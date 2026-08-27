@@ -26,5 +26,20 @@ logs/*
 !logs/.gitkeep
 *.log
 
-# Raw data is intentionally not ignored wholesale. Inventory each dataset and
-# make an explicit storage/version-control decision before staging large files.
+# Raw data is intentionally not ignored wholesale as a *policy* (see README.md,
+# "Git and large raw data"): each dataset still needs an explicit inventory and
+# storage decision. But as a *safety default* (Decision 013), files copied into
+# data/raw/ are not staged automatically — .gitkeep placeholders stay tracked,
+# everything else under data/raw/ must be added deliberately, file by file.
+data/raw/**/*
+!data/raw/**/.gitkeep
+!data/raw/**/README.md
+
+# Phase 1 SQLite inventory catalog (Decision 012, Decision 013): the database
+# is a regenerable local index, not source evidence. Its schema and manifests
+# stay in Git; the runtime database file does not.
+data/catalog/*.db
+data/catalog/*.db-wal
+data/catalog/*.db-shm
+data/catalog/*.sqlite
+data/catalog/*.sqlite3

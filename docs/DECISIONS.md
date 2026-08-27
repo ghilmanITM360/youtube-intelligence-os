@@ -122,3 +122,85 @@ Scrapling (`docs/TOOLS_INSTALLED.md`) may later support explicitly authorized we
 No automated scraping is enabled during Phase 0.5 or Phase 1. Live scraping is not authorized before Phase 8 (`docs/Phases.md`), and even then only under the boundaries in `docs/Security.md` §6, including mandatory use of `--ai-targeted` for any AI-facing extraction (`docs/Security.md` §5, `docs/TOOLS_INSTALLED.md`).
 
 **Reason:** Scrapling was added as a convenience research tool per this task's request, but the project's existing rule that external tooling never determines production architecture (`AGENTS.md`, External tool boundaries) applies to it exactly as it applies to every other installed tool.
+
+## Decision 012 — Phase 1 Local SQLite Inventory Catalog
+
+**Status:** Accepted
+
+During Phase 1, the YouTube Intelligence OS may use a local SQLite database as a machine-readable inventory/catalog alongside the human-readable manifests in `data/manifests/`. The SQLite catalog is **not** the final production intelligence database.
+
+Its Phase 1 purpose is limited to recording:
+
+- datasets
+- ingestion runs
+- source locations
+- source files
+- archive members
+- SHA-256 hashes
+- basic file metadata
+- classifications
+- provenance
+- duplicate/revision relationships
+- ingestion status
+- verification status
+- ingestion errors
+
+It must **not** yet become the storage system for:
+
+- embeddings
+- vectors
+- RAG
+- generated content ideas
+- final insights
+- title intelligence
+- thumbnail intelligence
+- script intelligence
+- content recommendations
+
+Final PostgreSQL/Supabase/vector/RAG architecture remains undecided (Decision 004). The SQLite design (`schemas/inventory/`) must remain migration-friendly — additive, versioned schema files, no destructive changes to shipped tables.
+
+**Reason:** Phase 0.5's Markdown-only discovery reports proved sufficient for four small folders, but reliably answering "what data do we own, where did it come from, and is it still trustworthy" at real ingestion volume needs a queryable, hash-indexed catalog. A minimal SQLite catalog gives that without prematurely choosing (or building) production infrastructure.
+
+## Decision 013 — Raw Payloads and Runtime Database Stay Local by Default
+
+**Status:** Accepted
+
+Large/raw source payloads and the operational SQLite database must not be blindly committed into Git history.
+
+Git versions:
+
+- source code
+- database schema
+- migrations
+- documentation
+- manifests
+- non-sensitive metadata
+- project decisions
+- tests
+
+Local filesystem storage holds:
+
+- copied immutable raw datasets (`data/raw/`)
+- operational `.db` files (`data/catalog/*.db`)
+- SQLite WAL/SHM files
+- other potentially large runtime data
+
+The actual source files remain primary evidence. The human-readable manifest is the durable ingestion record. The SQLite catalog is the fast machine-readable index.
+
+```text
+ORIGINAL SOURCE
+=
+PRIMARY EVIDENCE
+
+MANIFEST
+=
+DURABLE INGESTION RECORD
+
+SQLITE
+=
+MACHINE-READABLE CATALOG / INDEX
+```
+
+The SQLite database must be rebuildable from the canonical raw files, manifests, and schema where practical (`data/catalog/README.md`).
+
+**Reason:** Repository size and history hygiene matter as raw datasets grow; the project's existing rule that Git does not blindly absorb `data/raw/` (`README.md`, "Git and large raw data") extends naturally to the new runtime database, which is regenerable and not itself evidence.

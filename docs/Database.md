@@ -110,3 +110,21 @@ The four inspected source folders (`docs/source-discovery/SOURCE_DISCOVERY_REPOR
 Future fields will likely draw from: `INTEGER`, `TEXT`, `BOOLEAN`, `DATE`/`TIMESTAMP`, `JSON` (for variable/nested fields like hashtags or per-shot measurement arrays), foreign-key relationships between the entities above, content hashes (SHA-256, matching `docs/DATA_INVENTORY.md`'s existing rule), and confidence/status enums (the provenance states in §1, plus per-field confidence like the `HIGH`/`MEDIUM`/`LOW CONFIDENCE` labels already used in `FORENSIC_RECONSTRUCTION.md`).
 
 No SQL, no migrations, and no engine (PostgreSQL, Supabase, or otherwise) are part of this document or of Phase 0.5.
+
+## 5. Phase 1 Inventory Catalog
+
+```text
+CURRENT:
+SQLite inventory/catalog (data/catalog/youtube_inventory.db, schemas/inventory/)
+
+FUTURE:
+final structured intelligence database — the ~24 conceptual entities in §2
+(channels, videos, transcripts, insights, etc.)
+
+UNDECIDED:
+PostgreSQL / Supabase / vector / semantic retrieval architecture (Decision 004, Phase 10)
+```
+
+Phase 1 (Decision 012) intentionally implements only the minimal inventory subset needed to answer "what data do we own, where did it come from, and is it still trustworthy" — `schema_meta`, `datasets`, `ingestion_runs`, `source_locations`, `source_files`, `file_relationships`, `ingestion_errors`. This is a deliberately small slice of the conceptual model above, not a replacement for it: none of `channels`, `videos`, `transcripts`, `insights`, or any other entity in §2 is implemented yet. `source_files` rows track physical files and archive members only — one row per file, not one row per video, competitor, or transcript.
+
+The catalog exists to make the provenance model in §1 mechanically enforceable (hash-verified, queryable) rather than only documented, without pulling forward any decision this document defers to Phase 10. It is migration-friendly by design (Decision 012) so its data can move into whatever production database Phase 10 selects, rather than being re-derived from scratch.
