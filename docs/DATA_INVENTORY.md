@@ -46,4 +46,6 @@ Phase 1A (Decision 012) adds a local SQLite catalog (`data/catalog/youtube_inven
 
 | Dataset ID | Name | Discovery ID | Semantic Class | Status | Manifest |
 |---|---|---|---|---|---|
-| DS-000001 | Matty Invests & Mr. Finance Competitor Dataset | DISC-002 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000001.md`](../data/manifests/DS-000001.md) |
+| DS-000001 | Matty Invests & Mr. Finance Competitor Dataset | DISC-002 | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000001.md`](../data/manifests/DS-000001.md) |
+
+Status progression: `INGESTED` (Phase 1A — raw files preserved and cataloged) → `STRUCTURED_REGISTERED` (Phase 1B — channels/videos/snapshots/transcripts registered with field provenance, `docs/DECISIONS.md` Decisions 014–015). No competitor intelligence analysis has been performed at either stage.

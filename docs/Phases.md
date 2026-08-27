@@ -32,16 +32,29 @@ Database, RAG/vector-search, MCP servers, and agent-workflow infrastructure are 
 
 ---
 
-### Phase 1 — Controlled Data Entry & Inventory
-**Status: NEXT**
+### Phase 1A — Controlled Data Entry & Inventory
+**Status: COMPLETED**
 
-- **Objective:** Begin actually copying selected, prioritized source material into `data/raw/` under the workflow `docs/DATA_ENTRY_WORKFLOW.md` already defines, using the priorities `docs/source-discovery/SOURCE_INGESTION_RECOMMENDATIONS.md` proposes.
-- **Inputs:** User decision on which Phase 0.5 recommendation(s) to act on first.
-- **Outputs:** Populated `data/raw/`, `data/manifests/` records, updated `docs/DATA_INVENTORY.md` entries.
+- **Objective:** Begin actually copying selected, prioritized source material into `data/raw/` under the workflow `docs/DATA_ENTRY_WORKFLOW.md` already defines, using the priorities `docs/source-discovery/SOURCE_INGESTION_RECOMMENDATIONS.md` proposes; introduce a minimal local SQLite inventory/catalog (Decision 012) alongside the manifests.
+- **Inputs:** User decision on which Phase 0.5 recommendation(s) to act on first (DS-000001, DISC-002).
+- **Outputs:** Populated `data/raw/`, `data/manifests/DS-000001.md`, `docs/DATA_INVENTORY.md` entry, `schemas/inventory/001_initial.sql`, `scripts/inventory_catalog.py`.
 - **Allowed:** Copying explicitly approved source material; hashing; basic inventory; exact-duplicate detection; recording provenance.
-- **Prohibited:** Automated bulk ingestion of everything discovered in Phase 0.5; extraction/normalization; any database; any web research.
-- **Completion criteria:** At least one controlled testcase ingested with full provenance and no source modification.
+- **Prohibited:** Automated bulk ingestion of everything discovered in Phase 0.5; extraction/normalization; any competitor/content analysis; any web research.
+- **Completion criteria:** At least one controlled testcase ingested with full provenance and no source modification. Met — DS-000001 ingested, 8/8 tests passing, source hashes verified unchanged.
 - **Dependencies:** Phase 0.5 (its manifest and recommendations are the input).
+
+---
+
+### Phase 1B — Structured Source Registration
+**Status: CURRENT**
+
+- **Objective:** Convert a Phase 1A-ingested dataset's raw files into structured, provenance-tracked catalog entities (channels, videos, channel/video snapshots, transcript references) without performing competitor strategy analysis, topic generation, or content scoring.
+- **Inputs:** DS-000001's canonical raw files and Phase 1A catalog records.
+- **Outputs:** `schemas/inventory/002_structured_registration.sql`, `scripts/register_structured_source.py`, `scripts/source_adapters/`, populated `channels`/`channel_snapshots`/`videos`/`video_snapshots`/`transcripts`/`field_provenance` tables, updated manifest and `docs/DATA_INVENTORY.md` status.
+- **Allowed:** Source parsing, structured registration, identity resolution, metric snapshots, transcript metadata, field provenance, source cross-checking, validation, database migration, tests.
+- **Prohibited:** Competitor strategy analysis, viral/topic/title/thumbnail/script analysis, content-gap discovery, recommendations, ranking, embeddings, RAG, vectors, web research, scraping.
+- **Completion criteria:** Structured entities registered for DS-000001 with 100% field-provenance coverage on required fields, source reconciliation with no unexplained discrepancy, migration tests passing, SQLite integrity clean, manifest/database agreement.
+- **Dependencies:** Phase 1A.
 
 ---
 

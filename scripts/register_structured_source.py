@@ -1,0 +1,635 @@
+#!/usr/bin/env python3
+"""Phase 1B structured source registration (Decisions 014, 015).
+
+Turns a Phase 1A-ingested dataset's raw files into structured catalog
+entities (channels, videos, snapshots, transcripts) with field-level
+provenance. Stdlib only, aside from scripts/source_adapters/ which parses
+DS-000001's specific workbook/archive shape.
+
+Never analyzes competitor strategy, generates topics, or scores content —
+see docs/Phases.md Phase 1B boundary. Reuses scripts/inventory_catalog.py
+for hashing/id/time helpers and its CatalogError taxonomy rather than
+duplicating them (`inventory_catalog.py` stays responsible for file/dataset
+inventory; this script owns structured registration only — rule 35).
+"""
+import argparse
+import sqlite3
+import sys
+from collections import Counter
+from pathlib import Path
+
+import inventory_catalog
+from inventory_catalog import CatalogError, DEFAULT_DB_PATH, now_iso, sha256_file
+from source_adapters import youtube_master_data as ymd
+
+TOOL_VERSION = "register_structured_source.py/1"
+
+# rule 47: only these fields get provenance rows — internal ids/timestamps don't.
+CHANNEL_FIELDS = [("Channel ID", "youtube_channel_id"), ("Handle", "handle"), ("Channel Name", "display_name"), ("Channel URL", "channel_url")]
+CHANNEL_SNAPSHOT_FIELDS = [("Subscribers", "subscriber_count"), ("Total Videos (YouTube)", "video_count")]
+VIDEO_FIELDS = [("Video ID", "youtube_video_id"), ("Video URL", "canonical_url")]
+VIDEO_SNAPSHOT_FIELDS = [
+    ("Title", "title", "SOURCE_EXTRACTED"),
+    ("Published (UTC)", "published_at", "SOURCE_EXTRACTED"),
+    ("Sec", "duration_seconds", "SOURCE_EXTRACTED"),
+    ("Views", "views", "SOURCE_EXTRACTED"),
+    ("Likes", "likes", "SOURCE_EXTRACTED"),
+    ("Comments", "comments", "SOURCE_EXTRACTED"),
+    ("Views/Day", "views_per_day", "SOURCE_COMPUTED"),
+    ("Engagement", "engagement_rate", "SOURCE_COMPUTED"),
+    ("Desc Chars", "description_char_count", "SOURCE_EXTRACTED"),
+    ("Transcript Words", "transcript_word_count", "SOURCE_EXTRACTED"),
+]
+TRANSCRIPT_HEADER_FIELDS = ["availability_status", "caption_type", "language", "word_count"]
+
+EVIDENCE_LAYER = {
+    "SOURCE_EXTRACTED": "EXTRACTED_FACT",
+    "SOURCE_COMPUTED": "MEASURED_FACT",
+    "TRANSCRIPT_METADATA": "EXTRACTED_FACT",
+}
+
+
+class IdSeq:
+    def __init__(self, conn, table, prefix):
+        self.n = conn.execute("SELECT COUNT(*) FROM {};".format(table)).fetchone()[0]
+        self.prefix = prefix
+        self.created = 0
+
+    def next(self):
+        self.n += 1
+        self.created += 1
+        return "{}-{:06d}".format(self.prefix, self.n)
+
+
+def to_int(raw, field_name):
+    if raw is None or raw == "":
+        return None
+    try:
+        return int(float(raw))
+    except (TypeError, ValueError):
+        raise CatalogError("MalformedData", "Could not parse integer field {}: {!r}".format(field_name, raw))
+
+
+def to_float(raw, field_name):
+    if raw is None or raw == "":
+        return None
+    try:
+        return float(raw)
+    except (TypeError, ValueError):
+        raise CatalogError("MalformedData", "Could not parse decimal field {}: {!r}".format(field_name, raw))
+
+
+def normalize_published_at(raw):
+    if not raw:
+        return None
+    return raw.replace(" ", "T") + "Z"  # column is explicitly labeled "(UTC)" — no tz invented
+
+
+def _require_v2(conn):
+    tables = {r[0] for r in conn.execute("SELECT name FROM sqlite_master WHERE type='table';").fetchall()}
+    if "channels" not in tables:
+        raise CatalogError("SourceNotFound", "Schema version 2 not applied. Run: python3 scripts/inventory_catalog.py init")
+
+
+# ---------------------------------------------------------------------------
+# register
+# ---------------------------------------------------------------------------
+
+def cmd_register(args):
+    db_path = Path(args.db_path)
+    dataset_id = args.dataset_id
+    conn = sqlite3.connect(str(db_path))
+    conn.execute("PRAGMA foreign_keys = ON;")
+    try:
+        _require_v2(conn)
+        dataset = conn.execute("SELECT dataset_id, status FROM datasets WHERE dataset_id = ?;", (dataset_id,)).fetchone()
+        if not dataset:
+            raise CatalogError("SourceNotFound", "Dataset {} not found in catalog.".format(dataset_id))
+
+        physical = conn.execute(
+            """SELECT file_id, original_filename, canonical_path, sha256, file_role
+               FROM source_files WHERE dataset_id = ? AND storage_kind = 'PHYSICAL_FILE';""",
+            (dataset_id,),
+        ).fetchall()
+        xlsx_row = next((r for r in physical if r[4] == "STRUCTURED_METADATA"), None)
+        zip_row = next((r for r in physical if r[4] == "TRANSCRIPT_ARCHIVE"), None)
+        if not xlsx_row or not zip_row:
+            raise CatalogError(
+                "SourceNotFound",
+                "Dataset {} is missing an expected STRUCTURED_METADATA or TRANSCRIPT_ARCHIVE physical file.".format(dataset_id),
+            )
+
+        # Changed-source detection (rule 39) — before parsing anything.
+        for _, filename, canonical_path, recorded_sha256, _role in physical:
+            p = Path(canonical_path)
+            if not p.exists():
+                raise CatalogError("SourceNotFound", "Canonical file missing: {}".format(canonical_path))
+            actual = sha256_file(p)
+            if actual != recorded_sha256:
+                raise CatalogError(
+                    "RevisionDetected",
+                    "Canonical file {} hash changed since Phase 1A ingestion (recorded={}, actual={}). "
+                    "Registration refused under this Dataset ID.".format(filename, recorded_sha256, actual),
+                )
+
+        # Idempotency (rule 38).
+        prior = conn.execute(
+            """SELECT run_id FROM ingestion_runs
+               WHERE dataset_id = ? AND run_type = 'STRUCTURED_REGISTRATION' AND status = 'COMPLETED'
+               ORDER BY started_at DESC LIMIT 1;""",
+            (dataset_id,),
+        ).fetchone()
+        if prior:
+            print("ALREADY_REGISTERED / VERIFIED — {} was already structurally registered by run {}. "
+                  "Source hashes still match; no records created.".format(dataset_id, prior[0]))
+            return
+
+        xlsx_path, zip_path = Path(xlsx_row[2]), Path(zip_row[2])
+        wb = ymd.read_workbook(xlsx_path)
+        scraped_date = ymd.find_scraped_date(wb["banner_lines"])
+        transcript_members = ymd.read_transcript_archive(zip_path)
+
+        archive_rows = conn.execute(
+            """SELECT file_id, archive_member_path FROM source_files
+               WHERE dataset_id = ? AND storage_kind = 'ARCHIVE_MEMBER' AND file_role = 'TRANSCRIPT';""",
+            (dataset_id,),
+        ).fetchall()
+        archive_file_id_by_path = {path: file_id for file_id, path in archive_rows}
+
+        reconciliation = _reconcile(wb["videos"], transcript_members)
+        _register_transaction(
+            conn, dataset_id, wb, scraped_date, transcript_members,
+            archive_file_id_by_path, reconciliation, db_path,
+        )
+    except CatalogError as exc:
+        _log_failed_run(db_path, dataset_id, exc)
+        print("FAILED — {}: {}".format(exc.error_type, exc.message))
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def _reconcile(workbook_videos, transcript_members):
+    wb_ids = [v["Video ID"][0] for v in workbook_videos]
+    arc_ids = [m["video_id"] for m in transcript_members]
+    wb_counts, arc_counts = Counter(wb_ids), Counter(arc_ids)
+    return {
+        "workbook_video_ids": sorted(set(wb_ids)),
+        "archive_video_ids": sorted(set(arc_ids)),
+        "matched": sorted(set(wb_ids) & set(arc_ids)),
+        "workbook_only": sorted(set(wb_ids) - set(arc_ids)),
+        "archive_only": sorted(set(arc_ids) - set(wb_ids)),
+        "duplicate_workbook_ids": sorted(i for i, c in wb_counts.items() if c > 1),
+        "duplicate_archive_ids": sorted(i for i, c in arc_counts.items() if c > 1),
+    }
+
+
+def _register_transaction(conn, dataset_id, wb, scraped_date, transcript_members,
+                           archive_file_id_by_path, reconciliation, db_path):
+    run_id = IdSeq(conn, "ingestion_runs", "RUN").next()
+    started_at = now_iso()
+    transcripts_by_video_id = {}
+    for m in transcript_members:
+        transcripts_by_video_id.setdefault(m["video_id"], m)  # first occurrence wins on duplicates
+
+    channel_ids = IdSeq(conn, "channels", "CH")
+    snapshot_ids = IdSeq(conn, "channel_snapshots", "CS")
+    video_ids = IdSeq(conn, "videos", "VID")
+    video_snapshot_ids = IdSeq(conn, "video_snapshots", "VS")
+    transcript_ids = IdSeq(conn, "transcripts", "TR")
+    provenance_ids = IdSeq(conn, "field_provenance", "PR")
+
+    # Everything below is one transaction: on any exception nothing commits
+    # (rule 43). `with conn` rolls back automatically before the exception
+    # reaches cmd_register's except handler, so _log_failed_run's separate
+    # connection never collides with a still-open write transaction here.
+    with conn:
+        counts, warnings = _do_register(
+            conn, dataset_id, wb, scraped_date, transcripts_by_video_id, archive_file_id_by_path,
+            reconciliation, run_id, started_at, channel_ids, snapshot_ids, video_ids,
+            video_snapshot_ids, transcript_ids, provenance_ids,
+        )
+
+    print("COMPLETED — {} structurally registered. Run {}.".format(dataset_id, run_id))
+    print("Counts: {}".format(counts))
+    if warnings:
+        print("Warnings ({}):".format(len(warnings)))
+        for w in warnings:
+            print("  - {}".format(w))
+    print("Reconciliation: matched={} workbook_only={} archive_only={} duplicate_workbook_ids={} duplicate_archive_ids={}".format(
+        len(reconciliation["matched"]), len(reconciliation["workbook_only"]), len(reconciliation["archive_only"]),
+        len(reconciliation["duplicate_workbook_ids"]), len(reconciliation["duplicate_archive_ids"])))
+
+    _write_manifest_addendum(conn, dataset_id, run_id, counts, reconciliation, warnings)
+
+
+def _do_register(conn, dataset_id, wb, scraped_date, transcripts_by_video_id, archive_file_id_by_path,
+                  reconciliation, run_id, started_at, channel_ids, snapshot_ids, video_ids,
+                  video_snapshot_ids, transcript_ids, provenance_ids):
+    conn.execute(
+        """INSERT INTO ingestion_runs (run_id, dataset_id, started_at, completed_at, status,
+           source_file_count, archive_member_count, total_size_bytes, errors_count, verification_status,
+           tool_version, run_type, notes)
+           VALUES (?, ?, ?, NULL, 'STARTED', NULL, NULL, NULL, 0, NULL, ?, 'STRUCTURED_REGISTRATION', NULL);""",
+        (run_id, dataset_id, started_at, TOOL_VERSION),
+    )
+
+    provenance_rows = []
+
+    def add_provenance(target_col, target_id, field_name, locator, value_origin, extraction_method,
+                        observed_at=None, source_file_id=None):
+        cols = {"channel_id": None, "channel_snapshot_id": None, "video_id": None,
+                "video_snapshot_id": None, "transcript_id": None}
+        cols[target_col] = target_id
+        provenance_rows.append((
+            provenance_ids.next(), dataset_id, run_id, source_file_id,
+            cols["channel_id"], cols["channel_snapshot_id"], cols["video_id"],
+            cols["video_snapshot_id"], cols["transcript_id"],
+            field_name, locator, value_origin, EVIDENCE_LAYER[value_origin],
+            extraction_method, observed_at, started_at, None,
+        ))
+
+    warnings = []
+    errors_to_log = []
+
+    channel_name_to_id = {}
+    for display_name, fields in wb["channels"].items():
+        channel_id = channel_ids.next()
+        youtube_channel_id = fields.get("Channel ID", (None,))[0]
+        handle = fields.get("Handle", (None,))[0]
+        channel_url = fields.get("Channel URL", (None,))[0]
+        conn.execute(
+            """INSERT INTO channels (channel_id, youtube_channel_id, handle, display_name, channel_url,
+               created_from_dataset_id, created_at, updated_at, notes)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, NULL);""",
+            (channel_id, youtube_channel_id, handle, display_name, channel_url, dataset_id, started_at, started_at),
+        )
+        for field_label, target_attr in CHANNEL_FIELDS:
+            if field_label not in fields:
+                continue
+            value, row_num, col = fields[field_label]
+            locator = "YouTube_Master_Data.xlsx#Channel Overview!row={},column={}".format(row_num, col)
+            add_provenance("channel_id", channel_id, target_attr, locator, "SOURCE_EXTRACTED", "xlsx_cell_read")
+
+        channel_snapshot_id = snapshot_ids.next()
+        subscriber_count = to_int(fields.get("Subscribers", (None,))[0], "Subscribers")
+        video_count = to_int(fields.get("Total Videos (YouTube)", (None,))[0], "Total Videos (YouTube)")
+        conn.execute(
+            """INSERT INTO channel_snapshots (channel_snapshot_id, channel_id, dataset_id, registration_run_id,
+               observed_at, subscriber_count, video_count, created_at, notes)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, NULL);""",
+            (channel_snapshot_id, channel_id, dataset_id, run_id, scraped_date, subscriber_count, video_count, started_at),
+        )
+        for field_label, target_attr in CHANNEL_SNAPSHOT_FIELDS:
+            if field_label not in fields:
+                continue
+            value, row_num, col = fields[field_label]
+            locator = "YouTube_Master_Data.xlsx#Channel Overview!row={},column={}".format(row_num, col)
+            add_provenance("channel_snapshot_id", channel_snapshot_id, target_attr, locator, "SOURCE_EXTRACTED", "xlsx_cell_read", observed_at=scraped_date)
+
+        channel_name_to_id[display_name] = channel_id
+
+    for entry in reconciliation["archive_only"]:
+        warnings.append("Archive-only video ID (no workbook row, no video registered): {}".format(entry))
+        errors_to_log.append(("EvidenceConflict", "Low", "Archive video ID {} has no matching workbook row.".format(entry)))
+    for entry in reconciliation["duplicate_archive_ids"]:
+        warnings.append("Duplicate archive video ID (first occurrence used): {}".format(entry))
+        errors_to_log.append(("EvidenceConflict", "Low", "Archive video ID {} appears in more than one transcript member.".format(entry)))
+
+    processed_video_ids = set()
+    for v in wb["videos"]:
+        youtube_video_id = v["Video ID"][0]
+        if youtube_video_id in processed_video_ids:
+            warnings.append("Duplicate workbook video ID (first row used): {}".format(youtube_video_id))
+            errors_to_log.append(("EvidenceConflict", "Low", "Workbook video ID {} appears in more than one row.".format(youtube_video_id)))
+            continue
+        processed_video_ids.add(youtube_video_id)
+
+        channel_display = v["Channel"][0]
+        channel_id = channel_name_to_id.get(channel_display)
+        if not channel_id:
+            # Not a two-source disagreement (EvidenceConflict) — there is no
+            # valid channel_id to attach this row to at all, so it halts.
+            raise CatalogError("MalformedData", "Video {} references unrecognized channel '{}' (no matching Channel Overview entry)".format(youtube_video_id, channel_display))
+
+        transcript_meta = transcripts_by_video_id.get(youtube_video_id)
+        if transcript_meta and transcript_meta["channel"] != channel_display:
+            warnings.append("Channel mismatch for video {}: workbook='{}' transcript='{}'".format(
+                youtube_video_id, channel_display, transcript_meta["channel"]))
+            errors_to_log.append(("EvidenceConflict", "Medium",
+                "Video {}: workbook channel '{}' disagrees with transcript header channel '{}'.".format(
+                    youtube_video_id, channel_display, transcript_meta["channel"])))
+
+        video_id = video_ids.next()
+        canonical_url = v["Video URL"][0]
+        conn.execute(
+            """INSERT INTO videos (video_id, youtube_video_id, channel_id, canonical_url,
+               created_from_dataset_id, created_at, updated_at, notes)
+               VALUES (?, ?, ?, ?, ?, ?, ?, NULL);""",
+            (video_id, youtube_video_id, channel_id, canonical_url, dataset_id, started_at, started_at),
+        )
+        for field_label, target_attr in VIDEO_FIELDS:
+            value, row_num, col = v[field_label]
+            locator = "YouTube_Master_Data.xlsx#All Videos!row={},column={}".format(row_num, col)
+            add_provenance("video_id", video_id, target_attr, locator, "SOURCE_EXTRACTED", "xlsx_cell_read")
+
+        video_snapshot_id = video_snapshot_ids.next()
+        snap_values = {}
+        for field_label, target_attr, origin in VIDEO_SNAPSHOT_FIELDS:
+            raw_value, row_num, col = v[field_label]
+            if target_attr == "published_at":
+                parsed = normalize_published_at(raw_value)
+            elif target_attr in ("duration_seconds", "views", "likes", "comments",
+                                  "description_char_count", "transcript_word_count"):
+                parsed = to_int(raw_value, field_label)
+            elif target_attr in ("views_per_day", "engagement_rate"):
+                parsed = to_float(raw_value, field_label)
+            else:
+                parsed = raw_value
+            snap_values[target_attr] = parsed
+            locator = "YouTube_Master_Data.xlsx#All Videos!row={},column={}".format(row_num, col)
+            add_provenance("video_snapshot_id", video_snapshot_id, target_attr, locator, origin, "xlsx_cell_read", observed_at=scraped_date)
+
+        conn.execute(
+            """INSERT INTO video_snapshots (video_snapshot_id, video_id, dataset_id, registration_run_id,
+               observed_at, published_at, title, duration_seconds, views, likes, comments,
+               views_per_day, engagement_rate, description_char_count, transcript_word_count, created_at, notes)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL);""",
+            (video_snapshot_id, video_id, dataset_id, run_id, scraped_date, snap_values["published_at"],
+             snap_values["title"], snap_values["duration_seconds"], snap_values["views"], snap_values["likes"],
+             snap_values["comments"], snap_values["views_per_day"], snap_values["engagement_rate"],
+             snap_values["description_char_count"], snap_values["transcript_word_count"], started_at),
+        )
+
+        if not transcript_meta:
+            warnings.append("Workbook-only video, no transcript registered: {}".format(youtube_video_id))
+            errors_to_log.append(("TranscriptFailure", "Medium", "Video {} has no matching transcript archive member.".format(youtube_video_id)))
+            continue
+
+        archive_member_path = transcript_meta["archive_member_path"]
+        archive_file_id = archive_file_id_by_path.get(archive_member_path)
+        if not archive_file_id:
+            raise CatalogError("MissingProvenance", "No Phase 1A archive-member record for {}".format(archive_member_path))
+
+        transcript_id = transcript_ids.next()
+        word_count = to_int(transcript_meta["word_count"], "Word count")
+        conn.execute(
+            """INSERT INTO transcripts (transcript_id, video_id, dataset_id, registration_run_id,
+               archive_member_file_id, availability_status, caption_type, language, word_count,
+               transcript_sha256, description_present, created_at, notes)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, ?, ?, NULL);""",
+            (transcript_id, video_id, dataset_id, run_id, archive_file_id,
+             transcript_meta["availability_status"], transcript_meta["caption_type"],
+             transcript_meta["language"], word_count, int(transcript_meta["description_present"]), started_at),
+        )
+        for field_name in TRANSCRIPT_HEADER_FIELDS:
+            locator = "Transcripts_All_159_Videos.zip::{}#header:{}".format(archive_member_path, field_name)
+            add_provenance("transcript_id", transcript_id, field_name, locator, "TRANSCRIPT_METADATA",
+                            "transcript_header_parse", source_file_id=archive_file_id)
+
+    conn.executemany(
+        """INSERT INTO field_provenance (provenance_id, dataset_id, registration_run_id, source_file_id,
+           channel_id, channel_snapshot_id, video_id, video_snapshot_id, transcript_id,
+           field_name, source_locator, value_origin, evidence_layer, extraction_method, observed_at, created_at, notes)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);""",
+        provenance_rows,
+    )
+
+    completed_at = now_iso()
+    conn.execute(
+        """UPDATE ingestion_runs SET completed_at = ?, status = 'COMPLETED', errors_count = ?,
+           verification_status = 'VERIFIED', notes = ? WHERE run_id = ?;""",
+        (completed_at, len(errors_to_log),
+         "channels={} videos={} transcripts={} provenance_rows={}".format(
+             len(channel_name_to_id), len(processed_video_ids), transcript_ids.created, len(provenance_rows)),
+         run_id),
+    )
+    for error_type, severity, message in errors_to_log:
+        error_id = IdSeq(conn, "ingestion_errors", "ERR").next()
+        conn.execute(
+            """INSERT INTO ingestion_errors (error_id, run_id, dataset_id, file_id, error_type, severity,
+               message, retryable, requires_human_review, created_at, resolved_at, notes)
+               VALUES (?, ?, ?, NULL, ?, ?, ?, 0, 1, ?, NULL, NULL);""",
+            (error_id, run_id, dataset_id, error_type, severity, message, completed_at),
+        )
+
+    conn.execute(
+        "UPDATE datasets SET status = 'STRUCTURED_REGISTERED', updated_at = ? WHERE dataset_id = ?;",
+        (completed_at, dataset_id),
+    )
+
+    counts = {
+        "channels": len(channel_name_to_id),
+        "channel_snapshots": snapshot_ids.created,
+        "videos": video_ids.created,
+        "video_snapshots": video_snapshot_ids.created,
+        "transcripts": transcript_ids.created,
+        "field_provenance": len(provenance_rows),
+    }
+    return counts, warnings
+
+
+def _log_failed_run(db_path, dataset_id, exc):
+    conn = sqlite3.connect(str(db_path))
+    conn.execute("PRAGMA foreign_keys = ON;")
+    try:
+        run_id = IdSeq(conn, "ingestion_runs", "RUN").next()
+        ts = now_iso()
+        with conn:
+            conn.execute(
+                """INSERT INTO ingestion_runs (run_id, dataset_id, started_at, completed_at, status,
+                   source_file_count, archive_member_count, total_size_bytes, errors_count,
+                   verification_status, tool_version, run_type, notes)
+                   VALUES (?, ?, ?, ?, 'FAILED', NULL, NULL, NULL, 1, 'FAILED', ?, 'STRUCTURED_REGISTRATION', ?);""",
+                (run_id, dataset_id, ts, ts, TOOL_VERSION, "error={}".format(exc)),
+            )
+            error_id = IdSeq(conn, "ingestion_errors", "ERR").next()
+            conn.execute(
+                """INSERT INTO ingestion_errors (error_id, run_id, dataset_id, file_id, error_type, severity,
+                   message, retryable, requires_human_review, created_at, resolved_at, notes)
+                   VALUES (?, ?, ?, NULL, ?, 'High', ?, 0, 1, ?, NULL, NULL);""",
+                (error_id, run_id, dataset_id, exc.error_type, exc.message, ts),
+            )
+    finally:
+        conn.close()
+
+
+# ---------------------------------------------------------------------------
+# manifest addendum
+# ---------------------------------------------------------------------------
+
+MANIFEST_SECTION_MARKER = "## Phase 1B Structured Registration"
+
+
+def _write_manifest_addendum(conn, dataset_id, run_id, counts, reconciliation, warnings):
+    manifest_path = inventory_catalog.MANIFESTS_DIR / "{}.md".format(dataset_id)
+    text = manifest_path.read_text() if manifest_path.exists() else ""
+    if MANIFEST_SECTION_MARKER in text:
+        text = text.split(MANIFEST_SECTION_MARKER, 1)[0].rstrip() + "\n"
+
+    available = conn.execute(
+        "SELECT COUNT(*) FROM transcripts WHERE dataset_id=? AND availability_status='AVAILABLE';", (dataset_id,)
+    ).fetchone()[0]
+    unavailable = conn.execute(
+        "SELECT COUNT(*) FROM transcripts WHERE dataset_id=? AND availability_status='UNAVAILABLE';", (dataset_id,)
+    ).fetchone()[0]
+
+    lines = [text.rstrip(), "", MANIFEST_SECTION_MARKER, ""]
+    lines.append("- Registration run ID: {}".format(run_id))
+    lines.append("- Schema version: 2")
+    lines.append("- Registered channels: {}".format(counts["channels"]))
+    lines.append("- Registered channel snapshots: {}".format(counts["channel_snapshots"]))
+    lines.append("- Registered videos: {}".format(counts["videos"]))
+    lines.append("- Registered video snapshots: {}".format(counts["video_snapshots"]))
+    lines.append("- Transcript records: {} (AVAILABLE: {}, UNAVAILABLE: {})".format(
+        counts["transcripts"], available, unavailable))
+    lines.append("- Field provenance rows: {}".format(counts["field_provenance"]))
+    lines.append("")
+    lines.append("### Source Reconciliation")
+    lines.append("")
+    lines.append("- Workbook video IDs: {}".format(len(reconciliation["workbook_video_ids"])))
+    lines.append("- Archive video IDs: {}".format(len(reconciliation["archive_video_ids"])))
+    lines.append("- Matched: {}".format(len(reconciliation["matched"])))
+    lines.append("- Workbook-only: {}".format(len(reconciliation["workbook_only"])))
+    lines.append("- Archive-only: {}".format(len(reconciliation["archive_only"])))
+    lines.append("- Duplicate workbook IDs: {}".format(len(reconciliation["duplicate_workbook_ids"])))
+    lines.append("- Duplicate archive IDs: {}".format(len(reconciliation["duplicate_archive_ids"])))
+    lines.append("")
+    lines.append("### Warnings / Conflicts")
+    lines.append("")
+    if warnings:
+        for w in warnings:
+            lines.append("- {}".format(w))
+    else:
+        lines.append("None.")
+    lines.append("")
+    lines.append("### Limitations")
+    lines.append("")
+    lines.append("No competitor strategy analysis, topic generation, or content scoring was performed. "
+                 "This section records structured source registration only — what values exist, where they "
+                 "came from, and whether workbook/archive evidence agrees.")
+    lines.append("")
+
+    manifest_path.write_text("\n".join(lines))
+    print("Manifest updated: {}".format(manifest_path))
+
+
+# ---------------------------------------------------------------------------
+# verify
+# ---------------------------------------------------------------------------
+
+def cmd_verify(args):
+    db_path = Path(args.db_path)
+    dataset_id = args.dataset_id
+    conn = sqlite3.connect(str(db_path))
+    conn.execute("PRAGMA foreign_keys = ON;")
+    try:
+        _require_v2(conn)
+        run = conn.execute(
+            """SELECT run_id, status FROM ingestion_runs
+               WHERE dataset_id = ? AND run_type = 'STRUCTURED_REGISTRATION'
+               ORDER BY started_at DESC LIMIT 1;""",
+            (dataset_id,),
+        ).fetchone()
+        if not run:
+            print("NOT_REGISTERED — no structured registration run found for {}.".format(dataset_id))
+            sys.exit(1)
+
+        # Re-verify canonical raw files still match (rule 57).
+        physical = conn.execute(
+            """SELECT original_filename, canonical_path, sha256 FROM source_files
+               WHERE dataset_id = ? AND storage_kind = 'PHYSICAL_FILE';""",
+            (dataset_id,),
+        ).fetchall()
+        hash_mismatches = []
+        for filename, canonical_path, recorded_sha256 in physical:
+            p = Path(canonical_path)
+            if not p.exists() or sha256_file(p) != recorded_sha256:
+                hash_mismatches.append(filename)
+
+        counts = {}
+        dataset_id_column = {
+            "channels": "created_from_dataset_id", "channel_snapshots": "dataset_id",
+            "videos": "created_from_dataset_id", "video_snapshots": "dataset_id",
+            "transcripts": "dataset_id", "field_provenance": "dataset_id",
+        }
+        for table, column in dataset_id_column.items():
+            counts[table] = conn.execute(
+                "SELECT COUNT(*) FROM {} WHERE {} = ?;".format(table, column), (dataset_id,)
+            ).fetchone()[0]
+        counts["transcripts_available"] = conn.execute(
+            "SELECT COUNT(*) FROM transcripts WHERE dataset_id=? AND availability_status='AVAILABLE';", (dataset_id,)
+        ).fetchone()[0]
+        counts["transcripts_unavailable"] = conn.execute(
+            "SELECT COUNT(*) FROM transcripts WHERE dataset_id=? AND availability_status='UNAVAILABLE';", (dataset_id,)
+        ).fetchone()[0]
+
+        expected_provenance = (
+            counts["channels"] * len(CHANNEL_FIELDS)
+            + counts["channel_snapshots"] * len(CHANNEL_SNAPSHOT_FIELDS)
+            + counts["videos"] * len(VIDEO_FIELDS)
+            + counts["video_snapshots"] * len(VIDEO_SNAPSHOT_FIELDS)
+            + counts["transcripts"] * len(TRANSCRIPT_HEADER_FIELDS)
+        )
+        coverage = counts["field_provenance"] / expected_provenance if expected_provenance else None
+
+        integrity = conn.execute("PRAGMA integrity_check;").fetchone()[0]
+        fk_violations = conn.execute("PRAGMA foreign_key_check;").fetchall()
+
+        manifest_path = inventory_catalog.MANIFESTS_DIR / "{}.md".format(dataset_id)
+        manifest_agrees = None
+        if manifest_path.exists():
+            text = manifest_path.read_text()
+            manifest_agrees = (
+                "Registered videos: {}".format(counts["videos"]) in text
+                and "Field provenance rows: {}".format(counts["field_provenance"]) in text
+            )
+
+        status = "VERIFIED" if (
+            not hash_mismatches and integrity == "ok" and not fk_violations
+            and coverage == 1.0 and manifest_agrees
+        ) else "FAILED"
+
+        print("Registration run: {} ({})".format(run[0], run[1]))
+        print("Raw file hash mismatches: {}".format(hash_mismatches or "none"))
+        print("Counts: {}".format(counts))
+        print("Field provenance coverage: {}".format("{:.1%}".format(coverage) if coverage is not None else "N/A"))
+        print("PRAGMA integrity_check: {}".format(integrity))
+        print("PRAGMA foreign_key_check violations: {}".format(len(fk_violations)))
+        print("Manifest agrees with catalog counts: {}".format(manifest_agrees))
+        print("Status: {}".format(status))
+        if status != "VERIFIED":
+            sys.exit(1)
+    finally:
+        conn.close()
+
+
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
+
+def build_parser():
+    parser = argparse.ArgumentParser(description="Phase 1B structured source registration utility.")
+    parser.add_argument("--db-path", default=str(DEFAULT_DB_PATH))
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    p_register = sub.add_parser("register")
+    p_register.add_argument("--dataset-id", required=True)
+
+    p_verify = sub.add_parser("verify")
+    p_verify.add_argument("--dataset-id", required=True)
+
+    return parser
+
+
+def main(argv=None):
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    if args.command == "register":
+        cmd_register(args)
+    elif args.command == "verify":
+        cmd_verify(args)
+
+
+if __name__ == "__main__":
+    main()

@@ -2,14 +2,15 @@
 
 ## What this is
 
-`data/catalog/youtube_inventory.db` is a local SQLite database that acts as the Phase 1 machine-readable inventory/catalog for the YouTube Intelligence OS (Decision 012). It indexes datasets, ingestion runs, source locations, physical files, archive members, hashes, and file relationships so the project can answer "what data do we own, where did it come from, and is it still trustworthy" by query instead of by re-reading Markdown.
+`data/catalog/youtube_inventory.db` is a local SQLite database that acts as the Phase 1 machine-readable inventory/catalog for the YouTube Intelligence OS (Decision 012). Phase 1A (schema v1) indexes datasets, ingestion runs, source locations, physical files, archive members, hashes, and file relationships. Phase 1B (schema v2, Decisions 014–015) adds structured registration — channels, channel/video snapshots, transcript references, and field-level provenance — so the project can answer "what data do we own, where did it come from, what values does it contain, and is it still trustworthy" by query instead of by re-reading Markdown or a workbook.
 
 ## What this is not
 
 - Not the final production intelligence database. Final PostgreSQL/Supabase/vector/RAG architecture is undecided until Phase 10 (Decision 004, `docs/Database.md` §5).
-- Not a document warehouse. It never stores transcript bodies, raw XLSX/ZIP bytes, images, PDFs, or other BLOB payloads — only metadata, hashes, relationships, and status.
+- Not a document warehouse. It never stores transcript bodies, video descriptions, raw XLSX/ZIP bytes, images, PDFs, or other BLOB payloads — only metadata, hashes, structured field values, relationships, and status. Transcript text stays in the canonical ZIP archive; `transcripts` rows carry only availability/caption metadata and a pointer (`archive_member_file_id`) back to it.
 - Not a replacement for the human-readable manifest in `data/manifests/`. The manifest is the durable ingestion record; the catalog is the fast index over the same facts.
 - Not authoritative over the raw files. Raw evidence in `data/raw/` remains primary; the catalog describes it.
+- Not a competitor-intelligence or content-analysis store. `video_snapshots`/`channel_snapshots` hold source-reported and source-computed metrics only — no strategy analysis, topic generation, or scoring (Phase 1B boundary, `docs/Phases.md`).
 
 ## Where it lives
 
@@ -21,15 +22,16 @@ Decision 013: the operational database is regenerable from source material alrea
 
 ## How it is recreated
 
-1. Apply `schemas/inventory/001_initial.sql` (and any later `NNN_*.sql` file in order) to a fresh SQLite file — `python3 scripts/inventory_catalog.py init` does this.
+1. Apply `schemas/inventory/001_initial.sql` and `schemas/inventory/002_structured_registration.sql` (and any later `NNN_*.sql` file, in order) to a fresh SQLite file — `python3 scripts/inventory_catalog.py init` does this.
 2. Re-run `python3 scripts/inventory_catalog.py ingest --source <path> --dataset-id <id> --name <name> --semantic-class <class>` for each dataset described in `data/manifests/*.md`, pointing `--source` at that dataset's canonical copy under `data/raw/`.
 3. Run `python3 scripts/inventory_catalog.py verify --dataset-id <id>` to confirm the rebuilt catalog's hashes match the canonical files on disk.
+4. Run `python3 scripts/register_structured_source.py register --dataset-id <id>` to re-derive channels/videos/snapshots/transcripts/provenance from the same canonical files, then `python3 scripts/register_structured_source.py verify --dataset-id <id>` to confirm agreement.
 
-No fact recorded only inside the `.db` and nowhere else is currently load-bearing: every dataset's identity, source path, and file hashes are also written into its `data/manifests/<id>.md` file at ingestion time.
+No fact recorded only inside the `.db` and nowhere else is currently load-bearing: every dataset's identity, source path, and file hashes are also written into its `data/manifests/<id>.md` file at ingestion/registration time.
 
 ## Schema version
 
-Current: `1` (`schemas/inventory/001_initial.sql`, tracked in the `schema_meta` table). Later schema changes must ship as a new additive `NNN_*.sql` file, never an edit to a file that has already shipped.
+Current: `2` (`schemas/inventory/001_initial.sql` + `002_structured_registration.sql`, tracked in the `schema_meta` table). Later schema changes must ship as a new additive `NNN_*.sql` file, never an edit to a file that has already shipped.
 
 ## Raw evidence remains authoritative
 

@@ -204,3 +204,27 @@ MACHINE-READABLE CATALOG / INDEX
 The SQLite database must be rebuildable from the canonical raw files, manifests, and schema where practical (`data/catalog/README.md`).
 
 **Reason:** Repository size and history hygiene matter as raw datasets grow; the project's existing rule that Git does not blindly absorb `data/raw/` (`README.md`, "Git and large raw data") extends naturally to the new runtime database, which is regenerable and not itself evidence.
+
+## Decision 014 — Mutable Platform Metrics Are Append-Only Snapshots
+
+**Status:** Accepted
+
+YouTube/video/channel metrics change over time. Fields such as views, likes, comments, subscriber counts, views/day, and engagement calculations must never be treated as permanent properties of a video or channel.
+
+They must be stored as timestamped source snapshots (`channel_snapshots`, `video_snapshots`, `schemas/inventory/002_structured_registration.sql`). Future ingestion of the same video/channel at another date must create another snapshot rather than overwrite historical evidence — enforced by a `UNIQUE (video_id/channel_id, dataset_id, observed_at)` constraint, not just convention.
+
+Stable identity (`channels`, `videos`) and mutable observations (`channel_snapshots`, `video_snapshots`) must remain separate tables.
+
+**Reason:** `YouTube_Master_Data.xlsx` captures a single scrape date (24 Aug 2026); a later re-scrape of the same channels/videos is a certainty, not a hypothetical, and overwriting the 24 Aug 2026 values in place would destroy the only historical evidence this project has of that point in time.
+
+## Decision 015 — Structured Fields Require Source Provenance
+
+**Status:** Accepted
+
+Every important structured value registered from supplied datasets must remain traceable to its evidence source. Where practical, provenance must identify: the dataset; the source file; the workbook sheet/row/column, or the archive member and header/body location; the extraction method; the observed/scraped date; and the value's origin and evidence type.
+
+The system must distinguish `SOURCE_EXTRACTED` (e.g. a workbook cell copied directly from scraper output), `SOURCE_DECLARED` (e.g. a workbook verification/notes statement), `SOURCE_COMPUTED` (e.g. the "Views/Day" and "Engagement" columns, which the workbook itself computes via live formulas), `TRANSCRIPT_METADATA` (a transcript file's own header fields), `ARCHIVE_OBSERVED`, and `SYSTEM_VERIFIED` (a count or hash our own tooling produced). No computed workbook metric may be silently represented as if directly reported by YouTube.
+
+Implemented as `field_provenance` (`schemas/inventory/002_structured_registration.sql`) with a `CHECK` constraint requiring exactly one target entity per row, so a provenance record can never float free of the value it documents.
+
+**Reason:** `docs/Database.md` §1 already requires distinguishing fact from interpretation at the record level; Phase 1B is the first phase that registers real structured values, so this decision extends that requirement from a design principle into an enforced schema constraint before any value/formula distinction could be lost.
