@@ -1,0 +1,30 @@
+# Operating-system and editor artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Temporary and cache files
+.cache/
+.tmp/
+tmp/
+*.tmp
+
+# Generated operational logs; keep documentation and placeholders
+logs/*
+!logs/README.md
+!logs/.gitkeep
+*.log
+
+# Raw data is intentionally not ignored wholesale. Inventory each dataset and
+# make an explicit storage/version-control decision before staging large files.
