@@ -228,3 +228,15 @@ The system must distinguish `SOURCE_EXTRACTED` (e.g. a workbook cell copied dire
 Implemented as `field_provenance` (`schemas/inventory/002_structured_registration.sql`) with a `CHECK` constraint requiring exactly one target entity per row, so a provenance record can never float free of the value it documents.
 
 **Reason:** `docs/Database.md` §1 already requires distinguishing fact from interpretation at the record level; Phase 1B is the first phase that registers real structured values, so this decision extends that requirement from a design principle into an enforced schema constraint before any value/formula distinction could be lost.
+
+## Decision 016 — Content Domain and Editing Style Are Independent Dimensions
+
+**Status:** Accepted
+
+A channel or video's subject-matter niche (`content_domain`, `sub_niche`, `target_audience`) and its production/editing grammar (`editing_style`, camera/motion/transition vocabulary) must never be collapsed into one concept or inferred from each other. A health channel and a finance channel may share an editing style; two channels in the same niche may use completely different production styles — neither direction may be assumed.
+
+`editing_style` may only be set from evidence of actual moving-image content — real video, representative frames, keyframes, shot manifests, or an equivalent forensic report (`docs/Database.md`, `visual_reconstruction_cards`-style evidence). It must remain `UNKNOWN` when only channel-page or video-thumbnail screenshots exist, even when those screenshots strongly suggest a niche or packaging pattern. Packaging/thumbnail-style observations (doctor-led, warning framing, before/after, number-led, high-contrast, etc.) are a separate, screenshot-supportable dimension (`packaging_style`) and must never be reported as `editing_style`.
+
+Implemented as independent columns on `entity_classifications` (`schemas/inventory/003_multimodal_source_registration.sql`): `content_domain`, `sub_niche`, `target_audience`, `content_format`, `packaging_style`, `thumbnail_style`, `presenter_style`, `editing_style` — the last defaulting to `UNKNOWN` and never populated from screenshot-only evidence during Phase 1C.
+
+**Reason:** Phase 1C ingested 8 competitor folders that are channel/video-page screenshots only, with no actual video frames — a real, immediate case where niche is screenshot-evidenced but editing style is not, and where collapsing the two would have silently fabricated a production-style claim with no supporting evidence.

@@ -47,5 +47,22 @@ Phase 1A (Decision 012) adds a local SQLite catalog (`data/catalog/youtube_inven
 | Dataset ID | Name | Discovery ID | Semantic Class | Status | Manifest |
 |---|---|---|---|---|---|
 | DS-000001 | Matty Invests & Mr. Finance Competitor Dataset | DISC-002 | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000001.md`](../data/manifests/DS-000001.md) |
+| DS-000002 | "7 Things Wealthy Retirees Stopped Buying to Stay Rich" — Forensic Video Reconstruction | BATCH-000001 | C — Forensic Video Intelligence | INGESTED | [`data/manifests/DS-000002.md`](../data/manifests/DS-000002.md) |
+| DS-000003 | Doctor Thomas — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000003.md`](../data/manifests/DS-000003.md) |
+| DS-000004 | Dr. Adewale — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000004.md`](../data/manifests/DS-000004.md) |
+| DS-000005 | Dr. Okoro — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000005.md`](../data/manifests/DS-000005.md) |
+| DS-000006 | Dr. Aliza Wright / Advice — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000006.md`](../data/manifests/DS-000006.md) |
+| DS-000007 | Dr. Waterling — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000007.md`](../data/manifests/DS-000007.md) |
+| DS-000008 | The Senior Health Podcast — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000008.md`](../data/manifests/DS-000008.md) |
+| DS-000009 | Senior Health Hub — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000009.md`](../data/manifests/DS-000009.md) |
+| DS-000010 | The Health Educator — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000010.md`](../data/manifests/DS-000010.md) |
+| DS-000011 | All Training Data of YouTube — Global Knowledge Corpus | BATCH-000001 | A — Global YouTube Knowledge | INGESTED | [`data/manifests/DS-000011.md`](../data/manifests/DS-000011.md) |
+| DS-000012 | Sunset Video Forensic Reconstruction — Case 1 | BATCH-000001 | C — Forensic Video Intelligence | INGESTED | [`data/manifests/DS-000012.md`](../data/manifests/DS-000012.md) |
+| DS-000013 | Moon/Electron Physics Video Forensic Reconstruction | BATCH-000001 | C — Forensic Video Intelligence | INGESTED | [`data/manifests/DS-000013.md`](../data/manifests/DS-000013.md) |
+| DS-000014 | "Weird and Worrying Questions" Video Forensic Reconstruction | BATCH-000001 | C — Forensic Video Intelligence | INGESTED | [`data/manifests/DS-000014.md`](../data/manifests/DS-000014.md) |
+| DS-000015 | Sunset Video Forensic Reconstruction — Case 2 (possible revision of Case 1, unresolved) | BATCH-000001 | C — Forensic Video Intelligence | INGESTED | [`data/manifests/DS-000015.md`](../data/manifests/DS-000015.md) |
+| DS-000016 | Retiree Daily-Routines Video Forensic Reconstruction | BATCH-000001 | C — Forensic Video Intelligence | INGESTED | [`data/manifests/DS-000016.md`](../data/manifests/DS-000016.md) |
 
 Status progression: `INGESTED` (Phase 1A — raw files preserved and cataloged) → `STRUCTURED_REGISTERED` (Phase 1B — channels/videos/snapshots/transcripts registered with field provenance, `docs/DECISIONS.md` Decisions 014–015). No competitor intelligence analysis has been performed at either stage.
+
+DS-000002 through DS-000016 were registered in Phase 1C (`docs/Phases.md`) as part of bulk multi-source ingestion `BATCH-000001` — see `data/manifests/batches/BATCH-000001.md` for the full 12-root discovery/disposition record and `data/manifests/batches/BATCH-000001_FILES.csv` for the complete per-file coverage ledger (45,774 entries, 100% disposition coverage). One additional item discovered in that batch — a stray, accidentally-mixed-in unrelated video's frames inside the Codex archive, containing an identifiable real person — was deliberately held (`HOLD` disposition) rather than registered as a dataset; it is cataloged only in the discovered-files ledger, per `docs/Security.md`.

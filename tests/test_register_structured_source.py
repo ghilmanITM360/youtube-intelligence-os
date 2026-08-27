@@ -224,7 +224,16 @@ class RegisterStructuredSourceTestCase(unittest.TestCase):
         conn = sqlite3.connect(str(self.db_path))
         try:
             versions = {r[0] for r in conn.execute("SELECT schema_version FROM schema_meta;").fetchall()}
-            self.assertEqual(versions, {1, 2})
+            # Every shipped migration file must apply, and every applied
+            # version must correspond to a real shipped file — checked
+            # against schemas/inventory/ itself so this test never needs
+            # updating by hand when a later phase adds another migration.
+            expected_versions = {
+                int(p.stem.split("_", 1)[0]) for p in inventory_catalog.SCHEMA_DIR.glob("*.sql")
+            }
+            self.assertEqual(versions, expected_versions)
+            self.assertIn(1, versions)
+            self.assertIn(2, versions)
             tables = {r[0] for r in conn.execute("SELECT name FROM sqlite_master WHERE type='table';").fetchall()}
             expected = {"channels", "channel_snapshots", "videos", "video_snapshots", "transcripts", "field_provenance"}
             self.assertTrue(expected.issubset(tables))

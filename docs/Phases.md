@@ -46,7 +46,7 @@ Database, RAG/vector-search, MCP servers, and agent-workflow infrastructure are 
 ---
 
 ### Phase 1B — Structured Source Registration
-**Status: CURRENT**
+**Status: COMPLETE**
 
 - **Objective:** Convert a Phase 1A-ingested dataset's raw files into structured, provenance-tracked catalog entities (channels, videos, channel/video snapshots, transcript references) without performing competitor strategy analysis, topic generation, or content scoring.
 - **Inputs:** DS-000001's canonical raw files and Phase 1A catalog records.
@@ -55,6 +55,19 @@ Database, RAG/vector-search, MCP servers, and agent-workflow infrastructure are 
 - **Prohibited:** Competitor strategy analysis, viral/topic/title/thumbnail/script analysis, content-gap discovery, recommendations, ranking, embeddings, RAG, vectors, web research, scraping.
 - **Completion criteria:** Structured entities registered for DS-000001 with 100% field-provenance coverage on required fields, source reconciliation with no unexplained discrepancy, migration tests passing, SQLite integrity clean, manifest/database agreement.
 - **Dependencies:** Phase 1A.
+
+---
+
+### Phase 1C — Recursive Multi-Source & Multimodal Ingestion
+**Status: COMPLETE**
+
+- **Objective:** Bulk-ingest 12 authorized external source roots (competitor screenshot folders, a YouTube-training document corpus, a standalone forensic-video evidence set, and the historical `Documents/Codex` forensic-video archive) with 100% recursive file coverage and 100% disposition coverage — every discovered filesystem item explicitly classified (`INGEST`/`REFERENCE_ONLY`/`EXACT_DUPLICATE`/`NOISE`/`TOOLING`/`HOLD`/etc.), never silently skipped.
+- **Inputs:** 12 user-supplied local folder paths (`BATCH-000001`).
+- **Outputs:** `schemas/inventory/003_multimodal_source_registration.sql`, `schemas/inventory/004_discovered_files_fk_indexes.sql`, `scripts/register_batch.py`, `scripts/source_adapters/batch_rules.py`, `scripts/image_pipeline.py`, `scripts/image_text_recognition.swift`, `scripts/load_ocr_results.py`, `scripts/load_semantic_results.py`, `scripts/load_document_results.py`, `scripts/generate_batch_manifests.py`, 15 new registered datasets (`DS-000002`–`DS-000016`), `data/manifests/batches/BATCH-000001.md` + coverage ledger CSV, per-dataset manifests, `.codex/skills/multimodal-source-ingestion/`.
+- **Allowed:** Discovery, hashing, deduplication (exact + perceptual), image OCR/metadata/semantic inspection, document characterization, channel/video-page screenshot observation registration, classification (content domain, packaging style — kept independent of editing style), database migration, tests.
+- **Prohibited:** Competitor strategy analysis, viral analysis, topic clustering/generation, title/thumbnail/script recommendations, content-gap discovery, ranking, embeddings, RAG, vectors, web research/scraping, inferring editing style from screenshots alone.
+- **Completion criteria:** `TOTAL_DISCOVERED_FILES == TOTAL_FILES_WITH_DISPOSITION` (45,774 = 45,774); every unique competitor/evidence screenshot (122) OCR'd and semantically inspected; all 17 training-corpus documents characterized including the Hook-pair content comparison; every image (including 42,535 Codex files) hashed and perceptually clustered; source integrity re-verified (0 mismatches across 42,678 hashed files); migration/registration tests passing; SQLite integrity clean. Met.
+- **Dependencies:** Phase 1A, Phase 1B.
 
 ---
 

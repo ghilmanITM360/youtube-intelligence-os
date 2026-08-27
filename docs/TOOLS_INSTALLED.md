@@ -81,6 +81,23 @@ These developer tools are separate from the YouTube Intelligence OS application 
 - **Restart Required:** New Codex skill directories are not reloaded by existing sessions; a fresh session is needed to see `scrapling-official` listed.
 - **Notes:** No web target was scraped. Only package/CLI availability, version, `--help` output, and browser-dependency installation were verified, per this task's explicit no-live-scraping boundary.
 
+## Pillow
+
+- **Tool:** Pillow (PIL fork), image handling library for `scripts/image_pipeline.py`.
+- **Repository URL:** https://github.com/python-pillow/Pillow
+- **Purpose:** Layer-1 image-integrity extraction for Phase 1C (dimensions, color mode, format, orientation, EXIF, deterministic difference-hash for perceptual near-duplicate clustering). No system Python or repository script besides `image_pipeline.py` depends on it.
+- **Installed Version:** `11.3.0`, latest at install time via `pip install Pillow` into the isolated venv below.
+- **Installation Scope:** Isolated project-local virtualenv, never the system Python.
+- **Installation Location:** `.venv/` at the repository root (gitignored). The system `python3` (Xcode's bundled 3.9.6) remains untouched.
+- **Installation Method:** `python3 -m venv .venv && .venv/bin/python3 -m pip install Pillow`.
+- **Prerequisites Installed:** None beyond the venv itself.
+- **Files/Directories Created:** `.venv/` (gitignored).
+- **Hooks Installed:** None.
+- **Background Services:** None.
+- **Privacy / Telemetry Notes:** Pillow performs no network calls; it is a pure local image-processing library.
+- **Verification Result:** `.venv/bin/python3 scripts/image_pipeline.py <path>` returns correct width/height/format/dhash for real screenshots and Codex forensic frames; exercised live against all 5,172 unique images discovered in Phase 1C `BATCH-000001` with 0 extraction errors.
+- **Notes:** Only `scripts/image_pipeline.py` needs Pillow and therefore needs `.venv/bin/python3`; every other script in this repository (`inventory_catalog.py`, `register_structured_source.py`, `register_batch.py`) remains stdlib-only and runs under the system `python3`, per the project's dependency-minimization rule.
+
 ## Obsidian Skills
 
 - **Tool:** Obsidian Skills

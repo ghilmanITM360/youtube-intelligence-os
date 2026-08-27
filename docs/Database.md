@@ -129,10 +129,12 @@ Phase 1A (Decision 012) intentionally implemented only the minimal inventory sub
 
 Phase 1B (Decisions 014, 015) added `channels`, `channel_snapshots`, `videos`, `video_snapshots`, `transcripts`, and `field_provenance` (`schemas/inventory/002_structured_registration.sql`) — a deliberately small slice of the §2 conceptual model, scoped to structured *registration*, not analysis. `video_snapshots`/`channel_snapshots` implement the append-only snapshot pattern §2 already anticipated for `video_snapshots`/`channel_snapshots` but had no supporting evidence for; DS-000001's single scrape date (24 Aug 2026) is now that first snapshot.
 
-**IMPLEMENTED** (schema versions 1–2, `data/catalog/youtube_inventory.db`):
-`schema_meta`, `datasets`, `ingestion_runs`, `source_locations`, `source_files`, `file_relationships`, `ingestion_errors`, `channels`, `channel_snapshots`, `videos`, `video_snapshots`, `transcripts`, `field_provenance`.
+Phase 1C (`schemas/inventory/003_multimodal_source_registration.sql`, `004_discovered_files_fk_indexes.sql`) added a batch/discovery layer (`source_batches`, `batch_roots`, `discovered_files`) so every filesystem item encountered during a bulk multi-root ingestion gets an explicit disposition record, plus generic image (`visual_assets`, `visual_observations`), classification (`entity_classifications`, Decision 016), and document (`document_records`) tables — again a minimal slice scoped to registration/observation, not analysis, insight generation, or embeddings.
+
+**IMPLEMENTED** (schema versions 1–4, `data/catalog/youtube_inventory.db`):
+`schema_meta`, `datasets`, `ingestion_runs`, `source_locations`, `source_files`, `file_relationships`, `ingestion_errors`, `channels`, `channel_snapshots`, `videos`, `video_snapshots`, `transcripts`, `field_provenance`, `source_batches`, `batch_roots`, `discovered_files`, `visual_assets`, `visual_observations`, `entity_classifications`, `document_records`.
 
 **PLANNED / NOT IMPLEMENTED** (remaining §2 conceptual entities):
-`competitors`, `documents`/`document_sections`, `screenshots`, `keyframes`, `forensic_evidence`/`forensic_blueprints`, `research_sources`/`research_findings`, `insights`, `topic_clusters`, `content_ideas`/`content_projects`, `scripts`/`thumbnail_concepts`, `content_calendar`, `experiments`, `channel_analytics`, `agent_runs`, `ingestion_jobs`.
+`competitors`, `research_sources`/`research_findings`, `insights`, `topic_clusters`, `content_ideas`/`content_projects`, `scripts`/`thumbnail_concepts`, `content_calendar`, `experiments`, `channel_analytics`, `agent_runs`, `ingestion_jobs`.
 
 The catalog exists to make the provenance model in §1 mechanically enforceable (hash-verified, queryable) rather than only documented, without pulling forward any decision this document defers to Phase 10. It is migration-friendly by design (Decision 012) so its data can move into whatever production database Phase 10 selects, rather than being re-derived from scratch.

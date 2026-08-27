@@ -20,6 +20,10 @@ Thumbs.db
 tmp/
 *.tmp
 
+# Isolated Python environment for optional image-pipeline dependencies
+# (Pillow — Phase 1C). Never the system Python; see docs/TOOLS_INSTALLED.md.
+.venv/
+
 # Generated operational logs; keep documentation and placeholders
 logs/*
 !logs/README.md
@@ -43,3 +47,10 @@ data/catalog/*.db-wal
 data/catalog/*.db-shm
 data/catalog/*.sqlite
 data/catalog/*.sqlite3
+
+# Phase 1C transient handoff file between `register_batch.py discover` and
+# `register` — scratch state, not a durable record (the durable records are
+# data/manifests/batches/*.md and *_FILES.csv, both regenerated from the
+# catalog database by scripts/generate_batch_manifests.py).
+data/manifests/batches/*_state.json
+

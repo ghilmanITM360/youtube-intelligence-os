@@ -2,7 +2,7 @@
 
 A canonical workspace for developing a persistent, evidence-based intelligence system for multiple YouTube channels. The long-term vision includes data inventory, competitor analysis, research, topic discovery, and content-development intelligence, but this repository currently contains only the documentation-first data foundation.
 
-**Current Phase: Phase 0.5 — Foundation Hardening & Source Discovery** (see `docs/Phases.md`). Phase 1 — Controlled Data Entry & Inventory is next, pending explicit authorization.
+**Current Phase: Phase 1C — Recursive Multi-Source & Multimodal Ingestion, COMPLETE** (see `docs/Phases.md`). Phase 2 — Data Classification & Provenance is next, pending explicit authorization.
 
 ## Current purpose
 
