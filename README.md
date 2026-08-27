@@ -2,11 +2,11 @@
 
 A canonical workspace for developing a persistent, evidence-based intelligence system for multiple YouTube channels. The long-term vision includes data inventory, competitor analysis, research, topic discovery, and content-development intelligence, but this repository currently contains only the documentation-first data foundation.
 
-**Current Phase: Phase 1 — Data Entry & Inventory**
+**Current Phase: Phase 0.5 — Foundation Hardening & Source Discovery** (see `docs/Phases.md`). Phase 1 — Controlled Data Entry & Inventory is next, pending explicit authorization.
 
 ## Current purpose
 
-Phase 1 accepts user-supplied datasets, preserves their originals, inventories their contents, records provenance, and prepares for later classification and duplicate detection. It does not ingest or analyze datasets automatically.
+Phase 0.5 hardens the project's planning documentation (`docs/Architecture.md`, `docs/Phases.md`, `docs/Database.md`, `docs/Prompts.md`, `docs/Security.md`, `docs/Error_Handling.md`) and performs read-only discovery of real external source folders (`docs/source-discovery/`) so that Phase 1 begins with real recommendations instead of guesses. Phase 1, once authorized, accepts user-supplied datasets, preserves their originals, inventories their contents, records provenance, and prepares for later classification and duplicate detection. Neither phase ingests or analyzes datasets automatically.
 
 ## Data layers
 

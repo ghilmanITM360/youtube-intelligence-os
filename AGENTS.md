@@ -13,7 +13,7 @@
 9. Detect duplication before treating two datasets as independent evidence.
 10. Do not prematurely introduce infrastructure.
 11. Build only the phase explicitly requested.
-12. The current phase is **Phase 1 — Data Entry & Inventory**.
+12. The current phase is **Phase 0.5 — Foundation Hardening & Source Discovery** (see `docs/Phases.md`). Phase 1 — Controlled Data Entry & Inventory is next, pending explicit authorization; it does not begin automatically when Phase 0.5 completes.
 13. The YouTube API is not part of the planned competitor-data workflow unless the user explicitly changes this requirement.
 14. Competitor data will primarily be supplied by the user.
 15. Future live web research will complement supplied internal data, not replace it.

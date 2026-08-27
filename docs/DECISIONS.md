@@ -90,3 +90,35 @@ There must be only one authoritative working repository:
 `/Users/ghilmanislam360/Documents/youtube-intelligence-os`
 
 **Reason:** The long-term YouTube Intelligence System requires one stable, easy-to-find location independent of Codex-generated task folders or dated workspaces.
+
+## Decision 010 — External Source Folders Are Valid Ingestion Inputs
+
+**Status:** Accepted
+
+The system may receive a local folder path rather than uploaded/copied files, e.g.:
+
+```text
+Ingest this folder:
+/path/to/source-folder
+```
+
+The first operation on any such folder must be read-only discovery. The system must inspect → inventory → hash → classify → identify logical datasets → propose ingestion, before copying or transforming any source material. See `docs/Architecture.md` §5 for the conceptual flow and `docs/source-discovery/` for the Phase 0.5 demonstration of this procedure against four real folders.
+
+Original external folders remain source evidence and must not be modified, moved, renamed, or reorganized automatically. A folder is not assumed to be exactly one logical dataset — it may contain several, or a dataset may span more than one folder.
+
+**Reason:** The user works from local folders that already hold real evidence (screenshots, exports, analysis documents); the system must be able to reason about that material safely before any of it becomes part of the repository.
+
+## Decision 011 — Scrapling Is External Research Tooling
+
+**Status:** Accepted
+
+Scrapling (`docs/TOOLS_INSTALLED.md`) may later support explicitly authorized web-research/data-acquisition tasks. It is developer/research tooling, installed in an isolated user-level environment, and it does not determine:
+
+- the production database or data model (`docs/Database.md`);
+- RAG/retrieval architecture;
+- the memory system;
+- competitor-ingestion policy.
+
+No automated scraping is enabled during Phase 0.5 or Phase 1. Live scraping is not authorized before Phase 8 (`docs/Phases.md`), and even then only under the boundaries in `docs/Security.md` §6, including mandatory use of `--ai-targeted` for any AI-facing extraction (`docs/Security.md` §5, `docs/TOOLS_INSTALLED.md`).
+
+**Reason:** Scrapling was added as a convenience research tool per this task's request, but the project's existing rule that external tooling never determines production architecture (`AGENTS.md`, External tool boundaries) applies to it exactly as it applies to every other installed tool.
