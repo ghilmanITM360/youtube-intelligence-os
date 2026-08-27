@@ -240,3 +240,25 @@ A channel or video's subject-matter niche (`content_domain`, `sub_niche`, `targe
 Implemented as independent columns on `entity_classifications` (`schemas/inventory/003_multimodal_source_registration.sql`): `content_domain`, `sub_niche`, `target_audience`, `content_format`, `packaging_style`, `thumbnail_style`, `presenter_style`, `editing_style` — the last defaulting to `UNKNOWN` and never populated from screenshot-only evidence during Phase 1C.
 
 **Reason:** Phase 1C ingested 8 competitor folders that are channel/video-page screenshots only, with no actual video frames — a real, immediate case where niche is screenshot-evidenced but editing style is not, and where collapsing the two would have silently fabricated a production-style claim with no supporting evidence.
+
+## Decision 017 — Canonical GitHub Remote
+
+**Status:** Accepted
+
+The local canonical repository:
+
+`/Users/ghilmanislam360/Documents/youtube-intelligence-os`
+
+now has a canonical GitHub remote:
+
+`ghilmanITM360/youtube-intelligence-os` — https://github.com/ghilmanITM360/youtube-intelligence-os
+
+- **Visibility:** PRIVATE
+- **Default branch:** `main`
+- **`origin`** points at this repository; `main` tracks `origin/main`.
+
+GitHub stores the durable project layer only: code, schema migrations, scripts, tests, documentation, database-generated manifests, and project skills. GitHub does **not** store the raw ingested corpus or the operational SQLite catalog (`data/catalog/youtube_inventory.db`) — both remain local-only per Decision 013. No credentials, tokens, or other secrets are recorded in this decision or anywhere else in the repository.
+
+The local repository remains the working copy; GitHub is a remote backup/collaboration target, not a second source of truth.
+
+**Reason:** Phase 1C's ingestion work is now substantial enough (16 datasets, 45,774 discovered files, a tested ingestion pipeline) that it needs off-machine durability and a reviewable history, without changing where raw evidence or the operational database actually live.
