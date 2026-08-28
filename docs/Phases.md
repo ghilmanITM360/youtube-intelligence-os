@@ -2,7 +2,7 @@
 
 A phased roadmap for the YouTube Intelligence OS. Names and boundaries here are directional, not immutable — a later phase may split, merge, or reorder these if real evidence demands it, subject to an explicit decision recorded in `docs/DECISIONS.md`.
 
-Database, RAG/vector-search, MCP servers, and agent-workflow infrastructure are **not** Phase 0.5 or Phase 1 work anywhere in this roadmap. They first appear as design work in Phase 10–11, and even then, only after real datasets justify specific choices (Decision 004).
+The local SQLite inventory catalog is a Phase 1 exception (Decision 012). Final production database, RAG/vector-search, MCP servers, and agent-workflow infrastructure first appear as design work in Phase 10–11, only after real datasets justify specific choices (Decision 004).
 
 ---
 
@@ -20,7 +20,7 @@ Database, RAG/vector-search, MCP servers, and agent-workflow infrastructure are 
 ---
 
 ### Phase 0.5 — Foundation Hardening & Source Discovery
-**Status: CURRENT**
+**Status: COMPLETED**
 
 - **Objective:** Add Scrapling as external research tooling; write the architecture/planning documents this roadmap depends on; deeply inspect real external source folders without ingesting them; produce recommendations for controlled ingestion.
 - **Inputs:** Four external source folders (read-only); the Scrapling upstream repository.
@@ -68,6 +68,19 @@ Database, RAG/vector-search, MCP servers, and agent-workflow infrastructure are 
 - **Prohibited:** Competitor strategy analysis, viral analysis, topic clustering/generation, title/thumbnail/script recommendations, content-gap discovery, ranking, embeddings, RAG, vectors, web research/scraping, inferring editing style from screenshots alone.
 - **Completion criteria:** `TOTAL_DISCOVERED_FILES == TOTAL_FILES_WITH_DISPOSITION` (45,774 = 45,774); every unique competitor/evidence screenshot (122) OCR'd and semantically inspected; all 17 training-corpus documents characterized including the Hook-pair content comparison; every image (including 42,535 Codex files) hashed and perceptually clustered; source integrity re-verified (0 mismatches across 42,678 hashed files); migration/registration tests passing; SQLite integrity clean. Met.
 - **Dependencies:** Phase 1A, Phase 1B.
+
+---
+
+### Phase 1D — Controlled Apify YouTube Acquisition
+**Status: COMPLETE**
+
+- **Objective:** Add one production-safe, bounded adapter for `streamers/youtube-scraper` and prove it with the explicitly authorized Dr. Aliza Wright competitor pilot.
+- **Inputs:** DS-000006 screenshot evidence; exact handle `@Dr.AlizaWrightAdvice`; current Actor schema/pricing; explicit $0.50 cap.
+- **Outputs:** schema v5–v6, `scripts/apify_youtube_ingest.py`, offline fixtures/tests, Apify run/cost manifests, a Tier A channel linked to DS-000006, append-only channel/video snapshots, transcript references, thumbnail evidence, and field provenance.
+- **Allowed:** One explicitly authorized competitor channel; regular-video metadata; public English captions; bounded Actor execution; identity reconciliation; normalized registration; reporting and verification.
+- **Prohibited:** Remaining-competitor scraping, strategy analysis, topic/title/thumbnail/script recommendations, Shorts/livestream acquisition, AI add-ons, uncontrolled crawling, secret persistence, or name-only identity merges.
+- **Completion criteria:** Actor SUCCEEDED; expected catalog count reconciled; exact finalized cost below cap; no duplicates/malformed records/channel conflicts; schema/tests/integrity/foreign keys clean; DS-000006 raw screenshot evidence unchanged. Met for run `bD7JBsuj7LK5Wt2rk` (32 videos, exact cost $0.128).
+- **Dependencies:** Phase 1C, Decision 018, explicit user authorization.
 
 ---
 

@@ -40,6 +40,8 @@ For each class: severity, retryability, whether processing continues, whether hu
 | `ResearchFailure` | Medium | Yes | Continue for other sources | If repeated | A single failed web fetch should not invalidate an entire research pass. |
 | `WebFetchFailure` | Medium | Yes | Continue | If repeated | Network/service failures are expected and must not be conflated with data corruption. |
 | `RateLimit` | Low | Yes (backoff) | Pause, resume | No, unless persistent | Expected operational condition under §6 of `docs/Security.md`. |
+| `CostCapExceeded` | Critical | No | Halt before Actor invocation when planned cost exceeds the approved cap; halt ingestion if finalized billing exceeds it | Yes | Paid acquisition must never silently exceed the explicit ceiling. |
+| `AmbiguousIdentity` | High | No | Halt channel merge/registration | Yes | Similar names alone cannot prove that screenshot evidence and a live channel are the same competitor. |
 | `PromptInjectionRisk` | Critical | No | Halt the offending prompt/step | Yes | Detected embedded instructions in fetched/scraped content must never be silently executed or silently discarded — they must be surfaced (`docs/Security.md` §5, `docs/Prompts.md` §3). |
 | `ToolFailure` | Medium | Depends on tool | Continue if tool is non-essential to the step | If it recurs | External tool failures (`docs/TOOLS_INSTALLED.md`) must not be conflated with application-data errors. |
 | `PartialIngestion` | High | No | Halt, report exactly what completed | Yes | A half-copied dataset must never be recorded as fully ingested. |

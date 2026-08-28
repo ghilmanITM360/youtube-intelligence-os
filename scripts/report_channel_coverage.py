@@ -9,19 +9,20 @@ inference into a fact):
 
   Tier A — REGISTERED_CHANNEL: a real row in the `channels` table (Decision 015
            structured registration), with videos/snapshots/transcripts linked to it
-           by foreign key. Currently only the channels registered from DS-000001.
+           by foreign key. A linked screenshot dataset remains visible as evidence.
   Tier B — DATASET_EVIDENCED_COMPETITOR: no `channels` row exists. The "channel" is
            only known because one dataset's own recorded `dataset_name` literally
            says "<Name> — Competitor Channel Screenshots" and it carries screenshot
            evidence (`entity_classifications`, `visual_assets`). No transcript/video
-           identity has ever been registered for these — that is reported explicitly,
-           not glossed over.
+           identity has been registered for these — once a strong identity link exists,
+           that dataset is reported with Tier A instead of duplicated here.
 
 Usage:
     python3 scripts/report_channel_coverage.py
     python3 scripts/report_channel_coverage.py --json
 """
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -34,38 +35,88 @@ COMPETITOR_SUFFIX = " — Competitor Channel Screenshots"
 
 def _tier_a_registered_channels(conn):
     channels = conn.execute(
-        "SELECT channel_id, display_name, handle, created_from_dataset_id FROM channels ORDER BY channel_id;"
+        "SELECT channel_id, youtube_channel_id, display_name, handle, channel_url, "
+        "created_from_dataset_id FROM channels ORDER BY channel_id;"
     ).fetchall()
     out = []
     for ch in channels:
-        transcripts = conn.execute(
-            "SELECT COUNT(*) FROM transcripts t JOIN videos v ON v.video_id = t.video_id "
-            "WHERE v.channel_id = ? AND t.availability_status = 'AVAILABLE';",
+        transcript_rows = conn.execute(
+            "SELECT t.availability_status, COUNT(*) c FROM transcripts t "
+            "JOIN videos v ON v.video_id = t.video_id WHERE v.channel_id = ? "
+            "GROUP BY t.availability_status;",
             (ch["channel_id"],),
-        ).fetchone()[0]
+        ).fetchall()
+        transcripts = {row["availability_status"]: row["c"] for row in transcript_rows}
         videos = conn.execute("SELECT COUNT(*) FROM videos WHERE channel_id = ?;", (ch["channel_id"],)).fetchone()[0]
+        dataset_rows = conn.execute(
+            "SELECT dataset_id FROM channel_dataset_links WHERE channel_id=? UNION SELECT ?;",
+            (ch["channel_id"], ch["created_from_dataset_id"]),
+        ).fetchall()
+        dataset_ids = [row["dataset_id"] for row in dataset_rows]
+        placeholders = ",".join("?" for _ in dataset_ids)
         visual_assets = conn.execute(
-            "SELECT COUNT(*) FROM visual_assets WHERE dataset_id = ?;", (ch["created_from_dataset_id"],)
+            "SELECT COUNT(*) FROM visual_assets WHERE dataset_id IN ({});".format(placeholders), dataset_ids
         ).fetchone()[0]
+        semantic_rows = conn.execute(
+            "SELECT vo.structured_json FROM visual_observations vo "
+            "JOIN visual_assets va ON va.visual_asset_id=vo.visual_asset_id "
+            "WHERE va.dataset_id IN ({}) AND vo.observation_type='SEMANTIC_INSPECTION';".format(placeholders),
+            dataset_ids,
+        ).fetchall()
+        packaging = False
+        for row in semantic_rows:
+            try:
+                value = json.loads(row["structured_json"] or "null")
+            except json.JSONDecodeError:
+                value = None
+            packaging = packaging or bool(isinstance(value, dict) and value.get("visual_packaging_pattern_notes"))
+        classifications = conn.execute(
+            "SELECT content_domain, editing_style FROM entity_classifications "
+            "WHERE dataset_id IN ({});".format(placeholders), dataset_ids,
+        ).fetchall()
+        editing_styles = {row["editing_style"] for row in classifications if row["editing_style"] not in (None, "UNKNOWN")}
+        newest_snapshot = conn.execute(
+            "SELECT MAX(observed_at) FROM ("
+            "SELECT observed_at FROM channel_snapshots WHERE channel_id=? UNION ALL "
+            "SELECT vs.observed_at FROM video_snapshots vs JOIN videos v ON v.video_id=vs.video_id WHERE v.channel_id=?"
+            ");", (ch["channel_id"], ch["channel_id"]),
+        ).fetchone()[0]
+        has_apify = conn.execute(
+            "SELECT EXISTS(SELECT 1 FROM apify_source_runs WHERE dataset_id IN ({}));".format(placeholders),
+            dataset_ids,
+        ).fetchone()[0]
+        sources = []
+        if visual_assets:
+            sources.append("SCREENSHOT")
+        if has_apify:
+            sources.append("APIFY")
         out.append({
             "tier": "REGISTERED_CHANNEL",
             "channel_id": ch["channel_id"],
+            "youtube_channel_id": ch["youtube_channel_id"],
             "display_name": ch["display_name"],
             "handle": ch["handle"],
-            "dataset_id": ch["created_from_dataset_id"],
+            "channel_url": ch["channel_url"],
+            "dataset_ids": dataset_ids,
             "videos": videos,
-            "transcripts_available": transcripts,
+            "transcripts_available": transcripts.get("AVAILABLE", 0),
+            "transcripts_unavailable": transcripts.get("UNAVAILABLE", 0),
             "screenshot_evidence_count": visual_assets,
-            "has_packaging_evidence": False,
-            "has_editing_evidence": False,
-            "content_domain": None,
+            "has_packaging_evidence": packaging,
+            "has_editing_evidence": bool(editing_styles),
+            "editing_style": ", ".join(sorted(editing_styles)) if editing_styles else "UNKNOWN",
+            "content_domain": next((row["content_domain"] for row in classifications if row["content_domain"]), None),
+            "newest_structured_snapshot": newest_snapshot,
+            "evidence_sources": sources,
         })
     return out
 
 
 def _tier_b_dataset_evidenced_competitors(conn):
     datasets = conn.execute(
-        "SELECT dataset_id, dataset_name FROM datasets WHERE dataset_name LIKE ? ORDER BY dataset_id;",
+        "SELECT dataset_id, dataset_name FROM datasets WHERE dataset_name LIKE ? "
+        "AND NOT EXISTS (SELECT 1 FROM channel_dataset_links cdl WHERE cdl.dataset_id=datasets.dataset_id) "
+        "ORDER BY dataset_id;",
         ("%" + COMPETITOR_SUFFIX.strip() + "%",),
     ).fetchall()
     out = []
@@ -89,10 +140,14 @@ def _tier_b_dataset_evidenced_competitors(conn):
             "dataset_id": d["dataset_id"],
             "videos": None,
             "transcripts_available": transcripts,
+            "transcripts_unavailable": 0,
             "screenshot_evidence_count": visual_assets,
             "has_packaging_evidence": bool(cls and cls["packaging_style"]),
             "has_editing_evidence": bool(cls and cls["editing_style"] not in (None, "UNKNOWN")),
+            "editing_style": cls["editing_style"] if cls else "UNKNOWN",
             "content_domain": cls["content_domain"] if cls else None,
+            "newest_structured_snapshot": None,
+            "evidence_sources": ["SCREENSHOT"] if visual_assets else [],
         })
     return out
 
@@ -128,8 +183,13 @@ def build_report(conn):
     lines.append("## Tier A — Registered channels (`channels` table, has video/transcript identity)")
     lines.append("")
     lines.extend(rc.md_table(
-        ["Channel ID", "Display Name", "Handle", "Dataset", "Videos", "Transcripts Available"],
-        [(e["channel_id"], e["display_name"], e["handle"], e["dataset_id"], e["videos"], e["transcripts_available"])
+        ["Channel ID", "YouTube ID", "Display Name", "Handle", "Datasets", "Videos",
+         "Transcripts A/U", "Packaging", "Editing Style", "Newest Snapshot", "Sources"],
+        [(e["channel_id"], e["youtube_channel_id"], e["display_name"], e["handle"],
+          ", ".join(e["dataset_ids"]), e["videos"],
+          "{}/{}".format(e["transcripts_available"], e["transcripts_unavailable"]),
+          "YES" if e["has_packaging_evidence"] else "no", e["editing_style"],
+          e["newest_structured_snapshot"], ", ".join(e["evidence_sources"]))
          for e in tier_a]))
     lines.append("")
     lines.append("## Tier B — Dataset-evidenced competitor channels (screenshot evidence only, "

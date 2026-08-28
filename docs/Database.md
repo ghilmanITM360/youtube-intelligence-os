@@ -1,8 +1,8 @@
 # Database
 
-## DATABASE ARCHITECTURE — NOT YET IMPLEMENTED
+## FINAL DATABASE ARCHITECTURE — NOT YET IMPLEMENTED
 
-Nothing in this document is built. No table exists, no migration has been written, no database engine has been chosen or initialized. Final technology selection (relational, document, vector, or a mix) happens only in Phase 10 (`docs/Phases.md`), after real ingested datasets — starting with the ones characterized in `docs/source-discovery/`, section by section — have shown what shape the data actually needs. This document exists so that shape can be reasoned about now, without locking it in early (Decision 004).
+The Phase 1 local SQLite inventory/catalog is implemented through schema v6 (see §5). It is deliberately not the final production intelligence database. Final technology selection (relational, document, vector, or a mix) happens only in Phase 10 (`docs/Phases.md`), after real ingested datasets have shown what shape the data actually needs (Decision 004).
 
 Everything below is a **conceptual entity list**, not a schema. Entities may be renamed, merged, split, or dropped once real data volume and query patterns are known.
 
@@ -131,8 +131,10 @@ Phase 1B (Decisions 014, 015) added `channels`, `channel_snapshots`, `videos`, `
 
 Phase 1C (`schemas/inventory/003_multimodal_source_registration.sql`, `004_discovered_files_fk_indexes.sql`) added a batch/discovery layer (`source_batches`, `batch_roots`, `discovered_files`) so every filesystem item encountered during a bulk multi-root ingestion gets an explicit disposition record, plus generic image (`visual_assets`, `visual_observations`), classification (`entity_classifications`, Decision 016), and document (`document_records`) tables — again a minimal slice scoped to registration/observation, not analysis, insight generation, or embeddings.
 
-**IMPLEMENTED** (schema versions 1–4, `data/catalog/youtube_inventory.db`):
-`schema_meta`, `datasets`, `ingestion_runs`, `source_locations`, `source_files`, `file_relationships`, `ingestion_errors`, `channels`, `channel_snapshots`, `videos`, `video_snapshots`, `transcripts`, `field_provenance`, `source_batches`, `batch_roots`, `discovered_files`, `visual_assets`, `visual_observations`, `entity_classifications`, `document_records`.
+Phase 1D (`005_apify_youtube_acquisition.sql`, `006_apify_cost_observations.sql`) reuses those stable identities and append-only snapshots for bounded live acquisition. It adds Apify source-run/record provenance, channel-to-dataset identity links, snapshot descriptions/types, transcript source/reference metadata, thumbnail URL evidence, and append-only billing observations. Full transcript text remains in immutable local raw text files referenced by the catalog; raw Actor result payloads remain in the identified Apify dataset and are not committed.
+
+**IMPLEMENTED** (schema versions 1–6, `data/catalog/youtube_inventory.db`):
+`schema_meta`, `datasets`, `ingestion_runs`, `source_locations`, `source_files`, `file_relationships`, `ingestion_errors`, `channels`, `channel_snapshots`, `videos`, `video_snapshots`, `transcripts`, `field_provenance`, `source_batches`, `batch_roots`, `discovered_files`, `visual_assets`, `visual_observations`, `entity_classifications`, `document_records`, `apify_source_runs`, `channel_dataset_links`, `apify_result_records`, `thumbnail_evidence`, `apify_run_cost_observations`.
 
 **PLANNED / NOT IMPLEMENTED** (remaining §2 conceptual entities):
 `competitors`, `research_sources`/`research_findings`, `insights`, `topic_clusters`, `content_ideas`/`content_projects`, `scripts`/`thumbnail_concepts`, `content_calendar`, `experiments`, `channel_analytics`, `agent_runs`, `ingestion_jobs`.

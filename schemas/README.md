@@ -1,3 +1,3 @@
 # Schemas
 
-This directory is reserved for schemas justified by real dataset inventories. No database, vector-store, API, or application schema has been selected or fabricated during Phase 1.
+`schemas/inventory/` contains additive migrations for the local Phase 1 SQLite inventory/catalog, currently v6. This catalog is justified by real datasets and is not the final production database, vector store, or retrieval architecture.

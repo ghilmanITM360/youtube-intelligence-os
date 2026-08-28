@@ -17,7 +17,7 @@ Both modes are built from the same query results in one run, so they never disag
 | Script | Answers |
 |---|---|
 | `scripts/report_corpus_status.py` | What data has arrived so far? What is still missing? |
-| `scripts/report_channel_coverage.py` | Which channels are in the system? Which have scripts/transcripts? Which only have screenshots? Which have packaging-style / editing-style evidence? |
+| `scripts/report_channel_coverage.py` | Which channels are in the system? Which have scripts/transcripts? Which only have screenshots? Which have packaging/editing evidence? What is each channel's newest structured snapshot and which sources support it? |
 | `scripts/report_dataset_matrix.py` | Which datasets are registered? Which are forensic-video datasets? Which are health/finance/general-knowledge? |
 
 ## Question → command map
@@ -37,6 +37,10 @@ Both modes are built from the same query results in one run, so they never disag
 - **Which channels have editing-style evidence?**
   `python3 scripts/report_channel_coverage.py` — Editing Evidence column (Decision 016: requires real
   moving-image/frame evidence, never inferred from a screenshot).
+- **What is a channel's newest structured snapshot?**
+  `python3 scripts/report_channel_coverage.py` — Newest Snapshot column.
+- **Which evidence came from screenshots vs Apify?**
+  `python3 scripts/report_channel_coverage.py` — Sources column; packaging evidence remains screenshot-derived, while video/transcript/snapshot fields carry Apify provenance.
 - **Which datasets are forensic-video datasets?**
   `python3 scripts/report_dataset_matrix.py` — "Forensic Video" column / Forensic-video datasets section.
 - **Which datasets are health niche, finance niche, or general YouTube knowledge?**
@@ -80,11 +84,12 @@ so a reader can tell *what kind* of evidence backs a claim:
 
 - **Tier A — `REGISTERED_CHANNEL`**: a real row in the `channels` table, with `videos`/
   `transcripts` linked to it by foreign key.
-- **Tier B — `DATASET_EVIDENCED_COMPETITOR`**: no `channels` row exists. The display name is
+- **Tier B — `DATASET_EVIDENCED_COMPETITOR`**: no strongly linked `channels` row exists. The display name is
   derived by stripping the literal `" — Competitor Channel Screenshots"` suffix off that
   dataset's own recorded `dataset_name` — it is a label of convenience for this report, not a
   registered channel identity (no `channel_id`, no YouTube channel ID, no video/transcript
-  linkage). Never merge Tier A and Tier B rows or treat a Tier B name as if it had a `channel_id`.
+  linkage). Never merge on the name alone. Once exact handle/URL/channel-ID evidence creates a
+  `channel_dataset_links` relationship, the same dataset is shown with Tier A and suppressed from Tier B.
 
 ## Agent query example
 

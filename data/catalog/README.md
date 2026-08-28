@@ -2,12 +2,12 @@
 
 ## What this is
 
-`data/catalog/youtube_inventory.db` is a local SQLite database that acts as the Phase 1 machine-readable inventory/catalog for the YouTube Intelligence OS (Decision 012). Phase 1A (schema v1) indexes datasets, ingestion runs, source locations, physical files, archive members, hashes, and file relationships. Phase 1B (schema v2, Decisions 014–015) adds structured registration — channels, channel/video snapshots, transcript references, and field-level provenance. Phase 1C (schema v3–v4) adds a batch/discovery layer for bulk multi-root ingestion — every discovered filesystem item gets an explicit disposition record — plus image (OCR + native semantic inspection + perceptual hashing/clustering), classification (Decision 016), and document-characterization tables — so the project can answer "what data do we own, where did it come from, what values does it contain, and is it still trustworthy" by query instead of by re-reading Markdown or a workbook.
+`data/catalog/youtube_inventory.db` is a local SQLite database that acts as the Phase 1 machine-readable inventory/catalog for the YouTube Intelligence OS (Decision 012). Phase 1A (schema v1) indexes datasets, ingestion runs, source locations, physical files, archive members, hashes, and file relationships. Phase 1B (schema v2, Decisions 014–015) adds structured registration. Phase 1C (schema v3–v4) adds recursive multimodal registration. Phase 1D (schema v5–v6, Decision 018) adds bounded Apify run/result/cost provenance, channel identity links, description/type snapshots, transcript references, and thumbnail evidence.
 
 ## What this is not
 
 - Not the final production intelligence database. Final PostgreSQL/Supabase/vector/RAG architecture is undecided until Phase 10 (Decision 004, `docs/Database.md` §5).
-- Not a document warehouse. It never stores transcript bodies, video descriptions, raw XLSX/ZIP bytes, images, PDFs, or other BLOB payloads — only metadata, hashes, structured field values, relationships, and status. Transcript text stays in the canonical ZIP archive; `transcripts` rows carry only availability/caption metadata and a pointer (`archive_member_file_id`) back to it.
+- Not a raw-payload warehouse. It never stores transcript bodies, raw Actor result payloads, XLSX/ZIP bytes, images, PDFs, or other BLOB payloads. Phase 1D video descriptions are normalized snapshot text; transcript bodies stay in canonical ZIP members or immutable local raw text files referenced by `transcripts.canonical_reference` and `source_files` hashes.
 - Not a replacement for the human-readable manifest in `data/manifests/`. The manifest is the durable ingestion record; the catalog is the fast index over the same facts.
 - Not authoritative over the raw files. Raw evidence in `data/raw/` remains primary; the catalog describes it.
 - Not a competitor-intelligence or content-analysis store. `video_snapshots`/`channel_snapshots` hold source-reported and source-computed metrics only — no strategy analysis, topic generation, or scoring (Phase 1B/1C boundary, `docs/Phases.md`). `visual_observations`/`entity_classifications` hold descriptive extraction (what a screenshot shows) only — never a strategic recommendation.
@@ -27,12 +27,13 @@ Decision 013: the operational database is regenerable from source material alrea
 3. Run `python3 scripts/inventory_catalog.py verify --dataset-id <id>` to confirm the rebuilt catalog's hashes match the canonical files on disk.
 4. Run `python3 scripts/register_structured_source.py register --dataset-id <id>` to re-derive channels/videos/snapshots/transcripts/provenance from the same canonical files, then `python3 scripts/register_structured_source.py verify --dataset-id <id>` to confirm agreement.
 5. For Phase 1C's `BATCH-000001` (DS-000002–DS-000016), re-run `python3 scripts/register_batch.py discover`, `register --batch-id BATCH-000001`, and `images --batch-id BATCH-000001` against the same 12 source roots — this rebuilds `discovered_files`/`visual_assets` from scratch. OCR and native semantic-inspection observations are not regenerable purely from the catalog (they came from an on-device Vision pass and an AI-agent visual inspection pass respectively); their outputs are preserved in `data/manifests/DS-*.md` and `data/manifests/batches/BATCH-000001_FILES.csv` for reference even though the raw observation rows themselves would need to be re-run to fully repopulate.
+6. For Phase 1D, use the sanitized run manifests in `data/manifests/apify/` plus canonical local transcript files under `data/raw/competitors/<dataset>/apify/<run>/`; do not re-run an Actor merely to rebuild a local catalog without explicit cost authorization.
 
 No fact recorded only inside the `.db` and nowhere else is currently load-bearing: every dataset's identity, source path, and file hashes are also written into its `data/manifests/<id>.md` file at ingestion/registration time.
 
 ## Schema version
 
-Current: `4` (`001_initial.sql` + `002_structured_registration.sql` + `003_multimodal_source_registration.sql` + `004_discovered_files_fk_indexes.sql`, tracked in the `schema_meta` table). Later schema changes must ship as a new additive `NNN_*.sql` file, never an edit to a file that has already shipped.
+Current: `6` (`001_initial.sql` through `006_apify_cost_observations.sql`, tracked in `schema_meta`). Later schema changes must ship as a new additive `NNN_*.sql` file, never an edit to a file that has already shipped.
 
 ## Raw evidence remains authoritative
 

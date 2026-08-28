@@ -10,9 +10,9 @@ See `docs/Phases.md` for how these arrive over time, `docs/Database.md` for the 
 
 ## 1. What exists today — CURRENT
 
-- A documentation-first repository at the canonical path (Decision 009), with no application code.
-- A directory layout (`data/raw/inbox`, `data/raw`, `data/extracted`, `data/normalized`, `data/intelligence`, `data/manifests`) that names the intended data layers but holds no real ingested data.
-- `docs/DATA_CLASSIFICATION.md` (semantic classes A–H) and `docs/DATA_INVENTORY.md` (planned manifest fields) as the only classification/inventory mechanism — both Markdown, no database.
+- A documentation-first repository at the canonical path (Decision 009) with small stdlib ingestion, registration, and read-only reporting scripts.
+- A populated local raw/manifests layer and ignored SQLite inventory catalog (`data/catalog/youtube_inventory.db`, schema v6); this is not the final production database.
+- Structured channels/videos, append-only snapshots, transcript references, screenshot/multimodal evidence, field provenance, and bounded Apify source-run provenance through Phase 1D.
 - External developer/agent tooling (Graphify, Ponytail, Claude-Mem, Obsidian skills, Scrapling) recorded in `docs/TOOLS_INSTALLED.md`. None of it is part of the application.
 
 Everything else in this document is PLANNED or FUTURE / UNDECIDED.
@@ -87,7 +87,7 @@ GLOBAL KNOWLEDGE holds material that is true regardless of which channel uses it
 - **Agent memory** — session or cross-session memory used by an agent while working. Auxiliary only, same rule as external tools.
 - **Future structured database** — where inventory, provenance, and evidence records eventually live once real datasets justify a schema. Not chosen yet (`docs/Database.md`).
 - **Future semantic retrieval** — embeddings/RAG over normalized or intelligence-layer content, for stages like pattern discovery or topic hypothesis generation. Not chosen yet, and explicitly out of scope for Phase 0.5 and Phase 1.
-- **Future web acquisition** — live scraping/research tooling (candidate: Scrapling), used only for the WEB RESEARCH / VALIDATION stage, only under explicit future authorization (Decision 011).
+- **Future web research** — Scrapling remains reserved for the WEB RESEARCH / VALIDATION stage. The separately authorized, bounded Apify competitor-acquisition adapter is limited to structured Phase 1D registration (Decision 018), not research or analysis.
 
 No final database, vector-search, or web-acquisition architecture is chosen in this document. That choice is deferred until real ingested datasets make the tradeoffs concrete (Decision 004).
 

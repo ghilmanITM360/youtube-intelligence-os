@@ -30,6 +30,8 @@ Recommended Action      — e.g. rotate the credential, exclude the file from an
 
 No secret value discovered during Phase 0.5 source inspection is reproduced anywhere in this repository's documentation.
 
+For Apify acquisition, `APIFY_TOKEN` is read only from the process environment and sent in an HTTP Authorization header. It must never appear in a URL, CLI argument, stdout/stderr produced by the adapter, SQLite, manifests, project logs, tests, fixtures, documentation, or Git. Status checks report only `APIFY_TOKEN PRESENT` or `APIFY_TOKEN MISSING`. Actor input persistence uses an explicit allowlist that excludes authentication fields.
+
 ## 3. External tool boundary
 
 Graphify, Ponytail, Claude-Mem, Obsidian skills, and Scrapling (`docs/TOOLS_INSTALLED.md`) are developer/agent convenience tools. None of them may override the rules in this document or in `AGENTS.md`. Specifically: their internal caches, graphs, plugin configuration, or hook behavior never become project evidence, and none of them determines the production data model or architecture (`docs/Architecture.md` §4).
@@ -61,6 +63,8 @@ Future scraping/research activity (Phase 8 onward, `docs/Phases.md`) must:
 - Avoid uncontrolled or unbounded crawling — a target and scope must be explicit.
 - Rate-limit responsibly to avoid degrading the target service.
 - Preserve source URLs and retrieval timestamps for every fetched page (`docs/Database.md`, `research_sources`).
+
+Decision 018 adds one narrow exception: explicitly authorized, cost-bounded Apify competitor-channel acquisition may occur in Phase 1D for structured registration only. Each run requires an exact target, current pricing, a hard result/cost ceiling, no optional paid add-ons unless separately authorized, and full source/run/field provenance. It does not authorize strategy analysis, remaining-competitor scraping, or general web research.
 
 No live scraping of YouTube, competitors, social networks, authenticated services, or any production site occurred during this Phase 0.5 task. Verification of Scrapling was limited to package/CLI availability, version, `--help` output, and browser-dependency installation (`docs/TOOLS_INSTALLED.md`).
 

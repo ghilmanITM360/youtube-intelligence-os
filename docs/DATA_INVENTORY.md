@@ -51,7 +51,7 @@ Phase 1A (Decision 012) adds a local SQLite catalog (`data/catalog/youtube_inven
 | DS-000003 | Doctor Thomas — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000003.md`](../data/manifests/DS-000003.md) |
 | DS-000004 | Dr. Adewale — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000004.md`](../data/manifests/DS-000004.md) |
 | DS-000005 | Dr. Okoro — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000005.md`](../data/manifests/DS-000005.md) |
-| DS-000006 | Dr. Aliza Wright / Advice — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000006.md`](../data/manifests/DS-000006.md) |
+| DS-000006 | Dr. Aliza Wright / Advice — Competitor Channel Screenshots + linked Apify structured acquisition | BATCH-000001 + APIFYRUN-000001 | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000006.md`](../data/manifests/DS-000006.md) |
 | DS-000007 | Dr. Waterling — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000007.md`](../data/manifests/DS-000007.md) |
 | DS-000008 | The Senior Health Podcast — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000008.md`](../data/manifests/DS-000008.md) |
 | DS-000009 | Senior Health Hub — Competitor Channel Screenshots | BATCH-000001 | B — Competitor Evidence | INGESTED | [`data/manifests/DS-000009.md`](../data/manifests/DS-000009.md) |

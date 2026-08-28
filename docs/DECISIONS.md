@@ -262,3 +262,15 @@ GitHub stores the durable project layer only: code, schema migrations, scripts, 
 The local repository remains the working copy; GitHub is a remote backup/collaboration target, not a second source of truth.
 
 **Reason:** Phase 1C's ingestion work is now substantial enough (16 datasets, 45,774 discovered files, a tested ingestion pipeline) that it needs off-machine durability and a reviewable history, without changing where raw evidence or the operational database actually live.
+
+## Decision 018 — Controlled Apify YouTube Acquisition
+
+**Status:** Accepted
+
+`streamers/youtube-scraper` is the approved provider for explicitly authorized competitor-channel acquisition. This is a narrow Phase 1D registration workflow, not competitor strategy analysis or uncontrolled web research.
+
+Each run must be bounded before execution by current event pricing and a user-approved cost cap; omit Shorts, livestreams, date filtering, and paid AI add-ons unless separately authorized. Actor/run/build metadata, sanitized input, result counts, exact finalized cost, channel URL, transcript configuration, and field-level provenance are recorded. `APIFY_TOKEN` is environment-only and is never printed or persisted.
+
+Platform metrics remain append-only snapshots. Existing screenshot evidence remains unchanged and can be linked to a registered channel only by strong identity evidence such as an exact handle, canonical URL, or YouTube channel ID. Similar names alone never authorize a merge. Transcript/script evidence does not establish editing-style evidence.
+
+**Reason:** The Dr. Aliza Wright pilot demonstrated a bounded, provenance-safe acquisition with an existing Tier B screenshot dataset and a live structured source. A durable decision is required because this is an explicit exception to the earlier no-live-scraping Phase 1 boundary, while preserving every other evidence, security, and analysis boundary.
