@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""Dataset matrix report — one row per registered dataset, answering "which datasets
+are registered", "which are forensic-video datasets", "which are health/finance/
+general-knowledge", and separating: transcripts, screenshot/visual evidence,
+editing-style evidence, niche/domain classification, and provenance confidence.
+
+Read-only. `content_domain` is only ever the literal value already recorded in
+`entity_classifications` — if no classification row exists, this reports
+UNCLASSIFIED rather than guessing a niche from the dataset name.
+
+Usage:
+    python3 scripts/report_dataset_matrix.py
+    python3 scripts/report_dataset_matrix.py --json
+"""
+import argparse
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+import report_common as rc  # noqa: E402
+
+
+def _provenance_note(conn, dataset_id):
+    """Describes which evidence layer(s) actually back this dataset's structured
+    facts — not a fabricated confidence score, just what value_origin/evidence_layer
+    values are actually recorded for it, so a reader can judge reliability themselves."""
+    fp = conn.execute(
+        "SELECT DISTINCT value_origin FROM field_provenance WHERE dataset_id = ?;", (dataset_id,)
+    ).fetchall()
+    if fp:
+        return "field_provenance: " + ", ".join(sorted(r["value_origin"] for r in fp))
+    cls = conn.execute(
+        "SELECT evidence_layer, source_locator FROM entity_classifications WHERE dataset_id = ? LIMIT 1;",
+        (dataset_id,),
+    ).fetchone()
+    if cls:
+        return "entity_classifications: {} ({})".format(cls["evidence_layer"], cls["source_locator"])
+    doc = conn.execute("SELECT COUNT(*) FROM document_records WHERE dataset_id = ?;", (dataset_id,)).fetchone()[0]
+    if doc:
+        return "document_records: {} documents, full text read (content_read=1)".format(doc)
+    va = conn.execute(
+        "SELECT COUNT(*) FROM visual_assets WHERE dataset_id = ? AND visual_state_cluster_id IS NOT NULL;",
+        (dataset_id,),
+    ).fetchone()[0]
+    if va:
+        return ("visual_assets only (perceptual clustering + canonical forensic report as "
+                "SUPPORTING_EVIDENCE; see BATCH-000001_VISUAL_STATE_COVERAGE.md) — no entity_classifications row")
+    return "NO STRUCTURED PROVENANCE RECORDED for this dataset"
+
+
+def build_report(conn):
+    datasets = conn.execute("SELECT dataset_id, dataset_name, status FROM datasets ORDER BY dataset_id;").fetchall()
+
+    rows = []
+    for d in datasets:
+        dataset_id = d["dataset_id"]
+        cls = conn.execute(
+            "SELECT content_domain, sub_niche, packaging_style, editing_style FROM entity_classifications "
+            "WHERE dataset_id = ? LIMIT 1;", (dataset_id,)
+        ).fetchone()
+        visual_asset_count = conn.execute(
+            "SELECT COUNT(*) FROM visual_assets WHERE dataset_id = ?;", (dataset_id,)
+        ).fetchone()[0]
+        cluster_count = conn.execute(
+            "SELECT COUNT(DISTINCT visual_state_cluster_id) FROM visual_assets "
+            "WHERE dataset_id = ? AND visual_state_cluster_id IS NOT NULL;", (dataset_id,)
+        ).fetchone()[0]
+        transcript_count = conn.execute(
+            "SELECT COUNT(*) FROM transcripts WHERE dataset_id = ? AND availability_status = 'AVAILABLE';",
+            (dataset_id,),
+        ).fetchone()[0]
+        document_count = conn.execute(
+            "SELECT COUNT(*) FROM document_records WHERE dataset_id = ?;", (dataset_id,)
+        ).fetchone()[0]
+
+        rows.append({
+            "dataset_id": dataset_id,
+            "dataset_name": d["dataset_name"],
+            "status": d["status"],
+            "content_domain": (cls["content_domain"] if cls else None) or "UNCLASSIFIED",
+            "sub_niche": (cls["sub_niche"] if cls else None),
+            "forensic_video_evidence": cluster_count > 0,
+            "visual_state_clusters": cluster_count,
+            "screenshot_or_frame_asset_count": visual_asset_count,
+            "transcripts_available": transcript_count,
+            "document_records": document_count,
+            "packaging_style_evidence": bool(cls and cls["packaging_style"]),
+            "editing_style": (cls["editing_style"] if cls else None) or "UNKNOWN",
+            "classification_row_present": cls is not None,
+            "provenance": _provenance_note(conn, dataset_id),
+        })
+
+    forensic = [r for r in rows if r["forensic_video_evidence"]]
+    by_domain = {}
+    for r in rows:
+        by_domain.setdefault(r["content_domain"], []).append(r["dataset_id"])
+
+    payload = {"datasets": rows, "forensic_video_dataset_ids": [r["dataset_id"] for r in forensic],
+               "dataset_ids_by_content_domain": by_domain}
+
+    lines = []
+    lines.append("# Dataset Matrix Report")
+    lines.append("")
+    lines.append("Read-only. One row per registered dataset, generated by "
+                  "`scripts/report_dataset_matrix.py` from `data/catalog/youtube_inventory.db`.")
+    lines.append("")
+    lines.extend(rc.md_table(
+        ["Dataset", "Status", "Domain", "Forensic Video", "Clusters", "Visual Assets",
+         "Transcripts", "Docs", "Packaging", "Editing Style"],
+        [(r["dataset_id"], r["status"], r["content_domain"], "YES" if r["forensic_video_evidence"] else "no",
+          r["visual_state_clusters"], r["screenshot_or_frame_asset_count"], r["transcripts_available"],
+          r["document_records"], "YES" if r["packaging_style_evidence"] else "no", r["editing_style"])
+         for r in rows]))
+    lines.append("")
+    lines.append("## By content domain")
+    lines.append("")
+    for domain, ids in sorted(by_domain.items()):
+        lines.append("- **{}** ({}): {}".format(domain, len(ids), ", ".join(ids)))
+    lines.append("")
+    lines.append("## Forensic-video datasets ({})".format(len(forensic)))
+    lines.append("")
+    lines.append(", ".join(r["dataset_id"] for r in forensic) or "none")
+    lines.append("")
+    lines.append("## Provenance per dataset")
+    lines.append("")
+    lines.extend(rc.md_table(["Dataset", "Provenance"], [(r["dataset_id"], r["provenance"]) for r in rows]))
+    lines.append("")
+
+    return payload, lines
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--db-path", default=None)
+    parser.add_argument("--json", action="store_true", help="emit structured JSON instead of Markdown")
+    args = parser.parse_args()
+
+    conn = rc.connect(args.db_path)
+    payload, lines = build_report(conn)
+    rc.emit(payload, lines, args.json)
+
+
+if __name__ == "__main__":
+    main()
