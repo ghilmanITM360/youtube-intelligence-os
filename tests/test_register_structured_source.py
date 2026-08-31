@@ -467,6 +467,73 @@ class RegisterStructuredSourceTestCase(unittest.TestCase):
         finally:
             conn.close()
 
+    def test_backfill_legacy_workbook_provenance_changes_only_source_file_id(self):
+        self.init_catalog()
+        self.ingest_fixture()
+        rss.cmd_register(Args(db_path=str(self.db_path), dataset_id="DS-000001"))
+
+        def snapshot_without_source_file_id(conn):
+            snapshot = {}
+            tables = [r[0] for r in conn.execute(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name;"
+            )]
+            for table in tables:
+                columns = [r[1] for r in conn.execute("PRAGMA table_info({});".format(table))]
+                if table == "field_provenance":
+                    columns.remove("source_file_id")
+                snapshot[table] = conn.execute(
+                    "SELECT {} FROM {};".format(", ".join(columns), table)
+                ).fetchall()
+            return snapshot
+
+        conn = sqlite3.connect(str(self.db_path))
+        workbook_file_id = conn.execute(
+            """SELECT file_id FROM source_files
+               WHERE dataset_id='DS-000001' AND storage_kind='PHYSICAL_FILE'
+                 AND file_role='STRUCTURED_METADATA' AND original_filename='YouTube_Master_Data.xlsx';"""
+        ).fetchone()[0]
+        before_without_link = snapshot_without_source_file_id(conn)
+        before_links = dict(conn.execute(
+            "SELECT provenance_id, source_file_id FROM field_provenance ORDER BY provenance_id;"
+        ))
+        workbook_provenance_ids = {
+            r[0] for r in conn.execute(
+                """SELECT provenance_id FROM field_provenance
+                   WHERE dataset_id='DS-000001' AND source_file_id IS NULL
+                     AND source_locator LIKE 'YouTube_Master_Data.xlsx#%';"""
+            )
+        }
+        conn.close()
+        self.assertTrue(workbook_provenance_ids)
+
+        args = Args(db_path=str(self.db_path), dataset_id="DS-000001")
+        rss.cmd_backfill_workbook_provenance(args)
+
+        conn = sqlite3.connect(str(self.db_path))
+        after_without_link = snapshot_without_source_file_id(conn)
+        after_links = dict(conn.execute(
+            "SELECT provenance_id, source_file_id FROM field_provenance ORDER BY provenance_id;"
+        ))
+        conn.close()
+        self.assertEqual(after_without_link, before_without_link)
+        self.assertEqual(
+            after_links,
+            {provenance_id: (workbook_file_id if provenance_id in workbook_provenance_ids else source_file_id)
+             for provenance_id, source_file_id in before_links.items()},
+        )
+
+        rss.cmd_backfill_workbook_provenance(args)
+        conn = sqlite3.connect(str(self.db_path))
+        try:
+            self.assertEqual(
+                dict(conn.execute(
+                    "SELECT provenance_id, source_file_id FROM field_provenance ORDER BY provenance_id;"
+                )),
+                after_links,
+            )
+        finally:
+            conn.close()
+
     # -- Test 11: Changed-source rejection -----------------------------------
 
     def test_register_rejects_changed_canonical_source(self):

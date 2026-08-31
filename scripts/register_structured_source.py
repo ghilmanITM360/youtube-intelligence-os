@@ -605,6 +605,82 @@ def cmd_verify(args):
 
 
 # ---------------------------------------------------------------------------
+# legacy provenance backfill
+# ---------------------------------------------------------------------------
+
+def cmd_backfill_workbook_provenance(args):
+    db_path = Path(args.db_path)
+    dataset_id = args.dataset_id
+    if dataset_id != "DS-000001":
+        print("FAILED — this backfill is restricted to DS-000001.")
+        sys.exit(1)
+
+    conn = sqlite3.connect(str(db_path))
+    conn.execute("PRAGMA foreign_keys = ON;")
+    try:
+        _require_v2(conn)
+        workbooks = conn.execute(
+            """SELECT file_id, canonical_path, sha256 FROM source_files
+               WHERE dataset_id = ? AND storage_kind = 'PHYSICAL_FILE'
+                 AND file_role = 'STRUCTURED_METADATA'
+                 AND original_filename = 'YouTube_Master_Data.xlsx';""",
+            (dataset_id,),
+        ).fetchall()
+        if len(workbooks) != 1:
+            raise CatalogError(
+                "SourceNotFound",
+                "Expected exactly one canonical DS-000001 workbook; found {}.".format(len(workbooks)),
+            )
+
+        workbook_file_id, canonical_path, recorded_sha256 = workbooks[0]
+        workbook_path = Path(canonical_path)
+        if not workbook_path.exists():
+            raise CatalogError("SourceNotFound", "Canonical workbook missing: {}".format(canonical_path))
+        actual_sha256 = sha256_file(workbook_path)
+        if actual_sha256 != recorded_sha256:
+            raise CatalogError(
+                "RevisionDetected",
+                "Canonical workbook hash changed since ingestion (recorded={}, actual={}).".format(
+                    recorded_sha256, actual_sha256
+                ),
+            )
+
+        null_count = conn.execute(
+            "SELECT COUNT(*) FROM field_provenance WHERE dataset_id = ? AND source_file_id IS NULL;",
+            (dataset_id,),
+        ).fetchone()[0]
+        workbook_null_count = conn.execute(
+            """SELECT COUNT(*) FROM field_provenance
+               WHERE dataset_id = ? AND source_file_id IS NULL
+                 AND source_locator LIKE 'YouTube_Master_Data.xlsx#%';""",
+            (dataset_id,),
+        ).fetchone()[0]
+        if null_count != workbook_null_count:
+            raise CatalogError(
+                "MalformedData",
+                "DS-000001 has {} NULL provenance links but only {} workbook locators; no rows changed.".format(
+                    null_count, workbook_null_count
+                ),
+            )
+
+        with conn:
+            corrected = conn.execute(
+                """UPDATE field_provenance SET source_file_id = ?
+                   WHERE dataset_id = ? AND source_file_id IS NULL
+                     AND source_locator LIKE 'YouTube_Master_Data.xlsx#%';""",
+                (workbook_file_id, dataset_id),
+            ).rowcount
+        print("COMPLETED — {} workbook provenance link(s) backfilled to {}.".format(
+            corrected, workbook_file_id
+        ))
+    except CatalogError as exc:
+        print("FAILED — {}: {}".format(exc.error_type, exc.message))
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -619,6 +695,9 @@ def build_parser():
     p_verify = sub.add_parser("verify")
     p_verify.add_argument("--dataset-id", required=True)
 
+    p_backfill = sub.add_parser("backfill-workbook-provenance")
+    p_backfill.set_defaults(dataset_id="DS-000001")
+
     return parser
 
 
@@ -629,6 +708,8 @@ def main(argv=None):
         cmd_register(args)
     elif args.command == "verify":
         cmd_verify(args)
+    elif args.command == "backfill-workbook-provenance":
+        cmd_backfill_workbook_provenance(args)
 
 
 if __name__ == "__main__":
