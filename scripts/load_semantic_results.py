@@ -69,6 +69,12 @@ def main():
                 packaging_notes.append(img["visual_packaging_pattern_notes"])
 
         ds_row = conn.execute("SELECT semantic_class FROM datasets WHERE dataset_id = ?;", (dataset_id,)).fetchone()
+        semantic_count = conn.execute(
+            "SELECT COUNT(*) FROM visual_observations vo "
+            "JOIN visual_assets va ON va.visual_asset_id = vo.visual_asset_id "
+            "WHERE va.dataset_id = ? AND vo.observation_type = 'SEMANTIC_INSPECTION';",
+            (dataset_id,),
+        ).fetchone()[0]
         existing_class = conn.execute(
             "SELECT 1 FROM entity_classifications WHERE dataset_id = ? AND target_type = 'DATASET';",
             (dataset_id,),
@@ -85,7 +91,7 @@ def main():
                 "this dataset, never actual video frames, so no editing-grammar evidence is available (Phase 1C "
                 "content-domain-vs-editing-style rule).');",
                 (cls_id, dataset_id, dataset_id, content_domain,
-                 packaging_summary, "aggregated from {} screenshot semantic inspections".format(inserted), ic.now_iso()),
+                 packaging_summary, "aggregated from {} screenshot semantic inspections".format(semantic_count), ic.now_iso()),
             )
     print("dataset={} inserted={} missing_asset={}".format(dataset_id, inserted, len(missing_asset)))
     if missing_asset:

@@ -337,6 +337,69 @@ class RegisterBatchTestCase(unittest.TestCase):
         self.assertEqual(row[0], "HEALTH")
         self.assertEqual(row[1], "UNKNOWN")  # never inferred from a screenshot
 
+    def test_semantic_locator_counts_existing_observations_on_idempotent_retry(self):
+        root = self._flat_root("locator", {"shot.png": "placeholder"})
+        self._set_rules([self._already_ingested_spec(), {
+            "index": 2, "path": str(root), "kind": "flat_dataset", "dataset_key": "LOCATOR",
+            "dataset_name": "Locator Test", "semantic_class": "B", "content_domain": "HEALTH",
+            "copy_mode": "COPY",
+        }])
+        rb.cmd_discover(Args(db_path=str(self.db_path), dry_run=False))
+        rb.cmd_register(Args(db_path=str(self.db_path), batch_id=self._get_batch_id()))
+
+        conn = sqlite3.connect(str(self.db_path))
+        dataset_id = conn.execute("SELECT dataset_id FROM datasets WHERE discovered_as = 'LOCATOR';").fetchone()[0]
+        discovered_file_id, visual_path = conn.execute(
+            "SELECT discovered_file_id, absolute_path FROM discovered_files "
+            "WHERE relative_path = 'shot.png' AND dataset_id = ?;", (dataset_id,)
+        ).fetchone()
+        visual_asset_id = ic._next_id(conn, "visual_assets", "visual_asset_id", "VA")
+        conn.execute(
+            "INSERT INTO visual_assets (visual_asset_id, discovered_file_id, dataset_id, sha256, width_px, "
+            "height_px, color_mode, image_format, orientation, exif_json, perceptual_hash, "
+            "perceptual_hash_algorithm, frame_sequence_id, frame_index, visual_state_cluster_id, created_at, "
+            "notes) VALUES (?, ?, ?, 'x', 1, 1, 'RGB', 'PNG', 'SQUARE', '{}', 'abc', 'dhash8x8', NULL, NULL, "
+            "NULL, ?, NULL);",
+            (visual_asset_id, discovered_file_id, dataset_id, ic.now_iso()),
+        )
+        conn.commit()
+        conn.close()
+
+        import json
+        import load_semantic_results as lsr
+        state_path = self.tmp / "semantic-locator.json"
+        state_path.write_text(json.dumps({
+            "dataset_id": dataset_id,
+            "images": [{"path": visual_path, "visual_packaging_pattern_notes": "doctor-led"}],
+        }))
+        orig_default_db = ic.DEFAULT_DB_PATH
+        orig_argv = lsr.sys.argv
+        ic.DEFAULT_DB_PATH = self.db_path
+        try:
+            lsr.sys.argv = ["load_semantic_results.py", str(state_path), "HEALTH"]
+            lsr.main()
+            conn = sqlite3.connect(str(self.db_path))
+            conn.execute("DELETE FROM entity_classifications WHERE dataset_id = ?;", (dataset_id,))
+            conn.commit()
+            conn.close()
+            lsr.main()
+        finally:
+            ic.DEFAULT_DB_PATH = orig_default_db
+            lsr.sys.argv = orig_argv
+
+        conn = sqlite3.connect(str(self.db_path))
+        locator = conn.execute(
+            "SELECT source_locator FROM entity_classifications WHERE dataset_id = ?;", (dataset_id,)
+        ).fetchone()[0]
+        observation_count = conn.execute(
+            "SELECT COUNT(*) FROM visual_observations vo "
+            "JOIN visual_assets va ON va.visual_asset_id = vo.visual_asset_id "
+            "WHERE va.dataset_id = ? AND vo.observation_type = 'SEMANTIC_INSPECTION';", (dataset_id,)
+        ).fetchone()[0]
+        conn.close()
+        self.assertEqual(observation_count, 1)
+        self.assertEqual(locator, "aggregated from 1 screenshot semantic inspections")
+
     def _get_batch_id(self):
         conn = sqlite3.connect(str(self.db_path))
         row = conn.execute("SELECT batch_id FROM source_batches ORDER BY batch_id DESC LIMIT 1;").fetchone()
