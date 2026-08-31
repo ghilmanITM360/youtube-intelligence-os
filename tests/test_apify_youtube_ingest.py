@@ -105,7 +105,7 @@ class ApifyYouTubeIngestTests(unittest.TestCase):
     def tearDown(self):
         self.tmp.cleanup()
 
-    def ingest(self, run=None, records=None, actor_input=None):
+    def ingest(self, run=None, records=None, actor_input=None, **kwargs):
         return ayi.ingest_run(
             self.db,
             "DS-000006",
@@ -115,6 +115,7 @@ class ApifyYouTubeIngestTests(unittest.TestCase):
             records or [copy.deepcopy(self.with_transcript), copy.deepcopy(self.without_transcript)],
             raw_root=self.root / "raw",
             manifests_dir=self.root / "manifests",
+            **kwargs,
         )
 
     def connect(self):
@@ -128,6 +129,16 @@ class ApifyYouTubeIngestTests(unittest.TestCase):
         self.assertEqual(item["transcript"]["availability_status"], "AVAILABLE")
         self.assertEqual(item["transcript"]["caption_type"], "user_generated")
         self.assertEqual(item["thumbnail_urls"], [self.with_transcript["thumbnailUrl"]])
+
+    def test_short_content_type_is_preserved(self):
+        short = copy.deepcopy(self.with_transcript)
+        short.update({"type": "shorts", "fromChannelListPage": "shorts",
+                      "url": "https://www.youtube.com/shorts/AAAAAAAAAAA"})
+        result = self.ingest(records=[short])
+        with self.connect() as conn:
+            video_type = conn.execute("SELECT video_type FROM video_snapshots").fetchone()[0]
+        self.assertEqual(video_type, "shorts")
+        self.assertEqual(result["validation"]["content_type_counts"]["shorts"], 1)
 
     def test_missing_transcript_is_registered_unavailable(self):
         self.ingest(records=[copy.deepcopy(self.without_transcript)])
@@ -162,6 +173,101 @@ class ApifyYouTubeIngestTests(unittest.TestCase):
         self.assertEqual(channel["handle"], "@Dr.AlizaWrightAdvice")
         self.assertEqual(channel["created_from_dataset_id"], "DS-000006")
         self.assertIn("IDENTITY_EVIDENCE", {row[0] for row in links})
+
+    def test_direct_apify_identity_uses_exact_requested_handle(self):
+        with self.connect() as conn:
+            conn.execute("DELETE FROM visual_observations")
+            conn.commit()
+        result = self.ingest(
+            records=[copy.deepcopy(self.with_transcript)],
+            allow_direct_apify_identity=True,
+        )
+        self.assertEqual(result["youtube_channel_id"], "UCfixtureDrAlizaChannel")
+
+    def test_forensic_media_id_links_dataset_to_video_and_channel(self):
+        with self.connect() as conn:
+            conn.execute(
+                """INSERT INTO datasets
+                   (dataset_id,dataset_name,semantic_class,description,source_type,
+                    ingestion_mode,status,discovered_as,date_received,created_at,updated_at)
+                   VALUES ('DS-FORENSIC','forensic','C','fixture','EXTERNAL_FOLDER',
+                           'REFERENCE','INGESTED','FIXTURE',?,?,?)""",
+                (TS, TS, TS),
+            )
+            conn.commit()
+        result = self.ingest(
+            records=[copy.deepcopy(self.with_transcript)],
+            forensic_links=[{
+                "dataset_id": "DS-FORENSIC",
+                "youtube_video_id": "AAAAAAAAAAA",
+                "source_locator": "fixture.mp4#xattr:com.apple.metadata:kMDItemWhereFroms",
+                "source_sha256": "a" * 64,
+            }],
+        )
+        with self.connect() as conn:
+            channel_link = conn.execute(
+                "SELECT relationship_type FROM channel_dataset_links WHERE dataset_id='DS-FORENSIC'"
+            ).fetchone()[0]
+            provenance = conn.execute(
+                """SELECT extraction_method FROM field_provenance
+                   WHERE dataset_id='DS-FORENSIC' AND field_name='youtube_video_id'"""
+            ).fetchone()[0]
+        self.assertEqual(channel_link, "IDENTITY_EVIDENCE")
+        self.assertEqual(provenance, "xattr_plist_base64url_media_id")
+        self.assertEqual(result["forensic_relationships_proven"], 1)
+
+    def test_channel_report_shows_apify_content_and_forensic_coverage(self):
+        with self.connect() as conn:
+            conn.execute(
+                """INSERT INTO datasets
+                   (dataset_id,dataset_name,semantic_class,description,source_type,
+                    ingestion_mode,status,discovered_as,date_received,created_at,updated_at)
+                   VALUES ('DS-FORENSIC','forensic','C','fixture','EXTERNAL_FOLDER',
+                           'REFERENCE','INGESTED','FIXTURE',?,?,?)""",
+                (TS, TS, TS),
+            )
+            conn.execute(
+                """INSERT INTO discovered_files
+                   (discovered_file_id,batch_id,batch_root_id,entry_type,absolute_path,
+                    relative_path,extension,mime_type,size_bytes,sha256,dataset_id,
+                    disposition,disposition_reason,processing_status,created_at)
+                   VALUES ('DF-FORENSIC','BATCH-FIXTURE','BROOT-FIXTURE','FILE','frame.png',
+                           'frame.png','.png','image/png',1,?,'DS-FORENSIC','INGEST',
+                           'fixture','RECORDED',?)""",
+                ("b" * 64, TS),
+            )
+            conn.execute(
+                """INSERT INTO visual_assets
+                   (visual_asset_id,discovered_file_id,dataset_id,sha256,frame_sequence_id,
+                    frame_index,visual_state_cluster_id,created_at)
+                   VALUES ('VA-FORENSIC','DF-FORENSIC','DS-FORENSIC',?,'SEQ-1',0,'CLUSTER-1',?)""",
+                ("b" * 64, TS),
+            )
+            conn.commit()
+        short = copy.deepcopy(self.with_transcript)
+        short.update({
+            "id": "BBBBBBBBBBB", "title": "fixture short", "type": "shorts",
+            "fromChannelListPage": "shorts", "url": "https://www.youtube.com/shorts/BBBBBBBBBBB",
+        })
+        self.ingest(
+            records=[copy.deepcopy(self.with_transcript), short],
+            forensic_links=[{
+                "dataset_id": "DS-FORENSIC",
+                "youtube_video_id": "AAAAAAAAAAA",
+                "source_locator": "fixture.mp4#xattr:com.apple.metadata:kMDItemWhereFroms",
+            }],
+        )
+        with self.connect() as conn:
+            payload, _ = coverage.build_report(conn)
+        channel = payload["registered_channels"][0]
+        self.assertEqual((channel["videos"], channel["regular_videos"], channel["shorts"], channel["streams"]),
+                         (2, 1, 1, 0))
+        self.assertEqual((channel["transcripts_available"], channel["transcripts_unavailable"]), (2, 0))
+        self.assertEqual((channel["videos_with_thumbnail_evidence"], channel["thumbnail_reference_count"]), (2, 2))
+        self.assertEqual(channel["screenshot_evidence_count"], 1)
+        self.assertTrue(channel["has_forensic_editing_evidence"])
+        self.assertEqual(channel["related_forensic_datasets"][0]["dataset_id"], "DS-FORENSIC")
+        self.assertEqual(channel["apify_provenance"][0]["actor_run_id"], self.run["id"])
 
     def test_screenshot_evidence_is_preserved(self):
         with self.connect() as conn:

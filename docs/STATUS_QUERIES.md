@@ -32,15 +32,24 @@ Both modes are built from the same query results in one run, so they never disag
   `python3 scripts/report_channel_coverage.py` — "Channels with scripts/transcripts" answer line (Tier A only, currently).
 - **Which channels only have screenshots?**
   `python3 scripts/report_channel_coverage.py` — "Channels with screenshots only" answer line (Tier B).
-- **Which channels have packaging-style evidence?**
-  `python3 scripts/report_channel_coverage.py` — Packaging Evidence column.
+- **Which channels have thumbnail/packaging evidence?**
+  `python3 scripts/report_channel_coverage.py` — Thumbnail Items/Refs and Packaging columns. A thumbnail URL
+  reference is reported separately from a screenshot-supported packaging observation.
 - **Which channels have editing-style evidence?**
-  `python3 scripts/report_channel_coverage.py` — Editing Evidence column (Decision 016: requires real
-  moving-image/frame evidence, never inferred from a screenshot).
+  `python3 scripts/report_channel_coverage.py` — Editing Evidence and Related Forensics columns (Decision 016:
+  requires real moving-image/frame evidence, never inferred from a screenshot, thumbnail, or transcript). A linked
+  forensic dataset can establish that editing evidence exists without creating an editing-style classification.
 - **What is a channel's newest structured snapshot?**
   `python3 scripts/report_channel_coverage.py` — Newest Snapshot column.
 - **Which evidence came from screenshots vs Apify?**
-  `python3 scripts/report_channel_coverage.py` — Sources column; packaging evidence remains screenshot-derived, while video/transcript/snapshot fields carry Apify provenance.
+  `python3 scripts/report_channel_coverage.py` — Sources column and Apify Provenance table; packaging evidence
+  remains screenshot-derived, while video/transcript/snapshot fields carry Actor/run provenance.
+- **How many regular videos, Shorts, and streams does a channel have?**
+  `python3 scripts/report_channel_coverage.py` — Regular/Shorts/Streams/Unknown column, using each video's newest
+  structured snapshot without overwriting older observations.
+- **Which forensic datasets are strongly related to a channel?**
+  `python3 scripts/report_channel_coverage.py` — Related Forensics column. A relationship is shown only when an
+  exact source-download media ID is registered against a canonical channel video; topic/style similarity is not enough.
 - **Which datasets are forensic-video datasets?**
   `python3 scripts/report_dataset_matrix.py` — "Forensic Video" column / Forensic-video datasets section.
 - **Which datasets are health niche, finance niche, or general YouTube knowledge?**
@@ -58,16 +67,14 @@ Each report keeps these dimensions visually distinct rather than folding them in
 so a reader can tell *what kind* of evidence backs a claim:
 
 - **Scripts/transcripts coverage** — `channels`/`videos`/`transcripts` tables (Decision 014/015
-  structured registration). Only exists for datasets that went through Phase 1B structured
-  registration (currently DS-000001).
+  structured registration). Exists only for datasets that completed structured registration.
 - **Screenshot/visual packaging coverage** — `visual_assets` + `entity_classifications.packaging_style`.
   Screenshot evidence can support a packaging/thumbnail-style claim; it can never support an
   editing-style claim (Decision 016).
-- **Editing-style evidence** — `entity_classifications.editing_style`, which stays `UNKNOWN` unless
-  real moving-image/frame evidence exists (forensic-video frame clusters, shot manifests). As of
-  this writing, the forensic-video datasets that *do* have that evidence (DS-000012–DS-000016) have
-  no `entity_classifications` row at all yet — a real gap the corpus-status report surfaces, not a
-  false "no evidence" claim.
+- **Editing-style evidence** — a recorded `entity_classifications.editing_style`, or strongly linked forensic-video
+  frames/shot evidence. The report keeps an actual style classification separate from evidence availability: linked
+  frames may produce `FORENSIC (unclassified)`, never a guessed style. Transcripts, thumbnails, and screenshots do
+  not establish editing style.
 - **Niche/domain classification** — `entity_classifications.content_domain` / `sub_niche`, reported
   verbatim; `UNCLASSIFIED` when no row exists.
 - **Provenance confidence** — not a fabricated score. Each dataset's row in the dataset-matrix

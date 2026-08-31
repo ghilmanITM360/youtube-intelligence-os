@@ -149,8 +149,31 @@ def normalize_record(record, record_index):
     youtube_video_id = record.get("id")
     if not isinstance(youtube_video_id, str) or not re.fullmatch(r"[A-Za-z0-9_-]{11}", youtube_video_id):
         raise CatalogError("MalformedData", "Apify result {} has invalid video id: {!r}".format(record_index, youtube_video_id))
-    if record.get("type") not in (None, "video"):
-        raise CatalogError("MalformedData", "Apify result {} is not a regular video".format(record_index))
+    raw_type = record.get("type")
+    list_page = record.get("fromChannelListPage")
+    page_types = {
+        "videos": ({None, "video"}, "video"),
+        "shorts": ({None, "short", "shorts"}, "shorts"),
+        "streams": ({None, "live", "stream", "streams"}, "stream"),
+        "live": ({None, "live", "stream", "streams"}, "stream"),
+    }
+    if list_page in page_types:
+        allowed, video_type = page_types[list_page]
+        if raw_type not in allowed:
+            raise CatalogError(
+                "MalformedData",
+                "Apify result {} has conflicting type/page: {!r}/{!r}".format(
+                    record_index, raw_type, list_page
+                ),
+            )
+    elif raw_type in (None, "video"):
+        video_type = "video"
+    elif raw_type in ("short", "shorts"):
+        video_type = "shorts"
+    elif raw_type in ("live", "stream", "streams"):
+        video_type = "stream"
+    else:
+        raise CatalogError("MalformedData", "Apify result {} has unsupported content type {!r}".format(record_index, raw_type))
     title = record.get("title")
     channel_id = record.get("channelId") or (record.get("aboutChannelInfo") or {}).get("channelId")
     channel_name = record.get("channelName") or (record.get("aboutChannelInfo") or {}).get("channelName")
@@ -182,7 +205,7 @@ def normalize_record(record, record_index):
         "published_at": published_at,
         "duration_seconds": parse_duration(record.get("duration")),
         "description": description,
-        "video_type": record.get("type") or "video",
+        "video_type": video_type,
         "views": parse_int(record.get("viewCount"), "viewCount"),
         "likes": parse_int(record.get("likes"), "likes"),
         "comments": parse_int(record.get("commentsCount"), "commentsCount"),
@@ -207,7 +230,7 @@ def validate_records(records):
         by_id[item["youtube_video_id"]] = item
         normalized.append(item)
     if not normalized:
-        raise CatalogError("MalformedData", "Actor returned no valid regular-video records")
+        raise CatalogError("MalformedData", "Actor returned no valid content records")
 
     def one_value(field):
         values = {item[field] for item in normalized if item[field] not in (None, "")}
@@ -227,12 +250,17 @@ def validate_records(records):
         "title", "published_at", "duration_seconds", "description", "views", "likes", "comments", "thumbnail_urls"
     )}
     available = sum(item["transcript"]["availability_status"] == "AVAILABLE" for item in normalized)
+    content_type_counts = {
+        kind: sum(item["video_type"] == kind for item in normalized)
+        for kind in ("video", "shorts", "stream")
+    }
     return normalized, channel, {
         "returned_records": len(records),
         "unique_videos": len(normalized),
         "duplicate_video_ids": duplicates,
         "transcripts_available": available,
         "transcripts_unavailable": len(normalized) - available,
+        "content_type_counts": content_type_counts,
         "missing_metadata": missing,
         "malformed_records": 0,
     }
@@ -387,16 +415,27 @@ def _dataset_identity_evidence(conn, dataset_id):
     return evidence
 
 
-def reconcile_channel_identity(conn, dataset_id, requested_channel_url, channel):
+def reconcile_channel_identity(conn, dataset_id, requested_channel_url, channel,
+                               allow_direct_apify_identity=False):
     youtube_id = channel["youtube_channel_id"]
     requested_handle = handle_key(handle_from_url(requested_channel_url))
     actor_handle = handle_key(channel["handle"])
     actor_url = canonical_channel_url(channel["channel_url"])
     evidence = _dataset_identity_evidence(conn, dataset_id)
+    if allow_direct_apify_identity and requested_handle and actor_handle:
+        if requested_handle != actor_handle:
+            raise CatalogError(
+                "EvidenceConflict",
+                "Requested handle {} does not match Actor handle {}".format(
+                    requested_handle, actor_handle
+                ),
+            )
+        evidence["locators"].append("apify_actor_result:channel_identity")
     strong_match = bool(
         (actor_handle and actor_handle in evidence["handles"])
         or (requested_handle and requested_handle in evidence["handles"])
         or (actor_url and actor_url in evidence["urls"])
+        or (allow_direct_apify_identity and requested_handle and requested_handle == actor_handle)
     )
     existing = conn.execute("SELECT * FROM channels WHERE youtube_channel_id=?", (youtube_id,)).fetchone()
     if not existing and actor_handle:
@@ -646,30 +685,49 @@ def _write_dataset_manifest_addendum(conn, dataset_id):
     ).fetchall()
     file_count = conn.execute("SELECT COUNT(*) FROM source_files WHERE dataset_id=?", (dataset_id,)).fetchone()[0]
     videos = available = unavailable = thumbnails = 0
+    content_types = {}
+    forensic_relationships = 0
     if channel:
-        videos = conn.execute("SELECT COUNT(*) FROM videos WHERE channel_id=?", (channel["channel_id"],)).fetchone()[0]
+        videos = conn.execute(
+            "SELECT COUNT(DISTINCT video_id) FROM video_snapshots WHERE dataset_id=?",
+            (dataset_id,),
+        ).fetchone()[0]
+        content_types = dict(conn.execute(
+            "SELECT video_type,COUNT(*) FROM video_snapshots WHERE dataset_id=? GROUP BY video_type",
+            (dataset_id,),
+        ).fetchall())
         transcript_rows = conn.execute(
-            "SELECT availability_status,COUNT(*) FROM transcripts t JOIN videos v ON v.video_id=t.video_id "
-            "WHERE v.channel_id=? GROUP BY availability_status", (channel["channel_id"],),
+            "SELECT availability_status,COUNT(*) FROM transcripts WHERE dataset_id=? GROUP BY availability_status",
+            (dataset_id,),
         ).fetchall()
         transcript_counts = {row[0]: row[1] for row in transcript_rows}
         available, unavailable = transcript_counts.get("AVAILABLE", 0), transcript_counts.get("UNAVAILABLE", 0)
-        thumbnails = conn.execute(
-            "SELECT COUNT(*) FROM thumbnail_evidence te JOIN videos v ON v.video_id=te.video_id WHERE v.channel_id=?",
-            (channel["channel_id"],),
+        thumbnails = conn.execute("SELECT COUNT(*) FROM thumbnail_evidence WHERE dataset_id=?", (dataset_id,)).fetchone()[0]
+        forensic_relationships = conn.execute(
+            """SELECT COUNT(*) FROM field_provenance
+               WHERE registration_run_id IN (
+                   SELECT registration_run_id FROM apify_source_runs WHERE dataset_id=?
+               ) AND dataset_id<>? AND extraction_method='xattr_plist_base64url_media_id'""",
+            (dataset_id, dataset_id),
         ).fetchone()[0]
     lines = [text.rstrip(), "", DATASET_MANIFEST_MARKER, ""]
-    lines.append("Generated from the live catalog by `scripts/apify_youtube_ingest.py`; the screenshot evidence above is unchanged.")
+    lines.append("Generated from the live catalog by `scripts/apify_youtube_ingest.py`; the raw evidence above is unchanged.")
     lines.append("")
     lines.append("- Schema version: {}".format(conn.execute("SELECT MAX(schema_version) FROM schema_meta").fetchone()[0]))
     lines.append("- File record count: {}".format(file_count))
     if channel:
         lines.append("- Registered channel: {} (`{}`, `{}`)".format(channel["display_name"], channel["handle"], channel["youtube_channel_id"]))
-    lines.append("- Registered videos: {}".format(videos))
+    lines.append("- Registered content items: {} (regular {}, Shorts {}, streams {})".format(
+        videos, content_types.get("video", 0), content_types.get("shorts", 0),
+        content_types.get("stream", 0)))
     lines.append("- Transcripts: AVAILABLE {}, UNAVAILABLE {}".format(available, unavailable))
     lines.append("- Thumbnail references: {}".format(thumbnails))
-    lines.append("- Identity relationship: existing DS-000006 screenshot evidence linked to the registered channel by exact handle; no duplicate dataset or competitor identity created.")
-    lines.append("- Editing-style evidence: UNKNOWN (transcripts and thumbnails do not constitute moving-image evidence).")
+    lines.append("- Identity relationship: this dataset is linked to the canonical channel by exact source identity; no duplicate channel identity was created.")
+    if forensic_relationships:
+        lines.append("- Forensic relationships: {} PROVEN, 0 UNRESOLVED (exact source-download media IDs).".format(forensic_relationships))
+        lines.append("- Editing-style evidence: PRESENT in the linked forensic datasets; no style inference was added during this ingestion.")
+    else:
+        lines.append("- Editing-style evidence: UNKNOWN unless independently registered moving-image/forensic evidence exists; transcripts and thumbnails alone do not establish it.")
     lines.append("")
     lines.append("### Apify Runs")
     lines.append("")
@@ -682,7 +740,9 @@ def _write_dataset_manifest_addendum(conn, dataset_id):
 
 
 def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
-               cost_cap=DEFAULT_COST_CAP, raw_root=None, manifests_dir=None):
+               cost_cap=DEFAULT_COST_CAP, raw_root=None, manifests_dir=None,
+               raw_source_path=None, allow_direct_apify_identity=False,
+               forensic_links=None):
     db_path = Path(db_path)
     raw_root = Path(raw_root or (ic.REPO_ROOT / "data/raw/competitors"))
     update_dataset_manifest = manifests_dir is None
@@ -698,9 +758,57 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
         prior = conn.execute("SELECT apify_source_run_id FROM apify_source_runs WHERE actor_run_id=?", (run.get("id"),)).fetchone()
         if prior:
             return {"status": "ALREADY_INGESTED", "actor_run_id": run.get("id"), "apify_source_run_id": prior[0]}
+        raw_source_file_id = None
+        raw_source_info = None
+        if raw_source_path:
+            raw_path = Path(raw_source_path).resolve()
+            if not raw_path.is_file():
+                raise CatalogError("SourceNotFound", "Raw Apify payload is missing: {}".format(raw_path))
+            try:
+                raw_records = json.loads(raw_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as exc:
+                raise CatalogError("MalformedData", "Raw Apify payload is not valid JSON: {}".format(type(exc).__name__))
+            if raw_records != records:
+                raise CatalogError("EvidenceConflict", "Records do not exactly match the registered raw Apify payload")
+            digest = ic.sha256_file(raw_path)
+            row = conn.execute(
+                """SELECT file_id FROM source_files
+                   WHERE dataset_id=? AND sha256=?
+                     AND (canonical_path=? OR original_path=?)""",
+                (dataset_id, digest, str(raw_path), str(raw_path)),
+            ).fetchone()
+            if not row:
+                raise CatalogError("MissingProvenance", "Raw Apify payload is not hash-registered for {}".format(dataset_id))
+            raw_source_file_id = row["file_id"]
+            raw_source_info = {
+                "path": str(raw_path), "sha256": digest,
+                "size_bytes": raw_path.stat().st_size,
+            }
         try:
             normalized, channel, validation = validate_run(run, actor_input, records, cost_cap)
-            channel_id, create_channel, evidence = reconcile_channel_identity(conn, dataset_id, channel_url, channel)
+            channel_id, create_channel, evidence = reconcile_channel_identity(
+                conn, dataset_id, channel_url, channel, allow_direct_apify_identity
+            )
+            normalized_ids = {item["youtube_video_id"] for item in normalized}
+            validated_forensic_links = []
+            for link in forensic_links or []:
+                forensic_dataset_id = link.get("dataset_id")
+                youtube_video_id = link.get("youtube_video_id")
+                source_locator = link.get("source_locator")
+                if not forensic_dataset_id or not youtube_video_id or not source_locator:
+                    raise CatalogError("MalformedData", "Forensic link requires dataset_id, youtube_video_id, and source_locator")
+                if youtube_video_id not in normalized_ids:
+                    raise CatalogError("AmbiguousIdentity", "Forensic link video {} is absent from this Apify run".format(youtube_video_id))
+                if not conn.execute("SELECT 1 FROM datasets WHERE dataset_id=?", (forensic_dataset_id,)).fetchone():
+                    raise CatalogError("SourceNotFound", "Forensic dataset {} is not registered".format(forensic_dataset_id))
+                validated_forensic_links.append({
+                    "dataset_id": forensic_dataset_id,
+                    "youtube_video_id": youtube_video_id,
+                    "source_locator": source_locator,
+                    "source_sha256": link.get("source_sha256"),
+                    "evidence": link.get("evidence"),
+                    "status": "PROVEN",
+                })
         except CatalogError as exc:
             conn.close()
             record_rejected_run(db_path, dataset_id, channel_url, run, actor_input, len(records), exc)
@@ -735,7 +843,10 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
             "run_cost_usd": run_values["run_cost_usd"], "channel_url": channel_url,
             "source": "APIFY", "extraction_provider": ACTOR_NAME,
             "default_dataset_id": run_values["default_dataset_id"],
-            "validation": validation, "transcript_files": transcript_files,
+            "validation": validation, "raw_payload": raw_source_info,
+            "transcript_files": transcript_files,
+            "forensic_relationships": validated_forensic_links,
+            "forensic_relationships_unresolved": [],
         }
         manifest_path = manifests_dir / (run["id"] + ".json")
         manifest_data = (json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
@@ -780,23 +891,31 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
                 )
 
             provenance_id = int(_next_id(conn, "field_provenance", "provenance_id", "PR").rsplit("-", 1)[1])
-            def provenance(target_column, target_id, field_name, locator, source_file_id=manifest_file_id, origin="SOURCE_EXTRACTED"):
+            default_source_file_id = raw_source_file_id or manifest_file_id
+            unset_source_file = object()
+            def provenance(target_column, target_id, field_name, locator,
+                           source_file_id=unset_source_file, origin="SOURCE_EXTRACTED",
+                           dataset_ref=None, evidence_layer=None,
+                           extraction_method="apify_actor_record", notes=None):
                 nonlocal provenance_id
+                if source_file_id is unset_source_file:
+                    source_file_id = default_source_file_id
                 columns = {"channel_id": None, "channel_snapshot_id": None, "video_id": None,
                            "video_snapshot_id": None, "transcript_id": None}
                 columns[target_column] = target_id
-                evidence_layer = "MEASURED_FACT" if origin == "SYSTEM_VERIFIED" else "EXTRACTED_FACT"
+                evidence_layer = evidence_layer or ("MEASURED_FACT" if origin == "SYSTEM_VERIFIED" else "EXTRACTED_FACT")
                 conn.execute(
                     """INSERT INTO field_provenance
                        (provenance_id, dataset_id, registration_run_id, source_file_id,
                         channel_id, channel_snapshot_id, video_id, video_snapshot_id, transcript_id,
                         field_name, source_locator, value_origin, evidence_layer,
                         extraction_method, observed_at, created_at, notes)
-                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'apify_actor_record', ?, ?, ?)""",
-                    ("PR-{:06d}".format(provenance_id), dataset_id, internal_run_id, source_file_id,
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    ("PR-{:06d}".format(provenance_id), dataset_ref or dataset_id, internal_run_id, source_file_id,
                      columns["channel_id"], columns["channel_snapshot_id"], columns["video_id"],
                      columns["video_snapshot_id"], columns["transcript_id"], field_name, locator,
-                     origin, evidence_layer, observed_at, ts, "source_run={}".format(source_run_id)),
+                     origin, evidence_layer, extraction_method, observed_at, ts,
+                     notes or "source_run={}".format(source_run_id)),
                 )
                 provenance_id += 1
 
@@ -809,6 +928,8 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                     (channel_id, channel["youtube_channel_id"], channel["handle"], channel["display_name"],
                      channel["channel_url"] or channel_url, dataset_id, ts, ts,
+                     "Created from direct Apify identity after exact requested/returned handle reconciliation."
+                     if allow_direct_apify_identity else
                      "Tier B screenshot identity upgraded to Tier A after exact handle reconciliation."),
                 )
             else:
@@ -819,13 +940,18 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
                        WHERE channel_id=?""",
                     (channel["youtube_channel_id"], channel["handle"], channel["channel_url"] or channel_url, ts, channel_id),
                 )
-            identity_locator = ",".join(evidence["locators"]) or "dataset:{}".format(dataset_id)
+            channel_locator = "apify://{}/runs/{}/channel".format(ACTOR_NAME, run["id"])
+            identity_locator = channel_locator if allow_direct_apify_identity else (
+                ",".join(evidence["locators"]) or "dataset:{}".format(dataset_id)
+            )
             conn.execute(
                 """INSERT OR IGNORE INTO channel_dataset_links
                    (channel_id, dataset_id, relationship_type, source_locator,
                     evidence_layer, created_at, notes)
-                   VALUES (?, ?, 'IDENTITY_EVIDENCE', ?, 'OBSERVATION', ?, ?)""",
-                (channel_id, dataset_id, identity_locator, ts, "Exact handle/canonical URL reconciliation with Apify channel identity"),
+                   VALUES (?, ?, 'IDENTITY_EVIDENCE', ?, ?, ?, ?)""",
+                (channel_id, dataset_id, identity_locator,
+                 "EXTRACTED_FACT" if allow_direct_apify_identity else "OBSERVATION", ts,
+                 "Exact requested/returned handle reconciliation with Apify channel identity"),
             )
             conn.execute(
                 """INSERT OR IGNORE INTO channel_dataset_links
@@ -834,7 +960,6 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
                    VALUES (?, ?, 'STRUCTURED_OBSERVATION', ?, 'EXTRACTED_FACT', ?, NULL)""",
                 (channel_id, dataset_id, "apify://{}/runs/{}".format(ACTOR_NAME, run["id"]), ts),
             )
-            channel_locator = "apify://{}/runs/{}/channel".format(ACTOR_NAME, run["id"])
             for field in ("youtube_channel_id", "handle", "display_name", "channel_url"):
                 if channel[field] is not None:
                     provenance("channel_id", channel_id, field, channel_locator)
@@ -873,6 +998,7 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
                 )
 
             new_videos = 0
+            videos_by_youtube_id = {}
             for item in normalized:
                 locator = "apify://{}/datasets/{}/items/{}".format(ACTOR_NAME, run_values["default_dataset_id"] or "UNKNOWN", item["record_index"])
                 row = conn.execute("SELECT video_id, channel_id FROM videos WHERE youtube_video_id=?", (item["youtube_video_id"],)).fetchone()
@@ -890,6 +1016,7 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
                         (video_id, item["youtube_video_id"], channel_id, item["canonical_url"], dataset_id, ts, ts),
                     )
                     new_videos += 1
+                videos_by_youtube_id[item["youtube_video_id"]] = video_id
                 provenance("video_id", video_id, "youtube_video_id", locator)
                 provenance("video_id", video_id, "canonical_url", locator)
                 snapshot_id = _next_id(conn, "video_snapshots", "video_snapshot_id", "VS")
@@ -967,6 +1094,36 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
                     )
                     provenance("video_snapshot_id", snapshot_id, "thumbnail_url", locator)
 
+            for link in validated_forensic_links:
+                forensic_dataset_id = link["dataset_id"]
+                video_id = videos_by_youtube_id[link["youtube_video_id"]]
+                notes = "Exact source-download mediaId matched canonical YouTube video ID"
+                if link.get("source_sha256"):
+                    notes += "; source_sha256={}".format(link["source_sha256"])
+                if link.get("evidence"):
+                    notes += "; {}".format(link["evidence"])
+                conn.execute(
+                    """INSERT OR IGNORE INTO channel_dataset_links
+                       (channel_id, dataset_id, relationship_type, source_locator,
+                        evidence_layer, created_at, notes)
+                       VALUES (?, ?, 'IDENTITY_EVIDENCE', ?, 'SOURCE_METADATA', ?, ?)""",
+                    (channel_id, forensic_dataset_id, link["source_locator"], ts, notes),
+                )
+                exists = conn.execute(
+                    """SELECT 1 FROM field_provenance
+                       WHERE dataset_id=? AND video_id=? AND field_name='youtube_video_id'
+                         AND source_locator=?""",
+                    (forensic_dataset_id, video_id, link["source_locator"]),
+                ).fetchone()
+                if not exists:
+                    provenance(
+                        "video_id", video_id, "youtube_video_id", link["source_locator"],
+                        source_file_id=None, dataset_ref=forensic_dataset_id,
+                        evidence_layer="SOURCE_METADATA",
+                        extraction_method="xattr_plist_base64url_media_id",
+                        notes="source_run={}; forensic_identity=PROVEN; {}".format(source_run_id, notes),
+                    )
+
             completed_at = now_iso()
             conn.execute(
                 """UPDATE ingestion_runs SET completed_at=?, status='COMPLETED',
@@ -985,6 +1142,8 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
             "handle": channel["handle"], "new_videos": new_videos,
             "validation": validation, "actual_cost_usd": run_values["run_cost_usd"],
             "manifest_path": str(manifest_path),
+            "forensic_relationships_proven": len(validated_forensic_links),
+            "forensic_relationships_unresolved": 0,
         }
     except Exception:
         for path in reversed(created_files):
@@ -1004,6 +1163,7 @@ def build_parser():
     sub = parser.add_subparsers(dest="command", required=True)
     plan = sub.add_parser("plan", help="validate price/cap and print the bounded Actor input")
     run = sub.add_parser("run", help="invoke Actor, validate, and transactionally ingest")
+    existing = sub.add_parser("ingest-existing", help="ingest one completed run from registered local JSON without invoking an Actor")
     reconcile = sub.add_parser("reconcile-cost", help="record the finalized charged-event ledger for an ingested run")
     for command in (plan, run):
         command.add_argument("--channel-url", required=True)
@@ -1013,6 +1173,13 @@ def build_parser():
         command.add_argument("--expected-videos", type=int)
     run.add_argument("--dataset-id", required=True)
     run.add_argument("--timeout-seconds", type=int, default=1800)
+    existing.add_argument("--dataset-id", required=True)
+    existing.add_argument("--channel-url", required=True)
+    existing.add_argument("--run-metadata", required=True)
+    existing.add_argument("--actor-input", required=True)
+    existing.add_argument("--records", required=True)
+    existing.add_argument("--forensic-links")
+    existing.add_argument("--cost-cap", type=Decimal, default=DEFAULT_COST_CAP)
     reconcile.add_argument("--actor-run-id", required=True)
     reconcile.add_argument("--timeout-seconds", type=int, default=60)
     return parser
@@ -1020,6 +1187,26 @@ def build_parser():
 
 def main(argv=None):
     args = build_parser().parse_args(argv)
+    if args.command == "ingest-existing":
+        try:
+            run = json.loads(Path(args.run_metadata).read_text(encoding="utf-8"))
+            run = run.get("data", run)
+            actor_input = json.loads(Path(args.actor_input).read_text(encoding="utf-8"))
+            records = json.loads(Path(args.records).read_text(encoding="utf-8"))
+            forensic_links = json.loads(Path(args.forensic_links).read_text(encoding="utf-8")) if args.forensic_links else []
+            result = ingest_run(
+                args.db_path, args.dataset_id, args.channel_url, run, actor_input,
+                records, args.cost_cap, raw_source_path=args.records,
+                allow_direct_apify_identity=True, forensic_links=forensic_links,
+            )
+        except (OSError, json.JSONDecodeError) as exc:
+            print("FAILED — MalformedData: {}".format(type(exc).__name__))
+            raise SystemExit(1)
+        except CatalogError as exc:
+            print("FAILED — {}: {}".format(exc.error_type, exc.message))
+            raise SystemExit(1)
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return
     if args.command == "reconcile-cost":
         token = os.environ.get("APIFY_TOKEN")
         print("APIFY_TOKEN PRESENT" if token else "APIFY_TOKEN MISSING")

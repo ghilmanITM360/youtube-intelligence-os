@@ -604,6 +604,9 @@ def write_manifest(conn, dataset_id):
            FROM source_files WHERE dataset_id = ? AND storage_kind = 'ARCHIVE_MEMBER' ORDER BY archive_member_path;""",
         (dataset_id,),
     ).fetchall()
+    dataset_status = conn.execute(
+        "SELECT status FROM datasets WHERE dataset_id=?", (dataset_id,)
+    ).fetchone()[0]
 
     total_files = len(physical) + len(archive_members)
     index_count = sum(1 for m in archive_members if m[3] == "ARCHIVE_INDEX")
@@ -677,23 +680,20 @@ def write_manifest(conn, dataset_id):
     lines.append("")
     lines.append("## Duplicate / Revision Status")
     lines.append("")
-    lines.append("No duplicate or revision relationship was proven during this ingestion run "
-                  "(only the two authorized top-level source files were ingested; adjacent `~/Downloads` "
-                  "zip variants identified in Phase 0.5 were not part of this ingestion — see "
-                  "`docs/source-discovery/SOURCE_DUPLICATE_REPORT.md`).")
+    lines.append("No duplicate or revision relationship was proven during this ingestion run; "
+                 "only the authorized top-level source files were ingested.")
     lines.append("")
     lines.append("## Source Integrity")
     lines.append("")
-    lines.append("Original external source files were re-hashed before and after this ingestion run; "
-                  "0 modified, 0 moved, 0 renamed, 0 deleted (see Phase 1A final response for the run's "
-                  "specific before/after hash comparison).")
+    lines.append("Canonical copies were hash-verified against the source files during ingestion; "
+                 "the source files were not modified.")
     lines.append("")
     lines.append("## Database Registration")
     lines.append("")
     lines.append("- DB path: `data/catalog/youtube_inventory.db`")
-    lines.append("- Schema version: 1")
+    lines.append("- Schema version: {}".format(conn.execute("SELECT MAX(schema_version) FROM schema_meta").fetchone()[0]))
     lines.append("- Ingestion run ID: {}".format(run[0] if run else "UNKNOWN"))
-    lines.append("- Dataset record status: INGESTED")
+    lines.append("- Dataset record status: {}".format(dataset_status))
     lines.append("- File record count: {}".format(total_files))
     lines.append("")
     lines.append("## Limitations")
