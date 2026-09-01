@@ -17,6 +17,7 @@ from inventory_catalog import CatalogError  # noqa: E402
 
 FIXTURES = Path(__file__).parent / "fixtures" / "apify_youtube"
 TS = "2026-08-27T12:11:47.105Z"
+UNSET = object()
 
 
 def load_fixture(name):
@@ -105,16 +106,25 @@ class ApifyYouTubeIngestTests(unittest.TestCase):
     def tearDown(self):
         self.tmp.cleanup()
 
-    def ingest(self, run=None, records=None, actor_input=None, **kwargs):
+    def ingest(self, run=None, records=None, actor_input=None, raw_source_path=UNSET, **kwargs):
+        run = run or copy.deepcopy(self.run)
+        records = records if records is not None else [
+            copy.deepcopy(self.with_transcript), copy.deepcopy(self.without_transcript)
+        ]
+        if raw_source_path is UNSET:
+            raw_source_path = self.root / "raw" / "DS-000006" / "apify" / run["id"] / "dataset.json"
+            raw_source_path.parent.mkdir(parents=True, exist_ok=True)
+            raw_source_path.write_text(json.dumps(records, ensure_ascii=False, indent=2) + "\n")
         return ayi.ingest_run(
             self.db,
             "DS-000006",
             "https://www.youtube.com/@Dr.AlizaWrightAdvice",
-            run or copy.deepcopy(self.run),
+            run,
             actor_input or copy.deepcopy(self.actor_input),
-            records or [copy.deepcopy(self.with_transcript), copy.deepcopy(self.without_transcript)],
+            records,
             raw_root=self.root / "raw",
             manifests_dir=self.root / "manifests",
+            raw_source_path=raw_source_path,
             **kwargs,
         )
 
@@ -327,6 +337,32 @@ class ApifyYouTubeIngestTests(unittest.TestCase):
         self.assertEqual(second["status"], "ALREADY_INGESTED")
         with self.connect() as conn:
             self.assertEqual(conn.execute("SELECT COUNT(*) FROM video_snapshots").fetchone()[0], 1)
+
+    def test_raw_payload_retention_blocks_future_and_preserves_known_states(self):
+        with self.assertRaises(CatalogError) as caught:
+            self.ingest(raw_source_path=None)
+        self.assertEqual(caught.exception.error_type, "MissingProvenance")
+        with self.connect() as conn:
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM apify_source_runs").fetchone()[0], 0)
+
+        result = self.ingest(records=[copy.deepcopy(self.with_transcript)])
+        retained = ayi.verify_registered_raw_payloads(self.db)[0]
+        self.assertEqual((result["status"], retained["status"]), ("COMPLETED", "VERIFIED"))
+
+        legacy = ayi.verify_raw_payload_info(
+            "DS-000006", "APIFYRUN-000001", "bD7JBsuj7LK5Wt2rk", None
+        )
+        self.assertEqual(legacy["status"], "HISTORICAL_EXCEPTION")
+
+        xkcd_path = self.root / "raw" / "DS-000017" / "dataset.json"
+        xkcd_path.parent.mkdir(parents=True)
+        xkcd_path.write_text("[]\n")
+        xkcd = ayi.verify_raw_payload_info(
+            "DS-000017", "APIFYRUN-000002", "mzl5dCHF81LbcBamS",
+            {"path": str(xkcd_path), "sha256": ayi.ic.sha256_file(xkcd_path),
+             "size_bytes": xkcd_path.stat().st_size},
+        )
+        self.assertEqual(xkcd["status"], "VERIFIED")
 
     def test_field_provenance_carries_source_run_and_method(self):
         self.ingest(records=[copy.deepcopy(self.with_transcript)])

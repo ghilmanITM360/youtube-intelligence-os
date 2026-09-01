@@ -271,6 +271,8 @@ The local repository remains the working copy; GitHub is a remote backup/collabo
 
 Each run must be bounded before execution by current event pricing and a user-approved cost cap; omit Shorts, livestreams, date filtering, and paid AI add-ons unless separately authorized. Actor/run/build metadata, sanitized input, result counts, exact finalized cost, channel URL, transcript configuration, and field-level provenance are recorded. `APIFY_TOKEN` is environment-only and is never printed or persisted.
 
+Every successful new acquisition must save the full raw Actor result JSON locally, record its SHA-256, and verify its existence, size, and hash before registration can complete. `DS-000006` / `APIFYRUN-000001` / Actor run `bD7JBsuj7LK5Wt2rk` is the sole historical exception: its full raw result was not retained, must not be reconstructed from normalized records, and remains valid only as an explicitly identified legacy registration. `DS-000017` / `APIFYRUN-000002` demonstrates the required retained-payload behavior.
+
 Platform metrics remain append-only snapshots. Existing screenshot evidence remains unchanged and can be linked to a registered channel only by strong identity evidence such as an exact handle, canonical URL, or YouTube channel ID. Similar names alone never authorize a merge. Transcript/script evidence does not establish editing-style evidence.
 
 **Reason:** The Dr. Aliza Wright pilot demonstrated a bounded, provenance-safe acquisition with an existing Tier B screenshot dataset and a live structured source. A durable decision is required because this is an explicit exception to the earlier no-live-scraping Phase 1 boundary, while preserving every other evidence, security, and analysis boundary.
