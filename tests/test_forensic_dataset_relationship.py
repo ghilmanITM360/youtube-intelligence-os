@@ -23,6 +23,26 @@ class Args:
 
 class ForensicDatasetRelationshipTest(unittest.TestCase):
     def test_records_relationship_idempotently_without_merging_datasets(self):
+        acquisition_manifest = REPO_ROOT / "data/manifests/apify/mzl5dCHF81LbcBamS.json"
+        self.assertEqual(acquisition_manifest.stat().st_size, 28211)
+        self.assertEqual(
+            ic.sha256_file(acquisition_manifest),
+            "9dbef0d7e0112d067832d97912689b04292012b8d20a8b9adce8e6ac74e52de5",
+        )
+        self.assertNotIn(
+            "forensic_dataset_relationships",
+            json.loads(acquisition_manifest.read_text(encoding="utf-8")),
+        )
+        self.assertEqual(
+            classifier.DEFAULT_MANIFEST,
+            REPO_ROOT / "data/manifests/relationships/DSREL-000001.json",
+        )
+        relationship_manifest = json.loads(classifier.DEFAULT_MANIFEST.read_text(encoding="utf-8"))
+        self.assertEqual(
+            relationship_manifest["forensic_dataset_relationships"][0]["source_locator"],
+            "data/manifests/relationships/DSREL-000001.json#forensic_dataset_relationships[0]",
+        )
+
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             db_path = root / "catalog.db"

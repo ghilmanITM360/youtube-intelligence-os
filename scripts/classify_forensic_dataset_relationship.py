@@ -8,7 +8,7 @@ from pathlib import Path
 import inventory_catalog as ic
 
 
-DEFAULT_MANIFEST = ic.REPO_ROOT / "data/manifests/apify/mzl5dCHF81LbcBamS.json"
+DEFAULT_MANIFEST = ic.REPO_ROOT / "data/manifests/relationships/DSREL-000001.json"
 EXPECTED_DATASETS = ("DS-000012", "DS-000015")
 
 
