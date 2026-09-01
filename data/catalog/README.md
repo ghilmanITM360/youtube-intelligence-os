@@ -28,12 +28,13 @@ Decision 013: the operational database is regenerable from source material alrea
 4. Run `python3 scripts/register_structured_source.py register --dataset-id <id>` to re-derive channels/videos/snapshots/transcripts/provenance from the same canonical files, then `python3 scripts/register_structured_source.py verify --dataset-id <id>` to confirm agreement.
 5. For Phase 1C's `BATCH-000001` (DS-000002–DS-000016), re-run `python3 scripts/register_batch.py discover`, `register --batch-id BATCH-000001`, and `images --batch-id BATCH-000001` against the same 12 source roots — this rebuilds `discovered_files`/`visual_assets` from scratch. OCR and native semantic-inspection observations are not regenerable purely from the catalog (they came from an on-device Vision pass and an AI-agent visual inspection pass respectively); their outputs are preserved in `data/manifests/DS-*.md` and `data/manifests/batches/BATCH-000001_FILES.csv` for reference even though the raw observation rows themselves would need to be re-run to fully repopulate.
 6. For Phase 1D, use the sanitized run manifests in `data/manifests/apify/` plus canonical local transcript files under `data/raw/competitors/<dataset>/apify/<run>/`; do not re-run an Actor merely to rebuild a local catalog without explicit cost authorization.
+7. Run `python3 scripts/classify_forensic_dataset_relationship.py` to verify and register the proven `DS-000012`/`DS-000015` `SAME_SOURCE_INDEPENDENT_ANALYSIS` relationship from the xkcd acquisition manifest.
 
 No fact recorded only inside the `.db` and nowhere else is currently load-bearing: every dataset's identity, source path, and file hashes are also written into its `data/manifests/<id>.md` file at ingestion/registration time.
 
 ## Schema version
 
-Current: `6` (`001_initial.sql` through `006_apify_cost_observations.sql`, tracked in `schema_meta`). Later schema changes must ship as a new additive `NNN_*.sql` file, never an edit to a file that has already shipped.
+Current: `7` (`001_initial.sql` through `007_dataset_relationships.sql`, tracked in `schema_meta`). Later schema changes must ship as a new additive `NNN_*.sql` file, never an edit to a file that has already shipped.
 
 ## Raw evidence remains authoritative
 
