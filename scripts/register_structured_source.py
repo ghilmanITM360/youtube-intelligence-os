@@ -15,11 +15,12 @@ inventory; this script owns structured registration only — rule 35).
 import argparse
 import sqlite3
 import sys
+import zipfile
 from collections import Counter
 from pathlib import Path
 
 import inventory_catalog
-from inventory_catalog import CatalogError, DEFAULT_DB_PATH, now_iso, sha256_file
+from inventory_catalog import CatalogError, DEFAULT_DB_PATH, now_iso, sha256_bytes, sha256_file
 from source_adapters import youtube_master_data as ymd
 
 TOOL_VERSION = "register_structured_source.py/1"
@@ -680,6 +681,119 @@ def cmd_backfill_workbook_provenance(args):
         conn.close()
 
 
+def cmd_backfill_transcript_provenance(args):
+    db_path = Path(args.db_path)
+    dataset_id = args.dataset_id
+    if dataset_id != "DS-000001":
+        print("FAILED — this backfill is restricted to DS-000001.")
+        sys.exit(1)
+
+    conn = sqlite3.connect(str(db_path))
+    conn.execute("PRAGMA foreign_keys = ON;")
+    try:
+        _require_v2(conn)
+        rows = conn.execute(
+            """SELECT t.transcript_id, v.youtube_video_id, t.archive_member_file_id,
+                      t.transcript_sha256, t.canonical_reference,
+                      sf.dataset_id, sf.storage_kind, sf.file_role, sf.archive_member_path, sf.sha256,
+                      parent.file_id, parent.dataset_id, parent.storage_kind, parent.file_role,
+                      parent.canonical_path, parent.sha256
+               FROM transcripts t
+               JOIN videos v ON v.video_id = t.video_id
+               LEFT JOIN source_files sf ON sf.file_id = t.archive_member_file_id
+               LEFT JOIN source_files parent ON parent.file_id = sf.parent_file_id
+               WHERE t.dataset_id = ? AND t.availability_status = 'AVAILABLE'
+               ORDER BY t.transcript_id;""",
+            (dataset_id,),
+        ).fetchall()
+        if not rows:
+            raise CatalogError("SourceNotFound", "No AVAILABLE DS-000001 transcripts found.")
+        if len({row[2] for row in rows}) != len(rows):
+            raise CatalogError("MissingProvenance", "AVAILABLE transcripts do not map one-to-one to archive members.")
+
+        parents = {(row[10], row[14], row[15]) for row in rows}
+        if len(parents) != 1 or None in next(iter(parents)):
+            raise CatalogError("MissingProvenance", "AVAILABLE transcripts do not resolve to one canonical archive.")
+        _parent_file_id, canonical_path, recorded_archive_sha256 = next(iter(parents))
+        archive_path = Path(canonical_path)
+        if not archive_path.exists():
+            raise CatalogError("SourceNotFound", "Canonical transcript archive missing: {}".format(canonical_path))
+        actual_archive_sha256 = sha256_file(archive_path)
+        if actual_archive_sha256 != recorded_archive_sha256:
+            raise CatalogError(
+                "RevisionDetected",
+                "Canonical transcript archive hash changed since ingestion (recorded={}, actual={}).".format(
+                    recorded_archive_sha256, actual_archive_sha256
+                ),
+            )
+
+        parsed_members = ymd.read_transcript_archive(archive_path)
+        parsed_by_path = {member["archive_member_path"]: member for member in parsed_members}
+        if len(parsed_by_path) != len(parsed_members):
+            raise CatalogError("MissingProvenance", "Transcript archive contains duplicate member paths.")
+
+        updates = []
+        with zipfile.ZipFile(archive_path) as archive:
+            member_counts = Counter(archive.namelist())
+            for row in rows:
+                (transcript_id, youtube_video_id, _archive_member_file_id,
+                 existing_hash, existing_reference, source_dataset_id, storage_kind,
+                 file_role, member_path, recorded_member_sha256, _parent_file_id,
+                 parent_dataset_id, parent_storage_kind, parent_file_role,
+                 _parent_path, _parent_sha256) = row
+                if (
+                    source_dataset_id != dataset_id
+                    or storage_kind != "ARCHIVE_MEMBER"
+                    or file_role != "TRANSCRIPT"
+                    or parent_dataset_id != dataset_id
+                    or parent_storage_kind != "PHYSICAL_FILE"
+                    or parent_file_role != "TRANSCRIPT_ARCHIVE"
+                    or not member_path
+                    or not recorded_member_sha256
+                    or member_counts[member_path] != 1
+                ):
+                    raise CatalogError(
+                        "MissingProvenance",
+                        "Transcript {} has an invalid archive-member source relationship.".format(transcript_id),
+                    )
+                member_meta = parsed_by_path.get(member_path)
+                if not member_meta or member_meta["video_id"] != youtube_video_id:
+                    raise CatalogError(
+                        "MissingProvenance",
+                        "Transcript {} archive-member identity does not match its video.".format(transcript_id),
+                    )
+                actual_member_sha256 = sha256_bytes(archive.read(member_path))
+                reference = "{}::{}".format(canonical_path, member_path)
+                if actual_member_sha256 != recorded_member_sha256:
+                    raise CatalogError(
+                        "RevisionDetected",
+                        "Archive member hash changed for {} (recorded={}, actual={}).".format(
+                            member_path, recorded_member_sha256, actual_member_sha256
+                        ),
+                    )
+                if existing_hash not in (None, actual_member_sha256) or existing_reference not in (None, reference):
+                    raise CatalogError(
+                        "RevisionDetected",
+                        "Transcript {} has conflicting existing provenance values.".format(transcript_id),
+                    )
+                updates.append((actual_member_sha256, reference, transcript_id, dataset_id))
+
+        with conn:
+            conn.executemany(
+                """UPDATE transcripts
+                   SET transcript_sha256 = COALESCE(transcript_sha256, ?),
+                       canonical_reference = COALESCE(canonical_reference, ?)
+                   WHERE transcript_id = ? AND dataset_id = ? AND availability_status = 'AVAILABLE';""",
+                updates,
+            )
+        print("COMPLETED — {} AVAILABLE transcript provenance row(s) verified/backfilled.".format(len(updates)))
+    except CatalogError as exc:
+        print("FAILED — {}: {}".format(exc.error_type, exc.message))
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
@@ -698,6 +812,9 @@ def build_parser():
     p_backfill = sub.add_parser("backfill-workbook-provenance")
     p_backfill.set_defaults(dataset_id="DS-000001")
 
+    p_transcript_backfill = sub.add_parser("backfill-transcript-provenance")
+    p_transcript_backfill.set_defaults(dataset_id="DS-000001")
+
     return parser
 
 
@@ -710,6 +827,8 @@ def main(argv=None):
         cmd_verify(args)
     elif args.command == "backfill-workbook-provenance":
         cmd_backfill_workbook_provenance(args)
+    elif args.command == "backfill-transcript-provenance":
+        cmd_backfill_transcript_provenance(args)
 
 
 if __name__ == "__main__":

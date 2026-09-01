@@ -534,6 +534,75 @@ class RegisterStructuredSourceTestCase(unittest.TestCase):
         finally:
             conn.close()
 
+    def test_backfill_legacy_transcript_provenance_is_correct_idempotent_and_nondestructive(self):
+        self.init_catalog()
+        self.ingest_fixture(unavailable_video_ids={"vid00000002"})
+        rss.cmd_register(Args(db_path=str(self.db_path), dataset_id="DS-000001"))
+
+        conn = sqlite3.connect(str(self.db_path))
+        transcript_columns = [row[1] for row in conn.execute("PRAGMA table_info(transcripts);")]
+        unchanged_columns = [
+            column for column in transcript_columns
+            if column not in ("transcript_sha256", "canonical_reference")
+        ]
+        before_unchanged = conn.execute(
+            "SELECT {} FROM transcripts ORDER BY transcript_id;".format(", ".join(unchanged_columns))
+        ).fetchall()
+        unavailable_before = conn.execute(
+            "SELECT * FROM transcripts WHERE availability_status='UNAVAILABLE';"
+        ).fetchone()
+        archive_path = Path(conn.execute(
+            """SELECT canonical_path FROM source_files
+               WHERE dataset_id='DS-000001' AND storage_kind='PHYSICAL_FILE'
+                 AND file_role='TRANSCRIPT_ARCHIVE';"""
+        ).fetchone()[0])
+        archive_before = archive_path.read_bytes()
+        available_source = conn.execute(
+            """SELECT sf.sha256, parent.canonical_path, sf.archive_member_path
+               FROM transcripts t
+               JOIN source_files sf ON sf.file_id=t.archive_member_file_id
+               JOIN source_files parent ON parent.file_id=sf.parent_file_id
+               WHERE t.dataset_id='DS-000001' AND t.availability_status='AVAILABLE';"""
+        ).fetchone()
+        conn.close()
+        with zipfile.ZipFile(archive_path) as archive:
+            expected_hash = inventory_catalog.sha256_bytes(archive.read(available_source[2]))
+        self.assertEqual(available_source[0], expected_hash)
+
+        args = Args(db_path=str(self.db_path), dataset_id="DS-000001")
+        rss.cmd_backfill_transcript_provenance(args)
+
+        conn = sqlite3.connect(str(self.db_path))
+        available_after = conn.execute(
+            """SELECT transcript_sha256, canonical_reference FROM transcripts
+               WHERE dataset_id='DS-000001' AND availability_status='AVAILABLE';"""
+        ).fetchone()
+        expected_reference = "{}::{}".format(available_source[1], available_source[2])
+        self.assertEqual(available_after, (expected_hash, expected_reference))
+        self.assertEqual(
+            conn.execute(
+                "SELECT {} FROM transcripts ORDER BY transcript_id;".format(", ".join(unchanged_columns))
+            ).fetchall(),
+            before_unchanged,
+        )
+        self.assertEqual(
+            conn.execute("SELECT * FROM transcripts WHERE availability_status='UNAVAILABLE';").fetchone(),
+            unavailable_before,
+        )
+        first_run = conn.execute("SELECT * FROM transcripts ORDER BY transcript_id;").fetchall()
+        conn.close()
+        self.assertEqual(archive_path.read_bytes(), archive_before)
+
+        rss.cmd_backfill_transcript_provenance(args)
+        conn = sqlite3.connect(str(self.db_path))
+        try:
+            self.assertEqual(
+                conn.execute("SELECT * FROM transcripts ORDER BY transcript_id;").fetchall(),
+                first_run,
+            )
+        finally:
+            conn.close()
+
     # -- Test 11: Changed-source rejection -----------------------------------
 
     def test_register_rejects_changed_canonical_source(self):
