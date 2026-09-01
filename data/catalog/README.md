@@ -2,7 +2,7 @@
 
 ## What this is
 
-`data/catalog/youtube_inventory.db` is a local SQLite database that acts as the Phase 1 machine-readable inventory/catalog for the YouTube Intelligence OS (Decision 012). Phase 1A (schema v1) indexes datasets, ingestion runs, source locations, physical files, archive members, hashes, and file relationships. Phase 1B (schema v2, Decisions 014–015) adds structured registration. Phase 1C (schema v3–v4) adds recursive multimodal registration. Phase 1D (schema v5–v6, Decision 018) adds bounded Apify run/result/cost provenance, channel identity links, description/type snapshots, transcript references, and thumbnail evidence.
+`data/catalog/youtube_inventory.db` is the local SQLite inventory/catalog for the YouTube Intelligence OS (Decision 012). Phase 1A (schema v1) indexes datasets, ingestion runs, source locations, physical files, archive members, hashes, and file relationships. Phase 1B (schema v2, Decisions 014–015) adds structured registration. Phase 1C (schema v3–v4) adds recursive multimodal registration. Phase 1D (schema v5–v6, Decision 018) adds bounded Apify run/result/cost provenance, channel identity links, description/type snapshots, transcript references, and thumbnail evidence. Schema v8 adds the minimal Phase 2 foundation for provenance-linked content topic and format classifications; it does not populate or analyze the corpus.
 
 ## What this is not
 
@@ -10,7 +10,7 @@
 - Not a raw-payload warehouse. It never stores transcript bodies, raw Actor result payloads, XLSX/ZIP bytes, images, PDFs, or other BLOB payloads. Phase 1D video descriptions are normalized snapshot text; transcript bodies stay in canonical ZIP members or immutable local raw text files referenced by `transcripts.canonical_reference` and `source_files` hashes.
 - Not a replacement for the human-readable manifest in `data/manifests/`. The manifest is the durable ingestion record; the catalog is the fast index over the same facts.
 - Not authoritative over the raw files. Raw evidence in `data/raw/` remains primary; the catalog describes it.
-- Not a competitor-intelligence or content-analysis store. `video_snapshots`/`channel_snapshots` hold source-reported and source-computed metrics only — no strategy analysis, topic generation, or scoring (Phase 1B/1C boundary, `docs/Phases.md`). `visual_observations`/`entity_classifications` hold descriptive extraction (what a screenshot shows) only — never a strategic recommendation.
+- Not a competitor-intelligence or recommendation store. `video_snapshots`/`channel_snapshots` hold source-reported and source-computed metrics only. `visual_observations`/`entity_classifications` hold descriptive extraction, while `content_classifications` holds provenance-linked topic/format assertions with an explicit evidence layer and review status.
 
 ## Where it lives
 
@@ -34,7 +34,7 @@ No fact recorded only inside the `.db` and nowhere else is currently load-bearin
 
 ## Schema version
 
-Current: `7` (`001_initial.sql` through `007_dataset_relationships.sql`, tracked in `schema_meta`). Later schema changes must ship as a new additive `NNN_*.sql` file, never an edit to a file that has already shipped.
+Current: `8` (`001_initial.sql` through `008_content_classifications.sql`, tracked in `schema_meta`). Later schema changes must ship as a new additive `NNN_*.sql` file, never an edit to a file that has already shipped.
 
 ## Raw evidence remains authoritative
 
