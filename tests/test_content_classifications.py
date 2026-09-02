@@ -4,6 +4,7 @@ import sqlite3
 import sys
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 
 
@@ -168,7 +169,7 @@ class ContentClassificationTest(unittest.TestCase):
             conn.execute("UPDATE source_files SET verification_status='FAILED' WHERE file_id='FILE-TRANSCRIPT'")
             conn.commit()
             conn.close()
-            with self.assertRaisesRegex(ic.CatalogError, "incomplete or unverified"):
+            with self.assertRaisesRegex(ic.CatalogError, "failed existence/hash verification"):
                 pilot.classify_pilot(db_path, (item,))
 
             conn = sqlite3.connect(str(db_path))
@@ -191,6 +192,143 @@ class ContentClassificationTest(unittest.TestCase):
             ])
             self.assertEqual(conn.execute("PRAGMA foreign_key_check").fetchall(), [])
             conn.close()
+
+
+class ReferenceOnlyEvidenceTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        self.db_path = self.root / "catalog.db"
+        self.metadata = self.root / "metadata.xlsx"
+        self.archive = self.root / "transcripts.zip"
+        self.member = "channel/video.txt"
+        self.member_bytes = b"Verified transcript evidence without a snapshot description."
+        self.metadata.write_bytes(b"verified metadata")
+        with zipfile.ZipFile(self.archive, "w") as archive:
+            archive.writestr(self.member, self.member_bytes)
+        self.member_hash = hashlib.sha256(self.member_bytes).hexdigest()
+
+        conn = sqlite3.connect(str(self.db_path))
+        conn.execute("PRAGMA foreign_keys = ON")
+        for schema in sorted(SCHEMA_DIR.glob("*.sql")):
+            conn.executescript(schema.read_text(encoding="utf-8"))
+        conn.execute(
+            "INSERT INTO datasets (dataset_id,dataset_name,semantic_class,source_type,ingestion_mode,status,"
+            "date_received,created_at,updated_at) VALUES "
+            "('DS-REF','fixture','B','TEST','TEST','INGESTED',?,?,?)",
+            (TS, TS, TS),
+        )
+        conn.execute(
+            "INSERT INTO ingestion_runs (run_id,dataset_id,started_at,status,errors_count,tool_version,run_type) "
+            "VALUES ('RUN-REF','DS-REF',?,'COMPLETED',0,'test','FILE_INGESTION')",
+            (TS,),
+        )
+        for values in (
+            ("FILE-METADATA", None, "PHYSICAL_FILE", "STRUCTURED_METADATA", self.metadata.name,
+             str(self.metadata), str(self.metadata), None, self.metadata.stat().st_size,
+             hashlib.sha256(self.metadata.read_bytes()).hexdigest(), 1, 0, "VERIFIED"),
+            ("FILE-ARCHIVE", None, "PHYSICAL_FILE", "TRANSCRIPT_ARCHIVE", self.archive.name,
+             str(self.archive), str(self.archive), None, self.archive.stat().st_size,
+             hashlib.sha256(self.archive.read_bytes()).hexdigest(), 1, 0, "VERIFIED"),
+            ("FILE-MEMBER", "FILE-ARCHIVE", "ARCHIVE_MEMBER", "TRANSCRIPT", Path(self.member).name,
+             str(self.archive), None, self.member, len(self.member_bytes), self.member_hash, 0, 1, "HASHED"),
+        ):
+            conn.execute(
+                "INSERT INTO source_files (file_id,dataset_id,ingestion_run_id,parent_file_id,storage_kind,file_role,"
+                "original_filename,original_path,canonical_path,archive_member_path,size_bytes,sha256,semantic_class,"
+                "evidence_layer,is_copied,is_archive_member,processing_status,verification_status,created_at) VALUES "
+                "(?,'DS-REF','RUN-REF',?,?,?,?,?,?,?,?,?,'B','RAW_SOURCE',?,?,'CATALOGED',?,?)",
+                values + (TS,),
+            )
+        conn.execute(
+            "INSERT INTO channels VALUES "
+            "('CH-REF','UC_REF','@ref','Reference Fixture',NULL,'DS-REF',?,?,NULL)",
+            (TS, TS),
+        )
+        conn.execute(
+            "INSERT INTO videos VALUES ('VID-REF','youtube-ref','CH-REF',NULL,'DS-REF',?,?,NULL)",
+            (TS, TS),
+        )
+        conn.execute(
+            "INSERT INTO video_snapshots (video_snapshot_id,video_id,dataset_id,registration_run_id,"
+            "observed_at,title,duration_seconds,created_at,description,video_type) VALUES "
+            "('VS-REF','VID-REF','DS-REF','RUN-REF',?,'Reference evidence',600,?,NULL,'video')",
+            (TS, TS),
+        )
+        conn.execute(
+            "INSERT INTO transcripts (transcript_id,video_id,dataset_id,registration_run_id,"
+            "archive_member_file_id,availability_status,transcript_sha256,description_present,created_at,"
+            "transcript_source,canonical_reference) VALUES "
+            "('TR-REF','VID-REF','DS-REF','RUN-REF','FILE-MEMBER','AVAILABLE',?,1,?,'SUPPLIED_ARCHIVE',?)",
+            (self.member_hash, TS, "{}::{}".format(self.archive, self.member)),
+        )
+        conn.execute(
+            "INSERT INTO field_provenance (provenance_id,dataset_id,registration_run_id,source_file_id,"
+            "video_snapshot_id,field_name,source_locator,value_origin,evidence_layer,extraction_method,created_at) "
+            "VALUES ('FP-REF','DS-REF','RUN-REF','FILE-METADATA','VS-REF','duration_seconds',"
+            "'metadata.xlsx#videos[0]','SOURCE_EXTRACTED','EXTRACTED_FACT','fixture',?)",
+            (TS,),
+        )
+        conn.commit()
+        conn.close()
+        self.item = {"video_id": "VID-REF", "youtube_video_id": "youtube-ref"}
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def _update(self, sql, params=()):
+        with sqlite3.connect(str(self.db_path)) as conn:
+            conn.execute(sql, params)
+
+    def _verify(self):
+        conn = sqlite3.connect(str(self.db_path))
+        conn.row_factory = sqlite3.Row
+        try:
+            return pilot._verified_evidence(conn, self.item, canonical=True)
+        finally:
+            conn.close()
+
+    def test_reference_only_null_path_and_title_transcript_without_description_are_eligible(self):
+        evidence = self._verify()
+        self.assertIsNone(evidence["transcript_path"])
+        self.assertIsNone(evidence["description"])
+        self.assertEqual(
+            pilot._topic_provenance(evidence),
+            ("video_snapshot:VS-REF#title;source_file:FILE-MEMBER#full_text",
+             "ai_assisted_title_transcript_review"),
+        )
+        with sqlite3.connect(str(self.db_path)) as conn:
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM content_classifications").fetchone()[0], 0)
+
+    def test_missing_or_invalid_member_hash_is_rejected(self):
+        self._update("UPDATE source_files SET sha256=NULL WHERE file_id='FILE-MEMBER'")
+        with self.assertRaisesRegex(ic.CatalogError, "missing or conflicting hash"):
+            self._verify()
+        self._update("UPDATE source_files SET sha256=? WHERE file_id='FILE-MEMBER'", (self.member_hash,))
+        self._update("UPDATE transcripts SET transcript_sha256=? WHERE transcript_id='TR-REF'", ("0" * 64,))
+        with self.assertRaisesRegex(ic.CatalogError, "missing or conflicting hash"):
+            self._verify()
+
+    def test_unresolved_source_member_locator_is_rejected(self):
+        self._update("UPDATE source_files SET archive_member_path='missing.txt' WHERE file_id='FILE-MEMBER'")
+        with self.assertRaisesRegex(ic.CatalogError, "locator does not resolve"):
+            self._verify()
+
+    def test_ambiguous_transcript_provenance_is_rejected(self):
+        self._update(
+            "INSERT INTO videos VALUES ('VID-REF-2','youtube-ref-2','CH-REF',NULL,'DS-REF',?,?,NULL)",
+            (TS, TS),
+        )
+        self._update(
+            "INSERT INTO transcripts (transcript_id,video_id,dataset_id,registration_run_id,"
+            "archive_member_file_id,availability_status,transcript_sha256,description_present,created_at,"
+            "transcript_source,canonical_reference) VALUES "
+            "('TR-REF-2','VID-REF-2','DS-REF','RUN-REF','FILE-MEMBER','AVAILABLE',?,1,?,"
+            "'SUPPLIED_ARCHIVE',?)",
+            (self.member_hash, TS, "{}::{}".format(self.archive, self.member)),
+        )
+        with self.assertRaisesRegex(ic.CatalogError, "exactly one available transcript"):
+            self._verify()
 
 
 class BatchClassificationTest(unittest.TestCase):

@@ -39,3 +39,7 @@ Current: `8` (`001_initial.sql` through `008_content_classifications.sql`, track
 ## Raw evidence remains authoritative
 
 If the catalog and the raw files on disk ever disagree, the raw files win. The catalog is a derived index, not a source of truth (`AGENTS.md` rules 2–4).
+
+## Classification evidence eligibility
+
+The classification pipeline accepts a transcript archive member without a standalone `canonical_path` only when its catalog hash, unique member locator, parent-archive provenance, parent hash, and current member bytes all verify. No member is extracted or copied to create eligibility. A sourced title plus a verified available transcript is sufficient topic evidence when the snapshot has no description; the recorded classification provenance must omit `description` in that case. Duration evidence remains required separately for `CONTENT_FORMAT`.

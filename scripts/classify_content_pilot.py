@@ -4,6 +4,7 @@ import argparse
 import json
 import re
 import sqlite3
+import zipfile
 from pathlib import Path
 
 import inventory_catalog as ic
@@ -42,7 +43,15 @@ EVIDENCE_SELECT = (
     "vs.video_snapshot_id,vs.observed_at,vs.title,vs.description,vs.duration_seconds,"
     "t.archive_member_file_id,t.transcript_sha256,t.canonical_reference,"
     "tf.sha256 AS transcript_file_sha256,tf.canonical_path AS transcript_path,"
-    "tf.verification_status AS transcript_verification,fp.source_file_id AS metadata_file_id,"
+    "tf.dataset_id AS transcript_dataset_id,tf.storage_kind AS transcript_storage_kind,"
+    "tf.file_role AS transcript_file_role,tf.archive_member_path AS transcript_member_path,"
+    "tf.is_archive_member AS transcript_is_archive_member,"
+    "tf.processing_status AS transcript_processing_status,"
+    "tf.verification_status AS transcript_verification,"
+    "tp.dataset_id AS transcript_parent_dataset_id,tp.storage_kind AS transcript_parent_storage_kind,"
+    "tp.file_role AS transcript_parent_file_role,tp.canonical_path AS transcript_parent_path,"
+    "tp.sha256 AS transcript_parent_sha256,tp.verification_status AS transcript_parent_verification,"
+    "fp.source_file_id AS metadata_file_id,"
     "fp.source_locator AS duration_locator,fp.value_origin AS duration_origin,"
     "mf.sha256 AS metadata_sha256,mf.canonical_path AS metadata_path,"
     "mf.verification_status AS metadata_verification "
@@ -50,10 +59,67 @@ EVIDENCE_SELECT = (
     "JOIN video_snapshots vs ON vs.video_id=v.video_id "
     "JOIN transcripts t ON t.video_id=v.video_id AND t.dataset_id=vs.dataset_id "
     "JOIN source_files tf ON tf.file_id=t.archive_member_file_id "
+    "LEFT JOIN source_files tp ON tp.file_id=tf.parent_file_id "
     "JOIN field_provenance fp ON fp.video_snapshot_id=vs.video_snapshot_id "
     "AND fp.field_name='duration_seconds' "
     "JOIN source_files mf ON mf.file_id=fp.source_file_id "
 )
+
+
+def _verify_transcript_source(row):
+    if (
+        not row["canonical_reference"]
+        or not row["transcript_sha256"]
+        or not row["transcript_file_sha256"]
+        or row["transcript_sha256"] != row["transcript_file_sha256"]
+    ):
+        raise ic.CatalogError("HashFailure", "Transcript provenance has a missing or conflicting hash")
+
+    if row["transcript_path"]:
+        path = Path(row["transcript_path"])
+        if (
+            row["transcript_verification"] != "VERIFIED"
+            or not path.is_file()
+            or ic.sha256_file(path) != row["transcript_file_sha256"]
+        ):
+            raise ic.CatalogError("HashFailure", "Transcript source file failed existence/hash verification")
+        return
+
+    if (
+        row["transcript_dataset_id"] != row["dataset_id"]
+        or row["transcript_storage_kind"] != "ARCHIVE_MEMBER"
+        or row["transcript_file_role"] != "TRANSCRIPT"
+        or row["transcript_is_archive_member"] != 1
+        or row["transcript_processing_status"] != "CATALOGED"
+        or row["transcript_verification"] not in ("HASHED", "VERIFIED")
+        or row["transcript_parent_dataset_id"] != row["dataset_id"]
+        or row["transcript_parent_storage_kind"] != "PHYSICAL_FILE"
+        or row["transcript_parent_file_role"] != "TRANSCRIPT_ARCHIVE"
+        or row["transcript_parent_verification"] != "VERIFIED"
+        or not row["transcript_member_path"]
+        or not row["transcript_parent_path"]
+        or not row["transcript_parent_sha256"]
+    ):
+        raise ic.CatalogError("SourceNotFound", "Reference-only transcript provenance is incomplete")
+
+    parent_path = Path(row["transcript_parent_path"])
+    expected_reference = "{}::{}".format(parent_path, row["transcript_member_path"])
+    if row["canonical_reference"] != expected_reference:
+        raise ic.CatalogError("SourceNotFound", "Reference-only transcript locator does not resolve to its source member")
+    if not parent_path.is_file() or ic.sha256_file(parent_path) != row["transcript_parent_sha256"]:
+        raise ic.CatalogError("HashFailure", "Transcript source archive failed existence/hash verification")
+    try:
+        with zipfile.ZipFile(parent_path) as archive:
+            members = [info for info in archive.infolist() if info.filename == row["transcript_member_path"]]
+            if len(members) != 1:
+                raise ic.CatalogError(
+                    "AmbiguousIdentity", "Reference-only transcript locator must resolve to exactly one source member"
+                )
+            actual_hash = ic.sha256_bytes(archive.read(members[0]))
+    except (OSError, zipfile.BadZipFile) as exc:
+        raise ic.CatalogError("HashFailure", "Transcript source archive/member could not be verified") from exc
+    if actual_hash != row["transcript_file_sha256"]:
+        raise ic.CatalogError("HashFailure", "Reference-only transcript member hash does not match the catalog")
 
 
 def _verified_evidence(conn, item, canonical=False):
@@ -74,22 +140,39 @@ def _verified_evidence(conn, item, canonical=False):
             "Content item must resolve to one canonical snapshot, available transcript, and duration source",
         )
     row = rows[0]
-    if not row["title"] or not row["description"] or row["duration_seconds"] is None:
-        raise ic.CatalogError("SourceNotFound", "Content item lacks title, description, or duration evidence")
+    if not row["title"] or row["duration_seconds"] is None:
+        raise ic.CatalogError("SourceNotFound", "Content item lacks title or duration evidence")
     if (
-        not row["canonical_reference"]
-        or row["transcript_sha256"] != row["transcript_file_sha256"]
-        or row["transcript_verification"] != "VERIFIED"
-        or row["metadata_verification"] != "VERIFIED"
+        row["metadata_verification"] != "VERIFIED"
         or row["duration_origin"] != "SOURCE_EXTRACTED"
     ):
         raise ic.CatalogError("HashFailure", "Content provenance is incomplete or unverified")
-    for path_key, hash_key in (("transcript_path", "transcript_file_sha256"),
-                               ("metadata_path", "metadata_sha256")):
-        path = Path(row[path_key]) if row[path_key] else None
-        if not path or not path.is_file() or ic.sha256_file(path) != row[hash_key]:
-            raise ic.CatalogError("HashFailure", "Content source file failed existence/hash verification")
+    metadata_path = Path(row["metadata_path"]) if row["metadata_path"] else None
+    if (
+        not row["metadata_sha256"]
+        or not metadata_path
+        or not metadata_path.is_file()
+        or ic.sha256_file(metadata_path) != row["metadata_sha256"]
+    ):
+        raise ic.CatalogError("HashFailure", "Content metadata source failed existence/hash verification")
+    source_mappings = conn.execute(
+        "SELECT COUNT(*) FROM transcripts WHERE archive_member_file_id=? AND availability_status='AVAILABLE'",
+        (row["archive_member_file_id"],),
+    ).fetchone()[0]
+    if source_mappings != 1:
+        raise ic.CatalogError("AmbiguousIdentity", "Transcript source must map to exactly one available transcript")
+    _verify_transcript_source(row)
     return row
+
+
+def _topic_provenance(evidence):
+    snapshot_fields = "title,description" if evidence["description"] else "title"
+    return (
+        "video_snapshot:{}#{};source_file:{}#full_text".format(
+            evidence["video_snapshot_id"], snapshot_fields, evidence["archive_member_file_id"]
+        ),
+        "ai_assisted_{}_transcript_review".format(snapshot_fields.replace(",", "_")),
+    )
 
 
 def _insert_exact(conn, values):
@@ -148,14 +231,12 @@ def classify_pilot(db_path=ic.DEFAULT_DB_PATH, items=PILOT_ITEMS):
                 if content_format not in FORMAT_VOCABULARY:
                     raise ic.CatalogError("ManifestValidationFailure", "Format is outside the pilot vocabulary")
                 prefix = "CC-PILOT-{}".format(item["video_id"].removeprefix("VID-"))
+                topic_locator, topic_method = _topic_provenance(evidence)
                 created += _insert_exact(conn, (
                     prefix + "-TOPIC", item["video_id"], item["dataset_id"],
                     evidence["archive_member_file_id"], "CONTENT_TOPIC", item["topic"],
                     "AI_INTERPRETATION", "PROPOSED",
-                    "video_snapshot:{}#title,description;source_file:{}#full_text".format(
-                        item["video_snapshot_id"], evidence["archive_member_file_id"]
-                    ),
-                    "ai_assisted_title_description_transcript_review", None,
+                    topic_locator, topic_method, None,
                     "NON_REPRODUCIBLE",
                     "Pilot interpretation; model/prompt execution was not preserved for exact reproduction.",
                 ))
@@ -252,14 +333,12 @@ def _batch_values(batch_id, selected, dimension, assignment_source):
     value = selected["values"][dimension]
     prefix = "CC-{}-{}".format(batch_id, item["video_id"].removeprefix("VID-"))
     if dimension == "CONTENT_TOPIC":
+        topic_locator, topic_method = _topic_provenance(evidence)
         return (
             prefix + "-TOPIC", item["video_id"], evidence["dataset_id"],
             evidence["archive_member_file_id"], dimension, value,
             "AI_INTERPRETATION", "PROPOSED",
-            "video_snapshot:{}#title,description;source_file:{}#full_text".format(
-                evidence["video_snapshot_id"], evidence["archive_member_file_id"]
-            ),
-            "ai_assisted_title_description_transcript_review", None, "NON_REPRODUCIBLE",
+            topic_locator, topic_method, None, "NON_REPRODUCIBLE",
             "Batch interpretation recorded in {}; model/prompt execution was not preserved for exact reproduction.".format(
                 assignment_source or "an in-memory assignment"
             ),
