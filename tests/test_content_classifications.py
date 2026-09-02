@@ -194,6 +194,17 @@ class ContentClassificationTest(unittest.TestCase):
 
 
 class BatchClassificationTest(unittest.TestCase):
+    APPROVED_TOPICS = frozenset({
+        "BUSINESS_ECONOMICS",
+        "CARDIOVASCULAR_HEALTH",
+        "HEALTHY_AGING",
+        "METABOLIC_HEALTH",
+        "PERSONAL_FINANCE",
+        "RETIREMENT_PLANNING",
+        "SCIENCE_HYPOTHETICALS",
+        "STEM_EXPLANATIONS",
+    })
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name)
@@ -340,6 +351,20 @@ class BatchClassificationTest(unittest.TestCase):
         with self.assertRaisesRegex(ic.CatalogError, "outside the controlled vocabulary"):
             self._classify(1, items=invalid)
         self.assertEqual(hashlib.sha256(self.db_path.read_bytes()).hexdigest(), before)
+
+    def test_approved_topic_vocabulary_is_accepted_without_database_changes(self):
+        before = hashlib.sha256(self.db_path.read_bytes()).hexdigest()
+        items = tuple(
+            {"video_id": "VID-VOCAB-{:02d}".format(index),
+             "youtube_video_id": "youtube-vocab-{:02d}".format(index), "topic": topic}
+            for index, topic in enumerate(sorted(self.APPROVED_TOPICS), start=1)
+        )
+        pilot._validate_batch("VOCAB", items, len(items))
+        self.assertEqual(pilot.TOPIC_VOCABULARY, self.APPROVED_TOPICS)
+        self.assertTrue({"CARDIOVASCULAR_HEALTH", "SCIENCE_HYPOTHETICALS"} <= pilot.TOPIC_VOCABULARY)
+        self.assertEqual(hashlib.sha256(self.db_path.read_bytes()).hexdigest(), before)
+        with sqlite3.connect(str(self.db_path)) as conn:
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM content_classifications").fetchone()[0], 0)
 
 
 if __name__ == "__main__":
