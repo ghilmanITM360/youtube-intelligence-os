@@ -200,3 +200,261 @@ The following 21 DS-000018 claims were not in scope for this task and remain unv
 - **Titles/thumbnails/hooks:** Safe Conclusion 7 supports testing homepage/Shorts thumbnail treatments as a plausible lever, but any future engine should treat effect size as unmeasured, not import the source's self-reported figures.
 - **Format/episode design:** Safe Conclusion 4 is directly usable as a monetization-risk guardrail (avoid templated near-duplication) but should not be encoded as a discovery-ranking penalty without further evidence.
 - **Still speculative for any future layer:** TV-specific device-mix percentages (CLM-014), exact semantic-ID input modalities (CLM-012), and any subscriber "devaluation" framing (INT-002) — these should remain flagged as unverified in any downstream recommendation or scoring logic.
+
+---
+
+# Validation Batch 2
+
+## Scope
+
+- Source dataset validated: DS-000018 — 2026 Algorithm Update — Multi-Tab Creator Research Corpus (unchanged; same 33-claim source artifact)
+- Claims validated in this batch: **exactly 12**, selected from the 21 claims left unvalidated by Batch 1
+- Claims not revalidated: the 12 Batch 1 claims (ALG26-CLM-001, 002, 004, 005, 008, 009, 012, 014, 016, 017, 018, ALG26-INT-002) are unchanged and not re-scored here
+- Claims still unvalidated after this batch: 9 (listed under "Claims Still Requiring Evidence — Batch 2")
+- This batch is an additional evidence layer. It does not modify, delete, or promote any of the 33 original claims, and it creates zero `MEASURED_FACT` rows.
+- Batch date: 2026-09-04
+
+## Method
+
+1. Confirmed the 21 remaining unvalidated claim IDs directly from the DS-000018 source-intelligence artifact and Batch 1's "Claims Still Requiring Evidence" list before selecting: `ALG26-CLM-003, 006, 007, 010, 011, 013, 015`; `ALG26-INT-001, 003, 004, 005`; `ALG26-REC-001` through `ALG26-REC-010`. Count confirmed as 21 (7 + 4 + 10).
+2. Selected 12 claims prioritizing the task's named themes, with `ALG26-REC-007` (AEO/citation-friendliness) and `ALG26-REC-008` (off-platform trust for faceless channels) selected first per explicit instruction, since Batch 1 recorded the "off-platform/external signals" theme as uncovered.
+3. Re-verified provenance for every selected claim by resolving its cited tab alias (T36/T39/T43/T48/T49/T51) to `source_files.file_id`/`sha256` in `data/catalog/youtube_inventory.db` and confirming an exact match against the intelligence artifact's alias table (see table below). One new alias (T43) is used in this batch and is now cross-checked for the first time.
+4. Researched current official evidence for each claim from YouTube Help, the YouTube Official Blog, Google Search Central developer documentation (for the two AEO-adjacent claims), and the same Google Research/DeepMind Semantic-IDs paper used in Batch 1, per the task's primary-source priority list. No SEO blog, agency, newsletter, or press-summary source was used to determine any validation status; several SEO/agency search results for Shorts-vs-long-form "separate algorithms" and TV/living-room viewing statistics were deliberately excluded as non-primary and are not cited below.
+5. Assigned exactly one of the five required validation states per claim.
+6. Checked all 12 claims against: the Batch 1 twelve, the DS-000018 source artifact's own claims, Batch 1's recorded Safe OS Conclusions, DS-000011 (still `INGESTED`, no structured claim artifact — nothing to conflict against there, unchanged from Batch 1), and the primary evidence gathered in this batch.
+
+### Provenance re-verification (Batch 2)
+
+| Alias | FILE ID | DB `sha256` matches intelligence-artifact table | Selected claims using this member |
+|---|---|---|---|
+| T36 | FILE-006439 | ✅ match (re-confirmed) | ALG26-INT-001 |
+| T39 | FILE-006442 | ✅ match (re-confirmed) | ALG26-CLM-006, ALG26-CLM-007 |
+| T43 | FILE-006446 | ✅ match (first use) | ALG26-REC-007, ALG26-REC-008 |
+| T48 | FILE-006451 | ✅ match (re-confirmed) | ALG26-CLM-011 |
+| T49 | FILE-006452 | ✅ match (re-confirmed) | ALG26-CLM-015, ALG26-INT-003, ALG26-INT-004, ALG26-INT-005 |
+| T51 | FILE-006454 | ✅ match (re-confirmed) | ALG26-CLM-013 |
+
+Note: `ALG26-CLM-003` also resolves to T39 (1:19–2:57 block region, 5:48–6:58 specifically), already covered by the T39 row above via the same file/hash.
+
+## Primary Sources Used (Batch 2 — new sources; S1–S8 from Batch 1 are reused where noted)
+
+| ID | Organization | Title | URL | Retrieved | Section used |
+|---|---|---|---|---|---|
+| S9 | Google / YouTube Help | Good to know about recommendations for YouTube's recommendation system | https://support.google.com/youtube/answer/16559651 | 2026-09-04 | "Our search and recommendation systems look at audience activity while a video is publicly available"; Shorts-feed recency note |
+| S10 | Google / YouTube Help | Hyping videos eligibility, availability & policies; Leaderboard for hyped videos on YouTube | https://support.google.com/youtube/answer/15509925 ; https://support.google.com/youtube/answer/15334500 | 2026-09-04 | Eligibility (500–500,000 subscriber creators), small-creator bonus points, non-personalized discovery leaderboard |
+| S11 | Google / Google Search Central | AI Features and Your Website | https://developers.google.com/search/docs/appearance/ai-features | 2026-09-04 | "There are no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary"; scope is Google Search web results, not YouTube |
+| S12 | Google / Google Search Central | Google's Guide to Optimizing for Generative AI Features on Google Search | https://developers.google.com/search/docs/fundamentals/ai-optimization-guide | 2026-09-04 | No prescriptive "early direct answer" or specific-fact-density structural requirement; explicitly no requirement to fragment content for AI parsing |
+| S13 | Google / YouTube Help | Impersonation policy | https://support.google.com/youtube/answer/2801947 | 2026-09-04 | Channel must represent the real creator/brand/entity it claims to be |
+| S14 | Google / YouTube Help | Spam, deceptive practices & scams policies | https://support.google.com/youtube/answer/2801973 | 2026-09-04 | "Off-platform diversion" listed as a violation category; no off-platform-presence ranking benefit documented |
+| S1, S2 (reused) | Google / YouTube Help | YouTube's Recommendation System; How YouTube recommendations work | https://support.google.com/youtube/answer/16533387 ; https://support.google.com/youtube/answer/16089387 | 2026-09-04 | Watch history as a signal; "give as many videos as possible a chance to be discovered"; per-surface signal weighting; "fresh performance data...rather than relying on past results" |
+| S4 (reused) | YouTube Official Blog | YouTube CEO Neal Mohan's 2026 Letter: The Future of YouTube | https://blog.youtube/inside-youtube/the-future-of-youtube-2026/ | 2026-09-04 | AI-slop reduction, mandatory synthetic-content disclosure, "AI will remain a tool for expression, not a replacement" |
+| S5 (reused) | Google Research / Google DeepMind | Better Generalization with Semantic IDs: A Case Study in Ranking for Recommendations | arXiv:2306.08121 | 2026-09-04 | Semantic IDs from frozen content embeddings via RQ-VAE, evaluated on a real-world YouTube ranking model; no mention of a "mood" cluster construct |
+
+S10 is an official YouTube Help feature description, not press-reported, and is treated as full-confidence primary evidence (stronger than S6–S8 from Batch 1). S11 and S12 are official Google Search Central documentation but are explicitly scoped to Google Search web results, not YouTube — see the cross-system inference warnings below.
+
+## Claim-by-Claim Validation
+
+### ALG26-CLM-003 — Evergreen discovery
+- **Original claim locator:** T39, 5:48–6:58 (FILE-006442)
+- **SOURCE SAYS:** Initial performance is not the sole basis for later recommendations; evergreen videos may receive most of their views well after publication.
+- **PRIMARY EVIDENCE SAYS:** S9: "Our search and recommendation systems look at audience activity while a video is publicly available" — evaluation is ongoing, not fixed at launch. S1: "The algorithm uses fresh performance data for each individual video, rather than relying on past results" — recent signals, not a permanent early verdict, drive continued recommendation. Neither page states that evergreen videos typically receive most of their lifetime views after an initial window, or gives any frequency/magnitude for this pattern.
+- **Heuristic vs. platform fact:** A (documented platform behavior) for the mechanism; E (source interpretation) for the "most views well after publication" outcome framing.
+- **Validation status:** PARTIALLY_SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** A video's recommendation eligibility is not permanently fixed by its first-days performance; ongoing audience activity while the video remains public continues to matter. The stronger claim that evergreen videos typically get most of their views long after publication is a plausible source interpretation, not something either official page states.
+- **Confidence/limitations:** Medium-high on the mechanism (two independent official pages point the same direction); no confidence on the "most views" outcome framing, which no source measures.
+- **Conflict check:** NO_CONFLICT with Batch 1 (complements CLM-001/CLM-004's "fresh, per-viewer, not fixed" framing) and with other DS-000018 claims.
+
+### ALG26-CLM-006 — Suggested traffic / cross-topic connection
+- **Original claim locator:** T39, 28:38–31:15 (FILE-006442)
+- **SOURCE SAYS:** A suggested video need not share the current video's topic; personalization can connect cross-topic videos through a viewer's broader interests and co-viewing behavior.
+- **PRIMARY EVIDENCE SAYS:** S1/S2 confirm the system "learns from what videos similar viewers also watched, like 'viewers of video A also watched video B,'" and separately describes recognizing a viewer's "favored themes, topics, and formats" across their activity. Neither page states whether a specific "Up Next"/suggested placement can cross topic boundaries, or only reorders within a topic.
+- **Heuristic vs. platform fact:** A (documented platform behavior — co-viewing signal exists) blended with E (source interpretation of what that implies for cross-topic suggestion specifically).
+- **Validation status:** PARTIALLY_SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** Co-viewing behavior ("viewers of A also watched B") is a documented, official recommendation input, which is consistent with suggestions sometimes crossing topic lines when a broader interest pattern connects two videos. The stronger claim that this is a general, reliable cross-topic bridge mechanism is not itself confirmed.
+- **Confidence/limitations:** Medium. The underlying co-viewing signal is well documented; its cross-topic scope specifically is not addressed.
+- **Conflict check:** NO_CONFLICT with CLM-005/CLM-018 (channel/format boundaries operate at a different level — channel identity vs. per-video suggestion — so no contradiction).
+
+### ALG26-CLM-007 — New-channel discovery without prior history
+- **Original claim locator:** T39, 31:47–32:39 (FILE-006442)
+- **SOURCE SAYS:** New channels and fresh videos can be matched to interested viewers without prior channel-viewer history, using topical preferences and an understanding of the video's subject.
+- **PRIMARY EVIDENCE SAYS:** S1 states directly: "YouTube aims to give as many videos as possible a chance to be discovered by audiences who are interested in them." S10 (Hype feature, official) provides a concrete, documented mechanism aimed specifically at creators without an established audience: eligible for channels with 500–500,000 subscribers, with a "small creator bonus" that weights a hype from a smaller channel's viewer more heavily, surfaced via a non-personalized, topic-filterable public leaderboard. Neither source describes the exact content-understanding mechanism (e.g., topical/semantic matching) used for a genuinely brand-new, zero-subscriber channel's very first upload.
+- **Heuristic vs. platform fact:** A (documented platform behavior and a named product feature) for the general "new content gets a discovery chance" principle; E (source interpretation) for the specific "topical preferences and subject understanding" mechanism.
+- **Validation status:** PARTIALLY_SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** YouTube states an explicit goal of giving new/undiscovered content a chance to reach interested audiences, and has at least one official, documented feature (Hype) built to help smaller/newer creators gain visibility independent of subscriber count. The precise content-understanding mechanism for a zero-history channel's first video is not confirmed in detail by the sources found.
+- **Confidence/limitations:** Medium-high on the general principle and the existence of a supporting feature; low on the specific mechanism claimed.
+- **Conflict check:** NO_CONFLICT with CLM-002/INT-002 (Batch 1) — consistent with those claims' theme that subscriber totals are not the dominant distribution driver.
+
+### ALG26-CLM-011 — Watch history as an important recommendation input
+- **Original claim locator:** T48, 15:08–15:56 (FILE-006451)
+- **SOURCE SAYS:** Watch history is an important recommendation input because it indicates viewer interests.
+- **PRIMARY EVIDENCE SAYS:** S2, directly: "Watch history: The YouTube videos you've watched help to give you better recommendations." S1 confirms watch history as part of real-time per-viewer profiling. S2 further states that for homepage recommendations specifically, "our system primarily relies on your watch history."
+- **Heuristic vs. platform fact:** A (documented platform behavior) — this is a directly and consistently stated official mechanism.
+- **Validation status:** SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** Watch history is an official, explicitly named, high-weight recommendation signal, particularly for homepage recommendations.
+- **Confidence/limitations:** High confidence — stated plainly and consistently across two official Help pages.
+- **Conflict check:** NO_CONFLICT — directly reinforces Batch 1's CLM-001 (per-viewer, signal-driven ranking).
+
+### ALG26-CLM-013 — Semantic IDs connected to watch-history "mood" clusters
+- **Original claim locator:** T51, 7:31–8:12 (FILE-006454)
+- **SOURCE SAYS:** Semantic IDs are connected to watch-history clusters representing a viewer's recent formats, styles, interests, and mood.
+- **PRIMARY EVIDENCE SAYS:** S5 (the same Google Research/DeepMind paper used for CLM-012 in Batch 1) confirms Semantic IDs are discrete codes derived from frozen content embeddings, used in a real-world YouTube ranking model to improve generalization for new/long-tail videos. The paper's publicly available description does not mention "mood," or any watch-history clustering construct by that name; it addresses item (video) representation, not a described viewer-mood-state feature.
+- **Heuristic vs. platform fact:** F (speculative internal-algorithm claim) — this compounds an already-partially-unconfirmed mechanism (CLM-012) with an additional, more specific claim that has no located primary support.
+- **Validation status:** NOT_SUPPORTED_BY_PRIMARY_EVIDENCE
+- **OS CAN SAFELY CONCLUDE:** The published research basis for content-derived semantic IDs (already recorded under CLM-012) exists, but no primary source found describes a "mood cluster" construct tied to watch history. This should not be treated as confirmed; "not found" here reflects a genuine research-basis published on a different, narrower aspect (item embeddings), not a denial that any mood-related signal could exist.
+- **Confidence/limitations:** Low. The claim is a translated creator transcript's technical extrapolation beyond what the cited-style research publicly documents.
+- **Conflict check:** PARTIAL_TENSION with CLM-012 (Batch 1, PARTIALLY_SUPPORTED) — CLM-013 extends CLM-012's already-flagged "exact input-modality list unconfirmed" caution with an even more specific, unsupported claim. This is not a contradiction (both can be false-until-shown or true-but-unconfirmed) but the compounding specificity increases overclaim risk and both should be flagged together in any downstream use.
+
+### ALG26-CLM-015 — Long-form duration +51% since 2020 (100B-view analysis)
+- **Original claim locator:** T49, 2:44–3:03 (FILE-006452)
+- **SOURCE SAYS:** A strategist reports an analysis of 100 billion views in which mean/median long-form video duration increased 51% since 2020.
+- **PRIMARY EVIDENCE SAYS:** No official YouTube or Google source describing a 100-billion-view duration analysis, or confirming/denying a 51% duration increase, was located. S9 confirms YouTube's own framing is normative, not statistical: "There's no universal 'ideal' length for YouTube videos" — creators are told to match length to content, not given a platform-published duration trend figure.
+- **Heuristic vs. platform fact:** E (source interpretation) / self-reported quantitative claim with no accompanying raw data, structurally identical in kind to CLM-014 (Batch 1).
+- **Validation status:** NOT_SUPPORTED_BY_PRIMARY_EVIDENCE
+- **OS CAN SAFELY CONCLUDE:** No official confirmation or denial of this specific statistic exists in the sources checked; "not found" means unverified, not false. YouTube's own guidance is that video length should be need-driven rather than trend-driven, which neither confirms nor is contradicted by a possible real-world lengthening trend.
+- **Confidence/limitations:** None on the specific figure. The claim should not be repeated as an established platform statistic.
+- **Conflict check:** NO_CONFLICT with CLM-014 (Batch 1) — both are self-reported T49-strategist statistics with the same evidentiary limitation (no raw data, no primary corroboration); this is a repeated pattern within the source, not a contradiction between the two claims.
+
+### ALG26-INT-001 — Semantic discovery "eras" framing
+- **Original claim locator:** T36, 4:10–11:08 (FILE-006439)
+- **SOURCE SAYS:** The speaker frames YouTube's history as keyword, attention, interest, then "semantic" eras, with semantic meaning layered on top of metadata, clicks, watch time, and viewer interest.
+- **PRIMARY EVIDENCE SAYS:** No official YouTube or Google publication describing YouTube's recommendation history as a sequence of named "eras" (keyword/attention/interest/semantic) was located. S5 independently confirms a real, published semantic-ID research basis exists (consistent with a "semantic" capability being real), but no official source frames this as a historical stage succeeding earlier "eras."
+- **Heuristic vs. platform fact:** E (source interpretation) — an explanatory narrative built by the speaker, not a platform-published history.
+- **Validation status:** NOT_SUPPORTED_BY_PRIMARY_EVIDENCE
+- **OS CAN SAFELY CONCLUDE:** Semantic/content-derived matching is a real, published capability (per CLM-012's evidence), but the specific four-era historical narrative is the source's own framing device, not something YouTube or Google has published. Treat the underlying capability as supported (already recorded under CLM-012) and the "eras" narrative itself as unverified scaffolding.
+- **Confidence/limitations:** None on the narrative structure; medium on the underlying capability it describes (via CLM-012, not independently re-verified here).
+- **Conflict check:** NO_CONFLICT — compatible in spirit with CLM-012/INT-002 (Batch 1), which already carry the appropriate caveats for the technical mechanism.
+
+### ALG26-INT-003 — TV friction favors show-like, bingeable content
+- **Original claim locator:** T49, 7:03–10:06 (FILE-006452)
+- **SOURCE SAYS:** Strategists infer that TV-screen friction and lean-back viewing can favor recognizable, show-like, bingeable experiences and sometimes longer videos.
+- **PRIMARY EVIDENCE SAYS:** S4 confirms YouTube's large and growing TV-screen viewing share (Nielsen "#1 in streaming watchtime... for nearly three years") but does not describe a content-format effect of TV viewing (i.e., it does not state that TV viewing causes or correlates with a preference for show-like or longer content). No official source addressing a TV-format causal link was located.
+- **Heuristic vs. platform fact:** E (source interpretation) — an inference the source's own participants qualify by noting their personal TV habits differ.
+- **Validation status:** NOT_SUPPORTED_BY_PRIMARY_EVIDENCE
+- **OS CAN SAFELY CONCLUDE:** YouTube's growth on TV screens is independently, officially confirmed (already recorded under CLM-014, Batch 1). The specific inference that TV-screen friction pushes viewers toward show-like or longer formats is a creator-strategist interpretation with no located official support and should not be treated as a platform-documented effect.
+- **Confidence/limitations:** None on the causal format inference; the adjacent TV-growth fact is independently well evidenced (S4) but is a different claim.
+- **Conflict check:** NO_CONFLICT with CLM-014 (Batch 1) — same underlying TV-growth fact, different and separately unverified layer added on top.
+
+### ALG26-INT-004 — Authenticity/personality as a differentiator against imitable spectacle
+- **Original claim locator:** T49, 31:13–33:46 (FILE-006452)
+- **SOURCE SAYS:** As high-production spectacle becomes easier to imitate (implicitly, via AI tools), personality and personal connection become a stronger differentiator.
+- **PRIMARY EVIDENCE SAYS:** S4 (Neal Mohan's 2026 letter) confirms two adjacent, official platform-policy facts: YouTube requires creators to disclose "realistic altered or synthetic content," and YouTube states it is "actively building on its established systems for combatting spam and clickbait" specifically to reduce "low-quality AI content" and protect "genuine content from human creators." Neither statement asserts that personality/personal connection is becoming a stronger *audience* or *ranking* differentiator — that causal, market-level claim is not something YouTube's own communications make.
+- **Heuristic vs. platform fact:** B (documented policy) for the disclosure requirement and anti-slop enforcement direction; E (source interpretation) for the "personality becomes the differentiator" market claim built on top of it.
+- **Validation status:** PARTIALLY_SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** YouTube has officially confirmed policy actions consistent with valuing authentic, human-originated content over undisclosed synthetic content (mandatory synthetic-content disclosure, active anti-"AI slop" enforcement). The stronger claim that this environment makes personality/personal connection a *strategically stronger differentiator* is a plausible but unconfirmed market inference, not a platform-stated ranking or discovery mechanism.
+- **Confidence/limitations:** Medium on the policy-direction premise; none on the differentiation conclusion itself.
+- **Conflict check:** NO_CONFLICT with CLM-009 (Batch 1, SUPPORTED) — both point toward the same policy direction (against inauthentic/mass-produced/undisclosed-synthetic content).
+
+### ALG26-INT-005 — Long-form recommender more sophisticated than Shorts recommender
+- **Original claim locator:** T49, 1:00:25–1:02:14 (FILE-006452)
+- **SOURCE SAYS:** A strategist speculates that the mature long-form recommender is more sophisticated than the newer Shorts recommender and may handle content volume better.
+- **PRIMARY EVIDENCE SAYS:** No official YouTube or Google source comparing the relative sophistication, maturity, or architecture of a "long-form recommender" versus a "Shorts recommender" as distinct systems was located. This concerns internal system architecture and engineering comparisons that YouTube does not publish.
+- **Heuristic vs. platform fact:** F (speculative internal-algorithm claim) — the source itself repeatedly frames this as personal judgment, not platform-attributed information.
+- **Validation status:** NOT_CURRENTLY_VERIFIABLE
+- **OS CAN SAFELY CONCLUDE:** Nothing about the relative sophistication of a long-form versus Shorts recommendation system can be drawn from public primary documentation. This should remain an open, unverifiable question for any downstream layer.
+- **Confidence/limitations:** Not applicable — no evidence exists to weigh in either direction, and the claim concerns non-public system internals.
+- **Conflict check:** PARTIAL_TENSION with CLM-018 (Batch 1, CONTRADICTED for its "should not share a channel" framing) — INT-005 presupposes Shorts and long-form are handled by meaningfully separate systems, which is the same unresolved sub-premise Batch 1 explicitly left open ("the underlying 'separate algorithms' technical premise is neither confirmed nor denied"). This claim does not resolve that open premise; it merely reuses it as an assumption.
+
+### ALG26-REC-007 — AEO script structuring for AI-answer citation-friendliness
+- **Original claim locator:** T43, 5:08–6:49 (FILE-006446)
+- **SOURCE SAYS:** Structure scripts with an early, direct answer and specific names, dates, and places to make passages more citation-friendly for AI answer systems.
+- **PRIMARY EVIDENCE SAYS:** Google Search Central's own official guidance directly addresses this exact mechanism and states the opposite: S11: "There are no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary." S12 adds there is "no requirement to break your content into tiny pieces for AI to better understand it," and gives no early-answer or fact-density structural prescription — it instead emphasizes general content quality and organizing "by paragraphs and sections, along with headings."
+- **Heuristic vs. platform fact:** D (creator best-practice recommendation) that makes an implicit, unverified platform-mechanism claim — effectively F dressed as advice.
+- **Validation status:** CONTRADICTED
+- **OS CAN SAFELY CONCLUDE:** The specific mechanism this recommendation asserts — that an early-direct-answer, fact-dense structure specifically improves AI-answer citation odds — is directly contradicted by Google's own official AI-features guidance, which states no such special structuring is required or necessarily rewarded. General content-quality and topical-authority guidance (which this Search Central material does endorse) is a different, much weaker claim than the specific "structure-for-citation" formula in the source.
+- **Confidence/limitations:** High confidence on the contradiction, sourced to two official, directly fetched Google Search Central pages.
+- **CROSS-SYSTEM INFERENCE WARNING:** S11 and S12 describe **Google Search** web-result AI Overviews/AI Mode, not **YouTube Search** or **YouTube recommendations**. No official source was located describing whether or how AI-answer citation mechanics apply to YouTube video/transcript content specifically, or to any YouTube-native answer surface. This validation should not be read as evidence about YouTube's own systems — only as evidence that the *general* AEO mechanism claimed does not hold even in Google Search itself, the system it is most likely to have been imported from.
+- **Conflict check:** DIRECT_CONFLICT against primary evidence (S11/S12). NO_CONFLICT against the other 11 validated Batch 2 claims or Batch 1 claims — no prior claim addressed AEO.
+
+### ALG26-REC-008 — Off-platform brand presence builds trust for faceless channels
+- **Original claim locator:** T43, 7:05–12:38 (FILE-006446)
+- **SOURCE SAYS:** Build linked off-platform profiles and publishing surfaces so a faceless channel appears as a consistent brand rather than an anonymous content farm, implying this affects platform trust/distribution.
+- **PRIMARY EVIDENCE SAYS:** S13 (Impersonation policy) confirms channel identity must represent "the real creator, brand, or entity it claims to be," but this concerns not impersonating others, not building an off-platform footprint. S14 (Spam, deceptive practices & scams policy) lists "off-platform diversion" (content built to push users to external, often malicious, sites) as a *violation* category — the opposite direction from the claim's advice, though the policy targets deceptive diversion, not general brand-consistency linking. No official source states that a consistent off-platform brand presence functions as, or contributes to, a recommendation, ranking, or discovery-trust signal.
+- **Heuristic vs. platform fact:** D (creator best-practice recommendation) implying an unverified F-type mechanism (an off-platform "trust signal" feeding recommendations).
+- **Validation status:** NOT_SUPPORTED_BY_PRIMARY_EVIDENCE
+- **OS CAN SAFELY CONCLUDE:** No official YouTube or Google source confirms or denies that off-platform brand consistency influences recommendation, ranking, or discovery. Identity-representation policy (S13) and anti-diversion policy (S14) are adjacent but address different concerns (impersonation and malicious link-out behavior, respectively), not brand-trust scoring. This should be treated as an unverified creator-strategy hypothesis, not a platform mechanism.
+- **Confidence/limitations:** None on the specific "off-platform trust signal" mechanism; the adjacent policies found are real but do not establish or refute it.
+- **CROSS-SYSTEM INFERENCE WARNING:** The claim's framing resembles Google Search's E-E-A-T (Experience, Expertise, Authoritativeness, Trust) content-quality heuristics, which are a Google Search ranking concept — no official source was found extending that framework, or an equivalent, to YouTube recommendations specifically. This validation does not confirm or import any Search-side authority concept onto YouTube.
+- **Conflict check:** NO_CONFLICT with any Batch 1 or Batch 2 claim (no prior claim addressed off-platform presence).
+
+## Supported Claims (Batch 2)
+
+- ALG26-CLM-011 (watch history is a directly documented, high-weight recommendation signal)
+
+## Partially Supported Claims (Batch 2)
+
+- ALG26-CLM-003 (ongoing evaluation while publicly available confirmed; "most views after publication" outcome framing unconfirmed)
+- ALG26-CLM-006 (co-viewing signal confirmed; cross-topic scope specifically unconfirmed)
+- ALG26-CLM-007 (general new-content discovery goal and the Hype feature confirmed; exact new-channel matching mechanism unconfirmed)
+- ALG26-INT-004 (synthetic-content disclosure/anti-slop policy confirmed; "personality as stronger differentiator" market claim unconfirmed)
+
+## Contradicted Claims (Batch 2)
+
+- ALG26-REC-007 — the specific "early answer + specific facts = more AI-citable" structuring mechanism is directly contradicted by Google Search Central's own AI Overviews/AI Mode guidance ("no additional requirements... no special optimizations necessary"), and the guidance is scoped to Google Search, not YouTube.
+
+## Not Supported by Primary Evidence (Batch 2)
+
+- ALG26-CLM-013 (semantic-ID "mood cluster" construct not described in the cited research)
+- ALG26-CLM-015 (100B-view, +51% duration statistic — no primary corroboration or denial found)
+- ALG26-INT-001 ("keyword/attention/interest/semantic eras" historical narrative — not a published YouTube/Google framing)
+- ALG26-INT-003 (TV-friction-favors-show-like-content causal inference — no official source addresses this format effect)
+- ALG26-REC-008 (off-platform brand presence as a trust/discovery signal — no official source found)
+
+## Not Currently Verifiable (Batch 2)
+
+- ALG26-INT-005 (relative sophistication of the long-form vs. Shorts recommender — internal system architecture, not publicly documented; source itself frames this as personal judgment)
+
+## AEO / Off-Platform Findings
+
+- **Google Search AI Overviews/AI Mode do not require or specifically reward the "early direct answer + specific facts" script structure** claimed in ALG26-REC-007; Google's own guidance explicitly disclaims special structural requirements (S11, S12).
+- **No official source, for either Google Search or YouTube, was found establishing that off-platform brand-presence consistency functions as a discovery or ranking trust signal** (ALG26-REC-008). The closest official YouTube material addresses identity-impersonation policy and anti-diversion spam policy — both adjacent but distinct concerns.
+- Both AEO-adjacent findings are **Google Search-side, not YouTube-side** evidence (or, for REC-008, no primary evidence on either system). Per the task's cross-system rule, neither claim should be treated as validated or contradicted *for YouTube specifically* — REC-007 is contradicted for the system it most plausibly describes (Google Search), and REC-008 remains unconfirmed for both systems.
+
+## Cross-System Inference Warnings
+
+1. **ALG26-REC-007:** Evidence used (S11, S12) is Google Search Central documentation for Google Search's AI Overviews/AI Mode. It is not YouTube Search or YouTube-recommendation documentation. The CONTRADICTED status applies to the AEO mechanism as it would apply to Google Search itself; no claim is made about YouTube-native AI answer surfaces, which have no located primary documentation.
+2. **ALG26-REC-008:** No primary evidence was found on either system, so no cross-system substitution actually occurred here — but the claim's framing echoes Google Search's E-E-A-T concept, and any future reasoning must not import E-E-A-T (a Search ranking framework) onto YouTube recommendations without its own primary support.
+3. **ALG26-INT-003:** S4's confirmed TV-viewing-share growth (a real, official Google Search/Nielsen-sourced statistic about aggregate platform viewing) must not be read as confirming a *content-format* effect (show-like/bingeable content performing better on TV). The growth statistic and the format-preference inference are two different claims; only the former is supported.
+
+## Important Overclaims
+
+- **ALG26-CLM-013** compounds Batch 1's already-flagged CLM-012 overclaim risk (unconfirmed exact modality list) with an additional, more specific and less-supported claim ("mood" clustering). Any downstream layer citing CLM-012 must not silently absorb CLM-013's additional specificity as if it were part of the same confirmed mechanism.
+- **ALG26-REC-007** is a creator recommendation that smuggles in an unverified, and in this case contradicted, platform-mechanism claim. Creator best-practice advice should not be treated as evidence of how AI-answer systems actually rank or select citations, on YouTube or elsewhere.
+- **ALG26-INT-003** and **ALG26-INT-004** both take a real, independently confirmed platform trend (TV growth; anti-AI-slop policy) and extend it with an unconfirmed causal/behavioral inference (format preference; audience differentiation). The confirmed trend and the unconfirmed inference must be tracked separately.
+
+## Direct Conflicts (Batch 2)
+
+- ALG26-REC-007 vs. primary evidence (S11, S12) — the specific citation-structuring mechanism claimed is directly contradicted by Google's own AI-features guidance.
+
+## Partial Tensions (Batch 2)
+
+- ALG26-CLM-013 vs. ALG26-CLM-012 (Batch 1) — compounding, unconfirmed specificity added on top of an already-partial claim (see "Important Overclaims").
+- ALG26-INT-005 vs. ALG26-CLM-018 (Batch 1) — both rest on the same unresolved "are Shorts and long-form handled by meaningfully separate systems" premise, which remains neither confirmed nor denied.
+
+## New Safe OS Conclusions (Batch 2)
+
+These extend, and do not replace, Batch 1's Safe OS Conclusions. Each is conditional and traceable to the claim entry above.
+
+8. Recommendation evaluation continues for as long as a video is publicly available, using fresh rather than purely historical performance data — a video's discovery potential is not permanently fixed by its earliest performance (CLM-003).
+9. Co-viewing behavior ("viewers of A also watched B") is an official recommendation input capable of connecting videos across a viewer's broader interests, but its specific cross-topic reach is not separately confirmed (CLM-006).
+10. YouTube has stated goals and at least one official feature (Hype) supporting discovery for smaller/newer channels independent of subscriber count, though the exact content-matching mechanism for a brand-new channel's first video is unconfirmed (CLM-007).
+11. Watch history is an official, high-weight, explicitly documented recommendation signal — especially for homepage recommendations — and can be treated as a defensible input with high confidence (CLM-011).
+12. YouTube's official policy direction (mandatory synthetic-content disclosure, active anti-"AI slop" enforcement) supports treating authenticity and originality as an environment the platform is actively reinforcing — but the specific claim that personal connection is becoming a stronger competitive differentiator is a market inference, not a platform-stated mechanism, and should stay labeled as such (INT-004).
+13. No AEO "structure for AI citation" formula should be treated as a validated YouTube discovery lever; Google's own AI Overviews guidance contradicts the specific mechanism claimed, and no YouTube-specific AI-answer documentation exists to substitute for it (REC-007).
+14. No off-platform brand-consistency practice should be treated as a validated discovery or trust signal for YouTube recommendations; it remains an unverified hypothesis with no supporting or contradicting primary evidence found (REC-008).
+15. Claims resting on undisclosed internal system architecture comparisons (e.g., relative sophistication of separate recommender systems) should be treated as permanently unverifiable from public documentation, not as pending validation (INT-005).
+
+## Claims Still Requiring Evidence — Batch 2
+
+The following 9 DS-000018 claims remain unvalidated after Batch 1 and Batch 2 combined:
+
+- **Not selected `SOURCE_CLAIM` row:** ALG26-CLM-010
+- **Not selected `SOURCE_RECOMMENDATION` rows:** ALG26-REC-001, ALG26-REC-002, ALG26-REC-003, ALG26-REC-004, ALG26-REC-005, ALG26-REC-006, ALG26-REC-009, ALG26-REC-010
+
+## Implications for Future Intelligence Layers (Batch 2 additions)
+
+- **Discovery / new-channel strategy:** Safe Conclusion 10 (Hype feature, general discovery-chance goal) is usable as a background fact when reasoning about small/new-channel visibility mechanics, but should not be treated as a description of organic-recommendation matching for a channel's very first video.
+- **Retention / signal weighting:** Safe Conclusion 11 (watch history as a high-weight, homepage-primary signal) is directly usable with high confidence wherever a future layer reasons about which historical viewer data most plausibly drives a given surface's recommendations.
+- **Content/format strategy:** Safe Conclusion 8 (ongoing, fresh-data-driven evaluation) supports not writing off older catalog videos as permanently capped by early performance — but any "evergreen resurfacing" feature should be tested, not assumed.
+- **AEO / hooks / scripts:** Safe Conclusions 13 and 14 are guardrails, not opportunities — any future title/hook/script engine should not implement an "AI-citation formula" or an "off-platform trust builder" heuristic on the basis of DS-000018 alone; both remain unconfirmed or contradicted.
+- **Authenticity / creator differentiation:** Safe Conclusion 12 supports flagging authenticity/originality as a platform-reinforced environment when scoring content ideas, while keeping the audience-differentiation causal claim separately labeled as unconfirmed market interpretation.
+- **Still speculative for any future layer:** semantic-ID "mood" clustering (CLM-013), the four-era semantic-history narrative (INT-001), TV-friction-favors-show-format causal inference (INT-003), and any long-form-vs-Shorts recommender sophistication comparison (INT-005) — none of these should be encoded as platform fact.
