@@ -1,5 +1,7 @@
 # YouTube Algorithm Primary-Source Validation — 2026 Algorithm Update (DS-000018)
 
+> **Current authority: Step 15C-R, 2026-09-08.** The Final DS-000018 Validation Synthesis below is the only current disposition register (33/33). Batch 1 and Batch 2 remain historical records, including superseded conclusions. S6, S7 and S8 are secondary reporting, not primary authority. Their former classification is explicitly withdrawn by the remediation pass. Earlier safe conclusions and counts must not override the final register.
+
 ## Validation Scope
 
 - Source dataset validated: DS-000018 — 2026 Algorithm Update — Multi-Tab Creator Research Corpus
@@ -458,3 +460,579 @@ The following 9 DS-000018 claims remain unvalidated after Batch 1 and Batch 2 co
 - **AEO / hooks / scripts:** Safe Conclusions 13 and 14 are guardrails, not opportunities — any future title/hook/script engine should not implement an "AI-citation formula" or an "off-platform trust builder" heuristic on the basis of DS-000018 alone; both remain unconfirmed or contradicted.
 - **Authenticity / creator differentiation:** Safe Conclusion 12 supports flagging authenticity/originality as a platform-reinforced environment when scoring content ideas, while keeping the audience-differentiation causal claim separately labeled as unconfirmed market interpretation.
 - **Still speculative for any future layer:** semantic-ID "mood" clustering (CLM-013), the four-era semantic-history narrative (INT-001), TV-friction-favors-show-format causal inference (INT-003), and any long-form-vs-Shorts recommender sophistication comparison (INT-005) — none of these should be encoded as platform fact.
+
+
+# Primary-Source Remediation Pass
+
+Date: 2026-09-08. Task: Step 15C-R. Baseline: `446deee108ff6224be7c66a744124577cc5dec37`, on `main`, matching the existing `origin/main` ref. Preflight independently counted 33 source rows, 24 distinct historical dispositions and the nine Batch 3 IDs below. No prior Batch 3 existed. Known unrelated README/docs/environment/audit changes were excluded.
+
+This pass audits all 24 prior entries and makes 12 material source-basis or methodology remediations. Four claims (CLM-005, CLM-016, CLM-017, CLM-018) materially depended on S6/S7/S8. Other corrections address nearby-but-insufficient evidence, public/private scope and overstrong conclusions. Multiple Help pages from one publisher are not independent empirical corroboration. Dispositions are intelligence judgments, not new measured channel observations.
+
+## Current primary-source register and retrieval checks
+
+All R references were read and retrieved on **2026-09-08**. The publisher, relevant section and system boundary are recorded below. Older publications remain dated historical statements even when retrieved today. Help pages generally have no explicit revision date; copyright years are not revision dates. R11 is an original research paper by Google/Google DeepMind authors, hosted on arXiv, not a third-party summary. R26 uses only the signed TeamYouTube announcement; ordinary forum posts, replies and Product Expert answers are not official platform authority.
+
+| ID / source | Publisher | System / surface | Section inspected and bounded evidence |
+|---|---|---|---|
+| [R1] — YouTube's Recommendation System | YouTube Help | YouTube recommendations; creator guidance | The algorithm has two goals; Recommendations are personalized; channel growth strategy. Per-viewer context, interest affinity, similar-viewer behavior, satisfaction and fresh performance; series guidance. |
+| [R2] — How YouTube recommendations work | YouTube Help | Home; Up Next; Shorts Feed; channel pages | YouTube's recommendation system. History, subscriptions and feedback are inputs; Home primarily uses watch history, Up Next the current video. Surface weights differ. |
+| [R3] — Good to know about recommendations | YouTube Help | YouTube recommendations; Subscriptions; Search; creator guidance | Diverse interests across formats; experimenting; optimal length; head start; unique viewers. Cross-format connections are possible, but engagement varies. No universal ideal duration. Libraries help viewer journeys; no numeric launch requirement. |
+| [R4] — Understand your content performance | YouTube Help | YouTube content performance; Shorts and long-form creator guidance | Appeal; Engagement; Satisfaction; Packaging; Engaging hooks. Audience choice, continued viewing and enjoyment are distinct. Accurate packaging and concise, promise-matching intros are guidance, not fixed thresholds. |
+| [R5] — YouTube performance FAQ & Troubleshooting | YouTube Help | Home; Up Next; YouTube Search; upload guidance | Suggested; Search; daily uploads; old videos; likes/dislikes. Suggested can use history; Search considers query relevance and engagement. No daily/weekly upload requirement. Older videos can regain interest. |
+| [R6] — Upload schedule tips | YouTube Help | Creator scheduling guidance; videos, Shorts, live and posts | Frequency; Consistency; Content Volume. Plan a sustainable schedule around audience expectations and production resources; no documented schedule-triggered ranking reward. |
+| [R7] — Add custom thumbnails on YouTube | YouTube Help | Desktop Studio; video/Shorts thumbnails; surface-specific image handling | Add a custom Short thumbnail; Image size & resolution. Current page permits verified accounts to upload Shorts thumbnails in desktop Studio. Its vertical-video surface note is not a universal Shorts-feed rule. |
+| [R8] — A/B test titles & thumbnails | YouTube Help | Eligible Studio video experiments; excludes Shorts | Eligibility requirements; How does it work; Why is watch time used. Title-only, thumbnail-only and combined tests use watch-time share rather than CTR alone; no title or image formula is guaranteed. |
+| [R9] — AI features and your website | Google Search Central | Google Search; AI Overviews; AI Mode | Introduction; How AI features work in Search. No special optimization is required. This does not prove that any particular writing structure is ineffective. |
+| [R10] — Optimizing your website for generative AI features on Google Search | Google Search Central | Google Search; AI Overviews; AI Mode | Create valuable, non-commodity content; Mythbusting; Chunking. Useful original material and readable structure are guidance. No exact early-answer, name/date density or citation-success formula is established. |
+| [R11] — Better Generalization with Semantic IDs: A Case Study in Ranking for Recommendations | Google / Google DeepMind authors; author-submitted arXiv paper | Studied YouTube recommendation ranking model; research, not every current surface | Affiliations; Introduction; 4.1 Content Embeddings; Conclusion. Google affiliations verified. The studied encoder uses audio and visual features; semantic IDs improve new/long-tail generalization. No complete 2026 architecture or mood-state model is disclosed. |
+| [R12] — YouTube channel monetization policies | YouTube Help | Monetization policy | Generic or Repetitive Content; What is allowed to monetize; Reused content. Materially varied episodes can qualify; interchangeable low-value templates risk monetization eligibility. This is not a ranking-weight specification. |
+| [R13] — Spam Policy | YouTube Help | Community Guidelines; platform abuse enforcement | Engagement manipulation; Automated or synthetic mass-production; Off-platform diversion. Mass-produced repetition and manipulation can violate spam policy. Ordinary branding and links are not established recommendation signals. |
+| [R14] — Impersonation policy | YouTube Help | Identity policy; not recommendation ranking | What these policies mean for you. Deceptive imitation is prohibited; this does not establish a benefit for an external brand footprint. |
+| [R15] — Rene's Top Five: April 18, 2024 | YouTube Blog; Rene Ritchie, YouTube Creator Liaison | 2024 Subscriptions experiment; Home versus notification/subscription traffic | Most relevant; Q&A. An optional subscription-only recommendation filter preserved chronological access. Home feedback was distinguished from ignored notifications; disabling notifications for ranking was discouraged. |
+| [R16] — Rene's Top Five: August 1, 2024 | YouTube Blog; Rene Ritchie, YouTube Creator Liaison | Channel architecture guidance; Shorts, long-form, live and podcasts | Q&A on podcasts and Shorts. Channel choice depends on audience overlap; related podcast clips can coexist. This is official guidance, not a quantified ranking effect. |
+| [R17] — Rene's Top Five: July 25, 2024 | YouTube Blog; Rene Ritchie, YouTube Creator Liaison | Historical Shorts Feed versus Search, Home, channel and Subscriptions; creator strategy | Q&A 1 and Q&A 2. Discusses thumbnail-free Shorts-feed viewing and thumbnail browsing elsewhere; advises balancing audience continuity with experimentation. Historical feature availability is superseded by R7/R8. |
+| [R18] — Rene's Top Five: March 28, 2024 | YouTube Blog; Rene Ritchie, YouTube Creator Liaison | YouTube audience connections; deletion guidance; traffic sources | Q&A; Tip of the Week. Officially republishes deletion advice and discusses lost audience connections. It does not expose deletion timing or all retained model data. |
+| [R19] — Measure key moments for audience retention | YouTube Help | YouTube Analytics; video-level retention | Key moments; Intros; Spikes; Dips; Segments. Compare similar-length videos and audience segments; inspect drop-offs. Rewatch spikes can signal confusion. The 30-second intro metric is not a mandatory hook length. |
+| [R20] — Understand your YouTube engagement | YouTube Help | YouTube Analytics | Audience retention; Likes vs. dislikes. Engagement reports expose retention and like/dislike comparisons; neither defines a universal like-rate target. |
+| [R21] — Explore trends on YouTube | YouTube Help | YouTube Analytics Trends; YouTube Search gaps, including Shorts | Explore the Trends Tab; Learn about Content gaps. Insufficient, outdated or low-quality search results can inspire ideas. Breakout examples are inspiration, not evidence that copying wins. |
+| [R22] — Understand new, casual, & regular viewers | YouTube Help | Audience analytics; creator guidance; returning-viewer recommendations | Grow your core audience; Does the recommendation system optimize for returning viewers. Familiar formats, hosts and series can support loyalty. Returning viewers may receive more recommendations; the audience-segment metric itself is not a reach bonus. |
+| [R23] — Replace or delete your video | YouTube Help | Video deletion; YouTube Search; Analytics | Delete your own videos. Deletion is permanent. Watch time remains in aggregate reports without attribution to the deleted video; deleting is not evidence that every data trace vanishes. |
+| [R24] — Change video privacy settings | YouTube Help | Channel pages; Subscriptions; Search; related videos/recommendations; link access | About privacy settings; feature comparison table. Unlisted videos retain link access but lose ordinary recommendation/subscription placement. Search has a public-playlist exception. Unlisting is not continued public discovery. |
+| [R25] — Impressions & click-through-rate FAQs | YouTube Help | YouTube registered impressions; excludes some external/end-screen exposures | High or low CTR; comparing performance. The reported 2–10% range for half of channels/videos is descriptive, not a target or distribution gate. Audience and traffic mix matter. |
+| [R26] — Q3 & Q4 2025: Latest improvements to YouTube on TV | YouTube Help announcements; Hank (TeamYouTube) | YouTube on TV; Subscriptions shelf | Tailored Experiences for Every Viewer; signed announcement, not replies. Announces a Most Relevant shelf above the TV subscriptions feed. Does not disclose that shelf's exact recent-interest selection rule or establish identical desktop/mobile layouts. |
+| [R27] — The Future of YouTube 2026 | YouTube Blog; Neal Mohan | Platform outlook; TV viewing context; policy direction | Reinventing entertainment; AI. An official platform outlook does not validate the source's private-client device percentages, duration dataset or personality-market comparison. |
+| [R28] — All the YouTube news from Google I/O 2026 | YouTube Blog; The YouTube Team | Ask YouTube conversational search; not Google Search AI Overviews | Ask YouTube announcement. An official YouTube-native conversational-search announcement exists. It provides no source-script citation formula and does not authorize importing Google Search mechanisms. |
+
+The requested legacy Test & compare thumbnails URL (`https://support.google.com/youtube/answer/13861714`) redirects to R8. It is one source, not a second corroboration. Several web-reader requests returned rate limits or incomplete bodies; alternate canonical URLs and read-only direct HTTP retrieval recovered the required pages, including R4 and R26. Only successfully read sources enter the current evidence register.
+
+Historical S6 (Search Engine Journal), S7 (vidIQ/press) and S8 (PhoneArena/community reporting) remain visible solely to preserve history. None is a current primary reference. S8's Help component was adjacent material, not independent confirmation of the reported visibility pattern. S10's Hype feature is not used as organic cold-start evidence. S4's Nielsen-attributed platform statistic is not an independent check of the source's private client dataset.
+
+## Search coverage and negative-evidence limits
+
+Research covered the requested recommendation, cross-format, performance, duration, schedule, packaging tests, YouTube Search, Shorts thumbnail, monetization/spam and Search AI topics. Targeted official-domain searches included larger/bigger Home thumbnails and long-form outcomes; subscription Most Relevant shelves; semantic IDs and mood; exact audience seeding; deletion/unlisting audience connections; content gaps; and the 100-billion-view/51% statistic. Results were read only when they supplied relevant official material or original research. Ordinary community answers containing exact seeding/retention rules were rejected, even when hosted on support.google.com.
+
+For CLM-016, retrieved current thumbnail documentation does not reproduce the source's experiment or outcome; unrelated older redesign announcements cannot substitute. No usable direct official experiment record was located. For numerical/private/internal claims, failure to locate evidence means unestablished in this review, never false by default. The search is reasonably broad, not a claim to have exhaustively inspected every official video or every private experiment.
+
+## Audit of all 24 prior dispositions
+
+The current register later in this document owns the final statuses. This audit records whether each historical entry requires a material remediation or retains its disposition with the final register's narrower wording.
+
+| Claim ID | Prior status | Current official basis | Audit outcome |
+|---|---|---|---|
+| ALG26-CLM-001 | SUPPORTED | [R1], [R2] | Retained; use bounded final-register conclusion only |
+| ALG26-CLM-002 | PARTIALLY_SUPPORTED | [R1], [R2], [R15], [R19] | Retained; use bounded final-register conclusion only |
+| ALG26-CLM-003 | PARTIALLY_SUPPORTED | [R1], [R5] | Retained; use bounded final-register conclusion only |
+| ALG26-CLM-004 | SUPPORTED | [R1], [R2], [R4] | Retained; use bounded final-register conclusion only |
+| ALG26-CLM-005 | PARTIALLY_SUPPORTED | [R3], [R16] | VALIDATION_REMEDIATION below |
+| ALG26-CLM-006 | PARTIALLY_SUPPORTED | [R1], [R5] | Retained; use bounded final-register conclusion only |
+| ALG26-CLM-007 | PARTIALLY_SUPPORTED | [R5], [R11] | VALIDATION_REMEDIATION below |
+| ALG26-CLM-008 | SUPPORTED | [R2], [R5], [R22] | Retained; use bounded final-register conclusion only |
+| ALG26-CLM-009 | SUPPORTED | [R12], [R13] | VALIDATION_REMEDIATION below |
+| ALG26-CLM-011 | SUPPORTED | [R2] | Retained; use bounded final-register conclusion only |
+| ALG26-CLM-012 | PARTIALLY_SUPPORTED | [R11] | VALIDATION_REMEDIATION below |
+| ALG26-CLM-013 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R11] | VALIDATION_REMEDIATION below |
+| ALG26-CLM-014 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R27] | Retained; use bounded final-register conclusion only |
+| ALG26-CLM-015 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R3] | Retained; use bounded final-register conclusion only |
+| ALG26-CLM-016 | PARTIALLY_SUPPORTED | [R7], [R8] | VALIDATION_REMEDIATION below |
+| ALG26-CLM-017 | PARTIALLY_SUPPORTED | [R7], [R17] | VALIDATION_REMEDIATION below |
+| ALG26-CLM-018 | CONTRADICTED | [R3], [R16] | VALIDATION_REMEDIATION below |
+| ALG26-INT-001 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R11] | Retained; use bounded final-register conclusion only |
+| ALG26-INT-002 | PARTIALLY_SUPPORTED | [R1], [R2], [R22] | VALIDATION_REMEDIATION below |
+| ALG26-INT-003 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R3], [R27] | Retained; use bounded final-register conclusion only |
+| ALG26-INT-004 | PARTIALLY_SUPPORTED | [R12], [R22], [R27] | VALIDATION_REMEDIATION below |
+| ALG26-INT-005 | NOT_CURRENTLY_VERIFIABLE | [R3], [R11] | VALIDATION_REMEDIATION below |
+| ALG26-REC-007 | CONTRADICTED | [R9], [R10], [R28] | VALIDATION_REMEDIATION below |
+| ALG26-REC-008 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R13], [R14], [R9] | Retained; use bounded final-register conclusion only |
+
+## Verified source-member provenance
+
+All 64 ZIP members were read without extraction and matched their registered DB SHA-256 values. These seven claim-bearing members also match the unchanged source-intelligence provenance table. Each entry below retains its original claim ID, assertion type and timestamp range.
+
+| Alias | FILE ID / member | Member SHA-256 | Stable tab locator |
+|---|---|---|---|
+| T01 | FILE-006404 / `tabs/tab-01-video-01.md` | `8b8b01f5892fefe5e58fc517b144c65daec578ea364f83f9185c27409932c6ec` | `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.0` |
+| T36 | FILE-006439 / `tabs/tab-36-video-36.md` | `e18175321820d4c28ef8d33223b9b8543057e2cc2bd6480a6d883741938a9863` | `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.iroe5hw3b8bi` |
+| T39 | FILE-006442 / `tabs/tab-39-video-39.md` | `65131eb055daef65e3fa0c1804a6a5ba773c3e2f298a08a495001719528848a6` | `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.r9bzs1xopm0k` |
+| T43 | FILE-006446 / `tabs/tab-43-video-43.md` | `05df85450219b4934692813f5d293a30f0176e0da5a1d753de173b22f2e4f9da` | `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.2znmr6uzc7sq` |
+| T48 | FILE-006451 / `tabs/tab-48-video-48.md` | `6043129fc8ddd40f3e00023624cdd69007d0cf8f72a3b4689ca28d7695ba292d` | `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.pskezhreczge` |
+| T49 | FILE-006452 / `tabs/tab-49-video-49.md` | `ce95fe8cb75e9118a610e0a140503db24bb84579c1fb9157652c247199a6fe06` | `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.rkng3n2x22ds` |
+| T51 | FILE-006454 / `tabs/tab-51-video-51.md` | `3cf49a2d1258f747e65076a1d15400ca7e96ab7e411fe173567d38c7f3aa49fc` | `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.3u7zutfuv3rh` |
+
+### VALIDATION_REMEDIATION — ALG26-CLM-005
+
+- **CLAIM ID:** ALG26-CLM-005
+- **CLAIM TYPE:** SOURCE_CLAIM
+- **SOURCE LOCATOR:** T39, 23:43–26:36; FILE-006442 / `tabs/tab-39-video-39.md`; member SHA-256 `65131eb055daef65e3fa0c1804a6a5ba773c3e2f298a08a495001719528848a6`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.r9bzs1xopm0k`
+- **SOURCE SAYS:** Channels should align with audiences, while recommendations may still distinguish topic, length, Shorts, long-form, podcast, or live-stream preferences within one channel.
+- **PREVIOUS STATUS:** PARTIALLY_SUPPORTED
+- **PREVIOUS EVIDENCE BASIS:** S7: vidIQ/press-mediated executive guidance and a reported 2026 bridge.
+- **PRIMARY REPLACEMENT:** [R3], [R16]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** PARTIALLY_SUPPORTED
+- **RATIONALE:** The direct official sources now establish format-specific preferences and conditional channel guidance. R3 explicitly says experimenting across formats does not inherently confuse the algorithm or directly penalize the channel. Status remains partial because the full granular mechanism is not documented.
+- **OS CAN SAFELY CONCLUDE:** Cross-format preference differences are documented; the full length/podcast/internal partition list remains unestablished.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** DIRECT_CONFLICT with CLM-018 only in its universal channel-separation form.
+
+### VALIDATION_REMEDIATION — ALG26-CLM-007
+
+- **CLAIM ID:** ALG26-CLM-007
+- **CLAIM TYPE:** SOURCE_CLAIM
+- **SOURCE LOCATOR:** T39, 31:47–32:39; FILE-006442 / `tabs/tab-39-video-39.md`; member SHA-256 `65131eb055daef65e3fa0c1804a6a5ba773c3e2f298a08a495001719528848a6`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.r9bzs1xopm0k`
+- **SOURCE SAYS:** New channels and fresh videos can be matched without prior channel-viewer history by using topical preferences and an understanding of the video's subject.
+- **PREVIOUS STATUS:** PARTIALLY_SUPPORTED
+- **PREVIOUS EVIDENCE BASIS:** S1 plus S10 Hype eligibility/leaderboard evidence was used for organic new-channel matching.
+- **PRIMARY REPLACEMENT:** [R5], [R11]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** PARTIALLY_SUPPORTED
+- **RATIONALE:** Hype is a distinct discovery feature and cannot establish zero-history organic matching. Replace that analogy with direct Home guidance and bounded cold-start research; retain partial status.
+- **OS CAN SAFELY CONCLUDE:** New-video discovery and researched cold-start handling have primary support; exact first-upload audience assignment does not.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT established; prior overreach is superseded as described above.
+
+### VALIDATION_REMEDIATION — ALG26-CLM-009
+
+- **CLAIM ID:** ALG26-CLM-009
+- **CLAIM TYPE:** SOURCE_CLAIM
+- **SOURCE LOCATOR:** T48, 6:56–9:06; FILE-006451 / `tabs/tab-48-video-48.md`; member SHA-256 `6043129fc8ddd40f3e00023624cdd69007d0cf8f72a3b4689ca28d7695ba292d`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.pskezhreczge`
+- **SOURCE SAYS:** The source distinguishes literal, near-identical templated repetition from a reusable format: the former may be spam, while consistent topic formulas can remain acceptable when episodes differ.
+- **PREVIOUS STATUS:** SUPPORTED
+- **PREVIOUS EVIDENCE BASIS:** S3 monetization eligibility was used to validate a claim that also described spam.
+- **PRIMARY REPLACEMENT:** [R12], [R13]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** SUPPORTED
+- **RATIONALE:** The current Spam Policy directly covers abusive repetitive mass production; the monetization page separately permits materially varied episodes. Status remains supported within those two policy scopes, with no ranking inference.
+- **OS CAN SAFELY CONCLUDE:** Repetitive mass production can violate policy; materially varied formats can qualify for monetization. No ranking penalty or blanket exemption is inferred.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT established; prior overreach is superseded as described above.
+
+### VALIDATION_REMEDIATION — ALG26-CLM-012
+
+- **CLAIM ID:** ALG26-CLM-012
+- **CLAIM TYPE:** SOURCE_CLAIM
+- **SOURCE LOCATOR:** T51, 4:28–5:52; FILE-006454 / `tabs/tab-51-video-51.md`; member SHA-256 `3cf49a2d1258f747e65076a1d15400ca7e96ab7e411fe173567d38c7f3aa49fc`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.3u7zutfuv3rh`
+- **SOURCE SAYS:** A transcript claims YouTube uses a large recommender model and semantic IDs derived from metadata, frames, audio, pacing, and format.
+- **PREVIOUS STATUS:** PARTIALLY_SUPPORTED
+- **PREVIOUS EVIDENCE BASIS:** S5 abstract-level reading treated the entire modality list as unconfirmed.
+- **PRIMARY REPLACEMENT:** [R11]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** PARTIALLY_SUPPORTED
+- **RATIONALE:** The full paper, section 4.1, explicitly identifies audio and visual features. Correct that omission; do not convert a studied production model into a complete account of current recommendations. Status remains partial.
+- **OS CAN SAFELY CONCLUDE:** The studied semantic-ID model uses audiovisual embeddings; metadata, pacing, format and complete current deployment claims exceed the evidence.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT established; prior overreach is superseded as described above.
+
+### VALIDATION_REMEDIATION — ALG26-CLM-013
+
+- **CLAIM ID:** ALG26-CLM-013
+- **CLAIM TYPE:** SOURCE_CLAIM
+- **SOURCE LOCATOR:** T51, 7:31–8:12; FILE-006454 / `tabs/tab-51-video-51.md`; member SHA-256 `3cf49a2d1258f747e65076a1d15400ca7e96ab7e411fe173567d38c7f3aa49fc`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.3u7zutfuv3rh`
+- **SOURCE SAYS:** The same transcript claims semantic IDs are connected to watch-history clusters representing recent formats, styles, interests, and mood.
+- **PREVIOUS STATUS:** NOT_SUPPORTED_BY_PRIMARY_EVIDENCE
+- **PREVIOUS EVIDENCE BASIS:** S5 lacked the asserted semantic-ID mood-cluster description; prior result was evidence-not-found.
+- **PRIMARY REPLACEMENT:** [R11]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** NOT_CURRENTLY_VERIFIABLE
+- **RATIONALE:** The unsupported component concerns private platform internals, so NOT_CURRENTLY_VERIFIABLE better fits the task definitions. Absence from this paper does not disprove the mechanism.
+- **OS CAN SAFELY CONCLUDE:** The asserted private mood-cluster linkage is not publicly verifiable from the reviewed technical evidence.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** UNRESOLVED_SPECIFICITY beyond CLM-012; lack of disclosure is not disproof.
+
+### VALIDATION_REMEDIATION — ALG26-CLM-016
+
+- **CLAIM ID:** ALG26-CLM-016
+- **CLAIM TYPE:** SOURCE_CLAIM
+- **SOURCE LOCATOR:** T48, 1:47–3:21; FILE-006451 / `tabs/tab-48-video-48.md`; member SHA-256 `6043129fc8ddd40f3e00023624cdd69007d0cf8f72a3b4689ca28d7695ba292d`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.pskezhreczge`
+- **SOURCE SAYS:** The source claims experiments with larger, fewer homepage thumbnails improved selection and long-form viewing while smaller/new-channel recommendations remained near the top.
+- **PREVIOUS STATUS:** PARTIALLY_SUPPORTED
+- **PREVIOUS EVIDENCE BASIS:** S6: Search Engine Journal reporting, described incorrectly as weaker primary evidence.
+- **PRIMARY REPLACEMENT:** [R7], [R8]. The cited sections and surface limits are specified in the current source register. These are adjacent checks, not evidence proving the claimed Home experiment.
+- **FINAL STATUS:** NOT_SUPPORTED_BY_PRIMARY_EVIDENCE
+- **RATIONALE:** No direct official replacement was located for the specific experiment outcome. Current thumbnail/experiment documentation is adjacent only. Withdraw the prior positive finding and downgrade to evidence-not-found.
+- **OS CAN SAFELY CONCLUDE:** No direct official record located for the claimed Home experiment outcome or small-channel placement. Packaging tools do not establish either.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT established; prior overreach is superseded as described above.
+
+### VALIDATION_REMEDIATION — ALG26-CLM-017
+
+- **CLAIM ID:** ALG26-CLM-017
+- **CLAIM TYPE:** SOURCE_CLAIM
+- **SOURCE LOCATOR:** T48, 13:05–13:52; FILE-006451 / `tabs/tab-48-video-48.md`; member SHA-256 `6043129fc8ddd40f3e00023624cdd69007d0cf8f72a3b4689ca28d7695ba292d`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.pskezhreczge`
+- **SOURCE SAYS:** The source says Shorts thumbnails do not appear in the swipe feed but can matter in search, browse, and Shorts-shelf contexts.
+- **PREVIOUS STATUS:** PARTIALLY_SUPPORTED
+- **PREVIOUS EVIDENCE BASIS:** S8: PhoneArena/community feature reporting plus an adjacent Shorts Help page.
+- **PRIMARY REPLACEMENT:** [R7], [R17]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** PARTIALLY_SUPPORTED
+- **RATIONALE:** Replace reporting with direct Help and the official liaison article. Current desktop custom-Shorts upload support supersedes old availability discussions; retain partial status for unverified current shelf-specific scope/effects. Upload availability does not establish Shorts-feed ranking impact.
+- **OS CAN SAFELY CONCLUDE:** Direct official evidence replaces press. Current upload capability is established; historical feed guidance does not prove every current shelf or placement effect.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT established; prior overreach is superseded as described above.
+
+### VALIDATION_REMEDIATION — ALG26-CLM-018
+
+- **CLAIM ID:** ALG26-CLM-018
+- **CLAIM TYPE:** SOURCE_CLAIM
+- **SOURCE LOCATOR:** T01, 0:24–0:49; FILE-006404 / `tabs/tab-01-video-01.md`; member SHA-256 `8b8b01f5892fefe5e58fc517b144c65daec578ea364f83f9185c27409932c6ec`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.0`
+- **SOURCE SAYS:** A creator claims Shorts and long-form use separate algorithms and audiences and should not share a channel.
+- **PREVIOUS STATUS:** CONTRADICTED
+- **PREVIOUS EVIDENCE BASIS:** S7: vidIQ/press-mediated same-channel advice and bridge reporting.
+- **PRIMARY REPLACEMENT:** [R3], [R16]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** CONTRADICTED
+- **RATIONALE:** Direct official authority sustains contradiction of the absolute separation instruction. No secondary report or purported bridge launch date determines the current result.
+- **OS CAN SAFELY CONCLUDE:** The universal channel-separation instruction conflicts with official guidance. Distinct surface behavior is not itself refuted.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** DIRECT_CONFLICT with the absolute channel-separation rule; CLM-005 is the compatible bounded alternative.
+
+### VALIDATION_REMEDIATION — ALG26-INT-002
+
+- **CLAIM ID:** ALG26-INT-002
+- **CLAIM TYPE:** SOURCE_INTERPRETATION
+- **SOURCE LOCATOR:** T36, 11:25–13:03; FILE-006439 / `tabs/tab-36-video-36.md`; member SHA-256 `e18175321820d4c28ef8d33223b9b8543057e2cc2bd6480a6d883741938a9863`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.iroe5hw3b8bi`
+- **SOURCE SAYS:** The speaker interprets semantic matching as reducing the value of generic content and subscriber totals relative to specific content for a clearly understood viewer.
+- **PREVIOUS STATUS:** PARTIALLY_SUPPORTED
+- **PREVIOUS EVIDENCE BASIS:** S1/S2 personalized interests were extended into relative signal dominance and semantic-era devaluation.
+- **PRIMARY REPLACEMENT:** [R1], [R2], [R22]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** PARTIALLY_SUPPORTED
+- **RATIONALE:** Retain partial support for audience matching only. Withdraw any inference of a temporal subscriber downgrade, fixed relative signal priority or hidden topic-authority weight.
+- **OS CAN SAFELY CONCLUDE:** Audience relevance is documented; semantic-era subscriber devaluation and a hidden topic-authority weight are not.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT established; prior overreach is superseded as described above.
+
+### VALIDATION_REMEDIATION — ALG26-INT-004
+
+- **CLAIM ID:** ALG26-INT-004
+- **CLAIM TYPE:** SOURCE_INTERPRETATION
+- **SOURCE LOCATOR:** T49, 31:13–33:46; FILE-006452 / `tabs/tab-49-video-49.md`; member SHA-256 `ce95fe8cb75e9118a610e0a140503db24bb84579c1fb9157652c247199a6fe06`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.rkng3n2x22ds`
+- **SOURCE SAYS:** The speaker argues that personality and personal connection become a stronger differentiator as high-production spectacle becomes easier to imitate.
+- **PREVIOUS STATUS:** PARTIALLY_SUPPORTED
+- **PREVIOUS EVIDENCE BASIS:** S4 disclosure/anti-spam policy direction was treated as partial evidence of a personality-market advantage.
+- **PRIMARY REPLACEMENT:** [R12], [R22], [R27]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** NOT_SUPPORTED_BY_PRIMARY_EVIDENCE
+- **RATIONALE:** Policy and audience-loyalty guidance do not establish the comparative market claim. Downgrade rather than substituting adjacent guidance for its actual causal assertion; no human-versus-AI ranking preference is established.
+- **OS CAN SAFELY CONCLUDE:** Audience relationships may be useful; the claimed increase in personality differentiation as spectacle becomes imitable is unestablished.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT established; prior overreach is superseded as described above.
+
+### VALIDATION_REMEDIATION — ALG26-INT-005
+
+- **CLAIM ID:** ALG26-INT-005
+- **CLAIM TYPE:** SOURCE_INTERPRETATION
+- **SOURCE LOCATOR:** T49, 1:00:25–1:02:14; FILE-006452 / `tabs/tab-49-video-49.md`; member SHA-256 `ce95fe8cb75e9118a610e0a140503db24bb84579c1fb9157652c247199a6fe06`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.rkng3n2x22ds`
+- **SOURCE SAYS:** A strategist speculates that the mature long-form recommender is more sophisticated than the newer Shorts recommender and may handle content volume better.
+- **PREVIOUS STATUS:** NOT_CURRENTLY_VERIFIABLE
+- **PREVIOUS EVIDENCE BASIS:** No public internal comparison; Batch 2 implications nevertheless called it permanently unverifiable.
+- **PRIMARY REPLACEMENT:** [R3], [R11]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** NOT_CURRENTLY_VERIFIABLE
+- **RATIONALE:** Keep NOT_CURRENTLY_VERIFIABLE, but explicitly withdraw permanent unverifiability. Public evidence is incomplete today; a later technical disclosure could change the result.
+- **OS CAN SAFELY CONCLUDE:** The internal sophistication/volume comparison remains unverified; future public evidence could permit reassessment.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT established; prior overreach is superseded as described above.
+
+### VALIDATION_REMEDIATION — ALG26-REC-007
+
+- **CLAIM ID:** ALG26-REC-007
+- **CLAIM TYPE:** SOURCE_RECOMMENDATION
+- **SOURCE LOCATOR:** T43, 5:08–6:49; FILE-006446 / `tabs/tab-43-video-43.md`; member SHA-256 `05df85450219b4934692813f5d293a30f0176e0da5a1d753de173b22f2e4f9da`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.2znmr6uzc7sq`
+- **SOURCE SAYS:** Structure scripts with an early direct answer and specific names, dates, and places to make passages citation-friendly for AI answers.
+- **PREVIOUS STATUS:** CONTRADICTED
+- **PREVIOUS EVIDENCE BASIS:** S11/S12: no special optimization requirement was read as direct contradiction of citation benefit; no YouTube-native official material was said to exist.
+- **PRIMARY REPLACEMENT:** [R9], [R10], [R28]. The cited sections and surface limits are specified in the current source register.
+- **FINAL STATUS:** NOT_SUPPORTED_BY_PRIMARY_EVIDENCE
+- **RATIONALE:** No requirement does not mean no possible benefit. Change CONTRADICTED to NOT_SUPPORTED_BY_PRIMARY_EVIDENCE. An official Ask YouTube announcement exists, but it supplies no script-selection formula. No Google Search-to-YouTube bridge is inferred.
+- **OS CAN SAFELY CONCLUDE:** The early-answer citation formula is unestablished, not disproved. Google Search and Ask YouTube are distinct systems.
+- **CONFIDENCE / LIMITATION:** High confidence in the cited documents' stated scope; the unsupported part of the source claim remains unestablished. Official statements do not provide independent experimental data or a complete current ranking specification.
+- **CONFLICT STATUS:** PRIOR_CONFLICT_WITHDRAWN. No demonstrated contradiction of citation benefit; unsupported mechanism remains excluded.
+
+# Validation Batch 3 — Final Claims
+
+Date: 2026-09-08. Exactly the nine live-confirmed outstanding IDs are dispositioned below. The eight REC entries retain SOURCE_RECOMMENDATION identity. SUPPORTED for a recommendation means its actual bounded guidance has direct official support; it does not promote the strategy into a measured effect or guaranteed ranking mechanism. Original extracted wording remains intact; stronger statements in the cited raw passage are explicitly separated.
+
+### ALG26-CLM-010 — Subscription feed
+
+- **CLAIM ID:** ALG26-CLM-010
+- **CLAIM TYPE:** SOURCE_CLAIM
+- **SOURCE LOCATOR:** T48, 9:14–10:34; FILE-006451 / `tabs/tab-48-video-48.md`; member SHA-256 `6043129fc8ddd40f3e00023624cdd69007d0cf8f72a3b4689ca28d7695ba292d`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.pskezhreczge`
+- **SOURCE SAYS:** The source says a recommendation shelf in the subscription feed selects from subscribed channels using recent interests while retaining the chronological feed below it.
+- **PRIMARY EVIDENCE SAYS:** R26 documents a TV subscription shelf; R15 documents a 2024 subscription-only filter with chronological access. R3 describes a most-recent subscription list. These support the bounded product idea, not identical current layouts or the exact recent-interest rule for the shelf described in T48.
+- **HEURISTIC VS PLATFORM FACT:** PLATFORM FACT: the separately documented subscription features above. CREATOR HEURISTIC: none; this entry remains SOURCE_CLAIM. CLAIMED CAUSAL MECHANISM: recent-interest selection within that exact shelf remains unconfirmed, rather than borrowed from Home personalization.
+- **VALIDATION STATUS:** PARTIALLY_SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** Subscription recommendations and chronological access are documented in bounded contexts; the exact shelf mechanism and universal rollout are not.
+- **CONFIDENCE / LIMITATION:** Medium on product context; limited on current shelf selection and cross-device rollout. A dated optional filter and a TV shelf are not the same experiment.
+- **CONFLICT STATUS:** PARTIAL_TENSION only if chronology is treated as exclusive. A shelf and chronological list can coexist; current layout/selection details remain unresolved. No creator-recommendation evidence substitutes for platform analysis.
+- **PRIMARY SOURCES:** [R3], [R15], [R26]; retrieved 2026-09-08. See the source register for publisher, cited section and exact surface scope.
+
+### ALG26-REC-001 — Analytics / retention
+
+- **CLAIM ID:** ALG26-REC-001
+- **CLAIM TYPE:** SOURCE_RECOMMENDATION
+- **SOURCE LOCATOR:** T39, 14:02–14:34; FILE-006442 / `tabs/tab-39-video-39.md`; member SHA-256 `65131eb055daef65e3fa0c1804a6a5ba773c3e2f298a08a495001719528848a6`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.r9bzs1xopm0k`
+- **SOURCE SAYS:** Compare analytics against similar videos, inspect retention-drop points and like rates, and combine metrics with direct audience feedback.
+- **PRIMARY EVIDENCE SAYS:** R19 supplies similar-length retention comparisons and subscriber/new-viewer segments; R20 exposes like/dislike reports; R22 describes comments/community interaction. These support the recommended diagnostic practices, not a proven optimal metric combination.
+- **HEURISTIC VS PLATFORM FACT:** PLATFORM FACT: analytics reports and feedback channels exist. CREATOR HEURISTIC: combine relative metrics and audience feedback when deciding what to test. CLAIMED CAUSAL MECHANISM: none is established for merely monitoring metrics; no CTR, retention or like-rate gate follows.
+- **VALIDATION STATUS:** SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** Use retention comparisons, engagement reports and audience feedback as diagnostics, without metric thresholds or ranking guarantees.
+- **CONFIDENCE / LIMITATION:** High for the diagnostic guidance. Audience selection and sample size limit comparisons; comments are not a representative survey.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT. Consistent with CLM-004; a rewatch spike is not necessarily approval.
+- **PRIMARY SOURCES:** [R19], [R20], [R22]; retrieved 2026-09-08. See the source register for publisher, cited section and exact surface scope.
+
+### ALG26-REC-002 — Subscriber notifications
+
+- **CLAIM ID:** ALG26-REC-002
+- **CLAIM TYPE:** SOURCE_RECOMMENDATION
+- **SOURCE LOCATOR:** T39, 34:37–36:50; FILE-006442 / `tabs/tab-39-video-39.md`; member SHA-256 `65131eb055daef65e3fa0c1804a6a5ba773c3e2f298a08a495001719528848a6`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.r9bzs1xopm0k`
+- **SOURCE SAYS:** Do not disable subscriber notifications merely to game recommendations; instead inspect subscriber-source behavior separately.
+- **PRIMARY EVIDENCE SAYS:** R15 directly discourages disabling subscriber delivery to improve long-form Home results. R18 reinforces the distinction between traffic sources. R19 supports subscriber/non-subscriber analysis; analytics segmentation does not disclose training architecture.
+- **HEURISTIC VS PLATFORM FACT:** PLATFORM FACT: the official Home-versus-notification/subscription distinction. CREATOR HEURISTIC: examine the appropriate audience segment and delivery context. CLAIMED CAUSAL MECHANISM: no distribution advantage from disabling the checkbox is established.
+- **VALIDATION STATUS:** SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** Do not disable subscriber delivery as an algorithm trick; distinguish notification/subscription traffic from Home.
+- **CONFIDENCE / LIMITATION:** High for the specific guidance, bounded to the documented context. This is not a claim that all traffic sources are perfectly isolated or that notification settings never have legitimate uses.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT. Complements CLM-002/008 without validating exact cohort weights.
+- **PRIMARY SOURCES:** [R15], [R18], [R19]; retrieved 2026-09-08. See the source register for publisher, cited section and exact surface scope.
+
+### ALG26-REC-003 — Channel architecture
+
+- **CLAIM ID:** ALG26-REC-003
+- **CLAIM TYPE:** SOURCE_RECOMMENDATION
+- **SOURCE LOCATOR:** T39, 23:43–28:22; FILE-006442 / `tabs/tab-39-video-39.md`; member SHA-256 `65131eb055daef65e3fa0c1804a6a5ba773c3e2f298a08a495001719528848a6`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.r9bzs1xopm0k`
+- **SOURCE SAYS:** Align channels with audiences and brand promises, while choosing same-channel versus separate-channel formats according to audience overlap and creator goals.
+- **PRIMARY EVIDENCE SAYS:** R16 directly discusses channel architecture for long-form, live, Shorts and podcasts; R3 describes cross-format preferences. The advice is conditional, not a format-separation mandate.
+- **HEURISTIC VS PLATFORM FACT:** PLATFORM FACT: format connections are possible. CREATOR HEURISTIC: use audience overlap and the channel promise to choose architecture, then experiment. CLAIMED CAUSAL MECHANISM: neither mixing nor splitting automatically improves distribution.
+- **VALIDATION STATUS:** SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** Choose channel architecture by audience fit and goals; this is conditional creator guidance.
+- **CONFIDENCE / LIMITATION:** High for official strategic guidance. Audience overlap and creator goals still require separate channel-specific evidence before application.
+- **CONFLICT STATUS:** DIRECT_CONFLICT with CLM-018 as a universal rule; compatible with bounded CLM-005.
+- **PRIMARY SOURCES:** [R16], [R3]; retrieved 2026-09-08. See the source register for publisher, cited section and exact surface scope.
+
+### ALG26-REC-004 — Differentiation / audience promise
+
+- **CLAIM ID:** ALG26-REC-004
+- **CLAIM TYPE:** SOURCE_RECOMMENDATION
+- **SOURCE LOCATOR:** T48, 3:33–6:38; FILE-006451 / `tabs/tab-48-video-48.md`; member SHA-256 `6043129fc8ddd40f3e00023624cdd69007d0cf8f72a3b4689ca28d7695ba292d`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.pskezhreczge`
+- **SOURCE SAYS:** Find differentiated value and make a consistent promise to a defined audience rather than becoming the twentieth interchangeable treatment of a topic.
+- **PRIMARY EVIDENCE SAYS:** R4 addresses audience fit and communicating value; R17 balances continuity and experimentation; R22 describes familiar formats and branding as loyalty guidance. Together these substantiate the recommendation as strategy.
+- **HEURISTIC VS PLATFORM FACT:** PLATFORM FACT: documented viewer-response signals, not a uniqueness score. CREATOR HEURISTIC: differentiate a clear audience promise. CLAIMED CAUSAL MECHANISM: no fixed topic-authority, novelty or guaranteed repeat-recommendation reward is documented.
+- **VALIDATION STATUS:** SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** An audience promise and differentiated value are defensible strategy; no novelty weight or guaranteed repeat distribution follows.
+- **CONFIDENCE / LIMITATION:** High for guidance; not evidence that every differentiated treatment beats a familiar topic. The twentieth-treatment example is rhetoric, not a threshold.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT. INT-002 cannot convert this advice into semantic-era subscriber devaluation.
+- **PRIMARY SOURCES:** [R4], [R17], [R22]; retrieved 2026-09-08. See the source register for publisher, cited section and exact surface scope.
+
+### ALG26-REC-005 — New-channel viewer journey
+
+- **CLAIM ID:** ALG26-REC-005
+- **CLAIM TYPE:** SOURCE_RECOMMENDATION
+- **SOURCE LOCATOR:** T48, 15:08–15:56; FILE-006451 / `tabs/tab-48-video-48.md`; member SHA-256 `6043129fc8ddd40f3e00023624cdd69007d0cf8f72a3b4689ca28d7695ba292d`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.pskezhreczge`
+- **SOURCE SAYS:** Launch with several linked videos so a viewer can continue through a coherent journey and establish multiple watch-history interactions.
+- **PRIMARY EVIDENCE SAYS:** R1 recommends series and linked viewing paths; R3 discusses a library helping new viewers build engagement. Neither prescribes a launch count. T48 adds preparing ten videos and publishing three or four together; these remain the speaker's plan.
+- **HEURISTIC VS PLATFORM FACT:** PLATFORM FACT: watch history is an input (CLM-011). CREATOR HEURISTIC: prepare a coherent set of follow-on videos. CLAIMED CAUSAL MECHANISM: no fixed number of uploads or watch-history interactions unlocks distribution; publication alone is not engagement.
+- **VALIDATION STATUS:** PARTIALLY_SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** A coherent library can help continued viewing; a 3–4-video simultaneous launch or ten-video preparation rule is not established.
+- **CONFIDENCE / LIMITATION:** Medium. The library rationale is documented; the launch recipe and incremental causal effect are not quantified.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT with CLM-011. Any mandatory upload-volume or same-day cadence interpretation exceeds evidence.
+- **PRIMARY SOURCES:** [R1], [R3]; retrieved 2026-09-08. See the source register for publisher, cited section and exact surface scope.
+
+### ALG26-REC-006 — Shows / returning viewers
+
+- **CLAIM ID:** ALG26-REC-006
+- **CLAIM TYPE:** SOURCE_RECOMMENDATION
+- **SOURCE LOCATOR:** T49, 14:10–17:24 and 31:13–33:46; FILE-006452 / `tabs/tab-49-video-49.md`; member SHA-256 `ce95fe8cb75e9118a610e0a140503db24bb84579c1fb9157652c247199a6fe06`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.rkng3n2x22ds`
+- **SOURCE SAYS:** Develop repeatable formats into recognizable shows that support multiple episodes, binge paths, returning viewers, and audience relationships rather than maximizing every isolated view.
+- **PRIMARY EVIDENCE SAYS:** R1 recommends series and continuation links; R22 describes familiar formats, series and hosts in audience-loyalty guidance. These directly support experimenting with recurring shows.
+- **HEURISTIC VS PLATFORM FACT:** PLATFORM FACT: returning-viewer behavior is relevant; the regular-viewer analytics label itself is not a reach reward. CREATOR HEURISTIC: build recognizable episodes and voluntary continuation paths. CLAIMED CAUSAL MECHANISM: no automatic show-format, emotion or session-time ranking bonus is established.
+- **VALIDATION STATUS:** SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** Series and familiar formats are supported creator guidance; shows do not receive a documented automatic ranking boost.
+- **CONFIDENCE / LIMITATION:** High for guidance, limited for any comparative performance claim. This does not establish INT-003's TV-friction theory or INT-004's temporal personality advantage.
+- **CONFLICT STATUS:** NO_DIRECT_CONFLICT. Series still need material variation under CLM-009; repeating a successful template is not guaranteed success.
+- **PRIMARY SOURCES:** [R1], [R22]; retrieved 2026-09-08. See the source register for publisher, cited section and exact surface scope.
+
+### ALG26-REC-009 — Content gaps / market research
+
+- **CLAIM ID:** ALG26-REC-009
+- **CLAIM TYPE:** SOURCE_RECOMMENDATION
+- **SOURCE LOCATOR:** T01, 6:29–8:08; FILE-006404 / `tabs/tab-01-video-01.md`; member SHA-256 `8b8b01f5892fefe5e58fc517b144c65daec578ea364f83f9185c27409932c6ec`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.0`
+- **SOURCE SAYS:** Seek specific questions or subjects not already covered well in video and contribute net-new information rather than generic duplication.
+- **PRIMARY EVIDENCE SAYS:** R21 directly supports researching inadequate YouTube search results. T01's surrounding passage adds AI-citation/information-gain claims and guaranteed commercial examples. R9/R10 do not establish those formulas; their scope is Google Search.
+- **HEURISTIC VS PLATFORM FACT:** PLATFORM FACT: Trends exposes search-gap research. CREATOR HEURISTIC: contribute useful missing information. CLAIMED CAUSAL MECHANISM: novelty does not establish automatic YouTube ranking, AI citation, Gemini transcript-selection or revenue rewards.
+- **VALIDATION STATUS:** PARTIALLY_SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** Content-gap research is official creator guidance; the source passage adds an unverified AI-citation/information-gain mechanism.
+- **CONFIDENCE / LIMITATION:** Medium: the research practice is supported; the passage's causal and commercial promises are not. Trends availability and audience demand vary.
+- **CONFLICT STATUS:** CROSS_SYSTEM_OVERCLAIM with the source's Google AI framing. Same evidence boundary as REC-007; not a contradiction of useful gap research.
+- **PRIMARY SOURCES:** [R21], [R9], [R10]; retrieved 2026-09-08. See the source register for publisher, cited section and exact surface scope.
+
+### ALG26-REC-010 — Deletion / audience data
+
+- **CLAIM ID:** ALG26-REC-010
+- **CLAIM TYPE:** SOURCE_RECOMMENDATION
+- **SOURCE LOCATOR:** T01, 8:16–8:48; FILE-006404 / `tabs/tab-01-video-01.md`; member SHA-256 `8b8b01f5892fefe5e58fc517b144c65daec578ea364f83f9185c27409932c6ec`; tab `https://docs.google.com/document/d/14F1A38ngCbsn2ABWD-gRmUaLL_8utow31VLGHFEANJU/edit?tab=t.0`
+- **SOURCE SAYS:** Prefer unlisting to deleting an underperforming video because the speaker claims deletion removes useful audience-learning data.
+- **PRIMARY EVIDENCE SAYS:** R18 directly advises caution about deleting audience connections and permits unlisting when necessary. R23 says aggregate watch time remains after deletion. R24 documents lost discovery surfaces for unlisted videos. These do not expose all internal learning-state retention.
+- **HEURISTIC VS PLATFORM FACT:** PLATFORM FACT: deletion and unlisting have different documented visibility/data effects. CREATOR HEURISTIC: avoid irreversible deletion merely because performance disappoints. CLAIMED CAUSAL MECHANISM: T01's all-data-disappears-immediately assertion and a guaranteed unlisting benefit are overclaims.
+- **VALIDATION STATUS:** PARTIALLY_SUPPORTED
+- **OS CAN SAFELY CONCLUDE:** Official guidance supports caution about deletion; neither total instant data erasure nor complete signal preservation by unlisting is established.
+- **CONFIDENCE / LIMITATION:** Medium. R18's wording about removing content from public view is broader than its unlisting advice; retain R23/R24's precise distinctions. Aggregate analytics and recommender state are different things.
+- **CONFLICT STATUS:** PARTIAL_CONFLICT: literal erasure of all data conflicts with R23; the main deletion-caution guidance has primary support. No claim that unlisting preserves every audience signal.
+- **PRIMARY SOURCES:** [R18], [R23], [R24]; retrieved 2026-09-08. See the source register for publisher, cited section and exact surface scope.
+
+# Final DS-000018 Validation Synthesis
+
+## Authoritative current dispositions
+
+This table is the sole current disposition register as of 2026-09-08. Each of the 33 original IDs occurs exactly once here. Historical Batch 1/2 statuses and remediation logs are not extra current dispositions. A completed disposition means the claim has been evaluated, not necessarily supported. Source identity remains **Semantic Class A — Global YouTube Knowledge** and all original assertion types remain unchanged.
+
+| Claim ID | CURRENT FINAL DISPOSITION | Primary basis / boundary check | Authoritative bounded conclusion |
+|---|---|---|---|
+| ALG26-CLM-001 | SUPPORTED | [R1], [R2] | Personalized ranking uses viewer context; surface-specific inputs differ. |
+| ALG26-CLM-002 | PARTIALLY_SUPPORTED | [R1], [R2], [R15], [R19] | Personalization and distinct traffic/analytics segments are documented; an exact three-cohort training architecture is not. |
+| ALG26-CLM-003 | PARTIALLY_SUPPORTED | [R1], [R5] | Later discovery is possible. The source says may, not typically; a majority-of-lifetime-views outcome is not measured by these sources. |
+| ALG26-CLM-004 | SUPPORTED | [R1], [R2], [R4] | Satisfaction involves multiple signals; no universal metric hierarchy follows. |
+| ALG26-CLM-005 | PARTIALLY_SUPPORTED | [R3], [R16] | Cross-format preference differences are documented; the full length/podcast/internal partition list remains unestablished. |
+| ALG26-CLM-006 | PARTIALLY_SUPPORTED | [R1], [R5] | Suggested can use personal history beyond current-video relevance; no exact cross-topic co-viewing matcher is disclosed. |
+| ALG26-CLM-007 | PARTIALLY_SUPPORTED | [R5], [R11] | New-video discovery and researched cold-start handling have primary support; exact first-upload audience assignment does not. |
+| ALG26-CLM-008 | SUPPORTED | [R2], [R5], [R22] | Subscribers are not guaranteed viewers. No numerical subscriber-CTR gate or universal propagation rule is validated. |
+| ALG26-CLM-009 | SUPPORTED | [R12], [R13] | Repetitive mass production can violate policy; materially varied formats can qualify for monetization. No ranking penalty or blanket exemption is inferred. |
+| ALG26-CLM-010 | PARTIALLY_SUPPORTED | [R3], [R15], [R26] | Subscription recommendations and chronological access are documented in bounded contexts; the exact shelf mechanism and universal rollout are not. |
+| ALG26-CLM-011 | SUPPORTED | [R2] | Watch history informs recommendations, primarily Home; no universal high weight across surfaces is asserted. |
+| ALG26-CLM-012 | PARTIALLY_SUPPORTED | [R11] | The studied semantic-ID model uses audiovisual embeddings; metadata, pacing, format and complete current deployment claims exceed the evidence. |
+| ALG26-CLM-013 | NOT_CURRENTLY_VERIFIABLE | [R11] | The asserted private mood-cluster linkage is not publicly verifiable from the reviewed technical evidence. |
+| ALG26-CLM-014 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R27] | The selected-client 23–24% to over-50% device mix lacks its underlying data; platform outlook is not verification. |
+| ALG26-CLM-015 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R3] | The 100-billion-view, 51% duration statistic lacks its underlying data. No ideal-length rule follows. |
+| ALG26-CLM-016 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R7], [R8] | No direct official record located for the claimed Home experiment outcome or small-channel placement. Packaging tools do not establish either. |
+| ALG26-CLM-017 | PARTIALLY_SUPPORTED | [R7], [R17] | Direct official evidence replaces press. Current upload capability is established; historical feed guidance does not prove every current shelf or placement effect. |
+| ALG26-CLM-018 | CONTRADICTED | [R3], [R16] | The universal channel-separation instruction conflicts with official guidance. Distinct surface behavior is not itself refuted. |
+| ALG26-INT-001 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R11] | The four-era narrative remains the creator interpretation, not a published platform chronology. |
+| ALG26-INT-002 | PARTIALLY_SUPPORTED | [R1], [R2], [R22] | Audience relevance is documented; semantic-era subscriber devaluation and a hidden topic-authority weight are not. |
+| ALG26-INT-003 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R3], [R27] | Device context is documented, but a TV-friction advantage for long shows has not been established. |
+| ALG26-INT-004 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R12], [R22], [R27] | Audience relationships may be useful; the claimed increase in personality differentiation as spectacle becomes imitable is unestablished. |
+| ALG26-INT-005 | NOT_CURRENTLY_VERIFIABLE | [R3], [R11] | The internal sophistication/volume comparison remains unverified; future public evidence could permit reassessment. |
+| ALG26-REC-001 | SUPPORTED | [R19], [R20], [R22] | Use retention comparisons, engagement reports and audience feedback as diagnostics, without metric thresholds or ranking guarantees. |
+| ALG26-REC-002 | SUPPORTED | [R15], [R18], [R19] | Do not disable subscriber delivery as an algorithm trick; distinguish notification/subscription traffic from Home. |
+| ALG26-REC-003 | SUPPORTED | [R16], [R3] | Choose channel architecture by audience fit and goals; this is conditional creator guidance. |
+| ALG26-REC-004 | SUPPORTED | [R4], [R17], [R22] | An audience promise and differentiated value are defensible strategy; no novelty weight or guaranteed repeat distribution follows. |
+| ALG26-REC-005 | PARTIALLY_SUPPORTED | [R1], [R3] | A coherent library can help continued viewing; a 3–4-video simultaneous launch or ten-video preparation rule is not established. |
+| ALG26-REC-006 | SUPPORTED | [R1], [R22] | Series and familiar formats are supported creator guidance; shows do not receive a documented automatic ranking boost. |
+| ALG26-REC-007 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R9], [R10], [R28] | The early-answer citation formula is unestablished, not disproved. Google Search and Ask YouTube are distinct systems. |
+| ALG26-REC-008 | NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | [R13], [R14], [R9] | Off-platform branding can remain strategy; no recommendation trust-score benefit is established by these policies or Search guidance. |
+| ALG26-REC-009 | PARTIALLY_SUPPORTED | [R21], [R9], [R10] | Content-gap research is official creator guidance; the source passage adds an unverified AI-citation/information-gain mechanism. |
+| ALG26-REC-010 | PARTIALLY_SUPPORTED | [R18], [R23], [R24] | Official guidance supports caution about deletion; neither total instant data erasure nor complete signal preservation by unlisting is established. |
+
+## Final validation distribution
+
+| Validation status | Final source-wide total | Batch 3 total |
+|---|---:|---:|
+| SUPPORTED | 10 | 5 |
+| PARTIALLY_SUPPORTED | 12 | 4 |
+| CONTRADICTED | 1 | 0 |
+| NOT_SUPPORTED_BY_PRIMARY_EVIDENCE | 8 | 0 |
+| NOT_CURRENTLY_VERIFIABLE | 2 | 0 |
+
+- TOTAL CLAIMS: 33 (18 SOURCE_CLAIM, 5 SOURCE_INTERPRETATION, 10 SOURCE_RECOMMENDATION).
+- VALIDATED UNIQUE CLAIMS: 33.
+- UNVALIDATED: 0.
+- DUPLICATE CURRENT DISPOSITIONS: 0.
+- TOTAL CHECK: 33/33; Batch 3: 9/9.
+
+The totals were recomputed from the authoritative table, not copied from prior batches. Four historical statuses changed: CLM-013 from NOT_SUPPORTED_BY_PRIMARY_EVIDENCE to NOT_CURRENTLY_VERIFIABLE; CLM-016 and INT-004 from PARTIALLY_SUPPORTED to NOT_SUPPORTED_BY_PRIMARY_EVIDENCE; REC-007 from CONTRADICTED to NOT_SUPPORTED_BY_PRIMARY_EVIDENCE. Eight other material remediations retain their status while changing authority or interpretation. The prior 24/33 coverage and distribution remain historical only.
+
+## DS-000018 reliability assessment
+
+**MIXED_RELIABILITY.** Of 33 claims, 10 are supported, 12 partial, and 11 contradicted, unsupported or currently unverifiable. Some supported outcomes establish creator guidance rather than platform mechanisms. Provenance is strong at the captured-member level, but the corpus mixes interviews, translated commentary, strategies and inaccessible private analyses. The uncertainty lies in the source assertions, not a lack of claim identity. Use individual bounded conclusions and their limitations; never assign the whole corpus factual authority. This is an intelligence-layer judgment, not a change to semantic class or dataset identity.
+
+## A. SAFE PLATFORM KNOWLEDGE
+
+Only the following bounded facts may be used as platform knowledge. References resolve to the original claim identities; the linked current primary source register supplies the independent authority. Allowed-use labels grant evidence scope only, not permission to build an engine or make channel recommendations.
+
+| Safe conclusion and claim IDs | Primary basis | Allowed downstream uses | Prohibited expansion |
+|---|---|---|---|
+| Personalized, surface-dependent matching; watch history matters particularly on Home (ALG26-CLM-001, ALG26-CLM-004, ALG26-CLM-011). | [R1], [R2] | GENERAL_PLATFORM_CONTEXT; TOPIC_INTELLIGENCE | Fixed signal weights, universal session-time or emotion hierarchy. |
+| Subscriptions do not guarantee viewing; analytics audience groups do not establish model cohorts (ALG26-CLM-002, ALG26-CLM-008). | [R19], [R22] | GENERAL_PLATFORM_CONTEXT | Subscriber devaluation, aggregate CTR gates, subscriber-first seeding rules. |
+| Format connections can occur with different viewer preferences (ALG26-CLM-005, ALG26-CLM-018). | [R3] | FORMAT_STRATEGY; GENERAL_PLATFORM_CONTEXT | Automatic Shorts-to-long-form conversion, universal same/separate-channel rules. |
+| Later discovery and history-personalized Suggested are documented (ALG26-CLM-003, ALG26-CLM-006). | [R5] | OPPORTUNITY_DISCOVERY; GENERAL_PLATFORM_CONTEXT | Guaranteed evergreen view shares or exact cross-topic matching rules. |
+| Published research studies semantic IDs and cold-start generalization (ALG26-CLM-007, ALG26-CLM-012). | [R11] | GENERAL_PLATFORM_CONTEXT | Current universal architecture, semantic scores, mood features or seeding quotas. |
+| Repetitive mass production carries policy risk; varied episodes can meet monetization rules (ALG26-CLM-009). | [R12], [R13] | FORMAT_STRATEGY; SCRIPT_INTELLIGENCE; GENERAL_PLATFORM_CONTEXT | Encoding demonetization as a ranking penalty or promising blanket policy clearance. |
+| Subscription features have specific device/experiment boundaries (ALG26-CLM-010). | [R15], [R26] | GENERAL_PLATFORM_CONTEXT | Borrowing Home mechanisms or claiming a uniform live shelf layout. |
+| Shorts thumbnail uploads are currently documented; historical feed guidance is separately dated (ALG26-CLM-017). | [R7], [R17] | THUMBNAIL_INTELLIGENCE; FORMAT_STRATEGY | Claims that custom Shorts uploads are impossible, every Shorts surface uses the image identically, or upload availability proves Shorts-feed ranking impact. |
+| Viewer retention/engagement reports enable diagnosis (ALG26-REC-001, ALG26-REC-002). | [R19], [R20] | HOOK_INTELLIGENCE; SCRIPT_INTELLIGENCE; GENERAL_PLATFORM_CONTEXT | Treating analytics thresholds as guaranteed distribution gates. |
+| Public, unlisted and deleted videos have different visibility and reporting consequences (ALG26-REC-010). | [R23], [R24] | GENERAL_PLATFORM_CONTEXT | Total-data-erasure claims, automatic deletion or unlisting, preserved reach guarantees. |
+
+## B. CREATOR HEURISTICS — NOT PLATFORM FACTS
+
+| Bounded practice and claim IDs | Basis | Allowed downstream uses | Prohibited expansion |
+|---|---|---|---|
+| Compare retention and engagement with context; seek audience feedback (ALG26-REC-001). | [R19], [R20], [R22] | HOOK_INTELLIGENCE; SCRIPT_INTELLIGENCE | Universal hook seconds, retention percentages, rewatch targets or like-rate recipes. |
+| Preserve subscriber delivery unless a real publishing reason suggests otherwise (ALG26-REC-002). | [R15], [R18] | GENERAL_PLATFORM_CONTEXT | Gaming notifications for a claimed Home boost. |
+| Choose channel architecture by audience overlap and goals (ALG26-REC-003). | [R16] | FORMAT_STRATEGY | Automatic split/merge recommendations without channel-specific evidence. |
+| Clarify an audience promise; test differentiated value (ALG26-REC-004, ALG26-INT-002). | [R4], [R17] | TOPIC_INTELLIGENCE; TITLE_INTELLIGENCE; THUMBNAIL_INTELLIGENCE; OPPORTUNITY_DISCOVERY | Hidden authority/novelty scores, subscriber devaluation, copied winning templates. |
+| Create useful continuation paths and recurring episodes (ALG26-REC-005, ALG26-REC-006). | [R1], [R22] | FORMAT_STRATEGY; SCRIPT_INTELLIGENCE | Fixed launch volume/cadence, compulsory binge sessions, show-format bonuses. |
+| Explore genuine search gaps, checking demand and usefulness (ALG26-REC-009). | [R21] | TOPIC_INTELLIGENCE; OPPORTUNITY_DISCOVERY | Guaranteed citations, information-gain boosts, revenue promises or copying breakout videos as a rule. |
+| Consider reversibility before removing underperforming content (ALG26-REC-010). | [R18], [R23], [R24] | GENERAL_PLATFORM_CONTEXT | Automatic content removal or assumed preservation of all recommendation state. |
+| Personality, recognizable shows, clear answers and brand consistency can be tested as strategy (ALG26-INT-003, ALG26-INT-004, ALG26-REC-007, ALG26-REC-008). | Creator hypotheses; adjacent guidance [R16], [R22]. | FORMAT_STRATEGY; HOOK_INTELLIGENCE; SCRIPT_INTELLIGENCE | Platform-fact labels, TV causal advantages, AEO formulas or off-platform trust weights. |
+
+The last row preserves potentially useful ideas as hypotheses; it does not upgrade their unsupported source claims. No title, hook, script, thumbnail, topic or opportunity engine is created here.
+
+## C. DO NOT USE AS FACT
+
+- ALG26-CLM-002, ALG26-CLM-007, ALG26-CLM-008, ALG26-INT-002: exact audience-seeding cohorts, subscriber devaluation, hidden topic-authority weights or a subscriber-count distribution formula.
+- ALG26-CLM-012, ALG26-CLM-013, ALG26-INT-001, ALG26-INT-005: the full asserted modality list, mood clusters, four semantic eras, or a ranking-system sophistication/volume hierarchy.
+- ALG26-CLM-014, ALG26-CLM-015: the private-client device percentages and 100-billion-view/51% duration result. Different platform metrics do not validate these statistics.
+- ALG26-CLM-016: an established positive Home redesign effect or guaranteed near-top placement for smaller creators.
+- ALG26-CLM-017, ALG26-CLM-018: universal Shorts-thumbnail surface effects, automatic cross-format conversion, or compulsory separate channels.
+- ALG26-INT-003, ALG26-INT-004, ALG26-REC-006: TV friction necessarily favors longer shows; personality has gained a measured ranking/market premium; the algorithm rewards emotion or total session duration above all else.
+- ALG26-REC-001, ALG26-REC-004, ALG26-REC-005, ALG26-REC-006: exact CTR/retention/rewatch thresholds, one/two/three-second hook rules, fixed ideal duration, fixed upload cadence, mandatory launch volume, or copied-format guarantees.
+- ALG26-REC-007, ALG26-REC-008, ALG26-REC-009: early-answer/name/date formulas for AI citations, off-platform authority as YouTube trust scoring, or guaranteed net-information-gain/ranking/revenue outcomes.
+- ALG26-REC-010: deletion erases every data trace immediately; unlisting preserves every learning signal or improves ranking. The raw passage's literal all-data assertion conflicts with retained aggregate analytics [R23].
+
+All uses above are prohibited as facts in every listed downstream layer. They may be retained only as labeled source claims or explicitly testable hypotheses where the heuristic set allows that use. No evidence found does not mean false; only CLM-018 has an authoritative CONTRADICTED disposition.
+
+## Numeric, causal and cross-system guardrails
+
+| Issue investigated | Finding / permitted interpretation | Relevant original IDs |
+|---|---|---|
+| CTR and packaging formulas | [R25]'s 2–10% is a population description, not a target. [R8] evaluates eligible concurrent tests by watch-time share; it excludes Shorts. Exact title templates and thumbnail formulas are unestablished. | ALG26-CLM-004, ALG26-CLM-008, ALG26-CLM-016, ALG26-CLM-017, ALG26-REC-001, ALG26-REC-004 |
+| Hooks, retention and rewatch | [R4] recommends early value. [R19]'s 30-second intro measurement is not a hook-length rule; spikes can have multiple explanations. No required retention/rewatch percentage is established. | ALG26-CLM-004, ALG26-REC-001, ALG26-REC-007 |
+| Length, cadence and volume | [R3] rejects a universal ideal duration. [R6] concerns sustainable audience expectations; [R5] rejects a daily/weekly requirement. R5 also lists reduced upload frequency as a possible traffic-decline context; fewer viewing opportunities are not proof of a schedule ranking bonus. | ALG26-CLM-015, ALG26-REC-005, ALG26-REC-006 |
+| Emotion, sessions and format copying | Storytelling and continuation are strategies [R4], [R1]; no emotion score, universal session-time hierarchy, or copied-format reward is established. | ALG26-CLM-004, ALG26-INT-003, ALG26-REC-006 |
+| YouTube Search | Query relevance includes title, description and video content, plus query engagement [R5]. This is Search evidence, not a Home or Shorts-feed formula. | ALG26-REC-004, ALG26-REC-009 |
+| Policy versus recommendations | [R12]/[R13] address eligibility or abuse; they do not establish a generic ranking penalty. Distinct enforcement and content suitability effects must remain distinguishable. | ALG26-CLM-009, ALG26-INT-004, ALG26-REC-008 |
+| Google Search and AI answers | [R9]/[R10] concern websites in Google Search. [R28] documents Ask YouTube separately. Neither proves REC-007/009's citation formulas. External traffic is also distinct from registered YouTube impressions [R25]. | ALG26-REC-007, ALG26-REC-008, ALG26-REC-009 |
+| Home, Up Next, Shorts Feed, channel pages and Subscriptions | [R2], [R7], [R15], [R26] have different surface scopes. The sole explicit format bridge used is [R3]'s documented cross-format connection, without a guaranteed conversion rate. | ALG26-CLM-001, ALG26-CLM-005, ALG26-CLM-006, ALG26-CLM-010, ALG26-CLM-017, ALG26-CLM-018 |
+
+Numeric/topic requests without a standalone registered claim were investigated as guardrails, not invented as new claim IDs. Preserve the corpus's 33-claim boundary.
+
+## Evidence preservation and verification
+
+The original source-intelligence artifact remains byte-identical to baseline, SHA-256 `c2fd52471e75df74ee02c8d3c0b0ce13e7fdf9b323605ec36c6a5dbf69763928`. Raw DS-000018 remains `3992987b88dd4faa16f37b84b502d38b1defaab8fdef8c03722baa1622855a1f`; all 64 registered members match. No original assertion type, source locator, source archive member, channel record or transcript is edited. No dataset is ingested and no MEASURED_FACT row is created.
+
+Final verification on 2026-09-08:
+
+- Independent focused checks found 33 original IDs (18 claims, 5 interpretations, 10 recommendations), 33 unique final dispositions, zero missing IDs and zero duplicate current dispositions. All 28 R aliases resolve. All nine Batch 3 entries and 12 remediation entries contain their required fields; exactly four historical statuses changed.
+- Batch 1 and Batch 2 remain byte-identical after excluding the new authority notice. Every repeated SOURCE SAYS assertion, assertion type and timestamp locator agrees with the unchanged source-intelligence artifact.
+- The ZIP hash matches the registered snapshot; all 64 members match the catalog and all seven claim-bearing provenance aliases resolve. All 123 transcript-named files in the surviving pre-task hash baseline remain unchanged.
+- `.venv/bin/python -B -m pytest -p no:cacheprovider`: 73 collected, 73 passed, 0 failed, 0 skipped, 1 warning. `pytest.ini` restricts discovery to `tests/`; the ignored DS-000014 orphan test was not included. The warning is the intentional duplicate ZIP member `ChannelA/sameid00001.txt` in the duplicate-workbook rejection test.
+- SQLite was opened with URI `mode=ro`: `PRAGMA integrity_check` returned `ok`; `PRAGMA foreign_key_check` returned zero rows; `content_classifications` remained 546. Catalog SHA-256 before and after verification matches the surviving pre-task baseline: `74cb0480924ee73800c5ac9bc1040cc6e9ac3e1b7268bbe750494f070b241987`. Hash equality preserves all catalog rows, including transcript hashes, classifications and channel records; MEASURED_FACT promotions remain zero.
+- `git diff --check` passed. Task changes are limited to this validation artifact and `data/manifests/DS-000018.md`. Unrelated pre-existing changes remain excluded; temporary source notes, builder and verification scripts remain outside the repository.
+
+## Current reference links
+
+[R1]: https://support.google.com/youtube/answer/16533387?hl=en
+[R2]: https://support.google.com/youtube/answer/16089387?hl=en
+[R3]: https://support.google.com/youtube/answer/16559651?hl=en
+[R4]: https://support.google.com/youtube/answer/16559650?hl=en
+[R5]: https://support.google.com/youtube/answer/141805?hl=en
+[R6]: https://support.google.com/youtube/answer/13616979
+[R7]: https://support.google.com/youtube/answer/72431
+[R8]: https://support.google.com/youtube/answer/16391400?hl=en
+[R9]: https://developers.google.com/search/docs/appearance/ai-features
+[R10]: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+[R11]: https://arxiv.org/html/2306.08121v2
+[R12]: https://support.google.com/youtube/answer/1311392?hl=en
+[R13]: https://support.google.com/youtube/answer/2801973?hl=en
+[R14]: https://support.google.com/youtube/answer/2801947?hl=en
+[R15]: https://blog.youtube/culture-and-trends/renes-top-five-on-youtube-april-18-2024-edition/
+[R16]: https://blog.youtube/creator-and-artist-stories/renes-top-five-august-1-2024/
+[R17]: https://blog.youtube/creator-and-artist-stories/renes-top-five-july-25-2024/
+[R18]: https://blog.youtube/culture-and-trends/renes-top-five-on-youtube-march-28-2024-edition/
+[R19]: https://support.google.com/youtube/answer/9314415?hl=en
+[R20]: https://support.google.com/youtube/answer/9313698?hl=en
+[R21]: https://support.google.com/youtube/answer/11962757?co=GENIE.Platform%3DDesktop&hl=en
+[R22]: https://support.google.com/youtube/answer/10246996?hl=en
+[R23]: https://support.google.com/youtube/answer/55770?hl=en
+[R24]: https://support.google.com/youtube/answer/157177
+[R25]: https://support.google.com/youtube/answer/7628154
+[R26]: https://support.google.com/youtube/thread/396097464?hl=en&msgid=428283639
+[R27]: https://blog.youtube/inside-youtube/the-future-of-youtube-2026/
+[R28]: https://blog.youtube/news-and-events/youtube-news-google-io-2026/
