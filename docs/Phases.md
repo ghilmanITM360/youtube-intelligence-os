@@ -100,9 +100,9 @@ Foundation closure: 274 canonical content items dispositioned; 273 fully classif
 ---
 
 ### Phase 3 — Extraction & Normalization
-**Status: FIRST END-TO-END INTELLIGENCE PILOT AUTHORIZED / IN PROGRESS**
+**Status: TOPIC OPPORTUNITY INTELLIGENCE GENERALIZED / WORKING**
 
-Step 16B is a deliberately thin CH-000003 pilot across the later analytical flow. It does not declare the broader Phase 3–8 roadmap complete and does not authorize title, thumbnail, hook, or script intelligence.
+Step 16B's CH-000003 pilot passed. Step 16C generalized read-only Topic Opportunity Intelligence across the remaining canonical channels while preserving channel separation. This does not declare the broader Phase 3–8 roadmap complete or authorize title, thumbnail, hook, script, or packaging intelligence.
 
 - **Objective:** Turn raw evidence into extracted, then normalized, structured representations (text from PDFs/DOCX, transcripts from video, OCR from images) without interpretation.
 - **Inputs:** Classified raw evidence.

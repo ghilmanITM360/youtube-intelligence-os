@@ -13,7 +13,7 @@
 9. Detect duplication before treating two datasets as independent evidence.
 10. Do not prematurely introduce infrastructure.
 11. Build only the phase explicitly requested.
-12. **Phase 2 — Data Classification & Provenance** is closed. **Phase 3 — First End-to-End Intelligence Pilot** is explicitly authorized and in progress for CH-000003 only (see `docs/Phases.md`); no packaging-intelligence phase begins automatically.
+12. **Phase 2 — Data Classification & Provenance** is closed. **Phase 3 — Topic Opportunity Intelligence** is generalized across all canonical channels (see `docs/Phases.md`); no packaging-intelligence phase begins automatically.
 13. The YouTube API is not part of the planned competitor-data workflow unless the user explicitly changes this requirement.
 14. Competitor data will primarily be supplied by the user.
 15. Future live web research will complement supplied internal data, not replace it.

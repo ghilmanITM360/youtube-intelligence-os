@@ -1,0 +1,69 @@
+{
+  "schema_version": "topic-opportunity-comparison-1",
+  "generated_on": "2026-09-09",
+  "evidence_state": "OBSERVATION",
+  "channel_ids": ["CH-000001", "CH-000002", "CH-000004"],
+  "metric_pooling": false,
+  "identity_merging": false,
+  "channel_summaries": {
+    "CH-000001": {
+      "display_name": "Matty Invests",
+      "items": 94,
+      "canonical_topics": ["PERSONAL_FINANCE", "RETIREMENT_PLANNING", "UNCLASSIFIED"],
+      "repeatable_winner_families": ["RETIREMENT", "RETIREES"]
+    },
+    "CH-000002": {
+      "display_name": "Mr. Finance",
+      "items": 65,
+      "canonical_topics": ["BUSINESS_ECONOMICS"],
+      "repeatable_winner_families": ["BUSINESS_ECONOMICS"]
+    },
+    "CH-000004": {
+      "display_name": "xkcd's What If?",
+      "items": 83,
+      "canonical_topics": ["SCIENCE_HYPOTHETICALS", "STEM_EXPLANATIONS"],
+      "repeatable_winner_families": ["EARTH", "LIGHT", "SURVIVE"]
+    }
+  },
+  "patterns": [
+    {
+      "pattern": "SHARED_BROAD_DOMAIN",
+      "channels": ["CH-000001", "CH-000002"],
+      "observation": "Both channels address financial or economic decisions, but no exact derived topic family is shared.",
+      "evidence": {
+        "CH-000001": "Retirement and personal-finance classifications; retirement/lifestyle framing.",
+        "CH-000002": "Business-economics classification; owner and unit-economics framing."
+      }
+    },
+    {
+      "pattern": "DIFFERENT_AUDIENCE_FRAMING",
+      "channels": ["CH-000001", "CH-000002"],
+      "observation": "CH-000001 frames money through retirement life stages and household choices. CH-000002 frames money through business ownership, costs, and revenue.",
+      "metric_comparison": "NONE"
+    },
+    {
+      "pattern": "DENSE_THEMES",
+      "channels": ["CH-000001", "CH-000002"],
+      "observation": "Generic retirement is dense in CH-000001; generic business ownership is dense in CH-000002. Density is internal coverage, not market saturation."
+    },
+    {
+      "pattern": "POSSIBLE_WHITESPACE",
+      "evidence_state": "HYPOTHESIS",
+      "channels": ["CH-000001", "CH-000002"],
+      "observation": "Retirement-stage evaluation of small-business economics may bridge distinct audience framings.",
+      "supporting_evidence": {
+        "CH-000001": ["VID-000088"],
+        "CH-000002": ["VID-000067", "VID-000077", "VID-000081"]
+      },
+      "counter_evidence": "CH-000001's direct small-business item is a low relative performer; audience overlap is unavailable.",
+      "confidence": "LOW"
+    },
+    {
+      "pattern": "CROSS_DOMAIN_SEPARATION",
+      "channels": ["CH-000004"],
+      "observation": "Science-hypothetical evidence has no exact shared family with either finance channel. No science metrics were imported into finance conclusions or vice versa."
+    }
+  ],
+  "direct_winner_on_one_weak_on_another": [],
+  "limitation": "No exact shared family supports direct relative-performance transfer. Channel-relative metrics remain separate."
+}
