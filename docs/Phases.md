@@ -85,6 +85,9 @@ The local SQLite inventory catalog is a Phase 1 exception (Decision 012). Final 
 ---
 
 ### Phase 2 — Data Classification & Provenance
+**Status: FOUNDATION CLOSED**
+
+Foundation closure: 274 canonical content items dispositioned; 273 fully classified and one evidence-blocked. DS-000018 has 33/33 final primary-source dispositions with safe platform knowledge separated from creator heuristics and do-not-use-as-fact material.
 
 - **Objective:** Apply semantic classification (`docs/DATA_CLASSIFICATION.md` classes A–H) and the evidence-layer model (`docs/Database.md`) to ingested material; formalize provenance records.
 - **Inputs:** Phase 1 ingested data and manifests.
@@ -97,6 +100,9 @@ The local SQLite inventory catalog is a Phase 1 exception (Decision 012). Final 
 ---
 
 ### Phase 3 — Extraction & Normalization
+**Status: FIRST END-TO-END INTELLIGENCE PILOT AUTHORIZED / IN PROGRESS**
+
+Step 16B is a deliberately thin CH-000003 pilot across the later analytical flow. It does not declare the broader Phase 3–8 roadmap complete and does not authorize title, thumbnail, hook, or script intelligence.
 
 - **Objective:** Turn raw evidence into extracted, then normalized, structured representations (text from PDFs/DOCX, transcripts from video, OCR from images) without interpretation.
 - **Inputs:** Classified raw evidence.

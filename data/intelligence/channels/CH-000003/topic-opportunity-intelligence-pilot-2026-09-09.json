@@ -1,0 +1,200 @@
+{
+  "schema_version": "pilot-1",
+  "generated_at": "2026-09-09",
+  "channel": {
+    "channel_id": "CH-000003",
+    "display_name": "Dr. Aliza Wright | Advice",
+    "handle": "@Dr.AlizaWrightAdvice",
+    "dataset_id": "DS-000006",
+    "source_acquisition_run": "APIFYRUN-000001",
+    "actor_run_id": "bD7JBsuj7LK5Wt2rk",
+    "registration_run_id": "RUN-000018"
+  },
+  "evidence_snapshot": {
+    "evidence_layer": "INTERNAL_CANONICAL_EVIDENCE",
+    "metric_cutoff": "2026-08-28T12:06:34.708Z",
+    "canonical_item_count": 32,
+    "canonical_item_ids": [
+      "VID-000160", "VID-000161", "VID-000162", "VID-000163",
+      "VID-000164", "VID-000165", "VID-000166", "VID-000167",
+      "VID-000168", "VID-000169", "VID-000170", "VID-000171",
+      "VID-000172", "VID-000173", "VID-000174", "VID-000175",
+      "VID-000176", "VID-000177", "VID-000178", "VID-000179",
+      "VID-000180", "VID-000181", "VID-000182", "VID-000183",
+      "VID-000184", "VID-000185", "VID-000186", "VID-000187",
+      "VID-000188", "VID-000189", "VID-000190", "VID-000191"
+    ],
+    "transcripts_available": 32,
+    "transcript_words": 93911,
+    "publish_window": ["2026-06-05T19:27:33.000Z", "2026-07-25T02:08:43.000Z"],
+    "upload_gap_days": {"median": 1.0434, "mean": 1.5896, "minimum": 0.3480, "maximum": 4.2767},
+    "formats": {"LONG_FORM": 32, "SHORTS": 0, "LIVE": 0},
+    "canonical_topics": {
+      "CARDIOVASCULAR_HEALTH": 24,
+      "HEALTHY_AGING": 6,
+      "METABOLIC_HEALTH": 2
+    },
+    "public_metrics": ["views", "likes", "comments", "duration_seconds", "published_at", "observed_at"],
+    "unavailable_metrics": ["ctr", "impressions", "retention", "watch_time", "subscriber_conversion", "traffic_sources", "unique_viewers", "audience_overlap"]
+  },
+  "normalization": {
+    "evidence_layer": "DERIVED_OBSERVATION",
+    "age_days": "max(1, metric_cutoff - published_at)",
+    "views_per_day": "views / age_days",
+    "channel_relative": "views_per_day / channel median views_per_day",
+    "topic_relative": "views_per_day / derived family median views_per_day",
+    "outlier_rule": "1.5-IQR Tukey fences on log1p(views_per_day), minimum n=4",
+    "channel_median_views_per_day": 3.4019,
+    "views_per_day_quartiles": [2.3761, 3.4019, 7.6353],
+    "composite_score": null
+  },
+  "topic_families": [
+    {"family": "BLOOD_PRESSURE_MEDICATION_SAFETY", "item_count": 16, "median_views_per_day": 3.1305, "mean_title_token_jaccard": 0.1868, "strongest_video_id": "VID-000187", "weakest_video_id": "VID-000169", "repeatability": "LOW"},
+    {"family": "BLOOD_PRESSURE_LIFESTYLE_HOME", "item_count": 4, "median_views_per_day": 2.8509, "mean_title_token_jaccard": 0.2079, "strongest_video_id": "VID-000172", "weakest_video_id": "VID-000171", "repeatability": "LOW"},
+    {"family": "CARDIAC_WARNING_SELF_TESTS", "item_count": 3, "median_views_per_day": 2.1684, "mean_title_token_jaccard": 0.1849, "strongest_video_id": "VID-000170", "weakest_video_id": "VID-000161", "repeatability": "LOW"},
+    {"family": "FUNCTIONAL_AGING_SELF_ASSESSMENT", "item_count": 3, "median_views_per_day": 18.8284, "mean_title_token_jaccard": 0.1555, "strongest_video_id": "VID-000182", "weakest_video_id": "VID-000176", "repeatability": "MEDIUM"},
+    {"family": "MOBILITY_GAIT_FALL_PREVENTION", "item_count": 3, "median_views_per_day": 315.4202, "mean_title_token_jaccard": 0.1311, "strongest_video_id": "VID-000162", "weakest_video_id": "VID-000185", "repeatability": "HIGH"},
+    {"family": "METABOLIC_DIABETES", "item_count": 2, "median_views_per_day": 5.7672, "mean_title_token_jaccard": 0.0, "strongest_video_id": "VID-000173", "weakest_video_id": "VID-000184", "repeatability": "INSUFFICIENT_SAMPLE"},
+    {"family": "FOOD_SAFETY_LONGEVITY", "item_count": 1, "median_views_per_day": 3.3667, "mean_title_token_jaccard": null, "strongest_video_id": "VID-000160", "weakest_video_id": "VID-000160", "repeatability": "INSUFFICIENT_SAMPLE"}
+  ],
+  "outliers": {
+    "rule": "1.5-IQR Tukey fences on log1p(views_per_day)",
+    "positive": [
+      {"video_id": "VID-000162", "views": 219009, "views_per_day": 3495.4296, "channel_median_ratio": 1027.4933, "family": "MOBILITY_GAIT_FALL_PREVENTION"},
+      {"video_id": "VID-000187", "views": 47032, "views_per_day": 613.1131, "channel_median_ratio": 180.2267, "family": "BLOOD_PRESSURE_MEDICATION_SAFETY"},
+      {"video_id": "VID-000163", "views": 20701, "views_per_day": 315.4202, "channel_median_ratio": 92.7188, "family": "MOBILITY_GAIT_FALL_PREVENTION"}
+    ],
+    "negative": [],
+    "negative_relative_performers": ["VID-000169", "VID-000161", "VID-000171", "VID-000186"],
+    "recent_acceleration_candidates": ["VID-000179", "VID-000182", "VID-000185"],
+    "acceleration_limitation": "One snapshot cannot establish acceleration."
+  },
+  "candidate_opportunities": [
+    {"candidate_id": "CAND-01", "topic": "Falls and mobility", "angle": "Balance recovery and safer turning after 70", "supporting_video_ids": ["VID-000162", "VID-000163", "VID-000185"], "internal_signal": "Repeated winning family", "coverage": "UNDERCOVERED_ANGLE", "initial_confidence": "HIGH", "web_validated": true, "decision": "ADVANCE_OP-001"},
+    {"candidate_id": "CAND-02", "topic": "Gait", "angle": "Foot clearance, gait change, and trip prevention", "supporting_video_ids": ["VID-000162", "VID-000163"], "internal_signal": "Two robust outliers", "coverage": "NO_DIRECT_ITEM", "initial_confidence": "HIGH", "web_validated": true, "decision": "MERGE_WITH_OP-001"},
+    {"candidate_id": "CAND-03", "topic": "Leg symptoms", "angle": "Heavy legs: mobility problem versus warning sign", "supporting_video_ids": ["VID-000185", "VID-000163"], "internal_signal": "Newer item at 7.09x channel median", "coverage": "FOLLOW_UP_GAP", "initial_confidence": "HIGH", "web_validated": true, "decision": "ADVANCE_OP-002"},
+    {"candidate_id": "CAND-04", "topic": "Functional aging", "angle": "Practical functional-mobility checks for older adults", "supporting_video_ids": ["VID-000182", "VID-000166", "VID-000176", "VID-000162"], "internal_signal": "Two above-median items with one counterexample", "coverage": "PARTIAL", "initial_confidence": "HIGH", "web_validated": true, "decision": "ADVANCE_OP-003"},
+    {"candidate_id": "CAND-05", "topic": "Medication and falls", "angle": "Blood-pressure medicines, dizziness, and fall risk", "supporting_video_ids": ["VID-000187", "VID-000179", "VID-000183", "VID-000162", "VID-000163"], "internal_signal": "Medication outlier plus repeatable mobility family", "coverage": "AUDIENCE_PROBLEM_GAP", "initial_confidence": "HIGH", "web_validated": true, "decision": "ADVANCE_OP-004"},
+    {"candidate_id": "CAND-06", "topic": "Hypertension medication", "angle": "Individualized pill timing and adherence", "supporting_video_ids": ["VID-000179", "VID-000181", "VID-000175"], "internal_signal": "Moderate repeated velocity", "coverage": "DENSE", "initial_confidence": "MEDIUM", "web_validated": true, "decision": "REJECT_SATURATED_NO_GAP"},
+    {"candidate_id": "CAND-07", "topic": "Home monitoring", "angle": "Accurate home blood-pressure measurement", "supporting_video_ids": ["VID-000172", "VID-000168", "VID-000171", "VID-000188"], "internal_signal": "Mixed below-channel family", "coverage": "PARTIAL", "initial_confidence": "MEDIUM", "web_validated": true, "decision": "RESERVE"},
+    {"candidate_id": "CAND-08", "topic": "Medication safety", "angle": "Side effects by drug class with escalation boundaries", "supporting_video_ids": ["VID-000187", "VID-000174", "VID-000183"], "internal_signal": "One extreme outlier; typical follow-ups", "coverage": "DENSE_GENERIC", "initial_confidence": "MEDIUM", "web_validated": false, "decision": "NOT_ADVANCED"},
+    {"candidate_id": "CAND-09", "topic": "Kidney health", "angle": "Kidney monitoring questions for seniors taking BP medicine", "supporting_video_ids": ["VID-000183", "VID-000187"], "internal_signal": "Direct item below channel median", "coverage": "ONE_WEAK_ITEM", "initial_confidence": "LOW", "web_validated": false, "decision": "NOT_ADVANCED"},
+    {"candidate_id": "CAND-10", "topic": "Diabetes medication safety", "angle": "Hypoglycemia risk in older adults", "supporting_video_ids": ["VID-000184", "VID-000173"], "internal_signal": "Small family above channel median", "coverage": "SPARSE", "initial_confidence": "MEDIUM", "web_validated": true, "decision": "ADVANCE_OP-005"},
+    {"candidate_id": "CAND-11", "topic": "Nutrition", "angle": "Older-adult food choices spanning diabetes and blood pressure", "supporting_video_ids": ["VID-000173", "VID-000189"], "internal_signal": "Sparse, no outlier", "coverage": "SPARSE", "initial_confidence": "LOW", "web_validated": false, "decision": "NOT_ADVANCED"},
+    {"candidate_id": "CAND-12", "topic": "Heart attack education", "angle": "Warning signs versus unreliable self-tests", "supporting_video_ids": ["VID-000170", "VID-000161", "VID-000188"], "internal_signal": "Low family median and high factual risk", "coverage": "THREE_WEAK_ITEMS", "initial_confidence": "LOW", "web_validated": false, "decision": "NOT_ADVANCED"},
+    {"candidate_id": "CAND-13", "topic": "Food safety", "angle": "Food handling and reheating safety for older adults", "supporting_video_ids": ["VID-000160"], "internal_signal": "One near-median item", "coverage": "ONE_ITEM", "initial_confidence": "LOW", "web_validated": false, "decision": "NOT_ADVANCED"}
+  ],
+  "external_web_validation": [
+    {"candidate_id": "CAND-01", "evidence_layer": "EXTERNAL_WEB_VALIDATION", "freshness": "HIGH", "saturation": "Generic balance exercise is crowded", "gap": "Turning and everyday-obstacle framing was less visible", "source_ids": ["E1", "E2", "E3", "E11"]},
+    {"candidate_id": "CAND-02", "evidence_layer": "EXTERNAL_WEB_VALIDATION", "freshness": "MEDIUM", "saturation": "Overlaps general gait and balance coverage", "gap": "Standalone demand not established", "source_ids": ["E1", "E2"]},
+    {"candidate_id": "CAND-03", "evidence_layer": "EXTERNAL_WEB_VALIDATION", "freshness": "HIGH", "saturation": "Generic circulation remedies are established", "gap": "Symptom-versus-warning differentiation", "source_ids": ["E4", "E11"]},
+    {"candidate_id": "CAND-04", "evidence_layer": "EXTERNAL_WEB_VALIDATION", "freshness": "HIGH", "saturation": "Single mobility tests are well covered", "gap": "Compare distinct checks and their limits", "source_ids": ["E2", "E12"]},
+    {"candidate_id": "CAND-05", "evidence_layer": "EXTERNAL_WEB_VALIDATION", "freshness": "HIGH", "saturation": "Medication-danger framing is crowded and often sensational", "gap": "Symptom recognition and medication-review boundary", "source_ids": ["E1", "E2", "E10"]},
+    {"candidate_id": "CAND-06", "evidence_layer": "EXTERNAL_WEB_VALIDATION", "freshness": "HIGH", "saturation": "Recent dangerous-time claims are crowded", "gap": "SATURATED_NO_GAP", "source_ids": ["E7", "E13"]},
+    {"candidate_id": "CAND-07", "evidence_layer": "EXTERNAL_WEB_VALIDATION", "freshness": "HIGH", "saturation": "Generic measurement technique is dense", "gap": "Possible follow-up only", "source_ids": ["E5", "E6"]},
+    {"candidate_id": "CAND-10", "evidence_layer": "EXTERNAL_WEB_VALIDATION", "freshness": "HIGH", "saturation": "Institutional coverage exists but is often older or general", "gap": "Older-adult symptom-recognition angle", "source_ids": ["E8", "E9", "E14"]}
+  ],
+  "final_opportunities": [
+    {
+      "opportunity_id": "OP-001",
+      "topic": "Falls and mobility",
+      "specific_angle": "Dynamic balance during turns and everyday obstacles after 70",
+      "why_this_channel": "Strongest repeatable family",
+      "supporting_video_ids": ["VID-000162", "VID-000163", "VID-000185"],
+      "internal_performance": "Family median 315.4202 views/day; two robust outliers; third item 7.09x channel median",
+      "external_validation": "NIA/CDC retain gait, balance, mobility, and falls as current priorities; generic exercise is crowded but reviewed exact-angle results were limited",
+      "gap_types": ["UNDERCOVERED_ANGLE", "AUDIENCE_SPECIFIC_GAP"],
+      "why_now": "Current fall-prevention resources plus no direct channel item",
+      "risks": ["Generic balance saturation", "No private demand data", "Exercise safety"],
+      "confidence": "HIGH",
+      "falsification": "Later mobility performance returns to channel median or Trends/private search data shows low interest and no gap"
+    },
+    {
+      "opportunity_id": "OP-002",
+      "topic": "Leg symptoms",
+      "specific_angle": "Heavy legs after 70: movement limitation versus vascular warning pattern",
+      "why_this_channel": "Connects newer mobility traction with cardiovascular identity",
+      "supporting_video_ids": ["VID-000185", "VID-000163", "VID-000162"],
+      "internal_performance": "VID-000185 reached 24.1225 views/day, 7.09x channel median",
+      "external_validation": "NHLBI documents exertional leg heaviness as one possible PAD symptom; generic circulation-remedy content is established",
+      "gap_types": ["FOLLOW_UP_GAP", "UNDERCOVERED_ANGLE"],
+      "why_now": "Direct item traction and authoritative differential context",
+      "risks": ["Only one direct item", "Many possible causes", "Medical overclaim risk"],
+      "confidence": "MEDIUM",
+      "falsification": "Follow-up mobility velocity weakens or high-quality current cause-versus-warning coverage already dominates"
+    },
+    {
+      "opportunity_id": "OP-003",
+      "topic": "Functional aging",
+      "specific_angle": "What different senior mobility checks can and cannot tell you",
+      "why_this_channel": "Functional assessment repeats above baseline and connects to mobility winners",
+      "supporting_video_ids": ["VID-000182", "VID-000166", "VID-000176", "VID-000162"],
+      "internal_performance": "Family median 18.8284 views/day; two items above 5x channel median; one counterexample",
+      "external_validation": "CDC separately documents chair-stand, balance, and Timed Up and Go assessments; generic single-test coverage exists",
+      "gap_types": ["UNDERCOVERED_ANGLE", "FOLLOW_UP_GAP"],
+      "why_now": "Current interest with need for safer limits than lifespan prediction",
+      "risks": ["High saturation", "Clinical-setting boundary", "One weak family item"],
+      "confidence": "MEDIUM",
+      "falsification": "Audience interest is limited to novelty or careful multi-test framing performs below channel median"
+    },
+    {
+      "opportunity_id": "OP-004",
+      "topic": "Medication and falls",
+      "specific_angle": "Blood-pressure medicines, dizziness on standing, and fall-risk review after 60",
+      "why_this_channel": "Bridges medication identity with proven mobility/fall interest",
+      "supporting_video_ids": ["VID-000187", "VID-000179", "VID-000183", "VID-000162", "VID-000163"],
+      "internal_performance": "Medication outlier 613.1131 views/day, but 16-item family median only 3.1305; bridge is hypothesis",
+      "external_validation": "NIA/CDC connect postural hypotension and medication effects with falls; current drug-danger content is saturated and often overclaims",
+      "gap_types": ["AUDIENCE_SPECIFIC_GAP", "UNDERCOVERED_ANGLE"],
+      "why_now": "Current medication-risk resources and untested internal bridge",
+      "risks": ["One-off medication anomaly", "Individual medical factors", "Sensational market"],
+      "confidence": "MEDIUM",
+      "falsification": "Bridge item cannot beat medication-family median or audience data shows no medication/mobility overlap"
+    },
+    {
+      "opportunity_id": "OP-005",
+      "topic": "Diabetes medication safety",
+      "specific_angle": "Hypoglycemia signs older adults may miss while using insulin or certain diabetes medicines",
+      "why_this_channel": "Controlled diversification inside senior medication-safety positioning",
+      "supporting_video_ids": ["VID-000173", "VID-000184"],
+      "internal_performance": "Two-item family median 5.7672 views/day, above channel median but too small for repeatability",
+      "external_validation": "NIDDK/CDC identify age 65+, insulin/some medicines, symptoms, and hypoglycemia unawareness; much institutional video coverage is older/general",
+      "gap_types": ["AUDIENCE_SPECIFIC_GAP", "STALE_COVERAGE"],
+      "why_now": "Strong authoritative relevance and sparse internal coverage",
+      "risks": ["Only two internal items", "Lower channel fit", "Acute-care accuracy burden"],
+      "confidence": "MEDIUM",
+      "falsification": "Comparable item remains below channel median or channel Trends shows low audience interest"
+    }
+  ],
+  "confidence": {
+    "overall": "MEDIUM",
+    "limitations": ["single metric snapshot", "one channel", "all long-form", "no private analytics", "no causal inference", "qualitative web saturation review"]
+  },
+  "provenance": {
+    "internal": [
+      "data/catalog/youtube_inventory.db (read-only)",
+      "data/manifests/DS-000006.md",
+      "data/manifests/apify/bD7JBsuj7LK5Wt2rk.json",
+      "32 registered DS-000006 transcript members"
+    ],
+    "guardrail": "data/intelligence/global/youtube-algorithm-primary-validation-2026-09-04.md",
+    "calculation_script": "scripts/report_topic_opportunity_pilot.py",
+    "external_retrieved_at": "2026-09-09",
+    "external_urls": [
+      "https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention",
+      "https://www.cdc.gov/steadi/hcp/clinical-resources/index.html",
+      "https://www.nia.nih.gov/health/balance-problems-and-disorders",
+      "https://www.nhlbi.nih.gov/health/peripheral-artery-disease/symptoms",
+      "https://www.heart.org/en/health-topics/high-blood-pressure/blood-pressure-explained",
+      "https://international.heart.org/en/news-and-events/2025/august-high-blood-pressure",
+      "https://pubmed.ncbi.nlm.nih.gov/40354045/",
+      "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia.",
+      "https://www.cdc.gov/diabetes/about/low-blood-sugar-hypoglycemia.html",
+      "https://www.cdc.gov/older-adult-drivers/medicine/index.html",
+      "https://www.youtube.com/watch?v=jfqohbop3Xk",
+      "https://www.youtube.com/watch?v=KIXzy6tqQS8",
+      "https://www.youtube.com/watch?v=Ula_-vwiaKQ",
+      "https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/top-videos-health-professionals"
+    ]
+  }
+}
