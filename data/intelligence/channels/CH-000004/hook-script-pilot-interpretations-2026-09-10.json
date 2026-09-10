@@ -1,0 +1,225 @@
+{
+  "selected_opportunity_ids": [
+    "CH-000004-OP-001",
+    "CH-000004-OP-002"
+  ],
+  "continuity_terms": {
+    "CH-000004-OP-001": "Sun solar layer exposure nanosecond",
+    "CH-000004-OP-002": "Earth earthquake magnitude fault limit"
+  },
+  "timed_transcripts": [
+    {
+      "youtube_video_id": "mEUqVgGf4e0",
+      "dataset_id": "DS-000013",
+      "path": "data/raw/forensic-analysis/DS-000013/2026-08-21/files-mentioned-by-the-user-how-2/work/moon_protons_forensics/transcript.json",
+      "relationship_status": "PROVEN",
+      "relationship_evidence": "download metadata mediaId=mEUqVgGf4e0; exact title and duration support the ID match",
+      "evidence_state": "EXACT_TIMESTAMPED"
+    },
+    {
+      "youtube_video_id": "SLd4hnmeW_g",
+      "dataset_id": "DS-000014",
+      "path": "data/raw/forensic-analysis/DS-000014/2026-08-21/files-mentioned-by-the-user-how-2/work/weird_worrying_forensics/transcript.json",
+      "relationship_status": "PROVEN",
+      "relationship_evidence": "download metadata mediaId=SLd4hnmeW_g; exact title and duration support the ID match",
+      "evidence_state": "EXACT_TIMESTAMPED"
+    },
+    {
+      "youtube_video_id": "rGZ6TsXvi8E",
+      "dataset_id": "DS-000015",
+      "path": "data/raw/forensic-analysis/DS-000015/2026-08-21/files-mentioned-by-the-user-how-2/work/video_forensics/transcript.json",
+      "relationship_status": "PROVEN",
+      "relationship_evidence": "download metadata mediaId=rGZ6TsXvi8E; exact title and duration support the ID match",
+      "evidence_state": "EXACT_TIMESTAMPED"
+    }
+  ],
+  "platform_guardrails": {
+    "evidence_state": "CANONICAL_FACT",
+    "principles": [
+      "YouTube defines Intro retention as the percentage still watching after the first 30 seconds.",
+      "Title and thumbnail expectation alignment can affect Intro performance.",
+      "Creators should test different opening styles and may move compelling later moments earlier.",
+      "Top moments, spikes, and dips require actual YouTube Analytics retention data.",
+      "Appeal, Engagement, and Satisfaction are distinct content-performance signal groups.",
+      "Initial seconds should deliver the value promised by packaging."
+    ],
+    "source_urls": [
+      "https://support.google.com/youtube/answer/9314415",
+      "https://support.google.com/youtube/answer/16559650"
+    ]
+  },
+  "hook_hypotheses": [
+    {
+      "hook_id": "CH-000004-OP-001-HOOK-A",
+      "opportunity_id": "CH-000004-OP-001",
+      "package_link": "CH-000004-OP-001-PKG-A",
+      "hook_text": "Could you survive one nanosecond in every layer of the Sun? The answer changes depending on which layer you enter.",
+      "hook_archetype": "DIRECT_QUESTION",
+      "target_opening_window": "OPENING_0_15S",
+      "premise_delivery": "Immediate survival question and layer-dependent constraint.",
+      "open_loop": "Which solar layer delivers the most damaging exposure in one nanosecond?",
+      "expected_payoff": "Compare density, radiation flux, and temperature across solar layers without promising survival.",
+      "historical_support": "Direct questions and immediate premises recur across both formats; solar exposure analogues are high-relative performers.",
+      "supporting_video_ids": ["VID-000261", "VID-000237"],
+      "counter_evidence": "Direct-question openings also occur in weak videos; SURVIVE family cohesion is low.",
+      "risks": ["Survival depends on exposure geometry and layer definitions.", "No retention data supports exact opening length."],
+      "confidence": "MEDIUM",
+      "evidence_state": "HYPOTHESIS_FOR_TESTING"
+    },
+    {
+      "hook_id": "CH-000004-OP-001-HOOK-B",
+      "opportunity_id": "CH-000004-OP-001",
+      "package_link": "CH-000004-OP-001-PKG-B",
+      "hook_text": "One nanosecond is one billionth of a second. Inside the Sun, that can still mean three very different exposures.",
+      "hook_archetype": "NUMBER_LED",
+      "target_opening_window": "OPENING_0_15S",
+      "premise_delivery": "Scale anchor first, solar-layer comparison second.",
+      "open_loop": "Can an almost vanishing exposure time still transfer dangerous energy?",
+      "expected_payoff": "Quantify what changes between sparse hot plasma and denser solar material.",
+      "historical_support": "Number-led and limit/measurement structures repeat among high-relative examples, especially Shorts.",
+      "supporting_video_ids": ["VID-000261", "VID-000214", "VID-000216"],
+      "counter_evidence": "Most number-led support comes from Shorts; long-form transfer is unproven.",
+      "risks": ["Scale statement must not substitute for a physical energy calculation.", "Cross-format association may not transfer."],
+      "confidence": "MEDIUM",
+      "evidence_state": "HYPOTHESIS_FOR_TESTING"
+    },
+    {
+      "hook_id": "CH-000004-OP-001-HOOK-C",
+      "opportunity_id": "CH-000004-OP-001",
+      "package_link": "CH-000004-OP-001-PKG-C",
+      "hook_text": "The Sun's hottest layer may not be the layer that hurts you most in one nanosecond. Temperature is only one part of the exposure.",
+      "hook_archetype": "COUNTERINTUITIVE_PREMISE",
+      "target_opening_window": "OPENING_0_15S",
+      "premise_delivery": "Contradiction first, limiting variables immediately named.",
+      "open_loop": "Which variable overturns the obvious temperature-only answer?",
+      "expected_payoff": "Resolve the solar hazard comparison using temperature, density, radiation, and time.",
+      "historical_support": "Counterpoint-led explanations and escalation structures recur, but are mixed across performance bands.",
+      "supporting_video_ids": ["VID-000261", "VID-000242"],
+      "counter_evidence": "Declarative openings have weak and normal examples; no private retention comparison exists.",
+      "risks": ["Must avoid implying hotter is safer.", "Requires clear definition of harm."],
+      "confidence": "LOW",
+      "evidence_state": "HYPOTHESIS_FOR_TESTING"
+    },
+    {
+      "hook_id": "CH-000004-OP-002-HOOK-A",
+      "opportunity_id": "CH-000004-OP-002",
+      "package_link": "CH-000004-OP-002-PKG-A",
+      "hook_text": "Could Earth ever produce a magnitude 10 earthquake? The scale allows it, but the planet may not.",
+      "hook_archetype": "DIRECT_QUESTION",
+      "target_opening_window": "OPENING_0_15S",
+      "premise_delivery": "Immediate feasibility question followed by mathematical-versus-physical distinction.",
+      "open_loop": "What physical limit stops an open-ended magnitude scale?",
+      "expected_payoff": "Separate scale mathematics from Earth's available fault geometry.",
+      "historical_support": "Earthquake questions appear in high-relative Shorts and long-form examples.",
+      "supporting_video_ids": ["VID-000214", "VID-000216", "VID-000272"],
+      "counter_evidence": "Earthquake family has only two close long-form/Shorts analogues and disaster framing is crowded.",
+      "risks": ["Must not imply magnitude 10 has occurred.", "Scale and intensity must remain distinct."],
+      "confidence": "HIGH",
+      "evidence_state": "HYPOTHESIS_FOR_TESTING"
+    },
+    {
+      "hook_id": "CH-000004-OP-002-HOOK-B",
+      "opportunity_id": "CH-000004-OP-002",
+      "package_link": "CH-000004-OP-002-PKG-B",
+      "hook_text": "Earthquake magnitude has no mathematical maximum. Earth has a finite size, so the real question is what fault the planet can supply.",
+      "hook_archetype": "COUNTERINTUITIVE_PREMISE",
+      "target_opening_window": "OPENING_0_15S",
+      "premise_delivery": "Apparent contradiction stated first, physical constraint second.",
+      "open_loop": "How does finite fault size bound a mathematically open scale?",
+      "expected_payoff": "Show how fault length and rupture area constrain an Earth earthquake.",
+      "historical_support": "Constraint and counterpoint phases recur in channel scripts; exact earthquake items exceed channel median.",
+      "supporting_video_ids": ["VID-000214", "VID-000272"],
+      "counter_evidence": "Declarative title/package evidence is weaker channel-wide and n=2 is insufficient for a repeated winner.",
+      "risks": ["Must avoid presenting one exact universal ceiling.", "Finite-Earth shorthand needs qualification."],
+      "confidence": "MEDIUM",
+      "evidence_state": "HYPOTHESIS_FOR_TESTING"
+    },
+    {
+      "hook_id": "CH-000004-OP-002-HOOK-C",
+      "opportunity_id": "CH-000004-OP-002",
+      "package_link": "CH-000004-OP-002-PKG-C",
+      "hook_text": "To make a magnitude 10 earthquake on Earth, start with the fault. How long would it need to be before the planet itself becomes the constraint?",
+      "hook_archetype": "CONSTRAINT_LED",
+      "target_opening_window": "OPENING_0_15S",
+      "premise_delivery": "Physical constraint and calculation target arrive before consequence framing.",
+      "open_loop": "Does Earth contain a fault large enough for the target magnitude?",
+      "expected_payoff": "Estimate required rupture scale, then compare it with Earth's fault geometry.",
+      "historical_support": "Calculation and constraint phases repeat in explanatory scripts; limit/measurement titles have positive public-performance association.",
+      "supporting_video_ids": ["VID-000214", "VID-000216", "VID-000272"],
+      "counter_evidence": "Fault length alone does not determine every earthquake effect; historical package-performance alignment is unknown.",
+      "risks": ["Calculation assumptions must be explicit.", "Do not conflate magnitude with local shaking intensity."],
+      "confidence": "HIGH",
+      "evidence_state": "HYPOTHESIS_FOR_TESTING"
+    }
+  ],
+  "script_blueprints": [
+    {
+      "blueprint_id": "CH-000004-OP-001-BLUEPRINT-001",
+      "opportunity_id": "CH-000004-OP-001",
+      "package_links": ["CH-000004-OP-001-PKG-A", "CH-000004-OP-001-PKG-B", "CH-000004-OP-001-PKG-C"],
+      "hook_links": ["CH-000004-OP-001-HOOK-A", "CH-000004-OP-001-HOOK-B", "CH-000004-OP-001-HOOK-C"],
+      "script_archetype": "CALCULATED_ESCALATION",
+      "opening": "State one-nanosecond solar exposure and identify layer choice as the controlling comparison.",
+      "core_premise": "Exposure outcome depends on energy transfer, density, radiation, and time rather than temperature alone.",
+      "constraints": ["Define solar regions.", "Hold exposure time and body geometry constant.", "Separate heat, radiation, and particle interactions."],
+      "explanation_sequence": ["Define layers", "Fix assumptions", "Compare temperature and density", "Estimate energy transfer", "Rank hazards conditionally"],
+      "escalation": "Move from sparse outer plasma to denser regions while keeping one-nanosecond duration fixed.",
+      "intermediate_payoffs": ["Why hottest does not automatically mean most damaging.", "Which exposure channel dominates in each region."],
+      "main_payoff": "A bounded solar-layer hazard comparison showing which assumptions control one-nanosecond exposure.",
+      "counterpoint": "No single result applies to every depth, geometry, or harm definition.",
+      "ending": "Restate conditional answer and unresolved assumptions without survival certainty.",
+      "historical_support": "Calculation-plus-escalation structures and solar exposure analogues recur in canonical transcripts.",
+      "supporting_video_ids": ["VID-000261", "VID-000242", "VID-000237"],
+      "risks": ["Physical assumptions can dominate outcome.", "Public views do not prove structure caused performance."],
+      "what_not_to_overclaim": "Do not claim guaranteed survival, an exact injury threshold, or a proven retention structure.",
+      "evidence_state": "HYPOTHESIS_FOR_TESTING"
+    },
+    {
+      "blueprint_id": "CH-000004-OP-002-BLUEPRINT-001",
+      "opportunity_id": "CH-000004-OP-002",
+      "package_links": ["CH-000004-OP-002-PKG-A", "CH-000004-OP-002-PKG-B", "CH-000004-OP-002-PKG-C"],
+      "hook_links": ["CH-000004-OP-002-HOOK-A", "CH-000004-OP-002-HOOK-B", "CH-000004-OP-002-HOOK-C"],
+      "script_archetype": "PREMISE_THEN_QUALIFICATION",
+      "opening": "Separate open-ended magnitude mathematics from finite Earth physics.",
+      "core_premise": "Earthquake magnitude has no mathematical hard maximum, while Earth's rupture geometry imposes practical limits.",
+      "constraints": ["Distinguish magnitude from intensity.", "Use bounded fault geometry assumptions.", "Separate recorded events from hypothetical calculations."],
+      "explanation_sequence": ["Define magnitude", "Correct maximum-scale misconception", "Relate magnitude to rupture", "Compare required fault with Earth", "Qualify practical ceiling"],
+      "escalation": "Increase target magnitude and show rapidly growing rupture requirements.",
+      "intermediate_payoffs": ["Why the scale remains open-ended.", "Why terrestrial fault dimensions do not."],
+      "main_payoff": "A conditional Earth earthquake limit based on rupture geometry, without inventing one universal maximum.",
+      "counterpoint": "Magnitude alone does not describe local damage, and fault length is not the only physical variable.",
+      "ending": "Return to the scale-versus-planet distinction and state the bounded conclusion.",
+      "historical_support": "Earthquake analogues span Shorts and long-form; calculation, constraint, and qualification phases recur.",
+      "supporting_video_ids": ["VID-000214", "VID-000216", "VID-000272"],
+      "risks": ["Could overstate a precise ceiling.", "Disaster framing can outrun the evidence."],
+      "what_not_to_overclaim": "Do not claim magnitude 10 has occurred, fault length alone predicts effects, or structure is a retention winner.",
+      "evidence_state": "HYPOTHESIS_FOR_TESTING"
+    }
+  ],
+  "forensic_evidence": [
+    {
+      "video_id": "VID-000211",
+      "dataset_id": "DS-000013",
+      "use": "Validates timed premise, calculation, escalation, qualification, and payoff interpretation for one Shorts video.",
+      "scope": "LIMITED_ITEM_ONLY"
+    },
+    {
+      "video_id": "VID-000212",
+      "dataset_id": "DS-000014",
+      "use": "Validates timed repeated-question structure for one Shorts video.",
+      "scope": "LIMITED_ITEM_ONLY"
+    },
+    {
+      "video_id": "VID-000221",
+      "dataset_id": "DS-000015",
+      "use": "Validates timed constraint, explanation, and payoff interpretation for one Shorts video.",
+      "scope": "LIMITED_ITEM_ONLY"
+    }
+  ],
+  "provenance": {
+    "topic_artifact": "data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json",
+    "packaging_artifact": "data/intelligence/channels/CH-000004/packaging-intelligence-pilot-2026-09-09.json",
+    "packaging_visual_artifact": "data/intelligence/channels/CH-000004/packaging-intelligence-2026-09-09-v2.json",
+    "interpretation_input": "data/intelligence/channels/CH-000004/hook-script-pilot-interpretations-2026-09-10.json"
+  }
+}
