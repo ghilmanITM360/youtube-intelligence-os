@@ -109,11 +109,15 @@ def _tier_a_registered_channels(conn):
         ).fetchall()
         related_forensic_datasets = [dict(row) for row in forensic_rows]
         thumbnail_row = conn.execute(
-            "SELECT COUNT(*) references_count, COUNT(DISTINCT te.video_id) video_count "
-            "FROM thumbnail_evidence te JOIN videos v ON v.video_id=te.video_id "
-            "WHERE v.channel_id=?;",
-            (ch["channel_id"],),
+            "SELECT COALESCE(SUM(url_count),0) references_count, COUNT(*) video_count FROM ("
+            " SELECT video_id,COUNT(DISTINCT thumbnail_url) url_count FROM ("
+            "  SELECT te.video_id,te.thumbnail_url FROM thumbnail_evidence te JOIN videos v ON v.video_id=te.video_id WHERE v.channel_id=? "
+            "  UNION ALL "
+            "  SELECT vs.video_id,vs.thumbnail_url FROM video_snapshots vs JOIN videos v ON v.video_id=vs.video_id WHERE v.channel_id=? AND vs.thumbnail_url IS NOT NULL"
+            " ) GROUP BY video_id);",
+            (ch["channel_id"], ch["channel_id"]),
         ).fetchone()
+        packaging = packaging or thumbnail_row["video_count"] > 0
         newest_snapshot = conn.execute(
             "SELECT MAX(observed_at) FROM ("
             "SELECT observed_at FROM channel_snapshots WHERE channel_id=? UNION ALL "
@@ -134,6 +138,11 @@ def _tier_a_registered_channels(conn):
             sources.append("FORENSIC_VIDEO")
         if apify_runs:
             sources.append("APIFY")
+        if conn.execute(
+            "SELECT 1 FROM datasets WHERE dataset_id IN ({}) AND source_type='EXTERNAL_FILES' LIMIT 1".format(placeholders),
+            dataset_ids,
+        ).fetchone():
+            sources.append("SUPPLIED_FILES")
         out.append({
             "tier": "REGISTERED_CHANNEL",
             "channel_id": ch["channel_id"],

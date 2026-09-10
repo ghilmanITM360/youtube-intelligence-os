@@ -21,6 +21,7 @@ if str(SCRIPTS_DIR) not in sys.path:
 
 import inventory_catalog  # noqa: E402
 import register_structured_source as rss  # noqa: E402
+import register_supplied_channel as rsc  # noqa: E402
 
 
 class Args:
@@ -694,6 +695,61 @@ class RegisterStructuredSourceTestCase(unittest.TestCase):
             rss.cmd_verify(Args(db_path=str(self.db_path), dataset_id="DS-000001"))
         except SystemExit as exc:
             self.fail("cmd_verify unexpectedly exited with code {}".format(exc.code))
+
+
+class RegisterSuppliedChannelTestCase(unittest.TestCase):
+    def test_single_channel_loose_transcripts_register_and_deduplicate(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            db = root / "catalog.db"
+            inventory_catalog.cmd_init(Args(db_path=str(db)))
+            workbook = root / "Master.xlsx"
+            transcript_dir = root / "transcripts"
+            transcript_dir.mkdir()
+            ids = ("video000001", "video000002")
+            titles = ("Heart Health After 60", "Healthy Aging Habits")
+            filenames = ("01_video000001.txt", "02_video000002.txt")
+            workbook.write_bytes(_xlsx_bytes({
+                "Channel Overview": [
+                    ["Source: Test | Scraped 10 Sep 2026 | 2 videos"],
+                    ["Field", "Value"], ["Channel Name", "Channel X"], ["Handle", "@channelx"],
+                    ["Channel ID", "UCCHANNELX"], ["Channel URL", "https://www.youtube.com/channel/UCCHANNELX"],
+                    ["Subscribers", 100], ["Total Videos (YouTube)", 2], ["Shorts", "None"], ["Live videos", "None"],
+                ],
+                "All Videos": [
+                    ["#", "Video ID", "Title", "Video URL", "Published (UTC)", "Date", "Sec", "Views", "Likes", "Comments", "Views/Day", "Engagement", "Desc Chars", "Transcript Words", "Transcript File", "Thumbnail URL"],
+                    [1, ids[0], titles[0], "https://www.youtube.com/watch?v=" + ids[0], "2026-09-09 00:00:00", 46274, 600, 10, 1, 1, 10, .2, 12, 3, filenames[0], "https://i.ytimg.com/a.jpg"],
+                    [2, ids[1], titles[1], "https://www.youtube.com/watch?v=" + ids[1], "(date only)", 46273, 700, 20, 2, 1, 10, .15, 12, 3, filenames[1], "https://i.ytimg.com/b.jpg"],
+                ],
+                "Descriptions": [
+                    ["#", "Video ID", "Title", "Link Count", "Description Links (URLs)", "Full Description"],
+                    [1, ids[0], titles[0], 0, "", "Description A"],
+                    [2, ids[1], titles[1], 0, "", "Description B"],
+                ],
+            }))
+            for video_id, title, filename in zip(ids, titles, filenames):
+                (transcript_dir / filename).write_text(_transcript_member_text(
+                    channel="Channel X", title=title, video_id=video_id,
+                    url="https://www.youtube.com/watch?v=" + video_id,
+                    published="2026-09-09T00:00:00.000Z", duration="00:10:00",
+                    views=10, likes=1, comments=1, caption_type="auto_generated",
+                    language="en", word_count=3, transcript_body="Transcript body text.",
+                ), encoding="utf-8")
+            (transcript_dir / "INDEX.txt").write_text("2 transcripts", encoding="utf-8")
+            result = rsc.register(workbook, transcript_dir, db, root / "raw", root / "manifests")
+            self.assertEqual((result["dataset_id"], result["channel_id"]), ("DS-000001", "CH-000001"))
+            conn = sqlite3.connect(db)
+            try:
+                self.assertEqual(conn.execute("SELECT COUNT(*) FROM videos").fetchone()[0], 2)
+                self.assertEqual(conn.execute("SELECT COUNT(*) FROM transcripts WHERE availability_status='AVAILABLE' AND timing_quality='POSITIONAL_ONLY'").fetchone()[0], 2)
+                self.assertEqual(conn.execute("SELECT COUNT(thumbnail_url) FROM video_snapshots").fetchone()[0], 2)
+                self.assertEqual(conn.execute("SELECT COUNT(*) FROM source_files").fetchone()[0], 4)
+                self.assertEqual(conn.execute("PRAGMA integrity_check").fetchone()[0], "ok")
+                self.assertEqual(conn.execute("PRAGMA foreign_key_check").fetchall(), [])
+            finally:
+                conn.close()
+            with self.assertRaises(inventory_catalog.CatalogError):
+                rsc.register(workbook, transcript_dir, db, root / "raw", root / "manifests")
 
 
 if __name__ == "__main__":

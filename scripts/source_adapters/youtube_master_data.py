@@ -107,6 +107,19 @@ def parse_channel_overview(zf, sheet_path, shared_strings):
         if row_num < header_row_num and cells.get("A")
     ]
 
+    # Supplied single-channel exports use ``Field | Value`` while the older
+    # multi-channel workbook names each channel in the header row.
+    if channel_cols == {"B": "Value"}:
+        fields = {}
+        for row_num, cells in rows:
+            if row_num <= header_row_num or not cells.get("A") or cells.get("B") is None:
+                continue
+            fields[cells["A"]] = (cells["B"], row_num, "B")
+        name = fields.get("Channel Name", (None,))[0]
+        if not name:
+            raise SourceFormatError("Single-channel overview is missing Channel Name")
+        return {name: fields}, banner_lines
+
     result = {name: {} for name in channel_cols.values()}
     for row_num, cells in rows:
         if row_num <= header_row_num:
@@ -146,6 +159,22 @@ def parse_all_videos(zf, sheet_path, shared_strings):
     return records
 
 
+def parse_descriptions(zf, sheet_path, shared_strings):
+    rows = _read_sheet_rows(zf, sheet_path, shared_strings)
+    header_row_num, header_cells = _find_header_row(rows, "A", "#")
+    col_to_header = {col: name for col, name in header_cells.items() if name}
+    video_id_col = next((col for col, name in col_to_header.items() if name == "Video ID"), None)
+    if not video_id_col:
+        raise SourceFormatError("'Descriptions' sheet is missing a 'Video ID' column header")
+    return {
+        cells[video_id_col]: {
+            name: (cells.get(col), row_num, col) for col, name in col_to_header.items()
+        }
+        for row_num, cells in rows
+        if row_num > header_row_num and cells.get(video_id_col)
+    }
+
+
 def read_workbook(xlsx_path):
     with zipfile.ZipFile(xlsx_path) as zf:
         shared_strings = _load_shared_strings(zf)
@@ -155,6 +184,14 @@ def read_workbook(xlsx_path):
                 raise SourceFormatError("Workbook is missing expected sheet: {}".format(required))
         channels, banner_lines = parse_channel_overview(zf, sheet_paths["Channel Overview"], shared_strings)
         videos = parse_all_videos(zf, sheet_paths["All Videos"], shared_strings)
+        if len(channels) == 1:
+            channel_name = next(iter(channels))
+            for video in videos:
+                video.setdefault("Channel", (channel_name, None, None))
+        if "Descriptions" in sheet_paths:
+            descriptions = parse_descriptions(zf, sheet_paths["Descriptions"], shared_strings)
+            for video in videos:
+                video.update(descriptions.get(video["Video ID"][0], {}))
     return {"channels": channels, "videos": videos, "banner_lines": banner_lines}
 
 

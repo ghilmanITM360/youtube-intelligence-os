@@ -142,12 +142,14 @@ def load_registered(conn, channel_id):
                JOIN videos v ON v.video_id = vs.video_id
                WHERE v.channel_id = ?
            )
-           SELECT t.video_id, t.dataset_id, t.thumbnail_url, t.observed_at AS url_recorded_at,
+           SELECT s.video_id, COALESCE(t.dataset_id, s.dataset_id) AS dataset_id,
+                  COALESCE(t.thumbnail_url, s.thumbnail_url) AS thumbnail_url,
+                  COALESCE(t.observed_at, s.observed_at) AS url_recorded_at,
                   s.title, s.observed_at AS title_observed_at, s.video_type
-           FROM latest_thumbnails t
-           LEFT JOIN latest_titles s ON s.video_id = t.video_id AND s.rank = 1
-           WHERE t.rank = 1
-           ORDER BY t.video_id""",
+           FROM latest_titles s
+           LEFT JOIN latest_thumbnails t ON t.video_id = s.video_id AND t.rank = 1
+           WHERE s.rank = 1 AND COALESCE(t.thumbnail_url, s.thumbnail_url) IS NOT NULL
+           ORDER BY s.video_id""",
         (channel_id, channel_id),
     ).fetchall()
     return [
@@ -237,7 +239,7 @@ def build_manifest(channel_id, rows, retrieved_at):
         "format_counts": dict(sorted(Counter(row.get("format", "UNKNOWN") for row in ordered).items())),
         "snapshots": ordered,
         "guardrails": {
-            "allowlist_source": "canonical thumbnail_evidence rows for requested channel",
+            "allowlist_source": "canonical registered thumbnail references for requested channel",
             "crawl_performed": False,
             "url_discovery_performed": False,
             "youtube_api_used": False,
