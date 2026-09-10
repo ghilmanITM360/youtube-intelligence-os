@@ -1,0 +1,31 @@
+{
+  "schema_version": "cross-channel-health-comparison-1",
+  "generated_on": "2026-09-10",
+  "channels": [
+    {"channel_id": "CH-000003", "display_name": "Dr. Aliza Wright | Advice", "canonical_items": 32},
+    {"channel_id": "CH-000005", "display_name": "Dr. Elias Senior Health", "canonical_items": 29}
+  ],
+  "canonical_topic_distribution": {
+    "CH-000003": {"CARDIOVASCULAR_HEALTH": 24, "HEALTHY_AGING": 6, "METABOLIC_HEALTH": 2},
+    "CH-000005": {"CARDIOVASCULAR_HEALTH": 8, "HEALTHY_AGING": 16, "METABOLIC_HEALTH": 5}
+  },
+  "observations": {
+    "topic_overlap": ["CARDIOVASCULAR_HEALTH", "HEALTHY_AGING", "METABOLIC_HEALTH"],
+    "topic_difference": "CH-000003 is predominantly cardiovascular; CH-000005 is broader healthy-aging coverage with cardiovascular and metabolic subsets.",
+    "audience_framing": "Both address older adults explicitly. CH-000003 repeatedly frames blood-pressure and medication safety; CH-000005 uses broader symptom, food, habit, warning, and age-threshold framing.",
+    "derived_family_overlap": ["METABOLIC_HEALTH"],
+    "possible_relationship": "DIRECT_HEALTH_COMPETITOR_WITH_PARTIAL_TOPIC_OVERLAP"
+  },
+  "evidence_state": "AI_INTERPRETATION",
+  "guardrails": {
+    "channel_identities_merged": false,
+    "metrics_pooled": false,
+    "medical_claims_validated": false,
+    "causal_claims_created": 0
+  },
+  "provenance": [
+    "data/intelligence/channels/CH-000003/topic-opportunity-intelligence-pilot-2026-09-09.json",
+    "data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json",
+    "data/intelligence/cross-channel/dr-elias-vs-dr-aliza-2026-09-10.json"
+  ]
+}

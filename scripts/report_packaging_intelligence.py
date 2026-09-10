@@ -354,7 +354,7 @@ def derive_pair_archetypes(visual_rows):
     return rows
 
 
-def build_report(topic, acquisition=None, visual_annotations=None):
+def build_report(topic, acquisition=None, visual_annotations=None, registered_thumbnail_urls=None):
     items = topic.get("items", [])
     title_items = [
         title_item(
@@ -401,8 +401,10 @@ def build_report(topic, acquisition=None, visual_annotations=None):
         ),
     } for candidate in candidates]
     acquired = acquisition or {}
+    registered_urls = acquired.get("registered_urls", 0) if registered_thumbnail_urls is None else registered_thumbnail_urls
     thumbnail_state = (
         "CURRENT_REMOTE_SNAPSHOT" if acquired.get("successful_images")
+        else "REGISTERED_REFERENCE_ONLY" if registered_urls
         else "THUMBNAIL_REFERENCE_GAP"
     )
     return {
@@ -415,7 +417,7 @@ def build_report(topic, acquisition=None, visual_annotations=None):
             "titles_accounted_for": sum(bool(row["title"]) for row in title_items),
             "transcripts_available": topic["evidence_snapshot"].get("transcripts_available"),
             "formats": topic["evidence_snapshot"].get("formats"),
-            "registered_thumbnail_urls": acquired.get("registered_urls", 0),
+            "registered_thumbnail_urls": registered_urls,
             "acquired_thumbnails": acquired.get("successful_images", 0),
             "thumbnail_evidence_state": thumbnail_state,
         },
@@ -524,7 +526,14 @@ def main(argv=None):
             topic["items"] = build_items_from_db(conn, topic)
     acquisition = json.loads(Path(args.acquisition_manifest).read_text()) if args.acquisition_manifest else None
     annotations = json.loads(Path(args.visual_annotations).read_text()) if args.visual_annotations else None
-    payload = build_report(topic, acquisition, annotations)
+    with connect(args.db) as conn:
+        registered_thumbnail_urls = conn.execute(
+            "SELECT COUNT(DISTINCT vs.video_id) FROM video_snapshots vs "
+            "JOIN videos v ON v.video_id=vs.video_id "
+            "WHERE v.channel_id=? AND vs.thumbnail_url IS NOT NULL",
+            (args.channel,),
+        ).fetchone()[0]
+    payload = build_report(topic, acquisition, annotations, registered_thumbnail_urls)
     payload["provenance"]["topic_artifact"] = str(topic_path)
     if args.acquisition_manifest:
         payload["provenance"]["acquisition_manifest"] = args.acquisition_manifest

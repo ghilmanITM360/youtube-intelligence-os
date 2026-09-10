@@ -410,10 +410,16 @@ def load_canonical_rows(conn, channel_id):
     return [dict(row) for row in rows]
 
 
+def canonical_transcript_text(text):
+    """Strip supplied metadata/description wrappers before script analysis."""
+    parts = re.split(r"\n=+\nTRANSCRIPT\n=+\n", text, maxsplit=1)
+    return parts[-1].strip()
+
+
 def build_report(conn, channel_id, topic, packaging, packaging_visual, interpretations):
     if topic["channel"]["channel_id"] != channel_id:
         raise ValueError("topic artifact channel mismatch")
-    if packaging["channel"]["channel_id"] != channel_id or packaging_visual["channel"]["channel_id"] != channel_id:
+    if packaging["channel"]["channel_id"] != channel_id or (packaging_visual and packaging_visual["channel"]["channel_id"] != channel_id):
         raise ValueError("packaging artifact channel mismatch")
     rows = load_canonical_rows(conn, channel_id)
     topic_by_id = {row["canonical_fact"]["video_id"]: row for row in topic["items"]}
@@ -426,11 +432,11 @@ def build_report(conn, channel_id, topic, packaging, packaging_visual, interpret
         if velocity is not None:
             format_velocities[topic_row["canonical_fact"]["format"]].append(velocity)
     format_medians = {key: statistics.median(values) for key, values in format_velocities.items()}
-    timed = {row["youtube_video_id"]: row for row in interpretations.get("timed_transcripts", [])}
+    timed = {row["youtube_video_id"]: row for row in (interpretations or {}).get("timed_transcripts", [])}
     hook_features, script_features, pacing = [], [], []
     for row in rows:
         path = Path(row["canonical_reference"])
-        canonical_text = path.read_text(encoding="utf-8")
+        canonical_text = canonical_transcript_text(path.read_text(encoding="utf-8"))
         transcript = {"text": canonical_text}
         timed_source = timed.get(row["youtube_video_id"])
         if timed_source:
@@ -478,7 +484,7 @@ def build_report(conn, channel_id, topic, packaging, packaging_visual, interpret
             },
         })
         structure = derive_script_structure(transcript.get("text") or canonical_text)
-        payoff_map = interpretations.get("curiosity_payoff_maps", {}).get(row["video_id"], curiosity_payoff_map(canonical_text))
+        payoff_map = (interpretations or {}).get("curiosity_payoff_maps", {}).get(row["video_id"], curiosity_payoff_map(canonical_text))
         script_features.append({
             "video_id": row["video_id"], "format": format_name, "topic_family": topic_row["observation"]["topic_family"],
             "interpretation_state": "AI_INTERPRETATION",
@@ -491,6 +497,41 @@ def build_report(conn, channel_id, topic, packaging, packaging_visual, interpret
 
     hook_archetypes = aggregate_hook_archetypes(hook_features)
     script_archetypes = aggregate_script_archetypes(script_features)
+    timing_counts = Counter(row["timing_quality"] for row in hook_features)
+    if interpretations is None:
+        return {
+            "schema_version": "hook-script-intelligence-1", "generated_on": "2026-09-10", "channel": topic["channel"],
+            "evidence_snapshot": {
+                "canonical_item_count": len(rows), "transcripts_accounted_for": len(hook_features),
+                "timestamped_transcripts": timing_counts["EXACT_TIMESTAMPED"] + timing_counts["SEGMENT_TIMESTAMPED"],
+                "formats": dict(sorted(Counter(row["format"] for row in hook_features).items())),
+                "public_metrics_available": ["views", "views_per_day", "likes_per_view", "comments_per_view", "format_relative_performance", "family_relative_performance"],
+                "private_metrics_unavailable": sorted(PRIVATE_METRICS), "metric_observation": topic["evidence_snapshot"]["metric_cutoff"],
+            },
+            "timing_quality": {"counts": dict(sorted(timing_counts.items())), "positional_windows": "POSITIONAL_APPROXIMATION", "exact_seconds_not_inferred": True},
+            "hook_features": hook_features, "hook_archetypes": hook_archetypes,
+            "script_features": script_features, "script_archetypes": script_archetypes, "pacing_proxies": pacing,
+            "performance_associations": {
+                "evidence_state": "PERFORMANCE_ASSOCIATION", "causal_claim": False,
+                "high_performer_patterns": [row for row in hook_archetypes + script_archetypes if row["performance_association"]["median_channel_relative"] is not None and row["performance_association"]["median_channel_relative"] >= 1.25],
+                "by_performance_band": performance_band_summary(hook_features, script_features), "public_metrics_only": True,
+            },
+            "guardrails": {
+                "private_retention_available": False, "retention_claims_created": 0,
+                "prohibited_claims": ["PROVEN_RETENTION_DRIVER", "PROVEN_HOOK_WINNER", "RETENTION_CAUSE", "RETENTION_WINNER"],
+                "editing_intelligence_started": False, "full_scripts_created": 0,
+            },
+            "limitations": [
+                "Competitor private YouTube Analytics are unavailable.",
+                "Canonical plaintext transcripts lack timestamps; time windows are positional approximations.",
+                "Current thumbnail snapshots have unknown temporal alignment with observed performance."
+                if packaging.get("evidence_snapshot", {}).get("acquired_thumbnails")
+                else "Current thumbnail references have no acquired visual evidence.",
+                "Hook and script archetypes are AI_INTERPRETATION, not measured retention evidence.",
+            ],
+            "provenance": {"canonical_dataset": topic["channel"]["dataset_id"], "topic_schema": topic.get("schema_version"), "packaging_schema": packaging.get("schema_version")},
+            "capability_verdict": "PASS",
+        }
     selected_ids = interpretations["selected_opportunity_ids"]
     if len(selected_ids) != 2 or len(set(selected_ids)) != 2:
         raise ValueError("pilot requires exactly two unique opportunities")
@@ -546,7 +587,6 @@ def build_report(conn, channel_id, topic, packaging, packaging_visual, interpret
             "limitations": ["No private retention data.", "No causal hook or script claim.", "No polished narration."],
         })
 
-    timing_counts = Counter(row["timing_quality"] for row in hook_features)
     pilot_pass = (
         len(rows) == len(topic_by_id) == len(hook_features)
         and len(selected) == len(content_blueprints) == 2
@@ -653,22 +693,22 @@ def main(argv=None):
     parser.add_argument("--channel", required=True)
     parser.add_argument("--topic-artifact", required=True)
     parser.add_argument("--packaging-artifact", required=True)
-    parser.add_argument("--packaging-v2-artifact", required=True)
-    parser.add_argument("--interpretations", required=True)
+    parser.add_argument("--packaging-v2-artifact")
+    parser.add_argument("--interpretations")
     parser.add_argument("--db")
     parser.add_argument("--output", required=True)
     parser.add_argument("--markdown-output")
     args = parser.parse_args(argv)
     topic = json.loads(Path(args.topic_artifact).read_text(encoding="utf-8"))
     packaging = json.loads(Path(args.packaging_artifact).read_text(encoding="utf-8"))
-    packaging_visual = json.loads(Path(args.packaging_v2_artifact).read_text(encoding="utf-8"))
-    interpretations = json.loads(Path(args.interpretations).read_text(encoding="utf-8"))
+    packaging_visual = json.loads(Path(args.packaging_v2_artifact).read_text(encoding="utf-8")) if args.packaging_v2_artifact else None
+    interpretations = json.loads(Path(args.interpretations).read_text(encoding="utf-8")) if args.interpretations else None
     with connect(args.db) as conn:
         payload = build_report(conn, args.channel, topic, packaging, packaging_visual, interpretations)
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(render_json(payload), encoding="utf-8")
-    if args.markdown_output:
+    if args.markdown_output and interpretations is not None:
         Path(args.markdown_output).write_text(render_markdown(payload), encoding="utf-8")
 
 
