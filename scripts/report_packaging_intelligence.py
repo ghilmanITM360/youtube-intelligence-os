@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Build deterministic, read-only historical packaging evidence from Topic Intelligence."""
+"""Build channel-scoped packaging intelligence from canonical topic evidence."""
 
 import argparse
 import json
 import re
 import statistics
 from collections import Counter, defaultdict
+from datetime import datetime
 from pathlib import Path
 
 from report_common import connect
@@ -17,82 +18,78 @@ NUMBER_RE = re.compile(
     r"hundred|thousand|million|billion|trillion)\b",
     re.I,
 )
-EXTREME_RE = re.compile(
-    r"\b(?:all|every|entirely|largest|fastest|highest|lowest|billion|trillion|"
-    r"nanosecond|light speed|black hole|suddenly|last|no rules|world'?s?)\b",
-    re.I,
-)
-COMPARISON_RE = re.compile(
-    r"\b(?:versus|vs\.?|than|compared|except|half|instead|as an?|made of|turned into)\b|%",
-    re.I,
-)
-CONTRADICTION_RE = re.compile(
-    r"\b(?:but|except|actually|only|literally|no|without|impossible)\b", re.I
-)
-SCALE_RE = re.compile(
-    r"\b(?:magnitude|scale|how (?:fast|high|long|many|much|detailed)|speed|"
-    r"distance|size|largest|billion|percent)\b|%|\d",
+COMPARISON_RE = re.compile(r"\b(?:versus|vs\.?|than|compared|instead|or)\b|%", re.I)
+WARNING_RE = re.compile(
+    r"\b(?:warning|risks?|danger|dangerous|mistakes?|worst|never|avoid|regret|"
+    r"fail|broke|wrong|backfire|silent|quiet signs?|do not|don['’]t)\b",
     re.I,
 )
 CONSEQUENCE_RE = re.compile(
-    r"\b(?:what would happen|would .* be like|if .* died|disappear|vanish|"
-    r"stopped|went out|go out|survive|collapse|destroy)\b",
+    r"\b(?:what happens?|what would|result|after|before|leads? to|"
+    r"changes?|ends?|costs?|affects?|predicts?)\b",
     re.I,
 )
-SCIENCE_TERMS = {
-    "antimatter", "baseball", "climate", "computer", "dna", "earth",
-    "earthquake", "electron", "energy", "hubble", "laser", "lightning",
-    "mars", "microwave", "moon", "ocean", "planet", "power", "proton",
-    "radiation", "radioactivity", "space", "sun", "water", "wikipedia",
-}
+EXTREME_RE = re.compile(
+    r"\b(?:all|every|entire|largest|fastest|highest|lowest|billion|trillion|"
+    r"never|worst|best|perfect|zero|million|literally|most|least)\b",
+    re.I,
+)
+AUDIENCE_RE = re.compile(
+    r"\b(?:age[sd]?|after|before|over|under)\s*\d+\b|\b(?:senior|retiree|"
+    r"parent|couple|people|person|beginner|owner|adult|child|teen)\w*\b",
+    re.I,
+)
 FIRST_PERSON_RE = re.compile(r"\b(?:i|me|my|mine|we|us|our|ours)\b", re.I)
 SECOND_PERSON_RE = re.compile(r"\b(?:you|your|yours)\b", re.I)
 
 BOOLEAN_FEATURES = (
-    "question_form", "statement_form", "what_if_construction", "has_number",
-    "has_entity_candidate", "has_scientific_object", "extreme_condition",
-    "comparison", "contradiction", "scale_magnitude_framing",
-    "consequence_framing", "curiosity_gap", "parenthetical", "first_person",
-    "second_person",
+    "question_form", "statement_form", "has_number", "has_entity_candidate",
+    "extreme_condition", "comparison", "warning_or_risk",
+    "consequence_framing", "audience_or_life_stage", "curiosity_framing",
+    "parenthetical", "first_person", "second_person",
 )
 
+ARCHETYPE_DEFINITIONS = {
+    "QUESTION": "Title directly asks a question.",
+    "NUMBERED_SPECIFICITY": "Title uses a number or quantified promise.",
+    "WARNING_OR_RISK": "Title foregrounds risk, error, warning, or avoidance.",
+    "COMPARISON_OR_CHOICE": "Title contrasts options or asks a choice.",
+    "EXPLANATORY": "Title begins with why, how, or what and promises explanation.",
+    "DIRECT_STATEMENT": "Declarative title without another dominant structural pattern.",
+}
+
 LIMITATIONS = [
-    "One registered public-metric snapshot per item; no performance trajectory.",
+    "Public performance associations are observational and do not establish causality.",
     "No impressions, CTR, watch time, retention, traffic source, subscriber conversion, unique viewers, or audience overlap.",
-    "Title associations are observational and confounded by topic, thumbnail, format, release context, and content.",
-    "Registered thumbnail URLs are references, not locally preserved images; no visual attributes are inferred from them.",
-    "Long-form and Shorts evidence remains separated; transfer between formats is unproven.",
+    "Current thumbnails are not historical package evidence unless independently proven.",
+    "Long-form and Shorts remain separate; format transfer is not assumed.",
 ]
 
 
 def extract_title_features(title):
     title = title or ""
     words = WORD_RE.findall(title)
-    lower_words = [word.lower().replace("’", "'") for word in words]
-    question = title.rstrip().endswith("?")
-    entity_candidates = [
+    question = "?" in title
+    entities = [
         word for index, word in enumerate(words)
-        if index > 0 and word[:1].isupper() and word.lower() not in {"all", "except", "if", "what", "which", "why", "would"}
+        if index > 0 and word[:1].isupper() and word.lower() not in
+        {"a", "an", "and", "are", "at", "but", "for", "if", "in", "is", "of", "on", "or", "the", "to", "what", "when", "which", "why"}
     ]
-    science = sorted({word for word in lower_words if word.rstrip("s") in SCIENCE_TERMS})
     return {
         "character_length": len(title),
         "word_count": len(words),
         "question_form": question,
         "statement_form": bool(title) and not question,
-        "what_if_construction": bool(re.match(r"^what if\b", title, re.I)),
         "has_number": bool(NUMBER_RE.search(title)),
-        "capitalized_entity_candidates": entity_candidates,
-        "has_entity_candidate": bool(entity_candidates),
-        "scientific_objects": science,
-        "has_scientific_object": bool(science),
+        "capitalized_entity_candidates": entities,
+        "has_entity_candidate": bool(entities),
         "extreme_condition": bool(EXTREME_RE.search(title)),
         "comparison": bool(COMPARISON_RE.search(title)),
-        "contradiction": bool(CONTRADICTION_RE.search(title)),
-        "scale_magnitude_framing": bool(SCALE_RE.search(title)),
+        "warning_or_risk": bool(WARNING_RE.search(title)),
         "consequence_framing": bool(CONSEQUENCE_RE.search(title)),
-        "curiosity_gap": question,
-        "specificity": "HIGH" if NUMBER_RE.search(title) or science or entity_candidates else "MEDIUM" if len(words) >= 6 else "LOW",
+        "audience_or_life_stage": bool(AUDIENCE_RE.search(title)),
+        "curiosity_framing": question or bool(re.match(r"^(?:why|how|what|when|which)\b", title, re.I)),
+        "specificity": "HIGH" if NUMBER_RE.search(title) or entities else "MEDIUM" if len(words) >= 6 else "LOW",
         "question_marks": title.count("?"),
         "exclamation_marks": title.count("!"),
         "colon_count": title.count(":"),
@@ -104,16 +101,18 @@ def extract_title_features(title):
 
 
 def title_archetype(title):
-    lower = (title or "").lower()
-    if lower.startswith("what if"):
-        return "WHAT_IF_SCENARIO"
-    if lower.startswith("how ") or lower.startswith("is there"):
-        return "LIMIT_OR_MEASUREMENT"
-    if lower.startswith(("could ", "can ", "would a", "would an")):
-        return "FEASIBILITY_TEST"
-    if lower.startswith("what would") or lower.startswith("if "):
-        return "CONSEQUENCE_QUESTION"
-    return "DIRECT_QUESTION_OR_STATEMENT"
+    features = extract_title_features(title)
+    if features["warning_or_risk"]:
+        return "WARNING_OR_RISK"
+    if features["comparison"]:
+        return "COMPARISON_OR_CHOICE"
+    if features["has_number"]:
+        return "NUMBERED_SPECIFICITY"
+    if re.match(r"^(?:why|how|what|when|which)\b", title or "", re.I):
+        return "EXPLANATORY"
+    if features["question_form"]:
+        return "QUESTION"
+    return "DIRECT_STATEMENT"
 
 
 def title_item(video_id, title, format_name, channel_median_ratio, **metrics):
@@ -127,17 +126,11 @@ def title_item(video_id, title, format_name, channel_median_ratio, **metrics):
         "views_per_day": metrics.get("views_per_day"),
         "channel_median_ratio": channel_median_ratio,
         "family_median_ratio": metrics.get("family_median_ratio"),
-        "like_rate": metrics.get("like_rate"),
-        "comment_rate": metrics.get("comment_rate"),
         "performance_band": metrics.get("performance_band"),
         "topic_family": metrics.get("topic_family"),
         "published_at": metrics.get("published_at"),
         "age_days": metrics.get("age_days"),
         "transcript_status": metrics.get("transcript_status"),
-        "thumbnail_url": metrics.get("thumbnail_url"),
-        "thumbnail_local_path": metrics.get("thumbnail_local_path"),
-        "thumbnail_inspectable": bool(metrics.get("thumbnail_local_path")),
-        "packaging_screenshot_evidence": False,
     }
 
 
@@ -152,26 +145,11 @@ def _repeatability(members):
         return "INSUFFICIENT_SAMPLE"
     high = sum(row["channel_median_ratio"] >= 1.25 for row in measured)
     low = sum(row["channel_median_ratio"] < 0.75 for row in measured)
-    if high >= 2 and high / len(measured) >= 0.5 and low / len(measured) < 0.25:
-        return "REPEATED_HIGH_ASSOCIATION"
-    if low >= 2 and low / len(measured) >= 0.5 and high / len(measured) < 0.25:
-        return "REPEATED_LOW_ASSOCIATION"
-    return "MIXED_ASSOCIATION"
-
-
-def _performance_by_format(members):
-    groups = defaultdict(list)
-    for member in members:
-        groups[member["format"]].append(member)
-    return {
-        format_name: {
-            "item_count": len(rows),
-            "median_raw_views": _median(row["views"] for row in rows),
-            "median_views_per_day": _median(row["views_per_day"] for row in rows),
-            "median_channel_relative_performance": _median(row["channel_median_ratio"] for row in rows),
-        }
-        for format_name, rows in sorted(groups.items())
-    }
+    if high >= 2 and high / len(measured) >= 0.5:
+        return "REPEATABLE_PATTERN"
+    if low >= 2 and low / len(measured) >= 0.5:
+        return "LOW_ASSOCIATION"
+    return "MIXED_PATTERN"
 
 
 def aggregate_title_archetypes(items):
@@ -182,32 +160,20 @@ def aggregate_title_archetypes(items):
     for archetype_id, members in sorted(groups.items()):
         ranked = sorted(
             members,
-            key=lambda row: (row["channel_median_ratio"] is not None, row["channel_median_ratio"] or float("-inf")),
+            key=lambda row: row["channel_median_ratio"] if row["channel_median_ratio"] is not None else float("-inf"),
             reverse=True,
         )
         rows.append({
             "archetype_id": archetype_id,
-            "definition": {
-                "WHAT_IF_SCENARIO": "Counterfactual title beginning with 'What if'.",
-                "LIMIT_OR_MEASUREMENT": "Question asks for a limit, duration, quantity, detail, or existence boundary.",
-                "FEASIBILITY_TEST": "Could/Can/Would construction tests whether a premise works.",
-                "CONSEQUENCE_QUESTION": "Title asks what follows from a stated condition.",
-                "DIRECT_QUESTION_OR_STATEMENT": "Other direct question or declarative packaging.",
-            }[archetype_id],
+            "definition": ARCHETYPE_DEFINITIONS[archetype_id],
             "evidence_state": "OBSERVATION",
             "item_count": len(members),
             "supporting_video_ids": sorted(row["video_id"] for row in members),
-            "median_raw_views": _median(row["views"] for row in members),
-            "median_views_per_day": _median(row["views_per_day"] for row in members),
-            "median_channel_relative_performance": _median(row["channel_median_ratio"] for row in members),
-            "median_family_relative_performance": _median(row["family_median_ratio"] for row in members),
-            "median_like_rate": _median(row["like_rate"] for row in members),
-            "median_comment_rate": _median(row["comment_rate"] for row in members),
             "format_mix": dict(sorted(Counter(row["format"] for row in members).items())),
-            "performance_by_format": _performance_by_format(members),
-            "topic_contexts": sorted({row["topic_family"] for row in members if row["topic_family"]}),
-            "strongest_examples": [row["video_id"] for row in ranked[:3]],
-            "weakest_examples": [row["video_id"] for row in reversed(ranked[-3:])],
+            "median_normalized_performance": _median(row["views_per_day"] for row in members),
+            "median_channel_relative_performance": _median(row["channel_median_ratio"] for row in members),
+            "strong_examples": [row["video_id"] for row in ranked[:3]],
+            "counter_examples": [row["video_id"] for row in ranked[-3:]],
             "repeatability": _repeatability(members),
             "confidence": "HIGH" if len(members) >= 10 else "MEDIUM" if len(members) >= 3 else "LOW",
         })
@@ -215,39 +181,15 @@ def aggregate_title_archetypes(items):
 
 
 def summarize_title_features(items):
-    summaries = []
-    for feature in BOOLEAN_FEATURES:
-        members = [row for row in items if row["features"][feature]]
-        summaries.append({
-            "feature": feature,
-            "evidence_state": "DERIVED_METRIC",
-            "item_count": len(members),
-            "frequency": round(len(members) / len(items), 4) if items else None,
-            "median_raw_views": _median(row["views"] for row in members),
-            "median_views_per_day": _median(row["views_per_day"] for row in members),
-            "median_channel_relative_performance": _median(row["channel_median_ratio"] for row in members),
-            "format_mix": dict(sorted(Counter(row["format"] for row in members).items())),
-            "performance_by_format": _performance_by_format(members),
-        })
-    return summaries
-
-
-def thumbnail_record(video_id, url, local_path):
-    if local_path and Path(local_path).is_file():
-        return {
-            "video_id": video_id,
-            "thumbnail_url": url,
-            "local_path": str(local_path),
-            "inspectable": True,
-            "visual_observation_status": "LOCAL_IMAGE_AVAILABLE",
-        }
-    return {
-        "video_id": video_id,
-        "thumbnail_url": url,
-        "local_path": None,
-        "inspectable": False,
-        "visual_observation_status": "REMOTE_REFERENCE_ONLY" if url else "NOT_AVAILABLE",
-    }
+    return [{
+        "feature": feature,
+        "evidence_state": "DERIVED_METRIC",
+        "item_count": len(members),
+        "frequency": round(len(members) / len(items), 4) if items else None,
+        "median_normalized_performance": _median(row["views_per_day"] for row in members),
+        "median_channel_relative_performance": _median(row["channel_median_ratio"] for row in members),
+        "format_mix": dict(sorted(Counter(row["format"] for row in members).items())),
+    } for feature in BOOLEAN_FEATURES for members in [[row for row in items if row["features"][feature]]]]
 
 
 def recursive_keys(value):
@@ -262,96 +204,302 @@ def recursive_keys(value):
     return keys
 
 
-def validate_package_evidence(packages, canonical_video_ids, title_archetype_ids):
-    for package in packages:
-        support = package.get("historical_support", {})
-        unknown_videos = set(support.get("canonical_video_ids", ())) - set(canonical_video_ids)
-        if unknown_videos:
-            raise ValueError("unknown canonical video: " + ", ".join(sorted(unknown_videos)))
-        unknown_archetypes = set(support.get("title_archetype_ids", ())) - set(title_archetype_ids)
-        if unknown_archetypes:
-            raise ValueError("unknown title archetype: " + ", ".join(sorted(unknown_archetypes)))
-    return packages
+def validate_visual_annotations(rows, canonical_video_ids):
+    for row in rows:
+        if row.get("video_id") not in canonical_video_ids:
+            raise ValueError("unknown canonical video")
+        if row.get("interpretation_state") != "AI_INTERPRETATION":
+            raise ValueError("visual judgment must be AI_INTERPRETATION")
+        if row.get("temporal_alignment_state") != "TEMPORAL_ALIGNMENT_UNKNOWN":
+            raise ValueError("unsupported historical temporal state")
+        if row.get("format") not in {"LONG_FORM", "SHORTS", "UNCLASSIFIED"}:
+            raise ValueError("invalid format")
+    return rows
 
 
-def build_historical_report(conn, topic_artifact):
-    topic_path = Path(topic_artifact)
-    topic = json.loads(topic_path.read_text(encoding="utf-8"))
-    channel = topic["channel"]
-    canonical_items = topic["items"]
-    video_ids = [row["canonical_fact"]["video_id"] for row in canonical_items]
-    if len(video_ids) != len(set(video_ids)):
-        raise ValueError("duplicate canonical video ID in Topic Intelligence artifact")
-    placeholders = ",".join("?" for _ in video_ids)
-    thumbnail_rows = conn.execute(
-        "SELECT te.video_id, te.thumbnail_url FROM thumbnail_evidence te "
-        "WHERE te.video_id IN ({}) "
-        "ORDER BY te.video_id, te.observed_at DESC, te.thumbnail_evidence_id DESC".format(placeholders),
-        video_ids,
-    ).fetchall() if video_ids else []
-    urls = {}
-    for row in thumbnail_rows:
-        urls.setdefault(row["video_id"], row["thumbnail_url"])
-    thumbnails = [thumbnail_record(video_id, urls.get(video_id), None) for video_id in sorted(video_ids)]
-    title_items = []
-    for row in canonical_items:
-        fact, metric, observation = row["canonical_fact"], row["derived_metric"], row["observation"]
-        title_items.append(title_item(
-            fact["video_id"], fact["title"], fact["format"], metric["channel_median_ratio"],
-            views=fact["views"], views_per_day=metric["views_per_day"],
-            family_median_ratio=metric["family_median_ratio"], like_rate=metric["like_rate"],
-            comment_rate=metric["comment_rate"], performance_band=observation["performance_band"],
-            topic_family=observation["topic_family"], published_at=fact["published_at"],
-            age_days=metric["age_days"], transcript_status=fact["transcript_status"],
-            thumbnail_url=urls.get(fact["video_id"]), thumbnail_local_path=None,
-        ))
-    inspectable = sum(row["inspectable"] for row in thumbnails)
+def normalize_candidate(candidate):
+    angle = re.sub(
+        r"^Source-derived concept represented by VID-[^:]+:\s*", "",
+        candidate["specific_angle"], flags=re.I,
+    )
     return {
-        "schema_version": "packaging-intelligence-pilot-1",
-        "channel": channel,
-        "evidence_snapshot": {
-            "evidence_state": "CANONICAL_FACT",
-            "metric_cutoff": topic["evidence_snapshot"]["metric_cutoff"],
-            "canonical_item_count": len(canonical_items),
-            "titles_accounted_for": sum(bool(row["title"]) for row in title_items),
-            "transcripts_available": topic["evidence_snapshot"]["transcripts_available"],
-            "formats": topic["evidence_snapshot"]["formats"],
-            "thumbnail_urls_registered": len(urls),
-            "locally_preserved_thumbnails": inspectable,
-            "inspectable_thumbnails": inspectable,
-            "missing_thumbnail_references": len(canonical_items) - len(urls),
-            "packaging_screenshot_evidence": 0,
+        "candidate_id": candidate.get("candidate_id") or candidate.get("opportunity_id"),
+        "topic": candidate["topic"],
+        "specific_angle": angle,
+        "supporting_video_ids": candidate["supporting_video_ids"],
+        "performance_signal": candidate.get("performance_signal") or candidate.get("internal_performance"),
+        "counter_evidence": candidate.get("counter_evidence") or "; ".join(candidate.get("risks", [])),
+        "initial_confidence": candidate.get("initial_confidence") or candidate.get("confidence", "LOW"),
+    }
+
+
+def select_candidates(topic):
+    rows = topic.get("internal_candidates") or topic.get("final_opportunities") or topic.get("candidate_opportunities") or []
+    return [normalize_candidate(row) for row in rows[:2]]
+
+
+def generate_package_hypotheses(channel_id, candidate, canonical_video_ids, visual_video_ids=(), format_name="LONG_FORM"):
+    support = sorted(set(candidate["supporting_video_ids"]) & set(canonical_video_ids))
+    visual_support = sorted(set(support) & set(visual_video_ids))
+    if not support:
+        raise ValueError("candidate lacks canonical video support")
+    topic = candidate["topic"].strip()
+    angle = candidate["specific_angle"].strip().rstrip(".")
+    candidate_id = candidate["candidate_id"]
+    base_id = candidate_id if candidate_id.startswith(channel_id + "-") else f"{channel_id}-{candidate_id}"
+    variants = [
+        ("A", "QUESTION", f"What Should You Know About {topic}?", "One concrete subject with a single unresolved question.", "SINGLE_HERO", "QUESTION_PLUS_VISUAL_SETUP"),
+        ("B", "EXPLANATORY", angle[:1].upper() + angle[1:], "Two concrete states showing the decision or contrast.", "COMPARISON_LAYOUT", "TITLE_ADDS_CONTEXT"),
+        ("C", "WARNING_OR_RISK", f"What Changes the Outcome for {topic}?", "One consequence scene showing stakes without claiming certainty.", "CONSEQUENCE_SCENE", "TITLE_ADDS_STAKES"),
+    ]
+    return [{
+        "package_id": f"{base_id}-PKG-{suffix}",
+        "evidence_state": "HYPOTHESIS_FOR_TESTING",
+        "title": title,
+        "title_archetype": title_type,
+        "thumbnail_concept": thumbnail,
+        "thumbnail_archetype": thumbnail_type,
+        "pair_relationship": relationship,
+        "format_context": format_name,
+        "native_ab_eligible": "NO" if format_name == "SHORTS" else "YES",
+        "historical_support": {
+            "video_ids": support,
+            "performance_signal": candidate["performance_signal"],
         },
-        "title_feature_method": {
-            "evidence_state": "DERIVED_METRIC",
-            "method": "Deterministic regex and token features over all canonical titles.",
+        "visual_support": {
+            "state": "CHANNEL_VISUAL_PRECEDENT" if visual_support else "THUMBNAIL_REFERENCE_GAP",
+            "video_ids": visual_support,
             "causal_claim": False,
         },
-        "title_feature_summary": summarize_title_features(title_items),
-        "title_features": title_items,
-        "title_archetypes": aggregate_title_archetypes(title_items),
-        "thumbnail_features": thumbnails,
-        "thumbnail_archetypes": [],
-        "pair_patterns": [],
-        "limitations": LIMITATIONS,
-        "guardrails": {
-            "evidence_states": ["CANONICAL_FACT", "DERIVED_METRIC", "OBSERVATION", "HYPOTHESIS"],
-            "private_metrics_not_inferred": [
-                "CTR", "impressions", "retention", "watch time", "traffic source",
-                "subscriber conversion", "unique viewers", "audience overlap",
-            ],
-            "prohibited_outputs": ["CTR_SCORE", "ALGORITHM_PACKAGE_SCORE", "GUARANTEED_WINNER", "PREDICTED_CTR"],
-            "format_transfer_assumed": False,
-            "classification_mutation": False,
+        "risks": ["Generated direction requires factual review before production.", "No causal performance claim."],
+        "counter_evidence": candidate["counter_evidence"],
+        "confidence": candidate["initial_confidence"],
+    } for suffix, title_type, title, thumbnail, thumbnail_type, relationship in variants]
+
+
+def derive_thumbnail_archetypes(visual_rows):
+    patterns = [
+        ("TEXT_LED", "Text is a dominant visual element.", lambda row: row.get("approx_text_amount") == "HIGH"),
+        ("PERSON_LED", "Person or face is a primary visual element.", lambda row: row.get("human_face_present") or row.get("human_figure_present")),
+        ("SINGLE_HERO", "One dominant visual subject.", lambda row: row.get("single_hero")),
+        ("COMPARISON_LAYOUT", "Two states or objects are compared.", lambda row: row.get("comparison_layout") or row.get("split_layout")),
+        ("CONSEQUENCE_SCENE", "Visual depicts a result, risk, or aftermath.", lambda row: row.get("consequence_scene")),
+        ("DIAGRAM_OR_ILLUSTRATION", "Diagram or illustration carries the concept.", lambda row: row.get("diagram_style") or row.get("illustration_style")),
+        ("PHOTO_SCENE", "Photographic scene carries the concept.", lambda row: row.get("photo_style")),
+    ]
+    rows = []
+    for archetype_id, definition, predicate in patterns:
+        members = [row for row in visual_rows if predicate(row)]
+        if len(members) < 2:
+            continue
+        rows.append({
+            "archetype_id": archetype_id,
+            "definition": definition,
+            "item_count": len(members),
+            "video_ids": sorted(row["video_id"] for row in members),
+            "format_distribution": dict(sorted(Counter(row["format"] for row in members).items())),
+            "evidence_state": "AI_INTERPRETATION",
+            "temporal_alignment": "TEMPORAL_ALIGNMENT_UNKNOWN",
+            "performance_association": {
+                "state": "ASSOCIATED_PATTERN",
+                "median_channel_relative_performance": _median(row.get("channel_median_ratio") for row in members),
+                "causal_claim": False,
+            },
+            "counter_examples": sorted(
+                row["video_id"] for row in visual_rows if not predicate(row)
+            )[:3],
+            "repeatability": "REPEATABLE_PATTERN" if len(members) >= 3 else "INSUFFICIENT_SAMPLE",
+            "confidence": "HIGH" if len(members) >= 10 else "MEDIUM",
+        })
+    return sorted(rows, key=lambda row: (-row["item_count"], row["archetype_id"]))[:5]
+
+
+def derive_pair_archetypes(visual_rows):
+    groups = defaultdict(list)
+    for row in visual_rows:
+        groups[row.get("pair_relationship", "OTHER")].append(row)
+    rows = []
+    for index, (relationship, members) in enumerate(sorted(groups.items()), 1):
+        ranked = sorted(
+            members,
+            key=lambda row: row.get("channel_median_ratio") if row.get("channel_median_ratio") is not None else float("-inf"),
+            reverse=True,
+        )
+        title_patterns = Counter(row.get("title_archetype", "UNKNOWN") for row in members)
+        thumbnail_patterns = Counter(
+            "TEXT_LED" if row.get("approx_text_amount") == "HIGH"
+            else "SINGLE_HERO" if row.get("single_hero")
+            else "MULTI_OBJECT"
+            for row in members
+        )
+        rows.append({
+        "archetype_id": f"PAIR-{index:03d}",
+        "title_pattern": title_patterns.most_common(1)[0][0],
+        "thumbnail_pattern": thumbnail_patterns.most_common(1)[0][0],
+        "pair_relationship": relationship,
+        "item_count": len(members),
+        "video_ids": sorted(row["video_id"] for row in members),
+        "format": dict(sorted(Counter(row["format"] for row in members).items())),
+        "performance_association": {
+            "state": "ASSOCIATED_PATTERN",
+            "median_normalized_performance": _median(row.get("views_per_day") for row in members),
+            "median_channel_relative_performance": _median(row.get("channel_median_ratio") for row in members),
+            "causal_claim": False,
         },
+        "temporal_alignment": "TEMPORAL_ALIGNMENT_UNKNOWN",
+        "counter_examples": [row["video_id"] for row in ranked[-3:]],
+        "repeatability": "REPEATABLE_PATTERN" if len(members) >= 3 else "INSUFFICIENT_SAMPLE",
+        "confidence": "HIGH" if len(members) >= 10 else "MEDIUM" if len(members) >= 3 else "LOW",
+        })
+    return rows
+
+
+def build_report(topic, acquisition=None, visual_annotations=None):
+    items = topic.get("items", [])
+    title_items = [
+        title_item(
+            row["canonical_fact"]["video_id"], row["canonical_fact"]["title"],
+            row["canonical_fact"].get("format", "UNCLASSIFIED"),
+            row["derived_metric"].get("channel_median_ratio"),
+            views=row["canonical_fact"].get("views"),
+            views_per_day=row["derived_metric"].get("views_per_day"),
+            family_median_ratio=row["derived_metric"].get("family_median_ratio"),
+            performance_band=row["observation"].get("performance_band"),
+            topic_family=row["observation"].get("topic_family"),
+            published_at=row["canonical_fact"].get("published_at"),
+            age_days=row["derived_metric"].get("age_days"),
+            transcript_status=row["canonical_fact"].get("transcript_status"),
+        ) for row in items
+    ]
+    canonical_ids = {row["video_id"] for row in title_items}
+    if acquisition and acquisition.get("channel_id") != topic["channel"]["channel_id"]:
+        raise ValueError("acquisition manifest channel does not match topic artifact")
+    if acquisition:
+        unknown_snapshots = {
+            row.get("video_id") for row in acquisition.get("snapshots", [])
+        } - canonical_ids
+        if unknown_snapshots:
+            raise ValueError("acquisition manifest contains unknown canonical video")
+    visual_rows = validate_visual_annotations(visual_annotations or [], canonical_ids)
+    visual_video_ids = {row["video_id"] for row in visual_rows}
+    title_by_id = {row["video_id"]: row for row in title_items}
+    for row in visual_rows:
+        title = title_by_id[row["video_id"]]
+        row.update({
+            "title_archetype": title["title_archetype"],
+            "views_per_day": title["views_per_day"],
+            "channel_median_ratio": title["channel_median_ratio"],
+            "performance_association_state": "ASSOCIATED_PATTERN",
+        })
+    candidates = select_candidates(topic)
+    formats = topic["evidence_snapshot"].get("formats", {"UNCLASSIFIED": 0})
+    default_format = max(formats, key=formats.get)
+    packages = [{
+        "candidate": candidate,
+        "recommended_test_set": generate_package_hypotheses(
+            topic["channel"]["channel_id"], candidate, canonical_ids, visual_video_ids, default_format
+        ),
+    } for candidate in candidates]
+    acquired = acquisition or {}
+    thumbnail_state = (
+        "CURRENT_REMOTE_SNAPSHOT" if acquired.get("successful_images")
+        else "THUMBNAIL_REFERENCE_GAP"
+    )
+    return {
+        "schema_version": "packaging-intelligence-1",
+        "generated_on": "2026-09-10",
+        "channel": topic["channel"],
+        "evidence_snapshot": {
+            "metric_cutoff": topic["evidence_snapshot"].get("metric_cutoff"),
+            "canonical_item_count": len(items),
+            "titles_accounted_for": sum(bool(row["title"]) for row in title_items),
+            "transcripts_available": topic["evidence_snapshot"].get("transcripts_available"),
+            "formats": topic["evidence_snapshot"].get("formats"),
+            "registered_thumbnail_urls": acquired.get("registered_urls", 0),
+            "acquired_thumbnails": acquired.get("successful_images", 0),
+            "thumbnail_evidence_state": thumbnail_state,
+        },
+        "title_features": title_items,
+        "title_feature_summary": summarize_title_features(title_items),
+        "title_archetypes": aggregate_title_archetypes(title_items),
+        "archetype_scope": "PACKAGE_ARCHETYPE" if visual_rows else "TITLE_ONLY_ARCHETYPE",
+        "thumbnail_snapshots": [{
+            key: row.get(key) for key in (
+                "video_id", "format", "original_registered_url", "url_recorded_at",
+                "retrieval_timestamp", "final_url", "redirect_chain", "mime_type",
+                "byte_size", "width", "height", "aspect_ratio", "sha256",
+                "evidence_state", "temporal_alignment_state",
+            )
+        } for row in acquired.get("snapshots", [])],
+        "visual_features": visual_rows,
+        "thumbnail_archetypes": derive_thumbnail_archetypes(visual_rows),
+        "package_archetypes": derive_pair_archetypes(visual_rows),
+        "opportunity_packages": packages,
+        "temporal_alignment": {
+            "verified_historical_pairs": 0,
+            "current_snapshot_pairs": len(visual_rows),
+            "state": "TEMPORAL_ALIGNMENT_UNKNOWN" if visual_rows else "NO_THUMBNAIL_EVIDENCE",
+        },
+        "guardrails": {
+            "packaging_model": "PACKAGE -> VIEWER_RESPONSE -> POSSIBLE_PERFORMANCE_CHANGE",
+            "direct_algorithm_bonus_claimed": False,
+            "causal_claims_created": 0,
+            "historical_causal_package_analysis": "NOT_SUPPORTED",
+            "all_recommendations": "HYPOTHESIS_FOR_TESTING",
+            "prohibited_outputs": ["CTR_SCORE", "PACKAGE_SUCCESS_SCORE", "PREDICTED_CTR", "PREDICTED_WINNER"],
+        },
+        "limitations": LIMITATIONS,
         "provenance": {
-            "topic_artifact": str(topic_path),
-            "topic_artifact_schema": topic["schema_version"],
-            "dataset_id": channel["dataset_id"],
-            "thumbnail_reference_source": "thumbnail_evidence table; registered Apify URLs",
-            "visual_observation_basis": "No local thumbnail files; no visual observations made.",
+            "topic_artifact_schema": topic.get("schema_version"),
+            "acquisition_manifest_present": bool(acquisition),
+            "visual_review_state": "AI_INTERPRETATION" if visual_rows else "NOT_AVAILABLE",
         },
     }
+
+
+def build_items_from_db(conn, topic):
+    cutoff = topic["evidence_snapshot"]["metric_cutoff"]
+    cutoff_dt = datetime.fromisoformat(cutoff.replace("Z", "+00:00"))
+    channel_id = topic["channel"]["channel_id"]
+    rows = conn.execute(
+        """WITH latest AS (
+               SELECT vs.*, ROW_NUMBER() OVER (
+                 PARTITION BY vs.video_id ORDER BY vs.observed_at DESC, vs.video_snapshot_id DESC
+               ) rank
+               FROM video_snapshots vs JOIN videos v ON v.video_id=vs.video_id
+               WHERE v.channel_id=?
+           )
+           SELECT * FROM latest WHERE rank=1 ORDER BY video_id""",
+        (channel_id,),
+    ).fetchall()
+    velocities = []
+    prepared = []
+    for row in rows:
+        published = datetime.fromisoformat(row["published_at"].replace("Z", "+00:00"))
+        if published.tzinfo is None and cutoff_dt.tzinfo is not None:
+            published = published.replace(tzinfo=cutoff_dt.tzinfo)
+        age_days = max((cutoff_dt - published).total_seconds() / 86400, 1)
+        velocity = row["views"] / age_days if row["views"] is not None else None
+        velocities.append(velocity)
+        prepared.append((row, age_days, velocity))
+    median_velocity = statistics.median(value for value in velocities if value is not None)
+    return [{
+        "canonical_fact": {
+            "video_id": row["video_id"], "title": row["title"],
+            "format": "SHORTS" if (row["video_type"] or "").lower() == "shorts" else "LONG_FORM",
+            "views": row["views"], "published_at": row["published_at"],
+            "transcript_status": "AVAILABLE" if row["transcript_word_count"] else "MISSING",
+        },
+        "derived_metric": {
+            "views_per_day": round(velocity, 4) if velocity is not None else None,
+            "channel_median_ratio": round(velocity / median_velocity, 4) if velocity is not None and median_velocity else None,
+            "family_median_ratio": None, "age_days": round(age_days, 4),
+        },
+        "observation": {
+            "performance_band": "HIGH_RELATIVE_PERFORMER" if velocity >= median_velocity * 1.25 else "LOW_RELATIVE_PERFORMER" if velocity < median_velocity * 0.75 else "NORMAL_RANGE",
+            "topic_family": "UNASSIGNED",
+        },
+    } for row, age_days, velocity in prepared]
 
 
 def render_json(payload):
@@ -360,19 +508,29 @@ def render_json(payload):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--channel", required=True)
     parser.add_argument("--topic-artifact", required=True)
+    parser.add_argument("--acquisition-manifest")
+    parser.add_argument("--visual-annotations")
     parser.add_argument("--db")
-    parser.add_argument("--output")
+    parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
-    with connect(args.db) as conn:
-        payload = build_historical_report(conn, args.topic_artifact)
-    rendered = render_json(payload)
-    if args.output:
-        output = Path(args.output)
-        output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(rendered, encoding="utf-8")
-    else:
-        print(rendered, end="")
+    topic_path = Path(args.topic_artifact)
+    topic = json.loads(topic_path.read_text(encoding="utf-8"))
+    if topic["channel"]["channel_id"] != args.channel:
+        raise ValueError("topic artifact channel does not match --channel")
+    if not topic.get("items"):
+        with connect(args.db) as conn:
+            topic["items"] = build_items_from_db(conn, topic)
+    acquisition = json.loads(Path(args.acquisition_manifest).read_text()) if args.acquisition_manifest else None
+    annotations = json.loads(Path(args.visual_annotations).read_text()) if args.visual_annotations else None
+    payload = build_report(topic, acquisition, annotations)
+    payload["provenance"]["topic_artifact"] = str(topic_path)
+    if args.acquisition_manifest:
+        payload["provenance"]["acquisition_manifest"] = args.acquisition_manifest
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(render_json(payload), encoding="utf-8")
 
 
 if __name__ == "__main__":
