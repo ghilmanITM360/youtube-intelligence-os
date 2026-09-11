@@ -52,13 +52,11 @@ def test_metric_snapshot_refreshes_performance_and_longitudinal_layers():
     assert {"TOPIC", "PACKAGING", "HOOK_SCRIPT", "SUCCESS_FAILURE", "PUBLIC_METRIC_TRAJECTORY", "CHANNEL_STRATEGY"} <= set(layers)
 
 
-def test_first_party_future_seam_exists_without_ingestion():
-    assert set(planner.FIRST_PARTY_ANALYTICS_FIELDS) == {
-        "CTR", "IMPRESSIONS", "RETENTION", "AVD", "WATCH_TIME",
-        "TRAFFIC_SOURCES", "NEW_CASUAL_REGULAR", "AUDIENCE_OVERLAP",
-    }
+def test_first_party_refresh_contract_is_integrated():
+    assert {"IMPRESSIONS_CTR", "IMPRESSIONS", "RETENTION_PERCENTAGE", "AVERAGE_VIEW_DURATION", "WATCH_TIME_HOURS", "TRAFFIC_SOURCE", "NEW_VIEWERS", "CASUAL_VIEWERS", "REGULAR_VIEWERS"} <= set(planner.FIRST_PARTY_ANALYTICS_FIELDS)
     layers = planner.affected_layers("NEW_FIRST_PARTY_ANALYTICS")
-    assert {"SUCCESS_FAILURE", "CHANNEL_STRATEGY", "UNIFIED_PLAN"} <= set(layers)
+    assert {"TOPIC", "PACKAGING", "HOOK_SCRIPT", "SUCCESS_FAILURE", "FIRST_PARTY_DIAGNOSIS", "CHANNEL_STRATEGY", "BLUEPRINT", "UNIFIED_PLAN"} <= set(layers)
+    assert "CROSS_NICHE_CALIBRATION" not in layers
 
 
 def test_current_registry_yields_deterministic_noop():

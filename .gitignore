@@ -48,9 +48,12 @@ data/catalog/*.db-shm
 data/catalog/*.sqlite
 data/catalog/*.sqlite3
 
+# Private first-party YouTube Analytics exports and derived diagnoses stay local.
+# Only capability contracts/status and synthetic test fixtures are versioned.
+data/intelligence/first-party/**/*
+
 # Phase 1C transient handoff file between `register_batch.py discover` and
 # `register` — scratch state, not a durable record (the durable records are
 # data/manifests/batches/*.md and *_FILES.csv, both regenerated from the
 # catalog database by scripts/generate_batch_manifests.py).
 data/manifests/batches/*_state.json
-

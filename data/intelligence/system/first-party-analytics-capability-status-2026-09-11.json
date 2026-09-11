@@ -1,0 +1,19 @@
+{
+  "schema_version": "first-party-analytics-capability-status-1",
+  "generated_on": "2026-09-11",
+  "FIRST_PARTY_ANALYTICS_INGESTION": "READY",
+  "OWN_CHANNEL_DIAGNOSTIC_ENRICHMENT": "READY_FOR_REAL_DATA",
+  "LONGITUDINAL_FIRST_PARTY_INTELLIGENCE": "READY_WHEN_MULTIPLE_SNAPSHOTS_EXIST",
+  "REAL_FIRST_PARTY_DATA_INGESTED": false,
+  "production_status": "READY_FOR_REAL_FIRST_PARTY_EXPORT",
+  "supported_formats": ["CSV", "TSV", "XLSX"],
+  "normalized_storage": "PRIVATE_LOCAL_GITIGNORED_VERSIONED_ARTIFACTS",
+  "canonical_db_mutation_required": false,
+  "network_calls": 0,
+  "test_evidence": "SYNTHETIC_FIXTURES_ONLY",
+  "limitations": [
+    "No real owned-channel export is present, so no production diagnosis exists.",
+    "Localized headers outside the conservative alias map remain explicitly unmapped.",
+    "Longitudinal conclusions require at least two compatible observed date ranges."
+  ]
+}

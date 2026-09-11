@@ -18,7 +18,7 @@ REGISTRY_PATH = INTELLIGENCE_DIR / "system/intelligence-freshness-registry.json"
 
 RUN_ORDER = [
     "CANONICAL", "CLASSIFICATION", "TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING",
-    "SUCCESS_FAILURE", "PUBLIC_METRIC_TRAJECTORY", "CHANNEL_STRATEGY", "BENCHMARK",
+    "SUCCESS_FAILURE", "PUBLIC_METRIC_TRAJECTORY", "FIRST_PARTY_DIAGNOSIS", "CHANNEL_STRATEGY", "BENCHMARK",
     "TRAINING_KNOWLEDGE", "TRAINING_CALIBRATION", "CROSS_NICHE_CALIBRATION",
     "BLUEPRINT", "UNIFIED_PLAN",
 ]
@@ -32,7 +32,8 @@ DEPENDENCIES = {
     "EDITING": ["PACKAGING", "HOOK_SCRIPT"],
     "SUCCESS_FAILURE": ["TOPIC"],
     "PUBLIC_METRIC_TRAJECTORY": ["CANONICAL"],
-    "CHANNEL_STRATEGY": ["TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING", "SUCCESS_FAILURE"],
+    "FIRST_PARTY_DIAGNOSIS": ["TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING", "SUCCESS_FAILURE"],
+    "CHANNEL_STRATEGY": ["TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING", "SUCCESS_FAILURE", "FIRST_PARTY_DIAGNOSIS"],
     "BENCHMARK": ["CHANNEL_STRATEGY"],
     "TRAINING_KNOWLEDGE": [],
     "TRAINING_CALIBRATION": ["CHANNEL_STRATEGY", "TRAINING_KNOWLEDGE"],
@@ -49,8 +50,11 @@ CHANGE_CATEGORIES = [
 ]
 
 FIRST_PARTY_ANALYTICS_FIELDS = [
-    "CTR", "IMPRESSIONS", "RETENTION", "AVD", "WATCH_TIME", "TRAFFIC_SOURCES",
-    "NEW_CASUAL_REGULAR", "AUDIENCE_OVERLAP",
+    "VIEWS", "IMPRESSIONS", "IMPRESSIONS_CTR", "WATCH_TIME_HOURS", "AVERAGE_VIEW_DURATION",
+    "AVERAGE_PERCENTAGE_VIEWED", "UNIQUE_VIEWERS", "SUBSCRIBERS_GAINED", "SUBSCRIBERS_LOST",
+    "LIKES", "COMMENTS", "SHARES", "NEW_VIEWERS", "CASUAL_VIEWERS", "REGULAR_VIEWERS",
+    "RETURNING_VIEWERS", "TRAFFIC_SOURCE", "SEARCH_TERMS", "GEOGRAPHY",
+    "RETENTION_PERCENTAGE", "INTRO_30S_PERCENTAGE", "AUDIENCE_OVERLAP",
 ]
 
 # Field-sensitive invalidation. Example: transcript text changes Topic transcript
@@ -69,7 +73,7 @@ CHANGE_IMPACTS = {
     "CLASSIFICATION_CORRECTION": ["CLASSIFICATION", "TOPIC", "PACKAGING", "HOOK_SCRIPT", "SUCCESS_FAILURE", "CHANNEL_STRATEGY", "BENCHMARK", "TRAINING_CALIBRATION", "CROSS_NICHE_CALIBRATION", "BLUEPRINT", "UNIFIED_PLAN"],
     "NEW_EXTERNAL_VALIDATION": ["TOPIC", "CHANNEL_STRATEGY", "BLUEPRINT", "UNIFIED_PLAN"],
     "NEW_TRAINING_KNOWLEDGE": ["TRAINING_KNOWLEDGE", "TRAINING_CALIBRATION", "CHANNEL_STRATEGY", "BENCHMARK", "CROSS_NICHE_CALIBRATION", "BLUEPRINT", "UNIFIED_PLAN"],
-    "NEW_FIRST_PARTY_ANALYTICS": ["SUCCESS_FAILURE", "PUBLIC_METRIC_TRAJECTORY", "CHANNEL_STRATEGY", "BENCHMARK", "TRAINING_CALIBRATION", "CROSS_NICHE_CALIBRATION", "BLUEPRINT", "UNIFIED_PLAN"],
+    "NEW_FIRST_PARTY_ANALYTICS": ["TOPIC", "PACKAGING", "HOOK_SCRIPT", "SUCCESS_FAILURE", "PUBLIC_METRIC_TRAJECTORY", "FIRST_PARTY_DIAGNOSIS", "CHANNEL_STRATEGY", "BENCHMARK", "BLUEPRINT", "UNIFIED_PLAN"],
 }
 
 ARTIFACT_LAYER = {
@@ -78,6 +82,8 @@ ARTIFACT_LAYER = {
     "HOOK_SCRIPT": {"HOOK_SCRIPT"},
     "EDITING": {"EDITING"},
     "CHANNEL_STRATEGY": {"SUCCESS_FAILURE", "CHANNEL_STRATEGY"},
+    "FIRST_PARTY_DIAGNOSIS": {"FIRST_PARTY_DIAGNOSIS"},
+    "FIRST_PARTY_CAPABILITY": {"FIRST_PARTY_DIAGNOSIS"},
     "BENCHMARK": {"BENCHMARK"},
     "TRAINING_KNOWLEDGE": {"TRAINING_KNOWLEDGE"},
     "CROSS_NICHE_CALIBRATION": {"TRAINING_CALIBRATION", "CROSS_NICHE_CALIBRATION"},
@@ -91,7 +97,7 @@ ARTIFACT_LAYER = {
 REPLAYABLE_TYPES = {
     "TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING", "CHANNEL_STRATEGY", "BENCHMARK",
     "CROSS_NICHE_CALIBRATION", "BLUEPRINT", "UNIFIED_PLAN", "CAPABILITY_REGISTRY",
-    "EDITING_AVAILABILITY",
+    "EDITING_AVAILABILITY", "FIRST_PARTY_DIAGNOSIS",
 }
 
 
@@ -187,6 +193,18 @@ def _file_group_dependency(ref, paths):
 
 
 def canonical_dependency(conn, channel_id, kind):
+    if kind == "FIRST_PARTY_ANALYTICS":
+        paths = list((INTELLIGENCE_DIR / "first-party/channels" / channel_id).glob("*-normalized.json"))
+        return _file_group_dependency(f"files:{channel_id}:FIRST_PARTY_ANALYTICS", paths)
+    if kind == "FIRST_PARTY_KNOWLEDGE":
+        paths = [
+            INTELLIGENCE_DIR / "system/youtube-strategy-training-knowledge-2026-09-11.json",
+            INTELLIGENCE_DIR / "global/youtube-algorithm-primary-validation-2026-09-04.md",
+        ]
+        return _file_group_dependency("files:GLOBAL:FIRST_PARTY_KNOWLEDGE", paths)
+    if kind == "FIRST_PARTY_CONTRACT":
+        paths = [INTELLIGENCE_DIR / "system/first-party-analytics-import-contract.json"]
+        return _file_group_dependency("files:GLOBAL:FIRST_PARTY_CONTRACT", paths)
     if kind == "THUMBNAIL_BINARY":
         dataset_ids = [row[0] for row in conn.execute(
             "SELECT dataset_id FROM channel_dataset_links WHERE channel_id=? UNION SELECT created_from_dataset_id FROM channels WHERE channel_id=?",
@@ -224,11 +242,15 @@ def discover_current_artifacts(root=ROOT):
             selected = _pick_current(channel_dir.glob(pattern))
             if selected:
                 paths.append(selected)
+    for channel_dir in sorted((base / "first-party/channels").glob("CH-*")):
+        selected = _pick_current(channel_dir.glob("first-party-channel-diagnosis*.json"))
+        if selected:
+            paths.append(selected)
     paths += sorted((base / "plans").glob("*-content-intelligence-v1*.json"))
     paths += sorted((base / "blueprints").glob("*.json"))
     paths += sorted((base / "cross-channel").glob("*-channel-strategy-benchmark-*.json"))
     paths += sorted((base / "cross-channel").glob("editing-intelligence-availability-*.json"))
-    paths += sorted(path for path in (base / "system").glob("*.json") if path.name != REGISTRY_PATH.name)
+    paths += sorted(path for path in (base / "system").glob("*.json") if path.name not in {REGISTRY_PATH.name, "first-party-analytics-import-contract.json"})
     grouped = {}
     for path in set(paths):
         payload = _payload(path)
@@ -252,6 +274,10 @@ def artifact_type(path):
         return "EDITING"
     if "channel-strategy-diagnosis" in name:
         return "CHANNEL_STRATEGY"
+    if "first-party-channel-diagnosis" in name:
+        return "FIRST_PARTY_DIAGNOSIS"
+    if "first-party-analytics-capability-status" in name:
+        return "FIRST_PARTY_CAPABILITY"
     if "channel-strategy-benchmark" in name:
         return "BENCHMARK"
     if "strategy-blueprint" in name:
@@ -335,16 +361,22 @@ def source_dependencies(path, conn, all_paths):
         canonical(["FORENSIC_EVIDENCE"])
         upstream(["TOPIC", "PACKAGING", "HOOK_SCRIPT"])
     elif kind == "CHANNEL_STRATEGY":
-        upstream(["TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING"])
+        upstream(["TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING", "FIRST_PARTY_DIAGNOSIS"])
         training = next((p for p in all_paths if artifact_type(p) == "TRAINING_KNOWLEDGE"), None)
         if training:
             deps.append(_artifact_dep(training))
+    elif kind == "FIRST_PARTY_DIAGNOSIS":
+        canonical(["FIRST_PARTY_ANALYTICS", "FIRST_PARTY_KNOWLEDGE"])
+        upstream(["TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING"])
+    elif kind == "FIRST_PARTY_CAPABILITY":
+        deps.append(canonical_dependency(conn, None, "FIRST_PARTY_CONTRACT"))
+        deps.extend([_code_dep("ingest_youtube_analytics.py"), _code_dep("report_first_party_channel_diagnosis.py"), _code_dep("plan_intelligence_refresh.py")])
     elif kind in ("BENCHMARK", "CROSS_CHANNEL_COMPARISON"):
-        upstream(["TOPIC", "PACKAGING", "HOOK_SCRIPT", "CHANNEL_STRATEGY"])
+        upstream(["TOPIC", "PACKAGING", "HOOK_SCRIPT", "FIRST_PARTY_DIAGNOSIS", "CHANNEL_STRATEGY"])
     elif kind == "BLUEPRINT":
-        upstream(["CHANNEL_STRATEGY", "BENCHMARK"])
+        upstream(["FIRST_PARTY_DIAGNOSIS", "CHANNEL_STRATEGY", "BENCHMARK"])
     elif kind == "UNIFIED_PLAN":
-        upstream(["TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING", "CHANNEL_STRATEGY", "BLUEPRINT"])
+        upstream(["TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING", "FIRST_PARTY_DIAGNOSIS", "CHANNEL_STRATEGY", "BLUEPRINT"])
     elif kind == "TRAINING_KNOWLEDGE":
         deps.append(_query_dependency(conn, None, "TRAINING_KNOWLEDGE"))
     elif kind == "CROSS_NICHE_CALIBRATION":
@@ -362,6 +394,7 @@ def source_dependencies(path, conn, all_paths):
         "EDITING": "report_editing_visual_intelligence.py",
         "EDITING_AVAILABILITY": "report_editing_visual_intelligence.py",
         "CHANNEL_STRATEGY": "report_channel_strategy_intelligence.py",
+        "FIRST_PARTY_DIAGNOSIS": "report_first_party_channel_diagnosis.py",
         "BENCHMARK": "report_channel_strategy_intelligence.py",
         "TRAINING_KNOWLEDGE": "report_channel_strategy_intelligence.py",
         "CROSS_NICHE_CALIBRATION": "report_channel_strategy_intelligence.py",
@@ -416,7 +449,7 @@ def build_freshness_registry(root=ROOT, db_path=None, generated_at="2026-09-11T0
         "dependency_graph": DEPENDENCIES,
         "supported_change_categories": CHANGE_CATEGORIES,
         "status_taxonomy": ["CURRENT", "STALE", "PARTIALLY_STALE", "BLOCKED", "UNKNOWN"],
-        "first_party_analytics_future_seam": FIRST_PARTY_ANALYTICS_FIELDS,
+        "first_party_analytics": {"status": "READY_FOR_FILE_IMPORT", "supported_metrics": FIRST_PARTY_ANALYTICS_FIELDS},
         "canonical_state": state,
         "historical_artifacts_excluded": sorted(
             str(path.relative_to(root)) for path in (root / "data/intelligence/cross-channel").glob("*.json")
@@ -552,7 +585,7 @@ def build_refresh_plan(registry, root=ROOT, db_path=None, channel=None, simulate
         "artifacts_unchanged": unchanged,
         "artifacts_refreshed": [],
         "stale_artifacts": stale,
-        "blocked_layers": ["FIRST_PARTY_ANALYTICS_INGESTION_NOT_BUILT"] if any(c["change_type"] == "NEW_FIRST_PARTY_ANALYTICS" for c in selected_changes) else [],
+        "blocked_layers": [],
         "longitudinal_status": longitudinal,
         "invariants": {
             "network_calls": 0,

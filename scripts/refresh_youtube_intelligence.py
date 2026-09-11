@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import plan_intelligence_refresh as planner  # noqa: E402
+import ingest_youtube_analytics as analytics_ingest  # noqa: E402
+import report_first_party_channel_diagnosis as first_party  # noqa: E402
 import report_channel_strategy_intelligence as strategy  # noqa: E402
 import report_editing_visual_intelligence as editing  # noqa: E402
 import report_hook_script_intelligence as hook_script  # noqa: E402
@@ -23,6 +25,7 @@ REFRESHABLE = {
     "TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING", "CHANNEL_STRATEGY", "BENCHMARK",
     "TRAINING_KNOWLEDGE", "CROSS_NICHE_CALIBRATION", "BLUEPRINT", "UNIFIED_PLAN",
     "CAPABILITY_REGISTRY", "EDITING_AVAILABILITY",
+    "FIRST_PARTY_DIAGNOSIS", "FIRST_PARTY_CAPABILITY",
 }
 
 
@@ -216,6 +219,14 @@ def rebuild_payload(record, generated_on, affected_channels=None):
                 orchestrator.load_json(orchestrator.find_hook_script_artifact(cdir)),
                 generated_on,
             )
+    if kind == "FIRST_PARTY_DIAGNOSIS":
+        return first_party.build_from_paths(
+            old["SOURCE_ANALYTICS_ARTIFACTS"],
+            old.get("OWN_VS_COMPETITOR", {}).get("SELECTED_COMPETITORS", []),
+            f"{generated_on}T00:00:00Z",
+        )
+    if kind == "FIRST_PARTY_CAPABILITY":
+        return analytics_ingest.build_capability_status(generated_on)
     if kind == "CHANNEL_STRATEGY":
         channel_id = old["target_channel"]["channel_id"]
         peers = [row["channel_id"] for row in old.get("benchmark_channels", [])]

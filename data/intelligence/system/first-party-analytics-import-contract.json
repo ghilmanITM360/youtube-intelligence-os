@@ -1,0 +1,103 @@
+{
+  "schema_version": "first-party-analytics-import-contract-1",
+  "generated_on": "2026-09-11",
+  "source_contract": {
+    "accepted_formats": ["CSV", "TSV", "XLSX"],
+    "ownership_requirement": "CHANNEL_OWNERSHIP_CONTEXT=FIRST_PARTY",
+    "source_scope": "AGGREGATE_YOUTUBE_STUDIO_OR_ADVANCED_MODE_EXPORT",
+    "viewer_level_personal_data": "REJECTED",
+    "network_acquisition": "NOT_SUPPORTED"
+  },
+  "report_types": [
+    "VIDEO_PERFORMANCE",
+    "TRAFFIC_SOURCES",
+    "REACH_IMPRESSIONS",
+    "ENGAGEMENT",
+    "AUDIENCE_RETENTION_SUMMARY",
+    "AUDIENCE_RETENTION_CURVE",
+    "AUDIENCE_SEGMENTS",
+    "GEOGRAPHY",
+    "SUBSCRIPTION_STATUS",
+    "FORMAT_BREAKDOWN",
+    "CHANNEL_SUMMARY",
+    "UNKNOWN_REPORT"
+  ],
+  "metrics": [
+    "VIEWS",
+    "IMPRESSIONS",
+    "IMPRESSIONS_CTR",
+    "WATCH_TIME_HOURS",
+    "AVERAGE_VIEW_DURATION",
+    "AVERAGE_PERCENTAGE_VIEWED",
+    "UNIQUE_VIEWERS",
+    "SUBSCRIBERS_GAINED",
+    "SUBSCRIBERS_LOST",
+    "LIKES",
+    "COMMENTS",
+    "SHARES",
+    "NEW_VIEWERS",
+    "CASUAL_VIEWERS",
+    "REGULAR_VIEWERS",
+    "RETURNING_VIEWERS",
+    "RETENTION_PERCENTAGE",
+    "INTRO_30S_PERCENTAGE"
+  ],
+  "dimensions": [
+    "DATE",
+    "TRAFFIC_SOURCE",
+    "SEARCH_TERM",
+    "GEOGRAPHY",
+    "SUBSCRIPTION_STATUS",
+    "FORMAT",
+    "ELAPSED_VIDEO_TIME",
+    "AUDIENCE_SEGMENT"
+  ],
+  "date_range_kinds": [
+    "LIFETIME",
+    "FIRST_24H",
+    "FIRST_7D",
+    "FIRST_28D",
+    "CUSTOM_RANGE",
+    "ROLLING_28D",
+    "OTHER",
+    "UNKNOWN"
+  ],
+  "video_matching_priority": [
+    "YOUTUBE_VIDEO_ID",
+    "CANONICAL_VIDEO_URL",
+    "EXACT_TITLE_WITH_DATE_CONTEXT",
+    "NORMALIZED_TITLE_CONTROLLED_FALLBACK"
+  ],
+  "snapshot_identity": {
+    "id_basis": [
+      "CHANNEL_ID",
+      "SOURCE_SHA256",
+      "SHEET",
+      "REPORT_TYPE",
+      "OBSERVATION_START",
+      "OBSERVATION_END",
+      "DATE_RANGE_KIND",
+      "FILTERS"
+    ],
+    "overwrite_policy": "NEVER",
+    "exact_reimport": "EXACT_DUPLICATE"
+  },
+  "storage": {
+    "raw": "data/raw/inbox/first-party-analytics/<CHANNEL_ID>/<SOURCE_FILE_ID>/",
+    "normalized": "data/intelligence/first-party/channels/<CHANNEL_ID>/",
+    "git_policy": "LOCAL_GITIGNORED_PRIVATE_DATA"
+  },
+  "schema_mapping": {
+    "version": "youtube-studio-export-mapping-1",
+    "known_english_aliases": "CONSERVATIVE",
+    "unknown_headers": "PRESERVED_AS_UNMAPPED_SOURCE_FIELDS",
+    "unknown_localized_headers": "UNMAPPED_FIELD_NOT_GUESSED"
+  },
+  "interpretation_guardrails": [
+    "CTR_REQUIRES_IMPRESSION_AND_COHORT_CONTEXT",
+    "RETENTION_IS_OBSERVATION_NOT_CAUSAL_RULE",
+    "AUDIENCE_SEGMENTS_ARE_NOT_RANKING_FACTORS",
+    "UNEQUAL_DATE_WINDOWS_ARE_NOT_COMPARED",
+    "COMPETITOR_PRIVATE_METRICS_ARE_NOT_INFERRED"
+  ]
+}
