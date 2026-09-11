@@ -106,7 +106,71 @@ def _registered_thumbnail_count(conn, channel_id):
         "WHERE v.channel_id=? AND vs.thumbnail_url IS NOT NULL", (channel_id,)).fetchone()[0]
 
 
-def rebuild_payload(record, generated_on):
+def _cross_niche_result(statuses):
+    support = {"CORPUS_SUPPORTED", "CORPUS_PARTIALLY_SUPPORTED"}
+    values = list(statuses.values())
+    if "MIXED" in values or (any(value in support for value in values) and "CORPUS_NOT_SUPPORTED" in values):
+        return "CONFLICTING_PATTERN"
+    if sum(value in support for value in values) >= 2:
+        return "ROBUST_CROSS_NICHE_PATTERN"
+    if any(value in support for value in values) or "CORPUS_NOT_SUPPORTED" in values:
+        return "NICHE_SPECIFIC_PATTERN" if "INSUFFICIENT_EVIDENCE" in values else "CHANNEL_SPECIFIC_PATTERN"
+    return "INSUFFICIENT_EVIDENCE"
+
+
+def rebuild_cross_niche(old, affected_channels, calibrate=None):
+    """Recompute affected niches; reuse recorded evidence for untouched niches."""
+    calibrate = calibrate or strategy.calibrate_all
+    affected = set(affected_channels or [])
+    niches = old["niches"]
+    recalculated = {
+        niche: calibrate(channels)
+        for niche, channels in niches.items() if affected & set(channels)
+    }
+    by_niche = {
+        niche: {(row["rule_id"], row["archetype_kind"], row["archetype_id"]): row for row in rows}
+        for niche, rows in recalculated.items()
+    }
+    rows = []
+    for previous in old["heuristics"]:
+        key = (previous["rule_id"], previous["archetype_kind"], previous["archetype_id"])
+        statuses, evidence = {}, {}
+        changed = False
+        for niche in niches:
+            if niche in by_niche:
+                row = by_niche[niche][key]
+                status, observations = row["empirical_calibration_status"], row["observations"]
+            else:
+                status = previous[f"{niche}_RESULT"]
+                observations = previous["COUNTER_EVIDENCE"][f"{niche.lower()}_observations"]
+            statuses[niche] = status
+            evidence[f"{niche.lower()}_observations"] = observations
+            changed |= status != previous[f"{niche}_RESULT"] or observations != previous["COUNTER_EVIDENCE"][f"{niche.lower()}_observations"]
+        if not changed:
+            rows.append(previous)
+            continue
+        result = _cross_niche_result(statuses)
+        combined = strategy.empirical_calibration_verdict([item for group in evidence.values() for item in group])
+        rows.append({
+            "rule_id": key[0], "archetype_kind": key[1], "archetype_id": key[2], "claim": previous["claim"],
+            **{f"{niche}_RESULT": status for niche, status in statuses.items()},
+            "CROSS_NICHE_RESULT": result,
+            "COUNTER_EVIDENCE": evidence,
+            "CONFIDENCE": "MEDIUM" if result in ("ROBUST_CROSS_NICHE_PATTERN", "CONFLICTING_PATTERN") else "LOW",
+            "reason": "Recomputed from changed niche evidence; unchanged niche evidence reused from prior version.",
+            "training_rule_confidence_update": {
+                "previous_status": previous["training_rule_confidence_update"]["new_combined_status"],
+                "new_combined_status": combined,
+                "reason": "Empirical calibration changed only from affected-niche corpus evidence; official validation status remains separate.",
+            },
+        })
+    result = dict(old)
+    result["heuristics"] = rows
+    result["summary_counts"] = {state: sum(row["CROSS_NICHE_RESULT"] == state for row in rows) for state in sorted({row["CROSS_NICHE_RESULT"] for row in rows})}
+    return result
+
+
+def rebuild_payload(record, generated_on, affected_channels=None):
     """Call existing pure builders. No acquisition, classification, or DB writes."""
     kind = record["ARTIFACT_TYPE"]
     old = _current_payload(record)
@@ -167,7 +231,7 @@ def rebuild_payload(record, generated_on):
         result["generated_on"] = generated_on
         return result
     if kind == "CROSS_NICHE_CALIBRATION":
-        result = strategy.build_cross_niche_calibration()
+        result = rebuild_cross_niche(old, affected_channels)
         result["generated_on"] = generated_on
         return result
     if kind == "BLUEPRINT":
@@ -219,12 +283,15 @@ def execute(plan, run_id=None, generated_on=None):
     before_db = _db_state()
     refreshed, unchanged, conclusions, confidence, blocked = [], [], [], [], list(plan.get("blocked_layers", []))
     records = _sort_records(plan["artifacts_to_refresh"])
+    affected_scope = [plan["channel_filter"]] if plan.get("channel_filter") else sorted({
+        change.get("channel_id") for change in plan.get("trigger_changes", []) if change.get("channel_id")
+    })
     for record in records:
         if record["ARTIFACT_TYPE"] not in REFRESHABLE:
             blocked.append(f"NO_SAFE_BUILDER:{record['ARTIFACT_TYPE']}:{record['PATH']}")
             continue
         old = _current_payload(record)
-        new = rebuild_payload(record, generated_on)
+        new = rebuild_payload(record, generated_on, affected_scope)
         if semantic_equal(old, new):
             unchanged.append(record["PATH"])
             continue
@@ -246,7 +313,7 @@ def execute(plan, run_id=None, generated_on=None):
     report = build_run_report(
         run_id=run_id,
         trigger=plan.get("trigger_changes", []) or ([{"change_type": "CONTROLLED_REPLAY"}] if plan.get("replay") else []),
-        affected_channels=sorted({channel for row in records for channel in row["CHANNEL_IDS"]}),
+        affected_channels=affected_scope or sorted({channel for row in records for channel in row["CHANNEL_IDS"]}),
         upstream_changes=sorted({reason for row in records for reason in row.get("STALE_REASON", [])}),
         refreshed=refreshed,
         unchanged=unchanged,

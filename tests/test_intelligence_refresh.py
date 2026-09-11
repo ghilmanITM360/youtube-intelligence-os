@@ -146,3 +146,20 @@ def test_refresh_modules_contain_no_network_client_imports():
     combined = (planner.__file__ and Path(planner.__file__).read_text()) + Path(runner.__file__).read_text()
     for forbidden in ("import requests", "import urllib", "import socket", "httpx", "youtube.com"):
         assert forbidden not in combined
+
+
+def test_cross_niche_refresh_reuses_unaffected_niche():
+    old = json.loads((ROOT / "data/intelligence/system/cross-niche-strategy-calibration-2026-09-11.json").read_text())
+    calls = []
+
+    def calibrate(channels):
+        calls.append(channels)
+        return [{
+            "rule_id": row["rule_id"], "archetype_kind": row["archetype_kind"], "archetype_id": row["archetype_id"],
+            "empirical_calibration_status": row["HEALTH_RESULT"],
+            "observations": row["COUNTER_EVIDENCE"]["health_observations"],
+        } for row in old["heuristics"]]
+
+    refreshed = runner.rebuild_cross_niche(old, ["CH-000005"], calibrate=calibrate)
+    assert calls == [["CH-000003", "CH-000005"]]
+    assert refreshed == old
