@@ -1,0 +1,194 @@
+{
+  "schema_version": "channel-strategy-blueprint-1",
+  "generated_on": "2026-09-11",
+  "niche": "Senior Health",
+  "benchmark_channels": [
+    "CH-000003",
+    "CH-000005"
+  ],
+  "target_audience": {
+    "value": "Adults managing their own or a family member's senior/aging-related health concerns, seeking clear, non-alarmist explanation before a doctor visit.",
+    "source": "CORPUS_EVIDENCE",
+    "confidence": "MEDIUM",
+    "evidence": "Derived from combined canonical topic distribution across CH-000003/CH-000005 (HEALTHY_AGING, CARDIOVASCULAR_HEALTH, METABOLIC_HEALTH families)."
+  },
+  "positioning": {
+    "value": "A doctor-led, evidence-labeled explainer channel -- distinct from both benchmark channels' individual presentation style, not a copy of either.",
+    "source": "TRAINING_HEURISTIC",
+    "confidence": "MEDIUM",
+    "evidence": "TR-018-REC-004 (differentiated promise) + TR-011-017 (truth-hierarchy operating system)."
+  },
+  "niche_boundaries": {
+    "value": "Senior/aging-adult health explanation and risk-awareness content; explicitly not diagnosis, treatment, or medication guidance.",
+    "source": "OFFICIAL_PLATFORM_KNOWLEDGE",
+    "confidence": "HIGH",
+    "evidence": "Medical content requires MEDICAL_VALIDATION_STATUS; this repository never treats competitor transcript claims as medical fact."
+  },
+  "core_content_pillars": [
+    {
+      "pillar": "CARDIOVASCULAR_HEALTH",
+      "combined_item_count": 32,
+      "source": "CORPUS_EVIDENCE"
+    },
+    {
+      "pillar": "HEALTHY_AGING",
+      "combined_item_count": 22,
+      "source": "CORPUS_EVIDENCE"
+    },
+    {
+      "pillar": "METABOLIC_HEALTH",
+      "combined_item_count": 7,
+      "source": "CORPUS_EVIDENCE"
+    }
+  ],
+  "robust_cross_channel_patterns": [
+    {
+      "pattern": "hook:NUMBER_LED",
+      "claim": "Leading a hook with a concrete number increases relative performance.",
+      "source": "BENCHMARK_PATTERN",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "channel_specific_patterns_to_avoid_copying": [
+    {
+      "pattern": "script:CALCULATED_ESCALATION",
+      "claim": "Calculated-escalation script structure increases relative performance.",
+      "source": "BENCHMARK_PATTERN",
+      "note": "significant in only one benchmark channel -- do not generalize"
+    }
+  ],
+  "weak_or_conflicting_patterns": [
+    {
+      "pattern": "title:NUMBERED_SPECIFICITY",
+      "classification": "CONFLICTING_PATTERN",
+      "source": "BENCHMARK_PATTERN"
+    },
+    {
+      "pattern": "hook:CONTEXT_FIRST",
+      "classification": "CONFLICTING_PATTERN",
+      "source": "BENCHMARK_PATTERN"
+    }
+  ],
+  "underexploited_opportunities": [],
+  "title_language": {
+    "value": "Prefer WARNING_OR_RISK and NUMBERED_SPECIFICITY structures where a channel's own evidence supports them; do not assume either transfers to a new channel with zero data.",
+    "source": "BENCHMARK_PATTERN",
+    "confidence": "LOW"
+  },
+  "thumbnail_language": {
+    "value": "NOT_AVAILABLE for CH-000001/CH-000002-style gap; where thumbnail evidence exists (CH-000003/CH-000005), favor bright/natural colors, bold fonts, one big idea per the Packaging SOP.",
+    "source": "TRAINING_HEURISTIC",
+    "confidence": "LOW",
+    "rule_id": "TR-011-004"
+  },
+  "hook_principles": {
+    "value": "Use the Context Lean -> Scroll-Stop -> Snapback structure as a diagnostic lens for drafts; do not assume a fixed hook archetype outperforms until the new channel has >=3 items in that archetype.",
+    "source": "TRAINING_HEURISTIC",
+    "confidence": "LOW",
+    "rule_id": "TR-011-002"
+  },
+  "script_structures": {
+    "value": "Favor calculated-escalation / causal consequence-chain structuring as a baseline discipline; treat it as structurally common rather than a differentiator per current corpus calibration.",
+    "source": "CORPUS_EVIDENCE",
+    "confidence": "MEDIUM",
+    "rule_id": "TR-011-015"
+  },
+  "format_strategy": {
+    "value": "Start long-form only (matches both benchmark channels' canonical evidence); do not add Shorts on the same channel without an explicit test, per the unresolved CLM-005/CLM-018 conflict.",
+    "source": "OFFICIAL_PLATFORM_KNOWLEDGE",
+    "confidence": "LOW",
+    "rule_id": "TR-018-CLM-018"
+  },
+  "differentiation": {
+    "value": "Make one explicit, consistently-kept audience promise per TR-018-REC-004 rather than replicating either benchmark channel's topic mix wholesale.",
+    "source": "TRAINING_HEURISTIC",
+    "confidence": "MEDIUM"
+  },
+  "first_10_experiment_categories": [
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-01",
+      "CATEGORY": "HOOK_NUMBER_LED",
+      "SOURCE": "BENCHMARK_PATTERN",
+      "RATIONALE": "Leading a hook with a concrete number increases relative performance.",
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-02",
+      "CATEGORY": "TOPIC_PILLAR_CARDIOVASCULAR_HEALTH",
+      "SOURCE": "CORPUS_EVIDENCE",
+      "RATIONALE": "observed across benchmark channels (32 canonical items combined)",
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-03",
+      "CATEGORY": "TOPIC_PILLAR_HEALTHY_AGING",
+      "SOURCE": "CORPUS_EVIDENCE",
+      "RATIONALE": "observed across benchmark channels (22 canonical items combined)",
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-04",
+      "CATEGORY": "TOPIC_PILLAR_METABOLIC_HEALTH",
+      "SOURCE": "CORPUS_EVIDENCE",
+      "RATIONALE": "observed across benchmark channels (7 canonical items combined)",
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-05",
+      "CATEGORY": "TR-018-REC-002",
+      "SOURCE": "TRAINING_HEURISTIC",
+      "RATIONALE": "Do not disable subscriber notifications merely to game recommendations; inspect subscriber-source behavior separately.",
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-06",
+      "CATEGORY": "TR-018-REC-003",
+      "SOURCE": "TRAINING_HEURISTIC",
+      "RATIONALE": "Align channels with audiences and brand promises; choose same-channel vs separate-channel formats by audience overlap and creator goals, not a universal rule.",
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-07",
+      "CATEGORY": "TR-018-REC-004",
+      "SOURCE": "TRAINING_HEURISTIC",
+      "RATIONALE": "Find differentiated value and make a consistent promise to a defined audience rather than becoming the Nth interchangeable treatment of a topic.",
+      "CONFIDENCE": "LOW"
+    }
+  ],
+  "metrics_to_monitor": {
+    "available_now": [
+      "views_per_day (within-channel normalized)",
+      "channel_median_ratio",
+      "family repeatability",
+      "archetype repeatability"
+    ],
+    "not_available_until_first_party_analytics": [
+      "CTR",
+      "IMPRESSIONS",
+      "RETENTION",
+      "AVD",
+      "WATCH_TIME",
+      "TRAFFIC_SOURCES",
+      "NEW_CASUAL_REGULAR_VIEWERS",
+      "AUDIENCE_OVERLAP"
+    ]
+  },
+  "falsification_criteria": [
+    "A ROBUST_CROSS_CHANNEL_PATTERN used here fails to reach REPEATABLE_PATTERN status (>=3 items, consistent direction) within the new channel's first 10-15 uploads.",
+    "A TOPIC_PILLAR experiment category produces a WEAK_FAMILY or ONE_OFF_DEPENDENT classification instead of REPEATABLE_WINNER_FAMILY after 5+ items."
+  ],
+  "guardrails": {
+    "no_copying_one_competitor": true,
+    "no_causal_claims_from_public_correlation": true,
+    "private_analytics_not_available": [
+      "CTR",
+      "IMPRESSIONS",
+      "RETENTION",
+      "AVD",
+      "WATCH_TIME",
+      "TRAFFIC_SOURCES",
+      "NEW_CASUAL_REGULAR_VIEWERS",
+      "AUDIENCE_OVERLAP"
+    ]
+  }
+}

@@ -1,0 +1,1079 @@
+{
+  "schema_version": "youtube-strategy-training-knowledge-1",
+  "generated_on": "2026-09-11",
+  "source_inventory": {
+    "supplied_zip": {
+      "filename": "all training data of youtube 2.zip",
+      "sha256": "3567072fa8081b414a4c897cfdbf343d371fddf7fe3c1dcdef4b70b43eaa65b8",
+      "byte_size": 5192483,
+      "substantive_file_count": 15,
+      "dedup_verdict": "EXACT_DUPLICATE",
+      "dedup_target": "DS-000011",
+      "note": "All 15 substantive members are byte-identical (SHA-256) to 15 of the 17 files already registered under DS-000011. No new evidence; no new dataset registered."
+    },
+    "supplied_xlsx": {
+      "filename": "Youtube Algorithm Explained (2026) .xlsx",
+      "sha256": "10290b46f6894f09e7039394b09da3ea5fa3cdbd93aca82c34a02a0d0ce9494a",
+      "byte_size": 506708,
+      "row_count": 63,
+      "unique_source_count": 62,
+      "duplicate_groups": [
+        {
+          "rows": [
+            "51.0",
+            "52.0"
+          ],
+          "reason": "identical content_hash within the workbook"
+        }
+      ],
+      "dedup_verdict": "VARIANT",
+      "dedup_target": "DS-000018",
+      "note": "Row-for-row content matches (difflib quick_ratio >=0.92, mostly >=0.98 after stripping hyperlinks/URLs) the 63-tab '2026 Algorithm Update' Google Docs snapshot already registered as DS-000018. DS-000018 additionally contains one video (tab-47) absent from this workbook. No new dataset registered; this is a reformatted re-export of already-captured evidence."
+    }
+  },
+  "rules": [
+    {
+      "RULE_ID": "TR-011-001",
+      "DOMAIN": "CREATIVE_VISUAL",
+      "RULE_TYPE": "CREATIVE_FRAMEWORK",
+      "RULE_TEXT": "Six AI engines can be assigned cinematic 'filmmaker persona' lenses (strengths/weaknesses/psychological mode) for collaborative script and story analysis.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000001 Engine-by-Engine Personality & Lens",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "AI-collaboration workflow meta-framework only.",
+      "PROHIBITED_USE": "Do not treat engine 'personalities' as a platform ranking mechanism.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-002",
+      "DOMAIN": "HOOK",
+      "RULE_TYPE": "CREATIVE_FRAMEWORK",
+      "RULE_TEXT": "The 3-Step Hook Formula: Context Lean (establish a relatable frame) -> Scroll-Stop word/beat (pattern interrupt) -> Contrarian Snapback (reveal the real, counter-expectation payoff).",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000002/DOC-000003 Hook (1).pdf / Hook guide.pdf (proven byte-identical pair)",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "MIXED",
+      "SAFE_DOWNSTREAM_USE": "Diagnostic lens for reviewing an existing hook's structure (maps to the CONTEXT_FIRST measured hook archetype).",
+      "PROHIBITED_USE": "Do not claim this guarantees retention -- retention itself is NOT_AVAILABLE in this corpus.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-011-003",
+      "DOMAIN": "HOOK",
+      "RULE_TYPE": "DIAGNOSTIC_HEURISTIC",
+      "RULE_TEXT": "Intro Analyzer: judge a video's first 0-30 seconds for hook clarity, curiosity, emotional tone, and algorithmic fit.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000004 Intro Analyzer Prompts",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Qualitative checklist for reviewing a hook/intro draft.",
+      "PROHIBITED_USE": "Do not convert 'algorithmic fit' language into a measured ranking signal.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-004",
+      "DOMAIN": "PACKAGING",
+      "RULE_TYPE": "CREATOR_HEURISTIC",
+      "RULE_TEXT": "Packaging SOP: know the target audience first; thumbnails should use bright/natural colors, bold/big fonts with fewer words, and sell one big idea; titles should be short (one sentence) and matched to broad-vs-narrow targeting.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000005 Packaging (Thumbnail/Title) - SOP",
+      "SOURCE_QUALITY": "HUMAN_AUTHORED_DIRECT",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "CORPUS_PARTIALLY_SUPPORTED",
+      "SAFE_DOWNSTREAM_USE": "Packaging design checklist; genuineness ('no fake attention') aligns with official satisfaction guardrail.",
+      "PROHIBITED_USE": "Do not treat the stated '10%+ CTR' figure as a universal target -- no fixed CTR target exists.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-011-005",
+      "DOMAIN": "RETENTION_HEURISTIC",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "The same SOP claims a video's first ~10 seconds function as 'the new packaging' because YouTube autoplays, so early-video CTR-like effects matter as much as thumbnail/title.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000005 Packaging (Thumbnail/Title) - SOP",
+      "SOURCE_QUALITY": "HUMAN_AUTHORED_DIRECT",
+      "PRIMARY_VALIDATION_STATUS": "NOT_CURRENTLY_VERIFIABLE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Treat as an unverified creator hypothesis about autoplay behavior.",
+      "PROHIBITED_USE": "Do not present as an official platform mechanism; first-30-second retention data is NOT_AVAILABLE here.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-006",
+      "DOMAIN": "STORYTELLING",
+      "RULE_TYPE": "CREATIVE_FRAMEWORK",
+      "RULE_TEXT": "Renae Creative Engine v2.5: a 7-engine architecture fusing cinematic storytelling, emotional psychology, and the 16 Commandments of Storytelling into one authoring system.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000006 Renae_Creative_Engine_v2.5_Unified_Intelligence_Blueprint",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Meta-framework for script review; individual commandments (see TR-011-014) are the calibratable unit.",
+      "PROHIBITED_USE": "Do not treat as a validated retention mechanism.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-007",
+      "DOMAIN": "SCRIPT",
+      "RULE_TYPE": "DIAGNOSTIC_HEURISTIC",
+      "RULE_TEXT": "Script Analyzer: judge a full script's hook, narrative spine, cinematic imagination, retention mechanics, CTA/monetization, and title/thumbnail alignment.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000007 Script Analyzer",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "CORPUS_PARTIALLY_SUPPORTED",
+      "SAFE_DOWNSTREAM_USE": "Maps to the measured CALCULATED_ESCALATION/CONSEQUENCE_CHAIN script archetypes as a diagnostic lens.",
+      "PROHIBITED_USE": "Do not infer retention from this checklist alone -- retention stays NOT_AVAILABLE.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-011-008",
+      "DOMAIN": "CREATIVE_VISUAL",
+      "RULE_TYPE": "PROMPTING_TECHNIQUE",
+      "RULE_TEXT": "'Nano-Banana' prompt structure guide for AI image generation/editing: prompt structure, editing verbs, camera/lighting glossary, master prompt template.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000008 The Ultimate Nano-Banana Prompt Guide",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Thumbnail/creative asset prompting reference only.",
+      "PROHIBITED_USE": "Not a channel-strategy or algorithm rule.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-009",
+      "DOMAIN": "CREATIVE_VISUAL",
+      "RULE_TYPE": "PROMPTING_TECHNIQUE",
+      "RULE_TEXT": "Google VEO 3 prompting playbook: capabilities, prompt formulas, dialogue/audio, camera language, and JSON prompting for AI video generation.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000009 Ultimate Google VEO 3 Prompt Guide for VIRAL Videos",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "AI-video prompting reference only.",
+      "PROHIBITED_USE": "Not a channel-strategy or algorithm rule; the phrase 'for VIRAL videos' is marketing framing, not a validated outcome.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-010",
+      "DOMAIN": "HOOK",
+      "RULE_TYPE": "DIAGNOSTIC_HEURISTIC",
+      "RULE_TEXT": "Viral Checklist item -- Audience Pain Point: name a specific pain/desire/challenge the audience already has.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000010 Viral Checklist (Codie Sanchez), item 1",
+      "SOURCE_QUALITY": "CREATOR_ATTRIBUTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Hook/title drafting checklist item.",
+      "PROHIBITED_USE": "Not independently measurable from title/hook archetype fields alone.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-011",
+      "DOMAIN": "TITLE",
+      "RULE_TYPE": "DIAGNOSTIC_HEURISTIC",
+      "RULE_TEXT": "Viral Checklist item -- Specificity & Numbers: stats, details, or concrete numbers make a hook/title more actionable.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000010 Viral Checklist (Codie Sanchez), item 5",
+      "SOURCE_QUALITY": "CREATOR_ATTRIBUTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "MIXED",
+      "SAFE_DOWNSTREAM_USE": "Directly calibratable against the measured NUMBERED_SPECIFICITY title archetype and NUMBER_LED hook archetype.",
+      "PROHIBITED_USE": "Do not generalize a single channel's positive result to all channels -- see cross-channel evidence.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-011-012",
+      "DOMAIN": "HOOK",
+      "RULE_TYPE": "DIAGNOSTIC_HEURISTIC",
+      "RULE_TEXT": "Viral Checklist item -- Contrarian Thinking: an idea that challenges conventional wisdom.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000010 Viral Checklist (Codie Sanchez), item 4",
+      "SOURCE_QUALITY": "CREATOR_ATTRIBUTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "INSUFFICIENT_EVIDENCE",
+      "SAFE_DOWNSTREAM_USE": "Maps to the measured COUNTERINTUITIVE_PREMISE hook archetype, which is corpus-wide too sparse (1-2 items/channel) to calibrate -- see the CH-000001 single-item 281x ratio counter-example.",
+      "PROHIBITED_USE": "Do not promote the single extreme CH-000001 counterintuitive-premise ratio into a general rule -- one item is not a repeatable pattern.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-013",
+      "DOMAIN": "TITLE",
+      "RULE_TYPE": "CREATIVE_FRAMEWORK",
+      "RULE_TEXT": "Title Analyzer: opens with creator notes on title psychology and 7 viral title formulas, framed against YouTube's 'Viewer Satisfaction' signal language, before AI-persona title-rewrite prompts.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000011 YouTube Title Analyzer",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_CURRENTLY_VERIFIABLE",
+      "EMPIRICAL_CALIBRATION_STATUS": "INSUFFICIENT_EVIDENCE",
+      "SAFE_DOWNSTREAM_USE": "Title-drafting checklist; the 7 formulas map loosely onto measured title archetypes (QUESTION, NUMBERED_SPECIFICITY, WARNING_OR_RISK, ...).",
+      "PROHIBITED_USE": "Do not treat 'Viewer Satisfaction' language here as equivalent to the official Appeal/Engagement/Satisfaction framework without independent confirmation.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-014",
+      "DOMAIN": "STORYTELLING",
+      "RULE_TYPE": "CREATIVE_FRAMEWORK",
+      "RULE_TEXT": "16 Commandments of Storytelling: script quality judged across story arc, promise alignment, narrative spine, retention engineering, and cinematic energy.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000017 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated)",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "CORPUS_PARTIALLY_SUPPORTED",
+      "SAFE_DOWNSTREAM_USE": "'Promise alignment' commandment maps directly to the HOOK_PROMISE_MATCH root-cause layer already used in unified plan coherence checks.",
+      "PROHIBITED_USE": "Do not treat commandment adherence as a guaranteed retention driver -- retention is NOT_AVAILABLE.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-011-015",
+      "DOMAIN": "STORYTELLING",
+      "RULE_TYPE": "CREATIVE_FRAMEWORK",
+      "RULE_TEXT": "'BUT/THEREFORE' causal storytelling: chain scenes and script beats with 'but' (complication) and 'therefore' (consequence) instead of flat 'and then' sequencing.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000015 The Magic of 'BUT' and 'THEREFORE' in Storytelling",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "CORPUS_SUPPORTED",
+      "SAFE_DOWNSTREAM_USE": "Maps to the measured CONSEQUENCE_CHAIN script archetype (causal escalation) as a diagnostic lens.",
+      "PROHIBITED_USE": "Do not claim causal-chain scripting causes higher retention -- retention is NOT_AVAILABLE; only views-per-day association is measured.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-011-016",
+      "DOMAIN": "SEO",
+      "RULE_TYPE": "DIAGNOSTIC_HEURISTIC",
+      "RULE_TEXT": "YouTube Video SEO checklist: phase-by-phase keyword research, script/video-quality optimization, title/description/tag optimization, and thumbnail SEO.",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000016 YouTube Video SEO - COMPLETE CHECKLIST DOCUMENT",
+      "SOURCE_QUALITY": "HUMAN_AUTHORED_DIRECT",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Publishing/metadata checklist.",
+      "PROHIBITED_USE": "Do not treat keyword-density claims as a confirmed ranking mechanism.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-011-017",
+      "DOMAIN": "CHANNEL_STRATEGY",
+      "RULE_TYPE": "CREATIVE_FRAMEWORK",
+      "RULE_TEXT": "'YouTube Intelligence Brain v1' operating system: unifies research, ideation, packaging, scripting, retention engineering, SEO, and publishing for a senior-health/doctor-led channel around an explicit truth-hierarchy and evidence-labeling discipline (this repository's own evidence-layer vocabulary traces to this document).",
+      "SOURCE_ID": "DS-000011",
+      "SOURCE_LOCATOR": "DOC-000013 YouTube Intelligence Brain v1.0 - Verified Creator Operating System",
+      "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
+      "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Directly relevant meta-framework for the CH-000003/CH-000005 senior-health/health niche diagnosis and blueprint.",
+      "PROHIBITED_USE": "Do not treat as validated platform mechanism; it is a creator operating-system template.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-001",
+      "DOMAIN": "AUDIENCE",
+      "RULE_TYPE": "PLATFORM_FACT",
+      "RULE_TEXT": "Recommendations are selected per-viewer at surface load time, using viewer history and current context to rank candidates for that viewer.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-001",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "General personalization framing.",
+      "PROHIBITED_USE": "Do not infer a specific ranking formula from this.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-002",
+      "DOMAIN": "AUDIENCE",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "Early subscriber response is not one global verdict; the system can learn different responses for subscribers, non-subscribers, and new viewers.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-002",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Bounded hypothesis only.",
+      "PROHIBITED_USE": "Do not assume an exact three-cohort training architecture.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-003",
+      "DOMAIN": "PUBLISHING",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "Initial performance is not the sole basis for later recommendations; evergreen videos may receive most views well after publication.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-003",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Supports LONGITUDINAL_TREND=NOT_AVAILABLE discipline (later discovery is possible but not measured here).",
+      "PROHIBITED_USE": "Do not claim a majority-of-lifetime-views outcome as measured.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-004",
+      "DOMAIN": "RETENTION_HEURISTIC",
+      "RULE_TYPE": "PLATFORM_FACT",
+      "RULE_TEXT": "Long-term viewer value is the broad ranking objective; ranking uses multiple context-dependent signals rather than one universal metric or fixed weight.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-004",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Grounds the 'no single success score' system rule.",
+      "PROHIBITED_USE": "Do not collapse into one score.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-005",
+      "DOMAIN": "CHANNEL_STRATEGY",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "Channels should align with audiences; recommendations may still distinguish topic, length, Shorts/long-form/podcast/live-stream preferences within one channel.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-005",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Bounded hypothesis; conflicts with CLM-018.",
+      "PROHIBITED_USE": "Do not treat mixing formats on one channel as risk-free.",
+      "CONFLICTS": [
+        "TR-018-CLM-018"
+      ],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-006",
+      "DOMAIN": "AUDIENCE",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "A suggested video need not share the current video's topic; personalization can connect cross-topic videos through a viewer's broader interests.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-006",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "General framing only.",
+      "PROHIBITED_USE": "No exact cross-topic matcher mechanism is established.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-007",
+      "DOMAIN": "CHANNEL_STRATEGY",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "New channels/fresh videos can be matched to viewers without prior channel-viewer history, using topical preferences and subject understanding.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-007",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Supports new-channel blueprint cold-start framing.",
+      "PROHIBITED_USE": "No exact first-upload audience-assignment mechanism is established.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-008",
+      "DOMAIN": "AUDIENCE",
+      "RULE_TYPE": "PLATFORM_FACT",
+      "RULE_TEXT": "A subscription does not imply interest in every upload; the system seeks the interested subset rather than relying on aggregate subscriber click behavior.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-008",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Subscribers are not a guaranteed audience.",
+      "PROHIBITED_USE": "No numerical subscriber-CTR gate is validated.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-009",
+      "DOMAIN": "FORMAT",
+      "RULE_TYPE": "PLATFORM_FACT",
+      "RULE_TEXT": "Literal near-identical templated repetition may be treated as spam, while a reusable format with genuinely differing episodes can remain acceptable.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-009",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Supports 'repeatable format' vs 'templated spam' distinction in family health labeling.",
+      "PROHIBITED_USE": "Do not infer a specific ranking penalty.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-010",
+      "DOMAIN": "PUBLISHING",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "A subscription-feed recommendation shelf can select from subscribed channels using recent interests while a chronological feed remains available below it.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-010",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Bounded context only.",
+      "PROHIBITED_USE": "Do not assume universal rollout.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-011",
+      "DOMAIN": "AUDIENCE",
+      "RULE_TYPE": "PLATFORM_FACT",
+      "RULE_TEXT": "Watch history is an important recommendation input because it indicates viewer interests.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-011",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "General framing.",
+      "PROHIBITED_USE": "No universal cross-surface weight is asserted.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-012",
+      "DOMAIN": "TOPIC",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "A translated creator transcript claims YouTube uses a large recommender model and semantic IDs derived from metadata, frames, audio, pacing, and format.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-012",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Only the audiovisual-embedding portion has primary support.",
+      "PROHIBITED_USE": "Do not assert the full metadata/pacing/format bundle as confirmed.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-013",
+      "DOMAIN": "TOPIC",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "The same transcript claims semantic IDs connect to watch-history clusters representing recent formats, styles, interests, and mood.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-013",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_CURRENTLY_VERIFIABLE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Do not use as a working assumption.",
+      "PROHIBITED_USE": "Private mood-cluster linkage is not publicly verifiable.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-014",
+      "DOMAIN": "FORMAT",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "A strategist reports TV viewing rising from ~23-24% to over 50% of selected clients' viewing.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-014",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Do not use as a working assumption.",
+      "PROHIBITED_USE": "Self-reported client sample lacks underlying data.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-015",
+      "DOMAIN": "FORMAT",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "A strategist reports mean/median long-form duration increased 51% since 2020 across a 100-billion-view analysis.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-015",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Do not use as a working assumption.",
+      "PROHIBITED_USE": "No universal ideal-length rule follows even if true.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-016",
+      "DOMAIN": "THUMBNAIL",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "Experiments with larger, fewer homepage thumbnails allegedly improved selection/long-form viewing while smaller/new-channel recommendations stayed near the top.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-016",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Do not use as a working assumption.",
+      "PROHIBITED_USE": "No direct official record for the claimed outcome.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-017",
+      "DOMAIN": "THUMBNAIL",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "Shorts thumbnails do not appear in the swipe feed but can matter in search, browse, and Shorts-shelf contexts.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-017",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Bounded context only.",
+      "PROHIBITED_USE": "Do not generalize beyond search/browse/shelf contexts.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-CLM-018",
+      "DOMAIN": "CHANNEL_STRATEGY",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "A creator claims Shorts and long-form use separate algorithms/audiences and should not share a channel.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-CLM-018",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "CONTRADICTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Preserve the conflict with CLM-005; do not resolve by assertion.",
+      "PROHIBITED_USE": "Do not present as settled platform fact -- it is contradicted.",
+      "CONFLICTS": [
+        "TR-018-CLM-005"
+      ],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-INT-001",
+      "DOMAIN": "TOPIC",
+      "RULE_TYPE": "SOURCE_INTERPRETATION",
+      "RULE_TEXT": "A speaker frames YouTube discovery history as keyword -> attention -> interest -> 'semantic' eras.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-INT-001",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Historical narrative framing only.",
+      "PROHIBITED_USE": "Do not present as an official platform timeline.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-INT-002",
+      "DOMAIN": "TOPIC",
+      "RULE_TYPE": "SOURCE_INTERPRETATION",
+      "RULE_TEXT": "Semantic matching is interpreted as reducing the value of generic content/subscriber totals relative to specific content for a clearly understood viewer.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-INT-002",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Strategic hypothesis for niche specificity.",
+      "PROHIBITED_USE": "Not a measured platform rule.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-INT-003",
+      "DOMAIN": "FORMAT",
+      "RULE_TYPE": "SOURCE_INTERPRETATION",
+      "RULE_TEXT": "TV friction/lean-back viewing is interpreted as favoring recognizable, show-like, bingeable, sometimes longer videos.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-INT-003",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Not a working assumption; participants describe divergent personal behavior.",
+      "PROHIBITED_USE": "Do not treat as universal.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-INT-004",
+      "DOMAIN": "CHANNEL_STRATEGY",
+      "RULE_TYPE": "SOURCE_INTERPRETATION",
+      "RULE_TEXT": "Personality/personal connection is argued to become a stronger differentiator as high-production spectacle becomes easier to imitate.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-INT-004",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Creator-strategy interpretation only.",
+      "PROHIBITED_USE": "Not a measured platform rule.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-INT-005",
+      "DOMAIN": "FORMAT",
+      "RULE_TYPE": "SOURCE_INTERPRETATION",
+      "RULE_TEXT": "A strategist speculates the mature long-form recommender is more sophisticated than the newer Shorts recommender.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-INT-005",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_CURRENTLY_VERIFIABLE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Personal judgment, explicitly framed as such by the speaker.",
+      "PROHIBITED_USE": "Do not present as fact.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-REC-001",
+      "DOMAIN": "RETENTION_HEURISTIC",
+      "RULE_TYPE": "CREATOR_HEURISTIC",
+      "RULE_TEXT": "Compare analytics against similar videos, inspect retention-drop points and like rates, and combine metrics with direct audience feedback.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-001",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Sound practice; retention-drop data itself is NOT_AVAILABLE in this corpus.",
+      "PROHIBITED_USE": "Do not fabricate retention-drop values to follow this recommendation.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-REC-002",
+      "DOMAIN": "AUDIENCE",
+      "RULE_TYPE": "CREATOR_HEURISTIC",
+      "RULE_TEXT": "Do not disable subscriber notifications merely to game recommendations; inspect subscriber-source behavior separately.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-002",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Operational guidance.",
+      "PROHIBITED_USE": "Not applicable outside notification settings.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-REC-003",
+      "DOMAIN": "CHANNEL_STRATEGY",
+      "RULE_TYPE": "CREATOR_HEURISTIC",
+      "RULE_TEXT": "Align channels with audiences and brand promises; choose same-channel vs separate-channel formats by audience overlap and creator goals, not a universal rule.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-003",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Channel-architecture guidance; explicitly rejects a universal answer.",
+      "PROHIBITED_USE": "Do not force a single answer for every channel.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-REC-004",
+      "DOMAIN": "CHANNEL_STRATEGY",
+      "RULE_TYPE": "CREATOR_HEURISTIC",
+      "RULE_TEXT": "Find differentiated value and make a consistent promise to a defined audience rather than becoming the Nth interchangeable treatment of a topic.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-004",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Directly usable for the new-channel blueprint differentiation section.",
+      "PROHIBITED_USE": "Strategic advice, not a guaranteed outcome.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-REC-005",
+      "DOMAIN": "PUBLISHING",
+      "RULE_TYPE": "CREATOR_HEURISTIC",
+      "RULE_TEXT": "Launch with several linked videos so a viewer can continue through a coherent journey and build multiple watch-history interactions.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-005",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Usable for a new-channel launch-cohort experiment category.",
+      "PROHIBITED_USE": "Not an experimentally verified rule in this repository.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-REC-006",
+      "DOMAIN": "FORMAT",
+      "RULE_TYPE": "CREATOR_HEURISTIC",
+      "RULE_TEXT": "Develop repeatable formats into recognizable 'shows' supporting multiple episodes, binge paths, and returning-viewer relationships.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-006",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Maps to REPEATABLE_WINNER_FAMILY family-health thinking.",
+      "PROHIBITED_USE": "Do not maximize every isolated view at the expense of format identity.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "RULE_ID": "TR-018-REC-007",
+      "DOMAIN": "SEO",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "Structure scripts with an early direct answer and specific names/dates/places to make passages citation-friendly for AI answers (AEO).",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-007",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Do not use as a working assumption for ranking.",
+      "PROHIBITED_USE": "Claimed AEO ranking/citation mechanism is not independently supported.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-REC-008",
+      "DOMAIN": "CHANNEL_STRATEGY",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "Build linked off-platform profiles so a faceless channel reads as a consistent brand rather than an anonymous content farm.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-008",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Do not use as a working assumption for ranking.",
+      "PROHIBITED_USE": "Claimed platform trust signal is not established.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-REC-009",
+      "DOMAIN": "TOPIC",
+      "RULE_TYPE": "CREATOR_HEURISTIC",
+      "RULE_TEXT": "Seek specific questions/subjects not already covered well and contribute net-new information rather than generic duplication.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-009",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Usable as a content-gap research hypothesis for the new-channel blueprint.",
+      "PROHIBITED_USE": "Not established for ranking effects specifically.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "RULE_ID": "TR-018-REC-010",
+      "DOMAIN": "PUBLISHING",
+      "RULE_TYPE": "CLAIM_REQUIRING_VALIDATION",
+      "RULE_TEXT": "Prefer unlisting to deleting an underperforming video, since deletion may remove useful audience-learning data.",
+      "SOURCE_ID": "DS-000018",
+      "SOURCE_LOCATOR": "ALG26-REC-010",
+      "SOURCE_QUALITY": "CREATOR_SELF_REPORTED",
+      "PRIMARY_VALIDATION_STATUS": "PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "NOT_OBSERVABLE",
+      "SAFE_DOWNSTREAM_USE": "Operational hedge.",
+      "PROHIBITED_USE": "Platform behavior asserted without primary support.",
+      "CONFLICTS": [],
+      "CONFIDENCE": "LOW"
+    }
+  ],
+  "empirical_calibration_evidence": [
+    {
+      "rule_id": "TR-011-011",
+      "archetype_kind": "title",
+      "archetype_id": "NUMBERED_SPECIFICITY",
+      "claim": "Numbers/specificity in titles increase relative performance.",
+      "channels_evaluated": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000005"
+      ],
+      "observations": [
+        {
+          "channel_id": "CH-000001",
+          "repeatability": "MIXED_PATTERN",
+          "median_channel_relative": 0.9505,
+          "item_count": 35
+        },
+        {
+          "channel_id": "CH-000002",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 1.836,
+          "item_count": 2
+        },
+        {
+          "channel_id": "CH-000003",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 3.464,
+          "item_count": 10
+        },
+        {
+          "channel_id": "CH-000005",
+          "repeatability": "MIXED_PATTERN",
+          "median_channel_relative": 0.7663,
+          "item_count": 11
+        }
+      ],
+      "empirical_calibration_status": "MIXED",
+      "cross_channel_robustness": "CONFLICTING_PATTERN"
+    },
+    {
+      "rule_id": "TR-011-013",
+      "archetype_kind": "title",
+      "archetype_id": "QUESTION",
+      "claim": "Question-form titles increase relative performance.",
+      "channels_evaluated": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000005"
+      ],
+      "observations": [
+        {
+          "channel_id": "CH-000003",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 0.6604,
+          "item_count": 1
+        },
+        {
+          "channel_id": "CH-000005",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 1.7805,
+          "item_count": 1
+        }
+      ],
+      "empirical_calibration_status": "INSUFFICIENT_EVIDENCE",
+      "cross_channel_robustness": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "rule_id": "TR-011-002",
+      "archetype_kind": "hook",
+      "archetype_id": "CONTEXT_FIRST",
+      "claim": "Opening with context before the twist ('Context Lean') increases relative performance.",
+      "channels_evaluated": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000005"
+      ],
+      "observations": [
+        {
+          "channel_id": "CH-000001",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 3.0821,
+          "item_count": 47
+        },
+        {
+          "channel_id": "CH-000002",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 0.9102,
+          "item_count": 60
+        },
+        {
+          "channel_id": "CH-000003",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 1.2561,
+          "item_count": 11
+        },
+        {
+          "channel_id": "CH-000005",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 0.4547,
+          "item_count": 14
+        }
+      ],
+      "empirical_calibration_status": "MIXED",
+      "cross_channel_robustness": "CONFLICTING_PATTERN"
+    },
+    {
+      "rule_id": "TR-011-011",
+      "archetype_kind": "hook",
+      "archetype_id": "NUMBER_LED",
+      "claim": "Leading a hook with a concrete number increases relative performance.",
+      "channels_evaluated": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000005"
+      ],
+      "observations": [
+        {
+          "channel_id": "CH-000001",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 0.6938,
+          "item_count": 36
+        },
+        {
+          "channel_id": "CH-000002",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 1.6153,
+          "item_count": 4
+        },
+        {
+          "channel_id": "CH-000003",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 1.0103,
+          "item_count": 19
+        },
+        {
+          "channel_id": "CH-000005",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 1.455,
+          "item_count": 11
+        }
+      ],
+      "empirical_calibration_status": "MIXED",
+      "cross_channel_robustness": "CONFLICTING_PATTERN"
+    },
+    {
+      "rule_id": "TR-011-012",
+      "archetype_kind": "hook",
+      "archetype_id": "COUNTERINTUITIVE_PREMISE",
+      "claim": "A counterintuitive/contrarian premise hook increases relative performance.",
+      "channels_evaluated": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000005"
+      ],
+      "observations": [
+        {
+          "channel_id": "CH-000001",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 281.62,
+          "item_count": 1
+        },
+        {
+          "channel_id": "CH-000002",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 0.1689,
+          "item_count": 1
+        },
+        {
+          "channel_id": "CH-000003",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 0.6112,
+          "item_count": 2
+        },
+        {
+          "channel_id": "CH-000005",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 1.8331,
+          "item_count": 1
+        }
+      ],
+      "empirical_calibration_status": "INSUFFICIENT_EVIDENCE",
+      "cross_channel_robustness": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "rule_id": "TR-011-007",
+      "archetype_kind": "script",
+      "archetype_id": "CALCULATED_ESCALATION",
+      "claim": "Calculated-escalation script structure increases relative performance.",
+      "channels_evaluated": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000005"
+      ],
+      "observations": [
+        {
+          "channel_id": "CH-000001",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 0.9683,
+          "item_count": 62
+        },
+        {
+          "channel_id": "CH-000002",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 0.9864,
+          "item_count": 64
+        },
+        {
+          "channel_id": "CH-000003",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 1.0103,
+          "item_count": 31
+        },
+        {
+          "channel_id": "CH-000005",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 1.0804,
+          "item_count": 28
+        }
+      ],
+      "empirical_calibration_status": "CORPUS_PARTIALLY_SUPPORTED",
+      "cross_channel_robustness": "CHANNEL_SPECIFIC_PATTERN"
+    },
+    {
+      "rule_id": "TR-011-015",
+      "archetype_kind": "script",
+      "archetype_id": "CONSEQUENCE_CHAIN",
+      "claim": "Causal consequence-chain ('but/therefore') script structure increases relative performance.",
+      "channels_evaluated": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000005"
+      ],
+      "observations": [
+        {
+          "channel_id": "CH-000001",
+          "repeatability": "REPEATABLE_PATTERN",
+          "median_channel_relative": 1.3359,
+          "item_count": 31
+        },
+        {
+          "channel_id": "CH-000002",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 3.9482,
+          "item_count": 1
+        },
+        {
+          "channel_id": "CH-000003",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 0.6374,
+          "item_count": 1
+        },
+        {
+          "channel_id": "CH-000005",
+          "repeatability": "INSUFFICIENT_SAMPLE",
+          "median_channel_relative": 0.4444,
+          "item_count": 1
+        }
+      ],
+      "empirical_calibration_status": "CORPUS_SUPPORTED",
+      "cross_channel_robustness": "CHANNEL_SPECIFIC_PATTERN"
+    }
+  ],
+  "guardrails": {
+    "prohibited_scores": [
+      "CHANNEL_SUCCESS_SCORE",
+      "VIRALITY_SCORE",
+      "ALGORITHM_SCORE",
+      "CHANNEL_HEALTH_PERCENTAGE"
+    ],
+    "causality_status": "ASSOCIATION_ONLY_EVERYWHERE",
+    "private_metrics_not_inferred": [
+      "CTR",
+      "IMPRESSIONS",
+      "RETENTION",
+      "AVD",
+      "WATCH_TIME",
+      "TRAFFIC_SOURCES",
+      "NEW_CASUAL_REGULAR_VIEWERS",
+      "AUDIENCE_OVERLAP"
+    ]
+  }
+}
