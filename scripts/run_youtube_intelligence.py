@@ -37,6 +37,16 @@ PRIVATE_METRICS = [
 
 MEDICAL_CHANNELS = {"CH-000003", "CH-000005"}
 
+
+def _medical_validation(channel_id, external_validation):
+    """MEDICAL_VALIDATION_STATUS is never inferred from competitor transcript
+    claims -- only an actual EXTERNAL_VALIDATION source counts."""
+    if channel_id not in MEDICAL_CHANNELS:
+        return "NOT_APPLICABLE", []
+    if isinstance(external_validation, dict) and external_validation.get("state") == "EXTERNAL_VALIDATION":
+        return "PARTIALLY_VALIDATED", [external_validation["source"]]
+    return "VALIDATION_REQUIRED", []
+
 OFFICIAL_YOUTUBE_GUARDRAILS = {
     "appeal": "Topic/package gets viewer interest and communicates value.",
     "engagement": "Viewer response after choosing to watch.",
@@ -233,14 +243,41 @@ def _from_composed_blueprint(channel_id, opportunity_id, blueprint, availability
         "channel_wide_editing_style": "NOT_SUPPORTED",
     }
 
+    linkage = {
+        "OPPORTUNITY_ID": opportunity_id,
+        "PACKAGE_LINKS": [package.get("package_id")],
+        "HOOK_LINKS": [hook.get("hook_id")],
+        "SCRIPT_BLUEPRINT_LINK": script.get("blueprint_id"),
+        "EVIDENCE_OVERLAP": {
+            "opportunity_evidence_video_ids": sorted(blueprint.get("evidence", []) or []),
+            "hook_overlap_video_ids": hook.get("supporting_video_ids", []),
+            "script_overlap_video_ids": script.get("supporting_video_ids", []),
+        },
+        "SEMANTIC_MATCH": "FULL_MATCH",
+        "PROMISE_MATCH": "FULL_MATCH" if hook.get("package_link") == package.get("package_id") else "PARTIAL_MATCH",
+        "PAYOFF_MATCH": "FULL_MATCH" if hook.get("hook_id") in (script.get("hook_links") or []) else "PARTIAL_MATCH",
+        "LIMITATIONS": [],
+    }
+
     return {
         "opportunity": opportunity,
         "packaging": packaging,
         "hook": hook_out,
         "script": script_out,
         "editing": editing_out,
+        "linkage": linkage,
         "generation_state": "COMPOSED_FROM_EXISTING_BLUEPRINT",
     }
+
+
+def _match_state(archetype, overlap, evidence_ids):
+    """Honest evidence-overlap match state: never claims FULL_MATCH unless every
+    opportunity evidence video actually shares the chosen archetype."""
+    if not archetype or not overlap:
+        return "NO_MATCH"
+    if evidence_ids and set(overlap) >= set(evidence_ids):
+        return "FULL_MATCH"
+    return "PARTIAL_MATCH"
 
 
 def _from_assembled_layers(channel_id, opportunity_id, candidate, opp_package, hook_script_json, availability, cdir):
@@ -252,6 +289,8 @@ def _from_assembled_layers(channel_id, opportunity_id, candidate, opp_package, h
     script_archetype, script_overlap = best_archetype_by_evidence_overlap(
         hook_script_json.get("script_archetypes", []), evidence_ids, "script_archetype_id"
     )
+    hook_match = _match_state(hook_archetype, hook_overlap, evidence_ids)
+    script_match = _match_state(script_archetype, script_overlap, evidence_ids)
 
     test_set = opp_package.get("recommended_test_set", []) if opp_package else []
 
@@ -305,12 +344,36 @@ def _from_assembled_layers(channel_id, opportunity_id, candidate, opp_package, h
         "channel_wide_editing_style": "NOT_SUPPORTED",
     }
 
+    linkage = {
+        "OPPORTUNITY_ID": opportunity_id,
+        "PACKAGE_LINKS": [opp_package["candidate"]["candidate_id"]] if opp_package else [],
+        "HOOK_LINKS": [hook_archetype["hook_archetype_id"]] if hook_archetype else [],
+        "SCRIPT_BLUEPRINT_LINK": (script_archetype or {}).get("script_archetype_id"),
+        "EVIDENCE_OVERLAP": {
+            "opportunity_evidence_video_ids": sorted(evidence_ids),
+            "hook_overlap_video_ids": hook_overlap,
+            "script_overlap_video_ids": script_overlap,
+        },
+        "SEMANTIC_MATCH": hook_match,
+        "PROMISE_MATCH": hook_match,
+        "PAYOFF_MATCH": script_match,
+        "LIMITATIONS": (
+            ["Hook/script linkage derived by evidence-video overlap across the channel's archetype pool, "
+             "not an authored per-opportunity blueprint."]
+            + (["Hook archetype overlap is partial: not every opportunity evidence video shares the chosen hook archetype."]
+               if hook_match == "PARTIAL_MATCH" else [])
+            + (["Script archetype overlap is partial: not every opportunity evidence video shares the chosen script archetype."]
+               if script_match == "PARTIAL_MATCH" else [])
+        ),
+    }
+
     return {
         "opportunity": opportunity,
         "packaging": packaging,
         "hook": hook_out,
         "script": script_out,
         "editing": editing_out,
+        "linkage": linkage,
         "generation_state": "ASSEMBLED_FROM_LAYERS",
     }
 
@@ -358,9 +421,11 @@ def validate_coherence(channel_id, opportunity_id, plan, conn):
             dims["EDITING_VISUAL_MATCH"] = "NOT_APPLICABLE"
         dims["FORMAT_MATCH"] = "PARTIAL" if plan["packaging"]["native_ab_eligibility"] == "NOT_APPLICABLE" else "PASS"
     else:
+        match_to_verdict = {"FULL_MATCH": "PASS", "PARTIAL_MATCH": "PARTIAL", "NO_MATCH": "FAIL"}
+        linkage = plan.get("linkage") or {}
         dims["PACKAGE_PROMISE_MATCH"] = "PASS" if plan["packaging"]["selected_package"] else "FAIL"
-        dims["HOOK_PROMISE_MATCH"] = "PARTIAL" if plan["hook"]["selected_hook"] else "FAIL"
-        dims["SCRIPT_PAYOFF_MATCH"] = "PARTIAL" if plan["script"]["selected_script"] else "FAIL"
+        dims["HOOK_PROMISE_MATCH"] = match_to_verdict.get(linkage.get("SEMANTIC_MATCH"), "FAIL")
+        dims["SCRIPT_PAYOFF_MATCH"] = match_to_verdict.get(linkage.get("PAYOFF_MATCH"), "FAIL")
         dims["EDITING_VISUAL_MATCH"] = "NOT_APPLICABLE"
         dims["FORMAT_MATCH"] = "PARTIAL" if plan["packaging"]["native_ab_eligibility"] == "NOT_APPLICABLE" else "PASS"
 
@@ -420,6 +485,10 @@ def build_plan(channel_id, opportunity_id, generated_on=None):
             channel_id, opportunity_id, candidate, opp_package, hook_script_json, availability, cdir
         )
 
+    medical_validation_status, authoritative_sources = _medical_validation(
+        channel_id, layers["opportunity"].get("external_validation")
+    )
+
     plan = {
         "schema_version": SCHEMA_VERSION,
         "generated_on": generated_on or "2026-09-11",
@@ -432,6 +501,7 @@ def build_plan(channel_id, opportunity_id, generated_on=None):
         "hook": layers["hook"],
         "script": layers["script"],
         "editing": layers["editing"],
+        "linkage": layers.get("linkage"),
         "global": {
             "provenance": {
                 "topic_artifact": str(topic_path.relative_to(REPO_ROOT)),
@@ -452,6 +522,8 @@ def build_plan(channel_id, opportunity_id, generated_on=None):
                 channel_id in MEDICAL_CHANNELS
                 and layers["opportunity"].get("external_validation") == "NOT_AVAILABLE"
             ),
+            "medical_validation_status": medical_validation_status,
+            "authoritative_sources": authoritative_sources,
         },
     }
 
@@ -528,6 +600,8 @@ def render_markdown(plan):
         "",
         "## Validation Needed",
         f"- Medical validation required: {plan['global']['medical_validation_required']}",
+        f"- Medical validation status: {plan['global']['medical_validation_status']}",
+        f"- Authoritative sources: {', '.join(plan['global']['authoritative_sources']) or 'NOT_AVAILABLE'}",
         "",
         "## Provenance",
     ]
@@ -549,15 +623,17 @@ def write_outputs(plan, output_dir=None):
 
 
 def build_capability_registry(generated_on=None):
+    generated_on = generated_on or "2026-09-11"
     availability = load_editing_availability()
     channels = []
     for cdir in sorted(CHANNELS_DIR.iterdir()):
         if not cdir.is_dir():
             continue
         channel_id = cdir.name
-        has_topic = bool(list(cdir.glob("topic-opportunity-intelligence*.json")))
-        has_packaging = bool(list(cdir.glob("packaging-intelligence*.json")))
+        topic_path = _pick_current(list(cdir.glob("topic-opportunity-intelligence*.json")))
+        packaging_path = _pick_current(list(cdir.glob("packaging-intelligence*.json")))
         has_hook_script = bool(list(cdir.glob("hook-script-intelligence*.json")))
+        has_plan = bool(list(PLANS_DIR.glob(f"{channel_id}-*-content-intelligence-v1.json")))
         editing_row = availability.get(channel_id, {})
         editing_status = editing_row.get("editing_intelligence_status", "NOT_AVAILABLE")
         if editing_status == "WORKING_WITH_FORENSIC_EVIDENCE":
@@ -567,21 +643,50 @@ def build_capability_registry(generated_on=None):
             return {"status": "WORKING" if present else "NOT_AVAILABLE",
                      "reason": None if present else reason_if_missing}
 
+        limitations = []
+        acquired_thumbnails = 0
+        if packaging_path is not None:
+            acquired_thumbnails = len(load_json(packaging_path).get("thumbnail_snapshots") or [])
+        packaging_visual_working = acquired_thumbnails > 0
+        if packaging_path is not None and not packaging_visual_working:
+            limitations.append("No canonical thumbnail references acquired for this channel (title-only packaging).")
+        if not has_hook_script:
+            limitations.append("Hook/Script Intelligence not yet generalized to this channel.")
+        if editing_status != "WORKING_WITH_LIMITATIONS":
+            limitations.append("Editing/Visual Intelligence unavailable: no registered forensic video evidence.")
+        if channel_id in MEDICAL_CHANNELS:
+            limitations.append("No external authoritative medical validation source is wired in; medical claims require review.")
+
         channels.append({
             "channel_id": channel_id,
-            "TOPIC": _layer(has_topic),
-            "PACKAGING": _layer(has_packaging),
+            "TOPIC": _layer(topic_path is not None),
+            "PACKAGING": {
+                "status": "WORKING" if packaging_visual_working else "WORKING_WITH_LIMITATIONS" if packaging_path else "NOT_AVAILABLE",
+                "reason": None if packaging_visual_working else "THUMBNAIL_REFERENCE_GAP" if packaging_path else "NO_ARTIFACT_REGISTERED",
+            },
+            "PACKAGING_TITLE": _layer(packaging_path is not None),
+            "PACKAGING_VISUAL": {
+                "status": "WORKING" if packaging_visual_working else "NOT_AVAILABLE",
+                "reason": None if packaging_visual_working else "THUMBNAIL_REFERENCE_GAP",
+            },
             "HOOK": _layer(has_hook_script),
             "SCRIPT": _layer(has_hook_script),
             "EDITING": {
                 "status": editing_status,
                 "reason": editing_row.get("reason", "NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE"),
             },
+            "MEDICAL_VALIDATION": {
+                "status": "VALIDATION_REQUIRED" if channel_id in MEDICAL_CHANNELS else "NOT_APPLICABLE",
+                "reason": "NO_AUTHORITATIVE_EXTERNAL_SOURCE_WIRED_IN" if channel_id in MEDICAL_CHANNELS else None,
+            },
+            "UNIFIED_PLAN": _layer(has_plan, reason_if_missing="NOT_YET_COMPOSED"),
+            "limitations": limitations,
+            "last_verified_at": generated_on,
         })
 
     return {
-        "schema_version": "youtube-intelligence-os-v1-capabilities-1",
-        "generated_on": generated_on or "2026-09-11",
+        "schema_version": "youtube-intelligence-os-v1-capabilities-2",
+        "generated_on": generated_on,
         "channels": channels,
     }
 

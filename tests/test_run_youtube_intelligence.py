@@ -130,6 +130,106 @@ class CapabilityRegistryTests(unittest.TestCase):
         self.assertEqual(by_id["CH-000004"]["EDITING"]["status"], "WORKING_WITH_LIMITATIONS")
         self.assertEqual(by_id["CH-000005"]["EDITING"]["status"], "NOT_AVAILABLE")
 
+    def test_registry_is_not_optimistic_about_packaging_visual_gap(self):
+        by_id = {row["channel_id"]: row for row in orch.build_capability_registry()["channels"]}
+        for channel_id in ("CH-000001", "CH-000002"):
+            self.assertEqual(by_id[channel_id]["PACKAGING_TITLE"]["status"], "WORKING")
+            self.assertEqual(by_id[channel_id]["PACKAGING_VISUAL"]["status"], "NOT_AVAILABLE")
+            self.assertEqual(by_id[channel_id]["PACKAGING_VISUAL"]["reason"], "THUMBNAIL_REFERENCE_GAP")
+            self.assertEqual(by_id[channel_id]["PACKAGING"]["status"], "WORKING_WITH_LIMITATIONS")
+
+    def test_registry_reflects_working_visual_packaging_where_thumbnails_exist(self):
+        by_id = {row["channel_id"]: row for row in orch.build_capability_registry()["channels"]}
+        for channel_id in ("CH-000003", "CH-000004", "CH-000005"):
+            self.assertEqual(by_id[channel_id]["PACKAGING_VISUAL"]["status"], "WORKING")
+
+    def test_registry_lists_hook_script_as_working_for_all_channels_after_generalization(self):
+        by_id = {row["channel_id"]: row for row in orch.build_capability_registry()["channels"]}
+        for channel_id in ("CH-000001", "CH-000002", "CH-000003", "CH-000004", "CH-000005"):
+            self.assertEqual(by_id[channel_id]["HOOK"]["status"], "WORKING")
+            self.assertEqual(by_id[channel_id]["SCRIPT"]["status"], "WORKING")
+
+    def test_registry_medical_validation_only_for_health_channels(self):
+        by_id = {row["channel_id"]: row for row in orch.build_capability_registry()["channels"]}
+        self.assertEqual(by_id["CH-000003"]["MEDICAL_VALIDATION"]["status"], "VALIDATION_REQUIRED")
+        self.assertEqual(by_id["CH-000005"]["MEDICAL_VALIDATION"]["status"], "VALIDATION_REQUIRED")
+        self.assertEqual(by_id["CH-000001"]["MEDICAL_VALIDATION"]["status"], "NOT_APPLICABLE")
+
+
+class AllChannelOrchestrationTests(unittest.TestCase):
+    """Every canonical channel must compose a plan using its own strongest
+    existing candidate/opportunity -- no channel is forced to fail or to a
+    fabricated COHERENT verdict."""
+
+    OPPORTUNITIES = {
+        "CH-000001": "CH-000001-CAND-001",
+        "CH-000002": "CH-000002-CAND-001",
+        "CH-000003": "CH-000003-CAND-001",
+        "CH-000004": "CH-000004-OP-001",
+        "CH-000005": "CH-000005-CAND-001",
+    }
+
+    def test_all_five_channels_compose_without_error(self):
+        for channel_id, opportunity_id in self.OPPORTUNITIES.items():
+            plan = orch.build_plan(channel_id, opportunity_id, generated_on="2026-09-11")
+            self.assertEqual(plan["channel_id"], channel_id)
+            self.assertIn(plan["coherence"]["overall"], ("COHERENT", "PARTIAL"))
+            for metric, value in plan["global"]["unavailable_metrics"].items():
+                self.assertEqual(value, "NOT_AVAILABLE", metric)
+
+    def test_title_only_packaging_degrades_without_failing_workflow(self):
+        plan = orch.build_plan("CH-000001", "CH-000001-CAND-001", generated_on="2026-09-11")
+        self.assertTrue(plan["packaging"]["title_hypotheses"])
+        self.assertNotEqual(plan["coherence"]["overall"], "INCOHERENT")
+
+
+class CH5LinkageTests(unittest.TestCase):
+    """CH-000005's per-opportunity linkage object must honestly reflect real
+    evidence overlap -- never force a full match it cannot support."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.plan = orch.build_plan("CH-000005", "CH-000005-CAND-001", generated_on="2026-09-11")
+
+    def test_linkage_object_has_required_fields(self):
+        linkage = self.plan["linkage"]
+        for field in ("OPPORTUNITY_ID", "PACKAGE_LINKS", "HOOK_LINKS", "SCRIPT_BLUEPRINT_LINK",
+                      "EVIDENCE_OVERLAP", "SEMANTIC_MATCH", "PROMISE_MATCH", "PAYOFF_MATCH", "LIMITATIONS"):
+            self.assertIn(field, linkage)
+        self.assertEqual(linkage["OPPORTUNITY_ID"], "CH-000005-CAND-001")
+
+    def test_script_overlap_is_full_and_honestly_marked(self):
+        linkage = self.plan["linkage"]
+        evidence = set(linkage["EVIDENCE_OVERLAP"]["opportunity_evidence_video_ids"])
+        script_overlap = set(linkage["EVIDENCE_OVERLAP"]["script_overlap_video_ids"])
+        self.assertEqual(script_overlap, evidence)
+        self.assertEqual(linkage["PAYOFF_MATCH"], "FULL_MATCH")
+
+    def test_hook_overlap_is_partial_and_not_forced_to_full(self):
+        linkage = self.plan["linkage"]
+        evidence = set(linkage["EVIDENCE_OVERLAP"]["opportunity_evidence_video_ids"])
+        hook_overlap = set(linkage["EVIDENCE_OVERLAP"]["hook_overlap_video_ids"])
+        self.assertLess(hook_overlap, evidence)
+        self.assertEqual(linkage["SEMANTIC_MATCH"], "PARTIAL_MATCH")
+        self.assertEqual(linkage["PROMISE_MATCH"], "PARTIAL_MATCH")
+
+    def test_overall_coherence_not_forced_coherent(self):
+        self.assertEqual(self.plan["coherence"]["overall"], "PARTIAL")
+        self.assertEqual(self.plan["coherence"]["dimensions"]["SCRIPT_PAYOFF_MATCH"], "PASS")
+        self.assertEqual(self.plan["coherence"]["dimensions"]["HOOK_PROMISE_MATCH"], "PARTIAL")
+
+
+class MedicalValidationStatusTests(unittest.TestCase):
+    def test_health_channel_without_external_source_requires_validation(self):
+        plan = orch.build_plan("CH-000005", "CH-000005-CAND-001", generated_on="2026-09-11")
+        self.assertEqual(plan["global"]["medical_validation_status"], "VALIDATION_REQUIRED")
+        self.assertEqual(plan["global"]["authoritative_sources"], [])
+
+    def test_non_health_channel_is_not_applicable(self):
+        plan = orch.build_plan("CH-000004", "CH-000004-OP-001", generated_on="2026-09-11")
+        self.assertEqual(plan["global"]["medical_validation_status"], "NOT_APPLICABLE")
+        self.assertEqual(plan["global"]["authoritative_sources"], [])
+
 
 if __name__ == "__main__":
     unittest.main()

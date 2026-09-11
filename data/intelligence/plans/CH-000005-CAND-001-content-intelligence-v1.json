@@ -16,7 +16,7 @@
       "HOOK_PROMISE_MATCH": "PARTIAL",
       "OPPORTUNITY_MATCH": "PASS",
       "PACKAGE_PROMISE_MATCH": "PASS",
-      "SCRIPT_PAYOFF_MATCH": "PARTIAL",
+      "SCRIPT_PAYOFF_MATCH": "PASS",
       "TEMPORAL_LIMITATIONS_PRESERVED": "PASS",
       "TOPIC_MATCH": "PASS",
       "UNAVAILABLE_METRICS_DISCLOSED": "PASS"
@@ -32,9 +32,11 @@
   "generated_on": "2026-09-11",
   "generation_state": "ASSEMBLED_FROM_LAYERS",
   "global": {
+    "authoritative_sources": [],
     "evidence_quality_summary": "HYPOTHESIS",
     "generation_state": "ASSEMBLED_FROM_LAYERS",
     "medical_validation_required": true,
+    "medical_validation_status": "VALIDATION_REQUIRED",
     "platform_guardrails": {
       "appeal": "Topic/package gets viewer interest and communicates value.",
       "engagement": "Viewer response after choosing to watch.",
@@ -130,6 +132,39 @@
         "VID-000290"
       ]
     }
+  },
+  "linkage": {
+    "EVIDENCE_OVERLAP": {
+      "hook_overlap_video_ids": [
+        "VID-000290",
+        "VID-000297"
+      ],
+      "opportunity_evidence_video_ids": [
+        "VID-000290",
+        "VID-000296",
+        "VID-000297"
+      ],
+      "script_overlap_video_ids": [
+        "VID-000290",
+        "VID-000296",
+        "VID-000297"
+      ]
+    },
+    "HOOK_LINKS": [
+      "CONTEXT_FIRST"
+    ],
+    "LIMITATIONS": [
+      "Hook/script linkage derived by evidence-video overlap across the channel's archetype pool, not an authored per-opportunity blueprint.",
+      "Hook archetype overlap is partial: not every opportunity evidence video shares the chosen hook archetype."
+    ],
+    "OPPORTUNITY_ID": "CH-000005-CAND-001",
+    "PACKAGE_LINKS": [
+      "CH-000005-CAND-001"
+    ],
+    "PAYOFF_MATCH": "FULL_MATCH",
+    "PROMISE_MATCH": "PARTIAL_MATCH",
+    "SCRIPT_BLUEPRINT_LINK": "CALCULATED_ESCALATION",
+    "SEMANTIC_MATCH": "PARTIAL_MATCH"
   },
   "opportunity": {
     "angle": "Source-derived concept represented by VID-000296: Doctor Reveals: The #1 Best Fruit to Eat for Healthy Eyesight!",

@@ -1,0 +1,601 @@
+{
+  "channel": {
+    "channel_id": "CH-000001",
+    "dataset_id": "DS-000001",
+    "display_name": "Matty Invests",
+    "evidence_state": "CANONICAL_FACT",
+    "handle": "@MattyInvests"
+  },
+  "channel_id": "CH-000001",
+  "coherence": {
+    "dimensions": {
+      "CHANNEL_MATCH": "PASS",
+      "EDITING_VISUAL_MATCH": "NOT_APPLICABLE",
+      "EVIDENCE_TRACEABILITY": "PASS",
+      "FORMAT_MATCH": "PASS",
+      "HOOK_PROMISE_MATCH": "PARTIAL",
+      "OPPORTUNITY_MATCH": "PASS",
+      "PACKAGE_PROMISE_MATCH": "PASS",
+      "SCRIPT_PAYOFF_MATCH": "PARTIAL",
+      "TEMPORAL_LIMITATIONS_PRESERVED": "PASS",
+      "TOPIC_MATCH": "PASS",
+      "UNAVAILABLE_METRICS_DISCLOSED": "PASS"
+    },
+    "overall": "PARTIAL"
+  },
+  "editing": {
+    "blueprint": null,
+    "channel_wide_editing_style": "NOT_SUPPORTED",
+    "reason": "NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE",
+    "status": "NOT_AVAILABLE"
+  },
+  "generated_on": "2026-09-11",
+  "generation_state": "ASSEMBLED_FROM_LAYERS",
+  "global": {
+    "authoritative_sources": [],
+    "evidence_quality_summary": "HYPOTHESIS",
+    "generation_state": "ASSEMBLED_FROM_LAYERS",
+    "medical_validation_required": false,
+    "medical_validation_status": "NOT_APPLICABLE",
+    "platform_guardrails": {
+      "appeal": "Topic/package gets viewer interest and communicates value.",
+      "engagement": "Viewer response after choosing to watch.",
+      "no_direct_metadata_change_algorithm_boost": true,
+      "no_fixed_ctr_target": true,
+      "no_fixed_retention_target": true,
+      "no_hidden_ranking_weights": true,
+      "no_proprietary_algorithm_score": true,
+      "no_universal_ideal_video_length": true,
+      "personalization_matters": true,
+      "recommendation_surfaces_differ": true,
+      "satisfaction": "Whether viewers enjoyed/found value in the content."
+    },
+    "provenance": {
+      "canonical_dataset": "DS-000001",
+      "editing_artifact": null,
+      "hook_script_artifact": "data/intelligence/channels/CH-000001/hook-script-intelligence-2026-09-11.json",
+      "packaging_artifact": "data/intelligence/channels/CH-000001/packaging-intelligence-2026-09-10.json",
+      "topic_artifact": "data/intelligence/channels/CH-000001/topic-opportunity-intelligence-2026-09-09.json"
+    },
+    "unavailable_metrics": {
+      "AVERAGE_VIEW_DURATION": "NOT_AVAILABLE",
+      "CTR": "NOT_AVAILABLE",
+      "IMPRESSIONS": "NOT_AVAILABLE",
+      "RETENTION": "NOT_AVAILABLE",
+      "SUBSCRIBER_CONVERSION": "NOT_AVAILABLE",
+      "TRAFFIC_SOURCES": "NOT_AVAILABLE",
+      "UNIQUE_VIEWERS": "NOT_AVAILABLE",
+      "WATCH_TIME": "NOT_AVAILABLE"
+    },
+    "warnings": [
+      "EDITING NOT_AVAILABLE: NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE"
+    ]
+  },
+  "hook": {
+    "counter_evidence": [
+      "VID-000093",
+      "VID-000096"
+    ],
+    "evidence": [
+      "VID-000030",
+      "VID-000155"
+    ],
+    "hook_archetypes": [
+      "CONTEXT_FIRST"
+    ],
+    "hook_hypotheses": [
+      "Context First"
+    ],
+    "package_linkage": "EVIDENCE_OVERLAP_JOIN",
+    "selected_hook": {
+      "confidence": "HIGH",
+      "counter_examples": [
+        "VID-000093",
+        "VID-000096"
+      ],
+      "definition": "Context First",
+      "format_context": "LONG_FORM",
+      "hook_archetype_id": "CONTEXT_FIRST",
+      "interpretation_state": "AI_INTERPRETATION",
+      "item_count": 47,
+      "measured_feature_profile": "See hook_features records for opening counts and premise position.",
+      "performance_association": {
+        "causal_claim": false,
+        "median_channel_relative": 3.0821,
+        "state": "PERFORMANCE_ASSOCIATION"
+      },
+      "repeatability": "REPEATABLE_PATTERN",
+      "strong_examples": [
+        "VID-000065",
+        "VID-000042",
+        "VID-000013"
+      ],
+      "video_ids": [
+        "VID-000008",
+        "VID-000013",
+        "VID-000016",
+        "VID-000020",
+        "VID-000023",
+        "VID-000026",
+        "VID-000030",
+        "VID-000033",
+        "VID-000037",
+        "VID-000042",
+        "VID-000043",
+        "VID-000046",
+        "VID-000053",
+        "VID-000057",
+        "VID-000065",
+        "VID-000070",
+        "VID-000089",
+        "VID-000091",
+        "VID-000093",
+        "VID-000095",
+        "VID-000096",
+        "VID-000097",
+        "VID-000098",
+        "VID-000100",
+        "VID-000102",
+        "VID-000103",
+        "VID-000105",
+        "VID-000108",
+        "VID-000113",
+        "VID-000117",
+        "VID-000121",
+        "VID-000122",
+        "VID-000125",
+        "VID-000128",
+        "VID-000129",
+        "VID-000131",
+        "VID-000132",
+        "VID-000134",
+        "VID-000139",
+        "VID-000140",
+        "VID-000142",
+        "VID-000144",
+        "VID-000150",
+        "VID-000153",
+        "VID-000154",
+        "VID-000155",
+        "VID-000156"
+      ],
+      "weak_examples": [
+        "VID-000105",
+        "VID-000153",
+        "VID-000156"
+      ]
+    }
+  },
+  "linkage": {
+    "EVIDENCE_OVERLAP": {
+      "hook_overlap_video_ids": [
+        "VID-000030",
+        "VID-000155"
+      ],
+      "opportunity_evidence_video_ids": [
+        "VID-000005",
+        "VID-000030",
+        "VID-000155"
+      ],
+      "script_overlap_video_ids": [
+        "VID-000005",
+        "VID-000030"
+      ]
+    },
+    "HOOK_LINKS": [
+      "CONTEXT_FIRST"
+    ],
+    "LIMITATIONS": [
+      "Hook/script linkage derived by evidence-video overlap across the channel's archetype pool, not an authored per-opportunity blueprint.",
+      "Hook archetype overlap is partial: not every opportunity evidence video shares the chosen hook archetype.",
+      "Script archetype overlap is partial: not every opportunity evidence video shares the chosen script archetype."
+    ],
+    "OPPORTUNITY_ID": "CH-000001-CAND-001",
+    "PACKAGE_LINKS": [
+      "CH-000001-CAND-001"
+    ],
+    "PAYOFF_MATCH": "PARTIAL_MATCH",
+    "PROMISE_MATCH": "PARTIAL_MATCH",
+    "SCRIPT_BLUEPRINT_LINK": "CALCULATED_ESCALATION",
+    "SEMANTIC_MATCH": "PARTIAL_MATCH"
+  },
+  "opportunity": {
+    "angle": "Source-derived concept represented by VID-000005: Why Less is More in Retirement",
+    "confidence": "HIGH",
+    "counter_evidence": [
+      "Family signal remains observational; no private demand or causal data."
+    ],
+    "evidence_state": "HYPOTHESIS",
+    "external_validation": "NOT_AVAILABLE",
+    "falsification_condition": "Family signal remains observational; no private demand or causal data.",
+    "internal_evidence": [
+      "VID-000005",
+      "VID-000155",
+      "VID-000030"
+    ],
+    "opportunity_id": "CH-000001-CAND-001",
+    "risks": [
+      "Generated direction requires factual review before production.",
+      "No causal performance claim.",
+      "Generated direction requires factual review before production.",
+      "No causal performance claim.",
+      "Generated direction requires factual review before production.",
+      "No causal performance claim."
+    ],
+    "topic": "Retirement"
+  },
+  "opportunity_id": "CH-000001-CAND-001",
+  "packaging": {
+    "confidence": "HIGH",
+    "native_ab_eligibility": "POTENTIALLY_ELIGIBLE",
+    "package_archetypes": [
+      "COMPARISON_LAYOUT",
+      "CONSEQUENCE_SCENE",
+      "SINGLE_HERO"
+    ],
+    "selected_package": {
+      "candidate": {
+        "candidate_id": "CH-000001-CAND-001",
+        "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+        "initial_confidence": "HIGH",
+        "performance_signal": "Family median/channel median ratio: 2.0997",
+        "specific_angle": "Why Less is More in Retirement",
+        "supporting_video_ids": [
+          "VID-000005",
+          "VID-000155",
+          "VID-000030"
+        ],
+        "topic": "Retirement"
+      },
+      "recommended_test_set": [
+        {
+          "confidence": "HIGH",
+          "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+          "evidence_state": "HYPOTHESIS_FOR_TESTING",
+          "format_context": "LONG_FORM",
+          "historical_support": {
+            "performance_signal": "Family median/channel median ratio: 2.0997",
+            "video_ids": [
+              "VID-000005",
+              "VID-000030",
+              "VID-000155"
+            ]
+          },
+          "native_ab_eligible": "YES",
+          "package_id": "CH-000001-CAND-001-PKG-A",
+          "pair_relationship": "QUESTION_PLUS_VISUAL_SETUP",
+          "risks": [
+            "Generated direction requires factual review before production.",
+            "No causal performance claim."
+          ],
+          "thumbnail_archetype": "SINGLE_HERO",
+          "thumbnail_concept": "One concrete subject with a single unresolved question.",
+          "title": "What Should You Know About Retirement?",
+          "title_archetype": "QUESTION",
+          "visual_support": {
+            "causal_claim": false,
+            "state": "THUMBNAIL_REFERENCE_GAP",
+            "video_ids": []
+          }
+        },
+        {
+          "confidence": "HIGH",
+          "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+          "evidence_state": "HYPOTHESIS_FOR_TESTING",
+          "format_context": "LONG_FORM",
+          "historical_support": {
+            "performance_signal": "Family median/channel median ratio: 2.0997",
+            "video_ids": [
+              "VID-000005",
+              "VID-000030",
+              "VID-000155"
+            ]
+          },
+          "native_ab_eligible": "YES",
+          "package_id": "CH-000001-CAND-001-PKG-B",
+          "pair_relationship": "TITLE_ADDS_CONTEXT",
+          "risks": [
+            "Generated direction requires factual review before production.",
+            "No causal performance claim."
+          ],
+          "thumbnail_archetype": "COMPARISON_LAYOUT",
+          "thumbnail_concept": "Two concrete states showing the decision or contrast.",
+          "title": "Why Less is More in Retirement",
+          "title_archetype": "EXPLANATORY",
+          "visual_support": {
+            "causal_claim": false,
+            "state": "THUMBNAIL_REFERENCE_GAP",
+            "video_ids": []
+          }
+        },
+        {
+          "confidence": "HIGH",
+          "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+          "evidence_state": "HYPOTHESIS_FOR_TESTING",
+          "format_context": "LONG_FORM",
+          "historical_support": {
+            "performance_signal": "Family median/channel median ratio: 2.0997",
+            "video_ids": [
+              "VID-000005",
+              "VID-000030",
+              "VID-000155"
+            ]
+          },
+          "native_ab_eligible": "YES",
+          "package_id": "CH-000001-CAND-001-PKG-C",
+          "pair_relationship": "TITLE_ADDS_STAKES",
+          "risks": [
+            "Generated direction requires factual review before production.",
+            "No causal performance claim."
+          ],
+          "thumbnail_archetype": "CONSEQUENCE_SCENE",
+          "thumbnail_concept": "One consequence scene showing stakes without claiming certainty.",
+          "title": "What Changes the Outcome for Retirement?",
+          "title_archetype": "WARNING_OR_RISK",
+          "visual_support": {
+            "causal_claim": false,
+            "state": "THUMBNAIL_REFERENCE_GAP",
+            "video_ids": []
+          }
+        }
+      ]
+    },
+    "temporal_evidence_state": "HYPOTHESIS_FOR_TESTING",
+    "thumbnail_concepts": [
+      "One concrete subject with a single unresolved question.",
+      "Two concrete states showing the decision or contrast.",
+      "One consequence scene showing stakes without claiming certainty."
+    ],
+    "title_hypotheses": [
+      "What Should You Know About Retirement?",
+      "Why Less is More in Retirement",
+      "What Changes the Outcome for Retirement?"
+    ]
+  },
+  "schema_version": "youtube-intelligence-os-content-plan-1",
+  "script": {
+    "evidence": [
+      "VID-000005",
+      "VID-000030"
+    ],
+    "limitations": [
+      "Hook/script linkage derived by evidence-video overlap, not an authored per-opportunity blueprint."
+    ],
+    "payoff_structure": {
+      "structure_sequence": [
+        "HOOK",
+        "PREMISE",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "ESCALATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "PAYOFF"
+      ]
+    },
+    "script_archetype": [
+      "HOOK",
+      "PREMISE",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "CALCULATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "ESCALATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "PAYOFF"
+    ],
+    "script_blueprint": "Calculated Escalation",
+    "selected_script": {
+      "confidence": "HIGH",
+      "counter_examples": [],
+      "definition": "Calculated Escalation",
+      "format_context": "LONG_FORM",
+      "interpretation_state": "AI_INTERPRETATION",
+      "item_count": 62,
+      "performance_association": {
+        "causal_claim": false,
+        "median_channel_relative": 0.9683,
+        "state": "PERFORMANCE_ASSOCIATION"
+      },
+      "repeatability": "REPEATABLE_PATTERN",
+      "script_archetype_id": "CALCULATED_ESCALATION",
+      "strong_examples": [
+        "VID-000107",
+        "VID-000065",
+        "VID-000042"
+      ],
+      "structure_sequence": [
+        "HOOK",
+        "PREMISE",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "ESCALATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "PAYOFF"
+      ],
+      "topic_context": [
+        "KEEPING",
+        "MONEY",
+        "NET_WORTH",
+        "PAYING",
+        "PAY_OFF",
+        "PERFECT",
+        "RETIRE",
+        "RETIREES",
+        "RETIREES_AVOID",
+        "RETIREES_STOPPED",
+        "RETIREMENT",
+        "RETIREMENT_BETTER",
+        "RETIREMENT_LOOKS",
+        "RETIREMENT_SAVINGS",
+        "RETIREMENT_WEALTH",
+        "RETIRE_RICH",
+        "RETIRE_YET",
+        "RETIRING",
+        "RICH",
+        "RICH_RETIREES",
+        "SMART_RETIREES",
+        "WEALTHY",
+        "WEALTHY_RETIREES",
+        "WISE_RETIREES",
+        "WORST_RETIREMENT"
+      ],
+      "video_ids": [
+        "VID-000005",
+        "VID-000008",
+        "VID-000013",
+        "VID-000014",
+        "VID-000016",
+        "VID-000023",
+        "VID-000026",
+        "VID-000030",
+        "VID-000037",
+        "VID-000042",
+        "VID-000053",
+        "VID-000057",
+        "VID-000065",
+        "VID-000079",
+        "VID-000085",
+        "VID-000088",
+        "VID-000090",
+        "VID-000091",
+        "VID-000092",
+        "VID-000094",
+        "VID-000095",
+        "VID-000096",
+        "VID-000099",
+        "VID-000100",
+        "VID-000103",
+        "VID-000104",
+        "VID-000106",
+        "VID-000107",
+        "VID-000108",
+        "VID-000109",
+        "VID-000111",
+        "VID-000112",
+        "VID-000113",
+        "VID-000115",
+        "VID-000116",
+        "VID-000118",
+        "VID-000119",
+        "VID-000120",
+        "VID-000124",
+        "VID-000125",
+        "VID-000127",
+        "VID-000128",
+        "VID-000129",
+        "VID-000132",
+        "VID-000133",
+        "VID-000136",
+        "VID-000137",
+        "VID-000138",
+        "VID-000139",
+        "VID-000140",
+        "VID-000141",
+        "VID-000144",
+        "VID-000146",
+        "VID-000147",
+        "VID-000149",
+        "VID-000150",
+        "VID-000152",
+        "VID-000153",
+        "VID-000156",
+        "VID-000157",
+        "VID-000158",
+        "VID-000159"
+      ],
+      "weak_examples": [
+        "VID-000158",
+        "VID-000156",
+        "VID-000118"
+      ]
+    }
+  }
+}

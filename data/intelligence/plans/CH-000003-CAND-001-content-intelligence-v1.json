@@ -1,0 +1,571 @@
+{
+  "channel": {
+    "channel_id": "CH-000003",
+    "dataset_id": "DS-000006",
+    "display_name": "Dr. Aliza Wright | Advice",
+    "evidence_state": "CANONICAL_FACT",
+    "handle": "@Dr.AlizaWrightAdvice"
+  },
+  "channel_id": "CH-000003",
+  "coherence": {
+    "dimensions": {
+      "CHANNEL_MATCH": "PASS",
+      "EDITING_VISUAL_MATCH": "NOT_APPLICABLE",
+      "EVIDENCE_TRACEABILITY": "PASS",
+      "FORMAT_MATCH": "PASS",
+      "HOOK_PROMISE_MATCH": "PARTIAL",
+      "OPPORTUNITY_MATCH": "PASS",
+      "PACKAGE_PROMISE_MATCH": "PASS",
+      "SCRIPT_PAYOFF_MATCH": "PASS",
+      "TEMPORAL_LIMITATIONS_PRESERVED": "PASS",
+      "TOPIC_MATCH": "PASS",
+      "UNAVAILABLE_METRICS_DISCLOSED": "PASS"
+    },
+    "overall": "PARTIAL"
+  },
+  "editing": {
+    "blueprint": null,
+    "channel_wide_editing_style": "NOT_SUPPORTED",
+    "reason": "NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE",
+    "status": "NOT_AVAILABLE"
+  },
+  "generated_on": "2026-09-11",
+  "generation_state": "ASSEMBLED_FROM_LAYERS",
+  "global": {
+    "authoritative_sources": [],
+    "evidence_quality_summary": "HYPOTHESIS",
+    "generation_state": "ASSEMBLED_FROM_LAYERS",
+    "medical_validation_required": true,
+    "medical_validation_status": "VALIDATION_REQUIRED",
+    "platform_guardrails": {
+      "appeal": "Topic/package gets viewer interest and communicates value.",
+      "engagement": "Viewer response after choosing to watch.",
+      "no_direct_metadata_change_algorithm_boost": true,
+      "no_fixed_ctr_target": true,
+      "no_fixed_retention_target": true,
+      "no_hidden_ranking_weights": true,
+      "no_proprietary_algorithm_score": true,
+      "no_universal_ideal_video_length": true,
+      "personalization_matters": true,
+      "recommendation_surfaces_differ": true,
+      "satisfaction": "Whether viewers enjoyed/found value in the content."
+    },
+    "provenance": {
+      "canonical_dataset": "DS-000006",
+      "editing_artifact": null,
+      "hook_script_artifact": "data/intelligence/channels/CH-000003/hook-script-intelligence-2026-09-11.json",
+      "packaging_artifact": "data/intelligence/channels/CH-000003/packaging-intelligence-2026-09-11.json",
+      "topic_artifact": "data/intelligence/channels/CH-000003/topic-opportunity-intelligence-2026-09-11.json"
+    },
+    "unavailable_metrics": {
+      "AVERAGE_VIEW_DURATION": "NOT_AVAILABLE",
+      "CTR": "NOT_AVAILABLE",
+      "IMPRESSIONS": "NOT_AVAILABLE",
+      "RETENTION": "NOT_AVAILABLE",
+      "SUBSCRIBER_CONVERSION": "NOT_AVAILABLE",
+      "TRAFFIC_SOURCES": "NOT_AVAILABLE",
+      "UNIQUE_VIEWERS": "NOT_AVAILABLE",
+      "WATCH_TIME": "NOT_AVAILABLE"
+    },
+    "warnings": [
+      "EDITING NOT_AVAILABLE: NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE"
+    ]
+  },
+  "hook": {
+    "counter_evidence": [],
+    "evidence": [
+      "VID-000176",
+      "VID-000182"
+    ],
+    "hook_archetypes": [
+      "NUMBER_LED"
+    ],
+    "hook_hypotheses": [
+      "Number Led"
+    ],
+    "package_linkage": "EVIDENCE_OVERLAP_JOIN",
+    "selected_hook": {
+      "confidence": "HIGH",
+      "counter_examples": [],
+      "definition": "Number Led",
+      "format_context": "LONG_FORM",
+      "hook_archetype_id": "NUMBER_LED",
+      "interpretation_state": "AI_INTERPRETATION",
+      "item_count": 19,
+      "measured_feature_profile": "See hook_features records for opening counts and premise position.",
+      "performance_association": {
+        "causal_claim": false,
+        "median_channel_relative": 1.0103,
+        "state": "PERFORMANCE_ASSOCIATION"
+      },
+      "repeatability": "REPEATABLE_PATTERN",
+      "strong_examples": [
+        "VID-000187",
+        "VID-000185",
+        "VID-000182"
+      ],
+      "video_ids": [
+        "VID-000160",
+        "VID-000167",
+        "VID-000168",
+        "VID-000170",
+        "VID-000171",
+        "VID-000172",
+        "VID-000173",
+        "VID-000174",
+        "VID-000176",
+        "VID-000177",
+        "VID-000180",
+        "VID-000181",
+        "VID-000182",
+        "VID-000183",
+        "VID-000184",
+        "VID-000185",
+        "VID-000187",
+        "VID-000188",
+        "VID-000189"
+      ],
+      "weak_examples": [
+        "VID-000168",
+        "VID-000188",
+        "VID-000171"
+      ]
+    }
+  },
+  "linkage": {
+    "EVIDENCE_OVERLAP": {
+      "hook_overlap_video_ids": [
+        "VID-000176",
+        "VID-000182"
+      ],
+      "opportunity_evidence_video_ids": [
+        "VID-000166",
+        "VID-000176",
+        "VID-000182"
+      ],
+      "script_overlap_video_ids": [
+        "VID-000166",
+        "VID-000176",
+        "VID-000182"
+      ]
+    },
+    "HOOK_LINKS": [
+      "NUMBER_LED"
+    ],
+    "LIMITATIONS": [
+      "Hook/script linkage derived by evidence-video overlap across the channel's archetype pool, not an authored per-opportunity blueprint.",
+      "Hook archetype overlap is partial: not every opportunity evidence video shares the chosen hook archetype."
+    ],
+    "OPPORTUNITY_ID": "CH-000003-CAND-001",
+    "PACKAGE_LINKS": [
+      "CH-000003-CAND-001"
+    ],
+    "PAYOFF_MATCH": "FULL_MATCH",
+    "PROMISE_MATCH": "PARTIAL_MATCH",
+    "SCRIPT_BLUEPRINT_LINK": "CALCULATED_ESCALATION",
+    "SEMANTIC_MATCH": "PARTIAL_MATCH"
+  },
+  "opportunity": {
+    "angle": "Source-derived concept represented by VID-000182: The Way You Stand Up From a Chair After 70 Predicts How Long You'll Live | Dr. Aliza Wright",
+    "confidence": "HIGH",
+    "counter_evidence": [
+      "Family signal remains observational; no private demand or causal data."
+    ],
+    "evidence_state": "HYPOTHESIS",
+    "external_validation": "NOT_AVAILABLE",
+    "falsification_condition": "Family signal remains observational; no private demand or causal data.",
+    "internal_evidence": [
+      "VID-000182",
+      "VID-000166",
+      "VID-000176"
+    ],
+    "opportunity_id": "CH-000003-CAND-001",
+    "risks": [
+      "Generated direction requires factual review before production.",
+      "No causal performance claim.",
+      "Generated direction requires factual review before production.",
+      "No causal performance claim.",
+      "Generated direction requires factual review before production.",
+      "No causal performance claim."
+    ],
+    "topic": "Aliza Wright"
+  },
+  "opportunity_id": "CH-000003-CAND-001",
+  "packaging": {
+    "confidence": "HIGH",
+    "native_ab_eligibility": "POTENTIALLY_ELIGIBLE",
+    "package_archetypes": [
+      "COMPARISON_LAYOUT",
+      "CONSEQUENCE_SCENE",
+      "SINGLE_HERO"
+    ],
+    "selected_package": {
+      "candidate": {
+        "candidate_id": "CH-000003-CAND-001",
+        "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+        "initial_confidence": "HIGH",
+        "performance_signal": "Family median/channel median ratio: 3.2725",
+        "specific_angle": "The Way You Stand Up From a Chair After 70 Predicts How Long You'll Live | Dr. Aliza Wright",
+        "supporting_video_ids": [
+          "VID-000182",
+          "VID-000166",
+          "VID-000176"
+        ],
+        "topic": "Aliza Wright"
+      },
+      "recommended_test_set": [
+        {
+          "confidence": "HIGH",
+          "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+          "evidence_state": "HYPOTHESIS_FOR_TESTING",
+          "format_context": "LONG_FORM",
+          "historical_support": {
+            "performance_signal": "Family median/channel median ratio: 3.2725",
+            "video_ids": [
+              "VID-000166",
+              "VID-000176",
+              "VID-000182"
+            ]
+          },
+          "native_ab_eligible": "YES",
+          "package_id": "CH-000003-CAND-001-PKG-A",
+          "pair_relationship": "QUESTION_PLUS_VISUAL_SETUP",
+          "risks": [
+            "Generated direction requires factual review before production.",
+            "No causal performance claim."
+          ],
+          "thumbnail_archetype": "SINGLE_HERO",
+          "thumbnail_concept": "One concrete subject with a single unresolved question.",
+          "title": "What Should You Know About Aliza Wright?",
+          "title_archetype": "QUESTION",
+          "visual_support": {
+            "causal_claim": false,
+            "state": "THUMBNAIL_REFERENCE_GAP",
+            "video_ids": []
+          }
+        },
+        {
+          "confidence": "HIGH",
+          "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+          "evidence_state": "HYPOTHESIS_FOR_TESTING",
+          "format_context": "LONG_FORM",
+          "historical_support": {
+            "performance_signal": "Family median/channel median ratio: 3.2725",
+            "video_ids": [
+              "VID-000166",
+              "VID-000176",
+              "VID-000182"
+            ]
+          },
+          "native_ab_eligible": "YES",
+          "package_id": "CH-000003-CAND-001-PKG-B",
+          "pair_relationship": "TITLE_ADDS_CONTEXT",
+          "risks": [
+            "Generated direction requires factual review before production.",
+            "No causal performance claim."
+          ],
+          "thumbnail_archetype": "COMPARISON_LAYOUT",
+          "thumbnail_concept": "Two concrete states showing the decision or contrast.",
+          "title": "The Way You Stand Up From a Chair After 70 Predicts How Long You'll Live | Dr. Aliza Wright",
+          "title_archetype": "EXPLANATORY",
+          "visual_support": {
+            "causal_claim": false,
+            "state": "THUMBNAIL_REFERENCE_GAP",
+            "video_ids": []
+          }
+        },
+        {
+          "confidence": "HIGH",
+          "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+          "evidence_state": "HYPOTHESIS_FOR_TESTING",
+          "format_context": "LONG_FORM",
+          "historical_support": {
+            "performance_signal": "Family median/channel median ratio: 3.2725",
+            "video_ids": [
+              "VID-000166",
+              "VID-000176",
+              "VID-000182"
+            ]
+          },
+          "native_ab_eligible": "YES",
+          "package_id": "CH-000003-CAND-001-PKG-C",
+          "pair_relationship": "TITLE_ADDS_STAKES",
+          "risks": [
+            "Generated direction requires factual review before production.",
+            "No causal performance claim."
+          ],
+          "thumbnail_archetype": "CONSEQUENCE_SCENE",
+          "thumbnail_concept": "One consequence scene showing stakes without claiming certainty.",
+          "title": "What Changes the Outcome for Aliza Wright?",
+          "title_archetype": "WARNING_OR_RISK",
+          "visual_support": {
+            "causal_claim": false,
+            "state": "THUMBNAIL_REFERENCE_GAP",
+            "video_ids": []
+          }
+        }
+      ]
+    },
+    "temporal_evidence_state": "HYPOTHESIS_FOR_TESTING",
+    "thumbnail_concepts": [
+      "One concrete subject with a single unresolved question.",
+      "Two concrete states showing the decision or contrast.",
+      "One consequence scene showing stakes without claiming certainty."
+    ],
+    "title_hypotheses": [
+      "What Should You Know About Aliza Wright?",
+      "The Way You Stand Up From a Chair After 70 Predicts How Long You'll Live | Dr. Aliza Wright",
+      "What Changes the Outcome for Aliza Wright?"
+    ]
+  },
+  "schema_version": "youtube-intelligence-os-content-plan-1",
+  "script": {
+    "evidence": [
+      "VID-000166",
+      "VID-000176",
+      "VID-000182"
+    ],
+    "limitations": [
+      "Hook/script linkage derived by evidence-video overlap, not an authored per-opportunity blueprint."
+    ],
+    "payoff_structure": {
+      "structure_sequence": [
+        "HOOK",
+        "PREMISE",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "PAYOFF"
+      ]
+    },
+    "script_archetype": [
+      "HOOK",
+      "PREMISE",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "PAYOFF"
+    ],
+    "script_blueprint": "Calculated Escalation",
+    "selected_script": {
+      "confidence": "HIGH",
+      "counter_examples": [],
+      "definition": "Calculated Escalation",
+      "format_context": "LONG_FORM",
+      "interpretation_state": "AI_INTERPRETATION",
+      "item_count": 31,
+      "performance_association": {
+        "causal_claim": false,
+        "median_channel_relative": 1.0103,
+        "state": "PERFORMANCE_ASSOCIATION"
+      },
+      "repeatability": "REPEATABLE_PATTERN",
+      "script_archetype_id": "CALCULATED_ESCALATION",
+      "strong_examples": [
+        "VID-000162",
+        "VID-000187",
+        "VID-000163"
+      ],
+      "structure_sequence": [
+        "HOOK",
+        "PREMISE",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "PAYOFF"
+      ],
+      "topic_context": [
+        "ALIZA_WRIGHT",
+        "AMLODIPINE_LOSARTAN",
+        "AMLODIPINE_METOPROLOL",
+        "BLOOD_PRESSURE",
+        "CARDIOLOGIST_WARNING",
+        "FIX",
+        "LOSARTAN_AMLODIPINE",
+        "MANY_SENIORS",
+        "METABOLIC_HEALTH",
+        "SECOND_MORNING",
+        "WALK"
+      ],
+      "video_ids": [
+        "VID-000160",
+        "VID-000161",
+        "VID-000162",
+        "VID-000163",
+        "VID-000164",
+        "VID-000165",
+        "VID-000166",
+        "VID-000167",
+        "VID-000168",
+        "VID-000169",
+        "VID-000170",
+        "VID-000171",
+        "VID-000172",
+        "VID-000173",
+        "VID-000174",
+        "VID-000175",
+        "VID-000176",
+        "VID-000177",
+        "VID-000178",
+        "VID-000179",
+        "VID-000180",
+        "VID-000181",
+        "VID-000182",
+        "VID-000183",
+        "VID-000184",
+        "VID-000185",
+        "VID-000186",
+        "VID-000187",
+        "VID-000189",
+        "VID-000190",
+        "VID-000191"
+      ],
+      "weak_examples": [
+        "VID-000171",
+        "VID-000161",
+        "VID-000169"
+      ]
+    }
+  }
+}

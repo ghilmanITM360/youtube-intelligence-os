@@ -65,6 +65,8 @@
 
 ## Validation Needed
 - Medical validation required: False
+- Medical validation status: NOT_APPLICABLE
+- Authoritative sources: NOT_AVAILABLE
 
 ## Provenance
 - topic_artifact: data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json

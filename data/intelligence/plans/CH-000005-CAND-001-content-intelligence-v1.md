@@ -38,7 +38,7 @@
   - TOPIC_MATCH: PASS
   - PACKAGE_PROMISE_MATCH: PASS
   - HOOK_PROMISE_MATCH: PARTIAL
-  - SCRIPT_PAYOFF_MATCH: PARTIAL
+  - SCRIPT_PAYOFF_MATCH: PASS
   - EDITING_VISUAL_MATCH: NOT_APPLICABLE
   - FORMAT_MATCH: PASS
   - EVIDENCE_TRACEABILITY: PASS
@@ -65,6 +65,8 @@
 
 ## Validation Needed
 - Medical validation required: True
+- Medical validation status: VALIDATION_REQUIRED
+- Authoritative sources: NOT_AVAILABLE
 
 ## Provenance
 - topic_artifact: data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json
