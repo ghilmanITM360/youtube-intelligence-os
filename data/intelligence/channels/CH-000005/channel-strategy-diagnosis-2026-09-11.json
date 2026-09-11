@@ -1055,10 +1055,6 @@
     {
       "rule_id": "TR-011-011",
       "archetype": "hook:NUMBER_LED"
-    },
-    {
-      "rule_id": "TR-011-007",
-      "archetype": "script:CALCULATED_ESCALATION"
     }
   ],
   "training_heuristics_do_not_hold": [
@@ -1069,6 +1065,10 @@
     {
       "rule_id": "TR-011-002",
       "archetype": "hook:CONTEXT_FIRST"
+    },
+    {
+      "rule_id": "TR-011-007",
+      "archetype": "script:CALCULATED_ESCALATION"
     }
   ],
   "calibration_detail": [
@@ -1225,7 +1225,7 @@
           "item_count": 31
         }
       ],
-      "empirical_calibration_status": "CORPUS_PARTIALLY_SUPPORTED",
+      "empirical_calibration_status": "CORPUS_NOT_SUPPORTED",
       "cross_channel_robustness": "CHANNEL_SPECIFIC_PATTERN"
     },
     {
@@ -1643,7 +1643,7 @@
       "WHAT_WOULD_FALSIFY_IT": "family_health reclassifying on the next diagnosis run as new items publish"
     }
   ],
-  "medical_note": "Competitor/creator transcript claims are never treated as medical facts; MEDICAL_VALIDATION_STATUS is tracked separately per the unified orchestrator (VALIDATION_REQUIRED for this channel unless an EXTERNAL_VALIDATION source is supplied).",
+  "domain_validation_note": "Competitor/creator transcript claims are never treated as verified domain fact (medical, financial, or otherwise); high-stakes domain claims require EXTERNAL_VALIDATION per the unified orchestrator before being treated as authoritative.",
   "unavailable_private_metrics": [
     "CTR",
     "IMPRESSIONS",
@@ -1653,5 +1653,18 @@
     "TRAFFIC_SOURCES",
     "NEW_CASUAL_REGULAR_VIEWERS",
     "AUDIENCE_OVERLAP"
-  ]
+  ],
+  "first_party_analytics_enrichment": {
+    "fields": {
+      "CTR": "NOT_AVAILABLE",
+      "IMPRESSIONS": "NOT_AVAILABLE",
+      "RETENTION": "NOT_AVAILABLE",
+      "AVD": "NOT_AVAILABLE",
+      "WATCH_TIME": "NOT_AVAILABLE",
+      "TRAFFIC_SOURCES": "NOT_AVAILABLE",
+      "NEW_CASUAL_REGULAR_VIEWERS": "NOT_AVAILABLE",
+      "AUDIENCE_OVERLAP": "NOT_AVAILABLE"
+    },
+    "would_strengthen": "CTR/IMPRESSIONS would confirm whether TITLE/HOOK archetype associations reflect actual click behavior rather than post-click retention alone; RETENTION/AVD would let root_cause_layers distinguish HOOK_PROMISE_MATCH from SCRIPT_STRUCTURE failure instead of inferring both from views_per_day; WATCH_TIME/TRAFFIC_SOURCES would let family_health separate organic-search repeatability from suggested/browse-driven one-off spikes; NEW_CASUAL_REGULAR_VIEWERS/AUDIENCE_OVERLAP would let ROBUST_CROSS_CHANNEL_PATTERN require actual shared-audience overlap with the benchmark channel(s) rather than independent structural recurrence alone."
+  }
 }

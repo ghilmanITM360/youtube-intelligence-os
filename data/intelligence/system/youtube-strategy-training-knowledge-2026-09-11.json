@@ -131,7 +131,7 @@
       "SOURCE_LOCATOR": "DOC-000007 Script Analyzer",
       "SOURCE_QUALITY": "AI_GENERATED_SYNTHESIS",
       "PRIMARY_VALIDATION_STATUS": "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM",
-      "EMPIRICAL_CALIBRATION_STATUS": "CORPUS_PARTIALLY_SUPPORTED",
+      "EMPIRICAL_CALIBRATION_STATUS": "CORPUS_NOT_SUPPORTED",
       "SAFE_DOWNSTREAM_USE": "Maps to the measured CALCULATED_ESCALATION/CONSEQUENCE_CHAIN script archetypes as a diagnostic lens.",
       "PROHIBITED_USE": "Do not infer retention from this checklist alone -- retention stays NOT_AVAILABLE.",
       "CONFLICTS": [],
@@ -1013,7 +1013,7 @@
           "item_count": 28
         }
       ],
-      "empirical_calibration_status": "CORPUS_PARTIALLY_SUPPORTED",
+      "empirical_calibration_status": "CORPUS_NOT_SUPPORTED",
       "cross_channel_robustness": "CHANNEL_SPECIFIC_PATTERN"
     },
     {
@@ -1057,6 +1057,29 @@
       "cross_channel_robustness": "CHANNEL_SPECIFIC_PATTERN"
     }
   ],
+  "primary_validation_summary": {
+    "ds_000018_claim_level": {
+      "rule_count": 33,
+      "by_status": {
+        "SUPPORTED": 10,
+        "PARTIALLY_SUPPORTED": 12,
+        "NOT_CURRENTLY_VERIFIABLE": 2,
+        "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE": 8,
+        "CONTRADICTED": 1
+      }
+    },
+    "all_sources_rule_level": {
+      "rule_count": 50,
+      "by_status": {
+        "NOT_APPLICABLE_NOT_A_PLATFORM_CLAIM": 15,
+        "NOT_CURRENTLY_VERIFIABLE": 4,
+        "SUPPORTED": 10,
+        "PARTIALLY_SUPPORTED": 12,
+        "NOT_SUPPORTED_BY_PRIMARY_EVIDENCE": 8,
+        "CONTRADICTED": 1
+      }
+    }
+  },
   "guardrails": {
     "prohibited_scores": [
       "CHANNEL_SUCCESS_SCORE",

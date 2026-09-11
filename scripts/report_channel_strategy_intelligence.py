@@ -41,6 +41,7 @@ TRAINING_REGISTRY_SCHEMA = "youtube-strategy-training-knowledge-1"
 DIAGNOSIS_SCHEMA = "channel-strategy-diagnosis-1"
 BENCHMARK_SCHEMA = "channel-strategy-benchmark-1"
 BLUEPRINT_SCHEMA = "channel-strategy-blueprint-1"
+CROSS_NICHE_CALIBRATION_SCHEMA = "cross-niche-strategy-calibration-1"
 
 VIDEO_PERFORMANCE_STATES = [
     "BREAKOUT", "REPEATABLE_WINNER_EXAMPLE", "STRONG_RELATIVE_PERFORMER",
@@ -433,6 +434,14 @@ CALIBRATION_TARGETS = [
 
 MEASURED_ONLY_CHANNELS = ["CH-000001", "CH-000002", "CH-000003", "CH-000005"]
 
+# Independent-niche peer groups used for cross-niche calibration (Step 22B).
+# Deliberately data, not code branches: adding a third niche later means adding
+# one more entry here, not an "if niche == ..." anywhere in the engine.
+NICHE_CHANNEL_GROUPS = {
+    "HEALTH": ["CH-000003", "CH-000005"],
+    "FINANCE": ["CH-000001", "CH-000002"],
+}
+
 
 # ---------------------------------------------------------------------------
 # Artifact loading
@@ -657,21 +666,24 @@ def _archetype_observations(archetype_kind, archetype_id, channel_artifacts_by_i
 
 
 def empirical_calibration_verdict(observations, min_items=3, band=0.15):
+    """A claim is only ever CORPUS_(PARTIALLY_)SUPPORTED when at least one
+    usable channel actually shows the claimed outperformance (ratio >= 1+band).
+    Neutral-everywhere evidence (every usable channel sits within +/-band of
+    1.0, i.e. no measurable lift anywhere) is NOT_SUPPORTED, not
+    "partially supported" -- the claim of an advantage isn't backed just
+    because nothing contradicts it either."""
     usable = [o for o in observations if o["item_count"] >= min_items]
     if not usable:
         return "INSUFFICIENT_EVIDENCE"
     positive = [o for o in usable if o["median_channel_relative"] >= 1 + band]
     negative = [o for o in usable if o["median_channel_relative"] <= 1 - band]
-    neutral = [o for o in usable if o not in positive and o not in negative]
     if positive and negative:
         return "MIXED"
     if len(positive) == len(usable):
         return "CORPUS_SUPPORTED"
-    if len(negative) == len(usable):
-        return "CORPUS_NOT_SUPPORTED"
-    if positive or neutral:
+    if positive:
         return "CORPUS_PARTIALLY_SUPPORTED"
-    return "INSUFFICIENT_EVIDENCE"
+    return "CORPUS_NOT_SUPPORTED"
 
 
 def cross_channel_robustness(observations, min_items=3, band=0.15):
@@ -707,9 +719,134 @@ def calibrate_all(channel_ids=None):
     return results
 
 
+def cross_niche_pattern_verdict(health_entry, finance_entry):
+    """Classify a heuristic's cross-niche robustness from its independently
+    computed per-niche empirical_calibration_status. Never promotes to
+    ROBUST_CROSS_NICHE_PATTERN on one supporting niche alone; never treats
+    "no data yet" the same as "actively contradicted"."""
+    support = {"CORPUS_SUPPORTED", "CORPUS_PARTIALLY_SUPPORTED"}
+    h, f = health_entry["empirical_calibration_status"], finance_entry["empirical_calibration_status"]
+    insufficient = "INSUFFICIENT_EVIDENCE"
+
+    if h == "MIXED" or f == "MIXED":
+        return "CONFLICTING_PATTERN"
+    if (h in support and f == "CORPUS_NOT_SUPPORTED") or (f in support and h == "CORPUS_NOT_SUPPORTED"):
+        return "CONFLICTING_PATTERN"
+    if h == insufficient and f == insufficient:
+        return "INSUFFICIENT_EVIDENCE"
+    if h in support and f in support:
+        return "ROBUST_CROSS_NICHE_PATTERN"
+    if (h in support and f == insufficient) or (f in support and h == insufficient):
+        return "NICHE_SPECIFIC_PATTERN"
+    if (h == "CORPUS_NOT_SUPPORTED" and f == insufficient) or (f == "CORPUS_NOT_SUPPORTED" and h == insufficient):
+        return "NICHE_SPECIFIC_PATTERN"
+    if h == "CORPUS_NOT_SUPPORTED" and f == "CORPUS_NOT_SUPPORTED":
+        # Closest available bucket per the fixed 5-value taxonomy. Read literally
+        # this is the *opposite* of channel-specific -- it's a consistent null
+        # result across both niches -- so the `reason` field always spells that
+        # out; it is never presented as evidence the pattern IS channel-specific.
+        return "CHANNEL_SPECIFIC_PATTERN"
+    return "INSUFFICIENT_EVIDENCE"
+
+
+def build_cross_niche_calibration():
+    """Compare the same 7 CALIBRATION_TARGETS across the health peer group and
+    the finance peer group. Reuses calibrate_all() per niche group -- no new
+    heuristic definitions, no niche-specific branches."""
+    health = calibrate_all(NICHE_CHANNEL_GROUPS["HEALTH"])
+    finance = calibrate_all(NICHE_CHANNEL_GROUPS["FINANCE"])
+    previous_all_source = calibrate_all()  # MEASURED_ONLY_CHANNELS default -- what TRAINING_RULES already carries
+
+    rows = []
+    for h, f, prev in zip(health, finance, previous_all_source):
+        key = f"{h['archetype_kind']}:{h['archetype_id']}"
+        cross_niche = cross_niche_pattern_verdict(h, f)
+        reason_bits = [f"health={h['empirical_calibration_status']}", f"finance={f['empirical_calibration_status']}"]
+        if cross_niche == "CHANNEL_SPECIFIC_PATTERN" and h["empirical_calibration_status"] == "CORPUS_NOT_SUPPORTED" and f["empirical_calibration_status"] == "CORPUS_NOT_SUPPORTED":
+            reason = ("Consistent null result in both independent niches (no channel shows the claimed lift); "
+                       "not a true single-channel idiosyncrasy -- reported under CHANNEL_SPECIFIC_PATTERN only "
+                       "because the fixed taxonomy has no dedicated 'robustly refuted' bucket.")
+        elif cross_niche == "CONFLICTING_PATTERN":
+            reason = "Direction disagrees within at least one niche, or one niche supports while the other actively refutes it."
+        elif cross_niche == "NICHE_SPECIFIC_PATTERN":
+            reason = "Supported in one niche; the other niche has no usable (item_count>=3) evidence yet, not a contradiction."
+        elif cross_niche == "ROBUST_CROSS_NICHE_PATTERN":
+            reason = "Supported independently in both the health and the finance peer group with no contradicting direction."
+        else:
+            reason = "Neither niche has usable (item_count>=3) evidence for this archetype."
+
+        rows.append({
+            "rule_id": h["rule_id"], "archetype_kind": h["archetype_kind"], "archetype_id": h["archetype_id"],
+            "claim": h["claim"],
+            "HEALTH_RESULT": h["empirical_calibration_status"],
+            "FINANCE_RESULT": f["empirical_calibration_status"],
+            "CROSS_NICHE_RESULT": cross_niche,
+            "COUNTER_EVIDENCE": {
+                "health_observations": h["observations"],
+                "finance_observations": f["observations"],
+            },
+            "CONFIDENCE": "MEDIUM" if cross_niche in ("ROBUST_CROSS_NICHE_PATTERN", "CONFLICTING_PATTERN") else "LOW",
+            "reason": reason,
+            "training_rule_confidence_update": {
+                "previous_status": prev["empirical_calibration_status"],
+                "finance_status": f["empirical_calibration_status"],
+                "new_combined_status": prev["empirical_calibration_status"],
+                "reason": ("previous_status is recomputed from the SAME already-fixed empirical_calibration_verdict "
+                            "used everywhere else in this run (calibrate_all() over all 4 measured channels); it is "
+                            "not silently overwritten -- any difference from Step 22A's persisted registry value is "
+                            "the corrected-classification-bug documented in this run's report (neutral-everywhere "
+                            "evidence no longer reads as CORPUS_PARTIALLY_SUPPORTED), not a niche-driven reinterpretation."),
+            },
+        })
+
+    counts = {}
+    for r in rows:
+        counts[r["CROSS_NICHE_RESULT"]] = counts.get(r["CROSS_NICHE_RESULT"], 0) + 1
+
+    return {
+        "schema_version": CROSS_NICHE_CALIBRATION_SCHEMA,
+        "generated_on": "2026-09-11",
+        "niches": {k: v for k, v in NICHE_CHANNEL_GROUPS.items()},
+        "heuristics": rows,
+        "summary_counts": counts,
+        "promotion_standard": (
+            "ROBUST_CROSS_NICHE_PATTERN requires CORPUS_SUPPORTED or CORPUS_PARTIALLY_SUPPORTED "
+            "independently in both the health peer group and the finance peer group, with no MIXED "
+            "or opposite-direction result in either niche. One health channel plus one finance channel "
+            "agreeing is not sufficient on its own beyond what calibrate_all()'s existing item_count>=3 "
+            "usability filter and directional-agreement check already enforce per niche."
+        ),
+    }
+
+
 # ---------------------------------------------------------------------------
 # Training-knowledge registry artifact
 # ---------------------------------------------------------------------------
+
+def primary_validation_summary(rules):
+    """Two distinct tallies of PRIMARY_VALIDATION_STATUS -- kept separate so a
+    reader never sums them together and expects 33 (DS-000018's claim count):
+
+    - ds_000018_claim_level: scoped to SOURCE_ID == DS-000018 only (must
+      reconcile to exactly 33 -- one row per already-validated claim/
+      interpretation/recommendation).
+    - all_sources_rule_level: every rule in the registry, including the small
+      number of DS-000011-derived rules that also carry an independent
+      platform-validation status (e.g. TR-011-005, TR-011-013). This total is
+      NOT expected to equal 33.
+    """
+    def _tally(subset):
+        counts = {}
+        for r in subset:
+            counts[r["PRIMARY_VALIDATION_STATUS"]] = counts.get(r["PRIMARY_VALIDATION_STATUS"], 0) + 1
+        return counts
+
+    ds18_rules = [r for r in rules if r["SOURCE_ID"] == "DS-000018"]
+    return {
+        "ds_000018_claim_level": {"rule_count": len(ds18_rules), "by_status": _tally(ds18_rules)},
+        "all_sources_rule_level": {"rule_count": len(rules), "by_status": _tally(rules)},
+    }
+
 
 def build_training_registry(source_inventory=None):
     calibration = calibrate_all()
@@ -736,6 +873,7 @@ def build_training_registry(source_inventory=None):
         "source_inventory": source_inventory or {},
         "rules": rules,
         "empirical_calibration_evidence": calibration,
+        "primary_validation_summary": primary_validation_summary(rules),
         "guardrails": {
             "prohibited_scores": ["CHANNEL_SUCCESS_SCORE", "VIRALITY_SCORE", "ALGORITHM_SCORE", "CHANNEL_HEALTH_PERCENTAGE"],
             "causality_status": "ASSOCIATION_ONLY_EVERYWHERE",
@@ -928,8 +1066,20 @@ def diagnose_channel(target_id, benchmark_ids):
         "training_heuristics_do_not_hold": does_not_hold_detail,
         "calibration_detail": calibration,
         "actions": actions,
-        "medical_note": "Competitor/creator transcript claims are never treated as medical facts; MEDICAL_VALIDATION_STATUS is tracked separately per the unified orchestrator (VALIDATION_REQUIRED for this channel unless an EXTERNAL_VALIDATION source is supplied).",
+        "domain_validation_note": "Competitor/creator transcript claims are never treated as verified domain fact (medical, financial, or otherwise); high-stakes domain claims require EXTERNAL_VALIDATION per the unified orchestrator before being treated as authoritative.",
         "unavailable_private_metrics": PRIVATE_METRICS,
+        "first_party_analytics_enrichment": {
+            "fields": {metric: "NOT_AVAILABLE" for metric in PRIVATE_METRICS},
+            "would_strengthen": (
+                "CTR/IMPRESSIONS would confirm whether TITLE/HOOK archetype associations reflect actual click "
+                "behavior rather than post-click retention alone; RETENTION/AVD would let root_cause_layers "
+                "distinguish HOOK_PROMISE_MATCH from SCRIPT_STRUCTURE failure instead of inferring both from "
+                "views_per_day; WATCH_TIME/TRAFFIC_SOURCES would let family_health separate organic-search "
+                "repeatability from suggested/browse-driven one-off spikes; NEW_CASUAL_REGULAR_VIEWERS/"
+                "AUDIENCE_OVERLAP would let ROBUST_CROSS_CHANNEL_PATTERN require actual shared-audience overlap "
+                "with the benchmark channel(s) rather than independent structural recurrence alone."
+            ),
+        },
     }
 
 
@@ -1008,24 +1158,45 @@ def assemble_blueprint(niche_label, benchmark, diagnosis_by_channel):
         if exp_id > 10:
             break
 
+    bench_ids = [c["channel_id"] for c in benchmark["channels"]]
+    top_pillars = sorted(all_pillars, key=lambda k: -all_pillars[k])[:3]
+
+    def _robust_by_kind(kind):
+        return [p for p in robust if p["archetype_kind"] == kind]
+
+    hook_robust = _robust_by_kind("hook")
+    script_robust = _robust_by_kind("script")
+
+    format_mix = {}
+    for cid in bench_ids:
+        for fam in load_channel_artifacts(cid)["topic"].get("topic_families", []):
+            for fmt, count in (fam.get("format_mix") or {}).items():
+                format_mix[fmt] = format_mix.get(fmt, 0) + count
+
     return {
         "schema_version": BLUEPRINT_SCHEMA,
         "generated_on": "2026-09-11",
         "niche": niche_label,
-        "benchmark_channels": [c["channel_id"] for c in benchmark["channels"]],
+        "benchmark_channels": bench_ids,
         "target_audience": {
-            "value": "Adults managing their own or a family member's senior/aging-related health concerns, seeking clear, non-alarmist explanation before a doctor visit.",
-            "source": "CORPUS_EVIDENCE", "confidence": "MEDIUM",
-            "evidence": "Derived from combined canonical topic distribution across CH-000003/CH-000005 (HEALTHY_AGING, CARDIOVASCULAR_HEALTH, METABOLIC_HEALTH families).",
+            "value": (f"Viewers interested in {', '.join(top_pillars) if top_pillars else niche_label} "
+                      f"within the {niche_label} niche, based on the combined canonical topic distribution "
+                      f"across the benchmark channels."),
+            "source": "CORPUS_EVIDENCE", "confidence": "MEDIUM" if top_pillars else "LOW",
+            "evidence": f"Combined canonical topic distribution across {', '.join(bench_ids)}: {dict(sorted(all_pillars.items(), key=lambda kv: -kv[1])[:5])}.",
         },
         "positioning": {
-            "value": "A doctor-led, evidence-labeled explainer channel -- distinct from both benchmark channels' individual presentation style, not a copy of either.",
+            "value": (f"A focused, evidence-labeled explainer channel within {niche_label} -- distinct from "
+                      f"each benchmark channel's individual presentation style, not a copy of either."),
             "source": "TRAINING_HEURISTIC", "confidence": "MEDIUM", "evidence": "TR-018-REC-004 (differentiated promise) + TR-011-017 (truth-hierarchy operating system).",
         },
         "niche_boundaries": {
-            "value": "Senior/aging-adult health explanation and risk-awareness content; explicitly not diagnosis, treatment, or medication guidance.",
-            "source": "OFFICIAL_PLATFORM_KNOWLEDGE", "confidence": "HIGH",
-            "evidence": "Medical content requires MEDICAL_VALIDATION_STATUS; this repository never treats competitor transcript claims as medical fact.",
+            "value": (f"{niche_label} content bounded to the core content pillars observed across benchmark "
+                      f"channels ({', '.join(top_pillars) if top_pillars else 'insufficient pillar evidence'}); "
+                      f"claims requiring domain expertise (medical, financial, legal, or otherwise) are never "
+                      f"presented as verified fact from competitor transcripts without EXTERNAL_VALIDATION."),
+            "source": "CORPUS_EVIDENCE", "confidence": "MEDIUM",
+            "evidence": "This repository never treats competitor/creator transcript claims as verified domain fact; see guardrails.no_causal_claims_from_public_correlation.",
         },
         "core_content_pillars": [
             {"pillar": topic, "combined_item_count": count, "source": "CORPUS_EVIDENCE"}
@@ -1051,13 +1222,33 @@ def assemble_blueprint(niche_label, benchmark, diagnosis_by_channel):
         ],
         "title_language": {"value": "Prefer WARNING_OR_RISK and NUMBERED_SPECIFICITY structures where a channel's own evidence supports them; do not assume either transfers to a new channel with zero data.",
                             "source": "BENCHMARK_PATTERN", "confidence": "LOW"},
-        "thumbnail_language": {"value": "NOT_AVAILABLE for CH-000001/CH-000002-style gap; where thumbnail evidence exists (CH-000003/CH-000005), favor bright/natural colors, bold fonts, one big idea per the Packaging SOP.",
+        "thumbnail_language": {"value": (f"NOT_AVAILABLE for {', '.join(bench_ids)} (THUMBNAIL_REFERENCE_GAP); where thumbnail "
+                                          f"evidence exists for a benchmark channel, favor bright/natural colors, bold fonts, "
+                                          f"one big idea per the Packaging SOP."),
                                 "source": "TRAINING_HEURISTIC", "confidence": "LOW", "rule_id": "TR-011-004"},
-        "hook_principles": {"value": "Use the Context Lean -> Scroll-Stop -> Snapback structure as a diagnostic lens for drafts; do not assume a fixed hook archetype outperforms until the new channel has >=3 items in that archetype.",
-                             "source": "TRAINING_HEURISTIC", "confidence": "LOW", "rule_id": "TR-011-002"},
-        "script_structures": {"value": "Favor calculated-escalation / causal consequence-chain structuring as a baseline discipline; treat it as structurally common rather than a differentiator per current corpus calibration.",
-                               "source": "CORPUS_EVIDENCE", "confidence": "MEDIUM", "rule_id": "TR-011-015"},
-        "format_strategy": {"value": "Start long-form only (matches both benchmark channels' canonical evidence); do not add Shorts on the same channel without an explicit test, per the unresolved CLM-005/CLM-018 conflict.",
+        "hook_principles": ({"value": (f"Robust cross-channel hook pattern(s) for this benchmark set: "
+                                        f"{', '.join(p['archetype_id'] for p in hook_robust)}; use as a diagnostic lens, "
+                                        f"do not assume it outperforms until the new channel has >=3 items in that archetype."),
+                              "source": "BENCHMARK_PATTERN", "confidence": "MEDIUM",
+                              "rule_id": next((t["rule_id"] for t in CALIBRATION_TARGETS
+                                                if t["archetype_kind"] == "hook" and t["archetype_id"] == hook_robust[0]["archetype_id"]), "")}
+                             if hook_robust else
+                             {"value": ("No hook archetype reached ROBUST_CROSS_CHANNEL_PATTERN for this benchmark set; use the "
+                                        "3-Step Hook Formula (Context Lean -> Scroll-Stop -> Snapback) as a general starting "
+                                        "diagnostic lens only, not a proven pattern for this niche."),
+                              "source": "TRAINING_HEURISTIC", "confidence": "LOW", "rule_id": "TR-011-002"}),
+        "script_structures": ({"value": (f"Robust cross-channel script pattern(s) for this benchmark set: "
+                                          f"{', '.join(p['archetype_id'] for p in script_robust)}; treat as structurally "
+                                          f"supported rather than assumed."),
+                                "source": "BENCHMARK_PATTERN", "confidence": "MEDIUM"}
+                               if script_robust else
+                               {"value": ("No script archetype reached ROBUST_CROSS_CHANNEL_PATTERN for this benchmark set; use "
+                                          "BUT/THEREFORE causal structuring as a general baseline discipline, not a proven "
+                                          "differentiator for this niche."),
+                                "source": "TRAINING_HEURISTIC", "confidence": "LOW", "rule_id": "TR-011-015"}),
+        "format_strategy": {"value": (f"Observed format mix across benchmark channels: {format_mix or 'NOT_AVAILABLE'}; "
+                                       f"match the dominant observed format and do not add a second format on the same "
+                                       f"channel without an explicit test, per the unresolved Shorts-vs-long-form platform claim (TR-018-CLM-018)."),
                              "source": "OFFICIAL_PLATFORM_KNOWLEDGE", "confidence": "LOW", "rule_id": "TR-018-CLM-018"},
         "differentiation": {"value": "Make one explicit, consistently-kept audience promise per TR-018-REC-004 rather than replicating either benchmark channel's topic mix wholesale.",
                              "source": "TRAINING_HEURISTIC", "confidence": "MEDIUM"},
@@ -1162,7 +1353,7 @@ def render_diagnosis_markdown(diagnosis, benchmark_channel_id):
               "- Private YouTube Analytics (CTR, impressions, retention, AVD, watch time, traffic sources, subscriber conversion, audience overlap) are NOT_AVAILABLE for this channel.",
               "- LONGITUDINAL_TREND is NOT_AVAILABLE; only cross-sectional, publish-cohort-aware normalized performance is used.",
               "- Every archetype/family association is CAUSALITY_STATUS=ASSOCIATION_ONLY, never a causal claim.",
-              f"- {diagnosis['medical_note']}",
+              f"- {diagnosis['domain_validation_note']}",
               ""]
     return "\n".join(lines)
 
@@ -1221,6 +1412,8 @@ def main(argv=None):
     blueprint.add_argument("--niche", required=True)
     blueprint.add_argument("--benchmarks", required=True, help="comma-separated channel IDs")
 
+    sub.add_parser("cross-niche-calibration", help="Compare training heuristics across independent niche peer groups.")
+
     args = parser.parse_args(argv)
 
     if args.command == "diagnose":
@@ -1239,6 +1432,9 @@ def main(argv=None):
         bench_result = benchmark_channels(benchmarks)
         diagnosis_by_channel = {cid: diagnose_channel(cid, [b for b in benchmarks if b != cid]) for cid in benchmarks}
         result = assemble_blueprint(args.niche, bench_result, diagnosis_by_channel)
+        print(json.dumps(result, indent=2, default=str))
+    elif args.command == "cross-niche-calibration":
+        result = build_cross_niche_calibration()
         print(json.dumps(result, indent=2, default=str))
     return 0
 

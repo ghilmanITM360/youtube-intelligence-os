@@ -1,0 +1,206 @@
+{
+  "schema_version": "channel-strategy-blueprint-1",
+  "generated_on": "2026-09-11",
+  "niche": "Finance",
+  "benchmark_channels": [
+    "CH-000001",
+    "CH-000002"
+  ],
+  "target_audience": {
+    "value": "Viewers interested in RETIREMENT_PLANNING, BUSINESS_ECONOMICS, PERSONAL_FINANCE within the Finance niche, based on the combined canonical topic distribution across the benchmark channels.",
+    "source": "CORPUS_EVIDENCE",
+    "confidence": "MEDIUM",
+    "evidence": "Combined canonical topic distribution across CH-000001, CH-000002: {'RETIREMENT_PLANNING': 89, 'BUSINESS_ECONOMICS': 65, 'PERSONAL_FINANCE': 4, 'UNCLASSIFIED': 1}."
+  },
+  "positioning": {
+    "value": "A focused, evidence-labeled explainer channel within Finance -- distinct from each benchmark channel's individual presentation style, not a copy of either.",
+    "source": "TRAINING_HEURISTIC",
+    "confidence": "MEDIUM",
+    "evidence": "TR-018-REC-004 (differentiated promise) + TR-011-017 (truth-hierarchy operating system)."
+  },
+  "niche_boundaries": {
+    "value": "Finance content bounded to the core content pillars observed across benchmark channels (RETIREMENT_PLANNING, BUSINESS_ECONOMICS, PERSONAL_FINANCE); claims requiring domain expertise (medical, financial, legal, or otherwise) are never presented as verified fact from competitor transcripts without EXTERNAL_VALIDATION.",
+    "source": "CORPUS_EVIDENCE",
+    "confidence": "MEDIUM",
+    "evidence": "This repository never treats competitor/creator transcript claims as verified domain fact; see guardrails.no_causal_claims_from_public_correlation."
+  },
+  "core_content_pillars": [
+    {
+      "pillar": "RETIREMENT_PLANNING",
+      "combined_item_count": 89,
+      "source": "CORPUS_EVIDENCE"
+    },
+    {
+      "pillar": "BUSINESS_ECONOMICS",
+      "combined_item_count": 65,
+      "source": "CORPUS_EVIDENCE"
+    },
+    {
+      "pillar": "PERSONAL_FINANCE",
+      "combined_item_count": 4,
+      "source": "CORPUS_EVIDENCE"
+    },
+    {
+      "pillar": "UNCLASSIFIED",
+      "combined_item_count": 1,
+      "source": "CORPUS_EVIDENCE"
+    }
+  ],
+  "robust_cross_channel_patterns": [
+    {
+      "pattern": "hook:CONTEXT_FIRST",
+      "claim": "Opening with context before the twist ('Context Lean') increases relative performance.",
+      "source": "BENCHMARK_PATTERN",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "channel_specific_patterns_to_avoid_copying": [
+    {
+      "pattern": "title:NUMBERED_SPECIFICITY",
+      "claim": "Numbers/specificity in titles increase relative performance.",
+      "source": "BENCHMARK_PATTERN",
+      "note": "significant in only one benchmark channel -- do not generalize"
+    },
+    {
+      "pattern": "script:CALCULATED_ESCALATION",
+      "claim": "Calculated-escalation script structure increases relative performance.",
+      "source": "BENCHMARK_PATTERN",
+      "note": "significant in only one benchmark channel -- do not generalize"
+    },
+    {
+      "pattern": "script:CONSEQUENCE_CHAIN",
+      "claim": "Causal consequence-chain ('but/therefore') script structure increases relative performance.",
+      "source": "BENCHMARK_PATTERN",
+      "note": "significant in only one benchmark channel -- do not generalize"
+    }
+  ],
+  "weak_or_conflicting_patterns": [
+    {
+      "pattern": "hook:NUMBER_LED",
+      "classification": "CONFLICTING_PATTERN",
+      "source": "BENCHMARK_PATTERN"
+    }
+  ],
+  "underexploited_opportunities": [],
+  "title_language": {
+    "value": "Prefer WARNING_OR_RISK and NUMBERED_SPECIFICITY structures where a channel's own evidence supports them; do not assume either transfers to a new channel with zero data.",
+    "source": "BENCHMARK_PATTERN",
+    "confidence": "LOW"
+  },
+  "thumbnail_language": {
+    "value": "NOT_AVAILABLE for CH-000001, CH-000002 (THUMBNAIL_REFERENCE_GAP); where thumbnail evidence exists for a benchmark channel, favor bright/natural colors, bold fonts, one big idea per the Packaging SOP.",
+    "source": "TRAINING_HEURISTIC",
+    "confidence": "LOW",
+    "rule_id": "TR-011-004"
+  },
+  "hook_principles": {
+    "value": "Robust cross-channel hook pattern(s) for this benchmark set: CONTEXT_FIRST; use as a diagnostic lens, do not assume it outperforms until the new channel has >=3 items in that archetype.",
+    "source": "BENCHMARK_PATTERN",
+    "confidence": "MEDIUM",
+    "rule_id": "TR-011-002"
+  },
+  "script_structures": {
+    "value": "No script archetype reached ROBUST_CROSS_CHANNEL_PATTERN for this benchmark set; use BUT/THEREFORE causal structuring as a general baseline discipline, not a proven differentiator for this niche.",
+    "source": "TRAINING_HEURISTIC",
+    "confidence": "LOW",
+    "rule_id": "TR-011-015"
+  },
+  "format_strategy": {
+    "value": "Observed format mix across benchmark channels: {'LONG_FORM': 158, 'UNCLASSIFIED': 1}; match the dominant observed format and do not add a second format on the same channel without an explicit test, per the unresolved Shorts-vs-long-form platform claim (TR-018-CLM-018).",
+    "source": "OFFICIAL_PLATFORM_KNOWLEDGE",
+    "confidence": "LOW",
+    "rule_id": "TR-018-CLM-018"
+  },
+  "differentiation": {
+    "value": "Make one explicit, consistently-kept audience promise per TR-018-REC-004 rather than replicating either benchmark channel's topic mix wholesale.",
+    "source": "TRAINING_HEURISTIC",
+    "confidence": "MEDIUM"
+  },
+  "first_10_experiment_categories": [
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-01",
+      "CATEGORY": "HOOK_CONTEXT_FIRST",
+      "SOURCE": "BENCHMARK_PATTERN",
+      "RATIONALE": "Opening with context before the twist ('Context Lean') increases relative performance.",
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-02",
+      "CATEGORY": "TOPIC_PILLAR_RETIREMENT_PLANNING",
+      "SOURCE": "CORPUS_EVIDENCE",
+      "RATIONALE": "observed across benchmark channels (89 canonical items combined)",
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-03",
+      "CATEGORY": "TOPIC_PILLAR_BUSINESS_ECONOMICS",
+      "SOURCE": "CORPUS_EVIDENCE",
+      "RATIONALE": "observed across benchmark channels (65 canonical items combined)",
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-04",
+      "CATEGORY": "TOPIC_PILLAR_PERSONAL_FINANCE",
+      "SOURCE": "CORPUS_EVIDENCE",
+      "RATIONALE": "observed across benchmark channels (4 canonical items combined)",
+      "CONFIDENCE": "MEDIUM"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-05",
+      "CATEGORY": "TR-018-REC-002",
+      "SOURCE": "TRAINING_HEURISTIC",
+      "RATIONALE": "Do not disable subscriber notifications merely to game recommendations; inspect subscriber-source behavior separately.",
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-06",
+      "CATEGORY": "TR-018-REC-003",
+      "SOURCE": "TRAINING_HEURISTIC",
+      "RATIONALE": "Align channels with audiences and brand promises; choose same-channel vs separate-channel formats by audience overlap and creator goals, not a universal rule.",
+      "CONFIDENCE": "LOW"
+    },
+    {
+      "EXPERIMENT_CATEGORY_ID": "EXP-07",
+      "CATEGORY": "TR-018-REC-004",
+      "SOURCE": "TRAINING_HEURISTIC",
+      "RATIONALE": "Find differentiated value and make a consistent promise to a defined audience rather than becoming the Nth interchangeable treatment of a topic.",
+      "CONFIDENCE": "LOW"
+    }
+  ],
+  "metrics_to_monitor": {
+    "available_now": [
+      "views_per_day (within-channel normalized)",
+      "channel_median_ratio",
+      "family repeatability",
+      "archetype repeatability"
+    ],
+    "not_available_until_first_party_analytics": [
+      "CTR",
+      "IMPRESSIONS",
+      "RETENTION",
+      "AVD",
+      "WATCH_TIME",
+      "TRAFFIC_SOURCES",
+      "NEW_CASUAL_REGULAR_VIEWERS",
+      "AUDIENCE_OVERLAP"
+    ]
+  },
+  "falsification_criteria": [
+    "A ROBUST_CROSS_CHANNEL_PATTERN used here fails to reach REPEATABLE_PATTERN status (>=3 items, consistent direction) within the new channel's first 10-15 uploads.",
+    "A TOPIC_PILLAR experiment category produces a WEAK_FAMILY or ONE_OFF_DEPENDENT classification instead of REPEATABLE_WINNER_FAMILY after 5+ items."
+  ],
+  "guardrails": {
+    "no_copying_one_competitor": true,
+    "no_causal_claims_from_public_correlation": true,
+    "private_analytics_not_available": [
+      "CTR",
+      "IMPRESSIONS",
+      "RETENTION",
+      "AVD",
+      "WATCH_TIME",
+      "TRAFFIC_SOURCES",
+      "NEW_CASUAL_REGULAR_VIEWERS",
+      "AUDIENCE_OVERLAP"
+    ]
+  }
+}

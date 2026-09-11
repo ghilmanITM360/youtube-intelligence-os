@@ -1,0 +1,339 @@
+{
+  "schema_version": "cross-niche-strategy-calibration-1",
+  "generated_on": "2026-09-11",
+  "niches": {
+    "HEALTH": [
+      "CH-000003",
+      "CH-000005"
+    ],
+    "FINANCE": [
+      "CH-000001",
+      "CH-000002"
+    ]
+  },
+  "heuristics": [
+    {
+      "rule_id": "TR-011-011",
+      "archetype_kind": "title",
+      "archetype_id": "NUMBERED_SPECIFICITY",
+      "claim": "Numbers/specificity in titles increase relative performance.",
+      "HEALTH_RESULT": "MIXED",
+      "FINANCE_RESULT": "CORPUS_NOT_SUPPORTED",
+      "CROSS_NICHE_RESULT": "CONFLICTING_PATTERN",
+      "COUNTER_EVIDENCE": {
+        "health_observations": [
+          {
+            "channel_id": "CH-000003",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 3.464,
+            "item_count": 10
+          },
+          {
+            "channel_id": "CH-000005",
+            "repeatability": "MIXED_PATTERN",
+            "median_channel_relative": 0.7663,
+            "item_count": 11
+          }
+        ],
+        "finance_observations": [
+          {
+            "channel_id": "CH-000001",
+            "repeatability": "MIXED_PATTERN",
+            "median_channel_relative": 0.9505,
+            "item_count": 35
+          },
+          {
+            "channel_id": "CH-000002",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 1.836,
+            "item_count": 2
+          }
+        ]
+      },
+      "CONFIDENCE": "MEDIUM",
+      "reason": "Direction disagrees within at least one niche, or one niche supports while the other actively refutes it.",
+      "training_rule_confidence_update": {
+        "previous_status": "MIXED",
+        "finance_status": "CORPUS_NOT_SUPPORTED",
+        "new_combined_status": "MIXED",
+        "reason": "previous_status is recomputed from the SAME already-fixed empirical_calibration_verdict used everywhere else in this run (calibrate_all() over all 4 measured channels); it is not silently overwritten -- any difference from Step 22A's persisted registry value is the corrected-classification-bug documented in this run's report (neutral-everywhere evidence no longer reads as CORPUS_PARTIALLY_SUPPORTED), not a niche-driven reinterpretation."
+      }
+    },
+    {
+      "rule_id": "TR-011-013",
+      "archetype_kind": "title",
+      "archetype_id": "QUESTION",
+      "claim": "Question-form titles increase relative performance.",
+      "HEALTH_RESULT": "INSUFFICIENT_EVIDENCE",
+      "FINANCE_RESULT": "INSUFFICIENT_EVIDENCE",
+      "CROSS_NICHE_RESULT": "INSUFFICIENT_EVIDENCE",
+      "COUNTER_EVIDENCE": {
+        "health_observations": [
+          {
+            "channel_id": "CH-000003",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 0.6604,
+            "item_count": 1
+          },
+          {
+            "channel_id": "CH-000005",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 1.7805,
+            "item_count": 1
+          }
+        ],
+        "finance_observations": []
+      },
+      "CONFIDENCE": "LOW",
+      "reason": "Neither niche has usable (item_count>=3) evidence for this archetype.",
+      "training_rule_confidence_update": {
+        "previous_status": "INSUFFICIENT_EVIDENCE",
+        "finance_status": "INSUFFICIENT_EVIDENCE",
+        "new_combined_status": "INSUFFICIENT_EVIDENCE",
+        "reason": "previous_status is recomputed from the SAME already-fixed empirical_calibration_verdict used everywhere else in this run (calibrate_all() over all 4 measured channels); it is not silently overwritten -- any difference from Step 22A's persisted registry value is the corrected-classification-bug documented in this run's report (neutral-everywhere evidence no longer reads as CORPUS_PARTIALLY_SUPPORTED), not a niche-driven reinterpretation."
+      }
+    },
+    {
+      "rule_id": "TR-011-002",
+      "archetype_kind": "hook",
+      "archetype_id": "CONTEXT_FIRST",
+      "claim": "Opening with context before the twist ('Context Lean') increases relative performance.",
+      "HEALTH_RESULT": "MIXED",
+      "FINANCE_RESULT": "CORPUS_PARTIALLY_SUPPORTED",
+      "CROSS_NICHE_RESULT": "CONFLICTING_PATTERN",
+      "COUNTER_EVIDENCE": {
+        "health_observations": [
+          {
+            "channel_id": "CH-000003",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 1.2561,
+            "item_count": 11
+          },
+          {
+            "channel_id": "CH-000005",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 0.4547,
+            "item_count": 14
+          }
+        ],
+        "finance_observations": [
+          {
+            "channel_id": "CH-000001",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 3.0821,
+            "item_count": 47
+          },
+          {
+            "channel_id": "CH-000002",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 0.9102,
+            "item_count": 60
+          }
+        ]
+      },
+      "CONFIDENCE": "MEDIUM",
+      "reason": "Direction disagrees within at least one niche, or one niche supports while the other actively refutes it.",
+      "training_rule_confidence_update": {
+        "previous_status": "MIXED",
+        "finance_status": "CORPUS_PARTIALLY_SUPPORTED",
+        "new_combined_status": "MIXED",
+        "reason": "previous_status is recomputed from the SAME already-fixed empirical_calibration_verdict used everywhere else in this run (calibrate_all() over all 4 measured channels); it is not silently overwritten -- any difference from Step 22A's persisted registry value is the corrected-classification-bug documented in this run's report (neutral-everywhere evidence no longer reads as CORPUS_PARTIALLY_SUPPORTED), not a niche-driven reinterpretation."
+      }
+    },
+    {
+      "rule_id": "TR-011-011",
+      "archetype_kind": "hook",
+      "archetype_id": "NUMBER_LED",
+      "claim": "Leading a hook with a concrete number increases relative performance.",
+      "HEALTH_RESULT": "CORPUS_PARTIALLY_SUPPORTED",
+      "FINANCE_RESULT": "MIXED",
+      "CROSS_NICHE_RESULT": "CONFLICTING_PATTERN",
+      "COUNTER_EVIDENCE": {
+        "health_observations": [
+          {
+            "channel_id": "CH-000003",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 1.0103,
+            "item_count": 19
+          },
+          {
+            "channel_id": "CH-000005",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 1.455,
+            "item_count": 11
+          }
+        ],
+        "finance_observations": [
+          {
+            "channel_id": "CH-000001",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 0.6938,
+            "item_count": 36
+          },
+          {
+            "channel_id": "CH-000002",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 1.6153,
+            "item_count": 4
+          }
+        ]
+      },
+      "CONFIDENCE": "MEDIUM",
+      "reason": "Direction disagrees within at least one niche, or one niche supports while the other actively refutes it.",
+      "training_rule_confidence_update": {
+        "previous_status": "MIXED",
+        "finance_status": "MIXED",
+        "new_combined_status": "MIXED",
+        "reason": "previous_status is recomputed from the SAME already-fixed empirical_calibration_verdict used everywhere else in this run (calibrate_all() over all 4 measured channels); it is not silently overwritten -- any difference from Step 22A's persisted registry value is the corrected-classification-bug documented in this run's report (neutral-everywhere evidence no longer reads as CORPUS_PARTIALLY_SUPPORTED), not a niche-driven reinterpretation."
+      }
+    },
+    {
+      "rule_id": "TR-011-012",
+      "archetype_kind": "hook",
+      "archetype_id": "COUNTERINTUITIVE_PREMISE",
+      "claim": "A counterintuitive/contrarian premise hook increases relative performance.",
+      "HEALTH_RESULT": "INSUFFICIENT_EVIDENCE",
+      "FINANCE_RESULT": "INSUFFICIENT_EVIDENCE",
+      "CROSS_NICHE_RESULT": "INSUFFICIENT_EVIDENCE",
+      "COUNTER_EVIDENCE": {
+        "health_observations": [
+          {
+            "channel_id": "CH-000003",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 0.6112,
+            "item_count": 2
+          },
+          {
+            "channel_id": "CH-000005",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 1.8331,
+            "item_count": 1
+          }
+        ],
+        "finance_observations": [
+          {
+            "channel_id": "CH-000001",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 281.62,
+            "item_count": 1
+          },
+          {
+            "channel_id": "CH-000002",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 0.1689,
+            "item_count": 1
+          }
+        ]
+      },
+      "CONFIDENCE": "LOW",
+      "reason": "Neither niche has usable (item_count>=3) evidence for this archetype.",
+      "training_rule_confidence_update": {
+        "previous_status": "INSUFFICIENT_EVIDENCE",
+        "finance_status": "INSUFFICIENT_EVIDENCE",
+        "new_combined_status": "INSUFFICIENT_EVIDENCE",
+        "reason": "previous_status is recomputed from the SAME already-fixed empirical_calibration_verdict used everywhere else in this run (calibrate_all() over all 4 measured channels); it is not silently overwritten -- any difference from Step 22A's persisted registry value is the corrected-classification-bug documented in this run's report (neutral-everywhere evidence no longer reads as CORPUS_PARTIALLY_SUPPORTED), not a niche-driven reinterpretation."
+      }
+    },
+    {
+      "rule_id": "TR-011-007",
+      "archetype_kind": "script",
+      "archetype_id": "CALCULATED_ESCALATION",
+      "claim": "Calculated-escalation script structure increases relative performance.",
+      "HEALTH_RESULT": "CORPUS_NOT_SUPPORTED",
+      "FINANCE_RESULT": "CORPUS_NOT_SUPPORTED",
+      "CROSS_NICHE_RESULT": "CHANNEL_SPECIFIC_PATTERN",
+      "COUNTER_EVIDENCE": {
+        "health_observations": [
+          {
+            "channel_id": "CH-000003",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 1.0103,
+            "item_count": 31
+          },
+          {
+            "channel_id": "CH-000005",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 1.0804,
+            "item_count": 28
+          }
+        ],
+        "finance_observations": [
+          {
+            "channel_id": "CH-000001",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 0.9683,
+            "item_count": 62
+          },
+          {
+            "channel_id": "CH-000002",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 0.9864,
+            "item_count": 64
+          }
+        ]
+      },
+      "CONFIDENCE": "LOW",
+      "reason": "Consistent null result in both independent niches (no channel shows the claimed lift); not a true single-channel idiosyncrasy -- reported under CHANNEL_SPECIFIC_PATTERN only because the fixed taxonomy has no dedicated 'robustly refuted' bucket.",
+      "training_rule_confidence_update": {
+        "previous_status": "CORPUS_NOT_SUPPORTED",
+        "finance_status": "CORPUS_NOT_SUPPORTED",
+        "new_combined_status": "CORPUS_NOT_SUPPORTED",
+        "reason": "previous_status is recomputed from the SAME already-fixed empirical_calibration_verdict used everywhere else in this run (calibrate_all() over all 4 measured channels); it is not silently overwritten -- any difference from Step 22A's persisted registry value is the corrected-classification-bug documented in this run's report (neutral-everywhere evidence no longer reads as CORPUS_PARTIALLY_SUPPORTED), not a niche-driven reinterpretation."
+      }
+    },
+    {
+      "rule_id": "TR-011-015",
+      "archetype_kind": "script",
+      "archetype_id": "CONSEQUENCE_CHAIN",
+      "claim": "Causal consequence-chain ('but/therefore') script structure increases relative performance.",
+      "HEALTH_RESULT": "INSUFFICIENT_EVIDENCE",
+      "FINANCE_RESULT": "CORPUS_SUPPORTED",
+      "CROSS_NICHE_RESULT": "NICHE_SPECIFIC_PATTERN",
+      "COUNTER_EVIDENCE": {
+        "health_observations": [
+          {
+            "channel_id": "CH-000003",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 0.6374,
+            "item_count": 1
+          },
+          {
+            "channel_id": "CH-000005",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 0.4444,
+            "item_count": 1
+          }
+        ],
+        "finance_observations": [
+          {
+            "channel_id": "CH-000001",
+            "repeatability": "REPEATABLE_PATTERN",
+            "median_channel_relative": 1.3359,
+            "item_count": 31
+          },
+          {
+            "channel_id": "CH-000002",
+            "repeatability": "INSUFFICIENT_SAMPLE",
+            "median_channel_relative": 3.9482,
+            "item_count": 1
+          }
+        ]
+      },
+      "CONFIDENCE": "LOW",
+      "reason": "Supported in one niche; the other niche has no usable (item_count>=3) evidence yet, not a contradiction.",
+      "training_rule_confidence_update": {
+        "previous_status": "CORPUS_SUPPORTED",
+        "finance_status": "CORPUS_SUPPORTED",
+        "new_combined_status": "CORPUS_SUPPORTED",
+        "reason": "previous_status is recomputed from the SAME already-fixed empirical_calibration_verdict used everywhere else in this run (calibrate_all() over all 4 measured channels); it is not silently overwritten -- any difference from Step 22A's persisted registry value is the corrected-classification-bug documented in this run's report (neutral-everywhere evidence no longer reads as CORPUS_PARTIALLY_SUPPORTED), not a niche-driven reinterpretation."
+      }
+    }
+  ],
+  "summary_counts": {
+    "CONFLICTING_PATTERN": 3,
+    "INSUFFICIENT_EVIDENCE": 2,
+    "CHANNEL_SPECIFIC_PATTERN": 1,
+    "NICHE_SPECIFIC_PATTERN": 1
+  },
+  "promotion_standard": "ROBUST_CROSS_NICHE_PATTERN requires CORPUS_SUPPORTED or CORPUS_PARTIALLY_SUPPORTED independently in both the health peer group and the finance peer group, with no MIXED or opposite-direction result in either niche. One health channel plus one finance channel agreeing is not sufficient on its own beyond what calibrate_all()'s existing item_count>=3 usability filter and directional-agreement check already enforce per niche."
+}

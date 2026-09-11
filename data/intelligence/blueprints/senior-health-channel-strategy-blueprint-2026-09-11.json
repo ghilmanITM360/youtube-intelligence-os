@@ -7,22 +7,22 @@
     "CH-000005"
   ],
   "target_audience": {
-    "value": "Adults managing their own or a family member's senior/aging-related health concerns, seeking clear, non-alarmist explanation before a doctor visit.",
+    "value": "Viewers interested in CARDIOVASCULAR_HEALTH, HEALTHY_AGING, METABOLIC_HEALTH within the Senior Health niche, based on the combined canonical topic distribution across the benchmark channels.",
     "source": "CORPUS_EVIDENCE",
     "confidence": "MEDIUM",
-    "evidence": "Derived from combined canonical topic distribution across CH-000003/CH-000005 (HEALTHY_AGING, CARDIOVASCULAR_HEALTH, METABOLIC_HEALTH families)."
+    "evidence": "Combined canonical topic distribution across CH-000003, CH-000005: {'CARDIOVASCULAR_HEALTH': 32, 'HEALTHY_AGING': 22, 'METABOLIC_HEALTH': 7}."
   },
   "positioning": {
-    "value": "A doctor-led, evidence-labeled explainer channel -- distinct from both benchmark channels' individual presentation style, not a copy of either.",
+    "value": "A focused, evidence-labeled explainer channel within Senior Health -- distinct from each benchmark channel's individual presentation style, not a copy of either.",
     "source": "TRAINING_HEURISTIC",
     "confidence": "MEDIUM",
     "evidence": "TR-018-REC-004 (differentiated promise) + TR-011-017 (truth-hierarchy operating system)."
   },
   "niche_boundaries": {
-    "value": "Senior/aging-adult health explanation and risk-awareness content; explicitly not diagnosis, treatment, or medication guidance.",
-    "source": "OFFICIAL_PLATFORM_KNOWLEDGE",
-    "confidence": "HIGH",
-    "evidence": "Medical content requires MEDICAL_VALIDATION_STATUS; this repository never treats competitor transcript claims as medical fact."
+    "value": "Senior Health content bounded to the core content pillars observed across benchmark channels (CARDIOVASCULAR_HEALTH, HEALTHY_AGING, METABOLIC_HEALTH); claims requiring domain expertise (medical, financial, legal, or otherwise) are never presented as verified fact from competitor transcripts without EXTERNAL_VALIDATION.",
+    "source": "CORPUS_EVIDENCE",
+    "confidence": "MEDIUM",
+    "evidence": "This repository never treats competitor/creator transcript claims as verified domain fact; see guardrails.no_causal_claims_from_public_correlation."
   },
   "core_content_pillars": [
     {
@@ -76,25 +76,25 @@
     "confidence": "LOW"
   },
   "thumbnail_language": {
-    "value": "NOT_AVAILABLE for CH-000001/CH-000002-style gap; where thumbnail evidence exists (CH-000003/CH-000005), favor bright/natural colors, bold fonts, one big idea per the Packaging SOP.",
+    "value": "NOT_AVAILABLE for CH-000003, CH-000005 (THUMBNAIL_REFERENCE_GAP); where thumbnail evidence exists for a benchmark channel, favor bright/natural colors, bold fonts, one big idea per the Packaging SOP.",
     "source": "TRAINING_HEURISTIC",
     "confidence": "LOW",
     "rule_id": "TR-011-004"
   },
   "hook_principles": {
-    "value": "Use the Context Lean -> Scroll-Stop -> Snapback structure as a diagnostic lens for drafts; do not assume a fixed hook archetype outperforms until the new channel has >=3 items in that archetype.",
-    "source": "TRAINING_HEURISTIC",
-    "confidence": "LOW",
-    "rule_id": "TR-011-002"
+    "value": "Robust cross-channel hook pattern(s) for this benchmark set: NUMBER_LED; use as a diagnostic lens, do not assume it outperforms until the new channel has >=3 items in that archetype.",
+    "source": "BENCHMARK_PATTERN",
+    "confidence": "MEDIUM",
+    "rule_id": "TR-011-011"
   },
   "script_structures": {
-    "value": "Favor calculated-escalation / causal consequence-chain structuring as a baseline discipline; treat it as structurally common rather than a differentiator per current corpus calibration.",
-    "source": "CORPUS_EVIDENCE",
-    "confidence": "MEDIUM",
+    "value": "No script archetype reached ROBUST_CROSS_CHANNEL_PATTERN for this benchmark set; use BUT/THEREFORE causal structuring as a general baseline discipline, not a proven differentiator for this niche.",
+    "source": "TRAINING_HEURISTIC",
+    "confidence": "LOW",
     "rule_id": "TR-011-015"
   },
   "format_strategy": {
-    "value": "Start long-form only (matches both benchmark channels' canonical evidence); do not add Shorts on the same channel without an explicit test, per the unresolved CLM-005/CLM-018 conflict.",
+    "value": "Observed format mix across benchmark channels: {'LONG_FORM': 61}; match the dominant observed format and do not add a second format on the same channel without an explicit test, per the unresolved Shorts-vs-long-form platform claim (TR-018-CLM-018).",
     "source": "OFFICIAL_PLATFORM_KNOWLEDGE",
     "confidence": "LOW",
     "rule_id": "TR-018-CLM-018"

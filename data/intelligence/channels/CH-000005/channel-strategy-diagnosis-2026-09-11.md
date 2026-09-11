@@ -38,12 +38,12 @@ CH-000003 strong script archetypes: none
 # Training Heuristics That Hold
 
 - `TR-011-011` (via hook:NUMBER_LED): Viral Checklist item -- Specificity & Numbers: stats, details, or concrete numbers make a hook/title more actionable.
-- `TR-011-007` (via script:CALCULATED_ESCALATION): Script Analyzer: judge a full script's hook, narrative spine, cinematic imagination, retention mechanics, CTA/monetization, and title/thumbnail alignment.
 
 # Training Heuristics That Do Not Hold
 
 - `TR-011-011` (via title:NUMBERED_SPECIFICITY): Viral Checklist item -- Specificity & Numbers: stats, details, or concrete numbers make a hook/title more actionable.
 - `TR-011-002` (via hook:CONTEXT_FIRST): The 3-Step Hook Formula: Context Lean (establish a relatable frame) -> Scroll-Stop word/beat (pattern interrupt) -> Contrarian Snapback (reveal the real, counter-expectation payoff).
+- `TR-011-007` (via script:CALCULATED_ESCALATION): Script Analyzer: judge a full script's hook, narrative spine, cinematic imagination, retention mechanics, CTA/monetization, and title/thumbnail alignment.
 
 # Continue
 
@@ -82,5 +82,4 @@ CH-000003 strong script archetypes: none
 - Private YouTube Analytics (CTR, impressions, retention, AVD, watch time, traffic sources, subscriber conversion, audience overlap) are NOT_AVAILABLE for this channel.
 - LONGITUDINAL_TREND is NOT_AVAILABLE; only cross-sectional, publish-cohort-aware normalized performance is used.
 - Every archetype/family association is CAUSALITY_STATUS=ASSOCIATION_ONLY, never a causal claim.
-- Competitor/creator transcript claims are never treated as medical facts; MEDICAL_VALIDATION_STATUS is tracked separately per the unified orchestrator (VALIDATION_REQUIRED for this channel unless an EXTERNAL_VALIDATION source is supplied).
-
+- Competitor/creator transcript claims are never treated as verified domain fact (medical, financial, or otherwise); high-stakes domain claims require EXTERNAL_VALIDATION per the unified orchestrator before being treated as authoritative.
