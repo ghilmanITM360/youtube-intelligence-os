@@ -2,9 +2,9 @@
 
 ## Current scope
 
-The repository is in **Phase 1 — Data Entry & Inventory**. Current work is limited to safely receiving user-supplied data, preserving originals, describing datasets, recording provenance, and preparing for basic duplicate detection and semantic classification.
+**Phase 1D — Controlled Apify YouTube Acquisition is complete. Phase 2 — Data Classification & Provenance is also closed** (`AGENTS.md` rule 12; 604 classification rows across 303 canonical content items, 5 canonical channels). Topic Opportunity, Packaging, Hook/Script, and Editing/Visual Intelligence have since been authorized and piloted for one or more channels, and a first unified content-intelligence orchestrator (`scripts/run_youtube_intelligence.py`) composes existing layers into evidence-traceable plans without regenerating or fabricating intelligence. The phase numbering in `docs/Phases.md` has not been fully updated to reflect this progression and should be reconciled separately.
 
-No production database, vector store, embeddings, RAG system, MCP server, custom agent workflow, YouTube API integration, scraper, frontend, dashboard, generator, or scheduled research automation is part of this phase.
+Decision 018 authorizes controlled, cost-bounded Apify acquisition as the narrow Phase 1D exception to the no-scraper boundary. No production database, vector store, embeddings, RAG system, MCP server, custom agent workflow, YouTube API integration, other scraper, frontend, dashboard, generator, or scheduled research automation is part of the current scope.
 
 ## Long-term concept
 

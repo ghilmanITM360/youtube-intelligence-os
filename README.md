@@ -2,7 +2,7 @@
 
 A canonical workspace for developing a persistent, evidence-based intelligence system for multiple YouTube channels. The long-term vision includes data inventory, competitor analysis, research, topic discovery, and content-development intelligence. This repository is **not** that finished product yet — it is currently the data-ingestion and provenance foundation the later intelligence phases will build on.
 
-**Current Phase: Phase 1C — Recursive Multi-Source & Multimodal Ingestion, COMPLETE** (see `docs/Phases.md`). Phase 2 — Data Classification & Provenance is next, pending explicit authorization; it does not begin automatically.
+**Current Phase: Phase 1D — Controlled Apify YouTube Acquisition, COMPLETE** (see `docs/Phases.md`). Phase 2 — Data Classification & Provenance is also closed (`AGENTS.md` rule 12). Topic Opportunity, Packaging, Hook/Script, and Editing/Visual Intelligence have since been authorized and piloted for one or more of the 5 canonical channels, and a first unified content-intelligence orchestrator (`scripts/run_youtube_intelligence.py`) composes these existing layers into evidence-traceable plans. The formal phase bookkeeping in `docs/Phases.md` has not yet been updated to reflect this progression and should be reconciled separately.
 
 ## Current purpose
 

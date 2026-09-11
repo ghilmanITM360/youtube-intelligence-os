@@ -1,6 +1,6 @@
 # Data Inventory
 
-Every supplied dataset will eventually receive a durable inventory record. Markdown documents and files under `data/manifests/` are sufficient for Phase 1; no database is being introduced.
+Every supplied dataset receives a durable inventory record. The active local SQLite catalog (`data/catalog/youtube_inventory.db`, schema v10) is the machine-readable index alongside Markdown documents and files under `data/manifests/`; it currently contains 19 registered datasets across 5 canonical channels.
 
 ## Planned record fields
 
@@ -62,6 +62,9 @@ Phase 1A (Decision 012) adds a local SQLite catalog (`data/catalog/youtube_inven
 | DS-000014 | "Weird and Worrying Questions" Video Forensic Reconstruction | BATCH-000001 | C — Forensic Video Intelligence | INGESTED | [`data/manifests/DS-000014.md`](../data/manifests/DS-000014.md) |
 | DS-000015 | Sunset Video Forensic Reconstruction — Case 2 (possible revision of Case 1, unresolved) | BATCH-000001 | C — Forensic Video Intelligence | INGESTED | [`data/manifests/DS-000015.md`](../data/manifests/DS-000015.md) |
 | DS-000016 | Retiree Daily-Routines Video Forensic Reconstruction | BATCH-000001 | C — Forensic Video Intelligence | INGESTED | [`data/manifests/DS-000016.md`](../data/manifests/DS-000016.md) |
+| DS-000017 | xkcd's What If? — Apify Channel Acquisition | APIFY_YOUTUBE_CHANNEL | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000017.md`](../data/manifests/DS-000017.md) |
+| DS-000018 | 2026 Algorithm Update — Multi-Tab Creator Research Corpus | CLOUD_DOCUMENT_EXPORT | A — Global YouTube Knowledge | STRUCTURED_REGISTERED | [`data/manifests/DS-000018.md`](../data/manifests/DS-000018.md) |
+| DS-000019 | Dr. Elias Senior Health — Supplied Canonical Channel Export | EXTERNAL_FILES | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000019.md`](../data/manifests/DS-000019.md) |
 
 Status progression: `INGESTED` (Phase 1A — raw files preserved and cataloged) → `STRUCTURED_REGISTERED` (Phase 1B — channels/videos/snapshots/transcripts registered with field provenance, `docs/DECISIONS.md` Decisions 014–015). No competitor intelligence analysis has been performed at either stage.
 
