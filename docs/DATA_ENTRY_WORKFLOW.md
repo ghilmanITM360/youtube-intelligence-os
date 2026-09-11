@@ -32,3 +32,15 @@ INTELLIGENCE
 ```
 
 Later phases may expand this workflow only through explicit architectural decisions.
+
+## Incremental intelligence refresh
+
+After canonical ingestion and classification:
+
+1. Preview stale downstream layers: `.venv/bin/python -B scripts/plan_intelligence_refresh.py --channel CH-000005`.
+2. For a reviewed change category, preview execution: `.venv/bin/python -B scripts/refresh_youtube_intelligence.py --channel CH-000005 --simulate-change NEW_TRANSCRIPT --dry-run`.
+3. Run the same command without `--dry-run`.
+4. Review the versioned report in `data/intelligence/system/refresh-runs/` and any successor artifacts.
+5. Run tests and SQLite integrity checks, then commit only scoped changes.
+
+Freshness uses canonical IDs, DB values, source hashes, generator hashes, and upstream artifact hashes. File modification times are ignored. Refresh never acquires evidence, calls network services, classifies content, mutates the catalog, overwrites historical intelligence, or builds missing first-party analytics ingestion. Rebuild the baseline registry explicitly with `scripts/plan_intelligence_refresh.py --write-registry` only after verified current artifacts are accepted.

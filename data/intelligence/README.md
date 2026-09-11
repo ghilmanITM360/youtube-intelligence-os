@@ -4,4 +4,6 @@ Small derived-intelligence artifacts in this directory are durable project recor
 
 Each artifact must identify its channel or scope, source dataset/run and snapshot cutoff, evidence layers, and generation method/version when one exists. A rerun against different evidence creates a new dated artifact instead of overwriting the earlier result.
 
+`system/intelligence-freshness-registry.json` records current derived artifacts and content-based dependencies. `scripts/plan_intelligence_refresh.py` is read-only. `scripts/refresh_youtube_intelligence.py` writes a successor only when semantic output changes and always records a compact run under `system/refresh-runs/`; unchanged replay output is not rewritten.
+
 `channels/CH-000004/content-performance-intelligence-2026-08-28.md` is a historical, one-off artifact. It identifies `CH-000004`, `DS-000017`, `RUN-000020`, `APIFYRUN-000002`, the `2026-08-28T13:16:30.020Z` snapshot, and its 83-item scope, but no original generator or tool version was preserved. It is therefore intentionally retained unchanged and classified as **not reproducible**; do not fabricate a generator or silently regenerate its analysis.
