@@ -124,6 +124,8 @@ This does not retroactively declare Phases 4–12 below complete: no Channel Bra
 
 ### Phase 4 — Reusable Intelligence Extraction
 
+**Status update (Step 22A pilot):** A first Channel Strategy Intelligence layer exists on top of the V1 capabilities above: a training-knowledge registry (`data/intelligence/system/youtube-strategy-training-knowledge-2026-09-11.json`, 50 provenance-tagged rules from DS-000011/DS-000018), a relative success/failure and family-repeatability engine (`scripts/report_channel_strategy_intelligence.py`), a CH-000005-vs-CH-000003 health-niche diagnosis and benchmark, and a new-channel blueprint. This is **PILOT_WORKING**, not generalized — it has been exercised end-to-end for exactly one channel pair (the health niche) and is a CODE/CAPABILITY GAP outside that pair until tested further, not an EVIDENCE COVERAGE LIMITATION. No first-party analytics ingestion, RAG, agents, UI, or API were introduced.
+
 - **Objective:** Produce the first AI_INTERPRETATION / OBSERVATION layer outputs (see `docs/Database.md` provenance model) from normalized data — e.g., reusable Global YouTube Knowledge (Class A) distilled from training documents.
 - **Inputs:** Normalized data from Phase 3.
 - **Outputs:** `data/intelligence/` records, each tagged with its evidence layer and confidence.
