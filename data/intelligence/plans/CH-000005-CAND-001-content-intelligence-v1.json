@@ -1,0 +1,613 @@
+{
+  "channel": {
+    "channel_id": "CH-000005",
+    "dataset_id": "DS-000019",
+    "display_name": "Dr. Elias Senior Health",
+    "evidence_state": "CANONICAL_FACT",
+    "handle": "@Dr.EliasYT"
+  },
+  "channel_id": "CH-000005",
+  "coherence": {
+    "dimensions": {
+      "CHANNEL_MATCH": "PASS",
+      "EDITING_VISUAL_MATCH": "NOT_APPLICABLE",
+      "EVIDENCE_TRACEABILITY": "PASS",
+      "FORMAT_MATCH": "PASS",
+      "HOOK_PROMISE_MATCH": "PARTIAL",
+      "OPPORTUNITY_MATCH": "PASS",
+      "PACKAGE_PROMISE_MATCH": "PASS",
+      "SCRIPT_PAYOFF_MATCH": "PARTIAL",
+      "TEMPORAL_LIMITATIONS_PRESERVED": "PASS",
+      "TOPIC_MATCH": "PASS",
+      "UNAVAILABLE_METRICS_DISCLOSED": "PASS"
+    },
+    "overall": "PARTIAL"
+  },
+  "editing": {
+    "blueprint": null,
+    "channel_wide_editing_style": "NOT_SUPPORTED",
+    "reason": "NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE",
+    "status": "NOT_AVAILABLE"
+  },
+  "generated_on": "2026-09-11",
+  "generation_state": "ASSEMBLED_FROM_LAYERS",
+  "global": {
+    "evidence_quality_summary": "HYPOTHESIS",
+    "generation_state": "ASSEMBLED_FROM_LAYERS",
+    "medical_validation_required": true,
+    "platform_guardrails": {
+      "appeal": "Topic/package gets viewer interest and communicates value.",
+      "engagement": "Viewer response after choosing to watch.",
+      "no_direct_metadata_change_algorithm_boost": true,
+      "no_fixed_ctr_target": true,
+      "no_fixed_retention_target": true,
+      "no_hidden_ranking_weights": true,
+      "no_proprietary_algorithm_score": true,
+      "no_universal_ideal_video_length": true,
+      "personalization_matters": true,
+      "recommendation_surfaces_differ": true,
+      "satisfaction": "Whether viewers enjoyed/found value in the content."
+    },
+    "provenance": {
+      "canonical_dataset": "DS-000019",
+      "editing_artifact": null,
+      "hook_script_artifact": "data/intelligence/channels/CH-000005/hook-script-intelligence-2026-09-10.json",
+      "packaging_artifact": "data/intelligence/channels/CH-000005/packaging-intelligence-2026-09-10.json",
+      "topic_artifact": "data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json"
+    },
+    "unavailable_metrics": {
+      "AVERAGE_VIEW_DURATION": "NOT_AVAILABLE",
+      "CTR": "NOT_AVAILABLE",
+      "IMPRESSIONS": "NOT_AVAILABLE",
+      "RETENTION": "NOT_AVAILABLE",
+      "SUBSCRIBER_CONVERSION": "NOT_AVAILABLE",
+      "TRAFFIC_SOURCES": "NOT_AVAILABLE",
+      "UNIQUE_VIEWERS": "NOT_AVAILABLE",
+      "WATCH_TIME": "NOT_AVAILABLE"
+    },
+    "warnings": [
+      "EDITING NOT_AVAILABLE: NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE"
+    ]
+  },
+  "hook": {
+    "counter_evidence": [
+      "VID-000284",
+      "VID-000286"
+    ],
+    "evidence": [
+      "VID-000290",
+      "VID-000297"
+    ],
+    "hook_archetypes": [
+      "CONTEXT_FIRST"
+    ],
+    "hook_hypotheses": [
+      "Context First"
+    ],
+    "package_linkage": "EVIDENCE_OVERLAP_JOIN",
+    "selected_hook": {
+      "confidence": "HIGH",
+      "counter_examples": [
+        "VID-000284",
+        "VID-000286"
+      ],
+      "definition": "Context First",
+      "format_context": "LONG_FORM",
+      "hook_archetype_id": "CONTEXT_FIRST",
+      "interpretation_state": "AI_INTERPRETATION",
+      "item_count": 14,
+      "measured_feature_profile": "See hook_features records for opening counts and premise position.",
+      "performance_association": {
+        "causal_claim": false,
+        "median_channel_relative": 0.4547,
+        "state": "PERFORMANCE_ASSOCIATION"
+      },
+      "repeatability": "REPEATABLE_PATTERN",
+      "strong_examples": [
+        "VID-000284",
+        "VID-000286",
+        "VID-000297"
+      ],
+      "video_ids": [
+        "VID-000275",
+        "VID-000276",
+        "VID-000278",
+        "VID-000281",
+        "VID-000284",
+        "VID-000286",
+        "VID-000289",
+        "VID-000290",
+        "VID-000291",
+        "VID-000292",
+        "VID-000294",
+        "VID-000295",
+        "VID-000297",
+        "VID-000303"
+      ],
+      "weak_examples": [
+        "VID-000295",
+        "VID-000281",
+        "VID-000290"
+      ]
+    }
+  },
+  "opportunity": {
+    "angle": "Source-derived concept represented by VID-000296: Doctor Reveals: The #1 Best Fruit to Eat for Healthy Eyesight!",
+    "confidence": "HIGH",
+    "counter_evidence": [
+      "Family signal remains observational; no private demand or causal data."
+    ],
+    "evidence_state": "HYPOTHESIS",
+    "external_validation": "NOT_AVAILABLE",
+    "falsification_condition": "Family signal remains observational; no private demand or causal data.",
+    "internal_evidence": [
+      "VID-000296",
+      "VID-000297",
+      "VID-000290"
+    ],
+    "opportunity_id": "CH-000005-CAND-001",
+    "risks": [
+      "Generated direction requires factual review before production.",
+      "No causal performance claim.",
+      "Generated direction requires factual review before production.",
+      "No causal performance claim.",
+      "Generated direction requires factual review before production.",
+      "No causal performance claim."
+    ],
+    "topic": "Doctor Reveals"
+  },
+  "opportunity_id": "CH-000005-CAND-001",
+  "packaging": {
+    "confidence": "HIGH",
+    "native_ab_eligibility": "POTENTIALLY_ELIGIBLE",
+    "package_archetypes": [
+      "COMPARISON_LAYOUT",
+      "CONSEQUENCE_SCENE",
+      "SINGLE_HERO"
+    ],
+    "selected_package": {
+      "candidate": {
+        "candidate_id": "CH-000005-CAND-001",
+        "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+        "initial_confidence": "HIGH",
+        "performance_signal": "Family median/channel median ratio: 1.7805",
+        "specific_angle": "Doctor Reveals: The #1 Best Fruit to Eat for Healthy Eyesight!",
+        "supporting_video_ids": [
+          "VID-000296",
+          "VID-000297",
+          "VID-000290"
+        ],
+        "topic": "Doctor Reveals"
+      },
+      "recommended_test_set": [
+        {
+          "confidence": "HIGH",
+          "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+          "evidence_state": "HYPOTHESIS_FOR_TESTING",
+          "format_context": "LONG_FORM",
+          "historical_support": {
+            "performance_signal": "Family median/channel median ratio: 1.7805",
+            "video_ids": [
+              "VID-000290",
+              "VID-000296",
+              "VID-000297"
+            ]
+          },
+          "native_ab_eligible": "YES",
+          "package_id": "CH-000005-CAND-001-PKG-A",
+          "pair_relationship": "QUESTION_PLUS_VISUAL_SETUP",
+          "risks": [
+            "Generated direction requires factual review before production.",
+            "No causal performance claim."
+          ],
+          "thumbnail_archetype": "SINGLE_HERO",
+          "thumbnail_concept": "One concrete subject with a single unresolved question.",
+          "title": "What Should You Know About Doctor Reveals?",
+          "title_archetype": "QUESTION",
+          "visual_support": {
+            "causal_claim": false,
+            "state": "CHANNEL_VISUAL_PRECEDENT",
+            "video_ids": [
+              "VID-000290",
+              "VID-000296",
+              "VID-000297"
+            ]
+          }
+        },
+        {
+          "confidence": "HIGH",
+          "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+          "evidence_state": "HYPOTHESIS_FOR_TESTING",
+          "format_context": "LONG_FORM",
+          "historical_support": {
+            "performance_signal": "Family median/channel median ratio: 1.7805",
+            "video_ids": [
+              "VID-000290",
+              "VID-000296",
+              "VID-000297"
+            ]
+          },
+          "native_ab_eligible": "YES",
+          "package_id": "CH-000005-CAND-001-PKG-B",
+          "pair_relationship": "TITLE_ADDS_CONTEXT",
+          "risks": [
+            "Generated direction requires factual review before production.",
+            "No causal performance claim."
+          ],
+          "thumbnail_archetype": "COMPARISON_LAYOUT",
+          "thumbnail_concept": "Two concrete states showing the decision or contrast.",
+          "title": "Doctor Reveals: The #1 Best Fruit to Eat for Healthy Eyesight!",
+          "title_archetype": "EXPLANATORY",
+          "visual_support": {
+            "causal_claim": false,
+            "state": "CHANNEL_VISUAL_PRECEDENT",
+            "video_ids": [
+              "VID-000290",
+              "VID-000296",
+              "VID-000297"
+            ]
+          }
+        },
+        {
+          "confidence": "HIGH",
+          "counter_evidence": "Family signal remains observational; no private demand or causal data.",
+          "evidence_state": "HYPOTHESIS_FOR_TESTING",
+          "format_context": "LONG_FORM",
+          "historical_support": {
+            "performance_signal": "Family median/channel median ratio: 1.7805",
+            "video_ids": [
+              "VID-000290",
+              "VID-000296",
+              "VID-000297"
+            ]
+          },
+          "native_ab_eligible": "YES",
+          "package_id": "CH-000005-CAND-001-PKG-C",
+          "pair_relationship": "TITLE_ADDS_STAKES",
+          "risks": [
+            "Generated direction requires factual review before production.",
+            "No causal performance claim."
+          ],
+          "thumbnail_archetype": "CONSEQUENCE_SCENE",
+          "thumbnail_concept": "One consequence scene showing stakes without claiming certainty.",
+          "title": "What Changes the Outcome for Doctor Reveals?",
+          "title_archetype": "WARNING_OR_RISK",
+          "visual_support": {
+            "causal_claim": false,
+            "state": "CHANNEL_VISUAL_PRECEDENT",
+            "video_ids": [
+              "VID-000290",
+              "VID-000296",
+              "VID-000297"
+            ]
+          }
+        }
+      ]
+    },
+    "temporal_evidence_state": "HYPOTHESIS_FOR_TESTING",
+    "thumbnail_concepts": [
+      "One concrete subject with a single unresolved question.",
+      "Two concrete states showing the decision or contrast.",
+      "One consequence scene showing stakes without claiming certainty."
+    ],
+    "title_hypotheses": [
+      "What Should You Know About Doctor Reveals?",
+      "Doctor Reveals: The #1 Best Fruit to Eat for Healthy Eyesight!",
+      "What Changes the Outcome for Doctor Reveals?"
+    ]
+  },
+  "schema_version": "youtube-intelligence-os-content-plan-1",
+  "script": {
+    "evidence": [
+      "VID-000290",
+      "VID-000296",
+      "VID-000297"
+    ],
+    "limitations": [
+      "Hook/script linkage derived by evidence-video overlap, not an authored per-opportunity blueprint."
+    ],
+    "payoff_structure": {
+      "structure_sequence": [
+        "HOOK",
+        "PREMISE",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "PAYOFF"
+      ]
+    },
+    "script_archetype": [
+      "HOOK",
+      "PREMISE",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "ESCALATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "CALCULATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "COUNTERPOINT",
+      "EXPLANATION",
+      "ESCALATION",
+      "EXPLANATION",
+      "ESCALATION",
+      "PAYOFF"
+    ],
+    "script_blueprint": "Calculated Escalation",
+    "selected_script": {
+      "confidence": "HIGH",
+      "counter_examples": [],
+      "definition": "Calculated Escalation",
+      "format_context": "LONG_FORM",
+      "interpretation_state": "AI_INTERPRETATION",
+      "item_count": 28,
+      "performance_association": {
+        "causal_claim": false,
+        "median_channel_relative": 1.0804,
+        "state": "PERFORMANCE_ASSOCIATION"
+      },
+      "repeatability": "REPEATABLE_PATTERN",
+      "script_archetype_id": "CALCULATED_ESCALATION",
+      "strong_examples": [
+        "VID-000284",
+        "VID-000286",
+        "VID-000296"
+      ],
+      "structure_sequence": [
+        "HOOK",
+        "PREMISE",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "CALCULATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "COUNTERPOINT",
+        "EXPLANATION",
+        "ESCALATION",
+        "EXPLANATION",
+        "ESCALATION",
+        "PAYOFF"
+      ],
+      "topic_context": [
+        "BLOOD",
+        "CARDIOLOGIST",
+        "CARDIOLOGIST_WARNS",
+        "DOCTOR_EXPLAINS",
+        "DOCTOR_REVEALS",
+        "DRINK_WATER",
+        "EAT",
+        "HEALTH",
+        "HEALTHY",
+        "HEART_ATTACKS",
+        "METABOLIC_HEALTH",
+        "NIGHT",
+        "NOBODY",
+        "SENIORS",
+        "SENIORS_ADD",
+        "STROKE",
+        "TAKING_AMLODIPINE",
+        "WATER"
+      ],
+      "video_ids": [
+        "VID-000276",
+        "VID-000277",
+        "VID-000278",
+        "VID-000279",
+        "VID-000280",
+        "VID-000281",
+        "VID-000282",
+        "VID-000283",
+        "VID-000284",
+        "VID-000285",
+        "VID-000286",
+        "VID-000287",
+        "VID-000288",
+        "VID-000289",
+        "VID-000290",
+        "VID-000291",
+        "VID-000292",
+        "VID-000293",
+        "VID-000294",
+        "VID-000295",
+        "VID-000296",
+        "VID-000297",
+        "VID-000298",
+        "VID-000299",
+        "VID-000300",
+        "VID-000301",
+        "VID-000302",
+        "VID-000303"
+      ],
+      "weak_examples": [
+        "VID-000290",
+        "VID-000279",
+        "VID-000301"
+      ]
+    }
+  }
+}
