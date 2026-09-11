@@ -5,6 +5,7 @@ import argparse
 import json
 import re
 import statistics
+import zipfile
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -401,9 +402,14 @@ def load_canonical_rows(conn, channel_id):
     rows = conn.execute(
         """SELECT v.video_id, v.youtube_video_id, s.title, s.duration_seconds, s.views, s.likes, s.comments,
                   s.published_at, s.observed_at, s.video_type, t.canonical_reference, t.transcript_sha256,
-                  t.availability_status
+                  t.availability_status,
+                  sf.storage_kind AS transcript_storage_kind, sf.canonical_path AS transcript_path,
+                  sf.archive_member_path AS transcript_member_path,
+                  parent.canonical_path AS transcript_archive_path
            FROM videos v JOIN video_snapshots s ON s.video_id=v.video_id
            JOIN transcripts t ON t.video_id=v.video_id AND t.dataset_id=s.dataset_id
+           LEFT JOIN source_files sf ON sf.file_id = t.archive_member_file_id
+           LEFT JOIN source_files parent ON parent.file_id = sf.parent_file_id
            WHERE v.channel_id=? ORDER BY v.video_id""",
         (channel_id,),
     ).fetchall()
@@ -414,6 +420,14 @@ def canonical_transcript_text(text):
     """Strip supplied metadata/description wrappers before script analysis."""
     parts = re.split(r"\n=+\nTRANSCRIPT\n=+\n", text, maxsplit=1)
     return parts[-1].strip()
+
+
+def read_canonical_transcript_raw(row):
+    """Read raw transcript text regardless of physical-file vs archive-member storage."""
+    if row["transcript_storage_kind"] == "ARCHIVE_MEMBER":
+        with zipfile.ZipFile(row["transcript_archive_path"]) as archive:
+            return archive.read(row["transcript_member_path"]).decode("utf-8", errors="replace")
+    return Path(row["transcript_path"]).read_text(encoding="utf-8")
 
 
 def build_report(conn, channel_id, topic, packaging, packaging_visual, interpretations):
@@ -434,9 +448,12 @@ def build_report(conn, channel_id, topic, packaging, packaging_visual, interpret
     format_medians = {key: statistics.median(values) for key, values in format_velocities.items()}
     timed = {row["youtube_video_id"]: row for row in (interpretations or {}).get("timed_transcripts", [])}
     hook_features, script_features, pacing = [], [], []
+    unavailable_transcripts = []
     for row in rows:
-        path = Path(row["canonical_reference"])
-        canonical_text = canonical_transcript_text(path.read_text(encoding="utf-8"))
+        if row["availability_status"] != "AVAILABLE" or not row["canonical_reference"]:
+            unavailable_transcripts.append(row["video_id"])
+            continue
+        canonical_text = canonical_transcript_text(read_canonical_transcript_raw(row))
         transcript = {"text": canonical_text}
         timed_source = timed.get(row["youtube_video_id"])
         if timed_source:
@@ -479,7 +496,7 @@ def build_report(conn, channel_id, topic, packaging, packaging_visual, interpret
             "family_median_ratio": topic_row["derived_metric"]["family_median_ratio"],
             "views_per_day": topic_row["derived_metric"]["views_per_day"],
             "transcript_provenance": {
-                "canonical_path": str(path), "canonical_sha256": row["transcript_sha256"],
+                "canonical_path": row["canonical_reference"], "canonical_sha256": row["transcript_sha256"],
                 "timed_source": timed_source, "forensic_timing_used": bool(timed_source),
             },
         })
@@ -503,6 +520,7 @@ def build_report(conn, channel_id, topic, packaging, packaging_visual, interpret
             "schema_version": "hook-script-intelligence-1", "generated_on": "2026-09-10", "channel": topic["channel"],
             "evidence_snapshot": {
                 "canonical_item_count": len(rows), "transcripts_accounted_for": len(hook_features),
+                "unavailable_transcripts": sorted(unavailable_transcripts),
                 "timestamped_transcripts": timing_counts["EXACT_TIMESTAMPED"] + timing_counts["SEGMENT_TIMESTAMPED"],
                 "formats": dict(sorted(Counter(row["format"] for row in hook_features).items())),
                 "public_metrics_available": ["views", "views_per_day", "likes_per_view", "comments_per_view", "format_relative_performance", "family_relative_performance"],
@@ -528,7 +546,7 @@ def build_report(conn, channel_id, topic, packaging, packaging_visual, interpret
                 if packaging.get("evidence_snapshot", {}).get("acquired_thumbnails")
                 else "Current thumbnail references have no acquired visual evidence.",
                 "Hook and script archetypes are AI_INTERPRETATION, not measured retention evidence.",
-            ],
+            ] + ([f"{len(unavailable_transcripts)} canonical item(s) have no available transcript and are excluded from hook/script analysis: {sorted(unavailable_transcripts)}."] if unavailable_transcripts else []),
             "provenance": {"canonical_dataset": topic["channel"]["dataset_id"], "topic_schema": topic.get("schema_version"), "packaging_schema": packaging.get("schema_version")},
             "capability_verdict": "PASS",
         }
@@ -600,6 +618,7 @@ def build_report(conn, channel_id, topic, packaging, packaging_visual, interpret
         "schema_version": "hook-script-intelligence-pilot-1", "generated_on": "2026-09-10", "channel": topic["channel"],
         "evidence_snapshot": {
             "canonical_item_count": len(rows), "transcripts_accounted_for": len(hook_features),
+            "unavailable_transcripts": sorted(unavailable_transcripts),
             "timestamped_transcripts": timing_counts["EXACT_TIMESTAMPED"] + timing_counts["SEGMENT_TIMESTAMPED"],
             "formats": dict(sorted(Counter(row["format"] for row in hook_features).items())),
             "public_metrics_available": ["views", "views_per_day", "likes_per_view", "comments_per_view", "format_relative_performance", "family_relative_performance"],
