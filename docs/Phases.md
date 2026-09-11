@@ -100,9 +100,17 @@ Current catalog: 303 canonical content items; 302 fully classified and one evide
 ---
 
 ### Phase 3 — Extraction & Normalization
-**Status: TOPIC OPPORTUNITY INTELLIGENCE GENERALIZED / WORKING**
+**Status: SUPERSEDED BY DIRECT V1 INTELLIGENCE WORK — YOUTUBE INTELLIGENCE OS V1 COMPLETE**
 
-Step 16B's CH-000003 pilot passed. Step 16C generalized read-only Topic Opportunity Intelligence across the remaining canonical channels while preserving channel separation. This does not declare the broader Phase 3–8 roadmap complete or authorize title, thumbnail, hook, script, or packaging intelligence.
+Step 16B's CH-000003 pilot passed. Step 16C generalized read-only Topic Opportunity Intelligence across the remaining canonical channels while preserving channel separation. Since then, later authorized steps (through Step 21) generalized Packaging, Hook, and Script Intelligence to every canonical channel and added a unified orchestrator (`scripts/run_youtube_intelligence.py`) that composes these layers into evidence-traceable content plans:
+
+- **Topic Opportunity Intelligence:** COMPLETE CAPABILITY — working for all 5 canonical channels.
+- **Packaging Intelligence:** COMPLETE CAPABILITY — working for all 5 channels; title hypotheses are always available, but visual (thumbnail) packaging is an EVIDENCE COVERAGE LIMITATION for CH-000001/CH-000002 (`THUMBNAIL_REFERENCE_GAP`: no canonical thumbnail reference was ever acquired for those channels, not a code gap).
+- **Hook and Script Intelligence:** COMPLETE CAPABILITY — the same generic reporter (`scripts/report_hook_script_intelligence.py`) runs across all 5 channels; where no authored per-opportunity blueprint exists, hook/script archetypes are still measured from transcripts and linked to an opportunity by evidence-video overlap (disclosed as `PARTIAL`, never forced to a full match).
+- **Editing / Visual Intelligence:** COMPLETE CAPABILITY, conditionally available — attached only where forensic video evidence is registered (currently CH-000004 only). This is an EVIDENCE COVERAGE LIMITATION, not a missing capability: CH-000001/CH-000002/CH-000003/CH-000005 correctly report `NOT_AVAILABLE` / `NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE` rather than an inferred or fabricated editing style.
+- **Unified Orchestration:** COMPLETE — composes Topic → Packaging → Hook → Script → Editing into one evidence-traceable plan per (channel, opportunity), degrading gracefully instead of failing when a layer is unavailable.
+
+This does not retroactively declare Phases 4–12 below complete: no Channel Brain partitioning (Phase 5), competitor-intelligence engine (Phase 6), ranked opportunity engine (Phase 7), live web-validation loop (Phase 8), production database/retrieval infrastructure (Phase 10), or agent/automation workflows (Phases 11–12) exist. Phase 3's own literal objective ("Extraction & Normalization") and the formal Phase 4–9 step sequence below were effectively leapfrogged by directly-authorized V1 intelligence work; reconciling phase numbering/objective text against that real sequence is a separate documentation task, not addressed here.
 
 - **Objective:** Turn raw evidence into extracted, then normalized, structured representations (text from PDFs/DOCX, transcripts from video, OCR from images) without interpretation.
 - **Inputs:** Classified raw evidence.
