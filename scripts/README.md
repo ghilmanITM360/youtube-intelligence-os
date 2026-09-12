@@ -4,6 +4,8 @@ This directory contains small, transparent inventory, ingestion, registration, v
 
 `apify_youtube_ingest.py` is the Phase 1D bounded adapter for `streamers/youtube-scraper`. `plan` computes the result/cost ceiling without a network call. `run` reads `APIFY_TOKEN` from the environment, invokes one exact channel target, validates and deduplicates results, reconciles identity, and transactionally registers append-only snapshots/provenance. `reconcile-cost` records a finalized charged-event ledger without running another Actor.
 
+`package_five_channel_youtube_dataset.mjs` reproduces DS-000020 from explicit input paths. It validates the 132-video combined JSON/CSV/XLSX ID set, preserves three immutable Actor exports with hash checks, merges targeted description-recovery status by video ID, and builds five reference-format workbooks plus five deterministic transcript ZIPs. Run `node scripts/package_five_channel_youtube_dataset.mjs --help` for required arguments. Supply runtime paths for `@oai/artifact-tool` and JSZip through the documented arguments; the script embeds no machine path or credential.
+
 `classify_content_pilot.py` preserves the five-item Phase 2 pilot and runs controlled manifest batches with `--manifest`, `--batch-size`, and `--dry-run`. Its controlled formats are `SHORT_FORM` / `LONG_FORM`, derived from duration (`SHORT_FORM` is at most 180 seconds). Topic rows are proposed, non-reproducible `AI_INTERPRETATION`; format rows are verified, reproducible `MEASURED_FACT`.
 
 ## Controlled content-topic vocabulary

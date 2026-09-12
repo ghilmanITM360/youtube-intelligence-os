@@ -39,6 +39,19 @@ data/raw/**/*
 !data/raw/**/.gitkeep
 !data/raw/**/README.md
 
+# DS-000020 is an explicitly authorized, checksum-registered Apify evidence set.
+# Only these three immutable JSON exports are versioned; all other raw-data
+# safety defaults remain in force.
+!data/raw/channel-data/
+!data/raw/channel-data/DS-000020/
+!data/raw/channel-data/DS-000020/apify/
+!data/raw/channel-data/DS-000020/apify/*/
+!data/raw/channel-data/DS-000020/apify/*/*.json
+
+# Operational browser/export staging. Canonical registered copies live under
+# data/raw/channel-data/DS-000020 and data/extracted/channel-data/DS-000020.
+/outputs/
+
 # Phase 1 SQLite inventory catalog (Decision 012, Decision 013): the database
 # is a regenerable local index, not source evidence. Its schema and manifests
 # stay in Git; the runtime database file does not.
