@@ -55,6 +55,15 @@ data/raw/**/*
 !data/raw/channel-data/DS-000021/apify/*/
 !data/raw/channel-data/DS-000021/apify/*/*.json
 
+# DS-000022 is an explicitly authorized, checksum-registered set of
+# user-provided channel workbooks and transcript archives. Source-artifact
+# copies remain byte-identical; other raw-data defaults remain in force.
+!data/raw/channel-data/DS-000022/
+!data/raw/channel-data/DS-000022/source-artifacts/
+!data/raw/channel-data/DS-000022/source-artifacts/*/
+!data/raw/channel-data/DS-000022/source-artifacts/*/*.xlsx
+!data/raw/channel-data/DS-000022/source-artifacts/*/*.zip
+
 # Operational browser/export staging. Canonical registered copies live under
 # their checksum-registered data/raw/ and data/extracted/ dataset paths.
 /outputs/
