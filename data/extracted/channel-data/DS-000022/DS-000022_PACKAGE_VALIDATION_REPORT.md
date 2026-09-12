@@ -8,8 +8,8 @@
 - ZIP members: 739
 - Formula cells with usable cached values: 2998
 - Missing descriptions: 0
-- Apify recovery: Not performed by validator; preserved missing-value evidence is listed below.
-- Original Actor raw JSON and Actor run IDs: Not supplied.
+- Targeted recovery: Actor run `dmUFY1GHENjMdqsB9`, dataset `OSwKiHG3ijoDZZ1t9`; 10 requests succeeded, 0 failed; `$0.040`.
+- Original package Actor raw JSON and Actor run IDs: Not supplied.
 
 | Channel | Videos | Transcript files | ZIP members | Missing descriptions | Status |
 |---|---:|---:|---:|---:|---|
@@ -60,6 +60,12 @@ Checked exact sheet order and columns, typed IDs/dates/numbers, freeze panes, fi
 - No unexpected `#REF!`, `#DIV/0!`, `#VALUE!`, `#NAME?`, or `#N/A` formula errors were found.
 - The ten genuine Lucas Grant data gaps are visibly highlighted and agree with the Verification sheet.
 
+## Test execution
+
+- DS-000022 focused tests: 6 passed.
+- DS-000022 package validator: 732 rows, 732 unique video IDs, 732 transcript files, 10 verified placeholders, 739 ZIP members, 2,998 usable formula cells, and 0 missing descriptions.
+- Repository-wide `unittest` discovery: 233 tests ran; 216 passed and 17 errored because ignored/local runtime inputs were absent. Fifteen errors require the uncommitted SQLite catalog, one requires the absent raw `DS-000011` directory, and one imports the unavailable `pytest` package. No repository-wide failure implicated DS-000022 files or the recovery code.
+
 ## Recovery decision
 
-No Apify recovery run was performed. The Lucas Grant Verification sheet records that the same ten videos returned no view count and no transcript on two separate scrapes, which is preserved evidence of a stable source limitation rather than a confirmed recoverable scrape failure. The packages therefore contain 722 complete plaintext transcripts and ten explicit zero-word placeholder files. All 732 videos have complete individual descriptions.
+A targeted recovery scraped only the ten affected Lucas Grant URLs. All ten live YouTube pages resolved without redirect and showed members-only content plus `Subtitles/closed captions unavailable`. Actor run `dmUFY1GHENjMdqsB9` returned `subtitles: null`, `transcriptionUrl: null`, and `viewCount: null` for every URL; its log reported `No subtitles found` ten times. The Actor incorrectly returned `isMembersOnly: false`; the canonical workbook now records the browser-verified `Members Only = Yes` while raw output remains untouched. The packages contain 722 complete plaintext transcripts and ten verified zero-word placeholder files. All 732 videos have complete individual descriptions. Detailed evidence is in `DS-000022_LUCAS_TRANSCRIPT_RECOVERY_REPORT.md`.

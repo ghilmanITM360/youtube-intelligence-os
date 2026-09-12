@@ -22,6 +22,34 @@ HEADERS = [
 
 
 class SuppliedPackageValidatorTests(unittest.TestCase):
+    def test_accepts_verified_members_only_zero_word_placeholder(self):
+        text = """Channel      : Lucas Grant
+Title        : Example Video
+Video ID     : abcdefghijk
+URL          : https://www.youtube.com/watch?v=abcdefghijk
+Published    : 2026-09-12T00:00:00.000Z
+Duration     : 00:01:00
+Views        : None
+Likes        : 10
+Comments     : 1
+Hashtags     : (none)
+Caption type : NONE - members-only; captions unavailable
+Language     : -
+Word count   : 0
+==============================================================================
+DESCRIPTION
+==============================================================================
+Description
+
+==============================================================================
+TRANSCRIPT
+==============================================================================
+(Members-only video; unplayable without channel membership. YouTube displays 'Subtitles/closed captions unavailable'. Targeted Actor run dmUFY1GHENjMdqsB9 returned no subtitles.)
+"""
+        parsed = parse_transcript_text(text, "001_abcdefghijk_Example_Video.txt")
+        self.assertEqual(parsed["word_count"], 0)
+        self.assertTrue(parsed["placeholder"])
+
     def test_accepts_explicit_zero_word_placeholder(self):
         text = """Channel      : Example Channel
 Title        : Example Video

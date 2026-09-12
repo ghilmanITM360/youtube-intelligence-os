@@ -94,7 +94,21 @@ def parse_transcript_text(text: str, member: str) -> dict:
     except ValueError as exc:
         raise ValidationError(f"{member}: invalid Word count") from exc
     actual_words = len(body.split())
-    placeholder = declared_words == 0 and "NONE" in headers["Caption type"].upper() and body.lower().startswith("(no transcript available")
+    lower_body = body.lower()
+    unavailability_markers = (
+        "no transcript available",
+        "members-only video",
+        "captions unavailable",
+        "captions disabled",
+        "video unavailable",
+        "actor extraction failed",
+    )
+    placeholder = (
+        declared_words == 0
+        and "NONE" in headers["Caption type"].upper()
+        and body.startswith("(")
+        and any(marker in lower_body for marker in unavailability_markers)
+    )
     if not placeholder and declared_words != actual_words:
         raise ValidationError(f"{member}: transcript word count {actual_words} != declared {declared_words}")
     return {
