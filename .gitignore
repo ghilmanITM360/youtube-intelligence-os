@@ -48,8 +48,15 @@ data/raw/**/*
 !data/raw/channel-data/DS-000020/apify/*/
 !data/raw/channel-data/DS-000020/apify/*/*.json
 
+# DS-000021 is an explicitly authorized, checksum-registered Apify evidence set.
+# Only immutable JSON exports below this dataset path are versioned.
+!data/raw/channel-data/DS-000021/
+!data/raw/channel-data/DS-000021/apify/
+!data/raw/channel-data/DS-000021/apify/*/
+!data/raw/channel-data/DS-000021/apify/*/*.json
+
 # Operational browser/export staging. Canonical registered copies live under
-# data/raw/channel-data/DS-000020 and data/extracted/channel-data/DS-000020.
+# their checksum-registered data/raw/ and data/extracted/ dataset paths.
 /outputs/
 
 # Phase 1 SQLite inventory catalog (Decision 012, Decision 013): the database
