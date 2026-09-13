@@ -1,6 +1,6 @@
 # Data Inventory
 
-Every supplied dataset receives a durable inventory record. The active local SQLite catalog (`data/catalog/youtube_inventory.db`, schema v10) is the machine-readable index alongside Markdown documents and files under `data/manifests/`; durable manifests currently describe 22 registered datasets across the canonical channel corpus. The local SQLite catalog remains regenerable and may lag newly committed manifests until its next controlled rebuild.
+Every supplied dataset receives a durable inventory record. The active local SQLite catalog (`data/catalog/youtube_inventory.db`, schema v10) is the machine-readable index alongside Markdown documents and files under `data/manifests/`; durable manifests currently describe 24 registered datasets across the canonical channel corpus. The local SQLite catalog remains regenerable and may lag newly committed manifests until its next controlled rebuild.
 
 ## Planned record fields
 
@@ -69,6 +69,7 @@ Phase 1A (Decision 012) adds a local SQLite catalog (`data/catalog/youtube_inven
 | DS-000021 | Eleven-Channel YouTube Apify Dataset Packages | APIFY_YOUTUBE_CHANNEL | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000021.md`](../data/manifests/DS-000021.md) |
 | DS-000022 | Seven User-Provided YouTube Channel Packages | USER_PROVIDED_EXPORTS | B — Competitor Evidence | VALIDATED_SOURCE_PACKAGE | [`data/manifests/DS-000022.md`](../data/manifests/DS-000022.md) |
 | DS-000023 | Funded Master Channel Extraction — Batch 1 | APIFY_YOUTUBE_CHANNEL | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000023.md`](../data/manifests/DS-000023.md) |
+| DS-000024 | Funded Master Channel Extraction — Batch 2 | APIFY_YOUTUBE_CHANNEL | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000024.md`](../data/manifests/DS-000024.md) |
 
 Status progression: `INGESTED` (Phase 1A — raw files preserved and cataloged) → `STRUCTURED_REGISTERED` (Phase 1B — channels/videos/snapshots/transcripts registered with field provenance, `docs/DECISIONS.md` Decisions 014–015). No competitor intelligence analysis has been performed at either stage.
 
