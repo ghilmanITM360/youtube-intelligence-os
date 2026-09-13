@@ -1,0 +1,74 @@
+{
+  "dataset_package_id": "DS-000025",
+  "actor": "streamers/youtube-scraper",
+  "actor_id": "h7sDV53CddomktSi5",
+  "run_id": "HLqdr5AbPI0c1iYfN",
+  "dataset_id": "24ZtWCc6BjC7EX34V",
+  "dataset_console_url": "https://console.apify.com/storage/datasets/24ZtWCc6BjC7EX34V",
+  "console_run_url": "https://console.apify.com/actors/h7sDV53CddomktSi5/runs/HLqdr5AbPI0c1iYfN",
+  "status": "SUCCEEDED",
+  "started_at_console": "2026-09-13 21:22:15 Asia/Karachi",
+  "finished_at_console": "2026-09-13 21:29:38 Asia/Karachi",
+  "runtime_seconds": 443,
+  "recorded_at": "2026-09-13T21:35:12+05:00",
+  "build": "0.0.300",
+  "build_id_from_log": "CQoEo6C7XQjEZllyl",
+  "build_tag": "latest",
+  "memory_mb": 1024,
+  "timeout_seconds": 604800,
+  "input_sha256": "351d177da8f3ba95b38052712f9927d06620a95f4aef1166d1a2dc6f045556ae",
+  "input_bytes": 636,
+  "expected_result_count": 236,
+  "estimated_cost_usd": 0.944,
+  "actual_cost_usd": 0.928,
+  "starting_balance_usd": 1.648,
+  "ending_balance_displayed_usd": 0.72,
+  "ending_balance_calculated_usd": 0.72,
+  "funding_source": "existing Apify Free-plan credits only",
+  "result_count": 232,
+  "unique_video_id_count": 232,
+  "request_total": 476,
+  "request_succeeded": 476,
+  "request_failed": 0,
+  "channel_counts": {
+    "UC53wkzZ3aXyeH9-eIgi17WA": 75,
+    "UCaS30yIIV6y2zqSnHGdIGMQ": 76,
+    "UCmYG4TVuzHphjTrP3YKYGYQ": 81
+  },
+  "content_type_counts": {
+    "regular_videos": 232,
+    "shorts": 0,
+    "livestreams": 0
+  },
+  "description_nonempty_count": 232,
+  "transcript_coverage": {
+    "videos_with_subtitle_plaintext": 232,
+    "videos_without_subtitle_plaintext": 0,
+    "videos_with_transcription_url": 0,
+    "videos_with_transcript_field": 0,
+    "subtitle_track_count": 232,
+    "classification_note": "All 232 returned video items contain subtitle plaintext in subtitles[].plaintext. A missing transcript field or null transcriptionUrl was not treated as a missing transcript."
+  },
+  "post_launch_catalog_drift": {
+    "detected": true,
+    "cause": "All three channels published a new video at approximately 2026-09-13 21:00 Asia/Karachi after the earlier preflight count. The exact approved input retained maxResults 81.",
+    "current_actor_reported_channel_totals": {
+      "UC53wkzZ3aXyeH9-eIgi17WA": 75,
+      "UCaS30yIIV6y2zqSnHGdIGMQ": 76,
+      "UCmYG4TVuzHphjTrP3YKYGYQ": 82
+    },
+    "recovery_required": "One oldest Explain In Paint video is outside the 81-result ceiling and must be recovered before DS-000025 can be packaged as complete."
+  },
+  "raw_dataset": {
+    "path": "youtube_actor_raw.json",
+    "bytes": 6994665,
+    "sha256": "d19b236874e8a1a3c17d88e886e25b4de12e9399038c540d3a55466818664888"
+  },
+  "run_log": {
+    "path": "run.log.txt",
+    "bytes": 73880,
+    "lines": 604,
+    "sha256": "ff7ad7b0d74b4fc054b8bc4ccea633595f52bcc8426b13331a2a0ca2afd73113"
+  },
+  "notes": "Final authenticated Apify Console evidence for the primary DS-000025 run. All transient retries recovered; final request failure count is zero. Packaging is intentionally pending one-video completeness recovery."
+}

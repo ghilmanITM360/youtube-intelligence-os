@@ -1,0 +1,22 @@
+2026-09-13T16:57:01.255Z ACTOR: Pulling container image of build CQoEo6C7XQjEZllyl from registry.
+2026-09-13T16:57:01.258Z ACTOR: Creating container.
+2026-09-13T16:57:01.330Z ACTOR: Starting container.
+2026-09-13T16:57:01.332Z ACTOR: Running under "LIMITED_PERMISSIONS".
+2026-09-13T16:57:01.401Z Running on architecture: x86_64
+2026-09-13T16:57:01.406Z Will run command: xvfb-run -a -s "-ac -screen 0 1920x1080x24+32 -nolisten tcp" node dist/src/entrypoint.js
+2026-09-13T16:57:02.630Z INFO  System info {"apifyVersion":"3.7.2","apifyClientVersion":"2.23.4","crawleeVersion":"3.17.0","osType":"Linux","nodeVersion":"v24.21.0"}
+2026-09-13T16:57:03.136Z INFO  Starting scraper with startUrls, ignoring searchQueries
+2026-09-13T16:57:03.260Z INFO  CheerioCrawler: Starting the crawler.
+2026-09-13T16:57:07.344Z WARN  CheerioCrawler: Reclaiming failed request back to the list or queue. Error status code encountered - 429
+2026-09-13T16:57:07.347Z     at CurlImpersonateHttpClient.performRequest (file:///home/myuser/dist/src/tools/curl-impersonate-http-client.js:77:37) {"id":"Ha9ASEhjKsv1t1D","url":"https://m.youtube.com/watch?v=0IBXm8QtsZg&ucbcb=1","retryCount":1}
+2026-09-13T16:57:13.609Z INFO  handling detail url https://m.youtube.com/watch?v=0IBXm8QtsZg&ucbcb=1
+2026-09-13T16:57:21.879Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"0IBXm8QtsZg"}
+2026-09-13T16:57:22.689Z INFO  CheerioCrawler: Crawler's custom isFinishedFunction() returned true, the crawler will shut down.
+2026-09-13T16:57:22.691Z INFO  Persisting state for comments...
+2026-09-13T16:57:22.697Z INFO  Persisting AI enrichment state {"inFlightVideos":0}
+2026-09-13T16:57:22.699Z INFO  Persisting state for videos...
+2026-09-13T16:57:22.882Z INFO  CheerioCrawler: Final request statistics: {"requestsFinished":2,"requestsFailed":0,"retryHistogram":[1,1],"requestAvgFailedDurationMillis":null,"requestAvgFinishedDurationMillis":6001,"requestsFinishedPerMinute":6,"requestsFailedPerMinute":0,"requestTotalDurationMillis":12002,"requestsTotal":2,"crawlerRuntimeMillis":19702}
+2026-09-13T16:57:22.884Z INFO  CheerioCrawler: Finished! Total 2 requests: 2 succeeded, 0 failed. {"terminal":true}
+2026-09-13T16:57:22.923Z INFO  Persisting state for comments...
+2026-09-13T16:57:22.925Z INFO  Persisting AI enrichment state {"inFlightVideos":0}
+2026-09-13T16:57:22.927Z INFO  Persisting state for videos...

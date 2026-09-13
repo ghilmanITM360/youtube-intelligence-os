@@ -1,0 +1,36 @@
+{
+  "observed_at": "2026-09-13T20:04:00+05:00",
+  "method": "Authenticated Apify Console inspected in the user's active Chrome session before launch; public YouTube canonical channel pages inspected separately.",
+  "actor": "streamers/youtube-scraper",
+  "actor_id": "h7sDV53CddomktSi5",
+  "actor_build": "latest",
+  "price_event_name": "Video",
+  "price_event_description": "Each video written to the dataset.",
+  "price_usd_per_1000": 4.0,
+  "fresh_remaining_free_usage_displayed_usd": 1.65,
+  "conservative_exact_balance_for_calculation_usd": 1.648,
+  "minimum_reserve_usd": 0.3,
+  "expected_public_uploads": 230,
+  "conservative_expected_results": 236,
+  "estimated_cost_usd": 0.944,
+  "projected_balance_after_usd": 0.704,
+  "budget_decision": "SAFE_TO_LAUNCH",
+  "authorization_gates": {
+    "canonical_ids_match": true,
+    "complete_three_channel_catalogs_included": true,
+    "no_DS_000020_through_DS_000024_channel_duplicate": true,
+    "estimate_at_or_below_1_20_usd": true,
+    "projected_balance_at_or_above_0_30_usd": true,
+    "existing_credits_sufficient": true,
+    "purchase_credit_addition_or_upgrade_required": false,
+    "unexpected_paid_ai_transcription_enabled": false
+  },
+  "paid_addons": {
+    "date_range": false,
+    "ai_video_description": false,
+    "ai_video_summary": false,
+    "speech_to_text_transcription": false
+  },
+  "transcript_mode": "ALWAYS_SUBTITLES",
+  "notes": "Expected result count conservatively adds two possible non-video dataset records per channel. Existing credits only; no purchase, credit addition, plan upgrade, paid AI add-on, or date-range add-on authorized."
+}
