@@ -70,6 +70,40 @@ class YouTubeDatasetPackagerGeneralizationTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(result.stdout.rstrip("\n"), '"first\nsecond\nthird"')
 
+    def test_recovery_can_add_a_proven_missing_video(self):
+        config = {
+            "datasetId": "DS-TEST",
+            "datasetName": "Test YouTube Dataset",
+            "collectionDate": "2026-09-13",
+            "actor": "streamers/youtube-scraper",
+            "run": {"id": "run1", "datasetId": "dataset1", "status": "SUCCEEDED"},
+            "channels": [
+                {"name": "Alpha", "handle": "@alpha", "channelId": "UCalpha", "expectedCount": 2},
+            ],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config_path = root / "config.json"
+            raw_path = root / "raw.json"
+            recovery_path = root / "recovery.json"
+            config_path.write_text(json.dumps(config), encoding="utf-8")
+            raw_path.write_text(json.dumps([{"id": "aaaaaaaaaaa", "title": "A"}]), encoding="utf-8")
+            recovery_path.write_text(json.dumps([{"id": "bbbbbbbbbbb", "title": "B"}]), encoding="utf-8")
+            result = subprocess.run(
+                [
+                    "node", str(GENERATOR), "--config", str(config_path),
+                    "--raw-json", str(raw_path), "--recovery-raw-json", str(recovery_path),
+                    "--validate-record-merge-only",
+                ],
+                cwd=REPO_ROOT,
+                text=True,
+                capture_output=True,
+            )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        output = json.loads(result.stdout)
+        self.assertEqual(output["mergedVideoCount"], 2)
+        self.assertEqual(output["recoveryAddedVideoIds"], ["bbbbbbbbbbb"])
+
     def test_ds000020_reproduction_generator_stays_byte_identical(self):
         digest = hashlib.sha256(LEGACY_GENERATOR.read_bytes()).hexdigest()
         self.assertEqual(digest, "f8ae62c98f693d4cf396557c71bc5c9f9803d8bb36a8ee65fe5affca45e66994")

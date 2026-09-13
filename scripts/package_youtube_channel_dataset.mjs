@@ -32,7 +32,7 @@ function parseArgs(argv) {
   const args = {};
   for (let index = 0; index < argv.length; index += 1) {
     const token = argv[index];
-    if (token === "--help" || token === "--validate-config-only") args[token.slice(2)] = true;
+    if (["--help", "--validate-config-only", "--validate-record-merge-only"].includes(token)) args[token.slice(2)] = true;
     else if (token.startsWith("--")) {
       const key = token.slice(2);
       if (!argv[index + 1] || argv[index + 1].startsWith("--")) throw new Error(`Missing value for ${token}`);
@@ -128,6 +128,22 @@ if (args["validate-config-only"]) {
     channelCount: normalized.channelCount,
     totalExpectedVideos: normalized.totalExpectedVideos,
     channels: normalized.channels,
+  }));
+  process.exit(0);
+}
+if (args["validate-record-merge-only"]) {
+  for (const key of ["config", "raw-json", "recovery-raw-json"]) {
+    if (!args[key]) throw new Error(`Required argument missing: --${key}`);
+  }
+  const normalized = normalizeConfig(JSON.parse(await fs.readFile(path.resolve(args.config), "utf8")));
+  const rawRecords = JSON.parse(await fs.readFile(path.resolve(args["raw-json"]), "utf8"));
+  const recoveryRecords = JSON.parse(await fs.readFile(path.resolve(args["recovery-raw-json"]), "utf8"));
+  const merged = mergeActorVideoRecords(rawRecords, recoveryRecords);
+  assert(merged.byId.size === normalized.totalExpectedVideos,
+    `Merged video count must be ${normalized.totalExpectedVideos}; got ${merged.byId.size}`);
+  console.log(JSON.stringify({
+    mergedVideoCount: merged.byId.size,
+    recoveryAddedVideoIds: merged.recoveryAddedVideoIds,
   }));
   process.exit(0);
 }
@@ -365,20 +381,34 @@ function mergeRecord(base, incoming) {
   return output;
 }
 
+function mergeActorVideoRecords(rawRecords, recoveryRecords) {
+  assert(Array.isArray(rawRecords), "Raw Actor export must be a JSON array");
+  assert(Array.isArray(recoveryRecords), "Recovery raw export must be a JSON array");
+  const byId = new Map();
+  for (const record of rawRecords.filter(isVideoLike)) {
+    byId.set(record.id, byId.has(record.id) ? mergeRecord(byId.get(record.id), record) : structuredClone(record));
+  }
+  const recoveryAddedVideoIds = [];
+  for (const record of recoveryRecords.filter(isVideoLike)) {
+    if (byId.has(record.id)) byId.set(record.id, mergeRecord(byId.get(record.id), record));
+    else {
+      byId.set(record.id, structuredClone(record));
+      recoveryAddedVideoIds.push(record.id);
+    }
+  }
+  return { byId, recoveryAddedVideoIds };
+}
+
 const rawVideoRecords = raw.filter(isVideoLike);
 const aboutRecords = raw.filter(isAboutRecord);
 const statusRecords = raw.filter(record => !isVideoLike(record) && !isAboutRecord(record) && (record?.error || record?.status || record?.note));
 const unknownRecords = raw.filter(record => !isVideoLike(record) && !isAboutRecord(record) && !statusRecords.includes(record));
-const initialById = new Map();
-for (const record of rawVideoRecords) initialById.set(record.id, initialById.has(record.id) ? mergeRecord(initialById.get(record.id), record) : structuredClone(record));
-const duplicateRawVideoIds = rawVideoRecords.length - initialById.size;
-
 const recoveryRaw = sourcePaths["recovery-raw-json"] ? JSON.parse(await fs.readFile(sourcePaths["recovery-raw-json"], "utf8")) : [];
 assert(Array.isArray(recoveryRaw), "Recovery raw export must be a JSON array");
-for (const record of recoveryRaw.filter(isVideoLike)) {
-  assert(initialById.has(record.id), `Recovery video absent from initial run: ${record.id}`);
-  initialById.set(record.id, mergeRecord(initialById.get(record.id), record));
-}
+const mergedActorRecords = mergeActorVideoRecords(raw, recoveryRaw);
+const initialById = mergedActorRecords.byId;
+const recoveryAddedVideoIds = mergedActorRecords.recoveryAddedVideoIds;
+const duplicateRawVideoIds = rawVideoRecords.length - new Set(rawVideoRecords.map(record => record.id)).size;
 const recoveryVerification = sourcePaths["description-verification-json"]
   ? JSON.parse(await fs.readFile(sourcePaths["description-verification-json"], "utf8")) : { items: [] };
 assert(Array.isArray(recoveryVerification.items), "Description verification items must be an array");
@@ -961,7 +991,12 @@ const validationLines = [
   `- Dataset: ${DATASET_ID} — ${DATASET_NAME}`, `- Generated: ${COLLECTION_DATE}`, `- Actor: ${ACTOR}`,
   `- Run: ${RUN_ID}`, `- Apify dataset: ${APIFY_DATASET_ID}`, `- Status: ${config.run.status}`,
   `- Requests: ${config.run.requestsSucceeded} succeeded; ${config.run.requestsFailed} failed`,
-  `- Estimated cost: $${config.run.estimatedCostUsd}`, `- Actual cost: $${config.run.actualCostUsd}`, "",
+  `- Original estimated cost: $${config.run.estimatedCostUsd}`, `- Original actual cost: $${config.run.actualCostUsd}`,
+  `- Recovery run: ${RECOVERY_RUN_ID}; dataset: ${RECOVERY_DATASET_ID}`,
+  `- Recovery records: ${recoveryRaw.length}; recovery-added video IDs: ${recoveryAddedVideoIds.join(", ") || "none"}`,
+  `- Recovery actual cost: $${config.recoveryRun?.actualCostUsd ?? 0}`,
+  `- Total estimated cost: $${config.budget?.totalEstimatedCostUsd ?? config.run.estimatedCostUsd}`,
+  `- Total actual cost: $${config.budget?.totalActualCostUsd ?? config.run.actualCostUsd}`, "",
   "## Count reconciliation", "",
   "| Channel | Live public | Scraped unique | Missing | Duplicates | Regular | Shorts | Livestreams | Transcripts |",
   "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
@@ -969,6 +1004,7 @@ const validationLines = [
   `| **Total** | **${channelSummaryRows.reduce((sum, row) => sum + Number(row.live_public_count), 0)}** | **${TOTAL_VIDEOS}** | **0** | **0** | **${totalRegular}** | **${totalShorts}** | **${totalLive}** | **${totalTranscripts}** |`, "",
   "## Record classification", "",
   `- Raw records: ${raw.length}`, `- Raw video records: ${rawVideoRecords.length}`,
+  `- Recovery raw records: ${recoveryRaw.length}`, `- Recovery video records: ${recoveryRaw.filter(isVideoLike).length}`,
   `- Unique video IDs: ${TOTAL_VIDEOS}`, `- Duplicate video discoveries merged: ${duplicateRawVideoIds}`,
   `- Channel-about records: ${aboutRecords.length}`, `- Status/error records: ${statusRecords.length}`,
   `- Unknown records: ${unknownRecords.length}`, "",
@@ -1076,8 +1112,9 @@ const manifestMd = [
   `- Channel counts: ${CHANNELS.map(channel => `${channel.name} ${channel.count}`).join("; ")}.`,
   `- Content types: ${totalRegular} regular videos; ${totalShorts} Shorts; ${totalLive} livestreams.`,
   `- Transcript coverage: ${totalTranscripts}/${TOTAL_VIDEOS} plaintext transcripts.`,
-  `- Description recovery: ${recoveryRaw.filter(isVideoLike).length} targeted; ${missingDescriptions} verified no-public-description videos.`, "",
-  "## Lineage", "", "```text", "Apify Actor raw export", "  -> classified and deduplicated clean video records",
+  `- Actor recovery: ${recoveryRaw.filter(isVideoLike).length} targeted video; ${recoveryAddedVideoIds.length} added to the derived master.`,
+  `- Missing descriptions: ${missingDescriptions}; verified no-public-description videos: ${verifiedNoDescriptions}.`, "",
+  "## Lineage", "", "```text", "Original Apify Actor raw export + immutable targeted recovery export", "  -> classified and deduplicated clean video records",
   `  -> verified ${CHANNELS.length}-channel ${TOTAL_VIDEOS}-video master`, "  -> channel-specific master workbooks",
   "  -> channel-specific transcript packs", "```", "",
   "Raw Actor exports are immutable. Raw source/destination SHA-256 hashes match. Derived artifacts retain run/dataset provenance.", "",
