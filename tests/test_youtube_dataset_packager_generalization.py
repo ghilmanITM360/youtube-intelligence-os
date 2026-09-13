@@ -60,6 +60,16 @@ class YouTubeDatasetPackagerGeneralizationTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("Duplicate channel ID", result.stderr)
 
+    def test_csv_serialization_strips_line_end_whitespace_without_changing_content(self):
+        result = subprocess.run(
+            ["node", str(GENERATOR), "--normalize-csv-value", "first  \nsecond\t\nthird"],
+            cwd=REPO_ROOT,
+            text=True,
+            capture_output=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stdout.rstrip("\n"), '"first\nsecond\nthird"')
+
     def test_ds000020_reproduction_generator_stays_byte_identical(self):
         digest = hashlib.sha256(LEGACY_GENERATOR.read_bytes()).hexdigest()
         self.assertEqual(digest, "f8ae62c98f693d4cf396557c71bc5c9f9803d8bb36a8ee65fe5affca45e66994")

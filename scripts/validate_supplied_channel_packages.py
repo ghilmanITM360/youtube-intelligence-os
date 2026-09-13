@@ -37,6 +37,8 @@ NO_DESCRIPTION_MARKERS = {
 }
 HEADER_RE = re.compile(r"^([^:\n]+?)\s*:\s*(.*)$")
 SECTION_RE = re.compile(r"^={10,}\s*$", re.MULTILINE)
+HYPERLINK_RE = re.compile(r'^=HYPERLINK\(\s*"((?:[^"]|"")*)"\s*,', re.IGNORECASE)
+TRANSCRIPT_WORD_RE = re.compile(r"[^\W_]+(?:['’_-][^\W_]+)*", re.UNICODE)
 
 
 class ValidationError(RuntimeError):
@@ -70,6 +72,22 @@ def youtube_id_from_url(value: str) -> str | None:
     return None
 
 
+def youtube_id_from_cell(cached_value, formula_value) -> str | None:
+    """Resolve a YouTube ID from a plain URL or an Excel HYPERLINK formula."""
+    direct = youtube_id_from_url(str(cached_value))
+    if direct:
+        return direct
+    match = HYPERLINK_RE.match(str(formula_value))
+    if not match:
+        return None
+    return youtube_id_from_url(match.group(1).replace('""', '"'))
+
+
+def count_transcript_words(text: str) -> int:
+    """Match the package generator's Unicode letter/number tokenization."""
+    return len(TRANSCRIPT_WORD_RE.findall(text))
+
+
 def parse_transcript_text(text: str, member: str) -> dict:
     if "\nDESCRIPTION\n" not in text or "\nTRANSCRIPT\n" not in text:
         raise ValidationError(f"{member}: DESCRIPTION or TRANSCRIPT section missing")
@@ -93,7 +111,7 @@ def parse_transcript_text(text: str, member: str) -> dict:
         declared_words = int(headers["Word count"].replace(",", ""))
     except ValueError as exc:
         raise ValidationError(f"{member}: invalid Word count") from exc
-    actual_words = len(body.split())
+    actual_words = count_transcript_words(body)
     lower_body = body.lower()
     unavailability_markers = (
         "no transcript available",
@@ -141,6 +159,13 @@ def _formula_cache_errors(formula_book, value_book) -> tuple[list[str], int]:
     return errors, formula_count
 
 
+def has_expected_video_filter(sheet, expected_ref: str) -> bool:
+    """Accept either worksheet auto-filter or an Excel table over the video rows."""
+    if sheet.auto_filter.ref == expected_ref:
+        return True
+    return any(sheet.tables[name].ref == expected_ref for name in sheet.tables.keys())
+
+
 def validate_pair(spec: dict) -> dict:
     try:
         from openpyxl import load_workbook
@@ -177,29 +202,35 @@ def validate_pair(spec: dict) -> dict:
             raise ValidationError(f"{channel}: freeze panes {videos_sheet.freeze_panes!r}")
 
         rows = []
+        video_url_formulas = []
         for row_number in range(5, videos_sheet.max_row + 1):
             video_id = videos_sheet.cell(row_number, 2).value
             if video_id in (None, ""):
                 continue
             rows.append({header: values_sheet.cell(row_number, index + 1).value for index, header in enumerate(VIDEO_HEADERS)})
+            video_url_formulas.append(videos_sheet.cell(row_number, 4).value)
         if len(rows) != expected:
             raise ValidationError(f"{channel}: workbook videos {len(rows)} != expected {expected}")
         ids = [str(row["Video ID"]) for row in rows]
         duplicates = sorted(video_id for video_id, count in Counter(ids).items() if count > 1)
         if duplicates:
             raise ValidationError(f"{channel}: duplicate video IDs {duplicates}")
-        if videos_sheet.auto_filter.ref != f"A4:AB{4 + expected}":
-            raise ValidationError(f"{channel}: autofilter {videos_sheet.auto_filter.ref!r}")
+        expected_filter_ref = f"A4:AB{4 + expected}"
+        if not has_expected_video_filter(videos_sheet, expected_filter_ref):
+            table_refs = [videos_sheet.tables[name].ref for name in videos_sheet.tables.keys()]
+            raise ValidationError(
+                f"{channel}: filter range missing; worksheet={videos_sheet.auto_filter.ref!r}, tables={table_refs!r}"
+            )
 
         numeric_columns = ["Sec", "Views", "Likes", "Comments", "Transcript Words", "Desc Chars", "Desc Links"]
         invalid_rows = []
         missing_fields = []
         transcript_names = []
-        for row in rows:
+        for row, video_url_formula in zip(rows, video_url_formulas):
             video_id = str(row["Video ID"])
             if not row["Title"]:
                 invalid_rows.append(f"{video_id}: title missing")
-            if youtube_id_from_url(row["Video URL"]) != video_id:
+            if youtube_id_from_cell(row["Video URL"], video_url_formula) != video_id:
                 invalid_rows.append(f"{video_id}: invalid video URL")
             if not isinstance(row["Date"], (int, float, date, datetime)):
                 invalid_rows.append(f"{video_id}: Date not typed")
@@ -320,9 +351,20 @@ def write_markdown(report: dict, path: Path) -> None:
         f"- Formula cells with usable cached values: {report['total_formula_cells']}",
         f"- Missing descriptions: {report['total_missing_descriptions']}",
         "- Apify recovery: Not performed by validator; preserved missing-value evidence is listed below.",
-        "- Original Actor raw JSON and Actor run IDs: Not supplied.", "",
-        "| Channel | Videos | Transcript files | ZIP members | Missing descriptions | Status |", "|---|---:|---:|---:|---:|---|",
     ]
+    apify = report.get("apify")
+    if apify:
+        lines.extend([
+            f"- Original Actor raw JSON: `{apify['raw_json']}`",
+            f"- Actor run ID: `{apify['actor_run_id']}`",
+            f"- Apify dataset ID: `{apify['dataset_id']}`",
+        ])
+    else:
+        lines.append("- Original Actor raw JSON and Actor run IDs: Not supplied.")
+    lines.extend([
+        "",
+        "| Channel | Videos | Transcript files | ZIP members | Missing descriptions | Status |", "|---|---:|---:|---:|---:|---|",
+    ])
     for item in report["packages"]:
         lines.append(f"| {item['channel']} | {item['video_count']} | {item['transcript_files']} | {item['zip_members']} | {len(item['missing_descriptions'])} | {item['status']} |")
     lines.extend(["", "## Missing field evidence", "", "| Channel | Video ID | Field | Stored value |", "|---|---|---|---|"])
@@ -358,6 +400,7 @@ def main(argv: list[str] | None = None) -> int:
         raise ValidationError(f"cross-package duplicate video IDs: {duplicate_ids}")
     report = {
         "dataset_id": config["dataset_id"],
+        "apify": config.get("apify"),
         "packages": packages,
         "total_videos": len(all_ids),
         "total_unique_video_ids": len(set(all_ids)),

@@ -116,6 +116,10 @@ checksums, and manifest/lineage files. Input artifacts are read only.`;
 }
 
 const args = parseArgs(process.argv.slice(2));
+if (args["normalize-csv-value"] !== undefined) {
+  console.log(csvEscape(args["normalize-csv-value"]));
+  process.exit(0);
+}
 if (args["validate-config-only"]) {
   if (!args.config) throw new Error("Required argument missing: --config");
   const normalized = normalizeConfig(JSON.parse(await fs.readFile(path.resolve(args.config), "utf8")));
@@ -186,7 +190,9 @@ function sha256Text(text) {
 }
 
 function csvEscape(value) {
-  const text = value === null || value === undefined ? "" : String(value);
+  const text = value === null || value === undefined
+    ? ""
+    : String(value).replace(/[ \t]+(?=\r?\n|$)/g, "");
   return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
 }
 

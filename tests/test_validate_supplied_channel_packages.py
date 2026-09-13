@@ -7,7 +7,12 @@ import zipfile
 from pathlib import Path
 
 from openpyxl import Workbook
-from scripts.validate_supplied_channel_packages import parse_transcript_text
+from scripts.validate_supplied_channel_packages import (
+    count_transcript_words,
+    has_expected_video_filter,
+    parse_transcript_text,
+    youtube_id_from_cell,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +27,37 @@ HEADERS = [
 
 
 class SuppliedPackageValidatorTests(unittest.TestCase):
+    def test_transcript_word_count_matches_packager_unicode_tokenization(self):
+        self.assertEqual(count_transcript_words("You're born—now re-enter foo_bar."), 5)
+
+    def test_reads_video_id_from_hyperlink_formula_when_cached_value_is_diagnostic(self):
+        cached = (
+            "HYPERLINK is not implemented. "
+            "linkLocation=https://www.youtube.com/watch?v=abcdefghijk, "
+            "friendlyName=https://www.youtube.com/watch?v=abcdefghijk"
+        )
+        formula = (
+            '=HYPERLINK("https://www.youtube.com/watch?v=abcdefghijk",'
+            '"https://www.youtube.com/watch?v=abcdefghijk")'
+        )
+
+        self.assertEqual(youtube_id_from_cell(cached, formula), "abcdefghijk")
+
+    def test_accepts_excel_table_filter_when_sheet_auto_filter_is_absent(self):
+        from openpyxl.worksheet.table import Table
+
+        workbook = Workbook()
+        sheet = workbook.active
+        sheet.title = "All Videos"
+        sheet.append([])
+        sheet.append([])
+        sheet.append([])
+        sheet.append(HEADERS)
+        sheet.append([1, "abcdefghijk"] + [""] * 26)
+        sheet.add_table(Table(displayName="VideosTable", ref="A4:AB5"))
+
+        self.assertTrue(has_expected_video_filter(sheet, "A4:AB5"))
+
     def test_accepts_verified_members_only_zero_word_placeholder(self):
         text = """Channel      : Lucas Grant
 Title        : Example Video
@@ -154,6 +190,11 @@ one two three four five six seven eight nine ten
 
             config_path.write_text(json.dumps({
                 "dataset_id": "DS-TEST",
+                "apify": {
+                    "actor_run_id": "run-test",
+                    "dataset_id": "dataset-test",
+                    "raw_json": "data/raw/channel-data/DS-TEST/youtube_actor_raw.json",
+                },
                 "packages": [{
                     "channel": "Example Channel",
                     "expected_count": 1,
@@ -177,6 +218,9 @@ one two three four five six seven eight nine ten
             markdown = markdown_path.read_text(encoding="utf-8")
             self.assertIn("abcdefghijk", markdown)
             self.assertIn("Views", markdown)
+            self.assertIn("Actor run ID: `run-test`", markdown)
+            self.assertIn("Apify dataset ID: `dataset-test`", markdown)
+            self.assertIn("data/raw/channel-data/DS-TEST/youtube_actor_raw.json", markdown)
 
 
 if __name__ == "__main__":

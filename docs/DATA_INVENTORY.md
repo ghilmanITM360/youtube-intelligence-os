@@ -68,6 +68,7 @@ Phase 1A (Decision 012) adds a local SQLite catalog (`data/catalog/youtube_inven
 | DS-000020 | Five-Channel YouTube Apify Dataset Packages | APIFY_YOUTUBE_CHANNEL | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000020.md`](../data/manifests/DS-000020.md) |
 | DS-000021 | Eleven-Channel YouTube Apify Dataset Packages | APIFY_YOUTUBE_CHANNEL | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000021.md`](../data/manifests/DS-000021.md) |
 | DS-000022 | Seven User-Provided YouTube Channel Packages | USER_PROVIDED_EXPORTS | B — Competitor Evidence | VALIDATED_SOURCE_PACKAGE | [`data/manifests/DS-000022.md`](../data/manifests/DS-000022.md) |
+| DS-000023 | Funded Master Channel Extraction — Batch 1 | APIFY_YOUTUBE_CHANNEL | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000023.md`](../data/manifests/DS-000023.md) |
 
 Status progression: `INGESTED` (Phase 1A — raw files preserved and cataloged) → `STRUCTURED_REGISTERED` (Phase 1B — channels/videos/snapshots/transcripts registered with field provenance, `docs/DECISIONS.md` Decisions 014–015). No competitor intelligence analysis has been performed at either stage.
 
