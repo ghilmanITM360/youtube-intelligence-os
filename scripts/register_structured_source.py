@@ -43,6 +43,42 @@ VIDEO_SNAPSHOT_FIELDS = [
 ]
 TRANSCRIPT_HEADER_FIELDS = ["availability_status", "caption_type", "language", "word_count"]
 
+BASE_PRODUCER_CONTRACT = {
+    "channel_fields": {field for _label, field in CHANNEL_FIELDS},
+    "channel_snapshot_fields": {field for _label, field in CHANNEL_SNAPSHOT_FIELDS},
+    "video_fields": {field for _label, field in VIDEO_FIELDS},
+    "video_snapshot_fields": {field for _label, field, _origin in VIDEO_SNAPSHOT_FIELDS},
+    "transcript_fields": set(TRANSCRIPT_HEADER_FIELDS),
+}
+
+PRODUCER_CONTRACTS = {
+    TOOL_VERSION: BASE_PRODUCER_CONTRACT,
+    "apify_youtube_ingest.py/1": {
+        **BASE_PRODUCER_CONTRACT,
+        "video_snapshot_fields": {
+            "title", "published_at", "duration_seconds", "views", "likes", "comments",
+            "description", "description_char_count", "thumbnail_url", "video_type",
+            "transcript_word_count",
+        },
+        "transcript_fields": {
+            "availability_status", "caption_type", "language", "word_count",
+            "canonical_reference", "format",
+        },
+    },
+    "register_supplied_channel.py/1": {
+        **BASE_PRODUCER_CONTRACT,
+        "video_snapshot_fields": {
+            "title", "published_at", "duration_seconds", "views", "likes", "comments",
+            "description", "description_char_count", "thumbnail_url", "video_type",
+            "transcript_word_count", "views_per_day", "engagement_rate",
+        },
+        "transcript_fields": {
+            "availability_status", "caption_type", "language", "word_count",
+            "canonical_reference", "timing_quality",
+        },
+    },
+}
+
 EVIDENCE_LAYER = {
     "SOURCE_EXTRACTED": "EXTRACTED_FACT",
     "SOURCE_COMPUTED": "MEASURED_FACT",
@@ -519,6 +555,65 @@ def _write_manifest_addendum(conn, dataset_id, run_id, counts, reconciliation, w
 # verify
 # ---------------------------------------------------------------------------
 
+def _producer_contract(tool_version):
+    return PRODUCER_CONTRACTS.get(tool_version)
+
+
+def _provenance_coverage(conn, dataset_id, counts, contract):
+    if not contract:
+        return False, None
+    targets = (
+        ("channel_id", "channels", "channel_fields"),
+        ("channel_snapshot_id", "channel_snapshots", "channel_snapshot_fields"),
+        ("video_id", "videos", "video_fields"),
+        ("video_snapshot_id", "video_snapshots", "video_snapshot_fields"),
+        ("transcript_id", "transcripts", "transcript_fields"),
+    )
+    expected_total = 0
+    actual_total = 0
+    valid = True
+    for target_column, count_key, fields_key in targets:
+        expected_fields = contract[fields_key]
+        expected_total += counts[count_key] * len(expected_fields)
+        rows = conn.execute(
+            "SELECT {},field_name FROM field_provenance "
+            "WHERE dataset_id=? AND {} IS NOT NULL".format(target_column, target_column),
+            (dataset_id,),
+        ).fetchall()
+        actual_total += len(rows)
+        by_target = {}
+        for target_id, field_name in rows:
+            by_target.setdefault(target_id, []).append(field_name)
+        if len(by_target) != counts[count_key]:
+            valid = False
+        if any(len(fields) != len(expected_fields) or set(fields) != expected_fields
+               for fields in by_target.values()):
+            valid = False
+    return valid, actual_total / expected_total if expected_total else None
+
+
+def _manifest_agrees(text, counts, tool_version):
+    if tool_version == TOOL_VERSION:
+        return (
+            "Registered videos: {}".format(counts["videos"]) in text
+            and "Field provenance rows: {}".format(counts["field_provenance"]) in text
+        )
+    if tool_version == "apify_youtube_ingest.py/1":
+        video_marker = (
+            "Registered videos: {}".format(counts["videos"]) in text
+            or "Registered content items: {}".format(counts["videos"]) in text
+        )
+        transcript_marker = "Transcripts: AVAILABLE {}, UNAVAILABLE {}".format(
+            counts["transcripts_available"], counts["transcripts_unavailable"]
+        )
+        return video_marker and transcript_marker in text
+    if tool_version == "register_supplied_channel.py/1":
+        return (
+            "Canonical videos: {}".format(counts["videos"]) in text
+            and "Available transcripts: {}".format(counts["transcripts_available"]) in text
+        )
+    return False
+
 def cmd_verify(args):
     db_path = Path(args.db_path)
     dataset_id = args.dataset_id
@@ -527,7 +622,7 @@ def cmd_verify(args):
     try:
         _require_v2(conn)
         run = conn.execute(
-            """SELECT run_id, status FROM ingestion_runs
+            """SELECT run_id, status, tool_version FROM ingestion_runs
                WHERE dataset_id = ? AND run_type = 'STRUCTURED_REGISTRATION'
                ORDER BY started_at DESC LIMIT 1;""",
             (dataset_id,),
@@ -565,14 +660,8 @@ def cmd_verify(args):
             "SELECT COUNT(*) FROM transcripts WHERE dataset_id=? AND availability_status='UNAVAILABLE';", (dataset_id,)
         ).fetchone()[0]
 
-        expected_provenance = (
-            counts["channels"] * len(CHANNEL_FIELDS)
-            + counts["channel_snapshots"] * len(CHANNEL_SNAPSHOT_FIELDS)
-            + counts["videos"] * len(VIDEO_FIELDS)
-            + counts["video_snapshots"] * len(VIDEO_SNAPSHOT_FIELDS)
-            + counts["transcripts"] * len(TRANSCRIPT_HEADER_FIELDS)
-        )
-        coverage = counts["field_provenance"] / expected_provenance if expected_provenance else None
+        contract = _producer_contract(run[2])
+        provenance_valid, coverage = _provenance_coverage(conn, dataset_id, counts, contract)
 
         integrity = conn.execute("PRAGMA integrity_check;").fetchone()[0]
         fk_violations = conn.execute("PRAGMA foreign_key_check;").fetchall()
@@ -581,14 +670,11 @@ def cmd_verify(args):
         manifest_agrees = None
         if manifest_path.exists():
             text = manifest_path.read_text()
-            manifest_agrees = (
-                "Registered videos: {}".format(counts["videos"]) in text
-                and "Field provenance rows: {}".format(counts["field_provenance"]) in text
-            )
+            manifest_agrees = _manifest_agrees(text, counts, run[2])
 
         status = "VERIFIED" if (
             not hash_mismatches and integrity == "ok" and not fk_violations
-            and coverage == 1.0 and manifest_agrees
+            and provenance_valid and manifest_agrees
         ) else "FAILED"
 
         print("Registration run: {} ({})".format(run[0], run[1]))

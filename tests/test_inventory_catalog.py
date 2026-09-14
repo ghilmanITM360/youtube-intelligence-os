@@ -253,6 +253,39 @@ class InventoryCatalogTestCase(unittest.TestCase):
         manifest_text = manifest_path.read_text()
         self.assertIn("File record count: {}".format(db_count), manifest_text)
 
+    def test_verify_allows_uncopied_reference_with_null_canonical_path(self):
+        self.init_catalog()
+        source_dir = self.make_source_dir({"reference.txt": b"historical reference"})
+        inventory_catalog.cmd_ingest(Args(
+            db_path=str(self.db_path), source=str(source_dir), dataset_id="DS-000001",
+            name="Reference Dataset", semantic_class="C", discovered_as=None,
+        ))
+        conn = sqlite3.connect(str(self.db_path))
+        with conn:
+            conn.execute(
+                "UPDATE source_files SET canonical_path=NULL,is_copied=0 "
+                "WHERE dataset_id='DS-000001' AND original_filename='reference.txt'"
+            )
+        conn.close()
+        inventory_catalog.cmd_verify(Args(db_path=str(self.db_path), dataset_id="DS-000001"))
+
+    def test_verify_rejects_copied_file_with_null_canonical_path(self):
+        self.init_catalog()
+        source_dir = self.make_source_dir({"required.txt": b"required copy"})
+        inventory_catalog.cmd_ingest(Args(
+            db_path=str(self.db_path), source=str(source_dir), dataset_id="DS-000001",
+            name="Required Dataset", semantic_class="C", discovered_as=None,
+        ))
+        conn = sqlite3.connect(str(self.db_path))
+        with conn:
+            conn.execute(
+                "UPDATE source_files SET canonical_path=NULL "
+                "WHERE dataset_id='DS-000001' AND original_filename='required.txt'"
+            )
+        conn.close()
+        with self.assertRaises(SystemExit):
+            inventory_catalog.cmd_verify(Args(db_path=str(self.db_path), dataset_id="DS-000001"))
+
 
 if __name__ == "__main__":
     unittest.main()

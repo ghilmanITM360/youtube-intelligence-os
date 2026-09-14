@@ -696,6 +696,31 @@ class RegisterStructuredSourceTestCase(unittest.TestCase):
         except SystemExit as exc:
             self.fail("cmd_verify unexpectedly exited with code {}".format(exc.code))
 
+    def test_historical_producer_contracts_are_explicit(self):
+        self.assertEqual(
+            rss._producer_contract("apify_youtube_ingest.py/1")["video_snapshot_fields"],
+            {"title", "published_at", "duration_seconds", "views", "likes", "comments",
+             "description", "description_char_count", "thumbnail_url", "video_type",
+             "transcript_word_count"},
+        )
+        self.assertEqual(
+            rss._producer_contract("register_supplied_channel.py/1")["transcript_fields"],
+            {"availability_status", "caption_type", "language", "word_count",
+             "canonical_reference", "timing_quality"},
+        )
+
+    def test_manifest_agreement_uses_producer_specific_wording(self):
+        counts = {"videos": 2, "transcripts": 2, "transcripts_available": 2,
+                  "transcripts_unavailable": 0, "field_provenance": 42}
+        self.assertTrue(rss._manifest_agrees(
+            "Registered content items: 2\nTranscripts: AVAILABLE 2, UNAVAILABLE 0\n",
+            counts, "apify_youtube_ingest.py/1",
+        ))
+        self.assertTrue(rss._manifest_agrees(
+            "Canonical videos: 2\nAvailable transcripts: 2 (`POSITIONAL_ONLY`)\n",
+            counts, "register_supplied_channel.py/1",
+        ))
+
 
 class RegisterSuppliedChannelTestCase(unittest.TestCase):
     def test_single_channel_loose_transcripts_register_and_deduplicate(self):

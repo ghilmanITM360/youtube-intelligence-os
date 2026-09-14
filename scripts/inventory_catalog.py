@@ -506,13 +506,17 @@ def cmd_verify(args):
             sys.exit(1)
 
         physical = conn.execute(
-            """SELECT original_filename, canonical_path, size_bytes, sha256 FROM source_files
+            """SELECT original_filename, canonical_path, size_bytes, sha256, is_copied FROM source_files
                WHERE dataset_id = ? AND storage_kind = 'PHYSICAL_FILE';""",
             (dataset_id,),
         ).fetchall()
 
         mismatches = []
-        for filename, canonical_path, size_bytes, sha256 in physical:
+        for filename, canonical_path, size_bytes, sha256, is_copied in physical:
+            if canonical_path is None:
+                if is_copied:
+                    mismatches.append("{}: copied file has no canonical path".format(filename))
+                continue
             p = Path(canonical_path)
             if not p.exists():
                 mismatches.append("{}: canonical copy missing at {}".format(filename, canonical_path))

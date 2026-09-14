@@ -1,12 +1,13 @@
 import hashlib
 import importlib
+import inspect
 import json
 import sqlite3
 import sys
+import tempfile
+import unittest
 import zipfile
 from pathlib import Path
-
-import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -121,11 +122,11 @@ def test_video_matching_priority_and_ambiguous_title():
 
 
 def test_first_party_ownership_and_viewer_pii_rejected(tmp_path):
-    with pytest.raises(analytics.AnalyticsImportError, match="FIRST_PARTY"):
+    with unittest.TestCase().assertRaisesRegex(analytics.AnalyticsImportError, "FIRST_PARTY"):
         _normalize(FIXTURES / "video_performance.csv", ownership_context="COMPETITOR")
     pii = tmp_path / "pii.csv"
     pii.write_text("Viewer email,Views\nperson@example.com,1\n", encoding="utf-8")
-    with pytest.raises(analytics.AnalyticsImportError, match="viewer-level"):
+    with unittest.TestCase().assertRaisesRegex(analytics.AnalyticsImportError, "viewer-level"):
         _normalize(pii)
 
 
@@ -146,7 +147,7 @@ def test_ingest_copies_raw_additively_and_versions_snapshot(tmp_path):
         date_range_kind="CUSTOM_RANGE", export_date="2026-09-11", ingested_at="2026-09-11T00:00:00Z",
     )
     assert again["IMPORT_STATUS"] == "EXACT_DUPLICATE"
-    with pytest.raises(analytics.AnalyticsImportError, match="different snapshot metadata"):
+    with unittest.TestCase().assertRaisesRegex(analytics.AnalyticsImportError, "different snapshot metadata"):
         analytics.ingest_export(
             FIXTURES / "video_performance.csv", "CH-000002", "FIRST_PARTY", DB,
             raw_root, output_root, observation_start="2026-07-01", observation_end="2026-07-31",
@@ -279,3 +280,22 @@ def test_unknown_localized_headers_surface_without_guessing(tmp_path):
     assert snapshot["REPORT_TYPE"] == "UNKNOWN_REPORT"
     assert snapshot["SCHEMA_MAPPING"]["UNKNOWN_COLUMNS"] == ["Vistas", "Vídeo"]
     assert snapshot["ROW_RESULTS"][0]["UNMAPPED_SOURCE_FIELDS"] == {"Vídeo": "abc", "Vistas": "10"}
+
+
+def load_tests(loader, tests, pattern):
+    """Expose legacy function-style tests to stdlib unittest discovery."""
+    suite = unittest.TestSuite()
+    functions = sorted(
+        (value for name, value in globals().items() if name.startswith("test_") and callable(value)),
+        key=lambda function: function.__code__.co_firstlineno,
+    )
+    for function in functions:
+        if "tmp_path" in inspect.signature(function).parameters:
+            def run_with_tmp_path(function=function):
+                with tempfile.TemporaryDirectory() as tmp:
+                    function(Path(tmp))
+            case = unittest.FunctionTestCase(run_with_tmp_path, description=function.__name__)
+        else:
+            case = unittest.FunctionTestCase(function, description=function.__name__)
+        suite.addTest(case)
+    return suite
