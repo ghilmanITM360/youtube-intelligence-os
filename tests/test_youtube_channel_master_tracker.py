@@ -1,6 +1,10 @@
+import csv
+import hashlib
 import json
+import re
 import sqlite3
 import unittest
+import zipfile
 from pathlib import Path
 
 from openpyxl import load_workbook
@@ -227,6 +231,168 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             if isinstance(cell.value, str) and cell.value.startswith("=")
         ]
         self.assertFalse(any("/Users/" in formula or "file://" in formula for formula in formulas))
+
+    def test_raw_csv_json_sqlite_workbook_and_query_report_reconcile(self):
+        raw = json.loads(
+            (ROOT / "data/raw/channel-targets/user-supplied-youtube-channels-2026-09-14.json").read_text(encoding="utf-8")
+        )
+        with (ROOT / "data/manifests/YOUTUBE_CHANNEL_TARGETS.csv").open(encoding="utf-8", newline="") as handle:
+            csv_rows = {row["canonical_channel_id"]: row for row in csv.DictReader(handle)}
+        model_rows = {row["canonical_channel_id"]: row for row in self.model["channels"]}
+        target_ids = {identifier for identifier, row in model_rows.items() if row["target_group"] != "OUTSIDE_TARGET"}
+        self.assertEqual(
+            [row["original_url"] for row in raw["submissions"]],
+            [row["original_url"] for row in self.model["submissions"]],
+        )
+        self.assertEqual(target_ids, {row["canonical_channel_id"] for row in self.model["submissions"]})
+        self.assertEqual(set(model_rows), set(csv_rows))
+
+        all_channels = self.workbook["All Channels"]
+        all_headers = {all_channels.cell(4, column).value: column for column in range(1, all_channels.max_column + 1)}
+        workbook_rows = {
+            all_channels.cell(row, 1).value: row
+            for row in range(5, all_channels.max_row + 1)
+        }
+        visual = self.workbook["Visual Evidence"]
+        visual_rows = {visual.cell(row, 2).value: row for row in range(5, 74)}
+
+        connection = sqlite3.connect(ROOT / "data/catalog/youtube_channel_registry.db")
+        connection.row_factory = sqlite3.Row
+        try:
+            db_rows = {
+                row["canonical_channel_id"]: row
+                for row in connection.execute(
+                    """
+                    SELECT s.*,v.visual_evidence_level
+                    FROM v_channel_status s JOIN visual_coverage v USING(canonical_channel_id)
+                    """
+                )
+            }
+            self.assertEqual(set(model_rows), set(db_rows))
+            self.assertEqual(set(model_rows), set(workbook_rows))
+            for identifier, source in model_rows.items():
+                csv_row = csv_rows[identifier]
+                db_row = db_rows[identifier]
+                workbook_row = workbook_rows[identifier]
+                visual_row = visual_rows[identifier]
+                missing_descriptions = 0 if source["descriptions"] is None else source["video_count"] - source["descriptions"]
+                self.assertEqual(
+                    (
+                        source["channel_name"], source["target_group"], source["status"], source["package_status"],
+                        source["video_count"], source["real_transcripts"], source["placeholders"], source["description_status"],
+                        source["visual_asset_status"], source["first_party_analytics_status"], " | ".join(source["dataset_ids"]),
+                        source["workbook_path"] or "", source["transcript_zip_path"] or "",
+                    ),
+                    (
+                        csv_row["channel_name"], csv_row["target_group"], csv_row["status"], csv_row["package_status"],
+                        int(csv_row["video_count"]), int(csv_row["real_transcripts"]), int(csv_row["placeholders"]),
+                        csv_row["description_status"],
+                        csv_row["visual_asset_status"], csv_row["first_party_analytics_status"], csv_row["dataset_ids"],
+                        csv_row["workbook_path"], csv_row["transcript_zip_path"],
+                    ),
+                )
+                self.assertEqual(
+                    (
+                        source["channel_name"], source["target_group"], source["status"], source["package_status"],
+                        source["video_count"], source["real_transcripts"], source["placeholders"], missing_descriptions,
+                        source["visual_asset_status"], source["first_party_analytics_status"],
+                    ),
+                    (
+                        db_row["channel_name"], db_row["target_group"], db_row["status"], db_row["package_status"],
+                        db_row["video_count"], db_row["real_transcript_count"], db_row["placeholder_count"],
+                        db_row["missing_description_count"], db_row["visual_evidence_level"],
+                        db_row["first_party_analytics_status"],
+                    ),
+                )
+                self.assertEqual(source["channel_name"], all_channels.cell(workbook_row, all_headers["Channel Name"]).value)
+                self.assertEqual(source["target_group"], all_channels.cell(workbook_row, all_headers["Target Membership"]).value)
+                self.assertEqual(source["extraction_status"], all_channels.cell(workbook_row, all_headers["Extraction Status"]).value)
+                self.assertEqual(source["video_count"], all_channels.cell(workbook_row, all_headers["Saved Video Count"]).value)
+                self.assertEqual(source["visual_asset_status"], visual.cell(visual_row, 10).value)
+                self.assertEqual(", ".join(source["dataset_ids"]) or "—", all_channels.cell(workbook_row, all_headers["Dataset IDs"]).value)
+                if source["source_group"] == "STANDARD_PACKAGE":
+                    artifacts = dict(
+                        connection.execute(
+                            "SELECT artifact_type,repository_path FROM artifacts WHERE canonical_channel_id=? AND artifact_type IN ('WORKBOOK','TRANSCRIPT_ZIP')",
+                            (identifier,),
+                        )
+                    )
+                    self.assertEqual(source["workbook_path"], artifacts["WORKBOOK"])
+                    self.assertEqual(source["transcript_zip_path"], artifacts["TRANSCRIPT_ZIP"])
+
+            database_intelligence = {
+                (row["canonical_channel_id"], row["capability_id"]): tuple(row)
+                for row in connection.execute(
+                    "SELECT canonical_channel_id,capability_id,status,input_data_available,generated_artifact_available,evidence_path FROM intelligence_coverage"
+                )
+            }
+            intelligence_sheet = self.workbook["Intelligence Coverage"]
+            for row_number, source in enumerate(self.model["intelligence_coverage"], start=5):
+                key = (source["canonical_channel_id"], source["capability_id"])
+                self.assertEqual(
+                    key + (source["status"], int(source["input_data_available"]), int(source["generated_artifact_available"]), source["evidence_path"]),
+                    database_intelligence[key],
+                )
+                self.assertEqual(key, (intelligence_sheet.cell(row_number, 1).value, intelligence_sheet.cell(row_number, 3).value))
+                self.assertEqual(source["status"], intelligence_sheet.cell(row_number, 4).value)
+                self.assertEqual("✓" if source["input_data_available"] else "No", intelligence_sheet.cell(row_number, 5).value)
+                self.assertEqual("✓" if source["generated_artifact_available"] else "No", intelligence_sheet.cell(row_number, 6).value)
+
+            report = (ROOT / "docs/audits/YOUTUBE_CHANNEL_REGISTRY_QUERY_RESULTS_2026-09-14.md").read_text(encoding="utf-8")
+            complete = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE target_group<>'OUTSIDE_TARGET' AND extraction_status='COMPLETE' ORDER BY channel_name"))
+            pending = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE target_group<>'OUTSIDE_TARGET' AND extraction_status='NOT_EXTRACTED' ORDER BY lower(channel_name)"))
+            standard = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE source_group='STANDARD_PACKAGE' ORDER BY channel_name"))
+            self.assertIn(f"26 rows: {complete}.", report)
+            self.assertIn(f"29 rows: {pending}.", report)
+            self.assertIn(f"35 rows: {standard}.", report)
+            for text in ("Registry total: 1,893 real transcripts.", "Total: 11.", "Total: 14.", "69 channels: `SCHEMA_READY_NO_DATA`."):
+                self.assertIn(text, report)
+        finally:
+            connection.close()
+
+    def test_standard_transcript_archives_crc_and_database_text_reconcile(self):
+        from scripts.build_youtube_channel_registry import _parse_structured_transcript
+
+        connection = sqlite3.connect(ROOT / "data/catalog/youtube_channel_registry.db")
+        errors = []
+        counts = {"channels": 0, "videos": 0, "real": 0, "placeholders": 0, "over_excel_limit": 0}
+        try:
+            for channel in self.model["channels"]:
+                if channel["source_group"] != "STANDARD_PACKAGE":
+                    continue
+                counts["channels"] += 1
+                with zipfile.ZipFile(ROOT / channel["transcript_zip_path"]) as archive:
+                    self.assertIsNone(archive.testzip(), channel["channel_name"])
+                    members = [name for name in archive.namelist() if name != "INDEX.txt"]
+                    self.assertEqual(channel["video_count"], len(members), channel["channel_name"])
+                    self.assertEqual(len(members), len(set(members)), channel["channel_name"])
+                    for member in members:
+                        text = archive.read(member).decode("utf-8")
+                        body, placeholder, reason = _parse_structured_transcript(text)
+                        header = text.split("\n==========", 1)[0]
+                        video_id = dict(re.findall(r"^([^:\n]+?)\s*:\s*(.*)$", header, re.MULTILINE)).get("Video ID")
+                        row = connection.execute(
+                            "SELECT transcript_text,is_placeholder,unavailable_reason,transcript_sha256 FROM transcripts WHERE youtube_video_id=?",
+                            (video_id,),
+                        ).fetchone()
+                        if not row:
+                            errors.append(f"{channel['channel_name']}: missing {video_id}")
+                            continue
+                        if (body, int(placeholder), hashlib.sha256(body.encode()).hexdigest()) != (row[0], row[1], row[3]):
+                            errors.append(f"{channel['channel_name']}: mismatch {video_id}")
+                        if placeholder and not (reason and row[2]):
+                            errors.append(f"{channel['channel_name']}: missing placeholder reason {video_id}")
+                        counts["videos"] += 1
+                        counts["real"] += int(not placeholder)
+                        counts["placeholders"] += int(placeholder)
+                        counts["over_excel_limit"] += int(not placeholder and len(body) > 32_767)
+        finally:
+            connection.close()
+        self.assertFalse(errors, errors[:10])
+        self.assertEqual(
+            {"channels": 35, "videos": 1601, "real": 1591, "placeholders": 10, "over_excel_limit": 33},
+            counts,
+        )
 
 
 if __name__ == "__main__":

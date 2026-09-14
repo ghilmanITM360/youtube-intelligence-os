@@ -130,17 +130,59 @@ Transcript FTS5 is created only when runtime support exists. `data/catalog/chann
 
 ## Build and validate
 
-Use the bundled runtime from repository root:
+Use the bundled workspace Python from repository root:
 
 ```bash
-/Users/ghilmanislam360/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
-  -B -m scripts.build_youtube_channel_registry --write-ledgers
+python3 -B -m scripts.build_youtube_channel_registry --write-ledgers
 
-/Users/ghilmanislam360/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
-  -B -m scripts.validate_youtube_channel_registry
+python3 -B -m scripts.validate_youtube_channel_registry
 ```
 
 The validator checks control totals, source-group separation, visual evidence, intelligence input/output distinctions, evidence paths, required views, uniqueness, SQLite integrity, foreign keys, and a two-run idempotence build.
+
+Execute every example query with parameters set for the two parameterized examples:
+
+```bash
+sqlite3 \
+  -cmd ".parameter set :channel_id UCTcOboZIhgrKHMDm-oTlTOg" \
+  -cmd ".parameter set :phrase money" \
+  data/catalog/youtube_channel_registry.db \
+  < data/catalog/channel_registry/example_queries.sql
+```
+
+Build the tracker with the bundled Node.js runtime and the `@oai/artifact-tool` module returned by the workspace dependency loader:
+
+```bash
+node scripts/build_youtube_channel_master_tracker.mjs \
+  "$PWD" \
+  "$PWD/data/normalized/channel-targets/YOUTUBE_CHANNEL_MASTER_TRACKER.xlsx" \
+  "/tmp/youtube-channel-registry-renders" \
+  "$(git rev-parse --abbrev-ref HEAD)" \
+  "/absolute/path/to/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs"
+```
+
+The workbook builder reads the normalized registry JSON and generated registry database, recalculates formulas, scans formula errors, writes all nine sheets, and renders every populated row in bounded image chunks. The generated workbook and normalized CSV/JSON/Markdown ledgers must be reviewed and validated before commit.
+
+## Maintainer workflow
+
+Authoritative inputs are the immutable submitted-URL JSON, identity-evidence JSON, dataset manifests, registered package workbooks and transcript ZIPs, historical catalog evidence, and generated intelligence artifacts. `scripts/build_youtube_channel_registry.py` generates the normalized ledgers and ignored SQLite query database. `scripts/build_youtube_channel_master_tracker.mjs` generates the Excel tracker.
+
+Important invariants:
+
+- Canonical channels deduplicate by verified YouTube channel ID; submissions remain in original order with duplicate references.
+- Target membership, extraction, package, transcript, visual, intelligence, and first-party Analytics statuses remain independent.
+- Standard packages require exactly one workbook and one transcript ZIP.
+- Thumbnail URLs, downloaded thumbnails, and forensic evidence remain separate.
+- Input-ready intelligence never counts as generated intelligence.
+- Public metrics never count as first-party Analytics.
+
+To add a channel or dataset, register the supplied evidence and identity in the appropriate raw authority, identity ledger, dataset manifest, and package location. Rebuild the registry with `--write-ledgers`, run the registry validator and package tests, rebuild the tracker, rerun workbook tests and visual review, then update the query-results report only from reproduced SQL output.
+
+Never manually edit generated `YOUTUBE_CHANNEL_REGISTRY.json`, `YOUTUBE_CHANNEL_TARGETS.csv`, `YOUTUBE_CHANNEL_TARGETS.md`, `YOUTUBE_CHANNEL_MASTER_TRACKER.xlsx`, or `youtube_channel_registry.db`. Never modify or rebuild historical `youtube_inventory.db`. Never alter historical raw or extracted evidence to make a validation pass.
+
+## Environment-only test limits
+
+Full validation requires the bundled Python runtime with `openpyxl`, local ignored historical evidence, and normalized worktree paths. In an isolated linked worktree, two known checks can differ without a feature regression: DS-000018 raw-evidence presence when that ignored evidence is unavailable, and deterministic availability output when historical catalog rows retain the main worktree's absolute path. Confirm these checks read-only in the main worktree; do not copy or modify evidence to hide the difference.
 
 ## Portability and limits
 

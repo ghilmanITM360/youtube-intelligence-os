@@ -10,8 +10,8 @@ The generated registry database is separate from `data/catalog/youtube_inventory
 
 ## Usage checkpoint
 
-- Latest check: 69% primary / 85% weekly.
-- Optional work stopped at the 85% weekly checkpoint.
+- Latest check: 66% primary / 25% weekly.
+- The 85% stop threshold has not been reached.
 - If primary usage reaches 90%, start nothing new and update this handoff only.
 
 ## Git state and commits
@@ -21,8 +21,9 @@ The generated registry database is separate from `data/catalog/youtube_inventory
 - Base: `b7f0abfc39dd3906616489f3eb608e0caac8fefd`
 - Authority commit: `d8eef65e3d0a301a2c82e6aa78663e26cdc4d917`
 - Registry implementation commit: `b9cc126` (`data: add reproducible YouTube channel query registry`)
+- Tracker commit: `7c37b76` (`docs: add channel data and intelligence coverage tracker`)
 - `c024d13` remains in ancestry.
-- At the time this handoff was written, the branch still tracked the remediation remote; the final push must establish its own feature-branch upstream.
+- Local HEAD, upstream, and live feature-branch remote were all `7c37b769f7d3a6393b01f12ca1b1f9e5e4b04c16` before the final validation additions. The final commit still requires push and remote re-verification.
 
 ## Authoritative target controls
 
@@ -102,8 +103,10 @@ Tracked implementation:
 data/catalog/channel_registry/schema.sql
 data/catalog/channel_registry/example_queries.sql
 scripts/build_youtube_channel_registry.py
+scripts/build_youtube_channel_master_tracker.mjs
 scripts/validate_youtube_channel_registry.py
 tests/test_youtube_channel_registry.py
+tests/test_youtube_channel_master_tracker.py
 docs/YOUTUBE_CHANNEL_REGISTRY.md
 docs/audits/YOUTUBE_CHANNEL_REGISTRY_QUERY_RESULTS_2026-09-14.md
 ```
@@ -115,6 +118,8 @@ data/catalog/youtube_channel_registry.db
 ```
 
 The validator passes integrity, foreign keys, required views, uniqueness, evidence links, source-group distinctions, visual controls, intelligence input/output distinctions, and idempotent double-build controls. Both builds produced identical counts, including 69 channels, 1,904 videos, 1,904 transcript rows, 25 datasets, 239 artifacts, and 552 intelligence rows. FTS5 is enabled; the standard SQL transcript-search fallback returns the same sampled results.
+
+All 35 standard transcript ZIPs pass CRC, unique-member, member-count, parsed-text, placeholder-reason, and SHA-256 reconciliation against SQLite: 1,601 videos, 1,591 real transcripts, 10 placeholders, and 33 real transcripts above Excel's 32,767-character cell limit. The five historical channels contribute 303 videos, 302 real transcripts, one placeholder, and three additional transcripts above the Excel limit. Complete long text remains in SQLite/source ZIPs rather than being forced into Excel cells.
 
 ## Excel tracker
 
@@ -136,20 +141,25 @@ Sheets:
 8. `Intelligence Coverage`
 9. `Definitions`
 
-The workbook was authored with `@oai/artifact-tool`; the operation marker ran exactly once. Dashboard controls are formula-linked and evaluate to 69/63/40/35/5/29/1/3/2/7/1,904/1,893/11/14. All nine sheets were rendered and visually reviewed. The Artifact Tool renderer does not calculate `HYPERLINK`, but a disposable LibreOffice recalculation proved canonical YouTube and repository formulas resolve to their friendly link labels. No alternative library authored the delivered workbook.
+The workbook was authored with `@oai/artifact-tool`; the operation marker ran exactly once. Dashboard controls are formula-linked and evaluate to 69/63/40/35/5/29/1/3/2/7/1,904/1,893/11/14. All nine sheets were rendered and visually reviewed. The Artifact Tool renderer does not calculate `HYPERLINK`, but a disposable LibreOffice recalculation proved canonical YouTube and repository formulas resolve to their friendly link labels. No alternative library authored the delivered workbook. A clean temporary rebuild from the tracked builder was semantically identical to the repository workbook across values, formulas, styles, dimensions, frozen panes, tables, merged cells, and conditional formatting.
 
 Workbook tests reconcile channel IDs, target groups, extraction/package states, videos, transcripts, placeholders, description gaps, dataset memberships, visual evidence, all 552 capability rows, 67 ordered submissions, duplicate references, formulas, tables, and portable links against JSON and SQLite.
 
 ## Validation evidence
 
-- Registry plus workbook tests: 21/21 passed.
-- Relevant package/intelligence tests: 33/33 passed.
+- Registry plus workbook tests: 23/23 passed.
+- Package-validator and package-generalization tests: 11/11 passed.
 - Registry validator: PASS.
 - SQLite two-run idempotence: PASS.
+- All example SQL queries: PASS.
+- Cross-format raw/CSV/JSON/SQLite/workbook/query-report reconciliation: PASS.
+- Standard-package ZIP CRC/text/SHA reconciliation: 35/35 channels; 1,601/1,601 members.
+- Downloaded-thumbnail manifests/files/checksums: 32 + 29 + 83 verified.
+- Forensic artifact: 107 keyframes, 3 source videos, 107 observations, and 13/13 provenance files verified.
 - Formula error scan: 0 matches.
 - Credential/token scan: no high-confidence findings.
 - Workbook absolute-path scan: no `/Users/` or `file://` links.
-- Full bundled suite: 308 tests; 306 passed; 1 failure and 1 error.
+- Full bundled suite: 309 tests; 307 passed; 1 failure and 1 error.
 
 The two full-suite problems are pre-existing isolated-worktree environment issues, not feature failures:
 
@@ -173,6 +183,7 @@ Do not record this file's SHA-256 inside itself.
 When reading this handoff from its containing commit:
 
 1. Verify the feature status and that the ignored database/evidence are not staged.
-2. Push only `feat/youtube-channel-registry-and-tracker-2026-09-14` with its own upstream.
-3. Verify local, upstream, and live remote SHAs match.
-4. Do not open a PR or merge.
+2. Commit only the validated documentation, reproducible workbook builder, cross-format/ZIP reconciliation tests, and this handoff.
+3. Push only `feat/youtube-channel-registry-and-tracker-2026-09-14` with its own upstream.
+4. Verify local, upstream, and live remote SHAs match.
+5. Do not open a PR or merge.
