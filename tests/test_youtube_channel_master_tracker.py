@@ -86,6 +86,25 @@ class ChannelMasterTrackerTests(unittest.TestCase):
                     f"{sheet_name} row {row}",
                 )
 
+    def test_repository_links_use_main_and_existing_files(self):
+        prefix = "https://github.com/ghilmanITM360/youtube-intelligence-os/blob/main/"
+        count = 0
+        for sheet in self.workbook.worksheets:
+            for row in sheet.iter_rows():
+                for cell in row:
+                    formula = cell.value
+                    if not isinstance(formula, str) or not formula.startswith("=HYPERLINK("):
+                        continue
+                    match = re.match(r'=HYPERLINK\("([^"]+)","([^"]+)"\)', formula)
+                    self.assertIsNotNone(match, (sheet.title, cell.coordinate))
+                    url = match.group(1)
+                    if not url.startswith("https://github.com/ghilmanITM360/youtube-intelligence-os/blob/"):
+                        continue
+                    self.assertTrue(url.startswith(prefix), (sheet.title, cell.coordinate, url))
+                    self.assertTrue((ROOT / url[len(prefix):]).is_file(), (sheet.title, cell.coordinate, url))
+                    count += 1
+        self.assertGreater(count, 600)
+
     def test_independent_status_columns_are_present(self):
         headers = {
             self.workbook["All Channels"].cell(row=4, column=column).value

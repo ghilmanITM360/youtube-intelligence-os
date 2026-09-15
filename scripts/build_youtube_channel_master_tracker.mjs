@@ -1,11 +1,12 @@
 import fs from "node:fs/promises";
+import { statSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 const root = process.argv[2];
 if (!root) throw new Error("repository root argument is required");
-const artifactToolModule = process.argv[6] ?? "@oai/artifact-tool";
+const artifactToolModule = process.argv[5] ?? "@oai/artifact-tool";
 const { SpreadsheetFile, Workbook } = await import(
   artifactToolModule.startsWith("/") ? pathToFileURL(artifactToolModule).href : artifactToolModule
 );
@@ -16,8 +17,7 @@ const model = JSON.parse(
 const databasePath = `${root}/data/catalog/youtube_channel_registry.db`;
 const workbookPath = process.argv[3] ?? `${root}/data/normalized/channel-targets/YOUTUBE_CHANNEL_MASTER_TRACKER.xlsx`;
 const renderDir = process.argv[4] ?? "/tmp/youtube-channel-registry-renders";
-const branch = process.argv[5] ?? execFileSync("git", ["rev-parse", "--abbrev-ref", "HEAD"], { cwd: root, encoding: "utf8" }).trim();
-const githubBase = `https://github.com/ghilmanITM360/youtube-intelligence-os/blob/${branch}/`;
+const githubBase = "https://github.com/ghilmanITM360/youtube-intelligence-os/blob/main/";
 const fontName = "Arial";
 const navy = "#1F4E78";
 const blue = "#D9EAF7";
@@ -61,12 +61,17 @@ const linkFormula = (url, label = "Open") =>
   `=HYPERLINK("${excelText(url)}","${excelText(label)}")`;
 const cleanEvidencePath = (value) => {
   const first = String(value ?? "").split("; ")[0].split("#")[0].replace(/:row=.*$/, "");
-  return first.startsWith("data/") || first.startsWith("docs/") || first.startsWith("scripts/")
-    ? first
-    : "docs/YOUTUBE_CHANNEL_REGISTRY.md";
+  if (first.startsWith("https://")) return first;
+  const dataset = /^data\/raw\/competitors\/(DS-\d{6})$/.exec(first);
+  const candidate = dataset ? `data/manifests/${dataset[1]}.md` : first;
+  if (!candidate.startsWith("data/") && !candidate.startsWith("docs/") && !candidate.startsWith("scripts/")) {
+    throw new Error(`No repository evidence path: ${value}`);
+  }
+  if (!statSync(path.join(root, candidate)).isFile()) throw new Error(`Evidence file missing: ${candidate}`);
+  return candidate;
 };
 const repoFormula = (value, label = "Evidence") =>
-  linkFormula(`${githubBase}${cleanEvidencePath(value)}`, label);
+  linkFormula(String(value ?? "").startsWith("https://") ? value : `${githubBase}${cleanEvidencePath(value)}`, label);
 const yes = (condition) => (condition ? "✓" : "No");
 const displayStatus = (row, capability) =>
   coverageByChannel.get(row.canonical_channel_id)?.get(capability)?.status ?? "NOT_AVAILABLE";

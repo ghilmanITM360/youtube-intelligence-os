@@ -59,12 +59,19 @@ def test_first_party_refresh_contract_is_integrated():
     assert "CROSS_NICHE_CALIBRATION" not in layers
 
 
-def test_current_registry_yields_deterministic_noop():
+def test_editing_code_change_requires_deterministic_refresh_plan():
     registry = json.loads(planner.REGISTRY_PATH.read_text(encoding="utf-8"))
     first = planner.build_refresh_plan(registry)
     second = planner.build_refresh_plan(registry)
     assert first == second
-    assert first["status"] == "NO_REFRESH_REQUIRED"
+    assert first["status"] == "REFRESH_REQUIRED"
+    assert {
+        row["PATH"] for row in first["artifacts_to_refresh"]
+    } == {
+        "data/intelligence/channels/CH-000004/editing-visual-intelligence-pilot-2026-09-11.json",
+        "data/intelligence/cross-channel/editing-intelligence-availability-2026-09-11.json",
+    }
+    assert all(row["STALE_REASON"] == ["UPSTREAM_ARTIFACT_CHANGED"] for row in first["artifacts_to_refresh"])
     assert first["artifacts_refreshed"] == []
 
 

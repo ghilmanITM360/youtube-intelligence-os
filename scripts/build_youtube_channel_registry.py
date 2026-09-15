@@ -496,10 +496,19 @@ def _historical_records(root: Path) -> tuple[list[dict], list[dict], list[dict]]
             )
             path_part, separator, member = reference.partition("::")
             source_path = Path(path_part)
-            local_path = root / (
-                source_path.relative_to("/Users/ghilmanislam360/Documents/youtube-intelligence-os")
-                if source_path.is_absolute() else source_path
-            )
+            if source_path.is_absolute():
+                if source_path.is_relative_to(root):
+                    relative_path = source_path.relative_to(root)
+                elif "/data/" in source_path.as_posix():
+                    relative_path = Path("data") / source_path.as_posix().split("/data/", 1)[1]
+                else:
+                    raise ValueError(f"Historical source is outside repository data: {source_path}")
+            else:
+                relative_path = source_path
+            local_path = (root / relative_path).resolve()
+            if not local_path.is_relative_to(root.resolve()) or not local_path.is_file():
+                raise FileNotFoundError(f"Historical source missing in selected repository: {relative_path}")
+            portable_reference = relative_path.as_posix() + (f"::{member}" if separator else "")
             if separator:
                 with zipfile.ZipFile(local_path) as archive:
                     text = archive.read(member).decode("utf-8")
@@ -527,10 +536,10 @@ def _historical_records(root: Path) -> tuple[list[dict], list[dict], list[dict]]
                 "youtube_video_id": row["youtube_video_id"], "dataset_id": row["dataset_id"],
                 "transcript_text": body, "word_count": row["word_count"], "language": row["language"],
                 "caption_type": row["caption_type"], "is_placeholder": int(placeholder), "unavailable_reason": reason,
-                "evidence_locator": reference.replace("/Users/ghilmanislam360/Documents/youtube-intelligence-os/", ""),
+                "evidence_locator": portable_reference,
                 "transcript_sha256": row["transcript_sha256"] or sha256_bytes(body.encode("utf-8")),
             })
-            memberships.append({"dataset_id": row["dataset_id"], "youtube_video_id": row["youtube_video_id"], "evidence_locator": reference.replace("/Users/ghilmanislam360/Documents/youtube-intelligence-os/", "")})
+            memberships.append({"dataset_id": row["dataset_id"], "youtube_video_id": row["youtube_video_id"], "evidence_locator": portable_reference})
     finally:
         source.close()
     return videos, transcripts, memberships

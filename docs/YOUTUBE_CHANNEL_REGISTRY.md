@@ -157,7 +157,6 @@ node scripts/build_youtube_channel_master_tracker.mjs \
   "$PWD" \
   "$PWD/data/normalized/channel-targets/YOUTUBE_CHANNEL_MASTER_TRACKER.xlsx" \
   "/tmp/youtube-channel-registry-renders" \
-  "$(git rev-parse --abbrev-ref HEAD)" \
   "/absolute/path/to/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs"
 ```
 
@@ -182,12 +181,12 @@ Never manually edit generated `YOUTUBE_CHANNEL_REGISTRY.json`, `YOUTUBE_CHANNEL_
 
 ## Environment-only test limits
 
-Full validation requires the bundled Python runtime with `openpyxl`, local ignored historical evidence, and normalized worktree paths. In an isolated linked worktree, two known checks can differ without a feature regression: DS-000018 raw-evidence presence when that ignored evidence is unavailable, and deterministic availability output when historical catalog rows retain the main worktree's absolute path. Confirm these checks read-only in the main worktree; do not copy or modify evidence to hide the difference.
+Full validation requires the bundled Python runtime with `openpyxl` and local ignored historical evidence. An isolated linked worktree without DS-000018 or forensic raw fixtures can report unavailable data or fail fixture-dependent tests. Path resolution now uses the selected repository root and never reads forensic files from another worktree.
 
 ## Portability and limits
 
-- Tracked links use repository-relative paths or canonical HTTPS URLs.
+- Tracker evidence links use existing repository files on GitHub `main` or canonical HTTPS source URLs. Historical manifest paths may still record original machines as provenance.
 - Historical catalog evidence is ignored local state; a clean checkout needs safe local evidence copies for a full rebuild.
-- Some historical source records retain old absolute forensic paths. The new registry stores repository-relative locators where a canonical repository path exists.
+- Historical catalog source records retain old absolute paths as provenance. Registry and editing reports rebase repository evidence under the selected worktree and emit relative locators.
 - Transcript ZIP members remain authoritative when spreadsheet cell limits affect presentation.
 - No acquisition runs occur during build or validation.

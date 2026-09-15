@@ -28,6 +28,12 @@ class EditingVisualIntelligenceTests(unittest.TestCase):
                 generated_on="2026-09-11", repo_root=ROOT,
             )
 
+    def test_generated_report_has_only_portable_evidence_paths(self):
+        rendered = report.render_json(self.payload)
+        self.assertNotIn("/Users/", rendered)
+        self.assertNotIn("/private/tmp/", rendered)
+        self.assertNotIn("file://", rendered)
+
     def test_discovers_registered_forensic_evidence_and_resolves_duplicate_video(self):
         rows = self.payload["evidence_matrix"]
         self.assertEqual({row["dataset_id"] for row in rows}, {

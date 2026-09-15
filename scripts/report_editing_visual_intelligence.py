@@ -49,16 +49,26 @@ def render_json(payload):
     return json.dumps(payload, sort_keys=True, ensure_ascii=False, separators=(",", ":")) + "\n"
 
 
-def _existing_path(row):
-    for value in (row.get("canonical_path"), row.get("original_path")):
-        if value and Path(value).exists():
-            return Path(value)
+def _existing_path(row, repo_root=ROOT):
+    root = Path(repo_root).resolve()
+    dataset_id = row["dataset_id"]
+    relative = row.get("relative_path")
+    if relative:
+        candidate = (root / "data/raw/forensic-analysis" / dataset_id / relative).resolve()
+        if candidate.is_relative_to(root) and candidate.is_file():
+            return candidate
+    canonical = row.get("canonical_path") or ""
+    marker = "/data/raw/forensic-analysis/"
+    if marker in canonical:
+        candidate = (root / "data/raw/forensic-analysis" / canonical.split(marker, 1)[1]).resolve()
+        if candidate.is_relative_to(root) and candidate.is_file():
+            return candidate
     return None
 
 
 def _files(conn, dataset_id):
     return [dict(row) for row in conn.execute(
-        """SELECT file_id, original_filename, original_path, relative_path,
+        """SELECT dataset_id, file_id, original_filename, original_path, relative_path,
                   canonical_path, extension, sha256, is_copied
              FROM source_files WHERE dataset_id = ? ORDER BY file_id""",
         (dataset_id,),
@@ -131,10 +141,10 @@ def discover_forensic_evidence(conn, channel_id, repo_root=ROOT):
             row["original_filename"], re.I,
         )]
         timestamped = any(re.search(r"\d+(?:ms|s)(?:\.|$)", row["original_filename"], re.I) for row in images)
-        report_path = next((_existing_path(row) for row in sorted(reports, key=lambda item: item["is_copied"], reverse=True) if _existing_path(row)), None)
+        report_path = next((_existing_path(row, repo_root) for row in sorted(reports, key=lambda item: item["is_copied"], reverse=True) if _existing_path(row, repo_root)), None)
         report_text = "\n".join(
             path.read_text(encoding="utf-8", errors="replace")
-            for item in reports for path in [_existing_path(item)] if path
+            for item in reports for path in [_existing_path(item, repo_root)] if path
         )
         shot_data = bool(state_files) or bool(re.search(r"shot/edit decision|major-shot|editing decision list|temporal architecture", report_text, re.I))
         relation = relationships.get(link["dataset_id"], [])
@@ -149,9 +159,9 @@ def discover_forensic_evidence(conn, channel_id, repo_root=ROOT):
             "dataset_relationship_ids": sorted(item["relationship_id"] for item in relation),
             "dataset_relationship_type": relation[0]["relationship_type"] if relation else link["relationship_type"],
             "source_video_available": "YES" if any(
-                (item["extension"] or "").lower() in VIDEO_EXTENSIONS and _existing_path(item) for item in files
+                (item["extension"] or "").lower() in VIDEO_EXTENSIONS and _existing_path(item, repo_root) for item in files
             ) else "NO",
-            "keyframes_available": "YES" if images and any(_existing_path(item) for item in images) else "NO",
+            "keyframes_available": "YES" if images and any(_existing_path(item, repo_root) for item in images) else "NO",
             "frame_sequence_available": "YES" if len(images) >= 10 else "NO",
             "timestamps_available": "YES" if timestamped or bool(state_files) else "NO",
             "shot_visual_transition_data_available": "YES" if shot_data else "NO",
@@ -200,7 +210,7 @@ def _markdown_descriptions(text):
     return result
 
 
-def _load_states(conn, evidence_row):
+def _load_states(conn, evidence_row, repo_root=ROOT):
     files = _files(conn, evidence_row["dataset_id"])
     frame_files = defaultdict(list)
     for file_row in files:
@@ -209,12 +219,12 @@ def _load_states(conn, evidence_row):
             frame_files[match.group(1).upper()].append(file_row)
     report_path = Path(evidence_row["forensic_report"]) if evidence_row["forensic_report"] else None
     if report_path and not report_path.is_absolute():
-        report_path = ROOT / report_path
+        report_path = Path(repo_root).resolve() / report_path
     report_text = report_path.read_text(encoding="utf-8", errors="replace") if report_path and report_path.exists() else ""
     descriptions = _markdown_descriptions(report_text)
     candidates = []
     for item in files:
-        path = _existing_path(item)
+        path = _existing_path(item, repo_root)
         if not path or path.suffix.lower() != ".tsv":
             continue
         rows = _parse_tsv(path)
@@ -616,7 +626,7 @@ def build_report(conn, channel_id, topic, packaging, hook_script, generated_on="
     topic_items = _topic_items(topic)
     states_by_video, reports, measured, features = {}, {}, [], []
     for row in canonical:
-        states, report_text = _load_states(conn, row)
+        states, report_text = _load_states(conn, row, repo_root)
         if not states:
             continue
         states_by_video[row["video_id"]] = states
