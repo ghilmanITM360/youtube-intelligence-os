@@ -204,3 +204,11 @@ Status as of the 2026-09-15 continuation: steps 1-4 below are complete (see adde
 5. Do not open a PR or merge. — Still applies; no PR was opened, no merge performed.
 
 Remaining open item: install `openpyxl` (or equivalent) in a verification environment to independently re-run the workbook-dependent tests and validator idempotence check; this continuation could not do so per its no-auto-install rule (see addendum).
+
+## Errata / correction — current `main` state, 2026-09-15
+
+The feature branch was fast-forward merged into `main` at `6cb9e0d420bb9aeab657dc3d2ab194735d447b44` and then deleted. Only `main` and `ui/v1` remain locally and on the live remote. The statements above about no merge, a live feature branch, and missing `openpyxl` describe earlier checkpoints, not current state. Main's `.venv` has Python 3.9.6, pytest 8.4.2, and openpyxl 3.1.5; `.venv/bin/python -m pytest -q` passed 327 tests with zero failures, errors, or skips.
+
+The 32, 29, and 83 thumbnail-snapshot records are structured metadata in tracked JSON, **and 144 corresponding SHA-256-matched files exist locally** under ignored raw DS-000006, DS-000019, and DS-000017 thumbnail-snapshot directories. DS-000017 includes 82 JPEGs and one AVIF. Those raw files are not tracked or pushed. The seven unmapped screenshot subjects correspond to 113 other local ignored raw images; Aliza has seven additional local screenshots. CH-000004's 107 figure is a structured visual-state count; its 92 distinct `frame_locator` keyframe paths resolve to zero actual files. DS-000012–015 contain 82 other forensic images, which must not be counted as those keyframes.
+
+The tracker still has 1,090 cached `HYPERLINK()` error-typed cells. More seriously, 789 formula links use `/blob/feat/youtube-channel-registry-and-tracker-2026-09-14/`, a branch now absent from the live remote. Their URL syntax is valid, but their evidence targets are stale. This workbook was not changed during the correction audit. Full corrected counts and database/test evidence appear in the Errata section of `docs/audits/YOUTUBE_CHANNEL_REGISTRY_COMPLETION_AUDIT_2026-09-15.md`.
