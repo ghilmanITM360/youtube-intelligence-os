@@ -1,9 +1,11 @@
 # YouTube Channel Registry and Tracker — Completion Audit
 
+**Status: HISTORICAL.** This audit was written against a linked worktree and feature branch (`feat/youtube-channel-registry-and-tracker-2026-09-14`, and the `fix/repository-audit-remediation-2026-09-14` branch it cites in §2) that were fast-forward merged into `main` and deleted on 2026-09-15 — see `docs/audits/YOUTUBE_CHANNEL_REGISTRY_TRACKER_HANDOFF_2026-09-14.md` for that merge/cleanup record. Only `main` and `ui/v1` exist as of this reading. The findings below (counts, gaps, verification method) remain the historical record of that audit pass; branch names, worktree paths, and the specific test-count/commit-SHA snapshots in this file describe that point in time, not current `main`.
+
 Date: 2026-09-15
 Audit type: read-only verification against repository evidence. No files were fixed, rebuilt, committed, pushed, merged; no Apify run or credits were spent.
-Worktree audited: `/Users/ghilmanislam360/Documents/youtube-intelligence-os-channel-registry-2026-09-14`
-Branch: `feat/youtube-channel-registry-and-tracker-2026-09-14`
+Worktree audited: `/Users/ghilmanislam360/Documents/youtube-intelligence-os-channel-registry-2026-09-14` (deleted; historical reference only)
+Branch: `feat/youtube-channel-registry-and-tracker-2026-09-14` (merged and deleted; historical reference only)
 
 ## 1. Executive verdict: **PARTIAL** (see 2026-09-15 continuation update below)
 
