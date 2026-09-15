@@ -23,7 +23,8 @@ The generated registry database is separate from `data/catalog/youtube_inventory
 - Registry implementation commit: `b9cc126` (`data: add reproducible YouTube channel query registry`)
 - Tracker commit: `7c37b76` (`docs: add channel data and intelligence coverage tracker`)
 - `c024d13` remains in ancestry.
-- Local HEAD, upstream, and live feature-branch remote were all `7c37b769f7d3a6393b01f12ca1b1f9e5e4b04c16` before the final validation additions. The final commit still requires push and remote re-verification.
+- Local HEAD, upstream, and live feature-branch remote were all `7c37b769f7d3a6393b01f12ca1b1f9e5e4b04c16` before the final validation additions.
+- Update (2026-09-15 continuation): the final commit (`ef2813bca6993f250c7c4cb3a88edc7b7dfc5774`, "data: finalize reproducible YouTube channel tracker") has been pushed. Local HEAD, `@{upstream}`, and `git ls-remote origin` for `feat/youtube-channel-registry-and-tracker-2026-09-14` were independently re-verified as identical (`ef2813bca6993f250c7c4cb3a88edc7b7dfc5774`), 0 ahead/0 behind, on 2026-09-15. Push is complete; this line no longer describes a pending step.
 
 ## Authoritative target controls
 
@@ -178,12 +179,28 @@ Both were previously confirmed to pass read-only in the main worktree. No eviden
 
 Do not record this file's SHA-256 inside itself.
 
+## Audit resolution addendum (2026-09-15 continuation)
+
+A follow-on audit (`docs/audits/YOUTUBE_CHANNEL_REGISTRY_COMPLETION_AUDIT_2026-09-15.md`) independently re-verified this handoff's controls and flagged three items needing resolution. Findings, reproduced a second time in this continuation session:
+
+**Intelligence coverage row count — 552 is correct.** `552 = 69 channels × 8 capabilities`, confirmed both by direct SQLite query (`SELECT COUNT(*) FROM intelligence_coverage` = 552, `SELECT COUNT(*) FROM channels` = 69, `SELECT COUNT(*) FROM intelligence_capabilities` = 8) and by this document's own §"Registry controls" above. An external audit brief expected `414 = 69 × 6`; there is no schema evidence any capability is excluded from the per-channel cross-join, so `414` is a stale figure from that brief, not from this codebase. Kept here as a historical/audit-brief value only, superseded by 552.
+
+**Input-ready channel counts — 40 and 35 are both correct, measuring different things.** `40` = channels with `input_data_available = 1` for a capability (35 `STANDARD_PACKAGE` + 5 `HISTORICAL_FORMAT`, confirmed by SQL join on `channels.package_status`). `35` = the narrower subset additionally carrying `status = 'DATA_READY'` (standard-package only; the 5 historical-format channels carry `status = 'VALIDATED'` instead, despite also having usable input data). Both numbers are already guarded by existing tests (`tests/test_youtube_channel_registry.py:177,197,252,281`) and by `scripts/validate_youtube_channel_registry.py`'s `EXPECTED` dict (`channels_with_video_data: 40`, `standard_packages: 35`, `intelligence_coverage_rows: 552`), so no new regression test was added.
+
+**Visual evidence terminology.** To avoid ambiguity in the "83 thumbnail URLs/downloaded thumbnails... 107 keyframes... 107 timestamped observations" wording above: the 32/29/83 "downloaded thumbnail" counts are fetched-and-hashed metadata records (`sha256`, `byte_size`, `final_url` captured per thumbnail in each channel's packaging-intelligence JSON) — the underlying JPEGs are not committed to the repository, only their metadata is. The 107 "keyframes" for CH-000004 are likewise structured JSON observations (`measured_features[].keyframe_count`, cross-checked against 203 `visual_features` entries covering 92 distinct video/timestamp pairs across 3 source videos) — no keyframe image files exist anywhere in the repository; `data/raw/keyframes/` is tracked but contains only a `.gitkeep` placeholder. This does not indicate missing work — it reflects the feature's intended design (structured forensic observations, not a committed image corpus) — but "keyframes"/"downloaded thumbnails" should be read as evidence records, not image files, when this document is cited.
+
+**Excel `HYPERLINK()` cached-error cells — accepted with documented limitation (resolution B), not rebuilt.** Direct ZIP/XML inspection (stdlib `zipfile`, no `openpyxl` needed) reproduces the 1,090 `HYPERLINK()` formulas = 1,090 cached error-typed cells exactly, 100% resolving to valid `youtube.com`/`youtu.be`/`github.com` URLs (zero local file paths), with no `calcPr` element present (Excel's automatic-recalculation default applies). The cached error text is the standard `"HYPERLINK is not implemented. linkLocation=..., friendlyName=..."` placeholder left by a writer/recalculation engine that doesn't evaluate `HYPERLINK()`, not a broken formula. This section's own earlier claim of a disposable LibreOffice recalculation proving correct resolution was made in the original authoring environment; no `openpyxl`, LibreOffice, Numbers, or Excel exists in this or the prior audit's verification environment, so that specific claim could not be independently re-executed here. Rebuilding the workbook was not attempted (would require `openpyxl`, which is not installed and was not auto-installed per this task's safety rules — see below). No formula was replaced with a hardcoded value.
+
+**`openpyxl` availability.** Not installed in this environment (system Python 3.9.6, Homebrew Python, or either local venv checked). Per this task's rules, it was not auto-installed. This blocks ~10 of the registry/workbook/tracker tests and the validator script's idempotence re-check from running here; the 4 raw-authority tests that don't touch the workbook (`RawChannelAuthorityTests`) run and pass without it. This is an environment/dependency-availability limitation, not a known code defect.
+
 ## Remaining release steps
 
-When reading this handoff from its containing commit:
+Status as of the 2026-09-15 continuation: steps 1-4 below are complete (see addendum above). Retained for reference:
 
-1. Verify the feature status and that the ignored database/evidence are not staged.
-2. Commit only the validated documentation, reproducible workbook builder, cross-format/ZIP reconciliation tests, and this handoff.
-3. Push only `feat/youtube-channel-registry-and-tracker-2026-09-14` with its own upstream.
-4. Verify local, upstream, and live remote SHAs match.
-5. Do not open a PR or merge.
+1. Verify the feature status and that the ignored database/evidence are not staged. — Done; `data/catalog/*.db` remains gitignored and untouched.
+2. Commit only the validated documentation, reproducible workbook builder, cross-format/ZIP reconciliation tests, and this handoff. — Done at `ef2813b`.
+3. Push only `feat/youtube-channel-registry-and-tracker-2026-09-14` with its own upstream. — Done; see addendum for re-verified SHAs.
+4. Verify local, upstream, and live remote SHAs match. — Done.
+5. Do not open a PR or merge. — Still applies; no PR was opened, no merge performed.
+
+Remaining open item: install `openpyxl` (or equivalent) in a verification environment to independently re-run the workbook-dependent tests and validator idempotence check; this continuation could not do so per its no-auto-install rule (see addendum).
