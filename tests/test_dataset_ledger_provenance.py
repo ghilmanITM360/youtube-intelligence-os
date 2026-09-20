@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import validate_dataset_ledgers as v  # noqa: E402
 
-DATASETS = ["DS-000021", "DS-000022", "DS-000023", "DS-000024", "DS-000025"]
+DATASETS = ["DS-000021", "DS-000022", "DS-000023", "DS-000024", "DS-000025", "DS-000027"]
 
 
 class LedgerPathSafetyTests(unittest.TestCase):

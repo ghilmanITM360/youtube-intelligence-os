@@ -275,7 +275,7 @@ pending.freezePanes.freezeColumns(3);
 
 const dataCoverage = workbook.worksheets.getItem("Data Coverage");
 title(dataCoverage, "Channel data coverage", "Availability marks are evidence-derived. A raw input does not imply a generated intelligence artifact.");
-const actorDatasets = new Set(["DS-000017", "DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025"]);
+const actorDatasets = new Set(["DS-000017", "DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027"]);
 const dataCoverageRows = model.channels.map((row) => {
   const capabilityRows = [...(coverageByChannel.get(row.canonical_channel_id)?.values() ?? [])];
   return [
@@ -346,7 +346,7 @@ visual.getRange("J5:K73").conditionalFormats.add("containsText", { text: "THUMBN
 visual.freezePanes.freezeColumns(2);
 
 const datasetSheet = workbook.worksheets.getItem("Datasets");
-title(datasetSheet, "Registered datasets", "DS-000001 through DS-000025 are included. Channel and video counts preserve many-to-many membership.");
+title(datasetSheet, "Registered datasets", "Registered manifest datasets through DS-000027 are included. Channel and video counts preserve many-to-many membership.");
 const datasetRows = datasets.map((row) => [row.dataset_id, row.dataset_name, row.channel_count, row.video_count, null, row.evidence_scope || "—", shorten(row.limitations)]);
 const datasetBounds = addTable(datasetSheet, ["Dataset ID", "Dataset Name", "Channel Count", "Video Count", "Manifest", "Evidence Scope", "Limitations"], datasetRows, "DatasetsTable");
 datasetSheet.getRange(`E5:E${datasetBounds.endRow}`).formulas = datasets.map((row) => [repoFormula(row.manifest_path, "Manifest")]);

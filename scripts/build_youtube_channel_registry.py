@@ -147,7 +147,7 @@ def historical_dataset_links(root: Path) -> dict[str, list[str]]:
 
 def package_thumbnail_url_counts(root: Path, channels: list[dict]) -> dict[str, int]:
     counts = defaultdict(int)
-    for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025"):
+    for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027"):
         path = next((root / "data/extracted/channel-data" / dataset_id / "combined").glob("*_master.csv"))
         with path.open(encoding="utf-8-sig", newline="") as handle:
             for row in csv.DictReader(handle):
@@ -450,9 +450,12 @@ def build_model(root: Path) -> dict:
 
 def _dataset_records(root: Path) -> list[dict]:
     records = []
-    for number in range(1, 26):
-        dataset_id = f"DS-{number:06d}"
-        path = root / "data/manifests" / f"{dataset_id}.md"
+    paths = sorted(
+        path for path in (root / "data/manifests").glob("DS-*.md")
+        if re.fullmatch(r"DS-\d{6}\.md", path.name)
+    )
+    for path in paths:
+        dataset_id = path.stem
         text = path.read_text(encoding="utf-8")
         heading = next((line.removeprefix("# ").strip() for line in text.splitlines() if line.startswith("# ")), dataset_id)
         records.append({"dataset_id": dataset_id, "dataset_name": heading, "manifest_path": path.relative_to(root).as_posix(), "evidence_scope": None, "limitations": None})
@@ -551,7 +554,7 @@ def _combined_package_records(root: Path) -> tuple[list[dict], list[dict], list[
         item["video_id"]
         for item in json.loads((root / "data/manifests/DS-000020-description-recovery-verification.json").read_text(encoding="utf-8"))["items"]
     }
-    for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025"):
+    for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027"):
         path = next((root / "data/extracted/channel-data" / dataset_id / "combined").glob("*_master.csv"))
         with path.open(encoding="utf-8-sig", newline="") as handle:
             for row in csv.DictReader(handle):

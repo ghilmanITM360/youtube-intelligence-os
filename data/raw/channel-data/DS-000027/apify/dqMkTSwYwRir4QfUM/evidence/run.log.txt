@@ -1,0 +1,108 @@
+2026-09-20T11:39:41.168Z ACTOR: Pulling container image of build dFRrjfSKlhF6yPUT6 from registry.
+2026-09-20T11:39:41.171Z ACTOR: Creating container.
+2026-09-20T11:39:41.309Z ACTOR: Starting container.
+2026-09-20T11:39:41.312Z ACTOR: Running under "LIMITED_PERMISSIONS".
+2026-09-20T11:39:41.386Z Running on architecture: x86_64
+2026-09-20T11:39:41.387Z Will run command: xvfb-run -a -s "-ac -screen 0 1920x1080x24+32 -nolisten tcp" node dist/src/entrypoint.js
+2026-09-20T11:39:42.924Z INFO  System info {"apifyVersion":"3.7.2","apifyClientVersion":"2.23.4","crawleeVersion":"3.17.0","osType":"Linux","nodeVersion":"v24.21.0"}
+2026-09-20T11:39:43.432Z INFO  Starting scraper with startUrls, ignoring searchQueries
+2026-09-20T11:39:43.512Z INFO  CheerioCrawler: Starting the crawler.
+2026-09-20T11:39:44.565Z INFO  Processing channel /about page: https://www.youtube.com/channel/UC356D-NzdnznBOftTpYoBLw/about?ucbcb=1
+2026-09-20T11:39:45.395Z INFO  [CHANNEL_VIDEOS] Enqueued 30 new videos for detailed scraping --- https://www.youtube.com/channel/UC356D-NzdnznBOftTpYoBLw/videos
+2026-09-20T11:39:48.671Z INFO  handling detail url https://m.youtube.com/watch?v=wp-wk_Zm6NU&ucbcb=1
+2026-09-20T11:39:49.388Z INFO  handling detail url https://m.youtube.com/watch?v=FioBTeZ2wrI&ucbcb=1
+2026-09-20T11:39:49.519Z INFO  handling detail url https://m.youtube.com/watch?v=yA_2tSg6JHo&ucbcb=1
+2026-09-20T11:39:49.853Z INFO  handling detail url https://m.youtube.com/watch?v=EkcaJ18NLAU&ucbcb=1
+2026-09-20T11:39:49.989Z WARN  CheerioCrawler: Reclaiming failed request back to the list or queue. Error status code encountered - 429
+2026-09-20T11:39:49.990Z     at CurlImpersonateHttpClient.performRequest (file:///home/myuser/dist/src/tools/curl-impersonate-http-client.js:80:37) {"id":"GMFviZpuKaUWguE","url":"https://m.youtube.com/watch?v=Rxo1sriPZ2s&ucbcb=1","retryCount":1}
+2026-09-20T11:39:50.303Z INFO  handling detail url https://m.youtube.com/watch?v=AD_rIsaeTzs&ucbcb=1
+2026-09-20T11:39:50.689Z INFO  handling detail url https://m.youtube.com/watch?v=E4Qsvz-ggXE&ucbcb=1
+2026-09-20T11:39:50.954Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"wp-wk_Zm6NU"}
+2026-09-20T11:39:51.112Z INFO  handling detail url https://m.youtube.com/watch?v=HpHqBsif8h4&ucbcb=1
+2026-09-20T11:39:51.214Z INFO  handling detail url https://m.youtube.com/watch?v=0aiVrlKNMeM&ucbcb=1
+2026-09-20T11:39:51.712Z INFO  handling detail url https://m.youtube.com/watch?v=C8zmIX_9NCo&ucbcb=1
+2026-09-20T11:39:52.405Z INFO  handling detail url https://m.youtube.com/watch?v=xrH-BRF3nkg&ucbcb=1
+2026-09-20T11:39:53.393Z INFO  handling detail url https://m.youtube.com/watch?v=PWc0zfa2lWU&ucbcb=1
+2026-09-20T11:39:54.744Z INFO  handling detail url https://m.youtube.com/watch?v=smtHcX-AcsQ&ucbcb=1
+2026-09-20T11:39:55.404Z INFO  handling detail url https://m.youtube.com/watch?v=3Po1bEJte9c&ucbcb=1
+2026-09-20T11:39:56.601Z INFO  handling detail url https://m.youtube.com/watch?v=gV4jWkRo4Lg&ucbcb=1
+2026-09-20T11:39:58.098Z INFO  handling detail url https://m.youtube.com/watch?v=95kkamSxHr8&ucbcb=1
+2026-09-20T11:39:58.695Z INFO  handling detail url https://m.youtube.com/watch?v=nno8iS887Xo&ucbcb=1
+2026-09-20T11:39:59.228Z INFO  handling detail url https://m.youtube.com/watch?v=EkiJDOcgIBM&ucbcb=1
+2026-09-20T11:40:00.100Z INFO  handling detail url https://m.youtube.com/watch?v=VlVMGJcBudU&ucbcb=1
+2026-09-20T11:40:00.401Z INFO  handling detail url https://m.youtube.com/watch?v=nEbN7kkDo7Y&ucbcb=1
+2026-09-20T11:40:02.297Z INFO  handling detail url https://m.youtube.com/watch?v=UVFW1PWXCEc&ucbcb=1
+2026-09-20T11:40:03.297Z INFO  handling detail url https://m.youtube.com/watch?v=KofjTOvzyC0&ucbcb=1
+2026-09-20T11:40:07.474Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"KofjTOvzyC0"}
+2026-09-20T11:40:07.497Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"C8zmIX_9NCo"}
+2026-09-20T11:40:07.596Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"PWc0zfa2lWU"}
+2026-09-20T11:40:07.705Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"95kkamSxHr8"}
+2026-09-20T11:40:07.819Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"nEbN7kkDo7Y"}
+2026-09-20T11:40:08.071Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"3Po1bEJte9c"}
+2026-09-20T11:40:08.097Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"gV4jWkRo4Lg"}
+2026-09-20T11:40:08.206Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"nno8iS887Xo"}
+2026-09-20T11:40:08.673Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"EkcaJ18NLAU"}
+2026-09-20T11:40:08.768Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"smtHcX-AcsQ"}
+2026-09-20T11:40:08.839Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"xrH-BRF3nkg"}
+2026-09-20T11:40:08.905Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"HpHqBsif8h4"}
+2026-09-20T11:40:09.075Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"0aiVrlKNMeM"}
+2026-09-20T11:40:09.297Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"E4Qsvz-ggXE"}
+2026-09-20T11:40:09.400Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"AD_rIsaeTzs"}
+2026-09-20T11:40:10.636Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"yA_2tSg6JHo"}
+2026-09-20T11:40:13.120Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"UVFW1PWXCEc"}
+2026-09-20T11:40:14.024Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"EkiJDOcgIBM"}
+2026-09-20T11:40:15.410Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"VlVMGJcBudU"}
+2026-09-20T11:40:15.500Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"FioBTeZ2wrI"}
+2026-09-20T11:40:18.007Z INFO  [CONTINUATION_LIST_CHANNEL_VIDEOS] Enqueued 5 new videos for detailed scraping --- https://www.youtube.com/channel/UC356D-NzdnznBOftTpYoBLw/videos
+2026-09-20T11:40:18.008Z INFO  [CONTINUATION_LIST_CHANNEL_VIDEOS] Stopping scroll --- https://www.youtube.com/channel/UC356D-NzdnznBOftTpYoBLw/videos
+2026-09-20T11:40:19.595Z INFO  handling detail url https://m.youtube.com/watch?v=x-LRmQR7dAU&ucbcb=1
+2026-09-20T11:40:20.413Z INFO  handling detail url https://m.youtube.com/watch?v=T2hXXhaQK8I&ucbcb=1
+2026-09-20T11:40:20.821Z INFO  handling detail url https://m.youtube.com/watch?v=-bc9q11OBkQ&ucbcb=1
+2026-09-20T11:40:21.802Z INFO  handling detail url https://m.youtube.com/watch?v=ML_f1bVqiZk&ucbcb=1
+2026-09-20T11:40:23.030Z INFO  handling detail url https://m.youtube.com/watch?v=Rxo1sriPZ2s&ucbcb=1
+2026-09-20T11:40:23.299Z INFO  handling detail url https://m.youtube.com/watch?v=8IDSe2S5hkw&ucbcb=1
+2026-09-20T11:40:24.605Z INFO  handling detail url https://m.youtube.com/watch?v=74KZwMvMO44&ucbcb=1
+2026-09-20T11:40:25.298Z INFO  handling detail url https://m.youtube.com/watch?v=u8qKy7P7Wx8&ucbcb=1
+2026-09-20T11:40:25.598Z INFO  handling detail url https://m.youtube.com/watch?v=_fq_jzb8QiE&ucbcb=1
+2026-09-20T11:40:26.705Z INFO  handling detail url https://m.youtube.com/watch?v=lRn0p4YL0Bk&ucbcb=1
+2026-09-20T11:40:27.209Z INFO  handling detail url https://m.youtube.com/watch?v=5c2WWfADFvM&ucbcb=1
+2026-09-20T11:40:27.798Z INFO  handling detail url https://m.youtube.com/watch?v=ak9GFP9U6IM&ucbcb=1
+2026-09-20T11:40:28.101Z INFO  handling detail url https://m.youtube.com/watch?v=95A2UeaXs3k&ucbcb=1
+2026-09-20T11:40:28.302Z WARN  CheerioCrawler: Reclaiming failed request back to the list or queue. Blocked. Received blocking reason: Sign in to confirm you’re not a bot. Retrying...
+2026-09-20T11:40:28.303Z     at handleDetail (file:///home/myuser/dist/src/routes/detail.js:68:15) {"id":"FaBEtiTDuAGjLbL","url":"https://m.youtube.com/watch?v=74KZwMvMO44&ucbcb=1","retryCount":1}
+2026-09-20T11:40:28.647Z INFO  handling detail url https://m.youtube.com/watch?v=2rvSvPOb_1M&ucbcb=1
+2026-09-20T11:40:32.921Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"ak9GFP9U6IM"}
+2026-09-20T11:40:32.999Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"lRn0p4YL0Bk"}
+2026-09-20T11:40:33.095Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"8IDSe2S5hkw"}
+2026-09-20T11:40:33.191Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"_fq_jzb8QiE"}
+2026-09-20T11:40:33.291Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"Rxo1sriPZ2s"}
+2026-09-20T11:40:33.501Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"-bc9q11OBkQ"}
+2026-09-20T11:40:33.690Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"T2hXXhaQK8I"}
+2026-09-20T11:40:33.699Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"ML_f1bVqiZk"}
+2026-09-20T11:40:33.792Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"x-LRmQR7dAU"}
+2026-09-20T11:40:35.097Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"5c2WWfADFvM"}
+2026-09-20T11:40:35.191Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"u8qKy7P7Wx8"}
+2026-09-20T11:40:35.298Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"2rvSvPOb_1M"}
+2026-09-20T11:40:37.192Z INFO  handling detail url https://m.youtube.com/watch?v=74KZwMvMO44&ucbcb=1
+2026-09-20T11:40:39.702Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"74KZwMvMO44"}
+2026-09-20T11:40:41.109Z WARN  CheerioCrawler: Reclaiming failed request back to the list or queue. Request timed out after 10 seconds
+2026-09-20T11:40:41.110Z     at async CurlImpersonateHttpClient.performRequest (file:///home/myuser/dist/src/tools/curl-impersonate-http-client.js:64:24) {"id":"SOFgoaeNdv9DVWS","url":"https://m.youtube.com/watch?v=95A2UeaXs3k&ucbcb=1","retryCount":1}
+2026-09-20T11:40:42.925Z INFO  Persisting state for comments...
+2026-09-20T11:40:42.925Z INFO  Persisting state for videos...
+2026-09-20T11:40:42.926Z INFO  Persisting AI enrichment state {"inFlightVideos":0}
+2026-09-20T11:40:43.530Z INFO  CheerioCrawler:Statistics: CheerioCrawler request statistics: {"requestAvgFailedDurationMillis":null,"requestAvgFinishedDurationMillis":8641,"requestsFinishedPerMinute":71,"requestsFailedPerMinute":0,"requestTotalDurationMillis":613498,"requestsTotal":71,"crawlerRuntimeMillis":60060,"retryHistogram":[69,2]}
+2026-09-20T11:40:46.307Z INFO  CheerioCrawler:AutoscaledPool: state {"currentConcurrency":1,"desiredConcurrency":11,"systemStatus":{"isSystemIdle":false,"memInfo":{"isOverloaded":false,"limitRatio":0.2,"actualRatio":0},"eventLoopInfo":{"isOverloaded":false,"limitRatio":0.6,"actualRatio":0.379},"cpuInfo":{"isOverloaded":true,"limitRatio":0.4,"actualRatio":0.483},"clientInfo":{"isOverloaded":false,"limitRatio":0.3,"actualRatio":0}}}
+2026-09-20T11:40:50.389Z INFO  handling detail url https://m.youtube.com/watch?v=95A2UeaXs3k&ucbcb=1
+2026-09-20T11:41:01.405Z WARN  CheerioCrawler: Reclaiming failed request back to the list or queue. Request timed out after 10 seconds
+2026-09-20T11:41:01.411Z     at async CurlImpersonateHttpClient.performRequest (file:///home/myuser/dist/src/tools/curl-impersonate-http-client.js:64:24) {"id":"SOFgoaeNdv9DVWS","url":"https://m.youtube.com/watch?v=95A2UeaXs3k&ucbcb=1","retryCount":2}
+2026-09-20T11:41:08.492Z INFO  handling detail url https://m.youtube.com/watch?v=95A2UeaXs3k&ucbcb=1
+2026-09-20T11:41:14.794Z INFO  Fetching subtitle {"language":"en","type":"auto_generated","videoId":"95A2UeaXs3k"}
+2026-09-20T11:41:17.644Z INFO  CheerioCrawler: Crawler's custom isFinishedFunction() returned true, the crawler will shut down.
+2026-09-20T11:41:17.657Z INFO  Persisting state for comments...
+2026-09-20T11:41:17.672Z INFO  Persisting state for videos...
+2026-09-20T11:41:17.681Z INFO  Persisting AI enrichment state {"inFlightVideos":0}
+2026-09-20T11:41:17.911Z INFO  CheerioCrawler: Final request statistics: {"requestsFinished":73,"requestsFailed":0,"retryHistogram":[70,2,1],"requestAvgFailedDurationMillis":null,"requestAvgFinishedDurationMillis":8580,"requestsFinishedPerMinute":46,"requestsFailedPerMinute":0,"requestTotalDurationMillis":626341,"requestsTotal":73,"crawlerRuntimeMillis":94457}
+2026-09-20T11:41:17.915Z INFO  CheerioCrawler: Finished! Total 73 requests: 73 succeeded, 0 failed. {"terminal":true}
+2026-09-20T11:41:18.078Z INFO  Persisting state for comments...
+2026-09-20T11:41:18.081Z INFO  Persisting state for videos...
+2026-09-20T11:41:18.083Z INFO  Persisting AI enrichment state {"inFlightVideos":0}

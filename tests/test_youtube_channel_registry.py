@@ -63,6 +63,15 @@ class RawChannelAuthorityTests(unittest.TestCase):
             self.assertEqual(required, set(row))
 
 
+class DatasetInventoryTests(unittest.TestCase):
+    def test_registered_dataset_inventory_includes_ds_000027_without_requiring_ds_000026(self):
+        from scripts.build_youtube_channel_registry import _dataset_records
+
+        dataset_ids = [row["dataset_id"] for row in _dataset_records(ROOT)]
+        self.assertIn("DS-000027", dataset_ids)
+        self.assertNotIn("DS-000026", dataset_ids)
+
+
 class RegistryModelTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
