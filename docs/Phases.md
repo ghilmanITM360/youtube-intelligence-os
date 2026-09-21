@@ -4,6 +4,8 @@ A phased roadmap for the YouTube Intelligence OS. Names and boundaries here are 
 
 The local SQLite inventory catalog is a Phase 1 exception (Decision 012). Final production database, RAG/vector-search, MCP servers, and agent-workflow infrastructure first appear as design work in Phase 10–11, only after real datasets justify specific choices (Decision 004).
 
+Current implementation summary (2026-09-21): V1 intelligence code is complete. Registry integration covers 70 canonical channels and 26 acquired dataset manifests (DS-000001–DS-000025 and DS-000027; DS-000026 remains a proposal, not an acquisition). Generated channel-specific intelligence exists for five historical channels; 36 standard-package channels are input-ready; 29 are identity-only. No V2 UI, RAG, agent, API, automation, or YouTube API work is authorized by this status.
+
 ---
 
 ### Phase 0 — Foundation Definition

@@ -10,10 +10,12 @@ See `docs/Phases.md` for how these arrive over time, `docs/Database.md` for the 
 
 ## 1. What exists today — CURRENT
 
-- A documentation-first repository at the canonical path (Decision 009) with small stdlib ingestion, registration, and read-only reporting scripts.
-- A populated local raw/manifests layer and ignored SQLite inventory catalog (`data/catalog/youtube_inventory.db`, schema v6); this is not the final production database.
+- A documentation-first repository at the canonical path (Decision 009) with ingestion, registration, validation, and read-only reporting scripts.
+- 70 canonical channels: 41 with video data, 36 standard packages, five historical-format channels, and 29 identity-only channels.
+- Two ignored generated SQLite databases: schema-v10 manifest-index inventory (`youtube_inventory.db`) and the 70-channel query registry (`youtube_channel_registry.db`). Neither is the final production database.
 - Structured channels/videos, append-only snapshots, transcript references, screenshot/multimodal evidence, field provenance, and bounded Apify source-run provenance through Phase 1D.
-- External developer/agent tooling (Graphify, Ponytail, Claude-Mem, Obsidian skills, Scrapling) recorded in `docs/TOOLS_INSTALLED.md`. None of it is part of the application.
+- Generated intelligence artifacts exist for five historical channels. Standard-package channels are input-ready until their artifacts are generated. Editing/Visual output remains limited to registered forensic evidence for CH-000004.
+- External developer/agent tooling recorded in `docs/TOOLS_INSTALLED.md` is not part of the application.
 
 Everything else in this document is PLANNED or FUTURE / UNDECIDED.
 

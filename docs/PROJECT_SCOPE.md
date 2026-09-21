@@ -1,5 +1,7 @@
 # Project Scope
 
+Current boundary (2026-09-21): V1 ingestion and intelligence engines are implemented. The repository holds 70 canonical channels, while generated per-channel intelligence exists for five historical channels and 36 standard-package channels remain input-ready. UI, RAG, agents, service APIs, scheduled automation, and YouTube API integration remain outside current scope unless explicitly authorized.
+
 ## Current scope
 
 **Phase 1D — Controlled Apify YouTube Acquisition is complete. Phase 2 — Data Classification & Provenance is also closed** (`AGENTS.md` rule 12; 604 classification rows across 303 canonical content items, 5 canonical channels). Topic Opportunity, Packaging, Hook/Script, and Editing/Visual Intelligence have since been authorized and piloted for one or more channels, and a first unified content-intelligence orchestrator (`scripts/run_youtube_intelligence.py`) composes existing layers into evidence-traceable plans without regenerating or fabricating intelligence. The phase numbering in `docs/Phases.md` has not been fully updated to reflect this progression and should be reconciled separately.

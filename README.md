@@ -1,12 +1,29 @@
 # YouTube Intelligence OS
 
-A canonical workspace for developing a persistent, evidence-based intelligence system for multiple YouTube channels. The long-term vision includes data inventory, competitor analysis, research, topic discovery, and content-development intelligence. This repository is **not** that finished product yet — it is currently the data-ingestion and provenance foundation the later intelligence phases will build on.
+A canonical workspace for a persistent, evidence-based intelligence system for multiple YouTube channels. V1 ingestion, provenance, topic, packaging, hook/script, conditional editing/visual, strategy, and orchestration layers are implemented.
 
-**Current Phase: Phase 1D — Controlled Apify YouTube Acquisition, COMPLETE** (see `docs/Phases.md`). Phase 2 — Data Classification & Provenance is also closed (`AGENTS.md` rule 12). Topic Opportunity, Packaging, Hook/Script, and Editing/Visual Intelligence have since been authorized and piloted for one or more of the 5 canonical channels, and a first unified content-intelligence orchestrator (`scripts/run_youtube_intelligence.py`) composes these existing layers into evidence-traceable plans. The formal phase bookkeeping in `docs/Phases.md` has not yet been updated to reflect this progression and should be reconciled separately.
+**Current state (2026-09-21):** 70 canonical channels, 41 with video data, 36 standard packages, 5 historical-format channels, and 29 identity-only channels. The canonical union contains 1,939 videos, 1,928 verified real transcripts, and 11 explicit placeholders. Generated channel-specific intelligence exists for five historical channels; another 36 channels are input-ready, not already analyzed. Editing/Visual Intelligence remains evidence-gated to CH-000004. No real first-party YouTube Analytics export has been ingested.
+
+## Supported setup
+
+Python 3.12 and Node 22–24 are supported. From a clean clone:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install ".[dev]"
+python -m scripts.rebuild_inventory_catalog
+python -m scripts.build_youtube_channel_registry --write-ledgers
+python -m scripts.validate_dataset_ledgers
+python -m scripts.validate_youtube_channel_registry
+python -m pytest -q
+```
+
+`scripts.rebuild_inventory_catalog.py` creates a valid schema-v10 manifest index. It is semantically reproducible, not byte-identical to the historical operational catalog. Tests requiring ignored historical transcript or forensic raw evidence skip explicitly in a clean clone. Tracker generation additionally needs the external bundled `@oai/artifact-tool`; its path is supplied at runtime and is not an npm dependency.
 
 ## Current purpose
 
-Phase 0.5 hardened the project's planning documentation (`docs/Architecture.md`, `docs/Phases.md`, `docs/Database.md`, `docs/Prompts.md`, `docs/Security.md`, `docs/Error_Handling.md`) and performed read-only discovery of real external source folders. Phase 1A–1C then accepted user-supplied datasets, preserved their originals, inventoried their contents (recursively, with an explicit disposition for every discovered item), extracted descriptive facts from images and documents (OCR, native visual observation, text characterization), and recorded provenance — without performing competitor strategy analysis, topic generation, or any other content-recommendation work. That analysis layer is intentionally deferred to a later, separately-authorized phase.
+Phase 0.5 and Phase 1 established planning, controlled ingestion, inventory, and provenance. Phase 2 classification is closed. V1 now adds evidence-traceable topic, packaging, hook/script, conditional editing/visual, strategy, and unified-plan engines. Generated artifacts remain separate from input readiness: current per-channel artifacts cover five historical channels, while standard packages provide validated inputs for later generation.
 
 ## What is (and isn't) in this repository
 
@@ -16,10 +33,10 @@ This repository is the **code, schema, and documentation layer** — it is porta
 - Durable, database-generated manifests recording what was ingested, from where, and under what disposition (`data/manifests/`).
 - Project documentation, decisions, and the project-scoped ingestion skill (`docs/`, `.codex/skills/`).
 
-It deliberately does **not** contain the operational data payload:
+It does not commit runtime databases or private/local evidence by default:
 
-- `data/catalog/youtube_inventory.db` — the local SQLite catalog — is generated from the schema plus the manifests below and is gitignored (Decision 013). It is not committed, and does not need to be for the project's history to be reconstructable.
-- Raw source evidence (screenshots, video frames, PDFs, archives, spreadsheets) lives under `data/raw/` on the machine that ingested it and is likewise gitignored; only its provenance (hashes, paths, dispositions, counts) is recorded in the manifests that *are* committed.
+- `data/catalog/youtube_inventory.db` and `data/catalog/youtube_channel_registry.db` are generated, validated, and gitignored.
+- Selected approved canonical raw acquisitions are deliberately tracked with checksums. Other raw, private, or operational evidence remains ignored; durable manifests preserve its provenance and limitations.
 
 ## Data layers
 
