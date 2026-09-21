@@ -13,6 +13,13 @@ import report_editing_visual_intelligence as editing
 
 
 class PortableEvidencePathTests(unittest.TestCase):
+    def test_readonly_registry_connect_does_not_create_missing_database(self):
+        with tempfile.TemporaryDirectory() as directory:
+            missing = Path(directory) / "missing.db"
+            with self.assertRaisesRegex(FileNotFoundError, "missing or empty"):
+                registry.connect_readonly(missing)
+            self.assertFalse(missing.exists())
+
     def test_historical_reference_rebases_to_selected_repository(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -42,8 +49,7 @@ class PortableEvidencePathTests(unittest.TestCase):
 
             for reference in (str(source), "/Users/legacy/youtube-intelligence-os/" + relative.as_posix()):
                 row["canonical_reference"] = reference
-                with patch.object(registry.sqlite3, "connect", return_value=Connection()):
-                    videos, transcripts, memberships = registry._historical_records(root)
+                videos, transcripts, memberships = registry._historical_records(root, source=Connection())
                 self.assertEqual(1, len(videos))
                 self.assertEqual("Transcript sample", transcripts[0]["transcript_text"])
                 self.assertEqual(relative.as_posix(), transcripts[0]["evidence_locator"])

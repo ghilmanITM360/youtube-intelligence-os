@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import report_editing_visual_intelligence as report  # noqa: E402
 
 
+@unittest.skipUnless((ROOT / "data/raw/forensic-analysis/DS-000013").exists(), "requires ignored local forensic evidence")
 class EditingVisualIntelligenceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

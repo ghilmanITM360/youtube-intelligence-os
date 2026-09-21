@@ -18,6 +18,16 @@ import report_first_party_channel_diagnosis as diagnosis  # noqa: E402
 
 FIXTURES = ROOT / "tests/fixtures/youtube_analytics"
 DB = ROOT / "data/catalog/youtube_inventory.db"
+FULL_CATALOG = (ROOT / "data/raw/competitors/DS-000001").exists()
+if not FULL_CATALOG:
+    import pytest
+    pytestmark = pytest.mark.skip(reason="requires ignored historical catalog evidence")
+CATALOG_INDEPENDENT_TESTS = {
+    "test_video_matching_priority_and_ambiguous_title",
+    "test_refresh_trigger_has_first_party_diagnosis_and_no_global_calibration",
+    "test_importer_and_diagnosis_modules_have_no_network_clients",
+    "test_capability_status_is_generated_from_live_contract",
+}
 
 
 def _write_xlsx(path, fixture="retention_curve.json"):
@@ -290,6 +300,14 @@ def load_tests(loader, tests, pattern):
         key=lambda function: function.__code__.co_firstlineno,
     )
     for function in functions:
+        if not FULL_CATALOG and function.__name__ not in CATALOG_INDEPENDENT_TESTS:
+            def skip_missing_catalog(function=function):
+                raise unittest.SkipTest(
+                    f"{function.__name__} requires ignored historical catalog evidence"
+                )
+            case = unittest.FunctionTestCase(skip_missing_catalog, description=function.__name__)
+            suite.addTest(case)
+            continue
         if "tmp_path" in inspect.signature(function).parameters:
             def run_with_tmp_path(function=function):
                 with tempfile.TemporaryDirectory() as tmp:

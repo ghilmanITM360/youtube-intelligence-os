@@ -29,7 +29,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANIFESTS_DIR = REPO_ROOT / "data" / "manifests"
 
-DEFAULT_DATASETS = ["DS-000021", "DS-000022", "DS-000023", "DS-000024", "DS-000025"]
+DEFAULT_DATASETS = ["DS-000021", "DS-000022", "DS-000023", "DS-000024", "DS-000025", "DS-000027"]
 
 # (dataset_id, artifact_id) -> git commit whose blob content reconciles with
 # the ledger's recorded sha256/size_bytes for that mutable snapshot. Located
@@ -44,11 +44,19 @@ KNOWN_HISTORICAL_SNAPSHOTS = {
     ("DS-000022", "DS-000022-F032"): "b138af0e8e216f897e0bb9a96021a153b5967a72",
     ("DS-000022", "DS-000022-F033"): "b138af0e8e216f897e0bb9a96021a153b5967a72",
     ("DS-000022", "DS-000022-F034"): "a6223dca62007cd8f6c23d8ec16bf0b158abec34",
+    ("DS-000022", "DS-000022-F035"): "b138af0e8e216f897e0bb9a96021a153b5967a72",
     ("DS-000023", "DS-000023-F022"): "4fbdd57fd1975709a843ad9234ad27a080bbdb47",
     ("DS-000023", "DS-000023-F023"): "4fbdd57fd1975709a843ad9234ad27a080bbdb47",
     ("DS-000023", "DS-000023-F025"): "4fbdd57fd1975709a843ad9234ad27a080bbdb47",
+    ("DS-000023", "DS-000023-F026"): "b138af0e8e216f897e0bb9a96021a153b5967a72",
     ("DS-000024", "DS-000024-F020"): "4fbdd57fd1975709a843ad9234ad27a080bbdb47",
     ("DS-000024", "DS-000024-F021"): "4fbdd57fd1975709a843ad9234ad27a080bbdb47",
+    ("DS-000024", "DS-000024-F024"): "b138af0e8e216f897e0bb9a96021a153b5967a72",
+    ("DS-000025", "DS-000025-F023"): "b138af0e8e216f897e0bb9a96021a153b5967a72",
+    ("DS-000027", "DS-000027-F018"): "b138af0e8e216f897e0bb9a96021a153b5967a72",
+    ("DS-000027", "DS-000027-F027"): "25110136c61ac0cc8bb124a1cacd3aa5fae8a840",
+    ("DS-000027", "DS-000027-F028"): "25110136c61ac0cc8bb124a1cacd3aa5fae8a840",
+    ("DS-000027", "DS-000027-F030"): "25110136c61ac0cc8bb124a1cacd3aa5fae8a840",
 }
 
 

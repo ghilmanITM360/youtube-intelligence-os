@@ -8,6 +8,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import report_topic_opportunity_pilot as pilot  # noqa: E402
 
+ROOT = Path(__file__).resolve().parents[1]
+REQUIRES_HISTORICAL = unittest.skipUnless(
+    (ROOT / "data/raw/competitors/DS-000001").exists(),
+    "requires ignored historical catalog evidence",
+)
+
 
 class TopicOpportunityPilotTests(unittest.TestCase):
     def test_normalization_is_deterministic_and_public_only(self):
@@ -66,6 +72,7 @@ class TopicOpportunityPilotTests(unittest.TestCase):
         self.assertEqual(rendered, pilot.render_json(payload))
         self.assertEqual(list(json.loads(rendered)), ["a", "z"])
 
+    @REQUIRES_HISTORICAL
     def test_live_channel_snapshot_accounts_for_every_item_without_private_metrics(self):
         with pilot.connect() as conn:
             report = pilot.build_report(conn)

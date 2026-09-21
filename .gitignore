@@ -70,6 +70,21 @@ data/raw/**/*
 !data/raw/channel-data/DS-000022/apify-transcript-recovery/dmUFY1GHENjMdqsB9/
 !data/raw/channel-data/DS-000022/apify-transcript-recovery/dmUFY1GHENjMdqsB9/*
 
+# DS-000027 approved canonical acquisition evidence. Only committed immutable
+# Actor payload/evidence files are allowlisted; API responses, preflight
+# screenshots, and other operational staging remain ignored by default.
+!data/raw/channel-data/DS-000027/
+!data/raw/channel-data/DS-000027/apify/
+!data/raw/channel-data/DS-000027/apify/dqMkTSwYwRir4QfUM/
+!data/raw/channel-data/DS-000027/apify/dqMkTSwYwRir4QfUM/youtube_actor_raw.json
+!data/raw/channel-data/DS-000027/apify/dqMkTSwYwRir4QfUM/youtube_actor_raw.jsonl
+!data/raw/channel-data/DS-000027/apify/dqMkTSwYwRir4QfUM/evidence/
+!data/raw/channel-data/DS-000027/apify/dqMkTSwYwRir4QfUM/evidence/actor_input.json
+!data/raw/channel-data/DS-000027/apify/dqMkTSwYwRir4QfUM/evidence/post_run_usage_balance.json
+!data/raw/channel-data/DS-000027/apify/dqMkTSwYwRir4QfUM/evidence/run.log.txt
+!data/raw/channel-data/DS-000027/apify/dqMkTSwYwRir4QfUM/evidence/run_metadata_api_response.json
+!data/raw/channel-data/DS-000027/apify/dqMkTSwYwRir4QfUM/evidence/run_summary.json
+
 # Operational browser/export staging. Canonical registered copies live under
 # their checksum-registered data/raw/ and data/extracted/ dataset paths.
 /outputs/
@@ -92,3 +107,15 @@ data/intelligence/first-party/**/*
 # data/manifests/batches/*.md and *_FILES.csv, both regenerated from the
 # catalog database by scripts/generate_batch_manifests.py).
 data/manifests/batches/*_state.json
+
+# Python/test/build caches are always disposable and must never enter Git.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local inspection sidecars produced while validating generated workbooks.
+*.inspect.ndjson
