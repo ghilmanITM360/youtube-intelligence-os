@@ -9,27 +9,27 @@ import sqlite3
 import tempfile
 from pathlib import Path
 
-from scripts.build_youtube_channel_registry import build_database, build_model, connect
+from scripts.build_youtube_channel_registry import build_database, build_model, connect_readonly
 
 
 EXPECTED = {
-    "canonical_channels": 69,
+    "canonical_channels": 70,
     "raw_submissions": 67,
     "target_channels": 63,
-    "channels_with_video_data": 40,
+    "channels_with_video_data": 41,
     "identity_only_channels": 29,
-    "standard_packages": 35,
+    "standard_packages": 36,
     "historical_channels": 5,
-    "stored_outside_targets": 6,
-    "datasets": 25,
-    "videos": 1904,
-    "real_transcripts": 1893,
+    "stored_outside_targets": 7,
+    "datasets": 26,
+    "videos": 1939,
+    "real_transcripts": 1928,
     "placeholders": 11,
     "description_gaps": 14,
     "non_channel_subjects": 7,
-    "intelligence_coverage_rows": 552,
-    "data_layer_rows": 759,
-    "visual_coverage_rows": 69,
+    "intelligence_coverage_rows": 560,
+    "data_layer_rows": 770,
+    "visual_coverage_rows": 70,
 }
 
 REQUIRED_VIEWS = {
@@ -51,7 +51,7 @@ def scalar(connection: sqlite3.Connection, sql: str) -> int:
 
 
 def validate_database(root: Path, database: Path) -> dict:
-    connection = connect(database)
+    connection = connect_readonly(database)
     try:
         controls = {
             "canonical_channels": scalar(connection, "SELECT count(*) FROM channels"),
@@ -66,7 +66,7 @@ def validate_database(root: Path, database: Path) -> dict:
             "videos": scalar(connection, "SELECT count(*) FROM videos"),
             "real_transcripts": scalar(connection, "SELECT count(*) FROM transcripts WHERE is_placeholder=0"),
             "placeholders": scalar(connection, "SELECT count(*) FROM transcripts WHERE is_placeholder=1"),
-            "description_gaps": scalar(connection, "SELECT count(*) FROM videos WHERE description IS NULL"),
+            "description_gaps": scalar(connection, "SELECT count(*) FROM videos WHERE description IS NULL AND COALESCE(description_unavailable_reason,'') NOT LIKE 'Description verified present in historical coverage;%'"),
             "non_channel_subjects": scalar(connection, "SELECT count(*) FROM non_channel_subjects"),
             "intelligence_coverage_rows": scalar(connection, "SELECT count(*) FROM intelligence_coverage"),
             "data_layer_rows": scalar(connection, "SELECT count(*) FROM channel_data_layers"),

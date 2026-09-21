@@ -323,26 +323,30 @@ visual.getRange(`C5:C${visualBounds.endRow}`).formulas = model.channels.map((row
 visual.getRange(`L5:L${visualBounds.endRow}`).formulas = model.channels.map((row) => [repoFormula(row.visual_coverage.evidence_path)]);
 visual.getRange(`C5:C${visualBounds.endRow}`).format.font = { name: fontName, size: 10, color: "#0563C1" };
 visual.getRange(`L5:L${visualBounds.endRow}`).format.font = { name: fontName, size: 10, color: "#0563C1" };
-visual.getRange("A75").values = [["Unmapped screenshot-only subjects"]];
-visual.getRange("A75").format.font = { name: fontName, size: 12, bold: true, color: navy };
-visual.getRange("A76:M76").values = [visualHeaders];
+const subjectTitleRow = visualBounds.endRow + 2;
+const subjectHeaderRow = subjectTitleRow + 1;
+const subjectStartRow = subjectHeaderRow + 1;
+const subjectEndRow = subjectStartRow + model.subjects.length - 1;
+visual.getRange(`A${subjectTitleRow}`).values = [["Unmapped screenshot-only subjects"]];
+visual.getRange(`A${subjectTitleRow}`).format.font = { name: fontName, size: 12, bold: true, color: navy };
+visual.getRange(`A${subjectHeaderRow}:M${subjectHeaderRow}`).values = [visualHeaders];
 const subjectRows = model.subjects.map((row) => [row.subject_name, "—", "—", 0, 0, row.screenshot_count, 0, 0, 0, row.visual_evidence_level, "NOT_APPLICABLE", null, shorten(row.limitation)]);
-visual.getRange("A77:M83").values = subjectRows;
-visual.getRange("L77:L83").formulas = model.subjects.map((row) => [repoFormula(row.evidence_path)]);
-visual.getRange("L77:L83").format.font = { name: fontName, size: 10, color: "#0563C1" };
-const subjectTable = visual.tables.add("A76:M83", true, "UnmappedScreenshotSubjectsTable");
+visual.getRange(`A${subjectStartRow}:M${subjectEndRow}`).values = subjectRows;
+visual.getRange(`L${subjectStartRow}:L${subjectEndRow}`).formulas = model.subjects.map((row) => [repoFormula(row.evidence_path)]);
+visual.getRange(`L${subjectStartRow}:L${subjectEndRow}`).format.font = { name: fontName, size: 10, color: "#0563C1" };
+const subjectTable = visual.tables.add(`A${subjectHeaderRow}:M${subjectEndRow}`, true, "UnmappedScreenshotSubjectsTable");
 subjectTable.style = "TableStyleMedium4";
 subjectTable.showFilterButton = true;
-visual.getRange("A76:M76").format = { fill: "#548235", font: { name: fontName, size: 10, bold: true, color: "#FFFFFF" }, horizontalAlignment: "center", verticalAlignment: "center", wrapText: true };
-visual.getRange("A76:M76").format.rowHeight = 44;
-visual.getRange("A77:M83").format.font = { name: fontName, size: 10 };
-setWidths(visual, [26, 27, 12, 15, 17, 12, 12, 13, 18, 28, 23, 13, 58], 83);
-visual.getRange("M5:M83").format.wrapText = true;
-visual.getRange("A5:M73").format.rowHeight = 42;
-visual.getRange("A77:M83").format.rowHeight = 42;
-visual.getRange("J5:K73").conditionalFormats.add("containsText", { text: "FORENSIC", format: { fill: green, font: { color: "#375623", bold: true } } });
-visual.getRange("J5:K73").conditionalFormats.add("containsText", { text: "THUMBNAIL_EVIDENCE", format: { fill: blue } });
-visual.getRange("J5:K73").conditionalFormats.add("containsText", { text: "THUMBNAIL_URL_ONLY", format: { fill: amber } });
+visual.getRange(`A${subjectHeaderRow}:M${subjectHeaderRow}`).format = { fill: "#548235", font: { name: fontName, size: 10, bold: true, color: "#FFFFFF" }, horizontalAlignment: "center", verticalAlignment: "center", wrapText: true };
+visual.getRange(`A${subjectHeaderRow}:M${subjectHeaderRow}`).format.rowHeight = 44;
+visual.getRange(`A${subjectStartRow}:M${subjectEndRow}`).format.font = { name: fontName, size: 10 };
+setWidths(visual, [26, 27, 12, 15, 17, 12, 12, 13, 18, 28, 23, 13, 58], subjectEndRow);
+visual.getRange(`M5:M${subjectEndRow}`).format.wrapText = true;
+visual.getRange(`A5:M${visualBounds.endRow}`).format.rowHeight = 42;
+visual.getRange(`A${subjectStartRow}:M${subjectEndRow}`).format.rowHeight = 42;
+visual.getRange(`J5:K${visualBounds.endRow}`).conditionalFormats.add("containsText", { text: "FORENSIC", format: { fill: green, font: { color: "#375623", bold: true } } });
+visual.getRange(`J5:K${visualBounds.endRow}`).conditionalFormats.add("containsText", { text: "THUMBNAIL_EVIDENCE", format: { fill: blue } });
+visual.getRange(`J5:K${visualBounds.endRow}`).conditionalFormats.add("containsText", { text: "THUMBNAIL_URL_ONLY", format: { fill: amber } });
 visual.freezePanes.freezeColumns(2);
 
 const datasetSheet = workbook.worksheets.getItem("Datasets");
@@ -385,7 +389,7 @@ submitted.getRange(`G5:G${submittedBounds.endRow}`).conditionalFormats.add("cont
 submitted.freezePanes.freezeColumns(3);
 
 const intelligence = workbook.worksheets.getItem("Intelligence Coverage");
-title(intelligence, "Intelligence capability coverage", "552 rows represent eight capabilities for 69 channels; they do not represent 552 completed reports.");
+title(intelligence, "Intelligence capability coverage", `${model.intelligence_coverage.length} rows represent eight capabilities for ${model.channels.length} channels; they do not represent completed reports.`);
 const intelligenceRows = model.intelligence_coverage.map((row) => [
   row.canonical_channel_id,
   channelById.get(row.canonical_channel_id)?.channel_name ?? "",
@@ -449,22 +453,22 @@ dashboard.showGridLines = false;
 dashboard.getRange("A5:A11").values = [["Canonical registry channels"], ["Target channels"], ["Channels with video data"], ["Standard package channels"], ["Historical-format channels"], ["Identity-only channels"], ["Full forensic visual channels"]];
 dashboard.getRange("D5:D11").values = [["Thumbnail-evidence intelligence channels"], ["Title-only packaging channels"], ["Unmapped screenshot subjects"], ["Stored unique videos"], ["Real transcripts"], ["Transcript placeholders"], ["Missing public descriptions"]];
 dashboard.getRange("B5:B11").formulas = [
-  ["=COUNTA('All Channels'!$A$5:$A$73)"],
-  ["=COUNTIFS('All Channels'!$E$5:$E$73,\"<>OUTSIDE_TARGET\")"],
-  ["=COUNTIFS('All Channels'!$H$5:$H$73,\"✓\")"],
-  ["=COUNTIFS('All Channels'!$J$5:$J$73,\"✓\")"],
-  ["=COUNTIFS('All Channels'!$K$5:$K$73,\"✓\")"],
-  ["=COUNTIFS('All Channels'!$I$5:$I$73,\"NOT_EXTRACTED\")"],
-  ["=COUNTIFS('All Channels'!$S$5:$S$73,\"✓\")"],
+  [`=COUNTA('All Channels'!$A$5:$A$${allBounds.endRow})`],
+  [`=COUNTIFS('All Channels'!$E$5:$E$${allBounds.endRow},\"<>OUTSIDE_TARGET\")`],
+  [`=COUNTIFS('All Channels'!$H$5:$H$${allBounds.endRow},\"✓\")`],
+  [`=COUNTIFS('All Channels'!$J$5:$J$${allBounds.endRow},\"✓\")`],
+  [`=COUNTIFS('All Channels'!$K$5:$K$${allBounds.endRow},\"✓\")`],
+  [`=COUNTIFS('All Channels'!$I$5:$I$${allBounds.endRow},\"NOT_EXTRACTED\")`],
+  [`=COUNTIFS('All Channels'!$S$5:$S$${allBounds.endRow},\"✓\")`],
 ];
 dashboard.getRange("E5:E11").formulas = [
-  ["=COUNTIFS('All Channels'!$R$5:$R$73,\"✓\")"],
-  ["=COUNTIFS('All Channels'!$K$5:$K$73,\"✓\",'All Channels'!$Q$5:$Q$73,\"No\")"],
-  ["=COUNTA('Visual Evidence'!$A$77:$A$83)"],
-  ["=SUM('All Channels'!$L$5:$L$73)"],
-  ["=SUM('All Channels'!$M$5:$M$73)"],
-  ["=SUM('All Channels'!$N$5:$N$73)"],
-  ["=SUM('All Channels'!$O$5:$O$73)"],
+  [`=COUNTIFS('All Channels'!$R$5:$R$${allBounds.endRow},\"✓\")`],
+  [`=COUNTIFS('All Channels'!$K$5:$K$${allBounds.endRow},\"✓\",'All Channels'!$Q$5:$Q$${allBounds.endRow},\"No\")`],
+  [`=COUNTA('Visual Evidence'!$A$${subjectStartRow}:$A$${subjectEndRow})`],
+  [`=SUM('All Channels'!$L$5:$L$${allBounds.endRow})`],
+  [`=SUM('All Channels'!$M$5:$M$${allBounds.endRow})`],
+  [`=SUM('All Channels'!$N$5:$N$${allBounds.endRow})`],
+  [`=SUM('All Channels'!$O$5:$O$${allBounds.endRow})`],
 ];
 for (const range of ["A5:B11", "D5:E11"]) {
   dashboard.getRange(range).format = {
@@ -518,7 +522,7 @@ const renderRanges = {
   "All Channels": splitRenderRanges("AE", allBounds.endRow),
   "Pending Channels": splitRenderRanges("J", pendingBounds.endRow),
   "Data Coverage": splitRenderRanges("M", dataBounds.endRow),
-  "Visual Evidence": splitRenderRanges("M", 83),
+  "Visual Evidence": splitRenderRanges("M", subjectEndRow),
   Datasets: splitRenderRanges("G", datasetBounds.endRow),
   "Submitted URLs": splitRenderRanges("M", submittedBounds.endRow),
   "Intelligence Coverage": splitRenderRanges("J", intelligenceBounds.endRow),
@@ -534,4 +538,8 @@ for (const [sheetName, ranges] of Object.entries(renderRanges)) {
 const output = await SpreadsheetFile.exportXlsx(workbook);
 await fs.mkdir(path.dirname(workbookPath), { recursive: true });
 await output.save(workbookPath);
+execFileSync(process.env.PYTHON ?? "python3", [
+  `${root}/scripts/normalize_tracker_hyperlinks.py`,
+  workbookPath,
+]);
 console.log(JSON.stringify({ workbookPath, renderDir, sheets: sheetNames.length }));

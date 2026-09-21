@@ -28,6 +28,18 @@ STATUSES = {
     "UNAVAILABLE_OR_DELETED",
 }
 
+# Durable historical relationships previously registered in the ignored
+# operational catalog. Evidence remains in the named manifests and forensic
+# relationship ledger; this map prevents a clean-clone rebuild from silently
+# collapsing multi-dataset provenance to only the primary dataset.
+HISTORICAL_DATASET_RELATIONSHIPS = {
+    "UCkqzov98m_7niJOXwbRQgBA": ["DS-000001"],
+    "UC6AwWrRKNrwt83CMJqeTUzw": ["DS-000001"],
+    "UCXZi5JVeuTluazF-fYqQgNA": ["DS-000006"],
+    "UCQcBYZxFW7YwNMU8-DsT3Uw": ["DS-000019"],
+    "UC6IxnFzHofFJ5X2PycSMsww": ["DS-000012", "DS-000013", "DS-000014", "DS-000015", "DS-000017"],
+}
+
 
 def sha256_bytes(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest()
@@ -128,7 +140,29 @@ def coverage_metrics(root: Path, row: dict | None) -> dict:
 
 
 def historical_dataset_links(root: Path) -> dict[str, list[str]]:
-    connection = sqlite3.connect(root / "data/catalog/youtube_inventory.db")
+    database = root / "data/catalog/youtube_inventory.db"
+    use_fallback = not database.is_file() or database.stat().st_size == 0
+    if not use_fallback:
+        probe = sqlite3.connect(database.as_uri() + "?mode=ro", uri=True)
+        try:
+            use_fallback = probe.execute("SELECT count(*) FROM channel_dataset_links").fetchone()[0] == 0
+        finally:
+            probe.close()
+    if use_fallback:
+        normalized = root / "data/normalized/channel-targets/YOUTUBE_CHANNEL_REGISTRY.json"
+        if not normalized.is_file():
+            raise FileNotFoundError(
+                "Historical inventory database is missing and no normalized registry fallback exists. "
+                "Run scripts/rebuild_inventory_catalog.py before rebuilding the channel registry."
+            )
+        prior = json.loads(normalized.read_text(encoding="utf-8"))
+        prior_links = {
+            row["canonical_channel_id"]: list(dict.fromkeys(row["dataset_ids"]))
+            for row in prior["channels"]
+            if row.get("source_group") == "HISTORICAL_CATALOG"
+        }
+        return {identifier: HISTORICAL_DATASET_RELATIONSHIPS.get(identifier, links) for identifier, links in prior_links.items()}
+    connection = sqlite3.connect(database.as_uri() + "?mode=ro", uri=True)
     try:
         rows = connection.execute(
             """
@@ -477,8 +511,20 @@ def _parse_structured_transcript(text: str) -> tuple[str, bool, str | None]:
     return text.strip(), False, None
 
 
-def _historical_records(root: Path) -> tuple[list[dict], list[dict], list[dict]]:
-    source = sqlite3.connect(root / "data/catalog/youtube_inventory.db")
+def _historical_records(root: Path, source: sqlite3.Connection | None = None) -> tuple[list[dict], list[dict], list[dict]]:
+    database = root / "data/catalog/youtube_inventory.db"
+    owns_source = source is None
+    use_fallback = owns_source and (not database.is_file() or database.stat().st_size == 0)
+    if owns_source and not use_fallback:
+        probe = sqlite3.connect(database.as_uri() + "?mode=ro", uri=True)
+        try:
+            use_fallback = probe.execute("SELECT count(*) FROM videos").fetchone()[0] == 0
+        finally:
+            probe.close()
+    if use_fallback:
+        return _historical_records_from_tracked_snapshots(root)
+    if source is None:
+        source = sqlite3.connect(database.as_uri() + "?mode=ro", uri=True)
     source.row_factory = sqlite3.Row
     sql = """
       SELECT v.youtube_video_id,c.youtube_channel_id,v.canonical_url,v.created_from_dataset_id AS dataset_id,
@@ -544,7 +590,73 @@ def _historical_records(root: Path) -> tuple[list[dict], list[dict], list[dict]]
             })
             memberships.append({"dataset_id": row["dataset_id"], "youtube_video_id": row["youtube_video_id"], "evidence_locator": portable_reference})
     finally:
-        source.close()
+        if owns_source:
+            source.close()
+    return videos, transcripts, memberships
+
+
+def _historical_records_from_tracked_snapshots(root: Path) -> tuple[list[dict], list[dict], list[dict]]:
+    """Rebuild historical registry rows from tracked canonical-fact snapshots.
+
+    Transcript and description bodies are not present in a clean clone. Their
+    verified availability, hashes, and counts remain explicit; missing bodies
+    are never replaced with invented text.
+    """
+    coverage = {
+        row["Canonical ID"].split(" / ")[0]: row
+        for row in read_coverage(root)
+        if " / " in row["Canonical ID"] and row["Canonical ID"].startswith("CH-")
+    }
+    videos, transcripts, memberships = [], [], []
+    for internal_id, row in sorted(coverage.items()):
+        paths = sorted((root / "data/intelligence/channels" / internal_id).glob("topic-opportunity-intelligence-*.json"))
+        paths = [path for path in paths if "pilot" not in path.name]
+        if not paths:
+            raise FileNotFoundError(f"No tracked canonical-fact snapshot for historical channel {internal_id}")
+        artifact = json.loads(paths[-1].read_text(encoding="utf-8"))
+        facts = [item["canonical_fact"] for item in artifact.get("items", [])]
+        expected = as_int(row["Videos"])
+        if len(facts) != expected:
+            raise ValueError(f"Historical snapshot {paths[-1]} has {len(facts)} rows; expected {expected}")
+        channel_id = canonical_id(row["Canonical ID"])
+        dataset_id = row["Dataset"]
+        evidence = paths[-1].relative_to(root).as_posix()
+        for fact in facts:
+            youtube_id = fact["youtube_video_id"]
+            videos.append({
+                "youtube_video_id": youtube_id,
+                "canonical_channel_id": channel_id,
+                "canonical_url": f"https://www.youtube.com/watch?v={youtube_id}",
+                "title": fact.get("title"),
+                "published_at": fact.get("published_at"),
+                "duration_seconds": fact.get("duration_seconds"),
+                "video_type": fact.get("format"),
+                "views": fact.get("views"),
+                "likes": fact.get("likes"),
+                "comments": fact.get("comments"),
+                "description": None,
+                "description_unavailable_reason": "Description verified present in historical coverage; body is not retained in the clean-clone snapshot.",
+                "thumbnail_url": None,
+                "raw_json": json.dumps({"source": evidence, "evidence_state": "CANONICAL_FACT"}, sort_keys=True),
+            })
+            placeholder = fact.get("transcript_status") != "AVAILABLE"
+            transcripts.append({
+                "youtube_video_id": youtube_id,
+                "dataset_id": dataset_id,
+                "transcript_text": None,
+                "word_count": fact.get("transcript_word_count"),
+                "language": None,
+                "caption_type": None,
+                "is_placeholder": int(placeholder),
+                "unavailable_reason": (
+                    "Historical source records transcript as unavailable."
+                    if placeholder else
+                    "Real transcript verified by historical coverage; body is not retained in the clean-clone snapshot."
+                ),
+                "evidence_locator": evidence,
+                "transcript_sha256": fact.get("transcript_sha256"),
+            })
+            memberships.append({"dataset_id": dataset_id, "youtube_video_id": youtube_id, "evidence_locator": evidence})
     return videos, transcripts, memberships
 
 
@@ -784,18 +896,20 @@ def _intelligence_records(root: Path, model: dict) -> tuple[list[dict], list[dic
 
 def _actor_run_records(root: Path, package_runs: list[dict]) -> list[dict]:
     records = {row["actor_run_id"]: row for row in package_runs}
-    source = sqlite3.connect(root / "data/catalog/youtube_inventory.db")
-    source.row_factory = sqlite3.Row
-    try:
-        for row in source.execute("SELECT actor_run_id,default_dataset_id,dataset_id,actor_name,run_status,input_json FROM apify_source_runs"):
-            records[row["actor_run_id"]] = {
-                "actor_run_id": row["actor_run_id"], "actor_dataset_id": row["default_dataset_id"],
-                "dataset_id": row["dataset_id"], "actor_name": row["actor_name"],
-                "evidence_path": f"data/manifests/apify/{row['actor_run_id']}.json",
-                "run_status": row["run_status"], "raw_json": row["input_json"],
-            }
-    finally:
-        source.close()
+    database = root / "data/catalog/youtube_inventory.db"
+    if database.is_file() and database.stat().st_size:
+        source = sqlite3.connect(database.as_uri() + "?mode=ro", uri=True)
+        source.row_factory = sqlite3.Row
+        try:
+            for row in source.execute("SELECT actor_run_id,default_dataset_id,dataset_id,actor_name,run_status,input_json FROM apify_source_runs"):
+                records[row["actor_run_id"]] = {
+                    "actor_run_id": row["actor_run_id"], "actor_dataset_id": row["default_dataset_id"],
+                    "dataset_id": row["dataset_id"], "actor_name": row["actor_name"],
+                    "evidence_path": f"data/manifests/apify/{row['actor_run_id']}.json",
+                    "run_status": row["run_status"], "raw_json": row["input_json"],
+                }
+        finally:
+            source.close()
     for path in sorted((root / "data/manifests").glob("DS-00002*_CONFIG.json")):
         config = json.loads(path.read_text(encoding="utf-8"))
         for key in ("run", "recoveryRun"):
@@ -843,6 +957,14 @@ def _all_records(root: Path, model: dict):
 
 def connect(path: Path) -> sqlite3.Connection:
     connection = sqlite3.connect(path)
+    connection.execute("PRAGMA foreign_keys = ON")
+    return connection
+
+
+def connect_readonly(path: Path) -> sqlite3.Connection:
+    if not path.is_file() or path.stat().st_size == 0:
+        raise FileNotFoundError(f"SQLite database is missing or empty: {path}. Build it before running read-only validation.")
+    connection = sqlite3.connect(path.as_uri() + "?mode=ro", uri=True)
     connection.execute("PRAGMA foreign_keys = ON")
     return connection
 

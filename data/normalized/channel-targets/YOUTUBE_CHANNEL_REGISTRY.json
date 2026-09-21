@@ -5,9 +5,9 @@
     "submitted_rows": 67,
     "normalized_url_identities": 63,
     "canonical_target_channels": 63,
-    "all_canonical_channels": 69,
+    "all_canonical_channels": 70,
     "source_groups": {
-      "standard_packages": 35,
+      "standard_packages": 36,
       "historical_catalog": 5,
       "identity_only": 29
     },
@@ -18,9 +18,9 @@
       "unmapped_screenshot_subjects": 7
     },
     "package_layer": {
-      "channels": 35,
-      "unique_videos": 1601,
-      "real_transcripts": 1591,
+      "channels": 36,
+      "unique_videos": 1636,
+      "real_transcripts": 1626,
       "placeholders": 10,
       "missing_descriptions": 14
     }
@@ -6313,7 +6313,6 @@
       "intelligence_status": "PARTIAL",
       "first_party_analytics_status": "SCHEMA_READY_NO_DATA",
       "dataset_ids": [
-        "DS-000006",
         "DS-000006"
       ],
       "video_count": 32,
@@ -6389,6 +6388,104 @@
       }
     },
     {
+      "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
+      "channel_name": "Dr. Ares Senior",
+      "current_handle": "@Dr.Ares-YT",
+      "canonical_url": "https://www.youtube.com/channel/UC356D-NzdnznBOftTpYoBLw",
+      "source_group": "STANDARD_PACKAGE",
+      "primary_dataset_id": "DS-000027",
+      "target_group": "OUTSIDE_TARGET",
+      "status": "COMPLETE",
+      "completed_tick": "✓",
+      "identity_evidence_source": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+      "verified_at": "2026-09-14",
+      "handle_unavailable_reason": null,
+      "limitations": [],
+      "submission_rows": [],
+      "identity_status": "VERIFIED",
+      "extraction_status": "COMPLETE",
+      "package_status": "STANDARD_PACKAGE",
+      "video_metadata_status": "COMPLETE",
+      "description_status": "COMPLETE",
+      "transcript_status": "COMPLETE_REAL",
+      "intelligence_status": "DATA_READY",
+      "first_party_analytics_status": "SCHEMA_READY_NO_DATA",
+      "dataset_ids": [
+        "DS-000027"
+      ],
+      "video_count": 35,
+      "regular_videos": 35,
+      "shorts": 0,
+      "livestreams": 0,
+      "descriptions": 35,
+      "real_transcripts": 35,
+      "placeholders": 0,
+      "missing_transcripts": 0,
+      "workbook_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Master_Data.xlsx",
+      "transcript_zip_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Transcripts_35_Videos.zip",
+      "thumbnail_metadata_status": "COMPLETE",
+      "visual_asset_status": "THUMBNAIL_URL_ONLY",
+      "forensic_video_status": "NOT_AVAILABLE",
+      "visual_coverage": {
+        "thumbnail_url_count": 35,
+        "downloaded_thumbnail_count": 0,
+        "screenshot_count": 0,
+        "keyframe_count": 0,
+        "registered_source_video_count": 0,
+        "timestamped_visual_observation_count": 0,
+        "visual_evidence_level": "THUMBNAIL_URL_ONLY",
+        "editing_visual_intelligence_status": "NOT_AVAILABLE",
+        "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+        "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+      },
+      "layer_evidence": {
+        "identity_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": null
+        },
+        "extraction_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "package_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "video_metadata_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "description_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "transcript_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Transcripts_35_Videos.zip",
+          "limitation_reason": null
+        },
+        "thumbnail_metadata_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": null
+        },
+        "visual_asset_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+        },
+        "forensic_video_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+        },
+        "intelligence_status": {
+          "evidence_path": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
+          "limitation_reason": "Capability-level rows preserve generated, data-ready, and unavailable states."
+        },
+        "first_party_analytics_status": {
+          "evidence_path": "data/intelligence/system/first-party-analytics-capability-status-2026-09-11.json",
+          "limitation_reason": "No real YouTube Studio or Analytics export is ingested."
+        }
+      }
+    },
+    {
       "canonical_channel_id": "UCQcBYZxFW7YwNMU8-DsT3Uw",
       "channel_name": "Dr. Elias Senior Health",
       "current_handle": "@Dr.EliasYT",
@@ -6412,7 +6509,6 @@
       "intelligence_status": "PARTIAL",
       "first_party_analytics_status": "SCHEMA_READY_NO_DATA",
       "dataset_ids": [
-        "DS-000019",
         "DS-000019"
       ],
       "video_count": 29,
@@ -6818,7 +6914,6 @@
         "DS-000013",
         "DS-000014",
         "DS-000015",
-        "DS-000017",
         "DS-000017"
       ],
       "video_count": 83,
@@ -13400,6 +13495,86 @@
     },
     {
       "canonical_channel_id": "UCFKmBxFC3dOkUv1GirzTjww",
+      "capability_id": "FIRST_PARTY_ANALYTICS",
+      "status": "DATA_READY",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "data/intelligence/system/first-party-analytics-capability-status-2026-09-11.json",
+      "limitation_reason": "Schema and ingestion code are ready, but no real YouTube Studio or Analytics export is ingested.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
+      "capability_id": "TOPIC_OPPORTUNITY",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
+      "capability_id": "PACKAGING",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
+      "capability_id": "HOOK",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
+      "capability_id": "SCRIPT",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000027/packages/dr-ares-senior/DrAresSenior_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
+      "capability_id": "EDITING_VISUAL",
+      "status": "NOT_AVAILABLE",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+      "limitation_reason": "No registered forensic video evidence; transcripts and thumbnail URLs are not substitutes.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
+      "capability_id": "UNIFIED_ORCHESTRATION",
+      "status": "NOT_AVAILABLE",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
+      "limitation_reason": "Required input evidence or generated channel-specific artifact is unavailable.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
+      "capability_id": "CHANNEL_STRATEGY",
+      "status": "NOT_AVAILABLE",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "data/intelligence/system/cross-niche-strategy-calibration-2026-09-11.json",
+      "limitation_reason": "Required input evidence or generated channel-specific artifact is unavailable.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
       "capability_id": "FIRST_PARTY_ANALYTICS",
       "status": "DATA_READY",
       "input_data_available": false,

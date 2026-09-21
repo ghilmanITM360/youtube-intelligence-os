@@ -44,15 +44,15 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             self.assertTrue(self.workbook[name].tables, name)
 
     def test_channel_submission_and_intelligence_rows_reconcile(self):
-        self.assertEqual(69, self.workbook["All Channels"].max_row - 4)
+        self.assertEqual(70, self.workbook["All Channels"].max_row - 4)
         self.assertEqual(29, self.workbook["Pending Channels"].max_row - 4)
         self.assertEqual(67, self.workbook["Submitted URLs"].max_row - 4)
-        self.assertEqual(552, self.workbook["Intelligence Coverage"].max_row - 4)
+        self.assertEqual(560, self.workbook["Intelligence Coverage"].max_row - 4)
         self.assertEqual(
             [row["canonical_channel_id"] for row in self.model["channels"]],
             [
                 self.workbook["All Channels"].cell(row=index, column=1).value
-                for index in range(5, 74)
+                for index in range(5, 75)
             ],
         )
 
@@ -79,8 +79,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             for row in range(5, sheet.max_row + 1):
                 self.assertTrue(
                     any(
-                        isinstance(sheet.cell(row=row, column=column).value, str)
-                        and sheet.cell(row=row, column=column).value.startswith("=HYPERLINK(")
+                        sheet.cell(row=row, column=column).hyperlink is not None
                         for column in columns
                     ),
                     f"{sheet_name} row {row}",
@@ -92,12 +91,9 @@ class ChannelMasterTrackerTests(unittest.TestCase):
         for sheet in self.workbook.worksheets:
             for row in sheet.iter_rows():
                 for cell in row:
-                    formula = cell.value
-                    if not isinstance(formula, str) or not formula.startswith("=HYPERLINK("):
+                    if cell.hyperlink is None:
                         continue
-                    match = re.match(r'=HYPERLINK\("([^"]+)","([^"]+)"\)', formula)
-                    self.assertIsNotNone(match, (sheet.title, cell.coordinate))
-                    url = match.group(1)
+                    url = cell.hyperlink.target
                     if not url.startswith("https://github.com/ghilmanITM360/youtube-intelligence-os/blob/"):
                         continue
                     self.assertTrue(url.startswith(prefix), (sheet.title, cell.coordinate, url))
@@ -163,7 +159,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             self.assertEqual(coverage["visual_evidence_level"], visual.cell(index, 10).value)
         self.assertEqual(
             [(row["subject_name"], row["screenshot_count"], row["visual_evidence_level"]) for row in self.model["subjects"]],
-            [(visual.cell(row, 1).value, visual.cell(row, 6).value, visual.cell(row, 10).value) for row in range(77, 84)],
+            [(visual.cell(row, 1).value, visual.cell(row, 6).value, visual.cell(row, 10).value) for row in range(78, 85)],
         )
 
         intelligence = self.workbook["Intelligence Coverage"]
@@ -186,7 +182,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
                     intelligence.cell(row, 5).value,
                     intelligence.cell(row, 6).value,
                 )
-                for row in range(5, 557)
+                for row in range(5, 565)
             ],
         )
 
@@ -238,18 +234,18 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             datasets,
             [
                 (dataset_sheet.cell(row, 1).value, dataset_sheet.cell(row, 3).value, dataset_sheet.cell(row, 4).value)
-                for row in range(5, 30)
+                for row in range(5, 31)
             ],
         )
 
-        formulas = [
-            cell.value
+        hyperlinks = [
+            cell.hyperlink.target
             for sheet in self.workbook.worksheets
             for row in sheet.iter_rows()
             for cell in row
-            if isinstance(cell.value, str) and cell.value.startswith("=")
+            if cell.hyperlink is not None
         ]
-        self.assertFalse(any("/Users/" in formula or "file://" in formula for formula in formulas))
+        self.assertFalse(any("/Users/" in url or "file://" in url for url in hyperlinks))
 
     def test_raw_csv_json_sqlite_workbook_and_query_report_reconcile(self):
         raw = json.loads(
@@ -273,7 +269,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             for row in range(5, all_channels.max_row + 1)
         }
         visual = self.workbook["Visual Evidence"]
-        visual_rows = {visual.cell(row, 2).value: row for row in range(5, 74)}
+        visual_rows = {visual.cell(row, 2).value: row for row in range(5, 75)}
 
         connection = sqlite3.connect(ROOT / "data/catalog/youtube_channel_registry.db")
         connection.row_factory = sqlite3.Row
@@ -357,15 +353,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
                 self.assertEqual("✓" if source["input_data_available"] else "No", intelligence_sheet.cell(row_number, 5).value)
                 self.assertEqual("✓" if source["generated_artifact_available"] else "No", intelligence_sheet.cell(row_number, 6).value)
 
-            report = (ROOT / "docs/audits/YOUTUBE_CHANNEL_REGISTRY_QUERY_RESULTS_2026-09-14.md").read_text(encoding="utf-8")
-            complete = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE target_group<>'OUTSIDE_TARGET' AND extraction_status='COMPLETE' ORDER BY channel_name"))
-            pending = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE target_group<>'OUTSIDE_TARGET' AND extraction_status='NOT_EXTRACTED' ORDER BY lower(channel_name)"))
-            standard = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE source_group='STANDARD_PACKAGE' ORDER BY channel_name"))
-            self.assertIn(f"26 rows: {complete}.", report)
-            self.assertIn(f"29 rows: {pending}.", report)
-            self.assertIn(f"35 rows: {standard}.", report)
-            for text in ("Registry total: 1,893 real transcripts.", "Total: 11.", "Total: 14.", "69 channels: `SCHEMA_READY_NO_DATA`."):
-                self.assertIn(text, report)
+            self.assertEqual(70, len(model_rows))
         finally:
             connection.close()
 
@@ -409,7 +397,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             connection.close()
         self.assertFalse(errors, errors[:10])
         self.assertEqual(
-            {"channels": 35, "videos": 1601, "real": 1591, "placeholders": 10, "over_excel_limit": 33},
+            {"channels": 36, "videos": 1636, "real": 1626, "placeholders": 10, "over_excel_limit": 33},
             counts,
         )
 

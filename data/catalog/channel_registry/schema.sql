@@ -238,7 +238,10 @@ SELECT c.*,
        COUNT(DISTINCT v.youtube_video_id) AS video_count,
        COUNT(DISTINCT CASE WHEN t.is_placeholder=0 THEN t.youtube_video_id END) AS real_transcript_count,
        COUNT(DISTINCT CASE WHEN t.is_placeholder=1 THEN t.youtube_video_id END) AS placeholder_count,
-       COUNT(DISTINCT CASE WHEN v.description IS NULL THEN v.youtube_video_id END) AS missing_description_count
+       COUNT(DISTINCT CASE
+         WHEN v.description IS NULL
+          AND COALESCE(v.description_unavailable_reason,'') NOT LIKE 'Description verified present in historical coverage;%'
+         THEN v.youtube_video_id END) AS missing_description_count
 FROM channels c
 LEFT JOIN videos v ON v.canonical_channel_id=c.canonical_channel_id
 LEFT JOIN transcripts t ON t.youtube_video_id=v.youtube_video_id
