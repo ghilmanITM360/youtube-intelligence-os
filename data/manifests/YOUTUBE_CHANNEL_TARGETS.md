@@ -79,6 +79,7 @@ Status is target-registry progress only. Independent extraction, package, transc
 | OUTSIDE_TARGET | HISTORICAL_CATALOG | COMPLETE | HISTORICAL_FORMAT | COMPLETE_REAL | THUMBNAIL_EVIDENCE | PARTIAL | SCHEMA_READY_NO_DATA | [Dr. Aliza Wright | Advice](https://www.youtube.com/channel/UCXZi5JVeuTluazF-fYqQgNA) | 32 | DS-000006, DS-000006 |
 | OUTSIDE_TARGET | STANDARD_PACKAGE | COMPLETE | STANDARD_PACKAGE | COMPLETE_REAL | THUMBNAIL_URL_ONLY | DATA_READY | SCHEMA_READY_NO_DATA | [Dr. Ares Senior](https://www.youtube.com/channel/UC356D-NzdnznBOftTpYoBLw) | 35 | DS-000027 |
 | OUTSIDE_TARGET | HISTORICAL_CATALOG | COMPLETE | HISTORICAL_FORMAT | COMPLETE_REAL | THUMBNAIL_EVIDENCE | PARTIAL | SCHEMA_READY_NO_DATA | [Dr. Elias Senior Health](https://www.youtube.com/channel/UCQcBYZxFW7YwNMU8-DsT3Uw) | 29 | DS-000019, DS-000019 |
+| OUTSIDE_TARGET | STANDARD_PACKAGE | COMPLETE | STANDARD_PACKAGE | COMPLETE_REAL | THUMBNAIL_URL_ONLY | DATA_READY | SCHEMA_READY_NO_DATA | [Dr. Okoro](https://www.youtube.com/channel/UCMJxAeBJ0d1JC937de1eZ0Q) | 66 | DS-000028 |
 | OUTSIDE_TARGET | HISTORICAL_CATALOG | COMPLETE_WITH_LIMITATIONS | HISTORICAL_FORMAT | COMPLETE_WITH_PLACEHOLDERS | NONE | PARTIAL | SCHEMA_READY_NO_DATA | [Matty Invests](https://www.youtube.com/channel/UCkqzov98m_7niJOXwbRQgBA) | 94 | DS-000001 |
 | OUTSIDE_TARGET | HISTORICAL_CATALOG | COMPLETE_WITH_LIMITATIONS | HISTORICAL_FORMAT | COMPLETE_REAL | NONE | PARTIAL | SCHEMA_READY_NO_DATA | [Mr. Finance](https://www.youtube.com/channel/UC6AwWrRKNrwt83CMJqeTUzw) | 65 | DS-000001 |
 | OUTSIDE_TARGET | STANDARD_PACKAGE | COMPLETE_WITH_LIMITATIONS | STANDARD_PACKAGE | COMPLETE_REAL | THUMBNAIL_URL_ONLY | DATA_READY | SCHEMA_READY_NO_DATA | [Tp Dossier](https://www.youtube.com/channel/UCFKmBxFC3dOkUv1GirzTjww) | 92 | DS-000022 |
@@ -88,7 +89,6 @@ Status is target-registry progress only. Independent extraction, package, transc
 
 - Doctor Thomas (DS-000003): Screenshot-only subject; canonical YouTube identity and video population are not established.
 - Dr. Adewale (DS-000004): Screenshot-only subject; canonical YouTube identity and video population are not established.
-- Dr. Okoro (DS-000005): Screenshot-only subject; canonical YouTube identity and video population are not established.
 - Dr. Waterling (DS-000007): Screenshot-only subject; canonical YouTube identity and video population are not established.
 - The Senior Health Podcast (DS-000008): Screenshot-only subject; canonical YouTube identity and video population are not established.
 - Senior Health Hub (DS-000009): Screenshot-only subject; canonical YouTube identity and video population are not established.

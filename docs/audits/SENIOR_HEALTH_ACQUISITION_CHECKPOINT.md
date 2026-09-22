@@ -2,6 +2,22 @@
 
 Updated: 2026-09-22
 
+## Registry and package completion
+
+- Dr. Okoro full acquisition: `COMPLETE`
+- Standard package: `COMPLETE` — 66 unique videos, 66 descriptions, 66 thumbnail URLs, and 66 YouTube subtitle transcripts
+- Control/full-run deduplication: 67 source records resolve to 66 unique YouTube Video IDs; both immutable Actor run payloads remain preserved
+- Registry foreign-key issue: `RESOLVED`
+- Root cause: DS-000028 videos referenced canonical channel `UCMJxAeBJ0d1JC937de1eZ0Q`, while registry authority still represented Dr. Okoro only as an unresolved DS-000005 screenshot subject
+- Builder fix: inventory-only canonical acquisitions are promoted before child rows, orphan references receive explicit validation errors, and registry DB rebuilds atomically instead of retaining stale rows
+- Canonical channels: 71. Evidence review confirmed branch already contained 70 canonical channels including Dr. Ares; DS-000028 adds Dr. Okoro and reduces unresolved screenshot subjects from 7 to 6. The owner approved this evidence-backed count.
+- Registry validation: `PASS`; `PRAGMA integrity_check = ok`; foreign-key violations `0`
+- Inventory DB: `PRAGMA integrity_check = ok`; foreign-key violations `0`; SHA-256 `247294558d26b38d02d056cdbe52cc1009ea206c18c4106008a3fe5aa859c5d2`
+- Registry DB: `PRAGMA integrity_check = ok`; foreign-key violations `0`; SHA-256 `3570f9bc014cb14a72c1b1571a05ec01ccfe4f362a9f36f9082463a5e342ebc2`
+- New-campaign cumulative Apify spend: `$0.264`
+- Remaining campaign budget: `$4.236`
+- Next channel: Doctor Thomas (`UCFuGMi0idGeyXl6wYK9hg7Q`)
+
 ## Completed work
 
 - Last completed channel: Dr. Okoro catalog acquisition

@@ -20,7 +20,7 @@ Ten are original targets and 19 are later additions. All identities are verified
 
 ## 3. Standard-package channels
 
-35 rows: Apesthetic; Bob Invests; Brimm.; Bro Pump; CIPHER UNIT; Carl Invests; Crayon Capital; Dark Ledger; Explain In Paint; Genius History; Hypothetically; Ink Explainer; Just Some Guy Stories; Lost Legacy; Lucas Grant; Luco; Mack; Maximus; Money Life POV; My Chaotic Stories; Nick Invests; Oddlyhuman; Past Tense; Primate Economics; Shaami Finance; Sonny Finance; Stickly; The Life Outline; Tp Dossier; Unknown Frequencies; Well.; Zenn; Zoozle; ago.; inkly.
+37 rows: Apesthetic; Bob Invests; Brimm.; Bro Pump; CIPHER UNIT; Carl Invests; Crayon Capital; Dark Ledger; Dr. Ares Senior; Dr. Okoro; Explain In Paint; Genius History; Hypothetically; Ink Explainer; Just Some Guy Stories; Lost Legacy; Lucas Grant; Luco; Mack; Maximus; Money Life POV; My Chaotic Stories; Nick Invests; Oddlyhuman; Past Tense; Primate Economics; Shaami Finance; Sonny Finance; Stickly; The Life Outline; Tp Dossier; Unknown Frequencies; Well.; Zenn; Zoozle; ago.; inkly.
 
 Every row has one exact package workbook and one transcript ZIP path.
 
@@ -38,7 +38,7 @@ These are not reported as standard packages.
 
 ## 5. Channels with real transcripts
 
-40 channels. Registry total: 1,893 real transcripts.
+41 channels. Registry total: 1,994 real transcripts.
 
 ## 6. Channels with placeholders
 
@@ -56,7 +56,7 @@ Total: 14.
 
 ## 8. Channels with thumbnail URLs only
 
-35 rows, exactly the standard-package channels. Each package video has a thumbnail URL, but no downloaded thumbnail evidence is registered in the standard package.
+37 rows, exactly the standard-package channels. Each package video has a thumbnail URL, but no downloaded thumbnail evidence is registered in the standard package.
 
 ## 9. Channels with downloaded thumbnail evidence
 
@@ -70,7 +70,7 @@ One row: xkcd's What If? (`UC6IxnFzHofFJ5X2PycSMsww`), 107 measured keyframes, t
 
 ## 11. Screenshot-only unmapped subjects
 
-Seven rows: Doctor Thomas; Dr. Adewale; Dr. Okoro; Dr. Waterling; The Senior Health Podcast; Senior Health Hub; The Health Educator. All remain separate from canonical channels.
+Six rows: Doctor Thomas; Dr. Adewale; Dr. Waterling; The Senior Health Podcast; Senior Health Hub; The Health Educator. All remain separate from canonical channels.
 
 ## 12. Generated intelligence by capability
 
@@ -89,11 +89,11 @@ Generated rows include evidence paths. Packaging is partial/title-only for Matty
 
 ## 13. Input exists but output is not generated
 
-The 35 standard-package channels each have input-ready rows for Topic Opportunity, Packaging, Hook, and Script: 35 rows per capability, 140 rows total. `generated_artifact_available` remains false.
+The 37 standard-package channels each have input-ready rows for Topic Opportunity, Packaging, Hook, and Script: 37 rows per capability, 148 rows total. `generated_artifact_available` remains false.
 
 ## 14. First-party Analytics status
 
-69 channels: `SCHEMA_READY_NO_DATA`. Zero channels: `INGESTED`. Public scraped metrics are not first-party Analytics.
+71 channels: `SCHEMA_READY_NO_DATA`. Zero channels: `INGESTED`. Public scraped metrics are not first-party Analytics.
 
 ## 15. Data gaps for one channel
 
