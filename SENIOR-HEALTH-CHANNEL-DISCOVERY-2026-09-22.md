@@ -30,3 +30,12 @@ Source: direct YouTube channel pages observed on 2026-09-22. Subscriber and vide
 | [Richard Kelley M.D.](https://www.youtube.com/@RichardKelleyMD) | UCjPqI2_Ym14ufiF5rFvTt_w | @RichardKelleyMD | Over-50 medical/fitness adjacent | 40.9K | 104 | No | Medium | Doctor-led creatine, fitness, longevity after 50 |
 
 Identity verified: 24. Direct channels with visible content: 12. Adjacent or mixed channels with visible content: 10. No-content channels rejected for acquisition: 2. These are research candidates, not acquisition approval. More source sampling is needed before paid runs.
+
+## Acquisition tiers pending catalog sampling
+
+- **Provisional Tier A, direct:** Dr. Brooks; Dr. Nora Khalil; Dr. Franklin Senior Health; Senior Health Today; Senior Wellness; Better Health While Aging; Senior Vital Health. Their identity and initial senior-health focus are documented above. Recent-video sampling, account pricing, and cost caps remain required before paid runs.
+- **Tier B, adjacent or smaller direct catalogs:** Dr. Holloway After 60; Healthy Aging - Senior Health Tips; Dr. James Senior Health Tips; Healthy Aging; Healthy After 60; ElderfitTV; Body Fix Exercises; Healthy Aging with Dr. Doctor; Dr. Dani Fisher; Dr. Misha Kogan; Richard Kelley M.D.
+- **Tier C, mixed or sparse:** Wisdom After 60; Senior Book; Life After 60+; Health Science Daily.
+- **Rejected for acquisition:** Senior Health Protect and Ageless Science: zero visible public videos at observation.
+
+No newly discovered channel was acquired. `APIFY_TOKEN` was unavailable during the continuation, so Tier A was not advanced to a paid batch.
