@@ -649,6 +649,7 @@ def _ds22_records(root: Path, model: dict) -> tuple[list[dict], list[dict], list
 
 def _artifact_records(root: Path, model: dict) -> list[dict]:
     records = []
+    registered_datasets = {row["dataset_id"] for row in _dataset_records(root)}
     channel_by_package = {Path(row["workbook_path"]).parent.as_posix(): row["canonical_channel_id"] for row in model["channels"] if row["workbook_path"]}
     for path in sorted((root / "data/extracted/channel-data").rglob("*")):
         if not path.is_file():
@@ -674,8 +675,9 @@ def _artifact_records(root: Path, model: dict) -> list[dict]:
             continue
         rel = path.relative_to(root).as_posix()
         match = re.search(r"(DS-\d{6})", rel)
+        dataset_id = match.group(1) if match else None
         records.append({
-            "dataset_id": match.group(1) if match else None,
+            "dataset_id": dataset_id if dataset_id in registered_datasets else None,
             "canonical_channel_id": None,
             "artifact_type": "RAW_ACTOR_EVIDENCE" if "/apify/" in rel else "RAW_SOURCE_EVIDENCE",
             "repository_path": rel,
