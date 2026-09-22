@@ -1,0 +1,145 @@
+work/analyze_video.swift:23:39: warning: 'duration' was deprecated in macOS 13.0: Use load(.duration) instead [#DeprecatedDeclaration]
+21 | let url = URL(fileURLWithPath: CommandLine.arguments[1])
+22 | let asset = AVURLAsset(url: url)
+23 | let duration = CMTimeGetSeconds(asset.duration)
+   |                                       `- warning: 'duration' was deprecated in macOS 13.0: Use load(.duration) instead [#DeprecatedDeclaration]
+24 | let videoTracks = asset.tracks(withMediaType: .video)
+25 | let audioTracks = asset.tracks(withMediaType: .audio)
+
+work/analyze_video.swift:24:25: warning: 'tracks(withMediaType:)' was deprecated in macOS 13.0: Use loadTracks(withMediaType:) instead [#DeprecatedDeclaration]
+22 | let asset = AVURLAsset(url: url)
+23 | let duration = CMTimeGetSeconds(asset.duration)
+24 | let videoTracks = asset.tracks(withMediaType: .video)
+   |                         `- warning: 'tracks(withMediaType:)' was deprecated in macOS 13.0: Use loadTracks(withMediaType:) instead [#DeprecatedDeclaration]
+25 | let audioTracks = asset.tracks(withMediaType: .audio)
+26 | 
+
+work/analyze_video.swift:25:25: warning: 'tracks(withMediaType:)' was deprecated in macOS 13.0: Use loadTracks(withMediaType:) instead [#DeprecatedDeclaration]
+23 | let duration = CMTimeGetSeconds(asset.duration)
+24 | let videoTracks = asset.tracks(withMediaType: .video)
+25 | let audioTracks = asset.tracks(withMediaType: .audio)
+   |                         `- warning: 'tracks(withMediaType:)' was deprecated in macOS 13.0: Use loadTracks(withMediaType:) instead [#DeprecatedDeclaration]
+26 | 
+27 | var output: [String: Any] = [
+
+work/analyze_video.swift:35:29: warning: 'naturalSize' was deprecated in macOS 13.0: Use load(.naturalSize) instead [#DeprecatedDeclaration]
+33 | 
+34 | if let track = videoTracks.first {
+35 |     let transformed = track.naturalSize.applying(track.preferredTransform)
+   |                             `- warning: 'naturalSize' was deprecated in macOS 13.0: Use load(.naturalSize) instead [#DeprecatedDeclaration]
+36 |     output["display_width"] = abs(transformed.width)
+37 |     output["display_height"] = abs(transformed.height)
+
+work/analyze_video.swift:35:56: warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+33 | 
+34 | if let track = videoTracks.first {
+35 |     let transformed = track.naturalSize.applying(track.preferredTransform)
+   |                                                        `- warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+36 |     output["display_width"] = abs(transformed.width)
+37 |     output["display_height"] = abs(transformed.height)
+
+work/analyze_video.swift:38:37: warning: 'naturalSize' was deprecated in macOS 13.0: Use load(.naturalSize) instead [#DeprecatedDeclaration]
+36 |     output["display_width"] = abs(transformed.width)
+37 |     output["display_height"] = abs(transformed.height)
+38 |     output["natural_width"] = track.naturalSize.width
+   |                                     `- warning: 'naturalSize' was deprecated in macOS 13.0: Use load(.naturalSize) instead [#DeprecatedDeclaration]
+39 |     output["natural_height"] = track.naturalSize.height
+40 |     output["nominal_fps"] = track.nominalFrameRate
+
+work/analyze_video.swift:39:38: warning: 'naturalSize' was deprecated in macOS 13.0: Use load(.naturalSize) instead [#DeprecatedDeclaration]
+37 |     output["display_height"] = abs(transformed.height)
+38 |     output["natural_width"] = track.naturalSize.width
+39 |     output["natural_height"] = track.naturalSize.height
+   |                                      `- warning: 'naturalSize' was deprecated in macOS 13.0: Use load(.naturalSize) instead [#DeprecatedDeclaration]
+40 |     output["nominal_fps"] = track.nominalFrameRate
+41 |     output["estimated_data_rate"] = track.estimatedDataRate
+
+work/analyze_video.swift:40:35: warning: 'nominalFrameRate' was deprecated in macOS 13.0: Use load(.nominalFrameRate) instead [#DeprecatedDeclaration]
+38 |     output["natural_width"] = track.naturalSize.width
+39 |     output["natural_height"] = track.naturalSize.height
+40 |     output["nominal_fps"] = track.nominalFrameRate
+   |                                   `- warning: 'nominalFrameRate' was deprecated in macOS 13.0: Use load(.nominalFrameRate) instead [#DeprecatedDeclaration]
+41 |     output["estimated_data_rate"] = track.estimatedDataRate
+42 |     output["preferred_transform"] = [
+
+work/analyze_video.swift:41:43: warning: 'estimatedDataRate' was deprecated in macOS 13.0: Use load(.estimatedDataRate) instead [#DeprecatedDeclaration]
+39 |     output["natural_height"] = track.naturalSize.height
+40 |     output["nominal_fps"] = track.nominalFrameRate
+41 |     output["estimated_data_rate"] = track.estimatedDataRate
+   |                                           `- warning: 'estimatedDataRate' was deprecated in macOS 13.0: Use load(.estimatedDataRate) instead [#DeprecatedDeclaration]
+42 |     output["preferred_transform"] = [
+43 |         track.preferredTransform.a,
+
+work/analyze_video.swift:43:15: warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+41 |     output["estimated_data_rate"] = track.estimatedDataRate
+42 |     output["preferred_transform"] = [
+43 |         track.preferredTransform.a,
+   |               `- warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+44 |         track.preferredTransform.b,
+45 |         track.preferredTransform.c,
+
+work/analyze_video.swift:44:15: warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+42 |     output["preferred_transform"] = [
+43 |         track.preferredTransform.a,
+44 |         track.preferredTransform.b,
+   |               `- warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+45 |         track.preferredTransform.c,
+46 |         track.preferredTransform.d,
+
+work/analyze_video.swift:45:15: warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+43 |         track.preferredTransform.a,
+44 |         track.preferredTransform.b,
+45 |         track.preferredTransform.c,
+   |               `- warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+46 |         track.preferredTransform.d,
+47 |         track.preferredTransform.tx,
+
+work/analyze_video.swift:46:15: warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+44 |         track.preferredTransform.b,
+45 |         track.preferredTransform.c,
+46 |         track.preferredTransform.d,
+   |               `- warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+47 |         track.preferredTransform.tx,
+48 |         track.preferredTransform.ty
+
+work/analyze_video.swift:47:15: warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+45 |         track.preferredTransform.c,
+46 |         track.preferredTransform.d,
+47 |         track.preferredTransform.tx,
+   |               `- warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+48 |         track.preferredTransform.ty
+49 |     ]
+
+work/analyze_video.swift:48:15: warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+46 |         track.preferredTransform.d,
+47 |         track.preferredTransform.tx,
+48 |         track.preferredTransform.ty
+   |               `- warning: 'preferredTransform' was deprecated in macOS 13.0: Use load(.preferredTransform) instead [#DeprecatedDeclaration]
+49 |     ]
+50 |     if let anyDesc = track.formatDescriptions.first {
+
+work/analyze_video.swift:50:28: warning: 'formatDescriptions' was deprecated in macOS 13.0: Use load(.formatDescriptions) instead [#DeprecatedDeclaration]
+48 |         track.preferredTransform.ty
+49 |     ]
+50 |     if let anyDesc = track.formatDescriptions.first {
+   |                            `- warning: 'formatDescriptions' was deprecated in macOS 13.0: Use load(.formatDescriptions) instead [#DeprecatedDeclaration]
+51 |         let desc = anyDesc as! CMFormatDescription
+52 |         output["video_codec"] = fourCC(CMFormatDescriptionGetMediaSubType(desc))
+
+work/analyze_video.swift:57:49: warning: 'estimatedDataRate' was deprecated in macOS 13.0: Use load(.estimatedDataRate) instead [#DeprecatedDeclaration]
+55 | 
+56 | if let track = audioTracks.first {
+57 |     output["audio_estimated_data_rate"] = track.estimatedDataRate
+   |                                                 `- warning: 'estimatedDataRate' was deprecated in macOS 13.0: Use load(.estimatedDataRate) instead [#DeprecatedDeclaration]
+58 |     if let anyDesc = track.formatDescriptions.first {
+59 |         let desc = anyDesc as! CMAudioFormatDescription
+
+work/analyze_video.swift:58:28: warning: 'formatDescriptions' was deprecated in macOS 13.0: Use load(.formatDescriptions) instead [#DeprecatedDeclaration]
+56 | if let track = audioTracks.first {
+57 |     output["audio_estimated_data_rate"] = track.estimatedDataRate
+58 |     if let anyDesc = track.formatDescriptions.first {
+   |                            `- warning: 'formatDescriptions' was deprecated in macOS 13.0: Use load(.formatDescriptions) instead [#DeprecatedDeclaration]
+59 |         let desc = anyDesc as! CMAudioFormatDescription
+60 |         output["audio_codec"] = fourCC(CMFormatDescriptionGetMediaSubType(desc))
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>

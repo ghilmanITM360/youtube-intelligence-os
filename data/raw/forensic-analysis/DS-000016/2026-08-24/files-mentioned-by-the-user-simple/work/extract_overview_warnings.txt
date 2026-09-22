@@ -1,0 +1,17 @@
+work/extract_frames.swift:24:43: warning: 'duration' was deprecated in macOS 13.0: Use load(.duration) instead [#DeprecatedDeclaration]
+22 |         exit(2)
+23 |     }
+24 |     let duration = CMTimeGetSeconds(asset.duration)
+   |                                           `- warning: 'duration' was deprecated in macOS 13.0: Use load(.duration) instead [#DeprecatedDeclaration]
+25 |     times = stride(from: 0.0, through: max(0.0, duration - 0.001), by: interval).map { $0 }
+26 | } else {
+
+sysctlbyname for kern.hv_vmm_present failed with status -1work/extract_frames.swift:42:35: warning: 'copyCGImage(at:actualTime:)' was deprecated in macOS 15.0: Use generateCGImageAsynchronouslyForTime:completionHandler: instead [#DeprecatedDeclaration]
+40 |     var actual = CMTime.zero
+41 |     do {
+42 |         let image = try generator.copyCGImage(at: requested, actualTime: &actual)
+   |                                   `- warning: 'copyCGImage(at:actualTime:)' was deprecated in macOS 15.0: Use generateCGImageAsynchronouslyForTime:completionHandler: instead [#DeprecatedDeclaration]
+43 |         let actualSeconds = CMTimeGetSeconds(actual)
+44 |         let millis = Int((seconds * 1000).rounded())
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
