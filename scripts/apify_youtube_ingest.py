@@ -422,10 +422,17 @@ def _dataset_identity_evidence(conn, dataset_id):
 def reconcile_channel_identity(conn, dataset_id, requested_channel_url, channel,
                                allow_direct_apify_identity=False):
     youtube_id = channel["youtube_channel_id"]
+    requested_path = urllib.parse.urlparse(requested_channel_url).path.rstrip("/")
+    requested_id_match = re.fullmatch(r"/channel/(UC[A-Za-z0-9_-]{22})", requested_path)
+    requested_id = requested_id_match.group(1) if requested_id_match else None
     requested_handle = handle_key(handle_from_url(requested_channel_url))
     actor_handle = handle_key(channel["handle"])
     actor_url = canonical_channel_url(channel["channel_url"])
     evidence = _dataset_identity_evidence(conn, dataset_id)
+    if allow_direct_apify_identity and requested_id:
+        if requested_id != youtube_id:
+            raise CatalogError("EvidenceConflict", "Requested Channel ID does not match Actor Channel ID")
+        evidence["locators"].append("apify_actor_result:channel_id")
     if allow_direct_apify_identity and requested_handle and actor_handle:
         if requested_handle != actor_handle:
             raise CatalogError(
@@ -439,6 +446,7 @@ def reconcile_channel_identity(conn, dataset_id, requested_channel_url, channel,
         (actor_handle and actor_handle in evidence["handles"])
         or (requested_handle and requested_handle in evidence["handles"])
         or (actor_url and actor_url in evidence["urls"])
+        or (allow_direct_apify_identity and requested_id == youtube_id)
         or (allow_direct_apify_identity and requested_handle and requested_handle == actor_handle)
     )
     existing = conn.execute("SELECT * FROM channels WHERE youtube_channel_id=?", (youtube_id,)).fetchone()
