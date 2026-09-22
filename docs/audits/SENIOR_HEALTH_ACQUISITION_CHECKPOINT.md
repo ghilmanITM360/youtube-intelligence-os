@@ -18,6 +18,24 @@ Updated: 2026-09-22
 - Remaining campaign budget: `$4.236`
 - Next channel: Doctor Thomas (`UCFuGMi0idGeyXl6wYK9hg7Q`)
 
+## Doctor Thomas zero-spend precheck
+
+- Checked: `2026-09-22`
+- Canonical channel ID: `UCFuGMi0idGeyXl6wYK9hg7Q`
+- Current handle: `@DrThomasSeniorHealthTips`
+- Public header: 22 videos; Videos tab contains 22 regular uploads
+- Shorts: 0; no Shorts tab is exposed
+- Archived streams: 0; no Live tab is exposed
+- Repository overlap: `DS-000003` contains five screenshot-only items and no canonical video population
+- Subtitle sample: 0 of 2 sampled regular videos exposed YouTube captions; both players reported captions unavailable
+- Actor: `streamers/youtube-scraper`; live Free-plan price `$4.00 / 1,000` results (`$0.004` each)
+- Live actor build: not exposed by the public page or the account's limited-permission Actor view; latest evidence-backed successful build remains `0.0.303`
+- Expected maximum Actor charge for 22 results: `$0.088`
+- Apify account usage: `$4.28 / $5.00`; account credit remaining `$0.72`
+- Campaign budget remains `$4.236`; no Doctor Thomas spend occurred
+- Paid run: `NOT_STARTED`; Codex weekly usage reached 85%, triggering the mandatory stop rule
+- Acquisition caveat: existing-subtitles-only mode cannot presently guarantee transcripts for all 22 videos; AI transcription remains off
+
 ## Completed work
 
 - Last completed channel: Dr. Okoro catalog acquisition
