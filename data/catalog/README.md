@@ -14,11 +14,11 @@
 
 ## Where it lives
 
-`data/catalog/youtube_inventory.db`, plus SQLite `-wal`/`-shm` files while a connection is open. All of it stays local (Decision 013) — see `.gitignore`.
+`data/catalog/youtube_inventory.db`, plus SQLite `-wal`/`-shm` files while a connection is open. A clean, integrity-checked database snapshot is versioned; transient `-wal`/`-shm` files remain local. `data/catalog/youtube_channel_registry.db` is also versioned through Git LFS because it exceeds GitHub's 100 MiB normal-object limit.
 
 ## Why it is local
 
-Decision 013: the operational database is regenerable from source material already under version control (schema + raw canonical files + manifests), so committing it to Git would only bloat history without adding information Git doesn't already have another way to reconstruct.
+Decision 013 originally treated the operational database as a regenerable local index. Owner preservation policy superseded that storage choice on 2026-09-22: valid checkpointed database snapshots are preserved remotely. They remain derived indexes; raw evidence and manifests remain authoritative.
 
 ## How it is recreated
 

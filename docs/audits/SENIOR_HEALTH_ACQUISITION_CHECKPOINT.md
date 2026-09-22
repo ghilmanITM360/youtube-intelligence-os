@@ -49,12 +49,20 @@ Tracked for commit:
 - `data/manifests/apify/4Jkn3vuO1nDp57HfT.json`
 - this checkpoint
 
-Preserved local-only evidence:
+Remote-preservation set:
 
+- `data/raw/channel-data/DS-000026/preflight/29_channel_public_counts.json`
+- `data/raw/channel-data/DS-000026/preflight/29_channel_registry_export.json`
 - `data/raw/competitors/DS-000028/dataset.json`
 - `data/raw/competitors/DS-000028/apify/4Jkn3vuO1nDp57HfT/evidence/actor_input.json`
 - `data/raw/competitors/DS-000028/apify/4Jkn3vuO1nDp57HfT/evidence/run_metadata_console_observation.json`
 - `data/raw/competitors/DS-000028/apify/4Jkn3vuO1nDp57HfT/transcripts/eD2OnCE8iKM.txt`
 - `data/catalog/youtube_inventory.db`
+- `data/catalog/youtube_channel_registry.db` (Git LFS)
 
-No raw evidence or database binary will be staged.
+Correction (2026-09-22): owner policy requires remote preservation of canonical
+raw evidence and valid project database snapshots. DS-000028 acquisition
+evidence, existing DS-000026 preflight evidence, `youtube_inventory.db`, and
+`youtube_channel_registry.db` passed integrity, secret, and size review for
+remote preservation. SQLite WAL/SHM files, caches, temporary files, secrets,
+and exact duplicate staging copies remain excluded.
