@@ -17,22 +17,53 @@ Direct YouTube page observations on 2026-09-22. Video figures are channel displa
 | Channel | Channel ID | Current name | Current handle | Senior Health fit | Existing data | Acquisition action |
 |---|---|---|---|---|---|---|
 | Dr. Okoro | [UCMJxAeBJ0d1JC937de1eZ0Q](https://www.youtube.com/channel/UCMJxAeBJ0d1JC937de1eZ0Q) | Dr. Okoro | @drmarcusokoro | Yes | Screenshot-only DS-000005 | New data needed |
-| Dr. Adewale | [UC5qNIOYcXj-uIh6n5dWfLLg](https://www.youtube.com/channel/UC5qNIOYcXj-uIh6n5dWfLLg) | Not independently verifiable | Unavailable; @dr.adewale proposed | Unverifiable now | No ID match established | Exclude: Channel-ID URL says channel removed |
-| Dr. Aliza Wright \| Advice | [UCXZi5JVeuTluazF-fYqQgNA](https://www.youtube.com/channel/UCXZi5JVeuTluazF-fYqQgNA) | Dr. Aliza Wright \| Advice | @Dr.AlizaWrightAdvice | Yes | Historical/partial DS-000006 | Assess refresh against historical fields |
+| Dr. Adewale | [UC5qNIOYcXj-uIh6n5dWfLLg](https://www.youtube.com/channel/UC5qNIOYcXj-uIh6n5dWfLLg) | Removed historical identity | Historical @dr.adewale | Historical identity only | Prior identity evidence; no active channel | Do not acquire |
+| Dr. Aliza Wright \| Advice | [UCXZi5JVeuTluazF-fYqQgNA](https://www.youtube.com/channel/UCXZi5JVeuTluazF-fYqQgNA) | Dr. Aliza Wright \| Advice | @Dr.AlizaWrightAdvice | Yes | DS-000006: 32 videos, 32 transcripts | Existing complete snapshot; no redundant run |
 | Doctor Thomas | [UCFuGMi0idGeyXl6wYK9hg7Q](https://www.youtube.com/channel/UCFuGMi0idGeyXl6wYK9hg7Q) | Doctor Thomas | @DrThomasSeniorHealthTips | Yes | No ID match | New data needed |
-| The Health Educator | [UC8ycZesiOH1DSgZl_qjruvg](https://www.youtube.com/channel/UC8ycZesiOH1DSgZl_qjruvg) | Not independently verifiable | Unavailable; @TheHealthEducator05 dead | Unverifiable now | No ID match established | Exclude: Channel-ID URL says channel removed |
+| The Health Educator | [UC8ycZesiOH1DSgZl_qjruvg](https://www.youtube.com/channel/UC8ycZesiOH1DSgZl_qjruvg) | Removed historical identity | Historical @TheHealthEducator05 | Historical identity only | Prior identity evidence; no active channel | Do not acquire |
 | Senior Health Hub | [UCAYG0fzUyxv6OevH88qA45w](https://www.youtube.com/channel/UCAYG0fzUyxv6OevH88qA45w) | Senior Health Hub | @Health.Hub.Senior | Yes | No ID match | New data needed |
 | The Senior Health Podcast | [UCeY8vK104Gbzp4aqnTz4gzQ](https://www.youtube.com/channel/UCeY8vK104Gbzp4aqnTz4gzQ) | The Senior Health Podcast | @theseniorhealthpodcast | Yes | No ID match | New data needed |
 | Dr. Waterling | [UCLVvBoFiBC6oj7mT62GFAEA](https://www.youtube.com/channel/UCLVvBoFiBC6oj7mT62GFAEA) | Dr. Waterling | @Mr.Greendude | Yes | No ID match | New data needed |
 
-The two supplied Channel-ID URLs were tested directly on 2026-09-22. Both displayed YouTube's exact notice: “This channel was removed because it violated our Community Guidelines.” This establishes neither current title nor current content. No replacement channel was inferred from a similar name. Six of eight seeds remain verified and publicly available.
+The two supplied Channel-ID URLs were tested directly on 2026-09-22. Both displayed YouTube's exact notice: “This channel was removed because it violated our Community Guidelines.” Historical identities and prior screenshots remain preserved; cached third-party listings do not establish current activity. No replacement channel was inferred from a similar name. **Requested: 8; active: 6; removed historical: 2.**
+
+## Registry drift repaired
+
+The authoritative coverage ledger already included DS-000027, but generated normalized ledgers and tracker were stale. Rebuilding yielded **70 canonical channels**, including Dr. Ares Senior (`UC356D-NzdnznBOftTpYoBLw`) exactly once, linked to DS-000027, its standard package, 35 videos, 35 real transcripts, and eight capability rows. Registry now holds 36 standard package channels, 1,939 unique videos, and 1,928 real transcripts. Master tracker dashboard uses dynamic channel and screenshot ranges. Validator and idempotence checks pass; duplicate Channel IDs: zero. Separate fix commit: `28d4d9d` (pushed).
 
 ## Acquisition, data, and intelligence
 
-Existing controlled pipeline is `scripts/apify_youtube_ingest.py` using `streamers/youtube-scraper`, with `plan`, bounded `run`, raw preservation, and cost evidence. Shell authentication check returned **APIFY_TOKEN_NOT_AVAILABLE** on 2026-09-22. No authenticated account check, Actor build lookup, account-specific price, or paid acquisition could proceed. [Public Actor pricing](https://apify.com/streamers/youtube-scraper/pricing) previously observed at $2.40–$4.00 per 1,000 videos by plan is not an approved run price. Six resolved seeds displayed 698 videos; the historical Aliza snapshot accounts for 32 displayed videos, but completeness has not been established. Pipeline default cap is $0.50 per run. Actor build, current account price, subtitle/add-on costs, and bounded run plans require authenticated preflight. Required policy: existing YouTube subtitles only, no paid fallback transcription. No Apify run was started: actual cost $0; new datasets, videos, transcripts, and thumbnails 0; missing-transcript count unknown. No package, registry, cohort, sub-niche intelligence, or private metric was fabricated. Next dataset ID must be allocated from current ledger after access is restored; DS-000027 already exists remotely.
+Existing controlled pipeline is `scripts/apify_youtube_ingest.py` using `streamers/youtube-scraper`, with `plan`, bounded `run`, raw preservation, and cost evidence. Shell authentication check returned **APIFY_TOKEN_NOT_AVAILABLE** on 2026-09-22. No authenticated `/users/me` check, Actor build lookup, account-specific pricing, Store discount, subtitle price, or paid acquisition could proceed. Public pricing is not an approved account price. Pipeline default cap is $0.50 per run. It accepts an explicit `--cost-cap` but has no deterministic pagination/resume; repeating a newest-first bounded run would duplicate results and charges. Its current input selects regular videos (`maxResultsShorts=0`, `maxResultStreams=0`), so completeness across Shorts and live streams requires separate verified support before execution. Subtitle download is enabled, automated AI summary/description disabled; manual versus auto-generated subtitle type must remain unknown where Actor evidence does not distinguish it. No paid transcription fallback is authorized.
+
+| Active seed | Public Videos-tab estimate | Existing videos | New result ceiling for planning | Strategy |
+|---|---:|---:|---:|---|
+| Dr. Okoro | 66 | 0; DS-000005 screenshots | 66 | New standard observation |
+| Dr. Aliza Wright \| Advice | 32 | 32 in DS-000006 | 0 | Existing snapshot; refresh only on proven gap |
+| Doctor Thomas | 22 | 0 | 22 | New standard observation |
+| Senior Health Hub | 122 | 0 | 122 | New standard observation |
+| The Senior Health Podcast | 385 | 0 | 385 | New standard observation |
+| Dr. Waterling | 71 | 0 | 71 | New standard observation |
+
+Five new-seed runs would target at most **666 Videos-tab results**. Seven provisional direct competitors show another **656 Videos-tab results**; current qualified Tier A is five channels with **424** displayed videos. These are public display counts, not complete inventories. Per-channel maximum cost cannot be stated in USD without current authenticated event rates. For each bounded run, required calculation is `videos × account video rate + subtitle events × account subtitle rate + applicable start fee`, plus any other priced events exposed by Actor. Full 12-channel provisional ceiling is `1,322 × video rate + up to 1,322 × subtitle rate + 12 × start fee`; five-seed plus five-qualified-channel ceiling is `1,090 × video rate + up to 1,090 × subtitle rate + 10 × start fee`. Final run count may rise for Shorts/live acquisition. **TOTAL_MAXIMUM_APPROVED_COST: not established.** No run may use an assumed rate or silently raise $0.50 cap. Next free dataset ID must be read from ledger at run time; DS-000027 already exists.
+
+| Qualified Tier A | Videos-tab estimate | Estimated maximum cost, pending authenticated rates | Cost cap |
+|---|---:|---|---|
+| Better Health While Aging | 98 | `98 × video rate + 98 × subtitle rate + start fee` | Explicit budget required |
+| Senior Wellness | 98 | `98 × video rate + 98 × subtitle rate + start fee` | Explicit budget required |
+| Dr. Brooks | 107 | `107 × video rate + 107 × subtitle rate + start fee` | Explicit budget required |
+| Senior Health Today | 56 | `56 × video rate + 56 × subtitle rate + start fee` | Explicit budget required |
+| Dr. Nora Khalil | 65 | `65 × video rate + 65 × subtitle rate + start fee` | Explicit budget required |
+
+For the five new active seeds, the same upper-bound formula uses 66, 22, 122, 385, and 71 video results respectively. Actual subtitle events may be fewer; Actor build and billing evidence must confirm whether subtitles or starts incur separate charges. Existing `$0.50/run` cap is insufficient unless authenticated pricing proves otherwise. No deterministic continuation mechanism exists in this pipeline.
+
+No Apify run was started: actual cost $0; new datasets, videos, transcripts, and thumbnails 0; missing-subtitle count unknown. No new package, cohort, intelligence, or private metric was fabricated. Competitor medical claims remain content evidence, not clinical facts.
+
+## Validation and state
+
+Registry validator: PASS; rebuild idempotence: PASS; Dr. Ares identity/dataset/video/transcript/capability joins: 1/1/35/35/8. Master tracker dashboard recalculated 70 channels, 41 with video data, 36 standard packages, 1,939 videos, and 1,928 real transcripts. `git diff --check` and focused secret scan: PASS. `git fsck --connectivity-only --no-reflogs`: exit 0, dangling objects only. Existing package and manifest validation were not rerun because no raw acquisition or package changed. Removed seeds were not added to active acquired counts.
 
 ## Discovery and gaps
 
 [`SENIOR-HEALTH-CHANNEL-DISCOVERY-2026-09-22.md`](SENIOR-HEALTH-CHANNEL-DISCOVERY-2026-09-22.md) records 24 additional YouTube channel identities with canonical IDs, public snapshots, fit, and priority. None matched current canonical registry by ID. Two showed no public content and are rejected for acquisition. Further sampling should reject weak mixed channels before spending.
 
-Remaining: provide Apify credential through environment; obtain independently verifiable active channel identities if the two removed seeds should be replaced; validate current Actor price/build and budget; run bounded acquisitions; preserve raw outputs; package and validate; rebuild registry and cohort; generate supported intelligence; then commit and push durable artifacts. Remote preservation of pre-acquisition local evidence passed; acquisition remains blocked.
+Remaining: provide Apify credential through environment; obtain authenticated Actor build/pricing and explicit total budget; resolve full-catalog acquisition across regular videos, Shorts, and streams without duplicate charges; run bounded acquisitions; preserve raw outputs; package and validate; rebuild registry and cohort; generate supported intelligence; then commit and push durable artifacts. The two removed seeds are historical records, not unresolved active targets. Remote preservation and registry repair passed; acquisition remains blocked.
