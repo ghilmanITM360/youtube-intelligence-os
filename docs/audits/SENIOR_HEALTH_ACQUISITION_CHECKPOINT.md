@@ -36,10 +36,26 @@ Updated: 2026-09-22
 
 - Proposed additional acquisition cap: `$4.80`
 - Approval status: not approved in this conversation
-- Apify usage display: `$0.14 / $5.00` in the sidebar and `$0.15 / $5.00` on Billing Limits; approximately `$4.85–$4.86` remains
+- Apify subscription: Free plan; `$5.00` monthly free platform usage; no payment method configured
+- Apify current-period usage: `$0.15 / $5.00`; `$4.85` remains
 - Actor price display: from `$4.00 / 1,000 videos` (`$0.004` per video)
+- Actor/build: `streamers/youtube-scraper` / latest observed successful build `0.0.303`
+- Console maximum cost setting: `$0.15` per run; it is a per-run setting, not a cumulative acquisition cap
 - Next channel: Dr. Okoro full catalog, only after explicit cumulative-budget approval
 - Next state: `AWAITING_TOTAL_ACQUISITION_BUDGET_APPROVAL`
+
+## Zero-spend Dr. Okoro precheck
+
+- Public channel identity reconfirmed: `UCMJxAeBJ0d1JC937de1eZ0Q`, `@drmarcusokoro`
+- Public channel header: 66 videos
+- Regular-video catalog: 65 items observed across the complete public Videos tab
+- Shorts catalog: 1 item (`PSukpB1Io-o`)
+- Archived streams: 0 publicly exposed; no Live tab is present and the `/streams` route resolves to the Videos catalog
+- Existing control video: `eD2OnCE8iKM`; retain and deduplicate by YouTube Video ID if a full run is approved
+- Current Actor schema exposes separate limits for regular videos, Shorts, and streams
+- Subtitle mode available: existing subtitles only; language `Any`; plaintext output
+- AI video analysis remains off; no paid AI transcription is authorized
+- No new Actor run or charge was started during this precheck
 
 ## Durable and local-only files
 
