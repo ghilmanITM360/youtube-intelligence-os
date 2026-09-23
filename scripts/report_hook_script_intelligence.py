@@ -9,6 +9,7 @@ import zipfile
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import inventory_catalog as ic
 from report_common import connect
 
 
@@ -425,9 +426,9 @@ def canonical_transcript_text(text):
 def read_canonical_transcript_raw(row):
     """Read raw transcript text regardless of physical-file vs archive-member storage."""
     if row["transcript_storage_kind"] == "ARCHIVE_MEMBER":
-        with zipfile.ZipFile(row["transcript_archive_path"]) as archive:
+        with zipfile.ZipFile(ic.resolve_canonical_path(row["transcript_archive_path"])) as archive:
             return archive.read(row["transcript_member_path"]).decode("utf-8", errors="replace")
-    return Path(row["transcript_path"]).read_text(encoding="utf-8")
+    return ic.resolve_canonical_path(row["transcript_path"]).read_text(encoding="utf-8")
 
 
 def build_report(conn, channel_id, topic, packaging, packaging_visual, interpretations):

@@ -76,7 +76,7 @@ def _verify_transcript_source(row):
         raise ic.CatalogError("HashFailure", "Transcript provenance has a missing or conflicting hash")
 
     if row["transcript_path"]:
-        path = Path(row["transcript_path"])
+        path = ic.resolve_canonical_path(row["transcript_path"])
         if (
             row["transcript_verification"] != "VERIFIED"
             or not path.is_file()
@@ -102,10 +102,10 @@ def _verify_transcript_source(row):
     ):
         raise ic.CatalogError("SourceNotFound", "Reference-only transcript provenance is incomplete")
 
-    parent_path = Path(row["transcript_parent_path"])
-    expected_reference = "{}::{}".format(parent_path, row["transcript_member_path"])
+    expected_reference = "{}::{}".format(row["transcript_parent_path"], row["transcript_member_path"])
     if row["canonical_reference"] != expected_reference:
         raise ic.CatalogError("SourceNotFound", "Reference-only transcript locator does not resolve to its source member")
+    parent_path = ic.resolve_canonical_path(row["transcript_parent_path"])
     if not parent_path.is_file() or ic.sha256_file(parent_path) != row["transcript_parent_sha256"]:
         raise ic.CatalogError("HashFailure", "Transcript source archive failed existence/hash verification")
     try:
@@ -147,7 +147,7 @@ def _verified_evidence(conn, item, canonical=False):
         or row["duration_origin"] != "SOURCE_EXTRACTED"
     ):
         raise ic.CatalogError("HashFailure", "Content provenance is incomplete or unverified")
-    metadata_path = Path(row["metadata_path"]) if row["metadata_path"] else None
+    metadata_path = ic.resolve_canonical_path(row["metadata_path"]) if row["metadata_path"] else None
     if (
         not row["metadata_sha256"]
         or not metadata_path
