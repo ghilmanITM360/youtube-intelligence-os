@@ -14,6 +14,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -38,6 +40,6 @@ jobs:
           python -m scripts.validate_youtube_channel_registry
       - name: Run distributable suite
         run: python -m pytest -q
-      - name: Reject tracked runtime databases and generated junk
+      - name: Reject tracked untracked-by-design databases and generated junk
         run: |
-          test -z "$(git ls-files 'data/catalog/*.db' 'data/catalog/*.db-*' 'outputs/**' '*.pyc')"
+          test -z "$(git ls-files 'data/catalog/youtube_inventory.db' 'data/catalog/*.db-*' 'outputs/**' '*.pyc')"
