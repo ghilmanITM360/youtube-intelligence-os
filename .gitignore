@@ -118,3 +118,21 @@ data/intelligence/first-party/**/*
 # data/manifests/batches/*.md and *_FILES.csv, both regenerated from the
 # catalog database by scripts/generate_batch_manifests.py).
 data/manifests/batches/*_state.json
+
+# Python/test/build caches are always disposable and must never enter Git.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local inspection sidecars produced while validating generated workbooks.
+*.inspect.ndjson
+
+# Local rendering-pipeline test output (not checksum-registered dataset
+# evidence). Matches the /outputs/ naming already ignored above; this repo
+# also produces a singular "output/" directory from local pipeline runs.
+/output/
+/output.zip
