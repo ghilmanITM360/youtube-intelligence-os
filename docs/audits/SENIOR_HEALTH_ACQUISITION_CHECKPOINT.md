@@ -143,3 +143,47 @@ evidence, existing DS-000026 preflight evidence, `youtube_inventory.db`, and
 `youtube_channel_registry.db` passed integrity, secret, and size review for
 remote preservation. SQLite WAL/SHM files, caches, temporary files, secrets,
 and exact duplicate staging copies remain excluded.
+
+## Doctor Thomas acquisition (2026-09-23)
+
+| Run | Channel | Content Type | Results | Max Charge | Actual Cost | Cumulative Actual |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| `WqJIbwUkgkHDHxdaI` | Doctor Thomas | regular only | 22 | `$0.120` | `$0.088` | `$0.352` |
+
+- Channel identity verified before spend: `UCFuGMi0idGeyXl6wYK9hg7Q`, `@DrThomasSeniorHealthTips` — matched exactly, no mismatch.
+- Live Apify pricing verified pre-run: Free plan, $4.00/1,000 videos ($0.004/video); expected cost 22×$0.004=$0.088, confirmed exactly on completion.
+- Actor input: `maxResults=22`, `maxResultsShorts=0`, `maxResultStreams=0`, `transcriptionAndSubtitle=ALWAYS_SUBTITLES` (existing captions only), `aiVideoDescription=false`, `aiVideoSummary=false`. Platform-enforced `maxTotalChargeUsd=0.12`.
+- Run result: SUCCEEDED, 152/152 requests succeeded, 0 failed, 22/22 unique videos, 0 duplicates, 0 Shorts, 0 streams.
+- Transcripts: 21/22 AVAILABLE, 1/22 UNAVAILABLE (`fj4TaPrLl8U` — `NO_SUBTITLE_AVAILABLE`, non-blocking per policy).
+- Dataset registered as `DS-000029` via `scripts/inventory_catalog.py ingest` (controlled path, no manual SQLite writes); ingested via `scripts/apify_youtube_ingest.py ingest-existing` → `apify_source_run_id=APIFYRUN-000005`, `channel_id=CH-000007`, `registration_run_id=RUN-000028`.
+- `scripts/inventory_catalog.py verify --dataset-id DS-000029`: 24 physical files checked, 0 mismatches, `PRAGMA integrity_check: ok`, FK violations `0`, status `VERIFIED`.
+- Inventory DB: integrity `ok`; foreign-key violations `0`; SHA-256 `ab9597fef7389319fcc3aad4c942e124e6969112253ac28e721ee918b09fd7b0`
+- Registry DB: integrity `ok`; foreign-key violations `0`; unchanged SHA-256 `ea7c986b23758f4b72a731d1df77630191711ea532b3cf537b26259d47dc1e6d` (rebuild blocked, see below)
+- Secret scan (`scripts/scan_tracked_secrets.py`): `0` findings.
+
+### Discovered blocker — registry rebuild and full pytest
+
+`scripts/build_youtube_channel_registry.py` crashes with `TypeError: can only concatenate str (not "NoneType") to str` in `_historical_records` (line ~610). Root cause: the one video with no YouTube captions (`fj4TaPrLl8U`) produced a `transcripts` row with `canonical_reference=NULL` whose `archive_member_file_id` points to a non-archive physical file (`archive_member_path` also `NULL`), which the function's DS-000001-era legacy fallback assumes never happens. This is a pre-existing latent bug in shared registry-building code, first exposed by Doctor Thomas because prior Apify-ingested channels (e.g. DS-000028) happened to have captions on every video. Not fixed inline during this live paid run to avoid unrelated changes mid-acquisition; flagged as a separate follow-up task (background chip `task_92c65353`).
+
+Consequences while unfixed:
+- Canonical registry rebuild BLOCKED — registry DB remains at the pre-existing 71-channel state; Doctor Thomas is **not yet** a canonical registry channel (data is fully preserved in the inventory catalog/DS-000029 regardless).
+- `python3 -m pytest -q`: `8 failed, 346 passed, 5 warnings` — all 8 failures trace to this single root cause (`tests/test_youtube_channel_registry.py`, `tests/test_editing_visual_intelligence.py`, `tests/test_intelligence_refresh.py`). No other regressions found.
+- `scripts/validate_youtube_channel_registry.py` also blocked by the same crash (idempotence check rebuilds from source).
+
+Packaging (5-sheet workbook + transcript ZIP via `scripts/package_youtube_channel_dataset.mjs`) also deferred this run: the script requires an external `jszip` module and `artifact_tool.mjs` neither vendored in this repo (intentionally dependency-free) nor available in this session's environment. Raw evidence, ingestion, and validation are complete regardless of packaging.
+
+### Durable files (this acquisition)
+
+- `data/manifests/DS-000029.md`
+- `data/manifests/apify/WqJIbwUkgkHDHxdaI.json`
+- `data/raw/competitors/DS-000029/dataset.json`
+- `data/raw/competitors/DS-000029/apify/WqJIbwUkgkHDHxdaI/raw/dataset.json`
+- `data/raw/competitors/DS-000029/apify/WqJIbwUkgkHDHxdaI/evidence/actor_input.json`
+- `data/raw/competitors/DS-000029/apify/WqJIbwUkgkHDHxdaI/evidence/run_metadata_console_observation.json`
+- `data/raw/competitors/DS-000029/apify/WqJIbwUkgkHDHxdaI/transcripts/` (21 files)
+- `data/catalog/youtube_inventory.db`
+- this checkpoint
+
+### Next channel
+
+Senior Health Hub (`UCAYG0fzUyxv6OevH88qA45w`) zero-spend precheck only — do not start a paid run for it before the registry-rebuild blocker above is resolved and this acquisition's data is confirmed pushed to remote.
