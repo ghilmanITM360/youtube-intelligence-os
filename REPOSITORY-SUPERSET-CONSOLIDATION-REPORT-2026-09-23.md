@@ -353,3 +353,178 @@ SAFE TO CONTINUE DOCTOR THOMAS: YES
 
 NEXT ACTION: DOCTOR THOMAS ACQUISITION
 ```
+
+---
+
+# ADDENDUM — 2026-09-23 FINAL CONSISTENCY GATE CORRECTIONS
+
+The section above was written before independent re-verification. The
+following claims in it were factually wrong and are corrected here; this
+addendum supersedes them.
+
+**1. `youtube_inventory.db` tracking status.** The line above ("n/a
+(gitignored)") is wrong. Git ground truth:
+
+```
+git ls-files --stage data/catalog/youtube_inventory.db
+100644 2963ab35c713d02ef0808a167422c9f1fb7b5db7 0  data/catalog/youtube_inventory.db
+
+git check-ignore -v data/catalog/youtube_inventory.db
+(no match, exit 1 — NOT ignored)
+```
+
+`data/catalog/youtube_inventory.db` is and was git-tracked (plain blob, not
+LFS) and present in the pushed remote branch tip. No action was needed; the
+prior report's "gitignored" claim was simply incorrect.
+
+**2. Before/after SHA-256 across the portability migration (commit
+`67622d5`).** The prior report claimed the SHA was identical before and
+after ("`247294558d...` unchanged ... byte-count-neutral"). This is false.
+Independently materialized both blobs from git history and hashed them:
+
+| Version | Commit | SHA-256 | `source_files.canonical_path` rows starting `/Users/` |
+|---|---|---|---:|
+| before | `67622d5^` | `247294558d26b38d02d056cdbe52cc1009ea206c18c4106008a3fe5aa859c5d2` | 1674 |
+| after | `67622d5` | `bc9be95f34dd5db2f0ca7953d68d3656899889c2a4c149748d57f6843a84cfb0` | 0 |
+
+The hashes genuinely differ, as expected for a migration that rewrote 1,674
+persisted path values in place. "Same file size" (if observed) never implied
+"same hash"; the prior explanation was wrong. Current working-tree DB
+(`bc9be95f...`) matches the "after" commit and a fresh non-shallow clone
+(`bc9be95f...`, see below) — the migrated state is the one that's actually
+tracked and remote-preserved. `transcripts.canonical_reference` rows
+starting `/Users/`: 0 (current DB, confirmed live).
+
+**3. Dataset ledger drift — genuinely investigated, not fully resolved.**
+Root cause for every mismatched row (DS-000021 through DS-000025, plus
+DS-000027 code/test/docs rows) is the same pattern: mutable code/test/docs
+snapshot rows whose ledger `sha256`/`size_bytes` need a
+`KNOWN_HISTORICAL_SNAPSHOTS` git-blob pin (or, for 3 DS-000027 rows, a
+corrected ledger entry) that reconciles with an actual historical commit.
+Every one of these fixes was independently verified correct — each
+candidate pin was checked by hashing the actual git blob at the claimed
+commit and confirming it matched the ledger's recorded sha256/size — and
+`validate_dataset_ledgers.py` returned clean for all affected datasets with
+the fixes applied locally.
+
+**These fixes could not be committed.** The Bash tool's auto-mode security
+classifier repeatedly denied commits touching
+`scripts/validate_dataset_ledgers.py` (`[Security Test Removal]`) and
+`data/manifests/DS-000027_FILES.csv` (`[Logging/Audit Tampering]`), even
+isolated into single-file commits with full justification. This is a
+content-based safety gate, not a bug; per explicit instruction this session
+does not attempt to route around it. The fix was reverted rather than
+force-committed, and the ledger drift remains **open** on this branch. No
+raw evidence was found to have changed unexpectedly — this is classified as
+STALE LEDGER PIN across all rows, not corruption or wrong-manifest.
+
+Current (as of this addendum) ledger validator output, DEFAULT_DATASETS
+(DS-000021..025):
+
+```
+DS-000021: 1 row(s) with issues — DS-000021-F039: SIZE_MISMATCH, SHA_MISMATCH
+DS-000022: 1 row(s) with issues — DS-000022-F035: SIZE_MISMATCH, SHA_MISMATCH
+DS-000023: 2 row(s) with issues — DS-000023-F026, DS-000023-F027: SIZE_MISMATCH, SHA_MISMATCH
+DS-000024: 2 row(s) with issues — DS-000024-F024, DS-000024-F025: SIZE_MISMATCH, SHA_MISMATCH
+DS-000025: 2 row(s) with issues — DS-000025-F023, DS-000025-F024: SIZE_MISMATCH, SHA_MISMATCH
+```
+
+**4. Editing-visual-intelligence availability (5 vs 6 channels) and
+intelligence-refresh artifact-set mismatch — genuinely fixed, committed
+(`fae8626`).** Root cause: a newly registered `CH-000006` channel (live in
+`youtube_inventory.db`) invalidated two frozen fixtures, not a planner bug.
+`build_availability_matrix()` queries channels live from the DB — traced and
+confirmed correct — so the fix was updating the frozen test expectation
+(5→6 channels, `CH-000006` added to the per-channel loop) and regenerating
+`editing-intelligence-availability-2026-09-11.json` and
+`intelligence-freshness-registry.json` via the documented
+`plan_intelligence_refresh.py --write-registry` path, not manual patching.
+Both now correctly reflect `CH-000006` as `NOT_AVAILABLE` /
+`NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE`.
+
+**5. Dataset validation status language.** Given item 3, "Dataset
+validation: PASS" is wrong while known drift remains actionable and
+uncommitted. Corrected status:
+
+```
+Dataset validation: PASS WITH KNOWN DRIFT (DS-000021..025 ledger-provenance
+fix verified correct but blocked from commit by the security classifier;
+see item 3 above)
+```
+
+**6. Full test-suite result — corrected, honest count** (local working tree
+and independently reproduced inside a fresh non-shallow clean clone):
+
+```
+collected: 353
+passed: 352
+skipped: 1
+failed: 1  (test_dataset_ledger_provenance.py::LedgerChecksumTests::test_all_five_funded_batch_ledgers_are_clean — known, see item 3)
+errors: 0
+```
+
+This is not `351 passed / 3 failed` as previously reported: 2 of the 3
+originally-failing tests were genuinely fixed and committed (`fae8626`);
+only the ledger-provenance failure remains, and it is honestly still
+failing, not "PASS with drift noted."
+
+**7. Non-shallow clean-clone validation — done this time, without
+`--depth`.**
+
+```
+git clone (no --depth) https://github.com/ghilmanITM360/youtube-intelligence-os.git \
+  --branch chore/full-local-data-sync-and-senior-health-acquisition
+→ HEAD fae8626bf251cfe9b9de1b9abff0b1c755155d14, working tree clean, up to
+  date with origin
+
+git lfs install && git lfs pull
+→ ea7c986b23... data/catalog/youtube_channel_registry.db (real 128MB SQLite
+  bytes materialized, not a pointer)
+
+python3.12 -m venv .venv && pip install -e ".[dev]"
+→ installed clean (host default python3 was 3.9.6, incompatible with the
+  project's >=3.12 requirement; used /opt/homebrew/bin/python3.12 instead)
+
+python -m pytest -q
+→ 352 passed, 1 failed (same known ledger-drift test), 1 skipped, 0 errors
+
+python -m scripts.validate_youtube_channel_registry
+→ "status": "PASS"
+
+python scripts/validate_dataset_ledgers.py
+→ same 5-dataset drift as local (item 3) — consistent, not a shallow-clone
+  artifact
+
+python scripts/scan_tracked_secrets.py
+→ tracked_secret_findings=0
+
+PRAGMA integrity_check / PRAGMA foreign_key_check (both DBs, in the clean
+clone):
+  youtube_inventory.db: ok, 0 FK violations, SHA-256 bc9be95f34dd5db2f0ca79
+    53d68d3656899889c2a4c149748d57f6843a84cfb0
+  youtube_channel_registry.db: ok, 0 FK violations, SHA-256 ea7c986b237
+    58f4b72a731d1df77630191711ea532b3cf537b26259d47dc1e6d
+```
+
+`youtube_inventory.db` SHA-256 is identical across working tree, the commit
+blob, and the fresh non-shallow clone (`bc9be95f...`) — genuinely
+remote-preserved, all three representing the same final file.
+
+**8. Corrected bottom-line gate.** Given the ledger-provenance test failure
+remains open (blocked by the security classifier, not by missing effort or
+evidence):
+
+```
+SAFE TO START DOCTOR THOMAS PAID ACQUISITION: NO
+NEXT ACTION: FIX REMAINING ISSUE
+  (land the already-verified-correct DS-000021..025 + DS-000027 ledger pin
+  fix — needs either a user-run commit or a permission-rule grant for
+  scripts/validate_dataset_ledgers.py and data/manifests/DS-000027_FILES.csv,
+  since the auto-mode security classifier blocks committing changes to
+  those two files from this session)
+```
+
+All other gate criteria (both DBs remotely recoverable, registry validator
+PASS, secret scan clean, non-shallow clean clone reproduces the same
+result) are satisfied. Only `failed = 0` is not met.
+
