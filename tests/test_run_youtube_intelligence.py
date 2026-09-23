@@ -8,7 +8,11 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import run_youtube_intelligence as orch  # noqa: E402
 
+FULL_HISTORICAL_CATALOG = (ROOT / "data/raw/competitors/DS-000001").exists()
+REQUIRES_HISTORICAL = unittest.skipUnless(FULL_HISTORICAL_CATALOG, "requires ignored historical catalog evidence")
 
+
+@REQUIRES_HISTORICAL
 class CaseAFullEvidenceTests(unittest.TestCase):
     """CH-000004 / CH-000004-OP-001: full evidence chain, Editing available."""
 
@@ -51,6 +55,7 @@ class CaseAFullEvidenceTests(unittest.TestCase):
         self.assertEqual(json.dumps(self.plan, sort_keys=True), json.dumps(second, sort_keys=True))
 
 
+@REQUIRES_HISTORICAL
 class CaseBDegradedEvidenceTests(unittest.TestCase):
     """CH-000005 / strongest candidate: no forensic evidence -> Editing NOT_AVAILABLE."""
 
@@ -156,6 +161,7 @@ class CapabilityRegistryTests(unittest.TestCase):
         self.assertEqual(by_id["CH-000001"]["MEDICAL_VALIDATION"]["status"], "NOT_APPLICABLE")
 
 
+@REQUIRES_HISTORICAL
 class AllChannelOrchestrationTests(unittest.TestCase):
     """Every canonical channel must compose a plan using its own strongest
     existing candidate/opportunity -- no channel is forced to fail or to a
@@ -183,6 +189,7 @@ class AllChannelOrchestrationTests(unittest.TestCase):
         self.assertNotEqual(plan["coherence"]["overall"], "INCOHERENT")
 
 
+@REQUIRES_HISTORICAL
 class CH5LinkageTests(unittest.TestCase):
     """CH-000005's per-opportunity linkage object must honestly reflect real
     evidence overlap -- never force a full match it cannot support."""

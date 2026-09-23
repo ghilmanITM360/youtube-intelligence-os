@@ -14,6 +14,17 @@ RAW_AUTHORITY = (
 )
 
 
+class GeneratedAtTests(unittest.TestCase):
+    def test_generated_at_is_actual_build_time_not_verified_at(self):
+        import sys
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import build_youtube_channel_registry as builder
+
+        stamp = builder._generated_at()
+        self.assertNotEqual(stamp, builder.VERIFIED_AT)
+        self.assertRegex(stamp, r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
+
+
 class RawChannelAuthorityTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

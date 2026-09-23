@@ -26,6 +26,8 @@ class TrainingSourceDedupTests(unittest.TestCase):
         self.assertEqual(summary["row_count"], 63)
 
     def test_no_raw_evidence_files_were_added_for_these_sources(self):
+        if not (ROOT / "data/raw/global-youtube-knowledge/DS-000011").exists():
+            self.skipTest("requires ignored historical raw evidence directories")
         ds011_files = list((ROOT / "data/raw/global-youtube-knowledge/DS-000011").iterdir())
         ds018_files = list((ROOT / "data/raw/global-youtube-knowledge/DS-000018").iterdir())
         self.assertEqual(len(ds011_files), 17)

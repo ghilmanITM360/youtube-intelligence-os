@@ -66,6 +66,7 @@ class GeneralizedChannelArtifactTests(unittest.TestCase):
             self.assertEqual(payload["evidence_snapshot"]["unavailable_transcripts"], [])
 
 
+@unittest.skipUnless((ROOT / "data/raw/competitors/DS-000001").exists(), "requires ignored historical transcript archive")
 class ArchiveMemberTranscriptReadTests(unittest.TestCase):
     """CH-000001/002 store transcripts inside a zip (ARCHIVE_MEMBER source_files),
     unlike CH-000004/005's physical files -- the shared reporter must read both."""

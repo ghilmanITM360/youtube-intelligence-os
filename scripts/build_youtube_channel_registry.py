@@ -13,6 +13,7 @@ import sqlite3
 import sys
 import zipfile
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -21,6 +22,11 @@ IDENTITY_EVIDENCE = "data/manifests/YOUTUBE_CHANNEL_IDENTITY_EVIDENCE.json"
 COVERAGE_LEDGER = "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv"
 SCHEMA = "data/catalog/channel_registry/schema.sql"
 VERIFIED_AT = "2026-09-14"
+
+
+def _generated_at() -> str:
+    """Actual build time, distinct from VERIFIED_AT (last human evidence verification)."""
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 STATUSES = {
     "COMPLETE",
     "COMPLETE_WITH_LIMITATIONS",
@@ -545,7 +551,7 @@ def build_model(root: Path) -> dict:
     channels.sort(key=lambda row: ({"ORIGINAL_TARGET": 0, "ADDED_TARGET": 1, "OUTSIDE_TARGET": 2}[row["target_group"]], min(row["submission_rows"] or [999]), row["channel_name"].lower()))
     return {
         "schema_version": 2,
-        "generated_at": VERIFIED_AT,
+        "generated_at": _generated_at(),
         "controls": controls,
         "channels": channels,
         "submissions": submissions,
@@ -1077,7 +1083,7 @@ def build_database(root: Path, database_path: Path, model: dict | None = None) -
             for item in intelligence:
                 _upsert(connection, "intelligence_coverage", item, ("canonical_channel_id", "capability_id"))
             metadata = {
-                "generated_at": VERIFIED_AT,
+                "generated_at": _generated_at(),
                 "source_payload_sha256": json.loads((root / RAW_AUTHORITY).read_text())["controls"]["ordered_payload_sha256"],
                 "historical_catalog_sha256": sha256_file(root / "data/catalog/youtube_inventory.db"),
                 "fts5_enabled": "0",
