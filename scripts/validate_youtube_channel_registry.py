@@ -18,8 +18,8 @@ EXPECTED = {
     "target_channels": 63,
     "channels_with_video_data": 43,
     "identity_only_channels": 29,
-    "standard_packages": 37,
-    "historical_channels": 6,
+    "standard_packages": 38,
+    "historical_channels": 5,
     "stored_outside_targets": 9,
     "datasets": 28,
     "videos": 2027,
@@ -105,7 +105,7 @@ def validate_database(root: Path, database: Path) -> dict:
             "null_transcript_without_reason": 0,
             "forensic_channel_count": 1,
             "thumbnail_evidence_channel_count": 3,
-            "title_only_historical_channel_count": 3,
+            "title_only_historical_channel_count": 2,
             "first_party_ingested_count": 0,
         }
         check_results = {name: scalar(connection, sql) for name, sql in checks.items()}

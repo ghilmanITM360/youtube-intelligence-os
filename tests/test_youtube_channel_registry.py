@@ -174,16 +174,16 @@ class RegistryModelTests(unittest.TestCase):
 
     def test_package_control_totals(self):
         package = self.model["controls"]["package_layer"]
-        self.assertEqual(37, package["channels"])
-        self.assertEqual(1702, package["unique_videos"])
-        self.assertEqual(1692, package["real_transcripts"])
-        self.assertEqual(10, package["placeholders"])
-        self.assertEqual(14, package["missing_descriptions"])
+        self.assertEqual(38, package["channels"])
+        self.assertEqual(1724, package["unique_videos"])
+        self.assertEqual(1713, package["real_transcripts"])
+        self.assertEqual(11, package["placeholders"])
+        self.assertEqual(15, package["missing_descriptions"])
 
     def test_source_groups_and_independent_data_layer_statuses(self):
         channels = self.model["channels"]
         self.assertEqual(
-            {"STANDARD_PACKAGE": 37, "HISTORICAL_CATALOG": 6, "IDENTITY_ONLY": 29},
+            {"STANDARD_PACKAGE": 38, "HISTORICAL_CATALOG": 5, "IDENTITY_ONLY": 29},
             {
                 group: sum(row["source_group"] == group for row in channels)
                 for group in ("STANDARD_PACKAGE", "HISTORICAL_CATALOG", "IDENTITY_ONLY")
@@ -233,7 +233,7 @@ class RegistryModelTests(unittest.TestCase):
             },
         )
         self.assertEqual(
-            {"UCkqzov98m_7niJOXwbRQgBA", "UC6AwWrRKNrwt83CMJqeTUzw", "UCFuGMi0idGeyXl6wYK9hg7Q"},
+            {"UCkqzov98m_7niJOXwbRQgBA", "UC6AwWrRKNrwt83CMJqeTUzw"},
             {
                 identifier
                 for identifier, row in channels.items()
@@ -269,7 +269,7 @@ class RegistryModelTests(unittest.TestCase):
             if row["capability_id"] == "TOPIC_OPPORTUNITY"
             and row["status"] == "DATA_READY"
         ]
-        self.assertEqual(37, len(package_ready))
+        self.assertEqual(38, len(package_ready))
         self.assertTrue(all(row["input_data_available"] and not row["generated_artifact_available"] for row in package_ready))
         editing = [row for row in coverage if row["capability_id"] == "EDITING_VISUAL" and row["generated_artifact_available"]]
         self.assertEqual(["UC6IxnFzHofFJ5X2PycSMsww"], [row["canonical_channel_id"] for row in editing])
@@ -601,8 +601,8 @@ class RegistryDatabaseTests(unittest.TestCase):
                 self.assertEqual(2015, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
                 self.assertEqual(12, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 1").fetchone()[0])
                 self.assertEqual(15, connection.execute("SELECT count(*) FROM videos WHERE description IS NULL").fetchone()[0])
-                self.assertEqual(37, connection.execute("SELECT count(*) FROM channels WHERE source_group='STANDARD_PACKAGE'").fetchone()[0])
-                self.assertEqual(6, connection.execute("SELECT count(*) FROM channels WHERE source_group='HISTORICAL_CATALOG'").fetchone()[0])
+                self.assertEqual(38, connection.execute("SELECT count(*) FROM channels WHERE source_group='STANDARD_PACKAGE'").fetchone()[0])
+                self.assertEqual(5, connection.execute("SELECT count(*) FROM channels WHERE source_group='HISTORICAL_CATALOG'").fetchone()[0])
                 self.assertEqual(29, connection.execute("SELECT count(*) FROM channels WHERE source_group='IDENTITY_ONLY'").fetchone()[0])
                 self.assertEqual(72 * 11, connection.execute("SELECT count(*) FROM channel_data_layers").fetchone()[0])
                 self.assertEqual(72, connection.execute("SELECT count(*) FROM visual_coverage").fetchone()[0])
@@ -633,8 +633,8 @@ class RegistryValidatorTests(unittest.TestCase):
         self.assertEqual(63, result["controls"]["target_channels"])
         self.assertEqual(43, result["controls"]["channels_with_video_data"])
         self.assertEqual(29, result["controls"]["identity_only_channels"])
-        self.assertEqual(37, result["controls"]["standard_packages"])
-        self.assertEqual(6, result["controls"]["historical_channels"])
+        self.assertEqual(38, result["controls"]["standard_packages"])
+        self.assertEqual(5, result["controls"]["historical_channels"])
         self.assertEqual(576, result["controls"]["intelligence_coverage_rows"])
 
 

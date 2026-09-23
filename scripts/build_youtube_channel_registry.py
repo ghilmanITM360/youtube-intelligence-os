@@ -228,6 +228,10 @@ def package_thumbnail_url_counts(root: Path, channels: list[dict]) -> dict[str, 
             for row in csv.DictReader(handle):
                 if row["thumbnail_url"]:
                     counts[row["channel_id"]] += 1
+    ds29_raw = root / "data/raw/competitors/DS-000029/apify/WqJIbwUkgkHDHxdaI/raw/dataset.json"
+    if ds29_raw.is_file():
+        records = json.loads(ds29_raw.read_text(encoding="utf-8"))
+        counts["UCFuGMi0idGeyXl6wYK9hg7Q"] += sum(1 for record in records if record.get("thumbnailUrl"))
     from openpyxl import load_workbook
     for channel in channels:
         if channel["primary_dataset_id"] != "DS-000022":
@@ -483,7 +487,7 @@ def build_model(root: Path) -> dict:
             **{key: value for key, value in inventory.items() if key not in {"canonical_channel_id", "channel_name", "current_handle", "canonical_url", "primary_dataset_id"}},
         })
 
-    resolved_names = {re.sub(r"[^a-z0-9]", "", row["channel_name"].lower()) for row in inventory_channels}
+    resolved_names = {re.sub(r"[^a-z0-9]", "", row["channel_name"].lower()) for row in channels}
     screenshot_rows = [
         row for row in coverage
         if canonical_id(row["Canonical ID"]) is None

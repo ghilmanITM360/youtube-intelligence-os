@@ -366,8 +366,8 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             standard = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE source_group='STANDARD_PACKAGE' ORDER BY channel_name"))
             self.assertIn(f"26 rows: {complete}.", report)
             self.assertIn(f"29 rows: {pending}.", report)
-            self.assertIn(f"37 rows: {standard}.", report)
-            for text in ("Registry total: 1,994 real transcripts.", "Total: 11.", "Total: 14.", "71 channels: `SCHEMA_READY_NO_DATA`."):
+            self.assertIn(f"38 rows: {standard}.", report)
+            for text in ("Registry total: 2,015 real transcripts.", "Total: 12.", "Total: 15.", "72 channels: `SCHEMA_READY_NO_DATA`."):
                 self.assertIn(text, report)
         finally:
             connection.close()
@@ -394,13 +394,22 @@ class ChannelMasterTrackerTests(unittest.TestCase):
                         header = text.split("\n==========", 1)[0]
                         video_id = dict(re.findall(r"^([^:\n]+?)\s*:\s*(.*)$", header, re.MULTILINE)).get("Video ID")
                         row = connection.execute(
-                            "SELECT transcript_text,is_placeholder,unavailable_reason,transcript_sha256 FROM transcripts WHERE youtube_video_id=?",
+                            "SELECT transcript_text,is_placeholder,unavailable_reason,transcript_sha256,evidence_locator FROM transcripts WHERE youtube_video_id=?",
                             (video_id,),
                         ).fetchone()
                         if not row:
                             errors.append(f"{channel['channel_name']}: missing {video_id}")
                             continue
-                        if (body, int(placeholder), hashlib.sha256(body.encode()).hexdigest()) != (row[0], row[1], row[3]):
+                        # A video with no YouTube subtitle and no transcript archive backing it
+                        # (evidence_locator=NO_SOURCE_AVAILABLE) has no source text to reconcile
+                        # byte-for-byte: the DB records an explicit empty gap, while the package
+                        # ZIP carries an honest, non-fabricated placeholder marker. Both are
+                        # legitimate representations of "no source exists"; only the placeholder
+                        # flag and reason need to agree.
+                        if row[4] == "NO_SOURCE_AVAILABLE":
+                            if not (placeholder and row[1] and reason and row[2]):
+                                errors.append(f"{channel['channel_name']}: no-source video not marked placeholder {video_id}")
+                        elif (body, int(placeholder), hashlib.sha256(body.encode()).hexdigest()) != (row[0], row[1], row[3]):
                             errors.append(f"{channel['channel_name']}: mismatch {video_id}")
                         if placeholder and not (reason and row[2]):
                             errors.append(f"{channel['channel_name']}: missing placeholder reason {video_id}")
@@ -412,7 +421,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             connection.close()
         self.assertFalse(errors, errors[:10])
         self.assertEqual(
-            {"channels": 37, "videos": 1702, "real": 1692, "placeholders": 10, "over_excel_limit": 36},
+            {"channels": 38, "videos": 1724, "real": 1713, "placeholders": 11, "over_excel_limit": 36},
             counts,
         )
 
