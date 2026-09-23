@@ -606,40 +606,51 @@ def _historical_records(root: Path) -> tuple[list[dict], list[dict], list[dict]]
     videos, transcripts, memberships = [], [], []
     try:
         for row in source.execute(sql):
-            reference = row["canonical_reference"] or (
-                "data/raw/competitors/DS-000001/Transcripts_All_159_Videos.zip::"
-                + row["archive_member_path"]
-            )
-            path_part, separator, member = reference.partition("::")
-            source_path = Path(path_part)
-            if source_path.is_absolute():
-                if source_path.is_relative_to(root):
-                    relative_path = source_path.relative_to(root)
-                elif "/data/" in source_path.as_posix():
-                    relative_path = Path("data") / source_path.as_posix().split("/data/", 1)[1]
+            no_source = row["canonical_reference"] is None and row["archive_member_path"] is None
+            if no_source:
+                # Legitimate gap: YouTube provides no captions/subtitles for this
+                # video and no transcript archive backs it (e.g. Apify-ingested
+                # video with hasSubtitles=false). Not an error, not a file to read.
+                portable_reference = "NO_SOURCE_AVAILABLE"
+                body = ""
+                description = row["description"]
+                placeholder = True
+                reason = row["notes"] or "NO_YOUTUBE_SUBTITLE"
+            else:
+                reference = row["canonical_reference"] or (
+                    "data/raw/competitors/DS-000001/Transcripts_All_159_Videos.zip::"
+                    + row["archive_member_path"]
+                )
+                path_part, separator, member = reference.partition("::")
+                source_path = Path(path_part)
+                if source_path.is_absolute():
+                    if source_path.is_relative_to(root):
+                        relative_path = source_path.relative_to(root)
+                    elif "/data/" in source_path.as_posix():
+                        relative_path = Path("data") / source_path.as_posix().split("/data/", 1)[1]
+                    else:
+                        raise ValueError(f"Historical source is outside repository data: {source_path}")
                 else:
-                    raise ValueError(f"Historical source is outside repository data: {source_path}")
-            else:
-                relative_path = source_path
-            local_path = (root / relative_path).resolve()
-            if not local_path.is_relative_to(root.resolve()) or not local_path.is_file():
-                raise FileNotFoundError(f"Historical source missing in selected repository: {relative_path}")
-            portable_reference = relative_path.as_posix() + (f"::{member}" if separator else "")
-            if separator:
-                with zipfile.ZipFile(local_path) as archive:
-                    text = archive.read(member).decode("utf-8")
-            else:
-                text = local_path.read_text(encoding="utf-8")
-            body, parsed_placeholder, reason = _parse_structured_transcript(text)
-            description = row["description"]
-            if description is None and "\nDESCRIPTION\n" in text:
-                description_marker = re.search(r"\n={5,}\nDESCRIPTION\n={5,}\n", text)
-                transcript_marker = re.search(r"\n={5,}\nTRANSCRIPT\n={5,}\n", text)
-                if description_marker and transcript_marker:
-                    description = text[description_marker.end():transcript_marker.start()].strip() or None
-            placeholder = parsed_placeholder or row["availability_status"] != "AVAILABLE"
-            if placeholder and not reason:
-                reason = row["notes"] or body
+                    relative_path = source_path
+                local_path = (root / relative_path).resolve()
+                if not local_path.is_relative_to(root.resolve()) or not local_path.is_file():
+                    raise FileNotFoundError(f"Historical source missing in selected repository: {relative_path}")
+                portable_reference = relative_path.as_posix() + (f"::{member}" if separator else "")
+                if separator:
+                    with zipfile.ZipFile(local_path) as archive:
+                        text = archive.read(member).decode("utf-8")
+                else:
+                    text = local_path.read_text(encoding="utf-8")
+                body, parsed_placeholder, reason = _parse_structured_transcript(text)
+                description = row["description"]
+                if description is None and "\nDESCRIPTION\n" in text:
+                    description_marker = re.search(r"\n={5,}\nDESCRIPTION\n={5,}\n", text)
+                    transcript_marker = re.search(r"\n={5,}\nTRANSCRIPT\n={5,}\n", text)
+                    if description_marker and transcript_marker:
+                        description = text[description_marker.end():transcript_marker.start()].strip() or None
+                placeholder = parsed_placeholder or row["availability_status"] != "AVAILABLE"
+                if placeholder and not reason:
+                    reason = row["notes"] or body
             videos.append({
                 "youtube_video_id": row["youtube_video_id"], "canonical_channel_id": row["youtube_channel_id"],
                 "canonical_url": row["canonical_url"], "title": row["title"], "published_at": row["published_at"],
