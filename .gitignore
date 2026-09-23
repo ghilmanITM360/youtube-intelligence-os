@@ -78,6 +78,23 @@ data/raw/**/*
 !data/raw/channel-data/DS-000026/preflight/29_channel_public_counts.json
 !data/raw/channel-data/DS-000026/preflight/29_channel_registry_export.json
 
+# DS-000027 (Dr. Ares) is an explicitly authorized, checksum-registered Apify
+# evidence set. Version the preflight authorization trail and the run's
+# observed input/API/balance evidence; the raw actor payload and per-run
+# evidence/ subdirectory are already tracked separately.
+!data/raw/channel-data/DS-000027/
+!data/raw/channel-data/DS-000027/preflight/
+!data/raw/channel-data/DS-000027/preflight/channel_identity_evidence.json
+!data/raw/channel-data/DS-000027/preflight/actor_input_schema_evidence.json
+!data/raw/channel-data/DS-000027/preflight/authenticated_apify_balance_evidence.json
+!data/raw/channel-data/DS-000027/preflight/proposed_actor_input.json
+!data/raw/channel-data/DS-000027/preflight/authenticated_apify_pricing_evidence.json
+!data/raw/channel-data/DS-000027/preflight/preflight_cost_proposal.json
+!data/raw/channel-data/DS-000027/preflight/authenticated_apify_prelaunch_verification_20260920T163357+0500.json
+!data/raw/channel-data/DS-000027/apify/
+!data/raw/channel-data/DS-000027/apify/*/
+!data/raw/channel-data/DS-000027/apify/*/*.json
+
 # DS-000028 is an explicitly authorized, checksum-registered Apify evidence
 # set. Version its immutable raw result, observed input/run metadata, and
 # acquired transcript while keeping the general raw-data safety default.
