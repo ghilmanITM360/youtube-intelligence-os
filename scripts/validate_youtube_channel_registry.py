@@ -13,23 +13,23 @@ from scripts.build_youtube_channel_registry import build_database, build_model, 
 
 
 EXPECTED = {
-    "canonical_channels": 70,
+    "canonical_channels": 72,
     "raw_submissions": 67,
     "target_channels": 63,
-    "channels_with_video_data": 41,
+    "channels_with_video_data": 43,
     "identity_only_channels": 29,
-    "standard_packages": 36,
-    "historical_channels": 5,
-    "stored_outside_targets": 7,
-    "datasets": 26,
-    "videos": 1939,
-    "real_transcripts": 1928,
+    "standard_packages": 37,
+    "historical_channels": 6,
+    "stored_outside_targets": 9,
+    "datasets": 28,
+    "videos": 2127,
+    "real_transcripts": 2116,
     "placeholders": 11,
-    "description_gaps": 14,
+    "description_gaps": 16,
     "non_channel_subjects": 7,
-    "intelligence_coverage_rows": 560,
-    "data_layer_rows": 770,
-    "visual_coverage_rows": 70,
+    "intelligence_coverage_rows": 576,
+    "data_layer_rows": 792,
+    "visual_coverage_rows": 72,
 }
 
 REQUIRED_VIEWS = {
@@ -105,7 +105,7 @@ def validate_database(root: Path, database: Path) -> dict:
             "null_transcript_without_reason": 0,
             "forensic_channel_count": 1,
             "thumbnail_evidence_channel_count": 3,
-            "title_only_historical_channel_count": 2,
+            "title_only_historical_channel_count": 3,
             "first_party_ingested_count": 0,
         }
         check_results = {name: scalar(connection, sql) for name, sql in checks.items()}

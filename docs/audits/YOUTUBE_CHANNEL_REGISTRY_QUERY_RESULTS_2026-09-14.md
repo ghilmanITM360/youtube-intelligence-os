@@ -20,16 +20,17 @@ Ten are original targets and 19 are later additions. All identities are verified
 
 ## 3. Standard-package channels
 
-35 rows: Apesthetic; Bob Invests; Brimm.; Bro Pump; CIPHER UNIT; Carl Invests; Crayon Capital; Dark Ledger; Explain In Paint; Genius History; Hypothetically; Ink Explainer; Just Some Guy Stories; Lost Legacy; Lucas Grant; Luco; Mack; Maximus; Money Life POV; My Chaotic Stories; Nick Invests; Oddlyhuman; Past Tense; Primate Economics; Shaami Finance; Sonny Finance; Stickly; The Life Outline; Tp Dossier; Unknown Frequencies; Well.; Zenn; Zoozle; ago.; inkly.
+37 rows: Apesthetic; Bob Invests; Brimm.; Bro Pump; CIPHER UNIT; Carl Invests; Crayon Capital; Dark Ledger; Dr. Ares Senior; Explain In Paint; Genius History; Hypothetically; Ink Explainer; Just Some Guy Stories; Lost Legacy; Lucas Grant; Luco; Mack; Maximus; Money Life POV; My Chaotic Stories; Nick Invests; Oddlyhuman; Past Tense; Primate Economics; Senior Health Hub; Shaami Finance; Sonny Finance; Stickly; The Life Outline; Tp Dossier; Unknown Frequencies; Well.; Zenn; Zoozle; ago.; inkly.
 
 Every row has one exact package workbook and one transcript ZIP path.
 
 ## 4. Historical-format channels
 
-Five rows:
+Six rows:
 
 - Dr. Aliza Wright | Advice: `DS-000006`
 - Dr. Elias Senior Health: `DS-000019`
+- Dr. Okoro: `DS-000028`
 - Matty Invests: `DS-000001`
 - Mr. Finance: `DS-000001`
 - xkcd's What If?: `DS-000012`, `DS-000013`, `DS-000014`, `DS-000015`, `DS-000017`
@@ -38,7 +39,7 @@ These are not reported as standard packages.
 
 ## 5. Channels with real transcripts
 
-40 channels. Registry total: 1,893 real transcripts.
+43 channels. Registry total: 2,116 real transcripts.
 
 ## 6. Channels with placeholders
 
@@ -51,12 +52,13 @@ Total: 11.
 
 - Apesthetic: 1.
 - Primate Economics: 13.
+- Senior Health Hub: 2.
 
-Total: 14.
+Total: 16.
 
 ## 8. Channels with thumbnail URLs only
 
-35 rows, exactly the standard-package channels. Each package video has a thumbnail URL, but no downloaded thumbnail evidence is registered in the standard package.
+37 rows, exactly the standard-package channels. Each package video has a thumbnail URL, but no downloaded thumbnail evidence is registered in the standard package.
 
 ## 9. Channels with downloaded thumbnail evidence
 
@@ -89,11 +91,11 @@ Generated rows include evidence paths. Packaging is partial/title-only for Matty
 
 ## 13. Input exists but output is not generated
 
-The 35 standard-package channels each have input-ready rows for Topic Opportunity, Packaging, Hook, and Script: 35 rows per capability, 140 rows total. `generated_artifact_available` remains false.
+The 37 standard-package channels each have input-ready rows for Topic Opportunity, Packaging, Hook, and Script: 37 rows per capability, 148 rows total. `generated_artifact_available` remains false.
 
 ## 14. First-party Analytics status
 
-69 channels: `SCHEMA_READY_NO_DATA`. Zero channels: `INGESTED`. Public scraped metrics are not first-party Analytics.
+72 channels: `SCHEMA_READY_NO_DATA`. Zero channels: `INGESTED`. Public scraped metrics are not first-party Analytics.
 
 ## 15. Data gaps for one channel
 

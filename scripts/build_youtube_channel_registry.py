@@ -145,10 +145,37 @@ def historical_dataset_links(root: Path) -> dict[str, list[str]]:
         connection.close()
 
 
+def inventory_channels(root: Path) -> list[dict]:
+    connection = sqlite3.connect(root / "data/catalog/youtube_inventory.db")
+    connection.row_factory = sqlite3.Row
+    try:
+        return [dict(row) for row in connection.execute(
+            """
+            SELECT c.youtube_channel_id,c.display_name,c.handle,c.channel_url,
+                   v.created_from_dataset_id AS dataset_id,
+                   COUNT(DISTINCT v.video_id) AS videos,
+                   COUNT(DISTINCT CASE WHEN s.video_type='video' THEN v.video_id END) AS regular,
+                   COUNT(DISTINCT CASE WHEN s.video_type='shorts' THEN v.video_id END) AS shorts,
+                   COUNT(DISTINCT CASE WHEN s.video_type='stream' THEN v.video_id END) AS livestreams,
+                   COUNT(DISTINCT CASE WHEN s.description IS NOT NULL AND s.description<>'' THEN v.video_id END) AS descriptions,
+                   COUNT(DISTINCT CASE WHEN t.availability_status='AVAILABLE' THEN v.video_id END) AS real_transcripts,
+                   COUNT(DISTINCT CASE WHEN t.availability_status='UNAVAILABLE' THEN v.video_id END) AS placeholders
+            FROM channels c
+            JOIN videos v USING(channel_id)
+            LEFT JOIN video_snapshots s ON s.video_id=v.video_id AND s.dataset_id=v.created_from_dataset_id
+            LEFT JOIN transcripts t ON t.video_id=v.video_id AND t.dataset_id=v.created_from_dataset_id
+            WHERE c.youtube_channel_id IS NOT NULL
+            GROUP BY c.channel_id,v.created_from_dataset_id
+            ORDER BY c.youtube_channel_id
+            """
+        )]
+    finally:
+        connection.close()
+
+
 def package_thumbnail_url_counts(root: Path, channels: list[dict]) -> dict[str, int]:
     counts = defaultdict(int)
-    for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027"):
-        path = next((root / "data/extracted/channel-data" / dataset_id / "combined").glob("*_master.csv"))
+    for path in sorted((root / "data/extracted/channel-data").glob("DS-*/combined/*_master.csv")):
         with path.open(encoding="utf-8-sig", newline="") as handle:
             for row in csv.DictReader(handle):
                 if row["thumbnail_url"]:
@@ -376,6 +403,60 @@ def build_model(root: Path) -> dict:
             **metrics,
         })
 
+    known_ids = {row["canonical_channel_id"] for row in channels}
+    for row in inventory_channels(root):
+        identifier = row["youtube_channel_id"]
+        if identifier in known_ids:
+            continue
+        dataset_id = row["dataset_id"]
+        package_dir = root / "data/extracted/channel-data" / dataset_id / "packages"
+        workbooks = sorted(package_dir.glob("*/*.xlsx")) if package_dir.is_dir() else []
+        archives = sorted(package_dir.glob("*/*.zip")) if package_dir.is_dir() else []
+        packaged = len(workbooks) == len(archives) == 1
+        video_count = row["videos"]
+        limitations = [] if row["descriptions"] == video_count else [f"{video_count - row['descriptions']} videos have no public description."]
+        metrics = {
+            "dataset_ids": historical_links.get(identifier, [dataset_id]),
+            "video_count": video_count,
+            "regular_videos": row["regular"],
+            "shorts": row["shorts"],
+            "livestreams": row["livestreams"],
+            "descriptions": row["descriptions"],
+            "real_transcripts": row["real_transcripts"],
+            "placeholders": row["placeholders"],
+            "missing_transcripts": video_count - row["real_transcripts"] - row["placeholders"],
+            "workbook_path": workbooks[0].relative_to(root).as_posix() if packaged else None,
+            "transcript_zip_path": archives[0].relative_to(root).as_posix() if packaged else None,
+        }
+        source_group = "STANDARD_PACKAGE" if packaged else "HISTORICAL_CATALOG"
+        status = "COMPLETE_WITH_LIMITATIONS" if limitations else "COMPLETE"
+        evidence = f"data/manifests/{dataset_id}.md"
+        channels.append({
+            "canonical_channel_id": identifier,
+            "channel_name": row["display_name"],
+            "current_handle": row["handle"],
+            "canonical_url": row["channel_url"] or f"https://www.youtube.com/channel/{identifier}",
+            "source_group": source_group,
+            "primary_dataset_id": dataset_id,
+            "target_group": "OUTSIDE_TARGET",
+            "status": status,
+            "completed_tick": "✓" if status == "COMPLETE" else "",
+            "identity_evidence_source": evidence,
+            "verified_at": VERIFIED_AT,
+            "handle_unavailable_reason": None,
+            "limitations": limitations,
+            "submission_rows": [],
+            "identity_status": "VERIFIED",
+            "extraction_status": status,
+            "package_status": "STANDARD_PACKAGE" if packaged else "HISTORICAL_FORMAT",
+            "video_metadata_status": "COMPLETE",
+            "description_status": "COMPLETE" if row["descriptions"] == video_count else "PARTIAL",
+            "transcript_status": "COMPLETE_WITH_PLACEHOLDERS" if row["placeholders"] else ("COMPLETE_REAL" if row["real_transcripts"] == video_count else "PARTIAL"),
+            "intelligence_status": "DATA_READY" if packaged else "PARTIAL",
+            "first_party_analytics_status": "SCHEMA_READY_NO_DATA",
+            **metrics,
+        })
+
     screenshot_rows = [row for row in coverage if canonical_id(row["Canonical ID"]) is None and row["Dataset"] in {f"DS-{n:06d}" for n in range(3, 11)}]
     subjects = [{
         "subject_id": f"SUBJ-{index:06d}",
@@ -387,7 +468,6 @@ def build_model(root: Path) -> dict:
         "limitation": "Screenshot-only subject; canonical YouTube identity and video population are not established.",
     } for index, row in enumerate(screenshot_rows, 1)]
 
-    package_rows = [row for _, row in canonical_rows if int(row["Dataset"].split("-")[1]) >= 20]
     enrich_visual_coverage(root, channels, subjects)
     capabilities, intelligence_coverage = _intelligence_records(root, {"channels": channels})
     first_party_evidence = "data/intelligence/system/first-party-analytics-capability-status-2026-09-11.json"
@@ -426,11 +506,11 @@ def build_model(root: Path) -> dict:
             "unmapped_screenshot_subjects": len(subjects),
         },
         "package_layer": {
-            "channels": len(package_rows),
-            "unique_videos": sum(as_int(row["Videos"]) for row in package_rows),
-            "real_transcripts": sum(as_int(row["Real transcripts"]) for row in package_rows),
-            "placeholders": sum(as_int(row["Placeholders"]) for row in package_rows),
-            "missing_descriptions": sum(as_int(row["Videos"]) - as_int(row["Descriptions"]) for row in package_rows),
+            "channels": sum(row["source_group"] == "STANDARD_PACKAGE" for row in channels),
+            "unique_videos": sum(row["video_count"] for row in channels if row["source_group"] == "STANDARD_PACKAGE"),
+            "real_transcripts": sum(row["real_transcripts"] for row in channels if row["source_group"] == "STANDARD_PACKAGE"),
+            "placeholders": sum(row["placeholders"] for row in channels if row["source_group"] == "STANDARD_PACKAGE"),
+            "missing_descriptions": sum(row["video_count"] - row["descriptions"] for row in channels if row["source_group"] == "STANDARD_PACKAGE"),
         },
     }
     if controls["canonical_target_channels"] != len({row["canonical_channel_id"] for row in submissions}):

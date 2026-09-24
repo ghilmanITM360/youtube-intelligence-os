@@ -44,15 +44,15 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             self.assertTrue(self.workbook[name].tables, name)
 
     def test_channel_submission_and_intelligence_rows_reconcile(self):
-        self.assertEqual(69, self.workbook["All Channels"].max_row - 4)
+        self.assertEqual(len(self.model["channels"]), self.workbook["All Channels"].max_row - 4)
         self.assertEqual(29, self.workbook["Pending Channels"].max_row - 4)
         self.assertEqual(67, self.workbook["Submitted URLs"].max_row - 4)
-        self.assertEqual(552, self.workbook["Intelligence Coverage"].max_row - 4)
+        self.assertEqual(len(self.model["intelligence_coverage"]), self.workbook["Intelligence Coverage"].max_row - 4)
         self.assertEqual(
             [row["canonical_channel_id"] for row in self.model["channels"]],
             [
                 self.workbook["All Channels"].cell(row=index, column=1).value
-                for index in range(5, 74)
+                for index in range(5, 5 + len(self.model["channels"]))
             ],
         )
 
@@ -163,7 +163,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             self.assertEqual(coverage["visual_evidence_level"], visual.cell(index, 10).value)
         self.assertEqual(
             [(row["subject_name"], row["screenshot_count"], row["visual_evidence_level"]) for row in self.model["subjects"]],
-            [(visual.cell(row, 1).value, visual.cell(row, 6).value, visual.cell(row, 10).value) for row in range(77, 84)],
+            [(visual.cell(row, 1).value, visual.cell(row, 6).value, visual.cell(row, 10).value) for row in range(7 + len(self.model["channels"]), 7 + len(self.model["channels"]) + len(self.model["subjects"]))],
         )
 
         intelligence = self.workbook["Intelligence Coverage"]
@@ -186,7 +186,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
                     intelligence.cell(row, 5).value,
                     intelligence.cell(row, 6).value,
                 )
-                for row in range(5, 557)
+                for row in range(5, 5 + len(self.model["intelligence_coverage"]))
             ],
         )
 
@@ -238,7 +238,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             datasets,
             [
                 (dataset_sheet.cell(row, 1).value, dataset_sheet.cell(row, 3).value, dataset_sheet.cell(row, 4).value)
-                for row in range(5, 30)
+                for row in range(5, dataset_sheet.max_row + 1)
             ],
         )
 
@@ -273,7 +273,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             for row in range(5, all_channels.max_row + 1)
         }
         visual = self.workbook["Visual Evidence"]
-        visual_rows = {visual.cell(row, 2).value: row for row in range(5, 74)}
+        visual_rows = {visual.cell(row, 2).value: row for row in range(5, 5 + len(self.model["channels"]))}
 
         connection = sqlite3.connect(ROOT / "data/catalog/youtube_channel_registry.db")
         connection.row_factory = sqlite3.Row
@@ -363,8 +363,8 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             standard = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE source_group='STANDARD_PACKAGE' ORDER BY channel_name"))
             self.assertIn(f"26 rows: {complete}.", report)
             self.assertIn(f"29 rows: {pending}.", report)
-            self.assertIn(f"35 rows: {standard}.", report)
-            for text in ("Registry total: 1,893 real transcripts.", "Total: 11.", "Total: 14.", "69 channels: `SCHEMA_READY_NO_DATA`."):
+            self.assertIn(f"37 rows: {standard}.", report)
+            for text in ("Registry total: 2,116 real transcripts.", "Total: 11.", "Total: 16.", "72 channels: `SCHEMA_READY_NO_DATA`."):
                 self.assertIn(text, report)
         finally:
             connection.close()
@@ -409,7 +409,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             connection.close()
         self.assertFalse(errors, errors[:10])
         self.assertEqual(
-            {"channels": 35, "videos": 1601, "real": 1591, "placeholders": 10, "over_excel_limit": 33},
+            {"channels": 37, "videos": 1758, "real": 1748, "placeholders": 10, "over_excel_limit": 33},
             counts,
         )
 

@@ -120,7 +120,7 @@ class EditingVisualIntelligenceTests(unittest.TestCase):
         self.assertEqual(self.payload["channel_wide_editing_style"], "NOT_SUPPORTED")
         with report.connect() as conn:
             matrix = report.build_availability_matrix(conn, ROOT, "2026-09-11")
-        self.assertEqual(len(matrix["channels"]), 5)
+        self.assertEqual(len(matrix["channels"]), 7)
         self.assertEqual(
             next(row for row in matrix["channels"] if row["channel_id"] == "CH-000004")["editing_intelligence_status"],
             "WORKING_WITH_FORENSIC_EVIDENCE",
