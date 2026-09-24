@@ -638,5 +638,77 @@ class RegistryValidatorTests(unittest.TestCase):
         self.assertEqual(584, result["controls"]["intelligence_coverage_rows"])
 
 
+class StandardPackageDiscoveryTests(unittest.TestCase):
+    """Regression coverage for generalized standard-package discovery.
+
+    Proves discovery keys off `workbook_path` (any dataset), not a hardcoded
+    DS-000022 special case: DS-000022 keeps working, DS-000029 (Doctor Thomas)
+    is found the same generic way, and a third, never-before-seen dataset id
+    is discovered without adding any new code branch.
+    """
+
+    def _write_package(self, package_dir: Path, video_id: str) -> None:
+        from openpyxl import Workbook
+
+        package_dir.mkdir(parents=True)
+        workbook = Workbook()
+        videos_sheet = workbook.active
+        videos_sheet.title = "All Videos"
+        for _ in range(3):
+            videos_sheet.append([])
+        videos_sheet.append(["Video ID", "Title", "Published (UTC)", "Sec", "Views", "Likes", "Comments", "Transcript Words", "Thumbnail URL"])
+        videos_sheet.append([video_id, "Future Video", "2026-01-01", 60, 10, 1, 0, 2, "https://example.com/thumb.jpg"])
+        descriptions_sheet = workbook.create_sheet("Descriptions")
+        for _ in range(3):
+            descriptions_sheet.append([])
+        descriptions_sheet.append(["Video ID", "Full Description"])
+        descriptions_sheet.append([video_id, "A future-format description."])
+        workbook.save(package_dir / "Future_Master_Data.xlsx")
+
+        import zipfile
+
+        with zipfile.ZipFile(package_dir / "Future_Transcripts_1_Videos.zip", "w") as archive:
+            archive.writestr(
+                f"{video_id}.txt",
+                f"Video ID: {video_id}\nLanguage: en\nCaption type: manual\n==========\nTRANSCRIPT\n==========\nHello future transcript.",
+            )
+
+    def test_generic_discovery_covers_ds22_ds29_and_a_never_seen_dataset(self):
+        from scripts.build_youtube_channel_registry import _standard_package_records
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self._write_package(root / "data/extracted/channel-data/DS-000022/packages/well", "ds22vid001")
+            self._write_package(root / "data/extracted/channel-data/DS-000029/packages/doctor-thomas", "ds29vid001")
+            self._write_package(root / "data/extracted/channel-data/DS-999999/packages/future-channel", "fut001")
+
+            model = {
+                "channels": [
+                    {"workbook_path": "data/extracted/channel-data/DS-000022/packages/well/Future_Master_Data.xlsx", "primary_dataset_id": "DS-000022", "canonical_channel_id": "UC-DS22"},
+                    {"workbook_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/Future_Master_Data.xlsx", "primary_dataset_id": "DS-000029", "canonical_channel_id": "UC-DS29"},
+                    {"workbook_path": "data/extracted/channel-data/DS-999999/packages/future-channel/Future_Master_Data.xlsx", "primary_dataset_id": "DS-999999", "canonical_channel_id": "UC-FUTURE"},
+                    {"workbook_path": None, "primary_dataset_id": "DS-000001", "canonical_channel_id": "UC-HISTORICAL"},
+                ]
+            }
+
+            videos, transcripts, memberships = _standard_package_records(root, model)
+
+        self.assertEqual(
+            {"ds22vid001": "UC-DS22", "ds29vid001": "UC-DS29", "fut001": "UC-FUTURE"},
+            {video["youtube_video_id"]: video["canonical_channel_id"] for video in videos},
+        )
+        self.assertEqual(
+            {"ds22vid001": "DS-000022", "ds29vid001": "DS-000029", "fut001": "DS-999999"},
+            {transcript["youtube_video_id"]: transcript["dataset_id"] for transcript in transcripts},
+        )
+        self.assertEqual(3, len(memberships))
+
+    def test_ds22_special_case_function_no_longer_exists(self):
+        import scripts.build_youtube_channel_registry as builder
+
+        self.assertFalse(hasattr(builder, "_ds22_records"))
+        self.assertTrue(hasattr(builder, "_standard_package_records"))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -719,16 +719,19 @@ def _combined_package_records(root: Path) -> tuple[list[dict], list[dict], list[
     return videos, transcripts, memberships, runs
 
 
-def _ds22_records(root: Path, model: dict) -> tuple[list[dict], list[dict], list[dict]]:
+def _standard_package_records(root: Path, model: dict) -> tuple[list[dict], list[dict], list[dict]]:
+    """Discover every STANDARD_PACKAGE channel's workbook+ZIP, not just DS-000022's.
+
+    A channel qualifies by having `workbook_path` set (the coverage-ledger-driven
+    STANDARD_PACKAGE marker, see `coverage_metrics`), not by a hardcoded dataset id.
+    """
     from openpyxl import load_workbook
 
-    channels_by_package = {Path(row["workbook_path"]).parent.as_posix(): row for row in model["channels"] if row["primary_dataset_id"] == "DS-000022"}
+    channels_by_package = {Path(row["workbook_path"]).parent.as_posix(): row for row in model["channels"] if row["workbook_path"]}
     videos, transcripts, memberships = [], [], []
-    for package_dir in sorted((root / "data/extracted/channel-data/DS-000022/packages").iterdir()):
-        if not package_dir.is_dir():
-            continue
-        rel_dir = package_dir.relative_to(root).as_posix()
-        channel = channels_by_package[rel_dir]
+    for rel_dir, channel in sorted(channels_by_package.items()):
+        package_dir = root / rel_dir
+        dataset_id = channel["primary_dataset_id"]
         workbook_path = next(package_dir.glob("*.xlsx"))
         zip_path = next(package_dir.glob("*.zip"))
         book = load_workbook(workbook_path, read_only=True, data_only=True)
@@ -764,14 +767,14 @@ def _ds22_records(root: Path, model: dict) -> tuple[list[dict], list[dict], list
                 "thumbnail_url": row["Thumbnail URL"], "raw_json": json.dumps({key: value for key, value in row.items() if value is not None}, default=str, ensure_ascii=False, sort_keys=True),
             })
             transcripts.append({
-                "youtube_video_id": video_id, "dataset_id": "DS-000022", "transcript_text": body,
+                "youtube_video_id": video_id, "dataset_id": dataset_id, "transcript_text": body,
                 "word_count": as_int(row["Transcript Words"]), "language": headers.get("Language"),
                 "caption_type": headers.get("Caption type"), "is_placeholder": int(placeholder),
                 "unavailable_reason": reason,
                 "evidence_locator": f"{zip_path.relative_to(root).as_posix()}::{member}",
                 "transcript_sha256": sha256_bytes(body.encode("utf-8")),
             })
-            memberships.append({"dataset_id": "DS-000022", "youtube_video_id": video_id, "evidence_locator": workbook_path.relative_to(root).as_posix()})
+            memberships.append({"dataset_id": dataset_id, "youtube_video_id": video_id, "evidence_locator": workbook_path.relative_to(root).as_posix()})
     return videos, transcripts, memberships
 
 
@@ -957,10 +960,10 @@ def _actor_run_records(root: Path, package_runs: list[dict]) -> list[dict]:
 def _all_records(root: Path, model: dict):
     historical = _historical_records(root)
     combined = _combined_package_records(root)
-    ds22 = _ds22_records(root, model)
-    videos = historical[0] + combined[0] + ds22[0]
-    transcripts = historical[1] + combined[1] + ds22[1]
-    memberships = historical[2] + combined[2] + ds22[2]
+    standard_package = _standard_package_records(root, model)
+    videos = historical[0] + combined[0] + standard_package[0]
+    transcripts = historical[1] + combined[1] + standard_package[1]
+    memberships = historical[2] + combined[2] + standard_package[2]
     by_id = {}
     for video in videos:
         existing = by_id.get(video["youtube_video_id"])
