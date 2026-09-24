@@ -1,5 +1,7 @@
 # Project Scope
 
+Current boundary (2026-09-23): 71 canonical channels are registered across 27 acquired datasets (plus DS-000026, preflight-only). DS-000027 (Dr. Ares Senior) and DS-000028 (Dr. Okoro, complete) are both integrated (`docs/YOUTUBE_CHANNEL_REGISTRY.md`). UI, RAG, agents, service APIs, scheduled automation, and YouTube API integration remain outside current scope unless explicitly authorized.
+
 ## Current scope
 
 **Phase 1D — Controlled Apify YouTube Acquisition is complete. Phase 2 — Data Classification & Provenance is also closed** (`AGENTS.md` rule 12; 604 classification rows across 303 canonical content items, 5 canonical channels). Topic Opportunity, Packaging, Hook/Script, and Editing/Visual Intelligence have since been authorized and piloted for one or more channels, and a first unified content-intelligence orchestrator (`scripts/run_youtube_intelligence.py`) composes existing layers into evidence-traceable plans without regenerating or fabricating intelligence. The phase numbering in `docs/Phases.md` has not been fully updated to reflect this progression and should be reconciled separately.

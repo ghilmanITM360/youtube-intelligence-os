@@ -8,6 +8,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import report_topic_opportunity as report  # noqa: E402
 
+ROOT = Path(__file__).resolve().parents[1]
+REQUIRES_HISTORICAL = unittest.skipUnless(
+    (ROOT / "data/raw/competitors/DS-000001").exists(),
+    "requires ignored historical catalog evidence",
+)
+
 
 def family_item(video_id, title, velocity, transcript=""):
     return {
@@ -95,6 +101,7 @@ class TopicOpportunityTests(unittest.TestCase):
         self.assertEqual(patterns["available_items"], 0)
         self.assertEqual(patterns["recurring_terms"], [])
 
+    @REQUIRES_HISTORICAL
     def test_live_arbitrary_channel_is_complete_and_read_only(self):
         with report.connect() as conn:
             before = conn.execute("SELECT COUNT(*) FROM content_classifications").fetchone()[0]
@@ -106,6 +113,7 @@ class TopicOpportunityTests(unittest.TestCase):
         self.assertEqual(len(payload["items"]), 65)
         self.assertEqual(before, after)
 
+    @REQUIRES_HISTORICAL
     def test_candidate_evidence_is_traceable(self):
         with report.connect() as conn:
             payload = report.build_report(conn, "CH-000004")
@@ -126,6 +134,7 @@ class TopicOpportunityTests(unittest.TestCase):
         self.assertEqual(rendered, report.render_json(payload))
         self.assertEqual(list(json.loads(rendered)), ["a", "z"])
 
+    @REQUIRES_HISTORICAL
     def test_committed_channel_json_matches_live_generation(self):
         root = Path(__file__).resolve().parents[1]
         with report.connect() as conn:

@@ -4,6 +4,26 @@ A canonical workspace for developing a persistent, evidence-based intelligence s
 
 **Current Phase: Phase 1D — Controlled Apify YouTube Acquisition, COMPLETE** (see `docs/Phases.md`). Phase 2 — Data Classification & Provenance is also closed (`AGENTS.md` rule 12). Topic Opportunity, Packaging, Hook/Script, and Editing/Visual Intelligence have since been authorized and piloted for one or more of the 5 canonical channels, and a first unified content-intelligence orchestrator (`scripts/run_youtube_intelligence.py`) composes these existing layers into evidence-traceable plans. The formal phase bookkeeping in `docs/Phases.md` has not yet been updated to reflect this progression and should be reconciled separately.
 
+**Current data state (2026-09-23):** 71 canonical channels, 27 acquired datasets (DS-000001–028, plus DS-000026 as a preflight-only proposal). DS-000027 (Dr. Ares Senior) and DS-000028 (Dr. Okoro — 66 videos, 66 descriptions, 66 transcripts, complete) are both integrated. See `docs/YOUTUBE_CHANNEL_REGISTRY.md` for full population controls.
+
+## Bootstrap (clean clone)
+
+`youtube_channel_registry.db` is Git LFS-tracked; a clean clone gets only the pointer file until LFS materializes it:
+
+```bash
+git lfs install
+git lfs pull
+python3.12 -m venv .venv && source .venv/bin/activate
+python -m pip install ".[dev]"
+python -m scripts.rebuild_inventory_catalog
+python -m scripts.build_youtube_channel_registry --write-ledgers
+python -m scripts.validate_dataset_ledgers
+python -m scripts.validate_youtube_channel_registry
+python -m pytest -q
+```
+
+`scripts/rebuild_inventory_catalog.py` produces a valid schema-v10 manifest index; it is semantically reproducible, not byte-identical to the historical operational catalog. Tests requiring ignored local raw evidence skip explicitly with a stated reason when that evidence isn't present.
+
 ## Current purpose
 
 Phase 0.5 hardened the project's planning documentation (`docs/Architecture.md`, `docs/Phases.md`, `docs/Database.md`, `docs/Prompts.md`, `docs/Security.md`, `docs/Error_Handling.md`) and performed read-only discovery of real external source folders. Phase 1A–1C then accepted user-supplied datasets, preserved their originals, inventoried their contents (recursively, with an explicit disposition for every discovered item), extracted descriptive facts from images and documents (OCR, native visual observation, text characterization), and recorded provenance — without performing competitor strategy analysis, topic generation, or any other content-recommendation work. That analysis layer is intentionally deferred to a later, separately-authorized phase.
@@ -16,10 +36,11 @@ This repository is the **code, schema, and documentation layer** — it is porta
 - Durable, database-generated manifests recording what was ingested, from where, and under what disposition (`data/manifests/`).
 - Project documentation, decisions, and the project-scoped ingestion skill (`docs/`, `.codex/skills/`).
 
-It deliberately does **not** contain the operational data payload:
+It deliberately does **not** contain the full operational data payload:
 
-- `data/catalog/youtube_inventory.db` — the local SQLite catalog — is generated from the schema plus the manifests below and is gitignored (Decision 013). It is not committed, and does not need to be for the project's history to be reconstructable.
-- Raw source evidence (screenshots, video frames, PDFs, archives, spreadsheets) lives under `data/raw/` on the machine that ingested it and is likewise gitignored; only its provenance (hashes, paths, dispositions, counts) is recorded in the manifests that *are* committed.
+- `data/catalog/youtube_inventory.db` — the legacy/selected-inventory SQLite catalog — is generated from the schema plus the manifests below and is gitignored (Decision 013). It is not committed, and does not need to be for the project's history to be reconstructable.
+- `data/catalog/youtube_channel_registry.db` — the complete cross-channel query authority — **is** committed, via Git LFS (see Bootstrap above).
+- Most raw source evidence (screenshots, video frames, PDFs, archives, spreadsheets) lives under `data/raw/` on the machine that ingested it and is gitignored; only its provenance (hashes, paths, dispositions, counts) is recorded in the manifests that *are* committed. A small set of explicitly authorized, checksum-registered acquisitions (e.g. DS-000027, DS-000028) is a deliberate exception and is tracked — see the per-dataset allowlist in `.gitignore`.
 
 ## Data layers
 

@@ -1,0 +1,11 @@
+{
+  "name": "youtube-intelligence-os",
+  "private": true,
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "validate": "python3 -m scripts.validate_dataset_ledgers && python3 -m scripts.validate_youtube_channel_registry",
+    "test": "python3 -m pytest -q"
+  }
+}

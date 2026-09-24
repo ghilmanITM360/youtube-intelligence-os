@@ -44,15 +44,15 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             self.assertTrue(self.workbook[name].tables, name)
 
     def test_channel_submission_and_intelligence_rows_reconcile(self):
-        self.assertEqual(69, self.workbook["All Channels"].max_row - 4)
+        self.assertEqual(len(self.model["channels"]), self.workbook["All Channels"].max_row - 4)
         self.assertEqual(29, self.workbook["Pending Channels"].max_row - 4)
         self.assertEqual(67, self.workbook["Submitted URLs"].max_row - 4)
-        self.assertEqual(552, self.workbook["Intelligence Coverage"].max_row - 4)
+        self.assertEqual(len(self.model["intelligence_coverage"]), self.workbook["Intelligence Coverage"].max_row - 4)
         self.assertEqual(
             [row["canonical_channel_id"] for row in self.model["channels"]],
             [
                 self.workbook["All Channels"].cell(row=index, column=1).value
-                for index in range(5, 74)
+                for index in range(5, 5 + len(self.model["channels"]))
             ],
         )
 
@@ -163,7 +163,10 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             self.assertEqual(coverage["visual_evidence_level"], visual.cell(index, 10).value)
         self.assertEqual(
             [(row["subject_name"], row["screenshot_count"], row["visual_evidence_level"]) for row in self.model["subjects"]],
-            [(visual.cell(row, 1).value, visual.cell(row, 6).value, visual.cell(row, 10).value) for row in range(77, 84)],
+            [
+                (visual.cell(row, 1).value, visual.cell(row, 6).value, visual.cell(row, 10).value)
+                for row in range(7 + len(self.model["channels"]), 7 + len(self.model["channels"]) + len(self.model["subjects"]))
+            ],
         )
 
         intelligence = self.workbook["Intelligence Coverage"]
@@ -186,7 +189,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
                     intelligence.cell(row, 5).value,
                     intelligence.cell(row, 6).value,
                 )
-                for row in range(5, 557)
+                for row in range(5, 5 + len(self.model["intelligence_coverage"]))
             ],
         )
 
@@ -238,7 +241,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             datasets,
             [
                 (dataset_sheet.cell(row, 1).value, dataset_sheet.cell(row, 3).value, dataset_sheet.cell(row, 4).value)
-                for row in range(5, 30)
+                for row in range(5, dataset_sheet.max_row + 1)
             ],
         )
 
@@ -273,7 +276,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             for row in range(5, all_channels.max_row + 1)
         }
         visual = self.workbook["Visual Evidence"]
-        visual_rows = {visual.cell(row, 2).value: row for row in range(5, 74)}
+        visual_rows = {visual.cell(row, 2).value: row for row in range(5, 5 + len(self.model["channels"]))}
 
         connection = sqlite3.connect(ROOT / "data/catalog/youtube_channel_registry.db")
         connection.row_factory = sqlite3.Row
@@ -363,8 +366,8 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             standard = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE source_group='STANDARD_PACKAGE' ORDER BY channel_name"))
             self.assertIn(f"26 rows: {complete}.", report)
             self.assertIn(f"29 rows: {pending}.", report)
-            self.assertIn(f"35 rows: {standard}.", report)
-            for text in ("Registry total: 1,893 real transcripts.", "Total: 11.", "Total: 14.", "69 channels: `SCHEMA_READY_NO_DATA`."):
+            self.assertIn(f"38 rows: {standard}.", report)
+            for text in ("Registry total: 2,015 real transcripts.", "Total: 12.", "Total: 15.", "72 channels: `SCHEMA_READY_NO_DATA`."):
                 self.assertIn(text, report)
         finally:
             connection.close()
@@ -391,13 +394,22 @@ class ChannelMasterTrackerTests(unittest.TestCase):
                         header = text.split("\n==========", 1)[0]
                         video_id = dict(re.findall(r"^([^:\n]+?)\s*:\s*(.*)$", header, re.MULTILINE)).get("Video ID")
                         row = connection.execute(
-                            "SELECT transcript_text,is_placeholder,unavailable_reason,transcript_sha256 FROM transcripts WHERE youtube_video_id=?",
+                            "SELECT transcript_text,is_placeholder,unavailable_reason,transcript_sha256,evidence_locator FROM transcripts WHERE youtube_video_id=?",
                             (video_id,),
                         ).fetchone()
                         if not row:
                             errors.append(f"{channel['channel_name']}: missing {video_id}")
                             continue
-                        if (body, int(placeholder), hashlib.sha256(body.encode()).hexdigest()) != (row[0], row[1], row[3]):
+                        # A video with no YouTube subtitle and no transcript archive backing it
+                        # (evidence_locator=NO_SOURCE_AVAILABLE) has no source text to reconcile
+                        # byte-for-byte: the DB records an explicit empty gap, while the package
+                        # ZIP carries an honest, non-fabricated placeholder marker. Both are
+                        # legitimate representations of "no source exists"; only the placeholder
+                        # flag and reason need to agree.
+                        if row[4] == "NO_SOURCE_AVAILABLE":
+                            if not (placeholder and row[1] and reason and row[2]):
+                                errors.append(f"{channel['channel_name']}: no-source video not marked placeholder {video_id}")
+                        elif (body, int(placeholder), hashlib.sha256(body.encode()).hexdigest()) != (row[0], row[1], row[3]):
                             errors.append(f"{channel['channel_name']}: mismatch {video_id}")
                         if placeholder and not (reason and row[2]):
                             errors.append(f"{channel['channel_name']}: missing placeholder reason {video_id}")
@@ -409,7 +421,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             connection.close()
         self.assertFalse(errors, errors[:10])
         self.assertEqual(
-            {"channels": 35, "videos": 1601, "real": 1591, "placeholders": 10, "over_excel_limit": 33},
+            {"channels": 38, "videos": 1724, "real": 1713, "placeholders": 11, "over_excel_limit": 36},
             counts,
         )
 

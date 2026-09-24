@@ -194,6 +194,37 @@ class ApifyYouTubeIngestTests(unittest.TestCase):
         )
         self.assertEqual(result["youtube_channel_id"], "UCfixtureDrAlizaChannel")
 
+    def test_direct_apify_identity_uses_exact_channel_id_url(self):
+        with self.connect() as conn:
+            conn.execute("DELETE FROM visual_observations")
+            conn.commit()
+        channel_id = "UC" + "a" * 22
+        channel_url = "https://www.youtube.com/channel/" + channel_id
+        with self.connect() as conn:
+            with self.assertRaises(CatalogError):
+                ayi.reconcile_channel_identity(
+                    conn, "DS-000006", channel_url,
+                    {"youtube_channel_id": channel_id, "handle": "@Dr.AlizaWrightAdvice", "channel_url": channel_url},
+                )
+        raw_path = self.root / "raw" / "DS-000006" / "apify" / self.run["id"] / "dataset.json"
+        raw_path.parent.mkdir(parents=True)
+        records = [copy.deepcopy(self.with_transcript)]
+        records[0]["channelId"] = channel_id
+        raw_path.write_text(json.dumps(records), encoding="utf-8")
+        result = ayi.ingest_run(
+            self.db, "DS-000006", channel_url, self.run, self.actor_input, records,
+            raw_root=self.root / "raw", manifests_dir=self.root / "manifests",
+            raw_source_path=raw_path, allow_direct_apify_identity=True,
+        )
+        self.assertEqual(result["youtube_channel_id"], channel_id)
+        with self.connect() as conn:
+            with self.assertRaises(CatalogError):
+                ayi.reconcile_channel_identity(
+                    conn, "DS-000006", "https://www.youtube.com/channel/UC" + "b" * 22,
+                    {"youtube_channel_id": channel_id, "handle": "@Dr.AlizaWrightAdvice", "channel_url": channel_url},
+                    allow_direct_apify_identity=True,
+                )
+
     def test_forensic_media_id_links_dataset_to_video_and_channel(self):
         with self.connect() as conn:
             conn.execute(

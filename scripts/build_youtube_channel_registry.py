@@ -7,10 +7,13 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 import re
 import sqlite3
+import sys
 import zipfile
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -19,6 +22,11 @@ IDENTITY_EVIDENCE = "data/manifests/YOUTUBE_CHANNEL_IDENTITY_EVIDENCE.json"
 COVERAGE_LEDGER = "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv"
 SCHEMA = "data/catalog/channel_registry/schema.sql"
 VERIFIED_AT = "2026-09-14"
+
+
+def _generated_at() -> str:
+    """Actual build time, distinct from VERIFIED_AT (last human evidence verification)."""
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 STATUSES = {
     "COMPLETE",
     "COMPLETE_WITH_LIMITATIONS",
@@ -27,6 +35,8 @@ STATUSES = {
     "PENDING_IDENTITY_RESOLUTION",
     "UNAVAILABLE_OR_DELETED",
 }
+
+csv.field_size_limit(sys.maxsize)
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -145,14 +155,83 @@ def historical_dataset_links(root: Path) -> dict[str, list[str]]:
         connection.close()
 
 
+def inventory_only_channels(root: Path, represented_ids: set[str]) -> list[dict]:
+    """Return canonical inventory channels missing from registry authorities."""
+    connection = sqlite3.connect(root / "data/catalog/youtube_inventory.db")
+    connection.row_factory = sqlite3.Row
+    records = []
+    try:
+        for channel in connection.execute(
+            "SELECT channel_id,youtube_channel_id,handle,display_name,channel_url,created_from_dataset_id FROM channels ORDER BY channel_id"
+        ):
+            identifier = channel["youtube_channel_id"]
+            if not identifier or identifier in represented_ids:
+                continue
+            video_rows = list(connection.execute(
+                """
+                SELECT v.video_id,v.youtube_video_id,v.created_from_dataset_id,
+                       s.description,s.thumbnail_url,s.video_type
+                FROM videos v
+                LEFT JOIN video_snapshots s ON s.video_id=v.video_id
+                WHERE v.channel_id=?
+                ORDER BY v.video_id
+                """,
+                (channel["channel_id"],),
+            ))
+            videos = {row["video_id"]: row for row in video_rows}
+            video_ids = set(videos)
+            dataset_ids = {
+                row[0]
+                for row in connection.execute(
+                    "SELECT dataset_id FROM channel_dataset_links WHERE channel_id=?",
+                    (channel["channel_id"],),
+                )
+                if row[0]
+            }
+            dataset_ids.update(row["created_from_dataset_id"] for row in videos.values() if row["created_from_dataset_id"])
+            transcript_video_ids = {
+                row[0]
+                for row in connection.execute(
+                    "SELECT DISTINCT video_id FROM transcripts WHERE video_id IN (SELECT video_id FROM videos WHERE channel_id=?) AND availability_status='AVAILABLE'",
+                    (channel["channel_id"],),
+                )
+            }
+            types = [str(row["video_type"] or "").lower() for row in videos.values()]
+            records.append({
+                "canonical_channel_id": identifier,
+                "channel_name": channel["display_name"],
+                "current_handle": channel["handle"],
+                "canonical_url": channel["channel_url"] or f"https://www.youtube.com/channel/{identifier}",
+                "primary_dataset_id": channel["created_from_dataset_id"],
+                "dataset_ids": sorted(dataset_ids),
+                "video_count": len(video_ids),
+                "regular_videos": sum(value in {"video", "regular"} for value in types),
+                "shorts": sum(value in {"short", "shorts"} for value in types),
+                "livestreams": sum("live" in value or "stream" in value for value in types),
+                "descriptions": sum(bool(row["description"]) for row in videos.values()),
+                "real_transcripts": len(transcript_video_ids & video_ids),
+                "placeholders": 0,
+                "missing_transcripts": len(video_ids - transcript_video_ids),
+                "workbook_path": None,
+                "transcript_zip_path": None,
+            })
+    finally:
+        connection.close()
+    return records
+
+
 def package_thumbnail_url_counts(root: Path, channels: list[dict]) -> dict[str, int]:
     counts = defaultdict(int)
-    for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027"):
+    for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027", "DS-000028"):
         path = next((root / "data/extracted/channel-data" / dataset_id / "combined").glob("*_master.csv"))
         with path.open(encoding="utf-8-sig", newline="") as handle:
             for row in csv.DictReader(handle):
                 if row["thumbnail_url"]:
                     counts[row["channel_id"]] += 1
+    ds29_raw = root / "data/raw/competitors/DS-000029/apify/WqJIbwUkgkHDHxdaI/raw/dataset.json"
+    if ds29_raw.is_file():
+        records = json.loads(ds29_raw.read_text(encoding="utf-8"))
+        counts["UCFuGMi0idGeyXl6wYK9hg7Q"] += sum(1 for record in records if record.get("thumbnailUrl"))
     from openpyxl import load_workbook
     for channel in channels:
         if channel["primary_dataset_id"] != "DS-000022":
@@ -376,7 +455,45 @@ def build_model(root: Path) -> dict:
             **metrics,
         })
 
-    screenshot_rows = [row for row in coverage if canonical_id(row["Canonical ID"]) is None and row["Dataset"] in {f"DS-{n:06d}" for n in range(3, 11)}]
+    represented_ids = {row["canonical_channel_id"] for row in channels}
+    inventory_channels = inventory_only_channels(root, represented_ids)
+    for inventory in inventory_channels:
+        limitations = ["Canonical acquisition is registered in the inventory; no standard channel package exists yet."]
+        video_count = inventory["video_count"]
+        missing_descriptions = video_count - inventory["descriptions"]
+        channels.append({
+            "canonical_channel_id": inventory["canonical_channel_id"],
+            "channel_name": inventory["channel_name"],
+            "current_handle": inventory["current_handle"],
+            "canonical_url": inventory["canonical_url"],
+            "source_group": "HISTORICAL_CATALOG",
+            "primary_dataset_id": inventory["primary_dataset_id"],
+            "target_group": "OUTSIDE_TARGET",
+            "status": "COMPLETE_WITH_LIMITATIONS" if video_count else "IDENTITY_VERIFIED_DATA_NOT_EXTRACTED",
+            "completed_tick": "",
+            "identity_evidence_source": "data/catalog/youtube_inventory.db",
+            "verified_at": VERIFIED_AT,
+            "handle_unavailable_reason": None,
+            "limitations": limitations,
+            "submission_rows": [],
+            "identity_status": "VERIFIED",
+            "extraction_status": "COMPLETE_WITH_LIMITATIONS" if video_count else "NOT_EXTRACTED",
+            "package_status": "HISTORICAL_FORMAT" if video_count else "NO_PACKAGE",
+            "video_metadata_status": "COMPLETE" if video_count else "NONE",
+            "description_status": "COMPLETE" if video_count and not missing_descriptions else ("PARTIAL" if inventory["descriptions"] else "NONE"),
+            "transcript_status": "COMPLETE_REAL" if video_count and inventory["real_transcripts"] == video_count else ("PARTIAL" if inventory["real_transcripts"] else "NONE"),
+            "intelligence_status": "PARTIAL" if video_count else "NOT_AVAILABLE",
+            "first_party_analytics_status": "SCHEMA_READY_NO_DATA",
+            **{key: value for key, value in inventory.items() if key not in {"canonical_channel_id", "channel_name", "current_handle", "canonical_url", "primary_dataset_id"}},
+        })
+
+    resolved_names = {re.sub(r"[^a-z0-9]", "", row["channel_name"].lower()) for row in channels}
+    screenshot_rows = [
+        row for row in coverage
+        if canonical_id(row["Canonical ID"]) is None
+        and row["Dataset"] in {f"DS-{n:06d}" for n in range(3, 11)}
+        and re.sub(r"[^a-z0-9]", "", row["Channel"].lower()) not in resolved_names
+    ]
     subjects = [{
         "subject_id": f"SUBJ-{index:06d}",
         "subject_name": row["Channel"],
@@ -438,7 +555,7 @@ def build_model(root: Path) -> dict:
     channels.sort(key=lambda row: ({"ORIGINAL_TARGET": 0, "ADDED_TARGET": 1, "OUTSIDE_TARGET": 2}[row["target_group"]], min(row["submission_rows"] or [999]), row["channel_name"].lower()))
     return {
         "schema_version": 2,
-        "generated_at": VERIFIED_AT,
+        "generated_at": _generated_at(),
         "controls": controls,
         "channels": channels,
         "submissions": submissions,
@@ -493,40 +610,51 @@ def _historical_records(root: Path) -> tuple[list[dict], list[dict], list[dict]]
     videos, transcripts, memberships = [], [], []
     try:
         for row in source.execute(sql):
-            reference = row["canonical_reference"] or (
-                "data/raw/competitors/DS-000001/Transcripts_All_159_Videos.zip::"
-                + row["archive_member_path"]
-            )
-            path_part, separator, member = reference.partition("::")
-            source_path = Path(path_part)
-            if source_path.is_absolute():
-                if source_path.is_relative_to(root):
-                    relative_path = source_path.relative_to(root)
-                elif "/data/" in source_path.as_posix():
-                    relative_path = Path("data") / source_path.as_posix().split("/data/", 1)[1]
+            no_source = row["canonical_reference"] is None and row["archive_member_path"] is None
+            if no_source:
+                # Legitimate gap: YouTube provides no captions/subtitles for this
+                # video and no transcript archive backs it (e.g. Apify-ingested
+                # video with hasSubtitles=false). Not an error, not a file to read.
+                portable_reference = "NO_SOURCE_AVAILABLE"
+                body = ""
+                description = row["description"]
+                placeholder = True
+                reason = row["notes"] or "NO_YOUTUBE_SUBTITLE"
+            else:
+                reference = row["canonical_reference"] or (
+                    "data/raw/competitors/DS-000001/Transcripts_All_159_Videos.zip::"
+                    + row["archive_member_path"]
+                )
+                path_part, separator, member = reference.partition("::")
+                source_path = Path(path_part)
+                if source_path.is_absolute():
+                    if source_path.is_relative_to(root):
+                        relative_path = source_path.relative_to(root)
+                    elif "/data/" in source_path.as_posix():
+                        relative_path = Path("data") / source_path.as_posix().split("/data/", 1)[1]
+                    else:
+                        raise ValueError(f"Historical source is outside repository data: {source_path}")
                 else:
-                    raise ValueError(f"Historical source is outside repository data: {source_path}")
-            else:
-                relative_path = source_path
-            local_path = (root / relative_path).resolve()
-            if not local_path.is_relative_to(root.resolve()) or not local_path.is_file():
-                raise FileNotFoundError(f"Historical source missing in selected repository: {relative_path}")
-            portable_reference = relative_path.as_posix() + (f"::{member}" if separator else "")
-            if separator:
-                with zipfile.ZipFile(local_path) as archive:
-                    text = archive.read(member).decode("utf-8")
-            else:
-                text = local_path.read_text(encoding="utf-8")
-            body, parsed_placeholder, reason = _parse_structured_transcript(text)
-            description = row["description"]
-            if description is None and "\nDESCRIPTION\n" in text:
-                description_marker = re.search(r"\n={5,}\nDESCRIPTION\n={5,}\n", text)
-                transcript_marker = re.search(r"\n={5,}\nTRANSCRIPT\n={5,}\n", text)
-                if description_marker and transcript_marker:
-                    description = text[description_marker.end():transcript_marker.start()].strip() or None
-            placeholder = parsed_placeholder or row["availability_status"] != "AVAILABLE"
-            if placeholder and not reason:
-                reason = row["notes"] or body
+                    relative_path = source_path
+                local_path = (root / relative_path).resolve()
+                if not local_path.is_relative_to(root.resolve()) or not local_path.is_file():
+                    raise FileNotFoundError(f"Historical source missing in selected repository: {relative_path}")
+                portable_reference = relative_path.as_posix() + (f"::{member}" if separator else "")
+                if separator:
+                    with zipfile.ZipFile(local_path) as archive:
+                        text = archive.read(member).decode("utf-8")
+                else:
+                    text = local_path.read_text(encoding="utf-8")
+                body, parsed_placeholder, reason = _parse_structured_transcript(text)
+                description = row["description"]
+                if description is None and "\nDESCRIPTION\n" in text:
+                    description_marker = re.search(r"\n={5,}\nDESCRIPTION\n={5,}\n", text)
+                    transcript_marker = re.search(r"\n={5,}\nTRANSCRIPT\n={5,}\n", text)
+                    if description_marker and transcript_marker:
+                        description = text[description_marker.end():transcript_marker.start()].strip() or None
+                placeholder = parsed_placeholder or row["availability_status"] != "AVAILABLE"
+                if placeholder and not reason:
+                    reason = row["notes"] or body
             videos.append({
                 "youtube_video_id": row["youtube_video_id"], "canonical_channel_id": row["youtube_channel_id"],
                 "canonical_url": row["canonical_url"], "title": row["title"], "published_at": row["published_at"],
@@ -554,7 +682,7 @@ def _combined_package_records(root: Path) -> tuple[list[dict], list[dict], list[
         item["video_id"]
         for item in json.loads((root / "data/manifests/DS-000020-description-recovery-verification.json").read_text(encoding="utf-8"))["items"]
     }
-    for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027"):
+    for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027", "DS-000028"):
         path = next((root / "data/extracted/channel-data" / dataset_id / "combined").glob("*_master.csv"))
         with path.open(encoding="utf-8-sig", newline="") as handle:
             for row in csv.DictReader(handle):
@@ -591,16 +719,19 @@ def _combined_package_records(root: Path) -> tuple[list[dict], list[dict], list[
     return videos, transcripts, memberships, runs
 
 
-def _ds22_records(root: Path, model: dict) -> tuple[list[dict], list[dict], list[dict]]:
+def _standard_package_records(root: Path, model: dict) -> tuple[list[dict], list[dict], list[dict]]:
+    """Discover every STANDARD_PACKAGE channel's workbook+ZIP, not just DS-000022's.
+
+    A channel qualifies by having `workbook_path` set (the coverage-ledger-driven
+    STANDARD_PACKAGE marker, see `coverage_metrics`), not by a hardcoded dataset id.
+    """
     from openpyxl import load_workbook
 
-    channels_by_package = {Path(row["workbook_path"]).parent.as_posix(): row for row in model["channels"] if row["primary_dataset_id"] == "DS-000022"}
+    channels_by_package = {Path(row["workbook_path"]).parent.as_posix(): row for row in model["channels"] if row["workbook_path"]}
     videos, transcripts, memberships = [], [], []
-    for package_dir in sorted((root / "data/extracted/channel-data/DS-000022/packages").iterdir()):
-        if not package_dir.is_dir():
-            continue
-        rel_dir = package_dir.relative_to(root).as_posix()
-        channel = channels_by_package[rel_dir]
+    for rel_dir, channel in sorted(channels_by_package.items()):
+        package_dir = root / rel_dir
+        dataset_id = channel["primary_dataset_id"]
         workbook_path = next(package_dir.glob("*.xlsx"))
         zip_path = next(package_dir.glob("*.zip"))
         book = load_workbook(workbook_path, read_only=True, data_only=True)
@@ -636,19 +767,20 @@ def _ds22_records(root: Path, model: dict) -> tuple[list[dict], list[dict], list
                 "thumbnail_url": row["Thumbnail URL"], "raw_json": json.dumps({key: value for key, value in row.items() if value is not None}, default=str, ensure_ascii=False, sort_keys=True),
             })
             transcripts.append({
-                "youtube_video_id": video_id, "dataset_id": "DS-000022", "transcript_text": body,
+                "youtube_video_id": video_id, "dataset_id": dataset_id, "transcript_text": body,
                 "word_count": as_int(row["Transcript Words"]), "language": headers.get("Language"),
                 "caption_type": headers.get("Caption type"), "is_placeholder": int(placeholder),
                 "unavailable_reason": reason,
                 "evidence_locator": f"{zip_path.relative_to(root).as_posix()}::{member}",
                 "transcript_sha256": sha256_bytes(body.encode("utf-8")),
             })
-            memberships.append({"dataset_id": "DS-000022", "youtube_video_id": video_id, "evidence_locator": workbook_path.relative_to(root).as_posix()})
+            memberships.append({"dataset_id": dataset_id, "youtube_video_id": video_id, "evidence_locator": workbook_path.relative_to(root).as_posix()})
     return videos, transcripts, memberships
 
 
 def _artifact_records(root: Path, model: dict) -> list[dict]:
     records = []
+    registered_datasets = {row["dataset_id"] for row in _dataset_records(root)}
     channel_by_package = {Path(row["workbook_path"]).parent.as_posix(): row["canonical_channel_id"] for row in model["channels"] if row["workbook_path"]}
     for path in sorted((root / "data/extracted/channel-data").rglob("*")):
         if not path.is_file():
@@ -674,8 +806,9 @@ def _artifact_records(root: Path, model: dict) -> list[dict]:
             continue
         rel = path.relative_to(root).as_posix()
         match = re.search(r"(DS-\d{6})", rel)
+        dataset_id = match.group(1) if match else None
         records.append({
-            "dataset_id": match.group(1) if match else None,
+            "dataset_id": dataset_id if dataset_id in registered_datasets else None,
             "canonical_channel_id": None,
             "artifact_type": "RAW_ACTOR_EVIDENCE" if "/apify/" in rel else "RAW_SOURCE_EVIDENCE",
             "repository_path": rel,
@@ -827,10 +960,10 @@ def _actor_run_records(root: Path, package_runs: list[dict]) -> list[dict]:
 def _all_records(root: Path, model: dict):
     historical = _historical_records(root)
     combined = _combined_package_records(root)
-    ds22 = _ds22_records(root, model)
-    videos = historical[0] + combined[0] + ds22[0]
-    transcripts = historical[1] + combined[1] + ds22[1]
-    memberships = historical[2] + combined[2] + ds22[2]
+    standard_package = _standard_package_records(root, model)
+    videos = historical[0] + combined[0] + standard_package[0]
+    transcripts = historical[1] + combined[1] + standard_package[1]
+    memberships = historical[2] + combined[2] + standard_package[2]
     by_id = {}
     for video in videos:
         existing = by_id.get(video["youtube_video_id"])
@@ -863,18 +996,39 @@ def table_counts(connection: sqlite3.Connection) -> dict:
     return {table: connection.execute(f"SELECT count(*) FROM {table}").fetchone()[0] for table in tables}
 
 
+def _validate_foreign_key_inputs(model: dict, datasets: list[dict], videos: list[dict]) -> None:
+    channel_ids = {row["canonical_channel_id"] for row in model["channels"]}
+    dataset_ids = {row["dataset_id"] for row in datasets}
+    for video in videos:
+        if video["canonical_channel_id"] not in channel_ids:
+            raise ValueError(
+                f"video {video['youtube_video_id']} references missing channel {video['canonical_channel_id']}"
+            )
+    for channel in model["channels"]:
+        for dataset_id in channel["dataset_ids"]:
+            if dataset_id not in dataset_ids:
+                raise ValueError(
+                    f"channel {channel['canonical_channel_id']} references missing dataset {dataset_id}"
+                )
+
+
 def build_database(root: Path, database_path: Path, model: dict | None = None) -> dict:
     model = model or build_model(root)
     database_path.parent.mkdir(parents=True, exist_ok=True)
-    connection = connect(database_path)
+    temporary_path = database_path.with_name(database_path.name + ".tmp")
+    temporary_path.unlink(missing_ok=True)
+    connection = connect(temporary_path)
+    counts = None
     try:
         connection.executescript((root / SCHEMA).read_text(encoding="utf-8"))
         videos, transcripts, memberships, actor_runs = _all_records(root, model)
         artifacts = _artifact_records(root, model)
+        datasets = _dataset_records(root)
+        _validate_foreign_key_inputs(model, datasets, videos)
         capabilities = model["intelligence_capabilities"]
         intelligence = model["intelligence_coverage"]
         with connection:
-            for dataset in _dataset_records(root):
+            for dataset in datasets:
                 _upsert(connection, "datasets", dataset, ("dataset_id",))
             for channel in model["channels"]:
                 _upsert(connection, "channels", {
@@ -947,7 +1101,7 @@ def build_database(root: Path, database_path: Path, model: dict | None = None) -
             for item in intelligence:
                 _upsert(connection, "intelligence_coverage", item, ("canonical_channel_id", "capability_id"))
             metadata = {
-                "generated_at": VERIFIED_AT,
+                "generated_at": _generated_at(),
                 "source_payload_sha256": json.loads((root / RAW_AUTHORITY).read_text())["controls"]["ordered_payload_sha256"],
                 "historical_catalog_sha256": sha256_file(root / "data/catalog/youtube_inventory.db"),
                 "fts5_enabled": "0",
@@ -965,9 +1119,13 @@ def build_database(root: Path, database_path: Path, model: dict | None = None) -
         foreign_keys = connection.execute("PRAGMA foreign_key_check").fetchall()
         if integrity != "ok" or foreign_keys:
             raise ValueError(f"Registry validation failed: integrity={integrity}, foreign_keys={foreign_keys[:5]}")
-        return table_counts(connection)
+        counts = table_counts(connection)
     finally:
         connection.close()
+        if counts is None:
+            temporary_path.unlink(missing_ok=True)
+    os.replace(temporary_path, database_path)
+    return counts
 
 
 def write_normalized_outputs(root: Path, model: dict) -> None:

@@ -1,0 +1,46 @@
+{
+  "dataset_id": "DS-000027",
+  "observed_at": "2026-09-20T16:33:57+05:00",
+  "source": "Authenticated Apify Console UI and live actor pricing page",
+  "account_display": "ghilman",
+  "workspace": "Personal",
+  "plan": "Free",
+  "free_platform_usage_usd": 5.0,
+  "usage_displayed_usd": 0.0,
+  "remaining_credit_calculated_from_display_usd": 5.0,
+  "minimum_reserve_usd": 0.3,
+  "usable_before_reserve_usd": 4.7,
+  "actor": "streamers/youtube-scraper",
+  "actor_id": "h7sDV53CddomktSi5",
+  "plan_column_used": "Free — No discount",
+  "pricing": {
+    "video_written_to_dataset_usd_per_1000": 4.0,
+    "date_range_addon_usd_per_1000": 1.3,
+    "ai_description_usd_per_1000_video_minutes": 15.0,
+    "ai_summary_usd_per_1000_video_minutes": 15.0,
+    "transcript_usd_per_1000_started_video_minutes": 48.0,
+    "platform_usage": "Included"
+  },
+  "proposed_run": {
+    "canonical_channel_id": "UC356D-NzdnznBOftTpYoBLw",
+    "canonical_channel_url": "https://www.youtube.com/channel/UC356D-NzdnznBOftTpYoBLw",
+    "regular_video_limit": 35,
+    "shorts_limit": 0,
+    "streams_limit": 0,
+    "date_filter": false,
+    "ai_description": false,
+    "ai_summary": false,
+    "transcript_mode": "ALWAYS_SUBTITLES",
+    "paid_speech_to_text": false,
+    "base_video_event_estimate_usd": 0.14,
+    "conservative_metadata_cost_cap_usd": 0.148,
+    "projected_balance_after_cap_usd": 4.852,
+    "projected_headroom_above_reserve_usd": 4.552
+  },
+  "cost_basis_note": "The selected ALWAYS_SUBTITLES mode is limited to existing YouTube-provided subtitles and does not enable TRANSCRIPTION_AS_FALLBACK or ALWAYS_TRANSCRIBE. The separate transcript-minute event is recorded as a live price but is excluded from this proposal because paid speech-to-text is disabled. If the live run UI indicates that existing-subtitle retrieval will trigger transcript-minute charges, do not launch under this cap and return for revised approval.",
+  "authorization": {
+    "actor_run_authorized": false,
+    "credit_spend_authorized": false,
+    "required_phrase": "Launch approved"
+  }
+}

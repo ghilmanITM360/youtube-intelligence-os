@@ -1,0 +1,34 @@
+{
+  "schema_version": "creator-strategy-primary-validation-1",
+  "dataset_id": "DS-000031",
+  "checked_on": "2026-09-24",
+  "scope": "Current platform-behavior assertions and common misuse risks only. Creative frameworks remain source heuristics. This artifact does not edit source concepts.",
+  "primary_sources": [
+    {"id":"YTH-1","title":"How YouTube recommendations work","url":"https://support.google.com/youtube/answer/16089387?hl=en"},
+    {"id":"YTH-2","title":"Understand your content performance for YouTube's recommendation system","url":"https://support.google.com/youtube/answer/16559650?hl=en"},
+    {"id":"YTH-3","title":"YouTube performance FAQ and troubleshooting","url":"https://support.google.com/youtube/answer/141805?hl=en"},
+    {"id":"YTH-4","title":"Understand external factors for YouTube's recommendation system","url":"https://support.google.com/youtube/answer/16558238?hl=en"},
+    {"id":"YTH-5","title":"A/B test titles and thumbnails","url":"https://support.google.com/youtube/answer/16391400?hl=en"},
+    {"id":"YTH-6","title":"Impressions and click-through-rate FAQs","url":"https://support.google.com/youtube/answer/7628154?hl=en"},
+    {"id":"YTH-7","title":"Measure key moments for audience retention","url":"https://support.google.com/youtube/answer/9314415?hl=en"},
+    {"id":"YTH-8","title":"Good to know about recommendations","url":"https://support.google.com/youtube/answer/16559651?hl=en"}
+  ],
+  "checks": [
+    {"id":"V-001","concept":"CS-001","status":"CONSISTENT_WITH_PRIMARY_SOURCE","official_sources":["YTH-1","YTH-3"],"boundary":"YouTube explicitly says its system finds videos for viewers and personalizes recommendations; 'prediction engine' is source metaphor, not a complete architecture."},
+    {"id":"V-002","concept":"CS-002","status":"PARTIALLY_SUPPORTED","official_sources":["YTH-1","YTH-3"],"boundary":"Viewing/search history and current video vary by surface; exact age/device/time signals asserted by speaker are not established by these pages."},
+    {"id":"V-003","concept":"CS-003","status":"INSUFFICIENT_EVIDENCE","official_sources":["YTH-1"],"boundary":"Official current Help page does not document the lecture's exact two-network production implementation. Historical research is not proof of present internals."},
+    {"id":"V-004","concept":"CS-004","status":"CONTRADICTED_BY_PRIMARY_SOURCE","official_sources":["YTH-1","YTH-2"],"boundary":"Satisfaction matters, but official guidance separately names appeal and engagement, plus multiple recommendation signals; 'only' overstates."},
+    {"id":"V-005","concept":"CS-005","status":"INSUFFICIENT_EVIDENCE","official_sources":["YTH-1","YTH-2"],"boundary":"Official sources do not establish that a cross-video session contribution guarantees more recommendations for a creator video."},
+    {"id":"V-006","concept":"CS-006","status":"PARTIALLY_SUPPORTED","official_sources":["YTH-1","YTH-2","YTH-3"],"boundary":"Engagement and satisfaction matter; retention and return rate are not the sole currency or a fixed formula."},
+    {"id":"V-007","concept":"CS-007","status":"CONTRADICTED_BY_PRIMARY_SOURCE","official_sources":["YTH-5","YTH-6"],"boundary":"Native A/B test can compare up to three title/thumbnail options under defined eligibility; serial manual edits and video-batch comparisons are different experiments."},
+    {"id":"V-008","concept":"CS-021","status":"SOURCE_HEURISTIC_NOT_PLATFORM_RULE","official_sources":["YTH-3","YTH-4","YTH-6"],"boundary":"No official fixed 3–5 video or 48–72 hour diagnostic threshold. Low impressions may reflect demand, competition, eligibility, and audience response."},
+    {"id":"V-009","concept":"CS-023","status":"SOURCE_HEURISTIC_NOT_PLATFORM_RULE","official_sources":["YTH-2","YTH-4","YTH-6"],"boundary":"Funnel is useful for investigating possible causes, but no row proves a sole cause; CTR and watch behavior require traffic-source and audience context."},
+    {"id":"V-010","concept":"CS-012","status":"SOURCE_HEURISTIC_NOT_PLATFORM_RULE","official_sources":[],"boundary":"70–80/20–30 allocation is supplied creator advice; no official platform threshold is asserted."},
+    {"id":"V-011","concept":"CS-025","status":"SOURCE_HEURISTIC_NOT_PLATFORM_RULE","official_sources":["YTH-2","YTH-7"],"boundary":"Engagement and audience-retention analysis are official concepts; 60–90-second progression and 7–10 turns are not official rules."},
+    {"id":"V-012","concept":"CS-053","status":"SOURCE_HEURISTIC_NOT_PLATFORM_RULE","official_sources":[],"boundary":"Seven-item 35-point scorecard and its bands are source-defined; no platform endorsement or predictive calibration."},
+    {"id":"V-013","concept":"CS-061","status":"CONSISTENT_WITH_PRIMARY_SOURCE","official_sources":["YTH-2"],"boundary":"Official source names appeal, engagement, satisfaction. The specific topic/title/thumbnail and hook/story/pacing mapping is a project interpretation of these buckets."},
+    {"id":"V-014","concept":"CS-062","status":"CONFIRMED_BY_PRIMARY_SOURCE","official_sources":["YTH-6","YTH-7"],"boundary":"CTR and audience-retention reports are YouTube Studio Analytics for a creator's own video; public competitor pages do not expose the competitor's private graphs."},
+    {"id":"V-015","concept":"CS-042","status":"SOURCE_HEURISTIC_NOT_PLATFORM_RULE","official_sources":["YTH-4","YTH-8"],"boundary":"Topic interest and competition matter; a transferred format alone does not prove demand or guarantee reach."},
+    {"id":"V-016","concept":"CS-022","status":"SOURCE_HEURISTIC_NOT_PLATFORM_RULE","official_sources":["YTH-5"],"boundary":"Sequential topic or audience-desire testing is not native concurrent YouTube title/thumbnail A/B testing."}
+  ]
+}

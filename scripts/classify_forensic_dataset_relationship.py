@@ -64,7 +64,7 @@ def record_relationship(db_path=ic.DEFAULT_DB_PATH, manifest_path=DEFAULT_MANIFE
                 or row["sha256"] != report.get("sha256")
                 or row["verification_status"] != "VERIFIED"
                 or not row["canonical_path"]
-                or ic.sha256_file(row["canonical_path"]) != report.get("sha256")
+                or ic.sha256_file(ic.resolve_canonical_path(row["canonical_path"])) != report.get("sha256")
             ):
                 raise ic.CatalogError("HashFailure", "Canonical report evidence failed verification")
 

@@ -10,8 +10,9 @@ See `docs/Phases.md` for how these arrive over time, `docs/Database.md` for the 
 
 ## 1. What exists today — CURRENT
 
-- A documentation-first repository at the canonical path (Decision 009) with small stdlib ingestion, registration, and read-only reporting scripts.
-- A populated local raw/manifests layer and ignored SQLite inventory catalog (`data/catalog/youtube_inventory.db`, schema v6); this is not the final production database.
+- A documentation-first repository at the canonical path (Decision 009) with stdlib ingestion, registration, validation, and read-only reporting scripts.
+- 71 canonical channels across 27 acquired datasets (plus DS-000026, preflight-only). DS-000027 (Dr. Ares Senior) and DS-000028 (Dr. Okoro, complete) are both integrated — see `docs/YOUTUBE_CHANNEL_REGISTRY.md`.
+- Two generated SQLite databases with distinct roles: the gitignored legacy/selected-inventory catalog (`data/catalog/youtube_inventory.db`) and the Git LFS-tracked, committed cross-channel query registry (`data/catalog/youtube_channel_registry.db`). Neither is the final production database.
 - Structured channels/videos, append-only snapshots, transcript references, screenshot/multimodal evidence, field provenance, and bounded Apify source-run provenance through Phase 1D.
 - External developer/agent tooling (Graphify, Ponytail, Claude-Mem, Obsidian skills, Scrapling) recorded in `docs/TOOLS_INSTALLED.md`. None of it is part of the application.
 

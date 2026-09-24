@@ -13,23 +13,23 @@ from scripts.build_youtube_channel_registry import build_database, build_model, 
 
 
 EXPECTED = {
-    "canonical_channels": 69,
+    "canonical_channels": 73,
     "raw_submissions": 67,
     "target_channels": 63,
-    "channels_with_video_data": 40,
+    "channels_with_video_data": 44,
     "identity_only_channels": 29,
-    "standard_packages": 35,
-    "historical_channels": 5,
-    "stored_outside_targets": 6,
-    "datasets": 25,
-    "videos": 1904,
-    "real_transcripts": 1893,
-    "placeholders": 11,
-    "description_gaps": 14,
-    "non_channel_subjects": 7,
-    "intelligence_coverage_rows": 552,
-    "data_layer_rows": 759,
-    "visual_coverage_rows": 69,
+    "standard_packages": 38,
+    "historical_channels": 6,
+    "stored_outside_targets": 10,
+    "datasets": 30,
+    "videos": 2149,
+    "real_transcripts": 2137,
+    "placeholders": 12,
+    "description_gaps": 17,
+    "non_channel_subjects": 4,
+    "intelligence_coverage_rows": 584,
+    "data_layer_rows": 803,
+    "visual_coverage_rows": 73,
 }
 
 REQUIRED_VIEWS = {
@@ -105,7 +105,7 @@ def validate_database(root: Path, database: Path) -> dict:
             "null_transcript_without_reason": 0,
             "forensic_channel_count": 1,
             "thumbnail_evidence_channel_count": 3,
-            "title_only_historical_channel_count": 2,
+            "title_only_historical_channel_count": 3,
             "first_party_ingested_count": 0,
         }
         check_results = {name: scalar(connection, sql) for name, sql in checks.items()}
