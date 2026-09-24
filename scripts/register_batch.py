@@ -414,7 +414,7 @@ def _register_one_dataset(conn, db_path, batch_id, dataset_key, file_entries):
                     "Canonical copy hash mismatch for {}: source={} copy={}".format(
                         e["relative_path"], e["sha256"], copy_hash),
                 )
-            canonical_path = str(dest)
+            canonical_path = ic.to_repo_relative(dest)
         total_size += e["size_bytes"] or 0
         records.append((e, canonical_path, do_copy))
 

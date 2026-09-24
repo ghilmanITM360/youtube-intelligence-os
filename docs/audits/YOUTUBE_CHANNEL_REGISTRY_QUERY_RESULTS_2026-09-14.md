@@ -20,17 +20,16 @@ Ten are original targets and 19 are later additions. All identities are verified
 
 ## 3. Standard-package channels
 
-37 rows: Apesthetic; Bob Invests; Brimm.; Bro Pump; CIPHER UNIT; Carl Invests; Crayon Capital; Dark Ledger; Dr. Ares Senior; Explain In Paint; Genius History; Hypothetically; Ink Explainer; Just Some Guy Stories; Lost Legacy; Lucas Grant; Luco; Mack; Maximus; Money Life POV; My Chaotic Stories; Nick Invests; Oddlyhuman; Past Tense; Primate Economics; Senior Health Hub; Shaami Finance; Sonny Finance; Stickly; The Life Outline; Tp Dossier; Unknown Frequencies; Well.; Zenn; Zoozle; ago.; inkly.
+38 rows: Apesthetic; Bob Invests; Brimm.; Bro Pump; CIPHER UNIT; Carl Invests; Crayon Capital; Dark Ledger; Doctor Thomas; Dr. Ares Senior; Dr. Okoro; Explain In Paint; Genius History; Hypothetically; Ink Explainer; Just Some Guy Stories; Lost Legacy; Lucas Grant; Luco; Mack; Maximus; Money Life POV; My Chaotic Stories; Nick Invests; Oddlyhuman; Past Tense; Primate Economics; Shaami Finance; Sonny Finance; Stickly; The Life Outline; Tp Dossier; Unknown Frequencies; Well.; Zenn; Zoozle; ago.; inkly.
 
 Every row has one exact package workbook and one transcript ZIP path.
 
 ## 4. Historical-format channels
 
-Six rows:
+Five rows:
 
 - Dr. Aliza Wright | Advice: `DS-000006`
 - Dr. Elias Senior Health: `DS-000019`
-- Dr. Okoro: `DS-000028`
 - Matty Invests: `DS-000001`
 - Mr. Finance: `DS-000001`
 - xkcd's What If?: `DS-000012`, `DS-000013`, `DS-000014`, `DS-000015`, `DS-000017`
@@ -39,26 +38,27 @@ These are not reported as standard packages.
 
 ## 5. Channels with real transcripts
 
-43 channels. Registry total: 2,116 real transcripts.
+43 channels. Registry total: 2,015 real transcripts.
 
 ## 6. Channels with placeholders
 
+- Doctor Thomas: one explicit no-YouTube-subtitle placeholder.
 - Lucas Grant: 10 members-only/captions-unavailable placeholders.
 - Matty Invests: one explicit unavailable-caption placeholder.
 
-Total: 11.
+Total: 12.
 
 ## 7. Channels with missing descriptions
 
 - Apesthetic: 1.
+- Doctor Thomas: 1.
 - Primate Economics: 13.
-- Senior Health Hub: 2.
 
-Total: 16.
+Total: 15.
 
 ## 8. Channels with thumbnail URLs only
 
-37 rows, exactly the standard-package channels. Each package video has a thumbnail URL, but no downloaded thumbnail evidence is registered in the standard package.
+38 rows, exactly the standard-package channels. Each package video has a thumbnail URL, but no downloaded thumbnail evidence is registered in the standard package.
 
 ## 9. Channels with downloaded thumbnail evidence
 
@@ -72,7 +72,7 @@ One row: xkcd's What If? (`UC6IxnFzHofFJ5X2PycSMsww`), 107 measured keyframes, t
 
 ## 11. Screenshot-only unmapped subjects
 
-Seven rows: Doctor Thomas; Dr. Adewale; Dr. Okoro; Dr. Waterling; The Senior Health Podcast; Senior Health Hub; The Health Educator. All remain separate from canonical channels.
+Five rows: Dr. Adewale; Dr. Waterling; The Senior Health Podcast; Senior Health Hub; The Health Educator. All remain separate from canonical channels. Doctor Thomas is no longer listed here: it is now a canonical standard-package channel (DS-000029).
 
 ## 12. Generated intelligence by capability
 
@@ -91,7 +91,7 @@ Generated rows include evidence paths. Packaging is partial/title-only for Matty
 
 ## 13. Input exists but output is not generated
 
-The 37 standard-package channels each have input-ready rows for Topic Opportunity, Packaging, Hook, and Script: 37 rows per capability, 148 rows total. `generated_artifact_available` remains false.
+The 38 standard-package channels each have input-ready rows for Topic Opportunity, Packaging, Hook, and Script: 38 rows per capability, 152 rows total. `generated_artifact_available` remains false.
 
 ## 14. First-party Analytics status
 

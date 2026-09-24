@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CapCut GUI action plan v1",
+  "type": "object",
+  "required": ["schema_version", "actions"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["time", "operation"],
+        "properties": {
+          "time": {"type": "number", "minimum": 0},
+          "operation": {"enum": ["IMPORT_MEDIA", "ADD_MEDIA", "TRIM", "SPLIT", "POSITION", "SCALE", "ROTATE", "SET_OPACITY", "ADD_KEYFRAME", "SET_MASK", "ADD_TEXT", "IMPORT_SRT", "HARD_CUT", "SHOW", "HIDE", "SET_VOLUME"]}
+        }
+      }
+    }
+  }
+}

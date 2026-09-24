@@ -78,6 +78,23 @@ data/raw/**/*
 !data/raw/channel-data/DS-000026/preflight/29_channel_public_counts.json
 !data/raw/channel-data/DS-000026/preflight/29_channel_registry_export.json
 
+# DS-000027 (Dr. Ares) is an explicitly authorized, checksum-registered Apify
+# evidence set. Version the preflight authorization trail and the run's
+# observed input/API/balance evidence; the raw actor payload and per-run
+# evidence/ subdirectory are already tracked separately.
+!data/raw/channel-data/DS-000027/
+!data/raw/channel-data/DS-000027/preflight/
+!data/raw/channel-data/DS-000027/preflight/channel_identity_evidence.json
+!data/raw/channel-data/DS-000027/preflight/actor_input_schema_evidence.json
+!data/raw/channel-data/DS-000027/preflight/authenticated_apify_balance_evidence.json
+!data/raw/channel-data/DS-000027/preflight/proposed_actor_input.json
+!data/raw/channel-data/DS-000027/preflight/authenticated_apify_pricing_evidence.json
+!data/raw/channel-data/DS-000027/preflight/preflight_cost_proposal.json
+!data/raw/channel-data/DS-000027/preflight/authenticated_apify_prelaunch_verification_20260920T163357+0500.json
+!data/raw/channel-data/DS-000027/apify/
+!data/raw/channel-data/DS-000027/apify/*/
+!data/raw/channel-data/DS-000027/apify/*/*.json
+
 # DS-000028 is an explicitly authorized, checksum-registered Apify evidence
 # set. Version its immutable raw result, observed input/run metadata, and
 # acquired transcript while keeping the general raw-data safety default.
@@ -133,3 +150,21 @@ data/intelligence/first-party/**/*
 # data/manifests/batches/*.md and *_FILES.csv, both regenerated from the
 # catalog database by scripts/generate_batch_manifests.py).
 data/manifests/batches/*_state.json
+
+# Python/test/build caches are always disposable and must never enter Git.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local inspection sidecars produced while validating generated workbooks.
+*.inspect.ndjson
+
+# Local rendering-pipeline test output (not checksum-registered dataset
+# evidence). Matches the /outputs/ naming already ignored above; this repo
+# also produces a singular "output/" directory from local pipeline runs.
+/output/
+/output.zip

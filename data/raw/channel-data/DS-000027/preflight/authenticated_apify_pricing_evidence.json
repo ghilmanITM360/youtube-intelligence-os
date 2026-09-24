@@ -1,0 +1,21 @@
+{
+  "dataset_id": "DS-000027",
+  "observed_at": "2026-09-20T15:27:06+05:00",
+  "source": "Authenticated Apify session plus live Actor Store pricing tab",
+  "actor": "streamers/youtube-scraper",
+  "actor_id": "h7sDV53CddomktSi5",
+  "pricing_url": "https://apify.com/streamers/youtube-scraper/pricing",
+  "plan_column_used": "Free — No discount",
+  "currency": "USD",
+  "prices_per_1000": {
+    "video_written_to_dataset": 4.0,
+    "date_range_for_channels": 1.3,
+    "ai_description_per_video_minute": 15.0,
+    "ai_summary_per_video_minute": 15.0,
+    "transcript_started_minute": 48.0
+  },
+  "platform_usage": "Included",
+  "selected_paid_addons": [],
+  "pricing_note": "The page headline says 'from $2.40 / 1,000 videos'; the pricing table shows that rate under Business. The authenticated account is Free, so the applicable video rate is $4.00 / 1,000.",
+  "transcript_cost_behavior": "ALWAYS_SUBTITLES downloads existing YouTube subtitles when present. TRANSCRIPTION_AS_FALLBACK and ALWAYS_TRANSCRIBE use paid speech-to-text and can trigger the transcript-minute event. This proposal enables existing subtitles only and disables paid transcription."
+}

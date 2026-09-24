@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import report_editing_visual_intelligence as report  # noqa: E402
 
 
+@unittest.skipUnless((ROOT / "data/raw/forensic-analysis/DS-000013").exists(), "requires ignored local forensic evidence")
 class EditingVisualIntelligenceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -68,7 +69,7 @@ class EditingVisualIntelligenceTests(unittest.TestCase):
 
     def test_no_thumbnail_or_transcript_fallback(self):
         with report.connect() as conn:
-            for channel_id in ("CH-000001", "CH-000002", "CH-000003", "CH-000005"):
+            for channel_id in ("CH-000001", "CH-000002", "CH-000003", "CH-000005", "CH-000006"):
                 availability = report.channel_availability(conn, channel_id, ROOT)
                 self.assertEqual(availability["editing_intelligence_status"], "NOT_AVAILABLE")
                 self.assertEqual(availability["reason"], "NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE")
@@ -120,7 +121,7 @@ class EditingVisualIntelligenceTests(unittest.TestCase):
         self.assertEqual(self.payload["channel_wide_editing_style"], "NOT_SUPPORTED")
         with report.connect() as conn:
             matrix = report.build_availability_matrix(conn, ROOT, "2026-09-11")
-        self.assertEqual(len(matrix["channels"]), 7)
+        self.assertEqual(len(matrix["channels"]), 8)
         self.assertEqual(
             next(row for row in matrix["channels"] if row["channel_id"] == "CH-000004")["editing_intelligence_status"],
             "WORKING_WITH_FORENSIC_EVIDENCE",

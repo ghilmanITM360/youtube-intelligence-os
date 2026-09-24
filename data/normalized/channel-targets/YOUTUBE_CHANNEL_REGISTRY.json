@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14",
+  "generated_at": "2026-09-24T05:28:35Z",
   "controls": {
     "submitted_rows": 67,
     "normalized_url_identities": 63,
     "canonical_target_channels": 63,
-    "all_canonical_channels": 72,
+    "all_canonical_channels": 73,
     "source_groups": {
-      "standard_packages": 37,
+      "standard_packages": 38,
       "historical_catalog": 6,
       "identity_only": 29
     },
@@ -15,14 +15,14 @@
       "forensic_channels": 1,
       "thumbnail_evidence_channels": 3,
       "title_only_historical_channels": 3,
-      "unmapped_screenshot_subjects": 7
+      "unmapped_screenshot_subjects": 4
     },
     "package_layer": {
-      "channels": 37,
-      "unique_videos": 1758,
-      "real_transcripts": 1748,
-      "placeholders": 10,
-      "missing_descriptions": 16
+      "channels": 38,
+      "unique_videos": 1724,
+      "real_transcripts": 1713,
+      "placeholders": 11,
+      "missing_descriptions": 15
     }
   },
   "channels": [
@@ -6290,6 +6290,107 @@
       }
     },
     {
+      "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
+      "channel_name": "Doctor Thomas",
+      "current_handle": "@DrThomasSeniorHealthTips",
+      "canonical_url": "https://www.youtube.com/channel/UCFuGMi0idGeyXl6wYK9hg7Q",
+      "source_group": "STANDARD_PACKAGE",
+      "primary_dataset_id": "DS-000029",
+      "target_group": "OUTSIDE_TARGET",
+      "status": "COMPLETE_WITH_LIMITATIONS",
+      "completed_tick": "",
+      "identity_evidence_source": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+      "verified_at": "2026-09-14",
+      "handle_unavailable_reason": null,
+      "limitations": [
+        "1 transcript placeholders have explicit unavailable reasons.",
+        "1 videos have no public description."
+      ],
+      "submission_rows": [],
+      "identity_status": "VERIFIED",
+      "extraction_status": "COMPLETE_WITH_LIMITATIONS",
+      "package_status": "STANDARD_PACKAGE",
+      "video_metadata_status": "COMPLETE",
+      "description_status": "PARTIAL",
+      "transcript_status": "COMPLETE_WITH_PLACEHOLDERS",
+      "intelligence_status": "DATA_READY",
+      "first_party_analytics_status": "SCHEMA_READY_NO_DATA",
+      "dataset_ids": [
+        "DS-000029"
+      ],
+      "video_count": 22,
+      "regular_videos": 22,
+      "shorts": 0,
+      "livestreams": 0,
+      "descriptions": 21,
+      "real_transcripts": 21,
+      "placeholders": 1,
+      "missing_transcripts": 0,
+      "workbook_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Master_Data.xlsx",
+      "transcript_zip_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Transcripts_22_Videos.zip",
+      "thumbnail_metadata_status": "COMPLETE",
+      "visual_asset_status": "THUMBNAIL_URL_ONLY",
+      "forensic_video_status": "NOT_AVAILABLE",
+      "visual_coverage": {
+        "thumbnail_url_count": 22,
+        "downloaded_thumbnail_count": 0,
+        "screenshot_count": 0,
+        "keyframe_count": 0,
+        "registered_source_video_count": 0,
+        "timestamped_visual_observation_count": 0,
+        "visual_evidence_level": "THUMBNAIL_URL_ONLY",
+        "editing_visual_intelligence_status": "NOT_AVAILABLE",
+        "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+        "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+      },
+      "layer_evidence": {
+        "identity_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": null
+        },
+        "extraction_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Master_Data.xlsx",
+          "limitation_reason": "1 transcript placeholders have explicit unavailable reasons.; 1 videos have no public description."
+        },
+        "package_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "video_metadata_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "description_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Master_Data.xlsx",
+          "limitation_reason": "1 videos lack public descriptions."
+        },
+        "transcript_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Transcripts_22_Videos.zip",
+          "limitation_reason": "1 explicit transcript placeholders."
+        },
+        "thumbnail_metadata_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": null
+        },
+        "visual_asset_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+        },
+        "forensic_video_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+        },
+        "intelligence_status": {
+          "evidence_path": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
+          "limitation_reason": "Capability-level rows preserve generated, data-ready, and unavailable states."
+        },
+        "first_party_analytics_status": {
+          "evidence_path": "data/intelligence/system/first-party-analytics-capability-status-2026-09-11.json",
+          "limitation_reason": "No real YouTube Studio or Analytics export is ingested."
+        }
+      }
+    },
+    {
       "canonical_channel_id": "UCXZi5JVeuTluazF-fYqQgNA",
       "channel_name": "Dr. Aliza Wright | Advice",
       "current_handle": "@Dr.AlizaWrightAdvice",
@@ -6590,26 +6691,25 @@
       "channel_name": "Dr. Okoro",
       "current_handle": "@drmarcusokoro",
       "canonical_url": "https://www.youtube.com/channel/UCMJxAeBJ0d1JC937de1eZ0Q",
-      "source_group": "HISTORICAL_CATALOG",
+      "source_group": "STANDARD_PACKAGE",
       "primary_dataset_id": "DS-000028",
       "target_group": "OUTSIDE_TARGET",
       "status": "COMPLETE",
       "completed_tick": "✓",
-      "identity_evidence_source": "data/manifests/DS-000028.md",
+      "identity_evidence_source": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
       "verified_at": "2026-09-14",
       "handle_unavailable_reason": null,
       "limitations": [],
       "submission_rows": [],
       "identity_status": "VERIFIED",
       "extraction_status": "COMPLETE",
-      "package_status": "HISTORICAL_FORMAT",
+      "package_status": "STANDARD_PACKAGE",
       "video_metadata_status": "COMPLETE",
       "description_status": "COMPLETE",
       "transcript_status": "COMPLETE_REAL",
-      "intelligence_status": "PARTIAL",
+      "intelligence_status": "DATA_READY",
       "first_party_analytics_status": "SCHEMA_READY_NO_DATA",
       "dataset_ids": [
-        "DS-000028",
         "DS-000028"
       ],
       "video_count": 66,
@@ -6620,59 +6720,59 @@
       "real_transcripts": 66,
       "placeholders": 0,
       "missing_transcripts": 0,
-      "workbook_path": null,
-      "transcript_zip_path": null,
-      "thumbnail_metadata_status": "NONE",
-      "visual_asset_status": "NONE",
+      "workbook_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Master_Data.xlsx",
+      "transcript_zip_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Transcripts_66_Videos.zip",
+      "thumbnail_metadata_status": "COMPLETE",
+      "visual_asset_status": "THUMBNAIL_URL_ONLY",
       "forensic_video_status": "NOT_AVAILABLE",
       "visual_coverage": {
-        "thumbnail_url_count": 0,
+        "thumbnail_url_count": 66,
         "downloaded_thumbnail_count": 0,
         "screenshot_count": 0,
         "keyframe_count": 0,
         "registered_source_video_count": 0,
         "timestamped_visual_observation_count": 0,
-        "visual_evidence_level": "NONE",
+        "visual_evidence_level": "THUMBNAIL_URL_ONLY",
         "editing_visual_intelligence_status": "NOT_AVAILABLE",
-        "evidence_path": "data/manifests/DS-000028.md",
-        "limitation_reason": "No downloaded visual evidence is registered."
+        "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+        "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
       },
       "layer_evidence": {
         "identity_status": {
-          "evidence_path": "data/manifests/DS-000028.md",
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
           "limitation_reason": null
         },
         "extraction_status": {
-          "evidence_path": "data/manifests/DS-000028.md",
+          "evidence_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Master_Data.xlsx",
           "limitation_reason": null
         },
         "package_status": {
-          "evidence_path": "data/manifests/DS-000028.md",
-          "limitation_reason": "Historical catalog format; no new-style package."
+          "evidence_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Master_Data.xlsx",
+          "limitation_reason": null
         },
         "video_metadata_status": {
-          "evidence_path": "data/manifests/DS-000028.md",
+          "evidence_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Master_Data.xlsx",
           "limitation_reason": null
         },
         "description_status": {
-          "evidence_path": "data/manifests/DS-000028.md",
+          "evidence_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Master_Data.xlsx",
           "limitation_reason": null
         },
         "transcript_status": {
-          "evidence_path": "data/manifests/DS-000028.md",
+          "evidence_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Transcripts_66_Videos.zip",
           "limitation_reason": null
         },
         "thumbnail_metadata_status": {
-          "evidence_path": "data/manifests/DS-000028.md",
-          "limitation_reason": "No canonical thumbnail reference."
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": null
         },
         "visual_asset_status": {
-          "evidence_path": "data/manifests/DS-000028.md",
-          "limitation_reason": "No downloaded visual evidence is registered."
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
         },
         "forensic_video_status": {
-          "evidence_path": "data/manifests/DS-000028.md",
-          "limitation_reason": "No downloaded visual evidence is registered."
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
         },
         "intelligence_status": {
           "evidence_path": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
@@ -6890,28 +6990,27 @@
       "channel_name": "Senior Health Hub",
       "current_handle": "@Health.Hub.Senior",
       "canonical_url": "https://www.youtube.com/channel/UCAYG0fzUyxv6OevH88qA45w",
-      "source_group": "STANDARD_PACKAGE",
+      "source_group": "HISTORICAL_CATALOG",
       "primary_dataset_id": "DS-000030",
       "target_group": "OUTSIDE_TARGET",
       "status": "COMPLETE_WITH_LIMITATIONS",
       "completed_tick": "",
-      "identity_evidence_source": "data/manifests/DS-000030.md",
+      "identity_evidence_source": "data/catalog/youtube_inventory.db",
       "verified_at": "2026-09-14",
       "handle_unavailable_reason": null,
       "limitations": [
-        "2 videos have no public description."
+        "Canonical acquisition is registered in the inventory; no standard channel package exists yet."
       ],
       "submission_rows": [],
       "identity_status": "VERIFIED",
       "extraction_status": "COMPLETE_WITH_LIMITATIONS",
-      "package_status": "STANDARD_PACKAGE",
+      "package_status": "HISTORICAL_FORMAT",
       "video_metadata_status": "COMPLETE",
       "description_status": "PARTIAL",
       "transcript_status": "COMPLETE_REAL",
-      "intelligence_status": "DATA_READY",
+      "intelligence_status": "PARTIAL",
       "first_party_analytics_status": "SCHEMA_READY_NO_DATA",
       "dataset_ids": [
-        "DS-000030",
         "DS-000030"
       ],
       "video_count": 122,
@@ -6922,59 +7021,59 @@
       "real_transcripts": 122,
       "placeholders": 0,
       "missing_transcripts": 0,
-      "workbook_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Master_Data.xlsx",
-      "transcript_zip_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Transcripts_122_Videos.zip",
-      "thumbnail_metadata_status": "COMPLETE",
-      "visual_asset_status": "THUMBNAIL_URL_ONLY",
+      "workbook_path": null,
+      "transcript_zip_path": null,
+      "thumbnail_metadata_status": "NONE",
+      "visual_asset_status": "NONE",
       "forensic_video_status": "NOT_AVAILABLE",
       "visual_coverage": {
-        "thumbnail_url_count": 122,
+        "thumbnail_url_count": 0,
         "downloaded_thumbnail_count": 0,
         "screenshot_count": 0,
         "keyframe_count": 0,
         "registered_source_video_count": 0,
         "timestamped_visual_observation_count": 0,
-        "visual_evidence_level": "THUMBNAIL_URL_ONLY",
+        "visual_evidence_level": "NONE",
         "editing_visual_intelligence_status": "NOT_AVAILABLE",
-        "evidence_path": "data/manifests/DS-000030.md",
-        "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+        "evidence_path": "data/catalog/youtube_inventory.db",
+        "limitation_reason": "No downloaded visual evidence is registered."
       },
       "layer_evidence": {
         "identity_status": {
-          "evidence_path": "data/manifests/DS-000030.md",
+          "evidence_path": "data/catalog/youtube_inventory.db",
           "limitation_reason": null
         },
         "extraction_status": {
-          "evidence_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Master_Data.xlsx",
-          "limitation_reason": "2 videos have no public description."
+          "evidence_path": "data/catalog/youtube_inventory.db",
+          "limitation_reason": "Canonical acquisition is registered in the inventory; no standard channel package exists yet."
         },
         "package_status": {
-          "evidence_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Master_Data.xlsx",
-          "limitation_reason": null
+          "evidence_path": "data/catalog/youtube_inventory.db",
+          "limitation_reason": "Historical catalog format; no new-style package."
         },
         "video_metadata_status": {
-          "evidence_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Master_Data.xlsx",
+          "evidence_path": "data/catalog/youtube_inventory.db",
           "limitation_reason": null
         },
         "description_status": {
-          "evidence_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Master_Data.xlsx",
+          "evidence_path": "data/catalog/youtube_inventory.db",
           "limitation_reason": "2 videos lack public descriptions."
         },
         "transcript_status": {
-          "evidence_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Transcripts_122_Videos.zip",
+          "evidence_path": "data/catalog/youtube_inventory.db",
           "limitation_reason": null
         },
         "thumbnail_metadata_status": {
-          "evidence_path": "data/manifests/DS-000030.md",
-          "limitation_reason": null
+          "evidence_path": "data/catalog/youtube_inventory.db",
+          "limitation_reason": "No canonical thumbnail reference."
         },
         "visual_asset_status": {
-          "evidence_path": "data/manifests/DS-000030.md",
-          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+          "evidence_path": "data/catalog/youtube_inventory.db",
+          "limitation_reason": "No downloaded visual evidence is registered."
         },
         "forensic_video_status": {
-          "evidence_path": "data/manifests/DS-000030.md",
-          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+          "evidence_path": "data/catalog/youtube_inventory.db",
+          "limitation_reason": "No downloaded visual evidence is registered."
         },
         "intelligence_status": {
           "evidence_path": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
@@ -8068,18 +8167,6 @@
   "subjects": [
     {
       "subject_id": "SUBJ-000001",
-      "subject_name": "Doctor Thomas",
-      "canonical_channel_id": null,
-      "identity_status": "PENDING_IDENTITY_RESOLUTION",
-      "evidence_source": "data/raw/competitors/DS-000003 (5 screenshots)",
-      "dataset_id": "DS-000003",
-      "limitation": "Screenshot-only subject; canonical YouTube identity and video population are not established.",
-      "screenshot_count": 5,
-      "visual_evidence_level": "SCREENSHOT_ONLY_UNMAPPED",
-      "evidence_path": "data/raw/competitors/DS-000003"
-    },
-    {
-      "subject_id": "SUBJ-000002",
       "subject_name": "Dr. Adewale",
       "canonical_channel_id": null,
       "identity_status": "PENDING_IDENTITY_RESOLUTION",
@@ -8091,19 +8178,7 @@
       "evidence_path": "data/raw/competitors/DS-000004"
     },
     {
-      "subject_id": "SUBJ-000003",
-      "subject_name": "Dr. Okoro",
-      "canonical_channel_id": null,
-      "identity_status": "PENDING_IDENTITY_RESOLUTION",
-      "evidence_source": "data/raw/competitors/DS-000005 (10 screenshots)",
-      "dataset_id": "DS-000005",
-      "limitation": "Screenshot-only subject; canonical YouTube identity and video population are not established.",
-      "screenshot_count": 10,
-      "visual_evidence_level": "SCREENSHOT_ONLY_UNMAPPED",
-      "evidence_path": "data/raw/competitors/DS-000005"
-    },
-    {
-      "subject_id": "SUBJ-000004",
+      "subject_id": "SUBJ-000002",
       "subject_name": "Dr. Waterling",
       "canonical_channel_id": null,
       "identity_status": "PENDING_IDENTITY_RESOLUTION",
@@ -8115,7 +8190,7 @@
       "evidence_path": "data/raw/competitors/DS-000007"
     },
     {
-      "subject_id": "SUBJ-000005",
+      "subject_id": "SUBJ-000003",
       "subject_name": "The Senior Health Podcast",
       "canonical_channel_id": null,
       "identity_status": "PENDING_IDENTITY_RESOLUTION",
@@ -8127,19 +8202,7 @@
       "evidence_path": "data/raw/competitors/DS-000008"
     },
     {
-      "subject_id": "SUBJ-000006",
-      "subject_name": "Senior Health Hub",
-      "canonical_channel_id": null,
-      "identity_status": "PENDING_IDENTITY_RESOLUTION",
-      "evidence_source": "data/raw/competitors/DS-000009 (24 screenshots)",
-      "dataset_id": "DS-000009",
-      "limitation": "Screenshot-only subject; canonical YouTube identity and video population are not established.",
-      "screenshot_count": 24,
-      "visual_evidence_level": "SCREENSHOT_ONLY_UNMAPPED",
-      "evidence_path": "data/raw/competitors/DS-000009"
-    },
-    {
-      "subject_id": "SUBJ-000007",
+      "subject_id": "SUBJ-000004",
       "subject_name": "The Health Educator",
       "canonical_channel_id": null,
       "identity_status": "PENDING_IDENTITY_RESOLUTION",
@@ -13387,6 +13450,86 @@
       "last_verified_at": "2026-09-14"
     },
     {
+      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "capability_id": "TOPIC_OPPORTUNITY",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "capability_id": "PACKAGING",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "capability_id": "HOOK",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "capability_id": "SCRIPT",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000028/packages/dr-okoro/DrOkoro_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "capability_id": "EDITING_VISUAL",
+      "status": "NOT_AVAILABLE",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+      "limitation_reason": "No registered forensic video evidence; transcripts and thumbnail URLs are not substitutes.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "capability_id": "UNIFIED_ORCHESTRATION",
+      "status": "NOT_AVAILABLE",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
+      "limitation_reason": "Required input evidence or generated channel-specific artifact is unavailable.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "capability_id": "CHANNEL_STRATEGY",
+      "status": "NOT_AVAILABLE",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "data/intelligence/system/cross-niche-strategy-calibration-2026-09-11.json",
+      "limitation_reason": "Required input evidence or generated channel-specific artifact is unavailable.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "capability_id": "FIRST_PARTY_ANALYTICS",
+      "status": "DATA_READY",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "data/intelligence/system/first-party-analytics-capability-status-2026-09-11.json",
+      "limitation_reason": "Schema and ingestion code are ready, but no real YouTube Studio or Analytics export is ingested.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
       "canonical_channel_id": "UCXZi5JVeuTluazF-fYqQgNA",
       "capability_id": "TOPIC_OPPORTUNITY",
       "status": "VALIDATED",
@@ -13787,57 +13930,57 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
       "capability_id": "TOPIC_OPPORTUNITY",
       "status": "DATA_READY",
       "input_data_available": true,
       "generated_artifact_available": false,
-      "evidence_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Master_Data.xlsx",
+      "evidence_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Master_Data.xlsx",
       "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
       "capability_id": "PACKAGING",
       "status": "DATA_READY",
       "input_data_available": true,
       "generated_artifact_available": false,
-      "evidence_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Master_Data.xlsx",
+      "evidence_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Master_Data.xlsx",
       "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
       "capability_id": "HOOK",
       "status": "DATA_READY",
       "input_data_available": true,
       "generated_artifact_available": false,
-      "evidence_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Master_Data.xlsx",
+      "evidence_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Master_Data.xlsx",
       "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
       "capability_id": "SCRIPT",
       "status": "DATA_READY",
       "input_data_available": true,
       "generated_artifact_available": false,
-      "evidence_path": "data/extracted/channel-data/DS-000030/packages/senior-health-hub/SeniorHealthHub_Master_Data.xlsx",
+      "evidence_path": "data/extracted/channel-data/DS-000029/packages/doctor-thomas/DoctorThomas_Master_Data.xlsx",
       "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
       "capability_id": "EDITING_VISUAL",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
       "generated_artifact_available": false,
-      "evidence_path": "data/manifests/DS-000030.md",
+      "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
       "limitation_reason": "No registered forensic video evidence; transcripts and thumbnail URLs are not substitutes.",
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
       "capability_id": "UNIFIED_ORCHESTRATION",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
@@ -13847,7 +13990,7 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
       "capability_id": "CHANNEL_STRATEGY",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
@@ -13857,7 +14000,7 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
       "capability_id": "FIRST_PARTY_ANALYTICS",
       "status": "DATA_READY",
       "input_data_available": false,
@@ -13867,7 +14010,7 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
       "capability_id": "TOPIC_OPPORTUNITY",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
@@ -13877,7 +14020,7 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
       "capability_id": "PACKAGING",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
@@ -13887,7 +14030,7 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
       "capability_id": "HOOK",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
@@ -13897,7 +14040,7 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
       "capability_id": "SCRIPT",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
@@ -13907,17 +14050,17 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
       "capability_id": "EDITING_VISUAL",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
       "generated_artifact_available": false,
-      "evidence_path": "data/manifests/DS-000028.md",
+      "evidence_path": "data/catalog/youtube_inventory.db",
       "limitation_reason": "No registered forensic video evidence; transcripts and thumbnail URLs are not substitutes.",
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
       "capability_id": "UNIFIED_ORCHESTRATION",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
@@ -13927,7 +14070,7 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
       "capability_id": "CHANNEL_STRATEGY",
       "status": "NOT_AVAILABLE",
       "input_data_available": false,
@@ -13937,7 +14080,7 @@
       "last_verified_at": "2026-09-14"
     },
     {
-      "canonical_channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "canonical_channel_id": "UCAYG0fzUyxv6OevH88qA45w",
       "capability_id": "FIRST_PARTY_ANALYTICS",
       "status": "DATA_READY",
       "input_data_available": false,

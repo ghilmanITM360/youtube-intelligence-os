@@ -287,5 +287,33 @@ class InventoryCatalogTestCase(unittest.TestCase):
             inventory_catalog.cmd_verify(Args(db_path=str(self.db_path), dataset_id="DS-000001"))
 
 
+class CanonicalPathPortabilityTests(unittest.TestCase):
+    """A registry built on machine A must be consumable on machine B: canonical
+    paths are stored repo-relative, never baked in with another machine's
+    home-directory prefix."""
+
+    def test_to_repo_relative_strips_repo_root(self):
+        target = REPO_ROOT / "data" / "raw" / "example" / "file.txt"
+        self.assertEqual(inventory_catalog.to_repo_relative(target), "data/raw/example/file.txt")
+
+    def test_resolve_canonical_path_round_trips_through_repo_root(self):
+        target = REPO_ROOT / "data" / "raw" / "example" / "file.txt"
+        relative = inventory_catalog.to_repo_relative(target)
+        self.assertFalse(Path(relative).is_absolute())
+        self.assertEqual(inventory_catalog.resolve_canonical_path(relative), target.resolve())
+
+    def test_resolve_canonical_path_still_opens_legacy_absolute_rows(self):
+        legacy_absolute = "/Users/someone-elses-machine/youtube-intelligence-os/data/raw/x/y.txt"
+        self.assertEqual(inventory_catalog.resolve_canonical_path(legacy_absolute), Path(legacy_absolute))
+
+    def test_to_repo_relative_falls_back_to_absolute_outside_repo_root(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            outside = Path(tmp) / "file.txt"
+            outside.write_text("x")
+            result = inventory_catalog.to_repo_relative(outside)
+            self.assertTrue(Path(result).is_absolute())
+            self.assertEqual(Path(result), outside.resolve())
+
+
 if __name__ == "__main__":
     unittest.main()

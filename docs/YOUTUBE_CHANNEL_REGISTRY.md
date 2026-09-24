@@ -1,32 +1,29 @@
 # YouTube Channel Registry
 
-Verified: 2026-09-14
+Verified: 2026-09-23
 
 ## Purpose and authority
 
-This registry reconciles the 67 user-submitted YouTube URLs, 25 repository datasets, historical SQLite holdings, standardized channel packages, visual evidence, and generated intelligence. The immutable submitted URL authority is `data/raw/channel-targets/user-supplied-youtube-channels-2026-09-14.json`.
+This registry reconciles the 67 user-submitted YouTube URLs, 27 repository datasets (plus DS-000026, a preflight-only proposal that is not itself an acquisition), historical SQLite holdings, standardized channel packages, visual evidence, and generated intelligence. The immutable submitted URL authority is `data/raw/channel-targets/user-supplied-youtube-channels-2026-09-14.json`.
 
-The registry is separate from `data/catalog/youtube_inventory.db`. The historical catalog is read-only evidence and is never rebuilt or overwritten by this workflow. The generated `data/catalog/youtube_channel_registry.db` is ignored by Git; schema, builder, validator, queries, normalized ledgers, and workbook are tracked.
+The registry is separate from `data/catalog/youtube_inventory.db`. The historical catalog is read-only evidence and is never rebuilt or overwritten by this workflow. The generated `data/catalog/youtube_channel_registry.db` is a Git LFS-tracked, committed artifact (not gitignored) — it is the complete cross-channel query authority; `youtube_inventory.db` remains a separate, gitignored, legacy/selected-inventory workflow database. Schema, builder, validator, queries, normalized ledgers, and workbook are tracked.
 
 ## Population controls
 
 | Population | Count |
 |---|---:|
-| Canonical channels | 69 |
+| Canonical channels | 71 |
 | User-submitted rows | 67 |
 | Canonical target channels | 63 |
-| Standard-package channels | 35 |
+| Standard-package channels | 37 |
 | Historical-catalog channels | 5 |
 | Identity-only target channels | 29 |
-| Stored channels outside target list | 6 |
-| Datasets | 25 |
-| Unique videos across historical and package layers | 1,904 |
-| Real transcripts | 1,893 |
-| Explicit transcript placeholders | 11 |
-| Videos missing public descriptions | 14 |
-| Screenshot-only unmapped subjects | 7 |
+| Datasets | 27 (+ DS-000026 preflight-only) |
+| Videos (canonical union) | 2,005 |
+| Real transcripts | 1,995 |
+| Subtitle tracks | 2,008 |
 
-The 1,904-video total is the canonical union by YouTube video ID. It is not a blind sum of assumed-independent populations.
+DS-000027 (Dr. Ares Senior, standard package) and DS-000028 (Dr. Okoro, standard package — 66 videos, 66 descriptions, 66 transcripts, complete) are both integrated. The video total is the canonical union by YouTube video ID, not a blind sum of assumed-independent populations.
 
 ## Independent data layers
 
@@ -44,7 +41,7 @@ No single completion flag represents every layer. `status` is retained only as t
 - `intelligence_status`
 - `first_party_analytics_status`
 
-`channel_data_layers` stores one row per channel and layer, with status, evidence path, limitation reason, and verification date. This produces 759 rows: 69 channels times 11 layers.
+`channel_data_layers` stores one row per channel and layer, with status, evidence path, limitation reason, and verification date. This produces 781 rows: 71 channels times 11 layers.
 
 ### Source groups
 
@@ -74,7 +71,7 @@ Identity resolution never implies extraction. Thumbnail URLs never imply downloa
 | xkcd's What If? | 83 | 83 | 0 | 107 | 3 | 107 | `FORENSIC_VIDEO_EVIDENCE` |
 | Dr. Elias Senior Health | 29 | 29 | 0 | 0 | 0 | 0 | `THUMBNAIL_EVIDENCE` |
 
-The 35 standard-package channels have thumbnail URLs only and no registered downloaded thumbnail or forensic evidence in their packages. Matty Invests and Mr. Finance remain title-only for packaging because canonical thumbnail references are absent.
+The 37 standard-package channels have thumbnail URLs only and no registered downloaded thumbnail or forensic evidence in their packages. Matty Invests and Mr. Finance remain title-only for packaging because canonical thumbnail references are absent.
 
 Only xkcd's What If? (`UC6IxnFzHofFJ5X2PycSMsww`, historical `CH-000004`) has registered forensic visual-temporal evidence. The editing artifact covers three canonical videos across four forensic datasets; DS-000012 and DS-000015 are related analyses of the same source video and are not counted independently.
 
@@ -82,7 +79,7 @@ Seven screenshot-only subjects remain in `non_channel_subjects`. They have no ca
 
 ## Intelligence coverage
 
-Eight capabilities are stored separately for every canonical channel, producing 552 rows:
+Eight capabilities are stored separately for every canonical channel, producing 568 rows:
 
 1. Topic Opportunity Intelligence
 2. Packaging, Title, and Thumbnail Intelligence
@@ -95,7 +92,7 @@ Eight capabilities are stored separately for every canonical channel, producing 
 
 Each `intelligence_coverage` row distinguishes input availability from generated artifact availability. Raw data availability is not generated intelligence.
 
-The five historical intelligence channels have generated topic, packaging, hook, script, and unified artifacts. Packaging is title-only and `PARTIAL` for Matty Invests and Mr. Finance. Editing/Visual is generated only for xkcd and remains `PARTIAL` because evidence covers three videos, not the full channel. Channel Strategy has four generated/benchmark-covered channels and retains the two-channels-per-niche calibration limitation. The 35 package channels are `DATA_READY` for topic, packaging, hook, and script inputs but have no generated per-channel artifacts. The 29 identity-only channels lack these inputs.
+The five historical intelligence channels have generated topic, packaging, hook, script, and unified artifacts. Packaging is title-only and `PARTIAL` for Matty Invests and Mr. Finance. Editing/Visual is generated only for xkcd and remains `PARTIAL` because evidence covers three videos, not the full channel. Channel Strategy has four generated/benchmark-covered channels and retains the two-channels-per-niche calibration limitation. The 37 package channels, including Dr. Ares Senior and Dr. Okoro, are `DATA_READY` for topic, packaging, hook, and script inputs but have no generated per-channel artifacts. The 29 identity-only channels lack these inputs.
 
 First-party Analytics remains `SCHEMA_READY_NO_DATA` for every channel. Repository code and synthetic fixtures prove ingestion readiness; no real first-party export has been ingested.
 
@@ -130,11 +127,18 @@ Transcript FTS5 is created only when runtime support exists. `data/catalog/chann
 
 ## Build and validate
 
-Use the bundled workspace Python from repository root:
+`youtube_channel_registry.db` is Git LFS-tracked. A clean clone must materialize it before use:
 
 ```bash
-python3 -B -m scripts.build_youtube_channel_registry --write-ledgers
+git lfs install
+git lfs pull
+```
 
+Without this, the checked-out file is only the LFS pointer, not a real SQLite database. Then, using the Python 3.12 environment declared in `pyproject.toml`:
+
+```bash
+python3 -B -m scripts.rebuild_inventory_catalog
+python3 -B -m scripts.build_youtube_channel_registry --write-ledgers
 python3 -B -m scripts.validate_youtube_channel_registry
 ```
 

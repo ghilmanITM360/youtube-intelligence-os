@@ -1,0 +1,26 @@
+{
+  "dataset_id": "DS-000027",
+  "observed_at": "2026-09-20T15:27:06+05:00",
+  "actor": "streamers/youtube-scraper",
+  "actor_id": "h7sDV53CddomktSi5",
+  "build": "latest",
+  "input_schema_url": "https://apify.com/streamers/youtube-scraper/input-schema",
+  "relevant_fields": {
+    "startUrls": "Exact YouTube URLs to scrape",
+    "maxResults": "Maximum regular videos",
+    "maxResultsShorts": "Maximum Shorts",
+    "maxResultStreams": "Maximum livestreams",
+    "sortVideosBy": "NEWEST, POPULAR, or OLDEST",
+    "transcriptionAndSubtitle": "NONE, ALWAYS_SUBTITLES, TRANSCRIPTION_AS_FALLBACK, or ALWAYS_TRANSCRIBE",
+    "subtitlesLanguage": "Requested subtitle language or any",
+    "subtitlesFormat": "srt, vtt, xml, or plaintext",
+    "aiVideoDescription": "Paid AI add-on toggle",
+    "aiVideoSummary": "Paid AI add-on toggle"
+  },
+  "readme_verification": {
+    "existing_subtitles_only": "Downloads YouTube-provided subtitles when present; videos without subtitles get none.",
+    "transcription_as_fallback": "Uses paid speech-to-text only when subtitles are absent.",
+    "always_transcribe": "Always uses paid speech-to-text.",
+    "date_filter": "Optional channel date filtering has its own paid event."
+  }
+}

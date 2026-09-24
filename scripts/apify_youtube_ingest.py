@@ -626,7 +626,7 @@ def _verify_registered_raw_payload(conn, source_run):
     ).fetchone()
     if not manifest_row:
         raise CatalogError("MissingProvenance", "Apify run manifest is not registered")
-    manifest_path = Path(manifest_row["canonical_path"])
+    manifest_path = ic.resolve_canonical_path(manifest_row["canonical_path"])
     if not manifest_path.is_file() or manifest_path.stat().st_size != manifest_row["size_bytes"] \
             or ic.sha256_file(manifest_path) != manifest_row["sha256"]:
         raise CatalogError("RevisionDetected", "Apify run manifest is missing or changed: {}".format(manifest_path))
@@ -737,7 +737,7 @@ def reconcile_existing_cost(db_path, client, actor_run_id, timeout_seconds=60, m
                            '.json', 'application/json', ?, ?, 'B', 'MEASURED_FACT', 1, 0,
                            'CATALOGED', 'VERIFIED', ?, 'Append-only final billing observation')""",
                 (file_id, source_run["dataset_id"], source_run["registration_run_id"], path.name,
-                 cost_manifest["source_locator"], path.name, str(path), len(data), digest, observed_at),
+                 cost_manifest["source_locator"], path.name, ic.to_repo_relative(path), len(data), digest, observed_at),
             )
             conn.execute(
                 """UPDATE ingestion_runs SET source_file_count=COALESCE(source_file_count,0)+1,
@@ -926,7 +926,7 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
             path = run_dir / "transcripts" / (item["youtube_video_id"] + ".txt")
             data = transcript["text"].encode("utf-8")
             digest = _write_exact(path, data, created_files)
-            transcript_files[item["youtube_video_id"]] = {"path": str(path), "sha256": digest, "size_bytes": len(data)}
+            transcript_files[item["youtube_video_id"]] = {"path": ic.to_repo_relative(path), "sha256": digest, "size_bytes": len(data)}
 
         manifest = {
             "actor": {"name": ACTOR_NAME, "id": run_values["actor_id"], "run_id": run["id"],
@@ -977,7 +977,7 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
                                'CATALOGED', 'VERIFIED', ?, 'Full raw Actor result retained locally')""",
                     (raw_source_file_id, dataset_id, internal_run_id, raw_path.name,
                      "apify://{}/runs/{}/dataset".format(ACTOR_NAME, run["id"]),
-                     relative_raw_path, str(raw_path), raw_source_info["size_bytes"],
+                     relative_raw_path, ic.to_repo_relative(raw_path), raw_source_info["size_bytes"],
                      raw_source_info["sha256"], ts),
                 )
             manifest_file_id = _next_id(conn, "source_files", "file_id", "FILE")
@@ -992,7 +992,7 @@ def ingest_run(db_path, dataset_id, channel_url, run, actor_input, records,
                            '.json', ?, ?, 'B', 'RAW_SOURCE', 1, 0, 'CATALOGED', 'VERIFIED', ?, ?)""",
                 (manifest_file_id, dataset_id, internal_run_id, manifest_path.name,
                  "apify://{}/runs/{}".format(ACTOR_NAME, run["id"]), manifest_path.name,
-                 str(manifest_path), len(manifest_data), manifest_sha, ts,
+                 ic.to_repo_relative(manifest_path), len(manifest_data), manifest_sha, ts,
                  "Sanitized run manifest; full raw Actor result is separately hash-verified."),
             )
             if not conn.execute("SELECT 1 FROM source_locations WHERE dataset_id=? AND original_path=?", (dataset_id, channel_url)).fetchone():

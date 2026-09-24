@@ -20,7 +20,9 @@ from collections import Counter
 from pathlib import Path
 
 import inventory_catalog
-from inventory_catalog import CatalogError, DEFAULT_DB_PATH, now_iso, sha256_bytes, sha256_file
+from inventory_catalog import (
+    CatalogError, DEFAULT_DB_PATH, now_iso, resolve_canonical_path, sha256_bytes, sha256_file,
+)
 from source_adapters import youtube_master_data as ymd
 
 TOOL_VERSION = "register_structured_source.py/1"
@@ -158,7 +160,7 @@ def cmd_register(args):
 
         # Changed-source detection (rule 39) — before parsing anything.
         for _, filename, canonical_path, recorded_sha256, _role in physical:
-            p = Path(canonical_path)
+            p = resolve_canonical_path(canonical_path)
             if not p.exists():
                 raise CatalogError("SourceNotFound", "Canonical file missing: {}".format(canonical_path))
             actual = sha256_file(p)
@@ -639,7 +641,7 @@ def cmd_verify(args):
         ).fetchall()
         hash_mismatches = []
         for filename, canonical_path, recorded_sha256 in physical:
-            p = Path(canonical_path)
+            p = resolve_canonical_path(canonical_path)
             if not p.exists() or sha256_file(p) != recorded_sha256:
                 hash_mismatches.append(filename)
 
@@ -720,7 +722,7 @@ def cmd_backfill_workbook_provenance(args):
             )
 
         workbook_file_id, canonical_path, recorded_sha256 = workbooks[0]
-        workbook_path = Path(canonical_path)
+        workbook_path = resolve_canonical_path(canonical_path)
         if not workbook_path.exists():
             raise CatalogError("SourceNotFound", "Canonical workbook missing: {}".format(canonical_path))
         actual_sha256 = sha256_file(workbook_path)
@@ -801,7 +803,7 @@ def cmd_backfill_transcript_provenance(args):
         if len(parents) != 1 or None in next(iter(parents)):
             raise CatalogError("MissingProvenance", "AVAILABLE transcripts do not resolve to one canonical archive.")
         _parent_file_id, canonical_path, recorded_archive_sha256 = next(iter(parents))
-        archive_path = Path(canonical_path)
+        archive_path = resolve_canonical_path(canonical_path)
         if not archive_path.exists():
             raise CatalogError("SourceNotFound", "Canonical transcript archive missing: {}".format(canonical_path))
         actual_archive_sha256 = sha256_file(archive_path)

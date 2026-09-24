@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Universal production timeline v1",
+  "type": "object",
+  "required": ["schema_version", "project", "source_media", "scenes", "shots", "tracks", "assets", "audio", "captions", "motions", "keyframes", "transitions", "sync_events"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "project": {"type": "object", "required": ["name", "duration_sec", "canvas"]},
+    "source_media": {"type": "array", "minItems": 1},
+    "scenes": {"type": "array", "minItems": 1},
+    "shots": {"type": "array", "minItems": 1},
+    "tracks": {"type": "array", "minItems": 1},
+    "assets": {"type": "array"},
+    "audio": {"type": "array", "minItems": 1},
+    "captions": {"type": "array"},
+    "motions": {"type": "array"},
+    "keyframes": {"type": "array"},
+    "transitions": {"type": "array"},
+    "sync_events": {"type": "array"}
+  },
+  "additionalProperties": false
+}

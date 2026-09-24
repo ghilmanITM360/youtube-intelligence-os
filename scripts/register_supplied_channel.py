@@ -213,7 +213,7 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
                 file_ids[source.name] = file_id
                 conn.execute(
                     "INSERT INTO source_files (file_id,dataset_id,ingestion_run_id,parent_file_id,storage_kind,file_role,original_filename,original_path,relative_path,canonical_path,archive_member_path,extension,mime_type,size_bytes,sha256,semantic_class,evidence_layer,is_copied,is_archive_member,processing_status,verification_status,created_at,notes) VALUES (?,?,?,NULL,'PHYSICAL_FILE',?,?,?,?,?,NULL,?,?,?,?,?,'RAW_SOURCE',1,0,'CATALOGED','VERIFIED',?,?)",
-                    (file_id, dataset_id, file_run_id, role, source.name, str(source), relative, str(destination), source.suffix.lower(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" if source == workbook_path else "text/plain", source.stat().st_size, source_hashes[str(source)], "B", ts, "INGEST"),
+                    (file_id, dataset_id, file_run_id, role, source.name, str(source), relative, ic.to_repo_relative(destination), source.suffix.lower(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" if source == workbook_path else "text/plain", source.stat().st_size, source_hashes[str(source)], "B", ts, "INGEST"),
                 )
 
             def provenance(target_column, target_id, field, locator, source_file_id, origin="SOURCE_EXTRACTED", evidence="EXTRACTED_FACT", method="xlsx_cell_read"):
@@ -271,7 +271,7 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
 
                 transcript_id = next_id(conn, "transcripts", "transcript_id", "TR")
                 transcript_file_id = file_ids[transcript["path"].name]
-                canonical_reference = str(canonical_transcripts / transcript["path"].name)
+                canonical_reference = ic.to_repo_relative(canonical_transcripts / transcript["path"].name)
                 conn.execute(
                     "INSERT INTO transcripts (transcript_id,video_id,dataset_id,registration_run_id,archive_member_file_id,availability_status,caption_type,language,word_count,transcript_sha256,description_present,created_at,notes,transcript_format,transcript_source,canonical_reference,timing_quality) VALUES (?,?,?,?,?,'AVAILABLE',?,?,?,?,?, ?,?,'plaintext','SUPPLIED_APIFY_EXPORT',?,'POSITIONAL_ONLY')",
                     (transcript_id, video_id, dataset_id, structured_run_id, transcript_file_id, transcript["caption_type"], transcript["language"], as_int(transcript["word_count"], "Word count"), transcript["sha256"], int(transcript["description_present"]), ts, "No transcript timestamps; description chapter markers are not transcript timing.", canonical_reference),

@@ -1,0 +1,567 @@
+{
+  "data": {
+    "id": "TOdB7bMFfGfrqapsF",
+    "name": null,
+    "userId": "H24ACSyg2vOtQxYik",
+    "createdAt": "2026-09-20T11:39:41.076Z",
+    "modifiedAt": "2026-09-20T11:41:17.308Z",
+    "accessedAt": "2026-09-20T11:42:34.025Z",
+    "itemCount": 35,
+    "cleanItemCount": 35,
+    "actId": "h7sDV53CddomktSi5",
+    "actRunId": "dqMkTSwYwRir4QfUM",
+    "schema": {
+      "actorSpecification": 1,
+      "fields": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the YouTube video",
+            "nullable": true,
+            "example": "Amazing Tutorial Video"
+          },
+          "id": {
+            "type": "string",
+            "description": "The unique YouTube video ID",
+            "nullable": false,
+            "example": "dQw4w9WgXcQ"
+          },
+          "url": {
+            "type": "string",
+            "description": "The full URL of the video",
+            "nullable": false,
+            "example": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          },
+          "viewCount": {
+            "type": "number",
+            "description": "The number of views on the video",
+            "nullable": true,
+            "example": 100
+          },
+          "date": {
+            "type": "string",
+            "description": "The publish date of the video",
+            "nullable": true,
+            "example": "2024-08-27T07:47:39.000Z"
+          },
+          "duration": {
+            "type": "string",
+            "description": "The length of the video in time format",
+            "nullable": true,
+            "example": "00:03:27"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "video",
+              "shorts",
+              "stream"
+            ],
+            "description": "The type of video content",
+            "nullable": false,
+            "example": "video"
+          },
+          "thumbnailUrl": {
+            "type": "string",
+            "description": "URL of the video thumbnail image",
+            "nullable": true,
+            "example": "https://i.ytimg.com/vi/abc/maxresdefault.jpg"
+          },
+          "input": {
+            "type": "string",
+            "description": "The input provided by the user (URL, channel name, or search query)",
+            "nullable": false,
+            "example": "https://www.youtube.com/watch?v=abc123"
+          },
+          "channelName": {
+            "type": "string",
+            "description": "The name of the channel that published the video",
+            "nullable": true,
+            "example": "TechReviewer"
+          },
+          "channelUrl": {
+            "type": "string",
+            "description": "The URL of the channel",
+            "nullable": true,
+            "example": "https://www.youtube.com/@Apify"
+          },
+          "channelUsername": {
+            "type": "string",
+            "description": "The @username handle of the channel",
+            "nullable": true,
+            "example": "Apify"
+          },
+          "translatedTitle": {
+            "type": "string",
+            "description": "The translated title if YouTube provided a translation",
+            "nullable": true,
+            "example": "Increíble Video Tutorial"
+          },
+          "translatedText": {
+            "type": "string",
+            "description": "The translated description if YouTube provided a translation",
+            "nullable": true,
+            "example": "Crawlee te ayuda a crear scrapers confiables. Rápido."
+          },
+          "likes": {
+            "type": "number",
+            "description": "The number of likes on the video",
+            "nullable": true,
+            "example": 15000
+          },
+          "location": {
+            "type": "string",
+            "description": "Geographic location associated with the video",
+            "nullable": true,
+            "example": "United States"
+          },
+          "channelId": {
+            "type": "string",
+            "description": "The unique channel ID",
+            "nullable": true,
+            "example": "UC123456789abcdef"
+          },
+          "commentsCount": {
+            "type": "number",
+            "description": "The total number of comments on the video",
+            "nullable": true,
+            "example": 1250
+          },
+          "text": {
+            "type": "string",
+            "description": "The video description text",
+            "nullable": true,
+            "example": "Crawlee helps you build reliable scrapers. Fast."
+          },
+          "descriptionLinks": {
+            "type": "array",
+            "description": "Links found in the video description",
+            "nullable": true,
+            "example": [
+              {
+                "url": "https://crawlee.dev/",
+                "text": "https://crawlee.dev/"
+              }
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "url": {
+                  "type": "string",
+                  "nullable": true
+                }
+              }
+            }
+          },
+          "subtitles": {
+            "type": "array",
+            "description": "Available subtitles for the video",
+            "nullable": true,
+            "example": [
+              {
+                "srtUrl": null,
+                "type": "user_generated",
+                "language": "en",
+                "srt": "1\n00:00:0,640 --> 00:00:5,674\nExample subtitle text\n"
+              }
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "srtUrl": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "type": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "language": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "srt": {
+                  "type": "string",
+                  "nullable": true
+                }
+              }
+            }
+          },
+          "aiVideoDescription": {
+            "type": "array",
+            "description": "AI-generated, time-segmented description of the video (only when AI enrichment is enabled)",
+            "nullable": true,
+            "example": [
+              {
+                "startSecond": 0,
+                "endSecond": 12,
+                "displayTime": "0:00 - 0:12",
+                "description": "The host introduces Crawlee and outlines what the tutorial covers."
+              }
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "startSecond": {
+                  "type": "integer"
+                },
+                "endSecond": {
+                  "type": "integer"
+                },
+                "displayTime": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "aiVideoSummary": {
+            "type": "string",
+            "description": "AI-generated summary of the video (only when AI enrichment is enabled)",
+            "nullable": true,
+            "example": "A walkthrough of building a reliable scraper with Crawlee, covering setup, request handling, and data extraction."
+          },
+          "transcriptionUrl": {
+            "type": "string",
+            "description": "URL of the AI-generated transcript stored in the key-value store. Present only when a transcription option is selected in 'Transcription & subtitles'",
+            "nullable": true,
+            "example": "https://api.apify.com/v2/key-value-stores/abc123/records/transcription-dQw4w9WgXcQ"
+          },
+          "fromYTUrl": {
+            "type": "string",
+            "description": "The YouTube URL where this video was found (e.g. search results or channel page)",
+            "nullable": true,
+            "example": "https://www.youtube.com/results?search_query=Crawlee"
+          },
+          "order": {
+            "type": "number",
+            "description": "The position of the video in the list as it appeared on the source page",
+            "nullable": true,
+            "example": 21
+          },
+          "commentsTurnedOff": {
+            "type": "boolean",
+            "description": "Whether comments are disabled on the video",
+            "nullable": true,
+            "example": false
+          },
+          "isMonetized": {
+            "type": "boolean",
+            "description": "Whether the video is monetized",
+            "nullable": true,
+            "example": true
+          },
+          "hashtags": {
+            "type": "array",
+            "description": "Hashtags associated with the video",
+            "nullable": false,
+            "example": [
+              "#tech",
+              "#tutorial"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "isMembersOnly": {
+            "type": "boolean",
+            "description": "Whether the video is restricted to channel members",
+            "nullable": false,
+            "example": false
+          },
+          "collaborators": {
+            "type": "array",
+            "description": "Collaborators on the video",
+            "nullable": true,
+            "example": [
+              {
+                "name": "Apify",
+                "username": "@Apify",
+                "url": "https://www.youtube.com/@Apify"
+              }
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "username": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "url": {
+                  "type": "string",
+                  "nullable": true
+                }
+              }
+            }
+          },
+          "isPaidContent": {
+            "type": "boolean",
+            "description": "Whether the video requires payment to access",
+            "nullable": false,
+            "example": false
+          },
+          "numberOfSubscribers": {
+            "type": "number",
+            "description": "Number of subscribers to the channel",
+            "nullable": true,
+            "example": 500
+          },
+          "channelTotalVideos": {
+            "type": "number",
+            "description": "Total number of videos on the channel",
+            "nullable": true,
+            "example": 1234
+          },
+          "channelDescription": {
+            "type": "string",
+            "description": "The channel's description",
+            "nullable": true,
+            "example": "Apify is the platform where developers build, deploy, share, and monitor web scraping and automation tools."
+          },
+          "channelLocation": {
+            "type": "string",
+            "description": "The channel's location",
+            "nullable": true,
+            "example": "United States"
+          },
+          "channelJoinedDate": {
+            "type": "string",
+            "description": "When the channel was created",
+            "nullable": true,
+            "example": "2015-03-01T00:00:00.000Z"
+          },
+          "channelTotalViews": {
+            "type": "number",
+            "description": "Total views across all channel videos",
+            "nullable": true,
+            "example": 50000000
+          },
+          "isChannelVerified": {
+            "type": "boolean",
+            "description": "Whether the channel is verified",
+            "nullable": true,
+            "example": true
+          },
+          "channelBannerUrl": {
+            "type": "string",
+            "description": "URL of the channel banner",
+            "nullable": true,
+            "example": "https://yt3.googleusercontent.com/abc123/banner.jpg"
+          },
+          "channelAvatarUrl": {
+            "type": "string",
+            "description": "URL of the channel avatar",
+            "nullable": true,
+            "example": "https://yt3.googleusercontent.com/abc123/avatar.jpg"
+          },
+          "isAgeRestricted": {
+            "type": "boolean",
+            "description": "Whether the channel is age-restricted",
+            "nullable": true,
+            "example": false
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "description": "Overview of scraped YouTube videos with key information",
+          "transformation": {
+            "fields": [
+              "title",
+              "channelName",
+              "viewCount",
+              "likes",
+              "date",
+              "duration",
+              "type",
+              "url",
+              "commentsCount"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "title": {
+                "label": "Video Title",
+                "format": "text"
+              },
+              "channelName": {
+                "label": "Channel",
+                "format": "text"
+              },
+              "viewCount": {
+                "label": "Views",
+                "format": "number"
+              },
+              "likes": {
+                "label": "Likes",
+                "format": "number"
+              },
+              "date": {
+                "label": "Published",
+                "format": "text"
+              },
+              "duration": {
+                "label": "Duration",
+                "format": "text"
+              },
+              "type": {
+                "label": "Type",
+                "format": "text"
+              },
+              "url": {
+                "label": "Video URL",
+                "format": "link"
+              },
+              "commentsCount": {
+                "label": "Comments",
+                "format": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "stats": {
+      "inflatedBytes": 1073981,
+      "storageBytes": 350357,
+      "readCount": 196,
+      "writeCount": 35
+    },
+    "fields": [
+      "commentsTurnedOff",
+      "isAgeRestricted",
+      "isChannelVerified",
+      "isMembersOnly",
+      "isPaidContent",
+      "aiVideoDescription",
+      "aiVideoSummary",
+      "collaborators",
+      "isMonetized",
+      "location",
+      "transcriptionUrl",
+      "translatedText",
+      "translatedTitle",
+      "channelTotalVideos",
+      "channelTotalViews",
+      "commentsCount",
+      "likes",
+      "numberOfSubscribers",
+      "order",
+      "viewCount",
+      "channelAvatarUrl",
+      "channelBannerUrl",
+      "channelDescription",
+      "channelId",
+      "channelJoinedDate",
+      "channelLocation",
+      "channelName",
+      "channelUrl",
+      "channelUsername",
+      "date",
+      "duration",
+      "fromChannelListPage",
+      "fromYTUrl",
+      "id",
+      "input",
+      "inputChannelUrl",
+      "text",
+      "thumbnailUrl",
+      "title",
+      "type",
+      "url",
+      "hashtags/0",
+      "hashtags/1",
+      "hashtags/2",
+      "aboutChannelInfo/isAgeRestricted",
+      "aboutChannelInfo/isChannelVerified",
+      "aboutChannelInfo/channelTotalVideos",
+      "aboutChannelInfo/channelTotalViews",
+      "aboutChannelInfo/numberOfSubscribers",
+      "aboutChannelInfo/channelAvatarUrl",
+      "aboutChannelInfo/channelBannerUrl",
+      "aboutChannelInfo/channelDescription",
+      "aboutChannelInfo/channelId",
+      "aboutChannelInfo/channelJoinedDate",
+      "aboutChannelInfo/channelLocation",
+      "aboutChannelInfo/channelName",
+      "aboutChannelInfo/channelUrl",
+      "aboutChannelInfo/channelUsername",
+      "aboutChannelInfo/inputChannelUrl",
+      "descriptionLinks/0/text",
+      "descriptionLinks/0/url",
+      "descriptionLinks/1/text",
+      "descriptionLinks/1/url",
+      "descriptionLinks/2/text",
+      "descriptionLinks/2/url",
+      "descriptionLinks/3/text",
+      "descriptionLinks/3/url",
+      "descriptionLinks/4/text",
+      "descriptionLinks/4/url",
+      "descriptionLinks/5/text",
+      "descriptionLinks/5/url",
+      "descriptionLinks/6/text",
+      "descriptionLinks/6/url",
+      "descriptionLinks/7/text",
+      "descriptionLinks/7/url",
+      "descriptionLinks/8/text",
+      "descriptionLinks/8/url",
+      "descriptionLinks/9/text",
+      "descriptionLinks/9/url",
+      "descriptionLinks/10/text",
+      "descriptionLinks/10/url",
+      "descriptionLinks/11/text",
+      "descriptionLinks/11/url",
+      "descriptionLinks/12/text",
+      "descriptionLinks/12/url",
+      "descriptionLinks/13/text",
+      "descriptionLinks/13/url",
+      "descriptionLinks/14/text",
+      "descriptionLinks/14/url",
+      "descriptionLinks/15/text",
+      "descriptionLinks/15/url",
+      "descriptionLinks/16/text",
+      "descriptionLinks/16/url",
+      "descriptionLinks/17/text",
+      "descriptionLinks/17/url",
+      "descriptionLinks/18/text",
+      "descriptionLinks/18/url",
+      "descriptionLinks/19/text",
+      "descriptionLinks/19/url",
+      "descriptionLinks/20/text",
+      "descriptionLinks/20/url",
+      "descriptionLinks/21/text",
+      "descriptionLinks/21/url",
+      "descriptionLinks/22/text",
+      "descriptionLinks/22/url",
+      "descriptionLinks/23/text",
+      "descriptionLinks/23/url",
+      "descriptionLinks/24/text",
+      "descriptionLinks/24/url",
+      "descriptionLinks/25/text",
+      "descriptionLinks/25/url",
+      "subtitles/0/srtUrl",
+      "subtitles/0/language",
+      "subtitles/0/plaintext",
+      "subtitles/0/type"
+    ],
+    "consoleUrl": "https://console.apify.com/storage/datasets/TOdB7bMFfGfrqapsF",
+    "itemsPublicUrl": "https://api.apify.com/v2/datasets/TOdB7bMFfGfrqapsF/items",
+    "generalAccess": "FOLLOW_USER_SETTING"
+  }
+}

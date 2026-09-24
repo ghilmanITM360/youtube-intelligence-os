@@ -25,6 +25,30 @@ TOOL_VERSION = "inventory_catalog.py/1"
 RAW_DATA_ROOT = REPO_ROOT / "data" / "raw"
 MANIFESTS_DIR = REPO_ROOT / "data" / "manifests"
 
+
+def to_repo_relative(path):
+    """Inverse of resolve_canonical_path: store paths under REPO_ROOT relatively.
+
+    Falls back to an absolute path when `path` isn't under REPO_ROOT (e.g. a
+    test harness redirecting writes into a temp directory) so callers never
+    need a branch.
+    """
+    p = Path(path).resolve()
+    try:
+        return str(p.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(p)
+
+
+def resolve_canonical_path(value):
+    """canonical_path is stored repo-relative; resolve against REPO_ROOT.
+
+    Accepts a legacy absolute path too (pre-migration rows, or a different
+    REPO_ROOT than the one that wrote it) so callers never need a branch.
+    """
+    p = Path(value)
+    return p if p.is_absolute() else (REPO_ROOT / p)
+
 # Semantic class (docs/DATA_CLASSIFICATION.md) -> data/raw subdirectory.
 CLASS_TO_RAW_DIR = {
     "A": "global-youtube-knowledge",
@@ -356,7 +380,7 @@ def _ingest_new_dataset(conn, db_path, *, dataset_id, dataset_name, semantic_cla
                 {
                     "original_filename": src_file.name,
                     "original_path": str(src_file),
-                    "canonical_path": str(dest_file),
+                    "canonical_path": to_repo_relative(dest_file),
                     "extension": src_file.suffix.lower(),
                     "size_bytes": size_bytes,
                     "sha256": copy_hash,
@@ -517,7 +541,7 @@ def cmd_verify(args):
                 if is_copied:
                     mismatches.append("{}: copied file has no canonical path".format(filename))
                 continue
-            p = Path(canonical_path)
+            p = resolve_canonical_path(canonical_path)
             if not p.exists():
                 mismatches.append("{}: canonical copy missing at {}".format(filename, canonical_path))
                 continue

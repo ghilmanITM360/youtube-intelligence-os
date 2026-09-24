@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 from itertools import combinations
 from pathlib import Path
 
+import inventory_catalog as ic
 from report_common import connect
 
 
@@ -301,10 +302,10 @@ def read_transcript(item):
     if item.get("transcript_status") != "AVAILABLE":
         return None
     if item.get("transcript_path"):
-        text = Path(item["transcript_path"]).read_text(encoding="utf-8", errors="replace")
+        text = ic.resolve_canonical_path(item["transcript_path"]).read_text(encoding="utf-8", errors="replace")
         return clean_transcript(text)
     if item.get("transcript_archive_path") and item.get("transcript_member_path"):
-        with zipfile.ZipFile(item["transcript_archive_path"]) as archive:
+        with zipfile.ZipFile(ic.resolve_canonical_path(item["transcript_archive_path"])) as archive:
             text = archive.read(item["transcript_member_path"]).decode("utf-8", errors="replace")
             return clean_transcript(text)
     return None

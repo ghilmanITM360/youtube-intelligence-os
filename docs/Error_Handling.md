@@ -1,6 +1,6 @@
 # Error Handling
 
-A design specification for how the YouTube Intelligence OS should classify and respond to errors. No error class here is implemented as code yet — this defines the vocabulary and rules future implementation must follow.
+A specification for how the YouTube Intelligence OS classifies and responds to errors. Several classes are implemented in current ingestion, validation, and reporting paths; others remain contractual vocabulary for future components.
 
 ## Governing principles
 
@@ -46,7 +46,7 @@ For each class: severity, retryability, whether processing continues, whether hu
 | `ToolFailure` | Medium | Depends on tool | Continue if tool is non-essential to the step | If it recurs | External tool failures (`docs/TOOLS_INSTALLED.md`) must not be conflated with application-data errors. |
 | `PartialIngestion` | High | No | Halt, report exactly what completed | Yes | A half-copied dataset must never be recorded as fully ingested. |
 | `ManifestValidationFailure` | High | No | Halt for that manifest | Yes | An invalid manifest breaks the traceability the whole inventory system depends on. |
-| `DatabaseFailure` | Critical | Depends | Halt | Yes | Not applicable until Phase 10, but reserved now so it is not designed as an afterthought later. |
+| `DatabaseFailure` | Critical | Depends | Halt | Yes | SQLite readers must fail explicitly when a required DB is missing or empty and must never create a zero-byte DB as a read side effect. |
 | `PermissionFailure` | High | No | Halt for that action | Yes | Especially relevant to the read-only guarantee over external source folders (`docs/Security.md` §1, `docs/DECISIONS.md` Decision 010). |
 | `SecurityViolation` | Critical | No | Halt immediately | Yes | Covers anything in `docs/Security.md` — secret exposure, unsafe archive behavior, credential misuse. Always the highest priority to surface. |
 
