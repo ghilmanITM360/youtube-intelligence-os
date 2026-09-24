@@ -21,7 +21,7 @@ EXPECTED = {
     "standard_packages": 38,
     "historical_channels": 6,
     "stored_outside_targets": 10,
-    "datasets": 29,
+    "datasets": 30,
     "videos": 2149,
     "real_transcripts": 2137,
     "placeholders": 12,

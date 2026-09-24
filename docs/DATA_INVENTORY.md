@@ -70,6 +70,9 @@ Phase 1A (Decision 012) adds a local SQLite catalog (`data/catalog/youtube_inven
 | DS-000022 | Seven User-Provided YouTube Channel Packages | USER_PROVIDED_EXPORTS | B — Competitor Evidence | VALIDATED_SOURCE_PACKAGE | [`data/manifests/DS-000022.md`](../data/manifests/DS-000022.md) |
 | DS-000023 | Funded Master Channel Extraction — Batch 1 | APIFY_YOUTUBE_CHANNEL | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000023.md`](../data/manifests/DS-000023.md) |
 | DS-000024 | Funded Master Channel Extraction — Batch 2 | APIFY_YOUTUBE_CHANNEL | B — Competitor Evidence | STRUCTURED_REGISTERED | [`data/manifests/DS-000024.md`](../data/manifests/DS-000024.md) |
+| DS-000031 | Creator Strategy, Audience Psychology & Experimentation Frameworks Corpus | USER_SUPPLIED_CREATOR_STRATEGY_CORPUS | A — Global YouTube Knowledge | INGESTED | [`data/manifests/DS-000031.md`](../data/manifests/DS-000031.md) |
+
+DS-000031 is a separate immutable global-knowledge source, related by topic to DS-000011 and DS-000018 but not derived from either. Its [raw corpus](../data/raw/global-youtube-knowledge/DS-000031/creator-strategy-audience-psychology-experimentation-corpus.txt) is hash-preserved; [concept index](../data/intelligence/global/creator-strategy-knowledge-DS-000031.json), [primary-source validation](../data/intelligence/global/creator-strategy-primary-validation-2026-09-24.json), [training-registry successor](../data/intelligence/system/youtube-strategy-training-knowledge-2026-09-24.json), and [integration report](audits/creator-strategy-knowledge-integration-2026-09-24.md) are derived layers. No channel identity or count changes.
 
 Status progression: `INGESTED` (Phase 1A — raw files preserved and cataloged) → `STRUCTURED_REGISTERED` (Phase 1B — channels/videos/snapshots/transcripts registered with field provenance, `docs/DECISIONS.md` Decisions 014–015). No competitor intelligence analysis has been performed at either stage.
 

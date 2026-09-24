@@ -86,6 +86,7 @@ ARTIFACT_LAYER = {
     "FIRST_PARTY_CAPABILITY": {"FIRST_PARTY_DIAGNOSIS"},
     "BENCHMARK": {"BENCHMARK"},
     "TRAINING_KNOWLEDGE": {"TRAINING_KNOWLEDGE"},
+    "GLOBAL_KNOWLEDGE": {"TRAINING_KNOWLEDGE"},
     "CROSS_NICHE_CALIBRATION": {"TRAINING_CALIBRATION", "CROSS_NICHE_CALIBRATION"},
     "BLUEPRINT": {"BLUEPRINT"},
     "UNIFIED_PLAN": {"UNIFIED_PLAN"},
@@ -250,6 +251,7 @@ def discover_current_artifacts(root=ROOT):
     paths += sorted((base / "blueprints").glob("*.json"))
     paths += sorted((base / "cross-channel").glob("*-channel-strategy-benchmark-*.json"))
     paths += sorted((base / "cross-channel").glob("editing-intelligence-availability-*.json"))
+    paths += sorted((base / "global").glob("creator-strategy-*.json"))
     paths += sorted(path for path in (base / "system").glob("*.json") if path.name not in {REGISTRY_PATH.name, "first-party-analytics-import-contract.json"})
     grouped = {}
     for path in set(paths):
@@ -264,6 +266,8 @@ def discover_current_artifacts(root=ROOT):
 
 def artifact_type(path):
     name = Path(path).name
+    if name.startswith("creator-strategy-") or name == "youtube-strategy-training-knowledge-2026-09-24.json":
+        return "GLOBAL_KNOWLEDGE"
     if "topic-opportunity-intelligence" in name:
         return "TOPIC"
     if "packaging-intelligence" in name:
@@ -379,6 +383,16 @@ def source_dependencies(path, conn, all_paths):
         upstream(["TOPIC", "PACKAGING", "HOOK_SCRIPT", "EDITING", "FIRST_PARTY_DIAGNOSIS", "CHANNEL_STRATEGY", "BLUEPRINT"])
     elif kind == "TRAINING_KNOWLEDGE":
         deps.append(_query_dependency(conn, None, "TRAINING_KNOWLEDGE"))
+    elif kind == "GLOBAL_KNOWLEDGE":
+        raw = ROOT / "data/raw/global-youtube-knowledge/DS-000031/creator-strategy-audience-psychology-experimentation-corpus.txt"
+        deps.append(_artifact_dep(raw))
+        deps.append(_artifact_dep(ROOT / "data/manifests/DS-000031.md"))
+        if path.name.startswith("creator-strategy-primary-validation-"):
+            deps.append(_artifact_dep(ROOT / "data/intelligence/global/creator-strategy-knowledge-DS-000031.json"))
+        if path.name.startswith("youtube-strategy-training-"):
+            deps.append(_artifact_dep(ROOT / "data/intelligence/system/youtube-strategy-training-knowledge-2026-09-11.json"))
+            deps.append(_artifact_dep(ROOT / "data/intelligence/global/creator-strategy-knowledge-DS-000031.json"))
+            deps.append(_artifact_dep(ROOT / "data/intelligence/global/creator-strategy-primary-validation-2026-09-24.json"))
     elif kind == "CROSS_NICHE_CALIBRATION":
         for candidate in all_paths:
             if artifact_type(candidate) in ("CHANNEL_STRATEGY", "TRAINING_KNOWLEDGE"):
