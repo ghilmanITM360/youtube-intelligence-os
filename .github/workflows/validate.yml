@@ -31,16 +31,30 @@ jobs:
           python -m compileall -q scripts tests
           ruff check scripts tests
           python scripts/scan_tracked_secrets.py
-      - name: Rebuild generated databases
+      - name: Validate canonical inventory catalog integrity
         run: |
-          python -m scripts.rebuild_inventory_catalog
-          python -m scripts.build_youtube_channel_registry --write-ledgers
+          python -c "
+          import sqlite3
+          con = sqlite3.connect('data/catalog/youtube_inventory.db')
+          integrity = con.execute('PRAGMA integrity_check').fetchone()[0]
+          violations = con.execute('PRAGMA foreign_key_check').fetchall()
+          assert integrity == 'ok', f'integrity_check failed: {integrity}'
+          assert not violations, f'foreign key violations: {violations}'
+          print('canonical inventory catalog: integrity ok, 0 foreign key violations')
+          "
+      - name: Exercise partial catalog rebuilder against disposable database
+        run: |
+          python -m scripts.rebuild_inventory_catalog --database "$RUNNER_TEMP/bootstrap_inventory_catalog.db"
+      - name: Build channel registry from committed canonical sources
+        run: python -m scripts.build_youtube_channel_registry --write-ledgers
       - name: Validate provenance and registry
         run: |
           python -m scripts.validate_dataset_ledgers
           python -m scripts.validate_youtube_channel_registry
       - name: Run distributable suite
         run: python -m pytest -q
-      - name: Reject tracked untracked-by-design databases and generated junk
+      - name: Reject unapproved databases and generated junk
         run: |
-          test -z "$(git ls-files 'data/catalog/youtube_inventory.db' 'data/catalog/*.db-*' 'outputs/**' '*.pyc')"
+          test -z "$(git ls-files 'data/catalog/*.db-wal' 'data/catalog/*.db-shm' 'outputs/**' '*.pyc')"
+          UNAPPROVED_DBS="$(git ls-files '*.db' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' || true)"
+          test -z "$UNAPPROVED_DBS" || { echo "Unapproved tracked database(s):"; echo "$UNAPPROVED_DBS"; exit 1; }
