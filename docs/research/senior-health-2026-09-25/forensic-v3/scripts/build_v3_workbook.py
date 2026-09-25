@@ -124,16 +124,16 @@ readme = wb["00_READ_ME"]
 last_row = readme.max_row
 addendum_rows = [
     "",
-    "=== V3 ADDENDUM (2026-09-25) ===",
+    "V3 ADDENDUM (2026-09-25)",
     "Sheets 38-40 added by an independent adversarial audit. Full narrative and evidence in docs/research/senior-health-2026-09-25/forensic-v3/.",
     "4 new corrections found beyond V2's own 19 (sheet 31): see sheet 38_V3_CORRECTIONS.",
-    "Small-channel breakout inventory expanded from 5 cases to 29 breakout events across 12 channels: see sheet 39_V3_BREAKOUT_INVENTORY and SMALL-CHANNEL-BREAKOUT-FORENSICS.md.",
+    "Small-channel breakout inventory expanded from 5 cases to 37 breakout events across 13 channels (32 internal + 5 external; 23 internal + 5 external = 28 as of the NC-05 correction, plus 9 more internal events added same day from newly acquired Better Health While Aging, DS-000033, Case 13): see sheet 39_V3_BREAKOUT_INVENTORY and SMALL-CHANNEL-BREAKOUT-FORENSICS.md.",
     "All 32 Google Trends investigations re-verified with raw time-series exports now preserved (forensic-v3/trends-raw/); 1 entry (GT-20) found fabricated and retracted: see sheet 40_V3_TRENDS_STATUS.",
     "KNOWN LIMITATION, unchanged from V2: LibreOffice is not installed in this environment, so recalc.py could not run on this file. Sheets 38-40 contain no formulas (static evidence tables only), so this limitation does not affect them; it continues to apply to V2's original formula-bearing sheets (01, 03, 04, 05) exactly as V2 disclosed.",
 ]
 for i, text in enumerate(addendum_rows):
     c = readme.cell(row=last_row + 1 + i, column=1, value=text)
-    c.font = Font(name="Arial", size=10, bold=text.startswith("==="))
+    c.font = Font(name="Arial", size=10, bold=text.startswith("V3 ADDENDUM"))
     c.alignment = Alignment(wrap_text=True)
 
 wb.save(DST)
