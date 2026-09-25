@@ -174,16 +174,16 @@ class RegistryModelTests(unittest.TestCase):
 
     def test_package_control_totals(self):
         package = self.model["controls"]["package_layer"]
-        self.assertEqual(38, package["channels"])
-        self.assertEqual(1724, package["unique_videos"])
-        self.assertEqual(1713, package["real_transcripts"])
+        self.assertEqual(40, package["channels"])
+        self.assertEqual(1874, package["unique_videos"])
+        self.assertEqual(1863, package["real_transcripts"])
         self.assertEqual(11, package["placeholders"])
         self.assertEqual(15, package["missing_descriptions"])
 
     def test_source_groups_and_independent_data_layer_statuses(self):
         channels = self.model["channels"]
         self.assertEqual(
-            {"STANDARD_PACKAGE": 38, "HISTORICAL_CATALOG": 6, "IDENTITY_ONLY": 29},
+            {"STANDARD_PACKAGE": 40, "HISTORICAL_CATALOG": 6, "IDENTITY_ONLY": 29},
             {
                 group: sum(row["source_group"] == group for row in channels)
                 for group in ("STANDARD_PACKAGE", "HISTORICAL_CATALOG", "IDENTITY_ONLY")
@@ -233,7 +233,7 @@ class RegistryModelTests(unittest.TestCase):
             },
         )
         self.assertEqual(
-            {"UCkqzov98m_7niJOXwbRQgBA", "UC6AwWrRKNrwt83CMJqeTUzw", "UCAYG0fzUyxv6OevH88qA45w"},
+            {"UCkqzov98m_7niJOXwbRQgBA", "UC6AwWrRKNrwt83CMJqeTUzw"},
             {
                 identifier
                 for identifier, row in channels.items()
@@ -246,7 +246,7 @@ class RegistryModelTests(unittest.TestCase):
     def test_eight_capabilities_preserve_input_output_distinction(self):
         coverage = self.model["intelligence_coverage"]
         self.assertEqual(8, len(self.model["intelligence_capabilities"]))
-        self.assertEqual(73 * 8, len(coverage))
+        self.assertEqual(75 * 8, len(coverage))
         self.assertTrue(
             all(
                 {
@@ -269,12 +269,12 @@ class RegistryModelTests(unittest.TestCase):
             if row["capability_id"] == "TOPIC_OPPORTUNITY"
             and row["status"] == "DATA_READY"
         ]
-        self.assertEqual(38, len(package_ready))
+        self.assertEqual(40, len(package_ready))
         self.assertTrue(all(row["input_data_available"] and not row["generated_artifact_available"] for row in package_ready))
         editing = [row for row in coverage if row["capability_id"] == "EDITING_VISUAL" and row["generated_artifact_available"]]
         self.assertEqual(["UC6IxnFzHofFJ5X2PycSMsww"], [row["canonical_channel_id"] for row in editing])
         first_party = [row for row in coverage if row["capability_id"] == "FIRST_PARTY_ANALYTICS"]
-        self.assertEqual(73, len(first_party))
+        self.assertEqual(75, len(first_party))
         self.assertTrue(all(row["status"] == "DATA_READY" and not row["input_data_available"] for row in first_party))
 
 
@@ -597,16 +597,16 @@ class RegistryDatabaseTests(unittest.TestCase):
                         "v_intelligence_coverage",
                     }.issubset(views)
                 )
-                self.assertEqual(2149, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
-                self.assertEqual(2137, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
+                self.assertEqual(2299, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
+                self.assertEqual(2287, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
                 self.assertEqual(12, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 1").fetchone()[0])
                 self.assertEqual(17, connection.execute("SELECT count(*) FROM videos WHERE description IS NULL").fetchone()[0])
-                self.assertEqual(38, connection.execute("SELECT count(*) FROM channels WHERE source_group='STANDARD_PACKAGE'").fetchone()[0])
+                self.assertEqual(40, connection.execute("SELECT count(*) FROM channels WHERE source_group='STANDARD_PACKAGE'").fetchone()[0])
                 self.assertEqual(6, connection.execute("SELECT count(*) FROM channels WHERE source_group='HISTORICAL_CATALOG'").fetchone()[0])
                 self.assertEqual(29, connection.execute("SELECT count(*) FROM channels WHERE source_group='IDENTITY_ONLY'").fetchone()[0])
-                self.assertEqual(73 * 11, connection.execute("SELECT count(*) FROM channel_data_layers").fetchone()[0])
-                self.assertEqual(73, connection.execute("SELECT count(*) FROM visual_coverage").fetchone()[0])
-                self.assertEqual(73 * 8, connection.execute("SELECT count(*) FROM intelligence_coverage").fetchone()[0])
+                self.assertEqual(75 * 11, connection.execute("SELECT count(*) FROM channel_data_layers").fetchone()[0])
+                self.assertEqual(75, connection.execute("SELECT count(*) FROM visual_coverage").fetchone()[0])
+                self.assertEqual(75 * 8, connection.execute("SELECT count(*) FROM intelligence_coverage").fetchone()[0])
                 self.assertEqual(1, connection.execute("SELECT count(*) FROM visual_coverage WHERE visual_evidence_level='FORENSIC_VIDEO_EVIDENCE'").fetchone()[0])
                 self.assertEqual(
                     0,
@@ -629,13 +629,13 @@ class RegistryValidatorTests(unittest.TestCase):
             build_database(ROOT, path, model)
             result = validate_database(ROOT, path)
         self.assertEqual("PASS", result["status"])
-        self.assertEqual(73, result["controls"]["canonical_channels"])
+        self.assertEqual(75, result["controls"]["canonical_channels"])
         self.assertEqual(63, result["controls"]["target_channels"])
-        self.assertEqual(44, result["controls"]["channels_with_video_data"])
+        self.assertEqual(46, result["controls"]["channels_with_video_data"])
         self.assertEqual(29, result["controls"]["identity_only_channels"])
-        self.assertEqual(38, result["controls"]["standard_packages"])
+        self.assertEqual(40, result["controls"]["standard_packages"])
         self.assertEqual(6, result["controls"]["historical_channels"])
-        self.assertEqual(584, result["controls"]["intelligence_coverage_rows"])
+        self.assertEqual(600, result["controls"]["intelligence_coverage_rows"])
 
 
 class StandardPackageDiscoveryTests(unittest.TestCase):
@@ -708,6 +708,66 @@ class StandardPackageDiscoveryTests(unittest.TestCase):
 
         self.assertFalse(hasattr(builder, "_ds22_records"))
         self.assertTrue(hasattr(builder, "_standard_package_records"))
+
+
+class ThumbnailUrlCountDiscoveryTests(unittest.TestCase):
+    """Regression coverage for generalized raw-dataset thumbnail discovery.
+
+    Proves `package_thumbnail_url_counts` finds thumbnail URLs from any
+    dataset's raw Apify `dataset.json` (keyed by `channelId`), not just a
+    hardcoded DS-000029 special case: the batch CSV path keeps working,
+    a historically-nested `apify/<run>/raw/dataset.json` (DS-000029's own
+    layout) is found the same generic way, and a third, never-before-seen
+    dataset id with a top-level `dataset.json` is discovered without adding
+    any new code branch.
+    """
+
+    def _write_master_csv(self, root: Path, dataset_id: str, channel_id: str, thumbnail: str) -> None:
+        directory = root / "data/extracted/channel-data" / dataset_id / "combined"
+        directory.mkdir(parents=True)
+        with (directory / "channel_master.csv").open("w", encoding="utf-8-sig", newline="") as handle:
+            handle.write("channel_id,thumbnail_url\n")
+            handle.write(f"{channel_id},{thumbnail}\n")
+
+    def _write_raw_dataset(self, path: Path, channel_id: str, thumbnail_count: int) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        records = [
+            {"channelId": channel_id, "thumbnailUrl": f"https://img/{index}.jpg"}
+            for index in range(thumbnail_count)
+        ]
+        path.write_text(json.dumps(records), encoding="utf-8")
+
+    def test_generic_discovery_covers_csv_batch_nested_and_never_seen_dataset(self):
+        from scripts.build_youtube_channel_registry import package_thumbnail_url_counts
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027", "DS-000028"):
+                self._write_master_csv(root, dataset_id, f"UC-{dataset_id}", "https://img/batch.jpg")
+            self._write_raw_dataset(
+                root / "data/raw/competitors/DS-000029/apify/SOME-RUN-ID/raw/dataset.json",
+                "UC-NESTED",
+                22,
+            )
+            self._write_raw_dataset(
+                root / "data/raw/competitors/DS-999999/dataset.json",
+                "UC-FUTURE",
+                56,
+            )
+
+            counts = package_thumbnail_url_counts(root, channels=[])
+
+        self.assertEqual(1, counts.get("UC-DS-000028"))
+        self.assertEqual(22, counts.get("UC-NESTED"))
+        self.assertEqual(56, counts.get("UC-FUTURE"))
+
+    def test_ds29_channel_id_no_longer_hardcoded(self):
+        import inspect
+        import scripts.build_youtube_channel_registry as builder
+
+        source = inspect.getsource(builder.package_thumbnail_url_counts)
+        self.assertNotIn("UCFuGMi0idGeyXl6wYK9hg7Q", source)
+        self.assertNotIn("WqJIbwUkgkHDHxdaI", source)
 
 
 if __name__ == "__main__":

@@ -209,3 +209,134 @@ Senior Health Hub (`UCAYG0fzUyxv6OevH88qA45w`) zero-spend precheck only — do n
 - Standard package, registry, tracker, both DB snapshots, checkpoint, and report updated.
 - Final registry: 73 canonical channels, 44 with video data, 38 standard packages, 2,149 videos, 2,137 real transcripts.
 - No additional paid channel is authorized by this checkpoint.
+
+## PR #5 final integration baseline (2026-09-26)
+
+Verified integration commit `de393e2b4f8affd18864c0aa5a1f49a09c64b012` on
+`integration/repository-consolidation-2026-09-25`, PR
+[#5](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/5),
+consolidating PR #2/#3/#4. `main` unchanged at `bae03f43d0c7a38c057983298a6c479d3b997ff1`
+since integration branch was prepared. Remote HEAD matches local; PR is
+`MERGEABLE`, `mergeStateStatus=CLEAN`, CI check `validate` = `pass`.
+
+**Data totals** (independently recomputed from the canonical DBs in a fresh,
+disposable, non-shallow clone — not carried over from any prior report):
+75 canonical channels; 2,299 unique videos; 2,287 real transcripts (all
+have non-empty `transcript_text`, `word_count`, `transcript_sha256`); 12
+placeholders (all have `unavailable_reason`); 40 `STANDARD_PACKAGE` channels
+(29 `NO_PACKAGE`, 6 `HISTORICAL_FORMAT`). Both DBs: `PRAGMA integrity_check
+= ok`, zero foreign-key violations.
+
+**Senior Health competitive set**: 7 acquired competitors, 400 competitor
+videos (Senior Health Hub 122, Dr. Okoro 66, Doctor Thomas 22, Dr. Aliza
+Wright 32, Dr. Ares Senior 35, Dr. Elias Senior Health 29, Better Health
+While Aging 94). Dr. Rehan (own channel, `UCQIzqH7QZ9viBYpOFqgSXMg`) remains
+separately tracked at 56 videos, excluded from competitor totals. 19
+qualified-pending Senior Health leads remain identified but not acquired
+(class E: live, no disqualifying flag, zero spend). 19 previously-flagged
+missing public videos reconciled exactly: 15 are `NEW_UPLOADS_SINCE_SNAPSHOT`
+(Senior Health Hub 1, Dr. Ares Senior 2, Dr. Elias Senior Health 12 —
+optional refresh, not a gap) and 4 are a genuine `HISTORICAL_GAP` (Better
+Health While Aging Shorts `-SMFhfZrjm0`, `5Jqvsfq6UBo`, `U6kI1V6CQVs`,
+`x0Z5ziQNtWQ`, never captured by the original acquisition run).
+
+**Repairs landed this integration**: `DATA_INVENTORY.md`/`.gitignore`
+checksum-drift ledger entries (DS-000028-F018/F019, DS-000030-F017/F018)
+confirmed as legitimate historical snapshots by exact git-blob match, not
+corruption — no manifest or checksum changes made. 23 pre-ledger legacy
+datasets (DS-000001..DS-000019, plus DS-000029/031/032 outside the CSV-ledger
+format) confirmed to have real evidence on disk with SHA-256 documentation
+in older `.md` manifests; `validate_dataset_ledgers.py` does not read that
+format — a disclosed coverage gap, not fabricated retroactive evidence.
+`build_v3_workbook.py` made fully reproducible: portable repo-relative
+paths (`V3_WORKBOOK_SRC`/`V3_WORKBOOK_DST` env overrides), the withdrawn
+GT-20 correction and the 9 Case-13 (Better Health While Aging) breakout rows
+are now generated in code instead of hand-patched only onto the committed
+binary. Regenerating the workbook reproduces the committed
+`SENIOR-HEALTH-FORENSIC-WORKBOOK-V3.xlsx` exactly (41/41 sheets, cell-value
+equal) in both the working checkout and an independent fresh clone.
+Regression tests added: `tests/test_workbook_reproducibility.py`
+(no-hardcoded-`/tmp`-path guard, full regeneration-matches-committed guard,
+GT-20-non-reappearance guard).
+
+**Validation, fresh clean-clone run** (separate disposable clone from
+`origin/integration/repository-consolidation-2026-09-25`, full history +
+LFS, not the working worktree): `git lfs fsck` clean; both DBs materialized
+as real files (141MB registry, 52MB inventory), not LFS pointers; DB
+integrity/FK checks clean; `uv sync --extra dev` clean; full `pytest -q`:
+**384 passed, 1 skipped**; `compileall` clean; `ruff check` clean; secret
+scan (`scan_tracked_secrets.py`): 0 findings; registry validator
+(`validate_youtube_channel_registry`): `PASS`; dataset-ledger validator
+across all 9 CSV-ledger datasets (DS-000020/21/22/23/24/25/27/28/30): only
+the known, already-investigated DATA_INVENTORY.md/.gitignore drift on
+DS-000028/DS-000030; V3 workbook regenerated to an isolated path and
+diffed cell-by-cell against the committed workbook: 41/41 sheets identical.
+
+**Outstanding, not started by this checkpoint**: 19 qualified-pending Senior
+Health competitors (zero-spend precheck only, no paid Apify run authorized);
+the 4-Short historical gap on Better Health While Aging; extending
+`validate_dataset_ledgers.py` to the pre-CSV legacy manifest format for the
+23 legacy datasets. No paid acquisition, merge, branch deletion, or closing
+of PR #2/#3/#4 was performed as part of this verification pass.
+
+## PR #5 final remediation (2026-09-26)
+
+**Dataset-ledger drift resolved, not just disposed of.** All 4 previously-flagged
+rows (`DS-000028-F018`, `DS-000028-F019`, `DS-000030-F017`, `DS-000030-F018` —
+the `DATA_INVENTORY.md`/`.gitignore` snapshots) are now pinned in
+`validate_dataset_ledgers.py`'s `KNOWN_HISTORICAL_SNAPSHOTS` to the exact
+historical git commit each one's recorded SHA-256 reconciles against
+(located by walking full file history and hashing every blob until one
+matched). `DEFAULT_DATASETS` now covers all 9 known CSV-ledger datasets
+(previously only 5). All 9/9 validate clean with zero unexplained drift.
+Editing `tests/test_dataset_ledger_provenance.py` itself broke its own
+self-referential ledger row (`DS-000027-F029`, which tracks that exact test
+file) — caught by the validator, same as any other drift, and pinned the
+same way.
+
+**Legacy dataset count corrected: 23 is right, but the previously-listed ID
+set was wrong.** The prior checkpoint's group `DS-000001..019 + DS-000029 +
+DS-000031 + DS-000032` sums to 22, not 23 — it omitted `DS-000033` (Better
+Health While Aging Channel Acquisition). Rebuilt from the registry DB
+directly: 32 datasets are registered in the `datasets` table; 9 have
+CSV-ledger manifests; the remaining 23 are `DS-000001` through `DS-000019`
+plus `DS-000029`, `DS-000031`, `DS-000032`, `DS-000033`. Separately,
+`DS-000026` (a "preflight" channel-count reconnaissance artifact, see
+`docs/audits/DS-000026_FRESH_PREFLIGHT_PROPOSAL_2026-09-15.md`) exists on
+disk under `data/raw/channel-data/DS-000026/` but was never registered as a
+dataset — correctly excluded from both the CSV-ledger and legacy counts,
+not a 24th omitted dataset.
+
+**Legacy dataset evidence coverage gap closed with a real validator, not
+just documented.** Added `scripts/validate_legacy_dataset_manifests.py`
+(read-only; never modifies evidence) and `tests/test_legacy_dataset_manifests.py`.
+It parses both legacy manifest formats in use — markdown table
+(`DS-000002`..`016`) and bullet-list (`DS-000001`, `DS-000017`..`019`,
+`DS-000029`, `DS-000031`..`033`) — and verifies each declared SHA-256
+(full or, where the manifest itself only recorded a truncated prefix,
+prefix-matched) against the actual file on disk. Rows a manifest explicitly
+marks `Copied: NO` (96/103 of DS-000012, 154/190 of DS-000013, etc. — large
+forensic frame sequences disclosed as referenced-only, not copied into the
+repo) are reported separately, not as failures. All 23/23 legacy datasets
+validate clean.
+
+**Workbook validated beyond sheet/cell-value equality.** Compared formula
+strings (not just cached values) and chart counts between a freshly
+regenerated workbook and the committed one: identical on both. Confirmed
+`38_V3_CORRECTIONS` sheet covers NC-01..NC-04 and `STAGE2-CORRECTION-LEDGER.md`
+covers NC-01..NC-07 (V3-era NC-05/06/07 postdate that sheet) with no
+contradicting claims found in any active V3 document. Re-enumerated sheet
+`39_V3_BREAKOUT_INVENTORY` row-by-row: 39 rows total = 37 real breakout
+events (32 internal + 5 external, exact per-channel counts reconfirmed) +
+1 explicit negative-control marker row (Dr. Elias Senior Health) + 1
+footnote row — not 39 events as a naive row count would suggest. Spot-checked
+375 evidence-register (`29_EVIDENCE_REGISTER`) source-path/zip-member
+references (including forensic-v2-era citations): 0 genuinely broken.
+
+**Re-verified unchanged**: DB totals (75/2299/2287/12/40), both DBs'
+integrity/FK checks, Git LFS fsck — all identical to the prior baseline;
+no data file was touched this pass, only validator scripts, tests and this
+document. Full local suite: 387 passed, 1 skipped (384 + 3 new tests for
+the above). `compileall`, `ruff check`, secret scan: all clean. `main`
+unchanged at `bae03f4`. No paid acquisition, merge, branch deletion, or
+closing of PR #2/#3/#4 was performed.

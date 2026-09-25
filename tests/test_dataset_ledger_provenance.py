@@ -8,7 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import validate_dataset_ledgers as v  # noqa: E402
 
-DATASETS = ["DS-000021", "DS-000022", "DS-000023", "DS-000024", "DS-000025", "DS-000027"]
+DATASETS = [
+    "DS-000020", "DS-000021", "DS-000022", "DS-000023", "DS-000024",
+    "DS-000025", "DS-000027", "DS-000028", "DS-000030",
+]
 
 
 class LedgerPathSafetyTests(unittest.TestCase):
@@ -44,10 +47,13 @@ class LedgerPathSafetyTests(unittest.TestCase):
 
 
 class LedgerChecksumTests(unittest.TestCase):
-    def test_all_five_funded_batch_ledgers_are_clean(self):
+    def test_all_csv_ledger_datasets_are_clean(self):
         for dataset_id in DATASETS:
             problems = v.validate_dataset(dataset_id)
             self.assertEqual({}, problems, "{} has unresolved ledger issues".format(dataset_id))
+
+    def test_default_datasets_cover_every_known_csv_ledger(self):
+        self.assertEqual(set(DATASETS), set(v.DEFAULT_DATASETS))
 
     def test_historical_pinned_rows_are_checked_against_their_recorded_commit(self):
         # Every pinned row's ledger hash must reconcile against the git blob
