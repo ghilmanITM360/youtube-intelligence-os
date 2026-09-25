@@ -113,6 +113,17 @@ class BreakoutEventPopulationReconciliationTest(unittest.TestCase):
             if e["source"] == "internal":
                 self.assertTrue(e["channel_id"])
                 self.assertTrue(e["video_id"])
+        # 2026-09-25 Case 13 deep-dive: all 9 Better Health While Aging events
+        # must carry the supplementary time-matched local baseline multiple.
+        bhwa_ids = {
+            "MpohFGvHZHI", "JUCiIDVTshA", "16n80OQCVSM", "XX5Kw2OotL0",
+            "k-3BY-naQ0M", "Ev-i_E_MlTo", "8_depH-gT4o", "R7uXQBjnTjk",
+            "OCWvaUcSPOU",
+        }
+        bhwa_events = [e for e in events if e["video_id"] in bhwa_ids]
+        self.assertEqual(len(bhwa_events), 9)
+        for e in bhwa_events:
+            self.assertTrue(e.get("local_baseline_multiple"))
 
     def test_no_dependent_markdown_still_states_the_stale_29_6_count_as_fact(self):
         # any mention of the old "29 (23+6)" figure is fine IF it sits inside a

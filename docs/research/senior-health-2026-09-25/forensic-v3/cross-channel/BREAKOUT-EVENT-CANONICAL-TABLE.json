@@ -26,7 +26,7 @@
     }
   ],
   "verification_method": "All 23 internal events independently re-derived from data/catalog/youtube_channel_registry.db (videos table, ordered by published_at per canonical_channel_id) on 2026-09-25 and confirmed exact view-count match against the prose report. External events (5) have no registry entry — those channels were not acquired — and are sourced from live browser research (EXTERNAL-BREAKOUT-RESEARCH-RAW.md); 4 of 5 external video IDs were captured, 1 (SeniorHood breakout #1, 199K) was not.",
-  "correction_note": "Supersedes the prior claim of '29 breakout events (23 internal + 6 external)' stated in SMALL-CHANNEL-BREAKOUT-FORENSICS.md, SENIOR-HEALTH-FORENSIC-REPORT-V3.md, FINAL-STATUS-V3.md and workbook sheets 00_READ_ME/39_V3_BREAKOUT_INVENTORY. Direct recount of the per-case data in the same source document sums to 23 internal + 5 external = 28, not 29/6. The underlying per-event row data in workbook sheet 39_V3_BREAKOUT_INVENTORY was already correct (28 data rows); only the prose summary count was wrong. See STAGE2-CORRECTION-LEDGER.md, correction NC-05. On 2026-09-25, 9 further internal events were added from Better Health While Aging (DS-000033), a newly acquired channel not present at the time of the NC-05 correction; internal_count is now 32 and canonical_event_count is now 37.",
+  "correction_note": "Supersedes the prior claim of '29 breakout events (23 internal + 6 external)' stated in SMALL-CHANNEL-BREAKOUT-FORENSICS.md, SENIOR-HEALTH-FORENSIC-REPORT-V3.md, FINAL-STATUS-V3.md and workbook sheets 00_READ_ME/39_V3_BREAKOUT_INVENTORY. Direct recount of the per-case data in the same source document sums to 23 internal + 5 external = 28, not 29/6. The underlying per-event row data in workbook sheet 39_V3_BREAKOUT_INVENTORY was already correct (28 data rows); only the prose summary count was wrong. See STAGE2-CORRECTION-LEDGER.md, correction NC-05. On 2026-09-25, 9 further internal events were added from Better Health While Aging (DS-000033), a newly acquired channel not present at the time of the NC-05 correction; internal_count is now 32 and canonical_event_count is now 37. 2026-09-25 addendum (Case 13 deep-dive): a supplementary local-baseline (time-matched, +/-20 videos) multiple was added to BE-29..BE-37 to address the concern that a single whole-catalog median can misrepresent a breakout's true local significance on a channel whose overall view level changed substantially over its multi-year history; it does not change the canonical event count or qualification rule, which remains whole-channel-median-based for cross-case comparability.",
   "events": [
     {
       "event_id": "BE-01",
@@ -374,7 +374,10 @@
       "published_at": "2021-12-04T02:56:37.000Z",
       "views": 980106,
       "multiple_of_median": "45.3x",
-      "qualification_rule": "internal: >=15x whole-channel median views"
+      "qualification_rule": "internal: >=15x whole-channel median views",
+      "local_baseline_multiple": "115.5x",
+      "local_baseline_method": "median of +/-20 chronologically-nearest videos (regular+shorts), same channel",
+      "local_baseline_note": "Added 2026-09-25 during Case 13 deep-dive: the flat whole-catalog median (21,647.5) mixes 2021 videos against a channel baseline that grew ~4x by 2025. Local baseline reveals the 3 earliest breakouts (2021) are UNDERSTATED by the flat median (up to 460.6x locally vs 165.5x documented); 2 of the 3 2025 entries (8_depH-gT4o, OCWvaUcSPOU) fall below the 15x corpus threshold against a contemporaneous baseline (10.4x, 10.2x) though remain real local outliers, not baseline noise."
     },
     {
       "event_id": "BE-30",
@@ -386,7 +389,10 @@
       "published_at": "2021-12-11T18:47:20.000Z",
       "views": 429529,
       "multiple_of_median": "19.8x",
-      "qualification_rule": "internal: >=15x whole-channel median views"
+      "qualification_rule": "internal: >=15x whole-channel median views",
+      "local_baseline_multiple": "52.5x",
+      "local_baseline_method": "median of +/-20 chronologically-nearest videos (regular+shorts), same channel",
+      "local_baseline_note": "Added 2026-09-25 during Case 13 deep-dive: the flat whole-catalog median (21,647.5) mixes 2021 videos against a channel baseline that grew ~4x by 2025. Local baseline reveals the 3 earliest breakouts (2021) are UNDERSTATED by the flat median (up to 460.6x locally vs 165.5x documented); 2 of the 3 2025 entries (8_depH-gT4o, OCWvaUcSPOU) fall below the 15x corpus threshold against a contemporaneous baseline (10.4x, 10.2x) though remain real local outliers, not baseline noise."
     },
     {
       "event_id": "BE-31",
@@ -398,7 +404,10 @@
       "published_at": "2021-12-14T23:49:27.000Z",
       "views": 3582804,
       "multiple_of_median": "165.5x",
-      "qualification_rule": "internal: >=15x whole-channel median views"
+      "qualification_rule": "internal: >=15x whole-channel median views",
+      "local_baseline_multiple": "460.6x",
+      "local_baseline_method": "median of +/-20 chronologically-nearest videos (regular+shorts), same channel",
+      "local_baseline_note": "Added 2026-09-25 during Case 13 deep-dive: the flat whole-catalog median (21,647.5) mixes 2021 videos against a channel baseline that grew ~4x by 2025. Local baseline reveals the 3 earliest breakouts (2021) are UNDERSTATED by the flat median (up to 460.6x locally vs 165.5x documented); 2 of the 3 2025 entries (8_depH-gT4o, OCWvaUcSPOU) fall below the 15x corpus threshold against a contemporaneous baseline (10.4x, 10.2x) though remain real local outliers, not baseline noise."
     },
     {
       "event_id": "BE-32",
@@ -410,7 +419,10 @@
       "published_at": "2022-06-29T15:00:31.000Z",
       "views": 607506,
       "multiple_of_median": "28.1x",
-      "qualification_rule": "internal: >=15x whole-channel median views"
+      "qualification_rule": "internal: >=15x whole-channel median views",
+      "local_baseline_multiple": "53.0x",
+      "local_baseline_method": "median of +/-20 chronologically-nearest videos (regular+shorts), same channel",
+      "local_baseline_note": "Added 2026-09-25 during Case 13 deep-dive: the flat whole-catalog median (21,647.5) mixes 2021 videos against a channel baseline that grew ~4x by 2025. Local baseline reveals the 3 earliest breakouts (2021) are UNDERSTATED by the flat median (up to 460.6x locally vs 165.5x documented); 2 of the 3 2025 entries (8_depH-gT4o, OCWvaUcSPOU) fall below the 15x corpus threshold against a contemporaneous baseline (10.4x, 10.2x) though remain real local outliers, not baseline noise."
     },
     {
       "event_id": "BE-33",
@@ -422,7 +434,10 @@
       "published_at": "2023-09-07T15:42:39.000Z",
       "views": 953110,
       "multiple_of_median": "44.0x",
-      "qualification_rule": "internal: >=15x whole-channel median views"
+      "qualification_rule": "internal: >=15x whole-channel median views",
+      "local_baseline_multiple": "55.3x",
+      "local_baseline_method": "median of +/-20 chronologically-nearest videos (regular+shorts), same channel",
+      "local_baseline_note": "Added 2026-09-25 during Case 13 deep-dive: the flat whole-catalog median (21,647.5) mixes 2021 videos against a channel baseline that grew ~4x by 2025. Local baseline reveals the 3 earliest breakouts (2021) are UNDERSTATED by the flat median (up to 460.6x locally vs 165.5x documented); 2 of the 3 2025 entries (8_depH-gT4o, OCWvaUcSPOU) fall below the 15x corpus threshold against a contemporaneous baseline (10.4x, 10.2x) though remain real local outliers, not baseline noise."
     },
     {
       "event_id": "BE-34",
@@ -434,7 +449,10 @@
       "published_at": "2025-02-21T15:00:19.000Z",
       "views": 1294247,
       "multiple_of_median": "59.8x",
-      "qualification_rule": "internal: >=15x whole-channel median views"
+      "qualification_rule": "internal: >=15x whole-channel median views",
+      "local_baseline_multiple": "37.8x",
+      "local_baseline_method": "median of +/-20 chronologically-nearest videos (regular+shorts), same channel",
+      "local_baseline_note": "Added 2026-09-25 during Case 13 deep-dive: the flat whole-catalog median (21,647.5) mixes 2021 videos against a channel baseline that grew ~4x by 2025. Local baseline reveals the 3 earliest breakouts (2021) are UNDERSTATED by the flat median (up to 460.6x locally vs 165.5x documented); 2 of the 3 2025 entries (8_depH-gT4o, OCWvaUcSPOU) fall below the 15x corpus threshold against a contemporaneous baseline (10.4x, 10.2x) though remain real local outliers, not baseline noise."
     },
     {
       "event_id": "BE-35",
@@ -446,7 +464,10 @@
       "published_at": "2025-05-15T17:00:17.000Z",
       "views": 329571,
       "multiple_of_median": "15.2x",
-      "qualification_rule": "internal: >=15x whole-channel median views"
+      "qualification_rule": "internal: >=15x whole-channel median views",
+      "local_baseline_multiple": "10.4x",
+      "local_baseline_method": "median of +/-20 chronologically-nearest videos (regular+shorts), same channel",
+      "local_baseline_note": "Added 2026-09-25 during Case 13 deep-dive: the flat whole-catalog median (21,647.5) mixes 2021 videos against a channel baseline that grew ~4x by 2025. Local baseline reveals the 3 earliest breakouts (2021) are UNDERSTATED by the flat median (up to 460.6x locally vs 165.5x documented); 2 of the 3 2025 entries (8_depH-gT4o, OCWvaUcSPOU) fall below the 15x corpus threshold against a contemporaneous baseline (10.4x, 10.2x) though remain real local outliers, not baseline noise."
     },
     {
       "event_id": "BE-36",
@@ -458,7 +479,10 @@
       "published_at": "2025-05-29T19:04:04.000Z",
       "views": 664860,
       "multiple_of_median": "30.7x",
-      "qualification_rule": "internal: >=15x whole-channel median views"
+      "qualification_rule": "internal: >=15x whole-channel median views",
+      "local_baseline_multiple": "20.9x",
+      "local_baseline_method": "median of +/-20 chronologically-nearest videos (regular+shorts), same channel",
+      "local_baseline_note": "Added 2026-09-25 during Case 13 deep-dive: the flat whole-catalog median (21,647.5) mixes 2021 videos against a channel baseline that grew ~4x by 2025. Local baseline reveals the 3 earliest breakouts (2021) are UNDERSTATED by the flat median (up to 460.6x locally vs 165.5x documented); 2 of the 3 2025 entries (8_depH-gT4o, OCWvaUcSPOU) fall below the 15x corpus threshold against a contemporaneous baseline (10.4x, 10.2x) though remain real local outliers, not baseline noise."
     },
     {
       "event_id": "BE-37",
@@ -470,7 +494,10 @@
       "published_at": "2025-07-02T19:00:23.000Z",
       "views": 325492,
       "multiple_of_median": "15.0x",
-      "qualification_rule": "internal: >=15x whole-channel median views"
+      "qualification_rule": "internal: >=15x whole-channel median views",
+      "local_baseline_multiple": "10.2x",
+      "local_baseline_method": "median of +/-20 chronologically-nearest videos (regular+shorts), same channel",
+      "local_baseline_note": "Added 2026-09-25 during Case 13 deep-dive: the flat whole-catalog median (21,647.5) mixes 2021 videos against a channel baseline that grew ~4x by 2025. Local baseline reveals the 3 earliest breakouts (2021) are UNDERSTATED by the flat median (up to 460.6x locally vs 165.5x documented); 2 of the 3 2025 entries (8_depH-gT4o, OCWvaUcSPOU) fall below the 15x corpus threshold against a contemporaneous baseline (10.4x, 10.2x) though remain real local outliers, not baseline noise."
     }
   ]
 }
