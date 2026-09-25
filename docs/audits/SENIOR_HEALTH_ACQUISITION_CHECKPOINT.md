@@ -340,3 +340,55 @@ document. Full local suite: 387 passed, 1 skipped (384 + 3 new tests for
 the above). `compileall`, `ruff check`, secret scan: all clean. `main`
 unchanged at `bae03f4`. No paid acquisition, merge, branch deletion, or
 closing of PR #2/#3/#4 was performed.
+
+## PR #5 merged — canonical `main` baseline (2026-09-26)
+
+Owner-approved merge executed. PR #5 head `73816f1e853f750300b8cee5588077ac0b3837e4`
+merged into `main` via merge commit `b4ddca3b8190480d16cead2ca6756aa35cd99247`
+(normal merge, no admin bypass, no force-push). PR #2, #3 and #4 were
+auto-resolved `MERGED` by GitHub at merge time (their commits were already
+ancestors of the integration branch merged as #5) — no manual close needed,
+no branches deleted.
+
+Independently verified from a fresh, disposable, non-shallow clone
+(`git clone` over HTTPS, not reused from any prior audit) built directly
+from the merged `main` commit `b4ddca3b8190480d16cead2ca6756aa35cd99247`:
+
+- Full test suite: `387 passed, 1 skipped` (`python -m pytest -q`).
+- All 9 modern dataset-ledger validations (DS-000020/021/022/023/024/025/027/028/030): clean.
+- All 23 legacy manifest validations (DS-000001..019, 029, 031, 032, 033): clean.
+- Registry validation (`python -m scripts.validate_youtube_channel_registry`): `PASS`, idempotent (two rebuild passes byte-identical).
+- `ruff check .`: all checks passed.
+- Secret scan (`scan_tracked_secrets.py`): `0` findings.
+- Both DBs: `PRAGMA integrity_check = ok`; `PRAGMA foreign_key_check` = 0 violations.
+- Registry DB SHA-256: `63c1f8948fc5d53cc0a973e3e60790a51475bde9b59b4790f1dc0ae387e3f39a`.
+- Inventory DB SHA-256: `35cab2d8dea1ae00664cd854d611134c55edb31f1a51c2b45ef1aa005fff989c`.
+- Git LFS: `fsck OK`; 1 tracked object (`data/catalog/youtube_channel_registry.db`,
+  141 MB, over GitHub's 100 MiB limit — the only `.gitattributes` LFS
+  pattern); the second DB (`youtube_inventory.db`, 52 MB) is plain Git,
+  correctly under the LFS threshold. Both materialized as real binary
+  content, not pointer files.
+- V3 workbook regression/reproducibility (`test_senior_health_forensic_v3_regression.py`,
+  `test_workbook_reproducibility.py`, `test_breakout_event_consistency.py`):
+  covered by the full suite pass above, no drift.
+
+**Actual population queried live from the merged-`main` registry DB**
+(reference values given in the task were not used to adjust any data —
+all 8 matched exactly on the first query):
+
+| Metric | Reference | Actual |
+|---|---|---|
+| Canonical channels | 75 | 75 |
+| Videos | 2299 | 2299 |
+| Real transcripts | 2287 | 2287 |
+| Placeholders | 12 | 12 |
+| Standard packages | 40 | 40 |
+| Senior Health competitors | 7 | 7 |
+| Competitor videos | 400 | 400 (Senior Health Hub 122, Dr. Okoro 66, Dr. Aliza Wright 32, Dr. Ares Senior 35, Dr. Elias Senior Health 29, Better Health While Aging 94, Doctor Thomas 22) |
+| Own-channel videos | 56 | 56 (Dr. Rehan, `UCQIzqH7QZ9viBYpOFqgSXMg`) |
+
+No discrepancy required investigation. `docs/audits/SENIOR_HEALTH_ACQUISITION_CHECKPOINT.md`
+remains the single canonical checkpoint (this section appended, no
+duplicate report created). Next acquisition work continues from a new
+branch off this merged `main`; no paid Apify acquisition or broad
+discovery campaign was started in this pass.
