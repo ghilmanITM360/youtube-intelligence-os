@@ -278,3 +278,65 @@ the 4-Short historical gap on Better Health While Aging; extending
 `validate_dataset_ledgers.py` to the pre-CSV legacy manifest format for the
 23 legacy datasets. No paid acquisition, merge, branch deletion, or closing
 of PR #2/#3/#4 was performed as part of this verification pass.
+
+## PR #5 final remediation (2026-09-26)
+
+**Dataset-ledger drift resolved, not just disposed of.** All 4 previously-flagged
+rows (`DS-000028-F018`, `DS-000028-F019`, `DS-000030-F017`, `DS-000030-F018` —
+the `DATA_INVENTORY.md`/`.gitignore` snapshots) are now pinned in
+`validate_dataset_ledgers.py`'s `KNOWN_HISTORICAL_SNAPSHOTS` to the exact
+historical git commit each one's recorded SHA-256 reconciles against
+(located by walking full file history and hashing every blob until one
+matched). `DEFAULT_DATASETS` now covers all 9 known CSV-ledger datasets
+(previously only 5). All 9/9 validate clean with zero unexplained drift.
+Editing `tests/test_dataset_ledger_provenance.py` itself broke its own
+self-referential ledger row (`DS-000027-F029`, which tracks that exact test
+file) — caught by the validator, same as any other drift, and pinned the
+same way.
+
+**Legacy dataset count corrected: 23 is right, but the previously-listed ID
+set was wrong.** The prior checkpoint's group `DS-000001..019 + DS-000029 +
+DS-000031 + DS-000032` sums to 22, not 23 — it omitted `DS-000033` (Better
+Health While Aging Channel Acquisition). Rebuilt from the registry DB
+directly: 32 datasets are registered in the `datasets` table; 9 have
+CSV-ledger manifests; the remaining 23 are `DS-000001` through `DS-000019`
+plus `DS-000029`, `DS-000031`, `DS-000032`, `DS-000033`. Separately,
+`DS-000026` (a "preflight" channel-count reconnaissance artifact, see
+`docs/audits/DS-000026_FRESH_PREFLIGHT_PROPOSAL_2026-09-15.md`) exists on
+disk under `data/raw/channel-data/DS-000026/` but was never registered as a
+dataset — correctly excluded from both the CSV-ledger and legacy counts,
+not a 24th omitted dataset.
+
+**Legacy dataset evidence coverage gap closed with a real validator, not
+just documented.** Added `scripts/validate_legacy_dataset_manifests.py`
+(read-only; never modifies evidence) and `tests/test_legacy_dataset_manifests.py`.
+It parses both legacy manifest formats in use — markdown table
+(`DS-000002`..`016`) and bullet-list (`DS-000001`, `DS-000017`..`019`,
+`DS-000029`, `DS-000031`..`033`) — and verifies each declared SHA-256
+(full or, where the manifest itself only recorded a truncated prefix,
+prefix-matched) against the actual file on disk. Rows a manifest explicitly
+marks `Copied: NO` (96/103 of DS-000012, 154/190 of DS-000013, etc. — large
+forensic frame sequences disclosed as referenced-only, not copied into the
+repo) are reported separately, not as failures. All 23/23 legacy datasets
+validate clean.
+
+**Workbook validated beyond sheet/cell-value equality.** Compared formula
+strings (not just cached values) and chart counts between a freshly
+regenerated workbook and the committed one: identical on both. Confirmed
+`38_V3_CORRECTIONS` sheet covers NC-01..NC-04 and `STAGE2-CORRECTION-LEDGER.md`
+covers NC-01..NC-07 (V3-era NC-05/06/07 postdate that sheet) with no
+contradicting claims found in any active V3 document. Re-enumerated sheet
+`39_V3_BREAKOUT_INVENTORY` row-by-row: 39 rows total = 37 real breakout
+events (32 internal + 5 external, exact per-channel counts reconfirmed) +
+1 explicit negative-control marker row (Dr. Elias Senior Health) + 1
+footnote row — not 39 events as a naive row count would suggest. Spot-checked
+375 evidence-register (`29_EVIDENCE_REGISTER`) source-path/zip-member
+references (including forensic-v2-era citations): 0 genuinely broken.
+
+**Re-verified unchanged**: DB totals (75/2299/2287/12/40), both DBs'
+integrity/FK checks, Git LFS fsck — all identical to the prior baseline;
+no data file was touched this pass, only validator scripts, tests and this
+document. Full local suite: 387 passed, 1 skipped (384 + 3 new tests for
+the above). `compileall`, `ruff check`, secret scan: all clean. `main`
+unchanged at `bae03f4`. No paid acquisition, merge, branch deletion, or
+closing of PR #2/#3/#4 was performed.
