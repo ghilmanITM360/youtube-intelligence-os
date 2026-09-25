@@ -12,7 +12,7 @@
 
 Senior Health forensic expansion has completed primary evidence-building layers of the requested deep-dive study. Pass-1 calibrated baseline (14 evidence entries, 3 Trends queries, basic analysis) has been preserved and expanded to comprehensive forensic layer covering:
 
-- ✅ **Deep-analysis sample:** 149 strategic videos (42% of corpus)
+- ✅ **Deep-analysis sample:** 149 strategic videos (48.7% of corpus)
 - ✅ **Title feature analysis:** All 306 videos, 24 features extracted, correlation to performance quantified
 - ✅ **Channel concentration analysis:** Pareto/Lorenz distribution per channel; quantified HIT-DEPENDENT growth
 - ✅ **Matched-pair script forensics:** All 29 pairs analyzed for title/framing effects
@@ -32,7 +32,7 @@ Senior Health forensic expansion has completed primary evidence-building layers 
 ## Forensic Analysis — Completed Layers
 
 ### Layer 1: Deep-Analysis Sample Stratification ✅
-- **Sample Size:** 149 unique videos (42% of 306 corpus)
+- **Sample Size:** 149 unique videos (48.7% of 306 corpus)
 - **Stratification Method:** Per-channel Top 10, Bottom 10, Most Recent 5, Earliest 5, Major Breakout, Follow-ups; deduplicated
 - **Distribution:** Even per-channel coverage (21–31 videos per channel)
 - **Topic Representation:** Cardiovascular 41, Nutrition/Foods 40, UNCLASSIFIED 31, Medication Warnings 21, Mobility 15, others <10
