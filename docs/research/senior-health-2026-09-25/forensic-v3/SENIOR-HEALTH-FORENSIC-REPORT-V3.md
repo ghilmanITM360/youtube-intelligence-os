@@ -29,7 +29,7 @@ What *does* correlate, and survived being tested against confounds rather than j
 
 ## Question 2: How do small channels achieve extraordinary results in their first 20-40 uploads?
 
-This was investigated as the top priority, across **12 channels and 28 documented breakout events** (23 from 6 internal cohort channels + 5 from 2 new external successes, plus 4 external failure channels screened with zero breakouts and 10 more external channels screened; corrected from an earlier "29" arithmetic error — see `SMALL-CHANNEL-BREAKOUT-FORENSICS.md` NC-05). The clearest finding: **a breakout is always a spike on top of a flat baseline, never a gradual climb, and it never converts into a permanently higher floor** — not once, across all 28 events, including a channel (Senior Health Hub) that had 13 independent breakout-magnitude hits over 13 months on the same "clove" format and still shows no statistically meaningful lift in its channel-wide median views before vs. after.
+This was investigated as the top priority, across **13 channels and 37 documented breakout events** (32 from 7 internal cohort channels + 5 from 2 new external successes, plus 4 external failure channels screened with zero breakouts and 10 more external channels screened; 28 events across 12 channels as of the 2026-09-25 NC-05 correction, plus 9 further internal events from Better Health While Aging (DS-000033), acquired the same day — see `SMALL-CHANNEL-BREAKOUT-FORENSICS.md` Case 13). The clearest finding: **a breakout is always a spike on top of a flat baseline, never a gradual climb, and it never converts into a permanently higher floor** — not once, across all 37 events, including a channel (Senior Health Hub) that had 13 independent breakout-magnitude hits over 13 months on the same "clove" format and still shows no statistically meaningful lift in its channel-wide median views before vs. after.
 
 A genuine minimum-uploads pattern showed up: one failure channel (Senior Mobility) posted only 13 videos before going silent and never broke out — consistent with needing a longer runway. But this is not sufficient on its own: another failure channel (Aging Senior Health) posted 110 videos, well past any reasonable runway, and never broke out either.
 
@@ -37,7 +37,7 @@ A genuine minimum-uploads pattern showed up: one failure channel (Senior Mobilit
 
 ## Question 3-4: What happened around each breakout, and was it trend, pattern, or execution?
 
-Full timelines for all 28 breakout events are in `SMALL-CHANNEL-BREAKOUT-FORENSICS.md`. One clear example of trend-amplification survived scrutiny: Dr. Okoro's neuropathy-exercises breakout landed exactly in the peak week of a 5-year Google Trends high for that search term (91 vs. 70.7 baseline, US). Most other breakouts show no such alignment — they appear to be execution/timing events rather than riding a demand wave.
+Full timelines for all 37 breakout events are in `SMALL-CHANNEL-BREAKOUT-FORENSICS.md`. One clear example of trend-amplification survived scrutiny: Dr. Okoro's neuropathy-exercises breakout landed exactly in the peak week of a 5-year Google Trends high for that search term (91 vs. 70.7 baseline, US). Most other breakouts show no such alignment — they appear to be execution/timing events rather than riding a demand wave.
 
 ## Question 5: Why do identical titles/thumbnails/scripts produce different results?
 

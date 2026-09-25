@@ -174,16 +174,16 @@ class RegistryModelTests(unittest.TestCase):
 
     def test_package_control_totals(self):
         package = self.model["controls"]["package_layer"]
-        self.assertEqual(39, package["channels"])
-        self.assertEqual(1780, package["unique_videos"])
-        self.assertEqual(1769, package["real_transcripts"])
+        self.assertEqual(40, package["channels"])
+        self.assertEqual(1874, package["unique_videos"])
+        self.assertEqual(1863, package["real_transcripts"])
         self.assertEqual(11, package["placeholders"])
         self.assertEqual(15, package["missing_descriptions"])
 
     def test_source_groups_and_independent_data_layer_statuses(self):
         channels = self.model["channels"]
         self.assertEqual(
-            {"STANDARD_PACKAGE": 39, "HISTORICAL_CATALOG": 6, "IDENTITY_ONLY": 29},
+            {"STANDARD_PACKAGE": 40, "HISTORICAL_CATALOG": 6, "IDENTITY_ONLY": 29},
             {
                 group: sum(row["source_group"] == group for row in channels)
                 for group in ("STANDARD_PACKAGE", "HISTORICAL_CATALOG", "IDENTITY_ONLY")
@@ -246,7 +246,7 @@ class RegistryModelTests(unittest.TestCase):
     def test_eight_capabilities_preserve_input_output_distinction(self):
         coverage = self.model["intelligence_coverage"]
         self.assertEqual(8, len(self.model["intelligence_capabilities"]))
-        self.assertEqual(74 * 8, len(coverage))
+        self.assertEqual(75 * 8, len(coverage))
         self.assertTrue(
             all(
                 {
@@ -269,12 +269,12 @@ class RegistryModelTests(unittest.TestCase):
             if row["capability_id"] == "TOPIC_OPPORTUNITY"
             and row["status"] == "DATA_READY"
         ]
-        self.assertEqual(39, len(package_ready))
+        self.assertEqual(40, len(package_ready))
         self.assertTrue(all(row["input_data_available"] and not row["generated_artifact_available"] for row in package_ready))
         editing = [row for row in coverage if row["capability_id"] == "EDITING_VISUAL" and row["generated_artifact_available"]]
         self.assertEqual(["UC6IxnFzHofFJ5X2PycSMsww"], [row["canonical_channel_id"] for row in editing])
         first_party = [row for row in coverage if row["capability_id"] == "FIRST_PARTY_ANALYTICS"]
-        self.assertEqual(74, len(first_party))
+        self.assertEqual(75, len(first_party))
         self.assertTrue(all(row["status"] == "DATA_READY" and not row["input_data_available"] for row in first_party))
 
 
@@ -597,16 +597,16 @@ class RegistryDatabaseTests(unittest.TestCase):
                         "v_intelligence_coverage",
                     }.issubset(views)
                 )
-                self.assertEqual(2205, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
-                self.assertEqual(2193, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
+                self.assertEqual(2299, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
+                self.assertEqual(2287, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
                 self.assertEqual(12, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 1").fetchone()[0])
                 self.assertEqual(17, connection.execute("SELECT count(*) FROM videos WHERE description IS NULL").fetchone()[0])
-                self.assertEqual(39, connection.execute("SELECT count(*) FROM channels WHERE source_group='STANDARD_PACKAGE'").fetchone()[0])
+                self.assertEqual(40, connection.execute("SELECT count(*) FROM channels WHERE source_group='STANDARD_PACKAGE'").fetchone()[0])
                 self.assertEqual(6, connection.execute("SELECT count(*) FROM channels WHERE source_group='HISTORICAL_CATALOG'").fetchone()[0])
                 self.assertEqual(29, connection.execute("SELECT count(*) FROM channels WHERE source_group='IDENTITY_ONLY'").fetchone()[0])
-                self.assertEqual(74 * 11, connection.execute("SELECT count(*) FROM channel_data_layers").fetchone()[0])
-                self.assertEqual(74, connection.execute("SELECT count(*) FROM visual_coverage").fetchone()[0])
-                self.assertEqual(74 * 8, connection.execute("SELECT count(*) FROM intelligence_coverage").fetchone()[0])
+                self.assertEqual(75 * 11, connection.execute("SELECT count(*) FROM channel_data_layers").fetchone()[0])
+                self.assertEqual(75, connection.execute("SELECT count(*) FROM visual_coverage").fetchone()[0])
+                self.assertEqual(75 * 8, connection.execute("SELECT count(*) FROM intelligence_coverage").fetchone()[0])
                 self.assertEqual(1, connection.execute("SELECT count(*) FROM visual_coverage WHERE visual_evidence_level='FORENSIC_VIDEO_EVIDENCE'").fetchone()[0])
                 self.assertEqual(
                     0,
@@ -629,13 +629,13 @@ class RegistryValidatorTests(unittest.TestCase):
             build_database(ROOT, path, model)
             result = validate_database(ROOT, path)
         self.assertEqual("PASS", result["status"])
-        self.assertEqual(74, result["controls"]["canonical_channels"])
+        self.assertEqual(75, result["controls"]["canonical_channels"])
         self.assertEqual(63, result["controls"]["target_channels"])
-        self.assertEqual(45, result["controls"]["channels_with_video_data"])
+        self.assertEqual(46, result["controls"]["channels_with_video_data"])
         self.assertEqual(29, result["controls"]["identity_only_channels"])
-        self.assertEqual(39, result["controls"]["standard_packages"])
+        self.assertEqual(40, result["controls"]["standard_packages"])
         self.assertEqual(6, result["controls"]["historical_channels"])
-        self.assertEqual(592, result["controls"]["intelligence_coverage_rows"])
+        self.assertEqual(600, result["controls"]["intelligence_coverage_rows"])
 
 
 class StandardPackageDiscoveryTests(unittest.TestCase):

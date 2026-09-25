@@ -1,12 +1,12 @@
 {
-  "canonical_event_count": 28,
-  "internal_count": 23,
+  "canonical_event_count": 37,
+  "internal_count": 32,
   "external_count": 5,
   "negative_control_channels_excluded": [
     {
       "channel_name": "Dr. Elias Senior Health",
       "channel_id": "UCQcBYZxFW7YwNMU8-DsT3Uw",
-      "reason": "0 videos reach 15x median across 29 uploads (channel high 6.5x) \u2014 internal negative control, not a breakout event"
+      "reason": "0 videos reach 15x median across 29 uploads (channel high 6.5x) — internal negative control, not a breakout event"
     },
     {
       "channel_name": "Senior Mobility",
@@ -25,8 +25,8 @@
       "reason": "external failure control, 0 breakouts across 110 uploads"
     }
   ],
-  "verification_method": "All 23 internal events independently re-derived from data/catalog/youtube_channel_registry.db (videos table, ordered by published_at per canonical_channel_id) on 2026-09-25 and confirmed exact view-count match against the prose report. External events (5) have no registry entry \u2014 those channels were not acquired \u2014 and are sourced from live browser research (EXTERNAL-BREAKOUT-RESEARCH-RAW.md); 4 of 5 external video IDs were captured, 1 (SeniorHood breakout #1, 199K) was not.",
-  "correction_note": "Supersedes the prior claim of '29 breakout events (23 internal + 6 external)' stated in SMALL-CHANNEL-BREAKOUT-FORENSICS.md, SENIOR-HEALTH-FORENSIC-REPORT-V3.md, FINAL-STATUS-V3.md and workbook sheets 00_READ_ME/39_V3_BREAKOUT_INVENTORY. Direct recount of the per-case data in the same source document sums to 23 internal + 5 external = 28, not 29/6. The underlying per-event row data in workbook sheet 39_V3_BREAKOUT_INVENTORY was already correct (28 data rows); only the prose summary count was wrong. See STAGE2-CORRECTION-LEDGER.md, correction NC-05.",
+  "verification_method": "All 23 internal events independently re-derived from data/catalog/youtube_channel_registry.db (videos table, ordered by published_at per canonical_channel_id) on 2026-09-25 and confirmed exact view-count match against the prose report. External events (5) have no registry entry — those channels were not acquired — and are sourced from live browser research (EXTERNAL-BREAKOUT-RESEARCH-RAW.md); 4 of 5 external video IDs were captured, 1 (SeniorHood breakout #1, 199K) was not.",
+  "correction_note": "Supersedes the prior claim of '29 breakout events (23 internal + 6 external)' stated in SMALL-CHANNEL-BREAKOUT-FORENSICS.md, SENIOR-HEALTH-FORENSIC-REPORT-V3.md, FINAL-STATUS-V3.md and workbook sheets 00_READ_ME/39_V3_BREAKOUT_INVENTORY. Direct recount of the per-case data in the same source document sums to 23 internal + 5 external = 28, not 29/6. The underlying per-event row data in workbook sheet 39_V3_BREAKOUT_INVENTORY was already correct (28 data rows); only the prose summary count was wrong. See STAGE2-CORRECTION-LEDGER.md, correction NC-05. On 2026-09-25, 9 further internal events were added from Better Health While Aging (DS-000033), a newly acquired channel not present at the time of the NC-05 correction; internal_count is now 32 and canonical_event_count is now 37.",
   "events": [
     {
       "event_id": "BE-01",
@@ -314,7 +314,7 @@
       "published_at": null,
       "views": 207000,
       "multiple_of_median": null,
-      "qualification_rule": "external: informal visual outlier vs. double/triple-digit neighboring uploads (no channel median computed \u2014 disclosed gap, not a fixed threshold)"
+      "qualification_rule": "external: informal visual outlier vs. double/triple-digit neighboring uploads (no channel median computed — disclosed gap, not a fixed threshold)"
     },
     {
       "event_id": "BE-25",
@@ -326,7 +326,7 @@
       "published_at": null,
       "views": 199000,
       "multiple_of_median": null,
-      "qualification_rule": "external: informal visual outlier (video_id not captured in raw research pass \u2014 title/view-count only)"
+      "qualification_rule": "external: informal visual outlier (video_id not captured in raw research pass — title/view-count only)"
     },
     {
       "event_id": "BE-26",
@@ -363,6 +363,114 @@
       "views": 178000,
       "multiple_of_median": null,
       "qualification_rule": "external: informal visual outlier (late-window comparison)"
+    },
+    {
+      "event_id": "BE-29",
+      "channel_name": "Better Health While Aging",
+      "channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+      "video_id": "MpohFGvHZHI",
+      "source": "internal",
+      "upload_idx": 3,
+      "published_at": "2021-12-04T02:56:37.000Z",
+      "views": 980106,
+      "multiple_of_median": "45.3x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-30",
+      "channel_name": "Better Health While Aging",
+      "channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+      "video_id": "JUCiIDVTshA",
+      "source": "internal",
+      "upload_idx": 4,
+      "published_at": "2021-12-11T18:47:20.000Z",
+      "views": 429529,
+      "multiple_of_median": "19.8x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-31",
+      "channel_name": "Better Health While Aging",
+      "channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+      "video_id": "16n80OQCVSM",
+      "source": "internal",
+      "upload_idx": 5,
+      "published_at": "2021-12-14T23:49:27.000Z",
+      "views": 3582804,
+      "multiple_of_median": "165.5x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-32",
+      "channel_name": "Better Health While Aging",
+      "channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+      "video_id": "XX5Kw2OotL0",
+      "source": "internal",
+      "upload_idx": 15,
+      "published_at": "2022-06-29T15:00:31.000Z",
+      "views": 607506,
+      "multiple_of_median": "28.1x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-33",
+      "channel_name": "Better Health While Aging",
+      "channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+      "video_id": "k-3BY-naQ0M",
+      "source": "internal",
+      "upload_idx": 29,
+      "published_at": "2023-09-07T15:42:39.000Z",
+      "views": 953110,
+      "multiple_of_median": "44.0x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-34",
+      "channel_name": "Better Health While Aging",
+      "channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+      "video_id": "Ev-i_E_MlTo",
+      "source": "internal",
+      "upload_idx": 53,
+      "published_at": "2025-02-21T15:00:19.000Z",
+      "views": 1294247,
+      "multiple_of_median": "59.8x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-35",
+      "channel_name": "Better Health While Aging",
+      "channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+      "video_id": "8_depH-gT4o",
+      "source": "internal",
+      "upload_idx": 65,
+      "published_at": "2025-05-15T17:00:17.000Z",
+      "views": 329571,
+      "multiple_of_median": "15.2x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-36",
+      "channel_name": "Better Health While Aging",
+      "channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+      "video_id": "R7uXQBjnTjk",
+      "source": "internal",
+      "upload_idx": 66,
+      "published_at": "2025-05-29T19:04:04.000Z",
+      "views": 664860,
+      "multiple_of_median": "30.7x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-37",
+      "channel_name": "Better Health While Aging",
+      "channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+      "video_id": "OCWvaUcSPOU",
+      "source": "internal",
+      "upload_idx": 71,
+      "published_at": "2025-07-02T19:00:23.000Z",
+      "views": 325492,
+      "multiple_of_median": "15.0x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
     }
   ]
 }

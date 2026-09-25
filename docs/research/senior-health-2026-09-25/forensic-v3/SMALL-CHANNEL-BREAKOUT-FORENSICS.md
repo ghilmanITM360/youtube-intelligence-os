@@ -34,8 +34,9 @@
 | 10 | Health 365 (external) | Failure | 54 | 311 | 0 | — | Spans it, no breakout | — |
 | 11 | Senior Strength Secrets (external) | Failure | 41 | 59 | 0 | — | Spans it, no breakout | — |
 | 12 | Aging Senior Health (external) | Failure | 110 | 76 | 0 | — | Spans it, no breakout | — |
+| 13 | Better Health While Aging (internal, added 2026-09-25) | Success | 94 | 190K | 9 | #3 | No (early) | No |
 
-**Total qualifying breakout events across all cases: 28** (23 internal + 5 external instances — corrected from an earlier "29 (23+6)" arithmetic error, NC-05), plus 1 explicit zero-breakout internal channel and 4 explicit zero-breakout external channels as negative controls — a materially larger and more balanced evidence base than V2's original 5 cases (2 internal, 3 external with unknown script openings).
+**Total qualifying breakout events across all cases: 37** (32 internal + 5 external instances — 28 as of the 2026-09-25 NC-05 correction, plus 9 newly added from Better Health While Aging (DS-000033), acquired the same day per `ACQUISITION-BACKLOG.md` Group C P1), plus 1 explicit zero-breakout internal channel and 4 explicit zero-breakout external channels as negative controls — a materially larger and more balanced evidence base than V2's original 5 cases (2 internal, 3 external with unknown script openings).
 
 ---
 
@@ -116,6 +117,30 @@ The corrected reading: this channel tested a walking-related angle at #14, got a
 
 **Matched failure:** #18 (18 days after Hit #1), reusing the exact medication-safety template — 173 views (0.8x). This template was run 6 times on the channel; only #6 broke out.
 
+### Case 13: Better Health While Aging — acquired 2026-09-25 (DS-000033), largest breakout count in the internal cohort
+
+94 observed uploads (2021-11-04 → 2026-09-18), whole-channel median 21,648.
+
+**9 breakout-magnitude videos found** (≥15x median), the most of any internal channel after Senior Health Hub's 13:
+
+| Upload# | Date | Title | Views | Multiple |
+|---|---|---|---|---|
+| #3 | 2021-12-04 | "10 Causes of Memory Loss in Aging" | 980,106 | 45.3x |
+| #4 | 2021-12-11 | "😱 PARANOIA or Memory Loss. Signs That Could be Early Alzheimer's" | 429,529 | 19.8x |
+| #5 | 2021-12-14 | "Improve Memory by AVOIDING These Drugs ⛔" (channel peak) | 3,582,804 | 165.5x |
+| #15 | 2022-06-29 | "10 Warning Signs of Early Alzheimer's Disease – HOP ML Podcast" | 607,506 | 28.1x |
+| #29 | 2023-09-07 | "Memory Improvement: Say No to These Medications" | 953,110 | 44.0x |
+| #53 | 2025-02-21 | "Vitamin B12 Deficiency in Aging: Causes, Symptoms and Treatment" | 1,294,247 | 59.8x |
+| #65 | 2025-05-15 | "Is Your Blood Pressure Too Low? Understanding Hypotension" | 329,571 | 15.2x |
+| #66 | 2025-05-29 | "Tylenol, Advil, or Aspirin? What's Safest for Older Adults" | 664,860 | 30.7x |
+| #71 | 2025-07-02 | "Dehydration in Older Adults: Symptoms, Treatment, & Prevention" | 325,492 | 15.0x |
+
+**Same spike-not-lift pattern as every other case in this document.** #1–2 (pre-breakout) run 0.1x–0.4x; immediately after the 165.5x peak at #5, upload #6 (a COVID-update video, 2021-12-17) drops back to 0.2x. The three memory/Alzheimer's breakouts (#3, #4, #5) cluster in an 10-day window at the very start of the channel's observed history, then the channel does not break out again for six months. A second cluster (B12 deficiency #53, plus a related follow-up #54 at 14.3x — just under the 15x cutoff) and a third cluster (OTC-medication-safety #66 and dehydration #71, both in a run of general-symptom explainer content) show the same pattern: a topic breaks out once, a same-topic follow-up performs well but rarely repeats the multiple, and the channel reverts to baseline within 1–2 uploads either way.
+
+**Matched failure:** Upload #67 (2025-06-16), "Geriatrician outlines Common Causes of Hypertension" — 2,979 views (0.1x) — posted 18 days after the #65 blood-pressure breakout, same general topic (blood pressure), a fraction of the result.
+
+**Provenance:** all 9 figures independently computed from the freshly-acquired `data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/raw/dataset.json` (Apify run `AuZ65QkXBmVIXcOn9`, 2026-09-25) and cross-checked against `data/catalog/youtube_channel_registry.db` by exact YouTube video ID (`MpohFGvHZHI`, `JUCiIDVTshA`, `16n80OQCVSM`, `XX5Kw2OotL0`, `k-3BY-naQ0M`, `Ev-i_E_MlTo`, `8_depH-gT4o`, `R7uXQBjnTjk`, `OCWvaUcSPOU`). No external validation (Trends, duplication-network cross-reference) was performed for this case — it is registry-DB-only, matching the scope of Cases 1–6.
+
 ---
 
 ## External cases (live YouTube research, 2026-09-25)
@@ -155,7 +180,7 @@ All four found via the same searches that surfaced SeniorHood — a real "conten
 
 ## Cross-cutting findings
 
-**1. Every breakout is a spike, never a step-change.** Across all 28 breakout instances (23 internal + 5 external) in this document, not one channel's post-breakout baseline durably exceeded its pre-breakout baseline. The very next upload, in nearly every case, reverts to the channel's ordinary range. Senior Health Hub is the strongest counter-test (13 independent breakouts over 13 months on one channel) and even there, the whole-channel median is statistically unchanged before vs. after each hit.
+**1. Every breakout is a spike, never a step-change.** Across all 37 breakout instances (32 internal + 5 external) in this document, not one channel's post-breakout baseline durably exceeded its pre-breakout baseline. The very next upload, in nearly every case, reverts to the channel's ordinary range. Senior Health Hub is the strongest counter-test (13 independent breakouts over 13 months on one channel) and even there, the whole-channel median is statistically unchanged before vs. after each hit.
 
 **2. Template alone does not explain outcomes — this is directly falsifiable and was falsified.** The "Surgeon REVEALS/WARNS: Do THIS 1 Exercise" template is used, in some cases with identical wording, by SeniorHood (4 breakouts, up to 1.05M views) and by at least 10+ sibling channels (documented: Health 365, Senior Strength Secrets, plus 5 more named in search results) that get double/triple-digit views on the same words applied to the same ailments. Topic choice is similarly falsified: Health 365 has videos on neuropathy and leg circulation — the exact topics behind both Amos Boone's and two of SeniorHood's breakouts — and gets 42–56 views on them.
 

@@ -84,20 +84,23 @@ class GT20FabricationRegressionTest(unittest.TestCase):
 @unittest.skipIf(_skip_if_missing(), "senior-health forensic-v3 research tree not present")
 class BreakoutEventPopulationReconciliationTest(unittest.TestCase):
     """The breakout event total was miscounted as 29 (23 internal + 6 external)
-    in the original pass; the underlying per-case data actually sums to 28
-    (23 internal + 5 external). This guards the canonical event table and its
+    in the original pass; the underlying per-case data actually summed to 28
+    (23 internal + 5 external) after the NC-05 correction. On 2026-09-25, 9
+    further internal events were added from Better Health While Aging
+    (DS-000033), a newly acquired channel, bringing the total to 37 (32
+    internal + 5 external). This guards the canonical event table and its
     downstream restatements against the same class of aggregate-vs-underlying
-    mismatch (NC-05)."""
+    mismatch (NC-05) while tolerating legitimate growth from new acquisitions."""
 
     def test_canonical_table_has_explicit_identity_keys_and_reconciles(self):
         table_path = V3_DIR / "cross-channel/BREAKOUT-EVENT-CANONICAL-TABLE.json"
         data = json.loads(table_path.read_text(encoding="utf-8"))
         events = data["events"]
-        self.assertEqual(len(events), 28)
-        self.assertEqual(data["internal_count"], 23)
+        self.assertEqual(len(events), 37)
+        self.assertEqual(data["internal_count"], 32)
         self.assertEqual(data["external_count"], 5)
         self.assertEqual(
-            sum(1 for e in events if e["source"] == "internal"), 23
+            sum(1 for e in events if e["source"] == "internal"), 32
         )
         self.assertEqual(
             sum(1 for e in events if e["source"] == "external"), 5

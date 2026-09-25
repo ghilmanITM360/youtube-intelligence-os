@@ -13,23 +13,23 @@ from scripts.build_youtube_channel_registry import build_database, build_model, 
 
 
 EXPECTED = {
-    "canonical_channels": 74,
+    "canonical_channels": 75,
     "raw_submissions": 67,
     "target_channels": 63,
-    "channels_with_video_data": 45,
+    "channels_with_video_data": 46,
     "identity_only_channels": 29,
-    "standard_packages": 39,
+    "standard_packages": 40,
     "historical_channels": 6,
-    "stored_outside_targets": 11,
-    "datasets": 31,
-    "videos": 2205,
-    "real_transcripts": 2193,
+    "stored_outside_targets": 12,
+    "datasets": 32,
+    "videos": 2299,
+    "real_transcripts": 2287,
     "placeholders": 12,
     "description_gaps": 17,
     "non_channel_subjects": 4,
-    "intelligence_coverage_rows": 592,
-    "data_layer_rows": 814,
-    "visual_coverage_rows": 74,
+    "intelligence_coverage_rows": 600,
+    "data_layer_rows": 825,
+    "visual_coverage_rows": 75,
 }
 
 REQUIRED_VIEWS = {
