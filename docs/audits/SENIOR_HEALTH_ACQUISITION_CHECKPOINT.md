@@ -209,3 +209,72 @@ Senior Health Hub (`UCAYG0fzUyxv6OevH88qA45w`) zero-spend precheck only — do n
 - Standard package, registry, tracker, both DB snapshots, checkpoint, and report updated.
 - Final registry: 73 canonical channels, 44 with video data, 38 standard packages, 2,149 videos, 2,137 real transcripts.
 - No additional paid channel is authorized by this checkpoint.
+
+## PR #5 final integration baseline (2026-09-26)
+
+Verified integration commit `de393e2b4f8affd18864c0aa5a1f49a09c64b012` on
+`integration/repository-consolidation-2026-09-25`, PR
+[#5](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/5),
+consolidating PR #2/#3/#4. `main` unchanged at `bae03f43d0c7a38c057983298a6c479d3b997ff1`
+since integration branch was prepared. Remote HEAD matches local; PR is
+`MERGEABLE`, `mergeStateStatus=CLEAN`, CI check `validate` = `pass`.
+
+**Data totals** (independently recomputed from the canonical DBs in a fresh,
+disposable, non-shallow clone — not carried over from any prior report):
+75 canonical channels; 2,299 unique videos; 2,287 real transcripts (all
+have non-empty `transcript_text`, `word_count`, `transcript_sha256`); 12
+placeholders (all have `unavailable_reason`); 40 `STANDARD_PACKAGE` channels
+(29 `NO_PACKAGE`, 6 `HISTORICAL_FORMAT`). Both DBs: `PRAGMA integrity_check
+= ok`, zero foreign-key violations.
+
+**Senior Health competitive set**: 7 acquired competitors, 400 competitor
+videos (Senior Health Hub 122, Dr. Okoro 66, Doctor Thomas 22, Dr. Aliza
+Wright 32, Dr. Ares Senior 35, Dr. Elias Senior Health 29, Better Health
+While Aging 94). Dr. Rehan (own channel, `UCQIzqH7QZ9viBYpOFqgSXMg`) remains
+separately tracked at 56 videos, excluded from competitor totals. 19
+qualified-pending Senior Health leads remain identified but not acquired
+(class E: live, no disqualifying flag, zero spend). 19 previously-flagged
+missing public videos reconciled exactly: 15 are `NEW_UPLOADS_SINCE_SNAPSHOT`
+(Senior Health Hub 1, Dr. Ares Senior 2, Dr. Elias Senior Health 12 —
+optional refresh, not a gap) and 4 are a genuine `HISTORICAL_GAP` (Better
+Health While Aging Shorts `-SMFhfZrjm0`, `5Jqvsfq6UBo`, `U6kI1V6CQVs`,
+`x0Z5ziQNtWQ`, never captured by the original acquisition run).
+
+**Repairs landed this integration**: `DATA_INVENTORY.md`/`.gitignore`
+checksum-drift ledger entries (DS-000028-F018/F019, DS-000030-F017/F018)
+confirmed as legitimate historical snapshots by exact git-blob match, not
+corruption — no manifest or checksum changes made. 23 pre-ledger legacy
+datasets (DS-000001..DS-000019, plus DS-000029/031/032 outside the CSV-ledger
+format) confirmed to have real evidence on disk with SHA-256 documentation
+in older `.md` manifests; `validate_dataset_ledgers.py` does not read that
+format — a disclosed coverage gap, not fabricated retroactive evidence.
+`build_v3_workbook.py` made fully reproducible: portable repo-relative
+paths (`V3_WORKBOOK_SRC`/`V3_WORKBOOK_DST` env overrides), the withdrawn
+GT-20 correction and the 9 Case-13 (Better Health While Aging) breakout rows
+are now generated in code instead of hand-patched only onto the committed
+binary. Regenerating the workbook reproduces the committed
+`SENIOR-HEALTH-FORENSIC-WORKBOOK-V3.xlsx` exactly (41/41 sheets, cell-value
+equal) in both the working checkout and an independent fresh clone.
+Regression tests added: `tests/test_workbook_reproducibility.py`
+(no-hardcoded-`/tmp`-path guard, full regeneration-matches-committed guard,
+GT-20-non-reappearance guard).
+
+**Validation, fresh clean-clone run** (separate disposable clone from
+`origin/integration/repository-consolidation-2026-09-25`, full history +
+LFS, not the working worktree): `git lfs fsck` clean; both DBs materialized
+as real files (141MB registry, 52MB inventory), not LFS pointers; DB
+integrity/FK checks clean; `uv sync --extra dev` clean; full `pytest -q`:
+**384 passed, 1 skipped**; `compileall` clean; `ruff check` clean; secret
+scan (`scan_tracked_secrets.py`): 0 findings; registry validator
+(`validate_youtube_channel_registry`): `PASS`; dataset-ledger validator
+across all 9 CSV-ledger datasets (DS-000020/21/22/23/24/25/27/28/30): only
+the known, already-investigated DATA_INVENTORY.md/.gitignore drift on
+DS-000028/DS-000030; V3 workbook regenerated to an isolated path and
+diffed cell-by-cell against the committed workbook: 41/41 sheets identical.
+
+**Outstanding, not started by this checkpoint**: 19 qualified-pending Senior
+Health competitors (zero-spend precheck only, no paid Apify run authorized);
+the 4-Short historical gap on Better Health While Aging; extending
+`validate_dataset_ledgers.py` to the pre-CSV legacy manifest format for the
+23 legacy datasets. No paid acquisition, merge, branch deletion, or closing
+of PR #2/#3/#4 was performed as part of this verification pass.
