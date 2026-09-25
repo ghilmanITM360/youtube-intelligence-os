@@ -1,3 +1,5 @@
+> **CORRECTION (2026-09-25, live re-verification):** Group A is not uniformly complete and Group B is not empty. Better Health While Aging (acquired after this file was written, DS-000033) is PARTIAL: 4 oldest Shorts missing. Dr. Elias (+12), Dr. Ares (+2) and Senior Health Hub (+1) have post-snapshot uploads. Senior Fitness With Meredith's 454 items include 100 archived streams. Current counts, exact missing IDs and the run plan are in `SENIOR-HEALTH-MASTER-INVENTORY-REPORT.md`. The body below is preserved as a historical record.
+
 # Senior Health Acquisition Backlog (Phase 8) — 2026-09-25
 
 **Status:** Planning only. Zero-spend. No Apify run has been started from this document. Cost figures use the last independently-verified live price (`$4.00 / 1,000 videos` = `$0.004/video`, Free plan, confirmed 2026-09-22/23 in `docs/audits/SENIOR_HEALTH_ACQUISITION_CHECKPOINT.md`) — **this must be re-verified live before any run** (see Phase 9 note at the end); it is not re-checked here because that step touches the live Apify account and is intentionally left for explicit authorization.

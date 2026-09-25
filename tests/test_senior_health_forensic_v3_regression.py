@@ -153,5 +153,34 @@ class BreakoutEventPopulationReconciliationTest(unittest.TestCase):
         )
 
 
+@unittest.skipIf(_skip_if_missing(), "senior-health forensic-v3 research tree not present")
+class MasterInventoryRegressionTest(unittest.TestCase):
+    """The 2026-09-25 master inventory must keep BHWA's exact historical Shorts
+    gap, keep the own channel out of competitor classes, and never count a
+    removed or excluded lead as needing paid acquisition."""
+
+    def setUp(self):
+        path = V3_DIR / "SENIOR-HEALTH-MASTER-INVENTORY.json"
+        self.rows = {r["ref"]: r for r in json.loads(path.read_text(encoding="utf-8"))["channels"]}
+
+    def test_bhwa_missing_shorts_are_the_four_verified_ids(self):
+        r = self.rows["UCFpxvukIqCAUA7YizI-q9Dw"]
+        self.assertEqual(r["class"], "B")
+        self.assertEqual(sorted(r["missing_shorts_ids"]),
+                         sorted(["-SMFhfZrjm0", "U6kI1V6CQVs", "5Jqvsfq6UBo", "x0Z5ziQNtWQ"]))
+        self.assertEqual(r["gap_kinds"], {"shorts": "HISTORICAL_GAP"})
+
+    def test_own_channel_is_separate(self):
+        self.assertEqual(self.rows["UCQIzqH7QZ9viBYpOFqgSXMg"]["class"], "OWN")
+        self.assertEqual(sum(r["class"] == "OWN" for r in self.rows.values()), 1)
+
+    def test_excluded_leads_need_no_spend_and_ids_are_unique(self):
+        for r in self.rows.values():
+            if r["class"] == "F":
+                self.assertEqual(r["required_new_results"], 0, r["ref"])
+        ids = [r["canonical_channel_id"] for r in self.rows.values() if r["canonical_channel_id"]]
+        self.assertEqual(len(ids), len(set(ids)))
+
+
 if __name__ == "__main__":
     unittest.main()

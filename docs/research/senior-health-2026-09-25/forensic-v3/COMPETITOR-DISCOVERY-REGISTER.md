@@ -1,3 +1,5 @@
+> **CORRECTION (2026-09-25, live re-verification):** Part B's exclusion of `@SeniorShapeFitness` as a redirect to Dr. Waterling is wrong. The handle resolves to its own channel `UCkWYei5MULuRDhH7uxtZqqA` (SeniorShape Fitness, 880K subscribers, 416 public items). It is reclassified as identity-only / requalify in `SENIOR-HEALTH-MASTER-INVENTORY-REPORT.md`. The body below is preserved as a historical record.
+
 # Senior Health Competitor Discovery Register — 2026-09-25
 
 Status: FINAL for this pass. Local, untracked file — not committed per instructions. Repository was
