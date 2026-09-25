@@ -392,3 +392,90 @@ remains the single canonical checkpoint (this section appended, no
 duplicate report created). Next acquisition work continues from a new
 branch off this merged `main`; no paid Apify acquisition or broad
 discovery campaign was started in this pass.
+
+## Phase 2 acquisition — zero-spend precheck (2026-09-26)
+
+Working branch `research/senior-health-acquisition-phase-2`, forked
+exactly at merged `main` `812f249` (`git merge-base` confirms zero
+divergence). Baseline re-confirmed on this branch: 75 channels, 2299
+videos, 2287 real transcripts, 12 placeholders, 40 standard packages —
+exact match, `PRAGMA integrity_check = ok`.
+
+**Backlog recovery.** The full 19-qualified-pending-competitor backlog,
+missing-data matrix and per-channel acquisition plan already exist at
+`docs/research/senior-health-2026-09-25/forensic-v3/SENIOR-HEALTH-MASTER-INVENTORY-REPORT.md`
+(committed, tracked, dated 2026-09-25) — not rebuilt here. It lists all 14
+Group-C priority channels plus 34 identity-only/adjacent leads (=48 class-E
+total; the task's "19" figure is the Group-C direct-acquisition subset)
+with verified Channel IDs, live regular/Shorts/stream counts, and per-run
+cost estimates.
+
+**Live Apify account audit — previously blocked, now completed.** The
+2026-09-25 pass recorded this as blocked (Claude-in-Chrome OAuth account
+mismatch, no `APIFY_TOKEN`). This session's Chrome extension session is
+correctly authenticated (account `ghilman`, Personal), so the audit ran
+live:
+
+- Current billing period: Sep 17 – Oct 16 2026. Platform usage `$1.60 /
+  $5.00` (Actors `$1.59`, data transfer `$0.01`). **Remaining free-tier
+  credit: `$3.40`** — matches the last-documented figure exactly.
+- Actor: `streamers/youtube-scraper`, build `0.0.303`, unchanged since all
+  prior runs.
+- Run history: exactly 8 runs, all reconciled against this repo's own
+  manifests/ledger — no unintegrated orphan dataset exists:
+  | Live run (date, results, cost) | Repo record |
+  |---|---|
+  | 2026-09-20, 35, $0.14 | Dr. Ares Senior control |
+  | 2026-09-22, 1, $0.00 | precheck |
+  | 2026-09-22, 66, $0.26 | Dr. Okoro (DS-000028, `$0.264`) |
+  | 2026-09-23, 22, $0.09 | Doctor Thomas (DS-000029, `$0.088`) |
+  | 2026-09-23, 122, $0.49 | Senior Health Hub (DS-000030, `$0.488`) |
+  | 2026-09-25, 1, $0.00 (aborted) | precheck |
+  | 2026-09-25, 56, $0.22 | Own channel Dr. Rehan (DS-000032, `$0.224`) |
+  | 2026-09-25, 94, $0.38 | Better Health While Aging (DS-000033, `$0.376`) |
+- Owner-approved campaign cap remains `$4.50`; cumulative actual campaign
+  spend (Okoro + Thomas + SHH + BHWA + own-channel) `≈$1.44`; **remaining
+  approved campaign budget ≈ `$3.06`** — the binding constraint (tighter
+  than the `$3.40` free-tier balance).
+
+**Priority A — Better Health While Aging missing Shorts, re-verified live
+public today (not re-run, no spend):**
+
+| Video ID | Title | Public today |
+|---|---|---|
+| `-SMFhfZrjm0` | All About IADLs #shorts | yes |
+| `5Jqvsfq6UBo` | #Aging Parent with Memory Loss Won't Accept Help | yes |
+| `U6kI1V6CQVs` | All About ADLs #shorts | yes |
+| `x0Z5ziQNtWQ` | DO THIS: 4 Types of Exercise in Aging | yes |
+
+All 4 confirmed absent from `youtube_channel_registry.db` (`SELECT ...
+WHERE youtube_video_id IN (...)` → 0 rows) and all 4 still publicly
+reachable at their `/shorts/<id>` URLs. Ready for a targeted `startUrls`
+run (4 results, expected `$0.016`, proposed hard cap `$0.02`) — not
+started; awaiting explicit spend authorization per the financial boundary.
+
+**Priority B — newer uploads** (Dr. Elias +12, Dr. Ares +2, Senior Health
+Hub +1): already quantified with exact video IDs in the master inventory
+report above; classified `NEW_UPLOADS_SINCE_SNAPSHOT`, not a data gap.
+Optional refresh, ~`$0.06` total, not started.
+
+**Phase 6/7 individual + combined research status.** A substantial V3
+forensic pass already exists at
+`docs/research/senior-health-2026-09-25/forensic-v3/` (`FINAL-STATUS-V3.md`:
+"COMPLETE WITH WARNINGS") covering cross-channel title/thumbnail/hook
+pattern analysis, 37 small-channel breakout events across 13 channels
+(including a full same-day Case-13 deep-dive on Better Health While
+Aging), 32 Google Trends investigations, and a 41-sheet workbook. It does
+**not** yet contain the per-channel dedicated section format this task's
+Phase 6 specifies (individually complete title-by-title/thumbnail-by-
+thumbnail/script-by-script write-ups per acquired competitor) — that
+remains outstanding and was not attempted this pass; it is a multi-session
+writing effort, not a zero-spend precheck, and rushing it would risk
+exactly the kind of unevidenced inference Core Rule 6 forbids. No V4
+"repair-and-expand" pass referenced in `FINAL-STATUS-V3.md` actually
+landed in the repository (no `checkpoints/` directory, no V4 files exist)
+— that reference describes intent from an unpushed worktree, not
+completed work; noted here so a future session does not assume it exists.
+
+No paid Apify run, no merge to `main`, no branch deletion, no commit
+beyond this checkpoint was performed in this section.
