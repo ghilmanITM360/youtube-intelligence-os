@@ -14,6 +14,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[5]
 HERE = Path(__file__).resolve().parents[1]
 LIVE = HERE / "live-catalog-2026-09-25"
+
+sys.path.insert(0, str(ROOT / "scripts"))
+from video_type_classification import classify_video_type, REGULAR, SHORT, STREAM, UNKNOWN  # noqa: E402
 PRICE = 0.004  # last verified $/result (Free plan, 2026-09-25 DS-000033 run); must be re-verified live before spend
 
 REG = sqlite3.connect(ROOT / "data/catalog/youtube_channel_registry.db")
@@ -109,9 +112,10 @@ def main():
             "streams_tab": (tabs.get("streams") or {}).get("selected_tab"),
             "registry_status": reg[2] if reg else None, "package_status": reg[3] if reg else None,
             "dataset_ids": datasets, "apify_runs": runs,
-            "repo_regular": sum(1 for t in repo.values() if t == "video"),
-            "repo_shorts": sum(1 for t in repo.values() if t == "shorts"),
-            "repo_other": sum(1 for t in repo.values() if t not in ("video", "shorts")),
+            "repo_regular": sum(1 for t in repo.values() if classify_video_type(t) == REGULAR),
+            "repo_shorts": sum(1 for t in repo.values() if classify_video_type(t) == SHORT),
+            "repo_streams": sum(1 for t in repo.values() if classify_video_type(t) == STREAM),
+            "repo_other": sum(1 for t in repo.values() if classify_video_type(t) == UNKNOWN),
             "repo_real_transcripts": n_real_tx, "repo_missing_transcripts": len(repo) - n_real_tx if repo else None,
             "repo_descriptions": n_desc,
             "missing_regular_ids": miss_v, "missing_shorts_ids": miss_s, "missing_stream_ids": miss_st,
