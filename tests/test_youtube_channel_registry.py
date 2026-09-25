@@ -175,8 +175,8 @@ class RegistryModelTests(unittest.TestCase):
     def test_package_control_totals(self):
         package = self.model["controls"]["package_layer"]
         self.assertEqual(40, package["channels"])
-        self.assertEqual(1874, package["unique_videos"])
-        self.assertEqual(1863, package["real_transcripts"])
+        self.assertEqual(1878, package["unique_videos"])
+        self.assertEqual(1867, package["real_transcripts"])
         self.assertEqual(11, package["placeholders"])
         self.assertEqual(15, package["missing_descriptions"])
 
@@ -597,8 +597,8 @@ class RegistryDatabaseTests(unittest.TestCase):
                         "v_intelligence_coverage",
                     }.issubset(views)
                 )
-                self.assertEqual(2299, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
-                self.assertEqual(2287, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
+                self.assertEqual(2303, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
+                self.assertEqual(2291, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
                 self.assertEqual(12, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 1").fetchone()[0])
                 self.assertEqual(17, connection.execute("SELECT count(*) FROM videos WHERE description IS NULL").fetchone()[0])
                 self.assertEqual(40, connection.execute("SELECT count(*) FROM channels WHERE source_group='STANDARD_PACKAGE'").fetchone()[0])
