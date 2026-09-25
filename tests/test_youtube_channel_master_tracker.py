@@ -366,7 +366,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             standard = "; ".join(row[0] for row in connection.execute("SELECT channel_name FROM channels WHERE source_group='STANDARD_PACKAGE' ORDER BY channel_name"))
             self.assertIn(f"26 rows: {complete}.", report)
             self.assertIn(f"29 rows: {pending}.", report)
-            self.assertIn(f"38 rows: {standard}.", report)
+            self.assertIn(f"40 rows: {standard}.", report)
             for text in ("Registry total: 2,015 real transcripts.", "Total: 12.", "Total: 15.", "72 channels: `SCHEMA_READY_NO_DATA`."):
                 self.assertIn(text, report)
         finally:
@@ -421,7 +421,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             connection.close()
         self.assertFalse(errors, errors[:10])
         self.assertEqual(
-            {"channels": 38, "videos": 1724, "real": 1713, "placeholders": 11, "over_excel_limit": 36},
+            {"channels": 40, "videos": 1874, "real": 1863, "placeholders": 11, "over_excel_limit": 79},
             counts,
         )
 

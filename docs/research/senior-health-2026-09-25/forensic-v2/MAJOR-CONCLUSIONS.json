@@ -1,0 +1,110 @@
+[
+ {
+  "id": "C-01",
+  "conclusion": "Channel growth is hit-concentrated: top video = 13-78% of channel views",
+  "confidence": "HIGH",
+  "evidence": "VERIFIED-FACTS top_video.share_of_channel_views"
+ },
+ {
+  "id": "C-02",
+  "conclusion": "A hit does not raise the channel floor (SHH 9,539 -> 9,418 median; Okoro recent-10 median 75)",
+  "confidence": "HIGH",
+  "evidence": "VERIFIED-FACTS; DQ-09"
+ },
+ {
+  "id": "C-03",
+  "conclusion": "Same title on a different channel yields radically different results (2 to 1.6M); same persona + identical title + identical thumbnail (incl. typo) 5 days apart: 941,154 vs 160",
+  "confidence": "HIGH",
+  "evidence": "DUPLICATE-NETWORK-SUMMARY; C03-C13; CH_channel_pages"
+ },
+ {
+  "id": "C-04",
+  "conclusion": "Cohort channels share packaging but not scripts (max cross-channel transcript 5-gram Jaccard 0.024)",
+  "confidence": "HIGH",
+  "evidence": "DUPLICATE-NETWORK.json"
+ },
+ {
+  "id": "C-05",
+  "conclusion": "Ares and Elias show same-operator signals (identical thumbnail text incl. typos, same mismatched thumbnail on a different title)",
+  "confidence": "MEDIUM-HIGH (ownership UNVERIFIED)",
+  "evidence": "THUMBNAIL-MATRIX notes #49-#81"
+ },
+ {
+  "id": "C-06",
+  "conclusion": "Copy outcome depends on the copying channel, not order: across 37 cross-channel same-title pairs second movers won 22; at >=29 days they won 14/16 (stronger channels re-running weak channels' titles); inside the Ares-Elias twin, re-runs >=15 days later lost 4/6",
+  "confidence": "MEDIUM",
+  "evidence": "DUPLICATE-NETWORK-SUMMARY; C11"
+ },
+ {
+  "id": "C-07",
+  "conclusion": "Thumbnails that withhold the answer outperform those that reveal it (1.90x vs 0.47x; 0/14 revealed reached 3x)",
+  "confidence": "MEDIUM (stratified sample)",
+  "evidence": "THUMBNAIL-MATRIX feature_performance"
+ },
+ {
+  "id": "C-08",
+  "conclusion": "Warning-hook openings and warning icons underperform within channel (0.32x hooks, 14 of 22 below 0.5x; 0.55x icons)",
+  "confidence": "MEDIUM",
+  "evidence": "ARCHETYPE-PERFORMANCE; THUMBNAIL-MATRIX"
+ },
+ {
+  "id": "C-09",
+  "conclusion": "Many large winners had little or no web-search demand at upload (bathing 0/100, eyesight 0, anesthesia dip) - discovery appears non-search",
+  "confidence": "MEDIUM (traffic sources UNKNOWN)",
+  "evidence": "GT-18, GT-20, GT-21"
+ },
+ {
+  "id": "C-10",
+  "conclusion": "Trend alignment helped some winners (neuropathy peak week; garlic Jan peak; clove multi-year rise) but high interest did not rescue losers (stroke Jun 2026, sleeping-position Okoro)",
+  "confidence": "MEDIUM",
+  "evidence": "GT-01, GT-11, GT-17, GT-22, GT-24"
+ },
+ {
+  "id": "C-11",
+  "conclusion": "Generic stroke warning content failed on all 3 channels that ran it",
+  "confidence": "HIGH",
+  "evidence": "Pairs 11, 25; Thomas 2,078"
+ },
+ {
+  "id": "C-12",
+  "conclusion": "Conditional audience gating is not fatal (eggs-if-diabetes 127.6K) - pass-1 '247x from narrowing' over-attributed",
+  "confidence": "MEDIUM",
+  "evidence": "Pair 7, pair 28, DQ-11"
+ },
+ {
+  "id": "C-13",
+  "conclusion": "Series/franchise behavior drives the largest absolute results (SHH: 41 clove entries = 73.1% of channel views, 14 of 41 >=3x; exact repeats of the 3.09M format returned to ~1x)",
+  "confidence": "HIGH",
+  "evidence": "VERIFIED-FACTS; CH_channel_pages"
+ },
+ {
+  "id": "C-14",
+  "conclusion": "Winning openings place the viewer inside a lived moment within ~20 s and set an open loop within ~100 s",
+  "confidence": "MEDIUM (lexical heuristic + 29 reads)",
+  "evidence": "MATCHED-PAIRS-SCRIPT-FORENSICS"
+ },
+ {
+  "id": "C-15",
+  "conclusion": "Several category winners carry unsupported medical claims; performance lessons must be separated from the claims",
+  "confidence": "HIGH",
+  "evidence": "MEDICAL-VALIDATION MV-03/07/08/09/10"
+ },
+ {
+  "id": "C-16",
+  "conclusion": "AI-assisted production is disclosed in 26/32 Aliza transcripts; composite patients disclosed",
+  "confidence": "HIGH",
+  "evidence": "TRANSCRIPT-FORENSICS transcript_ai_disclosure_present"
+ },
+ {
+  "id": "C-17",
+  "conclusion": "Small channels can break out quickly (Aliza persona channel, Okoro, Fit Lit - the latter serves a South-Asian-language audience), usually on proven topics with new packaging",
+  "confidence": "MEDIUM",
+  "evidence": "SMALL-CHANNEL-BREAKOUTS.json"
+ },
+ {
+  "id": "C-18",
+  "conclusion": "Whitespace with rising demand and no cohort coverage: GLP-1 brand shift, creatine, BP-timing trial, mini-stroke in women, supplement interactions",
+  "confidence": "MEDIUM",
+  "evidence": "GT-13, GT-25, GT-29, GT-32, GT-11"
+ }
+]

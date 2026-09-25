@@ -1,0 +1,119 @@
+[
+ {
+  "knowledge_unit": "TR-011-002",
+  "framework": "3-Step Hook: Context Lean -> Scroll-Stop -> Contrarian Snapback",
+  "videos_tested_against": "UGmIU2dS5zc; CJxCjygEnmo; lRn0p4YL0Bk; KPigGh9_gbU",
+  "observed_evidence": "Thomas 1.0M opening: frame (fall prevention) -> stop ('not something you buy, not install, not a new routine') -> snapback ('a change in how you walk'); Ares 351K: 2:47 a.m. scene -> 'bladder has almost nothing to do with it'",
+  "counterexample": "b8uLzWR-ZGo uses the same 'what if... not coming from your knee' snapback and got 2.5K",
+  "result": "SUPPORTED_AS_NECESSARY_NOT_SUFFICIENT",
+  "contributes_to": "hooks"
+ },
+ {
+  "knowledge_unit": "TR-011-003",
+  "framework": "Intro Analyzer: judge first 0-30 s for clarity/curiosity/emotion",
+  "videos_tested_against": "All 305 transcripts (first-30s text, APPROXIMATED_FROM_WORD_POSITION)",
+  "observed_evidence": "Hook archetype medians (within-channel multiple): DIRECT_COMMAND 1.65x, WHAT_IF 1.30x, WARNING 0.32x (14/22 below 0.5x)",
+  "counterexample": "Pair 20: two DIRECT_COMMAND openings one day apart -> 1,133 vs 32",
+  "result": "PARTIALLY_SUPPORTED (archetype explains little on its own)",
+  "contributes_to": "hooks"
+ },
+ {
+  "knowledge_unit": "TR-011-004",
+  "framework": "Packaging SOP: know the audience, bold big text, fewer words, one big idea",
+  "videos_tested_against": "149 LIVE_WEB_VISUAL thumbnails",
+  "observed_evidence": "Answer-withheld thumbnails 1.90x vs revealed 0.47x (0/14 revealed >=3x); <=8 words 1.19x vs 0.95x; clutter (high bg complexity) 0.91x vs 1.16x",
+  "counterexample": ">15-word thumbnails 1.38x (n=8, Aliza 47K winner is text-dense)",
+  "result": "SUPPORTED (one-big-idea + withheld answer); word-count rule weak",
+  "contributes_to": "packaging"
+ },
+ {
+  "knowledge_unit": "TR-011-005",
+  "framework": "First ~10 s are 'the new packaging' (autoplay)",
+  "videos_tested_against": "Cannot test - no retention/traffic data (first-party analytics absent)",
+  "observed_evidence": "n/a",
+  "counterexample": "n/a",
+  "result": "NOT_TESTABLE_WITH_PUBLIC_DATA",
+  "contributes_to": "hooks"
+ },
+ {
+  "knowledge_unit": "TR-011-010",
+  "framework": "Viral Checklist: name a specific audience pain point",
+  "videos_tested_against": "Pairs 1, 12, 17, 24",
+  "observed_evidence": "Winners open on a pain the viewer already has (numb feet, nightly bathroom trips, 'one pill every day'); losers open on invisible conditions (silent kidney decline) or jargon (beta blockers)",
+  "counterexample": "Pair 11: loser opens on a vivid pain story (Olivia's numb hand) and still fails",
+  "result": "SUPPORTED",
+  "contributes_to": "scripts"
+ },
+ {
+  "knowledge_unit": "TR-011-011",
+  "framework": "Viral Checklist: specificity & numbers",
+  "videos_tested_against": "Title features (306) + thumbnails (149)",
+  "observed_evidence": "Thumbnail large number 2.13x vs 0.80x; Aliza 4-drug roll-call 47K vs single drug 31",
+  "counterexample": "Thomas knee video: stat-dense (64%, 1,100 adults) -> 2.5K; title has_specificity regex 0.88x",
+  "result": "PARTIALLY_SUPPORTED (concrete numbers help; unverifiable stats do not)",
+  "contributes_to": "packaging"
+ },
+ {
+  "knowledge_unit": "TR-011-012",
+  "framework": "Viral Checklist: contrarian thinking",
+  "videos_tested_against": "Title has_contrarian (n=13) 1.94x; Okoro 'Medical tests that may be unnecessary' 8.0x; TopHealthTips 'Walking Won't Make Your Legs Stronger' 800K",
+  "observed_evidence": "Contrarian + accurate works",
+  "counterexample": "'Stop walking' (SHH 352) and 'Magnesium pills are useless' (1.5K) - contrarian + inaccurate fails",
+  "result": "SUPPORTED_WHEN_ACCURATE",
+  "contributes_to": "packaging"
+ },
+ {
+  "knowledge_unit": "TR-011-013",
+  "framework": "Title Analyzer: 7 viral title formulas framed against viewer satisfaction",
+  "videos_tested_against": "Duplicate network (66 candidate pairs)",
+  "observed_evidence": "Identical formula titles range 2 views to 1.6M across channels",
+  "counterexample": "Same title, same week: Ares 1.47M vs Elias 28K (sleeping position)",
+  "result": "FORMULA_NOT_PREDICTIVE_ALONE",
+  "contributes_to": "packaging"
+ },
+ {
+  "knowledge_unit": "TR-011-014",
+  "framework": "16 Commandments: promise alignment (title promise delivered by script)",
+  "videos_tested_against": "KPigGh9_gbU; CJxCjygEnmo; 1KEvPjIZVsU",
+  "observed_evidence": "Okoro delivers all 9 promised signs (~250 words each); clove video delivers a timeline but title '10 minutes' vs script '15 minutes' mismatch",
+  "counterexample": "Clove video still 3.09M despite mismatch - promise alignment not required for views (may matter for satisfaction, unmeasured)",
+  "result": "UNRESOLVED (no satisfaction data)",
+  "contributes_to": "scripts"
+ },
+ {
+  "knowledge_unit": "TR-011-015",
+  "framework": "BUT/THEREFORE causal chaining instead of 'and then'",
+  "videos_tested_against": "CJxCjygEnmo; KPigGh9_gbU; pattern-interrupt counts",
+  "observed_evidence": "Okoro: 'Walter felt fine... BUT numb feet... THEREFORE one extra test -> A1C 9.2'. Clove: 'coffee is healthy BUT sugar/milk cancel it THEREFORE brew with clove'",
+  "counterexample": "Pattern-interrupt lexicon ('but here's') density does not separate winners from losers (0.0-1.8/1k in both)",
+  "result": "SUPPORTED_QUALITATIVELY",
+  "contributes_to": "storytelling"
+ },
+ {
+  "knowledge_unit": "TR-011-006/007",
+  "framework": "Creative Engine / Script Analyzer: narrative spine + retention mechanics + CTA alignment",
+  "videos_tested_against": "29 matched pairs",
+  "observed_evidence": "Winners more often place an open loop in the first ~100 s (Okoro 96s, Aliza 11s, Ares 81s) and a bridge to a related video at the end (Okoro kidney -> foot breakout)",
+  "counterexample": "Pair 5: winner has no open loop detected; pair 8 loser has no loop and no enumeration",
+  "result": "PARTIALLY_SUPPORTED",
+  "contributes_to": "creative structure"
+ },
+ {
+  "knowledge_unit": "TR-011-008/009",
+  "framework": "AI image/video prompt guides (Nano-Banana, VEO 3)",
+  "videos_tested_against": "Thumbnail production styles",
+  "observed_evidence": "Ares/Elias sketch-illustration template and SHH 3D organ renders are consistent with AI-generated imagery (not verified)",
+  "counterexample": "n/a",
+  "result": "NOT_A_PERFORMANCE_CLAIM (production tooling only)",
+  "contributes_to": "creative structure"
+ },
+ {
+  "knowledge_unit": "TR-011-016",
+  "framework": "Video SEO checklist (keyword research, tags, description)",
+  "videos_tested_against": "Trends GT-20/GT-21 vs internal winners",
+  "observed_evidence": "Several large winners had near-zero web search demand (bathing: 0/100 before upload; best fruit for eyes: 0 in upload week)",
+  "counterexample": "Neuropathy exercises winner aligned with a search peak (GT-24)",
+  "result": "WEAK for this niche (discovery appears browse/suggested-led; traffic data UNKNOWN)",
+  "contributes_to": "packaging"
+ }
+]
