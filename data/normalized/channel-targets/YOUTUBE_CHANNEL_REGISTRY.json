@@ -1,26 +1,26 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-24T18:09:52Z",
+  "generated_at": "2026-09-25T11:18:50Z",
   "controls": {
     "submitted_rows": 67,
     "normalized_url_identities": 63,
     "canonical_target_channels": 63,
-    "all_canonical_channels": 73,
+    "all_canonical_channels": 74,
     "source_groups": {
-      "standard_packages": 38,
+      "standard_packages": 39,
       "historical_catalog": 6,
       "identity_only": 29
     },
     "visual_evidence": {
       "forensic_channels": 1,
       "thumbnail_evidence_channels": 3,
-      "title_only_historical_channels": 3,
+      "title_only_historical_channels": 2,
       "unmapped_screenshot_subjects": 4
     },
     "package_layer": {
-      "channels": 38,
-      "unique_videos": 1724,
-      "real_transcripts": 1713,
+      "channels": 39,
+      "unique_videos": 1780,
+      "real_transcripts": 1769,
       "placeholders": 11,
       "missing_descriptions": 15
     }
@@ -6290,6 +6290,104 @@
       }
     },
     {
+      "canonical_channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
+      "channel_name": "Decode Your Heart - Dr. Rehan",
+      "current_handle": "@DrRehanOmar",
+      "canonical_url": "https://www.youtube.com/channel/UCQIzqH7QZ9viBYpOFqgSXMg",
+      "source_group": "STANDARD_PACKAGE",
+      "primary_dataset_id": "DS-000032",
+      "target_group": "OUTSIDE_TARGET",
+      "status": "COMPLETE",
+      "completed_tick": "✓",
+      "identity_evidence_source": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+      "verified_at": "2026-09-14",
+      "handle_unavailable_reason": null,
+      "limitations": [],
+      "submission_rows": [],
+      "identity_status": "VERIFIED",
+      "extraction_status": "COMPLETE",
+      "package_status": "STANDARD_PACKAGE",
+      "video_metadata_status": "COMPLETE",
+      "description_status": "COMPLETE",
+      "transcript_status": "COMPLETE_REAL",
+      "intelligence_status": "DATA_READY",
+      "first_party_analytics_status": "SCHEMA_READY_NO_DATA",
+      "dataset_ids": [
+        "DS-000032"
+      ],
+      "video_count": 56,
+      "regular_videos": 27,
+      "shorts": 29,
+      "livestreams": 0,
+      "descriptions": 56,
+      "real_transcripts": 56,
+      "placeholders": 0,
+      "missing_transcripts": 0,
+      "workbook_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Master_Data.xlsx",
+      "transcript_zip_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Transcripts_56_Videos.zip",
+      "thumbnail_metadata_status": "COMPLETE",
+      "visual_asset_status": "THUMBNAIL_URL_ONLY",
+      "forensic_video_status": "NOT_AVAILABLE",
+      "visual_coverage": {
+        "thumbnail_url_count": 56,
+        "downloaded_thumbnail_count": 0,
+        "screenshot_count": 0,
+        "keyframe_count": 0,
+        "registered_source_video_count": 0,
+        "timestamped_visual_observation_count": 0,
+        "visual_evidence_level": "THUMBNAIL_URL_ONLY",
+        "editing_visual_intelligence_status": "NOT_AVAILABLE",
+        "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+        "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+      },
+      "layer_evidence": {
+        "identity_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": null
+        },
+        "extraction_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "package_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "video_metadata_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "description_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Master_Data.xlsx",
+          "limitation_reason": null
+        },
+        "transcript_status": {
+          "evidence_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Transcripts_56_Videos.zip",
+          "limitation_reason": null
+        },
+        "thumbnail_metadata_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": null
+        },
+        "visual_asset_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+        },
+        "forensic_video_status": {
+          "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
+        },
+        "intelligence_status": {
+          "evidence_path": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
+          "limitation_reason": "Capability-level rows preserve generated, data-ready, and unavailable states."
+        },
+        "first_party_analytics_status": {
+          "evidence_path": "data/intelligence/system/first-party-analytics-capability-status-2026-09-11.json",
+          "limitation_reason": "No real YouTube Studio or Analytics export is ingested."
+        }
+      }
+    },
+    {
       "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
       "channel_name": "Doctor Thomas",
       "current_handle": "@DrThomasSeniorHealthTips",
@@ -7023,20 +7121,20 @@
       "missing_transcripts": 0,
       "workbook_path": null,
       "transcript_zip_path": null,
-      "thumbnail_metadata_status": "NONE",
-      "visual_asset_status": "NONE",
+      "thumbnail_metadata_status": "COMPLETE",
+      "visual_asset_status": "THUMBNAIL_URL_ONLY",
       "forensic_video_status": "NOT_AVAILABLE",
       "visual_coverage": {
-        "thumbnail_url_count": 0,
+        "thumbnail_url_count": 122,
         "downloaded_thumbnail_count": 0,
         "screenshot_count": 0,
         "keyframe_count": 0,
         "registered_source_video_count": 0,
         "timestamped_visual_observation_count": 0,
-        "visual_evidence_level": "NONE",
+        "visual_evidence_level": "THUMBNAIL_URL_ONLY",
         "editing_visual_intelligence_status": "NOT_AVAILABLE",
         "evidence_path": "data/catalog/youtube_inventory.db",
-        "limitation_reason": "No downloaded visual evidence is registered."
+        "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
       },
       "layer_evidence": {
         "identity_status": {
@@ -7065,15 +7163,15 @@
         },
         "thumbnail_metadata_status": {
           "evidence_path": "data/catalog/youtube_inventory.db",
-          "limitation_reason": "No canonical thumbnail reference."
+          "limitation_reason": null
         },
         "visual_asset_status": {
           "evidence_path": "data/catalog/youtube_inventory.db",
-          "limitation_reason": "No downloaded visual evidence is registered."
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
         },
         "forensic_video_status": {
           "evidence_path": "data/catalog/youtube_inventory.db",
-          "limitation_reason": "No downloaded visual evidence is registered."
+          "limitation_reason": "Thumbnail URLs are metadata only; no downloaded thumbnail or forensic video evidence is registered."
         },
         "intelligence_status": {
           "evidence_path": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
@@ -14001,6 +14099,86 @@
     },
     {
       "canonical_channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
+      "capability_id": "FIRST_PARTY_ANALYTICS",
+      "status": "DATA_READY",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "data/intelligence/system/first-party-analytics-capability-status-2026-09-11.json",
+      "limitation_reason": "Schema and ingestion code are ready, but no real YouTube Studio or Analytics export is ingested.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
+      "capability_id": "TOPIC_OPPORTUNITY",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
+      "capability_id": "PACKAGING",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
+      "capability_id": "HOOK",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
+      "capability_id": "SCRIPT",
+      "status": "DATA_READY",
+      "input_data_available": true,
+      "generated_artifact_available": false,
+      "evidence_path": "data/extracted/channel-data/DS-000032/packages/decode-your-heart-dr-rehan/DecodeYourHeartDrRehan_Master_Data.xlsx",
+      "limitation_reason": "Required public package inputs exist; no channel-specific intelligence artifact is generated.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
+      "capability_id": "EDITING_VISUAL",
+      "status": "NOT_AVAILABLE",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "docs/audits/CHANNEL_COVERAGE_LEDGER_2026-09-14.csv",
+      "limitation_reason": "No registered forensic video evidence; transcripts and thumbnail URLs are not substitutes.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
+      "capability_id": "UNIFIED_ORCHESTRATION",
+      "status": "NOT_AVAILABLE",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
+      "limitation_reason": "Required input evidence or generated channel-specific artifact is unavailable.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
+      "capability_id": "CHANNEL_STRATEGY",
+      "status": "NOT_AVAILABLE",
+      "input_data_available": false,
+      "generated_artifact_available": false,
+      "evidence_path": "data/intelligence/system/cross-niche-strategy-calibration-2026-09-11.json",
+      "limitation_reason": "Required input evidence or generated channel-specific artifact is unavailable.",
+      "last_verified_at": "2026-09-14"
+    },
+    {
+      "canonical_channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
       "capability_id": "FIRST_PARTY_ANALYTICS",
       "status": "DATA_READY",
       "input_data_available": false,

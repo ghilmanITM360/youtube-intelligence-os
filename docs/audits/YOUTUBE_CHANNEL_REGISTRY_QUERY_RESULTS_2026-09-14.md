@@ -20,7 +20,7 @@ Ten are original targets and 19 are later additions. All identities are verified
 
 ## 3. Standard-package channels
 
-38 rows: Apesthetic; Bob Invests; Brimm.; Bro Pump; CIPHER UNIT; Carl Invests; Crayon Capital; Dark Ledger; Doctor Thomas; Dr. Ares Senior; Dr. Okoro; Explain In Paint; Genius History; Hypothetically; Ink Explainer; Just Some Guy Stories; Lost Legacy; Lucas Grant; Luco; Mack; Maximus; Money Life POV; My Chaotic Stories; Nick Invests; Oddlyhuman; Past Tense; Primate Economics; Shaami Finance; Sonny Finance; Stickly; The Life Outline; Tp Dossier; Unknown Frequencies; Well.; Zenn; Zoozle; ago.; inkly.
+39 rows: Apesthetic; Bob Invests; Brimm.; Bro Pump; CIPHER UNIT; Carl Invests; Crayon Capital; Dark Ledger; Decode Your Heart - Dr. Rehan; Doctor Thomas; Dr. Ares Senior; Dr. Okoro; Explain In Paint; Genius History; Hypothetically; Ink Explainer; Just Some Guy Stories; Lost Legacy; Lucas Grant; Luco; Mack; Maximus; Money Life POV; My Chaotic Stories; Nick Invests; Oddlyhuman; Past Tense; Primate Economics; Shaami Finance; Sonny Finance; Stickly; The Life Outline; Tp Dossier; Unknown Frequencies; Well.; Zenn; Zoozle; ago.; inkly.
 
 Every row has one exact package workbook and one transcript ZIP path.
 

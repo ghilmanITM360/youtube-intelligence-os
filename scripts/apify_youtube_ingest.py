@@ -284,14 +284,14 @@ def enforce_cost_cap(max_results, price_per_video, cost_cap):
     return Decimal(max_results) * Decimal(str(price_per_video))
 
 
-def build_actor_input(channel_url, max_results):
+def build_actor_input(channel_url, max_results, max_results_shorts=0, max_results_streams=0):
     if not canonical_channel_url(channel_url):
         raise CatalogError("MalformedData", "Expected a public youtube.com channel URL")
     return {
         "startUrls": [{"url": channel_url}],
         "maxResults": max_results,
-        "maxResultsShorts": 0,
-        "maxResultStreams": 0,
+        "maxResultsShorts": max_results_shorts,
+        "maxResultStreams": max_results_streams,
         "downloadSubtitles": True,
         "subtitlesLanguage": "en",
         "subtitlesFormat": "plaintext",
@@ -1285,6 +1285,8 @@ def build_parser():
         command.add_argument("--price-per-video", required=True, type=Decimal)
         command.add_argument("--cost-cap", type=Decimal, default=DEFAULT_COST_CAP)
         command.add_argument("--max-results", type=int)
+        command.add_argument("--max-results-shorts", type=int, default=0)
+        command.add_argument("--max-results-streams", type=int, default=0)
         command.add_argument("--expected-videos", type=int)
     run.add_argument("--dataset-id", required=True)
     run.add_argument("--timeout-seconds", type=int, default=1800)
@@ -1330,12 +1332,13 @@ def main(argv=None):
         return
     maximum = maximum_results_for_cap(args.price_per_video, args.cost_cap)
     max_results = args.max_results or maximum
-    hard_ceiling = enforce_cost_cap(max_results, args.price_per_video, args.cost_cap)
-    expected = min(args.expected_videos, max_results) if args.expected_videos is not None else max_results
+    total_requested = max_results + args.max_results_shorts + args.max_results_streams
+    hard_ceiling = enforce_cost_cap(total_requested, args.price_per_video, args.cost_cap)
+    expected = min(args.expected_videos, total_requested) if args.expected_videos is not None else total_requested
     expected_cost = Decimal(expected) * args.price_per_video
-    actor_input = build_actor_input(args.channel_url, max_results)
+    actor_input = build_actor_input(args.channel_url, max_results, args.max_results_shorts, args.max_results_streams)
     print("Expected cost: ${} ({} source-supported videos at ${}/video)".format(expected_cost, expected, args.price_per_video))
-    print("Hard Actor result ceiling: {} videos / ${}".format(max_results, hard_ceiling))
+    print("Hard Actor result ceiling: {} videos / ${}".format(total_requested, hard_ceiling))
     if args.command == "plan":
         print(json.dumps(actor_input, indent=2, sort_keys=True))
         return

@@ -228,10 +228,18 @@ def package_thumbnail_url_counts(root: Path, channels: list[dict]) -> dict[str, 
             for row in csv.DictReader(handle):
                 if row["thumbnail_url"]:
                     counts[row["channel_id"]] += 1
-    ds29_raw = root / "data/raw/competitors/DS-000029/apify/WqJIbwUkgkHDHxdaI/raw/dataset.json"
-    if ds29_raw.is_file():
-        records = json.loads(ds29_raw.read_text(encoding="utf-8"))
-        counts["UCFuGMi0idGeyXl6wYK9hg7Q"] += sum(1 for record in records if record.get("thumbnailUrl"))
+    raw_dataset_paths = sorted(root.glob("data/raw/competitors/*/dataset.json")) + sorted(
+        root.glob("data/raw/competitors/*/apify/*/raw/dataset.json")
+    )
+    for raw_path in raw_dataset_paths:
+        records = json.loads(raw_path.read_text(encoding="utf-8"))
+        by_channel: dict[str, int] = defaultdict(int)
+        for record in records:
+            channel_id = record.get("channelId")
+            if channel_id and record.get("thumbnailUrl"):
+                by_channel[channel_id] += 1
+        for channel_id, count in by_channel.items():
+            counts[channel_id] = max(counts[channel_id], count)
     from openpyxl import load_workbook
     for channel in channels:
         if channel["primary_dataset_id"] != "DS-000022":
