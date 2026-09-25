@@ -1,0 +1,134 @@
+[
+  {
+    "evidence_id": "EV-001",
+    "claim": "Repository contains 73 canonical channels, 2149 videos, 2137 real transcripts, 12 placeholders, 38 standard packages, 44 channels with video-level data.",
+    "evidence_type": "OBSERVED_FACT",
+    "internal_external": "INTERNAL",
+    "repository_path": "data/catalog/youtube_channel_registry.db",
+    "confidence": "HIGH",
+    "notes": "Verified via direct SQL query against channels/videos/transcripts tables 2026-09-25."
+  },
+  {
+    "evidence_id": "EV-002",
+    "claim": "Exactly 6 of the 73 channels are Senior Health (direct/near-direct): Dr. Ares Senior, Senior Health Hub, Doctor Thomas, Dr. Okoro, Dr. Elias Senior Health, Dr. Aliza Wright | Advice. No adjacent/hidden Senior Health channels exist among the other 67.",
+    "evidence_type": "DERIVED_METRIC",
+    "internal_external": "INTERNAL",
+    "repository_path": "data/catalog/youtube_channel_registry.db (channels, videos tables)",
+    "confidence": "HIGH",
+    "notes": "Verified via channel-name review AND keyword scan of all 2149 video titles for 25+ health/aging terms; non-health channels showed only incidental noise-matches (e.g. 'fall' in unrelated contexts)."
+  },
+  {
+    "evidence_id": "EV-003",
+    "claim": "All 6 Senior Health channels have usable video-level data (STANDARD_PACKAGE or HISTORICAL_FORMAT, real transcripts). No internal data-completeness gap in this cohort.",
+    "evidence_type": "OBSERVED_FACT",
+    "internal_external": "INTERNAL",
+    "repository_path": "docs/research/senior-health-2026-09-25/00-cohort-readiness.json",
+    "confidence": "HIGH",
+    "notes": "306 total videos across the 6 channels; 305 real transcripts, 1 placeholder (Doctor Thomas)."
+  },
+  {
+    "evidence_id": "EV-004",
+    "claim": "None of the 6 Senior Health channels has forensic video/visual editing evidence (all NOT_AVAILABLE); this matches the project-wide state where only CH-000004 (not in this cohort) has forensic video evidence.",
+    "evidence_type": "OBSERVED_FACT",
+    "internal_external": "INTERNAL",
+    "repository_path": "data/catalog/youtube_channel_registry.db (channels.forensic_video_status)",
+    "confidence": "HIGH",
+    "notes": "Editing/Visual Intelligence is NOT_AVAILABLE for this cohort; thumbnail analysis limited to title-text and thumbnail_url presence, not pixel-level forensics."
+  },
+  {
+    "evidence_id": "EV-005",
+    "claim": "Topic clusters 'Digestion/Gut' (median 1.75x, 46% outlier rate, n=26) and 'Mobility/Falls/Balance' (median 1.67x, 40% outlier rate, n=20) are the two strongest-performing internal topic clusters; Cancer (median 0.54x) and Kidney/Skin/Nails signs (0.59x) are the weakest.",
+    "evidence_type": "DERIVED_METRIC",
+    "internal_external": "INTERNAL",
+    "repository_path": "docs/research/senior-health-2026-09-25/01-master-video-table.json",
+    "confidence": "MEDIUM",
+    "notes": "Topic tagging is keyword-regex based (12 categories), not human-verified per video; directional not exact."
+  },
+  {
+    "evidence_id": "EV-006",
+    "claim": "The title 'One SIMPLE Change to How You Walk That Could Save Your Life After 70' (or near-identical variant) was published on Doctor Thomas (2026-06-19, 1,004,391 views) and Dr. Aliza Wright | Advice (2026-06-26, 219,009 views) 7 days apart. Different video_ids and durations, so not literal duplicates, but same script/topic template.",
+    "evidence_type": "OBSERVED_FACT",
+    "internal_external": "INTERNAL",
+    "repository_path": "data/catalog/youtube_channel_registry.db (videos table, query by title)",
+    "confidence": "HIGH",
+    "notes": "Per AGENTS.md rule 9, treated as ONE topic-level demand signal, not two independent breakout observations, in all downstream synthesis."
+  },
+  {
+    "evidence_id": "EV-007",
+    "claim": "Matched pair (Dr. Okoro, Kidney/Bladder topic): 'Your Kidneys Are Begging You to Eat These 5 Vegetables' scored 56.9x channel median; near-identical title 'Your Kidneys Are Begging You to Eat These 6 Foods If You Have Diabetes' scored 0.23x. Same channel, same title template, 247x performance gap.",
+    "evidence_type": "OBSERVED_FACT / NEGATIVE_EVIDENCE",
+    "internal_external": "INTERNAL",
+    "repository_path": "docs/research/senior-health-2026-09-25/02-matched-pairs.json",
+    "confidence": "HIGH",
+    "notes": "Direct counter-evidence against any 'title template alone predicts success' rule."
+  },
+  {
+    "evidence_id": "EV-008",
+    "claim": "Google Trends search term 'clove water' (US, past 12 months) rose from ~40 (Sep 2025) to peak ~100 (late Feb 2026), then declined to a ~50-65 plateau through mid-2026. Senior Health Hub's single largest breakout (3,088,021 views, 'Put 1 Clove in Coffee...', 2026-04-28) was published roughly 2 months AFTER the trend peak, when search interest had already declined ~35-45%.",
+    "evidence_type": "CORRELATION",
+    "internal_external": "EXTERNAL_WEB_RESEARCH",
+    "repository_path": "N/A - Google Trends live query",
+    "url": "https://trends.google.com/trends/explore?date=today%2012-m&geo=US&q=clove%20water",
+    "access_date": "2026-09-25",
+    "confidence": "MEDIUM",
+    "notes": "Trend timing does not explain the single biggest breakout; trend rise may explain the channel's decision to enter/expand the cluster in the first place (Sep 2025 onward), but not why this specific video outperformed ~40 sibling videos on the same ingredient."
+  },
+  {
+    "evidence_id": "EV-009",
+    "claim": "Google Trends search term 'balance exercises for seniors' (US, past 12 months) shows stable evergreen interest (~50-90 range) with no discernible seasonal spike across the full window.",
+    "evidence_type": "OBSERVED_FACT",
+    "internal_external": "EXTERNAL_WEB_RESEARCH",
+    "url": "https://trends.google.com/trends/explore?date=today%2012-m&geo=US&q=balance%20exercises%20for%20seniors",
+    "access_date": "2026-09-25",
+    "confidence": "HIGH",
+    "notes": "Supports EVERGREEN-DEMAND classification for the Mobility pillar, corroborating the internal cross-channel breakout pattern (EV-006)."
+  },
+  {
+    "evidence_id": "EV-010",
+    "claim": "Google Trends search term 'diabetic foot signs' (US, past 12 months) shows sparse, near-zero baseline with occasional small spikes - low and noisy search volume, not a robust evergreen search term at the national level.",
+    "evidence_type": "OBSERVED_FACT",
+    "internal_external": "EXTERNAL_WEB_RESEARCH",
+    "url": "https://trends.google.com/trends/explore?date=today%2012-m&geo=US&q=diabetic%20foot%20signs",
+    "access_date": "2026-09-25",
+    "confidence": "MEDIUM",
+    "notes": "Weakens SEARCH-LIKELY explanation for Dr. Okoro's 2484x outlier; strengthens POSSIBLE-RECOMMENDATION-EXPANSION hypothesis."
+  },
+  {
+    "evidence_id": "EV-011",
+    "claim": "YouTube search for 'diabetic foot signs after 60' surfaced at least 2 unrelated small channels ('\u0628\u0648\u0627\u0628\u0629 \u0627\u0644\u0635\u062d\u0629 \u0628\u0627\u0644\u0639\u0631\u0628\u064a' - 36 views, 'Health Insight' - 20 views) publishing near-verbatim titles/scripts to Dr. Okoro's mega-breakout ('Cardiologist Warns: 9 Foot Signs of Hidden Diabetes After 60', 494,473 views). Both external copies badly underperformed despite using the same topic/title template.",
+    "evidence_type": "OBSERVED_FACT / NEGATIVE_EVIDENCE",
+    "internal_external": "EXTERNAL_WEB_RESEARCH",
+    "url": "https://www.youtube.com/results?search_query=diabetic+foot+signs+after+60",
+    "access_date": "2026-09-25",
+    "confidence": "HIGH",
+    "notes": "Strong evidence the topic+script is being farmed across multiple faceless channels (a content-mill pattern); only one execution broke out, suggesting packaging/channel-authority/algorithm-luck rather than topic demand alone drove the outcome."
+  },
+  {
+    "evidence_id": "EV-012",
+    "claim": "A YouTube search for 'clove water elderly benefits' surfaced multiple unrelated external creators with videos well outside the 73-channel repository earning 1M-5.9M+ views on the same core topic (e.g. Dr. Eric Berg DC - 5.9M views; a 'parasitic worms' angle - 2.6M views), confirming clove water is a pre-existing, large, cross-market wellness genre, not a niche invented by our internal channel.",
+    "evidence_type": "OBSERVED_FACT",
+    "internal_external": "EXTERNAL_WEB_RESEARCH",
+    "url": "https://www.youtube.com/results?search_query=clove+water+elderly+benefits",
+    "access_date": "2026-09-25",
+    "confidence": "HIGH",
+    "notes": "External validation for the Digestive Health pillar's demand claim."
+  },
+  {
+    "evidence_id": "EV-013",
+    "claim": "video_type field is inconsistent across the corpus (None/regular video/video/Short/shorts - 5 distinct values across 2149 videos, 159 with no value at all). Not resolved; per AGENTS.md Phase 94 rule, treated as UNKNOWN where unresolved rather than fabricated.",
+    "evidence_type": "OBSERVED_FACT",
+    "internal_external": "INTERNAL",
+    "repository_path": "data/catalog/youtube_channel_registry.db (videos.video_type)",
+    "confidence": "HIGH",
+    "notes": "Data-quality caveat carried into the master video table and all downstream analysis."
+  },
+  {
+    "evidence_id": "EV-014",
+    "claim": "No first-party YouTube Analytics exist for any competitor or for our future channel. CTR, impressions, retention, AVD, watch time, and traffic-source data are unavailable for all conclusions in this report.",
+    "evidence_type": "PRIVATE_METRIC_REQUIRED",
+    "internal_external": "INTERNAL",
+    "repository_path": "data/catalog/youtube_channel_registry.db (channels.first_party_analytics_status = NONE for all 73)",
+    "confidence": "HIGH",
+    "notes": "All discovery-mode labels (SEARCH-LIKELY/BROWSE-LIKELY/etc.) in this report are hypotheses, not proven causation."
+  }
+]

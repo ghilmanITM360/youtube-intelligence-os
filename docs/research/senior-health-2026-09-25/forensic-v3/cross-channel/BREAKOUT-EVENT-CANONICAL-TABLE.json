@@ -1,0 +1,368 @@
+{
+  "canonical_event_count": 28,
+  "internal_count": 23,
+  "external_count": 5,
+  "negative_control_channels_excluded": [
+    {
+      "channel_name": "Dr. Elias Senior Health",
+      "channel_id": "UCQcBYZxFW7YwNMU8-DsT3Uw",
+      "reason": "0 videos reach 15x median across 29 uploads (channel high 6.5x) \u2014 internal negative control, not a breakout event"
+    },
+    {
+      "channel_name": "Senior Mobility",
+      "reason": "external failure control, 0 breakouts across 13 uploads"
+    },
+    {
+      "channel_name": "Health 365",
+      "reason": "external failure control, 0 breakouts across 54 uploads"
+    },
+    {
+      "channel_name": "Senior Strength Secrets",
+      "reason": "external failure control, 0 breakouts across 41 uploads"
+    },
+    {
+      "channel_name": "Aging Senior Health",
+      "reason": "external failure control, 0 breakouts across 110 uploads"
+    }
+  ],
+  "verification_method": "All 23 internal events independently re-derived from data/catalog/youtube_channel_registry.db (videos table, ordered by published_at per canonical_channel_id) on 2026-09-25 and confirmed exact view-count match against the prose report. External events (5) have no registry entry \u2014 those channels were not acquired \u2014 and are sourced from live browser research (EXTERNAL-BREAKOUT-RESEARCH-RAW.md); 4 of 5 external video IDs were captured, 1 (SeniorHood breakout #1, 199K) was not.",
+  "correction_note": "Supersedes the prior claim of '29 breakout events (23 internal + 6 external)' stated in SMALL-CHANNEL-BREAKOUT-FORENSICS.md, SENIOR-HEALTH-FORENSIC-REPORT-V3.md, FINAL-STATUS-V3.md and workbook sheets 00_READ_ME/39_V3_BREAKOUT_INVENTORY. Direct recount of the per-case data in the same source document sums to 23 internal + 5 external = 28, not 29/6. The underlying per-event row data in workbook sheet 39_V3_BREAKOUT_INVENTORY was already correct (28 data rows); only the prose summary count was wrong. See STAGE2-CORRECTION-LEDGER.md, correction NC-05.",
+  "events": [
+    {
+      "event_id": "BE-01",
+      "channel_name": "Dr. Ares Senior",
+      "channel_id": "UC356D-NzdnznBOftTpYoBLw",
+      "video_id": "8IDSe2S5hkw",
+      "source": "internal",
+      "upload_idx": 8,
+      "published_at": "2026-08-19T22:52:47Z",
+      "views": 1475129,
+      "multiple_of_median": "32.4x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-02",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "qUSMccJH_bM",
+      "source": "internal",
+      "upload_idx": 2,
+      "published_at": "2025-09-17T20:39:23Z",
+      "views": 1090015,
+      "multiple_of_median": "114.3x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-03",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "BYIs-uNmc5E",
+      "source": "internal",
+      "upload_idx": 9,
+      "published_at": "2025-10-05T21:26:17Z",
+      "views": 432821,
+      "multiple_of_median": "45.4x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-04",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "TbM4090ZeGQ",
+      "source": "internal",
+      "upload_idx": 32,
+      "published_at": "2025-12-08T13:16:38Z",
+      "views": 143862,
+      "multiple_of_median": "15.1x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-05",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "DpmrJxxZfc0",
+      "source": "internal",
+      "upload_idx": 39,
+      "published_at": "2025-12-31T13:00:26Z",
+      "views": 168985,
+      "multiple_of_median": "17.7x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-06",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "xF0xfmUsSB4",
+      "source": "internal",
+      "upload_idx": 49,
+      "published_at": "2026-01-31T20:24:51Z",
+      "views": 1055564,
+      "multiple_of_median": "110.7x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-07",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "Eq1P1zS8LNk",
+      "source": "internal",
+      "upload_idx": 51,
+      "published_at": "2026-02-06T19:10:50Z",
+      "views": 353637,
+      "multiple_of_median": "37.1x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-08",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "UY7FY-kcrAs",
+      "source": "internal",
+      "upload_idx": 53,
+      "published_at": "2026-02-12T23:08:58Z",
+      "views": 554619,
+      "multiple_of_median": "58.1x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-09",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "WjXkp6vz8Gw",
+      "source": "internal",
+      "upload_idx": 65,
+      "published_at": "2026-03-22T17:11:39Z",
+      "views": 245337,
+      "multiple_of_median": "25.7x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-10",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "5nqMkH5hk7Y",
+      "source": "internal",
+      "upload_idx": 66,
+      "published_at": "2026-03-25T20:44:22Z",
+      "views": 290424,
+      "multiple_of_median": "30.4x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-11",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "nPSwuSygp4I",
+      "source": "internal",
+      "upload_idx": 68,
+      "published_at": "2026-04-01T17:19:34Z",
+      "views": 501622,
+      "multiple_of_median": "52.6x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-12",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "iBC4YPyDQhI",
+      "source": "internal",
+      "upload_idx": 75,
+      "published_at": "2026-04-22T17:30:56Z",
+      "views": 325737,
+      "multiple_of_median": "34.1x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-13",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "KPigGh9_gbU",
+      "source": "internal",
+      "upload_idx": 77,
+      "published_at": "2026-04-28T18:03:24Z",
+      "views": 3088021,
+      "multiple_of_median": "323.7x",
+      "qualification_rule": "internal: >=15x whole-channel median views (channel peak)"
+    },
+    {
+      "event_id": "BE-14",
+      "channel_name": "Senior Health Hub",
+      "channel_id": "UCAYG0fzUyxv6OevH88qA45w",
+      "video_id": "ZKpfUOzLCec",
+      "source": "internal",
+      "upload_idx": 112,
+      "published_at": "2026-08-14T19:01:58Z",
+      "views": 173273,
+      "multiple_of_median": "18.2x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-15",
+      "channel_name": "Doctor Thomas",
+      "channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
+      "video_id": "RuxmqVyJKb0",
+      "source": "internal",
+      "upload_idx": 9,
+      "published_at": "2026-06-12T10:01:04Z",
+      "views": 596346,
+      "multiple_of_median": "72.4x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-16",
+      "channel_name": "Doctor Thomas",
+      "channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
+      "video_id": "UGmIU2dS5zc",
+      "source": "internal",
+      "upload_idx": 14,
+      "published_at": "2026-06-19T10:01:17Z",
+      "views": 1004391,
+      "multiple_of_median": "122.0x",
+      "qualification_rule": "internal: >=15x whole-channel median views (channel peak)"
+    },
+    {
+      "event_id": "BE-17",
+      "channel_name": "Doctor Thomas",
+      "channel_id": "UCFuGMi0idGeyXl6wYK9hg7Q",
+      "video_id": "5oC-lLe7k6s",
+      "source": "internal",
+      "upload_idx": 16,
+      "published_at": "2026-06-21T10:11:44Z",
+      "views": 328707,
+      "multiple_of_median": "39.9x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-18",
+      "channel_name": "Dr. Okoro",
+      "channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "video_id": "CJxCjygEnmo",
+      "source": "internal",
+      "upload_idx": 26,
+      "published_at": "2026-05-16T12:00:30Z",
+      "views": 494473,
+      "multiple_of_median": "2484.8x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-19",
+      "channel_name": "Dr. Okoro",
+      "channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "video_id": "hBZhkr-UYuA",
+      "source": "internal",
+      "upload_idx": 37,
+      "published_at": "2026-06-03T13:00:19Z",
+      "views": 100852,
+      "multiple_of_median": "506.8x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-20",
+      "channel_name": "Dr. Okoro",
+      "channel_id": "UCMJxAeBJ0d1JC937de1eZ0Q",
+      "video_id": "CZI4zqe3JRw",
+      "source": "internal",
+      "upload_idx": 38,
+      "published_at": "2026-06-05T12:00:27Z",
+      "views": 11319,
+      "multiple_of_median": "56.9x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-21",
+      "channel_name": "Dr. Aliza Wright",
+      "channel_id": "UCXZi5JVeuTluazF-fYqQgNA",
+      "video_id": "_dt5OX_1fx8",
+      "source": "internal",
+      "upload_idx": 6,
+      "published_at": "2026-06-12T19:03:57Z",
+      "views": 47032,
+      "multiple_of_median": "216.7x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-22",
+      "channel_name": "Dr. Aliza Wright",
+      "channel_id": "UCXZi5JVeuTluazF-fYqQgNA",
+      "video_id": "rpArUoI6Qbg",
+      "source": "internal",
+      "upload_idx": 14,
+      "published_at": "2026-06-23T20:59:31Z",
+      "views": 20701,
+      "multiple_of_median": "95.4x",
+      "qualification_rule": "internal: >=15x whole-channel median views"
+    },
+    {
+      "event_id": "BE-23",
+      "channel_name": "Dr. Aliza Wright",
+      "channel_id": "UCXZi5JVeuTluazF-fYqQgNA",
+      "video_id": "r_ja_nYHCHE",
+      "source": "internal",
+      "upload_idx": 15,
+      "published_at": "2026-06-26T20:22:12Z",
+      "views": 219009,
+      "multiple_of_median": "1009.3x",
+      "qualification_rule": "internal: >=15x whole-channel median views (channel peak)"
+    },
+    {
+      "event_id": "BE-24",
+      "channel_name": "Amos Boone",
+      "channel_id": null,
+      "video_id": "Jljlizl2G0E",
+      "source": "external",
+      "upload_idx": "29 of 43",
+      "published_at": null,
+      "views": 207000,
+      "multiple_of_median": null,
+      "qualification_rule": "external: informal visual outlier vs. double/triple-digit neighboring uploads (no channel median computed \u2014 disclosed gap, not a fixed threshold)"
+    },
+    {
+      "event_id": "BE-25",
+      "channel_name": "SeniorHood",
+      "channel_id": null,
+      "video_id": null,
+      "source": "external",
+      "upload_idx": "12 of 76",
+      "published_at": null,
+      "views": 199000,
+      "multiple_of_median": null,
+      "qualification_rule": "external: informal visual outlier (video_id not captured in raw research pass \u2014 title/view-count only)"
+    },
+    {
+      "event_id": "BE-26",
+      "channel_name": "SeniorHood",
+      "channel_id": null,
+      "video_id": "sWDwRSyEB8w",
+      "source": "external",
+      "upload_idx": "16 of 76",
+      "published_at": null,
+      "views": 1046812,
+      "multiple_of_median": null,
+      "qualification_rule": "external: informal visual outlier (channel peak)"
+    },
+    {
+      "event_id": "BE-27",
+      "channel_name": "SeniorHood",
+      "channel_id": null,
+      "video_id": "7tXXgqrmji0",
+      "source": "external",
+      "upload_idx": "26 of 76",
+      "published_at": null,
+      "views": 471000,
+      "multiple_of_median": null,
+      "qualification_rule": "external: informal visual outlier"
+    },
+    {
+      "event_id": "BE-28",
+      "channel_name": "SeniorHood",
+      "channel_id": null,
+      "video_id": "f1ugpAwclHg",
+      "source": "external",
+      "upload_idx": "~73 of 76",
+      "published_at": null,
+      "views": 178000,
+      "multiple_of_median": null,
+      "qualification_rule": "external: informal visual outlier (late-window comparison)"
+    }
+  ]
+}

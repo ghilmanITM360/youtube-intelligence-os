@@ -1,0 +1,135 @@
+[
+ {
+  "id": "DQ-01",
+  "location": "SENIOR-HEALTH-CASE-STUDIES.md CS1",
+  "previous_claim": "Dr. Okoro launch '~2026-07'",
+  "verified_value": "Channel joined 2026-03-19 (raw Apify channelJoinedDate); first upload 2026-03-20 (EnSloA7tU3Q); breakout 2026-05-16 = day 58",
+  "evidence": "VERIFIED_FACTS channels.UCMJx...; raw DS-000028 dataset.json"
+ },
+ {
+  "id": "DQ-02",
+  "location": "CS1",
+  "previous_claim": "Duration 'estimated 10-15 min'",
+  "verified_value": "911 s (15:11) - registry videos.duration_seconds",
+  "evidence": "registry DB"
+ },
+ {
+  "id": "DQ-03",
+  "location": "CS1",
+  "previous_claim": "'48 pre-breakout videos'; '18 post'",
+  "verified_value": "25 before, 40 after (66 total incl. 1 Short)",
+  "evidence": "registry DB"
+ },
+ {
+  "id": "DQ-04",
+  "location": "CS1/CS4",
+  "previous_claim": "'4 Heart Warning Signs...Face' posted 5-20 as immediate follow-up",
+  "verified_value": "Posted 2026-07-11 (56 days later); '6 Everyday Foods...' 2026-07-19; the actual immediate follow-ups were 'Unnecessary tests' (05-17, 8.0x), neuropathy (06-03, 100,852)",
+  "evidence": "registry DB"
+ },
+ {
+  "id": "DQ-05",
+  "location": "CS1/CS4",
+  "previous_claim": "'Subsequent attempts = near-total failure'; 'luck more than formula'",
+  "verified_value": "Second hit neuropathy 100,852 (507x) and kidney 11,319 (57x) followed within 20 days; decay came later",
+  "evidence": "registry DB"
+ },
+ {
+  "id": "DQ-06",
+  "location": "CS1",
+  "previous_claim": "'Channel median 199 (recent-10)'",
+  "verified_value": "199 = all-video median; recent-10 median = 75",
+  "evidence": "VERIFIED-FACTS.json"
+ },
+ {
+  "id": "DQ-07",
+  "location": "CS1",
+  "previous_claim": "Title authority 'Cardiologist'",
+  "verified_value": "Script self-identifies as 'a heart surgeon' ('Dr. Marcus Acuora/Acord' ASR spellings); authority wording inconsistent between title and script",
+  "evidence": "TRANSCRIPT CJxCjygEnmo"
+ },
+ {
+  "id": "DQ-08",
+  "location": "CS2",
+  "previous_claim": "Clove duration 'estimated 8-12 min'",
+  "verified_value": "542 s (9:02)",
+  "evidence": "registry DB"
+ },
+ {
+  "id": "DQ-09",
+  "location": "CS2",
+  "previous_claim": "Clove video treated as novel one-off; 'Phase 1 20-50K median'; 'maintains higher baseline post-hit'",
+  "verified_value": "4th clove hit in an 8-month franchise (1.09M Sep-2025, 1.06M Jan-2026, 555K Feb-2026); Sep-Nov 2025 monthly medians 2.3K-3.2K; median before 9,539 vs after 9,418 (no lift)",
+  "evidence": "registry DB"
+ },
+ {
+  "id": "DQ-10",
+  "location": "CS2",
+  "previous_claim": "Script 'expected structure'",
+  "verified_value": "Replaced by actual transcript: conspiracy hook, symptom checklist, eugenol+chlorogenic 'synergy', dated benefit ladder, mid-video subscribe ask at ~43%, protocol, contraindications; title '10 minutes' vs script '15 minutes'",
+  "evidence": "TRANSCRIPT KPigGh9_gbU"
+ },
+ {
+  "id": "DQ-11",
+  "location": "CS3",
+  "previous_claim": "Kidney pair 11,370 vs 46 views, 247x",
+  "verified_value": "11,319 vs 45 = 251.5x; loser posted 42 days later in channel decay; stored transcript for loser concatenated 8 caption tracks (21,447 words) - parser now keeps first (English) track (2,573 words)",
+  "evidence": "registry DB; transcript_forensics.first_track"
+ },
+ {
+  "id": "DQ-12",
+  "location": "FORENSIC-DEEP-DIVE Part 2 + status",
+  "previous_claim": "Title features 'curiosity gap 3.5x, named food 3.1x, doctor specialty 3.5x'",
+  "verified_value": "Raw-view comparisons were channel-confounded; within-channel medians: curiosity 1.22x, named food 1.49x, doctor specialty 0.99x; evidence register EV-017 already said 0.5x (contradiction)",
+  "evidence": "ARCHETYPE-PERFORMANCE.json"
+ },
+ {
+  "id": "DQ-13",
+  "location": "02-VIDEOS-WITH-TITLE-FEATURES.json",
+  "previous_claim": "has_age_marker",
+  "verified_value": "Identical to has_number on all 306 rows - regex bug; feature invalid",
+  "evidence": "build_outputs TF note"
+ },
+ {
+  "id": "DQ-14",
+  "location": "02-matched-pairs.json",
+  "previous_claim": "Pair 1 topic 'Cardiovascular'",
+  "verified_value": "Foot-signs video is a diabetes topic (regex mis-tag)",
+  "evidence": "title"
+ },
+ {
+  "id": "DQ-15",
+  "location": "02-matched-pairs.json pair 15",
+  "previous_claim": "Topic control",
+  "verified_value": "Loser (K2-A lime + charcoal) is an off-niche legacy upload with no transcript - INVALID_CONTROL",
+  "evidence": "LIVE thumbnail #21"
+ },
+ {
+  "id": "DQ-16",
+  "location": "FINAL-STATUS 'transcripts require API/scraping'",
+  "previous_claim": "Transcript access",
+  "verified_value": "305/306 transcripts are stored in the registry DB; only 1 absent (fj4TaPrLl8U, no caption track)",
+  "evidence": "registry DB"
+ },
+ {
+  "id": "DQ-17",
+  "location": "Deep-dive/Case studies Trends tables",
+  "previous_claim": "Estimated Trends values",
+  "verified_value": "Withdrawn; replaced by 32 live investigations (TRENDS-REGISTER.json)",
+  "evidence": "TRENDS-REGISTER.json"
+ },
+ {
+  "id": "DQ-18",
+  "location": "CS1 'Medical Accuracy: Solid'",
+  "previous_claim": "Medical verdict",
+  "verified_value": "Replaced by MV-01 UNSUPPORTED / MV-02 PARTIAL",
+  "evidence": "MEDICAL-VALIDATION.json"
+ },
+ {
+  "id": "DQ-19",
+  "location": "Aliza thumbnail URLs",
+  "previous_claim": "DB thumbnail_url null for Aliza/Okoro/Thomas/SHH",
+  "verified_value": "Raw Apify thumbnailUrl used (Okoro/Thomas/SHH); Aliza from canonical i.ytimg pattern + repository snapshots (DS-000006 manifest)",
+  "evidence": "VERIFIED-FACTS.json"
+ }
+]

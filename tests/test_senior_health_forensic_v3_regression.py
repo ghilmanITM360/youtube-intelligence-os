@@ -1,0 +1,143 @@
+"""Regression tests guarding against two confirmed Senior Health V3 research
+defects recurring: a fabricated Google Trends claim (GT-20) and a breakout
+event population miscount (29 vs. the correct 28). Both were found and fixed
+by an independent audit on 2026-09-25 (STAGE2-CORRECTION-LEDGER.md, NC-03/NC-05).
+
+This research tree (docs/research/senior-health-2026-09-25/) is not yet part
+of the production pipeline and is currently untracked pending an explicit
+decision on where to commit it; this test is written against its current
+on-disk location so the checks are real and runnable now, not deferred.
+"""
+import json
+import re
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+V3_DIR = ROOT / "docs/research/senior-health-2026-09-25/forensic-v3"
+
+
+def _skip_if_missing():
+    return not V3_DIR.is_dir()
+
+
+@unittest.skipIf(_skip_if_missing(), "senior-health forensic-v3 research tree not present")
+class GT20FabricationRegressionTest(unittest.TestCase):
+    """GT-20 ('how often should seniors shower') was fabricated in the original
+    pass: claimed a post-video rise to means of 16.7-20, but the real raw
+    series is flat 0 for all 262 weeks except one unrelated 2022 spike."""
+
+    def test_raw_series_is_flat_zero_in_the_claimed_rise_window(self):
+        raw_path = V3_DIR / "trends-raw/GT-20.json"
+        data = json.loads(raw_path.read_text(encoding="utf-8"))
+        points = data["points"]
+        self.assertEqual(len(points), 262)
+        # the originally-claimed rise window: the last 12 weeks of the series
+        last_12 = points[-12:]
+        self.assertTrue(
+            all(p["value"] == 0 for p in last_12),
+            "GT-20's claimed Aug-Sep 2026 rise window must remain flat 0 in the "
+            "raw evidence; a nonzero value here would mean either the raw file "
+            "was altered or a genuinely new Trends signal appeared and the "
+            "correction needs re-review, not a silent revert.",
+        )
+        nonzero = [p for p in points if p["value"] > 0]
+        self.assertEqual(
+            len(nonzero), 1,
+            "exactly one isolated non-zero point is expected (Mar 2022, value 100, "
+            "unrelated to the claimed 2026 event); any other count means the raw "
+            "file changed and the fabrication finding must be re-verified.",
+        )
+
+    def test_workbook_no_longer_states_the_fabricated_mean(self):
+        try:
+            import openpyxl
+        except ImportError:
+            self.skipTest("openpyxl not available")
+        wb_path = V3_DIR / "SENIOR-HEALTH-FORENSIC-WORKBOOK-V3.xlsx"
+        wb = openpyxl.load_workbook(wb_path, data_only=False)
+        # 11_GOOGLE_TRENDS!J21 is GT-20's last_12w_mean; must be 0, not the
+        # fabricated 8.3
+        self.assertEqual(wb["11_GOOGLE_TRENDS"]["J21"].value, 0)
+        # 12_TREND_ATTRIBUTION!G31/G32 are GT-20's mean_90d_after for its two
+        # matched videos; must be 0, not the fabricated 16.7/20
+        self.assertEqual(wb["12_TREND_ATTRIBUTION"]["G31"].value, 0)
+        self.assertEqual(wb["12_TREND_ATTRIBUTION"]["G32"].value, 0)
+
+    def test_workbook_readme_cell_is_not_an_accidental_formula(self):
+        try:
+            import openpyxl
+        except ImportError:
+            self.skipTest("openpyxl not available")
+        wb_path = V3_DIR / "SENIOR-HEALTH-FORENSIC-WORKBOOK-V3.xlsx"
+        wb = openpyxl.load_workbook(wb_path, data_only=False)
+        value = wb["00_READ_ME"]["A49"].value
+        self.assertIsNotNone(value)
+        self.assertFalse(
+            value.startswith("="),
+            "00_READ_ME!A49 must not start with '=' - openpyxl/Excel treats any "
+            "such cell as a formula, not text, silently breaking a decorative "
+            "header (NC-06).",
+        )
+
+
+@unittest.skipIf(_skip_if_missing(), "senior-health forensic-v3 research tree not present")
+class BreakoutEventPopulationReconciliationTest(unittest.TestCase):
+    """The breakout event total was miscounted as 29 (23 internal + 6 external)
+    in the original pass; the underlying per-case data actually sums to 28
+    (23 internal + 5 external). This guards the canonical event table and its
+    downstream restatements against the same class of aggregate-vs-underlying
+    mismatch (NC-05)."""
+
+    def test_canonical_table_has_explicit_identity_keys_and_reconciles(self):
+        table_path = V3_DIR / "cross-channel/BREAKOUT-EVENT-CANONICAL-TABLE.json"
+        data = json.loads(table_path.read_text(encoding="utf-8"))
+        events = data["events"]
+        self.assertEqual(len(events), 28)
+        self.assertEqual(data["internal_count"], 23)
+        self.assertEqual(data["external_count"], 5)
+        self.assertEqual(
+            sum(1 for e in events if e["source"] == "internal"), 23
+        )
+        self.assertEqual(
+            sum(1 for e in events if e["source"] == "external"), 5
+        )
+        # every event must carry a unique identity key
+        event_ids = [e["event_id"] for e in events]
+        self.assertEqual(len(event_ids), len(set(event_ids)))
+        # every internal event must carry a real canonical_channel_id and video_id
+        for e in events:
+            if e["source"] == "internal":
+                self.assertTrue(e["channel_id"])
+                self.assertTrue(e["video_id"])
+
+    def test_no_dependent_markdown_still_states_the_stale_29_6_count_as_fact(self):
+        # any mention of the old "29 (23+6)" figure is fine IF it sits inside a
+        # sentence that also marks it as a corrected/historical claim (the
+        # master brief requires preserving the error as a labelled audit
+        # record, not scrubbing it) - it is only a regression if the number
+        # appears with no such marker nearby, i.e. restated as current fact.
+        stale_pattern = re.compile(r"29\s*\(23\s*internal\s*\+\s*6\s*external", re.IGNORECASE)
+        bare_stale = re.compile(r"\b29 breakout events\b")
+        correction_markers = re.compile(
+            r"NC-05|corrected|correction|retracted|superseded|misstated|"
+            r"miscounted|prior claim|original(ly)?|an earlier|was wrong|"
+            r"arithmetic error",
+            re.IGNORECASE,
+        )
+        offenders = []
+        for md_path in V3_DIR.glob("*.md"):
+            text = md_path.read_text(encoding="utf-8")
+            for m in list(stale_pattern.finditer(text)) + list(bare_stale.finditer(text)):
+                window = text[max(0, m.start() - 200): m.end() + 200]
+                if not correction_markers.search(window):
+                    offenders.append((md_path.name, text[max(0, m.start()-40):m.end()+40]))
+        self.assertEqual(
+            offenders, [],
+            f"these files state the corrected-away '29 (23+6)' breakout count "
+            f"with no nearby correction marker, i.e. as current fact: {offenders}",
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()
