@@ -324,8 +324,137 @@ SEEK_SAMPLED = {
         "possible_explanation": "Heavy early losses at 0:02 and 0:07 happen despite a demo inset; the credential intro at 0:31 again coincides with a dip, as in 5oPzZjfNgII at 0:27.",
         "alternative_explanation": "Views are small (109), and a longer runtime spreads the same audience thinner.",
     },
+    "8JdBlF-ragM": {
+        "duration_seconds": 71,
+        "comparison": "Ozempic long-form: stronger holding versus sUL6SU8LnEg",
+        "timestamps": ["0:02 seated doctor at desk with name plate, OZEMPIC / SEMAGLUTIDE lower title; caption: When it comes to weight loss, we always talk about [Ozempic] or semaglutide", "0:04 blurred close-up B-roll of an injector pen (curve -4.9 pts at 2-4% position)", "0:20 doctor on camera, LOSS OF LIBIDO title; caption: is Ozempic vagina or loss of libido because of this drug", "0:44 anatomical cross-section illustration; caption: fat loss occurs from those areas as well (curve -3.3 pts at 61%)", "0:58 animated RISK gauge with DAYS label; caption: lose fat aggressively rapidly over the course of days instead of months (curve -3.3 pts at 81%)", "1:08 doctor with end-screen video cards; caption: if we take care of our hydration status"],
+        "opening": "Names the drug and the common weight-loss framing, then turns to the sexual-health side effect by 0:20.",
+        "visuals": "Seated desk shot alternating with pen B-roll, anatomy illustration and an animated risk gauge.",
+        "editing": "22 hard cuts in 70 s (about 19 per minute) measured in the continuous 2x signal pass.",
+        "closing": "Hydration advice over end-screen cards.",
+        "possible_explanation": "Short runtime and a specific, rarely discussed side effect; 30-second retention 55.74% and end retention 45.9%. New viewers held far better than returning viewers (62.75% vs 20.0% at the 30-second position), so the topic may have reached a new-audience cohort.",
+        "alternative_explanation": "78 views; each curve step is roughly 1.6 viewers. No extended Studio row was captured for this video, so stayed/swiped values are unavailable.",
+    },
+    "sUL6SU8LnEg": {
+        "duration_seconds": 166,
+        "comparison": "Ozempic long-form: weaker holding versus 8JdBlF-ragM",
+        "timestamps": ["0:03 seated doctor at the same desk, name plate, no title card; caption: There are certain mythologies attributable to ozempic or semaglutide (curve -20 pts at 2% position)", "0:13 illustrated crowd graphic Common Myths About Semaglutide (Ozempic) with Permanent Muscle Loss, Only for Diabetes, It Causes Cancer; caption shows a literal (0:20) timecode (curve -20 pts at 8%)", "0:40 doctor; caption: multi endocrine neoplasia which is known as [medullary] thyroid carcinoma", "1:09 eye-anatomy illustration with magnifier; caption: clinical (1:10) entities like optic", "1:20 doctor gestures to his eye; caption: NAION, non arteritic ischemic anterior optic neuropathy (curve -10 pts at 49%)", "1:55 doctor; caption: US health network comprising of 16000 patients", "2:21 doctor; caption: 0.01% of patients who are taking ozempic (curve -10 pts at 85%)", "2:40 doctor; caption: one should never stop ozempic or semaglutide only because he or she is scared"],
+        "opening": "Abstract myth-debunk statement with no question, symptom or viewer qualifier; first graphic arrives around 0:13.",
+        "visuals": "Same desk set as 8JdBlF-ragM; two illustrations (myth crowd, eye anatomy) and long single-shot explanation.",
+        "editing": "23 hard cuts in 166 s (about 8 per minute); the first hard cut is at 18.6 s.",
+        "closing": "Reassurance not to stop the drug out of fear.",
+        "possible_explanation": "Abstract myth framing and clinical terminology (medullary thyroid carcinoma, NAION) may raise effort for a lay audience; 30-second retention 40.0% and end 10.0%. The uploaded captions show raw (m:ss) timecodes.",
+        "alternative_explanation": "Only 10 views, so each curve step is one viewer; a 2.3x longer runtime also spreads loss over more time.",
+    },
+    "KPYHy7MDmLM": {
+        "duration_seconds": 117,
+        "comparison": "Circulation long-form: weaker early holding versus NznebmgFwXI",
+        "timestamps": ["0:02 doctor in dim office behind kinetic OVER 50? NOTICING SMALL CHANGES, plus a burned-in all-caps subtitle bar MANY PEOPLE OVER FIFTY NOTICE THIS BUT IGNORE IT and the player caption (three text layers); caption: Many people over 50 notice this but ignore it (curve -15.8 pts at 1% and -10.5 at 2-3%)", "0:05 stock B-roll of a clinician with typewriter-style HEA[RT] text; burned-in HEART SPECIALIST QUIETLY WATCH", "0:30 doctor with cartoon-doctor sticker, OR YOUR HEALTHCARE PROVIDER; caption: It gives small hint and this is up to the doctors", "1:02 stock clinician B-roll; DO YOU KEEP A STEADY PACE OR FADE AFTER A FEW (curve -5.3 pts at 52%)", "1:07 doctor; CAN YOU TELL YOUR NAME IN ONE SENTENCE; caption: Can you talk comfortably or need to pause? (curve -10.5 pts at 57%)", "1:32 stock family on a sofa; IT'S ABOUT INDEPENDENCE IT MEANS VISITING LOVED", "1:49 SUBSCRIBED button animation over doctor; caption: Subscribe for calm, practical advice (curve -5.3 pts at 93%)"],
+        "opening": "Generic over-50 warning (notice this but ignore it) with no named symptom; three simultaneous text layers.",
+        "visuals": "Dim office, frequent stock B-roll, stickers and kinetic words; burned-in captions duplicate the player captions.",
+        "editing": "33 hard cuts in 117 s (about 17 per minute); loudest and most compressed audio in the batch (median RMS 0.18, 10th percentile 0.13).",
+        "closing": "Share and subscribe animation.",
+        "possible_explanation": "Retention falls to 57.89% by 3 s despite fast cutting: the opener withholds the symptom and the screen is crowded with text. 30-second retention 36.84%.",
+        "alternative_explanation": "20 views (each step about 5 pts); only returning viewers appear in the segment export. CTR 6.59% suggests the package attracted clicks the opening did not satisfy, but the sample is tiny.",
+    },
+    "NznebmgFwXI": {
+        "duration_seconds": 151,
+        "comparison": "Circulation long-form: stronger early holding versus KPYHy7MDmLM",
+        "timestamps": ["0:02 seated doctor, bright office, one white COLD FEET? card; caption: If your feet are often cold, even when the room is warm, your body may be sending an important signal (curve -6.5 pts at 1%, -7.2 at 2%)", "0:06 SOMETIMES NORMAL card; caption: Sometimes cold feet are harmless, but at other times they can reduce blood circulation", "0:14 TODAY ... MEAN lower third; caption: Today, I'll explain what cold feet might mean ... Hello, (introduction; curve -4.8 pts at 15%)", "0:23 O2 icon; caption: oxygen and nutrients throughout the body", "0:45 BLOOD MUST TRAVEL THROUGH LONG ARTERIES TO lower third", "1:30 AGING? card; caption: She often wore thick socks even during warm weather (patient story)", "2:25 NEXT INSIGHT: ONE POWERFUL FRUIT card with two end-screen video cards; caption: there's one everyday fruit that many"],
+        "opening": "Viewer-qualifying symptom question in the first sentence, then reassurance (sometimes normal) before the introduction.",
+        "visuals": "One continuous seated take with text cards and simple icons; no stock B-roll at sampled anchors.",
+        "editing": "Only 2 hard cuts in 151 s; overlays change but the shot does not. Continuous audio floor (no sample below 0.01 RMS).",
+        "closing": "Tease of the next video (one powerful fruit) over end-screen cards.",
+        "possible_explanation": "A concrete self-check symptom in the first sentence coincides with 87.1% retention at 3 s and 41.13% at 30 s, despite almost no cutting.",
+        "alternative_explanation": "Different topic framing (cold feet versus walking ability), 132 versus 20 views and a lower CTR (2.75%) that may have selected a more intent-matched audience.",
+    },
+    "hUSVbcHVeVw": {
+        "duration_seconds": 39,
+        "comparison": "Artery-food Short: format contrast with the long-form CZ3gAUzdTAg",
+        "timestamps": ["0:02 washed-out, over-exposed near-white frame with a faint figure; caption: 5 Foods That Clean Your Arteries These 5 foods help support healthy arteries (caption track begins with a heading line)", "0:05 3D anatomy figure with glowing arteries, ARTERIES NARROW, CHOLESTEROL, INFLAMMATION warning (curve -5.3 to -5.9 pts at 12-14%)", "0:12 seated doctor, DOCTOR APPROVED TOP 5 FOODS; caption uses emoji numerals: 1 Fatty fish like salmon", "0:27 olive close-up, 5. OLIVE OIL MEDITERRANEAN DIET (curve -4.0 pts at 69%)", "0:37 doctor, SAVE YOUR HEART and FULL VIDEO arrow; caption: Watch it next (curve -11.8 pts at 98%)"],
+        "opening": "Title-card style list promise over a pale frame, then an anatomy warning before the doctor appears at about 0:12.",
+        "visuals": "Anatomy render, food B-roll and doctor inserts; numbered cards.",
+        "editing": "12 hard cuts in 38 s (about 19 per minute).",
+        "closing": "Explicit pointer to the full video.",
+        "possible_explanation": "A numbered five-item list gives a visible progress path; 30-second retention 59.87% and stayed-to-watch 39.7%.",
+        "alternative_explanation": "Short-form retention is not comparable to the long-form partner. The title promises to reverse artery damage while the captions say support healthy arteries, a claim mismatch that metrics cannot evaluate.",
+    },
+    "CZ3gAUzdTAg": {
+        "duration_seconds": 211,
+        "comparison": "Artery-food long-form: format contrast with the Short hUSVbcHVeVw",
+        "timestamps": ["0:02 doctor in a dim room behind SUDDEN BLOCKAGE?; burned-in subtitle bar plus player caption: Most people think clogged arteries happen suddenly (curve -9.5 pts at 1% and 2%)", "0:05 artery B-roll, BUILDS OVER YEARS", "0:12 doctor in bright office, THE GOOD NEWS (curve -7.7 pts at 6%)", "0:18 food-grid B-roll, TOP 5 HEART FOODS; caption: Today, I'll show you five foods that (curve -3.9 pts at 8%)", "0:45 1. FATTY FISH card; caption: The first food is fatty fish such as salmon, sardines, and mackerel", "1:50 doctor with nuts icon; NUTS CONTAIN A COMBINATION OF HEALTHY FATS", "3:20 NEXT: BALANCE TEST card; caption: reveal important clues about your health"],
+        "opening": "Misconception opener (sudden blockage) and promise of five foods; first food named at about 0:43.",
+        "visuals": "Two different room setups (dim and bright), food and artery B-roll, burned-in subtitles duplicating player captions.",
+        "editing": "64 hard cuts in 210 s (about 18 per minute); continuous audio floor.",
+        "closing": "Next-video tease (balance test).",
+        "possible_explanation": "The list promise at 0:18 and first item at 0:43 leave a 25 s gap; the curve loses about 34 pts by 10 s. End retention 10.39%.",
+        "alternative_explanation": "Highest impressions in the batch (5,737) at 3.7% CTR, so a broader and less intent-matched audience; long-form and Short curves cannot be compared directly.",
+    },
+    "FDLU7tX7qNM": {
+        "duration_seconds": 45,
+        "comparison": "Ankle/calf Shorts: high-reach weaker holding versus p_iI0enaFX8",
+        "timestamps": ["0:02 illustrated swollen ankles with red highlight circles and DON'T IGNORE, white letterbox; caption: Have you noticed swelling in your ankles? Don't ignore it", "0:05 cut to seated doctor at desk, thumbs-up, no text (curve -9.9 pts at 10% and -7.5 at 11%)", "0:07 SWOLLEN ANKLES? DON'T IGNORE THIS header, burned-in yellow-highlight subtitles duplicate the player caption: Many seniors think it's normal (curve -5.1 pts at 13%)", "0:15 red-blood-cell illustration; caption: fluid can build up in the lower legs and ankles", "0:30 WATCH FULL LONG VIDEO NOW CLICK HERE -> header over the doctor", "0:43 SHARE SHARE SHARE graphic; caption: Like, comment HEALTH, and subscribe (emoji in the caption track)"],
+        "opening": "Illustrated symptom question, then a cut to a static doctor at about 0:04 that repeats the question.",
+        "visuals": "White letterbox, illustration, doctor at desk, header text and burned-in highlight subtitles.",
+        "editing": "11 hard cuts in 45 s; a cluster of cuts in the final 3 s.",
+        "closing": "Share/like/comment call and a pointer to the long-form video.",
+        "possible_explanation": "The steepest losses (4.5-6 s) coincide with the switch from illustration to a static doctor who repeats the question; 30-second retention 18.77%. New viewers 17.78% versus returning 46.15% at the 30-second position.",
+        "alternative_explanation": "805 views and 44.0% stayed-to-watch: feed acceptance was good, so broad feed exposure to less-interested viewers can explain the lower holding.",
+    },
+    "p_iI0enaFX8": {
+        "duration_seconds": 60,
+        "comparison": "Ankle/calf Shorts: tiny-sample stronger holding versus FDLU7tX7qNM",
+        "timestamps": ["0:02 AI-style figure in a cardigan with glowing heart and ECG line; kinetic word can; caption: (0:00) Over 60, your legs may already be sending you a heart warning. (0:05) 4 leg", "0:10 near-blank white frame at the sampled moment; caption: (0:08) 1. Calf pain while walking (curve -9.1 pts at 16%)", "0:22 two glowing blue feet, 2. COLD WET FEET (curve -9.1 pts at 22%)", "0:38 over-exposed near-white frame at the sampled moment; caption: (0:36) Any one of these alone (curve -9.1 pts at 63%)", "0:48 seated doctor, kinetic word actually; caption: (0:44) The most serious of the four is actually calf cramping (curve -9.1 pts at 80%)", "0:57 doctor; caption: (0:56) Watch my full video for the complete breakdown"],
+        "opening": "Age qualifier and numbered promise (4 leg signals) within 5 s, over an illustrated figure.",
+        "visuals": "AI-style illustrations, white or over-exposed transition frames, doctor inserts later.",
+        "editing": "9 hard cuts in 60 s; numbered progression.",
+        "closing": "Ranks the most serious sign, then points to the full video.",
+        "possible_explanation": "Numbered promise with a ranked payoff; 30-second retention 81.82%, end 27.27%, stayed 46.2%. Uploaded captions show raw (m:ss) timecodes throughout.",
+        "alternative_explanation": "Only 18 views and 144 impressions: each curve step is one viewer (9.1 pts), so the curve cannot support a comparison with FDLU7tX7qNM.",
+    },
 }
 PRIORITY_PLAYBACK.update(SEEK_SAMPLED)
+
+
+# Continuous 2x playback of the whole video through a Web Audio analyser that was not connected to the speakers,
+# measured 2026-09-28. Numbers are RMS amplitude (0-1) and hard cuts (mean 32x18 frame change > 40/255).
+# This measures levels and cuts only: speech, music and fades were not perceived or classified.
+SIGNAL_PASS = {
+    "8JdBlF-ragM": {"reached_s": 70.1, "duration_s": 70.3, "hard_cuts": 22, "rms_p10": 0.038, "rms_median": 0.0624, "rms_p90": 0.0905, "share_below_0_01": 0.005},
+    "sUL6SU8LnEg": {"reached_s": 165.2, "duration_s": 165.5, "hard_cuts": 23, "rms_p10": 0.0083, "rms_median": 0.1115, "rms_p90": 0.1854, "share_below_0_01": 0.108},
+    "KPYHy7MDmLM": {"reached_s": 116.8, "duration_s": 116.9, "hard_cuts": 33, "rms_p10": 0.1323, "rms_median": 0.1837, "rms_p90": 0.255, "share_below_0_01": 0.008},
+    "NznebmgFwXI": {"reached_s": 150.4, "duration_s": 150.6, "hard_cuts": 2, "rms_p10": 0.0549, "rms_median": 0.1111, "rms_p90": 0.1774, "share_below_0_01": 0.0},
+    "hUSVbcHVeVw": {"reached_s": 38.1, "duration_s": 38.2, "hard_cuts": 12, "rms_p10": 0.0234, "rms_median": 0.0921, "rms_p90": 0.1622, "share_below_0_01": 0.027},
+    "CZ3gAUzdTAg": {"reached_s": 210.1, "duration_s": 210.2, "hard_cuts": 64, "rms_p10": 0.0861, "rms_median": 0.1334, "rms_p90": 0.1902, "share_below_0_01": 0.001},
+    "FDLU7tX7qNM": {"reached_s": 44.7, "duration_s": 45.0, "hard_cuts": 11, "rms_p10": 0.0343, "rms_median": 0.1259, "rms_p90": 0.2242, "share_below_0_01": 0.004},
+    "p_iI0enaFX8": {"reached_s": 59.4, "duration_s": 59.6, "hard_cuts": 9, "rms_p10": 0.0366, "rms_median": 0.1107, "rms_p90": 0.1889, "share_below_0_01": 0.014},
+}
+
+
+def signal_summary(video_id: str) -> dict | None:
+    sp = SIGNAL_PASS.get(video_id)
+    if not sp:
+        return None
+    gaps = "natural speech gaps present" if sp["share_below_0_01"] >= 0.05 else "almost no near-silent samples (consistent with a background bed or heavy compression; not heard)"
+    return {
+        **sp,
+        "method": "Continuous 2x playback to the end, audio routed to an analyser only; hard-cut detector on downscaled frames. Fades and overlay changes are not counted as cuts.",
+        "cuts_per_minute": round(60 * sp["hard_cuts"] / sp["duration_s"], 1),
+        "audio_level_reading": gaps,
+    }
+
+
+# Caption-track defects found by scanning the 56 retained caption transcripts (2026-09-28).
+CAPTION_TIMECODE_IDS = {"r9ZyUWyY4Lc", "iltS1TPt4jo", "p_iI0enaFX8", "4ByUo2N_C-I", "TPVOIfcJl-k", "sUL6SU8LnEg", "phSq6PkPtIg", "VlSibJdSZF8", "Nf9pCrPYWyQ", "FVfG_HZV4qg"}
+CAPTION_EMOJI_IDS = {"hUSVbcHVeVw", "FDLU7tX7qNM"}
+
+NEXT_TASK = (
+    "Batch 5: coffee clip family (long-form parent fAwh2svMARM vs no-curve Short nRdBvyh7Sy0), Ozempic Shorts (nP9fDHP1jbo vs 7MXBh2hjfto), "
+    "potassium Shorts (1bb5M4E1oQs vs no-curve j9VqMB6yTXQ) and walking Shorts (nPqrcrxdrdE vs UeGxF8-hb2s). "
+    "Then Batch 6 (qObP1FPrC6Q/b-dam2LdHzM, 78JR_U-6HfQ/3dRcNqiLHgY, r9ZyUWyY4Lc/HzFdyjyEFTY, PIsyBj58fJA/RD7ugxaBHSQ), "
+    "Batch 7 (tf7f4RhQwtc, xI-KdZ96xcI, Nf9pCrPYWyQ, qC8BKb8Fh5Q plus no-curve jxoMnTrVziA, jLEp6jDsN3Q, Uq3T8YZgyTw, zESWa7FJgHY) "
+    "and Batch 8 (no-curve phSq6PkPtIg, sC_0XjL2z_Y, VlSibJdSZF8, tDZKHR8UjYg)."
+)
 
 
 # Records whose anchors were added on 2026-09-28 by muted seek-and-inspect (frames viewed, captions read on screen; audio not heard).
@@ -358,6 +487,10 @@ MATCHED_COMPARISONS = [
     {"pair": "Coffee Shorts II", "stronger_id": "fArHBQo6Ggw", "comparison_id": "tD4KOpsJH_c", "evidence": "30-second retention 52.23% vs 23.08%; APV 29.2% vs 21.9%; stayed 46.7% vs 48.7%; views 341 vs 87.", "interpretation": "Similar feed acceptance; audience-qualifier plus numbered open loop held viewers better than an answer-first opener."},
     {"pair": "Cholesterol Shorts", "stronger_id": "qbwCkH_GqhU", "comparison_id": "TPVOIfcJl-k", "evidence": "30-second retention 39.47% vs 18.52%; end 19.74% vs 3.7%; stayed 38.6% vs 31.4%; views 199 vs 77.", "interpretation": "Patient-problem story with checklist payoff versus a textbook definition opener; setting and title also differ."},
     {"pair": "Mobility-test long-form", "stronger_id": "t1j-p9pkw3Y", "comparison_id": "VrbLuTNi0qE", "evidence": "30-second retention 59.74% vs 41.12%; end 22.08% vs 14.95%; derived APV 22.2% vs 29.2%; views 160 vs 109.", "interpretation": "Participatory how-to opener held more early viewers than a research-framed opener with credential intro; later APV favours the weaker video, so the effect is early-only."},
+    {"pair": "Ozempic long-form", "stronger_id": "8JdBlF-ragM", "comparison_id": "sUL6SU8LnEg", "evidence": "30-second retention 55.74% vs 40.0%; end 45.9% vs 10.0%; derived APV 46.0% vs 28.3%; views 78 vs 10; duration 71 vs 166 s.", "interpretation": "Specific side-effect question with frequent visual change versus abstract myth-debunk with clinical terms and raw caption timecodes; duration and a 10-view sample dominate the uncertainty."},
+    {"pair": "Circulation long-form", "stronger_id": "NznebmgFwXI", "comparison_id": "KPYHy7MDmLM", "evidence": "Retention at 3 s 87.1% vs 57.89%; 30 s 41.13% vs 36.84%; views 132 vs 20; hard cuts 2 vs 33.", "interpretation": "Counterexample to pace-driven advice: the near-single-take video with a concrete symptom question held more early viewers than the fast-cut, text-heavy generic warning."},
+    {"pair": "Artery foods (Short vs long-form)", "stronger_id": "hUSVbcHVeVw", "comparison_id": "CZ3gAUzdTAg", "evidence": "Short: 30 s 59.87%, stayed 39.7%, 414 views, CTR 0.63%. Long-form: 30 s 43.92%, end 10.39%, 367 views from 5,737 impressions at 3.7% CTR.", "interpretation": "Same list topic in two formats; not a like-for-like retention comparison. The long-form delays the first item to about 0:43; the Short title over-claims (reverse) relative to its captions (support)."},
+    {"pair": "Ankle/calf Shorts", "stronger_id": "p_iI0enaFX8", "comparison_id": "FDLU7tX7qNM", "evidence": "30 s 81.82% vs 18.77%; stayed 46.2% vs 44.0%; views 18 vs 805.", "interpretation": "Not interpretable as a production effect: 18 views means one viewer per 9.1-pt step. FDLU7tX7qNM reached a broad feed audience and new viewers held far worse than returning viewers (17.78% vs 46.15%)."},
     {"pair": "Cholesterol long-form", "stronger_id": "BCNWQ3uuSuE", "comparison_id": "SBrMW71O69U", "evidence": "CTR 4.2% vs 2.87%; 30-second retention 60.5% vs 38.46%; subscribers +2 vs 0.", "interpretation": "Specific lab-test utility is the leading package hypothesis, not causal proof."},
 ]
 
@@ -581,7 +714,8 @@ def playback_audit(video_id: str) -> dict | None:
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": item["visuals"],
-        "audio": "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor." if sampled else "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
+        "continuous_signal_pass": signal_summary(video_id),
+        "audio": (f"Not heard. Level-only measurement over continuous 2x playback: {signal_summary(video_id)['audio_level_reading']}. Speech content is taken from on-screen captions." if video_id in SIGNAL_PASS else "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor.") if sampled else "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": item["visuals"],
         "on_screen_typography": THUMBNAIL_REVALIDATIONS.get(video_id, "Thumbnail not revalidated in this batch; see thumbnail_observation."),
         "editing_rhythm": item["editing"],
@@ -621,6 +755,8 @@ def main() -> None:
         remaining = [status_gap] if status_gap else []
         if not audit:
             remaining.append("Full playback and detailed editing audit")
+        elif vid in SIGNAL_PASS:
+            remaining.append("Seek-sampled frames plus a continuous level/cut pass; speech and music were not heard and no complete audiovisual editing review exists")
         elif vid in SEEK_SAMPLED:
             remaining.append("Seek-sampled only: continuous playback and audio not verified")
         if not retention_record or retention_record.get("curve_status") != "AVAILABLE":
@@ -654,6 +790,14 @@ def main() -> None:
             "full_editing_audit_complete": audit["full_editing_audit_status"] if audit else "NOT_STARTED",
             "editing_observations_recorded": audit["full_editing_audit_status"] if audit else "NOT_COMPLETE",
             "playback_audit": audit,
+            "completion_states": {
+                "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+                "thumbnail_inspection": observation["quality_status"],
+                "retention_analysis": "CONTENT_LINKED" if status == "RETENTION_ANALYZED" else ("NO_CURVE_DISCLOSED" if not retention_record or retention_record.get("curve_status") != "AVAILABLE" else "CURVE_NOT_YET_LINKED"),
+                "sampled_playback": "COMPLETE" if vid in SEEK_SAMPLED else ("REPORTED_FULL_PLAYBACK" if audit else "NOT_STARTED"),
+                "continuous_signal_pass": "COMPLETE_LEVELS_AND_CUTS_ONLY" if vid in SIGNAL_PASS else "NOT_STARTED",
+                "complete_audiovisual_editing_review": "NOT_VERIFIED",
+            },
             "investigation_status": status,
             "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
             "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -691,6 +835,8 @@ def main() -> None:
             "retention_new_vs_returning_split": sum(bool((r["retention_audience_segments"] or {}).get("new_vs_returning_available")) for r in records),
             "editing_audits_detailed": sum(r["full_editing_audit_complete"] == "COMPLETE_WITH_AUDIO_LIMITATION" for r in records),
             "matched_comparisons": len(MATCHED_COMPARISONS),
+            "continuous_signal_passes": sum(r["video_id"] in SIGNAL_PASS for r in records),
+            "complete_audiovisual_audits_verified": sum(r["completion_states"]["complete_audiovisual_editing_review"] == "COMPLETE" for r in records),
             "new_public_videos": 0,
             "investigation_status": {k: sum(r["investigation_status"] == k for r in records) for k in INVESTIGATION_STATUS_DEFINITIONS},
         },
@@ -705,12 +851,13 @@ def main() -> None:
         "branch": "research/senior-health-acquisition-phase-2",
         "starting_head": "31ea9a53a6b4c9a1b74a3478ce16e510fdf06e10",
         "overall_status": "PARTIALLY_COMPLETE",
-        "exact_next_unfinished_task": "Batch 4: seek-sample the next matched pairs among the 36 TRANSCRIPT_ONLY videos, starting with Ozempic long-form (8JdBlF-ragM vs sUL6SU8LnEg), circulation long-form (KPYHy7MDmLM vs NznebmgFwXI), artery-food Short vs long-form (hUSVbcHVeVw vs CZ3gAUzdTAg) and ankle/calf Shorts (FDLU7tX7qNM vs p_iI0enaFX8); then the remaining no-curve videos as LIMITED_BY_UNAVAILABLE_EVIDENCE.",
+        "exact_next_unfinished_task": NEXT_TASK,
         "batch_history": [
             {"batch": "Batch 1 Recovery and Analytics", "status": "COMPLETE_WITH_LIMITATIONS", "saved_at": "2026-09-28", "result": "Four original Studio ZIPs verified; 56 basic per-video rows joined; 47 extended rows observed; missing Short resolved."},
             {"batch": "Batch 2 Retention and Actual Playback", "status": "PARTIAL", "saved_at": "2026-09-28", "result": "56 retention exports, 46 curves; 12 saved playback records, of which 8 meet RETENTION_ANALYZED and 4 long-form records are PARTIAL_PLAYBACK (too few numeric anchors); 44 TRANSCRIPT_ONLY. -SjQc2MwaOU and HEJoPEEndG8 anchors gap-filled 2026-09-28."},
             {"batch": "Batch 2b Partial playback gap-fill", "status": "COMPLETE", "saved_at": "2026-09-28", "result": "5oPzZjfNgII, EB3_A2b4a6o, BCNWQ3uuSuE and SBrMW71O69U given numeric anchors at every exported retention event (7-11 anchors each) by muted seek-and-inspect; all four now RETENTION_ANALYZED."},
             {"batch": "Batch 3b Matched pairs (seek-sampled)", "status": "COMPLETE", "saved_at": "2026-09-28", "result": "8 TRANSCRIPT_ONLY videos in 4 matched pairs seek-sampled at retention events: YVjbjcVo1is/iltS1TPt4jo (same footage, re-edited), fArHBQo6Ggw/tD4KOpsJH_c, qbwCkH_GqhU/TPVOIfcJl-k, t1j-p9pkw3Y/VrbLuTNi0qE. Audience-segment curves summarized from retained exports for all 56."},
+            {"batch": "Batch 4 Matched pairs (seek-sampled plus continuous signal pass)", "status": "COMPLETE", "saved_at": "2026-09-28", "result": "8JdBlF-ragM/sUL6SU8LnEg, NznebmgFwXI/KPYHy7MDmLM, hUSVbcHVeVw/CZ3gAUzdTAg and p_iI0enaFX8/FDLU7tX7qNM seek-sampled at retention events and played continuously at 2x through a level-and-cut analyser. Caption-track defects scanned across all 56 transcripts; reused-footage scan across all 56."},
             {"batch": "Batch 3 Research Diagnosis and Deliverables", "status": "COMPLETE_FOR_AVAILABLE_SYNTHESIS", "saved_at": "2026-09-28", "result": "Three Trends comparisons verified; six matched comparisons synthesized; diagnosis and four existing deliverables reconciled."},
         ],
         "execution_matrix": [
@@ -719,10 +866,10 @@ def main() -> None:
             {"task": "Thumbnails", "previous_result": "56", "current_evidence": "56 images identity-verified; 12 priority observations revalidated; 44 contain templated commentary", "status": "COMPLETE_NEEDS_CORRECTION", "required_action": "Revalidate remaining 44 only when they enter a priority comparison"},
             {"task": "Studio reports", "previous_result": "Four reported", "current_evidence": "Lifetime, 90d, 28d and traffic-source ZIP hashes verified", "status": "VERIFIED_COMPLETE", "required_action": "None"},
             {"task": "Individual Analytics", "previous_result": "55 references reported", "current_evidence": "56 file-backed basic rows; 47 authenticated extended rows; 9 extended rows not captured", "status": "PARTIAL", "required_action": "Capture remaining extended rows only if Studio table/export becomes reliable"},
-            {"task": "Retention", "previous_result": "Previously missing", "current_evidence": f"56 exports; 46 curves; {register['counts']['retention_content_linked_investigations']} content-linked investigations; 10 no-curve disclosures; {register['counts']['retention_new_vs_returning_split']} exports carry a new-vs-returning split", "status": "PARTIAL", "required_action": "Link remaining 34 curves during playback; no action possible for 10 blank curves"},
+            {"task": "Retention", "previous_result": "Previously missing", "current_evidence": f"56 exports; 46 curves; {register['counts']['retention_content_linked_investigations']} content-linked investigations; 10 no-curve disclosures; {register['counts']['retention_new_vs_returning_split']} exports carry a new-vs-returning split", "status": "PARTIAL", "required_action": f"Link remaining {46 - register['counts']['retention_content_linked_investigations']} curves during playback; no action possible for 10 blank curves"},
             {"task": "Playback", "previous_result": "Previously missing", "current_evidence": f"{register['counts']['playback_reported_full']} reported full-playback records (text-only completion evidence) and {register['counts']['playback_seek_sampled']} seek-sampled records", "status": "PARTIAL", "required_action": f"Audit remaining {register['counts']['investigation_status']['TRANSCRIPT_ONLY']} TRANSCRIPT_ONLY videos"},
             {"task": "Trends", "previous_result": "Three comparisons", "current_evidence": "Three original official CSVs and configurations verified", "status": "VERIFIED_COMPLETE", "required_action": "No repeat query justified by available source detail"},
-            {"task": "Research synthesis", "previous_result": "Partial", "current_evidence": "Six matched comparisons and multi-stage diagnosis complete; audience/query/device/geography gaps remain", "status": "PARTIAL", "required_action": "Revisit only if unavailable Studio reports become accessible"},
+            {"task": "Research synthesis", "previous_result": "Partial", "current_evidence": f"{len(MATCHED_COMPARISONS)} matched comparisons and multi-stage diagnosis; audience/query/device/geography gaps remain", "status": "PARTIAL", "required_action": "Revisit only if unavailable Studio reports become accessible"},
         ],
         "phase_status": {
             "repository_recovery": "VERIFIED_COMPLETE",
@@ -764,6 +911,9 @@ def main() -> None:
             {"finding": "Shorts feed acceptance and depth are separate", "video_ids": ["QfRaG71ZA_0", "4ByUo2N_C-I", "PTB-6fgaAKk", "gunPgSlxJLA"], "metrics": "QfRaG71ZA_0 stayed 57.3%/APV 83.3%; 4ByUo2N_C-I 43.7%/43.8%; PTB-6fgaAKk 16.9%/126.6%; gunPgSlxJLA 28.7%/84.0%", "visual_and_transcript_evidence": "Concrete symptom frames are easier to parse; very short loops can inflate APV", "comparative_evidence": "kF26QB7xHiE had more views than FVfG_HZV4qg despite much lower stayed-to-watch", "historical_context": "Authenticated lifetime row observations on 2026-09-28", "counterexample": "High APV does not guarantee high stayed-to-watch or distribution", "alternative_explanations": "Feed cohort, loop length and repeat exposure", "confidence": "HIGH", "practical_experiment": "Test first-frame specificity and measure stayed-to-watch separately from APV."},
             {"finding": "Cross-format loyalty and audience-positioning effects remain unresolved", "video_ids": [], "metrics": "Shorts feed produced 5,355 of 8,366 views and 11.23 of 45.62 watch hours; viewers-across-formats and returning-viewer values were unavailable", "visual_and_transcript_evidence": "Catalog spans cardiology, metabolic health and mobility", "comparative_evidence": "YouTube documentation does not support a blanket mixed-format algorithm penalty", "historical_context": "Lifetime source totals", "counterexample": "Mixed formats can serve the same viewer needs", "alternative_explanations": "Small audience and limited returning-viewer history", "confidence": "HIGH that evidence is insufficient; LOW on audience-fragmentation hypothesis", "practical_experiment": "Use recurring series and compare audience reports when YouTube discloses enough data."},
             {"finding": "Public demand alone does not explain outcomes", "video_ids": ["sUL6SU8LnEg", "VlSibJdSZF8", "8JdBlF-ragM"], "metrics": "Ozempic mean normalized Trends score 31.45 versus semaglutide 7.71 and GLP-1 2.99 within one US YouTube Search comparison", "visual_and_transcript_evidence": "Existing packages vary between myth, side-effect and rebound-weight angles", "comparative_evidence": "High normalized interest did not yield strong channel results", "historical_context": "Five-year normalized Trends series", "counterexample": "Trends is not absolute volume and does not describe this channel's eligible audience", "alternative_explanations": "Packaging, authority fit, competition, timing and distribution", "confidence": "MEDIUM", "practical_experiment": "Use exact query/source evidence before commissioning another demand study."},
+            {"finding": "Caption-track defects are widespread but not associated with a consistent retention pattern", "video_ids": sorted(CAPTION_TIMECODE_IDS | CAPTION_EMOJI_IDS), "metrics": "Raw (m:ss) timecodes appear in 10 of 56 caption transcripts (5 Shorts, 5 long-form); emoji and a heading line appear in 2 more (hUSVbcHVeVw, FDLU7tX7qNM). Median compared-to-other-videos value at 30 s: timecode Shorts -27.49 vs other Shorts 7.93; timecode long-form 7.6 vs other long-form -30.81.", "visual_and_transcript_evidence": "Timecodes were seen on screen in iltS1TPt4jo, TPVOIfcJl-k, sUL6SU8LnEg and p_iI0enaFX8 during playback; the pattern suggests pasted script or chapter text uploaded as captions", "comparative_evidence": "Direction flips between formats", "historical_context": "Defect spans February to September 2026 uploads", "counterexample": "FVfG_HZV4qg has the defect and the second-highest Short view count (1,068) with 51.1% stayed-to-watch", "alternative_explanations": "Most viewers watch without captions; group sizes are 3-19", "confidence": "HIGH that the defect exists; LOW for any retention effect", "practical_experiment": "Replace the caption tracks on affected videos (a quality fix that needs no test) and do not attribute retention changes to it."},
+            {"finding": "Footage reuse is concentrated in the coffee cluster and one heart-attack re-edit", "video_ids": ["fAwh2svMARM", "QfRaG71ZA_0", "4ByUo2N_C-I", "fArHBQo6Ggw", "nRdBvyh7Sy0", "YVjbjcVo1is", "iltS1TPt4jo"], "metrics": "10-word transcript overlap: YVjbjcVo1is/iltS1TPt4jo 0.75; long-form fAwh2svMARM shares 0.33-0.49 with four coffee Shorts; no other pair exceeds 0.15", "visual_and_transcript_evidence": "Coffee Shorts are excerpts of the long-form coffee video; iltS1TPt4jo adds an illustrated cold open to YVjbjcVo1is footage", "comparative_evidence": "Four coffee Shorts drew 25-341 views each versus 48 for their long-form parent; stayed-to-watch 40.9-57.3%", "historical_context": "Parent published 2026-08-25; Shorts 2026-09-09 to 2026-09-18", "counterexample": "The same source footage produced both the strongest (QfRaG71ZA_0) and a weaker (4ByUo2N_C-I) coffee Short, so the excerpt and package matter more than the footage", "alternative_explanations": "Different excerpts, titles and publication dates", "confidence": "HIGH for reuse; MEDIUM for excerpt choice mattering", "practical_experiment": "When clipping a long-form video, test excerpts that open on a named symptom or viewer qualifier against excerpts that open on a definition."},
+            {"finding": "Fast cutting is not a reliable retention lever in this catalog", "video_ids": ["NznebmgFwXI", "KPYHy7MDmLM", "CZ3gAUzdTAg", "8JdBlF-ragM"], "metrics": "Hard cuts per minute: NznebmgFwXI 0.8 (3 s retention 87.1%), KPYHy7MDmLM 16.9 (57.89%), CZ3gAUzdTAg 18.3 (88.72% but 43.92% at 30 s), 8JdBlF-ragM 18.8 (78.69%, 55.74% at 30 s)", "visual_and_transcript_evidence": "The near-single-take video opens on a concrete self-check symptom; the fast-cut weaker video opens on a generic warning with three text layers", "comparative_evidence": "DS-000018 creator advice favours frequent pattern interrupts; this pair contradicts it at the opening", "historical_context": "Continuous 2x signal pass on 8 videos, 2026-09-28", "counterexample": "8JdBlF-ragM is fast-cut and holds well", "alternative_explanations": "Topic, title promise and tiny samples (20-132 views)", "confidence": "MEDIUM that pace alone does not explain opening loss; LOW for any causal claim", "practical_experiment": "Hold pace constant and vary only the first sentence (specific symptom question versus generic warning)."},
         ],
         "retention_export_summary": {key: retention[key] for key in ("record_count", "available_count", "curve_available_count", "exported_no_curve_count")},
         "remaining_private_requirements": ["Returning-viewer and viewers-across-formats channel reports", "Search query and suggested-video detail", "Geography and device reports", "Nine uncaptured extended per-video rows if a reliable export becomes available"],

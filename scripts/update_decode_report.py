@@ -123,7 +123,11 @@ doc.add_paragraph(
     f"{c['investigation_status']['RETENTION_ANALYZED']} videos have numeric playback anchors read against their exported retention curve. "
     f"{c['playback_reported_full']} come from the previous session's reported full playback (its completion evidence is a text record only). "
     f"{c['playback_seek_sampled']} were seek-sampled on 28 September 2026: muted, with frames viewed and on-screen captions read at each retention event, "
-    "so they are not continuous playback and audio was not heard. Each comparison below is associative; samples are small and distribution is uncontrolled."
+    "so they are not continuous playback and audio was not heard. "
+    f"{c['continuous_signal_passes']} of the seek-sampled videos were also played continuously at 2x to the end through a level meter and hard-cut counter; "
+    "that measures loudness, silence and cuts, not what was said or whether music played. "
+    f"Verified complete audiovisual editing reviews: {c['complete_audiovisual_audits_verified']}. "
+    "Each comparison below is associative; samples are small and distribution is uncontrolled."
 )
 for m in REG["matched_comparisons"]:
     p = doc.add_paragraph(style="List Bullet")
@@ -135,6 +139,13 @@ doc.add_paragraph(
     "curve drops, while openings that qualify the viewer or pose a test they can perform (fArHBQo6Ggw, t1j-p9pkw3Y) hold more viewers at 30 seconds. "
     "iltS1TPt4jo re-edits the YVjbjcVo1is footage with an illustrated cold open; it stopped slightly more swipes but held far fewer viewers, and its "
     "uploaded captions show raw timecodes such as (0:00) to viewers, as do TPVOIfcJl-k's. Every retained retention export reports organic traffic only."
+)
+doc.add_paragraph(
+    "Batch 4 adds a counterexample to pace-driven advice: NznebmgFwXI is almost a single take (2 hard cuts in 151 s) yet kept 87.1% of viewers at 3 s, "
+    "while the fast-cut KPYHy7MDmLM (33 cuts in 117 s) kept 57.89%; the stronger video opens on a concrete self-check symptom, the weaker on a generic warning "
+    "under three text layers. The ankle/calf pair is not interpretable (18 versus 805 views). A scan of all 56 caption transcripts found raw timecodes in 10 "
+    "and emoji or heading lines in 2 more; affected videos show no consistent retention direction, so this is a quality fix rather than a growth lever. "
+    "Transcript overlap shows the coffee Shorts are excerpts of the long-form fAwh2svMARM; the same footage produced both the strongest and a weaker coffee Short."
 )
 
 doc.add_heading("18.6 Evidence completeness and remaining limits", level=2)

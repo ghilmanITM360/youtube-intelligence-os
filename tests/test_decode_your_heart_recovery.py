@@ -40,3 +40,12 @@ def test_register_counts_match_records():
     for status, n in counts.items():
         assert sum(r["investigation_status"] == status for r in records) == n
     assert set(counts) == set(reg["investigation_status_definitions"])
+
+
+def test_signal_pass_never_claims_complete_audiovisual_review():
+    reg = json.loads(REGISTER.read_text())
+    passed = [r for r in reg["records"] if r["completion_states"]["continuous_signal_pass"] != "NOT_STARTED"]
+    assert passed and reg["counts"]["complete_audiovisual_audits_verified"] == 0
+    for r in passed:
+        assert r["playback_inspected"] == "SEEK_SAMPLED_AT_RETENTION_EVENTS"
+        assert r["completion_states"]["complete_audiovisual_editing_review"] == "NOT_VERIFIED"

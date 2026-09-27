@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-27T21:11:57.377973+00:00",
+  "generated_at": "2026-09-27T21:48:18.599007+00:00",
   "dataset_id": "DS-000032",
   "channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
   "retained_acquisition_observed_at": "2026-09-25T10:45:45.525Z",
@@ -19,20 +19,22 @@
     "studio_extended_rows_observed": 47,
     "retention_exports": 56,
     "retention_curves": 46,
-    "retention_content_linked_investigations": 20,
+    "retention_content_linked_investigations": 28,
     "playback_reported_full": 12,
-    "playback_seek_sampled": 8,
+    "playback_seek_sampled": 16,
     "retention_new_vs_returning_split": 12,
     "editing_audits_detailed": 12,
-    "matched_comparisons": 10,
+    "matched_comparisons": 14,
+    "continuous_signal_passes": 8,
+    "complete_audiovisual_audits_verified": 0,
     "new_public_videos": 0,
     "investigation_status": {
       "NOT_STARTED": 0,
-      "TRANSCRIPT_ONLY": 36,
+      "TRANSCRIPT_ONLY": 28,
       "PARTIAL_PLAYBACK": 0,
       "PLAYBACK_COMPLETE": 0,
       "EDITING_AUDIT_COMPLETE": 0,
-      "RETENTION_ANALYZED": 20,
+      "RETENTION_ANALYZED": 28,
       "LIMITED_BY_UNAVAILABLE_EVIDENCE": 0
     }
   },
@@ -110,6 +112,34 @@
       "interpretation": "Participatory how-to opener held more early viewers than a research-framed opener with credential intro; later APV favours the weaker video, so the effect is early-only."
     },
     {
+      "pair": "Ozempic long-form",
+      "stronger_id": "8JdBlF-ragM",
+      "comparison_id": "sUL6SU8LnEg",
+      "evidence": "30-second retention 55.74% vs 40.0%; end 45.9% vs 10.0%; derived APV 46.0% vs 28.3%; views 78 vs 10; duration 71 vs 166 s.",
+      "interpretation": "Specific side-effect question with frequent visual change versus abstract myth-debunk with clinical terms and raw caption timecodes; duration and a 10-view sample dominate the uncertainty."
+    },
+    {
+      "pair": "Circulation long-form",
+      "stronger_id": "NznebmgFwXI",
+      "comparison_id": "KPYHy7MDmLM",
+      "evidence": "Retention at 3 s 87.1% vs 57.89%; 30 s 41.13% vs 36.84%; views 132 vs 20; hard cuts 2 vs 33.",
+      "interpretation": "Counterexample to pace-driven advice: the near-single-take video with a concrete symptom question held more early viewers than the fast-cut, text-heavy generic warning."
+    },
+    {
+      "pair": "Artery foods (Short vs long-form)",
+      "stronger_id": "hUSVbcHVeVw",
+      "comparison_id": "CZ3gAUzdTAg",
+      "evidence": "Short: 30 s 59.87%, stayed 39.7%, 414 views, CTR 0.63%. Long-form: 30 s 43.92%, end 10.39%, 367 views from 5,737 impressions at 3.7% CTR.",
+      "interpretation": "Same list topic in two formats; not a like-for-like retention comparison. The long-form delays the first item to about 0:43; the Short title over-claims (reverse) relative to its captions (support)."
+    },
+    {
+      "pair": "Ankle/calf Shorts",
+      "stronger_id": "p_iI0enaFX8",
+      "comparison_id": "FDLU7tX7qNM",
+      "evidence": "30 s 81.82% vs 18.77%; stayed 46.2% vs 44.0%; views 18 vs 805.",
+      "interpretation": "Not interpretable as a production effect: 18 views means one viewer per 9.1-pt step. FDLU7tX7qNM reached a broad feed audience and new viewers held far worse than returning viewers (17.78% vs 46.15%)."
+    },
+    {
       "pair": "Cholesterol long-form",
       "stronger_id": "BCNWQ3uuSuE",
       "comparison_id": "SBrMW71O69U",
@@ -156,6 +186,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -758,6 +796,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -1354,13 +1400,66 @@
         "quality_status": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
         "quality_limitation": "Image identity is verified, but several analytical fields were generated from a repeated template and were not re-certified in this pass."
       },
-      "public_watch_page_accessible": "PUBLIC_URL_REGISTERED_NOT_REPLAYED_THIS_PASS",
-      "playback_inspected": "NOT_STARTED",
-      "video_actually_reviewed": "NOT_COMPLETE",
-      "full_editing_audit_complete": "NOT_STARTED",
-      "editing_observations_recorded": "NOT_COMPLETE",
-      "playback_audit": null,
-      "investigation_status": "TRANSCRIPT_ONLY",
+      "public_watch_page_accessible": "VERIFIED_PUBLIC_2026-09-28",
+      "playback_inspected": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "video_actually_reviewed": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "full_editing_audit_complete": "SAMPLED_FRAMES_ONLY",
+      "editing_observations_recorded": "SAMPLED_FRAMES_ONLY",
+      "playback_audit": {
+        "status": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+        "full_editing_audit_status": "SAMPLED_FRAMES_ONLY",
+        "observed_at": "2026-09-28",
+        "source": "https://www.youtube.com/watch?v=NznebmgFwXI",
+        "playback_speed": "muted seeks; about 1.8 s of playback at each anchor",
+        "completion_evidence": "Not watched continuously. Frames viewed and on-screen captions read at each listed anchor, chosen from exported retention events plus coverage points to the end.",
+        "comparison": "Circulation long-form: stronger early holding versus KPYHy7MDmLM",
+        "timestamps": [
+          "0:02 seated doctor, bright office, one white COLD FEET? card; caption: If your feet are often cold, even when the room is warm, your body may be sending an important signal (curve -6.5 pts at 1%, -7.2 at 2%)",
+          "0:06 SOMETIMES NORMAL card; caption: Sometimes cold feet are harmless, but at other times they can reduce blood circulation",
+          "0:14 TODAY ... MEAN lower third; caption: Today, I'll explain what cold feet might mean ... Hello, (introduction; curve -4.8 pts at 15%)",
+          "0:23 O2 icon; caption: oxygen and nutrients throughout the body",
+          "0:45 BLOOD MUST TRAVEL THROUGH LONG ARTERIES TO lower third",
+          "1:30 AGING? card; caption: She often wore thick socks even during warm weather (patient story)",
+          "2:25 NEXT INSIGHT: ONE POWERFUL FRUIT card with two end-screen video cards; caption: there's one everyday fruit that many"
+        ],
+        "opening_presentation": "Viewer-qualifying symptom question in the first sentence, then reassurance (sometimes normal) before the introduction.",
+        "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
+        "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
+        "camera_framing": "One continuous seated take with text cards and simple icons; no stock B-roll at sampled anchors.",
+        "continuous_signal_pass": {
+          "reached_s": 150.4,
+          "duration_s": 150.6,
+          "hard_cuts": 2,
+          "rms_p10": 0.0549,
+          "rms_median": 0.1111,
+          "rms_p90": 0.1774,
+          "share_below_0_01": 0.0,
+          "method": "Continuous 2x playback to the end, audio routed to an analyser only; hard-cut detector on downscaled frames. Fades and overlay changes are not counted as cuts.",
+          "cuts_per_minute": 0.8,
+          "audio_level_reading": "almost no near-silent samples (consistent with a background bed or heavy compression; not heard)"
+        },
+        "audio": "Not heard. Level-only measurement over continuous 2x playback: almost no near-silent samples (consistent with a background bed or heavy compression; not heard). Speech content is taken from on-screen captions.",
+        "b_roll_and_medical_visuals": "One continuous seated take with text cards and simple icons; no stock B-roll at sampled anchors.",
+        "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
+        "editing_rhythm": "Only 2 hard cuts in 151 s; overlays change but the shot does not. Continuous audio floor (no sample below 0.01 RMS).",
+        "visual_variety": "Only 2 hard cuts in 151 s; overlays change but the shot does not. Continuous audio floor (no sample below 0.01 RMS).",
+        "narrative_progression": "Viewer-qualifying symptom question in the first sentence, then reassurance (sometimes normal) before the introduction. Tease of the next video (one powerful fruit) over end-screen cards.",
+        "repetition": "No repeated segment was counted as a causal retention factor; loop behavior is noted where APV exceeded 100%.",
+        "medical_claims": "Claims were recorded as presented; this playback audit does not independently validate clinical correctness.",
+        "closing_structure": "Tease of the next video (one powerful fruit) over end-screen cards.",
+        "possible_explanation": "A concrete self-check symptom in the first sentence coincides with 87.1% retention at 3 s and 41.13% at 30 s, despite almost no cutting.",
+        "alternative_explanation": "Different topic framing (cold feet versus walking ability), 132 versus 20 views and a lower CTR (2.75%) that may have selected a more intent-matched audience.",
+        "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "COMPLETE_LEVELS_AND_CUTS_ONLY",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
+      "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
       "relevant_private_studio_analytics": "LIFETIME_BASIC_ROW_VERIFIED",
@@ -1870,8 +1969,8 @@
         "compared_to_other_videos_at_end_as_exported": 25.06
       },
       "retention_investigation": {
-        "status": "CURVE_PROFILE_COMPLETE_CONTENT_LINK_PENDING",
-        "content_linkage": "NOT_PLAYBACK_VERIFIED",
+        "status": "CONTENT_LINKED_COMPLETE",
+        "content_linkage": "SEEK_SAMPLED_PLAYBACK",
         "retention_at_3_seconds_percent": 87.1,
         "retention_at_5_seconds_percent": 83.06,
         "retention_at_30_seconds_percent": 41.13,
@@ -1917,11 +2016,11 @@
             "timestamp": "1:02"
           }
         ],
-        "possible_explanation": null,
-        "alternative_explanation": null,
-        "limitation": "Numeric curve profile complete, but individual dip/spike meaning remains open until content at those timestamps is playback-verified."
+        "possible_explanation": "A concrete self-check symptom in the first sentence coincides with 87.1% retention at 3 s and 41.13% at 30 s, despite almost no cutting.",
+        "alternative_explanation": "Different topic framing (cold feet versus walking ability), 132 versus 20 views and a lower CTR (2.75%) that may have selected a more intent-matched audience.",
+        "limitation": "Curve events were linked to observed frames and captions at those timestamps; dips remain associative, not causal."
       },
-      "remaining_gap": "Full playback and detailed editing audit; Retention timestamps not yet linked to actual playback; Thumbnail commentary quality revalidation",
+      "remaining_gap": "Seek-sampled frames plus a continuous level/cut pass; speech and music were not heard and no complete audiovisual editing review exists; Thumbnail commentary quality revalidation",
       "user_action_required": "No for public playback; authenticated Studio source table would be required for uncaptured extended rows and audience reports"
     },
     {
@@ -1962,6 +2061,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -2564,6 +2671,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -3166,6 +3281,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -3790,6 +3913,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Doctor and lipid report dominate the package; playback remains a steady explanatory presentation.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Doctor and lipid report dominate the package; playback remains a steady explanatory presentation.",
         "on_screen_typography": "16:9 doctor holding a lipid profile marked HIGH with READ THIS FIRST; legible but broader than the paired exact-number question.",
@@ -3802,6 +3926,14 @@
         "possible_explanation": "The broader promise and weaker first-30-second retention may reduce momentum.",
         "alternative_explanation": "Its smaller impression base and different audience exposure prevent a causal claim.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -4393,6 +4525,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -4995,6 +5135,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -5597,6 +5745,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -6199,6 +6355,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -6311,6 +6475,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -6913,6 +7085,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -7025,6 +7205,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -7636,6 +7824,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Single seated clinic shot with occasional kinetic words; no B-roll at sampled anchors.",
+        "continuous_signal_pass": null,
         "audio": "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor.",
         "b_roll_and_medical_visuals": "Single seated clinic shot with occasional kinetic words; no B-roll at sampled anchors.",
         "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
@@ -7648,6 +7837,14 @@
         "possible_explanation": "Without a cold open, viewers who stayed past the statistics line reached the symptom content; 30-second retention 45.16% versus 20.59% for the re-edit.",
         "alternative_explanation": "85 versus 87 views: each curve step is roughly one viewer, so the difference may be noise or a different feed cohort.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -8269,6 +8466,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "AI illustrations, then seated doctor under a persistent red DONT MISS THIS VIDEO banner.",
+        "continuous_signal_pass": null,
         "audio": "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor.",
         "b_roll_and_medical_visuals": "AI illustrations, then seated doctor under a persistent red DONT MISS THIS VIDEO banner.",
         "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
@@ -8281,6 +8479,14 @@
         "possible_explanation": "Stayed-to-watch was slightly higher (37.7% vs 33.7%) but 30-second retention was far lower (20.59% vs 45.16%): the illustrated question may stop the swipe yet mismatch the statistics-led footage that follows. Uploaded captions display raw (0:00)-style timecodes to viewers.",
         "alternative_explanation": "Tiny samples (87 views) and different publication dates; the caption-timecode defect and banner cannot be separated from the cold open.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -8884,6 +9090,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -9506,6 +9720,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Doctor-led vertical office frame, heart/warning overlay and sentence captions.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Doctor-led vertical office frame, heart/warning overlay and sentence captions.",
         "on_screen_typography": "Vertical doctor frame with heart and warning icons; a sentence-length subtitle sits at the bottom and is small at mobile scale.",
@@ -9518,6 +9733,14 @@
         "possible_explanation": "A concrete symptom may retain more viewers than generic fatigue.",
         "alternative_explanation": "Both Shorts have weak stayed-to-watch; feed cohort and topic familiarity remain plausible.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -10121,6 +10344,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -10723,6 +10954,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -10841,6 +11080,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Seated doctor with dense kinetic words and icons every few seconds.",
+        "continuous_signal_pass": null,
         "audio": "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor.",
         "b_roll_and_medical_visuals": "Seated doctor with dense kinetic words and icons every few seconds.",
         "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
@@ -10853,6 +11093,14 @@
         "possible_explanation": "Delivering the answer immediately may remove the reason to keep watching; the curve loses about 5 pts every 1-3 seconds after 0:05.",
         "alternative_explanation": "Stayed-to-watch was similar (48.7% vs 46.7%), so feed acceptance was not the gap; small sample (87 views).",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -11480,6 +11728,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Doctor-led explanation organized by chapters; thumbnail uses meter 168 and NO FOOD.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Doctor-led explanation organized by chapters; thumbnail uses meter 168 and NO FOOD.",
         "on_screen_typography": "16:9 glucose meter reading 168, empty plate, NO FOOD text and doctor; the numeric contradiction is explicit.",
@@ -11492,6 +11741,14 @@
         "possible_explanation": "Longer duration and a slower middle may contribute to the lower APV and midpoint retention.",
         "alternative_explanation": "The 1.8% CTR and differing distribution mean packaging may also constrain performance.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -12095,6 +12352,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -12706,6 +12971,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Doctor-led explanation supported by the lipid-panel hierarchy shown in the thumbnail.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Doctor-led explanation supported by the lipid-panel hierarchy shown in the thumbnail.",
         "on_screen_typography": "16:9 lipid-profile card with LDL/HDL/triglycerides, WHICH NUMBER MATTERS and doctor; strongest topic specificity in the pair.",
@@ -12718,6 +12984,14 @@
         "possible_explanation": "Specific lab-test utility may create a clearer promise than a broad high-cholesterol warning.",
         "alternative_explanation": "Audience source, publication timing and impression volume differ.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -13342,6 +13616,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Doctor explanation with symptom-focused examples; thumbnail uses AM/PM ankle comparison.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Doctor explanation with symptom-focused examples; thumbnail uses AM/PM ankle comparison.",
         "on_screen_typography": "16:9 AM-versus-PM ankle comparison, large WORSE BY EVENING text and doctor in scrubs; symptom difference is immediately visible.",
@@ -13354,6 +13629,14 @@
         "possible_explanation": "The concrete symptom, shorter duration and clear consequence ladder may support both CTR and retention.",
         "alternative_explanation": "Topic demand, traffic source and publication context also differ from EB3_A2b4a6o.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -13951,13 +14234,65 @@
         "quality_status": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
         "quality_limitation": "Image identity is verified, but several analytical fields were generated from a repeated template and were not re-certified in this pass."
       },
-      "public_watch_page_accessible": "PUBLIC_URL_REGISTERED_NOT_REPLAYED_THIS_PASS",
-      "playback_inspected": "NOT_STARTED",
-      "video_actually_reviewed": "NOT_COMPLETE",
-      "full_editing_audit_complete": "NOT_STARTED",
-      "editing_observations_recorded": "NOT_COMPLETE",
-      "playback_audit": null,
-      "investigation_status": "TRANSCRIPT_ONLY",
+      "public_watch_page_accessible": "VERIFIED_PUBLIC_2026-09-28",
+      "playback_inspected": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "video_actually_reviewed": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "full_editing_audit_complete": "SAMPLED_FRAMES_ONLY",
+      "editing_observations_recorded": "SAMPLED_FRAMES_ONLY",
+      "playback_audit": {
+        "status": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+        "full_editing_audit_status": "SAMPLED_FRAMES_ONLY",
+        "observed_at": "2026-09-28",
+        "source": "https://www.youtube.com/watch?v=p_iI0enaFX8",
+        "playback_speed": "muted seeks; about 1.8 s of playback at each anchor",
+        "completion_evidence": "Not watched continuously. Frames viewed and on-screen captions read at each listed anchor, chosen from exported retention events plus coverage points to the end.",
+        "comparison": "Ankle/calf Shorts: tiny-sample stronger holding versus FDLU7tX7qNM",
+        "timestamps": [
+          "0:02 AI-style figure in a cardigan with glowing heart and ECG line; kinetic word can; caption: (0:00) Over 60, your legs may already be sending you a heart warning. (0:05) 4 leg",
+          "0:10 near-blank white frame at the sampled moment; caption: (0:08) 1. Calf pain while walking (curve -9.1 pts at 16%)",
+          "0:22 two glowing blue feet, 2. COLD WET FEET (curve -9.1 pts at 22%)",
+          "0:38 over-exposed near-white frame at the sampled moment; caption: (0:36) Any one of these alone (curve -9.1 pts at 63%)",
+          "0:48 seated doctor, kinetic word actually; caption: (0:44) The most serious of the four is actually calf cramping (curve -9.1 pts at 80%)",
+          "0:57 doctor; caption: (0:56) Watch my full video for the complete breakdown"
+        ],
+        "opening_presentation": "Age qualifier and numbered promise (4 leg signals) within 5 s, over an illustrated figure.",
+        "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
+        "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
+        "camera_framing": "AI-style illustrations, white or over-exposed transition frames, doctor inserts later.",
+        "continuous_signal_pass": {
+          "reached_s": 59.4,
+          "duration_s": 59.6,
+          "hard_cuts": 9,
+          "rms_p10": 0.0366,
+          "rms_median": 0.1107,
+          "rms_p90": 0.1889,
+          "share_below_0_01": 0.014,
+          "method": "Continuous 2x playback to the end, audio routed to an analyser only; hard-cut detector on downscaled frames. Fades and overlay changes are not counted as cuts.",
+          "cuts_per_minute": 9.1,
+          "audio_level_reading": "almost no near-silent samples (consistent with a background bed or heavy compression; not heard)"
+        },
+        "audio": "Not heard. Level-only measurement over continuous 2x playback: almost no near-silent samples (consistent with a background bed or heavy compression; not heard). Speech content is taken from on-screen captions.",
+        "b_roll_and_medical_visuals": "AI-style illustrations, white or over-exposed transition frames, doctor inserts later.",
+        "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
+        "editing_rhythm": "9 hard cuts in 60 s; numbered progression.",
+        "visual_variety": "9 hard cuts in 60 s; numbered progression.",
+        "narrative_progression": "Age qualifier and numbered promise (4 leg signals) within 5 s, over an illustrated figure. Ranks the most serious sign, then points to the full video.",
+        "repetition": "No repeated segment was counted as a causal retention factor; loop behavior is noted where APV exceeded 100%.",
+        "medical_claims": "Claims were recorded as presented; this playback audit does not independently validate clinical correctness.",
+        "closing_structure": "Ranks the most serious sign, then points to the full video.",
+        "possible_explanation": "Numbered promise with a ranked payoff; 30-second retention 81.82%, end 27.27%, stayed 46.2%. Uploaded captions show raw (m:ss) timecodes throughout.",
+        "alternative_explanation": "Only 18 views and 144 impressions: each curve step is one viewer (9.1 pts), so the curve cannot support a comparison with FDLU7tX7qNM.",
+        "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "COMPLETE_LEVELS_AND_CUTS_ONLY",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
+      "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
       "relevant_private_studio_analytics": "LIFETIME_BASIC_ROW_VERIFIED",
@@ -14467,8 +14802,8 @@
         "compared_to_other_videos_at_end_as_exported": -32.96
       },
       "retention_investigation": {
-        "status": "CURVE_PROFILE_COMPLETE_CONTENT_LINK_PENDING",
-        "content_linkage": "NOT_PLAYBACK_VERIFIED",
+        "status": "CONTENT_LINKED_COMPLETE",
+        "content_linkage": "SEEK_SAMPLED_PLAYBACK",
         "retention_at_3_seconds_percent": 100.0,
         "retention_at_5_seconds_percent": 100.0,
         "retention_at_30_seconds_percent": 81.82,
@@ -14514,11 +14849,11 @@
             "timestamp": "0:02"
           }
         ],
-        "possible_explanation": null,
-        "alternative_explanation": null,
-        "limitation": "Numeric curve profile complete, but individual dip/spike meaning remains open until content at those timestamps is playback-verified."
+        "possible_explanation": "Numbered promise with a ranked payoff; 30-second retention 81.82%, end 27.27%, stayed 46.2%. Uploaded captions show raw (m:ss) timecodes throughout.",
+        "alternative_explanation": "Only 18 views and 144 impressions: each curve step is one viewer (9.1 pts), so the curve cannot support a comparison with FDLU7tX7qNM.",
+        "limitation": "Curve events were linked to observed frames and captions at those timestamps; dips remain associative, not causal."
       },
-      "remaining_gap": "Full playback and detailed editing audit; Retention timestamps not yet linked to actual playback; Thumbnail commentary quality revalidation",
+      "remaining_gap": "Seek-sampled frames plus a continuous level/cut pass; speech and music were not heard and no complete audiovisual editing review exists; Thumbnail commentary quality revalidation",
       "user_action_required": "No for public playback; authenticated Studio source table would be required for uncaptured extended rows and audience reports"
     },
     {
@@ -14576,6 +14911,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Outdoor standing shot, different from the channel's usual seated clinic frame; icons and a closing checklist.",
+        "continuous_signal_pass": null,
         "audio": "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor.",
         "b_roll_and_medical_visuals": "Outdoor standing shot, different from the channel's usual seated clinic frame; icons and a closing checklist.",
         "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
@@ -14588,6 +14924,14 @@
         "possible_explanation": "Patient-problem framing plus a checklist payoff may hold viewers; 30-second retention 39.47% versus 18.52%, end 19.74% versus 3.7%.",
         "alternative_explanation": "199 versus 77 views; the outdoor setting, title and topic specificity all differ at once.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -15191,6 +15535,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -15297,13 +15649,66 @@
         "quality_status": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
         "quality_limitation": "Image identity is verified, but several analytical fields were generated from a repeated template and were not re-certified in this pass."
       },
-      "public_watch_page_accessible": "PUBLIC_URL_REGISTERED_NOT_REPLAYED_THIS_PASS",
-      "playback_inspected": "NOT_STARTED",
-      "video_actually_reviewed": "NOT_COMPLETE",
-      "full_editing_audit_complete": "NOT_STARTED",
-      "editing_observations_recorded": "NOT_COMPLETE",
-      "playback_audit": null,
-      "investigation_status": "TRANSCRIPT_ONLY",
+      "public_watch_page_accessible": "VERIFIED_PUBLIC_2026-09-28",
+      "playback_inspected": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "video_actually_reviewed": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "full_editing_audit_complete": "SAMPLED_FRAMES_ONLY",
+      "editing_observations_recorded": "SAMPLED_FRAMES_ONLY",
+      "playback_audit": {
+        "status": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+        "full_editing_audit_status": "SAMPLED_FRAMES_ONLY",
+        "observed_at": "2026-09-28",
+        "source": "https://www.youtube.com/watch?v=KPYHy7MDmLM",
+        "playback_speed": "muted seeks; about 1.8 s of playback at each anchor",
+        "completion_evidence": "Not watched continuously. Frames viewed and on-screen captions read at each listed anchor, chosen from exported retention events plus coverage points to the end.",
+        "comparison": "Circulation long-form: weaker early holding versus NznebmgFwXI",
+        "timestamps": [
+          "0:02 doctor in dim office behind kinetic OVER 50? NOTICING SMALL CHANGES, plus a burned-in all-caps subtitle bar MANY PEOPLE OVER FIFTY NOTICE THIS BUT IGNORE IT and the player caption (three text layers); caption: Many people over 50 notice this but ignore it (curve -15.8 pts at 1% and -10.5 at 2-3%)",
+          "0:05 stock B-roll of a clinician with typewriter-style HEA[RT] text; burned-in HEART SPECIALIST QUIETLY WATCH",
+          "0:30 doctor with cartoon-doctor sticker, OR YOUR HEALTHCARE PROVIDER; caption: It gives small hint and this is up to the doctors",
+          "1:02 stock clinician B-roll; DO YOU KEEP A STEADY PACE OR FADE AFTER A FEW (curve -5.3 pts at 52%)",
+          "1:07 doctor; CAN YOU TELL YOUR NAME IN ONE SENTENCE; caption: Can you talk comfortably or need to pause? (curve -10.5 pts at 57%)",
+          "1:32 stock family on a sofa; IT'S ABOUT INDEPENDENCE IT MEANS VISITING LOVED",
+          "1:49 SUBSCRIBED button animation over doctor; caption: Subscribe for calm, practical advice (curve -5.3 pts at 93%)"
+        ],
+        "opening_presentation": "Generic over-50 warning (notice this but ignore it) with no named symptom; three simultaneous text layers.",
+        "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
+        "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
+        "camera_framing": "Dim office, frequent stock B-roll, stickers and kinetic words; burned-in captions duplicate the player captions.",
+        "continuous_signal_pass": {
+          "reached_s": 116.8,
+          "duration_s": 116.9,
+          "hard_cuts": 33,
+          "rms_p10": 0.1323,
+          "rms_median": 0.1837,
+          "rms_p90": 0.255,
+          "share_below_0_01": 0.008,
+          "method": "Continuous 2x playback to the end, audio routed to an analyser only; hard-cut detector on downscaled frames. Fades and overlay changes are not counted as cuts.",
+          "cuts_per_minute": 16.9,
+          "audio_level_reading": "almost no near-silent samples (consistent with a background bed or heavy compression; not heard)"
+        },
+        "audio": "Not heard. Level-only measurement over continuous 2x playback: almost no near-silent samples (consistent with a background bed or heavy compression; not heard). Speech content is taken from on-screen captions.",
+        "b_roll_and_medical_visuals": "Dim office, frequent stock B-roll, stickers and kinetic words; burned-in captions duplicate the player captions.",
+        "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
+        "editing_rhythm": "33 hard cuts in 117 s (about 17 per minute); loudest and most compressed audio in the batch (median RMS 0.18, 10th percentile 0.13).",
+        "visual_variety": "33 hard cuts in 117 s (about 17 per minute); loudest and most compressed audio in the batch (median RMS 0.18, 10th percentile 0.13).",
+        "narrative_progression": "Generic over-50 warning (notice this but ignore it) with no named symptom; three simultaneous text layers. Share and subscribe animation.",
+        "repetition": "No repeated segment was counted as a causal retention factor; loop behavior is noted where APV exceeded 100%.",
+        "medical_claims": "Claims were recorded as presented; this playback audit does not independently validate clinical correctness.",
+        "closing_structure": "Share and subscribe animation.",
+        "possible_explanation": "Retention falls to 57.89% by 3 s despite fast cutting: the opener withholds the symptom and the screen is crowded with text. 30-second retention 36.84%.",
+        "alternative_explanation": "20 views (each step about 5 pts); only returning viewers appear in the segment export. CTR 6.59% suggests the package attracted clicks the opening did not satisfy, but the sample is tiny.",
+        "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "COMPLETE_LEVELS_AND_CUTS_ONLY",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
+      "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
       "relevant_private_studio_analytics": "LIFETIME_BASIC_ROW_VERIFIED",
@@ -15813,8 +16218,8 @@
         "compared_to_other_videos_at_end_as_exported": -36.3
       },
       "retention_investigation": {
-        "status": "CURVE_PROFILE_COMPLETE_CONTENT_LINK_PENDING",
-        "content_linkage": "NOT_PLAYBACK_VERIFIED",
+        "status": "CONTENT_LINKED_COMPLETE",
+        "content_linkage": "SEEK_SAMPLED_PLAYBACK",
         "retention_at_3_seconds_percent": 57.89,
         "retention_at_5_seconds_percent": 57.89,
         "retention_at_30_seconds_percent": 36.84,
@@ -15860,11 +16265,11 @@
             "timestamp": "1:06"
           }
         ],
-        "possible_explanation": null,
-        "alternative_explanation": null,
-        "limitation": "Numeric curve profile complete, but individual dip/spike meaning remains open until content at those timestamps is playback-verified."
+        "possible_explanation": "Retention falls to 57.89% by 3 s despite fast cutting: the opener withholds the symptom and the screen is crowded with text. 30-second retention 36.84%.",
+        "alternative_explanation": "20 views (each step about 5 pts); only returning viewers appear in the segment export. CTR 6.59% suggests the package attracted clicks the opening did not satisfy, but the sample is tiny.",
+        "limitation": "Curve events were linked to observed frames and captions at those timestamps; dips remain associative, not causal."
       },
-      "remaining_gap": "Full playback and detailed editing audit; Retention timestamps not yet linked to actual playback; Thumbnail commentary quality revalidation",
+      "remaining_gap": "Seek-sampled frames plus a continuous level/cut pass; speech and music were not heard and no complete audiovisual editing review exists; Thumbnail commentary quality revalidation",
       "user_action_required": "No for public playback; authenticated Studio source table would be required for uncaptured extended rows and audience reports"
     },
     {
@@ -15905,6 +16310,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -16489,13 +16902,64 @@
         "quality_status": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
         "quality_limitation": "Image identity is verified, but several analytical fields were generated from a repeated template and were not re-certified in this pass."
       },
-      "public_watch_page_accessible": "PUBLIC_URL_REGISTERED_NOT_REPLAYED_THIS_PASS",
-      "playback_inspected": "NOT_STARTED",
-      "video_actually_reviewed": "NOT_COMPLETE",
-      "full_editing_audit_complete": "NOT_STARTED",
-      "editing_observations_recorded": "NOT_COMPLETE",
-      "playback_audit": null,
-      "investigation_status": "TRANSCRIPT_ONLY",
+      "public_watch_page_accessible": "VERIFIED_PUBLIC_2026-09-28",
+      "playback_inspected": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "video_actually_reviewed": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "full_editing_audit_complete": "SAMPLED_FRAMES_ONLY",
+      "editing_observations_recorded": "SAMPLED_FRAMES_ONLY",
+      "playback_audit": {
+        "status": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+        "full_editing_audit_status": "SAMPLED_FRAMES_ONLY",
+        "observed_at": "2026-09-28",
+        "source": "https://www.youtube.com/watch?v=hUSVbcHVeVw",
+        "playback_speed": "muted seeks; about 1.8 s of playback at each anchor",
+        "completion_evidence": "Not watched continuously. Frames viewed and on-screen captions read at each listed anchor, chosen from exported retention events plus coverage points to the end.",
+        "comparison": "Artery-food Short: format contrast with the long-form CZ3gAUzdTAg",
+        "timestamps": [
+          "0:02 washed-out, over-exposed near-white frame with a faint figure; caption: 5 Foods That Clean Your Arteries These 5 foods help support healthy arteries (caption track begins with a heading line)",
+          "0:05 3D anatomy figure with glowing arteries, ARTERIES NARROW, CHOLESTEROL, INFLAMMATION warning (curve -5.3 to -5.9 pts at 12-14%)",
+          "0:12 seated doctor, DOCTOR APPROVED TOP 5 FOODS; caption uses emoji numerals: 1 Fatty fish like salmon",
+          "0:27 olive close-up, 5. OLIVE OIL MEDITERRANEAN DIET (curve -4.0 pts at 69%)",
+          "0:37 doctor, SAVE YOUR HEART and FULL VIDEO arrow; caption: Watch it next (curve -11.8 pts at 98%)"
+        ],
+        "opening_presentation": "Title-card style list promise over a pale frame, then an anatomy warning before the doctor appears at about 0:12.",
+        "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
+        "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
+        "camera_framing": "Anatomy render, food B-roll and doctor inserts; numbered cards.",
+        "continuous_signal_pass": {
+          "reached_s": 38.1,
+          "duration_s": 38.2,
+          "hard_cuts": 12,
+          "rms_p10": 0.0234,
+          "rms_median": 0.0921,
+          "rms_p90": 0.1622,
+          "share_below_0_01": 0.027,
+          "method": "Continuous 2x playback to the end, audio routed to an analyser only; hard-cut detector on downscaled frames. Fades and overlay changes are not counted as cuts.",
+          "cuts_per_minute": 18.8,
+          "audio_level_reading": "almost no near-silent samples (consistent with a background bed or heavy compression; not heard)"
+        },
+        "audio": "Not heard. Level-only measurement over continuous 2x playback: almost no near-silent samples (consistent with a background bed or heavy compression; not heard). Speech content is taken from on-screen captions.",
+        "b_roll_and_medical_visuals": "Anatomy render, food B-roll and doctor inserts; numbered cards.",
+        "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
+        "editing_rhythm": "12 hard cuts in 38 s (about 19 per minute).",
+        "visual_variety": "12 hard cuts in 38 s (about 19 per minute).",
+        "narrative_progression": "Title-card style list promise over a pale frame, then an anatomy warning before the doctor appears at about 0:12. Explicit pointer to the full video.",
+        "repetition": "No repeated segment was counted as a causal retention factor; loop behavior is noted where APV exceeded 100%.",
+        "medical_claims": "Claims were recorded as presented; this playback audit does not independently validate clinical correctness.",
+        "closing_structure": "Explicit pointer to the full video.",
+        "possible_explanation": "A numbered five-item list gives a visible progress path; 30-second retention 59.87% and stayed-to-watch 39.7%.",
+        "alternative_explanation": "Short-form retention is not comparable to the long-form partner. The title promises to reverse artery damage while the captions say support healthy arteries, a claim mismatch that metrics cannot evaluate.",
+        "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "COMPLETE_LEVELS_AND_CUTS_ONLY",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
+      "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
       "relevant_private_studio_analytics": "LIFETIME_BASIC_ROW_VERIFIED",
@@ -17005,8 +17469,8 @@
         "compared_to_other_videos_at_end_as_exported": 56.96
       },
       "retention_investigation": {
-        "status": "CURVE_PROFILE_COMPLETE_CONTENT_LINK_PENDING",
-        "content_linkage": "NOT_PLAYBACK_VERIFIED",
+        "status": "CONTENT_LINKED_COMPLETE",
+        "content_linkage": "SEEK_SAMPLED_PLAYBACK",
         "retention_at_3_seconds_percent": 127.63,
         "retention_at_5_seconds_percent": 114.47,
         "retention_at_30_seconds_percent": 59.87,
@@ -17052,11 +17516,11 @@
             "timestamp": "0:17"
           }
         ],
-        "possible_explanation": null,
-        "alternative_explanation": null,
-        "limitation": "Numeric curve profile complete, but individual dip/spike meaning remains open until content at those timestamps is playback-verified."
+        "possible_explanation": "A numbered five-item list gives a visible progress path; 30-second retention 59.87% and stayed-to-watch 39.7%.",
+        "alternative_explanation": "Short-form retention is not comparable to the long-form partner. The title promises to reverse artery damage while the captions say support healthy arteries, a claim mismatch that metrics cannot evaluate.",
+        "limitation": "Curve events were linked to observed frames and captions at those timestamps; dips remain associative, not causal."
       },
-      "remaining_gap": "Full playback and detailed editing audit; Retention timestamps not yet linked to actual playback; Thumbnail commentary quality revalidation",
+      "remaining_gap": "Seek-sampled frames plus a continuous level/cut pass; speech and music were not heard and no complete audiovisual editing review exists; Thumbnail commentary quality revalidation",
       "user_action_required": "No for public playback; authenticated Studio source table would be required for uncaptured extended rows and audience reports"
     },
     {
@@ -17113,6 +17577,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Full-body vascular illustration with one centered warning label.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Full-body vascular illustration with one centered warning label.",
         "on_screen_typography": "Vertical vascular anatomy figure with one compact SLOW BLOOD FLOW warning; no doctor face and wide gray side bars.",
@@ -17125,6 +17590,14 @@
         "possible_explanation": "The 126.6% APV is consistent with looping or replay, not necessarily strong feed acceptance.",
         "alternative_explanation": "Low stayed-to-watch may reflect the first frame or the feed cohort rather than the 11-second edit itself.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -17722,13 +18195,65 @@
         "quality_status": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
         "quality_limitation": "Image identity is verified, but several analytical fields were generated from a repeated template and were not re-certified in this pass."
       },
-      "public_watch_page_accessible": "PUBLIC_URL_REGISTERED_NOT_REPLAYED_THIS_PASS",
-      "playback_inspected": "NOT_STARTED",
-      "video_actually_reviewed": "NOT_COMPLETE",
-      "full_editing_audit_complete": "NOT_STARTED",
-      "editing_observations_recorded": "NOT_COMPLETE",
-      "playback_audit": null,
-      "investigation_status": "TRANSCRIPT_ONLY",
+      "public_watch_page_accessible": "VERIFIED_PUBLIC_2026-09-28",
+      "playback_inspected": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "video_actually_reviewed": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "full_editing_audit_complete": "SAMPLED_FRAMES_ONLY",
+      "editing_observations_recorded": "SAMPLED_FRAMES_ONLY",
+      "playback_audit": {
+        "status": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+        "full_editing_audit_status": "SAMPLED_FRAMES_ONLY",
+        "observed_at": "2026-09-28",
+        "source": "https://www.youtube.com/watch?v=FDLU7tX7qNM",
+        "playback_speed": "muted seeks; about 1.8 s of playback at each anchor",
+        "completion_evidence": "Not watched continuously. Frames viewed and on-screen captions read at each listed anchor, chosen from exported retention events plus coverage points to the end.",
+        "comparison": "Ankle/calf Shorts: high-reach weaker holding versus p_iI0enaFX8",
+        "timestamps": [
+          "0:02 illustrated swollen ankles with red highlight circles and DON'T IGNORE, white letterbox; caption: Have you noticed swelling in your ankles? Don't ignore it",
+          "0:05 cut to seated doctor at desk, thumbs-up, no text (curve -9.9 pts at 10% and -7.5 at 11%)",
+          "0:07 SWOLLEN ANKLES? DON'T IGNORE THIS header, burned-in yellow-highlight subtitles duplicate the player caption: Many seniors think it's normal (curve -5.1 pts at 13%)",
+          "0:15 red-blood-cell illustration; caption: fluid can build up in the lower legs and ankles",
+          "0:30 WATCH FULL LONG VIDEO NOW CLICK HERE -> header over the doctor",
+          "0:43 SHARE SHARE SHARE graphic; caption: Like, comment HEALTH, and subscribe (emoji in the caption track)"
+        ],
+        "opening_presentation": "Illustrated symptom question, then a cut to a static doctor at about 0:04 that repeats the question.",
+        "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
+        "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
+        "camera_framing": "White letterbox, illustration, doctor at desk, header text and burned-in highlight subtitles.",
+        "continuous_signal_pass": {
+          "reached_s": 44.7,
+          "duration_s": 45.0,
+          "hard_cuts": 11,
+          "rms_p10": 0.0343,
+          "rms_median": 0.1259,
+          "rms_p90": 0.2242,
+          "share_below_0_01": 0.004,
+          "method": "Continuous 2x playback to the end, audio routed to an analyser only; hard-cut detector on downscaled frames. Fades and overlay changes are not counted as cuts.",
+          "cuts_per_minute": 14.7,
+          "audio_level_reading": "almost no near-silent samples (consistent with a background bed or heavy compression; not heard)"
+        },
+        "audio": "Not heard. Level-only measurement over continuous 2x playback: almost no near-silent samples (consistent with a background bed or heavy compression; not heard). Speech content is taken from on-screen captions.",
+        "b_roll_and_medical_visuals": "White letterbox, illustration, doctor at desk, header text and burned-in highlight subtitles.",
+        "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
+        "editing_rhythm": "11 hard cuts in 45 s; a cluster of cuts in the final 3 s.",
+        "visual_variety": "11 hard cuts in 45 s; a cluster of cuts in the final 3 s.",
+        "narrative_progression": "Illustrated symptom question, then a cut to a static doctor at about 0:04 that repeats the question. Share/like/comment call and a pointer to the long-form video.",
+        "repetition": "No repeated segment was counted as a causal retention factor; loop behavior is noted where APV exceeded 100%.",
+        "medical_claims": "Claims were recorded as presented; this playback audit does not independently validate clinical correctness.",
+        "closing_structure": "Share/like/comment call and a pointer to the long-form video.",
+        "possible_explanation": "The steepest losses (4.5-6 s) coincide with the switch from illustration to a static doctor who repeats the question; 30-second retention 18.77%. New viewers 17.78% versus returning 46.15% at the 30-second position.",
+        "alternative_explanation": "805 views and 44.0% stayed-to-watch: feed acceptance was good, so broad feed exposure to less-interested viewers can explain the lower holding.",
+        "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "COMPLETE_LEVELS_AND_CUTS_ONLY",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
+      "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
       "relevant_private_studio_analytics": "LIFETIME_BASIC_ROW_VERIFIED",
@@ -18238,8 +18763,8 @@
         "compared_to_other_videos_at_end_as_exported": 46.13
       },
       "retention_investigation": {
-        "status": "CURVE_PROFILE_COMPLETE_CONTENT_LINK_PENDING",
-        "content_linkage": "NOT_PLAYBACK_VERIFIED",
+        "status": "CONTENT_LINKED_COMPLETE",
+        "content_linkage": "SEEK_SAMPLED_PLAYBACK",
         "retention_at_3_seconds_percent": 102.95,
         "retention_at_5_seconds_percent": 84.72,
         "retention_at_30_seconds_percent": 18.77,
@@ -18285,11 +18810,11 @@
             "timestamp": "0:03"
           }
         ],
-        "possible_explanation": null,
-        "alternative_explanation": null,
-        "limitation": "Numeric curve profile complete, but individual dip/spike meaning remains open until content at those timestamps is playback-verified."
+        "possible_explanation": "The steepest losses (4.5-6 s) coincide with the switch from illustration to a static doctor who repeats the question; 30-second retention 18.77%. New viewers 17.78% versus returning 46.15% at the 30-second position.",
+        "alternative_explanation": "805 views and 44.0% stayed-to-watch: feed acceptance was good, so broad feed exposure to less-interested viewers can explain the lower holding.",
+        "limitation": "Curve events were linked to observed frames and captions at those timestamps; dips remain associative, not causal."
       },
-      "remaining_gap": "Full playback and detailed editing audit; Retention timestamps not yet linked to actual playback; Thumbnail commentary quality revalidation",
+      "remaining_gap": "Seek-sampled frames plus a continuous level/cut pass; speech and music were not heard and no complete audiovisual editing review exists; Thumbnail commentary quality revalidation",
       "user_action_required": "No for public playback; authenticated Studio source table would be required for uncaptured extended rows and audience reports"
     },
     {
@@ -18330,6 +18855,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -18936,6 +19469,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Single office shot, centered doctor, restrained caption treatment.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Single office shot, centered doctor, restrained caption treatment.",
         "on_screen_typography": "Vertical seated doctor frame with FEET FEEL IT FIRST and snowflake; simple but visually dark with wide side bars.",
@@ -18948,6 +19482,14 @@
         "possible_explanation": "The direct symptom phrase may be easier to parse than an anatomy-only opener.",
         "alternative_explanation": "The difference is small-sample and distribution-sensitive.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -19567,6 +20109,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Warm tint, doctor at desk, cartoon overlay, then generic walking footage and kinetic text.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Warm tint, doctor at desk, cartoon overlay, then generic walking footage and kinetic text.",
         "on_screen_typography": "Warm orange vertical frame; IT PREDICTS and HEART are separated by the doctor and a cartoon heart, weakening one-pass readability.",
@@ -19579,6 +20122,14 @@
         "possible_explanation": "Vague first-frame language may reduce swipe-stop clarity even though viewers who stayed watched much of the short video.",
         "alternative_explanation": "Its 1,212 views show broad distribution can coexist with low stayed-to-watch.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -20199,6 +20750,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Stock and illustrated cold open, then doctor with numbered list cards.",
+        "continuous_signal_pass": null,
         "audio": "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor.",
         "b_roll_and_medical_visuals": "Stock and illustrated cold open, then doctor with numbered list cards.",
         "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
@@ -20211,6 +20763,14 @@
         "possible_explanation": "Audience-qualified permission framing plus a numbered promise (three things) may give viewers a reason to stay; 30-second retention 52.23% versus 23.08%.",
         "alternative_explanation": "341 versus 87 views and a permission-versus-warning title difference; distribution scale differs.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -20830,6 +21390,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Doctor in a white coat and a large coffee cup; later split-screen/cartoon support; white captions.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Doctor in a white coat and a large coffee cup; later split-screen/cartoon support; white captions.",
         "on_screen_typography": "Vertical composite: Dr. Rehan in white coat, oversized coffee cup, WRONG QUESTION, and three small BP/heart/cups icons.",
@@ -20842,6 +21403,14 @@
         "possible_explanation": "The opener's withheld meaning and busier composition may increase early uncertainty.",
         "alternative_explanation": "Its audience and feed cohort may differ from QfRaG71ZA_0.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -21445,6 +22014,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -21565,6 +22142,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Doctor shot with a generic fatigued-person cutout and highlighted captions.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Doctor shot with a generic fatigued-person cutout and highlighted captions.",
         "on_screen_typography": "Vertical doctor frame with a generic fatigued-man cutout and sentence caption; the cutout competes with the doctor.",
@@ -21577,6 +22155,14 @@
         "possible_explanation": "Generic fatigue may feel less diagnostic or urgent than shortness of breath.",
         "alternative_explanation": "Low exposure and different viewer cohorts limit causal interpretation.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -22168,6 +22754,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -22786,6 +23380,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Doctor-led medium shot follows the staged opener; static office framing and karaoke-style captions.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Doctor-led medium shot follows the staged opener; static office framing and karaoke-style captions.",
         "on_screen_typography": "Vertical staged skeleton with coffee, large PALPITATIONS/ANXIETY/COFFEE text and wide brown side bars; dramatic but not a doctor frame.",
@@ -22798,6 +23393,14 @@
         "possible_explanation": "The concrete symptom and trigger may make the first frame easier to classify than the paired generic coffee question.",
         "alternative_explanation": "Audience mix, feed distribution and topic timing may explain part or all of the metric gap.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -23418,6 +24021,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Same seated clinic session as YVjbjcVo1is; sparse kinetic words.",
+        "continuous_signal_pass": null,
         "audio": "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor.",
         "b_roll_and_medical_visuals": "Same seated clinic session as YVjbjcVo1is; sparse kinetic words.",
         "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
@@ -23430,6 +24034,14 @@
         "possible_explanation": "Definition-first openers (also seen in YVjbjcVo1is) coincide with the steepest 0:04-0:08 losses; retention fell to 3.7% by the end.",
         "alternative_explanation": "77 views; the raw caption timecodes and the definition opener cannot be separated.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -23985,6 +24597,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -24091,13 +24711,67 @@
         "quality_status": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
         "quality_limitation": "Image identity is verified, but several analytical fields were generated from a repeated template and were not re-certified in this pass."
       },
-      "public_watch_page_accessible": "PUBLIC_URL_REGISTERED_NOT_REPLAYED_THIS_PASS",
-      "playback_inspected": "NOT_STARTED",
-      "video_actually_reviewed": "NOT_COMPLETE",
-      "full_editing_audit_complete": "NOT_STARTED",
-      "editing_observations_recorded": "NOT_COMPLETE",
-      "playback_audit": null,
-      "investigation_status": "TRANSCRIPT_ONLY",
+      "public_watch_page_accessible": "VERIFIED_PUBLIC_2026-09-28",
+      "playback_inspected": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "video_actually_reviewed": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "full_editing_audit_complete": "SAMPLED_FRAMES_ONLY",
+      "editing_observations_recorded": "SAMPLED_FRAMES_ONLY",
+      "playback_audit": {
+        "status": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+        "full_editing_audit_status": "SAMPLED_FRAMES_ONLY",
+        "observed_at": "2026-09-28",
+        "source": "https://www.youtube.com/watch?v=sUL6SU8LnEg",
+        "playback_speed": "muted seeks; about 1.8 s of playback at each anchor",
+        "completion_evidence": "Not watched continuously. Frames viewed and on-screen captions read at each listed anchor, chosen from exported retention events plus coverage points to the end.",
+        "comparison": "Ozempic long-form: weaker holding versus 8JdBlF-ragM",
+        "timestamps": [
+          "0:03 seated doctor at the same desk, name plate, no title card; caption: There are certain mythologies attributable to ozempic or semaglutide (curve -20 pts at 2% position)",
+          "0:13 illustrated crowd graphic Common Myths About Semaglutide (Ozempic) with Permanent Muscle Loss, Only for Diabetes, It Causes Cancer; caption shows a literal (0:20) timecode (curve -20 pts at 8%)",
+          "0:40 doctor; caption: multi endocrine neoplasia which is known as [medullary] thyroid carcinoma",
+          "1:09 eye-anatomy illustration with magnifier; caption: clinical (1:10) entities like optic",
+          "1:20 doctor gestures to his eye; caption: NAION, non arteritic ischemic anterior optic neuropathy (curve -10 pts at 49%)",
+          "1:55 doctor; caption: US health network comprising of 16000 patients",
+          "2:21 doctor; caption: 0.01% of patients who are taking ozempic (curve -10 pts at 85%)",
+          "2:40 doctor; caption: one should never stop ozempic or semaglutide only because he or she is scared"
+        ],
+        "opening_presentation": "Abstract myth-debunk statement with no question, symptom or viewer qualifier; first graphic arrives around 0:13.",
+        "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
+        "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
+        "camera_framing": "Same desk set as 8JdBlF-ragM; two illustrations (myth crowd, eye anatomy) and long single-shot explanation.",
+        "continuous_signal_pass": {
+          "reached_s": 165.2,
+          "duration_s": 165.5,
+          "hard_cuts": 23,
+          "rms_p10": 0.0083,
+          "rms_median": 0.1115,
+          "rms_p90": 0.1854,
+          "share_below_0_01": 0.108,
+          "method": "Continuous 2x playback to the end, audio routed to an analyser only; hard-cut detector on downscaled frames. Fades and overlay changes are not counted as cuts.",
+          "cuts_per_minute": 8.3,
+          "audio_level_reading": "natural speech gaps present"
+        },
+        "audio": "Not heard. Level-only measurement over continuous 2x playback: natural speech gaps present. Speech content is taken from on-screen captions.",
+        "b_roll_and_medical_visuals": "Same desk set as 8JdBlF-ragM; two illustrations (myth crowd, eye anatomy) and long single-shot explanation.",
+        "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
+        "editing_rhythm": "23 hard cuts in 166 s (about 8 per minute); the first hard cut is at 18.6 s.",
+        "visual_variety": "23 hard cuts in 166 s (about 8 per minute); the first hard cut is at 18.6 s.",
+        "narrative_progression": "Abstract myth-debunk statement with no question, symptom or viewer qualifier; first graphic arrives around 0:13. Reassurance not to stop the drug out of fear.",
+        "repetition": "No repeated segment was counted as a causal retention factor; loop behavior is noted where APV exceeded 100%.",
+        "medical_claims": "Claims were recorded as presented; this playback audit does not independently validate clinical correctness.",
+        "closing_structure": "Reassurance not to stop the drug out of fear.",
+        "possible_explanation": "Abstract myth framing and clinical terminology (medullary thyroid carcinoma, NAION) may raise effort for a lay audience; 30-second retention 40.0% and end 10.0%. The uploaded captions show raw (m:ss) timecodes.",
+        "alternative_explanation": "Only 10 views, so each curve step is one viewer; a 2.3x longer runtime also spreads loss over more time.",
+        "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "COMPLETE_LEVELS_AND_CUTS_ONLY",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
+      "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
       "relevant_private_studio_analytics": "LIFETIME_BASIC_ROW_VERIFIED",
@@ -24605,8 +25279,8 @@
         "compared_to_other_videos_at_end_as_exported": -23.45
       },
       "retention_investigation": {
-        "status": "CURVE_PROFILE_COMPLETE_CONTENT_LINK_PENDING",
-        "content_linkage": "NOT_PLAYBACK_VERIFIED",
+        "status": "CONTENT_LINKED_COMPLETE",
+        "content_linkage": "SEEK_SAMPLED_PLAYBACK",
         "retention_at_3_seconds_percent": 80.0,
         "retention_at_5_seconds_percent": 80.0,
         "retention_at_30_seconds_percent": 40.0,
@@ -24652,11 +25326,11 @@
             "timestamp": "1:00"
           }
         ],
-        "possible_explanation": null,
-        "alternative_explanation": null,
-        "limitation": "Numeric curve profile complete, but individual dip/spike meaning remains open until content at those timestamps is playback-verified."
+        "possible_explanation": "Abstract myth framing and clinical terminology (medullary thyroid carcinoma, NAION) may raise effort for a lay audience; 30-second retention 40.0% and end 10.0%. The uploaded captions show raw (m:ss) timecodes.",
+        "alternative_explanation": "Only 10 views, so each curve step is one viewer; a 2.3x longer runtime also spreads loss over more time.",
+        "limitation": "Curve events were linked to observed frames and captions at those timestamps; dips remain associative, not causal."
       },
-      "remaining_gap": "Full playback and detailed editing audit; Retention timestamps not yet linked to actual playback; Thumbnail commentary quality revalidation",
+      "remaining_gap": "Seek-sampled frames plus a continuous level/cut pass; speech and music were not heard and no complete audiovisual editing review exists; Thumbnail commentary quality revalidation",
       "user_action_required": "No for public playback; authenticated Studio source table would be required for uncaptured extended rows and audience reports"
     },
     {
@@ -24691,13 +25365,65 @@
         "quality_status": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
         "quality_limitation": "Image identity is verified, but several analytical fields were generated from a repeated template and were not re-certified in this pass."
       },
-      "public_watch_page_accessible": "PUBLIC_URL_REGISTERED_NOT_REPLAYED_THIS_PASS",
-      "playback_inspected": "NOT_STARTED",
-      "video_actually_reviewed": "NOT_COMPLETE",
-      "full_editing_audit_complete": "NOT_STARTED",
-      "editing_observations_recorded": "NOT_COMPLETE",
-      "playback_audit": null,
-      "investigation_status": "TRANSCRIPT_ONLY",
+      "public_watch_page_accessible": "VERIFIED_PUBLIC_2026-09-28",
+      "playback_inspected": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "video_actually_reviewed": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "full_editing_audit_complete": "SAMPLED_FRAMES_ONLY",
+      "editing_observations_recorded": "SAMPLED_FRAMES_ONLY",
+      "playback_audit": {
+        "status": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+        "full_editing_audit_status": "SAMPLED_FRAMES_ONLY",
+        "observed_at": "2026-09-28",
+        "source": "https://www.youtube.com/watch?v=8JdBlF-ragM",
+        "playback_speed": "muted seeks; about 1.8 s of playback at each anchor",
+        "completion_evidence": "Not watched continuously. Frames viewed and on-screen captions read at each listed anchor, chosen from exported retention events plus coverage points to the end.",
+        "comparison": "Ozempic long-form: stronger holding versus sUL6SU8LnEg",
+        "timestamps": [
+          "0:02 seated doctor at desk with name plate, OZEMPIC / SEMAGLUTIDE lower title; caption: When it comes to weight loss, we always talk about [Ozempic] or semaglutide",
+          "0:04 blurred close-up B-roll of an injector pen (curve -4.9 pts at 2-4% position)",
+          "0:20 doctor on camera, LOSS OF LIBIDO title; caption: is Ozempic vagina or loss of libido because of this drug",
+          "0:44 anatomical cross-section illustration; caption: fat loss occurs from those areas as well (curve -3.3 pts at 61%)",
+          "0:58 animated RISK gauge with DAYS label; caption: lose fat aggressively rapidly over the course of days instead of months (curve -3.3 pts at 81%)",
+          "1:08 doctor with end-screen video cards; caption: if we take care of our hydration status"
+        ],
+        "opening_presentation": "Names the drug and the common weight-loss framing, then turns to the sexual-health side effect by 0:20.",
+        "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
+        "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
+        "camera_framing": "Seated desk shot alternating with pen B-roll, anatomy illustration and an animated risk gauge.",
+        "continuous_signal_pass": {
+          "reached_s": 70.1,
+          "duration_s": 70.3,
+          "hard_cuts": 22,
+          "rms_p10": 0.038,
+          "rms_median": 0.0624,
+          "rms_p90": 0.0905,
+          "share_below_0_01": 0.005,
+          "method": "Continuous 2x playback to the end, audio routed to an analyser only; hard-cut detector on downscaled frames. Fades and overlay changes are not counted as cuts.",
+          "cuts_per_minute": 18.8,
+          "audio_level_reading": "almost no near-silent samples (consistent with a background bed or heavy compression; not heard)"
+        },
+        "audio": "Not heard. Level-only measurement over continuous 2x playback: almost no near-silent samples (consistent with a background bed or heavy compression; not heard). Speech content is taken from on-screen captions.",
+        "b_roll_and_medical_visuals": "Seated desk shot alternating with pen B-roll, anatomy illustration and an animated risk gauge.",
+        "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
+        "editing_rhythm": "22 hard cuts in 70 s (about 19 per minute) measured in the continuous 2x signal pass.",
+        "visual_variety": "22 hard cuts in 70 s (about 19 per minute) measured in the continuous 2x signal pass.",
+        "narrative_progression": "Names the drug and the common weight-loss framing, then turns to the sexual-health side effect by 0:20. Hydration advice over end-screen cards.",
+        "repetition": "No repeated segment was counted as a causal retention factor; loop behavior is noted where APV exceeded 100%.",
+        "medical_claims": "Claims were recorded as presented; this playback audit does not independently validate clinical correctness.",
+        "closing_structure": "Hydration advice over end-screen cards.",
+        "possible_explanation": "Short runtime and a specific, rarely discussed side effect; 30-second retention 55.74% and end retention 45.9%. New viewers held far better than returning viewers (62.75% vs 20.0% at the 30-second position), so the topic may have reached a new-audience cohort.",
+        "alternative_explanation": "78 views; each curve step is roughly 1.6 viewers. No extended Studio row was captured for this video, so stayed/swiped values are unavailable.",
+        "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "COMPLETE_LEVELS_AND_CUTS_ONLY",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
+      "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
       "relevant_private_studio_analytics": "LIFETIME_BASIC_ROW_VERIFIED",
@@ -25195,8 +25921,8 @@
         "compared_to_other_videos_at_end_as_exported": 63.97
       },
       "retention_investigation": {
-        "status": "CURVE_PROFILE_COMPLETE_CONTENT_LINK_PENDING",
-        "content_linkage": "NOT_PLAYBACK_VERIFIED",
+        "status": "CONTENT_LINKED_COMPLETE",
+        "content_linkage": "SEEK_SAMPLED_PLAYBACK",
         "retention_at_3_seconds_percent": 78.69,
         "retention_at_5_seconds_percent": 78.69,
         "retention_at_30_seconds_percent": 55.74,
@@ -25242,11 +25968,11 @@
             "timestamp": "0:49"
           }
         ],
-        "possible_explanation": null,
-        "alternative_explanation": null,
-        "limitation": "Numeric curve profile complete, but individual dip/spike meaning remains open until content at those timestamps is playback-verified."
+        "possible_explanation": "Short runtime and a specific, rarely discussed side effect; 30-second retention 55.74% and end retention 45.9%. New viewers held far better than returning viewers (62.75% vs 20.0% at the 30-second position), so the topic may have reached a new-audience cohort.",
+        "alternative_explanation": "78 views; each curve step is roughly 1.6 viewers. No extended Studio row was captured for this video, so stayed/swiped values are unavailable.",
+        "limitation": "Curve events were linked to observed frames and captions at those timestamps; dips remain associative, not causal."
       },
-      "remaining_gap": "Full playback and detailed editing audit; Retention timestamps not yet linked to actual playback; Extended Studio row metrics not captured in the authenticated visible table; Thumbnail commentary quality revalidation",
+      "remaining_gap": "Seek-sampled frames plus a continuous level/cut pass; speech and music were not heard and no complete audiovisual editing review exists; Extended Studio row metrics not captured in the authenticated visible table; Thumbnail commentary quality revalidation",
       "user_action_required": "No for public playback; authenticated Studio source table would be required for uncaptured extended rows and audience reports"
     },
     {
@@ -25308,6 +26034,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Same set as t1j-p9pkw3Y; demo inset and summary cards.",
+        "continuous_signal_pass": null,
         "audio": "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor.",
         "b_roll_and_medical_visuals": "Same set as t1j-p9pkw3Y; demo inset and summary cards.",
         "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
@@ -25320,6 +26047,14 @@
         "possible_explanation": "Heavy early losses at 0:02 and 0:07 happen despite a demo inset; the credential intro at 0:31 again coincides with a dip, as in 5oPzZjfNgII at 0:27.",
         "alternative_explanation": "Views are small (109), and a longer runtime spreads the same audience thinner.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -25923,6 +26658,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -26029,13 +26772,66 @@
         "quality_status": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
         "quality_limitation": "Image identity is verified, but several analytical fields were generated from a repeated template and were not re-certified in this pass."
       },
-      "public_watch_page_accessible": "PUBLIC_URL_REGISTERED_NOT_REPLAYED_THIS_PASS",
-      "playback_inspected": "NOT_STARTED",
-      "video_actually_reviewed": "NOT_COMPLETE",
-      "full_editing_audit_complete": "NOT_STARTED",
-      "editing_observations_recorded": "NOT_COMPLETE",
-      "playback_audit": null,
-      "investigation_status": "TRANSCRIPT_ONLY",
+      "public_watch_page_accessible": "VERIFIED_PUBLIC_2026-09-28",
+      "playback_inspected": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "video_actually_reviewed": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+      "full_editing_audit_complete": "SAMPLED_FRAMES_ONLY",
+      "editing_observations_recorded": "SAMPLED_FRAMES_ONLY",
+      "playback_audit": {
+        "status": "SEEK_SAMPLED_AT_RETENTION_EVENTS",
+        "full_editing_audit_status": "SAMPLED_FRAMES_ONLY",
+        "observed_at": "2026-09-28",
+        "source": "https://www.youtube.com/watch?v=CZ3gAUzdTAg",
+        "playback_speed": "muted seeks; about 1.8 s of playback at each anchor",
+        "completion_evidence": "Not watched continuously. Frames viewed and on-screen captions read at each listed anchor, chosen from exported retention events plus coverage points to the end.",
+        "comparison": "Artery-food long-form: format contrast with the Short hUSVbcHVeVw",
+        "timestamps": [
+          "0:02 doctor in a dim room behind SUDDEN BLOCKAGE?; burned-in subtitle bar plus player caption: Most people think clogged arteries happen suddenly (curve -9.5 pts at 1% and 2%)",
+          "0:05 artery B-roll, BUILDS OVER YEARS",
+          "0:12 doctor in bright office, THE GOOD NEWS (curve -7.7 pts at 6%)",
+          "0:18 food-grid B-roll, TOP 5 HEART FOODS; caption: Today, I'll show you five foods that (curve -3.9 pts at 8%)",
+          "0:45 1. FATTY FISH card; caption: The first food is fatty fish such as salmon, sardines, and mackerel",
+          "1:50 doctor with nuts icon; NUTS CONTAIN A COMBINATION OF HEALTHY FATS",
+          "3:20 NEXT: BALANCE TEST card; caption: reveal important clues about your health"
+        ],
+        "opening_presentation": "Misconception opener (sudden blockage) and promise of five foods; first food named at about 0:43.",
+        "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
+        "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
+        "camera_framing": "Two different room setups (dim and bright), food and artery B-roll, burned-in subtitles duplicating player captions.",
+        "continuous_signal_pass": {
+          "reached_s": 210.1,
+          "duration_s": 210.2,
+          "hard_cuts": 64,
+          "rms_p10": 0.0861,
+          "rms_median": 0.1334,
+          "rms_p90": 0.1902,
+          "share_below_0_01": 0.001,
+          "method": "Continuous 2x playback to the end, audio routed to an analyser only; hard-cut detector on downscaled frames. Fades and overlay changes are not counted as cuts.",
+          "cuts_per_minute": 18.3,
+          "audio_level_reading": "almost no near-silent samples (consistent with a background bed or heavy compression; not heard)"
+        },
+        "audio": "Not heard. Level-only measurement over continuous 2x playback: almost no near-silent samples (consistent with a background bed or heavy compression; not heard). Speech content is taken from on-screen captions.",
+        "b_roll_and_medical_visuals": "Two different room setups (dim and bright), food and artery B-roll, burned-in subtitles duplicating player captions.",
+        "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
+        "editing_rhythm": "64 hard cuts in 210 s (about 18 per minute); continuous audio floor.",
+        "visual_variety": "64 hard cuts in 210 s (about 18 per minute); continuous audio floor.",
+        "narrative_progression": "Misconception opener (sudden blockage) and promise of five foods; first food named at about 0:43. Next-video tease (balance test).",
+        "repetition": "No repeated segment was counted as a causal retention factor; loop behavior is noted where APV exceeded 100%.",
+        "medical_claims": "Claims were recorded as presented; this playback audit does not independently validate clinical correctness.",
+        "closing_structure": "Next-video tease (balance test).",
+        "possible_explanation": "The list promise at 0:18 and first item at 0:43 leave a 25 s gap; the curve loses about 34 pts by 10 s. End retention 10.39%.",
+        "alternative_explanation": "Highest impressions in the batch (5,737) at 3.7% CTR, so a broader and less intent-matched audience; long-form and Short curves cannot be compared directly.",
+        "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "COMPLETE_LEVELS_AND_CUTS_ONLY",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
+      "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
       "relevant_private_studio_analytics": "LIFETIME_BASIC_ROW_VERIFIED",
@@ -26545,8 +27341,8 @@
         "compared_to_other_videos_at_end_as_exported": -32.92
       },
       "retention_investigation": {
-        "status": "CURVE_PROFILE_COMPLETE_CONTENT_LINK_PENDING",
-        "content_linkage": "NOT_PLAYBACK_VERIFIED",
+        "status": "CONTENT_LINKED_COMPLETE",
+        "content_linkage": "SEEK_SAMPLED_PLAYBACK",
         "retention_at_3_seconds_percent": 88.72,
         "retention_at_5_seconds_percent": 79.23,
         "retention_at_30_seconds_percent": 43.92,
@@ -26592,11 +27388,11 @@
             "timestamp": "1:52"
           }
         ],
-        "possible_explanation": null,
-        "alternative_explanation": null,
-        "limitation": "Numeric curve profile complete, but individual dip/spike meaning remains open until content at those timestamps is playback-verified."
+        "possible_explanation": "The list promise at 0:18 and first item at 0:43 leave a 25 s gap; the curve loses about 34 pts by 10 s. End retention 10.39%.",
+        "alternative_explanation": "Highest impressions in the batch (5,737) at 3.7% CTR, so a broader and less intent-matched audience; long-form and Short curves cannot be compared directly.",
+        "limitation": "Curve events were linked to observed frames and captions at those timestamps; dips remain associative, not causal."
       },
-      "remaining_gap": "Full playback and detailed editing audit; Retention timestamps not yet linked to actual playback; Thumbnail commentary quality revalidation",
+      "remaining_gap": "Seek-sampled frames plus a continuous level/cut pass; speech and music were not heard and no complete audiovisual editing review exists; Thumbnail commentary quality revalidation",
       "user_action_required": "No for public playback; authenticated Studio source table would be required for uncaptured extended rows and audience reports"
     },
     {
@@ -26637,6 +27433,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -26737,6 +27541,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -26837,6 +27649,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -27439,6 +28259,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "NO_CURVE_DISCLOSED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -27551,6 +28379,14 @@
       "full_editing_audit_complete": "NOT_STARTED",
       "editing_observations_recorded": "NOT_COMPLETE",
       "playback_audit": null,
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CURVE_NOT_YET_LINKED",
+        "sampled_playback": "NOT_STARTED",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
+      },
       "investigation_status": "TRANSCRIPT_ONLY",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -28102,6 +28938,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Seated study shot with numbered setup cards and kinetic keywords.",
+        "continuous_signal_pass": null,
         "audio": "Muted; audio not heard. Speech content is taken from on-screen captions at each anchor.",
         "b_roll_and_medical_visuals": "Seated study shot with numbered setup cards and kinetic keywords.",
         "on_screen_typography": "Thumbnail not revalidated in this batch; see thumbnail_observation.",
@@ -28114,6 +28951,14 @@
         "possible_explanation": "A participatory test the viewer can perform gives a concrete reason to stay; 30-second retention 59.74% versus 41.12%, end 22.08% versus 14.95%.",
         "alternative_explanation": "Derived APV is lower (22.2% vs 29.2%), so the advantage is concentrated early; audience and traffic mix differ.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "COMPLETE_NEEDS_CORRECTION_TEMPLATED_COMMENTARY",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "COMPLETE",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
@@ -28733,6 +29578,7 @@
         "doctor_delivery": "Direct clinician explanation with visible gestures; delivery content was reviewed with captions/transcript.",
         "speech_clarity_and_pacing": "Speech sequence was intelligible through player captions; precise vocal prosody was not independently scored.",
         "camera_framing": "Doctor in black scrubs changes to illustrative walking footage with large labels and captions.",
+        "continuous_signal_pass": null,
         "audio": "Playback completed, but no isolated headphone/loudness/noise measurement was made.",
         "b_roll_and_medical_visuals": "Doctor in black scrubs changes to illustrative walking footage with large labels and captions.",
         "on_screen_typography": "Vertical direct-to-camera office frame with only START; doctor and gesture dominate, with muted red side bars.",
@@ -28745,6 +29591,14 @@
         "possible_explanation": "A clear test framing plus early visual change may support feed acceptance.",
         "alternative_explanation": "Higher acceptance did not produce the highest views; distribution scale differed.",
         "limitations": "Association only. Traffic source, audience cohort and publication context remain uncontrolled; audio was not instrument-tested."
+      },
+      "completion_states": {
+        "transcript_analysis": "STRUCTURAL_ANALYSIS_REUSED",
+        "thumbnail_inspection": "REVALIDATED_PRIORITY_2026-09-28",
+        "retention_analysis": "CONTENT_LINKED",
+        "sampled_playback": "REPORTED_FULL_PLAYBACK",
+        "continuous_signal_pass": "NOT_STARTED",
+        "complete_audiovisual_editing_review": "NOT_VERIFIED"
       },
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
