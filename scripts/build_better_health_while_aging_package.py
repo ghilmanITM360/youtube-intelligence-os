@@ -55,6 +55,7 @@ CHANNEL_HANDLE = "@BetterHealthWhileAging"
 CHANNEL_ID = "UCFpxvukIqCAUA7YizI-q9Dw"
 COLLECTION_DATE = "2026-09-26"
 PUBLIC_VIDEO_COUNT = sum(run["video_count"] for run in RUNS)
+THUMBNAIL_EVIDENCE = ROOT / "docs/research/senior-health-2026-09-25/forensic-v3/BETTER-HEALTH-WHILE-AGING-THUMBNAIL-EVIDENCE.json"
 
 ALL_VIDEO_HEADERS = [
     "#", "Video ID", "Title", "Video URL", "Published (UTC)", "Date", "Day", "Duration", "Sec", "Views",
@@ -131,6 +132,11 @@ def load_videos() -> list[dict]:
     seen_ids = [record["id"] for record in records]
     assert len(seen_ids) == len(set(seen_ids)), "duplicate video IDs across BHWA Apify runs"
     records.sort(key=lambda item: item["date"], reverse=True)
+    thumbnail_recoveries = {
+        row["video_id"]: row["thumbnail_url"]
+        for row in json.loads(THUMBNAIL_EVIDENCE.read_text(encoding="utf-8"))["observations"]
+        if row.get("purpose") == "Resolve source acquisition's missing thumbnail URL"
+    }
     videos = []
     for index, record in enumerate(records, start=1):
         video_id = record["id"]
@@ -163,7 +169,7 @@ def load_videos() -> list[dict]:
             "transcript": transcript_body,
             "words": word_count(transcript_body),
             "filename": f"{index:03d}_{video_id}_{clean_title_for_filename(record['title'])}.txt",
-            "thumbnail": record.get("thumbnailUrl") or "",
+            "thumbnail": record.get("thumbnailUrl") or thumbnail_recoveries.get(video_id, ""),
             "members_only": bool(record.get("isMembersOnly")),
             "paid": bool(record.get("isPaidContent")),
             "comments_off": bool(record.get("commentsTurnedOff")),

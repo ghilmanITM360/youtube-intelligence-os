@@ -1,5 +1,19 @@
 # Senior Health Acquisition Checkpoint
 
+## Better Health While Aging resumed forensic assignment — Batch A (2026-09-27)
+
+Status: **PARTIAL; assignment remains IN PROGRESS.**
+
+- Branch recovered: `research/senior-health-acquisition-phase-2`; starting local/remote commit `655db99`.
+- Reverified population: 98 unique videos, 80 regular videos, 18 Shorts, 98 real transcripts, 0 placeholders.
+- Caption provenance: 73 `user_generated`, 21 `auto_generated`, 4 real transcripts with source caption type unspecified. Prior `77 user-generated` wording was not evidence-exact and is corrected in the dossier.
+- Breakout candidates: 25 unique IDs at the existing descriptive `>=5x` all-video median screen; 9 original Case-13 IDs and 16 newly surfaced IDs, with no overlap or duplicates. Full 25 rows now appear in the existing dossier and canonical JSON analysis artifact.
+- Structural transcript analysis: 98/98 `AUTOMATED_STRUCTURAL_ANALYSIS_COMPLETE`; 15/30/60-second windows are labeled `ESTIMATED_FROM_WORD_POSITION_PLAINTEXT_CAPTIONS`. Automated structure remains separate from deep manual investigation.
+- Missing thumbnail: original missing registry value for `16n80OQCVSM` was a derived-data merge defect and is fixed. After that repair, the true acquisition gap was isolated to backfilled Short `x0Z5ziQNtWQ`; YouTube's watch-page `og:image`/`twitter:image` supplied its current image URL. Image visually inspected and recorded in `BETTER-HEALTH-WHILE-AGING-THUMBNAIL-EVIDENCE.json`. Standard package and registry now contain 98/98 thumbnail URLs. Raw source evidence remains unchanged.
+- Files updated: existing dossier, DS-000033 standard workbook/ZIP, registry DB/normalized ledgers, registry/package builders, focused regression tests. New analytical dataset: `BETTER-HEALTH-WHILE-AGING-TRANSCRIPT-STRUCTURE.json`. New visual evidence register: `BETTER-HEALTH-WHILE-AGING-THUMBNAIL-EVIDENCE.json`.
+- Verification: 7 focused tests passed; full suite passed `393 passed, 5 warnings`; registry integrity `ok`, 0 foreign-key violations; registry and channel tracker report 98 videos and 98 thumbnail URLs. Artifact-tool inspection found no formula errors in the regenerated DS-000033 workbook or channel tracker; exact cells confirm recovered `x0Z5ziQNtWQ` URL and tracker count 98. Existing DS-000033 `All Videos` sheet remains visually dense at whole-table zoom, so no broad formatting-quality claim is made. Workbook V3 research integration, commit, and push remain pending.
+- Outstanding Batch A boundary: deep transcript investigation remains 9 previously reported/89 not yet deeply investigated; original nine still need acceptance-level re-verification. Batch B/C/D not complete.
+
 Updated: 2026-09-22
 
 ## Registry and package completion

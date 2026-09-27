@@ -1,13 +1,13 @@
 # Better Health While Aging (DS-000033) — Individual Channel Dossier
 
 **Channel:** Better Health While Aging (`@BetterHealthWhileAging`, `UCFpxvukIqCAUA7YizI-q9Dw`)
-**Status date:** 2026-09-26
+**Status date:** 2026-09-27
 **Data basis:** 98/98 videos, 98/98 real transcripts, 0 placeholders (94-video initial acquisition, run `AuZ65QkXBmVIXcOn9`, 2026-09-25, + 4-video Priority A Shorts backfill, run `Ll3gKxE3dXEeG4SDd`, 2026-09-26). Source: `youtube_channel_registry.db` / `youtube_inventory.db`, dataset `DS-000033`.
 **Purpose:** Phase 6 individual-channel research artifact for this competitor, requested separately from the combined V3 cross-channel synthesis. Extends the existing V3 corpus rather than duplicating it — breakout-event analysis for this channel already exists in `SMALL-CHANNEL-BREAKOUT-FORENSICS.md` (Case 13) and is referenced, not re-derived, below.
 
 **Scope disclosure (metadata completeness vs. forensic-analysis completeness are tracked separately):**
-- Metadata completeness: **COMPLETE** — 98/98 videos, 98/98 real YouTube-caption transcripts, 0 explicit no-subtitle gaps, thumbnail URLs present for 97/98 (1 missing per registry ledger), all public metadata fields populated.
-- Forensic-analysis completeness this pass: **PARTIAL**. Covered: full population profiling, title-by-title pattern analysis (quantitative, all 98 videos), breakout-vs-baseline comparison, format (regular vs. Shorts) performance split, pointer to existing breakout-event case file. **Not covered this pass**: thumbnail-by-thumbnail visual inspection (no forensic video/thumbnail evidence is registered for this channel — `forensic_video_status = NOT_AVAILABLE`, `visual_asset_status` is URL-only; per AGENTS.md this must stay `NOT_AVAILABLE` rather than be inferred from titles), full manual script-by-script reading of all 98 transcripts beyond the 9 breakout events already read in Case 13, and DS-000011/018/031 knowledge-framework cross-referencing beyond what Case 13 already applied.
+- Metadata completeness: **COMPLETE** — 98/98 videos, 98/98 real YouTube-caption transcripts, 0 explicit no-subtitle gaps, 98/98 source thumbnail URLs. The earlier 97/98 registry result was a derived-data defect: `16n80OQCVSM` had a real URL in both immutable raw datasets and the standard workbook, but the registry kept an older snapshot row whose thumbnail field was blank. Duplicate video evidence now fills missing fields from later package evidence; multi-run thumbnail coverage now unions unique video IDs rather than taking the largest single run (94 vs. 4). Raw evidence was not changed.
+- Forensic-analysis completeness: **PARTIAL**. Automated structural transcript analysis now covers 98/98 videos in `BETTER-HEALTH-WHILE-AGING-TRANSCRIPT-STRUCTURE.json`, with actual opening text and explicitly estimated 15/30/60-second windows. This is separate from deep investigation. Case 13 contains prior narrative review for 9 breakouts, but those nine still require acceptance-level re-verification against every criterion in the resumed assignment; 89/98 videos remain without deep manual review. Thumbnail visual inspection, dedicated historical-demand work, complete DS-000011/018/031 application, and medical verification remain open.
 
 ---
 
@@ -39,7 +39,7 @@ Computed directly from the registered title text and view counts (`/tmp/bhwa_vid
 
 **Reading these numbers honestly:** number-in-title titles perform *worse* than the median here (opposite of a common assumption), but the sample sizes for the question-mark and warning-word groups (15 and 5) are small enough that this is a descriptive pattern within one channel, not a statistically established effect. It is reported as observed data, not as a recommendation.
 
-### Top 15 performers (>5x channel median views — descriptive breakout threshold, consistent with the methodology already used in `SMALL-CHANNEL-BREAKOUT-FORENSICS.md`)
+### Complete 25-video breakout-candidate inventory (>5x all-video median)
 
 | Views | Format | Title |
 |---|---|---|
@@ -58,8 +58,18 @@ Computed directly from the registered title text and view counts (`/tmp/bhwa_vid
 | 301,468 | video | Constipation After 60: Causes, Relief & Safe Treatments |
 | 275,536 | video | The Surprising Risks of Too Much Vitamin D for Seniors |
 | 269,514 | video | Turning 65 Soon? How to Get Started with Medicare |
+| 209,917 | video | Atrial Fibrillation in Older Adults: Watchman, Medications, & Other Treatment Options |
+| 200,502 | video | How to Treat Urinary Incontinence in Older Women |
+| 173,658 | video | UTIs in Older Adults: Symptoms & Prevention |
+| 173,598 | video | Anemia in Aging: Symptoms and Solutions |
+| 158,064 | video | Osteoporosis Medications Explained: What to Know Before You Start |
+| 156,943 | video | COVID and Flu Vaccines 2026 What Older Adults Need to Know |
+| 134,842 | video | High Blood Pressure in Aging: When to Treat & Why It Matters |
+| 110,997 | video | 10 Causes of Memory Loss in Old Age – HOP ML Podcast |
+| 100,825 | video | Slow Heart Rates in Aging: Pacemakers and other Treatments |
+| 99,834 | video | Boosting Bone Density: Best Ways to Prevent Fractures as You Age |
 
-25 of 98 videos (26%) clear the >5x-median breakout threshold — all are regular videos, none are Shorts. 9 of these 25 are the events already deep-dived in `SMALL-CHANNEL-BREAKOUT-FORENSICS.md` Case 13 (script openings, matched-failure comparisons, local-baseline multiples); the remaining 16 breakout titles above are newly surfaced by this population-level pass and have **not yet** had script-level breakout investigation — flagged as outstanding, not silently folded into Case 13's existing 9-event claim.
+25 of 98 videos (26%) clear the >5x-median candidate threshold — all regular videos, no Shorts. IDs and cohort membership are canonical in `BETTER-HEALTH-WHILE-AGING-TRANSCRIPT-STRUCTURE.json`: 25 unique IDs, 9 `ORIGINAL_NINE`, 16 `REMAINING_SIXTEEN`. This 5x candidate screen is intentionally broader than Case 13's 15x breakout-event rule. Case 13's nine are previously reported investigations, not newly accepted without re-verification. Remaining 16 have automated structure records but no deep case investigation.
 
 ### Bottom 10 performers
 
@@ -80,11 +90,11 @@ Computed directly from the registered title text and view counts (`/tmp/bhwa_vid
 
 ## 3. Thumbnails
 
-`visual_asset_status = THUMBNAIL_URL_ONLY` for this channel (confirmed via registry). Thumbnail URLs are captured for 97/98 videos but **no thumbnail image has been visually inspected or registered as forensic evidence** — per AGENTS.md Core Rule 4/6, this stays reported as `NOT_AVAILABLE` for forensic purposes rather than inferring visual patterns (e.g., "answer-withholding thumbnails") from title text alone. The cross-channel thumbnail pattern findings in `SENIOR-HEALTH-FORENSIC-REPORT-V3.md` were derived from channels with genuine forensic video/thumbnail evidence (CH-000004) and do not automatically transfer to this channel without its own registered visual evidence.
+`visual_asset_status = THUMBNAIL_URL_ONLY` for this channel. Source URLs exist for 98/98 videos after correction, but URL availability is not visual inspection. No candidate thumbnail is yet registered as inspected forensic evidence. Cross-channel thumbnail findings do not transfer automatically.
 
 ## 4. Script/transcript evidence
 
-98/98 real transcripts available (77 user-generated, 21 auto-generated captions across the combined 98-video set — verified via `SELECT caption_type, COUNT(*) FROM transcripts ... GROUP BY caption_type`; no paid AI transcription used in either run). Deep script-level reading (openings, hooks, reveals, structure) has been done for the 9 Case-13 breakout events in `SMALL-CHANNEL-BREAKOUT-FORENSICS.md`, including matched-failure comparisons for 7 of the 9 topics. The remaining 89 transcripts have not had the same manual script-structure reading — this is the largest concrete gap toward full Phase 6 depth for this channel and would be the next unit of work if continued.
+98/98 real transcripts available (73 labeled user-generated, 21 labeled auto-generated, 4 real-caption transcripts whose source record omits caption type; no paid AI transcription). Earlier `77 user-generated` wording silently treated the 4 unspecified records as user-generated and is corrected here. `BETTER-HEALTH-WHILE-AGING-TRANSCRIPT-STRUCTURE.json` now records 98/98 automated structural analyses: actual opening/promise text; estimated 15/30/60-second windows; hook labels; five-part script excerpts; narrative progression; information-density measures; authority/evidence cues; curiosity and revelation proxies; recommendation cues; and conclusion/CTA evidence. Every row states `AUTOMATED_STRUCTURAL_ANALYSIS_COMPLETE` and separately records deep-investigation state. Timing is `ESTIMATED_FROM_WORD_POSITION_PLAINTEXT_CAPTIONS`; it is not represented as exact caption timing.
 
 ## 5. Breakout investigation
 
@@ -102,4 +112,22 @@ Applied only within the existing Case-13 write-up (breakout events). Not yet app
 
 ## 8. Honest summary
 
-Metadata layer: complete and verified (98/98, real transcripts, 0 gaps, both DBs pass integrity/FK checks). Forensic-analysis layer: population-level and title-pattern analysis is now genuinely done for all 98 videos with real numbers, not estimates. Deep per-video script/thumbnail/breakout-cause analysis remains complete for 9 of 98 videos (the pre-existing Case 13) and outstanding for the other 89 — including 16 newly-identified breakout candidates this pass surfaced but did not investigate further. This is stated plainly so a later pass does not have to rediscover the gap.
+Metadata layer: 98/98 videos, 98/98 real transcripts, 98/98 source thumbnail URLs. Automated structural analysis: 98/98. Deep forensic acceptance: still **PARTIAL**; earlier Case 13 work covers nine candidates but requires criterion-by-criterion verification, while remaining 89 videos need deep review. No thumbnail inspection, dedicated historical-demand pass, complete knowledge-framework application, or medical-claim review is claimed complete.
+
+## 9. Resumed-assignment phase audit
+
+| Phase | Status | Evidence / gap |
+|---|---|---|
+| 1. Recover progress | VERIFIED COMPLETE | Current branch and remote at `655db99`; dossier, V3 reports, 41-sheet workbook, Case 13, evidence registers, raw DS-000033 evidence, package, and scripts located. |
+| 2. Data corrections | PARTIAL | 25 unique IDs and 9/16 split verified; full inventory restored; missing thumbnail cause fixed; 98 transcript provenance rows verified; regular/Short baselines distinct. Full regression suite and regenerated workbook still pending. |
+| 3. Structural transcript analysis | VERIFIED COMPLETE | `BETTER-HEALTH-WHILE-AGING-TRANSCRIPT-STRUCTURE.json`, 98 unique records. Automated status remains separate from deep review. |
+| 4. Deep 25-breakout investigation | PARTIAL | Case 13 contains prior work for 9; acceptance re-verification and remaining 16 outstanding. |
+| 5. Thumbnail inspection | NOT STARTED | 98 URLs available; 0 images registered as visually inspected. |
+| 6. Historical research | NOT STARTED | Existing general Trends corpus does not provide dedicated BHWA topic research. |
+| 7. Apply DS-000011/018/031 | PARTIAL | Prior Case 13 usage reported; full video-level support/counterexample matrix absent. |
+| 8. Medical verification | NOT STARTED | Existing cohort medical file is not a BHWA 98-video claim review. |
+| 9. Complete channel population | PARTIAL | Population statistics and automated structure complete; deep review incomplete. |
+| 10. Update dossier/workbook | PARTIAL | Dossier updated in place; existing 41-sheet workbook not yet regenerated with resumed findings. |
+| 11. Recoverable batches | PARTIAL | Batch A artifacts and tests exist; checkpoint/commit pending. |
+| 12. Validation/preservation | PARTIAL | Full suite passed (393 tests); registry integrity/FK checks and focused workbook QA passed. Commit and push pending; V3 workbook integration remains open. |
+| 13. Mandatory progress report | PARTIAL | Current numbers recorded here; final report waits for remaining phases. |
