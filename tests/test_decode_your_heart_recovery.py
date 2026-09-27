@@ -16,7 +16,7 @@ def _module():
 def test_investigation_status_rules():
     m = _module()
     curve = {"curve_status": "AVAILABLE"}
-    assert m.investigation_status("r9ZyUWyY4Lc", curve)[0] == "TRANSCRIPT_ONLY"
+    assert m.investigation_status("r9ZyUWyY4Lc", curve)[0] == "RETENTION_ANALYZED"
     base = {"comparison": "", "opening": "", "visuals": "", "editing": "", "closing": "", "possible_explanation": "", "alternative_explanation": ""}
     # Descriptive (non m:ss) anchors never count as complete playback.
     m.PRIORITY_PLAYBACK["x_desc"] = {**base, "duration_seconds": 40, "timestamps": ["0:00 a", "mid-video b", "0:40 c"]}
