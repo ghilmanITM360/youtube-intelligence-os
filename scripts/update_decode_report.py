@@ -46,6 +46,7 @@ stale_cells = {
     "Private satisfaction/retention metrics missing.": "Retention exports recovered for all 56 videos (46 with curves); satisfaction metrics not exported.",
     "Google Trends unavailable; traffic sources missing.": "Google Trends CSVs and lifetime traffic sources recovered (section 18).",
     "Own thumbnail URLs exist but image bytes were not available for visual audit; CTR absent.": "Own thumbnails recovered and inspected; lifetime CTR 3.0% from Studio export.",
+    "Channel-level: traffic-source detail (Browse, Suggested, Search, Shorts feed, External), YouTube search terms, geography, language/subtitles, device, unique viewers, new/casual/regular/returning viewers, and viewers-across-formats.": "Channel-level: traffic sources, YouTube search terms, Suggested sources, geography, device, age/gender and 28-day new/casual/regular viewers were exported on 27-28 September 2026 (section 18.3a). Still unavailable: language/subtitles, viewers-across-formats and per-video source drill-downs.",
 }
 for container in [doc] + [c for t in doc.tables for r in t.rows for c in r.cells]:
     for p in container.paragraphs:
@@ -103,6 +104,34 @@ doc.add_paragraph(
     "The strongest exported long-form examples include CZ3gAUzdTAg at 367 lifetime views, 5.71 watch hours, 5,737 impressions and 3.70% CTR; EB3_A2b4a6o at 158 views, 4.3 watch hours, 3,703 impressions and 1.8% CTR; and BCNWQ3uuSuE at 145 views, 2.8 watch hours, 1,730 impressions, 4.2% CTR and two subscribers gained. These examples contradict any diagnosis that treats exposure, click response, or viewing response as a single channel-wide constant."
 )
 
+SUP = CHK["studio_supplementary_2026_09_28"]
+REC = CHK["studio_live_observation"]["browser_vs_export_reconciliation"]
+doc.add_heading("18.3a Studio reports recovered on 28 September 2026", level=2)
+doc.add_paragraph(
+    "Seven further Studio CSV exports were archived byte-for-byte (SHA-256 of each archive equals its original download) in the private first-party folder, with a provenance manifest. "
+    f"The extended lifetime content table covers all 56 canonical videos with no duplicate IDs and one noncanonical community Post row, which is excluded. The nine rows missing from the earlier browser observation "
+    f"({', '.join(REC['previously_missing_now_exported'])}) are present. All {REC['browser_observed_rows']} browser-observed rows agree with the export within one-decimal display rounding, and views equal the 27 September lifetime export. Browser observations and exported values are kept as separate evidence fields."
+)
+a = SUP["audience_28_day"]; sr = SUP["search_terms"]; sg = SUP["suggested_sources"]; ages = SUP["age_views_percent"]
+geo = ", ".join(f"{g['country']} {g['share_percent']}%" for g in SUP["geography"]["disclosed"][:4])
+t = doc.add_table(rows=1, cols=3)
+t.style = "Table Grid"
+for cell, value in zip(t.rows[0].cells, ["Report", "Verified result", "Limit"]): cell.text = value
+for row in [
+    ("New / casual / regular viewers (28 days)", f"Monthly audience {a['monthly_audience_latest']}: {a['new_viewers_latest']} new, {a['casual_viewers_latest']} casual, {a['regular_viewers_latest']} regular (regular max {a['regular_viewers_max_in_period']} in the window); subscribers {a['subscribers_start']} to {a['subscribers_latest']}", f"Window {a['period']} only; Studio estimate"),
+    ("YouTube Search terms", f"{sr['total_search_views']:,} views, {sr['total_search_impressions']:,} impressions, CTR {sr['search_ctr_percent']}%; {sr['disclosed_terms']} disclosed terms carry {sr['views_in_disclosed_terms']} views, maximum {sr['max_views_single_term']} per term", "Long tail below disclosure; per-term CTR not interpretable"),
+    ("Suggested sources", f"{sg['total_suggested_views']:,} views, {sg['total_suggested_impressions']:,} impressions, CTR {sg['suggested_ctr_percent']}%; {sg['external_sources']} external source videos gave {sg['external_views']} views, own-channel videos {sg['own_channel_views']}", "Channel-level; top sources only"),
+    ("Geography", f"Disclosed: {geo}; {SUP['geography']['undisclosed_views']:,} views undisclosed", "Most views below the disclosure threshold"),
+    ("Device", "; ".join(f"{d['device']} {d['views']:,} views, AVD {d['average_view_duration']}" for d in SUP["device"]), "Lifetime"),
+    ("Age (share of views)", "; ".join(f"{k} {v}%" for k, v in ages.items()), "Signed-in viewers only; shares, not counts"),
+]:
+    cells = t.add_row().cells
+    for c, value in zip(cells, row): c.text = value
+doc.add_paragraph(
+    "Interpretation: the channel is built for viewers over 60 but, where Studio discloses it, most views come from viewers aged 25 to 54 and from India and Pakistan, and discovery comes largely from other creators' general-health videos. "
+    "Zero regular viewers in the latest 28 days is the clearest constraint in the data. These are channel-level reports; they cannot show which video attracted which viewer, and they do not show individual viewers moving between Shorts and long-form."
+)
+
 doc.add_heading("18.4 Google Trends evidence", level=2)
 doc.add_paragraph(
     "Three official CSV exports used United States geography, YouTube Search, all categories, and a five-year range. Within the broad comparison, mean normalized scores were 34.94 for blood pressure, 15.05 for cholesterol, 2.49 for heart health, 1.71 for the ambiguous ‘Lp a’ string, and 0.03 for heart failure symptoms. Within the GLP-1 comparison, Ozempic averaged 31.45, semaglutide 7.71, and GLP-1 2.99. A separate niche comparison included walking exercise seniors, chair stand test, coffee blood pressure, and lipoprotein a. Scores are comparison-normalized, not absolute search volume."
@@ -148,10 +177,50 @@ doc.add_paragraph(
     "Transcript overlap shows the coffee Shorts are excerpts of the long-form fAwh2svMARM; the same footage produced both the strongest and a weaker coffee Short."
 )
 
-doc.add_heading("18.6 Evidence completeness and remaining limits", level=2)
+doc.add_heading("18.5b Earlier findings re-tested against the full dataset", level=2)
+for head, body in [
+    ("Slow or generic openings", "Supported as an association in 9 of 22 matched pairs (for example qbwCkH_GqhU vs TPVOIfcJl-k, t1j-p9pkw3Y vs VrbLuTNi0qE, 78JR_U-6HfQ vs 3dRcNqiLHgY). Batch 7 adds four long-form curves (tf7f4RhQwtc, xI-KdZ96xcI, qC8BKb8Fh5Q, Nf9pCrPYWyQ) where the steepest loss falls during setup before the promised item. Contradiction: r9ZyUWyY4Lc and HzFdyjyEFTY have near-identical early curves despite different openings. Status: supported hypothesis, not a cause."),
+    ("Fast versus slow editing", "Not supported as a rule. NznebmgFwXI (2 cuts) outheld KPYHy7MDmLM (33 cuts) early; 78JR_U-6HfQ (60 cuts) outheld 3dRcNqiLHgY, but also had a more specific opening. Pace and opening specificity are confounded in every pair."),
+    ("Reused footage", "Verified: the coffee Shorts are excerpts of fAwh2svMARM, and YVjbjcVo1is and iltS1TPt4jo share footage. The same source produced both stronger and weaker Shorts, so reuse is neutral in this sample."),
+    ("Raw timecodes in captions", "Verified in 10 of 56 retained caption tracks, including phSq6PkPtIg (impossible 0:21 and 0:27 markers in a 14.86-second video). No consistent retention direction. Fix as a quality defect, not as a growth lever."),
+    ("Title/content mismatch", "Verified for 7MXBh2hjfto (title promises an appetite-suppressant comparison) and hUSVbcHVeVw (title says reverse, captions say support); RD7ugxaBHSQ shifts from calf to push-ups mid-video. sC_0XjL2z_Y's title has changed since acquisition, so its packaging cannot be evaluated historically."),
+    ("Black video sections", "Verified only in UeGxF8-hb2s (black and near-silent 0:50 to 1:28). The suspected black tail in Uq3T8YZgyTw was checked and is not present: it ends on a white engagement card. No other black section was found at sampled anchors."),
+    ("Direct viewer-focused hooks", "Openings that name a test or symptom the viewer can check (t1j-p9pkw3Y, fArHBQo6Ggw, NznebmgFwXI, jxoMnTrVziA) coincide with better early holding where curves exist; high-CTR titles (8JdBlF-ragM 4.89%, 5oPzZjfNgII 4.72%, r9ZyUWyY4Lc 4.64%) pose a concrete question. Sample sizes of 10 to 400 views keep confidence moderate."),
+]:
+    p = doc.add_paragraph(style="List Bullet")
+    p.add_run(head + ". ").bold = True
+    p.add_run(body)
+
+doc.add_heading("18.6 Recommendations and 30/60/90-day plan", level=2)
+doc.add_paragraph("No recommendation promises growth. Each one is a measurable test against the current baselines: 28-day regular viewers 0, lifetime CTR 3.0%, Search CTR 2.71%, Suggested CTR 2.9%, and median Shorts stayed-to-watch about 36%.")
+for head, body in [
+    ("Immediate quality corrections (week 1)", "Replace caption tracks on the 10 timecode-affected videos and the 2 emoji-affected videos; trim or fix UeGxF8-hb2s's black segment; retitle 7MXBh2hjfto and hUSVbcHVeVw to match the content; correct the 'INTIOXIDANTS' thumbnail misspelling and the 'Thanks Watching.' end card. These are defect fixes; do not attribute metric changes to them."),
+    ("Testable title and thumbnail changes", "Use Test & Compare where eligible on the three lowest-CTR mature long-form videos with 500 or more impressions (HzFdyjyEFTY 1.35%, EB3_A2b4a6o 1.81%, xI-KdZ96xcI 2.53%). Rewrite each around one concrete question or body signal. Success: CTR above the channel's 3.0% on at least 1,000 new impressions."),
+    ("Opening and script structure", "Deliver the promised item (test, sign or food) within 15 seconds and move credentials after the first payoff. Measure 30-second retention on the next 6 long-form uploads against the long-form median in the register. Keep one camera setup to isolate the script change."),
+    ("Topic-selection experiments", "Alternate two clusters over 6 weeks: cardiology decision questions (lipid tests, symptoms, medication choices) and general-health topics adjacent to the top Suggested sources. Compare impressions per upload, CTR and 30-second retention; judge only after at least 4 uploads per cluster."),
+    ("Long-form and Shorts strategy", "Shorts supply 64% of views but few returning viewers. Cut each Short from a long-form parent (as the coffee family already does) and link the parent. Track stayed-to-watch and the long-form parent's Suggested views from the channel's own Shorts; do not infer individual viewer movement."),
+    ("Audience development", "Launch one named weekly series with a playlist, end screens pointing only within the series, and a consistent thumbnail frame. Target: 28-day regular viewers above 0 by day 60, and own-channel Suggested share above the current 6.8%."),
+    ("Medical communication quality", "No medical claim in this catalog has been clinically reviewed in this research. Add a cited source line to descriptions, avoid 'reverse' or 'cure' framing, and add clear urgent-care signposting in heart-attack and heart-failure videos."),
+]:
+    p = doc.add_paragraph(style="List Bullet")
+    p.add_run(head + ". ").bold = True
+    p.add_run(body)
+t = doc.add_table(rows=1, cols=3)
+t.style = "Table Grid"
+for cell, value in zip(t.rows[0].cells, ["Window", "Actions", "Decision metric"]): cell.text = value
+for row in [
+    ("Days 1-30", "Defect fixes; 3 package tests; series launch; 4 uploads that follow the new opening structure", "Test & Compare result; CTR on new impressions; 30-second retention versus the register median"),
+    ("Days 31-60", "Topic-cluster alternation; Shorts cut from each long-form parent; re-export the Studio content, audience and source reports", "Impressions per upload by cluster; regular viewers; own-channel Suggested share"),
+    ("Days 61-90", "Keep the winning cluster and opening structure, drop the losers; repeat the matched-pair review on the new uploads", "Returning-viewer trend; subscribers per 1,000 views; retention against this baseline"),
+]:
+    cells = t.add_row().cells
+    for c, value in zip(cells, row): c.text = value
+
+doc.add_heading("18.7 Evidence completeness and remaining limits", level=2)
 doc.add_paragraph(
     "The machine-readable register contains one record for every canonical Video ID and tracks metadata, description, transcript, thumbnail URL, actual image, completed thumbnail inspection, watch-page status, video-review status, editing observations, topic-level Trends evidence, competitor comparison, Studio row coverage, retention, and remaining action independently."
 )
+c = REG["counts"]
 t = doc.add_table(rows=1, cols=3)
 t.style="Table Grid"
 for cell,value in zip(t.rows[0].cells,["Evidence category","Coverage","Status"]): cell.text=value
@@ -161,15 +230,18 @@ for row in [
     ("Current catalog", "56 IDs; zero new", "Complete at observation date"),
     ("Google Trends", "Three official exports; 12 series", "Complete at topic level"),
     ("Studio bulk analytics", "Lifetime, 90d, 28d, traffic source", "Complete for exported metrics"),
+    ("Studio extended per-video rows", f"{REG['counts']['studio_extended_rows_observed']} of 56 from the 28 September CSV export", "Complete; reconciled with the browser observation"),
     ("Actual playback and editing", "; ".join(f"{k} {v}" for k, v in REG["counts"]["investigation_status"].items() if v), "Status definitions in evidence register"),
     ("Individual retention curves", f"{c['retention_curves']} curves in {c['retention_exports']} exports", "Exported; 10 disclosed no rows"),
-    ("New vs returning viewers", f"{c['retention_new_vs_returning_split']} retention-by-segment splits", "Partial; viewer counts not exported"),
-    ("Cross-format overlap / queries / suggested sources / geography / device", "Not exported", "Private evidence still required"),
+    ("New vs returning viewers", f"{REG['counts']['retention_new_vs_returning_split']} retention-by-segment splits; channel 28-day new/casual/regular counts", "Channel-level counts exported; per-video counts unavailable"),
+    ("Search terms / suggested sources / geography / device / age", "Channel-level exports, 28 September", "Complete at channel level; per-video drill-downs not exported"),
+    ("Cross-format viewer overlap", "Not exported", "Unavailable"),
+    ("Spoken audio heard / complete audiovisual audit / medical claim review", "0 / 0 / 0 of 56", "Not performed"),
 ]:
     cells=t.add_row().cells
     for c,value in zip(cells,row): c.text=value
 doc.add_paragraph(
-    "No original raw evidence was modified. Recovered public images and official CSV/ZIP exports are stored as dated acquisition outputs. Playback and editing conclusions remain open for TRANSCRIPT_ONLY videos, and seek-sampled records are not claims of continuous playback."
+    "No original raw evidence was modified. Recovered public images and official CSV/ZIP exports are stored as dated acquisition outputs. Every video now has at least a seek-sampled or reported playback record, but none has a verified heard, continuous audiovisual audit, and seek-sampled records are not claims of continuous playback."
 )
 
 for table in doc.tables:

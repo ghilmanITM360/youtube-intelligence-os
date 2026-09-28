@@ -49,3 +49,38 @@ def test_signal_pass_never_claims_complete_audiovisual_review():
     for r in passed:
         assert r["playback_inspected"] == "SEEK_SAMPLED_AT_RETENTION_EVENTS"
         assert r["completion_states"]["complete_audiovisual_editing_review"] == "NOT_VERIFIED"
+
+
+def test_completeness_matrix_separates_sampling_from_audiovisual_audit():
+    reg = json.loads(REGISTER.read_text())
+    matrix = reg["completeness_matrix"]
+    for dim, counts in matrix.items():
+        assert sum(counts.values()) == 56, dim
+    assert matrix["complete_audiovisual_audit"] == {"NOT_VERIFIED": 56}
+    assert matrix["actual_spoken_audio_review"] == {"NOT_VERIFIED": 56}
+    no_curve = {r["video_id"] for r in reg["records"] if r["evidence_dimensions"]["retention_curve"] != "AVAILABLE"}
+    assert len(no_curve) == 10
+    for r in reg["records"]:
+        if r["video_id"] in no_curve:
+            assert r["investigation_status"] == "LIMITED_BY_UNAVAILABLE_EVIDENCE"
+            assert r["retention_investigation"]["status"] != "CONTENT_LINKED_COMPLETE"
+
+
+def test_uq3_black_tail_correction_is_active():
+    reg = json.loads(REGISTER.read_text())
+    rec = next(r for r in reg["records"] if r["video_id"] == "Uq3T8YZgyTw")
+    assert "does not recur" in rec["playback_audit"]["possible_explanation"]
+
+
+def test_studio_export_reconciliation():
+    m = _module()
+    if not m.EXTENDED_STUDIO_ARCHIVE.exists():
+        return  # private export absent on this machine
+    assert set(m.LIVE_STUDIO_METRICS) == {r["id"] for r in json.loads(m.DATASET.read_text())}
+    assert [e["title"] for e in m.EXTENDED_STUDIO_EXTRA_ROWS] == ["Post"]
+    rec = m.reconcile_browser_rows()
+    assert rec["mismatches_beyond_display_rounding"] == []
+    assert len(rec["previously_missing_now_exported"]) == 9
+    prov = json.loads((m.STUDIO_DIR_0928 / "studio-export-provenance.json").read_text())
+    for name, meta in prov["files"].items():
+        assert m.sha256(m.STUDIO_DIR_0928 / name) == meta["sha256"], name

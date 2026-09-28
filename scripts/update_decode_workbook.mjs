@@ -10,16 +10,17 @@ const wb = await SpreadsheetFile.importXlsx(await FileBlob.load(file));
 const headerFmt = { fill: "#1F4E78", font: { bold: true, color: "#FFFFFF" }, wrapText: true, verticalAlignment: "center" };
 const bodyFmt = { wrapText: true, verticalAlignment: "top" };
 
+const sup = checkpoint.studio_supplementary_2026_09_28;
 const dash = wb.worksheets.getItem("Dashboard");
 dash.getRange("A13:F20").unmerge();
 dash.getRange("A13:B20").values = [
-  ["Studio analytics", "AUTHORIZED BULK EXPORTS INGESTED — lifetime / 90d / 28d / traffic source"],
+  ["Studio analytics", "AUTHORIZED EXPORTS INGESTED — lifetime / 90d / 28d / traffic source; 2026-09-28 extended content, search, suggested, geography, device, age, audience"],
   [null, null], ["Executive diagnosis", null],
   ["1", "Discovery volume constrained: 36,159 lifetime thumbnail impressions across 56 videos; Search and Suggested dominate recorded impressions."],
   ["2", "Packaging response uneven: lifetime CTR 3.0%, with material video-level variation. CTR is not sole bottleneck."],
   ["3", "All 56 retained thumbnails recovered and visually inspected. Authority cues strong; repeated template and Shorts frame-grabs limit differentiation."],
   ["4", "Concrete tests, symptoms and practical problems lead several long-form outcomes; topic, age and distribution remain confounded."],
-  ["5", `Retention: ${register.counts.retention_exports} exports, ${register.counts.retention_curves} curves. Playback: ${register.counts.investigation_status.RETENTION_ANALYZED} RETENTION_ANALYZED, ${register.counts.investigation_status.PARTIAL_PLAYBACK} PARTIAL_PLAYBACK, ${register.counts.investigation_status.TRANSCRIPT_ONLY} TRANSCRIPT_ONLY; no claim made from transcripts alone.`],
+  ["5", `Retention: ${register.counts.retention_exports} exports, ${register.counts.retention_curves} curves. Playback: ${register.counts.investigation_status.RETENTION_ANALYZED} RETENTION_ANALYZED, ${register.counts.investigation_status.LIMITED_BY_UNAVAILABLE_EVIDENCE} limited by no curve; ${register.counts.complete_audiovisual_audits_verified} complete audiovisual audits. Audience: ${sup.audience_28_day.regular_viewers_latest} regular of ${sup.audience_28_day.monthly_audience_latest} monthly viewers (28 days).`],
 ];
 dash.getRange("A1:A30").format.columnWidth = 28;
 dash.getRange("B1:B30").format.columnWidth = 115;
@@ -41,21 +42,22 @@ own.getRange("A3:E15").values = [
   ["Average view duration / % viewed", "DERIVED FROM EXPORT", "Video rows", "Views + watch hours + duration", "Rounding-sensitive; not replacement for retention curve"],
   ["Audience retention / first 30s", "AVAILABLE", "Per video", "Studio individual retention exports", `${register.counts.retention_curves} curves of ${register.counts.retention_exports} exports; remainder disclosed no rows`],
   ["Traffic sources", "AVAILABLE", "Lifetime channel", "Studio traffic-source export", "Shorts feed 5,355 views; Search 1,175; Suggested 1,031; Browse 405"],
-  ["YouTube search terms / suggested videos", "MISSING", "Video/query", "Studio export", "Needed to identify discovery pathways"],
-  ["New / casual / regular / returning viewers", "PARTIAL", "Per video (retention by segment)", "Retained per-video retention exports", `${register.counts.retention_new_vs_returning_split} videos carry a new-vs-returning retention split; viewer counts still missing. All exports show organic traffic only.`],
-  ["Shorts engaged views / stayed to watch", "PARTIAL", "Video rows", "Authenticated Studio table observation 2026-09-28", `${register.counts.studio_extended_rows_observed} extended rows observed; browser-observed, no CSV`],
-  ["Geography/language/device", "MISSING", "Channel/video", "Studio audience reports", "Needed to verify intended versus actual audience"],
+  ["YouTube search terms / suggested videos", "AVAILABLE (CHANNEL)", "Channel drill-down", "Studio exports 2026-09-28", `Search ${sup.search_terms.total_search_views} views, CTR ${sup.search_terms.search_ctr_percent}%, ${sup.search_terms.disclosed_terms} terms carry ${sup.search_terms.views_in_disclosed_terms} views; Suggested ${sup.suggested_sources.total_suggested_views} views, own-channel sources ${sup.suggested_sources.own_channel_views}`],
+  ["New / casual / regular / returning viewers", "AVAILABLE (CHANNEL, 28 DAYS)", "Channel + per-video retention segments", "Studio audience export 2026-09-28 + retention exports", `${sup.audience_28_day.new_viewers_latest} new, ${sup.audience_28_day.casual_viewers_latest} casual, ${sup.audience_28_day.regular_viewers_latest} regular; ${register.counts.retention_new_vs_returning_split} videos carry a new-vs-returning retention split`],
+  ["Shorts engaged views / stayed to watch", "AVAILABLE", "Video rows", "Studio CSV export 2026-09-28", `${register.counts.studio_extended_rows_observed} of 56 extended rows exported; reconciled with 47 browser-observed rows`],
+  ["Geography/device/age", "AVAILABLE (CHANNEL)", "Channel", "Studio exports 2026-09-28", `Disclosed IN ${sup.geography.disclosed[0].share_percent}%; ${sup.geography.undisclosed_views} views undisclosed; language and per-video audience unavailable`],
 ];
 own.getRange("A3:E15").format = bodyFmt;
 own.getRange("A3:E3").format = headerFmt;
 
 const thumb = wb.worksheets.getItem("Thumbnail Forensics");
-const thHeaders = ["Video ID","Title","Thumbnail URL","URL status","Actual image","Visual inspection","Visible text","Readability","Composition","Subject / imagery","Authority cues","Color / contrast","Focal point / hierarchy","Title relationship","Audience / curiosity","Competitor comparison"];
-const thRows = register.records.map(r => { const o=r.thumbnail_observation; return [r.video_id,r.title_at_acquisition,r.thumbnail_image_path,"AVAILABLE","RECOVERED","COMPLETE",o.visible_text,o.text_readability,o.composition,o.subject_and_imagery,o.medical_authority_cues,o.color_and_contrast,o.focal_point+"; "+o.visual_hierarchy,o.title_relationship,o.intended_audience+"; "+o.curiosity_and_disclosure,o.competitor_comparison]; });
-thumb.getRange("A1:P57").values = [thHeaders, ...thRows];
-thumb.getRange("A1:P57").format = bodyFmt;
-thumb.getRange("A1:P1").format = headerFmt;
-thumb.getRange("A1:P57").format.font.size = 9;
+const thHeaders = ["Video ID","Title","Thumbnail URL","URL status","Actual image","Visual inspection","Visible text","Readability","Composition","Subject / imagery","Authority cues","Color / contrast","Focal point / hierarchy","Title relationship","Audience / curiosity","Competitor comparison","Image-specific observation (2026-09-28)"];
+const thRows = register.records.map(r => { const o=r.thumbnail_observation; return [r.video_id,r.title_at_acquisition,r.thumbnail_image_path,"AVAILABLE","RECOVERED","COMPLETE",o.visible_text,o.text_readability,o.composition,o.subject_and_imagery,o.medical_authority_cues,o.color_and_contrast,o.focal_point+"; "+o.visual_hierarchy,o.title_relationship,o.intended_audience+"; "+o.curiosity_and_disclosure,o.competitor_comparison,o.revalidation_observation ?? "NOT REVALIDATED"]; });
+thumb.getRange("A1:Q57").values = [thHeaders, ...thRows];
+thumb.getRange("A1:Q57").format = bodyFmt;
+thumb.getRange("A1:Q1").format = headerFmt;
+thumb.getRange("A1:Q57").format.font.size = 9;
+thumb.getRange("Q1:Q57").format.columnWidth = 60;
 
 const gt = wb.worksheets.getItem("Google Trends Research");
 gt.getRange("A1:J30").unmerge();
@@ -79,11 +81,11 @@ root.getRange("A1:G1").format = headerFmt;
 const gaps = wb.worksheets.getItem("Evidence Gaps");
 gaps.getRange("A1:E10").values = [
   ["Gap","Scope","Current evidence","Priority","Required action"],
-  ["Individual retention curves","56 videos",`${register.counts.retention_curves} curves in ${register.counts.retention_exports} retained exports; 10 disclosed no rows`,"CLOSED for export","Link remaining curves to playback"],
-  ["Shorts stayed-to-watch","29 Shorts",`${register.counts.studio_extended_rows_observed} extended rows browser-observed (no CSV); ${56 - register.counts.studio_extended_rows_observed} rows not captured`,"Medium","Studio content-table export if it becomes available"],
-  ["Playback/editing audit","56 videos",`${register.counts.investigation_status.RETENTION_ANALYZED} RETENTION_ANALYZED (${register.counts.playback_reported_full} reported full playback, ${register.counts.playback_seek_sampled} seek-sampled at curve events, ${register.counts.continuous_signal_passes} with a continuous 2x level/cut pass); ${register.counts.complete_audiovisual_audits_verified} verified complete audiovisual reviews; ${register.counts.investigation_status.TRANSCRIPT_ONLY} TRANSCRIPT_ONLY`,"High","Continue matched-pair batches"],
-  ["Search queries / suggested sources","Channel/video","Traffic-source totals available; query/referrer detail missing","High","Studio query and suggested-video exports"],
-  ["Viewer relationship","Channel","Subscriber totals available; new/returning and cross-format overlap missing","High","Studio Audience reports"],
+  ["Individual retention curves","56 videos",`${register.counts.retention_curves} curves in ${register.counts.retention_exports} retained exports; 10 disclosed no rows`,"CLOSED","None; all 46 curves are content-linked"],
+  ["Shorts stayed-to-watch","29 Shorts",`${register.counts.studio_extended_rows_observed} of 56 extended rows in the 2026-09-28 CSV export`,"CLOSED","None"],
+  ["Playback/editing audit","56 videos",`${register.counts.investigation_status.RETENTION_ANALYZED} RETENTION_ANALYZED, ${register.counts.investigation_status.LIMITED_BY_UNAVAILABLE_EVIDENCE} limited by no curve (${register.counts.playback_reported_full} reported full, ${register.counts.playback_seek_sampled} seek-sampled, ${register.counts.continuous_signal_passes} level/cut passes); ${register.counts.complete_audiovisual_audits_verified} verified complete audiovisual reviews; audio not heard`,"Medium","Heard continuous review only if a complete audiovisual audit is required"],
+  ["Search queries / suggested sources","Channel/video","Channel-level drill-downs exported 2026-09-28; per-video drill-downs not exported","Low","Per-video drill-down only if a video-level source question arises"],
+  ["Viewer relationship","Channel",`28-day new/casual/regular exported: ${sup.audience_28_day.regular_viewers_latest} regular viewers; cross-format overlap unavailable`,"CLOSED for channel","Re-export after 30 days"],
   ["Thumbnail visuals","56 videos","RECOVERED + INSPECTED","CLOSED","None"],
   ["Google Trends","9 configured term series","Official CSVs recovered","CLOSED","None; preserve normalization caveat"],
   ["Current public catalog","Channel","56 current videos; zero new vs retained 56","CLOSED","Observe future snapshots separately"],
@@ -98,6 +100,7 @@ ev.getRange("A1:R57").values = [evHeaders,...evRows]; ev.getRange("A1:R57").form
 
 const cp = wb.worksheets.getItem("Research Checkpoint");
 const cpRows = Object.entries(checkpoint.phase_status).map(([k,v])=>[k.replaceAll("_"," "),v,"See JSON checkpoint and cited raw evidence"]);
+for (const [dim, counts] of Object.entries(register.completeness_matrix)) cpRows.push([`evidence: ${dim.replaceAll("_"," ")}`, Object.entries(counts).map(([k,v])=>`${k} ${v}`).join("; "), "Per-video values in Video Evidence Register JSON (evidence_dimensions)"]);
 cp.getRange(`A1:C${cpRows.length+1}`).values = [["Work item","Status","Detail"],...cpRows]; cp.getRange(`A1:C${cpRows.length+1}`).format=bodyFmt; cp.getRange("A1:C1").format=headerFmt;
 
 wb.recalculate();
@@ -107,14 +110,14 @@ for (const range of ["Dashboard!A1:F22", "Own-Channel Analytics!A1:E15", "Thumbn
 }
 const errors = await wb.inspect({kind:"match",searchTerm:"#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!",options:{useRegex:true,maxResults:300},summary:"final formula error scan"});
 process.stdout.write(errors.ndjson+"\n");
-await fs.mkdir("/private/tmp/decode-heart-workbook-render", { recursive: true });
+await fs.mkdir(process.env.RENDER_DIR ?? "/private/tmp/decode-heart-workbook-render", { recursive: true });
 for (const [name, sheetName, range] of [
   ["dashboard", "Dashboard", "A1:F30"], ["analytics", "Own-Channel Analytics", "A1:E15"],
   ["thumbnails", "Thumbnail Forensics", "A1:P10"], ["trends", "Google Trends Research", "A1:J13"],
   ["gaps", "Evidence Gaps", "A1:E10"], ["register", "Video Evidence Register", "A1:R8"],
 ]) {
   const image = await wb.render({ sheetName, range, scale: 1.5, format: "png" });
-  await fs.writeFile(`/private/tmp/decode-heart-workbook-render/${name}.png`, new Uint8Array(await image.arrayBuffer()));
+  await fs.writeFile(`${process.env.RENDER_DIR ?? "/private/tmp/decode-heart-workbook-render"}/${name}.png`, new Uint8Array(await image.arrayBuffer()));
 }
 const out = await SpreadsheetFile.exportXlsx(wb);
 await out.save(file);
