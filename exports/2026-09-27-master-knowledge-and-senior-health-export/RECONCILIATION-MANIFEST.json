@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-09-27",
+  "repo_branch": "research/senior-health-acquisition-phase-2",
+  "correction_of": "2026-09-27-master-knowledge-and-senior-health-export (initial version, same directory)",
+  "reconciliation": {
+    "DS-000011": {
+      "prior_audit_files": 17,
+      "prior_audit_unique": 16,
+      "observed_files": 17,
+      "observed_rules": 17,
+      "fulltext_sources_extracted": 17,
+      "fulltext_unique_sources": 17,
+      "drift": false
+    },
+    "DS-000018": {
+      "prior_audit_tabs": 63,
+      "prior_audit_unique": 61,
+      "observed_tabs": 63,
+      "observed_claims": 33,
+      "tabs_with_fulltext_recovered": 63,
+      "tabs_claim_atomized": 63,
+      "original_human_audited_claims": 33,
+      "additional_ai_extracted_claims": 666,
+      "all_claims_combined": 699,
+      "drift": false
+    },
+    "DS-000031": {
+      "prior_audit": {
+        "segments": 15,
+        "concepts": 63,
+        "frameworks": 11,
+        "formulas": 15,
+        "scorecard": 1,
+        "examples": 9
+      },
+      "observed": {
+        "segments": 15,
+        "concepts": 63,
+        "formulas": 15,
+        "numeric_heuristics": 12,
+        "scorecard": 1,
+        "examples": 9,
+        "relationships": 15
+      },
+      "segments_with_fulltext_recovered": 15,
+      "drift": false
+    },
+    "senior_health": {
+      "acquired_channels_incl_own": 8,
+      "total_unique_video_records": 460,
+      "total_real_transcripts": 459,
+      "total_descriptions_exported": 458,
+      "total_thumbnail_urls_recovered": 459,
+      "total_downloaded_thumbnail_files": 61,
+      "known_leads_total": 69,
+      "class_distribution": {
+        "OWN": 1,
+        "A": 6,
+        "B": 1,
+        "F": 13,
+        "E": 48
+      }
+    }
+  },
+  "supplemental_archive_summary": {
+    "transcripts_copied": 459,
+    "transcripts_unavailable": 1,
+    "transcripts_unreadable": 0,
+    "transcripts_sha256_mismatch": 276,
+    "ds18_tabs_copied": 63,
+    "ds11_sources_copied": 17,
+    "thumbnails_copied": 61
+  },
+  "deliverables": {
+    "word_document": "YOUTUBE-KNOWLEDGE-AND-SENIOR-HEALTH-COMPLETE-DATA.docx",
+    "excel_workbook": "YOUTUBE-KNOWLEDGE-AND-SENIOR-HEALTH-COMPLETE-DATA.xlsx",
+    "supplemental_archive_zip": "SUPPLEMENTAL-DATA-ARCHIVE.zip",
+    "supplemental_archive_dir": "supplemental-data-archive/ (same content, unzipped)",
+    "extraction_scripts": [
+      "scripts/extract_master_data.py",
+      "scripts/build_xlsx.py",
+      "scripts/build_docx.mjs",
+      "scripts/build_supplemental_archive.py"
+    ],
+    "ai_extracted_claims_batches": "scripts/ds18_additional_claims/*.json (7 files, 666 claims, grounded extraction of the 56 previously-unprocessed DS-000018 tabs)"
+  },
+  "defect_classification": {
+    "DS-000018_56_tabs_unprocessed": "SOURCE_DATA_AVAILABLE_REQUIRES_EXTRACTION -> repaired (666 additional claims extracted)",
+    "DS-000031_concepts_short_summaries": "SOURCE_DATA_AVAILABLE_EXPORT_BUG -> repaired (full segment text now attached)",
+    "word_doc_5_video_cap": "SOURCE_DATA_AVAILABLE_EXPORT_BUG -> repaired (full video lists, no cap)",
+    "excel_video_descriptions_missing": "SOURCE_DATA_AVAILABLE_EXPORT_BUG -> repaired (already in master_data.json, just not wired to sheet)",
+    "thumbnail_urls_64_of_460": "SOURCE_DATA_AVAILABLE_REQUIRES_EXTRACTION -> repaired (459/460 recovered from raw acquisition source files; 1 genuinely unavailable)",
+    "dr_rehan_thumbnails_0_of_56": "SOURCE_DATA_AVAILABLE_REQUIRES_EXTRACTION -> repaired (56/56 recovered)",
+    "transcript_content_not_self_contained": "SOURCE_DATA_AVAILABLE_REQUIRES_EXTRACTION -> repaired (459 real transcripts copied into supplemental archive with portable relative paths)",
+    "ds18_validation_column_showed_citation_codes": "SOURCE_DATA_AVAILABLE_EXPORT_BUG -> repaired (separate columns for validated status vs citation codes)"
+  }
+}
