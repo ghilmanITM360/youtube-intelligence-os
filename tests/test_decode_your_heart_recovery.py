@@ -84,3 +84,39 @@ def test_studio_export_reconciliation():
     prov = json.loads((m.STUDIO_DIR_0928 / "studio-export-provenance.json").read_text())
     for name, meta in prov["files"].items():
         assert m.sha256(m.STUDIO_DIR_0928 / name) == meta["sha256"], name
+
+
+CHECKPOINT = ROOT / "docs/research/decode-your-heart-2026-09-27/Decode_Your_Heart_Research_Checkpoint.json"
+
+
+def test_final_validation_corrections_are_active():
+    chk = json.loads(CHECKPOINT.read_text())
+    fv = chk["final_validation_2026_09_28"]
+    audit = {c["id"]: c["status"] for c in fv["claim_audit"]}
+    assert audit["A"] == "CORRECTED" and audit["A2"] == "WITHDRAWN" and audit["B"] == "CORRECTED" and audit["D"] == "CORRECTED"
+    text = json.dumps(chk["diagnosis"])
+    assert "binding constraint" not in text.replace("LOW that audience development is currently the binding constraint", "")
+    assert "largely South Asian" not in text and "qbwCkH_GqhU 1.65%" not in text
+    assert "more than 6 months in the past year" in fv["youtube_definitions"]["regular_viewers"]
+
+
+def test_priority_reviews_never_claim_heard_audio():
+    reg = json.loads(REGISTER.read_text())
+    reviewed = [r for r in reg["records"] if r["priority_review_2026_09_28"]]
+    assert 8 <= len(reviewed) <= 12 == reg["counts"]["priority_reviews"]
+    for r in reviewed:
+        assert r["evidence_dimensions"]["actual_spoken_audio_review"] == "NOT_VERIFIED"
+        assert r["evidence_dimensions"]["complete_audiovisual_audit"] == "NOT_VERIFIED"
+    assert reg["counts"]["complete_audiovisual_audits_verified"] == 0
+
+
+def test_medical_reviews_cite_known_references_and_flag_aspirin():
+    chk = json.loads(CHECKPOINT.read_text())
+    fv = chk["final_validation_2026_09_28"]
+    refs = set(fv["medical_references"])
+    for c in fv["medical_claim_reviews"]:
+        cited = {t.strip() for t in c["evidence"].split(";")} & refs
+        if c["priority"] in ("IMMEDIATE", "HIGH") and c["verdict"] != "TITLE_CONTENT_MISMATCH":
+            assert cited, c
+    aspirin = [c for c in fv["medical_claim_reviews"] if c["video_id"] == "HzFdyjyEFTY" and c["priority"] == "IMMEDIATE"]
+    assert aspirin and "doctor" in aspirin[0]["alternative_wording"]

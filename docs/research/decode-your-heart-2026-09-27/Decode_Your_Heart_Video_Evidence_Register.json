@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-28T01:46:37.190006+00:00",
+  "generated_at": "2026-09-28T02:04:44.986349+00:00",
   "dataset_id": "DS-000032",
   "channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
   "retained_acquisition_observed_at": "2026-09-25T10:45:45.525Z",
@@ -28,6 +28,10 @@
     "continuous_signal_passes": 19,
     "complete_audiovisual_audits_verified": 0,
     "new_public_videos": 0,
+    "priority_reviews": 12,
+    "medical_claim_reviews": 15,
+    "videos_with_medical_claim_review": 12,
+    "medical_claims_requiring_action": 5,
     "investigation_status": {
       "NOT_STARTED": 0,
       "TRANSCRIPT_ONLY": 0,
@@ -86,7 +90,14 @@
       "TOPIC_LEVEL_GOOGLE_TRENDS": 56
     },
     "medical_claim_review": {
-      "NOT_PERFORMED": 56
+      "NOT_PERFORMED": 44,
+      "REVIEWED_ISSUES_FOUND": 6,
+      "REVIEWED_SUPPORTED": 6
+    },
+    "full_length_visual_progression": {
+      "NO": 47,
+      "STORYBOARD_FULL_LENGTH": 5,
+      "STORYBOARD_PARTIAL": 4
     }
   },
   "investigation_status_definitions": {
@@ -351,8 +362,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -1021,8 +1035,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -1702,8 +1719,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -2373,8 +2393,61 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_ISSUES_FOUND",
+        "full_length_visual_progression": "STORYBOARD_FULL_LENGTH"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Lowest long-form CTR (1.35%) with high 30 s retention (66.67%); cardiology medication; published 2026-09-17",
+        "coverage": "Storyboard 2 s x 92 frames, 0:00-3:02 complete",
+        "timestamps": [
+          "0:00 seated doctor, clinic room",
+          "0:06 ASK YOURSELF / WHY ARE YOU TAKING IT?",
+          "0:22 MISCONCEPTION",
+          "0:32 'Yes, I'm talking about aspirin'",
+          "1:06 CLINICAL DATA / CLINICAL EVIDENCE",
+          "1:14-1:18 'contraindicated or not required' PRIMARY PREVENTION",
+          "1:46 CLINICAL TRIALS ('CAPRIE')",
+          "2:00 BLEEDING RISK: GI, intracranial",
+          "2:34 secondary prevention: 'should always be given as the first priority'",
+          "2:56 AVOID IT: 'avoid taking aspirin'",
+          "3:00 NO KNOWN HEART CONDITION / BLEEDING RISK"
+        ],
+        "retention_link": "Direct second-person question holds 66.67% at 30 s.",
+        "title_promise": "DELIVERED on who should and should not take it, but the close is a blanket instruction.",
+        "pacing_visuals": "Single static shot; one icon per sentence.",
+        "medical": "SIGNIFICANT ISSUE: no advice to consult a clinician before stopping; cites CAPRIE (a clopidogrel secondary-prevention trial); 'contraindicated' overstates.",
+        "finding": "Highest-priority medical correction in the catalog; low CTR is confounded by its 10-day age."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "HzFdyjyEFTY",
+          "priority": "IMMEDIATE",
+          "claim": "'Avoid taking aspirin for the sake of preventing yourself from developing any heart condition' addressed to viewers over 60 already taking it daily.",
+          "verdict": "MISLEADING_FRAMING_SAFETY_RISK",
+          "evidence": "USPSTF_2022_ASPIRIN; ACC_AHA_2019_PRIMARY",
+          "analysis": "Direction (no routine primary-prevention aspirin at >=60) matches guidelines, but the video addresses current users and never advises discussing it with a clinician first. USPSTF explicitly says current users should not discontinue without consulting their clinician; some viewers may have undiagnosed indications (stents, AF history, PAD).",
+          "alternative_wording": "If you are over 60 and take daily aspirin but have never had a heart attack, stroke or stent, ask your doctor whether you still need it. Do not stop it on your own."
+        },
+        {
+          "video_id": "HzFdyjyEFTY",
+          "priority": "HIGH",
+          "claim": "'We have data from CAPRIE clinical trial ... harms supersede the benefits' for primary prevention.",
+          "verdict": "UNSUPPORTED_CITATION",
+          "evidence": "CAPRIE_1996",
+          "analysis": "CAPRIE compared clopidogrel and aspirin in secondary prevention; it does not support the primary-prevention statement.",
+          "alternative_wording": "Large trials such as ASPREE, ARRIVE and ASCEND found that for people without heart disease, bleeding risk largely offsets the small benefit."
+        },
+        {
+          "video_id": "HzFdyjyEFTY",
+          "priority": "MEDIUM",
+          "claim": "'Aspirin is now regarded to be contraindicated ... for primary prevention.'",
+          "verdict": "OVERSTATED",
+          "evidence": "USPSTF_2022_ASPIRIN",
+          "analysis": "Guidelines say 'not recommended routinely' or 'individual decision' at 40-59; 'contraindicated' is a stronger clinical term.",
+          "alternative_wording": "Aspirin is no longer routinely recommended for people without heart disease."
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -3043,8 +3116,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -3712,8 +3788,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -4384,8 +4463,42 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_ISSUES_FOUND",
+        "full_length_visual_progression": "STORYBOARD_PARTIAL"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Weaker cardiology comparator (38.46% at 30 s, CTR 2.87%)",
+        "coverage": "Storyboard 2 s, 0:00-1:40 of 3:51 viewed (sheets 0-1)",
+        "timestamps": [
+          "0:00 A VERY COMMON PROBLEM",
+          "0:06 SHOCKED?",
+          "0:08 HYPERCHOLESTEROLEMIA",
+          "0:14 LIPID PROFILE",
+          "0:18-0:24 channel-handle overlay @DrRehanOmar",
+          "0:36 YOUR CHOLESTEROL PANEL; lifestyle icons",
+          "0:44 CHOLESTEROL RISK FACTORS",
+          "0:48 WHAT DO CARDIOLOGISTS LOOK FOR?",
+          "1:04 LET'S BREAK IT DOWN; 1. LDL",
+          "1:30 LDL < 100; LDL < 70; 1:38 coronary artery disease"
+        ],
+        "retention_link": "The first answer ('what cardiologists look for') arrives at ~0:48 after jargon and a self-promotion overlay; retention is 38.46% at 30 s.",
+        "title_promise": "DELIVERED slowly.",
+        "pacing_visuals": "Same static single-shot format as BCNWQ3uuSuE; the difference is script order, not production.",
+        "medical": "Simplified targets (see claim review).",
+        "finding": "Paired with BCNWQ3uuSuE the difference is where the useful answer appears, not visual style."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "SBrMW71O69U",
+          "priority": "LOW",
+          "claim": "LDL <100 ideal; <70 with diabetes or high blood pressure; <55 with established coronary or cerebrovascular disease.",
+          "verdict": "SUPPORTED_SIMPLIFIED",
+          "evidence": "ESC_EAS_2019_LIPIDS",
+          "analysis": "Matches ESC/EAS goals, but ESC assigns targets by total risk category rather than diabetes/hypertension alone.",
+          "alternative_wording": "Your LDL target depends on your overall risk; your doctor sets it, often below 70 or 55 if you have diabetes or heart disease."
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -5049,8 +5162,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -5730,8 +5846,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -6411,8 +6530,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -7081,8 +7203,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -7272,8 +7397,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -7941,8 +8069,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -8132,8 +8263,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -8791,8 +8925,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -9459,8 +9596,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -10129,8 +10269,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -10799,8 +10942,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -11479,8 +11625,34 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_ISSUES_FOUND",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Previously verified 39 s black tail; broader mobility topic",
+        "coverage": "Retained transcript read; earlier luminance/frame evidence reused",
+        "timestamps": [
+          "0:00-0:50 chair-stand explanation",
+          "0:50-1:29 black, near-silent frames (verified earlier)"
+        ],
+        "retention_link": "69.23% at 30 s collapsing to 7.69% at end over the black section.",
+        "title_promise": "PARTIAL: explains the test but defers the answer to 'is 12 a good score' to another video.",
+        "pacing_visuals": "Not re-inspected.",
+        "medical": "Supported but incomplete (no age-norm answer).",
+        "finding": "Confirmed export defect plus an unanswered title question."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "UeGxF8-hb2s",
+          "priority": "LOW",
+          "claim": "No single passing score for the 30-second chair stand; the number reflects strength and endurance.",
+          "verdict": "SUPPORTED_INCOMPLETE",
+          "evidence": "CDC_STEADI_CHAIR_STAND",
+          "analysis": "True that norms vary, but CDC publishes age/sex thresholds the title question ('Is 12 good?') could answer.",
+          "alternative_wording": "For ages 60-64, fewer than 12 stands (men) or 11 (women) is below average; thresholds fall with age."
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -12149,8 +12321,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -12321,8 +12496,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -12995,8 +13173,41 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_SUPPORTED",
+        "full_length_visual_progression": "STORYBOARD_FULL_LENGTH"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Second-highest impressions (3,703) with low CTR 1.81% but high 30 s retention 60.0%; broader Senior Health (diabetes)",
+        "coverage": "Storyboard 5 s x 74 frames, 0:00-6:02 complete",
+        "timestamps": [
+          "0:00 seated talking head, dim office",
+          "0:15 WHERE DID IT COME FROM",
+          "0:25 7 REASONS YOUR MORNING SUGAR MAY RISE",
+          "1:00-1:15 BODY STARTS PREPARING / liver / GLUCONEOGENESIS (factor 1)",
+          "1:40 HIGH NUMBER != FAILURE",
+          "~2:35 FACTOR #3 THE SLEEP",
+          "~4:00 FACTOR #4 THE ROUTINE; 4:35 DO NOT STOP THEM / KEEP THEM INFORMED",
+          "~5:05 FACTOR #5 SMALL EVENING HABITS",
+          "5:50 subscribe card; 5:55-6:02 fade"
+        ],
+        "retention_link": "Holds 60.0% at 30 s but falls to 23.57% at midpoint and 13.57% at end; the steepest loss spans the long single-shot factor 2-3 section.",
+        "title_promise": "PARTIAL: the video announces seven reasons at 0:25; the transcript and frames contain five numbered factors, then 'Final thoughts'.",
+        "pacing_visuals": "One static seated shot for six minutes; variety comes only from kinetic text and small icons.",
+        "medical": "Supported; appropriately tells viewers not to stop medication.",
+        "finding": "Packaging and in-video promise both under-deliver a strong opening: low CTR plus a seven-to-five promise gap."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "EB3_A2b4a6o",
+          "priority": "NONE",
+          "claim": "Dawn phenomenon, sleep and medication timing can raise fasting glucose; do not stop medicines.",
+          "verdict": "SUPPORTED",
+          "evidence": "Standard diabetes care guidance",
+          "analysis": "Accurate and safety-conscious; in-video 'seven reasons' promise only partly delivered (five factors).",
+          "alternative_wording": "Five reasons your morning blood sugar may be higher (or add the missing two)."
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -13665,8 +13876,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -14330,8 +14544,41 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_SUPPORTED",
+        "full_length_visual_progression": "STORYBOARD_PARTIAL"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Strong long-form (CTR 4.16%, 60.5% at 30 s); cardiology test explainer; matched against SBrMW71O69U",
+        "coverage": "Storyboard 2 s, 0:00-1:40 of 3:37 viewed (sheets 0-1); earlier seek samples cover later events",
+        "timestamps": [
+          "0:00 seated doctor at desk",
+          "0:04 LIPID PROFILE = CHOLESTEROL TEST",
+          "0:10 CHECK YOUR CHOLESTEROL / SIMPLE BLOOD TEST / FUTURE HEART DISEASE RISK",
+          "0:36 COMMON CONFUSION",
+          "0:40 12-HOUR FAST? MYTH",
+          "0:48 NON-FASTING IS OK",
+          "1:00 only triglycerides are fasting dependent",
+          "1:20 #1 RISK FACTOR OF PLAQUE BUILDUP (LDL)",
+          "1:36 NSTEMI / UNSTABLE ANGINA / HEART ATTACK"
+        ],
+        "retention_link": "A concrete myth is set up and answered by 0:50, inside the 30 s-60 s window where it keeps 60.5%.",
+        "title_promise": "DELIVERED.",
+        "pacing_visuals": "Static desk shot with label cards; minimal B-roll.",
+        "medical": "Supported (non-fasting lipid testing).",
+        "finding": "Clear evidence that specific, useful answers early can hold viewers without heavy editing."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "BCNWQ3uuSuE",
+          "priority": "NONE",
+          "claim": "The first lipid profile can be non-fasting; only triglycerides are fasting-dependent.",
+          "verdict": "SUPPORTED",
+          "evidence": "AHA_ACC_2018_CHOLESTEROL",
+          "analysis": "Consistent with guideline.",
+          "alternative_wording": null
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -15001,8 +15248,41 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_SUPPORTED",
+        "full_length_visual_progression": "STORYBOARD_PARTIAL"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "High CTR 4.72% and 56.15% at 30 s; broader circulation topic",
+        "coverage": "Storyboard 2 s, 0:00-1:40 of 3:31 viewed",
+        "timestamps": [
+          "0:00 YOUR LEGS ARE SENDING SIGNALS",
+          "0:02 OVER 60? PAY ATTENTION",
+          "0:24 WHICH SYMPTOMS MATTER MOST? / WHAT TO TAKE SERIOUSLY",
+          "0:36 ARE YOU LISTENING TO THE SIGNALS?",
+          "1:06 4 KEY WARNING SYMPTOMS",
+          "1:08 1. CALF PAIN WHILE WALKING / CLAUDICATION",
+          "1:22 EARLY PAD WARNING SIGN",
+          "1:28 2. COLD FEET",
+          "1:38 3. SWELLING IN FEET"
+        ],
+        "retention_link": "Body-signal framing from frame 1; first symptom arrives at 1:08, later than BCNWQ3uuSuE, yet retention is similar, so early delay alone does not explain all differences.",
+        "title_promise": "DELIVERED.",
+        "pacing_visuals": "Static seated shot with label cards.",
+        "medical": "Supported.",
+        "finding": "Counterexample to a strict 'answer by 30 s' rule."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "5oPzZjfNgII",
+          "priority": "NONE",
+          "claim": "Calf pain on walking (claudication), cold feet and foot swelling can signal circulation problems.",
+          "verdict": "SUPPORTED",
+          "evidence": "General PAD guidance",
+          "analysis": "Presented as signals to check, not diagnoses.",
+          "alternative_wording": null
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -15681,8 +15961,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -16348,8 +16631,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -17026,8 +17312,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -17217,8 +17506,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -17896,8 +18188,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -18569,8 +18864,41 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_ISSUES_FOUND",
+        "full_length_visual_progression": "STORYBOARD_FULL_LENGTH"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Previously reported title/transcript discrepancy; 414 views Short",
+        "coverage": "Storyboard 1 s x 40 frames complete at Shorts storyboard resolution (text on frames not legible at this size)",
+        "timestamps": [
+          "0:00-0:04 doctor",
+          "0:06-0:10 anatomical body with highlighted arteries",
+          "0:16-0:18 fish/food",
+          "0:20 berries",
+          "0:26 leafy greens",
+          "0:30 nuts",
+          "0:32 olives/olive oil",
+          "0:34 salad close",
+          "0:36-0:39 doctor with end prompt"
+        ],
+        "retention_link": "59.87% at 30 s; content is the CZ3gAUzdTAg food list in Short form.",
+        "title_promise": "NOT DELIVERED AS STATED: published title says the foods 'Reverse Artery Damage'; retained caption heading says 'Clean Your Arteries'; the script itself says 'No single food can magically fix arteries'.",
+        "pacing_visuals": "Food B-roll every 2-4 s.",
+        "medical": "MISLEADING TITLE; body copy supported.",
+        "finding": "Confirmed: packaging claims what the content explicitly disclaims."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "hUSVbcHVeVw",
+          "priority": "IMMEDIATE",
+          "claim": "Title: '5 Foods That Reverse Artery Damage'.",
+          "verdict": "MISLEADING_TITLE",
+          "evidence": "AHA_DIET_2021; the video's own script",
+          "analysis": "The script says no single food can fix arteries; no food reverses established plaque.",
+          "alternative_wording": "5 Foods That Support Healthy Arteries (Doctor Explains)"
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -19235,8 +19563,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -19915,8 +20246,34 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_SUPPORTED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "805-view heart-warning Short; only video where returning viewers held better",
+        "coverage": "Retained transcript read; earlier seek-sampled frames reused",
+        "timestamps": [
+          "0:00 ankle-swelling question",
+          "0:45 end with like/comment/subscribe request"
+        ],
+        "retention_link": "18.77% at 30 s position; stayed-to-watch 44.01%.",
+        "title_promise": "DELIVERED in general terms; content is generic ('health experts warn').",
+        "pacing_visuals": "Not re-inspected.",
+        "medical": "Supported, generic.",
+        "finding": "Generic phrasing and a call-to-action ending; weak evidence either way."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "FDLU7tX7qNM",
+          "priority": "NONE",
+          "claim": "Persistent ankle swelling can be linked to heart function and should be checked.",
+          "verdict": "SUPPORTED_GENERIC",
+          "evidence": "General clinical guidance",
+          "analysis": "Accurate but non-specific.",
+          "alternative_wording": null
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -20594,8 +20951,42 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_ISSUES_FOUND",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Previously reported title-content mismatch",
+        "coverage": "Retained transcript read in full; existing seek-sampled frames reused (no new storyboard pass)",
+        "timestamps": [
+          "0:00-0:25 per earlier seek samples: cancer-myth discussion throughout"
+        ],
+        "retention_link": "End retention 6.25%; 30 s retention not applicable (26 s Short).",
+        "title_promise": "NOT DELIVERED: title 'Ozempic vs Appetite Suppressants: Which is Better for Weight Loss'; the entire transcript addresses whether Ozempic causes cancer.",
+        "pacing_visuals": "Not re-inspected.",
+        "medical": "Overstated reassurance (see claim review).",
+        "finding": "Confirmed mismatch."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "7MXBh2hjfto",
+          "priority": "HIGH",
+          "claim": "Title promises an Ozempic versus appetite-suppressant comparison.",
+          "verdict": "TITLE_CONTENT_MISMATCH",
+          "evidence": "Retained transcript",
+          "analysis": "Content only addresses a cancer myth.",
+          "alternative_wording": "Does Ozempic Cause Cancer? What the Warning Label Actually Means"
+        },
+        {
+          "video_id": "7MXBh2hjfto",
+          "priority": "MEDIUM",
+          "claim": "'Ozempic has not been caused for any kind of cancer ... has not shown in any clinical trial for causing any kind of cancer'; warning described as family history only.",
+          "verdict": "OVERSTATED_REASSURANCE",
+          "evidence": "FDA_SEMAGLUTIDE_LABEL",
+          "analysis": "Trials have not shown a clear human cancer increase, but the boxed warning rests on rodent thyroid C-cell tumours with human relevance undetermined, and the contraindication covers personal as well as family history.",
+          "alternative_wording": "Trials so far have not shown a clear rise in cancer in people. The label warns about thyroid tumours seen in animals, so it is not used if you or a family member has had medullary thyroid cancer or MEN 2."
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -21254,8 +21645,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -21920,8 +22314,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -22587,8 +22984,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -23253,8 +23653,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -23932,8 +24335,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -24106,8 +24512,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -24773,8 +25182,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -25439,8 +25851,37 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_SUPPORTED",
+        "full_length_visual_progression": "STORYBOARD_FULL_LENGTH"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Strongest Short (stayed 57.28%, APV 83.27%)",
+        "coverage": "Storyboard 1 s x 47 frames complete at Shorts storyboard resolution",
+        "timestamps": [
+          "0:00 VEED-branded AI skeleton character with coffee, 'Seniors watch this' banner",
+          "0:06 cut to doctor in blue scrubs, red chair, yellow caption boxes",
+          "0:14-0:34 doctor with heart/pill icons listing symptoms",
+          "0:36 back to glowing-heart skeleton",
+          "0:45 end"
+        ],
+        "retention_link": "Unusual non-doctor first frame plus audience call-out.",
+        "title_promise": "DELIVERED (symptoms to act on).",
+        "pacing_visuals": "Two visual worlds alternating; editor watermark visible at 0:00 and 0:45.",
+        "medical": "Supported; repeatedly advises contacting a healthcare provider.",
+        "finding": "Best Short uses a distinct first frame and a clear symptom list; third-party editor watermark is a production-quality defect."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "QfRaG71ZA_0",
+          "priority": "NONE",
+          "claim": "Palpitations, anxiety, sleep problems after coffee warrant contacting a healthcare provider.",
+          "verdict": "SUPPORTED",
+          "evidence": "General clinical guidance",
+          "analysis": "Safety-conscious.",
+          "alternative_wording": null
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -26106,8 +26547,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -26728,8 +27172,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -26920,8 +27367,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -27598,8 +28048,46 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_ISSUES_FOUND",
+        "full_length_visual_progression": "STORYBOARD_FULL_LENGTH"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Highest CTR among >=500-impression videos (4.89%), 55.74% at 30 s; GLP-1 topic",
+        "coverage": "Storyboard 1 s x 72 frames, 0:00-1:10 complete",
+        "timestamps": [
+          "0:00 seated doctor at desk with name plate",
+          "0:02 OZEMPIC / SEMAGLUTIDE",
+          "0:05-0:08 pen-injector stock images",
+          "0:10 NEW ADVERSE EFFECTS",
+          "0:22 search-bar graphic",
+          "0:24 LOSS OF LIBIDO",
+          "0:26 WEIGHT LOSS silhouette",
+          "0:27 FAT LOSS + MUSCLE LOSS",
+          "0:32 GENITAL FAT LOSS; anatomical diagrams",
+          "0:36 FAT PROVIDES STRUCTURAL SUPPORT",
+          "0:48 SAGGY / PETULOUS / DRY",
+          "0:53 RISK gauge: AGGRESSIVELY / RAPIDLY / DAYS INSTEAD OF MONTHS",
+          "0:60 RAPID WEIGHT LOSS = HIGH RISK",
+          "1:05 GRADUAL LOSS / PROPER HYDRATION"
+        ],
+        "retention_link": "Novel, specific curiosity (named side effect) from 0:10; 45.9% still watching at end.",
+        "title_promise": "DELIVERED.",
+        "pacing_visuals": "Fastest cutting in the set (1 s storyboard changes every 1-3 frames).",
+        "medical": "SIGNIFICANT ISSUE: presents an informal term and a speculative mechanism as an established new adverse effect.",
+        "finding": "The best-clicked video is also one of the least evidence-based; strong response must not be copied by adding speculative claims."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "8JdBlF-ragM",
+          "priority": "HIGH",
+          "claim": "Semaglutide causes 'new adverse effects', 'Ozempic vagina' and loss of libido, via genital fat loss making tissue 'saggy, petulous and dry because of dehydration'.",
+          "verdict": "UNSUPPORTED_SPECULATIVE_MECHANISM",
+          "evidence": "FDA_SEMAGLUTIDE_LABEL",
+          "analysis": "Neither term is a recognised adverse effect in the prescribing information or major trials; the mechanism is presented as fact without cited evidence. Rapid weight loss and hydration advice is reasonable general guidance.",
+          "alternative_wording": "Some people online describe changes they call 'Ozempic vagina'. It is not a recognised side effect and research is limited; if you notice changes in sexual health or dryness while losing weight, discuss them with your doctor."
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -28263,8 +28751,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -28931,8 +29422,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -29122,8 +29616,44 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "REVIEWED_SUPPORTED",
+        "full_length_visual_progression": "STORYBOARD_PARTIAL"
       },
+      "priority_review_2026_09_28": {
+        "method": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD",
+        "why_selected": "Highest impressions (5,737) and views (367) in the catalog; cardiology; long-form",
+        "coverage": "Storyboard 2 s x 107 frames, 0:00-3:20 of 3:30 viewed (last 10 s not viewed)",
+        "timestamps": [
+          "0:00 seated doctor in maroon chair, bright room",
+          "0:02-0:10 SUDDEN BLOCKAGE, artery animation, BUILDS OVER YEARS, PLAQUE BUILDS UP",
+          "0:18-0:22 TOP 5 HEART FOODS over stock food",
+          "0:26-0:30 stock doctor-patient insert COMMON QUESTION / FOOD FOR ARTERIES?",
+          "0:32 NO INSTANT FIX: no food can magically remove plaque overnight",
+          "0:42 1. FATTY FISH; 0:58 1-2X WEEKLY",
+          "1:00 2. BERRIES; ATHEROSCLEROSIS animation",
+          "1:28 3. LEAFY GREEN VEGETABLES / NITRATES",
+          "1:48 4. NUTS, SMALL PORTION, MODERATION",
+          "2:22 5. EXTRA VIRGIN OLIVE OIL, MEDITERRANEAN DIET",
+          "2:34 NO MIRACLE FOOD; example day",
+          "3:18 NEXT: BALANCE TEST end card"
+        ],
+        "retention_link": "30 s retention 43.92% sits in the 0:26-0:42 stretch where a generic stock insert and a restated question delay the first food; 3 s retention was 88.72%.",
+        "title_promise": "DELIVERED: five foods, hedged as support rather than cure.",
+        "pacing_visuals": "Frequent B-roll and animation; numbered cards give clear structure.",
+        "medical": "Supported (see claim review).",
+        "finding": "Strongest reach is not explained by production polish alone; its early delay to the first item is the most visible retention risk."
+      },
+      "medical_claim_reviews": [
+        {
+          "video_id": "CZ3gAUzdTAg",
+          "priority": "NONE",
+          "claim": "Five foods 'may help support healthy arteries'; no food removes plaque overnight.",
+          "verdict": "SUPPORTED",
+          "evidence": "AHA_DIET_2021",
+          "analysis": "Hedged appropriately.",
+          "alternative_wording": null
+        }
+      ],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -29792,8 +30322,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -29966,8 +30499,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -30141,8 +30677,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -30809,8 +31348,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "LIMITED_BY_UNAVAILABLE_EVIDENCE",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -30999,8 +31541,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -31598,8 +32143,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",
@@ -32264,8 +32812,11 @@
         "verified_full_playback": "NOT_VERIFIED",
         "complete_audiovisual_audit": "NOT_VERIFIED",
         "external_research": "TOPIC_LEVEL_GOOGLE_TRENDS",
-        "medical_claim_review": "NOT_PERFORMED"
+        "medical_claim_review": "NOT_PERFORMED",
+        "full_length_visual_progression": "NO"
       },
+      "priority_review_2026_09_28": null,
+      "medical_claim_reviews": [],
       "investigation_status": "RETENTION_ANALYZED",
       "google_trends_research": "TOPIC_LEVEL_VERIFIED_COMPLETE",
       "external_competitor_comparison": "REUSED_EXISTING_EVIDENCE",

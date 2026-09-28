@@ -128,8 +128,8 @@ for row in [
     cells = t.add_row().cells
     for c, value in zip(cells, row): c.text = value
 doc.add_paragraph(
-    "Interpretation: the channel is built for viewers over 60 but, where Studio discloses it, most views come from viewers aged 25 to 54 and from India and Pakistan, and discovery comes largely from other creators' general-health videos. "
-    "Zero regular viewers in the latest 28 days is the clearest constraint in the data. These are channel-level reports; they cannot show which video attracted which viewer, and they do not show individual viewers moving between Shorts and long-form."
+    "Interpretation (corrected in section 19): the channel is built for viewers over 60, but signed-in age data put most views at ages 25 to 54, and India and Pakistan lead the 32.8% of views that have a disclosed country; the other 67% is undisclosed and is not extrapolated. "
+    "Zero regular viewers is structurally expected: YouTube counts a regular viewer only after monthly viewing in more than 6 of the past 12 months, and this channel began in February 2026 with an almost inactive April. These are channel-level reports; they cannot show which video attracted which viewer, and they do not show individual viewers moving between Shorts and long-form."
 )
 
 doc.add_heading("18.4 Google Trends evidence", level=2)
@@ -192,29 +192,7 @@ for head, body in [
     p.add_run(body)
 
 doc.add_heading("18.6 Recommendations and 30/60/90-day plan", level=2)
-doc.add_paragraph("No recommendation promises growth. Each one is a measurable test against the current baselines: 28-day regular viewers 0, lifetime CTR 3.0%, Search CTR 2.71%, Suggested CTR 2.9%, and median Shorts stayed-to-watch about 36%.")
-for head, body in [
-    ("Immediate quality corrections (week 1)", "Replace caption tracks on the 10 timecode-affected videos and the 2 emoji-affected videos; trim or fix UeGxF8-hb2s's black segment; retitle 7MXBh2hjfto and hUSVbcHVeVw to match the content; correct the 'INTIOXIDANTS' thumbnail misspelling and the 'Thanks Watching.' end card. These are defect fixes; do not attribute metric changes to them."),
-    ("Testable title and thumbnail changes", "Use Test & Compare where eligible on the three lowest-CTR mature long-form videos with 500 or more impressions (HzFdyjyEFTY 1.35%, EB3_A2b4a6o 1.81%, xI-KdZ96xcI 2.53%). Rewrite each around one concrete question or body signal. Success: CTR above the channel's 3.0% on at least 1,000 new impressions."),
-    ("Opening and script structure", "Deliver the promised item (test, sign or food) within 15 seconds and move credentials after the first payoff. Measure 30-second retention on the next 6 long-form uploads against the long-form median in the register. Keep one camera setup to isolate the script change."),
-    ("Topic-selection experiments", "Alternate two clusters over 6 weeks: cardiology decision questions (lipid tests, symptoms, medication choices) and general-health topics adjacent to the top Suggested sources. Compare impressions per upload, CTR and 30-second retention; judge only after at least 4 uploads per cluster."),
-    ("Long-form and Shorts strategy", "Shorts supply 64% of views but few returning viewers. Cut each Short from a long-form parent (as the coffee family already does) and link the parent. Track stayed-to-watch and the long-form parent's Suggested views from the channel's own Shorts; do not infer individual viewer movement."),
-    ("Audience development", "Launch one named weekly series with a playlist, end screens pointing only within the series, and a consistent thumbnail frame. Target: 28-day regular viewers above 0 by day 60, and own-channel Suggested share above the current 6.8%."),
-    ("Medical communication quality", "No medical claim in this catalog has been clinically reviewed in this research. Add a cited source line to descriptions, avoid 'reverse' or 'cure' framing, and add clear urgent-care signposting in heart-attack and heart-failure videos."),
-]:
-    p = doc.add_paragraph(style="List Bullet")
-    p.add_run(head + ". ").bold = True
-    p.add_run(body)
-t = doc.add_table(rows=1, cols=3)
-t.style = "Table Grid"
-for cell, value in zip(t.rows[0].cells, ["Window", "Actions", "Decision metric"]): cell.text = value
-for row in [
-    ("Days 1-30", "Defect fixes; 3 package tests; series launch; 4 uploads that follow the new opening structure", "Test & Compare result; CTR on new impressions; 30-second retention versus the register median"),
-    ("Days 31-60", "Topic-cluster alternation; Shorts cut from each long-form parent; re-export the Studio content, audience and source reports", "Impressions per upload by cluster; regular viewers; own-channel Suggested share"),
-    ("Days 61-90", "Keep the winning cluster and opening structure, drop the losers; repeat the matched-pair review on the new uploads", "Returning-viewer trend; subscribers per 1,000 views; retention against this baseline"),
-]:
-    cells = t.add_row().cells
-    for c, value in zip(cells, row): c.text = value
+doc.add_paragraph("Superseded by section 19 (final forensic validation, 28 September 2026). The earlier plan targeted regular viewers above zero, which YouTube's definition makes unattainable within the plan window, and treated a Short's CTR as packaging evidence; both are corrected in section 19.")
 
 doc.add_heading("18.7 Evidence completeness and remaining limits", level=2)
 doc.add_paragraph(
@@ -236,13 +214,115 @@ for row in [
     ("New vs returning viewers", f"{REG['counts']['retention_new_vs_returning_split']} retention-by-segment splits; channel 28-day new/casual/regular counts", "Channel-level counts exported; per-video counts unavailable"),
     ("Search terms / suggested sources / geography / device / age", "Channel-level exports, 28 September", "Complete at channel level; per-video drill-downs not exported"),
     ("Cross-format viewer overlap", "Not exported", "Unavailable"),
-    ("Spoken audio heard / complete audiovisual audit / medical claim review", "0 / 0 / 0 of 56", "Not performed"),
+    ("Priority reviews (full-length storyboard frames plus transcript)", f"{c['priority_reviews']} videos", "Section 19.2; audio not heard"),
+    ("Medical claim review", f"{c['medical_claim_reviews']} claims in {c['videos_with_medical_claim_review']} videos; {c['medical_claims_requiring_action']} need action", "Section 19.3"),
+    ("Spoken audio heard / complete audiovisual audit", "0 / 0 of 56", "Not possible in this environment"),
 ]:
     cells=t.add_row().cells
     for c,value in zip(cells,row): c.text=value
 doc.add_paragraph(
     "No original raw evidence was modified. Recovered public images and official CSV/ZIP exports are stored as dated acquisition outputs. Every video now has at least a seek-sampled or reported playback record, but none has a verified heard, continuous audiovisual audit, and seek-sampled records are not claims of continuous playback."
 )
+
+FV = CHK["final_validation_2026_09_28"]
+
+
+def table(headers, rows, widths=None):
+    t = doc.add_table(rows=1, cols=len(headers))
+    t.style = "Table Grid"
+    for cell, value in zip(t.rows[0].cells, headers):
+        cell.text = value
+    for row in rows:
+        for cell, value in zip(t.add_row().cells, row):
+            cell.text = "" if value is None else str(value)
+    return t
+
+
+def bullet(head, body):
+    p = doc.add_paragraph(style="List Bullet")
+    p.add_run(head + ". ").bold = True
+    p.add_run(body)
+
+
+doc.add_page_break()
+doc.add_heading("19 Final Forensic Validation and Actionable Diagnosis", level=1)
+doc.add_paragraph(
+    "This section supersedes any earlier statement it contradicts. It re-audits every active conclusion against the original private exports and YouTube's "
+    "official definitions, adds 12 priority reviews and 15 medical claim reviews, and replaces the earlier plan. Every performance explanation below is an "
+    "association from small cohorts (tens to a few hundred viewers per video), not a demonstrated cause. " + FV["residual_uncertainty"]
+)
+
+doc.add_heading("19.1 What the measurements establish", level=2)
+for head, body in [
+    ("Scale", "8,366 lifetime views, 36,159 thumbnail impressions, 45.6 watch hours and 33 subscribers across 56 videos published from 3 February to 25 September 2026."),
+    ("Format mix", "The Shorts feed supplied 5,355 views (64%). Long-form reach came from Search (1,175 views, CTR 2.71%), Suggested (1,031, CTR 2.9%) and Browse (405, CTR 3.28%). Search overtook Suggested in August and September."),
+    ("Discovery shape", "114 disclosed search terms carry 170 views (no term above 7); 472 disclosed Suggested source videos, of which the channel's own videos supplied 70 views (6.8%)."),
+    ("Audience", "Latest 28 days: 505 monthly viewers, 495 new, 10 casual, 0 regular. Geography is disclosed for only 32.8% of views; within that disclosed third, India 48.7%, Pakistan 15.0%, US 11.9%, UK 11.1%."),
+    ("Video-level variation", "Mature long-form CTR spans roughly 2.5-4.9% (EB3_A2b4a6o 1.81% is the outlier); 30-second retention spans 31-67%. Variation is real; single causes are not identifiable."),
+]:
+    bullet(head, body)
+
+doc.add_heading("19.2 Corrected claim audit", level=2)
+table(["Claim", "Period / sample", "Confounders and counterexamples", "Corrected interpretation", "Status"],
+      [(c["id"] + ". " + c["previous_claim"], c["period"] + "; " + c["sample_size"], c["confounders"] + " Counterexample: " + c["counterexamples"], c["corrected_interpretation"], c["status"]) for c in FV["claim_audit"]])
+doc.add_paragraph("YouTube definitions used (" + FV["youtube_definitions"]["source"] + "): casual = " + FV["youtube_definitions"]["casual_viewers"] + " Regular = " + FV["youtube_definitions"]["regular_viewers"])
+
+doc.add_heading("19.3 Priority audiovisual reviews", level=2)
+m = FV["priority_review_method"]
+doc.add_paragraph("Method. Visual: " + m["visual"] + " Speech: " + m["speech"] + " Audio: " + m["audio"])
+recs = {r["video_id"]: r for r in REG["records"]}
+for vid in FV["priority_review_video_ids"]:
+    pr = recs[vid]["priority_review_2026_09_28"]
+    doc.add_heading(f"{vid}: {recs[vid]['title_at_acquisition'][:80]}", level=3)
+    doc.add_paragraph(f"Why selected: {pr['why_selected']}. Coverage: {pr['coverage']}.")
+    doc.add_paragraph("Timestamped observations: " + "; ".join(pr["timestamps"]) + ".")
+    doc.add_paragraph(f"Retention link: {pr['retention_link']} Title promise: {pr['title_promise']} Pacing and visuals: {pr['pacing_visuals']} Medical: {pr['medical']}")
+    doc.add_paragraph("Finding: " + pr["finding"])
+doc.add_paragraph("Sufficiency: the 12 cases cover the highest-reach, strongest, weakest and defect cases across cardiology, broader senior health, long-form and Shorts. They are sufficient for the corrections and experiments below; they do not justify another full 56-video playback campaign, because the remaining uncertainty is about audience and distribution data, not unseen footage.")
+
+doc.add_heading("19.4 Medical claim review", level=2)
+table(["Video", "Claim", "Verdict", "Evidence", "Suggested wording", "Priority"],
+      [(c["video_id"], c["claim"], c["verdict"], c["evidence"] + ". " + c["analysis"], c["alternative_wording"] or "No change needed", c["priority"]) for c in FV["medical_claim_reviews"]])
+doc.add_paragraph("References: " + " ".join(f"[{k}] {v}" for k, v in FV["medical_references"].items()))
+doc.add_paragraph("Published content was not changed; wording is proposed for the channel owner's review.")
+
+doc.add_heading("19.5 Root-cause investigation matrix", level=2)
+table(["Constraint", "Observation / scope", "Evidence", "Counterexamples / confounders", "Interpretation / confidence", "Practical response"],
+      [(r["constraint"], r["observation"] + " Scope: " + r["scope"], r["supporting_evidence"], r["counterexamples"] + " Confounders: " + r["confounders"], r["interpretation"] + " Confidence: " + r["confidence"], r["practical_response"]) for r in FV["root_cause_matrix"]])
+doc.add_paragraph("No overall channel score is assigned. Quality defects are local to specific videos; packaging weakness is local to specific videos; no constraint is shown to be channel-wide and causal.")
+
+doc.add_heading("19.6 Suspected problems not supported by the data", level=2)
+for item in FV["not_supported_by_data"]:
+    doc.add_paragraph(item, style="List Bullet")
+
+doc.add_heading("19.7 Knowledge datasets applied", level=2)
+table(["Source", "Passage", "Applied to", "Verdict", "Contradiction"],
+      [(k["source"], k["passage"], k["applied_to"], k["verdict"], k["contradiction"] or "None found") for k in FV["knowledge_applications"]])
+
+doc.add_heading("19.8 Immediate quality corrections", level=2)
+table(["ID", "Video", "Action", "Evidence"], [(q["id"], q["video_id"], q["action"], q["evidence"]) for q in FV["immediate_corrections"]])
+
+doc.add_heading("19.9 Controlled experiments", level=2)
+table(["ID", "Experiment", "Eligible videos", "Evidence basis", "Window", "Metrics", "Interpretation rule"],
+      [(e["id"], e["name"] + ": " + e["purpose"], "; ".join(e["eligible_videos"]), e["evidence_basis"], e["window"], e["metrics"], e["interpretation"]) for e in FV["experiments"]])
+doc.add_paragraph("Shorts are judged on stayed-to-watch and engaged views; long-form on Test & Compare verdicts, impressions CTR from the same period, and 30/60-second retention. No view-count target is set and no growth is promised.")
+
+doc.add_heading("19.10 Future research", level=2)
+table(["ID", "Question", "Requires"], [(r["id"], r["question"], r["requires"]) for r in FV["future_research"]])
+
+doc.add_heading("19.11 30/60/90-day plan", level=2)
+table(["Window", "Actions", "Useful evidence"], [(p["window"], p["actions"], p["success_evidence"]) for p in FV["plan_30_60_90"]])
+
+doc.add_heading("19.12 Answers to the acceptance questions", level=2)
+for head, body in [
+    ("What the measurements establish", "A small, Shorts-heavy channel whose long-form reach is fragmented across many search terms and external Suggested sources, with a new-viewer-dominated audience and real video-level variation in click and retention response."),
+    ("What separates stronger and weaker videos", "Associations only: a specific question answered early (BCNWQ3uuSuE vs SBrMW71O69U), concrete body-signal or test framing, and exact promise delivery. Editing pace, topic label and production polish do not separate them."),
+    ("Not supported", "See 19.6: regular-viewer failure, returning-viewer advantage, South Asian majority, Shorts CTR, fast cutting, caption-defect effects, cardiology under-performance, algorithm preference."),
+    ("Needs immediate attention", "HzFdyjyEFTY's instruction to avoid aspirin without clinician advice; hUSVbcHVeVw's 'reverse' title; 7MXBh2hjfto's mismatched title; 8JdBlF-ragM's speculative side-effect claim; UeGxF8-hb2s's black tail; caption defects."),
+    ("Still hypotheses", "Audience development, audience alignment with the 'After 60' target, and any packaging or opening rule until E1-E3 produce verdicts."),
+    ("Next experiments and what counts", "E1 Test & Compare verdicts; E2 30-second retention differences above ~15 points; E3 group-median stayed-to-watch; E4 own-channel Suggested share above the 6.8% baseline."),
+]:
+    bullet(head, body)
 
 for table in doc.tables:
     for row_index, row in enumerate(table.rows):
