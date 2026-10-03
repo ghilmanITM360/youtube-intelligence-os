@@ -13,8 +13,23 @@ from PIL import Image
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 REG = sqlite3.connect(ROOT / 'data/catalog/youtube_channel_registry.db')
+INV = sqlite3.connect(ROOT / 'data/catalog/youtube_inventory.db')
+# INFERENCE channel-scope niche labels (assigned from channel names and top titles; not platform data)
+NICHE = {}
+SENIOR = {'UCMJxAeBJ0d1JC937de1eZ0Q', 'UCQIzqH7QZ9viBYpOFqgSXMg', 'UCFpxvukIqCAUA7YizI-q9Dw', 'UCAYG0fzUyxv6OevH88qA45w', 'UC356D-NzdnznBOftTpYoBLw',
+          'UCQcBYZxFW7YwNMU8-DsT3Uw', 'UCFuGMi0idGeyXl6wYK9hg7Q', 'UCXZi5JVeuTluazF-fYqQgNA'}
+FINANCE = {'UCXzNNA2ngRpRiWvyA7eGd6w', 'UCTcOboZIhgrKHMDm-oTlTOg', 'UCkqzov98m_7niJOXwbRQgBA', 'UCxoC2voi0vPg2hwqgfjdhYw', 'UC6AwWrRKNrwt83CMJqeTUzw',
+           'UCAKBDBaY1dP7OdZkGPiDnug', 'UCFvEZUMNoAVjSoSB8NrV7yw', 'UCDglfjh__GM2RFM1oAL3a6A', 'UC5ZSqmk7PKry99xdiRDrc0A', 'UCCEwJbv7D1CYzxdKYYOH6AA',
+           'UCP9RPj_BG0vit2TNM7LuRxA', 'UC14Fb2zWTEZklONPXFbLrTQ', 'UC9m3w-9L_Bt34x02IQXQ5kg', 'UC1GwXFBhh1fiLLuZxs8VRXA'}
+ROLEPLAY = {'UC96yqt8xjtShTpgdoIo0Lqg', 'UC0L9hD7HMwWU7xuU5HRA6Iw', 'UCeVwhrEnYjCNdaDr47x4dSw', 'UCNO35SZS-e3f1hLIDon_mag', 'UCm1yxl_4qMbStLHpHQu6xWg', 'UCJgTBuO9fbNvgL_IS8pqtqg'}
+ANCIENT = {'UC53wkzZ3aXyeH9-eIgi17WA', 'UCK8TbMQGDbB94EOR3aGJo3Q', 'UCaS30yIIV6y2zqSnHGdIGMQ', 'UCcWtWryYdHHiNWfZGSROl1A', 'UCmYG4TVuzHphjTrP3YKYGYQ',
+           'UCpgrEMx8diLrw7YNQ6r3uUw', 'UCxyQ6jK98CCOsy-gwV8QaFA', 'UChGF6aMxELhXOKg2EDDLYNg', 'UCS3iXffTKXrhKWGXaPckb8A', 'UC9ibMPcwu9pesqKEyzlut7w',
+           'UCFKmBxFC3dOkUv1GirzTjww', 'UChFs6t9iB1yv0X8fuKtNIvA'}
+for c, lab in [(SENIOR, 'SENIOR_HEALTH'), (FINANCE, 'FINANCE_POV_EXPLAINER'), (ROLEPLAY, 'HISTORY_ROLEPLAY_POV'), (ANCIENT, 'ANCIENT_HUMANS_ANIMAL_SURVIVAL_EXPLAINER')]:
+    for x in c: NICHE[x] = lab
+NICHE['UCQTcmLiL5_HMUnO1GRwCdjQ'] = 'FITNESS_HEALTH'
 FIELDS = ['Thumbnail_ID', 'Asset_ID', 'Video_ID', 'Channel_ID', 'Channel_Name', 'Dataset_IDs', 'Format', 'Title',
-          'Published_At', 'Source_Type', 'Source_Path', 'Source_URL', 'Source_Observation_Date', 'SHA256', 'Width',
+          'Published_At', 'Niche_Label', 'Internal_Channel_ID', 'Internal_Video_ID', 'Source_Type', 'Source_Path', 'Source_URL', 'Source_Observation_Date', 'SHA256', 'Width',
           'Height', 'Aspect_Ratio', 'Evidence_Class', 'Mapping_Confidence', 'Inspection_Status', 'Creative_Version_ID',
           'Creative_Temporal_Alignment', 'Exact_Duplicate_Group', 'Visual_Family_ID', 'Recovery_Status', 'Notes']
 
@@ -34,11 +49,13 @@ chname = dict(REG.execute('select canonical_channel_id,channel_name from channel
 dsets = defaultdict(list)
 for d, v in REG.execute('select dataset_id,youtube_video_id from dataset_videos order by 1'): dsets[v].append(d)
 assert len(vids) == 2303, len(vids)
+ivmap = {y: (v, c) for v, y, c in INV.execute('select video_id,youtube_video_id,channel_id from videos')}
 
 
 def base(vid):
     v = vids[vid]
-    return dict(Video_ID=vid, Channel_ID=v['ch'], Channel_Name=chname.get(v['ch'], ''), Dataset_IDs=';'.join(dsets[vid]),
+    return dict(Video_ID=vid, Channel_ID=v['ch'], Channel_Name=chname.get(v['ch'], ''), Niche_Label=NICHE.get(v['ch'], 'GENERAL_EXPLAINER') + ' (INFERENCE_channel_scope)',
+                Internal_Channel_ID=ivmap.get(vid, ('', ''))[1], Internal_Video_ID=ivmap.get(vid, ('', ''))[0], Dataset_IDs=';'.join(dsets[vid]),
                 Format=v['fmt'], Title=v['title'], Published_At=v['pub'])
 
 
@@ -117,7 +134,11 @@ for h, g in sorted(grp.items()):
     if len(g) > 1:
         n += 1
         for r in g: r['Exact_Duplicate_Group'] = f'XD-{n:04d}'
+vf = {}
+if (HERE / 'visual-family-register.csv').exists():
+    vf = {r['Thumbnail_ID']: r['Visual_Family_ID'] for r in csv.DictReader((HERE / 'visual-family-register.csv').open())}
 for r in rows:
+    r['Visual_Family_ID'] = vf.get(r.get('Thumbnail_ID'), '')
     for f in FIELDS: r.setdefault(f, '')
 rows.sort(key=lambda r: (r['Evidence_Class'], r['Video_ID'], r['Source_Path']))
 with (HERE / 'thumbnail-universe.csv').open('w', newline='') as f:
