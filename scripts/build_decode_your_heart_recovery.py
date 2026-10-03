@@ -1478,7 +1478,7 @@ def main() -> None:
             "plan_30_60_90": FINAL.PLAN_30_60_90,
             "residual_uncertainty": "Audio was not heard for any video; storyboard frames are low resolution; per-video traffic sources, cross-format viewing and two-thirds of geography are undisclosed; all performance explanations are associations from small cohorts (tens to a few hundred viewers per video).",
         },
-        "preservation": {"raw_private_exports_modified": False, "credentials_saved": False, "remote_push_performed": False, "note": "Only derived docs/research artifacts and supporting scripts were updated."},
+        "preservation": {"raw_private_exports_modified": False, "credentials_saved": False, "remote_push_performed": True, "note": "Only derived docs/research artifacts and supporting scripts were updated. CORRECTED 2026-10-03: these derived private Studio metrics were pushed to the private origin (research/senior-health-acquisition-phase-2); raw Studio ZIPs remain ignored/local-only. See docs/audits/DECODE-YOUR-HEART-PRIVACY-CLASSIFICATION-2026-10-03.md."},
     }
     (OUT_DIR / "Decode_Your_Heart_Video_Evidence_Register.json").write_text(json.dumps(register, indent=2) + "\n")
     (OUT_DIR / "Decode_Your_Heart_Research_Checkpoint.json").write_text(json.dumps(checkpoint, indent=2) + "\n")
