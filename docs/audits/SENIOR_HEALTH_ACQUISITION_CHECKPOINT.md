@@ -600,3 +600,31 @@ the existing 9-event Case-13 claim.
 paid Apify run (the remaining 13 of Group C, or any Priority B refresh)
 — owner authorized only the one Priority A backfill this turn.
 beyond this checkpoint was performed in this section.
+
+## Senior Health data expansion — checkpoint (2026-09-28, PARTIAL — collection paused by owner)
+
+- Branch `research/senior-health-data-expansion-2026-09-28`, worktree `../yios-sh-expansion`, forked from
+  `origin/research/senior-health-acquisition-phase-2` @ `31ea9a5` (= `origin/main` `812f249` + 4 commits).
+  Main checkout (`research/senior-health-complete-local-sync` @ `9f0454c`, merged via PR #3) left untouched.
+- Live snapshot: `docs/research/senior-health-2026-09-25/forensic-v3/live-catalog-2026-09-28/` (69 original leads
+  + 69 search discoveries + 5 web-search leads; tab enumeration with listing-card details, About panels).
+- Per-video zero-spend public metadata (`scripts/yt_video_meta.py`) staged in the session scratchpad (mirrored to git-ignored `.tmp/ds34_stage/` in the worktree)
+  `ds34_stage/public-metadata/<channel_id>.jsonl`; registered as `DS-000034` (below).
+- YouTube bot-check encountered at 4 parallel workers (359 refused requests, logged separately, no data recorded);
+  collection resumed single-worker at 1 s spacing with a 15-minute back-off rule.
+- Apify (read-only, 2026-09-28): $1.62/$5.00 used, $3.38 free credit, period Sep 17–Oct 16; 9 runs, all
+  already integrated; Actor build `0.0.303`; Free-plan `$4.00/1,000` videos. No paid run started.
+- Collection paused at owner request (2026-09-28 18:15 PKT). Registered as `DS-000034` (class B,
+  `data/raw/competitors/DS-000034/`, 73 files: 63 per-channel `<channel_id>.jsonl.gz`, 9 refusal logs,
+  `collection_manifest.json`; `inventory_catalog.py verify` VERIFIED). 4,648 per-video records, 0 errors,
+  collected 2026-09-28T11:52:58Z–13:16:10Z. Coverage: P0 acquired 7/7, P1 qualified pending 14/14,
+  P2 new direct discoveries 26/39, P3 0/23, P4 adjacent and P5 international not started.
+- Rebuilt `SENIOR-HEALTH-MASTER-INVENTORY-2026-09-28.*` from DS-000034 (143 leads: 71 identity-only,
+  35 adjacent, 14 qualified pending, 11 removed/unavailable, 4 acquired complete, 3 acquired with new
+  uploads, 4 excluded by review, 1 own channel; metadata: 56 per-video complete, 7 partial, 69 listing-level
+  only). `PAID-ACQUISITION-PLAN-2026-09-28.md`: 15 runs / 2,054 results / $8.216 expected; 7 fit the
+  $3.044 campaign residual and 80% of $3.38 credit ($2.112 expected). **No paid run authorized or started.**
+- Registry rebuilt (datasets 32 → 33 expected, validator PASS), master tracker regenerated; 397 tests pass.
+- Remaining (resumable; the collector skips IDs already in a file, but new records belong in a new dataset
+  since DS-000034 is immutable): P2 13 channels, P3 23 channels, Dr. Brooks' 107 videos
+  (`UClzqmRzoC-7r8GiB_XQUn_A`; its snapshot was stale when first processed), P4/P5 per-video collection, then rebuild the inventory.
