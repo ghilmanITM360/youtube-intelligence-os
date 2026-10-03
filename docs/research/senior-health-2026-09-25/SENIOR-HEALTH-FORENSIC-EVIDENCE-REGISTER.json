@@ -304,5 +304,32 @@
     "repository_path": "Google Trends (search: \"balance exercises for seniors\", region: US, 12-month window)",
     "confidence": "MEDIUM",
     "notes": "Corroborates Mobility cluster high performance as demand-driven; evergreen nature"
+  },
+  {
+    "evidence_id": "EV-049",
+    "claim": "Better Health While Aging contains 98 unique videos, 98 real transcripts, and 25 unique >=5x all-video-median breakout candidates split into the original 9 and remaining 16",
+    "evidence_type": "DERIVED_METRIC",
+    "internal_external": "INTERNAL",
+    "repository_path": "docs/research/senior-health-2026-09-25/forensic-v3/BETTER-HEALTH-WHILE-AGING-TRANSCRIPT-STRUCTURE.json",
+    "confidence": "HIGH",
+    "notes": "Reproducible from registry DB by scripts/analyze_better_health_while_aging.py; candidate threshold differs from Case 13's 15x event rule"
+  },
+  {
+    "evidence_id": "EV-050",
+    "claim": "All 98 Better Health While Aging transcripts have automated structural records with actual opening text and explicitly estimated 15/30/60-second windows",
+    "evidence_type": "TRANSCRIPT_ANALYSIS",
+    "internal_external": "INTERNAL",
+    "repository_path": "docs/research/senior-health-2026-09-25/forensic-v3/BETTER-HEALTH-WHILE-AGING-TRANSCRIPT-STRUCTURE.json",
+    "confidence": "HIGH",
+    "notes": "Automated structural completion is not deep manual investigation; plaintext-caption timing is estimated from word position"
+  },
+  {
+    "evidence_id": "EV-051",
+    "claim": "The only DS-000033 thumbnail URL absent from acquired metadata, Short x0Z5ziQNtWQ, was recovered from YouTube watch-page og:image metadata and visually inspected",
+    "evidence_type": "VISUAL_WEB_RESEARCH",
+    "internal_external": "EXTERNAL",
+    "repository_path": "docs/research/senior-health-2026-09-25/forensic-v3/BETTER-HEALTH-WHILE-AGING-THUMBNAIL-EVIDENCE.json",
+    "confidence": "HIGH",
+    "notes": "Current YouTube page observation; auto-selected Shorts image does not establish creator packaging intent"
   }
 ]

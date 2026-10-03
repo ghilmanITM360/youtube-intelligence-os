@@ -421,7 +421,7 @@ class ChannelMasterTrackerTests(unittest.TestCase):
             connection.close()
         self.assertFalse(errors, errors[:10])
         self.assertEqual(
-            {"channels": 40, "videos": 1874, "real": 1863, "placeholders": 11, "over_excel_limit": 79},
+            {"channels": 40, "videos": 1878, "real": 1867, "placeholders": 11, "over_excel_limit": 79},
             counts,
         )
 
