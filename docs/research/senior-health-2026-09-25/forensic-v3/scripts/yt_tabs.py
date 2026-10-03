@@ -8,8 +8,44 @@ def get(url, data=None):
     req = urllib.request.Request(url, data=data, headers={**UA, **({"Content-Type": "application/json"} if data else {})})
     return urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
 
+DETAILS = {}  # videoId -> listing-card text exactly as YouTube rendered it (views/age/duration/thumbnail)
+
+
+def _texts(o):
+    """Every visible 'content' string inside a lockup metadata subtree, in order."""
+    if isinstance(o, dict):
+        if isinstance(o.get("content"), str):
+            yield o["content"]
+        for v in o.values():
+            yield from _texts(v)
+    elif isinstance(o, list):
+        for v in o:
+            yield from _texts(v)
+
+
+def _badge(o):
+    for t in _texts_key(o, "thumbnailBadgeViewModel"):
+        return t.get("text")
+
+
+def _texts_key(o, key):
+    if isinstance(o, dict):
+        if key in o:
+            yield o[key]
+        for v in o.values():
+            yield from _texts_key(v, key)
+    elif isinstance(o, list):
+        for v in o:
+            yield from _texts_key(v, key)
+
+
 def walk(o, out, conts):
     if isinstance(o, dict):
+        if "videoId" in o and "videoRenderer" not in o and ("lengthText" in o or "viewCountText" in o):
+            g = lambda k: (o.get(k) or {}).get("simpleText") or "".join(r.get("text", "") for r in (o.get(k) or {}).get("runs", []))
+            DETAILS.setdefault(o["videoId"], {"views_text": g("viewCountText"), "published_text": g("publishedTimeText"),
+                                              "duration_text": g("lengthText"),
+                                              "thumbnail_url": ((o.get("thumbnail") or {}).get("thumbnails") or [{}])[-1].get("url")})
         if "videoId" in o and ("title" in o or "headline" in o) and "thumbnail" in o:
             t = o.get("title") or o.get("headline") or {}
             txt = t.get("simpleText") or "".join(r.get("text", "") for r in t.get("runs", []))
@@ -17,11 +53,21 @@ def walk(o, out, conts):
         if "shortsLockupViewModel" in o:
             v = o["shortsLockupViewModel"]
             vid = v.get("onTap", {}).get("innertubeCommand", {}).get("reelWatchEndpoint", {}).get("videoId")
-            if vid: out.setdefault(vid, v.get("overlayMetadata", {}).get("primaryText", {}).get("content", ""))
+            if vid:
+                out.setdefault(vid, v.get("overlayMetadata", {}).get("primaryText", {}).get("content", ""))
+                DETAILS.setdefault(vid, {"views_text": v.get("overlayMetadata", {}).get("secondaryText", {}).get("content"),
+                                         "accessibility_text": v.get("accessibilityText"),
+                                         "thumbnail_url": ((v.get("onTap", {}).get("innertubeCommand", {}).get("reelWatchEndpoint", {})
+                                                            .get("thumbnail") or {}).get("thumbnails") or [{}])[-1].get("url")})
         if "lockupViewModel" in o and o["lockupViewModel"].get("contentType") in (None, "LOCKUP_CONTENT_TYPE_VIDEO"):
             v = o["lockupViewModel"]
             if v.get("contentId"):
-                out.setdefault(v["contentId"], v.get("metadata", {}).get("lockupMetadataViewModel", {}).get("title", {}).get("content", ""))
+                md = v.get("metadata", {}).get("lockupMetadataViewModel", {})
+                out.setdefault(v["contentId"], md.get("title", {}).get("content", ""))
+                srcs = (((v.get("contentImage") or {}).get("thumbnailViewModel") or {}).get("image") or {}).get("sources") or [{}]
+                DETAILS.setdefault(v["contentId"], {"metadata_text": list(_texts(md.get("metadata", {}))),
+                                                    "duration_text": _badge(v.get("contentImage")),
+                                                    "thumbnail_url": srcs[-1].get("url")})
         if "continuationCommand" in o:
             conts.append(o["continuationCommand"]["token"])
         for v in o.values(): walk(v, out, conts)
@@ -52,6 +98,10 @@ def tab(cid, name):
         walk(j.get("onResponseReceivedActions", []), out, conts)
     return out, (sel[0] if sel else "NONE")
 
+
+def details_for(ids):
+    return {i: DETAILS[i] for i in ids if i in DETAILS}
+
 def header(cid):
     html = get(f"https://www.youtube.com/channel/{cid}")
     canon = re.search(r'<link rel="canonical" href="([^"]+)"', html)
@@ -76,11 +126,16 @@ if __name__ == "__main__":
     if not cid:
         print(json.dumps({"ref": ref, "channel_id": None, "error": err})); sys.exit()
     res = {"ref": ref, "channel_id": cid, "observed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), **header(cid), "tabs": {}}
-    if not res["removed"]:
+    # "doesn't have any content" is also YouTube's empty-Home-tab placeholder, so it is only final once every tab is empty
+    home_only_empty = bool(res["removed"]) and "any content" in res["removed"]
+    if not res["removed"] or home_only_empty:
         for name in ("videos", "shorts", "streams"):
             try:
                 ids, sel = tab(cid, name)
-                res["tabs"][name] = {"selected_tab": sel, "count": None if ids is None else len(ids), "items": ids}
+                res["tabs"][name] = {"selected_tab": sel, "count": None if ids is None else len(ids), "items": ids,
+                                     "details": details_for(ids or {})}
             except Exception as e:
                 res["tabs"][name] = {"error": repr(e)}
+        if home_only_empty and any((t.get("count") or 0) for t in res["tabs"].values()):
+            res["removed"] = None
     print(json.dumps(res, ensure_ascii=False))

@@ -175,8 +175,8 @@ class RegistryModelTests(unittest.TestCase):
     def test_package_control_totals(self):
         package = self.model["controls"]["package_layer"]
         self.assertEqual(40, package["channels"])
-        self.assertEqual(1874, package["unique_videos"])
-        self.assertEqual(1863, package["real_transcripts"])
+        self.assertEqual(1878, package["unique_videos"])
+        self.assertEqual(1867, package["real_transcripts"])
         self.assertEqual(11, package["placeholders"])
         self.assertEqual(15, package["missing_descriptions"])
 
@@ -597,8 +597,8 @@ class RegistryDatabaseTests(unittest.TestCase):
                         "v_intelligence_coverage",
                     }.issubset(views)
                 )
-                self.assertEqual(2299, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
-                self.assertEqual(2287, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
+                self.assertEqual(2303, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
+                self.assertEqual(2291, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
                 self.assertEqual(12, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 1").fetchone()[0])
                 self.assertEqual(17, connection.execute("SELECT count(*) FROM videos WHERE description IS NULL").fetchone()[0])
                 self.assertEqual(40, connection.execute("SELECT count(*) FROM channels WHERE source_group='STANDARD_PACKAGE'").fetchone()[0])
@@ -768,6 +768,91 @@ class ThumbnailUrlCountDiscoveryTests(unittest.TestCase):
         source = inspect.getsource(builder.package_thumbnail_url_counts)
         self.assertNotIn("UCFuGMi0idGeyXl6wYK9hg7Q", source)
         self.assertNotIn("WqJIbwUkgkHDHxdaI", source)
+
+    def test_raw_runs_for_same_channel_are_unioned_by_video_id(self):
+        import sys
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from build_youtube_channel_registry import package_thumbnail_url_counts
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027", "DS-000028"):
+                self._write_master_csv(root, dataset_id, f"UC-{dataset_id}", "https://img/batch.jpg")
+            first = root / "data/raw/competitors/DS-000033/apify/RUN-A/raw/dataset.json"
+            second = root / "data/raw/competitors/DS-000033/apify/RUN-B/dataset.json"
+            first.parent.mkdir(parents=True)
+            second.parent.mkdir(parents=True)
+            first.write_text(json.dumps([
+                {"id": "video-1", "channelId": "UC-BHWA", "thumbnailUrl": "https://img/1.jpg"},
+                {"id": "video-2", "channelId": "UC-BHWA", "thumbnailUrl": "https://img/2.jpg"},
+            ]), encoding="utf-8")
+            second.write_text(json.dumps([
+                {"id": "video-2", "channelId": "UC-BHWA", "thumbnailUrl": "https://img/2.jpg"},
+                {"id": "video-3", "channelId": "UC-BHWA", "thumbnailUrl": "https://img/3.jpg"},
+            ]), encoding="utf-8")
+
+            counts = package_thumbnail_url_counts(root, channels=[])
+
+        self.assertEqual(3, counts["UC-BHWA"])
+
+    def test_standard_package_workbook_thumbnail_counts_are_not_ds22_specific(self):
+        import sys
+        from openpyxl import Workbook
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from build_youtube_channel_registry import package_thumbnail_url_counts
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for dataset_id in ("DS-000020", "DS-000021", "DS-000023", "DS-000024", "DS-000025", "DS-000027", "DS-000028"):
+                self._write_master_csv(root, dataset_id, f"UC-{dataset_id}", "https://img/batch.jpg")
+            package = root / "data/extracted/channel-data/DS-000033/packages/bhwa/master.xlsx"
+            package.parent.mkdir(parents=True)
+            workbook = Workbook()
+            sheet = workbook.active
+            sheet.title = "All Videos"
+            sheet.append([])
+            sheet.append([])
+            sheet.append([])
+            sheet.append(["#", "Video ID", "Thumbnail URL"])
+            sheet.append([1, "one", "https://img/one.jpg"])
+            sheet.append([2, "two", "https://img/two.jpg"])
+            workbook.save(package)
+
+            counts = package_thumbnail_url_counts(root, channels=[{
+                "primary_dataset_id": "DS-000033",
+                "canonical_channel_id": "UC-BHWA",
+                "workbook_path": package.relative_to(root).as_posix(),
+            }])
+
+        self.assertEqual(2, counts["UC-BHWA"])
+
+
+class DuplicateVideoEvidenceMergeTests(unittest.TestCase):
+    def test_later_package_record_fills_missing_thumbnail_without_overwriting_identity(self):
+        import sys
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from build_youtube_channel_registry import _merge_video_records
+
+        historical = {
+            "youtube_video_id": "16n80OQCVSM",
+            "canonical_channel_id": "UCFpxvukIqCAUA7YizI-q9Dw",
+            "canonical_url": "https://www.youtube.com/watch?v=16n80OQCVSM",
+            "title": "Improve Memory by AVOIDING These Drugs ⛔",
+            "thumbnail_url": None,
+            "raw_json": None,
+        }
+        package = {
+            **historical,
+            "thumbnail_url": "https://i.ytimg.com/vi/16n80OQCVSM/maxresdefault.jpg",
+            "raw_json": '{"source":"standard-package"}',
+        }
+
+        merged = _merge_video_records([historical, package])
+
+        self.assertEqual(1, len(merged))
+        self.assertEqual(historical["title"], merged[0]["title"])
+        self.assertEqual(package["thumbnail_url"], merged[0]["thumbnail_url"])
+        self.assertIsNone(merged[0]["raw_json"])
 
 
 if __name__ == "__main__":

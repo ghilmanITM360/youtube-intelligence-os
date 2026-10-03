@@ -182,5 +182,51 @@ class MasterInventoryRegressionTest(unittest.TestCase):
         self.assertEqual(len(ids), len(set(ids)))
 
 
+INVENTORY_2026_09_28 = V3_DIR / "SENIOR-HEALTH-MASTER-INVENTORY-2026-09-28.json"
+
+
+@unittest.skipIf(not INVENTORY_2026_09_28.exists(), "2026-09-28 master inventory not present")
+class MasterInventory20260928RegressionTest(unittest.TestCase):
+    """The 2026-09-28 inventory keeps every 2026-09-25 lead, keeps the own channel
+    separate, never proposes spend on excluded leads, and its report totals are the
+    sum of its rows."""
+
+    CATEGORIES = {"ACQUIRED_COMPLETE_AT_SNAPSHOT", "ACQUIRED_WITH_HISTORICAL_GAPS", "ACQUIRED_WITH_NEW_PUBLIC_UPLOADS",
+                  "PARTIALLY_ACQUIRED", "QUALIFIED_PENDING", "HEALTH_RELEVANT_IDENTITY_ONLY", "ADJACENT_HEALTH_REFERENCE",
+                  "UNVERIFIED_IDENTITY", "REMOVED_OR_UNAVAILABLE", "EXCLUDED_BY_REVIEW", "OWN_CHANNEL"}
+
+    def setUp(self):
+        self.rows = json.loads(INVENTORY_2026_09_28.read_text(encoding="utf-8"))["channels"]
+        self.by_ref = {r["ref"]: r for r in self.rows}
+
+    def test_every_2026_09_25_lead_is_still_accounted_for(self):
+        old = json.loads((V3_DIR / "SENIOR-HEALTH-MASTER-INVENTORY.json").read_text(encoding="utf-8"))["channels"]
+        self.assertEqual({r["ref"] for r in old} - set(self.by_ref), set())
+
+    def test_categories_ids_and_own_channel(self):
+        self.assertTrue({r["inventory_category"] for r in self.rows} <= self.CATEGORIES)
+        ids = [r["canonical_channel_id"] for r in self.rows if r["canonical_channel_id"]]
+        self.assertEqual(len(ids), len(set(ids)))
+        own = [r for r in self.rows if r["inventory_category"] == "OWN_CHANNEL"]
+        self.assertEqual([r["canonical_channel_id"] for r in own], ["UCQIzqH7QZ9viBYpOFqgSXMg"])
+        self.assertEqual(own[0]["required_new_results"], 0)
+
+    def test_excluded_need_no_spend_and_qualified_pending_are_the_fourteen(self):
+        for r in self.rows:
+            if r["inventory_category"] in ("REMOVED_OR_UNAVAILABLE", "EXCLUDED_BY_REVIEW", "OWN_CHANNEL"):
+                self.assertEqual(r["required_new_results"], 0, r["ref"])
+        self.assertEqual(sum(r["inventory_category"] == "QUALIFIED_PENDING" for r in self.rows), 14)
+
+    def test_collected_metadata_belongs_to_its_channel(self):
+        for r in self.rows:
+            self.assertEqual(r.get("meta_channel_id_mismatch_ids") or [], [], r["ref"])
+
+    def test_report_category_counts_match_rows(self):
+        report = (V3_DIR / "SENIOR-HEALTH-MASTER-INVENTORY-REPORT-2026-09-28.md").read_text(encoding="utf-8")
+        from collections import Counter
+        for category, count in Counter(r["inventory_category"] for r in self.rows).items():
+            self.assertIn(f"{category} {count}", report)
+
+
 if __name__ == "__main__":
     unittest.main()

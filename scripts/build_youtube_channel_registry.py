@@ -228,21 +228,24 @@ def package_thumbnail_url_counts(root: Path, channels: list[dict]) -> dict[str, 
             for row in csv.DictReader(handle):
                 if row["thumbnail_url"]:
                     counts[row["channel_id"]] += 1
-    raw_dataset_paths = sorted(root.glob("data/raw/competitors/*/dataset.json")) + sorted(
-        root.glob("data/raw/competitors/*/apify/*/raw/dataset.json")
+    raw_dataset_paths = (
+        sorted(root.glob("data/raw/competitors/*/dataset.json"))
+        + sorted(root.glob("data/raw/competitors/*/apify/*/dataset.json"))
+        + sorted(root.glob("data/raw/competitors/*/apify/*/raw/dataset.json"))
     )
+    raw_video_ids: dict[str, set[str]] = defaultdict(set)
     for raw_path in raw_dataset_paths:
         records = json.loads(raw_path.read_text(encoding="utf-8"))
-        by_channel: dict[str, int] = defaultdict(int)
         for record in records:
             channel_id = record.get("channelId")
             if channel_id and record.get("thumbnailUrl"):
-                by_channel[channel_id] += 1
-        for channel_id, count in by_channel.items():
-            counts[channel_id] = max(counts[channel_id], count)
+                identity = record.get("id") or record.get("url") or record["thumbnailUrl"]
+                raw_video_ids[channel_id].add(str(identity))
+    for channel_id, video_ids in raw_video_ids.items():
+        counts[channel_id] = max(counts[channel_id], len(video_ids))
     from openpyxl import load_workbook
     for channel in channels:
-        if channel["primary_dataset_id"] != "DS-000022":
+        if not channel.get("workbook_path"):
             continue
         book = load_workbook(root / channel["workbook_path"], read_only=True, data_only=True)
         try:
@@ -965,6 +968,22 @@ def _actor_run_records(root: Path, package_runs: list[dict]) -> list[dict]:
     return list(records.values())
 
 
+def _merge_video_records(videos: list[dict]) -> list[dict]:
+    """Fill missing thumbnail metadata from later evidence for duplicate videos."""
+    by_id: dict[str, dict] = {}
+    for video in videos:
+        video_id = video["youtube_video_id"]
+        existing = by_id.get(video_id)
+        if existing and existing["canonical_channel_id"] != video["canonical_channel_id"]:
+            raise ValueError(f"Video {video_id} has conflicting channels")
+        if not existing:
+            by_id[video_id] = dict(video)
+            continue
+        if existing.get("thumbnail_url") in (None, "") and video.get("thumbnail_url") not in (None, ""):
+            existing["thumbnail_url"] = video["thumbnail_url"]
+    return list(by_id.values())
+
+
 def _all_records(root: Path, model: dict):
     historical = _historical_records(root)
     combined = _combined_package_records(root)
@@ -972,14 +991,7 @@ def _all_records(root: Path, model: dict):
     videos = historical[0] + combined[0] + standard_package[0]
     transcripts = historical[1] + combined[1] + standard_package[1]
     memberships = historical[2] + combined[2] + standard_package[2]
-    by_id = {}
-    for video in videos:
-        existing = by_id.get(video["youtube_video_id"])
-        if existing and existing["canonical_channel_id"] != video["canonical_channel_id"]:
-            raise ValueError(f"Video {video['youtube_video_id']} has conflicting channels")
-        if not existing:
-            by_id[video["youtube_video_id"]] = video
-    return list(by_id.values()), transcripts, memberships, _actor_run_records(root, combined[3])
+    return _merge_video_records(videos), transcripts, memberships, _actor_run_records(root, combined[3])
 
 
 def connect(path: Path) -> sqlite3.Connection:

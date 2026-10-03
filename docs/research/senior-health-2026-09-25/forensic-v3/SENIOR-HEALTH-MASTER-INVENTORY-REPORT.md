@@ -1,3 +1,5 @@
+> **SUPERSEDED (2026-09-28):** the current inventory, category counts, exact missing IDs and paid-run plan are in `SENIOR-HEALTH-MASTER-INVENTORY-REPORT-2026-09-28.md`, `SENIOR-HEALTH-MASTER-INVENTORY-2026-09-28.json/.csv` and `PAID-ACQUISITION-PLAN-2026-09-28.md` (live re-enumeration, 143 leads, per-video public metadata DS-000034). This file is kept unchanged below as the 2026-09-25 historical record.
+
 # Senior Health Master Inventory, Missing-Data Matrix & Acquisition Plan — 2026-09-25
 
 **Status:** Phases 1–4 and 6 complete, zero-spend. Phases 5 (live Apify account audit) and 7 (paid acquisition) are **BLOCKED**: the Claude-in-Chrome extension reports an OAuth account mismatch and `APIFY_TOKEN` is not set, so the authenticated Apify Console could not be opened. No Actor run was started; spend this pass: **$0.000**.

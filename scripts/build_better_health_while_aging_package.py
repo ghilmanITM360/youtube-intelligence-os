@@ -3,10 +3,11 @@
 
 Reproduces the same five-sheet workbook + transcript ZIP contract used by
 existing standard packages (DS-000028 / Dr. Okoro, DS-000029 / Doctor
-Thomas, DS-000032 / Dr. Rehan). Every one of the 94 captured videos has a
-real YouTube caption track (74 user-generated, 20 auto-generated); no
-explicit no-subtitle placeholder is needed here because none exists in the
-evidence.
+Thomas, DS-000032 / Dr. Rehan). Combines two Apify runs: the original
+94-video catalog acquisition (2026-09-25) and a 4-video targeted Shorts
+backfill (2026-09-26, Priority A missing historical Shorts). Every one of
+the 98 captured videos has a real YouTube caption track; no explicit
+no-subtitle placeholder is needed here because none exists in the evidence.
 
 This is a Senior Health competitor acquisition (Group C, P1 tier) — see
 docs/research/senior-health-2026-09-25/forensic-v3/ACQUISITION-BACKLOG.md.
@@ -24,18 +25,37 @@ from openpyxl import Workbook
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW_JSON = ROOT / "data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/raw/dataset.json"
-TRANSCRIPTS_DIR = ROOT / "data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/transcripts"
+RUNS = [
+    {
+        "raw_json": ROOT / "data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/raw/dataset.json",
+        "transcripts_dir": ROOT / "data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/transcripts",
+        "run_id": "AuZ65QkXBmVIXcOn9",
+        "dataset_id": "ijadodx1EUhkjOrcp",
+        "collection_date": "2026-09-25",
+        "video_count": 94,
+        "cost_usd": "$0.376",
+        "cost_cap": "$0.45",
+    },
+    {
+        "raw_json": ROOT / "data/raw/competitors/DS-000033/apify/Ll3gKxE3dXEeG4SDd/dataset.json",
+        "transcripts_dir": ROOT / "data/raw/competitors/DS-000033/apify/Ll3gKxE3dXEeG4SDd/transcripts",
+        "run_id": "Ll3gKxE3dXEeG4SDd",
+        "dataset_id": "xCOQ0gj6iLVqCI9B5",
+        "collection_date": "2026-09-26",
+        "video_count": 4,
+        "cost_usd": "$0.016",
+        "cost_cap": "$0.02",
+    },
+]
 PACKAGE_DIR = ROOT / "data/extracted/channel-data/DS-000033/packages/better-health-while-aging"
 WORKBOOK_PATH = PACKAGE_DIR / "BetterHealthWhileAging_Master_Data.xlsx"
-ZIP_PATH = PACKAGE_DIR / "BetterHealthWhileAging_Transcripts_94_Videos.zip"
+ZIP_PATH = PACKAGE_DIR / "BetterHealthWhileAging_Transcripts_98_Videos.zip"
 CHANNEL_NAME = "Better Health While Aging"
 CHANNEL_HANDLE = "@BetterHealthWhileAging"
 CHANNEL_ID = "UCFpxvukIqCAUA7YizI-q9Dw"
-COLLECTION_DATE = "2026-09-25"
-RUN_ID = "AuZ65QkXBmVIXcOn9"
-DATASET_ID = "ijadodx1EUhkjOrcp"
-PUBLIC_VIDEO_COUNT = 94
+COLLECTION_DATE = "2026-09-26"
+PUBLIC_VIDEO_COUNT = sum(run["video_count"] for run in RUNS)
+THUMBNAIL_EVIDENCE = ROOT / "docs/research/senior-health-2026-09-25/forensic-v3/BETTER-HEALTH-WHILE-AGING-THUMBNAIL-EVIDENCE.json"
 
 ALL_VIDEO_HEADERS = [
     "#", "Video ID", "Title", "Video URL", "Published (UTC)", "Date", "Day", "Duration", "Sec", "Views",
@@ -102,15 +122,28 @@ def parse_duration(value: str) -> int:
 
 
 def load_videos() -> list[dict]:
-    records = json.loads(RAW_JSON.read_text(encoding="utf-8"))
+    records = []
+    transcripts_by_id: dict[str, Path] = {}
+    for run in RUNS:
+        run_records = json.loads(run["raw_json"].read_text(encoding="utf-8"))
+        records.extend(run_records)
+        for record in run_records:
+            transcripts_by_id[record["id"]] = run["transcripts_dir"] / f"{record['id']}.txt"
+    seen_ids = [record["id"] for record in records]
+    assert len(seen_ids) == len(set(seen_ids)), "duplicate video IDs across BHWA Apify runs"
     records.sort(key=lambda item: item["date"], reverse=True)
+    thumbnail_recoveries = {
+        row["video_id"]: row["thumbnail_url"]
+        for row in json.loads(THUMBNAIL_EVIDENCE.read_text(encoding="utf-8"))["observations"]
+        if row.get("purpose") == "Resolve source acquisition's missing thumbnail URL"
+    }
     videos = []
     for index, record in enumerate(records, start=1):
         video_id = record["id"]
         published = datetime.fromisoformat(record["date"].replace("Z", "+00:00"))
         duration_seconds = parse_duration(record["duration"])
         description = record.get("text") or ""
-        transcript_path = TRANSCRIPTS_DIR / f"{video_id}.txt"
+        transcript_path = transcripts_by_id[video_id]
         has_transcript = transcript_path.is_file()
         transcript_body = transcript_path.read_text(encoding="utf-8").strip() if has_transcript else ""
         subtitles = record.get("subtitles") or []
@@ -136,7 +169,7 @@ def load_videos() -> list[dict]:
             "transcript": transcript_body,
             "words": word_count(transcript_body),
             "filename": f"{index:03d}_{video_id}_{clean_title_for_filename(record['title'])}.txt",
-            "thumbnail": record.get("thumbnailUrl") or "",
+            "thumbnail": record.get("thumbnailUrl") or thumbnail_recoveries.get(video_id, ""),
             "members_only": bool(record.get("isMembersOnly")),
             "paid": bool(record.get("isPaidContent")),
             "comments_off": bool(record.get("commentsTurnedOff")),
@@ -163,6 +196,10 @@ def build_workbook(videos: list[dict]) -> Workbook:
     real_transcripts = sum(1 for v in videos if v["has_transcript"])
     regular_count = sum(1 for v in videos if v["content_type"] == "regular video")
     shorts_count = sum(1 for v in videos if v["content_type"] == "Short")
+    user_generated = sum(1 for v in videos if v["caption_type"] == "user_generated")
+    auto_generated = sum(1 for v in videos if v["caption_type"] == "auto_generated")
+    run_ids = ", ".join(run["run_id"] for run in RUNS)
+    dataset_ids = ", ".join(run["dataset_id"] for run in RUNS)
     overview.append([f"{CHANNEL_NAME} — Full Channel Data Export"])
     overview.append([f"Source: Apify streamers/youtube-scraper | Packaged {COLLECTION_DATE} | "
                       f"{len(videos)} videos, {len(videos) - no_descriptions} public descriptions, "
@@ -180,13 +217,14 @@ def build_workbook(videos: list[dict]) -> Workbook:
         ("Shorts", shorts_count),
         ("Source Actor", "streamers/youtube-scraper"),
         ("Scrape Date", COLLECTION_DATE),
-        ("Relevant Run ID", RUN_ID),
-        ("Relevant Dataset ID", DATASET_ID),
-        ("Completeness Notes", f"{len(videos)}/{PUBLIC_VIDEO_COUNT} videos captured within the approved "
-                                f"$0.45 cost cap; 0 duplicate IDs."),
+        ("Relevant Run IDs", run_ids),
+        ("Relevant Dataset IDs", dataset_ids),
+        ("Completeness Notes", f"{len(videos)} videos captured across {len(RUNS)} Apify runs "
+                                f"(94-video initial catalog acquisition + 4-video Priority A Shorts backfill); "
+                                f"0 duplicate IDs."),
         ("Transcript Notes", f"{real_transcripts}/{len(videos)} videos have a real YouTube transcript "
-                              f"(74 user-generated, 20 auto-generated captions; no paid AI transcription used); "
-                              f"0 videos have an explicit no-subtitle gap."),
+                              f"({user_generated} user-generated, {auto_generated} auto-generated captions; "
+                              f"no paid AI transcription used); 0 videos have an explicit no-subtitle gap."),
     ]:
         overview.append([field, value])
 
@@ -237,14 +275,16 @@ def build_workbook(videos: list[dict]) -> Workbook:
     verification.append([f"Every value below is computed from the registered {len(videos)}-video master and channel package data."])
     verification.append([])
     verification.append(["Check", "Value", "Result"])
-    verification.append(["Videos captured within Actor result ceiling", PUBLIC_VIDEO_COUNT,
-                          f"Actor run {RUN_ID} returned exactly {PUBLIC_VIDEO_COUNT} videos"])
-    verification.append(["Videos captured", len(videos), "Matches Actor output exactly"])
+    verification.append(["Videos captured across all runs", PUBLIC_VIDEO_COUNT,
+                          f"Actor runs {', '.join(run['run_id'] for run in RUNS)} returned exactly "
+                          f"{PUBLIC_VIDEO_COUNT} videos combined"])
+    verification.append(["Videos captured", len(videos), "Matches combined Actor output exactly"])
     verification.append(["Real transcripts", real_transcripts, f"{real_transcripts}/{len(videos)} videos have YouTube captions"])
     verification.append(["Explicit transcript gaps", len(videos) - real_transcripts,
                           "None; every captured video has a YouTube caption track"])
-    verification.append(["Duplicate video IDs", 0, "No duplicates in captured set"])
-    verification.append(["Actual run cost", "$0.376", "Under the $0.45 approved cap"])
+    verification.append(["Duplicate video IDs", 0, "No duplicates across combined runs"])
+    for run in RUNS:
+        verification.append([f"Actual run cost ({run['run_id']})", run["cost_usd"], f"Under the {run['cost_cap']} approved cap"])
 
     analysis = workbook["Analysis"]
     analysis.append([f"Channel Analysis — {CHANNEL_NAME}"])

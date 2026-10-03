@@ -1,5 +1,19 @@
 # Senior Health Acquisition Checkpoint
 
+## Better Health While Aging resumed forensic assignment — Batch A (2026-09-27)
+
+Status: **PARTIAL; assignment remains IN PROGRESS.**
+
+- Branch recovered: `research/senior-health-acquisition-phase-2`; starting local/remote commit `655db99`.
+- Reverified population: 98 unique videos, 80 regular videos, 18 Shorts, 98 real transcripts, 0 placeholders.
+- Caption provenance: 73 `user_generated`, 21 `auto_generated`, 4 real transcripts with source caption type unspecified. Prior `77 user-generated` wording was not evidence-exact and is corrected in the dossier.
+- Breakout candidates: 25 unique IDs at the existing descriptive `>=5x` all-video median screen; 9 original Case-13 IDs and 16 newly surfaced IDs, with no overlap or duplicates. Full 25 rows now appear in the existing dossier and canonical JSON analysis artifact.
+- Structural transcript analysis: 98/98 `AUTOMATED_STRUCTURAL_ANALYSIS_COMPLETE`; 15/30/60-second windows are labeled `ESTIMATED_FROM_WORD_POSITION_PLAINTEXT_CAPTIONS`. Automated structure remains separate from deep manual investigation.
+- Missing thumbnail: original missing registry value for `16n80OQCVSM` was a derived-data merge defect and is fixed. After that repair, the true acquisition gap was isolated to backfilled Short `x0Z5ziQNtWQ`; YouTube's watch-page `og:image`/`twitter:image` supplied its current image URL. Image visually inspected and recorded in `BETTER-HEALTH-WHILE-AGING-THUMBNAIL-EVIDENCE.json`. Standard package and registry now contain 98/98 thumbnail URLs. Raw source evidence remains unchanged.
+- Files updated: existing dossier, DS-000033 standard workbook/ZIP, registry DB/normalized ledgers, registry/package builders, focused regression tests. New analytical dataset: `BETTER-HEALTH-WHILE-AGING-TRANSCRIPT-STRUCTURE.json`. New visual evidence register: `BETTER-HEALTH-WHILE-AGING-THUMBNAIL-EVIDENCE.json`.
+- Verification: 7 focused tests passed; full suite passed `393 passed, 5 warnings`; registry integrity `ok`, 0 foreign-key violations; registry and channel tracker report 98 videos and 98 thumbnail URLs. Artifact-tool inspection found no formula errors in the regenerated DS-000033 workbook or channel tracker; exact cells confirm recovered `x0Z5ziQNtWQ` URL and tracker count 98. Existing DS-000033 `All Videos` sheet remains visually dense at whole-table zoom, so no broad formatting-quality claim is made. Workbook V3 research integration, commit, and push remain pending.
+- Outstanding Batch A boundary: deep transcript investigation remains 9 previously reported/89 not yet deeply investigated; original nine still need acceptance-level re-verification. Batch B/C/D not complete.
+
 Updated: 2026-09-22
 
 ## Registry and package completion
@@ -392,3 +406,225 @@ remains the single canonical checkpoint (this section appended, no
 duplicate report created). Next acquisition work continues from a new
 branch off this merged `main`; no paid Apify acquisition or broad
 discovery campaign was started in this pass.
+
+## Phase 2 acquisition — zero-spend precheck (2026-09-26)
+
+Working branch `research/senior-health-acquisition-phase-2`, forked
+exactly at merged `main` `812f249` (`git merge-base` confirms zero
+divergence). Baseline re-confirmed on this branch: 75 channels, 2299
+videos, 2287 real transcripts, 12 placeholders, 40 standard packages —
+exact match, `PRAGMA integrity_check = ok`.
+
+**Backlog recovery.** The full 19-qualified-pending-competitor backlog,
+missing-data matrix and per-channel acquisition plan already exist at
+`docs/research/senior-health-2026-09-25/forensic-v3/SENIOR-HEALTH-MASTER-INVENTORY-REPORT.md`
+(committed, tracked, dated 2026-09-25) — not rebuilt here. It lists all 14
+Group-C priority channels plus 34 identity-only/adjacent leads (=48 class-E
+total; the task's "19" figure is the Group-C direct-acquisition subset)
+with verified Channel IDs, live regular/Shorts/stream counts, and per-run
+cost estimates.
+
+**Live Apify account audit — previously blocked, now completed.** The
+2026-09-25 pass recorded this as blocked (Claude-in-Chrome OAuth account
+mismatch, no `APIFY_TOKEN`). This session's Chrome extension session is
+correctly authenticated (account `ghilman`, Personal), so the audit ran
+live:
+
+- Current billing period: Sep 17 – Oct 16 2026. Platform usage `$1.60 /
+  $5.00` (Actors `$1.59`, data transfer `$0.01`). **Remaining free-tier
+  credit: `$3.40`** — matches the last-documented figure exactly.
+- Actor: `streamers/youtube-scraper`, build `0.0.303`, unchanged since all
+  prior runs.
+- Run history: exactly 8 runs, all reconciled against this repo's own
+  manifests/ledger — no unintegrated orphan dataset exists:
+  | Live run (date, results, cost) | Repo record |
+  |---|---|
+  | 2026-09-20, 35, $0.14 | Dr. Ares Senior control |
+  | 2026-09-22, 1, $0.00 | precheck |
+  | 2026-09-22, 66, $0.26 | Dr. Okoro (DS-000028, `$0.264`) |
+  | 2026-09-23, 22, $0.09 | Doctor Thomas (DS-000029, `$0.088`) |
+  | 2026-09-23, 122, $0.49 | Senior Health Hub (DS-000030, `$0.488`) |
+  | 2026-09-25, 1, $0.00 (aborted) | precheck |
+  | 2026-09-25, 56, $0.22 | Own channel Dr. Rehan (DS-000032, `$0.224`) |
+  | 2026-09-25, 94, $0.38 | Better Health While Aging (DS-000033, `$0.376`) |
+- Owner-approved campaign cap remains `$4.50`; cumulative actual campaign
+  spend (Okoro + Thomas + SHH + BHWA + own-channel) `≈$1.44`; **remaining
+  approved campaign budget ≈ `$3.06`** — the binding constraint (tighter
+  than the `$3.40` free-tier balance).
+
+**Priority A — Better Health While Aging missing Shorts, re-verified live
+public today (not re-run, no spend):**
+
+| Video ID | Title | Public today |
+|---|---|---|
+| `-SMFhfZrjm0` | All About IADLs #shorts | yes |
+| `5Jqvsfq6UBo` | #Aging Parent with Memory Loss Won't Accept Help | yes |
+| `U6kI1V6CQVs` | All About ADLs #shorts | yes |
+| `x0Z5ziQNtWQ` | DO THIS: 4 Types of Exercise in Aging | yes |
+
+All 4 confirmed absent from `youtube_channel_registry.db` (`SELECT ...
+WHERE youtube_video_id IN (...)` → 0 rows) and all 4 still publicly
+reachable at their `/shorts/<id>` URLs. Ready for a targeted `startUrls`
+run (4 results, expected `$0.016`, proposed hard cap `$0.02`) — not
+started; awaiting explicit spend authorization per the financial boundary.
+
+**Priority B — newer uploads** (Dr. Elias +12, Dr. Ares +2, Senior Health
+Hub +1): already quantified with exact video IDs in the master inventory
+report above; classified `NEW_UPLOADS_SINCE_SNAPSHOT`, not a data gap.
+Optional refresh, ~`$0.06` total, not started.
+
+**Phase 6/7 individual + combined research status.** A substantial V3
+forensic pass already exists at
+`docs/research/senior-health-2026-09-25/forensic-v3/` (`FINAL-STATUS-V3.md`:
+"COMPLETE WITH WARNINGS") covering cross-channel title/thumbnail/hook
+pattern analysis, 37 small-channel breakout events across 13 channels
+(including a full same-day Case-13 deep-dive on Better Health While
+Aging), 32 Google Trends investigations, and a 41-sheet workbook. It does
+**not** yet contain the per-channel dedicated section format this task's
+Phase 6 specifies (individually complete title-by-title/thumbnail-by-
+thumbnail/script-by-script write-ups per acquired competitor) — that
+remains outstanding and was not attempted this pass; it is a multi-session
+writing effort, not a zero-spend precheck, and rushing it would risk
+exactly the kind of unevidenced inference Core Rule 6 forbids. No V4
+"repair-and-expand" pass referenced in `FINAL-STATUS-V3.md` actually
+landed in the repository (no `checkpoints/` directory, no V4 files exist)
+— that reference describes intent from an unpushed worktree, not
+completed work; noted here so a future session does not assume it exists.
+
+No paid Apify run, no merge to `main`, no branch deletion, no commit
+beyond this checkpoint was performed in this section.
+
+## Phase 4 Priority A backfill + reconciliation (2026-09-26)
+
+**Authorization.** Owner explicitly authorized "one targeted Better Health
+While Aging acquisition only, with a strict maximum additional charge of
+$0.020" in chat, no other paid run.
+
+**Live prechecks before spend.** Apify billing re-verified live: $1.60/$5.00
+used, $3.40 free-tier credit remaining, same billing period (Sep 17–Oct 16
+2026) — exact match to the prior zero-spend precheck, nothing changed
+in between. Actor `streamers/youtube-scraper` build `0.0.303`, live price
+confirmed `$4.00/1,000 videos` ($0.004/video). All 4 target Shorts
+(`-SMFhfZrjm0`, `5Jqvsfq6UBo`, `U6kI1V6CQVs`, `x0Z5ziQNtWQ`) re-verified
+public today (page-title check, zero cost) and re-confirmed absent from
+`youtube_inventory.db` immediately before the run.
+
+**Run configuration.** Apify Console (authenticated browser session),
+`streamers/youtube-scraper`, Direct URLs = the 4 exact Short URLs only
+(no channel-level re-scrape). `maxResults`/`maxResultsShorts` capped at 4
+each as a safety bound. AI video description/summary add-ons left off.
+Transcription mode = "Only download subtitles (when present on the
+video)" (`transcriptionAndSubtitle: "ALWAYS_SUBTITLES"`, `subtitlesFormat:
+plaintext`, `subtitlesLanguage: en`) — real YouTube captions only, no paid
+AI transcription. Server-side hard cap: **Maximum cost per run = $0.02**
+(`maxTotalChargeUsd`, `isMaxTotalChargeUsdSetByUser: true` — confirmed in
+the run's own API record).
+
+**Result.** Run `Ll3gKxE3dXEeG4SDd`: SUCCEEDED, 8/8 requests, 0 failed,
+4/4 videos returned, all 4 with real captions (3 user-generated, 1
+auto-generated — that one video has no manual captions available on
+YouTube, so auto-generated is the best real evidence that exists).
+`chargedEventCounts`: 4 result events, 0 AI-description, 0 AI-summary,
+0 transcribe-minute events. **Actual cost: $0.016** (under the $0.02 cap
+and under the ~$3.06 remaining approved campaign budget).
+
+**Ingestion and rebuild.** Ingested through the existing controlled
+pipeline (`apify_youtube_ingest.py ingest-existing`, same dataset lineage
+`DS-000033`) — 4 new videos, 0 duplicates, 0 malformed records. Channel
+now 98/98 videos with real transcripts, 0 placeholders. Rebuilt: BHWA
+standard package workbook + transcript ZIP (now spanning both Apify runs,
+94 + 4), channel registry DB and ledgers (`build_youtube_channel_registry.py
+--write-ledgers`), master tracker workbook. Updated the coverage-ledger
+row for DS-000033 and the two hardcoded regression-test baselines that
+had gone stale (platform-wide: 2299→2303 videos, 2287→2291 real
+transcripts; standard-package layer: 1874→1878 videos, 1863→1867 real
+transcripts) — these were legitimate ground-truth updates after a real,
+evidenced acquisition, not silent assumption changes; both are named and
+explained in the commit. Both catalog DBs pass `PRAGMA integrity_check` and
+zero foreign-key violations after the rebuild. Full test suite: 388/388
+pass. Secret scan: 0 findings.
+
+**Committed and pushed** to `research/senior-health-acquisition-phase-2` as
+commit `1cecffe` (on top of `520592b`), verified present on
+`origin/research/senior-health-acquisition-phase-2`, including the 4 new
+raw-evidence files and 2 evidence/provenance files force-added under
+`data/raw/competitors/DS-000033/apify/Ll3gKxE3dXEeG4SDd/` (same
+force-add pattern already used for the original run). No merge to `main`.
+
+**19-vs-14 qualified-pending reconciliation.** The "19 qualified-pending
+Senior Health leads" figure quoted earlier in this checkpoint (PR #5 final
+remediation section, "class E") does not match the more recent and more
+precise `SENIOR-HEALTH-MASTER-INVENTORY-REPORT.md` (2026-09-25), which
+explicitly supersedes `ACQUISITION-BACKLOG.md` and gives a fully
+itemized, cost-estimated breakdown: **14 QUALIFIED AND PENDING** (Group C
+— named channels, verified Channel IDs, priority tiers P1/P2/P3, per-
+channel cost estimates) + 34 IDENTITY_ONLY (identity confirmed, not yet
+qualified/cost-estimated — a lower-confidence pool, not the same thing
+as "qualified") + 13 REMOVED/EXCLUDED + 6 ALREADY COMPLETE + 1 (Better
+Health While Aging, now fully complete after this backfill) + 1 own
+channel = 69 total recovered leads. Tracing the arithmetic: the original
+Group C table in `ACQUISITION-BACKLOG.md` had 15 rows, one of which was
+Better Health While Aging itself (listed as P1-tier pending, before it
+was acquired as DS-000033); once BHWA was acquired and removed from the
+pending pool, Group C's own count became exactly 14 — which is what the
+master inventory report reports. **No document in this repository
+currently substantiates a 19-count qualified-pending list** — the
+checkpoint's own "class E" label does not match any classification
+scheme defined in `ACQUISITION-BACKLOG.md`'s own Group A–E lettering
+(where Group E means *removed/excluded*, the opposite of qualified-
+pending). Per Core Rule 6/7 (never convert an unverified figure into
+fact; preserve provenance), **14 is treated as the current, traceable,
+authoritative qualified-pending count going forward**; "19" is flagged
+here as stale/unsubstantiated rather than silently carried forward or
+silently discarded.
+
+**Phase 6 individual research — first channel dossier.** Started (not
+completed) zero-spend individual forensic research for Better Health
+While Aging: `docs/research/senior-health-2026-09-25/forensic-v3/
+BETTER-HEALTH-WHILE-AGING-CHANNEL-DOSSIER.md`. Covers full 98-video
+population profiling and quantitative title-by-title pattern analysis
+(all real numbers, computed from `video_snapshots`, not estimated),
+format (regular vs. Shorts) performance split, and a pointer to the
+existing Case-13 breakout write-up rather than duplicating it. Explicitly
+flags what is *not* done: thumbnail visual inspection (no forensic
+evidence registered for this channel — stays `NOT_AVAILABLE`, not
+inferred), script-level reading of the 89 non-breakout videos, dedicated
+Google Trends check for this channel's specific topics, and knowledge-
+corpus (DS-000011/018/031) integration beyond the existing Case-13 scope.
+16 additional videos clearing the same >5x-median breakout threshold were
+newly surfaced by this pass and flagged as not yet individually
+investigated — a concrete next unit of work, not silently folded into
+the existing 9-event Case-13 claim.
+
+**Not started, correctly gated on separate authorization**: any further
+paid Apify run (the remaining 13 of Group C, or any Priority B refresh)
+— owner authorized only the one Priority A backfill this turn.
+beyond this checkpoint was performed in this section.
+
+## Senior Health data expansion — checkpoint (2026-09-28, PARTIAL — collection paused by owner)
+
+- Branch `research/senior-health-data-expansion-2026-09-28`, worktree `../yios-sh-expansion`, forked from
+  `origin/research/senior-health-acquisition-phase-2` @ `31ea9a5` (= `origin/main` `812f249` + 4 commits).
+  Main checkout (`research/senior-health-complete-local-sync` @ `9f0454c`, merged via PR #3) left untouched.
+- Live snapshot: `docs/research/senior-health-2026-09-25/forensic-v3/live-catalog-2026-09-28/` (69 original leads
+  + 69 search discoveries + 5 web-search leads; tab enumeration with listing-card details, About panels).
+- Per-video zero-spend public metadata (`scripts/yt_video_meta.py`) staged in the session scratchpad (mirrored to git-ignored `.tmp/ds34_stage/` in the worktree)
+  `ds34_stage/public-metadata/<channel_id>.jsonl`; registered as `DS-000034` (below).
+- YouTube bot-check encountered at 4 parallel workers (359 refused requests, logged separately, no data recorded);
+  collection resumed single-worker at 1 s spacing with a 15-minute back-off rule.
+- Apify (read-only, 2026-09-28): $1.62/$5.00 used, $3.38 free credit, period Sep 17–Oct 16; 9 runs, all
+  already integrated; Actor build `0.0.303`; Free-plan `$4.00/1,000` videos. No paid run started.
+- Collection paused at owner request (2026-09-28 18:15 PKT). Registered as `DS-000034` (class B,
+  `data/raw/competitors/DS-000034/`, 73 files: 63 per-channel `<channel_id>.jsonl.gz`, 9 refusal logs,
+  `collection_manifest.json`; `inventory_catalog.py verify` VERIFIED). 4,648 per-video records, 0 errors,
+  collected 2026-09-28T11:52:58Z–13:16:10Z. Coverage: P0 acquired 7/7, P1 qualified pending 14/14,
+  P2 new direct discoveries 26/39, P3 0/23, P4 adjacent and P5 international not started.
+- Rebuilt `SENIOR-HEALTH-MASTER-INVENTORY-2026-09-28.*` from DS-000034 (143 leads: 71 identity-only,
+  35 adjacent, 14 qualified pending, 11 removed/unavailable, 4 acquired complete, 3 acquired with new
+  uploads, 4 excluded by review, 1 own channel; metadata: 56 per-video complete, 7 partial, 69 listing-level
+  only). `PAID-ACQUISITION-PLAN-2026-09-28.md`: 15 runs / 2,054 results / $8.216 expected; 7 fit the
+  $3.044 campaign residual and 80% of $3.38 credit ($2.112 expected). **No paid run authorized or started.**
+- Registry rebuilt (datasets 32 → 33 expected, validator PASS), master tracker regenerated; 397 tests pass.
+- Remaining (resumable; the collector skips IDs already in a file, but new records belong in a new dataset
+  since DS-000034 is immutable): P2 13 channels, P3 23 channels, Dr. Brooks' 107 videos
+  (`UClzqmRzoC-7r8GiB_XQUn_A`; its snapshot was stale when first processed), P4/P5 per-video collection, then rebuild the inventory.

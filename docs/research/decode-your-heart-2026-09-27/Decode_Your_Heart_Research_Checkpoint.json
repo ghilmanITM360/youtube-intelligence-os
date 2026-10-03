@@ -1,0 +1,1740 @@
+{
+  "schema_version": "2.0",
+  "project": "Decode Your Heart forensic audit",
+  "as_of": "2026-09-28",
+  "branch": "research/senior-health-acquisition-phase-2",
+  "starting_head": "31ea9a53a6b4c9a1b74a3478ce16e510fdf06e10",
+  "overall_status": "PARTIALLY_COMPLETE",
+  "exact_next_unfinished_task": "Final validation complete 2026-09-28 (claim audit, 12 priority reviews, 15 medical claim reviews, root-cause matrix). Next: owner applies corrections Q1-Q8, runs experiments E1-E4 per the 30/60/90-day plan, and re-exports new/casual/regular viewers on 2026-10-26. A heard audio review needs a person or approval to install speech recognition.",
+  "batch_history": [
+    {
+      "batch": "Batch 1 Recovery and Analytics",
+      "status": "COMPLETE_WITH_LIMITATIONS",
+      "saved_at": "2026-09-28",
+      "result": "Four original Studio ZIPs verified; 56 basic per-video rows joined; 47 extended rows observed; missing Short resolved."
+    },
+    {
+      "batch": "Batch 2 Retention and Actual Playback",
+      "status": "PARTIAL",
+      "saved_at": "2026-09-28",
+      "result": "56 retention exports, 46 curves; 12 saved playback records, of which 8 meet RETENTION_ANALYZED and 4 long-form records are PARTIAL_PLAYBACK (too few numeric anchors); 44 TRANSCRIPT_ONLY. -SjQc2MwaOU and HEJoPEEndG8 anchors gap-filled 2026-09-28."
+    },
+    {
+      "batch": "Batch 2b Partial playback gap-fill",
+      "status": "COMPLETE",
+      "saved_at": "2026-09-28",
+      "result": "5oPzZjfNgII, EB3_A2b4a6o, BCNWQ3uuSuE and SBrMW71O69U given numeric anchors at every exported retention event (7-11 anchors each) by muted seek-and-inspect; all four now RETENTION_ANALYZED."
+    },
+    {
+      "batch": "Batch 3b Matched pairs (seek-sampled)",
+      "status": "COMPLETE",
+      "saved_at": "2026-09-28",
+      "result": "8 TRANSCRIPT_ONLY videos in 4 matched pairs seek-sampled at retention events: YVjbjcVo1is/iltS1TPt4jo (same footage, re-edited), fArHBQo6Ggw/tD4KOpsJH_c, qbwCkH_GqhU/TPVOIfcJl-k, t1j-p9pkw3Y/VrbLuTNi0qE. Audience-segment curves summarized from retained exports for all 56."
+    },
+    {
+      "batch": "Batch 4 Matched pairs (seek-sampled plus continuous signal pass)",
+      "status": "COMPLETE",
+      "saved_at": "2026-09-28",
+      "result": "8JdBlF-ragM/sUL6SU8LnEg, NznebmgFwXI/KPYHy7MDmLM, hUSVbcHVeVw/CZ3gAUzdTAg and p_iI0enaFX8/FDLU7tX7qNM seek-sampled at retention events and played continuously at 2x through a level-and-cut analyser. Caption-track defects scanned across all 56 transcripts; reused-footage scan across all 56."
+    },
+    {
+      "batch": "Batch 5 Coffee clips, Ozempic, potassium and walking Shorts",
+      "status": "COMPLETE",
+      "saved_at": "2026-09-28",
+      "result": "fAwh2svMARM/nRdBvyh7Sy0, nP9fDHP1jbo/7MXBh2hjfto, 1bb5M4E1oQs/j9VqMB6yTXQ and nPqrcrxdrdE/UeGxF8-hb2s seek-sampled plus continuous signal pass; two no-curve videos recorded as LIMITED_BY_UNAVAILABLE_EVIDENCE. Found a 39 s black tail in UeGxF8-hb2s and a title-content mismatch in 7MXBh2hjfto."
+    },
+    {
+      "batch": "Batch 6 Diabetes, heart-risk, medication and outdoor-mobility pairs",
+      "status": "COMPLETE_WITH_AUDIO_LIMITATIONS",
+      "saved_at": "2026-09-28",
+      "result": "qObP1FPrC6Q/b-dam2LdHzM, 78JR_U-6HfQ/3dRcNqiLHgY, r9ZyUWyY4Lc/HzFdyjyEFTY and PIsyBj58fJA/RD7ugxaBHSQ seek-sampled at retained curve events. Three preserved signal passes were registered; current read-only browser did not expose audio/canvas instrumentation for the other five. Audio was not heard. All eight thumbnails were revalidated."
+    },
+    {
+      "batch": "Batch 7 final curve-linked and no-curve public-video review",
+      "status": "COMPLETE_WITH_AUDIO_AND_PRIVATE_DATA_LIMITATIONS",
+      "saved_at": "2026-09-28",
+      "result": "tf7f4RhQwtc, xI-KdZ96xcI, Nf9pCrPYWyQ and qC8BKb8Fh5Q were seek-sampled at retained curve events; jxoMnTrVziA, jLEp6jDsN3Q, Uq3T8YZgyTw and zESWa7FJgHY were seek-sampled but remain LIMITED_BY_UNAVAILABLE_EVIDENCE because Studio disclosed no curve. Uq3T8YZgyTw ends on a white engagement card through 49.8 s, not a black tail. Audio was not heard. All eight thumbnails were revalidated."
+    },
+    {
+      "batch": "Batch 8 final no-curve public-video review",
+      "status": "COMPLETE_WITH_PRIVATE_RETENTION_UNAVAILABLE",
+      "saved_at": "2026-09-28",
+      "result": "phSq6PkPtIg, sC_0XjL2z_Y, VlSibJdSZF8 and tDZKHR8UjYg were seek-sampled from opening through close. Public content and production characteristics are documented, but all four remain LIMITED_BY_UNAVAILABLE_EVIDENCE because their Studio exports contain no retention curve. phSq6PkPtIg's retained caption text includes impossible 0:21/0:27 timecodes for a 14.86-second video. Audio was not heard. All four thumbnails were revalidated."
+    },
+    {
+      "batch": "Batch 9 Studio export recovery and reconciliation",
+      "status": "COMPLETE",
+      "saved_at": "2026-09-28",
+      "result": "Seven Studio CSV exports downloaded 2026-09-28 04:01-04:14 were archived byte-identical (SHA-256 match) under the private 2026-09-28 folder with a provenance manifest: extended lifetime content table, Search-term and Suggested-source drill-downs, geography, device, age/gender and 28-day new/casual/regular audience. Extended table covers all 56 canonical IDs with no duplicates plus one noncanonical Post row; the nine previously missing rows are present; all 47 browser-observed rows agree within display rounding; views equal the 2026-09-27 lifetime export."
+    },
+    {
+      "batch": "Batch 10 Final forensic validation",
+      "status": "COMPLETE_WITH_AUDIO_NOT_HEARD",
+      "saved_at": "2026-09-28",
+      "result": "Every active conclusion re-audited against original exports and YouTube's official viewer definitions (audience-development, returning-retention, geography and Shorts-CTR claims corrected or withdrawn). 12 priority videos reviewed with full-length YouTube storyboard frames plus transcripts; 15 medical claims checked against USPSTF, ACC/AHA, ESC/EAS, FDA and CDC sources; root-cause matrix, immediate corrections, experiments E1-E5 and the 30/60/90-day plan recorded. Audio not heard; complete audiovisual audits remain 0."
+    },
+    {
+      "batch": "Batch 3 Research Diagnosis and Deliverables",
+      "status": "COMPLETE_FOR_AVAILABLE_SYNTHESIS",
+      "saved_at": "2026-09-28",
+      "result": "Three Trends comparisons verified; six matched comparisons synthesized; diagnosis and four existing deliverables reconciled."
+    }
+  ],
+  "execution_matrix": [
+    {
+      "task": "Metadata",
+      "previous_result": "56 records",
+      "current_evidence": "56 exact canonical Video IDs; current public catalog still 56 on 2026-09-28",
+      "status": "VERIFIED_COMPLETE",
+      "required_action": "None"
+    },
+    {
+      "task": "Transcripts",
+      "previous_result": "56",
+      "current_evidence": "56 original transcript files present",
+      "status": "VERIFIED_COMPLETE",
+      "required_action": "Reuse; do not reread wholesale"
+    },
+    {
+      "task": "Thumbnails",
+      "previous_result": "56 identity-verified images with 44 templated analyses",
+      "current_evidence": "56 images identity-verified and 56 image-specific observations revalidated",
+      "status": "VERIFIED_COMPLETE",
+      "required_action": "None within the retained thumbnail set"
+    },
+    {
+      "task": "Studio reports",
+      "previous_result": "Four reported",
+      "current_evidence": "Lifetime, 90d, 28d and traffic-source ZIP hashes verified",
+      "status": "VERIFIED_COMPLETE",
+      "required_action": "None"
+    },
+    {
+      "task": "Individual Analytics",
+      "previous_result": "56 basic rows plus 47 browser-observed extended rows",
+      "current_evidence": "56 canonical basic rows and 56 canonical extended rows in the authenticated CSV export; one noncanonical Post row preserved but excluded",
+      "status": "VERIFIED_COMPLETE_FOR_CONTENT_TABLE",
+      "required_action": "None for the per-video lifetime content table"
+    },
+    {
+      "task": "Retention",
+      "previous_result": "Previously missing",
+      "current_evidence": "56 exports; 46 curves; 46 content-linked investigations; 10 no-curve disclosures; 12 exports carry a new-vs-returning split",
+      "status": "COMPLETE_FOR_AVAILABLE_PRIVATE_EVIDENCE",
+      "required_action": "No action possible for the 10 exports with no disclosed curve unless YouTube later exposes data"
+    },
+    {
+      "task": "Playback",
+      "previous_result": "Previously missing",
+      "current_evidence": "12 reported full-playback records (text-only completion evidence) and 44 seek-sampled records; zero verified complete audiovisual audits",
+      "status": "PUBLIC_CONTENT_SAMPLED_AUDIOVISUAL_DEPTH_PARTIAL",
+      "required_action": "Audibly review continuous playback only if a complete audiovisual editing audit is required"
+    },
+    {
+      "task": "Trends",
+      "previous_result": "Three comparisons",
+      "current_evidence": "Three original official CSVs and configurations verified",
+      "status": "VERIFIED_COMPLETE",
+      "required_action": "No repeat query justified by available source detail"
+    },
+    {
+      "task": "Channel-level audience and source reports",
+      "previous_result": "Unavailable",
+      "current_evidence": "Search terms, Suggested sources, geography, device, age/gender and 28-day new/casual/regular exports archived and hash-verified",
+      "status": "VERIFIED_COMPLETE_CHANNEL_LEVEL",
+      "required_action": "Per-video source drill-downs remain unexported"
+    },
+    {
+      "task": "Research synthesis",
+      "previous_result": "Partial",
+      "current_evidence": "22 matched comparisons and multi-stage diagnosis including audience-development, Search and Suggested evidence",
+      "status": "COMPLETE_FOR_AVAILABLE_EVIDENCE",
+      "required_action": "Run the preregistered experiments; reassess after 30 days of new data"
+    }
+  ],
+  "phase_status": {
+    "repository_recovery": "VERIFIED_COMPLETE",
+    "thumbnail_recovery_and_visual_inspection": "VERIFIED_COMPLETE_56_IMAGE_SPECIFIC_REVALIDATIONS",
+    "public_catalog_refresh": "VERIFIED_COMPLETE",
+    "video_playback_forensics": "PUBLIC_SAMPLE_COMPLETE_46_RETENTION_ANALYZED_10_NO_CURVE_LIMITED_OF_56_AUDIO_NOT_VERIFIED",
+    "retention_investigations": "COMPLETE_FOR_AVAILABLE_EVIDENCE_46_CONTENT_LINKED_10_NO_CURVE",
+    "google_trends": "VERIFIED_COMPLETE",
+    "youtube_studio_exports": "VERIFIED_COMPLETE_ORIGINAL_EXPORTS",
+    "video_level_studio_metrics": "VERIFIED_COMPLETE_56_BASIC_56_EXTENDED",
+    "growth_diagnosis": "FINAL_VALIDATED_ASSOCIATIONS_NOT_CAUSES",
+    "medical_claim_review": "COMPLETE_FOR_12_PRIORITY_VIDEOS",
+    "four_artifacts": "UPDATED_IN_PLACE"
+  },
+  "verified_counts": {
+    "videos": 56,
+    "regular": 27,
+    "shorts": 29,
+    "descriptions": 56,
+    "transcripts": 56,
+    "thumbnail_urls": 56,
+    "thumbnail_images": 56,
+    "thumbnail_visual_inspections": 56,
+    "thumbnail_priority_revalidations": 56,
+    "studio_basic_rows": 56,
+    "studio_extended_rows_observed": 56,
+    "retention_exports": 56,
+    "retention_curves": 46,
+    "retention_content_linked_investigations": 46,
+    "playback_reported_full": 12,
+    "playback_seek_sampled": 44,
+    "retention_new_vs_returning_split": 12,
+    "editing_audits_detailed": 12,
+    "matched_comparisons": 22,
+    "continuous_signal_passes": 19,
+    "complete_audiovisual_audits_verified": 0,
+    "new_public_videos": 0,
+    "priority_reviews": 12,
+    "medical_claim_reviews": 15,
+    "videos_with_medical_claim_review": 12,
+    "medical_claims_requiring_action": 5,
+    "investigation_status": {
+      "NOT_STARTED": 0,
+      "TRANSCRIPT_ONLY": 0,
+      "PARTIAL_PLAYBACK": 0,
+      "PLAYBACK_COMPLETE": 0,
+      "EDITING_AUDIT_COMPLETE": 0,
+      "RETENTION_ANALYZED": 46,
+      "LIMITED_BY_UNAVAILABLE_EVIDENCE": 10
+    }
+  },
+  "studio": {
+    "dataset_id": "DS-000032",
+    "channel_id": "UCQIzqH7QZ9viBYpOFqgSXMg",
+    "obtained_at": "2026-09-27",
+    "source": "YouTube Studio Advanced Mode authenticated read-only manager session",
+    "account_role_observed": "Manager",
+    "periods": {
+      "last-28-days": {
+        "archive": "data/raw/first-party/youtube-studio/DS-000032/2026-09-27/studio-advanced-content-last-28-days.zip",
+        "sha256": "40f2bd7436e5d5553ca23629237aa7cb8030637bfa799861846602595b549e53",
+        "views": 1158,
+        "watch_hours": 7.9763,
+        "subscribers": 4,
+        "thumbnail_impressions": 4360,
+        "thumbnail_ctr_percent": 3.19,
+        "video_rows": 56
+      },
+      "last-90-days": {
+        "archive": "data/raw/first-party/youtube-studio/DS-000032/2026-09-27/studio-advanced-content-last-90-days.zip",
+        "sha256": "33fb89a54636538b23c1c71a8f3b00903cc1a8d8ec34fb942481d17221f20fa9",
+        "views": 2507,
+        "watch_hours": 22.7064,
+        "subscribers": 10,
+        "thumbnail_impressions": 18579,
+        "thumbnail_ctr_percent": 3.04,
+        "video_rows": 56
+      },
+      "lifetime": {
+        "archive": "data/raw/first-party/youtube-studio/DS-000032/2026-09-27/studio-advanced-content-lifetime.zip",
+        "sha256": "567a9a1a3b82af4fba761e5c851692910f11b4cc75237d252524fc37d4cb01b4",
+        "views": 8366,
+        "watch_hours": 45.6161,
+        "subscribers": 33,
+        "thumbnail_impressions": 36159,
+        "thumbnail_ctr_percent": 3.0,
+        "video_rows": 57
+      },
+      "traffic-source-lifetime": {
+        "archive": "data/raw/first-party/youtube-studio/DS-000032/2026-09-27/studio-advanced-traffic-source-lifetime.zip",
+        "sha256": "bb0f9e15e35276b4d032e3128d3698b15c4dd035dd467b13cb3a5bf1448ec72a",
+        "rows": [
+          {
+            "Traffic source": "Shorts feed",
+            "Views": "5355",
+            "Watch time (hours)": "11.2299",
+            "Average view duration": "0:00:19",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          },
+          {
+            "Traffic source": "YouTube search",
+            "Views": "1175",
+            "Watch time (hours)": "6.4933",
+            "Average view duration": "0:00:39",
+            "Thumbnail impressions": "11245",
+            "Thumbnail click-through rate (%)": "2.71"
+          },
+          {
+            "Traffic source": "Suggested videos",
+            "Views": "1031",
+            "Watch time (hours)": "19.3177",
+            "Average view duration": "0:01:07",
+            "Thumbnail impressions": "19841",
+            "Thumbnail click-through rate (%)": "2.9"
+          },
+          {
+            "Traffic source": "Browse features",
+            "Views": "405",
+            "Watch time (hours)": "3.4228",
+            "Average view duration": "0:00:57",
+            "Thumbnail impressions": "4028",
+            "Thumbnail click-through rate (%)": "3.28"
+          },
+          {
+            "Traffic source": "Channel pages",
+            "Views": "139",
+            "Watch time (hours)": "0.517",
+            "Average view duration": "0:00:19",
+            "Thumbnail impressions": "982",
+            "Thumbnail click-through rate (%)": "7.03"
+          },
+          {
+            "Traffic source": "External",
+            "Views": "104",
+            "Watch time (hours)": "2.9078",
+            "Average view duration": "0:01:40",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          },
+          {
+            "Traffic source": "Other YouTube features",
+            "Views": "85",
+            "Watch time (hours)": "0.8341",
+            "Average view duration": "0:00:45",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          },
+          {
+            "Traffic source": "Direct or unknown",
+            "Views": "62",
+            "Watch time (hours)": "0.8016",
+            "Average view duration": "0:00:48",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          },
+          {
+            "Traffic source": "Related Shorts",
+            "Views": "2",
+            "Watch time (hours)": "0.0094",
+            "Average view duration": "0:00:33",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          },
+          {
+            "Traffic source": "Playlists",
+            "Views": "2",
+            "Watch time (hours)": "0.0756",
+            "Average view duration": "0:02:16",
+            "Thumbnail impressions": "63",
+            "Thumbnail click-through rate (%)": "1.59"
+          },
+          {
+            "Traffic source": "Hashtag pages",
+            "Views": "2",
+            "Watch time (hours)": "0.0043",
+            "Average view duration": "0:00:15",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          },
+          {
+            "Traffic source": "Sound pages",
+            "Views": "1",
+            "Watch time (hours)": "0.0005",
+            "Average view duration": "0:00:01",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          },
+          {
+            "Traffic source": "Notifications",
+            "Views": "1",
+            "Watch time (hours)": "0.0005",
+            "Average view duration": "0:00:01",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          },
+          {
+            "Traffic source": "End screens",
+            "Views": "1",
+            "Watch time (hours)": "0.0016",
+            "Average view duration": "0:00:05",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          },
+          {
+            "Traffic source": "Video cards and annotations",
+            "Views": "1",
+            "Watch time (hours)": "0",
+            "Average view duration": "0:00:00",
+            "Thumbnail impressions": "",
+            "Thumbnail click-through rate (%)": ""
+          }
+        ]
+      }
+    },
+    "limits": [
+      "Per-video retention exports are stored separately; some curves may be blank when Studio does not disclose rows",
+      "Derived average view duration and percentage use exported views, watch hours and duration; YouTube rounding may cause small error"
+    ]
+  },
+  "studio_live_observation": {
+    "observed_at": "2026-09-28",
+    "access": "Authenticated read-only manager session for canonical channel",
+    "channel_totals": {
+      "views": 8366,
+      "watch_hours": 45.6,
+      "net_subscribers": 33,
+      "subscribers_gained": 34,
+      "impressions": 36169,
+      "ctr_percent": 2.99,
+      "engaged_views": 3999,
+      "average_view_duration_seconds_actual": 39,
+      "average_percentage_viewed_actual": 37.32,
+      "stayed_to_watch_percent": 36.03
+    },
+    "extended_video_rows_observed": 56,
+    "extended_video_rows_not_captured": 0,
+    "source_archive": "data/raw/first-party/youtube-studio/DS-000032/2026-09-28/studio-advanced-content-lifetime-extended.zip",
+    "source_sha256": "62f813bc510e78a15761b170fb7fd021d06c8e049910f8990b7040cb197e9266",
+    "noncanonical_rows_preserved_not_counted": [
+      {
+        "video_id": "FjK6DU-HmZg",
+        "title": "Post",
+        "views": "2"
+      }
+    ],
+    "missing_short_status": "RESOLVED",
+    "missing_short_metrics": {
+      "video_id": "-SjQc2MwaOU",
+      "views": 233,
+      "engaged_views": 54,
+      "average_view_duration_seconds_actual": 23,
+      "average_percentage_viewed_actual": 52.1,
+      "stayed_to_watch_percent": 20.6,
+      "swiped_away_percent": 79.4,
+      "impressions": 338,
+      "ctr_percent": 1.2,
+      "subscribers_gained": 0
+    },
+    "unavailable_reports": [
+      "Per-video search queries",
+      "Per-video suggested-video sources",
+      "Viewers across formats",
+      "Per-video new/returning viewer counts (channel-level 28-day new/casual/regular counts are now exported)"
+    ],
+    "browser_vs_export_reconciliation": {
+      "browser_observed_rows": 47,
+      "exported_canonical_rows": 56,
+      "previously_missing_now_exported": [
+        "7MXBh2hjfto",
+        "8JdBlF-ragM",
+        "SBrMW71O69U",
+        "VlSibJdSZF8",
+        "j9VqMB6yTXQ",
+        "nPqrcrxdrdE",
+        "sC_0XjL2z_Y",
+        "tf7f4RhQwtc",
+        "zESWa7FJgHY"
+      ],
+      "mismatches_beyond_display_rounding": [],
+      "rule": "Browser values are rounded to one decimal; differences within 0.05 are display rounding. Blank browser subscriber cells are not treated as zero."
+    },
+    "availability_note": "New/returning/unique viewer cells displayed em dash in the inspected content table; this is unavailability, not a measured zero."
+  },
+  "studio_supplementary_2026_09_28": {
+    "provenance_file": "data/raw/first-party/youtube-studio/DS-000032/2026-09-28/studio-export-provenance.json",
+    "files": {
+      "studio-advanced-content-lifetime-extended.zip": {
+        "sha256": "62f813bc510e78a15761b170fb7fd021d06c8e049910f8990b7040cb197e9266",
+        "bytes": 9491,
+        "reporting_period": "2026-02-03..2026-09-27",
+        "report": "Advanced Mode > Content, lifetime, extended metric columns (engaged views, AVD, APV, stayed to watch, subscribers gained, impressions, CTR)"
+      },
+      "studio-advanced-search-queries-lifetime.zip": {
+        "sha256": "3d54029c8c8893b6621cf5e25b148329ab3be86c994d7ce6312797f303add546",
+        "bytes": 6715,
+        "reporting_period": "2026-02-03..2026-09-27",
+        "report": "Advanced Mode > Traffic source > YouTube search drill-down (search terms)"
+      },
+      "studio-advanced-suggested-videos-lifetime.zip": {
+        "sha256": "2665bbe503926a105579c10dbb4ce5d160feca627897380f462c889018990ddd",
+        "bytes": 32476,
+        "reporting_period": "2026-02-03..2026-09-27",
+        "report": "Advanced Mode > Traffic source > Suggested videos drill-down (source videos)"
+      },
+      "studio-advanced-geography-lifetime.zip": {
+        "sha256": "a90bad43a0cf2ae62b4bc21b989bd14dd328eeb80b639acf20d94cccb9e1d007",
+        "bytes": 6890,
+        "reporting_period": "2026-02-03..2026-09-27",
+        "report": "Advanced Mode > Geography, lifetime"
+      },
+      "studio-advanced-device-type-lifetime.zip": {
+        "sha256": "c9e4366b5b5a019703b1ba0053d21df9f1055d9d02e0abe5f909d281863562ba",
+        "bytes": 4412,
+        "reporting_period": "2026-02-03..2026-09-27",
+        "report": "Advanced Mode > Device type, lifetime"
+      },
+      "studio-advanced-audience-age-gender-lifetime.zip": {
+        "sha256": "9feb831f6c7b5ebdade1800d510c308dec552b07aedb02316452bdab9650d7ed",
+        "bytes": 319,
+        "reporting_period": "2026-02-03..2026-09-27",
+        "report": "Advanced Mode > Viewer age x Viewer gender, lifetime (percent shares only)"
+      },
+      "studio-audience-size-growth-last-28-days.zip": {
+        "sha256": "0a737d9aa5a2db8e1984affa7e9fe6f4bbda7a0403dff7f3d9525f627dd75333",
+        "bytes": 869,
+        "reporting_period": "2026-08-30..2026-09-27",
+        "report": "Audience tab > Audience size and growth export (monthly audience; 28-day new/casual/regular viewers; subscribers)"
+      }
+    },
+    "search_terms": {
+      "total_search_views": 1175,
+      "total_search_impressions": 11248,
+      "search_ctr_percent": 2.71,
+      "disclosed_terms": 114,
+      "views_in_disclosed_terms": 170,
+      "max_views_single_term": 7,
+      "top_terms": [
+        {
+          "term": "heart attack symptoms",
+          "views": 7
+        },
+        {
+          "term": "\u1014\u103e\u101c\u102f\u1036\u1038\u101e\u103d\u1031\u1038\u1000\u103c\u1031\u102c\u1000\u103b\u1009\u103a\u1038\u101b\u1031\u102c\u1002\u102b in english",
+          "views": 6
+        },
+        {
+          "term": "blood pressure",
+          "views": 5
+        },
+        {
+          "term": "massage",
+          "views": 4
+        },
+        {
+          "term": "lipid profile test",
+          "views": 4
+        },
+        {
+          "term": "6 min walk test",
+          "views": 4
+        },
+        {
+          "term": "coffee and anxiety",
+          "views": 3
+        },
+        {
+          "term": "symptoms of heart attack",
+          "views": 3
+        },
+        {
+          "term": "ldl",
+          "views": 3
+        },
+        {
+          "term": "ldl cholesterol",
+          "views": 3
+        }
+      ]
+    },
+    "suggested_sources": {
+      "total_suggested_views": 1031,
+      "total_suggested_impressions": 19844,
+      "suggested_ctr_percent": 2.9,
+      "disclosed_source_videos": 472,
+      "own_channel_sources": 13,
+      "own_channel_views": 70,
+      "external_sources": 459,
+      "external_views": 910,
+      "top_external_sources": [
+        {
+          "title": "Can Thyroid cause back pain? Doctor Explains",
+          "views": 84
+        },
+        {
+          "title": "Stop Ignoring Your Acid Reflux: When Acidity Becomes a Serious Condition",
+          "views": 70
+        },
+        {
+          "title": "Numbness and Tingling in Your Legs And Feet - Dr. Vivek Joshi",
+          "views": 34
+        },
+        {
+          "title": "Doctor Explains Colonoscopy in Men",
+          "views": 27
+        },
+        {
+          "title": "\u0995\u09cb\u09b2\u09c7\u09b8\u09cd\u099f\u09c7\u09b0\u09b2 \u0995\u09ae\u09be\u09a8\u09cb\u09b0 \u0998\u09b0\u09cb\u09af\u09bc\u09be \u0989\u09aa\u09be\u09af\u09bc \u0993 \u0996\u09be\u09ac\u09be\u09b0 \u09a4\u09be\u09b2\u09bf\u0995\u09be |  Diet Chart & Precautions| Dr Hasim Reza,MBBS,MD I",
+          "views": 20
+        },
+        {
+          "title": "The Most Scientific Way to Reduce Cholesterol",
+          "views": 17
+        },
+        {
+          "title": "Gond Katira Benefits: 5 Amazing Health Benefits for Gut, Sugar, BP & Weakness",
+          "views": 11
+        },
+        {
+          "title": "Penis Size \u092c\u0922\u093c\u093e\u0928\u0947 \u0915\u0947 \u0924\u0930\u0940\u0915\u0947 \u2014 \u0915\u094d\u092f\u093e \u0915\u093e\u092e \u0915\u0930\u0924\u093e \u0939\u0948, \u0915\u094d\u092f\u093e SCAM \u0939\u0948? | Doctor Explains",
+          "views": 11
+        }
+      ]
+    },
+    "geography": {
+      "total_views": 8366,
+      "disclosed": [
+        {
+          "country": "IN",
+          "views": 1336,
+          "share_percent": 16.0
+        },
+        {
+          "country": "PK",
+          "views": 411,
+          "share_percent": 4.9
+        },
+        {
+          "country": "US",
+          "views": 327,
+          "share_percent": 3.9
+        },
+        {
+          "country": "GB",
+          "views": 305,
+          "share_percent": 3.6
+        },
+        {
+          "country": "MY",
+          "views": 64,
+          "share_percent": 0.8
+        },
+        {
+          "country": "ID",
+          "views": 62,
+          "share_percent": 0.7
+        },
+        {
+          "country": "LK",
+          "views": 59,
+          "share_percent": 0.7
+        },
+        {
+          "country": "AU",
+          "views": 52,
+          "share_percent": 0.6
+        },
+        {
+          "country": "ZA",
+          "views": 46,
+          "share_percent": 0.5
+        },
+        {
+          "country": "NP",
+          "views": 38,
+          "share_percent": 0.5
+        },
+        {
+          "country": "SG",
+          "views": 27,
+          "share_percent": 0.3
+        },
+        {
+          "country": "BD",
+          "views": 19,
+          "share_percent": 0.2
+        }
+      ],
+      "undisclosed_views": 5620
+    },
+    "device": [
+      {
+        "device": "Mobile phone",
+        "views": 6990,
+        "watch_hours": 31.9499,
+        "average_view_duration": "0:00:34"
+      },
+      {
+        "device": "Computer",
+        "views": 519,
+        "watch_hours": 4.3067,
+        "average_view_duration": "0:00:48"
+      },
+      {
+        "device": "Tablet",
+        "views": 449,
+        "watch_hours": 2.2624,
+        "average_view_duration": "0:00:38"
+      },
+      {
+        "device": "TV",
+        "views": 399,
+        "watch_hours": 6.9522,
+        "average_view_duration": "0:01:17"
+      }
+    ],
+    "age_views_percent": {
+      "25\u201334 years": 20.8,
+      "35\u201344 years": 37.35,
+      "45\u201354 years": 8.19,
+      "55\u201364 years": 14.29,
+      "65+ years": 19.36
+    },
+    "audience_28_day": {
+      "period": "2026-08-30..2026-09-26",
+      "monthly_audience_latest": 505,
+      "new_viewers_latest": 495,
+      "casual_viewers_latest": 10,
+      "regular_viewers_latest": 0,
+      "regular_viewers_max_in_period": 0,
+      "subscribers_start": 29,
+      "subscribers_latest": 33
+    },
+    "limits": [
+      "Channel-level drill-downs: they cannot be attributed to individual videos.",
+      "Studio discloses only the top rows; undisclosed remainders are recorded, not imputed.",
+      "Search-term rows usually show 0 impressions because Studio counts search impressions at source level; per-term CTR is not interpretable.",
+      "New/casual/regular counts cover only the last 28 days and are Studio estimates."
+    ]
+  },
+  "trends": {
+    "obtained_at": "2026-09-27",
+    "source": "Official Google Trends CSV downloads",
+    "files": {
+      "broad-cardiovascular-topics-us-youtube-5y.csv": {
+        "configuration": {
+          "geography": "United States",
+          "property": "YouTube Search",
+          "range": "Past 5 years",
+          "category": "All categories"
+        },
+        "series": {
+          "Heart health: (United States)": {
+            "mean": 2.49,
+            "median": 3.0,
+            "max": 4,
+            "weeks": 262
+          },
+          "Cholesterol: (United States)": {
+            "mean": 15.05,
+            "median": 15.0,
+            "max": 21,
+            "weeks": 262
+          },
+          "Lp a: (United States)": {
+            "mean": 1.71,
+            "median": 2.0,
+            "max": 6,
+            "weeks": 262
+          },
+          "Blood pressure: (United States)": {
+            "mean": 34.94,
+            "median": 35.0,
+            "max": 100,
+            "weeks": 262
+          },
+          "Heart failure symptoms: (United States)": {
+            "mean": 0.03,
+            "median": 0.0,
+            "max": 1,
+            "weeks": 262
+          }
+        }
+      },
+      "glp1-ozempic-us-youtube-5y.csv": {
+        "configuration": {
+          "geography": "United States",
+          "property": "YouTube Search",
+          "range": "Past 5 years",
+          "category": "All categories"
+        },
+        "series": {
+          "GLP-1: (United States)": {
+            "mean": 2.99,
+            "median": 2.0,
+            "max": 11,
+            "weeks": 262
+          },
+          "Ozempic: (United States)": {
+            "mean": 31.45,
+            "median": 32.0,
+            "max": 100,
+            "weeks": 262
+          },
+          "semaglutide: (United States)": {
+            "mean": 7.71,
+            "median": 8.0,
+            "max": 17,
+            "weeks": 262
+          }
+        }
+      },
+      "niche-health-topics-us-youtube-5y.csv": {
+        "configuration": {
+          "geography": "United States",
+          "property": "YouTube Search",
+          "range": "Past 5 years",
+          "category": "All categories"
+        },
+        "series": {
+          "coffee blood pressure: (United States)": {
+            "mean": 0.16,
+            "median": 0.0,
+            "max": 34,
+            "weeks": 262
+          },
+          "walking exercise seniors: (United States)": {
+            "mean": 8.87,
+            "median": 0.0,
+            "max": 95,
+            "weeks": 262
+          },
+          "chair stand test: (United States)": {
+            "mean": 0.38,
+            "median": 0.0,
+            "max": 100,
+            "weeks": 262
+          },
+          "lipoprotein a: (United States)": {
+            "mean": 1.86,
+            "median": 0.0,
+            "max": 50,
+            "weeks": 262
+          }
+        }
+      }
+    },
+    "interpretation_limits": [
+      "Scores normalized 0-100 within each comparison; not absolute volume",
+      "Do not infer view causation without traffic-source and query evidence",
+      "Lp a broad query is ambiguous; lipoprotein a series is preferred"
+    ]
+  },
+  "matched_comparisons": [
+    {
+      "pair": "Coffee Shorts",
+      "stronger_id": "QfRaG71ZA_0",
+      "comparison_id": "4ByUo2N_C-I",
+      "evidence": "Stayed 57.3% vs 43.7%; APV 83.3% vs 43.8%; 30-second retention 67.8% vs 39.62%.",
+      "interpretation": "Specific symptom-plus-trigger framing is a plausible contributor, not a proven cause."
+    },
+    {
+      "pair": "Walking Shorts",
+      "stronger_id": "FVfG_HZV4qg",
+      "comparison_id": "kF26QB7xHiE",
+      "evidence": "Stayed 51.1% vs 27.0%; APV 53.7% vs 59.8%; views 1,068 vs 1,212.",
+      "interpretation": "Clearer feed acceptance did not equal more views; distribution and completion are separate stages."
+    },
+    {
+      "pair": "Cold-feet Shorts",
+      "stronger_id": "gunPgSlxJLA",
+      "comparison_id": "PTB-6fgaAKk",
+      "evidence": "Stayed 28.7% vs 16.9%; APV 84.0% vs 126.6%.",
+      "interpretation": "Replay above 100% can coexist with weak swipe acceptance."
+    },
+    {
+      "pair": "Heart-failure Shorts",
+      "stronger_id": "-SjQc2MwaOU",
+      "comparison_id": "HEJoPEEndG8",
+      "evidence": "Stayed 20.6% vs 13.3%; APV 52.1% vs 28.0%; 30-second retention 35.19% vs 16.0%.",
+      "interpretation": "Both openings are weak in feed terms; concrete shortness-of-breath framing retains more of those who stay."
+    },
+    {
+      "pair": "Symptom vs metabolic long-form",
+      "stronger_id": "5oPzZjfNgII",
+      "comparison_id": "EB3_A2b4a6o",
+      "evidence": "CTR 4.7% vs 1.8%; actual APV 44.1% vs 29.0%; end retention 20.0% vs 13.57%.",
+      "interpretation": "Shorter duration and concrete symptom progression are plausible contributors; topic and source mix remain confounded."
+    },
+    {
+      "pair": "Heart-attack Shorts (same footage)",
+      "stronger_id": "YVjbjcVo1is",
+      "comparison_id": "iltS1TPt4jo",
+      "evidence": "30-second retention 45.16% vs 20.59%; APV 21.2% vs 14.2%; stayed 33.7% vs 37.7%; views 85 vs 87.",
+      "interpretation": "Closest natural experiment in the set: same doctor footage, re-edited with an illustrated cold open, banner and raw caption timecodes. Better swipe acceptance but worse holding; tiny samples."
+    },
+    {
+      "pair": "Coffee Shorts II",
+      "stronger_id": "fArHBQo6Ggw",
+      "comparison_id": "tD4KOpsJH_c",
+      "evidence": "30-second retention 52.23% vs 23.08%; APV 29.2% vs 21.9%; stayed 46.7% vs 48.7%; views 341 vs 87.",
+      "interpretation": "Similar feed acceptance; audience-qualifier plus numbered open loop held viewers better than an answer-first opener."
+    },
+    {
+      "pair": "Cholesterol Shorts",
+      "stronger_id": "qbwCkH_GqhU",
+      "comparison_id": "TPVOIfcJl-k",
+      "evidence": "30-second retention 39.47% vs 18.52%; end 19.74% vs 3.7%; stayed 38.6% vs 31.4%; views 199 vs 77.",
+      "interpretation": "Patient-problem story with checklist payoff versus a textbook definition opener; setting and title also differ."
+    },
+    {
+      "pair": "Mobility-test long-form",
+      "stronger_id": "t1j-p9pkw3Y",
+      "comparison_id": "VrbLuTNi0qE",
+      "evidence": "30-second retention 59.74% vs 41.12%; end 22.08% vs 14.95%; derived APV 22.2% vs 29.2%; views 160 vs 109.",
+      "interpretation": "Participatory how-to opener held more early viewers than a research-framed opener with credential intro; later APV favours the weaker video, so the effect is early-only."
+    },
+    {
+      "pair": "Ozempic long-form",
+      "stronger_id": "8JdBlF-ragM",
+      "comparison_id": "sUL6SU8LnEg",
+      "evidence": "30-second retention 55.74% vs 40.0%; end 45.9% vs 10.0%; derived APV 46.0% vs 28.3%; views 78 vs 10; duration 71 vs 166 s.",
+      "interpretation": "Specific side-effect question with frequent visual change versus abstract myth-debunk with clinical terms and raw caption timecodes; duration and a 10-view sample dominate the uncertainty."
+    },
+    {
+      "pair": "Circulation long-form",
+      "stronger_id": "NznebmgFwXI",
+      "comparison_id": "KPYHy7MDmLM",
+      "evidence": "Retention at 3 s 87.1% vs 57.89%; 30 s 41.13% vs 36.84%; views 132 vs 20; hard cuts 2 vs 33.",
+      "interpretation": "Counterexample to pace-driven advice: the near-single-take video with a concrete symptom question held more early viewers than the fast-cut, text-heavy generic warning."
+    },
+    {
+      "pair": "Artery foods (Short vs long-form)",
+      "stronger_id": "hUSVbcHVeVw",
+      "comparison_id": "CZ3gAUzdTAg",
+      "evidence": "Short: 30 s 59.87%, stayed 39.7%, 414 views, CTR 0.63%. Long-form: 30 s 43.92%, end 10.39%, 367 views from 5,737 impressions at 3.7% CTR.",
+      "interpretation": "Same list topic in two formats; not a like-for-like retention comparison. The long-form delays the first item to about 0:43; the Short title over-claims (reverse) relative to its captions (support)."
+    },
+    {
+      "pair": "Ankle/calf Shorts",
+      "stronger_id": "p_iI0enaFX8",
+      "comparison_id": "FDLU7tX7qNM",
+      "evidence": "30 s 81.82% vs 18.77%; stayed 46.2% vs 44.0%; views 18 vs 805.",
+      "interpretation": "Not interpretable as a production effect: 18 views means one viewer per 9.1-pt step. FDLU7tX7qNM reached a broad feed audience and new viewers held far worse than returning viewers (17.78% vs 46.15%)."
+    },
+    {
+      "pair": "Coffee clip family",
+      "stronger_id": "fAwh2svMARM",
+      "comparison_id": "nRdBvyh7Sy0",
+      "evidence": "Parent long-form: 30 s 70.37%, end 22.22%, 48 views from 287 impressions. Short excerpt: stayed 40.9%, APV 78.6%, 25 views; no retention curve disclosed.",
+      "interpretation": "The parent holds unusually well but reached few viewers; its Shorts, including this one, redistribute the same footage. The Short's curve is unavailable, so no timestamp comparison is possible."
+    },
+    {
+      "pair": "Ozempic Shorts",
+      "stronger_id": "nP9fDHP1jbo",
+      "comparison_id": "7MXBh2hjfto",
+      "evidence": "End retention 15.93% vs 6.25%; retention at 10 s 35.4% vs 46.88%; views 490 vs 216.",
+      "interpretation": "Both lose most viewers at 4-8 s as the answer is declared; 7MXBh2hjfto's title promises a comparison with appetite suppressants that its content does not deliver at sampled anchors."
+    },
+    {
+      "pair": "Potassium Shorts (same shoot)",
+      "stronger_id": "1bb5M4E1oQs",
+      "comparison_id": "j9VqMB6yTXQ",
+      "evidence": "1bb5M4E1oQs: 30 s 36.36%, stayed 46.2%, 23 views; j9VqMB6yTXQ: no curve, 21 views, 0% recorded CTR.",
+      "interpretation": "Mystery opener versus definition-first opener from the same chair shoot; curve missing for one side, so this is descriptive only."
+    },
+    {
+      "pair": "Walking Shorts",
+      "stronger_id": "nPqrcrxdrdE",
+      "comparison_id": "UeGxF8-hb2s",
+      "evidence": "End retention 20.0% vs 7.69%; views 171 vs 34; UeGxF8-hb2s is black and near-silent from 0:50 to 1:28.",
+      "interpretation": "The weaker video's end retention is an export defect, not a content judgement: it held 69.23% at 30 s, better than nPqrcrxdrdE's 26.67% at its 30 s end."
+    },
+    {
+      "pair": "Diabetes Shorts",
+      "stronger_id": "b-dam2LdHzM",
+      "comparison_id": "qObP1FPrC6Q",
+      "evidence": "b-dam2LdHzM: stayed 25.8%, APV 65.5%, 30 s 64.71%, end 35.29%, 64 views. qObP1FPrC6Q: stayed 34.2%, APV 55.3%, 30 s 46.15%, end 15.38%, 36 views.",
+      "interpretation": "Feed acceptance and post-swipe depth diverge: the illustrated morning-spike Short stopped more swipes, while the concrete oatmeal/candy comparison retained more of those who stayed. Samples, titles and topics differ; no success formula follows."
+    },
+    {
+      "pair": "Heart-risk long-form",
+      "stronger_id": "78JR_U-6HfQ",
+      "comparison_id": "3dRcNqiLHgY",
+      "evidence": "78JR_U-6HfQ: 3 s 84.85%, 10 s 72.73%, 30 s 54.55%, end 15.15%, 37 views, 60 detected cuts. 3dRcNqiLHgY: 3 s 76.19%, 10 s 52.38%, 30 s 38.1%, end 19.05%, 24 views; no comparable signal pass.",
+      "interpretation": "The faster edit also opens with a specific morning-safety question and promised habit; the weaker video spends its opening on repeated importance/mortality setup. Topic, packaging, view count and missing matched signal data prevent attributing the difference to pace."
+    },
+    {
+      "pair": "Medication/food advice long-form",
+      "stronger_id": "r9ZyUWyY4Lc",
+      "comparison_id": "HzFdyjyEFTY",
+      "evidence": "At 10 s: 89.16% vs 86.11%; 30 s: 67.47% vs 66.67%; end: 25.3% vs 19.44%; views 113 vs 50; CTR 4.64% vs 1.35%.",
+      "interpretation": "Early curves are effectively similar despite white motion graphics versus a clinic talking head. The small end difference can reflect topic intent, title/traffic selection, runtime or audience; it is not evidence that one visual style wins."
+    },
+    {
+      "pair": "Outdoor mobility demonstrations",
+      "stronger_id": "PIsyBj58fJA",
+      "comparison_id": "RD7ugxaBHSQ",
+      "evidence": "PIsyBj58fJA: 30 s 82.35%, end 17.65%, 18 views. RD7ugxaBHSQ: 10 s 76.19%, 30 s 47.62%, end 23.81%, 29 views.",
+      "interpretation": "Both use vertical outdoor demonstrations and side-panel instructions. The shoulder video stays on its promised routine; the calf video switches to modified push-ups. The 18- and 29-view curves are too coarse to isolate title alignment, exercise type or production."
+    },
+    {
+      "pair": "Cholesterol long-form",
+      "stronger_id": "BCNWQ3uuSuE",
+      "comparison_id": "SBrMW71O69U",
+      "evidence": "CTR 4.2% vs 2.87%; 30-second retention 60.5% vs 38.46%; subscribers +2 vs 0.",
+      "interpretation": "Specific lab-test utility is the leading package hypothesis, not causal proof."
+    }
+  ],
+  "knowledge_framework_applications": {
+    "status": "REUSED_EXISTING_MAPPINGS_PLUS_2026_09_28_SOURCE_PASSAGES",
+    "count": 12,
+    "final_validation_applications": 5,
+    "source_table": "Forensic report section 9 mapping table",
+    "guardrail": "DS-000018 creator claims remain mixed reliability; official YouTube documentation overrides conflicting blanket claims."
+  },
+  "diagnosis": [
+    {
+      "finding": "Distribution opportunity is limited and uneven",
+      "video_ids": [
+        "CZ3gAUzdTAg",
+        "EB3_A2b4a6o",
+        "BCNWQ3uuSuE"
+      ],
+      "metrics": "36,169 lifetime counted impressions across the exported content table; Suggested 19,841, Search 11,245 and Browse 4,028 impressions in the retained source export",
+      "visual_and_transcript_evidence": "No single production pattern explains the source mix",
+      "comparative_evidence": "Some videos still received thousands of impressions",
+      "historical_context": "Lifetime through 2026-09-27",
+      "counterexample": "Low impressions can coexist with high CTR on a narrow loyal audience",
+      "alternative_explanations": "Topic demand, audience size, eligibility and competition",
+      "confidence": "HIGH for limited recorded reach; LOW for one causal mechanism",
+      "practical_experiment": "Run native package tests on mature eligible long-form videos with adequate impressions and preserve the medical promise."
+    },
+    {
+      "finding": "Packaging response varies materially by video and source",
+      "video_ids": [
+        "BCNWQ3uuSuE",
+        "SBrMW71O69U",
+        "EB3_A2b4a6o"
+      ],
+      "metrics": "Lifetime CTR 3.0%; BCNWQ3uuSuE 4.2%, SBrMW71O69U 2.87%, EB3_A2b4a6o 1.8%",
+      "visual_and_transcript_evidence": "Specific lab-test utility is clearer in BCNWQ3uuSuE than the broad SBrMW71O69U warning",
+      "comparative_evidence": "BCNWQ3uuSuE also retains 60.5% at 30 seconds versus 38.46% for SBrMW71O69U",
+      "historical_context": "Video ages and impression bases differ",
+      "counterexample": "High CTR rows on tiny impression bases are unstable",
+      "alternative_explanations": "Traffic source and audience composition",
+      "confidence": "HIGH for variation; MEDIUM for the specific-package hypothesis",
+      "practical_experiment": "Test exact utility/problem packages against broad warning packages on one unchanged mature video."
+    },
+    {
+      "finding": "Early and mid-video retention are inconsistent",
+      "video_ids": [
+        "5oPzZjfNgII",
+        "EB3_A2b4a6o",
+        "BCNWQ3uuSuE",
+        "SBrMW71O69U"
+      ],
+      "metrics": "30-second retention 56.15%, 60.0%, 60.5% and 38.46%; midpoint 43.85%, 23.57%, 31.93% and 15.38% respectively",
+      "visual_and_transcript_evidence": "Concrete symptom/test progressions hold more of the audience in selected pairs; long steady explanation sections coincide with faster decline",
+      "comparative_evidence": "Retention and CTR do not always move together",
+      "historical_context": "Actual per-video curves from exports through 2026-09-27",
+      "counterexample": "A dip alone does not identify why viewers left",
+      "alternative_explanations": "Audience intent, source, video length and topic familiarity",
+      "confidence": "HIGH for variation; MEDIUM for production hypotheses",
+      "practical_experiment": "Open with the exact promised decision, demonstrate it early and review the first major dip against the published cut."
+    },
+    {
+      "finding": "Shorts feed acceptance and depth are separate",
+      "video_ids": [
+        "QfRaG71ZA_0",
+        "4ByUo2N_C-I",
+        "PTB-6fgaAKk",
+        "gunPgSlxJLA"
+      ],
+      "metrics": "QfRaG71ZA_0 stayed 57.3%/APV 83.3%; 4ByUo2N_C-I 43.7%/43.8%; PTB-6fgaAKk 16.9%/126.6%; gunPgSlxJLA 28.7%/84.0%",
+      "visual_and_transcript_evidence": "Concrete symptom frames are easier to parse; very short loops can inflate APV",
+      "comparative_evidence": "kF26QB7xHiE had more views than FVfG_HZV4qg despite much lower stayed-to-watch",
+      "historical_context": "Authenticated lifetime row observations on 2026-09-28",
+      "counterexample": "High APV does not guarantee high stayed-to-watch or distribution",
+      "alternative_explanations": "Feed cohort, loop length and repeat exposure",
+      "confidence": "HIGH",
+      "practical_experiment": "Test first-frame specificity and measure stayed-to-watch separately from APV."
+    },
+    {
+      "finding": "Audience development is an unproven hypothesis, not a demonstrated constraint (corrected 2026-09-28)",
+      "video_ids": [],
+      "metrics": "28-day window ending 2026-09-26: monthly audience 505; 495 new, 10 casual, 0 regular (casual 3-10 across the 28 daily rows). Subscribers 29 to 33. Own-channel videos supplied 70 of 1,031 lifetime Suggested views.",
+      "visual_and_transcript_evidence": "Catalog alternates cardiology, metabolic/GLP-1, diabetes, mobility and exercise topics without a recurring series frame",
+      "comparative_evidence": "Returning viewers retained less than new viewers at 30 s in 8 of 11 retention splits; the earlier FDLU7tX7qNM example was not representative",
+      "historical_context": "YouTube defines regular viewers as watching in more than 6 of the past 12 months; the channel first published 2026-02-03 and had 8 views in April 2026, so regular = 0 is structurally expected",
+      "counterexample": "Casual viewers rose from 3 to 10 while new viewers rose after the 2026-09-09 coffee Shorts",
+      "alternative_explanations": "Channel age, the April gap and a Shorts-driven spike explain the new-viewer dominance without any retention failure",
+      "confidence": "LOW that audience development is currently the binding constraint; HIGH that about 98% of the latest 28-day audience was new",
+      "practical_experiment": "Future research R1: re-export new/casual/regular monthly for three windows; series pilot E4 measures own-channel Suggested share against the 6.8% baseline."
+    },
+    {
+      "finding": "Long-form discovery is fragmented across external Suggested sources and low-volume searches (geography corrected 2026-09-28)",
+      "video_ids": [
+        "CZ3gAUzdTAg",
+        "EB3_A2b4a6o",
+        "NznebmgFwXI"
+      ],
+      "metrics": "Suggested: 1,031 views from 19,844 impressions (CTR 2.9%); 459 external source videos supplied 910 disclosed views, top sources are other doctors' Hindi/Bengali/English general-health videos (thyroid, acid reflux, neuropathy, colonoscopy). Search: 1,175 views from 11,248 impressions (CTR 2.71%); 114 disclosed terms carry only 170 views, maximum 7 views per term. Geography: only 2,746 of 8,366 views (32.8%) have a disclosed country; within that disclosed set IN 48.7%, PK 15.0%, US 11.9%, GB 11.1%; the other 5,620 views are undisclosed and are not extrapolated. Device: mobile 6,990 views (AVD 0:34), TV 399 views (AVD 1:17).",
+      "visual_and_transcript_evidence": "Titles use 'After 60' and US-style clinical framing; captions and thumbnails are English",
+      "comparative_evidence": "Search CTR (2.71%) and Suggested CTR (2.9%) are similar; no source outperforms by a margin that survives the small base",
+      "historical_context": "Lifetime through 2026-09-27; channel-level only",
+      "counterexample": "US and GB together still supply 7.5% of views; senior targeting may work there but the base is too small to test",
+      "alternative_explanations": "The disclosed set may over-represent large countries; no statement about the recommendation system's preferences is supported",
+      "confidence": "HIGH for the source mix; LOW for any audience-mismatch hypothesis because two-thirds of geography is undisclosed",
+      "practical_experiment": "Test two topic clusters for 6 weeks each (cardiology decision questions versus general-health adjacent to the top Suggested sources) and compare impressions, CTR and 30-second retention per upload."
+    },
+    {
+      "finding": "Format and topic confound most apparent patterns",
+      "video_ids": [
+        "CZ3gAUzdTAg",
+        "HzFdyjyEFTY",
+        "EB3_A2b4a6o",
+        "8JdBlF-ragM"
+      ],
+      "metrics": "Extended export medians (impressions >= 100): long-form cardiology CTR 2.83% (14 videos, 1,232 views), long-form broader 3.09% (13, 746), Shorts CTR is excluded because Shorts-feed views carry no thumbnail impressions. Lowest long-form CTR with >= 500 impressions: HzFdyjyEFTY 1.35% (10 days old at export, immature), EB3_A2b4a6o 1.81% on 3,703 impressions despite 60.0% 30-second retention; highest: 8JdBlF-ragM 4.89%, 5oPzZjfNgII 4.72%, r9ZyUWyY4Lc 4.64%.",
+      "visual_and_transcript_evidence": "Low-CTR titles open with a population/decision frame ('Daily Aspirin After 60', 'Morning Fasting Blood Sugars High?'); high-CTR titles name a concrete question or body signal",
+      "comparative_evidence": "Cardiology versus broader topic differences are within 0.6 CTR points and reverse between formats",
+      "historical_context": "Lifetime; video ages differ by up to 7 months",
+      "counterexample": "CZ3gAUzdTAg drew the most impressions (5,738) with a mid-range 3.69% CTR",
+      "alternative_explanations": "Impression source mix per video is unexported; Shorts CTR reflects non-feed surfaces only",
+      "confidence": "HIGH that topic label alone does not separate performance; LOW for any single packaging rule",
+      "practical_experiment": "Experiment E1: Test & Compare on EB3_A2b4a6o, then CZ3gAUzdTAg and HzFdyjyEFTY once mature, to a concrete question/body-signal form using Test & Compare where eligible; keep the video unchanged."
+    },
+    {
+      "finding": "Public demand alone does not explain outcomes",
+      "video_ids": [
+        "sUL6SU8LnEg",
+        "VlSibJdSZF8",
+        "8JdBlF-ragM"
+      ],
+      "metrics": "Ozempic mean normalized Trends score 31.45 versus semaglutide 7.71 and GLP-1 2.99 within one US YouTube Search comparison",
+      "visual_and_transcript_evidence": "Existing packages vary between myth, side-effect and rebound-weight angles",
+      "comparative_evidence": "High normalized interest did not yield strong channel results",
+      "historical_context": "Five-year normalized Trends series",
+      "counterexample": "Trends is not absolute volume and does not describe this channel's eligible audience",
+      "alternative_explanations": "Packaging, authority fit, competition, timing and distribution",
+      "confidence": "MEDIUM",
+      "practical_experiment": "Use exact query/source evidence before commissioning another demand study."
+    },
+    {
+      "finding": "Caption-track defects are widespread but not associated with a consistent retention pattern",
+      "video_ids": [
+        "4ByUo2N_C-I",
+        "FDLU7tX7qNM",
+        "FVfG_HZV4qg",
+        "Nf9pCrPYWyQ",
+        "TPVOIfcJl-k",
+        "VlSibJdSZF8",
+        "hUSVbcHVeVw",
+        "iltS1TPt4jo",
+        "p_iI0enaFX8",
+        "phSq6PkPtIg",
+        "r9ZyUWyY4Lc",
+        "sUL6SU8LnEg"
+      ],
+      "metrics": "Raw (m:ss) timecodes appear in 10 of 56 retained caption transcripts (5 Shorts, 5 long-form); emoji and a heading line appear in 2 more (hUSVbcHVeVw, FDLU7tX7qNM). phSq6PkPtIg's retained text includes 0:21 and 0:27 markers although public runtime is 14.86 s. Median compared-to-other-videos value at 30 s: timecode Shorts -27.49 vs other Shorts 7.93; timecode long-form 7.6 vs other long-form -30.81.",
+      "visual_and_transcript_evidence": "Timecodes were seen on screen in iltS1TPt4jo, TPVOIfcJl-k, sUL6SU8LnEg and p_iI0enaFX8 during earlier playback. phSq6PkPtIg's impossible markers are present in retained transcript evidence; player captions were not enabled during its sampled playback.",
+      "comparative_evidence": "Direction flips between formats; Nf9pCrPYWyQ retains 80.77% at 3 s and 42.31% at 30 s despite literal transcript timecodes, while other affected videos perform weakly",
+      "historical_context": "Defect spans February to September 2026 uploads",
+      "counterexample": "FVfG_HZV4qg has the defect and the second-highest Short view count (1,068) with 51.1% stayed-to-watch",
+      "alternative_explanations": "Many viewers may not enable captions; group sizes are 3-19 and title/topic/source differ",
+      "confidence": "HIGH that the retained-text defect exists; LOW for any retention effect",
+      "practical_experiment": "Replace the caption tracks on affected videos (a quality fix that needs no test) and do not attribute retention changes to it."
+    },
+    {
+      "finding": "Footage reuse is concentrated in the coffee cluster and one heart-attack re-edit",
+      "video_ids": [
+        "fAwh2svMARM",
+        "QfRaG71ZA_0",
+        "4ByUo2N_C-I",
+        "fArHBQo6Ggw",
+        "nRdBvyh7Sy0",
+        "YVjbjcVo1is",
+        "iltS1TPt4jo"
+      ],
+      "metrics": "10-word transcript overlap: YVjbjcVo1is/iltS1TPt4jo 0.75; long-form fAwh2svMARM shares 0.33-0.49 with four coffee Shorts; no other pair exceeds 0.15",
+      "visual_and_transcript_evidence": "Coffee Shorts are excerpts of the long-form coffee video; iltS1TPt4jo adds an illustrated cold open to YVjbjcVo1is footage",
+      "comparative_evidence": "Four coffee Shorts drew 25-341 views each versus 48 for their long-form parent; stayed-to-watch 40.9-57.3%",
+      "historical_context": "Parent published 2026-08-25; Shorts 2026-09-09 to 2026-09-18",
+      "counterexample": "The same source footage produced both the strongest (QfRaG71ZA_0) and a weaker (4ByUo2N_C-I) coffee Short, so the excerpt and package matter more than the footage",
+      "alternative_explanations": "Different excerpts, titles and publication dates",
+      "confidence": "HIGH for reuse; MEDIUM for excerpt choice mattering",
+      "practical_experiment": "When clipping a long-form video, test excerpts that open on a named symptom or viewer qualifier against excerpts that open on a definition."
+    },
+    {
+      "finding": "Fast cutting is not a reliable retention lever in this catalog",
+      "video_ids": [
+        "NznebmgFwXI",
+        "KPYHy7MDmLM",
+        "CZ3gAUzdTAg",
+        "8JdBlF-ragM"
+      ],
+      "metrics": "Hard cuts per minute: NznebmgFwXI 0.8 (3 s retention 87.1%), KPYHy7MDmLM 16.9 (57.89%), CZ3gAUzdTAg 18.3 (88.72% but 43.92% at 30 s), 8JdBlF-ragM 18.8 (78.69%, 55.74% at 30 s)",
+      "visual_and_transcript_evidence": "The near-single-take video opens on a concrete self-check symptom; the fast-cut weaker video opens on a generic warning with three text layers",
+      "comparative_evidence": "DS-000018 creator advice favours frequent pattern interrupts; this pair contradicts it at the opening",
+      "historical_context": "Continuous 2x signal pass on 8 videos, 2026-09-28",
+      "counterexample": "8JdBlF-ragM is fast-cut and holds well",
+      "alternative_explanations": "Topic, title promise and tiny samples (20-132 views)",
+      "confidence": "MEDIUM that pace alone does not explain opening loss; LOW for any causal claim",
+      "practical_experiment": "Hold pace constant and vary only the first sentence (specific symptom question versus generic warning)."
+    },
+    {
+      "finding": "Export and packaging defects remove or misdirect viewers independently of content quality",
+      "video_ids": [
+        "UeGxF8-hb2s",
+        "7MXBh2hjfto",
+        "RD7ugxaBHSQ",
+        "1bb5M4E1oQs",
+        "hUSVbcHVeVw",
+        "Uq3T8YZgyTw"
+      ],
+      "metrics": "UeGxF8-hb2s is black and near-silent for its final 39 s (44% of runtime): 69.23% retained at 30 s, 7.69% at end, APV 51.3%. 7MXBh2hjfto's title promises an appetite-suppressant comparison but its content debunks a cancer myth; end retention 6.25%. RD7ugxaBHSQ shifts from calf circulation to modified push-ups. 1bb5M4E1oQs uses a 7-day no-sugar/no-carb thumbnail for a potassium/blood-pressure video.",
+      "visual_and_transcript_evidence": "Frame luminance is 0 from 50 s to 80 s in UeGxF8-hb2s; sampled 7MXBh2hjfto anchors show only cancer-myth content; sampled RD7ugxaBHSQ anchors show modified push-ups; retained 1bb5M4E1oQs thumbnail was re-inspected at full size.",
+      "comparative_evidence": "Uq3T8YZgyTw was the closest word-density candidate for another tail defect, but sampled frames at 47.1 and 49.8 s show a white engagement card through its 50.82 s end, not black.",
+      "historical_context": "Affected uploads span February to September 2026",
+      "counterexample": "Not every low-word-density or static-ending video has a black tail; Uq3T8YZgyTw explicitly refutes that generalization. RD7ugxaBHSQ's largest early loss precedes its title-scope shift, so the mismatch cannot explain the opening drop.",
+      "alternative_explanations": "Tiny samples, later title changes and unknown traffic sources limit performance attribution",
+      "confidence": "HIGH that the listed defects/mismatches exist; MEDIUM that the black tail depresses APV; LOW for distribution effects",
+      "practical_experiment": "Re-export or trim UeGxF8-hb2s; align title, thumbnail and delivered content for 7MXBh2hjfto, RD7ugxaBHSQ and 1bb5M4E1oQs; verify every final render before upload."
+    }
+  ],
+  "retention_export_summary": {
+    "record_count": 56,
+    "available_count": 56,
+    "curve_available_count": 46,
+    "exported_no_curve_count": 10
+  },
+  "remaining_private_requirements": [
+    "Viewers-across-formats report",
+    "Per-video traffic-source, Search and Suggested drill-downs",
+    "Monthly new/casual/regular re-exports (2026-10-26 onward)"
+  ],
+  "final_validation_2026_09_28": {
+    "youtube_definitions": {
+      "source": "https://support.google.com/youtube/answer/10246996 (retrieved 2026-09-28)",
+      "new_viewers": "Watched the channel for the first time in the period (includes people with cleared history or private browsing, or who have not watched in over a year).",
+      "casual_viewers": "Watched the channel at least once per month for 1 to 5 months in the past year.",
+      "regular_viewers": "Watched the channel at least once per month for more than 6 months in the past year.",
+      "returning_viewers": "Umbrella term for casual plus regular viewers; the retention report's new-vs-returning split is a separate segmentation of retention curves, not a viewer count.",
+      "monthly_audience": "Unique viewers in the last 28 days."
+    },
+    "claim_audit": [
+      {
+        "id": "A",
+        "previous_claim": "The channel is not yet building a returning audience; zero regular viewers make returning viewers the binding constraint.",
+        "original_evidence": "studio-audience-size-growth-last-28-days.zip: 2026-09-26 row 495 new, 10 casual, 0 regular; monthly audience 505.",
+        "period": "28-day windows ending 2026-08-30 through 2026-09-26 (28 daily rows)",
+        "sample_size": "505 monthly viewers; casual 3-10 across the 28 rows",
+        "confounders": "Channel first published 2026-02-03; lifetime Totals.csv shows only 8 views in April 2026, so almost no viewer can have watched in more than 6 of the past 12 months. Views jumped on 2026-09-09 when the coffee Shorts began (new viewers 339 to 458 in one day).",
+        "counterexamples": "Casual (returning) viewers rose from 3 to 10 during the window while new viewers also rose.",
+        "evidence_strength": "Regular = 0 is structurally expected for this channel age and gap; it is not evidence of a retention failure. Casual share is 2.0% of monthly audience, which is low but measured over one 28-day window only.",
+        "corrected_interpretation": "Audience development is UNPROVEN, not demonstrated as the binding constraint. The measurable fact is that about 98% of the latest 28-day audience was new. Whether the channel converts viewers into casual/regular viewers can only be judged after several further 28-day exports.",
+        "status": "CORRECTED"
+      },
+      {
+        "id": "A2",
+        "previous_claim": "Retention exports show returning viewers holding better (FDLU7tX7qNM 46.15% vs 17.78% new at 30 s).",
+        "original_evidence": "audience-retention-by-video exports with a new-vs-returning split (11 videos).",
+        "period": "Per-video lifetime retention through 2026-09-27",
+        "sample_size": "11 videos; returning cohort counts are not disclosed and are very small",
+        "confounders": "Returning cohorts can be a handful of viewers; Studio discloses curve shape only.",
+        "counterexamples": "Returning viewers retained LESS than new viewers at the 30 s position in 8 of 11 videos (e.g. 8JdBlF-ragM 20.0 vs 62.75, 78JR_U-6HfQ 40.0 vs 60.87, qC8BKb8Fh5Q 18.18 vs 37.5); higher only in FDLU7tX7qNM and xI-KdZ96xcI; equal in BCNWQ3uuSuE.",
+        "evidence_strength": "The earlier claim was a single-example selection.",
+        "corrected_interpretation": "No consistent returning-viewer retention advantage exists in the available splits; the cohort is too small to interpret.",
+        "status": "WITHDRAWN"
+      },
+      {
+        "id": "B",
+        "previous_claim": "Discovery is largely South Asian.",
+        "original_evidence": "studio-advanced-geography-lifetime.zip: 8,366 total views; 12 disclosed countries carry 2,746 views.",
+        "period": "Lifetime 2026-02-03..2026-09-27",
+        "sample_size": "2,746 of 8,366 views (32.8%) have a disclosed country",
+        "confounders": "Studio withholds small-country rows; undisclosed views may be concentrated or spread across many countries.",
+        "counterexamples": "US 327 and GB 305 views are 11.9% and 11.1% of the disclosed set.",
+        "evidence_strength": "Within the disclosed third: IN 48.7%, PK 15.0%, LK/NP/BD 4.2% (South Asia ~68%). Nothing can be said about the other 67%.",
+        "corrected_interpretation": "South Asia is the largest DISCLOSED segment. The overall audience composition is unknown; do not extrapolate. The previous percentages (IN 16.0%) were shares of total views, correct arithmetic but presented without the disclosure caveat.",
+        "status": "CORRECTED"
+      },
+      {
+        "id": "C",
+        "previous_claim": "Discovery comes from other creators' health videos and a long search tail.",
+        "original_evidence": "Traffic-source lifetime table; Search-term and Suggested-source drill-downs (lifetime).",
+        "period": "Lifetime 2026-02-03..2026-09-27",
+        "sample_size": "Suggested 1,031 views / 19,841 impressions; Search 1,175 views / 11,245 impressions; 114 disclosed search terms carry 170 views; 472 disclosed Suggested source videos",
+        "confounders": "Drill-downs disclose only top rows; Suggested impressions in the drill-down (19,844) differ from the source table (19,841) by rounding/refresh.",
+        "counterexamples": "Monthly source mix changed: Suggested led May-July (250/340/220 views) but Search led August (317) and September (340); Shorts feed dominated February-March.",
+        "evidence_strength": "Facts: Shorts feed is 64% of lifetime views; own-channel videos supplied 70 of 1,031 Suggested views; no search term exceeds 7 views.",
+        "corrected_interpretation": "Long-form discovery is fragmented across many external source videos and many low-volume search terms; there is no dominant query or source. This says nothing about whether the recommendation system 'prefers' the channel. Search's rising monthly share since August is the only upward source trend visible.",
+        "status": "CONFIRMED_WITH_LIMITS"
+      },
+      {
+        "id": "D",
+        "previous_claim": "Lowest CTR among videos with >=500 impressions: HzFdyjyEFTY 1.35%, qbwCkH_GqhU 1.65%, EB3_A2b4a6o 1.81%; Shorts cardiology median CTR 1.48%.",
+        "original_evidence": "studio-advanced-content-lifetime-extended.zip thumbnail impressions and CTR.",
+        "period": "Lifetime; each video's own age",
+        "sample_size": "15 long-form videos with >=500 impressions",
+        "confounders": "qbwCkH_GqhU is a 50-second Short: Shorts-feed views carry no thumbnail impression, so Shorts CTR describes only non-feed surfaces and is not comparable. HzFdyjyEFTY was 10 days old at export. CTR mixes Search (2.71%) and Suggested (2.9%) surfaces with different eligibility.",
+        "counterexamples": "EB3_A2b4a6o has the second-highest impressions (3,703) with 1.81% CTR yet 60.0% 30-second retention: low click response did not mean poor content response.",
+        "evidence_strength": "Long-form CTR range 1.35-4.89% among mature videos is real variation; Shorts CTR comparisons are invalid.",
+        "corrected_interpretation": "Remove qbwCkH_GqhU and all Shorts CTR medians from packaging conclusions. Treat HzFdyjyEFTY as immature. EB3_A2b4a6o is the clearest mature long-form case where packaging under-performs the content.",
+        "status": "CORRECTED"
+      },
+      {
+        "id": "E",
+        "previous_claim": "Concrete self-test/symptom openings hold more viewers; slow or generic setup coincides with faster decline; fast cutting is not a reliable lever.",
+        "original_evidence": "Retention curves plus storyboard/seek frames.",
+        "period": "Lifetime retention through 2026-09-27",
+        "sample_size": "Long-form videos with 80-367 views; 30 s retention has roughly +/-10 percentage-point 95% uncertainty at 100 viewers",
+        "confounders": "Topic, traffic source mix, length and video age are uncontrolled.",
+        "counterexamples": "HzFdyjyEFTY opens on a direct question and holds 66.7% at 30 s but has the lowest CTR; CZ3gAUzdTAg (most views) holds only 43.9% at 30 s.",
+        "evidence_strength": "Differences above ~20 points (BCNWQ3uuSuE 60.5% vs SBrMW71O69U 38.5%) exceed sampling noise; smaller ones do not. All are associations.",
+        "corrected_interpretation": "Supported as an association: openings that state the specific question and pay it off within 30-50 s (BCNWQ3uuSuE fasting myth at 0:40-0:50; HzFdyjyEFTY aspirin reveal at 0:32) hold better than openings built from generic framing and self-promotion (SBrMW71O69U channel-handle overlay 0:18-0:24). Cutting frequency is unrelated in this catalog. Caption timecode defects show no consistent retention direction.",
+        "status": "CONFIRMED_AS_ASSOCIATION"
+      }
+    ],
+    "priority_review_method": {
+      "visual": "YouTube storyboard level-2 sprite sheets (160x90 per frame for long-form, 45x80 for Shorts) at the frame interval YouTube publishes (1 s for videos under ~100 s, 2 s to 5 s for longer ones), viewed sheet by sheet on 2026-09-28. This is continuous full-length visual progression at storyboard resolution, not full-frame-rate playback.",
+      "speech": "Retained uploaded caption track (creator-provided text) read in full. YouTube's auto-generated (ASR) track exists for all 12 videos but could not be retrieved in the signed-out browser (timedtext requests rejected; player exposes only the manual track).",
+      "audio": "NOT HEARD. The agent environment has no audio output and no local speech-recognition tool; audible speech quality, music level and mix are therefore not assessed. Automated volume measurements from earlier signal passes are not used as evidence of audible quality.",
+      "status_label": "PRIORITY_REVIEW_FULL_LENGTH_VISUAL_AND_TRANSCRIPT_AUDIO_NOT_HEARD"
+    },
+    "priority_review_video_ids": [
+      "5oPzZjfNgII",
+      "7MXBh2hjfto",
+      "8JdBlF-ragM",
+      "BCNWQ3uuSuE",
+      "CZ3gAUzdTAg",
+      "EB3_A2b4a6o",
+      "FDLU7tX7qNM",
+      "HzFdyjyEFTY",
+      "QfRaG71ZA_0",
+      "SBrMW71O69U",
+      "UeGxF8-hb2s",
+      "hUSVbcHVeVw"
+    ],
+    "medical_references": {
+      "USPSTF_2022_ASPIRIN": "US Preventive Services Task Force, Aspirin Use to Prevent Cardiovascular Disease (2022): Grade D against initiating for primary prevention at >=60; Grade C individual decision at 40-59 with >=10% 10-year risk; current users should not discontinue without consulting their clinician.",
+      "ACC_AHA_2019_PRIMARY": "2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease: low-dose aspirin should not be administered routinely for primary prevention in adults >70 or with increased bleeding risk; may be considered selectively at 40-70.",
+      "CAPRIE_1996": "CAPRIE (Lancet 1996): clopidogrel versus aspirin in patients with recent stroke, MI or peripheral arterial disease (secondary prevention). It is not a primary-prevention aspirin trial; the relevant primary-prevention trials are ASPREE, ARRIVE and ASCEND (2018).",
+      "ESC_EAS_2019_LIPIDS": "2019 ESC/EAS Dyslipidaemia Guidelines: LDL-C goals by risk category, <55 mg/dL very high risk (including established ASCVD), <70 high risk, <100 moderate risk, <116 low risk.",
+      "AHA_ACC_2018_CHOLESTEROL": "2018 AHA/ACC Cholesterol Guideline: non-fasting lipid profile acceptable for initial risk assessment; fasting repeat if triglycerides >=400 mg/dL.",
+      "FDA_SEMAGLUTIDE_LABEL": "Ozempic/Wegovy US prescribing information: boxed warning for thyroid C-cell tumours in rodents (human relevance not determined); contraindicated with personal or family history of medullary thyroid carcinoma or MEN 2.",
+      "AHA_DIET_2021": "2021 AHA Dietary Guidance to Improve Cardiovascular Health: dietary patterns (fish, vegetables, nuts, olive oil) lower risk; no individual food reverses established atherosclerosis.",
+      "CDC_STEADI_CHAIR_STAND": "CDC STEADI 30-Second Chair Stand: below-average scores are age- and sex-specific (e.g. <12 for men and <11 for women aged 60-64)."
+    },
+    "medical_claim_reviews": [
+      {
+        "video_id": "HzFdyjyEFTY",
+        "priority": "IMMEDIATE",
+        "claim": "'Avoid taking aspirin for the sake of preventing yourself from developing any heart condition' addressed to viewers over 60 already taking it daily.",
+        "verdict": "MISLEADING_FRAMING_SAFETY_RISK",
+        "evidence": "USPSTF_2022_ASPIRIN; ACC_AHA_2019_PRIMARY",
+        "analysis": "Direction (no routine primary-prevention aspirin at >=60) matches guidelines, but the video addresses current users and never advises discussing it with a clinician first. USPSTF explicitly says current users should not discontinue without consulting their clinician; some viewers may have undiagnosed indications (stents, AF history, PAD).",
+        "alternative_wording": "If you are over 60 and take daily aspirin but have never had a heart attack, stroke or stent, ask your doctor whether you still need it. Do not stop it on your own."
+      },
+      {
+        "video_id": "HzFdyjyEFTY",
+        "priority": "HIGH",
+        "claim": "'We have data from CAPRIE clinical trial ... harms supersede the benefits' for primary prevention.",
+        "verdict": "UNSUPPORTED_CITATION",
+        "evidence": "CAPRIE_1996",
+        "analysis": "CAPRIE compared clopidogrel and aspirin in secondary prevention; it does not support the primary-prevention statement.",
+        "alternative_wording": "Large trials such as ASPREE, ARRIVE and ASCEND found that for people without heart disease, bleeding risk largely offsets the small benefit."
+      },
+      {
+        "video_id": "HzFdyjyEFTY",
+        "priority": "MEDIUM",
+        "claim": "'Aspirin is now regarded to be contraindicated ... for primary prevention.'",
+        "verdict": "OVERSTATED",
+        "evidence": "USPSTF_2022_ASPIRIN",
+        "analysis": "Guidelines say 'not recommended routinely' or 'individual decision' at 40-59; 'contraindicated' is a stronger clinical term.",
+        "alternative_wording": "Aspirin is no longer routinely recommended for people without heart disease."
+      },
+      {
+        "video_id": "8JdBlF-ragM",
+        "priority": "HIGH",
+        "claim": "Semaglutide causes 'new adverse effects', 'Ozempic vagina' and loss of libido, via genital fat loss making tissue 'saggy, petulous and dry because of dehydration'.",
+        "verdict": "UNSUPPORTED_SPECULATIVE_MECHANISM",
+        "evidence": "FDA_SEMAGLUTIDE_LABEL",
+        "analysis": "Neither term is a recognised adverse effect in the prescribing information or major trials; the mechanism is presented as fact without cited evidence. Rapid weight loss and hydration advice is reasonable general guidance.",
+        "alternative_wording": "Some people online describe changes they call 'Ozempic vagina'. It is not a recognised side effect and research is limited; if you notice changes in sexual health or dryness while losing weight, discuss them with your doctor."
+      },
+      {
+        "video_id": "7MXBh2hjfto",
+        "priority": "HIGH",
+        "claim": "Title promises an Ozempic versus appetite-suppressant comparison.",
+        "verdict": "TITLE_CONTENT_MISMATCH",
+        "evidence": "Retained transcript",
+        "analysis": "Content only addresses a cancer myth.",
+        "alternative_wording": "Does Ozempic Cause Cancer? What the Warning Label Actually Means"
+      },
+      {
+        "video_id": "7MXBh2hjfto",
+        "priority": "MEDIUM",
+        "claim": "'Ozempic has not been caused for any kind of cancer ... has not shown in any clinical trial for causing any kind of cancer'; warning described as family history only.",
+        "verdict": "OVERSTATED_REASSURANCE",
+        "evidence": "FDA_SEMAGLUTIDE_LABEL",
+        "analysis": "Trials have not shown a clear human cancer increase, but the boxed warning rests on rodent thyroid C-cell tumours with human relevance undetermined, and the contraindication covers personal as well as family history.",
+        "alternative_wording": "Trials so far have not shown a clear rise in cancer in people. The label warns about thyroid tumours seen in animals, so it is not used if you or a family member has had medullary thyroid cancer or MEN 2."
+      },
+      {
+        "video_id": "hUSVbcHVeVw",
+        "priority": "IMMEDIATE",
+        "claim": "Title: '5 Foods That Reverse Artery Damage'.",
+        "verdict": "MISLEADING_TITLE",
+        "evidence": "AHA_DIET_2021; the video's own script",
+        "analysis": "The script says no single food can fix arteries; no food reverses established plaque.",
+        "alternative_wording": "5 Foods That Support Healthy Arteries (Doctor Explains)"
+      },
+      {
+        "video_id": "SBrMW71O69U",
+        "priority": "LOW",
+        "claim": "LDL <100 ideal; <70 with diabetes or high blood pressure; <55 with established coronary or cerebrovascular disease.",
+        "verdict": "SUPPORTED_SIMPLIFIED",
+        "evidence": "ESC_EAS_2019_LIPIDS",
+        "analysis": "Matches ESC/EAS goals, but ESC assigns targets by total risk category rather than diabetes/hypertension alone.",
+        "alternative_wording": "Your LDL target depends on your overall risk; your doctor sets it, often below 70 or 55 if you have diabetes or heart disease."
+      },
+      {
+        "video_id": "BCNWQ3uuSuE",
+        "priority": "NONE",
+        "claim": "The first lipid profile can be non-fasting; only triglycerides are fasting-dependent.",
+        "verdict": "SUPPORTED",
+        "evidence": "AHA_ACC_2018_CHOLESTEROL",
+        "analysis": "Consistent with guideline.",
+        "alternative_wording": null
+      },
+      {
+        "video_id": "CZ3gAUzdTAg",
+        "priority": "NONE",
+        "claim": "Five foods 'may help support healthy arteries'; no food removes plaque overnight.",
+        "verdict": "SUPPORTED",
+        "evidence": "AHA_DIET_2021",
+        "analysis": "Hedged appropriately.",
+        "alternative_wording": null
+      },
+      {
+        "video_id": "EB3_A2b4a6o",
+        "priority": "NONE",
+        "claim": "Dawn phenomenon, sleep and medication timing can raise fasting glucose; do not stop medicines.",
+        "verdict": "SUPPORTED",
+        "evidence": "Standard diabetes care guidance",
+        "analysis": "Accurate and safety-conscious; in-video 'seven reasons' promise only partly delivered (five factors).",
+        "alternative_wording": "Five reasons your morning blood sugar may be higher (or add the missing two)."
+      },
+      {
+        "video_id": "QfRaG71ZA_0",
+        "priority": "NONE",
+        "claim": "Palpitations, anxiety, sleep problems after coffee warrant contacting a healthcare provider.",
+        "verdict": "SUPPORTED",
+        "evidence": "General clinical guidance",
+        "analysis": "Safety-conscious.",
+        "alternative_wording": null
+      },
+      {
+        "video_id": "UeGxF8-hb2s",
+        "priority": "LOW",
+        "claim": "No single passing score for the 30-second chair stand; the number reflects strength and endurance.",
+        "verdict": "SUPPORTED_INCOMPLETE",
+        "evidence": "CDC_STEADI_CHAIR_STAND",
+        "analysis": "True that norms vary, but CDC publishes age/sex thresholds the title question ('Is 12 good?') could answer.",
+        "alternative_wording": "For ages 60-64, fewer than 12 stands (men) or 11 (women) is below average; thresholds fall with age."
+      },
+      {
+        "video_id": "5oPzZjfNgII",
+        "priority": "NONE",
+        "claim": "Calf pain on walking (claudication), cold feet and foot swelling can signal circulation problems.",
+        "verdict": "SUPPORTED",
+        "evidence": "General PAD guidance",
+        "analysis": "Presented as signals to check, not diagnoses.",
+        "alternative_wording": null
+      },
+      {
+        "video_id": "FDLU7tX7qNM",
+        "priority": "NONE",
+        "claim": "Persistent ankle swelling can be linked to heart function and should be checked.",
+        "verdict": "SUPPORTED_GENERIC",
+        "evidence": "General clinical guidance",
+        "analysis": "Accurate but non-specific.",
+        "alternative_wording": null
+      }
+    ],
+    "root_cause_matrix": [
+      {
+        "constraint": "Discovery volume",
+        "observation": "36,159 lifetime thumbnail impressions for 56 videos over ~8 months; 4,360 in the last 28 days.",
+        "scope": "Channel",
+        "supporting_evidence": "Traffic-source lifetime table; content last-28-days export.",
+        "counterexamples": "CZ3gAUzdTAg alone received 5,737 impressions.",
+        "confounders": "Channel age, niche competition, upload gap in April 2026.",
+        "interpretation": "Reach is small in absolute terms. The data cannot say why; there is no evidence of suppression.",
+        "confidence": "HIGH for the observation; NONE for any mechanism",
+        "practical_response": "Do not chase 'algorithm' fixes. Measure impressions per new long-form video in its first 28 days as the baseline for experiments."
+      },
+      {
+        "constraint": "Viewer appeal (click response) on long-form",
+        "observation": "Mature long-form CTR ranges 2.5-4.9%; EB3_A2b4a6o 1.81% on 3,703 impressions despite 60.0% 30 s retention.",
+        "scope": "Some long-form videos, not systematic",
+        "supporting_evidence": "Extended content export CTR/impressions; EB3_A2b4a6o retention export.",
+        "counterexamples": "BCNWQ3uuSuE 4.16%, 5oPzZjfNgII 4.72% with the same doctor-portrait thumbnail style.",
+        "confounders": "Source mix per video not exported; video age; topic.",
+        "interpretation": "Packaging is a video-level issue for specific videos (EB3_A2b4a6o clearest), not a channel-wide failure.",
+        "confidence": "MEDIUM",
+        "practical_response": "Experiment E1 (Test & Compare) on EB3_A2b4a6o and HzFdyjyEFTY."
+      },
+      {
+        "constraint": "Opening retention (first 30-60 s)",
+        "observation": "Mature long-form 30 s retention ranges 31-67%.",
+        "scope": "Long-form",
+        "supporting_evidence": "BCNWQ3uuSuE 60.5% (myth answered by 0:50) vs SBrMW71O69U 38.46% (answer at ~0:48 after jargon and handle overlay); CZ3gAUzdTAg 43.92% with a stock insert before the first food at 0:42.",
+        "counterexamples": "5oPzZjfNgII 56.15% with first symptom at 1:08.",
+        "confounders": "Topic, audience source, small cohorts (80-367 views).",
+        "interpretation": "Association only: early, specific payoff and absence of self-promotion coincide with better holds.",
+        "confidence": "MEDIUM",
+        "practical_response": "Experiment E2 (opening structure) on the next 6 long-form uploads."
+      },
+      {
+        "constraint": "Ongoing engagement (mid-video)",
+        "observation": "EB3_A2b4a6o falls 60.0% to 23.57% by midpoint; CZ3gAUzdTAg ends 10.39%.",
+        "scope": "Longer (>3.5 min) long-form",
+        "supporting_evidence": "Retention curves; EB3_A2b4a6o storyboard shows six minutes of one static shot and a seven-reason promise with five delivered.",
+        "counterexamples": "BCNWQ3uuSuE is also a static shot and ends 10.92%, similar to CZ3gAUzdTAg which has heavy B-roll.",
+        "confounders": "Length; topic depth.",
+        "interpretation": "No production style explains mid-video loss; unkept promises (EB3_A2b4a6o) are a concrete, fixable contributor in one video.",
+        "confidence": "LOW-MEDIUM",
+        "practical_response": "Keep count promises exact; review mid-video curve after E2."
+      },
+      {
+        "constraint": "Topic strategy",
+        "observation": "Cardiology and broader senior-health videos show overlapping CTR and retention ranges.",
+        "scope": "Channel",
+        "supporting_evidence": "Long-form cardiology vs broader CTR medians 2.83% vs 3.09% (within noise).",
+        "counterexamples": "Top five by views mix arteries, walking tests, ankles and lipid tests.",
+        "confounders": "Format and age.",
+        "interpretation": "No evidence that narrowing to cardiology or widening to senior health would help by itself.",
+        "confidence": "LOW",
+        "practical_response": "Experiment E4 (topic series) rather than a channel pivot."
+      },
+      {
+        "constraint": "Audience alignment",
+        "observation": "Titles target 'After 60'; age export shows most views from viewers aged 25-54; disclosed geography is mostly South Asian but covers 32.8% of views.",
+        "scope": "Channel",
+        "supporting_evidence": "Age/gender and geography exports.",
+        "counterexamples": "Signed-in age data exclude many older viewers and shared devices; undisclosed geography is 67%.",
+        "confounders": "Studio demographics are signed-in estimates.",
+        "interpretation": "Possible mismatch between intended and actual audience; not demonstrated.",
+        "confidence": "LOW",
+        "practical_response": "Future research R2; do not re-target content on current data."
+      },
+      {
+        "constraint": "Audience development",
+        "observation": "Latest 28 days: 495 new, 10 casual, 0 regular.",
+        "scope": "Channel",
+        "supporting_evidence": "New/casual/regular export; YouTube definitions.",
+        "counterexamples": "Regular = 0 is structurally expected for an 8-month channel with a dormant April.",
+        "confounders": "Channel age; Shorts spike from 2026-09-09.",
+        "interpretation": "Hypothesis, not a demonstrated constraint.",
+        "confidence": "LOW",
+        "practical_response": "Future research R1: re-export monthly and track casual share."
+      },
+      {
+        "constraint": "Content and medical quality",
+        "observation": "Two misleading titles, one unsafe instruction, one speculative medical claim, one 39 s black tail, one editor watermark, caption defects on 10 tracks.",
+        "scope": "Specific videos (local, not channel-wide)",
+        "supporting_evidence": "Medical claim reviews; priority reviews; caption scan.",
+        "counterexamples": "8JdBlF-ragM (speculative claim) is among the best performers, so quality defects are not what limits growth.",
+        "confounders": "Not applicable (these are quality issues regardless of metrics).",
+        "interpretation": "Fix for accuracy and trust, not as a growth lever.",
+        "confidence": "HIGH for the defects",
+        "practical_response": "Immediate corrections Q1-Q6."
+      }
+    ],
+    "not_supported_by_data": [
+      "Zero regular viewers proves a returning-audience failure (structurally expected for channel age).",
+      "Returning viewers retain better (8 of 11 splits show the opposite).",
+      "The audience is predominantly South Asian (only 32.8% of views have a disclosed country).",
+      "Shorts CTR differences reflect packaging quality (Shorts-feed views carry no impressions).",
+      "Faster cutting improves retention (NznebmgFwXI 0.8 cuts/min held better than KPYHy7MDmLM 16.9).",
+      "Caption timecode defects reduce retention (no consistent direction).",
+      "Cardiology topics under-perform broader health topics (within 0.6 CTR points, direction reverses by format).",
+      "The recommendation system prefers or penalises the channel (no data can show this).",
+      "Posting Shorts and long-form on one channel harms growth (DS-000018 creator claim; cross-format data not exported)."
+    ],
+    "knowledge_applications": [
+      {
+        "source": "DS-000011 Hook guide (creator reference)",
+        "passage": "3-step hook: Context Lean (clearly state what the video is about) then Scroll-Stop Interjection then Contrarian Snapback.",
+        "applied_to": "BCNWQ3uuSuE: 'lipid profile' context, 'common confusion', '12-hour fast is a myth' by 0:50 (60.5% at 30 s). HzFdyjyEFTY: question, misconception, aspirin reveal at 0:32 (66.67%).",
+        "verdict": "SUPPORTED by in-video retention",
+        "contradiction": "HzFdyjyEFTY's hook holds viewers but its package gets the lowest CTR: the framework speaks to retention, not clicks."
+      },
+      {
+        "source": "DS-000031 strategy corpus (creator)",
+        "passage": "Demand -> Click -> Watch -> Want More; Hit -> Follow-up -> Cluster -> Series; check which video brought returning viewers.",
+        "applied_to": "Coffee cluster (fArHBQo6Ggw, QfRaG71ZA_0, 4ByUo2N_C-I, nRdBvyh7Sy0) coincides with new-viewer rise from 2026-09-09; casual viewers 3 to 10 in the same window.",
+        "verdict": "PARTIALLY SUPPORTED; cluster timing aligns but causation unshown",
+        "contradiction": "The parent coffee long-form (fAwh2svMARM) drew only 48 views; the cluster did not carry viewers to long-form measurably."
+      },
+      {
+        "source": "DS-000031 (creator, Urdu lecture)",
+        "passage": "YouTube judges satisfaction: click, stay, binge session, return; 'views are vanity metrics'.",
+        "applied_to": "Use retention and casual-viewer share as experiment metrics, not raw views.",
+        "verdict": "CONSISTENT WITH OFFICIAL GUIDANCE (YouTube describes appeal, engagement and satisfaction)",
+        "contradiction": null
+      },
+      {
+        "source": "DS-000018 algorithm-watch creator video",
+        "passage": "Shorts and long-form are 'two completely different algorithms' and audiences; posting both on one channel is a mistake.",
+        "applied_to": "64% of lifetime views are Shorts feed; long-form gets few views.",
+        "verdict": "UNVALIDATED CREATOR CLAIM; viewers-across-formats report not exported, so the channel cannot test it",
+        "contradiction": "YouTube's official Studio offers a viewers-across-formats report precisely because overlap exists; no recommendation to split channels."
+      },
+      {
+        "source": "YouTube Help (official)",
+        "passage": "Casual = 1-5 of past 12 months; regular = more than 6 of past 12 months.",
+        "applied_to": "Claim A correction.",
+        "verdict": "OFFICIAL, OVERRIDES CREATOR CLAIMS",
+        "contradiction": null
+      }
+    ],
+    "immediate_corrections": [
+      {
+        "id": "Q1",
+        "video_id": "HzFdyjyEFTY",
+        "action": "Pin a comment and add to description (and, if re-editing, a closing card): 'Do not stop aspirin without talking to your doctor.' Replace the CAPRIE reference with ASPREE/ARRIVE/ASCEND in future cuts.",
+        "evidence": "USPSTF 2022; storyboard 2:56-3:00; transcript"
+      },
+      {
+        "id": "Q2",
+        "video_id": "hUSVbcHVeVw",
+        "action": "Retitle to 'Foods That Support Healthy Arteries'; remove 'Reverse'.",
+        "evidence": "Title vs own script"
+      },
+      {
+        "id": "Q3",
+        "video_id": "7MXBh2hjfto",
+        "action": "Retitle to match the cancer-myth content; correct the 'family history only' wording in a pinned comment.",
+        "evidence": "Transcript; FDA label"
+      },
+      {
+        "id": "Q4",
+        "video_id": "8JdBlF-ragM",
+        "action": "Add a pinned clarification that 'Ozempic vagina' is not a recognised side effect and the mechanism is unproven; keep the title (it is not false) but avoid 'new adverse effects' framing in any follow-up.",
+        "evidence": "FDA label; transcript"
+      },
+      {
+        "id": "Q5",
+        "video_id": "UeGxF8-hb2s",
+        "action": "Trim the 39 s black tail with YouTube Studio's Trim tool (keeps the URL and metrics).",
+        "evidence": "Earlier luminance verification"
+      },
+      {
+        "id": "Q6",
+        "video_id": "10 caption tracks listed in CAPTION_TIMECODE_IDS; 2 with emoji",
+        "action": "Re-upload clean caption files without '(m:ss)' markers or emoji.",
+        "evidence": "Caption scan of retained transcripts"
+      },
+      {
+        "id": "Q7",
+        "video_id": "QfRaG71ZA_0 and any VEED-watermarked Shorts",
+        "action": "Export future Shorts without the third-party editor watermark.",
+        "evidence": "Storyboard 0:00 and 0:45"
+      },
+      {
+        "id": "Q8",
+        "video_id": "EB3_A2b4a6o",
+        "action": "Either change the spoken '7 reasons' reference in future re-uses or make follow-ups state the exact count delivered.",
+        "evidence": "Transcript factors 1-5; storyboard 0:25"
+      }
+    ],
+    "experiments": [
+      {
+        "id": "E1",
+        "name": "Long-form title/thumbnail Test & Compare",
+        "purpose": "Test whether a specific question/answer package lifts click response on videos whose content already holds viewers.",
+        "eligible_videos": [
+          "EB3_A2b4a6o",
+          "HzFdyjyEFTY (after it passes 28 days old)",
+          "CZ3gAUzdTAg"
+        ],
+        "evidence_basis": "EB3_A2b4a6o CTR 1.81% vs 60.0% 30 s retention; HzFdyjyEFTY CTR 1.35% vs 66.67%.",
+        "window": "Days 1-30; YouTube Studio Test & Compare runs up to 2 weeks per test",
+        "metrics": "Test & Compare watch-time share (YouTube's winner criterion); secondary impressions CTR from the same period",
+        "interpretation": "Count a lift only if Studio declares a winner; 'inconclusive' is a valid result and means packaging is not the limiting factor for that video. Never compare against lifetime CTR."
+      },
+      {
+        "id": "E2",
+        "name": "Opening structure on new long-form",
+        "purpose": "Test early specific payoff: state the question in the first sentence and deliver the first concrete answer by 0:30, with no channel-handle or subscribe overlay before 1:00.",
+        "eligible_videos": [
+          "Next 6 long-form uploads, alternating with 3 in the current style if cadence allows"
+        ],
+        "evidence_basis": "BCNWQ3uuSuE vs SBrMW71O69U; CZ3gAUzdTAg stock insert before the first item.",
+        "window": "Days 1-60; evaluate each video at 28 days",
+        "metrics": "Retention at 30 s and 60 s (Studio key moments), average percentage viewed; views only as context",
+        "interpretation": "Require a difference above ~15 points in 30 s retention between groups before acting; with ~100 viewers per video smaller differences are noise. Report as association unless randomised."
+      },
+      {
+        "id": "E3",
+        "name": "Shorts first-frame specificity",
+        "purpose": "Test whether a distinct first frame plus a named symptom or number improves stayed-to-watch.",
+        "eligible_videos": [
+          "Next 8 Shorts: 4 with a distinct visual first frame and named symptom, 4 in the current talking-head style"
+        ],
+        "evidence_basis": "QfRaG71ZA_0 (57.28% stayed) vs 4ByUo2N_C-I (43.7%) from the same footage.",
+        "window": "Days 1-30 per Short",
+        "metrics": "Stayed to watch (%) and engaged views; ignore Shorts CTR",
+        "interpretation": "Shorts feed cohorts vary; judge on the median of each group of 4, not the single best Short."
+      },
+      {
+        "id": "E4",
+        "name": "Topic cluster/series pilot",
+        "purpose": "Test whether a connected 3-part long-form series with explicit end-screen links raises own-channel Suggested views and casual viewers.",
+        "eligible_videos": [
+          "New 3-part series on one topic that already showed interest (lipid tests: BCNWQ3uuSuE; leg/circulation signals: 5oPzZjfNgII, NznebmgFwXI)"
+        ],
+        "evidence_basis": "Own-channel videos supplied only 70 of 1,031 Suggested views; DS-000031 cluster/series framework (creator claim).",
+        "window": "Days 31-90",
+        "metrics": "Own-channel Suggested views per series video (Suggested drill-down), end-screen click rate, 28-day casual viewers",
+        "interpretation": "Useful evidence = own-channel Suggested share of series videos above the channel's 6.8% lifetime baseline; casual viewer count is secondary because it is channel-wide."
+      },
+      {
+        "id": "E5",
+        "name": "Medical-accuracy guardrail (process, not growth test)",
+        "purpose": "Every new script checked against a named guideline before recording; titles may not claim reversal/cure.",
+        "eligible_videos": [
+          "All new uploads"
+        ],
+        "evidence_basis": "Five significant claim issues in the priority set.",
+        "window": "Continuous",
+        "metrics": "Count of claims with named source; zero unsupported treatment claims",
+        "interpretation": "Not measured by views."
+      }
+    ],
+    "future_research": [
+      {
+        "id": "R1",
+        "question": "Is audience development a real constraint?",
+        "requires": "Monthly new/casual/regular export for at least 3 further 28-day windows (2026-10-26, 2026-11-23, 2026-12-21); regular viewers cannot appear until viewers accumulate >6 active months."
+      },
+      {
+        "id": "R2",
+        "question": "Who is the actual audience?",
+        "requires": "Viewers-across-formats report; per-video geography and age for the top 10 videos; comments review."
+      },
+      {
+        "id": "R3",
+        "question": "Which surfaces drive each video?",
+        "requires": "Per-video traffic-source and Suggested/Search drill-downs for the E1/E2 videos."
+      },
+      {
+        "id": "R4",
+        "question": "Audible speech quality and mix",
+        "requires": "Heard review by a person, or explicit approval to install a local speech-recognition tool and download audio; not attempted without approval."
+      }
+    ],
+    "plan_30_60_90": [
+      {
+        "window": "Days 1-30 (from 2026-09-28)",
+        "actions": "Q1-Q8 corrections; start E1 on EB3_A2b4a6o then CZ3gAUzdTAg; publish first E2 and E3 videos; export new/casual/regular on 2026-10-26.",
+        "success_evidence": "Corrections live; E1 Studio verdict recorded (winner or inconclusive)."
+      },
+      {
+        "window": "Days 31-60",
+        "actions": "Continue E2/E3; E1 on HzFdyjyEFTY; plan and publish E4 series part 1-2; export per-video traffic sources for E2 videos.",
+        "success_evidence": "At least 4 E2 videos with 28-day retention; E3 group medians compared."
+      },
+      {
+        "window": "Days 61-90",
+        "actions": "Finish E4 series; compare own-channel Suggested share; third audience export; decide which formats to keep.",
+        "success_evidence": "Decisions based on pre-set thresholds; no view-count targets."
+      }
+    ],
+    "residual_uncertainty": "Audio was not heard for any video; storyboard frames are low resolution; per-video traffic sources, cross-format viewing and two-thirds of geography are undisclosed; all performance explanations are associations from small cohorts (tens to a few hundred viewers per video)."
+  },
+  "preservation": {
+    "raw_private_exports_modified": false,
+    "credentials_saved": false,
+    "remote_push_performed": true,
+    "note": "Only derived docs/research artifacts and supporting scripts were updated. CORRECTED 2026-10-03: these derived private Studio metrics were pushed to the private origin (research/senior-health-acquisition-phase-2); raw Studio ZIPs remain ignored/local-only. See docs/audits/DECODE-YOUR-HEART-PRIVACY-CLASSIFICATION-2026-10-03.md."
+  }
+}
