@@ -18,6 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DB = ROOT / "data/catalog/youtube_channel_registry.db"
 OUTPUT = ROOT / "docs/research/senior-health-2026-09-25/forensic-v3/BETTER-HEALTH-WHILE-AGING-TRANSCRIPT-STRUCTURE.json"
+DEEP_REGISTER = OUTPUT.with_name("BETTER-HEALTH-WHILE-AGING-DEEP-INVESTIGATIONS.json")
 CHANNEL_ID = "UCFpxvukIqCAUA7YizI-q9Dw"
 TIME_LABEL = "ESTIMATED_FROM_WORD_POSITION_PLAINTEXT_CAPTIONS"
 ORIGINAL_NINE = {
@@ -25,6 +26,14 @@ ORIGINAL_NINE = {
     "k-3BY-naQ0M", "Ev-i_E_MlTo", "8_depH-gT4o", "R7uXQBjnTjk",
     "OCWvaUcSPOU",
 }
+
+def verified_deep_ids() -> set[str]:
+    """Videos whose full transcript review is recorded in the deep-investigation register."""
+    if not DEEP_REGISTER.exists():
+        return set()
+    cases = json.loads(DEEP_REGISTER.read_text(encoding="utf-8"))["breakout_investigations"]
+    return {c["video_id"] for c in cases if c["transcript_review_state"] == "COMPLETE_TRANSCRIPT_REVIEWED"}
+
 
 PATTERNS = {
     "authority": re.compile(r"\b(board[- ]certified|geriatrician|doctor|physician|study|research|evidence|guideline|criteria)\b", re.I),
@@ -118,6 +127,7 @@ def main() -> None:
 
     views = [int(row["views"] or 0) for row in rows]
     median_views = statistics.median(views)
+    deep_ids = verified_deep_ids()
     records = []
     for row in rows:
         text = row["transcript_text"] or ""
@@ -180,7 +190,7 @@ def main() -> None:
             },
             "completion_state": "AUTOMATED_STRUCTURAL_ANALYSIS_COMPLETE",
             "deep_investigation_state": (
-                "PREVIOUSLY_REPORTED_DEEP_REVIEW" if row["youtube_video_id"] in ORIGINAL_NINE
+                "VERIFIED_DEEP_INVESTIGATION" if row["youtube_video_id"] in deep_ids
                 else "NOT_YET_DEEPLY_INVESTIGATED"
             ),
             "limitations": [
