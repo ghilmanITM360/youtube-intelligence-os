@@ -21,8 +21,10 @@ CLASS_RANK = {'REGISTERED_LOCAL_THUMBNAIL': 0, 'CURRENT_PUBLIC_THUMBNAIL': 1, 'S
 
 def audited():
     a = {}
+    ok = set(json.load((HERE / 'package-batch-plan.json').open())['verified_thumbnail_batches'])  # drafts/partial batches that have not cleared their QA gate are not counted
     for f in sorted(glob.glob(str(HERE / 'audit-batch-B002-*.json'))) + [str(HERE / 'individual-audit-batch-001.json')]:
-        for r in json.load(open(f)): a[r['Thumbnail_ID']] = (r.get('batch_id', 'B001'), r.get('score_100'))
+        for r in json.load(open(f)):
+            if r.get('batch_id', 'B001') in ok: a[r['Thumbnail_ID']] = (r.get('batch_id', 'B001'), r.get('score_100'))
     return a
 
 
