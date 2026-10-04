@@ -51,7 +51,7 @@ def validate(rows, inputs=None):
             else: tot += r[k]
         if r['score_100'] != tot: errs.append(f"{t} SCORE_SUM {r['score_100']}!={tot}")
         for k in NARR:
-            if not isinstance(r[k], str) or len(r[k].strip()) < (12 if k in ('strength', 'weakness', 'bottleneck') else 4 if k == 'text' else 25): errs.append(f'{t} TOO_SHORT {k}')
+            if not isinstance(r[k], str) or len(r[k].strip()) < (12 if k in ('strength', 'weakness', 'bottleneck') else 2 if k == 'text' else 25): errs.append(f'{t} TOO_SHORT {k}')
         if not isinstance(r['word_count'], int) or r['word_count'] < 0: errs.append(f'{t} BAD_WORD_COUNT')
         tx = re.sub(r'\[[^\]]*\]', '', r['text'])
         if (r['numbers_in_text'] == 'Y') != bool(re.search(r'\d', tx)) and not re.search(r'\b(one|two|three|four|five|six|seven|eight|nine|ten|zero)\b', tx, re.I): errs.append(f'{t} NUMBERS_TAG_VS_TEXT')

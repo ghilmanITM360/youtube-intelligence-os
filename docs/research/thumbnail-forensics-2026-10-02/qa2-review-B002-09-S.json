@@ -1,0 +1,148 @@
+{
+ "reviewer": "QA-B002-09",
+ "batch": "B002-09",
+ "rows": [
+  {
+   "seq": 4,
+   "thumbnail_id": "THB-4f2406eb3f1866fb62bcffc7175dcb604c38d878075da144f089fd0a052d702f",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: NO DEGREE, / $100K and the coin stacks remain clearly legible on sheet_160",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "word_count",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "2",
+     "corrected_value": 3,
+     "reason": "Visible text is NO, DEGREE, and $100K: three tokens. The row's own typography says 'Two words plus a dollar figure', which is already 3.",
+     "evidence": "Native image: 'NO DEGREE,' on line 1, '$100K' on line 2."
+    },
+    {
+     "field": "title_partnership_score",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "12",
+     "corrected_value": 9,
+     "reason": "The row's own partnership says the 12 count is missing and the jobs are not shown, and the weakness says the visual does not suggest the list. 12/15 (80%) is not earned; about 9 fits. Implied score_100 becomes 68 with this change alone.",
+     "evidence": "Title is '12 High Paying Jobs...'; image shows one generic toolbox cartoon and a pay figure only."
+    },
+    {
+     "field": "story_score",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "13",
+     "corrected_value": 10,
+     "reason": "The weakness and bottleneck lines call the visual generic with no specific job. 13/15 contradicts that; about 10 fits. With both subjective changes score_100 would be 65.",
+     "evidence": "Smiling cartoon man with a toolbox beside coin stacks; no identifiable job."
+    }
+   ]
+  },
+  {
+   "seq": 14,
+   "thumbnail_id": "THB-59e77413f6c537221d6785761acf7cf0908b90ca6b0aec645506e9df525a679f",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: figures and the red badge with 'what if?' are still readable on sheet_160",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "scene",
+     "error_class": "STYLE_ONLY",
+     "original_value": "A red circle at bottom left holds a small black silhouette hanging in a sling and the words what if?",
+     "corrected_value": "A red circle at bottom left holds a small black dinosaur silhouette hanging in a sling and the words what if?",
+     "reason": "The silhouette is recognisably a dinosaur; 'silhouette' alone is vague. Detail only, no change to interpretation.",
+     "evidence": "Native image: tail, small arms and head of a theropod-shaped silhouette suspended by lines inside the red circle."
+    }
+   ]
+  },
+  {
+   "seq": 16,
+   "thumbnail_id": "THB-d65dc04cb23f8bf89d0d735068f1a6e901f64734c19102e7afaa3b7fb46fe835",
+   "wrong_image_mapping": false,
+   "visible_text_correct": false,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: PARTIAL is right; the red 60 is only a small red smudge at 160x90 while the heart glow survives",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "text",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "60, [no badge or logo text]",
+     "corrected_value": "60,",
+     "reason": "The text field must hold only visible words; the bracketed note is padding and could be misread as badge text. The only visible text is the red numeral 60 and comma.",
+     "evidence": "Native 405x720: red '60,' at the shoes; the only other mark is a wordless white star at bottom right."
+    },
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Vertical Shorts frame with the figure centred and filling the full height, the heart at upper chest as the focal point and 60 at the bottom as a second anchor. The desaturated room and the figure's grey clothes make the red heart the one colour point. Symmetry is strong.",
+     "corrected_value": "Vertical Shorts frame with the figure centred and spanning roughly four-fifths of the height (head near the top, feet near the bottom), the heart at upper chest as the focal point and 60 at the bottom as a second anchor. The desaturated room and the figure's grey clothes make the red heart the one colour point. Symmetry is strong.",
+     "reason": "Figure spans about y=90 to y=650 of 720, with clear floor and ceiling space, so it does not fill the full height.",
+     "evidence": "Native image: white head top at about 12% of height, shoes end at about 90%."
+    },
+    {
+     "field": "art_style",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "THREE_D_RENDER",
+     "corrected_value": "AI_STYLE_ILLUSTRATION",
+     "reason": "A concrete artefact is visible: the four-point sparkle mark at bottom right that the row itself mentions as 'wordless', alongside a photoreal mannequin figure with a glow overlay. That reads as an AI-generated image, not a 3D render. Moderate confidence.",
+     "evidence": "Native image bottom right: white four-point star; the figure and room are photoreal, desaturated and softly lit."
+    }
+   ]
+  },
+  {
+   "seq": 17,
+   "thumbnail_id": "THB-d64a05df804aeb59ebe43420ef7a100d758d15704520eaa28e0c30f646b82b5d",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: both headline rows and the two figures stay legible on sheet_160",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 22,
+   "thumbnail_id": "THB-1fb99f7a4c1581928a0e72225d173c7e81ac46e1532f16e617beb981eff0fabb",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: all four text rows and the colon graphic are readable on sheet_160",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 23,
+   "thumbnail_id": "THB-95b364020caec1eb0c29fde353905571284c4c6c14d83584a0b6b945e7a336d3",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: PARTIAL is right; the headline survives but the five handwritten labels are thin marks on sheet_160",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Five hand-drawn red ovals with labels, Driver Salaries, Package Delivery Revenue, Dispatch & Software, Vehicle Maintenance and Fuel & Tolls, surround it, each with a thin black curved arrow.",
+     "corrected_value": "Five hand-drawn red ovals with labels, Driver Salaries, Package Delivery Revenue, Dispatch & Software, Vehicle Maintenance and Fuel & Tolls, surround it, each with a thin black curved arrow; a sixth short unlabelled black arrow points down at the van roof from above.",
+     "reason": "There are six arrows, not five. The sixth is an unlabelled straight arrow above the cab. This is minor, but it matters for the hub-and-spoke composition claim.",
+     "evidence": "Native image around x=768, y=258-318: a thin vertical arrow ending at the roof, with no oval or label."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 6,
+  "material": 0,
+  "minor_factual": 4,
+  "classification": 1,
+  "subjective": 2,
+  "style_only": 1
+ }
+}

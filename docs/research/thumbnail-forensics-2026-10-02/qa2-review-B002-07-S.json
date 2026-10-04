@@ -1,0 +1,164 @@
+{
+ "reviewer": "QA-B002-07",
+ "batch": "B002-07",
+ "rows": [
+  {
+   "seq": 1,
+   "thumbnail_id": "THB-f49ea17ce64d1fda4a5cd484fb612b8b9fc5ad71bafa25a98abb9536a634ce36",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: on sheet_160 'You are' (thin) and red KING still read, crown and robe survive; PARTIAL with 7 is fair.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 2,
+   "thumbnail_id": "THB-1d429048f8a28ada069e6f16419eaaf2ccf793debcffa9e3a2fb502dc5cab870",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: on sheet_160 COULD IT BE YOU? and the angled $250K tag are both still legible, so PASS holds (weakness wording about the small tag is slightly stronger than what the 160 render shows).",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 7,
+   "thumbnail_id": "THB-db9c07b53c4d3cb3c22b1e93ff52fb74d8e9321cb3d8d2081e031fa26d5a58f0",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: on sheet_160 the yellow headline, the flames and the split are all clear; PASS holds.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "with wavy heat lines above while a wall air conditioner burns with orange flames, grey smoke and yellow sparks",
+     "corrected_value": "A split-screen separated by a white lightning-bolt tear. On the left, in grey tones, a stick-figure man sits on a sofa with sweat drops flying, wipes his forehead with a cloth and has an open mouth, with wavy heat lines above while a floor-standing portable air-conditioner unit beside a window burns with orange flames, grey smoke and yellow sparks. On the right, in colour, a stick-figure man in a white toga with a laurel wreath reclines on a marble chaise with a hand propping his head, half-lidded eyes and a slight smile, while a smaller curly-haired attendant waves a peacock-feather fan in front of a waterfall wall and marble columns.",
+     "reason": "The burning unit stands on the floor in front of the window (a freestanding portable cooler with a grille), it is not mounted on the wall.",
+     "evidence": "Native image 07.jpg left half: the grey box sits on the floor with its base at the bottom-left corner and the flames rise from its top."
+    }
+   ]
+  },
+  {
+   "seq": 9,
+   "thumbnail_id": "THB-e99bd3ec73e738532ea807ef5049c1de4a3295e3f0f9c6a4863e64e773863b24",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: on sheet_160 the face and suit read at once and LIES survives as a stamped texture; PASS holds.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "text",
+     "error_class": "STYLE_ONLY",
+     "original_value": "LIES [repeated on every background banana; no other text]",
+     "corrected_value": "LIES",
+     "reason": "Protocol says text is the exact visible words and must not be padded; the repetition remark belongs in typography (which already has it) and the bracket is reserved for badge/logo text.",
+     "evidence": "Native image 09.jpg shows only the word LIES on the bananas, with no badge or logo."
+    },
+    {
+     "field": "mechanism",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A repeated accusation: hundreds of bananas stamped LIES surround a suited authority figure, so the Ponzi theme is shown as a wall of falsehood rather than a chart.",
+     "corrected_value": "A repeated accusation: roughly thirty visible bananas stamped LIES surround a suited authority figure, so the Ponzi theme is shown as a wall of falsehood rather than a chart.",
+     "reason": "Quantity overstated; the protocol says to count rather than estimate loosely. About 14-16 LIES bananas per side are readable, around 30 in total (approximate count).",
+     "evidence": "Native image 09.jpg: left column has about 14 stacked rows with LIES, right about 15, none behind the figure."
+    },
+    {
+     "field": "psychology",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The figure has lowered angled brows, glasses and a tilted flat mouth, which read as stern or scheming. The suit, tie and grey hair are authority-figure props and the LIES wall adds an accusatory cue.",
+     "corrected_value": "The figure has lowered angled brows, glasses and a tilted flat mouth, which read as stern. The suit, tie and grey hair are authority-figure props and the LIES wall adds an accusatory cue.",
+     "reason": "'Scheming' is an inferred inner state, which the protocol bans; describe only the visible expression.",
+     "evidence": "Native image 09.jpg: brows slanted down toward the centre, mouth is a single line tilted up at the right."
+    }
+   ]
+  },
+  {
+   "seq": 10,
+   "thumbnail_id": "THB-fb4a43d9cd047166fd22a70b96ec12dc080e1ca08719b1ed5047d7c79b48979c",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: on sheet_160 all four text lines, the red bar and the face-and-hand pose remain legible; PASS holds.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A left-text, right-face split with the headline stacked in four lines of descending size emphasis and the face at upper right.",
+     "corrected_value": "A left-text, right-face split with the headline stacked in four lines, the first line CHOKING ALONE? set smaller and the next three (DO THIS IN, THE FIRST, 20 SECONDS) set larger and of similar height, and the face at upper right. The hand at the throat sits low-right and leads the eye back toward the text. Black negative space between the blocks keeps the frame clear.",
+     "reason": "The sizes do not descend; line 1 is the smallest and lines 2-3 are the tallest. The row's own weakness says all four lines compete in size, so the composition sentence contradicts it.",
+     "evidence": "Native image 10.jpg: CHOKING ALONE? cap height about 70px, DO THIS IN and THE FIRST about 130px each, 20 SECONDS about 100px."
+    },
+    {
+     "field": "title_partnership_score",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "12",
+     "corrected_value": 9,
+     "reason": "Row tags title_relation DUPLICATES and its own bottleneck says the headline runs close to the title wording with little unique information; 12/15 (80%) needs a visible reason for adding value. Only the throat-grab pose is new, and it is not text. Total would become 79.",
+     "evidence": "Thumbnail text repeats 'Choking', 'Alone', 'Do this', 'first 20 seconds' from the title; only 'after 60' is dropped."
+    }
+   ]
+  },
+  {
+   "seq": 18,
+   "thumbnail_id": "THB-a3a38b592704267d9e01622904435d07da3ab1159da6ecf1350e5e1ca48b9f2e",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "disagree: on sheet_160 the headline reads but the disc logos (BOILER ROOM, CLUGSPACE, elrow) are illegible blobs, and the row's own weakness says the brands lose meaning at phone size; tag should be PARTIAL and score lower.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A hand in a navy suit sleeve with a white cuff reaches down from the top in a puppeteer pose",
+     "corrected_value": "A hand in a navy suit sleeve with a white cuff rises from the bottom edge of the frame, the wrist bending over so the fingers dangle downward in a puppeteer pose, with a thin wire loop on each of its five fingertips. Each wire ends in a round metal-rimmed disc carrying a different mark: a black BOILER ROOM disc, a black CLUGSPACE disc, a purple disc with a dark triangular glyph, a yellow elrow disc and a white disc with a red cherry pair. The background is beige graph paper.",
+     "reason": "The sleeve enters from the bottom centre of the frame and ends at the wrist, so the arm does not come from the top.",
+     "evidence": "Native image 18.jpg: sleeve occupies x~570-800 from y~430 down to the bottom edge; wires and the purple disc hang in front of it."
+    },
+    {
+     "field": "art",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The wire loops sit on the fingertips coherently and the shadows under the discs are consistent.",
+     "corrected_value": "Photographic hand composited with 3D metal-rimmed discs and wires, with soft lighting and a vignette. The wire loops sit on the fingertips coherently, but the discs cast no visible shadow on the paper, and because the arm rises from below the strings and the purple disc hang in front of the sleeve, an unusual puppet geometry. The graph-paper texture is subtle and no distortion is visible.",
+     "reason": "No disc shadows are visible, so 'consistent shadows' is unsupported; the arm-from-below geometry is a visible oddity the row omits.",
+     "evidence": "Native image 18.jpg: the paper behind each disc is clean with no cast shadow; purple disc overlaps the navy sleeve."
+    },
+    {
+     "field": "mobile_readability_160",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "PASS",
+     "corrected_value": "PARTIAL",
+     "reason": "Row's own weakness and bottleneck state the logo wordmarks are too small to recognise at phone size, and the logos are the evidence for the claim; protocol requires PARTIAL or FAIL.",
+     "evidence": "sheet_160 row 18: headline legible, disc marks reduced to coloured dots, no wordmark readable."
+    },
+    {
+     "field": "mobile_readability_score",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "8",
+     "corrected_value": 6,
+     "reason": "Score must agree with the PARTIAL tag; headline survives but the proof objects do not. Total would become 79 with this change.",
+     "evidence": "sheet_160 row 18 and the row's own weakness line."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 6,
+  "material": 0,
+  "minor_factual": 5,
+  "classification": 2,
+  "subjective": 1,
+  "style_only": 2
+ }
+}
