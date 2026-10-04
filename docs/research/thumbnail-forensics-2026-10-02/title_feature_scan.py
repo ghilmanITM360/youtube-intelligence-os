@@ -27,5 +27,10 @@ for k, f in FEAT.items():
     n_with = sum(1 for g in coh.values() for p, v in g if f(tf[v], ta[v]))
     out.append(dict(feature=k, videos_with_feature=n_with, cohorts_compared=len(d), median_within_cohort_percentile_diff=round(st.median(d), 3) if d else None,
                     share_cohorts_positive=round(sum(x > 0 for x in d) / len(d), 2) if d else None))
-json.dump(out, open(HERE / 'early-title-feature-scan.json', 'w'), indent=1)
+V1_REF = {'Number_Present': 0.045, 'List_Form': 0.044, 'Second_person_YOU/YOUR': 0.043, 'Fear_Frame': -0.076, 'Authority_Cue_present': -0.126, 'Mistake_Frame': -0.128}  # first scan, taxonomy v1 flags
+for o in out: o['evidence_label'] = 'EXPLORATORY_ASSOCIATION'; o['v1_flag_median_diff'] = V1_REF.get(o['feature'])
+json.dump(dict(evidence_label='EXPLORATORY_ASSOCIATION', evidence_tier='D_AGE_ADJUSTED_PUBLIC (within channel x format cohort percentile)', taxonomy_version='v2-2026-10-04',
+               caveats=['observational, no causal claim', 'multiple features tested, no correction', 'coarse percentile outcome (1/13 granularity)', 'channel and topic heterogeneity not controlled', 'few cohorts per feature for rare features',
+                        'feature flags are rule-based and were revised after title QA: Fear/Authority/Mistake effects moved between flag versions, which is itself evidence of instability', 'promotion requires counterexamples, larger samples and within-channel support'],
+               features=out), open(HERE / 'early-title-feature-scan.json', 'w'), indent=1)
 for o in out: print(o)

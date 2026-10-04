@@ -1,114 +1,160 @@
-[
- {
-  "feature": "Number_Present",
-  "videos_with_feature": 830,
-  "cohorts_compared": 28,
-  "median_within_cohort_percentile_diff": 0.045,
-  "share_cohorts_positive": 0.68
- },
- {
-  "feature": "Question_Form",
-  "videos_with_feature": 597,
-  "cohorts_compared": 14,
-  "median_within_cohort_percentile_diff": 0.048,
-  "share_cohorts_positive": 0.57
- },
- {
-  "feature": "List_Form",
-  "videos_with_feature": 262,
-  "cohorts_compared": 14,
-  "median_within_cohort_percentile_diff": 0.033,
-  "share_cohorts_positive": 0.64
- },
- {
-  "feature": "Warning_Frame",
-  "videos_with_feature": 222,
-  "cohorts_compared": 12,
-  "median_within_cohort_percentile_diff": -0.003,
-  "share_cohorts_positive": 0.5
- },
- {
-  "feature": "Fear_Frame",
-  "videos_with_feature": 211,
-  "cohorts_compared": 17,
-  "median_within_cohort_percentile_diff": -0.036,
-  "share_cohorts_positive": 0.18
- },
- {
-  "feature": "Authority_Cue_present",
-  "videos_with_feature": 112,
-  "cohorts_compared": 8,
-  "median_within_cohort_percentile_diff": -0.111,
-  "share_cohorts_positive": 0.38
- },
- {
-  "feature": "Age_Number_Present",
-  "videos_with_feature": 158,
-  "cohorts_compared": 9,
-  "median_within_cohort_percentile_diff": 0.015,
-  "share_cohorts_positive": 0.78
- },
- {
-  "feature": "Mistake_Frame",
-  "videos_with_feature": 50,
-  "cohorts_compared": 3,
-  "median_within_cohort_percentile_diff": -0.134,
-  "share_cohorts_positive": 0.0
- },
- {
-  "feature": "Secret_Frame",
-  "videos_with_feature": 78,
-  "cohorts_compared": 6,
-  "median_within_cohort_percentile_diff": -0.058,
-  "share_cohorts_positive": 0.0
- },
- {
-  "feature": "Second_person_YOU/YOUR",
-  "videos_with_feature": 883,
-  "cohorts_compared": 26,
-  "median_within_cohort_percentile_diff": 0.043,
-  "share_cohorts_positive": 0.69
- },
- {
-  "feature": "Short_title_(<=45 chars)",
-  "videos_with_feature": 914,
-  "cohorts_compared": 29,
-  "median_within_cohort_percentile_diff": -0.002,
-  "share_cohorts_positive": 0.45
- },
- {
-  "feature": "Long_title_(>=75 chars)",
-  "videos_with_feature": 268,
-  "cohorts_compared": 12,
-  "median_within_cohort_percentile_diff": -0.009,
-  "share_cohorts_positive": 0.5
- },
- {
-  "feature": "Curiosity_frame",
-  "videos_with_feature": 1030,
-  "cohorts_compared": 24,
-  "median_within_cohort_percentile_diff": 0.033,
-  "share_cohorts_positive": 0.58
- },
- {
-  "feature": "Hope_frame",
-  "videos_with_feature": 221,
-  "cohorts_compared": 13,
-  "median_within_cohort_percentile_diff": -0.021,
-  "share_cohorts_positive": 0.38
- },
- {
-  "feature": "Analyst_orientation_BROWSE",
-  "videos_with_feature": 1452,
-  "cohorts_compared": 30,
-  "median_within_cohort_percentile_diff": -0.055,
-  "share_cohorts_positive": 0.37
- },
- {
-  "feature": "Analyst_score_>=70",
-  "videos_with_feature": 599,
-  "cohorts_compared": 34,
-  "median_within_cohort_percentile_diff": 0.04,
-  "share_cohorts_positive": 0.68
- }
-]
+{
+ "evidence_label": "EXPLORATORY_ASSOCIATION",
+ "evidence_tier": "D_AGE_ADJUSTED_PUBLIC (within channel x format cohort percentile)",
+ "taxonomy_version": "v2-2026-10-04",
+ "caveats": [
+  "observational, no causal claim",
+  "multiple features tested, no correction",
+  "coarse percentile outcome (1/13 granularity)",
+  "channel and topic heterogeneity not controlled",
+  "few cohorts per feature for rare features",
+  "feature flags are rule-based and were revised after title QA: Fear/Authority/Mistake effects moved between flag versions, which is itself evidence of instability",
+  "promotion requires counterexamples, larger samples and within-channel support"
+ ],
+ "features": [
+  {
+   "feature": "Number_Present",
+   "videos_with_feature": 830,
+   "cohorts_compared": 28,
+   "median_within_cohort_percentile_diff": 0.045,
+   "share_cohorts_positive": 0.68,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": 0.045
+  },
+  {
+   "feature": "Question_Form",
+   "videos_with_feature": 597,
+   "cohorts_compared": 14,
+   "median_within_cohort_percentile_diff": 0.048,
+   "share_cohorts_positive": 0.57,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  },
+  {
+   "feature": "List_Form",
+   "videos_with_feature": 262,
+   "cohorts_compared": 14,
+   "median_within_cohort_percentile_diff": 0.033,
+   "share_cohorts_positive": 0.64,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": 0.044
+  },
+  {
+   "feature": "Warning_Frame",
+   "videos_with_feature": 222,
+   "cohorts_compared": 12,
+   "median_within_cohort_percentile_diff": -0.003,
+   "share_cohorts_positive": 0.5,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  },
+  {
+   "feature": "Fear_Frame",
+   "videos_with_feature": 211,
+   "cohorts_compared": 17,
+   "median_within_cohort_percentile_diff": -0.036,
+   "share_cohorts_positive": 0.18,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": -0.076
+  },
+  {
+   "feature": "Authority_Cue_present",
+   "videos_with_feature": 112,
+   "cohorts_compared": 8,
+   "median_within_cohort_percentile_diff": -0.111,
+   "share_cohorts_positive": 0.38,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": -0.126
+  },
+  {
+   "feature": "Age_Number_Present",
+   "videos_with_feature": 158,
+   "cohorts_compared": 9,
+   "median_within_cohort_percentile_diff": 0.015,
+   "share_cohorts_positive": 0.78,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  },
+  {
+   "feature": "Mistake_Frame",
+   "videos_with_feature": 50,
+   "cohorts_compared": 3,
+   "median_within_cohort_percentile_diff": -0.134,
+   "share_cohorts_positive": 0.0,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": -0.128
+  },
+  {
+   "feature": "Secret_Frame",
+   "videos_with_feature": 78,
+   "cohorts_compared": 6,
+   "median_within_cohort_percentile_diff": -0.058,
+   "share_cohorts_positive": 0.0,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  },
+  {
+   "feature": "Second_person_YOU/YOUR",
+   "videos_with_feature": 883,
+   "cohorts_compared": 26,
+   "median_within_cohort_percentile_diff": 0.043,
+   "share_cohorts_positive": 0.69,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": 0.043
+  },
+  {
+   "feature": "Short_title_(<=45 chars)",
+   "videos_with_feature": 914,
+   "cohorts_compared": 29,
+   "median_within_cohort_percentile_diff": -0.002,
+   "share_cohorts_positive": 0.45,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  },
+  {
+   "feature": "Long_title_(>=75 chars)",
+   "videos_with_feature": 268,
+   "cohorts_compared": 12,
+   "median_within_cohort_percentile_diff": -0.009,
+   "share_cohorts_positive": 0.5,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  },
+  {
+   "feature": "Curiosity_frame",
+   "videos_with_feature": 1030,
+   "cohorts_compared": 24,
+   "median_within_cohort_percentile_diff": 0.033,
+   "share_cohorts_positive": 0.58,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  },
+  {
+   "feature": "Hope_frame",
+   "videos_with_feature": 221,
+   "cohorts_compared": 13,
+   "median_within_cohort_percentile_diff": -0.021,
+   "share_cohorts_positive": 0.38,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  },
+  {
+   "feature": "Analyst_orientation_BROWSE",
+   "videos_with_feature": 1452,
+   "cohorts_compared": 30,
+   "median_within_cohort_percentile_diff": -0.055,
+   "share_cohorts_positive": 0.37,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  },
+  {
+   "feature": "Analyst_score_>=70",
+   "videos_with_feature": 599,
+   "cohorts_compared": 34,
+   "median_within_cohort_percentile_diff": 0.04,
+   "share_cohorts_positive": 0.68,
+   "evidence_label": "EXPLORATORY_ASSOCIATION",
+   "v1_flag_median_diff": null
+  }
+ ]
+}
