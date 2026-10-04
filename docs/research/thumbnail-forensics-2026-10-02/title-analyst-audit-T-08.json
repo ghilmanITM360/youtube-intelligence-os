@@ -635,9 +635,9 @@
    "Most Secret"
   ],
   "overpromise_risk": "MEDIUM",
-  "overpromise_note": "Broken grammar ('Most Secret Jet') hurts credibility",
+  "overpromise_note": "Superlative 'Most Secret' unsupported",
   "medical_title_flag": "NOT_HEALTH",
-  "improvement": "Fix grammar and name it: 'The North Korean Pilot Who Stole a MiG and Defected'",
+  "improvement": "Fix grammar: 'He Stole the Most Secret Jet to Escape North Korea'",
   "clarity_score": 12,
   "specificity_score": 6,
   "curiosity_score": 12,
@@ -647,7 +647,7 @@
   "concision_score": 3,
   "score_100": 58,
   "confidence": "MEDIUM",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -805,17 +805,17 @@
   "overpromise_risk": "MEDIUM",
   "overpromise_note": "'Most Secret' superlative unsupported",
   "medical_title_flag": "NOT_HEALTH",
-  "improvement": "Name the aircraft: 'The Woman Who Stole a Soviet MiG-25 Out of Russia'",
+  "improvement": "Name the aircraft once known: 'The Spy Who Stole a Soviet [Jet Model]'",
   "clarity_score": 13,
-  "specificity_score": 6,
+  "specificity_score": 9,
   "curiosity_score": 13,
   "promise_strength_score": 10,
   "credibility_score": 9,
   "audience_fit_score": 5,
   "concision_score": 4,
-  "score_100": 60,
+  "score_100": 63,
   "confidence": "MEDIUM",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -1274,7 +1274,7 @@
   "exact_promise": "Names a psychology concept without saying what it is",
   "intended_viewer": "Psychology-curious viewers",
   "unanswered_question": "What is the spotlight effect and does it affect me?",
-  "tells_too_much": "Y",
+  "tells_too_much": "N",
   "tells_too_little": "Y",
   "mechanism_reliance": [
    "NOVELTY"
@@ -1296,7 +1296,7 @@
   "concision_score": 5,
   "score_100": 47,
   "confidence": "LOW",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -1773,7 +1773,7 @@
   "concision_score": 5,
   "score_100": 71,
   "confidence": "HIGH",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -2234,7 +2234,6 @@
   ],
   "orientation": "BROWSE",
   "unnecessary_words": [
-   "NEVER",
    "Silently"
   ],
   "overpromise_risk": "HIGH",
@@ -2300,7 +2299,6 @@
   ],
   "orientation": "SEARCH",
   "unnecessary_words": [
-   "NEVER",
    "(Doctor Explains Why)"
   ],
   "overpromise_risk": "MEDIUM",
@@ -2385,7 +2383,7 @@
   "concision_score": 3,
   "score_100": 69,
   "confidence": "MEDIUM",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -2404,7 +2402,6 @@
   ],
   "orientation": "SEARCH",
   "unnecessary_words": [
-   "NEVER",
    "(Critical Warning)"
   ],
   "overpromise_risk": "MEDIUM",
@@ -2595,7 +2592,7 @@
   "seq": 81,
   "core_topic": "Reheating food danger",
   "exact_promise": "Says one healthy food turns to poison when reheated",
-  "intended_viewer": "Home cooks and seniors",
+  "intended_viewer": "Home cooks",
   "unanswered_question": "Which healthy food, and is it really poison?",
   "tells_too_much": "N",
   "tells_too_little": "N",
@@ -2622,7 +2619,7 @@
   "concision_score": 4,
   "score_100": 55,
   "confidence": "MEDIUM",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -2632,19 +2629,17 @@
   "exact_promise": "Hints that one water habit seniors should rethink",
   "intended_viewer": "Seniors",
   "unanswered_question": "Which water habit should I change?",
-  "tells_too_much": "Y",
+  "tells_too_much": "N",
   "tells_too_little": "Y",
   "mechanism_reliance": [
    "CURIOSITY"
   ],
   "orientation": "BROWSE",
-  "unnecessary_words": [
-   "Worth"
-  ],
+  "unnecessary_words": [],
   "overpromise_risk": "LOW",
   "overpromise_note": "",
   "medical_title_flag": "UNRESOLVED",
-  "improvement": "Name the habit: 'The 1 Water Habit Seniors Should Change After 60'",
+  "improvement": "The Water Habit Seniors Should Stop After 60: Drinking X",
   "clarity_score": 9,
   "specificity_score": 2,
   "curiosity_score": 10,
@@ -2654,7 +2649,7 @@
   "concision_score": 4,
   "score_100": 51,
   "confidence": "MEDIUM",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -2689,7 +2684,7 @@
   "concision_score": 2,
   "score_100": 70,
   "confidence": "HIGH",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -3345,16 +3340,15 @@
    "AUTHORITY",
    "SPECIFICITY"
   ],
-  "orientation": "SEARCH",
+  "orientation": "BROWSE",
   "unnecessary_words": [
-   "NAILS",
    "THIS",
    "May be"
   ],
   "overpromise_risk": "HIGH",
   "overpromise_note": "Diagnosis-from-symptom with authority and fear",
   "medical_title_flag": "MISLEADING_RISK",
-  "improvement": "Soften: '4 Nail Changes After 60 Worth Showing Your Doctor'",
+  "improvement": "a wording different from item 6",
   "clarity_score": 11,
   "specificity_score": 9,
   "curiosity_score": 15,
@@ -3364,7 +3358,7 @@
   "concision_score": 2,
   "score_100": 60,
   "confidence": "MEDIUM",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -3380,14 +3374,14 @@
    "FEAR",
    "CURIOSITY"
   ],
-  "orientation": "SEARCH",
+  "orientation": "BROWSE",
   "unnecessary_words": [
    "The"
   ],
   "overpromise_risk": "MEDIUM",
   "overpromise_note": "Fear framing, though hedged with 'may'",
   "medical_title_flag": "NEEDS_CONTEXT",
-  "improvement": "Name the habit: 'Standing Up Too Fast in the Morning After 60 May Strain Your Heart'",
+  "improvement": "Name the habit: '[Specific habit] Every Morning After 60 May Strain Your Heart'",
   "clarity_score": 12,
   "specificity_score": 5,
   "curiosity_score": 15,
@@ -3397,7 +3391,7 @@
   "concision_score": 3,
   "score_100": 64,
   "confidence": "HIGH",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -3451,7 +3445,6 @@
   ],
   "orientation": "SEARCH",
   "unnecessary_words": [
-   "ONLY",
    "YOU",
    "Need"
   ],
@@ -3734,7 +3727,7 @@
   "concision_score": 3,
   "score_100": 63,
   "confidence": "HIGH",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -3881,7 +3874,7 @@
   "exact_promise": "Says seniors waking often at 3 AM should know something",
   "intended_viewer": "Seniors waking at 3 AM",
   "unanswered_question": "What should I know about 3 AM waking?",
-  "tells_too_much": "Y",
+  "tells_too_much": "N",
   "tells_too_little": "Y",
   "mechanism_reliance": [
    "CURIOSITY"
@@ -3892,18 +3885,18 @@
   ],
   "overpromise_risk": "LOW",
   "overpromise_note": "",
-  "medical_title_flag": "UNRESOLVED",
+  "medical_title_flag": "NEEDS_CONTEXT",
   "improvement": "Make it concrete: 'Waking Up at 3 AM After 60? Here's What May Be Behind It'",
   "clarity_score": 10,
-  "specificity_score": 3,
+  "specificity_score": 7,
   "curiosity_score": 11,
   "promise_strength_score": 8,
   "credibility_score": 12,
   "audience_fit_score": 8,
   "concision_score": 2,
-  "score_100": 54,
+  "score_100": 58,
   "confidence": "MEDIUM",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -3985,7 +3978,6 @@
   ],
   "orientation": "SEARCH",
   "unnecessary_words": [
-   "ONLY",
    "YOU"
   ],
   "overpromise_risk": "MEDIUM",
@@ -4086,9 +4078,8 @@
    "AUTHORITY",
    "CURIOSITY"
   ],
-  "orientation": "SEARCH",
+  "orientation": "BROWSE",
   "unnecessary_words": [
-   "NAILS",
    "THIS",
    "Cardiologist Warns"
   ],
@@ -4105,7 +4096,7 @@
   "concision_score": 2,
   "score_100": 56,
   "confidence": "MEDIUM",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -4261,7 +4252,6 @@
   ],
   "orientation": "BROWSE",
   "unnecessary_words": [
-   "Right Now",
    "Your Body"
   ],
   "overpromise_risk": "MEDIUM",
@@ -4311,7 +4301,7 @@
   "concision_score": 3,
   "score_100": 72,
   "confidence": "HIGH",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -4344,7 +4334,7 @@
   "concision_score": 3,
   "score_100": 70,
   "confidence": "HIGH",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -4362,7 +4352,6 @@
   ],
   "orientation": "SEARCH",
   "unnecessary_words": [
-   "ONLY",
    "Calm"
   ],
   "overpromise_risk": "HIGH",
@@ -4378,7 +4367,7 @@
   "concision_score": 3,
   "score_100": 68,
   "confidence": "HIGH",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
@@ -4544,7 +4533,7 @@
   "concision_score": 3,
   "score_100": 78,
   "confidence": "HIGH",
-  "qa_status": "NOT_SAMPLED",
+  "qa_status": "QA_SAMPLED",
   "batch": "T-08"
  },
  {
