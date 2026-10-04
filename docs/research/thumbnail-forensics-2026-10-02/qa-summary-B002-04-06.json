@@ -1,0 +1,24 @@
+{
+ "scope": "B002-04..B002-06 (72 audits), QA wave 2",
+ "decision": "PASS_WITH_CORRECTIONS (no systematic failure; no material errors)",
+ "sample": {
+  "B002_04": 6,
+  "B002_05": 6,
+  "B002_06": 8,
+  "total": 20,
+  "note": "B002-06 sample extended by seq 10 and 14 (title/image mismatch checks) and reviewer checked sheet_160 because the auditor had not opened it"
+ },
+ "material": 0,
+ "minor_factual": 17,
+ "classification": 2,
+ "subjective": 0,
+ "style_only": 1,
+ "wrong_image_mappings": 0,
+ "visible_text_errors": 0,
+ "score_arithmetic_errors": 0,
+ "templated_rows": 0,
+ "rows_with_correction": "13 of 20 sampled rows",
+ "field_corrections_applied": 20,
+ "automated_checks_all_72_rows": "qa-wave-checks-B002-04-06.json: 0 validator errors, 0 duplicate Thumbnail_IDs, 0 repeated prose, 34 distinct scores, mean 65.3; mild pattern: credibility_score=6 on 26/72 rows",
+ "open_note": "seq 14 (xkcd short) title \"Why is the sky blue?\" vs image of a green statue is a source-data mismatch, not an audit error; word_count convention for numerals is inconsistent (numerals count as words from now on)."
+}

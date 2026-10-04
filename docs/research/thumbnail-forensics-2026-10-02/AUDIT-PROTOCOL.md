@@ -56,3 +56,5 @@ Use the full range. Typical scale: a component at 40-60% of its maximum is ordin
 - No inferred inner states or traits ("smug", "arrogance", "guilt"); describe the visible expression. Do not describe a stick figure's brows or a live animal as a "carcass" unless visible.
 - Do not claim text is "larger"/"truncated"/"overlapping" without checking; wordless logos are not text; bracketed credential or badge words count in `word_count` only when they are real words.
 - Keep `scene`, `composition` and `typography` consistent with each other (an element cannot be both behind and in front of the headline).
+- `word_count` counts every visible word and every numeral token (e.g. "10 SIGNS OF FAKE RICH" = 5; a number such as $10,000,000,000,000 = 1); bracketed badge words that are real words count.
+- Never open only the 320 sheet: check the 160x90 sheet before assigning `mobile_readability_160` and what survives at 160x90.
