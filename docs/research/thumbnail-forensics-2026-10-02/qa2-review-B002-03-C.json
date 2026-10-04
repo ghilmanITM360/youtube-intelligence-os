@@ -1,0 +1,182 @@
+{
+ "reviewer": "QA2-C",
+ "batch": "B002-03",
+ "rows": [
+  {
+   "seq": 18,
+   "thumbnail_id": "THB-2a1419f916e8dd18ca7790d050c9aef0efd88ade9abaae7348e1e517d6973856",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: WHY? and the orange flame/green dragon are clearly legible in sheet_160; PASS holds.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A strong left-to-right diagonal of fire links the two characters, with lots of white space.",
+     "corrected_value": "A strong right-to-left band of fire, running from the dragon's mouth and rising slightly towards the upper left, links the two characters, with moderate white space around the head and flame.",
+     "reason": "Flame direction is reversed: it originates at the dragon on the right and travels left towards the stick figure; it is near-horizontal, not a clear diagonal.",
+     "evidence": "Flame base is at the dragon's open mouth (x~1050, y~440) and tapers to a point at x~405, y~300 left of the dragon, stopping short of the stick figure."
+    }
+   ]
+  },
+  {
+   "seq": 19,
+   "thumbnail_id": "THB-403238f5fae4ad11bae72e711d0fb52e73be9e52690731c542e74f68a1ae3fe7",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: headline and chair/coin stacks readable in sheet_160; PASS holds.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Large white space between figure and table.",
+     "corrected_value": "The table sits directly beside the armchair with almost no gap; the open white space is to the right of the table and below the headline, where the arrow runs.",
+     "reason": "The chair (x~30-510) and the table (x~520-720) are adjacent; the gap claim is false.",
+     "evidence": "Native image: chair arm and table top touch/nearly touch; empty white lies to the right of the table."
+    },
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "a black curved arrow points down at the coins.",
+     "corrected_value": "a thick black curved arrow starts under the headline at right, curves down and points left towards the coin stacks.",
+     "reason": "The arrowhead points leftwards (down-left), not straight down.",
+     "evidence": "Arrowhead at x~770-890, y~470-520 with the barbed tip pointing left; shaft curves from x~1015, y~370."
+    },
+    {
+     "field": "typography",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The text repeats the milestone theme only through 'MOVES'; the title's 'MONEY Milestones' list is not shown.",
+     "corrected_value": "The text echoes the title only through '40S' (age); 'MONEY' and 'Milestones' are replaced by 'WEALTH MOVES', and no milestone list is shown.",
+     "reason": "'MOVES' does not repeat the milestone theme; the only shared element with the title is the 40s age marker.",
+     "evidence": "Visible text is WEALTH MOVES / IN YOUR 40S."
+    }
+   ]
+  },
+  {
+   "seq": 20,
+   "thumbnail_id": "THB-b2382e84934eadc6e90982c83796dc170b3a3992e8f64607411f82b040380b6e",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: PARTIAL; the two-line headline and storefront survive in sheet_160 while callouts blur out.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "weakness",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Roughly 60 words and sixteen icons overload the frame and are unreadable on mobile.",
+     "corrected_value": "Roughly 60 words and about twenty small icons overload the frame; the callouts are unreadable on mobile.",
+     "reason": "Icon count is about 20, not sixteen: shoppers+cart (2), four category tiles (4), map+awning (2), box+clipboard+scanner+pallet jack (4), crate+tablet+recycle (3), loyalty card+bag (2), pie chart+coins (2), bar chart+coin (1).",
+     "evidence": "Counted in native image around the storefront."
+    },
+    {
+     "field": "title_relation",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "DUPLICATES",
+     "corrected_value": "COMPLEMENTS",
+     "reason": "The partnership prose itself says the thumbnail adds eight benefit callouts beyond the title; tag and prose disagree. Only the headline duplicates the title subject.",
+     "evidence": "Headline 'SO YOU WANT TO OWN A GROCERY STORE' mirrors the title, but eight callouts (demand, scalable model, revenue streams, profit, location, costs, inventory, loyalty) are extra content."
+    }
+   ]
+  },
+  {
+   "seq": 22,
+   "thumbnail_id": "THB-63a613d4c19598d5c3296b8920a5a77327f2d57d1aec53e4a9b351beb30e5105",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: FAIL; in sheet_160 the caption is illegible and both faces are specks on grey bars.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Seated doctor in the upper centre with the standing man overlapping his lower-right side; the caption bar sits between them. Both figures are small in a narrow column, and the grey bars occupy over two-thirds of the width, leaving little visual impact.",
+     "corrected_value": "Seated doctor in the upper centre with the standing man overlapping his lower-right side; the caption bar runs across the standing man's chest below the doctor's hands. The standing man is the largest element (about 57% of frame height) but both faces are tiny, all inside a ~404px column, and the grey bars occupy about 68% of the width, leaving little visual impact.",
+     "reason": "The caption is not between the two men; it overlaps the standing man's torso. The standing man is not small; only the faces are.",
+     "evidence": "Caption box x~497-780, y~573-607 overlaps standing man (x~612-842, y~308-720); content column x 438-842 = 404px of 1280 (bars ~876px, 68%)."
+    },
+    {
+     "field": "colors",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Muted blue-grey office, navy scrubs, grey t-shirt and blurred grey bars; the lime-yellow caption is the only bright element. Low saturation and low contrast overall.",
+     "corrected_value": "Pale lavender-grey office wall, navy scrubs, grey t-shirt and blurred grey bars, with a glossy red-brown desk and burgundy chair as the warmest areas; the lime-yellow caption is the brightest element. Low saturation and low contrast overall.",
+     "reason": "The red-brown desk and burgundy chair are visible warm colour masses omitted from the palette.",
+     "evidence": "Lower-left desk surface is red-brown; chair behind the doctor is burgundy."
+    },
+    {
+     "field": "medical_notes",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A scrubs-clad speaker with no legible credential is paired with an unrelated healthy-looking pasted figure and a symptom caption under a title that says the symptom means heart failure; the content was not read.",
+     "corrected_value": "A scrubs-clad speaker whose chest embroidery shows only a partly legible 'Dr.' prefix is paired with a healthy-looking pasted-in standing man and a fatigue caption under a title that says the symptom means heart failure; how the pasted figure relates to the speech was not checked because the content was not read.",
+     "reason": "'unrelated' is an unsupported inference about content, and 'no legible credential' overstates: a small embroidered 'Dr.' is visible.",
+     "evidence": "Small blue embroidery on the left chest of the scrubs begins with 'Dr.'; no transcript was read."
+    }
+   ]
+  },
+  {
+   "seq": 23,
+   "thumbnail_id": "THB-4a2b5560c8d56637373625b25405d8b904295398b3fdb43cc93cb5227d7adb54",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: PASS; '$1M' and the yellow RETIREMENT? bar are the strongest elements in sheet_160.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "action",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Hypothesis: replace the plain headline layout with a small bar chart showing a short 'YES' bar against a tall '$1M' bar to test whether a data visual increases the curiosity gap.",
+     "corrected_value": "Hypothesis: replace the plain headline layout with a small bar chart showing one very short bar labelled with a small percentage against a tall '$1M' bar, to test whether a data visual increases the curiosity gap.",
+     "reason": "A bar labelled 'YES' is incoherent as a quantity comparison; the proposed test needs a comparable measure.",
+     "evidence": "Current thumbnail has no chart; headline only."
+    }
+   ]
+  },
+  {
+   "seq": 24,
+   "thumbnail_id": "THB-6dde89f9e760587025eb569e2b151a054569f5828bfee41a0542626e1dafd292",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: PARTIAL; in sheet_160 the capped shushing figure and laughing group read, phone/coins and signs are lost.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The shushing figure sits at centre-left as the focal point; the three laughing bystanders form a cluster beside and to the right of him",
+     "corrected_value": "The shushing figure sits at the horizontal centre as the focal point; the three laughing bystanders form a cluster beside and to the right of him",
+     "reason": "The hoodie figure spans roughly x 150-240 of 360, centred at about 54%, i.e. centre rather than centre-left.",
+     "evidence": "Native 360x202 image: capped head at x~160-215, body x~150-240."
+    },
+    {
+     "field": "action",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Hypothesis: shrink the background lane/EXPRESS signs and add a big 'NEVER TELL' overlay over the ceiling band to test whether a text anchor sharpens the hook at 160px.",
+     "corrected_value": "Hypothesis: add a large 'NEVER TELL' overlay in the clearer upper-left/ceiling area and reduce the prominence of the lane '6' and EXPRESS signs to test whether a text anchor sharpens the hook at 160px.",
+     "reason": "The ceiling band is only a thin strip (~25px of 202), too narrow for a 'big' overlay as stated.",
+     "evidence": "Ceiling strip with lights is a narrow band at the very top of the 360x202 frame."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 6,
+  "material": 0,
+  "minor_factual": 9,
+  "classification": 1,
+  "subjective": 0,
+  "style_only": 2
+ }
+}

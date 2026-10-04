@@ -48,3 +48,11 @@ Use the full range. Typical scale: a component at 40-60% of its maximum is ordin
 - Work only in a scratch directory whose name contains your batch id (other agents run in parallel; shared names get overwritten).
 - `psychology` records visible cues only (no "guilt", "wry", "smug inner state"); use expression descriptions (wide eyes, furrowed brows, open mouth).
 - Describe only what you can see; verify quantities (box width, count of objects) against the image before stating them.
+
+## Recurring defects found by QA (B002-01..03) — self-check before writing each row
+- Count quantities from the image (people, icons, lines of text); do not write "dozens", "five lines" or "sixteen" from memory. Left/right is the viewer's left/right.
+- `title_relation`: DUPLICATES only when the thumbnail text is (nearly) the title wording with nothing added; if the row's own `partnership` says the image adds information, use COMPLEMENTS.
+- `mobile_readability_160`: if `weakness`/`bottleneck` says a key element is unreadable at phone size, the tag must be PARTIAL or FAIL and the score must agree.
+- No inferred inner states or traits ("smug", "arrogance", "guilt"); describe the visible expression. Do not describe a stick figure's brows or a live animal as a "carcass" unless visible.
+- Do not claim text is "larger"/"truncated"/"overlapping" without checking; wordless logos are not text; bracketed credential or badge words count in `word_count` only when they are real words.
+- Keep `scene`, `composition` and `typography` consistent with each other (an element cannot be both behind and in front of the headline).
