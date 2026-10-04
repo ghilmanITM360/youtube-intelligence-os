@@ -1,0 +1,223 @@
+{
+ "reviewer": "QA-B002-14",
+ "batch": "B002-14",
+ "rows": [
+  {
+   "seq": 1,
+   "thumbnail_id": "THB-3f9dd311e154e0e8b8b31e6c976ffc8e89a674a3106dbca77fd1b1b6eae25076",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: the ALDI wordmark is a few pixels at 160x90 and the store reads as a generic blue shop, so PARTIAL fits.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "field": "word_count",
+     "original_value": "0",
+     "corrected_value": "1",
+     "reason": "The row lists ALDI in the text field in brackets as logo text; the protocol counts bracketed badge/logo words that are real words, and a wordmark is not a wordless logo.",
+     "evidence": "The sign on the tower reads ALDI in white capitals inside an orange-bordered panel."
+    },
+    {
+     "error_class": "STYLE_ONLY",
+     "field": "composition",
+     "original_value": "The ALDI sign is the secondary point, set high on the right half of the building.",
+     "corrected_value": "The ALDI sign is the secondary point, set high on the central tower of the building.",
+     "reason": "Sign centre sits at about x=637 of a building spanning x=295-940 (centre ~617), so it is central, not in the right half.",
+     "evidence": "Sign panel at roughly x=583-690 on the raised central tower."
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "thumbnail_id": "THB-b4b6a4f85ef41d7a15094ff60507fb3b3ff65b5ae2bb2da089de75a6ea6dd4e4",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: Stolen Life and the tearful face are clearly readable at 160x90 on the white ground.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "field": "composition",
+     "original_value": "She fills the left 45 percent of the frame and is cropped at the knees",
+     "corrected_value": "She fills the left 45 percent of the frame and is cropped at the waist, with the chained hands at the bottom edge",
+     "reason": "No legs or knees are visible; the frame ends at the hands and the dress at about waist level, with the chain dangling off the bottom edge.",
+     "evidence": "Clasped shackled hands at y~600-700; bottom edge shows striped dress and chain links only."
+    },
+    {
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "field": "typography",
+     "original_value": "about a fifth of the frame tall",
+     "corrected_value": "about an eighth of the frame tall",
+     "reason": "Measured letter height of Stolen Life is ~85-95 px of 720 (about 12-13 percent), not 20 percent.",
+     "evidence": "S/L ascenders span y~205-300 in the 1280x720 image."
+    },
+    {
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "field": "word_count",
+     "original_value": "2",
+     "corrected_value": "4",
+     "reason": "The text field itself includes the lost LEGACY logo; bracketed badge/logo words that are real words count under the protocol, so either word_count should be 4 or the logo should be excluded from text.",
+     "evidence": "Top-left logo reads lost (script) over LEGACY (small caps)."
+    },
+    {
+     "error_class": "STYLE_ONLY",
+     "field": "psychology",
+     "original_value": "a trembling-looking mouth",
+     "corrected_value": "a downturned open mouth showing teeth",
+     "reason": "Protocol asks for visible cues, not inferred states; trembling cannot be seen in a still.",
+     "evidence": "Mouth is downturned with upper teeth visible, tears on both cheeks."
+    }
+   ]
+  },
+  {
+   "seq": 9,
+   "thumbnail_id": "THB-7e4e1cd7a67cc4a83cfbdb947323ab54b75e89c1342a676e4c037f27c6adddc1",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: all four headline lines, the red AMLODIPINE box and the pink figure survive at 160x90, so PASS is right.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 13,
+   "thumbnail_id": "THB-a30045046a7d9e6b77bcc5819992f65e5cd1ff25e8d3551535760ff641f8e1c0",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: EATING 4 EGGS AFTER 60 and the woman are clear at 160x90; only the red bar text is small but readable.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 14,
+   "thumbnail_id": "THB-f73c82267c7123802d312db7fc60ae9615ecd3c1cd72cb78482f9a9a8f233084",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: the outlined yellow headline and the centred baby are legible at 160x90; props are simple shapes.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 17,
+   "thumbnail_id": "THB-7252fdab3f190e32b66311c63da4a4befc19d69ef865f814c1f2291a3fe7bb54",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "disagree: the row's own bottleneck says the red injury mark disappears at 160x90 and calls it the cue that gives the scene stakes, so the tag/score should be PARTIAL/7 rather than PASS/9; headline, bear and cub remain readable.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "error_class": "CLASSIFICATION_ERROR",
+     "field": "mobile_readability_160",
+     "original_value": "PASS",
+     "corrected_value": "PARTIAL",
+     "reason": "Protocol rule: if weakness/bottleneck says a key element is unreadable at phone size the tag must be PARTIAL or FAIL and the score must agree. The row names the red mark as the lost stakes cue.",
+     "evidence": "At 160x90 the red mark on the cub is not visible at all (checked on sheet_160 and a 160x90 downscale); bear, cub shape and yellow headline still read.",
+     "also_correct": {
+      "mobile_readability_score": {
+       "original": 9,
+       "corrected": 7
+      },
+      "score_100": {
+       "original": 74,
+       "corrected": 72
+      }
+     }
+    }
+   ]
+  },
+  {
+   "seq": 18,
+   "thumbnail_id": "THB-2a36f54a3832d4adbeba4dc757d6d26302fbf319375c0067e2e20bf52ef90f66",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: WRONG QUESTION? and the doctor survive but are small inside the one-third-width panel and the BP label is unreadable, so PARTIAL fits.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "field": "word_count",
+     "original_value": "3",
+     "corrected_value": "2",
+     "reason": "The headline is two words; BP is an abbreviation on a monitor display, not a real badge word, and the same row's typography describes two lines of text.",
+     "evidence": "Headline WRONG / QUESTION?; BP appears only as tiny screen text on the monitor icon."
+    },
+    {
+     "error_class": "STYLE_ONLY",
+     "field": "typography",
+     "original_value": "about a seventh of the frame tall",
+     "corrected_value": "about a tenth of the frame tall per line",
+     "reason": "Each line is ~65-75 px tall of 720, roughly 9-10 percent.",
+     "evidence": "WRONG spans y~30-92, QUESTION? y~112-185."
+    }
+   ]
+  },
+  {
+   "seq": 19,
+   "thumbnail_id": "THB-5c9252614513f1006b035cba683b61ee0d7b8bf54003cd0975a5f96330bc42b5",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "disagree: on sheet_160 and a 160x90 downscale the red headline, face, the search phrase Ozempic vagina? and the OZEMPIC pen name are all still legible, so PASS (not PARTIAL) is better supported.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "field": "typography",
+     "original_value": "The headline reads at 160x90 but the search text and the pen label shrink to unreadable lines.",
+     "corrected_value": "The headline and the search phrase Ozempic vagina? stay legible at 160x90; only the OZEMPIC (semaglutide) injection label and the dose window are very small.",
+     "reason": "The search text is large enough (~30 px cap height native) to read on the 160 sheet, so it is not unreadable.",
+     "evidence": "In sheet_160 cell #19 the text Ozempic vagina? and the blue OZEMPIC wordmark on the pen can be read."
+    },
+    {
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "field": "bottleneck",
+     "original_value": "At 160x90 only the red headline and the face survive, so the viewer cannot tell which drug or which side effect the frame is about.",
+     "corrected_value": "At 160x90 the headline, face, search phrase and pen name remain readable; the drug and the queried side effect can still be identified, and the small pen label is the weakest element.",
+     "reason": "Both the drug name (search phrase, pen wordmark) and the query text are visible on the 160 sheet.",
+     "evidence": "Search card text and OZEMPIC pen wordmark visible in sheet_160 #19 and in a 160x90 downscale."
+    },
+    {
+     "error_class": "CLASSIFICATION_ERROR",
+     "field": "mobile_readability_160",
+     "original_value": "PARTIAL",
+     "corrected_value": "PASS",
+     "reason": "Key content (headline, face, search query, pen name) survives at 160x90; only secondary small print is lost.",
+     "evidence": "See the evidence above; the card query is readable at 160 px width.",
+     "also_correct": {
+      "mobile_readability_score": {
+       "original": 6,
+       "corrected": 8
+      },
+      "score_100": {
+       "original": 66,
+       "corrected": 68
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 8,
+  "material": 0,
+  "minor_factual": 4,
+  "classification": 2,
+  "subjective": 3,
+  "style_only": 3
+ }
+}
