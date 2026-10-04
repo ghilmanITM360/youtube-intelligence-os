@@ -1,0 +1,226 @@
+{
+ "reviewer": "PKQA-8",
+ "rows": [
+  {
+   "Package_ID": "PKG-ZC6cqLrZahw",
+   "pk": "PK-17",
+   "seq": 24,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-xhbukTTkwJY",
+   "pk": "PK-18",
+   "seq": 1,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-6RjMA6hPT8s",
+   "pk": "PK-18",
+   "seq": 6,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "A vertical clip frame: teal title bar DASH diet to lower blood pressure, a slide with bullets, and Leslie Kernisan MD MPH speaking.",
+     "corrected_value": "A vertical clip frame: teal title bar DASH diet to lower blood pressure, a bulleted slide, Leslie Kernisan MD MPH speaking.",
+     "reason": "23 words; limit is 20.",
+     "evidence": "Word count of the field."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-HbZywT3qYIY",
+   "pk": "PK-18",
+   "seq": 7,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Yellow CROCODILE MEAT? above a thinking stick figure between a cow with a shiny steak and a crocodile with a grey steak and flies.",
+     "corrected_value": "Yellow CROCODILE MEAT? above a thinking stick figure between a cow with a shiny steak and a crocodile with a grey, fly-ridden steak.",
+     "reason": "24 words; limit is 20. Content is accurate.",
+     "evidence": "Word count of the field; image shows the described cow/crocodile plates."
+    },
+    {
+     "field": "improvement",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Test changing the title's absolute 'Never' to 'rarely' and putting a question mark above the stick figure instead of flies.",
+     "corrected_value": "Test changing the title's absolute 'Never' to 'rarely', keeping the cow-versus-crocodile steak image.",
+     "reason": "Improvement bundles two edits (title wording plus a new question mark) although the brief asks for ONE edit; the thumbnail already carries a question mark in CROCODILE MEAT?.",
+     "evidence": "Image headline already ends with '?'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-PIsyBj58fJA",
+   "pk": "PK-18",
+   "seq": 12,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "strongest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Three stacked lines AFTER 60 FROZEN SHOULDER? and the man's pained grip on a glowing shoulder name audience, problem and body part instantly.",
+     "corrected_value": "Stacked AFTER 60 FROZEN SHOULDER? plus the man gripping a glowing shoulder name audience, problem and body part instantly.",
+     "reason": "23 words; limit is 20.",
+     "evidence": "Word count of the field."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-Q2m-w9-fATo",
+   "pk": "PK-18",
+   "seq": 24,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "medical_escalation",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "BOTH_MODERATE",
+     "corrected_value": "TITLE_MODERATE_THUMBNAIL_EXTREME",
+     "reason": "The row itself sets thumbnail_escalates_beyond_title=Y, THUMBNAIL_OVERPROMISE and a weakest_element about the INSANELY FAST claim, yet escalation is BOTH_MODERATE, which says the two halves are equally moderate. The title is a moderate 'never hit 100 (until you do this)' while the image adds an extreme speed claim (20 to 99+, INSANELY FAST).",
+     "evidence": "Image: red INSANELY FAST banner under a 20 PUSH-UP vs 99+ PUSH-UP split; title has no speed claim."
+    },
+    {
+     "field": "strongest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The crying 20 against the blank-eyed 99+ in matching push-up poses sets up the title's gap and reads from across a phone grid.",
+     "corrected_value": "Crying 20 against blank-eyed 99+ in matching push-up poses sets up the title's gap and reads on a phone grid.",
+     "reason": "23 words; limit is 20.",
+     "evidence": "Word count of the field."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-12-psgr_Zb4",
+   "pk": "PK-19",
+   "seq": 2,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "title_escalates_beyond_thumbnail",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Y",
+     "corrected_value": "N",
+     "reason": "The title does not make a bigger claim than the image; it is more specific (three points, smiling curve) but equally moderate. If anything the leaking-coins image leans toward a decline narrative the title never states. Defensible either way.",
+     "evidence": "Title 'The 3 Points of Retirement Spending (Smiling Curve Explained)' vs image RETIREMENT SPENDING CURVE with coins falling from a wallet."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-LzKkWaGCfOM",
+   "pk": "PK-19",
+   "seq": 7,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Yellow FIT, HEALTHY & DYING! with THE HIDDEN HEART ATTACK banner beside a stern doctor holding a glowing cracked red heart.",
+     "corrected_value": "White FIT, then yellow HEALTHY & DYING! with a THE HIDDEN HEART ATTACK banner beside a worried doctor holding a glowing cracked red heart.",
+     "reason": "FIT, is white; only HEALTHY and DYING! are yellow. The doctor looks alarmed (raised brows, open mouth) rather than stern, as the thumbnail audit itself notes. Same 'Giant yellow FIT' slip appears in strongest_element.",
+     "evidence": "Image: first line 'FIT,' in white, lines 2-3 in yellow gradient; man has raised brows and parted lips."
+    },
+    {
+     "field": "weakest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "DYING and the cracked glowing heart push fear beyond the title's wording, and the hidden cause stays unnamed so the claim reads as hype.",
+     "corrected_value": "DYING and the cracked glowing heart push fear past the title's wording, and the unnamed hidden cause reads as hype.",
+     "reason": "24 words; limit is 20.",
+     "evidence": "Word count of the field."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-FXP9BEEw6gc",
+   "pk": "PK-19",
+   "seq": 17,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "primary_relationship",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "TITLE_EXPLAINS_THUMBNAIL",
+     "corrected_value": "UNCLEAR",
+     "reason": "The title (12-year-old car, $2M, secrecy) does not actually explain anything in the image (a dealer presenting financing figures); the row's own weakest_element says no old car, no $2M and no secrecy appear. UNCLEAR (or DISCONNECTED) fits the pairing better than TITLE_EXPLAINS_THUMBNAIL as primary. Defensible either way.",
+     "evidence": "Image: salesman holding a FINANCING OPTIONS sheet ($34,990, $415/mo, 6.9% APR, 72 Mos) beside a capped driver in a dark sedan; nothing old-car or $2M."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-qf8A5durdfw",
+   "pk": "PK-19",
+   "seq": 19,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-rA9Osr-7fQo",
+   "pk": "PK-19",
+   "seq": 21,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "thumbnail_only_information",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A blue couch, a closed-off laptop, a mug and a slouching man in diagonal window light, with no numbers.",
+     "corrected_value": "A blue couch, an open laptop angled away, a mug and a man seated upright with fists on his knees in diagonal window light, with no numbers.",
+     "reason": "The laptop is open (screen turned away), not 'closed-off', and the man sits upright with hands on knees rather than slouching.",
+     "evidence": "Image: open black laptop on the coffee table, man seated straight on the couch with both fists on his thighs."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-Fzdn89C2YXo",
+   "pk": "PK-20",
+   "seq": 3,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "thumbnail_repeats_title",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "The image headline '$500 A MONTH!?' repeats the title's key phrase almost verbatim; the thumbnail repeats the $500 hook and only adds a wealth picture. The same pattern is flagged Y for FROZEN SHOULDER and RETIREMENT SPENDING CURVE in this batch. Relationship COMPLEMENTARY/primary is then arguably REINFORCING (subjective).",
+     "evidence": "Image text '$500 A MONTH!?' vs title 'How $500 a Month Makes You a Millionaire'."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 12,
+  "material": 0,
+  "minor_factual": 2,
+  "classification": 2,
+  "subjective": 2,
+  "style_only": 6
+ }
+}

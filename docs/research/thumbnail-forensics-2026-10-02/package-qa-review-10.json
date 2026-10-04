@@ -1,0 +1,49 @@
+{
+ "reviewer": "PKQA-10",
+ "rows": [
+  {
+   "Package_ID": "PKG-Awo-BmmysKg",
+   "pk": "PK-22",
+   "seq": 17,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "weakest_element",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Eight text fragments and two figures compete; only '7 MONEY TALKS' survives at phone size, burying the debt story.",
+     "corrected_value": "Eight text fragments compete; at phone size only the '7 MONEY TALKS COUPLES AVOID' headline reads, burying the debt story.",
+     "reason": "'COUPLES AVOID' is also large red underlined text and would survive at 160x90, so '7 MONEY TALKS' is not the only legible element; the debt scene is what is lost.",
+     "evidence": "Image: 'COUPLES AVOID' in big red caps beside the black '7 MONEY TALKS' headline; the audit's mobile_readability_160 is PARTIAL, not a one-phrase survival."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-_YyD_zUdu_c",
+   "pk": "PK-22",
+   "seq": 23,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Yellow 'AFTER DARK?' over a night campfire: a boy sharpening a spear, two elders talking, and a sleeper under a hide.",
+     "corrected_value": "Yellow 'AFTER DARK?' over a night campfire: a wary spear-wielder, two seated talkers, and a sleeper under a hide.",
+     "reason": "The foreground figure is a wild-haired, frowning adult-style caveman, not evidently a boy; only one of the two seated figures has a grey beard (elder), the other is a plain bald figure. Also the original is 21 words (limit 20).",
+     "evidence": "Image: foreground figure with spiky brown hair holding spears and a stone; left seated figure has no beard or visible age cue, right one has grey beard."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 2,
+  "material": 0,
+  "minor_factual": 2,
+  "classification": 0,
+  "subjective": 0,
+  "style_only": 0
+ }
+}
