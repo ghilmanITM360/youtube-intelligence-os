@@ -18,9 +18,11 @@ SHEETS = HERE / 'audit-sheets'
 def queue():
     done = {r['Thumbnail_ID'] for r in csv.DictReader((HERE / 'individual-audit-batch-001.csv').open())}
     feats = {r['Thumbnail_ID']: r for r in csv.DictReader((HERE / 'visual-features.csv').open())}
-    uni = [r for r in csv.DictReader((HERE / 'thumbnail-universe.csv').open()) if r['Thumbnail_ID'] and r['Evidence_Class'] in ('REGISTERED_LOCAL_THUMBNAIL', 'CURRENT_PUBLIC_THUMBNAIL')]
-    uni.sort(key=lambda r: hashlib.sha256(r['Thumbnail_ID'].encode()).hexdigest())
-    return [(r, feats[r['Thumbnail_ID']]) for r in uni if r['Thumbnail_ID'] not in done]
+    allr = [r for r in csv.DictReader((HERE / 'thumbnail-universe.csv').open()) if r['Thumbnail_ID'] and r['Audit_Required'] == 'Y']
+    key = lambda r: hashlib.sha256(r['Thumbnail_ID'].encode()).hexdigest()
+    cur = sorted([r for r in allr if r['Evidence_Class'] in ('REGISTERED_LOCAL_THUMBNAIL', 'CURRENT_PUBLIC_THUMBNAIL')], key=key)
+    shot = sorted([r for r in allr if r['Evidence_Class'] == 'SCREENSHOT_EMBEDDED_THUMBNAIL'], key=key)  # appended after the registry thumbnails so earlier batches stay stable
+    return [(r, feats[r['Thumbnail_ID']]) for r in cur + shot if r['Thumbnail_ID'] not in done]
 
 
 def load(path):
@@ -42,7 +44,7 @@ if __name__ == '__main__':
         items.append(dict(Seq=i, Thumbnail_ID=r['Thumbnail_ID'], View_Path=str(view), Video_ID=r['Video_ID'], Channel_ID=r['Channel_ID'],
                           Channel_Name=r['Channel_Name'], Niche_Label=r['Niche_Label'], Format=r['Format'], Title=r['Title'], Published_At=r['Published_At'],
                           Dataset_IDs=r['Dataset_IDs'], Source_Path=r['Source_Path'], Native_Size=f"{r['Width']}x{r['Height']}",
-                          Evidence_Class=r['Evidence_Class'], Creative_Temporal_Alignment=r['Creative_Temporal_Alignment'], Source_Observation_Date=r['Source_Observation_Date'],
+                          Observation_Context=r['Notes'], Mapping_Confidence=r['Mapping_Confidence'], Evidence_Class=r['Evidence_Class'], Creative_Temporal_Alignment=r['Creative_Temporal_Alignment'], Source_Observation_Date=r['Source_Observation_Date'],
                           Letterbox_Cropped=f['Letterbox_Cropped'],
                           Objective_Features={k: f[k] for k in ('Mean_Luminance', 'Contrast_Std', 'Mean_Saturation', 'Dominant_Colors', 'Color_Count_Proxy', 'Edge_Density',
                                                                   'Background_Edge_Density', 'Strong_Edge_Block_Ratio', 'Face_Count_Haar', 'Largest_Face_Area_Ratio')}))

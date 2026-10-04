@@ -37,3 +37,14 @@ Health safety: `medical_label` NOT_HEALTH / MEDICAL_PACKAGING_SAFE / NEEDS_CONTE
 Integer components, `score_100` = their exact sum:
 `story_score` 0-15 (clear visual proposition) · `psychological_hook_score` 0-15 · `title_partnership_score` 0-15 · `hierarchy_score` 0-10 · `mobile_readability_score` 0-10 · `composition_score` 0-10 · `emotion_subject_alignment_score` 0-10 · `credibility_score` 0-10 · `distinctiveness_score` 0-5.
 Use the full range. Typical scale: a component at 40-60% of its maximum is ordinary; 80%+ must be earned by a visible reason; <30% requires a visible defect. Do not give every thumbnail similar totals. `credibility_score` rates visible production/claim plausibility cues, not factual truth.
+
+## Consistency rules enforced by the validator
+- `numbers_in_text` = Y iff the thumbnail text contains digits (spelled-out numbers may also be Y).
+- `face_visible` = N iff `face_scale` = NONE (stick-figure and cartoon faces count as faces).
+- `arrow_present` must be Y when the scene/composition describes an arrow (including arrowheads on charts) unless explicitly negated.
+- `warning_color_used` = Y when red/yellow-black/orange is described as signalling danger, urgency or an alarm.
+- `before_after` = Y only for a true before/after or transformation pair; a wrong-vs-right split is N.
+- `text` is the exact visible words (or NONE); never pad it. Put layout remarks in `typography`.
+- Work only in a scratch directory whose name contains your batch id (other agents run in parallel; shared names get overwritten).
+- `psychology` records visible cues only (no "guilt", "wry", "smug inner state"); use expression descriptions (wide eyes, furrowed brows, open mouth).
+- Describe only what you can see; verify quantities (box width, count of objects) against the image before stating them.

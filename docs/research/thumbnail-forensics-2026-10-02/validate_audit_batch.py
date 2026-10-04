@@ -30,7 +30,7 @@ def sents(t): return {re.sub(r'\W+', ' ', s).strip().lower() for s in re.split(r
 
 
 def validate(rows, inputs=None):
-    errs = []
+    errs, warns = [], []
     if inputs is not None:
         want = [i['Thumbnail_ID'] for i in inputs]
         if [r.get('Thumbnail_ID') for r in rows] != want: errs.append('ROW_SET_OR_ORDER_MISMATCH')
@@ -51,8 +51,16 @@ def validate(rows, inputs=None):
             else: tot += r[k]
         if r['score_100'] != tot: errs.append(f"{t} SCORE_SUM {r['score_100']}!={tot}")
         for k in NARR:
-            if not isinstance(r[k], str) or len(r[k].strip()) < (12 if k in ('strength', 'weakness', 'bottleneck') else 25): errs.append(f'{t} TOO_SHORT {k}')
+            if not isinstance(r[k], str) or len(r[k].strip()) < (12 if k in ('strength', 'weakness', 'bottleneck') else 4 if k == 'text' else 25): errs.append(f'{t} TOO_SHORT {k}')
         if not isinstance(r['word_count'], int) or r['word_count'] < 0: errs.append(f'{t} BAD_WORD_COUNT')
+        tx = re.sub(r'\[[^\]]*\]', '', r['text'])
+        if (r['numbers_in_text'] == 'Y') != bool(re.search(r'\d', tx)) and not re.search(r'\b(one|two|three|four|five|six|seven|eight|nine|ten|zero)\b', tx, re.I): errs.append(f'{t} NUMBERS_TAG_VS_TEXT')
+        if (r['face_visible'] == 'N') != (r['face_scale'] == 'NONE'): errs.append(f'{t} FACE_TAG_MISMATCH')
+        negated = re.search(r'\bno (separate |visible |literal )?arrows?\b|without (an )?arrows?|not an arrow', (r['scene'] + ' ' + r['composition']).lower())
+        if r['arrow_present'] == 'N' and re.search(r'\barrow', (r['scene'] + ' ' + r['composition']).lower()) and not negated: warns.append(f'{t} ARROW_TAG_VS_NARRATIVE')
+        if r['warning_color_used'] == 'N' and not re.search(r'no warning|not a warning|no red', r['colors'].lower()) and re.search(r'red[^.]*(warning|urgen|alarm|danger)|(warning|urgen|alarm|danger)[^.]*red', r['colors'].lower()): warns.append(f'{t} WARNING_COLOR_TAG_VS_COLORS')
+        n_words = len(re.findall(r"[A-Za-z0-9$%#'’]+", tx))
+        if r['word_count'] and abs(n_words - r['word_count']) > max(3, 0.35 * r['word_count']): warns.append(f"{t} WORD_COUNT {r['word_count']} vs {n_words}")
         extra = set(r) - ALLOWED_TOP
         if extra: errs.append(f'{t} UNKNOWN_FIELDS {sorted(extra)}')
     # template-repetition screen
@@ -64,7 +72,7 @@ def validate(rows, inputs=None):
             x, y = set(re.findall(r'\w+', a.get(k, '').lower())), set(re.findall(r'\w+', b.get(k, '').lower()))
             if x and y and len(x & y) / len(x | y) > 0.8 and len(x) > 6: rep.append((k, f"{a['Thumbnail_ID'][:12]}~{b['Thumbnail_ID'][:12]}", round(len(x & y) / len(x | y), 2)))
     sc = Counter(r.get('score_100') for r in rows)
-    flags = dict(repeated_sentences_or_near_duplicates=rep, most_common_total_score=sc.most_common(1), distinct_total_scores=len(sc),
+    flags = dict(consistency_warnings=warns, repeated_sentences_or_near_duplicates=rep, most_common_total_score=sc.most_common(1), distinct_total_scores=len(sc),
                  mean_score=round(sum(r.get('score_100', 0) for r in rows) / max(1, len(rows)), 1))
     return errs, flags
 

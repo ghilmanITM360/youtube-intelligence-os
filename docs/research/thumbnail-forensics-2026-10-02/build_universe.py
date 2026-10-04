@@ -31,7 +31,7 @@ NICHE['UCQTcmLiL5_HMUnO1GRwCdjQ'] = 'FITNESS_HEALTH'
 FIELDS = ['Thumbnail_ID', 'Asset_ID', 'Video_ID', 'Channel_ID', 'Channel_Name', 'Dataset_IDs', 'Format', 'Title',
           'Published_At', 'Niche_Label', 'Internal_Channel_ID', 'Internal_Video_ID', 'Source_Type', 'Source_Path', 'Source_URL', 'Source_Observation_Date', 'SHA256', 'Width',
           'Height', 'Aspect_Ratio', 'Evidence_Class', 'Mapping_Confidence', 'Inspection_Status', 'Creative_Version_ID',
-          'Creative_Temporal_Alignment', 'Exact_Duplicate_Group', 'Visual_Family_ID', 'Recovery_Status', 'Notes']
+          'Creative_Temporal_Alignment', 'Exact_Duplicate_Group', 'Visual_Family_ID', 'Recovery_Status', 'Audit_Required', 'Notes']
 
 
 def fmt(video_type, dur):
@@ -99,7 +99,7 @@ for r in rec['results']:
                          Notes='attempts: ' + ' ; '.join(r['attempts'])[:400]))
 # 3. non-thumbnail image assets from the B000 inventory
 ROLE = {'ACQUISITION_SCREENSHOT_PENDING_REVIEW': 'UI_OR_PREFLIGHT_IMAGE', 'FORENSIC_SUPPORT_IMAGE_PENDING_REVIEW': 'FORENSIC_SUPPORT_IMAGE',
-        'SCREENSHOT_PENDING_THUMBNAIL_EXTRACTION': 'UNKNOWN_IMAGE', 'IMAGE_UNCLASSIFIED': 'UNKNOWN_IMAGE'}
+        'SCREENSHOT_PENDING_THUMBNAIL_EXTRACTION': 'UI_OR_PREFLIGHT_IMAGE', 'IMAGE_UNCLASSIFIED': 'UNKNOWN_IMAGE'}
 tri = {}
 if (HERE / 'asset-triage.csv').exists():
     tri = {r['Asset_ID']: r for r in csv.DictReader((HERE / 'asset-triage.csv').open())}
@@ -111,8 +111,37 @@ for r in csv.DictReader((HERE / 'asset-inventory.csv').open()):
     t = tri.get(r['asset_id'], {})
     rows.append(dict(Asset_ID=r['asset_id'], Source_Type='REPO_FILE' if '!/' not in loc else 'DOCUMENT_MEMBER', Source_Path=loc,
                      SHA256=r['sha256'], Width=r['width'], Height=r['height'], Evidence_Class=t.get('Evidence_Class') or cls,
-                     Mapping_Confidence='NOT_MAPPED', Inspection_Status=t.get('Inspection_Status', 'NOT_INSPECTED'),
-                     Creative_Temporal_Alignment='UNKNOWN', Notes=t.get('Notes', '')))
+                     Mapping_Confidence='NOT_MAPPED', Inspection_Status=t.get('Inspection_Status') or ('TRIAGED_TILES_EXTRACTED_AND_TRANSCRIBED' if r['role'] == 'SCREENSHOT_PENDING_THUMBNAIL_EXTRACTION' else 'NOT_INSPECTED'),
+                     Creative_Temporal_Alignment='UNKNOWN', Notes=t.get('Notes') or ('Source channel-page screenshot container; thumbnails extracted as SCREENSHOT_CROP rows' if r['role'] == 'SCREENSHOT_PENDING_THUMBNAIL_EXTRACTION' else '')))
+# 3b. screenshot-embedded thumbnail crops (historical observations with on-screen views/age)
+SR = HERE / 'screenshot-thumbnail-register.csv'
+curver = {r['Video_ID']: r for r in rows if r.get('Thumbnail_ID') and r['Evidence_Class'] in ('REGISTERED_LOCAL_THUMBNAIL', 'CURRENT_PUBLIC_THUMBNAIL')}
+if SR.exists():
+    for t in csv.DictReader(SR.open()):
+        ms = t['Mapping_Status']
+        if ms == 'NOT_A_THUMBNAIL': continue
+        p = ROOT / t['Crop_Path']
+        w, h = dims(p)
+        v = t['Video_ID']
+        rel = t['Creative_Relation']
+        common = dict(Asset_ID='AS-' + t['Crop_SHA256'], Source_Type='SCREENSHOT_CROP', Source_Path=t['Crop_Path'], Source_URL='', Source_Observation_Date=t['Screenshot_Observation_Date'],
+                      SHA256=t['Crop_SHA256'], Width=w, Height=h, Evidence_Class='SCREENSHOT_EMBEDDED_THUMBNAIL', Creative_Temporal_Alignment='SAME_PERIOD_VERIFIED',
+                      Recovery_Status='', Inspection_Status='NOT_INSPECTED')
+        note = f"{t['Screenshot_Source_ID']} {t['Tile']} crop x={t['X']} y={t['Y']} w={t['W']} h={t['H']} of {t['Screenshot_Path']}; on-screen views={t['OCR_Views']!r} age={t['OCR_Age']!r}"
+        if ms == 'MAPPED_TO_REGISTRY_VIDEO':
+            cur = curver.get(v)
+            same = rel == 'SAME_CREATIVE_AS_CURRENT'
+            cv = f"CV-{cur['Video_ID']}-{cur['SHA256'][:10]}" if (cur and same) else f"CV-{v}-{t['Crop_SHA256'][:10]}"
+            if cur and same and cur['Creative_Temporal_Alignment'] == 'CURRENT_PUBLIC_ONLY': cur['Creative_Temporal_Alignment'] = 'HISTORICAL_SNAPSHOT_VERIFIED'
+            rows.append(dict({**base(v), **common}, Thumbnail_ID='THB-' + t['Crop_SHA256'], Mapping_Confidence='TITLE_OCR_PLUS_PHASH' if same else 'TITLE_OCR_ART_DIFFERS_MANUAL_REVIEW',
+                             Creative_Version_ID=cv, Audit_Required='N' if same or t['Canonical_In_Cluster'] == 'N' else 'Y',
+                             Notes=note + ('; same creative as current public thumbnail' if same else '; creative CHANGED vs current public thumbnail' if rel == 'CREATIVE_CHANGED_VERIFIED' else '; no current image exists, screenshot is the only visual evidence')))
+        else:
+            hnd = t['Channel_Handle']
+            rows.append(dict(common, Thumbnail_ID='THB-' + t['Crop_SHA256'], Video_ID='', Channel_ID='HANDLE:' + hnd, Channel_Name=t['Channel_Label'], Title=t['OCR_Title'],
+                             Niche_Label='SENIOR_HEALTH (INFERENCE_channel_scope)', Dataset_IDs='', Format='LONG_FORM', Mapping_Confidence='SCREENSHOT_ONLY_NO_REGISTRY_VIDEO' if ms.startswith('SCREENSHOT') else 'AMBIGUOUS_MAPPING',
+                             Creative_Version_ID=f"CV-{t['Cluster_ID']}", Audit_Required='Y' if t['Canonical_In_Cluster'] == 'Y' else 'N',
+                             Notes=note + f"; cluster {t['Cluster_ID']}" + ('' if t['Canonical_In_Cluster'] == 'Y' else ' (duplicate scroll observation)')))
 # 4. canonical videos with neither image nor recovery attempt
 for vid in vids:
     if vid not in covered and not any(r.get('Video_ID') == vid for r in rows):
@@ -124,7 +153,7 @@ for r in rows:
     except Exception: r['Aspect_Ratio'] = ''
     r.setdefault('Inspection_Status', 'NOT_INSPECTED')
     r['Inspection_Status'] = r.get('Inspection_Status') or 'NOT_INSPECTED'
-    if r.get('Thumbnail_ID'):
+    if r.get('Thumbnail_ID') and not r.get('Creative_Version_ID'):
         r['Creative_Version_ID'] = f"CV-{r['Video_ID']}-{r['SHA256'][:10]}"
 grp = defaultdict(list)
 for r in rows:
@@ -140,6 +169,8 @@ if (HERE / 'visual-family-register.csv').exists():
 for r in rows:
     r['Visual_Family_ID'] = vf.get(r.get('Thumbnail_ID'), '')
     for f in FIELDS: r.setdefault(f, '')
+for r in rows:
+    if not r.get('Audit_Required'): r['Audit_Required'] = 'Y' if r.get('Evidence_Class') in ('REGISTERED_LOCAL_THUMBNAIL', 'CURRENT_PUBLIC_THUMBNAIL') else 'N'
 rows.sort(key=lambda r: (r['Evidence_Class'], r['Video_ID'], r['Source_Path']))
 with (HERE / 'thumbnail-universe.csv').open('w', newline='') as f:
     w = csv.DictWriter(f, FIELDS); w.writeheader(); w.writerows(rows)
