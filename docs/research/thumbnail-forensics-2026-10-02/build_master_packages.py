@@ -26,6 +26,13 @@ def audited():
     return a
 
 
+def package_audits():
+    pa = {}
+    for f in sorted(glob.glob(str(HERE / 'package-audit-PK-*.json'))):
+        for r in json.load(open(f)): pa[r['Package_ID']] = r
+    return pa
+
+
 def band(p, n):
     if p == '': return 'INSUFFICIENT_COHORT'
     p = float(p)
@@ -44,6 +51,7 @@ def main():
     for r in csv.DictReader((HERE / 'thumbnail-universe.csv').open()):
         if r['Video_ID'] and r['Thumbnail_ID'] and r['Evidence_Class'] in CLASS_RANK: uni[r['Video_ID']].append(r)
     aud = audited()
+    pa = package_audits()
     ta = {r['Video_ID']: r for r in csv.DictReader((HERE / 'title-analyst-audit.csv').open())} if (HERE / 'title-analyst-audit.csv').exists() else {}
     niche = {}
     for r in tf.values(): niche.setdefault(r['Channel_ID'], Counter())[r['Niche']] += 1
@@ -87,7 +95,8 @@ def main():
             Relative_Performance_Class=m['Performance_Class'], Perf_Percentile_Age_Matched=m['Perf_Percentile_Age_Matched'], Cohort_Size=n, Performance_Band=band(m['Perf_Percentile_Age_Matched'], n),
             Within_Channel_Percentile_Raw_Views=rawpct.get(vid, ''), Outlier_Multiple_Age_Adjusted=outl.get(vid, ''), Robust_Z_Age_Adjusted=rz.get(vid, ''), Evidence_Tier='D_AGE_ADJUSTED_PUBLIC' if m['Performance_Class'] != 'INSUFFICIENT_COHORT' else 'E_RAW_PUBLIC_VIEWS',
             Title_Audit_Status=('PROGRAMMATIC_AND_ANALYST_DONE_QA_SAMPLED' if ta[vid].get('qa_status') == 'QA_SAMPLED' else 'PROGRAMMATIC_AND_ANALYST_DONE_NOT_QA_SAMPLED') if vid in ta else 'PROGRAMMATIC_DONE_ANALYST_PENDING', ANALYST_TITLE_DIAGNOSTIC_SCORE=ta.get(vid, {}).get('ANALYST_TITLE_DIAGNOSTIC_SCORE', ''), Title_Orientation=ta.get(vid, {}).get('orientation', ''), Title_Overpromise_Risk=ta.get(vid, {}).get('overpromise_risk', ''), Title_Medical_Flag=ta.get(vid, {}).get('medical_title_flag', ''), Thumbnail_Audit_Status=('AUDITED_' + a[0]) if a else ('PENDING' if tid else 'NO_IMAGE'), Thumbnail_Diagnostic_Score=a[1] if a else '',
-            Packaging_Audit_Status='NOT_STARTED' if tid else 'NOT_POSSIBLE_NO_IMAGE', Evidence_Limitations='|'.join(lim)))
+            Packaging_Audit_Status=(('AUDITED_' + pa[f'PKG-{vid}']['batch_id']) if f'PKG-{vid}' in pa else 'NOT_STARTED') if tid else 'NOT_POSSIBLE_NO_IMAGE',
+            EXPERT_PACKAGING_DIAGNOSTIC_SCORE=pa.get(f'PKG-{vid}', {}).get('score_100', ''), Package_Primary_Relationship=pa.get(f'PKG-{vid}', {}).get('primary_relationship', ''), Evidence_Limitations='|'.join(lim)))
     with (HERE / 'master-packages.csv').open('w', newline='') as fh:
         w = csv.DictWriter(fh, list(rows[0])); w.writeheader(); w.writerows(rows)
     (HERE / 'master-packages.json').write_text(json.dumps(rows, ensure_ascii=False))
@@ -113,7 +122,7 @@ def main():
             for pat, lab in NAME_NICHE:
                 if re.search(pat, c['name'], re.I): nn = lab; break
         cv.append(dict(Channel_ID=cid, Channel_Name=c['name'], Handle=c['handle'] or '', Own_Competitor_Reference='OWN' if cid in OWN else 'COMPETITOR_OR_REFERENCE_UNSPECIFIED', Registry_Target_Group=c['tg'], Niche=nn, Sub_Niche='UNSPECIFIED',
-                       Canonical_Videos=nv, Videos_With_Title=nt, Videos_With_Thumbnail=nth, Videos_With_Title_And_Thumbnail=both, Thumbnail_Audits_Complete=ta, Packaging_Audits_Complete=0,
+                       Canonical_Videos=nv, Videos_With_Title=nt, Videos_With_Thumbnail=nth, Videos_With_Title_And_Thumbnail=both, Thumbnail_Audits_Complete=ta, Packaging_Audits_Complete=sum(1 for r in g if r['Packaging_Audit_Status'].startswith('AUDITED')),
                        Public_Performance_Data=f'{pv}/{nv} videos with views; {pm} age-matched classified' if nv else 'NONE', First_Party_Data='PRIVATE_STUDIO_NOT_JOINED' if cid in OWN else 'NONE',
                        Temporal_Thumbnail_Evidence=f'{hist} videos with snapshot/screenshot-period creative' if nv else 'NONE', Coverage_Status=st, Main_Gap=gap))
     with (HERE / 'channel-coverage.csv').open('w', newline='') as fh:
