@@ -1,0 +1,196 @@
+{
+ "scope": "Wave 7 existing drafts QA only; no new authoring",
+ "status": "COMPLETE",
+ "decision": "PASS_WITH_CORRECTIONS",
+ "wave_result": "PASS_WITH_CORRECTIONS",
+ "starting_HEAD": "2197f97625fce3df831de3f23045e27ee027c909",
+ "reviewer": "PRIMARY_AGENT_ONLY",
+ "review_timestamp": "2026-10-04T18:29:12.482459+00:00",
+ "authored_rows": 72,
+ "new_authored_this_session": 0,
+ "new_verified_rows": 72,
+ "previously_reopened_valid_rows": 23,
+ "new_unique_reopened": 17,
+ "total_genuinely_reopened": 40,
+ "reopened_sequences": {
+  "B002-19": [
+   1,
+   2,
+   4,
+   5,
+   6,
+   7,
+   9,
+   12,
+   14,
+   15,
+   17,
+   18,
+   22,
+   23
+  ],
+  "B002-20": [
+   3,
+   4,
+   5,
+   6,
+   9,
+   10,
+   11,
+   13,
+   14,
+   16,
+   19,
+   20,
+   21
+  ],
+  "B002-21": [
+   1,
+   2,
+   4,
+   5,
+   6,
+   7,
+   10,
+   12,
+   14,
+   16,
+   20,
+   22,
+   24
+  ]
+ },
+ "inspection": "Original deterministic 18-row sample native and both mobile sizes preserved; five prior supplementary native reopens preserved. Seven formerly truncated rows reopened one at a time at native/320/160. Additional targeted text/color native reopens use prior mobile inspection where no mobile dispute remains. Never count repeated reopens twice.",
+ "sample_coverage": {
+  "public_performance": {
+   "LOW": 13,
+   "MIDDLE": 17,
+   "HIGH": 9,
+   "INSUFFICIENT_COHORT": 1
+  },
+  "face": {
+   "Y": 35,
+   "N": 5
+  },
+  "medical": {
+   "NOT_HEALTH": 29,
+   "MEDICAL_PACKAGING_SAFE": 3,
+   "NEEDS_CONTEXT": 5,
+   "MISLEADING_RISK": 3
+  },
+  "text_density": {
+   "LOW": 21,
+   "MEDIUM": 10,
+   "HIGH": 5,
+   "NONE": 4
+  },
+  "channels": 25
+ },
+ "material": 0,
+ "minor_factual": 57,
+ "classification": 17,
+ "subjective": 0,
+ "style_only": 75,
+ "counting_basis": "Field-level correction events, including earlier 18 provisional fields. Text-convention normalization and bounded uncertainty included in minor factual count. Style count includes 72 image-specific expression-label reconciliations from existing authoring evidence, not 72 new image reopens.",
+ "visible_text_corrections": 44,
+ "mapping_errors": 0,
+ "hash_mismatches": 0,
+ "score_errors": 0,
+ "unresolved_material_errors": 0,
+ "fabricated_prominent_text_unresolved": 0,
+ "rows_corrected": 72,
+ "fields_corrected": 149,
+ "warning_adjudications": [
+  {
+   "warning": "THB-2ddcbe198b43 WARNING_COLOR_TAG_VS_COLORS",
+   "status": "RESOLVED",
+   "reason": "Red gym underlines are heading/category emphasis, not danger. Native rechecked, narrative explicitly negates warning."
+  },
+  {
+   "warning": "THB-1d811d11912e WARNING_COLOR_TAG_VS_COLORS",
+   "status": "RESOLVED",
+   "reason": "Red what if? badge is branding, not danger. Native rechecked, explicit negation removes regex false positive."
+  },
+  {
+   "warning": "THB-5bd3875503ba WORD_COUNT 26 vs 37",
+   "status": "RESOLVED",
+   "reason": "Native/320/160 rechecked. Two prominent tokens; incidental financial microtext separately bounded as partly readable native, unreadable mobile. Uncertain strings not asserted."
+  },
+  {
+   "warning": "THB-d7e7a84f87f0 WARNING_COLOR_TAG_VS_COLORS",
+   "status": "RESOLVED",
+   "reason": "Red EARN IT is motivational emphasis, not danger. Native rechecked and negative wording explicit."
+  }
+ ],
+ "all_warnings_resolved": true,
+ "automated_all_72": "PASS",
+ "canonical_join": "72/72 ordered Thumbnail_ID/Video_ID/Channel_ID/title/path/SHA match",
+ "score_monitor": {
+  "mean": 68.66666666666667,
+  "median": 70.0,
+  "range": [
+   38,
+   81
+  ],
+  "channels": 32,
+  "historical_wave_means": [
+   59.1,
+   65.3,
+   68.5,
+   66.9
+  ],
+  "wave6_mean": 62.833333333333336,
+  "drift_concern": "NOT_ESTABLISHED",
+  "reason": "Wave 7 is near prior 68.5 and 66.9 means. Relative to Wave 6, niche and style mix differ: finance POV 35 vs 32; ancient-human/animal explainer 16 vs 9; cartoon 50 vs 48; photo 1 vs 5; channels 32 vs 27. Differences plausibly affect visual scores; no paired calibration evidence establishing inflation.",
+  "performance_mix": {
+   "MIDDLE": 26,
+   "HIGH": 23,
+   "LOW": 21,
+   "INSUFFICIENT_COHORT": 2
+  }
+ },
+ "medical": {
+  "MEDICAL_PACKAGING_SAFE": 5,
+  "NOT_HEALTH": 53,
+  "NEEDS_CONTEXT": 9,
+  "MISLEADING_RISK": 5,
+  "UNRESOLVED": 0,
+  "CONTRADICTED_BY_CONTENT": 0
+ },
+ "future_verification_queue_additions": 14,
+ "future_queue": "future-content-verification-B002-19-21.json",
+ "counterexample_logic": "Four same-batch visual-opposite references added, grounded in reopened sources. NONE_IN_BATCH elsewhere means no qualified visual opposite selected for that row, not absence of all possible opposites. Neither raw views nor score/view disagreement establishes a performance counterexample.",
+ "text_convention": "For this wave, word_count and text track prominent package wording. Incidental interface, credential-clothing and environmental microtext is preserved in qa-field-evidence-B002-19-21.json. Deliberately enlarged narrative proof labels and brand logos remain package wording. Numeral group/hyphenated term one token; standalone currency icon excluded; ampersand counted.",
+ "pending_checkpoint_preserved": [
+  "qa-summary-B002-19-21-PENDING.json",
+  "qa-wave-checks-B002-19-21-PENDING.json"
+ ],
+ "resource_control": {
+  "subagents": 0,
+  "background_agents": 0,
+  "watchers": 0,
+  "max_concurrent_llm_agents": 1,
+  "largest_image_batch": 1,
+  "context_truncation": false,
+  "short_term_used_percent": 54,
+  "weekly_used_percent": 9,
+  "context_percentage": null
+ },
+ "package_state": {
+  "PK04_to07": "MECHANICALLY_VALID / VISUAL_QA_PENDING",
+  "PK08": "COMPLETE_UNVALIDATED",
+  "PK09": "PARTIAL",
+  "PK10": "PARTIAL",
+  "PK11": "FAILED_NO_OUTPUT",
+  "new_work": false
+ },
+ "title_work": {
+  "new_work": false,
+  "preserved_sample": "150/150"
+ },
+ "limitation": "40 unique images were reopened across the two QA sessions; remaining 32 receive mechanical checks, not independent visual re-review. Generic expression labels were reconciled from authoring observations. Current-public creative is not historical creative-performance proof. No content verification or medical advice assessment was performed.",
+ "total_verified": 510,
+ "remaining": 2188,
+ "next_new_authoring_ID": "THB-3f3104736753c90a068eb77c44e09735a677d46b921e78b0c3c1337ff2820e8d",
+ "project_status": "IN_PROGRESS"
+}
