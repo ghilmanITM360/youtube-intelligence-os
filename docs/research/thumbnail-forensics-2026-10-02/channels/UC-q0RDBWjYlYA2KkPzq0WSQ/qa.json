@@ -61,7 +61,53 @@
       "style_only": 0,
       "result": "PASS",
       "review_timestamp": "2026-10-05T02:59:11.300331+00:00"
+    },
+    {
+      "Video_ID": "BkOtJwis7vg",
+      "Thumbnail_ID": "THB-4f7f681f3d3beae05bf5a1ddc4137b4e238336aee54237a9b05337b58a852ea9",
+      "microbatch": "CHANNEL-001-M03",
+      "native_reopened": true,
+      "mobile_sizes_inspected": [
+        "320x180",
+        "160x90"
+      ],
+      "mapping": "PASS",
+      "hash": "PASS",
+      "prominent_text": "ISRAEL / 37 BC \u2013 2026",
+      "incidental_text": "TEXT_PRESENT_BUT_NOT_VERIFIABLE: tiny architectural band marks",
+      "objects_people_composition": "PASS: gold dome, patterned architecture, stone city, towers and trees; no clearly distinguishable person",
+      "title_and_package_relationship": "PASS: reinforcing overview; no inferred chronology or geographical-content verification",
+      "medical_status": "NOT_HEALTH",
+      "score_arithmetic": "PASS: thumbnail 56; package 60; reused title 58",
+      "corrections": [
+        {
+          "field": "word_count",
+          "original_value": 5,
+          "corrected_value": 4,
+          "error_class": "MINOR_FACTUAL",
+          "reason": "Prominent tokens are ISRAEL, 37, BC and 2026; dash is punctuation and incidental architectural marks are excluded",
+          "source": "actual native thumbnail and 320x180/160x90 inspection",
+          "review_timestamp": "2026-10-05T03:04:14.197848+00:00"
+        },
+        {
+          "field": "typography",
+          "original_value": "A black serif ISRAEL headline sits above bold 37 BC \u2013 2026. Both remain readable at 320x180 and 160x90. Tiny marks in the building's blue bands are incidental and not verifiable as exact text at native size; they are excluded from the prominent five-word count.",
+          "corrected_value": "A black serif ISRAEL headline sits above bold 37 BC \u2013 2026. Both remain readable at 320x180 and 160x90. Tiny marks in the building's blue bands are incidental and not verifiable as exact text at native size; they are excluded from the prominent four-token count.",
+          "error_class": "MINOR_FACTUAL",
+          "reason": "Align explanatory prose with the corrected four-token count",
+          "source": "actual native thumbnail",
+          "review_timestamp": "2026-10-05T03:04:14.197848+00:00"
+        }
+      ],
+      "warnings": [],
+      "material": 0,
+      "minor_factual": 2,
+      "classification": 0,
+      "subjective": 0,
+      "style_only": 0,
+      "result": "PASS_WITH_CORRECTIONS",
+      "review_timestamp": "2026-10-05T03:04:14.197848+00:00"
     }
   ],
-  "channel_result": "IN_PROGRESS: two newly completed videos; channel gate pending"
+  "channel_result": "IN_PROGRESS: three newly completed videos; channel gate pending"
 }
