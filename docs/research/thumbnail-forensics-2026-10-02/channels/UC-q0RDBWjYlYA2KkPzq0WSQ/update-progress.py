@@ -42,11 +42,11 @@ for bid in sorted({r['batch_id'] for r in thumbs if r['batch_id']!=batch}):
 write('completion-ledger.csv',ledger)
 s=json.loads((R/'packaging-progress-summary.json').read_text())
 s.update(timestamp=stamp,phase='CHANNEL_BY_CHANNEL',status='IN_PROGRESS')
-baseline_thumb=sum(int(r['audited_units']) for r in ledger if r['batch_id'] in ('B001','B002'))
+baseline_thumb=sum(int(r['audited_units']) for r in ledger if r['batch_id']=='B001')
 legacy_packages={row['Video_ID'] for file in R.glob('package-audit-PK-*.json') for row in json.loads(file.read_text())}
 legacy_qa={row['Package_ID'].removeprefix('PKG-') for file in R.glob('package-qa-review-*.json') for row in json.loads(file.read_text()).get('rows',[]) if row.get('Package_ID')}
 new_packages={r['Video_ID'] for r in json.loads((HERE/'package-audits.json').read_text())}
-s['thumbnails']['verified']=baseline_thumb+len(verified);s['thumbnails']['remaining']=s['thumbnails']['eligible']-s['thumbnails']['verified']
+s['thumbnails']['verified']=baseline_thumb+sum(r['Legacy_Status']=='VERIFIED' for r in cross);s['thumbnails']['remaining']=s['thumbnails']['eligible']-s['thumbnails']['verified']
 s['packages']['audited']=len(legacy_packages|new_packages)
 s['packages']['qa_sampled']=len(legacy_qa|{r['Video_ID'] for r in qa['reviews']});s['packages']['remaining']=s['packages']['eligible']-s['packages']['audited']
 s['progress'].update(thumbnail=s['thumbnails']['verified']/s['thumbnails']['eligible'],package=s['packages']['audited']/s['packages']['eligible'],qa=s['packages']['qa_sampled']/s['packages']['eligible'])

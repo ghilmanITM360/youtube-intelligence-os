@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-05T03:04:48.922437+00:00",
+  "timestamp": "2026-10-05T03:11:58.497093+00:00",
   "phase": "CHANNEL_BY_CHANNEL",
   "channels": {
     "total": 75,
@@ -56,22 +56,23 @@
     "progress": 0.6
   },
   "git": {
-    "HEAD": "b3fd97337df827c12da7f84da65fff2becb662b3",
-    "remote_HEAD": "b3fd97337df827c12da7f84da65fff2becb662b3",
-    "Latest_Data_Commit_SHA": "b3fd97337df827c12da7f84da65fff2becb662b3",
-    "last_data_push_verified_at": "2026-10-05T03:01:21.623Z",
+    "HEAD": "0da3cec4f4647c3fa91897f6d932f9b97bcca6eb",
+    "remote_HEAD": "0da3cec4f4647c3fa91897f6d932f9b97bcca6eb",
+    "Latest_Data_Commit_SHA": "0da3cec4f4647c3fa91897f6d932f9b97bcca6eb",
+    "last_data_push_verified_at": "2026-10-05T03:07:01.339Z",
     "checkpoint_semantics": "Latest confirmed research data push; later metadata commits do not self-reference."
   },
   "resource": {
     "starting_short_window_used_percent": 23,
-    "latest_short_window_used_percent": 41,
-    "weekly_used_percent": 17,
+    "latest_short_window_used_percent": 46,
+    "weekly_used_percent": 18,
     "subagents": 0,
     "background_agents": 0,
     "watchers": 0,
     "visual_analysis": true,
     "tool_output_truncation": false,
-    "context_window_warning": false
+    "context_window_warning": false,
+    "checkpoint_reason": "Conservative working-context checkpoint after three single-video research commits; no explicit context warning or output truncation in this resumed run."
   },
   "source_SHA256": {
     "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "9f9b97f2f22968c7f795eafd198363a629d3c54b05f2f46461521e52e9447d3a",
@@ -168,7 +169,7 @@
   },
   "next_step": "Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video cqGJ5ZRLAvs",
   "queue_order_policy": "Priority 1: full creative availability plus age-matched public class on every video; then Senior Health; own channel; other full data; partial data; identity-only. Ties use canonical Channel_ID.",
-  "status": "IN_PROGRESS",
+  "status": "RESOURCE_CHECKPOINT",
   "channel_microbatch": {
     "ids": [
       "CHANNEL-001-M01",
