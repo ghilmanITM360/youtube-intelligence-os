@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-05T11:39:51.048236+00:00",
+  "timestamp": "2026-10-05T11:44:15.945075+00:00",
   "phase": "CHANNEL_BY_CHANNEL",
   "channels": {
     "total": 75,
@@ -21,51 +21,51 @@
     "eligible": 2303
   },
   "thumbnails": {
-    "verified": 514,
+    "verified": 515,
     "draft": 40,
     "draft_structurally_valid": 39,
     "draft_invalid": 1,
     "eligible": 2698,
-    "remaining": 2184,
+    "remaining": 2183,
     "canonical_channel_eligible": 2284,
     "unregistered_identity_eligible": 414
   },
   "packages": {
-    "audited": 514,
-    "qa_sampled": 115,
+    "audited": 515,
+    "qa_sampled": 116,
     "full_visual_qa": false,
     "eligible": 2282,
-    "remaining": 1768
+    "remaining": 1767
   },
   "progress": {
     "title": 1,
-    "thumbnail": 0.1905114899925871,
-    "package": 0.2252410166520596,
-    "qa": 0.050394390885188434,
-    "composite": 0.36653672438245877
+    "thumbnail": 0.19088213491475167,
+    "package": 0.22567922874671342,
+    "qa": 0.05083260297984225,
+    "composite": 0.3668484916603268
   },
   "current_channel": {
     "order": 1,
     "Channel_ID": "UC-q0RDBWjYlYA2KkPzq0WSQ",
     "name": "Genius History",
     "videos": 10,
-    "next_Video_ID": "cqGJ5ZRLAvs",
-    "next_Thumbnail_ID": "THB-ed2d8c8963740d779592ec59354dfd70f45ec321c267eead8c977814e657fd03",
-    "completed_videos": 6,
-    "remaining_videos": 4,
-    "progress": 0.7000000000000001
+    "next_Video_ID": "gT_b6RkSPUI",
+    "next_Thumbnail_ID": "THB-1cd86662ea6c98195a302bbf9da921750b50be3e83f8c3a28442dbf591f9b1e9",
+    "completed_videos": 7,
+    "remaining_videos": 3,
+    "progress": 0.7749999999999999
   },
   "git": {
-    "HEAD": "3ae5c5e2c9d2aa28edff07a42486eea049333d1e",
-    "remote_HEAD": "3ae5c5e2c9d2aa28edff07a42486eea049333d1e",
-    "Latest_Data_Commit_SHA": "3ae5c5e2c9d2aa28edff07a42486eea049333d1e",
+    "HEAD": "ce0d017b92e932c903a185b0fb353877eebced74",
+    "remote_HEAD": "ce0d017b92e932c903a185b0fb353877eebced74",
+    "Latest_Data_Commit_SHA": "ce0d017b92e932c903a185b0fb353877eebced74",
     "last_data_push_verified_at": "2026-10-05T09:22:45.604520+00:00",
     "checkpoint_semantics": "Latest confirmed research data push; later metadata commits do not self-reference."
   },
   "resource": {
     "starting_short_window_used_percent": 3,
-    "latest_short_window_used_percent": 3,
-    "weekly_used_percent": 3,
+    "latest_short_window_used_percent": 28,
+    "weekly_used_percent": 7,
     "provider": "CODEX",
     "percentage_semantics": "USED",
     "subagents": 0,
@@ -76,7 +76,7 @@
     "context_window_warning": false
   },
   "source_SHA256": {
-    "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "8f7f291292999ad31334cfe9b36eaa749c2668e37776ba9d1fca6f6ffc47b500",
+    "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "6796eaa453eeec7e5f8ae9576d943945d9bc2c384b4d1e85594c215680c6b2fa",
     "docs/research/thumbnail-forensics-2026-10-02/package-batch-plan.json": "5f26d6d91d702cb88bbffc23ff24d1a8cb155f11d8eff1393f398d4c3ff5aec0",
     "docs/research/thumbnail-forensics-2026-10-02/wave8-recovery-state.json": "b42e5e87cd5288485fbebb59b5e7cf1992272e4ab8eecd543db55f95d6bf5e63",
     "docs/research/thumbnail-forensics-2026-10-02/channel-coverage.csv": "739d6be88e6a0647b573cf18c98104bf249c00e21a99d247ba450125654ec44b",
@@ -168,7 +168,7 @@
     "rendered_sheets": 11,
     "visual_sheet_review": "PASS: all 11 sheet previews inspected before checkpoint trigger"
   },
-  "next_step": "Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video cqGJ5ZRLAvs",
+  "next_step": "Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video gT_b6RkSPUI",
   "queue_order_policy": "Priority 1: full creative availability plus age-matched public class on every video; then Senior Health; own channel; other full data; partial data; identity-only. Ties use canonical Channel_ID.",
   "status": "IN_PROGRESS",
   "channel_microbatch": {
@@ -176,13 +176,20 @@
       "CHANNEL-001-M01",
       "CHANNEL-001-M02",
       "CHANNEL-001-M03",
-      "CHANNEL-001-M05"
+      "CHANNEL-001-M05",
+      "CHANNEL-001-M06"
     ],
-    "authored_thumbnail_rows": 4,
-    "authored_package_rows": 4,
-    "reopened_qa_rows": 5,
+    "authored_thumbnail_rows": 5,
+    "authored_package_rows": 5,
+    "reopened_qa_rows": 6,
     "result": "PASS_WITH_CORRECTIONS",
     "evidence_tier": "D_AGE_ADJUSTED_PUBLIC",
     "causality": "NOT_ESTABLISHED"
-  }
+  },
+  "confirmed_video_checkpoints": [
+    {
+      "Video_ID": "vfUeKc8MSiA",
+      "sha": "ce0d017b92e932c903a185b0fb353877eebced74"
+    }
+  ]
 }

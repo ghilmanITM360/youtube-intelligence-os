@@ -35,6 +35,11 @@ current.getRange('B13').values=[[10-counts.complete]];
 // Advance the explicit resume pointer while retaining dependent INDEX formulas.
 current.getRange('B19').formulas=[[summary.current_channel.next_Video_ID ? `=MATCH("${summary.current_channel.next_Video_ID}",'02_VIDEO_PROGRESS'!D1:D2304,0)` : '=0']];
 const checkpoints=wb.worksheets.getItem('09_GIT_CHECKPOINTS');
+for(const cp of summary.confirmed_video_checkpoints||[]){
+ const ix=checkpoints.getUsedRange().values.findIndex(row=>row[2]==='Video '+cp.Video_ID+' complete; awaiting this commit push');
+ if(ix>=0){checkpoints.getRange(`E${ix+1}:G${ix+1}`).values=[[cp.sha,'PUSH_VERIFIED',cp.sha]];checkpoints.getRange(`C${ix+1}`).values=[['Video '+cp.Video_ID+' complete; push verified']];}
+}
+if(summary.git?.Latest_Data_Commit_SHA){current.getRange('B17').values=[[summary.git.Latest_Data_Commit_SHA]];ch.getRange('Z2').values=[[summary.git.Latest_Data_Commit_SHA]];}
 const checkpointLabel='Video '+latest+' complete; awaiting this commit push';
 if(!checkpoints.getUsedRange().values.some(row=>row[2]===checkpointLabel)) checkpoints.tables.items[0].rows.add(null,[[now,'Genius History',checkpointLabel,1,null,'READY_FOR_COMMIT',null,'PASS','Commit SHA and push verification recorded after push; no self-referential SHA']]);
 const qa=wb.worksheets.getItem('08_QA_PROGRESS');

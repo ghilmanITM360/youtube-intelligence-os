@@ -58,7 +58,7 @@ s['progress'].update(thumbnail=s['thumbnails']['verified']/s['thumbnails']['elig
 s['progress']['composite']=sum(s['progress'][k] for k in ('title','thumbnail','package','qa'))/4
 nextrow=next((r for r in m if r['Current_Status']!='COMPLETE'), {'Video_ID':'','Thumbnail_ID':''})
 s['current_channel'].update(completed_videos=counts['complete'],remaining_videos=10-counts['complete'],progress=(1+counts['verified']/10+counts['packages']/10+counts['qa']/10)/4,next_Video_ID=nextrow['Video_ID'],next_Thumbnail_ID=nextrow['Thumbnail_ID'])
-s['resource']=dict(starting_short_window_used_percent=3,latest_short_window_used_percent=3,weekly_used_percent=3,provider='CODEX',percentage_semantics='USED',subagents=0,background_agents=0,watchers=0,visual_analysis=True,tool_output_truncation=True,context_window_warning=False)
+s['resource']=dict(starting_short_window_used_percent=3,latest_short_window_used_percent=s.get('resource',{}).get('latest_short_window_used_percent',3),weekly_used_percent=s.get('resource',{}).get('weekly_used_percent',3),provider='CODEX',percentage_semantics='USED',subagents=0,background_agents=0,watchers=0,visual_analysis=True,tool_output_truncation=True,context_window_warning=False)
 s['next_step']='Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video '+nextrow['Video_ID']
 for name in ('completion-ledger.csv',):
     relative='docs/research/thumbnail-forensics-2026-10-02/'+name
