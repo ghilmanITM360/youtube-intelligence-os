@@ -12,6 +12,7 @@ def parse(z):
   for c in doc.findall('.//m:sheetData/m:row/m:c',n):
    v=c.findtext('m:v',default='',namespaces=n)
    if c.get('t')=='s':v=ss[int(v)]
+   elif c.get('t')=='inlineStr':v=''.join(c.find('m:is',n).itertext())
    f=c.findtext('m:f',default='',namespaces=n)
    cells[c.get('r')]=(f,v)
   out[k]=(doc,cells)

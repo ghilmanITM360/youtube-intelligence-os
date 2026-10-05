@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-05T03:11:58.497093+00:00",
+  "timestamp": "2026-10-05T09:20:24.211956+00:00",
   "phase": "CHANNEL_BY_CHANNEL",
   "channels": {
     "total": 75,
@@ -32,7 +32,7 @@
   },
   "packages": {
     "audited": 513,
-    "qa_sampled": 113,
+    "qa_sampled": 114,
     "full_visual_qa": false,
     "eligible": 2282,
     "remaining": 1769
@@ -41,19 +41,19 @@
     "title": 1,
     "thumbnail": 0.19014084507042253,
     "package": 0.22480280455740578,
-    "qa": 0.04951796669588081,
-    "composite": 0.36611540408092724
+    "qa": 0.04995617879053462,
+    "composite": 0.36622495710459074
   },
   "current_channel": {
     "order": 1,
     "Channel_ID": "UC-q0RDBWjYlYA2KkPzq0WSQ",
     "name": "Genius History",
     "videos": 10,
-    "next_Video_ID": "cqGJ5ZRLAvs",
-    "next_Thumbnail_ID": "THB-ed2d8c8963740d779592ec59354dfd70f45ec321c267eead8c977814e657fd03",
-    "completed_videos": 4,
-    "remaining_videos": 6,
-    "progress": 0.6
+    "next_Video_ID": "vfUeKc8MSiA",
+    "next_Thumbnail_ID": "THB-ba9ecd05d8e5dc39b6157d190fa452f17593814bbd090757ba1a85487c284153",
+    "completed_videos": 5,
+    "remaining_videos": 5,
+    "progress": 0.625
   },
   "git": {
     "HEAD": "0da3cec4f4647c3fa91897f6d932f9b97bcca6eb",
@@ -63,16 +63,17 @@
     "checkpoint_semantics": "Latest confirmed research data push; later metadata commits do not self-reference."
   },
   "resource": {
-    "starting_short_window_used_percent": 23,
-    "latest_short_window_used_percent": 46,
-    "weekly_used_percent": 18,
+    "starting_short_window_used_percent": 64,
+    "latest_short_window_used_percent": 64,
+    "weekly_used_percent": 28,
     "subagents": 0,
     "background_agents": 0,
     "watchers": 0,
     "visual_analysis": true,
-    "tool_output_truncation": false,
+    "tool_output_truncation": true,
     "context_window_warning": false,
-    "checkpoint_reason": "Conservative working-context checkpoint after three single-video research commits; no explicit context warning or output truncation in this resumed run."
+    "policy": "PERCENT_USED: normal <=70; bounded video 71-82; checkpoint 83-90; mandatory stop >90",
+    "truncation_stopped_work": false
   },
   "source_SHA256": {
     "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "9f9b97f2f22968c7f795eafd198363a629d3c54b05f2f46461521e52e9447d3a",
@@ -108,7 +109,7 @@
     "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-02.json": "f0a5d3999e8124a486cc0e2ffded97bbc71367d70d7837adb4f6191121d6e56f",
     "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-14.json": "7468c473fed5eb39b52d3ac3629ddf8984f7ed57fd75c8ba4b35360a62409961",
     "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-15.json": "2457ac17fc9919a58d0d8e17d28f5b20677ce4d9b66f3d5524485396d3a7dcae",
-    "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-03.json": "40ac27f6ea3c7e5cb2b11f823c4aa3e3faf362e3edcf642789c6ed318808482f",
+    "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-03.json": "208e0486dd50f2b70db6aa4c1c51e55748eb4c5cc3855d7ced95a95f93180417",
     "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-23.json": "0c5d5849dcdf5c3c72c2edb8bdf9c9da0da0801fa654fe21ec98ba8cd185a794",
     "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-19.json": "c39591a369f86286c4f98840da3df987ffb51f099e3374b5fe9de898f8649347",
     "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-15.json": "8fb412d7c958b5c33690e1b846776cc37457307d9920b78ba3c335008fbc9e5f",
@@ -143,7 +144,7 @@
     "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-6.json": "edb2562a491eeca6a230c75dfab07c4676bfef170ee7b2f1d300456784e5c085",
     "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-7.json": "6f9c2394c3151fcb9e504b7c4fd074e775a5a952a9b9081a4407d2862e2636cd",
     "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-1.json": "d2b5f9217338d0969bd469b17b25f7ff20de588dfbb45fd38073361eadcf9253",
-    "data/catalog/youtube_channel_registry.db": "39e7a28ba592b9022bd1b32f4c288edde519730164a98ea858ce90c44d52f654"
+    "data/catalog/youtube_channel_registry.db": "4c4322bf2d7b38e3ecb1ef159c0250f02b4cac007eb5a2e47a03d9f1059641cc"
   },
   "validation": {
     "canonical_registry_join": "PASS",
@@ -167,9 +168,9 @@
     "rendered_sheets": 11,
     "visual_sheet_review": "PASS: all 11 sheet previews inspected before checkpoint trigger"
   },
-  "next_step": "Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video cqGJ5ZRLAvs",
+  "next_step": "Continue Genius History priority order: vfUeKc8MSiA, cqGJ5ZRLAvs, gT_b6RkSPUI, guBzFxCYFVg, p000f2w5xSA; one completed video per push.",
   "queue_order_policy": "Priority 1: full creative availability plus age-matched public class on every video; then Senior Health; own channel; other full data; partial data; identity-only. Ties use canonical Channel_ID.",
-  "status": "RESOURCE_CHECKPOINT",
+  "status": "IN_PROGRESS",
   "channel_microbatch": {
     "ids": [
       "CHANNEL-001-M01",
@@ -178,7 +179,7 @@
     ],
     "authored_thumbnail_rows": 3,
     "authored_package_rows": 3,
-    "reopened_qa_rows": 3,
+    "reopened_qa_rows": 4,
     "result": "PASS_WITH_CORRECTIONS",
     "evidence_tier": "D_AGE_ADJUSTED_PUBLIC",
     "causality": "NOT_ESTABLISHED"
