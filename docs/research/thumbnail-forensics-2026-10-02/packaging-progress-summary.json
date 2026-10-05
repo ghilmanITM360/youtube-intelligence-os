@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-05T02:52:47.933358+00:00",
+  "timestamp": "2026-10-05T02:59:11.649481+00:00",
   "phase": "CHANNEL_BY_CHANNEL",
   "channels": {
     "total": 75,
@@ -21,39 +21,39 @@
     "eligible": 2303
   },
   "thumbnails": {
-    "verified": 511,
+    "verified": 512,
     "draft": 40,
     "draft_structurally_valid": 39,
     "draft_invalid": 1,
     "eligible": 2698,
-    "remaining": 2187,
+    "remaining": 2186,
     "canonical_channel_eligible": 2284,
     "unregistered_identity_eligible": 414
   },
   "packages": {
-    "audited": 511,
-    "qa_sampled": 111,
+    "audited": 512,
+    "qa_sampled": 112,
     "full_visual_qa": false,
     "eligible": 2282,
-    "remaining": 1771
+    "remaining": 1770
   },
   "progress": {
     "title": 1,
-    "thumbnail": 0.1893995552260934,
-    "package": 0.22392638036809817,
-    "qa": 0.04864154250657318,
-    "composite": 0.3654918695251912
+    "thumbnail": 0.18977020014825796,
+    "package": 0.22436459246275198,
+    "qa": 0.049079754601226995,
+    "composite": 0.3658036368030592
   },
   "current_channel": {
     "order": 1,
     "Channel_ID": "UC-q0RDBWjYlYA2KkPzq0WSQ",
     "name": "Genius History",
     "videos": 10,
-    "next_Video_ID": "6-tlQ0ym7UE",
-    "next_Thumbnail_ID": "THB-bf982ff5df2eb0857b3a39f15f047e49e5a9eacc542b6aaedb0f9f9826cdc3bd",
-    "completed_videos": 2,
-    "remaining_videos": 8,
-    "progress": 0.45
+    "next_Video_ID": "BkOtJwis7vg",
+    "next_Thumbnail_ID": "THB-4f7f681f3d3beae05bf5a1ddc4137b4e238336aee54237a9b05337b58a852ea9",
+    "completed_videos": 3,
+    "remaining_videos": 7,
+    "progress": 0.5249999999999999
   },
   "git": {
     "HEAD": "2e0deeef196608c8556a1889810032060c2d7a39",
@@ -64,8 +64,8 @@
   },
   "resource": {
     "starting_short_window_used_percent": 23,
-    "latest_short_window_used_percent": 28,
-    "weekly_used_percent": 15,
+    "latest_short_window_used_percent": 36,
+    "weekly_used_percent": 16,
     "subagents": 0,
     "background_agents": 0,
     "watchers": 0,
@@ -74,7 +74,7 @@
     "context_window_warning": false
   },
   "source_SHA256": {
-    "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "c31797910fbcd8e214aaf29844f866cdb92d8f8848454ef700e65a5ecae31996",
+    "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "dda461114c9ba629250ad296d0e599c3134418182a0ce3b81f2b411bb0a921c5",
     "docs/research/thumbnail-forensics-2026-10-02/package-batch-plan.json": "5f26d6d91d702cb88bbffc23ff24d1a8cb155f11d8eff1393f398d4c3ff5aec0",
     "docs/research/thumbnail-forensics-2026-10-02/wave8-recovery-state.json": "b42e5e87cd5288485fbebb59b5e7cf1992272e4ab8eecd543db55f95d6bf5e63",
     "docs/research/thumbnail-forensics-2026-10-02/channel-coverage.csv": "739d6be88e6a0647b573cf18c98104bf249c00e21a99d247ba450125654ec44b",
@@ -166,14 +166,17 @@
     "rendered_sheets": 11,
     "visual_sheet_review": "PASS: all 11 sheet previews inspected before checkpoint trigger"
   },
-  "next_step": "Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video 6-tlQ0ym7UE",
+  "next_step": "Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video BkOtJwis7vg",
   "queue_order_policy": "Priority 1: full creative availability plus age-matched public class on every video; then Senior Health; own channel; other full data; partial data; identity-only. Ties use canonical Channel_ID.",
   "status": "IN_PROGRESS",
   "channel_microbatch": {
-    "id": "CHANNEL-001-M01",
-    "authored_thumbnail_rows": 1,
-    "authored_package_rows": 1,
-    "reopened_qa_rows": 1,
+    "ids": [
+      "CHANNEL-001-M01",
+      "CHANNEL-001-M02"
+    ],
+    "authored_thumbnail_rows": 2,
+    "authored_package_rows": 2,
+    "reopened_qa_rows": 2,
     "result": "PASS",
     "evidence_tier": "D_AGE_ADJUSTED_PUBLIC",
     "causality": "NOT_ESTABLISHED"

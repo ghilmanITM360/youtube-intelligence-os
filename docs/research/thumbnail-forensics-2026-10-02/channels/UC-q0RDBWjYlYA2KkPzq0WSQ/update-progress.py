@@ -31,6 +31,13 @@ batch='CHANNEL-001-M01'
 entry=dict(zip(ledger[0],['']*len(ledger[0])))
 entry.update(batch_id=batch,scope='Genius History video 279aqcCGBpI: channel-first thumbnail/package microbatch',status='COMPLETE',discovered_units='1',opened_units='1',classified_units='1',audited_units='1',excluded_units='0',ambiguous_units='0',remaining_units='0',QA_status='PASS',provenance='PRIMARY_AGENT_SEQUENTIAL; source SHA256 checked; historical title reused; content NOT_CHECKED',output='channels/'+HERE.name+'/thumbnail-audits.json; channels/'+HERE.name+'/package-audits.json; channels/'+HERE.name+'/qa.json')
 ledger=[r for r in ledger if r['batch_id']!=batch]+[entry]
+thumbs=json.loads((HERE/'thumbnail-audits.json').read_text())
+for bid in sorted({r['batch_id'] for r in thumbs if r['batch_id']!=batch}):
+    selected=[r for r in thumbs if r['batch_id']==bid]
+    reviewed_selected=[r for r in qa['reviews'] if r['Thumbnail_ID'] in {t['Thumbnail_ID'] for t in selected}]
+    newentry=dict(entry)
+    newentry.update(batch_id=bid,scope='Genius History channel-first videos '+','.join(r['Video_ID'] for r in reviewed_selected),discovered_units=str(len(selected)),opened_units=str(len(selected)),classified_units=str(len(selected)),audited_units=str(len(reviewed_selected)),remaining_units=str(len(selected)-len(reviewed_selected)),status='COMPLETE' if len(selected)==len(reviewed_selected) else 'QA_PENDING')
+    ledger=[r for r in ledger if r['batch_id']!=bid]+[newentry]
 write('completion-ledger.csv',ledger)
 s=json.loads((R/'packaging-progress-summary.json').read_text())
 s.update(timestamp=stamp,phase='CHANNEL_BY_CHANNEL',status='IN_PROGRESS')
@@ -50,6 +57,6 @@ s['next_step']='Continue Genius History in canonical Video_ID order, reuse compl
 for name in ('completion-ledger.csv',):
     relative='docs/research/thumbnail-forensics-2026-10-02/'+name
     s['source_SHA256'][relative]=hashlib.sha256((R/name).read_bytes()).hexdigest()
-s['channel_microbatch']=dict(id=batch,authored_thumbnail_rows=1,authored_package_rows=1,reopened_qa_rows=1,result='PASS',evidence_tier='D_AGE_ADJUSTED_PUBLIC',causality='NOT_ESTABLISHED')
+s['channel_microbatch']=dict(ids=sorted({r['batch_id'] for r in thumbs}),authored_thumbnail_rows=len(thumbs),authored_package_rows=len(new_packages),reopened_qa_rows=len(qa['reviews']),result='PASS',evidence_tier='D_AGE_ADJUSTED_PUBLIC',causality='NOT_ESTABLISHED')
 (R/'packaging-progress-summary.json').write_text(json.dumps(s,indent=2)+'\n')
 print(json.dumps(dict(channel=counts,progress=s['progress'],next_video=nextrow['Video_ID'])))
