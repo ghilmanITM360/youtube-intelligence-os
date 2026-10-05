@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-05T07:07:09+05:00",
-  "phase": "A_INFRASTRUCTURE_ONLY",
+  "timestamp": "2026-10-05T02:52:47.933358+00:00",
+  "phase": "CHANNEL_BY_CHANNEL",
   "channels": {
     "total": 75,
     "complete": 0,
@@ -21,36 +21,39 @@
     "eligible": 2303
   },
   "thumbnails": {
-    "verified": 510,
+    "verified": 511,
     "draft": 40,
     "draft_structurally_valid": 39,
     "draft_invalid": 1,
     "eligible": 2698,
-    "remaining": 2188,
+    "remaining": 2187,
     "canonical_channel_eligible": 2284,
     "unregistered_identity_eligible": 414
   },
   "packages": {
-    "audited": 510,
-    "qa_sampled": 110,
+    "audited": 511,
+    "qa_sampled": 111,
     "full_visual_qa": false,
     "eligible": 2282,
-    "remaining": 1772
+    "remaining": 1771
   },
   "progress": {
     "title": 1,
-    "thumbnail": 0.18902891030392885,
-    "package": 0.22348816827344434,
-    "qa": 0.04820333041191937,
-    "composite": 0.36518010224732317
+    "thumbnail": 0.1893995552260934,
+    "package": 0.22392638036809817,
+    "qa": 0.04864154250657318,
+    "composite": 0.3654918695251912
   },
   "current_channel": {
     "order": 1,
     "Channel_ID": "UC-q0RDBWjYlYA2KkPzq0WSQ",
     "name": "Genius History",
     "videos": 10,
-    "next_Video_ID": "279aqcCGBpI",
-    "next_Thumbnail_ID": "THB-f3edab4d080ff1f56feebe840a8cb0aea0691422d9d4c54057376ee1610a79fa"
+    "next_Video_ID": "6-tlQ0ym7UE",
+    "next_Thumbnail_ID": "THB-bf982ff5df2eb0857b3a39f15f047e49e5a9eacc542b6aaedb0f9f9826cdc3bd",
+    "completed_videos": 2,
+    "remaining_videos": 8,
+    "progress": 0.45
   },
   "git": {
     "HEAD": "2db8abd1008828fc5842aedcec5ad5f8e4bdeb00",
@@ -60,18 +63,18 @@
     "checkpoint_semantics": "HEAD and remote_HEAD are the confirmed data checkpoint recorded before the one metadata follow-up commit; no self-reference loop."
   },
   "resource": {
-    "starting_short_window_used_percent": 1,
-    "weekly_used_percent": 11,
+    "starting_short_window_used_percent": 23,
+    "latest_short_window_used_percent": 28,
+    "weekly_used_percent": 15,
     "subagents": 0,
     "background_agents": 0,
     "watchers": 0,
-    "visual_analysis": false,
-    "tool_output_truncation": true,
-    "context_window_warning": false,
-    "checkpoint_reason": "Oversized CSV whitespace diff output was truncated. Line endings repaired, existing infrastructure validated and persisted; no further image previews or analysis."
+    "visual_analysis": true,
+    "tool_output_truncation": false,
+    "context_window_warning": false
   },
   "source_SHA256": {
-    "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "453413f8364bcbb4b089e81e2fe8caf49117f1fe94c8badc033e3260553978a5",
+    "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "c31797910fbcd8e214aaf29844f866cdb92d8f8848454ef700e65a5ecae31996",
     "docs/research/thumbnail-forensics-2026-10-02/package-batch-plan.json": "5f26d6d91d702cb88bbffc23ff24d1a8cb155f11d8eff1393f398d4c3ff5aec0",
     "docs/research/thumbnail-forensics-2026-10-02/wave8-recovery-state.json": "b42e5e87cd5288485fbebb59b5e7cf1992272e4ab8eecd543db55f95d6bf5e63",
     "docs/research/thumbnail-forensics-2026-10-02/channel-coverage.csv": "739d6be88e6a0647b573cf18c98104bf249c00e21a99d247ba450125654ec44b",
@@ -163,7 +166,16 @@
     "rendered_sheets": 11,
     "visual_sheet_review": "PASS: all 11 sheet previews inspected before checkpoint trigger"
   },
-  "next_step": "Start Channel #1 only in a future authorized session; recover its existing drafts before authoring.",
+  "next_step": "Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video 6-tlQ0ym7UE",
   "queue_order_policy": "Priority 1: full creative availability plus age-matched public class on every video; then Senior Health; own channel; other full data; partial data; identity-only. Ties use canonical Channel_ID.",
-  "status": "DASHBOARD_READY"
+  "status": "IN_PROGRESS",
+  "channel_microbatch": {
+    "id": "CHANNEL-001-M01",
+    "authored_thumbnail_rows": 1,
+    "authored_package_rows": 1,
+    "reopened_qa_rows": 1,
+    "result": "PASS",
+    "evidence_tier": "D_AGE_ADJUSTED_PUBLIC",
+    "causality": "NOT_ESTABLISHED"
+  }
 }
