@@ -57,16 +57,16 @@
     "status": "IN_PROGRESS"
   },
   "git": {
-    "HEAD": "f2d8f610c4c99b7c46778d3575aed701735d8da8",
-    "remote_HEAD": "f2d8f610c4c99b7c46778d3575aed701735d8da8",
-    "Latest_Data_Commit_SHA": "f2d8f610c4c99b7c46778d3575aed701735d8da8",
-    "last_data_push_verified_at": "2026-10-05T12:35:37.183Z",
+    "HEAD": "912dd2b5a03df0f3b3ea0149ef6a6d4aa1874d29",
+    "remote_HEAD": "912dd2b5a03df0f3b3ea0149ef6a6d4aa1874d29",
+    "Latest_Data_Commit_SHA": "912dd2b5a03df0f3b3ea0149ef6a6d4aa1874d29",
+    "last_data_push_verified_at": "2026-10-05T12:40:11.440Z",
     "checkpoint_semantics": "Latest confirmed research data push; later metadata commits do not self-reference."
   },
   "resource": {
     "starting_short_window_used_percent": 3,
-    "latest_short_window_used_percent": 78,
-    "weekly_used_percent": 12,
+    "latest_short_window_used_percent": 90,
+    "weekly_used_percent": 14,
     "provider": "CODEX",
     "percentage_semantics": "USED",
     "subagents": 0,
@@ -74,7 +74,8 @@
     "watchers": 0,
     "visual_analysis": true,
     "tool_output_truncation": true,
-    "context_window_warning": false
+    "context_window_warning": false,
+    "new_visual_work_allowed": false
   },
   "source_SHA256": {
     "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "28885c0114ad0ee30f9407e970814940bcbf3192bf1635b3c7a444d667452d49",
@@ -169,9 +170,9 @@
     "rendered_sheets": 11,
     "visual_sheet_review": "PASS: all 11 sheet previews inspected before checkpoint trigger"
   },
-  "next_step": "Continue Hypothetically with QA_PENDING video EvuEMhh7SSk; one completed video per push. Existing scores and raw evidence preserved.",
+  "next_step": "Resource checkpoint: resume only after live short-window usage is at most 82%; next QA video EvuEMhh7SSk. No background work.",
   "queue_order_policy": "Priority 1: full creative availability plus age-matched public class on every video; then Senior Health; own channel; other full data; partial data; identity-only. Ties use canonical Channel_ID.",
-  "status": "NEXT_CHANNEL_IN_PROGRESS",
+  "status": "RESOURCE_CHECKPOINT",
   "channel_microbatch": {
     "ids": [
       "CHANNEL-002-M02"
@@ -208,6 +209,10 @@
     {
       "Video_ID": "_mV6X5Fbpys",
       "sha": "f2d8f610c4c99b7c46778d3575aed701735d8da8"
+    },
+    {
+      "Video_ID": "24VpqQN2gfY",
+      "sha": "912dd2b5a03df0f3b3ea0149ef6a6d4aa1874d29"
     }
   ],
   "next_channel": {
