@@ -3,8 +3,8 @@
   "phase": "CHANNEL_BY_CHANNEL",
   "channels": {
     "total": 75,
-    "complete": 0,
-    "in_progress": 46,
+    "complete": 1,
+    "in_progress": 45,
     "not_started": 0,
     "qa_pending": 0,
     "identity_only": 29,
@@ -45,27 +45,28 @@
     "composite": 0.367783793493931
   },
   "current_channel": {
-    "order": 1,
-    "Channel_ID": "UC-q0RDBWjYlYA2KkPzq0WSQ",
-    "name": "Genius History",
-    "videos": 10,
-    "next_Video_ID": "",
-    "next_Thumbnail_ID": "",
-    "completed_videos": 10,
-    "remaining_videos": 0,
-    "progress": 1.0
+    "order": 2,
+    "Channel_ID": "UC0L9hD7HMwWU7xuU5HRA6Iw",
+    "name": "Hypothetically",
+    "videos": 39,
+    "next_Video_ID": "_mV6X5Fbpys",
+    "next_Thumbnail_ID": "THB-5b2ba505864ce23fb687efdf4cadc6445c7760d48a2a133d3196d1ec4134ff47",
+    "completed_videos": 0,
+    "remaining_videos": 39,
+    "progress": 0.4230769230769231,
+    "status": "IN_PROGRESS"
   },
   "git": {
-    "HEAD": "5d798d87ea8f56f5e27f62c2bf6c3d7137714eec",
-    "remote_HEAD": "5d798d87ea8f56f5e27f62c2bf6c3d7137714eec",
-    "Latest_Data_Commit_SHA": "5d798d87ea8f56f5e27f62c2bf6c3d7137714eec",
+    "HEAD": "ad6d286c9467084ab70561bc3ce9d1895b0c1d77",
+    "remote_HEAD": "ad6d286c9467084ab70561bc3ce9d1895b0c1d77",
+    "Latest_Data_Commit_SHA": "ad6d286c9467084ab70561bc3ce9d1895b0c1d77",
     "last_data_push_verified_at": "2026-10-05T09:22:45.604520+00:00",
-    "checkpoint_semantics": "Latest confirmed research data push; later metadata commits do not self-reference."
+    "checkpoint_semantics": "Latest confirmed video-data push; channel closure commit cannot self-reference."
   },
   "resource": {
     "starting_short_window_used_percent": 3,
-    "latest_short_window_used_percent": 66,
-    "weekly_used_percent": 13,
+    "latest_short_window_used_percent": 80,
+    "weekly_used_percent": 15,
     "provider": "CODEX",
     "percentage_semantics": "USED",
     "subagents": 0,
@@ -168,9 +169,9 @@
     "rendered_sheets": 11,
     "visual_sheet_review": "PASS: all 11 sheet previews inspected before checkpoint trigger"
   },
-  "next_step": "Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video ",
+  "next_step": "Genius History complete; next queue channel is Hypothetically (UC0L9hD7HMwWU7xuU5HRA6Iw). No next-channel analysis started.",
   "queue_order_policy": "Priority 1: full creative availability plus age-matched public class on every video; then Senior Health; own channel; other full data; partial data; identity-only. Ties use canonical Channel_ID.",
-  "status": "IN_PROGRESS",
+  "status": "CHANNEL_COMPLETE",
   "channel_microbatch": {
     "ids": [
       "CHANNEL-001-M01",
@@ -205,6 +206,45 @@
     {
       "Video_ID": "guBzFxCYFVg",
       "sha": "5d798d87ea8f56f5e27f62c2bf6c3d7137714eec"
+    },
+    {
+      "Video_ID": "p000f2w5xSA",
+      "sha": "ad6d286c9467084ab70561bc3ce9d1895b0c1d77"
     }
-  ]
+  ],
+  "next_channel": {
+    "Channel_Order": "2",
+    "Channel_ID": "UC0L9hD7HMwWU7xuU5HRA6Iw",
+    "Channel_Name": "Hypothetically",
+    "Handle": "@HypotheticallyHQ",
+    "Channel_Type": "REFERENCE",
+    "Niche": "HISTORY_ROLEPLAY_POV",
+    "Sub_Niche": "UNSPECIFIED",
+    "Canonical_Videos": "39",
+    "Titles_Available": "39",
+    "Thumbnails_Available": "39",
+    "Packages_Eligible": "39",
+    "Existing_Title_Audits": "39",
+    "Existing_Verified_Thumbnail_Audits": "12",
+    "Existing_Thumbnail_Drafts": "1",
+    "Existing_Package_Audits": "12",
+    "Existing_Package_QA": "3",
+    "Videos_Remaining": "39",
+    "Priority": "1",
+    "Priority_Reason": "Full title, accessible primary thumbnail and age-matched public metrics for every canonical video",
+    "Channel_Status": "IN_PROGRESS"
+  },
+  "channel_results": "channels/UC-q0RDBWjYlYA2KkPzq0WSQ/channel-results.json",
+  "completed_channel": {
+    "order": 1,
+    "Channel_ID": "UC-q0RDBWjYlYA2KkPzq0WSQ",
+    "name": "Genius History",
+    "videos": 10,
+    "next_Video_ID": "",
+    "next_Thumbnail_ID": "",
+    "completed_videos": 10,
+    "remaining_videos": 0,
+    "progress": 1,
+    "status": "COMPLETE"
+  }
 }

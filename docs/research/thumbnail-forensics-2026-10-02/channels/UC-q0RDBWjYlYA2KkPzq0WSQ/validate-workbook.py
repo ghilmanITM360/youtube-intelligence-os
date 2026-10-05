@@ -1,4 +1,4 @@
-import csv,io,json,subprocess,zipfile,xml.etree.ElementTree as E
+import csv,io,json,subprocess,sys,zipfile,xml.etree.ElementTree as E
 from pathlib import Path
 r=Path(__file__).resolve().parent.parents[1]
 root=r.parents[2]
@@ -33,8 +33,27 @@ for sheet,col,count in [(2,'B',75),(3,'D',2303)]:
 assert any(x.get('type')=='dataBar' for x in after[1][0].findall('.//m:cfRule',n))
 assert any(x.get('type')=='dataBar' for x in after[2][0].findall('.//m:cfRule',n))
 assert after[4][1]['B15'][1]==s['current_channel']['next_Video_ID']
+closure='--channel-closure' in sys.argv
 for k in [5,6,7,8,11]:
- assert before[k][1]==after[k][1],f'Unrelated sheet {k} modified'
+ if not closure or k==11:
+  assert before[k][1]==after[k][1],f'Unrelated sheet {k} modified'
+ else:
+  affected={cell[1:] for cell,(formula,value) in before[k][1].items() if cell.startswith('A') and value=='Genius History'}
+  for cell,value in before[k][1].items():
+   row=''.join(c for c in cell if c.isdigit())
+   if row not in affected and value!=('',''):
+    assert after[k][1].get(cell)==value,(k,cell,'unrelated channel changed')
+if closure:
+ assert after[2][1]['V2'][1]=='COMPLETE'
+ for k,count in [(5,1),(6,6),(7,6),(8,2)]:
+  assert sum(cell.startswith('A') and value=='Genius History' for cell,(formula,value) in after[k][1].items())==count
+ assert s.get('completed_channel',s['current_channel'])['completed_videos']==10 and s['status']=='CHANNEL_COMPLETE'
+ assert after[1][1]['E7'][1]==str(s['channels']['complete'])
+ assert after[1][1]['H7'][1]==str(s['channels']['in_progress'])
+ assert after[4][1]['B5'][1]==s['current_channel']['Channel_ID']
+ assert after[4][1]['B13'][1]==str(s['current_channel']['remaining_videos'])
+ assert after[4][1]['B16'][1]==s['current_channel']['next_Thumbnail_ID']
+
 for k in range(1,12):
  for cell,(formula,value) in after[k][1].items():
   assert value not in ('#REF!','#DIV/0!','#VALUE!','#NAME?','#NUM!','#SPILL!','#CALC!'),(k,cell,value)
