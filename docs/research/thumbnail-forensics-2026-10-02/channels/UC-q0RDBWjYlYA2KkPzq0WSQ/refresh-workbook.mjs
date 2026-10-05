@@ -32,7 +32,11 @@ dash.getRange('B27').values=[['CURRENT CHANNEL • SEQUENTIAL VIDEO ANALYSIS']];
 dash.getRange('F35').values=[['Short-window '+summary.resource.latest_short_window_used_percent+'% / weekly '+summary.resource.weekly_used_percent+'% at latest check']];
 const current=wb.worksheets.getItem('03_CURRENT_CHANNEL');current.getRange('A1').values=[['CURRENT CHANNEL / ACTIVE WORKLIST']];
 current.getRange('B13').values=[[10-counts.complete]];
-// Existing formulas own the dynamic channel/video list; preserve their references.
+// Advance the explicit resume pointer while retaining dependent INDEX formulas.
+current.getRange('B19').formulas=[[summary.current_channel.next_Video_ID ? `=MATCH("${summary.current_channel.next_Video_ID}",'02_VIDEO_PROGRESS'!D1:D2304,0)` : '=0']];
+const checkpoints=wb.worksheets.getItem('09_GIT_CHECKPOINTS');
+const checkpointLabel='Video '+latest+' complete; awaiting this commit push';
+if(!checkpoints.getUsedRange().values.some(row=>row[2]===checkpointLabel)) checkpoints.tables.items[0].rows.add(null,[[now,'Genius History',checkpointLabel,1,null,'READY_FOR_COMMIT',null,'PASS','Commit SHA and push verification recorded after push; no self-referential SHA']]);
 const qa=wb.worksheets.getItem('08_QA_PROGRESS');
 const audit=JSON.parse(await fs.readFile(here+'/package-audits.json','utf8')).find(r=>r.Video_ID===latest);
 const reviews=JSON.parse(await fs.readFile(here+'/qa.json','utf8')).reviews.filter(r=>r.microbatch===audit.batch_id||(!r.microbatch&&audit.batch_id==='CHANNEL-001-M01'));

@@ -49,7 +49,9 @@ def main():
     errors = []
     assert len(videos) == 10 and len({r['Video_ID'] for r in videos}) == 10
     assert len(nt) == len(newthumb) and len(np) == len(newpkg)
-    assert not set(nt) & set(oldthumb), 'Never overwrite/duplicate a legacy audit'
+    superseded = set(nt) & set(oldthumb)
+    provenance = {r['Thumbnail_ID'] for r in qa['reviews'] if r.get('legacy_draft_preserved') and r.get('legacy_draft_source') and r['result'] in ('PASS', 'PASS_WITH_CORRECTIONS')}
+    assert superseded <= provenance, 'Legacy successors require explicit preserved-draft QA provenance'
     assert not set(np) & set(oldpkg), 'Never duplicate a legacy package'
     vmap = {r['Video_ID']: r for r in videos}
     for row in newthumb:

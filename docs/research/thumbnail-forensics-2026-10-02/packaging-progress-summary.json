@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-05T09:20:24.211956+00:00",
+  "timestamp": "2026-10-05T11:39:51.048236+00:00",
   "phase": "CHANNEL_BY_CHANNEL",
   "channels": {
     "total": 75,
@@ -21,39 +21,39 @@
     "eligible": 2303
   },
   "thumbnails": {
-    "verified": 513,
+    "verified": 514,
     "draft": 40,
     "draft_structurally_valid": 39,
     "draft_invalid": 1,
     "eligible": 2698,
-    "remaining": 2185,
+    "remaining": 2184,
     "canonical_channel_eligible": 2284,
     "unregistered_identity_eligible": 414
   },
   "packages": {
-    "audited": 513,
-    "qa_sampled": 114,
+    "audited": 514,
+    "qa_sampled": 115,
     "full_visual_qa": false,
     "eligible": 2282,
-    "remaining": 1769
+    "remaining": 1768
   },
   "progress": {
     "title": 1,
-    "thumbnail": 0.19014084507042253,
-    "package": 0.22480280455740578,
-    "qa": 0.04995617879053462,
-    "composite": 0.36622495710459074
+    "thumbnail": 0.1905114899925871,
+    "package": 0.2252410166520596,
+    "qa": 0.050394390885188434,
+    "composite": 0.36653672438245877
   },
   "current_channel": {
     "order": 1,
     "Channel_ID": "UC-q0RDBWjYlYA2KkPzq0WSQ",
     "name": "Genius History",
     "videos": 10,
-    "next_Video_ID": "vfUeKc8MSiA",
-    "next_Thumbnail_ID": "THB-ba9ecd05d8e5dc39b6157d190fa452f17593814bbd090757ba1a85487c284153",
-    "completed_videos": 5,
-    "remaining_videos": 5,
-    "progress": 0.625
+    "next_Video_ID": "cqGJ5ZRLAvs",
+    "next_Thumbnail_ID": "THB-ed2d8c8963740d779592ec59354dfd70f45ec321c267eead8c977814e657fd03",
+    "completed_videos": 6,
+    "remaining_videos": 4,
+    "progress": 0.7000000000000001
   },
   "git": {
     "HEAD": "3ae5c5e2c9d2aa28edff07a42486eea049333d1e",
@@ -63,21 +63,20 @@
     "checkpoint_semantics": "Latest confirmed research data push; later metadata commits do not self-reference."
   },
   "resource": {
-    "starting_short_window_used_percent": 64,
-    "latest_short_window_used_percent": 86,
-    "weekly_used_percent": 32,
+    "starting_short_window_used_percent": 3,
+    "latest_short_window_used_percent": 3,
+    "weekly_used_percent": 3,
+    "provider": "CODEX",
+    "percentage_semantics": "USED",
     "subagents": 0,
     "background_agents": 0,
     "watchers": 0,
     "visual_analysis": true,
     "tool_output_truncation": true,
-    "context_window_warning": false,
-    "policy": "PERCENT_USED: normal <=70; bounded video 71-82; checkpoint 83-90; mandatory stop >90",
-    "truncation_stopped_work": false,
-    "checkpoint_reason": "Revised user policy: 83-90 percent used; Rome completed and pushed, no next video started."
+    "context_window_warning": false
   },
   "source_SHA256": {
-    "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "9f9b97f2f22968c7f795eafd198363a629d3c54b05f2f46461521e52e9447d3a",
+    "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "8f7f291292999ad31334cfe9b36eaa749c2668e37776ba9d1fca6f6ffc47b500",
     "docs/research/thumbnail-forensics-2026-10-02/package-batch-plan.json": "5f26d6d91d702cb88bbffc23ff24d1a8cb155f11d8eff1393f398d4c3ff5aec0",
     "docs/research/thumbnail-forensics-2026-10-02/wave8-recovery-state.json": "b42e5e87cd5288485fbebb59b5e7cf1992272e4ab8eecd543db55f95d6bf5e63",
     "docs/research/thumbnail-forensics-2026-10-02/channel-coverage.csv": "739d6be88e6a0647b573cf18c98104bf249c00e21a99d247ba450125654ec44b",
@@ -169,18 +168,19 @@
     "rendered_sheets": 11,
     "visual_sheet_review": "PASS: all 11 sheet previews inspected before checkpoint trigger"
   },
-  "next_step": "Continue Genius History priority order: vfUeKc8MSiA, cqGJ5ZRLAvs, gT_b6RkSPUI, guBzFxCYFVg, p000f2w5xSA; one completed video per push.",
+  "next_step": "Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video cqGJ5ZRLAvs",
   "queue_order_policy": "Priority 1: full creative availability plus age-matched public class on every video; then Senior Health; own channel; other full data; partial data; identity-only. Ties use canonical Channel_ID.",
-  "status": "RESOURCE_CHECKPOINT",
+  "status": "IN_PROGRESS",
   "channel_microbatch": {
     "ids": [
       "CHANNEL-001-M01",
       "CHANNEL-001-M02",
-      "CHANNEL-001-M03"
+      "CHANNEL-001-M03",
+      "CHANNEL-001-M05"
     ],
-    "authored_thumbnail_rows": 3,
-    "authored_package_rows": 3,
-    "reopened_qa_rows": 4,
+    "authored_thumbnail_rows": 4,
+    "authored_package_rows": 4,
+    "reopened_qa_rows": 5,
     "result": "PASS_WITH_CORRECTIONS",
     "evidence_tier": "D_AGE_ADJUSTED_PUBLIC",
     "causality": "NOT_ESTABLISHED"

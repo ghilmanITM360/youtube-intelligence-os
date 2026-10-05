@@ -25,6 +25,11 @@ for row in cross:
     if row['Thumbnail_ID'] in verified:
         row.update(Legacy_Status='VERIFIED',QA_Status='PRIMARY_SEQUENTIAL_QA_PASS',**{'Already_Reused?':'NO'})
         row['Notes']='New channel-first audit; legacy batch/sequence retained as queue provenance, not a newly authored global batch.'
+        review=next((q for q in qa['reviews'] if q['Thumbnail_ID']==row['Thumbnail_ID']), {})
+        if review.get('legacy_draft_preserved'):
+            row['Already_Reused?']='YES'
+            row['QA_Status']='PRIMARY_SEQUENTIAL_QA_'+review['result']
+            row['Notes']='Verified successor reuses '+review['legacy_draft_source']+'; original draft preserved; corrections in channel qa.json.'
 write('legacy-batch-to-channel.csv',cross)
 ledger=read('completion-ledger.csv')
 batch='CHANNEL-001-M01'
@@ -51,9 +56,9 @@ s['packages']['audited']=len(legacy_packages|new_packages)
 s['packages']['qa_sampled']=len(legacy_qa|{r['Video_ID'] for r in qa['reviews']});s['packages']['remaining']=s['packages']['eligible']-s['packages']['audited']
 s['progress'].update(thumbnail=s['thumbnails']['verified']/s['thumbnails']['eligible'],package=s['packages']['audited']/s['packages']['eligible'],qa=s['packages']['qa_sampled']/s['packages']['eligible'])
 s['progress']['composite']=sum(s['progress'][k] for k in ('title','thumbnail','package','qa'))/4
-nextrow=next(r for r in m if r['Current_Status']!='COMPLETE')
+nextrow=next((r for r in m if r['Current_Status']!='COMPLETE'), {'Video_ID':'','Thumbnail_ID':''})
 s['current_channel'].update(completed_videos=counts['complete'],remaining_videos=10-counts['complete'],progress=(1+counts['verified']/10+counts['packages']/10+counts['qa']/10)/4,next_Video_ID=nextrow['Video_ID'],next_Thumbnail_ID=nextrow['Thumbnail_ID'])
-s['resource']=dict(starting_short_window_used_percent=23,latest_short_window_used_percent=28,weekly_used_percent=15,subagents=0,background_agents=0,watchers=0,visual_analysis=True,tool_output_truncation=False,context_window_warning=False)
+s['resource']=dict(starting_short_window_used_percent=3,latest_short_window_used_percent=3,weekly_used_percent=3,provider='CODEX',percentage_semantics='USED',subagents=0,background_agents=0,watchers=0,visual_analysis=True,tool_output_truncation=True,context_window_warning=False)
 s['next_step']='Continue Genius History in canonical Video_ID order, reuse completed legacy rows; next video '+nextrow['Video_ID']
 for name in ('completion-ledger.csv',):
     relative='docs/research/thumbnail-forensics-2026-10-02/'+name
