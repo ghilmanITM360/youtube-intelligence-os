@@ -56,16 +56,16 @@
     "progress": 0.625
   },
   "git": {
-    "HEAD": "0da3cec4f4647c3fa91897f6d932f9b97bcca6eb",
-    "remote_HEAD": "0da3cec4f4647c3fa91897f6d932f9b97bcca6eb",
-    "Latest_Data_Commit_SHA": "0da3cec4f4647c3fa91897f6d932f9b97bcca6eb",
-    "last_data_push_verified_at": "2026-10-05T03:07:01.339Z",
+    "HEAD": "3ae5c5e2c9d2aa28edff07a42486eea049333d1e",
+    "remote_HEAD": "3ae5c5e2c9d2aa28edff07a42486eea049333d1e",
+    "Latest_Data_Commit_SHA": "3ae5c5e2c9d2aa28edff07a42486eea049333d1e",
+    "last_data_push_verified_at": "2026-10-05T09:22:45.604520+00:00",
     "checkpoint_semantics": "Latest confirmed research data push; later metadata commits do not self-reference."
   },
   "resource": {
     "starting_short_window_used_percent": 64,
-    "latest_short_window_used_percent": 64,
-    "weekly_used_percent": 28,
+    "latest_short_window_used_percent": 86,
+    "weekly_used_percent": 32,
     "subagents": 0,
     "background_agents": 0,
     "watchers": 0,
@@ -73,7 +73,8 @@
     "tool_output_truncation": true,
     "context_window_warning": false,
     "policy": "PERCENT_USED: normal <=70; bounded video 71-82; checkpoint 83-90; mandatory stop >90",
-    "truncation_stopped_work": false
+    "truncation_stopped_work": false,
+    "checkpoint_reason": "Revised user policy: 83-90 percent used; Rome completed and pushed, no next video started."
   },
   "source_SHA256": {
     "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv": "9f9b97f2f22968c7f795eafd198363a629d3c54b05f2f46461521e52e9447d3a",
@@ -170,7 +171,7 @@
   },
   "next_step": "Continue Genius History priority order: vfUeKc8MSiA, cqGJ5ZRLAvs, gT_b6RkSPUI, guBzFxCYFVg, p000f2w5xSA; one completed video per push.",
   "queue_order_policy": "Priority 1: full creative availability plus age-matched public class on every video; then Senior Health; own channel; other full data; partial data; identity-only. Ties use canonical Channel_ID.",
-  "status": "IN_PROGRESS",
+  "status": "RESOURCE_CHECKPOINT",
   "channel_microbatch": {
     "ids": [
       "CHANNEL-001-M01",
