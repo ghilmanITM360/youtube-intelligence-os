@@ -7,6 +7,7 @@ import os
 import sqlite3
 import tempfile
 from contextlib import closing
+from datetime import datetime, timezone
 from pathlib import Path
 
 from source_adapters.what_if_forensic_brain import TABLE_IDS, load_brain
@@ -109,6 +110,34 @@ def build_manifest(brain, catalog_ids, tables, excluded, excluded_rows, table_fi
     }
 
 
+def write_lifecycle(output, manifest):
+    """Keep wall-clock creation metadata separate from deterministic evidence bytes."""
+    receipt_path = output / "lifecycle.json"
+    receipt = {
+        "schema_version": "what-if-stage-lifecycle-1",
+        "source_release": manifest["source_release"],
+        "transformation_version": manifest["transformation_version"],
+        "manifest_sha256": sha256(output / "manifest.json"),
+        "accepted_rows": manifest["accepted_rows"],
+        "held_rows": manifest["excluded_rows"],
+        "rejected_rows": manifest["rejected_rows"],
+    }
+    if receipt_path.exists():
+        existing = json.loads(receipt_path.read_text(encoding="utf-8"))
+        created_at = existing.pop("created_at", None)
+        if existing != receipt or not isinstance(created_at, str):
+            raise StagingError("lifecycle receipt differs from validated stage")
+        try:
+            if datetime.fromisoformat(created_at).utcoffset() is None:
+                raise ValueError("missing timezone")
+        except ValueError as exc:
+            raise StagingError("invalid lifecycle timestamp") from exc
+        return
+    receipt["created_at"] = datetime.now(timezone.utc).isoformat()
+    with receipt_path.open("x", encoding="utf-8") as stream:
+        stream.write(canonical_json(receipt) + "\n")
+
+
 def stage(brain, catalog_path, output):
     catalog_ids = catalog_identities(catalog_path)
     tables, excluded, excluded_rows = normalize(brain, catalog_ids)
@@ -127,14 +156,16 @@ def stage(brain, catalog_path, output):
         (temporary / "manifest.json").write_text(canonical_json(manifest) + "\n", encoding="utf-8")
         if output.exists():
             expected = {path.name: sha256(path) for path in temporary.iterdir()}
-            actual = {path.name: sha256(path) for path in output.iterdir() if path.is_file()}
+            actual = {path.name: sha256(path) for path in output.iterdir() if path.is_file() and path.name != "lifecycle.json"}
             if actual != expected:
                 raise StagingError(canonical_json({
                     "status": "DIFF_REQUIRES_REVIEW", "expected": expected, "existing": actual,
                     "accepted_rows": manifest["accepted_rows"],
                     "excluded_rows": manifest["excluded_rows"]}))
+            write_lifecycle(output, manifest)
             return {"status": "UNCHANGED", "manifest": manifest}
         os.replace(temporary, output)
+        write_lifecycle(output, manifest)
         return {"status": "CREATED", "manifest": manifest}
 
 

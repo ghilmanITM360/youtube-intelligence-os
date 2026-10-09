@@ -70,6 +70,20 @@ class StagingTests(unittest.TestCase):
             self.assertEqual(connection.execute("SELECT COUNT(*) FROM videos").fetchone()[0], 1)
             self.assertEqual(connection.execute("SELECT views FROM video_snapshots").fetchone()[0], 123)
 
+    def test_durable_lifecycle_receipt_survives_second_run(self):
+        stage(self.brain, self.catalog, self.output)
+        receipt_path = self.output / "lifecycle.json"
+        self.assertTrue(receipt_path.is_file())
+        first = receipt_path.read_bytes()
+        receipt = json.loads(first)
+        self.assertTrue(receipt["created_at"].endswith("+00:00"))
+        self.assertEqual(receipt["accepted_rows"], 8)
+        self.assertEqual(receipt["held_rows"], 16)
+        self.assertEqual(receipt["rejected_rows"], 0)
+        self.assertEqual(len(receipt["manifest_sha256"]), 64)
+        self.assertEqual(stage(self.brain, self.catalog, self.output)["status"], "UNCHANGED")
+        self.assertEqual(receipt_path.read_bytes(), first)
+
     def test_changed_stage_requires_review_without_overwrite(self):
         stage(self.brain, self.catalog, self.output)
         before = (self.output / "manifest.json").read_bytes()
