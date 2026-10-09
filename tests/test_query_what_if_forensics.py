@@ -133,3 +133,19 @@ def test_guidance_uses_all_eight_source_tables(evidence):
     tables = {ref["source_table"] for row in result["recommendations"] for ref in row["evidence"]}
     assert tables == {"MASTER_WORDS", "MASTER_SENTENCES", "MASTER_SHOTS", "MASTER_STATES",
                       "MASTER_MOTIONS", "MASTER_ASSETS", "MASTER_AUDIO_EVENTS", "MASTER_AUDIO_VISUAL_SYNC"}
+
+
+def test_aggregate_evidence_keeps_all_rows_in_compact_groups(evidence):
+    import query_what_if_forensics as query
+    second = dict(evidence.brain["tables"]["MASTER_SHOTS"][0])
+    second.update({"SHOT_ID": "ROW4", "START_SEC": "4", "END_SEC": "8"})
+    evidence.brain["tables"]["MASTER_SHOTS"].append(second)
+    output = evidence.root / "grouped-stage"
+    stage(evidence.brain, evidence.catalog, output)
+    index = evidence.root / "grouped-index.json"
+    promote(output, evidence.catalog, index)
+    result = query.query_evidence(output, evidence.catalog, index)
+    pacing = next(row for row in result["recommendations"] if row["kind"] == "SHOT_PACING")
+    assert len(pacing["evidence"]) == 1
+    assert [row["source_row_id"] for row in pacing["evidence"][0]["source_rows"]] == ["ROW1", "ROW4"]
+    assert pacing["evidence"][0]["source_rows"][1]["source_reference"].endswith("#row=5")

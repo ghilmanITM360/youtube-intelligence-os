@@ -679,7 +679,9 @@ def render_markdown(plan):
             refs = recommendation["evidence"]
             lines.append(f"- EVIDENCE_BACKED_HYPOTHESIS: {recommendation['recommendation']}")
             lines.append("  - Evidence: " + "; ".join(
-                f"{row['canonical_youtube_video_id']} / {row['source_video_id']} / {row['source_table']}:{row['source_row_id']} / {row['source_reference']} (confidence: {row['confidence']})"
+                f"{row['canonical_youtube_video_id']} / {row['source_video_id']} / {row['source_table']} / "
+                + ", ".join(f"{item['source_row_id']}@{item['source_reference']} (confidence: {item['confidence']})"
+                            for item in row.get("source_rows", [row]))
                 for row in refs))
     elif consumption:
         lines.append(f"- Forensic consumption: NOT_AVAILABLE ({consumption['reason']}).")

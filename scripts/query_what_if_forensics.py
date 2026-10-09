@@ -33,6 +33,17 @@ def reference(row):
     )}
 
 
+def evidence_groups(rows):
+    """Share common provenance once per video/table; retain every contributing row."""
+    groups = {}
+    for row in rows:
+        key = (row["canonical_youtube_video_id"], row["source_video_id"], row["source_table"])
+        item = groups.setdefault(key, {**reference(row), "source_rows": []})
+        item["source_rows"].append({field: row[field] for field in
+                                    ("source_row_id", "source_reference", "confidence")})
+    return list(groups.values())
+
+
 def query_evidence(stage_dir, catalog_path, index_path, video_ids=None):
     """Validate every staged byte against promotion, then summarize selected videos.
 
@@ -86,7 +97,7 @@ def query_evidence(stage_dir, catalog_path, index_path, video_ids=None):
         # Word/sentence detail is bounded to the opening, not raw narration text.
         for table in ("MASTER_WORDS", "MASTER_SENTENCES"):
             table_evidence[table] = {"count": len(tables[table]),
-                                     "opening_evidence": [reference(row) for row in opening[table]]}
+                                     "opening_evidence": evidence_groups(opening[table])}
         mean = statistics.mean(durations) if durations else None
         first_row = next(iter(tables.values()))[0]
         videos.append({
@@ -123,7 +134,7 @@ def query_evidence(stage_dir, catalog_path, index_path, video_ids=None):
                 "kind": "SHOT_PACING",
                 "youtube_video_id": youtube_id,
                 "recommendation": f"Test shot pacing near {mean:.2f} seconds per sampled shot when the example's explanatory structure fits the planned segment; review the cited states and narration before adoption.",
-                "evidence": [reference(row) for row, _ in valid_shots],
+                "evidence": evidence_groups([row for row, _ in valid_shots]),
                 "confidence": "LIMITED_SOURCE_SAMPLE",
                 "performance_effect": "NOT_ESTABLISHED",
             })
@@ -158,7 +169,7 @@ def query_evidence(stage_dir, catalog_path, index_path, video_ids=None):
         for kind, recommendation, rows, extra in hypotheses:
             recommendations.append({"claim_kind": "EVIDENCE_BACKED_HYPOTHESIS", "kind": kind,
                                     "youtube_video_id": youtube_id, "recommendation": recommendation,
-                                    "evidence": [reference(row) for row in rows],
+                                    "evidence": evidence_groups(rows),
                                     "confidence": "LIMITED_SOURCE_SAMPLE", "performance_effect": "NOT_ESTABLISHED",
                                     **extra})
     recurring = defaultdict(list)
