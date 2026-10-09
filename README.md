@@ -1,10 +1,10 @@
 # YouTube Intelligence OS
 
-A canonical workspace for developing a persistent, evidence-based intelligence system for multiple YouTube channels. The long-term vision includes data inventory, competitor analysis, research, topic discovery, and content-development intelligence. This repository is **not** that finished product yet — it is currently the data-ingestion and provenance foundation the later intelligence phases will build on.
+An evidence-based intelligence system for multiple YouTube channels. **YouTube Intelligence OS V1 is complete**: Topic, Packaging, Hook and Script intelligence feed a unified production-plan orchestrator. Editing/Visual intelligence is available where registered forensic evidence exists; unavailable evidence is explicit. Channel Strategy is GENERALIZED_WORKING with limited cross-niche evidence coverage. V2 does not begin automatically.
 
-**Current Phase: Phase 1D — Controlled Apify YouTube Acquisition, COMPLETE** (see `docs/Phases.md`). Phase 2 — Data Classification & Provenance is also closed (`AGENTS.md` rule 12). Topic Opportunity, Packaging, Hook/Script, and Editing/Visual Intelligence have since been authorized and piloted for one or more of the 5 canonical channels, and a first unified content-intelligence orchestrator (`scripts/run_youtube_intelligence.py`) composes these existing layers into evidence-traceable plans. The formal phase bookkeeping in `docs/Phases.md` has not yet been updated to reflect this progression and should be reconciled separately.
+**What If integration (2026-10-09):** source contract, read-only adapter, durable normalized staging, promotion and source-backed Editing/Visual production guidance are implemented. Ten existing videos supply 8,327 observations. Two verified external IDs await canonical acquisition; two ID-less sources remain unresolved. Canonical What If count remains 83. See [current project status](PROJECT_STATUS.md) and [integration workflow](docs/WHAT_IF_INTEGRATION_WORKFLOW.md) for exact counts, commands and external blockers.
 
-**Current data state (2026-09-23):** 71 canonical channels, 27 acquired datasets (DS-000001–028, plus DS-000026 as a preflight-only proposal). DS-000027 (Dr. Ares Senior) and DS-000028 (Dr. Okoro — 66 videos, 66 descriptions, 66 transcripts, complete) are both integrated. See `docs/YOUTUBE_CHANNEL_REGISTRY.md` for full population controls.
+Catalogs have distinct populations: the selected inventory and the broader channel registry must not be treated as interchangeable sample counts. See `docs/YOUTUBE_CHANNEL_REGISTRY.md` and `data/catalog/README.md`.
 
 ## Bootstrap (clean clone)
 
@@ -26,7 +26,7 @@ python -m pytest -q
 
 ## Current purpose
 
-Phase 0.5 hardened the project's planning documentation (`docs/Architecture.md`, `docs/Phases.md`, `docs/Database.md`, `docs/Prompts.md`, `docs/Security.md`, `docs/Error_Handling.md`) and performed read-only discovery of real external source folders. Phase 1A–1C then accepted user-supplied datasets, preserved their originals, inventoried their contents (recursively, with an explicit disposition for every discovered item), extracted descriptive facts from images and documents (OCR, native visual observation, text characterization), and recorded provenance — without performing competitor strategy analysis, topic generation, or any other content-recommendation work. That analysis layer is intentionally deferred to a later, separately-authorized phase.
+Phase 0.5 hardened the project's planning documentation (`docs/Architecture.md`, `docs/Phases.md`, `docs/Database.md`, `docs/Prompts.md`, `docs/Security.md`, `docs/Error_Handling.md`) and performed read-only discovery of real external source folders. Phase 1A–1C then accepted user-supplied datasets, preserved their originals, inventoried their contents (recursively, with an explicit disposition for every discovered item), extracted descriptive facts from images and documents (OCR, native visual observation, text characterization), and recorded provenance — without performing competitor strategy analysis, topic generation, or any other content-recommendation work. Those historical ingestion boundaries remain documented; the subsequently authorized V1 intelligence layers are now implemented.
 
 ## What is (and isn't) in this repository
 
@@ -38,9 +38,9 @@ This repository is the **code, schema, and documentation layer** — it is porta
 
 It deliberately does **not** contain the full operational data payload:
 
-- `data/catalog/youtube_inventory.db` — the legacy/selected-inventory SQLite catalog — is generated from the schema plus the manifests below and is gitignored (Decision 013). It is not committed, and does not need to be for the project's history to be reconstructable.
+- `data/catalog/youtube_inventory.db` — the selected-inventory SQLite catalog — is committed as a checkpoint under the owner preservation policy. It remains a derived index; original evidence and reviewed manifests are authoritative. See `data/catalog/README.md`.
 - `data/catalog/youtube_channel_registry.db` — the complete cross-channel query authority — **is** committed, via Git LFS (see Bootstrap above).
-- Most raw source evidence (screenshots, video frames, PDFs, archives, spreadsheets) lives under `data/raw/` on the machine that ingested it and is gitignored; only its provenance (hashes, paths, dispositions, counts) is recorded in the manifests that *are* committed. A small set of explicitly authorized, checksum-registered acquisitions (e.g. DS-000027, DS-000028) is a deliberate exception and is tracked — see the per-dataset allowlist in `.gitignore`.
+- Most raw source evidence (screenshots, video frames, PDFs, archives, spreadsheets) lives under `data/raw/` on the machine that ingested it and is gitignored; only its provenance (hashes, paths, dispositions, counts) is recorded in the manifests that *are* committed. Explicitly preserved, checksum-registered acquisitions are tracked under per-dataset allowlists. Historical tracked audio, frames and private-derived analytics are listed in `docs/audits/WHAT_IF_REPOSITORY_SAFETY_2026-10-09.md`; their removal or storage migration remains a separate evidence-preservation decision.
 
 ## Data layers
 
@@ -66,7 +66,7 @@ Raw source files are evidence and must never be modified, rewritten, compressed,
 - `data/manifests/` — file and dataset inventory records.
 - `docs/` — scope, workflows, classifications, decisions, and tooling records.
 - `channels/` — future separated channel-specific workspaces.
-- `schemas/`, `scripts/`, and `config/` — reserved for justified later-phase additions.
+- `schemas/`, `scripts/`, and `config/` — implemented schema, ingestion, intelligence, validation and configuration layers.
 - `logs/` — non-source operational logs when processing is introduced.
 
 ## Entering data

@@ -81,3 +81,7 @@ Discovery and future ingestion work must guard against:
 - Oversized inputs that could exhaust memory or disk during inspection.
 
 During this Phase 0.5 task, archive inspection was done with listing commands (`unzip -l`) rather than blind extraction beside originals; where content needed to be read, extraction happened only into the session scratchpad, never over or beside the original archive, and the original files were never modified (`docs/source-discovery/SOURCE_DISCOVERY_REPORT.md`, Confidence & Sampling Limitations).
+
+## What If release and private analytics lifecycle
+
+What If source media stays outside Git and immutable. Generated normalized staging is ignored; promotion and query consumers validate hashes before using source-declared observations. New raw media, Studio exports and private-derived analytics are excluded from integration commits. Retain field-level provenance in reviewed public-safe derived summaries. Existing historical exceptions and owner decisions are listed in [repository safety review](audits/WHAT_IF_REPOSITORY_SAFETY_2026-10-09.md); do not rewrite history or remove provenance-bearing evidence automatically. See [integration workflow](WHAT_IF_INTEGRATION_WORKFLOW.md) for rollback and update procedures.

@@ -276,3 +276,11 @@ Every successful new acquisition must save the full raw Actor result JSON locall
 Platform metrics remain append-only snapshots. Existing screenshot evidence remains unchanged and can be linked to a registered channel only by strong identity evidence such as an exact handle, canonical URL, or YouTube channel ID. Similar names alone never authorize a merge. Transcript/script evidence does not establish editing-style evidence.
 
 **Reason:** The Dr. Aliza Wright pilot demonstrated a bounded, provenance-safe acquisition with an existing Tier B screenshot dataset and a live structured source. A durable decision is required because this is an explicit exception to the earlier no-live-scraping Phase 1 boundary, while preserving every other evidence, security, and analysis boundary.
+
+## Decision 019 — Portable What If evidence integration and narrow identity refresh
+
+**Status:** Accepted by owner request, 2026-10-09.
+
+The Git repository and reviewed canonical branch identify the workspace; historical absolute machine paths in Decision 009 and old audits do not dictate the checkout location on another machine. Operational corpus paths are configured with `YIOS_WHAT_IF_CORPUS_ROOT`; persisted What If source references are relative paths with row locators. Source bytes remain immutable. Generated normalized staging is local and ignored, while reviewed contracts, promotion index and derived evidence-backed production plans may be committed. Forensic observations attach to existing canonical videos and never increase channel sample counts.
+
+The owner explicitly authorized an official uploads-playlist YouTube Data API refresh for CH-000004 only. This supersedes Decision 001 narrowly for that requested refresh; it does not authorize general API infrastructure, paid acquisition without a cap, or other V2 work. Without API authorization, verified-but-unregistered and unresolved sources remain held. Update, rollback and private-data decisions are documented in `docs/WHAT_IF_INTEGRATION_WORKFLOW.md`.
