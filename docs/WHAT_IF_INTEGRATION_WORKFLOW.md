@@ -103,3 +103,13 @@ Review dependent later commits before reverting; revert dependent units newest f
 No raw MP4, audio, dense frames, Studio exports, credentials, temporary query outputs, or duplicated release packages may enter this What If integration. Keep source corpus and generated stages local. Commit only reviewed contracts, checksums, code/tests/docs and derived summaries with provenance. New private-derived analytics belong under ignored first-party storage.
 
 Pre-existing tracked audio/frames/private-derived artifacts are separately classified in [repository safety review](audits/WHAT_IF_REPOSITORY_SAFETY_2026-10-09.md). They are not silently removed by this integration. Broader repository sharing or history rewriting requires an explicit owner/security decision.
+
+## Documentation entry points
+
+- [Staging and promotion](FORENSIC_STAGING_AND_PROMOTION.md)
+- [Provenance lifecycle](PROVENANCE.md)
+- [Data privacy](DATA_PRIVACY.md)
+- [Update workflow](UPDATE_WORKFLOW.md)
+- [Rollback](ROLLBACK.md)
+
+Commands remain centralized above to prevent conflicting copies.
