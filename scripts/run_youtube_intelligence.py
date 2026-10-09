@@ -484,6 +484,44 @@ def validate_coherence(channel_id, opportunity_id, plan, conn):
     return {"dimensions": dims, "overall": overall}
 
 
+def attach_forensic_guidance(plan, stage_dir, catalog_path, index_path):
+    """Enrich only matching canonical videos; absence is explicit and drift fails closed."""
+    if plan["channel_id"] != "CH-000004" or not index_path:
+        return
+    if not (Path(stage_dir) / "manifest.json").is_file():
+        plan["editing"]["forensic_consumption"] = {
+            "status": "NOT_AVAILABLE", "reason": "LOCAL_FORENSIC_STAGE_MISSING",
+            "regeneration": "python scripts/stage_what_if_forensics.py",
+        }
+        return
+    from query_what_if_forensics import query_evidence
+    from stage_what_if_forensics import StagingError
+    evidence_ids = plan["opportunity"].get("internal_evidence") or []
+    local_ids = [value for value in evidence_ids if value.startswith("VID-")]
+    youtube_ids = [value for value in evidence_ids if not value.startswith("VID-")]
+    if local_ids:
+        with connect(catalog_path) as conn:
+            placeholders = ",".join("?" for _ in local_ids)
+            youtube_ids.extend(row[0] for row in conn.execute(
+                f"SELECT youtube_video_id FROM videos WHERE channel_id = ? AND video_id IN ({placeholders})",
+                (plan["channel_id"], *local_ids),
+            ))
+    try:
+        result = query_evidence(stage_dir, catalog_path, index_path, youtube_ids)
+    except (StagingError, OSError, ValueError, KeyError) as exc:
+        raise OrchestrationError(f"forensic consumption rejected: {exc}") from exc
+    plan["editing"]["forensic_consumption"] = result
+    if result["recommendations"]:
+        if plan["editing"].get("blueprint") is None:
+            plan["editing"]["blueprint"] = {"evidence_state": "EVIDENCE_BACKED_HYPOTHESIS"}
+        plan["editing"]["blueprint"]["forensic_guidance"] = result["recommendations"]
+        plan["editing"]["status"] = "AVAILABLE"
+        plan["editing"]["reason"] = None
+        plan["global"]["warnings"] = [warning for warning in plan["global"].get("warnings", [])
+                                       if not warning.startswith("EDITING NOT_AVAILABLE:")]
+    plan["global"]["provenance"]["forensic_staging_manifest_sha256"] = result["staging_manifest_sha256"]
+
+
 def build_plan(channel_id, opportunity_id, generated_on=None):
     cdir = channel_dir(channel_id)
     topic_path = find_topic_artifact(cdir)
@@ -569,6 +607,11 @@ def build_plan(channel_id, opportunity_id, generated_on=None):
         plan["global"]["provenance"]["forensic_observation_index"] = (
             str(forensic_index_path.relative_to(REPO_ROOT)) if forensic_index_path else None
         )
+    attach_forensic_guidance(
+        plan, REPO_ROOT / "data/staging/what-if-forensic/v1.0.0",
+        REPO_ROOT / "data/catalog/youtube_inventory.db", forensic_index_path,
+    )
+    with connect() as conn:
         plan["coherence"] = validate_coherence(channel_id, opportunity_id, plan, conn)
 
     return plan
@@ -603,7 +646,7 @@ def render_markdown(plan):
         f"- Registered forensic observations: "
         f"{editing['forensic_observation_index']['video_count']} catalog videos / "
         f"{editing['forensic_observation_index']['observation_count']} source rows "
-        f"({editing['forensic_observation_index']['artifact']}); existing blueprint unchanged."
+        f"({editing['forensic_observation_index']['artifact']}); source-declared evidence."
         if editing.get("forensic_observation_index") else
         "- Registered forensic observations: NOT_AVAILABLE",
         "",
@@ -629,6 +672,19 @@ def render_markdown(plan):
         "## Cross-Layer Coherence",
         f"- Overall: {coherence['overall']}",
     ]
+    consumption = editing.get("forensic_consumption", {})
+    if consumption.get("status") == "AVAILABLE":
+        lines.append(f"- Forensic evidence consumed: {consumption['video_count']} matching videos; {consumption['observation_count']} observations; 0 new channel samples.")
+        for recommendation in consumption["recommendations"]:
+            refs = recommendation["evidence"]
+            lines.append(f"- EVIDENCE_BACKED_HYPOTHESIS: {recommendation['recommendation']}")
+            lines.append("  - Evidence: " + "; ".join(
+                f"{row['canonical_youtube_video_id']} / {row['source_video_id']} / {row['source_table']} / "
+                + ", ".join(f"{item['source_row_id']}@{item['source_reference']} (confidence: {item['confidence']})"
+                            for item in row.get("source_rows", [row]))
+                for row in refs))
+    elif consumption:
+        lines.append(f"- Forensic consumption: NOT_AVAILABLE ({consumption['reason']}).")
     for dim, verdict in coherence["dimensions"].items():
         lines.append(f"  - {dim}: {verdict}")
     lines += [
