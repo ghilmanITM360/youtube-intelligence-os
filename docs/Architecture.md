@@ -1,6 +1,6 @@
 # Architecture
 
-This document describes the architectural vision for the YouTube Intelligence OS. It is a planning document, not an implementation. Every section is labeled:
+This document describes the architectural vision for the YouTube Intelligence OS. It records current implementation alongside longer-term planning. Every section is labeled:
 
 - **CURRENT** — actually built and running today.
 - **PLANNED** — decided in direction, not yet implemented.
@@ -11,12 +11,18 @@ See `docs/Phases.md` for how these arrive over time, `docs/Database.md` for the 
 ## 1. What exists today — CURRENT
 
 - A documentation-first repository at the canonical path (Decision 009) with stdlib ingestion, registration, validation, and read-only reporting scripts.
-- 71 canonical channels across 27 acquired datasets (plus DS-000026, preflight-only). DS-000027 (Dr. Ares Senior) and DS-000028 (Dr. Okoro, complete) are both integrated — see `docs/YOUTUBE_CHANNEL_REGISTRY.md`.
-- Two generated SQLite databases with distinct roles: the gitignored legacy/selected-inventory catalog (`data/catalog/youtube_inventory.db`) and the Git LFS-tracked, committed cross-channel query registry (`data/catalog/youtube_channel_registry.db`). Neither is the final production database.
+- The broader registry validates 75 canonical channels and 33 datasets (2026-10-09); the selected inventory contains 10 channels and 26 datasets. These populations have distinct roles — see `docs/YOUTUBE_CHANNEL_REGISTRY.md` and `data/catalog/README.md`.
+- Two generated SQLite databases with distinct roles: the committed selected-inventory catalog (`data/catalog/youtube_inventory.db`) and the Git LFS-tracked, committed cross-channel query registry (`data/catalog/youtube_channel_registry.db`). Neither is the final production database.
 - Structured channels/videos, append-only snapshots, transcript references, screenshot/multimodal evidence, field provenance, and bounded Apify source-run provenance through Phase 1D.
 - External developer/agent tooling (Graphify, Ponytail, Claude-Mem, Obsidian skills, Scrapling) recorded in `docs/TOOLS_INSTALLED.md`. None of it is part of the application.
 
-Everything else in this document is PLANNED or FUTURE / UNDECIDED.
+### V1 intelligence and What If forensic flow — CURRENT
+
+Topic, Packaging, Hook/Script and evidence-eligible Editing/Visual builders feed `scripts/run_youtube_intelligence.py`. The orchestrator reads canonical artifacts and catalog identities to produce traceable production plans. Channel Strategy is generalized with explicit evidence-coverage limitations; UI/RAG/agents/API services remain outside this V1 architecture.
+
+What If external corpus (configured `YIOS_WHAT_IF_CORPUS_ROOT`) is validated by release/table/media hashes. The read-only adapter loads eight canonical MASTER tables; normalized staging lives under ignored `data/staging/what-if-forensic/v1.0.0/`. Promotion validates staging and commits a compact identity/provenance index. The evidence-query layer validates that index against staged bytes, summarizes matching existing videos, and enriches production-plan Editing/Visual blueprints with cited hypotheses. It never adds forensic rows to channel sample counts or overwrites catalog snapshots. Missing local staging is unavailable, while changed evidence fails closed.
+
+See [integration lifecycle](WHAT_IF_INTEGRATION_WORKFLOW.md) for update, regeneration, rollback and privacy boundaries. Remaining conceptual sections retain their own PLANNED or FUTURE labels where implementation has not been authorized.
 
 ## 2. The conceptual end-to-end flow — PLANNED (sequence), FUTURE / UNDECIDED (implementation of each stage)
 
