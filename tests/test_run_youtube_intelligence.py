@@ -1,5 +1,7 @@
 import json
+import sqlite3
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -7,6 +9,25 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import run_youtube_intelligence as orch  # noqa: E402
+
+
+class ForensicIndexContractTests(unittest.TestCase):
+    def test_rejects_index_video_absent_from_channel_catalog(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "forensic-observation-index-v1.json"
+            path.write_text(json.dumps({
+                "schema_version": "forensic-observation-index-1",
+                "channel_id": "CH-000004", "video_count": 1,
+                "videos": [{"youtube_video_id": "missing0001"}],
+            }))
+            conn = sqlite3.connect(":memory:")
+            conn.row_factory = sqlite3.Row
+            try:
+                conn.execute("CREATE TABLE videos (youtube_video_id TEXT, channel_id TEXT)")
+                with self.assertRaisesRegex(orch.OrchestrationError, "unregistered video identity"):
+                    orch.registered_forensic_index(path, "CH-000004", conn)
+            finally:
+                conn.close()
 
 FULL_HISTORICAL_CATALOG = (ROOT / "data/raw/competitors/DS-000001").exists()
 REQUIRES_HISTORICAL = unittest.skipUnless(FULL_HISTORICAL_CATALOG, "requires ignored historical catalog evidence")
@@ -33,6 +54,11 @@ class CaseAFullEvidenceTests(unittest.TestCase):
         self.assertEqual(self.plan["editing"]["status"], "AVAILABLE")
         self.assertIsNotNone(self.plan["editing"]["blueprint"])
         self.assertIsNone(self.plan["editing"]["reason"])
+        index = self.plan["editing"]["forensic_observation_index"]
+        self.assertEqual(index["video_count"], 10)
+        self.assertEqual(index["observation_count"], 8327)
+        self.assertFalse(index["used_in_existing_blueprint"])
+        self.assertTrue(index["not_independent_channel_samples"])
 
     def test_package_hook_script_linkage_matches_source_ids(self):
         hook = self.plan["hook"]["selected_hook"]

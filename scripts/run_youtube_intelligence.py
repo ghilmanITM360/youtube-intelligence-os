@@ -111,6 +111,40 @@ def find_editing_artifact(cdir):
     return _pick_current(list(cdir.glob("editing-visual-intelligence*.json")))
 
 
+def find_forensic_index_artifact(cdir):
+    return _pick_current(list(cdir.glob("forensic-observation-index-*.json")))
+
+
+def registered_forensic_index(path, channel_id, conn):
+    if path is None:
+        return None
+    artifact = load_json(path)
+    videos = artifact.get("videos", [])
+    ids = [video.get("youtube_video_id") for video in videos]
+    if (artifact.get("schema_version") != "forensic-observation-index-1"
+            or artifact.get("channel_id") != channel_id
+            or artifact.get("video_count") != len(ids)
+            or not ids or len(ids) != len(set(ids)) or not all(ids)):
+        raise OrchestrationError("invalid forensic observation index")
+    placeholders = ",".join("?" for _ in ids)
+    rows = conn.execute(
+        f"SELECT youtube_video_id FROM videos WHERE channel_id=? AND youtube_video_id IN ({placeholders})",
+        [channel_id, *ids],
+    ).fetchall()
+    if {row["youtube_video_id"] for row in rows} != set(ids):
+        raise OrchestrationError("forensic index contains unregistered video identity")
+    return {
+        "status": "REGISTERED_EVIDENCE",
+        "source_release": artifact["source_release"],
+        "video_count": len(ids),
+        "observation_count": artifact["observation_count"],
+        "video_ids": sorted(ids),
+        "artifact": str(path.relative_to(REPO_ROOT)),
+        "used_in_existing_blueprint": False,
+        "not_independent_channel_samples": True,
+    }
+
+
 def load_editing_availability():
     if not EDITING_AVAILABILITY_ARTIFACT.exists():
         return {}
@@ -456,6 +490,7 @@ def build_plan(channel_id, opportunity_id, generated_on=None):
     packaging_path = find_packaging_artifact(cdir)
     hook_script_path = find_hook_script_artifact(cdir)
     editing_path = find_editing_artifact(cdir)
+    forensic_index_path = find_forensic_index_artifact(cdir)
 
     topic_json = load_json(topic_path)
     packaging_json = load_json(packaging_path)
@@ -528,6 +563,12 @@ def build_plan(channel_id, opportunity_id, generated_on=None):
     }
 
     with connect() as conn:
+        plan["editing"]["forensic_observation_index"] = registered_forensic_index(
+            forensic_index_path, channel_id, conn
+        )
+        plan["global"]["provenance"]["forensic_observation_index"] = (
+            str(forensic_index_path.relative_to(REPO_ROOT)) if forensic_index_path else None
+        )
         plan["coherence"] = validate_coherence(channel_id, opportunity_id, plan, conn)
 
     return plan
@@ -559,6 +600,12 @@ def render_markdown(plan):
         "## Evidence",
         f"- Internal video evidence: {', '.join(opp.get('internal_evidence') or []) or 'NOT_AVAILABLE'}",
         f"- External validation: {opp.get('external_validation')}",
+        f"- Registered forensic observations: "
+        f"{editing['forensic_observation_index']['video_count']} catalog videos / "
+        f"{editing['forensic_observation_index']['observation_count']} source rows "
+        f"({editing['forensic_observation_index']['artifact']}); existing blueprint unchanged."
+        if editing.get("forensic_observation_index") else
+        "- Registered forensic observations: NOT_AVAILABLE",
         "",
         "## Packaging Options",
     ]
