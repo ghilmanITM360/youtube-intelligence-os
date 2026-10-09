@@ -517,6 +517,8 @@ def attach_forensic_guidance(plan, stage_dir, catalog_path, index_path):
         plan["editing"]["blueprint"]["forensic_guidance"] = result["recommendations"]
         plan["editing"]["status"] = "AVAILABLE"
         plan["editing"]["reason"] = None
+        plan["global"]["warnings"] = [warning for warning in plan["global"].get("warnings", [])
+                                       if not warning.startswith("EDITING NOT_AVAILABLE:")]
     plan["global"]["provenance"]["forensic_staging_manifest_sha256"] = result["staging_manifest_sha256"]
 
 
@@ -605,11 +607,12 @@ def build_plan(channel_id, opportunity_id, generated_on=None):
         plan["global"]["provenance"]["forensic_observation_index"] = (
             str(forensic_index_path.relative_to(REPO_ROOT)) if forensic_index_path else None
         )
-        plan["coherence"] = validate_coherence(channel_id, opportunity_id, plan, conn)
     attach_forensic_guidance(
         plan, REPO_ROOT / "data/staging/what-if-forensic/v1.0.0",
         REPO_ROOT / "data/catalog/youtube_inventory.db", forensic_index_path,
     )
+    with connect() as conn:
+        plan["coherence"] = validate_coherence(channel_id, opportunity_id, plan, conn)
 
     return plan
 

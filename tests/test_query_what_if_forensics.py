@@ -82,7 +82,7 @@ def test_query_excludes_unmatched_ids_and_invalid_durations(evidence):
     promote(output, evidence.catalog, index)
     result = query.query_evidence(output, evidence.catalog, index)
     assert result["videos"][0]["shot_pacing"]["mean_duration_seconds"] is None
-    assert result["recommendations"] == []
+    assert not any(row.get("kind") == "SHOT_PACING" for row in result["recommendations"])
 
 
 def test_production_blueprint_consumes_matching_forensic_rows(evidence):
@@ -106,3 +106,30 @@ def test_missing_stage_is_explicit_and_other_channels_unchanged(evidence):
     plan["editing"].pop("forensic_consumption")
     orchestrator.attach_forensic_guidance(plan, evidence.output, evidence.catalog, evidence.index)
     assert "forensic_consumption" not in plan["editing"]
+
+
+def test_forensic_enrichment_updates_unavailable_warning(evidence):
+    import run_youtube_intelligence as orchestrator
+    plan = {"channel_id": "CH-000004", "opportunity": {"internal_evidence": ["existing001"]},
+            "editing": {"status": "NOT_AVAILABLE", "reason": "OLD_REASON", "blueprint": None},
+            "global": {"provenance": {}, "warnings": ["EDITING NOT_AVAILABLE: OLD_REASON", "KEEP_ME"]}}
+    orchestrator.attach_forensic_guidance(plan, evidence.output, evidence.catalog, evidence.index)
+    assert plan["editing"]["status"] == "AVAILABLE"
+    assert plan["global"]["warnings"] == ["KEEP_ME"]
+
+
+def test_sync_guidance_preserves_signed_offset_evidence(evidence):
+    import query_what_if_forensics as query
+    result = query.query_evidence(evidence.output, evidence.catalog, evidence.index)
+    sync = [row for row in result["recommendations"] if row.get("kind") == "NARRATION_VISUAL_SYNC"]
+    assert len(sync) == 1
+    assert sync[0]["observed_median_offset_ms"] == 120
+    assert sync[0]["evidence"][0]["source_table"] == "MASTER_AUDIO_VISUAL_SYNC"
+
+
+def test_guidance_uses_all_eight_source_tables(evidence):
+    import query_what_if_forensics as query
+    result = query.query_evidence(evidence.output, evidence.catalog, evidence.index)
+    tables = {ref["source_table"] for row in result["recommendations"] for ref in row["evidence"]}
+    assert tables == {"MASTER_WORDS", "MASTER_SENTENCES", "MASTER_SHOTS", "MASTER_STATES",
+                      "MASTER_MOTIONS", "MASTER_ASSETS", "MASTER_AUDIO_EVENTS", "MASTER_AUDIO_VISUAL_SYNC"}
