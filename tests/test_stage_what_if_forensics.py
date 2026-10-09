@@ -9,6 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from source_adapters.what_if_forensic_brain import TABLE_IDS
 from stage_what_if_forensics import StagingError, stage
+from promote_what_if_forensics import promote
 
 
 class StagingTests(unittest.TestCase):
@@ -76,6 +77,33 @@ class StagingTests(unittest.TestCase):
         with self.assertRaisesRegex(StagingError, "DIFF_REQUIRES_REVIEW"):
             stage(self.brain, self.catalog, self.output)
         self.assertEqual((self.output / "manifest.json").read_bytes(), before)
+
+    def test_promotion_is_small_idempotent_and_catalog_safe(self):
+        stage(self.brain, self.catalog, self.output)
+        index_path = self.root / "index.json"
+        status, index = promote(self.output, self.catalog, index_path)
+        self.assertEqual(status, "CREATED")
+        self.assertEqual(index["video_count"], 1)
+        self.assertEqual(index["observation_count"], 8)
+        self.assertEqual(len(index["held_sources"]), 2)
+        self.assertEqual(promote(self.output, self.catalog, index_path)[0], "UNCHANGED")
+        with closing(sqlite3.connect(self.catalog)) as connection:
+            self.assertEqual(connection.execute("SELECT COUNT(*) FROM videos").fetchone()[0], 1)
+            self.assertEqual(connection.execute("SELECT views FROM video_snapshots").fetchone()[0], 123)
+
+    def test_promotion_rejects_tampered_stage(self):
+        stage(self.brain, self.catalog, self.output)
+        (self.output / "MASTER_WORDS.jsonl").write_text("tampered\n")
+        with self.assertRaisesRegex(StagingError, "changed or missing stage table"):
+            promote(self.output, self.catalog, self.root / "index.json")
+
+    def test_promotion_rejects_changed_catalog_identity_set(self):
+        stage(self.brain, self.catalog, self.output)
+        with closing(sqlite3.connect(self.catalog)) as connection:
+            connection.execute("INSERT INTO videos VALUES ('newvideo001', 'CH-000004')")
+            connection.commit()
+        with self.assertRaisesRegex(StagingError, "catalog identity set changed"):
+            promote(self.output, self.catalog, self.root / "index.json")
 
 
 if __name__ == "__main__":
