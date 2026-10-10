@@ -15,12 +15,8 @@ TT = ['core_topic', 'exact_promise', 'intended_viewer', 'unanswered_question', '
 
 
 def thumb_rows():
-    rows = {}
-    for r in json.load((HERE / 'individual-audit-batch-001.json').open()): rows[r['Thumbnail_ID']] = ('B001', r)
-    for f in sorted(glob.glob(str(HERE / 'audit-batch-B002-*.json'))):
-        b = Path(f).stem.replace('audit-batch-', '')
-        for r in json.load(open(f)): rows[r['Thumbnail_ID']] = (b, r)
-    return rows
+    from packaging_audit_records import verified_records
+    return verified_records(HERE)[0]
 
 
 def view_path(tid, batch):

@@ -37,7 +37,7 @@ for r in rows:
                     PERFORMANCE_CLASS=pc, Performance_Band=r['Performance_Band'], Perf_Percentile_Age_Matched=r['Perf_Percentile_Age_Matched'], Outlier_Multiple_Age_Adjusted=r['Outlier_Multiple_Age_Adjusted'], Quadrant=q,
                     Primary_Relationship=r['primary_relationship'], Available_Alternative_Evidence='|'.join(ev) if q.startswith(('Q3', 'Q4')) else '', Not_Testable_Factors=NT if q.startswith(('Q3', 'Q4')) else '', Evidence_Tier=r['Evidence_Tier']))
 with (HERE / 'packaging-quadrants.csv').open('w', newline='') as fh:
-    w = csv.DictWriter(fh, list(out[0])); w.writeheader(); w.writerows(out)
+    w = csv.DictWriter(fh, list(out[0]), lineterminator="\n"); w.writeheader(); w.writerows(out)
 qc = Counter(o['Quadrant'] for o in out)
 json.dump(dict(packages=len(out), strong_cut=round(hi, 1), weak_cut=round(lo, 1), counts=dict(qc), definition='STRONG = top third of PACKAGE_SCORE in the audited sample; WEAK = bottom third; HIGH/LOW = age-matched public class; descriptive only, no causal claim',
                performance_by_package_strength={k: dict(Counter(o['PERFORMANCE_CLASS'] for o in out if o['Package_Strength'] == k)) for k in ('STRONG_PACKAGE', 'MIDDLE_PACKAGE', 'WEAK_PACKAGE')}), open(HERE / 'packaging-quadrants-summary.json', 'w'), indent=1)

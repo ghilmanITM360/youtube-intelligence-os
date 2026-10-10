@@ -20,19 +20,13 @@ CLASS_RANK = {'REGISTERED_LOCAL_THUMBNAIL': 0, 'CURRENT_PUBLIC_THUMBNAIL': 1, 'S
 
 
 def audited():
-    a = {}
-    ok = set(json.load((HERE / 'package-batch-plan.json').open())['verified_thumbnail_batches'])  # drafts/partial batches that have not cleared their QA gate are not counted
-    for f in sorted(glob.glob(str(HERE / 'audit-batch-B002-*.json'))) + [str(HERE / 'individual-audit-batch-001.json')]:
-        for r in json.load(open(f)):
-            if r.get('batch_id', 'B001') in ok: a[r['Thumbnail_ID']] = (r.get('batch_id', 'B001'), r.get('score_100'))
-    return a
+    from packaging_audit_records import verified_records
+    return {key: (batch, row.get('score_100')) for key, (batch, row) in verified_records(HERE)[0].items()}
 
 
 def package_audits():
-    pa = {}
-    for f in sorted(glob.glob(str(HERE / 'package-audit-PK-*.json'))):
-        for r in json.load(open(f)): pa[r['Package_ID']] = r
-    return pa
+    from packaging_audit_records import verified_records
+    return verified_records(HERE)[1]
 
 
 def band(p, n):
@@ -100,7 +94,7 @@ def main():
             Packaging_Audit_Status=(('AUDITED_' + pa[f'PKG-{vid}']['batch_id']) if f'PKG-{vid}' in pa else 'NOT_STARTED') if tid else 'NOT_POSSIBLE_NO_IMAGE',
             EXPERT_PACKAGING_DIAGNOSTIC_SCORE=pa.get(f'PKG-{vid}', {}).get('score_100', ''), Package_Primary_Relationship=pa.get(f'PKG-{vid}', {}).get('primary_relationship', ''), Evidence_Limitations='|'.join(lim)))
     with (HERE / 'master-packages.csv').open('w', newline='') as fh:
-        w = csv.DictWriter(fh, list(rows[0])); w.writeheader(); w.writerows(rows)
+        w = csv.DictWriter(fh, list(rows[0]), lineterminator="\n"); w.writeheader(); w.writerows(rows)
     (HERE / 'master-packages.json').write_text(json.dumps(rows, ensure_ascii=False))
     # channel coverage
     cv = []
@@ -128,7 +122,7 @@ def main():
                        Public_Performance_Data=f'{pv}/{nv} videos with views; {pm} age-matched classified' if nv else 'NONE', First_Party_Data='PRIVATE_STUDIO_NOT_JOINED' if cid in OWN else 'NONE',
                        Temporal_Thumbnail_Evidence=f'{hist} videos with snapshot/screenshot-period creative' if nv else 'NONE', Coverage_Status=st, Main_Gap=gap))
     with (HERE / 'channel-coverage.csv').open('w', newline='') as fh:
-        w = csv.DictWriter(fh, list(cv[0])); w.writeheader(); w.writerows(cv)
+        w = csv.DictWriter(fh, list(cv[0]), lineterminator="\n"); w.writeheader(); w.writerows(cv)
     print(len(rows), Counter(r['Thumbnail_Audit_Status'][:9] for r in rows), Counter(r['Performance_Band'] for r in rows))
     print(len(cv), Counter(c['Coverage_Status'] for c in cv))
 

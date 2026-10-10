@@ -3,14 +3,15 @@ Keeps TITLE_SCORE, THUMBNAIL_SCORE, PACKAGE_SCORE (EXPERT_PACKAGING_DIAGNOSTIC_S
 import csv, glob, json
 from pathlib import Path
 from build_package_inputs import thumb_rows
+from packaging_audit_records import verified_records
 
 HERE = Path(__file__).resolve().parent
 rd = lambda f, k='Video_ID': {r[k]: r for r in csv.DictReader((HERE / f).open())}
 mp, ta, tf = rd('master-packages.csv', 'Package_ID'), rd('title-analyst-audit.csv'), rd('title-forensics.csv')
 tr = thumb_rows()
 out = []
-for f in sorted(glob.glob(str(HERE / 'package-audit-PK-*.json'))):
-    for r in json.load(open(f)):
+for records in [verified_records(HERE)[1].values()]:
+    for r in records:
         m = mp[r['Package_ID']]; v = m['Video_ID']; b, th = tr[m['Thumbnail_ID']]
         o = dict(Package_ID=r['Package_ID'], Channel_ID=m['Channel_ID'], Channel_Name=m['Channel_Name'], Niche=m['Niche'], Format=m['Format'], Video_ID=v, Title=m['Title_Current'], Thumbnail_ID=m['Thumbnail_ID'],
                  Creative_Temporal_Alignment=m['Creative_Temporal_Alignment'], Package_Batch=r['batch_id'], Thumbnail_Batch=b,
@@ -25,6 +26,6 @@ for f in sorted(glob.glob(str(HERE / 'package-audit-PK-*.json'))):
         out.append(o)
 if out:
     with (HERE / 'package-forensics.csv').open('w', newline='') as fh:
-        w = csv.DictWriter(fh, list(out[0])); w.writeheader(); w.writerows(out)
+        w = csv.DictWriter(fh, list(dict.fromkeys(key for row in out for key in row)), lineterminator="\n"); w.writeheader(); w.writerows(out)
     (HERE / 'package-forensics.json').write_text(json.dumps(dict(method='ANALYST_PACKAGE_AUDIT_BLIND_TO_PERFORMANCE; PACKAGE_SCORE = EXPERT_PACKAGING_DIAGNOSTIC_SCORE is a diagnostic, not a CTR/views/virality prediction; PERFORMANCE_CLASS is public age-adjusted and separate', rows=out), ensure_ascii=False))
 print(len(out), 'package audits merged')

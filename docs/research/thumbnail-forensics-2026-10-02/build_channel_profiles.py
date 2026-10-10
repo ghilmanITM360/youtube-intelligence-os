@@ -41,6 +41,6 @@ for c in cov:
     row['Top_Video_By_Age_Adjusted_Outlier_ANY_AUDIT_STATE'] = f"{best_title['Video_ID']} | {best_title['Title_Current'][:70]} | x{best_title['Outlier_Multiple_Age_Adjusted']}" if best_title else 'NONE'
     out.append(row)
 with (HERE / 'channel-packaging-profiles.csv').open('w', newline='') as fh:
-    w = csv.DictWriter(fh, list(out[0])); w.writeheader(); w.writerows(out)
+    w = csv.DictWriter(fh, list(out[0]), lineterminator="\n"); w.writeheader(); w.writerows(out)
 (HERE / 'channel-packaging-profiles.json').write_text(json.dumps(dict(method='see build_channel_profiles.py docstring', rows=out), ensure_ascii=False))
 print(len(out), Counter(r['Coverage_Confidence'] for r in out), 'channels with >=1 verified package', sum(1 for r in out if r['Coverage_Confidence'] != 'INSUFFICIENT_PACKAGING_EVIDENCE'))
