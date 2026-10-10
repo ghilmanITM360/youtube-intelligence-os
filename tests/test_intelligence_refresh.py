@@ -59,11 +59,11 @@ def test_first_party_refresh_contract_is_integrated():
     assert "CROSS_NICHE_CALIBRATION" not in layers
 
 
-def test_editing_code_change_requires_deterministic_refresh_plan():
-    # Freshness baseline is regenerated (plan_intelligence_refresh.py --write-registry)
-    # whenever canonical state (e.g. a newly registered channel) or dependency code
-    # changes, so a freshly rebuilt baseline is expected to be plan-stable and clean.
-    registry = json.loads(planner.REGISTRY_PATH.read_text(encoding="utf-8"))
+def test_fresh_baseline_has_deterministic_refresh_plan():
+    # Test a fresh baseline in memory. A committed historical baseline may
+    # legitimately require refresh after append-only identity registration.
+    # Do not relabel older analytical artifacts current merely to pass tests.
+    registry = planner.build_freshness_registry()
     first = planner.build_refresh_plan(registry)
     second = planner.build_refresh_plan(registry)
     assert first == second
