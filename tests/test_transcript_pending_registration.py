@@ -132,3 +132,49 @@ def test_existing_channel_pending_registration_preserves_history(packet, monkeyp
         assert conn.execute('SELECT COUNT(*) FROM videos').fetchone()[0] == 4
         assert conn.execute('SELECT * FROM video_snapshots ORDER BY video_snapshot_id LIMIT 2').fetchall() == before
     rss.cmd_verify(Args(db_path=str(packet[2]), dataset_id=second['dataset_id']))
+
+
+def test_sparse_identity_packet_does_not_invent_public_observations(packet, monkeypatch):
+    import io
+    import zipfile
+    import xml.etree.ElementTree as element_tree
+
+    monkeypatch.setattr(ic, 'MANIFESTS_DIR', packet[4])
+    output = io.BytesIO()
+    namespace = {'m': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
+    with zipfile.ZipFile(packet[0]) as source, zipfile.ZipFile(output, 'w') as target:
+        for member in source.namelist():
+            data = source.read(member)
+            if member == 'xl/worksheets/sheet1.xml':
+                tree = element_tree.fromstring(data)
+                for row in tree.findall('m:sheetData/m:row', namespace):
+                    for cell in list(row):
+                        if cell.get('r') in {'B7', 'B8'}:
+                            row.remove(cell)
+                data = element_tree.tostring(tree)
+            if member == 'xl/worksheets/sheet2.xml':
+                tree = element_tree.fromstring(data)
+                for row in tree.findall('m:sheetData/m:row', namespace)[1:]:
+                    for cell in list(row):
+                        if cell.get('r', '').rstrip('0123456789') in {'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P'}:
+                            row.remove(cell)
+                data = element_tree.tostring(tree)
+            target.writestr(member, data)
+    packet[0].write_bytes(output.getvalue())
+    (packet[1] / 'one.txt').unlink()
+    result = rsc.register(*packet, transcript_pending_ids=['video000001', 'video000002'])
+    with sqlite3.connect(packet[2]) as conn:
+        assert conn.execute('SELECT COUNT(*) FROM transcripts').fetchone()[0] == 0
+        assert conn.execute('SELECT video_type FROM video_snapshots').fetchall() == [(None,), (None,)]
+        assert conn.execute('SELECT views,likes,comments,duration_seconds,transcript_word_count FROM video_snapshots').fetchall() == [(None, None, None, None, None)] * 2
+    rss.cmd_verify(Args(db_path=str(packet[2]), dataset_id=result['dataset_id']))
+
+
+@pytest.mark.parametrize('field', ['title', 'views'])
+def test_v2_verifier_rejects_missing_observed_field_provenance(packet, monkeypatch, field):
+    monkeypatch.setattr(ic, 'MANIFESTS_DIR', packet[4])
+    result = rsc.register(*packet, transcript_pending_ids=['video000002'])
+    with sqlite3.connect(packet[2]) as conn:
+        conn.execute('DELETE FROM field_provenance WHERE video_snapshot_id IS NOT NULL AND field_name=?', (field,))
+    with pytest.raises(SystemExit):
+        rss.cmd_verify(Args(db_path=str(packet[2]), dataset_id=result['dataset_id']))

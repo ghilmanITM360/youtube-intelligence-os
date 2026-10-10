@@ -88,6 +88,8 @@ def load_source(workbook_path, transcript_dir, transcript_pending_ids=()):
     for video in workbook["videos"]:
         youtube_id = video["Video ID"][0]
         if youtube_id in pending:
+            if not re.fullmatch(r"[A-Za-z0-9_-]{11}", youtube_id or "") or not video.get("Title", (None,))[0] or video.get("Video URL", (None,))[0] != "https://www.youtube.com/watch?v=" + youtube_id:
+                raise CatalogError("AmbiguousIdentity", "Pending video requires exact ID, title and canonical watch URL")
             if video.get("Transcript File", (None,))[0] or video.get("Transcript Words", (None,))[0] not in (None, ""):
                 raise CatalogError("EvidenceConflict", "Pending video must not claim transcript file or word count: {}".format(youtube_id))
             continue
@@ -213,7 +215,7 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
             )
             conn.execute(
                 "INSERT INTO ingestion_runs (run_id,dataset_id,started_at,completed_at,status,source_file_count,archive_member_count,total_size_bytes,errors_count,verification_status,tool_version,notes,run_type) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                (structured_run_id, dataset_id, ts, ts, "COMPLETED", len(source_paths), 0, sum(path.stat().st_size for path in source_paths), 0, "VERIFIED", TOOL_VERSION, "{} workbook rows; {} nonempty transcripts; {} explicitly pending IDs.".format(len(workbook["videos"]), len(transcripts), len(transcript_pending_ids)), "STRUCTURED_REGISTRATION"),
+                (structured_run_id, dataset_id, ts, ts, "COMPLETED", len(source_paths), 0, sum(path.stat().st_size for path in source_paths), len(transcript_pending_ids), "VERIFIED", TOOL_VERSION, "{} workbook rows; {} nonempty transcripts; {} explicitly pending IDs.".format(len(workbook["videos"]), len(transcripts), len(transcript_pending_ids)), "STRUCTURED_REGISTRATION"),
             )
             for original, kind in ((workbook_path, "LOCAL_FILE"), (transcript_dir, "LOCAL_FOLDER")):
                 conn.execute("INSERT INTO source_locations VALUES (?,?,?,?,?,?,?)", (next_id(conn, "source_locations", "source_location_id", "LOC"), dataset_id, str(original), kind, 1, ts, None))
@@ -249,7 +251,9 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
             snapshot_id = next_id(conn, "channel_snapshots", "channel_snapshot_id", "CS")
             conn.execute("INSERT INTO channel_snapshots VALUES (?,?,?,?,?,?,?,?,?)", (snapshot_id, channel_id, dataset_id, structured_run_id, observed_at, as_int(channel.get("Subscribers", (None,))[0], "Subscribers"), as_int(channel.get("Total Videos (YouTube)", (None,))[0], "Total Videos"), ts, "Supplied public channel observation."))
             for label, field in (("Subscribers", "subscriber_count"), ("Total Videos (YouTube)", "video_count")):
-                value, row, col = channel[label]
+                value, row, col = channel.get(label, (None, None, None))
+                if value in (None, ""):
+                    continue
                 provenance("channel_snapshot_id", snapshot_id, field, "{}#Channel Overview!{}{}".format(workbook_path.name, col, row), workbook_file_id)
 
             for video in workbook["videos"]:
@@ -265,7 +269,7 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
                     "views": as_int(video["Views"][0], "Views"), "likes": as_int(video["Likes"][0], "Likes"), "comments": as_int(video["Comments"][0], "Comments"),
                     "views_per_day": as_float(video["Views/Day"][0], "Views/Day"), "engagement_rate": as_float(video["Engagement"][0], "Engagement"),
                     "description_char_count": as_int(video["Desc Chars"][0], "Desc Chars"), "transcript_word_count": as_int(video["Transcript Words"][0], "Transcript Words"),
-                    "description": video.get("Full Description", (None,))[0], "video_type": "video", "thumbnail_url": video.get("Thumbnail URL", (None,))[0],
+                    "description": video.get("Full Description", (None,))[0], "video_type": "video" if transcript is not None else None, "thumbnail_url": video.get("Thumbnail URL", (None,))[0],
                 }
                 video_snapshot_id = next_id(conn, "video_snapshots", "video_snapshot_id", "VS")
                 conn.execute(
@@ -281,7 +285,8 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
                     evidence = "MEASURED_FACT" if origin == "SOURCE_COMPUTED" else "EXTRACTED_FACT"
                     sheet = "Descriptions" if label == "Full Description" else "All Videos"
                     provenance("video_snapshot_id", video_snapshot_id, field, "{}#{}!{}{}".format(workbook_path.name, sheet, col, row), workbook_file_id, origin, evidence)
-                provenance("video_snapshot_id", video_snapshot_id, "video_type", "{}#Channel Overview!B16:B17".format(workbook_path.name), workbook_file_id, "SOURCE_DECLARED")
+                if values["video_type"] is not None:
+                    provenance("video_snapshot_id", video_snapshot_id, "video_type", "{}#Channel Overview!B16:B17".format(workbook_path.name), workbook_file_id, "SOURCE_DECLARED")
 
                 if transcript is None:
                     conn.execute(

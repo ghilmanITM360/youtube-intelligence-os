@@ -81,10 +81,11 @@ PRODUCER_CONTRACTS = {
     },
 }
 
-# V2 preserves strict field coverage except explicitly absent transcript counts.
+# V2 requires provenance for observed values and preserves absent optional observations.
 PRODUCER_CONTRACTS["register_supplied_channel.py/2"] = {
     **PRODUCER_CONTRACTS["register_supplied_channel.py/1"],
-    "nullable_video_snapshot_fields": {"transcript_word_count"},
+    "nullable_video_snapshot_fields": PRODUCER_CONTRACTS["register_supplied_channel.py/1"]["video_snapshot_fields"] - {"title"},
+    "nullable_channel_snapshot_fields": {"subscriber_count", "video_count"},
 }
 
 EVIDENCE_LAYER = {
@@ -591,16 +592,19 @@ def _provenance_coverage(conn, dataset_id, counts, contract):
         by_target = {}
         for target_id, field_name in rows:
             by_target.setdefault(target_id, []).append(field_name)
-        if len(by_target) != counts[count_key]:
-            valid = False
         expected_by_target = {}
-        if target_column == "video_snapshot_id":
-            for field in contract.get("nullable_video_snapshot_fields", set()):
+        nullable_key = {"video_snapshot_id": "nullable_video_snapshot_fields",
+                        "channel_snapshot_id": "nullable_channel_snapshot_fields"}.get(target_column)
+        if nullable_key:
+            for field in contract.get(nullable_key, set()):
                 for target_id, value in conn.execute(
-                    "SELECT video_snapshot_id,{} FROM video_snapshots WHERE dataset_id=?".format(field), (dataset_id,),
+                    "SELECT {},{} FROM {} WHERE dataset_id=?".format(target_column, field, count_key), (dataset_id,),
                 ):
                     if value is None:
                         expected_by_target.setdefault(target_id, set(expected_fields)).discard(field)
+        empty_targets = {target_id for target_id, fields in expected_by_target.items() if not fields}
+        if len(set(by_target) | empty_targets) != counts[count_key]:
+            valid = False
         expected_total += counts[count_key] * len(expected_fields) - sum(
             len(expected_fields) - len(fields) for fields in expected_by_target.values()
         )
