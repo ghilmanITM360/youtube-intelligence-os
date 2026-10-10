@@ -2,7 +2,7 @@
 
 ## Current contract and evidence boundaries
 
-Release 1.0.0 supplies 14 media sources and 11,585 source-declared observations. The reviewed crosswalk has 12 verified mappings and two unresolved mappings. Ten verified mappings exist in the canonical CH-000004 inventory. X97DDWvxaqQ and 9VG0yqq_PHM remain unregistered with acquired transcript evidence blocked; ownership is independently verified. The selected canonical inventory has 83 unique What If videos; this integration has created zero videos and modified zero historical snapshots or transcripts.
+Release 1.0.0 supplies 14 media sources and 11,585 source-declared observations. The reviewed crosswalk has 12 verified mappings and two unresolved mappings. Ten verified mappings exist in the canonical CH-000004 inventory. X97DDWvxaqQ and 9VG0yqq_PHM remain unregistered with acquired transcript evidence pending; ownership is independently verified. PR #17 is canonical; use the reviewed metadata packet and normal supplied-workbook importer with exact `--transcript-pending-id` declarations (see [registration contract](TRANSCRIPT_PENDING_REGISTRATION.md)). Unknown metrics and content format remain NULL, and no fabricated transcript row is permitted. The selected canonical inventory has 83 unique What If videos; this integration has created zero videos and modified zero historical snapshots or transcripts.
 
 The external corpus is immutable. Configure its location at runtime; no code assumes a home directory or machine name:
 

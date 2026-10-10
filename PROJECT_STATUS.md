@@ -14,7 +14,7 @@ Owner/security decision: preserve historical audio/frame evidence and private-de
 
 See [What If workflow](docs/WHAT_IF_INTEGRATION_WORKFLOW.md) for current commands and exact source/staged/promoted/held counts. Historical phase audits remain preserved and may describe earlier states.
 
-## Live remaining-work audit — 2026-10-11
+## Historical audit checkpoint — 2026-10-11 (before approved integration)
 
 Main was verified live at `c2d88eb533465f790f44ff14f72e95d066e82b96`; exact-SHA CI run 38010428097 passed with 438 tests and one skip. Actual MASTER values already influence Editing/Visual production plans. This work is complete and was not regenerated.
 
@@ -23,3 +23,11 @@ Canonical identity does not require a transcript at the schema level. The comple
 Genius History is 10/10 complete on the pushed packaging research branch, not main. The remote branch contains 518 unique thumbnail/package audits and 121 sampled package QA records, but current hash/rollup/source-locator drift prevents an unconditional whole-branch integration. Local worktrees and partial drafts remain preserved. SRC01/SRC02 have stronger public content candidates but remain held because exact local-source edit/version correspondence is unresolved.
 
 See [live audit and remaining-work matrix](docs/audits/REMAINING-WORK-MATRIX-2026-10-11.md) for distinct registry/inventory counts, PR reconciliation, provenance trace, privacy boundaries and exact continuation actions.
+
+## Current canonical integration — 2026-10-11
+
+PR #17 merged as `a6e6eae7c41a1cad711396a9119f71a649e1700d`; PR #19 merged next as `42d35dcfed98894b20ec984db653e76e15bad16b`, the canonical main checkpoint for this refresh. Transcript-optional registration, registry retention and safe hook/script joins are now canonical. The validated Genius History packet is canonical: ten exact videos with title, thumbnail and package audits, explicit QA, rankings, supported counterexamples and matched comparisons. The other 508 research packages and 2,293 title audits remain noncanonical research; the mixed research branch must not be bulk-merged.
+
+9VG0yqq_PHM and X97DDWvxaqQ remain IDENTITY_VERIFIED / TRANSCRIPT_PENDING / NOT_REGISTERED. Their reviewed metadata packet is ready for normal supplied-workbook materialization and importer registration, preserving unknown metrics and format as NULL and creating no transcript row. This refresh registers neither ID. SRC01/SRC02 remain HELD_UNRESOLVED. The owner privacy/access decision remains outstanding; evidence and Git history are preserved.
+
+Post-#17 validation: 454 passed, 1 skipped. Post-#19 validation: 460 passed, 1 skipped; portable packaging validator 10/10, registry/dataset validation clean, secret scan zero, LFS and whitespace checks pass. See [refresh evidence](docs/audits/remaining-work-2026-10-11/canonical-integration-refresh.json). Historical audit sections and packets retain their original checkpoint meaning. PR #18 is refreshed against this main checkpoint before its separately approved merge.
