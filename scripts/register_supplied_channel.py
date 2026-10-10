@@ -13,7 +13,7 @@ import inventory_catalog as ic
 from inventory_catalog import CatalogError
 from source_adapters import youtube_master_data as ymd
 
-TOOL_VERSION = "register_supplied_channel.py/1"
+TOOL_VERSION = "register_supplied_channel.py/2"
 TRANSCRIPT_RE = re.compile(r"\n=+\nTRANSCRIPT\n=+\n")
 
 
@@ -64,7 +64,7 @@ def parse_transcript(path):
     return fields
 
 
-def load_source(workbook_path, transcript_dir):
+def load_source(workbook_path, transcript_dir, transcript_pending_ids=()):
     workbook = ymd.read_workbook(workbook_path)
     if len(workbook["channels"]) != 1:
         raise CatalogError("AmbiguousIdentity", "Supplied channel workbook must establish exactly one channel")
@@ -78,11 +78,21 @@ def load_source(workbook_path, transcript_dir):
     transcript_ids = [row["video_id"] for row in transcripts]
     if any(count > 1 for count in Counter(workbook_ids).values()) or any(count > 1 for count in Counter(transcript_ids).values()):
         raise CatalogError("EvidenceConflict", "Duplicate video or transcript identity in supplied source")
-    if set(workbook_ids) != set(transcript_ids):
+    pending = list(transcript_pending_ids)
+    if len(pending) != len(set(pending)):
+        raise CatalogError("EvidenceConflict", "Duplicate transcript-pending declaration")
+    missing = set(workbook_ids) - set(transcript_ids)
+    if set(pending) != missing or set(transcript_ids) - set(workbook_ids):
         raise CatalogError("EvidenceConflict", "Workbook and transcript video IDs do not reconcile exactly")
     by_id = {row["video_id"]: row for row in transcripts}
     for video in workbook["videos"]:
         youtube_id = video["Video ID"][0]
+        if youtube_id in pending:
+            if not re.fullmatch(r"[A-Za-z0-9_-]{11}", youtube_id or "") or not video.get("Title", (None,))[0] or video.get("Video URL", (None,))[0] != "https://www.youtube.com/watch?v=" + youtube_id:
+                raise CatalogError("AmbiguousIdentity", "Pending video requires exact ID, title and canonical watch URL")
+            if video.get("Transcript File", (None,))[0] or video.get("Transcript Words", (None,))[0] not in (None, ""):
+                raise CatalogError("EvidenceConflict", "Pending video must not claim transcript file or word count: {}".format(youtube_id))
+            continue
         transcript = by_id[youtube_id]
         declared_file = video.get("Transcript File", (None,))[0]
         if declared_file != transcript["path"].name or transcript["channel"] != channel_name or transcript["title"] != video["Title"][0]:
@@ -112,13 +122,18 @@ def resolve_channel(conn, channel):
 
 def write_manifest(conn, dataset_id, path):
     dataset = conn.execute("SELECT * FROM datasets WHERE dataset_id=?", (dataset_id,)).fetchone()
-    channel = conn.execute("SELECT * FROM channels WHERE created_from_dataset_id=?", (dataset_id,)).fetchone()
+    channel = conn.execute("SELECT c.* FROM channels c JOIN channel_dataset_links l USING(channel_id) WHERE l.dataset_id=? LIMIT 1", (dataset_id,)).fetchone()
     files = conn.execute("SELECT original_path,canonical_path,size_bytes,sha256,file_role FROM source_files WHERE dataset_id=? ORDER BY relative_path", (dataset_id,)).fetchall()
     run = conn.execute("SELECT run_id,started_at,completed_at FROM ingestion_runs WHERE dataset_id=? AND run_type='STRUCTURED_REGISTRATION' ORDER BY started_at DESC LIMIT 1", (dataset_id,)).fetchone()
     counts = dict(conn.execute(
         "SELECT 'videos',COUNT(*) FROM video_snapshots WHERE dataset_id=? UNION ALL SELECT 'transcripts',COUNT(*) FROM transcripts WHERE dataset_id=? UNION ALL SELECT 'thumbnails',COUNT(thumbnail_url) FROM video_snapshots WHERE dataset_id=?",
         (dataset_id, dataset_id, dataset_id),
     ).fetchall())
+    pending = [row[0] for row in conn.execute(
+        "SELECT v.youtube_video_id FROM videos v JOIN video_snapshots s USING(video_id) "
+        "WHERE s.dataset_id=? AND NOT EXISTS (SELECT 1 FROM transcripts t WHERE t.video_id=v.video_id AND t.dataset_id=?) ORDER BY v.youtube_video_id",
+        (dataset_id, dataset_id),
+    )]
     lines = [
         "# {} — {}".format(dataset_id, dataset["dataset_name"]), "",
         "Generated from live catalog by `scripts/register_supplied_channel.py`.", "",
@@ -128,6 +143,7 @@ def write_manifest(conn, dataset_id, path):
         "- Registered channel: {} (`{}`, `{}`)".format(channel["display_name"], channel["handle"], channel["youtube_channel_id"]),
         "- Canonical videos: {}".format(counts["videos"]),
         "- Available transcripts: {} (`POSITIONAL_ONLY`)".format(counts["transcripts"]),
+        "- Transcript pending: {} ({})".format(len(pending), ", ".join(pending) or "none"),
         "- Registered thumbnail references: {}".format(counts["thumbnails"]),
         "- Editing intelligence: `EDITING_INTELLIGENCE_NOT_AVAILABLE`", "",
         "## Source files", "",
@@ -138,11 +154,11 @@ def write_manifest(conn, dataset_id, path):
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root=None, manifest_dir=None, dataset_name=None):
+def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root=None, manifest_dir=None, dataset_name=None, *, transcript_pending_ids=()):
     workbook_path, transcript_dir, db_path = Path(workbook_path).resolve(), Path(transcript_dir).resolve(), Path(db_path).resolve()
     if not workbook_path.is_file() or not transcript_dir.is_dir():
         raise CatalogError("SourceNotFound", "Workbook or transcript source path does not exist")
-    workbook, channel_name, channel, transcripts = load_source(workbook_path, transcript_dir)
+    workbook, channel_name, channel, transcripts = load_source(workbook_path, transcript_dir, transcript_pending_ids)
     source_paths = [workbook_path] + sorted(path for path in transcript_dir.iterdir() if path.is_file())
     source_hashes = {str(path): ic.sha256_file(path) for path in source_paths}
     raw_root = Path(raw_root or (ic.REPO_ROOT / "data/raw/competitors"))
@@ -191,7 +207,7 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
         with conn:
             conn.execute(
                 "INSERT INTO datasets VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
-                (dataset_id, dataset_name or "{} — Supplied Canonical Channel Export".format(channel_name), "B", "Supplied workbook and complete loose transcript pack.", "EXTERNAL_FILES", "CONTROLLED_COPY", "STRUCTURED_REGISTERED", "User-supplied canonical channel evidence", ts, ts, ts, "All source bytes copied unchanged; no live crawl performed."),
+                (dataset_id, dataset_name or "{} — Supplied Canonical Channel Export".format(channel_name), "B", "Supplied workbook and loose transcript evidence; explicitly declared gaps remain pending.", "EXTERNAL_FILES", "CONTROLLED_COPY", "STRUCTURED_REGISTERED", "User-supplied canonical channel evidence", ts, ts, ts, "All source bytes copied unchanged; no live crawl performed."),
             )
             conn.execute(
                 "INSERT INTO ingestion_runs (run_id,dataset_id,started_at,completed_at,status,source_file_count,archive_member_count,total_size_bytes,errors_count,verification_status,tool_version,notes,run_type) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
@@ -199,7 +215,7 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
             )
             conn.execute(
                 "INSERT INTO ingestion_runs (run_id,dataset_id,started_at,completed_at,status,source_file_count,archive_member_count,total_size_bytes,errors_count,verification_status,tool_version,notes,run_type) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                (structured_run_id, dataset_id, ts, ts, "COMPLETED", len(source_paths), 0, sum(path.stat().st_size for path in source_paths), 0, "VERIFIED", TOOL_VERSION, "29 workbook rows reconciled exactly to 29 transcript files.", "STRUCTURED_REGISTRATION"),
+                (structured_run_id, dataset_id, ts, ts, "COMPLETED", len(source_paths), 0, sum(path.stat().st_size for path in source_paths), len(transcript_pending_ids), "VERIFIED", TOOL_VERSION, "{} workbook rows; {} nonempty transcripts; {} explicitly pending IDs.".format(len(workbook["videos"]), len(transcripts), len(transcript_pending_ids)), "STRUCTURED_REGISTRATION"),
             )
             for original, kind in ((workbook_path, "LOCAL_FILE"), (transcript_dir, "LOCAL_FOLDER")):
                 conn.execute("INSERT INTO source_locations VALUES (?,?,?,?,?,?,?)", (next_id(conn, "source_locations", "source_location_id", "LOC"), dataset_id, str(original), kind, 1, ts, None))
@@ -235,12 +251,14 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
             snapshot_id = next_id(conn, "channel_snapshots", "channel_snapshot_id", "CS")
             conn.execute("INSERT INTO channel_snapshots VALUES (?,?,?,?,?,?,?,?,?)", (snapshot_id, channel_id, dataset_id, structured_run_id, observed_at, as_int(channel.get("Subscribers", (None,))[0], "Subscribers"), as_int(channel.get("Total Videos (YouTube)", (None,))[0], "Total Videos"), ts, "Supplied public channel observation."))
             for label, field in (("Subscribers", "subscriber_count"), ("Total Videos (YouTube)", "video_count")):
-                value, row, col = channel[label]
+                value, row, col = channel.get(label, (None, None, None))
+                if value in (None, ""):
+                    continue
                 provenance("channel_snapshot_id", snapshot_id, field, "{}#Channel Overview!{}{}".format(workbook_path.name, col, row), workbook_file_id)
 
             for video in workbook["videos"]:
                 youtube_id = video["Video ID"][0]
-                transcript = transcripts[youtube_id]
+                transcript = transcripts.get(youtube_id)
                 video_id = next_id(conn, "videos", "video_id", "VID")
                 conn.execute("INSERT INTO videos VALUES (?,?,?,?,?,?,?,?)", (video_id, youtube_id, channel_id, video["Video URL"][0], dataset_id, ts, ts, "Created from supplied canonical workbook."))
                 for label, field in (("Video ID", "youtube_video_id"), ("Video URL", "canonical_url")):
@@ -251,7 +269,7 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
                     "views": as_int(video["Views"][0], "Views"), "likes": as_int(video["Likes"][0], "Likes"), "comments": as_int(video["Comments"][0], "Comments"),
                     "views_per_day": as_float(video["Views/Day"][0], "Views/Day"), "engagement_rate": as_float(video["Engagement"][0], "Engagement"),
                     "description_char_count": as_int(video["Desc Chars"][0], "Desc Chars"), "transcript_word_count": as_int(video["Transcript Words"][0], "Transcript Words"),
-                    "description": video.get("Full Description", (None,))[0], "video_type": "video", "thumbnail_url": video.get("Thumbnail URL", (None,))[0],
+                    "description": video.get("Full Description", (None,))[0], "video_type": "video" if transcript is not None else None, "thumbnail_url": video.get("Thumbnail URL", (None,))[0],
                 }
                 video_snapshot_id = next_id(conn, "video_snapshots", "video_snapshot_id", "VS")
                 conn.execute(
@@ -267,8 +285,18 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
                     evidence = "MEASURED_FACT" if origin == "SOURCE_COMPUTED" else "EXTRACTED_FACT"
                     sheet = "Descriptions" if label == "Full Description" else "All Videos"
                     provenance("video_snapshot_id", video_snapshot_id, field, "{}#{}!{}{}".format(workbook_path.name, sheet, col, row), workbook_file_id, origin, evidence)
-                provenance("video_snapshot_id", video_snapshot_id, "video_type", "{}#Channel Overview!B16:B17".format(workbook_path.name), workbook_file_id, "SOURCE_DECLARED")
+                if values["video_type"] is not None:
+                    provenance("video_snapshot_id", video_snapshot_id, "video_type", "{}#Channel Overview!B16:B17".format(workbook_path.name), workbook_file_id, "SOURCE_DECLARED")
 
+                if transcript is None:
+                    conn.execute(
+                        "INSERT INTO ingestion_errors VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+                        (next_id(conn, "ingestion_errors", "error_id", "ERR"), structured_run_id, dataset_id,
+                         workbook_file_id, "TranscriptPending", "Medium",
+                         "Canonical identity registered; transcript evidence pending: {}".format(youtube_id),
+                         1, 0, ts, None, "Explicit registration declaration; no transcript row or fabricated body."),
+                    )
+                    continue
                 transcript_id = next_id(conn, "transcripts", "transcript_id", "TR")
                 transcript_file_id = file_ids[transcript["path"].name]
                 canonical_reference = ic.to_repo_relative(canonical_transcripts / transcript["path"].name)
@@ -281,7 +309,7 @@ def register(workbook_path, transcript_dir, db_path=ic.DEFAULT_DB_PATH, raw_root
 
         manifest_path = manifest_dir / "{}.md".format(dataset_id)
         write_manifest(conn, dataset_id, manifest_path)
-        return {"dataset_id": dataset_id, "channel_id": channel_id, "channel_name": channel_name, "run_id": structured_run_id, "video_count": len(workbook["videos"]), "transcript_count": len(transcripts), "file_count": len(source_paths), "total_bytes": sum(path.stat().st_size for path in source_paths), "manifest": str(manifest_path), "dedup_status": "EXISTING_CHANNEL_NEW_DATA" if existing_channel_id else "NEW_SOURCE"}
+        return {"dataset_id": dataset_id, "channel_id": channel_id, "channel_name": channel_name, "run_id": structured_run_id, "video_count": len(workbook["videos"]), "transcript_count": len(transcripts), "transcript_pending_ids": sorted(transcript_pending_ids), "file_count": len(source_paths), "total_bytes": sum(path.stat().st_size for path in source_paths), "manifest": str(manifest_path), "dedup_status": "EXISTING_CHANNEL_NEW_DATA" if existing_channel_id else "NEW_SOURCE"}
     except Exception:
         if canonical_dir and canonical_dir.exists() and not conn.execute("SELECT 1 FROM datasets WHERE dataset_id=?", (canonical_dir.name,)).fetchone():
             shutil.rmtree(canonical_dir)
@@ -294,12 +322,13 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workbook", required=True)
     parser.add_argument("--transcripts", required=True)
+    parser.add_argument("--transcript-pending-id", action="append", default=[], help="Exact workbook video ID lacking transcript evidence; repeat for each gap")
     parser.add_argument("--db", default=str(ic.DEFAULT_DB_PATH))
     parser.add_argument("--raw-root")
     parser.add_argument("--manifest-dir")
     parser.add_argument("--dataset-name")
     args = parser.parse_args(argv)
-    result = register(args.workbook, args.transcripts, args.db, args.raw_root, args.manifest_dir, args.dataset_name)
+    result = register(args.workbook, args.transcripts, args.db, args.raw_root, args.manifest_dir, args.dataset_name, transcript_pending_ids=args.transcript_pending_id)
     print("COMPLETED — {dataset_id}, {channel_id}, {video_count} videos, {transcript_count} transcripts, run {run_id}".format(**result))
 
 

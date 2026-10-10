@@ -615,14 +615,19 @@ def _historical_records(root: Path) -> tuple[list[dict], list[dict], list[dict]]
              t.canonical_reference,t.transcript_sha256,t.notes,sf.archive_member_path
       FROM videos v JOIN channels c ON c.channel_id=v.channel_id
       JOIN video_snapshots s ON s.video_id=v.video_id
-      JOIN transcripts t ON t.video_id=v.video_id AND t.dataset_id=v.created_from_dataset_id
-      JOIN source_files sf ON sf.file_id=t.archive_member_file_id
+      LEFT JOIN transcripts t ON t.video_id=v.video_id AND t.dataset_id=v.created_from_dataset_id
+      LEFT JOIN source_files sf ON sf.file_id=t.archive_member_file_id
     """
     videos, transcripts, memberships = [], [], []
     try:
         for row in source.execute(sql):
             no_source = row["canonical_reference"] is None and row["archive_member_path"] is None
-            if no_source:
+            if row["availability_status"] is None:
+                # Canonical identity is independent of transcript evidence. Keep
+                # membership without inventing a placeholder/body/hash.
+                portable_reference = "data/catalog/youtube_inventory.db::video:" + row["youtube_video_id"]
+                description = row["description"]
+            elif no_source:
                 # Legitimate gap: YouTube provides no captions/subtitles for this
                 # video and no transcript archive backs it (e.g. Apify-ingested
                 # video with hasSubtitles=false). Not an error, not a file to read.
@@ -674,7 +679,8 @@ def _historical_records(root: Path) -> tuple[list[dict], list[dict], list[dict]]
                 "description_unavailable_reason": None if description is not None else "Description unavailable in historical catalog.",
                 "thumbnail_url": row["thumbnail_url"], "raw_json": None,
             })
-            transcripts.append({
+            if row["availability_status"] is not None:
+                transcripts.append({
                 "youtube_video_id": row["youtube_video_id"], "dataset_id": row["dataset_id"],
                 "transcript_text": body, "word_count": row["word_count"], "language": row["language"],
                 "caption_type": row["caption_type"], "is_placeholder": int(placeholder), "unavailable_reason": reason,
@@ -1098,8 +1104,11 @@ def build_database(root: Path, database_path: Path, model: dict | None = None) -
             for subject in model["subjects"]:
                 _upsert(connection, "non_channel_subjects", {key: subject[key] for key in ("subject_id", "subject_name", "canonical_channel_id", "identity_status", "evidence_source", "limitation")}, ("subject_id",))
                 _upsert(connection, "subject_datasets", {"subject_id": subject["subject_id"], "dataset_id": subject["dataset_id"]}, ("subject_id", "dataset_id"))
+            transcript_ids = {row["youtube_video_id"] for row in transcripts}
             for video in videos:
                 _upsert(connection, "videos", video, ("youtube_video_id",))
+                if video["youtube_video_id"] not in transcript_ids:
+                    _upsert(connection, "availability_gaps", {"canonical_channel_id": video["canonical_channel_id"], "field_name": f"video:{video['youtube_video_id']}:transcript", "unavailable_reason": "TRANSCRIPT_PENDING: canonical identity has no stored transcript evidence.", "evidence_source": video["canonical_url"]}, ("canonical_channel_id", "field_name", "unavailable_reason"))
                 if video["description"] is None:
                     _upsert(connection, "availability_gaps", {"canonical_channel_id": video["canonical_channel_id"], "field_name": f"video:{video['youtube_video_id']}:description", "unavailable_reason": video["description_unavailable_reason"], "evidence_source": video["canonical_url"]}, ("canonical_channel_id", "field_name", "unavailable_reason"))
                 for field in ("duration_seconds", "video_type", "views", "likes", "comments"):

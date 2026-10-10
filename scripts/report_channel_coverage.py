@@ -158,6 +158,7 @@ def _tier_a_registered_channels(conn):
             "unknown_content_type": content_counts.get("unknown", 0),
             "transcripts_available": transcripts.get("AVAILABLE", 0),
             "transcripts_unavailable": transcripts.get("UNAVAILABLE", 0),
+            "transcripts_pending": videos - sum(transcripts.values()),
             "screenshot_evidence_count": visual_assets,
             "thumbnail_reference_count": thumbnail_row["references_count"],
             "videos_with_thumbnail_evidence": thumbnail_row["video_count"],
@@ -255,13 +256,13 @@ def build_report(conn):
     lines.append("")
     lines.extend(rc.md_table(
         ["Channel ID", "YouTube ID", "Display Name", "Handle", "Datasets", "Total (Regular/Shorts/Streams/Unknown)",
-         "Transcripts A/U", "Thumbnail Items/Refs", "Packaging", "Editing Evidence", "Related Forensics",
+         "Transcripts A/U/Pending", "Thumbnail Items/Refs", "Packaging", "Editing Evidence", "Related Forensics",
          "Newest Snapshot", "Sources"],
         [(e["channel_id"], e["youtube_channel_id"], e["display_name"], e["handle"],
           ", ".join(e["dataset_ids"]),
           "{} ({}/{}/{}/{})".format(e["videos"], e["regular_videos"], e["shorts"], e["streams"],
                                      e["unknown_content_type"]),
-          "{}/{}".format(e["transcripts_available"], e["transcripts_unavailable"]),
+          "{}/{}/{}".format(e["transcripts_available"], e["transcripts_unavailable"], e["transcripts_pending"]),
           "{}/{}".format(e["videos_with_thumbnail_evidence"], e["thumbnail_reference_count"]),
           "YES" if e["has_packaging_evidence"] else "no",
           e["editing_style"] if e["editing_style"] != "UNKNOWN" else
