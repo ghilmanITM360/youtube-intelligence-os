@@ -209,3 +209,40 @@ def test_hook_script_pending_only_corpus_is_graceful(packet):
     assert output['evidence_snapshot']['transcripts_accounted_for'] == 0
     assert output['evidence_snapshot']['unavailable_transcripts'] == [pending_id]
     assert output['hook_features'] == output['script_features'] == []
+
+
+def test_registry_loader_preserves_pending_video_without_placeholder(packet):
+    import shutil
+    from scripts.build_youtube_channel_registry import _historical_records
+
+    rsc.register(*packet, transcript_pending_ids=['video000002'])
+    with sqlite3.connect(packet[2]) as conn:
+        pending_id = conn.execute("SELECT video_id FROM videos WHERE youtube_video_id='video000002'").fetchone()[0]
+        conn.execute('DELETE FROM video_snapshots WHERE video_id<>?', (pending_id,))
+    catalog = packet[2].parent / 'data/catalog'
+    catalog.mkdir(parents=True)
+    shutil.copyfile(packet[2], catalog / 'youtube_inventory.db')
+    videos, transcripts, memberships = _historical_records(packet[2].parent)
+    assert [row['youtube_video_id'] for row in videos] == ['video000002']
+    assert transcripts == []
+    assert len(memberships) == 1
+    assert 'video000002' in memberships[0]['evidence_locator']
+
+
+def test_registry_builder_records_missing_transcript_gap_without_synthetic_row(tmp_path, monkeypatch):
+    from scripts import build_youtube_channel_registry as registry
+
+    root = Path(__file__).resolve().parents[1]
+    model = registry.build_model(root)
+    channel = model['channels'][0]
+    video = dict(youtube_video_id='pending0001', canonical_channel_id=channel['canonical_channel_id'], canonical_url='https://www.youtube.com/watch?v=pending0001', title='Reviewed identity', published_at=None, duration_seconds=None, video_type=None, views=None, likes=None, comments=None, description=None, description_unavailable_reason='Not observed', thumbnail_url=None, raw_json=None)
+    monkeypatch.setattr(registry, '_all_records', lambda root, model: ([video], [], [], []))
+    database = tmp_path / 'registry.db'
+    first = registry.build_database(root, database, model)
+    second = registry.build_database(root, database, model)
+    assert first == second
+    with sqlite3.connect(database) as conn:
+        assert conn.execute('SELECT count(*) FROM transcripts').fetchone()[0] == 0
+        reason = conn.execute("SELECT unavailable_reason FROM availability_gaps WHERE field_name='video:pending0001:transcript'").fetchone()
+        assert reason and reason[0].startswith('TRANSCRIPT_PENDING:')
+        assert conn.execute('PRAGMA foreign_key_check').fetchall() == []

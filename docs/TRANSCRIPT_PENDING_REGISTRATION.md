@@ -36,3 +36,5 @@ At the audited baseline, 9VG0yqq_PHM and X97DDWvxaqQ remain IDENTITY_VERIFIED, T
 ## Review verification
 
 The pending-only hook/script regression reproduces the prior corpus-mismatch failure and now returns an explicit unavailable transcript with no invented hook or script. Existing canonical snapshot/transcript joins were compared directly: the left join returns exactly the same rows as the former inner join on the current inventory. Only the affected reporter dependency fingerprint is updated; existing intelligence output bytes remain unchanged.
+
+The historical registry loader also retains identity/snapshot rows through left transcript/source joins. Missing transcripts create registry availability gaps, not synthetic transcript rows or hashes. A disposable registry rebuild verifies both repeatability and foreign keys for this state. Current canonical control totals remain unchanged.
