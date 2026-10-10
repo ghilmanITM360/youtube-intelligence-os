@@ -22,7 +22,7 @@ and [X97DDWvxaqQ](https://www.youtube.com/watch?v=X97DDWvxaqQ) displayed
 `xkcd's What If?` as owner and linked to `@xkcd_whatif`. They are verified
 external identities but are **not yet registered** in the local YIOS catalog.
 They must enter through the existing controlled channel acquisition path,
-before forensic observations can join to them. The owner has now authorized an official uploads-playlist refresh; execution is blocked by unavailable API authorization and the absence of an existing official acquisition implementation. A paid Apify fallback still requires a separately approved cost cap.
+before forensic observations can join to them. The owner has now authorized an official uploads-playlist refresh; that full-list refresh is blocked by unavailable API authorization and the absence of an existing official acquisition implementation. Direct ownership verification of the two exact IDs was completed independently on 2026-10-10; it does not depend on the refresh. A paid Apify fallback still requires a separately approved cost cap.
 SRC01 and SRC02 have no independently verified YouTube ID and remain
 `UNRESOLVED`; title or slug similarity is insufficient.
 

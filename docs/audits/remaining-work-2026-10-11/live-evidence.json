@@ -1,0 +1,698 @@
+{
+  "verified_on": "2026-10-11",
+  "canonical_main": "c2d88eb533465f790f44ff14f72e95d066e82b96",
+  "checkpoint_is_current_main": true,
+  "default_branch": "refs/remotes/origin/main",
+  "baseline_ci": {
+    "run_id": 38010428097,
+    "sha": "c2d88eb533465f790f44ff14f72e95d066e82b96",
+    "status": "SUCCESS",
+    "passed": 438,
+    "skipped": 1
+  },
+  "pr_reconciliation": [
+    {
+      "baseRefOid": "6d63023f6b23d22073b2ecd533068fa36b15c2b6",
+      "files": [
+        "data/intelligence/channels/CH-000004/forensic-observation-index-v1.json",
+        "data/intelligence/system/intelligence-freshness-registry.json",
+        "scripts/promote_what_if_forensics.py",
+        "scripts/run_youtube_intelligence.py",
+        "tests/test_run_youtube_intelligence.py",
+        "tests/test_stage_what_if_forensics.py"
+      ],
+      "headRefOid": "aff815ef2b4d0dc3bc84c054322ce7b86d98f445",
+      "mergeCommit": {
+        "oid": "e43e2d9312608c3143d04b74530f78083dda399c"
+      },
+      "mergedAt": "2026-10-09T16:02:22Z",
+      "number": 11,
+      "state": "MERGED",
+      "title": "Link validated What If forensic observations to intelligence",
+      "canonical_ancestor": true
+    },
+    {
+      "baseRefOid": "e43e2d9312608c3143d04b74530f78083dda399c",
+      "files": [
+        "docs/superpowers/plans/2026-10-09-what-if-completion.md",
+        "scripts/stage_what_if_forensics.py",
+        "tests/test_stage_what_if_forensics.py"
+      ],
+      "headRefOid": "89ecee564ecb9f167486406e49f0fcf73dabb9be",
+      "mergeCommit": {
+        "oid": "3c2fa06efd7aa48ba1ebca968264c00cd13d6656"
+      },
+      "mergedAt": "2026-10-09T16:08:29Z",
+      "number": 12,
+      "state": "MERGED",
+      "title": "Record durable What If staging lifecycle",
+      "canonical_ancestor": true
+    },
+    {
+      "baseRefOid": "3c2fa06efd7aa48ba1ebca968264c00cd13d6656",
+      "files": [
+        "data/intelligence/plans/what-if-forensic-2026-10-09/CH-000004-OP-001-content-intelligence-v1.json",
+        "data/intelligence/plans/what-if-forensic-2026-10-09/CH-000004-OP-001-content-intelligence-v1.md",
+        "data/intelligence/system/intelligence-freshness-registry.json",
+        "scripts/query_what_if_forensics.py",
+        "scripts/run_youtube_intelligence.py",
+        "tests/test_query_what_if_forensics.py"
+      ],
+      "headRefOid": "89e2acb60e976c5aeba2a4994754c0392fa1222e",
+      "mergeCommit": {
+        "oid": "f79479ae901551ef3a5d7582895138bf902dd0cd"
+      },
+      "mergedAt": "2026-10-09T16:22:07Z",
+      "number": 13,
+      "state": "MERGED",
+      "title": "Consume promoted What If evidence in Editing/Visual plans",
+      "canonical_ancestor": true
+    },
+    {
+      "baseRefOid": "f79479ae901551ef3a5d7582895138bf902dd0cd",
+      "files": [
+        "PROJECT_STATUS.md",
+        "README.md",
+        "docs/Architecture.md",
+        "docs/DECISIONS.md",
+        "docs/Phases.md",
+        "docs/Security.md",
+        "docs/WHAT_IF_FORENSIC_SOURCE_CONTRACT.md",
+        "docs/WHAT_IF_INTEGRATION_WORKFLOW.md",
+        "docs/audits/WHAT_IF_REPOSITORY_SAFETY_2026-10-09.md",
+        "docs/superpowers/plans/2026-10-09-what-if-completion.md"
+      ],
+      "headRefOid": "5afb8034807ab6a02aa73fdd76f28b2be1d42d1b",
+      "mergeCommit": {
+        "oid": "a084c57704052315637313bbc9efef6effb51fe3"
+      },
+      "mergedAt": "2026-10-09T16:26:43Z",
+      "number": 14,
+      "state": "MERGED",
+      "title": "Document What If lifecycle, portability and repository safety",
+      "canonical_ancestor": true
+    },
+    {
+      "baseRefOid": "a084c57704052315637313bbc9efef6effb51fe3",
+      "files": [
+        "docs/DATA_PRIVACY.md",
+        "docs/FORENSIC_STAGING_AND_PROMOTION.md",
+        "docs/PROVENANCE.md",
+        "docs/ROLLBACK.md",
+        "docs/UPDATE_WORKFLOW.md",
+        "docs/WHAT_IF_INTEGRATION_WORKFLOW.md"
+      ],
+      "headRefOid": "44f24a06d835b30eac7f19a0460451c8ae834203",
+      "mergeCommit": {
+        "oid": "06d374ed4c67a866bdf0f8c07b4bf2ac8f81a0b0"
+      },
+      "mergedAt": "2026-10-10T00:02:19Z",
+      "number": 15,
+      "state": "MERGED",
+      "title": "docs: expose forensic lifecycle entry points and retention classes",
+      "canonical_ancestor": true
+    },
+    {
+      "baseRefOid": "06d374ed4c67a866bdf0f8c07b4bf2ac8f81a0b0",
+      "files": [
+        "PROJECT_STATUS.md",
+        "data/manifests/what-if-forensic-source-v1.json",
+        "docs/WHAT_IF_FORENSIC_SOURCE_CONTRACT.md",
+        "docs/evidence/what-if-identity-2026-10-10/9VG0yqq_PHM.json",
+        "docs/evidence/what-if-identity-2026-10-10/X97DDWvxaqQ.json"
+      ],
+      "headRefOid": "a3c1fcad900c1c5eff462793d45db3190e4077a2",
+      "mergeCommit": {
+        "oid": "c2d88eb533465f790f44ff14f72e95d066e82b96"
+      },
+      "mergedAt": "2026-10-10T00:45:39Z",
+      "number": 16,
+      "state": "MERGED",
+      "title": "docs: reconcile final official What If identity evidence",
+      "canonical_ancestor": true
+    }
+  ],
+  "metrics": {
+    "youtube_inventory": {
+      "datasets": 26,
+      "channels": 10,
+      "videos": 667,
+      "transcripts": 668,
+      "document_records": 17,
+      "visual_assets": 5172,
+      "thumbnail_evidence": 479,
+      "transcript_status_counts": {
+        "AVAILABLE": 666,
+        "UNAVAILABLE": 2
+      }
+    },
+    "youtube_channel_registry": {
+      "datasets": 33,
+      "channels": 75,
+      "videos": 2303,
+      "transcripts": 2303,
+      "availability_gaps": 216,
+      "artifacts": 318,
+      "real_transcripts": 2291,
+      "placeholders": 12,
+      "thumbnail_url_references": 1907
+    }
+  },
+  "worktrees": [
+    {
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os",
+      "branch": "codex/remaining-work-audit-2026-10-11",
+      "head": "c2d88eb533465f790f44ff14f72e95d066e82b96",
+      "status": ""
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-thumbnail-forensics",
+      "branch": "research/thumbnail-forensics-complete-2026-10-04",
+      "head": "ba3e73483eb2d376b617555afe55dcde64cf051c",
+      "status": "?? docs/research/thumbnail-forensics-2026-10-02/HANDOFF-wave8-resource-stop-2026-10-05.md"
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-expansion",
+      "branch": "research/senior-health-data-expansion-2026-09-28",
+      "head": "814a027976d8373920500600805542070429e5eb",
+      "status": "M docs/research/senior-health-2026-09-25/forensic-v3/scripts/build_master_inventory.py"
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-integration",
+      "branch": "integration/yios-current-canonical-2026-10-03",
+      "head": "c1c3bb8860b92fb3a54628da0b6e41252453f5b0",
+      "status": ""
+    }
+  ],
+  "stashes": "stash@{0}: On chore/full-local-data-sync-and-senior-health-acquisition: checkpoint doc wip",
+  "packaging": {
+    "branch": "origin/research/thumbnail-forensics-complete-2026-10-04",
+    "head": "aaa32b580131adfe8ab83bf3a46814d3aadee32d",
+    "unique_commits": 48,
+    "summary_reported": {
+      "channels": {
+        "total": 75,
+        "complete": 1,
+        "in_progress": 45,
+        "not_started": 0,
+        "qa_pending": 0,
+        "identity_only": 29,
+        "full_data": 43,
+        "partial": 3
+      },
+      "videos": {
+        "total": 2303,
+        "with_titles": 2303,
+        "with_primary_thumbnails": 2282
+      },
+      "titles": {
+        "done": 2303,
+        "eligible": 2303
+      },
+      "thumbnails": {
+        "verified": 518,
+        "draft": 40,
+        "draft_structurally_valid": 39,
+        "draft_invalid": 1,
+        "eligible": 2698,
+        "remaining": 2180,
+        "canonical_channel_eligible": 2284,
+        "unregistered_identity_eligible": 414
+      },
+      "packages": {
+        "audited": 518,
+        "qa_sampled": 121,
+        "full_visual_qa": false,
+        "eligible": 2282,
+        "remaining": 1764
+      },
+      "progress": {
+        "title": 1,
+        "thumbnail": 0.19199406968124536,
+        "package": 0.22699386503067484,
+        "qa": 0.053023663453111304,
+        "composite": 0.3680028995412579
+      },
+      "current_channel": {
+        "order": 2,
+        "Channel_ID": "UC0L9hD7HMwWU7xuU5HRA6Iw",
+        "name": "Hypothetically",
+        "videos": 39,
+        "next_Video_ID": "EvuEMhh7SSk",
+        "next_Thumbnail_ID": "THB-d493f7626dd7664e9d3aa778dfdeee133eb55c880c0c9d983f0f5dd77256a5d6",
+        "completed_videos": 5,
+        "remaining_videos": 34,
+        "progress": 0.4358974358974359,
+        "status": "IN_PROGRESS"
+      },
+      "completed_channel": {
+        "order": 1,
+        "Channel_ID": "UC-q0RDBWjYlYA2KkPzq0WSQ",
+        "name": "Genius History",
+        "videos": 10,
+        "next_Video_ID": "",
+        "next_Thumbnail_ID": "",
+        "completed_videos": 10,
+        "remaining_videos": 0,
+        "progress": 1,
+        "status": "COMPLETE"
+      }
+    },
+    "recomputed": {
+      "title_rows": 2303,
+      "unique_verified_thumbnails": 518,
+      "unique_package_ids": 518,
+      "unique_qa_package_images": 121,
+      "complete_channels": 1,
+      "genius_complete_videos": 10,
+      "genius_source_image_hashes_pass": 10,
+      "genius_source_images_in_canonical_checkout": 0
+    },
+    "summary_hash_checks": [
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/completion-ledger.csv",
+        "expected": "28885c0114ad0ee30f9407e970814940bcbf3192bf1635b3c7a444d667452d49",
+        "actual": "28885c0114ad0ee30f9407e970814940bcbf3192bf1635b3c7a444d667452d49",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-batch-plan.json",
+        "expected": "5f26d6d91d702cb88bbffc23ff24d1a8cb155f11d8eff1393f398d4c3ff5aec0",
+        "actual": "5f26d6d91d702cb88bbffc23ff24d1a8cb155f11d8eff1393f398d4c3ff5aec0",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/wave8-recovery-state.json",
+        "expected": "b42e5e87cd5288485fbebb59b5e7cf1992272e4ab8eecd543db55f95d6bf5e63",
+        "actual": "b42e5e87cd5288485fbebb59b5e7cf1992272e4ab8eecd543db55f95d6bf5e63",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/channel-coverage.csv",
+        "expected": "739d6be88e6a0647b573cf18c98104bf249c00e21a99d247ba450125654ec44b",
+        "actual": "739d6be88e6a0647b573cf18c98104bf249c00e21a99d247ba450125654ec44b",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/master-packages.csv",
+        "expected": "9ffd349517330dea0f96e61d06924212158c012e1476a507057c5dba18028a04",
+        "actual": "9ffd349517330dea0f96e61d06924212158c012e1476a507057c5dba18028a04",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/title-forensics.csv",
+        "expected": "48496e27d4ed89c554a894e883524cf320a8ed6501994ec0f18582ba182040d4",
+        "actual": "48496e27d4ed89c554a894e883524cf320a8ed6501994ec0f18582ba182040d4",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/thumbnail-universe.csv",
+        "expected": "5758fd9aad9b7b09ca661dfef5ce46e469278c254c41264a1c93b2169eea8059",
+        "actual": "5758fd9aad9b7b09ca661dfef5ce46e469278c254c41264a1c93b2169eea8059",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/individual-audit-batch-001.json",
+        "expected": "465a2da035687938aca7c79ee20982c31ba58ba5042e2f0f61eec3d5a2b32e63",
+        "actual": "465a2da035687938aca7c79ee20982c31ba58ba5042e2f0f61eec3d5a2b32e63",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/channel-packaging-profiles.csv",
+        "expected": "e1fc4813c5f5297e86a252bbfd71b7df33a781c20fa669a30d8513d1909daefb",
+        "actual": "e1fc4813c5f5297e86a252bbfd71b7df33a781c20fa669a30d8513d1909daefb",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-forensics.json",
+        "expected": "10bd61ee65aa120e78fe39261815d9b5440c355a5be68f1635dfb584737923ae",
+        "actual": "10bd61ee65aa120e78fe39261815d9b5440c355a5be68f1635dfb584737923ae",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/packaging-quadrants.csv",
+        "expected": "f8129da09c3137960f69ebc51dc0ccf1f813e03f4bcace4593be1cea16117067",
+        "actual": "f8129da09c3137960f69ebc51dc0ccf1f813e03f4bcace4593be1cea16117067",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-summary.json",
+        "expected": "f3f292c9c8268fff2779397e05a58c33cdf809dc13be8a825e40076787d49ed8",
+        "actual": "f3f292c9c8268fff2779397e05a58c33cdf809dc13be8a825e40076787d49ed8",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-20.json",
+        "expected": "054ee01a30cd3e0cca185e1d0283aa12b34d2d936b31167a36629750fdd02ca3",
+        "actual": "054ee01a30cd3e0cca185e1d0283aa12b34d2d936b31167a36629750fdd02ca3",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-16.json",
+        "expected": "2052aa2c58b6c2f70e5cbd2e8aa71c08a39f07fbbf9cc7e27e31d387271158fa",
+        "actual": "2052aa2c58b6c2f70e5cbd2e8aa71c08a39f07fbbf9cc7e27e31d387271158fa",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-01.json",
+        "expected": "011045de34c7e7c4e343020fcac29d5cc6833febc7f8c9803d3c508d1349d25c",
+        "actual": "011045de34c7e7c4e343020fcac29d5cc6833febc7f8c9803d3c508d1349d25c",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-17.json",
+        "expected": "f96051bb5e080330f3efa1818987b4baa76c078ab5f2a23095c47f3e8ea2b290",
+        "actual": "f96051bb5e080330f3efa1818987b4baa76c078ab5f2a23095c47f3e8ea2b290",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-21.json",
+        "expected": "1567197b6e94db9617afcb1fde5db249e6c15d31444ba4a0d090287626465923",
+        "actual": "1567197b6e94db9617afcb1fde5db249e6c15d31444ba4a0d090287626465923",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-10.json",
+        "expected": "e08007b7012a38ebda79fd4eb8d59a6d32026f88f08c394eddc04e0b1755035a",
+        "actual": "e08007b7012a38ebda79fd4eb8d59a6d32026f88f08c394eddc04e0b1755035a",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-06.json",
+        "expected": "074ca625660a1a68ab98182aea72364d73f23fe2f0e56bf9ed31586331691baf",
+        "actual": "074ca625660a1a68ab98182aea72364d73f23fe2f0e56bf9ed31586331691baf",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-07.json",
+        "expected": "c338e2bf0684a2d60dd52343a0c30fd0fa92a71458d21da37298d39a15cda7cf",
+        "actual": "c338e2bf0684a2d60dd52343a0c30fd0fa92a71458d21da37298d39a15cda7cf",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-11.json",
+        "expected": "a8dcb9a52ab719de61e695bba426541d08b08bb0aa1ba662f27f2904cc123094",
+        "actual": "a8dcb9a52ab719de61e695bba426541d08b08bb0aa1ba662f27f2904cc123094",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-04.json",
+        "expected": "3a8f76d8745cf723403d3bd4307240c517f0a9e8a2c4dfcd2be42e2519c686f0",
+        "actual": "3a8f76d8745cf723403d3bd4307240c517f0a9e8a2c4dfcd2be42e2519c686f0",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-12.json",
+        "expected": "27fa717715b4e2d1d4de048695a32dd052740908ba342bfab678c29f8cd19c52",
+        "actual": "27fa717715b4e2d1d4de048695a32dd052740908ba342bfab678c29f8cd19c52",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-08.json",
+        "expected": "8fb48c9adbd8ed8f6033fec15060efe3ff9febaca9aea157f3c007415e137ad0",
+        "actual": "8fb48c9adbd8ed8f6033fec15060efe3ff9febaca9aea157f3c007415e137ad0",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-24.json",
+        "expected": "0e2a43c87f1e91245f87a37dadfc4e5442014379d93934167464bfb448cac5f4",
+        "actual": "0e2a43c87f1e91245f87a37dadfc4e5442014379d93934167464bfb448cac5f4",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-09.json",
+        "expected": "94e428f9257bde9c109bfcb4676ac62303128fc08a50b06a5e13d8fa870086f6",
+        "actual": "94e428f9257bde9c109bfcb4676ac62303128fc08a50b06a5e13d8fa870086f6",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-13.json",
+        "expected": "aa913e79d643b3ee7b0937e8d050e9e10f3c8741cbc843352b84a95f91495150",
+        "actual": "aa913e79d643b3ee7b0937e8d050e9e10f3c8741cbc843352b84a95f91495150",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-05.json",
+        "expected": "37717d6692bc08aee0856c28ffbbb2e072036d9b9bc4e5605425410dbb531cca",
+        "actual": "37717d6692bc08aee0856c28ffbbb2e072036d9b9bc4e5605425410dbb531cca",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-18.json",
+        "expected": "708b5dd5648b5e8d4caaf637b9c09eb56382a92ee5bbc940c2397da9a33f71ea",
+        "actual": "708b5dd5648b5e8d4caaf637b9c09eb56382a92ee5bbc940c2397da9a33f71ea",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-22.json",
+        "expected": "74aa29416e1d03295db9a7ae110651d0f704cb6e883d3013ad453f397e507864",
+        "actual": "74aa29416e1d03295db9a7ae110651d0f704cb6e883d3013ad453f397e507864",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-02.json",
+        "expected": "f0a5d3999e8124a486cc0e2ffded97bbc71367d70d7837adb4f6191121d6e56f",
+        "actual": "f0a5d3999e8124a486cc0e2ffded97bbc71367d70d7837adb4f6191121d6e56f",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-14.json",
+        "expected": "7468c473fed5eb39b52d3ac3629ddf8984f7ed57fd75c8ba4b35360a62409961",
+        "actual": "7468c473fed5eb39b52d3ac3629ddf8984f7ed57fd75c8ba4b35360a62409961",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-15.json",
+        "expected": "2457ac17fc9919a58d0d8e17d28f5b20677ce4d9b66f3d5524485396d3a7dcae",
+        "actual": "2457ac17fc9919a58d0d8e17d28f5b20677ce4d9b66f3d5524485396d3a7dcae",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-03.json",
+        "expected": "208e0486dd50f2b70db6aa4c1c51e55748eb4c5cc3855d7ced95a95f93180417",
+        "actual": "4d7d487dac5ae6a685fe48a54247246b24030aaad1771a01914810eaa20ea18a",
+        "match": false
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-23.json",
+        "expected": "0c5d5849dcdf5c3c72c2edb8bdf9c9da0da0801fa654fe21ec98ba8cd185a794",
+        "actual": "0c5d5849dcdf5c3c72c2edb8bdf9c9da0da0801fa654fe21ec98ba8cd185a794",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-19.json",
+        "expected": "c39591a369f86286c4f98840da3df987ffb51f099e3374b5fe9de898f8649347",
+        "actual": "c39591a369f86286c4f98840da3df987ffb51f099e3374b5fe9de898f8649347",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-15.json",
+        "expected": "8fb412d7c958b5c33690e1b846776cc37457307d9920b78ba3c335008fbc9e5f",
+        "actual": "8fb412d7c958b5c33690e1b846776cc37457307d9920b78ba3c335008fbc9e5f",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-03.json",
+        "expected": "dcf1602462581775b681dea8175e04cea3e127cb6ee965fa1fc91927ffa4ba2c",
+        "actual": "dcf1602462581775b681dea8175e04cea3e127cb6ee965fa1fc91927ffa4ba2c",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-19.json",
+        "expected": "5a7c961f4d2d4cab34af369fd57e3de85016a43bf18253059f14b69137277e6c",
+        "actual": "5a7c961f4d2d4cab34af369fd57e3de85016a43bf18253059f14b69137277e6c",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-22.json",
+        "expected": "8260049d3b80bdb01c0328eba491b1852a9a5e7365f7a1932bd21168db243c2b",
+        "actual": "8260049d3b80bdb01c0328eba491b1852a9a5e7365f7a1932bd21168db243c2b",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-18.json",
+        "expected": "1a73f9cb6e06356af46fb5ef54ed313178dbaf7e4eaba2a3648894d1bb9e3b5e",
+        "actual": "1a73f9cb6e06356af46fb5ef54ed313178dbaf7e4eaba2a3648894d1bb9e3b5e",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-02.json",
+        "expected": "997378d67dfe5cd333d8621dc12d680671c5aed00ac876fd4f45e6849012581c",
+        "actual": "997378d67dfe5cd333d8621dc12d680671c5aed00ac876fd4f45e6849012581c",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-14.json",
+        "expected": "cd07e07bb1d6ae07d4b6c3b0736cacb431845ca77935f487321687d28edcc53d",
+        "actual": "cd07e07bb1d6ae07d4b6c3b0736cacb431845ca77935f487321687d28edcc53d",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-09.json",
+        "expected": "343d8f09d2ce0454403b48b9e065436c1c32985ccc2996f77e72ca839968e8b9",
+        "actual": "343d8f09d2ce0454403b48b9e065436c1c32985ccc2996f77e72ca839968e8b9",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-13.json",
+        "expected": "74671bc26e3402f0478f1809c1b34edc501ba76eb696bf286229f6403edbbdf2",
+        "actual": "74671bc26e3402f0478f1809c1b34edc501ba76eb696bf286229f6403edbbdf2",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-05.json",
+        "expected": "09bd78bd64b377d358bc92fbfbaadd60beee9cad75040573265b47ba35445418",
+        "actual": "09bd78bd64b377d358bc92fbfbaadd60beee9cad75040573265b47ba35445418",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-04.json",
+        "expected": "00baec1b257d385657c4e09a7fe16de47da57c4732ac48386d6523f338234de5",
+        "actual": "00baec1b257d385657c4e09a7fe16de47da57c4732ac48386d6523f338234de5",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-12.json",
+        "expected": "3c18cdcbfcbc0803e00c0cc22f2238a861d679a8513fca2187d7aae2df3aa9ae",
+        "actual": "3c18cdcbfcbc0803e00c0cc22f2238a861d679a8513fca2187d7aae2df3aa9ae",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-08.json",
+        "expected": "2b4b1104b0264690d44f39c6cbee2583d9cf026a3230c34e8405cf3e43388c31",
+        "actual": "2b4b1104b0264690d44f39c6cbee2583d9cf026a3230c34e8405cf3e43388c31",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-07.json",
+        "expected": "a70fb22876223b56987538f0988720620e3b480fd322c66a1917db07bc53fe7b",
+        "actual": "a70fb22876223b56987538f0988720620e3b480fd322c66a1917db07bc53fe7b",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-11.json",
+        "expected": "132f27f4f7de752adeeb5ffb1f256b0f7c199f41348b7cfcc90c055ccc2ba4c3",
+        "actual": "132f27f4f7de752adeeb5ffb1f256b0f7c199f41348b7cfcc90c055ccc2ba4c3",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-10.json",
+        "expected": "9e7b283c87cba99199ac815da6216c6d236c19e434e0d8da7953fac0f8b568ad",
+        "actual": "9e7b283c87cba99199ac815da6216c6d236c19e434e0d8da7953fac0f8b568ad",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-06.json",
+        "expected": "120c4ada867f4dc375cf640cb7b23690c079ae179cebf6f3cf5c2326dbae2233",
+        "actual": "120c4ada867f4dc375cf640cb7b23690c079ae179cebf6f3cf5c2326dbae2233",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-01.json",
+        "expected": "9e19e38eb0faacf80ed0dde6d71f865d33e4a4f2eb7718e89381232341949d3c",
+        "actual": "9e19e38eb0faacf80ed0dde6d71f865d33e4a4f2eb7718e89381232341949d3c",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-17.json",
+        "expected": "738286e1a2b25de415d49a7d5661e3e09c5d118fc655319884e221d2320e1d8b",
+        "actual": "738286e1a2b25de415d49a7d5661e3e09c5d118fc655319884e221d2320e1d8b",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-21.json",
+        "expected": "a5c588d8d01f103771d1a9636daf16b4aa5b5181241c54676041e2c9a815b6c3",
+        "actual": "a5c588d8d01f103771d1a9636daf16b4aa5b5181241c54676041e2c9a815b6c3",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-20.json",
+        "expected": "21297e7b21be72bdaa4a31092fbefe9c467bc90ccfbbcd5b2e4fcaafb289b4aa",
+        "actual": "21297e7b21be72bdaa4a31092fbefe9c467bc90ccfbbcd5b2e4fcaafb289b4aa",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-audit-PK-16.json",
+        "expected": "fcdc28068e0512df1ebe435e3700920a7548b8baddab7eaab120b495ad290953",
+        "actual": "fcdc28068e0512df1ebe435e3700920a7548b8baddab7eaab120b495ad290953",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-10.json",
+        "expected": "fa4311a7ab775be7ae5120a7fa3ca84ba4e6c99a4daac27c240766f9cbe838bc",
+        "actual": "fa4311a7ab775be7ae5120a7fa3ca84ba4e6c99a4daac27c240766f9cbe838bc",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-2.json",
+        "expected": "f15ed5224535a1bbaa76d3cc6317487e5b9459b4b74b7f120f2024682e544e5a",
+        "actual": "f15ed5224535a1bbaa76d3cc6317487e5b9459b4b74b7f120f2024682e544e5a",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-3.json",
+        "expected": "3105421940426757e2ba08715991cbc2c142e34b0634826e11ebf49b22e46872",
+        "actual": "3105421940426757e2ba08715991cbc2c142e34b0634826e11ebf49b22e46872",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-4.json",
+        "expected": "4bc98be37a547694e453c683d6f6b3192f1fd296a76bcffbce978ec980934161",
+        "actual": "4bc98be37a547694e453c683d6f6b3192f1fd296a76bcffbce978ec980934161",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-8.json",
+        "expected": "c635f120a7056ef0c1c306786926b0523809f7829d90e518d0eaf7018ec67956",
+        "actual": "c635f120a7056ef0c1c306786926b0523809f7829d90e518d0eaf7018ec67956",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-9.json",
+        "expected": "f7bf4670b795ffaa37dcd092185658a42d243eea4d926fe86cea6c88a92ad3cb",
+        "actual": "f7bf4670b795ffaa37dcd092185658a42d243eea4d926fe86cea6c88a92ad3cb",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-5.json",
+        "expected": "beff0dd327b572e7aa4d175735448edcd294a624c9a885542da783a6d81a3e9b",
+        "actual": "beff0dd327b572e7aa4d175735448edcd294a624c9a885542da783a6d81a3e9b",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-6.json",
+        "expected": "edb2562a491eeca6a230c75dfab07c4676bfef170ee7b2f1d300456784e5c085",
+        "actual": "edb2562a491eeca6a230c75dfab07c4676bfef170ee7b2f1d300456784e5c085",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-7.json",
+        "expected": "6f9c2394c3151fcb9e504b7c4fd074e775a5a952a9b9081a4407d2862e2636cd",
+        "actual": "6f9c2394c3151fcb9e504b7c4fd074e775a5a952a9b9081a4407d2862e2636cd",
+        "match": true
+      },
+      {
+        "path": "docs/research/thumbnail-forensics-2026-10-02/package-qa-review-1.json",
+        "expected": "d2b5f9217338d0969bd469b17b25f7ff20de588dfbb45fd38073361eadcf9253",
+        "actual": "d2b5f9217338d0969bd469b17b25f7ff20de588dfbb45fd38073361eadcf9253",
+        "match": true
+      },
+      {
+        "path": "data/catalog/youtube_channel_registry.db",
+        "expected": "4c4322bf2d7b38e3ecb1ef159c0250f02b4cac007eb5a2e47a03d9f1059641cc",
+        "actual": "4c4322bf2d7b38e3ecb1ef159c0250f02b4cac007eb5a2e47a03d9f1059641cc",
+        "match": true
+      }
+    ]
+  },
+  "resource": {
+    "starting_short_term_used": 0,
+    "starting_weekly_used": 47,
+    "latest_short_term_used": 10,
+    "latest_weekly_used": 49,
+    "context_warning": false,
+    "agents": 1,
+    "subagents": 0,
+    "watchers": 0
+  }
+}
