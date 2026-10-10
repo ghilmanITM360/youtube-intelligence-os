@@ -408,7 +408,7 @@ def load_canonical_rows(conn, channel_id):
                   sf.archive_member_path AS transcript_member_path,
                   parent.canonical_path AS transcript_archive_path
            FROM videos v JOIN video_snapshots s ON s.video_id=v.video_id
-           JOIN transcripts t ON t.video_id=v.video_id AND t.dataset_id=s.dataset_id
+           LEFT JOIN transcripts t ON t.video_id=v.video_id AND t.dataset_id=s.dataset_id
            LEFT JOIN source_files sf ON sf.file_id = t.archive_member_file_id
            LEFT JOIN source_files parent ON parent.file_id = sf.parent_file_id
            WHERE v.channel_id=? ORDER BY v.video_id""",
