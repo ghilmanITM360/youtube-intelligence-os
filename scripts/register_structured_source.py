@@ -81,6 +81,12 @@ PRODUCER_CONTRACTS = {
     },
 }
 
+# V2 preserves strict field coverage except explicitly absent transcript counts.
+PRODUCER_CONTRACTS["register_supplied_channel.py/2"] = {
+    **PRODUCER_CONTRACTS["register_supplied_channel.py/1"],
+    "nullable_video_snapshot_fields": {"transcript_word_count"},
+}
+
 EVIDENCE_LAYER = {
     "SOURCE_EXTRACTED": "EXTRACTED_FACT",
     "SOURCE_COMPUTED": "MEASURED_FACT",
@@ -576,7 +582,6 @@ def _provenance_coverage(conn, dataset_id, counts, contract):
     valid = True
     for target_column, count_key, fields_key in targets:
         expected_fields = contract[fields_key]
-        expected_total += counts[count_key] * len(expected_fields)
         rows = conn.execute(
             "SELECT {},field_name FROM field_provenance "
             "WHERE dataset_id=? AND {} IS NOT NULL".format(target_column, target_column),
@@ -588,9 +593,21 @@ def _provenance_coverage(conn, dataset_id, counts, contract):
             by_target.setdefault(target_id, []).append(field_name)
         if len(by_target) != counts[count_key]:
             valid = False
-        if any(len(fields) != len(expected_fields) or set(fields) != expected_fields
-               for fields in by_target.values()):
-            valid = False
+        expected_by_target = {}
+        if target_column == "video_snapshot_id":
+            for field in contract.get("nullable_video_snapshot_fields", set()):
+                for target_id, value in conn.execute(
+                    "SELECT video_snapshot_id,{} FROM video_snapshots WHERE dataset_id=?".format(field), (dataset_id,),
+                ):
+                    if value is None:
+                        expected_by_target.setdefault(target_id, set(expected_fields)).discard(field)
+        expected_total += counts[count_key] * len(expected_fields) - sum(
+            len(expected_fields) - len(fields) for fields in expected_by_target.values()
+        )
+        for target_id, fields in by_target.items():
+            expected = expected_by_target.get(target_id, expected_fields)
+            if len(fields) != len(expected) or set(fields) != expected:
+                valid = False
     return valid, actual_total / expected_total if expected_total else None
 
 
@@ -609,7 +626,7 @@ def _manifest_agrees(text, counts, tool_version):
             counts["transcripts_available"], counts["transcripts_unavailable"]
         )
         return video_marker and transcript_marker in text
-    if tool_version == "register_supplied_channel.py/1":
+    if tool_version in {"register_supplied_channel.py/1", "register_supplied_channel.py/2"}:
         return (
             "Canonical videos: {}".format(counts["videos"]) in text
             and "Available transcripts: {}".format(counts["transcripts_available"]) in text
@@ -655,6 +672,11 @@ def cmd_verify(args):
             counts[table] = conn.execute(
                 "SELECT COUNT(*) FROM {} WHERE {} = ?;".format(table, column), (dataset_id,)
             ).fetchone()[0]
+        if run[2] == "register_supplied_channel.py/2":
+            counts["channels"] = conn.execute(
+                "SELECT COUNT(DISTINCT channel_id) FROM channel_dataset_links WHERE dataset_id=?",
+                (dataset_id,),
+            ).fetchone()[0]
         counts["transcripts_available"] = conn.execute(
             "SELECT COUNT(*) FROM transcripts WHERE dataset_id=? AND availability_status='AVAILABLE';", (dataset_id,)
         ).fetchone()[0]
@@ -674,9 +696,25 @@ def cmd_verify(args):
             text = manifest_path.read_text()
             manifest_agrees = _manifest_agrees(text, counts, run[2])
 
+        pending_valid = True
+        if run[2] == "register_supplied_channel.py/2":
+            pending_ids = [row[0] for row in conn.execute(
+                "SELECT v.youtube_video_id FROM videos v JOIN video_snapshots s USING(video_id) "
+                "WHERE s.dataset_id=? AND NOT EXISTS (SELECT 1 FROM transcripts t WHERE t.video_id=v.video_id AND t.dataset_id=?) ORDER BY v.youtube_video_id",
+                (dataset_id, dataset_id),
+            )]
+            declarations = [row[0] for row in conn.execute(
+                "SELECT message FROM ingestion_errors WHERE dataset_id=? AND run_id=? AND error_type='TranscriptPending' ORDER BY message",
+                (dataset_id, run[0]),
+            )]
+            expected_declarations = ["Canonical identity registered; transcript evidence pending: {}".format(value) for value in pending_ids]
+            pending_valid = declarations == expected_declarations
+            pending_valid = pending_valid and manifest_path.exists() and (
+                "Transcript pending: {} ({})".format(len(pending_ids), ", ".join(pending_ids) or "none") in text
+            )
         status = "VERIFIED" if (
             not hash_mismatches and integrity == "ok" and not fk_violations
-            and provenance_valid and manifest_agrees
+            and provenance_valid and manifest_agrees and pending_valid
         ) else "FAILED"
 
         print("Registration run: {} ({})".format(run[0], run[1]))
