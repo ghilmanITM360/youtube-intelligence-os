@@ -1,0 +1,13 @@
+# Canonical integration continuation — 2026-10-11
+
+PRs #17, #19, and refreshed #18 were merged in order with normal merge commits. Canonical main is `08e719264e31ecd82de24f8eeb8f065c08359fe5`; canonical validation passed (460 tests, 1 skip; registry/dataset validation, SQLite integrity, zero FK violations, Ruff/compile, secrets, LFS, whitespace). Genius History's ten-video validated subset is canonical.
+
+Registration branch `codex/register-verified-transcript-pending-what-if`, commit `e9b56960f6c6bcbb07d5dd0475eaf4572a657a25`, is PR #20. CI passed. DO NOT MERGE without new owner approval. On that proposed branch only, 9VG0yqq_PHM and X97DDWvxaqQ are registered via DS-000035 with pending transcripts, zero transcript insertions, and unknown metrics/format NULL. Original historical evidence packets remain unchanged. Three What If intelligence artifacts explicitly remain REFRESH_REQUIRED; no historical analysis was falsely stamped current.
+
+SRC01/U8F7UNK9jco and SRC02/qu8nx1qUwEU remain HELD_UNRESOLVED and unregistered. See adjacent JSON for observations versus interpretation. Exact independent audiovisual correspondence remains the verification gate.
+
+Research branch includes the existing exact-ID rollup repair commits; it is deliberately not bulk-merged into main. Counts recomputed read-only from verified records and QA union: 2,303 title audits, 518 verified thumbnails, 518 packages, 121 QA, 1/75 complete. Dashboard and queue select Hypothetically, UC0L9hD7HMwWU7xuU5HRA6Iw: 39 videos, 12 verified thumbnails/packages, 5 QA, 34 remaining. No new video audit was completed in this session, so the workbook was not changed for fictitious progress.
+
+EXACT NEXT ACTION: Check five-hour usage first, weekly second. If safe, resume Hypothetically video EvuEMhh7SSk (What It's Like to be a Dark Web Kingpin). Verify exact local image hash d493f7626dd7664e9d3aa778dfdeee133eb55c880c0c9d983f0f5dd77256a5d6, reuse audit-batch-B002-07.json and package-audit-PK-08.json, finish explicit visual/package QA, update PACKAGING-PROGRESS.xlsx and exact-ID rollups, validate, then commit explicit paths and push that one-video checkpoint. Read the existing workbook helpers carefully: generic refresh still has fixed expected totals that need deriving from current records before new progress.
+
+Context compaction triggered this conservative continuation checkpoint; latest usage was 60% short-term and 70% weekly, below numeric stop thresholds. No subagents or watchers ran. Owner privacy/access decision remains outstanding. An unrelated pre-existing untracked HANDOFF-wave8-resource-stop-2026-10-05.md was preserved.
