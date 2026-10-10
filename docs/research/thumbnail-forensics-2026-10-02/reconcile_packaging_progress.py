@@ -39,6 +39,53 @@ def qa_video_ids(root=HERE):
     return ids
 
 
+def dashboard_payload(root=HERE):
+    """Derive current dashboard from the exact-ID audit union, never cached totals."""
+    root = Path(root)
+    thumbs, packages = verified_records(root)
+    master = read_csv(root / 'master-packages.csv')
+    assert len({row['Video_ID'] for row in master}) == len(master)
+    qa = qa_video_ids(root)
+    assert qa <= {row['Video_ID'] for row in packages.values()}
+    titles = {row['Video_ID'] for row in read_csv(root / 'title-analyst-audit.csv')}
+    queue = read_csv(root / 'channel-processing-queue.csv')
+    for video in master:
+        thumb = thumbs.get(video['Thumbnail_ID'])
+        package = packages.get(video['Package_ID'])
+        video['Thumbnail_Audit_Status'] = 'AUDITED' if thumb else 'NOT_AUDITED'
+        video['Packaging_Audit_Status'] = 'AUDITED' if package else 'NOT_AUDITED'
+        if thumb:
+            video['Thumbnail_Diagnostic_Score'] = thumb[1]['score_100']
+        if package:
+            video['EXPERT_PACKAGING_DIAGNOSTIC_SCORE'] = package['score_100']
+        video['QA_Status'] = 'PASS' if video['Video_ID'] in qa else 'QA_PENDING'
+        video['Title_Status'] = 'TITLE_DONE' if video['Video_ID'] in titles else 'NOT_STARTED'
+        video['Current_Status'] = 'COMPLETE' if thumb and package and video['Video_ID'] in qa else 'QA_PENDING' if package else 'NOT_STARTED'
+    for row in queue:
+        videos = [v for v in master if v['Channel_ID'] == row['Channel_ID']]
+        row['Existing_Title_Audits'] = str(sum(v['Video_ID'] in titles for v in videos))
+        row['Existing_Verified_Thumbnail_Audits'] = str(sum(v['Thumbnail_ID'] in thumbs for v in videos))
+        row['Existing_Package_Audits'] = str(sum(v['Package_ID'] in packages for v in videos))
+        done = sum(v['Current_Status'] == 'COMPLETE' for v in videos)
+        row['Existing_Package_QA'] = str(done)
+        row['Videos_Remaining'] = str(len(videos) - done)
+        if videos and done == len(videos):
+            row['Channel_Status'] = 'COMPLETE'
+        elif row['Channel_Status'] == 'COMPLETE':
+            row['Channel_Status'] = 'IN_PROGRESS'
+    active = sorted((row for row in queue if int(row['Videos_Remaining']) > 0 and row['Channel_Status'] not in ('IDENTITY_ONLY', 'INSUFFICIENT_DATA')), key=lambda row: int(row['Channel_Order']))
+    current = {}
+    if active:
+        row = active[0]
+        videos = [v for v in master if v['Channel_ID'] == row['Channel_ID']]
+        remaining = [v for v in videos if v['Current_Status'] != 'COMPLETE']
+        # QA of existing packages first, then verified thumbnails, then new work.
+        remaining.sort(key=lambda v: (0 if v['Package_ID'] in packages else 1 if v['Thumbnail_ID'] in thumbs else 2, v['Video_ID']))
+        next_video = remaining[0]
+        current = dict(order=int(row['Channel_Order']), Channel_ID=row['Channel_ID'], name=row['Channel_Name'], videos=len(videos), next_Video_ID=next_video['Video_ID'], next_Thumbnail_ID=next_video['Thumbnail_ID'], completed_videos=int(row['Existing_Package_QA']), remaining_videos=len(remaining), progress=sum(float(row[key]) / len(videos) for key in ('Existing_Title_Audits', 'Existing_Verified_Thumbnail_Audits', 'Existing_Package_Audits', 'Existing_Package_QA')) / 4, status=row['Channel_Status'])
+    return dict(research_root=str(root.resolve()), queue=queue, master=master, qa_ids=sorted(qa), current_channel=current, totals=dict(titles=len(titles), thumbnails=len(thumbs), packages=len(packages), qa=len(qa), channels_complete=sum(row['Channel_Status'] == 'COMPLETE' for row in queue)))
+
+
 def rebuild(root=HERE, repo=ROOT):
     root, repo = Path(root), Path(repo)
     thumbs, packages = verified_records(root)
@@ -47,23 +94,18 @@ def rebuild(root=HERE, repo=ROOT):
     assert len(video_map) == len(master)
     qa = qa_video_ids(root)
     assert qa <= {row['Video_ID'] for row in packages.values()}
-    queue = read_csv(root / 'channel-processing-queue.csv')
-    for row in queue:
-        channel = row['Channel_ID']
-        videos = [v for v in master if v['Channel_ID'] == channel]
-        row['Existing_Verified_Thumbnail_Audits'] = str(sum(v['Thumbnail_ID'] in thumbs for v in videos))
-        row['Existing_Package_Audits'] = str(sum(v['Package_ID'] in packages for v in videos))
-        row['Existing_Package_QA'] = str(sum(v['Video_ID'] in qa for v in videos))
-        if row['Channel_Status'] == 'COMPLETE':
-            assert videos and all(v['Thumbnail_ID'] in thumbs and v['Package_ID'] in packages and v['Video_ID'] in qa for v in videos)
+    data = dashboard_payload(root)
+    queue = data['queue']
     write_csv(root / 'channel-processing-queue.csv', queue)
     summary = json.loads((root / 'packaging-progress-summary.json').read_text())
-    summary['titles']['done'] = len(read_csv(root / 'title-analyst-audit.csv'))
+    summary['titles']['done'] = data['totals']['titles']
     summary['thumbnails']['verified'] = len(thumbs)
     summary['packages'].update(audited=len(packages), qa_sampled=len(qa))
     summary['thumbnails']['remaining'] = summary['thumbnails']['eligible'] - len(thumbs)
     summary['packages']['remaining'] = summary['packages']['eligible'] - len(packages)
     summary['channels']['complete'] = sum(row['Channel_Status'] == 'COMPLETE' for row in queue)
+    summary['current_channel'] = data['current_channel']
+    summary['next_channel'] = next((row for row in queue if row['Channel_ID'] == data['current_channel'].get('Channel_ID')), {})
     summary['reconciliation_basis'] = 'Exact-ID QA-gated legacy and channel union; drafts preserved separately; no new visual review'
     progress = summary['progress']
     progress.update(title=summary['titles']['done']/summary['titles']['eligible'], thumbnail=len(thumbs)/summary['thumbnails']['eligible'], package=len(packages)/summary['packages']['eligible'], qa=len(qa)/summary['packages']['eligible'])
@@ -88,4 +130,11 @@ def rebuild(root=HERE, repo=ROOT):
 
 
 if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--payload', type=Path)
+    args = parser.parse_args()
     rebuild()
+    if args.payload:
+        args.payload.parent.mkdir(parents=True, exist_ok=True)
+        args.payload.write_text(json.dumps(dashboard_payload(), indent=2) + '\n')

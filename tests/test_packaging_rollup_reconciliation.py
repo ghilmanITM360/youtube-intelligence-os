@@ -59,3 +59,62 @@ def test_current_rollups_reconcile_and_source_hashes_match():
     assert len(list(csv.DictReader((RESEARCH / 'rollup-reconciliation.csv').open()))) == 8
     for path, digest in summary['source_SHA256'].items():
         assert hashlib.sha256((RESEARCH.parents[2] / path).read_bytes()).hexdigest() == digest, path
+
+
+def test_dashboard_derives_current_exact_id_totals():
+    import reconcile_packaging_progress as progress
+    data = progress.dashboard_payload(RESEARCH)
+    assert data['totals'] == dict(titles=2303, thumbnails=518, packages=518, qa=121, channels_complete=1)
+    assert data['current_channel']['completed_videos'] == 5
+    assert data['current_channel']['remaining_videos'] == 34
+
+
+def test_dashboard_updates_qa_without_double_counting_or_drafts(tmp_path):
+    import shutil
+    import reconcile_packaging_progress as progress
+    # Use real authoritative records; add a valid review twice, plus an unapproved draft.
+    for name in ['package-batch-plan.json', 'individual-audit-batch-001.json', 'master-packages.csv', 'title-analyst-audit.csv', 'channel-processing-queue.csv']:
+        shutil.copy(RESEARCH / name, tmp_path / name)
+    for pattern in ['audit-batch-B002-*.json', 'package-audit-PK-*.json', 'package-qa-review-*.json']:
+        for file in RESEARCH.glob(pattern):
+            shutil.copy(file, tmp_path / file.name)
+    shutil.copytree(RESEARCH / 'channels', tmp_path / 'channels')
+    before = progress.dashboard_payload(tmp_path)
+    review = dict(Video_ID='EvuEMhh7SSk', result='PASS', Package_ID='PKG-EvuEMhh7SSk')
+    (tmp_path / 'package-qa-review-new.json').write_text(json.dumps([review, review]))
+    (tmp_path / 'audit-batch-B002-unapproved.json').write_text('[{"Thumbnail_ID":"THB-draft"}]')
+    after = progress.dashboard_payload(tmp_path)
+    assert after['totals']['qa'] == before['totals']['qa'] + 1
+    assert after['totals']['thumbnails'] == before['totals']['thumbnails']
+    assert after['totals']['packages'] == before['totals']['packages']
+    assert after['current_channel']['completed_videos'] == 6
+    assert after['current_channel']['remaining_videos'] == 33
+    assert after['current_channel']['next_Video_ID'] != 'EvuEMhh7SSk'
+    # Overlay and duplicated title identities remain part of the exact-ID union.
+    with (tmp_path / 'title-analyst-audit.csv').open('a') as file:
+        file.write((tmp_path / 'title-analyst-audit.csv').read_text().splitlines()[1] + '\n')
+    assert progress.dashboard_payload(tmp_path)['totals']['titles'] == 2303
+    assert after['totals']['channels_complete'] == 1
+    assert all(row['Thumbnail_ID'] != 'THB-draft' for row in after['master'] if row['Thumbnail_Audit_Status'].startswith('AUDITED'))
+
+
+def test_channel_completion_uses_full_coverage_not_stale_status(tmp_path):
+    import shutil
+    import reconcile_packaging_progress as progress
+    for file in RESEARCH.glob('*'):
+        if file.suffix in {'.csv', '.json'}:
+            shutil.copy(file, tmp_path / file.name)
+    shutil.copytree(RESEARCH / 'channels', tmp_path / 'channels')
+    queue = progress.read_csv(tmp_path / 'channel-processing-queue.csv')
+    next(row for row in queue if row['Channel_Name'] == 'Hypothetically')['Channel_Status'] = 'COMPLETE'
+    progress.write_csv(tmp_path / 'channel-processing-queue.csv', queue)
+    data = progress.dashboard_payload(tmp_path)
+    assert data['totals']['channels_complete'] == 1
+    assert data['current_channel']['name'] == 'Hypothetically'
+
+
+def test_workbook_and_json_match_derived_summary():
+    from validate_progress_workbook import validate
+    result = validate(RESEARCH)
+    assert result['totals']['thumbnails'] == 518
+    assert result['native_features'] == 'PASS'
