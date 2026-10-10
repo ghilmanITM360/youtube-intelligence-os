@@ -178,3 +178,34 @@ def test_v2_verifier_rejects_missing_observed_field_provenance(packet, monkeypat
         conn.execute('DELETE FROM field_provenance WHERE video_snapshot_id IS NOT NULL AND field_name=?', (field,))
     with pytest.raises(SystemExit):
         rss.cmd_verify(Args(db_path=str(packet[2]), dataset_id=result['dataset_id']))
+
+
+def test_hook_script_consumer_accounts_for_pending_identity(packet):
+    import report_hook_script_intelligence as hook
+
+    result = rsc.register(*packet, transcript_pending_ids=['video000002'])
+    with sqlite3.connect(packet[2]) as conn:
+        conn.row_factory = sqlite3.Row
+        rows = hook.load_canonical_rows(conn, result['channel_id'])
+    assert len(rows) == 2
+    pending = next(row for row in rows if row['youtube_video_id'] == 'video000002')
+    assert pending['availability_status'] is None
+    assert pending['canonical_reference'] is None
+
+
+def test_hook_script_pending_only_corpus_is_graceful(packet):
+    import report_hook_script_intelligence as hook
+
+    result = rsc.register(*packet, transcript_pending_ids=['video000002'])
+    with sqlite3.connect(packet[2]) as conn:
+        conn.row_factory = sqlite3.Row
+        # Restrict this disposable corpus to the genuinely pending imported video.
+        pending_id = conn.execute("SELECT video_id FROM videos WHERE youtube_video_id='video000002'").fetchone()[0]
+        conn.execute('DELETE FROM video_snapshots WHERE video_id<>?', (pending_id,))
+        channel = {'channel_id': result['channel_id'], 'dataset_id': result['dataset_id']}
+        topic = {'channel': channel, 'items': [{'canonical_fact': {'video_id': pending_id}, 'derived_metric': {'views_per_day': None}}], 'evidence_snapshot': {'metric_cutoff': None}}
+        output = hook.build_report(conn, result['channel_id'], topic, {'channel': channel}, None, None)
+    assert output['evidence_snapshot']['canonical_item_count'] == 1
+    assert output['evidence_snapshot']['transcripts_accounted_for'] == 0
+    assert output['evidence_snapshot']['unavailable_transcripts'] == [pending_id]
+    assert output['hook_features'] == output['script_features'] == []
