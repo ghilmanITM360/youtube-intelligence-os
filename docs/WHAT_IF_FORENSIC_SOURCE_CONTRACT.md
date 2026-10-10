@@ -34,3 +34,16 @@ snapshots, or copy raw media into Git.
 The contract is consumed by the read-only adapter, durable ignored stage, validated promotion index and compact evidence-query layer. Production plans attach source-backed Editing/Visual hypotheses for matching canonical videos. All eight MASTER tables contribute; source-declared observations never become independent channel samples or causal performance evidence.
 
 See [workflow and provenance lifecycle](WHAT_IF_INTEGRATION_WORKFLOW.md) for validation, staging, diff review, promotion, query, update, rollback and privacy commands. Current accepted count is 8,327 rows across ten registered videos; 3,258 rows remain held across two unresolved and two unregistered sources.
+
+## Final identity reconciliation — 2026-10-10
+
+Direct official watch-page player metadata and official YouTube oEmbed independently reconfirm both held exact IDs against canonical channel ID `UC6IxnFzHofFJ5X2PycSMsww` and handle `@xkcd_whatif`:
+
+- [9VG0yqq_PHM evidence](evidence/what-if-identity-2026-10-10/9VG0yqq_PHM.json): “If you put a toaster in a freezer, which wins?”, published September 15, 2026.
+- [X97DDWvxaqQ evidence](evidence/what-if-identity-2026-10-10/X97DDWvxaqQ.json): “Could you power your computer by typing?”, published September 1, 2026.
+
+Both identities are VERIFIED but remain HELD_UNREGISTERED. The existing `register_supplied_channel.py` registration workflow requires a supplied workbook plus matching nonempty transcript files. Official caption requests returned empty bodies; no independently acquired transcript package is available for these IDs. Bypassing that workflow with direct SQL, creating a replacement registration architecture, or inventing transcripts was not authorized by this narrow reconciliation request. Ownership verification itself no longer requires an API credential. A complete uploads-membership refresh remains a separate acquisition limitation.
+
+SRC01/SRC02 remain UNRESOLVED. Previously recorded public candidates have no independent linkage to the exact local source bytes. Official candidate page fetches were throttled; source metadata supplies encoding/duration rather than a video identity. Similar questions, titles, duration, ordering and slugs do not establish that linkage.
+
+Canonical count remains 83; ten eligible sources retain 8,327 observations. Four held sources retain 3,258 rows. No registration, snapshot overwrite, stage replacement or promotion replacement occurred.
