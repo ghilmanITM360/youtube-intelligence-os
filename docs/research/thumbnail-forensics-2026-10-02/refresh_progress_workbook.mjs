@@ -15,7 +15,7 @@ if(mode==='before'){
  const cids=channel.getRange(`B2:B${data.queue.length+1}`).values;
  for(const q of data.queue){
   const n=cids.findIndex(row=>row[0]===q.Channel_ID)+2;if(n<2)throw Error('Missing channel '+q.Channel_ID);
-  for(const [col,key] of [['J','Existing_Title_Audits'],['L','Existing_Verified_Thumbnail_Audits'],['O','Existing_Package_Audits'],['P','Existing_Package_QA']]){const cell=channel.getRange(`${col}${n}`);if(cell.values[0][0]!==Number(q[key]))cell.values=[[Number(q[key])]];}
+  for(const [col,key] of [['J','Existing_Title_Audits'],['L','Existing_Verified_Thumbnail_Audits'],['M','Existing_Thumbnail_Drafts'],['O','Existing_Package_Audits'],['P','Existing_Package_QA']]){const cell=channel.getRange(`${col}${n}`);if(cell.values[0][0]!==Number(q[key]))cell.values=[[Number(q[key])]];}
   if(channel.getRange(`V${n}`).values[0][0]!==q.Channel_Status)channel.getRange(`V${n}`).values=[[q.Channel_Status]];
   if(q.Channel_Status==='COMPLETE')channel.getRange(`W${n}`).values=[['NONE']];
  }

@@ -18,8 +18,11 @@ def builder():
 def test_master_loader_includes_all_verified_channel_overlays():
     module = builder()
     thumbnails, packages = module.audited(), module.package_audits()
-    assert len(thumbnails) == 518
-    assert len(packages) == 518
+    from reconcile_packaging_progress import dashboard_payload
+    totals = dashboard_payload(RESEARCH)['totals']
+    assert len(thumbnails) == totals['thumbnails']
+    assert len(packages) == totals['packages']
+    assert sum(not row['batch_id'].startswith('CHANNEL-002-') for row in packages.values()) == 518
     for file in RESEARCH.glob('channels/*/package-audits.json'):
         for row in json.loads(file.read_text()):
             assert packages[row['Package_ID']] == row
@@ -29,7 +32,8 @@ def test_master_loader_includes_all_verified_channel_overlays():
 def test_package_input_loader_excludes_unverified_drafts():
     from build_package_inputs import thumb_rows
     rows = thumb_rows()
-    assert len(rows) == 518
+    from reconcile_packaging_progress import dashboard_payload
+    assert len(rows) == dashboard_payload(RESEARCH)['totals']['thumbnails']
     assert all(batch != 'B002-27' for batch, row in rows.values())
 
 
@@ -53,10 +57,10 @@ def test_current_rollups_reconcile_and_source_hashes_match():
     master = list(csv.DictReader((RESEARCH / 'master-packages.csv').open()))
     packages = json.loads((RESEARCH / 'package-forensics.json').read_text())['rows']
     summary = json.loads((RESEARCH / 'packaging-progress-summary.json').read_text())
-    assert sum(r['Thumbnail_Audit_Status'].startswith('AUDITED') for r in master) == 518
-    assert sum(r['Packaging_Audit_Status'].startswith('AUDITED') for r in master) == len(packages) == 518
+    assert sum(r['Thumbnail_Audit_Status'].startswith('AUDITED') for r in master) == summary['thumbnails']['verified']
+    assert sum(r['Packaging_Audit_Status'].startswith('AUDITED') for r in master) == len(packages) == summary['packages']['audited']
     assert len(qa_video_ids(RESEARCH)) == summary['packages']['qa_sampled']
-    assert len(list(csv.DictReader((RESEARCH / 'rollup-reconciliation.csv').open()))) == 8
+    assert len(list(csv.DictReader((RESEARCH / 'rollup-reconciliation.csv').open()))) == sum(len(json.loads(file.read_text())) for file in RESEARCH.glob('channels/*/package-audits.json'))
     for path, digest in summary['source_SHA256'].items():
         assert hashlib.sha256((RESEARCH.parents[2] / path).read_bytes()).hexdigest() == digest, path
 
@@ -64,7 +68,12 @@ def test_current_rollups_reconcile_and_source_hashes_match():
 def test_dashboard_derives_current_exact_id_totals():
     import reconcile_packaging_progress as progress
     data = progress.dashboard_payload(RESEARCH)
-    assert {k: data['totals'][k] for k in ('titles','thumbnails','packages','channels_complete')} == dict(titles=2303, thumbnails=518, packages=518, channels_complete=1)
+    from packaging_audit_records import verified_records
+    thumbnails, packages = verified_records(RESEARCH)
+    assert data['totals']['titles'] == 2303
+    assert data['totals']['thumbnails'] == len(thumbnails)
+    assert data['totals']['packages'] == len(packages)
+    assert data['totals']['channels_complete'] == 1
     assert data['current_channel']['completed_videos'] + data['current_channel']['remaining_videos'] == 39
 
 
@@ -79,7 +88,9 @@ def test_dashboard_updates_qa_without_double_counting_or_drafts(tmp_path):
             shutil.copy(file, tmp_path / file.name)
     shutil.copytree(RESEARCH / 'channels', tmp_path / 'channels')
     before = progress.dashboard_payload(tmp_path)
-    selected = next(row['Video_ID'] for row in before['master'] if row['Channel_ID'] == before['current_channel']['Channel_ID'] and row['Packaging_Audit_Status'] == 'AUDITED' and row['Video_ID'] in before['qa_ids'])
+    from packaging_audit_records import verified_records
+    legacy_ids = {row['Video_ID'] for row in verified_records(tmp_path)[1].values() if row['batch_id'].startswith('PK-')}
+    selected = next(row['Video_ID'] for row in before['master'] if row['Video_ID'] in legacy_ids and row['Channel_ID'] == before['current_channel']['Channel_ID'] and row['Packaging_Audit_Status'] == 'AUDITED' and row['Video_ID'] in before['qa_ids'])
     def clear_review(value):
         if isinstance(value, dict):
             if value.get('Video_ID') == selected or value.get('Package_ID') == 'PKG-' + selected:
@@ -133,7 +144,8 @@ def test_channel_completion_uses_full_coverage_not_stale_status(tmp_path):
 def test_workbook_and_json_match_derived_summary():
     from validate_progress_workbook import validate
     result = validate(RESEARCH)
-    assert result['totals']['thumbnails'] == 518
+    from reconcile_packaging_progress import dashboard_payload
+    assert result['totals'] == dashboard_payload(RESEARCH)['totals']
     assert result['native_features'] == 'PASS'
 
 
@@ -175,3 +187,14 @@ def test_existing_draft_precedes_new_visual_work(tmp_path):
     pending = [dict(Video_ID=row['Video_ID'], result='PASS') for row in before['master'] if row['Channel_ID'] == channel and row['Packaging_Audit_Status'] == 'AUDITED']
     (tmp_path / 'package-qa-review-test.json').write_text(json.dumps(pending))
     assert progress.dashboard_payload(tmp_path)['current_channel']['next_Video_ID'] == chosen['Video_ID']
+
+
+def test_promoted_successors_are_not_counted_as_unresolved_drafts():
+    import reconcile_packaging_progress as progress
+    from packaging_audit_records import verified_records
+    data = progress.dashboard_payload(RESEARCH)
+    verified, unused = verified_records(RESEARCH)
+    unresolved = {row['Thumbnail_ID'] for file in RESEARCH.glob('audit-batch-B002-*.json') for row in json.loads(file.read_text()) if row['Thumbnail_ID'] not in verified}
+    assert data['totals']['drafts'] == len(unresolved)
+    assert data['totals']['drafts'] == data['totals']['drafts_valid'] + data['totals']['drafts_invalid']
+    assert sum(int(row['Existing_Thumbnail_Drafts']) for row in data['queue']) == data['totals']['drafts_valid']

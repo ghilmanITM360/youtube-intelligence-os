@@ -48,6 +48,13 @@ def dashboard_payload(root=HERE):
     qa = qa_video_ids(root)
     assert qa <= {row['Video_ID'] for row in packages.values()}
     titles = {row['Video_ID'] for row in read_csv(root / 'title-analyst-audit.csv')}
+    from validate_audit_batch import validate
+    draft_rows = {}
+    for file in sorted(root.glob('audit-batch-B002-*.json')):
+        for audit in json.loads(file.read_text()):
+            if audit['Thumbnail_ID'] not in thumbs:
+                draft_rows[audit['Thumbnail_ID']] = audit
+    valid_drafts = {key for key, audit in draft_rows.items() if not validate([audit], None)[0]}
     queue = read_csv(root / 'channel-processing-queue.csv')
     for video in master:
         thumb = thumbs.get(video['Thumbnail_ID'])
@@ -65,6 +72,7 @@ def dashboard_payload(root=HERE):
         videos = [v for v in master if v['Channel_ID'] == row['Channel_ID']]
         row['Existing_Title_Audits'] = str(sum(v['Video_ID'] in titles for v in videos))
         row['Existing_Verified_Thumbnail_Audits'] = str(sum(v['Thumbnail_ID'] in thumbs for v in videos))
+        row['Existing_Thumbnail_Drafts'] = str(sum(v['Thumbnail_ID'] in valid_drafts for v in videos))
         row['Existing_Package_Audits'] = str(sum(v['Package_ID'] in packages for v in videos))
         done = sum(v['Current_Status'] == 'COMPLETE' for v in videos)
         row['Existing_Package_QA'] = str(done)
@@ -85,7 +93,7 @@ def dashboard_payload(root=HERE):
         remaining.sort(key=lambda v: (0 if v['Package_ID'] in packages else 1 if v['Video_ID'] in draft_ids or v['Thumbnail_ID'] in thumbs else 2, v['Video_ID']))
         next_video = remaining[0]
         current = dict(order=int(row['Channel_Order']), Channel_ID=row['Channel_ID'], name=row['Channel_Name'], videos=len(videos), next_Video_ID=next_video['Video_ID'], next_Thumbnail_ID=next_video['Thumbnail_ID'], completed_videos=int(row['Existing_Package_QA']), remaining_videos=len(remaining), progress=sum(float(row[key]) / len(videos) for key in ('Existing_Title_Audits', 'Existing_Verified_Thumbnail_Audits', 'Existing_Package_Audits', 'Existing_Package_QA')) / 4, status=row['Channel_Status'])
-    return dict(research_root=str(root.resolve()), queue=queue, master=master, qa_ids=sorted(qa), current_channel=current, totals=dict(titles=len(titles), thumbnails=len(thumbs), packages=len(packages), qa=len(qa), channels_complete=sum(row['Channel_Status'] == 'COMPLETE' for row in queue)))
+    return dict(research_root=str(root.resolve()), queue=queue, master=master, qa_ids=sorted(qa), current_channel=current, totals=dict(titles=len(titles), thumbnails=len(thumbs), packages=len(packages), qa=len(qa), channels_complete=sum(row['Channel_Status'] == 'COMPLETE' for row in queue), drafts=len(draft_rows), drafts_valid=len(valid_drafts), drafts_invalid=len(draft_rows)-len(valid_drafts)))
 
 
 def rebuild(root=HERE, repo=ROOT):
@@ -102,6 +110,7 @@ def rebuild(root=HERE, repo=ROOT):
     summary = json.loads((root / 'packaging-progress-summary.json').read_text())
     summary['titles']['done'] = data['totals']['titles']
     summary['thumbnails']['verified'] = len(thumbs)
+    summary['thumbnails'].update(draft=data['totals']['drafts'], draft_structurally_valid=data['totals']['drafts_valid'], draft_invalid=data['totals']['drafts_invalid'])
     summary['packages'].update(audited=len(packages), qa_sampled=len(qa))
     summary['thumbnails']['remaining'] = summary['thumbnails']['eligible'] - len(thumbs)
     summary['packages']['remaining'] = summary['packages']['eligible'] - len(packages)
@@ -116,7 +125,7 @@ def rebuild(root=HERE, repo=ROOT):
     for file in sorted(root.glob('channels/*/package-audits.json')):
         for item in json.loads(file.read_text()):
             video = video_map[item['Video_ID']]
-            delta.append(dict(Video_ID=item['Video_ID'], Thumbnail_ID=item['Thumbnail_ID'], Channel_ID=video['Channel_ID'], audit_source=str(file.with_name('thumbnail-audits.json').relative_to(root)), package_source=str(file.relative_to(root)), QA_state='PASS_WITH_CORRECTIONS' if next(r for r in json.loads(file.with_name('qa.json').read_text())['reviews'] if r['Video_ID']==item['Video_ID'])['result']=='PASS_WITH_CORRECTIONS' else 'PASS', included_in_518=True, included_in_legacy_510=False, reason='Legacy generators globbed top-level wave files only; channel overlay omitted'))
+            delta.append(dict(Video_ID=item['Video_ID'], Thumbnail_ID=item['Thumbnail_ID'], Channel_ID=video['Channel_ID'], audit_source=str(file.with_name('thumbnail-audits.json').relative_to(root)), package_source=str(file.relative_to(root)), QA_state='PASS_WITH_CORRECTIONS' if next(r for r in json.loads(file.with_name('qa.json').read_text())['reviews'] if r['Video_ID']==item['Video_ID'])['result']=='PASS_WITH_CORRECTIONS' else 'PASS', included_in_current_verified_union=True, included_in_legacy_verified_union=False, reason='QA-gated channel overlay; preserved legacy rows are not counted twice'))
     write_csv(root / 'rollup-reconciliation.csv', delta)
     # Hash registry describes current bytes, not historical snapshots. Changes require
     # the separate hash-reconciliation record, including the committed LFS object.
