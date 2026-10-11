@@ -777,7 +777,14 @@
       "legacy_package_source": "channels/UC0L9hD7HMwWU7xuU5HRA6Iw/package-audits.json",
       "legacy_rows_preserved": true,
       "corrections": [],
-      "warnings": [],
+      "warnings": [
+        {
+          "validator_warning": "ARROW_TAG_VS_NARRATIVE",
+          "disposition": "ACCEPTED_FALSE_POSITIVE",
+          "reason": "Scene explicitly negates any exposed organ or visible arrow. Native and mobile inspection show no arrow; regex does not recognize this compound negation.",
+          "source_evidence": "Exact source SHA256 ac9ddbb7c9611ccea1aed4436eee3576897fd442cecd87d53fd2a55fd6f52994"
+        }
+      ],
       "material": 0,
       "minor_factual": 0,
       "classification": 0,
@@ -831,6 +838,84 @@
       },
       "package_field_verification": "A–J observations and all eight package information/promise fields checked against exact source at native, 320x180 and 160x90, then native reopened. Star is transcribed literally; no visible organ, inferred death or medical outcome is treated as fact. Categorical killing claim queued for content verification. Existing title score 61 reused.",
       "score_policy": "New analyst ratings; public LOW performance was already exposed during exact-row recovery. No blinded-review claim.",
+      "audit_origin": "NEW_VISUAL_AUDIT"
+    },
+    {
+      "Video_ID": "5IdPdw62oT0",
+      "Thumbnail_ID": "THB-0c72dd6452b0918094d4e9c2e560f6cee9f1563f17cac34a90e6cc137fb191bf",
+      "microbatch": "CHANNEL-002-M13",
+      "native_reopened": true,
+      "mobile_sizes_inspected": [
+        "320x180",
+        "160x90"
+      ],
+      "mapping": "PASS",
+      "hash": "PASS",
+      "prominent_text": "Dealer / Sicario / Cook",
+      "incidental_text": "NONE_OBSERVED",
+      "word_count": 3,
+      "objects_people_composition": "Three illustrated figures sit shoulder-to-shoulder on white under Dealer, Sicario and Cook labels. Left figure wears a backward red cap, red hoodie and chain with drooping brows and a downturned mouth. Center figure wears a backward green cap, dark glasses, black face covering, green hoodie, dark vest and chain. Right figure wears a gray full-face respirator and yellow collared garment.",
+      "medical_status": "NOT_HEALTH",
+      "score_arithmetic": "PASS: thumbnail 72, package 76; component sums recomputed.",
+      "legacy_thumbnail_source": "channels/UC0L9hD7HMwWU7xuU5HRA6Iw/thumbnail-audits.json",
+      "legacy_package_source": "channels/UC0L9hD7HMwWU7xuU5HRA6Iw/package-audits.json",
+      "legacy_rows_preserved": true,
+      "corrections": [],
+      "warnings": [],
+      "material": 0,
+      "minor_factual": 0,
+      "classification": 0,
+      "subjective": 0,
+      "style_only": 0,
+      "result": "PASS",
+      "review_timestamp": "2026-10-11T10:40:55.866028+00:00",
+      "content_promise_verified": "NOT_CHECKED",
+      "blinded_to_performance": true,
+      "temporal_evidence_policy": "CURRENT_PUBLIC_ONLY retained; no historical creative or performance causality inferred.",
+      "performance_context": {
+        "basis": "Same-channel, same-format nearest-age candidates; topic differences limit matching. Public age-adjusted evidence only; impressions and traffic source unavailable.",
+        "performance_result": {
+          "Relative_Performance_Class": "MIDDLE",
+          "Performance_Band": "MIDDLE_50_PERCENT",
+          "Perf_Percentile_Age_Matched": "0.583",
+          "Age_Days": "315.1",
+          "Evidence_Tier": "D_AGE_ADJUSTED_PUBLIC",
+          "Creative_Temporal_Alignment": "CURRENT_PUBLIC_ONLY"
+        },
+        "analyst_packaging_quality": {
+          "title_score": 69,
+          "thumbnail_score": 72,
+          "package_score": 76
+        },
+        "matched_comparison_candidates": [
+          {
+            "Video_ID": "K4TJhugKWUk",
+            "Title_Current": "Good Debt Explained Like You're 5",
+            "Age_Days": "328.2",
+            "Relative_Performance_Class": "LOW"
+          },
+          {
+            "Video_ID": "x92kaI7phzs",
+            "Title_Current": "What It's Like To Be Every CIA Rank",
+            "Age_Days": "299.1",
+            "Relative_Performance_Class": "LOW"
+          },
+          {
+            "Video_ID": "BVyJL_tcMd8",
+            "Title_Current": "How It Felt to be a Millionaire in Every Era",
+            "Age_Days": "343.0",
+            "Relative_Performance_Class": "LOW"
+          }
+        ],
+        "alternative_explanations": [
+          "Topic demand",
+          "Recommendation exposure and traffic sources",
+          "Content quality and audience fit",
+          "Current creative not proven at historical metric time"
+        ]
+      },
+      "package_field_verification": "New A–J audit and all eight package information/promise fields checked against native, 320x180 and 160x90 source, then native reopened for primary self-review. Visible text transcribed literally. Observations, interpretations and hypotheses remain separate. Existing title forensic score reused; content coverage and role accuracy remain NOT_CHECKED.",
+      "score_policy": "New analyst ratings finalized before reading public performance for this video.",
       "audit_origin": "NEW_VISUAL_AUDIT"
     }
   ],
