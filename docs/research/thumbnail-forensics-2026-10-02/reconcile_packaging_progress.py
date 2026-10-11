@@ -79,8 +79,10 @@ def dashboard_payload(root=HERE):
         row = active[0]
         videos = [v for v in master if v['Channel_ID'] == row['Channel_ID']]
         remaining = [v for v in videos if v['Current_Status'] != 'COMPLETE']
-        # QA of existing packages first, then verified thumbnails, then new work.
-        remaining.sort(key=lambda v: (0 if v['Package_ID'] in packages else 1 if v['Thumbnail_ID'] in thumbs else 2, v['Video_ID']))
+        channel_progress = root / 'channels' / row['Channel_ID'] / 'packaging-progress.csv'
+        draft_ids = {v['Video_ID'] for v in read_csv(channel_progress) if 'DRAFT' in v['Thumbnail_Status'] or 'DRAFT' in v['Package_Status']} if channel_progress.exists() else set()
+        # Complete existing packages' QA, then reuse drafts, then start new work.
+        remaining.sort(key=lambda v: (0 if v['Package_ID'] in packages else 1 if v['Video_ID'] in draft_ids or v['Thumbnail_ID'] in thumbs else 2, v['Video_ID']))
         next_video = remaining[0]
         current = dict(order=int(row['Channel_Order']), Channel_ID=row['Channel_ID'], name=row['Channel_Name'], videos=len(videos), next_Video_ID=next_video['Video_ID'], next_Thumbnail_ID=next_video['Thumbnail_ID'], completed_videos=int(row['Existing_Package_QA']), remaining_videos=len(remaining), progress=sum(float(row[key]) / len(videos) for key in ('Existing_Title_Audits', 'Existing_Verified_Thumbnail_Audits', 'Existing_Package_Audits', 'Existing_Package_QA')) / 4, status=row['Channel_Status'])
     return dict(research_root=str(root.resolve()), queue=queue, master=master, qa_ids=sorted(qa), current_channel=current, totals=dict(titles=len(titles), thumbnails=len(thumbs), packages=len(packages), qa=len(qa), channels_complete=sum(row['Channel_Status'] == 'COMPLETE' for row in queue)))

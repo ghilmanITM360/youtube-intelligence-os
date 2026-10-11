@@ -79,7 +79,24 @@ def test_dashboard_updates_qa_without_double_counting_or_drafts(tmp_path):
             shutil.copy(file, tmp_path / file.name)
     shutil.copytree(RESEARCH / 'channels', tmp_path / 'channels')
     before = progress.dashboard_payload(tmp_path)
-    selected = before['current_channel']['next_Video_ID']
+    selected = next(row['Video_ID'] for row in before['master'] if row['Channel_ID'] == before['current_channel']['Channel_ID'] and row['Packaging_Audit_Status'] == 'AUDITED' and row['Video_ID'] in before['qa_ids'])
+    def clear_review(value):
+        if isinstance(value, dict):
+            if value.get('Video_ID') == selected or value.get('Package_ID') == 'PKG-' + selected:
+                if 'result' in value:
+                    value['result'] = 'QA_PENDING'
+                if 'verdict' in value:
+                    value['verdict'] = 'QA_PENDING'
+            for item in value.values():
+                clear_review(item)
+        elif isinstance(value, list):
+            for item in value:
+                clear_review(item)
+    for file in list(tmp_path.glob('package-qa-review-*.json')) + list(tmp_path.glob('channels/*/qa.json')):
+        value = json.loads(file.read_text())
+        clear_review(value)
+        file.write_text(json.dumps(value))
+    before = progress.dashboard_payload(tmp_path)
     review = dict(Video_ID=selected, result='PASS', Package_ID='PKG-' + selected)
     (tmp_path / 'package-qa-review-new.json').write_text(json.dumps([review, review]))
     (tmp_path / 'audit-batch-B002-unapproved.json').write_text('[{"Thumbnail_ID":"THB-draft"}]')
@@ -136,3 +153,25 @@ def test_native_preserver_authors_preformatted_empty_cells(tmp_path):
         ET.fromstring(xml)
         assert b's="89"' in xml
         assert archive.read('native-feature') == b'unchanged'
+
+
+def test_existing_draft_precedes_new_visual_work(tmp_path):
+    import shutil
+    import reconcile_packaging_progress as progress
+    for file in RESEARCH.glob('*'):
+        if file.suffix in {'.csv', '.json'}:
+            shutil.copy(file, tmp_path / file.name)
+    shutil.copytree(RESEARCH / 'channels', tmp_path / 'channels')
+    before = progress.dashboard_payload(tmp_path)
+    channel = before['current_channel']['Channel_ID']
+    candidates = [row for row in before['master'] if row['Channel_ID'] == channel and row['Packaging_Audit_Status'] != 'AUDITED']
+    chosen = max(candidates, key=lambda row: row['Video_ID'])
+    records = tmp_path / 'channels' / channel / 'packaging-progress.csv'
+    rows = progress.read_csv(records)
+    for row in rows:
+        row['Thumbnail_Status'] = 'THUMBNAIL_DRAFT' if row['Video_ID'] == chosen['Video_ID'] else 'NOT_STARTED'
+        row['Package_Status'] = 'NOT_STARTED'
+    progress.write_csv(records, rows)
+    pending = [dict(Video_ID=row['Video_ID'], result='PASS') for row in before['master'] if row['Channel_ID'] == channel and row['Packaging_Audit_Status'] == 'AUDITED']
+    (tmp_path / 'package-qa-review-test.json').write_text(json.dumps(pending))
+    assert progress.dashboard_payload(tmp_path)['current_channel']['next_Video_ID'] == chosen['Video_ID']
