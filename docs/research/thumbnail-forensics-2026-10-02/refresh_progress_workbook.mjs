@@ -45,6 +45,8 @@ if(mode==='before'){
   set('H',m.Title_Status);
   if(qa.has(m.Video_ID))set('O',channelReviews.find(row=>row.Video_ID===m.Video_ID)?.result || (['PASS','PASS_WITH_CORRECTIONS'].includes(video.getRange(`O${n}`).values[0][0])?video.getRange(`O${n}`).values[0][0]:'PASS'));
   if(m.Current_Status==='COMPLETE')set('V','COMPLETE');
+  const reviewed=channelReviews.find(row=>row.Video_ID===m.Video_ID);
+  if(reviewed){set('X','COMMIT_CONTAINING_THIS_RECORD');set('Y',Date.parse(reviewed.review_timestamp)/86400000+25569);}
   if(m.Thumbnail_Audit_Status.startsWith('AUDITED')){
    {const cell=video.getRange(`K${n}`);if(cell.values[0][0]!=='THUMBNAIL_VERIFIED')cell.values=[['THUMBNAIL_VERIFIED']];}
    {const cell=video.getRange(`R${n}`);if(cell.values[0][0]!==Number(m.Thumbnail_Diagnostic_Score))cell.values=[[Number(m.Thumbnail_Diagnostic_Score)]];}
