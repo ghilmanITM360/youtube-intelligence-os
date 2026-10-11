@@ -284,6 +284,78 @@
       "temporal_evidence_policy": "Existing Creative_Temporal_Alignment retained; no historical creative causality inferred.",
       "performance_context": "Performance and analyst packaging quality remain separate. Scores retained without lifetime-view ranking; no causal claim.",
       "package_field_verification": "All eight information/promise fields, relationships and score components reviewed; title-only information supports the recorded classification correction. Unanswered question and promise are analyst interpretations, not verified video content."
+    },
+    {
+      "Video_ID": "_pDRBnQHsMI",
+      "Thumbnail_ID": "THB-d64a05df804aeb59ebe43420ef7a100d758d15704520eaa28e0c30f646b82b5d",
+      "microbatch": "CHANNEL-002-M04",
+      "native_reopened": true,
+      "mobile_sizes_inspected": [
+        "320x180",
+        "160x90"
+      ],
+      "mapping": "PASS",
+      "hash": "PASS",
+      "prominent_text": "SQUID GAMES / RANKS",
+      "incidental_text": "2 on green costume; readable natively, tiny at 160x90",
+      "word_count": 4,
+      "objects_people_composition": "Two illustrated stick figures: standing pink masked figure with circle emblem at right; lying green-costumed figure with numeral 2 at left. Long handled flat-ended tool lies diagonally. Teal wall and beige floor. No human facial expression visible.",
+      "medical_status": "NOT_HEALTH",
+      "score_arithmetic": "PASS: thumbnail 68, package 67; component sums verified; original scores retained.",
+      "legacy_thumbnail_source": "audit-batch-B002-09.json",
+      "legacy_package_source": "package-audit-PK-09.json",
+      "legacy_rows_preserved": true,
+      "corrections": [
+        {
+          "artifact": "audit-batch-B002-09.json",
+          "field": "numbers_in_text",
+          "original_value": "N",
+          "corrected_value": "Y",
+          "error_class": "CLASSIFICATION",
+          "reason": "Visible incidental numeral 2 contradicts N.",
+          "source_evidence": "Exact source SHA256 d64a05df804aeb59ebe43420ef7a100d758d15704520eaa28e0c30f646b82b5d inspected at native, 320x180, 160x90; canonical title."
+        },
+        {
+          "artifact": "audit-batch-B002-09.json",
+          "field": "word_count",
+          "original_value": 3,
+          "corrected_value": 4,
+          "error_class": "MINOR_FACTUAL",
+          "reason": "Three headline words plus one numeric token; incidental text retained separately.",
+          "source_evidence": "Exact source SHA256 d64a05df804aeb59ebe43420ef7a100d758d15704520eaa28e0c30f646b82b5d inspected at native, 320x180, 160x90; canonical title."
+        },
+        {
+          "artifact": "audit-batch-B002-09.json",
+          "field": "scene",
+          "original_value": "Against a teal wall and tan floor, a stick-limbed figure in a pink-red hooded suit with a black circle-masked face stands at the right and holds a long dark-handled tool with a flat paddle end resting on the floor. At the lower left a white-headed stick figure in a green top marked with the number 2 lies motionless on its side on the floor.",
+          "corrected_value": "Against a teal wall and beige floor, a pink hooded stick figure with a circle-marked black mask stands on the right holding a long handled flat-ended tool. At lower left a white-headed figure in green costume marked 2 lies on its side. No motion can be established from this still image.",
+          "error_class": "MINOR_FACTUAL",
+          "reason": "Motionless is a temporal conclusion unsupported by a still image.",
+          "source_evidence": "Exact source SHA256 d64a05df804aeb59ebe43420ef7a100d758d15704520eaa28e0c30f646b82b5d inspected at native, 320x180, 160x90; canonical title."
+        },
+        {
+          "artifact": "package-audit-PK-09.json",
+          "field": "title_says",
+          "original_value": "Promises a first-person look at living as each Squid Games rank.",
+          "corrected_value": "Promises a second-person look at life across every Squid Games rank.",
+          "error_class": "CLASSIFICATION",
+          "reason": "Your Life uses second-person framing, not first person.",
+          "source_evidence": "Exact source SHA256 d64a05df804aeb59ebe43420ef7a100d758d15704520eaa28e0c30f646b82b5d inspected at native, 320x180, 160x90; canonical title."
+        }
+      ],
+      "warnings": [],
+      "material": 0,
+      "minor_factual": 2,
+      "classification": 2,
+      "subjective": 0,
+      "style_only": 0,
+      "result": "PASS_WITH_CORRECTIONS",
+      "review_timestamp": "2026-10-11T09:25:06.953504+00:00",
+      "content_promise_verified": "NOT_CHECKED",
+      "blinded_to_performance": true,
+      "temporal_evidence_policy": "Existing Creative_Temporal_Alignment retained; no historical creative causality inferred.",
+      "performance_context": "Performance and analyst packaging quality remain separate. Scores retained without lifetime-view ranking; no causal claim.",
+      "package_field_verification": "All information/promise fields and relationship flags reviewed. Second-person scope supplied by title; franchise/rank headline reinforces title. Scores 68/67 retained. Static image does not establish motion or actual violence. Content and historical creative causality unverified."
     }
   ],
   "historical_qa_reused": {
