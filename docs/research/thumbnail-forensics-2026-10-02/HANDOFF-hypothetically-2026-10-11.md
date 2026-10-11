@@ -1,5 +1,26 @@
 # Hypothetically continuation checkpoint — 2026-10-11
 
+## Latest continuation — supersedes the next-action and totals below
+
+Started from live synchronized research HEAD `5441bcf4b80783226d22cea7d3920c595d402c82`. Four videos completed sequentially, with each exact source hash checked, native/320x180/160x90 inspection and native reopen for primary self-review, existing title forensics reused, dynamic rollups and existing workbook updated, validation, explicit-path commit and immediate push:
+
+1. `3MrJIFKO-94`: full new audit, thumbnail 73, package 69, title 61 reused, QA PASS. Commit `01770d8bdc80efbcf0e3644626a1abb48e3a41bb`. Exact source SHA256 `ac9ddbb7c9611ccea1aed4436eee3576897fd442cecd87d53fd2a55fd6f52994`. Prominent copy is `K*LLED FOR / PARTS`; no organ is visibly identified. Medical classification NEEDS_CONTEXT and categorical killing wording queued for content verification. Ratings are explicitly unblinded because public LOW performance appeared during initial row recovery. No existing audit correction. A validator arrow-negation regex false positive is explicitly adjudicated in qa.json.
+2. `5IdPdw62oT0`: full new audit, thumbnail 72, package 76, title 69 reused, QA PASS. Commit `f9b597b5ddc0dc0590596f3e0ca7efd9e3643f34`. Dealer/Sicario/Cook labels remain readable at mobile size. Public performance MIDDLE, separate from analyst quality.
+3. `6k6QjHtRHYk`: full new audit, thumbnail 59, package 54, title 34 reused, QA PASS. Commit `acedb7805465cbfeadb25d6362d6f0c1b2d92102`. THE END is prominent copy; embedded channel-header text is incidental. Depicted subscriber/video counts are not independently verified current metrics. REDUNDANT/REINFORCING finality; performance MIDDLE.
+4. `7KEqvaL0nwg`: full new audit, thumbnail 79, package 80, title 86 reused, QA PASS. Commit `7f80605178bdfb239e134bb57471921aced4dc04`. YOU personalizes an illustrated disaster; nuclear danger and facial alarm are interpretations, not verified events or outcomes. Performance MIDDLE.
+
+Hypothetically explicit QA: 14 before, 4 added, 18 now, 21 remaining of 39. Research totals derive from the exact-ID union: 2,303 titles, 524 verified thumbnails, 524 packages, 134 explicit QA IDs, 1/75 channels complete. Unresolved drafts: 38 total, 37 structurally valid, 1 invalid. Channel synthesis and closure remain pending.
+
+Each video passed the 11 dynamic progress regression tests, exact-ID QA-gated reconciliation, current channel source/schema/score validation, workbook validation, tracked secret scan (0 findings), whitespace checks and Git LFS fsck. The same 11-sheet workbook retains 75 channel rows and 2,303 video rows, formulas, Data Bars, filters, freeze panes and native formatting. Dashboard renders were visually checked. Programmatic recalculation was run; native Excel recalculation was NOT_RUN. No project-wide re-audit or title pipeline run occurred.
+
+Runtime note: system Python 3.9 and `/tmp/yios-review-env/bin/python` (Python 3.13) differ at the last floating-point digit in current-channel progress on some totals. Counts and workbook outputs agree. Run aggregation and regression validation with the same Python runtime; this session used `/tmp/yios-review-env/bin/python` for reconcile_packaging_progress.py, validate_progress_workbook.py and pytest. No repository code was changed for this environment difference.
+
+Resource checkpoint after fourth synchronized push: short-term 84%, weekly 13%. No actual context/session/rate-limit warning. Do not begin another visual audit until fresh usage permits it. Next dynamically selected video is `81r4BT3Wm5E`, thumbnail `THB-fe2d18420117c2f3f00b1b8b6dcdbd3cf997c1090f620786504d2f21b4b8f14a`. Its source has not been opened in this continuation. First next action: usage check, confirm research local/remote synchronization, read that exact current-channel row, and rehash its source before inspection.
+
+PR #20 startup check: OPEN, unchanged head `e9b56960f6c6bcbb07d5dd0475eaf4572a657a25`, validation green, MERGEABLE/CLEAN, empty reviewDecision. End check is reported separately. Do not merge without explicit owner approval. SRC01/SRC02 and the unrelated untracked Wave 8 handoff remain untouched. No subagents or background watchers.
+
+Latest data HEAD was remote-synchronized before this handoff-only checkpoint. Resolve the containing handoff commit through Git rather than recording a self-referential SHA.
+
 PR #20 remains open and unmerged. Owner approval is still required. Its unchanged head is e9b56960f6c6bcbb07d5dd0475eaf4572a657a25; canonical main remains 08e719264e31ecd82de24f8eeb8f065c08359fe5. Do not re-review unchanged registration work or work on SRC01/SRC02 in the packaging session.
 
 Research worktree: /Users/ghilmankhan/workprojects/yios-thumbnail-forensics
