@@ -5,7 +5,7 @@ PR #20 remains open and unmerged. Owner approval is still required. Its unchange
 Research worktree: /Users/ghilmankhan/workprojects/yios-thumbnail-forensics
 Branch: research/thumbnail-forensics-complete-2026-10-04
 Starting checkpoint: bb27ffbcb208e8e55272508ac398571f3fba2ee0
-This file is included in the final Roman-video checkpoint commit. Resolve its exact commit through Git; do not invent a self-referential SHA.
+The final Roman-video checkpoint is ede2f7994c2b784b3ecd745c3a388fcd6bdf20fe, pushed and synchronized. This handoff was introduced there and finalized in the subsequent continuation checkpoint. Resolve the final handoff commit through Git; do not invent a self-referential SHA.
 
 ## Completed work
 
@@ -46,3 +46,7 @@ Next current-channel video, dynamically selected: 3MrJIFKO-94. Expected source h
 Continue one video at a time: source verification, reuse any records, visual/package audit, explicit QA, dynamic refresh, workbook validation, explicit-path commit, immediate push and remote sync. Do not call the channel complete until all 39 videos are accounted for. Channel synthesis and closure remain pending.
 
 Preserve the unrelated untracked HANDOFF-wave8-resource-stop-2026-10-05.md. SRC01/SRC02 remain HELD_UNRESOLVED; no investigation or registration occurred. No new PR was created, and PR #20 must remain unmerged without separate owner approval.
+
+## Final persistence confirmation
+
+All nine video commits were pushed individually. Local and remote research HEAD matched ede2f7994c2b784b3ecd745c3a388fcd6bdf20fe before this handoff-only update. Latest resource measurement: short-term 92%, weekly 14%. The earlier 86% measurement was taken while finishing the current video. No actual context/session/rate-limit warning appeared. Work stops at RESOURCE_CHECKPOINT; no next video is started. The only pre-existing untracked handoff remains untouched.
