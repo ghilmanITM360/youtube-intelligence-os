@@ -34,7 +34,8 @@ def preserve(path, baseline):
                     if cell is None:
                         return raw
                     # Keep the original cell style/metadata; use authored scalar/formula.
-                    start = raw[:raw.index('>') + 1]
+                    start = raw[:raw.index('>') + 1].replace('/>', '>')
+                    prefix = re.match(r'<((?:\w+:)?)c\b', raw).group(1)
                     start = re.sub(r' t="[^"]*"', '', start)
                     kind = cell.get('t')
                     value = cell.findtext('m:v', namespaces=NS)
@@ -42,6 +43,10 @@ def preserve(path, baseline):
                     body = ''
                     if formula is not None:
                         body += ET.tostring(formula, encoding='unicode').replace('ns0:', '').replace(' xmlns:ns0="' + NS['m'] + '"', '')
+                    else:
+                        existing_formula = re.search(r'<(?:\w+:)?f\b[^>]*>.*?</(?:\w+:)?f>', raw, flags=re.S)
+                        if existing_formula:
+                            body += existing_formula.group(0)
                     if kind in ('s', 'inlineStr'):
                         text = shared[int(value)] if kind == 's' else ''.join(cell.find('m:is', NS).itertext())
                         start = start[:-1] + ' t="inlineStr">'
@@ -49,9 +54,11 @@ def preserve(path, baseline):
                     elif value is not None:
                         if kind:
                             start = start[:-1] + ' t="' + kind + '">'
-                        body += '<v>' + value + '</v>'
-                    return start + body + '</c>'
-                content = re.sub(r'<c\b[^>]*>.*?</c>', replace, content.decode(), flags=re.S).encode()
+                        body += '<v>' + value.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;') + '</v>'
+                    if prefix:
+                        body = re.sub(r'<(/?)(f|v|is|t)\b', lambda tag: '<' + tag.group(1) + prefix + tag.group(2), body)
+                    return start + body + '</' + prefix + 'c>'
+                content = re.sub(r'<(?:\w+:)?c\b[^>]*?/>|<(?:\w+:)?c\b[^>]*>.*?</(?:\w+:)?c>', replace, content.decode(), flags=re.S).encode()
             saved.writestr(item, content)
     authored.close()
     original.close()

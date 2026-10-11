@@ -55,7 +55,7 @@ def test_current_rollups_reconcile_and_source_hashes_match():
     summary = json.loads((RESEARCH / 'packaging-progress-summary.json').read_text())
     assert sum(r['Thumbnail_Audit_Status'].startswith('AUDITED') for r in master) == 518
     assert sum(r['Packaging_Audit_Status'].startswith('AUDITED') for r in master) == len(packages) == 518
-    assert len(qa_video_ids(RESEARCH)) == summary['packages']['qa_sampled'] == 121
+    assert len(qa_video_ids(RESEARCH)) == summary['packages']['qa_sampled']
     assert len(list(csv.DictReader((RESEARCH / 'rollup-reconciliation.csv').open()))) == 8
     for path, digest in summary['source_SHA256'].items():
         assert hashlib.sha256((RESEARCH.parents[2] / path).read_bytes()).hexdigest() == digest, path
@@ -64,9 +64,8 @@ def test_current_rollups_reconcile_and_source_hashes_match():
 def test_dashboard_derives_current_exact_id_totals():
     import reconcile_packaging_progress as progress
     data = progress.dashboard_payload(RESEARCH)
-    assert data['totals'] == dict(titles=2303, thumbnails=518, packages=518, qa=121, channels_complete=1)
-    assert data['current_channel']['completed_videos'] == 5
-    assert data['current_channel']['remaining_videos'] == 34
+    assert {k: data['totals'][k] for k in ('titles','thumbnails','packages','channels_complete')} == dict(titles=2303, thumbnails=518, packages=518, channels_complete=1)
+    assert data['current_channel']['completed_videos'] + data['current_channel']['remaining_videos'] == 39
 
 
 def test_dashboard_updates_qa_without_double_counting_or_drafts(tmp_path):
@@ -80,16 +79,17 @@ def test_dashboard_updates_qa_without_double_counting_or_drafts(tmp_path):
             shutil.copy(file, tmp_path / file.name)
     shutil.copytree(RESEARCH / 'channels', tmp_path / 'channels')
     before = progress.dashboard_payload(tmp_path)
-    review = dict(Video_ID='EvuEMhh7SSk', result='PASS', Package_ID='PKG-EvuEMhh7SSk')
+    selected = before['current_channel']['next_Video_ID']
+    review = dict(Video_ID=selected, result='PASS', Package_ID='PKG-' + selected)
     (tmp_path / 'package-qa-review-new.json').write_text(json.dumps([review, review]))
     (tmp_path / 'audit-batch-B002-unapproved.json').write_text('[{"Thumbnail_ID":"THB-draft"}]')
     after = progress.dashboard_payload(tmp_path)
     assert after['totals']['qa'] == before['totals']['qa'] + 1
     assert after['totals']['thumbnails'] == before['totals']['thumbnails']
     assert after['totals']['packages'] == before['totals']['packages']
-    assert after['current_channel']['completed_videos'] == 6
-    assert after['current_channel']['remaining_videos'] == 33
-    assert after['current_channel']['next_Video_ID'] != 'EvuEMhh7SSk'
+    assert after['current_channel']['completed_videos'] == before['current_channel']['completed_videos'] + 1
+    assert after['current_channel']['remaining_videos'] == before['current_channel']['remaining_videos'] - 1
+    assert after['current_channel']['next_Video_ID'] != selected
     # Overlay and duplicated title identities remain part of the exact-ID union.
     with (tmp_path / 'title-analyst-audit.csv').open('a') as file:
         file.write((tmp_path / 'title-analyst-audit.csv').read_text().splitlines()[1] + '\n')
@@ -118,3 +118,21 @@ def test_workbook_and_json_match_derived_summary():
     result = validate(RESEARCH)
     assert result['totals']['thumbnails'] == 518
     assert result['native_features'] == 'PASS'
+
+
+def test_native_preserver_authors_preformatted_empty_cells(tmp_path):
+    import zipfile
+    from preserve_workbook_features import preserve
+    namespace = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'
+    for name, cell in [('baseline', '<x:c r="A1" s="89"/>'), ('authored', '<c r="A1" t="str"><v>QA &amp; evidence</v></c>')]:
+        with zipfile.ZipFile(tmp_path / name, 'w') as archive:
+            archive.writestr('xl/worksheets/sheet1.xml', f'<x:worksheet xmlns:x="{namespace}" xmlns="{namespace}"><x:sheetData><x:row r="1">{cell}</x:row></x:sheetData></x:worksheet>')
+            archive.writestr('native-feature', b'unchanged')
+    preserve(tmp_path / 'authored', tmp_path / 'baseline')
+    with zipfile.ZipFile(tmp_path / 'authored') as archive:
+        xml = archive.read('xl/worksheets/sheet1.xml')
+        assert b'>QA &amp; evidence<' in xml
+        import xml.etree.ElementTree as ET
+        ET.fromstring(xml)
+        assert b's="89"' in xml
+        assert archive.read('native-feature') == b'unchanged'

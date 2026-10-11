@@ -106,7 +106,7 @@ def rebuild(root=HERE, repo=ROOT):
     summary['channels']['complete'] = sum(row['Channel_Status'] == 'COMPLETE' for row in queue)
     summary['current_channel'] = data['current_channel']
     summary['next_channel'] = next((row for row in queue if row['Channel_ID'] == data['current_channel'].get('Channel_ID')), {})
-    summary['reconciliation_basis'] = 'Exact-ID QA-gated legacy and channel union; drafts preserved separately; no new visual review'
+    summary['reconciliation_basis'] = 'Exact-ID QA-gated legacy and channel union; drafts preserved separately; dated QA records identify actual visual reviews'
     progress = summary['progress']
     progress.update(title=summary['titles']['done']/summary['titles']['eligible'], thumbnail=len(thumbs)/summary['thumbnails']['eligible'], package=len(packages)/summary['packages']['eligible'], qa=len(qa)/summary['packages']['eligible'])
     progress['composite'] = sum(progress[k] for k in ('title', 'thumbnail', 'package', 'qa')) / 4

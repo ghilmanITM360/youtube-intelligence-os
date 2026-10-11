@@ -230,6 +230,60 @@
       "review_timestamp": "2026-10-05T12:37:32.866578+00:00",
       "content_promise_verified": "NOT_CHECKED",
       "blinded_to_performance": true
+    },
+    {
+      "Video_ID": "EvuEMhh7SSk",
+      "Thumbnail_ID": "THB-d493f7626dd7664e9d3aa778dfdeee133eb55c880c0c9d983f0f5dd77256a5d6",
+      "microbatch": "CHANNEL-002-M03",
+      "native_reopened": true,
+      "mobile_sizes_inspected": [
+        "320x180",
+        "160x90"
+      ],
+      "mapping": "PASS",
+      "hash": "PASS",
+      "prominent_text": "Dead Man / Walking",
+      "incidental_text": "NONE_OBSERVED",
+      "word_count": 3,
+      "objects_people_composition": "One illustrated masked hooded figure on the left; red and black jacket, pale mask, curved black arrow pointing left toward hood; two-line headline on white at right. No additional people or objects observed.",
+      "medical_status": "NOT_HEALTH",
+      "score_arithmetic": "PASS: thumbnail 74 and package 70 equal component sums; existing scores retained.",
+      "legacy_thumbnail_source": "audit-batch-B002-07.json",
+      "legacy_package_source": "package-audit-PK-08.json",
+      "legacy_rows_preserved": true,
+      "corrections": [
+        {
+          "artifact": "audit-batch-B002-07.json",
+          "field": "typography",
+          "original_value": "Three words in a thin hand-written style: Dead in red, Man and Walking in black. The word Dead is the only part with strong contrast at 160x90, while the thin Walking line is weaker. It adds a phrase the title does not contain.",
+          "corrected_value": "Three handwritten words on two lines: Dead in red, Man and Walking in black. All three words remain readable at 160x90 against white; the illustration has heavier outlines than the lettering. The phrase is absent from the title.",
+          "error_class": "MINOR_FACTUAL",
+          "reason": "The inspected 160x90 image preserves readable black Man and Walking; contrast is not exclusive to red Dead.",
+          "source_evidence": "Exact SHA256 d493f7626dd7664e9d3aa778dfdeee133eb55c880c0c9d983f0f5dd77256a5d6 inspected at native 1280x720, 320x180 and 160x90; canonical title."
+        },
+        {
+          "artifact": "package-audit-PK-08.json",
+          "field": "title_explains_what_thumbnail_cannot",
+          "original_value": "N",
+          "corrected_value": "Y",
+          "error_class": "CLASSIFICATION",
+          "reason": "The title explicitly identifies the dark web and kingpin rank; the mask and danger phrase do not identify either.",
+          "source_evidence": "Exact SHA256 d493f7626dd7664e9d3aa778dfdeee133eb55c880c0c9d983f0f5dd77256a5d6 inspected at native 1280x720, 320x180 and 160x90; canonical title."
+        }
+      ],
+      "warnings": [],
+      "material": 0,
+      "minor_factual": 1,
+      "classification": 1,
+      "subjective": 0,
+      "style_only": 0,
+      "result": "PASS_WITH_CORRECTIONS",
+      "review_timestamp": "2026-10-11T09:16:38.480509+00:00",
+      "content_promise_verified": "NOT_CHECKED",
+      "blinded_to_performance": true,
+      "temporal_evidence_policy": "Existing Creative_Temporal_Alignment retained; no historical creative causality inferred.",
+      "performance_context": "Performance and analyst packaging quality remain separate. Scores retained without lifetime-view ranking; no causal claim.",
+      "package_field_verification": "All eight information/promise fields, relationships and score components reviewed; title-only information supports the recorded classification correction. Unanswered question and promise are analyst interpretations, not verified video content."
     }
   ],
   "historical_qa_reused": {

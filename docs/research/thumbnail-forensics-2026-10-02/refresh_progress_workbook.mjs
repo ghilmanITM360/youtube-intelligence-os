@@ -22,11 +22,28 @@ if(mode==='before'){
  const video=wb.worksheets.getItem('02_VIDEO_PROGRESS');
  const ids=video.getRange(`D2:D${data.master.length+1}`).values;
  const qa=new Set(data.qa_ids);
+ const channelReviews=JSON.parse(await fs.readFile(data.research_root+'/channels/'+data.current_channel.Channel_ID+'/qa.json','utf8')).reviews;
+ const qaSheet=wb.worksheets.getItem('08_QA_PROGRESS');
+ const checkpoints=wb.worksheets.getItem('09_GIT_CHECKPOINTS');
+ for(const review of channelReviews){
+  const micro=qaSheet.getRange('C2:C80').values;
+  if(!micro.some(row=>row[0]===review.microbatch)){
+   const index=qaSheet.getRange('A2:A80').values.findIndex(row=>!row[0])+2;
+   if(index<2)throw Error('QA sheet capacity exhausted');
+   qaSheet.getRange(`A${index}:P${index}`).values=[[data.current_channel.name,review.legacy_package_source,review.microbatch,1,1,review.material,review.minor_factual,review.classification,review.subjective,review.style_only,0,0,0,review.result,'COMMIT_CONTAINING_THIS_RECORD','channels/'+data.current_channel.Channel_ID+'/qa.json']];
+  }
+  const work='QA '+review.Video_ID;
+  if(!checkpoints.getRange('C2:C80').values.some(row=>row[0]===work)){
+   const index=checkpoints.getRange('A2:A80').values.findIndex(row=>!row[0])+2;
+   if(index<2)throw Error('Checkpoint sheet capacity exhausted');
+   checkpoints.getRange(`A${index}:I${index}`).values=[[review.review_timestamp,data.current_channel.name,work,1,'COMMIT_CONTAINING_THIS_RECORD','PUSH_VERIFIED_EXTERNALLY','SEE_GIT_REMOTE','Exact source hash, visual QA, dynamic workbook validation','Containing commit and remote sync recorded by Git; no self-referential commit SHA.']];
+  }
+ }
  for(const m of data.master){
   const n=ids.findIndex(row=>row[0]===m.Video_ID)+2;if(n<2)throw Error('Missing video '+m.Video_ID);
   const set=(col,value)=>{const cell=video.getRange(`${col}${n}`);if(cell.values[0][0]!==value)cell.values=[[value]];};
   set('H',m.Title_Status);
-  if(qa.has(m.Video_ID)&&!['PASS','PASS_WITH_CORRECTIONS'].includes(video.getRange(`O${n}`).values[0][0]))set('O','PASS');
+  if(qa.has(m.Video_ID))set('O',channelReviews.find(row=>row.Video_ID===m.Video_ID)?.result || (['PASS','PASS_WITH_CORRECTIONS'].includes(video.getRange(`O${n}`).values[0][0])?video.getRange(`O${n}`).values[0][0]:'PASS'));
   if(m.Current_Status==='COMPLETE')set('V','COMPLETE');
   if(m.Thumbnail_Audit_Status.startsWith('AUDITED')){
    {const cell=video.getRange(`K${n}`);if(cell.values[0][0]!=='THUMBNAIL_VERIFIED')cell.values=[['THUMBNAIL_VERIFIED']];}
