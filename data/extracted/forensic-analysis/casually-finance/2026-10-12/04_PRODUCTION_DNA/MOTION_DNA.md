@@ -37,7 +37,7 @@ Three narrow sequences have independent source-frame confirmation: 0ll9rEtoRrs M
 
 ## Finalization candidate review
 
-Original664 candidates: 664 inspected; 529 corrected, 117 confirmed, 18 insufficient evidence, 0 untriaged. Dispositions and individual source/timestamp references are in07_VALIDATION/MOTION_QA_DISPOSITION.csv. These counts are not a whole-corpus motion sign-off.
+Original664 candidates: 664 inspected; 543 corrected, 119 confirmed, 2 insufficient evidence, 0 untriaged. Dispositions and individual source/timestamp references are in07_VALIDATION/MOTION_QA_DISPOSITION.csv. These counts are not a whole-corpus motion sign-off.
 
 Independent narrow examples: JsK53moCyZA M0032 16.967–20.633s scene replacement then rising head; M0046 30.4–32.867s cut then paper enlargement. rSa2aziEsAI M0010 20.333–21.1s rising character and M0027 38.8–39.633s upward banknote transfer. 6S3PzAUFnXQ M0030 33.667–34.333s cut then host entrance and M0045 51.75–52.542s sliding source chart plus comparison build. PxgCsLSf-w4 M0030 38.708–39.625s progressive screenshot reveal/enlargement. YGC3ao005as M0001 0.125–0.875s progressive screenshot entrance. 2EZzwupIa80 M0040 47.125–48.583s scene replacement followed by chart-trace reveal.
 
@@ -56,3 +56,11 @@ OBSERVED (housing, Uumnx2Fo6cE): All72 original flagged candidates now have samp
 OBSERVED (xtqbRt94TTw economy video): All64 original flagged candidates now reviewed:59 corrected,5 confirmed. M0118 is a valid rotating property exit; M0288/M0427 are valid source-scene cuts. M0085 gradually increases cube opacity around a retained map rather than instantly introducing a new cube; M0092 fragments property graphics before a chart replacement. M0179 scrolls source content past the top edge. M0260 separates source scroll, enlarged excerpt, and emphasis. M0407/M0409 show visual explosion/lettering without certifying heard effects or speech. Easing and financial statements remain qualified.
 
 OBSERVED (DgbHW0IqHrI): All104 original flagged candidates reviewed:92 corrected,12 confirmed. M0021 retains valid pose change, M0122 valid text swap, M0132 valid portrait exit, and M0341 valid ending cut. M0337/M0338/M0340 show source-broadcast gestures/graphic updates inside fixed monitor framing rather than demonstrated global reframe. M0300/M0325/M0332 reveal props by opening a door; M0308 moves chart bars into a separate strip. All664 original corpus flags now have dispositions;18 earlier mechanisms still need denser inspection. No continuous playback or listened synchronization is certified.
+
+## Dense ambiguous-interval investigation — 2026-10-13
+
+OBSERVED: All18 earlier insufficient intervals received every-native-frame inspection with adjacent context and source aspect ratio preserved. Fourteen categorical phase labels were refined; -X6YzlY_8tM M0140 CUT and5umJ63d3rzQ M0115 EXIT were confirmed. Two exact mechanisms remain insufficient: -X6YzlY_8tM M0418 source-edit/crop details, and6S3PzAUFnXQ M0042 overlapping chart-layer/crop transitions. Their investigations are complete; uncertainty is retained. All664 original candidates have dispositions:543 corrected,119 confirmed,2 insufficient. No full-duration playback, direct listening, exact easing or production-tool certification follows from this review.
+
+MEASURED TIMING REFERENCE: The existing pipeline stores native frame index divided by fps. Source video tracks begin one frame after container zero:1/24s or1/30s. Container PTS adds the measured track start offset. New review JSONs include explicit frame indices and both time references; historical requested-seek entries are preserved. First new opening sheet was regenerated using exact frame selection, correcting two boundary notes without changing classifications.
+
+OBSERVED counterexamples: roe3SgezmmU M0399 shows uninterrupted interviewee gestures within the inspected monitor scene, rather than a demonstrated cut. YGC3ao005as M0034 combines abrupt bubble appearance with later quote scrolling. rSa2aziEsAI M0012 combines a cut, sequential banknote additions, exit and another cut. Source text, actor identity and financial meaning remain separate verification tasks.

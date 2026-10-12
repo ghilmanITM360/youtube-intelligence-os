@@ -47,9 +47,9 @@ No original media, recovered variants, canonical datasets or Economics records w
 
 ## Active finalization register
 
-Current reviewed dispositions: {'CORRECTED_LABEL': 529, 'INSUFFICIENT_EVIDENCE': 18, 'CONFIRMED_EXISTING_LABEL': 117, 'NOT_STARTED': 0}. Earlier664 count above is the starting checkpoint, not the current unresolved count.
+Current reviewed dispositions: {'CORRECTED_LABEL': 543, 'INSUFFICIENT_EVIDENCE': 2, 'CONFIRMED_EXISTING_LABEL': 119, 'NOT_STARTED': 0}. Earlier664 count above is the starting checkpoint, not the current unresolved count.
 
-Agent work remaining: 0 long-form candidates untriaged; 18 previously reviewed candidates need denser review. Nonflagged motions, whole-duration independent visual coverage, asset provenance and233 externally unverified claim groups are not completed merely by preparing reports.
+Agent work remaining: 0 long-form candidates untriaged; All18 previously insufficient candidates have completed dense investigation;2 retain unresolved exact mechanisms. Nonflagged motions, whole-duration independent visual coverage, asset provenance and233 externally unverified claim groups are not completed merely by preparing reports.
 
 Listening dependency: full soundtracks for all16 videos plus priority clips; owner deferral remains. Source dependency: turJ6VMfUjI,Qof71Ef-3EU. Authoritative-data dependency: comparable historical intraday benchmark, creator growth/interest series identifiers and vintages, inaccessible company financial/intent data. Separate these dependencies from recoverable agent work.
 
