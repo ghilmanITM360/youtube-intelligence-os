@@ -4,8 +4,8 @@ Goal: complete recoverable independent research, preserve uncertainty, and push 
 
 Execution: one primary agent, directly in the existing Finance checkout. User explicitly requests continuous execution; no approval pause or delegation. No source modification, canonical changes, merges, or missing-source acquisition.
 
-- [ ] Establish exact-head Git/CI and resource gate.
-- [ ] Census all 664 candidates and create an 18-video multidimensional matrix; preserve unreviewed candidates explicitly.
+- [x] Establish exact-head Git/CI and resource gate.
+- [x] Census all 664 candidates and create an 18-video multidimensional matrix; preserve unreviewed candidates explicitly.
 - [ ] Review source sequences in bounded per-video units; record individual dispositions with evidence, then reconcile modified motion rows and masters.
 - [ ] Audit whole-duration coverage and available audio evidence without claiming playback or listening from sheets/ASR.
 - [ ] Review material financial claim families and archive authoritative evidence where accessible.

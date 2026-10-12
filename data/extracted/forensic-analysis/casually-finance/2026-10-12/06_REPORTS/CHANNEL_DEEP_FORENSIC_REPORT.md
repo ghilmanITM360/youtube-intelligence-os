@@ -37,3 +37,17 @@ The dated derived update preserves the earlier repository research drop as histo
 ## Enhanced QA checkpoint —2026-10-12
 
 Native plus320×180/160×90 mobile review now covers all16available thumbnails (ten prior long-form reviews plus six new Shorts reviews). All45Japan and57SpaceX Short representative states were independently inspected; targeted long-form source frames resolved the OBR transcription error and supported the existing EBITDA/private-meeting caveats. These reviews do not certify continuous motion, every financial claim, direct listening or ASR audio accuracy. Per-video ENHANCED_QA_2026-10-12.json records exact scopes. All ten master tables pass focused reconciliation after the OBR correction.
+
+## Finalization checkpoint 2026-10-12
+
+Status: RESEARCH_CONTINUATION_REQUIRED.18 selected,16 source-verified,16 structural passes, zero full audiovisual sign-offs. All2050 supplied files freshly rehashed unchanged; two original Shorts remain absent in bounded supplied-folder search. Public video fetches were throttled, so public accessibility is unverified.
+
+Motion: 101/664 candidates independently inspected; 563 untriaged and 12 need denser/adjacent-state inspection. Existing labels outside reviewed units remain provisional. Per-video matrix separates each QA dimension. Source-sequence sheets are evidence for discrete observations, not continuous playback.
+
+Financial register covers287 claim groups,240 HIGH/MED priority. External result census: {'UNVERIFIED': 237, 'NOT_TESTABLE_WITH_AVAILABLE_DATA': 38, 'PARTIALLY_VERIFIED': 8, 'VERIFIED': 2, 'CONTRADICTED': 2}. UNVERIFIED includes recoverable agent work not yet performed; screen excerpt consistency is not independent source certification. Verified scope includes Nasdaq rule provisions and attributed CRFB crossover forecast. Partial scope includes CBO debt projection and previous Treasury auction comparisons. Nasdaq threshold/purchase-mechanism contradictions are documented. Intraday19-year maximum and creator debt-rate period comparability remain unresolved. Primary sources and exact scope are inNASDAQ_RULE_VERIFICATION.md,DEBT_PRIMARY_SOURCE_QA.md andFINAL_EVIDENCE_QA_2026-10-12.json.
+
+Visual/script/editing/packaging synthesis remains descriptive of selected supplied evidence. Independent Js Short inspection covers all57 representative states plus flagged transitions, but no continuous playback. Source-asset provenance and rights, authoring tools, CTR/retention, causal performance effects and full audiovisual certification are not established. Existing seven Production DNA reports and production blueprint are the comprehensive channel-analysis artifacts; this section updates their evidence boundary, not the missing evidence.
+
+Audio: four clips preserved/hash-checked; owner listening deferred. No semantic audio listening capability was used. AUDIO_REVIEW_HANDOFF.md adds one material source interval per available video and specifies whole-soundtrack certification requirements. Financial forecasts remain forecasts; packaging rhetoric is not a factual guarantee.
+
+Remaining agent work is substantial, so the blocker register must not be presented as owner-action-only. No claim of ALL_AVAILABLE_RESEARCH_COMPLETE orFULL_CORPUS_VERIFIED is made.

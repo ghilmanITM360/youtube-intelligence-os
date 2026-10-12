@@ -44,3 +44,13 @@ Visual DNA supports the documented white-field illustration grammar, characters,
 - JsK53moCyZA: PASS_STRUCTURAL; FULL_AV_SIGNOFF_PENDING; 8 current label-versus-active-frame flags. These flags are review candidates, not proven errors.
 
 No original media, recovered variants, canonical datasets or Economics records were modified. No full video analyses were restarted.
+
+## Active finalization register
+
+Current reviewed dispositions: {'NOT_STARTED': 563, 'CONFIRMED_EXISTING_LABEL': 34, 'CORRECTED_LABEL': 55, 'INSUFFICIENT_EVIDENCE': 12}. Earlier664 count above is the starting checkpoint, not the current unresolved count.
+
+Agent work remaining: 563 long-form candidates untriaged; 12 sampled Short candidates need denser review. Nonflagged motions, whole-duration independent visual coverage, asset provenance and237 externally unverified claim groups are not completed merely by preparing reports.
+
+Listening dependency: full soundtracks for all16 videos plus priority clips; owner deferral remains. Source dependency: turJ6VMfUjI,Qof71Ef-3EU. Authoritative-data dependency: comparable historical intraday benchmark, creator growth/interest series identifiers and vintages, inaccessible company financial/intent data. Separate these dependencies from recoverable agent work.
+
+Exact continuation: use the individual candidate ledger, prioritize materially contradictory long-form labels, reuse source/scratch and preserve prior corrections. Continue primary-source checking of HIGH/MED claims. Completion matrix and claim CSV are registers with unresolved states, not completion certificates.

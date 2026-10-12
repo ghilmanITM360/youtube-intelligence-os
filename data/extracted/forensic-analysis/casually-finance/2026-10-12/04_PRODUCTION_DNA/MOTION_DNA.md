@@ -6,22 +6,22 @@ Evidence scope:16 available sources (ten long-form, six Shorts), selected by the
 
 | Reviewer label | Rows |
 |---|---:|
-| CUT | 1867 |
-| POP_IN | 722 |
+| CUT | 1835 |
+| POP_IN | 708 |
 | TEXT_REVEAL | 282 |
-| BUILD | 241 |
+| BUILD | 244 |
 | HIGHLIGHT | 142 |
 | ZOOM_IN | 125 |
-| TEXT_SWAP | 125 |
+| TEXT_SWAP | 117 |
 | POSE_CHANGE | 110 |
 | LOOP_ANIM | 97 |
 | SCROLL | 91 |
 | REPOSITION | 88 |
-| SWAP | 88 |
+| SWAP | 87 |
 | FACE_CHANGE | 81 |
 | DRAW_ON | 65 |
 | EXIT | 62 |
-| REFRAME | 52 |
+| REFRAME | 53 |
 
 Rows represent selected changes between stable states, including boundaries. One mechanism may generate several rows; these are not independent creative decisions. Pixel episodes, motion rows and reviewed shots are different units. Easing and precise tracked trajectories remain UNVERIFIED. Label-versus-pixel conflicts are retained in MOTIONS.csv rather than erased.
 
@@ -34,3 +34,11 @@ INTERPRETATION: For original productions, storyboard start/end states before add
 ## Bounded independent sequence review
 
 Three narrow sequences have independent source-frame confirmation: 0ll9rEtoRrs M0004 progressive counter entrance, M0020 abrupt chart replacement followed by enlargement, and -X6YzlY_8tM M0047 cut followed by paper enlargement. Active-frame duration is not entrance duration. New composite labels POP_IN_THEN_SCALE and CUT_THEN_ZOOM_IN each have one row. These checks do not certify easing, camera versus object scaling, narration synchronization or the remaining corpus labels. See 07_VALIDATION/FINAL_QA_REGISTER_2026-10-12.md.
+
+## Finalization candidate review
+
+Original664 candidates: 101 inspected; 55 corrected, 34 confirmed, 12 insufficient evidence, 563 untriaged. Dispositions and individual source/timestamp references are in07_VALIDATION/MOTION_QA_DISPOSITION.csv. These counts are not a whole-corpus motion sign-off.
+
+Independent narrow examples: JsK53moCyZA M0032 16.967–20.633s scene replacement then rising head; M0046 30.4–32.867s cut then paper enlargement. rSa2aziEsAI M0010 20.333–21.1s rising character and M0027 38.8–39.633s upward banknote transfer. 6S3PzAUFnXQ M0030 33.667–34.333s cut then host entrance and M0045 51.75–52.542s sliding source chart plus comparison build. PxgCsLSf-w4 M0030 38.708–39.625s progressive screenshot reveal/enlargement. YGC3ao005as M0001 0.125–0.875s progressive screenshot entrance. 2EZzwupIa80 M0040 47.125–48.583s scene replacement followed by chart-trace reveal.
+
+Supported distinction: an active-pixel episode can combine a cut, object entrance, caption build and later scaling. Caption event labels may remain correct despite many active frames. Easing, camera versus object transforms, exact authoring tools and listened narration timing remain uncertified. Do not generalize reviewed sequences to unreviewed records.

@@ -21,3 +21,16 @@ INTERPRETATION: This blueprint applies general explanation techniques observed i
 ## Suggested deliverables
 
 An original script with claim IDs, source ledger, beat sheet, storyboard/state table, asset inventory, motion/sync plan, listening QA, mobile packaging variants and post-publication test brief. Begin with one video; no new infrastructure/API/dashboard required. Missing sources or uncertain financial propositions should narrow claims, not trigger invented evidence. For Shorts, use one complete bounded explanation or label it as a teaser; six-source findings remain partial.
+
+## Finalization evidence-qualified production guidance
+
+These are recommendations for original production, not mandatory competitor rules or proven audience effects.
+
+1. Start with a concrete question or contradiction; distinguish measured fact from hypothesis and promise only a payoff the script delivers. Counterexamples: fictional novice o3FQcd91MIs and investor taxonomy kwMHrTFCWUE demonstrate alternatives to macroeconomic threat hooks.
+2. Build independently designed host/actor/country illustrations, monetary/document props, charts and source-excerpt frames. Use clear contours and whitespace; do not copy proprietary asset files. Asset motif resemblance does not establish shared source identity.
+3. Storyboard the phase order separately: initial replacement, progressive entrance, comparison build, highlight, enlargement and exit. Native-frame examples in MOTION_QA_DISPOSITION.csv demonstrate why one label cannot describe every active frame. Choose easing creatively; source easing was not measured.
+4. Separate composition cadence from hard cuts and within-layout state changes. Existing measured shot cadence is a reference for information flow, not a universal cutting rate. Preserve enough time to read evidence and let figures update visibly.
+5. Evaluate thumbnails at160/320px for subject recognition, readable primary promise, limited text, chart/figure legibility and truthful title complementarity. Earlier collage/investor designs are counterexamples to a single universal warning template. No CTR optimization is certified without analytics.
+6. Before audio sign-off, genuinely listen to every line and confirm numbers, proper nouns, pauses, source meaning, music/SFX audibility, mix transitions and semantic synchronization. ASR alignment is a starting cue sheet, not a certificate.
+7. Fact-check instrument, maturity, observation date, series vintage, units, denominator, nominal/real distinction and projection status. Compare auction highs with auction highs; daily par with daily par; intraday benchmarks with comparable intraday history. Do not turn index weighting into compulsory share-purchase counts. Express6.6%-3.5% as3.1 percentage points; verify periods before economic interpretation.
+8. Finish each unit with reviewed source observations, provenance, explicit confidence, foreign-key/timestamp validation and per-video/master reconciliation. Do not promote research into canonical inventory or claim18/18 coverage without missing sources.
