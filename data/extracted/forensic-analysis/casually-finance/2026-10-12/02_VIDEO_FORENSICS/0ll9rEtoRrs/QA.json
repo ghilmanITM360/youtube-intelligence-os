@@ -35,7 +35,7 @@
   "audio_method": "Whole soundtrack analysed by signal processing (loudness/pauses/transient flux) and spectrogram strips inspected; NOT auditory listening"
  },
  "counts": {
-  "label_vs_measure_conflicts": 100,
+  "label_vs_measure_conflicts": 1,
   "words": 3284,
   "sentences": 192,
   "states": 577,
@@ -70,5 +70,13 @@
  "orphan_annotations": [],
  "status": "PASS_STRUCTURAL",
  "financial_claims_qa": "39 unique claims with valid sentence-derived intervals; financial truth not independently verified",
- "targeted_motion_qa": "See07_VALIDATION/FINAL_EVIDENCE_QA_2026-10-12.json; narrow sequence review only, full AV pending"
+ "targeted_motion_qa": "See07_VALIDATION/FINAL_EVIDENCE_QA_2026-10-12.json; narrow sequence review only, full AV pending",
+ "independent_motion_review": {
+  "original_candidates": 100,
+  "reviewed": 100,
+  "confirmed_existing_labels": 27,
+  "corrected_labels": 72,
+  "insufficient_evidence": 1,
+  "scope": "Nine source samples per candidate at native-frame-adjacent start and distributed follow-on points; not continuous playback"
+ }
 }
