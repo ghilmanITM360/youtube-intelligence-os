@@ -6,8 +6,8 @@ Evidence scope:16 available sources (ten long-form, six Shorts), selected by the
 
 | Reviewer label | Rows |
 |---|---:|
-| CUT | 1868 |
-| POP_IN | 724 |
+| CUT | 1867 |
+| POP_IN | 722 |
 | TEXT_REVEAL | 282 |
 | BUILD | 241 |
 | HIGHLIGHT | 142 |
@@ -30,3 +30,7 @@ OBSERVED: Additive builds dominate explanations: -X6YzlY_8tM13–17s consumer lo
 OBSERVED: Cuts replace compositions, while zooms and reframes simulate a camera on static drawings or screenshots (-X6YzlY_8tM29–31s pointing host,513–517s chart enlargement). SCROLL moves a source crop or UI behind a fixed framing (474–478s channel grid). Source-footage motion remains distinct from added graphics (302–336s podcast). Embedded footage action cannot establish the creator's animation process.
 
 INTERPRETATION: For original productions, storyboard start/end states before adding movement. Reveal an explanatory dependency when narration introduces it, highlight one supported quantity, use position/scale for attention, and reserve repeated pose loops for character continuity. Do not convert the corpus rate into a mandatory animation quota. Fast micro changes can be caption-driven rather than major scene changes; separate both measures when evaluating a new edit.
+
+## Bounded independent sequence review
+
+Three narrow sequences have independent source-frame confirmation: 0ll9rEtoRrs M0004 progressive counter entrance, M0020 abrupt chart replacement followed by enlargement, and -X6YzlY_8tM M0047 cut followed by paper enlargement. Active-frame duration is not entrance duration. New composite labels POP_IN_THEN_SCALE and CUT_THEN_ZOOM_IN each have one row. These checks do not certify easing, camera versus object scaling, narration synchronization or the remaining corpus labels. See 07_VALIDATION/FINAL_QA_REGISTER_2026-10-12.md.

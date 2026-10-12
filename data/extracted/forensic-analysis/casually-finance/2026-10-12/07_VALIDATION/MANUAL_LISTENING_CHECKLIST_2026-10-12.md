@@ -10,3 +10,14 @@ Status: AUDIO_LISTENING_UNVERIFIED. No direct listening occurred. ASR, screen ca
 | Same source | 50.98–55.35s | Does narrator say three full points, rather than3.1? Later chart displays+3.1. | Exact wording; whether percentage points explicitly stated. |
 
 Verify source SHA before listening: Pxg0ea5882ac58dbd23254fa1e5c892cb5e9e5c6797d7c0c067a731de50dedb3420; Debt6ec37847fdccb35fb16797a28399be4fdf8cdc572739010d70ba9dae47a79438. Preserve punctuation and disputed numbers; do not overwrite transcripts based on expectation.
+
+## Local owner-listening package
+
+Owner deferred listening on2026-10-12. Status remains MANUAL_AUDIO_REVIEW_PENDING. Each requested interval starts1.5s into its context clip. Source hashes were verified before extraction. Clips remain outside Git; manifest records clip hashes and source windows.
+
+- /Users/ghilmankhan/workprojects/yios-recovery-status/finance-owner-listening-2026-10-12/PxgCsLSf-w4_38.84-55.19_context.m4a
+- /Users/ghilmankhan/workprojects/yios-recovery-status/finance-owner-listening-2026-10-12/PxgCsLSf-w4_55.19-64.44_context.m4a
+- /Users/ghilmankhan/workprojects/yios-recovery-status/finance-owner-listening-2026-10-12/6S3PzAUFnXQ_17.25-19.51_context.m4a
+- /Users/ghilmankhan/workprojects/yios-recovery-status/finance-owner-listening-2026-10-12/6S3PzAUFnXQ_50.98-55.35_context.m4a
+
+Second Pxg clip has0.547891s trailing context because the source ends at64.987891s; requested listening window is complete.

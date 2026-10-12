@@ -21,3 +21,7 @@ Debt Short at19.20s explicitly captionsabout6.5%, while latergrowthbar6.6%; pres
 Long-form0ll9rEtoRrs M0004 sampled source sequence5.1667–5.875s confirms progressive counter entrance; POP_IN corrected to REVEAL_MOVE in per-video and master. Exact easing/scale/crop remain unassessed. This completes the scoped label check, not whole-video motion QA.
 
 Progress remains16/18PASS_STRUCTURAL,0fullaudiovisualsignoffs. MissingturJ6VMfUjI,Qof71Ef-3EU. Next: complete manual listening checklist; obtain authoritative intraday historical benchmark and30yearauction history before certifying superlatives. Continue other specifically flagged long-form motion checks only as separate bounded units.
+
+## Final evidence QA continuation
+
+See FINAL_QA_REGISTER_2026-10-12.md and FINAL_EVIDENCE_QA_2026-10-12.json. The since-2001 nominal 30-Year auction comparison is now verified against complete historical Treasury data; intraday record and spoken referent remain unresolved. Two additional motion sequences were corrected without reprocessing the corpus. Four local-only owner-listening clips are prepared; owner deferred review. Progress remains 16/18 structural, zero full audiovisual sign-offs.
