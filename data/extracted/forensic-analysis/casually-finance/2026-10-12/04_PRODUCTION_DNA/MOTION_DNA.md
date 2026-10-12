@@ -6,10 +6,10 @@ Evidence scope:16 available sources (ten long-form, six Shorts), selected by the
 
 | Reviewer label | Rows |
 |---|---:|
-| CUT | 1835 |
-| POP_IN | 708 |
+| CUT | 1808 |
+| POP_IN | 701 |
 | TEXT_REVEAL | 282 |
-| BUILD | 244 |
+| BUILD | 250 |
 | HIGHLIGHT | 142 |
 | ZOOM_IN | 125 |
 | TEXT_SWAP | 117 |
@@ -21,7 +21,7 @@ Evidence scope:16 available sources (ten long-form, six Shorts), selected by the
 | FACE_CHANGE | 81 |
 | DRAW_ON | 65 |
 | EXIT | 62 |
-| REFRAME | 53 |
+| REFRAME | 51 |
 
 Rows represent selected changes between stable states, including boundaries. One mechanism may generate several rows; these are not independent creative decisions. Pixel episodes, motion rows and reviewed shots are different units. Easing and precise tracked trajectories remain UNVERIFIED. Label-versus-pixel conflicts are retained in MOTIONS.csv rather than erased.
 
@@ -37,7 +37,7 @@ Three narrow sequences have independent source-frame confirmation: 0ll9rEtoRrs M
 
 ## Finalization candidate review
 
-Original664 candidates: 101 inspected; 55 corrected, 34 confirmed, 12 insufficient evidence, 563 untriaged. Dispositions and individual source/timestamp references are in07_VALIDATION/MOTION_QA_DISPOSITION.csv. These counts are not a whole-corpus motion sign-off.
+Original664 candidates: 146 inspected; 92 corrected, 41 confirmed, 13 insufficient evidence, 518 untriaged. Dispositions and individual source/timestamp references are in07_VALIDATION/MOTION_QA_DISPOSITION.csv. These counts are not a whole-corpus motion sign-off.
 
 Independent narrow examples: JsK53moCyZA M0032 16.967–20.633s scene replacement then rising head; M0046 30.4–32.867s cut then paper enlargement. rSa2aziEsAI M0010 20.333–21.1s rising character and M0027 38.8–39.633s upward banknote transfer. 6S3PzAUFnXQ M0030 33.667–34.333s cut then host entrance and M0045 51.75–52.542s sliding source chart plus comparison build. PxgCsLSf-w4 M0030 38.708–39.625s progressive screenshot reveal/enlargement. YGC3ao005as M0001 0.125–0.875s progressive screenshot entrance. 2EZzwupIa80 M0040 47.125–48.583s scene replacement followed by chart-trace reveal.
 
