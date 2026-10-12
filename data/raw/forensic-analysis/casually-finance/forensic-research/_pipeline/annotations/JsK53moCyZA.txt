@@ -1,0 +1,61 @@
+# FORMAT: state_id|literal description|exact visible text|layout/focal|assets|change entering state
+#H1|Hook: Elon Musk preparing the largest IPO in human history; word-chunk burned-in captions|ORIGINAL_DRAWING;SCREEN_CAPTURE;MOTION_GRAPHICS
+S001.0|White canvas; small stick-figure host at left holding a pointer, smiling|-|host lower left|HOST=hand-drawn stick-figure presenter;POINTER=thin pointer stick|START
+S001.1|Burned-in caption (small black hand-lettered text, lower right) appears: 'Elon Musk'|Elon Musk|host left, caption lower centre|HOST;POINTER;CAPTION_CHUNK=small black hand-lettered caption showing 1–4 words at a time|TEXT_REVEAL: caption chunk 1
+S001.2|Caption chunk changes to 'is preparing'|is preparing|same|HOST;POINTER;CAPTION_CHUNK|TEXT_SWAP: chunk 2
+S001.3|Blue horizontal bar chart 'SpaceX IPO vs. The Biggest Companies on Earth' appears at right with a red SpaceX bar and a yellow 'Largest IPO in history' tag; host looks surprised (open mouth); caption 'the largest'|SpaceX IPO vs. The Biggest Companies on Earth / Largest IPO in history / the largest|chart right, host left|SS_BIGGEST_COMPANIES_CHART=bar chart ranking SpaceX IPO value against the biggest companies;HOST;POINTER;CAPTION_CHUNK|POP_IN: chart; FACE_CHANGE; TEXT_SWAP: chunk 3
+S001.4|Caption chunk 'initial public offering'|initial public offering|same|SS_BIGGEST_COMPANIES_CHART;HOST;POINTER;CAPTION_CHUNK|TEXT_SWAP: chunk 4
+S001.5|Caption chunk 'in human history'|in human history|same|SS_BIGGEST_COMPANIES_CHART;HOST;POINTER;CAPTION_CHUNK|TEXT_SWAP: chunk 5
+S001.6|Chart replaced by a single long red SpaceX bar ($1.75T) at top; a drawn Elon-style character (dark hair, smile, black 'X' shirt, wavy arms) at lower left; caption 'at a $1.75 trillion dollar'|SpaceX / $1.75T / at a $1.75 trillion dollar|bar top, character lower left|SS_SPACEX_BAR=single red SpaceX valuation bar chart ($1.75T);CHAR_MUSK=drawn Musk-like character with black 'X' shirt;CAPTION_CHUNK|CUT: bar chart + Musk character
+S001.7|Character's face shifts to a broader smile (wavy arms move)|at a $1.75 trillion dollar|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|LOOP_ANIM: character idle (frame set 1)
+S001.8|Character pose cycles (arms wave)|at a $1.75 trillion dollar|same, composition scrolled slightly lower|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|SCROLL: composition drops; LOOP_ANIM
+S001.9|Idle cycle continues|at a $1.75 trillion dollar|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|LOOP_ANIM
+S001.10|Idle cycle continues|at a $1.75 trillion dollar|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|LOOP_ANIM
+S001.11|Idle cycle continues|at a $1.75 trillion dollar|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|LOOP_ANIM
+S001.12|Caption chunk 'target valuation'|target valuation|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|TEXT_SWAP
+S001.13|Idle cycle continues|target valuation|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|LOOP_ANIM
+S001.14|Idle cycle continues|target valuation|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|LOOP_ANIM
+S001.15|Caption chunk 'SpaceX would be worth'|SpaceX would be worth|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|TEXT_SWAP
+S001.16|Caption 'SpaceX would be worth' (second showing)|SpaceX would be worth|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|LOOP_ANIM
+S001.17|Caption chunk 'more than'; character mouth open|more than|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|TEXT_SWAP
+S001.18|Second bar below the red one labelled 'Everyone Else…' made of defence-contractor logos (RTX, Lockheed, Boeing etc.) totalling $0.90T; caption 'every American'|Everyone Else… / $0.90T / every American|two bars stacked, character lower left|SS_DEFENSE_BAR=stacked-logo bar of American defence contractors ($0.90T);SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|POP_IN: second bar (draws in left to right)
+S001.19|Same|every American|same|SS_DEFENSE_BAR;SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|LOOP_ANIM
+S001.20|Caption chunk 'defense contractor combined'|defense contractor combined|same|SS_DEFENSE_BAR;SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|TEXT_SWAP
+S001.21|Red hand-lettered 'more than all COMBINED!' appears right of the lower bar|more than all COMBINED!|label right of lower bar|SS_DEFENSE_BAR;SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK;TXT_RED_CAPTION=red hand-lettered emphasis caption|TEXT_REVEAL
+S001.22|Same|defense contractor combined|same|SS_DEFENSE_BAR;SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK;TXT_RED_CAPTION|HOLD
+S001.23|Composition re-set: red SpaceX bar mid-frame with the character now standing on the bar's right end; caption 'worth more than'|worth more than|bar mid, character on bar end|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|CUT: new layout (character relocated onto bar)
+S001.24|Same; caption holds|worth more than|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|HOLD
+S001.25|Caption 'the market caps'|the market caps|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK|TEXT_SWAP
+S001.26|Lower bar begins: a Coca-Cola logo tile under the red bar; caption 'of Coca Cola'|of Coca Cola|lower bar left|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK;SS_BRANDS_BAR=bar built from brand-logo tiles (Coca-Cola, McDonald's, Disney, Nike, Starbucks; $0.91T)|DRAW_ON: bar grows by one logo tile per word
+S001.27|McDonald's tile added|McDonald's|lower bar|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK;SS_BRANDS_BAR|DRAW_ON: tile
+S001.28|Disney, Nike and Starbucks tiles complete the bar ($0.91T); caption 'and Starbucks'|$0.91T / and Starbucks|lower bar full|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK;SS_BRANDS_BAR|DRAW_ON: remaining tiles
+S001.29|Same; caption holds|and Starbucks|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK;SS_BRANDS_BAR|HOLD
+S001.30|Caption 'all put together'|all put together|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK;SS_BRANDS_BAR|TEXT_SWAP
+S001.31|Same; caption holds|all put together|same|SS_SPACEX_BAR;CHAR_MUSK;CAPTION_CHUNK;SS_BRANDS_BAR|HOLD
+S001.32|Second lower bar now 'Top 10 LSE Companies' built from ten logo tiles ($1.58T); a tiny worried face at lower left with a hand-lettered 'huh???'; caption 'London Stock Exchange'|Top 10 LSE Companies... / $1.58T / huh???? / London Stock Exchange|two bars, face lower left|SS_SPACEX_BAR;SS_LSE_BAR=bar built from top-10 London Stock Exchange company logo tiles ($1.58T);CHAR_MUSK_FACE_SMALL=small worried character face;TXT_HANDLETTER;CAPTION_CHUNK|CUT+DRAW_ON: LSE bar
+S001.33|Caption 'combined'|combined|same|SS_SPACEX_BAR;SS_LSE_BAR;CAPTION_CHUNK|TEXT_SWAP
+S001.34|Blank white; host (small, dubious pose) centred; caption 'so if you're wondering'|so if you're wondering|host centre|HOST;CAPTION_CHUNK|CUT: reset to host
+S001.35|Host raises hands in a shrug|so if you're wondering|host centre|HOST;CAPTION_CHUNK|POSE_CHANGE
+S001.36|Caption 'who the f****'|who the f****|host centre|HOST;CAPTION_CHUNK|TEXT_SWAP (censored profanity)
+S001.37|SpaceX wordmark appears above; caption 'is buying SpaceX'|SPACEX / is buying SpaceX|logo upper, caption lower|LOGO_SPACEX=SpaceX wordmark logo;CAPTION_CHUNK|CUT: logo
+S001.38|Dark news card below the logo ('SpaceX posted nearly $5 billion loss in 2025, The Information reports'); caption 'a company'|SpaceX posted nearly $5 billion loss in 2025, The Information reports / a company|card mid|LOGO_SPACEX;SS_HEADLINE_SPACEX_LOSS=Reuters-style dark headline card about SpaceX's ~$5B 2025 loss;CAPTION_CHUNK|POP_IN: headline card
+S001.39|Red circle hand-drawn round '$5 billion loss'; hand-lettered 'ouch' under card; caption 'losing $5 billion'|ouch / losing $5 billion|circle on card|LOGO_SPACEX;SS_HEADLINE_SPACEX_LOSS;HL_RED_CIRCLE=hand-drawn red circle;TXT_HANDLETTER;CAPTION_CHUNK|DRAW_ON: red circle; TEXT_REVEAL: 'ouch'
+S001.40|Composition shifts lower; caption 'per year'|per year|logo/card lower|LOGO_SPACEX;SS_HEADLINE_SPACEX_LOSS;HL_RED_CIRCLE;TXT_HANDLETTER;CAPTION_CHUNK|SCROLL: composition lowers
+S001.41|Full-frame bar chart 'SpaceX IPO vs. The Biggest Companies on Earth' (NVIDIA first; SpaceX highlighted red); caption 'at the'|SpaceX IPO vs. The Biggest Companies on Earth / at the|chart centre|SS_BIGGEST_COMPANIES_CHART;CAPTION_CHUNK|CUT: chart returns
+S001.42|Yellow tag 'Largest IPO in history' appears at the SpaceX bar; caption 'largest IPO valuation'|Largest IPO in history / largest IPO valuation|tag at right of red bar|SS_BIGGEST_COMPANIES_CHART;CAPTION_CHUNK;HL_YELLOW_TAG=yellow tag annotation|POP_IN: tag
+S001.43|Same; caption 'in history'|in history|same|SS_BIGGEST_COMPANIES_CHART;CAPTION_CHUNK;HL_YELLOW_TAG|TEXT_SWAP
+#H2|Reveal: the buyer is you (retirement accounts)|ORIGINAL_DRAWING
+S001.44|Host smiling with a tiny angel (halo, left) and tiny devil (horns, right) on his shoulders; caption 'well the answer'|well the answer|host centre|HOST;CHAR_ANGEL=tiny stick angel;CHAR_DEVIL=tiny stick devil;CAPTION_CHUNK|CUT
+S001.45|Host enlarged, pointing straight at the viewer (hand fills frame); angel and devil flank him; caption 'is you'|is you|host fills frame|HOST;CHAR_ANGEL;CHAR_DEVIL;CAPTION_CHUNK|ZOOM_IN: host points at camera
+S001.46|Hand-drawn '401K' document with scribbled lines; caption 'is going to be'|401K / is going to be|document centre|OBJ_401K_DOC=hand-drawn 401K paper document;CAPTION_CHUNK|CUT
+S001.47|Small 401K document character (with legs) holds out a green dollar bill; caption 'one of the biggest buyers'|401K / one of the biggest buyers|character upper left|OBJ_401K_DOC;OBJ_CASH_BILLS;CAPTION_CHUNK|CUT: 401K becomes a character offering cash
+S001.48|401K character with wide eyes offers cash; speech bubble 'Give me SPACEX stonks pls'; caption 'of SpaceX stock'|Give me SPACEX stonks pls / of SpaceX stock|character left, bubble right|OBJ_401K_DOC;OBJ_CASH_BILLS;OBJ_SPEECH_BUBBLE;TXT_HANDLETTER;CAPTION_CHUNK|POP_IN: bubble; FACE_CHANGE
+S001.49|Same; caption 'whether you like it or not'|whether you like it or not|same|OBJ_401K_DOC;OBJ_CASH_BILLS;OBJ_SPEECH_BUBBLE;TXT_HANDLETTER;CAPTION_CHUNK|TEXT_SWAP
+#H3|The Nasdaq rule|COMPOSITED_STILLS;MOTION_GRAPHICS
+S001.50|Large Nasdaq logo centred; caption 'and that's because'|Nasdaq / and that's because|logo centre|LOGO_NASDAQ=Nasdaq wordmark logo;CAPTION_CHUNK|CUT
+S001.51|Caption 'NASDAQ quietly'|NASDAQ quietly|same|LOGO_NASDAQ;CAPTION_CHUNK|TEXT_SWAP
+S001.52|Logo moves left and shrinks; a 'Rules' paper icon appears right|Nasdaq / Rules|logo left, rules right|LOGO_NASDAQ;OBJ_RULES_DOC=hand-drawn parchment 'Rules' document;CAPTION_CHUNK|REPOSITION+POP_IN: Rules
+S001.53|Caption 'introduced a'|introduced a|same|LOGO_NASDAQ;OBJ_RULES_DOC;CAPTION_CHUNK|TEXT_SWAP
+S001.54|Caption 'brand-new rule'|brand-new rule|same|LOGO_NASDAQ;OBJ_RULES_DOC;CAPTION_CHUNK|TEXT_SWAP
+S001.55|Tiny text 'shh… you saw nothing' above the logo; caption 'designed specifically'|shh... you saw nothing / designed specifically|label above logo|LOGO_NASDAQ;OBJ_RULES_DOC;TXT_HANDLETTER;CAPTION_CHUNK|TEXT_REVEAL: gag aside
+S001.56|Logo/rules shifted left-down; caption 'to make that happen'; video ends on this frame (no end card)|to make that happen|logo left|LOGO_NASDAQ;OBJ_RULES_DOC;TXT_HANDLETTER;CAPTION_CHUNK|SLIDE: composition moves; END (hard stop at 43.1 s, mid-argument cliffhanger)

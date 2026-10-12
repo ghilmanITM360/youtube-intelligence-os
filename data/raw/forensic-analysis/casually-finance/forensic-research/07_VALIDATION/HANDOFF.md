@@ -1,0 +1,39 @@
+# HANDOFF — Casually Finance forensic research (resume guide)
+
+_Updated 2026-10-11 (UTC) at ~86% of the 5-hour limit / 82% weekly (stopped before the 90% threshold). Source of truth for progress: `00_MANIFEST/PROGRESS.json`; validation: `07_VALIDATION/VALIDATION_RESULTS.json`._
+
+## State
+- **COMPLETE (14/18 structural, QA PASS_STRUCTURAL, source SHA256 re-verified at the start of the continuation session):** long-forms `roe3SgezmmU`, `Uumnx2Fo6cE`, `xtqbRt94TTw`, `o3FQcd91MIs`, `dlBhLhn8lL0`, `kwMHrTFCWUE`, `DgbHW0IqHrI`, `5umJ63d3rzQ`; Shorts `2EZzwupIa80, YGC3ao005as, PxgCsLSf-w4, 6S3PzAUFnXQ, rSa2aziEsAI, JsK53moCyZA`.
+- **IN_PROGRESS:** none. Next video: see `00_MANIFEST/PROGRESS.json` `next_video_id` (planned order: `0ll9rEtoRrs`, `-X6YzlY_8tM`).
+- **SOURCE_VERIFIED, NOT STARTED (2 long-forms):** `-X6YzlY_8tM` (892 s), `0ll9rEtoRrs` (1,012 s).
+- **Stopped at 95% weekly usage (2026-10-12):** resume after the weekly window resets (2026-10-16 11:00 UTC); next video per `PROGRESS.json` is `0ll9rEtoRrs`.
+- **BLOCKED / MISSING_LOCAL:** `turJ6VMfUjI`, `Qof71Ef-3EU` — no matching local file or zip entry. Do not mark complete. Needs the user to supply the files (downloading was not authorised).
+- Written channel-level outputs: `01_CHANNEL_METADATA/*` (206 uploads), `03_MASTER_DATA/MASTER_*.csv` (regenerated after each COMPLETE), `04_PRODUCTION_DNA/SHORTS_DNA.md` (PARTIAL, 6/8 Shorts), `06_REPORTS/WINNERS_LOSERS_COUNTEREXAMPLES.md` (full catalog context).
+- **Not yet written (pending the remaining videos):** `04_PRODUCTION_DNA/{VISUAL,MOTION,SCRIPT,EDITING,AUDIO,PACKAGING}_DNA.md`, `05_PATTERNS_AND_BLUEPRINTS/*`, `06_REPORTS/{CHANNEL_DEEP_FORENSIC_REPORT,VIRALITY_HYPOTHESES}.md`.
+- The research folder is **not a Git repository** (LOCAL_CHECKPOINT_ONLY — NOT PUSHED); no dedicated remote exists.
+- Continuation-session staging root (volatile): `/private/tmp/claude-501/-Users-ghilmankhan-workprojects-youtube-intelligence-os/315dd083-95aa-491d-a178-c5422cd7d145/scratchpad/work` (use `python3 -B`, not `-I`, for scripts that import PIL).
+
+## How to resume a video (all scripts in `_pipeline/`, run from there)
+Volatile staging root (frames, contact sheets, `visual_auto.json`, whisper, features) lives in the earlier session scratchpad:
+`WORK=/private/tmp/claude-501/-Users-ghilmankhan-workprojects-youtube-intelligence-os/9ac510ae-89a6-49b5-a753-99056a76250e/scratchpad/work`
+If it is gone, regenerate with the stage scripts (source paths are in `PROGRESS.json`; sources are read-only):
+1. `python3 -B stage_audio.py <id> $WORK $OUT` → `python3 -B build_transcript.py <id> $WORK $OUT` → `python3 -B stage_audio_features.py <id> $WORK` → `python3 -B stage_visual.py <id> $WORK $OUT all`
+2. Review `$WORK/<id>/sheets/sheet_NNN.jpg` (12 states per sheet 16:9; 16 for 9:16) and append annotations to `_pipeline/annotations/<id>.txt` — exactly 6 `|`-separated fields per state: `state_id|literal description|exact visible text|layout/focal|assets (KEY=desc on first use)|change entering state`; `#label|purpose|technique` header lines start a shot. Use `peek.py <id> $WORK <out.jpg> <state ids…> [--w 640]` for full-resolution detail.
+3. Write `_pipeline/beats/<id>.txt` (`T####-T####|BEAT_TYPES|viewer intent|devices`).
+4. If `02_VIDEO_FORENSICS/<id>/_SENTENCES.csv` is missing but `SENTENCES.csv` exists, copy it to `_SENTENCES.csv` before building, then delete the copy.
+5. `python3 -B build_video.py <id> $WORK $OUT` → expect `QA: PASS_STRUCTURAL`; `python3 -B report_video.py <id> $OUT`.
+6. Write `PACKAGING.md` (view `evidence/thumbnail_maxresdefault.jpg`) and `FINANCE_CLAIMS.csv`; then `python3 -B progress.py $OUT <id> COMPLETE "<note>"`; then `python3 -B aggregate_master.py $OUT` and `python3 -B channel_context.py $OUT`.
+`OUT=/Users/ghilmankhan/Downloads/CasuallyFinance-Forensic-Research`.
+
+## Data-handling policy adopted this session
+On-screen third-party article/transcript text is recorded as headline + at most ~200 characters per state (`[…]` marks truncation); song lyrics and individual user handles are not transcribed. Earlier annotation files and STATES.csv were truncated to this policy. Do not paste long article bodies into annotations.
+
+## Rules carried over
+Sources read-only; no repo/YIOS changes; no subagents/background jobs; no paid services; no unauthorised downloads; one video at a time; checkpoint after each; stop at 90% (5 h) / 95% (weekly) usage. Label findings OBSERVED / MEASURED_ASSOCIATION / PLAUSIBLE_HYPOTHESIS / NOT_TESTABLE_WITH_PUBLIC_DATA; never claim CTR, retention or causality; do not name music or call a voice AI-generated without evidence; do not transcribe song lyrics.
+
+## Known limits (apply to every COMPLETE video)
+Whisper-base ASR (proper nouns/numbers unverified; prefer on-screen text); audio analysed by signal processing, **not listened to**; easing NOT_ASSESSED; thumbnails viewed at full size only; structural QA ≠ proof of annotation correctness; third-party claims about subscriber/video counts are not used.
+
+## Housekeeping notes
+- `01_CHANNEL_METADATA/snapshots/20261011T182811Z` is the canonical snapshot; `…T182635Z` is an empty crashed run; `…T194208Z` is a partial accidental run marked excluded (`NOTE.txt`).
+- Pipeline scripts were recovered from an earlier session transcript after being lost; they compile and reproduced prior outputs.
