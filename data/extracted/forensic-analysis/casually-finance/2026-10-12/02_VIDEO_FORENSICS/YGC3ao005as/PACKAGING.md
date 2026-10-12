@@ -20,3 +20,11 @@ _Public metadata snapshot 2026-10-11 (`SOURCE.json`): SHORT · 63 s · published
 ## Performance associations (MEASURED_ASSOCIATION; not causal)
 - Views and views/day are in the percentile band above; age is 3.9 days, so older and newer Shorts are not directly comparable (age confound). Topic heuristic: `UNCLASSIFIED`.
 - NOT_TESTABLE_WITH_PUBLIC_DATA: CTR, impressions, swipe-away/retention, traffic source, thumbnail tests.
+
+## Mobile review —2026-10-12 (OBSERVED)
+
+320×180: Treasury seal and sunglasses distinct at320; headline small, tiny watch-this annotation illegible.
+
+160×90: At160, round blue/gold seal and sunglasses recognizable; department ring text and annotation illegible, headline unreliable.
+
+Native image also reviewed. Source-image hashes and remaining audiovisual limitations are recorded in ENHANCED_QA_2026-10-12.json. No performance or CTR causal inference.
