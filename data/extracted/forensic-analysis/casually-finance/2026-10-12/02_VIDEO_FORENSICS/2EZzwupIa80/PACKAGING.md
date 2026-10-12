@@ -29,3 +29,11 @@ _Public metadata snapshot 2026-10-11 (`SOURCE.json`): SHORT · 75 s · published
 - Highest-percentile views/day among the 173 Shorts at collection, but only ~1.1 days old; early velocity is not comparable to older Shorts with accumulated views (age confound). Lifetime views sit at the 12.7th percentile.
 - Topic (US national debt / fiscal) matches a recurring channel theme (`topic_derived_heuristic = NATIONAL_DEBT_FISCAL`); current-event timing (the Short itself shows a 5.216% 30-year auction yield labelled highest since 2001) is a PLAUSIBLE_HYPOTHESIS only.
 - NOT_TESTABLE_WITH_PUBLIC_DATA: CTR, impressions, swipe-away/retention, traffic source, thumbnail testing.
+
+## Mobile review —2026-10-12 (OBSERVED)
+
+320×180: Headline and country character readable at320; debt-denial speech bubble smaller.
+
+160×90: At160, green map/sunglasses survive; multiword headline and bubble unreliable.
+
+Native image also reviewed. Source-image hashes and remaining audiovisual limitations are recorded in ENHANCED_QA_2026-10-12.json. No performance or CTR causal inference.
