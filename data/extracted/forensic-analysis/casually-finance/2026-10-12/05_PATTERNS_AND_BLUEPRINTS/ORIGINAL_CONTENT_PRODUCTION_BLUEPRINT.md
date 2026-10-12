@@ -36,3 +36,5 @@ These are recommendations for original production, not mandatory competitor rule
 8. Finish each unit with reviewed source observations, provenance, explicit confidence, foreign-key/timestamp validation and per-video/master reconciliation. Do not promote research into canonical inventory or claim18/18 coverage without missing sources.
 
 RECOMMENDATION (2026-10-13 sampled continuation): Separate chart entrance, character reaction, and emphasis-outline timing in original storyboards. For a multi-company explanation, stagger original character entrances rather than treating an entire active episode as one pop-in. Evidence: roe3SgezmmU M0001/M0005/M0011. These observed phases do not establish retention effects, exact easing, or an authoring tool.
+
+RECOMMENDATION: For original source-document scenes, distinguish document scroll, excerpt enlargement, highlight extension, and scene replacement in the storyboard. Evidence: roe3SgezmmU M0089/M0091/M0144. Preserve readable source context; do not treat visually emphasized statements as verified financial facts.

@@ -37,7 +37,7 @@ Three narrow sequences have independent source-frame confirmation: 0ll9rEtoRrs M
 
 ## Finalization candidate review
 
-Original664 candidates: 333 inspected; 237 corrected, 78 confirmed, 18 insufficient evidence, 331 untriaged. Dispositions and individual source/timestamp references are in07_VALIDATION/MOTION_QA_DISPOSITION.csv. These counts are not a whole-corpus motion sign-off.
+Original664 candidates: 353 inspected; 257 corrected, 78 confirmed, 18 insufficient evidence, 311 untriaged. Dispositions and individual source/timestamp references are in07_VALIDATION/MOTION_QA_DISPOSITION.csv. These counts are not a whole-corpus motion sign-off.
 
 Independent narrow examples: JsK53moCyZA M0032 16.967–20.633s scene replacement then rising head; M0046 30.4–32.867s cut then paper enlargement. rSa2aziEsAI M0010 20.333–21.1s rising character and M0027 38.8–39.633s upward banknote transfer. 6S3PzAUFnXQ M0030 33.667–34.333s cut then host entrance and M0045 51.75–52.542s sliding source chart plus comparison build. PxgCsLSf-w4 M0030 38.708–39.625s progressive screenshot reveal/enlargement. YGC3ao005as M0001 0.125–0.875s progressive screenshot entrance. 2EZzwupIa80 M0040 47.125–48.583s scene replacement followed by chart-trace reveal.
 
@@ -46,3 +46,5 @@ Supported distinction: an active-pixel episode can combine a cut, object entranc
 ## 2026-10-13 opening-sequence continuation
 
 OBSERVED: roe3SgezmmU M0001 (0.042–0.667s) gradually exposes a chart while retaining the host; M0005 (9.708–10.292s) adds company characters in stages. M0075 and M0083 replace the composition, then enlarge an isolated logo; this supports object enlargement without establishing camera motion. M0011 separates chart replacement from a later outline build. Twenty newly reviewed candidates are recorded in the existing per-video review and disposition register. Native-frame samples support these phases, not easing or listened synchronization.
+
+OBSERVED (next opening unit): roe3SgezmmU M0091 preserves an abstract/host layout while extending highlighting; its CUT label omitted continuity. M0110 gathers company figures before replacing them with a cash bag. M0187 introduces rent and mortgage props from different edges. These are sampled counterexamples to treating every active-pixel flag as a cut or one instantaneous entrance. Sponsor statements are not financially verified by this inspection.
