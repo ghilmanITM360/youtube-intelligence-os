@@ -11,7 +11,7 @@ _Public metadata snapshot 2026-10-11 (`SOURCE.json`): SHORT · 61 s · published
 ## Thumbnail (viewed)
 - Canvas: 1280×720 public image with the 9:16 artwork centred and a darkened enlarged copy as side fill (side-fill origin NOT_TESTABLE_WITH_PUBLIC_DATA).
 - **"The (Overdue) Collapse of Japan"** — two lines of bold black rounded sans at the top; a green Japan-shaped character with worried eyes at centre, a crossed-out money bag + shield cluster at upper left and a crossed-out stack of bond documents at lower right (both red X). The two red X marks are the video's closing image (state S011.8). The parenthetical '(Overdue)' echoes the title's '(Actually)' pattern in JsK53moCyZA.
-- Mobile-scale legibility: not re-tested at reduced size in this session (NOT_ASSESSED).
+- Mobile-scale legibility: reviewed at320×180 and160×90 on2026-10-12. At320, the central portrait strip compresses the headline and especially the parenthetical; at160, red X marks/green character survive but full wording and fine money/document detail are unreliable. See ENHANCED_QA_2026-10-12.json; this does not certify CTR or audio.
 - Title/thumbnail relation: Different words; the thumbnail escalates (collapse vs awful) and adds a visual answer (two things that cannot both be saved). Semantic redundancy LOW — the pair works as escalating copy. Overstatement risk: HIGH for the thumbnail.
 
 ## Hook alignment and ending
