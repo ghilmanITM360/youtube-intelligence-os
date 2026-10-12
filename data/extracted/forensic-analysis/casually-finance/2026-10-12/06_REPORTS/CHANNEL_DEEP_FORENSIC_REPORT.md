@@ -4,7 +4,7 @@ Evidence scope:16 available sources (ten long-form, six Shorts), selected by the
 
 ## Completion and provenance
 
-The starting checkpoint had 14 of 18 selected videos complete. Newly completed: `0ll9rEtoRrs` and `-X6YzlY_8tM`. The corpus now has 16 structurally complete videos: ten long-form and six Shorts. `turJ6VMfUjI` and `Qof71Ef-3EU` remain `MISSING_LOCAL`. The inventory records 16 unique source hashes. The remaining two source hashes were freshly matched this session; the earlier 14 retain their documented verification. No new media or public metadata was acquired.
+The starting checkpoint had 14 of 18 selected videos complete. Newly completed: `0ll9rEtoRrs` and `-X6YzlY_8tM`. The corpus now has 16 structurally complete videos: ten long-form and six Shorts. `turJ6VMfUjI` and `Qof71Ef-3EU` remain `MISSING_LOCAL`. The inventory records 16 unique source hashes. All16unique source hashes were freshly matched against the owner-supplied Downloads/CasuallyFinance folder on2026-10-12; its17files include one exact duplicate. No new media or public metadata was acquired.
 
 The master tables contain 1,446 shots, 4,508 states, 4,484 motions, 2,196 assets, 1,992 audio events, 5,930 synchronization rows, 248 semantic beats, 24,527 words, 1,493 sentences and 287 financial claims. All ten master tables have unique composite identifiers and reconcile exactly with their per-video rows. Validation checks timestamp bounds, foreign keys, shot/state relationships, source identity, required reports and evidence-sheet existence. Decoded video coverage is separated from observed container tails below 0.25 seconds.
 
@@ -16,7 +16,7 @@ OBSERVED / INTERPRETATION: The selected videos use a recurring explanation gramm
 
 SpaceX offers a clear structural example: 0–43s valuation and personal stake; 55–80s three-business roadmap; 82–202s xAI; 216–250s rockets; 251–421s Starlink; 447–465s rule timing; sponsor at 465–557s; 557–716s index conditions; 718–806s retail and household exposure; 840–847s CTA; 847–883s passive-investing qualification. Its claim register preserves adjusted EBITDA versus profit ambiguity, hypothetical index eligibility and a private-meeting versus on-record conflict, including a CFO name discrepancy.
 
-The bond video `0ll9rEtoRrs` opens with American versus global scope at 0–18s. A pension analogy explains long-term buyers before institutional source excerpts and rollover implications. Its register retains BLS denominator changes, an OBR spoken/screen figure conflict, Japan forecast modality and certainty about future rates. A visible source supports its specific excerpt; it does not automatically validate the narration's broader interpretation.
+The bond video `0ll9rEtoRrs` opens with American versus global scope at 0–18s. A pension analogy explains long-term buyers before institutional source excerpts and rollover implications. Its register retains BLS denominator changes, an OBR projection reviewed against the native frame; the prior28.7% annotation was corrected to26.7%, consistent with rounded ASR27%, Japan forecast modality and certainty about future rates. A visible source supports its specific excerpt; it does not automatically validate the narration's broader interpretation.
 
 MEASURED: Pooled long-form mean shot duration is 5.356s; pooled median is listed in EDITING_DNA. Shorts can show many caption/state changes inside a held composition. These measures describe the selected corpus and are not optimal pace targets. ASR and audio signal measurements do not establish audible music, voice character or precise intentional synchronization. Original-content recommendations use the explanation principles, not copied drawings or scripts.
 
@@ -33,3 +33,7 @@ Completed: visual, motion, editing, script, audio and packaging DNA; production 
 Still unavailable or unverified: the two local Shorts, direct audio listening, ASR numbers and proper nouns, easing and independent visual QA. The result is `STRUCTURAL_QA_PASSED` and `AUDIOVISUAL_QA_PARTIAL`, not `AUDIOVISUAL_QA_FULLY_VERIFIED`.
 
 The dated derived update preserves the earlier repository research drop as historical evidence. Both are versions of one corpus, not independent datasets. This request does not change the YouTube Intelligence OS production engine or begin a new project phase.
+
+## Enhanced QA checkpoint —2026-10-12
+
+Native plus320×180/160×90 mobile review now covers all16available thumbnails (ten prior long-form reviews plus six new Shorts reviews). All45Japan and57SpaceX Short representative states were independently inspected; targeted long-form source frames resolved the OBR transcription error and supported the existing EBITDA/private-meeting caveats. These reviews do not certify continuous motion, every financial claim, direct listening or ASR audio accuracy. Per-video ENHANCED_QA_2026-10-12.json records exact scopes. All ten master tables pass focused reconciliation after the OBR correction.
