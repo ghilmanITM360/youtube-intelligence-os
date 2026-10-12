@@ -34,7 +34,7 @@ Counts distinguish canonical registry data, identity leads and branch-only resea
 | [Zenn](https://www.youtube.com/channel/UCK8TbMQGDbB94EOR3aGJo3Q) | ADJACENT | 35 | 35 | 35 | 0 / 0 | No source-video/deep audiovisual QA verified in this inventory |
 | [Mack](https://www.youtube.com/channel/UCaS30yIIV6y2zqSnHGdIGMQ) | ADJACENT | 76 | 76 | 76 | 0 / 0 | No source-video/deep audiovisual QA verified in this inventory |
 | [Explain In Paint](https://www.youtube.com/channel/UCmYG4TVuzHphjTrP3YKYGYQ) | ADJACENT | 82 | 82 | 82 | 0 / 0 | No source-video/deep audiovisual QA verified in this inventory |
-| [Casual Finance](https://www.youtube.com/channel/UCrNfRFWnLC3tCy1TnyhVQ7g) | UNVERIFIED_NICHE | 0 | 0 | 0 | 16 / 16 | 2missingShorts; audio listening/numbers/names/easing/independent visual QA partial; research corpus unpromoted |
+| [Casual Finance](https://www.youtube.com/channel/UCrNfRFWnLC3tCy1TnyhVQ7g) | MACRO_ECONOMICS | 0 | 0 | 0 | 16 / 16 | 2missingShorts; audio listening/numbers/names/easing/independent visual QA partial; research corpus unpromoted |
 | [Mark - Retired at 55](https://www.youtube.com/channel/UCegPlgZVNg0g1pAzZtGH4dw) | UNVERIFIED_NICHE | 0 | 0 | 0 | 0 / 0 | Video catalog/transcripts/media not acquired |
 | [Tom - Lazy Dividend Investor](https://www.youtube.com/channel/UCUhTFmf6v8Kk2-ofFD2udkg) | UNVERIFIED_NICHE | 0 | 0 | 0 | 0 / 0 | Video catalog/transcripts/media not acquired |
 | [Tom - Lazy Investor](https://www.youtube.com/channel/UCHKwo7_qXD8ixLZmpPlIb_w) | UNVERIFIED_NICHE | 0 | 0 | 0 | 0 / 0 | Video catalog/transcripts/media not acquired |
@@ -56,3 +56,5 @@ Counts distinguish canonical registry data, identity leads and branch-only resea
 | [Casual Economics](https://www.youtube.com/@casual_economics/videos) | ECONOMIC_HISTORY | 0 | 0 | 0 | 11 / 0 | Full exact metadata/Apify acquisition pending budget;11forensic analyses pending; Singapore publicauto captions acquired locally but not canonical transcript registration |
 
 CSV carries exact Channel IDs,dataset IDs,state distinctions and coverage fields; JSON also lists every excluded registry identity and limitations. Full audiovisual QA remains unverified for both research channels. Historical Issue23 and DraftPR24 remain deferred.
+
+Update: DS-000036 Economics acquisition validated at $0.044: 11 videos, 11 English auto-caption tracks, one structural evidence checkpoint with audiovisual QA partial. These are research-only counts; canonical video/transcript counts remain unchanged. Finance has 16 local Whisper-ASR transcripts; these remain separately labelled. CSV/JSON contain both research and canonical fields.
