@@ -35,7 +35,7 @@
   "audio_method": "Whole soundtrack analysed by signal processing (loudness/pauses/transient flux) and spectrogram strips inspected; NOT auditory listening"
  },
  "counts": {
-  "label_vs_measure_conflicts": 15,
+  "label_vs_measure_conflicts": 3,
   "words": 213,
   "sentences": 13,
   "states": 45,
@@ -67,5 +67,14 @@
  },
  "missing_annotations": [],
  "orphan_annotations": [],
- "status": "PASS_STRUCTURAL"
+ "status": "PASS_STRUCTURAL",
+ "independent_motion_review": {
+  "original_candidates": 15,
+  "reviewed": 15,
+  "confirmed_existing_labels": 4,
+  "corrected_labels": 8,
+  "insufficient_evidence": 3,
+  "scope": "Nine source-frame samples per candidate, not continuous playback; three require denser entrance review",
+  "decoder_note": "Two ffmpeg seek extractions emitted nonfatal h264 mmco unref-short warnings. Saved images inspected; no source bytes altered."
+ }
 }
