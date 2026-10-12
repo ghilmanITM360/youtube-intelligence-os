@@ -20,3 +20,11 @@ _Public metadata snapshot 2026-10-11 (`SOURCE.json`): SHORT · 65 s · published
 ## Performance associations (MEASURED_ASSOCIATION; not causal)
 - Views and views/day are in the percentile band above; age is 5.9 days, so older and newer Shorts are not directly comparable (age confound). Topic heuristic: `UNCLASSIFIED`.
 - NOT_TESTABLE_WITH_PUBLIC_DATA: CTR, impressions, swipe-away/retention, traffic source, thumbnail tests.
+
+## Mobile review —2026-10-12 (OBSERVED)
+
+320×180: Two-line headline distinguishable at320; large green America face dominates with tired eyes.
+
+160×90: At160, short headline relatively stronger than other central-strip thumbnails but still small; green face/eyes retain emotional cue.
+
+Native image also reviewed. Source-image hashes and remaining audiovisual limitations are recorded in ENHANCED_QA_2026-10-12.json. No performance or CTR causal inference.
