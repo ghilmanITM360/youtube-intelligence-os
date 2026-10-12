@@ -57,3 +57,7 @@ INTERPRETATION: Edit around information changes, questions and payoffs. Keep a s
 | JsK53moCyZA | 10 | 13.94 | 0 |
 
 These proxies differ from reviewed shot groupings. Some motion rows combine several pixel episodes; local cuts can stay below the large-area threshold, and pose swaps can be labelled inconsistently. No exact verified hard-cut rate is claimed.
+
+## Continuation evidence —2026-10-13
+
+OBSERVED: motion register664/664 candidates triaged;543 phase labels corrected,119 confirmed,2 exact mechanisms unresolved after dense investigation. Compound builds/exits, document scrolling, panel replacement and embedded footage gestures recur; hard-cut labels cannot stand in for each compound phase. Distributed visual sheets show sponsor product panels/yellow strips returning to reused financial metaphor characters. Evidence: existing per-video MOTION_REVIEW.json records and NEW_MAC_TARGETED_VISUAL_QA_2026-10-12.json. MEASURED: dense18-interval coverage1089 frame appearances/1085 distinct(source,n) pairs; native frame index vs actual containerPTS offset documented, tables unchanged. INFERRED: phase-based choreography can guide an original edit. RECOMMENDATION: storyboard entry/build/hold/emphasis/exit separately and keep statement qualifiers readable. UNVERIFIED: exact easing/tooling, continuous timing perception, sound synchronization, retention effects and asset ownership.
