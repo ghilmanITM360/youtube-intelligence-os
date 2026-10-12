@@ -10,6 +10,6 @@ QA corrections:2961sheet-reference changes logged in EVIDENCE_REFERENCE_CORRECTI
 
 User explicitly authorized PR21 update: https://github.com/ghilmanITM360/youtube-intelligence-os/pull/21. Branch codex/casually-finance-forensic-research; origin https://github.com/ghilmanITM360/youtube-intelligence-os.git. Research folder itself remains non-Git. Dated derived update goes in data/extracted/forensic-analysis/casually-finance/2026-10-12; earlier raw drop preserved. No new MP4/staging upload, no catalog promotion or engine changes.
 
-At writing: commit/push pending final verification; see repository GIT_SYNC record and Git history for actual synchronization. Last live usage50%five-hour24%weekly. No resource stop reached.
+Research commit `b28f0484b9313d651433aa57de858d1edbe787d5` pushed and verified against both remote branch and PR head. PR description/title updated. GIT_SYNC.json records verification; Git history identifies the subsequent checkpoint-record commit. Latest live usage: five-hour58%, weekly25%. No resource stop reached.
 
 Next evidence action: supply `turJ6VMfUjI` and `Qof71Ef-3EU`, then complete their forensics and Shorts DNA. Separately, direct listening and independent visual review are required for full audiovisual sign-off.
