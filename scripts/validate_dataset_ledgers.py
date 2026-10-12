@@ -40,6 +40,11 @@ DEFAULT_DATASETS = [
 # do not add an entry here without doing the same and recording the commit
 # that actually matched.
 KNOWN_HISTORICAL_SNAPSHOTS = {
+    # Finance added legitimate LFS/CSV attributes. These two configuration
+    # snapshots reconcile byte-for-byte with the original 627-byte blob;
+    # the canonical manifests and immutable raw evidence remain unchanged.
+    ("DS-000028", "DS-000028-F020"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
+    ("DS-000030", "DS-000030-F019"): "c740f89212dd7a1c59c273fce07e2613f24a68c4",
     ("DS-000021", "DS-000021-F034"): "78ad5d728380873d67422d71e67f613ff28c37cf",
     ("DS-000021", "DS-000021-F035"): "78ad5d728380873d67422d71e67f613ff28c37cf",
     ("DS-000021", "DS-000021-F037"): "78ad5d728380873d67422d71e67f613ff28c37cf",
