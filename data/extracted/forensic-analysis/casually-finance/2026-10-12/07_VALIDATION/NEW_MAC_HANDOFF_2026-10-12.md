@@ -28,6 +28,12 @@ See FINAL_QA_REGISTER_2026-10-12.md and FINAL_EVIDENCE_QA_2026-10-12.json. The s
 
 ## Complete-finalization mission checkpoint
 
-Starting HEAD e64a96540785de52817bba454103ea560eb1da45. Continuous single-agent execution completed multiple independently validated/pushed Short motion and financial-rule units. Current candidate status: {'CORRECTED_LABEL': 205, 'INSUFFICIENT_EVIDENCE': 16, 'CONFIRMED_EXISTING_LABEL': 77, 'NOT_STARTED': 366}. See completion matrix, candidate disposition register, claim verification CSV, audio handoff and updated channel report/blueprint. Remaining work is not owner-action-only; no all-available/full-corpus completion is declared.
+Starting HEAD e64a96540785de52817bba454103ea560eb1da45. Continuous single-agent execution completed multiple independently validated/pushed Short motion and financial-rule units. Current candidate status: {'CORRECTED_LABEL': 217, 'INSUFFICIENT_EVIDENCE': 18, 'CONFIRMED_EXISTING_LABEL': 78, 'NOT_STARTED': 351}. See completion matrix, candidate disposition register, claim verification CSV, audio handoff and updated channel report/blueprint. Remaining work is not owner-action-only; no all-available/full-corpus completion is declared.
 
-Use Finance branch in/Users/ghilmankhan/workprojects/youtube-intelligence-os. Begin next independent unit with366 untriaged long-form candidates (or the16 insufficient mechanisms), not previously verified Treasury auction history or previousM0004/M0020/M0047 corrections. Never infer playback/listening from source-frame sheets/ASR. Four existing listening clips stay deferred. Economics untouched.
+Use Finance branch in/Users/ghilmankhan/workprojects/youtube-intelligence-os. Begin next independent unit with351 untriaged long-form candidates (or the18 insufficient mechanisms), not previously verified Treasury auction history or previousM0004/M0020/M0047 corrections. Never infer playback/listening from source-frame sheets/ASR. Four existing listening clips stay deferred. Economics untouched.
+
+## Resource checkpoint — finalization continuation
+
+Live usage reached 91% five-hour and 53% weekly; the required 90% stop gate applies. No further review unit started. This run reviewed 313 of 664 original motion candidates: 78 confirmed, 217 corrected/refined, 18 insufficient evidence, 351 untriaged. These counts do not imply continuous playback or audio certification.
+
+Next: review remaining roe3SgezmmU candidates (111), then Uumnx2Fo6cE (72), xtqbRt94TTw (64), DgbHW0IqHrI (104), using source-verified temporal evidence. Revisit the 18 insufficient-evidence intervals at higher resolution where feasible. Complete independent visual coverage for the six unstarted videos and unresolved material claim groups. Read PENSION_PRIMARY_SOURCE_QA.md for the newly qualified Fed attribution and ABP transition-plan findings. Preserve owner-deferred listening and the two missing source Shorts. All available research remains incomplete.
