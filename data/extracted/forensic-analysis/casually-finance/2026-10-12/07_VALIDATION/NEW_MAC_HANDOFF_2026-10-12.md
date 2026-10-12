@@ -9,3 +9,15 @@ Targeted independent visual review covered recorded contact sheets for four Shor
 Primary Treasury XML now corroborates the two separate auctions for CUSIP912810UW6: August13 high yield5.216% versus September10 high yield5.308%. This resolves the cross-video figure mismatch, not the entire claim or chronology. See AUCTION_PRIMARY_SOURCE_QA_2026-10-12.json.
 
 Next: verify August18 market-event chronology and the historical superlative; directly listen to narration around 38.84-55.19 seconds in PxgCsLSf-w4 and 17.25-19.51/50.98-55.35 seconds in 6S3PzAUFnXQ. No listening result is fabricated. Additional independent visual and motion review remains pending for long-form videos. Missing Shorts require owner-supplied sources. Casual Economics and PR25 remain untouched.
+
+## Continuation checkpoint
+
+PR21 CI diagnosis corrected: canonical main passes. Earlier Finance changes expanded .gitattributes, exposing missing historical snapshot pins for DS-000028-F020 and DS-000030-F019. Two exact Git commits reconcile original627byte/SHA metadata. Manifests and raw evidence unchanged. All462tests pass after repair; focused regression rejects tamperedSHA. See PR21_CI_DIAGNOSIS_2026-10-12.json.
+
+New narrow source-frame review confirms Pxg news publicationAugust18,2026 versus auctionSeptember10,2026;23calendar days separate events. Treasury daily par yieldAugust18 is5.28%, distinct from CNBC5.33%headline and auction5.308%; it cannot certify an intraday high. Historical19year andsince2001superlatives remain unverified. CNBC live article inaccessible.
+
+Debt Short at19.20s explicitly captionsabout6.5%, while latergrowthbar6.6%; preserve both. Spoken wording and rate period comparability remain unverified. Manual listening checklist includes both requested windows plus Pxg superlative continuation.
+
+Long-form0ll9rEtoRrs M0004 sampled source sequence5.1667–5.875s confirms progressive counter entrance; POP_IN corrected to REVEAL_MOVE in per-video and master. Exact easing/scale/crop remain unassessed. This completes the scoped label check, not whole-video motion QA.
+
+Progress remains16/18PASS_STRUCTURAL,0fullaudiovisualsignoffs. MissingturJ6VMfUjI,Qof71Ef-3EU. Next: complete manual listening checklist; obtain authoritative intraday historical benchmark and30yearauction history before certifying superlatives. Continue other specifically flagged long-form motion checks only as separate bounded units.
