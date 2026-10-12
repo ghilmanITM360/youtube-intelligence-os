@@ -1,0 +1,17 @@
+# SCRIPT DNA
+
+Evidence scope:16 available sources (ten long-form, six Shorts), selected by the user; two missing Shorts excluded. Public context is the existing206-upload snapshot20261011T182811Z, collected2026-10-11. OBSERVED denotes supplied media/metadata observations; MEASURED_ASSOCIATION denotes computed relationships; PLAUSIBLE_HYPOTHESIS denotes proposed explanation; UNVERIFIED denotes claims not established; UNAVAILABLE denotes absent evidence. Technique/script labels are reviewer interpretations and do not become facts about authoring tools or viewer behavior. Structural QA passed; audiovisual QA remains partial. No direct listening, easing assessment, independent visual reviewer, private CTR/retention or causal effects. Source IDs/timestamps below resolve to per-video tables; financial claims are not certified investment facts.
+
+## Hook and story mechanisms
+
+OBSERVED/INTERPRETATION: Openings give a contradiction or a high-stakes claim before context. Uumnx2Fo6cE first semantic beat0s begins a buyer/seller paradox;5umJ63d3rzQ first beat0s rejects familiar AI/political threats for a boring hidden risk;0ll9rEtoRrs0–18s broadens American debt headlines into a global event;-X6YzlY_8tM0–43s compares valuation then says the buyer is you. Earlier o3FQcd91MIs opens with fictional successful novice Dave;kwMHrTFCWUE opens with a six-type investor promise. There is more than one hook format.
+
+OBSERVED: Promises delay a mechanism while first teaching prerequisite concepts. SpaceX delays its Nasdaq explanation until447s and resumes after sponsor557s; before then, three business chapters establish the stakes. Pension/bond video0ll9rEtoRrs uses an employee/lifetime-income analogy before institutional allocation evidence and rollover implications. These are reviewer semantic interpretations, not demonstrated viewer curiosity curves.
+
+OBSERVED: Questions, familiar brands and financial comparisons scale unfamiliar quantities. Humor uses shocked faces, imagined dialogue, memes and metaphors, then returns to a source or chart. SpaceX58–63s street questions,188–194s airline analogy,410s party joke and637–650s multiplier/game-star joke are different devices. Creator-spoken approximations, rhetorical certainty and source screenshots can conflict; the claim register retains that distinction.
+
+OBSERVED: Escalation generally connects a mechanism to who bears the outcome. Housing's final beat concerns young ownership/parental help;SpaceX772–806s moves to families/401k;0ll9rEtoRrs ends with rollover conditions and an opening callback. Counterexamples:kwMHrTFCWUE closes with comic uncertainty, and JsK53moCyZA ends43s after introducing the rule without its explanation. A complete payoff is not universal across selected Shorts.
+
+OBSERVED: CTAs can precede a final qualification:SpaceX840–847s subscribe, then847–883s passive-investing benefit/risk reversal. A sponsor may come before the promised mechanism; it is not a universal preferred placement. Audio cadence comes from ASR, not listening.
+
+INTERPRETATION: For original content, write one falsifiable central question, explain needed context, show evidence with dates/denominators, entertain through an original analogy, disclose exceptions and answer the question. Distinguish confidence in storytelling from certainty of a financial prediction. Do not reuse source scripts, character art or a universal doom formula.

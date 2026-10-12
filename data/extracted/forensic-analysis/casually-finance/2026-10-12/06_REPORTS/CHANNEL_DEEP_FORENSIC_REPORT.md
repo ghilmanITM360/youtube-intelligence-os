@@ -1,0 +1,35 @@
+# CHANNEL DEEP FORENSIC REPORT
+
+Evidence scope:16 available sources (ten long-form, six Shorts), selected by the user; two missing Shorts excluded. Public context is the existing206-upload snapshot20261011T182811Z, collected2026-10-11. OBSERVED denotes supplied media/metadata observations; MEASURED_ASSOCIATION denotes computed relationships; PLAUSIBLE_HYPOTHESIS denotes proposed explanation; UNVERIFIED denotes claims not established; UNAVAILABLE denotes absent evidence. Technique/script labels are reviewer interpretations and do not become facts about authoring tools or viewer behavior. Structural QA passed; audiovisual QA remains partial. No direct listening, easing assessment, independent visual reviewer, private CTR/retention or causal effects. Source IDs/timestamps below resolve to per-video tables; financial claims are not certified investment facts.
+
+## Completion and provenance
+
+The starting checkpoint had 14 of 18 selected videos complete. Newly completed: `0ll9rEtoRrs` and `-X6YzlY_8tM`. The corpus now has 16 structurally complete videos: ten long-form and six Shorts. `turJ6VMfUjI` and `Qof71Ef-3EU` remain `MISSING_LOCAL`. The inventory records 16 unique source hashes. The remaining two source hashes were freshly matched this session; the earlier 14 retain their documented verification. No new media or public metadata was acquired.
+
+The master tables contain 1,446 shots, 4,508 states, 4,484 motions, 2,196 assets, 1,992 audio events, 5,930 synchronization rows, 248 semantic beats, 24,527 words, 1,493 sentences and 287 financial claims. All ten master tables have unique composite identifiers and reconcile exactly with their per-video rows. Validation checks timestamp bounds, foreign keys, shot/state relationships, source identity, required reports and evidence-sheet existence. Decoded video coverage is separated from observed container tails below 0.25 seconds.
+
+Targeted QA corrected 2,961 contact-sheet references. Comparing dimension strings misclassified sheet orientation; portrait sheets contain 16 frames and landscape sheets contain 12. The correction ledger retains each old and corrected link. Reviewed frames, descriptions and timestamps were preserved. The earlier spectrogram renderer stretched a partial final strip across a 120-second axis. SpaceX's strip now preserves proportional duration; older final strips remain a documented timing limitation. These defects show why the earlier structural checks were insufficient. The broader validator still cannot certify every interpretation.
+
+## Production system
+
+OBSERVED / INTERPRETATION: The selected videos use a recurring explanation grammar: white backgrounds, outlined narrators and financial props, sequential comparisons, source crops, annotation marks, humor and consequential callbacks. Recent macro videos open with a familiar story, then explain a less obvious mechanism. Earlier investor videos use fictional characters and taxonomies. This ten-video long-form study does not establish that all 33 catalog long-forms use identical execution.
+
+SpaceX offers a clear structural example: 0–43s valuation and personal stake; 55–80s three-business roadmap; 82–202s xAI; 216–250s rockets; 251–421s Starlink; 447–465s rule timing; sponsor at 465–557s; 557–716s index conditions; 718–806s retail and household exposure; 840–847s CTA; 847–883s passive-investing qualification. Its claim register preserves adjusted EBITDA versus profit ambiguity, hypothetical index eligibility and a private-meeting versus on-record conflict, including a CFO name discrepancy.
+
+The bond video `0ll9rEtoRrs` opens with American versus global scope at 0–18s. A pension analogy explains long-term buyers before institutional source excerpts and rollover implications. Its register retains BLS denominator changes, an OBR spoken/screen figure conflict, Japan forecast modality and certainty about future rates. A visible source supports its specific excerpt; it does not automatically validate the narration's broader interpretation.
+
+MEASURED: Pooled long-form mean shot duration is 5.356s; pooled median is listed in EDITING_DNA. Shorts can show many caption/state changes inside a held composition. These measures describe the selected corpus and are not optimal pace targets. ASR and audio signal measurements do not establish audible music, voice character or precise intentional synchronization. Original-content recommendations use the explanation principles, not copied drawings or scripts.
+
+## Performance interpretation
+
+The saved catalog contains 33 long-form uploads and 173 Shorts. All long-forms and 170 Shorts were at least seven days old at collection. Long-form median views were 484,561, with median lifetime views/day approximately 2,647. Shorts median views were 21,787; the aged subset's median views/day was approximately 217. Housing and the dumping-ground video led long-form lifetime average velocity. Brace For Impact had high accumulated reach at an older publication age. Older MicroStrategy and private-credit titles counter the idea that financial warning language guarantees popularity.
+
+MEASURED_ASSOCIATION: Long-form views/day correlated with duration at Spearman +0.75 and publication age at -0.86. Topic, recency, length, template and channel development co-vary. Title features are exploratory and overlapping. Views/day is cumulative views divided by age, not observed current daily traffic. The two missing Shorts are important catalog outliers; their visual or storytelling mechanisms cannot be inferred from their popularity. The hypotheses report specifies evidence that could test possible explanations without inventing CTR or retention.
+
+## Deliverables and evidence gaps
+
+Completed: visual, motion, editing, script, audio and packaging DNA; production patterns; original-content blueprint; deep report; virality hypotheses; winners, losers and counterexamples. Shorts DNA remains `SHORTS_DNA_PARTIAL_6_OF_8`. Per-video records and metadata support the citations, with full source hashes retained.
+
+Still unavailable or unverified: the two local Shorts, direct audio listening, ASR numbers and proper nouns, easing and independent visual QA. The result is `STRUCTURAL_QA_PASSED` and `AUDIOVISUAL_QA_PARTIAL`, not `AUDIOVISUAL_QA_FULLY_VERIFIED`.
+
+The dated derived update preserves the earlier repository research drop as historical evidence. Both are versions of one corpus, not independent datasets. This request does not change the YouTube Intelligence OS production engine or begin a new project phase.

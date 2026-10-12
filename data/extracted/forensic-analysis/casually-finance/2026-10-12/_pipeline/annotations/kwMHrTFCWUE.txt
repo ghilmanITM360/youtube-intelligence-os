@@ -1,0 +1,207 @@
+# FORMAT: state_id|literal description|exact visible text ('-' none)|layout/focal|assets (KEY=desc on first use; ';' sep)|change entering this state
+#H1|Hook: Wall Street, where the dumbest and brightest minds rejoice|RASTER_ART;ORIGINAL_DRAWING;MOTION_GRAPHICS
+S001.0|Richly shaded illustration of a trading floor: a smiling suited man with a blue tie in the centre, two traders in profile on phones at the sides, many monitors with rising and falling charts and a black ticker band of coloured numbers across the top|AR 34.11 / R101.2 / 9995.1400 / EXPR -12.3 / 1234 / ABC -0.2|man centre, monitors around, ticker top|IMG_TRADING_FLOOR=full-frame richly shaded raster-style illustration of a trading floor with monitors and a number ticker|START: trading-floor illustration
+S002.0|Line drawing of a columned exchange-style building on a ground line with a street-name sign on a post at right|Wall Street|building centre-right|OBJ_EXCHANGE_BUILDING=hand-drawn columned exchange-style building;OBJ_STREET_SIGN=black post with a sign reading Wall Street|CUT: exchange building and street sign
+#H2|A guy with a PhD in quantum physics and a guy who eats crayons united by one sacred truth|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S002.1|A pale hairless outline figure appears at left pointing at the building|Wall Street|figure left, building right|OBJ_EXCHANGE_BUILDING;OBJ_STREET_SIGN;CHAR_PALE_OUTLINE=pale hairless sketchy outline figure with a hunched pose|POP_IN: pale pointing figure
+S002.2|A hooded figure in a brown cloak with a pale face appears further left, and the whole scene is smaller|Wall Street|two figures left, building right|OBJ_EXCHANGE_BUILDING;OBJ_STREET_SIGN;CHAR_PALE_OUTLINE;IMG_HOODED_MEME=hooded figure in a brown cloak with a pale grey face (meme-style cut-out)|REFRAME+POP_IN: scene shrinks, hooded figure
+S002.3|Scene cleared to white with a wavy black vertical divider right of centre|-|divider right|OBJ_WAVY_DIVIDER=tall wavy black line splitting the frame|CUT: wavy divider on white
+S002.4|Left of the divider: a bespectacled scientist in a lab coat holding a test tube and flask in a sketch-style laboratory with equations|-|left panel|CHAR_SCIENTIST=stick-style scientist with round glasses and a white coat holding a test tube and a flask;OBJ_LAB_SKETCH=pencil-style laboratory background with equations and glassware;OBJ_WAVY_DIVIDER|BUILD: scientist in lab
+S002.5|Right of the divider: a spiky-haired stick figure with a purple crayon at his mouth|-|scientist left, crayon eater right|CHAR_SCIENTIST;OBJ_LAB_SKETCH;OBJ_WAVY_DIVIDER;CHAR_CRAYON_EATER=spiky-haired stick figure biting a purple crayon|BUILD: crayon eater
+#H3|Nobody knows what the hell is going on|ORIGINAL_DRAWING
+S003.0|Both characters with question marks, the crayon eater asking a question, beside a red falling chart|Wait - why stock go down?? / -67%|two characters left, chart right|CHAR_SCIENTIST;CHAR_CRAYON_EATER;ICON_QUESTION_MARK=small hand-drawn question mark;CHART_FALL_RED=hand-drawn axes with a falling red line and arrow labelled -67%;TXT_SMALL_CAPTION=small handwritten caption|CUT: both baffled by -67%
+#H4|Today we cover the six types of investors on Wall Street|MOTION_GRAPHICS;COMPOSITED_STILLS;ORIGINAL_DRAWING
+S003.1|Ellipsis text alone on white|And... Today...|text centre|TXT_TITLE_LINE=black handwritten title line|CUT: And... Today...
+S004.0|Grey and white triangular segments meeting at the centre like a closing aperture|-|centre|OBJ_TRIANGLE_WIPE=full-frame triangular-segment transition pattern in grey tones|CUT: triangle transition
+S004.1|The segmented frame filled with six archetype vignettes: a clutter-surrounded laptop worker, a pointing figure at a wall chart, a film poster with green candles and a pointing pale figure, a hooded figure, a second film poster with a trading-forum mascot and a figure on burning cash, red candles with a Bitcoin coin beside a weeping pale figure|THE WOLF OF WALL STREET / THE BIG SHORT / WALL STREET BETS|six triangular segments around the centre|OBJ_TRIANGLE_WIPE;IMG_COLLAGE_ARCHETYPES=six-segment collage of investor archetype vignettes built from drawn figures, candles, a coin, film posters and a forum mascot logo|CUT+BUILD: six-archetype collage
+#H5|Number one: the value investor, the Warren Buffett disciple|ORIGINAL_DRAWING
+S005.0|Numbered heading alone on white|1. The Value Investor|text centre|TXT_ARCHETYPE_TITLE=black handwritten numbered archetype heading|CUT: archetype one title
+#H6|Start with the disciples of the famous value investor|ORIGINAL_DRAWING
+S006.0|Cream background: a glowing, haloed older man in glasses sitting cross-legged with a red can and a briefcase, ringed by two rows of cross-legged suited disciples|-|guru top centre, disciples in rows|OBJ_GURU_DISCIPLES=cream-background scene of a haloed seated older man with a red can and briefcase among two rows of cross-legged suited disciples|CUT: guru and disciples
+#H7|Or should I say the value investors?|COMPOSITED_STILLS
+S007.0|Photo of an elderly smiling man in glasses, a dark suit and a red tie in front of a wine rack|-|photo centre|IMG_OLDER_MAN_PHOTO=third-party photo of an elderly man in glasses, a dark suit and a red patterned tie in front of a wine rack (narration refers to the value-investing figure here; identity not asserted from the image)|CUT: elderly-man photo
+#H8|He owns khakis in multiple shades of beige|ORIGINAL_DRAWING
+S008.0|Two rails of hanging beige khaki trousers filling the frame with the host peeking in at the lower right|-|closet fills frame, host right|OBJ_KHAKIS_CLOSET=hand-drawn closet of hanging trousers in many shades of beige;HOST=hand-drawn stick-figure presenter (round peach head, spiky black hair)|CUT: closet of khakis
+#H9|And drinks lukewarm coffee|ORIGINAL_DRAWING
+S009.0|Smiling figure holding a mug on a cream canvas with a short remark|I actually prefer it room temperature|figure centre-left|HOST;OBJ_MUG=hand-drawn white mug;TXT_SMALL_CAPTION=small handwritten caption|CUT: lukewarm-coffee joke
+#H10|And considers a classic investing book light reading in bed|ORIGINAL_DRAWING
+S010.0|Dark night-time bedroom: a figure lying in bed holding a red book with a moon in the window|THE INTELLIGENT INVESTOR|bed centre|OBJ_BED_NIGHT=dark nighttime bedroom with a window and moon, a bed and a nightstand;HOST;OBJ_BOOK_INTELLIGENT=small red book titled The Intelligent Investor|CUT: reading in bed
+#H11|You could say he's the life of the party|ORIGINAL_DRAWING
+S011.0|Pencil-style party scene: a lone figure in a party hat holding a cup by a doorframe at left, dancers at right and on the floor, a disco ball above|-|scene centre|OBJ_PARTY_SKETCH=pencil-style party scene with a party-hat figure, dancers and a disco ball|CUT: party sketch
+#H12|He won't shut up about moats, intrinsic value and compound growth|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S012.0|Pale-blue background: host pointing up at left beside an empty whiteboard on a stand|-|host left, board right|HOST;OBJ_WHITEBOARD=hand-drawn whiteboard on a black stand|CUT: host with whiteboard
+S012.1|First item written on the board; host points at it|Moats|host left, board right|HOST;OBJ_WHITEBOARD;TXT_BOARD_WORDS=handwritten list on a whiteboard|TEXT_REVEAL: Moats
+S012.2|Second item added|Moats / Intrinsic Value|host left, board right|HOST;OBJ_WHITEBOARD;TXT_BOARD_WORDS|TEXT_REVEAL: Intrinsic Value
+S012.3|Third item added and the board shifts lower to hold it|Moats / Intrinsic Value / Compound Growth|host left, board right|HOST;OBJ_WHITEBOARD;TXT_BOARD_WORDS|TEXT_REVEAL: Compound Growth
+#H13|He'll spend 400 hours analysing a company's 10-K|ORIGINAL_DRAWING
+S013.0|A wall clock showing 2 AM above a tired, bag-eyed figure at a cluttered desk with a laptop, a cup, wrappers, a chips bag and a takeaway box|2 AM / Chips|desk lower centre, clock upper left|OBJ_CLOCK_2AM=hand-drawn wall clock reading 2 AM;CHAR_TIRED_ANALYST=tired stick figure with eye bags at a desk with a laptop and snack litter|CUT: 2 AM analyst
+#H14|Ask his year-to-date return and he says he invests for the long term|ORIGINAL_DRAWING
+S013.1|Host at left and a balding man at right, both smiling with hands on hips|-|two figures across|HOST;CHAR_BALD_MAN=balding stick figure with a few side hairs and a smile|CUT: two figures facing each other
+S013.2|Host at left and the balding man at right asking a question|How are you doing YTD?|two figures across|HOST;CHAR_BALD_MAN;TXT_SMALL_CAPTION|CUT+TEXT_REVEAL: year-to-date question
+S013.3|Host frowns and answers; the balding man stays smiling|I actually invest for the long-term|two figures across|HOST;CHAR_BALD_MAN;TXT_SMALL_CAPTION|FACE_CHANGE+TEXT_SWAP: long-term answer
+#H15|Translation: he's been underperforming since the Bush administration|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S013.4|Blank hand-drawn axes on white|-|axes centre-left|OBJ_AXES_BLANK=hand-drawn blank axes|CUT: empty axes
+S013.5|Two-line chart: a green line labelled for the index climbing above a red line for the value investor, a year at the axis end, and a small archival-news still at the lower left|S&P 500 / The Value Investor / 2025|chart left, key right, still lower left|CHART_SP_VS_VALUE=hand-drawn chart with a green line for the S&P 500 above a red line for the value investor and a colour key;IMG_NEWS_CLIP_STILL=small third-party archival still of two men in suits, one whispering to the other|BUILD: lines, key and still
+#H16|A bed-scene innuendo joke about the value investor|ORIGINAL_DRAWING
+S013.6|Smiling black-bobbed woman with hands on hips, alone|-|figure centre-left|CHAR_WOMAN_BOB=stick woman with a black bob haircut|CUT: woman
+S013.7|Woman lying in bed on a pillow and the host beside the bed asking a one-word question|The classic?|bed left, host right|CHAR_WOMAN_BOB;OBJ_BED_SIMPLE=minimal hand-drawn bed with a pillow and sheet;HOST;TXT_SMALL_CAPTION|CUT: woman in bed, host speaks
+S013.8|Woman frowns from bed; host shrugs|You can't be serious|bed left, host right|CHAR_WOMAN_BOB;OBJ_BED_SIMPLE;HOST;TXT_SMALL_CAPTION|FACE_CHANGE+POSE_CHANGE: she is unimpressed, he shrugs
+#H17|The value investor is the human equivalent of watching paint dry|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S013.9|Host holding a steaming mug on a cream canvas|-|host centre-left|HOST;OBJ_MUG_STEAM=mug with steam lines|CUT: host with hot mug
+S013.10|Label with an arrow above him and an equals sign to a photo of a man sitting on a chair facing a white wall|The Value Investor / =|host left, photo right|HOST;OBJ_MUG_STEAM;TXT_LABEL_VALUE=handwritten label The Value Investor with an arrow;IMG_WALL_SITTER=third-party photo of a man seated on a garden chair facing a white wall|BUILD: label and equals to the wall-sitter photo
+#H18|Number two: the Wolf of Wall Street investor|ORIGINAL_DRAWING
+S013.11|Numbered heading alone on white|2. The 'Wolf of Wall Street' Investor|text centre|TXT_ARCHETYPE_TITLE|CUT: archetype two title
+#H19|His portfolio: three meme stocks, a forex trading course and a pending DUI|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S013.12|Slicked-hair figure in sunglasses with an open mouth and a boast beside his head|It's called 'diversification'|figure left, text right|CHAR_BRO=stick figure with slicked spiky hair and sunglasses and an open mouth;TXT_SMALL_CAPTION|CUT: sunglasses bro
+S013.13|Three round meme-coin images appear at the upper right|It's called 'diversification'|figure left, coins upper right|CHAR_BRO;TXT_SMALL_CAPTION;IMG_MEMECOINS_THREE=three third-party round meme-coin images (a frog, a dog and a shiba)|POP_IN: three meme coins
+S013.14|The meme coins now beside a third-party self-help book cover about forex trading at the right|It's called 'diversification' / HOW TO FOREX TRADE / The Complete Guide to Make Money in the Forex Market […]|figure left, coins and book right|CHAR_BRO;TXT_SMALL_CAPTION;IMG_MEMECOINS_THREE;IMG_FOREX_BOOK=third-party book cover titled How to Forex Trade|POP_IN: forex book cover
+S013.15|A scowling police officer in a cap with a handheld device appears at the lower right|It's called 'diversification'|figure left, coins and book upper right, officer lower right|CHAR_BRO;TXT_SMALL_CAPTION;IMG_MEMECOINS_THREE;IMG_FOREX_BOOK;CHAR_OFFICER=scowling stick-figure police officer with a cap holding a handheld device|POP_IN: officer
+#H20|Every morning: a cold plunge, a podcast and 'meditation'|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S013.16|Short line on white|Every morning...|text centre|TXT_TITLE_LINE|CUT: Every morning...
+S013.17|Sunglasses figure stepping into a bin of icy water|-|figure and bin left|CHAR_BRO;OBJ_ICE_BIN=hand-drawn bin of icy water|CUT: cold plunge
+S013.18|Arrow to the figure wearing headphones with a thought bubble holding a small photo|-|plunge left, headphones figure centre|CHAR_BRO;OBJ_ICE_BIN;OBJ_ARROW_SMALL;OBJ_THOUGHT_BUBBLE=hand-drawn thought bubble holding a photo;IMG_PODCAST_PHOTO=small third-party photo of a shirtless man outdoors|BUILD: podcast step
+S013.19|Second arrow to the figure meditating cross-legged above the ground|-|three steps across|CHAR_BRO;OBJ_ICE_BIN;OBJ_ARROW_SMALL;OBJ_THOUGHT_BUBBLE;IMG_PODCAST_PHOTO|BUILD: meditation step
+#H21|He's just thumping his chest, wishing he was on Wall Street in the 90s|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S013.20|Empty white canvas|-|empty|-|CLEAR: blank beat
+S013.21|Figure with arms crossed and a thought bubble holding a film still of two men talking at a restaurant table|-|figure centre, bubble above|CHAR_BRO;OBJ_THOUGHT_BUBBLE;IMG_FILM_STILL=third-party film still of two men talking across a restaurant table|CUT: film-still thought
+#H22|In his room: a hustle-harder poster, empty energy-drink cans and a nightstand|ORIGINAL_DRAWING
+S013.22|Sunglasses figure leaning back at a desk with his feet up and hands behind his head|-|figure left of centre|CHAR_BRO;OBJ_DESK_FEET_UP=hand-drawn desk and chair with the figure leaning back, feet up|CUT: feet-up desk
+S013.23|Framed gold-lettered poster appears on the wall above him|HUSTLE HARDER|poster upper centre, figure lower left|CHAR_BRO;OBJ_DESK_FEET_UP;OBJ_POSTER_HUSTLE=framed black poster with gold lettering HUSTLE HARDER|POP_IN: hustle-harder poster
+S013.24|A bed with a nightstand holding red cans and a small item appears at the right|HUSTLE HARDER|poster upper centre, figure left, bed right|CHAR_BRO;OBJ_DESK_FEET_UP;OBJ_POSTER_HUSTLE;OBJ_BED_NIGHTSTAND=hand-drawn bed with a nightstand holding red energy-drink cans|POP_IN: bed and nightstand
+#H23|The guy you hope not to run into at the grocery store|ORIGINAL_DRAWING
+S013.25|Sunglasses figure pushing a shopping cart and greeting, a worried thin figure at right|Bro... How you been?|figure left, worried figure right|CHAR_BRO;OBJ_SHOPPING_CART=hand-drawn shopping cart;CHAR_NERVOUS=worried thin stick figure;TXT_SMALL_CAPTION|CUT: grocery-store encounter
+S013.26|Cart-pushing figure and the worried figure now shrugging, with a question|Well... how do you invest now?|cart left, worried figure right|CHAR_BRO;OBJ_SHOPPING_CART;CHAR_NERVOUS;TXT_SMALL_CAPTION|CUT+TEXT_SWAP: how do you invest
+S013.27|Cart-pusher gives the self-improvement line, worried figure thin again|Bro. The best investment is in yourself|cart left, worried figure right|CHAR_BRO;OBJ_SHOPPING_CART;CHAR_NERVOUS;TXT_SMALL_CAPTION|TEXT_SWAP: best investment line
+#H24|He likes to call himself an entrepreneur: diversified income streams|ORIGINAL_DRAWING
+S013.28|Sunglasses figure larger at left with a claim, and the black-bobbed woman smiling at right|Yeah i'm actually an entrepreneur|figure left, woman right|CHAR_BRO;CHAR_WOMAN_BOB;TXT_SMALL_CAPTION|CUT: entrepreneur claim
+S014.0|Pale-blue background with the sunglasses figure pointing at a whiteboard titled with an income list|3 Investments to Diversify Your Income|figure left, board right|CHAR_BRO;OBJ_WHITEBOARD;TXT_BOARD_WORDS|CUT: whiteboard heading
+S015.0|Board fills the frame with a dark sports-betting slip screenshot|Cooper Kupp / George Kittle / Christian McCaffrey Over 61.5 / Travis Etienne 100+ Yards […]|board fills frame|OBJ_WHITEBOARD;SS_BETTING_SLIP=dark mobile screenshot of a sports-betting slip with player prop bets|ZOOM_IN+CUT: board with a betting-slip screenshot
+S015.1|Board shows the three round meme-coin images|-|board fills frame|OBJ_WHITEBOARD;IMG_MEMECOINS_THREE|SWAP: meme coins on the board
+#H25|And charging people $20 to get into his party|ORIGINAL_DRAWING;RASTER_ART
+S016.0|Clouds and a green lawn: a pale figure at left and the sunglasses figure at right with a short line, a detailed house and pool partly at the right edge|Who do you know here?|figures on a lawn, house right|IMG_LAWN_HOUSE=richly coloured raster-style illustration of a lawn with a house, trees and a pool;CHAR_BRO;CHAR_PALE_GUEST=small pale-faced stick figure with hands on hips;TXT_SMALL_CAPTION|CUT: lawn party entrance
+S017.0|Full-frame bright cartoon backyard: a rainbow arch behind a pool, trees, clouds, a sun and flowers with the sunglasses figure standing before the rainbow|-|pool and rainbow centre|IMG_BACKYARD_RAINBOW=bright cartoon backyard illustration with rainbow, trees, sun, flowers and a pool;CHAR_BRO|CUT: backyard party scene
+S018.0|Cartoon road scene: a purple car crashed into a tree with its bumper and a wheel on the ground, a scowling police officer by the car and a sweating sunglasses figure with a protest|You don't have to do this|car centre, figures lower centre|IMG_CAR_CRASH=cartoon road scene with a purple car crashed into a tree, a loose bumper and wheel;CHAR_BRO;CHAR_OFFICER;TXT_SMALL_CAPTION|CUT: crash and police scene
+#H26|It's safe to say he's not trying to beat the market, just his charges|ORIGINAL_DRAWING
+S019.0|Heading alone on white|3. The Chart Whisperer|text centre|TXT_ARCHETYPE_TITLE|CUT: archetype three title
+#H27|He looks at a stock chart the way conspiracy theorists look at grainy UFO footage|ORIGINAL_DRAWING;SCREEN_CAPTURE
+S020.0|Pale-blue scene: a wild-haired figure with round glasses beside a whiteboard showing a chart crowded with drawn lines and annotations|-|figure left, chart board right|CHAR_CHARTIST=stick figure with wild black hair and round glasses;OBJ_WHITEBOARD;SS_CHART_CLUTTER=technical-analysis chart crowded with many coloured trend lines|CUT: chart whisperer with cluttered chart
+S020.1|A tiny line of praise appears beside his head|It's - it's perfect|figure left, chart right|CHAR_CHARTIST;OBJ_WHITEBOARD;SS_CHART_CLUTTER;TXT_SMALL_CAPTION|TEXT_REVEAL: it's perfect
+#H28|He has 12 monitors|COMPOSITED_STILLS;ORIGINAL_DRAWING
+S021.0|Photo of a dim home trading desk with a bank of monitors showing charts and a leather chair, with the wild-haired chartist's small drawn figure seated in the chair|-|photo centre|IMG_TRADING_DESK_PHOTO=third-party photo of a trading desk with many chart monitors and a leather office chair;CHAR_CHARTIST|CUT: monitor desk with the chartist composited in
+#H29|He sees bull flags in his morning coffee|ORIGINAL_DRAWING
+S022.0|Chartist with raised hands and an open mouth next to a coffee cup on a table whose foam shows a green chart pattern|-|chartist left, table right|CHAR_CHARTIST;OBJ_COFFEE_CHART=hand-drawn coffee cup on a table with a chart pattern drawn in the foam|CUT: bull flag in the coffee
+#H30|He speaks in a language only the degenerate few understand|ORIGINAL_DRAWING
+S022.1|Chartist whispering into the ear of a frowning figure, with technical jargon above|* MACD Divergence, Liquidity Sweep, Oversold RSI *|two figures centre, jargon above|CHAR_CHARTIST;CHAR_NERVOUS;TXT_JARGON=handwritten technical-analysis jargon line|CUT: jargon whisper
+#H31|Every candlestick tells a story, he says|ORIGINAL_DRAWING
+S023.0|Pale-blue scene: the chartist beside the cluttered-chart whiteboard with a line of speech|Every candlestick tells a story|figure left, chart right|CHAR_CHARTIST;OBJ_WHITEBOARD;SS_CHART_CLUTTER;TXT_SMALL_CAPTION|CUT: candlestick line
+#H32|He doesn't care what a company does; fundamentals are for boomers|ORIGINAL_DRAWING
+S024.0|Chartist with raised arms and an open smile with a dismissive line|Who cares|chartist centre|CHAR_CHARTIST;TXT_SMALL_CAPTION|CUT: who cares
+S024.1|Chartist grins and points at a bowler-hatted, black-suited older figure at right|Boomer|chartist left, boomer right|CHAR_CHARTIST;CHAR_BOOMER=bowler-hatted, black-suited elderly stick figure with a frown;TXT_SMALL_CAPTION|CUT+POP_IN: points at a boomer
+#H33|He doesn't do due diligence, he draws art|ORIGINAL_DRAWING
+S024.2|Chartist in a red beret painting the cluttered chart on an easel on a stool|-|artist centre-left|CHAR_CHARTIST_ARTIST=chartist in a red beret painting at an easel;OBJ_EASEL_CHART=easel carrying the cluttered chart|CUT: chartist as painter
+#H34|He doesn't admire the famous investor, he admires Pablo Picasso|COMPOSITED_STILLS;ORIGINAL_DRAWING
+S024.3|Photo of the elderly man in a dark suit and red tie at the left of a wavy divider, empty to the right|-|photo left, divider right|IMG_OLDER_MAN_PHOTO;OBJ_WAVY_DIVIDER|CUT: elderly-man photo beside divider
+S024.4|Red X over the elderly-man photo; at right of the divider a black-and-white photo of a painter at an easel with the chartist small below it|-|photo left, painter photo right, chartist lower right|IMG_OLDER_MAN_PHOTO;OBJ_WAVY_DIVIDER;HL_RED_X=large red hand-drawn X;IMG_PAINTER_PHOTO=third-party black-and-white photo of a shirtless painter at work on a large canvas;CHAR_CHARTIST|BUILD+STRIKE: X over the investor, painter beside
+#H35|But you better not insult his charts|ORIGINAL_DRAWING
+S025.0|Frowning chartist at left and a bodyguard in sunglasses and a suit holding a sign at right|Your charts stink|chartist left, bodyguard right|CHAR_CHARTIST;CHAR_BODYGUARD=stick-figure bodyguard in black sunglasses and a grey suit holding a sign;TXT_SIGN_STINK=handwritten sign Your charts stink|CUT: insult scene
+#H36|Never interrupt an artist at work|ORIGINAL_DRAWING
+S025.1|Chartist in a beret painting at an easel with a quotation and attribution at right|"Never Interrupt an Artist at Work" / - Some Chart Whisperer Somewhere|artist left, quote right|CHAR_CHARTIST_ARTIST;OBJ_EASEL_CHART;TXT_QUOTE_ARTIST=handwritten quotation with a joke attribution|CUT: artist quote
+#H37|Number four: the crypto bro|ORIGINAL_DRAWING
+S025.2|Heading alone on white|4. The Crypto Bro|text centre|TXT_ARCHETYPE_TITLE|CUT: archetype four title
+#H38|He turned $400 into $13,000 and then back into $0|ORIGINAL_DRAWING;SCREEN_CAPTURE
+S025.3|Smirking figure with a Bitcoin symbol on his forehead and rosy cheeks beside a phone showing a rising green chart|-|figure left, phone right|CHAR_CRYPTO_BRO=stick figure with spiky hair, rosy cheeks and a Bitcoin symbol on his forehead;OBJ_PHONE_CHART=hand-drawn phone screen showing a price chart|CUT: crypto bro and a rising chart
+S025.4|Same figure frowning beside the phone, whose chart has crashed in red|-|figure left, phone right|CHAR_CRYPTO_BRO;OBJ_PHONE_CHART|SWAP+FACE_CHANGE: crash on the phone, he frowns
+#H39|He calls himself early, but he's unemployed with an addiction to Discord|ORIGINAL_DRAWING
+S025.5|Smirking crypto bro with a line of self-description|I consider myself an early stage investor|figure left, text right|CHAR_CRYPTO_BRO;TXT_SMALL_CAPTION|CUT: early-stage claim
+S025.6|Figure hunched at a desk with a chat-app logo on the monitor and the black-bobbed woman at right with a command|I think it's time to get a job sweetie / Discord|desk left, woman right|CHAR_CRYPTO_BRO;OBJ_DESK_MONITOR=hand-drawn desk with a monitor showing a chat-app logo;LOGO_DISCORD=chat-app logo on a monitor;CHAR_WOMAN_BOB;TXT_SMALL_CAPTION|CUT: unemployed at the desk
+#H40|He lost his net worth in a rug pull of a meme coin and calls it a learning experience|ORIGINAL_DRAWING
+S025.7|Angry crypto bro beside a falling red chart|-67%|figure left, chart right|CHAR_CRYPTO_BRO;CHART_FALL_RED|CUT: -67% chart
+S025.8|Joke-coin blob appears under the chart|-67% / FartCoin / The Future of Crypto|figure left, chart and coin right|CHAR_CRYPTO_BRO;CHART_FALL_RED;OBJ_MEMECOIN=orange hand-drawn coin labelled FartCoin The Future of Crypto|POP_IN: meme coin
+S025.9|Smirking crypto bro with a glossy line of self-justification|This makes for an even better comeback story|figure left, text right|CHAR_CRYPTO_BRO;TXT_SMALL_CAPTION|CUT: comeback story
+#H41|Now he owns 12 NFTs of pixelated animals|COMPOSITED_STILLS
+S026.0|Sky-blue background with a grid of fifteen pixel-art cats in different hats and outfits|-|grid centre|IMG_NFT_CATS=third-party grid of fifteen pixel-art cat NFT images in different hats and outfits|CUT: pixel-art animal NFTs
+#H42|He insists on being off-grid and says fiat currency is a scam, all while using his mom's Venmo|ORIGINAL_DRAWING;RASTER_ART
+S027.0|Close view of a rusty beige van with its side door open: the crypto bro grinning inside among a pizza slice, a bottle, a laptop and books, with scratchy window shading|-|van fills frame|IMG_VAN_INTERIOR=richly detailed raster-style illustration of a rusty van with its sliding door open and a cluttered interior;CHAR_CRYPTO_BRO|CUT: off-grid van life
+S028.0|Figure at the desk with a chat-app monitor beside the woman, declaring a belief|The whole system is one giant scam / Discord|desk left, woman right|CHAR_CRYPTO_BRO;OBJ_DESK_MONITOR;LOGO_DISCORD;CHAR_WOMAN_BOB;TXT_SMALL_CAPTION|CUT: whole-system claim
+S028.1|Same scene with a different line from the desk figure|Also can we please increase my allowance this month|desk left, woman right|CHAR_CRYPTO_BRO;OBJ_DESK_MONITOR;LOGO_DISCORD;CHAR_WOMAN_BOB;TXT_SMALL_CAPTION|TEXT_SWAP: allowance request
+#H43|He hasn't filed taxes since 2021|ORIGINAL_DRAWING
+S028.2|Crypto bro in close-up with a worried look and a shrug|-|figure centre|CHAR_CRYPTO_BRO|CUT: worried shrug
+S028.3|Crypto bro in close-up shrugging with a question|Why would I file my taxes?|figure left, text right|CHAR_CRYPTO_BRO;TXT_SMALL_CAPTION|CUT+TEXT_REVEAL: tax question
+#H44|The blockchain is borderless; eight hours a day in audio chat rooms arguing with 14-year-olds|ORIGINAL_DRAWING
+S028.4|Smirking crypto bro beside a Bitcoin coin on a pedestal|Bitcoin is the future|figure left, coin right|CHAR_CRYPTO_BRO;ICON_BITCOIN_PEDESTAL=orange Bitcoin coin on a white pedestal;TXT_SMALL_CAPTION|CUT: Bitcoin on a pedestal
+S028.5|Angry crypto bro shouting at a brown-haired teenage figure in a blue top|How do you not get that this is the future?|crypto bro left, teen right|CHAR_CRYPTO_BRO;CHAR_TEEN=brown-haired stick figure in a blue top with a worried look;TXT_SMALL_CAPTION|CUT: arguing with a teen
+#H45|But the truth is he has no idea what the blockchain actually is|ORIGINAL_DRAWING
+S028.6|Empty white canvas held about 3.7 s|-|empty|-|CLEAR: blank beat
+S028.7|Worried crypto bro at left and the teen figure at right asking|Dude do you actually know what any of this stuff means?|two figures across|CHAR_CRYPTO_BRO;CHAR_TEEN;TXT_SMALL_CAPTION|CUT: do you know what it means
+S028.8|Smirking crypto bro at left with three fancy terms at right|Web3 / Decentralized Finance / Non-fungible Tokens|figure left, list right|CHAR_CRYPTO_BRO;TXT_BUZZWORDS=handwritten list of finance buzzwords|CUT+TEXT_REVEAL: fancy words
+#H46|Number five: the Wall Street Bets investor|ORIGINAL_DRAWING
+S028.9|Heading alone on white|5. The Wall Street Bets 'Investor'|text centre|TXT_ARCHETYPE_TITLE|CUT: archetype five title
+#H47|He loves options, worships a guy named Roaring Kitty, and has one investing philosophy|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S028.10|Pale hairless outline figure pointing at a title graphic for derivatives trading with small chart pictograms|This good / OPTIONS TRADING|figure left, graphic right|CHAR_PALE_OUTLINE;TXT_SMALL_CAPTION;IMG_OPTIONS_TRADING=third-party stock graphic reading OPTIONS TRADING with small chart and pie icons|CUT: options-trading graphic
+S028.11|Third-party still of a man in a red shirt holding a black billiard ball in front of a microphone replaces the graphic|This also good / roaringkitty|figure left, still right|CHAR_PALE_OUTLINE;TXT_SMALL_CAPTION;IMG_STREAMER_STILL=third-party webcam-style still of a man in a red branded shirt holding a black eight-ball in front of a microphone|SWAP+TEXT_SWAP: streamer still
+S028.12|Dark forum-comment screenshot replaces the still|This really good / Because nobody ever dollar cost averaged their way into a 3some with insta baddies.|figure left, comment right|CHAR_PALE_OUTLINE;TXT_SMALL_CAPTION;SS_FORUM_COMMENT=dark-mode forum comment screenshot with a one-line comment and reaction counts|SWAP+TEXT_SWAP: forum comment
+#H48|He drinks Monster, eats Hot Pockets and hasn't seen daylight since GameStop peaked|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S028.13|Pale outline figure with a content face and a belly rub, three white energy-drink cans at upper right|-|figure left, cans upper right|CHAR_PALE_OUTLINE;IMG_ENERGY_CANS=third-party product photo of three white energy-drink cans|CUT: energy-drink cans
+S028.14|A box of frozen pepperoni pizza snacks appears at the lower right|Yum / HOT POCKETS / PEPPERONI PIZZA|figure left, cans upper right, box lower right|CHAR_PALE_OUTLINE;IMG_ENERGY_CANS;IMG_HOT_POCKETS=third-party product photo of a box of pepperoni pizza snacks;TXT_SMALL_CAPTION|POP_IN: snack box
+S029.0|Full near-black frame (about RGB 25,27,27) held about 3.6 s with no visible content|-|empty|DARK_FRAME=full-frame solid near-black used as a beat between scenes|CUT: dark beat
+#H49|He calls the famous investor a coward|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.0|Pale outline figure pointing at the elderly-man photo with a one-word insult|Coward|figure left, photo right|CHAR_PALE_OUTLINE;IMG_OLDER_MAN_PHOTO;TXT_SMALL_CAPTION|CUT: coward remark
+#H50|He believes a 40% pullback is just consolidation and trading losses are battle scars|ORIGINAL_DRAWING
+S030.1|Figure with a worried face beside a falling red chart|This is normal... right? / -40%|figure left, chart right|CHAR_PALE_OUTLINE;CHART_FALL_RED;TXT_SMALL_CAPTION|CUT: -40% chart
+S030.2|Phrase alone on white|Battle Scars|text centre|TXT_TITLE_LINE|CUT: Battle Scars
+#H51|His Roth IRA: he's never heard of it|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.3|Figure at left and a pink piggy bank marked with a retirement account name, gold coins around it at right|Roth IRA|figure left, piggy bank right|CHAR_PALE_OUTLINE;OBJ_PIGGY_ROTH=third-party pink piggy-bank graphic with coins labelled Roth IRA|CUT: Roth IRA piggy bank
+S030.4|Figure points at the piggy bank with a puzzled line|What's that ugly thing? / Roth IRA|figure left, piggy bank right|CHAR_PALE_OUTLINE;OBJ_PIGGY_ROTH;TXT_SMALL_CAPTION|POSE_CHANGE+TEXT_REVEAL: points at it, ugly-thing line
+#H52|His long-term plan to build generational wealth|COMPOSITED_STILLS;ORIGINAL_DRAWING
+S030.5|Figure holding a third-party book cover about generational wealth in front of his torso|DEBT / Build Generational WEALTH|figure left, book centre|CHAR_PALE_OUTLINE;IMG_WEALTH_BOOK=third-party book cover with a banknote portrait and the words Build Generational Wealth|CUT: generational-wealth book
+#H53|Includes going all in on weekly SPY calls|ORIGINAL_DRAWING
+S030.6|Two words alone on white|All in|text centre|TXT_TITLE_LINE|CUT: All in
+S030.7|Three words alone on white|Weekly $SPY Calls|text centre|TXT_TITLE_LINE|TEXT_SWAP: Weekly $SPY Calls
+#H54|Blaming market manipulation when they expire worthless|ORIGINAL_DRAWING
+S030.8|Frowning figure and the hooded cloak figure with a complaint|It was market manipulation|figure left, hooded figure right|CHAR_PALE_OUTLINE;IMG_HOODED_MEME;TXT_SMALL_CAPTION|CUT: market-manipulation claim
+#H55|He doesn't do technical analysis|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.9|Figure giving a thumbs-down beside a grid of six chart-pattern diagrams (double top, head and shoulders, rising wedge, double bottom, inverted head and shoulders, falling wedge) with put or call markers|Double Top / Head and Shoulders / Rising Wedge / Double Bottom / Inverted Head and Shoulders / Falling Wedge / Trigger Line / Neck Line / Put / Call|figure left, diagrams right|CHAR_PALE_OUTLINE;IMG_CHART_PATTERNS=third-party diagram grid of six chart patterns with put and call markers|CUT: thumbs-down on chart patterns
+#H56|He's never read an earnings report|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.10|Figure still giving a thumbs-down beside a dark navy filings-search graphic|SEC.gov / EDGAR / Filings / 10-Q 10-K 8-K|figure left, graphic right|CHAR_PALE_OUTLINE;IMG_EDGAR_FILINGS=third-party navy graphic of a magnifying glass over a filing cabinet labelled Filings with form names|SWAP: filings graphic
+#H57|His philosophy: he just feels things; and to him that's enough|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.11|Pale outline figure holding a crystal ball on a pedestal containing a coin, a film poster and a chip-maker wordmark|NVIDIA / THE WOLF OF WALL STREET|figure left, crystal ball right|CHAR_PALE_OUTLINE;OBJ_CRYSTAL_BALL=hand-drawn crystal ball on a gold pedestal holding a coin, a film poster and a chip-maker wordmark (the same composition appears in the packaging thumbnail of another video)|CUT: crystal ball
+#H58|Number six: the guy who watched The Big Short|ORIGINAL_DRAWING
+S030.12|Heading alone on white|6. The Guy Who Watched 'The Big Short'|text centre|TXT_ARCHETYPE_TITLE|CUT: archetype six title
+#H59|He doesn't blink, he lives in Excel|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S030.13|Hooded cloak figure with a pale face at a cluttered desk with a laptop, cups, chips and a takeaway box under a 2 AM clock|2 AM / Chips|desk lower centre, clock upper left|CHAR_DOOMER=hooded brown-cloak figure with a pale face (the doomer archetype);OBJ_CLOCK_2AM;OBJ_DESK_CLUTTER=hand-drawn desk with laptop, cups, chips bag and takeaway box|CUT: doomer at 2 AM
+S030.14|Same desk scene moved smaller to the left with a line of speech|2 AM / Who needs women when you have excel? / Chips|desk left, text right|CHAR_DOOMER;OBJ_CLOCK_2AM;OBJ_DESK_CLUTTER;TXT_SMALL_CAPTION|REFRAME+TEXT_REVEAL: smaller, excel remark
+#H60|He calls every asset class a bubble; paces his apartment in socks mumbling about synthetic CDOs|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.15|Room scene: a TV on a stand showing a bathtub scene at left, the doomer standing in socks, a framed portrait of a man on the wall and a bed with a nightstand at right|-|room across frame|CHAR_DOOMER;OBJ_TV_STAND=hand-drawn television on a wooden stand;IMG_TV_STILL=third-party film still of a woman in a bathtub shown on the TV;OBJ_FRAMED_PORTRAIT=framed portrait of a man partly covering a poster title;OBJ_BED_NIGHTSTAND|CUT: apartment room
+S030.16|Same room, the doomer speaking|It's only a matter of time before it all collapses|room across frame|CHAR_DOOMER;OBJ_TV_STAND;IMG_TV_STILL;OBJ_FRAMED_PORTRAIT;OBJ_BED_NIGHTSTAND;TXT_SMALL_CAPTION|TEXT_REVEAL: collapse line
+#H61|Ever since watching the film he hasn't known peace: a spiritual awakening|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.17|Doomer standing at left with a thought bubble holding a film-poster collage|-|doomer left, bubble upper centre|CHAR_DOOMER;OBJ_THOUGHT_BUBBLE;IMG_BIGSHORT_POSTER=third-party poster of a finance film with a cast montage and a yellow arrow|CUT: film in his thoughts
+S030.18|Doomer kneeling in prayer facing the film poster at the right|It all makes sense now / THE BIG SHORT|doomer left, poster right|CHAR_DOOMER;IMG_BIGSHORT_POSTER;TXT_SMALL_CAPTION|POSE_CHANGE+POP_IN: kneeling before the poster
+#H62|He's been wrong 137 times in a row, but his answer is always one day|ORIGINAL_DRAWING
+S030.19|Hooded figure seen from behind at a desk watching a monitor with a faint falling chart|-|desk centre|CHAR_DOOMER;OBJ_DESK_SIMPLE=simple hand-drawn desk, chair and monitor showing a faint falling chart|CUT: doomer at a monitor
+S030.20|Doomer at right with a prophecy|One day the market will crash|doomer right, text above|CHAR_DOOMER;TXT_SMALL_CAPTION|CUT: one day the market will crash
+S030.21|Second prophecy replaces the first|One day the Fed will be exposed|doomer right, text above|CHAR_DOOMER;TXT_SMALL_CAPTION|TEXT_SWAP: Fed exposed
+S030.22|Third prophecy replaces the second|One day you'll all see|doomer right, text above|CHAR_DOOMER;TXT_SMALL_CAPTION|TEXT_SWAP: you'll all see
+#H63|He shorts the market, the economy, and hope|ORIGINAL_DRAWING;SCREEN_CAPTURE;COMPOSITED_STILLS
+S030.23|Doomer seen from behind at a desk watching a monitor with a red falling index chart, with a line of speech|It's a bubble / DOW INDUSTRIALS|desk centre-left|CHAR_DOOMER;OBJ_DESK_SIMPLE;SS_INDEX_FALL_MONITOR=monitor image of a falling red stock-index chart;TXT_SMALL_CAPTION|CUT: it's a bubble
+S030.24|Monitor now shows a national flag; new line of speech|The tides are turning|desk centre-left|CHAR_DOOMER;OBJ_DESK_SIMPLE;IMG_FLAG_MONITOR=monitor showing a waving national flag;TXT_SMALL_CAPTION|SWAP+TEXT_SWAP: flag monitor, tides line
+S030.25|Monitor shows a stick-figure teacher and a few small students; new line of speech|Short it|desk centre-left|CHAR_DOOMER;OBJ_DESK_SIMPLE;IMG_CLASS_MONITOR=monitor showing a drawn teacher reading to small children;TXT_SMALL_CAPTION|SWAP+TEXT_SWAP: classroom monitor, short it
+S030.26|Doomer standing with a thought bubble holding a banknote crossed out in red|-|doomer left, bubble upper centre|CHAR_DOOMER;OBJ_THOUGHT_BUBBLE;OBJ_BANKNOTE_CROSSED=banknote struck through with red lines;HL_RED_X|CUT: banknote crossed out in thought
+#H64|He wants to watch the world burn so we can stand in the ashes and whisper I told you so|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.27|Doomer with hands pressed together beside a flaming, smoking Earth|-|doomer left, globe upper right|CHAR_DOOMER;IMG_BURNING_EARTH=cartoon globe with flames and smoke around its edges|CUT: burning Earth
+S030.28|Doomer now standing on a heap of smouldering ashes, Earth gone|-|doomer centre|CHAR_DOOMER;OBJ_ASHES=heap of ashes with small flames and smoke under the figure|SWAP: ashes under the doomer
+S030.29|Same scene with the whispered line|I told you so|doomer centre, line upper right|CHAR_DOOMER;OBJ_ASHES;TXT_SMALL_CAPTION|TEXT_REVEAL: I told you so
+#H65|Until that day: water jugs, canned beans, and old earnings reports|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.30|Phrase alone on white|Until that day comes...|text centre|TXT_TITLE_LINE|CUT: Until that day comes...
+S030.31|Pile of water jugs and canned beans at lower left with the doomer standing at right|CANNED BEANS|pile left, doomer right|CHAR_DOOMER;OBJ_SUPPLY_PILE=heap of blue water jugs and cans labelled Canned Beans|CUT: survival supplies
+S030.32|Doomer now standing on a spread of paper earnings reports at lower right, the supply pile at lower left|CANNED BEANS / TECHNOVATE SOLUTIONS / OMEGA RETAIL / METRO|pile left, doomer and reports right|CHAR_DOOMER;OBJ_SUPPLY_PILE;OBJ_EARNINGS_REPORTS=scatter of paper earnings reports with invented company names|BUILD: earnings reports under the doomer
+#H66|So what have we learned today? Absolutely nothing|ORIGINAL_DRAWING
+S030.33|Question alone on white|What have we learned today?|text centre|TXT_CLOSING_LINE=black handwritten closing question|CUT: what have we learned
+S030.34|Answer alone on white|Absolutely nothing..|text centre|TXT_CLOSING_LINE|TEXT_SWAP: Absolutely nothing
+#H67|Whether you read the famous investor's letters like scripture or bet rent money on a candlestick pattern|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.35|Host kneeling at left facing the elderly-man photo|-|host left, photo right|HOST;CHAR_HOST_KNEEL=host in a kneeling pose;IMG_OLDER_MAN_PHOTO|CUT: host kneels before the investor photo
+S030.36|Hunched figure at a desk with a meme-frog chart on the monitor beside a black-bobbed woman with a stern face|This is the trade that's gonna make us rich|desk left, woman right|CHAR_DESK_TRADER=hunched spiky-haired stick figure at a desk with a monitor showing a meme-style frog chart;CHAR_WOMAN_BOB;OBJ_DESK_MONITOR;TXT_SMALL_CAPTION|CUT: rent-money trade
+#H68|It all boils down to one universal truth: nobody knows what the hell is going on|ORIGINAL_DRAWING
+S030.37|Phrase alone on white|One universal truth...|text centre|TXT_CLOSING_LINE|CUT: one universal truth
+S030.38|Statement alone on white (the narration repeats the opening line)|Nobody knows what the h*ll is going on|text centre|TXT_CLOSING_LINE|TEXT_SWAP: nobody knows
+#H69|End card: subscribe, only on this platform|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S030.39|White end card: title at top, the video-platform logo with a note and arrow above three crossed-out round social-media icons at left, the host grinning and pressing a red subscribe button at right|Subscribe for more / Casual Finance / only on / YouTube / SUBSCRIBE|title top, logo left, host and button right|TXT_ENDCARD_TEXT=hand-lettered end-card text;LOGO_YOUTUBE=video-platform logo with red play icon;LOGO_SOCIAL_ICONS=three round social-media icons (Facebook, Instagram, Twitter) crossed out;HL_RED_X=large red hand-drawn X;UI_SUBSCRIBE_BUTTON=red rounded SUBSCRIBE button;HOST|CUT: end card
