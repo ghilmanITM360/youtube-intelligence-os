@@ -102,7 +102,7 @@ Repeated construction: **Verified quantity + mechanism or stakes**.
 | [HXlcMbxzz0U](https://www.youtube.com/watch?v=HXlcMbxzz0U) | The AI Bubble Survives on $1.65 Trillion in Hidden Debt | 2026-08-01 | TYPICAL (1.1059×) |
 | [965yZYhY_f4](https://www.youtube.com/watch?v=965yZYhY_f4) | The $12 Billion Trading Scam That Only Works If You Fail | 2026-02-03 | UNDERPERFORMER (0.3596×) |
 
-Observed success/failure boundary: Credit wave above baseline; $1.65T AI debt typical; $12B trading scam weak. Large numbers are not a substitute for relevance.
+Observed success/failure boundary: Credit wave typical (1.2395, below the 1.25 ABOVE_BASELINE boundary); $1.65T AI debt typical; $12B trading scam weak. Large numbers are not a substitute for relevance.
 
 HYPOTHESIS: connect the number to a human-scale decision and label its period.
 
@@ -134,7 +134,7 @@ Repeated construction: **New / already / dated condition**.
 | [Im-N3K9Pnf0](https://www.youtube.com/watch?v=Im-N3K9Pnf0) | Something Feels Off About 2026... | 2026-01-15 | TOP_PERFORMER (3.2465×) |
 | [-RMZszjZSNE](https://www.youtube.com/watch?v=-RMZszjZSNE) | The Economy's Booming… Just Not For Everyone | 2026-06-22 | UNDERPERFORMER (0.347×) |
 
-Observed success/failure boundary: Housing strong; something-off-2026 typical; booming-economy weak. Publication era and channel development co-vary.
+Observed success/failure boundary: Housing strong; something-off-2026 top performer; booming-economy weak. Publication era and channel development co-vary.
 
 HYPOTHESIS: a newly available source helps relevance, but news demand and recommendations remain unknown.
 

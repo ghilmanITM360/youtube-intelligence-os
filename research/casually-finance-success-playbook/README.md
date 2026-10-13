@@ -4,6 +4,15 @@ Research date: 2026-10-13 (Asia/Karachi). Status: RESEARCH_COMPLETE (playbook sc
 
 This research answers the owner's supplied brief using the existing dated corpus. It does not modify YIOS engines or source evidence. The isolated branch is `research/casually-finance-success-playbook`; its base is `codex/casually-finance-forensic-research` at `7e2f6d3a3d5e4294d5f8bc4737dd0c784610c1f1`. Dependency: [PR #21](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/21). Scope: [issue #27](https://github.com/ghilmanITM360/youtube-intelligence-os/issues/27). Do not merge this stacked PR into main before resolving its base dependency.
 
+## Word and Excel delivery
+
+The owner requested analysis in Office formats and no further video work.
+
+- [Word report](OFFICE/Casually_Finance_Analysis.docx): 29 pages covering findings, packaging, topics, scripts, visual methods, asset feasibility, production gates, improvements and evidence limits.
+- [Excel workbook](OFFICE/Casually_Finance_Analysis.xlsx): 206 sortable video records, 10 sheets, an editable tier chart, 272 native evidence links, editorial scorecards and a future own-channel analytics template.
+
+[Office reproduction and validation](OFFICE/README.md). The prior optional demo remains historical supporting work; it is not required to use these reports.
+
 ## Read in this order
 
 1. EXECUTIVE_FINDINGS.md: decisions and counterexamples.
