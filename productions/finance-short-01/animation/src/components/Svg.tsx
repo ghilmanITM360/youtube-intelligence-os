@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
 import { evaluate, headMarkup, resolve, svgMatrix, type NumPose } from "../rig/rig";
+import { captionLayout, CAPTION_METRICS } from "../lib/captions";
 import { B, C, assetMarkup, instMarkup, type Inst } from "../lib/bundle";
 
 /** Raw library markup inside a group. Markup is generator output from build/ (trusted, offline). */
@@ -91,14 +92,13 @@ export const SceneWorld: React.FC<{ id: string; ov?: Record<string, Override>; c
 };
 
 /** Caption plate (port of typography.caption_plate; live text, Avenir Next 800). */
-export const captionSize = (text: string, max = 56) => Math.min(max, (940 - 70) / (text.length * 0.56)); // fit within x 70–1010
+export const captionSize = (text: string, max = 56) => captionLayout(text, 0, max).size;
 export const CaptionPlate: React.FC<{ text: string; opacity?: number; cy?: number }> = ({ text, opacity = 1, cy = 1430 }) => {
-  const size = captionSize(text);
-  const w = text.length * size * 0.56 + 70, h = size * 1.18 + 34;
+  const {size, width, height, x, y} = captionLayout(text, cy);
   return (
     <g opacity={opacity}>
-      <rect x={Math.round(540 - w / 2)} y={Math.round(cy - h / 2)} width={Math.round(w)} height={Math.round(h)} rx={24} fill={C.ink} fillOpacity={0.88} />
-      <text x={540} y={Math.round(cy - h / 2 + 17 + size * 0.95)} fontFamily={B.font} fontSize={size} fontWeight={800} textAnchor="middle" fill={C.paper}>{text}</text>
+      <rect x={Math.round(x)} y={Math.round(y)} width={Math.round(width)} height={Math.round(height)} rx={24} fill={C.ink} fillOpacity={0.88} />
+      <text x={CAPTION_METRICS.centerX} y={Math.round(y + 17 + size * 0.95)} fontFamily={B.font} fontSize={size} fontWeight={800} textAnchor="middle" fill={C.paper}>{text}</text>
     </g>
   );
 };

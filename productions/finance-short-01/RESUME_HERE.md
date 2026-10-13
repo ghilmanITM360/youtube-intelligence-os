@@ -106,3 +106,15 @@ Nothing, once the milestone C commit is pushed. `animation/out/` (QA renders) is
 - Added production-path contact tests: approach, endpoint hold, continuous retreat, home return, backward seeking. Test failed on old path and passed after fix. Rig/timeline tests and typecheck PASS; before/after frames 1374–1377 and 1381 inspected. Evidence in ignored local `animation/out/qa/marker_comparison.png`; final source fix is remotely recoverable after push.
 - Usage: five-hour 6%, weekly 29%. Audio and owner approvals unchanged.
 - Next safe operation: inspect sampled grip, coin, lever, receipt, walk and seated contacts, then finish mobile obstruction review.
+
+## Caption milestone
+
+- Previous local/remote head `fee3b41abb4b719be5111b42b93ffb310e77c89e`; exact-head CI SUCCESS.
+- Fixed confirmed caption carry across cuts (e.g. old “payment date” persisted at S11+2). Holds are now bounded by their source shot and caption gaps stay empty.
+- Fixed caption overlap with the explicitly simulated UI mask: top y0–100, bottom y1600–1920, right x900–1080/y850–1600. These are conservative test zones, not a claim about every YouTube app/device layout.
+- Shared metrics: centre x470, maximum plate width840, default y1530, S07B y200; font >=40px for every current chunk. Existing font/style and one-line captions retained.
+- New caption regression tests failed with old timing/geometry and pass after fixes; checks cover all 21 shot boundaries, hold ends, gaps, all current caption safe bounds and minimum size. Rig/timeline/contact tests and typecheck PASS.
+- Native 21-shot stills plus 320px/160px simulations reviewed; 11 targeted updated caption samples inspected. Local-only ignored paths: `animation/out/qa/all_shots_native/`, `mobile_320/`, `mobile_160/`, `caption_mobile/`, `contacts/`.
+- Prop/contact samples reviewed at S01B+12/13/15, S02A+49/50/51, S03+20/21/25, S05A+13/14/26, S06B+30/31/32, S07B+69/70, S11+2/11/19. No additional confirmed contact defect from those samples; this does not certify every intervening frame or replace motion review.
+- Remaining mobile risk: small source qualifiers/diagram supporting labels at stress scale and right-side scene content under simulated rail. Recomposition of approved diagrams requires deliberate owner review; no claim that captions make all scene content phone-safe.
+- Usage snapshot five-hour8%, weekly30%; corrected MP3 still absent. Next safe operation: one consolidated updated muted full preview, decode and joint-warning checks; then owner review checkpoint.
