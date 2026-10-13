@@ -32,3 +32,7 @@ Original owner paths `/Users/ghilmankhan/...` do not exist on this Mac. This wor
 ## Verification plan
 
 Run scoring edge-case checks; compare duplicate universe to saved coverage; verify all peer IDs stay within format and exclude launch-window videos; hash every frozen input before/after; ensure only the research folder differs from the base; reproduce generated outputs byte-for-byte; inspect representative images and the optional demo; record GitHub check status literally. Pending CI is pending.
+
+## Additional source provenance
+
+NEWS_SOURCE_CHECKS.json preserves the three reopened primary URLs, dates, video timing and failed Google Trends query. BENCHMARK_SOURCES.json records the separate Crayon source hash and exact Casual Economics/Dr Rehan read-only Git commits/files. These external channel and technical references are not independent finance corroboration for Casually Finance. Chart reproduction uses the bundled ReportLab graphics library via build_chart.py; it does not modify source metrics.

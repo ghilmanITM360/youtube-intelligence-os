@@ -54,3 +54,7 @@ Our reusable modules: one original host rig, one bank/building family, three env
 ## Visual weaknesses and repair policy
 
 Dense source text cannot be assumed readable on mobile; enlarge the exact supported fragment and carry title/date/unit to a persistent citation strip. Qualify projections on screen. Use predictable color meanings but not color alone. Name dates and denominators before animating a comparison. Sponsor UI and meme imports need authorized provenance. Expressions should support narration, not assert a real person's emotions. Continuous easing/sync and full audio still need human QA; no universal “high motion makes videos win” finding.
+
+## Existing production technology, inspected read-only
+
+Dr Rehan branch frozen at `8daa1c831834ff30f2b72180a2e233b566b36468`: `projects/dr-rehan-test-videos/project/src/rig.tsx` separates look/pose records, local joint points, interpolated angles and parent transforms; `src/lib.ts` evaluates keyframes from absolute time. The established project also records full-listening and fine-motion limits. Our method uses these technical principles independently; no medical art, scripts, narration or implementation is copied or modified. [Read-only rig reference](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/8daa1c831834ff30f2b72180a2e233b566b36468/projects/dr-rehan-test-videos/project/src/rig.tsx).

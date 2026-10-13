@@ -42,9 +42,9 @@ Topic labels are single-label analyst assignments for 33 long-forms and disclose
 - [x] Inspect duplicates, Git history, usage and actual available corpus.
 - [x] Create issue and isolated stacked branch.
 - [x] Validate and persist all-upload analytics.
-- [ ] Compare packaging and topics; verify bounded news timing.
-- [ ] Synthesize existing script/visual/motion evidence.
-- [ ] Write asset factory, production gates and improvement tests.
+- [x] Compare packaging and topics; verify bounded news timing.
+- [x] Synthesize existing script/visual/motion evidence.
+- [x] Write asset factory, production gates and improvement tests.
 - [ ] Build optional original demo using existing tools only.
 - [ ] Verify source integrity, outputs, remote HEAD, PR HEAD and CI; update same draft PR.
 

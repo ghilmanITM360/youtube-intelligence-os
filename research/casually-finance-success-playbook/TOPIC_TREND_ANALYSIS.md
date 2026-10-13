@@ -74,3 +74,7 @@ Casually Finance's sampled combination—US-map macro warnings, recent year/red 
 ## Topic selection scorecard
 
 Our original 0–2 ratings: audience decision/stakes; evidence quality; surprising answerable mechanism; timeliness or enduring relevance; visual explainability; ability to make a distinct original contribution. Proceed at >=9/12, evidence >=2, and a one-sentence conditional central claim. A trending label cannot compensate for weak evidence. Keep one timely and one evergreen candidate in reserve; do not infer an optimal upload schedule from this snapshot.
+
+## Benchmark reproduction
+
+Exact branch-only file hashes and commits are in BENCHMARK_SOURCES.json. Inspect without checkout changes using `git show 6f86d786d908dbf9738a28f837282483058fa9dd:data/extracted/forensic-analysis/casual-economics/2026-10-12/02_VIDEO_FORENSICS/3tVMjRRXQIg/PACKAGING.md`. [Frozen Casual Economics evidence](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/6f86d786d908dbf9738a28f837282483058fa9dd/data/extracted/forensic-analysis/casual-economics/2026-10-12/02_VIDEO_FORENSICS/3tVMjRRXQIg/PACKAGING.md). Crayon source is `data/extracted/channel-data/DS-000023/combined/youtube_5_channels_master.csv`, filtered by exact channel_name; no new acquisition. Each title above resolves to `https://www.youtube.com/watch?v=VIDEO_ID`. No comparator rate ranking is claimed without matching snapshot dates.
