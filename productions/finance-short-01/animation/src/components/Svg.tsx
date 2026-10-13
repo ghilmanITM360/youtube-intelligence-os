@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { evaluate, headMarkup, svgMatrix, type NumPose } from "../rig/rig";
+import { evaluate, headMarkup, resolve, svgMatrix, type NumPose } from "../rig/rig";
 import { B, C, assetMarkup, instMarkup, type Inst } from "../lib/bundle";
 
 /** Raw library markup inside a group. Markup is generator output from build/ (trusted, offline). */
@@ -12,14 +12,29 @@ export const Asset: React.FC<{ id: string; tf?: string | null; opacity?: number 
   opacity === 0 ? null : <Raw m={assetMarkup(id)} tf={tf} opacity={opacity} />;
 
 /** A rigged character evaluated for this frame. `only` limits drawing to some part ids (macro crops). */
-// Suggested joint limits from remy_rig.json; violations are logged (render logs feed the QA report).
+// Joint envelope = rig suggested limits ∪ the angles the approved library poses already use
+// (several approved 3/4-view poses fold the near arm with the elbow out, beyond the side-view
+// suggestion). Frames that leave this envelope are logged as [JOINT] for the QA report.
 const LIMITS: Record<string, [number, number]> = { lean: [-10, 12], neck: [-12, 12], shoulder: [-170, 120], elbow: [-150, 20], wrist: [-60, 60], hip: [-95, 30], knee: [0, 100] };
-const checkJoints = (rig: string, p: NumPose) => {
-  const out: string[] = [];
-  const t = (name: string, v: number) => { const [lo, hi] = LIMITS[name]; if (v < lo - 2 || v > hi + 2) out.push(`${name}=${v.toFixed(1)}`); };
+type Env = Record<string, [number, number]>;
+const ENVELOPE: Record<string, Env> = {};
+for (const rig of ["remy", "assoc"] as const) {
+  const env: Env = {};
+  const widen = (k: string, v: number) => { const [lo, hi] = env[k] ?? LIMITS[k.split("_")[0]]; env[k] = [Math.min(lo, v), Math.max(hi, v)]; };
+  for (const p of Object.values(B.poses[rig])) {
+    const r = resolve(B.joints, p);
+    widen("lean", r.lean); widen("neck", r.neck);
+    for (const [side, a] of [["n", r.arm_n], ["f", r.arm_f]] as const) { widen(`shoulder_${side}`, a[0]); widen(`elbow_${side}`, a[1]); widen(`wrist_${side}`, a[2]); }
+    for (const [side, l] of [["n", r.leg_n], ["f", r.leg_f]] as const) { widen(`hip_${side}`, l[0]); widen(`knee_${side}`, l[1]); }
+  }
+  ENVELOPE[rig] = env;
+}
+const checkJoints = (rig: "remy" | "assoc", p: NumPose) => {
+  const env = ENVELOPE[rig], out: string[] = [];
+  const t = (k: string, v: number) => { const [lo, hi] = env[k] ?? LIMITS[k.split("_")[0]]; if (v < lo - 2 || v > hi + 2) out.push(`${k}=${v.toFixed(1)}`); };
   t("lean", p.lean); t("neck", p.neck);
-  for (const a of [p.arm_n, p.arm_f]) { t("shoulder", a[0]); t("elbow", a[1]); t("wrist", a[2]); }
-  for (const l of [p.leg_n, p.leg_f]) { t("hip", l[0]); t("knee", l[1]); }
+  for (const [side, a] of [["n", p.arm_n], ["f", p.arm_f]] as const) { t(`shoulder_${side}`, a[0]); t(`elbow_${side}`, a[1]); t(`wrist_${side}`, a[2]); }
+  for (const [side, l] of [["n", p.leg_n], ["f", p.leg_f]] as const) { t(`hip_${side}`, l[0]); t(`knee_${side}`, l[1]); }
   if (out.length) console.warn(`[JOINT] ${rig} ${out.join(" ")}`);
 };
 

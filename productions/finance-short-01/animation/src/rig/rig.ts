@@ -168,10 +168,12 @@ export const resolve = (J: Joints, p: Pose): NumPose => ({
 });
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
-const lerpAng = (a: number, b: number, t: number) => a + wrap(b - a) * t;
-const lerp3 = (a: Triple, b: Triple, t: number): Triple => [lerpAng(a[0], b[0], t), lerpAng(a[1], b[1], t), lerpAng(a[2], b[2], t)];
+// Joint angles are normalized to ±180 and every limit lies inside that range, so plain linear
+// interpolation keeps each in-between within the interval spanned by its two keys (it can never
+// swing "through the back" of a joint the way a shortest-path turn across ±180 would).
+const lerp3 = (a: Triple, b: Triple, t: number): Triple => [lerp(a[0], b[0], t), lerp(a[1], b[1], t), lerp(a[2], b[2], t)];
 
-/** Blend two resolved poses. Continuous channels interpolate (shortest-path angles); discrete
+/** Blend two resolved poses. Continuous channels interpolate linearly (joint-range safe); discrete
  *  channels (hand shapes, flips, expression, slots, props) switch when t >= switchAt. */
 export function blend(a: NumPose, b: NumPose, t: number, switchAt = 1): NumPose {
   const d = t >= switchAt ? b : a;

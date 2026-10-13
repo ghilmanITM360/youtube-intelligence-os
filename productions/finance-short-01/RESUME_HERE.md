@@ -1,6 +1,6 @@
 # RESUME HERE: Finance Short 01 keyframe animation
 
-_Last updated: 2026-10-13, milestone C (first grouped scenes)._
+_Last updated: 2026-10-13, milestone D complete (all 21 shots animated) + QA checkpoint. Stopped at the 5-hour usage checkpoint (85 %)._
 
 ## Where things are
 
@@ -8,7 +8,7 @@ _Last updated: 2026-10-13, milestone C (first grouped scenes)._
 |---|---|
 | Branch | `production/finance-short-01-keyframe` (base `main`) |
 | Draft PR | https://github.com/ghilmanITM360/youtube-intelligence-os/pull/29 (draft; do not merge) |
-| Last verified pushed commit before this file | `5935cd6` (milestone B). This file ships in the milestone C commit. Verify with `git ls-remote origin refs/heads/production/finance-short-01-keyframe` |
+| Last verified pushed commit before this file | `ff205a5` (S09–S12). This file ships in the QA checkpoint commit right after it. Verify with `git ls-remote origin refs/heads/production/finance-short-01-keyframe` |
 | Audio | **Blocked.** The only MP3 (`experiment/PHASE_2_ASSETS/audio_analysis/source_audio/TTSOL-en-AU-WilliamMultilingual-20261013-154730.mp3`, SHA256 `f4a9e22d…7b33`) says "April" for APR at 38.63–39.03 s. No corrected MP3 has been found yet. All timings are PROVISIONAL; previews are muted and watermarked |
 | Final export | **Not allowed** until a corrected MP3 passes the pronunciation gate (`timeline.gate.final_sync_allowed` in the bundle) |
 
@@ -16,24 +16,27 @@ _Last updated: 2026-10-13, milestone C (first grouped scenes)._
 
 | Status | Shots |
 |---|---|
-| Animated and QA'd (stills and contact sheets) | S01A, S01B, S02A, S02B, S03 |
-| Remaining (they render as labelled static hero frames) | S04A, S04B, S04C, S05A, S05B, S06A, S06B, S07A, S07B, S08, S09A, S09B, S10A, S10B, S11, S12 |
+| Animated and QA'd: stills, contact sheets, motion strips and a full muted preview | **All 21:** S01A, S01B, S02A, S02B, S03, S04A, S04B, S04C, S05A, S05B, S06A, S06B, S07A, S07B, S08, S09A, S09B, S10A, S10B, S11, S12 |
+| Remaining | No animation is missing. Still to do: audio sync once the corrected MP3 arrives, human review, and the final render once the owner approves |
 
 The per-shot choreography plan (word-anchored) is in `experiment/PHASE_2_ASSETS/CLAUDE_HANDOFF.md` §5. The shot code is in `animation/src/shots/`. Keyframes reference narration words with `word(shot, norm)`, so they follow a re-alignment automatically.
 
 ## Known defects and deviations
 
-- **S03:** the fingertip now lands on the IF lever face at (712, 742) instead of the hero frame's plate edge at (610, 1010). This is deliberate, so the press is physical, and it's documented in `S03.tsx`.
-- **Captions:** they're moved above the action in S01A, S01B and S02A (`CAPTION_Y` in `Video.tsx`), and long chunks auto-shrink to fit one line (min 40 px).
+- Full QA record: `animation/ANIMATION_QA.md`. It covers checks, deliberate deviations from the hero frames (S03 contact, S10 live circle, S11 sit-down, IK walk) and open items.
+- **Captions:** default y is 1550; S01A/B, S02A, S07B and S09 have per-shot overrides (`CAPTION_Y` in `Video.tsx`). Long chunks auto-shrink to fit one line (min 40 px). Check these on a phone.
 - **12 scene instances** (label pills, qualifier text, the C14 clock) are generator variants of registered assets with different text or size. They're listed in `bundle.report`.
 - **Text font:** Avenir Next is a macOS system font and can't be committed. On non-Mac machines the fallback font changes text widths, so re-check labels there.
 - No human art-direction or motion review has happened yet. remy-2 hair still needs owner sign-off.
 
 ## Last successful QA
 
-- `npm test` passes: rig parity on 22 poses, eyes and IK; leg IK; rigidity; walk with no foot slide (< 1e-11), knee 20–53°, hip −34…8°; timeline coverage; captions fit; asset resolution; the gate blocks final sync.
-- `npx tsc --noEmit` is clean.
-- Visual contact sheets for S01–S03 at `animation/out/qa/` (local, not committed).
+- `npm test` passes and `npx tsc --noEmit` is clean.
+- The full render gives 0 joint-envelope violations across 1590 frames, 0 black segments and 0 decode errors.
+- Seek-order stills are byte-identical.
+- Committed evidence:
+  - `animation/qa/contact_sheet_shot_midpoints.png` and the `motion_*.png` strips
+  - `animation/previews/finance_short_01_PROVISIONAL_muted.mp4` (muted and watermarked, SHA256 `ba5a5ee3…e2ed`, 5.4 MB)
 
 ## Rebuild and preview
 
@@ -72,7 +75,12 @@ python3 scripts/export_bundle.py         # only after PHASE_2_ASSETS changes (de
 
 ## Next exact operation
 
-Animate S04A–S04C (C05 ledger): title pop, balance card slide, month strip stagger, receipt rows growing under the NOT CHARGED YET clip, point_across, and the "not yet charged" pill. Then S05–S06.
+1. Get the owner's review of `previews/finance_short_01_PROVISIONAL_muted.mp4` and `qa/` (acting, pacing, caption positions, remy-2 hair).
+2. When the corrected MP3 arrives:
+   - Follow "When the corrected MP3 arrives" above.
+   - Wire `<Audio>` from a copy of the new MP3 under `animation/public/`, gated on `TL.gate.final_sync_allowed`.
+   - Re-check each shot's word anchors and its S09A "apr" anchor.
+   - Re-render, run the QA, and get owner approval before the final H.264/AAC export.
 
 ## Not yet pushed
 
