@@ -1,0 +1,40 @@
+{
+  "gate": "FINANCIAL_TERM_PRONUNCIATION",
+  "checked": "2026-10-13",
+  "result": "FAIL_MATERIAL_MISPRONUNCIATION",
+  "items": [
+    {
+      "script_text": "A true zero-percent introductory APR is different.",
+      "script_word": "APR",
+      "required_pronunciation": "A-P-R (letters; Annual Percentage Rate)",
+      "heard_as": "April (the month)",
+      "acoustic_word_span_s": [38.63, 39.03],
+      "acoustic_word_span_frames_30fps": [1159, 1171],
+      "sentence_span_s": [36.845, 39.647],
+      "sentence_span_frames_30fps": [1105, 1189],
+      "severity": "MATERIAL: changes a defined financial term into a date word in the key comparison beat",
+      "evidence": [
+        "Unprompted whisper.cpp small.en transcript of the full file: 'A true 0% introductory April is different.' (token p=0.993).",
+        "Isolated re-decodes of 36.80-39.70 s: default beam, greedy (bs1/bo1), temperature 0.4 and tail-only 37.60-39.70 s all return 'April'.",
+        "Decoder prompt deliberately biased toward 'APR, annual percentage rate, A.P.R.' still returns 'April' on the isolated sentence.",
+        "Acoustic segmentation (LPC formants, 10 kHz): [ae-I] 38.63-38.74 s, /p/ closure 38.76-38.84 s, then [r-schwa-dark l] 38.85-39.02 s with lowered F3 ~1.6-1.7 kHz and F2 ~0.95-1.08 kHz, then 'is' at ~39.10 s.",
+        "No /i:/ ('pee') after the /p/ release: this voice's own /i:/ in '-ry' shows F2 ~2.0 kHz (38.56-38.62 s); no such segment occurs, nor an open 'ar' vowel (F1 >= ~650 Hz).",
+        "Post-release material lasts ~0.17 s, enough for '-ril' but not for two spelled letter names 'P' + 'R'."
+      ],
+      "evidence_files": [
+        "audio_analysis/APR_segment_spectrogram_annotated.png",
+        "audio_analysis/APR_sentence_spectrogram_36.80-39.75s.png",
+        "audio_analysis/apr_acoustics.py",
+        "audio_analysis/asr/asr_dtw_unprompted.json"
+      ],
+      "limitations": "No human listening pass was possible in this session; the finding rests on ASR agreement across five decodes plus acoustic-phonetic segmentation.",
+      "action": "Owner to regenerate the MP3 with the TTS input written so the voice spells the letters (for example 'A-P-R' or 'A.P.R.', or SSML say-as characters), then re-run build/align_audio.py. The supplied MP3 was not edited."
+    }
+  ],
+  "other_terms_checked_ok": [
+    "interest", "store card", "deferred interest", "promotional balance", "deadline", "waived",
+    "accumulated interest", "calculated", "balances", "minimum payment", "zero-percent",
+    "introductory", "period", "promotion's deadline", "monthly payment date"
+  ],
+  "other_terms_note": "Recognized as the scripted words with ASR token probability 0.78-0.999; 'zero-percent' surfaces as '0%' (spoken 'zero percent')."
+}

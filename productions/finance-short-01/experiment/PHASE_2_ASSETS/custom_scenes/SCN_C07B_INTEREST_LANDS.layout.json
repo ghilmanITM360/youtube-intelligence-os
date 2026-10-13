@@ -1,0 +1,57 @@
+{
+ "scene_id": "SCN_C07B_INTEREST_LANDS",
+ "shots": [
+  "S06B"
+ ],
+ "camera": "none",
+ "note": "Receipt drops onto the statement; interest row fills coral. No dollar amounts.",
+ "world": [
+  {
+   "z": 0,
+   "instance": "env_stage__stage_bg",
+   "asset_id": "ENV_STAGE_L_STAGE_BG",
+   "transform": "none"
+  },
+  {
+   "z": 1,
+   "instance": "env_stage__stage_floor",
+   "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+   "transform": "none"
+  },
+  {
+   "z": 2,
+   "instance": "statement",
+   "asset_id": "PRP_STATEMENT_CHARGED",
+   "transform": "translate(470 900) scale(1.45)"
+  },
+  {
+   "z": 3,
+   "instance": "receipt",
+   "asset_id": "PRP_RECEIPT_ROWS_12",
+   "transform": "translate(470 300) rotate(-6) scale(0.8)"
+  },
+  {
+   "z": 4,
+   "instance": "stamp",
+   "asset_id": "PRP_STAMP_CHARGED",
+   "transform": "translate(470 1250) scale(0.8)"
+  },
+  {
+   "z": 5,
+   "instance": "remy",
+   "asset_id": "CHR_REMY_POSE_SHOCKED",
+   "transform": "translate(1102.4 1227.8) scale(-0.74 0.74)",
+   "pose": "shocked",
+   "expr": {
+    "preset": "shocked"
+   },
+   "feet": [
+    870,
+    1990
+   ],
+   "scale": 0.74,
+   "flip": true
+  }
+ ],
+ "ui": []
+}

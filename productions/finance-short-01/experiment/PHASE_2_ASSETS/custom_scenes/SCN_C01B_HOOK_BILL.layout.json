@@ -1,0 +1,49 @@
+{
+ "scene_id": "SCN_C01B_HOOK_BILL",
+ "shots": [
+  "S01B"
+ ],
+ "camera": "none",
+ "note": "Statement slides up into Remy's grip on 'bill'; camera pushes in from C01A framing.",
+ "world": [
+  {
+   "z": 0,
+   "instance": "env_stage__stage_bg",
+   "asset_id": "ENV_STAGE_L_STAGE_BG",
+   "transform": "none"
+  },
+  {
+   "z": 1,
+   "instance": "env_stage__stage_floor",
+   "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+   "transform": "none"
+  },
+  {
+   "z": 2,
+   "instance": "promo_sign",
+   "asset_id": "PRP_PROMO_SIGN",
+   "transform": "translate(540 170) scale(1.4)"
+  },
+  {
+   "z": 3,
+   "instance": "remy",
+   "asset_id": "CHR_REMY_POSE_HOLD_BILL",
+   "transform": "translate(86.7 668.6) scale(1.38)",
+   "pose": "hold_bill",
+   "expr": {
+    "preset": "concerned",
+    "gaze": [
+     0,
+     5
+    ]
+   },
+   "feet": [
+    520,
+    2090
+   ],
+   "scale": 1.38,
+   "flip": false
+  }
+ ],
+ "ui": []
+}

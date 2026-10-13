@@ -1,0 +1,1368 @@
+{
+ "design_version": "remy-2",
+ "frame": {
+  "viewBox": [
+   0,
+   0,
+   640,
+   1060
+  ],
+  "ground_y": 1030,
+  "ground_point": [
+   314,
+   1030
+  ]
+ },
+ "joints": {
+  "root": [
+   314,
+   1030
+  ],
+  "hip_c": [
+   314,
+   600
+  ],
+  "neck": [
+   314,
+   296
+  ],
+  "hip_n": [
+   274,
+   600
+  ],
+  "knee_n": [
+   270,
+   806
+  ],
+  "ankle_n": [
+   266,
+   986
+  ],
+  "hip_f": [
+   356,
+   600
+  ],
+  "knee_f": [
+   360,
+   806
+  ],
+  "ankle_f": [
+   364,
+   986
+  ],
+  "sho_n": [
+   240,
+   374
+  ],
+  "elb_n": [
+   234,
+   532
+  ],
+  "wri_n": [
+   230,
+   678
+  ],
+  "sho_f": [
+   392,
+   368
+  ],
+  "elb_f": [
+   398,
+   526
+  ],
+  "wri_f": [
+   402,
+   672
+  ]
+ },
+ "slots_back_to_front": [
+  "legF",
+  "legN",
+  "armF",
+  "neck",
+  "torso",
+  "head",
+  "mid",
+  "armN",
+  "prop",
+  "top"
+ ],
+ "parts": [
+  {
+   "part": "shin_f",
+   "asset_id": "CHR_REMY_PART_SHIN_F",
+   "joint": "knee",
+   "parent": "thigh",
+   "pivot": [
+    360,
+    806
+   ],
+   "slot": "legF"
+  },
+  {
+   "part": "thigh_f",
+   "asset_id": "CHR_REMY_PART_THIGH_F",
+   "joint": "hip",
+   "parent": "root",
+   "pivot": [
+    356,
+    600
+   ],
+   "slot": "legF"
+  },
+  {
+   "part": "shoe_f",
+   "asset_id": "CHR_REMY_PART_SHOE_F",
+   "joint": "ankle",
+   "parent": "shin",
+   "pivot": [
+    364,
+    986
+   ],
+   "slot": "legF"
+  },
+  {
+   "part": "shin_n",
+   "asset_id": "CHR_REMY_PART_SHIN_N",
+   "joint": "knee",
+   "parent": "thigh",
+   "pivot": [
+    270,
+    806
+   ],
+   "slot": "legN"
+  },
+  {
+   "part": "thigh_n",
+   "asset_id": "CHR_REMY_PART_THIGH_N",
+   "joint": "hip",
+   "parent": "root",
+   "pivot": [
+    274,
+    600
+   ],
+   "slot": "legN"
+  },
+  {
+   "part": "shoe_n",
+   "asset_id": "CHR_REMY_PART_SHOE_N",
+   "joint": "ankle",
+   "parent": "shin",
+   "pivot": [
+    266,
+    986
+   ],
+   "slot": "legN"
+  },
+  {
+   "part": "upper_arm_f",
+   "asset_id": "CHR_REMY_PART_UPPER_ARM_F",
+   "joint": "sho",
+   "parent": "torso",
+   "pivot": [
+    392,
+    368
+   ],
+   "slot": "armF"
+  },
+  {
+   "part": "forearm_f",
+   "asset_id": "CHR_REMY_PART_FOREARM_F",
+   "joint": "elb",
+   "parent": "upper_arm",
+   "pivot": [
+    398,
+    526
+   ],
+   "slot": "armF"
+  },
+  {
+   "part": "hand_f",
+   "asset_id": "CHR_REMY_PART_HAND_F",
+   "joint": "wri",
+   "parent": "forearm",
+   "pivot": [
+    402,
+    672
+   ],
+   "slot": "armF"
+  },
+  {
+   "part": "cuff_f",
+   "asset_id": "CHR_REMY_PART_CUFF_F",
+   "joint": "elb",
+   "parent": "upper_arm",
+   "pivot": [
+    398,
+    526
+   ],
+   "slot": "armF"
+  },
+  {
+   "part": "neck",
+   "asset_id": "CHR_REMY_PART_NECK",
+   "joint": "hip_c",
+   "parent": "upper_body",
+   "pivot": [
+    314,
+    600
+   ],
+   "slot": "neck"
+  },
+  {
+   "part": "torso",
+   "asset_id": "CHR_REMY_PART_TORSO",
+   "joint": "hip_c",
+   "parent": "upper_body",
+   "pivot": [
+    314,
+    600
+   ],
+   "slot": "torso"
+  },
+  {
+   "part": "upper_arm_n",
+   "asset_id": "CHR_REMY_PART_UPPER_ARM_N",
+   "joint": "sho",
+   "parent": "torso",
+   "pivot": [
+    240,
+    374
+   ],
+   "slot": "armN"
+  },
+  {
+   "part": "forearm_n",
+   "asset_id": "CHR_REMY_PART_FOREARM_N",
+   "joint": "elb",
+   "parent": "upper_arm",
+   "pivot": [
+    234,
+    532
+   ],
+   "slot": "armN"
+  },
+  {
+   "part": "hand_n",
+   "asset_id": "CHR_REMY_PART_HAND_N",
+   "joint": "wri",
+   "parent": "forearm",
+   "pivot": [
+    230,
+    678
+   ],
+   "slot": "armN"
+  },
+  {
+   "part": "cuff_n",
+   "asset_id": "CHR_REMY_PART_CUFF_N",
+   "joint": "elb",
+   "parent": "upper_arm",
+   "pivot": [
+    234,
+    532
+   ],
+   "slot": "armN"
+  }
+ ],
+ "hierarchy": "root -> body_dy -> {legs: hip->knee->ankle} and upper_body(rotate lean @hip_c) -> {neck, torso, head(rotate neck @neck), arms: shoulder->elbow->wrist->hand}",
+ "transform_rule": "world = parent * translate(pivot) * rotate(angle) * translate(-pivot); all parts drawn in one rest frame. Hand: forearm * rotate(wrist @wri) * translate(wri) * rotate(90) [* scale(1,-1) if flip].",
+ "angle_sign": "SVG degrees, positive = clockwise on screen; lean + = forward (toward screen-right)",
+ "suggested_limits_deg": {
+  "lean": [
+   -10,
+   12
+  ],
+  "neck": [
+   -12,
+   12
+  ],
+  "shoulder": [
+   -170,
+   120
+  ],
+  "elbow": [
+   -150,
+   20
+  ],
+  "wrist": [
+   -60,
+   60
+  ],
+  "hip": [
+   -95,
+   30
+  ],
+  "knee": [
+   0,
+   100
+  ]
+ },
+ "hands": [
+  "relaxed",
+  "point",
+  "fist",
+  "open",
+  "palm_up",
+  "grip_back",
+  "grip_front",
+  "pen_back",
+  "pen_front",
+  "release"
+ ],
+ "hand_front_layers": {
+  "grip_back": "grip_front",
+  "pen_back": "pen_front"
+ },
+ "expressions": {
+  "neutral": {
+   "eyes": "open",
+   "brows": "neutral",
+   "mouth": "neutral",
+   "blush": false
+  },
+  "curious": {
+   "eyes": "open",
+   "brows": "raised",
+   "mouth": "smirk",
+   "blush": false
+  },
+  "intrigued": {
+   "eyes": "open",
+   "brows": "skeptic",
+   "mouth": "smirk",
+   "blush": false
+  },
+  "confused": {
+   "eyes": "open",
+   "brows": "skeptic",
+   "mouth": "wavy",
+   "blush": false
+  },
+  "concerned": {
+   "eyes": "open",
+   "brows": "worried",
+   "mouth": "frown",
+   "blush": false
+  },
+  "worried_talk": {
+   "eyes": "open",
+   "brows": "worried",
+   "mouth": "open",
+   "blush": false
+  },
+  "shocked": {
+   "eyes": "wide",
+   "brows": "raised",
+   "mouth": "oh",
+   "blush": false
+  },
+  "alarmed": {
+   "eyes": "wide",
+   "brows": "worried",
+   "mouth": "grimace",
+   "blush": false
+  },
+  "relieved": {
+   "eyes": "closed",
+   "brows": "soft",
+   "mouth": "smile",
+   "blush": true
+  },
+  "happy": {
+   "eyes": "happy",
+   "brows": "soft",
+   "mouth": "grin",
+   "blush": true
+  },
+  "content": {
+   "eyes": "open",
+   "brows": "soft",
+   "mouth": "smile",
+   "blush": true
+  },
+  "focused": {
+   "eyes": "squint",
+   "brows": "focused",
+   "mouth": "flat",
+   "blush": false
+  },
+  "determined": {
+   "eyes": "open",
+   "brows": "focused",
+   "mouth": "smirk",
+   "blush": false
+  },
+  "skeptical": {
+   "eyes": "half",
+   "brows": "skeptic",
+   "mouth": "flat",
+   "blush": false
+  },
+  "deadpan": {
+   "eyes": "half",
+   "brows": "neutral",
+   "mouth": "flat",
+   "blush": false
+  }
+ },
+ "gaze_rule": "add (dx,dy) to both eye centres; keep within +-6px",
+ "face_components": [
+  "CHR_REMY_FACE_EYES_OPEN",
+  "CHR_REMY_FACE_EYES_WIDE",
+  "CHR_REMY_FACE_EYES_HALF",
+  "CHR_REMY_FACE_EYES_HAPPY",
+  "CHR_REMY_FACE_EYES_CLOSED",
+  "CHR_REMY_FACE_EYES_SQUINT",
+  "CHR_REMY_FACE_BROWS_NEUTRAL",
+  "CHR_REMY_FACE_BROWS_RAISED",
+  "CHR_REMY_FACE_BROWS_WORRIED",
+  "CHR_REMY_FACE_BROWS_FOCUSED",
+  "CHR_REMY_FACE_BROWS_SKEPTIC",
+  "CHR_REMY_FACE_BROWS_SOFT",
+  "CHR_REMY_FACE_MOUTH_NEUTRAL",
+  "CHR_REMY_FACE_MOUTH_SMILE",
+  "CHR_REMY_FACE_MOUTH_FROWN",
+  "CHR_REMY_FACE_MOUTH_FLAT",
+  "CHR_REMY_FACE_MOUTH_SMIRK",
+  "CHR_REMY_FACE_MOUTH_WAVY",
+  "CHR_REMY_FACE_MOUTH_GRIN",
+  "CHR_REMY_FACE_MOUTH_OPEN",
+  "CHR_REMY_FACE_MOUTH_OH",
+  "CHR_REMY_FACE_MOUTH_GRIMACE"
+ ],
+ "poses": {
+  "stand_neutral": {
+   "asset_id": "CHR_REMY_POSE_STAND_NEUTRAL",
+   "use": "Default stance, entrances, reaction holds",
+   "compatible_expressions": [
+    "neutral",
+    "curious",
+    "concerned",
+    "content",
+    "skeptical",
+    "deadpan"
+   ],
+   "body_dy": 0,
+   "lean": 0,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "relaxed",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": 6,
+    "elbow": -4,
+    "wrist": 0
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -6,
+    "elbow": 4,
+    "wrist": 0
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "neutral"
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "point_forward": {
+   "asset_id": "CHR_REMY_POSE_POINT_FORWARD",
+   "use": "B3 point at IF; B7/B10 indicate a label to screen-right",
+   "compatible_expressions": [
+    "curious",
+    "determined",
+    "concerned",
+    "neutral"
+   ],
+   "body_dy": 0,
+   "lean": 3,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "point",
+   "flip_n": false,
+   "flip_f": false,
+   "arm_n_deg": {
+    "shoulder": 6,
+    "elbow": -4,
+    "wrist": 0
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -60.52,
+    "elbow": -49.82,
+    "wrist": 16.35
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "curious",
+    "gaze": [
+     4,
+     0
+    ]
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "point_up": {
+   "asset_id": "CHR_REMY_POSE_POINT_UP",
+   "use": "Point at headline / sign above and to the right",
+   "compatible_expressions": [
+    "curious",
+    "determined",
+    "intrigued"
+   ],
+   "body_dy": 0,
+   "lean": 0,
+   "neck": -4,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "point",
+   "flip_n": false,
+   "flip_f": false,
+   "arm_n_deg": {
+    "shoulder": 6,
+    "elbow": -4,
+    "wrist": 0
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -105.1,
+    "elbow": -66.65,
+    "wrist": 33.74
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "curious",
+    "gaze": [
+     4,
+     -4
+    ]
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "point_across": {
+   "asset_id": "CHR_REMY_POSE_POINT_ACROSS",
+   "use": "Near-arm point across the body at a close object (switch, ledger)",
+   "compatible_expressions": [
+    "determined",
+    "curious",
+    "concerned"
+   ],
+   "body_dy": 0,
+   "lean": 4,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "point",
+   "hand_f": "relaxed",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": -29.6,
+    "elbow": -79.64,
+    "wrist": 13.24
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -6,
+    "elbow": 4,
+    "wrist": 0
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "determined",
+    "gaze": [
+     4,
+     2
+    ]
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "hold_sheet": {
+   "asset_id": "CHR_REMY_POSE_HOLD_SHEET",
+   "use": "B2 reading the store-card offer",
+   "compatible_expressions": [
+    "intrigued",
+    "curious",
+    "concerned",
+    "skeptical",
+    "neutral"
+   ],
+   "body_dy": 0,
+   "lean": 0,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "grip_back",
+   "hand_f": "grip_back",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": -51.43,
+    "elbow": 136.41,
+    "wrist": 173.02
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": 36.84,
+    "elbow": -127.64,
+    "wrist": -167.2
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "intrigued",
+    "gaze": [
+     2,
+     4
+    ]
+   },
+   "slot_overrides": {},
+   "props": [
+    {
+     "id": "held_offer_sheet",
+     "attach": "upper_body",
+     "translate_rotate_scale": [
+      330,
+      440,
+      -2,
+      0.6
+     ]
+    }
+   ]
+  },
+  "hold_bill": {
+   "asset_id": "CHR_REMY_POSE_HOLD_BILL",
+   "use": "B1 'Then why the interest bill?'; B6 bill lands",
+   "compatible_expressions": [
+    "concerned",
+    "shocked",
+    "confused",
+    "alarmed"
+   ],
+   "body_dy": 0,
+   "lean": -3,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "grip_back",
+   "hand_f": "grip_back",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": -50.97,
+    "elbow": 132.38,
+    "wrist": 176.59
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": 36.87,
+    "elbow": -123.73,
+    "wrist": -171.14
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "concerned",
+    "gaze": [
+     0,
+     4
+    ]
+   },
+   "slot_overrides": {},
+   "props": [
+    {
+     "id": "held_statement",
+     "attach": "upper_body",
+     "translate_rotate_scale": [
+      330,
+      440,
+      3,
+      0.66
+     ]
+    }
+   ]
+  },
+  "hold_card_up": {
+   "asset_id": "CHR_REMY_POSE_HOLD_CARD_UP",
+   "use": "B2 store card in hand; B9 holding the 0% card",
+   "compatible_expressions": [
+    "curious",
+    "intrigued",
+    "content",
+    "skeptical"
+   ],
+   "body_dy": 0,
+   "lean": 0,
+   "neck": 4,
+   "head_flip": false,
+   "hand_n": "grip_back",
+   "hand_f": "relaxed",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": -10.2,
+    "elbow": -124.88,
+    "wrist": -32.92
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -6,
+    "elbow": 4,
+    "wrist": 0
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "curious",
+    "gaze": [
+     5,
+     2
+    ]
+   },
+   "slot_overrides": {},
+   "props": [
+    {
+     "id": "held_store_card",
+     "attach": "upper_body",
+     "translate_rotate_scale": [
+      418,
+      352,
+      -10,
+      0.85
+     ]
+    }
+   ]
+  },
+  "open_hands": {
+   "asset_id": "CHR_REMY_POSE_OPEN_HANDS",
+   "use": "B9 separating two offer types (two different things)",
+   "compatible_expressions": [
+    "content",
+    "neutral",
+    "determined",
+    "curious"
+   ],
+   "body_dy": 0,
+   "lean": 0,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "open",
+   "hand_f": "open",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": -18.74,
+    "elbow": 129.53,
+    "wrist": 41.21
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": 14.72,
+    "elbow": -124.15,
+    "wrist": -42.57
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "content"
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "shrug": {
+   "asset_id": "CHR_REMY_POSE_SHRUG",
+   "use": "Hook: 'No interest?' quizzical shrug",
+   "compatible_expressions": [
+    "confused",
+    "skeptical",
+    "deadpan"
+   ],
+   "body_dy": 0,
+   "lean": 0,
+   "neck": -5,
+   "head_flip": false,
+   "hand_n": "palm_up",
+   "hand_f": "palm_up",
+   "flip_n": true,
+   "flip_f": false,
+   "arm_n_deg": {
+    "shoulder": -34.09,
+    "elbow": 117.89,
+    "wrist": -5.8
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": 27.55,
+    "elbow": -112.39,
+    "wrist": 6.84
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "confused"
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "shocked": {
+   "asset_id": "CHR_REMY_POSE_SHOCKED",
+   "use": "B6 accumulated interest lands on the bill",
+   "compatible_expressions": [
+    "shocked",
+    "alarmed"
+   ],
+   "body_dy": 0,
+   "lean": -5,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "open",
+   "hand_f": "open",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": 59.75,
+    "elbow": 154.51,
+    "wrist": -48.27
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -60.93,
+    "elbow": -151.19,
+    "wrist": 46.12
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "shocked"
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "think_chin": {
+   "asset_id": "CHR_REMY_POSE_THINK_CHIN",
+   "use": "B7 'Not just interest on what's left' \u2013 working it out",
+   "compatible_expressions": [
+    "skeptical",
+    "intrigued",
+    "concerned",
+    "focused"
+   ],
+   "body_dy": 0,
+   "lean": 0,
+   "neck": -3,
+   "head_flip": false,
+   "hand_n": "fist",
+   "hand_f": "relaxed",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": -47.69,
+    "elbow": -158.48,
+    "wrist": 54.17
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -6,
+    "elbow": 4,
+    "wrist": 0
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "skeptical",
+    "gaze": [
+     4,
+     -3
+    ]
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "drop_coin": {
+   "asset_id": "CHR_REMY_POSE_DROP_COIN",
+   "use": "B5 dropping payment tokens onto the promotional balance",
+   "compatible_expressions": [
+    "determined",
+    "focused",
+    "content"
+   ],
+   "body_dy": 0,
+   "lean": 6,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "release",
+   "flip_n": false,
+   "flip_f": false,
+   "arm_n_deg": {
+    "shoulder": 6,
+    "elbow": -4,
+    "wrist": 0
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -17.79,
+    "elbow": -69.31,
+    "wrist": 31.1
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "determined",
+    "gaze": [
+     4,
+     5
+    ]
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "relieved": {
+   "asset_id": "CHR_REMY_POSE_RELIEVED",
+   "use": "B5 interest waived \u2013 exhale",
+   "compatible_expressions": [
+    "relieved",
+    "happy",
+    "content"
+   ],
+   "body_dy": 0,
+   "lean": -3,
+   "neck": -7,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "relaxed",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": 10,
+    "elbow": -6,
+    "wrist": 0
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -10,
+    "elbow": 6,
+    "wrist": 0
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "relieved"
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "walk_a": {
+   "asset_id": "CHR_REMY_POSE_WALK_A",
+   "use": "Walk cycle contact pose (B2 entering store, B7 walking the timeline)",
+   "compatible_expressions": [
+    "curious",
+    "neutral",
+    "content",
+    "determined"
+   ],
+   "body_dy": 0,
+   "lean": 3,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "relaxed",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": -16,
+    "elbow": -10,
+    "wrist": 0
+   },
+   "leg_n_deg": {
+    "hip": -22,
+    "knee": 14,
+    "ankle": -6
+   },
+   "arm_f_deg": {
+    "shoulder": 16,
+    "elbow": -14,
+    "wrist": 0
+   },
+   "leg_f_deg": {
+    "hip": 20,
+    "knee": 24,
+    "ankle": 4
+   },
+   "expression": {
+    "preset": "curious",
+    "gaze": [
+     4,
+     0
+    ]
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "walk_b": {
+   "asset_id": "CHR_REMY_POSE_WALK_B",
+   "use": "Walk cycle passing pose",
+   "compatible_expressions": [
+    "curious",
+    "neutral",
+    "content",
+    "determined"
+   ],
+   "body_dy": -6,
+   "lean": 3,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "relaxed",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": 2,
+    "elbow": -6,
+    "wrist": 0
+   },
+   "leg_n_deg": {
+    "hip": -4,
+    "knee": 6,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -2,
+    "elbow": -6,
+    "wrist": 0
+   },
+   "leg_f_deg": {
+    "hip": -14,
+    "knee": 52,
+    "ankle": 10
+   },
+   "expression": {
+    "preset": "curious",
+    "gaze": [
+     4,
+     0
+    ]
+   },
+   "slot_overrides": {},
+   "props": []
+  },
+  "tick_pen": {
+   "asset_id": "CHR_REMY_POSE_TICK_PEN",
+   "use": "B8 ticking minimum-payment boxes",
+   "compatible_expressions": [
+    "focused",
+    "determined",
+    "concerned"
+   ],
+   "body_dy": 0,
+   "lean": 5,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "pen_back",
+   "flip_n": false,
+   "flip_f": false,
+   "arm_n_deg": {
+    "shoulder": 6,
+    "elbow": -4,
+    "wrist": 0
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -25.84,
+    "elbow": -94.68,
+    "wrist": 54.52
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "focused",
+    "gaze": [
+     5,
+     3
+    ]
+   },
+   "slot_overrides": {},
+   "props": [
+    {
+     "id": "held_pen",
+     "attach": "hand_f",
+     "translate_rotate_scale": [
+      24,
+      -4,
+      70,
+      0.8
+     ]
+    }
+   ]
+  },
+  "circle_marker": {
+   "asset_id": "CHR_REMY_POSE_CIRCLE_MARKER",
+   "use": "B10 circling the promotion-expiry date",
+   "compatible_expressions": [
+    "determined",
+    "focused",
+    "content"
+   ],
+   "body_dy": 0,
+   "lean": 0,
+   "neck": -3,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "pen_back",
+   "flip_n": false,
+   "flip_f": false,
+   "arm_n_deg": {
+    "shoulder": 6,
+    "elbow": -4,
+    "wrist": 0
+   },
+   "leg_n_deg": {
+    "hip": 3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": -67.38,
+    "elbow": -86.86,
+    "wrist": 30.24
+   },
+   "leg_f_deg": {
+    "hip": -3,
+    "knee": 0,
+    "ankle": 0
+   },
+   "expression": {
+    "preset": "determined",
+    "gaze": [
+     5,
+     -2
+    ]
+   },
+   "slot_overrides": {},
+   "props": [
+    {
+     "id": "held_marker",
+     "attach": "hand_f",
+     "translate_rotate_scale": [
+      26,
+      -6,
+      70,
+      0.8
+     ]
+    }
+   ]
+  },
+  "sit_relaxed": {
+   "asset_id": "CHR_REMY_POSE_SIT_RELAXED",
+   "use": "B11 sofa came home on day one",
+   "compatible_expressions": [
+    "content",
+    "relieved",
+    "happy",
+    "neutral"
+   ],
+   "body_dy": 206,
+   "lean": -4,
+   "neck": 0,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "relaxed",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": -12.78,
+    "elbow": -54.28,
+    "wrist": -10.94
+   },
+   "leg_n_deg": {
+    "hip": -90,
+    "knee": 90,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": 27.13,
+    "elbow": -85.73,
+    "wrist": -13.4
+   },
+   "leg_f_deg": {
+    "hip": -88,
+    "knee": 92,
+    "ankle": -4
+   },
+   "expression": {
+    "preset": "content"
+   },
+   "slot_overrides": {
+    "shin_f": "mid",
+    "thigh_f": "mid",
+    "shoe_f": "mid",
+    "shin_n": "mid",
+    "thigh_n": "mid",
+    "shoe_n": "mid"
+   },
+   "props": []
+  },
+  "sit_notice": {
+   "asset_id": "CHR_REMY_POSE_SIT_NOTICE",
+   "use": "B12 notices the waiting interest receipt beside him",
+   "compatible_expressions": [
+    "concerned",
+    "skeptical",
+    "deadpan",
+    "intrigued"
+   ],
+   "body_dy": 206,
+   "lean": 2,
+   "neck": 7,
+   "head_flip": false,
+   "hand_n": "relaxed",
+   "hand_f": "relaxed",
+   "flip_n": false,
+   "flip_f": true,
+   "arm_n_deg": {
+    "shoulder": -12.78,
+    "elbow": -54.28,
+    "wrist": -10.94
+   },
+   "leg_n_deg": {
+    "hip": -90,
+    "knee": 90,
+    "ankle": 0
+   },
+   "arm_f_deg": {
+    "shoulder": 27.13,
+    "elbow": -85.73,
+    "wrist": -13.4
+   },
+   "leg_f_deg": {
+    "hip": -88,
+    "knee": 92,
+    "ankle": -4
+   },
+   "expression": {
+    "preset": "concerned",
+    "gaze": [
+     5,
+     5
+    ]
+   },
+   "slot_overrides": {
+    "shin_f": "mid",
+    "thigh_f": "mid",
+    "shoe_f": "mid",
+    "shin_n": "mid",
+    "thigh_n": "mid",
+    "shoe_n": "mid"
+   },
+   "props": []
+  }
+ }
+}

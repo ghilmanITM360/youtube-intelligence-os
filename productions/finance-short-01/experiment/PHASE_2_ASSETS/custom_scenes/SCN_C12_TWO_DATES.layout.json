@@ -1,0 +1,85 @@
+{
+ "scene_id": "SCN_C12_TWO_DATES",
+ "shots": [
+  "S10A",
+  "S10B"
+ ],
+ "camera": "none",
+ "note": "Due-date card first, then Remy circles the single promotion-expiry card.",
+ "world": [
+  {
+   "z": 0,
+   "instance": "env_living_room__living_bg_wall",
+   "asset_id": "ENV_LIVING_ROOM_L_LIVING_BG_WALL",
+   "transform": "none"
+  },
+  {
+   "z": 1,
+   "instance": "env_living_room__living_floor",
+   "asset_id": "ENV_LIVING_ROOM_L_LIVING_FLOOR",
+   "transform": "none"
+  },
+  {
+   "z": 2,
+   "instance": "env_living_room__living_rug",
+   "asset_id": "ENV_LIVING_ROOM_L_LIVING_RUG",
+   "transform": "none"
+  },
+  {
+   "z": 3,
+   "instance": "env_living_room__living_mid_props",
+   "asset_id": "ENV_LIVING_ROOM_L_LIVING_MID_PROPS",
+   "transform": "none"
+  },
+  {
+   "z": 4,
+   "instance": "env_living_room__living_fg_plant",
+   "asset_id": "ENV_LIVING_ROOM_L_LIVING_FG_PLANT",
+   "transform": "none"
+  },
+  {
+   "z": 5,
+   "instance": "cal_due",
+   "asset_id": "PRP_CALENDAR_PAGE_PAYMENT_DUE",
+   "transform": "translate(720 450) scale(0.95)"
+  },
+  {
+   "z": 6,
+   "instance": "cal_promo",
+   "asset_id": "PRP_CALENDAR_PAGE_PROMO_ENDS",
+   "transform": "translate(800 940) scale(1.45)"
+  },
+  {
+   "z": 7,
+   "instance": "remy",
+   "asset_id": "CHR_REMY_POSE_CIRCLE_MARKER",
+   "transform": "translate(63.1 884.5) scale(0.85)",
+   "pose": "circle_marker",
+   "expr": {
+    "preset": "determined",
+    "gaze": [
+     5,
+     -2
+    ]
+   },
+   "feet": [
+    330,
+    1760
+   ],
+   "scale": 0.85,
+   "flip": false
+  }
+ ],
+ "ui": [
+  {
+   "instance": "label_due",
+   "asset_id": "TYP_LABEL_EVERY_MONTH",
+   "transform": "translate(720 630)"
+  },
+  {
+   "instance": "label_promo",
+   "asset_id": "TYP_LABEL_ONE_DEADLINE",
+   "transform": "translate(800 1170)"
+  }
+ ]
+}
