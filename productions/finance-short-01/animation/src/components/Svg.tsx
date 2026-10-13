@@ -75,3 +75,11 @@ export const CaptionPlate: React.FC<{ text: string; opacity?: number; cy?: numbe
     </g>
   );
 };
+
+/** Rectangular clip (masks for wipes and paper growing out of a holder). */
+export const Clip: React.FC<{ id: string; x: number; y: number; w: number; h: number; children: React.ReactNode }> = ({ id, x, y, w, h, children }) => (
+  <>
+    <defs><clipPath id={id}><rect x={x} y={y} width={Math.max(0, w)} height={Math.max(0, h)} /></clipPath></defs>
+    <g clipPath={`url(#${id})`}>{children}</g>
+  </>
+);

@@ -6,8 +6,10 @@ import { prog } from "./lib/anim";
 import { SHOTS } from "./shots";
 import { StaticHero } from "./shots/StaticHero";
 
-// Caption plate centre per shot where the default (y 1430) would cover the key action.
+// Caption plate centre. Default y 1550 keeps the plate (≈1500–1600) above the Shorts UI band
+// (bottom 320 px) and below Remy's face in the stage set-ups; shots with a big Remy override it.
 const CAPTION_Y: Record<string, number> = { S01A: 720, S01B: 720, S02A: 560 };
+const CAPTION_DEFAULT_Y = 1550;
 
 /** Screen-fixed captions from CAPTIONS.json (provisional timings). */
 const Captions: React.FC = () => {
@@ -19,7 +21,7 @@ const Captions: React.FC = () => {
   const o = prog(f, c.from - 2, c.from + 2) * (1 - prog(f, end - 3, end));
   return (
     <AbsoluteFill>
-      <svg viewBox="0 0 1080 1920" width={1080} height={1920}><CaptionPlate text={c.text} opacity={o} cy={CAPTION_Y[c.shot] ?? 1430} /></svg>
+      <svg viewBox="0 0 1080 1920" width={1080} height={1920}><CaptionPlate text={c.text} opacity={o} cy={CAPTION_Y[c.shot] ?? CAPTION_DEFAULT_Y} /></svg>
     </AbsoluteFill>
   );
 };

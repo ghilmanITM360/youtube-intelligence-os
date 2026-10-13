@@ -1,6 +1,6 @@
 // Typed access to the generated asset bundle (src/data/bundle.json, from scripts/export_bundle.py).
 import raw from "../data/bundle.json";
-import { resolve, type FaceData, type Joints, type NumPose, type Pose, type RigData } from "../rig/rig";
+import { apply, evaluate, resolve, type FaceData, type Joints, type NumPose, type Pose, type RigData } from "../rig/rig";
 
 export type CharMeta = { rig: "remy" | "assoc"; pose: Pose; feet?: [number, number] | null; scale?: number; flip?: boolean | null };
 export type Inst = { id: string; asset: string; tf: string | null; m?: string | null; char?: CharMeta };
@@ -62,3 +62,10 @@ export const shotLen = (id: string) => shot(id).to - shot(id).from;
 /** Port of scenes.char_tf: put the rig ground point (314, 1030) at scene (fx, fy) with scale s. */
 export const charTf = (fx: number, fy: number, s: number, flip = false) =>
   flip ? `translate(${fx + 314 * s} ${fy - 1030 * s}) scale(${-s} ${s})` : `translate(${fx - 314 * s} ${fy - 1030 * s}) scale(${s})`;
+
+/** Port of scenes.char_point: scene position of a local point on a character part. */
+export const charPoint = (p: NumPose, part: string, local: [number, number], fx: number, fy: number, s: number, flip = false, rig: "remy" | "assoc" = "remy"): [number, number] => {
+  const m = evaluate(B.joints, B.slots, B.hand_front, B.rigs[rig], p).find((q) => q.id === part)!.m;
+  const [x, y] = apply(m, local);
+  return [fx + (flip ? -1 : 1) * (x - 314) * s, fy + (y - 1030) * s];
+};
