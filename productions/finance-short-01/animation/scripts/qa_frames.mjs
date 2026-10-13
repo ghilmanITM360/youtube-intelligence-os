@@ -30,6 +30,7 @@ for (const frame of frames) {
   files.push(["-label", `${frame} ${s.id}+${frame - s.from}`, file]);
 }
 await browser.close({ silent: true });
-execFileSync("magick", ["montage", ...files.flat(), "-tile", `${cols}x`, "-geometry", "+6+6", "-font", opt.font ?? "/System/Library/Fonts/Helvetica.ttc", "-pointsize", "18",
+if (opt.sheet === "false") { console.log(out); process.exit(0); }
+execFileSync("magick", ["montage", ...files.flat(), "-tile", `${cols}x`, "-geometry", "+6+6", ...(opt.font ? ["-font", opt.font] : []), "-pointsize", "18",
   "-background", "#E9E4DA", path.join(out, "sheet.png")]);
 console.log(path.join(out, "sheet.png"));

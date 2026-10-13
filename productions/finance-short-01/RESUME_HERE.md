@@ -85,3 +85,16 @@ python3 scripts/export_bundle.py         # only after PHASE_2_ASSETS changes (de
 ## Not yet pushed
 
 Nothing, once the milestone C commit is pushed. `animation/out/` (QA renders) is intentionally local.
+
+## 2026-10-13 second-PC milestone: portability
+
+- Current checkout: `/Users/ghilmankhan/.codex/worktrees/finance-short-01/youtube-intelligence-os`, branch `production/finance-short-01-keyframe`; old owner-PC path does not exist here.
+- Verified starting local/remote/PR head: `a9543746622e5dc8ad715551b184f06887b8e2fb`; exact-head GitHub validate SUCCESS. This section ships in the next milestone; resolve its SHA with `git log -1` and remote with `git ls-remote` (a commit cannot contain its own SHA).
+- Fixed confirmed second-PC PNG renderer failure: local locked Sharp 0.35.5 instead of hardcoded owner-PC cache. Added real scratch render test (unrelated cwd, dimensions, deterministic output).
+- QA frame extraction now supports `--sheet=false` without ImageMagick; default montage font no longer uses a macOS filesystem path.
+- Fresh `npm ci`, rig/timeline tests, typecheck, bundle rebuild, and four 320px stills PASS. 244 SVG / 196 PNG hashes match. Renderer `npm ci` and smoke test PASS. `PORTABILITY.md` contains exact commands and font strategy.
+- Bundle bytes match; fixture float drift max 4.55e-13, within 1e-6 tolerance; original committed fixture preserved.
+- New previews are local-only ignored `animation/out/qa/portability/`; existing committed preview remains remotely recoverable. No visual shot artwork changed in this milestone.
+- Corrected MP3 absent; original remains intact, final export blocked. Hair and human art/motion/mobile approval remain pending.
+- Usage at milestone: five-hour 3%, weekly 29% (live snapshot; recheck).
+- Next safe operation: inspect fresh mobile stills, then sample sensitive contact transitions and classify any confirmed defect. All 21 implemented shots remain in scope; no claim of human approval.
