@@ -58,3 +58,7 @@ Dense source text cannot be assumed readable on mobile; enlarge the exact suppor
 ## Existing production technology, inspected read-only
 
 Dr Rehan branch frozen at `8daa1c831834ff30f2b72180a2e233b566b36468`: `projects/dr-rehan-test-videos/project/src/rig.tsx` separates look/pose records, local joint points, interpolated angles and parent transforms; `src/lib.ts` evaluates keyframes from absolute time. The established project also records full-listening and fine-motion limits. Our method uses these technical principles independently; no medical art, scripts, narration or implementation is copied or modified. [Read-only rig reference](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/8daa1c831834ff30f2b72180a2e233b566b36468/projects/dr-rehan-test-videos/project/src/rig.tsx).
+
+## Rendered follow-up and attribution correction (2026-10-13)
+
+The archived YouTube description for roe3SgezmmU credits original hand-drawn illustrations, visuals and animation to a freelance artist. This verifies the channel's self-report, not its actual software, artist workload or AI usage. Budget custom illustration and acting separately from keyframe engineering. The new [42-second original Remotion pilot](PILOT_REMOTION/README.md) demonstrates rig consistency and real animation but shows [illustration/acting quality gaps](PILOT_REMOTION/QUALITY_REVIEW.md); it does not certify parity or publication readiness. The prior Word/Excel reports are the earlier research snapshot; this follow-up supplies the corrected feasibility evidence.

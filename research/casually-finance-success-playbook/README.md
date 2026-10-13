@@ -66,3 +66,7 @@ Run `python3 research/casually-finance-success-playbook/verify_playbook.py` for 
 For the chart, use the bundled Python from Codex workspace dependencies with `python3 research/casually-finance-success-playbook/build_chart.py` (ReportLab required). All metrics remain the frozen saved snapshot. For demo reproduction, follow [DEMO README](DEMO/README.md).
 
 [Issue #27](https://github.com/ghilmanITM360/youtube-intelligence-os/issues/27) / [draft PR #28](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/28). The ten reports, all-upload CSV, chart and original demo are delivered. No merges, production engine changes, paid scraping, source modifications or forensic reruns.
+
+## Rendered visual-quality follow-up
+
+The [new original Remotion pilot](PILOT_REMOTION/README.md) includes a 42-second 1080p MP4, articulated SVG character library, a moving reference comparison, measured technical QA, source-description attribution correction and an honest quality-gap review. Status: `PILOT_RENDERED_QUALITY_GAPS`; full human listening/art direction pending. The existing research audit and Office exports were reused without reprocessing.

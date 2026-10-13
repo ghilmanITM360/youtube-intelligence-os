@@ -120,3 +120,7 @@ Planning estimates for one solo creator, already comfortable with SVG/code, no c
 | Final review / revisions / publish | 3–8 hours | 3–8 hours |
 
 Initial total roughly 47–116 person-hours; established-kit episode 27–68. Parallel team work changes elapsed time, not total labor automatically. Highly unique documentary scenes, licensed media, complex acting or poor source access expand these ranges. The small silent demo proves deterministic reuse, not a full production cycle, professional art quality or hundreds-of-assets throughput. Demo status and reproduction appear in DEMO/README.md.
+
+## Rendered follow-up and attribution correction (2026-10-13)
+
+The archived YouTube description for roe3SgezmmU credits original hand-drawn illustrations, visuals and animation to a freelance artist. This verifies the channel's self-report, not its actual software, artist workload or AI usage. Budget custom illustration and acting separately from keyframe engineering. The new [42-second original Remotion pilot](PILOT_REMOTION/README.md) demonstrates rig consistency and real animation but shows [illustration/acting quality gaps](PILOT_REMOTION/QUALITY_REVIEW.md); it does not certify parity or publication readiness. The prior Word/Excel reports are the earlier research snapshot; this follow-up supplies the corrected feasibility evidence.

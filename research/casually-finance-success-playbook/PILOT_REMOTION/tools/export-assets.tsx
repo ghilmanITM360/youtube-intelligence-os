@@ -1,0 +1,11 @@
+import React from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import fs from 'node:fs';
+import {Character,House,Bank,Contract,Lock,Coin,Environment,Expression} from '../src/art';
+import {PoseName} from '../src/motion';
+fs.mkdirSync('assets/characters',{recursive:true});fs.mkdirSync('assets/props',{recursive:true});
+const svg=(content:React.ReactNode,w=600,h=600)=>'<?xml version="1.0" encoding="UTF-8"?>\n'+renderToStaticMarkup(<svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${w} ${h}`} width={w} height={h}>{content}</svg>);
+for(const pose of ['shrug','point','hold'] as PoseName[])for(const expression of ['curious','concerned','explain','pleased','neutral'] as Expression[])fs.writeFileSync(`assets/characters/nori-${pose}-${expression}.svg`,svg(<Character x={300} y={100} scale={1} f={40} pose={pose} expression={expression}/>));
+for(const [name,Component] of Object.entries({house:House,bank:Bank,contract:Contract,lock:Lock,coin:Coin}))fs.writeFileSync(`assets/props/${name}.svg`,svg(<Component x={300} y={300} scale={1.4}/>));
+fs.writeFileSync('assets/environment.svg',svg(<Environment/>,1920,1080));
+console.log('Exported 15 character states, 5 props, 1 environment; character states share one authored rig');
