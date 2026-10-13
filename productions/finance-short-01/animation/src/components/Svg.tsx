@@ -12,7 +12,19 @@ export const Asset: React.FC<{ id: string; tf?: string | null; opacity?: number 
   opacity === 0 ? null : <Raw m={assetMarkup(id)} tf={tf} opacity={opacity} />;
 
 /** A rigged character evaluated for this frame. `only` limits drawing to some part ids (macro crops). */
+// Suggested joint limits from remy_rig.json; violations are logged (render logs feed the QA report).
+const LIMITS: Record<string, [number, number]> = { lean: [-10, 12], neck: [-12, 12], shoulder: [-170, 120], elbow: [-150, 20], wrist: [-60, 60], hip: [-95, 30], knee: [0, 100] };
+const checkJoints = (rig: string, p: NumPose) => {
+  const out: string[] = [];
+  const t = (name: string, v: number) => { const [lo, hi] = LIMITS[name]; if (v < lo - 2 || v > hi + 2) out.push(`${name}=${v.toFixed(1)}`); };
+  t("lean", p.lean); t("neck", p.neck);
+  for (const a of [p.arm_n, p.arm_f]) { t("shoulder", a[0]); t("elbow", a[1]); t("wrist", a[2]); }
+  for (const l of [p.leg_n, p.leg_f]) { t("hip", l[0]); t("knee", l[1]); }
+  if (out.length) console.warn(`[JOINT] ${rig} ${out.join(" ")}`);
+};
+
 export const Character: React.FC<{ rig: "remy" | "assoc"; pose: NumPose; tf?: string | null; only?: (id: string) => boolean; opacity?: number }> = ({ rig, pose, tf, only, opacity }) => {
+  checkJoints(rig, pose);
   const parts = evaluate(B.joints, B.slots, B.hand_front, B.rigs[rig], pose);
   return (
     <g transform={tf ?? undefined} opacity={opacity}>
