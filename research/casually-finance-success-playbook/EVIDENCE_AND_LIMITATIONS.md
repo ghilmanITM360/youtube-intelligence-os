@@ -36,3 +36,7 @@ Run scoring edge-case checks; compare duplicate universe to saved coverage; veri
 ## Additional source provenance
 
 NEWS_SOURCE_CHECKS.json preserves the three reopened primary URLs, dates, video timing and failed Google Trends query. BENCHMARK_SOURCES.json records the separate Crayon source hash and exact Casual Economics/Dr Rehan read-only Git commits/files. These external channel and technical references are not independent finance corroboration for Casually Finance. Chart reproduction uses the bundled ReportLab graphics library via build_chart.py; it does not modify source metrics.
+
+## Repository-wide verification boundary
+
+Documented `uv run --frozen --extra dev python -m pytest -q`: 455 passed, six failed, one skipped, five warnings. All six fail on an unmaterialized inherited channel-registry Git LFS pointer (`sqlite3.DatabaseError: file is not a database`). Exact test names and pointer OID/size are in REPOSITORY_TEST_STATUS.json. No production code, database or unrelated forensic output was changed. Focused playbook checks are independent of that database. GitHub Repository validation passed for the prior completed report head 280097c; final head CI is checked separately, not inferred from that earlier pass.

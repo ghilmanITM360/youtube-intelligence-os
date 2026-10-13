@@ -56,3 +56,7 @@ Start with one original 5–8m mechanism explainer plus a self-contained Short f
 ## Research completion boundary
 
 This playbook can be complete while inherited whole-corpus audiovisual/financial verification remains partial. Existing register: 287 groups, 33 verified/76 partial/136 unverified/38 not testable/four contradicted at the frozen base. Scope/date/denominator corrections are central original-channel improvements, not a new competitor audit. Continuous playback/listening, exact easing, actual authoring workflow, rights, trend search evidence and causal success remain unknown. See EVIDENCE_AND_LIMITATIONS.md for precise boundaries and verification artifacts.
+
+## Demonstration result
+
+[Original editable demo](DEMO/README.md): one original rig, nine pose/expression exports, one environment and progressive schematic diagram. Rendered 8s, 240 frames, 1920×1080 at30fps, no audio. Five proof frames inspected; repeated5.9s image identical after backward seek. It proves deterministic composition/reuse, not sophisticated acting or hundreds-of-illustrations throughput.

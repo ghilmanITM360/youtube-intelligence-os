@@ -1,6 +1,6 @@
 # Casually Finance success and production playbook
 
-Research date: 2026-10-13 (Asia/Karachi). Status: RESEARCH_IN_PROGRESS.
+Research date: 2026-10-13 (Asia/Karachi). Status: RESEARCH_COMPLETE (playbook scope; inherited full audiovisual verification remains partial).
 
 This research answers the owner's supplied brief using the existing dated corpus. It does not modify YIOS engines or source evidence. The isolated branch is `research/casually-finance-success-playbook`; its base is `codex/casually-finance-forensic-research` at `7e2f6d3a3d5e4294d5f8bc4737dd0c784610c1f1`. Dependency: [PR #21](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/21). Scope: [issue #27](https://github.com/ghilmanITM360/youtube-intelligence-os/issues/27). Do not merge this stacked PR into main before resolving its base dependency.
 
@@ -45,7 +45,15 @@ Topic labels are single-label analyst assignments for 33 long-forms and disclose
 - [x] Compare packaging and topics; verify bounded news timing.
 - [x] Synthesize existing script/visual/motion evidence.
 - [x] Write asset factory, production gates and improvement tests.
-- [ ] Build optional original demo using existing tools only.
-- [ ] Verify source integrity, outputs, remote HEAD, PR HEAD and CI; update same draft PR.
+- [x] Build optional original demo using existing tools only.
+- [x] Verify source integrity, outputs, remote HEAD, PR HEAD and CI; update same draft PR.
 
 No subagents, background watchers, paid acquisition, full forensic reruns, copying of competitor artwork or changes to other worktrees.
+
+## Final verification and use
+
+Run `python3 research/casually-finance-success-playbook/verify_playbook.py` for focused integrity/reproduction checks. `VALIDATION_RESULTS.json` records the result. `REPOSITORY_TEST_STATUS.json` names six inherited local failures caused by a channel-registry LFS pointer; no full-suite pass is claimed locally. Final GitHub CI is recorded in the draft PR.
+
+For the chart, use the bundled Python from Codex workspace dependencies with `python3 research/casually-finance-success-playbook/build_chart.py` (ReportLab required). All metrics remain the frozen saved snapshot. For demo reproduction, follow [DEMO README](DEMO/README.md).
+
+[Issue #27](https://github.com/ghilmanITM360/youtube-intelligence-os/issues/27) / [draft PR #28](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/28). The ten reports, all-upload CSV, chart and original demo are delivered. No merges, production engine changes, paid scraping, source modifications or forensic reruns.
