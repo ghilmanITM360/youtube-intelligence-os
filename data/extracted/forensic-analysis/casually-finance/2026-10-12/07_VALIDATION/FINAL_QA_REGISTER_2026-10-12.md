@@ -109,3 +109,9 @@ Eight new material groups checked:3 source-scoped VERIFIED,5 PARTIALLY_VERIFIED.
 ## Fifth bounded claim batch —2026-10-13
 
 8 new fiscal/policy groups investigated:1VERIFIED/5PARTIALLY_VERIFIED/2remainUNVERIFIED; one already-investigated CRFB gap received additional prose check without exact-year upgrade. URLs/access date/comparison notes in existing FINANCE_CLAIM_VERIFICATION.csv (DgbHW0IqHrI C06/C07/C09/C23/C26/C30/C33;0ll9rEtoRrs C01;2EZzwupIa80 C08). Full CRFB chart inspection remains incomplete: direct download stalled and terminated without retained source artifact. Total52 distinct groups investigated (51material,1LOW) this continuation. Material census:{'UNVERIFIED': 157, 'PARTIALLY_VERIFIED': 41, 'VERIFIED': 15, 'NOT_TESTABLE_WITH_AVAILABLE_DATA': 25, 'CONTRADICTED': 2}. Remaining UNVERIFIED includes agent work.
+
+## Resumed OECD claim research — 2026-10-13
+
+Thirteen previously uninvestigated material groups reviewed: 0ll9rEtoRrs C05/C06/C10/C26/C29/C31/C32/C33/C34/C35/C36/C37/C39. Exact source URLs, publication dates, printed pages/figures, retrieval date and residual gaps are recorded in the existing FINANCE_CLAIM_VERIFICATION.csv. Five VERIFIED, seven PARTIALLY_VERIFIED and one CONTRADICTED. Verdicts cover recorded claims and source attribution; no listening or realized-forecast certification.
+
+C34 conflicts with the source denominator: stock versus annual issuance. C32 uses the 2025 report and its 2024 stock baseline; later report vintages cannot silently replace it. Future refinancing costs remain conditional. Investigation status is now tracked independently from evidence verdict in the existing register. Earlier primary component reviews are distinct from bounded completed investigations; source-screen consistency alone remains NOT_YET_RESEARCHED. Research remains incomplete. Locked motion/visual QA unchanged.

@@ -97,3 +97,9 @@ Network recovered: b12cf391b1df2c9ec9e72174bbf6b62cf6ef8057 now matched local/re
 ## Mandatory resource stop — final live read
 
 Five-hour92%used; weekly49%used. Mandatory>=90%five-hour gate reached. No further research launched. Closing research commit 4fd920b342f8f9e74372a90b42250989a9be6398 pushed normally and matched remote branch/OPEN PR21. Exact-head validate IN_PROGRESS (CI_PENDING); earlierb12cf39 exact-head CI SUCCESS. This final handoff/resource commit follows that research head; check current Git/PR head and CI on resume.52distinct claim groups researched (51material,1LOW);157materialUNVERIFIED still include unperformed agent work. Motion/visual checkpoints complete as recorded; fullAV/listening/continuous0; missing2Shorts unchanged. RESOURCE_CHECKPOINT.
+
+## Resumed OECD claim research — 2026-10-13
+
+Thirteen previously uninvestigated material groups reviewed: 0ll9rEtoRrs C05/C06/C10/C26/C29/C31/C32/C33/C34/C35/C36/C37/C39. Exact source URLs, publication dates, printed pages/figures, retrieval date and residual gaps are recorded in the existing FINANCE_CLAIM_VERIFICATION.csv. Five VERIFIED, seven PARTIALLY_VERIFIED and one CONTRADICTED. Verdicts cover recorded claims and source attribution; no listening or realized-forecast certification.
+
+C34 conflicts with the source denominator: stock versus annual issuance. C32 uses the 2025 report and its 2024 stock baseline; later report vintages cannot silently replace it. Future refinancing costs remain conditional. Investigation status is now tracked independently from evidence verdict in the existing register. Earlier primary component reviews are distinct from bounded completed investigations; source-screen consistency alone remains NOT_YET_RESEARCHED. Research remains incomplete. Locked motion/visual QA unchanged.
