@@ -8,7 +8,7 @@ import { StaticHero } from "./shots/StaticHero";
 
 // Caption plate centre. Default y 1550 keeps the plate (≈1500–1600) above the Shorts UI band
 // (bottom 320 px) and below Remy's face in the stage set-ups; shots with a big Remy override it.
-const CAPTION_Y: Record<string, number> = { S01A: 720, S01B: 720, S02A: 560 };
+const CAPTION_Y: Record<string, number> = { S01A: 720, S01B: 720, S02A: 560, S07B: 100 };
 const CAPTION_DEFAULT_Y = 1550;
 
 /** Screen-fixed captions from CAPTIONS.json (provisional timings). */
