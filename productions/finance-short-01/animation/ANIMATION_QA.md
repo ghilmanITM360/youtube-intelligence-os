@@ -14,7 +14,7 @@ QA date 2026-10-13. Reviewer: one agent (Claude). **No human motion or art-direc
 | Leg IK round trip: the ankle lands on its target and the shoe stays flat | PASS |
 | Joint angles on every rendered frame (1590 frames), against the rig's suggested limits ∪ the angles the approved poses use | PASS: 0 violations after the fix below |
 | Timeline: 21 shots, 21 phrases, contiguous coverage, every word inside its phrase, narration not truncated, audio frames + end hold | PASS |
-| Captions fit one line at ≥ 40 px inside x 70–1010 | PASS (one chunk auto-shrinks to 45.7 px) |
+| Captions fit one line at ≥ 40 px inside x 50–890 (updated phone-safe metrics) | PASS (one chunk auto-shrinks to 45.7 px) |
 | Every scene instance resolves to a registered asset or its own generator markup | PASS |
 | Final sync is blocked while the pronunciation gate fails | PASS (BLOCKED) |
 | Deterministic seeking: 6 frames rendered forward and in reverse are byte-identical | PASS |
@@ -48,8 +48,8 @@ QA date 2026-10-13. Reviewer: one agent (Claude). **No human motion or art-direc
 ## Known limitations and open items
 
 - **Audio.** Timings are word-anchored but PROVISIONAL until a corrected MP3 is aligned. The audio track isn't wired into the composition yet, by design.
-- **Captions.** Default y is 1550 (plate ≈ 1500–1600). That's above the Shorts UI band but below the handoff's "essential text ≤ 1520" guideline. S01A/B and S02A use 720/560, S07B uses 100 and S09 uses 1335. Check on a phone.
-- **Font.** Avenir Next comes from macOS. Other operating systems fall back to a different font, so widths change.
+- **Captions.** Updated default y1530, S01A/B y720, S02A y560, S07B y200, S09 y1335; x470/max-width840. All chunks satisfy the simulated UI mask. Actual phone/app review remains pending.
+- **Font.** Avenir Next comes from macOS. Fallback strategy and tested second-PC scope are in PORTABILITY.md; fallback widths/pixels need review.
 - **Associate.** Their acting is limited to two pose blends (stand → present, offer → present).
 - **Hands and in-betweens.** Hands remain stylised mittens. Hand-shape and expression changes are step switches by design. There's no smear or motion blur.
 - **Still needed:** human review of acting, timing feel, phone readability, and owner sign-off on the remy-2 hair.
@@ -63,3 +63,31 @@ Fresh Node 24.14.0 install, rig/timeline tests and typecheck PASS. All 244 SVG /
 **Fixed caption timing and UI overlaps:** source-shot holds now stop at the cut (observed at S11+2 with old S10B wording). All 21 boundaries/gaps/end-of-timeline are covered by regression tests. Captions use shared x470/max-width840/default-y1530/S07B-y200 metrics. Every current chunk remains >=40px and outside the test mask (top100, bottom320, right180px from y850–1600). The test mask is a simulation, not a universal YouTube UI specification. Native stills for 21 shots and 320/160px stress sheets reviewed, followed by 11 updated caption samples. Supporting labels/qualifiers remain very small at 160px; approved right-side scene content can be obscured by the mask. Actual-device/human review is pending.
 
 Contact boundary samples: S01B+12/13/15, S02A+49/50/51, S03+20/21/25, S05A+13/14/26, S06B+30/31/32, S07B+69/70, S11+2/11/19. No new defect confirmed in these samples; automated rig tests remain separate from artistic review. Associate gesture range remains limited; adding motion without demonstrated communication benefit is deferred to human direction.
+
+## Remaining-work classification after consolidated QA
+
+| Category | Item / disposition |
+|---|---|
+| CONFIRMED DEFECT | Marker retreat jump, caption spill across cuts and caption simulated-UI overlaps: fixed and regression tested. No other defect confirmed by this session's sampled frames. |
+| ALREADY VERIFIED | All 21 shots render; asset resolution and hashes; native bundle rebuild; rig parity; actual two walk trajectories; contact samples; updated caption layout; muted preview decode health. |
+| REPRODUCIBLE QUALITY GAP | 20–24px supporting labels/qualifiers become 3–4px at 160px stress scale. Right-side approved diagram/scene content intersects the conservative simulated UI rail. Requires owner review of message hierarchy and approved composition before broad redesign. |
+| TECHNICAL RISK | Cross-platform font/raster differences. Second macOS ARM64 checkout verified; Linux/Windows not executed (no container runtime available). |
+| DOCUMENTATION / PORTABILITY GAP | Owner-PC Sharp path and macOS-only QA font path resolved. Local dependency lock/smoke test and font strategy documented. |
+| OWNER APPROVAL REQUIRED | Associate gesture/art direction; Remy-2 hair; phone/device readability; human motion review; final export. Existing approved art retained. |
+| AUDIO BLOCKED | Only original MP3 present; APR→April correction absent. No replacement voice generated, no publication gate bypass. |
+
+### Approved near-arm perspective exceptions: exact owner review samples
+
+These are three-quarter approved artwork, not side-view anatomical flexion measurements. The automated envelope accepts them; this is not human art-direction approval.
+
+| Pose | Near elbow | Representative frame |
+|---|---:|---|
+| shrug | +117.89° | S01A+30, absolute30 |
+| hold_bill | +132.38° | S01B+15, absolute56 |
+| hold_sheet | +136.41° | S02B+40, absolute215 |
+| open_hands | +129.53° | S09A+17, absolute1114 |
+| shocked | +154.51° | S06B+38, absolute757 |
+
+Actual walk test trajectories now include S02A travel550/0.62 over64 frames with170-unit step target and S07B travel760 over48 frames with170-unit step target (in addition to prior generic cases). Both report planted slide~1.1e-12px, knees19.8–53.4°, hips−35.0…11.6°. Stop samples S02A+49/50/51/58 and S07B+115/116/118 inspected. Seated contact remains sampled at S11+2/11/19; no human physics/acting certification is implied.
+
+Consolidated updated preview: 1080×1920 H.264,30fps,1590frames,53.0s, no audio stream. Full-frame joint-warning capture:0. FFmpeg decode exit0/no stderr; blackdetect0 segments. Five fresh forward/backward frame pairs byte-identical (81,1297,1375,1376,1439). Preview SHA256 `9d83fa32ed662a3933dbaa8122e48716b321f73b521ca3e1fd8b67cddbe78df0`. Committed machine-readable evidence: `qa/second_pc_validation.json`; targeted visual evidence: `qa/marker_retreat_before_after.png`, `qa/caption_simulated_UI_stress.png`. Two scratch registered-PNG rebuilds match manifest hashes without overwriting registered assets. Updated preview includes all session visual fixes and remains muted/watermarked.

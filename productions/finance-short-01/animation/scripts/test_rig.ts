@@ -49,8 +49,8 @@ for (const side of ["n", "f"] as const) for (const [dx, lift, dy] of [[-120, 0, 
   check(leg[1] >= -1e-9 && leg[1] <= 100, `legIK ${side} ${dx}: knee ${leg[1].toFixed(1)} outside [0,100]`);
 }
 // 6. walk: planted feet do not slide, stay on the ground, joints stay in range
-for (const [dist, frames, lead] of [[645, 50, "n"], [900, 70, "f"], [300, 30, "n"]] as const) {
-  const plan = planWalk({ f0: 0, f1: frames, dist, lead, upper: resolve(B.joints, B.poses.remy.walk_a) });
+for (const [dist, frames, lead, stepLen] of [[645, 50, "n", 150], [900, 70, "f", 150], [300, 30, "n", 150], [550 / 0.62, 64, "n", 170], [760, 48, "n", 170]] as const) {
+  const plan = planWalk({ f0: 0, f1: frames, dist, lead, stepLen, upper: resolve(B.joints, B.poses.remy.walk_a) });
   const plantedAt: Record<string, number | null> = { n: null, f: null };
   let maxSlide = 0, maxGround = 0, minKnee = 1e9, maxKnee = -1e9, minHip = 1e9, maxHip = -1e9, maxDy = 0;
   for (let f = -2; f <= plan.fEnd + 2; f += 0.25) {

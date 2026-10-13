@@ -45,7 +45,7 @@ export function track(f: number, keys: Key[]): number {
 }
 
 export type PoseKey = { f: number; pose: NumPose; ease?: Ease; switchAt?: number };
-/** Pose track: blends consecutive keyed poses (angles shortest-path). Discrete channels (hand
+/** Pose track: blends consecutive keyed poses (linear normalized joint angles). Discrete channels (hand
  *  shape, expression, props) switch at `switchAt` of each segment (default: at the key, i.e. the
  *  extreme of the move, per the handoff). */
 export function poseTrack(f: number, keys: PoseKey[]): NumPose {

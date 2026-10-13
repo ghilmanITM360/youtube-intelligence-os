@@ -27,7 +27,7 @@ check(T.frames_total >= audioFrames && T.frames_total - audioFrames <= 12, `time
 for (const c of T.captions) {
   const s = T.shots.find((x: any) => x.id === c.shot);
   check(c.from >= s.from && c.to <= s.to, `caption "${c.text}" inside ${c.shot}`);
-  const size = captionLayout(c.text, 0).size; // same rule as CaptionPlate
+  const size = captionLayout(c.text, 0).size; // shared CaptionPlate geometry
   check(size >= 40, `caption "${c.text}" fits one line at >= 40 px (got ${size.toFixed(1)})`);
 }
 // every scene instance resolves to a registered asset (or carries its own generator markup)
