@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import { markerTipAt } from "../src/lib/marker.ts";
+const turn = 2 * Math.PI * 1.08;
+const circle = (th: number): [number, number] => [868.15 + 49.3 * Math.cos(th), 1027 + 40.6 * Math.sin(th)];
+const home: [number, number] = [720, 1180];
+const tip = (t: number) => markerTipAt(t, 14, 37, home, circle, turn);
+const distance = (a: number[], b: number[]) => Math.hypot(a[0]-b[0], a[1]-b[1]);
+assert.ok(distance(tip(61), tip(61 + 1e-7)) < 1e-5, "marker retreat must begin at the completed stroke endpoint without a position jump");
+assert.deepEqual(tip(57), circle(turn));
+assert.deepEqual(tip(61), circle(turn));
+assert.deepEqual(tip(71), home);
+assert.deepEqual(tip(0), home);
+assert.deepEqual(tip(37), circle(0));
+const frames = [0, 14, 37, 57, 60, 61, 62, 63, 66, 71, 80];
+const forward = frames.map(tip);
+for (const f of [...frames].reverse()) assert.deepEqual(tip(f), forward[frames.indexOf(f)], "backward seek is deterministic");
+console.log("contact tests: PASS (marker approach, circle endpoint, retreat continuity, seek order)");

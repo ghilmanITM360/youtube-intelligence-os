@@ -3,6 +3,7 @@ import React from "react";
 import { useCurrentFrame } from "remotion";
 import { Raw, SceneWorld, type Override } from "../components/Svg";
 import { E, pop, prog } from "../lib/anim";
+import { markerTipAt } from "../lib/marker";
 import { C, assetMarkup, charPoint, charTf, pose, shot, word } from "../lib/bundle";
 import { scaleAbout, without } from "../lib/markup";
 import { apply, mul, R, S as Sc, T, type IKSpec, type NumPose } from "../rig/rig";
@@ -39,10 +40,7 @@ function Dates({ t }: { t: number }) {
   // approach: tip travels to the circle's start, then traces it in sync with "deadline"
   const d0 = deadline, d1 = deadline + 20;
   const th = TURN * prog(t, d0, d1, E.inOut);
-  const approach = prog(t, check, d0, E.inOut);
-  const start = elPt(0);
-  const tip: [number, number] = t < d0 ? [TIP0[0] + (start[0] - TIP0[0]) * approach, TIP0[1] + (start[1] - TIP0[1]) * approach]
-    : t <= d1 + 4 ? elPt(th) : [start[0] + (TIP0[0] - start[0]) * prog(t, d1 + 4, d1 + 14), start[1] + (TIP0[1] - start[1]) * prog(t, d1 + 4, d1 + 14)];
+  const tip = markerTipAt(t, check, deadline, TIP0, elPt, TURN);
   const nPts = Math.max(2, Math.ceil((th / TURN) * 70));
   const traced = t >= d0 ? Array.from({ length: nPts }, (_, i) => elPt((th * i) / (nPts - 1))) : [];
   const gazeUp = t >= monthly - 4;

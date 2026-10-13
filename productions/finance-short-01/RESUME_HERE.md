@@ -98,3 +98,11 @@ Nothing, once the milestone C commit is pushed. `animation/out/` (QA renders) is
 - Corrected MP3 absent; original remains intact, final export blocked. Hair and human art/motion/mobile approval remain pending.
 - Usage at milestone: five-hour 3%, weekly 29% (live snapshot; recheck).
 - Next safe operation: inspect fresh mobile stills, then sample sensitive contact transitions and classify any confirmed defect. All 21 implemented shots remain in scope; no claim of human approval.
+
+## Marker contact milestone
+
+- Prior milestone pushed and remote verified: `39081c5e45d94d4767b7ae6d7cd5223449ba4f2b`.
+- CONFIRMED DEFECT fixed: S10A absolute frame 1375 → S10B frame 1376 marker retreat jumped from the 1.08-turn endpoint to the zero-angle start (~20px). Retreat now begins at the actual completed stroke endpoint; approved circle geometry and timing remain unchanged.
+- Added production-path contact tests: approach, endpoint hold, continuous retreat, home return, backward seeking. Test failed on old path and passed after fix. Rig/timeline tests and typecheck PASS; before/after frames 1374–1377 and 1381 inspected. Evidence in ignored local `animation/out/qa/marker_comparison.png`; final source fix is remotely recoverable after push.
+- Usage: five-hour 6%, weekly 29%. Audio and owner approvals unchanged.
+- Next safe operation: inspect sampled grip, coin, lever, receipt, walk and seated contacts, then finish mobile obstruction review.

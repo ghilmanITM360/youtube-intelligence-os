@@ -53,3 +53,9 @@ QA date 2026-10-13. Reviewer: one agent (Claude). **No human motion or art-direc
 - **Associate.** Their acting is limited to two pose blends (stand → present, offer → present).
 - **Hands and in-betweens.** Hands remain stylised mittens. Hand-shape and expression changes are step switches by design. There's no smear or motion blur.
 - **Still needed:** human review of acting, timing feel, phone readability, and owner sign-off on the remy-2 hair.
+
+## Second-PC targeted QA (2026-10-13)
+
+Fresh Node 24.14.0 install, rig/timeline tests and typecheck PASS. All 244 SVG / 196 PNG manifest hashes match. Bundle rebuild bytes match; Python parity-fixture numeric differences max 4.55e-13 (tolerance 1e-6), original fixture preserved. Local Sharp renderer smoke test passes from an unrelated cwd. Renderer and font strategy: `PORTABILITY.md`.
+
+**Fixed S10 contact discontinuity:** S10A+61 / S10B+0 (absolute 1375→1376). The 1.08-turn stroke ends beyond the zero-angle start; the old retreat incorrectly jumped back to that start. Retreat now begins at the drawn endpoint. A continuity test failed before the fix and passes afterward, including backward seek checks. Five before/after stills inspected; no full render repeated. Existing committed full preview predates this fix; it remains a provisional reference, not the updated master.
