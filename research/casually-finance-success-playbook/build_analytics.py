@@ -138,7 +138,7 @@ def main():
               Confidence='MODERATE_DESCRIPTIVE' if mode=='AGE_CALIPER' and agreement>=.8 else 'LOW_BASELINE_SENSITIVE')
         output.append(base)
     with (OUT/'VIDEO_PERFORMANCE.csv').open('w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=list(output[0]));writer.writeheader();writer.writerows(output)
+        writer=csv.DictWriter(f,fieldnames=list(output[0]),lineterminator="\n");writer.writeheader();writer.writerows(output)
     summaries={}
     for kind in ['LONG_FORM','SHORT']:
         group=[x for x in output if x['Format']==kind]
