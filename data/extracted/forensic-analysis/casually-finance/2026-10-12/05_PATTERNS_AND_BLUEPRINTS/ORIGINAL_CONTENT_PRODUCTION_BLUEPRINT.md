@@ -66,3 +66,5 @@ Fiscal-explanation refinement: distinguish announced buyback maxima from accepte
 ## Debt-source production rule — 2026-10-13
 
 RECOMMENDATION, based on 0ll9rEtoRrs C26/C29/C32/C34/C36/C39 in the financial verification register: label stock versus issuance flow, preserve forecast vintage and maturity cohort, and show scenario conditions alongside numerical conclusions. A known maturity schedule cannot establish a future refinancing rate. Preserve historical forecast evidence without presenting it as a realized outcome. Documentary verdicts do not certify the soundtrack. No new visual or motion review occurred.
+
+Pension evidence refinement: preserve access versus participation populations; distinguish equity look-through from standalone bond funds. A defined-contribution employer lacks a promised lifetime DB payout but retains legal duties. Model PV01 comparisons require explicit duration-risk units and cannot become annual nominal bond-sales claims. Keep transition snapshot dates and source attribution on evidence panels. See the pension/issuance claim batch in the verification register; no new audiovisual review.
