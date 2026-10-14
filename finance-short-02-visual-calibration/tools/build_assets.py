@@ -128,10 +128,10 @@ state(6,'S06_05','V16',43.4,45.4,'Distinct historical 2021 payment',layers(*s6hi
 state(6,'S06_06','V16',45.4,47.4,'Preliminary remittance, not net income',layers(*s6hist,T('PRELIM','2021 PRELIMINARY . FED 14 JAN 2022',83,1510,804,size=31)))
 
 # 07: same host faces two consequences, not a second unrelated presenter card.
-s7=[T('HIGHER_RATES','HIGHER RATES',80,170,720),L('PRICE','PROP_PRICE_PRESSURE',579,518,266),L('HOST','HOST_SHIELD',145,477,379,'POSE_SWITCH'),L('SHIELD','PROP_SHIELD',386,734,228,'POP_IN','Host near hand219,207 maps to shield left contact at x431,y748'),T('FIGHT','CAN FIGHT INFLATION',118,1103,753,a.GREEN)]
+s7=[T('HIGHER_RATES','HIGHER RATES',80,170,720),L('PRICE','PROP_PRICE_PRESSURE',579,518,266),L('HOST','HOST_SHIELD',145,477,379,'POSE_SWITCH'),L('SHIELD','PROP_SHIELD',407,711,228,'POP_IN','Shield left rim meets host near hand at431,747'),L('SHIELD_GRIP','HAND_GRIP',409,695,71.5,'STATIC','Wrist17,40 maps to431,747; thumb renders above shield'),T('FIGHT','CAN FIGHT INFLATION',118,1103,753,a.GREEN)]
 state(7,'S07_01','V17',47.4,48.4,'Benefit: resist price pressure',layers(*s7),True,'Return to original host for payoff, fifth actual planned cut')
 state(7,'S07_02','V17',48.4,49.5,'Benefit held / gaze toward price',layers(*s7,L('RATE','ANN_RATE_UP',819,414,50)))
-s7end=[T('HIGHER_RATES','HIGHER RATES',80,170,720),T('REPAIR_HEADER','HARDER TO REPAIR', 80,290,819,a.RED),L('HOST','HOST_REPAIR',118,735,358,'POSE_SWITCH'),L('LEDGER','PROP_LEDGER',628,846,278),L('WRENCH','PROP_WRENCH',362,1027,138,'ROTATE','Host hand224,263 mapped approximately x394,y1060; wrench handle matches wrist'),L('STEPS','ENV_RECOVERY_STEPS',575,1191,294),T('FED_RECOVERY','THE FED\'S OWN FINANCES',84,1435,822)]
+s7end=[T('HIGHER_RATES','HIGHER RATES',80,170,720),T('REPAIR_HEADER','HARDER TO REPAIR', 80,290,819,a.RED),L('HOST','HOST_REPAIR',118,735,358,'POSE_SWITCH'),L('LEDGER','PROP_LEDGER',628,846,278),L('WRENCH','PROP_WRENCH',289,966.5,138,'ROTATE','Handle118,105 maps to394,1060; hand224,263 maps to394.5,1060'),L('TOOL_GRIP','HAND_GRIP',373.5,1010.8,68,'STATIC','Wrist17,40 maps to394.5,1060.2; thumb above handle'),L('STEPS','ENV_RECOVERY_STEPS',575,1191,294),T('FED_RECOVERY','THE FED\'S OWN FINANCES',84,1435,822)]
 state(7,'S07_03','V18',49.5,51.3,'Recovery work becomes harder',layers(*s7end))
 state(7,'S07_04','V18',51.3,53,'Paradox held in one combined explanation',layers(*s7end,L('PRICE','PROP_PRICE_PRESSURE',716,454,189),L('SHIELD','PROP_SHIELD',480,466,134),T('BOTH','BOTH CAN BE TRUE',127,1583,708,size=42)))
 

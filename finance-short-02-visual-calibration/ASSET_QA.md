@@ -32,3 +32,8 @@ Reference: REF09 / 2EZzwupIa80 S005.2-S005.6 32.54-35.61s and S006.1 44.75s actu
 Six static states inspected. Future-earnings bag and open ledger precede the paused Fed-to-Treasury route; separate historical2021 layout uses actual107.4B crop and preliminary publication date. No107.8B income/remittance confusion or negative cash arrow. Buildings, pause, money and evidence remain independent.320px relation/date readable;160px main107.4B and pause survive, fine attribution secondary.
 
 Reference: REF09 / 2EZzwupIa80 S007.2 51.80s paper personification; VISUAL_DNA simple institutional finance props. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene07
+
+Four payoff states inspected. Same host switches resolved shield grip to concerned wrench-handle grip; foreground thumb layers meet recorded hand anchors. Corrected conditional headline to CAN MAKE REPAIR HARDER. Shield/price-pressure reminder links both consequences. Native/320px contact and main words clear;160px main paradox recognizable, subtle fingers reduced. Recovery steps are a qualitative metaphor, not a measured financial chart. All7 scenes now have actual editable sources.
+
+Reference: SHORTS_DNA / rSa2aziEsAI ending yen/debt tradeoff; REF02 / -X6YzlY_8tM S018.9/S018.12 190.18/194.67s expression switch. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
