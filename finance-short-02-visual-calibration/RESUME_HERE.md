@@ -1,6 +1,8 @@
-# Finance Short 02 — current status: animated video rendered
+# Finance Short 02 — current status: V3 polished video rendered
 
-Status: VIDEO_RENDERED_REVIEW_REQUIRED (2026-10-14). The owner WAV (49.68 s, SHA256 3eff2e57…0328) is aligned, and all 7 scenes / 36 states are animated from the existing 114-asset package with no new artwork. The final 1080×1920 MP4 is rendered and technically validated. **Start at animation/RESUME_HERE.md**; QA is in animation/FINAL_VIDEO_QA.md. Owner viewing/listening and artistic approval are pending. The static-artwork handoff below is preserved for history.
+Status: V3_RENDERED_OWNER_REVIEW_REQUIRED (2026-10-14). V3 (`animation/Finance_Short_02_FINAL_v3.mp4`, 51.0 s) retimes the confirmed fast builds and adds an original ducked music bed and 10 original effects; artwork and narration are unchanged and V2 is kept. **Start at animation/RESUME_HERE.md.**
+
+Previous status: VIDEO_RENDERED_REVIEW_REQUIRED (2026-10-14). The owner WAV (49.68 s, SHA256 3eff2e57…0328) is aligned, and all 7 scenes / 36 states are animated from the existing 114-asset package with no new artwork. The final 1080×1920 MP4 is rendered and technically validated. **Start at animation/RESUME_HERE.md**; QA is in animation/FINAL_VIDEO_QA.md. Owner viewing/listening and artistic approval are pending. The static-artwork handoff below is preserved for history.
 
 # Finance Short 02 — recovered static artwork handoff
 

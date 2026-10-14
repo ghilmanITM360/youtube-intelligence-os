@@ -31,6 +31,8 @@ The approved narration is the project's `editable_sources/original/APPROVED_NARR
 
 ## Use in the video
 
+> V3 uses the same file, unchanged, inside a mix with an original music bed and effects (uniform −1.35 dB master gain on the whole mix only). See `V3_AUDIO_LICENSES.md` and `V3_AUDIO_MIX_QA.md`. The section below describes V2.
+
 - The WAV is the **timing authority**. Video length = audio length (1491 frames at 30 fps = 49.70 s; the AAC stream is 49.68 s).
 - Narration is **unchanged**: no cut, trim, speed, pitch, EQ or gain change. It is encoded once to AAC-LC 192 kb/s, resampled 44.1 → 48 kHz, mono.
 - The decoded MP4 audio has exactly the WAV's sample count at 48 kHz (2,384,640). Its zero-lag SNR against the WAV is 47.3 dB, so there is no truncation or offset. Peak after encoding is −0.45 dBFS sample / −0.4 dBTP true peak, with no clipping.

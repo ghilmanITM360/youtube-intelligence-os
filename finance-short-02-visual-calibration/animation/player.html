@@ -75,6 +75,7 @@ async function build() {
         const img = new Image(); img.src = im.getAttribute('href') || im.getAttribute('xlink:href'); decodes.push(img.decode());
       }
       while (doc.firstChild) inner.appendChild(document.importNode(doc.firstChild, true)), doc.removeChild(doc.firstChild);
+      for (const h of tr.hide || []) h.els = h.ids.map(id => inner.querySelector('#t' + n + '_' + CSS.escape(id)));
     }) });
   });
   await Promise.all(nodes.map(n => n.ready));
@@ -86,6 +87,7 @@ function apply(t) {
   cam.setAttribute('transform', noCam ? '' : `translate(${c.cx} ${c.cy}) scale(${c.k}) translate(${-c.cx} ${-c.cy})`);
   for (const { tr, outer, inner, clip, cid } of nodes) {
     const v = sample(tr.keys, t);
+    for (const h of tr.hide || []) for (const el of h.els) el.style.visibility = t >= h.t0 && t < h.t1 ? 'hidden' : '';  // FACE_* overlay shown
     if (v.o <= 0.002) { outer.style.display = 'none'; continue; }
     outer.style.display = '';
     const px = v.px ?? tr.pivot[0], py = v.py ?? tr.pivot[1];
@@ -106,7 +108,7 @@ build().then(() => {
   window.__ready = true;
   if (q.has('render')) return;
   document.body.classList.add('review');
-  const audio = new Audio(TL.audio), seek = document.getElementById('seek'), clock = document.getElementById('clock');
+  const audio = new Audio(TL.audio_mix || TL.audio), seek = document.getElementById('seek'), clock = document.getElementById('clock');
   seek.max = TL.duration;
   const tick = () => { apply(audio.currentTime); seek.value = audio.currentTime; clock.textContent = audio.currentTime.toFixed(2); if (!audio.paused) requestAnimationFrame(tick); };
   document.getElementById('play').onclick = () => audio.paused ? (audio.play(), requestAnimationFrame(tick)) : audio.pause();

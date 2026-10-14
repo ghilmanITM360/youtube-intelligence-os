@@ -1,4 +1,6 @@
-# Finance Short 02 — final video QA
+# Finance Short 02 — final video QA (V2)
+
+> V2 record, kept unchanged. The current deliverable is V3: see `V3_VISUAL_QA.md` and `V3_AUDIO_MIX_QA.md`.
 
 Date 2026-10-14, Laptop B. Machine results are in `FINAL_VIDEO_QA.json` (`tools/qa.py video`) and `STATE_IDENTITY_QA.json` (`tools/qa.py states`). **Verdict: technically validated; human viewing, listening and artistic sign-off are still required.**
 

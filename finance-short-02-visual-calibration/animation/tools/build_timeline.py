@@ -17,7 +17,9 @@ LEAD = 0.07  # visuals land ~2 frames before the word onset
 
 AL = json.loads((ROOT / 'animation/AUDIO_ALIGNMENT.json').read_text())
 WORDS = AL['words']
-DURATION = AL['source']['duration_sec']
+NARRATION = AL['source']['duration_sec']
+END_HOLD = 1.3  # V3: the payoff holds after the last word; the narration itself is untouched
+DURATION = round(NARRATION + END_HOLD, 3)
 
 
 def w(ref):
@@ -37,34 +39,35 @@ CUES = {
     'S01_01': (0.0, True, {'FED': 0.0, 'HOST': 0.0, 'RATES': 0.0, 'RATE': w('3:raised')}),
     'S01_02': (w('4:interest'), False, {}),
     'S01_03': (w('6:and'), False, {'BILL_UP': w('8:own'), 'BILL': w('10:bill'), 'EMPHASIS': w('11:went')}),
-    'S01_04': (w('12:up.'), False, {}),
-    'S02_01': (w('13:In'), True, {'POLICY_DATE': w('14:September,'), 'POLICY': w('15:the'), 'POLICY_ATTR': w('15:the') + 0.2,
-                                  'POLICY_FOCUS': w('17:raised'), 'QUARTER_POINT': w('19:by'), 'POLICY_HL': w('21:quarter')}),
-    'S02_02': (w('21:quarter') + 0.05, False, {}),
-    'S02_03': (w("23:Here's"), True, {'HOST': w('25:problem.'), 'BANKER': w('26:Banks')}),
+    'S01_04': (w('11:went') + 0.1, False, {}),  # V3: label lands with 'went up' so it reads before the cut
+    'S02_01': (w('13:In'), True, {'POLICY_DATE': w('14:September,'), 'POLICY': w('14:September,') + 0.3, 'POLICY_ATTR': w('14:September,') + 0.55,
+                                  'POLICY_FOCUS': w('17:raised'), 'QUARTER_POINT': w('18:rates'), 'POLICY_HL': w('21:quarter')}),
+    'S02_02': (w('21:quarter') + 0.11, False, {}),
+    'S02_03': (w('24:the'), True, {'HOST': w('25:problem.') + 0.1, 'BANKER': w('26:Banks')}),  # V3: cut on 'the problem' gives TARGET ~1 s
     'S02_04': (w('29:$3'), False, {'BALANCE_LINK': w('30:trillion') + 0.1, 'BALANCE_LABEL': w('30:trillion') + 0.35}),
     'S02_05': (w('31:in'), False, {'RESERVE_UNITS': w('31:in') + 0.25, 'RESERVE_HL': w('32:reserves')}),
     'S02_06': (w('36:and'), False, {'PAY_FLOW': w('36:and') + 0.12, 'PAY_NOTE': w('36:and') + 0.3, 'FED_EXPENSE': w('39:pays')}),
     'S02_07': (w('40:them'), False, {}),
-    'S03_01': (w('44:quarter'), True, {'DELTA': w('44:quarter') + 0.15, 'HOST': w('44:quarter') + 0.3, 'CASH': w('50:$7.5') + 0.25}),
-    'S03_02': (w('46:increase'), False, {}),
-    'S03_03': (w('47:would'), False, {'CALC_UNDERLINE': w('49:about')}),
+    'S03_01': (w('44:quarter'), True, {'DELTA': w('44:quarter') + 2 * F, 'HOST': w('44:quarter') + 0.3, 'CASH': w('51:billion')}),
+    'S03_02': (w('46:increase'), False, {}),  # V3: 0.25% morphs into 0.25% = 0.0025 (MORPH)
+    'S03_03': (w('47:would'), False, {'MATH': w('48:add'), 'CALC_UNDERLINE': w('49:about') + 0.1}),
     'S03_04': (w('50:$7.5'), False, {'PER_YEAR': w('53:year'), 'INTEREST_COSTS': w('55:interest')}),
     'S03_05': (w('57:if'), False, {'ILLUSTRATION': w('57:if') + 0.2}),
-    'S04_01': (w('62:But'), True, {'BOND': w("66:Fed's"), 'COUPON': w("66:Fed's") + 0.2, 'BOND_INCOME': w('68:income'), 'CLOCK': w("69:doesn't")}),
+    'S04_01': (w('62:But'), True, {'BOND': w('63:much') + 0.1, 'COUPON': w("66:Fed's") + 0.1, 'BOND_INCOME': w('68:income'), 'CLOCK': w("69:doesn't")}),  # V3: bond fills the frame on 'much of'
     'S04_02': (w('70:rise'), False, {'SLOW_LABEL': w('70:rise') + 0.2, 'AS_QUICKLY': w('72:quickly.')}),
-    'S04_03': (w('73:When'), False, {'EXPENSE_LABEL': w('73:When'), 'HOST': w('74:expenses'), 'BILL': w('74:expenses') + 0.1, 'EXPENSE_UP': w('75:outweigh')}),
-    'S04_04': (w('76:income,'), False, {}),
-    'S05_01': (w('77:losses'), True, {}),  # authored layout replacement; a cut avoids an empty in-between frame
-    'S05_02': (w('78:build'), False, {'LEDGER': w('79:into')}),
+    'S04_03': (24.45, False, {'HOST': 24.45, 'EXPENSE_LABEL': w('73:When'), 'BILL': w('74:expenses') + 0.1, 'EXPENSE_UP': w('75:outweigh')}),
+    'S04_04': (w('75:outweigh') + 0.2, False, {}),
+    'S05_01': (26.42, True, {'HOST': 26.42 + 3 * F, 'MISMATCH': 26.42 + 6 * F}),  # V3: cut inside the 0.6 s pause so the recap header registers before 'losses'
+    'S05_02': (w('77:losses'), False, {'DOWN': w('77:losses'), 'LEDGER': w('79:into')}),
     'S05_03': (w('80:what\'s'), False, {'DEFERRED': w('83:deferred')}),
     'S05_04': (w('84:asset.') - 0.25, False, {'NOT_THIS_HIKE': w('84:asset.') + 0.1}),
     'S05_05': (30.6, False, {'OCT_DATE': 30.75, 'H41_ATTR': w('88:that'), 'SOURCE_LABEL': w('88:that') + 0.1, 'SOURCE_TOTAL': w('89:balance') + 0.2,
                              'MILLIONS': w('91:roughly'), 'SOURCE_HL': w('91:roughly') + 0.2, '234B': w('92:$234')}),
     'S05_06': (w('92:$234') + 0.55, False, {}),
-    'S06_01': (w('94:Until'), True, {'EARNINGS_BAG': w('95:future'), 'LEDGER': w('96:earnings'), 'COVER': w('97:cover'), 'COVER_FIRST': w('97:cover') + 0.2}),
-    'S06_02': (w('98:it,') - 0.05, False, {'BEFORE': w('98:it,') + 0.15}),
-    'S06_03': (w('101:normal'), True, {'FED': w('101:normal') + 0.15, 'TREASURY': w('105:Treasury'), 'NORMAL_ROUTE': w('105:Treasury') + 0.12,
+    'S06_01': (w('94:Until'), True, {'EARNINGS_BAG': w('95:future'), 'LEDGER': w('96:earnings'), 'COVER': w('97:cover'), 'COVER_FIRST': w('97:cover') + 0.12}),
+    'S06_02': (w('98:it,') - 0.05, False, {'STEPS': w('98:it,') - 0.05, 'BEFORE': w('98:it,') + 0.07}),
+    # V3: cut on 'payments' so 'the Fed's normal...' is heard over BEFORE NORMAL PAYMENTS RESUME
+    'S06_03': (w('102:payments'), True, {'FED': w('102:payments') + 0.13, 'TREASURY': w('105:Treasury'), 'NORMAL_ROUTE': w('105:Treasury') + 0.12,
                                         'PAUSE': w('106:stay'), 'PAUSE_LABEL': w('107:paused.'), 'WHILE_BALANCE': w('107:paused.') + 0.15}),
     'S06_04': (38.8, False, {}),
     'S06_05': (40.25, True, {'ROUTE': w('110:those'), 'NOTE': w('110:those') + 0.15, 'HIST_AMOUNT': w('115:$107'), 'HIST_REMITTED': w('115:$107') + 0.35,
@@ -83,6 +86,12 @@ GROUPS = {('SCENE_07', 'S07_01'): ['HOST', 'SHIELD', 'SHIELD_GRIP'], ('SCENE_07'
 WIPE = {'DGM_INTEREST_FLOW': ('rl', 14), 'DGM_REMIT_FLOW': ('lr', 14), 'DGM_RESERVE_LINK': ('lr', 14), 'DGM_SLOW_CHANGE': ('lr', 36),
         'ANN_EXPENSE_UP': ('bt', 7), 'ANN_RATE_UP': ('bt', 10), 'ANN_ARROW_RED': ('lr', 8), 'ANN_ARROW_GREEN': ('lr', 10), 'ANN_UNDERLINE': ('lr', 10),
         'DGM_CONDITION_DOWN': ('tb', 10), 'ENV_RECOVERY_STEPS': ('lr', 14), 'ANN_SOURCE_BOX': ('lr', 8), 'ANN_SOURCE_WIDE': ('lr', 8)}
+WRITE = {'TX_DECIMAL': 10, 'TX_MATH': 10, 'TX_TARGET_RANGE': 10, 'TX_COVER_FIRST': 10, 'TX_BEFORE': 10}  # V3: faster write-on, longer read
+# V3: TX_DELTA draws the same '0.25%' glyphs as the start of TX_DECIMAL, so it glides onto them and only '= 0.0025' writes on.
+MORPH = {('S03_02', 'DECIMAL'): ('DELTA', 8)}
+# V3: expression overlays (CHARACTER_BIBLE: FACE_* top-left at host-local 100,65, original eyes/brows/mouth hidden).
+FACES = {('S03_04', 'HOST'): ('FACE_WOW', w('51:billion') + 0.2), ('S03_05', 'HOST'): ('FACE_THINK', w('59:stayed')),
+         ('S07_04', 'HOST'): ('FACE_RESOLVE', 49.45)}
 BIG_NUMBERS = {'TX_ANNUAL_COST', 'TX_234B', 'TX_HIST_AMOUNT', 'TX_DELTA', 'TX_THREE_TRILLION'}
 FOCUS_CROPS = {'EVD_FOMC_QUARTER', 'EVD_DEFERRED', 'EVD_2021', 'EVD_IORB', 'EVD_RESERVES'}
 TRAVEL = {'PAY_NOTE': (170, 0, 18), 'NOTE': (-230, 0, 20)}  # start offset (dx,dy) and frames; follows flow direction
@@ -139,7 +148,7 @@ def main():
             key(t + n * F, tr, p, e='inout')
             return t + n * F
         if a in WIPE or (a.startswith('TX_') and a not in BIG_NUMBERS):
-            n = WIPE[a][1] if a in WIPE else max(8, min(16, round(tr['w'] * p['s'] / 60)))
+            n = WIPE[a][1] if a in WIPE else WRITE.get(a) or max(8, min(16, round(tr['w'] * p['s'] / 60)))
             OPS['SOURCE_HIGHLIGHT wipe' if a.startswith('ANN_SOURCE') else 'TRACE_REVEAL wipe (arrow/diagram)' if a in WIPE else 'TRACE_REVEAL lettering write-on'] += 1
             key(t - F, tr, p, o=0, wp=0)
             key(t, tr, p, o=1, wp=0, e='step')
@@ -191,8 +200,10 @@ def main():
             hr = cur['HOST']; ha = json.loads(assets[hr['asset_id']]['anchor_pivot_json'])['feet']
             gpiv = (float(hr['x']) + float(hr['scale']) * ha[0], float(hr['y']) + float(hr['scale']) * ha[1])
         exits = [l for l in old if l not in cur or l not in old_persist]
-        # a group leaving with a big host move: the whole held-prop group exits together
+        morph_src = {src for (st, _), (src, _) in MORPH.items() if st == s}
         for l in exits:
+            if l in morph_src:
+                continue  # leaves by gliding into its successor (below)
             r = old[l]
             leave(track(scene_of[prev], l, r['asset_id']), T, place(r), hard=cut)
         gap = 4 * F if (exits and not cut) else 0
@@ -226,6 +237,19 @@ def main():
                     key(ts - 0.0005, tr, po, o=0); key(ts, tr, po, e='step'); key(ts + 8 * F, tr, p, e='inout')
                     finish = max(finish, ts + 8 * F)
                 continue
+            if (s, l) in MORPH:  # glide the predecessor onto this layer's identical glyphs, then write on the rest
+                src, n = MORPH[(s, l)]
+                ot, po = track(scene_of[prev], src, old[src]['asset_id']), place(old[src])
+                t0 = at(cues.get(l, T))
+                key(t0, ot, po); key(t0 + n * F, ot, p, e='inout'); key(t0 + n * F + 0.0005, ot, p, o=0, e='step')
+                frac = ot['w'] / tr['w']
+                key(t0 + n * F, tr, p, o=0, wp=frac); key(t0 + n * F + 0.0005, tr, p, wp=frac, e='step')
+                m = WRITE.get(r['asset_id'], 10)
+                key(t0 + (n + m) * F, tr, p, e='out')
+                OPS['MORPH glide into matching lettering'] += 1
+                finish = max(finish, t0 + (n + m) * F)
+                rank += 1
+                continue
             if l in cues:
                 t0 = at(cues[l])
             elif cut and rank == 0:
@@ -245,11 +269,25 @@ def main():
         if finish > end[s] + 1e-6:  # an entrance may finish inside the next state; fine unless that state moves the same layer
             print(f'note: {s} entrance finishes {finish - end[s]:.2f}s into the next state')
 
-    # close every track at its last state's end (scene cuts are hard)
-    last_state = {}
-    for k, tr in tracks.items():
-        if tr['states']:
-            last_state[k] = tr['states'][-1]
+    # expression overlays: shown while the host pose holds still; the host's own eyes/brows/mouth are hidden meanwhile
+    by_host = {}
+    for (s, l), (face, tf) in sorted(FACES.items(), key=lambda kv: kv[1][1]):
+        by_host.setdefault((scene_of[s], l, lay[(s, l)]['asset_id']), []).append((s, face, tf))
+    for (scene, l, asset), faces in by_host.items():
+        host = tracks[f'{scene}:{l}:{asset}']
+        sub = json.loads(assets[asset]['editable_subparts_json'])
+        parts = [i for k in ('eyes', 'brows', 'mouth') for i in (sub[k] if isinstance(sub[k], list) else [sub[k]])]
+        for j, (s, face, tf) in enumerate(faces):
+            gone = min([k['t'] for k in host['keys'] if k['t'] > tf and k['o'] < 0.5] + [DURATION])
+            t1 = min(gone, faces[j + 1][2]) if j + 1 < len(faces) else gone
+            assert all(k['t'] >= gone - 0.001 for k in host['keys'] if k['t'] > tf), f'{s}:{l} moves under its face overlay'
+            hp = place(lay[(s, l)]); ax, ay = json.loads(assets[face]['anchor_pivot_json'])['host_attach']
+            fp = dict(x=hp['x'] + hp['s'] * ax, y=hp['y'] + hp['s'] * ay, s=hp['s'], r=0.0)
+            ft = track(scene, l + '_FACE', face)
+            ft['states'].append(s); ft['z'] = host['z']
+            key(tf - F, ft, fp, o=0); key(tf, ft, fp, e='step'); key(t1 - 0.0005, ft, fp); key(t1, ft, fp, o=0, e='step')
+            host.setdefault('hide', []).append(dict(t0=round(tf, 4), t1=round(t1, 4), ids=parts))
+            OPS['EXPRESSION_SWAP (FACE overlay)'] += 1
     for k, tr in tracks.items():
         tr['keys'].sort(key=lambda kk: kk['t'])
 
@@ -273,8 +311,8 @@ def main():
 
     scene_rank = {sc: i for i, sc in enumerate(dict.fromkeys(scene_of[s] for s in order))}
     out = dict(
-        fps=FPS, width=1080, height=1920, duration=DURATION, frames=math.ceil(round(DURATION * FPS, 6)),
-        audio='audio/' + Path(AL['source']['project_copy']).name, audio_sha256=AL['source']['sha256'],
+        fps=FPS, width=1080, height=1920, duration=DURATION, frames=math.ceil(round(DURATION * FPS, 6)), narration_duration=NARRATION, end_hold=END_HOLD,
+        audio='audio/' + Path(AL['source']['project_copy']).name, audio_sha256=AL['source']['sha256'], audio_mix='audio/v3/FS02_V3_MIX.wav',
         note='Times in seconds. Keys interpolate x,y,s (authored placement), k (scale about pivot px/py or track pivot), r, o (opacity), wp (wipe 0..1). e = easing into that key: linear|out|inout|back|step.',
         states=[dict(id=s, scene=scene_of[s], start=start[s], end=round(end[s], 3), built=built[s], cut=CUES[s][1],
                      phrase=next(b['narration_phrase'] for b in board if b['state_id'] == s)) for s in order],
@@ -291,7 +329,7 @@ def main():
     # closed-caption sidecar (approved wording, ASR phrase timing) for upload; nothing is burned into the picture
     def ts(x):
         return f"{int(x // 3600):02}:{int(x % 3600 // 60):02}:{int(x % 60):02},{round(x % 1 * 1000) % 1000:03}"
-    srt = [f"{i}\n{ts(p['start'])} --> {ts(min(p['end'] + 0.25, DURATION))}\n{p['text']}\n" for i, p in enumerate(AL['phrases'], 1)]
+    srt = [f"{i}\n{ts(p['start'])} --> {ts(min(p['end'] + 0.25, NARRATION))}\n{p['text']}\n" for i, p in enumerate(AL['phrases'], 1)]
     (ROOT / 'animation/Finance_Short_02.en.srt').write_text('\n'.join(srt))
     (ROOT / 'animation/KEYFRAME_TIMELINE.json').write_text(json.dumps(out, separators=(',', ':')) + '\n')
     nkeys = sum(len(t['keys']) for t in out['tracks'])

@@ -7,6 +7,7 @@
 //   node animation/tools/render.cjs --out animation/Finance_Short_02_PREVIEW.mp4 --scale 0.5
 //   node animation/tools/render.cjs --png-dir /tmp/frames --times 0,3.2,10 [--nocam]
 //   node animation/tools/render.cjs --out clip.mp4 --from 0 --to 8 --scale 0.5
+//   --audio <path under animation/>  soundtrack (default: TL.audio_mix if built, else the narration WAV); padded to the video length
 const http = require('node:http'), fs = require('node:fs'), path = require('node:path'), os = require('node:os');
 const { spawn } = require('node:child_process');
 
@@ -89,12 +90,14 @@ async function main() {
   } else {
     const f0 = Math.round(Number(args.from || 0) * fps);
     const f1 = args.to ? Math.round(Number(args.to) * fps) : TL.frames;
-    const wav = path.join(ROOT, 'animation', TL.audio);
+    const mix = TL.audio_mix && fs.existsSync(path.join(ROOT, 'animation', TL.audio_mix)) ? TL.audio_mix : TL.audio;
+    const wav = path.join(ROOT, 'animation', args.audio || mix);
+    process.stderr.write(`audio: ${path.relative(ROOT, wav)}\n`);
     const ff = spawn('ffmpeg', ['-y', '-hide_banner', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'png', '-i', '-',
       '-ss', String(f0 / fps), '-t', String((f1 - f0) / fps), '-i', wav, '-map', '0:v', '-map', '1:a',
       '-vf', 'scale=out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709:range=tv', '-c:v', 'libx264', '-preset', 'slow', '-crf', String(args.crf || 16),
       '-tune', 'animation', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-color_range', 'tv',
-      '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-af', args.gain ? `volume=${args.gain}dB` : 'anull',
+      '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-af', (args.gain ? `volume=${args.gain}dB,` : '') + 'apad',
       '-movflags', '+faststart', '-t', String((f1 - f0) / fps), path.resolve(args.out)], { stdio: ['pipe', 'inherit', 'inherit'] });
     const done = new Promise((ok, ko) => ff.on('close', c => (c ? ko(new Error('ffmpeg exit ' + c)) : ok())));
     const t0 = Date.now();

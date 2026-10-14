@@ -3,7 +3,8 @@
 
   states <ref_dir> <hold_dir>   authored state SVG vs player frame at each state's last frame (camera off)
   sheet <mp4> <png>             FINAL_CONTACT_SHEET: one tile per state at its last frame
-  video <mp4>                   decode check, stream facts, blank/frozen frame scan, audio peaks
+  video <mp4> [--narration]     decode check, stream facts, blank/frozen frame scan, audio peaks, narration sync
+                                (compares against audio_mix when built; --narration for a narration-only file)
 """
 import json, subprocess, sys
 from pathlib import Path
@@ -50,13 +51,23 @@ def video(mp4):
     peak = [l.split(':')[-1].strip() for l in ast.splitlines() if 'Peak level dB' in l]
     tp = [l.split(':')[-1].strip() for l in ast.splitlines() if l.strip().startswith('Peak:')]
     a = next(s for s in probe['streams'] if s['codec_type'] == 'audio')
-    # audio fidelity: decoded AAC vs the original WAV (both 48 kHz mono float), zero-lag SNR
-    wav = ROOT / 'animation' / TL['audio']
+    # audio fidelity: decoded AAC vs the soundtrack it was encoded from (both 48 kHz mono float), zero-lag SNR
+    mix = TL.get('audio_mix') if TL.get('audio_mix') and (ROOT / 'animation' / TL['audio_mix']).exists() and '--narration' not in sys.argv else None
+    wav = ROOT / 'animation' / (mix or TL['audio'])
     pcm = lambda src: np.frombuffer(subprocess.run(['ffmpeg', '-v', 'error', '-i', str(src), '-map', '0:a', '-ac', '1', '-ar', '48000', '-f', 'f32le', '-'],
-                                                   capture_output=True).stdout, np.float32)
+                                                   capture_output=True).stdout, np.float32).astype(np.float64)
     x, y = pcm(wav), pcm(mp4)
     n = min(len(x), len(y))
     snr = 10 * np.log10((x[:n] ** 2).sum() / max(1e-12, ((x[:n] - y[:n]) ** 2).sum()))
+    # narration preserved: best-fit gain and lag of the original WAV inside the delivered audio
+    nv = pcm(ROOT / 'animation' / TL['audio']); m = len(nv)
+    lags = range(-240, 241, 8)  # +-5 ms
+    corr = [float(np.dot(nv[2400:m - 2400], y[2400 + L:m - 2400 + L])) for L in lags]
+    lag = list(lags)[int(np.argmax(corr))]
+    g = float(np.dot(nv, y[:m]) / np.dot(nv, nv))
+    rest = y[:m] - g * nv
+    narration = dict(lag_samples=lag, fitted_gain_db=round(20 * np.log10(g), 2),
+                     narration_to_rest_db=round(float(10 * np.log10((g * nv) @ (g * nv) / (rest @ rest))), 1), mp4_samples_48k=len(y), expected_samples_48k=round(TL['frames'] / TL['fps'] * 48000))
     # sync: the encoded file's hard cuts must land on the timeline's cut frames
     cuts = [round(st['start'] * TL['fps']) for st in TL['states'] if st['cut'] and st['start'] > 0]
     # change[i] is frame i -> i+1, so a cut on frame c peaks at change[c-1]; report the peak's offset in +-4 frames
@@ -69,7 +80,7 @@ def video(mp4):
                 decode_errors=dec or 'none', decoded_frames=len(fr), blank_frames=blank, black_frames=black,
                 longest_identical_run=dict(frames=longest[0], start_frame=longest[1], start_sec=round(longest[1] / TL['fps'], 2)),
                 flicker_frames=flicker,
-                audio_vs_wav=dict(wav_samples_48k=len(x), mp4_samples_48k=len(y), snr_db=round(float(snr), 1)),
+                audio_vs_source=dict(source=str(wav.relative_to(ROOT)), source_samples_48k=len(x), mp4_samples_48k=len(y), snr_db=round(float(snr), 1)), narration_in_audio=narration,
                 cut_sync_frame_error=cut_hits)
 
 

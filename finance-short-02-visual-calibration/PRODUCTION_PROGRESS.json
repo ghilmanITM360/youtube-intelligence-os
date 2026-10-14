@@ -1,6 +1,6 @@
 {
-  "phase": "ANIMATION_AND_FINAL_RENDER",
-  "status": "VIDEO_RENDERED_REVIEW_REQUIRED",
+  "phase": "V3_PROFESSIONAL_POLISH",
+  "status": "V3_RENDERED_OWNER_REVIEW_REQUIRED",
   "scenes_completed": [
     1,
     2,
@@ -84,8 +84,9 @@
   "artwork_status": "ALL_7_SCENES_AUTHORED_AND_STATIC_REVIEWED",
   "artwork_local_remote_sha": "a8370b71404702e59592f0bedf116117d2d90e01",
   "remaining": [
-    "Owner viewing/listening of animation/Finance_Short_02_FINAL.mp4 on a phone",
+    "Owner viewing/listening of animation/Finance_Short_02_FINAL_v3.mp4 on a phone (bed level, 10 effects, face reactions, remaining short holds)",
     "Owner artistic approval or retiming notes",
+    "Optional: swap in a YouTube Audio Library track (owner download; see V3_AUDIO_LICENSES.md)",
     "Re-check H.4.1 before publishing"
   ],
   "clean_committed_source_validation": "PASS",
@@ -132,5 +133,46 @@
   "usage_animation_start": {
     "five_hour": 2,
     "weekly": 28
-  }
+  },
+  "animation_v3": {
+    "resume": "animation/RESUME_HERE.md",
+    "edit_decisions": "animation/V3_EDIT_DECISIONS.csv",
+    "visual_qa": "animation/V3_VISUAL_QA.md",
+    "audio_mix_qa": "animation/V3_AUDIO_MIX_QA.md",
+    "audio_licenses": "animation/V3_AUDIO_LICENSES.md",
+    "final_mp4": "animation/Finance_Short_02_FINAL_v3.mp4",
+    "final_sha256": "1536625d33207a914bd7bee3ac1d47f489c0f8df5258659635e00908eecc6be5",
+    "preview_mp4": "animation/Finance_Short_02_PREVIEW_v3.mp4",
+    "preview_sha256": "78637483a26c63f6297c3a1952f6f34326fc6ab55a789dece852255b301f2f54",
+    "narration_only_mp4": "animation/Finance_Short_02_FINAL_v3_NARRATION_ONLY.mp4",
+    "narration_only_sha256": "a87e307abd9a6084cecbb08cc4f6615fce2b30fa47347739c1f9cf143d8bb41a",
+    "mix_wav": "animation/audio/v3/FS02_V3_MIX.wav",
+    "mix_sha256": "81df81926de6f5a3eb0326e251255364601af2c7caf7eef5df3862c63254ba23",
+    "duration_sec": 51.0,
+    "frames": 1530,
+    "end_hold_sec": 1.3,
+    "narration_unchanged": true,
+    "states_animated": 36,
+    "scenes": 7,
+    "tracks": 120,
+    "keys": 634,
+    "camera_keys": 28,
+    "cuts": 11,
+    "assets_used": 107,
+    "new_artwork_created": 0,
+    "music": "ORIGINAL procedural bed (tools/sound.py)",
+    "sfx_count": 10,
+    "sfx_source": "ORIGINAL procedural (tools/sound.py)",
+    "true_peak_dbtp": -1.5,
+    "narration_to_rest_db": 23.1,
+    "integrated_lufs": -15.0,
+    "human_listening": "NOT_PERFORMED",
+    "owner_video_approval": "PENDING",
+    "v2_preserved": [
+      "animation/Finance_Short_02_FINAL.mp4",
+      "animation/Finance_Short_02_PREVIEW.mp4"
+    ],
+    "v2_source_commit": "9d0a93a2618c1aa113b653929e3801ce08fe2495"
+  },
+  "usage_v3_start": "5h 27% / weekly 32%"
 }
