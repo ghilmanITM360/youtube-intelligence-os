@@ -1,6 +1,6 @@
 {
-  "phase": "STATIC_ASSET_EXPANSION",
-  "status": "ASSET_PACKAGE_RECOVERED_AND_READY_FOR_OWNER_REVIEW",
+  "phase": "ANIMATION_AND_FINAL_RENDER",
+  "status": "VIDEO_RENDERED_REVIEW_REQUIRED",
   "scenes_completed": [
     1,
     2,
@@ -12,7 +12,7 @@
   ],
   "scene_count": 7,
   "script_words": 147,
-  "timing": "PROVISIONAL_NO_MP3",
+  "timing": "WAV_ALIGNED_49.68s",
   "private_reference_pixels_tracked": false,
   "baseline_backup": "/Users/ghilmankhan/yios-git-recovery/finance-short-02-v2-baseline-20261014T071214Z",
   "usage_start": {
@@ -80,15 +80,13 @@
     "five_hour": 96,
     "weekly": 55
   },
-  "no_animation_or_video": true,
+  "no_animation_or_video": false,
   "artwork_status": "ALL_7_SCENES_AUTHORED_AND_STATIC_REVIEWED",
   "artwork_local_remote_sha": "a8370b71404702e59592f0bedf116117d2d90e01",
   "remaining": [
-    "Owner full-package visual approval",
-    "Any owner-confirmed blocking artwork correction",
-    "Original MP3",
-    "Audio timing alignment",
-    "Separate authorization to animate"
+    "Owner viewing/listening of animation/Finance_Short_02_FINAL.mp4 on a phone",
+    "Owner artistic approval or retiming notes",
+    "Re-check H.4.1 before publishing"
   ],
   "clean_committed_source_validation": "PASS",
   "fresh_remote_blob_download": "PASS_PROJECT_ONLY_INDEPENDENT_RETRIEVAL",
@@ -103,5 +101,36 @@
     "result": "PASS",
     "run": "https://github.com/ghilmanITM360/youtube-intelligence-os/actions/runs/38533722637",
     "note": "Final documentation commit requires its own exact-head CI check; resolve current status with gh pr checks 30."
+  },
+  "animation": {
+    "folder": "animation/",
+    "resume": "animation/RESUME_HERE.md",
+    "qa": "animation/FINAL_VIDEO_QA.md",
+    "final_mp4": "animation/Finance_Short_02_FINAL.mp4",
+    "final_sha256": "e606f9d14029f60f42618edc31d4cd4711b58e6b719a6285e9c9e77f21b146a9",
+    "preview_mp4": "animation/Finance_Short_02_PREVIEW.mp4",
+    "preview_sha256": "7ef37f5395bf979ea205696bd6e1702ab618a84e27e871dc6e17d3bfaf6f7bff",
+    "audio": "animation/audio/cartesia_2026-10-14T09_09_17Z_Skylar_sonic-3.6-2026-08-27.wav",
+    "audio_sha256": "3eff2e57cd6f86e9a879d907d4cd46478dcc04d1660050b78ce4f72a5ee50328",
+    "duration_sec": 49.7,
+    "frames": 1491,
+    "fps": 30,
+    "resolution": "1080x1920",
+    "states_animated": 36,
+    "scenes": 7,
+    "tracks": 117,
+    "keys": 621,
+    "camera_keys": 28,
+    "cuts": 11,
+    "assets_used": 104,
+    "new_artwork_created": 0,
+    "script_match": "MATCH_AFTER_NUMBER_NORMALIZATION",
+    "music_sfx": "none",
+    "human_listening": "NOT_PERFORMED",
+    "owner_video_approval": "PENDING"
+  },
+  "usage_animation_start": {
+    "five_hour": 2,
+    "weekly": 28
   }
 }

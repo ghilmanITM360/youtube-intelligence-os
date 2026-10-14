@@ -49,7 +49,7 @@ def verify(require_complete=False):
   assert Image.open(R/c['source']).crop(c['box_xyxy']).convert('RGB').tobytes()==Image.open(R/c['file']).convert('RGB').tobytes()
  git_result=subprocess.run(['git','ls-files','-z','--',str(R)],cwd=R.parent,capture_output=True)
  tracked=git_result.stdout.decode().split('\0') if git_result.returncode==0 else [str(f.relative_to(R)) for f in R.rglob('*') if f.is_file()]
- assert not any('/references/' in f or 'VISUAL_COMPARISON' in f or 'HOST_CONCEPT' in f or f.endswith(('.zip','.mp4','.mp3','.mov')) for f in tracked)
+ assert not any('/references/' in f or 'VISUAL_COMPARISON' in f or 'HOST_CONCEPT' in f or (f.endswith(('.zip','.mp4','.mp3','.mov')) and '/animation/' not in f) for f in tracked)  # animation/ holds the owner-authorised production render
  # Interaction anchor and consistent anatomy checks, independent of source generation.
  data={r['asset_id']:r for r in json.loads((R/'manifests/ASSET_DATA.json').read_text())}
  def world(layer,anchor):

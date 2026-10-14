@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finance Short 02 Player</title>
+<style>
+  html, body { margin: 0; background: #fff; }
+  body.review { background: #e9e6df; font: 14px system-ui, sans-serif; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 8px; }
+  body.review #stage { width: min(56vh, 96vw); height: auto; box-shadow: 0 1px 6px #0003; background: #fff; }
+  #ui { display: none; gap: 8px; align-items: center; width: min(56vh, 96vw); }
+  body.review #ui { display: flex; }
+  #ui input { flex: 1; }
+</style>
+</head>
+<body>
+<svg id="stage" xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs id="defs"></defs>
+  <rect width="1080" height="1920" fill="#fff"/>
+  <g id="cam"></g>
+</svg>
+<div id="ui"><button id="play">Play</button><input id="seek" type="range" min="0" step="0.001" value="0"><span id="clock">0.00</span></div>
+<script>
+// Keyframe player for KEYFRAME_TIMELINE.json. Every layer is the original asset SVG at its authored
+// placement; this file only interpolates keys. Rendering is a pure function of t (deterministic seeking).
+const NS = 'http://www.w3.org/2000/svg';
+const q = new URLSearchParams(location.search);
+const EASE = {
+  linear: u => u,
+  out: u => 1 - (1 - u) ** 3,
+  inout: u => u < 0.5 ? 4 * u ** 3 : 1 - (-2 * u + 2) ** 3 / 2,
+  back: u => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * (u - 1) ** 3 + c1 * (u - 1) ** 2; },
+};
+function sample(keys, t) {
+  if (t <= keys[0].t) return keys[0];
+  const last = keys[keys.length - 1];
+  if (t >= last.t) return last;
+  let i = 0;
+  while (keys[i + 1].t <= t) i++;
+  const a = keys[i], b = keys[i + 1];
+  if (b.e === 'step') return a;
+  const u = (EASE[b.e] || EASE.linear)((t - a.t) / (b.t - a.t));
+  const v = { };
+  for (const f in b) if (typeof b[f] === 'number') v[f] = (a[f] ?? b[f]) + (b[f] - (a[f] ?? b[f])) * u;
+  return v;
+}
+let TL, nodes = [], cam;
+async function build() {
+  TL = await (await fetch('KEYFRAME_TIMELINE.json', { cache: 'no-store' })).json();
+  const svgText = {};
+  for (const tr of TL.tracks) svgText[tr.src] ??= fetch(tr.src).then(r => r.text());
+  const defs = document.getElementById('defs');
+  cam = document.getElementById('cam');
+  const parser = new DOMParser();
+  const decodes = [];
+  TL.tracks.forEach((tr, n) => {
+    const outer = document.createElementNS(NS, 'g');
+    outer.setAttribute('data-track', tr.id);
+    outer.style.display = 'none';
+    const inner = document.createElementNS(NS, 'g');
+    outer.appendChild(inner);
+    cam.appendChild(outer);
+    let clip = null;
+    if (tr.wipe) {
+      const cp = document.createElementNS(NS, 'clipPath');
+      cp.id = 'wipe' + n;
+      clip = document.createElementNS(NS, 'rect');
+      cp.appendChild(clip);
+      defs.appendChild(cp);
+    }
+    nodes.push({ tr, outer, inner, clip, cid: 'wipe' + n, ready: svgText[tr.src].then(text => {
+      const doc = parser.parseFromString(text, 'image/svg+xml').documentElement;
+      for (const el of doc.querySelectorAll('[id]')) el.id = 't' + n + '_' + el.id;
+      for (const im of doc.querySelectorAll('image')) {
+        const img = new Image(); img.src = im.getAttribute('href') || im.getAttribute('xlink:href'); decodes.push(img.decode());
+      }
+      while (doc.firstChild) inner.appendChild(document.importNode(doc.firstChild, true)), doc.removeChild(doc.firstChild);
+    }) });
+  });
+  await Promise.all(nodes.map(n => n.ready));
+  await Promise.all(decodes);
+}
+function apply(t) {
+  const noCam = q.has('nocam');
+  const c = sample(TL.camera, t);
+  cam.setAttribute('transform', noCam ? '' : `translate(${c.cx} ${c.cy}) scale(${c.k}) translate(${-c.cx} ${-c.cy})`);
+  for (const { tr, outer, inner, clip, cid } of nodes) {
+    const v = sample(tr.keys, t);
+    if (v.o <= 0.002) { outer.style.display = 'none'; continue; }
+    outer.style.display = '';
+    const px = v.px ?? tr.pivot[0], py = v.py ?? tr.pivot[1];
+    outer.setAttribute('transform', `translate(${v.x} ${v.y}) scale(${v.s}) translate(${px} ${py}) rotate(${v.r}) scale(${v.k}) translate(${-px} ${-py})`);
+    outer.setAttribute('opacity', Math.min(1, v.o).toFixed(4));
+    if (clip && v.wp < 0.999) {
+      const m = 30, W = tr.w + 2 * m, H = tr.h + 2 * m, d = tr.wipe, p = Math.max(0, v.wp);
+      const r = d === 'lr' ? [-m, -m, W * p, H] : d === 'rl' ? [-m + W * (1 - p), -m, W * p, H]
+              : d === 'tb' ? [-m, -m, W, H * p] : [-m, -m + H * (1 - p), W, H * p];
+      ['x', 'y', 'width', 'height'].forEach((a, i) => clip.setAttribute(a, r[i]));
+      inner.setAttribute('clip-path', `url(#${cid})`);
+    } else inner.removeAttribute('clip-path');
+  }
+}
+window.__render = t => { apply(t); return new Promise(r => requestAnimationFrame(() => requestAnimationFrame(() => r(true)))); };
+build().then(() => {
+  apply(Number(q.get('t') || 0));
+  window.__ready = true;
+  if (q.has('render')) return;
+  document.body.classList.add('review');
+  const audio = new Audio(TL.audio), seek = document.getElementById('seek'), clock = document.getElementById('clock');
+  seek.max = TL.duration;
+  const tick = () => { apply(audio.currentTime); seek.value = audio.currentTime; clock.textContent = audio.currentTime.toFixed(2); if (!audio.paused) requestAnimationFrame(tick); };
+  document.getElementById('play').onclick = () => audio.paused ? (audio.play(), requestAnimationFrame(tick)) : audio.pause();
+  seek.oninput = () => { audio.currentTime = +seek.value; apply(+seek.value); clock.textContent = (+seek.value).toFixed(2); };
+});
+</script>
+</body>
+</html>

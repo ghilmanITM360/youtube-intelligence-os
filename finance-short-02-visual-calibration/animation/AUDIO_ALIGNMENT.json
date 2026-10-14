@@ -1,0 +1,1303 @@
+{
+ "source": {
+  "original_path": "/Users/ghilmankhan/Downloads/cartesia_2026-10-14T09_09_17Z_Skylar_sonic-3.6-2026-08-27.wav",
+  "project_copy": "animation/audio/cartesia_2026-10-14T09_09_17Z_Skylar_sonic-3.6-2026-08-27.wav",
+  "sha256": "3eff2e57cd6f86e9a879d907d4cd46478dcc04d1660050b78ce4f72a5ee50328",
+  "bytes": 4381820,
+  "format": "WAV PCM s16le",
+  "sample_rate": 44100,
+  "channels": 1,
+  "duration_sec": 49.68,
+  "sample_peak_dbfs": -0.37,
+  "clipped_samples": 0
+ },
+ "method": "openai-whisper base word timestamps (ASR) + ffmpeg silencedetect -40 dB / 0.18 s. Phrase onsets snapped to silence ends. No human listening.",
+ "approved_script": {
+  "path": "editable_sources/original/APPROVED_NARRATION.txt",
+  "sha256": "a43916ce5eed6eacd1fbc1ce49bcf0c0143e165521303e12f0fdb203b2d3be0b",
+  "words": 147
+ },
+ "asr_text": "The Federal Reserve raised interest rates, and its own interest bill went up. In September, the Fed raised rates by a quarter point. Here's the problem. Banks keep roughly $3 trillion in reserves at the Fed, and the Fed pays them interest. Just that quarter point increase would add about $7.5 billion a year in interest costs, if reserves stayed the same. But much of the Fed's bond income doesn't rise as quickly. When expenses outweigh income, losses build into what's called a deferred asset. By early October, that balance was roughly $234 billion. Until future earnings cover it, the Fed's normal payments to the Treasury stay paused. In 2021, those payments were more than $107 billion. Higher rates can fight inflation. But they can also make the Fed's own finances harder to repair.",
+ "comparison": {
+  "status": "MATCH_AFTER_NUMBER_NORMALIZATION",
+  "asr_tokens": 134,
+  "approved_tokens_after_normalization": 134,
+  "normalization_only_differences": [
+   "'three trillion dollars' printed by ASR as '$3 trillion'",
+   "'seven and a half billion dollars' printed by ASR as '$7.5 billion'",
+   "'two hundred and thirty-four billion dollars' printed by ASR as '$234 billion'",
+   "'twenty twenty-one' printed by ASR as '2021'",
+   "'one hundred and seven billion dollars' printed by ASR as '$107 billion'",
+   "punctuation/capitalisation; \"quarter-point\" hyphen"
+  ],
+  "not_resolvable_by_asr": "Exact spoken realisation of numbers (e.g. \"seven and a half\" vs \"seven point five\", and each spoken \"dollars\") is inferred, not heard. Unbroken speech after \"$234 billion\" (33.88-34.76 s) and \"$107 billion\" (43.32-44.46 s) is consistent with the approved \"dollars\"."
+ },
+ "silences": [
+  [
+   2.27,
+   2.573
+  ],
+  [
+   4.238,
+   4.528
+  ],
+  [
+   5.242,
+   5.444
+  ],
+  [
+   7.375,
+   7.827
+  ],
+  [
+   8.603,
+   9.034
+  ],
+  [
+   14.006,
+   14.438
+  ],
+  [
+   21.265,
+   21.577
+  ],
+  [
+   24.588,
+   24.801
+  ],
+  [
+   39.225,
+   39.575
+  ],
+  [
+   44.2,
+   44.457
+  ],
+  [
+   46.06,
+   46.472
+  ]
+ ],
+ "speech_start_sec": 0.0,
+ "speech_end_sec": 49.28,
+ "phrases": [
+  {
+   "id": "P01",
+   "text": "The Federal Reserve raised interest rates.",
+   "first_word": 0,
+   "last_word": 5,
+   "start": 0.0,
+   "end": 1.94
+  },
+  {
+   "id": "P02",
+   "text": "And its own interest bill went up.",
+   "first_word": 6,
+   "last_word": 12,
+   "start": 2.573,
+   "end": 4.1
+  },
+  {
+   "id": "P03",
+   "text": "In September, the Fed raised rates by a quarter point.",
+   "first_word": 13,
+   "last_word": 22,
+   "start": 4.528,
+   "end": 7.2
+  },
+  {
+   "id": "P04",
+   "text": "Here's the problem:",
+   "first_word": 23,
+   "last_word": 25,
+   "start": 7.827,
+   "end": 8.46
+  },
+  {
+   "id": "P05",
+   "text": "banks keep roughly three trillion dollars in reserves at the Fed,",
+   "first_word": 26,
+   "last_word": 35,
+   "start": 9.034,
+   "end": 12.22
+  },
+  {
+   "id": "P06",
+   "text": "and the Fed pays them interest.",
+   "first_word": 36,
+   "last_word": 41,
+   "start": 12.6,
+   "end": 13.78
+  },
+  {
+   "id": "P07",
+   "text": "Just that quarter-point increase",
+   "first_word": 42,
+   "last_word": 46,
+   "start": 14.438,
+   "end": 15.72
+  },
+  {
+   "id": "P08",
+   "text": "would add about seven and a half billion dollars a year in interest costs,",
+   "first_word": 47,
+   "last_word": 56,
+   "start": 15.72,
+   "end": 19.56
+  },
+  {
+   "id": "P09",
+   "text": "if reserves stayed the same.",
+   "first_word": 57,
+   "last_word": 61,
+   "start": 19.84,
+   "end": 21.04
+  },
+  {
+   "id": "P10",
+   "text": "But much of the Fed's bond income doesn't rise as quickly.",
+   "first_word": 62,
+   "last_word": 72,
+   "start": 21.577,
+   "end": 24.36
+  },
+  {
+   "id": "P11",
+   "text": "When expenses outweigh income,",
+   "first_word": 73,
+   "last_word": 76,
+   "start": 24.801,
+   "end": 26.22
+  },
+  {
+   "id": "P12",
+   "text": "losses build into what's called a deferred asset.",
+   "first_word": 77,
+   "last_word": 84,
+   "start": 26.84,
+   "end": 29.4
+  },
+  {
+   "id": "P13",
+   "text": "By early October, that balance was roughly two hundred and thirty-four billion dollars.",
+   "first_word": 85,
+   "last_word": 93,
+   "start": 29.4,
+   "end": 33.88
+  },
+  {
+   "id": "P14",
+   "text": "Until future earnings cover it,",
+   "first_word": 94,
+   "last_word": 98,
+   "start": 34.76,
+   "end": 36.34
+  },
+  {
+   "id": "P15",
+   "text": "the Fed's normal payments to the Treasury stay paused.",
+   "first_word": 99,
+   "last_word": 107,
+   "start": 36.52,
+   "end": 38.9
+  },
+  {
+   "id": "P16",
+   "text": "In twenty twenty-one, those payments were more than one hundred and seven billion dollars.",
+   "first_word": 108,
+   "last_word": 116,
+   "start": 39.575,
+   "end": 43.32
+  },
+  {
+   "id": "P17",
+   "text": "Higher rates can fight inflation.",
+   "first_word": 117,
+   "last_word": 121,
+   "start": 44.457,
+   "end": 45.88
+  },
+  {
+   "id": "P18",
+   "text": "But they can also make the Fed's own finances harder to repair.",
+   "first_word": 122,
+   "last_word": 133,
+   "start": 46.472,
+   "end": 49.28
+  }
+ ],
+ "words": [
+  {
+   "i": 0,
+   "text": "The",
+   "start": 0.0,
+   "start_refined": 0.0,
+   "end": 0.22,
+   "p": 0.658
+  },
+  {
+   "i": 1,
+   "text": "Federal",
+   "start": 0.22,
+   "start_refined": 0.22,
+   "end": 0.46,
+   "p": 0.825
+  },
+  {
+   "i": 2,
+   "text": "Reserve",
+   "start": 0.46,
+   "start_refined": 0.46,
+   "end": 0.9,
+   "p": 0.993
+  },
+  {
+   "i": 3,
+   "text": "raised",
+   "start": 0.9,
+   "start_refined": 0.9,
+   "end": 1.26,
+   "p": 0.973
+  },
+  {
+   "i": 4,
+   "text": "interest",
+   "start": 1.26,
+   "start_refined": 1.26,
+   "end": 1.72,
+   "p": 0.998
+  },
+  {
+   "i": 5,
+   "text": "rates,",
+   "start": 1.72,
+   "start_refined": 1.72,
+   "end": 1.94,
+   "p": 0.999
+  },
+  {
+   "i": 6,
+   "text": "and",
+   "start": 2.54,
+   "start_refined": 2.573,
+   "end": 2.72,
+   "p": 0.985
+  },
+  {
+   "i": 7,
+   "text": "its",
+   "start": 2.72,
+   "start_refined": 2.72,
+   "end": 2.98,
+   "p": 0.982
+  },
+  {
+   "i": 8,
+   "text": "own",
+   "start": 2.98,
+   "start_refined": 2.98,
+   "end": 3.14,
+   "p": 0.993
+  },
+  {
+   "i": 9,
+   "text": "interest",
+   "start": 3.14,
+   "start_refined": 3.14,
+   "end": 3.38,
+   "p": 0.992
+  },
+  {
+   "i": 10,
+   "text": "bill",
+   "start": 3.38,
+   "start_refined": 3.38,
+   "end": 3.66,
+   "p": 0.992
+  },
+  {
+   "i": 11,
+   "text": "went",
+   "start": 3.66,
+   "start_refined": 3.66,
+   "end": 3.86,
+   "p": 0.994
+  },
+  {
+   "i": 12,
+   "text": "up.",
+   "start": 3.86,
+   "start_refined": 3.86,
+   "end": 4.1,
+   "p": 0.999
+  },
+  {
+   "i": 13,
+   "text": "In",
+   "start": 4.52,
+   "start_refined": 4.528,
+   "end": 4.6,
+   "p": 0.992
+  },
+  {
+   "i": 14,
+   "text": "September,",
+   "start": 4.6,
+   "start_refined": 4.6,
+   "end": 5.04,
+   "p": 0.994
+  },
+  {
+   "i": 15,
+   "text": "the",
+   "start": 5.44,
+   "start_refined": 5.444,
+   "end": 5.52,
+   "p": 0.988
+  },
+  {
+   "i": 16,
+   "text": "Fed",
+   "start": 5.52,
+   "start_refined": 5.52,
+   "end": 5.72,
+   "p": 0.932
+  },
+  {
+   "i": 17,
+   "text": "raised",
+   "start": 5.72,
+   "start_refined": 5.72,
+   "end": 6.1,
+   "p": 0.997
+  },
+  {
+   "i": 18,
+   "text": "rates",
+   "start": 6.1,
+   "start_refined": 6.1,
+   "end": 6.38,
+   "p": 0.985
+  },
+  {
+   "i": 19,
+   "text": "by",
+   "start": 6.38,
+   "start_refined": 6.38,
+   "end": 6.54,
+   "p": 0.993
+  },
+  {
+   "i": 20,
+   "text": "a",
+   "start": 6.54,
+   "start_refined": 6.54,
+   "end": 6.66,
+   "p": 0.989
+  },
+  {
+   "i": 21,
+   "text": "quarter",
+   "start": 6.66,
+   "start_refined": 6.66,
+   "end": 6.86,
+   "p": 0.952
+  },
+  {
+   "i": 22,
+   "text": "point.",
+   "start": 6.86,
+   "start_refined": 6.86,
+   "end": 7.2,
+   "p": 0.677
+  },
+  {
+   "i": 23,
+   "text": "Here's",
+   "start": 7.7,
+   "start_refined": 7.827,
+   "end": 8.04,
+   "p": 0.975
+  },
+  {
+   "i": 24,
+   "text": "the",
+   "start": 8.04,
+   "start_refined": 8.04,
+   "end": 8.12,
+   "p": 0.996
+  },
+  {
+   "i": 25,
+   "text": "problem.",
+   "start": 8.12,
+   "start_refined": 8.12,
+   "end": 8.46,
+   "p": 0.999
+  },
+  {
+   "i": 26,
+   "text": "Banks",
+   "start": 9.02,
+   "start_refined": 9.034,
+   "end": 9.2,
+   "p": 0.966
+  },
+  {
+   "i": 27,
+   "text": "keep",
+   "start": 9.2,
+   "start_refined": 9.2,
+   "end": 9.42,
+   "p": 0.993
+  },
+  {
+   "i": 28,
+   "text": "roughly",
+   "start": 9.42,
+   "start_refined": 9.42,
+   "end": 9.76,
+   "p": 0.991
+  },
+  {
+   "i": 29,
+   "text": "$3",
+   "start": 9.76,
+   "start_refined": 9.76,
+   "end": 10.18,
+   "p": 0.937
+  },
+  {
+   "i": 30,
+   "text": "trillion",
+   "start": 10.18,
+   "start_refined": 10.18,
+   "end": 10.7,
+   "p": 0.98
+  },
+  {
+   "i": 31,
+   "text": "in",
+   "start": 10.7,
+   "start_refined": 10.7,
+   "end": 11.3,
+   "p": 0.967
+  },
+  {
+   "i": 32,
+   "text": "reserves",
+   "start": 11.3,
+   "start_refined": 11.3,
+   "end": 11.56,
+   "p": 0.988
+  },
+  {
+   "i": 33,
+   "text": "at",
+   "start": 11.56,
+   "start_refined": 11.56,
+   "end": 11.86,
+   "p": 0.959
+  },
+  {
+   "i": 34,
+   "text": "the",
+   "start": 11.86,
+   "start_refined": 11.86,
+   "end": 11.98,
+   "p": 0.998
+  },
+  {
+   "i": 35,
+   "text": "Fed,",
+   "start": 11.98,
+   "start_refined": 11.98,
+   "end": 12.22,
+   "p": 0.988
+  },
+  {
+   "i": 36,
+   "text": "and",
+   "start": 12.6,
+   "start_refined": 12.6,
+   "end": 12.72,
+   "p": 0.997
+  },
+  {
+   "i": 37,
+   "text": "the",
+   "start": 12.72,
+   "start_refined": 12.72,
+   "end": 12.82,
+   "p": 0.996
+  },
+  {
+   "i": 38,
+   "text": "Fed",
+   "start": 12.82,
+   "start_refined": 12.82,
+   "end": 13.02,
+   "p": 0.988
+  },
+  {
+   "i": 39,
+   "text": "pays",
+   "start": 13.02,
+   "start_refined": 13.02,
+   "end": 13.3,
+   "p": 0.993
+  },
+  {
+   "i": 40,
+   "text": "them",
+   "start": 13.3,
+   "start_refined": 13.3,
+   "end": 13.44,
+   "p": 0.994
+  },
+  {
+   "i": 41,
+   "text": "interest.",
+   "start": 13.44,
+   "start_refined": 13.44,
+   "end": 13.78,
+   "p": 0.997
+  },
+  {
+   "i": 42,
+   "text": "Just",
+   "start": 14.32,
+   "start_refined": 14.438,
+   "end": 14.52,
+   "p": 0.992
+  },
+  {
+   "i": 43,
+   "text": "that",
+   "start": 14.52,
+   "start_refined": 14.52,
+   "end": 14.74,
+   "p": 0.996
+  },
+  {
+   "i": 44,
+   "text": "quarter",
+   "start": 14.74,
+   "start_refined": 14.74,
+   "end": 15.04,
+   "p": 0.981
+  },
+  {
+   "i": 45,
+   "text": "point",
+   "start": 15.04,
+   "start_refined": 15.04,
+   "end": 15.3,
+   "p": 0.803
+  },
+  {
+   "i": 46,
+   "text": "increase",
+   "start": 15.3,
+   "start_refined": 15.3,
+   "end": 15.72,
+   "p": 0.992
+  },
+  {
+   "i": 47,
+   "text": "would",
+   "start": 15.72,
+   "start_refined": 15.72,
+   "end": 15.96,
+   "p": 0.993
+  },
+  {
+   "i": 48,
+   "text": "add",
+   "start": 15.96,
+   "start_refined": 15.96,
+   "end": 16.14,
+   "p": 0.996
+  },
+  {
+   "i": 49,
+   "text": "about",
+   "start": 16.14,
+   "start_refined": 16.14,
+   "end": 16.38,
+   "p": 0.993
+  },
+  {
+   "i": 50,
+   "text": "$7.5",
+   "start": 16.38,
+   "start_refined": 16.38,
+   "end": 17.14,
+   "p": 0.748
+  },
+  {
+   "i": 51,
+   "text": "billion",
+   "start": 17.14,
+   "start_refined": 17.14,
+   "end": 17.64,
+   "p": 0.988
+  },
+  {
+   "i": 52,
+   "text": "a",
+   "start": 17.64,
+   "start_refined": 17.64,
+   "end": 18.22,
+   "p": 0.9
+  },
+  {
+   "i": 53,
+   "text": "year",
+   "start": 18.22,
+   "start_refined": 18.22,
+   "end": 18.52,
+   "p": 0.999
+  },
+  {
+   "i": 54,
+   "text": "in",
+   "start": 18.52,
+   "start_refined": 18.52,
+   "end": 18.68,
+   "p": 0.962
+  },
+  {
+   "i": 55,
+   "text": "interest",
+   "start": 18.68,
+   "start_refined": 18.68,
+   "end": 18.94,
+   "p": 0.993
+  },
+  {
+   "i": 56,
+   "text": "costs,",
+   "start": 18.94,
+   "start_refined": 18.94,
+   "end": 19.56,
+   "p": 0.993
+  },
+  {
+   "i": 57,
+   "text": "if",
+   "start": 19.84,
+   "start_refined": 19.84,
+   "end": 19.96,
+   "p": 0.996
+  },
+  {
+   "i": 58,
+   "text": "reserves",
+   "start": 19.96,
+   "start_refined": 19.96,
+   "end": 20.22,
+   "p": 0.974
+  },
+  {
+   "i": 59,
+   "text": "stayed",
+   "start": 20.22,
+   "start_refined": 20.22,
+   "end": 20.62,
+   "p": 0.983
+  },
+  {
+   "i": 60,
+   "text": "the",
+   "start": 20.62,
+   "start_refined": 20.62,
+   "end": 20.8,
+   "p": 1.0
+  },
+  {
+   "i": 61,
+   "text": "same.",
+   "start": 20.8,
+   "start_refined": 20.8,
+   "end": 21.04,
+   "p": 1.0
+  },
+  {
+   "i": 62,
+   "text": "But",
+   "start": 21.52,
+   "start_refined": 21.577,
+   "end": 21.64,
+   "p": 0.991
+  },
+  {
+   "i": 63,
+   "text": "much",
+   "start": 21.64,
+   "start_refined": 21.64,
+   "end": 21.88,
+   "p": 0.981
+  },
+  {
+   "i": 64,
+   "text": "of",
+   "start": 21.88,
+   "start_refined": 21.88,
+   "end": 22.02,
+   "p": 0.997
+  },
+  {
+   "i": 65,
+   "text": "the",
+   "start": 22.02,
+   "start_refined": 22.02,
+   "end": 22.12,
+   "p": 0.989
+  },
+  {
+   "i": 66,
+   "text": "Fed's",
+   "start": 22.12,
+   "start_refined": 22.12,
+   "end": 22.44,
+   "p": 0.989
+  },
+  {
+   "i": 67,
+   "text": "bond",
+   "start": 22.44,
+   "start_refined": 22.44,
+   "end": 22.66,
+   "p": 0.978
+  },
+  {
+   "i": 68,
+   "text": "income",
+   "start": 22.66,
+   "start_refined": 22.66,
+   "end": 23.06,
+   "p": 0.999
+  },
+  {
+   "i": 69,
+   "text": "doesn't",
+   "start": 23.06,
+   "start_refined": 23.06,
+   "end": 23.62,
+   "p": 0.995
+  },
+  {
+   "i": 70,
+   "text": "rise",
+   "start": 23.62,
+   "start_refined": 23.62,
+   "end": 23.82,
+   "p": 0.989
+  },
+  {
+   "i": 71,
+   "text": "as",
+   "start": 23.82,
+   "start_refined": 23.82,
+   "end": 24.04,
+   "p": 0.966
+  },
+  {
+   "i": 72,
+   "text": "quickly.",
+   "start": 24.04,
+   "start_refined": 24.04,
+   "end": 24.36,
+   "p": 0.998
+  },
+  {
+   "i": 73,
+   "text": "When",
+   "start": 24.74,
+   "start_refined": 24.801,
+   "end": 24.88,
+   "p": 0.997
+  },
+  {
+   "i": 74,
+   "text": "expenses",
+   "start": 24.88,
+   "start_refined": 24.88,
+   "end": 25.3,
+   "p": 0.933
+  },
+  {
+   "i": 75,
+   "text": "outweigh",
+   "start": 25.3,
+   "start_refined": 25.3,
+   "end": 25.78,
+   "p": 0.966
+  },
+  {
+   "i": 76,
+   "text": "income,",
+   "start": 25.78,
+   "start_refined": 25.78,
+   "end": 26.22,
+   "p": 0.998
+  },
+  {
+   "i": 77,
+   "text": "losses",
+   "start": 26.84,
+   "start_refined": 26.84,
+   "end": 27.04,
+   "p": 0.944
+  },
+  {
+   "i": 78,
+   "text": "build",
+   "start": 27.04,
+   "start_refined": 27.04,
+   "end": 27.32,
+   "p": 0.894
+  },
+  {
+   "i": 79,
+   "text": "into",
+   "start": 27.32,
+   "start_refined": 27.32,
+   "end": 27.64,
+   "p": 0.97
+  },
+  {
+   "i": 80,
+   "text": "what's",
+   "start": 27.64,
+   "start_refined": 27.64,
+   "end": 27.9,
+   "p": 0.982
+  },
+  {
+   "i": 81,
+   "text": "called",
+   "start": 27.9,
+   "start_refined": 27.9,
+   "end": 28.12,
+   "p": 0.999
+  },
+  {
+   "i": 82,
+   "text": "a",
+   "start": 28.12,
+   "start_refined": 28.12,
+   "end": 28.4,
+   "p": 0.939
+  },
+  {
+   "i": 83,
+   "text": "deferred",
+   "start": 28.4,
+   "start_refined": 28.4,
+   "end": 29.04,
+   "p": 0.836
+  },
+  {
+   "i": 84,
+   "text": "asset.",
+   "start": 29.04,
+   "start_refined": 29.04,
+   "end": 29.4,
+   "p": 0.998
+  },
+  {
+   "i": 85,
+   "text": "By",
+   "start": 29.4,
+   "start_refined": 29.4,
+   "end": 30.0,
+   "p": 0.475
+  },
+  {
+   "i": 86,
+   "text": "early",
+   "start": 30.0,
+   "start_refined": 30.0,
+   "end": 30.24,
+   "p": 0.998
+  },
+  {
+   "i": 87,
+   "text": "October,",
+   "start": 30.24,
+   "start_refined": 30.24,
+   "end": 30.76,
+   "p": 0.982
+  },
+  {
+   "i": 88,
+   "text": "that",
+   "start": 31.22,
+   "start_refined": 31.22,
+   "end": 31.3,
+   "p": 0.987
+  },
+  {
+   "i": 89,
+   "text": "balance",
+   "start": 31.3,
+   "start_refined": 31.3,
+   "end": 31.6,
+   "p": 0.996
+  },
+  {
+   "i": 90,
+   "text": "was",
+   "start": 31.6,
+   "start_refined": 31.6,
+   "end": 31.8,
+   "p": 0.996
+  },
+  {
+   "i": 91,
+   "text": "roughly",
+   "start": 31.8,
+   "start_refined": 31.8,
+   "end": 32.16,
+   "p": 0.996
+  },
+  {
+   "i": 92,
+   "text": "$234",
+   "start": 32.16,
+   "start_refined": 32.16,
+   "end": 33.42,
+   "p": 0.928
+  },
+  {
+   "i": 93,
+   "text": "billion.",
+   "start": 33.42,
+   "start_refined": 33.42,
+   "end": 33.88,
+   "p": 0.929
+  },
+  {
+   "i": 94,
+   "text": "Until",
+   "start": 34.76,
+   "start_refined": 34.76,
+   "end": 35.1,
+   "p": 0.99
+  },
+  {
+   "i": 95,
+   "text": "future",
+   "start": 35.1,
+   "start_refined": 35.1,
+   "end": 35.42,
+   "p": 0.993
+  },
+  {
+   "i": 96,
+   "text": "earnings",
+   "start": 35.42,
+   "start_refined": 35.42,
+   "end": 35.72,
+   "p": 0.997
+  },
+  {
+   "i": 97,
+   "text": "cover",
+   "start": 35.72,
+   "start_refined": 35.72,
+   "end": 36.1,
+   "p": 0.991
+  },
+  {
+   "i": 98,
+   "text": "it,",
+   "start": 36.1,
+   "start_refined": 36.1,
+   "end": 36.34,
+   "p": 0.986
+  },
+  {
+   "i": 99,
+   "text": "the",
+   "start": 36.52,
+   "start_refined": 36.52,
+   "end": 36.58,
+   "p": 0.992
+  },
+  {
+   "i": 100,
+   "text": "Fed's",
+   "start": 36.58,
+   "start_refined": 36.58,
+   "end": 36.86,
+   "p": 0.801
+  },
+  {
+   "i": 101,
+   "text": "normal",
+   "start": 36.86,
+   "start_refined": 36.86,
+   "end": 37.12,
+   "p": 0.984
+  },
+  {
+   "i": 102,
+   "text": "payments",
+   "start": 37.12,
+   "start_refined": 37.12,
+   "end": 37.48,
+   "p": 0.997
+  },
+  {
+   "i": 103,
+   "text": "to",
+   "start": 37.48,
+   "start_refined": 37.48,
+   "end": 37.7,
+   "p": 0.997
+  },
+  {
+   "i": 104,
+   "text": "the",
+   "start": 37.7,
+   "start_refined": 37.7,
+   "end": 37.8,
+   "p": 0.992
+  },
+  {
+   "i": 105,
+   "text": "Treasury",
+   "start": 37.8,
+   "start_refined": 37.8,
+   "end": 38.14,
+   "p": 0.657
+  },
+  {
+   "i": 106,
+   "text": "stay",
+   "start": 38.14,
+   "start_refined": 38.14,
+   "end": 38.56,
+   "p": 0.932
+  },
+  {
+   "i": 107,
+   "text": "paused.",
+   "start": 38.56,
+   "start_refined": 38.56,
+   "end": 38.9,
+   "p": 0.979
+  },
+  {
+   "i": 108,
+   "text": "In",
+   "start": 39.54,
+   "start_refined": 39.575,
+   "end": 39.62,
+   "p": 0.994
+  },
+  {
+   "i": 109,
+   "text": "2021,",
+   "start": 39.62,
+   "start_refined": 39.62,
+   "end": 40.18,
+   "p": 0.992
+  },
+  {
+   "i": 110,
+   "text": "those",
+   "start": 40.62,
+   "start_refined": 40.62,
+   "end": 40.98,
+   "p": 0.996
+  },
+  {
+   "i": 111,
+   "text": "payments",
+   "start": 40.98,
+   "start_refined": 40.98,
+   "end": 41.28,
+   "p": 0.998
+  },
+  {
+   "i": 112,
+   "text": "were",
+   "start": 41.28,
+   "start_refined": 41.28,
+   "end": 41.48,
+   "p": 0.994
+  },
+  {
+   "i": 113,
+   "text": "more",
+   "start": 41.48,
+   "start_refined": 41.48,
+   "end": 41.66,
+   "p": 0.991
+  },
+  {
+   "i": 114,
+   "text": "than",
+   "start": 41.66,
+   "start_refined": 41.66,
+   "end": 41.8,
+   "p": 0.998
+  },
+  {
+   "i": 115,
+   "text": "$107",
+   "start": 41.8,
+   "start_refined": 41.8,
+   "end": 42.8,
+   "p": 0.988
+  },
+  {
+   "i": 116,
+   "text": "billion.",
+   "start": 42.8,
+   "start_refined": 42.8,
+   "end": 43.32,
+   "p": 0.992
+  },
+  {
+   "i": 117,
+   "text": "Higher",
+   "start": 44.2,
+   "start_refined": 44.457,
+   "end": 44.66,
+   "p": 0.967
+  },
+  {
+   "i": 118,
+   "text": "rates",
+   "start": 44.66,
+   "start_refined": 44.66,
+   "end": 44.98,
+   "p": 0.997
+  },
+  {
+   "i": 119,
+   "text": "can",
+   "start": 44.98,
+   "start_refined": 44.98,
+   "end": 45.18,
+   "p": 0.991
+  },
+  {
+   "i": 120,
+   "text": "fight",
+   "start": 45.18,
+   "start_refined": 45.18,
+   "end": 45.4,
+   "p": 0.963
+  },
+  {
+   "i": 121,
+   "text": "inflation.",
+   "start": 45.4,
+   "start_refined": 45.4,
+   "end": 45.88,
+   "p": 0.999
+  },
+  {
+   "i": 122,
+   "text": "But",
+   "start": 46.4,
+   "start_refined": 46.472,
+   "end": 46.52,
+   "p": 0.984
+  },
+  {
+   "i": 123,
+   "text": "they",
+   "start": 46.52,
+   "start_refined": 46.52,
+   "end": 46.62,
+   "p": 0.988
+  },
+  {
+   "i": 124,
+   "text": "can",
+   "start": 46.62,
+   "start_refined": 46.62,
+   "end": 46.72,
+   "p": 0.987
+  },
+  {
+   "i": 125,
+   "text": "also",
+   "start": 46.72,
+   "start_refined": 46.72,
+   "end": 46.92,
+   "p": 0.983
+  },
+  {
+   "i": 126,
+   "text": "make",
+   "start": 46.92,
+   "start_refined": 46.92,
+   "end": 47.08,
+   "p": 0.998
+  },
+  {
+   "i": 127,
+   "text": "the",
+   "start": 47.08,
+   "start_refined": 47.08,
+   "end": 47.22,
+   "p": 0.995
+  },
+  {
+   "i": 128,
+   "text": "Fed's",
+   "start": 47.22,
+   "start_refined": 47.22,
+   "end": 47.58,
+   "p": 0.993
+  },
+  {
+   "i": 129,
+   "text": "own",
+   "start": 47.58,
+   "start_refined": 47.58,
+   "end": 47.78,
+   "p": 0.993
+  },
+  {
+   "i": 130,
+   "text": "finances",
+   "start": 47.78,
+   "start_refined": 47.78,
+   "end": 48.34,
+   "p": 0.993
+  },
+  {
+   "i": 131,
+   "text": "harder",
+   "start": 48.34,
+   "start_refined": 48.34,
+   "end": 48.76,
+   "p": 0.986
+  },
+  {
+   "i": 132,
+   "text": "to",
+   "start": 48.76,
+   "start_refined": 48.76,
+   "end": 48.98,
+   "p": 0.997
+  },
+  {
+   "i": 133,
+   "text": "repair.",
+   "start": 48.98,
+   "start_refined": 48.98,
+   "end": 49.28,
+   "p": 0.99
+  }
+ ]
+}

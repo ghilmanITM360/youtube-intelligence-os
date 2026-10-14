@@ -1,5 +1,7 @@
 # Why Raising Rates Costs the Fed Money — static artwork handoff
 
+> Update 2026-10-14: the animation now exists in `animation/` (owner WAV timing, keyframe timeline, final MP4). The provisional 53 s and the five proposed cuts below were superseded by the 49.68 s WAV alignment and 11 audio-led cuts. See `animation/RESUME_HERE.md`.
+
 All seven scene groups and36 meaningful static states are authored. The147-word narration at editable_sources/original/APPROVED_NARRATION.txt is unchanged.53seconds and five proposed cuts remain provisional; align to the owner's future audio before any animation. This package contains no audio, video, temporal evaluator or rig.
 
 ## Open and assemble
