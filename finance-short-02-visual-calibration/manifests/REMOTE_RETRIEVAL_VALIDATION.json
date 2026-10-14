@@ -1,0 +1,49 @@
+{
+  "source_commit": "966d2d654b7e009e74d15b6a0435f8e091332988",
+  "files_retrieved": 471,
+  "sha256_matches": 471,
+  "mismatches": [],
+  "method": "Independent depth-1 blob-filtered HTTPS sparse checkout; project-only blobs, no local alternates",
+  "retrieval": "PASS",
+  "date": "2026-10-14",
+  "structural_validation": {
+    "result": "PASS",
+    "approved_words": 147,
+    "script_sha256": "a43916ce5eed6eacd1fbc1ce49bcf0c0143e165521303e12f0fdb203b2d3be0b",
+    "states_authored": 36,
+    "states_planned": 36,
+    "scenes_authored": 7,
+    "assets": 114,
+    "actual_scene_layers": 315,
+    "contact_anchor_checks": 8,
+    "host_anatomy_consistent": true,
+    "transparent_asset_edges_unclipped": true,
+    "SVGs_checked": 150,
+    "PNG_decodes_checked": 150,
+    "embedded_evidence_hashes_checked": 8,
+    "exact_pixel_crops": 24,
+    "financial_decimal_calculation": "3000000000000 * 0.0025 = 7500000000",
+    "timing": "53 seconds PROVISIONAL",
+    "planned_cuts": 5,
+    "competitor_pixels_tracked": false,
+    "human_art_approval": "PENDING",
+    "automated_tests_do_not_certify_art": true
+  },
+  "export_validation": {
+    "result": "PASS",
+    "independent_asset_pixel_matches": 114,
+    "state_preview_pixel_matches": 36,
+    "native_scene_pixel_matches": 7,
+    "mismatches": [],
+    "runtime": {
+      "node": "v24.14.0",
+      "sharp": "0.35.5",
+      "libvips": "8.18.7"
+    },
+    "scope": "Same-runtime decoded pixel equality; not a claim of all-platform renderer pixel identity"
+  },
+  "dependency_install": "npm ci --ignore-scripts and isolated Python 3.12 venv/pip requirements-assets.txt: PASS",
+  "ignored_local_sources_required": false,
+  "scope": "Independent remote retrieval and validation on current Laptop B; not an actual second physical laptop test",
+  "historical_failure": "Previous broad archive blob prefetch: RPC connection reset / early EOF. Replaced with bounded project-only sparse retrieval; historical successful checks retained in CLEAN_SOURCE_VALIDATION.json."
+}

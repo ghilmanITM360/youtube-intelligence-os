@@ -1,6 +1,6 @@
 {
   "phase": "STATIC_ASSET_EXPANSION",
-  "status": "RESOURCE_CHECKPOINT",
+  "status": "ASSET_PACKAGE_RECOVERED_AND_READY_FOR_OWNER_REVIEW",
   "scenes_completed": [
     1,
     2,
@@ -84,10 +84,24 @@
   "artwork_status": "ALL_7_SCENES_AUTHORED_AND_STATIC_REVIEWED",
   "artwork_local_remote_sha": "a8370b71404702e59592f0bedf116117d2d90e01",
   "remaining": [
-    "Latest-head CI verification",
-    "Bounded independent remote project retrieval after connection-reset failure",
-    "Owner full-package visual approval"
+    "Owner full-package visual approval",
+    "Any owner-confirmed blocking artwork correction",
+    "Original MP3",
+    "Audio timing alignment",
+    "Separate authorization to animate"
   ],
   "clean_committed_source_validation": "PASS",
-  "fresh_remote_blob_download": "FAILED_NETWORK_RESET_NOT_CLAIMED_PASS"
+  "fresh_remote_blob_download": "PASS_PROJECT_ONLY_INDEPENDENT_RETRIEVAL",
+  "recovery_checkpoint_sha": "966d2d654b7e009e74d15b6a0435f8e091332988",
+  "recovery_validation_report": "manifests/REMOTE_RETRIEVAL_VALIDATION.json",
+  "usage_recovery_start": {
+    "five_hour": 0,
+    "weekly": 8
+  },
+  "recovery_ci": {
+    "sha": "966d2d654b7e009e74d15b6a0435f8e091332988",
+    "result": "PASS",
+    "run": "https://github.com/ghilmanITM360/youtube-intelligence-os/actions/runs/38533722637",
+    "note": "Final documentation commit requires its own exact-head CI check; resolve current status with gh pr checks 30."
+  }
 }
