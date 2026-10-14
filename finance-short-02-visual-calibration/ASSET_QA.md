@@ -17,3 +17,8 @@ Reference: REF03 / rSa2aziEsAI M0027 38.7333-39.6997s note entrance; REF08 / 0ll
 Five native/source states with progressive percent-to-decimal math inspected; cash bundle/pointing host remain independent. Actual decimal check verifies3T x0.0025=7.5B. Fixed-reserves qualifier and annualized extra-cost wording remain visible; no invented accumulation arithmetic. Main values/assumption readable at320, secondary forecast note weak at160. Typography intentionally hand-lettered uppercase, cleaner than the creator ink.
 
 Reference: VISUAL_DNA / -X6YzlY_8tM 169-189s sequential numerical comparisons; REF05 M0047 30.375-32.750s isolated paper scale. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene04
+
+Bond/coupon/clock and expense-bill illustrations inspected atnative and mobile, all4 states sampled. Preserved explicit much-bond-income and slower reset labels into final comparison, avoiding an all-income claim. Arrows are qualitative, not an invented chart. Main objects and direction survive160; secondary timing words need320/narration. No observed clipping or anatomy mismatch.
+
+Reference: VISUAL_DNA / 0ll9rEtoRrs 75-225s bond/payment metaphor; MOTION_DNA persistent additive financial explanations. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
