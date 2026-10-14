@@ -1,37 +1,105 @@
-# Casual Economics deep research — recovery and Greece checkpoint
+# Casual Economics — Deep Research Report
 
-Status: **RESOURCE_CHECKPOINT**. Research date: 2026-10-14 (Asia/Karachi). This is not full research completion.
+Status: **FULL_RESEARCH_COMPLETE** within sampled-forensic scope. Full audiovisual sign-off: **0/11** (not claimed). Research date: 2026-10-14. Branch `codex/casual-economics-forensic-research`, draft PR #25. Exact commits and CI results are recorded in Git; this file does not track them.
 
-## Recovery
+## 1. Scope and evidence
 
-Started on `codex/casual-economics-forensic-research` at `429d0e007614ad191533bef0457e2e4009c2c71f`, matching remote. Found 24 staged research files and no unstaged research edits. Revalidated the interrupted package: 55 checks passed, secret scan zero, whitespace clean. Recovered and pushed it as `e5f15a4d8ab571df2d479ab92346f4b448e44f0a`. Targeted Big Short improvements were pushed as `dcf70cf9cec7d7c91c5eb05cfad893ea95015a83`; exact-head repository CI passed for that head. Later checkpoint SHA/CI must be read from Git, not inferred from this file.
+- **Sources:** 11/11 original MP4s with verified SHA256 and size, read-only in `~/Downloads/casual_economics`. 11 English auto-caption tracks (DS-000036). Japan, 2008 and Great Depression were re-hashed in this session and matched.
+- **Structural packages, 11/11 PASS:**
+  - Six historical packages: `data/extracted/forensic-analysis/casual-economics/2026-10-12/02_VIDEO_FORENSICS/`, ten masters, 18,091 rows, unchanged.
+  - Five research packages: `02_VIDEO_FORENSICS/`, five masters, 2,083 rows. Big Short 55 checks; Greece, Japan, 2008 and Great Depression 49 checks each.
+  - The two master scopes are separate and do not duplicate each other.
+- **Sampled coverage added this session:**
 
-## Sources and coverage
+  | Video | Point samples | Temporal sequences | Sequence frame entries | Beats |
+  |---|---|---|---|---|
+  | Japan | 252 | 31 | 269 | 15 |
+  | 2008 | 179 | 31 | 295 | 13 |
+  | Great Depression | 181 | 31 | 275 | 14 |
 
-Reuse 11/11 historical SHA256/size matches and AV stream records, zero recorded mismatches, 11 caption tracks. No bulk rehash, reacquisition or original-media modification. Greece current path/size checked against its verified record. Source identity verification is distinct from full decode integrity.
+  The maximum gap between point samples is 4 s, plus a final tail frame. These are point samples, not shots or an exhaustive state census.
+- **Not done:**
+  - Direct audio listening (all audio evidence is SIGNAL_MEASURED plus ASR_INFERRED).
+  - Independent second-reviewer visual QA.
+  - Frame-exact easing or timing.
+  - A complete fact-check of every claim.
 
-Before this recovery: 7/11 structural units, including the staged Big Short. Newly completed: Greece. Current: **8/11 structural packages**, **0/11 full AV sign-offs**. Independent review and audio listening are not newly certified. Historical six retain their original QA limits. Fixed point samples and candidate-state representatives are different coverage methods; structural status means validated package integrity, not equivalent exhaustive coverage.
+## 2. Per-video packages
 
-Big Short retained 317 still observations, 34 coarse sequences and 30 beats. Added `PAYOFF_TARGETED_REVIEW.json` (23 new frames/two reused boundaries) and `AMBIGUITY_TARGETED_REVIEW.json` (22 selected frames). Payoff cash/$10,000 reveal bracket: 445.833333–445.866667; scene replacement: 448.4–448.433333. Progressive bar push and staged borrower labels now have additional source evidence. All 625 automatic episodes are not independently adjudicated; exact easing and listening remain unresolved.
+| Video | ID | Package location | Key file |
+|---|---|---|---|
+| Singapore | kbPauzdHhcI | historical | VISUAL_RECONSTRUCTION.md |
+| Dubai | N9GUfsfiM4M | historical | VISUAL_RECONSTRUCTION.md |
+| Ancient Rome | rl6ggpS13ao | historical | VISUAL_RECONSTRUCTION.md |
+| Norway | xVhMZPiIIGs | historical | VISUAL_RECONSTRUCTION.md |
+| Great Depression Europe | VTx478EUybo | historical | VISUAL_RECONSTRUCTION.md |
+| Switzerland | 3tVMjRRXQIg | historical | VISUAL_RECONSTRUCTION.md |
+| Big Short | Iwz0fhJWN9Q | research | VIDEO_REPORT.md |
+| Greece | nr5dcBPACH0 | research | VIDEO_REPORT.md |
+| Japan's Lost Decade | x_MZu-QF-6o | research (new) | VIDEO_REPORT.md, PACKAGING_AND_CLAIMS.md |
+| 2008 Financial Crisis | APlGPpM-nBo | research (new) | VIDEO_REPORT.md, PACKAGING_AND_CLAIMS.md |
+| Great Depression | qF3ekm9Gx_E | research (new) | VIDEO_REPORT.md, PACKAGING_AND_CLAIMS.md |
 
-Greece `nr5dcBPACH0`: **205 point observations, 27 temporal sequences/139 frame entries, 319 unique reviewed timestamps, two native-resolution inspections, 29 narrative beats**. Maximum between-sample gap four seconds. Structural validator passed 49 checks. Source audio decoded successfully for measurements: peak −3.337773 dBFS, RMS −21.346097 dBFS; no listening claim. 345 nonblank auto-caption cues, 1,942 regex-counted caption words (not measured speech-only rate). Two H.264 seek reference warnings are retained as a limitation; exact affected seek was not logged, no obvious corruption seen at contact-sheet scale, full decode integrity not certified.
+## 3. Channel production DNA — summary
 
-## Findings and their scope
+Full detail is in `03_CHANNEL_DNA/CHANNEL_PRODUCTION_DNA.md`.
 
-Greece combines large-head conversational figures, modular arm/expression variants, detailed reused environments and bespoke metaphor illustrations. Source examples: parliament dialogue at 144; bandaged recovery figure at 780; debt concealment behind bush at 172–173.5; bank splitting at 358–359.5; opposed character entrances at 608–610; multi-layer library/host/board entrance at 751.9–752.2. The GDP line grows across 416.0–416.75; bailout writing appears as a complete block between 500.1–500.2, not observed continuous handwriting. Creator workflow/software/easing unknown.
+- **Visual:** simple outlined round-head characters placed on detailed painted environments. Three "stage" fields alternate with scenes: cream for charts, black for years and concept cards, white for prop diagrams. One consistent chart style uses green for gains, red for losses and a yellow highlight band. Emphasis comes from blurring or dimming the background, not from 3D.
+- **Characters:** a single body grammar throughout. Identity is carried by accessories (hats, glasses, facial hair, badges). The expression set is small. Dialogue is done with pose swaps, not rigs. The host character changes from video to video. Metaphors sometimes require custom reaction drawings.
+- **Assets:** recurring families (money bags, certificates, bank and tower icons, seals, FOR SALE signs, zigzag arrows, chalkboards, maps) plus prepared state variants (intact/wrecked, cracked/repaired). Environment plates are reused heavily within a video. Some assets appear across videos: the Dow 1929 chart, the breadline storefront, the crash grid, and the shared thumbnail template used by the 2008 and Great Depression videos.
+- **Motion:** almost everything can be reproduced with keyframes: cuts, type-on, pop-ins, numeric counters, chart line draws, bar and pie builds, staggered lists, strike-and-correct, character slides and swaps, prop swaps, drops and rises, accumulation of duplicates, opacity fades, recolours, split-panel slides, wipes and whips, and camera pushes. No lip-sync, rigs or 3D were observed. Easing was not measured.
+- **Editing:** a new visual proposition roughly every 1–4 s, about one per sentence. The pattern is a statement followed by a proof chart. Black year cards mark chronology. Endings reuse earlier scenes.
+- **Storytelling:** the opening (≤30 s) presents a contrast or a magnitude, then poses a question. The video then rewinds and follows a chronological spine. Mechanisms are laid out as lists of 2–4 causes or as feedback loops. Abstract finance is shown through literal metaphors (bubble, zombie loans, anvil of debt, dart-board stock picking). Dramatized skits carry part of the story. Videos end with lessons, a present-day parallel and a referral to another video.
+- **Audio:** continuous non-silent soundtracks (measured). Music credits are mostly Kevin MacLeod. Narration, pauses and SFX are not verified.
+- **Packaging:** four title formulas. The thumbnail system is a big outlined headline, a large distressed character, a central symbol and a small secondary group.
 
-Narrative moves from fragility hook through prestige/collapse contrast, currency entry, alleged workaround, prosperity, crisis, repeated conditional rescues, social costs and causal recap. Desaturated reused scenes at 692–708 connect the conclusion to earlier setups. Economic claims remain attributed video/caption claims; the 102% historical ratio, euro/swap chronology, Argentina counts and GDP versus GDP-per-capita framing need fact checks. See per-video `PACKAGING_AND_CLAIMS.md`.
+## 4. Production blueprint
 
-## Reconciliation
+`05_PRODUCTION_BLUEPRINT/ORIGINAL_PRODUCTION_BLUEPRINT.md` covers:
 
-Original ten historical masters remain unchanged and reconcile to **18,091 rows**. Research-only `03_MASTER_DATA/` contains five matching-schema tables for Big Short and Greece: **989 rows**, exact per-video multiset reconciliation. These two scopes are separate; they are not duplicate independent evidence. `STATUS.json` derives eight structural units from six historical plus two new QA records.
+- originality guardrails;
+- the 9-stage pipeline;
+- script and act templates;
+- the character system with pose and expression libraries;
+- asset library folder structure and reuse estimates;
+- eight layered scene templates;
+- eighteen keyframe movement recipes with suggested durations;
+- audio-sync and editing rules;
+- a QA checklist;
+- a thumbnail and title kit.
 
-## Unfinished work
+Custom drawing is required for poses, expressions, one-off metaphors and environment plates. Everything else can be animated from static layered originals.
 
-Next sequential videos: Japan `x_MZu-QF-6o`, 2008 Crisis `APlGPpM-nBo`, Great Depression `qF3ekm9Gx_E`. Then targeted historical-six QA gaps, channel DNA, public performance/virality, Google Trends/news and original-production blueprint. These later phases have not started; no strong/typical/weak ranking, causal explanation or completed blueprint is claimed. CTR, impressions, retention, traffic shares, revenue/RPM and subscriber conversion remain UNKNOWN.
+## 5. Performance and virality — summary
 
-## Preservation and resources
+Full detail is in `04_PERFORMANCE_RESEARCH/PERFORMANCE_AND_VIRALITY_RESEARCH.md`.
 
-PR #25 stays draft/open; no merge, new branch/worktree/PR or PR #30 changes. Unrelated untracked work and existing stash preserved. One primary agent only; no production video/artwork generated. Compact source evidence images are research derivatives, not production assets. Live resource readings: start 2% five-hour/56% weekly; after Greece validation 79%/68%. Prior 98%/24% readings belonged to the previous session and are historical. No explicit context warning exposed. See `RESUME_HERE.md` and `STATUS.json` for the final resource checkpoint and exact next operation.
+- **Tiers** (lifetime views/day vs. median): STRONG — Great Depression, Big Short, Singapore (provisional because the video is young). TYPICAL — Greece, 2008, Switzerland, Rome, Japan. WEAK — Dubai, Norway, Europe Depression.
+- **SUPPORTED:**
+  - One evergreen breakout (Great Depression, 3.1 M views, ≈57% of all channel views) dominates. It is still earning ≈1,300 views/day.
+  - The production style is near-constant across videos, so style alone does not explain the 60× spread.
+  - A visible source list in the description did not determine reach.
+- **PLAUSIBLE:**
+  - Canonical high-demand event titles help.
+  - The April 2025 tariff crash and Smoot-Hawley news cycle amplified the Great Depression video. Trends peaked 2025-04-03/09.
+  - Very low-search topics (Switzerland, Greece) relied on recommendations. Traffic source is not known.
+- **WEAK_EVIDENCE:** question titles underperform.
+- **UNKNOWN:**
+  - The effect of the thumbnail template. It appears on both the best and the worst video.
+  - CTR, retention, traffic sources, RPM and subscriber conversion.
+- **Counterexample:** the Europe Depression video was uploaded while "great depression" interest was at its local peak, yet it is the weakest video.
 
-Final research stop decision: five-hour 87%, weekly 69%, near the requested approximately 90% threshold. Finish persistence and exact-head CI only; Japan has not started.
+## 6. Quality gaps
+
+Status of the historical six:
+
+- Their known gaps are already documented and partially supplemented in their own reports: Switzerland, Norway, Singapore and Big Short semantic-boundary misses, Europe's three failed targeted seeks, and Dubai's 1983/1985 caption-versus-screen discrepancy.
+- No historical package was regenerated.
+- Remaining limitations are in `06_VALIDATION_AND_HANDOFF/QA_LIMITATIONS_REGISTER.md`.
+
+New factual issues found in this session:
+
+- Japan: on-screen typo "TECHOLOGY" at 804 s.
+- Great Depression: crash grid shows -90% while later chart labels show -70% and -68%.
+- 2008: dramatized office dialogue.
+- 2008 and Great Depression: no source notes in the descriptions.
