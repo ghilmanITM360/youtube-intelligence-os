@@ -1,0 +1,16 @@
+{
+  "name": "finance-short-02-static-assets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static SVG illustration export and verification only",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  },
+  "scripts": {
+    "verify:exports": "node tools/verify_exports.cjs",
+    "review:sheets": "node tools/build_review.cjs"
+  }
+}

@@ -37,3 +37,11 @@ Reference: REF09 / 2EZzwupIa80 S007.2 51.80s paper personification; VISUAL_DNA s
 Four payoff states inspected. Same host switches resolved shield grip to concerned wrench-handle grip; foreground thumb layers meet recorded hand anchors. Corrected conditional headline to CAN MAKE REPAIR HARDER. Shield/price-pressure reminder links both consequences. Native/320px contact and main words clear;160px main paradox recognizable, subtle fingers reduced. Recovery steps are a qualitative metaphor, not a measured financial chart. All7 scenes now have actual editable sources.
 
 Reference: SHORTS_DNA / rSa2aziEsAI ending yen/debt tradeoff; REF02 / -X6YzlY_8tM S018.9/S018.12 190.18/194.67s expression switch. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+
+## Final package review and corrected boundaries
+
+All36 static states and seven native scene finals were inspected through scene sheets/native samples; all114 reusable assets reviewed on the original-only contact sheet and production character sheet. Padded five dollar labels, FACE_WOW overlay brow bounds and wrench tip after an alpha-boundary test exposed clipping; all standalone illustrated alpha bounds now clear their canvas edge. Final seven-scene overview rechecked; no fundamental visual-direction failure observed. Geometry remains cleaner and lettering more uniform than naturally inked references. This is owner-review-ready original interpretation, not visual equivalence or independent human sign-off.
+
+Exact decoded-pixel comparison:114 standalone exports,36 mobile state previews and7 native scene images match their SVG sources in the recorded Sharp/libvips runtime. SVG IDs, actual layer maps, financial qualifiers, approved script hash,24 exact official pixel crops, prop/hand contact and host anatomy are checked separately. Eight face/body assemblies are not eight new character designs; cash bundle reuses banknotes. Counts are explicit in manifests/ASSET_COUNTS.json.
+
+The final payoff now says CAN MAKE REPAIR HARDER; an earlier text replacement did not match the source spacing and was caught in the rendered review, then corrected. The final render contains the conditional wording. No unsupported financial certainty is intended.

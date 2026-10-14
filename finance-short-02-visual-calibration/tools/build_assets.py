@@ -21,11 +21,15 @@ for ident,pose,expr,upper in [('HOST_NEUTRAL','STAND','NEUTRAL',False),('HOST_PO
  anchors={'pivot':[139,269] if not upper else [139,208],'head':[145,100],'feet':[139,377],'near_hand':[207,196] if pose=='BILL' else {'POINT':[245,171],'UP':[242,140],'OPEN':[220,192],'THINK':[148,149],'LEFT':[49,171],'SHIELD':[219,207],'REPAIR':[224,263]}.get(pose,[146,243])}
  spec(ident,'characters',a.host(pose,expr,upper),290,400 if not upper else 265,'HOST', 'POSE_EXPRESSION_VARIANT',anchors)
 for expr in ['NEUTRAL','EXPLAIN','WOW','WORRIED','THINK','RESOLVE']:
- spec('FACE_'+expr,'characters',a.g(a.face(expr),-100,-75),100,90,'HOST_FACE','EXPRESSION_OVERLAY',{'pivot':[45,25],'host_attach':[100,75]})
+ spec('FACE_'+expr,'characters',a.g(a.face(expr),-100,-65),100,100,'HOST_FACE','EXPRESSION_OVERLAY',{'pivot':[45,35],'host_attach':[100,65]})
 for ident,d in [('HAND_POINT','M8 39 L27 26 L42 11 M27 26 L47 22 M27 26 L41 34'),('HAND_GRIP','M17 44 Q7 25 13 17 Q18 7 26 17 L35 26 M17 44 Q9 47 12 34'),('HAND_OPEN','M9 40 L23 29 L18 10 M23 29 L29 6 M23 29 L40 13 M23 29 L44 26')]:
  spec(ident,'characters',a.p(d,a.SKIN if ident=='HAND_GRIP' else 'none',sw=3),55,55,'HOST_HAND','HAND_VARIANT',{'pivot':[17,40],'wrist':[17,40]})
 for ident,name,w,h in [('PROP_FED','fed',300,250),('PROP_BANK','bank',245,225),('PROP_BILL','bill',210,230),('PROP_NOTE','note',175,95)]:spec(ident,'props',a.v2(name),w,h,source='Original V2 drawing; production lettering converted to original paths')
-for ident,fn,w,h in [('PROP_CASH_BAG',a.moneybag,185,200),('PROP_CASH_BUNDLE',a.stack,210,205),('PROP_BOND',a.bond,210,260),('PROP_COUPON',a.coupon,180,125),('PROP_LEDGER',a.ledger,310,235),('PROP_TREASURY',a.treasury,320,250),('PROP_LOSS_PILE',a.deferredpile,235,205),('PROP_CLOCK',a.clock,175,165),('PROP_PAUSE',a.pause,105,125),('PROP_SHIELD',a.shield,175,185),('PROP_PRICE_PRESSURE',a.price,235,150),('PROP_WRENCH',a.wrench,155,130)]:spec(ident,'props',fn(),w,h)
+for ident,fn,w,h in [('PROP_CASH_BAG',a.moneybag,185,200),('PROP_CASH_BUNDLE',a.stack,210,205),('PROP_BOND',a.bond,210,260),('PROP_COUPON',a.coupon,180,125),('PROP_LEDGER',a.ledger,310,235),('PROP_TREASURY',a.treasury,320,250),('PROP_LOSS_PILE',a.deferredpile,235,205),('PROP_CLOCK',a.clock,175,165),('PROP_PAUSE',a.pause,105,125),('PROP_SHIELD',a.shield,175,185),('PROP_PRICE_PRESSURE',a.price,235,150),('PROP_WRENCH',lambda:a.g(a.wrench(),0,5),155,130)]:spec(ident,'props',fn(),w,h)
+SPECS['PROP_CASH_BUNDLE']['classification']='DERIVED_PROP_ASSEMBLY'
+SPECS['PROP_CASH_BUNDLE']['provenance']='Three instances of original PROP_NOTE with original paper band; count as one derived assembly, not a new banknote drawing'
+SPECS['PROP_WRENCH']['anchors']['handle']=[118,110]
+SPECS['PROP_SHIELD']['anchors']['grip']=[18,28]
 spec('SUPPORT_BANKER','supporting_characters',a.bankrep(),190,330,'BANKER',anchors={'pivot':[99,237],'feet':[101,313],'near_hand':[151,190]})
 spec('BG_WHITE','environments','<rect width="1080" height="1920" fill="#fff"/>',1080,1920,classification='CANVAS')
 spec('ENV_GROUND','environments',a.p('M7 19 Q152 14 299 20 M27 25 L51 26 M242 28 L265 26',sw=2.8),310,40)
@@ -54,7 +58,7 @@ for x in [('EVD_FOMC_QUARTER','A_FOMC_QUARTER_FOCUS.png','SOURCE_A,1/4 percentag
 # Per-state visible layers with concrete transforms. A label is an editable original
 # lettering asset, not counted as a unique illustrated drawing.
 def label(ident,value,size=50,color=a.INK):
- body,w=a.lettering(value,size,color);spec(ident,'evidence_overlays',a.g(body,4,4),w+8,size*1.18,base='ORIGINAL_LETTERING',classification='ORIGINAL_LETTERING',source='Original path alphabet in tools/pen_art.py; editable semantic text retained')
+ body,w=a.lettering(value,size,color);spec(ident,'evidence_overlays',a.g(body,4,9 if '$' in value else 4),w+8,size*1.3 if '$' in value else size*1.18,base='ORIGINAL_LETTERING',classification='ORIGINAL_LETTERING',source='Original path alphabet in tools/pen_art.py; editable semantic text retained')
  SPECS[ident]['text']=value
  return ident
 def L(key,asset,x,y,width,operation='STATIC',note=''):
@@ -131,7 +135,7 @@ state(6,'S06_06','V16',45.4,47.4,'Preliminary remittance, not net income',layers
 s7=[T('HIGHER_RATES','HIGHER RATES',80,170,720),L('PRICE','PROP_PRICE_PRESSURE',579,518,266),L('HOST','HOST_SHIELD',145,477,379,'POSE_SWITCH'),L('SHIELD','PROP_SHIELD',407,711,228,'POP_IN','Shield left rim meets host near hand at431,747'),L('SHIELD_GRIP','HAND_GRIP',409,695,71.5,'STATIC','Wrist17,40 maps to431,747; thumb renders above shield'),T('FIGHT','CAN FIGHT INFLATION',118,1103,753,a.GREEN)]
 state(7,'S07_01','V17',47.4,48.4,'Benefit: resist price pressure',layers(*s7),True,'Return to original host for payoff, fifth actual planned cut')
 state(7,'S07_02','V17',48.4,49.5,'Benefit held / gaze toward price',layers(*s7,L('RATE','ANN_RATE_UP',819,414,50)))
-s7end=[T('HIGHER_RATES','HIGHER RATES',80,170,720),T('REPAIR_HEADER','HARDER TO REPAIR', 80,290,819,a.RED),L('HOST','HOST_REPAIR',118,735,358,'POSE_SWITCH'),L('LEDGER','PROP_LEDGER',628,846,278),L('WRENCH','PROP_WRENCH',289,966.5,138,'ROTATE','Handle118,105 maps to394,1060; hand224,263 maps to394.5,1060'),L('TOOL_GRIP','HAND_GRIP',373.5,1010.8,68,'STATIC','Wrist17,40 maps to394.5,1060.2; thumb above handle'),L('STEPS','ENV_RECOVERY_STEPS',575,1191,294),T('FED_RECOVERY','THE FED\'S OWN FINANCES',84,1435,822)]
+s7end=[T('HIGHER_RATES','HIGHER RATES',80,170,720),T('REPAIR_HEADER','CAN MAKE REPAIR HARDER', 80,290,819,a.RED),L('HOST','HOST_REPAIR',118,735,358,'POSE_SWITCH'),L('LEDGER','PROP_LEDGER',628,846,278),L('WRENCH','PROP_WRENCH',289,962,138,'ROTATE','Handle118,110 maps to394,1060; hand224,263 maps to394.5,1060'),L('TOOL_GRIP','HAND_GRIP',373.5,1010.8,68,'STATIC','Wrist17,40 maps to394.5,1060.2; thumb above handle'),L('STEPS','ENV_RECOVERY_STEPS',575,1191,294),T('FED_RECOVERY','THE FED\'S OWN FINANCES',84,1435,822)]
 state(7,'S07_03','V18',49.5,51.3,'Recovery work becomes harder',layers(*s7end))
 state(7,'S07_04','V18',51.3,53,'Paradox held in one combined explanation',layers(*s7end,L('PRICE','PROP_PRICE_PRESSURE',716,454,189),L('SHIELD','PROP_SHIELD',480,466,134),T('BOTH','BOTH CAN BE TRUE',127,1583,708,size=42)))
 
@@ -151,7 +155,9 @@ def write_asset(ident):
  ET.register_namespace('',a.NS);ET.register_namespace('xlink','http://www.w3.org/1999/xlink');ET.ElementTree(root).write(out,encoding='unicode')
  return {k:v for k,v in s.items() if k!='body'}|{'source':str(out.relative_to(R)),'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'qa_status':'STRUCTURAL_PASS_VISUAL_REVIEW_REQUIRED'}
 def build(n):
- states=SCENES[n];used=sorted({x['asset_id'] for s in states for x in s['layers']});records={r['asset_id']:r for r in json.loads((M/'ASSET_DATA.json').read_text())} if (M/'ASSET_DATA.json').exists() else {}
+ states=SCENES[n];previous_scene=json.loads((M/f'SCENE_{n:02d}.json').read_text()) if (M/f'SCENE_{n:02d}.json').exists() else None
+ old_hashes={q.name:hashlib.sha256(q.read_bytes()).hexdigest() for q in (A/'scene_compositions').glob(f'S{n:02d}_*.svg')}
+ used=sorted({x['asset_id'] for s in states for x in s['layers']});records={r['asset_id']:r for r in json.loads((M/'ASSET_DATA.json').read_text())} if (M/'ASSET_DATA.json').exists() else {}
  if n==1: used=sorted(set(used)|{'HOST_NEUTRAL'}|{x for x in SPECS if x.startswith(('FACE_','HAND_'))})
  for ident in used:records[ident]=write_asset(ident)
  for s in states:
@@ -162,23 +168,38 @@ def build(n):
    body+=f'<g id="{s["scene_id"]}_{l["layer_id"]}" data-asset-id="{l["asset_id"]}" data-operation="{l["operation"]}" transform="translate({l["x"]} {l["y"]}) scale({l["scale"]:.9f})">{inner}</g>'
   f=A/'scene_compositions'/(s['state_id']+'.svg');f.write_text(a.svg(body,1080,1920,s['state_id']))
  last=A/'scene_compositions'/(states[-1]['state_id']+'.svg');(A/'scene_compositions'/f'SCENE_{n:02d}.svg').write_bytes(last.read_bytes())
- (M/f'SCENE_{n:02d}.json').write_text(json.dumps({'scene':n,'reference':REFS[n],'classification':'Original art and staging; reference technique supported, particular composition inferred','states':states,'review_status':'NATIVE_MOBILE_REVIEW_PENDING'},indent=2))
+ new_scene={'scene':n,'reference':REFS[n],'classification':'Original art and staging; reference technique supported, particular composition inferred','states':states,'review_status':'NATIVE_MOBILE_REVIEW_PENDING'}
+ if previous_scene and all(old_hashes.get(q.name)==hashlib.sha256(q.read_bytes()).hexdigest() for q in (A/'scene_compositions').glob(f'S{n:02d}_*.svg')):
+  for key in ['review_status','visual_finding','reviewer']:
+   if key in previous_scene:new_scene[key]=previous_scene[key]
+ (M/f'SCENE_{n:02d}.json').write_text(json.dumps(new_scene,indent=2))
  (M/'ASSET_DATA.json').write_text(json.dumps(list(records.values()),indent=2));refresh()
 def refresh():
- records=json.loads((M/'ASSET_DATA.json').read_text());present={r['asset_id'] for r in records};allrows=[];maps=[]
+ records=json.loads((M/'ASSET_DATA.json').read_text());present={r['asset_id'] for r in records};allrows=[];maps=[];previous={}
  parents={r['state_id']:r for r in csv.DictReader((R/'STORYBOARD.csv').open())}
  for n,states in SCENES.items():
   for s in states:
    exists=(A/'scene_compositions'/(s['state_id']+'.svg')).exists()
    par=parents[s['parent_state']]
-   allrows.append({'state_id':s['state_id'],'scene_id':s['scene_id'],'approved_parent_state':s['parent_state'],'provisional_start_sec':s['start'],'provisional_end_sec':s['end'],'narration_phrase':par['narration_phrase'],'visual_beat':s['visual_beat'],'required_asset_ids':';'.join(l['asset_id'] for l in s['layers']),'layer_order':';'.join(l['layer_id'] for l in s['layers']),'keyframe_options':';'.join(dict.fromkeys(l['operation'] for l in s['layers'])),'cut_at_start':s['cut'],'continuity':s['continuity'],'source_reference':s['reference'],'timing_status':'PROVISIONAL_NO_AUDIO','art_status':'AUTHORED' if exists else 'PLANNED'})
+   current={l['layer_id']:l for l in s['layers']}
+   events={'enter_layers':';'.join(k for k in current if k not in previous),'exit_layers':';'.join(k for k in previous if k not in current),'switch_layers':';'.join(k for k in current if k in previous and current[k]['asset_id']!=previous[k]['asset_id']),'reposition_layers':';'.join(k for k in current if k in previous and any(current[k][f]!=previous[k][f] for f in ['x','y','scale'])),'held_layers':';'.join(k for k in current if k in previous and current[k]==previous[k])}
+   allrows.append({'state_id':s['state_id'],'scene_id':s['scene_id'],'approved_parent_state':s['parent_state'],'provisional_start_sec':s['start'],'provisional_end_sec':s['end'],'narration_phrase':par['narration_phrase'],'visual_beat':s['visual_beat'],'required_asset_ids':';'.join(l['asset_id'] for l in s['layers']),'layer_order':';'.join(l['layer_id'] for l in s['layers']),'keyframe_options':';'.join(dict.fromkeys(l['operation'] for l in s['layers'])),'cut_at_start':s['cut'],'continuity':s['continuity'],'source_reference':s['reference'],'timing_status':'PROVISIONAL_NO_AUDIO','art_status':'AUTHORED' if exists else 'PLANNED','financial_source_ids':{1:'A',2:'A;B;C',3:'A;C;CONDITIONAL_ARITHMETIC',4:'APPROVED_SCRIPT_TIMING_RELATION',5:'C;D',6:'C_FOOTNOTE8;E',7:'APPROVED_SCRIPT_CONCLUSION'}[n],**events})
+   previous=current
    if exists:
     for i,l in enumerate(s['layers']):
      asset=SPECS[l['asset_id']];piv=asset['anchors']['pivot'];maps.append({'scene_id':s['scene_id'],'state_id':s['state_id'],'layer_id':s['scene_id']+'_'+l['layer_id'],'asset_id':l['asset_id'],'z_order':i,'x':l['x'],'y':l['y'],'x_normalized':round(l['x']/1080,6),'y_normalized':round(l['y']/1920,6),'scale':round(l['scale'],9),'rotation_degrees':0,'pivot_local_x':piv[0],'pivot_local_y':piv[1],'future_operation':l['operation'],'contact_constraint':l['contact_note'] or 'Maintain original proportions; do not distort source pixels','source_reference':s['reference']})
  rows=[]
  for r in records:
   uses=[x for x in maps if x['asset_id']==r['asset_id']];f=R/r['source'];export=A/'exports'/(r['asset_id']+'.png')
-  rows.append({'asset_id':r['asset_id'],'filename':r['source'],'category':r['category'],'base_design_id':r['base_id'],'classification':r['classification'],'scene_usage':';'.join(sorted({x['scene_id'] for x in uses})),'state_usage':';'.join(sorted({x['state_id'] for x in uses})),'layer_relationships':'Independent source; instantiated by scene/state map','anchor_pivot_json':json.dumps(r['anchors'],separators=(',',':')),'width':r['width'],'height':r['height'],'transparency':'opaque_white_canvas' if r['asset_id']=='BG_WHITE' else 'transparent_background','dependencies':'tools/pen_art.py original path alphabet' if r['classification']=='ORIGINAL_LETTERING' else ('ARTICLE_EVIDENCE/CROP_MANIFEST.json' if r['classification']=='DOCUMENTARY_CROP' else 'none; self-contained SVG'),'provenance':r['provenance'],'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'png_export':str(export.relative_to(R)),'png_sha256':hashlib.sha256(export.read_bytes()).hexdigest() if export.exists() else '', 'qa_status':r['qa_status']})
+  parts={}
+  root=ET.parse(f).getroot()
+  if r['asset_id'].startswith('HOST_'):
+   children=list(root)
+   for part,node in zip(['legs','torso','arms','head','held_paper','thumb'],children):parts[part]=node.get('id')
+   faceparts=list(children[3]);parts.update({'bun':faceparts[0].get('id'),'face_contour':faceparts[1].get('id'),'hair':faceparts[2].get('id'),'eyes':[x.get('id') for x in faceparts[3:-2]],'brows':faceparts[-2].get('id'),'mouth':faceparts[-1].get('id')})
+  elif r['asset_id'].startswith('FACE_'):
+   feature=list(root[0]);parts={'eyes':[x.get('id') for x in feature[:-2]],'brows':feature[-2].get('id'),'mouth':feature[-1].get('id')}
+  rows.append({'asset_id':r['asset_id'],'filename':r['source'],'category':r['category'],'base_design_id':r['base_id'],'classification':r['classification'],'scene_usage':';'.join(sorted({x['scene_id'] for x in uses})),'state_usage':';'.join(sorted({x['state_id'] for x in uses})),'layer_relationships':'Independent source; instantiated by scene/state map','editable_subparts_json':json.dumps(parts,separators=(',',':')),'anchor_pivot_json':json.dumps(r['anchors'],separators=(',',':')),'width':r['width'],'height':r['height'],'transparency':'opaque_white_canvas' if r['asset_id']=='BG_WHITE' else ('original_opaque_evidence_rectangle' if r['classification']=='DOCUMENTARY_CROP' else 'transparent_background'),'dependencies':'tools/pen_art.py original path alphabet' if r['classification']=='ORIGINAL_LETTERING' else ('ARTICLE_EVIDENCE/CROP_MANIFEST.json' if r['classification']=='DOCUMENTARY_CROP' else 'none; self-contained SVG'),'provenance':r['provenance'],'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'png_export':str(export.relative_to(R)),'png_sha256':hashlib.sha256(export.read_bytes()).hexdigest() if export.exists() else '', 'qa_status':r['qa_status']})
  csvwrite(R/'FULL_STORYBOARD.csv',allrows);csvwrite(R/'SCENE_ASSET_MAP.csv',maps);csvwrite(R/'ASSET_REGISTER.csv',rows)
  completed=[n for n in SCENES if (M/f'SCENE_{n:02d}.json').exists() and json.loads((M/f'SCENE_{n:02d}.json').read_text())['review_status']=='NATIVE_MOBILE_REVIEWED']
  progress=json.loads((R/'PRODUCTION_PROGRESS.json').read_text());progress.update({'status':'STATIC_ASSET_EXPANSION_IN_PROGRESS','scenes_completed':completed,'states_authored':sum(r['art_status']=='AUTHORED' for r in allrows),'states_planned':len(allrows),'completed_art_files':len(records),'reviewed_scene_count':len(completed)});(R/'PRODUCTION_PROGRESS.json').write_text(json.dumps(progress,indent=2))
