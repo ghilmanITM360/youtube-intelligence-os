@@ -27,3 +27,8 @@ Reference: VISUAL_DNA / 0ll9rEtoRrs 75-225s bond/payment metaphor; MOTION_DNA pe
 Six states inspected: open accounting ledger and loss papers build cumulatively, then genuine dated H41 label/Total is isolated. Corrected Expenses>income lettering overlap. Kept original source pixels, millions/date and Fed release attribution; negative line explicitly means deferred balance. Main234B and actual-233587 remain identifiable at160; row label and fine attribution need320/native. No claim that latest hike created the full balance.
 
 Reference: REF09 / 2EZzwupIa80 S005.2-S005.6 32.54-35.61s and S006.1 44.75s actual source/highlight. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene06
+
+Six static states inspected. Future-earnings bag and open ledger precede the paused Fed-to-Treasury route; separate historical2021 layout uses actual107.4B crop and preliminary publication date. No107.8B income/remittance confusion or negative cash arrow. Buildings, pause, money and evidence remain independent.320px relation/date readable;160px main107.4B and pause survive, fine attribution secondary.
+
+Reference: REF09 / 2EZzwupIa80 S007.2 51.80s paper personification; VISUAL_DNA simple institutional finance props. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
