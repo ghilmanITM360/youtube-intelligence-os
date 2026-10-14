@@ -34,6 +34,7 @@ spec('ENV_RECOVERY_STEPS','environments',a.stepbridge(),245,155)
 for ident,color in [('ANN_ARROW_BLACK',a.INK),('ANN_ARROW_RED',a.RED),('ANN_ARROW_GREEN',a.GREEN)]:spec(ident,'evidence_overlays',a.arrow(color),125,48,'ATTENTION_ARROW','ANNOTATION_VARIANT',{'pivot':[8,22],'tip':[114,24]})
 for ident,color in [('ANN_RATE_UP',a.GREEN),('ANN_EXPENSE_UP',a.RED)]:spec(ident,'evidence_overlays',a.up(color),65,195,'UP_ARROW','ANNOTATION_VARIANT',{'pivot':[29,181],'tip':[27,17]})
 spec('ANN_SOURCE_BOX','evidence_overlays',a.p('M7 12 Q153 4 292 13 L289 112 Q148 121 7 113 Z',stroke=a.RED,sw=3.2),305,130,'SOURCE_HIGHLIGHT','ANNOTATION',{'pivot':[152,65]})
+spec('ANN_SOURCE_WIDE','evidence_overlays',a.p('M8 10 Q414 2 806 12 L802 145 Q399 154 8 146 Z',stroke=a.RED,sw=3.4),820,160,'SOURCE_HIGHLIGHT','ANNOTATION')
 spec('ANN_UNDERLINE','evidence_overlays',a.p('M7 16 Q110 9 225 19',stroke=a.RED,sw=5),235,35,'UNDERLINE','ANNOTATION')
 spec('DGM_RESERVE_LINK','diagrams','<path d="M12 20 Q222 39 460 22 M441 9 L465 22 L442 38" fill="none" stroke="'+a.INK+'" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 10"/>',480,55,anchors={'pivot':[240,25],'bank':[12,20],'fed':[465,22]},source='Original conceptual bank balance relationship, not physical cash movement')
 spec('DGM_INTEREST_FLOW','diagrams',a.p('M460 21 Q244 81 14 21 M35 7 L10 21 L35 38',stroke=a.GREEN,sw=5),480,90,anchors={'pivot':[240,45],'from_fed':[460,21],'to_bank':[10,21]})
@@ -48,7 +49,7 @@ def evidence(ident,crop,source):
  from PIL import Image
  w,h=Image.open(f).size;body=f'<image x="0" y="0" width="{w}" height="{h}" href="data:image/png;base64,{base64.b64encode(f.read_bytes()).decode()}"/>'
  spec(ident,'diagrams',body,w,h,classification='DOCUMENTARY_CROP',source=source+'; exact crop:'+str(f.relative_to(R)))
-for x in [('EVD_FOMC','A_FOMC_decision.png','SOURCE_A,16 Sep2026 policy decision'),('EVD_FOMC_DATE','A_FOMC_date.png','SOURCE_A,16 Sep2026 original date'),('EVD_IORB','B_IORB_focus.png','SOURCE_B,3.90 percent IORB effective17 Sep2026'),('EVD_RESERVES','C_RESERVES_value_SHARP.png','SOURCE_C,H41 page2 Wednesday7 Oct2026,millions'),('EVD_DEFERRED','C_DEFERRED_value_SHARP.png','SOURCE_C,H41 page9 Total Wednesday7 Oct2026,-233587 millions'),('EVD_DEFERRED_LABEL','C_DEFERRED_label_SHARP.png','SOURCE_C,H41 page9 original row label'),('EVD_2021','E_2021_amount.png','SOURCE_E,107.4B preliminary2021 remittance,14 Jan2022 publication')]:evidence(*x)
+for x in [('EVD_FOMC_QUARTER','A_FOMC_QUARTER_FOCUS.png','SOURCE_A,1/4 percentage point actual source phrase'),('EVD_FOMC','A_FOMC_decision.png','SOURCE_A,16 Sep2026 policy decision'),('EVD_FOMC_DATE','A_FOMC_date.png','SOURCE_A,16 Sep2026 original date'),('EVD_IORB','B_IORB_focus.png','SOURCE_B,3.90 percent IORB effective17 Sep2026'),('EVD_RESERVES','C_RESERVES_value_SHARP.png','SOURCE_C,H41 page2 Wednesday7 Oct2026,millions'),('EVD_DEFERRED','C_DEFERRED_value_SHARP.png','SOURCE_C,H41 page9 Total Wednesday7 Oct2026,-233587 millions'),('EVD_DEFERRED_LABEL','C_DEFERRED_label_SHARP.png','SOURCE_C,H41 page9 original row label'),('EVD_2021','E_2021_amount.png','SOURCE_E,107.4B preliminary2021 remittance,14 Jan2022 publication')]:evidence(*x)
 
 # Per-state visible layers with concrete transforms. A label is an editable original
 # lettering asset, not counted as a unique illustrated drawing.
@@ -73,7 +74,7 @@ state(1,'S01_03','V02',2.4,3.8,'Unexpected bill / surprise grip',layers(*s1b))
 state(1,'S01_04','V02',3.8,5,'Interest bill focus and readable hold',layers(*s1b,T('FED_BILL','FED INTEREST BILL',544,1330,346,a.RED,'ADDITIVE_BUILD')))
 
 # 02: evidence then accounts and reverse expense flow; supporting banker is a distinct original.
-s2a=[T('SEPT','SEPTEMBER',80,170,490),T('QUARTER_POINT','+0.25 PERCENTAGE POINT',80,290,793,a.GREEN),L('POLICY','EVD_FOMC',90,527,780,'POP_IN'),L('POLICY_DATE','EVD_FOMC_DATE',100,438,265),L('POLICY_HL','ANN_SOURCE_BOX',90,515,778,'SOURCE_HIGHLIGHT'),T('POLICY_ATTR','FED . 16 SEP 2026',85,1090,525,size=38)]
+s2a=[T('SEPT','SEPTEMBER',80,170,490),T('QUARTER_POINT','+0.25 PERCENTAGE POINT',80,290,793,a.GREEN),L('POLICY','EVD_FOMC',100,815,780,'POP_IN'),L('POLICY_FOCUS','EVD_FOMC_QUARTER',118,579,730,'SCALE'),L('POLICY_DATE','EVD_FOMC_DATE',100,438,265),L('POLICY_HL','ANN_SOURCE_WIDE',104,552,764,'SOURCE_HIGHLIGHT'),T('POLICY_ATTR','FED . 16 SEP 2026',85,1090,525,size=38)]
 state(2,'S02_01','V03',5,6.6,'Real September decision excerpt',layers(*s2a),True,'Cut into genuine document; hold only rate sentence, narration carries detail')
 state(2,'S02_02','V03',6.6,8.2,'Target range differentiated',layers(*s2a,T('TARGET_RANGE','TARGET: 3.75-4.00%',80,1280,744,size=47)))
 s2base=[T('RESERVES','RESERVES AT THE FED',80,175,785),L('BANK','PROP_BANK',65,405,328),L('FED','PROP_FED',587,412,336),L('BANKER','SUPPORT_BANKER',132,1130,154)]
