@@ -22,7 +22,7 @@ for n in names:
  canon=lambda rr:collections.Counter(tuple(x[k] for k in fields) for x in rr)
  assert canon(actual)==canon(rows),n
  index[n]={'rows':len(rows),'per_video':counts,'master_sha256':hashlib.sha256(dest.read_bytes()).hexdigest()}
-summary={'scope':'Research-only Big Short and Greece schema; historical six remain in original ten masters, not mixed or duplicated here.','packages':[p.name for p in packages],'tables':index,'total_rows':sum(x['rows'] for x in index.values()),'historical_master_rows_separate':18091}
+summary={'scope':'Research-only sampled-package schema (Big Short, Greece and later videos); historical six remain in original ten masters, not mixed or duplicated here.','packages':[p.name for p in packages],'tables':index,'total_rows':sum(x['rows'] for x in index.values()),'historical_master_rows_separate':18091}
 if write:(M/'RECONCILIATION.json').write_text(json.dumps(summary,indent=2)+'\n')
 else:assert json.loads((M/'RECONCILIATION.json').read_text())==summary
 s=json.loads((D/'STATUS.json').read_text());assert set(s['new_structural_completed'])=={p.name for p in packages};assert s['structural_total']==len(set(s['historical_structural_completed'])|{p.name for p in packages})
