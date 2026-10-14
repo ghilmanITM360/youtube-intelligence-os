@@ -4,10 +4,10 @@ Source recovery: 11/11 originals hash/size verified and ffprobe AV streams confi
 
 ## Next video and next operation
 
-Continue **Iwz0fhJWN9Q**, not Greece yet. Review `QA.json`, `VIDEO_REPORT.md`, `COVERAGE_MEASUREMENTS.json` and `MOTION_SEQUENCES.csv` first. Already reviewed: 275 representatives, 42 gap stills, 34 seven-frame temporal sequences and four native frames. There are 554 unique reviewed source times. Do not regenerate these images or repeat these annotations.
+Big Short targeted high-value review is complete with explicit residual limits; next video is Greece **nr5dcBPACH0**. Review `QA.json`, `VIDEO_REPORT.md`, `COVERAGE_MEASUREMENTS.json` and `MOTION_SEQUENCES.csv` first. Already reviewed: 275 representatives, 42 gap stills, 34 seven-frame temporal sequences and four native frames. There are 554 unique reviewed source times. Do not regenerate these images or repeat these annotations.
 
-1. Resolve the short CDS-payoff interval 445.8–448.6 seconds, especially around 447 seconds.
-2. Adjudicate remaining meaningful episodes from the existing 625-episode `visual_auto.json`; distinguish semantic cuts missed inside candidates from harmless micro-change. Map existing observations before extracting anything new.
+1. CDS-payoff interval resolved in `PAYOFF_TARGETED_REVIEW.json` (23 new frames, two reused). Do not repeat it. Reveal bracket 445.833333–445.866667; scene replacement 448.4–448.433333.
+2. Bar-push and borrower-label ambiguities resolved in `AMBIGUITY_TARGETED_REVIEW.json`. Remaining 625-episode exhaustive adjudication is explicitly not certified; do not block sequential research over unmeasured micro-motions.
 3. Resolve ambiguous transitions and sample exact motion paths more densely only where required. Keep sampled bounds distinct from exact durations; easing remains unmeasured.
 4. Repair semantic segmentation as a new scoped record if justified; do not silently alter historical candidate tables.
 5. Preserve direct-listening limitations unless actual listening occurs. Current audio stats are signal evidence only.

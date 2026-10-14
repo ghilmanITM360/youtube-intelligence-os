@@ -1,6 +1,6 @@
 # Casual Economics deep research — resource checkpoint
 
-Status: **RESOURCE_CHECKPOINT**, not full research completion. Date: 2026-10-14.
+Status: **RESEARCH_IN_PROGRESS**, not full research completion. Date: 2026-10-14.
 
 ## Source recovery
 
@@ -22,7 +22,7 @@ Performance/virality research, top/middle/weak rankings, current public metrics,
 
 ## Exact next action
 
-Continue **Iwz0fhJWN9Q**: resolve approximately 445.8–448.6 seconds, adjudicate remaining meaningful motion/semantic changes, and improve ambiguous timing where needed. Reuse all existing reviewed images and notes. Then Greece `nr5dcBPACH0`, followed by Japan, 2008 Crisis and Great Depression; upgrade only missing dimensions of the historical six. See `RESUME_HERE.md` for exact source/scratch paths and validation command.
+Big Short recovery is persisted at `e5f15a4`. Targeted supplements resolve the payoff, progressive bar push and borrower-label sequence; remaining micro-motion, listening and independent-review limits are explicit. Next: Greece. Reuse all existing reviewed images and notes. Then Greece `nr5dcBPACH0`, followed by Japan, 2008 Crisis and Great Depression; upgrade only missing dimensions of the historical six. See `RESUME_HERE.md` for exact source/scratch paths and validation command.
 
 ## Git and resources
 
@@ -31,3 +31,5 @@ Branch: `codex/casual-economics-forensic-research`; existing draft PR #25. Start
 Finance branch remains at `30e0ef2f8c1c1abe8189ebe1feb560286db62607`. All 13 preexisting untracked files and existing stash preserved. No new worktree, PR, merge, paid acquisition, source download, asset generation or video production. One thumbnail retrieved from the saved public CDN URL.
 
 Five-hour usage: 10% at start, 88% when expensive research stopped, 98% during QA/persistence closure. Weekly: 10% at start, 24% at last check. No explicit context warning exposed. One agent only. No automatic continuation or watcher created.
+
+Recovery session live opening usage: 2% five-hour, 56% weekly (previous paragraph readings are historical). Targeted review does not change 7/11 structural or 0/11 full AV totals.
