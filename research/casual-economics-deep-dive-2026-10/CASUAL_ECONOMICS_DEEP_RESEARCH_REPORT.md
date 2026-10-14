@@ -1,35 +1,37 @@
-# Casual Economics deep research — resource checkpoint
+# Casual Economics deep research — recovery and Greece checkpoint
 
-Status: **RESEARCH_IN_PROGRESS**, not full research completion. Date: 2026-10-14.
+Status: **RESOURCE_CHECKPOINT**. Research date: 2026-10-14 (Asia/Karachi). This is not full research completion.
 
-## Source recovery
+## Recovery
 
-All 11 originals in `/Users/ghilmankhan/Downloads/casual_economics` match the historical manifest by SHA256 and exact size. Zero mismatches; 11 unique sources. ffprobe confirms video/audio streams and expected duration/resolution/FPS. Eleven English auto-caption tracks mapped; direct audio verification remains incomplete. Originals were not modified or copied into Git.
+Started on `codex/casual-economics-forensic-research` at `429d0e007614ad191533bef0457e2e4009c2c71f`, matching remote. Found 24 staged research files and no unstaged research edits. Revalidated the interrupted package: 55 checks passed, secret scan zero, whitespace clean. Recovered and pushed it as `e5f15a4d8ab571df2d479ab92346f4b448e44f0a`. Targeted Big Short improvements were pushed as `dcf70cf9cec7d7c91c5eb05cfad893ea95015a83`; exact-head repository CI passed for that head. Later checkpoint SHA/CI must be read from Git, not inferred from this file.
 
-## Visual research
+## Sources and coverage
 
-Before: 6/11 historical structural checkpoints. New: Big Short `Iwz0fhJWN9Q` passed 55 focused structural checks. Now: **7/11 structural**, **0/11 full AV sign-offs**. This is not 7/11 completed deep forensic research.
+Reuse 11/11 historical SHA256/size matches and AV stream records, zero recorded mismatches, 11 caption tracks. No bulk rehash, reacquisition or original-media modification. Greece current path/size checked against its verified record. Source identity verification is distinct from full decode integrity.
 
-Big Short package: 317 still observations (275 representatives plus 42 gap samples), 34 temporal sequences containing 238 frames, four native-resolution checks, 30 story/editing beats, caption-linked AV records, reviewed thumbnail, source hashes and explicit QA limits. Review covers 554 unique timestamps with maximum gap 3.996 seconds. Sampled coverage does not certify every intervening change. All 625 automatic episodes have not been individually adjudicated; deep mechanism coverage remains partial.
+Before this recovery: 7/11 structural units, including the staged Big Short. Newly completed: Greece. Current: **8/11 structural packages**, **0/11 full AV sign-offs**. Independent review and audio listening are not newly certified. Historical six retain their original QA limits. Fixed point samples and candidate-state representatives are different coverage methods; structural status means validated package integrity, not equivalent exhaustive coverage.
 
-Observed in this video: large-head illustrated characters, pose/expression variants, detailed reused room compositions, blur/desaturation behind labels, staggered diagram elements, text/line reveals, translated panels, scaled cash/bar graphics and metaphor-driven scene replacements. Source timestamps and implementable original-layer methods are in the per-video tables. Creator software, actual authored asset files and easing remain unknown.
+Big Short retained 317 still observations, 34 coarse sequences and 30 beats. Added `PAYOFF_TARGETED_REVIEW.json` (23 new frames/two reused boundaries) and `AMBIGUITY_TARGETED_REVIEW.json` (22 selected frames). Payoff cash/$10,000 reveal bracket: 445.833333–445.866667; scene replacement: 448.4–448.433333. Progressive bar push and staged borrower labels now have additional source evidence. All 625 automatic episodes are not independently adjudicated; exact easing and listening remain unresolved.
 
-Ten historical master tables reconcile exactly: **18,091 rows**. Six prior forensic checkpoints and canonical datasets remain unchanged.
+Greece `nr5dcBPACH0`: **205 point observations, 27 temporal sequences/139 frame entries, 319 unique reviewed timestamps, two native-resolution inspections, 29 narrative beats**. Maximum between-sample gap four seconds. Structural validator passed 49 checks. Source audio decoded successfully for measurements: peak −3.337773 dBFS, RMS −21.346097 dBFS; no listening claim. 345 nonblank auto-caption cues, 1,942 regex-counted caption words (not measured speech-only rate). Two H.264 seek reference warnings are retained as a limitation; exact affected seek was not logged, no obvious corruption seen at contact-sheet scale, full decode integrity not certified.
 
-## Unfinished phases
+## Findings and their scope
 
-Performance/virality research, top/middle/weak rankings, current public metrics, Google Trends/news analysis and channel-wide DNA/production blueprint have **not started**, preserving the required visual-first order. Saved metrics remain dated October 12 snapshots. CTR, impressions, retention, traffic sources and creator revenue remain unknown.
+Greece combines large-head conversational figures, modular arm/expression variants, detailed reused environments and bespoke metaphor illustrations. Source examples: parliament dialogue at 144; bandaged recovery figure at 780; debt concealment behind bush at 172–173.5; bank splitting at 358–359.5; opposed character entrances at 608–610; multi-layer library/host/board entrance at 751.9–752.2. The GDP line grows across 416.0–416.75; bailout writing appears as a complete block between 500.1–500.2, not observed continuous handwriting. Creator workflow/software/easing unknown.
 
-## Exact next action
+Narrative moves from fragility hook through prestige/collapse contrast, currency entry, alleged workaround, prosperity, crisis, repeated conditional rescues, social costs and causal recap. Desaturated reused scenes at 692–708 connect the conclusion to earlier setups. Economic claims remain attributed video/caption claims; the 102% historical ratio, euro/swap chronology, Argentina counts and GDP versus GDP-per-capita framing need fact checks. See per-video `PACKAGING_AND_CLAIMS.md`.
 
-Big Short recovery is persisted at `e5f15a4`. Targeted supplements resolve the payoff, progressive bar push and borrower-label sequence; remaining micro-motion, listening and independent-review limits are explicit. Next: Greece. Reuse all existing reviewed images and notes. Then Greece `nr5dcBPACH0`, followed by Japan, 2008 Crisis and Great Depression; upgrade only missing dimensions of the historical six. See `RESUME_HERE.md` for exact source/scratch paths and validation command.
+## Reconciliation
 
-## Git and resources
+Original ten historical masters remain unchanged and reconcile to **18,091 rows**. Research-only `03_MASTER_DATA/` contains five matching-schema tables for Big Short and Greece: **989 rows**, exact per-video multiset reconciliation. These two scopes are separate; they are not duplicate independent evidence. `STATUS.json` derives eight structural units from six historical plus two new QA records.
 
-Branch: `codex/casual-economics-forensic-research`; existing draft PR #25. Starting research SHA: `6f86d786d908dbf9738a28f837282483058fa9dd`. Source checkpoint: `429d0e007614ad191533bef0457e2e4009c2c71f`, pushed and exact-head CI successful. This report accompanies the next scoped forensic checkpoint; verify its final SHA and CI from Git/PR.
+## Unfinished work
 
-Finance branch remains at `30e0ef2f8c1c1abe8189ebe1feb560286db62607`. All 13 preexisting untracked files and existing stash preserved. No new worktree, PR, merge, paid acquisition, source download, asset generation or video production. One thumbnail retrieved from the saved public CDN URL.
+Next sequential videos: Japan `x_MZu-QF-6o`, 2008 Crisis `APlGPpM-nBo`, Great Depression `qF3ekm9Gx_E`. Then targeted historical-six QA gaps, channel DNA, public performance/virality, Google Trends/news and original-production blueprint. These later phases have not started; no strong/typical/weak ranking, causal explanation or completed blueprint is claimed. CTR, impressions, retention, traffic shares, revenue/RPM and subscriber conversion remain UNKNOWN.
 
-Five-hour usage: 10% at start, 88% when expensive research stopped, 98% during QA/persistence closure. Weekly: 10% at start, 24% at last check. No explicit context warning exposed. One agent only. No automatic continuation or watcher created.
+## Preservation and resources
 
-Recovery session live opening usage: 2% five-hour, 56% weekly (previous paragraph readings are historical). Targeted review does not change 7/11 structural or 0/11 full AV totals.
+PR #25 stays draft/open; no merge, new branch/worktree/PR or PR #30 changes. Unrelated untracked work and existing stash preserved. One primary agent only; no production video/artwork generated. Compact source evidence images are research derivatives, not production assets. Live resource readings: start 2% five-hour/56% weekly; after Greece validation 79%/68%. Prior 98%/24% readings belonged to the previous session and are historical. No explicit context warning exposed. See `RESUME_HERE.md` and `STATUS.json` for the final resource checkpoint and exact next operation.
+
+Final research stop decision: five-hour 87%, weekly 69%, near the requested approximately 90% threshold. Finish persistence and exact-head CI only; Japan has not started.
