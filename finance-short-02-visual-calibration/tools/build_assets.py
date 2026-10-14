@@ -38,7 +38,7 @@ spec('ANN_SOURCE_WIDE','evidence_overlays',a.p('M8 10 Q414 2 806 12 L802 145 Q39
 spec('ANN_UNDERLINE','evidence_overlays',a.p('M7 16 Q110 9 225 19',stroke=a.RED,sw=5),235,35,'UNDERLINE','ANNOTATION')
 spec('DGM_RESERVE_LINK','diagrams','<path d="M12 20 Q222 39 460 22 M441 9 L465 22 L442 38" fill="none" stroke="'+a.INK+'" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 10"/>',480,55,anchors={'pivot':[240,25],'bank':[12,20],'fed':[465,22]},source='Original conceptual bank balance relationship, not physical cash movement')
 spec('DGM_INTEREST_FLOW','diagrams',a.p('M460 21 Q244 81 14 21 M35 7 L10 21 L35 38',stroke=a.GREEN,sw=5),480,90,anchors={'pivot':[240,45],'from_fed':[460,21],'to_bank':[10,21]})
-spec('DGM_MISMATCH','diagrams',a.txt(5,62,'EXPENSES',49,a.RED)+a.txt(257,62,'>',64)+a.txt(330,62,'INCOME',49)+a.p('M15 94 Q248 107 555 93',sw=3.1),590,120)
+spec('DGM_MISMATCH','diagrams',a.txt(5,62,'EXPENSES',38,a.RED)+a.txt(276,62,'>',48)+a.txt(353,62,'INCOME',38)+a.p('M15 94 Q248 107 555 93',sw=3.1),590,120)
 spec('DGM_CONDITION_DOWN','diagrams',a.p('M25 9 Q18 84 27 145 M7 123 L27 148 L46 124',sw=4),55,160)
 spec('DGM_REMIT_FLOW','diagrams',a.p('M10 29 Q209 9 439 26 M418 9 L443 26 L419 44',stroke=a.GREEN,sw=5),460,60,anchors={'pivot':[230,28],'from_fed':[10,29],'to_treasury':[443,26]})
 spec('DGM_SLOW_CHANGE','diagrams',a.p('M6 27 Q109 17 214 26 M192 11 L219 26 L193 42',stroke=a.INK,sw=3.8),235,55,source='Qualitative timing arrow; length/position does not encode financial data')
@@ -112,7 +112,7 @@ state(5,'S05_02','V11',29,30,'Condition feeds loss ledger',layers(*s5,L('DOWN','
 s5ledger=s5+[L('DOWN','DGM_CONDITION_DOWN',494,630,51),L('LEDGER','PROP_LEDGER',307,875,436),L('LOSS_PILE','PROP_LOSS_PILE',667,1030,237,'ADDITIVE_BUILD'),T('DEFERRED','DEFERRED ASSET',254,1298,642,a.RED)]
 state(5,'S05_03','V12',30,31.8,'Deferred asset is accumulated balance',layers(*s5ledger))
 state(5,'S05_04','V12',31.8,33.4,'Cumulative accounting label',layers(*s5ledger,T('CUMULATIVE','CUMULATIVE LOSSES',242,1420,617),T('NOT_THIS_HIKE','NOT CREATED BY THIS HIKE ALONE',140,1540,737,size=33)))
-s5ev=[T('DEFERRED_TITLE','DEFERRED ASSET',80,167,802),T('234B','ABOUT $234B',149,347,704,a.RED),T('OCT_DATE','7 OCTOBER 2026',163,526,664),L('LEDGER','PROP_LEDGER',92,746,253),L('HOST','HOST_CONCERNED',749,739,193),L('SOURCE_LABEL','EVD_DEFERRED_LABEL',91,1061,744),L('SOURCE_TOTAL','EVD_DEFERRED',215,1203,535,'SCALE'),L('SOURCE_HL','ANN_SOURCE_BOX',185,1171,602,'SOURCE_HIGHLIGHT'),T('MILLIONS','MILLIONS OF DOLLARS',97,1453,718,size=40)]
+s5ev=[T('DEFERRED_TITLE','DEFERRED ASSET',80,167,802),T('234B','ABOUT $234B',149,347,704,a.RED),T('OCT_DATE','7 OCTOBER 2026',163,526,664),L('LEDGER','PROP_LEDGER',92,746,253),L('HOST','HOST_CONCERNED',749,739,193),T('H41_ATTR','FED H.4.1 . RELEASE 8 OCT 2026',100,1000,695,size=34),L('SOURCE_LABEL','EVD_DEFERRED_LABEL',91,1061,744),L('SOURCE_TOTAL','EVD_DEFERRED',215,1203,535,'SCALE'),L('SOURCE_HL','ANN_SOURCE_BOX',185,1171,602,'SOURCE_HIGHLIGHT'),T('MILLIONS','MILLIONS OF DOLLARS',97,1453,718,size=40)]
 state(5,'S05_05','V13',33.4,35.2,'Dated actual H41 row and Total',layers(*s5ev),False,'Local reframe/replace ledger detail with source cells; focus only on one dated amount')
 state(5,'S05_06','V13',35.2,37.4,'Negative line correctly interpreted',layers(*s5ev,T('NEGATIVE','NEGATIVE LINE = DEFERRED BALANCE',101,1552,780,size=32)),False,'No cash arrow to Treasury from the negative table value')
 

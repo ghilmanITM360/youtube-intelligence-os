@@ -22,3 +22,8 @@ Reference: VISUAL_DNA / -X6YzlY_8tM 169-189s sequential numerical comparisons; R
 Bond/coupon/clock and expense-bill illustrations inspected atnative and mobile, all4 states sampled. Preserved explicit much-bond-income and slower reset labels into final comparison, avoiding an all-income claim. Arrows are qualitative, not an invented chart. Main objects and direction survive160; secondary timing words need320/narration. No observed clipping or anatomy mismatch.
 
 Reference: VISUAL_DNA / 0ll9rEtoRrs 75-225s bond/payment metaphor; MOTION_DNA persistent additive financial explanations. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene05
+
+Six states inspected: open accounting ledger and loss papers build cumulatively, then genuine dated H41 label/Total is isolated. Corrected Expenses>income lettering overlap. Kept original source pixels, millions/date and Fed release attribution; negative line explicitly means deferred balance. Main234B and actual-233587 remain identifiable at160; row label and fine attribution need320/native. No claim that latest hike created the full balance.
+
+Reference: REF09 / 2EZzwupIa80 S005.2-S005.6 32.54-35.61s and S006.1 44.75s actual source/highlight. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
