@@ -49,7 +49,7 @@ Result: static draft visually inspected; publication QA_BLOCKED. Structural chec
 (R/'AUDIO_TRANSFER_MANIFEST.json').write_text(json.dumps(transfer,indent=2))
 (R/'MASTER_CLAUDE_HANDOFF.md').write_text('''# Three senior-health visual packages
 
-**QA_BLOCKED — three draft illustration packages built, clinical and listening review still required.** No final video rendered. Branch: production/senior-health-casually-finance-three-videos. Issue #33.
+**QA_BLOCKED — three draft illustration packages built, clinical and listening review still required.** No final video rendered. Branch: production/senior-health-casually-finance-three-videos. [Issue #33](https://github.com/ghilmanITM360/youtube-intelligence-os/issues/33). [Draft PR #34](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/34).
 
 | Package | Duration | Scenes | First file |
 |---|---:|---:|---|

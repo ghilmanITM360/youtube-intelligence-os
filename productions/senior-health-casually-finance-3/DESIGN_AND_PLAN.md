@@ -14,7 +14,7 @@ Architecture: files only, isolated production branch from origin/main. Existing 
 - [x] Synthesize referenced visual rules and original style guide; produce full narration-led storyboard before artwork.
 - [x] For each video: create three hero scenes; inspect character, explanation and hook at mobile scale; build required remaining layers and states; write keyframe plans.
 - [x] Validate every referenced asset, timing coverage, SVG/PNG, IDs, source integrity and counts. Record visual QA honestly.
-- [ ] Commit each package; draft issue/PR; verify remote SHA and exact-head checks; produce independent Claude handoffs.
+- [x] Commit each package; draft issue/PR; verify remote SHA and exact-head checks; produce independent Claude handoffs.
 
 ## Review focus
 Beginning/end speech truncation; ordinal scores presented as medical evidence; unsupported clinical absolutes; intact character joints and independently addressable layers; transfer manifest actually matching local audio and source files.
