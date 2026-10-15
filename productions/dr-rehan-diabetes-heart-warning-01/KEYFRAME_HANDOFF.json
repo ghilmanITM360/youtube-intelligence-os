@@ -833,6 +833,142 @@
         "S03-C-L02",
         "S03-C-L03"
       ]
+    },
+    {
+      "state_id": "S04-A",
+      "scene_id": "S04",
+      "layers": [
+        {
+          "asset_id": "STAGE-ink",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S04-A-L00",
+          "z": 0,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "TXT-groups",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S04-A-L01",
+          "z": 1,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        }
+      ],
+      "script_words": "they should always be evaluated in certain subsets of patients which are",
+      "narrative_function": "Chapter reset; grouping not exhaustive.",
+      "reference": "CE04",
+      "medical_source_ids": "M08",
+      "minimum_hold_seconds": 3,
+      "approval_status": "PROVISIONAL_OWNER_REVIEW",
+      "layer_ids": [
+        "S04-A-L00",
+        "S04-A-L01"
+      ]
+    },
+    {
+      "state_id": "S04-B",
+      "scene_id": "S04",
+      "layers": [
+        {
+          "asset_id": "STAGE-cream",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S04-B-L00",
+          "z": 0,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "CH-diabetes-hold-neutral-front",
+          "x": 150,
+          "y": 500,
+          "scale": 0.92,
+          "operation": "OPACITY",
+          "layer_id": "S04-B-L01",
+          "z": 1,
+          "width": 600,
+          "height": 900,
+          "anchor_local": [
+            285,
+            802
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "PROP-glucose-kit",
+          "x": 381,
+          "y": 891,
+          "scale": 0.6,
+          "operation": "POP_IN",
+          "layer_id": "S04-B-L02",
+          "z": 2,
+          "width": 300,
+          "height": 260,
+          "anchor_local": [
+            150,
+            225
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "TXT-diabetes",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S04-B-L03",
+          "z": 3,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        }
+      ],
+      "script_words": "number 1 type 2 diabetes,",
+      "narrative_function": "Diabetes context; no fabricated glucose reading.",
+      "reference": "CE03",
+      "medical_source_ids": "M01;M08",
+      "minimum_hold_seconds": 4,
+      "approval_status": "PROVISIONAL_OWNER_REVIEW",
+      "layer_ids": [
+        "S04-B-L00",
+        "S04-B-L01",
+        "S04-B-L02",
+        "S04-B-L03"
+      ]
     }
   ]
 }
