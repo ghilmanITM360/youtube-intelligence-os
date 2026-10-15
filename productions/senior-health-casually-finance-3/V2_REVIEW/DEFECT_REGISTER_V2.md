@@ -32,3 +32,8 @@ Severity: **C** = critical (wrong medical wording, QA data in frame) · **H** = 
 | RUN | 14.4–19.7 | "Speaker's limit: 3x a week" + "SPEAKER'S LIMIT" reads as a universal cap | V1 15–19 s | H | "3 runs a week?" + "the speaker's suggestion" | V2 16–19 s; clinical review still required |
 | RUN | 24.0–28.4 | Lungs, heart and arrow unrelated, no build | V1 24–27 s | H | Heart from chest → lungs → O₂ travels into the heart | V2 26–28.8 s 5 fps window |
 | RUN | 0–4.6 (V2 draft) | Tree parked behind later diagrams | V2 draft stills | M | Tree passes and exits; a new tree in the endurance beat | Final contact sheet |
+| SWIM | 0–17.9 | Captions lower-case, unpunctuated ("swimming i'll give") | V1 frames 0–2 | H | Casing/punctuation only | V2 SRT; no word changed |
+| SWIM | 11.9–14.8 | S5 contradictory sentence shown amber; "Joints still move" headline asserts an interpretation | V1 12–14.5 | C | Keep verbatim; neutral "What about the joints?" + speaker's point | Wording confirmed (Δ≥14 nats vs alternatives); clinical decision pending |
+| SWIM | 2.9–10.2 | "best exercise" ranking presented with no attribution | V1 3–10 | H | Label "the speaker's view"; no ranking graphic | V2 4–9.5 s |
+| SWIM | 0–17.9 | Swimmer static on the water (4–6° swings), 5 cuts pool ↔ standing June | V1 grid | H | Parented freestyle rig, travel, one stage | 12-frame adjacency check |
+| SWIM | 0–17.9 | Review strip + S5 ID in frame | V1 12–14.5 | C | Remove | V2: none |

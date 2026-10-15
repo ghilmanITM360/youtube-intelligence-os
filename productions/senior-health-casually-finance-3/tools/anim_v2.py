@@ -376,7 +376,7 @@ class Video:
         merged = []
         for c in chunks:
             if merged and (c[-1][1] - c[0][0] < 0.8 or merged[-1][-1][1] - merged[-1][0][0] < 0.8) and \
-                    len(" ".join(x[2] for x in merged[-1] + c)) <= 44 and c[0][0] - merged[-1][-1][1] < 0.45:
+                    len(" ".join(x[2] for x in merged[-1] + c)) <= 44 and c[0][0] - merged[-1][-1][1] < 0.7:
                 merged[-1] = merged[-1] + c
             else:
                 merged.append(c)
