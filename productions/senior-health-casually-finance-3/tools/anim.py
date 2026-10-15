@@ -96,7 +96,7 @@ class Video:
         return sc
 
     def layer(self, sc, asset, x, y, s, at=None, until=None, enter="cut", part=None, z=None, moves=(),
-              loop=None, pivot=None, sfx=None, name=None):
+              loop=None, pivot=None, sfx=None, name=None, o=1.0):
         """x,y = asset-canvas top-left in world px at scale s. enter: cut|rise|pop|fade|wipe|slide_l|slide_r.
         moves: [(t0, t1, dict(x=,y=,s=,r=,o=))] absolute targets, eased. loop: ('bob',amp,period) |
         ('swing',deg,period) | ('spin',deg_per_s) | ('pulse',amp,[times])."""
@@ -105,7 +105,7 @@ class Video:
         a = self.reg[asset]
         L = dict(name=name or f"{sc['id']}--{asset}" + (f"--{part}" if part else ""), asset=asset, part=part,
                  x=x, y=y, s=s, at=at, until=until, enter=enter, moves=list(moves), loop=loop,
-                 pivot=pivot or a["anchors"]["pivot"], z=len(sc["layers"]) if z is None else z)
+                 pivot=pivot or a["anchors"]["pivot"], z=len(sc["layers"]) if z is None else z, o=o)
         sc["layers"].append(L)
         if sfx:
             self.sfx.append((at, sfx, L["name"]))
@@ -124,7 +124,7 @@ class Video:
 
     # ---------- evaluation ----------
     def state(self, L, t):
-        x, y, s, r, o = L["x"], L["y"], L["s"], 0.0, 1.0
+        x, y, s, r, o = L["x"], L["y"], L["s"], 0.0, L["o"]
         for t0, t1, tgt in L["moves"]:
             if t >= t0:
                 u = ease((t - t0) / max(1e-6, t1 - t0), "inout")

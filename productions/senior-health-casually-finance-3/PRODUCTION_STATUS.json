@@ -1,6 +1,6 @@
 {
   "status": "QA_BLOCKED",
-  "artifact_stage": "THREE_DRAFT_ASSET_PACKAGES_BUILT",
+  "artifact_stage": "THREE_V1_REVIEW_PREVIEWS_RENDERED",
   "source_integrity": "PASS",
   "structural_status": "PASS",
   "packages": [
@@ -80,5 +80,15 @@
       ]
     }
   ],
-  "errors": []
+  "errors": [],
+  "animation": {
+    "engine": "tools/anim.py",
+    "review_previews": {
+      "01_HIIT_AFTER_60": "01_HIIT_AFTER_60/animation/HIIT_After_60_V1_REVIEW.mp4",
+      "02_RUNNING_AFTER_60": "02_RUNNING_AFTER_60/animation/Running_After_60_V1_REVIEW.mp4",
+      "03_SWIMMING_AFTER_60": "03_SWIMMING_AFTER_60/animation/Swimming_After_60_V1_REVIEW.mp4"
+    },
+    "publication_status": "QA_BLOCKED: owner listening + clinical review pending",
+    "qa": "per-video animation/VISUAL_QA_V1.md and animation/qa/RENDER_QA.json"
+  }
 }
