@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "canvas": [
+    1080,
+    1920
+  ],
+  "suggested_fps": 30,
+  "audio": null,
+  "timing_status": "PROVISIONAL_NOT_WORD_ALIGNED",
+  "coordinate_system": "top-left; anchor in asset local pixels; uniform scale; z ascending",
+  "approval": "OWNER_AND_CLINICAL_REVIEW_PENDING",
+  "recipes": {
+    "POP_IN": {
+      "frames": 9,
+      "opacity": [
+        0,
+        1
+      ],
+      "scale": [
+        0.94,
+        1
+      ],
+      "clearance_px": 24
+    },
+    "SLIDE_IN": {
+      "frames": 12,
+      "offset_xy_px": [
+        90,
+        0
+      ],
+      "clearance_px": 100
+    },
+    "TRANSLATE_XY": {
+      "frames": 18,
+      "max_delta_px": 80,
+      "clearance_px": 90
+    },
+    "SCALE": {
+      "frames": 12,
+      "range": [
+        1,
+        1.04
+      ],
+      "clearance_px": 40
+    },
+    "ROTATE": {
+      "frames": 12,
+      "degrees": [
+        -2,
+        0
+      ],
+      "clearance_px": 30
+    },
+    "OPACITY": {
+      "frames": 8,
+      "range": [
+        0,
+        1
+      ],
+      "clearance_px": 0
+    },
+    "POSE_SWITCH": {
+      "frames": 1,
+      "hold_swap": true,
+      "clearance_px": 0
+    },
+    "EXPRESSION_SWITCH": {
+      "frames": 1,
+      "parts": [
+        "eyes-brows",
+        "mouth"
+      ],
+      "clearance_px": 0
+    },
+    "TEXT_REVEAL": {
+      "frames": 18,
+      "unit": "whole line",
+      "clearance_px": 0
+    },
+    "DIAGRAM_BUILD": {
+      "frames": 18,
+      "method": "independent layer opacity or stroke reveal",
+      "clearance_px": 0
+    },
+    "CAMERA_PUSH": {
+      "frames": 90,
+      "scale": [
+        1,
+        1.03
+      ],
+      "clearance_px": 32,
+      "exclude": [
+        "text",
+        "source-label"
+      ]
+    },
+    "SOURCE_HIGHLIGHT": {
+      "frames": 12,
+      "method": "opacity only; no flash",
+      "clearance_px": 0
+    },
+    "CUT_OR_WIPE": {
+      "frames": 1,
+      "optional_wipe_frames": 8,
+      "clearance_px": 0
+    }
+  },
+  "states": [
+    {
+      "state_id": "S01-A",
+      "scene_id": "S01",
+      "layers": [
+        {
+          "asset_id": "ENV-home-far",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S01-A-L00",
+          "z": 0,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "ENV-home-mid",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S01-A-L01",
+          "z": 1,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "CH-diabetes-breath-concerned-front",
+          "x": 230,
+          "y": 565,
+          "scale": 0.92,
+          "operation": "POSE_SWITCH",
+          "layer_id": "S01-A-L02",
+          "z": 2,
+          "width": 600,
+          "height": 900,
+          "anchor_local": [
+            285,
+            802
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "FX-breath",
+          "x": 650,
+          "y": 850,
+          "scale": 0.48,
+          "operation": "OPACITY",
+          "layer_id": "S01-A-L03",
+          "z": 3,
+          "width": 300,
+          "height": 260,
+          "anchor_local": [
+            150.0,
+            260
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "ENV-home-front",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S01-A-L04",
+          "z": 4,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "TXT-hook",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S01-A-L05",
+          "z": 5,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        }
+      ],
+      "script_words": "People with diabetes may be more likely to miss the warning signs of a heart attack.",
+      "narrative_function": "Human-scale question; concerning symptom is illustrative, not diagnosed.",
+      "reference": "CE01;CE02",
+      "medical_source_ids": "M01;M02",
+      "minimum_hold_seconds": 4,
+      "approval_status": "PROVISIONAL_OWNER_REVIEW",
+      "layer_ids": [
+        "S01-A-L00",
+        "S01-A-L01",
+        "S01-A-L02",
+        "S01-A-L03",
+        "S01-A-L04",
+        "S01-A-L05"
+      ]
+    },
+    {
+      "state_id": "S01-B",
+      "scene_id": "S01",
+      "layers": [
+        {
+          "asset_id": "ENV-home-far",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S01-B-L00",
+          "z": 0,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "ENV-home-mid",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S01-B-L01",
+          "z": 1,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "CH-diabetes-breath-concerned-front",
+          "x": 230,
+          "y": 565,
+          "scale": 0.92,
+          "operation": "OPACITY",
+          "layer_id": "S01-B-L02",
+          "z": 2,
+          "width": 600,
+          "height": 900,
+          "anchor_local": [
+            285,
+            802
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "PROP-call",
+          "x": 690,
+          "y": 930,
+          "scale": 0.55,
+          "operation": "POP_IN",
+          "layer_id": "S01-B-L03",
+          "z": 3,
+          "width": 330,
+          "height": 390,
+          "anchor_local": [
+            165.0,
+            390
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "TXT-hook-care",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S01-B-L04",
+          "z": 4,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        }
+      ],
+      "script_words": "People with diabetes may be more likely to miss the warning signs of a heart attack.",
+      "narrative_function": "Safety overlay while acute symptoms are depicted; not added narration.",
+      "reference": "CE03",
+      "medical_source_ids": "M05",
+      "minimum_hold_seconds": 5,
+      "approval_status": "PROVISIONAL_OWNER_REVIEW",
+      "layer_ids": [
+        "S01-B-L00",
+        "S01-B-L01",
+        "S01-B-L02",
+        "S01-B-L03",
+        "S01-B-L04"
+      ]
+    }
+  ]
+}
