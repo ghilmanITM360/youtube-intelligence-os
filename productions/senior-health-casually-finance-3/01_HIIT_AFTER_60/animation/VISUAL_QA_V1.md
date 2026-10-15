@@ -48,5 +48,5 @@ There are 8 scenes and 7 hard cuts at the storyboard times. The motion is restra
 - **H4, 13.4–16.2 s:** "must be supervised by an expert cardiologist". The absolute wording needs clinical review.
 - **H5, 16.2–21.3 s:** "mortality or mobility" may be "morbidity". The caption is amber and the strip is flagged.
 - **H6, 21.3–24.3 s:** one ASR model heard "avoided" and the other "awarded". The caption shows `avoided/awarded` in amber. The headline "Not one rule for everyone" is an editorial proposal from the claims register, not speech.
-- **H1 and H8:** the ratings are labelled "speaker's opinion".
+- **H1:** the 7/10 rating at the start and end is labelled "speaker's opinion".
 - No human has listened to the full preview or approved it clinically.
