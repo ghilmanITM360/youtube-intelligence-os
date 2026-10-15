@@ -1,5 +1,8 @@
 # Resume here
 
+## Phase 2 animation (2026-10-15)
+Muted provisional preview built: `animation/Dr_Rehan_Heart_Warning_PREVIEW_MUTED.mp4` (45.5 s, 1080×1920@30). Editable: `animation/animate.py` (cues) → `animation/KEYFRAME_TIMELINE.json` → render. Rebuild: `python3 animation/animate.py timeline && python3 animation/animate.py render`. Timing from owner MP3 (sha256 in `animation/AUDIO_ALIGNMENT.json`; file not committed — place it locally). MP3 has no final 'That is why… when…' sentence. Still needed: confirm ACS/angina/subsets/sudden wording, doctor credit/likeness, clinician review, then mux audio + optional licensed music → FINAL. See `animation/ANIMATION_QA.md`.
+
 Status: ASSET_PACKAGE_READY_FOR_OWNER_REVIEW; SCRIPT_APPROVAL_REQUIRED before final animation/publication. Eight scene groups / eighteen static visual states (seventeen narrative states plus one non-public ending placeholder). See DELIVERY_COUNTS.json; 17 original illustration designs, not 167 independently drawn assets.
 
 Branch: production/dr-rehan-diabetes-heart-warning-assets
