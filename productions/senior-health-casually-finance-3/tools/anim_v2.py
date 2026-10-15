@@ -24,6 +24,7 @@ INK, CORAL, TEAL, AMBER, GREY = (41, 42, 45), (200, 104, 85), (50, 124, 121), (1
 CHALK = "/System/Library/Fonts/Supplemental/ChalkboardSE.ttc"
 ARIALB = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
 ARIAL = "/System/Library/Fonts/Supplemental/Arial.ttf"
+UNI = "/System/Library/Fonts/Supplemental/Arial Unicode.ttf"  # fallback for glyphs Arial Bold lacks (subscript 2)
 CAP_Y, CAP_SIZE, CAP_LINE = 1330, 66, 80   # caption block top; bottom stays <= ~1500 (above Shorts title/UI zone)
 HEAD_Y = 150
 
@@ -406,6 +407,13 @@ class Video:
         k = best[1] if best else len(words) // 2
         return [list(range(k)), list(range(k, len(words)))]
 
+    @staticmethod
+    def segments(word):
+        return [p for p in word.replace("₂", "\0₂\0").split("\0") if p]
+
+    def word_len(self, d, word, f):
+        return sum(d.textlength(p, font=font(UNI, CAP_SIZE) if p == "₂" else f) for p in self.segments(word))
+
     def draw_caption(self, canvas, t):
         d = ImageDraw.Draw(canvas)
         for c in self.caption_chunks():
@@ -415,13 +423,17 @@ class Video:
                 cur = max((i for i, w in enumerate(c["words"]) if w[0] <= t), default=-1)
                 for li, idx in enumerate(lines):
                     y = CAP_Y + CAP_LINE * li + (CAP_LINE / 2 if len(lines) == 1 else 0) + CAP_LINE / 2
-                    lw = d.textlength(" ".join(c["words"][i][2] for i in idx), font=f)
+                    sp = d.textlength(" ", font=f)
+                    lw = sum(self.word_len(d, c["words"][i][2], f) for i in idx) + sp * (len(idx) - 1)
                     xx = (W - lw) / 2
                     for i in idx:
                         s, e, wd = c["words"][i]
                         col = CORAL if i == cur and t < e + 0.25 else INK
-                        d.text((xx, y), wd, font=f, fill=col, anchor="lm", stroke_width=9, stroke_fill=(255, 255, 255))
-                        xx += d.textlength(wd + " ", font=f)
+                        for seg in self.segments(wd):  # draw "₂" with the fallback font, same size and stroke
+                            fs = font(UNI, CAP_SIZE) if seg == "₂" else f
+                            d.text((xx, y), seg, font=fs, fill=col, anchor="lm", stroke_width=9, stroke_fill=(255, 255, 255))
+                            xx += d.textlength(seg, font=fs)
+                        xx += sp
                 return
 
     # ---------- frame ----------

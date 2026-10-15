@@ -23,3 +23,12 @@ Severity: **C** = critical (wrong medical wording, QA data in frame) · **H** = 
 | HIIT | 21.3–24.3 | Headline "Not one rule for everyone" softens the speaker's "avoid" advice | V1 23.7 | H | "Heart disease? Avoid it" + "the speaker's view" | Message preserved; clinical review still required |
 | HIIT | 10.24–11.78 | "caught" vs "got" | ASR | L | Keep "caught" (acoustically preferred); note it | Listening |
 | HIIT | 3.4 / 27.3 | "motor exercise" / "formula exercise" (base ASR) | ASR diff | M | small.en reading "mode of" / "form of" | small.en Δ6.7 / Δ3.4 |
+| RUN | 9.56–10.42 | Caption "muscular scuttle system" (ASR garble), amber | V1 frame 10.0; base heard "musculoskeletal" | C | Show "musculoskeletal" | Both models prefer it (small.en Δ2.5, base Δ7.2); V2 10.9 s |
+| RUN | 27.8 | Caption "of the other blood" | ASR both | H | "of the blood," | Free decodes of the isolated clip in both models; forced Δ2.7 / Δ4.4 |
+| RUN | 0–31.9 | Review strip, R3/R5/R7 IDs, amber in frame | V1 frames 5–19, 24–28 | C | Remove from frames | V2: none |
+| RUN | 0–31.9 | Caption flashes: 30 cues, shortest 0.42 s | V1 SRT | H | Phrase cues | 17 cues, min 0.98 s |
+| RUN | 0–2.7 | Hook: static bob, no heart question | V1 0–2 s | H | Running travel + beating heart on chest + "and your heart?" | V2 frame 0 |
+| RUN | 4.6–11.4 | Joint ring and shoe float, not linked to the character's knee/ankle | V1 7–10 s | H | Ring parented to Sam's legs: knee → ankle → legs; arrow to close-up | V2 7.9–10.9 s |
+| RUN | 14.4–19.7 | "Speaker's limit: 3x a week" + "SPEAKER'S LIMIT" reads as a universal cap | V1 15–19 s | H | "3 runs a week?" + "the speaker's suggestion" | V2 16–19 s; clinical review still required |
+| RUN | 24.0–28.4 | Lungs, heart and arrow unrelated, no build | V1 24–27 s | H | Heart from chest → lungs → O₂ travels into the heart | V2 26–28.8 s 5 fps window |
+| RUN | 0–4.6 (V2 draft) | Tree parked behind later diagrams | V2 draft stills | M | Tree passes and exits; a new tree in the endurance beat | Final contact sheet |
