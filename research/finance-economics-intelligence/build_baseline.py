@@ -23,7 +23,7 @@ def read_csv(path):
 
 def write_csv(name, rows):
     with (BASE / name).open('w', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0]))
+        w = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
 
@@ -141,7 +141,42 @@ def main():
     for v in videos:
         values = compare(v, videos)
         v.update(dict(zip(['Performance_tier','Peer_count','Lifetime_rate_ratio','Peer_Video_IDs','Tier_basis'],values)))
-    write_csv('CHANNEL_UNIVERSE.csv', channels)
+    review_path = BASE / 'SEMANTIC_REVIEWS.csv'
+    if review_path.exists():
+        semantic = {r['Video_ID']: r for r in read_csv(review_path)}
+        for v in videos:
+            r = semantic.get(v['Video_ID'])
+            if r:
+                for key in ['Audience_problem', 'Economic_mechanism', 'Demand_type', 'Narrative_angle']:
+                    v[key] = r[key]
+                v['Classification_method'] = r['Review_scope'] + ';ANALYST_INTERPRETATION'
+    visual_path = BASE / 'THUMBNAIL_REVIEWS.csv'
+    if visual_path.exists():
+        reviewed = {r['Video_ID'] for r in read_csv(visual_path)}
+        assets = {}
+        for name in ['THUMBNAIL_FETCH_REGISTER.csv', 'THUMBNAIL_FALLBACK_REGISTER.csv']:
+            path = BASE / name
+            if path.exists():
+                assets.update({r['Video_ID']: r for r in read_csv(path) if r['Path']})
+        for t in thumbs:
+            r = assets.get(t['Video_ID'])
+            if r:
+                t['Local_asset'] = r['Path']
+                t['Association_verified'] = 'VIDEO_ID_IN_CDN_URL'
+                t['Mobile_review'] = 'REVIEWED_320_WIDE' if t['Video_ID'] in reviewed else 'NOT_REVIEWED'
+    write_csv('CANONICAL_CHANNELS.csv', channels)
+    universe = list(channels)
+    landscape = BASE / 'LANDSCAPE_CHANNELS.csv'
+    if landscape.exists():
+        for r in read_csv(landscape):
+            universe.append(dict(Channel_ID=r['Channel_ID'], Channel=r['Name'], Scope='RESEARCH_ONLY_LANDSCAPE',
+                Dataset=r['Evidence'], Videos=int(r['Visible_videos']), Niche='SEE_LANDSCAPE_RESEARCH',
+                Research_depth=r['Depth'], Current_growth=r['Growth']))
+    for ident, name, count in [('UCrNfRFWnLC3tCy1TnyhVQ7g','Casual Finance / @CasuallyFinance',206),
+                               ('RESEARCH_ONLY_NOT_PROMOTED','Casual Economics',11)]:
+        universe.append(dict(Channel_ID=ident,Channel=name,Scope='REUSED_RESEARCH_OVERLAY',Dataset='REUSED_SOURCE_REGISTER.csv',
+            Videos=count,Niche='FINANCE_ECONOMICS',Research_depth='EXISTING_REPORTS_AND_TABLES_REUSED',Current_growth='UNKNOWN'))
+    write_csv('CHANNEL_UNIVERSE.csv', universe)
     write_csv('VIDEO_MASTER.csv', videos)
     write_csv('TRANSCRIPT_COVERAGE.csv',transcripts)
     write_csv('THUMBNAIL_COVERAGE.csv',thumbs)

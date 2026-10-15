@@ -16,8 +16,8 @@ Missing snapshot/date → insufficient comparison; mixed formats → separate co
 ## Batches
 
 - [x] Verify checkout, PR and exact-head starting CI; read central knowledge.
-- [ ] Baseline: build CHANNEL_UNIVERSE, VIDEO_MASTER, TRANSCRIPT_COVERAGE, THUMBNAIL_COVERAGE, TITLE_FEATURES, SCRIPT_FEATURES and BASELINE_COVERAGE; verify counts, source checksums and ranking edge cases. Commit/push.
-- [ ] Reuse: register immutable Casually Finance and Casual Economics report/data versions, retain their distinct ranking methods and QA limits.
+- [x] Baseline: build CHANNEL_UNIVERSE, VIDEO_MASTER, TRANSCRIPT_COVERAGE, THUMBNAIL_COVERAGE, TITLE_FEATURES, SCRIPT_FEATURES and BASELINE_COVERAGE; verify counts, source checksums and ranking edge cases. Commit/push.
+- [x] Reuse: register immutable Casually Finance and Casual Economics report/data versions, retain their distinct ranking methods and QA limits.
 - [ ] Packaging/scripts: stratify by channel, format and tier; deep-read selected scripts and review feasible mobile thumbnails with Video_ID association. Publish libraries and negative examples.
 - [ ] Live evidence: selectively expand Tier B/C only for gaps; verify official YouTube rules and event/Trends provenance. No search snippet treated as a full channel audit.
 - [ ] Synthesis: topic/performance/cross-channel findings, gaps, transparent backlog and pilot strategy.
@@ -26,3 +26,5 @@ Missing snapshot/date → insufficient comparison; mixed formats → separate co
 ## Sampling decision
 
 All 966 canonical finance videos and all valid transcript records receive automated coverage. Deep interpretation initially targets 18 canonical videos across strong/typical/weak/insufficient groups plus the existing two research overlays; expand only for unresolved decisions. New landscape discovery capped initially at six channel leads. Thumbnail acquisition starts with a matched 18-video sample; coverage gaps remain explicit, and expansion is required where image evidence changes conclusions. No claim to audit the entire niche.
+
+Execution ledger: baseline validated and pushed as ef02fad; CSV LF correction included next. Sample expanded from 18 to 30 to cover all 13 channels plus three Shorts. Nine full-text reads and 27 mobile image reads completed; remaining scope stays explicit. Six first-page competitors add 180 cards. Twenty-six path gaps dispositioned. Legacy metadata candidate date recorded without promoting unknown formats. One primary agent throughout.

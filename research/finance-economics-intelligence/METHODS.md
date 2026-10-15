@@ -13,3 +13,5 @@ Performance: require a parseable publication date, collection day, age >=7 days,
 Transcript deduplication: SHA256 of stored UTF-8 plaintext, with duplicate pointer; word counts are regex tokens and can differ from source counters. Available text is not certified complete narration or human verification. All text features are lexical proxies. Punctuation-based sentence length is ASR-sensitive. Evidence-marker counts do not verify citations; causal-marker counts do not certify mechanisms. No 3/10/30-second or narration-rate estimates from untimed text. Keyword topic labels may overlap and are not semantic findings. Unknowns are explicit.
 
 These scripts are research utilities, not a new production intelligence layer. All generated tables are research-only.
+
+Legacy follow-up: [LEGACY_METADATA_PROBE.json](LEGACY_METADATA_PROBE.json) records the existing inventory catalog's candidate DS-000001 observation day, 2026-08-24, for all 159 records. The original date provenance still needs verification and all formats remain null; no tiers were promoted. Do not repeat this catalog lookup.
