@@ -47,15 +47,17 @@ def ease(u, kind="out"):
 
 
 class Video:
+    TAG, SUB = "V2", "v2"   # output tag / folder (anim_v3.Video3 overrides)
+
     def __init__(self, pkg, out_name, music_chords, music_seg=2.4, voice=None, word_fix=None, cue_breaks=()):
         self.pkg = os.path.join(ROOT, pkg)
         self.name, self.out_name = pkg, out_name
-        self.anim = os.path.join(self.pkg, "animation/v2")
+        self.anim = os.path.join(self.pkg, "animation", self.SUB)
         self.raster_dir = os.path.join(self.pkg, "animation/raster")  # shared derived cache; V1 files never rewritten
         self.reg = {a["asset_id"]: a for a in json.load(open(os.path.join(self.pkg, "assets/ASSET_REGISTER.json")))}
         self.src_audio = os.path.join(self.pkg, "source_audio/original_audio.m4a")
         self.voice = os.path.join(self.pkg, voice) if voice else None
-        self.pacing = json.load(open(os.path.join(self.anim, "VOICE_PACING.json"))) if voice else None
+        self.pacing = json.load(open(os.path.join(self.pkg, "animation/v2/VOICE_PACING.json"))) if voice else None
         tm = (lambda t: remap(self.pacing["time_map"], t)) if voice else (lambda t: t)
         self.T = tm  # source seconds -> output seconds
         raw = [(float(r["start"]), float(r["end"]), r["word"].strip()) for r in
@@ -543,7 +545,7 @@ class Video:
                    scenes=[dict(id=s["id"], in_frame=round(s["start"] * FPS), out_frame_exclusive=round(s["end"] * FPS),
                                 headline="".join(p for p, _ in s["headline"]), label=s["label"]) for s in self.scenes],
                    tracks=tracks, sfx=[dict(t=a, kind=k, event=e) for a, k, e in self.sfx])
-        json.dump(doc, open(os.path.join(self.anim, "KEYFRAME_TIMELINE_V2.json"), "w"), indent=1)
+        json.dump(doc, open(os.path.join(self.anim, f"KEYFRAME_TIMELINE_{self.TAG}.json"), "w"), indent=1)
         return doc
 
     def srt(self):
@@ -551,7 +553,7 @@ class Video:
             ms = round(x * 1000)
             return f"{ms // 3600000:02}:{ms // 60000 % 60:02}:{ms // 1000 % 60:02},{ms % 1000:03}"
         lines = [f"{i}\n{ts(c['start'])} --> {ts(c['end'])}\n{c['text']}\n" for i, c in enumerate(self.caption_chunks(), 1)]
-        open(os.path.join(self.anim, "CAPTIONS_V2.srt"), "w").write("\n".join(lines))
+        open(os.path.join(self.anim, f"CAPTIONS_{self.TAG}.srt"), "w").write("\n".join(lines))
 
     def qa(self, mp4):
         probe = json.loads(subprocess.run(["ffprobe", "-v", "error", "-show_entries",
@@ -585,7 +587,7 @@ class Video:
                    cues_under_0_8s=[c["text"] for c in cues if c["end"] - c["start"] < 0.8],
                    caption_block_bottom_px=CAP_Y + 2 * CAP_LINE, word_corrections=self.corrections,
                    review_marks_in_frames=False, sfx=len(self.sfx), audio=self.audio_report)
-        json.dump(rep, open(os.path.join(self.anim, "RENDER_QA_V2.json"), "w"), indent=1)
+        json.dump(rep, open(os.path.join(self.anim, f"RENDER_QA_{self.TAG}.json"), "w"), indent=1)
         return rep
 
     def contact_sheet(self, mp4, step=1.0):
@@ -604,7 +606,7 @@ class Video:
             x, y = 8 + (i % cols) * (tw + 8), 8 + (i // cols) * (th + 34)
             sheet.paste(im, (x, y))
             d.text((x, y + th + 4), f"{tt:.2f}s", font=font(ARIAL, 20), fill=INK)
-        sheet.save(os.path.join(self.anim, "CONTACT_SHEET_V2.png"))
+        sheet.save(os.path.join(self.anim, f"CONTACT_SHEET_{self.TAG}.png"))
 
     def main(self, argv):
         mode = argv[1] if len(argv) > 1 else "render"
@@ -616,7 +618,7 @@ class Video:
             for s in argv[2:]:
                 self.frame(round(float(s) * FPS)).save(os.path.join(self.anim, f"qa/still_{float(s):05.2f}.png"))
         elif mode == "srt":
-            self.srt(); print(open(os.path.join(self.anim, "CAPTIONS_V2.srt")).read())
+            self.srt(); print(open(os.path.join(self.anim, f"CAPTIONS_{self.TAG}.srt")).read())
         else:
             mp4 = self.render()
             mob = mp4.replace(".mp4", "_MOBILE_540x960.mp4")
@@ -625,7 +627,7 @@ class Video:
                             "-movflags", "+faststart", mob], check=True)
             self.timeline(); self.srt(); self.contact_sheet(mp4)
             rep = self.qa(mp4)
-            json.dump(self.audio_report, open(os.path.join(self.anim, "AUDIO_PROVENANCE_V2.json"), "w"), indent=1)
+            json.dump(self.audio_report, open(os.path.join(self.anim, f"AUDIO_PROVENANCE_{self.TAG}.json"), "w"), indent=1)
             os.remove(os.path.join(self.anim, "build_mix.wav"))
             print(json.dumps({k: rep[k] for k in ("decode_errors", "av_duration_delta_s", "max_volume", "mean_volume",
                                                   "blank_frames", "unplanned_large_jumps_s", "caption_min_s",
