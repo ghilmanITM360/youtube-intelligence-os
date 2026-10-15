@@ -190,7 +190,9 @@ class RunRig:
 # 0.00 entry ahead of the head -> 0.12 extend -> 0.25 high-elbow catch -> 0.40 pull under the shoulder ->
 # 0.52 push to the hip -> 0.60 exit -> 0.72 / 0.86 above-water recovery (elbow high) -> entry. Unwrapped: -360/cycle.
 UPPER = [(0.00, 186), (0.12, 168), (0.25, 140), (0.40, 95), (0.52, 30), (0.60, -15), (0.72, -70), (0.86, -130)]
-FORE = [(0.00, 181), (0.12, 160), (0.25, 100), (0.40, 60), (0.52, 10), (0.60, -25), (0.72, -185), (0.86, -190)]
+# elbow flexes one way only (forearm angle <= upper-arm angle): 5-40 deg in the pull, 15-30 deg in a relaxed
+# near-straight-arm recovery (a hanging forearm would dip the hand: forearm 89 > upper arm 87 at a waterline shoulder)
+FORE = [(0.00, 181), (0.12, 160), (0.25, 100), (0.40, 60), (0.52, 10), (0.60, -30), (0.72, -95), (0.86, -160)]
 
 
 class SwimRig:
@@ -198,11 +200,11 @@ class SwimRig:
     parts = ("rear-arm", "rear-leg", "front-leg", "front-arm", "fx")
     WATER = 160.0                                     # waterline in asset y (project_v2: SY = WT - 160*SS)
 
-    def __init__(self, kick_amp=9.0, roll=5.0):
+    def __init__(self, kick_amp=7.0, roll=5.0):
         self.arms = {"front-arm": dict(sh=(216, 165), l=(87, 89), w=(32, 23), ph=0.0, roll=-1),
                      "rear-arm": dict(sh=(229, 129), l=(87, 80), w=(31, 22), ph=0.5, roll=1)}
         self.legs = {"front-leg": dict(hip=(437, 189), l=(99, 88), w=(39, 30), base=12, ph=0.0),
-                     "rear-leg": dict(hip=(435, 165), l=(98, 86), w=(37, 28), base=4, ph=0.5)}
+                     "rear-leg": dict(hip=(435, 165), l=(98, 86), w=(37, 28), base=9, ph=0.5)}
         self.kick_amp, self.roll = kick_amp, roll
 
     @staticmethod
@@ -223,7 +225,7 @@ class SwimRig:
         g = self.legs[name]
         q = 3 * p + g["ph"]                                                  # 6-beat kick: 3 per leg per stroke
         th = g["base"] + self.kick_amp * math.sin(2 * math.pi * q)
-        flex = 6 + 20 * (0.5 - 0.5 * math.sin(2 * math.pi * q + 0.6))        # knee most bent at top of the downbeat
+        flex = 4 + 14 * (0.5 - 0.5 * math.sin(2 * math.pi * q + 0.6))        # knee most bent at top of the downbeat
         k = polar(g["hip"], th, g["l"][0])
         return g["hip"], k, polar(k, th - flex, g["l"][1])
 

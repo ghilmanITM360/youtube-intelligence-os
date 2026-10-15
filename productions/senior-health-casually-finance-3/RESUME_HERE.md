@@ -1,31 +1,26 @@
-# RESUME HERE — V3 motion correction (in progress; stopped at the 5-hour usage checkpoint)
+# RESUME HERE — V3 motion correction: all three review videos rendered (2026-10-16)
 
 Branch `production/senior-health-casually-finance-three-videos`, draft PR #34. V1 and V2 files untouched (anim_v2.py only
-gained `TAG`/`SUB` class attributes; defaults still write V2 names to animation/v2).
+gained `TAG`/`SUB` class attributes; defaults still write V2 names to animation/v2). **V3 is a REVIEW version, not publication-ready.**
 
-| Video | V3 status | Commit |
-|---|---|---|
-| HIIT | DONE: `01_HIIT_AFTER_60/animation/v3/HIIT_After_60_V3_REVIEW.mp4`, MOTION_QA_V3.md | e495794 |
-| Running | DONE: `02_RUNNING_AFTER_60/animation/v3/Running_After_60_V3_REVIEW.mp4`, MOTION_QA_V3.md | c78b9d5 |
-| Swimming | NOT STARTED as a render. `tools/rig.py` SwimRig + `anim_v3.Video3.swimmer()` written, rig self-check passes, never drawn/rendered/inspected | — |
+| Video | V3 output | QA | Commit |
+|---|---|---|---|
+| HIIT | `01_HIIT_AFTER_60/animation/v3/HIIT_After_60_V3_REVIEW.mp4` (31.133 s) | MOTION_QA_V3.md | e495794 |
+| Running | `02_RUNNING_AFTER_60/animation/v3/Running_After_60_V3_REVIEW.mp4` (31.933 s) | MOTION_QA_V3.md | c78b9d5 |
+| Swimming | `03_SWIMMING_AFTER_60/animation/v3/Swimming_After_60_V3_REVIEW.mp4` (17.867 s) | MOTION_QA_V3.md | see git log |
 
-V3 pieces: `tools/rig.py` (RunRig two-leg IK gait + contralateral arms; SwimRig alternating crawl + 6-beat kick + water fx;
-`python3 tools/rig.py` self-check), `tools/anim_v3.py` (Video3: rig layers, gait bounce, ground marks, red opening bar),
-`tools/motion_qa_v3.py` (phase strip + every-frame sequence sheet from the ENCODED mp4).
+V3 pieces: `tools/rig.py` (RunRig two-leg IK gait + contralateral arms; SwimRig alternating crawl, one-way elbow flexion,
+near-straight-arm recovery, 6-beat kick, water fx at contacts; `python3 tools/rig.py` self-check), `tools/anim_v3.py`
+(Video3: rig layers, gait bounce, ground marks, red opening bar), `tools/motion_qa_v3.py` (phase strip + every-frame
+sequence sheet from the ENCODED mp4). Each package: `animation/project_v3.py`, `animation/v3/` (MP4, mobile MP4, captions
+byte-identical to V2, GAIT_PHASES_V3.png, MOTION_V2_V3.png, CONTACT_SHEET_V3.png, RENDER_QA_V3.json, qa/).
 
-## Next: Swimming V3 (one unit, then commit/push/CI)
-1. `03_SWIMMING_AFTER_60/animation/project_v3.py` from project_v2.py: `from anim_v3 import Video3 as Video` + `import rig`;
-   out `Swimming_After_60_V3_REVIEW.mp4`; replace the root/STROKE/kids block with
-   `root = v.swimmer(S1, "june-swim-warm", 250, SY, SS, per=1.2, rg=rig.SwimRig(), until=END + 0.1, moves=[(0, END, dict(x=90), "linear")])`
-   (drop the V2 bob loop; SwimRig.bounce supplies it). Keep heart/labels parented to `root`.
-   `v.bar = dict(lines=["SWIMMING AFTER 60", "HEART BENEFITS?"], until=b2)`.
-2. `python3 project_v3.py test 0 2.6`, then `python3 tools/motion_qa_v3.py <test mp4> 0 1.2 "40,560,1040,1120" <prefix> "0,0.5"`.
-   Inspect: both arms alternate half a cycle apart; recovery above water, pull below (front water at 55% over it);
-   entry splash at the hand entry point, bubbles along the pull, kick spray only where a foot breaks the surface;
-   no snapping at 1.2 s loop; far arm passes behind body/head. Tune `UPPER`/`FORE` keys or fx alpha if needed.
-3. Full render, `cmp` CAPTIONS_V2/V3, MOTION_V2_V3.png + GAIT_PHASES_V3.png (pattern as in the other two packages),
-   MOTION_QA_V3.md, commit, push, verify SHA, check exact-head CI.
-4. Update this table and the final report.
+Red opening bars: HIIT 0–3.52 s "HIIT AFTER 60 / TOO INTENSE?"; Running 0–2.66 s "RUNNING AFTER 60 / GOOD OR BAD?";
+Swimming 0–2.48 s "SWIMMING AFTER 60 / HEART BENEFITS?". Same component, x 60–1020, top y 160.
+
+## Next
+Owner watches all three V3 MP4s at playback speed (motion was reviewed frame-by-frame from decoded frames only), then the
+open items below. Do not merge PR #34.
 
 Open (unchanged from V2): human listening (HIIT stretched spans, mobility/morbidity, caught/got, avoided in; Running "of the
 blood"), clinical review H4/H5/H6, R3/R5/R7, S5 + "best" ranking, phone check, music/SFX rights, owner approval.
