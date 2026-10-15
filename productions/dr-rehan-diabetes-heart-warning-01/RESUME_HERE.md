@@ -20,3 +20,6 @@ Next owner actions: supply MP3 and full ending; confirm quoted wording and displ
 Claude can assemble from KEYFRAME_HANDOFF.json, SCENE_ASSET_MAP.csv, PART_REGISTER.csv and existing SVG/PNG files once inputs are approved. No need to regenerate assets. Detailed instructions: CLAUDE_ANIMATION_HANDOFF.md.
 
 Unrelated state preserved: existing finance-short-02-visual-calibration/ and research/casually-finance-script-intelligence/ untracked files; pre-existing stash; PR #25 and #30. On main-based production checkout, Git may display the remaining research files under `?? research/`; do not remove them.
+
+## Phase 3 — V2 visual redesign (2026-10-15)
+V2 lives in `animation_v2/` (start with `V2_REPORT.md`). It is a white-canvas redesign with 37 new original assets, 9 scenes and audio-timed keyframes. The preview `Dr_Rehan_Heart_Warning_V2_PREVIEW.mp4` (45.5 s, with voice, original music and SFX) is NOT for publication. V1 in `animation/` is kept unchanged for comparison. Open approvals: the four uncertain ASR phrases, the presenter credit, clinician review, the ~42 s trim, and the music rights decision.
