@@ -1123,6 +1123,196 @@
         "S05-B-L02",
         "S05-B-L03"
       ]
+    },
+    {
+      "state_id": "S06-A",
+      "scene_id": "S06",
+      "layers": [
+        {
+          "asset_id": "STAGE-cream",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S06-A-L00",
+          "z": 0,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "CH-risk-adult-stand-neutral-front",
+          "x": 100,
+          "y": 550,
+          "scale": 0.8,
+          "operation": "OPACITY",
+          "layer_id": "S06-A-L01",
+          "z": 1,
+          "width": 600,
+          "height": 900,
+          "anchor_local": [
+            285,
+            802
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "PROP-pressure-cuff",
+          "x": 570,
+          "y": 850,
+          "scale": 0.8,
+          "operation": "POP_IN",
+          "layer_id": "S06-A-L02",
+          "z": 2,
+          "width": 370,
+          "height": 300,
+          "anchor_local": [
+            185.0,
+            300
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "TXT-comorbid",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S06-A-L03",
+          "z": 3,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        }
+      ],
+      "script_words": "and number 3 with patients with comorbid conditions.",
+      "narrative_function": "First supported example; not an assigned diagnosis.",
+      "reference": "CE03",
+      "medical_source_ids": "M04;M08",
+      "minimum_hold_seconds": 4,
+      "approval_status": "PROVISIONAL_OWNER_REVIEW",
+      "layer_ids": [
+        "S06-A-L00",
+        "S06-A-L01",
+        "S06-A-L02",
+        "S06-A-L03"
+      ]
+    },
+    {
+      "state_id": "S06-B",
+      "scene_id": "S06",
+      "layers": [
+        {
+          "asset_id": "STAGE-cream",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S06-B-L00",
+          "z": 0,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "CH-risk-adult-open-neutral-front",
+          "x": 100,
+          "y": 550,
+          "scale": 0.8,
+          "operation": "POSE_SWITCH",
+          "layer_id": "S06-B-L01",
+          "z": 1,
+          "width": 600,
+          "height": 900,
+          "anchor_local": [
+            285,
+            802
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "PROP-pressure-cuff",
+          "x": 550,
+          "y": 700,
+          "scale": 0.65,
+          "operation": "OPACITY",
+          "layer_id": "S06-B-L02",
+          "z": 2,
+          "width": 370,
+          "height": 300,
+          "anchor_local": [
+            185.0,
+            300
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "PROP-lab-tube",
+          "x": 650,
+          "y": 950,
+          "scale": 0.6,
+          "operation": "POP_IN",
+          "layer_id": "S06-B-L03",
+          "z": 3,
+          "width": 300,
+          "height": 310,
+          "anchor_local": [
+            150.0,
+            310
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        },
+        {
+          "asset_id": "TXT-comorbid",
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "operation": "OPACITY",
+          "layer_id": "S06-B-L04",
+          "z": 4,
+          "width": 1080,
+          "height": 1920,
+          "anchor_local": [
+            540.0,
+            1920
+          ],
+          "opacity": 1,
+          "rotation_deg": 0
+        }
+      ],
+      "script_words": "and number 3 with patients with comorbid conditions.",
+      "narrative_function": "Add cholesterol lab-context symbol without a result.",
+      "reference": "CE03",
+      "medical_source_ids": "M04;M08",
+      "minimum_hold_seconds": 4,
+      "approval_status": "PROVISIONAL_OWNER_REVIEW",
+      "layer_ids": [
+        "S06-B-L00",
+        "S06-B-L01",
+        "S06-B-L02",
+        "S06-B-L03",
+        "S06-B-L04"
+      ]
     }
   ]
 }
