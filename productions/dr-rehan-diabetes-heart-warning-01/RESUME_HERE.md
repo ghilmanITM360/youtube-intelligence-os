@@ -1,5 +1,18 @@
 # Resume here
 
+## Phase 4: V3 upload candidate (2026-10-15)
+- **Output:** `animation_v2/Dr_Rehan_Heart_Warning_V3_UPLOAD_CANDIDATE.mp4`, 43.0 s, 1080×1920, 30 fps, H.264 + AAC.
+- **Thumbnail:** `animation_v2/thumbnail/Dr_Rehan_Heart_Warning_THUMBNAIL_FINAL.png` (A selected over B).
+- **What changed:** the debug band and doctor-intro notes are removed, the captions are cleaned, and the export is trimmed after speech.
+- **Sources and reports:** built by `animation_v2/v3.py` and `thumb.py`. Reports are `animation_v2/V3_CHANGELOG.md`, `V3_FULL_REVIEW.md`, `V3_AUDIO_QA.md` and `V3_THUMBNAIL_QA.md`.
+- **Still needed:**
+  1. The owner listens to confirm the four wording points.
+  2. The owner approves the "Dr. Rehan" name. No title or credential is shown.
+  3. Clinician review.
+  4. The owner approves the 43.0 s cut.
+  5. A rights decision on the music.
+  6. Phone playback review.
+
 ## Phase 2 animation (2026-10-15)
 Muted provisional preview built: `animation/Dr_Rehan_Heart_Warning_PREVIEW_MUTED.mp4` (45.5 s, 1080×1920@30). Editable: `animation/animate.py` (cues) → `animation/KEYFRAME_TIMELINE.json` → render. Rebuild: `python3 animation/animate.py timeline && python3 animation/animate.py render`. Timing from owner MP3 (sha256 in `animation/AUDIO_ALIGNMENT.json`; file not committed — place it locally). MP3 has no final 'That is why… when…' sentence. Still needed: confirm ACS/angina/subsets/sudden wording, doctor credit/likeness, clinician review, then mux audio + optional licensed music → FINAL. See `animation/ANIMATION_QA.md`.
 
