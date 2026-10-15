@@ -1,0 +1,1325 @@
+{
+  "schema_version": "1.0",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "time_origin": "source container zero",
+  "duration_seconds": 30.55746,
+  "duration_frames": 917,
+  "interpolation": "linear values through easeOutCubic; step for hold; frames absolute; out exclusive",
+  "layer_transform": "translate(x,y) then rotate about asset pivot then uniform scale; rotation zero in supplied tracks",
+  "source_audio": "source_audio/narration_mix.wav",
+  "audio_processing": "none; no music/SFX added; mixed-source status unverified",
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "start_seconds": 0,
+      "end_seconds": 3.24,
+      "in_frame": 0,
+      "out_frame_exclusive": 97,
+      "narration_verbatim_asr": "or high intensity interval training. I'll give that seven out of 10.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "HIIT",
+      "subtitle_proposed": "Work. Recover. Repeat.",
+      "claim_id": "H1",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Hook: illustrate interval contrast, then attribute rating.",
+      "expected_result": "Hook: illustrate interval contrast, then attribute rating.",
+      "objects": [
+        {
+          "instance_id": "S01--sam-run-warm",
+          "asset_id": "sam-run-warm",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-run-warm",
+          "keyframes": [
+            {
+              "frame": 0,
+              "x": 125,
+              "y": 650,
+              "scale": 1.35,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 96,
+              "x": 125,
+              "y": 650,
+              "scale": 1.35,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 96,
+          "word_cue": "or"
+        },
+        {
+          "instance_id": "S01--intervals",
+          "asset_id": "intervals",
+          "z": 1,
+          "pivot": [
+            350.0,
+            140.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "intervals",
+          "keyframes": [
+            {
+              "frame": 0,
+              "x": 175,
+              "y": 454,
+              "scale": 1.0,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 10,
+              "x": 175,
+              "y": 454,
+              "scale": 1.0,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 18,
+              "x": 175,
+              "y": 430,
+              "scale": 1.0,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 96,
+              "x": 175,
+              "y": 430,
+              "scale": 1.0,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 78,
+          "word_cue": "intensity",
+          "component_visibility": [
+            {
+              "target_id": "S01--intervals--baseline",
+              "asset_layer_id": "intervals--baseline",
+              "visible_from_frame": 10,
+              "out_frame_exclusive": 97
+            },
+            {
+              "target_id": "S01--intervals--work-1",
+              "asset_layer_id": "intervals--work-1",
+              "visible_from_frame": 10,
+              "out_frame_exclusive": 97
+            },
+            {
+              "target_id": "S01--intervals--rest-1",
+              "asset_layer_id": "intervals--rest-1",
+              "visible_from_frame": 21,
+              "out_frame_exclusive": 97
+            },
+            {
+              "target_id": "S01--intervals--work-2",
+              "asset_layer_id": "intervals--work-2",
+              "visible_from_frame": 30,
+              "out_frame_exclusive": 97
+            },
+            {
+              "target_id": "S01--intervals--rest-2",
+              "asset_layer_id": "intervals--rest-2",
+              "visible_from_frame": 39,
+              "out_frame_exclusive": 97
+            },
+            {
+              "target_id": "S01--intervals--work-3",
+              "asset_layer_id": "intervals--work-3",
+              "visible_from_frame": 48,
+              "out_frame_exclusive": 97
+            },
+            {
+              "target_id": "S01--intervals--caption",
+              "asset_layer_id": "intervals--caption",
+              "visible_from_frame": 10,
+              "out_frame_exclusive": 97
+            }
+          ]
+        },
+        {
+          "instance_id": "S01--score7",
+          "asset_id": "score7",
+          "z": 2,
+          "pivot": [
+            165,
+            155
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "score7",
+          "keyframes": [
+            {
+              "frame": 0,
+              "x": 630,
+              "y": 944,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 27,
+              "x": 630,
+              "y": 944,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 35,
+              "x": 630,
+              "y": 920,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 96,
+              "x": 630,
+              "y": 920,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 61,
+          "word_cue": "training."
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S01-title",
+          "instance_id": "S01-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 0,
+          "out_frame_exclusive": 97
+        },
+        {
+          "asset_id": "S01-subtitle",
+          "instance_id": "S01-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 0,
+          "out_frame_exclusive": 97
+        }
+      ]
+    },
+    {
+      "scene_id": "S02",
+      "start_seconds": 3.24,
+      "end_seconds": 7.72,
+      "in_frame": 97,
+      "out_frame_exclusive": 232,
+      "narration_verbatim_asr": "It's a wonderful mode of exercise, good for the heart, good for cardiovascular conditioning.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "Heart conditioning",
+      "subtitle_proposed": "An exercise benefit",
+      "claim_id": "H2",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Heart appears on the spoken heart cue; symbolic, not diagnostic.",
+      "expected_result": "Heart appears on the spoken heart cue; symbolic, not diagnostic.",
+      "objects": [
+        {
+          "instance_id": "S02--sam-stand-warm",
+          "asset_id": "sam-stand-warm",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-stand-warm",
+          "keyframes": [
+            {
+              "frame": 97,
+              "x": 115,
+              "y": 600,
+              "scale": 1.45,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 231,
+              "x": 115,
+              "y": 600,
+              "scale": 1.45,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 134,
+          "word_cue": "It's"
+        },
+        {
+          "instance_id": "S02--heart",
+          "asset_id": "heart",
+          "z": 1,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "heart",
+          "keyframes": [
+            {
+              "frame": 97,
+              "x": 610,
+              "y": 694,
+              "scale": 0.85,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 148,
+              "x": 610,
+              "y": 694,
+              "scale": 0.85,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 156,
+              "x": 610,
+              "y": 670,
+              "scale": 0.85,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 231,
+              "x": 610,
+              "y": 670,
+              "scale": 0.85,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 75,
+          "word_cue": "good"
+        },
+        {
+          "instance_id": "S02--arrow",
+          "asset_id": "arrow",
+          "z": 2,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "arrow",
+          "keyframes": [
+            {
+              "frame": 97,
+              "x": 520,
+              "y": 1064,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 166,
+              "x": 520,
+              "y": 1064,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 174,
+              "x": 520,
+              "y": 1040,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 231,
+              "x": 520,
+              "y": 1040,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 57,
+          "word_cue": "good"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S02-title",
+          "instance_id": "S02-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 97,
+          "out_frame_exclusive": 232
+        },
+        {
+          "asset_id": "S02-subtitle",
+          "instance_id": "S02-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 97,
+          "out_frame_exclusive": 232
+        }
+      ]
+    },
+    {
+      "scene_id": "S03",
+      "start_seconds": 7.72,
+      "end_seconds": 13.36,
+      "in_frame": 232,
+      "out_frame_exclusive": 401,
+      "narration_verbatim_asr": "However, there's a very strong point of concern for patients who have caught underlying cardiovascular diseases.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "The important caveat",
+      "subtitle_proposed": "Existing heart disease",
+      "claim_id": "H3",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Retain patient identity; concern without catastrophe.",
+      "expected_result": "Retain patient identity; concern without catastrophe.",
+      "objects": [
+        {
+          "instance_id": "S03--sam-concern-concern",
+          "asset_id": "sam-concern-concern",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-concern-concern",
+          "keyframes": [
+            {
+              "frame": 232,
+              "x": 120,
+              "y": 620,
+              "scale": 1.45,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 400,
+              "x": 120,
+              "y": 620,
+              "scale": 1.45,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 168,
+          "word_cue": "there's"
+        },
+        {
+          "instance_id": "S03--heart",
+          "asset_id": "heart",
+          "z": 1,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "heart",
+          "keyframes": [
+            {
+              "frame": 232,
+              "x": 650,
+              "y": 834,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 304,
+              "x": 650,
+              "y": 834,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 312,
+              "x": 650,
+              "y": 810,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 400,
+              "x": 650,
+              "y": 810,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 88,
+          "word_cue": "for"
+        },
+        {
+          "instance_id": "S03--question",
+          "asset_id": "question",
+          "z": 2,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "question",
+          "keyframes": [
+            {
+              "frame": 232,
+              "x": 690,
+              "y": 604,
+              "scale": 0.54,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 250,
+              "x": 690,
+              "y": 604,
+              "scale": 0.54,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 258,
+              "x": 690,
+              "y": 580,
+              "scale": 0.54,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 400,
+              "x": 690,
+              "y": 580,
+              "scale": 0.54,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 142,
+          "word_cue": "there's"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S03-title",
+          "instance_id": "S03-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 232,
+          "out_frame_exclusive": 401
+        },
+        {
+          "asset_id": "S03-subtitle",
+          "instance_id": "S03-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 232,
+          "out_frame_exclusive": 401
+        }
+      ]
+    },
+    {
+      "scene_id": "S04",
+      "start_seconds": 13.36,
+      "end_seconds": 16.2,
+      "in_frame": 401,
+      "out_frame_exclusive": 486,
+      "narration_verbatim_asr": "So it has to be done under the supervision of an expert cardiologist.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "Supervised care",
+      "subtitle_proposed": "Individual assessment",
+      "claim_id": "H4",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Explainer and patient; fictional host has no implied credentials.",
+      "expected_result": "Explainer and patient; fictional host has no implied credentials.",
+      "objects": [
+        {
+          "instance_id": "S04--clinic",
+          "asset_id": "clinic",
+          "z": 0,
+          "pivot": [
+            450.0,
+            250.0
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "clinic",
+          "keyframes": [
+            {
+              "frame": 401,
+              "x": 65,
+              "y": 950,
+              "scale": 1.02,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 485,
+              "x": 65,
+              "y": 950,
+              "scale": 1.02,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 84,
+          "word_cue": "So"
+        },
+        {
+          "instance_id": "S04--nora-point-explain",
+          "asset_id": "nora-point-explain",
+          "z": 1,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "nora-point-explain",
+          "keyframes": [
+            {
+              "frame": 401,
+              "x": 105,
+              "y": 714,
+              "scale": 1.08,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 403,
+              "x": 105,
+              "y": 714,
+              "scale": 1.08,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 411,
+              "x": 105,
+              "y": 690,
+              "scale": 1.08,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 485,
+              "x": 105,
+              "y": 690,
+              "scale": 1.08,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 74,
+          "word_cue": "it"
+        },
+        {
+          "instance_id": "S04--sam-stand-warm",
+          "asset_id": "sam-stand-warm",
+          "z": 2,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-stand-warm",
+          "keyframes": [
+            {
+              "frame": 401,
+              "x": 535,
+              "y": 744,
+              "scale": 1.02,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 413,
+              "x": 535,
+              "y": 744,
+              "scale": 1.02,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 421,
+              "x": 535,
+              "y": 720,
+              "scale": 1.02,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 485,
+              "x": 535,
+              "y": 720,
+              "scale": 1.02,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 64,
+          "word_cue": "to"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S04-title",
+          "instance_id": "S04-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 401,
+          "out_frame_exclusive": 486
+        },
+        {
+          "asset_id": "S04-subtitle",
+          "instance_id": "S04-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 401,
+          "out_frame_exclusive": 486
+        }
+      ]
+    },
+    {
+      "scene_id": "S05",
+      "start_seconds": 16.2,
+      "end_seconds": 21.26,
+      "in_frame": 486,
+      "out_frame_exclusive": 638,
+      "narration_verbatim_asr": "Or in order to avoid the higher incidence of mortality or mobility,",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "Risk needs context",
+      "subtitle_proposed": "No risk percentage supplied",
+      "claim_id": "H5",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Hold concern; never invent a mortality statistic or damaged heart.",
+      "expected_result": "Hold concern; never invent a mortality statistic or damaged heart.",
+      "objects": [
+        {
+          "instance_id": "S05--sam-concern-concern",
+          "asset_id": "sam-concern-concern",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-concern-concern",
+          "keyframes": [
+            {
+              "frame": 486,
+              "x": 115,
+              "y": 660,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 637,
+              "x": 115,
+              "y": 660,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 151,
+          "word_cue": "Or"
+        },
+        {
+          "instance_id": "S05--question",
+          "asset_id": "question",
+          "z": 1,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "question",
+          "keyframes": [
+            {
+              "frame": 486,
+              "x": 610,
+              "y": 764,
+              "scale": 0.8,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 501,
+              "x": 610,
+              "y": 764,
+              "scale": 0.8,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 509,
+              "x": 610,
+              "y": 740,
+              "scale": 0.8,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 637,
+              "x": 610,
+              "y": 740,
+              "scale": 0.8,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 128,
+          "word_cue": "order"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S05-title",
+          "instance_id": "S05-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 486,
+          "out_frame_exclusive": 638
+        },
+        {
+          "asset_id": "S05-subtitle",
+          "instance_id": "S05-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 486,
+          "out_frame_exclusive": 638
+        }
+      ]
+    },
+    {
+      "scene_id": "S06",
+      "start_seconds": 21.26,
+      "end_seconds": 24.34,
+      "in_frame": 638,
+      "out_frame_exclusive": 730,
+      "narration_verbatim_asr": "it should be better awarded to patients who have got cardiovascular diseases.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "Not one rule for everyone",
+      "subtitle_proposed": "Clinical review required",
+      "claim_id": "H6",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Audio avoidance statement remains disputed; no universal prohibition icon.",
+      "expected_result": "Audio avoidance statement remains disputed; no universal prohibition icon.",
+      "objects": [
+        {
+          "instance_id": "S06--nora-open-concern",
+          "asset_id": "nora-open-concern",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "nora-open-concern",
+          "keyframes": [
+            {
+              "frame": 638,
+              "x": 120,
+              "y": 630,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 729,
+              "x": 120,
+              "y": 630,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 91,
+          "word_cue": "should"
+        },
+        {
+          "instance_id": "S06--heart",
+          "asset_id": "heart",
+          "z": 1,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "heart",
+          "keyframes": [
+            {
+              "frame": 638,
+              "x": 650,
+              "y": 794,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 653,
+              "x": 650,
+              "y": 794,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 661,
+              "x": 650,
+              "y": 770,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 729,
+              "x": 650,
+              "y": 770,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 68,
+          "word_cue": "awarded"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S06-title",
+          "instance_id": "S06-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 638,
+          "out_frame_exclusive": 730
+        },
+        {
+          "asset_id": "S06-subtitle",
+          "instance_id": "S06-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 638,
+          "out_frame_exclusive": 730
+        }
+      ]
+    },
+    {
+      "scene_id": "S07",
+      "start_seconds": 24.34,
+      "end_seconds": 28.9,
+      "in_frame": 730,
+      "out_frame_exclusive": 867,
+      "narration_verbatim_asr": "But for normal patients to improve endurance and stamina, it is an excellent form of exercise.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "Endurance + stamina",
+      "subtitle_proposed": "Suitability matters",
+      "claim_id": "H7",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Return to same patient; conceptual stamina, not prescribed HIIT session.",
+      "expected_result": "Return to same patient; conceptual stamina, not prescribed HIIT session.",
+      "objects": [
+        {
+          "instance_id": "S07--park",
+          "asset_id": "park",
+          "z": 0,
+          "pivot": [
+            450.0,
+            225.0
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "park",
+          "keyframes": [
+            {
+              "frame": 730,
+              "x": 70,
+              "y": 1080,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 866,
+              "x": 70,
+              "y": 1080,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 136,
+          "word_cue": "But"
+        },
+        {
+          "instance_id": "S07--sam-run-warm",
+          "asset_id": "sam-run-warm",
+          "z": 1,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-run-warm",
+          "keyframes": [
+            {
+              "frame": 730,
+              "x": 155,
+              "y": 684,
+              "scale": 1.3,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 732,
+              "x": 155,
+              "y": 684,
+              "scale": 1.3,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 740,
+              "x": 155,
+              "y": 660,
+              "scale": 1.3,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 866,
+              "x": 155,
+              "y": 660,
+              "scale": 1.3,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 126,
+          "word_cue": "for"
+        },
+        {
+          "instance_id": "S07--stopwatch",
+          "asset_id": "stopwatch",
+          "z": 2,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "stopwatch",
+          "keyframes": [
+            {
+              "frame": 730,
+              "x": 640,
+              "y": 764,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 772,
+              "x": 640,
+              "y": 764,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 780,
+              "x": 640,
+              "y": 740,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 866,
+              "x": 640,
+              "y": 740,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 86,
+          "word_cue": "and"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S07-title",
+          "instance_id": "S07-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 730,
+          "out_frame_exclusive": 867
+        },
+        {
+          "asset_id": "S07-subtitle",
+          "instance_id": "S07-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 730,
+          "out_frame_exclusive": 867
+        }
+      ]
+    },
+    {
+      "scene_id": "S08",
+      "start_seconds": 28.9,
+      "end_seconds": 30.55746,
+      "in_frame": 867,
+      "out_frame_exclusive": 917,
+      "narration_verbatim_asr": "That's why I'm giving that 7 out of 10.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "The speaker’s verdict",
+      "subtitle_proposed": "A rating, not a medical scale",
+      "claim_id": "H1",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Short closing callback; no extra CTA or rewritten speech.",
+      "expected_result": "Short closing callback; no extra CTA or rewritten speech.",
+      "objects": [
+        {
+          "instance_id": "S08--nora-open-warm",
+          "asset_id": "nora-open-warm",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "nora-open-warm",
+          "keyframes": [
+            {
+              "frame": 867,
+              "x": 140,
+              "y": 660,
+              "scale": 1.25,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 916,
+              "x": 140,
+              "y": 660,
+              "scale": 1.25,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 49,
+          "word_cue": "That's"
+        },
+        {
+          "instance_id": "S08--score7",
+          "asset_id": "score7",
+          "z": 1,
+          "pivot": [
+            165,
+            155
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "score7",
+          "keyframes": [
+            {
+              "frame": 867,
+              "x": 610,
+              "y": 870,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 916,
+              "x": 610,
+              "y": 870,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 49,
+          "word_cue": "That's"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S08-title",
+          "instance_id": "S08-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 867,
+          "out_frame_exclusive": 917
+        },
+        {
+          "asset_id": "S08-subtitle",
+          "instance_id": "S08-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 867,
+          "out_frame_exclusive": 917
+        }
+      ]
+    }
+  ]
+}

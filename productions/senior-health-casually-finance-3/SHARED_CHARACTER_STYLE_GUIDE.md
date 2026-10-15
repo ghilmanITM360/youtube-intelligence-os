@@ -1,0 +1,9 @@
+# Original character and layer guide
+
+Original designs: Nora (silver bun, ochre cardigan, teal trousers), Sam (receding grey hair, teal top, charcoal trousers), June (silver bob, coral top, teal trousers). These are fictional illustrators' characters, not likenesses or credentialed medical advisers. Same 400×620 character canvas; head around (200,115), shoulders (140,235)/(260,235), hips near (175,390)/(225,390). Head/face stays fixed across each identity's poses. Feet contact the ground around y=590 in standing poses. Seated pose requires its matching chair; swimming uses a purpose-drawn horizontal silhouette.
+
+Layers: rear arm, legs, torso, neck, head/hair, eyes/brows/mouth, front arm and hands. Full pose SVGs retain IDs; exported transparent parts preserve the full canvas so imported layers align at (0,0). Hand end points are attached to the forearm and have matching skin fill. Do not rotate a complete bent limb about an elbow; swap approved complete poses, or split/re-rig deliberately. Local pivot and hand/foot anchors are listed in asset register. No lip-sync is specified.
+
+Authoring units: three identity base designs; pose variants are derivatives, not extra characters. Props/diagrams/environments each count once by design ID. Full SVG/PNG exports and component exports are reported separately. Every package contains its actual referenced asset files; shared_style documents common conventions only.
+
+Use black outlines with rounded joins and 5–7px local strokes; preserve stroke scaling as part of SVG export. Mild contour asymmetry, flat fills, restrained shadow only under shoes. No random wobble between animation frames. Typography: Chalkboard for illustrated headings and Arial for precise labels; renderer uses installed macOS fonts. Package previews retain rasterized text; editable SVG requires these fonts or equivalent measured substitution.
