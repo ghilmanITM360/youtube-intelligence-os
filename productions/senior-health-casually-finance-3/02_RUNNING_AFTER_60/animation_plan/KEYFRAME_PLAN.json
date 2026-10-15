@@ -1,0 +1,1251 @@
+{
+  "schema_version": "1.0",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "time_origin": "source container zero",
+  "duration_seconds": 31.927438,
+  "duration_frames": 958,
+  "interpolation": "linear values through easeOutCubic; step for hold; frames absolute; out exclusive",
+  "layer_transform": "translate(x,y) then rotate about asset pivot then uniform scale; rotation zero in supplied tracks",
+  "source_audio": "source_audio/narration_mix.wav",
+  "audio_processing": "none; no music/SFX added; mixed-source status unverified",
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "start_seconds": 0,
+      "end_seconds": 2.7,
+      "in_frame": 0,
+      "out_frame_exclusive": 81,
+      "narration_verbatim_asr": "Running, I'll give you 7 out of 10.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "RUNNING",
+      "subtitle_proposed": "The speaker’s rating",
+      "claim_id": "R1",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Immediate run pose; rating appears on spoken seven.",
+      "expected_result": "Immediate run pose; rating appears on spoken seven.",
+      "objects": [
+        {
+          "instance_id": "S01--park",
+          "asset_id": "park",
+          "z": 0,
+          "pivot": [
+            450.0,
+            225.0
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "park",
+          "keyframes": [
+            {
+              "frame": 0,
+              "x": 70,
+              "y": 1080,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 80,
+              "x": 70,
+              "y": 1080,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 80,
+          "word_cue": "Running,"
+        },
+        {
+          "instance_id": "S01--sam-run-warm",
+          "asset_id": "sam-run-warm",
+          "z": 1,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-run-warm",
+          "keyframes": [
+            {
+              "frame": 0,
+              "x": 135,
+              "y": 650,
+              "scale": 1.35,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 80,
+              "x": 135,
+              "y": 650,
+              "scale": 1.35,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 80,
+          "word_cue": "Running,"
+        },
+        {
+          "instance_id": "S01--score7",
+          "asset_id": "score7",
+          "z": 2,
+          "pivot": [
+            165,
+            155
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "score7",
+          "keyframes": [
+            {
+              "frame": 0,
+              "x": 650,
+              "y": 574,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 27,
+              "x": 650,
+              "y": 574,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 35,
+              "x": 650,
+              "y": 550,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 80,
+              "x": 650,
+              "y": 550,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 45,
+          "word_cue": "I'll"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S01-title",
+          "instance_id": "S01-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 0,
+          "out_frame_exclusive": 81
+        },
+        {
+          "asset_id": "S01-subtitle",
+          "instance_id": "S01-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 0,
+          "out_frame_exclusive": 81
+        }
+      ]
+    },
+    {
+      "scene_id": "S02",
+      "start_seconds": 2.7,
+      "end_seconds": 4.64,
+      "in_frame": 81,
+      "out_frame_exclusive": 139,
+      "narration_verbatim_asr": "Running is a very good form of exercise.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "A form of exercise",
+      "subtitle_proposed": "",
+      "claim_id": "R2",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Preserve runner, add symbolic heart.",
+      "expected_result": "Preserve runner, add symbolic heart.",
+      "objects": [
+        {
+          "instance_id": "S02--sam-run-warm",
+          "asset_id": "sam-run-warm",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-run-warm",
+          "keyframes": [
+            {
+              "frame": 81,
+              "x": 180,
+              "y": 650,
+              "scale": 1.35,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 138,
+              "x": 180,
+              "y": 650,
+              "scale": 1.35,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 57,
+          "word_cue": "Running"
+        },
+        {
+          "instance_id": "S02--heart",
+          "asset_id": "heart",
+          "z": 1,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "heart",
+          "keyframes": [
+            {
+              "frame": 81,
+              "x": 640,
+              "y": 774,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 95,
+              "x": 640,
+              "y": 774,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 103,
+              "x": 640,
+              "y": 750,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 138,
+              "x": 640,
+              "y": 750,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 35,
+          "word_cue": "good"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S02-title",
+          "instance_id": "S02-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 81,
+          "out_frame_exclusive": 139
+        }
+      ]
+    },
+    {
+      "scene_id": "S03",
+      "start_seconds": 4.64,
+      "end_seconds": 11.36,
+      "in_frame": 139,
+      "out_frame_exclusive": 341,
+      "narration_verbatim_asr": "However, it does pose problems to your knees, ankles and the other muscular scuttle system. Running",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "Consider your joints",
+      "subtitle_proposed": "Knees • ankles",
+      "claim_id": "R3",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Highlight joints without asserting running always causes injury.",
+      "expected_result": "Highlight joints without asserting running always causes injury.",
+      "objects": [
+        {
+          "instance_id": "S03--sam-concern-concern",
+          "asset_id": "sam-concern-concern",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-concern-concern",
+          "keyframes": [
+            {
+              "frame": 139,
+              "x": 100,
+              "y": 650,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 340,
+              "x": 100,
+              "y": 650,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 201,
+          "word_cue": "However,"
+        },
+        {
+          "instance_id": "S03--joint",
+          "asset_id": "joint",
+          "z": 1,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "joint",
+          "keyframes": [
+            {
+              "frame": 139,
+              "x": 640,
+              "y": 744,
+              "scale": 0.8,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 223,
+              "x": 640,
+              "y": 744,
+              "scale": 0.8,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 231,
+              "x": 640,
+              "y": 720,
+              "scale": 0.8,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 340,
+              "x": 640,
+              "y": 720,
+              "scale": 0.8,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 109,
+          "word_cue": "your"
+        },
+        {
+          "instance_id": "S03--shoe",
+          "asset_id": "shoe",
+          "z": 2,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "shoe",
+          "keyframes": [
+            {
+              "frame": 139,
+              "x": 640,
+              "y": 1124,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 253,
+              "x": 640,
+              "y": 1124,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 261,
+              "x": 640,
+              "y": 1100,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 340,
+              "x": 640,
+              "y": 1100,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 79,
+          "word_cue": "and"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S03-title",
+          "instance_id": "S03-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 139,
+          "out_frame_exclusive": 341
+        },
+        {
+          "asset_id": "S03-subtitle",
+          "instance_id": "S03-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 139,
+          "out_frame_exclusive": 341
+        }
+      ]
+    },
+    {
+      "scene_id": "S04",
+      "start_seconds": 11.36,
+      "end_seconds": 14.42,
+      "in_frame": 341,
+      "out_frame_exclusive": 433,
+      "narration_verbatim_asr": "is a good source of exercise, provided they are in moderation,",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "In moderation",
+      "subtitle_proposed": "",
+      "claim_id": "R4",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Conceptual pacing; no automatic dose recommendation.",
+      "expected_result": "Conceptual pacing; no automatic dose recommendation.",
+      "objects": [
+        {
+          "instance_id": "S04--nora-open-explain",
+          "asset_id": "nora-open-explain",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "nora-open-explain",
+          "keyframes": [
+            {
+              "frame": 341,
+              "x": 140,
+              "y": 630,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 432,
+              "x": 140,
+              "y": 630,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 91,
+          "word_cue": "is"
+        },
+        {
+          "instance_id": "S04--stopwatch",
+          "asset_id": "stopwatch",
+          "z": 1,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "stopwatch",
+          "keyframes": [
+            {
+              "frame": 341,
+              "x": 635,
+              "y": 824,
+              "scale": 0.75,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 380,
+              "x": 635,
+              "y": 824,
+              "scale": 0.75,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 388,
+              "x": 635,
+              "y": 800,
+              "scale": 0.75,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 432,
+              "x": 635,
+              "y": 800,
+              "scale": 0.75,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 44,
+          "word_cue": "provided"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S04-title",
+          "instance_id": "S04-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 341,
+          "out_frame_exclusive": 433
+        }
+      ]
+    },
+    {
+      "scene_id": "S05",
+      "start_seconds": 14.42,
+      "end_seconds": 19.66,
+      "in_frame": 433,
+      "out_frame_exclusive": 590,
+      "narration_verbatim_asr": "not more than 3 times per week and the distance should also be moderate, not very high.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "“Three times per week”",
+      "subtitle_proposed": "Speaker’s advice — verify",
+      "claim_id": "R5",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Attribute frequency; do not promote it as an age-based universal limit.",
+      "expected_result": "Attribute frequency; do not promote it as an age-based universal limit.",
+      "objects": [
+        {
+          "instance_id": "S05--calendar",
+          "asset_id": "calendar",
+          "z": 0,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "calendar",
+          "keyframes": [
+            {
+              "frame": 433,
+              "x": 570,
+              "y": 704,
+              "scale": 1.0,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 448,
+              "x": 570,
+              "y": 704,
+              "scale": 1.0,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 456,
+              "x": 570,
+              "y": 680,
+              "scale": 1.0,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 589,
+              "x": 570,
+              "y": 680,
+              "scale": 1.0,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 133,
+          "word_cue": "more"
+        },
+        {
+          "instance_id": "S05--nora-point-concern",
+          "asset_id": "nora-point-concern",
+          "z": 1,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "nora-point-concern",
+          "keyframes": [
+            {
+              "frame": 433,
+              "x": 80,
+              "y": 760,
+              "scale": 1.25,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 589,
+              "x": 80,
+              "y": 760,
+              "scale": 1.25,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 156,
+          "word_cue": "not"
+        },
+        {
+          "instance_id": "S05--shoe",
+          "asset_id": "shoe",
+          "z": 2,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "shoe",
+          "keyframes": [
+            {
+              "frame": 433,
+              "x": 620,
+              "y": 1174,
+              "scale": 0.55,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 511,
+              "x": 620,
+              "y": 1174,
+              "scale": 0.55,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 519,
+              "x": 620,
+              "y": 1150,
+              "scale": 0.55,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 589,
+              "x": 620,
+              "y": 1150,
+              "scale": 0.55,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 70,
+          "word_cue": "distance"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S05-title",
+          "instance_id": "S05-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 433,
+          "out_frame_exclusive": 590
+        },
+        {
+          "asset_id": "S05-subtitle",
+          "instance_id": "S05-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 433,
+          "out_frame_exclusive": 590
+        }
+      ]
+    },
+    {
+      "scene_id": "S06",
+      "start_seconds": 19.66,
+      "end_seconds": 24.04,
+      "in_frame": 590,
+      "out_frame_exclusive": 721,
+      "narration_verbatim_asr": "So if you have got a normal heart, running improves your cardiac function.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "Heart function",
+      "subtitle_proposed": "The speaker’s conditional claim",
+      "claim_id": "R6",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Retain the normal-heart condition without implying a visual diagnosis.",
+      "expected_result": "Retain the normal-heart condition without implying a visual diagnosis.",
+      "objects": [
+        {
+          "instance_id": "S06--sam-stand-warm",
+          "asset_id": "sam-stand-warm",
+          "z": 0,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-stand-warm",
+          "keyframes": [
+            {
+              "frame": 590,
+              "x": 120,
+              "y": 620,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 720,
+              "x": 120,
+              "y": 620,
+              "scale": 1.4,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 130,
+          "word_cue": "So"
+        },
+        {
+          "instance_id": "S06--heart",
+          "asset_id": "heart",
+          "z": 1,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "heart",
+          "keyframes": [
+            {
+              "frame": 590,
+              "x": 620,
+              "y": 754,
+              "scale": 0.85,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 638,
+              "x": 620,
+              "y": 754,
+              "scale": 0.85,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 646,
+              "x": 620,
+              "y": 730,
+              "scale": 0.85,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 720,
+              "x": 620,
+              "y": 730,
+              "scale": 0.85,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 74,
+          "word_cue": "heart,"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S06-title",
+          "instance_id": "S06-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 590,
+          "out_frame_exclusive": 721
+        },
+        {
+          "asset_id": "S06-subtitle",
+          "instance_id": "S06-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 590,
+          "out_frame_exclusive": 721
+        }
+      ]
+    },
+    {
+      "scene_id": "S07",
+      "start_seconds": 24.04,
+      "end_seconds": 28.44,
+      "in_frame": 721,
+      "out_frame_exclusive": 853,
+      "narration_verbatim_asr": "Running improves your VO2 or maximum oxygen extraction of the other blood",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "Oxygen + exercise",
+      "subtitle_proposed": "VO₂: terminology needs review",
+      "claim_id": "R7",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Symbolic oxygen/heart relation; no physiological numbers or bogus ECG.",
+      "expected_result": "Symbolic oxygen/heart relation; no physiological numbers or bogus ECG.",
+      "objects": [
+        {
+          "instance_id": "S07--lungs",
+          "asset_id": "lungs",
+          "z": 0,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "lungs",
+          "keyframes": [
+            {
+              "frame": 721,
+              "x": 145,
+              "y": 704,
+              "scale": 1.05,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 739,
+              "x": 145,
+              "y": 704,
+              "scale": 1.05,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 747,
+              "x": 145,
+              "y": 680,
+              "scale": 1.05,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 852,
+              "x": 145,
+              "y": 680,
+              "scale": 1.05,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 105,
+          "word_cue": "your"
+        },
+        {
+          "instance_id": "S07--heart",
+          "asset_id": "heart",
+          "z": 1,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "heart",
+          "keyframes": [
+            {
+              "frame": 721,
+              "x": 650,
+              "y": 814,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 763,
+              "x": 650,
+              "y": 814,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 771,
+              "x": 650,
+              "y": 790,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 852,
+              "x": 650,
+              "y": 790,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 81,
+          "word_cue": "or"
+        },
+        {
+          "instance_id": "S07--arrow",
+          "asset_id": "arrow",
+          "z": 2,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "arrow",
+          "keyframes": [
+            {
+              "frame": 721,
+              "x": 490,
+              "y": 1064,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 781,
+              "x": 490,
+              "y": 1064,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 789,
+              "x": 490,
+              "y": 1040,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 852,
+              "x": 490,
+              "y": 1040,
+              "scale": 0.65,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 63,
+          "word_cue": "oxygen"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S07-title",
+          "instance_id": "S07-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 721,
+          "out_frame_exclusive": 853
+        },
+        {
+          "asset_id": "S07-subtitle",
+          "instance_id": "S07-subtitle",
+          "x": 0,
+          "y": 294,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 721,
+          "out_frame_exclusive": 853
+        }
+      ]
+    },
+    {
+      "scene_id": "S08",
+      "start_seconds": 28.44,
+      "end_seconds": 31.927438,
+      "in_frame": 853,
+      "out_frame_exclusive": 958,
+      "narration_verbatim_asr": "and it also promotes your endurance and stamina.",
+      "transcript_source": "script/ASR_SMALL_EN.json",
+      "narration_status": "MACHINE_ASR_NOT_HUMAN_VERIFIED",
+      "title_proposed": "Endurance + stamina",
+      "subtitle_proposed": "",
+      "claim_id": "R8",
+      "clinical_gate": "REVIEW_REQUIRED",
+      "source_technique": "CASUALLY_FINANCE_VISUAL_SPEC.md: additive reveal / retained character / staged comparison",
+      "transition": "hard cut; no added audio",
+      "continuity": "Close on movement; do not add score absent from ending speech.",
+      "expected_result": "Close on movement; do not add score absent from ending speech.",
+      "objects": [
+        {
+          "instance_id": "S08--park",
+          "asset_id": "park",
+          "z": 0,
+          "pivot": [
+            450.0,
+            225.0
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "park",
+          "keyframes": [
+            {
+              "frame": 853,
+              "x": 65,
+              "y": 1080,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 957,
+              "x": 65,
+              "y": 1080,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 104,
+          "word_cue": "and"
+        },
+        {
+          "instance_id": "S08--sam-run-warm",
+          "asset_id": "sam-run-warm",
+          "z": 1,
+          "pivot": [
+            200,
+            380
+          ],
+          "entry": "visible_on_cut",
+          "exit": "cut_at_scene_end",
+          "pose": "sam-run-warm",
+          "keyframes": [
+            {
+              "frame": 853,
+              "x": 150,
+              "y": 650,
+              "scale": 1.35,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 957,
+              "x": 150,
+              "y": 650,
+              "scale": 1.35,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 104,
+          "word_cue": "and"
+        },
+        {
+          "instance_id": "S08--stopwatch",
+          "asset_id": "stopwatch",
+          "z": 2,
+          "pivot": [
+            200.0,
+            200.0
+          ],
+          "entry": "rise_24px_8frames",
+          "exit": "cut_at_scene_end",
+          "pose": "stopwatch",
+          "keyframes": [
+            {
+              "frame": 853,
+              "x": 650,
+              "y": 824,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "hold"
+            },
+            {
+              "frame": 871,
+              "x": 650,
+              "y": 824,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 0,
+              "easing": "easeOutCubic"
+            },
+            {
+              "frame": 879,
+              "x": 650,
+              "y": 800,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            },
+            {
+              "frame": 957,
+              "x": 650,
+              "y": 800,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 1,
+              "easing": "hold"
+            }
+          ],
+          "hold_frames": 78,
+          "word_cue": "it"
+        }
+      ],
+      "fixed_text_layers": [
+        {
+          "asset_id": "S08-title",
+          "instance_id": "S08-title",
+          "x": 0,
+          "y": 214,
+          "z": 100,
+          "opacity": 1,
+          "in_frame": 853,
+          "out_frame_exclusive": 958
+        }
+      ]
+    }
+  ]
+}
