@@ -1,10 +1,61 @@
 # Resume here
 
-**Stage: three V1 REVIEW previews rendered (owner review). NOT publication-ready.** No human listening or clinical approval has been given. Do not merge PR #34.
+**Stage: three V2 REVIEW videos rendered (2026-10-15). NOT publication-ready.** No human listening or clinical approval has been given. Do not merge PR #34.
 
 Draft PR: https://github.com/ghilmanITM360/youtube-intelligence-os/pull/34 · Issue #33 · Branch `production/senior-health-casually-finance-three-videos`.
 
-## Animation phase (2026-10-15)
+## V2 refinement (current)
+| Video | V2 review MP4 | Duration | Cues (min) | Audio |
+|---|---|---:|---:|---|
+| HIIT | `01_HIIT_AFTER_60/animation/v2/HIIT_After_60_V2_REVIEW.mp4` | 31.133 s | 20 (0.86 s) | Derived paced voice: atempo 0.90 on 0–1.30 s and 0.93 on 2.96–7.37 s, +0.12 s pause. Source hash unchanged. Plan in `animation/v2/VOICE_PACING.json`. |
+| Running | `02_RUNNING_AFTER_60/animation/v2/Running_After_60_V2_REVIEW.mp4` | 31.933 s | 17 (0.98 s) | Original voice, unchanged |
+| Swimming | `03_SWIMMING_AFTER_60/animation/v2/Swimming_After_60_V2_REVIEW.mp4` | 17.867 s | 9 (0.94 s) | Original voice, unchanged |
+
+**Each `animation/v2/` folder contains:**
+- the MP4 + a 540×960 mobile copy
+- `CAPTIONS_V2.srt`
+- `KEYFRAME_TIMELINE_V2.json`
+- `AUDIO_PROVENANCE_V2.json`
+- `CAPTION_VERIFICATION.md`
+- `CORRECTION_LOG_V1_V2.md`
+- `VISUAL_QA_V2.md`, which includes the Casually Finance references and the remaining questions
+- `RENDER_QA_V2.json`
+- `CONTACT_SHEET_V2.png`
+- `CORRECTED_FRAMES_V1_V2.png`
+
+**Shared files:**
+- Defect register: `V2_REVIEW/DEFECT_REGISTER_V2.md`
+- Wording evidence: `V2_REVIEW/CAPTION_SCORE_RESULTS.txt` (`tools/caption_score.py`)
+
+**Rebuild, one at a time from repo root:**
+```
+python3 productions/senior-health-casually-finance-3/0X_…/animation/project_v2.py render
+```
+- **Engine:** `tools/anim_v2.py`.
+- **HIIT needs `source_audio/voice_v2_paced.wav`.** It is git-ignored and must be regenerated with `tools/voice_stretch.py` from the plan in `VOICE_PACING.json`, then checked against the sha256 recorded there.
+- **V1 is untouched:** `project.py`, `tools/anim.py` and the V1 MP4s still rebuild as before.
+
+## Still blocking publication (V2)
+**Listening (human):**
+- **HIIT:**
+  - "mortality or mobility": both models prefer "mobility" over "morbidity", so it was **not** substituted.
+  - "caught" vs "got".
+  - "avoided in", corrected from "awarded to".
+  - Naturalness of the two stretched spans; revert with `voice=None` if they sound metallic.
+- **Running:** "of the blood" (ASR heard "other") and "should" vs "would".
+
+**Clinical:**
+- **HIIT:** H4 (absolute cardiologist supervision), H5/H6 (blanket avoidance with CVD).
+- **Running:** R3 (broad joint claim), R5 (3 runs a week as a maximum), R7 (VO₂ / "oxygen extraction" terminology).
+- **Swimming:** S5 (the joints sentence contradicts itself as spoken, kept verbatim) and the "best exercise" ranking (attributed, no ranking graphic).
+
+**Owner:**
+- Phone review of the small supporting labels.
+- Rights for the synthesised music/SFX and the supplied audio.
+
+---
+## V1 record (superseded by V2 for review, kept unchanged)
+### Animation phase V1 (2026-10-15)
 | Video | Preview | Duration | Scenes | Layer tracks | Unique assets | SFX |
 |---|---|---:|---:|---:|---:|---:|
 | HIIT | `01_HIIT_AFTER_60/animation/HIIT_After_60_V1_REVIEW.mp4` | 30.567 s | 8 | 37 | 14 | 11 |
