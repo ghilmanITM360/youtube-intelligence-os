@@ -13,6 +13,15 @@ def identity_errors(baseline, actual):
     if set(baseline)!=set(actual): errors.append('missing or substituted IDs')
     return errors
 
+def projection_errors(source, display):
+    by_id={r['Video_ID']:r for r in display}
+    errors=[]
+    for r in source:
+        actual=by_id.get(r['Video_ID'],{})
+        for dimension,status in r['statuses'].items():
+            if actual.get(dimension)!=status: errors.append('matrix status mismatch '+r['Video_ID']+':'+dimension)
+    return errors
+
 def image_errors(vid, image):
     errors=[]
     if image.get('image_path'):
@@ -44,6 +53,7 @@ REQUIRED={
     'SCRIPT_REVIEW':['analysis','beat_map','claim_audit','opening_words','ending_words','timing','source'],
     'TOPIC_REVIEW':['analysis','novelty_and_corpus_angle','competition'],
     'VIRALITY_REVIEW':['analysis','observed_result','topic_demand','trend_timing','competition','format_fit','channel_context','alternative_explanations','original_content_lesson','causal_status']}
+SCOPES={'TITLE_REVIEW':'ACTUAL_TITLE','THUMBNAIL_REVIEW':'ACTUAL_IMAGE','SCRIPT_REVIEW':'FULL_STORED_TEXT','TOPIC_REVIEW':'FULL_TRANSCRIPT_TOPIC','VIRALITY_REVIEW':'INDIVIDUAL_PUBLIC_EVIDENCE'}
 
 def semantic_errors(row):
     errors=[]
@@ -51,7 +61,7 @@ def semantic_errors(row):
         if status not in STATUSES: errors.append('invalid status '+d)
         if status not in COMPLETE or d=='PERFORMANCE_REVIEW': continue
         section=row.get(d.removesuffix('_REVIEW').lower(),{})
-        if section.get('review_scope') not in {'FULL_STORED_TEXT','ACTUAL_TITLE','ACTUAL_IMAGE','FULL_TRANSCRIPT_TOPIC','INDIVIDUAL_PUBLIC_EVIDENCE'}:
+        if section.get('review_scope') != SCOPES.get(d):
             errors.append('no semantic scope '+d)
         if not section.get('source_refs'): errors.append('no source references '+d)
         if not section.get('analysis'): errors.append('no individual analysis '+d)
@@ -90,15 +100,30 @@ def validate():
         if not r['performance'].get('methodology'): errors.append('performance method '+vid)
     for name in ['VIDEO_AUDIT_966','VIDEO_COMPLETION_MATRIX','THUMBNAIL_ANALYSIS_966','SCRIPT_ANALYSIS_966','TITLE_ANALYSIS_966','TOPIC_ANALYSIS_966','VIRALITY_INTELLIGENCE_966']:
         errors+=identity_errors([r['Video_ID'] for r in ids],[r['Video_ID'] for r in read(name+'.csv')])
+    errors+=projection_errors(rows,read('VIDEO_COMPLETION_MATRIX.csv'))
+    errors+=projection_errors(rows,read('VIDEO_AUDIT_966.csv'))
+    for dimension in ['THUMBNAIL','SCRIPT','TITLE','TOPIC','VIRALITY']:
+        display={r['Video_ID']:r for r in read(dimension+'_ANALYSIS_966.csv' if dimension!='VIRALITY' else 'VIRALITY_INTELLIGENCE_966.csv')}
+        for r in rows:
+            cell=display.get(r['Video_ID'],{})
+            if cell.get('Status')!=r['statuses'][dimension+'_REVIEW']: errors.append('component CSV status mismatch '+r['Video_ID'])
+            if cell.get('analysis','')!=r[dimension.lower()].get('analysis',''): errors.append('component CSV analysis mismatch '+r['Video_ID'])
     sources=json.loads((BASE/'audit-batches/EVENT_SOURCES.json').read_text())
     source_ids={r['id'] for r in sources['sources']}
     for row in rows:
         if set(row['event'].get('source_ids',[]))-source_ids: errors.append('unknown event source '+row['Video_ID'])
     expanded=sum(all(s in COMPLETE for s in row['statuses'].values()) for row in rows)
     full_evidence=sum(all(s=='COMPLETE_EVIDENCE_BACKED' for s in row['statuses'].values()) for row in rows)
+    readings={'titles':sum(bool(r['title'].get('analysis') or r['title'].get('legacy_review')) for r in rows),
+              'thumbnails':sum(bool(r['thumbnail'].get('analysis') or r['thumbnail'].get('legacy_review')) for r in rows),
+              'topics':sum(bool(r['topic'].get('analysis') or r['topic'].get('legacy_review')) for r in rows)}
+    batches=[]
+    for path in sorted((BASE/'audit-batches').glob('*.json')):
+        batch=json.loads(path.read_text())
+        if batch.get('reviews'): batches.append({'batch_id':batch['batch_id'],'status':batch.get('status','UNDECLARED'),'registered_reviews':len(batch['reviews'])})
     coverage={d:dict(Counter(r['statuses'][d+'_REVIEW'] for r in rows)) for d in DIMENSIONS}
     outstanding=[r['Video_ID'] for r in rows if any(s in {'NOT_STARTED','IN_PROGRESS'} for s in r['statuses'].values())]
-    report={'validation':'PASS' if not errors else 'FAIL','research_status':'FULL_POPULATION_RESEARCH_IN_PROGRESS' if outstanding else 'ALL_966_COVERED_WITH_EVIDENCE_GAPS','registered':len(rows),'fully_analyzed_complete_evidence':full_evidence,'analyzed_partial_evidence':expanded-full_evidence,'source_blocked_videos':sum(any(s=='BLOCKED_MISSING_SOURCE' for s in r['statuses'].values()) for r in rows),'coverage':coverage,'distinct_full_stored_text_reads':sum(r['script'].get('review_scope')=='FULL_STORED_TEXT' for r in rows),'outstanding_videos':len(outstanding),'next_master_order_id':outstanding[0] if outstanding else None,'source_hashes_checked':len(frozen['source_hashes']),'errors':errors,'semantic_content_validation':'STRUCTURAL_ONLY; analyst reasoning and source entailment require review','causal_inference':'Public metadata cannot establish causation; private metrics unavailable','exact_head_ci':'CHECK_PR_36_AFTER_PUSH'}
+    report={'validation':'PASS' if not errors else 'FAIL','research_status':'FULL_POPULATION_RESEARCH_IN_PROGRESS' if outstanding else 'ALL_966_COVERED_WITH_EVIDENCE_GAPS','registered':len(rows),'fully_analyzed_complete_evidence':full_evidence,'analyzed_partial_evidence':expanded-full_evidence,'source_blocked_videos':sum(any(s=='BLOCKED_MISSING_SOURCE' for s in r['statuses'].values()) for r in rows),'coverage':coverage,'distinct_readings_including_legacy_and_in_progress':readings,'batches':batches,'distinct_full_stored_text_reads':sum(r['script'].get('review_scope')=='FULL_STORED_TEXT' for r in rows),'outstanding_videos':len(outstanding),'next_master_order_id':outstanding[0] if outstanding else None,'source_hashes_checked':len(frozen['source_hashes']),'errors':errors,'semantic_content_validation':'STRUCTURAL_ONLY; analyst reasoning and source entailment require review','causal_inference':'Public metadata cannot establish causation; private metrics unavailable','exact_head_ci':'CHECK_PR_36_AFTER_PUSH'}
     (BASE/'VALIDATION_966.json').write_text(json.dumps(report,indent=2)+'\n')
     assert not errors, errors
     print(json.dumps(report,indent=2))

@@ -11,15 +11,15 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 ## Completed checkpoint
 
 - PRIMATE_001: **28/28 expanded reviews COMPLETE_LIMITED_EVIDENCE**. All 13 Shorts +15 long-form. Every stored text read, every actual mapped image inspected at 320px, individual title/topic/script/virality interpretations. 22 new images, six reused; receipts and four contact sheets tracked.
-- Legacy union: 52 distinct title/topic semantic readings, 49 distinct visual readings, 39 distinct full-stored-text readings. Expanded rubric completion remains 28. Prior excerpt-only reviews not upgraded.
-- Performance revalidated 966; 179 strong, 383 typical, 161 weak, 243 insufficient. Five-peer sensitivity 598/723 agreement. Automated metadata validation is distinct from 28 bespoke virality assessments.
+- Current union: 79 distinct title readings, 54 distinct topic readings, 76 distinct visual readings, 41 distinct full-stored-text readings. Expanded rubric completion is 30. Prior excerpt-only reviews not upgraded.
+- Performance revalidated 966; 179 strong, 383 typical, 161 weak, 243 insufficient. Five-peer sensitivity 598/723 agreement. Automated metadata validation is distinct from 30 bespoke virality assessments.
 - Eleven missing transcripts: public watch pages returned HTTP 200 with correct titles but no captionTracks marker; no transcript recovered. See TRANSCRIPT_RECOVERY_001.json. Other legitimately published transcripts remain a recovery possibility, not exhausted. Never infer private/removed merely from failed captions.
-- Google Trends attempted US Web Search, inflation/tariffs/cryptocurrency, 2025-03-01 to 2025-07-31; no series returned. Nine shared historical event receipts; per-video chronology/exclusions preserved.
-- All named population tables/reports and filterable XLSX exist as **in-progress deliverables**. 938 videos still await expanded reviews; 11 script components blocked. No all-966 completion claim.
+- Google Trends attempted US Web Search, inflation/tariffs/cryptocurrency, 2025-03-01 to 2025-07-31; no series returned. Thirteen shared historical context/reference receipts; per-video chronology/exclusions preserved.
+- All named population tables/reports and filterable XLSX exist as **in-progress deliverables**. 936 videos still await expanded reviews; 11 script components blocked. No all-966 completion claim.
 
 ## Exact next work
 
-Next master-order ID: **`1GowFTjbUnk`**, Crayon Capital, NVIDIA Explained Like You're 5. Next channel batch: **all 30 Crayon Capital IDs in VIDEO_MASTER order**. Reuse its prior full reads/title/image reviews; extend to expanded rubric. Stable next-ID advances only when record statuses justify it. Primate completed channel is skipped when encountered later.
+Next master-order ID: **`AKrjI9m6fpk`**, Crayon Capital, Epstein Situation Explained Like You're 5. Current channel batch: **all 30 Crayon Capital IDs in VIDEO_MASTER order**. NVIDIA `1GowFTjbUnk` and Petrodollar `9r-45QPLl-Y` have complete limited-evidence expanded reviews. All 30 actual titles/images inspected; remaining 28 expanded records in progress. Reuse its prior full reads/title/image reviews; extend to expanded rubric. Stable next-ID advances only when record statuses justify it. Primate completed channel is skipped when encountered later.
 
 After Crayon, continue remaining channels in frozen master order, batches approximately 20–40, until all 966 individual reviews handled. Remaining public thumbnail retrieval includes 159 missing canonical URL fields; never edit registry to fill research-derived fallbacks. Recover metrics where defensible without substituting current snapshots into old cohorts. Eleven transcript source gaps remain visibly blocked while other dimensions proceed.
 
@@ -41,6 +41,14 @@ Legacy VALIDATION.json reports only legacy tables; VALIDATION_966.json covers ne
 
 Workbook builder: copy tracked build_workbook_966.mjs into a temporary directory beside a node_modules symlink to bundled dependencies, run bundled Node with absolute research directory argument. Read Spreadsheets skill for runtime paths and authoring protocol. Builder recalculates six coverage counts, mutation-tests one status, renders all three sheets, exports one XLSX. `audit-batches/workbook-*.png` are previews, not competitor evidence.
 
-Local verification: 14 research unit tests pass; 461 repository tests pass (five pre-existing fixture/Pillow warnings). Knowledge validator checks 2,732 local hashes but exits nonzero on its historical scope guard: seven existing `reports/project-status/2026-10-16/*` files lie outside its old allowlist relative to `08e7192`. These files already existed at starting HEAD. Do not delete unrelated status reports or claim this validator passed.
+Local verification: 16 research unit tests pass; 461 repository tests pass (five pre-existing fixture/Pillow warnings). Knowledge validator checks 2,732 local hashes but exits nonzero on its historical scope guard: seven existing `reports/project-status/2026-10-16/*` files lie outside its old allowlist relative to `08e7192`. These files already existed at starting HEAD. Do not delete unrelated status reports or claim this validator passed.
 
-Live resources last checked: five-hour 9% used, weekly 32% used; context UNKNOWN. No resource stop threshold reached at that reading. Before each expensive unit check five-hour → weekly → context. Stop gates near 90%/95%; complete atomic unit, validate, commit/push and record exact next ID. This file's readings are historical, never substitute for live checks.
+Live resources last checked: five-hour 29% used, weekly 35% used; context UNKNOWN. No resource stop threshold reached at that reading. Before each expensive unit check five-hour → weekly → context. Stop gates near 90%/95%; complete atomic unit, validate, commit/push and record exact next ID. This file's readings are historical, never substitute for live checks.
+
+## Latest continuation additions
+
+CRAYON_001: 30 packaging records; two expanded complete, 28 pending. 27 new images and three reused, three contact sheets. Keep title-image-to-content alignment pending unless full stored script was reviewed. Preserve prior full reads for Epstein, Rockefeller and Margin Call; extend missing fields without rerunning old discovery.
+
+LEGACY_THUMBNAIL_RECOVERY_001: 159 IDs tracked; first request `-UdMJ-EtLDI` returned HTTP 429, 158 not attempted. New requests stopped, no retry/bypass. Do not treat these as permanently unavailable or repeat immediately. All other research can continue from local evidence.
+
+First checkpoint ad9326b was pushed and exact-head CI passed (run 38924569360). This is historical after the next commit; verify final HEAD independently. Final current SHA/CI belongs in PR #36.

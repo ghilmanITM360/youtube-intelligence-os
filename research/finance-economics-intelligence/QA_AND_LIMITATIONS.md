@@ -1,8 +1,8 @@
 # QA and limitations
 
-**Phase status: RESOURCE_CHECKPOINT.** Reports and a pilot proposal exist, but the complete requested scope is not finished. Deliverable presence is not completion.
+**Current status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Reports and a pilot proposal exist, but the complete requested scope is not finished. Deliverable presence is not completion.
 
-## Verified scope
+## Historical legacy scope (superseded by continuation counts below)
 
 - 13 canonical finance channels, 966 unique videos, 966 titles; 955 nonplaceholder transcripts with 955 distinct exact text hashes. Eleven videos lack available transcript text (ten Lucas Grant placeholders and one Matty Invests gap). Exact hashes do not detect paraphrase/template duplication.
 - 794 source-classified long-form, 13 Shorts and 159 unknown formats. No duration-only inference. No new timed transcript segments; 3/10/30-second analysis unavailable in this baseline.
@@ -48,3 +48,5 @@ Eleven public watch-page transcript recovery attempts returned title-bearing HTT
 Fresh explicit research validation covers frozen IDs, 26 source hashes, transcript hashes, local source references, image/video association and hashes, six completion dimensions, required semantic rubric fields and full-population table identity. Structural checks cannot establish prose entailment or causation. CI integration deferred because repository CI regenerates the canonical DB and its binary hash is a local source-preservation receipt, not a cross-build identity contract.
 
 Repository suite: 461 passed, five warnings. Research suite: 14 passed. Knowledge validation's 2,732 local hashes were checked, but its old-base scope guard rejects seven pre-existing project-status report files, so its overall exit is FAIL_SCOPE_GUARD, not PASS. Do not relabel this as successful knowledge validation. General exact-head CI remains a separate live PR check.
+
+Latest continuation supersedes counts in the preceding checkpoint: 30 expanded complete limited-evidence records (28 Primate + NVIDIA/Petrodollar), 79 title readings, 54 topic readings, 76 visual readings, 41 full stored-text reads; 936 expanded reviews remain outstanding. Crayon 28 records are in progress after actual title/image inspection. Thirteen shared context/reference sources; 16 research tests. Missing-URL metadata acquisition stopped on first HTTP 429; 158 unattempted records stay explicit.

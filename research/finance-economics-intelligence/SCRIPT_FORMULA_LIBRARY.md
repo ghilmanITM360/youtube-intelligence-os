@@ -14,3 +14,5 @@ Scope: 28 Primate full stored texts and prior registered readings; no audio veri
 | Social problem → glossary entries → opening-setting callback | `8UE7bPkt1NE` terms | Use terms inside a decision, not only as dinner-party vocabulary. No performance tier available. |
 
 Short/parent reuse is substantial: stock ownership and vocabulary; inflation causes and monetary loop; crypto intro/investing/rug pull; credit-card approval/rewards; tax definition/types; tariff definition/mechanics. Distinct exact transcript hashes do not detect this segment reuse. No family is counted as multiple independent discoveries.
+
+Crayon continuation: NVIDIA `1GowFTjbUnk` uses wrong-technology failure → financing survival deadline → delayed CUDA payoff → dependency/regulatory threat → scale callback. Petrodollar `9r-45QPLl-Y` uses lost anchor → new bargain → recycling loop → sanctions/conflict montage → challengers → qualified dominance ending. The latter is a structural reading, not adoption of its implied war causation; IMF valuation-effects evidence supplies an omitted competing explanation.

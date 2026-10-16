@@ -1,3 +1,5 @@
+> Current scope is ALL 966 videos. This report is the historical sampled checkpoint. See FULL_POPULATION_RESEARCH_REPORT.md, VALIDATION_966.json and RESUME_HERE.md for current expanded coverage and pending work.
+
 # Finance & Economics competitive intelligence
 
 **Status: RESOURCE_CHECKPOINT — substantial validated research, incomplete requested scope.** Research date: 2026-10-16, Asia/Karachi. Existing PR #36 only. The strongest current editorial direction is **mechanism-led explanations of everyday financial contradictions**, with reproducible numbers and explicit exceptions. Audience demand for this proposed positioning remains a hypothesis.

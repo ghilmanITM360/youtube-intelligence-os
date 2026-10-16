@@ -48,3 +48,5 @@ The owner's 966-video instruction supersedes the sampling decision above. All 96
 - [ ] Continue stable channel/master order until no dimension remains NOT_STARTED/IN_PROGRESS. Keep source-blocked components visibly blocked. Update RESUME_HERE with the exact next ID after each checkpoint.
 
 Implementation interface: `build_audit_966.py` reads frozen identities, current master/coverage, prior semantic/title/image tables and explicit analyst `audit-batches/*.json`; writes requested full-population tables. `validate_audit_966.py` validates without rewriting analyses. Batch files are analytical source records, never generated model-like filler. All required fields absent from older reviews stay visibly pending.
+
+Execution checkpoint: PRIMATE_001 complete limited evidence (28 IDs); CRAYON_001 30 title/image readings, NVIDIA/Petrodollar expanded complete and 28 pending. Missing-URL acquisition stopped on HTTP 429 with 158 requests unattempted. All work remains on PR #36; current next ID AKrjI9m6fpk.

@@ -43,3 +43,16 @@ class ProvenanceContract(unittest.TestCase):
         from validate_audit_966 import semantic_errors
         r={'Video_ID':'a','statuses':{'VIRALITY_REVIEW':'COMPLETE_LIMITED_EVIDENCE'},'virality':{'review_scope':'INDIVIDUAL_PUBLIC_EVIDENCE','source_refs':['VIDEO_MASTER.csv:a'],'analysis':'One sentence'}}
         self.assertTrue(semantic_errors(r))
+
+class ScopeContract(unittest.TestCase):
+    def test_title_scope_cannot_complete_script(self):
+        from validate_audit_966 import semantic_errors
+        r={'Video_ID':'a','statuses':{'SCRIPT_REVIEW':'COMPLETE_LIMITED_EVIDENCE'},'script':{'review_scope':'ACTUAL_TITLE','analysis':'x','source_refs':['x'],'beat_map':['x'],'claim_audit':'x','opening_words':'x','ending_words':'x','timing':'OPENING_WORDS_ONLY','source':{'Text_SHA256':'x'}}}
+        self.assertTrue(any('scope' in e for e in semantic_errors(r)))
+
+class ProjectionContract(unittest.TestCase):
+    def test_csv_cannot_claim_more_completion_than_jsonl(self):
+        from validate_audit_966 import projection_errors
+        source=[{'Video_ID':'a','statuses':{'TITLE_REVIEW':'NOT_STARTED'}}]
+        display=[{'Video_ID':'a','TITLE_REVIEW':'COMPLETE_LIMITED_EVIDENCE'}]
+        self.assertTrue(projection_errors(source,display))
