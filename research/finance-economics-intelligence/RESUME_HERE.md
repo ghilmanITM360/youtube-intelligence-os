@@ -1,48 +1,46 @@
-# Continue Finance & Economics intelligence
+# Resume the full 966-video Finance and Economics audit
 
-Status: **RESOURCE_CHECKPOINT**. Existing branch `research/finance-economics-intelligence`; draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). Do not create another branch/worktree/PR or merge. Starting checkpoint was `03a6cd0e98c9fb10b7d6a954bc1ef1f1c3ec8566`; final pushed head and CI belong in the PR body, avoiding a self-referential commit hash here.
+**Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-Read FINANCE_ECONOMICS_MASTER_REPORT.md, QA_AND_LIMITATIONS.md, METHODS.md and VALIDATION.json. The baseline commit is `ef02fad`; `29532c5` delivered the initial research checkpoint, `31d6042` deepened scripts/titles, and `505f032` repaired dates/reconciled Drive. Later commits finalize this continuation. Pre-existing untracked folders `finance-short-02-visual-calibration/`, `productions/`, `research/casually-finance-script-intelligence/` were preserved. Do not stage them.
+## Recovery and identity
 
-## Completed/remaining matrix
+Starting verified head: `11bd3bebd746f85fba1820b1ebee457dd1a1a0a0`, same local/remote/PR, exact-head CI green at start. Latest pushed SHA/CI must be read from PR #36 and live Git, not assumed from this document. Three pre-existing untracked folders, stash and unrelated worktree preserved; never stage them.
 
-| Unit | Completed | Remaining next action |
-|---|---|---|
-| Baseline | 13 canonical channels; 966 videos/titles; 955 distinct text hashes; baseline coverage | Preserve source scope; do not redo discovery |
-| Performance | 723 reproducible labels; 598 agree under five-peer sensitivity | 243 insufficient; seek original collection-time evidence for DS-000001 and source format for 159 historical records, without guessing |
-| Scripts/topics | All available canonical texts have lexical features; 30 contextual reviews; 17 full reads | 936 semantic labels; 17 full reads now span seven channels; broaden the remaining channel sample; no blanket human verification |
-| Packaging | 966 lexical title feature rows; 27 mobile image reviews /30 attempts | Three Shaami 404s; expand images across selected important channels; 939 without fresh review; 30 explicit semantic title records now complete; 936 remain unreviewed |
-| Reuse | Frozen 206 Casually Finance +11 Economics metric rows and relevant reports/Trends | Keep methods separate; source claims/financial facts not fully independently reverified |
-| Expansion | Six partial Tier B first-page captures, 180 IDs | Emerging-channel cohort and representative weak/average channels; full history where decision-relevant |
-| Trends | 22 inherited window rows reviewed; normalization preserved; event chronology checked | Broader canonical publication-event matching; query-specific demand validation; no extra fetch merely to duplicate existing series |
-| Strategy | Cross-channel hypotheses; 12 scored ideas; four-episode pilot | Validate remaining evidence before promoting editorial hypotheses; no production requested |
-| Source gaps | 26 original-path dispositions | Drive: 128 candidates, five prior content reviews plus five new triages; 118 remaining. Finance export duplicates 206 reused rows; see DRIVE_FOLLOWUP.md |
-| QA | Local research validator, unit tests, source hashes, secrets/whitespace | Recheck exact-head CI after final push; see PR body for latest run |
+Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels. Exact source master bytes in `audit-baseline/VIDEO_MASTER.csv`; 26 hashes in MANIFEST.json. Do not recreate or mutate baseline. New audit JSONL is authoritative; CSVs/workbook are derived views. Batch JSON contains authored individual analysis, so regeneration needs no scratch script.
 
-## Commands
+## Completed checkpoint
+
+- PRIMATE_001: **28/28 expanded reviews COMPLETE_LIMITED_EVIDENCE**. All 13 Shorts +15 long-form. Every stored text read, every actual mapped image inspected at 320px, individual title/topic/script/virality interpretations. 22 new images, six reused; receipts and four contact sheets tracked.
+- Legacy union: 52 distinct title/topic semantic readings, 49 distinct visual readings, 39 distinct full-stored-text readings. Expanded rubric completion remains 28. Prior excerpt-only reviews not upgraded.
+- Performance revalidated 966; 179 strong, 383 typical, 161 weak, 243 insufficient. Five-peer sensitivity 598/723 agreement. Automated metadata validation is distinct from 28 bespoke virality assessments.
+- Eleven missing transcripts: public watch pages returned HTTP 200 with correct titles but no captionTracks marker; no transcript recovered. See TRANSCRIPT_RECOVERY_001.json. Other legitimately published transcripts remain a recovery possibility, not exhausted. Never infer private/removed merely from failed captions.
+- Google Trends attempted US Web Search, inflation/tariffs/cryptocurrency, 2025-03-01 to 2025-07-31; no series returned. Nine shared historical event receipts; per-video chronology/exclusions preserved.
+- All named population tables/reports and filterable XLSX exist as **in-progress deliverables**. 938 videos still await expanded reviews; 11 script components blocked. No all-966 completion claim.
+
+## Exact next work
+
+Next master-order ID: **`1GowFTjbUnk`**, Crayon Capital, NVIDIA Explained Like You're 5. Next channel batch: **all 30 Crayon Capital IDs in VIDEO_MASTER order**. Reuse its prior full reads/title/image reviews; extend to expanded rubric. Stable next-ID advances only when record statuses justify it. Primate completed channel is skipped when encountered later.
+
+After Crayon, continue remaining channels in frozen master order, batches approximately 20–40, until all 966 individual reviews handled. Remaining public thumbnail retrieval includes 159 missing canonical URL fields; never edit registry to fill research-derived fallbacks. Recover metrics where defensible without substituting current snapshots into old cohorts. Eleven transcript source gaps remain visibly blocked while other dimensions proceed.
+
+## Validation and rebuilding
 
 ```bash
-git status --short
-git branch --show-current
-git rev-parse HEAD
-git ls-remote origin refs/heads/research/finance-economics-intelligence
-gh pr view 36 --json headRefOid,statusCheckRollup,url,isDraft
-python3 -m unittest discover -s research/finance-economics-intelligence -p 'test_*.py'
+python3 research/finance-economics-intelligence/build_baseline.py
 python3 research/finance-economics-intelligence/build_comparisons.py
+python3 research/finance-economics-intelligence/build_audit_966.py
+python3 -m unittest discover -s research/finance-economics-intelligence -p 'test_*.py'
 python3 research/finance-economics-intelligence/validate_research.py
-python3 knowledge/youtube/validate_knowledge.py
+python3 research/finance-economics-intelligence/validate_audit_966.py
+.venv/bin/python -m pytest -q
 python3 scripts/scan_tracked_secrets.py
 git diff --check
 ```
 
-`build_baseline.py` reproducibly regenerates baseline tables and overlays existing semantic/image annotations; it does not reacquire anything. `collect_landscape.py` reuses saved `*-videos-v2.json` captures and does not refetch them. Do not delete saved evidence to force a refresh; new snapshots require new filenames. Fetch provenance is in SOURCE_REGISTER and thumbnail registers. Existing report content can be read with `git show <Version>` using REUSED_SOURCE_REGISTER, without switching branches. No graph build/query is authorized.
+Legacy VALIDATION.json reports only legacy tables; VALIDATION_966.json covers new full-population views. Research checks run explicitly; general repository CI does not automatically validate research. No CI workflow changed in this checkpoint because regenerated registry DB bytes in CI can differ from the frozen local binary hash despite equivalent source data.
 
-Next atomic unit: deep-read matched strong/typical/weak videos from a newly rankable DS-000022 channel (Carl/Nick/Bob/Lucas), or expand mobile thumbnail coverage. DS-000022 dates are repaired; do not repeat that investigation. DS-000001 format and date provenance remain unresolved. Preserve unknowns if original evidence cannot resolve them. Check usage **five-hour → weekly → context** before starting: stop beginning expensive units around 90% five-hour or 95% weekly, finish current unit, validate/commit/push/handoff. Context indicators unavailable must remain UNKNOWN. Do not claim FINANCE_INTELLIGENCE_COMPLETE until the scope gaps are resolved or the user explicitly narrows the scope.
+Workbook builder: copy tracked build_workbook_966.mjs into a temporary directory beside a node_modules symlink to bundled dependencies, run bundled Node with absolute research directory argument. Read Spreadsheets skill for runtime paths and authoring protocol. Builder recalculates six coverage counts, mutation-tests one status, renders all three sheets, exports one XLSX. `audit-batches/workbook-*.png` are previews, not competitor evidence.
 
-Legacy follow-up: [LEGACY_METADATA_PROBE.json](LEGACY_METADATA_PROBE.json) records the existing inventory catalog's candidate DS-000001 observation day, 2026-08-24, for all 159 records. The original date provenance still needs verification and all formats remain null; no tiers were promoted. Do not repeat this catalog lookup.
+Local verification: 14 research unit tests pass; 461 repository tests pass (five pre-existing fixture/Pillow warnings). Knowledge validator checks 2,732 local hashes but exits nonzero on its historical scope guard: seven existing `reports/project-status/2026-10-16/*` files lie outside its old allowlist relative to `08e7192`. These files already existed at starting HEAD. Do not delete unrelated status reports or claim this validator passed.
 
-Prior checkpoint stopped at 93% five-hour /41% weekly. On explicit continuation, live usage was checked again in order: 5% five-hour /16% weekly /context UNKNOWN. Work resumed in bounded batches; the prior resource reading is historical, not the current limit.
-
-Continuation validation must include `build_baseline.py` then `build_comparisons.py` when metadata changes. `METRIC_DATE_EVIDENCE.csv` records immutable source-cell evidence; `verify_workbook_dates.py` reproduces the 595-row source reconciliation using Python with openpyxl. Drive follow-up is finished for the five selected candidates; remaining 118 are not all relevant and should not be fetched indiscriminately.
-
-Latest continuation checkpoint: **89% five-hour → 29% weekly → context UNKNOWN**. No new research unit starts beyond this approximate stop boundary. Completed this continuation: eight additional full script reads (17 total), 30 semantic title records, five Drive triages, source-date repair for 595 rows and 547 additional eligible performance comparisons (723 total). Finish validation, push and exact-head CI; final SHA/CI are maintained in PR #36.
+Live resources last checked: five-hour 9% used, weekly 32% used; context UNKNOWN. No resource stop threshold reached at that reading. Before each expensive unit check five-hour → weekly → context. Stop gates near 90%/95%; complete atomic unit, validate, commit/push and record exact next ID. This file's readings are historical, never substitute for live checks.

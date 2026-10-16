@@ -1,0 +1,87 @@
+{
+  "batch_id": "EVENT_SOURCES",
+  "reviews": [],
+  "retrieved_at": "2026-10-16",
+  "sources": [
+    {
+      "id": "EV-FED-20250319",
+      "date": "2025-03-19",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm",
+      "finding": "Fed held its target range; inflation remained elevated. Contemporary macro context, not measured video demand.",
+      "kind": "OBSERVED_FACT"
+    },
+    {
+      "id": "EV-CPI-20250312",
+      "date": "2025-03-12",
+      "url": "https://www.bls.gov/news.release/archives/cpi_03122025.htm",
+      "finding": "February CPI release preceded the March inflation explainer. A scheduled official statistical release, not search-interest measurement.",
+      "kind": "OBSERVED_FACT"
+    },
+    {
+      "id": "EV-CPI-20250410",
+      "date": "2025-04-10",
+      "url": "https://www.bls.gov/news.release/archives/cpi_04102025.htm",
+      "finding": "March CPI release occurred AFTER the April 9 Short; cannot explain publication-day knowledge. It preceded the April 18 follow-up.",
+      "kind": "OBSERVED_FACT"
+    },
+    {
+      "id": "EV-TARIFF-20250402",
+      "date": "2025-04-02",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/04/regulating-imports-with-a-reciprocal-tariff-to-rectify-trade-practices-that-contribute-to-large-and-persistent-annual-united-states-goods-trade-deficits/",
+      "finding": "Reciprocal-tariff order is dated April 2; full page retrieved on retry. Contemporary policy event, not video demand evidence.",
+      "access": "FULL_PAGE_RETRIEVED",
+      "kind": "OBSERVED_FACT"
+    },
+    {
+      "id": "EV-GENEVA-20250512",
+      "date": "2025-05-12",
+      "url": "https://www.whitehouse.gov/briefings-statements/2025/05/joint-statement-on-u-s-china-economic-and-trade-meeting-in-geneva/",
+      "finding": "US-China joint statement announced tariff changes; date only. Intraday availability relative to the 07:50 UTC Short is unverified. Later than May 7/8 uploads.",
+      "kind": "OBSERVED_FACT"
+    },
+    {
+      "id": "EV-CRYPTO-20250528",
+      "date": "2025-05-28",
+      "url": "https://www.sec.gov/newsroom/press-releases/2025-78-sec-announces-agenda-panelists-roundtable-crypto-defi",
+      "finding": "SEC announced a June 9 DeFi roundtable on May 28. Regulatory context preceded May 31 and June Shorts; no evidence it drove their views.",
+      "kind": "OBSERVED_FACT"
+    },
+    {
+      "id": "EV-TAX-202509",
+      "date": "2025-09-04",
+      "url": "https://www.irs.gov/newsroom/news-releases-for-september-2025",
+      "finding": "September archive checked. Pre-upload disaster-preparedness notice does not establish demand for general tax definitions; later notices excluded from publication-time explanations.",
+      "kind": "OBSERVED_FACT"
+    },
+    {
+      "id": "EV-HORMUZ-20260512",
+      "date": "2026-05-12",
+      "url": "https://www.eia.gov/pressroom/releases/press588.php",
+      "finding": "May EIA release described ongoing Mideast disruption and an assumed late-May Hormuz closure. Predates May 26 oil upload; source forecast, not certainty.",
+      "access": "FULL_PAGE_RETRIEVED",
+      "kind": "OBSERVED_FACT"
+    },
+    {
+      "id": "EV-OIL-20260707",
+      "date": "2026-07-07",
+      "url": "https://www.eia.gov/pressroom/releases/press590.php",
+      "finding": "July EIA release described resumed Hormuz traffic and forecast recovery. Predates July 10 recession upload; broad energy-shock context, not proof of recession.",
+      "kind": "OBSERVED_FACT"
+    }
+  ],
+  "google_trends": {
+    "query": [
+      "inflation",
+      "tariffs",
+      "cryptocurrency"
+    ],
+    "region": "US",
+    "search_type": "WEB_SEARCH",
+    "date_window": "2025-03-01 2025-07-31",
+    "url": "https://trends.google.com/trends/explore?date=2025-03-01%202025-07-31&geo=US&q=inflation,tariffs,cryptocurrency",
+    "retrieval_date": "2026-10-16",
+    "outcome": "TOOL_ACCESS_FAILURE_NO_SERIES_RETURNED",
+    "values": null,
+    "interpretation": "No demand trend inferred. Any future series is normalized 0\u2013100 relative interest, not absolute volume."
+  }
+}

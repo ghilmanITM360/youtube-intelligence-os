@@ -38,3 +38,13 @@ Legacy follow-up: [LEGACY_METADATA_PROBE.json](LEGACY_METADATA_PROBE.json) recor
 Prior checkpoint stopped at 93% five-hour /41% weekly. On explicit continuation, live usage was checked again in order: 5% five-hour /16% weekly /context UNKNOWN. Work resumed in bounded batches; the prior resource reading is historical, not the current limit.
 
 Latest continuation checkpoint: **89% five-hour → 29% weekly → context UNKNOWN**. No new research unit starts beyond this approximate stop boundary. Completed this continuation: eight additional full script reads (17 total), 30 semantic title records, five Drive triages, source-date repair for 595 rows and 547 additional eligible performance comparisons (723 total). Finish validation, push and exact-head CI; final SHA/CI are maintained in PR #36.
+
+## Superseding 966-video audit checkpoint
+
+The full-population owner's instruction supersedes the earlier sample scope and RESOURCE_CHECKPOINT headline. Current state is **FULL_POPULATION_RESEARCH_IN_PROGRESS**; consult VALIDATION_966.json, not the legacy counters above. PRIMATE_001 adds all 28 channel videos under the expanded rubric, all limited evidence. Combined distinct totals: 52 titles/topics, 49 actual images, 39 full-stored-text readings. 938 expanded reviews outstanding. All 966 records registered and historical performance revalidated; 243 remain insufficient.
+
+Eleven public watch-page transcript recovery attempts returned title-bearing HTTP 200 pages without captionTracks markers; no transcript recovered. This does not prove the videos lack captions under every accessible method. Google Trends query returned access failure, no numeric observations. Nine shared event sources have per-video linkage and exclusion notes.
+
+Fresh explicit research validation covers frozen IDs, 26 source hashes, transcript hashes, local source references, image/video association and hashes, six completion dimensions, required semantic rubric fields and full-population table identity. Structural checks cannot establish prose entailment or causation. CI integration deferred because repository CI regenerates the canonical DB and its binary hash is a local source-preservation receipt, not a cross-build identity contract.
+
+Repository suite: 461 passed, five warnings. Research suite: 14 passed. Knowledge validation's 2,732 local hashes were checked, but its old-base scope guard rejects seven pre-existing project-status report files, so its overall exit is FAIL_SCOPE_GUARD, not PASS. Do not relabel this as successful knowledge validation. General exact-head CI remains a separate live PR check.

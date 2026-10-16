@@ -34,3 +34,17 @@ Continuation after renewed capacity: six additional full reads (Brimm/Crayon mat
 Second continuation unit: Drive triage of five indexed candidates (no new independent finance evidence), and source-declared DS-000022 scrape-day recovery for 595 records. Ranking expands from 176 to 723 eligible videos with five-peer and ±1-day sensitivity. Source workbooks and catalog remain unchanged.
 
 Final bounded script unit: full Carl/Bob reads raise full-text coverage to 17 across seven channels; conditional million-dollar reveal and internal arithmetic/scenario issues documented without adopting financial claims.
+
+## Superseding full-population execution — 2026-10-16
+
+The owner's 966-video instruction supersedes the sampling decision above. All 966 IDs are mandatory; the old 30-row sample is reusable evidence only. Existing canonical sources remain immutable. Execute inline on this branch/PR; no plan approval gate or new worktree.
+
+- [x] Freeze `VIDEO_MASTER.csv` bytes and ordered identities in `audit-baseline/`; hash canonical DB, transcript coverage and source files.
+- [x] Add `build_audit_966.py`, `validate_audit_966.py`, and `test_audit_966.py`. Test duplicate/substituted identities, evidence drift, false semantic completion, missing script provenance and image mismatches before implementation.
+- [x] Generate 966 JSONL/CSV records and six independent status dimensions. Import prior readings with their actual scope; excerpt review is not a full-script read. Preserve unavailable private metrics.
+- [ ] Process channel batches of 20–40 where possible, starting with all 28 Primate Economics videos. Read all available stored text; inspect each mapped thumbnail; attach individual narrative/virality findings and specific event linkage or explicit unresolved status.
+- [x] Produce requested shared tables, reports and workbook with truthful partial coverage; no unfinished record becomes complete because an output exists.
+- [ ] Recompute performance under METHODS.md, validate all joins/hashes/statuses, run research and repository checks, commit/push checkpoint, verify remote equality and exact-head CI.
+- [ ] Continue stable channel/master order until no dimension remains NOT_STARTED/IN_PROGRESS. Keep source-blocked components visibly blocked. Update RESUME_HERE with the exact next ID after each checkpoint.
+
+Implementation interface: `build_audit_966.py` reads frozen identities, current master/coverage, prior semantic/title/image tables and explicit analyst `audit-batches/*.json`; writes requested full-population tables. `validate_audit_966.py` validates without rewriting analyses. Batch files are analytical source records, never generated model-like filler. All required fields absent from older reviews stay visibly pending.
