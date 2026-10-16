@@ -56,13 +56,13 @@ def main():
     assert len(sample)==len(semantic)==30
     assert {v['Channel'] for v in sample}=={v['Channel'] for v in videos}
     assert {v['Video_ID'] for v in sample}=={v['Video_ID'] for v in semantic}
-    assert sum(r['Review_scope']=='FULL_STORED_TEXT' for r in semantic)==15
+    assert sum(r['Review_scope']=='FULL_STORED_TEXT' for r in semantic)==17
     title_semantic=rows('TITLE_SEMANTIC_REVIEWS.csv')
     assert len(title_semantic)==30 and {r['Video_ID'] for r in title_semantic}=={r['Video_ID'] for r in sample}
     for r in title_semantic:
         assert r['Title']==by[r['Video_ID']]['Title']
         assert r['Performance_tier']==by[r['Video_ID']]['Performance_tier']
-    deep=rows('DEEP_SCRIPT_MAPS.csv');assert len(deep)==6
+    deep=rows('DEEP_SCRIPT_MAPS.csv');assert len(deep)==8
     for r in deep:
         text=con.execute('SELECT transcript_text FROM transcripts WHERE youtube_video_id=?',(r['Video_ID'],)).fetchone()[0]
         assert hashlib.sha256(text.encode()).hexdigest()==r['Text_SHA256']
@@ -92,6 +92,12 @@ def main():
         assert all(1<=int(r[k])<=5 for k in score_fields)
         assert sum(int(r[k]) for k in score_fields)==int(r['Total_out_of_40'])
         assert set(r['Evidence_Video_IDs'].split(';'))<=set.union(*all_sets)
+    examples=rows('EXPANDED_PERFORMANCE_EXAMPLES.csv');assert len(examples)==16
+    for r in examples:
+        v=by[r['Video_ID']]
+        assert r['Title']==v['Title'] and r['Tier']==v['Performance_tier']
+        assert float(r['Ratio'])==float(v['Lifetime_rate_ratio'])
+        assert int(r['Views'])==v['Views']
     receipt=rows('METRIC_DATE_EVIDENCE.csv');assert len(receipt)==4
     assert sum(int(r['Verified_video_rows']) for r in receipt)==595
     for r in receipt:
@@ -106,6 +112,7 @@ def main():
         for r in date_cases:
             if int(r['Snapshot_shift_days'])==delta:
                 result=compare(shifted_by[r['Video_ID']],shifted)
+                assert r['Primary_tier']==by[r['Video_ID']]['Performance_tier']
                 assert result[0]==r['Shifted_tier'] and str(result[2])==r['Ratio']
                 assert r['Agrees']==str(r['Primary_tier']==r['Shifted_tier'])
     drive=rows('DRIVE_CONTENT_TRIAGE.csv');assert len(drive)==5
@@ -123,7 +130,7 @@ def main():
     result=dict(status='PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION',phase_complete=False,
         canonical_channels=13,canonical_unique_videos=966,canonical_titles=966,valid_transcript_texts=955,
         exact_transcript_text_duplicates=0,automated_script_features=len(rows('SCRIPT_FEATURES.csv')),
-        full_text_reads=15,title_semantic_reviews=30,deep_script_maps=6,excerpt_or_full_reviews=30,mobile_thumbnail_reviews=27,attempted_thumbnail_videos=30,
+        full_text_reads=17,title_semantic_reviews=30,deep_script_maps=8,excerpt_or_full_reviews=30,mobile_thumbnail_reviews=27,attempted_thumbnail_videos=30,
         sampled_thumbnail_unavailable=3,canonical_without_new_mobile_review=939,
         canonical_without_semantic_review=936,formats=dict(Counter(v['Format'] for v in videos)),
         tiers=dict(Counter(v['Performance_tier'] for v in videos)),sensitivity_agreements=sum(r['Agrees']=='True' for r in sensitivity),

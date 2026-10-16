@@ -1,8 +1,8 @@
 # Continue Finance & Economics intelligence
 
-Status: **FINANCE_INTELLIGENCE_IN_PROGRESS**. Existing branch `research/finance-economics-intelligence`; draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). Do not create another branch/worktree/PR or merge. Starting checkpoint was `03a6cd0e98c9fb10b7d6a954bc1ef1f1c3ec8566`; final pushed head and CI belong in the PR body, avoiding a self-referential commit hash here.
+Status: **RESOURCE_CHECKPOINT**. Existing branch `research/finance-economics-intelligence`; draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). Do not create another branch/worktree/PR or merge. Starting checkpoint was `03a6cd0e98c9fb10b7d6a954bc1ef1f1c3ec8566`; final pushed head and CI belong in the PR body, avoiding a self-referential commit hash here.
 
-Read FINANCE_ECONOMICS_MASTER_REPORT.md, QA_AND_LIMITATIONS.md, METHODS.md and VALIDATION.json. The baseline commit is `ef02fad`; later commits correct CSV line endings and add research. Pre-existing untracked folders `finance-short-02-visual-calibration/`, `productions/`, `research/casually-finance-script-intelligence/` were preserved. Do not stage them.
+Read FINANCE_ECONOMICS_MASTER_REPORT.md, QA_AND_LIMITATIONS.md, METHODS.md and VALIDATION.json. The baseline commit is `ef02fad`; `29532c5` delivered the initial research checkpoint, `31d6042` deepened scripts/titles, and `505f032` repaired dates/reconciled Drive. Later commits finalize this continuation. Pre-existing untracked folders `finance-short-02-visual-calibration/`, `productions/`, `research/casually-finance-script-intelligence/` were preserved. Do not stage them.
 
 ## Completed/remaining matrix
 
@@ -10,7 +10,7 @@ Read FINANCE_ECONOMICS_MASTER_REPORT.md, QA_AND_LIMITATIONS.md, METHODS.md and V
 |---|---|---|
 | Baseline | 13 canonical channels; 966 videos/titles; 955 distinct text hashes; baseline coverage | Preserve source scope; do not redo discovery |
 | Performance | 723 reproducible labels; 598 agree under five-peer sensitivity | 243 insufficient; seek original collection-time evidence for DS-000001 and source format for 159 historical records, without guessing |
-| Scripts/topics | All available canonical texts have lexical features; 30 contextual reviews; 15 full reads | 936 semantic labels; 15 full reads now span five channels; broaden the remaining channel sample; no blanket human verification |
+| Scripts/topics | All available canonical texts have lexical features; 30 contextual reviews; 17 full reads | 936 semantic labels; 17 full reads now span seven channels; broaden the remaining channel sample; no blanket human verification |
 | Packaging | 966 lexical title feature rows; 27 mobile image reviews /30 attempts | Three Shaami 404s; expand images across selected important channels; 939 without fresh review; 30 explicit semantic title records now complete; 936 remain unreviewed |
 | Reuse | Frozen 206 Casually Finance +11 Economics metric rows and relevant reports/Trends | Keep methods separate; source claims/financial facts not fully independently reverified |
 | Expansion | Six partial Tier B first-page captures, 180 IDs | Emerging-channel cohort and representative weak/average channels; full history where decision-relevant |
@@ -44,3 +44,5 @@ Legacy follow-up: [LEGACY_METADATA_PROBE.json](LEGACY_METADATA_PROBE.json) recor
 Prior checkpoint stopped at 93% five-hour /41% weekly. On explicit continuation, live usage was checked again in order: 5% five-hour /16% weekly /context UNKNOWN. Work resumed in bounded batches; the prior resource reading is historical, not the current limit.
 
 Continuation validation must include `build_baseline.py` then `build_comparisons.py` when metadata changes. `METRIC_DATE_EVIDENCE.csv` records immutable source-cell evidence; `verify_workbook_dates.py` reproduces the 595-row source reconciliation using Python with openpyxl. Drive follow-up is finished for the five selected candidates; remaining 118 are not all relevant and should not be fetched indiscriminately.
+
+Latest continuation checkpoint: **89% five-hour → 29% weekly → context UNKNOWN**. No new research unit starts beyond this approximate stop boundary. Completed this continuation: eight additional full script reads (17 total), 30 semantic title records, five Drive triages, source-date repair for 595 rows and 547 additional eligible performance comparisons (723 total). Finish validation, push and exact-head CI; final SHA/CI are maintained in PR #36.

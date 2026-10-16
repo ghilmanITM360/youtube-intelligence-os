@@ -1,13 +1,13 @@
 # QA and limitations
 
-**Phase status: FINANCE_INTELLIGENCE_IN_PROGRESS.** Reports and a pilot proposal exist, but the complete requested scope is not finished. Deliverable presence is not completion.
+**Phase status: RESOURCE_CHECKPOINT.** Reports and a pilot proposal exist, but the complete requested scope is not finished. Deliverable presence is not completion.
 
 ## Verified scope
 
 - 13 canonical finance channels, 966 unique videos, 966 titles; 955 nonplaceholder transcripts with 955 distinct exact text hashes. Eleven videos lack available transcript text (ten Lucas Grant placeholders and one Matty Invests gap). Exact hashes do not detect paraphrase/template duplication.
 - 794 source-classified long-form, 13 Shorts and 159 unknown formats. No duration-only inference. No new timed transcript segments; 3/10/30-second analysis unavailable in this baseline.
 - 723 canonical historical comparisons; 243 insufficient. 125/723 labels change with five-peer sensitivity. No channel-growth-at-publication controls. Current canonical views not fetched.
-- 30 transcript excerpt reviews, including 15 full stored-text reads. These are AI analyst readings, **not human/audio verification**. Thirty contextual labels do not constitute 966 semantic topic audits.
+- 30 transcript excerpt reviews, including 17 full stored-text reads. These are AI analyst readings, **not human/audio verification**. Thirty contextual labels do not constitute 966 semantic topic audits.
 - 807 registry thumbnail URLs, 159 missing registry fields. Thirty attempted sample videos; 27 downloaded and inspected at 320px width; three remain 404 at both saved maxres and fallback hq URLs. 939 canonical videos lack new mobile review; 936 of those were not in the attempted sample. The two CDN-derived fallback URLs do not repair canonical registry fields.
 - 206 Casually Finance and 11 Casual Economics records reused through immutable sources, without new forensic work. Full Economics AV sign-off remains 0/11. These are separate from canonical channels.
 - Six additional public channel pages, 180 distinct first-page video cards, rounded metrics and relative dates. They are partial Tier B, not full histories. Emerging-channel growth coverage remains incomplete.
@@ -36,3 +36,5 @@ The initial baseline commit used CRLF CSV lines, caught by whitespace validation
 Legacy follow-up: [LEGACY_METADATA_PROBE.json](LEGACY_METADATA_PROBE.json) records the existing inventory catalog's candidate DS-000001 observation day, 2026-08-24, for all 159 records. The original date provenance still needs verification and all formats remain null; no tiers were promoted. Do not repeat this catalog lookup.
 
 Prior checkpoint stopped at 93% five-hour /41% weekly. On explicit continuation, live usage was checked again in order: 5% five-hour /16% weekly /context UNKNOWN. Work resumed in bounded batches; the prior resource reading is historical, not the current limit.
+
+Latest continuation checkpoint: **89% five-hour → 29% weekly → context UNKNOWN**. No new research unit starts beyond this approximate stop boundary. Completed this continuation: eight additional full script reads (17 total), 30 semantic title records, five Drive triages, source-date repair for 595 rows and 547 additional eligible performance comparisons (723 total). Finish validation, push and exact-head CI; final SHA/CI are maintained in PR #36.

@@ -11,7 +11,7 @@ The practical recommendation is to test **well-sourced mechanisms behind everyda
 
 Evidence and exact versions: [performance](PERFORMANCE_AND_VIRALITY.md), [scripts](SCRIPT_INTELLIGENCE.md), [title library](TITLE_FORMULA_LIBRARY.md), [thumbnail observations](THUMBNAIL_REVIEWS.csv), [Trends](TOPIC_AND_TRENDS_RESEARCH.md), [source register](SOURCE_REGISTER.csv). Canonical comparisons are within channel and format; cross-channel raw views are never treated as controlled experiments.
 
-Repeated observations from exports, playbooks, Office files and forensic summaries remain the same underlying videos. Canonical + two overlays + landscape form 1,363 distinct referenced video IDs (966 +206 +11 +180), **not 1,363 deeply analyzed videos**. Automated transcripts cover 955 canonical texts, full fresh text reads 15, mobile fresh thumbnail reads 27. Existing forensics were reused, not repeated.
+Repeated observations from exports, playbooks, Office files and forensic summaries remain the same underlying videos. Canonical + two overlays + landscape form 1,363 distinct referenced video IDs (966 +206 +11 +180), **not 1,363 deeply analyzed videos**. Automated transcripts cover 955 canonical texts, full fresh text reads 17, mobile fresh thumbnail reads 27. Existing forensics were reused, not repeated.
 
 ## Continuation evidence
 
