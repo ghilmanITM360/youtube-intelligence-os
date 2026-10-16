@@ -1,6 +1,6 @@
 # Script intelligence
 
-955 valid stored transcript texts received deterministic feature extraction; 30 received opening/ending interpretation; **nine received full stored-text reading** (six long-form, three Shorts). None received new audio verification. Exact scope, hashes and locators: [coverage](TRANSCRIPT_COVERAGE.csv), [features](SCRIPT_FEATURES.csv), [review sample](REVIEW_SAMPLE.csv), [semantic reviews](SEMANTIC_REVIEWS.csv). Twenty-one excerpt reviews cannot certify the middle of a script. Untimed text cannot establish first 3/10/30 seconds or reliable narration density.
+955 valid stored transcript texts received deterministic feature extraction; 30 received opening/ending interpretation; **15 received full stored-text reading** (12 long-form, three Shorts). None received new audio verification. Exact scope, hashes and locators: [coverage](TRANSCRIPT_COVERAGE.csv), [features](SCRIPT_FEATURES.csv), [review sample](REVIEW_SAMPLE.csv), [semantic reviews](SEMANTIC_REVIEWS.csv). Fifteen excerpt reviews cannot certify the middle of a script. Untimed text cannot establish first 3/10/30 seconds or reliable narration density.
 
 ## What the full reads show
 
@@ -34,3 +34,20 @@ Open with one observable contradiction and a bounded question. Explain two or th
 Test hypotheses with original-channel retention and comprehension feedback: question-first versus scene-first opening; one mechanism versus a catalog of concepts; assumption-labeled chart versus unexplained big balance. No competitor CTR, retention or private analytics exists here.
 
 Existing timestamped Casually Finance/ Casual Economics research remains separately reusable through [immutable sources](REUSED_SOURCE_REGISTER.csv). Source-reported 0–34.52s housing contradiction and SpaceX 0–42.78s buyer question are inherited evidence, not newly timed reviews. Full Economics AV sign-off remains 0/11.
+
+## Continuation: matched documentary and business explanations
+
+Six additional complete stored-text reads cover Brimm and Crayon Capital, one strong, typical and weak video each. [DEEP_SCRIPT_MAPS.csv](DEEP_SCRIPT_MAPS.csv) records source hashes, exact short anchors and character offsets, causal sequences, payoffs and claim limits. Character offsets are not timestamps. These observations concern the text; historical, economic and personal allegations are not verified by reading them.
+
+| Channel / tier | Video | Observed sequence and counterexample |
+|---|---|---|
+| Brimm / strong | `nrCtYbVytS4` | Industrial past versus current delays → three questions → planning/court explanation → comparative projects → institutional prescription. An argumentative opening, not a second-person scene. |
+| Brimm / typical | `6-pxbfLfGGU` | Saturday shopping scene → unwanted purchases → layout, pricing and food mechanisms → trolley callback. A concrete scene, mechanisms and a closed loop coexist with typical performance. |
+| Brimm / weak | `ATYVPNn7ZPk` | Resident disruption → yen/policy incentives → social friction → geographic concentration → access/dispersal proposals. The final answer qualifies the national-crisis premise. Clear mechanisms and a meaningful exception exist in a weak example. |
+| Crayon / strong | `sMH8WchxQR8` | Breakup-made-him-richer paradox → biography → cost control, transport leverage and consolidation → antitrust → retained shares and wealth payoff → legacy. Suspense delays the opening answer through a long chronology. |
+| Crayon / typical | `adpt6KW4Jb4` | Threat → dismissal/USB mystery → mortgage analogy → sponsor → risk/correlation/leverage → liquidation → late fiction disclosure → moral coda. Sustained suspense and analogies do not guarantee strong performance. |
+| Crayon / weak | `AKrjI9m6fpk` | Death mystery → career/access → source-of-wealth question → allegations → legal chronology → death reprise → unresolved accountability. The named controversy and narrative stakes do not establish a finance learning payoff. Allegations remain unverified source assertions. |
+
+**Updated interpretation:** explainers can use either a familiar scene or a historical reversal. The matched comparisons do not establish a winning hook. Topic relevance, audience expectations, publication context and distribution remain alternative explanations. Confidence is moderate for observed structure and low for any performance explanation.
+
+**Further writing QA opportunities:** distinguish hypothetical decoy-pricing examples from observed experiments (`6-pxbfLfGGU`); give annual visitor/resident comparisons a time denominator (`ATYVPNn7ZPk`); identify fictional characters before presenting their dialogue as a historical crisis (`adpt6KW4Jb4`). For biography and scandal, dialogue, motives and association claims need their own sources. Do not infer wrongdoing or factual history from dramatic certainty. These checks are editorial safeguards, not measured retention advantages.

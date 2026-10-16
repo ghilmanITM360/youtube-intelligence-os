@@ -1,6 +1,6 @@
 # Finance & Economics competitive intelligence
 
-**Status: RESOURCE_CHECKPOINT — substantial validated research, incomplete requested scope.** Research date: 2026-10-16, Asia/Karachi. Existing PR #36 only. The strongest current editorial direction is **mechanism-led explanations of everyday financial contradictions**, with reproducible numbers and explicit exceptions. Audience demand for this proposed positioning remains a hypothesis.
+**Status: FINANCE_INTELLIGENCE_IN_PROGRESS — substantial validated research, incomplete requested scope.** Research date: 2026-10-16, Asia/Karachi. Existing PR #36 only. The strongest current editorial direction is **mechanism-led explanations of everyday financial contradictions**, with reproducible numbers and explicit exceptions. Audience demand for this proposed positioning remains a hypothesis.
 
 ## Executive findings
 
@@ -16,7 +16,7 @@
 |---|---|---|
 | Canonical baseline | 13 channels; 966 unique videos/titles; 955 transcript texts indexed | Semantic topic/title classification for remaining 936; reliable historical dates/format gaps |
 | Performance | 49 strong, 71 typical, 56 weak; exact peer IDs | 790 insufficient; 34/176 sensitivity flips; channel-history controls |
-| Scripts | 30 opening/ending reviews; nine full stored-text reads | Broader full-text interpretation and timestamped opening evidence |
+| Scripts | 30 opening/ending reviews; 15 full stored-text reads | Broader full-text interpretation and timestamped opening evidence |
 | Thumbnails | 27 reviewed /30 attempted; 807 saved URLs overall | Three sampled 404s; 939 canonical videos without new mobile review |
 | Reused research | Casually Finance 206; Casual Economics 11 | Preserve inherited QA; no repeated forensics |
 | New landscape | Six channels; 180 visible cards | Full upload histories, stronger weak/average/emerging representation |
@@ -33,4 +33,4 @@ The backlog is an editorial scorecard, not viral probability: eight equally weig
 
 Use the [source register](SOURCE_REGISTER.csv), [methods](METHODS.md), [QA limits](QA_AND_LIMITATIONS.md), [machine validation](VALIDATION.json) and [resume instructions](RESUME_HERE.md). No canonical datasets were promoted, no source evidence changed, no YouTube API was used, and no video/image production assets were generated. Downloaded public thumbnails are research evidence. Do not promote this report to complete until the remaining matrix is resolved or the owner explicitly accepts a narrower scope.
 
-Resource checkpoint: live five-hour usage reached 93%, weekly 41%; context UNKNOWN. No new research unit started after this reading. Finish validation/push/CI only. The research remains incomplete; use the remaining matrix in RESUME_HERE.md.
+Prior checkpoint stopped at 93% five-hour /41% weekly. On explicit continuation, live usage was checked again in order: 5% five-hour /16% weekly /context UNKNOWN. Work resumed in bounded batches; the prior resource reading is historical, not the current limit.

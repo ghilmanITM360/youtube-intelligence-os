@@ -56,7 +56,18 @@ def main():
     assert len(sample)==len(semantic)==30
     assert {v['Channel'] for v in sample}=={v['Channel'] for v in videos}
     assert {v['Video_ID'] for v in sample}=={v['Video_ID'] for v in semantic}
-    assert sum(r['Review_scope']=='FULL_STORED_TEXT' for r in semantic)==9
+    assert sum(r['Review_scope']=='FULL_STORED_TEXT' for r in semantic)==15
+    title_semantic=rows('TITLE_SEMANTIC_REVIEWS.csv')
+    assert len(title_semantic)==30 and {r['Video_ID'] for r in title_semantic}=={r['Video_ID'] for r in sample}
+    for r in title_semantic:
+        assert r['Title']==by[r['Video_ID']]['Title']
+        assert r['Performance_tier']==by[r['Video_ID']]['Performance_tier']
+    deep=rows('DEEP_SCRIPT_MAPS.csv');assert len(deep)==6
+    for r in deep:
+        text=con.execute('SELECT transcript_text FROM transcripts WHERE youtube_video_id=?',(r['Video_ID'],)).fetchone()[0]
+        assert hashlib.sha256(text.encode()).hexdigest()==r['Text_SHA256']
+        for prefix in ['Hook','Mechanism','Payoff']:
+            assert text.index(r[prefix+'_anchor'])==int(r[prefix+'_char_offset'])
     assert len(visual)==27
     assets={}
     for name in ['THUMBNAIL_FETCH_REGISTER.csv','THUMBNAIL_FALLBACK_REGISTER.csv']:
@@ -83,10 +94,10 @@ def main():
         assert set(r['Evidence_Video_IDs'].split(';'))<=set.union(*all_sets)
     assert len(rows('SOURCE_GAP_DISPOSITIONS.csv'))==26
     assert not subprocess.check_output(['git','diff','03a6cd0','--','data/raw','data/catalog','data/manifests'],cwd=ROOT)
-    result=dict(status='PASS_BOUNDED_CHECKPOINT_NOT_PHASE_COMPLETION',phase_complete=False,
+    result=dict(status='PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION',phase_complete=False,
         canonical_channels=13,canonical_unique_videos=966,canonical_titles=966,valid_transcript_texts=955,
         exact_transcript_text_duplicates=0,automated_script_features=len(rows('SCRIPT_FEATURES.csv')),
-        full_text_reads=9,excerpt_or_full_reviews=30,mobile_thumbnail_reviews=27,attempted_thumbnail_videos=30,
+        full_text_reads=15,title_semantic_reviews=30,deep_script_maps=6,excerpt_or_full_reviews=30,mobile_thumbnail_reviews=27,attempted_thumbnail_videos=30,
         sampled_thumbnail_unavailable=3,canonical_without_new_mobile_review=939,
         canonical_without_semantic_review=936,formats=dict(Counter(v['Format'] for v in videos)),
         tiers=dict(Counter(v['Performance_tier'] for v in videos)),sensitivity_agreements=sum(r['Agrees']=='True' for r in sensitivity),

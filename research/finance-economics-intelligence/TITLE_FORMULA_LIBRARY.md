@@ -15,3 +15,9 @@ All 966 canonical titles have lexical features in [TITLE_FEATURES.csv](TITLE_FEA
 Within Brimm.'s ranked long-form, question openers appear in 12/13 strong, 9/13 typical and 9/14 weak titles. These are small observational cells. Crayon's numeric-title fraction is 4/5 strong versus 9/10 weak: numbers are not a general differentiator. [Exact denominators and IDs](FEATURE_COMPARISONS.csv).
 
 Original candidate forms: “Why [payment] can fall while [cost] rises”; “Who gets paid when [ordinary transaction] happens?”; “[Headline number] is not [household outcome]”; “The same [asset], two different risks.” Use real conditions, not absolute inevitability. No full-corpus semantic classification of all 966 titles is claimed. Positive/negative sentiment, urgency and lexical curiosity flags need context review before editorial scoring.
+
+## Explicit semantic sample
+
+[TITLE_SEMANTIC_REVIEWS.csv](TITLE_SEMANTIC_REVIEWS.csv) now records all 30 sampled titles individually: grammar, curiosity, paradox, specificity, stakes, framing, questions, number role, urgency, potential search intent and title–thumbnail relationship. Search relevance is an editorial hypothesis, not query-volume evidence. The remaining 936 have lexical features only.
+
+Two material refinements: `2RAF0y-ieMY` promises life getting easier while the inspected thumbnail says “STILL NOT ENOUGH”; subject agreement does not mean promise agreement. `TDEme_uxx4c` names a monthly contribution, while the image adds a million-plus outcome without a title horizon. Treat both as packaging tensions to investigate, not proven clickbait or measured CTR effects. Three Shaami images remain unavailable, so their consistency fields remain unknown.
