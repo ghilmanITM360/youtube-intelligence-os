@@ -1,6 +1,6 @@
 """Comparison invariants protect against misleading performance labels."""
 import unittest
-from build_baseline import compare, date, format_of
+from build_baseline import compare, date, format_of, metric_date
 
 
 class ComparisonTests(unittest.TestCase):
@@ -27,6 +27,17 @@ class ComparisonTests(unittest.TestCase):
     def test_sparse_and_zero_baseline(self):
         self.assertEqual(compare(self.row('target'),[self.row(str(i)) for i in range(4)])[0],'INSUFFICIENT_DATA')
         self.assertEqual(compare(self.row('target'),[self.row(str(i),0) for i in range(5)])[0],'INSUFFICIENT_DATA')
+
+    def test_metric_date_requires_matching_evidence(self):
+        evidence={'channel': {'Dataset':'DS-000022', 'Metric_snapshot_date':'2026-09-11',
+                              'Snapshot_precision':'SOURCE_DECLARED_SCRAPE_DAY_TIMEZONE_UNKNOWN'}}
+        self.assertEqual(metric_date('DS-000022','channel',evidence)[0], '2026-09-11')
+        self.assertEqual(metric_date('DS-000001','channel',evidence)[0], '')
+        self.assertEqual(metric_date('DS-000022','other',evidence)[0], '')
+        self.assertEqual(metric_date('DS-000020','other',{})[0], '2026-09-12')
+        evidence['channel']['Metric_snapshot_date']='invalid'
+        with self.assertRaises(ValueError):
+            metric_date('DS-000022','channel',evidence)
 
     def test_source_parsing(self):
         self.assertIsNone(date('(date only)'))

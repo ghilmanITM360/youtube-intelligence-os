@@ -35,6 +35,18 @@ def date(value):
         return None
 
 
+def metric_date(dataset, channel_id, evidence):
+    """Only a matching source receipt can replace an unknown observation day."""
+    receipt = evidence.get(channel_id)
+    if receipt and receipt['Dataset'] == dataset:
+        day = receipt['Metric_snapshot_date']
+        if date(day) is None:
+            raise ValueError('Invalid source-declared metric day')
+        return day, receipt['Snapshot_precision']
+    day = COLLECTED.get(dataset, '')
+    return day, 'MANIFEST_COLLECTION_DAY' if day else 'UNKNOWN_INGESTION_IS_NOT_COLLECTION'
+
+
 def format_of(value):
     value = (value or '').lower()
     return 'SHORTS' if value in ('short', 'shorts') else 'LONG_FORM' if value in ('regular video', 'video') else 'UNKNOWN'
@@ -76,6 +88,8 @@ def main():
     con = sqlite3.connect(f'file:{DB}?mode=ro', uri=True)
     con.row_factory = sqlite3.Row
     inventory = read_csv(BASE / 'EXISTING_DATA_INVENTORY.csv')
+    evidence_path = BASE / 'METRIC_DATE_EVIDENCE.csv'
+    metric_evidence = {r['Channel_ID']: r for r in read_csv(evidence_path)} if evidence_path.exists() else {}
     selected = [r for r in inventory if r['Scope'] == 'CANONICAL' and r['Niche'] != 'ADJACENT']
     channels, videos, transcripts, thumbs, features, title_features = [], [], [], [], [], []
     seen_hash = {}
@@ -89,7 +103,7 @@ def main():
             s = dict(source); vid = s['youtube_video_id']; title = s['title'] or ''
             ds = list(con.execute('SELECT * FROM dataset_videos WHERE youtube_video_id=? ORDER BY dataset_id', (vid,)))
             dataset = ds[0]['dataset_id']
-            snapshot = COLLECTED.get(dataset, '')
+            snapshot, precision = metric_date(dataset, cid, metric_evidence)
             published = date(s['published_at']); collected = date(snapshot)
             age = round((collected - published).total_seconds()/86400, 4) if published and collected else ''
             if age != '' and age <= 0:
@@ -97,7 +111,7 @@ def main():
             tags = [label for label, pattern in TOPICS if re.search(pattern, title, re.I)]
             videos.append({'Video_ID': vid, 'Channel_ID': cid, 'Channel': ch['Channel'], 'Dataset': dataset,
                 'Title': title, 'Published_at_raw': s['published_at'], 'Metric_snapshot_date': snapshot,
-                'Snapshot_precision': 'MANIFEST_COLLECTION_DAY' if snapshot else 'UNKNOWN_INGESTION_IS_NOT_COLLECTION',
+                'Snapshot_precision': precision,
                 'Views': s['views'], 'Current_views': 'NOT_FETCHED', 'Format': format_of(s['video_type']),
                 'Format_source_value': s['video_type'], 'Duration_seconds': s['duration_seconds'], 'Age_days': age,
                 'Topic_tags_provisional': '|'.join(tags) or 'UNCLASSIFIED', 'Classification_method': 'TITLE_KEYWORD_HEURISTIC_NOT_SEMANTIC_REVIEW',

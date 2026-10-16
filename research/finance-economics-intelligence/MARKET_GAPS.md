@@ -17,3 +17,5 @@ These are **editorial hypotheses**, not certified unmet search markets. A title-
 **Shorts:** one distinction or arithmetic step, such as balance versus cashflow or fee versus price. **Long-form:** a fully sourced institutional mechanism or historical case. **Series:** Short answers one narrow question completely, then long-form explores conditions and counterexamples. No assertion that Short views automatically convert to long-form viewers.
 
 Unfilled coverage: validated emerging-channel cohort, mortgage-specific comparisons, semantic labels for remaining canonical videos, broader thumbnail evidence and audience-demand validation. These remain work items, not invisible assumptions in the strategy score.
+
+Date-repaired evidence now includes a mortgage-specific weak comparison, Carl `TTilKZZd3Es` (0.06×), and same-channel strong monthly-investing examples. This narrows the gap from “no mortgage comparison” to “too little matched mortgage/topic interpretation.” Bob's household-cost contradictions provide stronger positive examples, but do not establish an underserved search market. [Expanded examples](EXPANDED_PERFORMANCE_EXAMPLES.csv).

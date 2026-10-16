@@ -30,3 +30,7 @@ For eligible long-form, test distinct honest title/thumbnail promises concurrent
 Pre-register one hypothesis per episode. Compare within format and comparable age windows, separate source mixes, and report uncertainty. Do not adopt a universal CTR target. Continue a cluster when evidence supports audience understanding and sustainable production; revise if viewers click but the central explanation loses them; do not call a single breakout proof.
 
 Production feasibility is deliberately modest: original diagrams and a restrained visual vocabulary; no new forensic imitation. Costs in the [backlog](TOPIC_IDEA_BACKLOG.csv) are editorial relative ratings, not measured budgets or performance probabilities. Establish actual research/editing hours during the pilot before scaling.
+
+## Evidence update after date repair
+
+Keep the pilot as a hypothesis, not a proven niche choice. Bob's strong two-income and poverty-cost examples (`pM3t-m0Zryk`, `8PeiQFJA2BU`) strengthen the case for specific household contradictions. Carl's weak mortgage-payoff comparison (`TTilKZZd3Es`) and Nick's borderline typical/weak numeric car-cost warning (`J_sTOWazmho`) show that usefulness and quantified stakes alone do not ensure reach. Use those as negative controls when developing the promise. No backlog score was increased simply because more records became rankable; original primary-source briefs and audience tests remain required.

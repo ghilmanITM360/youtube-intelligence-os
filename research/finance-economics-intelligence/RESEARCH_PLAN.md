@@ -30,3 +30,5 @@ All 966 canonical finance videos and all valid transcript records receive automa
 Execution ledger: baseline validated and pushed as ef02fad; CSV LF correction included next. Sample expanded from 18 to 30 to cover all 13 channels plus three Shorts. Nine full-text reads and 27 mobile image reads completed; remaining scope stays explicit. Six first-page competitors add 180 cards. Twenty-six path gaps dispositioned. Legacy metadata candidate date recorded without promoting unknown formats. One primary agent throughout.
 
 Continuation after renewed capacity: six additional full reads (Brimm/Crayon matched tiers), 30 explicit semantic title records, and source-anchored deep script maps. Full reads now 15; remaining work unchanged except these audited increments.
+
+Second continuation unit: Drive triage of five indexed candidates (no new independent finance evidence), and source-declared DS-000022 scrape-day recovery for 595 records. Ranking expands from 176 to 723 eligible videos with five-peer and ±1-day sensitivity. Source workbooks and catalog remain unchanged.

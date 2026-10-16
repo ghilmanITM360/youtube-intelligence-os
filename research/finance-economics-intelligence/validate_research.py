@@ -45,7 +45,7 @@ def main():
         for key,value in zip(['Performance_tier','Peer_count','Lifetime_rate_ratio','Peer_Video_IDs','Tier_basis'],result):
             assert str(v[key])==str(value),(v['Video_ID'],key)
     sensitivity=rows('PERFORMANCE_SENSITIVITY.csv');by={v['Video_ID']:v for v in typed}
-    assert len(sensitivity)==176
+    assert len(sensitivity)==723
     for r in sensitivity:
         v=by[r['Video_ID']];peers=[by[x] for x in v['Peer_Video_IDs'].split('|')][:5]
         ratio=v['Views']/v['Age_days']/median(p['Views']/p['Age_days'] for p in peers)
@@ -92,6 +92,32 @@ def main():
         assert all(1<=int(r[k])<=5 for k in score_fields)
         assert sum(int(r[k]) for k in score_fields)==int(r['Total_out_of_40'])
         assert set(r['Evidence_Video_IDs'].split(';'))<=set.union(*all_sets)
+    receipt=rows('METRIC_DATE_EVIDENCE.csv');assert len(receipt)==4
+    assert sum(int(r['Verified_video_rows']) for r in receipt)==595
+    for r in receipt:
+        assert sha(ROOT/r['Source_path'])==r['Source_SHA256']
+        cohort=[v for v in videos if v['Channel_ID']==r['Channel_ID']]
+        assert len(cohort)==int(r['Verified_video_rows'])
+        assert all(v['Dataset']==r['Dataset'] and v['Metric_snapshot_date']==r['Metric_snapshot_date'] for v in cohort)
+    date_cases=rows('DATE_SENSITIVITY.csv');assert len(date_cases)==1190
+    for delta in (-1,1):
+        shifted=[dict(v,Age_days=v['Age_days']+delta if v['Age_days']!='' else '') for v in typed]
+        shifted_by={v['Video_ID']:v for v in shifted}
+        for r in date_cases:
+            if int(r['Snapshot_shift_days'])==delta:
+                result=compare(shifted_by[r['Video_ID']],shifted)
+                assert result[0]==r['Shifted_tier'] and str(result[2])==r['Ratio']
+                assert r['Agrees']==str(r['Primary_tier']==r['Shifted_tier'])
+    drive=rows('DRIVE_CONTENT_TRIAGE.csv');assert len(drive)==5
+    discovered=json.loads((ROOT/'knowledge/youtube/DRIVE_DISCOVERY.json').read_text())['files']
+    assert {r['Drive_ID'] for r in drive}<={r['id'] for r in discovered}
+    comparison=rows('DRIVE_FINANCE_COMPARISON.csv');assert len(comparison)==206
+    source=comparison[0]['Frozen_version']
+    frozen={r['Video_ID']:r for r in csv.DictReader(subprocess.check_output(['git','show',source],cwd=ROOT).decode().splitlines())}
+    assert {r['Video_ID'] for r in comparison}==set(frozen)
+    for r in comparison:
+        assert all(r[k]==frozen[r['Video_ID']][k] for k in ['Title','Public_Views','Format','Tier'])
+        assert 0<=float(r['Timestamp_delta_seconds'])<=0.001
     assert len(rows('SOURCE_GAP_DISPOSITIONS.csv'))==26
     assert not subprocess.check_output(['git','diff','03a6cd0','--','data/raw','data/catalog','data/manifests'],cwd=ROOT)
     result=dict(status='PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION',phase_complete=False,
@@ -101,8 +127,10 @@ def main():
         sampled_thumbnail_unavailable=3,canonical_without_new_mobile_review=939,
         canonical_without_semantic_review=936,formats=dict(Counter(v['Format'] for v in videos)),
         tiers=dict(Counter(v['Performance_tier'] for v in videos)),sensitivity_agreements=sum(r['Agrees']=='True' for r in sensitivity),
-        sensitivity_denominator=176,landscape_channels=6,landscape_video_cards=180,
+        sensitivity_denominator=723,landscape_channels=6,landscape_video_cards=180,
         reused_overlay_video_records=217,disjoint_referenced_video_ids=1363,original_path_gaps_dispositioned=26,
+        metric_date_repaired_records=595,date_sensitivity_agreements=sum(r['Agrees']=='True' for r in date_cases),
+        date_sensitivity_cases=1190,new_drive_triages=5,drive_finance_overlap_rows=206,
         raw_catalog_manifest_git_diff='EMPTY',canonical_db_sha256=sha(db),
         private_metrics='UNKNOWN',context_usage='UNKNOWN',
         exact_head_ci='CHECK_PR_36_AFTER_FINAL_PUSH; NOT_CERTIFIED_BY_THIS_LOCAL_VALIDATOR')

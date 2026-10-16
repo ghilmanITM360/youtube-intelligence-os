@@ -6,7 +6,7 @@
 
 - 13 canonical finance channels, 966 unique videos, 966 titles; 955 nonplaceholder transcripts with 955 distinct exact text hashes. Eleven videos lack available transcript text (ten Lucas Grant placeholders and one Matty Invests gap). Exact hashes do not detect paraphrase/template duplication.
 - 794 source-classified long-form, 13 Shorts and 159 unknown formats. No duration-only inference. No new timed transcript segments; 3/10/30-second analysis unavailable in this baseline.
-- 176 canonical historical comparisons; 790 insufficient. 34/176 labels change with five-peer sensitivity. No channel-growth-at-publication controls. Current canonical views not fetched.
+- 723 canonical historical comparisons; 243 insufficient. 125/723 labels change with five-peer sensitivity. No channel-growth-at-publication controls. Current canonical views not fetched.
 - 30 transcript excerpt reviews, including 15 full stored-text reads. These are AI analyst readings, **not human/audio verification**. Thirty contextual labels do not constitute 966 semantic topic audits.
 - 807 registry thumbnail URLs, 159 missing registry fields. Thirty attempted sample videos; 27 downloaded and inspected at 320px width; three remain 404 at both saved maxres and fallback hq URLs. 939 canonical videos lack new mobile review; 936 of those were not in the attempted sample. The two CDN-derived fallback URLs do not repair canonical registry fields.
 - 206 Casually Finance and 11 Casual Economics records reused through immutable sources, without new forensic work. Full Economics AV sign-off remains 0/11. These are separate from canonical channels.
@@ -17,9 +17,9 @@
 
 [Twenty-six original-path dispositions](SOURCE_GAP_DISPOSITIONS.csv) preserve the known missing-machine paths. DS-000001 directly affects this audit: its canonical registry/transcript records are available, while original location recovery and historical observation-time/format gaps remain unresolved. Other missing paths do not block the selected baseline. Existing general knowledge is reused from the indexed canonical copies.
 
-Drive remains 128 discovered candidates with five previously content-reviewed. Drive access was unavailable during the first checkpoint; a connector is now listed after continuation, but no additional content review is yet claimed. Available branch reports provide finance reuse despite the cloud gap. No hidden assumption that discovery-only documents have been read.
+Drive has 128 discovered candidates: five previously content-reviewed plus five new bounded content triages. The new finance workbook matches the reused 206-row report on five key fields; four other files are outside finance. The remaining 118 are not content-reviewed. See [Drive follow-up](DRIVE_FOLLOWUP.md); triage is not complete semantic review or binary equivalence.
 
-Canonical dates are August/September-era stored records, not current public totals. Four dataset collection/packaging days support approximate observation dates; ingestion-only datasets are deliberately unranked. Branch snapshots span October 11–14. New channel/thumbnail fetches are October 16 local (UTC metadata can be October 15). A current thumbnail need not match the one that generated historical views.
+Canonical dates are August/September-era stored records, not current public totals. Four dataset collection/packaging days and DS-000022 workbook-declared scrape day support approximate observation dates; DS-000001 remains unranked. Branch snapshots span October 11–14. New channel/thumbnail fetches are October 16 local (UTC metadata can be October 15). A current thumbnail need not match the one that generated historical views.
 
 ## Interpretation boundaries
 

@@ -4,6 +4,8 @@
 
 ## Executive findings
 
+Continuation recovered source-declared collection dates for 595 existing records, adding 547 eligible performance comparisons without new acquisition. Script full reads increased to 15, semantic title records to 30. Five additional Drive triages yielded no independent finance data. [Performance/date evidence](PERFORMANCE_AND_VIRALITY.md), [Drive disposition](DRIVE_FOLLOWUP.md).
+
 - **A formula is not a strategy.** Banana analogies, quiet-wealth scenarios, numeric promises and explanation titles occur among strong, typical and weak videos. Primate's bubbles `37C7fXr8XSY` is strong while investing `lW29lVYi2uI` is weak; Sonny's `$5/day` `vb7UojsINvg` is strong while Shaami's `ENUs_Bzh2lI` is typical. [Title patterns](TITLE_FORMULA_LIBRARY.md).
 - **Specific mechanisms merit testing.** Airline layout `m5WPi3LX9z0`, bank wealth treatment `2LXED3ENhck` and inherited historical-crash examples are exceptional observations. Generic crisis coverage and some hidden-industry warnings underperform. Outliers do not establish causal topic effects. [Performance evidence](PERFORMANCE_AND_VIRALITY.md).
 - **Script quality has an actionable gap.** Stored credit-card text mixes monthly/daily units; a strong money-status story compares investment income with a raise and then calls it the job's income. Original scripts can improve unit/comparator checks and label fictional scenarios. Audio confirmation remains outstanding. [Script analysis](SCRIPT_INTELLIGENCE.md).
@@ -14,8 +16,8 @@
 
 | Layer | Actual work | Main unfinished work |
 |---|---|---|
-| Canonical baseline | 13 channels; 966 unique videos/titles; 955 transcript texts indexed | Semantic topic/title classification for remaining 936; reliable historical dates/format gaps |
-| Performance | 49 strong, 71 typical, 56 weak; exact peer IDs | 790 insufficient; 34/176 sensitivity flips; channel-history controls |
+| Canonical baseline | 13 channels; 966 unique videos/titles; 955 transcript texts indexed | Semantic topic/title classification for remaining 936; DS-000001 date/format gaps |
+| Performance | 179 strong, 383 typical, 161 weak; exact peer IDs | 243 insufficient; 125/723 sensitivity flips; channel-history controls |
 | Scripts | 30 opening/ending reviews; 15 full stored-text reads | Broader full-text interpretation and timestamped opening evidence |
 | Thumbnails | 27 reviewed /30 attempted; 807 saved URLs overall | Three sampled 404s; 939 canonical videos without new mobile review |
 | Reused research | Casually Finance 206; Casual Economics 11 | Preserve inherited QA; no repeated forensics |

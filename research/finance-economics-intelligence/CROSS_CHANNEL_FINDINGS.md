@@ -11,4 +11,12 @@ The practical recommendation is to test **well-sourced mechanisms behind everyda
 
 Evidence and exact versions: [performance](PERFORMANCE_AND_VIRALITY.md), [scripts](SCRIPT_INTELLIGENCE.md), [title library](TITLE_FORMULA_LIBRARY.md), [thumbnail observations](THUMBNAIL_REVIEWS.csv), [Trends](TOPIC_AND_TRENDS_RESEARCH.md), [source register](SOURCE_REGISTER.csv). Canonical comparisons are within channel and format; cross-channel raw views are never treated as controlled experiments.
 
-Repeated observations from exports, playbooks, Office files and forensic summaries remain the same underlying videos. Canonical + two overlays + landscape form 1,363 distinct referenced video IDs (966 +206 +11 +180), **not 1,363 deeply analyzed videos**. Automated transcripts cover 955 canonical texts, full fresh text reads nine, mobile fresh thumbnail reads 27. Existing forensics were reused, not repeated.
+Repeated observations from exports, playbooks, Office files and forensic summaries remain the same underlying videos. Canonical + two overlays + landscape form 1,363 distinct referenced video IDs (966 +206 +11 +180), **not 1,363 deeply analyzed videos**. Automated transcripts cover 955 canonical texts, full fresh text reads 15, mobile fresh thumbnail reads 27. Existing forensics were reused, not repeated.
+
+## Continuation evidence
+
+The source-date repair brings four previously unranked channel libraries into historical comparison. Monthly-investing examples in Carl and household-cost contradictions in Bob provide additional support for testing useful, specific explanations. Counterexamples matter: Carl's mortgage-versus-investing question is weak; Nick's more numerical car-cost warning is borderline typical/weak despite a strong car-payment warning in the same channel. See [expanded matched examples](EXPANDED_PERFORMANCE_EXAMPLES.csv). Topic label and title grammar are not sufficient predictors. Full script coverage for these newly rankable libraries remains narrow.
+
+The six added full script reads also weaken any universal hook claim: a clear tourism mechanism is weak in Brimm, while sustained financial suspense is typical in Crayon. This supports testing comprehension and promise fulfillment on our own channel, not asserting a competitor retention result.
+
+Five newly fetched Drive candidates add no independent finance observations: four are outside finance and the remaining workbook overlaps the 206 reused records. Exact-field and timestamp-precision differences are documented in [Drive follow-up](DRIVE_FOLLOWUP.md).
