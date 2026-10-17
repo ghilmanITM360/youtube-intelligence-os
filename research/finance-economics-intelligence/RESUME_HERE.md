@@ -11,14 +11,16 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 ## Completed checkpoint (current authoritative counts)
 
 - Primate 28/28 and Crayon 30/30 expanded-complete; reused unchanged.
-- Lucas LUCAS_001 through LUCAS_006: 48 expanded + 6 members-only title/image-only = 54/95 handled; 41 remain.
-- Total **106/966 expanded COMPLETE_LIMITED_EVIDENCE**, 112 title + 112 actual-image reviews, 106 script/topic/virality reviews. Six handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
+- Lucas LUCAS_001 through LUCAS_007: 54 expanded + 6 members-only title/image-only = 60/95 handled; 35 remain.
+- Total **112/966 expanded COMPLETE_LIMITED_EVIDENCE**, 118 title + 118 actual-image reviews, 112 script/topic/virality reviews. Six handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
 - All 966 performance classifications were previously revalidated: 179 strong, 383 typical, 161 weak, 243 insufficient. Metadata revalidation is not an individual virality assessment.
-- JSONL/matrix/derived CSVs are current; workbook remains stale pending a larger consolidated refresh. No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
+- JSONL/matrix/derived CSVs are current; workbook refreshed at the LUCAS_007 checkpoint (112 expanded, 118 title/image). No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
 
 ## Exact next work
 
-Next master-order ID: **`WzIzSSM4nQw`**, Lucas Grant, "POV: Your Life as a Silent Millionaire — Built Quietly From a Low Income". LUCAS_006 handled Ti1w_dtmLk0, UXnBuUCXWpA and Wsupxnomwtk, three expanded reviews. Total **106/966 expanded**, 112 title/image, 106 script/topic/virality; Lucas **48 expanded + 6 blocked = 54 handled**, **41 remain**. Skip existing batch IDs.
+Next master-order ID: **`_X1vVWCZGnA`**, Lucas Grant, "Do This EVERY Time You Get Paid — The Quiet Wealth Formula Nobody Shares". LUCAS_007 handled WzIzSSM4nQw through Ze_w31V-uM0, six consecutive expanded reviews. Total **112/966 expanded**, 118 title/image, 112 script/topic/virality; Lucas **54 expanded + 6 blocked = 60 handled**, **35 remain**. Skip existing batch IDs.
+
+LUCAS_007: YQk4U4II7j4 WEAK 0.186x is a close title/topic counterexample to OLQDFW6M9yQ STRONG 2.559x. Z6CXVJ7i4P0 day-in-life STRONG 2.812x versus Wz low-income origin TYPICAL 0.537x. ZT numbered signs TYPICAL 0.735x challenges a universal checklist rule against NQ STRONG 3.071x. Z4Y6OnDIL04 stays INSUFFICIENT_DATA: date-only transcript header preserved, no baseline repair or invented ratio. IRS compensation requirement conflicts with unsupported newborn annual Roth-funding story; gift exclusions do not establish IRA eligibility. All six stored scripts and actual images reviewed; no historical demand series, audio/CTR or causal attribution.
 
 LUCAS_006 counterexample: lottery stages Ti1w_dtmLk0 TYPICAL 1.24x versus secret-$600M lottery PL STRONG 19.98x. Same topic and vivid scenarios do not suffice. Retirement UX TYPICAL 0.54x; fixed-$1K investing Wsup TYPICAL 1.52x. New primary reference checks: California FAQ conflicts with anonymous blind-trust claim; IRS dealership FAQ excludes wires from Form 8300 cash. These are retrospective rule checks, not proof of demand or causal reach effects. Full stored ASR read once with compact authored notes; three canonical images reviewed at320px. Read/image receipts preserve provenance. Source audio remains unverified; mathematical/tax claims are not silently repaired.
 
@@ -36,7 +38,7 @@ Lucas Grant channel findings so far (public metadata only; labeled hypotheses): 
 
 After Lucas Grant, continue the remaining channels in frozen master order in batches of about 20 to 40, until all 966 individual reviews are handled. Remaining public thumbnail retrieval includes 159 missing canonical URL fields; never edit registry to fill research-derived fallbacks. Eleven transcript source gaps remain visibly blocked while other dimensions proceed.
 
-The filterable XLSX (`FINANCE_966_VIDEO_INTELLIGENCE.xlsx`) has **not** been regenerated since the Primate checkpoint; regenerate it at the next larger checkpoint with the workbook builder below. The CSV/JSONL views are current.
+The filterable XLSX (`FINANCE_966_VIDEO_INTELLIGENCE.xlsx`) was refreshed at LUCAS_007: 966 population rows, 138 individual/legacy reading rows, expanded dimension counts 118/118/112/112/964/112. The existing builder recalculated counts, mutation-tested one title status, scanned formula errors (zero matches), rendered all three sheets and exported successfully. Native Excel application recalculation was not tested. Subsequent research batches can advance CSV/JSONL before the next consolidated workbook refresh.
 
 ## Validation and rebuilding
 
@@ -75,3 +77,5 @@ Starting local/remote/PR SHA `dbbad36fb2f00aeaa34526a8a988dce3ea2fdaa1`; exact-h
 Latest validated continuation: LUCAS_003/004/005. 16 research unit tests, both research validators, 26 immutable source hashes, secret scan and whitespace pass. Repository-wide tests were not rerun for these research-only additions. Starting exact-head CI passed; after each push inspect PR #36 again. Continuation commits so far `e8f9b0a`, `73364de`; subsequent final SHA must be read live. Latest live usage: five-hour 14%, weekly 39%; context UNKNOWN (not a claimed threshold warning). Normal research remains authorized; full Lucas/966 mission is unfinished.
 
 Continuation start verified 4dd667cab5117ee4eca093a3e5e57e781a31b3c5 local/remote/PR; exact CI passed run39028624942. Live use before LUCAS_006: five-hour18%, weekly40%; after authoring21%/40%; context unavailable. No stop threshold reached. Workbook still stale.
+
+LUCAS_007 live usage at authoring: five-hour24%, weekly41%; context unavailable. LUCAS_006 pushed ce5ebef963373272c6688866ea4add17d9dcaf4b, verified local/remote/PR alignment; exact CI must be checked live. Three unrelated untracked folders preserved.
