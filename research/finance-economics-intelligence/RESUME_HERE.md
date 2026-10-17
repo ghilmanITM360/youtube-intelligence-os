@@ -11,14 +11,16 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 ## Completed checkpoint (current authoritative counts)
 
 - Primate 28/28 and Crayon 30/30 expanded-complete; reused unchanged.
-- Lucas LUCAS_001 through LUCAS_016: 80 expanded + 9 members-only title/image-only = 89/95 handled; 6 remain.
-- Total **138/966 expanded COMPLETE_LIMITED_EVIDENCE**, 147 title + 147 actual-image reviews, 138 script/topic/virality reviews. Nine handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
+- Lucas LUCAS_001 through LUCAS_017: 85 expanded + 10 members-only title/image-only = 95/95 handled; zero Lucas IDs remain.
+- Total **143/966 expanded COMPLETE_LIMITED_EVIDENCE**, 153 title + 153 actual-image reviews, 143 script/topic/virality reviews. Ten handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
 - All 966 performance classifications were previously revalidated: 179 strong, 383 typical, 161 weak, 243 insufficient. Metadata revalidation is not an individual virality assessment.
-- JSONL/matrix/derived CSVs and workbook reconciled at LUCAS_013 (129 expanded, 136 title/image). No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
+- JSONL/matrix/derived CSVs and workbook reconciled at Lucas completion LUCAS_017 (143 expanded, 153 title/image). No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
 
 ## Exact next work
 
-Next master-order ID: **`v9cnzGVREPA`**, Lucas Grant, "POV: Why Rich People Pretend to Be Poor — Not What You Think". LUCAS_016 handled sUtNetxxNvg,sdGRQ2LRgoI,v1dvjQeymMc. Current138/966 expanded,147 title/image,138 script/topic/virality; Lucas80expanded+9blocked=89/95handled,6remain. Population828 notexpanded including ninepartialrecords. Workbook explicitlyLUCAS_013129expanded/136title-image; refresh afterLucascomplete.
+Next master-order ID: **`-w_MYe_EjbA`**, **Brimm.**, "How Endless Crime is Destroying Britain". Lucas is fully handled:95title/image,85expanded+10members-onlypartial, no NOT_STARTED dimensions. Total143/966expanded,823notexpanded including tenhandledpartialrecords. Title/image153; script/topic/virality143. Populationtranscriptgaps11 unchanged. Do not re-review any Lucas batch. See audit-batches/LUCAS_SYNTHESIS.md for cross-video findings and counterexamples.
+
+LUCAS_017 completed final six IDs:v9cnzGVREPA,wFGvAwrzq0Q,wRqwnApwTVc,xg9FaQX_cac,yQA24eKfcIY,z8pO3YovxZg. Fiveexpanded, yQA title/imageonlyblocked. wFGdateonlyheaderAug17 preserved, no forcedperformanceclassification. z8cashbuyer ledger doesnotreconcile:38940-7950=30990pretax plusTexas6.25%~1936.88, not30890.12outdoor;37Kminus30890.12=6109.88 not1159.88. CurrentTexasofficialrate/tradecredit registered. v9farmviewpoint distinguishes povertyperformance versus camouflage; Versailles1783workingfarm qualifies simplifiedfakevillage analogy. wRq explicitlyshowssecrecy'srelationshipcost, counteruniversalbenefit. xgfirstpaycheckcannotfundsaving;100monthly20years at10%nominalmonthly~75,937 not235Kwithoutmorecapital. Fullstoredscriptsreadonce, actualsiximagesreviewed; xgendingunfinished.
 
 LUCAS_016:sUt4946views at1.49days remainsINSUFFICIENT_DATA; inspected financedvehiclekeptuntilpayoff, not immediatecashpurity. sddebtladder WEAK0.456x:560weeklyrevenue minus380monthlypayment not180weekly; margin60Kagainst370Kassets at30%maintenance needs~76.8%assetfall absentchangedrules, not unexplainedordinarydip. HeldSBLOCcollateral stillmarket-sensitive, existingSEC/FINRAwarningcontradictsimmuneholdingclaim. v1upgrades TYPICAL0.731x endorsescleaner,hobby,wedding,bodycomfort andchosenluxury, counteruniversalfrugality. Listedpurchases4447beforemanycostsexceed4212openingcashwithouttimelineledger. Allthreefullstoredtexts/imagesreviewed, noaudio/privateanalytics.
 
@@ -125,3 +127,7 @@ Prepared LUCAS_016 evidence only:sUtNetxxNvg,sdGRQ2LRgoI,v1dvjQeymMc full stored
 LUCAS_015 pushed4e294dc321a7625562e019bc51f02e675d5f0699; initialremotequeryracedpush, recheckalignmentlive. LUCAS_016prebatch64%five-hour47%weekly; contextpercentageunavailable.
 
 Prepared LUCAS_017 source evidence only:lastsixLucasIDs images and readreceipts saved, no expandedcompletion yet. v9cnzGVREPA,wFGvAwrzq0Q,wRqwnApwTVc,xg9FaQX_cac,z8pO3YovxZg fullstoredtexts; yQA24eKfcIY membersplaceholder. Reuse images/texts ifinterrupted.
+
+LUCAS_016 pushed37aa572; verifyfullSHA/CI. Latestlive72%five-hour48%weekly, contextpercentageunavailable. NextBrimm44videos storedscripts mostlyshorter; continueinmasterorder. Workbook refreshed atLucascompletion143expanded/153title-image; visiblebaseHEAD37aa572 and exactJSONLhash.
+
+Lucas completion workbook:966populationrows,173readingsincludinglegacy. Coverage153/153/143/143/960/143 reconciled withJSONL andexportedcachedvalues; filtersA4:U970 andA4:L177. Countmutation/restore andformulaerrorscanpass; renderedCoverageinspected. BaseHEAD37aa57276d99e170b6ffa7141f77b22af02b3c9d plusLUCAS_017data, sourcehash8e47b10f366c53b501f5ded7f1c0aa744acd731e1ac17081a42bed4abce4dd9b. NativeExcelrecalculationuntested. All95LucasIDs individuallyhandled;85expanded10memberspartial. NextBrimm-w_MYe_EjbA.
