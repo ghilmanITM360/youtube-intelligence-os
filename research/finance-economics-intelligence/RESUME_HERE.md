@@ -2,6 +2,21 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
+## Current cross-account handoff — 2026-10-17
+
+This section supersedes historical checkpoint paragraphs below.
+
+- FULL_POPULATION_RESEARCH_IN_PROGRESS. Live resource checkpoint: five-hour91%, weekly51%; context percentage unavailable. No more expensive research in this window.
+- Expanded158/966;808 not expanded, including10 handled members-only partial records. Title/actual image168 each; script/topic/individual virality158 each. Population transcript gaps11. All966 performance records were previously revalidated; current component matrix explicitly blocks six records lacking public performance sources.
+- Primate28/28 and Crayon30/30 complete. Lucas95/95 handled:85 expanded+10 members-only partial, no NOT_STARTED dimensions. Brimm15/44 expanded;29 remain, including one legacy IN_PROGRESS record that is not expanded complete.
+- Exact next: Brimm. `IW5ARyOjZYU`, “The Rise and Fall of Club 18-30”. Resume frozen master order. No extracted-but-unreviewed active unit remains.
+- This continuation handled38 IDs:23 Lucas (20 expanded+3 partial) and15 Brimm expanded. Batches LUCAS_012–017 and BRIMM_001–003 contain authored findings and receipts. Twenty-nine compact script paragraphs were formatted into readable prose without repeating reads or changing findings.
+- Workbook:158 expanded/168 title-image;966 population rows,186 readings including legacy. Independent counts, title-status mutation/restore and formula-error scan passed. Native Excel recalculation untested. Visible snapshot identifies base Git HEAD plus exact JSONL hash, not the workbook’s later commit hash.
+- Fresh checks:16 research tests, both research validators,26 immutable source hashes, secrets0, whitespace clean. Finance validators run explicitly; general CI does not automatically cover them. Structural validation is not source-entailment review. Repository-wide tests not rerun for these research additions.
+- Branch research/finance-economics-intelligence, draft PR36 only. Pre-final base2a244c3080a4e4f8e1bb03f4fce7e1efaf9b840a aligned local/remote/PR; exact CI PASS run39040822702. Read final live SHA/CI after push; never apply this result to the later commit.
+- Three unrelated untracked folders, stash and other worktrees preserved. Raw evidence, immutable baseline and159-entry rate-limit ledger unchanged. No ASR, paid scraping, graph, full-video download, new branch/worktree/PR or merge.
+- Recover from committed batch files and authoritative JSONL, not /tmp helpers. Receipt locators/hashes preserve source recovery. Search-excerpt-only event references remain explicitly limited.
+
 ## Recovery and identity
 
 Starting verified head: `11bd3bebd746f85fba1820b1ebee457dd1a1a0a0`, same local/remote/PR, exact-head CI green at start. Latest pushed SHA/CI must be read from PR #36 and live Git, not assumed from this document. Three pre-existing untracked folders, stash and unrelated worktree preserved; never stage them.
@@ -12,13 +27,15 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 
 - Primate 28/28 and Crayon 30/30 expanded-complete; reused unchanged.
 - Lucas LUCAS_001 through LUCAS_017: 85 expanded + 10 members-only title/image-only = 95/95 handled; zero Lucas IDs remain.
-- Total **153/966 expanded COMPLETE_LIMITED_EVIDENCE**, 163 title + 163 actual-image reviews, 153 script/topic/virality reviews. Ten handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
+- Total **158/966 expanded COMPLETE_LIMITED_EVIDENCE**, 168 title + 168 actual-image reviews, 158 script/topic/virality reviews. Ten handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
 - All 966 performance classifications were previously revalidated: 179 strong, 383 typical, 161 weak, 243 insufficient. Metadata revalidation is not an individual virality assessment.
-- JSONL/matrix/derived CSVs and workbook reconciled at Lucas completion LUCAS_017 (143 expanded, 153 title/image). No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
+- JSONL/matrix/derived CSVs and workbook reconciled at BRIMM_003 (158 expanded, 168 title/image). No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
 
 ## Exact next work
 
-Next master-order ID: **`7vcwTykGUkM`**, Brimm., "How Private Equity Is Quietly Taking Over Music Festivals and Nightlife". BRIMM_002 handled4WWYlZYBojk,4rY01Q-9rvY,55XwQLW-Vu0,6-pxbfLfGGU,76OdJsc0V5Q. Brimm10/44expanded. Total153/966expanded,163title/image,153script/topic/virality;813notexpandedincluding10handledpartialrecords. Lucas95/95handled unchanged. Workbook remainsvisibleLucas143expanded/153title-image snapshot, tenbehindcurrentJSONL.
+Next master-order ID: **`IW5ARyOjZYU`**, Brimm., "The Rise and Fall of Club 18-30". BRIMM_003 handled7vcwTykGUkM,8W4d28fJKfE,ATYVPNn7ZPk,IBqcHJ0nJ4s,IOBcBqb6igM. Brimm15/44expanded,29remain. Total158/966expanded,168title/image,158script/topic/virality;808notexpandedincluding10handledpartialrecords. Lucas95/95handled(85expanded10memberspartial),Primate28/28,Crayon30/30unchanged. Populationtranscriptgaps11. Workbook current at158expanded/168title-image; exported source hash/counts/filters verified.
+
+BRIMM_003:Israelstartup STRONG2.102x,Japanvisitorpressure WEAK0.377x,piracyeconomics TYPICAL0.820x,Walmart WEAK0.113x,festivalPE INSUFFICIENT_DATA22,660views(noforcedtier). JapanweakversusAmsterdamstrongandIbizaweakrejectsinvasion/tourismasuniversalsuccessformula. Walmartnamedbrandhammer/competitiveconflictnotwinnerguarantee. FestivaldealofficialsellerJune21,2024termsundisclosed; leveragead1000x/riskcapunverifiedadvertiserclaim,notendorsedorcompetitoranalytics. Talpiot100Mcompanynot1Bunicorn;FTC12.5BMotorola2012countersexaggeratedWazesuperlative. JNTO2024arrivals36,869,900supportsround37M,notregionalcrowding. ICC116incidents2024narrowcheck;CapeHornroutingerrorflagged. Allfivefullstoredtexts/imagesreviewed, noactualediting/audioinspectionorprivateanalytics.
 
 BRIMM_002:Sharkdesire STRONG3.290x,IKEA TYPICAL1.106x,Uniqlo TYPICAL0.807x,gym TYPICAL1.298x,Oktoberfest WEAK0.270x. Near-titleUniqloquietstoretypical versuswlvquietstoreSTRONG62.487x rejectsheadlineformulaaswinnerdeterminant. Gymmembership/concurrentcapacityratioisnotfraudulentoversellingproof. Official2025festival6.5Mliters/16daysmatchesnarrowfigure;97.5Mbeerrevenuebeforecostnotprofit. Oct30upload25daysafterclose, notmeasuredseasonalityeffect. SharkFeb11,2025launch349.99and24hourfreezeverified; campaign70Mimpressions notcompetitorvideoanalytics. Fivefullstoredscripts/imagesreviewed, noactualediting/audioinspection.
 
@@ -139,3 +156,7 @@ Lucas completion workbook:966populationrows,173readingsincludinglegacy. Coverage
 Lucascompletioncommit03c54d93ae6fcf499d8458b7164ec59f2089046f local/remote/PRaligned;exact-headCIpassedrun39036304390. BRIMM_001 prebatch75%five-hour49%weekly;contextunavailable. No stopgateatthetime; continueauthorizedbatches.
 
 BRIMM_001 pushed2280d24; verifyfullSHA/CI. BRIMM_002prebatch79%five-hour49%weekly;contextpercentageunavailable. Continueuntillivestopgate.
+
+BRIMM_002pushed2a244c3; verifyfullSHA/CI. BRIMM_003prebatch84%five-hour50%weekly;contextpercentageunavailable. Completeatomicunit,thenliveusage/checkpointbeforestartingmoreexpensiveresearch.
+
+Final workbook source SHA-256: 6443584f194ac949b5394f9e4034b4de6b2b90aab35b53308217bbcfadf12007. Population filterA4:U970, readings filterA4:L190. Prior tracked Brimm IKEA/Japan images reused; receipts correctly state REUSED_TRACKED_ASSET with starting-commit provenance, not fictional fresh requests.
