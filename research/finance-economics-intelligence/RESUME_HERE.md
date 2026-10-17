@@ -11,14 +11,16 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 ## Completed checkpoint (current authoritative counts)
 
 - Primate 28/28 and Crayon 30/30 expanded-complete; reused unchanged.
-- Lucas LUCAS_001 through LUCAS_009: 60 expanded + 6 members-only title/image-only = 66/95 handled; 29 remain.
-- Total **118/966 expanded COMPLETE_LIMITED_EVIDENCE**, 124 title + 124 actual-image reviews, 118 script/topic/virality reviews. Six handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
+- Lucas LUCAS_001 through LUCAS_010: 62 expanded + 7 members-only title/image-only = 69/95 handled; 26 remain.
+- Total **120/966 expanded COMPLETE_LIMITED_EVIDENCE**, 127 title + 127 actual-image reviews, 120 script/topic/virality reviews. Six handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
 - All 966 performance classifications were previously revalidated: 179 strong, 383 typical, 161 weak, 243 insufficient. Metadata revalidation is not an individual virality assessment.
 - JSONL/matrix/derived CSVs are current; workbook refreshed at the LUCAS_007 checkpoint (112 expanded, 118 title/image). No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
 
 ## Exact next work
 
-Next master-order ID: **`cm4O5iR7tws`**, Lucas Grant, "POV: You Secretly Became the Richest Person in Your Circle — Nobody Expected This". LUCAS_009 handled by_Ah5cDyP8, cWxSAuzw2to and clPUrPzHsAM. Total **118/966 expanded**, 124 title/image, 118 script/topic/virality; Lucas **60 expanded + 6 blocked = 66 handled**, **29 remain**. Skip existing batch IDs.
+Next master-order ID: **`fHHRhGN51OY`**, Lucas Grant, "POV: What Happens When You Start Thinking Like Old Money". LUCAS_010 handled cm4O5iR7tws and euWxjXvK9go as expanded, eL2wbhmkhZA as members-only title/image. Total **120/966 expanded**, 127 title/image, 120 script/topic/virality; Lucas **62 expanded + 7 blocked = 69 handled**, **26 remain**. Skip existing batch IDs.
+
+LUCAS_010: cm circle-richest TYPICAL 1.067x and eu wealth-levels TYPICAL 0.769x. cm attending Nashville while choosing a cheaper room counters universal deprivation, but nine-year frame and age22to33 growth are unreconciled. eu950412mixes propertyequity and portfolio, so it does not establish950Kliquid withdrawal target reached. Members-only eL has actual title/image complete; script/topic/performance/virality BLOCKED_MISSING_SOURCE, source views absent, no inferred narrations. Seven Lucas handled members-only; two other members-only placeholders remain later. Total11populationtranscript gaps unchanged.
 
 LUCAS_009: cash-car by_Ah5cDyP8 STRONG 29.111x versus Wsup TYPICAL 1.520x uses closely similar showroom/cash/surprised-seller composition; visual ingredient alone does not discriminate an outlier. PAID CASH text, behavior-focused title, repairs, family need and explicit two-income/luck caveat are differences to test, not proven causes. cWx broad superlative STRONG 3.305x challenges a universal specificity rule; stored ending unfinished. Three wealth levels cl TYPICAL 0.637x challenges numbered/status progression rule. IRS January2026car-interest leaflet and SEC qualified-purchaser section validate narrow parameters, no measured demand. by image reused from prior ledger without fetch; two other canonical images added. Full stored scripts read once, factual gaps preserved.
 
@@ -87,3 +89,5 @@ LUCAS_007 live usage at authoring: five-hour24%, weekly41%; context unavailable.
 LUCAS_007 pushed1a43bfc0acf5a52840c540c4844731851db6e595 with verified local/remote/PR alignment; CI queued at that check. LUCAS_008 pre-batch live usage29%five-hour,42%weekly; context unavailable. Workbook remains consolidated at112expanded, while JSONL/CSV advance to115; no rebuild after each small batch.
 
 Continuation LUCAS_009 live usage32%five-hour,42%weekly; context unavailable. Workbook at112expanded consolidated checkpoint, JSONL/CSV now118. Current batch validators required before push; exact final SHA/CI read live. No new branch/worktree/PR, ASR, graph or raw evidence edits.
+
+LUCAS_008/009 pushed9e0aaa95bcb8a49ab6ec0ef07056af189a6bb595, local/remote/PR verified, exact CI running at check. Eighteen consecutive IDs handled this continuation including one members-only; seventeen expanded added. Workbook at112expanded checkpoint. Live limits must be re-read before further expensive work.
