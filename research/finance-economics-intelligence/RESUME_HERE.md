@@ -21,7 +21,11 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 
 ## Exact next work
 
-Next master-order ID: **`IyN2D4n6XiM`**, Lucas Grant, "POV: You Chose Wealth Over Looking Rich" (a members-only video: title and thumbnail can be completed, script/topic/virality are BLOCKED_MISSING_SOURCE; the next text-available Lucas Grant ID after it is `JFsP9FWI95A`). Handled so far in Lucas Grant: **LUCAS_001** (first 24 IDs: 22 expanded + 2 members-only) and **LUCAS_002** (next 12 IDs `ElGhlrZNb_4` through `I1f7_ksEiKY`: 10 expanded + 2 members-only). Crayon Capital is 30/30 and Primate 28/28. Expanded-complete total **90/966** (92 including 4 members-only title/thumbnail-only records counted separately; 36 Lucas Grant IDs handled; 59 Lucas Grant IDs remain), then the other channels in frozen master order.
+Next master-order ID: **`KyXa--2pZy8`**, Lucas Grant, "POV: Why Looking Poor Is So Important — Nobody Tells You This". LUCAS_003 handled `IyN2D4n6XiM` through `KyMHch51vY4`: four expanded reviews and one members-only title/thumbnail-only review. Current authoritative totals: **94/966 expanded-complete**, 99 title reviews, 99 actual-image reviews, 94 script/topic/virality reviews. Lucas: 36 expanded + 5 members-only handled = 41/95; **54 Lucas IDs remain**. Prior LUCAS_001/002, Crayon and Primate reviews are unchanged.
+
+`IyN2D4n6XiM` has title/image complete; script/topic/performance/virality explicitly BLOCKED_MISSING_SOURCE. Its frozen publication timestamp exists, but views/transcript do not. Previously handled members-only performance dispositions remain unchanged; they are metadata availability checks, not usable performance classifications.
+
+LUCAS_003 adds full-stored-text interpretations of `JFsP9FWI95A`, `JU6Cgs0uftg`, `KlTFqZbc8J0`, `KyMHch51vY4`; four new source-linked images plus the members-only image inspected at 320px. Key counterexample: $1.8B title is strong 2.04x, below $650M video's 34.42x; number size is not a universal rule. First-$100K 0.75x versus six-month repair 1.49x are both typical. Specific script/year/timeline mismatches are recorded, not interpreted as causes of public reach. IRS 2026 limits checked against a pre-upload November 2025 primary notice; July 29 Fed decision is explicitly excluded for uploads preceding its release. No measured demand or private metrics.
 
 Remaining Lucas Grant IDs include 5 more members-only/placeholder videos (script blocked) and two IDs whose publication date is '(date only)' in the master (`Z4Y6OnDIL04`, `wFGvAwrzq0Q`; `11oeh1Xi_Gs` is done): the transcript header states the date, but the frozen baseline could not parse it, so their performance tier stays INSUFFICIENT_DATA. Do not edit the baseline.
 
@@ -62,3 +66,7 @@ LEGACY_THUMBNAIL_RECOVERY_001: 159 IDs tracked; first request `-UdMJ-EtLDI` retu
 Corrections made while finishing Crayon: the earlier thumbnail record for `xhbukTTkwJY` read the text as 'MADDOFF'; the stored image shows 'MADOFF' and the record is corrected.
 
 Historical pushed SHAs: ad9326b and 5bc8944 (exact-head CI passed for ad9326b, run 38924569360). The Crayon completion commit follows; verify final HEAD independently. Final current SHA/CI belongs in PR #36.
+
+## 2026-10-17 continuation verification
+
+Starting local/remote/PR SHA `dbbad36fb2f00aeaa34526a8a988dce3ea2fdaa1`; exact-head Repository validation passed (run 39023865515). Live usage at start: five-hour 0%, weekly 37%; context percentage unavailable. Recheck live before expensive units. Workbook remains stale; defer to a larger consolidated checkpoint. No baseline recovery, ASR, graph, new branch/worktree/PR or unrelated-folder changes.
