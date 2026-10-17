@@ -2,7 +2,21 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current continuation checkpoint — 2026-10-18 (CARL_002)
+## Current continuation checkpoint — 2026-10-18 (CARL_003 and workbook)
+
+This section supersedes all historical counts below.
+
+- Expanded **217/966**, **749 not expanded** (includes10 handled partials). Title/actual-image **227 each**; full stored script/topic/individual virality **217 each**. Carl Invests **30/80**,50remaining. Brimm44/44 unchanged. This continuation adds17reviews:CARL_002(15) andCARL_003(2). All COMPLETE_LIMITED_EVIDENCE, not audio-certified.
+- Exact next **I9Yscvqrrt0**, Carl Invests, “The Biggest Wealth Killers in Your 40s and 50s (Avoid At All Costs)”. No acquired-but-unreviewed next unit. Start a new batch; reuse completed evidence and never overwrite prior reviews.
+- CARL_003 coversH5n8dGfAmVE andHlPsFSniNOc. First401kvideo1.23125xTYPICAL has genuine June16Vanguard release27days beforeJuly13upload, withMarch4headlinepreview alreadyavailable. Vanguard provider account population must not become all-American totalretirementwealth. Secrets1.40417xTYPICAL contains unsupportedIQ/income equality, personalnurseYouTube5k/month andcharityincome causal rhetoric; finalcorrelationcaveat conflicts earliercausalclaim. FDICApril0.38%monthlytable supports narrowrate only.
+- CARL_002 findings/counterexamples retained below. No CTR/retention/impressions/satisfaction or historicalTrendsvalues invented. Publication context does not establish reach causation.26immutablebaselinehashes unchanged;11transcriptgaps,6performanceblocked remain. Primarywebreceipts mostlySEARCH_EXCERPT_ONLY; Vanguard54MBPDF fullretrievalfailed, age-specificprimarytables uncertified.
+- JSONL andall7derivedCSV files reconcile966unique IDs; **Excel refreshedat217/227, zero lag**. Workbook966population rows/244readingsincludinglegacy; coverage227/227/217/217/960/217. Artifactengine recalculation,inputmutation/restore,formulaerror scan0 andall3previewchecks performed. Exportedcachedcounts/sourcehash independentlychecked withread-onlyopenpyxl. NativeExcelapp recalculationUNTESTED.
+- Workbook/JSONL sourceSHA256 **01fe77dd4181d3e69291a651ca29deb68da160c7febc0d000e70f3b06fa8a74f**. VisibleworkbookbaseGitHEAD **7b8c4ba5f31a6aeade95cb5a40b45240123c13e2** plusCARL_003workingdata, not latercommitSHA. Population970totalrows/header4;Readings248totalrows/header4. No workbook claim tied to its latercommit hash.
+- Fresh16researchtestsPASS; bothvalidatorsPASS;26sourcehashes;source/image/reference checksPASS;secrets0;gitdiffcheckPASS.964outsideCARL_003records unchanged againstparent, following951outsideCARL_002 unchanged earlier. Validator isstructural, not independentsemanticentailment certification. Repository-wide tests delegated toexistingCI, not locallyrerun forresearch-onlydata.
+- Last pushed verifieddata SHA **7b8c4ba5f31a6aeade95cb5a40b45240123c13e2**, same remote/PR; exact-headCI **SUCCESS**,run39077654091. This consolidation commit follows: get finalownHEAD/remote/PRSHA andCI live afterpush, never applyparentCI tochild. Keep existingdraftPR36/branch andunrelated3folders/stash/worktrees/rawbaseline.
+- Resourcecheckpoint: latestLIVE five-hour25%,weekly4%. These thresholds are not reached. Contextpercentage and automaticcontextindicator unavailable; this continuation checkpoints because accumulatedfull-transcript/tool context leaves insufficientroom for another quality15–30reviewunit. This is a context-capacity assessment, not a claimed measuredpercentage or an exposedautomaticwarning. Active2reviewunit and17reviewconsolidation completed/validated beforehandoff. Freshusage/contextcheckrequiredonresume. No resetused.
+
+### Previous continuation checkpoint — 2026-10-18 (CARL_002)
 
 This section supersedes historical counts below.
 
