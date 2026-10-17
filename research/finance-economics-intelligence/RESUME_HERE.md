@@ -2,7 +2,22 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current continuation checkpoint — 2026-10-18 (CARL_004)
+## Current continuation checkpoint — 2026-10-18 (CARL_005 and workbook)
+
+This section supersedes historical counts below.
+
+- **247/966 expanded (25.57%)**,719 not expanded including10 handled partials. Carl Invests **60/80**,20 remaining. Title/actual thumbnail **257 each**; full stored script/topic/individual virality **247 each**. Brimm44/44,Primate28/28,Crayon30/30 complete; Lucas95handled(85expanded10partial) unchanged.
+- This continuation adds30 reviews inCARL_004/005,15 each. CARL_005 exactlyXJU51PKcJz8 throughl_bk9NsyCJg in immutable master order;951outside-batch records unchanged versusfa3298136a44a79589faea1fec8c0d221be3f7e3. Exact next **ljtRgiCw3V8**, Carl Invests, 7 Signs Someone Is Fake Rich. No next acquired-but-unreviewed unit.
+- XJU51PKcJz8(3.4859days) andbOqEXeRx4fk(1.4859days) retain INSUFFICIENT_DATA with blank ratio/peerpool. PERFORMANCE_REVIEW means frozen-source revalidation, not a valid normalized outcome; original automated revalidation completion preserved. **Six existing performance-source blockers unchanged**,11transcript-source gaps unchanged. No invented private metrics or historicalTrends series.
+- Counterexamples: low-salaryeZ7.94268x/average-salaryMK3.66494x strong butsalarypath5g0.77810x typical;20ksecurityXSL3.42504x strong versus20khowtoSItu0.45171x weak;wealthladder ecf10.44913x strong versusemotionallevels i90.32004x weak;age45milestones l_bk7.75203x strong versus45signsWR0.96965x typical. Monthlymaps500TDE55.63202x/1007sb160.54988x strong are hypotheses to test, not causal formulas.
+- Yencrisis kpn0.16557x weak has genuineeventwindow: officialJapanMOFAug3 confirmsJuly31coordinatedyenbuying,17daysbeforeAug20upload. Sameofficialstatement describesFIMA use asfutureplan, notproofalreadydrawn. Fedfacilitydates2020/2021, notnewsecrettool. Eventexistence doesnotexplainreach. Sources include fullprimaryMOF/Fedpages; manyotherreceiptssearch-excerpt-only.
+- Materialclaim gaps:7%permanentwithdrawalpromise,IRAconversionwindowfalselyclosesatRMDage,probatecanoccurwithwill,unsupported97.8%literacyrank,grossbudgetallocating100%beforetax,BEAsavingratedenominator,20kallocationmissing4k,three-missed-matchannuityerror,inconsistentretirementcasebalances. FullindividualrecordsretainASR/audio/source limitations.
+- JSONL/all7CSVs reconcile966uniqueIDs. **Excel refreshedat247expanded/257title-image,zero lag**:966populationrows/273individual-or-legacyreadings. Coverage257/257/247/247/960/247;distinctreadings273/270images/263topics/251fulltexts includinglegacy. Artifactengine recalculation,title-inputmutation/restore,0formulaerrors and3sheetpreviews inspected. Exportedcachedcounts/hash independentlychecked withread-onlyopenpyxl; tablesA4:U970/A4:L277. NativeExcelapplicationrecalculationUNTESTED.
+- WorkbooksourceJSONLSHA256 **b6356d3f342d4435c456d443a1c12ccfa26b6c789579bcef9ef2a8926cf9d074**;visiblebaseGitHEAD **fa3298136a44a79589faea1fec8c0d221be3f7e3** plusCARL_005workingdata, notlatercommithash. Existingbuilder/runtime reused, no rawsource/baseline changes.
+- Fresh16researchtestsPASS;bothvalidatorsPASS;26immutablehashes;source/image/referencechecksPASS. Structuralvalidationnotindependentsemanticcertification. Secrets/whitespacecheck requiredagain afterstaging. Parentfa3298136a44a79589faea1fec8c0d221be3f7e3 local/remote/PRverified, exact-headCI39079591440SUCCESS; inspectnewcommit own head/CI afterpush. ExistingdraftPR36/branch,3unrelatedfolders,stash/worktrees preserved.
+- LatestLIVE five-hour67%,weekly10%;contextpercentageunavailable, no seriouscontextwarning exposed. No resource stopgate:continue after atomic persistence with remaining20Carl records.
+
+### Previous continuation checkpoint — 2026-10-18 (CARL_004)
 
 This section supersedes historical counts below.
 

@@ -1,3 +1,11 @@
+## 2026-10-18 continuation: CARL_005 and consolidated workbook
+
+247/966 expanded, title/thumbnail257 and script/topic/virality247; Carl60/80. JSONL/7CSVs/workbook agree, zero lag. Two young new reviews retain INSUFFICIENT_DATA/blank ratios while original automated performance-revalidation status remains complete; six original performance-source blockers and11transcript gaps preserved. Thirty new reviews this continuation, no previous reviews overwritten.
+
+Counterexamples:20ksecurity3.43x versus20khowto0.45x; wealthranking10.45x versusemotionallevels0.32x; age45milestones7.75x versus45signs0.97x; low-salarymillionaire7.94x versusearliersalarypath0.78x. Controlled tests warranted, not causal success rules. Yencrisis0.17x has genuinepreuploadJuly31intervention confirmedbyMOFAug3, showing timelinessaloneinsufficient. MOFsaysFIMAuseplannedinthefuture; scriptclaimsactualdeploymentwithouttransactionproof. Details inCARL_005/EVENT_SOURCES.
+
+Workbook artifact-engine recalculation, mutation/restore, formula scan and3preview inspections performed; exportedcachedcounts/sourcehash independentlychecked, nativeExceluntested. Currentdatahash b6356d3f342d4435c456d443a1c12ccfa26b6c789579bcef9ef2a8926cf9d074.16researchtests andbothvalidatorsPASS,26immutablehashes unchanged.
+
 ## 2026-10-18 continuation: CARL_004
 
 232/966 expanded reviews; title/actual thumbnail242, script/topic/virality232. Carl45/80. Fifteen new individual reviews in immutable order, no prior records overwritten. JSONL/CSV current; Excel217expanded/227title-image,15-review lag pending consolidation. Public-only framework and source limits remain: no private appeal/engagement/satisfaction metrics, no recovered historical Trends series,11transcript gaps and6performance blockers.
