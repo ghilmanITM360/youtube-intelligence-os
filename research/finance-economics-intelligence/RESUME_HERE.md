@@ -11,14 +11,16 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 ## Completed checkpoint (current authoritative counts)
 
 - Primate 28/28 and Crayon 30/30 expanded-complete; reused unchanged.
-- Lucas LUCAS_001 through LUCAS_005: 45 expanded + 6 members-only title/image-only = 51/95 handled; 44 remain.
-- Total **103/966 expanded COMPLETE_LIMITED_EVIDENCE**, 109 title + 109 actual-image reviews, 103 script/topic/virality reviews. Six handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
+- Lucas LUCAS_001 through LUCAS_006: 48 expanded + 6 members-only title/image-only = 54/95 handled; 41 remain.
+- Total **106/966 expanded COMPLETE_LIMITED_EVIDENCE**, 112 title + 112 actual-image reviews, 106 script/topic/virality reviews. Six handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
 - All 966 performance classifications were previously revalidated: 179 strong, 383 typical, 161 weak, 243 insufficient. Metadata revalidation is not an individual virality assessment.
 - JSONL/matrix/derived CSVs are current; workbook remains stale pending a larger consolidated refresh. No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
 
 ## Exact next work
 
-Next master-order ID: **`Ti1w_dtmLk0`**, Lucas Grant, "Your Life at Every Level After Winning the Lottery". LUCAS_003/004/005 handled 15 consecutive IDs from `IyN2D4n6XiM` through `TEHTKmgA9gs`: 13 expanded + two members-only title/image-only. Current total **103/966 expanded**, 109 title/image, 103 script/topic/virality. Lucas **45 expanded + 6 blocked = 51 handled**, **44 remain**. Skip all existing batch IDs.
+Next master-order ID: **`WzIzSSM4nQw`**, Lucas Grant, "POV: Your Life as a Silent Millionaire — Built Quietly From a Low Income". LUCAS_006 handled Ti1w_dtmLk0, UXnBuUCXWpA and Wsupxnomwtk, three expanded reviews. Total **106/966 expanded**, 112 title/image, 106 script/topic/virality; Lucas **48 expanded + 6 blocked = 54 handled**, **41 remain**. Skip existing batch IDs.
+
+LUCAS_006 counterexample: lottery stages Ti1w_dtmLk0 TYPICAL 1.24x versus secret-$600M lottery PL STRONG 19.98x. Same topic and vivid scenarios do not suffice. Retirement UX TYPICAL 0.54x; fixed-$1K investing Wsup TYPICAL 1.52x. New primary reference checks: California FAQ conflicts with anonymous blind-trust claim; IRS dealership FAQ excludes wires from Form 8300 cash. These are retrospective rule checks, not proof of demand or causal reach effects. Full stored ASR read once with compact authored notes; three canonical images reviewed at320px. Read/image receipts preserve provenance. Source audio remains unverified; mathematical/tax claims are not silently repaired.
 
 `IyN2D4n6XiM` and `KyXa--2pZy8`: script/topic/performance/virality BLOCKED_MISSING_SOURCE; earlier members-only metadata-check dispositions unchanged. `Mpo-bDnZzjI`: public 6,939 views, age 6.453 days, INSUFFICIENT_DATA; no tier/ratio invented. Read receipts in LUCAS_003_004_READ_RECEIPTS.json and LUCAS_005_READ_RECEIPTS.json preserve source locators/hashes. Fourteen new images; lottery `PLgVQhvtU_A` reuses its original October 16 tracked asset/receipt. No retry of the 159-entry rate-limit ledger.
 
@@ -71,3 +73,5 @@ Historical pushed SHAs: ad9326b and 5bc8944 (exact-head CI passed for ad9326b, r
 Starting local/remote/PR SHA `dbbad36fb2f00aeaa34526a8a988dce3ea2fdaa1`; exact-head Repository validation passed (run 39023865515). Live usage at start: five-hour 0%, weekly 37%; context percentage unavailable. Recheck live before expensive units. Workbook remains stale; defer to a larger consolidated checkpoint. No baseline recovery, ASR, graph, new branch/worktree/PR or unrelated-folder changes.
 
 Latest validated continuation: LUCAS_003/004/005. 16 research unit tests, both research validators, 26 immutable source hashes, secret scan and whitespace pass. Repository-wide tests were not rerun for these research-only additions. Starting exact-head CI passed; after each push inspect PR #36 again. Continuation commits so far `e8f9b0a`, `73364de`; subsequent final SHA must be read live. Latest live usage: five-hour 14%, weekly 39%; context UNKNOWN (not a claimed threshold warning). Normal research remains authorized; full Lucas/966 mission is unfinished.
+
+Continuation start verified 4dd667cab5117ee4eca093a3e5e57e781a31b3c5 local/remote/PR; exact CI passed run39028624942. Live use before LUCAS_006: five-hour18%, weekly40%; after authoring21%/40%; context unavailable. No stop threshold reached. Workbook still stale.
