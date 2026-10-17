@@ -1,6 +1,8 @@
 // Run a copy beside a symlink to the bundled node_modules; pass research directory.
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { Workbook, SpreadsheetFile } from '@oai/artifact-tool';
 
 const base = path.resolve(process.argv[2]);
@@ -75,6 +77,13 @@ readings.getRangeByIndexes(4,0,done.length,12).format.verticalAlignment='top';
 readings.getRangeByIndexes(3,1,done.length+1,10).format.columnWidth=74;
 readings.getRangeByIndexes(4,0,done.length,12).format.autofitRows();
 readings.freezePanes.freezeColumns(1);
+const baseHead = execFileSync('git',['rev-parse','HEAD'],{cwd:base,encoding:'utf8'}).trim();
+const auditHash = createHash('sha256').update(await fs.readFile(path.join(base,'VIDEO_AUDIT_966.jsonl'))).digest('hex');
+const expanded = rows.filter(r=>['TITLE','THUMBNAIL','SCRIPT','TOPIC','VIRALITY'].every(d=>r.statuses[d+'_REVIEW'].startsWith('COMPLETE_'))).length;
+cover.getRange('A28:B33').values=[['Exported UTC',new Date()],['Base Git HEAD',baseHead],['Audit SHA-256',auditHash],['Expanded complete',expanded],['Not expanded',rows.length-expanded],['Latest Lucas batch',rows.filter(r=>r.identity.Channel==='Lucas Grant').map(r=>r.batch_id).filter(x=>x.startsWith('LUCAS_')).sort().at(-1)]];
+cover.getRange('B28').setNumberFormat('yyyy-mm-dd hh:mm:ss');
+cover.getRange('A28:E33').format.font={name:'Arial',size:10};
+cover.getRange('A28:E33').format.rowHeight=28;
 cover.getRange('A22:B22').values=[['Distinct readings, including legacy','Count']];
 cover.getRange('A23:A26').values=[['Titles'],['Actual images'],['Topics'],['Full stored texts']];
 const end=done.length+4;
@@ -99,7 +108,7 @@ videos.getRange(mutationCell).values=old;
 wb.recalculate();
 console.log((await wb.inspect({kind:'region',sheetId:'Coverage',range:'A6:C12',maxChars:1400,tableMaxRows:8,tableMaxCols:3})).ndjson);
 console.log((await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#NUM!|#SPILL!',options:{useRegex:true,maxResults:20},maxChars:1000})).ndjson);
-for(const [sheetName,range] of [['Coverage','A1:D27'],['Videos','A1:F8'],['Readings','A1:C6']]) {
+for(const [sheetName,range] of [['Coverage','A1:E34'],['Videos','A1:F8'],['Readings','A1:C6']]) {
   const image=await wb.render({sheetName,range,scale:1.4,format:'png'});
   await fs.writeFile(path.join(base,`audit-batches/workbook-${sheetName}.png`),new Uint8Array(await image.arrayBuffer()));
 }
