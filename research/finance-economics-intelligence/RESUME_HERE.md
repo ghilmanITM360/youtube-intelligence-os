@@ -2,7 +2,22 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current continuation checkpoint — 2026-10-17
+## Current continuation checkpoint — 2026-10-17 (CARL_001)
+
+This section supersedes historical counts below.
+
+- Expanded **200/966**, **766 not expanded** (including 10 handled members-only partials). Title/actual-image **210 each**; script/topic/individual virality **200 each**. Brimm **44/44**; Carl Invests **13/80**, 67 remaining. All expanded records remain COMPLETE_LIMITED_EVIDENCE, not audio-certified complete evidence.
+- Exact next immutable master-order Video_ID: **7sbA9WZrfHk**, Carl Invests, “What Happens If You Invest $100 Every Month (Most People Don’t Realize This)”. Image receipt already acquired and full stored transcript previously read, but no authored review/thumbnail inspection completion: do not count it. Following 91OdhWI3e1c has acquired image; full stored reading still required. Reuse both image receipts. CARL_001 contains exactly 13 completed reviews; begin a new batch for next records.
+- This continuation completed 29 Brimm + 13 Carl = 42 expanded reviews. Brimm comparison and all 44 references are in BRIMM_COMPLETE_AUDIT.md. Prior Brimm checkpoint retained below for detailed findings.
+- Carl counterexamples: wealthy-signs 24.31439x versus quietly-rich-never-buy 0.33125x; age45 16.32755x versus age30s 0.39909x; AI allocation change 0.20036x versus salary pathway 0.77810x. No causal claim from public counts. Material issues include family-versus-individual Fed statistics, outdated 2026 contribution limits, incorrect car amortization, compounding arithmetic, and AI wage-premium association presented as training opportunity. EVENT_SOURCES access limitations remain explicit.
+- JSONL, seven 966-row CSVs and refreshed Excel reconciled: expanded 200, title/image210, coverage210/210/200/200/960/200. Workbook966 population rows/227 readings including legacy; artifact-engine recalculation and mutation/restore passed, formula error scan zero. Independently checked exported cached counts and JSONL hash. Native Excel application recalculation UNTESTED.
+- 16 research tests PASS; both validators PASS; 26 immutable hashes checked; tracked secrets zero. Structural validation is not semantic entailment certification. Population transcript gaps11 and blocked performance6 unchanged. Private CTR/retention/impressions, original audio completeness and historic Trends values unavailable.
+- Resource stop: LIVE five-hour47%, weekly49% at checkpoint; context percentage unavailable, but an actual tool output exceeded available model context. Stop new expensive research per user instruction, persist this completed atomic unit. Next session check fresh usage before resuming; these numbers are historical then.
+- Keep existing branch/draft PR36. Read actual final SHA/remote/PR exact-head CI after push, never reuse prior-head CI. Preserve three unrelated untracked folders, stash, worktrees, raw evidence and baseline. No graph/ASR/full-video acquisition/API/infrastructure.
+
+### Brimm consolidation checkpoint (historical detail)
+
+Brimm completed before CARL_001
 
 This section supersedes historical counts below.
 

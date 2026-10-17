@@ -1,3 +1,5 @@
+Current continuation checkpoint: 200/966 expanded; 766 not expanded; title/image210 each; script/topic/virality200 each. Brimm44/44, Carl Invests13/80. Refreshed workbook200 expanded/227 readings, seven CSV populations reconciled. See RESUME_HERE.md for resource stop and exact next ID7sbA9WZrfHk. Historical report below.
+
 # Finance and Economics: 966-video audit
 
 Status: **FULL_POPULATION_RESEARCH_IN_PROGRESS**. Scope is all 966 canonical videos across 13 channels. The old 30-video sampling ceiling is revoked. File presence does not establish analytical completion.
