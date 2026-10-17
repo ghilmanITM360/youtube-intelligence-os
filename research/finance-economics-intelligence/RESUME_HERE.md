@@ -6,7 +6,7 @@
 
 This section supersedes historical checkpoint paragraphs below.
 
-- FULL_POPULATION_RESEARCH_IN_PROGRESS. Live resource checkpoint: five-hour91%, weekly51%; context percentage unavailable. No more expensive research in this window.
+- FULL_POPULATION_RESEARCH_IN_PROGRESS. Live resource checkpoint: five-hour94%, weekly52%; context percentage unavailable. No more expensive research in this window.
 - Expanded158/966;808 not expanded, including10 handled members-only partial records. Title/actual image168 each; script/topic/individual virality158 each. Population transcript gaps11. All966 performance records were previously revalidated; current component matrix explicitly blocks six records lacking public performance sources.
 - Primate28/28 and Crayon30/30 complete. Lucas95/95 handled:85 expanded+10 members-only partial, no NOT_STARTED dimensions. Brimm15/44 expanded;29 remain, including one legacy IN_PROGRESS record that is not expanded complete.
 - Exact next: Brimm. `IW5ARyOjZYU`, “The Rise and Fall of Club 18-30”. Resume frozen master order. No extracted-but-unreviewed active unit remains.
@@ -160,3 +160,5 @@ BRIMM_001 pushed2280d24; verifyfullSHA/CI. BRIMM_002prebatch79%five-hour49%weekl
 BRIMM_002pushed2a244c3; verifyfullSHA/CI. BRIMM_003prebatch84%five-hour50%weekly;contextpercentageunavailable. Completeatomicunit,thenliveusage/checkpointbeforestartingmoreexpensiveresearch.
 
 Final workbook source SHA-256: 6443584f194ac949b5394f9e4034b4de6b2b90aab35b53308217bbcfadf12007. Population filterA4:U970, readings filterA4:L190. Prior tracked Brimm IKEA/Japan images reused; receipts correctly state REUSED_TRACKED_ASSET with starting-commit provenance, not fictional fresh requests.
+
+Persistence confirmation: data/workbook commit0ab4c33b6e914f7ba408c4d2c91ba4422b2198eb pushed and verified local/remote/PR alignment. Exact-head CI rollup had no reported checks immediately after push, so no green claim applies. This final documentation commit only records the resource handoff; verify its own live SHA/CI on resume. Latest usage94%five-hour52%weekly; no further research launched after the stop gate.
