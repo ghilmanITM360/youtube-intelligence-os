@@ -2,20 +2,19 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current cross-account handoff — 2026-10-17
+## Current continuation checkpoint — 2026-10-17
 
-This section supersedes historical checkpoint paragraphs below.
+This section supersedes historical counts below.
 
-- FULL_POPULATION_RESEARCH_IN_PROGRESS. Live resource checkpoint: five-hour94%, weekly52%; context percentage unavailable. No more expensive research in this window.
-- Expanded158/966;808 not expanded, including10 handled members-only partial records. Title/actual image168 each; script/topic/individual virality158 each. Population transcript gaps11. All966 performance records were previously revalidated; current component matrix explicitly blocks six records lacking public performance sources.
-- Primate28/28 and Crayon30/30 complete. Lucas95/95 handled:85 expanded+10 members-only partial, no NOT_STARTED dimensions. Brimm15/44 expanded;29 remain, including one legacy IN_PROGRESS record that is not expanded complete.
-- Exact next: Brimm. `IW5ARyOjZYU`, “The Rise and Fall of Club 18-30”. Resume frozen master order. No extracted-but-unreviewed active unit remains.
-- This continuation handled38 IDs:23 Lucas (20 expanded+3 partial) and15 Brimm expanded. Batches LUCAS_012–017 and BRIMM_001–003 contain authored findings and receipts. Twenty-nine compact script paragraphs were formatted into readable prose without repeating reads or changing findings.
-- Workbook:158 expanded/168 title-image;966 population rows,186 readings including legacy. Independent counts, title-status mutation/restore and formula-error scan passed. Native Excel recalculation untested. Visible snapshot identifies base Git HEAD plus exact JSONL hash, not the workbook’s later commit hash.
-- Fresh checks:16 research tests, both research validators,26 immutable source hashes, secrets0, whitespace clean. Finance validators run explicitly; general CI does not automatically cover them. Structural validation is not source-entailment review. Repository-wide tests not rerun for these research additions.
-- Branch research/finance-economics-intelligence, draft PR36 only. Pre-final base2a244c3080a4e4f8e1bb03f4fce7e1efaf9b840a aligned local/remote/PR; exact CI PASS run39040822702. Read final live SHA/CI after push; never apply this result to the later commit.
-- Three unrelated untracked folders, stash and other worktrees preserved. Raw evidence, immutable baseline and159-entry rate-limit ledger unchanged. No ASR, paid scraping, graph, full-video download, new branch/worktree/PR or merge.
-- Recover from committed batch files and authoritative JSONL, not /tmp helpers. Receipt locators/hashes preserve source recovery. Search-excerpt-only event references remain explicitly limited.
+- Expanded **173/966**, 793 not expanded including 10 handled members-only partial records. Title/actual image **183 each**; full stored script/topic/individual virality **173 each**. Brimm **30/44** expanded, 14 remain. Lucas95/95 handled, Primate28/28 and Crayon30/30 unchanged.
+- Exact next master-order ID: **fvmcFFRF2mE**, “How $1B Was Mistakenly Buried Beneath a Landfill”. No extracted-but-unreviewed unit remains.
+- BRIMM_004 adds15 consecutive records startingIW5ARyOjZYU. All full stored texts and actual images reviewed, with320px contact-sheet check; receipts/hashes committed. No audio/editing/private analytics certified.
+- Findings: Club18-30 historical closure RNS supports discontinuation, not sole GenZ causality; contradictory acquisition dates retained. Cruise/container system explanations remain typical. Brazil stored21.4%Argentina inflation conflicts official211.4%. Konbini1.96891x remainsTYPICAL, with gross-profit/revenue royalty denominator andkW/kWh issues. Chi-Chi’s employee-origin claim conflicts CDCgreen-onion investigation;2025revival announcement predates2026upload. Dutch ecommerce38.63996x versus same-country farms1.75962x and similar Israelflag-cartimage2.102x rejects national/visual formula alone. Ibiza0.20391x versus near-titleAmsterdam12.69872x; London7.51689x thumbnail500%priceincrease differs script280%. Strongreach doesnotvalidateclaims.
+- JSONL and all derived966CSVs reconciled at173expanded. Workbook remains previous158expanded/168title-image checkpoint, explicitly stale by15; refresh atBrimm44/44consolidation. No workbook recalculation claimed this batch.
+- Verification:16researchtests, bothresearchvalidators,26immutable sourcehashes, secrets0, whitespacepass. Structural validation is not source-entailment certification. Repository-wide tests not rerun for this research-only batch.
+- Recovery local/remote/PR matched966279359a8b5fb2f60775ae4c7fc464c143ec75; exact-headRepositoryvalidationPASSrun39041502806. Read laterSHA/CI live afterpush; earlierPASSdoesnotapplyto latercommit.
+- Latest live resources:five-hour8%,weekly43%;contextpercentage unavailable,no seriouswarning exposed. No stopthreshold reached; continue authorizedresearch afterpersisting thisunit.
+- Existing branch and draftPR36 retained;3unrelateduntrackedfolders,stash/worktrees,rawsources,baselineandrate-limitledger preserved. No graph,ASR,full-video download or new infrastructure.
 
 ## Recovery and identity
 
