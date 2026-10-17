@@ -10,6 +10,7 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 
 ## Completed checkpoint
 
+- CRAYON_001: **30/30 expanded reviews COMPLETE_LIMITED_EVIDENCE** (all stored transcripts read, all 30 images inspected, individual title/topic/script/virality interpretations, nine grouped and cached event-source receipts with per-video linkage and exclusions, Google Trends not attempted for these windows; no first-party metrics). Cross-video findings are in each virality record; channel-level association: reach vs like rate Spearman -0.62 and vs comment rate -0.58 (n=30, age-uncontrolled).
 - PRIMATE_001: **28/28 expanded reviews COMPLETE_LIMITED_EVIDENCE**. All 13 Shorts +15 long-form. Every stored text read, every actual mapped image inspected at 320px, individual title/topic/script/virality interpretations. 22 new images, six reused; receipts and four contact sheets tracked.
 - Current union: 79 distinct title readings, 54 distinct topic readings, 76 distinct visual readings, 41 distinct full-stored-text readings. Expanded rubric completion is 30. Prior excerpt-only reviews not upgraded.
 - Performance revalidated 966; 179 strong, 383 typical, 161 weak, 243 insufficient. Five-peer sensitivity 598/723 agreement. Automated metadata validation is distinct from 30 bespoke virality assessments.
@@ -19,9 +20,11 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 
 ## Exact next work
 
-Next master-order ID: **`AKrjI9m6fpk`**, Crayon Capital, Epstein Situation Explained Like You're 5. Current channel batch: **all 30 Crayon Capital IDs in VIDEO_MASTER order**. NVIDIA `1GowFTjbUnk` and Petrodollar `9r-45QPLl-Y` have complete limited-evidence expanded reviews. All 30 actual titles/images inspected; remaining 28 expanded records in progress. Reuse its prior full reads/title/image reviews; extend to expanded rubric. Stable next-ID advances only when record statuses justify it. Primate completed channel is skipped when encountered later.
+Next master-order ID: **`--nI-29Awuc`**, Lucas Grant (95 videos, first in frozen master order after the completed Primate and Crayon batches), POV: You Choose a Trade Over College. Crayon Capital is **30/30 expanded reviews COMPLETE_LIMITED_EVIDENCE** (CRAYON_001); Primate **28/28**. Expanded-complete total **58/966**; 908 outstanding. Remaining channel populations by master order: Lucas Grant 95, Matty Invests 94, Carl Invests 80, Mr. Finance 65, Bob Invests 57, Brimm. 44, Sonny Finance 39, Dark Ledger 38, Money Life POV 20, Shaami Finance 13, Nick Invests 363 (counts include IDs with legacy in-progress rows; read VIDEO_COMPLETION_MATRIX.csv for the exact IDs).
 
-After Crayon, continue remaining channels in frozen master order, batches approximately 20–40, until all 966 individual reviews handled. Remaining public thumbnail retrieval includes 159 missing canonical URL fields; never edit registry to fill research-derived fallbacks. Recover metrics where defensible without substituting current snapshots into old cohorts. Eleven transcript source gaps remain visibly blocked while other dimensions proceed.
+Continue remaining channels in frozen master order in batches of about 20 to 40, skipping expanded-complete IDs, until all 966 individual reviews are handled. Author per-video records directly into a new `audit-batches/<CHANNEL>_00N.json` (same shape as CRAYON_001.json: `reviews` with unique Video_IDs, statuses, title/thumbnail/topic/script/virality/event blocks), add shared event evidence once to `audit-batches/EVENT_SOURCES.json`, then run `build_audit_966.py` and the validators. For videos with INSUFFICIENT_DATA performance there is no PERFORMANCE_SENSITIVITY.csv row, so omit that source ref and keep a non-empty `peer_comparison_ids` for the title block. Remaining public thumbnail retrieval includes 159 missing canonical URL fields; never edit registry to fill research-derived fallbacks. Eleven transcript source gaps remain visibly blocked while other dimensions proceed.
+
+The filterable XLSX (`FINANCE_966_VIDEO_INTELLIGENCE.xlsx`) has **not** been regenerated since the Primate checkpoint; regenerate it at the next larger checkpoint with the workbook builder below. The CSV/JSONL views are current.
 
 ## Validation and rebuilding
 
@@ -47,8 +50,8 @@ Live resources last checked: five-hour 29% used, weekly 35% used; context UNKNOW
 
 ## Latest continuation additions
 
-CRAYON_001: 30 packaging records; two expanded complete, 28 pending. 27 new images and three reused, three contact sheets. Keep title-image-to-content alignment pending unless full stored script was reviewed. Preserve prior full reads for Epstein, Rockefeller and Margin Call; extend missing fields without rerunning old discovery.
-
 LEGACY_THUMBNAIL_RECOVERY_001: 159 IDs tracked; first request `-UdMJ-EtLDI` returned HTTP 429, 158 not attempted. New requests stopped, no retry/bypass. Do not treat these as permanently unavailable or repeat immediately. All other research can continue from local evidence.
 
-First checkpoint ad9326b was pushed and exact-head CI passed (run 38924569360). This is historical after the next commit; verify final HEAD independently. Final current SHA/CI belongs in PR #36.
+Corrections made while finishing Crayon: the earlier thumbnail record for `xhbukTTkwJY` read the text as 'MADDOFF'; the stored image shows 'MADOFF' and the record is corrected.
+
+Historical pushed SHAs: ad9326b and 5bc8944 (exact-head CI passed for ad9326b, run 38924569360). The Crayon completion commit follows; verify final HEAD independently. Final current SHA/CI belongs in PR #36.
