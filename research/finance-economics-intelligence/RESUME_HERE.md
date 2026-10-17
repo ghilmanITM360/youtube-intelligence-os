@@ -11,14 +11,16 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 ## Completed checkpoint (current authoritative counts)
 
 - Primate 28/28 and Crayon 30/30 expanded-complete; reused unchanged.
-- Lucas LUCAS_001 through LUCAS_011: 65 expanded + 7 members-only title/image-only = 72/95 handled; 23 remain.
-- Total **123/966 expanded COMPLETE_LIMITED_EVIDENCE**, 130 title + 130 actual-image reviews, 123 script/topic/virality reviews. Six handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
+- Lucas LUCAS_001 through LUCAS_012: 68 expanded + 7 members-only title/image-only = 75/95 handled; 20 remain.
+- Total **126/966 expanded COMPLETE_LIMITED_EVIDENCE**, 133 title + 133 actual-image reviews, 126 script/topic/virality reviews. Seven handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
 - All 966 performance classifications were previously revalidated: 179 strong, 383 typical, 161 weak, 243 insufficient. Metadata revalidation is not an individual virality assessment.
 - JSONL/matrix/derived CSVs are current; workbook refreshed at the LUCAS_007 checkpoint (112 expanded, 118 title/image). No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
 
 ## Exact next work
 
-Next master-order ID: **`iOoq5wq9sYQ`**, Lucas Grant, "POV: Your Life Driving The Same Car For 10 Years". LUCAS_011 handled fHHRhGN51OY, gLO_HgkYbfc and iDJl5oCXrFg. Total **123/966 expanded**, 130 title/image, 123 script/topic/virality; Lucas **65 expanded + 7 blocked = 72 handled**, **23 remain**. Skip existing batch IDs. Primate28/28 and Crayon30/30 unchanged. Remaining population not expanded:843; seven handled partial records among those843.
+Next master-order ID: **`l-w__xg_L8c`**, Lucas Grant, "POV: Your Money Was Doubling This Whole Time — Nobody Told You". LUCAS_012 handled iOoq5wq9sYQ, kCoh9LCmurQ and kLdJtVPyCMc. Current126/966 expanded,133 title/image,126 script/topic/virality; Lucas68 expanded+7 blocked=75/95 handled,20 remain. Population840 not expanded, including seven handled partial records. Workbook remains at112 expanded pending consolidation.
+
+LUCAS_012: same-car iO TYPICAL0.534x versus next-day same-house rk STRONG13.991x at nearly identical exposure age: persistence framing alone does not discriminate. Car wealth ladder kC TYPICAL0.732x reverses expected ownership payoff into chauffeured attention; large portfolio/business jump and guaranteed collectible gains remain unsupported. $500/month kLd TYPICAL0.575x despite15,152absoluteviews: normalized performance differs from raw reach. Stored ASR has49,233 versus150Kcontributions+259Kgrowth; missing digits plausible, not silently corrected.30%pricefall buys42.86%more shares at fixed cash, not30%. All three full stored scripts read once and canonical thumbnails inspected at320px. Current YouTube appeal/engagement/satisfaction and external-factor guidance registered as questions, not measured competitor private signals. No verified publication-day catalyst or historic Trends series.
 
 LUCAS_011: fH old-money TYPICAL1.219x, gLO5rules WEAK0.397x, iDJincome-trap WEAK0.347x. Generic rules/automation are not sufficient: payday_XSTRONG2.998x and next-day cWxSTRONG3.305x counter gLO. fH eventually sells limited shares for family medical bill, counterexample to literal never-sell. Fed2023report confirms cited age-wealth figures are2022family cohorts, not currentindividualbenchmarks. IRSgiftFAQ confirms narrow19K2025/2026limit withfilingexceptions. iDJ's early50versuslate500superiority is not supported: at7%nominalmonthly to65,22start50/month~163806 versus40start500/month~405036. Rate/horizon assumptions explicit, not forecast or reach explanation.
 
@@ -97,3 +99,5 @@ LUCAS_008/009 pushed9e0aaa95bcb8a49ab6ec0ef07056af189a6bb595, local/remote/PR ve
 LUCAS_010 pushedb2bcf737836143153df2ee9c302aef421ecee64f, local/remote/PR verified; exactCI not yet reported atthatcheck. This continuation has handled21consecutiveIDs:20expanded+1members-only. Workbook refreshedonceat112expanded; currentJSONL/CSV123. Livefive-hour39%,weekly43%beforeLUCAS_011; contextpercentageunavailable. No resource threshold claimed. Furthernormalresearchremainsauthorized; Lucas/966missionunfinished.
 
 Persistence correction: the by_Ah5cDyP8 canonical image was fetched in LUCAS_009, not reused; its receipt was committed but the image remained untracked. The LUCAS_011 checkpoint includes the missing image file. All registered image paths and hashes validate locally.
+
+Continuation live check: five-hour47%, weekly44%; context percentage unavailable. Starting0411e237 local/remote/PR aligned; exact-head CI passed run39031003588. No resource stop gate reached. LUCAS_012 is an atomic research unit; continue normal authorized research after persistence.
