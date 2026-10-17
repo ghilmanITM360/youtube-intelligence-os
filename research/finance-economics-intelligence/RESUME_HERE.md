@@ -12,13 +12,15 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 
 - Primate 28/28 and Crayon 30/30 expanded-complete; reused unchanged.
 - Lucas LUCAS_001 through LUCAS_017: 85 expanded + 10 members-only title/image-only = 95/95 handled; zero Lucas IDs remain.
-- Total **148/966 expanded COMPLETE_LIMITED_EVIDENCE**, 158 title + 158 actual-image reviews, 148 script/topic/virality reviews. Ten handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
+- Total **153/966 expanded COMPLETE_LIMITED_EVIDENCE**, 163 title + 163 actual-image reviews, 153 script/topic/virality reviews. Ten handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
 - All 966 performance classifications were previously revalidated: 179 strong, 383 typical, 161 weak, 243 insufficient. Metadata revalidation is not an individual virality assessment.
 - JSONL/matrix/derived CSVs and workbook reconciled at Lucas completion LUCAS_017 (143 expanded, 153 title/image). No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
 
 ## Exact next work
 
-Next master-order ID: **`4WWYlZYBojk`**, Brimm., "Why Cheap Gyms Are Actually Genius". BRIMM_001 handled -w_MYe_EjbA,0kT4-532n8I,1nUpWkBuAKw,2IB-i3qoZmo,2JwER92TJm4. Current148/966expanded,158title/image,148script/topic/virality;818notexpanded including10handledpartialrecords. Lucas95/95handled unchanged. Workbook explicitlyLucascompletion143expanded/153title-image, nowfivebehindJSONL; counts/sourcehashvisible.
+Next master-order ID: **`7vcwTykGUkM`**, Brimm., "How Private Equity Is Quietly Taking Over Music Festivals and Nightlife". BRIMM_002 handled4WWYlZYBojk,4rY01Q-9rvY,55XwQLW-Vu0,6-pxbfLfGGU,76OdJsc0V5Q. Brimm10/44expanded. Total153/966expanded,163title/image,153script/topic/virality;813notexpandedincluding10handledpartialrecords. Lucas95/95handled unchanged. Workbook remainsvisibleLucas143expanded/153title-image snapshot, tenbehindcurrentJSONL.
+
+BRIMM_002:Sharkdesire STRONG3.290x,IKEA TYPICAL1.106x,Uniqlo TYPICAL0.807x,gym TYPICAL1.298x,Oktoberfest WEAK0.270x. Near-titleUniqloquietstoretypical versuswlvquietstoreSTRONG62.487x rejectsheadlineformulaaswinnerdeterminant. Gymmembership/concurrentcapacityratioisnotfraudulentoversellingproof. Official2025festival6.5Mliters/16daysmatchesnarrowfigure;97.5Mbeerrevenuebeforecostnotprofit. Oct30upload25daysafterclose, notmeasuredseasonalityeffect. SharkFeb11,2025launch349.99and24hourfreezeverified; campaign70Mimpressions notcompetitorvideoanalytics. Fivefullstoredscripts/imagesreviewed, noactualediting/audioinspection.
 
 BRIMM_001:NorthKorea STRONG2.644x versusBritaincrime WEAK0.486x,emptySpain WEAK0.236x,GreyGoose WEAK0.229x,Lisbonnomads TYPICAL0.647x. Hiddenmechanism/nationalnegativity spanperformance; comparetourismAthens/AmsterdamstrongversusIbizaweakwithoutinferringcauses. PrimaryDOJconfirmsChapman102months/17M+scheme/309UScompanies; revenuesnotnetDPRKincome. BOKofficialsearch supports3.7%2024estimate, nothouseholdprosperity. PortugueseATrepealJan2024withlegacy/transitionaleligibilityqualifiesblanketNHRclaimatDec2025. Bacardiownerpageconfirmsdates/origin, notfraud/qualityequivalence. Spain1979death/133%pensionstorederrorsflagged,notrepaired. NCAexcerptonlygeneralportexploitation;exactcrimepercentagesunverified. Fullfive storedtexts andactualimagesreviewed; noaudio/editingorprivateanalyticsinvented.
 
@@ -135,3 +137,5 @@ LUCAS_016 pushed37aa572; verifyfullSHA/CI. Latestlive72%five-hour48%weekly, cont
 Lucas completion workbook:966populationrows,173readingsincludinglegacy. Coverage153/153/143/143/960/143 reconciled withJSONL andexportedcachedvalues; filtersA4:U970 andA4:L177. Countmutation/restore andformulaerrorscanpass; renderedCoverageinspected. BaseHEAD37aa57276d99e170b6ffa7141f77b22af02b3c9d plusLUCAS_017data, sourcehash8e47b10f366c53b501f5ded7f1c0aa744acd731e1ac17081a42bed4abce4dd9b. NativeExcelrecalculationuntested. All95LucasIDs individuallyhandled;85expanded10memberspartial. NextBrimm-w_MYe_EjbA.
 
 Lucascompletioncommit03c54d93ae6fcf499d8458b7164ec59f2089046f local/remote/PRaligned;exact-headCIpassedrun39036304390. BRIMM_001 prebatch75%five-hour49%weekly;contextunavailable. No stopgateatthetime; continueauthorizedbatches.
+
+BRIMM_001 pushed2280d24; verifyfullSHA/CI. BRIMM_002prebatch79%five-hour49%weekly;contextpercentageunavailable. Continueuntillivestopgate.
