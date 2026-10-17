@@ -11,14 +11,16 @@ Immutable population: `audit-baseline/VIDEO_IDS.csv`, 966 IDs across 13 channels
 ## Completed checkpoint (current authoritative counts)
 
 - Primate 28/28 and Crayon 30/30 expanded-complete; reused unchanged.
-- Lucas LUCAS_001 through LUCAS_014: 74 expanded + 9 members-only title/image-only = 83/95 handled; 12 remain.
-- Total **132/966 expanded COMPLETE_LIMITED_EVIDENCE**, 141 title + 141 actual-image reviews, 132 script/topic/virality reviews. Nine handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
+- Lucas LUCAS_001 through LUCAS_015: 77 expanded + 9 members-only title/image-only = 86/95 handled; 9 remain.
+- Total **135/966 expanded COMPLETE_LIMITED_EVIDENCE**, 144 title + 144 actual-image reviews, 135 script/topic/virality reviews. Nine handled members-only records remain component-blocked; 11 population transcript gaps remain. Legacy readings/excerpts are separate and do not count as expanded completion.
 - All 966 performance classifications were previously revalidated: 179 strong, 383 typical, 161 weak, 243 insufficient. Metadata revalidation is not an individual virality assessment.
 - JSONL/matrix/derived CSVs and workbook reconciled at LUCAS_013 (129 expanded, 136 title/image). No first-party analytics, measured CTR/retention/impressions, or causal view explanations exist.
 
 ## Exact next work
 
-Next master-order ID: **`qkyhSeiQizw`**, Lucas Grant, "POV: You Choose Paying Off Your Mortgage Over Investing — It Changes Everything". LUCAS_014 handled miTYqqZnrXE,mlfYGGSFNBg,okehASW4zOY plus members-only p26tUA4TawM/q8ZdQ4OsD7U. Current132/966 expanded,141 title/image,132 script/topic/virality; Lucas74 expanded+9 blocked=83/95 handled,12 remain. Population834 not expanded including nine partial records. Workbook is explicitly snapshotLUCAS_013,129 expanded/136 title-image, three expanded and five title/image behind current JSONL.
+Next master-order ID: **`sUtNetxxNvg`**, Lucas Grant, "POV: You Finally Realize Car Payments Are Not Normal — Nobody Talks About This". LUCAS_015 handled qkyhSeiQizw,rkGn4RNQJC0,sLyCSVEObig. Current135/966 expanded,144 title/image,135 script/topic/virality; Lucas77expanded+9blocked=86/95handled,9remain. Population831 not expanded including nine partial records. Workbook remains explicitlyLUCAS_013snapshot129expanded/136title-image; refresh again afterLucascompletion.
+
+LUCAS_015:qky795views at2.48days remainsINSUFFICIENT_DATA, notweak; script admits mortgageprepaymentliquiditycrisis but2340*12*25=702K versusstored72K and payofftimelineunreconciled. rkhouse STRONG13.991x contrasts prior-daysamecar0.534x atnearlysameage; titleformula/persistencealoneinsufficient. rk190K5.9%1289monthlymodel givesyear15~87.7K, notunder35K;2.9%30yearinitialinterestshare58.1%, notuniversal75–80%. Strongreach doesnotvalidateclaims. sLy100K TYPICAL0.690x hasrepair/identityarc but3year100Kledger and6yearframeunreconciled. Threefullstoredscripts andactualimagesreviewed; qkyendingunfinished. Nohistoricaldemand/privateanalyticsinvented.
 
 LUCAS_014: holdingcompany mi TYPICAL0.548x; broad homeless-to-GodTier mlf WEAK0.305x; disclosurewarning oke TYPICAL1.983x (not rounded toSTRONG). Extreme wealth/ladder/secrecy cannot independently distinguish tiers. mi stated8%equity304K versus90,412.18cash+40Kinvestor leaves173,587.82 gap beforefees; historical officialSBA8standby rule verified and differs from two-year story. oke425monthly25years7%nominalmonthly~344,280 mathematicallyfits projectedgap, but hypothetical does not verify causalvisibilitytax;400monthlystart cannot establish112Kthree/fiveyearbalance withoutunreportedcapital. mlf emphasizes mutualhelp,financedreliabletransport andchanceequitywindfalls; not proof ordinarysaving guaranteesultrawealth. All three complete storedtexts read once, actual five images inspected; two members-only components remain blocked.
 
@@ -113,3 +115,7 @@ Consolidated LUCAS_013 workbook:966 population rows,156 readings including legac
 Prepared LUCAS_014 source evidence only (not counted complete):miTYqqZnrXE,mlfYGGSFNBg,okehASW4zOY,p26tUA4TawM,q8ZdQ4OsD7U images/read receipts are saved. First three stored text available; last two members placeholders. No ASR or retry. If interrupted, reuse these images/receipts and finish interpretations from exact nextmiTYqqZnrXE.
 
 LUCAS_013/workbook pushed3bead4c; verify full SHA/CI live. LUCAS_014 live beforestart57%five-hour46%weekly; contextpercentageunavailable. No stop gate claimed. Later full-population research remains authorized.
+
+LUCAS_014 pushede56cddb; exactSHA/CIreadlive. Livebefore015:61%five-hour47%weekly; contextpercentageunavailable. No resource stop gate reached atthatreading.
+
+Prepared LUCAS_016 evidence only:sUtNetxxNvg,sdGRQ2LRgoI,v1dvjQeymMc full stored texts extracted and images saved with receipts; not yet counted complete. Reuse these sources if interrupted. Live64%five-hour47%weekly; context unavailable.
