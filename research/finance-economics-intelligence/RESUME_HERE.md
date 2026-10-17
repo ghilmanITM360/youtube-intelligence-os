@@ -2,7 +2,20 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current continuation checkpoint — 2026-10-18 (CARL_003 and workbook)
+## Current continuation checkpoint — 2026-10-18 (CARL_004)
+
+This section supersedes historical counts below.
+
+- Expanded **232/966** (24.02%), **734 not expanded**, including 10 handled partials. Title/actual-thumbnail **242 each**; full stored script/topic/individual virality **232 each**. Carl Invests **45/80**,35 remaining; Brimm44/44,Primate28/28,Crayon30/30 complete; Lucas95handled (85expanded/10partial).
+- CARL_004 adds15 consecutive master-order IDs I9Yscvqrrt0 through WVTUWtwILXc. Exact next **XJU51PKcJz8**, Carl Invests, “What Actually Happens When You Invest $20,000?”. No previous completed review overwritten;951 outside-batch JSONL records unchanged against starting2e2c02599805146107c67c33bcb38e8e4d9b72f0.
+- Findings:500monthly55.63202x STRONG and100monthly160.54988x prior STRONG motivate testing accessible recurring-contribution maps;20khowto0.45171x WEAK is counterexample to numeric investing alone.40smilestones5.42539x versus40supgrades0.26516x and45signs0.96965x show age alone insufficient. Near-title lookingpoor1.15568x versus11.53184x; lookingrich0.34899x WEAK. Descriptive lifetime-rate/age/peer comparisons, not causal explanations or private audience metrics.
+- Credibility:20k allocation totals16000dollars/stated85%, not full20k;500monthlymillion requires match; finalSophie/Jenna balances unreconciled; three missed5k matches incorrectly valued as20yearannuity; mortgage wholeportfolio versus interest-only comparison inequivalent. HYSA30%shockplusfixed8% is not worst-case guarantee; latest preupload BLS CPI3.8%, not script2.7%. Revenue/profit/passivity confused in Japanese-machine list. Named/anonymous cases and ASR gaps qualified in individual records.
+- JSONL and7 derivedCSV files rebuilt. Excel remains at217expanded/227title-image: **15-review lag**, refresh at consolidated checkpoint. No workbook recalculation claimed forCARL_004.11transcript gaps,6performance blockers and all unavailable private metrics preserved; no historical Google Trends series recovered. Originalaudio/editing not certified.
+- Fresh16researchtests PASS; bothresearchvalidators PASS;26immutablehashes checked; registered source/image/reference checks PASS; secrets0 and whitespacecheck PASS. SevenCSV population IDs reconcile966 unique rows. Structural validation is not independent semantic entailment certification.
+- Recovery local/remote/PR2e2c02599805146107c67c33bcb38e8e4d9b72f0 matched; exact-headCI39077899587 SUCCESS. New batch commit follows; inspect its own head/remote/PR andCI after push, never reuse parentCI. ExistingdraftPR36/branch retained; unrelated folders/stash/worktrees/rawsource untouched.
+- Latest live five-hour45%, weekly7%; contextpercentage unavailable, no seriouscontextwarning exposed. No resource stop gate reached: continue after this atomic persistence.
+
+### Previous continuation checkpoint — 2026-10-18 (CARL_003 and workbook)
 
 This section supersedes all historical counts below.
 
