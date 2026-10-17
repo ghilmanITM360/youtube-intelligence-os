@@ -1,3 +1,5 @@
+Current checkpoint (2026-10-18, CARL_002):215/966expanded;225title/actualimage;215storedscript/topic/individualvirality;Carl28/80,Brimm44/44. Seven966rowCSVs/JSONLvalidated;Excel remains200/210 consolidated with15reviewlag. NextH5n8dGfAmVE. Details/source limitations in RESUME_HERE.md and audit-batches/CARL_002.json. Historical checkpoints below are superseded.
+
 Current continuation checkpoint: 200/966 expanded; 766 not expanded; title/image210 each; script/topic/virality200 each. Brimm44/44, Carl Invests13/80. Refreshed workbook200 expanded/227 readings, seven CSV populations reconciled. See RESUME_HERE.md for resource stop and exact next ID7sbA9WZrfHk. Historical report below.
 
 # Finance and Economics: 966-video audit

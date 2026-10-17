@@ -2,7 +2,20 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current continuation checkpoint — 2026-10-17 (CARL_001)
+## Current continuation checkpoint — 2026-10-18 (CARL_002)
+
+This section supersedes historical counts below.
+
+- Expanded **215/966**, **751 not expanded** (includes10 handled partials). Title/actual-image **225 each**; full stored script/topic/individual virality **215 each**. Carl Invests **28/80**,52remaining; Brimm44/44 unchanged. CARL_002 adds15 consecutive unique master-order reviews,7sbA9WZrfHk throughGjZX2jEziaI. No previous completed review overwritten;951 outside-batch JSONL objects verified unchanged.
+- Exact next **H5n8dGfAmVE**, Carl Invests, “Average 401K Balance By Age - 2026 Edition!”. No active extracted/unreviewed unit beyond this checkpoint. Continue in master order with a new batch.
+- Findings:100monthly160.54988xSTRONG versus9neverbroke0.30938xWEAK in same peer pool; quiet-firing0.12417xWEAK; lookingpoor11.53184xSTRONG versus near-title1.15568xTYPICAL; secretwealth sequel8.73004xSTRONG versus original24.31439xSTRONG. These are descriptive associations with public lifetime-rate/age limitations, not causal mechanisms or private appeal/engagement/satisfaction measurements.
+- Material credibility: enough-money script treats portfolio growth and new savings as alternatives, incorrectly concludes stoppingwork yields larger portfolio;4.7%historic30year withdrawal rule is not an indefinite guarantee. Bankcash script ignores M1 definition change and overstates universalcashcap; otherCarl videos endorse12month/1–3year reserves. Quiet-firing automaticseverance/no-legal-exposure claims contradicted byDOL/EEOC. Housing profitmargin confusedwithcapitalreturn; agent3%notfixed. Some2026limits outdated, while40supgrades correctlyquotes24500+8000. Survey population/units and ASR limitations explicitly recorded.
+- JSONL and7derivedCSVs reconcile966 unique IDs;215expanded/225title-image. SourceJSONLhash67d40496a459a68ed39a76ef3041f2897c8dcaeb7808946734868cb792dc5631. Excel remains deliberately consolidated at200expanded/210title-image; **15-review lag**, not current215coverage. Refresh at next consolidated checkpoint. No workbook recalculation claimed this batch.
+- Fresh16researchtests PASS; bothvalidators PASS;26immutablehashes;source/image/reference checks;secrets0;whitespacePASS. Semantic validator structural only. Transcriptgaps11,performanceblocked6; no audio/editing certification,privateanalytics or historicalTrendsseries. PrimarywebreceiptsmostlySEARCH_EXCERPT_ONLY.
+- Recovery local/remote/PR matched d5b90ed7ab96bdc0c6d227129bb7b1598942648d; exact-headCI SUCCESS run39045293162. This batch commit follows; inspect its own live Git/PR SHA and CI after push. Keep existingdraftPR36/branch,3unrelateduntrackedfolders,stash/worktrees/rawbaseline preserved.
+- LIVE before persistence: five-hour17%,weekly3%,contextpercentageUNKNOWN; no seriouscontextwarning exposed. Continue authorized research after atomic persistence; historical readings are not stop conditions or currentusage on future resume.
+
+### Previous continuation checkpoint — 2026-10-17 (CARL_001)
 
 This section supersedes historical counts below.
 
