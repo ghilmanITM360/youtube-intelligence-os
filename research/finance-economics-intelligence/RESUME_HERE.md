@@ -2,7 +2,21 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current continuation checkpoint — 2026-10-18 (CARL_006 resource stop)
+## Current continuation checkpoint — 2026-10-18 (CARL_007)
+
+This section supersedes historical checkpoints below.
+
+- Expanded **259/966 (26.81%)**, **707 remaining**, including 10 handled partials. Carl Invests **72/80**, eight remaining. Title/actual thumbnail **269 each**; full stored script/topic/individual virality **259 each**. Brimm44/44, Primate28/28, Crayon30/30 complete; Lucas95 handled (85 expanded,10 partial).
+- CARL_007 adds ten consecutive IDs nWlaR6AnbuQ through s4w8cyfnXUA. Exact next **s_G83pcoOhE**, “Average Savings by Age in 2026 (You Might Be Doing Better Than Most Americans)”. No next acquired/unreviewed item. All ten stored transcripts extracted locally and read in bounded sequential character ranges; receipts record contiguous coverage and hashes. Actual saved images inspected individually. Original audio/ASR accuracy remains unverified.
+- Counterexamples: compounding threshold rnbg **51.38486x STRONG** versus saving threshold o2 **0.76652x TYPICAL**; ten-year retirement nW **1.07945x TYPICAL** versus100/500monthly strong. Average-salary nd **3.02327x STRONG** versus windfall ow **0.16343x WEAK**. Retirement-lie og **0.20843x WEAK** despite genuine April1 survey context; SpaceX IPO qf **0.99004x TYPICAL** despite genuine June12 debut. Public normalized performance is descriptive, not causal packaging proof.
+- Material discrepancies: rnbg contributions108k stated18k, Lisa growth75% not99%; qs actual thumbnail18M unsupported by1.4–1.8m script and HSA55 catch-up counted from50; o2 SSA offset900k should300k not600k; qym50k/7%/72 loan852.45 not750, coffee time16.67 not24; qf566b terminal revenue assumes unstated~8x sales multiple and crash chart unverified; ow growth-only conversion tax24162 not30762 and inherited-basis/FDIC/Roth-heir caveats. Full individual reviews retain qualifications.
+- Eleven transcript-source gaps, ten handled partials and six performance blockers preserved. Historical Google Trends series and privateCTR/impressions/retention/satisfaction unavailable. Primary receipts often search-excerpt-only; S1 numerical-table access gap explicit, no endpoint retry loop.
+- JSONL and seven CSVs reconcile966 unique IDs;956 outside-batch JSONL records unchanged against8acec59731ee58bc4a2a7f394af7a2c689c17c69. Both validators and16research tests PASS;26immutable hashes checked. Structural validation is not semantic entailment certification. Secrets/whitespace rechecked before commit.
+- Excel remains at249expanded/259title-image: **ten-review lag**, refresh at Carl consolidation. No workbook recalculation claimed forCARL_007.
+- Recovery local/remote/PR8acec59731ee58bc4a2a7f394af7a2c689c17c69 matched; its exact-headCI39080663073 SUCCESS. New commit identity/CI must be checked after push. Existing draft PR36 remains open; no merge. Three unrelated folders, stash/worktrees and source baselines preserved.
+- Fresh LIVE five-hour16%, weekly16%; context percentage unavailable, no new truncation warning. Continue remaining eight Carl records after atomic persistence; no resource stop gate reached.
+
+### Previous continuation checkpoint — 2026-10-18 (CARL_006 resource stop)
 
 This section supersedes historical checkpoints below.
 
