@@ -2,7 +2,15 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current continuation checkpoint — 2026-10-18 (CARL_008 consolidated resource stop)
+## Current recovery checkpoint — 2026-10-18 (no new research; explicit truncation gate)
+
+- Recovery verified local/origin/PR head `c6fbd77af9403cf4f0b771b4a55b10c2729c9fd4`, existing branch, OPEN DRAFT PR36; exact-head CI39114484625 SUCCESS. Tracked tree was clean; three unrelated untracked folders preserved.
+- Authoritative JSONL freshly counted:966 unique IDs;267 expanded (27.64%),699 remaining;277 title/thumbnail,267 script/topic/virality. Carl80/80; Nick0/363. No audit records, source evidence, CSVs or workbook modified. Workbook remains at267 expanded per consolidated checkpoint below; no recalculation or validators rerun during this recovery-only operation.
+- LIVE usage at recovery: five-hour50%,weekly21%; context percentage unavailable. The checkpoint read unexpectedly returned an actual “Warning: truncated output”. Under the owner's explicit stop-on-truncation instruction, no expensive research was initiated. This is a tool-output gate, not a measured usage/context exhaustion claim.
+- Exact next remains `-CbNGP9H4xw`, Nick Invests, “Once You Get Money, Upgrade These 10 Things Immediately”. No image/transcript acquisition or review started. Eleven transcript-source gaps, ten handled members-only partials, six performance-source blockers and unavailable private metrics unchanged. Read the next consolidated section only in bounded chunks if details are needed.
+- This handoff-only commit follows the verified research head above. Inspect its own live HEAD/origin/PR and CI; do not transfer parent CI success to this new documentation commit.
+
+## Previous consolidated continuation checkpoint — 2026-10-18 (CARL_008 consolidated resource stop)
 
 This section supersedes historical checkpoints below. Read this section only for recovery; do not reload the historical handoff.
 
