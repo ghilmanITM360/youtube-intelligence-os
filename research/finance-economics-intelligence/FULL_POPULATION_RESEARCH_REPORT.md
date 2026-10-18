@@ -1,3 +1,13 @@
+## Latest continuation — 2026-10-18: Nick14/363; 281 expanded
+
+Fourteen individually authored reviews added in NICK_001/002/003; 281/966 expanded (29.09%), 685 remaining, title/actual-image291 each. Full stored script/topic/virality281 each. Carl, Brimm, Primate, Crayon complete; Lucas95 handled including10partial. Next14gilFEp_Iw, no reading begun. Details and primary source receipts reside in the batch JSON and EVENT_SOURCES; read receipts certify contiguous stored-text coverage, not original audio.
+
+Payday4.33976xSTRONG contrasts2030doom0.4549xWEAK/basicliteracy0.32143xWEAK and upgrade1.60821xTYPICAL. Actual inspected white/cartoon templates and financial anxiety occur across different outcomes. Realestate1.98045x versusrentbuy0.66627x bothTYPICAL; paired images show categorical stock rejection versus neutral question, but age/distribution/topic differences prohibit causal interpretation. Genuine BOJ and jobs publication windows likewise produced typical frozen outcomes. Two new records have no defensible normalized tier (0.138-day upload and missing date); ratios/peer pools remain blank.
+
+Claims checked include debt-cohort retirement arithmetic, compound-value errors, selected survey denominators, hypothetical homeowner cashflow, flood coverage and loan-policy timing. Selected/reused social clips are not independent prevalence evidence. Five-year inflation projections, gross/net wages and real/nominal returns must remain distinct. Missing11transcripts/6performance-source blockers/10handledpartials/privateanalytics/Trends preserved.
+
+JSONL and allsevenCSVviews966uniqueIDs;952outside-sessionrecords unchanged. Fresh16tests/two validators and26immutablehashes PASS. Workbook refreshed281/291 with307legacy-inclusive readings, cachedsourcehash/counts/IDs and3previews verified; artifact recalculation tested, nativeExcel recalculation UNTESTED. Live90percentfivehour/28weekly resource stop. Exact next14gilFEp_Iw. See latest RESUME section for commit/CI verification instructions.
+
 ## Current continuation checkpoint — 2026-10-18 (CARL_008 consolidated resource stop)
 
 This section supersedes historical checkpoints below. Read this section only for recovery; do not reload the historical handoff.
