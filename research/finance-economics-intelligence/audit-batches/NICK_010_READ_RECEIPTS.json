@@ -71,5 +71,10 @@
       "access": "2026-10-18primarypage/searchsnippetorreusedreceipt",
       "observation": "retained2026IRSlimitsreused"
     }
-  ]
+  ],
+  "reproducible_calculations": {
+    "monthly_future_value": "FV=P*(1+r/12)**n+C*((1+r/12)**n-1)/(r/12); end-month contributions",
+    "coast": "FV(50000,1200,.05,120)*1.05**16=586514.8491601542 nominal; inflation not deducted",
+    "seed7": "50000*(1+.07/12)**120=100483.06883478165; annual compounding50000*1.07**10=98357.56786447832"
+  }
 }
