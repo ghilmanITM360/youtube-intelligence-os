@@ -2,7 +2,17 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current recovery checkpoint — 2026-10-18 (no new research; explicit truncation gate)
+## Current continuation checkpoint — 2026-10-18 (NICK_001)
+
+- Expanded272/966 (28.16%),694 remaining; title/actual-thumbnail282 each; script/topic/virality272 each. Nick5/363; Carl80,Brimm44,Primate28,Crayon30 complete; Lucas95handled including10partial. NICK_001 contains exactly firstfive frozenNickIDs -CbNGP9H4xw through -bzaU4X9xb0. Exact next `-fuCWtCi4Mc`, “Let's Watch 36 Minutes of People Who Can't Afford the House They Bought”. Stored source exists34023characters; not yet read/reviewed at this checkpoint.
+- Allfive actual images inspected and full storedtexts read sequentially; NICK_001_READ_RECEIPTS records contiguous character ranges/hash. Firstimage acquisition was necessary: no existing local Nick image/receipt was found. Historical upload thumbnails/audio not certified. No previously completed review repeated.
+- Counterexamples: payday4.33976xSTRONG versus updatedJune payday0.76001xTYPICAL; upgrades1.60821xTYPICAL, realestate/stocks1.98045xTYPICAL versus rentbuy0.66627xTYPICAL. Exactpeerpool strong/typical/weak comparisons recorded; unreviewed peers explicitly title/performance-only. Actual realestate/rentbuy images compared; no causal packaging proof.
+- Factual findings: stocks100k30y10.4percent=1.946m not1.74m; leveragedexample19.5percent not17.6; renter3yearcash101400 evenbeforegrowth not80000;20yearmortgagebalance208k notnearlydead. May2026SHED63percent cash-equivalent contradicts mostcannot400 blanket framing. June16BOJ1percentdecision verifies6daypreuploadnewswindow, notviralitycausality. MissingTrends/privateCTR/retention/impressions/satisfaction unchanged;11transcriptgaps/6performanceblockers/10handledpartials preserved.
+- JSONL/sevenCSVs966uniqueIDs;961outsidebatchJSONLrecords unchanged against8b0fedf3580891f65ae39b25113559b924522ac4. Fresh16testsPASS; bothvalidators/sourcehash checks recorded in command logs before commit. Structuralvalidation not semanticcertification. Secrets/whitespace checked before commit.
+- Excel remains267expanded/277title-image: deliberate five-review lag; no workbookrecalculation claimed this batch. Refresh at consolidated checkpoint.
+- Recovery8b0fedf local/origin/PRmatched, ownexactheadCISUCCESS. New researchcommit follows; inspect its own SHA/CI afterpush. OPEN DRAFT PR36, existingbranch, untrackedfolders/rawbaseline/stash preserved. Latestlive5h60percent,weekly23percent; contextpercentage unavailable, no new truncation warning. Continue research after persistence; no resourcegate reached.
+
+## Previous recovery checkpoint — 2026-10-18 (no new research; explicit truncation gate)
 
 - Recovery verified local/origin/PR head `c6fbd77af9403cf4f0b771b4a55b10c2729c9fd4`, existing branch, OPEN DRAFT PR36; exact-head CI39114484625 SUCCESS. Tracked tree was clean; three unrelated untracked folders preserved.
 - Authoritative JSONL freshly counted:966 unique IDs;267 expanded (27.64%),699 remaining;277 title/thumbnail,267 script/topic/virality. Carl80/80; Nick0/363. No audit records, source evidence, CSVs or workbook modified. Workbook remains at267 expanded per consolidated checkpoint below; no recalculation or validators rerun during this recovery-only operation.
