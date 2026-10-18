@@ -2,7 +2,20 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Current continuation checkpoint — 2026-10-18 (NICK_021)
+## Current continuation checkpoint — 2026-10-18 (NICK_022–025)
+
+- Expanded **306/966**, 660 remaining; Nick Invests **39/363** expanded-complete. This continuation starts302 and adds4. Title/actual thumbnail317 each; full stored script/topic307 each; virality306; performance959. Previous302 expanded reviews unchanged; exactly4 JSONL records changed. Frozen master/source evidence unchanged.
+- Exact next **4KiTtL0OrPs** — Same Income, Different Outcomes: Rich vs Broke. Transcript reading has started in local scratch only; no authored review or acquired image yet. Do not count it. Continue immutable master order.
+- NICK_022–025 each has individual six-dimension analysis and READ_RECEIPTS with full contiguous stored-text ranges, canonical SHA256, original saved image and1280/320px inspection. Stored ASR is not audio certification. All4 COMPLETE_LIMITED_EVIDENCE; the broken retirement-statistic sentence in024 is recorded, not repaired.
+- Findings: schoolgap1.16413TYPICAL versus literacy4.25985STRONG and basics0.32143WEAK; inflation0.79661TYPICAL versus oldinflationraise0.12069WEAK and sameage millionaire4.29824STRONG; middleclasstraps1.7538TYPICAL versus older near-title0.14549WEAK; monthlywins0.69287TYPICAL versus samepoolfirst10004.1915STRONG/mindset0.46369WEAK. Public associations only, no causal packaging formula/private metrics. Exactpeerpool and topicalcomparators explicitly distinguished.
+- Credibility:022500monthly7%40years gives1.312m not13m;023380k/24k=15.83not14, USPSstamp78c onJune30/planned82cJuly12 not84c, coffee shrinkflation30% unsupported byBLS table.024Garcia350deficit andsecondincome7–10k arithmetic check, but household not observed median; retirement value absent.025payingprincipal withcash reduces both assets/liabilities, noinstant networthgain;4000annual8%30years453133 notover500k. Primaryweb receipt access scopes and timing limitations retained.
+- **Excel deliberate4-review lag:** workbook remains302expanded/313title-image. JSONL/sevenCSV views306/317; refresh at meaningful consolidation. No workbook recalculation performed this checkpoint. JSONL SHA256 `743d04e8f7b3e91f729924d2181bca0340cc228a1f6f66a3cd6ebd4bbf0518b5`.
+- Eleven transcript gaps, ten members-only partials, one separately handled missing-date performance-limited record and seven performance blockers unchanged. No invented historicalTrends/CTR/retention/impressions/satisfaction.26baselinehashes/fullauditvalidatorPASS, boundedresearchvalidatorPASS;16researchtests freshlyPASS;trackedsecretfindings0;whitespacePASS. Canonical-event field validation caught external URL misplacement in023; corrected to externalreceipt without inventing registered event ID.
+- Recovery local/remote/PR `84e9005e36b210c4419821ee6279263aca1ececd` match; its exact-headCI39132045040SUCCESS. Newcheckpoint commit ownhead/remote/PR/CI must be verified afterpush. Existingbranch andDRAFTPR36,three unrelateduntracked folders preserved.
+- Latest LIVE five-hour10%,weekly30%; contextpercentageUNKNOWN, no seriouscontextwarning. This is an intermediate atomic persistence, **not a resource stop**; continue automatically aftervalidatedpush.
+
+## Previous continuation checkpoint — 2026-10-18 (NICK_021)
+
 
 - Expanded302/966,664remaining; Nick Invests35/363 expanded-complete. This session296→302:6 newly complete plus1 separately handled performance-limited disposition. Other expanded unchanged: Carl80,Brimm44,Primate28,Crayon30,Lucas85. Title313/thumbnail313/script303/topic303/individualvirality302/performance959. Dimension counts intentionally differ.
 - Exact next: `3w6Ffj_21Z0` — The Money Skills School Never Taught You And Why It’s Costing You. No next transcript or thumbnail reviewed/acquired. Continue frozen master order.
