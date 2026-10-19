@@ -18,6 +18,8 @@
 | 14 | The reasons for visual choices (callbacks, metaphors, pops on keywords) | `ART_DIRECTION_INFERENCE` | no creator statement |
 | 15 | Music and SFX content | `NOT_VERIFIED` | unlistened; signal measured only |
 | 16 | The 38 Shorts and 10 long-form videos behave alike | `UNKNOWN` | 0 long-form videos analysed in this phase |
-| 17 | Population claims | `NOT_VERIFIED` | sample of 12 selected by views/diversity; 48 of 210 public videos are local |
+| 17 | Script sentences and the prop kit are recycled across Shorts, but scenes are re-composed rather than re-used as clips (`NgryCruZegs` vs `Qof71Ef-3EU`: ~40 % shared narration, same props, no frame correlation >= 0.90) | `MEASURED` (45x80 correlation) + `DIRECTLY_OBSERVED` | one pair tested in depth (and `DEgQTSsSX9U` vs `44ggG2I6JPY`: 1.6 % of frames >= 0.90); other pairs untested |
+| 18 | A blackboard-presenter composition recurs across Shorts | `MEASURED` (automatic; low-information frames) | 4 analysed videos match at correlation >= 0.985 (`44ggG2I6JPY`, `mT2hOLrCYSk`, plus three not yet authored); sparse frames give false positives, so treat as a lead |
+| 19 | Population claims | `NOT_VERIFIED` | sample of 12 selected by views/diversity; 48 of 210 public videos are local |
 
 Reuse of previous research: the Oct-12 corpus (`codex/casually-finance-forensic-research`) reports 11.2 shots/min for long-form and 7.2 shots/min for Shorts; these are `REFERENCE_SUPPORTED` and use a different unit (state-based shots), so they are not comparable with the 16-29 hard cuts/min measured here.

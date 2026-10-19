@@ -22,6 +22,8 @@ Flat colour fills with thick uneven black outlines; very simple faces (dot or ro
 ## 3. Reuse rules (measured pressure)
 In the sample the same characters recur across videos (country-map character in 8 of 10, presenter in 7 of 10, Earth in 3, official figure in 3) and props recur within a video. Plan for **8-15 new props and 1-3 new characters per video** on top of the permanent kit; a new scene must still communicate a new beat, not only a recolour.
 
+In the 2026-09 pair `Qof71Ef-3EU` / `NgryCruZegs` the same props, characters and even sentences recur but the scenes are rebuilt (no frame correlation >= 0.90), which is the pattern to copy: **keep a reusable kit, recompose every storyboard**, and do not rely on reusing rendered clips (the one exact clip reuse found is the money-rain overlay in `mT2hOLrCYSk`).
+
 ## 4. Technical specification
 - Canvas 1080x1920; stage safe area y 0.20-0.80 (banded) or full frame (full-bleed); no text within 0.10 of top/bottom.
 - Rig pivots: shoulder, elbow, neck; head swap by visibility. Expressions are separate head layers (avoid morphing).
