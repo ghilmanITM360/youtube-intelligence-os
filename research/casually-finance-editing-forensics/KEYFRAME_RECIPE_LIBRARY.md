@@ -1,4 +1,4 @@
-# Keyframe recipe library (PRELIMINARY; derived from 10 validated Shorts; original-production guidance)
+# Keyframe recipe library (PRELIMINARY; derived from 12 validated Shorts; original-production guidance)
 
 Conventions: timeline 24 fps; **1 frame = 41.7 ms**; "word onset W" = the ASR start of the keyword; `W-2f` = two frames before. Easing default is **linear** because 5 of 6 clean measurements were linear (see `OBSERVATIONS_VS_HYPOTHESES.md`); use ease-out only where noted. Reference IDs/times are Casually Finance sources for **private timing comparison only**; never reuse their pixels. Layers are listed bottom → top. Mobile rule: nothing meant to be read may be smaller than 0.028 of frame height.
 
@@ -45,7 +45,7 @@ Conventions: timeline 24 fps; **1 frame = 41.7 ms**; "word onset W" = the ASR st
 
 ## R08 Context transition (hard cut)
 - **Situation**: every scene change. **Layers**: whole stage replaced.
-- **States**: composition A on frame n, composition B on frame n+1, new objects all present on n+1 (stagger by 1 frame only if the layers are separate clips). **Timing**: cut at W-2f to W-4f (sample median -80 ms; p10 -199); at a pause end if present. **Keyframes**: none. **Sound**: unknown. **Mistakes**: dissolve; cutting before the previous caption chunk ends.
+- **States**: composition A on frame n, composition B on frame n+1, new objects all present on n+1 (stagger by 1 frame only if the layers are separate clips). **Timing**: cut at W-2f to W-4f (sample median -76 ms; p10 -204); at a pause end if present. **Keyframes**: none. **Sound**: unknown. **Mistakes**: dissolve; cutting before the previous caption chunk ends.
 
 ## R09 Narrative escalation
 - **Situation**: stakes rise or a theme is repeated. **Patterns**: rapid source montage (`Qof71Ef-3EU` f1936-2048: 8 pages in 3.7 s, holds 0.35-0.7 s, captions dropped); a branded overlay repeated at each 'billions' beat (`mT2hOLrCYSk` rain at 29.5, 46.6, 79.6 s); callback of the opening image (`Qof71Ef-3EU` 26.1 s).

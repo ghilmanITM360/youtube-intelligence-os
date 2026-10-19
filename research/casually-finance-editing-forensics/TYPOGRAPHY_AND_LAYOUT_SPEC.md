@@ -1,4 +1,4 @@
-# Typography and layout spec (PRELIMINARY, n = 10 Shorts; measured on 360x640 and 720x1280 sources)
+# Typography and layout spec (PRELIMINARY, n = 12 Shorts; measured on 360x640 and 720x1280 sources)
 
 All coordinates are fractions of frame width/height (0,0 = top-left). Exact typefaces, weights and hex colours are **UNKNOWN**: the sources are low-resolution H.264 and no font file was inspected. Do not infer a font name. Re-express in your own font and palette; do not reuse pixels.
 

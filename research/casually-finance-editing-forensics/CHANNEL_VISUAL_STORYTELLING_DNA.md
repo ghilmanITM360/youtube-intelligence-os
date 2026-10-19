@@ -1,4 +1,4 @@
-# Casually Finance — Visual Storytelling DNA (PRELIMINARY, n = 10 Shorts of 48 local; narration = unlistened ASR)
+# Casually Finance — Visual Storytelling DNA (PRELIMINARY; narrative shapes drawn from the first 10 Shorts, timing numbers from 12; narration = unlistened ASR)
 
 Sources: each video's `STORY_STRUCTURE.md`, `NARRATION_VISUAL_ALIGNMENT.csv`, `SCENE_TIMELINE.csv`. Narration phrases come from Whisper small.en (names and numbers uncertified; on-screen text is the better source). "Purpose" statements are `ART_DIRECTION_INFERENCE` unless the creator said it (no creator statement was found).
 
@@ -13,8 +13,8 @@ Sources: each video's `STORY_STRUCTURE.md`, `NARRATION_VISUAL_ALIGNMENT.csv`, `S
 8. **Pop-culture beat.** Meme photo, Avengers logo, Shaq dunk, The Office sign, pixel sunglasses appear as one-scene jokes (5 of 10 videos). Rights unverified; treat as inspiration only.
 9. **Closing line paired with an image of the thesis object**, not a summary card: builder figure (`7bm7XYssqlU`), crystal-ball figure (`RB5zVghPor8`), worried host over '+1.8%' (`7IMFHclDn8k`), black circle fading (`DEgQTSsSX9U`), newspaper reader (`44ggG2I6JPY`).
 
-## Narration-to-visual timing (MEASURED, n = 203 cuts, 427 caption words)
-- The cut or pop usually arrives **on or slightly before** the spoken keyword: hard cuts median -80 ms against the nearest ASR word onset (p10 -199, p90 +62); captions median +33 ms (79 % within ±100 ms).
+## Narration-to-visual timing (MEASURED, n = 238 cuts, 427 caption words)
+- The cut or pop usually arrives **on or slightly before** the spoken keyword: hard cuts median -76 ms against the nearest ASR word onset (p10 -204, p90 +67); captions median +33 ms (79 % within ±100 ms).
 - 10 of 33 cuts in `Qof71Ef-3EU` and 13 of 18 pauses in `7bm7XYssqlU` coincide with the end of a >=0.25 s pause: new phrase, new scene (`MEASURED`, one video each).
 - Reading holds: scene median 1.7-4.1 s across the sample; dense source pages in a closing montage were held 0.35-0.7 s (`Qof71Ef-3EU`, f1936-2048), i.e. too short to read and used as texture (`ART_DIRECTION_INFERENCE`).
 - Compositions reset on every hard cut; between cuts the composition only grows (no objects are removed except by the next cut), with exceptions: a character that slides out and back (`Es5c2MKzbDg`), a prop that slides behind a figure, a chart that is recoloured, and an opacity fade.

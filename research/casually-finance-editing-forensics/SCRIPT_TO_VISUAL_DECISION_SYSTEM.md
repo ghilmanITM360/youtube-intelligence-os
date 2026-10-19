@@ -1,4 +1,4 @@
-# Script-to-visual decision system (PRELIMINARY; design rules derived from observed co-occurrence in 10 Shorts)
+# Script-to-visual decision system (PRELIMINARY; design rules derived from observed co-occurrence in 12 Shorts)
 
 These are **our rules inferred from what the sample does** (`ART_DIRECTION_INFERENCE`), not the creator's rules. For each sentence in the script, pick the first matching row, then apply the recipe in `KEYFRAME_RECIPE_LIBRARY.md`. Timing: cut or pop at 2-4 frames before the keyword onset; one new idea per scene.
 

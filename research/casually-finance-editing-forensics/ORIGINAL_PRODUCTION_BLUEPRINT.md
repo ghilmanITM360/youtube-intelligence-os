@@ -1,6 +1,6 @@
-# Original production blueprint (PRELIMINARY; from 10 validated Casually Finance Shorts)
+# Original production blueprint (PRELIMINARY; from 12 validated Casually Finance Shorts, snapshot 2026-10-20)
 
-Purpose: produce **original** vertical explainers in Finance, Senior Health, Medical, History and other topics with comparable timing, structure and communication. This is a method, not a template to copy: use original characters, props, wording and sources. No finished video is made here. Companion files: `KEYFRAME_RECIPE_LIBRARY.md`, `ASSET_CREATION_SPEC.md`, `SCRIPT_TO_VISUAL_DECISION_SYSTEM.md`, `TYPOGRAPHY_AND_LAYOUT_SPEC.md`, `CLAUDE_CODE_ANIMATION_HANDOFF.md`. Everything below is derived from sample statistics (n = 10, depth-mixed) and from `ART_DIRECTION_INFERENCE`; none is a creator statement.
+Purpose: produce **original** vertical explainers in Finance, Senior Health, Medical, History and other topics with comparable timing, structure and communication. This is a method, not a template to copy: use original characters, props, wording and sources. No finished video is made here. Companion files: `KEYFRAME_RECIPE_LIBRARY.md`, `ASSET_CREATION_SPEC.md`, `SCRIPT_TO_VISUAL_DECISION_SYSTEM.md`, `TYPOGRAPHY_AND_LAYOUT_SPEC.md`, `CLAUDE_CODE_ANIMATION_HANDOFF.md`. Everything below is derived from sample statistics (n = 12, depth-mixed) and from `ART_DIRECTION_INFERENCE`; none is a creator statement.
 
 ## 1. Format targets (measured in the sample)
 | Parameter | Target | Sample evidence |
@@ -13,7 +13,7 @@ Purpose: produce **original** vertical explainers in Finance, Senior Health, Med
 | Static frames | 60-90 % | 75 % |
 | Words | 165-215 per minute; phrases ~3.6 words/s; pause ~0.3 s every ~4 s | measured |
 | Caption | append-by-word at onset +1 frame, chunks of ~5 words | median +33 ms |
-| Cut timing | 2-4 frames before the keyword onset | median -80 ms |
+| Cut timing | 2-4 frames before the keyword onset | median -76 ms |
 
 ## 2. Production pipeline (stages and gates)
 1. **Script**: one claim per sentence; write each sentence with its *visual verb* in the margin (see decision system). Gate: every number has a source and a unit.
@@ -23,7 +23,7 @@ Purpose: produce **original** vertical explainers in Finance, Senior Health, Med
 5. **Layer plan and keyframes**: choose layout (banded vs full-bleed, see typography spec), assign recipes R01-R13 to scenes.
 6. **Timeline data**: frame-based keyframes `{frame, target, property, value}` with linear easing by default; hard cuts = scene start frames; pops = visibility at frame n.
 7. **Render** deterministic (frame function of time); export 24 fps.
-8. **Verify**: run `scripts/forensic_features.py --asr` and `build_video_tables.py` on your own render: cut-to-word offsets (target median -80 ms, within ±150 ms), caption offsets (target within ±100 ms), frame duplicates (none unless intended), static-frame ratio.
+8. **Verify**: run `scripts/forensic_features.py --asr` and `build_video_tables.py` on your own render: cut-to-word offsets (target median -76 ms, within ±150 ms), caption offsets (target within ±100 ms), frame duplicates (none unless intended), static-frame ratio.
 9. **Human gates**: listen on a phone, read all captions, verify every number against its source, check meme/brand/photo rights.
 
 ## 3. Scene grammar (what a scene is)

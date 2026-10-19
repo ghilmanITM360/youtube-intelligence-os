@@ -122,6 +122,19 @@ with open(os.path.join(RDIR, "ASSET_FAMILY_LIBRARY.csv"), "w", newline="") as f:
                     "; ".join("%s(%d)" % x for x in a["roles"].most_common(4)), a["layer"], a["reuse"],
                     "Asset IDs are analyst labels assigned per video; cross-video ID matches indicate the same visual family/character as judged by the reviewer, not a verified identical file. Do not copy source pixels."])
 
+pooled = {}
+for label, sel in (("ALL", lambda r: True), ("DEPTH_A_B_ONLY", lambda r: r["Depth"] in ("DEPTH_A", "DEPTH_B"))):
+    tot = Counter(); N = 0
+    for r in rows:
+        if not sel(r):
+            continue
+        q = json.load(open(os.path.join(RDIR, "videos", r["Video_ID"], "QA.json")))
+        tot.update(q["derived_statistics"]["frame_classes_frames"]); N += q["coverage"]["frames_decoded"]
+    mot = N - tot["STATIC_HOLD"]
+    pooled[label] = {"videos": sum(1 for r in rows if sel(r)), "frames": N, "moving_frames": mot,
+                     "pct_of_all_frames": {k: round(100 * x / N, 1) for k, x in tot.items()},
+                     "pct_of_moving_frames": {k: round(100 * x / max(mot, 1), 1) for k, x in tot.items() if k != "STATIC_HOLD"}}
+json.dump(pooled, open(os.path.join(RDIR, "evidence", "pooled_motion_classes.json"), "w"), indent=1)
 vj = {"generated": "2026-10-20", "validated_videos": valid, "failed_validation": invalid, "validated_count": len(valid), "local_unique_videos": 48, "public_videos": 210,
       "claim": "NOT 100 PERCENT COMPLETE: %d of 48 local videos have per-video forensics; all remain audio-listening BLOCKED and single-reviewer" % len(valid),
       "depth_mix": dict(Counter(r["Depth"] for r in rows)), "layout_mix": dict(Counter(r["Layout_Era"] for r in rows)),

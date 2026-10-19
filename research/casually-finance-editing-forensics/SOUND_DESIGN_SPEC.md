@@ -1,4 +1,4 @@
-# Sound design spec (PRELIMINARY, n = 10 Shorts) — **MEASURED SIGNAL ONLY; NOTHING HERE WAS LISTENED TO**
+# Sound design spec (PRELIMINARY, n = 10 Shorts for audio statistics; snapshot 2026-10-20) — **MEASURED SIGNAL ONLY; NOTHING HERE WAS LISTENED TO**
 
 The agent that produced this research has no auditory capability. Everything below comes from signal measurement (50 ms RMS windows, band energies, spectral flux, spectrograms) and Whisper small.en ASR. Statements about music, sound effects, tone, accent, originality, licensing or software are `NOT_VERIFIED`. A human must listen before any audio decision is copied. Absence of a detected transient is `NOT_DETECTED`, not `ABSENT`.
 
