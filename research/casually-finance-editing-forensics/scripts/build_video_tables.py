@@ -135,6 +135,25 @@ def main(vid, ev_root):
                                "desc": "Detected %s change of %s %% of the frame over %d frame(s); mechanism not individually resolved." % (x["auto_hint"], round(100 * float(x["peak_changed_frac_of_stage"]), 1), int(x["n_active_span"])),
                                "mclass": "INDET", "geometry": "", "easing": "not measured", "measure": "", "evidence": x["event_id"],
                                "label": "MEASURED (detection only)", "confidence": "LOW", "ambiguity": "not classified", "trigger": "", "after": ""})
+        if bands_cfg.get("auto_fill"):
+            # second pass: runs of large (>=1000 px) stage changes still outside any event become UNRESOLVED_CHANGE too
+            cov_ = np.zeros(gtmp.shape[0], bool)
+            for e in events:
+                cov_[max(e["f0"] - 3, 0):min(e["f1"] + 4, gtmp.shape[0])] = True
+            big_ = [i for i in range(1, gtmp.shape[0]) if int((np.abs(gtmp[i, a0:a1] - gtmp[i - 1, a0:a1]) > 16).sum()) >= 1000 and not cov_[i]]
+            runs_, cur_ = [], []
+            for i in big_:
+                if cur_ and i - cur_[-1] > 3:
+                    runs_.append(cur_); cur_ = []
+                cur_.append(i)
+            if cur_:
+                runs_.append(cur_)
+            for r_ in runs_:
+                sc_ = next(s2 for s2 in scenes if s2["f0"] <= r_[0] < s2["f1"])
+                events.append({"id": "auto", "scene": sc_["id"], "f0": r_[0], "f1": min(r_[-1], sc_["f1"] - 1), "op": "UNRESOLVED_CHANGE",
+                               "target": "stage region (large change run)", "desc": "Large stage change over %d frame(s); mechanism not individually resolved." % (r_[-1] - r_[0] + 1),
+                               "mclass": "INDET", "geometry": "", "easing": "not measured", "measure": "", "evidence": "stage px >= 1000",
+                               "label": "MEASURED (detection only)", "confidence": "LOW", "ambiguity": "not classified", "trigger": "", "after": ""})
         events.sort(key=lambda e: (e["f0"], 0 if e["op"].startswith("HARD_CUT") else 1, e["id"]))
         for k, e in enumerate(events, 1):
             e["id"] = "ME%03d" % k
