@@ -1,0 +1,148 @@
+{
+  "batch_id": "NICK_124_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "MBtwn6xwamg",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "fcbc2b55162a4bb413ee8c3efba4a8dc96be8b18f44325b0cdbf3ba6f7f247ca",
+      "character_count": 18889,
+      "source_word_count": 3533,
+      "coverage_token_count": 3479,
+      "read_character_ranges": [
+        [
+          0,
+          11000
+        ],
+        [
+          11000,
+          18889
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED",
+      "archive_member": "021_MBtwn6xwamg_Why_250K_is_Halfway_to_1_Million_The_Actual_Math.txt",
+      "archive_member_sha256": "33a96aa97028d4c8ebf8035920d541b409bf02ffc56019300290df46455d8ba3",
+      "archive_member_bytes": 20471,
+      "archive_member_lines": 541,
+      "audio_verified": false,
+      "image_sha256": "1eb0b00e6911b10c3738f725316527b4506758e652be76032e3a14b1941ac45d",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/MBtwn6xwamg/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/MBtwn6xwamg/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "SCF dated family wealth",
+      "url": "https://www.federalreserve.gov/publications/october-2023-changes-in-us-family-finances-from-2019-to-2022.htm",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT; direct PDF extraction where stated",
+      "finding": "Median192900/mean1063700in2022dollars;notallindividualrankorretirementbalance."
+    },
+    {
+      "claim": "Fidelity period counterexample",
+      "url": "https://about.fidelity.com/data-and-insights/q4-2025-retirement-analysis",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT; direct PDF extraction where stated",
+      "finding": "2025yearendmean146400;141K/32800and558300needmatchedhistoricalrelease;notrefutedmerelybylaterdata."
+    },
+    {
+      "claim": "Hardship provider population",
+      "url": "https://workplace.vanguard.com/insights-and-research/perspective/how-america-uses-hardship-withdrawals.html",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT; direct PDF extraction where stated",
+      "finding": "Primaryarticleabout6%eligibleparticipants2025vs5%2024;notallAmericans."
+    },
+    {
+      "claim": "Vanguard 2026 report",
+      "url": "https://workplace.vanguard.com/content/dam/inst/iig-transformation/insights/pdf/has/how-america-saves-2026.pdf",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT; direct PDF extraction where stated",
+      "finding": "Web PDF extraction failed, but direct PDF download and pypdf targeted extraction succeeded: page 6 mean $167,970/median $44,115; pages 8/98 hardship6%; page99 leading reasons36% foreclosure/eviction and31% medical."
+    },
+    {
+      "claim": "Forecast limitations",
+      "url": "https://corporate.vanguard.com/content/dam/corp/research/pdf/isg_vemo_2026.pdf",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT; direct PDF extraction where stated",
+      "finding": "Direct PDF targeted extraction pages4/17 supports4%-5% U.S. stocks over5-10years, asofSept30,2025; narration4%-6% differs."
+    },
+    {
+      "claim": "Dated Goldman forecast",
+      "url": "https://www.gspublishing.com/content/research/en/reports/2024/10/18/29e68989-0d2c-4960-bd4b-010a101f711e.pdf",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT; direct PDF extraction where stated",
+      "finding": "2024dated3%annualizedUSequityforecastthrough2034;notcontemporaryconsensus."
+    },
+    {
+      "claim": "Lost decade index",
+      "url": "https://www.dimensional.com/hk-en/insights/a-tale-of-two-decades",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT; direct PDF extraction where stated",
+      "finding": "PrimarymanagerarticleJan2000-Dec2009annualizedS&P500-.95%;notpersonalcontributionpath."
+    },
+    {
+      "claim": "CAPE original reference",
+      "url": "https://www.econ.yale.edu/~shiller/data.htm",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT; direct PDF extraction where stated",
+      "finding": "Dataproviderlocated;exactrecordingdate42andrankingnotextracted."
+    },
+    {
+      "claim": "Retirement tax access",
+      "url": "https://www.irs.gov/retirement-plans/hardships-early-withdrawals-and-loans",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT; direct PDF extraction where stated",
+      "finding": "Tax/earlydistributionconditionsandexceptions;balanceisnotautomaticallyspendableaftertaxcash."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Independent log-annuity end-month rate/12 versus effectiveannualcoasting; deriveequal-timec/q125K;scenariosnotforecasts",
+      "results": {
+        "500_0.07_first": 19.560272065791263,
+        "500_0.07_second": 16.816471259932225,
+        "500_0.05_first": 22.5671098794317,
+        "500_0.05_second": 22.197736398158906,
+        "2000_0.07_first": 7.846219009225056,
+        "2000_0.07_second": 11.714053056566208,
+        "2000_0.05_first": 8.402625599956824,
+        "2000_0.05_second": 14.164484279474877,
+        "line_nominal7_monthly": 729.1666666666666,
+        "line_effective7_monthly": 706.7681734256593,
+        "Coast7_effective": 20.489536702117423,
+        "Coast7_monthly_nominal": 19.861911429335308,
+        "Coast6_effective": 23.79132209188375,
+        "million_real_2_5inflation20": 610270.9428588309,
+        "million_real_3inflation20": 553675.7541863344,
+        "lostdecade_million": 908960.05611738,
+        "SCFmeanmedian": 5.514256091238984,
+        "peer_ratio_10": 1.0009053098542213,
+        "peer_ratio_5": 1.0128238039196733
+      }
+    }
+  ],
+  "pdf_receipts": [
+    {
+      "url": "https://workplace.vanguard.com/content/dam/inst/iig-transformation/insights/pdf/has/how-america-saves-2026.pdf",
+      "sha256": "50b70f409efa3183f869187c701329bb3776b236f70b6f1a9644cce811e0b88d",
+      "inspection": "TARGETED_EXTRACTED_PAGES_ONLY; not full document review"
+    },
+    {
+      "url": "https://corporate.vanguard.com/content/dam/corp/research/pdf/isg_vemo_2026.pdf",
+      "sha256": "af3b10b6b05f8ee4734b35bfaeb3f272a370133a7949b7203f87cacf4c9de229",
+      "inspection": "TARGETED_EXTRACTED_PAGES_ONLY; not full document review"
+    }
+  ]
+}
