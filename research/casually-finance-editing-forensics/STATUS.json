@@ -1,7 +1,7 @@
 {
  "schema": "1.0",
  "updated": "2026-10-20",
- "phase": "PHASE_2_IN_PROGRESS",
+ "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=10 validated Shorts)",
  "phase1_gate": "PASSED",
  "branch": "research/casually-finance-editing-forensics",
  "worktree": "/Users/ghilmankhan/workprojects/yio-cf-editing-forensics",
@@ -161,5 +161,27 @@
   "zkeA5cH9nyM",
   "_3tM1d-WeUI",
   "f_ZCoPKLpyU (features re-run; shift authored frames by -1 where a decode duplicate preceded)"
- ]
+ ],
+ "deliverables_present": [
+  "SOURCE_MEDIA_INVENTORY.csv",
+  "PRIOR_RESEARCH_COVERAGE.csv",
+  "RESEARCH_GAP_REGISTER.csv",
+  "SOURCE_DISCOVERY_REPORT.md",
+  "per-video tables for validated videos",
+  "CHANNEL_EDITING_DNA.md",
+  "CHANNEL_VISUAL_STORYTELLING_DNA.md",
+  "MOTION_OPERATION_TAXONOMY.csv",
+  "ASSET_FAMILY_LIBRARY.csv",
+  "TYPOGRAPHY_AND_LAYOUT_SPEC.md",
+  "SOUND_DESIGN_SPEC.md",
+  "EDITING_TIMING_STATISTICS.csv",
+  "OBSERVATIONS_VS_HYPOTHESES.md",
+  "ORIGINAL_PRODUCTION_BLUEPRINT.md",
+  "KEYFRAME_RECIPE_LIBRARY.md",
+  "ASSET_CREATION_SPEC.md",
+  "SCRIPT_TO_VISUAL_DECISION_SYSTEM.md",
+  "CLAUDE_CODE_ANIMATION_HANDOFF.md",
+  "VALIDATION.json"
+ ],
+ "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (n=10 snapshot of 2026-10-20)"
 }
