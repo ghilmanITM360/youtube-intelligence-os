@@ -1,0 +1,104 @@
+{
+  "batch_id": "NICK_137_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "NoDH9GW0S38",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "dc64202818509305f4d20f75d286f4dbd8432b38abb4a3411dd71521eab69b3a",
+      "character_count": 18120,
+      "source_word_count": 3056,
+      "coverage_token_count": 3090,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          18120
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "207_NoDH9GW0S38_Stop_Being_Cheap_Its_Keeping_You_Poor.txt",
+      "archive_member_sha256": "f495587562872845ae8a0084a79493f7a56d77fce65bb20893dbb6cb948a826c",
+      "archive_member_bytes": 20519,
+      "archive_member_lines": 524,
+      "audio_verified": false,
+      "image_sha256": "6b1e62c72e760688851ec38664607a78090faacb0b9f34e0b2eea3f86dc16e34",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/NoDH9GW0S38/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/NoDH9GW0S38/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/NoDH9GW0S38/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "U.S. regular gasoline retail price around publication",
+      "url": "https://fred.stlouisfed.org/graph/?g=NOfs",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_FRED_GASREGW_EIA_SERIES_AND_EIA_WEEKLY_HIGHLIGHTS; series page not opened directly",
+      "finding": "EIA weekly U.S. regular retail $2.779-$2.853/gal in January 2026 and $2.867 on 2026-02-02, before publication; video's $3.79/$3.89 is about $1 above national average."
+    },
+    {
+      "claim": "Average new-car monthly payment",
+      "url": "https://www.experian.com/blogs/ask-experian/average-car-payment/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_EXPERIAN_CONSUMER_ARTICLE_CITING_Q3_2025_STATE_OF_AUTOMOTIVE_FINANCE; primary report not opened",
+      "finding": "Q3 2025 average new-car payment $748, average loan $42,332 at 6.56% over ~69 months; available before publication."
+    },
+    {
+      "claim": "Decision fatigue / ego depletion as settled limited-bandwidth mechanism",
+      "url": "https://research-portal.uu.nl/en/publications/a-multilab-preregistered-replication-of-the-ego-depletion-effect/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_PUBLICATION_RECORD; full paper not opened",
+      "finding": "Hagger, Chatzisarantis et al. 2016, Perspectives on Psychological Science 11(4):546-573, 23 labs, n=2,141, d=0.04 95% CI [-0.07,0.15]; published long before video."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Reproduced narrator arithmetic; loan payments via standard amortization; coffee future value with end-of-year contributions at assumed nominal 7%/8% (analyst assumptions); gas fuel use at 20-30 mph city averages and 25 mpg (analyst assumptions)",
+      "results": {
+        "gas_saved": 1.5,
+        "gas_net_loss_narrator": 2.29,
+        "gas_total_with_time": 14.79,
+        "implied_mph_for_1_gallon_in_30min": 50.0,
+        "fuel_cost_20mph": 1.52,
+        "fuel_cost_30mph": 2.27,
+        "car47000_6pct_72mo": 778.93,
+        "car47000_6pct_84mo": 686.6,
+        "car47000_7pct_72mo": 801.3,
+        "coffee_annual": 1825,
+        "coffee_fv_30y_7pct": 172391,
+        "coffee_fv_40y_8pct": 472778,
+        "laptops_5y_count": 3.33,
+        "laptops_5y_cost_fractional": 1000.0,
+        "laptops_5y_cost_4_units": 1200,
+        "freelance_80hr_fulltime": 166400,
+        "hours_for_75K_at_80": 937.5,
+        "dental_ratio_rootcanal": 10.0,
+        "dental_ratio_implant": 26.67,
+        "likes_pct": 3.02,
+        "comments_pct": 0.59,
+        "peer_ratio_10": 1.457716452776033,
+        "peer_ratio_5": 2.099515729210221
+      }
+    }
+  ]
+}

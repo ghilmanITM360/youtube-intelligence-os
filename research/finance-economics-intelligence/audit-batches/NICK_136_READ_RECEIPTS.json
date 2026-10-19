@@ -1,0 +1,118 @@
+{
+  "batch_id": "NICK_136_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "NjTXVrszIQ4",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "986743168122f6ba7be4e89e24d4d76edfca009b5bc320497dbf7afd5899284b",
+      "character_count": 19118,
+      "source_word_count": 3195,
+      "coverage_token_count": 3243,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          19118
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "274_NjTXVrszIQ4_How_Much_Home_You_Can_ACTUALLY_Afford.txt",
+      "archive_member_sha256": "afeabb5cc5f3634c09c77112e1672d013cdb5cf1c490bca59f0e7a33488d410a",
+      "archive_member_bytes": 20729,
+      "archive_member_lines": 539,
+      "audio_verified": false,
+      "image_sha256": "3e3b684456fa7826eecb3595090681beb2971936c916ea019ccf2b33b210f379",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/NjTXVrszIQ4/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/NjTXVrszIQ4/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/NjTXVrszIQ4/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "$80,000 is around US median household income",
+      "url": "https://www.fox5ny.com/news/how-much-american-household-earned-2023-census",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_SECONDARY_COVERAGE_OF_CENSUS_2023_INCOME_REPORT; Census table not opened",
+      "finding": "2023 real median household income $80,610 (Census, September 2024, before publication). 2024 figure not checked."
+    },
+    {
+      "claim": "Median priced US home over $400,000",
+      "url": "https://fred.stlouisfed.org/series/MSPUS",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_SERIES_VINTAGES",
+      "finding": "MSPUS Q2 2025 $410,800 (July 2025 vintage, before publication); Q3 2025 $410,100 (February 2026 vintage)."
+    },
+    {
+      "claim": "7% mortgage rate assumption versus market",
+      "url": "https://freddiemac.gcs-web.com/news-releases/news-release-details/mortgage-rates-decrease-8",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_PRESS_RELEASE",
+      "finding": "PMMS 30-year fixed 6.23% on 2025-11-26 (day before publication), 6.81% a year earlier."
+    },
+    {
+      "claim": "Most lenders cap total DTI at 45%",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-6-02/debt-income-ratios",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_GUIDE",
+      "finding": "Fannie Mae B3-6-02: 36% manual, up to 45% with credit/reserve requirements, 50% max for DU loans."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Standard 30-year fully amortizing monthly payment L*i/(1-(1+i)^-360), i=rate/12; simple ratios on narrator's stated figures",
+      "results": {
+        "pct28_of_80K_monthly": 1866.67,
+        "PI_200K_7pct": 1330.6,
+        "PI_200K_6_23pct": 1228.83,
+        "house_supported_if_1800_PI_7pct_20pct_down": 338192,
+        "PI_320K_6_23pct_median_home_20pct_down": 1966.13,
+        "share_2000_of_80K_gross_monthly": 0.3,
+        "pct35_of_80K_monthly": 2333.33,
+        "tenK_example_leftover_7000_minus_4500": 2500,
+        "tenK_example_share_of_takehome": 0.6429,
+        "hundredK_takehome_monthly": 5833.33,
+        "hundredK_leftover": 833.33,
+        "rate_6_vs_7_on_400K_monthly_diff": 263.01,
+        "rate_6_vs_7_on_400K_30yr_total": 94682.84,
+        "first_principal_200K_7pct": 163.94,
+        "first_principal_400K_7pct": 327.88,
+        "closing_2_5pct_of_500K": [
+          10000,
+          25000
+        ],
+        "property_tax_0_5_2pct_of_500K": [
+          2500,
+          10000
+        ],
+        "property_tax_max_monthly": 833.33,
+        "maintenance_1pct_500K_monthly": 416.67,
+        "three_x_75K": 225000,
+        "like_rate": 0.02547,
+        "comment_rate": 0.00515,
+        "peer_ratio_10": 0.5820214853170258,
+        "peer_ratio_5": 0.20715895753439534
+      }
+    }
+  ]
+}
