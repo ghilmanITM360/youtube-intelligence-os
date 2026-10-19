@@ -179,6 +179,35 @@ def extent(vid, ev_root, f0, f1, rows):
             "ink_fit": fit_easing(t, [o["ink_px"] for o in out])}
 
 
+def orient(vid, ev_root, f0, f1, rows, cols, thr=100):
+    """Principal-axis angle (deg, 0=horizontal, image y down) and centroid of dark pixels in a region, per frame."""
+    g = np.load(os.path.join(ev_root, vid, "gray.npy"))
+    h, w = g.shape[1:]
+    y0, y1, x0, x1 = int(rows[0] * h), int(rows[1] * h), int(cols[0] * w), int(cols[1] * w)
+    fps = json.load(open(os.path.join(RDIR, "videos", vid, "auto", "AUTO_SUMMARY.json")))["fps"]
+    out = []
+    for k in range(f0, f1 + 1):
+        m = g[k, y0:y1, x0:x1] < thr
+        ys, xs = np.where(m)
+        if len(xs) < 20:
+            out.append({"frame": k, "n": int(len(xs)), "angle_deg": None})
+            continue
+        cx, cy = xs.mean(), ys.mean()
+        cov = np.cov(np.vstack([xs - cx, ys - cy]))
+        ev_, vec = np.linalg.eigh(cov)
+        v = vec[:, 1]
+        ang = float(np.degrees(np.arctan2(v[1], v[0])))
+        if ang < 0:
+            ang += 180.0
+        out.append({"frame": k, "n": int(len(xs)), "angle_deg": round(ang, 2), "cx": round(float((cx + x0) / w), 4), "cy": round(float((cy + y0) / h), 4),
+                    "elong": round(float(np.sqrt(ev_[1] / max(ev_[0], 1e-9))), 2)})
+    ok = [o for o in out if o["angle_deg"] is not None]
+    t = [(o["frame"] - f0) / fps for o in ok]
+    ang = np.unwrap(np.radians([o["angle_deg"] * 2 for o in ok])) / 2  # undo 180-degree ambiguity
+    return {"kind": "orient", "video_id": vid, "f0": f0, "f1": f1, "fps": fps, "curves": out,
+            "angle_fit": fit_easing(t, list(np.degrees(ang))) if ok else None}
+
+
 def main():
     kind, vid, ev_root, f0, f1 = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5])
     rest = sys.argv[6:]
@@ -186,6 +215,10 @@ def main():
     if kind == "camera":
         rows = parse_rows(rest[0]) if rest else [0.30, 0.665]
         res = camera(vid, ev_root, f0, f1, rows)
+    elif kind == "orient":
+        rows = parse_rows(rest[0]) if rest else [0.30, 0.70]
+        cols = parse_rows(rest[1]) if len(rest) > 1 else [0.0, 1.0]
+        res = orient(vid, ev_root, f0, f1, rows, cols)
     elif kind == "blob":
         rows = parse_rows(rest[1]) if len(rest) > 1 else [0.30, 0.665]
         res = blob(vid, ev_root, f0, f1, rest[0], rows)
