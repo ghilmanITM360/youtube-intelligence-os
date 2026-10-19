@@ -12,4 +12,11 @@ n, h, w = g.shape
 a0, a1 = int(b["stage"][0] * h), int(b["stage"][1] * h)
 px = [0] + [int((np.abs(g[i, a0:a1] - g[i - 1, a0:a1]) > 16).sum()) for i in range(1, n)]
 c = [(i, px[i]) for i in range(1, n) if px[i] >= minpx]
-print("stage px=%d; boundaries>=%d:" % ((a1 - a0) * w, minpx), " ".join("%d(%d)" % x for x in c))
+runs = []
+for i, v in c:
+    if runs and i - runs[-1][1] <= 2:
+        runs[-1][1] = i; runs[-1][2] = max(runs[-1][2], v); runs[-1][3] += 1
+    else:
+        runs.append([i, i, v, 1])
+print("frames=%d stage px=%d; change runs>=%d (start-end,peak,len; len 1 = cut candidate):" % (n, (a1 - a0) * w, minpx))
+print(" ".join(("%d(%d)" % (a, v)) if l == 1 else ("%d-%d(%d)" % (a, b, v)) for a, b, v, l in runs))
