@@ -1,6 +1,6 @@
 # Resume here — Casually Finance editing forensics
 
-State (2026-10-20): Phase 1 gate PASSED. 10 of 48 local videos (all Shorts) have validated per-video forensics (depth A/B/C, listening blocked, single reviewer); preliminary channel DNA, recipes, asset spec and handoff exist (n=10 snapshot). 38 videos remain (22 uncovered Shorts + 16 prior-covered videos incl. all 10 long-form). Do not claim 100 %.
+State (2026-10-20): Phase 1 gate PASSED. 14 of 48 local videos (all Shorts) have validated per-video forensics (depth A/B/C, listening blocked, single reviewer); preliminary channel DNA, recipes, asset spec and handoff exist (n=10 snapshot). 34 videos remain (18 uncovered Shorts + 16 prior-covered videos incl. all 10 long-form). Do not claim 100 %.
 
 1. Read `SOURCE_DISCOVERY_REPORT.md`, then `STATUS.json` (`queue_uncovered_by_views`, `videos_in_progress`).
 2. Worktree: `/Users/ghilmankhan/workprojects/yio-cf-editing-forensics`, branch `research/casually-finance-editing-forensics` (from `main@08e71926`). Do not touch the main checkout (`research/finance-economics-intelligence`, PR #36).
@@ -15,3 +15,5 @@ State (2026-10-20): Phase 1 gate PASSED. 10 of 48 local videos (all Shorts) have
 
 10. After adding videos: run `scripts/aggregate_channel.py` and `scripts/update_registers.py`, then refresh the numbers quoted in `CHANNEL_EDITING_DNA.md`, `OBSERVATIONS_VS_HYPOTHESES.md`, `SOUND_DESIGN_SPEC.md`.
 11. Decode must use `-fps_mode passthrough` (fixed). Videos whose AUTO_SUMMARY frames differ from inventory frames must be re-extracted before authoring (`STATUS.json` `redo_after_decode_fix`).
+
+12. Fast authoring: `scripts/prep_banded.sh <id>` or `scripts/prep_full.sh <id>`, then a per-video `videos/<id>/review/author_review.py` using `scripts/author_lib.py` (see `videos/UJEqqBpH18k/review/author_review.py`).
