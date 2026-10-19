@@ -1,0 +1,144 @@
+{
+  "batch_id": "NICK_069",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "Bz0ZJea3n9g",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:Bz0ZJea3n9g",
+          "TRANSCRIPT_COVERAGE.csv:Bz0ZJea3n9g",
+          "audit-batches/NICK_069_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"Never Keep Over THIS AMOUNT In a Bank (Huge Mistake).\" Absolute \"Never\", withheld capitalized \"THIS AMOUNT\" and parenthetical loss warning create a specific-number curiosity gap and fear of error. \"In a Bank\" plausibly evokes deposit-insurance limits for some viewers, but the script never discusses FDIC coverage; the delivered answer is a personal range (3-6 months of expenses, \"$15,000 to $45,000\"), not one amount. Search intent overlaps \"how much cash to keep in bank\" and emergency-fund sizing.",
+        "peer_comparison_ids": [
+          "92DrqdPuwkM",
+          "s12cRrFRhH8",
+          "RmJKnJkUgxA",
+          "QogQUuyFUx8",
+          "pu7UaN3FemE",
+          "r4fpD0dgQ64"
+        ],
+        "search_demand": "Historical query volume unknown. The same title reused by Carl 92DrqdPuwkM (1.23887 TYPICAL) and later Nick s12cRrFRhH8 (1.01751 TYPICAL) also landed TYPICAL; title text is not sufficient for STRONG outcomes.",
+        "script_alignment": "Partial: withheld number is delayed through inflation/opportunity-cost argument and resolved as a 3-6-month expense rule plus \"$15K-$45K sweet spot\". \"Huge mistake\" maps to inflation/opportunity cost, not bank-failure risk."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:Bz0ZJea3n9g",
+          "TRANSCRIPT_COVERAGE.csv:Bz0ZJea3n9g",
+          "audit-batches/NICK_069_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_Bz0ZJea3n9g.jpg",
+        "image_source": "https://i.ytimg.com/vi/Bz0ZJea3n9g/maxresdefault.jpg",
+        "image_sha256": "981b451355fb92cf9dfe6a3e6f666a13f7603fc6ddc95847c4953afa44b07bc2",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a smug half-lidded cartoon man in a light-blue shirt stands before an open steel vault door with a heap of green coins spilling out; center a single banded stack of green bills sits on a white pedestal; right heavy black \"HOW MUCH / CA$H?\" with a curved arrow to the stack. Mobile: question text and the small stack remain legible; vault reads as bank. Image asks a question rather than stating a number, consistent with the withheld-amount title; the modest stack versus large coin pile visually hints \"keep only a little\", matching the script. No inflation, investing or warning cue."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:Bz0ZJea3n9g",
+          "TRANSCRIPT_COVERAGE.csv:Bz0ZJea3n9g",
+          "audit-batches/NICK_069_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "Have you ever looked at your bank\naccount balance and felt proud of that\nnice fat number staring back at you?\nMaybe you've been diligently saving for\nyears, watching those digits climb\nhigher and higher, thinking you're being\nfinancially responsible. Well, what if I\ntold you that keeping too much money in\nyour bank account might actually be one\nof the worst financial decisions you're\nmaking right now? What if that safety\nnet you think you're buil",
+        "ending_words": "king enormous\nrisks. They're guaranteed to lose\npurchasing power to inflation. They're\nmissing out on compound growth and\nthey're creating a false sense of\nsecurity that prevents them from taking\nthe calculated risks necessary to build\nreal wealth. So there you have it. Keep\n3 to 6 months of expenses in your bank\naccount and put everything else to work\nbefore inflation turns your financial\nfortress into a house of cards. Your\nfuture self will thank you for making\nyour money work as hard as you do. Stop\nletting your bank get rich off your fear\nand start building the wealth you\nactually deserve.",
+        "analysis": "All 19,971 stored characters read in three contiguous ranges with canonical hash match. Hook: pride in a large balance reframed as a \"trap\"; early subscribe CTA (~1,900 characters). Body: inflation erosion (Fed 2% target, $10K at 0.5% vs 2% inflation -> ~$9,850 real), price examples, 3-6-month expense rule ($4,000 x 3-6 = $12K-$24K), opportunity-cost example, market-crash reassurance, personal-situation caveat, cash-hoarding psychology, banks lending deposits, alternatives (index funds, half-and-half start, real estate/REITs, self-investment), emergency-size minimization, planned-purchase exception (HYSA/CDs inside 2 years), \"lean cash motivates income\", Parkinson framing, four-month dollar-cost-averaging plan, \"$15K-$45K\" sweet spot and recap. Mostly generic narration with repetitive motivational passages and no case story or on-screen data cues in text. Key omission: high-yield savings, money-market funds and T-bills paid materially above inflation in 2025, so \"guaranteed to lose purchasing power\" applies to low-yield accounts only; script mentions HYSA only for short-term purchases. Also omits FDIC coverage limits despite bank framing. Backup liquidity suggestions (credit cards, retirement-account loans) understate cost and plan-specific repayment risks. ASR filler (\"uh\", \"um\", \"coid9\") retained, not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              7000
+            ],
+            "beat": "Too-much-cash hook, subscribe CTA, inflation math, 3-6-month rule, $30K opportunity cost, crash reassurance, personal-situation caveat, hoarding psychology"
+          },
+          {
+            "character_range": [
+              7000,
+              14000
+            ],
+            "beat": "Banks lend deposits, alternatives (index funds, real estate, self-investment), start-now push, emergencies small, credit/retirement-loan backups, planned purchases"
+          },
+          {
+            "character_range": [
+              14000,
+              19971
+            ],
+            "beat": "Short-term HYSA/CD exception, cash as tool, lean-cash motivation, Parkinson framing, 4-month DCA plan, $15K-$45K sweet spot, recap CTA"
+          }
+        ],
+        "claim_audit": [
+          "0:7000 $10,000 at 0.5% with 2% inflation: 10,050/1.02 = ~$9,853 real, matches ~$9,850; \"1.5% per year\" is the approximate real loss. Low-yield savings near 0.5% approximates national-average traditional savings, but high-yield accounts/money-market funds paid ~4% in 2025 (above ~3% CPI), so the \"guaranteed loss\" is account-dependent. Chipotle $8 -> $12 and new-car $38K -> $48K are rough and unsourced; widely reported car figures are average transaction prices, not medians.",
+          "0:7000 $30,000 at 7% for 10 years = ~$59,015, slightly below \"over $60,000\"; \"$31,000\" implies ~0.33%/year. At a 4% high-yield rate the 10-year balance is ~$44,400, so the gap is ~$14,600, not ~$30,000. S&P 500 \"October 2024 to recent months over 15%\" is a short window chosen after the fact, ambiguous dating, not evidence about future returns.",
+          "7000:14000 \"Real emergencies are usually small\" and job loss \"rarely requires\" large withdrawals are unsupported generalizations; unemployment insurance replaces only part of wages with state caps, and severance is not guaranteed. Credit-card bridging can carry ~20%+ APR; retirement-plan loans depend on plan rules and may come due on job separation. Banks lending deposits at higher rates is a fair simplification.",
+          "14000:19971 Parkinson's original law concerns work expanding to fill time; the expenditure version (\"Parkinson's second law\") is an adage, not a behavioral-economics finding; the extension to cash balances is asserted. \"Less cash makes you more motivated\" unsupported. Four-month 25% transfers is a reasonable gradual plan. $15K-$45K sweet spot equals 6 months of $2,500-$7,500 monthly expenses, internally consistent but not one amount. No FDIC $250K-per-depositor-per-bank-per-ownership-category discussion despite the bank title."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:Bz0ZJea3n9g",
+          "TRANSCRIPT_COVERAGE.csv:Bz0ZJea3n9g",
+          "audit-batches/NICK_069_READ_RECEIPTS.json"
+        ],
+        "analysis": "Evergreen cash-allocation and emergency-fund sizing: savers with large idle balances unsure whether to invest. Mechanisms: inflation, opportunity cost, liquidity needs, behavioral comfort. Broad audience (any saver), strong practical relevance, highly competitive and repeatedly reused across channels. Published Oct 2025 while savings yields were still elevated, which the script underplays.",
+        "novelty_and_corpus_angle": "Original angle: compare a traditional 0.4% account, a high-yield account/T-bills and a diversified portfolio over the same 1-, 5- and 10-year horizons after inflation and taxes; separate emergency fund, sinking funds and FDIC insurance limits; show job-loss duration data rather than assuming emergencies are small.",
+        "competition": "Exact title reused: Carl 92DrqdPuwkM 1.23887 TYPICAL, Nick s12cRrFRhH8 1.01751 TYPICAL. Related Nick: QogQUuyFUx8 live off $500K in the bank 4.93852 STRONG, RmJKnJkUgxA emergency cash 0.5711 TYPICAL, doUSOwmdaw0 how banks make money 0.4881 WEAK."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:Bz0ZJea3n9g",
+          "TRANSCRIPT_COVERAGE.csv:Bz0ZJea3n9g",
+          "audit-batches/NICK_069_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "122,766 views at 327.5817 days, 21:02; 1.74788x TYPICAL against 10 same-channel LONG_FORM peers published 2025-10-13 to 10-23, frozen 2026-09-11. Exact pool: strong pu7UaN3FemE 3 net-worth milestones 6.26895, 7-pWsyPlSeg no-longer-worth 5.85399, 9zLgeax5sQc 40s milestones 2.75121; typical 3V3uUy6zR0I buy/lease/finance 1.65085, xVeB_15xEfs first million 0.92147, ohQxPH0-adw 100K to 1M 0.74675, XP-VPkD3N64 19 rules 0.62665, A1Ix8wUhrRo 40K salary 0.53194, 35IbvMTwdJE hidden-wealth signs 0.52889; weak r4fpD0dgQ64 pay off 10K debt 0.2221. Target is upper TYPICAL. Same-title replications (Carl 1.23887, Nick s12cRrFRhH8 1.01751) also TYPICAL, with far lower absolute views (5,278 and 4,933), so absolute reach differences reflect channel/time context more than title text. Peer images/scripts not re-inspected.",
+        "observed_result": "122,766 views; 327.5817 days; 1,262 seconds; 1.74788x TYPICAL; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Cash-amount and emergency-fund topics recur across Nick, Carl and Bob with TYPICAL to WEAK outcomes and one STRONG $500K-in-bank variant; historical search interest unknown.",
+        "trend_timing": "2025-10-18 publication during elevated savings yields after Fed cuts began; no verified event link; seasonality unknown.",
+        "competition": "Strong same-week milestone/net-worth peers and repeated title copies across channels.",
+        "format_fit": "21-minute single-question explainer with delayed answer; answer-withholding may hold curiosity, but repetitive middle passages could cost attention; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison within one channel fortnight; all peers 322-333 days old.",
+        "alternative_explanations": [
+          "Appeal: withheld-number title plus \"HOW MUCH CA$H?\" vault image offers a concrete answerable question; CTR unknown.",
+          "Engagement: delayed answer could sustain viewing, while generic repetition and no case story could reduce it; retention unavailable.",
+          "Satisfaction: viewers expecting a single amount or FDIC guidance may find a 3-6-month range less satisfying; the \"guaranteed loss\" claim ignores HYSA yields; satisfaction unknown.",
+          "Channel growth stage in Oct 2025, recommendation exposure and audience overlap could explain why the same title reached far more absolute viewers here than in later reuses."
+        ],
+        "original_content_lesson": {
+          "test": "Test a cash-amount video that answers with a worked calculator (expenses x months, plus FDIC limits and HYSA vs inflation) against withheld-number framing; measure own CTR, drop-off before the reveal, and comments asking for the number.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

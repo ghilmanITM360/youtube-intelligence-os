@@ -1,0 +1,144 @@
+{
+  "batch_id": "NICK_070",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "C1CqdnB321o",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:C1CqdnB321o",
+          "TRANSCRIPT_COVERAGE.csv:C1CqdnB321o",
+          "audit-batches/NICK_070_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"Shocking MONEY Stats of the Average 30 Year Old (The Harsh Truth).\" Social-comparison benchmark title: an age anchor invites self-placement, \"Shocking\" and \"Harsh Truth\" promise negative surprise, capitalized MONEY emphasizes category. Search intent overlaps \"average 30 year old savings/net worth/debt\". No number in the title; the promise is a statistics tour rather than advice.",
+        "peer_comparison_ids": [
+          "Rd40d0XZLpQ",
+          "MK1-ZC06EkU",
+          "fDdT5xPDdD0",
+          "Ygv_u2j90OA",
+          "w5hm8ZXtCgw",
+          "CQO9rtzuc4E"
+        ],
+        "search_demand": "Historical query volume unknown. The same \"Shocking Money Stats\" template on this channel ranges from Rd40d0XZLpQ 19.76486 STRONG to Ygv_u2j90OA 0.30959 WEAK, so the template does not predict outcome.",
+        "script_alignment": "Covers student loans, credit cards, housing, savings and retirement for the 30-ish cohort, but several statistics are all-age or under-35 figures presented as 30-year-old figures; the \"series\" framing mentions more than delivered."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:C1CqdnB321o",
+          "TRANSCRIPT_COVERAGE.csv:C1CqdnB321o",
+          "audit-batches/NICK_070_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_C1CqdnB321o.jpg",
+        "image_source": "https://i.ytimg.com/vi/C1CqdnB321o/maxresdefault.jpg",
+        "image_sha256": "4a88ce6e22f9ab33931ef097a7aaf9b9628433861053a688461cf71ea175cca2",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a kneeling cartoon man in a gray hoodie with a shocked open mouth pulls open a steel safe that is empty except for one glowing orange coin and a curling receipt; right heavy black \"30 AND / BROKE?\" with a curved arrow to the safe. Mobile: two-line text and empty safe read immediately. Image promises a personal diagnosis (\"are you broke at 30?\") and emptiness; script supports debt/low-savings framing but is a statistics tour plus composite stories rather than a test the viewer can take. Consistent negative emotional promise with title."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:C1CqdnB321o",
+          "TRANSCRIPT_COVERAGE.csv:C1CqdnB321o",
+          "audit-batches/NICK_070_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "Have you ever wondered if you're\nsecretly broke compared to everyone else\nyour age? Maybe you're lying awake at 3\nin the morning scrolling through your\nbanking app wondering how your college\nroommate just bought a house while\nyou're still trying to figure out why\nyour credit card balance keeps growing\ndespite your best intentions.\nOr perhaps you're at a dinner party\nlistening to someone casually mention\ntheir savings account balance and you're\nsi",
+        "ending_words": "l the other expenses that\ncome with being alive. So, so there you\nhave it. The brutally honest financial\nreality of being 30 in America today. If\nthese numbers made you feel worse about\nyour situation, remember, you're not\nalone in this economic hellscape. If\nthey made you feel better,\ncongratulations on beating some pretty\ndepressing odds. Either way,\nunderstanding where you actually stand\ncompared to your peers is the first step\ntoward making better financial\ndecisions. Because let's be honest,\npretending everything is fine while\ndrowning in debt isn't a strategy. It's\njust expensive denial.",
+        "analysis": "All 20,080 stored characters read in three contiguous ranges with canonical hash match. Hook: 3 a.m. banking-app anxiety, roommate-bought-a-house comparison, joke about savings lasting 12 minutes; early subscribe/like CTA. Sections: student loans (average $42K, $436 payment, IDR negative amortization, composite \"Michael\"), credit-score drops after delinquency reporting, credit cards (average $4K at 22%, composite \"Sarah\" with itemized $3,800 balance), housing (under-35 ownership 37%, $500K average price, 6.7% 2024 rate, affordability ratios), rental screening, savings (1x salary by 30, $1,000 emergency stat, \"median\" $62,400), $800/month retirement advice paradox, Fidelity 1x benchmark, $14K average balance and 4% rule, closing \"economic hellscape\" reassurance. Strong empathetic framing (\"not about discipline\") is consistent throughout, but the script contains no remedies and several numeric inconsistencies. Composite stories are labeled \"real situation that represents millions\" without verification. ASR fillers and fragments (\"Dart,\", \"soulc crushingly\") retained; not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              7000
+            ],
+            "beat": "Comparison-anxiety hook, CTA, generational framing, student-loan average/payment, Michael IDR story, credit-score drop"
+          },
+          {
+            "character_range": [
+              7000,
+              14000
+            ],
+            "beat": "Bankruptcy limit, credit-card debt, Sarah itemized balance and minimum-payment claim, budget shares, housing ownership/price/rate affordability"
+          },
+          {
+            "character_range": [
+              14000,
+              20080
+            ],
+            "beat": "Delayed milestones, rental screening, savings benchmarks and emergency stat, $800 advice paradox, Fidelity 1x and $14K balance, 4% rule close"
+          }
+        ],
+        "claim_audit": [
+          "0:7000 Michael: $68,500 at ~6.5% over 10 years gives ~$778/month, matching $780, but $780 x 12 / $75,000 = 12.5% of gross, not \"over 15%\". A $420 payment on $65,000 covers monthly interest at the 6.08% (~$329) or 7.08% (~$384) graduate rates of recent years; balance growth to $68,500 requires a rate near 7.75% or a lower payment, so the story is internally doubtful. Average $42K student debt \"for 30-year-olds\" and $436 payment unsourced; the credit-score drop (100+ points, 177-point average for 720+) resembles 2025 NY Fed reporting but was not verified here.",
+          "7000:14000 $4,000 at 22% = $880/year, consistent. Sarah 1,500 + 800 + 1,500 = $3,800, correct. A fixed $120/month at 22% repays $3,800 in ~48 months with ~$1,940 interest; \"over 18 years and more than $8,000\" only follows if the minimum shrinks with the balance, unstated. $380 + $120 = $500 = ~13% of $3,800 take-home, not \"roughly 10%\".",
+          "7000:14000 Under-35 ownership ~37% is an under-35 figure; \"nearly 2/3 of 30-year-olds renting\" generalizes to a narrower age with higher ownership. Average price over $500K is an average (medians are lower). $400K loan at 6.7% for 30 years = ~$2,581/month, not ~$2,400; 2,400/3,800 = 63% as stated. 28% x $58,000 / 12 = ~$1,353, correct. Claim that rent is \"often higher than mortgage payments\" contradicts the script's own $1,800-2,000 rent versus $2,400+ mortgage.",
+          "14000:20080 Fidelity 1x salary by 30 benchmark correctly attributed. \"More than half can't cover $1,000\" resembles Bankrate-style all-adult survey results, then is restated as \"Americans your age\" - age conflation. \"$62,400 median savings\" matches the 2022 SCF mean transaction-account balance (~$62,410), not a median. $800/month = 21% of $3,800, not 25%. $14,000 x 4% = $560/year = ~$46.67/month, correct arithmetic; the $14K \"average\" for 30s unsourced. \"Only 14% have $100K saved\" unsourced."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:C1CqdnB321o",
+          "TRANSCRIPT_COVERAGE.csv:C1CqdnB321o",
+          "audit-batches/NICK_070_READ_RECEIPTS.json"
+        ],
+        "analysis": "Evergreen age-benchmark/social-comparison finance: late-20s to mid-30s viewers anxious about falling behind. Mechanisms: student-loan amortization, revolving credit interest, housing affordability ratios, savings benchmarks. Highly competitive benchmark genre; this version emphasizes structural hardship over personal blame and offers no plan. Oct 2025 publication coincides with renewed student-loan delinquency reporting, but no verified event linkage.",
+        "novelty_and_corpus_angle": "Original angle: use one clearly dated source per statistic with exact age band (25-34 vs under-35 vs all adults) and median versus mean labels, then convert each benchmark into one concrete next step; compare composite stories against amortization calculators on screen.",
+        "competition": "Same-template Nick series: Rd40d0XZLpQ 19.76486 STRONG, MK1-ZC06EkU 2.04278 STRONG, fDdT5xPDdD0 0.85163 TYPICAL, ED3pUaLp5g8 retiree 0.72684 TYPICAL, Ygv_u2j90OA 0.30959 WEAK. Age-benchmark variants: 34Z38nfn6q8 average 45-year-old 6.34409 STRONG; Carl 4RORa1tIdHc 30s milestones 0.39909 WEAK."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:C1CqdnB321o",
+          "TRANSCRIPT_COVERAGE.csv:C1CqdnB321o",
+          "audit-batches/NICK_070_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "106,043 views at 338.5986 days, 22:04; 1.51432x TYPICAL against 10 same-channel LONG_FORM peers published 2025-10-01 to 10-13, frozen 2026-09-11. Exact pool: strong w5hm8ZXtCgw first $1,000 4.1915, 6KPXYyki9so money formula 3.0302, 9zLgeax5sQc 40s milestones 2.75121; typical BZAU-4_MSsA 10 rules 1.46797, XkhWSzOB7fI $25K to $100K 1.20089, eEw52CPOrbE after $100K 0.99803, e06r3ZWyBVc wealth killers 0.82458, ofJ8nZG87fA mindset of 1% 0.53622; weak 3DzkwbNxfCE first $10K 0.4982, CQO9rtzuc4E mindset vs paycheck 0.46369. Target is upper TYPICAL. Template counterexamples: the same \"Shocking Money Stats\" format reached 19.76486 STRONG (Rd40d0XZLpQ, a month earlier) and 0.30959 WEAK (Ygv_u2j90OA). Age-anchored 40s milestones in the same pool is STRONG while 30s stats is TYPICAL - descriptive only. Peer images/scripts not re-inspected.",
+        "observed_result": "106,043 views; 338.5986 days; 1,324 seconds; 1.51432x TYPICAL; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Benchmark/statistics videos recur heavily on Nick with very wide outcome dispersion; historical search interest unknown.",
+        "trend_timing": "2025-10-07 publication; student-loan collections/credit-reporting news in 2025 may have raised salience; not verified as linkage; seasonality unknown.",
+        "competition": "Same-fortnight pool includes strong savings-milestone and formula videos; numerous same-template statistics videos on the channel.",
+        "format_fit": "22-minute statistics tour with two composite stories; empathetic tone could suit browse viewers, absence of solutions may limit satisfaction; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison within one channel fortnight; peers 332-345 days old.",
+        "alternative_explanations": [
+          "Appeal: \"30 AND BROKE?\" plus empty-safe image is a direct self-diagnosis prompt for a large age cohort; CTR unknown.",
+          "Engagement: concrete composite stories (Michael, Sarah) may hold attention better than bare statistics; retention unavailable.",
+          "Satisfaction: validation without remedies and several inaccurate numbers may limit satisfaction among informed viewers; satisfaction unknown.",
+          "Channel growth phase in early Oct 2025, recommendation exposure, prior viewing of the STRONG Rd40d0XZLpQ template and audience saturation could explain the result."
+        ],
+        "original_content_lesson": {
+          "test": "Test an age-benchmark video that ends each statistic with a verified source, correct age band and one action step, against a pure statistics tour; measure own CTR, retention after each statistic, and comments disputing numbers.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}
