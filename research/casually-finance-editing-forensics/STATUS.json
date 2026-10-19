@@ -54,6 +54,18 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "A",
    "qa": "videos/DEgQTSsSX9U/QA.json"
+  },
+  {
+   "video_id": "7IMFHclDn8k",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/7IMFHclDn8k/QA.json"
+  },
+  {
+   "video_id": "HvnVO1_YrMQ",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/HvnVO1_YrMQ/QA.json"
   }
  ],
  "videos_in_progress": [],
@@ -64,7 +76,6 @@
   "zkeA5cH9nyM",
   "ZDoeEd8fMdo",
   "UJEqqBpH18k",
-  "7IMFHclDn8k",
   "_3tM1d-WeUI",
   "ud1ESmogrFY",
   "s3_3SFxtt14",
@@ -72,7 +83,6 @@
   "-Vr8JhCIv08",
   "bF9WVzzS4ds",
   "-WJDfT-MwmY",
-  "HvnVO1_YrMQ",
   "YST8eMG3_Z8",
   "06pN9dDvVVU",
   "xrNPr3YrWdw",
@@ -127,5 +137,6 @@
   "weekly_pct": 62,
   "context_pct": 71
  },
- "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled."
+ "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled.",
+ "procedure_fast": "forensic_features.py --asr (background batch available) -> layout_profile.py -> prep_full.sh <id> (full-bleed) or bands.json+segment_events.py+event_sheets.py --lean (banded) -> read sheets -> videos/<id>/review/author_review.py (copy a previous one) -> build_video_tables.py -> review/findings.md + STORY_STRUCTURE.md -> write_review.py -> commit"
 }
