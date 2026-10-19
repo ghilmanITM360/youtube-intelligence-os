@@ -72,12 +72,17 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "C",
    "qa": "videos/44ggG2I6JPY/QA.json"
+  },
+  {
+   "video_id": "mT2hOLrCYSk",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "C",
+   "qa": "videos/mT2hOLrCYSk/QA.json"
   }
  ],
  "videos_in_progress": [],
  "queue_uncovered_by_views": [
   "ji2qFfcgSB4",
-  "mT2hOLrCYSk",
   "zkeA5cH9nyM",
   "ZDoeEd8fMdo",
   "UJEqqBpH18k",
@@ -147,5 +152,14 @@
  "lessons": {
   "decode": "ffmpeg decode must use -fps_mode passthrough (fixed 2026-10-20); only 44ggG2I6JPY was affected and was re-analysed",
   "depth_C": "bands.json auto_fill + depth_label allow honest UNRESOLVED_CHANGE rows for unviewed/unclassified events"
- }
+ },
+ "redo_after_decode_fix": [
+  "s3_3SFxtt14",
+  "ZDoeEd8fMdo",
+  "ud1ESmogrFY",
+  "bF9WVzzS4ds",
+  "zkeA5cH9nyM",
+  "_3tM1d-WeUI",
+  "f_ZCoPKLpyU (features re-run; shift authored frames by -1 where a decode duplicate preceded)"
+ ]
 }
