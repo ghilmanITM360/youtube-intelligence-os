@@ -18,12 +18,16 @@
   "public_videos_total": 210,
   "denominator_note": "all aggregates are over 48 local videos of 210 public"
  },
- "videos_complete": [],
- "videos_in_progress": [
-  "Qof71Ef-3EU"
+ "videos_complete": [
+  {
+   "video_id": "Qof71Ef-3EU",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "qa": "videos/Qof71Ef-3EU/QA.json",
+   "note": "single reviewer; 360p source"
+  }
  ],
+ "videos_in_progress": [],
  "queue_uncovered_by_views": [
-  "Qof71Ef-3EU",
   "Es5c2MKzbDg",
   "ji2qFfcgSB4",
   "ffIiiPLDFdM",
@@ -78,5 +82,24 @@
   "turJ6VMfUjI": "source missing locally",
   "direct_audio_listening": "agent has no auditory capability"
  },
- "claim": "NOT 100% COMPLETE. 0 of 48 videos have completed this task's five-pass forensics."
+ "claim": "NOT 100% COMPLETE. 0 of 48 videos have completed this task's five-pass forensics.",
+ "pipeline": {
+  "order": [
+   "forensic_features.py (--asr)",
+   "hand-set videos/<id>/auto/bands.json (row-activity profile)",
+   "segment_events.py",
+   "event_sheets.py / make_sheet.py (visual review)",
+   "measure_motion.py (camera|blob|extent)",
+   "author review/scenes.json, events.json, assets.json",
+   "build_video_tables.py",
+   "write STORY_STRUCTURE.md + FORENSIC_REVIEW.md"
+  ],
+  "python": "python3 -E (user-site numpy/PIL/torch/whisper); do not use -I"
+ },
+ "usage_checkpoint": {
+  "time": "2026-10-20 ~02:40 local",
+  "five_hour_pct": 18,
+  "weekly_pct": 59,
+  "context_pct": 46
+ }
 }
