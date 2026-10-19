@@ -34,6 +34,7 @@ TAX = {
     "MASKED_REVEAL_WIPE": ("none", "none", "none", "left-to-right progressive reveal", "PARTIAL", "YES", "YES", "YES", "NO", "NO"),
     "HIGHLIGHT_SWEEP": ("none", "none", "none", "growing highlight area", "PARTIAL", "YES", "YES", "YES", "NO", "NO"),
     "SCREEN_RECORDING_INSERT": ("none", "none", "none", "none", "YES (clip)", "N/A", "N/A", "NO (needs the recording)", "N/A", "NO"),
+    "PROP_DRIFT": ("none", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "SLIDE_IN": ("none", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "CAMERA_SCROLL_ZOOM": ("see geometry", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "SCALE_TWEEN": ("grows/shrinks over N frames", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
