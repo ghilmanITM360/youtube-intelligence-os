@@ -1,4 +1,5 @@
 {
+ "analysis_depth": "DEPTH_A (every auto stage event reviewed at native resolution; caption words measured)",
  "video_id": "Qof71Ef-3EU",
  "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
  "checks": {
@@ -120,7 +121,16 @@
    "within_100ms_pct": 79.7
   },
   "hard_cuts_at_phrase_start_after_pause": 10,
-  "native_cadence": "24 fps content conformed to 30 fps by duplicating every 5th frame (see FORENSIC_REVIEW)"
+  "native_cadence": {
+   "isolated_duplicate_frames_in_motion": 55,
+   "gap_histogram_top": {
+    "5": 44,
+    "10": 1,
+    "40": 1,
+    "95": 1
+   },
+   "interpretation": "24 fps timeline conformed to 30 fps by repeating every 5th frame (MEASURED: 52 of 55 duplicates share one phase mod 5; 5-frame gaps 44)"
+  }
  },
  "limitations": [
   "Direct audio listening not performed (agent has no auditory capability)",

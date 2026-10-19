@@ -26,12 +26,20 @@ TAX = {
     "HARD_CUT_THROUGH_BLANK_FRAME": ("none", "none", "none: one blank frame", "none", "YES", "YES", "YES", "YES", "YES", "NO"),
     "POP_IN": ("none visible at 30 fps sampling", "none", "0->100% in one frame", "none", "YES", "YES", "YES", "YES", "YES", "NO"),
     "OVERLAY_POP": ("none visible", "none", "0->100% in one frame", "none (no draw-on progression)", "YES", "YES", "YES", "YES", "YES", "NO"),
+    "POSE_SWAP": ("none", "limb rotation by pose swap", "none", "none", "PARTIAL", "YES", "YES", "YES", "YES", "NO"),
+    "CAPTION_CHUNK_CHANGE": ("none", "none", "word(s) appear in one frame", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "EXPRESSION_SWAP": ("none", "none", "none", "none", "PARTIAL", "YES", "YES", "YES", "YES", "NO"),
     "CAMERA_PUSH_IN": ("see geometry", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "POINTER_TRANSLATE": ("none", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "MASKED_REVEAL_WIPE": ("none", "none", "none", "left-to-right progressive reveal", "PARTIAL", "YES", "YES", "YES", "NO", "NO"),
     "HIGHLIGHT_SWEEP": ("none", "none", "none", "growing highlight area", "PARTIAL", "YES", "YES", "YES", "NO", "NO"),
     "SCREEN_RECORDING_INSERT": ("none", "none", "none", "none", "YES (clip)", "N/A", "N/A", "NO (needs the recording)", "N/A", "NO"),
+    "SLIDE_IN": ("none", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
+    "CAMERA_SCROLL_ZOOM": ("see geometry", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
+    "SCALE_TWEEN": ("grows/shrinks over N frames", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
+    "STROKE_REVEAL": ("none", "none", "none", "progressive stroke/line draw", "PARTIAL", "YES", "YES", "YES (dash offset)", "YES", "NO"),
+    "CHARACTER_RISE_IN": ("none", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
+    "LAYER_SLIDE_BEHIND": ("none", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "CHARACTER_LOOP_ANIMATION": ("none/limb poses vary", "limb rotation by pose swap", "none", "none", "PARTIAL (needs pre-rendered loop)", "YES", "YES", "YES", "YES", "UNKNOWN (not required)"),
 }
 FAMILY = {  # layer requirement, reusability
@@ -45,6 +53,12 @@ FAMILY = {  # layer requirement, reusability
     "SOURCE_SCREENSHOT": ("raster still, cropped to evidence region", "TOPIC-SPECIFIC (needs authorised source)"),
     "TYPOGRAPHY_PERSISTENT": ("fixed text layer above stage", "HIGH"),
     "TYPOGRAPHY_CAPTION": ("per-word reveal layer synced to narration", "HIGH"),
+    "TYPOGRAPHY_EMPHASIS": ("separate large coloured text layer above caption", "HIGH"),
+    "CHARACTER_CROWD": ("N identical small figures instanced + label layer", "HIGH"),
+    "PROP_HOUSING": ("single flat prop, may crop at frame edge or slide behind characters", "HIGH"),
+    "PROP_FINANCIAL": ("single flat prop", "HIGH"),
+    "PROP_FURNITURE": ("single flat prop + occupant", "MEDIUM"),
+    "PROP_DEVICE": ("device frame + screen content layer (icon scale tween)", "HIGH"),
 }
 RANK = {"STATIC": 0, "CONV": 1, "SCREENREC": 2, "COMPLEX": 3}
 MCLASS_NAME = {"CONV": "PLAUSIBLY_CONVENTIONAL_2D_KEYFRAME_COMPOSITING", "COMPLEX": "MORE_COMPLEX_CONTINUOUS_ANIMATION",
@@ -87,7 +101,7 @@ def main(vid, ev_root):
         a0, a1 = int(bands_cfg["stage"][0] * ht), int(bands_cfg["stage"][1] * ht)
         have = {e["f0"] for e in events if e["op"].startswith("HARD_CUT")}
         for k, sc_ in enumerate(scenes):
-            if k == 0 or sc_["f0"] in have:
+            if k == 0 or sc_["f0"] in have or sc_.get("no_auto_cut"):
                 continue
             pxv = int((np.abs(gtmp[sc_["f0"], a0:a1] - gtmp[sc_["f0"] - 1, a0:a1]) > 16).sum())
             events.append({"id": "auto", "scene": sc_["id"], "f0": sc_["f0"], "f1": sc_["f0"], "op": "HARD_CUT_REPLACE",
@@ -246,7 +260,7 @@ def main(vid, ev_root):
     wcsv(os.path.join(vd, "AUDIO_EVENTS.csv"), ["Audio_Event_ID", "Video_ID", "Start_S", "End_S", "Type", "Description", "Words", "Words_Per_S", "Mean_RMS_dB", "Method", "Aligned_Visual_Event", "Label"], ae)
 
     # caption words (DP alignment to ASR)
-    cev = rows(os.path.join(vd, "auto", "CAPTION_EVENTS_AUTO.csv"))
+    cev = rows(os.path.join(vd, "auto", "CAPTION_EVENTS_AUTO.csv")) if os.path.exists(os.path.join(vd, "auto", "CAPTION_EVENTS_AUTO.csv")) else []
     cap_last = bands.get("caption_last_frame", N)
     cev = [c for c in cev if int(c["frame"]) <= cap_last]
     cap = [(0.0, "INITIAL_FRAME")] + [(float(c["t_sec"]), c["kind"]) for c in cev if c["kind"] in ("ADD", "OTHER") or (c["kind"] == "RESET_OR_CLEAR" and int(c["ink_px"]) > 0)]
@@ -275,12 +289,13 @@ def main(vid, ev_root):
         else:
             i -= 1
     cw = []
-    for i, (t, kind) in enumerate(cap):
+    for i, (t, kind) in enumerate(cap if cev else []):
         j = pairs.get(i)
         cw.append({"Video_ID": vid, "Caption_Event_Index": i, "Frame": int(round(t * fps)), "Time_S": round(t, 3), "Event_Kind": kind,
                    "Matched_ASR_Word": asr[j]["word"] if j is not None else "", "ASR_Word_Start_S": a_st[j] if j is not None else "",
                    "Offset_ms": int(round((t - a_st[j]) * 1000)) if j is not None else "", "Label": "MEASURED (caption pixel change vs ASR onset)"})
-    wcsv(os.path.join(vd, "CAPTION_WORD_EVENTS.csv"), list(cw[0].keys()), cw)
+    if cw:
+        wcsv(os.path.join(vd, "CAPTION_WORD_EVENTS.csv"), list(cw[0].keys()), cw)
     offs = np.array([r["Offset_ms"] for r in cw if r["Offset_ms"] != ""], float)
 
     # ---------- QA ----------
@@ -300,7 +315,18 @@ def main(vid, ev_root):
     for e in events:
         cover[max(e["f0"] - 3, 0):min(e["f1"] + 4, N)] = True
     un = [int(i) for i in np.where(active & ~cover)[0]]
-    chk["all_stage_active_frames_attributed"] = len(un) == 0
+    if bands_cfg.get("mode") == "full":
+        auto_ev = rows(os.path.join(vd, "auto", "STAGE_EVENTS_AUTO.csv"))
+        def covered(a_, b_):
+            return any(e["f0"] - 3 <= b_ and a_ <= e["f1"] + 3 for e in events)
+        missing_big = [x["event_id"] for x in auto_ev if (x["auto_hint"] != "SMALL" or float(x["peak_changed_frac_of_stage"]) >= 0.008) and not covered(int(x["start_frame"]), int(x["end_frame"]))]
+        small_unrev = [x["event_id"] for x in auto_ev if x["auto_hint"] == "SMALL" and float(x["peak_changed_frac_of_stage"]) < 0.008]
+        chk["all_nonsmall_auto_events_attributed"] = len(missing_big) == 0
+        qa_extra = {"nonsmall_auto_events_unattributed": missing_big, "small_auto_events_not_individually_reviewed": len(small_unrev),
+                    "frames_above_noise_not_in_any_authored_event": len(un), "analysis_depth": "DEPTH_B (cut-delimited scenes + all CUT/BIG/ANIMATION and >=0.8%-area SMALL auto events reviewed on compact sheets; sub-0.8% changes such as caption words and thin strokes counted, not individually reviewed)"}
+    else:
+        chk["all_stage_active_frames_attributed"] = len(un) == 0
+        qa_extra = {"analysis_depth": "DEPTH_A (every auto stage event reviewed at native resolution; caption words measured)"}
     # every scene boundary has a hard-cut event
     chk["every_scene_start_has_event"] = all(any(e["f0"] <= s["f0"] <= e["f1"] or e["f0"] == s["f0"] + 0 for e in events) for s in scenes[1:])
     cutv = {e["id"]: int(stage_px[e["f0"]]) for e in events if e["op"].startswith("HARD_CUT") and e["op"] != "HARD_CUT_THROUGH_BLANK_FRAME"}
@@ -321,7 +347,15 @@ def main(vid, ev_root):
     ops = {}
     for e in events:
         ops[e["op"]] = ops.get(e["op"], 0) + 1
-    qa = {"video_id": vid, "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED", "checks": chk, "all_checks_pass": all(chk.values()),
+    iso = [i for i in range(2, N - 2) if stage_px[i] < max(3, bands.get("stage_thr", 8) // 10) and stage_px[i - 1] > 15 * max(1, bands.get("stage_thr", 8) // 8) and stage_px[i + 1] > 15 * max(1, bands.get("stage_thr", 8) // 8)]
+    gaps = {}
+    for a_, b_ in zip(iso, iso[1:]):
+        gaps[int(b_ - a_)] = gaps.get(int(b_ - a_), 0) + 1
+    mod5 = sum(1 for i in iso if i % 5 == iso[0] % 5) if iso else 0
+    five = gaps.get(5, 0)
+    cadence = {"isolated_duplicate_frames_in_motion": len(iso), "gap_histogram_top": dict(sorted(gaps.items(), key=lambda kv: -kv[1])[:4]),
+               "interpretation": ("24 fps timeline conformed to 30 fps by repeating every 5th frame (MEASURED: %d of %d duplicates share one phase mod 5; 5-frame gaps %d)" % (mod5, len(iso), five)) if (fps > 29 and len(iso) >= 8 and five >= 0.6 * max(len(iso) - 1, 1)) else ("no 5-frame duplicate cadence found; frames in motion change every frame (native cadence = %.0f fps)" % fps if len(iso) < 8 else "irregular duplicates; cadence unresolved")}
+    qa = {**qa_extra, "video_id": vid, "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED", "checks": chk, "all_checks_pass": all(chk.values()),
           "unattributed_stage_active_frames": un, "hard_cut_stage_px": cutv,
           "coverage": {"duration_s": summ["duration_s"], "frames_decoded": N, "fps": fps, "source_size": summ["source_size"],
                        "pass_A_narrative_structure": "34 scenes authored from full-duration 1 fps overview (69 frames) + event sheets",
@@ -336,9 +370,9 @@ def main(vid, ev_root):
                                  "visual_events_per_min": round(len(events) / dur_min, 2),
                                  "scene_duration_s": {"mean": round(statistics.mean(stats_scene), 3), "median": round(statistics.median(stats_scene), 3), "min": round(min(stats_scene), 3), "max": round(max(stats_scene), 3)},
                                  "frame_classes_frames": dw, "frame_classes_pct": {k: round(100 * v / N, 1) for k, v in dw.items()},
-                                 "caption_offset_ms_vs_asr_onset": {"n": int(len(offs)), "median": float(np.median(offs)), "p10": float(np.percentile(offs, 10)), "p90": float(np.percentile(offs, 90)), "within_100ms_pct": round(float((abs(offs) <= 100).mean() * 100), 1)},
+                                 "caption_offset_ms_vs_asr_onset": ({"n": int(len(offs)), "median": float(np.median(offs)), "p10": float(np.percentile(offs, 10)), "p90": float(np.percentile(offs, 90)), "within_100ms_pct": round(float((abs(offs) <= 100).mean() * 100), 1)} if len(offs) else "NOT_MEASURED (full-bleed layout; no caption band)"),
                                  "hard_cuts_at_phrase_start_after_pause": sum(1 for r in al_rows if r["Composition_Reset_At_Event"] and r["At_Phrase_Start_After_Pause"]),
-                                 "native_cadence": "24 fps content conformed to 30 fps by duplicating every 5th frame (see FORENSIC_REVIEW)"},
+                                 "native_cadence": cadence},
           "limitations": ["Direct audio listening not performed (agent has no auditory capability)", "360x640 source: fine linework, text weight and sub-10-px motion are resolution limited",
                           "No independent second reviewer; confidence labels are single-reviewer", "Motion method/tool is not observable from a final MP4",
                           "Unreviewed micro-changes below the 8-px stage threshold are treated as compression-noise level and not classified"]}

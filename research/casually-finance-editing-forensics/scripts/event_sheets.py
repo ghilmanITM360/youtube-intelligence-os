@@ -49,11 +49,15 @@ def main():
     ap.add_argument("--events", default="")
     ap.add_argument("--max-long", type=int, default=16)
     ap.add_argument("--prefix", default="ev")
+    ap.add_argument("--classes", default="", help="comma list of auto_hint prefixes to keep, e.g. CUT,BIG,ANI")
     a = ap.parse_args()
     rows = list(csv.DictReader(open(os.path.join(ms.RDIR, "videos", a.vid, "auto", "STAGE_EVENTS_AUTO.csv"))))
     if a.events:
         want = set(a.events.split(","))
         rows = [r for r in rows if r["event_id"] in want]
+    if a.classes:
+        keep = tuple(a.classes.split(","))
+        rows = [r for r in rows if r["auto_hint"].startswith(keep)]
     src, fps = ms.source(a.vid)
     import json
     nframes = json.load(open(os.path.join(ms.RDIR, "videos", a.vid, "auto", "AUTO_SUMMARY.json")))["frames_decoded"]
