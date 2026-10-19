@@ -38,6 +38,8 @@ TAX = {
     "ROTATION": ("none", "see geometry", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "MORPH_REARRANGE": ("elements resize/move into a new arrangement", "none", "none", "none", "PARTIAL", "YES", "YES", "YES", "YES", "NO"),
     "SHAPE_MORPH": ("shape skew/scale", "see description", "none", "none", "PARTIAL (needs frame sequence or rig)", "YES", "YES", "YES", "YES", "UNKNOWN (not required)"),
+    "TEXT_WRITE_ON": ("none", "none", "none", "progressive write-on / reveal", "PARTIAL", "YES", "YES", "YES", "YES", "NO"),
+    "OPACITY_FADE": ("none", "none", "linear 100->0 %", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "SLIDE_IN": ("none", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "CAMERA_SCROLL_ZOOM": ("see geometry", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "SCALE_TWEEN": ("grows/shrinks over N frames", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
@@ -333,7 +335,7 @@ def main(vid, ev_root):
                     "frames_above_noise_not_in_any_authored_event": len(un), "analysis_depth": "DEPTH_B (cut-delimited scenes + all CUT/BIG/ANIMATION and >=0.8%-area SMALL auto events reviewed on compact sheets; sub-0.8% changes such as caption words and thin strokes counted, not individually reviewed)"}
     else:
         chk["all_stage_active_frames_attributed"] = len(un) == 0
-        qa_extra = {"analysis_depth": "DEPTH_A (every auto stage event reviewed at native resolution; caption words measured)"}
+        qa_extra = {"analysis_depth": "DEPTH_A (banded layout: every auto stage event reviewed on pre/active/post contact sheets; caption word timing measured against ASR)"}
     # every scene boundary has a hard-cut event
     chk["every_scene_start_has_event"] = all(any(e["f0"] <= s["f0"] <= e["f1"] or e["f0"] == s["f0"] + 0 for e in events) for s in scenes[1:])
     cutv = {e["id"]: int(stage_px[e["f0"]]) for e in events if e["op"].startswith("HARD_CUT") and e["op"] != "HARD_CUT_THROUGH_BLANK_FRAME"}
@@ -358,7 +360,7 @@ def main(vid, ev_root):
     gaps = {}
     for a_, b_ in zip(iso, iso[1:]):
         gaps[int(b_ - a_)] = gaps.get(int(b_ - a_), 0) + 1
-    mod5 = sum(1 for i in iso if i % 5 == iso[0] % 5) if iso else 0
+    mod5 = max([sum(1 for i in iso if i % 5 == r) for r in range(5)]) if iso else 0
     five = gaps.get(5, 0)
     cadence = {"isolated_duplicate_frames_in_motion": len(iso), "gap_histogram_top": dict(sorted(gaps.items(), key=lambda kv: -kv[1])[:4]),
                "interpretation": ("24 fps timeline conformed to 30 fps by repeating every 5th frame (MEASURED: %d of %d duplicates share one phase mod 5; 5-frame gaps %d)" % (mod5, len(iso), five)) if (fps > 29 and len(iso) >= 8 and five >= 0.6 * max(len(iso) - 1, 1)) else ("no 5-frame duplicate cadence found; frames in motion change every frame (native cadence = %.0f fps)" % fps if len(iso) < 8 else "irregular duplicates; cadence unresolved")}
