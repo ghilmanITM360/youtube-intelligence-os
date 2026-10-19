@@ -17,10 +17,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_sheet as ms  # noqa: E402
 
 
-def plan(row, max_long, nframes):
+def plan(row, max_long, nframes, lean=False):
     a, b = int(row["start_frame"]), int(row["end_frame"])
     span = b - a + 1
     pairs = [(max(a - 1, 0), "pre")]
+    if lean and span == 1:
+        return [(max(a - 1, 0), "pre"), (a, "act")]
     if span <= 4:
         pairs += [(f, "act") for f in range(a, b + 1)]
     else:
@@ -29,7 +31,7 @@ def plan(row, max_long, nframes):
         if acts[-1] != b:
             acts.append(b)
         pairs += [(f, "act") for f in acts]
-    pairs += [(min(b + 1, nframes - 1), "post"), (min(b + 4, nframes - 1), "hold")]
+    pairs += [(min(b + 1, nframes - 1), "post")] + ([] if lean else [(min(b + 4, nframes - 1), "hold")])
     seen, out = set(), []
     for f, role in pairs:
         if f not in seen:
@@ -49,6 +51,7 @@ def main():
     ap.add_argument("--events", default="")
     ap.add_argument("--max-long", type=int, default=16)
     ap.add_argument("--prefix", default="ev")
+    ap.add_argument("--lean", action="store_true", help="1-frame events: pre+act only; no hold frames")
     ap.add_argument("--classes", default="", help="comma list of auto_hint prefixes to keep, e.g. CUT,BIG,ANI")
     a = ap.parse_args()
     rows = list(csv.DictReader(open(os.path.join(ms.RDIR, "videos", a.vid, "auto", "STAGE_EVENTS_AUTO.csv"))))
@@ -63,7 +66,7 @@ def main():
     nframes = json.load(open(os.path.join(ms.RDIR, "videos", a.vid, "auto", "AUTO_SUMMARY.json")))["frames_decoded"]
     groups, cur = [], []
     for r in rows:
-        items = [(r["event_id"], f, role) for f, role in plan(r, a.max_long, nframes)]
+        items = [(r["event_id"], f, role) for f, role in plan(r, a.max_long, nframes, a.lean)]
         if cur and len(cur) + len(items) > a.per_sheet:
             groups.append(cur)
             cur = []

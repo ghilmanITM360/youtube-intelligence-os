@@ -54,6 +54,7 @@ FAMILY = {  # layer requirement, reusability
     "SOURCE_SCREENSHOT": ("raster still, cropped to evidence region", "TOPIC-SPECIFIC (needs authorised source)"),
     "TYPOGRAPHY_PERSISTENT": ("fixed text layer above stage", "HIGH"),
     "TYPOGRAPHY_CAPTION": ("per-word reveal layer synced to narration", "HIGH"),
+    "SOURCE_LOGO": ("raster logo/seal, scaled or popped", "TOPIC-SPECIFIC (needs authorised source)"),
     "TYPOGRAPHY_EMPHASIS": ("separate large coloured text layer above caption", "HIGH"),
     "CHARACTER_CROWD": ("N identical small figures instanced + label layer", "HIGH"),
     "PROP_HOUSING": ("single flat prop, may crop at frame edge or slide behind characters", "HIGH"),
