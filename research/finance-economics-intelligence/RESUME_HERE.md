@@ -5,6 +5,18 @@
 
 
 
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_126 / MKR complete)
+
+- **403/966 expanded-complete; 563 remaining. Nick Invests 136/363**, plus five separate missing-date authored partials. Completed `MKRDKnPvCUA` — 7 Sacrifices You MUST Do to Build Wealth. Exact next immutable master-order ID **`MKSPz6cWlwc` — Growing Up Poor: The Hidden Psychological Cost**. No next-video research started at this checkpoint.
+- Previous unit commit `94c5dbe6d03b26e7bd7d25d730bea05a7a60583c` pushed and local/remote/OPEN-DRAFT PR #36 aligned. Its exact-head run39289575940 is FAILURE with no steps and explicit billing/spending annotation: **CI_BLOCKED_BILLING**. Prior033 run39288578163 independently confirmed CI_BLOCKED_BILLING/no steps. Do not confuse CI and local test results.
+- Full19,363-character/3,253-source-word canonical transcript read in two contiguous chunks; SHA256 `f7b5e5ac1d62be1d5907c265f56b101c0e3be594d6d47c939e547119ed8d17f6`. ZIP20,872bytes/544lines SHA256 `9802a5106b1c89dbb61723cdf8d3c8b6a44bd1ee7d8151d6e6b6cd7c386f58f5`. Actual1280x720 and320x180 image inspected, SHA256 `a87908b5ecfb25033cb509af68786c95cf70367580af1714d7a66c649e73f149`. MOST PEOPLE WONT/red luxury versus green bank challenge legible. Audio/editing and historical image continuity unverified.
+- Virality independently reproduced **2.03687x STRONG / five-peer2.13389x STRONG**,78,003 frozenviews, close to2x. Exactpeer seven-smart-purchases5.35726x STRONG versus saving-share.97092x TYPICAL and car-poor.4104x WEAK. Broader habit lists and opposite stop-grinding package also vary, so no universal abstinence/list formula; private analytics unavailable.
+- Credibility: three-to-four35dollar deliveries weekly total455-607monthly; fee/tip increment is195-260, not over500justconvenience. MUST/money-before-time/never-shop-around/strangers-probably-indebted claims lack support. Primary buying-time research and CFPB comparison guidance supply counterexamples without claiming every convenience expense is good.500monthly30years has180Kprincipal; analyst-only return/inflation sensitivity is explicitly distinguished from source narration and guarantees. Index risk, fees, taxes, liquidity and personal spending targets are omitted. Provenance, counterexamples and calculations persisted in NICK_126 receipts.
+- Prior965JSONL records preserved; onlyMKRchanged. All966IDs/sevenCSVs reconcile. Workbook zero lag:966population,434legacy-inclusive readings,412fulltexts; coverage **418/418/408/408/955/403**, expanded403/remaining563. Corrected source dates/structured beat formatting preserved. Native Excel recalculation UNTESTED. Fingerprint, artifact recalculation/mutation restore, zero formula errors, Coverage preview and966publication values PASS; no object placeholders. Workbook SHA256 `6c474b8798348cf9b7e9e19965fdb1464344db4f5cc065fd6e57d9c418cd2ded`.
+- Fresh16focusedtests and2workbookregressions PASS. Both research validators and26immutable-source hashes PASS with zero errors; structural checks do not certify semantic entailment. Final staged secret/whitespace and postpush identity checks required. No repository-wide suite rerun.
+- Live usage five-hour47%, weekly41%; contextpercentage unavailable/no serious warning exposed. No resource stopgate reached. Full966mission remains incomplete; continue after validated push.
+
 ## Latest continuation checkpoint — 2026-10-19 (NICK_125 / MK1 complete)
 
 - **402/966 expanded-complete; 564 remaining. Nick Invests 135/363**, plus five missing-date authored partials. Completed `MK1-ZC06EkU` — 50 Shocking Money Stats Of The Average Person. Exact next immutable master-order ID **`MKRDKnPvCUA` — 7 Sacrifices You MUST Do to Build Wealth**. No next-video research started at this checkpoint.
