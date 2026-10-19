@@ -11,7 +11,7 @@ DEPTH_B (cut-delimited scenes + all CUT/BIG/ANIMATION and >=0.8%-area SMALL auto
 ## Measured statistics
 - 17 scenes (median 2.83 s, p10 1.56, p90 4.80, longest 6.29); 16 hard cuts (17.56/min); 54 events (59.26/min), 36 of them one-frame.
 - Operations: HARD_CUT_REPLACE 16, POP_IN 15, OVERLAY_POP 8, STROKE_REVEAL 4, CAMERA_SCROLL_ZOOM 4, CAPTION_CHUNK_CHANGE 3, CHARACTER_RISE_IN 2, POSE_SWAP 1, PROP_DRIFT 1.
-- Frame-weighted: static hold 70.1 %, plausibly conventional keyframe/compositing 29.9 %, screen recording 0.0 %, complex continuous animation 0.0 %; generated/video-based: none identified.
+- Frame-weighted: static hold 70.1 %, plausibly conventional keyframe/compositing 29.9 %, screen recording 0.0 %, complex continuous animation 0.0 %, change of undetermined method 0.0 %; generated/video-based: none identified.
 - Hard cuts relative to the nearest ASR word onset: median -74 ms (p10 -144, p90 96; negative = visual first; ASR uncertainty ~100 ms).
 - Cadence: no 5-frame duplicate cadence found; frames in motion change every frame (native cadence = 24 fps).
 

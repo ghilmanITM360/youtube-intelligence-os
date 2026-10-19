@@ -40,6 +40,7 @@ TAX = {
     "SHAPE_MORPH": ("shape skew/scale", "see description", "none", "none", "PARTIAL (needs frame sequence or rig)", "YES", "YES", "YES", "YES", "UNKNOWN (not required)"),
     "TEXT_WRITE_ON": ("none", "none", "none", "progressive write-on / reveal", "PARTIAL", "YES", "YES", "YES", "YES", "NO"),
     "OPACITY_FADE": ("none", "none", "linear 100->0 %", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
+    "UNRESOLVED_CHANGE": ("unknown", "unknown", "unknown", "unknown", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
     "SLIDE_IN": ("none", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "CAMERA_SCROLL_ZOOM": ("see geometry", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "SCALE_TWEEN": ("grows/shrinks over N frames", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
@@ -69,7 +70,7 @@ FAMILY = {  # layer requirement, reusability
     "PROP_FURNITURE": ("single flat prop + occupant", "MEDIUM"),
     "PROP_DEVICE": ("device frame + screen content layer (icon scale tween)", "HIGH"),
 }
-RANK = {"STATIC": 0, "CONV": 1, "SCREENREC": 2, "COMPLEX": 3}
+RANK = {"STATIC": 0, "INDET": 1, "CONV": 2, "SCREENREC": 3, "COMPLEX": 4}
 MCLASS_NAME = {"CONV": "PLAUSIBLY_CONVENTIONAL_2D_KEYFRAME_COMPOSITING", "COMPLEX": "MORE_COMPLEX_CONTINUOUS_ANIMATION",
                "SCREENREC": "SOURCE_SCREEN_RECORDING", "GENVID": "POSSIBLE_GENERATED_OR_VIDEO_BASED", "INDET": "INDETERMINATE_METHOD"}
 
@@ -118,6 +119,20 @@ def main(vid, ev_root):
                            "desc": "Stage composition replaced between frame %d and %d (%d changed stage px); no blended frame." % (sc_["f0"] - 1, sc_["f0"], pxv),
                            "mclass": "CONV", "geometry": "", "easing": "", "measure": "", "evidence": "stage px series f%d=%d" % (sc_["f0"], pxv),
                            "label": "DIRECTLY_OBSERVED", "confidence": "HIGH" if pxv >= 1000 else "MEDIUM", "ambiguity": "", "trigger": sc_.get("trigger", ""), "after": ""})
+        if bands_cfg.get("auto_fill"):
+            # Honest fallback: every non-small (or >=0.8 % area) auto event not covered by an authored event becomes an UNRESOLVED_CHANGE row.
+            for x in rows(os.path.join(vd, "auto", "STAGE_EVENTS_AUTO.csv")):
+                a_, b_ = int(x["start_frame"]), int(x["end_frame"])
+                if not (x["auto_hint"] != "SMALL" or float(x["peak_changed_frac_of_stage"]) >= 0.008):
+                    continue
+                if any(e["f0"] - 3 <= b_ and a_ <= e["f1"] + 3 for e in events):
+                    continue
+                sc_ = next(s2 for s2 in scenes if s2["f0"] <= a_ < s2["f1"])
+                events.append({"id": "auto", "scene": sc_["id"], "f0": a_, "f1": min(b_, sc_["f1"] - 1), "op": "UNRESOLVED_CHANGE",
+                               "target": "region bbox %s (auto %s)" % (x["union_bbox_norm"], x["event_id"]),
+                               "desc": "Detected %s change of %s %% of the frame over %d frame(s); mechanism not individually resolved." % (x["auto_hint"], round(100 * float(x["peak_changed_frac_of_stage"]), 1), int(x["n_active_span"])),
+                               "mclass": "INDET", "geometry": "", "easing": "not measured", "measure": "", "evidence": x["event_id"],
+                               "label": "MEASURED (detection only)", "confidence": "LOW", "ambiguity": "not classified", "trigger": "", "after": ""})
         events.sort(key=lambda e: (e["f0"], 0 if e["op"].startswith("HARD_CUT") else 1, e["id"]))
         for k, e in enumerate(events, 1):
             e["id"] = "ME%03d" % k
@@ -331,8 +346,8 @@ def main(vid, ev_root):
         missing_big = [x["event_id"] for x in auto_ev if (x["auto_hint"] != "SMALL" or float(x["peak_changed_frac_of_stage"]) >= 0.008) and not covered(int(x["start_frame"]), int(x["end_frame"]))]
         small_unrev = [x["event_id"] for x in auto_ev if x["auto_hint"] == "SMALL" and float(x["peak_changed_frac_of_stage"]) < 0.008]
         chk["all_nonsmall_auto_events_attributed"] = len(missing_big) == 0
-        qa_extra = {"nonsmall_auto_events_unattributed": missing_big, "small_auto_events_not_individually_reviewed": len(small_unrev),
-                    "frames_above_noise_not_in_any_authored_event": len(un), "analysis_depth": "DEPTH_B (cut-delimited scenes + all CUT/BIG/ANIMATION and >=0.8%-area SMALL auto events reviewed on compact sheets; sub-0.8% changes such as caption words and thin strokes counted, not individually reviewed)"}
+        qa_extra = {"unresolved_change_events": sum(1 for e in events if e["op"] == "UNRESOLVED_CHANGE"), "nonsmall_auto_events_unattributed": missing_big, "small_auto_events_not_individually_reviewed": len(small_unrev),
+                    "frames_above_noise_not_in_any_authored_event": len(un), "analysis_depth": bands_cfg.get("depth_label") or "DEPTH_B (cut-delimited scenes + all CUT/BIG/ANIMATION and >=0.8%-area SMALL auto events reviewed on compact sheets; sub-0.8% changes such as caption words and thin strokes counted, not individually reviewed)"}
     else:
         chk["all_stage_active_frames_attributed"] = len(un) == 0
         qa_extra = {"analysis_depth": "DEPTH_A (banded layout: every auto stage event reviewed on pre/active/post contact sheets; caption word timing measured against ASR)"}
@@ -344,13 +359,13 @@ def main(vid, ev_root):
     chk["asr_within_duration"] = float(asr[-1]["end_sec"]) <= summ["duration_s"] + 0.3
     # duration-weighted classes (frames): each frame -> most complex active event class; else static
     cls = np.zeros(N, int)
-    names = {0: "STATIC_HOLD", 1: "CONV", 2: "SCREENREC", 3: "COMPLEX"}
+    names = {0: "STATIC_HOLD", 1: "INDET", 2: "CONV", 3: "SCREENREC", 4: "COMPLEX"}
     for e in events:
         if e["f1"] > e["f0"] or e["op"] in ("POINTER_TRANSLATE",):
             for f in range(e["f0"], e["f1"] + 1):
                 cls[f] = max(cls[f], RANK.get(e["mclass"], 1))
     inst = sum(1 for e in events if e["f1"] == e["f0"])
-    dw = {names[r]: int((cls == r).sum()) for r in range(4)}
+    dw = {names[r]: int((cls == r).sum()) for r in range(5)}
     stats_scene = [(s["f1"] - s["f0"]) / fps for s in scenes if s["f1"] - s["f0"] > 1]
     dur_min = summ["duration_s"] / 60
     ops = {}

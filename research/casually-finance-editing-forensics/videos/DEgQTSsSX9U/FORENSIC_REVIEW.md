@@ -11,7 +11,7 @@ DEPTH_A (banded layout: every auto stage event reviewed on pre/active/post conta
 ## Measured statistics
 - 26 scenes (median 1.87 s, p10 1.08, p90 4.75, longest 7.03); 25 hard cuts (23.46/min); 75 events (70.38/min), 56 of them one-frame.
 - Operations: HARD_CUT_REPLACE 25, POP_IN 21, OVERLAY_POP 9, POSE_SWAP 5, SCALE_TWEEN 3, SLIDE_IN 3, STROKE_REVEAL 2, CAMERA_SCROLL_ZOOM 2, SHAPE_MORPH 1, TEXT_WRITE_ON 1, PROP_DRIFT 1, CHARACTER_LOOP_ANIMATION 1, OPACITY_FADE 1.
-- Frame-weighted: static hold 80.3 %, plausibly conventional keyframe/compositing 19.0 %, screen recording 0.0 %, complex continuous animation 0.6 %; generated/video-based: none identified.
+- Frame-weighted: static hold 80.3 %, plausibly conventional keyframe/compositing 15.6 %, screen recording 0.0 %, complex continuous animation 0.6 %, change of undetermined method 3.4 %; generated/video-based: none identified.
 - Hard cuts relative to the nearest ASR word onset: median -13 ms (p10 -96, p90 139; negative = visual first; ASR uncertainty ~100 ms).
 - Cadence: 24 fps timeline conformed to 30 fps by repeating every 5th frame (MEASURED: 32 of 54 duplicates share one phase mod 5; 5-frame gaps 38).
 

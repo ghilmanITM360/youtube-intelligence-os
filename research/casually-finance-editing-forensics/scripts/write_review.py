@@ -35,7 +35,7 @@ Status: `{status}` (single reviewer, no independent QA). Machine checks: {'all p
 ## Measured statistics
 - {q['counts']['scenes']} scenes (median {np.median(sc):.2f} s, p10 {np.percentile(sc,10):.2f}, p90 {np.percentile(sc,90):.2f}, longest {max(sc):.2f}); {d['hard_cuts']} hard cuts ({d['hard_cuts_per_min']}/min); {q['counts']['events']} events ({d['visual_events_per_min']}/min), {q['counts']['instant_events']} of them one-frame.
 - Operations: {', '.join(f'{k} {v}' for k, v in sorted(ops.items(), key=lambda kv: -kv[1]))}.
-- Frame-weighted: static hold {fp['STATIC_HOLD']} %, plausibly conventional keyframe/compositing {fp['CONV']} %, screen recording {fp['SCREENREC']} %, complex continuous animation {fp['COMPLEX']} %; generated/video-based: none identified.
+- Frame-weighted: static hold {fp['STATIC_HOLD']} %, plausibly conventional keyframe/compositing {fp['CONV']} %, screen recording {fp['SCREENREC']} %, complex continuous animation {fp['COMPLEX']} %, change of undetermined method {fp.get('INDET', 0)} %; generated/video-based: none identified.
 - Hard cuts relative to the nearest ASR word onset: median {np.median(cuts):.0f} ms (p10 {np.percentile(cuts,10):.0f}, p90 {np.percentile(cuts,90):.0f}; negative = visual first; ASR uncertainty ~100 ms).
 - Cadence: {cad}.
 

@@ -41,7 +41,7 @@ def probe(path):
 
 def decode_gray(path, w, h):
     """Stream every native frame as (h,w) uint8 gray, area-averaged. Returns (N,h,w) and mean RGB (N,3)."""
-    cmd = ["ffmpeg", "-v", "error", "-i", path, "-an", "-vf", "scale=%d:%d:flags=area" % (w, h),
+    cmd = ["ffmpeg", "-v", "error", "-i", path, "-an", "-fps_mode", "passthrough", "-vf", "scale=%d:%d:flags=area" % (w, h),
            "-pix_fmt", "rgb24", "-f", "rawvideo", "-"]
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     fs = w * h * 3
