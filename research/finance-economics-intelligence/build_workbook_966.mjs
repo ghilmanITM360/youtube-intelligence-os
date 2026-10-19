@@ -4,6 +4,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { Workbook, SpreadsheetFile } from '@oai/artifact-tool';
+import { beatMapForDisplay, publicationDateForUtcDisplay, structuredValueForDisplay } from './workbook_formatting.mjs';
 
 const base = path.resolve(process.argv[2]);
 const rows = (await fs.readFile(path.join(base, 'VIDEO_AUDIT_966.jsonl'), 'utf8')).trim().split('\n').map(JSON.parse);
@@ -43,12 +44,13 @@ cover.getRange('A16').values = [['Other completions require individual semantic 
 cover.getRange('A18').values = [['Historical snapshots. Private analytics unavailable.']];
 cover.getRange('A19').values = [['Full stored text does not certify complete audio.']];
 cover.getRange('A20').values = [['See Readings for individual findings and provenance.']];
-cover.getRange('A15:C20').format.font = {name:'Arial',size:10};
+cover.getRange('A21').values = [['Publication timestamps with explicit offsets display in UTC; timezone-unknown source values remain text.']];
+cover.getRange('A15:C21').format.font = {name:'Arial',size:10};
 videos.getRange('A2').values = [['Canonical population and independent completion indicators']];
 const numeric = x => x === '' || x === null ? null : Number(x);
 const dated = x => x && !Number.isNaN(Date.parse(x)) ? new Date(x) : x;
 const headers = ['Video ID','Channel','Title','Published UTC','Historical views','Snapshot','Format','Duration seconds','Tier','Age-peer ratio',...dims.map(d=>d+' review'),'Batch','Transcript status','Source locator','Historical likes','Historical comments'];
-table(videos,headers,rows.map(r=>[r.Video_ID,r.identity.Channel,r.identity.Title,dated(r.identity.Published_at_raw),numeric(r.identity.Views),dated(r.identity.Metric_snapshot_date),r.identity.Format,numeric(r.identity.Duration_seconds),r.performance.Performance_tier,numeric(r.performance.Lifetime_rate_ratio),...dims.map(d=>r.statuses[d+'_REVIEW']),r.batch_id,r.script.source.Status,r.identity.Evidence_locator,r.identity.likes,r.identity.comments]),'Population');
+table(videos,headers,rows.map(r=>[r.Video_ID,r.identity.Channel,r.identity.Title,publicationDateForUtcDisplay(r.identity.Published_at_raw),numeric(r.identity.Views),dated(r.identity.Metric_snapshot_date),r.identity.Format,numeric(r.identity.Duration_seconds),r.performance.Performance_tier,numeric(r.performance.Lifetime_rate_ratio),...dims.map(d=>r.statuses[d+'_REVIEW']),r.batch_id,r.script.source.Status,r.identity.Evidence_locator,r.identity.likes,r.identity.comments]),'Population');
 videos.getRange('C4:C970').format.columnWidth=66;
 videos.getRange('C5:C970').format.wrapText=true;
 videos.getRange('A5:U970').format.autofitRows();
@@ -71,7 +73,7 @@ for(let i=0;i<dims.length;i++) {
 }
 const done = rows.filter(r=>r.title.analysis || r.title.legacy_review);
 readings.getRange('A2').values=[['Individual readings. Check scope and pending components.']];
-table(readings,['Video ID','Title','Topic','Title reading','Script beats','Script decisions','Claims to verify','Thumbnail reading','Virality assessment','Original test','Source references','Script scope'],done.map(r=>[r.Video_ID,r.identity.Title,r.topic.analysis || r.topic.legacy_review?.Audience_problem || 'PENDING',r.title.analysis || JSON.stringify(r.title.legacy_review),r.script.beat_map?.join(' → ') || r.script.legacy_beat_map?.Narrative_chain || 'PENDING',r.script.analysis || (r.script.legacy_review ? 'LEGACY '+r.script.review_scope+': '+r.script.legacy_review.Narrative_angle : 'PENDING'),r.script.claim_audit || 'PENDING',r.thumbnail.analysis || (r.thumbnail.legacy_review ? JSON.stringify(r.thumbnail.legacy_review) : 'PENDING'),r.virality.analysis || 'PENDING',r.virality.original_content_lesson?.test || 'PENDING',(r.virality.source_refs || r.title.source_refs || [r.title.legacy_review.Source]).join('\n'),r.script.review_scope]),'IndividualReadings');
+table(readings,['Video ID','Title','Topic','Title reading','Script beats','Script decisions','Claims to verify','Thumbnail reading','Virality assessment','Original test','Source references','Script scope'],done.map(r=>[r.Video_ID,r.identity.Title,r.topic.analysis || r.topic.legacy_review?.Audience_problem || 'PENDING',r.title.analysis || JSON.stringify(r.title.legacy_review),beatMapForDisplay(r.script.beat_map,r.script.legacy_beat_map?.Narrative_chain),r.script.analysis || (r.script.legacy_review ? 'LEGACY '+r.script.review_scope+': '+r.script.legacy_review.Narrative_angle : 'PENDING'),structuredValueForDisplay(r.script.claim_audit),r.thumbnail.analysis || (r.thumbnail.legacy_review ? JSON.stringify(r.thumbnail.legacy_review) : 'PENDING'),r.virality.analysis || 'PENDING',r.virality.original_content_lesson?.test || 'PENDING',(r.virality.source_refs || r.title.source_refs || [r.title.legacy_review.Source]).join('\n'),r.script.review_scope]),'IndividualReadings');
 readings.getRangeByIndexes(4,0,done.length,12).format.wrapText=true;
 readings.getRangeByIndexes(4,0,done.length,12).format.verticalAlignment='top';
 readings.getRangeByIndexes(3,1,done.length+1,10).format.columnWidth=74;

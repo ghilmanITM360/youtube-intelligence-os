@@ -1,0 +1,102 @@
+{
+  "batch_id": "NICK_119",
+  "scope": "One consecutive master-order Nick Invests record; full stored transcript read and actual image acquired and inspected",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "reviews": [
+    {
+      "Video_ID": "LI_PDfxunOk",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": ["VIDEO_MASTER.csv:LI_PDfxunOk", "TRANSCRIPT_COVERAGE.csv:LI_PDfxunOk", "audit-batches/NICK_119_READ_RECEIPTS.json"],
+        "analysis": "Exact: \"Stock Market Explained for Beginners\" (36 characters, six words). It is a plain search-intent formula: broad mechanism + explained + explicit novice audience. The wording promises comprehension rather than a numerical outcome, fear or secret, and omits the description's 2026 freshness cue. At 0.75094x it is TYPICAL in the 10-peer model but crosses to WEAK at 0.46148x against five peers, so the result is not robust to peer-pool size.",
+        "peer_comparison_ids": ["zEOTb-p7tyg", "05T4iZ4MdIA", "3w6Ffj_21Z0", "YDQFf-NtUuw"],
+        "search_demand": "The title matches evergreen beginner-investing search intent, but historical query volume and Google Trends values are unavailable. Same-window results range from 5.73439x STRONG to 0.4549x WEAK, so neither the broad topic nor an educational promise isolates reach.",
+        "script_alignment": "Strong at the category level: the script defines stocks, business ownership, diversification, index funds, contribution cadence, account types and automation. It is less aligned with the thumbnail's extreme simplicity because it also introduces business analysis, taxes, crashes, behavioral discipline and account selection."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": ["VIDEO_MASTER.csv:LI_PDfxunOk", "audit-batches/NICK_119_READ_RECEIPTS.json"],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_LI_PDfxunOk.jpg",
+        "image_source": "https://i.ytimg.com/vi/LI_PDfxunOk/maxresdefault.jpg",
+        "image_sha256": "e1e07390efaab7245254a9ee8fb90b2ec5ec6bba4629284b7b0cec0f6f60d49e",
+        "dimensions": [1280, 720],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Native 1280x720 and 320x180 inspected. Huge black text IT'S THIS SIMPLE occupies the upper-right; a thick curved arrow points at a bright pink piggy bank. On the left, a neutral cartoon beginner sits behind two open books and a laptop with a rising green chart. The white field, oversized four-word headline, black arrow and saturated green/pink accents remain readable at 320px; book detail becomes decorative but the face, chart and pig remain distinct. The visual promise is easy learning and saving-to-investing conversion, consistent with the beginner title and the script's low-cost-index/automation payoff. It understates the script's many concepts and risks, and the arrow specifically targets saving although the script distinguishes emergency/near-term cash from long-horizon stock money. No historical image proves this design was live throughout the measurement window."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": ["VIDEO_MASTER.csv:LI_PDfxunOk", "TRANSCRIPT_COVERAGE.csv:LI_PDfxunOk", "audit-batches/NICK_119_READ_RECEIPTS.json"],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "Picture this scenario. You're scrolling through social media at 2 in the morning, watching someone your age post about their latest vacation to Bali, their brand new Tesla, or their downtown apartment",
+        "ending_words": "Your future self will thank you for finally taking action instead of just watching everyone else build wealth while you stayed on the sidelines.",
+        "analysis": "All 20,050 canonical transcript characters were read in four contiguous bounded ranges and the registered SHA256 matched. Structure: late-night social-comparison cold open -> stocks as an accessible bridge to wealth -> inflation and long-run return case -> ownership versus speculation -> crashes, time horizon and discipline -> stock/business fundamentals -> index-fund simplification -> contribution rate, dollar-cost averaging and tax wrappers -> automation/psychology -> practical brokerage-opening steps and a 20-year do-nothing payoff. The opening is emotionally vivid but takes roughly 1,500 transcript characters plus a subscribe/disclaimer interruption before explaining the market. The middle alternates definitions, brand examples and objections rather than following a person or worked case. Recurring contrasts—casino versus ownership, checking cash versus productive assets, panic versus automation—support comprehension; the final checklist delivers a practical payoff. Evidence is usually asserted without dates or source names, and repeated motivational claims overstate certainty.",
+        "beat_map": [
+          {"character_range": [0, 5000], "beat": "Social-comparison hook, wealth-access promise, inflation framing and long-run market return setup"},
+          {"character_range": [5000, 10000], "beat": "$300 compounding example, ownership versus speculation, crashes, time horizon and emotional discipline"},
+          {"character_range": [10000, 15000], "beat": "Business fundamentals, company examples, index diversification, fees and contribution priorities"},
+          {"character_range": [15000, 20050], "beat": "Dollar-cost averaging, account taxation, Roth claim, automation, broker access and action payoff"}
+        ],
+        "claim_audit": [
+          "At the stated 8% nominal return, $300 end-of-month contributions for 40 years grow to about $1.047M before fees, taxes and inflation, so 'over $800,000' is conservative. It is a scenario, not a forecast; realized returns, sequence, costs and purchasing power differ.",
+          "An 8%-10% long-run S&P 500 average needs a specified start/end date, nominal-versus-real basis and dividend treatment. An arithmetic average is not a guaranteed investor return, and the script later calls its broad-market history the closest thing to a guarantee despite its disclaimer.",
+          "'Every major crash' recovered and 'any 20-year period' rewarded patient index investors require the exact U.S. index, nominal total-return series, endpoints and reinvestment assumptions. Historical U.S. recovery does not ensure a five-year goal is safe or make short-term volatility irrelevant for every investor.",
+          "Apple's ecosystem is a plausible moat interpretation, not proof of future returns. Coca-Cola's serving count, fee averages and professional-manager comparison need dated sources. Revenue, margins and competitive advantage are introductory inputs, not a sufficient valuation method.",
+          "An S&P 500 fund provides broad U.S. large-cap exposure, not thousands of companies or automatic global/asset-class diversification. The index is selected by a committee and is not simply the 500 largest public companies. Diversification reduces company-specific risk but not market loss.",
+          "Dollar-cost averaging enforces a schedule and can reduce behavioral timing risk, but it does not guarantee a reasonable cost or outperform investing an already-available lump sum. The transcript conflates recurring income contributions with deliberately holding investable cash.",
+          "The 2026 IRA contribution limit is $7,500 for people under 50, but that equals $625 per month, not less than $600. Roth contributions also require compensation and are subject to income phase-outs; tax-free earnings withdrawals generally require a qualified distribution, so 'tax-free forever' and 'without a single penny' are too broad.",
+          "The Amazon $3,000-per-share example is materially stale after Amazon's 20-for-1 split; fractional shares remain a valid access point but that price illustration does not describe the publication period. Commission-free does not mean cost-free: spreads, fund expenses, taxes and routing conflicts remain.",
+          "The claim that successful stock investors share one listed behavior set is not tied to a sample. Saying a viewer has more commitment than 90% of aspiring wealth builders is unsupported. Income, debt, emergency liquidity, employer match, risk tolerance and horizon can change the appropriate starting action."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": ["VIDEO_MASTER.csv:LI_PDfxunOk", "TRANSCRIPT_COVERAGE.csv:LI_PDfxunOk", "audit-batches/NICK_119_READ_RECEIPTS.json"],
+        "analysis": "Evergreen beginner stock-market education: ownership, compounding, market risk, business fundamentals, index funds, fees, regular contributions, retirement accounts and investor behavior. Audience: novice U.S. earners who feel excluded from investing. Core mechanics are evergreen, while 2026 tax limits, broker features, account yields, prices and product fees are date-sensitive.",
+        "novelty_and_corpus_angle": "The coverage is comprehensive but generic. A more defensible version would separate a five-step beginner action path from optional individual-stock analysis, distinguish emergency/short-horizon cash from investment money, show return ranges rather than one deterministic path, and label each tax/account constraint.",
+        "competition": "Exact peers: STRONG zEOTb-p7tyg at 5.73439x; TYPICAL ZnI6pKMnpf4 1.68072x, V5n4jp-p2NI 1.65998x, 3w6Ffj_21Z0 1.16413x, mKVSk76bOJI 0.999x, AzJkAWt5zr4 0.90656x, YDQFf-NtUuw 0.85297x, 7x9YpxZIOMA 0.79586x and ZC6cqLrZahw 0.53158x; WEAK 05T4iZ4MdIA at 0.4549x. The target's plain beginner query is not independently associated with a strong result."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": ["VIDEO_MASTER.csv:LI_PDfxunOk", "PERFORMANCE_SENSITIVITY.csv:LI_PDfxunOk", "TRANSCRIPT_COVERAGE.csv:LI_PDfxunOk", "audit-batches/NICK_119_READ_RECEIPTS.json"],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "13,155 frozen public views at 256.5454 days; 0.75094x TYPICAL against 10 same-channel LONG_FORM age peers, but 0.46148x WEAK against five peers. The sensitivity crossing makes the tier unstable. The exact pool includes a 5.73439x STRONG wealth-in-your-30s outlier and a 0.4549x WEAK future-cost video; broad financial education spans both. A direct search title, oversized easy-learning image and novice definitions plausibly support appeal and comprehension, while generic positioning, delayed mechanics and repeated unsupported certainty plausibly limit differentiation or satisfaction. CTR, impressions, retention and satisfaction are unavailable, so none is measured or causal.",
+        "observed_result": "13,155 views; 256.5454 days; 1,238 seconds; 0.75094x TYPICAL; five-peer 0.46148x WEAK; 474 likes and 97 comments are public engagement proxies only.",
+        "topic_demand": "Evergreen beginner-investing relevance, but no historical search-volume or Trends series was recovered.",
+        "trend_timing": "Published 2025-12-28 and framed in the description/script as a 2026 guide. A year-end resolution audience is a hypothesis; no verified publication-window catalyst or demand series establishes it.",
+        "competition": "The exact same-channel age pool ranges from 5.73439x STRONG to 0.4549x WEAK; the target is below seven of 10 peers by lifetime-rate ratio and sensitivity-crosses to WEAK.",
+        "format_fit": "20:38 comprehensive beginner explainer with definitions, objections and an action checklist; original audio, visual editing and retention are unverified.",
+        "channel_context": "Same-channel age-normalized public lifetime-rate snapshot; nominally TYPICAL but peer-count sensitive, not evidence that the package or instruction caused reach.",
+        "alternative_explanations": [
+          "Appeal hypothesis: direct beginner search language plus IT'S THIS SIMPLE may reduce intimidation; CTR and impressions are unavailable.",
+          "Engagement hypothesis: progressive definitions and objection handling may support comprehension, while the long pre-mechanics opening and repetition may create drop-off; retention is unavailable.",
+          "Satisfaction hypothesis: the practical index/automation payoff may help novices, while guarantee-like rhetoric, the stale Amazon price and Roth arithmetic/qualification gaps may reduce trust; satisfaction is unavailable.",
+          "Search ranking, recommendation exposure, returning-viewer overlap, seasonal intent, channel momentum and competing uploads are unobserved."
+        ],
+        "original_content_lesson": {
+          "test": "Test the same beginner curriculum with a concrete five-step title and thumbnail, front-load the account/index/action map, move company analysis to an optional branch, and show assumption-labelled ranges. On owned analytics, compare impressions, CTR, first-30-second retention, chapter exits and a post-view comprehension prompt.",
+          "confidence": "HIGH that the result is not sensitivity-stable; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event or historical Trends series. Year-end/2026 framing is observable, but seasonal demand remains a hypothesis.",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}
