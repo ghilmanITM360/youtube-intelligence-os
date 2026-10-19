@@ -1,0 +1,55 @@
+{
+  "batch_id": "NICK_105_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "JVVsyYbuzLo",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "4c8c33f1187145409717e1ff2774e461f436ee580482b5d1728e4f480257ad02",
+      "character_count": 16592,
+      "read_character_ranges": [[0, 4200], [4200, 8400], [8400, 12600], [12600, 16592]],
+      "audio_verified": false,
+      "image_sha256": "4eec8bc9f95250426eb703d4fb1e1bc487ccd20b504566649379fe4a4ac04d3d",
+      "image_inspected_sizes": [[1280, 720], [320, 180]],
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Auto-loan comparison should use amount financed, APR, term and total interest, not monthly payment alone",
+      "source": "Consumer Financial Protection Bureau auto-loan comparison guidance",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-compare-auto-loan-offers-what-should-i-look-at-besides-the-monthly-payment-en-753/",
+      "accessed": "2026-10-19"
+    },
+    {
+      "claim": "Rolling negative equity into a replacement loan raises financed amount and total cost",
+      "source": "Consumer Financial Protection Bureau negative-equity guidance",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/should-i-trade-in-my-car-if-its-not-paid-off-en-2045/",
+      "accessed": "2026-10-19"
+    },
+    {
+      "claim": "Business-use lease deductions and inclusion-amount limits",
+      "source": "Internal Revenue Service Publication 463 (2025)",
+      "url": "https://www.irs.gov/publications/p463",
+      "accessed": "2026-10-19"
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "calculation": "$45,000 financed for 72 months at 6.37%",
+      "result": "$753.66 monthly; $54,263.85 total; $9,263.85 interest; $6,769.65 interest in first 36 payments",
+      "method": "standard monthly amortization at 0.0637/12"
+    },
+    {
+      "calculation": "$27,000 financed for 48 months at 6.37%",
+      "result": "$638.69 monthly; $30,656.93 total; $3,656.93 interest",
+      "method": "standard monthly amortization at 0.0637/12"
+    },
+    {
+      "calculation": "Three 36-month leases at $613 monthly",
+      "result": "$66,204 before drive-off, disposition, mileage, wear, insurance and maintenance costs",
+      "method": "613*108"
+    }
+  ]
+}
