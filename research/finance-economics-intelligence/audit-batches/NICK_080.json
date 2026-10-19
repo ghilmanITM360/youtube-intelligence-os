@@ -1,0 +1,137 @@
+{
+  "batch_id": "NICK_080",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "ED3pUaLp5g8",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:ED3pUaLp5g8",
+          "TRANSCRIPT_COVERAGE.csv:ED3pUaLp5g8",
+          "audit-batches/NICK_080_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"Shocking Money Stats of the Average Retiree In US (2026).\" Reuse of the channel's \"Shocking Money Stats\" template applied to retirees, with country and year tags for freshness/search. Audience: retirees and pre-retirees comparing themselves; social-comparison and fear intent. No number in title.",
+        "peer_comparison_ids": [
+          "Rd40d0XZLpQ",
+          "MK1-ZC06EkU",
+          "C1CqdnB321o",
+          "fDdT5xPDdD0",
+          "Ygv_u2j90OA",
+          "HJ5GZ2R3n2I"
+        ],
+        "search_demand": "Historical query volume unknown. Template spans Rd40d0XZLpQ 19.76486 STRONG to Ygv_u2j90OA 0.30959 WEAK; this retiree variant 0.72684 TYPICAL.",
+        "script_alignment": "Strong: mean vs median retirement savings, 4% rule, Social Security average and dependence, trust-fund shortfall, savings targets vs reality, gender/race gaps, healthcare and long-term care costs, debt, forced early retirement, pension decline, and actions (claiming age, HSA, debt payoff, know your number)."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:ED3pUaLp5g8",
+          "TRANSCRIPT_COVERAGE.csv:ED3pUaLp5g8",
+          "audit-batches/NICK_080_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_ED3pUaLp5g8.jpg",
+        "image_source": "https://i.ytimg.com/vi/ED3pUaLp5g8/maxresdefault.jpg",
+        "image_sha256": "a44611909d80b791f3a6664d8f65455a0d972aca78f0213d5927f9b86f2e8f44",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a worried gray-haired cartoon retiree in a sweater vest, hand on chin; center-right a smaller ragged elderly man in torn brown clothes extends his hands toward a glowing red card labeled \"$ 9,000\"; heavy black \"WHAT RETIREES / REALLY HAVE\" with a large curved arrow. Mobile: headline and $9,000 card legible. \"$9,000\" does not appear in the stored script (which centers $200,000 median, $130,000 for 75+ and $110,000 Linda); destitute-retiree depiction exaggerates relative to the script's modest-but-not-destitute typical retiree. Promise of revealing a true number aligns with the mean-vs-median theme."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:ED3pUaLp5g8",
+          "TRANSCRIPT_COVERAGE.csv:ED3pUaLp5g8",
+          "audit-batches/NICK_080_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "It's the first of the month and Linda\nsits at her kitchen table with a coffee\ngone cold doing math nobody warned her\nabout. Her social security landed this\nmorning, $1,900 same as last month, same\nas next, next to a Medicare letter that\njust nudged her Part B premium up again\nand the grocery coupons. In her head is\nlast week's headline, \"The average\nretiree supposedly has $600,000.\"\nLinda worked 41 years, raised two kids,\nnever missed a payment. ",
+        "ending_words": "o, if today\nlanded heavy, I want you to sit with\nthis instead. None of these numbers are\nverdict on you. They are a map of a\nsystem that pulled the pension, handed\nyou the risk, and then had the nerve to\ncall you irresponsible for being nervous\nabout it. You do not have to be the\naverage. The average is a ghost. You're\na real person sitting at a real table\nwho can run real numbers, and that\nhonestly already puts you miles ahead of\nalmost everyone who ever scrolled past\nthat headline and just believed it. So,\ngo find your number, not the headlines,\nyours. I'm Nick. I'll see you in the\nnext one.",
+        "analysis": "All 17,293 stored characters read in two contiguous ranges with canonical hash match. Composite Linda (Social Security $1,900, $110K saved, Part B letter) frames the whole video and returns at the end. Sections: SCF mean $609K vs median $200K for 65-74 with a \"Bezos walks into a bar\" analogy; 4% rule on $200K; Fidelity 401k millionaires vs ~$30K median; 2026 average Social Security ~$2,071; dependence shares; 2033 trust-fund depletion and 77% payable; Northwestern Mutual $1.26M magic number vs $185K near-retiree median; gender and racial gaps; Fidelity $172,500 healthcare estimate, long-term care odds and nursing-home costs; Part B premium vs COLA; retiree credit-card debt; plan-to-work vs actual and forced early retirement; DB pension decline; mid-late \"faceless YouTube channel\" community CTA; actions (claiming age, HSA, pay off 22% cards, know your number); empathetic close. Well-structured, empathetic, mostly sourced to named organizations; one internal numeric contradiction and conditional-statistic framing issues. ASR not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              8700
+            ],
+            "beat": "Linda hook, mean vs median SCF savings and Bezos analogy, 4% rule, 401k millionaire vs median, Social Security average and dependence, 2033 shortfall, $1.26M target vs $185K, gender and racial gaps, healthcare intro"
+          },
+          {
+            "character_range": [
+              8700,
+              17293
+            ],
+            "beat": "Fidelity healthcare estimate, long-term care, Part B vs COLA, retiree debt, work-longer gap and forced retirement, pension decline, community CTA, actions, Linda close"
+          }
+        ],
+        "claim_audit": [
+          "0:8700 SCF 2022 retirement-account mean ~$609K and median $200K for ages 65-74 and median ~$185K for 55-64 match Federal Reserve figures, but they are conditional on families that hold retirement accounts; the script says \"every household\", omitting that roughly half have none, so typical household savings are lower than presented. $200,000 x 4% = $8,000/year = ~$667/month correct. 2026 average retired-worker benefit ~$2,071 consistent with SSA after the 2.8% COLA. \"About 4 in 10\" majority-dependent and \"1 in 7\" at 90%+ consistent with SSA fact-sheet ranges.",
+          "0:8700 2025 Trustees: combined/OASI reserves depleted ~2033 with ~77% payable consistent; typical-couple cut ~$16,500 resembles CRFB estimates (latest versions somewhat higher), unverified exact. Northwestern Mutual 2025 \"magic number\" $1.26M consistent with the 2025 study; $1.26M / $185K = ~6.8x (\"about 1/7\") correct. Fidelity 401k median \"closer to $30,000\" is approximate (industry medians ~$35-40K).",
+          "8700:17293 Fidelity 2025 estimate $172,500 single / ~$345,000 couple consistent. Contradiction: script says $172,000 is \"more than six times the median retirement balance of someone 75 and older\", then states the median 75-year-old has $130,000 (SCF 2022, conditional) - ratio ~1.3x. Long-term care \"~70% chance\" is a widely cited HHS figure (newer estimates lower, ~56% for some care); private nursing room >$100K/year consistent with Genworth-type surveys. 2026 Part B premium increase exceeded the 2.8% COLA, consistent.",
+          "8700:17293 EBRI Retirement Confidence Survey patterns (about 3/4 workers expect to work in retirement vs ~1/3 retirees did; expected 65 vs actual ~62; ~4 in 10 retiring early for health) consistent with recent releases. Private-sector DB coverage decline is real, but \"six in 10 covered workers in early 1980s to ~4% today\" mixes coverage definitions; unverified. \"$180,000 lifetime cost of claiming at the wrong time\" resembles a 2019 United Income analysis (reported figures vary by household definition); unverified. HSA triple tax advantage correct federally (some states tax HSAs)."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:ED3pUaLp5g8",
+          "TRANSCRIPT_COVERAGE.csv:ED3pUaLp5g8",
+          "audit-batches/NICK_080_READ_RECEIPTS.json"
+        ],
+        "analysis": "Retirement readiness statistics: savings distributions, Social Security dependence and solvency, healthcare/LTC costs, debt, forced early retirement and pension decline. Audience: pre-retirees and retirees, plus younger viewers warned \"the trap is being built for you\". Evergreen with 2026 figures; competitive genre, differentiated by mean-vs-median education and empathetic framing.",
+        "novelty_and_corpus_angle": "Original angle: present unconditional household distributions (including zero-account households) alongside conditional medians, and convert each statistic into a worked monthly income picture for a composite retiree with Social Security claiming scenarios.",
+        "competition": "Same-template Nick: Rd40d0XZLpQ 19.76486 STRONG, MK1-ZC06EkU 2.04278 STRONG, C1CqdnB321o 30-year-old 1.51432 TYPICAL, fDdT5xPDdD0 0.85163 TYPICAL, Ygv_u2j90OA 0.30959 WEAK. Exact pool retirement-adjacent: HJ5GZ2R3n2I retirement accounts 0.94962 TYPICAL."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:ED3pUaLp5g8",
+          "TRANSCRIPT_COVERAGE.csv:ED3pUaLp5g8",
+          "audit-batches/NICK_080_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "4,173 views at 73.0545 days, 18:41; 0.72684x TYPICAL against 10 same-channel LONG_FORM peers published 2026-06-24 to 07-05, frozen 2026-09-11. Exact pool: typical -CbNGP9H4xw upgrade 10 things 1.60821, maClOD9240k start looking poor 1.36662, HR6wU9Hb6xk Wall Street warning 1.21959, v7uG773-wAY debt collapse 1.11089, dlnPr167zII stop working before 50 1.02296, Ctpvnr2OmNU crash investing 0.98931, HJ5GZ2R3n2I retirement accounts 0.94962, 4-XefbqKnPo inflation 0.79661, CBzVGI_K3bQ World Cup 0.75709, TIrIi752GSc bond market 0.61547. No STRONG or WEAK peer: the entire pool is TYPICAL, so this pool cannot discriminate packaging. Template counterexamples remain the main contrast (Rd40d0XZLpQ 19.76 vs this 0.73). Peer images/scripts not re-inspected.",
+        "observed_result": "4,173 views; 73.0545 days; 1,121 seconds; 0.72684x TYPICAL; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Retirement statistics recur; template outcomes vary widely; historical search interest unknown.",
+        "trend_timing": "2026-06-29 publication; no event linkage; seasonality unknown.",
+        "competition": "All-TYPICAL pool in a compressed mid-2026 period; heavy external retirement content.",
+        "format_fit": "19-minute statistics narrative with a recurring composite character; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 67-78 days old.",
+        "alternative_explanations": [
+          "Appeal: destitute-retiree image with an unexplained $9,000 card may attract curiosity or feel dissonant; CTR unknown.",
+          "Engagement: Linda through-line and mean/median reveal may sustain attention; mid-late community CTA could interrupt; retention unavailable.",
+          "Satisfaction: empathetic framing and actionable steps may satisfy older viewers; numeric contradictions could reduce trust; satisfaction unknown.",
+          "Older-audience fit with the channel's core viewership, mid-2026 compression and template fatigue could explain the result."
+        ],
+        "original_content_lesson": {
+          "test": "Test a retiree-statistics video whose thumbnail shows the actual median figure from the script against an unexplained number; measure own CTR, retention and comments questioning the thumbnail figure.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}
