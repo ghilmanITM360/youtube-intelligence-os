@@ -2,7 +2,13 @@
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
 
-## Latest continuation checkpoint — 2026-10-19 (NICK_093–100)
+## Latest continuation checkpoint — 2026-10-19 (NICK_101–102; usage-limit stop)
+
+- **379 → 381/966 expanded-complete; 585 remaining. Nick Invests 114/363.** Added `Hb4Dhhp8YnM` ($20K saved, 5.0692 STRONG; template $20K STRONG vs $50K TYPICAL vs $100K STRONG) and `HcGoQkyhNjQ` (money "secrets" basics explainer, 1.07236 TYPICAL; 401k limit stated $24,000 not $24,500, participation stat misread, unsupported "90% of millionaires via real estate"). Coverage title/thumbnail 394, script/topic 384, virality 381, performance 957.
+- **Exact next `Hlk1ZZLbI6s` — The 3 Net Worth Levels When People Start Treating You Differently.** Its transcript was partly read (0-9200) in the stopped session but no record was written and its image was deleted; restart it from the beginning.
+- Excel workbook lags by these 2 records (built at 379). CI still BLOCKED by GitHub billing. Usage limit reached; stop was a resource stop, not a source blocker.
+
+## Previous continuation checkpoint — 2026-10-19 (NICK_093–100)
 
 - **371 → 379/966 expanded-complete: eight new expanded reviews; 587 remaining. Nick Invests 112/363 expanded-complete** (plus three missing-date authored partials). Coverage: title/actual thumbnail **392 each**, full stored script/topic **382 each**, individual virality **379**, performance **957**.
 - Reviewed in frozen master order: `GZUH1m8INNs`, `HDBlb-oaXeM`, `HEtVmp38D4M`, `HJ5GZ2R3n2I`, `HO4L5NJrUz0`, `HR6wU9Hb6xk`, `HWU9IQB9Q-k`, `HYf0zR0_kak`. Full stored texts read in contiguous ranges (receipts NICK_093–100); images fetched fresh (`HJ5GZ2R3n2I` hqdefault only). Exactly eight JSONL objects changed against `824128484c6ea1156a8b4f36f17cb5755b900a90`; no completed review overwritten.
