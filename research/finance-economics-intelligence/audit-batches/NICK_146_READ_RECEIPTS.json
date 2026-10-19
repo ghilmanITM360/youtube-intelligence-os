@@ -1,0 +1,136 @@
+{
+  "batch_id": "NICK_146_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "Q-pBBlwNDMU",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "c8805fcb7a50d22ab40b22e5d3efb114e7042164c8e4dfbeb1957657f79d592f",
+      "character_count": 17198,
+      "source_word_count": 3147,
+      "coverage_token_count": 3196,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          17198
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "017_Q-pBBlwNDMU_If_You_Have_100000_Invested_Do_THIS_to_Reach_1_Million.txt",
+      "archive_member_sha256": "857eb737c6463da83077df4c6e2d750f6d884c5eb3e44ed2cc48bdb0551cd826",
+      "archive_member_bytes": 18786,
+      "archive_member_lines": 487,
+      "audio_verified": false,
+      "image_sha256": "efcb85071805a95fda1d499802f42aa29d52d40562380bf8c828d8afd421e3bc",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/Q-pBBlwNDMU/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/Q-pBBlwNDMU/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/Q-pBBlwNDMU/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "79% of active large-cap US funds underperformed the S&P 500 in 2025",
+      "url": "https://www.spglobal.com/spdji/en/spiva/article/spiva-us-year-end-2025/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_REPORT",
+      "finding": "SPIVA U.S. Year-End 2025: about 79% of active large-cap funds trailed the S&P 500 (65% in 2024); available before publication. 15-year 90% and 22-category claims not checked."
+    },
+    {
+      "claim": "41.4% cash out 401(k) at job separation; 85% empty accounts",
+      "url": "https://www.informs.org/News-Room/INFORMS-Releases/News-Releases/Draining-401-k-Accounts-When-Changing-Jobs-The-Hidden-Time-Bomb-Undermining-Retirement-Savings",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_PUBLISHER_PRESS_RELEASE_AND_UNIVERSITY_LISTING; paper not opened",
+      "finding": "Wang, Zhai and Lynch, Marketing Science 42(4) 2023: 162,360 terminating employees, 28 plans, 41.4% cashed out; ~64% emptied in one withdrawal plus ~21% over several (85%). $266,000 lifetime cost not found."
+    },
+    {
+      "claim": "Vanguard 10-year US equity outlook roughly 4 to 6%",
+      "url": "https://corporate.vanguard.com/content/corporatesite/us/en/corp/vemo/vemo-return-forecasts.html",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_PAGE",
+      "finding": "December 2025 outlook 4.0-5.0%; January 2026 model run about 3.9-5.9% annualized, nominal. Consistent with narrator's range but nominal, so '6% real' exceeds it. Goldman 6.5% not checked."
+    },
+    {
+      "claim": "Fidelity about 850,000 401(k) millionaires, about 26 years of saving",
+      "url": "https://money.com/401k-millionaires-fidelity-retirement-savings/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_SECONDARY_COVERAGE_OF_FIDELITY_Q2_2026; Fidelity release not opened",
+      "finding": "Record 769,000 401(k) millionaires at end of June 2026, average saving tenure about 25 years; narrator's 850,000 not matched. 1.5% share not checked."
+    },
+    {
+      "claim": "20 years through 2025 ~7x; missing 10 best days ~half; 7 of 10 best days within two weeks of worst; Morningstar 7-day median gap",
+      "url": "https://www.hartfordfunds.com/practice-management/client-conversations/managing-volatility/2025-illustrates-why-market-timing-is-impossible.html",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_ONLY; no primary source for the specific figures found",
+      "finding": "UNVERIFIED: only 2025 single-year and older 1995-2014 J.P. Morgan figures found; specific 20-year multiple, halving and seven-day statistics not confirmed."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Analyst Python: $100,000 start, end-of-month contributions, nominal annual rate compounded monthly (annual-compounding variants also computed), no fees/taxes; fees subtracted from annual return; inflation by constant 2.5%; back-solves for unstated contributions",
+      "results": {
+        "yrs_1M_7pct_0mo": 32.99,
+        "yrs_1M_7pct_0mo_annual": 34.03,
+        "yrs_1M_7pct_1000mo": 20.95,
+        "yrs_1M_7pct_1000mo_annual": 21.61,
+        "yrs_1M_7pct_2000mo": 15.89,
+        "yrs_1M_7pct_2000mo_annual": 16.4,
+        "yrs_1M_7pct_500mo": 25.3,
+        "yrs_1M_6pct_1000mo": 23.16,
+        "yrs_1M_6pct_0mo": 38.47,
+        "crossover_500mo": 85714,
+        "crossover_1000mo": 171429,
+        "doublings_10x": 3.3219,
+        "doubling_years_7pct": 10.24,
+        "nocontrib_yr5_annual": 140255,
+        "ranata_1000mo_yr5": 213355,
+        "ranata_1000mo_yr11": 413484,
+        "annual_1.07pow30": 761226,
+        "annual_1.07pow35": 1067658,
+        "gain_last5_from_760K": 305939,
+        "wait3_contrib_delay_total_yrs": 22.77,
+        "wait3_delay_cost_yrs": 1.82,
+        "two_women_contrib_410K": 395,
+        "two_women_contrib_940K": 2067,
+        "fee_0.03pct_30y": 754849,
+        "fee_1pct_30y": 574349,
+        "fee_gap": 180500,
+        "real_1M_20y_2.5pct": 610271,
+        "nominal_needed_20y_2.5pct": 1638616,
+        "real_share_25y_2.5pct": 0.539,
+        "1M_in_1990_dollars_cpi_approx": 405775,
+        "desmond_contrib_7pct": 1144,
+        "desmond_yrs_to_1.6M_7pct": 25.82,
+        "desmond_contrib_6pct": 1448,
+        "desmond_yrs_to_1.6M_6pct": 26.38,
+        "desmond_nocontrib_rate_needed": 0.122,
+        "desmond_nocontrib_extra_yrs": 4.08,
+        "yrs_1M_10pct_1000mo": 16.34,
+        "bal_6pct_after_16.34yrs": 597387,
+        "sp_7x_20y_implied_cagr": 0.1022,
+        "peer_ratio_10": 1.2808684270035877,
+        "peer_ratio_5": 1.410639884388998
+      }
+    }
+  ]
+}
