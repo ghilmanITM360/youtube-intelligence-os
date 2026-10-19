@@ -1,0 +1,169 @@
+[
+ {
+  "id": "S01",
+  "f0": 0,
+  "f1": 57,
+  "label": "MUNDER DIFFLIN sign with a bond tag, red arrow, then bag and document",
+  "layers": "headline; sign; bond; arrow; bag; caption",
+  "assets": "PR_MUNDER,PR_BOND,OV_REDARROW,PR_BAG,PR_DOC",
+  "transition_in": "START",
+  "purpose": "Buyers who didn't ask the price are being replaced [ART_DIRECTION_INFERENCE]",
+  "notes": "",
+  "no_auto_cut": true
+ },
+ {
+  "id": "S02",
+  "f0": 57,
+  "f1": 112,
+  "label": "Green-tie man with bubble 'Wait, but how much is that worth?'",
+  "layers": "headline; figure; bubble; caption",
+  "assets": "CH_OFFICIAL,OV_BUBBLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "The new buyers ask the price [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S03",
+  "f0": 112,
+  "f1": 593,
+  "label": "Fed committee page: zoom and scroll, host pointing, yellow highlight",
+  "layers": "headline; article (zoom/scroll); host; highlight; caption",
+  "assets": "SS_FED_PAGE,CH_HOST,OV_HIGHLIGHT",
+  "transition_in": "HARD_CUT",
+  "purpose": "The Fed's bond desk: ownership shifted to price-sensitive private investors [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S04",
+  "f0": 593,
+  "f1": 749,
+  "label": "Bond tag and red timeline; bills pop one by one",
+  "layers": "headline; bond; timeline; bills; caption",
+  "assets": "PR_BOND,OV_TIMELINE,PR_BILLS",
+  "transition_in": "HARD_CUT",
+  "purpose": "Term premium as the extra charge [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S05",
+  "f0": 749,
+  "f1": 813,
+  "label": "Timeline with bag and a struck-through 'thirty years' written on",
+  "layers": "headline; timeline; bag; text write-on; caption",
+  "assets": "PR_BOND,OV_TIMELINE,PR_BAG,TY_RED_NOTE",
+  "transition_in": "HARD_CUT",
+  "purpose": "Tying money up for 30 years instead of 30 days [ART_DIRECTION_INFERENCE]",
+  "notes": "",
+  "no_auto_cut": true
+ },
+ {
+  "id": "S06",
+  "f0": 813,
+  "f1": 900,
+  "label": "UK map character; Office for Budget Responsibility sign slides in",
+  "layers": "headline; UK map character; OBR sign; caption",
+  "assets": "CH_UKMAP,SS_OBR_SIGN",
+  "transition_in": "HARD_CUT",
+  "purpose": "UK OBR found a similar thing [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S07",
+  "f0": 900,
+  "f1": 1007,
+  "label": "UK map character with a gilt certificate",
+  "layers": "headline; UK map character; certificate; caption",
+  "assets": "CH_UKMAP,PR_GILT",
+  "transition_in": "HARD_CUT",
+  "purpose": "Known as gilts [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S08",
+  "f0": 1007,
+  "f1": 1029,
+  "label": "Blue 'Gilts' card beside the UK character",
+  "layers": "headline; UK character; card; caption",
+  "assets": "CH_UKMAP,SS_GILT_CARD",
+  "transition_in": "HARD_CUT",
+  "purpose": "Definition card [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S09",
+  "f0": 1029,
+  "f1": 1344,
+  "label": "Report text page with highlight; UK character",
+  "layers": "headline; text page; highlight; UK character; caption",
+  "assets": "SS_OBR_TEXT,OV_HIGHLIGHT,CH_UKMAP",
+  "transition_in": "HARD_CUT",
+  "purpose": "Pension funds hold gilts worth ~27% of GDP, falling to under 6% [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S10",
+  "f0": 1344,
+  "f1": 1406,
+  "label": "Sad figure: 'and cause damage'",
+  "layers": "headline; figure; caption",
+  "assets": "CH_FIG",
+  "transition_in": "HARD_CUT",
+  "purpose": "Shifts this size cause damage [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S11",
+  "f0": 1406,
+  "f1": 1726,
+  "label": "OBR chart with host pointing: about GBP 22 billion per year",
+  "layers": "headline; chart; host; caption",
+  "assets": "SS_OBR_CHART,CH_HOST",
+  "transition_in": "HARD_CUT",
+  "purpose": "80 bp higher rates would cost 22 billion pounds a year [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S12",
+  "f0": 1726,
+  "f1": 1865,
+  "label": "Country-map ensemble; 'a global trend' with yield charts",
+  "layers": "headline; map characters; chart strip; caption",
+  "assets": "CH_MAPS,SS_YIELD_CHARTS",
+  "transition_in": "HARD_CUT",
+  "purpose": "A global trend through every major economy [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S13",
+  "f0": 1865,
+  "f1": 2018,
+  "label": "Figure with tray and Japan-map character: 'Load me some?' 'Alrighty'",
+  "layers": "headline; figure; Japan character; bubbles; caption",
+  "assets": "CH_FIG,CH_JAPAN,OV_BUBBLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "Governments still auction; buyers changed [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S14",
+  "f0": 2018,
+  "f1": 2166,
+  "label": "Yield chart with red/blue lines; then auction chart with figures and cash",
+  "layers": "headline; chart; figures; cash; caption",
+  "assets": "SS_DB_CHART,SS_AUCTION_CHART,CH_FIG,PR_CASH",
+  "transition_in": "HARD_CUT",
+  "purpose": "Buyers who care about the price they pay [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S15",
+  "f0": 2166,
+  "f1": 2206,
+  "label": "Brown-haired figure thinking, then holding cash: 'and they want a better price'",
+  "layers": "headline; figure; cash; caption (end)",
+  "assets": "CH_OFFICIAL,PR_CASH",
+  "transition_in": "HARD_CUT",
+  "purpose": "Closing: buyers want a better price [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ }
+]

@@ -1,7 +1,7 @@
 {
  "schema": "1.0",
  "updated": "2026-10-20",
- "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=13 validated Shorts; doc snapshot n=12)",
+ "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=14 validated Shorts; doc snapshot n=12)",
  "phase1_gate": "PASSED",
  "branch": "research/casually-finance-editing-forensics",
  "worktree": "/Users/ghilmankhan/workprojects/yio-cf-editing-forensics",
@@ -96,6 +96,12 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "B",
    "qa": "videos/NgryCruZegs/QA.json"
+  },
+  {
+   "video_id": "UJEqqBpH18k",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/UJEqqBpH18k/QA.json"
   }
  ],
  "videos_in_progress": [],
@@ -103,7 +109,6 @@
   "ji2qFfcgSB4",
   "zkeA5cH9nyM",
   "ZDoeEd8fMdo",
-  "UJEqqBpH18k",
   "_3tM1d-WeUI",
   "ud1ESmogrFY",
   "f_ZCoPKLpyU",
@@ -199,5 +204,5 @@
   "VALIDATION.json"
  ],
  "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (n=10 snapshot of 2026-10-20)",
- "next_suggested": "UJEqqBpH18k (banded era, cheap), then ji2qFfcgSB4, YST8eMG3_Z8, xrNPr3YrWdw, wo71JwXSYIs (banded 09-05..09-12), then Aug 720p Shorts; long-form only after Shorts"
+ "next_suggested": "ji2qFfcgSB4, YST8eMG3_Z8, xrNPr3YrWdw, wo71JwXSYIs (banded 09-05..09-10; use scripts/prep_banded.sh + scripts/author_lib.py), then Aug 720p Shorts via prep_full.sh; long-form only after Shorts; refresh doc numbers from aggregate_channel.py"
 }
