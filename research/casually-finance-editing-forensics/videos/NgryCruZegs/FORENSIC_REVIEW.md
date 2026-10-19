@@ -1,12 +1,12 @@
 # Forensic review — NgryCruZegs "Nobody Is Talking About the World's Safest Market Breaking"
 
-Status: `VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
+Status: `VISUAL_FORENSICS_COMPLETE_AT_DEPTH_B_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
 
 ## Source (MEASURED)
 `Nobody-Is-Talking-SnapYT.App.mp4` (`CFSRC-026`), SHA256 `02f598d4...a6c0a`, H.264/AAC, 360x640, 30.0 fps, 2013 frames (decoded = ffprobe), 67.157 s. SHORT uploaded 2026-09-14, 11,041 views at the 2026-10-19 snapshot. Identity = title+duration match (not cryptographic). 360p limits line weight and small-motion measurement.
 
 ## Depth
-DEPTH_A (banded layout: every auto stage event reviewed on pre/active/post contact sheets; caption word timing measured against ASR). Audio: whole track measured (76 % voiced, 15 pauses >=0.25 s, 7 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-2012.
+DEPTH_B (banded layout; scenes cut-delimited; all 50 auto stage events seen on lean pre/active/post sheets; event operations authored for the main ones, remaining detected changes kept as UNRESOLVED_CHANGE rows; caption words measured against ASR). Audio: whole track measured (76 % voiced, 15 pauses >=0.25 s, 7 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-2012.
 
 ## Measured statistics
 - 24 scenes (median 1.90 s, p10 0.86, p90 6.08, longest 7.90); 21 hard cuts (18.76/min); 55 events (49.14/min), 41 of them one-frame.

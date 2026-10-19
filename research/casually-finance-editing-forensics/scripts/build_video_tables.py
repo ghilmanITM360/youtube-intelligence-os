@@ -371,7 +371,7 @@ def main(vid, ev_root):
                     "frames_above_noise_not_in_any_authored_event": len(un), "analysis_depth": bands_cfg.get("depth_label") or "DEPTH_B (cut-delimited scenes + all CUT/BIG/ANIMATION and >=0.8%-area SMALL auto events reviewed on compact sheets; sub-0.8% changes such as caption words and thin strokes counted, not individually reviewed)"}
     else:
         chk["all_stage_active_frames_attributed"] = len(un) == 0
-        qa_extra = {"analysis_depth": "DEPTH_A (banded layout: every auto stage event reviewed on pre/active/post contact sheets; caption word timing measured against ASR)"}
+        qa_extra = {"analysis_depth": bands_cfg.get("depth_label") or "DEPTH_A (banded layout: every auto stage event reviewed on pre/active/post contact sheets; caption word timing measured against ASR)"}
     # every scene boundary has a hard-cut event
     chk["every_scene_start_has_event"] = all(s.get("no_auto_cut") or any(e["f0"] <= s["f0"] <= e["f1"] or e["f0"] == s["f0"] + 0 for e in events) for s in scenes[1:])
     cutv = {e["id"]: int(stage_px[e["f0"]]) for e in events if e["op"].startswith("HARD_CUT") and e["op"] != "HARD_CUT_THROUGH_BLANK_FRAME"}

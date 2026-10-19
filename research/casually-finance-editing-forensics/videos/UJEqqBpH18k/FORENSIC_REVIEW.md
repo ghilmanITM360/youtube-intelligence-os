@@ -1,12 +1,12 @@
 # Forensic review — UJEqqBpH18k "The World Is Running Out of Buyers"
 
-Status: `VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
+Status: `VISUAL_FORENSICS_COMPLETE_AT_DEPTH_B_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
 
 ## Source (MEASURED)
 `The-World-Is-SnapYT.App.mp4` (`CFSRC-039`), SHA256 `ab444fc9...f5d37`, H.264/AAC, 360x640, 30.0 fps, 2206 frames (decoded = ffprobe), 73.579 s. SHORT uploaded 2026-09-12, 37,564 views at the 2026-10-19 snapshot. Identity = title+duration match (not cryptographic). 360p limits line weight and small-motion measurement.
 
 ## Depth
-DEPTH_A (banded layout: every auto stage event reviewed on pre/active/post contact sheets; caption word timing measured against ASR). Audio: whole track measured (76 % voiced, 14 pauses >=0.25 s, 8 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-2205.
+DEPTH_B (banded layout; scenes cut-delimited; every HARD/ANIMATION auto stage event seen on lean pre/active/post sheets; operations authored for the main events, remaining detected changes kept as UNRESOLVED_CHANGE rows; caption words measured against ASR). Audio: whole track measured (76 % voiced, 14 pauses >=0.25 s, 8 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-2205.
 
 ## Measured statistics
 - 15 scenes (median 3.57 s, p10 1.53, p90 10.60, longest 16.03); 13 hard cuts (10.6/min); 40 events (32.62/min), 31 of them one-frame.
