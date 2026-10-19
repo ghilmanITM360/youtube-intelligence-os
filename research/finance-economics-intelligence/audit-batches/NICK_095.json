@@ -1,0 +1,135 @@
+{
+  "batch_id": "NICK_095",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "HEtVmp38D4M",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HEtVmp38D4M",
+          "TRANSCRIPT_COVERAGE.csv:HEtVmp38D4M",
+          "audit-batches/NICK_095_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact stored title (double space): \"Invest or Pay Off Debt?  The Wealthy Know the Answer.\" A classic binary personal-finance question plus insider-authority framing. High search intent (\"invest or pay off debt\", \"pay off mortgage or invest\"); curiosity from the implied single answer, though the script says there is no universal answer.",
+        "peer_comparison_ids": [
+          "QogQUuyFUx8",
+          "hvcr7gVbcr0",
+          "BL1eTZxWc4A",
+          "kVpJ1Elw680",
+          "Ke8nD2zCzmE",
+          "4vCP4Gxghb0"
+        ],
+        "search_demand": "Historical query volume unknown; the question is a perennial search topic. Frozen 3.64145 STRONG in an early-channel pool with several outliers.",
+        "script_alignment": "Partial: thorough framework (guaranteed return vs expected return, mortgage worked example, inflation and fixed-rate debt, credit cards/avalanche, student and car loans, life stage, cash flow, emergency fund, taxes, behavior) but concludes \"no one-size-fits-all answer\", unlike the title's implied secret answer."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HEtVmp38D4M",
+          "TRANSCRIPT_COVERAGE.csv:HEtVmp38D4M",
+          "audit-batches/NICK_095_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_HEtVmp38D4M.jpg",
+        "image_source": "https://i.ytimg.com/vi/HEtVmp38D4M/maxresdefault.jpg",
+        "image_sha256": "344f8f3f9ee6b3a233c1ebe721d17b5cf4e1b5235ab28b63d3b02bb4489f7438",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a smirking cartoon man in a gray jacket pointing at a balance scale holding a glowing red credit card (left pan) and a glowing green coin stack (right pan) at equal height; heavy black \"INVEST BEFORE / DEBT?\" with a curved arrow. Mobile: question and scale legible. Image frames a balanced trade-off, matching the script's \"depends\" conclusion more closely than the title."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HEtVmp38D4M",
+          "TRANSCRIPT_COVERAGE.csv:HEtVmp38D4M",
+          "audit-batches/NICK_095_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "Picture this. You're staring at your\nbank statement and there's actually\nmoney left over after paying your bills.\nI know, I know it sounds like science\nfiction, but bear with me. Now, you're\nfaced with a choice that could literally\ndetermine whether you retire sipping\ncocktails on a beach or eating ramen\nnoodles in your studio apartment at 75.\nShould you throw that extra cash at your\ndebts like you're playing financial\nwhack-a-ole, or should you ",
+        "ending_words": "ge careers and go back to school.\nSo, here's the bottom line. Whether you\nshould pay off debt or invest isn't a\nquestion with a onesizefits-all\nanswer. It depends entirely on your\nsituation, your debt interest rates, and\nyour risk tolerance. High interest debt,\nattack it like it owes you money. Low\ninterest debt, like yum. Maybe let it\nstick around while your investments do\nthe heavy lifting. Either way, stop\noverthinking it and start doing\nsomething because the biggest financial\nmistake is spending so much time\nplanning the perfect strategy that you\nnever actually execute any strategy at\nall.",
+        "analysis": "All 19,272 stored characters read in two contiguous ranges with canonical hash match. Hook: leftover money and the debt-vs-invest choice; subscribe CTA. Framework: paying debt = guaranteed return; market ~10% with volatility; $350K 4% mortgage with $1,000 extra (payoff ~14.5 years, ~$140K interest saved, then invest $2,670/month -> ~$1.2M) vs investing $1,000 from day one (~$2.2M, ~$250K interest) and an \"$800,000 difference\"; assumptions caveat; inflation erodes fixed payments; credit cards and avalanche vs snowball; student loans and car loans; age/risk tolerance; cash flow; splitting; emergency fund; mortgage-interest deduction and capital gains; 401k match; behavioral fit; inflation/deflation; bottom line. Balanced, practical, joke-laden; one flawed wealth comparison and dated rate assumptions. ASR not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              9700
+            ],
+            "beat": "Choice hook, CTA, guaranteed vs expected return, mortgage prepay vs invest worked example, assumption caveats, inflation and fixed-rate debt, credit cards and avalanche, student loans start"
+          },
+          {
+            "character_range": [
+              9700,
+              19272
+            ],
+            "beat": "Student and car loans, life stage and risk, cash flow, splitting, emergency fund, tax considerations, 401k match, behavior, inflation/deflation, bottom line"
+          }
+        ],
+        "claim_audit": [
+          "0:9700 $350,000 at 4% for 30 years: payment ~$1,671 correct; adding $1,000/month pays off in ~173 months (~14.4 years) and saves ~$140,700 interest - correct. Investing $2,671/month for the remaining ~15.6 years at 10% gives ~$1.19M, and investing $1,000/month for 30 years gives ~$2.26M with ~$251,500 total mortgage interest - correct. But the wealth comparison then subtracts interest from the invest path and adds avoided interest to the prepay path; both paths make the same scheduled payments, so final investment balances already capture the difference: ~$2.26M vs ~$1.19M (~$1.07M gap), not \"$1.1M vs $1.9M, $800,000\". A 4% mortgage was not typical in Aug 2025 (~6.5-7%); at higher rates the investing advantage narrows. Market -38% year (2008) correct.",
+          "9700:19272 Student loan interest deduction phases out by income - correct in substance. Mortgage-interest deduction benefit only applies to itemizers (most households take the standard deduction since 2018), unstated. Emergency savings \"earning 0.01%\" ignores ~4% high-yield accounts available in 2025. Long-term capital gains rates generally below ordinary rates - correct. Inflation benefiting fixed-rate borrowers and deflation hurting them - correct conceptually."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HEtVmp38D4M",
+          "TRANSCRIPT_COVERAGE.csv:HEtVmp38D4M",
+          "audit-batches/NICK_095_READ_RECEIPTS.json"
+        ],
+        "analysis": "Debt payoff versus investing: expected vs guaranteed returns, mortgage prepayment, high-interest debt, behavior and taxes. Perennial high-intent topic with broad audience; competitive. Balanced treatment with a memorable worked example.",
+        "novelty_and_corpus_angle": "Original angle: a calculator comparing final net worth (investments + home equity) under several mortgage rates (4%, 6.5%, 7.5%), after-tax returns and a bad-sequence scenario, showing where prepayment wins.",
+        "competition": "Exact pool: STRONG QogQUuyFUx8 live off $500K 4.93852, BL1eTZxWc4A $1,000/month dividends 4.15859, hvcr7gVbcr0 $100K 1/3 to $1M 2.85698, TFtBWn9CWOU doing better than you think 2.11005; WEAK zppYzhlGiOc 0.46591, 4vCP4Gxghb0 401k mistakes 0.30109, Ke8nD2zCzmE money traps 0.24125, uXkF1LtRZso 0.21768, kVpJ1Elw680 retire on $1M 0.15245."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HEtVmp38D4M",
+          "TRANSCRIPT_COVERAGE.csv:HEtVmp38D4M",
+          "audit-batches/NICK_095_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "117,010 views at 380.5947 days, 20:24; 3.64145x STRONG against 10 same-channel LONG_FORM peers published 2025-08-17 to 09-04, frozen 2026-09-11. Exact pool: strong QogQUuyFUx8 live off $500K 4.93852, BL1eTZxWc4A dividends 4.15859, hvcr7gVbcr0 $100K third of $1M 2.85698, TFtBWn9CWOU doing better 2.11005; typical BSlwkVIozNo first $100K 0.56009; weak zppYzhlGiOc $100K dividends 0.46591, 4vCP4Gxghb0 401k mistakes 0.30109, Ke8nD2zCzmE money traps 0.24125, uXkF1LtRZso one house 0.21768, kVpJ1Elw680 retire on $1M 0.15245. Target third-highest in a bimodal early-channel pool. Counterexamples: question-format retirement title kVpJ1Elw680 \"Retire on $1,000,000? The Shocking Reality\" WEAK 0.15245 versus this question title STRONG; \"money traps\" warning titles WEAK. A high-intent practical question with a clear trade-off is a testable difference; causation not established.",
+        "observed_result": "117,010 views; 380.5947 days; 1,224 seconds; 3.64145x STRONG; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Invest-vs-debt is a perennial search question; historical search interest unknown.",
+        "trend_timing": "2025-08-26 publication during the channel's early growth; no event link.",
+        "competition": "Bimodal pool with four STRONG and five WEAK videos in a three-week window.",
+        "format_fit": "20-minute balanced explainer with one worked example; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 371-390 days old; early channel period.",
+        "alternative_explanations": [
+          "Appeal: universal binary question plus balanced scale image; CTR unknown.",
+          "Engagement: concrete mortgage example and humor may sustain viewing; retention unavailable.",
+          "Satisfaction: nuanced conclusion may satisfy, though some may want a definitive answer the title implies; satisfaction unknown.",
+          "Search traffic for a perennial question and early-channel recommendation dynamics could explain the STRONG result."
+        ],
+        "original_content_lesson": {
+          "test": "Test a debt-vs-invest video whose title states the decision rule (\"Pay Off Anything Above X%\") against a mystery \"the wealthy know\" title; measure own CTR, search share and retention.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

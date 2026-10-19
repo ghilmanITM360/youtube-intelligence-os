@@ -1,0 +1,134 @@
+{
+  "batch_id": "NICK_100",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "HYf0zR0_kak",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HYf0zR0_kak",
+          "TRANSCRIPT_COVERAGE.csv:HYf0zR0_kak",
+          "audit-batches/NICK_100_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"The Real Power of Having Cash Nobody Talks About.\" Contrarian value claim for cash with neglect framing (\"Nobody Talks About\"). Search intent overlaps \"how much cash to keep\" and \"emergency fund vs investing\". Positions against the channel's own earlier anti-cash framing (Bz0ZJea3n9g \"Never Keep Over THIS AMOUNT In a Bank\").",
+        "peer_comparison_ids": [
+          "Bz0ZJea3n9g",
+          "s12cRrFRhH8",
+          "RmJKnJkUgxA",
+          "QogQUuyFUx8",
+          "qEAldAzgJiA"
+        ],
+        "search_demand": "Historical query volume unknown. Performance tier INSUFFICIENT_DATA (4.138 days old at the frozen snapshot). Related cash videos (not matched peers): Bz0ZJea3n9g 1.74788 TYPICAL, s12cRrFRhH8 1.01751 TYPICAL, RmJKnJkUgxA 0.5711 TYPICAL, QogQUuyFUx8 4.93852 STRONG.",
+        "script_alignment": "Aligned: cash as \"buying time\" - emergencies, sequence risk during layoffs, negotiating leverage, months-of-runway framing, opportunities/dry powder, psychological effect, opportunity cost of too much cash."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HYf0zR0_kak",
+          "TRANSCRIPT_COVERAGE.csv:HYf0zR0_kak",
+          "audit-batches/NICK_100_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_HYf0zR0_kak.jpg",
+        "image_source": "https://i.ytimg.com/vi/HYf0zR0_kak/maxresdefault.jpg",
+        "image_sha256": "17b8e9f23422d2f978a169504d11717808e4bc4b1a997a15f2bfb8ae894340bc",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field (thin blue line at top edge); left a calm cartoon man holding a banded fan of cash beside an open safe filled with stacked bills; heavy black \"CASH / CHANGES / EVERYTHING\" with a curved arrow. Mobile: three-word text dominant and legible. Positive, calm packaging consistent with the script's thesis that liquidity changes decisions; no figures or job-loss cue."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HYf0zR0_kak",
+          "TRANSCRIPT_COVERAGE.csv:HYf0zR0_kak",
+          "audit-batches/NICK_100_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "Imagine two people with $300,000 of\nwealth. On paper, they look almost\nidentical financially. Then, on the same\nFriday, both of them lose their jobs.\nOne starts applying for anything that\nwill pay the mortgage. The other spends\nMonday making coffee, opens his laptop,\nand starts looking for the job he\nactually wants. Nothing about their net\nworth changed. What changed was where\nthe money was sitting. And that\ndifference can determine whether a bad",
+        "ending_words": " of money you have, it's the\nnumber of bad situations you can walk\nthrough without being forced into a bad\ndecision. That's the real power of cash.\nMost of the time, it looks boring. It\nsits there. It earns a modest return.\nIt doesn't send you a notification every\ntime the market moves. It certainly\ndoesn't make for a very exciting\nscreenshot. But then, something happens.\nAnd suddenly, you realize that the money\nyou thought was doing nothing was\nactually doing the most important job of\nall. It was buying you time. And time is\nwhat gives you something even more\nvaluable than a return,\na choice.",
+        "analysis": "All 18,976 stored characters read in two contiguous ranges with canonical hash match. Paired hook: two people with $300K net worth both laid off - one panics, one searches calmly. Composite Daniel (46, $300K, all invested, \"every dollar should have a job\"): $4,200 car repair goes on a card; 27% market drop then layoff illustrates sequence risk at the household level; $78K offer declined because savings allow waiting, then $88K offer. Reframe: ask what decisions money allows, not just its return; cash costs (inflation, opportunity cost); months-of-runway table ($5K expenses -> $15K/$30K/$45K); liquidity test (months without selling, borrowing or asking); two $300K balance-sheet examples ($10K vs $30K cash -> 2 vs 6 months); too much cash ($100K at 25) is expensive; dry powder/opportunities without market timing; tight-credit environments; psychological effect; earn a competitive rate but don't over-optimize; Daniel's resolution. Calm, balanced, well-structured; no community CTA; few statistics. One narrative inconsistency: Daniel is first described as having moved all savings into the market and charging a $4,200 repair, then has \"several months\" of savings and later \"$30,000\". ASR (\"ear sum\") preserved; not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              9500
+            ],
+            "beat": "Two-$300K hook, Daniel all-invested, $4,200 repair on card, 27% drop and layoff, sequence risk at home, declining $78K offer, $88K offer, decisions not returns, cash costs, runway table"
+          },
+          {
+            "character_range": [
+              9500,
+              18976
+            ],
+            "beat": "Liquidity test, two balance sheets, too much cash at 25, opportunities/dry powder, tightening credit, psychology, competitive rate, Daniel resolution, close on time and choice"
+          }
+        ],
+        "claim_audit": [
+          "0:9500 Runway arithmetic: $5,000/month x 3/6/9 = $15K/$30K/$45K correct. Sequence-risk explanation (selling depressed assets to cover living costs) correct. Daniel narrative is internally inconsistent: he moved even savings into the market and had to charge a $4,200 repair, but later \"checks his savings\" and has \"several months\" and \"$30,000\" of cash - unreconciled.",
+          "9500:18976 Two $300K examples: $270K + $20K + $10K and $230K + $40K + $30K both sum to $300K; $10K and $30K equal ~2 and ~6 months at $5K - correct. Opportunity cost of large cash balances for long horizons and inflation erosion correctly stated; advice to earn a competitive rate (e.g., high-yield accounts) without over-optimizing is reasonable. No statistics or tax claims requiring primary checks."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HYf0zR0_kak",
+          "TRANSCRIPT_COVERAGE.csv:HYf0zR0_kak",
+          "audit-batches/NICK_100_READ_RECEIPTS.json"
+        ],
+        "analysis": "Liquidity and emergency reserves framed as optionality: protecting long-term investments from short-term shocks and preserving negotiating power. Broad evergreen relevance; the balanced view contrasts with the channel's earlier anti-cash video. Moderate competition.",
+        "novelty_and_corpus_angle": "Original angle: show measured job-search duration and layoff-risk data by industry to size runway months, and quantify the cost of a forced sale during a 27% drawdown versus holding cash.",
+        "competition": "Channel cash/emergency videos: Bz0ZJea3n9g 1.74788 TYPICAL (opposite thesis), RmJKnJkUgxA 0.5711 TYPICAL, QogQUuyFUx8 $500K in bank 4.93852 STRONG, qEAldAzgJiA emergency fund in 60 days INSUFFICIENT_DATA."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HYf0zR0_kak",
+          "TRANSCRIPT_COVERAGE.csv:HYf0zR0_kak",
+          "audit-batches/NICK_100_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "INSUFFICIENT_DATA: 10,609 views at 4.138 days, 20:06, frozen 2026-09-11; Tier_basis MISSING_DATE_FORMAT_VIEWS_OR_YOUNG - too young for a lifetime-rate comparison, so no ratio or peer pool. Early views are not a mature outcome and are not classified STRONG/TYPICAL/WEAK. Related cash videos listed as unmatched context only; no inference from raw early views.",
+        "observed_result": "10,609 views; 4.138 days; 1,206 seconds; ratio NOT_ELIGIBLE; peer pool UNAVAILABLE; frozen 2026-09-11.",
+        "topic_demand": "Cash/emergency-fund topics recur with TYPICAL outcomes and one STRONG variant; historical search interest unknown.",
+        "trend_timing": "2026-09-06 publication; snapshot 4 days later; no event link.",
+        "competition": "No eligible comparables at this age.",
+        "format_fit": "20-minute calm narrative explainer; retention unknown.",
+        "channel_context": "Published at the end of the frozen window; no maturity for comparison.",
+        "alternative_explanations": [
+          "Appeal: calm \"CASH CHANGES EVERYTHING\" packaging; CTR unknown.",
+          "Engagement: Daniel narrative and runway test may hold viewers; retention unavailable.",
+          "Satisfaction: balanced, actionable framing likely satisfying; satisfaction unknown.",
+          "At four days old, early views reflect launch distribution, not lifetime performance."
+        ],
+        "original_content_lesson": {
+          "test": "Re-measure after maturity; test optionality framing (\"cash buys time\") against anti-cash framing on similar audiences; measure own CTR and retention.",
+          "confidence": "LOW: insufficient performance age"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}
