@@ -1,0 +1,41 @@
+{
+  "snapshot_timestamp_utc": "2026-10-20T07:54:15.819Z",
+  "channel": {
+    "name": "Chronofold",
+    "handle": "@Chronofold-m8x",
+    "id": "UCN87LLx0N_ZZ9BZBegN1WXA"
+  },
+  "primary_run": {
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.318",
+    "run_id": "dVdEwIBncKCxyZCEU",
+    "dataset_id": "5aiVNFBbrGdiKajXc",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-10-20T07:41:08.010Z",
+    "finished_at_utc": "2026-10-20T07:54:15.819Z",
+    "actual_cost_usd": 0.016,
+    "max_cost_usd": 2.25,
+    "input": {
+      "requestedUrl": "https://www.youtube.com/@Chronofold-m8x",
+      "maxResults": 999,
+      "maxResultsShorts": 999,
+      "maxResultStreams": 999,
+      "transcriptionAndSubtitle": "NONE",
+      "costAllocation": "raw rows x $0.004; shared full run"
+    },
+    "raw_rows": 4,
+    "raw_video_rows": 2
+  },
+  "pilot_run": {
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.318",
+    "run_id": "c2ohHxnXWxULA6vdT",
+    "dataset_id": "XofPEGRTaJo0ils7c",
+    "actual_cost_usd": 0.14400000000000002
+  },
+  "normalization": {
+    "public_master_rows": 2,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  }
+}
