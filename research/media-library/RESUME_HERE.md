@@ -19,6 +19,12 @@ Completed local ingest state:
 - One temporary representative frame per channel was successfully extracted
   and deleted. No caption or transcript files were present in the seven source
   folders.
+- Machine B durable root:
+  `/Users/ghilmanislam360/Documents/YIOS-Media-Library/`. All 456 files and
+  4,363,111,708 bytes were independently re-hashed there with zero mismatches.
+  Set `YIOS_MEDIA_ROOT` to that path. The worktree-local copy and original
+  Downloads source were retained pending owner-directed cleanup; neither is
+  GitHub/LFS-hosted.
 
 Do not upload media bytes or infer channel completeness from the local folders.
 The next bounded action is evidence-led reconciliation of the 67 unmapped files

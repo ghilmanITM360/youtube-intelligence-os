@@ -151,11 +151,17 @@ def write_csv(path: Path, fieldnames: list[str], rows: Iterable[dict[str, Any]])
         writer.writerows(rows)
 
 
-def build(source_root: Path, repo_root: Path, output_dir: Path, ingest: bool) -> dict[str, Any]:
+def build(
+    source_root: Path,
+    repo_root: Path,
+    output_dir: Path,
+    ingest: bool,
+    media_root: Path | None = None,
+) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
     records: list[dict[str, Any]] = []
     channel_rows: list[dict[str, Any]] = []
-    ingest_root = repo_root / "data" / "local-channel-media"
+    ingest_root = media_root or repo_root / "data" / "local-channel-media"
     for channel in CHANNELS:
         channel_root = source_root / channel
         if not channel_root.is_dir():
@@ -177,7 +183,7 @@ def build(source_root: Path, repo_root: Path, output_dir: Path, ingest: bool) ->
             preservation_status = "SOURCE_LINK_ONLY"
             copy_error = ""
             if ingest:
-                copy_action, copy_error = atomic_copy(source_path, repo_root / project_path, digest)
+                copy_action, copy_error = atomic_copy(source_path, ingest_root / relative_source_path, digest)
                 if copy_action in {"COPIED_VERIFIED", "VERIFIED_EXISTING"}:
                     preservation_status = "LOCAL_COPY_VERIFIED"
                 else:
@@ -261,7 +267,11 @@ def build(source_root: Path, repo_root: Path, output_dir: Path, ingest: bool) ->
     report = {
         "schema_version": 1,
         "source_root": str(source_root),
-        "local_library_root": ingest_root.relative_to(repo_root).as_posix(),
+        "local_library_root": (
+            ingest_root.relative_to(repo_root).as_posix()
+            if ingest_root.is_relative_to(repo_root)
+            else "YIOS_MEDIA_ROOT"
+        ),
         "rights_access_classification": RIGHTS_STATUS,
         "ingest_requested": ingest,
         "channel_count_expected": len(CHANNELS),
@@ -302,6 +312,12 @@ def main() -> int:
     parser.add_argument("--source-root", required=True, type=Path)
     parser.add_argument("--repo-root", type=Path, default=Path.cwd())
     parser.add_argument("--output-dir", type=Path, default=Path("research/media-library"))
+    parser.add_argument(
+        "--media-root",
+        type=Path,
+        default=Path(os.environ["YIOS_MEDIA_ROOT"]) if os.environ.get("YIOS_MEDIA_ROOT") else None,
+        help="durable media root; defaults to $YIOS_MEDIA_ROOT, then <repo>/data/local-channel-media",
+    )
     parser.add_argument("--ingest", action="store_true")
     args = parser.parse_args()
     source_root = args.source_root.expanduser().resolve()
@@ -309,7 +325,8 @@ def main() -> int:
     output_dir = args.output_dir if args.output_dir.is_absolute() else repo_root / args.output_dir
     if not source_root.is_dir():
         parser.error(f"source root does not exist: {source_root}")
-    report = build(source_root, repo_root, output_dir, args.ingest)
+    media_root = args.media_root.expanduser().resolve() if args.media_root else None
+    report = build(source_root, repo_root, output_dir, args.ingest, media_root)
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0 if report["copy_errors"] == 0 and report["ffprobe_errors"] == 0 else 1
 

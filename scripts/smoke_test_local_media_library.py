@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import subprocess
 import tempfile
 from pathlib import Path
@@ -24,6 +25,12 @@ def main() -> int:
     parser.add_argument("--repo-root", type=Path, default=Path.cwd())
     parser.add_argument("--inventory", type=Path, default=Path("research/media-library/SOURCE_INVENTORY.jsonl"))
     parser.add_argument("--output", type=Path, default=Path("research/media-library/SMOKE_TEST_REPORT.json"))
+    parser.add_argument(
+        "--media-root",
+        type=Path,
+        default=Path(os.environ["YIOS_MEDIA_ROOT"]) if os.environ.get("YIOS_MEDIA_ROOT") else None,
+        help="durable media root; defaults to $YIOS_MEDIA_ROOT, then paths relative to the repository",
+    )
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
     inventory_path = args.inventory if args.inventory.is_absolute() else repo_root / args.inventory
@@ -42,7 +49,11 @@ def main() -> int:
     results = []
     failures = 0
     for channel, record in selected.items():
-        media_path = repo_root / record["local_media_path"]
+        media_path = (
+            args.media_root.expanduser().resolve() / record["original_relative_path"]
+            if args.media_root
+            else repo_root / record["local_media_path"]
+        )
         with tempfile.TemporaryDirectory(prefix="yios-media-smoke-") as temporary_directory:
             frame_path = Path(temporary_directory) / "frame.jpg"
             completed = subprocess.run(

@@ -19,6 +19,32 @@
 15. Future live web research will complement supplied internal data, not replace it.
 16. The system will eventually support multiple YouTube channels; channel-specific intelligence must remain separated.
 
+## Permanent worktree rule
+
+- Never create a new worktree for an ordinary task. Use the existing canonical
+  repository whenever it is safe, or reuse an existing owner-approved worktree
+  when branch isolation is required.
+- Create another worktree only after explicit owner approval.
+- Before switching branches, verify a clean Git state, branch ownership, and
+  that no agent on either Mac is modifying the same branch. Never overwrite
+  another machine's unpushed work.
+- Never merge a pull request automatically. Preserve branches, stashes,
+  untracked files, ignored evidence, and interrupted-work handoffs.
+- Aim for one canonical checkout and at most one necessary existing long-lived
+  auxiliary worktree per Mac. This target never authorizes removal of an active,
+  dirty, unverified, or uniquely data-bearing worktree.
+- Keep private media in durable storage outside temporary directories. On
+  Machine B the configured root is
+  `/Users/ghilmanislam360/Documents/YIOS-Media-Library/`; set
+  `YIOS_MEDIA_ROOT` to that path. Machine A must establish and document its own
+  verified durable root from a Machine A session.
+
+Current ownership: Machine B canonical checkout
+`/Users/ghilmanislam360/Documents/youtube-intelligence-os` owns ongoing branch
+`research/finance-economics-intelligence`. Machine A canonical checkout is
+`/Users/ghilmankhan/workprojects/youtube-intelligence-os`; do not infer its
+branch, cleanliness, worktree ownership, or media inventory from Machine B.
+
 ## graphify
 
 The project-scoped Graphify Codex skill is installed, but no knowledge graph has been built.
