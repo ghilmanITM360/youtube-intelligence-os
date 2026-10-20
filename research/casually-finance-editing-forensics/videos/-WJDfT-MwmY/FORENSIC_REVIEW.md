@@ -1,0 +1,28 @@
+# Forensic review — -WJDfT-MwmY "America's Debt Has Started Feeding Itself."
+
+Status: `VISUAL_FORENSICS_COMPLETE_AT_DEPTH_B_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
+
+## Source (MEASURED)
+`Americas-Debt-Has-SnapYT.App.mp4` (`CFSRC-009`), SHA256 `68f971e3...88e0e`, H.264/AAC, 360x640, 24.0 fps, 1465 frames (decoded = ffprobe), 61.099 s. SHORT uploaded 2026-09-21, 21,968 views at the 2026-10-19 snapshot. Identity = title+duration match (not cryptographic). 360p limits line weight and small-motion measurement.
+
+## Depth
+DEPTH_B (cut-delimited scenes + all CUT/BIG/ANIMATION and >=0.8%-area SMALL auto events reviewed on compact sheets; sub-0.8% changes such as caption words and thin strokes counted, not individually reviewed). Audio: whole track measured (74 % voiced, 13 pauses >=0.25 s, 11 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-1464.
+
+## Measured statistics
+- 16 scenes (median 3.38 s, p10 1.52, p90 6.38, longest 6.83); 15 hard cuts (14.73/min); 72 events (70.7/min), 51 of them one-frame.
+- Operations: UNRESOLVED_CHANGE 17, HARD_CUT_REPLACE 15, POP_IN 12, CAMERA_SCROLL_ZOOM 5, OVERLAY_POP 5, CHARACTER_RISE_IN 4, PROP_DRIFT 3, CAPTION_CHUNK_CHANGE 2, HIGHLIGHT_SWEEP 2, POSE_SWAP 2, SCALE_TWEEN 2, ROTATION 2, SLIDE_IN 1.
+- Frame-weighted: static hold 62.1 %, plausibly conventional keyframe/compositing 28.8 %, screen recording 0.0 %, complex continuous animation 0.0 %, change of undetermined method 9.1 %; generated/video-based: none identified.
+- Hard cuts relative to the nearest ASR word onset: median -62 ms (p10 -141, p90 -2; negative = visual first; ASR uncertainty ~100 ms).
+- Cadence: no 5-frame duplicate cadence found; frames in motion change every frame (native cadence = 24 fps).
+
+## Findings
+- **Full-bleed, typed captions, no band.** White background from the first frame, no headline; each caption is typed word by word on the stage and re-flowed as lines are added, so caption timing is `NOT_MEASURED` as a band. The file is native 23.976 fps (24000/1001): frames in motion change every frame and no 24-to-30 conform exists to test (`MEASURED`, inventory FPS 24.0).
+- **Cutting.** 15 hard cuts in 61.1 s (14.7/min), 16 scenes (median 3.4 s, shortest 1.1 s, longest 6.8 s); 72 table rows (70.7/min); 62.1 % of frames are static holds, 28.8 % conventional keyframe motion and 9.1 % indeterminate (the two turning arrow rings). Hard cuts sit a median 62 ms before the nearest ASR word onset (n = 15, range -175 to +43 ms; 4 lead by more than 100 ms, 11 within ±100 ms, none lag; ASR uncertainty ~100 ms), tighter than the -107 ms of `bF9WVzzS4ds` (`MEASURED`).
+- **Red numbers pop at the spoken number.** Red '$6.3' (f204, 8.51 s) 70 ms before ASR '$6' (8.58 s) with a red box around the outlay figure in the same frame; red '6%' (f268, 11.18 s) 60 ms before ASR '6' (11.24 s); red '3.8,' (f354, 14.76 s) 80 ms before ASR '3' (14.84 s); red '50' (f1444, 60.22 s) at ASR '50' (60.22 s); the big 'spent' caption (f198, 8.26 s) 40 ms before ASR 'spent' (8.30 s). All are one-frame pops (`MEASURED` from red-pixel counts; ASR uncertainty ~100 ms).
+- **Source tables get pointer, box and zoom.** The monthly budget report page enlarges in three bursts and jumps down to a table (f82-137; the camera tracker saturates there, geometry not reported), then the table enlarges 1.67x over 16 frames with ease-out quad (`SUPPORTED`, margin 0.071-0.086). At f164 the host and a green box on '4,485' appear in one frame, the green caption number is replaced at f198 and the red box lands at f204 (`MEASURED`, green and red pixel counts).
+- **Two yellow highlight sweeps on one outlook page.** Yellow area grows from 2 to 456 px over f233-272 (linear `SUPPORTED`, margin 0.042) and from 530 to 636 px over f322-360 (linear `SUPPORTED`, margin 0.020); the same page is reused in S05 under a different caption (`MEASURED`; page identity by eye).
+- **Chart pages pan; the arrow rings turn.** The line chart pans left about 62 px over ~39 frames (f1083-1121, linear x pan `SUPPORTED`, margin 0.026) and the long fiscal chart pans left about 150 px over ~69 frames (f1380-1448, ease-out quad `SUPPORTED`, margin 0.037). The ring of three red arrows pops in one frame (f921, f1046), changes shape every frame (~550-570 px per frame) while it is on screen and is removed in one frame (f1019, f1083): continuous turning is consistent, but a looped clip is not excluded (`DIRECTLY_OBSERVED` / `PLAUSIBLE_HYPOTHESIS`).
+- **Prop growth measured on the red label.** The red DEFICIT label grows from 8 to 411 red px over f763-782 (ease-in-out `AMBIGUOUS`, margin 0.020); the orange percent coin rises from the bottom edge over 9 frames (f1223-1231, stage change 673 to 2108 px) (`MEASURED`).
+- **One kit, many scenes.** The US-map character is in eight of 16 scenes (S04, S06, S08, S10, S12, S14, S15, S16) and the host or a worried head in six (S01, S02, S05, S10, S12, S14); the DEBT paper reappears in S06, S08, S09, S10, S11 and S14, and the same pile-of-papers prop in S09 and S11 (`DIRECTLY_OBSERVED`, same-asset identity judged by eye).
+- **No script reuse found.** No run of 8 or more identical ASR words with any other analysed video (difflib; `gGNVpOo7BK8` and `bF9WVzzS4ds` share an opening with each other but not with this Short).
+- **No screen recording, no generated motion identified.** 17 detected sub-0.8 %-area changes (176 to 877 px) remain unresolved rows; their positions are consistent with typed caption words but were not individually identified.
