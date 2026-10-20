@@ -19,3 +19,5 @@ State (2026-10-20): Phase 1 gate PASSED. 38 of 48 local videos (all Shorts) have
 12. Fast authoring: `scripts/prep_banded.sh <id>` or `scripts/prep_full.sh <id>`, then a per-video `videos/<id>/review/author_review.py` using `scripts/author_lib.py` (see `videos/UJEqqBpH18k/review/author_review.py`).
 
 13. Lessons added 2026-10-20 evening (details in `STATUS.json` -> `lessons`): ids starting with '-' need `--` for argparse scripts only; delete stale `auto/CAPTION_EVENTS_AUTO.csv` when switching a video from banded peek to full mode; drop `UNRESOLVED_CHANGE` rows that duplicate scene-start cuts after `fill_small`; cover continuous loops, slow drifts and caption starts with events or QA fails; 10-fps clip inserts are recorded as `VIDEO_CLIP_INSERT`.
+
+14. Long-form round (10 videos): procedure is written in `STATUS.json` -> `longform_procedure` but NOT started: usage on 2026-10-20 22:13 local was five-hour 96 %, weekly 93 %. Re-check usage first (start only below 90 % / 95 %); weekly resets 2026-10-23 ~16:00 +05. Pilot: `o3FQcd91MIs`.

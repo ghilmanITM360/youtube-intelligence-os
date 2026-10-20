@@ -1,6 +1,6 @@
 {
  "schema": "1.0",
- "updated": "2026-10-20",
+ "updated": "2026-10-20 22:13 local (+05)",
  "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=38 validated Shorts = all local Shorts; six chat docs refreshed at n=38)",
  "phase1_gate": "PASSED",
  "branch": "research/casually-finance-editing-forensics",
@@ -281,9 +281,13 @@
   "python": "python3 -E (user-site numpy/PIL/torch/whisper); do not use -I"
  },
  "usage_checkpoint": {
-  "time": "2026-10-20 21:58 local",
-  "five_hour_pct": 72,
-  "weekly_pct": 89
+  "time": "2026-10-20 22:13 local",
+  "five_hour_pct": 96,
+  "weekly_pct": 93,
+  "five_hour_resets_utc": "2026-10-20T19:59:59Z",
+  "weekly_resets_utc": "2026-10-23T10:59:59Z",
+  "extra_usage": "disabled (no paid credits)",
+  "decision": "Owner asked for the long-form round; owner rule says no expensive work at 5-hour >=90 % or weekly >=95 %. 5-hour is 96 %, weekly 93 %, so NO long-form video was started. Procedure only was written. Re-check usage before LF-0; weekly leaves ~2 % headroom, so wait for the weekly reset (2026-10-23 ~16:00 +05) unless the owner explicitly overrides."
  },
  "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled. JsK53moCyZA (2026-06-01) is a small centred-stage layout (all changes in rows 0.37-0.72, no headline) with a measured 24-to-30 fps conform; June Shorts are not otherwise profiled.",
  "procedure_fast": "forensic_features.py --asr (background batch available) -> layout_profile.py -> prep_full.sh <id> (full-bleed) or bands.json+segment_events.py+event_sheets.py --lean (banded) -> read sheets -> videos/<id>/review/author_review.py (copy a previous one) -> build_video_tables.py -> review/findings.md + STORY_STRUCTURE.md -> write_review.py -> commit",
@@ -342,5 +346,39 @@
   "VALIDATION.json"
  ],
  "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/aggregate_audio.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md, ORIGINAL_PRODUCTION_BLUEPRINT.md, KEYFRAME_RECIPE_LIBRARY.md and TYPOGRAPHY_AND_LAYOUT_SPEC.md (ALL SIX refreshed at n=38 on 2026-10-20 night; refresh them again once about ten more videos validate, i.e. at about n=48; note the withdrawn ease-in scale tallies: filter scale fits by net scale change >= 5 %)",
- "next_suggested": "All 38 local Shorts are validated (2026-10-20 night). The 10 remaining local videos are the long-form ones (queue_prior_partial_16 now lists exactly those 10); long-form needs a separate procedure (scene counts and decode time are larger). Video ids starting with '-' need '--' before positionals for argparse scripts (event_sheets, make_sheet) but not for build_video_tables. New lessons: text pans measured with measure_motion camera give constant per-frame steps (use per-frame dx_px, not the scale fit); filter scale fits by net scale >= 5 % before counting easing curves. Do not claim 100 %."
+ "next_suggested": "Long-form: procedure is in longform_procedure (written, not started) because usage was 96 % five-hour / 93 % weekly on 2026-10-20 22:13 local. Start with LF-0 on pilot o3FQcd91MIs when five-hour < 90 % and weekly < 95 % (weekly resets 2026-10-23 ~16:00 +05). Video ids starting with \"-\" need \"--\" for argparse scripts.",
+ "longform_procedure": {
+  "status": "WRITTEN_NOT_STARTED (2026-10-20); untested, calibrate on the pilot and edit this block afterwards",
+  "scope": "10 local long-form videos (queue_prior_partial_16), 125.1 min, 190,947 frames in total (the 38 validated Shorts: 44 min, 74,035 frames). All 16:9 (not 9:16): 8 at 1280x720, 2 at 1920x1080; 24 fps (Sep-Oct 2026 uploads) or 30 fps (2025 to Mar 2026).",
+  "why_separate": "Hand-authoring every event (Short procedure) would mean thousands of events per video. Long-form uses a full automated pass plus hand-authored, seeded sampling windows. Findings from windows are SAMPLED, never universal; always state \"windows X s of T s\".",
+  "keep_separate": "Long-form aggregates go into their own files (e.g. LONGFORM_*.csv). Do NOT merge with the 38-Short aggregates until both layouts are labelled; 16:9 layout is a new class. Never mix Casual Economics or What If evidence.",
+  "start_gate": "LF-0 first: five-hour usage < 90 % and weekly < 95 % (get_usage). Re-check between videos. Checkpoint, commit and push at five-hour >=90 % / weekly >=95 %, or context nearly full.",
+  "order": [
+   "o3FQcd91MIs (278 s, pilot: shortest, measures real cost)",
+   "kwMHrTFCWUE (374 s)",
+   "dlBhLhn8lL0 (408 s, 1080p)",
+   "5umJ63d3rzQ (753 s)",
+   "xtqbRt94TTw (828 s, 1080p, 24 fps)",
+   "-X6YzlY_8tM (892 s)",
+   "Uumnx2Fo6cE (921 s)",
+   "DgbHW0IqHrI (996 s)",
+   "0ll9rEtoRrs (1013 s)",
+   "roe3SgezmmU (1043 s)"
+  ],
+  "steps": [
+   "LF-0 preflight: usage check; confirm source file and SHA256 against SOURCE_MEDIA_INVENTORY.csv (canonical row, Video_ID column); read PRIOR_RESEARCH_COVERAGE row; only one writer on the branch (git status clean, no other session running).",
+   "LF-1 decode: ffmpeg -fps_mode passthrough to gray .npy in the local-evidence dir (outside Git); store frame count vs inventory; videos > 20k frames decode in chunks. Original MP4 is read-only.",
+   "LF-2 full automated pass over ALL frames: complete hard-cut list, pixel-delta series, scene count, static-frame share, cuts/min, events/min; fps cadence phase (24->30 repeated frame) where measurable; per-segment layout class (row profile) because long-form may switch layouts.",
+   "LF-3 sampling plan (write it to videos/<id>/review/WINDOWS.json BEFORE looking at content): first 60 s, last 60 s, plus N 45-s windows by fixed seed: top-20 % and bottom-20 % event density and 3 random. Record seed and window-seconds / total-seconds.",
+   "LF-4 hand-authored forensics inside windows only, same tables and rules as Shorts (scene timeline, motion events with easing fits filtered to net scale >= 5 %, colour-area emphasis, assets, caption words); outside windows rows are marked AUTOMATED_ONLY, never invented.",
+   "LF-5 audio and narration: Whisper small.en over the full audio (uncertified), measured loudness / voiced share / pauses; narration-to-visual alignment inside windows; story structure map in 60-90 s segments from ASR + cut density. Never claim to have listened.",
+   "LF-6 QA and commit: every frame belongs to an automated segment; every window frame covered by an event or marked; QA.json status VISUAL_FORENSICS_SAMPLED_AUDIO_LISTENING_BLOCKED; depth label LF-SAMPLED; update STATUS.json (move id to videos_complete_longform, not videos_complete), commit and push per video; record usage cost per video in this block.",
+   "After pilot: re-estimate cost for the other 9 and edit this block; ask the owner only if the cost does not fit the limits."
+  ],
+  "caveats": [
+   "Headline of Short ji2qFfcgSB4 equals the public title of 0ll9rEtoRrs; relation UNKNOWN; analyse independently.",
+   "Whisper ASR text is not verified transcript; audio quality, music and SFX cannot be judged without listening (GAP-006).",
+   "Single reviewer; no independent QA yet."
+  ]
+ }
 }
