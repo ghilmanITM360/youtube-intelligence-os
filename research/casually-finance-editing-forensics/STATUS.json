@@ -1,7 +1,7 @@
 {
  "schema": "1.0",
  "updated": "2026-10-20",
- "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=22 validated Shorts; doc snapshot n=12 except era split)",
+ "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=22 validated Shorts; CHANNEL_EDITING_DNA, OBSERVATIONS_VS_HYPOTHESES and SOUND_DESIGN_SPEC refreshed at n=22; ORIGINAL_PRODUCTION_BLUEPRINT, KEYFRAME_RECIPE_LIBRARY and TYPOGRAPHY_AND_LAYOUT_SPEC still quote the n=12 snapshot)",
  "phase1_gate": "PASSED",
  "branch": "research/casually-finance-editing-forensics",
  "worktree": "/Users/ghilmankhan/workprojects/yio-cf-editing-forensics",
@@ -202,8 +202,8 @@
   "python": "python3 -E (user-site numpy/PIL/torch/whisper); do not use -I"
  },
  "usage_checkpoint": {
-  "time": "2026-10-20 ~10:00 local",
-  "note": "5-hour about 13 % and weekly about 69 % at session start; plan limits unreadable mid-session"
+  "time": "2026-10-20 ~11:00 local",
+  "note": "5-hour 43 % and weekly 74 % at the last readable check (plan limits intermittently unreadable); context ~60 %"
  },
  "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled.",
  "procedure_fast": "forensic_features.py --asr (background batch available) -> layout_profile.py -> prep_full.sh <id> (full-bleed) or bands.json+segment_events.py+event_sheets.py --lean (banded) -> read sheets -> videos/<id>/review/author_review.py (copy a previous one) -> build_video_tables.py -> review/findings.md + STORY_STRUCTURE.md -> write_review.py -> commit",
@@ -217,7 +217,9 @@
   "cadence_phase": "build_video_tables now reports a measured 24->30 fps conform when duplicate frames share one phase mod 5 (xrNPr3YrWdw, wo71JwXSYIs)",
   "script_reuse": "A 51-word ASR run (OECD introduction + 'Avengers' joke) is identical in 44ggG2I6JPY and xrNPr3YrWdw; test script reuse with difflib on asr_words.csv",
   "sheet_frames": "Event-sheet cells are native frame numbers (verified 1:1 with gray.npy), but hand-read onsets from sheets can be off by a few frames; confirm exact pop frames with the pixel/colour series (measure_color_area.py or stage px) before citing them (zkeA5cH9nyM '66.7%' f1058)",
-  "full_bleed_workflow": "Full-bleed: prep_full.sh -> bands.json add auto_fill + depth_label -> author_review.py via author_lib (stage [0,1]); measure camera with rows e.g. 0.05:0.55, colour blink with measure_color_area.py; unquoted loop vars do not split in zsh (use ${=args})"
+  "full_bleed_workflow": "Full-bleed: prep_full.sh -> bands.json add auto_fill + depth_label -> author_review.py via author_lib (stage [0,1]); measure camera with rows e.g. 0.05:0.55, colour blink with measure_color_area.py; unquoted loop vars do not split in zsh (use ${=args})",
+  "fill_small": "Author.fill_small(172) adds UNRESOLVED_CHANGE rows for detected changes >=172 stage px that no authored event covers; call it just before A.write() in full-bleed videos with many small events (ud1ESmogrFY)",
+  "aggregate_audio": "scripts/aggregate_audio.py computes the audio table (voiced %, wpm, phrase rate, pauses, levels, flux at cuts, cut-to-word offsets) over all validated videos into evidence/audio_aggregate.json"
  },
  "redo_after_decode_fix": [
   "s3_3SFxtt14",
@@ -249,6 +251,6 @@
   "CLAUDE_CODE_ANIMATION_HANDOFF.md",
   "VALIDATION.json"
  ],
- "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (n=10 snapshot of 2026-10-20)",
- "next_suggested": "Remaining Aug/Sep full-bleed 720p Shorts: ZDoeEd8fMdo, _3tM1d-WeUI, ud1ESmogrFY, f_ZCoPKLpyU, bF9WVzzS4ds (features re-checked: frames match inventory; run scripts/prep_full.sh <id>), then 360p uncovered Shorts (-WJDfT-MwmY, 06pN9dDvVVU, gGNVpOo7BK8, JztI-l-0-x4, m8NC4L8hmeE) and 720p ODMyV3F_G2g, Kq5VMugQMHw, H3PRCteue9Y; long-form last; refresh doc numbers from aggregate_channel.py once ~10 more videos validate (19 validated vs n=12 snapshot in docs)"
+ "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/aggregate_audio.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (refreshed at n=22 on 2026-10-20) and, still pending, ORIGINAL_PRODUCTION_BLUEPRINT.md, KEYFRAME_RECIPE_LIBRARY.md, TYPOGRAPHY_AND_LAYOUT_SPEC.md (n=12)",
+ "next_suggested": "Remaining 720p Shorts: _3tM1d-WeUI done; ZDoeEd8fMdo done; next f_ZCoPKLpyU, bF9WVzzS4ds (frames match inventory; scripts/prep_full.sh <id>; full-bleed procedure in lessons), then 360p -WJDfT-MwmY, 06pN9dDvVVU, gGNVpOo7BK8, JztI-l-0-x4, m8NC4L8hmeE and 720p ODMyV3F_G2g, Kq5VMugQMHw, H3PRCteue9Y; long-form last; refresh blueprint/recipes/typography numbers from the aggregate CSVs"
 }
