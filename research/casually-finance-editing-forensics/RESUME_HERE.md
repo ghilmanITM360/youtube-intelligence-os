@@ -1,6 +1,6 @@
 # Resume here — Casually Finance editing forensics
 
-State (2026-10-20): Phase 1 gate PASSED. 18 of 48 local videos (all Shorts) have validated per-video forensics (depth A/B/C, listening blocked, single reviewer); preliminary channel DNA, recipes, asset spec and handoff exist (n=10-12 snapshot, era split refreshed at n=14). 30 videos remain (14 uncovered Shorts + 16 prior-covered videos incl. all 10 long-form). Latest: wo71JwXSYIs (banded, depth B). Do not claim 100 %.
+State (2026-10-20): Phase 1 gate PASSED. 19 of 48 local videos (all Shorts) have validated per-video forensics (depth A/B/C, listening blocked, single reviewer); preliminary channel DNA, recipes, asset spec and handoff exist (n=10-12 snapshot, era split refreshed at n=14). 29 videos remain (13 uncovered Shorts + 16 prior-covered videos incl. all 10 long-form). Latest: zkeA5cH9nyM (full-bleed 720p, depth B). Do not claim 100 %.
 
 1. Read `SOURCE_DISCOVERY_REPORT.md`, then `STATUS.json` (`queue_uncovered_by_views`, `videos_in_progress`).
 2. Worktree: `/Users/ghilmankhan/workprojects/yio-cf-editing-forensics`, branch `research/casually-finance-editing-forensics` (from `main@08e71926`). Do not touch the main checkout (`research/finance-economics-intelligence`, PR #36).

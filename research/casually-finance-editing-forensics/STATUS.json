@@ -1,7 +1,7 @@
 {
  "schema": "1.0",
  "updated": "2026-10-20",
- "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=18 validated Shorts; doc snapshot n=12 except era split)",
+ "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=19 validated Shorts; doc snapshot n=12 except era split)",
  "phase1_gate": "PASSED",
  "branch": "research/casually-finance-editing-forensics",
  "worktree": "/Users/ghilmankhan/workprojects/yio-cf-editing-forensics",
@@ -126,11 +126,16 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "B",
    "qa": "videos/wo71JwXSYIs/QA.json"
+  },
+  {
+   "video_id": "zkeA5cH9nyM",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/zkeA5cH9nyM/QA.json"
   }
  ],
  "videos_in_progress": [],
  "queue_uncovered_by_views": [
-  "zkeA5cH9nyM",
   "ZDoeEd8fMdo",
   "_3tM1d-WeUI",
   "ud1ESmogrFY",
@@ -195,7 +200,9 @@
   "highlights": "Slow highlighter growth changes <8 gray levels per frame and is missed by the stage-event detector; measure it with scripts/measure_color_area.py <vid> rows color(yellow|orange|lgreen|red) min_px segments=f0:f1,... (writes motion/color_<color>.json, cite in the event 'measure' field)",
   "scene_snapping": "author_lib snaps a scene start to the largest stage change within +-15 frames; if the true scene boundary has <1000 stage px (props shrinking into a new scene), merge the scenes instead (xrNPr3YrWdw S07)",
   "cadence_phase": "build_video_tables now reports a measured 24->30 fps conform when duplicate frames share one phase mod 5 (xrNPr3YrWdw, wo71JwXSYIs)",
-  "script_reuse": "A 51-word ASR run (OECD introduction + 'Avengers' joke) is identical in 44ggG2I6JPY and xrNPr3YrWdw; test script reuse with difflib on asr_words.csv"
+  "script_reuse": "A 51-word ASR run (OECD introduction + 'Avengers' joke) is identical in 44ggG2I6JPY and xrNPr3YrWdw; test script reuse with difflib on asr_words.csv",
+  "sheet_frames": "Event-sheet cells are native frame numbers (verified 1:1 with gray.npy), but hand-read onsets from sheets can be off by a few frames; confirm exact pop frames with the pixel/colour series (measure_color_area.py or stage px) before citing them (zkeA5cH9nyM '66.7%' f1058)",
+  "full_bleed_workflow": "Full-bleed: prep_full.sh -> bands.json add auto_fill + depth_label -> author_review.py via author_lib (stage [0,1]); measure camera with rows e.g. 0.05:0.55, colour blink with measure_color_area.py; unquoted loop vars do not split in zsh (use ${=args})"
  },
  "redo_after_decode_fix": [
   "s3_3SFxtt14",
@@ -228,5 +235,5 @@
   "VALIDATION.json"
  ],
  "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (n=10 snapshot of 2026-10-20)",
- "next_suggested": "Aug 720p Shorts via scripts/prep_full.sh (redo_after_decode_fix list first: re-run forensic_features.py --asr for them), then remaining uncovered Shorts by views; long-form only after Shorts; refresh doc numbers from aggregate_channel.py once ~10 more videos validate (currently 18 validated vs n=12 snapshot in docs)"
+ "next_suggested": "Remaining Aug/Sep full-bleed 720p Shorts: ZDoeEd8fMdo, _3tM1d-WeUI, ud1ESmogrFY, f_ZCoPKLpyU, bF9WVzzS4ds (features re-checked: frames match inventory; run scripts/prep_full.sh <id>), then 360p uncovered Shorts (-WJDfT-MwmY, 06pN9dDvVVU, gGNVpOo7BK8, JztI-l-0-x4, m8NC4L8hmeE) and 720p ODMyV3F_G2g, Kq5VMugQMHw, H3PRCteue9Y; long-form last; refresh doc numbers from aggregate_channel.py once ~10 more videos validate (19 validated vs n=12 snapshot in docs)"
 }
