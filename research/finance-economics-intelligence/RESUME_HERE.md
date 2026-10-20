@@ -1,5 +1,28 @@
 # Resume the full 966-video Finance and Economics audit
 
+## Latest preservation checkpoint — 2026-10-20 (durable local source found; audit counts unchanged)
+
+- Machine B's permanent private media root is
+  `/Users/ghilmanislam360/Documents/YIOS-Media-Library/`. Its 456 files and
+  4,363,111,708 bytes were checked individually against the tracked media
+  inventory with SHA-256: 456 matches, zero missing or mismatched. The original
+  Downloads source remains untouched; no media bytes were uploaded to GitHub or
+  Git LFS.
+- Expansion video `HjlVexL2Lxk` is present as
+  `PrimateEconomics-MP4/Options Trading Explained with Bananas (No AI)
+  [HjlVexL2Lxk].mp4`: 24,763,075 bytes, 1920x1080 H.264/AAC, 615.003719
+  seconds, SHA-256
+  `c01050ad557d2e478b6a928e017382bedc7e6f13dc16d8f0f6ae194ea99d520d`.
+  This proves local media availability only. It is not an official-caption
+  source, no ASR was generated in this checkpoint, and the existing
+  `BLOCKED_PARTIAL_EVIDENCE` state remains unchanged.
+- Original progress remains 429/966; expansion remains 0/197 deep-complete,
+  one blocked partial and 196 metadata-only. Exact next original remains
+  `R_E6OOnF9e4` (`NICK_154`). Live usage after the preservation unit was 79%
+  five-hour and 25% weekly, paid balance $0, with two reset credits unused.
+  A complete NICK_154 research+rebuild+QA unit was not started because its
+  projected cost would leave inadequate reserve before the 90% stop gate.
+
 ## Latest continuation checkpoint — 2026-10-20 (NICK_153 complete; first expansion candidate blocked)
 
 - Starting aligned HEAD was `8d3144ac171f0218c6f3f20f86362c12686fd6aa`; local branch, `origin/research/finance-economics-intelligence` and draft PR #36 matched. The working tree was clean and no other process owned this Finance checkout. Draft PR #39 remained unmerged at `967ea707a0d7198754d132a978962baa96073f49`; no acquisition was repeated.
