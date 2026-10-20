@@ -1,6 +1,6 @@
-# Keyframe recipe library (PRELIMINARY; derived from 32 validated Shorts of 48 local videos of 210 public; snapshot 2026-10-20 evening; original-production guidance)
+# Keyframe recipe library (PRELIMINARY; derived from 38 validated Shorts of 48 local videos of 210 public; snapshot 2026-10-20 night; original-production guidance)
 
-Conventions: timeline 24 fps; **1 frame = 41.7 ms**; "word onset W" = the ASR start of the keyword; `W-2f` = two frames before. Easing default is **linear** because linear is the most common single measured curve (13 of 29 supported camera-scale fits, 8 of 11 pointer x-fits; the other supported scale fits are 8 ease-out, 5 ease-in, 3 ease-in-out; see `OBSERVATIONS_VS_HYPOTHESES.md`); use other curves only where noted. Reference IDs/times are Casually Finance sources for **private timing comparison only**; never reuse their pixels. Layers are listed bottom → top. Mobile rule: nothing meant to be read may be smaller than 0.028 of frame height.
+Conventions: timeline 24 fps; **1 frame = 41.7 ms**; "word onset W" = the ASR start of the keyword; `W-2f` = two frames before. Easing default is **linear** because linear is the most common single measured curve (13 of 21 supported camera-scale fits with a real zoom, 18 of 31 supported pans, 8 of 11 pointer x-fits; the other supported scale fits are 8 ease-out; the earlier ease-in and ease-in-out scale tallies were withdrawn, see `OBSERVATIONS_VS_HYPOTHESES.md`); use other curves only where noted. Reference IDs/times are Casually Finance sources for **private timing comparison only**; never reuse their pixels. Layers are listed bottom → top. Mobile rule: nothing meant to be read may be smaller than 0.028 of frame height.
 
 ---
 ## R01 First-three-second visual hook
@@ -30,7 +30,7 @@ Conventions: timeline 24 fps; **1 frame = 41.7 ms**; "word onset W" = the ASR st
 ## R05 Number reveal
 - **Situation**: a headline figure. **Assets**: large hand-lettered number (3-6x caption size) in red/green/black.
 - **Initial**: caption under the position. **States**: figure pops in one frame on the word (`Es5c2MKzbDg` f49 '58%', f573 '$429,000'; `HvnVO1_YrMQ` f347 '3%'); optional highlight on the source.
-- **Keyframes**: visibility only. **Text**: number >= 0.06 of frame height; units in the caption. **Duration**: hold 1.5-3 s. **Timing (measured)**: pop on the word onset or up to 80 ms before it (`$74B` -20 ms, `3.5` bubble -10 ms, `6%` -60 ms, `3.8` -80 ms, `$6.3` -70 ms, `1998` -50 ms, `50` 0 ms); a figure may also lead by 0.3-0.5 s when it is the topic of the sentence (`$60B`, `$101`). **Mistakes**: counting animations; more than one number at a time.
+- **Keyframes**: visibility only. **Text**: number >= 0.06 of frame height; units in the caption. **Duration**: hold 1.5-3 s. **Timing (measured)**: pop on the word onset or up to 80 ms before it (`$74B` -20 ms, `3.5` bubble -10 ms, `6%` -60 ms, `3.8` -80 ms, `$6.3` -70 ms, `1998` -50 ms, `50` 0 ms); a figure may also lead by 0.3-0.5 s when it is the topic of the sentence (`$60B`, `$101`). Later Shorts add a wider spread (25 marks, -540 to +390 ms, median -90 ms, 11 within ±100 ms): pop on the word or up to 0.35 s before it; do not place a mark after the word. **Mistakes**: counting animations; more than one number at a time.
 
 ## R06 Visual comparison
 - **Situation**: A versus B. **Assets**: two charts/props, divider or labels, per-side icon sets.
@@ -40,12 +40,12 @@ Conventions: timeline 24 fps; **1 frame = 41.7 ms**; "word onset W" = the ASR st
 ## R07 Source / article highlight
 - **Situation**: a document supports the claim. **Assets**: raster page, marker highlight, optional red box.
 - **Initial**: page appears by hard cut (small), or slides in (`Es5c2MKzbDg` f5-13). **States**: push-in or scroll 0.9-3.7 s (linear for fast reads), highlight sweep 10-30 frames left to right (`Qof71Ef-3EU` f1467-1517; `RB5zVghPor8` f858-888), presenter pops in to point.
-- **Keyframes**: scale 1.00→1.3-2.0 with a drift over 16-63 frames (linear in 13 of 29 supported fits: 1.72x over 63 frames, 1.60x over 31, 1.85x over 43, 1.55x over 30); a second stage may pan 165-205 px (analysis size) over 15-57 frames with ease-in-out; highlight area grows linearly over 0.5-7.7 s and starts on the first word of the quoted clause, ending near its end. **Text**: crop to the supporting fragment; keep date/source visible. **Duration**: 3-10 s. **Mistakes**: full unreadable page; highlight before the clause is spoken.
+- **Keyframes**: scale 1.00→1.3-2.0 with a drift over 16-63 frames (linear in 13 of 21 supported zoom fits: 1.72x over 63 frames, 1.60x over 31, 1.85x over 43, 1.55x over 30; 1.38x over 23 frames on a chart); a second stage may pan 165-205 px (analysis size) over 15-57 frames with ease-in-out; highlight area grows linearly over 0.5-7.7 s and starts on the first word of the quoted clause, ending near its end. **Text**: crop to the supporting fragment; keep date/source visible. **Duration**: 3-10 s. **Mistakes**: full unreadable page; highlight before the clause is spoken.
 - **Reference**: `Qof71Ef-3EU` 49-55.7 s; `RB5zVghPor8` 28-37 s; `ffIiiPLDFdM` 42-46 s.
 
 ## R08 Context transition (hard cut)
 - **Situation**: every scene change. **Layers**: whole stage replaced.
-- **States**: composition A on frame n, composition B on frame n+1, new objects all present on n+1 (stagger by 1 frame only if the layers are separate clips). **Timing**: cut at W-2f to W-4f (sample median -73 ms; p10 -207; p90 +76; n = 606 cuts); at a pause end if present. **Keyframes**: none. **Sound**: unknown. **Mistakes**: dissolve; cutting before the previous caption chunk ends.
+- **States**: composition A on frame n, composition B on frame n+1, new objects all present on n+1 (stagger by 1 frame only if the layers are separate clips). **Timing**: cut at W-2f to W-4f (sample median -80 ms; p10 -207; p90 +73; n = 696 cuts); optionally clear the caption block one frame before the cut (seen at 11 of 46 cuts in three Shorts); at a pause end if present. **Keyframes**: none. **Sound**: unknown. **Mistakes**: dissolve; cutting before the previous caption chunk ends.
 
 ## R09 Narrative escalation
 - **Situation**: stakes rise or a theme is repeated. **Patterns**: rapid source montage (`Qof71Ef-3EU` f1936-2048: 8 pages in 3.7 s, holds 0.35-0.7 s, captions dropped); a branded overlay repeated at each 'billions' beat (`mT2hOLrCYSk` rain at 29.5, 46.6, 79.6 s); callback of the opening image (`Qof71Ef-3EU` 26.1 s).
@@ -80,8 +80,21 @@ Conventions: timeline 24 fps; **1 frame = 41.7 ms**; "word onset W" = the ASR st
 
 ## R16 Clip insert (third-party footage or meme)
 - **Situation**: a reaction or analogy shown by short borrowed footage. **Assets**: a short clip in a bounded rectangle plus a caption.
-- **States**: the rectangle appears in one frame; the clip updates about every third frame (10 updates per second on a 30 fps timeline, alternating 2/3-frame gaps on 24 fps) for 1.5-4 s, then holds on its last frame until the cut (`bF9WVzzS4ds` f289-346, `gGNVpOo7BK8` f816-867, `JztI-l-0-x4` f1755-1804, `m8NC4L8hmeE` f1042-1086).
+- **States**: the rectangle appears in one frame; the clip updates about every third frame (10 updates per second on a 30 fps timeline, alternating 2/3-frame gaps on 24 fps; 15 per second in `rSa2aziEsAI`) for 1.5-4 s, then holds on its last frame until the cut (`bF9WVzzS4ds` f289-346, `gGNVpOo7BK8` f816-867, `JztI-l-0-x4` f1755-1804, `m8NC4L8hmeE` f1042-1086).
 - **Mistakes**: using footage you do not have rights to; a full-rate clip beside a 10-fps look. **Rights**: use original or licensed clips only; the sources here are `UNKNOWN`.
+
+## R18 Read-along page pan
+- **Situation**: a quoted passage must be read at the narrator's pace. **Assets**: raster text page wider than the frame, yellow marker layer, optional desk figure.
+- **States**: page cut in (small) at the start of the sentence; the highlighter grows across the line over the spoken duration (0.4-8.7 s; start 0.12-0.38 s before the first word, end at the last word); the page pans left at a constant step (-2.0 to -4.7 px per frame at the 180-px analysis size, 15-69 frames) and returns to the line start at a faster constant step in 5-11 frames before the next line (`2EZzwupIa80` f957-993, f1035-1080, f1321-1397, f1680-1790).
+- **Keyframes**: linear translate only; no scale. **Text**: the page carries the words; the caption may be dropped. **Mistakes**: ease-in-out on the pan; a highlighter that is ahead of the voice. **Reference**: `2EZzwupIa80` 35.8-47.1 s and 64.5-75.3 s.
+
+## R19 Metronomic wobble
+- **Situation**: a character must stay alive through a long hold. **States**: two poses swapped exactly every 10 frames (3 per second at 30 fps) for 200+ frames (`JsK53moCyZA` f139-349, 22 swaps); a small figure at the corner may blink-swap at irregular 11-34-frame gaps.
+- **Keyframes**: visibility swap, no tween. **Mistakes**: continuous morphing.
+
+## R20 Chart draw-on
+- **Situation**: a rate or yield line is introduced. **States**: the line is drawn left to right over 34-41 frames (`rSa2aziEsAI` f228-261 ease-in-out, f558-598 linear-ambiguous, the second followed by a tooltip at the line end); in a source recording the chart scrolls left ~215 px (analysis size) over 92 frames with tooltips every 22-24 frames (`6S3PzAUFnXQ` f360-451).
+- **Keyframes**: reveal mask progress, smoothstep or linear. **Mistakes**: drawing faster than the caption can be read.
 
 ## R17 Turning ring (feedback loop)
 - **Situation**: a self-reinforcing process. **Assets**: ring of three arrows, one typed phrase inside.
