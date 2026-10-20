@@ -110,7 +110,12 @@
    "qa": "videos/ji2qFfcgSB4/QA.json"
   }
  ],
- "videos_in_progress": [],
+ "videos_in_progress": [
+  {
+   "video_id": "YST8eMG3_Z8",
+   "note": "prep run, scenes reviewed, not authored: see videos/YST8eMG3_Z8/review/prep_notes.md"
+  }
+ ],
  "queue_uncovered_by_views": [
   "zkeA5cH9nyM",
   "ZDoeEd8fMdo",
@@ -211,5 +216,5 @@
   "VALIDATION.json"
  ],
  "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (n=10 snapshot of 2026-10-20)",
- "next_suggested": "YST8eMG3_Z8, xrNPr3YrWdw, wo71JwXSYIs (banded 09-05..09-10; use scripts/prep_banded.sh + scripts/author_lib.py), then Aug 720p Shorts via prep_full.sh; long-form only after Shorts; refresh doc numbers from aggregate_channel.py"
+ "next_suggested": "YST8eMG3_Z8 (prep notes exist), xrNPr3YrWdw, wo71JwXSYIs (banded), then Aug 720p Shorts via prep_full.sh; long-form only after Shorts"
 }
