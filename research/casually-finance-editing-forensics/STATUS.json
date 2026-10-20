@@ -204,12 +204,16 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "B",
    "qa": "videos/Kq5VMugQMHw/QA.json"
+  },
+  {
+   "video_id": "H3PRCteue9Y",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/H3PRCteue9Y/QA.json"
   }
  ],
  "videos_in_progress": [],
- "queue_uncovered_by_views": [
-  "H3PRCteue9Y"
- ],
+ "queue_uncovered_by_views": [],
  "queue_prior_partial_16": [
   "DgbHW0IqHrI",
   "6S3PzAUFnXQ",
@@ -299,5 +303,5 @@
   "VALIDATION.json"
  ],
  "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/aggregate_audio.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (refreshed at n=22 on 2026-10-20) and, still pending, ORIGINAL_PRODUCTION_BLUEPRINT.md, KEYFRAME_RECIPE_LIBRARY.md, TYPOGRAPHY_AND_LAYOUT_SPEC.md (n=12)",
- "next_suggested": "Next: 720p H3PRCteue9Y; long-form last. Then refresh CHANNEL_EDITING_DNA/OBSERVATIONS/SOUND_DESIGN_SPEC and the three n=12 docs (ORIGINAL_PRODUCTION_BLUEPRINT/KEYFRAME_RECIPE_LIBRARY/TYPOGRAPHY_AND_LAYOUT_SPEC) from the aggregate CSVs. Video ids starting with '-' need '--' before positionals for argparse scripts (event_sheets, make_sheet) but not for build_video_tables. 10-fps clip cadence (every 3rd frame) seen in bF9WVzzS4ds, gGNVpOo7BK8, JztI-l-0-x4, 06pN9dDvVVU, m8NC4L8hmeE."
+ "next_suggested": "Queue of uncovered Shorts is empty; next: refresh CHANNEL_EDITING_DNA/OBSERVATIONS/SOUND_DESIGN_SPEC and the three n=12 docs (ORIGINAL_PRODUCTION_BLUEPRINT/KEYFRAME_RECIPE_LIBRARY/TYPOGRAPHY_AND_LAYOUT_SPEC) from the aggregate CSVs at n=32; then the 16 prior-covered videos incl. all 10 long-form. Video ids starting with '-' need '--' before positionals for argparse scripts (event_sheets, make_sheet) but not for build_video_tables."
 }
