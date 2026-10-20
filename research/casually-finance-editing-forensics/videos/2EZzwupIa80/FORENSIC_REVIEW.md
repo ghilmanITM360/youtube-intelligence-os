@@ -1,0 +1,28 @@
+# Forensic review — 2EZzwupIa80 "Nothing Forces the Government to Fix The $40 Trillion Debt"
+
+Status: `VISUAL_FORENSICS_COMPLETE_AT_DEPTH_B_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
+
+## Source (MEASURED)
+`Nothing Forces the Government to Fix The 40 Trillion Debt - Casual Finance (720p, h264).mp4` (`CFSRC-027`), SHA256 `8e60377e...7b7be`, H.264/AAC, 720x1280, 24.0 fps, 1804 frames (decoded = ffprobe), 75.274 s. SHORT uploaded 2026-10-10, 27,047 views at the 2026-10-19 snapshot. Identity = title+duration match (not cryptographic). 
+
+## Depth
+DEPTH_B (cut-delimited scenes + all CUT/BIG/ANIMATION and >=0.8%-area SMALL auto events reviewed on compact sheets; sub-0.8% changes such as caption words and thin strokes counted, not individually reviewed). Audio: whole track measured (79 % voiced, 15 pauses >=0.25 s, 11 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-1803.
+
+## Measured statistics
+- 13 scenes (median 4.83 s, p10 3.01, p90 10.40, longest 11.29); 12 hard cuts (9.57/min); 80 events (63.77/min), 49 of them one-frame.
+- Operations: UNRESOLVED_CHANGE 28, HARD_CUT_REPLACE 12, CAMERA_SCROLL_ZOOM 12, HIGHLIGHT_SWEEP 7, OVERLAY_POP 6, SLIDE_IN 6, CAPTION_CHUNK_CHANGE 3, POSE_SWAP 2, POP_IN 2, STROKE_REVEAL 1, CHARACTER_RISE_IN 1.
+- Frame-weighted: static hold 45.8 %, plausibly conventional keyframe/compositing 54.1 %, screen recording 0.0 %, complex continuous animation 0.0 %, change of undetermined method 0.1 %; generated/video-based: none identified.
+- Hard cuts relative to the nearest ASR word onset: median -151 ms (p10 -185, p90 -12; negative = visual first; ASR uncertainty ~100 ms).
+- Cadence: no 5-frame duplicate cadence found; frames in motion change every frame (native cadence = 24 fps).
+
+## Findings
+- **Full-bleed, no headline and no band.** White page from the first frame with a hand-lettered typed caption in the first five scenes and a text page doing the work in the rest; the file is native 24 fps with only 2 isolated duplicate frames in motion and no 5-frame cadence (`MEASURED`).
+- **Slowest cutting of the four videos validated in this session.** 12 hard cuts in 75.3 s (9.6/min), 13 scenes (median 4.83 s, p10 3.01, p90 10.40, longest 11.29 s); 80 table rows (64/min), 28 of them unresolved sub-0.8 %-area changes (caption words); 45.8 % of frames are static holds and 54.1 % conventional keyframe motion (nearly all of it page pans and highlights), 0.1 % indeterminate (`MEASURED`).
+- **Hard cuts lead the spoken word.** Median 151 ms before the nearest ASR word onset (n = 12, range -212 to +125 ms; 10 lead by more than 100 ms, 1 within ±100 ms, 1 lags; ASR uncertainty ~100 ms) (`MEASURED`). At every cut the caption and picture change in the same frame (the frame before each cut has 0 changed px).
+- **Read-along text pans at constant speed.** The WSJ and Hustle Fund pages scroll left at a constant velocity (linear, per-frame steps of -2.0 to -4.7 px at the 180-px analysis size) while a yellow highlight follows the line, then return to the line start at a faster constant speed in 3-11 frames: S09 -3.9 px x 26 frames then +8.8 x 11, -4.7 x 22 then +18.7 x 5; S11 -2.0 x 69 then +17.1 x 8; S13 -3.0 x 35 then +21.3 x 5 and -3.0 x 31; S07 three passes of -2.6 x 23, -2.0 x 17 and -3.0 x 15 with returns (`MEASURED`). The pan speed is set by the narrated line: the S13 passes start 0.16 and 0.15 s before ASR 'Then' (70.16 s) and 'Address' (73.48 s).
+- **Highlights span the narrated sentence.** The S09 highlight grows from 0 to 3872 px over f913-1121, starting 0.12 s before ASR 'I' (38.16 s) and ending with ASR 'makers.' (46.88 s); the S07 highlight spans the 30-percent sentence (f544-638 against ASR 22.5-26.9 s); the S11 highlight starts 0.38 s before ASR 'Every' (`MEASURED` from yellow-area counts).
+- **Pops cluster before the word.** The BILL paper appears 0.24 s before ASR 'bill' (50.32 s) (f1202), the coat opens 0.24 s before ASR 'mom's' (63.28 s) (f1510-1514), red 'broke' appears 70 ms before ASR 'broke' (34.36 s) (f823) and green 'time' lands at ASR 'time.' (17.26 s) (f413) (`MEASURED`; ASR uncertainty ~100 ms).
+- **Script re-use.** The sentence 'Druckenmiller is a billionaire hedge fund manager and widely considered one of the greatest investors of all time.' (18 identical ASR words) also appears at 12.3 s in m8NC4L8hmeE (uploaded 2026-09-23; this video 2026-10-10), where the Druckenmiller photo and a LinkedIn profile card are likewise shown; the frames are similar but not identical (best low-resolution correlation 0.80, f320 against m8NC4L8hmeE f284, a 360p source) (`MEASURED`; same assets re-used is a `PLAUSIBLE_HYPOTHESIS`).
+- **Desk figure and brand mark.** The same stick figure with glasses at a desk with a laptop marked 'CF' sits under the WSJ pages in S09, S11 and S13 (3 of 13 scenes) (`DIRECTLY_OBSERVED`).
+- **Source evidence in 9 of 13 scenes.** A photo and LinkedIn card (S05-S06), a Hustle Fund article (S07), a Bank of England article (S08), three WSJ text pages (S09, S11, S13), an auction chart (S10) and a Genius lyrics page (S12); the remaining 4 scenes (S01-S04) are bubble gags with characters (`DIRECTLY_OBSERVED`).
+- **Gags carry the tone.** Bubbles 'Debt? What debt?', 'uh, what's 2+2?', 'Your debt is growing!' / 'Yours too!' / 'we're even', 'I promise, we'll have less!', 'XD' and 'NOT funny', and the Eminem pose swap are not in the ASR (`DIRECTLY_OBSERVED`, text read at 720p).
