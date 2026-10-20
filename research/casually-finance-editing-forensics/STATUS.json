@@ -240,6 +240,12 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "B",
    "qa": "videos/rSa2aziEsAI/QA.json"
+  },
+  {
+   "video_id": "JsK53moCyZA",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/JsK53moCyZA/QA.json"
   }
  ],
  "videos_in_progress": [],
@@ -250,7 +256,6 @@
   "kwMHrTFCWUE",
   "dlBhLhn8lL0",
   "Uumnx2Fo6cE",
-  "JsK53moCyZA",
   "-X6YzlY_8tM",
   "roe3SgezmmU",
   "0ll9rEtoRrs",
@@ -276,11 +281,11 @@
   "python": "python3 -E (user-site numpy/PIL/torch/whisper); do not use -I"
  },
  "usage_checkpoint": {
-  "time": "2026-10-20 21:52 local",
-  "five_hour_pct": 68,
+  "time": "2026-10-20 21:58 local",
+  "five_hour_pct": 72,
   "weekly_pct": 89
  },
- "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled.",
+ "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled. JsK53moCyZA (2026-06-01) is a small centred-stage layout (all changes in rows 0.37-0.72, no headline) with a measured 24-to-30 fps conform; June Shorts are not otherwise profiled.",
  "procedure_fast": "forensic_features.py --asr (background batch available) -> layout_profile.py -> prep_full.sh <id> (full-bleed) or bands.json+segment_events.py+event_sheets.py --lean (banded) -> read sheets -> videos/<id>/review/author_review.py (copy a previous one) -> build_video_tables.py -> review/findings.md + STORY_STRUCTURE.md -> write_review.py -> commit",
  "lessons": {
   "decode": "ffmpeg decode must use -fps_mode passthrough (fixed 2026-10-20); only 44ggG2I6JPY was affected and was re-analysed",
