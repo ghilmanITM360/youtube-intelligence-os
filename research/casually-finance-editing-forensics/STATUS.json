@@ -253,7 +253,7 @@
  "usage_checkpoint": {
   "time": "2026-10-20 evening local",
   "five_hour_pct": 30,
-  "weekly_pct": 82
+  "weekly_pct": 83
  },
  "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled.",
  "procedure_fast": "forensic_features.py --asr (background batch available) -> layout_profile.py -> prep_full.sh <id> (full-bleed) or bands.json+segment_events.py+event_sheets.py --lean (banded) -> read sheets -> videos/<id>/review/author_review.py (copy a previous one) -> build_video_tables.py -> review/findings.md + STORY_STRUCTURE.md -> write_review.py -> commit",
@@ -270,7 +270,13 @@
   "full_bleed_workflow": "Full-bleed: prep_full.sh -> bands.json add auto_fill + depth_label -> author_review.py via author_lib (stage [0,1]); measure camera with rows e.g. 0.05:0.55, colour blink with measure_color_area.py; unquoted loop vars do not split in zsh (use ${=args})",
   "fill_small": "Author.fill_small(172) adds UNRESOLVED_CHANGE rows for detected changes >=172 stage px that no authored event covers; call it just before A.write() in full-bleed videos with many small events (ud1ESmogrFY)",
   "aggregate_audio": "scripts/aggregate_audio.py computes the audio table (voiced %, wpm, phrase rate, pauses, levels, flux at cuts, cut-to-word offsets) over all validated videos into evidence/audio_aggregate.json",
-  "full_mode_qa": "In full mode QA does not require every small (<0.8 %) change to be attributed: A.fill_small is optional there; a cut-like event placed on a frame with 0 stage px (e.g. a removal one frame earlier) fails every_hard_cut_has_large_stage_change, so confirm the frame from the px series"
+  "full_mode_qa": "In full mode QA does not require every small (<0.8 %) change to be attributed: A.fill_small is optional there; a cut-like event placed on a frame with 0 stage px (e.g. a removal one frame earlier) fails every_hard_cut_has_large_stage_change, so confirm the frame from the px series",
+  "dash_ids": "Video ids starting with '-' (-WJDfT-MwmY, -Vr8JhCIv08): argparse scripts (event_sheets.py, make_sheet.py) need options first and `-- <vid> <root>`; build_video_tables.py, write_review.py and measure_*.py take positionals and must NOT get `--`; measure_motion.py/measure_color_area.py take rows and segments as bare args (`0.0:0.5`, `640:722,1270:1312`), not `rows=...`",
+  "stale_caption_files": "If prep_banded.sh was run to peek at a layout and the video is then analysed in full mode, delete videos/<id>/auto/CAPTION_EVENTS_AUTO.csv and CAPTION_WORD_EVENTS.csv before build_video_tables.py, otherwise caption offsets are computed from a band that does not exist (m8NC4L8hmeE, fixed 2026-10-20)",
+  "fill_small_cut_duplicates": "A.fill_small(172) also adds UNRESOLVED rows for cut frames that build_video_tables later turns into HARD_CUT_REPLACE; drop UNRESOLVED rows whose text mentions CUT/BIG_POP and that sit within 2 frames of a scene start (see videos/m8NC4L8hmeE/review/author_review.py), otherwise events and the unresolved share are inflated",
+  "coverage_gaps": "QA fails if any stage-active frame (>=172 px) is outside every authored event: slow slides, continuous character loops (~500-1200 px per frame for dozens of frames), slow drifts (bbox moves 0.05 of frame height over ~146 frames) and typed-caption starts need an event spanning those frames",
+  "clip_cadence": "Third-party clip inserts update every 3rd frame (10 fps) on 30 fps files (alternating 2/3 on 24 fps); measure by mean abs diff inside the clip region and list update frames; op VIDEO_CLIP_INSERT (mclass INDET) was added to build_video_tables.py TAX",
+  "tracker_limits": "measure_motion camera saturates for fast zooms (per-frame scale cap ~1.03) and returns net 0 px when a chart line reveals while the page moves: report such moves as DIRECTLY_OBSERVED without geometry"
  },
  "redo_after_decode_fix": [
   "s3_3SFxtt14",
@@ -302,6 +308,6 @@
   "CLAUDE_CODE_ANIMATION_HANDOFF.md",
   "VALIDATION.json"
  ],
- "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/aggregate_audio.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (refreshed at n=22 on 2026-10-20) and, still pending, ORIGINAL_PRODUCTION_BLUEPRINT.md, KEYFRAME_RECIPE_LIBRARY.md, TYPOGRAPHY_AND_LAYOUT_SPEC.md (n=12)",
- "next_suggested": "Queue of uncovered Shorts is empty; next: refresh CHANNEL_EDITING_DNA/OBSERVATIONS/SOUND_DESIGN_SPEC and the three n=12 docs (ORIGINAL_PRODUCTION_BLUEPRINT/KEYFRAME_RECIPE_LIBRARY/TYPOGRAPHY_AND_LAYOUT_SPEC) from the aggregate CSVs at n=32; then the 16 prior-covered videos incl. all 10 long-form. Video ids starting with '-' need '--' before positionals for argparse scripts (event_sheets, make_sheet) but not for build_video_tables."
+ "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/aggregate_audio.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md, ORIGINAL_PRODUCTION_BLUEPRINT.md, KEYFRAME_RECIPE_LIBRARY.md and TYPOGRAPHY_AND_LAYOUT_SPEC.md (ALL SIX refreshed at n=32 on 2026-10-20 evening; refresh them again once about ten more videos validate, i.e. at about n=42)",
+ "next_suggested": "Queue of 9 uncovered Shorts is finished (32 of 48 validated). Remaining: 16 prior-covered videos incl. all 10 long-form (queue_prior_partial_16); long-form needs a separate procedure (scene counts and decode time are larger). Video ids starting with '-' need '--' before positionals for argparse scripts (event_sheets, make_sheet) but not for build_video_tables. Do not claim 100 %."
 }
