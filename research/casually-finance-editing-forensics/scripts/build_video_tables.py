@@ -41,6 +41,7 @@ TAX = {
     "TEXT_WRITE_ON": ("none", "none", "none", "progressive write-on / reveal", "PARTIAL", "YES", "YES", "YES", "YES", "NO"),
     "OPACITY_FADE": ("none", "none", "linear 100->0 %", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "UNRESOLVED_CHANGE": ("unknown", "unknown", "unknown", "unknown", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+    "VIDEO_CLIP_INSERT": ("none", "none", "none", "none", "YES (clip)", "N/A", "N/A", "NO (needs the clip)", "N/A", "NO"),
     "OVERLAY_CLIP_LOOP": ("none", "none", "per-frame particle motion", "none", "YES (stock/pre-rendered overlay)", "N/A", "YES", "PARTIAL (particles)", "NO", "NO"),
     "SLIDE_IN": ("none", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
     "CAMERA_SCROLL_ZOOM": ("see geometry", "none", "none", "none", "YES", "YES", "YES", "YES", "NO", "NO"),
