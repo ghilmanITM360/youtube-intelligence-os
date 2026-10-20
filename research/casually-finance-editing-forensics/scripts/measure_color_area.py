@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Per-frame area of a colour (default: yellow highlighter) inside the stage rows (MEASURED, appearance-based).
 
-Usage: python3 -E measure_color_area.py <vid> [rows=0.30:0.665] [color=yellow|orange|red] [min_px=40] [segments=f0:f1,f0:f1]
+Usage: python3 -E measure_color_area.py <vid> [rows=0.30:0.665] [color=yellow|orange|lgreen|red] [min_px=40] [segments=f0:f1,f0:f1]
 Decodes the source at 180 px width (passthrough), counts matching pixels per frame, and writes
 videos/<vid>/motion/color_<color>.json: per-frame counts plus "runs" (contiguous spans with a count change >= min_px,
 with start/end counts) so highlight appear / grow / disappear frames can be cited. The gray stage detector misses slow
@@ -20,6 +20,7 @@ import make_sheet as ms  # noqa: E402
 PRED = {
     "yellow": lambda a: (a[..., 0] > 200) & (a[..., 1] > 170) & (a[..., 2] < 150) & (a[..., 0].astype(int) - a[..., 2] > 70),
     "orange": lambda a: (a[..., 0] > 200) & (a[..., 1] > 100) & (a[..., 1] < 190) & (a[..., 2] < 100) & (a[..., 0].astype(int) - a[..., 1] > 40),
+    "lgreen": lambda a: (a[..., 1] > 200) & (a[..., 0] < 215) & (a[..., 2] < 215) & (a[..., 1].astype(int) - a[..., 0] > 25),
     "red": lambda a: (a[..., 0] > 150) & (a[..., 1] < 70) & (a[..., 2] < 70),
 }
 

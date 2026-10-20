@@ -1,7 +1,7 @@
 {
  "schema": "1.0",
  "updated": "2026-10-20",
- "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=17 validated Shorts; doc snapshot n=12 except era split)",
+ "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=18 validated Shorts; doc snapshot n=12 except era split)",
  "phase1_gate": "PASSED",
  "branch": "research/casually-finance-editing-forensics",
  "worktree": "/Users/ghilmankhan/workprojects/yio-cf-editing-forensics",
@@ -120,6 +120,12 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "B",
    "qa": "videos/xrNPr3YrWdw/QA.json"
+  },
+  {
+   "video_id": "wo71JwXSYIs",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/wo71JwXSYIs/QA.json"
   }
  ],
  "videos_in_progress": [],
@@ -136,7 +142,6 @@
   "gGNVpOo7BK8",
   "JztI-l-0-x4",
   "Kq5VMugQMHw",
-  "wo71JwXSYIs",
   "m8NC4L8hmeE",
   "H3PRCteue9Y"
  ],
@@ -177,10 +182,8 @@
   "python": "python3 -E (user-site numpy/PIL/torch/whisper); do not use -I"
  },
  "usage_checkpoint": {
-  "time": "2026-10-20 ~08:40 local",
-  "five_hour_pct": 9,
-  "weekly_pct": 68,
-  "context_pct": 13
+  "time": "2026-10-20 ~10:00 local",
+  "note": "5-hour about 13 % and weekly about 69 % at session start; plan limits unreadable mid-session"
  },
  "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled.",
  "procedure_fast": "forensic_features.py --asr (background batch available) -> layout_profile.py -> prep_full.sh <id> (full-bleed) or bands.json+segment_events.py+event_sheets.py --lean (banded) -> read sheets -> videos/<id>/review/author_review.py (copy a previous one) -> build_video_tables.py -> review/findings.md + STORY_STRUCTURE.md -> write_review.py -> commit",
@@ -188,7 +191,11 @@
   "decode": "ffmpeg decode must use -fps_mode passthrough (fixed 2026-10-20); only 44ggG2I6JPY was affected and was re-analysed",
   "depth_C": "bands.json auto_fill + depth_label allow honest UNRESOLVED_CHANGE rows for unviewed/unclassified events",
   "cadence_text": "build_video_tables.py cadence interpretation fixed 2026-10-20: <8 isolated duplicates on a 30 fps file now reports 'too little motion to test' (was a false 'native 30 fps'); ji2qFfcgSB4 and s3_3SFxtt14 rebuilt",
-  "headline_vs_title": "Banded headline can equal another upload's public title: ji2qFfcgSB4 -> long-form 0ll9rEtoRrs (2026-09-01); NgryCruZegs -> Qof71Ef-3EU (2026-09-08). 2 of 5 banded videos; relation UNKNOWN"
+  "headline_vs_title": "Banded headline can equal another upload's public title: ji2qFfcgSB4 -> long-form 0ll9rEtoRrs (2026-09-01); NgryCruZegs -> Qof71Ef-3EU (2026-09-08). 2 of 8 banded videos analysed (YST8eMG3_Z8, xrNPr3YrWdw, wo71JwXSYIs do not match); relation UNKNOWN",
+  "highlights": "Slow highlighter growth changes <8 gray levels per frame and is missed by the stage-event detector; measure it with scripts/measure_color_area.py <vid> rows color(yellow|orange|lgreen|red) min_px segments=f0:f1,... (writes motion/color_<color>.json, cite in the event 'measure' field)",
+  "scene_snapping": "author_lib snaps a scene start to the largest stage change within +-15 frames; if the true scene boundary has <1000 stage px (props shrinking into a new scene), merge the scenes instead (xrNPr3YrWdw S07)",
+  "cadence_phase": "build_video_tables now reports a measured 24->30 fps conform when duplicate frames share one phase mod 5 (xrNPr3YrWdw, wo71JwXSYIs)",
+  "script_reuse": "A 51-word ASR run (OECD introduction + 'Avengers' joke) is identical in 44ggG2I6JPY and xrNPr3YrWdw; test script reuse with difflib on asr_words.csv"
  },
  "redo_after_decode_fix": [
   "s3_3SFxtt14",
@@ -221,5 +228,5 @@
   "VALIDATION.json"
  ],
  "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (n=10 snapshot of 2026-10-20)",
- "next_suggested": "YST8eMG3_Z8 (prep notes exist), xrNPr3YrWdw, wo71JwXSYIs (banded), then Aug 720p Shorts via prep_full.sh; long-form only after Shorts"
+ "next_suggested": "Aug 720p Shorts via scripts/prep_full.sh (redo_after_decode_fix list first: re-run forensic_features.py --asr for them), then remaining uncovered Shorts by views; long-form only after Shorts; refresh doc numbers from aggregate_channel.py once ~10 more videos validate (currently 18 validated vs n=12 snapshot in docs)"
 }
