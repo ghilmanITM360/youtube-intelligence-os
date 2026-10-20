@@ -198,11 +198,16 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "B",
    "qa": "videos/ODMyV3F_G2g/QA.json"
+  },
+  {
+   "video_id": "Kq5VMugQMHw",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/Kq5VMugQMHw/QA.json"
   }
  ],
  "videos_in_progress": [],
  "queue_uncovered_by_views": [
-  "Kq5VMugQMHw",
   "H3PRCteue9Y"
  ],
  "queue_prior_partial_16": [
@@ -243,7 +248,7 @@
  },
  "usage_checkpoint": {
   "time": "2026-10-20 evening local",
-  "five_hour_pct": 25,
+  "five_hour_pct": 30,
   "weekly_pct": 82
  },
  "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled.",
@@ -294,5 +299,5 @@
   "VALIDATION.json"
  ],
  "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/aggregate_audio.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (refreshed at n=22 on 2026-10-20) and, still pending, ORIGINAL_PRODUCTION_BLUEPRINT.md, KEYFRAME_RECIPE_LIBRARY.md, TYPOGRAPHY_AND_LAYOUT_SPEC.md (n=12)",
- "next_suggested": "Next: 720p Kq5VMugQMHw, H3PRCteue9Y; long-form last. Then refresh CHANNEL_EDITING_DNA/OBSERVATIONS/SOUND_DESIGN_SPEC and the three n=12 docs (ORIGINAL_PRODUCTION_BLUEPRINT/KEYFRAME_RECIPE_LIBRARY/TYPOGRAPHY_AND_LAYOUT_SPEC) from the aggregate CSVs. Video ids starting with '-' need '--' before positionals for argparse scripts (event_sheets, make_sheet) but not for build_video_tables. 10-fps clip cadence (every 3rd frame) seen in bF9WVzzS4ds, gGNVpOo7BK8, JztI-l-0-x4, 06pN9dDvVVU, m8NC4L8hmeE."
+ "next_suggested": "Next: 720p H3PRCteue9Y; long-form last. Then refresh CHANNEL_EDITING_DNA/OBSERVATIONS/SOUND_DESIGN_SPEC and the three n=12 docs (ORIGINAL_PRODUCTION_BLUEPRINT/KEYFRAME_RECIPE_LIBRARY/TYPOGRAPHY_AND_LAYOUT_SPEC) from the aggregate CSVs. Video ids starting with '-' need '--' before positionals for argparse scripts (event_sheets, make_sheet) but not for build_video_tables. 10-fps clip cadence (every 3rd frame) seen in bF9WVzzS4ds, gGNVpOo7BK8, JztI-l-0-x4, 06pN9dDvVVU, m8NC4L8hmeE."
 }
