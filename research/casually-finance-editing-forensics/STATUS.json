@@ -216,6 +216,12 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "B",
    "qa": "videos/6S3PzAUFnXQ/QA.json"
+  },
+  {
+   "video_id": "PxgCsLSf-w4",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/PxgCsLSf-w4/QA.json"
   }
  ],
  "videos_in_progress": [],
@@ -226,7 +232,6 @@
   "kwMHrTFCWUE",
   "dlBhLhn8lL0",
   "2EZzwupIa80",
-  "PxgCsLSf-w4",
   "Uumnx2Fo6cE",
   "JsK53moCyZA",
   "-X6YzlY_8tM",
@@ -256,9 +261,9 @@
   "python": "python3 -E (user-site numpy/PIL/torch/whisper); do not use -I"
  },
  "usage_checkpoint": {
-  "time": "2026-10-20 21:21 local",
-  "five_hour_pct": 51,
-  "weekly_pct": 86
+  "time": "2026-10-20 21:30 local",
+  "five_hour_pct": 56,
+  "weekly_pct": 87
  },
  "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled.",
  "procedure_fast": "forensic_features.py --asr (background batch available) -> layout_profile.py -> prep_full.sh <id> (full-bleed) or bands.json+segment_events.py+event_sheets.py --lean (banded) -> read sheets -> videos/<id>/review/author_review.py (copy a previous one) -> build_video_tables.py -> review/findings.md + STORY_STRUCTURE.md -> write_review.py -> commit",
