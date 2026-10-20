@@ -16,6 +16,6 @@ Short, 63.6 s, 720x1280, 30 fps file, uploaded 2026-08-25 (14,368 views at the 2
 | 10 The machine | 56.3-63.6 | S18-S19 | "It's a machine that eats its own tail. Every force pushing the yen down before the operation was still pushing it down after." | Host and ouroboros image; sad host, red 'PROBLEMS', slow downward drift |
 
 ## Observed practices (this video only)
-- Every number that carries the argument (74, 3.5, 'about three weeks') pops in one frame within 40 ms of the spoken word.
+- The numbers that carry the argument ('74', '3.5', 'three') pop in one frame within 30 ms of the spoken word (measured; ASR uncertainty ~100 ms).
 - The explanation of price and yield is carried by three props (dollar sign, percent coin, bond pile), not by a chart.
 - The closing beat holds one composition for 146 frames with only a slow downward drift.
