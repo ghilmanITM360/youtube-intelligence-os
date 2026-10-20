@@ -13,7 +13,7 @@ DEPTH_C (cut-delimited scenes authored from a 1 s full-duration overview; detect
 - Operations: UNRESOLVED_CHANGE 31, HARD_CUT_REPLACE 18, POP_IN 1, CAMERA_SCROLL_ZOOM 1, CHARACTER_RISE_IN 1, SLIDE_IN 1.
 - Frame-weighted: static hold 73.2 %, plausibly conventional keyframe/compositing 7.5 %, screen recording 0.0 %, complex continuous animation 0.0 %, change of undetermined method 19.3 %; generated/video-based: none identified.
 - Hard cuts relative to the nearest ASR word onset: median -54 ms (p10 -306, p90 79; negative = visual first; ASR uncertainty ~100 ms).
-- Cadence: no 5-frame duplicate cadence found; frames in motion change every frame (native cadence = 30 fps).
+- Cadence: too little continuous motion to test cadence (2 isolated duplicates, 0 with a 5-frame gap).
 
 ## Findings
 - **Fastest cutting in the sample so far.** 18 hard cuts in 60.8 s but ~39 further detected change runs (19 % of frames) that are mostly animated screenshot scrolls and character moves; only the two largest spans (report scroll f976-1075, report slide-in f1686-1703) were resolved (`DIRECTLY_OBSERVED`). The rest are UNRESOLVED_CHANGE (depth C).

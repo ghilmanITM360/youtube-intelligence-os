@@ -1,7 +1,7 @@
 {
  "schema": "1.0",
  "updated": "2026-10-20",
- "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=14 validated Shorts; doc snapshot n=12)",
+ "phase": "PHASE_2_IN_PROGRESS; PHASE_8_9_PRELIMINARY_DELIVERED (n=15 validated Shorts; doc snapshot n=12 except era split)",
  "phase1_gate": "PASSED",
  "branch": "research/casually-finance-editing-forensics",
  "worktree": "/Users/ghilmankhan/workprojects/yio-cf-editing-forensics",
@@ -102,11 +102,16 @@
    "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
    "depth": "B",
    "qa": "videos/UJEqqBpH18k/QA.json"
+  },
+  {
+   "video_id": "ji2qFfcgSB4",
+   "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+   "depth": "B",
+   "qa": "videos/ji2qFfcgSB4/QA.json"
   }
  ],
  "videos_in_progress": [],
  "queue_uncovered_by_views": [
-  "ji2qFfcgSB4",
   "zkeA5cH9nyM",
   "ZDoeEd8fMdo",
   "_3tM1d-WeUI",
@@ -162,16 +167,18 @@
   "python": "python3 -E (user-site numpy/PIL/torch/whisper); do not use -I"
  },
  "usage_checkpoint": {
-  "time": "2026-10-20 ~03:50 local",
-  "five_hour_pct": 36,
-  "weekly_pct": 62,
-  "context_pct": 71
+  "time": "2026-10-20 ~08:40 local",
+  "five_hour_pct": 9,
+  "weekly_pct": 68,
+  "context_pct": 13
  },
  "era_note": "Layout era split: persistent headline + bounded stage + caption band (banded) through Sep 15 (Qof71Ef-3EU 09-08, DEgQTSsSX9U 09-15, NgryCruZegs 09-14); full-bleed hand-lettered captions from Sep 19 onward. 720p Aug Shorts not yet profiled.",
  "procedure_fast": "forensic_features.py --asr (background batch available) -> layout_profile.py -> prep_full.sh <id> (full-bleed) or bands.json+segment_events.py+event_sheets.py --lean (banded) -> read sheets -> videos/<id>/review/author_review.py (copy a previous one) -> build_video_tables.py -> review/findings.md + STORY_STRUCTURE.md -> write_review.py -> commit",
  "lessons": {
   "decode": "ffmpeg decode must use -fps_mode passthrough (fixed 2026-10-20); only 44ggG2I6JPY was affected and was re-analysed",
-  "depth_C": "bands.json auto_fill + depth_label allow honest UNRESOLVED_CHANGE rows for unviewed/unclassified events"
+  "depth_C": "bands.json auto_fill + depth_label allow honest UNRESOLVED_CHANGE rows for unviewed/unclassified events",
+  "cadence_text": "build_video_tables.py cadence interpretation fixed 2026-10-20: <8 isolated duplicates on a 30 fps file now reports 'too little motion to test' (was a false 'native 30 fps'); ji2qFfcgSB4 and s3_3SFxtt14 rebuilt",
+  "headline_vs_title": "Banded headline can equal another upload's public title: ji2qFfcgSB4 -> long-form 0ll9rEtoRrs (2026-09-01); NgryCruZegs -> Qof71Ef-3EU (2026-09-08). 2 of 5 banded videos; relation UNKNOWN"
  },
  "redo_after_decode_fix": [
   "s3_3SFxtt14",
@@ -204,5 +211,5 @@
   "VALIDATION.json"
  ],
  "refresh_after_new_videos": "python3 -E scripts/build_video_tables.py <id> <evidence_root>; scripts/write_review.py <id>; scripts/aggregate_channel.py; scripts/update_registers.py; then refresh numbers quoted in CHANNEL_EDITING_DNA.md, OBSERVATIONS_VS_HYPOTHESES.md, SOUND_DESIGN_SPEC.md (n=10 snapshot of 2026-10-20)",
- "next_suggested": "ji2qFfcgSB4, YST8eMG3_Z8, xrNPr3YrWdw, wo71JwXSYIs (banded 09-05..09-10; use scripts/prep_banded.sh + scripts/author_lib.py), then Aug 720p Shorts via prep_full.sh; long-form only after Shorts; refresh doc numbers from aggregate_channel.py"
+ "next_suggested": "YST8eMG3_Z8, xrNPr3YrWdw, wo71JwXSYIs (banded 09-05..09-10; use scripts/prep_banded.sh + scripts/author_lib.py), then Aug 720p Shorts via prep_full.sh; long-form only after Shorts; refresh doc numbers from aggregate_channel.py"
 }
