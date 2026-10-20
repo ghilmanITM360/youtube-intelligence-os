@@ -47,6 +47,26 @@ class Author:
         self.E.append(dict(id="x", scene=scene, f0=f0, f1=f1, op=op, target=target, desc=desc, mclass=mclass, geometry=geo, easing="not measured", measure="",
                            evidence=ref, label=label, confidence=conf, ambiguity=amb, trigger="", after=""))
 
+    def fill_small(self, min_px=172):
+        """Add UNRESOLVED_CHANGE rows for auto events (any class) of at least min_px changed stage px that no authored event covers (+-3 frames)."""
+        import csv
+        rows = list(csv.DictReader(open(self.rd + "auto/STAGE_EVENTS_AUTO.csv")))
+        n0 = len(self.E)
+        for x in rows:
+            a, b = int(x["start_frame"]), int(x["end_frame"])
+            if int(x["peak_changed_px"]) < min_px:
+                continue
+            if any(e["f0"] - 3 <= b and a <= e["f1"] + 3 for e in self.E):
+                continue
+            sc = next((q for q in self.S if q["f0"] <= a < q["f1"]), None)
+            if sc is None:
+                continue
+            self.E.append(dict(id="x", scene=sc["id"], f0=a, f1=min(b, sc["f1"] - 1), op="UNRESOLVED_CHANGE", target="region bbox %s (auto %s)" % (x["union_bbox_norm"], x["event_id"]),
+                               desc="Detected %s change of %s px over %d frame(s); mechanism not individually resolved." % (x["auto_hint"], x["peak_changed_px"], int(x["n_active_span"])),
+                               mclass="INDET", geometry="", easing="not measured", measure="", evidence=x["event_id"], label="MEASURED (detection only)", confidence="LOW",
+                               ambiguity="not classified", trigger="", after=""))
+        print("fill_small added", len(self.E) - n0, "rows")
+
     def write(self, headline=None):
         sc = {s["id"]: s for s in self.S}
         for e in self.E:
