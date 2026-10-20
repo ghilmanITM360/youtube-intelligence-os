@@ -1,0 +1,29 @@
+# Forensic review — 06pN9dDvVVU "America Now Spends More on Interest Than Its Own Military"
+
+Status: `VISUAL_FORENSICS_COMPLETE_AT_DEPTH_B_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
+
+## Source (MEASURED)
+`America-Now-Spends-SnapYT.App.mp4` (`CFSRC-008`), SHA256 `940c8df4...bd87a`, H.264/AAC, 360x640, 30.0 fps, 2154 frames (decoded = ffprobe), 71.872 s. SHORT uploaded 2026-09-03, 18,958 views at the 2026-10-19 snapshot. Identity = title+duration match (not cryptographic). 360p limits line weight and small-motion measurement.
+
+## Depth
+DEPTH_B (banded layout with a headline to f487 only; scenes cut-delimited; every HARD/ANIMATION auto stage event seen on lean pre/active/post sheets at 360p; operations authored for the main events, remaining detected changes kept as UNRESOLVED_CHANGE rows; caption words measured against ASR). Audio: whole track measured (74 % voiced, 15 pauses >=0.25 s, 9 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-2153.
+
+## Measured statistics
+- 19 scenes (median 3.93 s, p10 1.06, p90 6.16, longest 8.23); 18 hard cuts (15.03/min); 60 events (50.09/min), 34 of them one-frame.
+- Operations: HARD_CUT_REPLACE 18, UNRESOLVED_CHANGE 16, POP_IN 5, OVERLAY_POP 5, PROP_DRIFT 4, SCALE_TWEEN 2, CAMERA_SCROLL_ZOOM 2, SLIDE_IN 2, HIGHLIGHT_SWEEP 2, STROKE_REVEAL 2, POINTER_TRANSLATE 1, VIDEO_CLIP_INSERT 1.
+- Frame-weighted: static hold 67.4 %, plausibly conventional keyframe/compositing 27.4 %, screen recording 0.0 %, complex continuous animation 0.0 %, change of undetermined method 5.2 %; generated/video-based: none identified.
+- Hard cuts relative to the nearest ASR word onset: median -114 ms (p10 -200, p90 193; negative = visual first; ASR uncertainty ~100 ms).
+- Cadence: 24 fps timeline conformed to 30 fps by repeating every 5th frame (MEASURED: 68 of 120 duplicates share one phase mod 5; 5-frame gaps 98).
+
+## Findings
+- **Headline for 16 s, then none.** The headline 'the cost of America's debt is changing the economy' sits in the header band (y 0.2-0.3) from the first frame and is removed at the cut f488 (16.3 s); the one-line captions in the caption band continue to the end. The headline differs from the public title ('America Now Spends More on Interest Than Its Own Military') and from every local title (`DIRECTLY_OBSERVED`).
+- **Captions track the words.** 213 caption changes were matched to ASR word onsets: median +53 ms (captions after the word), p10 -40, p90 +153 ms, 71.4 % within ±100 ms (`MEASURED`; ASR uncertainty ~100 ms). The caption grows phrase by phrase ('it's', 'it's the fastest', ...) rather than word by word replacement.
+- **Cutting.** 18 hard cuts in 71.9 s (15.0/min), 19 scenes (median 3.9 s, shortest 0.7 s, longest 8.2 s); 60 table rows (50/min); 67.4 % of frames are static holds, 27.4 % conventional keyframe motion and 5.2 % indeterminate (the clip insert). Hard cuts sit a median 114 ms before the nearest ASR word onset (n = 18, range -207 to +280 ms; 10 lead by more than 100 ms, 5 within ±100 ms, 3 lag; ASR uncertainty ~100 ms) (`MEASURED`).
+- **24 fps timeline conformed to 30 fps.** 98 of the 120 isolated duplicate frames in motion sit exactly five frames apart and 68 share one phase modulo 5 (`MEASURED`), the same cadence seen in `xrNPr3YrWdw` and `wo71JwXSYIs`.
+- **Red marks land on the spoken word.** The red oval on the first bar pops at f1035 (34.50 s) exactly at ASR 'three' (34.50 s); the red X over the bars pops at f1257 (41.90 s) at ASR 'costs' (41.92 s); the first red X pops at f624 (20.80 s), 0.16 s after ASR 'surplus' (20.64 s) (`MEASURED` from red-pixel counts, ASR uncertainty ~100 ms).
+- **Charts and pages move, slowly or linearly.** The net-interest area chart grows over 51 frames (ink area ease-out quad `SUPPORTED`, margin 0.025); the outlay chart eases in with a 1.01x net zoom and a (-14,-31) px drift over ~61 frames (ease-in quad `SUPPORTED`, margin 0.135); the CBO figure page enlarges 1.60x with a (+55,+29) px shift over ~31 frames, linear on all channels (`SUPPORTED`, margin 0.024-0.040); the red arrow travels along the yield curve for 87 frames from (0.17,0.49) to (0.80,0.42), linear in x and y (`SUPPORTED`, margin 0.053-0.058) (`MEASURED`).
+- **Highlights and drawn lines.** A yellow highlight grows from 90 to 329 px over f413-444 on 'it passes Medicare by 2028'; red lines draw along two table rows (red area 0 to 159 px by f1360 and 159 to 455 px by f1423) (`MEASURED`).
+- **Low-frame-rate clip insert and a meme insert.** In S17 a small movie-still clip at the left changes on 24 frames with 2-4 frame gaps (median gap 3, about 9-10 updates per second) and a 'Panik' meme image pops at the right from f2045; the last scene is a purple armoured figure with a golden gauntlet on a purple background (`DIRECTLY_OBSERVED`; sources `UNKNOWN`).
+- **Persona gags and a sustained kit.** The US-map character appears in five scenes (S03, S04, S05, S07, S09), the DEBT paper in four (S04, S07, S08, S09) and the host in S01, S02, S06, S11, S12, S15, S18; bubbles carry editorial asides ('You gotta pay me', 'I'd rather live on the edge') that the narration never speaks (`DIRECTLY_OBSERVED`, bubble wording read at 360p).
+- **No script reuse found.** No run of 8 or more identical ASR words with any other analysed video.
+- **360p limits.** Thin lines and caption stroke changes are below the detector at this resolution; 16 sub-0.8 %-area changes stay as unresolved rows, mostly caption and bubble text (`MEASURED` counts; identity not reviewed).
