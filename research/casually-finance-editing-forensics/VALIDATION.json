@@ -32,6 +32,7 @@
   "ji2qFfcgSB4",
   "m8NC4L8hmeE",
   "mT2hOLrCYSk",
+  "rSa2aziEsAI",
   "s3_3SFxtt14",
   "ud1ESmogrFY",
   "wo71JwXSYIs",
@@ -39,17 +40,17 @@
   "zkeA5cH9nyM"
  ],
  "failed_validation": [],
- "validated_count": 36,
+ "validated_count": 37,
  "local_unique_videos": 48,
  "public_videos": 210,
- "claim": "NOT 100 PERCENT COMPLETE: 36 of 48 local videos have per-video forensics; all remain audio-listening BLOCKED and single-reviewer",
+ "claim": "NOT 100 PERCENT COMPLETE: 37 of 48 local videos have per-video forensics; all remain audio-listening BLOCKED and single-reviewer",
  "depth_mix": {
   "DEPTH_C": 4,
-  "DEPTH_B": 30,
+  "DEPTH_B": 31,
   "DEPTH_A": 2
  },
  "layout_mix": {
-  "FULL_BLEED": 23,
+  "FULL_BLEED": 24,
   "BANDED_HEADLINE_CAPTION": 13
  },
  "per_video_checks": {
@@ -564,6 +565,23 @@
    "asr_within_duration": true
   },
   "mT2hOLrCYSk": {
+   "source_sha256_matches_inventory": true,
+   "decoded_frames_equal_ffprobe_frames": true,
+   "scenes_contiguous_cover_all_frames": true,
+   "unique_scene_ids": true,
+   "unique_event_ids": true,
+   "events_inside_their_scene": true,
+   "events_sorted_by_start": true,
+   "measurement_files_exist": true,
+   "asset_scenes_exist": true,
+   "alignment_rows_equal_events": true,
+   "all_nonsmall_auto_events_attributed": true,
+   "every_scene_start_has_event": true,
+   "every_hard_cut_has_large_stage_change": true,
+   "no_unattributed_large_stage_change": true,
+   "asr_within_duration": true
+  },
+  "rSa2aziEsAI": {
    "source_sha256_matches_inventory": true,
    "decoded_frames_equal_ffprobe_frames": true,
    "scenes_contiguous_cover_all_frames": true,
