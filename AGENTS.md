@@ -38,6 +38,10 @@
   `/Users/ghilmanislam360/Documents/YIOS-Media-Library/`; set
   `YIOS_MEDIA_ROOT` to that path. Machine A must establish and document its own
   verified durable root from a Machine A session.
+- Before video, thumbnail, animation, script, editing or forensic workflows
+  acquire sources, check `docs/LOCAL_MEDIA_AVAILABILITY.md` and the linked
+  file-level registries. A tracked manifest does not prove that media bytes are
+  available on the current machine; resolve them through `YIOS_MEDIA_ROOT`.
 
 Current ownership: Machine B canonical checkout
 `/Users/ghilmanislam360/Documents/youtube-intelligence-os` owns ongoing branch

@@ -69,6 +69,11 @@ Raw source files are evidence and must never be modified, rewritten, compressed,
 - `schemas/`, `scripts/`, and `config/` — implemented schema, ingestion, intelligence, validation and configuration layers.
 - `logs/` — non-source operational logs when processing is introduced.
 
+Before acquiring media for video, thumbnail, animation, script, editing or
+forensic work, check the [local media availability registry](docs/LOCAL_MEDIA_AVAILABILITY.md).
+Tracked manifests describe verified local holdings; they do not imply that the
+media bytes are present on GitHub or on every machine.
+
 ## Entering data
 
 Place or provide each new dataset through `data/raw/inbox/`. A dataset may contain archives, documents, tables, images, transcripts, metadata, or other formats not yet known. File extension records physical format; it does not determine semantic role or intelligence value.
