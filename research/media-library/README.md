@@ -50,6 +50,27 @@ recorded as the stable final state `LOCAL_COPY_VERIFIED`. Video IDs are accepted
 No transcoding, normalization, remote acquisition, upload, or deletion is part
 of this library.
 
+## Selective cache and future remote retrieval
+
+`REMOTE_MEDIA_MANIFEST.csv` is the tracked per-file retrieval contract. Remote
+release fields are intentionally blank while redistribution rights and free
+GitHub storage eligibility remain unverified. Build it deterministically and
+fetch a single channel or Video ID into the disposable ignored cache:
+
+```bash
+python3 scripts/media_cache.py build-manifest
+python3 scripts/media_cache.py fetch --video-id VcyCHhn9WB4 \
+  --media-root "$YIOS_MEDIA_ROOT"
+python3 scripts/media_cache.py verify --video-id VcyCHhn9WB4
+python3 scripts/media_cache.py purge --video-id VcyCHhn9WB4
+```
+
+When upload is separately authorized, populate `github_release_tag` and
+`github_asset_name`; the same fetch command will use authenticated
+`gh release download` when the durable local source is absent. Ordinary clone
+and pull never download media bytes. Purge operates only below the disposable
+cache root and never deletes the durable master.
+
 Run the bounded reader smoke test after ingest:
 
 ```bash
