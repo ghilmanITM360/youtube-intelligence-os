@@ -1,3 +1,15 @@
+## Population extension — 2026-10-21
+
+The frozen 966-video audit remains unchanged at 429 complete and 537 remaining.
+The existing 197-video expansion also remains unchanged and 0 deep-complete.
+PR #38 contributes a separate 76-public-video MonkeyExplains1999 collection (61
+regular, 15 Shorts); individual title/description classification yields 63
+eligible unique Finance/Economics additions, 13 exclusions, and zero overlap
+with the prior 1,163 IDs. Combined population is 1,226. All 63 additions remain
+`METADATA_ONLY_NOT_DEEP_AUDITED`; see
+`expansion-monkey-explains-1999-2026-10-21/` for the source, crosswalk,
+provenance, checksums, and validation.
+
 ## Latest continuation — 2026-10-18: Nick14/363; 281 expanded
 
 Fourteen individually authored reviews added in NICK_001/002/003; 281/966 expanded (29.09%), 685 remaining, title/actual-image291 each. Full stored script/topic/virality281 each. Carl, Brimm, Primate, Crayon complete; Lucas95 handled including10partial. Next14gilFEp_Iw, no reading begun. Details and primary source receipts reside in the batch JSON and EVENT_SOURCES; read receipts certify contiguous stored-text coverage, not original audio.

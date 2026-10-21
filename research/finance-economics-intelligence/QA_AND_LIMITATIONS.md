@@ -2,6 +2,15 @@
 
 **Current status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Reports and a pilot proposal exist, but the complete requested scope is not finished. Deliverable presence is not completion.
 
+The 2026-10-21 MonkeyExplains1999 layer preserves all 76 public PR #38 metadata
+rows separately and classifies each actual title and description. It adds 63
+eligible unique IDs and retains 13 exclusions in the broader source collection;
+zero IDs overlap the frozen 966 or existing 197. The resulting 1,226-ID union is
+a research population, not 1,226 completed audits. Original completion remains
+429; both expansion layers remain 0 deep-complete, leaving 797 unfinished or
+not-deep-audited records. Forty-five restricted PR #38 references are excluded
+from public counts and availability claims.
+
 ## Historical legacy scope (superseded by continuation counts below)
 
 - 13 canonical finance channels, 966 unique videos, 966 titles; 955 nonplaceholder transcripts with 955 distinct exact text hashes. Eleven videos lack available transcript text (ten Lucas Grant placeholders and one Matty Invests gap). Exact hashes do not detect paraphrase/template duplication.

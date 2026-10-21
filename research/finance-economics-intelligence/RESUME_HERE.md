@@ -1,5 +1,29 @@
 # Resume the full 966-video Finance and Economics audit
 
+## Latest population expansion — 2026-10-21 (MonkeyExplains1999 metadata classified)
+
+- PR #38 commit `f176aa2861cd93913b977e6159a4e00f4eabeacc` is the
+  immutable metadata authority. Its 76 public videos reconcile to 61 regular
+  videos and 15 Shorts. The 45 restricted records are not in the public-video
+  collection and are not counted as available videos.
+- Every public Video ID was classified from its actual title and description in
+  `expansion-monkey-explains-1999-2026-10-21/FINANCE_INCLUSION_CROSSWALK.csv`:
+  **63 Finance/Economics eligible, 13 excluded, 0 duplicates** against either
+  the frozen 966 or the existing 197 additions. The 13 unrelated records remain
+  available in the separate 76-row full-channel source collection.
+- The versioned layer adds 63 unique IDs, making the combined population
+  **1,226** (966 + 197 + 63). Original progress remains **429/966**, with 537
+  original records remaining. Existing expansion deep completion remains 0/197;
+  Monkey expansion deep completion is 0/63. Therefore 797 combined records are
+  not yet deep-audited or remain unfinished.
+- All new records are explicitly `METADATA_ONLY_NOT_DEEP_AUDITED`. No transcript,
+  thumbnail binary, private analytics, scraping, paid run, or restricted media
+  was added. The exact next untouched original remains `R_E6OOnF9e4`
+  (`NICK_154`).
+- Reproducible builder: `build_monkey_expansion.py`; contract tests:
+  `test_monkey_expansion.py`; machine result: the new layer's
+  `EXPANSION_VALIDATION.json`.
+
 ## Latest preservation checkpoint — 2026-10-20 (durable local source found; audit counts unchanged)
 
 - Machine B's permanent private media root is
