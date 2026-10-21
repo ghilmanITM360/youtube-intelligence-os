@@ -52,7 +52,7 @@ def build_manifest(inventory: Path, output: Path) -> None:
     records = [json.loads(line) for line in inventory.read_text(encoding="utf-8").splitlines()]
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=FIELDS)
+        writer = csv.DictWriter(handle, fieldnames=FIELDS, lineterminator="\n")
         writer.writeheader()
         for record in records:
             writer.writerow({
