@@ -15,7 +15,7 @@ class CombinedWorkbookContract(unittest.TestCase):
         rows = self.payload["all_videos"]
         self.assertEqual(1612, len(rows))
         self.assertEqual(1612, len({r["video_id"] for r in rows}))
-        self.assertEqual(433, sum(r["audit_status"] == "DEEP_AUDIT_COMPLETE" for r in rows))
+        self.assertEqual(434, sum(r["audit_status"] == "DEEP_AUDIT_COMPLETE" for r in rows))
         self.assertEqual(
             "DEEP_AUDIT_COMPLETE",
             next(r["audit_status"] for r in rows if r["video_id"] == "Rd40d0XZLpQ"),
@@ -29,6 +29,13 @@ class CombinedWorkbookContract(unittest.TestCase):
         self.assertEqual("AVAILABLE", target["thumbnail_status"])
         self.assertEqual(
             "research/finance-economics-intelligence/audit-batches/NICK_RmJKnJkUgxA.jpg",
+            target["local_media_status"],
+        )
+        target = next(r for r in rows if r["video_id"] == "S0xwBH_fAn0")
+        self.assertEqual("DEEP_AUDIT_COMPLETE", target["audit_status"])
+        self.assertEqual("AVAILABLE", target["thumbnail_status"])
+        self.assertEqual(
+            "research/finance-economics-intelligence/audit-batches/NICK_S0xwBH_fAn0.jpg",
             target["local_media_status"],
         )
         self.assertFalse(any(r["audit_status"] == "DEEP_AUDIT_COMPLETE" and r["population_layer"] != "FROZEN_ORIGINAL_966" for r in rows))

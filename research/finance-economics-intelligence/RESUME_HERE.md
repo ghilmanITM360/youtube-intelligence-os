@@ -1,5 +1,48 @@
 # Resume the full 966-video Finance and Economics audit
 
+## Latest continuation — 2026-10-21 (`NICK_158` complete)
+
+- `S0xwBH_fAn0` — “Why $100K Doesn’t Feel Rich Anymore” is complete with
+  limited evidence. The complete auto-caption text was read and hash-verified:
+  18,564 canonical bytes, SHA-256
+  `63fb4984aeaf2b7cc3f80a6747cbbf1f28b17f0a141f7ea68a6732c9c28907b4`.
+  The archive member is 19,826 bytes/521 lines, SHA-256
+  `d824166888e3ab60cd1790cd941f480b531009b9509747ced597624fb40e9141`.
+- The registered 1280x720 thumbnail was fetched once and preserved as
+  `audit-batches/NICK_S0xwBH_fAn0.jpg` (105,915 bytes; SHA-256
+  `aad00d939912566de818d55878ed20e41d53259374ff8424c065def8aa37a285`).
+  `$100K POOR`, the worried presenter, cash and arrow remain legible at 320x180;
+  the categorical `POOR` claim is stronger than the script's relative-spending
+  conclusion. Historical art, impressions, CTR and A/B tests are unavailable.
+- Frozen performance reproduces at **0.44202x WEAK** against ten peers and
+  **0.29857x WEAK** against five. The exact ten-peer cohort contains three
+  STRONG, four TYPICAL and three WEAK records. This is descriptive only.
+- The universal 40% tax claim does not reproduce: a 2025 single filer with
+  wages only and the standard deduction owes about 21.26% in federal income
+  tax plus employee FICA before state/local tax. November CPI-U arithmetic
+  maps November 2015 `$100,000` to about `$136,567` in November 2025 dollars
+  and November 2005 `$100,000` to about `$164,029`, not `$132,000` and
+  `$175,000`; the 2025 endpoint postdates upload. NAR supports age 40 only for
+  successful first-time primary-residence buyers in its defined survey.
+  Unnamed paycheck-to-paycheck, debt and `$520,000` perception figures remain
+  limited or unreproduced and are not universal financial rules.
+- Original completion is **434/966**; combined completion is **434/1,612**,
+  leaving **1,178** combined records. `VALIDATION_966.json` is PASS with zero
+  errors, all 26 immutable source fingerprints unchanged and next frozen-order
+  ID `SJLyXAGbBLk`. Expansion records remain metadata-only.
+- Both workbooks were rebuilt. JSONL SHA-256 is
+  `85890022e675fe9884ce04bfd0284900a501f6f39afd21652646785bc5264a43`;
+  original workbook SHA-256 is
+  `017d908a8f62e4ea256b134f8588da520256ee76af448d0578f752d87c6b4eeb`;
+  combined workbook SHA-256 is
+  `994afc106fb159fda9dcbac106cb614467efbb0917309a33a9166901d42f5fc8`.
+  Coverage is 450/450/440/440/954/434. Contract tests and workbook-format tests
+  pass; 595 source dates reconcile. Native Microsoft Excel recalculation
+  remains untested.
+- The combined-workbook thumbnail-receipt overlay added with `NICK_157`
+  remains covered by contract tests and now also maps `S0xwBH_fAn0` to its
+  exact registered local image path.
+
 ## Latest continuation — 2026-10-21 (`NICK_157` complete)
 
 - `RmJKnJkUgxA` — “How Much Emergency Cash You Actually Need Saved” is
