@@ -1,0 +1,42 @@
+{
+  "batch_id": "NICK_154_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [{
+    "Video_ID": "R_E6OOnF9e4",
+    "scope": "FULL_STORED_TEXT",
+    "Text_SHA256": "70704b6d9146317a7029506a54fb72d8efdfad277b4a2529c3d4c6754441afe5",
+    "coverage_token_count": 3430,
+    "read_character_ranges": [[0, 7200], [7200, 14400], [14400, 21598]],
+    "first_text_witness": "Jude and Mary grew up in the same neighborhood, went to the same state school, graduated the same year.",
+    "last_text_witness": "If this was useful, subscribe and I'll keep making these. See you in the next one.",
+    "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_FROM_REGISTERED_EXTRACT_VERIFIED_BY_VALIDATOR; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+    "archive_member": "140_R_E6OOnF9e4_15_Low_Effort_Boring_Tasks_That_Make_More_Than_Your_Job.txt",
+    "archive_member_sha256": "6466d1e2a194f45285ebdffd3bb4ee43890869ae80bc96f843210fab75c78e5b",
+    "archive_member_bytes": 21598,
+    "archive_member_lines": 580,
+    "audio_verified": false,
+    "image_sha256": "c531626b9f2e9e4bf707717a5359c356944928974ec8ddb381a642a40f8da0d2",
+    "image_bytes": 164521,
+    "image_media_type": "image/jpeg",
+    "image_inspected_sizes": [[1280, 720], [320, 180]],
+    "registered_image_url": "https://i.ytimg.com/vi/R_E6OOnF9e4/maxresdefault.jpg",
+    "fetched_image_url": "https://i.ytimg.com/vi/R_E6OOnF9e4/maxresdefault.jpg",
+    "image_acquisition": "SINGLE_FETCH_FROM_REGISTERED_YTIMG_URL; HTTP_SUCCESS; HASHED_AND_PRESERVED",
+    "acquired_date": "2026-10-21"
+  }],
+  "primary_source_receipts": [
+    {"claim": "Capital-gain rates and exceptions", "url": "https://www.irs.gov/taxtopics/tc409", "accessed": "2026-10-21", "source_date": "2025 TAX-YEAR GUIDANCE; RETROSPECTIVE", "access_scope": "PRIMARY_OFFICIAL_PAGE", "finding": "Long-term net-capital-gain rates depend on taxable income; 0%, 15% and 20% are not universal, and exceptions can exceed 20%. Short-term gains use ordinary rates."},
+    {"claim": "April 2026 national savings rate", "url": "https://www.fdic.gov/national-rates-and-rate-caps", "accessed": "2026-10-21", "source_date": "2026-04; CONTEMPORANEOUS", "access_scope": "PRIMARY_OFFICIAL_TABLE", "finding": "FDIC reports 0.38% national savings rate for April 2026, near but not exactly the script's 0.39%."},
+    {"claim": "I-bond composite rate", "url": "https://www.treasurydirect.gov/savings-bonds/i-bonds/i-bonds-interest-rates/", "accessed": "2026-10-21", "source_date": "CURRENT TABLE WITH HISTORICAL ISSUE PERIODS", "access_scope": "PRIMARY_OFFICIAL_TABLE", "finding": "TreasuryDirect records 4.03% for bonds issued November 2025-April 2026; the May-October 2026 earning-period table shows 4.26%."},
+    {"claim": "REIT distribution requirement and risks", "url": "https://www.sec.gov/file/reitspdf", "accessed": "2026-10-21", "source_date": "OFFICIAL INVESTOR BULLETIN", "access_scope": "PRIMARY_OFFICIAL_PDF", "finding": "A qualifying REIT must distribute at least 90% of taxable income; the bulletin also describes property, management, leverage and market risks."}
+  ],
+  "calculation_receipts": [{
+    "method": "Frozen lifetime-view-rate medians from VIDEO_MASTER.csv",
+    "assumptions": "Frozen views and age_days; exact listed same-channel long-form peers; first five for sensitivity.",
+    "results": {"target_views_per_day": 43.72908741913692, "peer_ratio_10": 0.5967776364571833, "peer_ratio_5": 0.6665948600999668, "tier_10": "TYPICAL", "tier_5": "TYPICAL", "peer_ids_10": ["ypUI1Sv-Nhk", "ccNuYRhrA0U", "zwrY8QsDTgs", "8LncpNMNPW8", "eAzo0uvSnus", "vXBhBlBIUDs", "RUVOjfrIemY", "1W9dzLgpU4k", "mErWx9GiVUc", "-DIT32sBkAk"], "peer_ids_5": ["ypUI1Sv-Nhk", "ccNuYRhrA0U", "zwrY8QsDTgs", "8LncpNMNPW8", "eAzo0uvSnus"]}
+  }, {
+    "method": "Monthly normalization of Mary's explicitly stated amounts",
+    "assumptions": "$195 parking + $190 storage + $1,680 annual savings interest / 12 + $340 quarterly dividend / 3; Groundfloor cash flow not stated.",
+    "results": {"reproducible_monthly_amount": 638.3333333333, "script_claim_monthly": 1300, "unexplained_gap": 661.6666666667, "disposition": "NOT_REPRODUCIBLE_FROM_DISCLOSED_VALUES"}
+  }]
+}

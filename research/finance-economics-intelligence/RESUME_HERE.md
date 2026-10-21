@@ -1,5 +1,54 @@
 # Resume the full 966-video Finance and Economics audit
 
+## Latest continuation — 2026-10-21 (`NICK_154` complete)
+
+- `R_E6OOnF9e4` — “15 Low Effort Boring Tasks That Make More Than Your Job” is
+  complete with limited evidence. The full registered auto-caption text was
+  read; canonical text SHA-256 remains
+  `70704b6d9146317a7029506a54fb72d8efdfad277b4a2529c3d4c6754441afe5`.
+  Archive member: 21,598 bytes, 580 lines, SHA-256
+  `6466d1e2a194f45285ebdffd3bb4ee43890869ae80bc96f843210fab75c78e5b`.
+- The registered 1280x720 thumbnail was inspected at native and mobile size and
+  preserved as `audit-batches/NICK_R_E6OOnF9e4.jpg` (164,521 bytes; SHA-256
+  `c531626b9f2e9e4bf707717a5359c356944928974ec8ddb381a642a40f8da0d2`).
+  Four of six pictured examples are absent from the transcript.
+- Frozen performance reproduces at 0.59678x TYPICAL (ten peers) and 0.66659x
+  TYPICAL (five peers). Primary-source checks support the dated FDIC savings
+  rate, I-bond issue-period rate and REIT distribution rule, while the universal
+  tax claim and most platform/business earnings remain misleading or
+  unverified. Mary's disclosed amounts reproduce to about $638/month before an
+  unstated Groundfloor amount, not the claimed $1,300.
+- Original deep completion is **430/966**, leaving 536 original records. Combined
+  universe workload is **1,182**. Validator PASS reports next frozen-order ID
+  `Rd40d0XZLpQ`.
+- Derived JSONL/CSVs and workbook were rebuilt. JSONL SHA-256 is
+  `051b85500cc9ad1017def5e191675e5c27bb6ba2e32d51ee618551b2e7342d8a`;
+  workbook SHA-256 is
+  `cd6c6567285d8c89c9308bb97e03d050236ed795e5b7224e30d9d0ccb535ff57`.
+  Workbook population is 966 with 462 readings and coverage
+  446/446/436/436/954/430. Formula-error scan returned zero matches; the
+  Coverage render is legible. Native Microsoft Excel recalculation remains
+  untested.
+
+## Repository-wide reconciliation — 2026-10-21
+
+- `reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv` now provides
+  one provenance-preserving index for every eligible Video ID already
+  enumerated in repository evidence: **1,612 unique IDs**.
+- The prior 1,226 remains unchanged. The new layer adds **386** disjoint
+  metadata-only records: 180 from six committed landscape snapshots and 206
+  from the pinned Casually Finance branch artifact at
+  `fb1e56d03e5ad53086c74247cd2972b262d09b78`. No new acquisition occurred.
+- Channel directory: **42** unique identities; **27** have included video
+  datasets, five supplied channels have video datasets but zero eligible rows,
+  and ten are `IDENTITY_ONLY_NEEDS_DATA`.
+- `NICK_154` completes `R_E6OOnF9e4`; deep completion is now **430**. Remaining
+  individual deep-audit workload is **1,182**. The 10 MEDIUM-confidence MonkeyExplains inclusions were reviewed
+  from actual title/description and retained at MEDIUM because no transcript is
+  registered.
+- Continue frozen original order at `Rd40d0XZLpQ`. Do not mark any
+  reconciliation addition complete without its own evidence-based audit.
+
 ## Latest population expansion — 2026-10-21 (MonkeyExplains1999 metadata classified)
 
 - PR #38 commit `f176aa2861cd93913b977e6159a4e00f4eabeacc` is the

@@ -106,3 +106,13 @@ Eleven population transcript gaps remain. Historical Google Trends acquisition w
 Rebuild with `build_audit_966.py`, validate with `validate_audit_966.py`. `VALIDATION_966.json` is the authoritative machine coverage report; the legacy `VALIDATION.json` describes only legacy tables. Research validation is explicit and separate from general repository CI.
 
 The missing-URL acquisition pass stopped on its first metadata HTTP 429 (`-UdMJ-EtLDI`); 158 remaining requests were not attempted. No retry/bypass or permanent unavailability inference. See LEGACY_THUMBNAIL_RECOVERY_001.json.
+# Repository-wide synchronized universe (2026-10-21)
+
+The authoritative combined index is now
+`reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv`: 1,612 unique
+Video IDs, comprising the immutable 966, the existing 197 and 63 expansions,
+180 committed landscape records, and 206 Casually Finance records pinned to
+commit `fb1e56d03e5ad53086c74247cd2972b262d09b78`. The 386 new records are
+metadata-only. After `NICK_154`, deep-audit completion is 430 complete and 1,182
+remaining. See the versioned directory README and validation JSON for exact
+provenance, channel coverage and blockers.
