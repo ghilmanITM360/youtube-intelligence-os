@@ -1,5 +1,45 @@
 # Resume the full 966-video Finance and Economics audit
 
+## Latest continuation — 2026-10-21 (`NICK_156` complete)
+
+- `RgaTGzeFcPQ` — “Is Bitcoin going to 0? (What They Won't Tell You)” is
+  complete with limited evidence. The entire registered auto-caption text was
+  read; canonical text SHA-256 remains
+  `531fd437e4ceebef6787d4325aa0a4084a7aa89c818930a46d35de1fc937d57a`.
+  Archive member: 20,172 bytes, 521 lines, SHA-256
+  `ace939c657afd441ed55b7f71b13783486e3108f464e04ead76f526e480ffbac`.
+- The registered 1280x720 thumbnail was fetched once and preserved as
+  `audit-batches/NICK_RgaTGzeFcPQ.jpg` (128,018 bytes; SHA-256
+  `751b4a780d8560eb78149759178bf16d2ca33a8ce2db317893731cc54beef1cf`).
+  `IT'S OVER...`, the falling line, Bitcoin coin and arrows remain legible at
+  320x180. The image implies finality more strongly than the script, which says
+  literal zero is unlikely. Historical art, CTR and A/B tests remain unavailable.
+- Frozen performance reproduces at 1.17070x TYPICAL against ten peers and
+  1.27390x TYPICAL against five. All ten exact peers are also TYPICAL. The
+  extreme zero/finality package therefore is not a frozen-snapshot breakout and
+  no causal packaging claim is made.
+- Primary-source checks support the approximate 2025 peak, Q2 2026 ETF-outflow
+  context, liquidity-driven miner selling, Strategy's $1.25 billion authorized
+  monetization capacity, the Federal Reserve's 10% prior-year crypto-use measure
+  and the subsidy-halving schedule. Exact aggregate flow, miner, wallet-loss,
+  holder-supply and attack-cost figures remain unreproduced from named primary
+  data. Strategy authorization was not a completed sale at the cited date.
+  BIP-360 and BIP-361 were draft proposals, not activated Bitcoin Core code or
+  an adopted confiscation decision. Price and quantum outcomes remain
+  speculation; no probability was invented.
+- Original deep completion is **432/966**; combined completion is **432/1,612**,
+  leaving **1,180** combined records. `VALIDATION_966.json` is PASS with zero
+  structural errors and reports next frozen-order ID `RmJKnJkUgxA`.
+- Both workbooks were rebuilt from the latest audit. JSONL SHA-256 is
+  `207d4fe91189abd991000ec9244e4aa4817fce412d6b5b51536ea80faef9ed23`;
+  original workbook SHA-256 is
+  `005c4237bb64f2a1a88c8ba3dffda5d3d1c8204f0eb2b4c2a6f9a2f45db4ddfb`;
+  combined workbook SHA-256 is
+  `cc091c37f5e68447ca33db26006f7d8b3c2023edf842534cbf9400ac7fac20ee`.
+  Coverage is 448/448/438/438/954/432. Formula-error scans returned zero
+  matches; rendered Coverage and Combined Dashboard views are legible. Native
+  Microsoft Excel recalculation remains untested.
+
 ## Combined workbook — 2026-10-21
 
 - `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` is the reproducible combined view of
@@ -10,8 +50,8 @@
 - The four sheets are `Combined Dashboard`, `All Finance Videos` (1,612 rows),
   `Channel Directory` (42 rows) and `Detailed Research` (966 original records).
   Expansion records remain metadata-only and are never marked deep-complete.
-- Current checkpoint: 431 deep-audited, 1,181 pending. Next untouched original
-  record is `RgaTGzeFcPQ`.
+- Current checkpoint: 432 deep-audited, 1,180 pending. Next untouched original
+  record is `RmJKnJkUgxA`.
 
 ## Latest continuation — 2026-10-21 (`NICK_155` complete)
 

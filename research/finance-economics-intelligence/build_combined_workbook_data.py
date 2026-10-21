@@ -80,6 +80,7 @@ def main() -> None:
         audit_status = ("DEEP_AUDIT_COMPLETE" if all(s in COMPLETE_STATUSES for s in statuses.values())
                         else "NOT_DEEP_AUDITED") if layer == "FROZEN_ORIGINAL_966" else u["audit_status"]
         row = {**u, "audit_status": audit_status,
+               "blocker": "" if audit_status == "DEEP_AUDIT_COMPLETE" else u["blocker"],
                "publication_date": published, "duration": as_number(duration) if str(duration).replace('.', '', 1).isdigit() else duration,
                "views": as_number(views) or views, "likes": as_number(likes), "comments": as_number(comments),
                "metric_snapshot": snapshot, "format": fmt, "description": description, **{f"{d.lower()}_review_status": statuses[d] for d in DIMS}}
