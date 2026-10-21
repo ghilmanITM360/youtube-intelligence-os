@@ -84,6 +84,9 @@ def main() -> None:
                "publication_date": published, "duration": as_number(duration) if str(duration).replace('.', '', 1).isdigit() else duration,
                "views": as_number(views) or views, "likes": as_number(likes), "comments": as_number(comments),
                "metric_snapshot": snapshot, "format": fmt, "description": description, **{f"{d.lower()}_review_status": statuses[d] for d in DIMS}}
+        if layer == "FROZEN_ORIGINAL_966" and a.get("thumbnail", {}).get("image_path"):
+            row["thumbnail_status"] = "AVAILABLE"
+            row["local_media_status"] = a["thumbnail"]["image_path"]
         all_rows.append(row)
 
     deep = sum(r["audit_status"] == "DEEP_AUDIT_COMPLETE" for r in all_rows)

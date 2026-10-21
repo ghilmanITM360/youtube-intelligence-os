@@ -1,5 +1,54 @@
 # Resume the full 966-video Finance and Economics audit
 
+## Latest continuation — 2026-10-21 (`NICK_157` complete)
+
+- `RmJKnJkUgxA` — “How Much Emergency Cash You Actually Need Saved” is
+  complete with limited evidence. The entire registered auto-caption text was
+  read; canonical text SHA-256 remains
+  `64c45c42a1d8468a96646ca6660e658e4d1874dc704afbf31cc120d29b7dac38`.
+  Archive member: 21,014 bytes, 548 lines, SHA-256
+  `d607cf66c8e72ac29c33c6cb124aa9ee1849056eed29f763867dfd2d7dbb1a98`.
+- The registered 1280x720 thumbnail was fetched once and preserved as
+  `audit-batches/NICK_RmJKnJkUgxA.jpg` (100,315 bytes; SHA-256
+  `61f01b99b22e4755e5162d300491004de33c22bcdbf342e1e30db5790f2a8876`).
+  `THE REAL NUMBER`, the presenter, piggy bank and arrow remain legible at
+  320x180. The singular certainty is stronger than the script's conditional
+  household-specific framework. Historical art, CTR and A/B tests are
+  unavailable.
+- Frozen performance reproduces at **0.57110x TYPICAL** against ten peers and
+  **0.42432x WEAK** against five. The exact ten-peer pool contains eight
+  TYPICAL, one STRONG and one WEAK record. The tier sensitivity and unavailable
+  private analytics preclude causal packaging claims.
+- Primary-source review supports household-specific emergency-fund sizing, a
+  starter buffer, the purchasing-power effect of inflation and the distinction
+  between spending shocks and income shocks. The `$2,000` versus `$1 million`
+  comparison is a regression association, not economic or causal equivalence.
+  The 44% `$1,000` figure is a dated private survey; the 42% no-fund and `$500`
+  median figures remain unreproduced. Credit cards do not guarantee 30
+  interest-free days; insurance and unemployment benefits leave material gaps;
+  bank money-market deposit accounts must not be conflated with uninsured
+  money-market mutual funds. The three-to-nine-month and debt-allocation
+  recommendations are heuristics, not universal rules.
+- Original deep completion is **433/966**; combined completion is **433/1,612**,
+  leaving **1,179** combined records. `VALIDATION_966.json` is PASS with zero
+  structural errors, all 26 immutable source fingerprints unchanged and next
+  frozen-order ID `S0xwBH_fAn0`.
+- Both workbooks were rebuilt. JSONL SHA-256 is
+  `d87336f8298dfbd0653c26629eb6dcee8d5cb48271a3c55048924e20fd850cec`;
+  original workbook SHA-256 is
+  `0ef637326aa4a02ea39787cb12b1b5a97a31fdc96df6a7dfccac40170a364161`;
+  combined workbook SHA-256 is
+  `25c32a5dd26b30e1bfd19e6dcce6525ec89c2172ce1b8eff27c4cc4715d65d1e`.
+  Coverage is 449/449/439/439/954/433. Both workbooks preserve their exact
+  unique-ID populations and formula-error scans return zero matches. Rendered
+  views are legible; native Microsoft Excel recalculation remains untested.
+- The combined-workbook thumbnail issue was real: its frozen universe snapshot
+  could retain `URL_OR_NOT_AVAILABLE` after a later individual audit registered
+  a local receipt. The focused projection now overlays the authoritative audit
+  image receipt at build time. A contract test and independent exported-workbook
+  check confirm `RmJKnJkUgxA` displays `AVAILABLE` and the exact local evidence
+  path; no source universe or raw evidence was rewritten.
+
 ## Latest continuation — 2026-10-21 (`NICK_156` complete)
 
 - `RgaTGzeFcPQ` — “Is Bitcoin going to 0? (What They Won't Tell You)” is
