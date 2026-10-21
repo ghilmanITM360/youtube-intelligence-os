@@ -10,8 +10,44 @@
 - The four sheets are `Combined Dashboard`, `All Finance Videos` (1,612 rows),
   `Channel Directory` (42 rows) and `Detailed Research` (966 original records).
   Expansion records remain metadata-only and are never marked deep-complete.
-- Current checkpoint: 430 deep-audited, 1,182 pending. Next untouched original
-  record remains `Rd40d0XZLpQ`.
+- Current checkpoint: 431 deep-audited, 1,181 pending. Next untouched original
+  record is `RgaTGzeFcPQ`.
+
+## Latest continuation — 2026-10-21 (`NICK_155` complete)
+
+- `Rd40d0XZLpQ` — “Shocking Money Stats of the Average Person” is complete
+  with limited evidence. The entire registered auto-caption text was read;
+  canonical text SHA-256 remains
+  `ecb82f628146589bdc52cff62d7eaa13a4680ac4a74f2ed8f0eeca42000797be`.
+  Archive member: 22,718 bytes, 589 lines, SHA-256
+  `77ec88293c3118cca54b1c6168dfa7197e44ad8fb852483085a4a961d5d0db8f`.
+- The registered 1280x720 thumbnail was fetched once and preserved as
+  `audit-batches/NICK_Rd40d0XZLpQ.jpg` (94,504 bytes; SHA-256
+  `8b774057afde97381040b2e7d8ced78df362ddcaf8d1e7426980f88cdccb0789`).
+  `WHAT PEOPLE REALLY HAVE`, the arrow and the `9,000` card remain legible at
+  320x180. Historical art, CTR and A/B tests remain unavailable.
+- Frozen performance reproduces at 19.76486x STRONG against ten peers and
+  9.52068x STRONG against five. This is an extreme descriptive outlier, not a
+  causal packaging result. The exact peer pool includes TYPICAL and WEAK
+  social-comparison counterexamples.
+- Financial fact-checking found that much of the spending block exactly uses
+  BLS 2021 means, while the income, Social Security, net-worth and saving-rate
+  figures are stale or use mismatched populations relative to official data
+  available by publication. The 4%-withdrawal, card-interest and annualization
+  arithmetic reproduces, but arithmetic accuracy does not repair source-vintage
+  or denominator problems. Receipts preserve official source dates and limits.
+- Original deep completion is **431/966**; combined completion is **431/1,612**,
+  leaving **1,181** combined records. `VALIDATION_966.json` is PASS with zero
+  structural errors and reports next frozen-order ID `RgaTGzeFcPQ`.
+- Both workbooks were rebuilt from the latest audit. JSONL SHA-256 is
+  `49e24dfce26f79e59b793f1e27e692b75f0047274b3ac5d29c09642f459d16dd`;
+  original workbook SHA-256 is
+  `7242fb53cdafc934179b2d48f639723ae8cf7a0eb91ca554589aa92934e2754d`;
+  combined workbook SHA-256 is
+  `f1117fb1caafc57c470a5579d44db6123e0cf3b62e20ce05ea600168ff2e92e7`.
+  Coverage is 447/447/437/437/954/431. Formula-error scans returned zero
+  matches; rendered Coverage and Combined Dashboard views are legible. Native
+  Microsoft Excel recalculation remains untested.
 
 ## Latest continuation — 2026-10-21 (`NICK_154` complete)
 

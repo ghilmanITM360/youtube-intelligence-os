@@ -16,6 +16,7 @@ CHANNELS = ROOT / "reconciliation-all-repository-2026-10-21/CHANNEL_DIRECTORY.cs
 CASUAL_COMMIT = "fb1e56d03e5ad53086c74247cd2972b262d09b78"
 CASUAL_PATH = "research/casually-finance-success-playbook/VIDEO_PERFORMANCE.csv"
 DIMS = ("TITLE", "THUMBNAIL", "SCRIPT", "TOPIC", "PERFORMANCE", "VIRALITY")
+COMPLETE_STATUSES = {"COMPLETE_EVIDENCE_BACKED", "COMPLETE_LIMITED_EVIDENCE"}
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -76,7 +77,10 @@ def main() -> None:
         else:
             r = casual[vid]
             published, duration, views, snapshot, fmt = r["Publish_Date"], r["Duration_Sec"], r["Public_Views"], r["Snapshot_Date"], r["Format"]
-        row = {**u, "publication_date": published, "duration": as_number(duration) if str(duration).replace('.', '', 1).isdigit() else duration,
+        audit_status = ("DEEP_AUDIT_COMPLETE" if all(s in COMPLETE_STATUSES for s in statuses.values())
+                        else "NOT_DEEP_AUDITED") if layer == "FROZEN_ORIGINAL_966" else u["audit_status"]
+        row = {**u, "audit_status": audit_status,
+               "publication_date": published, "duration": as_number(duration) if str(duration).replace('.', '', 1).isdigit() else duration,
                "views": as_number(views) or views, "likes": as_number(likes), "comments": as_number(comments),
                "metric_snapshot": snapshot, "format": fmt, "description": description, **{f"{d.lower()}_review_status": statuses[d] for d in DIMS}}
         all_rows.append(row)

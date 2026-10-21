@@ -70,7 +70,7 @@ dashboard.getRange('A23:B27').values=[['Checkpoint','2026-10-21'],['Universe SHA
 dashboard.getRange('B25').setNumberFormat('yyyy-mm-dd hh:mm:ss'); dashboard.getRange('A23:B27').format.font={name:font,size:10}; dashboard.getRange('B24:B27').format.columnWidth=88;
 wb.recalculate();
 if(summary.total!==1612 || new Set(rows.map(r=>r.video_id)).size!==1612) throw new Error('Combined population contract failed');
-if(details.length!==966 || details.filter(r=>r.deep_audit_status==='DEEP_AUDIT_COMPLETE').length!==430) throw new Error('Original detail preservation failed');
+if(details.length!==966 || details.filter(r=>r.deep_audit_status==='DEEP_AUDIT_COMPLETE').length!==summary.deep_audited) throw new Error('Original detail preservation failed');
 if(rows.filter(r=>r.population_layer!=='FROZEN_ORIGINAL_966'&&r.audit_status==='DEEP_AUDIT_COMPLETE').length) throw new Error('Metadata-only row marked complete');
 console.log((await wb.inspect({kind:'region',sheetId:'Combined Dashboard',range:'A4:H18',maxChars:5000,tableMaxRows:20,tableMaxCols:8})).ndjson);
 console.log((await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!',options:{useRegex:true,maxResults:50},maxChars:2000})).ndjson);

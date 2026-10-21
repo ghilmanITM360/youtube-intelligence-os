@@ -15,7 +15,11 @@ class CombinedWorkbookContract(unittest.TestCase):
         rows = self.payload["all_videos"]
         self.assertEqual(1612, len(rows))
         self.assertEqual(1612, len({r["video_id"] for r in rows}))
-        self.assertEqual(430, sum(r["audit_status"] == "DEEP_AUDIT_COMPLETE" for r in rows))
+        self.assertEqual(431, sum(r["audit_status"] == "DEEP_AUDIT_COMPLETE" for r in rows))
+        self.assertEqual(
+            "DEEP_AUDIT_COMPLETE",
+            next(r["audit_status"] for r in rows if r["video_id"] == "Rd40d0XZLpQ"),
+        )
         self.assertFalse(any(r["audit_status"] == "DEEP_AUDIT_COMPLETE" and r["population_layer"] != "FROZEN_ORIGINAL_966" for r in rows))
 
     def test_layers_channels_and_detail(self):
