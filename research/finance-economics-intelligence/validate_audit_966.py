@@ -2,6 +2,7 @@
 import hashlib
 import json
 import sqlite3
+import zipfile
 from collections import Counter
 from build_audit_966 import BASE, ROOT, DIMENSIONS, STATUSES, read
 
@@ -55,6 +56,87 @@ REQUIRED={
     'VIRALITY_REVIEW':['analysis','observed_result','topic_demand','trend_timing','competition','format_fit','channel_context','alternative_explanations','original_content_lesson','causal_status']}
 SCOPES={'TITLE_REVIEW':'ACTUAL_TITLE','THUMBNAIL_REVIEW':'ACTUAL_IMAGE','SCRIPT_REVIEW':'FULL_STORED_TEXT','TOPIC_REVIEW':'FULL_TRANSCRIPT_TOPIC','VIRALITY_REVIEW':'INDIVIDUAL_PUBLIC_EVIDENCE'}
 
+def contiguous_range_errors(ranges, length):
+    errors=[]
+    if not isinstance(ranges, list) or not ranges:
+        return ['missing read ranges']
+    cursor=0
+    for item in ranges:
+        if not isinstance(item, list) or len(item)!=2 or not all(isinstance(v,int) for v in item):
+            return ['invalid read ranges']
+        start,end=item
+        if start!=cursor or end<=start or end>length:
+            errors.append('noncontiguous read ranges')
+            break
+        cursor=end
+    if cursor!=length: errors.append('incomplete read ranges')
+    return errors
+
+def strict_receipt_required(batch_id):
+    if not batch_id.startswith('NICK_'): return False
+    try: return int(batch_id.split('_',1)[1]) >= 156
+    except ValueError: return False
+
+def strict_receipt_errors(row, transcript_text, master_by_id):
+    """Enforce the current receipt standard without inventing evidence for older batches."""
+    vid=row['Video_ID']; batch=row['batch_id']; errors=[]
+    path=BASE/'audit-batches'/f'{batch}_READ_RECEIPTS.json'
+    if not path.is_file(): return ['missing strict receipt '+vid]
+    doc=json.loads(path.read_text())
+    receipts=[r for r in doc.get('receipts',[]) if r.get('Video_ID')==vid]
+    if len(receipts)!=1: return ['strict receipt cardinality '+vid]
+    receipt=receipts[0]; raw=transcript_text.encode()
+    expected_hash=hashlib.sha256(raw).hexdigest()
+    checks={
+        'scope': 'FULL_STORED_TEXT',
+        'Text_SHA256': expected_hash,
+        'character_count': len(transcript_text),
+        'canonical_utf8_bytes': len(raw),
+    }
+    for key,expected in checks.items():
+        if receipt.get(key)!=expected: errors.append(f'strict receipt {key} {vid}')
+    if not isinstance(receipt.get('audio_verified'),bool): errors.append('strict receipt audio status '+vid)
+    errors += [e+' '+vid for e in contiguous_range_errors(receipt.get('read_character_ranges'),len(transcript_text))]
+    normalized=' '.join(transcript_text.split())
+    if not receipt.get('first_text_witness') or not normalized.startswith(receipt['first_text_witness']): errors.append('first witness '+vid)
+    if not receipt.get('last_text_witness') or not normalized.endswith(receipt['last_text_witness']): errors.append('last witness '+vid)
+    locator=row['script']['source'].get('Evidence_locator','')
+    archive_name,sep,member=locator.partition('::')
+    if not sep or member!=receipt.get('archive_member'): errors.append('archive locator '+vid)
+    else:
+        archive=ROOT/archive_name
+        try:
+            with zipfile.ZipFile(archive) as zf: archive_bytes=zf.read(member)
+        except (FileNotFoundError,KeyError,zipfile.BadZipFile):
+            errors.append('archive member unavailable '+vid)
+        else:
+            if hashlib.sha256(archive_bytes).hexdigest()!=receipt.get('archive_member_sha256'): errors.append('archive hash '+vid)
+            if len(archive_bytes)!=receipt.get('archive_member_bytes'): errors.append('archive bytes '+vid)
+            if len(archive_bytes.splitlines())!=receipt.get('archive_member_lines'): errors.append('archive lines '+vid)
+    image_path=ROOT/row['thumbnail'].get('image_path','')
+    if not image_path.is_file(): errors.append('strict image absent '+vid)
+    else:
+        image_bytes=image_path.read_bytes()
+        if hashlib.sha256(image_bytes).hexdigest()!=receipt.get('image_sha256'): errors.append('strict image hash '+vid)
+        if len(image_bytes)!=receipt.get('image_bytes'): errors.append('strict image bytes '+vid)
+    sizes=receipt.get('image_inspected_sizes',[])
+    if row['thumbnail'].get('dimensions') not in sizes or [row['thumbnail'].get('mobile_review_width'),180] not in sizes:
+        errors.append('native/mobile inspection sizes '+vid)
+    if not doc.get('primary_source_receipts'): errors.append('missing primary source receipts '+vid)
+    if not doc.get('calculation_receipts'): errors.append('missing calculation receipts '+vid)
+    perf=[r for r in doc.get('calculation_receipts',[]) if str(r.get('method','')).startswith('Frozen lifetime-view-rate')]
+    if len(perf)!=1: errors.append('performance calculation receipt '+vid)
+    else:
+        results=perf[0].get('results',{}); master=master_by_id[vid]
+        peers=master['Peer_Video_IDs'].split('|') if master['Peer_Video_IDs'] else []
+        if results.get('peer_ids_10')!=peers or results.get('peer_ids_5')!=peers[:5]: errors.append('peer cohort receipt '+vid)
+        if results.get('tier_10')!=master['Performance_tier']: errors.append('ten-peer tier receipt '+vid)
+        if abs(float(results.get('peer_ratio_10',-1))-float(master['Lifetime_rate_ratio']))>0.00001: errors.append('ten-peer ratio receipt '+vid)
+    if receipt.get('audio_verified') is False and 'audio, timed delivery and editing unverified' not in row['script'].get('stored_text_completeness',''):
+        errors.append('audiovisual limitation '+vid)
+    if row['virality'].get('causal_status')!='DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL': errors.append('causal boundary '+vid)
+    return errors
+
 def semantic_errors(row):
     errors=[]
     for d,status in row['statuses'].items():
@@ -78,6 +160,7 @@ def validate():
     frozen=json.loads((BASE/'audit-baseline/MANIFEST.json').read_text())
     ids=read('audit-baseline/VIDEO_IDS.csv'); master=read('VIDEO_MASTER.csv')
     rows=[json.loads(s) for s in (BASE/'VIDEO_AUDIT_966.jsonl').read_text().splitlines()]
+    master_by_id={r['Video_ID']:r for r in master}
     errors=[]
     assert len(ids)==len({r['Video_ID'] for r in ids})==966
     errors+=identity_errors([r['Video_ID'] for r in ids],[r['Video_ID'] for r in rows])
@@ -94,6 +177,7 @@ def validate():
         if digest:
             text=con.execute('select transcript_text from transcripts where youtube_video_id=?',(vid,)).fetchone()[0]
             if hashlib.sha256(text.encode()).hexdigest()!=digest: errors.append('transcript drift '+vid)
+            if strict_receipt_required(r['batch_id']): errors += strict_receipt_errors(r,text,master_by_id)
         errors+=image_errors(vid,r['thumbnail'])
         for section in ['title','thumbnail','script','topic','virality']:
             errors+=reference_errors(r[section].get('source_refs',[]))

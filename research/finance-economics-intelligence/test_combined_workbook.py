@@ -46,6 +46,18 @@ class CombinedWorkbookContract(unittest.TestCase):
         self.assertEqual(42, len(self.payload["channels"]))
         self.assertEqual(966, len(self.payload["details"]))
         self.assertTrue(all(all(k in r for k in ("title_research", "thumbnail_research", "script_research", "topic_research", "performance_research", "virality_research")) for r in self.payload["details"]))
+        authoritative = [json.loads(line) for line in (ROOT / "VIDEO_AUDIT_966.jsonl").read_text().splitlines()]
+        projected = {r["video_id"]: r for r in self.payload["details"]}
+        self.assertEqual({r["Video_ID"] for r in authoritative}, set(projected))
+        for source in authoritative:
+            detail = projected[source["Video_ID"]]
+            self.assertEqual(source["statuses"], detail["statuses"])
+            for section in ("title", "thumbnail", "script", "topic", "performance", "virality", "event", "private_metrics"):
+                self.assertEqual(source[section], detail[f"{section}_research"] if section != "private_metrics" else detail[section])
+
+    def test_single_current_excel_deliverable(self):
+        self.assertEqual([BOOK], sorted(ROOT.glob("FINANCE_*_INTELLIGENCE.xlsx")))
+        self.assertEqual([ROOT / "build_workbook_1612.mjs"], sorted(ROOT.glob("build_workbook_*.mjs")))
 
     def test_exported_workbook_shape(self):
         self.assertTrue(BOOK.exists())
@@ -57,7 +69,7 @@ class CombinedWorkbookContract(unittest.TestCase):
                                   if name.startswith("xl/tables/table") and name.endswith(".xml"))
             self.assertIn('ref="A4:AG1616"', table_xml)
             self.assertIn('ref="A4:G46"', table_xml)
-            self.assertIn('ref="A4:N970"', table_xml)
+            self.assertIn('ref="A4:X970"', table_xml)
 
 
 if __name__ == "__main__":
