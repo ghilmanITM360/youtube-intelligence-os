@@ -27,6 +27,30 @@ class CurrentDeepAuditQualityContract(unittest.TestCase):
         self.assertTrue(contiguous_range_errors([[0,4],[5,9]],9))
         self.assertTrue(contiguous_range_errors([[0,4]],9))
 
+    def test_nick_162_census_household_income_bin_contract(self):
+        receipts = json.loads((BASE / 'audit-batches/NICK_162_READ_RECEIPTS.json').read_text())
+        census = next(r for r in receipts['primary_source_receipts']
+                      if r['claim'] == 'Household income distribution')
+        self.assertEqual('ACSST1Y2024.S1901', census['dataset'])
+        self.assertEqual('2024_ACS_1_YEAR', census['source_date'])
+        self.assertEqual('United States (010XX00US)', census['geography'])
+        self.assertEqual('Households estimate', census['estimate_column'])
+        self.assertEqual('United States households', census['population_denominator'])
+        self.assertEqual(132737146, census['total_households'])
+        self.assertEqual(
+            {'label': '$50,000 to $74,999', 'estimate_percent': 15.6},
+            census['variables']['S1901_C01_007E'],
+        )
+        self.assertEqual(
+            {'label': '$200,000 or more', 'estimate_percent': 13.7},
+            census['variables']['S1901_C01_011E'],
+        )
+        claim = next(c for c in self.rows['S_8SLGjLrBM']['script']['claim_audit']
+                     if c['claim'].startswith('Only 12%-13%'))
+        self.assertIn('13.7%', claim['assessment'])
+        self.assertIn('$50,000-$74,999', claim['assessment'])
+        self.assertNotIn('15.6% of households at $200,000 or more', claim['assessment'])
+
 
 if __name__ == '__main__':
     unittest.main()
