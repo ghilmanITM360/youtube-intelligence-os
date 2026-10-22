@@ -89,7 +89,7 @@ research.getRange('A2').values=[['Original 966-video audit detail. Expansion rec
 research.getRange('F4:X970').format.columnWidth=72; research.getRange('A5:X970').format.wrapText=true; research.getRange('A5:X970').format.verticalAlignment='top';
 
 const sourceHash=createHash('sha256').update(await fs.readFile(path.join(base,'reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv'))).digest('hex');
-dashboard.getRange('A23:B27').values=[['Checkpoint','2026-10-21'],['Universe SHA-256',sourceHash],['Generated UTC',new Date()],['Base Git HEAD',execFileSync('git',['rev-parse','HEAD'],{cwd:base,encoding:'utf8'}).trim()],['Source of truth','FINANCE_UNIVERSE.csv + original audit JSONL + approved expansion ledgers']];
+dashboard.getRange('A23:B27').values=[['Checkpoint','2026-10-22'],['Universe SHA-256',sourceHash],['Generated UTC',new Date()],['Base Git HEAD',execFileSync('git',['rev-parse','HEAD'],{cwd:base,encoding:'utf8'}).trim()],['Source of truth','FINANCE_UNIVERSE.csv + original audit JSONL + approved expansion ledgers']];
 dashboard.getRange('B25').setNumberFormat('yyyy-mm-dd hh:mm:ss'); dashboard.getRange('A23:B27').format.font={name:font,size:10}; dashboard.getRange('B24:B27').format.columnWidth=88;
 wb.recalculate();
 if(summary.total!==1612 || new Set(rows.map(r=>r.video_id)).size!==1612) throw new Error('Combined population contract failed');
