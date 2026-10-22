@@ -17,7 +17,7 @@ class CurrentDeepAuditQualityContract(unittest.TestCase):
         cls.con.close()
 
     def test_recent_receipts_reconcile_to_canonical_evidence(self):
-        for video_id in ('RgaTGzeFcPQ','RmJKnJkUgxA','S0xwBH_fAn0'):
+        for video_id in ('RgaTGzeFcPQ','RmJKnJkUgxA','S0xwBH_fAn0','SsHQ-TtXhRQ'):
             with self.subTest(video_id=video_id):
                 text = self.con.execute('select transcript_text from transcripts where youtube_video_id=?',(video_id,)).fetchone()[0]
                 self.assertEqual([], strict_receipt_errors(self.rows[video_id], text, self.master))
