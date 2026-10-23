@@ -1,5 +1,9 @@
 # Resume the full 966-video Finance and Economics audit
 
+## Weekend writer transfer — 2026-10-23
+
+Before any Finance write, read [writer ownership](FINANCE_WRITER_OWNERSHIP.md), [Friday handoff](FINANCE_WEEKEND_HANDOFF_2026-10-23.md) and [Machine A Saturday start](MACHINE_A_SATURDAY_START.md). Machine B releases only on verified publication; Machine A acceptance is still required. Research counts/last/next below are unchanged. Supplementary [Nick channel intelligence](channel-intelligence/nick-invests/2026-10-23/README.md) does not alter audit completion.
+
 ## Latest continuation — 2026-10-22 (`NICK_165` complete)
 
 - `SsHQ-TtXhRQ` — “Why a $70,000 Truck Costs $1M in Retirement” is complete with limited evidence. The full 18,252-character canonical auto-caption text was read in four contiguous ranges and hash-verified at SHA-256 `697d0545e42e6b2a060a1dda252f3c0a75c7d4aefb3d933f3c324b085c8f1bdd`. Archive member `200_SsHQ-TtXhRQ_Why_a_70000_Truck_Costs_1M_in_Retirement.txt` is 19,761 bytes/554 lines, SHA-256 `e7d4ed8cca8b3d1b4afcc22a0d1170749c622cd79958d9c0c20fb2a89e354715`.

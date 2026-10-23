@@ -80,3 +80,7 @@ Project documentation, decisions, configuration examples, and small manifests ar
 ## Deferred architecture
 
 Database, vector-search, RAG, agent, provider, API, frontend, and cloud infrastructure choices are intentionally deferred until real supplied datasets have been inspected. External developer tools recorded in `docs/TOOLS_INSTALLED.md` are conveniences and do not determine the system's production architecture.
+
+## Research discovery
+
+See the [project research index](research/README.md), including Finance audit continuation and the Nick Invests channel-intelligence package.
