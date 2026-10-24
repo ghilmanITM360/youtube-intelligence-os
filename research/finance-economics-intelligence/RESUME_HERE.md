@@ -1,3 +1,17 @@
+# Latest published research unit — NICK_170 (2026-10-25)
+
+- Parent checkpoint: `8fa0fe28f0870b2717d08a4099e1c4425a66429c`. Machine A remains the sole Finance writer; Machine B released. PR #36 stays OPEN/DRAFT.
+- Completed `ULkTn-jHBBc`, **6 Ways People Become Rich With Debt**, published `2026-07-07T20:47:41Z` (archive UTC). All 19,179 canonical characters read in three witnessed contiguous ranges. Native and 320×180 authentic thumbnail inspected.
+- All six dimensions `COMPLETE_LIMITED_EVIDENCE`. 39 exact claim groups, 20 source receipts, 15 numerical receipts. The sixth method is an OPM synthesis, not an independent sixth wealth engine.
+- Key distinctions: borrowing creates an equal liability; 25% rental appreciation/equity is gross; the rounded 340K/166K/180K example has a 6K reconciliation gap, not proof of a false real-world outcome. Closing stored 150K down conflicts with earlier 50K (audio unverified). Qualified new-vehicle interest already had a 2025–28 tax exception. Full-sale one-time tax and interest on a smaller recurring loan are not directly comparable. Fed 12%/60%, eight-times relative wealth and a universal nursing income uplift remain unverified.
+- Frozen performance: 0.81094 ten-peer / 0.75960 five-peer, both TYPICAL. Public metadata cannot identify demand or packaging causation.
+- Derived counts: **446/1,612 complete; 1,166 remaining = 520 original + 646 expansion pending**. Exactly one target JSONL row and one row in each seven projections changed; previous audits and all 966/646 identities preserved; 26/26 fingerprints checked. Workbook has its original four sheets.
+- Fresh checks: 34 Finance tests and two workbook-formatting tests PASS. Full regression and exact-head hosted CI are recorded in the external final report; the known DS-000028-F020 `.gitattributes` checksum failure is unchanged from the accepted parent and is not silently repaired. Native Excel recalculation NOT_TESTED.
+- Validator next unresolved master ID remains legacy `TFtBWn9CWOU` (IN_PROGRESS, preserved). Next genuinely untouched original: `UdfpP8R1zuI` — **The S&P 500 Explained Simply — And Why Most Investors Use It**. Do not start automatically.
+- External evidence and final publication result: `/Users/ghilmankhan/YIOS-local-audits/2026-10-25-NICK_170/`. Canonical packet and strict receipts: `audit-batches/NICK_170.json`, `audit-batches/NICK_170_READ_RECEIPTS.json`.
+
+---
+
 # Resume the full 1,612-video Finance and Economics audit
 
 ## Latest continuation — 2026-10-25 (`NICK_169` complete)
