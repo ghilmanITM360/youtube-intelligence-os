@@ -1,0 +1,28 @@
+{
+ "video_id": "Uumnx2Fo6cE",
+ "verdict": "UUMNX2FO6CE_VISUAL_CT_SCAN_COMPLETE_WITH_EVIDENCE",
+ "scope": "visual-only forensic CT scan; no audio-visual certification",
+ "gates": {
+  "source_identity": "PASS",
+  "full_frame_temporal_measurements": "PASS",
+  "source_relative_timestamp_accuracy": "PASS",
+  "scene_and_state_candidate_coverage": "PASS_WITH_DECLARED_BLIND_SPOT (<~18x18 px high-contrast; low-contrast motion; one sub-threshold tier swept)",
+  "native_frame_boundary_verification": "PASS_WITH_DECLARED_LIMITATIONS (715/715 episodes + 42 clusters as decoded-frame tiles 256x144; 10 UNVERIFIED, 2 CODEC)",
+  "intra_state_visual_events": "PASS_WITH_DECLARED_LIMITATIONS (218)",
+  "deep_creative_art_direction_analysis": "PASS (subjective, labelled)",
+  "motion_and_cinematography": "PASS (motion measured; cinematography NOT_APPLICABLE)",
+  "on_screen_typography": "PARTIAL_OPEN_LIMITATION (219 states with unreadable/uncertain small text, flagged not guessed)",
+  "visual_to_script_synchronization": "PROVISIONAL_ASR_ONLY",
+  "original_production_reconstruction": "PASS (507 specs, 218 beats)",
+  "output_consistency_and_traceability": "PASS (validator 53/53; negative tests 24/24)",
+  "human_audio_listening": "NOT_COMPLETED",
+  "full_audiovisual_signoff": "BLOCKED"
+ },
+ "completion_rule": "visual-only CT_SCAN contract; typography limitation and ASR-only sync were accepted as declared limitations under the same reading used for o3FQcd91MIs; no listening prerequisite in SKILL.md",
+ "inferred_not_verified": [
+  "shot count (194; range 194-225)",
+  "story function",
+  "easing labels",
+  "attention hypotheses"
+ ]
+}

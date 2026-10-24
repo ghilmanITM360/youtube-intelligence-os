@@ -1,0 +1,12 @@
+# Independent verification of state descriptions — video Uumnx2Fo6cE
+ROOT=/Users/ghilmankhan/YIOS-local-audits/2026-10-24-Uumnx2Fo6cE-deep-ct-scan . You are a SECOND, independent reviewer. A first reviewer wrote descriptions; an audit found errors (e.g. S0284 was described as a detective but its tile shows a laptop news page; a 49-frame state said 'only 8 frames').
+Inputs: ROOT/agents/verify/in_shard_N.json (records for your 73 states in order) and the tiles ROOT/agents/shard_N/state_sheets/ss_01..13.jpg (6 states per sheet, 3x2, order = order of the records; each tile is labelled with its state id — trust the label on the tile, check the label equals the record id).
+Procedure, per sheet: Read the sheet FIRST, write your OWN 10-20 word description of every tile, THEN compare with the record. Do not just confirm.
+For each state output {"id","own":"<your 10-20 word description>","match":"OK"|"MINOR"|"WRONG","fixes":{...}}.
+- OK = record's objects/background/readable_text agree with the tile.
+- MINOR = right content but wrong/rough positions, missing objects, readable_text not actually visible, a claimed text that cannot be read at this size, duration statements inconsistent with n_frames/duration_s.
+- WRONG = describes different content than the tile (like S0284).
+For MINOR/WRONG give "fixes": corrected full replacement strings for ONLY the fields that need it, from: objects, background, illustration, typography, readable_text, unreadable_text, hierarchy, prompt, recon, continuity. Also fix any field that is a thin placeholder (e.g. typography 'none' while text is visible; prompt padded with a generic tail and not specific). Corrected prompts: 30-70 words, original-art, no brand/person names, no logos, no quoted source text, specific to the tile. Never invent text you cannot read: put it in unreadable_text.
+Optionally add "confidence_cap":"MEDIUM" when the tile contains text/detail you believe the first reviewer could not have read at 640x360.
+You may extract native crops with ffmpeg (<=15 crops): frame i is at (i+1)/24 s from "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/The New American Housing Crisis Has Landed.mp4"; save under ROOT/agents/verify/crops_N/.
+Output: ROOT/agents/verify/OUT_verify_N.json = {"shard":N,"results":[...73 entries in order...]} (valid JSON; write in chunks if needed; verify count). Change nothing else. Reply only: counts of OK/MINOR/WRONG and any tile that was blank or mislabelled.
