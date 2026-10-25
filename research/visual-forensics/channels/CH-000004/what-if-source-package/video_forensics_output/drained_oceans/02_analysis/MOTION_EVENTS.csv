@@ -1,0 +1,30 @@
+MOTION_ID,SHOT_ID,SOURCE_STATE,TARGET_STATE,IN,OUT,MOVING_ELEMENT,ACTION,DIRECTION_OR_PATH,SPEED,AMPLITUDE,CAMERA,STATIC_ANCHORS,RELATIONSHIP,CONFIDENCE
+A01,S01,F01.0,F01.1,00:01.500,00:01.750,G01,Portal label/arrow reveal,Appears at lower-right trench mouth,Fast,Text-sized,Locked,trench|presenter|frame,STATE_REPLACEMENT,High
+A02,S01,F01.1,F01.2,00:04.500,00:04.750,T01,Challenger Deep label reveal,Appears in lower-left trench,Fast,Text-sized,Locked,trench|presenter|portal label,STATE_REPLACEMENT,High
+A03,S01,F01.2,F01.3,00:07.625,00:08.000,C01|C02|O01,Presenter pose replacement and paper drop,Reading pose to arms-raised; paper shifts to floor,Fast,Whole figure,Locked,display|labels,STATE_REPLACEMENT,High
+A04,S02,F01.3,F02.0,00:09.083,00:09.200,E02|E03,Hard cut board content,Trench to Mars ridge,Instant,Full display,Locked,presenter|display frame,STATE_REPLACEMENT,High
+A05,S02,F02.0,F02.1,00:11.917,00:12.200,G02|C04,Waterline and tiny figure reveal,Across upper Mars display,Fast,Display-width,Locked,Mars ridge|presenter,STATE_REPLACEMENT,High
+A06,S02,F02.1,F02.2,00:13.625,00:14.250,E04,Water curtain fills Mars sky,Top edge downward over display,Fast,Most display height,Locked,frame|Mars ground|presenter,SIMULTANEOUS_COUPLED,High
+A07,S03,F02.2,F03.0,00:16.917,00:17.042,E05,Hard cut to globe,Full composition replacement,Instant,Full frame,Locked,white canvas,STATE_REPLACEMENT,High
+A08,S03,F03.0,F03.1,00:20.542,00:20.792,C04,Thinker/ellipsis reveal,Appears below globe,Fast,Figure-sized,Locked,globe|locator,STATE_REPLACEMENT,High
+A09,S04,F03.1,F04.0,00:22.583,00:22.708,G03,Hard cut to scale diagram,Full composition replacement,Instant,Full frame,Locked,None,STATE_REPLACEMENT,High
+A10,S05,F04.0,F05.0,00:24.792,00:27.125,E06|G04,Descent visualization,Radial streaks converge downwards while black form descends,Fast,Full-frame,Locked,lower curved forms,SIMULTANEOUS_COUPLED,High
+A11,S06,F05.0,F06.0,00:27.125,00:27.250,E07,Hard cut to depth cross-section,Full composition replacement,Instant,Full frame,Locked,None,STATE_REPLACEMENT,High
+A12,S06,F06.0,F06.1,00:36.000,00:36.250,G06,Checklist reveal,Appears lower-left,Fast,Panel-sized,Locked,depth profile|labels,STATE_REPLACEMENT,High
+A13,S07,F06.1,F07.0,00:41.042,00:41.167,E08|C03,Hard cut to map dashboard,Full composition replacement,Instant,Full frame,Locked,None,STATE_REPLACEMENT,High
+A14,S07,F07.0,F07.1,00:42.708,00:42.958,G07|C03,Counter update and presenter pose swap,0m changes to -50m; arm raises,Fast,Text and figure,Locked,map|DRAIN marker,SIMULTANEOUS_INDEPENDENT,High
+A15,S07,F07.1,F07.2,00:45.500,00:46.000,G08,Regional map annotations reveal,Multiple red callouts across map,Fast,Map-wide,Locked,map|counter|DRAIN marker,STATE_REPLACEMENT,High
+A16,S08,F07.2,F08.0,00:49.625,00:49.750,E09,Hard cut to island warning tableau,Full composition replacement,Instant,Full frame,Locked,None,STATE_REPLACEMENT,High
+A17,S09,F08.0,F09.0,00:54.792,00:60.083,E08|G07|C03,Hard cut and subsequent counter update,Cave to map; counter advances -50m then -100m,Moderate,Full frame then text,Locked,map surface|DRAIN marker,SEQUENTIAL,High
+A18,S09,F09.0,F09.1,00:60.083,00:60.333,G08,European callout reveal,Appears over northwestern Europe,Fast,Regional,Locked,map|counter|DRAIN marker,STATE_REPLACEMENT,Medium
+A19,S10,F09.1,F10.0,00:64.500,00:64.625,E09,Hard cut to text-free island tableau,Full composition replacement,Instant,Full frame,Locked,None,STATE_REPLACEMENT,High
+A20,S11,F10.0,F11.0,00:68.125,00:68.250,E08|G07|C03,Hard cut to -200m map,Full composition replacement,Instant,Full frame,Locked,None,STATE_REPLACEMENT,High
+A21,S11,F11.0,F11.1,00:72.208,00:72.458,G08,Regional callouts reveal,Red marks and THE NETHERLANDS label appear,Fast,Map-wide,Locked,map|counter|DRAIN marker,STATE_REPLACEMENT,High
+A22,S12,F11.1,F12.0,00:74.292,00:74.417,G07|G08,Depth/callout state replacement,-200m annotations change to -500m set,Instant,Text and regional marks,Locked,map|presenter|DRAIN marker,STATE_REPLACEMENT,High
+A23,S13,F12.0,F13.0,00:79.417,00:79.542,G07|G08,Depth/callout state replacement,-500m annotations change to -1000m New Zealand set,Instant,Text and regional marks,Locked,map|presenter|DRAIN marker,STATE_REPLACEMENT,High
+A24,S14,F13.0,F14.0,00:83.083,00:83.208,E08|E10|G07,Hard cut to exposed-seafloor map,Map drawing and counter replace together,Instant,Full map,Locked,presenter,STATE_REPLACEMENT,High
+A25,S14,F14.0,F14.1,00:86.917,00:87.167,G09,DRAINED title reveal,Appears centered above map,Fast,Text-sized,Locked,seafloor map|presenter,STATE_REPLACEMENT,High
+A26,S14,F14.1,F14.2,00:90.500,00:91.000,G08,Final regional annotation reveal,Multiple red circles/arrows/labels appear,Fast,Map-wide,Locked,seafloor map|DRAINED title,STATE_REPLACEMENT,High
+A27,S15,F14.2,F15.0,00:95.375,00:95.500,E11,Hard cut to valley/pool,Full composition replacement,Instant,Full frame,Locked,None,STATE_REPLACEMENT,High
+A28,S16,F15.0,F16.0,00:100.708,00:100.833,G10|C05,Hard cut to news graphic,Full composition replacement,Instant,Full frame,Locked,None,STATE_REPLACEMENT,High
+A29,S17,F16.0,F17.0,00:105.500,00:105.625,E01|E12|C04,Hard cut to final board,Full composition replacement,Instant,Full frame,Locked,None,STATE_REPLACEMENT,High

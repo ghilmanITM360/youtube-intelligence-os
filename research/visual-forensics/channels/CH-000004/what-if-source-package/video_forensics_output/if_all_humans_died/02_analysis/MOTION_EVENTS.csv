@@ -1,0 +1,22 @@
+MOTION_ID,SHOT_ID,SOURCE_STATE,TARGET_STATE,IN,OUT,MOVING_ELEMENT,ACTION,DIRECTION_OR_PATH,SPEED,AMPLITUDE,CAMERA,STATIC_ANCHORS,RELATIONSHIP,CONFIDENCE
+A01,S01,F01.0,F01.1,00:02.000,00:04.000,C01 and C02,"black outline changes to red outline",none; state replacement,slow,none,locked,E01;O01;G01,STATE_REPLACEMENT,medium
+A02,S01,F01.1,F01.2,00:04.000,00:08.667,C01 and C02,"red outlines become speckled and fade; display darkens",local outward speckle plus opacity down,slow,low,locked,E01;O01;G01,STATE_REPLACEMENT,medium
+A03,S03,F03.0,F03.1,00:10.667,00:15.750,city windows,"white windows extinguish",multiple windows to black,slow,low,locked,E02,SIMULTANEOUS_INDEPENDENT,medium
+A04,S04,F04.0,F04.0,00:15.750,00:20.667,city and room plates,"domestic room reveals from right over city",lateral,slow,frame-width,locked,scene art,STATE_REPLACEMENT,medium
+A05,S05,F05.0,F05.2,00:22.500,00:28.000,red figures,"figures dissolve into local red speckles",local texture replacement,slow,low,locked,E04;O02,STATE_REPLACEMENT,medium
+A06,S06,F06.0,F06.2,00:31.000,00:38.583,warning markers; figures; illumination,"markers pop in; figures vanish; room darkens",sequential pop and state replacement,slow,low,locked,E05,SEQUENTIAL,medium
+A07,S08,F08.0,F08.0,00:40.917,00:46.500,O04,"fuel-energy card and curled strip replace plant",hard-cut/popup insertion,fast,large,locked,white field,STATE_REPLACEMENT,high
+A08,S09,F09.0,F09.1,00:49.625,00:56.792,G03,"alert icons then MAYDAY callout accumulate",pop-ins around plant,moderate,small,locked,E04;O02;O03,SEQUENTIAL,medium
+A09,S13,F13.0,F13.0,01:21.917,01:27.750,C02/C03 and machinery,"operator becomes red speckles while machinery gains decay texture",local state replacement,slow,medium,locked,pipes; machine; bucket,SEQUENTIAL,medium
+A10,S14,F14.0,F14.1,01:27.750,01:38.667,O06 and G04,"turbine blades rotate; bordered inset appears then clears",rotation plus pop-in,steady,about one-third turn per sampled interval,locked,E09; turbine towers,SIMULTANEOUS_INDEPENDENT,medium
+A11,S15,F15.0,F15.1,01:38.667,01:48.333,O07,"comparison grows from two to three panels; maintenance inset appears",rightward panel reveal,moderate,wide,locked,panel borders; turbine bases,STATE_REPLACEMENT,high
+A12,S16,F16.0,F16.1,01:48.333,01:58.083,C02/C03 and dam texture,"presenter vanishes; OOPS appears; damage texture grows",local state replacement,slow,medium,locked,dam; spillway; pylon; water,SEQUENTIAL,medium
+A13,S17,F17.0,F18.0,01:58.083,02:10.083,O08/O09,"Eternal Light card cuts to battery tray then type chart; red fills drain",hard replacements plus fill reduction,sequential,small,locked,grey/white fields,SEQUENTIAL,medium
+A14,S19,F19.0,F19.0,02:10.083,02:18.667,O10 and O11,"house becomes side-by-side solar/security-pole and technical diagrams",hard cuts/panel reveal,moderate,wide,locked,white field,STATE_REPLACEMENT,medium
+A15,S20,F20.0,F20.2,02:18.667,02:38.083,E11/O11/G05,"panel dirties; billboard swaps; rain overlay and age label appear",surface growth; state replacement; diagonal rain,slow,medium,locked,road; sign position; pole; light pool,SIMULTANEOUS_INDEPENDENT,medium
+A16,S21,F21.0,F21.0,02:38.083,02:42.125,G06,"five energy panels lose illumination in sequence",left-to-right dimming,moderate,full-panel,locked,panel borders,SEQUENTIAL,medium
+A17,S23,F23.0,F23.1,02:45.708,02:58.458,O13 and C02,"watch state advances and desk figure appears",face replacement and figure pop-in,slow,medium,locked,E13; concentric rings,SEQUENTIAL,medium
+A18,S24,F24.0,F24.0,02:58.458,03:11.208,O14,"radiation circles/waves develop cyan emission then scene changes to vial",cyan bloom then hard state replacement,moderate,large,locked,E14; screen border,SEQUENTIAL,high
+A19,S26,F26.0,F26.0,03:18.458,03:26.125,O16,"text becomes outlined Cesium 137 label",state replacement,moderate,medium,locked,white field,STATE_REPLACEMENT,high
+A20,S27,F27.0,F27.0,03:26.125,03:45.167,O16 and G07,"label gains dark field/cyan glow; decay graph appears above",background replacement then graph pop-in,moderate,medium,locked,label geometry; graph card position,SIMULTANEOUS_INDEPENDENT,high
+A21,S28,F28.0,F28.0,03:45.167,03:53.792,O16,"single label separates into two stacked halves over cyan glow",central horizontal split,fast,medium,locked,black field; cyan underglow,STATE_REPLACEMENT,high

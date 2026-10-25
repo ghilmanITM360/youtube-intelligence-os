@@ -1,0 +1,44 @@
+ASSET_ID,TYPE,DESCRIPTION,MEDIA_FORMAT_NEEDED,TRANSPARENT_BG,FIRST_APPEARANCE,OTHER_APPEARANCES,REUSE_STATUS,SOURCE_OR_RECREATION_METHOD,NOTES
+C01,character,"black presenter stick figure with paper",PNG,YES,F01.0,F01.1;F01.2,recurring variant,"draw/recreate as transparent line art",OBSERVED
+C02,character,"small black stick figure",PNG,YES,F01.0;F05.0,F03.0;F04.0;F05.0;F10.1;F11.1;F12.0;F19.1,recurring,"draw/recreate as transparent line art",OBSERVED
+C03,character,"red speckled disappearance version of C01/C02",PNG or VIDEO,YES,F01.1,F01.2;F04.1;F05.2;F07.1;F10.2;F11.1,recurring effect,"make red particle/texture overlay from clean figure",OBSERVED effect; exact particle behavior UNKNOWN
+E01,environment,"intro display frame with floor lamp and small figure",JPG,NO,F01.0,F01.2,one scene,"draw full-frame plate",OBSERVED
+E02,environment,"dark city skyline with lit windows",JPG,NO,F03.0,F03.1;F04.0,one scene,"draw full-frame plate",OBSERVED
+E03,environment,"quiet bedroom/living room corner",JPG,NO,F04.0,F04.0,one scene,"draw full-frame plate",OBSERVED
+E04,environment,"industrial exterior: cooling tower, plant, pylon",JPG,NO,F05.0,F05.2;F07.0;F07.1;F10.2,recurring,"draw full-frame plate",OBSERVED
+E05,environment,"control room with two seated operators and wall grid map",JPG,NO,F06.0,F06.2,one scene,"draw full-frame plate",OBSERVED
+E06,environment,"night energy-source quadrant collage",JPG,NO,F10.0,F10.0,one scene,"draw full-frame plate",OBSERVED
+E07,environment,"tropical hut with generator and palm",JPG,NO,F10.1,F10.2,one scene,"draw full-frame plate",OBSERVED
+E08,environment,"geothermal plant cross-section",JPG,NO,F12.0,F12.1;F13.0,one scene,"draw full-frame plate",OBSERVED
+E09,environment,"wind farm",JPG,NO,F14.0,F14.1,one scene,"draw full-frame plate",OBSERVED
+E10,environment,"dam, spillway and power pylon",JPG,NO,F16.0,F16.1,one scene,"draw full-frame plate",OBSERVED
+E11,environment,"roadside with Rhode Island sign and solar lamp",JPG,NO,F20.0,F20.2,one scene,"draw full-frame plate",OBSERVED
+E12,environment,"dark radioactive-barrel room",JPG,NO,F22.0,F22.0,one scene,"draw full-frame plate",OBSERVED
+E13,environment,"white concentric-ring watch backdrop",JPG,NO,F23.0,F23.1,one scene,"draw full-frame plate",OBSERVED
+E14,environment,"projection screen / grey field",JPG,NO,F24.0,F25.0,one scene,"draw full-frame plate",OBSERVED
+O01,object,"floor lamp",PNG,YES,F01.0,F01.2,one scene,"draw as transparent line art",OBSERVED; light state changes
+O02,object,"factory pylon and wires",PNG,YES,F05.0,F07.1;F10.2;F14.0,recurring,"draw transparent line art",OBSERVED
+O03,object,"nuclear plant / reactor lock icon",PNG,YES,F07.0,F07.1,one scene,"draw transparent line art",OBSERVED
+O04,object,"fuel-energy comparison strip and card",SVG or PNG,YES,F08.0,F08.0,one scene,"build as shapes plus editor text",readable text observed
+O05,object,"generator machinery",PNG,YES,F10.0,F10.2;F11.0,recurring,"draw transparent line art",OBSERVED
+O06,object,"wind turbine",PNG,YES,F10.0,F12.1;F13.0,recurring,"draw transparent line art",blade rotation only where assigned
+O07,object,"Gedser and modern turbine comparison panels",SVG or PNG,NO,F15.0,F15.1,one scene,"build as shapes plus editor text",OBSERVED
+O08,object,"Eternal Light product card and battery tray",SVG or PNG,NO,F17.0,F17.1,one scene,"build as shapes plus editor text",exact small copy not required
+O09,object,"six battery-type icon set",SVG or PNG,YES,F18.0,F18.0,one scene,"draw icons plus editor labels",OBSERVED
+O10,object,"solar-roof house",PNG,YES,F16.0,F16.1,one scene,"draw transparent line art",OBSERVED
+O11,object,"solar security/light pole",PNG,YES,F19.0;F20.0,F20.2,recurring,"draw transparent line art",OBSERVED
+O12,object,"radioactive barrel and warning signs",PNG,YES,F22.0,F22.0,one scene,"draw transparent line art",OBSERVED
+O13,object,"large wristwatch",PNG,YES,F23.0,F23.1,one scene,"draw transparent line art",hands/face change assigned
+O14,object,"cesium radiation wave diagram",SVG or PNG,NO,F24.0,F24.0,one scene,"build as vector rings/waves",OBSERVED
+O15,object,"glowing cesium source vial",PNG,YES,F25.0,F25.0,one scene,"draw transparent line art plus cyan glow",OBSERVED
+O16,object,"Cesium 137 label bar",SVG or PNG,YES,F26.0,F28.0,recurring,"build as shape plus editor text",OBSERVED
+G01,graphic,"question quotation card",SHAPE + TEXT,NO,F01.0,F01.2,one scene,"CapCut text and rounded rectangle",readable source quote
+G02,graphic,"what if? title card",SVG or PNG,NO,F02.0,F02.0,one scene,"recreate branded card as clean graphic",OBSERVED; source branding retained only if authorized
+G03,graphic,"warning markers and MAYDAY callout",SHAPE + TEXT,YES,F06.1;F07.1,F07.1,one scene,"editor text/shapes",OBSERVED
+G04,graphic,"Tom Scott inset card",PNG or SCREENSHOT,NO,F14.0,F14.0,one scene,"recreate as generic bordered inset if rights unavailable",exact source/portrait UNKNOWN
+G05,graphic,"rain overlay",VIDEO,YES,F20.2,F20.2,one scene,"short diagonal-line overlay",OBSERVED
+G06,graphic,"power-source vertical panel sequence",SVG or PNG,NO,F21.0,F21.0,one scene,"build as vector panel layout",OBSERVED
+G07,graphic,"30-year Cs-137 decay graph",SVG + TEXT,NO,F27.0,F27.0,one scene,"draw graph and editor text",OBSERVED
+G08,graphic,"red end-credit/book card",PNG or VIDEO,NO,F29.0,F29.0,one scene,"use supplied/authorized end card or recreate only layout",credits/artwork attribution must remain accurate
+T01,text_system,"hand-lettered black all-caps labels, captions and callouts",TEXT,YES,F01.0,F25.0,global,"closest installed handwritten font or traced text",exact font UNKNOWN
+AU01,audio,"embedded AAC program audio",AUDIO,NO,F01.0,F26.0,global,"extract from source for reference sync",speech content not machine-verified here
