@@ -1,0 +1,47 @@
+MOTION_ID,SHOT_ID,SOURCE_STATE,TARGET_STATE,IN,OUT,MOVING_ELEMENT,ACTION,DIRECTION_OR_PATH,SPEED,AMPLITUDE,CAMERA,STATIC_ANCHORS,RELATIONSHIP,CONFIDENCE
+A01,S01,F01.0,F01.1,00:00.000,00:03.500,E01 drawing,Incremental board drawing,Blank board to framed picture area,Slow,Board-scale,None,C01;O01,STATE_REPLACEMENT,High
+A02,S01,F01.1,F01.2,00:03.500,00:07.000,E02/C02/O02/O15,Incremental illustration reveal,Inside board from sparse to cave scene,Slow,Board interior,None,C01;E01,STATE_REPLACEMENT,High
+A03,S01,F01.2,F01.3,00:07.000,00:11.000,E02 lines,Add cave/mountain detail,Across board interior,Slow,Local,None,C01;E01;C02;O02,STATE_REPLACEMENT,High
+A04,S02,F01.4,F02.0,00:15.208,00:15.208,Full frame,Hard cut,White board to red card,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A05,S03,F02.0,F03.0,00:17.208,00:17.208,Full frame,Hard cut,Red card to three-panel cave,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A06,S03,F03.0,F03.1,00:20.000,00:24.500,Center panel,Gradual graphic/label development,Inside doorway only,Slow,Panel-local,None,E02;side panels,STATE_REPLACEMENT,Medium
+A07,S03,F03.1,F03.2,00:24.500,00:24.500,T02,Text reveal,Above center figure,Instant,Text-local,None,E02;O05;C02;C03,STATE_REPLACEMENT,High
+A08,S03,F03.2,F03.3,00:28.000,00:28.000,T01,Text reveal,Lower-right center panel,Instant,Text-local,None,E02;O05;C02;C03,STATE_REPLACEMENT,High
+A09,S04,F03.3,F04.0,00:29.417,00:29.417,Full frame,Hard cut,Cave panels to snow field,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A10,S04,F04.0,F04.1,00:31.000,00:31.000,C02,Reveal,Appears center-left,Instant,Character-local,None,E06;O03;C04;O04;O15,STATE_REPLACEMENT,High
+A11,S04,F04.1,F04.2,00:33.500,00:33.500,T01,Callout reveal,Curves from C02 toward right,Instant,Text/local line,None,E06;all figures,STATE_REPLACEMENT,High
+A12,S05,F04.2,F05.0,00:37.250,00:37.250,Full frame,Hard cut,Snow to dark Sun edge,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A13,S06,F05.0,F06.0,00:42.250,00:42.250,Full frame,Hard cut,Sun edge to black diagram,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A14,S06,F06.0,F06.1,00:44.208,00:44.208,Panel,Hard cut,Black diagram to white/black split,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A15,S06,F06.1,F06.1,00:44.208,00:49.292,Panels,Repeated hard swaps,Alternating polarity and labels,Fast,Full frame,None,None,SEQUENTIAL,Medium
+A16,S06,F06.1,F06.2,00:49.292,00:49.292,O06/O07/T01,Graphic relation reveal,Equals and Sun-edge relation added,Instant,Diagram-local,None,E04;O06;O07,STATE_REPLACEMENT,Medium
+A17,S07,F06.2,F07.0,00:51.625,00:51.625,Full frame,Hard cut,Black diagram to lecturer,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A18,S07,F07.0,F07.1,00:54.500,00:58.000,O08/E03/T02,Chart reveal,Axis and first marker enter left to right,Slow,Chart-scale,None,C01 absent,STATE_REPLACEMENT,High
+A19,S07,F07.1,F07.2,00:58.000,01:03.000,O08,Curve/panel reveal,First branch and panel added,Slow,Chart-local,None,E05;E03,STATE_REPLACEMENT,High
+A20,S07,F07.2,F07.3,01:03.000,01:10.000,O08,Curve/panel reveal,Third panel and long lower curve added,Slow,Chart-local,None,E05;existing chart,STATE_REPLACEMENT,High
+A21,S07,F07.3,F07.4,01:10.000,01:18.000,O08,Curve/panel reveal,Brain panel joins at far right,Slow,Chart-local,None,E05;existing chart,STATE_REPLACEMENT,High
+A22,S07,F07.4,F07.5,01:18.000,01:18.000,FLASH badge,Graphic reveal,At far-right endpoint,Instant,Badge-local,None,E05;O08,STATE_REPLACEMENT,High
+A23,S07,F07.5,F07.5,01:26.000,01:28.958,FLASH badge,Fade/clear,Disappears from far right,Slow,Badge-local,None,E05;O08,STATE_REPLACEMENT,Medium
+A24,S08,F07.5,F08.0,01:28.958,01:28.958,Full frame,Hard cut,Chart to dark exposure field,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A25,S08,F08.0,F08.1,01:36.000,01:36.000,Full frame,Hard cut,Dark exposure to white calculation,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A26,S08,F08.1,F08.2,01:38.000,01:38.000,Full frame,Hard cut,White calculation to dark exposure,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A27,S08,F08.2,F08.3,01:40.000,01:40.000,Full frame,Hard cut,Dark exposure to white calculation,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A28,S08,F08.3,F08.4,01:42.000,01:42.000,Full frame,Hard cut,White calculation to dark exposure,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A29,S08,F08.4,F08.5,01:44.000,01:44.000,Full frame,Hard cut,Dark exposure to white calculation,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A30,S08,F08.5,F08.6,01:46.000,01:46.000,Full frame,Hard cut,White calculation to dark exposure,Instant,Full frame,None,None,STATE_REPLACEMENT,Medium
+A31,S08,F08.6,F08.7,01:49.000,01:49.000,Full frame,Hard cut,Dark exposure to white calculation,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A32,S09,F08.7,F09.0,01:53.375,01:53.375,Full frame,Hard cut,White calculation to dark exposure,Instant,Full frame,None,None,STATE_REPLACEMENT,Medium
+A33,S09,F09.0,F09.1,01:55.000,01:55.000,Full frame,Hard cut,Dark field to phone ad,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A34,S10,F09.1,F10.0,02:06.083,02:06.083,Full frame,Hard cut,Phone ad to cave question,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A35,S11,F10.0,F11.0,02:08.083,02:08.083,Full frame,Hard cut,Cave question to law board,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A36,S11,F11.0,F11.1,02:16.000,02:16.000,O10/C05,Text and character reveal,Under formula and lower-right,Instant,Board-local,None,C01;E01,STATE_REPLACEMENT,High
+A37,S11,F11.1,F11.2,02:22.000,02:22.000,O11,Graphic replacement,Formula detail replaced by waves,Instant,Board-local,None,C01;E01,STATE_REPLACEMENT,High
+A38,S11,F11.2,F11.3,02:30.000,02:30.000,O12,Graphic reveal,Appears board right,Instant,Board-local,None,C01;E01;O11,STATE_REPLACEMENT,High
+A39,S11,F11.3,F11.4,02:38.000,02:38.000,O12/O13,Graphic reveal,Additional body and warning sign at right,Instant,Board-local,None,C01;E01;O11;existing O12,STATE_REPLACEMENT,High
+A40,S12,F11.4,F12.0,02:43.583,02:43.583,Full frame,Hard cut,Board to scale/sun scene,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A41,S12,F12.0,F12.1,02:49.000,02:49.000,C06/heat marks,State replacement,Float pose to fall/impact drawing,Instant,Character-local,None,E06;O14;O15,STATE_REPLACEMENT,High
+A42,S12,F12.1,F12.2,02:55.000,02:55.000,T01,Text reveal,Center title line,Instant,Text-local,None,E06;O14;O15;C06,STATE_REPLACEMENT,High
+A43,S12,F12.2,F12.3,03:01.000,03:01.000,T01,Text reveal,Second centered equation line,Instant,Text-local,None,E06;O14;O15;C06,STATE_REPLACEMENT,High
+A44,S13,F12.3,F13.0,03:06.708,03:06.708,Full frame,Hard cut,Scale scene to cave portal,Instant,Full frame,None,None,STATE_REPLACEMENT,High
+A45,S13,F13.0,F13.1,03:12.000,03:12.000,T01,Speech bubble reveal,At right cave panel,Instant,Bubble-local,None,E02;O05;C02;C03,STATE_REPLACEMENT,High
+A46,S14,F13.1,F14.0,03:18.500,03:18.500,Full frame,Hard cut,Cave to red end card,Instant,Full frame,None,None,STATE_REPLACEMENT,High

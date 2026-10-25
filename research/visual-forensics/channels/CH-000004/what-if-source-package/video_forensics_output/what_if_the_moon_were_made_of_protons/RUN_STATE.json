@@ -1,0 +1,52 @@
+{
+  "video_slug": "what_if_the_moon_were_made_of_protons",
+  "reference_video": "/Users/ghilmanislam360/Downloads/YTDown.com_Shorts_What-if-the-Moon-were-made-of-Protons_Media_mEUqVgGf4e0_002_720p.mp4",
+  "audio_present": true,
+  "audio_verified": true,
+  "current_stage": "COMPLETE_WITH_DOCUMENTED_LIMITATIONS",
+  "last_completed_shot": "S09",
+  "last_completed_state": "F09.6",
+  "last_completed_motion": "A24",
+  "last_completed_image": "IMG15",
+  "last_completed_capcut_shot": "S09",
+  "last_completed_i2v_shot": "S09",
+  "completed_files": [
+    "00_source/SOURCE_MANIFEST.md",
+    "00_source/audio/audio_original.aac",
+    "00_source/audio/audio.wav",
+    "00_source/verify.py",
+    "01_evidence/CONTACT_SHEET_1.jpg",
+    "01_evidence/CONTACT_SHEET_2.jpg",
+    "01_evidence/frames/ (88 source-resolution 1s-interval PNGs)",
+    "01_evidence/zoom_*.jpg (8 targeted native-resolution inspection tiles)",
+    "02_analysis/TIMELINE.csv",
+    "02_analysis/ASSET_MANIFEST.csv",
+    "02_analysis/MOTION_EVENTS.csv",
+    "02_analysis/VISUAL_DNA.md",
+    "03_capcut/CAPCUT_REBUILD.md",
+    "04_image_to_video/IMAGE_PROMPTS.md",
+    "04_image_to_video/ANIMATION_PROMPTS.md",
+    "04_image_to_video/I2V_REBUILD.md",
+    "05_audio/AUDIO_MAP.md",
+    "MASTER_REPORT.md",
+    "CONTINUATION_HANDOFF.md"
+  ],
+  "partial_files": [],
+  "known_issues": [
+    "No transcript available: local whisper/mlx-whisper install failed (broken system pip / truststore macOS-version-parsing bug, same as other videos in this project). Audio structure analyzed via ffmpeg silencedetect instead (7 measured gaps); spoken words are UNKNOWN throughout, though on-screen caption/label text is fully transcribed as a proxy. See 00_source/SOURCE_MANIFEST.md and 05_audio/AUDIO_MAP.md.",
+    "All 8 shot boundaries are OBSERVED (confirmed by ffmpeg scene-cut detection at threshold 0.25 or 0.10), but all 24 internal visual-state boundaries were derived from 1-second-interval visual sampling only, not exhaustive frame-by-frame confirmation; they are labeled LIKELY in TIMELINE.csv and MOTION_EVENTS.csv.",
+    "S09's ~13s continuous circle-growth motion (A20) will likely need to be split into several shorter chained I2V sub-clips in practice, given typical model generation-length limits; documented as a fidelity/practicality note in I2V_REBUILD.md, not treated as a third workflow."
+  ],
+  "counts": {
+    "shots": 9,
+    "visual_states": 32,
+    "unique_assets": 27,
+    "motion_events": 24,
+    "unique_images": 15,
+    "audio_assets": 1
+  },
+  "next_required_action": "None. Project complete. If a working speech-to-text tool becomes available later, transcribe 00_source/audio/audio.wav and patch SCRIPT_OR_AUDIO_CUE in TIMELINE.csv plus the AUDIO SYNC lines in CAPCUT_REBUILD.md/I2V_REBUILD.md; re-run 00_source/verify.py afterward. No other stage needs revisiting unless the source video itself changes (check SHA-256 in SOURCE_MANIFEST.md).",
+  "verification_command": "python3 00_source/verify.py",
+  "completed_at_utc": "2026-09-16T15:40:00Z",
+  "updated_at": "2026-09-16T15:40:00Z"
+}

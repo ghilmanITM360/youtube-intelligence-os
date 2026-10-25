@@ -1,0 +1,63 @@
+{
+  "video_slug": "videoplayback",
+  "source": "/Users/ghilmanislam360/Downloads/videoplayback.mp4",
+  "completed_stages": [
+    "PASS_1_SOURCE_INSPECTION",
+    "PASS_2_SHOTS_AND_VISUAL_STATES",
+    "PASS_3_VISUAL_DNA_AND_ASSETS",
+    "PASS_4_MOTION_EVENTS",
+    "PASS_5_AUDIO_AND_SYNC",
+    "PASS_6_TWO_RECONSTRUCTION_WORKFLOWS",
+    "PASS_7_QUALITY_VERIFICATION"
+  ],
+  "current_stage": null,
+  "seven_pass_plan": [
+    "source inspection",
+    "shots and visual states",
+    "visual DNA and assets",
+    "motion events",
+    "audio and synchronization",
+    "two reconstruction workflows",
+    "quality verification"
+  ],
+  "shot_cut_frames": [
+    0,
+    108,
+    183,
+    249,
+    463,
+    721,
+    860,
+    1045,
+    1366,
+    1603,
+    1694,
+    2187,
+    2296
+  ],
+  "limitations": [
+    "The supplied file has no audio stream. Narration/music/SFX and spoken synchronization remain UNKNOWN; both workflows reproduce the supplied silent playback only.",
+    "Original source layers, font, software/model and asset provenance are UNKNOWN. Source-derived/traced stills can match visible geometry; freshly generated linework/font/objects are approximate.",
+    "Tiny scientific-body marks are not readable prose; portions of book text and calendar dates are clipped/too small for certain transcription. Preserve the source artwork rather than invent wording.",
+    "Mask paths and soft light falloff are measured visual approximations; original easing/effect values cannot be recovered. Frame onsets are measured; first faint pixels of reveals can differ by about one frame.",
+    "This deliverable is the analysis, evidence and independently usable reconstruction specifications. It does not include a native CapCut project, generated image/video assets or an exported rebuilt video."
+  ],
+  "counts": {
+    "shots": 13,
+    "visual_states": 97,
+    "unique_assets": 40,
+    "motion_events": 59,
+    "unique_images": 18,
+    "audio_assets": 0
+  },
+  "deliverable_scope": "Evidence and reconstruction specifications; no generated assets, native editing project or final video export.",
+  "resume_instructions": "All seven stages finished. Read MASTER_REPORT.md and canonical CSVs. Reuse saved evidence; only revisit audio if an audio-bearing reference is supplied, or source inspection if its SHA-256 changes.",
+  "status": "COMPLETE_WITH_DOCUMENTED_LIMITATIONS",
+  "completed_at_utc": "2026-09-16T07:36:45.160282+00:00",
+  "evidence": {
+    "decoded_frames": 2419,
+    "saved_source_resolution_pngs": 193,
+    "inspection": "Full-duration sparse visual coverage; full-frame change screening; targeted adjacent and dense motion/reveal review."
+  },
+  "verification_command": "python3 00_source/verify.py"
+}

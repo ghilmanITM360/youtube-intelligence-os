@@ -1,0 +1,53 @@
+{
+  "video_slug": "what_if_all_visible_light_was_a_single_beam",
+  "reference_video": "/Users/ghilmanislam360/Downloads/What if all visible light was a single beam.mp4",
+  "audio_present": true,
+  "audio_verified": true,
+  "audio_reanalysis_required": false,
+  "audio_reanalysis_complete": true,
+  "current_stage": "COMPLETE_WITH_DOCUMENTED_LIMITATIONS",
+  "last_completed_shot": "S15",
+  "last_completed_state": "F15.0",
+  "last_completed_motion": "A18",
+  "last_completed_image": "IMG13",
+  "last_completed_capcut_shot": "S15",
+  "last_completed_i2v_shot": "S15",
+  "completed_files": [
+    "00_source/SOURCE_MANIFEST.md",
+    "00_source/audio/audio_original.aac",
+    "00_source/audio/audio.wav",
+    "00_source/verify.py",
+    "01_evidence/CONTACT_SHEET_1.jpg",
+    "01_evidence/CONTACT_SHEET_2.jpg",
+    "01_evidence/frames/ (124 source-resolution 1s-interval PNGs)",
+    "02_analysis/TIMELINE.csv",
+    "02_analysis/ASSET_MANIFEST.csv",
+    "02_analysis/MOTION_EVENTS.csv",
+    "02_analysis/VISUAL_DNA.md",
+    "03_capcut/CAPCUT_REBUILD.md",
+    "04_image_to_video/IMAGE_PROMPTS.md",
+    "04_image_to_video/ANIMATION_PROMPTS.md",
+    "04_image_to_video/I2V_REBUILD.md",
+    "05_audio/AUDIO_MAP.md",
+    "MASTER_REPORT.md",
+    "CONTINUATION_HANDOFF.md"
+  ],
+  "partial_files": [],
+  "known_issues": [
+    "No transcript available: local whisper/mlx-whisper install failed (broken system pip / truststore macOS-version-parsing bug). Audio structure analyzed via ffmpeg silencedetect instead (5 measured gaps); spoken words are UNKNOWN throughout. See 00_source/SOURCE_MANIFEST.md and 05_audio/AUDIO_MAP.md.",
+    "S05's small icon glyph near 'NOT SAFE!' and S06's third (partially framed) gravestone's text are illegible at source resolution; left UNKNOWN rather than guessed.",
+    "Long continuous motions (A13 ring wrap ~19.9s, A18 comet flight ~9.0s) were timed via 1s/4s interval sampling, not exhaustive native-frame verification; boundary seconds are best estimates (+/-1s)."
+  ],
+  "counts": {
+    "shots": 15,
+    "visual_states": 33,
+    "unique_assets": 30,
+    "motion_events": 18,
+    "unique_images": 13,
+    "audio_assets": 1
+  },
+  "next_required_action": "None. Project complete. If a working speech-to-text tool becomes available later, transcribe 00_source/audio/audio.wav and patch SPOKEN_WORDS_OR_AUDIO_CUE in TIMELINE.csv plus the AUDIO SYNC lines in CAPCUT_REBUILD.md/I2V_REBUILD.md; re-run 00_source/verify.py afterward. No other stage needs revisiting unless the source video itself changes (check SHA-256 in SOURCE_MANIFEST.md).",
+  "verification_command": "python3 00_source/verify.py",
+  "completed_at_utc": "2026-09-16T13:35:00Z",
+  "updated_at": "2026-09-16T13:35:00Z"
+}

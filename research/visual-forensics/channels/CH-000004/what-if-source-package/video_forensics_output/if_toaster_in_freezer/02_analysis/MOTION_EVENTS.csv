@@ -1,0 +1,39 @@
+MOTION_ID,SHOT_ID,SOURCE_STATE,TARGET_STATE,IN,OUT,MOVING_ELEMENT,ACTION,DIRECTION_OR_PATH,SPEED,AMPLITUDE,CAMERA,STATIC_ANCHORS,RELATIONSHIP,CONFIDENCE
+A01,S01,F01.0,F01.1,00:01.000,00:05.750,G01,Question banner/text reveal,Top-center opacity/type-on,Slow,Full banner width,Locked,C01;E01,STATE_REPLACEMENT,High
+A02,S01,F01.1,F01.3,00:05.750,00:10.750,Board illustration,Draw-on/reveal,Within board left-to-right and detail additions,Moderate,Board interior,Locked,C01;G01;board exterior,SEQUENTIAL,High
+A03,S01,F01.3,F02.0,00:10.750,00:10.950,Whole composition,Whole-frame enlargement/replacement,Board scene to refrigerator close view,Fast,Full frame,Change,No shared reliable anchor,STATE_REPLACEMENT,High
+A04,S02,F02.0,F02.1,00:12.250,00:14.750,G03,Heat strokes reveal,Upward above toaster,Moderate,About toaster height,Locked,E02;C02;O01;O03;O04,STATE_REPLACEMENT,High
+A05,S02,F02.1,F02.2,00:14.750,00:17.750,G03,Heat removed and frost specks appear,Upper compartment,Moderate,Compartment interior,Locked,E02;C02;O01;O03;O04,STATE_REPLACEMENT,High
+A06,S02,F02.2,F02.4,00:17.750,00:23.000,O02/O01,Bread/toaster state change,Vertical pop then replacement,Moderate,Small vertical pop,Locked,E02;C02;O03;O04,SEQUENTIAL,Medium
+A07,S02,F02.4,F02.5,00:23.000,00:25.250,G01/G03,"Grey wash, electrical arcs, caption",Full-frame darkening; arcs around subjects,Moderate,Full frame,Locked,E02;C02;O01;O03;O04,SIMULTANEOUS_COUPLED,High
+A08,S02,F02.5,F03.0,00:25.250,00:25.450,Whole composition,Hard cut,Scene to red bumper,Fast,Full frame,Change,None,STATE_REPLACEMENT,High
+A09,S03,F03.0,F04.0,00:29.250,00:29.450,Whole composition,Hard cut,Red bumper to white counter,Fast,Full frame,Change,None,STATE_REPLACEMENT,High
+A10,S04,F04.0,F04.1,00:30.250,00:32.750,O01,Toaster reveals,Appear at right side of counter,Slow,Small object area,Locked,E04;O03,STATE_REPLACEMENT,High
+A11,S04,F04.1,F04.2,00:32.750,00:34.500,G02,Headings reveal,Top left and top right,Moderate,Text only,Locked,E04;O01;O03,STATE_REPLACEMENT,High
+A12,S04,F04.2,F04.4,00:34.500,00:40.500,G03/O01,Heating graphics and coils reveal,Upward strokes then toaster face,Moderate,Toaster local region,Locked,E04;O03;G02,SEQUENTIAL,High
+A13,S04,F04.4,F04.5,00:40.500,00:42.000,O01/G02,Red glow and 600°C text reveal,Toaster body and below it,Moderate,Local glow,Locked,E04;O03;G02,STATE_REPLACEMENT,High
+A14,S04,F04.5,F05.0,00:42.000,00:42.200,Whole composition,Hard cut,Counter to scale,Fast,Full frame,Change,None,STATE_REPLACEMENT,High
+A15,S05,F05.0,F05.3,00:44.750,00:52.250,G02,Markers and bracket draw/reveal,Across horizontal scale,Moderate,Most frame width,Locked,E05,SEQUENTIAL,High
+A16,S05,F05.3,F06.0,00:58.000,00:58.200,Whole composition,Hard cut,Scale to burner analogy,Fast,Full frame,Change,None,STATE_REPLACEMENT,High
+A17,S06,F06.0,F06.1,01:00.250,01:03.250,G01,Speech bubble/text reveal,Above figure,Moderate,Upper-left quadrant,Locked,C01;E06;O01;G03,STATE_REPLACEMENT,High
+A18,S06,F06.1,F07.0,01:03.250,01:03.450,Whole composition,Hard cut,Burner analogy to group/freezer,Fast,Full frame,Change,None,STATE_REPLACEMENT,High
+A19,S07,F07.0,F07.1,01:08.500,01:10.250,O03,Freezer door closes,Door closes over upper compartment,Moderate,Door width,Locked,C03;lower refrigerator; cable,STATE_REPLACEMENT,High
+A20,S07,F07.1,F07.2,01:10.250,01:12.000,G03,Red rim glow and icy trails appear,Upper refrigerator then downward,Moderate,Upper half,Locked,C03;O03;O04,STATE_REPLACEMENT,High
+A21,S07,F07.2,F07.3,01:12.000,01:15.000,G02,~1000W label reveal,Inside freezer door,Moderate,Text only,Locked,C03;O03;O04;G03,STATE_REPLACEMENT,High
+A22,S07,F07.3,F08.0,01:15.000,01:15.200,Whole composition,Hard cut,Group scene to technical front view,Fast,Full frame,Change,None,STATE_REPLACEMENT,High
+A23,S08,F08.0,F08.3,01:17.000,01:25.500,G02,"Diagram arrows, labels, and equation draw/reveal",Compressor/coil then cable side,Moderate,Right half and top,Locked,E08;O03;O04,SEQUENTIAL,High
+A24,S08,F08.3,F08.4,01:25.500,01:28.000,O01/G02,Toaster and upward arrow appear,Inside upper compartment,Moderate,Upper compartment,Locked,E08;O03;O04;existing diagram labels,STATE_REPLACEMENT,High
+A25,S08,F08.4,F08.5,01:28.000,01:32.000,G02,Toaster COP label reveal,On toaster face,Moderate,Text only,Locked,E08;O01;O03;O04,STATE_REPLACEMENT,High
+A26,S08,F08.5,F08.7,01:32.000,01:45.000,G02/G03/O01,"Ambient arrows, heat rays, power labels, and red toaster state appear",Left-to-right diagram additions,Moderate,Whole appliance region,Locked,E08;O03;O04,SEQUENTIAL,High
+A27,S08,F08.7,F09.0,01:45.000,01:45.200,Whole composition,Hard cut,Technical diagram to ice-cream vignette,Fast,Full frame,Change,None,STATE_REPLACEMENT,High
+A28,S09,F09.0,F09.3,01:49.500,01:54.000,O01/G02/G03,"Toaster, glow, and temperature labels reveal",Left stand then above it,Moderate,Left third,Locked,C03;E09;G01,SEQUENTIAL,High
+A29,S09,F09.3,F10.0,01:58.000,01:58.200,Whole composition,Hard cut,Indoor vignette to bright winter exterior,Fast,Full frame,Change,None,STATE_REPLACEMENT,High
+A30,S10,F10.0,F10.1,02:01.250,02:03.000,E10/G01,Outdoor scene fades dark and temperature text changes,Full-frame opacity wash,Moderate,Full frame,Locked,C04;all geometry,SIMULTANEOUS_COUPLED,High
+A31,S10,F10.2,F10.3,02:07.000,02:09.000,O01/O05,Stool and toaster appear,Ground right of figure,Moderate,Lower middle,Locked,C04;E10;G01,STATE_REPLACEMENT,High
+A32,S10,F10.3,F10.4,02:09.000,02:11.000,O01/C04/G03,Toaster glows and figure pose changes,Local toaster halo and arm lean,Moderate,Lower-middle local area,Locked,E10;O05;G01,SIMULTANEOUS_COUPLED,High
+A33,S10,F10.4,F10.5,02:11.000,02:13.500,O02,Toast/object rises from toaster,Vertical above toaster,Moderate,Small,Locked,C04;E10;O01;O05,STATE_REPLACEMENT,Medium
+A34,S10,F10.5,F10.7,02:13.500,02:26.000,C04/G01,Reaction poses and ALWOOO... caption appear,Figure upright to hunched; text above/right,Slow,Left half,Locked,E10;O01;O05,SEQUENTIAL,High
+A35,S10,F10.7,F11.0,02:26.000,02:26.200,Whole composition,Hard cut,Outdoor night to panel scene,Fast,Full frame,Change,None,STATE_REPLACEMENT,High
+A36,S11,F11.0,F11.1,02:28.000,02:31.000,G01,First conclusion text reveals,Top-center,Moderate,Text only,Locked,C03;E11,STATE_REPLACEMENT,High
+A37,S11,F11.1,F11.2,02:31.000,02:33.000,G01,Second conclusion text reveals,Below first line,Moderate,Text only,Locked,C03;E11,STATE_REPLACEMENT,High
+A38,S11,F11.2,F12.0,02:33.000,02:33.200,Whole composition,Hard cut,Panel to red end card,Fast,Full frame,Change,None,STATE_REPLACEMENT,High

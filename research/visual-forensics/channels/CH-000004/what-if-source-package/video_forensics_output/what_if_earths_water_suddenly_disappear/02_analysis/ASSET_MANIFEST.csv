@@ -1,0 +1,42 @@
+ASSET_ID,TYPE,DESCRIPTION,MEDIA_FORMAT_NEEDED,TRANSPARENT_BG,FIRST_APPEARANCE,OTHER_APPEARANCES,REUSE_STATUS,SOURCE_OR_RECREATION_METHOD,NOTES
+C01,CHARACTER,"Bald stick-figure host/narrator, holds a paper, stands beside a blackboard",PNG,YES,F01.0,F01.1;F01.2;F01.3;F13.0;F13.1;F15.0;F15.1;F15.2,RECURRING (3 shots),Recreate as transparent-PNG stick figure matching xkcd house style,Same host design used across this project's other xkcd-family videos
+C02,CHARACTER,Walking stick-figure beach visitor,PNG,YES,F03.0,F03.1;F03.2;F05.0;F05.1,RECURRING,Recreate as transparent PNG,"Small, background-scale figure"
+C03,CHARACTER,Kayaker stick figure paddling small watercraft,PNG,YES,F03.0,F03.1;F03.2;F05.0,RECURRING,Recreate as transparent PNG,Paired with O02 watercraft
+C04,CHARACTER,Stick figure standing on exposed seafloor near water tower,PNG,YES,F04.2,,SINGLE-USE,Recreate as transparent PNG,
+C05,CHARACTER,"Household scene figures: one figure at a rooftop water tank, one figure departing with a dog toward a rowboat",PNG,YES,F11.0,F11.1,"SINGLE-USE (bundled, 1 shot)",Recreate as transparent PNG figure set (2 human figures + dog silhouette),Bundled as one asset since all elements are single-use and appear only within S11
+C06,CHARACTER,"Greeter figure/head entering frame beside the aquarium, says Hi!",PNG,YES,F17.0,,SINGLE-USE,Recreate as transparent PNG,Ambiguous design at native resolution; treat as a simple head/hair silhouette
+E01,ENVIRONMENT,"Blackboard classroom backdrop (blackboard, chalk tray, wall)",JPG/PNG,NO (full-frame),F01.0,F01.1;F01.2;F01.3;F13.0;F13.1;F15.0;F15.1;F15.2,RECURRING (3 shots),Recreate as full-frame background plate,Content drawn ON the blackboard varies per shot; treat board interior as a separate overlay region
+E02,ENVIRONMENT,"Tropical beach backdrop: palm tree, sloping sand, ocean water fill",JPG/PNG,NO (full-frame),F03.0,F03.1;F03.2;F05.0;F05.1;F05.2;F05.3;F05.4,RECURRING (2 shots),Recreate as full-frame background plate,
+E03,ENVIRONMENT,"Coastal town backdrop: cliff face, shoreline, dashed sea-level line",JPG/PNG,NO (full-frame),F04.0,F04.1;F04.2,SINGLE-USE (1 shot),Recreate as full-frame background plate,
+E04,ENVIRONMENT,Underwater cross-section backdrop: sloped/graded seafloor line and open water column,JPG/PNG,NO (full-frame),F06.0,F06.1;F06.2;F07.0;F08.0;F09.0;F09.1,RECURRING (4 shots),"Recreate as full-frame background plate, redrawn per depth scale",Depth scale and gray fill level change per state; treat as parametric background
+E05,ENVIRONMENT,Household rooftop/sink backdrop: house structure with wall-mounted water tank and sink,JPG/PNG,NO (full-frame),F11.0,F11.1,SINGLE-USE,Recreate as full-frame background plate,
+E06,ENVIRONMENT,Hillside/vegetation silhouette backdrop,JPG/PNG,NO (full-frame),F12.0,F12.1;F12.2;F12.3;F12.4;F12.5,SINGLE-USE (1 shot),Recreate as full-frame background plate,"Vegetation density/color changes are treated as motion, not new backgrounds"
+E07,ENVIRONMENT,"Volcano cross-section backdrop (mountain shape, rock layers)",JPG/PNG,NO (full-frame),F14.0,F14.1,SINGLE-USE,Recreate as full-frame background plate,
+E08,ENVIRONMENT,Black space backdrop with Sun and Moon shapes,JPG/PNG,NO (full-frame),F15.0,F15.1;F15.2,SINGLE-USE,Recreate as full-frame background plate,Drawn inside the E01 blackboard region
+E09,ENVIRONMENT,"Aquarium/tank cross-section backdrop: glass walls, rocks, water fill",JPG/PNG,NO (full-frame),F16.0,F17.0,RECURRING (2 shots),Recreate as full-frame background plate,
+O01,OBJECT,Simple chalk-drawn sailboat illustration (inside blackboard),PNG,YES,F01.1,F01.2;F01.3,SINGLE-USE,"Recreate as transparent PNG, sketch-line style",
+O02,OBJECT,Beach sailboat/kayak watercraft,PNG,YES,F03.0,F03.1;F03.2;F05.0;F05.1;F05.2;F05.3;F05.4,RECURRING,Recreate as transparent PNG,
+O03,OBJECT,Debris: dead fish and small grounded boats scattered on beach,PNG,YES,F05.1,F05.2,SINGLE-USE (1 shot),Recreate as transparent PNG scatter set,
+O04,OBJECT,Water tower structure,PNG,YES,F04.0,F04.1;F04.2,SINGLE-USE,Recreate as transparent PNG,
+O05,OBJECT,Small ship/fleet marks used across depth-scale diagrams,PNG,YES,F06.0,F06.1;F06.2;F07.0;F08.0;F09.1,RECURRING,"Recreate as transparent PNG icon, reused at multiple scales",Same icon reused at different sizes/positions per depth
+O06,OBJECT,Seaplane,PNG,YES,F10.0,F10.1;F10.2,SINGLE-USE (1 shot),Recreate as transparent PNG,
+O07,OBJECT,"Small creature silhouettes (fish, whale, dolphin) shown inside jars and the epilogue tank",PNG,YES,F10.2,F10.3;F10.4;F10.5;F16.0;F17.0,RECURRING (3 shots),Recreate as a transparent PNG creature set (3-4 designs),Same creature designs reused between the jar-diagram sequence and the aquarium epilogue
+O08,OBJECT,Household rowboat,PNG,YES,F11.0,F11.1,SINGLE-USE,Recreate as transparent PNG,Distinct design from O02 beach watercraft
+G01,GRAPHIC,Gray Q-card text-box graphic,PNG,YES,F01.0,,SINGLE-USE,"CapCut native shape+text, or generated PNG plate",Holds the video's title question and attribution
+G02,GRAPHIC,Title-card logo/wordmark graphic (torn-paper xkcd 'what if?' mark),PNG/VIDEO,YES,F02.0,,SINGLE-USE,Recreate as static PNG or reuse studio-provided title card asset,Full-frame red background is part of this graphic
+G03,GRAPHIC,Solid black 'VACUUM' fill graphic replacing the water area,PNG,YES,F03.1,,SINGLE-USE,CapCut solid-color shape + text overlay,
+G04,GRAPHIC,"Measurement overlay system: timer labels, vertical/curly-bracket scale markers, depth-axis tick marks",PNG/TEXT,YES,F05.3,F05.4;F06.0;F06.1;F06.2;F07.0;F08.0;F09.0;F09.1;F10.0,RECURRING (6 shots),CapCut native text + shape layers,Values change per state (1 SECOND -> ~6 SECONDS -> ~600/~30 SECONDS -> ~60 SECONDS); recreate as a template overlay with swappable text
+G05,GRAPHIC,Jar/tank container icon system used for the marine-life sequence,PNG,YES,F10.2,F10.3;F10.4;F10.5,SINGLE-USE (1 shot),"Recreate as transparent PNG jar outline, reused per row",
+G06,GRAPHIC,GASP! / WHEEZE! caption callouts,TEXT,N/A,F10.3,F10.4;F10.5,RECURRING (within 1 shot),CapCut native text layer,
+G07,GRAPHIC,Small footnote/asterisk caption box (ship-halves joke; water/climate caveat note),PNG/TEXT,YES,F07.0,F08.0;F12.5,RECURRING (3 shots),CapCut native text box,Reused format for two unrelated footnote jokes/caveats
+G08,GRAPHIC,Rain cloud and falling-rain-line graphic,PNG,YES,F12.0,F12.1,SINGLE-USE (1 shot),Recreate as transparent PNG / CapCut line animation,
+G09,GRAPHIC,Fire graphic (flame/ember shapes),PNG,YES,F12.3,F12.4;F12.5,SINGLE-USE (1 shot),"Recreate as transparent PNG, red/orange fill",
+G10,GRAPHIC,CO2 text-symbol cascade graphic,TEXT/PNG,YES,F12.5,F14.0;F14.1,RECURRING (2 shots),"CapCut native text layer, repeated instances",Same 'CO2' repeating-text motif reused in the volcano/carbonate diagram
+G11,GRAPHIC,Tombstone graphic reading RIP ALL LIFE ON EARTH / THANKS JOANNA,PNG,YES,F13.0,F13.1,SINGLE-USE,Recreate as transparent PNG illustration,
+G12,GRAPHIC,"Volcano/carbonate-silicate cycle annotation graphic: boxes, arrows, chemical formulas, red heat gradient",PNG,YES,F14.0,F14.1,SINGLE-USE,Recreate as layered PNG (labels separate from gradient for animation),Red gradient intensity is the only element that changes across F14.0->F14.1
+G13,GRAPHIC,"'~1,000,000,000 YEARS FROM NOW' / 'BYE!' caption overlay",TEXT,N/A,F15.0,,SINGLE-USE,CapCut native text layer,
+G14,GRAPHIC,"Red credits card graphic: logo, contributor list, book-cover thumbnails, GET THE BOOKS text",PNG,NO (full-frame),F18.0,,SINGLE-USE,Recreate as one full-frame plate or reuse studio-provided end card,Held/looped for the remainder of the runtime; treat as a single static plate
+T01,TEXT_SYSTEM,"Q&A question-card typography (bold sans, question + attribution line)",TEXT,N/A,F01.0,F13.0,RECURRING,CapCut native text style,
+T02,TEXT_SYSTEM,"Bold aside/exclamation caption typography (VACUUM, WORSE? FOR WHO?, Hi!)",TEXT,N/A,F03.1,F13.1;F15.0;F17.0,RECURRING,CapCut native text style,
+T03,TEXT_SYSTEM,"Small measurement/chemistry label typography (depth numbers, timer values, chemical formulas)",TEXT,N/A,F05.3,F06.0;F06.1;F06.2;F07.0;F08.0;F09.0;F09.1;F14.0;F14.1,RECURRING,CapCut native text style,
+AU01,AUDIO,"Undifferentiated full-mix audio track (continuous narration + any music/SFX, not separable)",AUDIO,N/A,N/A (whole runtime),,N/A,Extract from source; cannot be split into stems without source separation tooling not available here,No transcript; see 05_audio/AUDIO_MAP.md

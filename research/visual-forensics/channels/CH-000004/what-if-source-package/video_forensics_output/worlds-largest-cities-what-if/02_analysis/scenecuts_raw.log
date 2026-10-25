@@ -1,0 +1,66 @@
+ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.1.1.101)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      61.  1.101 / 61.  1.101
+  libavcodec     63.  1.101 / 63.  1.101
+  libavformat    63.  1.101 / 63.  1.101
+  libavdevice    63.  1.101 / 63.  1.101
+  libavfilter    12.  1.101 / 12.  1.101
+  libswscale     10.  1.101 / 10.  1.101
+  libswresample   7.  1.101 /  7.  1.101
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/ghilmanislam360/Downloads/YTDown.com_Shorts_What-would-the-world-s-largest-cities-be_Media_GgEGcxJRDik_001_1080p.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Duration: 00:01:23.41, start: 0.000000, bitrate: 1184 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR 9:16], 1051 kb/s, 24 fps, 24 tbr, 12288 tbn (default)
+    Metadata:
+      handler_name    : ISO Media file produced by Google Inc.
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      handler_name    : ISO Media file produced by Google Inc.
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[Parsed_showinfo_1 @ 0x89a82e580] config in time_base: 1/12288, frame_rate: 24/1
+[Parsed_showinfo_1 @ 0x89a82e580] config out time_base: 0/0, frame_rate: 0/0
+[Parsed_showinfo_1 @ 0x89a82e580] n:   0 pts:  54272 pts_time:4.416667 duration:    512 duration_time:0.0416667 fmt:yuv420p cl:left sar:1/1 s:1080x1920 i:P iskey:1 type:I checksum:6297BB04 plane_checksum:[298124CF EB712474 E47671C1] mean:[213 127 126] stdev:[35.2 4.8 5.7]
+[Parsed_showinfo_1 @ 0x89a82e580]   side data - H.26[45] User Data Unregistered SEI message: UUID=a4dcf53f-130a-291c-9bd6-1ac002e6bcaf
+[Parsed_showinfo_1 @ 0x89a82e580] User Data=313239393930333135333238353636383137383900
+[Parsed_showinfo_1 @ 0x89a82e580] 
+[Parsed_showinfo_1 @ 0x89a82e580] color_range:tv color_space:bt709 color_primaries:bt709 color_trc:bt709
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Video: wrapped_avframe, yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 24 fps, 24 tbn (default)
+    Metadata:
+      encoder         : Lavc63.1.101 wrapped_avframe
+      handler_name    : ISO Media file produced by Google Inc.
+  Stream #0:1(eng): Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s (default)
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+      handler_name    : ISO Media file produced by Google Inc.
+[Parsed_showinfo_1 @ 0x89a82e580] n:   1 pts: 108544 pts_time:8.833333 duration:    512 duration_time:0.0416667 fmt:yuv420p cl:left sar:1/1 s:1080x1920 i:P iskey:0 type:P checksum:D9AF921A plane_checksum:[48B4980E BD58AD53 77044CAA] mean:[191 125 124] stdev:[41.6 9.1 9.3]
+[Parsed_showinfo_1 @ 0x89a82e580] color_range:tv color_space:bt709 color_primaries:bt709 color_trc:bt709
+[Parsed_showinfo_1 @ 0x89a82e580] n:   2 pts: 221184 pts_time:18      duration:    512 duration_time:0.0416667 fmt:yuv420p cl:left sar:1/1 s:1080x1920 i:P iskey:0 type:P checksum:0A3DCA80 plane_checksum:[B4E805A9 DC4D2884 AB0A9C53] mean:[191 123 122] stdev:[42.3 10.7 11.0]
+[Parsed_showinfo_1 @ 0x89a82e580] color_range:tv color_space:bt709 color_primaries:bt709 color_trc:bt709
+frame=    3 fps=0.0 q=-0.0 size=N/A time=00:00:18.20 bitrate=N/A speed=  36x elapsed=0:00:00.50    [Parsed_showinfo_1 @ 0x89a82e580] n:   3 pts: 314368 pts_time:25.583333 duration:    512 duration_time:0.0416667 fmt:yuv420p cl:left sar:1/1 s:1080x1920 i:P iskey:0 type:P checksum:EC880922 plane_checksum:[10254208 4B834B27 71BA7BE4] mean:[190 126 124] stdev:[46.4 8.0 8.8]
+[Parsed_showinfo_1 @ 0x89a82e580] color_range:tv color_space:bt709 color_primaries:bt709 color_trc:bt709
+[Parsed_showinfo_1 @ 0x89a82e580] n:   4 pts: 435200 pts_time:35.416667 duration:    512 duration_time:0.0416667 fmt:yuv420p cl:left sar:1/1 s:1080x1920 i:P iskey:0 type:P checksum:4E23190A plane_checksum:[977B432D A6FDD03D CE2C0591] mean:[192 126 124] stdev:[46.9 8.6 9.9]
+[Parsed_showinfo_1 @ 0x89a82e580] color_range:tv color_space:bt709 color_primaries:bt709 color_trc:bt709
+frame=    5 fps=5.0 q=-0.0 size=N/A time=00:00:35.66 bitrate=N/A speed=35.5x elapsed=0:00:01.00    [Parsed_showinfo_1 @ 0x89a82e580] n:   5 pts: 515072 pts_time:41.916667 duration:    512 duration_time:0.0416667 fmt:yuv420p cl:left sar:1/1 s:1080x1920 i:P iskey:0 type:B checksum:026ED52F plane_checksum:[198951FC 7FA3AAB9 2734D86B] mean:[188 125 123] stdev:[38.6 9.7 10.3]
+[Parsed_showinfo_1 @ 0x89a82e580] color_range:tv color_space:bt709 color_primaries:bt709 color_trc:bt709
+[Parsed_showinfo_1 @ 0x89a82e580] n:   6 pts: 588288 pts_time:47.875  duration:    512 duration_time:0.0416667 fmt:yuv420p cl:left sar:1/1 s:1080x1920 i:P iskey:0 type:P checksum:7937076D plane_checksum:[F9B483A5 AD5CB87D 1D15CB2D] mean:[185 125 122] stdev:[36.4 10.0 10.8]
+[Parsed_showinfo_1 @ 0x89a82e580] color_range:tv color_space:bt709 color_primaries:bt709 color_trc:bt709
+frame=    7 fps=4.6 q=-0.0 size=N/A time=00:00:48.04 bitrate=N/A speed=31.8x elapsed=0:00:01.51    [Parsed_showinfo_1 @ 0x89a82e580] n:   7 pts: 802304 pts_time:65.291667 duration:    512 duration_time:0.0416667 fmt:yuv420p cl:left sar:1/1 s:1080x1920 i:P iskey:0 type:B checksum:BB45FAAC plane_checksum:[948297CD 2E2DC6E7 9AA29BE9] mean:[189 125 123] stdev:[39.7 9.7 10.2]
+[Parsed_showinfo_1 @ 0x89a82e580] color_range:tv color_space:bt709 color_primaries:bt709 color_trc:bt709
+[Parsed_showinfo_1 @ 0x89a82e580] n:   8 pts: 889344 pts_time:72.375  duration:    512 duration_time:0.0416667 fmt:yuv420p cl:left sar:1/1 s:1080x1920 i:P iskey:0 type:P checksum:B41D025D plane_checksum:[6E2C9FE9 382CD1ED A0BB9069] mean:[179 124 120] stdev:[41.9 11.6 11.8]
+[Parsed_showinfo_1 @ 0x89a82e580] color_range:tv color_space:bt709 color_primaries:bt709 color_trc:bt709
+frame=    9 fps=4.5 q=-0.0 size=N/A time=00:01:12.58 bitrate=N/A speed=  36x elapsed=0:00:02.01    [out#0/null @ 0x89a82c300] video:4KiB audio:14368KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=    9 fps=4.3 q=-0.0 Lsize=N/A time=00:01:23.40 bitrate=N/A speed=39.8x elapsed=0:00:02.09    
