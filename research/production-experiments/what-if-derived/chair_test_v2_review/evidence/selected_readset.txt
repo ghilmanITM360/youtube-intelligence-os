@@ -1,0 +1,540 @@
+
+## R02 Could you power your computer by typing?
+R02-01 2.016 F01.1 FRAME: Off-white portrait field; black rectangular presentation board spans x4–96%, y23–52%. Inside it a blank-headed stick typist sits left at a table with a sloped key fixture, two stacked books and open laptop to the right. Outside the board a standing blank-headed presenter at x13–35%, y56–88% holds a paper. Uniform flat ink, no photographic light or depth; white space above board. A scattered black TAP cloud fills upper/right board interior; small action ticks above the key fixture. 
+MOTION: TAP cloud appears in one frame | Cloud extends in one frame 
+NARRATION: ['What would be the cumulative energy of hundreds of thousands of keystrokes required to write a novel?']
+R02-03 28.222 F05.3 FRAME: Off-white field; outlined rectangular title 1.5 MILLIJOULES centered at x11–89%, y11–19%. Vertical comparison layout with large blank gaps. Flat black drawing, gray squirrel fill; no camera movement. Squirrel area is replaced with a slightly redrawn silhouette and two black ground/reference strokes directly beneath its feet. Title, droplet and caption persist; no gradual rise is visible. 
+MOTION: Local squirrel/ground state replacement | HARD CUT 
+NARRATION: ["It's also enough to lift a squirrel 300 microns all the way from the ground to the top of a stack of"]
+R02-05 56.443 F08.7 FRAME: Off-white field; long narrow table spans x15–97%, y52–55%, chair left. Faceless stick figure sits bent forward at left with hand against face; sloped four-key fixture with front socket sits before them. Empty table extends right. Flat black lines, fixed side view and large upper/lower negative space. Tiny upright cell-like object on far-right tabletop, with curved downward arrow from ~10 kJ above-right. 
+MOTION: Small object and annotation appear | HARD CUT 
+NARRATION: ['Writing one full novel would provide an off-energy to run a laptop for a total of about 30 seconds.']
+R02-06 70.554 F10.1 FRAME: Off-white portrait canvas; annual calendar rectangle x30–96%, y11–46%, twelve black month/date blocks in a 3-column by 4-row grid. Two red outlined booklets left labeled PART 1 and PART 2, each with red arrow to a calendar date; tiny dates too small for confident transcription. Upper composition fixed; lower half initially blank. Lower half adds seated stick figure at desktop computer, typing/action ticks above keyboard; curved speech leader to SOMEONE IS WRONG / ON THE INTERNET. centered around y53–61%. 
+MOTION: Lower callout group appears in one frame | HARD CUT 
+NARRATION: []
+R02-08 96.76 F13.0 FRAME: Off-white outdoor illustration; huge solid black leafy canopy fills top/upper-left, trunk down left side. Seated blank-headed figure leans against trunk with laptop on lap; closed book on ground at lower-left. On mid-right, ponytailed running-pose stick figure above curved ground line. Sparse grass strokes; lower area reserved for caption. Fixed wide drawing, flat ink without moving foliage. Outdoor drawing static; no caption. Runner is a still pose, not an animated running cycle. 
+MOTION: HARD CUT | Two-line caption reveal begins 
+NARRATION: ['Even for the fastest typists, writing is not a novel form of exercise.']
+03_capcut/CAPCUT_REBUILD.md 1. Set still duration by frame count, not a rounded decimal drag. All times below are global. Use timeline row boundaries for exact clip lengths. Hard cuts get zero transition duration.
+2. Register every full-frame source-aligned plate at 100% scale, center (0,0), zero rotation. When artwork is recreated at different bounds, match the evidence overlay at 50% opacity, then remove the alignment overlay. Positions/crop matches are APPROXIMATE until verified against the reference.
+3. For a state replacement, split at the A-ID IN frame and start the new PNG/overlay at full opacity. Do not interpolate position or add stock entrance animation. The one-frame event interval records the change; keep its result until the next applicable event.
+4. For reveals, animate a hard mask or crop over fixed artwork. A moving cover matching the background is an alternative when that version cannot keyframe a mask. For complex curves, a short sequence of traced progression PNGs gives tighter control inside CapCut.
+5. For S07 use separate black text strips and red stroke layers. Preserve source baselines and line breaks; do not allow auto-wrapping or automatic caption layout. Per-frame x extents are available in the evidence CSV. Do not confuse a wipe through letters with a new hand-writing animation.
+6. End with a held image on frame 2418. Export MP4/H.264, 1080×1920, 24 fps, no added audio. Check that the export contains 2,419 frames.
+BUILD:
+1. Trim the base plate to this shot’s canonical duration. Separate the changing media onto the listed overlay tracks.
+2. Apply the event operations below in
+04_image_to_video/IMAGE_PROMPTS.md - CHARACTER: C02 uses blank oval head and simple stick limbs; retain scene-specific pose. C03 always keeps the same ponytail and headset shape. C04 remains a held running pose. No invented eyes/clothes or breathing.
+- ENVIRONMENT: off-white flat field; only the recorded gray/dark/outdoor exceptions. No parallax or environment movement.
+- OBJECT: retain desk/chair geometry, laptop angles, and measured book counts. Cables and socket panels are separate matched variants.
+- STYLE: 2D irregular black ink, white interiors, limited gray fill and muted-red annotations. Original font/software/model/source library UNKNOWN.
+STANDALONE IMAGE PROMPT:
+Portrait 9:16 flat 2D ink illustration on a uniform off-white background. Slightly irregular near-black hand-drawn contours, no photoreal texture, no 3D shading or decorative effects. A thin rectangular presentation board fills the middle-upper area, from about 4% to 96% width and 23% to 52% height. Within the board, a faceless oval-headed stick person sits left in a round-backed office chair at a desk. A small sloped key fixture is before the hands; two books and an open laptop sit to the right. A second stick person stands outside the board below-left holding a sheet of paper, one arm on hip. Large empty top area and lower-right area. Fixed side-on diagram perspective. Preserve plain circular heads and stick proportions. No lettering or floating symbols.
+04_image_to_video/ANIMATION_PROMPTS.md A-IDs are shared with MOTION_EVENTS.csv. Each prompt specifies only change. These are control prompts; exact text, one-frame replacements and short reveals should be executed deterministically during final assembly because generative interpolation would reduce fidelity. No prompt is provided for a static hold.
+For every later event, SOURCE IMAGE means the named master **plus the current preceding composite state**. Preserve every already-added label, cloud and object. An instantaneous event needs a still replacement, not a generated movement clip. Its one-frame CLIP DURATION is the transition interval; the following held duration comes from TIMELINE.csv. For a reveal, the final changed frame is the fully visible target; OUT is exclusive.
+
+## R03 could_you_survive_nanosecond_sun
+R03-02 29.19 F03.3 FRAME: Center panel adds TOO MANY NANOSECONDS text at lower right; all three panels remain 
+MOTION: Text reveal | Hard cut 
+NARRATION: []
+R03-04 87.57 F07.5 FRAME: Black spiky FLASH badge appears by far-right axis and later fades while chart remains 
+MOTION: Graphic reveal | Hard cut 
+NARRATION: ['only fading as your retinal cells finally quieted down.']
+R03-05 116.76 F09.1 FRAME: White spoof ad: heading NEW: TELEPORTATION FUNCTION!; large O09 phone center; black and red annotations around it 
+MOTION: Hard cut | Hard cut 
+NARRATION: ["The sun's surface is relatively cool."]
+R03-07 175.14 F12.2 FRAME: Text TEMPERATURE ≠ HEAT appears across center above C06 
+MOTION: Text reveal | Text reveal 
+NARRATION: ["but temperature and heat aren't the same thing."]
+03_capcut/CAPCUT_REBUILD.md States: F03.0–F03.3. Media: E02, O05, C02, C03, E03, T01/T02. Stack: V4 labels; V3 O05/C03; V2 side C02; V1 E02. Start three-panel layout. At 00:20.000 update center gradient/labels; 00:24.500 add approximately 5800 K; 00:28.000 add TOO MANY NANOSECONDS. Use editable text and replaced center-panel stills, not animated gradients. Hard cut at 00:29.417. Audio: AU01.
+State: F05.0. Media: E03, C03, T01/T02. Stack: V3 text/red BAD line; V2 C03; V1 E03. Compose fixed bright curve at right. Hold. Hard cut at 00:42.250. Fidelity limit: source small technical lettering is only partially legible; recreate only verified readable text.
+04_image_to_video/IMAGE_PROMPTS.md - **Style:** flat hand-drawn science-comic line art, black thin irregular ink lines on warm white, sparse muted red annotations, locked orthographic-like wide framing, no texture gradients except stated Sun edge.
+- **C01:** gender-neutral stick lecturer, circular blank head, black line body, holds a paper/pointer.
+- **C02:** black-line explorer with simple helmet and hand gear. **C03:** white-outline human figure on near-black field. **E02:** snow ground and ice-roof cave entrance. **E03:** dark field with a broad soft gray-to-white curved solar edge at right.
+### IMG01 — S01 F01.0
+TEXT BAKED: NO. 16:9 warm-white hand-drawn science-comic frame. Black-line lecturer holding paper at far left, large blank rectangular whiteboard with tray centered/right, broad empty board area, no other objects. Locked wide shot. Keep top band clear for an editor-added gray question banner.
+04_image_to_video/ANIMATION_PROMPTS.md Hard cuts/state swaps (A04, A05, A09, A12–A17, A24–A35, A40, A44, A46) belong in final assembly; do not send them to I2V. Use I2V only where observed drawing/reveal change benefits from interpolation. Prompts below are under 500 characters.
+Locked triptych. In center dark doorway only, gently reveal existing pale heat glow and small non-text graphic marks. Keep cave, ice roof, side explorers, center figure, panel edges and camera fixed. No character movement. End with brighter center panel.
+
+## R04 drained_oceans
+R04-01 2.183 F01.1 FRAME: Same display adds small white PORTAL label and left-pointing arrow beside lower-right mouth of trench. Presenter remains reading. 
+MOTION: None | None 
+NARRATION: ['How quickly would the oceans drain if a circular portal 20 meters in diameter appeared at the bottom of the challenge']
+R04-02 15.283 F02.2 FRAME: Mars display becomes dense vertical grey water curtain filling most rectangle above black ground; red top line remains. Presenter unchanged. 
+MOTION: None | Hard cut 
+NARRATION: ["evidence of liquid water on Mars' surface. So what happens back on Earth when the portal opens?"]
+R04-03 30.567 F06.0 FRAME: Wide black ocean-floor cross-section across lower half: broad grey water/void above, deep narrow grey trench near right-center. White labels identify average ocean depth and Challenger Deep; a small -1cm/DAY marker sits near top. 
+MOTION: Hard cut | None 
+NARRATION: ['the oceans are huge. The water level would drop by much less than a centimeter per day.']
+R04-08 104.8 F16.0 FRAME: White panel with headline WHERE HAS THE WATER GONE? and smaller CONSPIRACY THEORISTS CLAIM IT'S ON MARS! A hand-drawn news TV frame below contains a reporter with microphone and NEWS bug; lower strap reads NETHERLANDS FOUNDED NEW GIETHOORN. 
+MOTION: Hard cut | Hard cut 
+NARRATION: ["extinctions at every level. But it's possible, if unlikely, that humans could manage to survive."]
+03_capcut/CAPCUT_REBUILD.md - Canvas: 9:16 portrait; 1080 x 1920; 24 fps; 01:49.227.
+- Background: white for board scenes; black behind C03/map lower field.
+- Master audio: AU01 on A1, unchanged. Align first sample to 00:00.000.
+- Text: T01 closest hand-drawn uppercase. Do not claim original font. White text over black, black over white, red only for G01/G02/G03/G08.
+- Effects: none globally. No camera keyframes, glow, parallax, drift or added motion.
+- 00:41.042: hard cut in 0m map. 00:42.708: replace text 0m with -50m and C03 pose (A14). 00:45.500: add G08 whole red callout set (A15).
+- Tools: cut, text, overlay. No tween. End: F07.2.
+04_image_to_video/IMAGE_PROMPTS.md All: recreate observed hand-drawn explainer style, thin irregular black ink outlines, flat white/light-grey/black fills, muted red only where stated, portrait 9:16, locked orthographic graphic composition. **TEXT BAKED: NO** unless stated; add exact T01/G overlays in final assembly.
+- **Style:** blank white paper-like field, no texture beyond uneven ink contours; no realism, shadows, gradients, camera blur or decorative particles.
+- **C03 map presenter:** white single-line stick figure with blank circular head and angular limbs, against black lower field; static pose variants as needed.
+- **E08 map:** grey world ocean, white continents with black coastline ink, black field below; keep projection and continent placement identical across all depth variants.
+04_image_to_video/ANIMATION_PROMPTS.md Only A06 and A10 show continuous change requiring I2V. Other A-IDs are hard cuts, discrete layer/pose replacements, or text/shape reveals; assemble those directly so generator drift does not reduce fidelity.
+## State-replacement handling
+
+## R05 earthquake-magnitude-shorts-wBLVmEZV2Oc
+R05-03 18.468 UNMAPPED FRAME:  
+MOTION:  |  
+NARRATION: ['A magnitude 9 earthquake already measurably alters the rotation of the Earth.']
+R05-05 36.937 UNMAPPED FRAME:  
+MOTION:  |  
+NARRATION: ['A magnitude 15 earthquake would be a million times more powerful than that,']
+R05-06 46.171 F01.17 FRAME: Same cracked/spiky globe. A stick figure with raised arms and a shout/scribble mark over its head fades in to the right. 
+MOTION: A17 | A18 
+NARRATION: []
+R05-07 55.405 F01.20 FRAME: Same title/subtitle. A chaotic illustration fades in below: the earth broken into irregular chunks with debris and radiating streak lines, i.e. the planet visibly shattering. 
+MOTION: A20 | A21 
+NARRATION: ['To put it another way, the Death Star caused a magnitude 18 earthquake on Alderron.']
+03_capcut/CAPCUT_REBUILD.md ## PROJECT SETUP
+- CANVAS / ASPECT RATIO: 9:16
+- RESOLUTION: 1080x1920
+- FPS: 24
+- TOTAL DURATION: 65.96s (round timeline to 66s)
+- BACKGROUND: solid white (#FFFFFF), set as canvas color for the whole project (no background clip needed)
+- MASTER AUDIO: AU01 narration (write/record new lines per state, see AUDIO_MAP.md) + optional AU02 music bed, low volume, ducked under narration
+- GLOBAL FONT/TEXT SYSTEM: one bold hand-drawn/marker-style caps font for T01 (titles), same family at smaller regular weight for T02 (captions) — pick one CapCut font (e.g. "Permanent Marker" or similar bundled font) and reuse for both via size/weight variation only
+- GLOBAL COLOR RULE: black line art + grey flat fills on white canvas; red reserved only for annotation/alert marks (strike-throughs, circles, epicenter rings, scribbles) — never used elsewhere
+- GLOBAL EFFECTS: none (no filters, no LUTs, no vignette observed)
+## MEDIA TO IMPORT
+Reference ASSET_MANIFEST.csv for full descriptions. Import as transparent PNGs unless noted:
+T01, T02 (built as CapCut text layers, not images), E01, O01, O02, G01 (one frame, reused 3x), C01 (4 pose variants), E02 (ruler — build as CapCut shapes+text, not an image, so it can be keyframed), E03 (4 damage-state PNGs, or 1 base + 3 additive overlay PNGs), O05, O03, O04 (2 density variants), AU01, AU02.
+04_image_to_video/IMAGE_PROMPTS.md Master style, reused in every prompt below: black-line hand-drawn/marker-sketch illustration style, thin uniform stroke weight, flat light-grey fills only (no gradients, no 3D shading, no textures), pure white background, no camera perspective (flat 2D graphic), vertical 1080x1920 canvas with generous negative space around the subject so text can be added on top later.
+## IMG01
+USED BY SHOTS / STATES: F01.0-F01.2
+SOURCE STATE: opening
+REUSE RELATIONSHIP: none (single use)
+TEXT BAKED: NO (title text added in final assembly, per TEXT RULE)
+STANDALONE IMAGE PROMPT:
+"Black-line hand-drawn sketch illustration of an old mechanical seismograph: a wooden stand holding a paper-drum recorder on the left connected to a long pen arm on the right, with a thin wavy ink line already drawn on the paper. Flat light-grey shading on the drum and stand only, no gradients, no 3D rendering. Pure white background, centered composition, wide empty margin above and below for text overlay. Vertical 1080x1920 frame, flat 2D orthographic view, no camera perspective, no additional objects."
+04_image_to_video/ANIMATION_PROMPTS.md Each prompt ≤500 characters, focused on change-through-time only (appearance already established by the source image). Static holds are NOT animated — see I2V_REBUILD.md for which states use ANIMATION REQUIRED: NO.
+
+## R06 how_long_could_you_drive_towards_the_sunset
+R06-01 2.598 F01.0 FRAME: White chalkboard fills frame on a stand with a wooden ledge/eraser tray; a small chalk-drawn globe (grey continents on white circle) sits center-left with a soft grey shadow gradient to its right; thin white squiggle lines along the left edge suggest chalk-dust/motion; a plain stick figure stands below-left holding a sheet of paper, reading it. 
+MOTION: CUT (video start) | CONTINUOUS (into A01) 
+NARRATION: ["What's the longest possible sunset you can experience while driving,"]
+R06-03 36.365 F05.1 FRAME: Same globe; a red curved arrow and "1000 km/h" label appear along the terminator near the equator, then a second matching "1000 km/h" arrow/label appears above it. 
+MOTION: CONTINUOUS (from A10) | CONTINUOUS (into A11) 
+NARRATION: ['So if you fly west in a commercial airliner, you can experience an arbitrarily long sunset,']
+R06-05 72.73 F09.2 FRAME: Same three figures; the small inset diagram has grown a second yellow/grey circle pair with a short red down-arrow between the two pairs. 
+MOTION: CONTINUOUS (from A20) | CUT (hard cut to S10) 
+NARRATION: ["If you're in northern Scandinavia on a day when the sun just barely sets and then rises again,"]
+R06-08 124.68 F14.3 FRAME: Same scene; two more captions appear stacked at upper area: "LENGTHENING THE SUNSET" and, beneath it, "PUSHING BACK THE NIGHT", both with leader lines to the spinning figure. 
+MOTION: CONTINUOUS (from A32) | CONTINUOUS (into A33) 
+NARRATION: ["slows the Earth's rotation. It's true that it will only add an imperceptibly small fraction of"]
+03_capcut/CAPCUT_REBUILD.md ## Project setup
+- CANVAS / ASPECT RATIO: 9:16 vertical (480x854 source; recommend building at 1080x1920 and matching crop).
+- RESOLUTION: 1080x1920 (or 480x854 to match source 1:1).
+- FPS: 24.
+- TOTAL DURATION: 129.875s (3117 frames at 24fps).
+- BACKGROUND: varies per shot — see MEDIA per shot below (white canvas, chalkboard, vignette, painterly plates, maps).
+- MASTER AUDIO: AU01 (single full-mix track) on A1, placed at 00:00.000, untouched — do not split narration/music, no verified separation exists.
+- GLOBAL FONT/TEXT SYSTEM: one consistent white, rounded/hand-lettered sans-serif style for every caption instance of T01-T04.
+- GLOBAL COLOR RULE: red is reserved exclusively for rejection marks (X), directional arrows, and callout labels; green is reserved for confirmation checks; do not use either color elsewhere.
+- GLOBAL EFFECTS: none — every shot uses a static locked camera; do not add camera moves, zooms, or particle effects anywhere in this rebuild.
+### Media to import
+E01 chalkboard BG · C01 stick-figure PNG · G14 chalk-globe PNG · G01 yellow-circle shape · G02 grey-circle shape · G03 horizon-line shape · G04 mountain-silhouette shape · G05 flashlight-rig PNG · G06 2D globe PNG · G07 3D wireframe-globe PNG · G08 car-icon shape · G09 snow-tractor PNG · E02 polar-dusk-sky BG · C03 seals PNG · E03 mountain-ridge silhouette · G10 hatchback-car PNG · G11 map-inset PNG · G12 legend-icon PNG · E04 coastline-map BG · E05 office-desk BG · G13 PyEphem-icon PNG · E06 church-silhouette PNG · E07 painterly-sunset BG · C02 camera-crew-silhouette PNG · T01-T04 native CapCut text 
+04_image_to_video/IMAGE_PROMPTS.md 14 numbered image entries (IMG01-IMG14) cover all 14 shots — one unique source image per shot, since each shot's background/composition differs substantially from every other shot (no two shots share a background plate in this video, unlike the more repetitive prior project). Default TEXT BAKED = NO for all; add captions as overlay text in final assembly per `02_analysis/TIMELINE.csv` for exact wording/timing.
+## IMG01
+USED BY SHOTS / STATES: S01 (F01.0, source for chained animation into F01.1)
+SOURCE STATE: F01.0
+REUSE RELATIONSHIP: unique, first appearance
+TEXT BAKED: NO
+STANDALONE IMAGE PROMPT:
+Flat 2D vector illustration, 9:16 vertical. A white chalkboard/whiteboard panel fills the frame, mounted on a thin wooden ledge along the bottom edge holding an eraser. On the board, left-of-center, a simple chalk-drawn globe: a circle with light-grey continent shapes and a soft darker-grey shading gradient on its right side. A few thin white curved squiggle lines sit along the left edge of the board suggesting chalk dust or motion. Below the board, a minimal white stick figure (plain circle head, no facial features, thin line limbs) stands holding a small rectangular sheet of paper up in a reading pose. Flat, shadeless lighting; palette is white/black/grey only, no color accents. Clean minimal line-art style, straight-on flat perspective, no camera tilt, no depth/parallax layers.
+04_image_to_video/ANIMATION_PROMPTS.md 34 animation events (A01-A34), one per motion in `02_analysis/MOTION_EVENTS.csv`. Every prompt is ≤500 characters and describes only change-through-time; static appearance is already established by the source image.
+## A01
+SHOT ID: S01
+SOURCE IMAGE: IMG01
+SOURCE STATE: F01.0
+TARGET STATE: F01.1
+CLIP DURATION: ~4.8s
+MOVING ELEMENT: chalk-drawn globe
+STATIC ANCHORS: chalkboard frame, ledge, stick figure
+ANIMATION PROMPT:
+Locked camera. The chalk-drawn globe on the board slowly rotates in place, continent shapes shifting as if spinning on a vertical axis, while faint chalk-motion squiggles along the left edge pulse subtly. A small curved arrow fades in on the globe near the end indicating spin direction. Keep the chalkboard, ledge, and stick figure completely fixed. End with the globe mid-rotation and the arrow visible.
+
+## R07 if_all_humans_died
+R07-02 42.531 F08.0 FRAME: White card at left reads 'FUEL ENERGY CONTENT IN MJ/KG' with sugar, coal, fat, gasoline and uranium values. A long curled black-and-white energy strip fills center/right; 76,000,000 label near right. 
+MOTION: hard cut | state replacement 
+NARRATION: ["Nuclear reactors, of course, don't require a steady supply of fuel."]
+R07-04 127.593 F18.0 FRAME: White battery taxonomy sheet: six labeled battery types in two rows; red fill marks charge/content in several icons. 
+MOTION: hard cut | hard cut 
+NARRATION: ['Modern turbines are typically rated to run for three years without servicing and there are no doubt some which would run for decades.']
+R07-06 212.654 F27.0 FRAME: Dark grey field. Cyan-glowing 'CESIUM 137' label bar sits lower center. White graph card above reads '30 YEAR HALF LIFE CESIUM-137' with red descending curve; objects hold. 
+MOTION: hard cut | hard cut 
+NARRATION: ['If we follow a strict definition of lighting, solar-powered lights and remote locations could conceivably be the last surviving human light source.']
+R07-07 255.185 F29.0 FRAME: Static red end-credit/book card. Black illustrated animal/cart motif at left; book covers bottom center; small white credits and URLs at right. 
+MOTION: hard cut | end 
+NARRATION: ["This light is called Cherenkov radiation and it's seen in the distinctive blue glow of nuclear reactor cores."]
+03_capcut/CAPCUT_REBUILD.md Source states: F01.0, F01.1, F01.2. Media: E01, C01, C02/C03, O01, G01. Tracks: V4 G01, V3 C01, V2 C02/C03, V1 E01, A1 AU01. Initial composition: presenter left; display right; quote top. Build: hold E01/O01/G01; overlay C01/C02. Keyframes: 02.000 replace black overlays with red; 04.000–08.667 use C03 opacity 100–0 and darken display/lamp overlay. Tools: overlay, opacity, blend/mask only for local speckles. Audio sync: opening narration. Transition: hard cut at 08.667. End: F01.2.
+Source states: F03.0, F03.1. Media: E02. Tracks: V2 window-light mask, V1 E02, A1 AU01. Initial: skyline full frame. Build: duplicate E02; mask white window areas on top copy. Keyframes: approx. 13.500–15.750 top-copy opacity 100–0 or replace lit-window plate with dark-window plate. No camera change. End: F03.1.
+04_image_to_video/IMAGE_PROMPTS.md All images: 16:9, locked front-facing 2D hand-drawn explanatory illustration, uneven black ink outlines, off-white paper field, flat charcoal/grey fills, no photorealism, no depth-of-field, no camera distortion, no baked text unless stated. Keep empty space for editor text. Text baked: NO by default.
+| Image ID | Used by shots/states | Source/reuse | Text baked | Standalone image prompt |
+|---|---|---|---|---|
+| IMG01 | S01 F01.0–F01.2 | new | NO | 16:9 flat hand-drawn ink diagram. Off-white field; black stick presenter holding paper at far left; large outlined dark display on right with small stick figure and tall floor lamp; broad clear rounded-card area across top. Black ink, charcoal fill, fixed camera. |
+| IMG02 | S02 F02.0 | new | YES only if authorized | Flat red 16:9 title-card clean plate with black whimsical line-art object cluster upper center and clear central white-title area; no invented logos or wording; no motion. |
+| IMG03 | S03–S04 | new | NO | 16:9 dark charcoal night city skyline, black rectangular buildings and many glowing white windows on black ground, sparse tiny stars; reserve right third for later domestic-room wipe; front-facing hand-drawn ink style. |
+| IMG04 | S04 | new | NO | 16:9 quiet domestic room, TV at left, armchair center-left, small drawer cabinet and lamp center-right, refrigerator far right, pale grey/white wall, front-facing flat ink drawing, no people, no text. |
+| IMG05 | S05,S07–S09 | new | NO | 16:9 white industrial silhouette scene: cooling tower with outlined smoke left, black factory mass across lower third, dark reactor openi
+04_image_to_video/ANIMATION_PROMPTS.md Each prompt is under 500 characters. Use only listed passes. Static timeline states require no I2V generation.
+Locked camera. Change only presenter and small display stick figure from black outline to red outline. Keep quote-card area, display border, lamp, room, placement, scale and lighting fixed. End with both figures red and intact.
+
+## R08 if_toaster_in_freezer
+R08-02 22.709 F02.4 FRAME: Close refrigerator scene holds with toaster compartment visually altered/darker; observer remains at right. 
+MOTION: State replacement | Warning overlay 
+NARRATION: []
+R08-04 68.127 F07.0 FRAME: Three black-line people flank refrigerator: two at left, glasses-wearing figure at right; freezer door is open with toaster visible inside. 
+MOTION: Hard cut | Door close 
+NARRATION: ['If you left both the toaster and the freezer running, which would win in the long term?']
+R08-05 90.837 F08.5 FRAME: Toaster gets COP ≈ 1 label; compressor COP ≈ 3 and EOUT/EIN markings remain. 
+MOTION: Text reveal | Ambient arrows 
+NARRATION: ["So toaster is less efficient than a freezer, but it's far more powerful."]
+R08-06 113.546 F09.2 FRAME: Toaster glows red and 600°C label appears above/near it. 
+MOTION: Text/overlay reveal | Cold label 
+NARRATION: ['The freezer can make the air around the toaster cold, but remember to the toaster all our air is cold.']
+03_capcut/CAPCUT_REBUILD.md - Canvas: 16:9 landscape, 1920 x 1080, 24 fps; total 02:42.261.
+- Background: white for line-art shots; use E03/E12 red full-frame plates where called.
+- Master audio: AU01 extracted from source MP4; lock before visual editing.
+- Text: T01 closest hand-drawn uppercase/handwriting match. Use native text for exact readable words; never bake generator text.
+- Color: black line art on near-white; red only for heat, diagrams, title/end-card fields.
+- Global effects: none. Use local red glow only in F04.5, F07.2, F08.7, F09.2, F10.4–F10.7; grey opacity wash only F02.5 and F10.1 onward.
+`C01–C04, E01–E12, O01–O05, G01–G03, T01, AU01` from `ASSET_MANIFEST.csv`. Build each E plate clean; use transparent overlays for objects/graphics that change. For each listed state replacement, an exported state plate is valid and closer than invented interpolation.
+04_image_to_video/IMAGE_PROMPTS.md `Flat hand-drawn black ink line art on an off-white paper background, 16:9. A minimal round-headed stick-figure lecturer stands at far left, facing a large empty rectangular whiteboard occupying center and right. Two small erasers sit on the board rail. Sparse thin imperfect black lines, no shading, no color, locked straight-on wide composition, generous blank space above board.`
+`Flat 2D hand-drawn black line art on off-white, 16:9. Open refrigerator fills left-center, top freezer compartment open with a simple two-slot toaster inside; lower refrigerator door, outlet and cable at far left, hanging lamp top-right. Minimal round-headed observer stands at right. Thin imperfect ink outlines, straight-on locked camera, no color, leave appliance interior clean for overlays.`
+04_image_to_video/ANIMATION_PROMPTS.md All prompts are under 500 characters. Use state plates/editor overlays for cuts, labels, diagrams, and static holds; do not ask I2V to invent readable text.
+| Animation ID | Shot | Source image | Source/target | Clip duration | Moving element | Static anchors | Animation prompt |
+|---|---|---|---|---:|---|---|---|
+| A01 | S01 | IMG01 | F01.0/F01.1 | 4.75 s | Banner overlay | Lecturer, board, erasers | Locked camera. Fade in a light-grey question banner above board; no movement in lecturer, board, erasers, lighting, or frame. Add exact text in editor. End with fully visible banner. |
+| A02 | S01 | IMG01 | F01.1/F01.3 | 5.00 s | Board sketch layers | Lecturer, board outer frame, banner | Locked camera. Reveal black-line refrigerator, observer, toaster, and small appliance details only inside board. Draw left-to-right in two stages. Keep lecturer, banner, board frame, lighting, and composition fixed. |
+| A03 | S01 | IMG01/IMG02 | F01.3/F02.0 | 0.20 s | Whole frame | None | Do not generate. Editor hard state replacement from board scene to refrigerator close plate. |
+| A04 | S02 | IMG02 | F02.0/F02.1 | 2.50 s | Red heat strokes | Refrigerator, observer, toaster, lamp, outlet | Locked camera. Thin red heat strokes gradually appear upward above toaster only. Keep refrigerator, observer, toaster body, lamp, outlet, lighting, and framing fixed. |
+| A05 | S02 | IMG02 | F02.1/F02.2 | 3.00 s | Heat/frost overlays | Refrigerator, observer, toaster, lamp, outlet | Locked camera. Remove red heat strokes and replace with sparse pale frost specks in upper freezer compartment. Keep all obje
+
+## R09 weird_and_worrying_questions
+R09-01 0.949 F01.0 FRAME: White canvas. Fixed locked-camera composition: a plain bald stick figure (C01) sits at a desk (O01) with a monitor and keyboard, right side of frame; a large scalloped thought-bubble outline (G01) occupies the upper portion of the frame when active. Gray Q-card (T01) top-left: ‘Would it be possible to get your teeth to such a cold temperature that they would shatter upon drinking a hot cup of coffee?’ — Shelby. C01 already holds a physical coffee mug (O02) in hand at the desk. No thought bubble content yet. 
+MOTION: CUT (video start) | N/A (continuous) 
+NARRATION: ['Shelby asks, would it be possible to eat your teeth to such a cold temperature that they would shatter upon drinking a hot cup of coffee?']
+R09-02 6.644 F01.6 FRAME: White canvas. Fixed locked-camera composition: a plain bald stick figure (C01) sits at a desk (O01) with a monitor and keyboard, right side of frame; a large scalloped thought-bubble outline (G01) occupies the upper portion of the frame when active. Gray Q-card (T01) top-left: ‘Would it be possible to get your teeth to such a cold temperature that they would shatter upon drinking a hot cup of coffee?’ — Shelby. C01's physical mug (O02) is flung away from frame (motion lines trailing up-left) while C01's head tilts in a reaction pose; bubble content (G02;G03;G04) holds unchanged. 
+MOTION: CUT | CUT 
+NARRATION: ['Thank you, Shelby, for my new recurring nightmare.']
+R09-04 19.932 F01.12 FRAME: White canvas. Fixed locked-camera composition: a plain bald stick figure (C01) sits at a desk (O01) with a monitor and keyboard, right side of frame; a large scalloped thought-bubble outline (G01) occupies the upper portion of the frame when active. Gray Q-card (T01) top-left: ‘Given humanity’s current knowledge and capabilities, is it possible to build a new star?’ — Jeff. The standing figure (G06) now has a speech line reading '...MAYBE' (T02), held for ~2s. 
+MOTION: CUT | CUT 
+NARRATION: ['What are you planning?']
+R09-06 33.221 F01.19 FRAME: White canvas. Fixed locked-camera composition: a plain bald stick figure (C01) sits at a desk (O01) with a monitor and keyboard, right side of frame; a large scalloped thought-bubble outline (G01) occupies the upper portion of the frame when active. Gray Q-card (T01) top-left: ‘Would dumping anti-matter into the Chernobyl reactor when it was melting down stop the meltdown?’ — AJ. Reactor building with radiation triangle and 'ANTIMATTER →' label held static, no change (~3s). 
+MOTION: N/A (continuous) | N/A (continuous) 
+NARRATION: ['AJ asks, would dumping antimatter into the Chernobyl reactor when it was melting down stopped the meltdown?']
+R09-08 45.56 F01.25 FRAME: Q-card and thought bubble clear to blank; a short caption '...KARL' (T02) appears above C01, implying an off-panel voice. 
+MOTION: CUT | CUT 
+NARRATION: ['Carl, is everything okay?']
+03_capcut/CAPCUT_REBUILD.md ## CapCut project setup
+- CANVAS / ASPECT RATIO: 9:16
+- RESOLUTION: 1080x1920
+- FPS: 24
+- TOTAL DURATION: 00:47.458 (1139 frames)
+- BACKGROUND: solid white (E01), full duration
+- MASTER AUDIO: AU01, single continuous track from 00:00.000
+- GLOBAL FONT/TEXT SYSTEM: two text styles reused throughout — T01 (Q-card: gray rounded-rectangle shape, sentence-case body text, smaller bold "— Name" line) and T02 (bold all-caps hand-drawn-style font, selective underline for emphasis)
+- GLOBAL COLOR RULE: black line art on white; red fill reserved for the thermometer mercury (G03) only
+- GLOBAL EFFECTS: none (no filters, LUTs, or transitions beyond hard cuts/fades on individual layers)
+## Media to import
+Reference `../02_analysis/ASSET_MANIFEST.csv` for full detail. Import checklist:
+- C01 — narrator stick-figure PNG (base + drinking + exasperated pose variants)
+- C02 — detective/mirrors-aside character PNG
+- O01 — desk/monitor/keyboard PNG
+- O02 — coffee mug PNG (in-hand + thrown variants)
+- G01 — thought-bubble outline PNG
+- G02 — teeth PNG (intact + shattered variants)
+- G03 — thermometer PNG (mercury-high + mercury-low variants)
+- G04 — steaming mug (bubble illustration) PNG
+- G05 — ring/beam/sunburst composite PNG
+- G06 — standing figure (bubble) PNG
+- G07 — volcano PNG (static + erupting variants)
+- G08 — reactor building PNG (intact + meltdown variants)
+- G09 — "ANTIMATTER →" label PNG or native text
+- G10 — award plaque PNG (heading-only + with caption line variants, or build caption as an overlay)
+- G11 — crying figure PNG (puddle-growth variants)
+- AU01 — full-mix audio WAV/AA
+04_image_to_video/IMAGE_PROMPTS.md All Q-cards (T01) and captions (T02) are added as editor text overlays in final assembly (TEXT BAKED: NO throughout) — generated images contain only the character, desk, and thought-bubble graphic content. Master continuity references below apply to every prompt.
+## Master continuity references
+- **C01 (narrator)**: plain black-outline stick figure, round bald head with no facial features, thin limbs, seated in an office chair at a desk, facing left toward a monitor. Base pose: relaxed, hands near keyboard.
+- **O01 (desk)**: simple rectangular desk with a flat-screen monitor and keyboard, black outline only, no color fill.
+- **Style (all images)**: loose hand-drawn black-ink vector/sketch line art on a pure white background, no shading, no gradients, no color except where noted (thermometer mercury only). 9:16 portrait, flat 2D, static locked camera framing with C01+desk positioned lower-right of frame, leaving the upper-left/upper-center area clear for a thought-bubble overlay.
+04_image_to_video/ANIMATION_PROMPTS.md Each prompt describes change through time only; appearance is already established by the source image. All prompts are ≤500 characters. Static holds (F01.19) have no animation entry, per spec.
+## A01
+SHOT ID: S01
+SOURCE IMAGE: IMG01
+SOURCE STATE: F01.0
+TARGET STATE: F01.1
+CLIP DURATION: ~1s
+MOVING ELEMENT: thought bubble outline; teeth graphic
+STATIC ANCHORS: C01, desk, monitor
+ANIMATION PROMPT:
+Locked camera. A scalloped thought bubble draws itself in above the seated figure's head, and a plain row of teeth appears inside it, fully formed. Keep the figure, desk, monitor and mug fixed. No camera movement. End with the bubble and bare teeth fully visible.
+
+## R10 what-if-earth-grew-1cm-every-second
+R10-02 44.188 F07.0 FRAME: Bent stick person stands on scale; black '70kg' becomes red '70.01 kg'; T = 1 DAY strip. 
+MOTION: Scale,person | Locked 
+NARRATION: ["you'd weigh 70.01 at the end of the first day."]
+R10-04 132.562 F18.0 FRAME: Three-panel stick-person scale examples: November 70.28 kg, December 71.14 kg; then Singapore 70 kg, New York 70.19 kg, Helsinki 70.35 kg. 
+MOTION: A18 | Scale/person panel border 
+NARRATION: ['Human body weights vary by much more than 0.4 percent over the course of a day,']
+R10-06 220.938 F32.0 FRAME: White chart: CENTRAL NERVOUS SYSTEM TOXICITY and oxygen-breathing-hours axis; gray graded bands with labels including pulmonary effects and no toxicity. 
+MOTION: Locked | Cut 
+NARRATION: []
+R10-07 265.125 F37.0 FRAME: Black space field; grayscale Earth lower-left/center, small Moon upper-right, two or three white satellites, faint circular orbital paths; T = 300 YEARS. 
+MOTION: Hard cut | A37 
+NARRATION: []
+03_capcut/CAPCUT_REBUILD.md - Canvas: 16:9, 1920 × 1080; 24 fps; total 05:15.675.
+- Background: near-white (`#F7F7F5` approximate) unless listed black (S37–S38) or red (S02/S39). Global effects: none observed.
+- Audio: put `AU01` / `../05_audio/source_audio.wav` on A1 at 00:00.000; lock it. Narration/music/SFX split is UNKNOWN.
+- Text system: manual text/shape layers only. Small uppercase time strip is white on black; numerical emphasis/red arrows use muted red. Exact unrecovered tiny text stays source-frame transcription work, not invented.
+- Import media: all listed IDs from `../02_analysis/ASSET_MANIFEST.csv`. Build vector diagrams as SVG/shape/text layers; use transparent PNG layers for characters, objects, and silhouettes.
+- Default stack: V4 text/graphics, V3 foreground/moving object, V2 characters/objects, V1 environment. Add V5 only when a graphic must sit over all else. Every unlisted property holds fixed. All positions/scales below are composition-relative APPROXIMATE because pixels cannot be reliably measured from contact sheets.
+### S10 — 00:56.250–01:05.292
+Media: E05, C01, C03. Build: hard cut; bridge V1; figures V2. No keyframes. End: F10.0.
+04_image_to_video/IMAGE_PROMPTS.md Global continuity: 16:9 hand-drawn explanatory animation, near-white paper background, thin uneven black ink lines, restrained gray graphite hatching, muted red only for emphasis, flat locked camera, broad empty space. Add all exact readable text later as editor overlays unless prompt says otherwise. Do not add shadows, color grading, camera blur, or decorative motion.
+### IMG01 — S01 / F01.0; text baked: NO
+Clean near-white whiteboard with a thin black frame and tray, generic line-drawn stick presenter holding paper at far left, gray hand-sketched Earth centered on board, empty top-board space for question. 16:9, locked straight-on view, black ink and gray graphite hatching, no arrows, no text.
+04_image_to_video/ANIMATION_PROMPTS.md No I2V pass for A02, A04–A06, A08–A11, A13, A19, A30–A34, or A41: these are observed hard cuts/holds and must be assembled as cuts. All prompts are below 500 characters.
+## A07 — S07 — IMG07 — static pose to labelled state — 5.625 s
+Locked camera. Keep person and scale fully still. Add only weight-label change beside person: retain black 70kg then reveal muted-red 70.01 kg. No body motion, no scale movement, no background change. End with both values visible as source requires.
+
+## R11 what_if_all_visible_light_was_a_single_beam
+R11-01 2.479 F01.1 FRAME: Same chalkboard. A widening cone of light rays now visibly connects SUN to EARTH; label changes to "UNINHABITABLE EARTH". 
+MOTION: SMOOTH | SMOOTH 
+NARRATION: ['What if all the suns output of visible light were bundled up into a laser-like beam that had a diameter of around one meter once it reached the Earth?']
+R11-03 34.701 F04.2 FRAME: Same view, static hold. Dome is now large with red spike/ray texture and full labels "PLASMA", "X-RAYS", "MORE PLASMA" plus the "MILLIONS OF DEGREES...'' callout. 
+MOTION: SMOOTH | SMOOTH 
+NARRATION: ["The radiation would vaporize everything in sight and start stripping away the Earth's surface, like a hydrogen bomb, only much more violent."]
+R11-05 69.403 F08.0 FRAME: Same sphere. A glowing red-white ring grows continuously out of the terminator cracks, progressively wrapping further around the globe's circumference over time (quarter-wrap, half-wrap, three-quarter-wrap observed at intermediate seconds); short silence measured near the end of this state (~75.2-75.4s). 
+MOTION: SMOOTH | SMOOTH 
+NARRATION: ['Plasma is relatively transparent to x-rays, so those would pass through and dump their energy into the non-plasma air around it, heating it enough to give off its own substantial thermal radiation.']
+R11-08 118.976 F14.0 FRAME: Cut to the Moon alone in space, no beam visible: a small cracked, reddened sphere with fine debris flecks around it. 
+MOTION: STATIC | HARD_CUT 
+NARRATION: ["Everyone on the surface would still be cooked, of course, and much of the atmosphere in exterior would be lost, but the bulk of the Earth would probably remain as a testament to humanity's horrible ideas."]
+03_capcut/CAPCUT_REBUILD.md Reference `02_analysis/TIMELINE.csv`, `02_analysis/ASSET_MANIFEST.csv`, `02_analysis/MOTION_EVENTS.csv`, `05_audio/AUDIO_MAP.md` for canonical facts; this file gives only the CapCut build actions. Import `AU01` (the original audio track, or a re-recorded/licensed replacement — see NOTE below) onto A1 for the full project length before building any shot.
+## S01 — 0:00.000–0:06.567
+SOURCE STATES: F01.0 → F01.1 → F01.2
+MEDIA: E01, C01, G01, G02, G03, T01
+TRACK STACK: V1 chalkboard background (E01) · V2 stick figure (C01) · V3 sun icon (G01) + earth icon (G02) · V4 beam/cone (G03) · V5 text (T01)
+INITIAL COMPOSITION: E01 full-frame; C01 lower-third, centered; G01 upper-left; G02 mid-right; T01 top-right of G02.
+BUILD:
+1. Place E01 on V1 for the full shot duration; place C01 on V2, static.
+2. Place G01/G02 on V3, static; add T01 on V5 reading "UN-SUN-SPECTING EARTH".
+3. At 0:02.000 cut V4 in: draw/overlay a widening cone from G01 to G02 (opacity 0→100 over ~6 frames); swap T01 text to "UNINHABITABLE EARTH" at the same timestamp.
+4. At 0:04.000 animate the cone (V4) narrowing to a thin line via a mask/scale keyframe; add a small "1m" bracket text element next to G02.
+KEYFRAMES: V4 opacity 0→100 at 0:02.000 (A01); V4 width scale 100%→20% between 0:04.000 and 0:04.200 (A02, fastest defensible interpretation of a same-second reveal).
+TEXT: "UN-SUN-SPECTING EARTH" (0:00.000-0:02.000) → "UNINHABITABLE EARTH" (0:02.000-0:06.567) → "1m" bracket label appears 0:04.000.
+TRANSITION IN: hard cut (video start). TRANSITION OUT: hard cut.
+AUDIO SYNC: continuous mixed audio under the whole shot
+04_image_to_video/IMAGE_PROMPTS.md 13 numbered image entries (IMG01-IMG13) cover all 15 shots: 12 are independently generated and 1 (IMG08) is a reuse-stub pointing back to IMG04, so S09 needs no new generation; S13 also needs no new image, continuing directly from IMG11's animated end-frame — see "Reuse decisions". Default TEXT BAKED = NO for all; add captions as overlay text in final assembly, per `02_analysis/TIMELINE.csv` for exact wording/timing.
+## IMG01
+USED BY SHOTS / STATES: S01 (F01.0, source for chained animations into F01.1/F01.2)
+SOURCE STATE: F01.0
+REUSE RELATIONSHIP: unique, first appearance
+TEXT BAKED: NO
+STANDALONE IMAGE PROMPT:
+Flat 2D vector illustration, 9:16 vertical. A grey chalkboard fills the frame, resting on a thin wooden tray/ledge along the bottom edge. On the chalkboard, upper-left: a small glowing white sun icon (simple circle with soft radial glow). Mid-right of the sun: a tiny plain grey Earth icon (circle with faint continent shading). No connecting lines between them yet. Lower third of the frame, centered below the chalkboard: a minimal white-background stick figure (simple circle head, thin line limbs, no face detail) standing and holding a small rectangular sheet of paper up in front of its chest, in a presenting pose. Flat, shadeless lighting; palette is neutral grey/white/black only, no color accents. Clean minimal line-art style, no texture/gradients beyond the sun's soft glow and the chalkboard's flat grey fill. No camera tilt, straight-on flat perspective, no depth/parallax layers.
+04_image_to_video/ANIMATION_PROMPTS.md 18 motion events (A01-A18), one per actual observed motion. Shots S09, S10, S14, S15 have ANIMATION REQUIRED: NO (static holds) and are not listed here — see `03_capcut/CAPCUT_REBUILD.md` / `04_image_to_video/I2V_REBUILD.md` for their still-image handling. All prompts are ≤500 characters.
+## A01
+SHOT ID: S01
+SOURCE IMAGE: IMG01
+SOURCE STATE: F01.0
+TARGET STATE: F01.1
+CLIP DURATION: 2.000s
+MOVING ELEMENT: light rays connecting sun icon to earth icon; caption text
+STATIC ANCHORS: chalkboard, stick figure, sun icon position, earth icon position
+AUDIO SYNC CUE: continuous mixed audio, no measured silence
+ANIMATION PROMPT: A widening cone of thin white light rays fades smoothly into view, connecting the glowing sun icon to the earth icon. Nothing else in the frame moves. Caption text below the earth icon changes from one line to a new line at the same moment the rays finish appearing.
+
+## R12 what_if_earths_water_suddenly_disappear
+R12-02 25.731 F04.2 FRAME: Same framing; seafloor now fully dark/rocky-textured across most of the lower frame; a person figure (C04) stands on the newly exposed ground near the water tower. 
+MOTION:  | CUT 
+NARRATION: ['and artificial bodies of water like swimming pools and water tanks.']
+R12-03 51.462 F06.2 FRAME: Depth scale changes to a deeper range (-1000m,-2000m,-3000m); ship fleet marks visible at the bottom of a gray water column; final frames of the state fade to a solid gray full-frame block (transition device). 
+MOTION:  | FADE 
+NARRATION: ['After the first six or seven seconds, there would be a brief low in the ship destruction rate.']
+R12-05 102.923 F10.5 FRAME: Final jar row(s): water fully evaporated to a black dried-out fill with a small starved/dead creature silhouette at the bottom of each jar; captions complete. 
+MOTION:  | CUT 
+NARRATION: ['An air breathing animal would likely suffer the same slow suffocation and dehydration']
+R12-06 128.654 F12.3 FRAME: A small flame ignites at one point along the dried vegetation line. 
+MOTION:  |  
+NARRATION: ["and within a few years, most of the world's forests would burn."]
+03_capcut/CAPCUT_REBUILD.md ## 1. Project setup
+- CANVAS / ASPECT RATIO: 16:9 landscape
+- RESOLUTION: 1920x1080
+- FPS: 24
+- TOTAL DURATION: 183.792s (4411 frames)
+- BACKGROUND: white (default for all diagram shots except S02/S18 red cards and S06–S09/S15 dark/space panels)
+- MASTER AUDIO: AU01 (undifferentiated narration+music mix), placed on A1 for the full runtime
+- GLOBAL FONT/TEXT SYSTEM: one bold sans-serif family at 3 weights — T01 (question-card), T02 (bold caption/exclamation), T03 (small measurement/chemistry label). Reference `../02_analysis/ASSET_MANIFEST.csv` for exact usage per shot.
+- GLOBAL COLOR RULE: black line-art on white/gray by default; red reserved for the title card, credits card, the S14 heat gradient, and the S15 engulfment rays — never used elsewhere.
+- GLOBAL EFFECTS: none beyond opacity fades at the S06/S07 gray-fade transition and the S10 seaplane→jar-diagram dissolve.
+## 2. Media import checklist
+Characters: C01–C06 · Environments: E01–E09 · Objects: O01–O08 · Graphics: G01–G14 · Text systems: T01–T03 · Audio: AU01. Full descriptions in `../02_analysis/ASSET_MANIFEST.csv`.
+04_image_to_video/IMAGE_PROMPTS.md 24 unique source images cover all 47 timeline states (see `../02_analysis/TIMELINE.csv`). Master continuity notes: all characters are minimal black-outline stick figures (circle head, single-line limbs, no facial features) in the xkcd "what if?" house style; all illustration is flat 2D black-ink line art on white/gray, no 3D, no photographic texture, no lighting model beyond flat fill. 16:9 landscape framing throughout.
+## IMG01
+USED BY: F01.0
+SOURCE STATE: F01.0
+REUSE RELATIONSHIP: unique (first-frame of an S01 first/last-frame pair with IMG02)
+TEXT BAKED: NO
+CLEAN PLATE: leave the gray Q-card box area top-left empty of illustration so the question text can be overlaid.
+TEXT OVERLAY: "What would happen if all the bodies of water on Earth magically disappeared? -Joanna Ku"; top-left, small bold sans-serif, left-aligned, held for the whole shot.
+STANDALONE IMAGE PROMPT: Flat black-ink 2D line-art illustration, 16:9. A blank blackboard fills the right two-thirds of frame, wooden chalk tray along its bottom edge. A minimal stick-figure (circle head, single-line limbs, no face) stands in the left third, facing right, holding a sheet of paper in both hands at chest height. White wall background around the blackboard. No color beyond black outlines on white/dark-gray blackboard fill. Flat, shadowless, no camera perspective distortion — straight-on framing.
+04_image_to_video/ANIMATION_PROMPTS.md 29 animation events (A01–A29), one per intra-shot state transition. Each prompt is ≤500 characters and independently copy-paste-ready. Cross-reference `../02_analysis/MOTION_EVENTS.csv` for full tabular detail.
+## A01
+SHOT ID: S01 · SOURCE IMAGE: IMG01 · SOURCE STATE: F01.0 · TARGET STATE: F01.1 · CLIP DURATION: 2s
+MOVING ELEMENT: sailboat illustration · STATIC ANCHORS: host figure, blackboard frame, Q-card
+ANIMATION PROMPT: Locked camera. A simple line-drawn sailboat fades/draws itself onto the horizontal water line inside the blackboard, as if being sketched in real time. Keep the host figure, blackboard frame, and question card completely still. End with the sailboat fully drawn and static.
+
+## R13 what_if_the_moon_were_made_of_protons
+R13-01 1.762 F01.1 FRAME: Same EARTH/MOON box diagram; radiating field lines progressively appear and thicken between the Earth and Moon circles, increasing in density across the range. C01 unchanged, still facing the box. 
+MOTION: N/A (continuous from F01.0) | CUT 
+NARRATION: ['What if the Earth were made entirely of protons and the Moon were made entirely of electrons?']
+R13-03 24.663 F03.4 FRAME: A second electron symbol appears below the first, connected by a tall double-headed vertical arrow; the label '10^20' sits beside the arrow. 
+MOTION: N/A | N/A (second arrow added) 
+NARRATION: ['If you put two negatively-charged electrons together, they try to fly apart with a force about 20 orders of magnitude stronger than the gravity pulling them together.']
+R13-04 36.995 F04.3 FRAME: The fuzzy cloud resolves into many small circled '⊖'/electron-style dots radiating outward from the central '10^53·e⁻' circle, spreading further apart across the range. 'PLEASE STOP!' caption continues. 
+MOTION: N/A | CUT 
+NARRATION: ['the forces trying to blow each one apart would be far more powerful.']
+R13-06 61.658 F06.3 FRAME: Same funnel graphic; the label 'BLACK HOLE' appears beside it. 
+MOTION: N/A | CUT 
+NARRATION: ['An entire observable universe where the mass energy concentrated in the space of our relatively small moon would warp space-time so strongly that it would easily overpower even the repulsion of those 10 to the 53 electrons.']
+R13-08 84.56 F09.5 FRAME: Circle continues growing, same three-line interior label; red caption changes to 'LA LA LA'. 
+MOTION: N/A | N/A (caption disappears) 
+NARRATION: ['Most of the universe around us would remain blissfully unaware of our ridiculous electron experiment, until they suddenly...']
+03_capcut/CAPCUT_REBUILD.md ## Project setup
+- CANVAS / ASPECT RATIO: 9:16 portrait
+- RESOLUTION: 720x1280 (source-matched; 1080x1920 acceptable if upscaling all imported graphics)
+- FPS: 24
+- TOTAL DURATION: 88.083s (2114 frames) video; extend the final audio track to 88.143s to preserve the trailing fade
+- BACKGROUND: none needed as a base layer — every shot supplies its own full-frame background asset (E01/E02/E03/E04/E05)
+- MASTER AUDIO: AU01, single continuous track from 00:00.000, no splitting (see `../05_audio/AUDIO_MAP.md`)
+- GLOBAL FONT/TEXT SYSTEM: three text roles held throughout — T01 (red, casual/handwriting-style, for asides/jokes), T02 (black, plain sans-serif, for character dialogue), T03 (small black label text, baked into diagram graphics wherever practical, or CapCut native text matching diagram lettering otherwise)
+- GLOBAL COLOR RULE: monochrome black/white/grey line art; red (T01/G04) is the only reserved accent color and is never used for T02/T03 text
+- GLOBAL EFFECTS: none observed — no camera moves, no filters/LUTs, no persistent overlay effects
+## Media to import
+Reference `../02_analysis/ASSET_MANIFEST.csv` for full descriptions. Summary: C01, C02 (characters); E01–E05 (backgrounds); G01–G16 (diagram/graphic elements, most single-use); T01–T03 (text systems, native CapCut text layers where wording is exact); AU01 (audio).
+04_image_to_video/IMAGE_PROMPTS.md ## Master continuity references
+- **C01 (narrator character):** minimalist black-outline stick figure — a single perfect circle for a head with two small dot eyes and a simple curved-line mouth, no hair, thin single-stroke arms and legs, no fill color, hand-drawn/slightly wavering line quality.
+- **C02 (aside character):** identical stick-figure body language and line style to C01, but with a scribbly/wavy short-hair outline on top of the head as the one distinguishing feature.
+- **Global style:** loose hand-drawn ink/vector line-art illustration, flat 2D, no photographic or 3D-rendered elements, no camera perspective/depth-of-field; black strokes on either a plain white or plain black background, with red reserved exclusively for annotation/rejection marks and aside captions.
+## IMG01
+USED BY SHOTS / STATES: S01 (F01.0, F01.1 base)
+SOURCE STATE: opening frame
+REUSE RELATIONSHIP: none (first image)
+TEXT BAKED: NO
+STANDALONE IMAGE PROMPT:
+Hand-drawn black-ink vector illustration, 9:16 portrait, flat white background. Small rectangular diagram box in the upper third of the frame containing two plain circles side by side — one large, one small — with a thin gap between them and no connecting lines. Below the box, a minimalist stick figure (single-circle head, thin-line limbs, no hair) stands facing the box at a slight angle, as if reading it. No text baked in — leave clear space above each circle for 'EARTH'/'MOON' labels and clear space between the circles for field-line overlay. Locked flat frontal view, no perspective. Pure black linework on white, no shading, no gradients.
+04_image_to_video/ANIMATION_PROMPTS.md 24 animation events (A01–A24), each ≤500 characters. SOURCE IMAGE / SOURCE STATE / TARGET STATE reference `IMAGE_PROMPTS.md` and `../02_analysis/TIMELINE.csv`. Prompts describe change through time only — the linked source image already establishes appearance.
+## A01
+SHOT ID: S01
+SOURCE IMAGE: IMG01
+SOURCE STATE: F01.0
+TARGET STATE: F01.1
+CLIP DURATION: ~4.4s
+MOVING ELEMENT: field lines between the Earth and Moon circles
+STATIC ANCHORS: both circles, the box frame, the stick figure
+ANIMATION PROMPT: Locked camera, static scene. Thin radiating field lines gradually fade in and steadily thicken in the gap between the two circles, increasing in density and count over time. The circles, box frame, and stick figure below do not move at all. End with the lines at their densest, fully connecting the two circles.
+
+## R14 what_would_a_magnitude_15_earthquake_be
+R14-02 25.941 F04.0 FRAME: Three-part composite: center, a 'Daily News' newspaper with headline '3.5 EARTHQUAKE STRIKES FEAR IN OHIO CORN FIELD' over a cornfield illustration; left, a smartphone alert 'SMALL DOG WAS FRIGHTENED BY 4.8 EARTHQUAKE' / 'WE MUST STOP THIS AT THE SOURCE!' with a shaking dog icon; right, a LIVE TV inset of two stick figures, one saying 'IT'S AT LEAST AN 8 ON THE RICHTER SCALE!', the other replying 'UHM, ACTUALLY...'. 
+MOTION: Hard cut (scdet 24.042) | Hard cut (scdet 27.458) 
+NARRATION: ['which was raiding somewhere between 3 and 9,']
+R14-05 103.763 F12.3 FRAME: Full-frame cut to the host stick figure standing alone, calm, on a blank ruler backdrop (0 to -15 range visible faintly). 
+MOTION: Cut | Cut 
+NARRATION: ["Hold on, we're spending a lot of time thinking about things that are large and violent."]
+R14-06 129.704 F13.1 FRAME: 'MAGNITUDE 0' headline; truck and house replaced by a wall of tumbling dust/debris with small particle figures and star/sparkle marks cascading down. 
+MOTION: Cut | Hard cut (scdet 132.583) 
+NARRATION: ["running it full-tilled into the side of your neighbor's garage."]
+R14-07 155.645 F14.6 FRAME: 'MAGNITUDE -7' headline; a single feather falls slowly through empty frame with a faint wisp/smoke trail. 
+MOTION: Cut | Cut 
+NARRATION: ['Negative 7 is a single feather fluttering to the ground.']
+03_capcut/CAPCUT_REBUILD.md ## Project setup
+CANVAS / ASPECT RATIO: 16:9 landscape
+RESOLUTION: 1280x720
+FPS: 24
+TOTAL DURATION: 00:03:05.29 (4447 frames)
+BACKGROUND: Off-white (#F5F5F0 approx.) for all illustration shots; solid deep red for the bumper (S02) and credits (S16)
+MASTER AUDIO: Single narration/music mix track (AU01), placed on A1 for the full runtime
+GLOBAL FONT/TEXT SYSTEM: Bold rounded sans-serif for "MAGNITUDE ##" headlines and most captions (T01/T03); looser hand-lettered comic font for onomatopoeia (T02)
+GLOBAL COLOR RULE: Black line art on off-white by default; red reserved for the bumper/credits background and hand-scribble emphasis marks (strike-through, tick marks, epicenter rings)
+GLOBAL EFFECTS IF ANY: None — no filters, LUTs, vignettes, or camera-shake effects were measured anywhere in the source
+MEDIA TO IMPORT: See `../02_analysis/ASSET_MANIFEST.csv` for the full list (C01-C05 characters, E01-E06 environments, O01-O17 objects, G01-G07 graphics, T01-T03 text systems, AU01 audio). Reference IDs below rather than re-describing each asset.
+04_image_to_video/IMAGE_PROMPTS.md 29 unique source images cover all 47 timeline states via aggressive reuse (see `REUSE RELATIONSHIP` per entry and `TIMELINE.csv` for exact state-to-image mapping). Master style reused in every prompt below: **black single-stroke hand-drawn line art on a flat off-white background, no color except red accents and the red bumper/credits background, no shading, no gradients, flat 2D, xkcd "what if?" house style.**
+## IMG01
+USED BY SHOTS / STATES: S01 / F01.0, F01.1, F01.2
+SOURCE STATE: F01.0
+REUSE RELATIONSHIP: Base image for the whole intro comparison; text label changed via overlay, not regeneration
+TEXT BAKED: NO
+STANDALONE IMAGE PROMPT: Flat 2D black-ink line-art illustration, 16:9. Left third: a simple stick figure (circle head, no face, thin single-stroke limbs) standing, holding a sheet of paper as if reading aloud. Right two-thirds: a black silhouette skyline of New York City (Statue of Liberty at left edge of the skyline, dense building shapes filling the rest) rendered as a solid black bar-chart-like cutout, sitting on a thin baseline. Small simple gear-icon outline in the top-right corner of the skyline panel. No text, no color, flat off-white background, no shadows.
+04_image_to_video/ANIMATION_PROMPTS.md All prompts assume a locked/static camera (no shot in this video has camera movement). Every prompt is ≤500 characters. Reference `MOTION_EVENTS.csv` for full tabular detail (direction, amplitude, relationship).
+## A01
+SHOT ID: S01
+SOURCE IMAGE: IMG01
+SOURCE STATE: F01.0
+TARGET STATE: F01.1
+CLIP DURATION: 1.0s
+MOVING ELEMENT: "MAGNITUDE 15" text label
+STATIC ANCHORS: Host figure; skyline silhouette
+ANIMATION PROMPT: Locked camera, nothing in the illustration moves. The text "MAGNITUDE 15" fades into view above the skyline. Keep the host figure, skyline, and gear icon completely fixed. End with the label fully visible.
+
+## R15 worlds-largest-cities-what-if
+R15-01 1.667 F01.0 FRAME: Off-white background. Top: rounded gray title card holding two centered lines of black serif text: "What would the world's largest cities be like / if the land masses were rotated by 90 degrees?". Mid-frame: a hand-drawn blackboard with chalk tray holding one line-art globe (Americas facing camera) centered on the board. Bottom: a hand-drawn stick-figure narrator (round head, no face features) holding a paper/clipboard, angled toward the board as if presenting. 
+MOTION: HARD_CUT (video start) | STATE_REPLACEMENT into F01.1 
+NARRATION: ["What would the world's largest cities be like if the landmasses were rotated by 90 degrees?"]
+R15-03 23.333 F02.2 FRAME: Map has moved further: ASIA / EUROPE / AFRICA labels all visible together, upper portion covered in cyan (flooded/inland-sea band) with dense mountain hachure marks. Pins visible: KOLKATA, DELHI, HONG KONG (first sampled at 18.3s); by 22.0s also MUMBAI, KARACHI, and MANILA (edge) have been added without further camera movement. 
+MOTION: PAN-BLUR BURST (from F02.1) | PAN-BLUR BURST → F02.3 
+NARRATION: ["The ocean isn't frozen solid, but it sure is cold."]
+R15-05 46.667 F02.5 FRAME: Camera pushed in tighter on the Cairo/Nile area. "CAIRO" pin and a hand-lettered "NILE" label along a river line are visible. A new circular white vignette sticker (line-art: sun, mountain range, trees, lake/river) appears map-anchored near the Cairo/Nile area. 
+MOTION: PAN-BLUR BURST (from F02.4) | PAN-BLUR BURST → F02.6 
+NARRATION: ["It's now surrounded by coastal savannah with spots of rainforest found around the mouth of the Nile."]
+R15-08 80.0 F02.8 FRAME: Camera settled on the Moscow/Cairo/London/New York quadrant. A second circular white vignette sticker appears map-anchored near London (line-art: two seated stick/animal characters at a table, one with a speech bubble reading "SORRY"). All 20 city pins remain visible/legible in the final frame (82.9s) sampled. 
+MOTION: PAN-BLUR BURST (from F02.7) | END OF FILE (no outro card observed in last sampled frame) 
+NARRATION: ["Spicy curry is now climatically appropriate, the tems is full of piranha, and it's the only place on"]
+03_capcut/CAPCUT_REBUILD.md ## Media to import
+- T01 — title card (text box + rounded-rect background shape, built natively in CapCut, no import needed)
+- C01 — stick-figure narrator PNG
+- O01 — single globe PNG
+- O02 — two-globes-plus-arrow PNG (or two separate globe PNGs + CapCut arrow shape)
+- E01 — master map JPG/PNG (must be wide enough that the S02 crop window never runs out of image — see FIDELITY LIMITATION below)
+- G02 — one city-pin dot PNG (reused), 20x native CapCut text labels
+- G03 — red circle annotation PNG (or drawn live with CapCut's shape/brush tool)
+- G04 — landscape vignette sticker PNG
+- G05 — dialogue vignette sticker PNG
+- AU01 — full-length audio/music+VO track
+INITIAL COMPOSITION: T01 centered top ~1/3 of frame; board (O01) centered middle third; C01 bottom third, left-of-center.
+BUILD:
+1. Add AU01 to A1, full length.
+2. Add T01 text box, position top-third, duration 0:00–0:04.42 (holds unchanged the whole shot).
+3. Add C01 PNG to V1, same duration, static, no keyframes (APPROVED: no motion observed).
+4. Add O01 to V2, 0:00–~0:02.00 (APPROXIMATE cut point — verify against your own copy of the source before locking).
+5. Cut V2 to O02 at ~0:02.00, hold to 0:04.42.
+KEYFRAMES: none — every element in S01 is a static hold (confirms MOTION_EVENTS A01 as a straight replace, not a tween).
+TOOLS: text tool (rounded background), cutout/PNG overlay, cut (no transition effect — it's a straight replace within the same locked shot).
+TEXT: "What would the world's largest cities be like / if the land masses were rotated by 90 degrees?" — two centered lines, black serif, gray rounded card, po
+04_image_to_video/IMAGE_PROMPTS.md ## IMG01
+- USED BY SHOTS/STATES: S01 (F01.0, F01.1)
+- SOURCE STATE: opening frame
+- REUSE RELATIONSHIP: single use — this is the one board illustration; F01.0→F01.1 is a same-image local edit (swap the globe content), not a new image. If your generator can't edit in place, generate IMG01 twice (IMG01a = single globe, IMG01b = two globes+arrow) with identical style/composition instructions below, changing only the "OBJECTS" line.
+- TEXT BAKED: NO (title card T01 is added in final assembly, not baked into the image)
+- STANDALONE IMAGE PROMPT:
+"Minimalist black-and-white line-art doodle illustration, vertical 9:16 frame, flat off-white background. A large simple blackboard with a thin chalk tray, drawn in loose single-line hand-drawn style, centered in the upper-middle of the frame. On the blackboard: one small line-art desk globe on a tripod stand, globe shows simplified continents (Americas facing forward) in light gray fill with black outlines. Below the blackboard, bottom third of frame: a minimalist stick-figure character — plain circle head with no facial features, thin single-line limbs and torso, angled three-quarter pose, holding a small rectangular paper/clipboard up near chest height as if presenting to the board. No color anywhere except grayscale line art and light gray fills. No shadows, no gradients, no background scenery beyond the blackboard and character. Flat 2D vector-doodle style throughout."
+## IMG02
+- USED BY SHOTS/STATES: S02, all states F02.0–F02.8 (every city pin and every camera position in the second half of the video is a crop/overlay pass on this 
+04_image_to_video/ANIMATION_PROMPTS.md ## Compliance note (read first)
+Every observed motion in this video is either (a) a camera crop moving across a static painted image (E01/IMG02), or (b) a static overlay/text popping on and holding. There is no observed independent motion of any drawn element — no character movement, no water/cloud animation, no object travel. Per rule 28 (static scenes) and rule 22 (I2V motion should be reserved for real change-through-time), generating genuine I2V clips for the map pans would manufacture motion detail (drift risk) the source never asked for. **ANIMATION REQUIRED: NO for every S02 camera move — reconstruct them as crop/position keyframes on the still IMG02 master plate during final assembly (identical technique to the CapCut build's E01 keyframes), not as generative I2V passes.** This is the correct lazy-and-faithful call, not a shortcut around a real requirement.
+## Reveals (R01, R02, R04, R05, R06): NO ANIMATION PROMPT NEEDED
+G02 city pins, G03 red circle, G04 and G05 stickers are all static pop-ins/holds — add as overlay images/text with a simple opacity fade (or hard cut-in, per OBSERVED — the exact fade-vs-cut style could not be isolated at 1fps sampling) in final assembly. Generating these via I2V would be pure drift risk for zero benefit.
+
