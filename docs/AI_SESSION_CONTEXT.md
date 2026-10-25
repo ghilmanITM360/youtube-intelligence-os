@@ -2,6 +2,22 @@
 
 Operational entry point for future Claude/Codex chats. Snapshot reviewed **2026-10-25** at archival HEAD `dcbdc7d8c24d5d3ccd28bdd4fdf5e9fc90a7cf67`. Read the [master plan](YIOS_MASTER_PLAN.md) for mission and architecture. This handoff points to underlying authorities; it neither replaces ledgers/checkpoints nor grants execution or writer permission. Refresh live checks before acting.
 
+## Main-based archive integration — 2026-10-25
+
+The separately authorized candidate branch is `codex/what-if-archive-main-integration`, based directly on main `08e719264e31ecd82de24f8eeb8f065c08359fe5`. The five original archive/documentation commits remain preserved on `research/what-if-brain-preservation-batch1`; their 134 Finance-side ancestors are excluded from this candidate. The earlier checkout snapshot below is historical and describes the original branch.
+
+| Original source commit | Replayed candidate commit |
+|---|---|
+| `5f7afcbf16e27ed93aa37401208baa7fe6167052` | `d4111afc20443b22fba5614ef8505e46dcf7c151` |
+| `b928b95d96f5903b111336c495df80227ad31f36` | `f5cf5479ff1930360799609fe3dc626fc4fe016e` |
+| `1c5a2d4b222eb5b4902eab9765dbb5423f594948` | `7bea4298616edba36eaf0dd05103b30b3c97dfa4` |
+| `dcbdc7d8c24d5d3ccd28bdd4fdf5e9fc90a7cf67` | `f4703d64c7668d1f6029e28d6431055dfbb2db8f` |
+| `abdcf8e04c16bfc0c9495fcbd05b0c6bb64951b0` | `f0373a8d590af58d3c8578e0a5237a23616bd782` |
+
+Finance and Visual CT Scan links pinned to `1adb8129f689207552f0838414e5823e4255bde1` are historical authorities verified at that exact commit; they are external to this main-based tree and do not establish current Finance state. Existing relative authorities remain local.
+
+This candidate preserves archival publication, not a merge into main or independent binary restoration. The documentation repair commit and subsequent publication receipts are recorded externally under `2026-10-25-machine-a-phase1b/OPTION_A_EXECUTION_RECEIPT.json` in the Machine A audit root. Resolve the final candidate SHA from Git and verify its remote receipt before continuation. No PR or merge is authorized. After validation/publication, stop; separate owner approval is required for PR creation and review.
+
 ## Checkout and branch snapshot
 
 - Canonical Machine A root: `/Users/ghilmankhan/workprojects/youtube-intelligence-os`.
@@ -34,13 +50,13 @@ Frozen metadata is historical: its BRAIN_MANIFEST still says PREPARING with null
 
 ## Finance research — owner handoff snapshot, not a new audit
 
-The latest [Finance continuation](../research/finance-economics-intelligence/RESUME_HERE.md) at Finance SHA above reports **1,612 registered videos and 446 deep audits**, dated 2026-10-25, latest NICK_170. These are COMPLETE_LIMITED_EVIDENCE research counts, not audiovisual completion. The previous [Friday handoff](../research/finance-economics-intelligence/FINANCE_WEEKEND_HANDOFF_2026-10-23.md) recorded 441; it is historical.
+The latest [Finance continuation](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/1adb8129f689207552f0838414e5823e4255bde1/research/finance-economics-intelligence/RESUME_HERE.md) at Finance SHA above reports **1,612 registered videos and 446 deep audits**, dated 2026-10-25, latest NICK_170. These are COMPLETE_LIMITED_EVIDENCE research counts, not audiovisual completion. The previous [Friday handoff](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/1adb8129f689207552f0838414e5823e4255bde1/research/finance-economics-intelligence/FINANCE_WEEKEND_HANDOFF_2026-10-23.md) recorded 441; it is historical.
 
 This stage read the published owner handoff and verified branch/PR refs; it did not recount Finance ledgers or obtain a fresh Finance-owner confirmation. **Current counts require owner confirmation.** Underlying audit JSON/receipts, JSONL, immutable baseline and source registries remain authoritative; the combined workbook is a derived view. Do not start its next audit from this handoff.
 
 ## Visual Forensics — paused and protected
 
-The [visual research index](../research/visual-forensics/README.md) records Video 001 (`o3FQcd91MIs`) and Video 002 (`Uumnx2Fo6cE`) as completed **visual-only** CT scans. Human listening remains NOT_COMPLETED and full audiovisual sign-off BLOCKED.
+The [visual research index](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/1adb8129f689207552f0838414e5823e4255bde1/research/visual-forensics/README.md) records Video 001 (`o3FQcd91MIs`) and Video 002 (`Uumnx2Fo6cE`) as completed **visual-only** CT scans. Human listening remains NOT_COMPLETED and full audiovisual sign-off BLOCKED.
 
 Video 003 (`5umJ63d3rzQ`) remains **VIDEO_003_PARTIAL_WITH_VALIDATED_HANDOFF**. Checkpoint 6 previously verified **1,823 checksum entries, zero failures**; this documentation stage does not rehash its media or certify forensic completion. Reviewer A and merged reviewer C are preserved. Reviewer B (shards 3–4) and D (7–8) remain pending, then structural integration, reconstruction, validators/negative tests and final Roman Urdu report. Human listening and audiovisual sign-off remain incomplete.
 
@@ -65,7 +81,7 @@ External checkpoint root: `/Users/ghilmankhan/YIOS-local-audits/2026-10-24-5umJ6
 
 ## Ownership and stop rules
 
-The [published Finance policy](../research/finance-economics-intelligence/FINANCE_WRITER_OWNERSHIP.md) records MACHINE_A_SOLE_WRITER_ACCEPTED on 2026-10-24 after Machine B release. The owner's older two-Mac instruction reserves Finance/expansion/channel metadata to Machine B. **These declarations conflict; neither is silently universalized.** This task has only explicit Machine A documentation authorization. Resolve current Finance ownership with the owner and both Macs before Finance writes; remote refs cannot reveal unpushed work.
+The [published Finance policy](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/1adb8129f689207552f0838414e5823e4255bde1/research/finance-economics-intelligence/FINANCE_WRITER_OWNERSHIP.md) records MACHINE_A_SOLE_WRITER_ACCEPTED on 2026-10-24 after Machine B release. The owner's older two-Mac instruction reserves Finance/expansion/channel metadata to Machine B. **These declarations conflict; neither is silently universalized.** This task has only explicit Machine A documentation authorization. Resolve current Finance ownership with the owner and both Macs before Finance writes; remote refs cannot reveal unpushed work.
 
 Protected `research/casually-finance-editing-forensics` writer remains the owner-designated Claude session `873b9a27-ba03-4183-aa61-f82d01f65998`; a PID is only historical. Do not interrupt, modify or retire its work. The paused Video 003 session is separate. One active writer per shared branch; confirm active sessions, checkout access and scope immediately before writes. Preserve all unpushed work, stashes and untracked/ignored evidence.
 
@@ -88,4 +104,4 @@ External audit root on Machine A: `/Users/ghilmankhan/YIOS-local-audits/`. These
 | Batch 3 | `50418dbc508ee6f89d96a21ce588051ffebc25ec721069202aac7df363c93227` |
 | Batch 4 | `8b3d4ea5d5a8f2613d0cf215cddaefd989fc9aceed517c4f6fae51a0aeb54ca7` |
 
-Only this documentation integration is authorized now. After publication, stop. Separately recommended: review archival branch ancestry and a safe main-integration strategy without automatic history changes; reconcile writers; choose owner-approved private binary preservation and independent restore scope; investigate missing dependencies. No cleanup is authorized by a classification or a checksum match.
+The original documentation-only authorization above is historical. The separately authorized main-based candidate and its limits are recorded at the top of this handoff. After candidate publication, stop. Separately recommended: obtain approval for archive PR review; reconcile writers; choose owner-approved private binary preservation and independent restore scope; investigate missing dependencies. No cleanup is authorized by a classification or a checksum match.

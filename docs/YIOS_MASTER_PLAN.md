@@ -20,20 +20,22 @@ The [decision log](DECISIONS.md) retains a historical Machine B canonical path i
 |---|---|
 | This master plan | Permanent mission, architectural direction and acceptance gates |
 | [Session context](AI_SESSION_CONTEXT.md) | Dated operational handoff and pointers; does not override evidence or grant writer rights |
-| [Finance research](../research/finance-economics-intelligence/README.md) and its ledgers/receipts | Finance population, individual audits, frozen performance and review status; workbook is a derived view |
-| [Visual CT Scan packages](../research/visual-forensics/README.md) and checkpoints | Per-video visual findings and completion gates; checksum validity alone does not certify analysis |
+| [Finance research](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/1adb8129f689207552f0838414e5823e4255bde1/research/finance-economics-intelligence/README.md) and its ledgers/receipts | Finance population, individual audits, frozen performance and review status; workbook is a derived view |
+| [Visual CT Scan packages](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/1adb8129f689207552f0838414e5823e4255bde1/research/visual-forensics/README.md) and checkpoints | Per-video visual findings and completion gates; checksum validity alone does not certify analysis |
 | [What If archived brain](../research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/BRAIN_MANIFEST.json) | Historical reference observations, source-declared rules and reconstruction proposals, with their original limitations |
 | [Production experiments](../research/production-experiments/what-if-derived/) | YIOS-created tests, failures and proposed methods; never additional reference-channel observations |
 | Original media and source hashes | Primary evidence outside ordinary Git; hashes establish identity, not rights or backup availability |
 | Publication receipts | Proof only for the exact commits and file bytes actually retrieved |
 
+Finance and Visual CT Scan links above and below that point to `1adb8129f689207552f0838414e5823e4255bde1` are dated historical authorities, not live Finance state or evidence that their files are integrated into main.
+
 ## Research and channel intelligence
 
 Use the existing RAW → EXTRACTED → NORMALIZED → INTELLIGENCE layers and [provenance lifecycle](PROVENANCE.md). Preserve facts, observations, interpretations and hypotheses separately, with immutable source bytes and dated metric snapshots. Selected-inventory counts, broader registry counts, Finance populations and forensic observation counts measure different things; never add them as independent samples. See [registry](YOUTUBE_CHANNEL_REGISTRY.md) and [catalog roles](../data/catalog/README.md).
 
-Finance/Economics research combines exact title, authentic thumbnail, canonical transcript, claim verification, topic/audience mechanism, frozen peer performance and limited-evidence virality assessment. It does not establish original audiovisual editing or private retention metrics. Follow its [methods](../research/finance-economics-intelligence/METHODS.md) and owner-controlled continuation.
+Finance/Economics research combines exact title, authentic thumbnail, canonical transcript, claim verification, topic/audience mechanism, frozen peer performance and limited-evidence virality assessment. It does not establish original audiovisual editing or private retention metrics. Follow its [methods](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/1adb8129f689207552f0838414e5823e4255bde1/research/finance-economics-intelligence/METHODS.md) and owner-controlled continuation.
 
-Visual CT Scan uses authenticated video, native-frame inspection, candidate discovery, independent review, state/motion ledgers, reconstruction specifications and validators. Automated candidates and inferred shots remain labeled; visual-only completion does not imply human listening or audiovisual sign-off. Follow the [methodology](../research/visual-forensics/methodology/README.md) and each video's acceptance record.
+Visual CT Scan uses authenticated video, native-frame inspection, candidate discovery, independent review, state/motion ledgers, reconstruction specifications and validators. Automated candidates and inferred shots remain labeled; visual-only completion does not imply human listening or audiovisual sign-off. Follow the [methodology](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/1adb8129f689207552f0838414e5823e4255bde1/research/visual-forensics/methodology/README.md) and each video's acceptance record.
 
 Reusable channel DNA should retain canonical channel identity, supporting video/source hashes, exact frame/time/table locators, claim type, confidence, sample denominator, exceptions, reviewer status and version. Production grammar and recipes additionally need inputs, asset roles, operation order, measured versus estimated timing, tool versions, rights and validation outcomes. This is a proposed representation, not a new implemented schema. Scale through separate channel profiles and independent tests before promoting any cross-channel rule.
 
