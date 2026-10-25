@@ -1,0 +1,94 @@
+{
+  "schema_version": "2.0",
+  "release_version": "1.0.0",
+  "reconstruction_type": "EVIDENCE_BASED_SYNTHESIS",
+  "generated_from": "03_reconstruction_system/*.md (canonical) + BRAIN_MANIFEST.json",
+  "generated_at": "2026-09-17T00:00:00Z",
+
+  "documents": [
+    "CAPCUT_PRODUCTION_SYSTEM.md",
+    "IMAGE_TO_VIDEO_SYSTEM.md",
+    "ASSET_CREATION_SYSTEM.md",
+    "DECISION_RULES.md"
+  ],
+
+  "systems": [
+    {
+      "name": "CapCut Reconstruction",
+      "type": "Traditional editing workflow",
+      "doc": "CAPCUT_PRODUCTION_SYSTEM.md",
+      "workflow": "Import → Segment → Layout → Sync → Animate → Text → Polish → Export",
+      "primary_use": "Primary editing and shot assembly"
+    },
+    {
+      "name": "Image-to-Video Synthesis",
+      "type": "AI-powered animation",
+      "doc": "IMAGE_TO_VIDEO_SYSTEM.md",
+      "workflow": "Identify states → Write prompts → Generate → Integrate → Verify → Export",
+      "primary_use": "Animated state progressions and motion sequences"
+    }
+  ],
+  "decision_criteria": {
+    "reference_doc": "DECISION_RULES.md",
+    "use_capcut_when": [
+      "Cutting between static states",
+      "Simple text overlays and titles",
+      "Organizing existing visual assets",
+      "Color correction and effects"
+    ],
+    "use_i2v_when": [
+      "Visual progression or growth",
+      "Element reveal or entrance",
+      "Motion showing relationships",
+      "Animations explaining change"
+    ]
+  },
+  "constraints": {
+    "audio": "No modification to narration; preserve original timing",
+    "resolution": "OUTPUT FORMAT MUST INHERIT THE TARGET / REFERENCE PROJECT REQUIREMENT. The training corpus spans multiple source resolutions and aspect ratios; there is no single standard to assume.",
+    "timing": "Synchronize to word-level precision",
+    "silence": "Preserve all silence regions; no deletion"
+  },
+  "dna_reference": {
+    "word_timing": {
+      "count": 7864,
+      "mean_duration_ms": 223.5,
+      "median_duration_ms": 200.0,
+      "min_duration_ms": 10.0,
+      "max_duration_ms": 1400.0,
+      "stdev_duration_ms": 116.9
+    },
+    "sentence_pacing": {
+      "total_sentences": 604,
+      "mean_sentence_duration_ms": 3042.8,
+      "median_sentence_duration_ms": 2790.0,
+      "mean_words_per_sentence": 13.02,
+      "min_sentence_duration_ms": 140.0,
+      "max_sentence_duration_ms": 11620.0
+    },
+    "sync_relationships": {
+      "total_syncs": 1421,
+      "sync_relations": {
+        "DURING_WORD": 721,
+        "BETWEEN_WORDS": 306,
+        "NO_SPEECH": 193,
+        "ON_WORD_START": 126,
+        "ON_WORD_END": 60,
+        "AFTER_WORD": 8,
+        "DURING_SILENCE": 6,
+        "DURING_PAUSE": 1
+      },
+      "visual_event_types": {
+        "STATE_CHANGE": 581,
+        "MOTION_START": 438,
+        "MOTION_END": 402
+      },
+      "offset_statistics": {
+        "mean_offset_ms": 30.5,
+        "median_offset_ms": 40.0,
+        "min_offset_ms": -8640.0,
+        "max_offset_ms": 3340.0
+      }
+    }
+  }
+}
