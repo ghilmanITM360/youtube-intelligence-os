@@ -24,3 +24,17 @@ This document is an operational coordination record, not a distributed lock. Rec
 - Next untouched original: `T3HINW7Nv14` (NICK_166). Its thumbnail is not stored locally (`PRESENT_NOT_FETCHED`); the registered URL answered HTTP 200 to a HEAD request, nothing downloaded.
 - Usage at acceptance: five-hour 4%, weekly 6%. CI remains CI_BLOCKED_BILLING and is not certified by these local checks.
 - No NICK_166 or NICK_165 work started. Unrelated Visual Forensics candidate untouched.
+
+## Owner-directed Machine A → Machine B transfer — 2026-10-26
+
+**State: `MACHINE_B_SOLE_WRITER_ACCEPTED` (owner-directed; no Machine A `MACHINE_A_RELEASED_AWAITING_MACHINE_B_ACCEPTANCE` was published).** Accepted at 2026-10-26T04:54:30Z.
+
+- Authority: the owner directed this A→B transfer in the Machine B session and, when asked, explicitly chose to proceed without a published Machine A release and confirmed that no Machine A Finance chat or automation will write. Machine A's 20261026T032417Z preservation handoff certifies no transfer and states that its preservation chat performs no Finance audit writes. Machine A stops canonical Finance writes from this record; ownership does not return to Machine A without a new published release/acceptance pair.
+- Host/user/root: `Users-MacBook-Pro.local` / `ghilmanislam360` / `/Users/ghilmanislam360/Documents/youtube-intelligence-os`.
+- Accepted live SHA `1adb8129f689207552f0838414e5823e4255bde1` (NICK_170): local, origin and draft PR #36 (OPEN) heads equal after a strict `--ff-only` from stale Machine B `c5c3d60ebb23f111721c6526146b569fe0f5d826` (ahead 0, behind 7, zero added-path collisions). Machine B had no unpushed commits and no unpublished Finance work.
+- Preservation: tracked tree clean; stash `ac51465b33be2d25d1a18749b1301cda778e33e5` (Senior Health, unrelated) and all other refs untouched; one worktree; no index lock.
+- Ledger at acceptance: 966 unique JSONL rows; 446/1,612 all six dimensions `COMPLETE_LIMITED_EVIDENCE`; 1,166 remaining = 520 original + 646 expansion. Expansion ledger 197 records. Registry 1,612. JSONL SHA-256 `c2d1dfa028ea2ad9b565efd1946d607fbcd0224fac35b6e76ed627bc7b6b6a57`; workbook SHA-256 `7f810ff7290f3c584b7657c30563b57e9653e84f5b8965bc78b8c56cd576ce57`.
+- Checks: 34 Finance tests PASS on Python 3.12.14 (repo `.venv`, openpyxl 3.1.5, Pillow 12.3.0); `validate_audit_966.py` and `validate_research.py` PASS with byte-identical outputs (26 source hashes).
+- Next untouched original: `UdfpP8R1zuI`; its transcript is present in the tracked Nick Invests transcript archive. `TFtBWn9CWOU` remains IN_PROGRESS and preserved.
+- Usage: five-hour/weekly meters are not observable from this CLI session; recorded as owner-supervised, not measured. Mac data volume 33 GiB free (97% used).
+- Protected Visual Forensics writer ownership (session `873b9a27…`, `research/casually-finance-editing-forensics`) is separate and untouched.

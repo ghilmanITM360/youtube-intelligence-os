@@ -1,6 +1,6 @@
 # Latest published research unit — NICK_170 (2026-10-25)
 
-- Parent checkpoint: `8fa0fe28f0870b2717d08a4099e1c4425a66429c`. Machine A remains the sole Finance writer; Machine B released. PR #36 stays OPEN/DRAFT.
+- Parent checkpoint: `8fa0fe28f0870b2717d08a4099e1c4425a66429c`. Machine B is now the sole Finance writer (owner-directed transfer, see FINANCE_WRITER_OWNERSHIP.md); Machine A released. PR #36 stays OPEN/DRAFT.
 - Completed `ULkTn-jHBBc`, **6 Ways People Become Rich With Debt**, published `2026-07-07T20:47:41Z` (archive UTC). All 19,179 canonical characters read in three witnessed contiguous ranges. Native and 320×180 authentic thumbnail inspected.
 - All six dimensions `COMPLETE_LIMITED_EVIDENCE`. 39 exact claim groups, 20 source receipts, 15 numerical receipts. The sixth method is an OPM synthesis, not an independent sixth wealth engine.
 - Key distinctions: borrowing creates an equal liability; 25% rental appreciation/equity is gross; the rounded 340K/166K/180K example has a 6K reconciliation gap, not proof of a false real-world outcome. Closing stored 150K down conflicts with earlier 50K (audio unverified). Qualified new-vehicle interest already had a 2025–28 tax exception. Full-sale one-time tax and interest on a smaller recurring loan are not directly comparable. Fed 12%/60%, eight-times relative wealth and a universal nursing income uplift remain unverified.
