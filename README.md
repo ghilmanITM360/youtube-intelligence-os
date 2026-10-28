@@ -6,6 +6,11 @@ An evidence-based intelligence system for multiple YouTube channels. **YouTube I
 
 Catalogs have distinct populations: the selected inventory and the broader channel registry must not be treated as interchangeable sample counts. See `docs/YOUTUBE_CHANNEL_REGISTRY.md` and `data/catalog/README.md`.
 
+## Channel visual research
+
+- [Casually Finance: source-backed visual research index](research/visual-forensics/channels/UCrNfRFWnLC3tCy1TnyhVQ7g/START_HERE.md) links the existing draft forensic corpus, Machine A CT checkpoints, original-media hashes, and evidence limits. It does not merge the draft corpus into `main`.
+- [Two-Mac writer handoff](docs/TWO_MAC_WORKFLOW.md) explains how to switch the repository writer between computers safely.
+
 ## Bootstrap (clean clone)
 
 `youtube_channel_registry.db` is Git LFS-tracked; a clean clone gets only the pointer file until LFS materializes it:
