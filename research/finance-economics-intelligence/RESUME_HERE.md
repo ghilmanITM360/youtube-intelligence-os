@@ -1,3 +1,18 @@
+# Latest checkpoint — NICK_183 (Machine B, 2026-10-30)
+
+**Four videos accepted and published this session: NICK_180 `W-j0_v9cXuQ`, NICK_181 `WAbZSrUMdk0`, NICK_182 `WyHZdWkS85U`, NICK_183 `X6_FpDN3XD8`.** 459/1,612 complete; 1,153 remaining = 507 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Commits: `f49382f5`, `2e8dd26f`, `394d5329`, and the NICK_183 commit containing this note (verify live on PR #36).
+
+NICK_183 "The Smartest Order to Invest Your Money if WW3 Starts Tomorrow": all six dimensions COMPLETE_LIMITED_EVIDENCE; 18,774 characters read in full; 21 claim groups.
+- Verified: TreasuryDirect confirms the I bond $10K limit and 12-month lock, but the creator omits the 5-year interest penalty. EIA puts Hormuz flow at 20M b/d, not the stated 13M.
+- Concentration: the tactical sleeves sum to 45–70% while index funds are called "untouchable".
+- Unsourced or non-reproducible: war-return, ETF and defence statistics; Mark/Sarah outcomes.
+- Performance: 1.61477× ten-peer TYPICAL, 3.24558× five-peer STRONG (cohort-sensitive).
+- Workbook diff: only row 452 plus dashboard counters changed; 0 styles changed; 0 formula errors.
+
+**Next untouched: NICK_184 `XFEndHZQ66Q` — Nick Reacts To 20 People Being Financially Illiterate.** Stopped here to stay below the 95% weekly gate (Pro plan); read live usage before resuming.
+
+---
+
 # Session checkpoint — Machine B, 2026-10-30
 
 **Three videos accepted and published this session: NICK_180 `W-j0_v9cXuQ`, NICK_181 `WAbZSrUMdk0`, NICK_182 `WyHZdWkS85U`.** 458/1,612 complete; 1,154 remaining = 508 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Research commits: `f49382f5` (NICK_180) and `2e8dd26f` (NICK_181); the NICK_182 commit contains this note, so verify its SHA live on PR #36. Hosted CI for `f49382f5` did not start (billing block, 0 steps); it was not rerun.
