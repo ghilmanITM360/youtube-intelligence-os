@@ -1,3 +1,23 @@
+# Latest validated checkpoint — NICK_181 (2026-10-30, Machine B)
+
+Parent `f49382f543f2ef0bb4676738a3a4e100bd47428a` (NICK_180) was verified equal on local, live remote and OPEN-DRAFT PR #36 before this unit.
+
+**NICK_181 `WAbZSrUMdk0` — The Psychology of Why You Can't Save.** All six dimensions are `COMPLETE_LIMITED_EVIDENCE`.
+- All 20,001 canonical characters were read in four ranges. Hashes and archive containment reconcile. The registered thumbnail (HTTP 200, 1280×720, "WIRED TO SPEND") was inspected at native size and at 320×180. Audio is unverified.
+- 18 located claim groups, 3 primary peer-reviewed abstracts (McClure 2004 Science; Ersner-Hershfield 2009 SCAN; Hagger 2016 multilab replication) and 3 calculation receipts.
+- Key corrections:
+  - Ego depletion is presented as settled, but the 23-lab, 2,141-participant replication found d = 0.04 (95% CI includes zero).
+  - The future-self study is distorted: participants rated their selves during fMRI and were not shown scans.
+  - "Completely outside your control" contradicts the video's own automation advice.
+  - Choosing $20 now over $25 in two weeks implies a 651.8% simple annualised return forgone.
+- Frozen performance reproduced: 0.39625× ten-peer / 0.37569× five-peer, both WEAK. Duration matches the peers (1.01×). The STRONG contrast peer is a concrete contrarian money move.
+- **457/1,612 complete; 1,155 remaining = 509 original + 646 expansion.** Legacy `TFtBWn9CWOU` stays IN_PROGRESS.
+- Both validators, 34 Finance tests and 2 formatting tests pass. The CSVs are target-row only. Workbook diff: only row 450 plus dashboard counters changed; 0 styles changed; 0 formula errors. Native Excel recalculation is NOT_TESTED. Workbook SHA-256 `4df8096d8f6909d2f10cd070298f71901f523c2b30f5aca1fa3aa5ebd5c17367`.
+
+**Next untouched: NICK_182 `WyHZdWkS85U` — How Much House Your Salary Actually Buys You.** Evidence: `audit-batches/NICK_181.json`, `NICK_181_READ_RECEIPTS.json`, `NICK_181_VALIDATION.json`, `NICK_WAbZSrUMdk0.jpg`.
+
+---
+
 # Latest validated checkpoint — NICK_180 (2026-10-30, Machine B)
 
 Machine B resumed as sole Finance writer from published parent `61f26b5ca9a7bd39c0aa2b63780bb33c18d29cff`, verified equal on local, upstream, live remote and OPEN-DRAFT PR #36. Clean tree, no competing Finance writer. Work was done in Claude worktree branch `claude/finance-audits-machine-b-0044ae`, reset to the remote Finance head and pushed normally to `research/finance-economics-intelligence`. The main checkout itself was left untouched.

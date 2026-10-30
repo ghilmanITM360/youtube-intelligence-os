@@ -101,3 +101,6 @@ Publication closeout `2026-10-26T12:25:19.671928+00:00`: all five session audits
 ## Machine B continuation — NICK_180 (2026-10-30)
 
 `MACHINE_B_SOLE_WRITER_ACCEPTED` remains in effect under the owner's continuous-batching directive. The accepted parent `61f26b5ca9a7bd39c0aa2b63780bb33c18d29cff` was verified on local main checkout, upstream, live remote and OPEN-DRAFT PR #36. No competing writer was found; Machine A cleanup is paused and protected assets (Casually Finance Visual Forensics, Video 003 checkpoint, source media, cleanup logs, PR #44, PR #21) were untouched. The writer is an isolated Claude worktree that pushes normally to the Finance branch. No force push, merge, paid credit or reset-credit redemption. NICK_180 accepted: 456 complete / 1,156 remaining.
+
+
+NICK_181 accepted on parent `f49382f5` under the same sole-writer authority: 457 complete / 1,155 remaining. No protected Machine A asset touched.
