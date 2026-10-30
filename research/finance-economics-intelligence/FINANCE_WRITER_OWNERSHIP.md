@@ -96,3 +96,8 @@ Stop new research at the documented conservative context/execution-reserve check
 
 
 Publication closeout `2026-10-26T12:25:19.671928+00:00`: all five session audits are published. Latest research commit `df80644a2394b89973952f98a60986c44af5b38d` independently matches local/upstream/live remote/OPEN-DRAFT PR36; clean research tree. Durable `FINANCE_PROGRESS_CHECKPOINT.json` records every batch, count, hash, local checks and zero-step hosted billing failures. Stop new audits at the documented reserve checkpoint; next NICK_180/W-j0_v9cXuQ untouched. Machine B remains sole writer; no ownership transfer.
+
+
+## Machine B continuation — NICK_180 (2026-10-30)
+
+`MACHINE_B_SOLE_WRITER_ACCEPTED` remains in effect under the owner's continuous-batching directive. The accepted parent `61f26b5ca9a7bd39c0aa2b63780bb33c18d29cff` was verified on local main checkout, upstream, live remote and OPEN-DRAFT PR #36. No competing writer was found; Machine A cleanup is paused and protected assets (Casually Finance Visual Forensics, Video 003 checkpoint, source media, cleanup logs, PR #44, PR #21) were untouched. The writer is an isolated Claude worktree that pushes normally to the Finance branch. No force push, merge, paid credit or reset-credit redemption. NICK_180 accepted: 456 complete / 1,156 remaining.

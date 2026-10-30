@@ -53,7 +53,7 @@ def build():
     batches = {}
     for path in sorted((BASE/'audit-batches').glob('*.json')):
         batch = json.loads(path.read_text())
-        for r in batch['reviews']:
+        for r in batch.get('reviews', []):  # validation/receipt companions carry no reviews
             assert r['Video_ID'] not in batches, 'Duplicate analyst batch ID'
             batches[r['Video_ID']] = (batch['batch_id'],r)
     assert not batch_identity_errors({r["Video_ID"] for r in master}, batches), "Unknown batch video"

@@ -1,3 +1,30 @@
+# Latest validated checkpoint — NICK_180 (2026-10-30, Machine B)
+
+Machine B resumed as sole Finance writer from published parent `61f26b5ca9a7bd39c0aa2b63780bb33c18d29cff`, verified equal on local, upstream, live remote and OPEN-DRAFT PR #36. Clean tree, no competing Finance writer. Work was done in Claude worktree branch `claude/finance-audits-machine-b-0044ae`, reset to the remote Finance head and pushed normally to `research/finance-economics-intelligence`. The main checkout itself was left untouched.
+
+**NICK_180 `W-j0_v9cXuQ` — FINANCIAL SYSTEM Explained in 50 Mins.** All six dimensions are `COMPLETE_LIMITED_EVIDENCE`.
+- All 45,453 canonical characters were read in seven 6,500-character ranges. SQLite and archive hashes reconcile. The authentic registered thumbnail (HTTP 200, 1280×720) was inspected at native size and at 320×180. Audio, timed delivery and editing are unverified.
+- 39 located claim groups, 9 official-source receipts (Fed reserve requirements, FOMC Jul 2023, BLS CPI, FDIC, Fed SVB review, SEC accredited investor, Berkshire 2017 letter, FSB NBFI 2025, BoE 28 Sep 2022) and 4 calculation receipts. The DOJ 1MDB and BIS derivatives fetches failed; those claims stay unverified.
+- Key corrections:
+  - Buffett-bet figures (7.1%/2.2%) are interim; the final 2008–2017 index-fund result was 8.5% a year.
+  - The NBFI half-share is a 2024 statistic (51.0%), not a mid-2000s one.
+  - The CPI peak was 9.1%, not 8%.
+  - The BoE operation was 28 September 2022.
+  - Benchmark/Uber is 855.6×, not the stated 750×.
+  - The $1.1M "Sarah" projection implies about 8.65%, matching neither stated return.
+  - The 10% reserve example mislabels total deposits as lending.
+  - The Toys R Us interest figure is missing its unit.
+- Frozen performance reproduced: 0.77455× ten-peer / 0.55674× five-peer, both TYPICAL. Duration is 2.40× the peer median. No private analytics or causal claims.
+- **456/1,612 complete; 1,156 remaining = 510 original + 646 expansion.** Legacy `TFtBWn9CWOU` stays IN_PROGRESS; all 455 prior completions and 26 fingerprints are preserved.
+- Tooling note: `build_audit_966.py` crashed on `*_VALIDATION.json` companions (no `reviews` key). It now skips them, matching the validator. The seven CSV projections are updated by header-stable target-row replacement: the full regenerated CSVs would add columns (`peer_titles`, `weak_performance_counterexamples`) that HEAD headers never had, so those fields stay in the JSONL only, as in prior batches. Changing the header is a separate decision.
+- Both validators, 34 Finance tests and 2 formatting tests pass. Workbook diff: only row 449 plus dashboard counters changed; 0 styles changed; formulas, tables and panes preserved; 0 formula errors; zip intact. Native Excel recalculation is NOT_TESTED. Workbook SHA-256 `cc317f983e22720c2dd14f2620f6b1e09a835bbe993f38805facbc0f287f837a`.
+
+**Next untouched: NICK_181 `WAbZSrUMdk0` — The Psychology of Why You Can't Save.** The binding resource is the Pro weekly quota (88% → 90% for this unit). Stop new audits at 95% weekly.
+
+Evidence: `audit-batches/NICK_180.json`, `NICK_180_READ_RECEIPTS.json`, `NICK_180_VALIDATION.json`, `NICK_W-j0_v9cXuQ.jpg`.
+
+---
+
 # Published session closeout — 2026-10-26
 
 **Five accepted videos, NICK_175–179, published in verified 2 + 2 + 1 checkpoints.** Latest research commit `df80644a2394b89973952f98a60986c44af5b38d` matches local/upstream/live Finance/PR #36. **455 complete / 1,157 remaining** (511 original + 646 expansion pending). JSONL, all seven CSVs, the four-sheet workbook, individual packets and continuation records are synchronized. Durable machine-readable publication evidence: [FINANCE_PROGRESS_CHECKPOINT.json](FINANCE_PROGRESS_CHECKPOINT.json).
