@@ -1,17 +1,17 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-10-30T05:03:25.202129+00:00",
- "status": "PUBLISHED_SESSION_CHECKPOINT",
+ "as_of_utc": "2026-10-30T05:08:46.767360+00:00",
+ "status": "PUBLISHED_SESSION_CLOSEOUT",
  "writer": "MACHINE_B_SOLE_WRITER_ACCEPTED",
  "branch": "research/finance-economics-intelligence",
- "published_research_commit": "58a2cb2ad0a039c2c529e63026fd0b71a4115040",
+ "published_research_commit": "e6000baa8152668b0b89d1482847381d98aa6c18",
  "publication_verification": {
-  "local_head": "58a2cb2ad0a039c2c529e63026fd0b71a4115040",
-  "live_remote_head": "58a2cb2ad0a039c2c529e63026fd0b71a4115040",
-  "pr36_head": "58a2cb2ad0a039c2c529e63026fd0b71a4115040",
+  "local_head": "e6000baa8152668b0b89d1482847381d98aa6c18",
+  "live_remote_head": "e6000baa8152668b0b89d1482847381d98aa6c18",
+  "pr36_head": "e6000baa8152668b0b89d1482847381d98aa6c18",
   "pr36": "OPEN_DRAFT_UNMERGED",
   "verification": "INDEPENDENT_LS_REMOTE_AND_GITHUB_PR_API",
-  "note": "NICK_184 commit contains this checkpoint; verify its SHA live."
+  "note": "NICK_185 commit contains this checkpoint; verify its SHA live."
  },
  "batches": [
   {
@@ -122,17 +122,31 @@
    "nicks": [
     "NICK_184"
    ],
-   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "commit": "e6000baa8152668b0b89d1482847381d98aa6c18",
    "accepted": 1,
    "blocked": 0,
    "completed": 460,
    "remaining": 1152,
    "original_pending": 506,
    "expansion_pending": 646,
+   "remote_and_pr_verified": true,
+   "ci": "NOT_CHECKED_EXPECTED_BILLING_BLOCK"
+  },
+  {
+   "nicks": [
+    "NICK_185"
+   ],
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 1,
+   "blocked": 0,
+   "completed": 461,
+   "remaining": 1151,
+   "original_pending": 505,
+   "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 5,
+ "session_accepted": 6,
  "session_blocked": 0,
  "packets": [
   {
@@ -254,14 +268,26 @@
    "packet_sha256": "b9e44a16ae3f9d818564a3f6869224edc7d42be239b53a6fae9442cf0084008d",
    "read_receipts_sha256": "22f7df08e596a2135b774fb229d2a8d3dfcc2d652456076bd0c10c6547a4f5d0",
    "validation_sha256": "2b681ca3efadd18a01aff7ab98ac3f5c1e6120f85f987f5e01f7d17bc350d74f"
+  },
+  {
+   "nick": "NICK_185",
+   "video_id": "XJ4ls6r2MCE",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18845,
+   "claim_groups": 16,
+   "primary_source_receipts": 2,
+   "calculation_receipts": 2,
+   "packet_sha256": "71c10733be34c44bd3d366d0490a3874bcb4e8faf2fd52223ccf55e4873f11b6",
+   "read_receipts_sha256": "d854ceafb073554f3eb34950f0cf0c9c731f60cbd4c1b6b3e430adf06fa5a4b9",
+   "validation_sha256": "492e4a8471152cec90b262b36f99c6a02863eeaf098e5fbe7d46f426f688fb06"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 460,
-  "remaining": 1152,
+  "completed": 461,
+  "remaining": 1151,
   "original_total": 966,
-  "original_pending": 506,
+  "original_pending": 505,
   "expansion_total": 646,
   "expansion_pending": 646
  },
@@ -277,7 +303,7 @@
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "83aee9e19dbf6f399e807112751ad36ef979e62143cdce7223a3ed806f9a5c4a",
+  "workbook_sha256": "24ddcd2512583b7e39eda894bd4c5b4628384d738d5445bd4e69dc2ed81ffdc6",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -297,8 +323,8 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "65175c02b5bb49080380dcb0af8174462306c8bfc967ec65b30a2edc79346491",
-  "VIDEO_AUDIT_966.csv": "210a4e3515e969619cf743c9acdbf7741bb5fba9249fb8718bfeb1e4fcb5edba",
+  "VIDEO_AUDIT_966.jsonl": "b54554e5b1759ad573d114faa8b9ed75e4b840303627c039e5019fa64e387580",
+  "VIDEO_AUDIT_966.csv": "84ae55730eaf3d71bafc62eff50d6c7f466837009652be4a5a0c3e7c4bbdeca0",
   "VIDEO_COMPLETION_MATRIX.csv": "dc21f3fd7a7040a5da6948420eb7288129075617768e8b6d0d5e7a74da85ee57",
   "THUMBNAIL_ANALYSIS_966.csv": "34e8335d6e4b96a14711faf6be98c739f596da53786e0f419ae90b6a792fb301",
   "SCRIPT_ANALYSIS_966.csv": "5bb8fa428ff59e42a6b99c1c1741a922cc17f79407c945ad2b3fb3d1067237b2",
@@ -321,16 +347,17 @@
   "pending_work": "NONE;allacceptedworkpublished"
  },
  "next": {
-  "nick": "NICK_185",
-  "video_id": "XJ4ls6r2MCE",
-  "title": "Why Everything Changes After The First $5,000 Month"
+  "nick": "NICK_186",
+  "video_id": "XP-26tqGFXc",
+  "title": "How Your Coworkers Afford Their Lifestyle (The Ugly Truth)"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
- "stop_reason": "STOP_BELOW_95_PERCENT_WEEKLY_GATE_PRO_PLAN",
+ "stop_reason": "SESSION_CLOSED_NEAR_95_PERCENT_PRO_WEEKLY_GATE",
  "latest_resources": {
-  "five_hour_used_percent": 38,
-  "weekly_used_percent": 92,
+  "weekly_used_percent_before_last_unit": 93,
   "paid_credits_spent": 0,
-  "free_disk_gib_rounded": 50
- }
+  "reset_credits_redeemed": 0,
+  "free_disk_gib_rounded": 46
+ },
+ "main_checkout": "LEFT_AT_61f26b5c_FAST_FORWARD_BEFORE_USE"
 }
