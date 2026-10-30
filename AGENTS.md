@@ -32,3 +32,10 @@ The project-scoped Graphify Codex skill is installed, but no knowledge graph has
 - Ponytail is a coding-quality assistant; it does not override this repository's core rules.
 - Claude-Mem is auxiliary session memory only. It is never evidence, canonical project knowledge, or a replacement for repository documentation.
 - External tool databases, graphs, embeddings, MCP adapters, hooks, or services do not determine the YouTube Intelligence OS production architecture.
+
+## Explicitly requested two-Mac coordination
+
+- Read `docs/YIOS_TWO_MAC_WORKFLOW.md` and `research/coordination/CHANNELS.md` before task writes or handoffs.
+- The new CLI does not itself transfer legacy authority. Finance's published Machine B sole-writer record and protected Video003 checkpoint remain enforceable until their explicit release and real two-Mac acceptance gates pass.
+- One remote claim per video; a separate exclusive coordinator publishes canonical updates. Do not delete claim refs, bypass a competing writer, infer release from idleness, or overwrite canonical data from a task branch.
+- Small partial checkpoints use separate task branches and exact remote SHA verification. UNSYNCED work remains local until verified. Original media recovery is a separate hash-checked gate.

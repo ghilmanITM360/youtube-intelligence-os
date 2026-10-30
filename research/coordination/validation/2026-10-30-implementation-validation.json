@@ -1,0 +1,86 @@
+{
+  "status": "IMPLEMENTED_LOCALLY_TESTED_REMOTE_PROTOCOL_VERIFIED",
+  "created_utc": "2026-10-30T12:55:59.582466+00:00",
+  "base_finance_head": "223f44981ee174988574e86d5e23ae83ee60ee5d",
+  "finance_counts": {
+    "total": 1612,
+    "complete": 461,
+    "remaining": 1151,
+    "original_pending": 505,
+    "expansion_pending": 646,
+    "next": {
+      "video_id": "XP-26tqGFXc",
+      "channel_id": "UCXzNNA2ngRpRiWvyA7eGd6w",
+      "title": "How Your Coworkers Afford Their Lifestyle (The Ugly Truth)"
+    }
+  },
+  "canonical_research_changes": "NONE",
+  "immutable_source_fingerprints": {
+    "verified": 26,
+    "result": "PASS"
+  },
+  "tests": {
+    "coordination": {
+      "passed": 26,
+      "failed": 0
+    },
+    "finance": {
+      "passed": 38
+    },
+    "workbook_formatting": {
+      "passed": 2
+    },
+    "canonical_validators": [
+      "PASS",
+      "PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION"
+    ],
+    "full_repository": {
+      "passed": 485,
+      "failed": 1,
+      "skipped": 1,
+      "preexisting_failure": "DS-000028-F020 .gitattributes ledger checksum/size mismatch",
+      "baseline_bytes_identical": true,
+      "actual_bytes": 895,
+      "actual_sha256": "93d4461c54929f06d8977a3741b20dbf788bcfffbb4d2f2234027e914a230222"
+    },
+    "remote_protocol": "2026-10-30-remote-smoke.json",
+    "fresh_agent_navigation": "PASS; no inherited conversation; original storyboard with exact evidence locators"
+  },
+  "ownership": {
+    "migration": "BLOCKED_PENDING_EXPLICIT_LEGACY_RELEASE_AND_REAL_DUAL_MAC_ACCEPTANCE",
+    "finance_legacy": "PRESERVED",
+    "video003": "PROTECTED_PARTIAL_CHECKPOINT_6_PRESERVED",
+    "production_claims_started": 0
+  },
+  "machines": {
+    "machine_b": "LOCAL_IMPLEMENTATION_AND_LIVE_GITHUB_CLIENT_TESTS_VERIFIED",
+    "machine_a": "NOT_TESTED",
+    "real_two_mac_acceptance": "NOT_TESTED"
+  },
+  "limitations": [
+    "Native Microsoft Excel recalculation NOT_TESTED",
+    "Hosted CI NOT_RUN; historical billing gate",
+    "Original966 Finance integration adapter only; expansion646 adapter not implemented",
+    "Video003 continuation integration requires separately reviewed adapter even after ownership release",
+    "Private media restore on second Mac NOT_TESTED",
+    "Status visual snapshot explicitly dated; not live reviewer certification",
+    "Ready submission withdrawal/rework transition not implemented",
+    "Cooperative Git exclusion does not prevent collaborators bypassing the CLI",
+    "Production migration not completed; no new research started"
+  ],
+  "safety": {
+    "five_hour_used_percent": 83,
+    "weekly_used_percent": 29,
+    "disk_free_gib": 46,
+    "paid_credits": 0,
+    "reset_credits_redeemed": false,
+    "context_reserve": "AVAILABLE_UNMETERED"
+  },
+  "log_sha256": {
+    "yios-full-tests-final.log": "391f85e3bf8562113d8e686f1e757560922008c9a605775802a609ef330a77eb",
+    "yios-finance-tests.log": "cfc731ce55b81ccd067c87e0ecdaa21fd22d4d0bcee2a5b4c727441ba5e6e3ae",
+    "yios-format-tests.log": "a703d28c13b3f515fd479f248752560e1ca0d9fe6fc5416015cb1878d606c268",
+    "yios-validator-audit.log": "483ae735e70cb8377727fa0be19fe08383bb091919eac4e794c9285eebcc3a7e",
+    "yios-validator-research.log": "2a40e84c022cd78fe09b65c2f644ad5c86b8a7e5e1fb1ba893104f827c12ea8e"
+  }
+}

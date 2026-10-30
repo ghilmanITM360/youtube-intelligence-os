@@ -15,7 +15,11 @@ class CombinedWorkbookContract(unittest.TestCase):
         rows = self.payload["all_videos"]
         self.assertEqual(1612, len(rows))
         self.assertEqual(1612, len({r["video_id"] for r in rows}))
-        self.assertEqual(461, sum(r["audit_status"] == "DEEP_AUDIT_COMPLETE" for r in rows))
+        authoritative = [json.loads(line) for line in (ROOT / "VIDEO_AUDIT_966.jsonl").read_text().splitlines()]
+        accepted = sum(len(r["statuses"]) == 6 and all(s in {"COMPLETE_EVIDENCE_BACKED", "COMPLETE_LIMITED_EVIDENCE"}
+                       for s in r["statuses"].values()) for r in authoritative)
+        self.assertGreaterEqual(accepted, 461, "Published NICK_180–185 acceptance must be preserved")
+        self.assertEqual(accepted, sum(r["audit_status"] == "DEEP_AUDIT_COMPLETE" for r in rows))
         self.assertEqual(
             "DEEP_AUDIT_COMPLETE",
             next(r["audit_status"] for r in rows if r["video_id"] == "Rd40d0XZLpQ"),
