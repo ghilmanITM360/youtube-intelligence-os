@@ -1,3 +1,17 @@
+# Latest checkpoint — NICK_184 (Machine B, 2026-10-30)
+
+**Five videos accepted and published this session: NICK_180–184** (`W-j0_v9cXuQ`, `WAbZSrUMdk0`, `WyHZdWkS85U`, `X6_FpDN3XD8`, `XFEndHZQ66Q`). 460/1,612 complete; 1,152 remaining = 506 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Commits: `f49382f5`, `2e8dd26f`, `394d5329`, `58a2cb2a`, and the NICK_184 commit containing this note (verify live).
+
+NICK_184 "Nick Reacts To 20 People Being Financially Illiterate": all six dimensions COMPLETE_LIMITED_EVIDENCE; 25,329 characters read in full (clip audio and host commentary mixed); 19 claim groups.
+- Arithmetic: 4× overspend reproduces; the 17% car-loan totals reproduce. $143/month on $6K implies about 28.6% APR, above Fed G.19's 21–22% average, so it is not "standard".
+- Verified: BoE 2014 confirms banks create most money by lending; IRS FMV rule for goods prizes (Prizes and awards section not reached).
+- The thumbnail uses real third-party faces; rights and identity were not assessed.
+- Performance: 1.76004× TYPICAL; the whole cohort is TYPICAL.
+
+**Next untouched: NICK_185 `XJ4ls6r2MCE` — Why Everything Changes After The First $5,000 Month.** Read live usage before resuming (Pro weekly gate 95%).
+
+---
+
 # Latest checkpoint — NICK_183 (Machine B, 2026-10-30)
 
 **Four videos accepted and published this session: NICK_180 `W-j0_v9cXuQ`, NICK_181 `WAbZSrUMdk0`, NICK_182 `WyHZdWkS85U`, NICK_183 `X6_FpDN3XD8`.** 459/1,612 complete; 1,153 remaining = 507 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Commits: `f49382f5`, `2e8dd26f`, `394d5329`, and the NICK_183 commit containing this note (verify live on PR #36).
