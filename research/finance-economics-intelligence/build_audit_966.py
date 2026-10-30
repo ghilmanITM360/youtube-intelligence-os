@@ -1,6 +1,7 @@
 """Research ledger only. Never generate semantic findings from lexical features."""
 import csv
 import hashlib
+import io
 import json
 import sqlite3
 from pathlib import Path
@@ -26,12 +27,52 @@ def initial_statuses(has_script):
     return statuses
 
 def csv_out(name, rows):
+    path = BASE / name
     keys = list(dict.fromkeys(k for r in rows for k in r))
-    with (BASE / name).open('w', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=keys, lineterminator='\n')
-        w.writeheader()
-        for r in rows:
-            w.writerow({k: json.dumps(v, ensure_ascii=False, sort_keys=True) if isinstance(v, (dict,list)) or isinstance(v, str) and ('\n' in v or '\r' in v) else v for k,v in r.items()})
+    existing = []
+    output = []
+    if path.exists():
+        lines = path.read_bytes().decode('utf-8').splitlines(keepends=True)
+        reader = csv.reader(lines)
+        keys = next(reader)
+        end = reader.line_num
+        output.append(''.join(lines[:end]))
+        for values in reader:
+            existing.append((values, ''.join(lines[end:reader.line_num])))
+            end = reader.line_num
+        assert len(keys) == len(set(keys)) and 'Video_ID' in keys, name
+        ids = [values[keys.index('Video_ID')] for values, _ in existing]
+        assert len(ids) == len(set(ids)) and ids == [r['Video_ID'] for r in rows], name
+    else:
+        header = io.StringIO(newline='')
+        csv.writer(header, lineterminator='\n').writerow(keys)
+        output.append(header.getvalue())
+    # Published headers stay frozen; additional fields remain in canonical JSONL.
+    for i, row in enumerate(rows):
+        values = []
+        for key in keys:
+            value = row.get(key, '')
+            if isinstance(value, (dict, list)) or isinstance(value, str) and ('\n' in value or '\r' in value):
+                value = json.dumps(value, ensure_ascii=False, sort_keys=True)
+            values.append('' if value is None else str(value))
+        if existing and values == existing[i][0]:
+            output.append(existing[i][1])
+        else:
+            record = io.StringIO(newline='')
+            csv.writer(record, lineterminator='\n').writerow(values)
+            output.append(record.getvalue())
+    path.write_bytes(''.join(output).encode('utf-8'))
+
+def load_batches(directory):
+    batches = {}
+    for path in sorted(directory.glob('*.json')):
+        batch = json.loads(path.read_text())
+        if 'reviews' not in batch and path.name.endswith('_VALIDATION.json') and 'batch_id' not in batch:
+            continue
+        for review in batch['reviews']:
+            assert review['Video_ID'] not in batches, 'Duplicate analyst batch ID'
+            batches[review['Video_ID']] = (batch['batch_id'], review)
+    return batches
 
 def batch_identity_errors(canonical_ids, batch_ids):
     return sorted(set(batch_ids)-set(canonical_ids))
@@ -50,12 +91,7 @@ def build():
     transcript_recovery = {r['Video_ID']:r for r in json.loads((BASE/'audit-batches/TRANSCRIPT_RECOVERY_001.json').read_text())['attempts']}
     thumbnail_recovery_path = BASE/'audit-batches/LEGACY_THUMBNAIL_RECOVERY_001.json'
     thumbnail_recovery = {r['Video_ID']:r for r in json.loads(thumbnail_recovery_path.read_text())['receipts']} if thumbnail_recovery_path.exists() else {}
-    batches = {}
-    for path in sorted((BASE/'audit-batches').glob('*.json')):
-        batch = json.loads(path.read_text())
-        for r in batch.get('reviews', []):  # validation/receipt companions carry no reviews
-            assert r['Video_ID'] not in batches, 'Duplicate analyst batch ID'
-            batches[r['Video_ID']] = (batch['batch_id'],r)
+    batches = load_batches(BASE/'audit-batches')
     assert not batch_identity_errors({r["Video_ID"] for r in master}, batches), "Unknown batch video"
     con = sqlite3.connect(f'file:{ROOT}/data/catalog/youtube_channel_registry.db?mode=ro', uri=True)
     con.row_factory = sqlite3.Row

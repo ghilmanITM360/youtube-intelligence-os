@@ -1,3 +1,21 @@
+# NICK_180 publication recheck and builder preservation — 2026-10-30
+
+The supplied IN_PROGRESS snapshot was stale. NICK_180 was already accepted/published as `f49382f543f2ef0bb4676738a3a4e100bd47428a`; the existing worktree and live Finance branch/OPEN-DRAFT-unmerged PR #36 were at `c325f9cb656242f1f713dd51252fdd929d14c6f0` after NICK_181–185. No new video was started in this closeout. The main checkout remains at `61f26b5c`; continue in the existing Finance worktree, not the stale main checkout.
+
+Machine B remains the authorized sole Finance writer on Users-MacBook-Pro.local / ghilmanislam360. The existing Claude worktree session ended its assistant turn at 05:10:08Z, followed only by local compaction at 05:21:53Z; process/session and app inspection found no competing active Finance turn. Other research and raw evidence were untouched.
+
+Independent historical comparison proves exactly one new complete video for the NICK_180 commit: **455 → 456/1,612; 1,156 remaining = 510 original + 646 expansion.** Current canonical ledger independently recomputes **461/1,612 complete; 1,151 remaining = 505 original + 646 expansion**. Next untouched is **NICK_186 `XP-26tqGFXc`**. Existing partial records, including `TFtBWn9CWOU`, remain unchanged.
+
+NICK_180 workbook: four original sheets and 1,612 identities preserved; only its research row 449 and seven dashboard cells changed. All worksheet structure, styles, formulas, tables, filters, row/column dimensions, panes and other package parts compare equal after removing cell values and normalizing exporter-generated relationship IDs; relationship targets are identical. All 26 immutable fingerprints match. All seven CSVs changed only NICK_180 and all existing-header fields reconcile to JSONL. Native Excel recalculation **NOT_TESTED**.
+
+Fresh checks: **38 Python Finance tests (34 existing + 4 focused regressions), 2 formatting tests and both canonical validators PASS**. All 39 claim witnesses and source references reconcile; four calculation receipts independently reproduce. The scratchpad helpers were reviewed and remain uncommitted. Full detail, packet hashes and qualifications: `audit-batches/NICK_180_CLOSEOUT_VALIDATION.json`.
+
+The original one-line receipt fix was committed with NICK_180 but silently ignored any JSON lacking `reviews`. This closeout narrows exclusion to validation companions; legitimate audit packets are loaded, malformed packets fail, and duplicate IDs remain rejected. Disposable rebuilds exposed three CSVs being rewritten despite unchanged JSONL. The builder now preserves existing headers and unchanged raw records; two complete disposable rebuilds produced byte-identical JSONL and all seven CSVs. Additional JSONL fields remain JSONL-only unless a CSV schema change is separately authorized. Rebuilds are still not multi-file transactions; validate before atomic Git publication.
+
+Evidence limits remain: Buffett final-result comparison requires the disclosed fund-period qualification; the narrative's interim-period attribution is not independently sourced. Sarah's illustrative projection does not match either stated rate. DOJ/BIS claims remain unverified after failed retrievals. No fresh research, audio/video verification or hosted CI rerun was performed. Current Codex usage reading: 18% five-hour / 19% weekly, paid balance zero; reset credit untouched; context percentage unavailable; 46 GiB disk free at preflight. Recheck live before any future task. Publish this focused closeout normally, then independently verify its containing commit against upstream/live remote/PR #36.
+
+---
+
 # Session closeout — Machine B, 2026-10-30 (NICK_180–185)
 
 **Six videos accepted and published this session: NICK_180 `W-j0_v9cXuQ`, NICK_181 `WAbZSrUMdk0`, NICK_182 `WyHZdWkS85U`, NICK_183 `X6_FpDN3XD8`, NICK_184 `XFEndHZQ66Q`, NICK_185 `XJ4ls6r2MCE`.** 461/1,612 complete; 1,151 remaining = 505 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Commits: `f49382f5`, `2e8dd26f`, `394d5329`, `58a2cb2a`, `e6000baa`, and the NICK_185 commit containing this note (verify live on PR #36). Hosted CI is billing-blocked (0 steps) and was not rerun.
