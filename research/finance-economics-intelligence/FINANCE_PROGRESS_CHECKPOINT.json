@@ -1,204 +1,284 @@
 {
-  "schema_version": 1,
-  "as_of_utc": "2026-10-26T12:25:19.671928+00:00",
-  "status": "PUBLISHED_VERIFIED_SESSION_RESOURCE_CHECKPOINT",
-  "writer": "MACHINE_B_SOLE_WRITER_ACCEPTED",
-  "branch": "research/finance-economics-intelligence",
-  "published_research_commit": "df80644a2394b89973952f98a60986c44af5b38d",
-  "publication_verification": {
-    "local_head": "df80644a2394b89973952f98a60986c44af5b38d",
-    "upstream_head": "df80644a2394b89973952f98a60986c44af5b38d",
-    "live_remote_head": "df80644a2394b89973952f98a60986c44af5b38d",
-    "pr36_head": "df80644a2394b89973952f98a60986c44af5b38d",
-    "pr36": "OPEN_DRAFT_UNMERGED",
-    "verification": "INDEPENDENT_LS_REMOTE_AND_GITHUB_PR_API",
-    "note": "This record is a documentation closeout over the verified research commit;the containing documentation commit is verified separately after push."
+ "schema_version": 1,
+ "as_of_utc": "2026-10-30T04:53:18.079093+00:00",
+ "status": "PUBLISHED_SESSION_CHECKPOINT",
+ "writer": "MACHINE_B_SOLE_WRITER_ACCEPTED",
+ "branch": "research/finance-economics-intelligence",
+ "published_research_commit": "2e8dd26f169708c5b3ead19a84ad5a0701170475",
+ "publication_verification": {
+  "local_head": "2e8dd26f169708c5b3ead19a84ad5a0701170475",
+  "live_remote_head": "2e8dd26f169708c5b3ead19a84ad5a0701170475",
+  "pr36_head": "2e8dd26f169708c5b3ead19a84ad5a0701170475",
+  "pr36": "OPEN_DRAFT_UNMERGED",
+  "verification": "INDEPENDENT_LS_REMOTE_AND_GITHUB_PR_API",
+  "note": "NICK_182 commit contains this checkpoint; verify its SHA live."
+ },
+ "batches": [
+  {
+   "nicks": [
+    "NICK_175",
+    "NICK_176"
+   ],
+   "commit": "703fc67530fdec4213f9308472c40a932e24d40e",
+   "accepted": 2,
+   "blocked": 0,
+   "completed": 452,
+   "remaining": 1160,
+   "original_pending": 514,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": true,
+   "ci": "CI_BLOCKED_BILLING",
+   "ci_run": 40315190338
   },
-  "batches": [
-    {
-      "nicks": [
-        "NICK_175",
-        "NICK_176"
-      ],
-      "commit": "703fc67530fdec4213f9308472c40a932e24d40e",
-      "accepted": 2,
-      "blocked": 0,
-      "completed": 452,
-      "remaining": 1160,
-      "original_pending": 514,
-      "expansion_pending": 646,
-      "remote_and_pr_verified": true,
-      "ci": "CI_BLOCKED_BILLING",
-      "ci_run": 40315190338
-    },
-    {
-      "nicks": [
-        "NICK_177",
-        "NICK_178"
-      ],
-      "commit": "733c7f717f5e47c0969b50cd4f00934030a0c219",
-      "accepted": 2,
-      "blocked": 0,
-      "completed": 454,
-      "remaining": 1158,
-      "original_pending": 512,
-      "expansion_pending": 646,
-      "remote_and_pr_verified": true,
-      "ci": "CI_BLOCKED_BILLING",
-      "ci_run": 40318391063
-    },
-    {
-      "nicks": [
-        "NICK_179"
-      ],
-      "commit": "df80644a2394b89973952f98a60986c44af5b38d",
-      "accepted": 1,
-      "blocked": 0,
-      "completed": 455,
-      "remaining": 1157,
-      "original_pending": 511,
-      "expansion_pending": 646,
-      "remote_and_pr_verified": true,
-      "ci": "CI_BLOCKED_BILLING",
-      "ci_run": 40321898085
-    }
-  ],
-  "session_accepted": 5,
-  "session_blocked": 0,
-  "packets": [
-    {
-      "nick": "NICK_175",
-      "video_id": "UwIxpBwUpUo",
-      "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-      "transcript_characters": 20127,
-      "claim_groups": 24,
-      "primary_source_receipts": 11,
-      "calculation_receipts": 2,
-      "packet_sha256": "fb6fc644da5730e02bddfe9848d7b3baa48e5b5faba7be2c52dfaf7b10b5f4fb",
-      "read_receipts_sha256": "248366dc6b29279b1f05a71162ab7f72f62d52140e15a627477ad50040b5dc78",
-      "validation_sha256": "19a594da755aa3c9557b97bce4d01a80034859d24d76b82b91c8b33352809775"
-    },
-    {
-      "nick": "NICK_176",
-      "video_id": "V5n4jp-p2NI",
-      "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-      "transcript_characters": 20139,
-      "claim_groups": 25,
-      "primary_source_receipts": 7,
-      "calculation_receipts": 3,
-      "packet_sha256": "f8c347015f20fa3c26fee9b0f09d01f3c1386a50b4d8fd6f19207dbe30c3a8da",
-      "read_receipts_sha256": "074fef8652ad8dd5b76cebe17991e08879fc25a1a6991d27414d360831d46fa3",
-      "validation_sha256": "550c2bfc5f3415dd9348277d9e168de03fec3c80bd7ea3a039413a079211a26d"
-    },
-    {
-      "nick": "NICK_177",
-      "video_id": "VAHjO-Vyovg",
-      "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-      "transcript_characters": 16745,
-      "claim_groups": 21,
-      "primary_source_receipts": 8,
-      "calculation_receipts": 3,
-      "packet_sha256": "e10b50deb4c95b076a3d2a0b11b44218cf4041a7be07e666ab1e235587521be3",
-      "read_receipts_sha256": "44bf804ac6f97450f29ae40dcc4cc89291cdbdd407096d389e0a27ef0aa34a8a",
-      "validation_sha256": "43fe5a373fbe7128bd93614b11cfeac01453d2bddb0ab1b8d443326bd3f07565"
-    },
-    {
-      "nick": "NICK_178",
-      "video_id": "VREo0Hj_tyQ",
-      "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-      "transcript_characters": 18967,
-      "claim_groups": 21,
-      "primary_source_receipts": 3,
-      "calculation_receipts": 2,
-      "packet_sha256": "40fe6d1bf0a201251015a19c1c4b1333b31e51cb4752189875f3f6243c8472c5",
-      "read_receipts_sha256": "70c1f34bd8baf68f592b3a7b475ae7253cd2923e212ca50a5ac9548c428a20f7",
-      "validation_sha256": "b0adf550dbb654c44e84f7f400784a0209f4a3e0398625acdec07f3104d8dbfd"
-    },
-    {
-      "nick": "NICK_179",
-      "video_id": "VWS7OpILfYI",
-      "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-      "transcript_characters": 39752,
-      "claim_groups": 29,
-      "primary_source_receipts": 10,
-      "calculation_receipts": 4,
-      "packet_sha256": "bba08035719969b9d6b55a8dea401a29a9e1322046e6c8ea6d606a8ff3895c23",
-      "read_receipts_sha256": "893c749a913937e2dc44b6f461987c8bbe90a4667ff38c6b573624238b44ba22",
-      "validation_sha256": "38c5e7c4eb5a39e71611c4059990c8b94eef69343faabc5629c7ca0d715cbb0c"
-    }
-  ],
-  "population": {
-    "total": 1612,
-    "completed": 455,
-    "remaining": 1157,
-    "original_total": 966,
-    "original_pending": 511,
-    "expansion_total": 646,
-    "expansion_pending": 646
+  {
+   "nicks": [
+    "NICK_177",
+    "NICK_178"
+   ],
+   "commit": "733c7f717f5e47c0969b50cd4f00934030a0c219",
+   "accepted": 2,
+   "blocked": 0,
+   "completed": 454,
+   "remaining": 1158,
+   "original_pending": 512,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": true,
+   "ci": "CI_BLOCKED_BILLING",
+   "ci_run": 40318391063
   },
-  "coverage": {
-    "full_stored_text_characters": 115730,
-    "claim_groups": 120,
-    "primary_source_receipt_rows": 39,
-    "source_independence": "Receipt rows include disclosed legitimate reuse;not39independentsources",
-    "calculation_receipts": 14,
-    "authentic_thumbnails_native_and_mobile": 5
+  {
+   "nicks": [
+    "NICK_179"
+   ],
+   "commit": "df80644a2394b89973952f98a60986c44af5b38d",
+   "accepted": 1,
+   "blocked": 0,
+   "completed": 455,
+   "remaining": 1157,
+   "original_pending": 511,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": true,
+   "ci": "CI_BLOCKED_BILLING",
+   "ci_run": 40321898085
   },
-  "synchronization": {
-    "jsonl": "PASS",
-    "csv_projections": 7,
-    "workbook": "PASS",
-    "workbook_sha256": "7bce8e3450ae356d7d2c882446a344b787134c441d14392d830e208151f5f03b",
-    "workbook_sheets": 4,
-    "unique_workbook_ids": 1612,
-    "detailed_json_projections": 8694,
-    "format_formula_table_filter_pane_objects": "PRESERVED",
-    "native_excel_recalculation": "NOT_TESTED",
-    "source_fingerprints_preserved": 26,
-    "legacy_TFtBWn9CWOU": "UNCHANGED_IN_PROGRESS"
+  {
+   "nicks": [
+    "NICK_180"
+   ],
+   "commit": "f49382f543f2ef0bb4676738a3a4e100bd47428a",
+   "accepted": 1,
+   "blocked": 0,
+   "completed": 456,
+   "remaining": 1156,
+   "original_pending": 510,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": true,
+   "ci": "CI_BLOCKED_BILLING",
+   "ci_run": 41004335508
   },
-  "validation": {
-    "finance_tests_per_batch": 34,
-    "formatting_tests_per_batch": 2,
-    "canonical_validators": "PASS_BOTH_EACH_BATCH",
-    "target_only_claim_calculation_and_workbook_checks": "PASS_EACH_BATCH",
-    "semantic_scope": "Analystreview,evidence-qualified;notschemaguaranteeoftruth",
-    "hosted_ci": "CI_BLOCKED_BILLING_ALL_THREE_RESEARCH_COMMITS",
-    "hosted_test_steps_executed": 0
+  {
+   "nicks": [
+    "NICK_181"
+   ],
+   "commit": "2e8dd26f169708c5b3ead19a84ad5a0701170475",
+   "accepted": 1,
+   "blocked": 0,
+   "completed": 457,
+   "remaining": 1155,
+   "original_pending": 509,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": true,
+   "ci": "NOT_CHECKED_EXPECTED_BILLING_BLOCK"
   },
-  "hashes": {
-    "VIDEO_AUDIT_966.jsonl": "d5542a51cddc1c309c1a5ad1e9b798ffc35f49a6f8302f73d83edadde9249458",
-    "VIDEO_AUDIT_966.csv": "d7b78dd7b2aa2034c54289d2998ebf0e502000e0142f9e7c7d00c5d6477a9b91",
-    "VIDEO_COMPLETION_MATRIX.csv": "dc21f3fd7a7040a5da6948420eb7288129075617768e8b6d0d5e7a74da85ee57",
-    "THUMBNAIL_ANALYSIS_966.csv": "34e8335d6e4b96a14711faf6be98c739f596da53786e0f419ae90b6a792fb301",
-    "SCRIPT_ANALYSIS_966.csv": "5bb8fa428ff59e42a6b99c1c1741a922cc17f79407c945ad2b3fb3d1067237b2",
-    "TITLE_ANALYSIS_966.csv": "73f50d463c12a4e3ccb24f4db939cb41e344d1901bba622414ab2ae3c3e06efb",
-    "TOPIC_ANALYSIS_966.csv": "3289b791eae03ef29de8f06a29acd752cefd8f2cb7e25edbb86cbe399e1e0976",
-    "VIRALITY_INTELLIGENCE_966.csv": "fa05e5a1850007d7d7578aba5dd66a5a773648031bd83ef116dfba3372f6cd34"
+  {
+   "nicks": [
+    "NICK_182"
+   ],
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 1,
+   "blocked": 0,
+   "completed": 458,
+   "remaining": 1154,
+   "original_pending": 508,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": "PENDING_AT_WRITE"
+  }
+ ],
+ "session_accepted": 3,
+ "session_blocked": 0,
+ "packets": [
+  {
+   "nick": "NICK_175",
+   "video_id": "UwIxpBwUpUo",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 20127,
+   "claim_groups": 24,
+   "primary_source_receipts": 11,
+   "calculation_receipts": 2,
+   "packet_sha256": "fb6fc644da5730e02bddfe9848d7b3baa48e5b5faba7be2c52dfaf7b10b5f4fb",
+   "read_receipts_sha256": "248366dc6b29279b1f05a71162ab7f72f62d52140e15a627477ad50040b5dc78",
+   "validation_sha256": "19a594da755aa3c9557b97bce4d01a80034859d24d76b82b91c8b33352809775"
   },
-  "resources": {
-    "five_hour_used_percent": 46,
-    "weekly_used_percent": 7,
-    "paid_credit_balance": 0,
-    "free_disk_gib_rounded": 16,
-    "context_input_observed": 372441,
-    "context_window": 475000,
-    "compactions": 0,
-    "stop_reason": "CONSERVATIVE_CONTEXT_AND_EXECUTION_RESERVE_FOR_NEXT_COMPLEX_UNIT",
-    "quota_threshold_reached": false,
-    "disk_threshold_reached": false,
-    "planning_estimate_reference": "FINANCE_EXECUTION_FORECAST.json",
-    "pending_work": "NONE;allacceptedworkpublished"
+  {
+   "nick": "NICK_176",
+   "video_id": "V5n4jp-p2NI",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 20139,
+   "claim_groups": 25,
+   "primary_source_receipts": 7,
+   "calculation_receipts": 3,
+   "packet_sha256": "f8c347015f20fa3c26fee9b0f09d01f3c1386a50b4d8fd6f19207dbe30c3a8da",
+   "read_receipts_sha256": "074fef8652ad8dd5b76cebe17991e08879fc25a1a6991d27414d360831d46fa3",
+   "validation_sha256": "550c2bfc5f3415dd9348277d9e168de03fec3c80bd7ea3a039413a079211a26d"
   },
-  "next": {
-    "nick": "NICK_180",
-    "video_id": "W-j0_v9cXuQ",
-    "title": "FINANCIAL SYSTEM Explained in 50 Mins",
-    "duration_seconds": 3159,
-    "canonical_transcript_characters": 45453,
-    "thumbnail_status": "PRESENT_NOT_FETCHED",
-    "status": "NOT_STARTED_READINESS_ONLY_CHECKED",
-    "deferrals": []
+  {
+   "nick": "NICK_177",
+   "video_id": "VAHjO-Vyovg",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 16745,
+   "claim_groups": 21,
+   "primary_source_receipts": 8,
+   "calculation_receipts": 3,
+   "packet_sha256": "e10b50deb4c95b076a3d2a0b11b44218cf4041a7be07e666ab1e235587521be3",
+   "read_receipts_sha256": "44bf804ac6f97450f29ae40dcc4cc89291cdbdd407096d389e0a27ef0aa34a8a",
+   "validation_sha256": "43fe5a373fbe7128bd93614b11cfeac01453d2bddb0ab1b8d443326bd3f07565"
   },
-  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops."
+  {
+   "nick": "NICK_178",
+   "video_id": "VREo0Hj_tyQ",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18967,
+   "claim_groups": 21,
+   "primary_source_receipts": 3,
+   "calculation_receipts": 2,
+   "packet_sha256": "40fe6d1bf0a201251015a19c1c4b1333b31e51cb4752189875f3f6243c8472c5",
+   "read_receipts_sha256": "70c1f34bd8baf68f592b3a7b475ae7253cd2923e212ca50a5ac9548c428a20f7",
+   "validation_sha256": "b0adf550dbb654c44e84f7f400784a0209f4a3e0398625acdec07f3104d8dbfd"
+  },
+  {
+   "nick": "NICK_179",
+   "video_id": "VWS7OpILfYI",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 39752,
+   "claim_groups": 29,
+   "primary_source_receipts": 10,
+   "calculation_receipts": 4,
+   "packet_sha256": "bba08035719969b9d6b55a8dea401a29a9e1322046e6c8ea6d606a8ff3895c23",
+   "read_receipts_sha256": "893c749a913937e2dc44b6f461987c8bbe90a4667ff38c6b573624238b44ba22",
+   "validation_sha256": "38c5e7c4eb5a39e71611c4059990c8b94eef69343faabc5629c7ca0d715cbb0c"
+  },
+  {
+   "nick": "NICK_180",
+   "video_id": "W-j0_v9cXuQ",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 45453,
+   "claim_groups": 39,
+   "primary_source_receipts": 9,
+   "calculation_receipts": 4,
+   "packet_sha256": "a916f578a81c77b1c8ed898808777ebd27662d2cb9eb6c315f5afe4eb066a477",
+   "read_receipts_sha256": "bb538cc7c5e13f71108fcb76aa891b2133a805d3ac79cec6ac394721389d31bb",
+   "validation_sha256": "a12e932d4db5df275c22489507ab3cdb7637ccbab243cd99aef73a5433eacbf9"
+  },
+  {
+   "nick": "NICK_181",
+   "video_id": "WAbZSrUMdk0",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 20001,
+   "claim_groups": 18,
+   "primary_source_receipts": 3,
+   "calculation_receipts": 3,
+   "packet_sha256": "d2b213e8ba5f6df4411fdd84cc3a423409d7ce0106adea2a8465073dce5d40ef",
+   "read_receipts_sha256": "455ccbf2b81305961921f4e41a051f5499796770a8751e9cca4559fa90f40bd7",
+   "validation_sha256": "352e7908089592d04eff459c60cd9ffffcda6e7aaec495da7ac6c0623ec09ebe"
+  },
+  {
+   "nick": "NICK_182",
+   "video_id": "WyHZdWkS85U",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18767,
+   "claim_groups": 23,
+   "primary_source_receipts": 3,
+   "calculation_receipts": 4,
+   "packet_sha256": "3d5ae693b0233c287b07611754d90ab1839e09efbd473a3d320e58fffe05d475",
+   "read_receipts_sha256": "1807dd1829d712ca988488b27c0c5ede2f6e2cf7026eecb3501ef57c55b715e5",
+   "validation_sha256": "5539627b18c12bdb75f3e8945f9e06559bd84f8702e531f3be1950d09cec86d4"
+  }
+ ],
+ "population": {
+  "total": 1612,
+  "completed": 458,
+  "remaining": 1154,
+  "original_total": 966,
+  "original_pending": 508,
+  "expansion_total": 646,
+  "expansion_pending": 646
+ },
+ "coverage": {
+  "full_stored_text_characters": 115730,
+  "claim_groups": 120,
+  "primary_source_receipt_rows": 39,
+  "source_independence": "Receipt rows include disclosed legitimate reuse;not39independentsources",
+  "calculation_receipts": 14,
+  "authentic_thumbnails_native_and_mobile": 5
+ },
+ "synchronization": {
+  "jsonl": "PASS",
+  "csv_projections": 7,
+  "workbook": "PASS",
+  "workbook_sha256": "b98396f30383863cb3e84aa60b0588525b5bba35e01d3944f2bbdbbac289ac0b",
+  "workbook_sheets": 4,
+  "unique_workbook_ids": 1612,
+  "detailed_json_projections": 8694,
+  "format_formula_table_filter_pane_objects": "PRESERVED",
+  "native_excel_recalculation": "NOT_TESTED",
+  "source_fingerprints_preserved": 26,
+  "legacy_TFtBWn9CWOU": "UNCHANGED_IN_PROGRESS",
+  "csv_method": "HEADER_STABLE_TARGET_ROW_REPLACEMENT"
+ },
+ "validation": {
+  "finance_tests_per_batch": 34,
+  "formatting_tests_per_batch": 2,
+  "canonical_validators": "PASS_BOTH_EACH_BATCH",
+  "target_only_claim_calculation_and_workbook_checks": "PASS_EACH_BATCH",
+  "semantic_scope": "Analystreview,evidence-qualified;notschemaguaranteeoftruth",
+  "hosted_ci": "CI_BLOCKED_BILLING_ALL_THREE_RESEARCH_COMMITS",
+  "hosted_test_steps_executed": 0
+ },
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "8b29db486d89f5eed1c1a24103fdafd9ed793752ab7f1b2e482f8dd2fa350a59",
+  "VIDEO_AUDIT_966.csv": "bd97d631fb58907b8600b039a154c2e6042723f90d37396dbf67e1e5012f46b0",
+  "VIDEO_COMPLETION_MATRIX.csv": "dc21f3fd7a7040a5da6948420eb7288129075617768e8b6d0d5e7a74da85ee57",
+  "THUMBNAIL_ANALYSIS_966.csv": "34e8335d6e4b96a14711faf6be98c739f596da53786e0f419ae90b6a792fb301",
+  "SCRIPT_ANALYSIS_966.csv": "5bb8fa428ff59e42a6b99c1c1741a922cc17f79407c945ad2b3fb3d1067237b2",
+  "TITLE_ANALYSIS_966.csv": "73f50d463c12a4e3ccb24f4db939cb41e344d1901bba622414ab2ae3c3e06efb",
+  "TOPIC_ANALYSIS_966.csv": "3289b791eae03ef29de8f06a29acd752cefd8f2cb7e25edbb86cbe399e1e0976",
+  "VIRALITY_INTELLIGENCE_966.csv": "fa05e5a1850007d7d7578aba5dd66a5a773648031bd83ef116dfba3372f6cd34"
+ },
+ "resources": {
+  "five_hour_used_percent": 46,
+  "weekly_used_percent": 7,
+  "paid_credit_balance": 0,
+  "free_disk_gib_rounded": 16,
+  "context_input_observed": 372441,
+  "context_window": 475000,
+  "compactions": 0,
+  "stop_reason": "CONSERVATIVE_CONTEXT_AND_EXECUTION_RESERVE_FOR_NEXT_COMPLEX_UNIT",
+  "quota_threshold_reached": false,
+  "disk_threshold_reached": false,
+  "planning_estimate_reference": "FINANCE_EXECUTION_FORECAST.json",
+  "pending_work": "NONE;allacceptedworkpublished"
+ },
+ "next": {
+  "nick": "NICK_183",
+  "video_id": "X6_FpDN3XD8",
+  "title": "The Smartest Order to Invest Your Money if WW3 Starts Tomorrow"
+ },
+ "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
+ "stop_reason": "CHECKPOINT_AT_92_PERCENT_WEEKLY_GATE_IS_95",
+ "latest_resources": {
+  "five_hour_used_percent": 38,
+  "weekly_used_percent": 92,
+  "paid_credits_spent": 0,
+  "free_disk_gib_rounded": 50
+ }
 }

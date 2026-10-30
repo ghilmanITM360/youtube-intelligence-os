@@ -1,0 +1,302 @@
+{
+ "batch_id": "NICK_182_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "WyHZdWkS85U",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "e75d2f5c351d51dc3461b1788b24a5ad8054f14a769b030e064591b59e43c7f3",
+   "character_count": 18767,
+   "canonical_utf8_bytes": 18767,
+   "canonical_whitespace_word_count": 3169,
+   "coverage_token_count": 3250,
+   "read_character_ranges": [
+    [
+     0,
+     6500
+    ],
+    [
+     6500,
+     13000
+    ],
+    [
+     13000,
+     18767
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "You're making $80,000 a year. Decent salary, right? You've been responsible. You've saved some money. You're ready to become a homeowner. So, you open Zillow at midnight on a Tuesday and every single house that doesn't look like it's actively falling apart costs at least $400,000. The kitchen has laminate countertops from 2003. The carpet is that specific shade of beige that screams, \"We stopped caring in 1997.\" There's fake wood paneling in the basement and the listing",
+   "last_text_witness": "that it doesn't make sense. Not right now. Not at these prices. Not with your current income. And that's not failure. That's math. That's reality. That's making a decision based on what will actually make your life better instead of what everyone else thinks you should do. Your salary buys you a lot less house than you think it does. And understanding that might be the most valuable financial lesson you learn.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 6500,
+     "first80": "You're making $80,000 a year.\nDecent salary, right?\nYou've been responsible. You",
+     "last80": " home. Their housing\npayment eats $3,191\nof that, leaving $1,476\nfor everything "
+    },
+    {
+     "start": 6500,
+     "end": 13000,
+     "first80": "else. Now, add utilities,\ngroceries, car payment, insurance, gas,\nstudent loans,",
+     "last80": "32 car payment, you've got\na pre-mortgage debt-to-income ratio of\nover 11%.\nThat"
+    },
+    {
+     "start": 13000,
+     "end": 18767,
+     "first80": " means at the bank's 43% threshold,\nyou only have about 32% of your income\nleft ",
+     "last80": "s. And understanding that might be\nthe most valuable financial lesson you\nlearn."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "192_WyHZdWkS85U_How_Much_House_Your_Salary_Actually_Buys_You.txt",
+   "archive_member_sha256": "4039be052626ce18a8e7794ef111a47746cbbb77c7a1c3e9f57f782236e1d4ac",
+   "archive_member_bytes": 20277,
+   "archive_member_lines": 551,
+   "audio_verified": false,
+   "image_sha256": "50e5f1b0197bf75295bf135e0188a62cd6e21e995c52801a0667ea4325d66fd8",
+   "image_bytes": 122410,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/WyHZdWkS85U/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/WyHZdWkS85U/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_PROPORTIONAL_MOBILE_INSPECTED",
+   "acquired_date": "2026-10-30"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "CENSUS2024",
+   "url": "https://www.census.gov/library/publications/2025/demo/p60-286.html",
+   "source_date": "2025-09-09",
+   "accessed": "2026-10-30",
+   "access_scope": "PRIMARY_RELEVANT_SECTIONS_READ",
+   "locator": "Publication page summary",
+   "finding": "Income in the United States: 2024 (P60-286): 2024 real median household income $83,730, not statistically different from 2023 ($82,690).",
+   "limitations": "National median; no income-distribution shares read.",
+   "publication_applicability": "AVAILABLE_AT_VIDEO_PUBLICATION"
+  },
+  {
+   "source_id": "CFPBDTI",
+   "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/",
+   "source_date": "2023-08-28",
+   "accessed": "2026-10-30",
+   "access_scope": "PRIMARY_RELEVANT_SECTIONS_READ",
+   "locator": "Ask CFPB answer",
+   "finding": "Different loan products and lenders have different DTI limits; page states no single 43% cap and no 28/36 guidance.",
+   "limitations": "Consumer explainer, not underwriting rules.",
+   "publication_applicability": "CURRENT_PAGE_ACCESSED_AFTER_PUBLICATION"
+  },
+  {
+   "source_id": "NAR2025",
+   "url": "https://www.nar.realtor/research-and-statistics/research-reports/highlights-from-the-profile-of-home-buyers-and-sellers",
+   "source_date": "2025-11",
+   "accessed": "2026-10-30",
+   "access_scope": "SECONDARY_SUMMARY_LINK_TITLE_LEVEL",
+   "locator": "Highlights page",
+   "finding": "2025 Profile of Home Buyers and Sellers (July 2024-June 2025) highlights link a release titled first-time buyers at a historic-low 21% and median first-time age 40; the page notes all-time-high all-cash buyers without a number.",
+   "limitations": "Trade-association survey; figures read at link-title level only; full report not read.",
+   "publication_applicability": "AVAILABLE_AT_VIDEO_PUBLICATION"
+  }
+ ],
+ "source_access_failures": [
+  {
+   "source_id": "CENSUSPR",
+   "url": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance.html",
+   "accessed": "2026-10-30",
+   "result": "HTTP_404;replaced by P60-286 page"
+  },
+  {
+   "source_id": "NARPR",
+   "url": "https://www.nar.realtor/newsroom/first-time-home-buyers-shrink-to-historic-low-of-21-share-in-2025-median-age-hits-record-high-of-40",
+   "accessed": "2026-10-30",
+   "result": "HTTP_404;not used"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 88794,
+    "age_days": 203.27,
+    "views_per_day": 436.82786441678553,
+    "peer_median_10": 56.31026610746897,
+    "peer_median_5": 43.49202175574935,
+    "peer_ratio_10": 7.757517316346776,
+    "peer_ratio_5": 10.043861995425399,
+    "tier_10": "STRONG",
+    "tier_5": "STRONG",
+    "peer_ids_10": [
+     "OJ-AlXuGIPk",
+     "l1NjZktMqj8",
+     "duTU1_Fdav0",
+     "6qgJOFGj4Fc",
+     "rbnPR2Dnmz4",
+     "Hb4Dhhp8YnM",
+     "87I07jMziLE",
+     "zJrEAcz7BPE",
+     "4BO-G1P9SI0",
+     "mQH1MPWBsy4"
+    ],
+    "peer_ids_5": [
+     "OJ-AlXuGIPk",
+     "l1NjZktMqj8",
+     "duTU1_Fdav0",
+     "6qgJOFGj4Fc",
+     "rbnPR2Dnmz4"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "OJ-AlXuGIPk",
+      "Title": "The Psychology Behind Buying Unnecessary Things",
+      "Views": "13993",
+      "Age_days": "202.4201",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "l1NjZktMqj8",
+      "Title": "The Crypto Trap That Keeps The Middle Class Poor",
+      "Views": "7050",
+      "Age_days": "204.2494",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "duTU1_Fdav0",
+      "Title": "Do This Once You Have $50,000 Saved",
+      "Views": "23845",
+      "Age_days": "201.2346",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "6qgJOFGj4Fc",
+      "Title": "Why Everything Changes After You Have 0.1 Bitcoin",
+      "Views": "8932",
+      "Age_days": "205.371",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "rbnPR2Dnmz4",
+      "Title": "Why Everything Changes After $50,000 A Year",
+      "Views": "7444",
+      "Age_days": "200.1457",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "Hb4Dhhp8YnM",
+      "Title": "Do This Once You Have $20,000 Saved",
+      "Views": "58929",
+      "Age_days": "206.444",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "87I07jMziLE",
+      "Title": "The Japanese Way To Save Money (Step-by-Step)",
+      "Views": "29678",
+      "Age_days": "199.1013",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "zJrEAcz7BPE",
+      "Title": "The \"Degree\" Trap (Why College Keeps You Poor)",
+      "Views": "5747",
+      "Age_days": "207.4975",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "4BO-G1P9SI0",
+      "Title": "Every Financial Trap Middle Class People Fall Into Explained",
+      "Views": "46504",
+      "Age_days": "198.2123",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "mQH1MPWBsy4",
+      "Title": "Why The Middle Class Is Being Taxed Into Poverty",
+      "Views": "8599",
+      "Age_days": "208.3352",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Standard 360-month fixed amortisation at 6.09%/12; income thresholds = annual cost / ratio; payment capacity = payment / annuity factor",
+   "results": {
+    "pi_360k": 2179.2564,
+    "pi_380k": 2300.3262,
+    "pi_400k": 2421.396,
+    "stack_sum": 3508,
+    "income_at_28pct": 150342.86,
+    "income_at_43pct": 97897.67,
+    "implied_pmi_rate": 0.0091667,
+    "loan_supported_by_250": 41298.49,
+    "loan_supported_by_3200_all_pi": 528620.67
+   },
+   "limitations": "Rate not independently fetched; tax/insurance/PMI/maintenance are creator assumptions."
+  },
+  {
+   "calculation_id": "K03",
+   "method": "Scenario reconciliation for $80K, $200K and $120K households",
+   "results": {
+    "80k_share_3191": 0.47865,
+    "80k_itemised_before_pmi": 3383.33,
+    "200k_share_3770": 0.2262,
+    "200k_pi_tax_ins_maint_at_400k_basis": 3504.4,
+    "120k_dti": 0.0932,
+    "120k_remaining_ratio_at_43": 0.3368,
+    "120k_housing_budget": 3368.0
+   },
+   "limitations": "Take-home pay and expense lists are creator assertions."
+  },
+  {
+   "calculation_id": "K04",
+   "method": "Direct ratio checks",
+   "results": {
+    "price_to_income": 4.956408,
+    "san_jose_to_cleveland": 7.887944,
+    "nj_implied_home_value": 427847.53,
+    "tx_monthly_tax": 600.0,
+    "hidden_cost_monthly": 1783.33,
+    "price_500_over_415": 1.204819,
+    "down_payment_years_4000": 20.75,
+    "down_payment_years_1000_monthly": 6.916667,
+    "five_pct_of_median_income": 4186.5,
+    "car_748_over_532": 1.406015
+   },
+   "limitations": "Arithmetic only; underlying levels mostly unverified."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification; relevant sections only. Unverified claims are tags, not established facts; no paid purchases."
+}

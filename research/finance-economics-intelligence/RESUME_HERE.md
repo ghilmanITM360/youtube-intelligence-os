@@ -1,3 +1,17 @@
+# Session checkpoint — Machine B, 2026-10-30
+
+**Three videos accepted and published this session: NICK_180 `W-j0_v9cXuQ`, NICK_181 `WAbZSrUMdk0`, NICK_182 `WyHZdWkS85U`.** 458/1,612 complete; 1,154 remaining = 508 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Research commits: `f49382f5` (NICK_180) and `2e8dd26f` (NICK_181); the NICK_182 commit contains this note, so verify its SHA live on PR #36. Hosted CI for `f49382f5` did not start (billing block, 0 steps); it was not rerun.
+
+NICK_182 summary: all six dimensions are COMPLETE_LIMITED_EVIDENCE; 18,767 characters read in full; 23 claim groups; Census P60-286 confirms the $83,730 median income; the CFPB page states DTI limits vary (no single 43% cap); NAR 21%/age-40 read at link-title level.
+- Reproduced: the $3,508 cost stack, the $150K/$98K income thresholds, and $250 of debt per $41K of loan capacity.
+- Errors: P&I $2,179, not $2,150; the $3,191 scenario contradicts its own itemisation ($3,383 before PMI); the $120K DTI is 9.32%, not over 11%; car payment $748 versus $532.
+- Performance: STRONG at 7.75752× ten-peer and 10.04386× five-peer, the cohort high.
+- Workbook diff: only row 451 plus dashboard counters changed; 0 styles changed; 0 formula errors.
+
+**Checkpoint at a live reading of 92% weekly / 38% five-hour (Pro plan; stop gate 95% weekly).** Next untouched: **NICK_183 `X6_FpDN3XD8` — The Smartest Order to Invest Your Money if WW3 Starts Tomorrow.** Machine B remains sole writer. Tooling: `build_audit_966.py` skips companion JSON without `reviews`. CSVs use header-stable target-row replacement (`peer_titles` and `weak_performance_counterexamples` live in the JSONL only).
+
+---
+
 # Latest validated checkpoint — NICK_181 (2026-10-30, Machine B)
 
 Parent `f49382f543f2ef0bb4676738a3a4e100bd47428a` (NICK_180) was verified equal on local, live remote and OPEN-DRAFT PR #36 before this unit.
