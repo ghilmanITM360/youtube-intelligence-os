@@ -1,3 +1,7 @@
+# Machine A expansion-source preparation (2026-11-01)
+
+The 30 Casually Finance expansion transcript candidates (16 forensic-research `TRANSCRIPT.csv`, 14 editing-forensics `auto/asr_words.csv`, read from origin blobs only) are verified in `EXPANSION_TRANSCRIPT_CANDIDATES_VERIFIED.json`: ID match, identical copies, 0.98–1.00 duration coverage, no duplicates, content consistent with titles. They are **branch-local verified candidates, not registered and not canonically accepted**. Registration is the registry writer's job (Machine B). Note: the forensic-research `word_index` restarts per sentence, so order words by `start_sec`.
+
 # Machine A owner-directed checkpoint — NICK_215–217 (2026-11-01)
 
 **Parent `4fa498b1`.** PR #36 / canonical branch still `223f4498`, untouched. 493/1,612 complete; next `NICK_218 dF-_DaVgir0`. Validation: `validate_audit_966` rc=0 (493 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 486–488), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN (not readable from session).

@@ -42,3 +42,10 @@ verify local = upstream = remote.
 No audio/visual review beyond thumbnails, no native Excel recalculation, no inferred impressions/CTR/
 retention/revenue/demographics. Expansion rows are all `BLOCKED_MISSING_SOURCE_TRANSCRIPT` until a
 transcript is registered; metadata alone never makes them complete.
+
+## Expansion transcript candidates (read-only)
+`python3 -I machine_a_tools/verify_expansion.py EXPANSION_TRANSCRIPT_CANDIDATES_VERIFIED.json` re-verifies the 30 Casually Finance
+candidates from origin blobs: video ID in path and rows, identical copies across branches, ASR end time ≥ 0.9 × duration, no
+duplicate text across IDs. As of 2026-11-01 all 30 pass, as `VERIFIED_CANDIDATE_NOT_REGISTERED`. They are machine ASR (Whisper), not
+YouTube captions. They cannot be audited until the registry writer (Machine B) registers them with Text_SHA256 and archive containment;
+Machine A never writes the registry. The other 616 expansion rows have no local source, so do not search for them again.
