@@ -1,3 +1,11 @@
+# Machine A owner-directed checkpoint — NICK_215–217 (2026-11-01)
+
+**Parent `4fa498b1`.** PR #36 / canonical branch still `223f4498`, untouched. 493/1,612 complete; next `NICK_218 dF-_DaVgir0`. Validation: `validate_audit_966` rc=0 (493 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 486–488), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN (not readable from session).
+
+- **NICK_215 `ccNuYRhrA0U` — POV: You Stopped Following Normal Money Advice.** 1.00027× TYPICAL; 18 claims. Verified: Census $83,730 median, CE $77K spending, SPIVA ~95% 20-year, Vanguard 55–64 median $95,642. Rent-vs-buy 57%/118%/131% is a March 2025 study (stale). Reproduces: 1% fee on $500K = $934K; $700/month = $1.58M only at an unstated 10%. Problems: Nina/Ian ages and horizons inconsistent; $3.16M not reproducible from 35% of $60K at 8%; "$72K after tax" vs "$60K"; 20% day-one depreciation; MIT 12–18%; "physical pain" neuroscience.
+- **NICK_216 `ciWCTKap5ZM` — How to Invest Your First $1,000 in 2026.** 0.96779× TYPICAL; 11 claims. Verified 2026 IRA $7,500/$8,600. Wrong: $1,000 → $50,000 in 30 years (needs 13.9%; $17,449 at 10%); active funds "2–3%" (ICI ~0.64% active, 0.40% all equity); FXAIX labelled total market.
+- **NICK_217 `czaMRc6fZQI` — If I Started Investing in August 2026, This is What I'd Buy.** 0.76669× TYPICAL (~19 days old); 16 claims. Verified: S&P ~7,700–7,800, 30-year Treasury 5.31% 19-year high (17 Aug), July CPI 3.4%, 2026 IRA/401(k) limits, best-days pattern. Reproduces blended 0.034% fee and $566K/$89K fee example (annual convention). Problems: "VT or VOO" for the US slice; 51% saving at target conflated with missing the match; best-days period label uncertain. Correctly flags the Fidelity "dead accounts" story as folklore.
+
 # Machine A owner-directed checkpoint — NICK_212–214 (2026-11-01)
 
 **Parent `3d498714`.** PR #36 / canonical branch still `223f4498`, untouched. 490/1,612 complete; next `NICK_215 ccNuYRhrA0U`. Validation: `validate_audit_966` rc=0 (490 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 483–485), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN (not readable from session).
