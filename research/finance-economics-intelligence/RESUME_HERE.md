@@ -1,3 +1,16 @@
+# Machine A owner-directed checkpoint — NICK_197–200 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed`; parent `728465cc`.** PR #36 and `research/finance-economics-intelligence` were still at `223f4498` and were not touched. Start from `machine_a_tools/RUNBOOK.md` gates and the queue head, not from this note. 476/1,612 complete; next `NICK_201 Zp6BytPl4u0`.
+
+All four: six dimensions COMPLETE_LIMITED_EVIDENCE; full stored text read; authentic maxresdefault thumbnails inspected at 1280x720 and 320x180; audio unverified.
+
+- **NICK_197 `ZCJcr5K0U6A` — Stop Grinding: How to Build Wealth Without Sacrificing Your Life.** 1.63485× TYPICAL; 11 claims. Vanguard $2,000/21% well-being verified (associational). Errors: one-year savings $2,400 (reproduces $10,400), leftover "$100–400" (reproduces $1,400), IRA limit $7,000 stale (2026 $7,500), $5,000 card at 22% "nearly $2,800" understated ($3,286–$4,151), 401(k) called tax-free. Compounding examples reproduce.
+- **NICK_198 `ZO5VUGD1a84` — The "Shadow Portfolio": How To Get Rich At Work.** 2.97359× STRONG; 13 claims. "Benefits ≈30% of base salary" uses the wrong denominator (BLS ECEC: ~29.9% of total compensation ≈ 43% of wages, incl. mandatory benefits). $9,800 tally and ~$926K at 7% reproduce but count non-cash education/wellness as investable (~$548K investable). Match capture "one third" unverified (varies by income). 10-year roadmap is illustrative and aggressive.
+- **NICK_199 `Zn5jEbthAHU` — The Biggest Myths in Personal Finance.** 0.76378× TYPICAL (only ~42 days old); 19 claims. Best-sourced script so far: BLS CE 2024 shares, G.19 22.15%, Vanguard lump sum 68%, SPIVA 79%, Trustees 2033/77% all verify. Error: 1% fee on $500K/30y → $2.87M and $902K gap, not $2.99M/$820K.
+- **NICK_200 `ZnI6pKMnpf4` — Why Your 40s Beat Your 20s for Building Wealth.** 1.68072× TYPICAL; 13 claims. FV figures reproduce ($1.31M, $1.22M, $2.03M) but the late starter contributes 1.9–3.1× as much, so the arithmetic supports starting early. Biographies (Walton 44, Child 36/49/50, Wang ~40, Buffett 56) consistent; Hartshorne & Germine 2015 partially supports cognitive-peak claim.
+
+Validation: `validate_audit_966` rc=0 (26 source hashes, 0 errors); `validate_research` PASS_BOUNDED; 38 + 2 tests pass; workbook 119 cells changed (dashboard 7 + rows 466–469), 0 styles, 0 formulas, zip OK; each CSV/JSONL changed only the 4 target rows; witnesses, source refs and text SHA true; `TFtBWn9CWOU` still IN_PROGRESS. Native Excel recalculation NOT_TESTED. Profiling: workbook build ~100s and `validate_audit_966` ~62s dominate; pytest/node ~1s each.
+
 # Machine A owner-directed checkpoint — NICK_195–196 (2026-10-31)
 
 **Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `dcd7a4c0`, which added a recomputable queue (`build_continuation_queue.py`, `FINANCE_CONTINUATION_QUEUE.csv`), a writer lock and `machine_a_tools/RUNBOOK.md`. A fresh session starts from the RUNBOOK gates and the queue head, not from this note. The canonical branch and PR #36 were still at `223f4498`.
