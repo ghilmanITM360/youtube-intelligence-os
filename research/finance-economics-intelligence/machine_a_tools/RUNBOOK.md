@@ -35,6 +35,9 @@ Copy packets and `NICK_{vid}.jpg` into `audit-batches/`; `python3 build_audit_96
 `machine_a_tools/vr.py`, `machine_a_tools/post.py`; prepend RESUME_HERE; rebuild the queue; commit; push;
 verify local = upstream = remote.
 
+## Blocked rows
+`python3 build_source_readiness.py` (read-only) classifies every BLOCKED row and lists recovery candidates; it never registers a transcript.
+
 ## Limits
 No audio/visual review beyond thumbnails, no native Excel recalculation, no inferred impressions/CTR/
 retention/revenue/demographics. Expansion rows are all `BLOCKED_MISSING_SOURCE_TRANSCRIPT` until a
