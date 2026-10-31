@@ -1,3 +1,30 @@
+# Machine A owner-directed checkpoint — NICK_193–194 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `b1a30425` (NICK_191–192). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
+
+**NICK_193 `YbvRMquX3Tc` — POV: Your Life With Every Level of Debt (& What To Do).** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,813 characters read in full; the ending is complete (final third is unpunctuated ASR). 16 claim groups.
+- Thumbnail: maxresdefault 1280×720 triptych "$5K / $50K / $200K DEBT"; the story never uses those tiers.
+- Reproduces: car loan $499 (9.1%, 60 mo), $879 true car cost, budget chain $1,021/$635/$527, student loan $386, housing $2,797 and the −$667 deficit, $1,500 at 8% for 30y = $2.24M.
+- Verified: 565,759 bankruptcy filings in 2025 (+11%; Epiq). Supported: ~$1.28T card debt (implied from NY Fed Q1 2026); Stewart (2009) minimum-payment anchoring (70% is a secondary calculation).
+- Errors: $3,200 at 24% with a 2% minimum is interest-only ($64), so the $54/$10 split is impossible; "+$50" total $3,700 is understated (~$4,660). Mortgage figures slightly high ($1,846 vs $1,853).
+- Unverified/contested: two-thirds medical bankruptcy; 1990–2025 cost increases; $1T interest.
+- Performance: 0.60040× TYPICAL.
+
+**NICK_194 `Ygv_u2j90OA` — Shocking Money Stats of the Average American.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,157 characters read in full; the ending is complete; several ASR number garbles. 19 claim groups.
+- Thumbnail: maxresdefault 1280×720 ("HOW DO YOU COMPARE?", shocked character, debt anchor).
+- Verified: Northwestern Mutual 2024 $1.46M / $88,400 (stale for a Sep 2025 upload); BLS CE average income ~$101,805 (2023).
+- Wrong or stale: first-time buyer age 36 (NAR record was 38); $1,200/month at 8% for 30y is ~$1.79M, not $2.7M; Social Security $1,550 (≈$2,000 in 2025); retirement medians match 2019 SCF; spending $6,270/month does not match CE 2023.
+- Internal inconsistencies: debt $15,000 vs $100,000; 40% called "nearly half". Simple multiplications reproduce.
+- Performance: 0.30959× WEAK.
+
+**470/1,612 complete; 1,142 remaining = 496 original + 646 expansion.** Both validators, 38 Finance tests and 2 formatting tests pass; TFtBWn9CWOU partial preserved. Workbook: 63 cells changed (dashboard plus 2 target rows), 0 styles, 0 formulas. Usage meters: UNKNOWN (not readable from the session).
+
+**Next untouched: NICK_195 `YqpHONUEewY` — Your Life With Every Level of Paycheck.**
+
+---
+
 # Machine A owner-directed checkpoint — NICK_191–192 (2026-10-31)
 
 **Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `1655822a` (NICK_189–190). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
