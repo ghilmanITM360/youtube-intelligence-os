@@ -1,3 +1,13 @@
+# Machine A owner-directed checkpoint — NICK_218–220 (2026-11-01)
+
+**Parent `7b235f9e`.** PR #36 / canonical branch still `223f4498`, untouched. 496/1,612 complete; next `NICK_221 dlnPr167zII`. Validation: `validate_audit_966` rc=0 (496 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 489–491), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN (not readable from session).
+
+- **NICK_218 `dF-_DaVgir0` — The Biggest Financial Traps Men Fall In Their 40's.** 0.84888× TYPICAL; 15 claims. Verified: Vanguard 45–54 median $67,796 (2025 ed.), AGA $13.71B bettor losses. Truck, sports, whole-life, boat and betting opportunity costs reproduce. Errors: catch-up $1.27M at 7% *real* then deflated again to ~$700K (double count); AGA handle $149.90B not $147.91B; Barber–Odean return gaps garbled; household median applied to "working men"; thumbnail "BAD DIVORCE" panel never covered.
+- **NICK_219 `dJqAfhcX5lw` — What Changes at $1M, $2M, and $5M Retirement?** 0.50009× TYPICAL (at WEAK boundary, ~17 days old); 17 claims. Verified: EBRI spend-down (11.8% vs ~25%, one-third grew assets), Fidelity YE2025 $146,100/$34,400 (one quarter stale). RMDs ($81,300/$203,252), Social Security shares, $5.38M 15% threshold, 8/12-year jumps reproduce. "1% eats 30%" is 24.5% at 7%.
+- **NICK_220 `d_oOo5wDMOg` — Who Can Afford Rent In 2026?** 1.06668× TYPICAL; 21 claims. Verified: Zillow March 2026 $1,910 / +1.8%, JCHS 22.6M / 12.1M cost-burdened, DOJ–RealPage settlement with no penalty. Kevin budget, 45% burden, eviction every 6.05 min, year-one interest 84% reproduce. Problems: thumbnail "$3,000 RENT" absent from script; Denver −$938 not reproducible; FTC junk-fee rule scope overstated; down-payment "five years ago essentially zero".
+
+Checkpoint fix: NICK_215–217 containing commit recorded as `930155e6` (the expansion-only commit `7b235f9e` sits between batches).
+
 # Machine A expansion-source preparation (2026-11-01)
 
 The 30 Casually Finance expansion transcript candidates (16 forensic-research `TRANSCRIPT.csv`, 14 editing-forensics `auto/asr_words.csv`, read from origin blobs only) are verified in `EXPANSION_TRANSCRIPT_CANDIDATES_VERIFIED.json`: ID match, identical copies, 0.98–1.00 duration coverage, no duplicates, content consistent with titles. They are **branch-local verified candidates, not registered and not canonically accepted**. Registration is the registry writer's job (Machine B). Note: the forensic-research `word_index` restarts per sentence, so order words by `start_sec`.

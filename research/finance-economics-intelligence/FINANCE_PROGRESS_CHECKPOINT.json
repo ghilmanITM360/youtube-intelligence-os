@@ -1,12 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-10-31T20:15:02.955693+00:00",
+ "as_of_utc": "2026-10-31T20:23:40.289984+00:00",
  "status": "MACHINE_A_BRANCH_PUBLISHED_PENDING_PR36_RECONCILIATION",
  "writer": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED",
  "branch": "codex/finance-machine-a-owner-directed",
  "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "note": "NICK_217 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
+  "note": "NICK_220 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
  },
  "batches": [
   {
@@ -358,17 +358,35 @@
    "machine": "A",
    "branch": "codex/finance-machine-a-owner-directed",
    "parent": "4fa498b182ca909a39e72a9b022340bd4a73aad1",
-   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "commit": "930155e6131f6b933c77be33ecf3bb251a7dc6ce",
    "accepted": 3,
    "blocked": 0,
    "completed": 493,
    "remaining": 1119,
    "original_pending": 473,
    "expansion_pending": 646,
+   "remote_and_pr_verified": "MACHINE_A_BRANCH_REMOTE_VERIFIED;PR36_NOT_APPLICABLE"
+  },
+  {
+   "nicks": [
+    "NICK_218",
+    "NICK_219",
+    "NICK_220"
+   ],
+   "machine": "A",
+   "branch": "codex/finance-machine-a-owner-directed",
+   "parent": "7b235f9ea78ce1f11229b1dcf500526f6d300503",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 3,
+   "blocked": 0,
+   "completed": 496,
+   "remaining": 1116,
+   "original_pending": 470,
+   "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 6,
+ "session_accepted": 9,
  "session_blocked": 0,
  "packets": [
   {
@@ -442,30 +460,66 @@
    "packet_sha256": "f04d862ce569c37c4751fa87f6747bff3ab636d2823c6bcad7d45e814c9e6ca0",
    "read_receipts_sha256": "189d3210f8c4f94eaabd6738e3b84529c041b6d93d4cd03194ce47236331d2da",
    "validation_sha256": "5728570545d777b2507716bb9f90b6972ace0166554aefb6c1ab19ff64513e6d"
+  },
+  {
+   "nick": "NICK_218",
+   "video_id": "dF-_DaVgir0",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 16437,
+   "claim_groups": 15,
+   "primary_source_receipts": 2,
+   "calculation_receipts": 2,
+   "packet_sha256": "5e9eb1e2325a730df07c15b6efab525f92c3ddf0fa49557030e02ffe36e28a81",
+   "read_receipts_sha256": "ca15c5b2da67e76e133da6f3d785c26b718fb8da11fbc6132eda68a097f97e63",
+   "validation_sha256": "731a6d87a4282c2b9cc3827e59515d660d4333124feab0c16a31b0fa5fe325bc"
+  },
+  {
+   "nick": "NICK_219",
+   "video_id": "dJqAfhcX5lw",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 19394,
+   "claim_groups": 17,
+   "primary_source_receipts": 2,
+   "calculation_receipts": 2,
+   "packet_sha256": "56e590d3a1b482332147c1972e2580ff37eeb71e27554418fbdfd2c90e4021e2",
+   "read_receipts_sha256": "a6989589e09f327a24683404222e47a8c3fa32f5c57563af969ea2956cbdbafc",
+   "validation_sha256": "7db1f63dc3b1883fc4f38a26c6a264f39edb2ddf1abf9716552c65e87eaaf3e4"
+  },
+  {
+   "nick": "NICK_220",
+   "video_id": "d_oOo5wDMOg",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 17767,
+   "claim_groups": 21,
+   "primary_source_receipts": 3,
+   "calculation_receipts": 2,
+   "packet_sha256": "82e5306a3f5bc860a82c578a54c37d2d51d131fd13837c50e15f10a0d782af9b",
+   "read_receipts_sha256": "ab4a6eb97884bc12df4c9fed71166f6119f7e2a8f4e09d7dc67431fa8b6a70c6",
+   "validation_sha256": "2693d73d1ab0fb776fb4de26d3cda331d9fcc9bb371ea424d25b07c68cac6bb4"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 493,
-  "remaining": 1119,
+  "completed": 496,
+  "remaining": 1116,
   "original_total": 966,
-  "original_pending": 473,
+  "original_pending": 470,
   "expansion_total": 646,
   "expansion_pending": 646
  },
  "coverage": {
-  "full_stored_text_characters": 672751,
-  "claim_groups": 544,
-  "primary_source_receipt_rows": 118,
-  "source_independence": "Receipt rows include disclosed legitimate reuse;not118independentsources",
-  "calculation_receipts": 72,
-  "authentic_thumbnails_native_and_mobile": 34
+  "full_stored_text_characters": 726349,
+  "claim_groups": 597,
+  "primary_source_receipt_rows": 125,
+  "source_independence": "Receipt rows include disclosed legitimate reuse;not125independentsources",
+  "calculation_receipts": 78,
+  "authentic_thumbnails_native_and_mobile": 37
  },
  "synchronization": {
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "ddf7208cd41058fada2861e3f0b030b470cf1bb6610deb3d8ad5d6dade28113c",
+  "workbook_sha256": "012b6b682afbcda4d8b45ad2eff02a9f17dfa5998905540597549636427dd041",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -485,14 +539,14 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "076a2ff0aed2ed45b142c3e6372933490da582c4fd4ee68829c08038e75304db",
-  "VIDEO_AUDIT_966.csv": "c19d2ce735cc6d08e07a05318d03712cde1a2f244abe10ab444cb47663afacb7",
-  "VIDEO_COMPLETION_MATRIX.csv": "766bbbb36448c12831fd176ac408f9d5d749943cc51a65f241eb297151ecf09e",
-  "THUMBNAIL_ANALYSIS_966.csv": "10b1b9e0fe2d7c886375104df0ba13a92be247652d6f75f751541b25d4927c3f",
-  "SCRIPT_ANALYSIS_966.csv": "8d1870e3dbefaa27ae657937b4c8ab2ebfa5f49029d962bee1ec840a9e3541f8",
-  "TITLE_ANALYSIS_966.csv": "ec2b63566ea8dd7d04fe1c19ffb63e5627864194e4e823641d5dc16cf97f5523",
-  "TOPIC_ANALYSIS_966.csv": "046b8bfafa714cd18989c5e2c0c3350941ab51ecb001f045eaa6f3ea22559f16",
-  "VIRALITY_INTELLIGENCE_966.csv": "662fd4200fc3292c8fee93b21b65a7db91352a194691dda06f9b07a2c9ae267d"
+  "VIDEO_AUDIT_966.jsonl": "9d93243ccfa7c7567a53d96a33d5e8ccd110a059878e4829beaa99def0c01617",
+  "VIDEO_AUDIT_966.csv": "2ac6b1680149ea641b6ab86497dac9a35a986aa67db52756d278f1daa0aedca1",
+  "VIDEO_COMPLETION_MATRIX.csv": "711c6efbf77d4173da23518f804a56d0bdb84147e501e1ff9133d2274c90f642",
+  "THUMBNAIL_ANALYSIS_966.csv": "97ac7610e3829b3129b2355adacd91e2ece16deb84d994770f1455c5487e1876",
+  "SCRIPT_ANALYSIS_966.csv": "9b86257a02bb57773940c3dc912b438d7946c2b0b0d3bc05c9ffafcc2d4e0503",
+  "TITLE_ANALYSIS_966.csv": "52a878ef000a632c857f095402497af3f3e506b9c2ed24b659ac77795038c901",
+  "TOPIC_ANALYSIS_966.csv": "472fb8e9041520720496200933022ac5eeda0c3b0e28206696f22343a070e345",
+  "VIRALITY_INTELLIGENCE_966.csv": "fb74ba845b57ac7aa04991b61239e926c9b0621569d35c4bff27fa5f4cda954c"
  },
  "resources": {
   "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
@@ -503,9 +557,9 @@
   "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_218",
-  "video_id": "dF-_DaVgir0",
-  "title": "The Biggest Financial Traps Men Fall In Their 40's (Nobody Warns You)"
+  "nick": "NICK_221",
+  "video_id": "dlnPr167zII",
+  "title": "You’ll Stop Working BEFORE 50 Once You Understand This"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
  "stop_reason": "IN_SESSION",
