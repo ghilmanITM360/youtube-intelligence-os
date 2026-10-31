@@ -1,3 +1,30 @@
+# Machine A owner-directed checkpoint — NICK_189–190 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `d820304d` (NICK_187–188). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
+
+**NICK_189 `Xtri19wLdJw` — Pawn Shops are Seeing Something the Stock Market Isn't.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 16,993 characters read in full; the stored ending is complete. 19 claim groups.
+- Thumbnail: the registered hqdefault (480×360, gold bars, "THEY KNOW?!"); the maxresdefault 404 placeholder was discarded.
+- Verified from the FirstCash Q1 2026 8-K (read directly): $1.05B revenue (+26%) and record $851M pawn receivables.
+- Supported (via search summaries): EZCORP +46% revenue, a third of it acquisition-driven; Fitch record subprime delinquency of 6.90%, above 2008; record Vanguard hardship withdrawals; Dollar General >$100K trade-in; 3.6% saving rate (as originally published).
+- Overstated: CAPE "near 43" (sources say 40–41.6); branches "73,000" (FDIC June 2025 shows >76,000); EZCORP scrap "+64%" (sources show +288%, and FirstCash +161%, so the gold confound is understated).
+- The pawn-vs-card arithmetic reproduces (~243% vs ~24% APR).
+- Performance: 0.76567× TYPICAL.
+
+**NICK_190 `Y1OaaClH_eQ` — How Inflation Quietly Stole Your Raise.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 18,573 characters read in full; the ending is complete, with one garbled ASR splice in the real-estate passage. 17 claim groups.
+- Verified: BLS Sep 2025 CPI +3.0% and gasoline +4.1% (largest monthly factor); I-bond 1.10%/2.86%/3.98%.
+- The CPI-U ratio 324.800/258.678 = +25.6%, not 23%, so the real shortfall in the $50K example is about $4,800, not $3,500.
+- Stale or mixed-date figures: Conference Board 3.9% was the 2024 projection (actual 2025 was 3.4%); $5,577/month is 2021 CE data; February 2025 food figures sit alongside September 2025 data.
+- The budget total is off by $500–800. Transport is given as $500 and also as $900.
+- Performance: 0.12069× WEAK.
+
+**466/1,612 complete; 1,146 remaining = 500 original + 646 expansion.** Both validators, 38 Finance tests and 2 formatting tests pass, and the 26 source hashes are checked. Workbook: 63 cells changed (dashboard plus 2 target rows), 0 styles changed. Usage meters: UNKNOWN (not readable from the session).
+
+**Next untouched: NICK_191 `YDI8nD9lgA4` — How Everything Changes After Your Investments Beat Your Salary.**
+
+---
+
 # Machine A owner-directed checkpoint — NICK_187–188 (2026-10-31)
 
 **Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `14962d3b` (NICK_186). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
