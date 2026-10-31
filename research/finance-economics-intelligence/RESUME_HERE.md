@@ -1,3 +1,11 @@
+# Machine A owner-directed checkpoint — NICK_212–214 (2026-11-01)
+
+**Parent `3d498714`.** PR #36 / canonical branch still `223f4498`, untouched. 490/1,612 complete; next `NICK_215 ccNuYRhrA0U`. Validation: `validate_audit_966` rc=0 (490 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 483–485), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN (not readable from session).
+
+- **NICK_212 `bv5qS6sR4Bs` — Are You Ready For What's Coming?** 4.79096× STRONG (5-peer 6.20×); 17 claims. Published 26 Mar 2026 during the Iran war / Hormuz oil shock. Verified: IEA "largest supply disruption" and record 400M-barrel release, Brent ~$120 peak, late-March gas $3.96 (EIA) / diesel $5.37, FOMC hold 3.50–3.75%, NY Fed $1.28T card debt, DALBAR 848 bp / 15 years, urea ~+50% and Hormuz third of urea trade. Wrong/unsupported: February mortgage 5.87% (Freddie low 5.98%), NOLA "32% in one week", Spirit 124%, "15,000% vs 91%", "1973 and 1979 combined". DALBAR research presented as "our research". Maya grocery example (+12–21%) overstates the cited 4.4% CPI.
+- **NICK_213 `cCgJ_itCb-0` — Your Friends Are Secretly Making You Poor (The Friendship Tax).** 0.43928× WEAK; 10 claims. Illustrative sums reproduce; guest spending per wedding ($461–610) within the stated $300–700. Unsourced $4,000/year social spending; 50% marriage survival overstated; 90/10 split invented.
+- **NICK_214 `cGVuTIDDqtc` — The First $100k is the Hardest (Why 75% Fail).** 0.72251× TYPICAL; 12 claims. Car loan, $100K compounding and milestone ages reproduce approximately. Overstated: $5K/yr 40y "over $1.4M" ($1.30–1.40M), 30y "~$650K" ($566–612K), delayed balance $310K (~$270K), 3/2/1.5-year increments. Stale: $75K household income (2024 median $83,730). Both "75%" figures unsourced.
+
 # Machine A owner-directed checkpoint — NICK_209–211 (2026-10-31)
 
 **Parent `dd4df016`.** PR #36 / canonical branch still `223f4498`, untouched. 487/1,612 complete; next `NICK_212 bv5qS6sR4Bs`. Validation: `validate_audit_966` rc=0 (487 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 479, 481, 482; row 480 is a non-target row), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows.
