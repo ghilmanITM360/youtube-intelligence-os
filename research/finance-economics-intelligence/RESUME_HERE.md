@@ -1,3 +1,11 @@
+# Machine A owner-directed checkpoint — NICK_206–208 (2026-10-31)
+
+**Parent `43b46e2c`.** PR #36 / canonical branch still `223f4498`, untouched. 484/1,612 complete; next `NICK_209 b-Wl948s8Iw`. Validation: `validate_audit_966` rc=0 (484 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 475–477), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows.
+
+- **NICK_206 `_uFxmNBZYzE` — The Financial "Bulk & Cut" Strategy - Which Phase Are You In?** 0.42788× WEAK (5-peer 0.75888 TYPICAL); 10 claims. Opinion framework; arithmetic reproduces (233% ROI, $412K with monthly contributions, $435K/$93K at 8%, $375/hour). Atlanta Fed: stayers out-earned switchers Feb–Jul 2025, so the job-hop premium was weak near publication; "$650 payment = generational wealth" (~$48K) is hyperbole.
+- **NICK_207 `a6O3gNMpTZ8` — The $10K Savings Formula (That Works on Normal Incomes).** 0.5275× TYPICAL; 11 claims. Save More Tomorrow 3.5%→13.6% (3.9×) matches "3.8×" but tested pre-committed raises, not a payday split. "3.3× = 330% more" is 230%; 90% abandonment / 92% 30-day figures unsourced; compounding at 10% reproduces.
+- **NICK_208 `aHunm6XYO8k` — Why $100,000 is the Minimum Viable Net Worth to Survive WW3.** 0.43848× WEAK; 17 claims. Verified Doomsday Clock 85s (closest ever) and New START expiry. Errors: Eisenmenger was Viennese, not a German teacher; remaining capital $62–78K (not $64–83K); allocation bands sum to $80–130K; gold "breaking $3,000" stale (>$4,000 since Oct 2025); Blackstone "80,000 distressed homes" overstated.
+
 # Machine A owner-directed checkpoint — NICK_203–205 (2026-10-31)
 
 **Parent `707dc687`.** PR #36 / canonical branch still `223f4498`, untouched. Initial worktree was clean (CLEAN_NO_ACTION_REQUIRED). 481/1,612 complete; next `NICK_206 _uFxmNBZYzE`. Validation: `validate_audit_966` PASS (481 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 472–474), 0 styles/formulas, zip OK, package differs only by exporter relationship IDs. Workbook rebuild took ~17s and `validate_audit_966` ~45s this run.
