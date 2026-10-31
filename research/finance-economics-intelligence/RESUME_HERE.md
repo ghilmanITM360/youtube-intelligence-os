@@ -1,3 +1,13 @@
+# Machine A owner-directed checkpoint — NICK_209–211 (2026-10-31)
+
+**Parent `dd4df016`.** PR #36 / canonical branch still `223f4498`, untouched. 487/1,612 complete; next `NICK_212 bv5qS6sR4Bs`. Validation: `validate_audit_966` rc=0 (487 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 479, 481, 482; row 480 is a non-target row), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows.
+
+- **NICK_209 `b-Wl948s8Iw` — Why $300,000 Net Worth Feels Like Nothing in 2026.** 0.51233× TYPICAL (just above WEAK); 16 claims. Verified Schwab 2025 $2.3M / $839K. Many sums and compounding figures reproduce. Errors: 2022 loss at the stated 20.5% is $61,500, not $76,200; Musk $250B since 2020 vs "$800B in a year"; retirement gap ignores the second spouse's Social Security; compounding applied to the full $300K after excluding home equity; premiums rose ~54%, not 49%.
+- **NICK_210 `bHZObxKdzxA` — The Easiest (& Laziest) Way to Get Rich.** 0.79334× TYPICAL (~51 days old); 14 claims. SPIVA 2024 summary confirms no category majority outperforming over 15 years (exact ~90% and "zero" persistence not confirmed). Bogle/Dalbar/JPM best-days arithmetic reproduces. $987K implies ~9.4%; waiting 10 years costs ~two-thirds, not half; thumbnail "$50 → $2M" is unsupported; Magellan "investors lost money" unverified.
+- **NICK_211 `bYmB2S2h_B4` — Why "Not-So-Smart" People Get Rich Faster Than You Think.** 1.73944× TYPICAL; 7 claims. Swedish ability-plateau study (ESR 2023, 59,000 men, top 1% slightly lower) verified, but the script overstates it as top earners being "dumber". EQ "85–90% of success" is a popular misquote; the Ivy sticker-price comparison ignores aid.
+
+Known cosmetic defect: NICK_206's title analysis contains literal backslashes before the quotes (`\"Bulk & Cut\"`). Accepted text is left unchanged; correct it in a dedicated fix if desired.
+
 # Machine A owner-directed checkpoint — NICK_206–208 (2026-10-31)
 
 **Parent `43b46e2c`.** PR #36 / canonical branch still `223f4498`, untouched. 484/1,612 complete; next `NICK_209 b-Wl948s8Iw`. Validation: `validate_audit_966` rc=0 (484 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 475–477), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows.
