@@ -80,13 +80,13 @@ def build():
             "prior_audit_ref": a["batch_id"] if a else "",
             "eligibility": elig,
             "accepted_packet": f"audit-batches/{batch}.json" if batch and (ROOT / f"audit-batches/{batch}.json").exists() else "",
-            "accepted_commit": commits.get(batch, "PRE_HISTORY_OR_LEGACY") if batch else "",
+            "accepted_commit": commits.get(batch, "CONTAINING_COMMIT_VERIFY_LIVE") if batch else "",
             "next_atomic_operation": "",
         })
     # Order: originals before expansion; priority channels first; then channel, video id.
     rank = lambda r: (r["population"] != "ORIGINAL", r["channel_name"] not in CHANNEL_PRIORITY, r["channel_name"], r["video_id"])
     out.sort(key=rank)
-    nicks = [int(k.split("_")[1]) for k in commits if k.startswith("NICK_") and k.split("_")[1].isdigit()]
+    nicks = [int(p.stem[5:]) for p in (ROOT / "audit-batches").glob("NICK_*.json") if p.stem[5:].isdigit()]
     n = max(nicks, default=0)
     for r in out:
         if r["eligibility"] == "ELIGIBLE":

@@ -1,3 +1,42 @@
+# Machine A owner-directed checkpoint — NICK_195–196 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `dcd7a4c0`, which added a recomputable queue (`build_continuation_queue.py`, `FINANCE_CONTINUATION_QUEUE.csv`), a writer lock and `machine_a_tools/RUNBOOK.md`. A fresh session starts from the RUNBOOK gates and the queue head, not from this note. The canonical branch and PR #36 were still at `223f4498`.
+
+**NICK_195 `YqpHONUEewY` — Your Life With Every Level of Paycheck.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,157 characters read in full; the ending is complete. 18 claim groups.
+- Thumbnail: "$2K/MO · $5K/MO · $20K/MO" triptych. The script's take-home tiers ($2,375–$14,207) never reach $20K/month.
+- Verified: Census 2024 median household income $83,730; SmartAsset Manhattan $30,362; Goldman 2025 16% ($200–300K) and 41% ($300–500K).
+- Supported: Philadelphia Fed lottery-neighbour bankruptcies (Canadian data); Killingsworth–Kahneman–Mellers 2023; Chetty 2016 14.6-year gap.
+- Errors:
+  - "Same rate as under $50K" is wrong (57%, not 40%).
+  - At $65K the 3-month fund takes 34 months, not 17.
+  - At $100K, "under a year" is wrong (17–36 months).
+  - At $150K, "under 5 months" is wrong (11).
+  - The $65K item list is $190 short of its $3,610 total.
+  - The 401(k) limit of $23,500 is stale (2026 is $24,500).
+  - The $2.2M projection implies a return below 5%.
+- Reproduces: the deficit at each tier, the $1,906 raise and $8.58M at 8%.
+- Performance: 1.48312× TYPICAL.
+
+**NICK_196 `ZC6cqLrZahw` — Why $50k Feels Broke.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,206 characters read. The stored text ends mid-sentence, so the closing may be missing from the caption. 10 claim groups.
+- Thumbnail: "THE PAYCHECK MIRAGE", paycheck in hand, empty pockets, a calculator bleeding red.
+- Mostly a psychological essay.
+- Reproduces: $38K / $3,167 take-home; rent 47%; 15% = $7,500.
+- Supported: rent ~$1,500 (Zumper ~$1,519).
+- Overstated as typical: a $3,000 deductible (KFF 2025 average is $1,886).
+- Internally loose: the implied ~$300 for insurance and utilities; credit limits of $10–15K vs $5K.
+- Performance: 0.53158× TYPICAL.
+
+**472/1,612 complete; 1,140 remaining = 494 original + 646 expansion.**
+- Queue: 267 eligible originals; 200 deferred (insufficient peer baseline); 16 partial preserved (including TFtBWn9CWOU); 11 originals blocked on missing transcripts. All 646 expansion videos are blocked on missing transcripts.
+- Checks: both validators pass (26 source hashes); 38 Finance and 2 formatting tests pass. The workbook changed 63 cells and no styles or formulas.
+- Usage meters: UNKNOWN.
+
+**Next untouched: NICK_197 `ZCJcr5K0U6A`.**
+
+---
+
 # Machine A owner-directed checkpoint — NICK_193–194 (2026-10-31)
 
 **Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `b1a30425` (NICK_191–192). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
