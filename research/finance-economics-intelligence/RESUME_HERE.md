@@ -1,3 +1,29 @@
+# Machine A owner-directed checkpoint — NICK_191–192 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `1655822a` (NICK_189–190). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
+
+**NICK_191 `YDI8nD9lgA4` — How Everything Changes After Your Investments Beat Your Salary.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 20,929 characters read in full; the stored ending is complete, with one ASR omission ("you need million" — 25× $80K = $2M). 19 claim groups.
+- Thumbnail: maxresdefault 1280×720 ("TELL NO ONE", INVESTMENTS bar taller than SALARY); the secrecy hook is not in the script.
+- Reproduces: 25× targets; $1,000/month at 7% gives $520,927 (20y) and $1.22M (30y); the $3,911 budget; teacher $687,500 vs surgeon $9M; $500/month from 25 vs 35 (~$702K gap); median 401(k) yield $2,672.
+- Slightly off: final-decade growth is $699K, not $680K; crossover at $390/month is 41.1 years, not 43.
+- Overstated: federal tax on $100K MFJ wages in 2026 is about $7,640, not $11,500, and the marginal rate is 12%, not 22%. Stale: the 0% LTCG threshold of $94,000 is 2024; 2026 is $98,900 (IRS Rev. Proc. 2025-32, via search summaries).
+- Supported: Ramsey National Study of Millionaires figures (79% no inheritance; 1 in 3 never earned $100K). Unverified: T. Rowe 57%, 74% control, 40% emergency, 4.9% savings rate.
+- Performance: 1.22037× TYPICAL.
+
+**NICK_192 `YDQFf-NtUuw` — Why Saving Money Feels Useless Before $10,000.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 20,237 characters read in full; the ending is complete. 8 claim groups (mostly behavioural interpretation, few factual claims).
+- Thumbnail: maxresdefault 1280×720 ("THE $10K SWITCH", coin pile vs full safe); legible at 320×180.
+- Arithmetic reproduces: $50/month → 16.7 years; $1,000/month → 10 months; $1,200 − $800 = $400.
+- Unevidenced: an "exact $10,000" psychological threshold and "almost never go back". CFPB 2017 (search summary) supports liquid savings as the strongest correlate of financial well-being, but shows no threshold. Compound interest at $10K (~$400–500/year) is overstated as a driver.
+- Performance: 0.85297× TYPICAL.
+
+**468/1,612 complete; 1,144 remaining = 498 original + 646 expansion.** Both validators, 38 Finance tests and 2 formatting tests pass; TFtBWn9CWOU partial preserved. Workbook: 63 cells changed (dashboard plus 2 target rows), 0 styles, 0 formulas. Usage meters: UNKNOWN (not readable from the session).
+
+**Next untouched: NICK_193 `YbvRMquX3Tc`.**
+
+---
+
 # Machine A owner-directed checkpoint — NICK_189–190 (2026-10-31)
 
 **Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `d820304d` (NICK_187–188). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
