@@ -49,3 +49,6 @@ candidates from origin blobs: video ID in path and rows, identical copies across
 duplicate text across IDs. As of 2026-11-01 all 30 pass, as `VERIFIED_CANDIDATE_NOT_REGISTERED`. They are machine ASR (Whisper), not
 YouTube captions. They cannot be audited until the registry writer (Machine B) registers them with Text_SHA256 and archive containment;
 Machine A never writes the registry. The other 616 expansion rows have no local source, so do not search for them again.
+On 2026-11-01 the owner allowed branch-local registration; it was assessed and not performed because the 30 IDs have no registry
+`videos` rows (a new dataset registration is needed), the registry is a 141 MB LFS binary, and expansion acceptance and K01 baselines are not
+wired. See `registration_readiness` in the JSON.

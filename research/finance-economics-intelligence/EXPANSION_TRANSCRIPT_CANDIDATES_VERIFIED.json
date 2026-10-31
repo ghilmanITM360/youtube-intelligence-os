@@ -2266,5 +2266,18 @@
    "verdict": "VERIFIED_CANDIDATE_NOT_REGISTERED",
    "caption_type": "MACHINE_ASR_NOT_CREATOR_CAPTIONS"
   }
- ]
+ ],
+ "registration_readiness": {
+  "checked_utc": "2026-11-01",
+  "owner_authorization": "Owner allowed branch-local registration on Machine A if registry contract constraints are satisfied",
+  "source_identity_recheck": "104 of 104 candidate locators resolve to the recorded git blobs on origin; no fingerprints changed",
+  "status": "INTEGRATION_READY_NOT_REGISTERED",
+  "blockers": [
+   "None of the 30 video IDs exist in the registry videos table; transcripts.youtube_video_id is a foreign key, so registration first needs a new dataset, channel, dataset_videos and video identity rows (a governed dataset registration, not a transcript insert).",
+   "data/catalog/youtube_channel_registry.db is a 141 MB Git LFS binary; a branch-local write publishes a divergent copy of the canonical registry that Machine B must reconcile.",
+   "Expansion acceptance is not wired: build_continuation_queue.py reads statuses only from VIDEO_AUDIT_966.jsonl (original 966), and VIDEO_MASTER.csv has no expansion rows or K01 10-peer baseline.",
+   "Performance evidence exists only in fb1e56d0:research/casually-finance-success-playbook/VIDEO_PERFORMANCE.csv (snapshot 2026-10-11, different tier vocabulary, 0-12 peers; 3 candidates INSUFFICIENT_DATA); adopting it requires a K01-compatible re-benchmark."
+  ],
+  "next_step_for_registry_writer": "Register a Casually Finance dataset (channel, videos, ASR transcripts with Text_SHA256 from the candidate rows above, caption_type ASR_WHISPER_BASE), then extend the queue and ledger to read expansion audits and derive K01 tiers from a dated same-channel snapshot."
+ }
 }
