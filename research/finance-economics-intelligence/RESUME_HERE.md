@@ -1,3 +1,10 @@
+# Machine A owner-directed checkpoint — NICK_201–202 (2026-10-31)
+
+**Parent `1adb7357`.** PR #36 / canonical branch still `223f4498`, untouched. 478/1,612 complete; next `NICK_203 _6Zvfj0ThsQ`. Same validation as NICK_197–200: both validators (26 fingerprints, 0 errors), 38 + 2 tests, workbook 63 cells (dashboard + rows 470–471), 0 styles/formulas, each CSV/JSONL only 2 target rows, witnesses/refs/SHA true, `TFtBWn9CWOU` IN_PROGRESS.
+
+- **NICK_201 `Zp6BytPl4u0` — Major MONEY Milestones To Accomplish In Your 40s.** 1.77977× TYPICAL; 15 claims. Reproduces Fidelity 3×/6× gaps and $1,234 vs $381/month. Errors: SCF 35–44 median $60K (≈$45K); $1,400/month at 8% for 30y "$1.09M" (≈$2.09M); $100K at 8% "$1.74M" (≈$1.01M; 10% used) and an apples-to-oranges mortgage comparison; catch-up "$730K" (≈$188K); 2025 limits stale for a Feb 2026 video (2026: $24,500 / $8,000).
+- **NICK_202 `Zw038izB1tg` — Why So Many Homeowners Are Going Broke in 2025.** 2.19528× STRONG on the frozen 10-peer rule but 0.28982× WEAK on 5 peers (cohort includes 632K/264K/193K outliers) — tier is cohort-sensitive. 13 claims. 28% rule reproduces; income growth "20–30%" understated (+56% nominal 2014–24); refinance 0.5% saves ≈$100/month, not "hundreds"; cost-uplift range inconsistent.
+
 # Machine A owner-directed checkpoint — NICK_197–200 (2026-10-31)
 
 **Branch `codex/finance-machine-a-owner-directed`; parent `728465cc`.** PR #36 and `research/finance-economics-intelligence` were still at `223f4498` and were not touched. Start from `machine_a_tools/RUNBOOK.md` gates and the queue head, not from this note. 476/1,612 complete; next `NICK_201 Zp6BytPl4u0`.
