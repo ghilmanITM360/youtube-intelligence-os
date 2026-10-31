@@ -1,0 +1,52 @@
+{
+ "status": "PASS",
+ "video_id": "XP-26tqGFXc",
+ "nick": "NICK_186",
+ "claims": 19,
+ "sources": 4,
+ "calculations": 2,
+ "transcript_chars": 17461,
+ "parent_commit": "223f44981ee174988574e86d5e23ae83ee60ee5d",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_186"
+ ],
+ "changed_ledger_ids": [
+  "XP-26tqGFXc"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 461,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 2.49527 STRONG (5-peer 3.09872 STRONG); K02 analyst arithmetic",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 462,
+  "remaining": 1150,
+  "original_pending": 504,
+  "expansion_pending": 646,
+  "changed_cells": "35: Combined Dashboard C13,D13,G15,C17,D17,B25,B26; target row in All Finance Videos (9 cells) and Detailed Research (19 cells)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "ba8bea50c30d775af619f27079f50cc226b711d91ba739fefb83c24d89a1d3d2"
+ },
+ "semantic_acceptance": "All 17461 stored characters and six dimensions reviewed; 19 located claim groups; primary sources NYFED2026, CERULLI2024, BLSA16, HAN2010. Commercial survey statistics unverified. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "9cbb0e4dcb660df2dd505c9536a11b979e2abeef12b3a99eba03c90448db6fbf",
+  "NICK_186.json": "c4e3b3151843a505a569ffa890f6852da397ae7a5451376dd6605b0768eb8d96",
+  "NICK_186_READ_RECEIPTS.json": "fca7069eaac4db2b9b084a9f840d489ee1ed50c2f825c935d5c2e8c8f080f251",
+  "thumbnail": "d02b74944d2340227514fb83251c33116096123506869aae1d6fc0ab8e29b7fd"
+ }
+}

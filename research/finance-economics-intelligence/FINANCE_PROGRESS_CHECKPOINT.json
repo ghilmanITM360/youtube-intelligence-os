@@ -1,17 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-10-30T05:08:46.767360+00:00",
- "status": "PUBLISHED_SESSION_CLOSEOUT",
- "writer": "MACHINE_B_SOLE_WRITER_ACCEPTED",
- "branch": "research/finance-economics-intelligence",
- "published_research_commit": "e6000baa8152668b0b89d1482847381d98aa6c18",
+ "as_of_utc": "2026-10-31T07:48:20.841139+00:00",
+ "status": "MACHINE_A_BRANCH_PUBLISHED_PENDING_PR36_RECONCILIATION",
+ "writer": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED",
+ "branch": "codex/finance-machine-a-owner-directed",
+ "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "local_head": "e6000baa8152668b0b89d1482847381d98aa6c18",
-  "live_remote_head": "e6000baa8152668b0b89d1482847381d98aa6c18",
-  "pr36_head": "e6000baa8152668b0b89d1482847381d98aa6c18",
-  "pr36": "OPEN_DRAFT_UNMERGED",
-  "verification": "INDEPENDENT_LS_REMOTE_AND_GITHUB_PR_API",
-  "note": "NICK_185 commit contains this checkpoint; verify its SHA live."
+  "note": "NICK_186 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
  },
  "batches": [
   {
@@ -144,150 +139,46 @@
    "original_pending": 505,
    "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
+  },
+  {
+   "nicks": [
+    "NICK_186"
+   ],
+   "machine": "A",
+   "branch": "codex/finance-machine-a-owner-directed",
+   "parent": "223f44981ee174988574e86d5e23ae83ee60ee5d",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 1,
+   "blocked": 0,
+   "completed": 462,
+   "remaining": 1150,
+   "original_pending": 504,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 6,
+ "session_accepted": 1,
  "session_blocked": 0,
  "packets": [
   {
-   "nick": "NICK_175",
-   "video_id": "UwIxpBwUpUo",
+   "nick": "NICK_186",
+   "video_id": "XP-26tqGFXc",
    "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 20127,
-   "claim_groups": 24,
-   "primary_source_receipts": 11,
-   "calculation_receipts": 2,
-   "packet_sha256": "fb6fc644da5730e02bddfe9848d7b3baa48e5b5faba7be2c52dfaf7b10b5f4fb",
-   "read_receipts_sha256": "248366dc6b29279b1f05a71162ab7f72f62d52140e15a627477ad50040b5dc78",
-   "validation_sha256": "19a594da755aa3c9557b97bce4d01a80034859d24d76b82b91c8b33352809775"
-  },
-  {
-   "nick": "NICK_176",
-   "video_id": "V5n4jp-p2NI",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 20139,
-   "claim_groups": 25,
-   "primary_source_receipts": 7,
-   "calculation_receipts": 3,
-   "packet_sha256": "f8c347015f20fa3c26fee9b0f09d01f3c1386a50b4d8fd6f19207dbe30c3a8da",
-   "read_receipts_sha256": "074fef8652ad8dd5b76cebe17991e08879fc25a1a6991d27414d360831d46fa3",
-   "validation_sha256": "550c2bfc5f3415dd9348277d9e168de03fec3c80bd7ea3a039413a079211a26d"
-  },
-  {
-   "nick": "NICK_177",
-   "video_id": "VAHjO-Vyovg",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 16745,
-   "claim_groups": 21,
-   "primary_source_receipts": 8,
-   "calculation_receipts": 3,
-   "packet_sha256": "e10b50deb4c95b076a3d2a0b11b44218cf4041a7be07e666ab1e235587521be3",
-   "read_receipts_sha256": "44bf804ac6f97450f29ae40dcc4cc89291cdbdd407096d389e0a27ef0aa34a8a",
-   "validation_sha256": "43fe5a373fbe7128bd93614b11cfeac01453d2bddb0ab1b8d443326bd3f07565"
-  },
-  {
-   "nick": "NICK_178",
-   "video_id": "VREo0Hj_tyQ",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 18967,
-   "claim_groups": 21,
-   "primary_source_receipts": 3,
-   "calculation_receipts": 2,
-   "packet_sha256": "40fe6d1bf0a201251015a19c1c4b1333b31e51cb4752189875f3f6243c8472c5",
-   "read_receipts_sha256": "70c1f34bd8baf68f592b3a7b475ae7253cd2923e212ca50a5ac9548c428a20f7",
-   "validation_sha256": "b0adf550dbb654c44e84f7f400784a0209f4a3e0398625acdec07f3104d8dbfd"
-  },
-  {
-   "nick": "NICK_179",
-   "video_id": "VWS7OpILfYI",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 39752,
-   "claim_groups": 29,
-   "primary_source_receipts": 10,
-   "calculation_receipts": 4,
-   "packet_sha256": "bba08035719969b9d6b55a8dea401a29a9e1322046e6c8ea6d606a8ff3895c23",
-   "read_receipts_sha256": "893c749a913937e2dc44b6f461987c8bbe90a4667ff38c6b573624238b44ba22",
-   "validation_sha256": "38c5e7c4eb5a39e71611c4059990c8b94eef69343faabc5629c7ca0d715cbb0c"
-  },
-  {
-   "nick": "NICK_180",
-   "video_id": "W-j0_v9cXuQ",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 45453,
-   "claim_groups": 39,
-   "primary_source_receipts": 9,
-   "calculation_receipts": 4,
-   "packet_sha256": "a916f578a81c77b1c8ed898808777ebd27662d2cb9eb6c315f5afe4eb066a477",
-   "read_receipts_sha256": "bb538cc7c5e13f71108fcb76aa891b2133a805d3ac79cec6ac394721389d31bb",
-   "validation_sha256": "a12e932d4db5df275c22489507ab3cdb7637ccbab243cd99aef73a5433eacbf9"
-  },
-  {
-   "nick": "NICK_181",
-   "video_id": "WAbZSrUMdk0",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 20001,
-   "claim_groups": 18,
-   "primary_source_receipts": 3,
-   "calculation_receipts": 3,
-   "packet_sha256": "d2b213e8ba5f6df4411fdd84cc3a423409d7ce0106adea2a8465073dce5d40ef",
-   "read_receipts_sha256": "455ccbf2b81305961921f4e41a051f5499796770a8751e9cca4559fa90f40bd7",
-   "validation_sha256": "352e7908089592d04eff459c60cd9ffffcda6e7aaec495da7ac6c0623ec09ebe"
-  },
-  {
-   "nick": "NICK_182",
-   "video_id": "WyHZdWkS85U",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 18767,
-   "claim_groups": 23,
-   "primary_source_receipts": 3,
-   "calculation_receipts": 4,
-   "packet_sha256": "3d5ae693b0233c287b07611754d90ab1839e09efbd473a3d320e58fffe05d475",
-   "read_receipts_sha256": "1807dd1829d712ca988488b27c0c5ede2f6e2cf7026eecb3501ef57c55b715e5",
-   "validation_sha256": "5539627b18c12bdb75f3e8945f9e06559bd84f8702e531f3be1950d09cec86d4"
-  },
-  {
-   "nick": "NICK_183",
-   "video_id": "X6_FpDN3XD8",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 18774,
-   "claim_groups": 21,
-   "primary_source_receipts": 2,
-   "calculation_receipts": 2,
-   "packet_sha256": "504d04f854fec05738d7592124863d164ced8ba54d5693fc79e448bcb317d0d5",
-   "read_receipts_sha256": "c58a90605cd39877d1bb7eddd76282bbf9e7bc8d57758032488e06f679d841c4",
-   "validation_sha256": "9707768e8eafd3240c21ac84d3c613298103190a7e300649db6997d0d9e465d3"
-  },
-  {
-   "nick": "NICK_184",
-   "video_id": "XFEndHZQ66Q",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 25329,
+   "transcript_characters": 17461,
    "claim_groups": 19,
-   "primary_source_receipts": 3,
-   "calculation_receipts": 4,
-   "packet_sha256": "b9e44a16ae3f9d818564a3f6869224edc7d42be239b53a6fae9442cf0084008d",
-   "read_receipts_sha256": "22f7df08e596a2135b774fb229d2a8d3dfcc2d652456076bd0c10c6547a4f5d0",
-   "validation_sha256": "2b681ca3efadd18a01aff7ab98ac3f5c1e6120f85f987f5e01f7d17bc350d74f"
-  },
-  {
-   "nick": "NICK_185",
-   "video_id": "XJ4ls6r2MCE",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 18845,
-   "claim_groups": 16,
-   "primary_source_receipts": 2,
+   "primary_source_receipts": 4,
    "calculation_receipts": 2,
-   "packet_sha256": "71c10733be34c44bd3d366d0490a3874bcb4e8faf2fd52223ccf55e4873f11b6",
-   "read_receipts_sha256": "d854ceafb073554f3eb34950f0cf0c9c731f60cbd4c1b6b3e430adf06fa5a4b9",
-   "validation_sha256": "492e4a8471152cec90b262b36f99c6a02863eeaf098e5fbe7d46f426f688fb06"
+   "packet_sha256": "c4e3b3151843a505a569ffa890f6852da397ae7a5451376dd6605b0768eb8d96",
+   "read_receipts_sha256": "fca7069eaac4db2b9b084a9f840d489ee1ed50c2f825c935d5c2e8c8f080f251",
+   "validation_sha256": "9ed4a179405162f44273cc5ed5819347135c0ddca8047eab22d8bac8d6c8f41b"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 461,
-  "remaining": 1151,
+  "completed": 462,
+  "remaining": 1150,
   "original_total": 966,
-  "original_pending": 505,
+  "original_pending": 504,
   "expansion_total": 646,
   "expansion_pending": 646
  },
@@ -303,7 +194,7 @@
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "24ddcd2512583b7e39eda894bd4c5b4628384d738d5445bd4e69dc2ed81ffdc6",
+  "workbook_sha256": "ba8bea50c30d775af619f27079f50cc226b711d91ba739fefb83c24d89a1d3d2",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -314,50 +205,50 @@
   "csv_method": "HEADER_STABLE_TARGET_ROW_REPLACEMENT"
  },
  "validation": {
-  "finance_tests_per_batch": 34,
+  "finance_tests_per_batch": 38,
   "formatting_tests_per_batch": 2,
   "canonical_validators": "PASS_BOTH_EACH_BATCH",
   "target_only_claim_calculation_and_workbook_checks": "PASS_EACH_BATCH",
   "semantic_scope": "Analystreview,evidence-qualified;notschemaguaranteeoftruth",
-  "hosted_ci": "CI_BLOCKED_BILLING_ALL_THREE_RESEARCH_COMMITS",
+  "hosted_ci": "NOT_RERUN;billing-blocked historically",
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "b54554e5b1759ad573d114faa8b9ed75e4b840303627c039e5019fa64e387580",
-  "VIDEO_AUDIT_966.csv": "84ae55730eaf3d71bafc62eff50d6c7f466837009652be4a5a0c3e7c4bbdeca0",
-  "VIDEO_COMPLETION_MATRIX.csv": "dc21f3fd7a7040a5da6948420eb7288129075617768e8b6d0d5e7a74da85ee57",
-  "THUMBNAIL_ANALYSIS_966.csv": "34e8335d6e4b96a14711faf6be98c739f596da53786e0f419ae90b6a792fb301",
-  "SCRIPT_ANALYSIS_966.csv": "5bb8fa428ff59e42a6b99c1c1741a922cc17f79407c945ad2b3fb3d1067237b2",
-  "TITLE_ANALYSIS_966.csv": "73f50d463c12a4e3ccb24f4db939cb41e344d1901bba622414ab2ae3c3e06efb",
-  "TOPIC_ANALYSIS_966.csv": "3289b791eae03ef29de8f06a29acd752cefd8f2cb7e25edbb86cbe399e1e0976",
-  "VIRALITY_INTELLIGENCE_966.csv": "fa05e5a1850007d7d7578aba5dd66a5a773648031bd83ef116dfba3372f6cd34"
+  "VIDEO_AUDIT_966.jsonl": "9cbb0e4dcb660df2dd505c9536a11b979e2abeef12b3a99eba03c90448db6fbf",
+  "VIDEO_AUDIT_966.csv": "53ba9f047f1e53c00c784793c8cc06ead7cf846b0e8e2822f7c42268c09238ee",
+  "VIDEO_COMPLETION_MATRIX.csv": "28344453e5baa538c3fd987cbbf3b8048628b1c4351d7ababf946a1fc4ff5fcf",
+  "THUMBNAIL_ANALYSIS_966.csv": "7cbb93a3450ee01a4d961351e485e41d6b4de93817a8ebdd2f9d209428192d56",
+  "SCRIPT_ANALYSIS_966.csv": "0c99539590f0be283664a73d43a442b501d1af94d1eb616dedc17678d543e211",
+  "TITLE_ANALYSIS_966.csv": "46e02f90373fcb9c2150bb07442e126851c143f4418625bb18ea26d25b999490",
+  "TOPIC_ANALYSIS_966.csv": "1fffe8e8c6ccebec71a881b34c5573b23539e4415e88421ebedb0fe8fde42f07",
+  "VIRALITY_INTELLIGENCE_966.csv": "19d006a9badd6178aef51d17665d1ea34d8b49d14e06189bab6565d544b2cd63"
  },
  "resources": {
-  "five_hour_used_percent": 46,
-  "weekly_used_percent": 7,
-  "paid_credit_balance": 0,
+  "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
+  "weekly_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
+  "paid_credits_spent": 0,
+  "reset_credits_redeemed": 0,
   "free_disk_gib_rounded": 16,
-  "context_input_observed": 372441,
-  "context_window": 475000,
-  "compactions": 0,
-  "stop_reason": "CONSERVATIVE_CONTEXT_AND_EXECUTION_RESERVE_FOR_NEXT_COMPLEX_UNIT",
-  "quota_threshold_reached": false,
-  "disk_threshold_reached": false,
-  "planning_estimate_reference": "FINANCE_EXECUTION_FORECAST.json",
-  "pending_work": "NONE;allacceptedworkpublished"
+  "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_186",
-  "video_id": "XP-26tqGFXc",
-  "title": "How Your Coworkers Afford Their Lifestyle (The Ugly Truth)"
+  "nick": "NICK_187",
+  "video_id": "XP-VPkD3N64",
+  "title": "19 Rules for Financial Freedom"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
- "stop_reason": "SESSION_CLOSED_NEAR_95_PERCENT_PRO_WEEKLY_GATE",
+ "stop_reason": "IN_SESSION",
  "latest_resources": {
   "weekly_used_percent_before_last_unit": 93,
   "paid_credits_spent": 0,
   "reset_credits_redeemed": 0,
   "free_disk_gib_rounded": 46
  },
- "main_checkout": "LEFT_AT_61f26b5c_FAST_FORWARD_BEFORE_USE"
+ "main_checkout": "Machine A canonical checkout untouched on codex/casually-finance-knowledge-navigation; Finance work in linked worktree /Users/ghilmankhan/workprojects/yios-finance-machine-a",
+ "writer_provenance": "Owner directed Machine A execution on 2026-10-31 without a Machine B release. MACHINE_B_RELEASE_VERIFIED and MACHINE_B_HAS_NO_UNPUBLISHED_WORK are NOT established. Machine B history is preserved unchanged.",
+ "canonical_baseline": {
+  "branch": "research/finance-economics-intelligence",
+  "commit": "223f44981ee174988574e86d5e23ae83ee60ee5d",
+  "pr36": "OPEN_DRAFT_UNMODIFIED_BY_MACHINE_A"
+ }
 }

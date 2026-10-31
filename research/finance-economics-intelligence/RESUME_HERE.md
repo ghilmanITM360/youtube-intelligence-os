@@ -1,3 +1,21 @@
+# Machine A owner-directed checkpoint — NICK_186 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Baseline: canonical `research/finance-economics-intelligence` = PR #36 head `223f44981ee174988574e86d5e23ae83ee60ee5d`. No Machine B release exists; Machine B's unpublished state is unknown. PR #36 is not updated by this branch.
+
+**NICK_186 `XP-26tqGFXc` — How Your Coworkers Afford Their Lifestyle (The Ugly Truth).** All six dimensions are `COMPLETE_LIMITED_EVIDENCE`.
+- All 17,461 canonical characters were read in three ranges. SQLite hash and archive containment reconcile. The registered maxresdefault thumbnail (HTTP 200, 1280×720, "FAKE LIFE?") was inspected at native size and at 320×180. Audio is unverified.
+- 19 claim groups, 4 primary receipts (NY Fed Q4 2025 press release; Cerulli Dec 2024; BLS table A-16; Han/Nunes/Drèze 2010 abstract) and 2 calculation receipts.
+- Verified: $18.8T household debt and $1.28T card balances; $124T transfer through 2048 with $62T from 2% of households.
+- Not reproduced: BLS November 2025 9.3M/5.7% (the fetched table shows Sep 2025 8.79M/5.4%).
+- Overstated: $772/month over 40 years is $4.88M at 10%, not "over $6M" (that needs about 10.67%). The generational parental-transfer averages are inconsistent with the overall $1,474 average.
+- Performance: 2.49527× ten-peer / 3.09872× five-peer, STRONG, the cohort high.
+- **462/1,612 complete; 1,150 remaining = 504 original + 646 expansion.** Legacy `TFtBWn9CWOU` stays IN_PROGRESS.
+- Checks: both validators, 38 Finance tests and 2 formatting tests pass. Workbook rebuilt with the unmodified `build_workbook_1612.mjs`: 35 target and dashboard cells, 0 styles changed, rels differ only by exporter IDs.
+
+**Next untouched: NICK_187 `XP-VPkD3N64` — 19 Rules for Financial Freedom.** Evidence: `audit-batches/NICK_186.json`, `NICK_186_READ_RECEIPTS.json`, `NICK_186_VALIDATION.json`, `NICK_XP-26tqGFXc.jpg`.
+
+---
+
 # NICK_180 publication recheck and builder preservation — 2026-10-30
 
 The supplied IN_PROGRESS snapshot was stale. NICK_180 was already accepted/published as `f49382f543f2ef0bb4676738a3a4e100bd47428a`; the existing worktree and live Finance branch/OPEN-DRAFT-unmerged PR #36 were at `c325f9cb656242f1f713dd51252fdd929d14c6f0` after NICK_181–185. No new video was started in this closeout. The main checkout remains at `61f26b5c`; continue in the existing Finance worktree, not the stale main checkout.

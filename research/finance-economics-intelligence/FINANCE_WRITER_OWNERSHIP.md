@@ -112,3 +112,13 @@ NICK_183 accepted on parent `394d5329`: 459 complete / 1,153 remaining. Ownershi
 NICK_184 accepted on parent `58a2cb2a`: 460 complete / 1,152 remaining. Ownership unchanged (Machine B sole writer).
 
 NICK_185 accepted on parent `e6000baa`: 461 complete / 1,151 remaining. Session closed near the weekly usage gate; Machine B remains sole writer. Main checkout left at `61f26b5c` (fast-forward before use).
+
+## Owner-directed Machine A execution — 2026-10-31
+
+State: `MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED` (owner instruction in the Machine A session, Ghilmans-Laptop.local / ghilmankhan).
+
+- No Machine B release was published. `MACHINE_B_RELEASE_VERIFIED` and `MACHINE_B_HAS_NO_UNPUBLISHED_WORK` are **not** established; the Machine B sections above are preserved unchanged as provenance.
+- Isolation: Machine A writes only to branch `codex/finance-machine-a-owner-directed` (linked worktree `/Users/ghilmankhan/workprojects/yios-finance-machine-a`), based on canonical `research/finance-economics-intelligence` = PR #36 head `223f44981ee174988574e86d5e23ae83ee60ee5d`. Machine A does not push to the canonical branch or modify PR #36.
+- Reconciliation: before integrating, compare canonical HEAD against this branch by exact Video_ID and packet receipts; never double-count or silently replace an accepted audit.
+
+NICK_186 accepted on Machine A branch, parent `223f4498`: 462 complete / 1,150 remaining.
