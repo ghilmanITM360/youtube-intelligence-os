@@ -1,0 +1,4 @@
+# tables/integrated (2026-10-31, Claude session c1b75aa6)
+Built by v1_scripts/integrate_second_pass.py from first-pass shards + OUT2_A/B/C_MERGED/D (read-only). Validate: python3 -I v1_scripts/validate_integration.py --negative.
+Files: candidates_final.csv (695), states_final.csv (409, draft vs measured start), composition_groups.csv (merge_with_prev=True folded; UNCERTAIN kept separate), disputes_final.csv (280), unowned_intervals_final.csv (union of reviewer intervals), corrections_ledger.csv, script_visual_alignment.csv (PROVISIONAL ASR sentence alignment), integration_summary.json.
+Status: INTEGRATED_FROM_REVIEWER_RECORDS. Not a new visual review. 'measured_start' applies a 1-frame-earlier px_diff peak (hard-cut signature) only; other offsets are flagged, not applied. Audio never heard; AV sign-off BLOCKED.

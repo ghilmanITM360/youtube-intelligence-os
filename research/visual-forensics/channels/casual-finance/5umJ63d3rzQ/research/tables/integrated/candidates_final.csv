@@ -1,0 +1,696 @@
+id,shard,reviewer,start,end,first_pass_verdict,first_pass_type,first_pass_boundary,second_pass_type,second_pass_boundary,agreement,final_decision,confidence,evidence
+EP0001,1,A,13,13,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f13 black scribble creature with two red eyes pops in under bed edge at top-left; bed, worried figure unchanged (f12 vs f13)"
+EP0002,1,A,31,31,RECLASSIFIED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,"f31 large green USA map (with Alaska, Hawaii) pops in at right/centre; bed+creature at top-left unchanged; pre f30 blank there"
+EP0003,1,A,45,49,CONFIRMED,ADDITIVE_ENTRY,NO,SEQUENTIAL_POP_IN,NO,AGREE,ACCEPT_FIRST,HIGH,"on map: one money bag f45 and f46, two bags f47, banknote pair added by f49; stepped pop-ins in 5 frames (viewed f45,46,47,49)"
+EP0004,1,A,70,70,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f70 bed+map+bags replaced by plain neutral stick figure (black tuft hair, flat mouth, hands on hips) centred"
+EP0005,1,A,83,83,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f83 stick figure replaced by grey robot with red eyes, antenna, bubble wand; bubbles carry OpenAI-like swirl, starburst, whale logos"
+EP0006,1,A,93,93,CONFIRMED,HIGHLIGHT_ADD,NO,ADDITIVE_OVERLAY,NO,AGREE,ACCEPT_FIRST,HIGH,"f93 big red hand-drawn X pops over bubbles/right of robot, robot unchanged"
+SUB001,1,A,95,95,NOT_A_CHANGE,OTHER,NO,NOT_A_CHANGE,NO,AGREE,ACCEPT_FIRST,MEDIUM,"f94 vs f95 crops look identical (robot, X, bubbles); sub-threshold, likely codec noise"
+EP0007,1,A,119,119,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f119 robot+X+bubbles replaced by large green China map (Taiwan, Hainan) centred, no other elements"
+EP0008,1,A,135,135,CONFIRMED,HIGHLIGHT_ADD,NO,ADDITIVE_OVERLAY,NO,AGREE,ACCEPT_FIRST,HIGH,"f135 red X pops over China map in one frame, map unchanged"
+EP0009,1,A,152,152,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f152 China map+X replaced by blond suited caricature at brown podium between two US flags, arm raised"
+EP0010,1,A,165,165,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f165 podium figure arms: left arm out/down+right arm raised -> left arm raised up, right arm extended out; face unchanged"
+EP0011,1,A,178,178,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f178 arms swap back to f152-164 pose (left arm out, right arm raised)"
+EP0012,1,A,191,192,CONFIRMED,HIGHLIGHT_ADD,NO,ADDITIVE_OVERLAY_PLUS_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f191-192 big red X over figure; arm pose also changes to the raised-left/extended-right pose (f190 pose A vs f192 pose B)
+EP0013,1,A,204,204,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f204 arm pose swap under X (to arms-up pose)
+EP0014,1,A,217,217,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f217 arm pose swap back under X
+EP0015,1,A,223,223,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f223 podium+X replaced by plain black-hair stick figure, smiling mouth"
+EP0016,1,A,255,255,CONFIRMED,EXPRESSION_CHANGE,NO,EXPRESSION_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f255 stick figure mouth smile -> flat line
+EP0017,1,A,277,307,RECLASSIFIED,ZOOM_OR_SCALE,YES,HARD_CUT_THEN_ZOOM_OUT,YES,AGREE,ACCEPT_FIRST,HIGH,"f277 hard cut to oversized pink-grey-faced figure (brown tie, hand at chin) head clipped at left edge; scales down f277-f297-f307; black ? appears by f307 (viewed f277,287,297,307)"
+EP0018,1,A,313,313,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f313 second black ? appears beside first ? (f312 one, f313 two); figure unchanged"
+EP0019,1,A,318,318,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f318 third black ? pops in (row of ?)
+EP0020,1,A,324,324,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f324 fourth ? pops in
+EP0021,1,A,330,330,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f330 fifth ? pops in
+EP0022,1,A,357,357,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f357 pink-faced figure + five ? replaced by small black-bob-haired stick figure at left (face mostly covered by hair)
+EP0023,1,A,380,380,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f380 orange sign 'FINANCE LORE' with red arrow on post plus dark brown hole/mound pops in right; figure unchanged
+EP0024,1,A,443,443,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f443 bob-hair figure+sign replaced by blond-haired figure looking at black phone with pale blue light cone
+EP0025,1,A,481,481,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f481 phone-holder arm: diagonal arm line replaced by V-shaped arm/collar curve; head, phone same"
+EP0026,1,A,539,539,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f539 phone figure replaced by pink-faced figure w/ brown tie, hand at chin, shifted left"
+EP0027,1,A,555,555,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f555 speech bubble reading 'Why?' pops in upper area right of head
+EP0028,1,A,579,579,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f579 cluster of three cream houses pops in top right
+EP0029,1,A,590,615,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_PLUS_POP_IN,NO,AGREE,ACCEPT_FIRST,HIGH,"f590-615 red zigzag arrow drawn on progressively (partial at f598, f606, full by f615) and two banknote stacks pop in lower right (viewed f590,598,606,615)"
+EP0030,1,A,641,719,RECLASSIFIED,FULL_REPLACE,YES,HARD_CUT_TO_THIRD_PARTY_SCREENSHOT_THEN_HARD_CUT,YES,AGREE,ACCEPT_FIRST,HIGH,f641 cut to dark Microsoft Corp (NASDAQ MSFT) 396.79 USD 1Y chart screenshot with wobbling meme head Panik (wobble f642-718 MEASURED); second cut MEASURED at I-frame f719 to presenter plus Fed seal
+EP0031,1,A,757,757,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f757 stick figure+Fed seal replaced by cream columned building doodle labelled FEDERAL RESERVE on pediment, left of centre"
+EP0032,1,A,777,777,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f777 speech bubble reading We're cutting rates lads! pops in right of building
+EP0033,1,A,801,801,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f801 building+bubble replaced by big beige round-headed figure slumped on brown table beside glass of amber drink (close-up)
+EP0034,1,A,836,836,CONFIRMED,TEXT_CHANGE,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f836 handwritten caption (still broke) appears above-left of slumped figure
+EP0035,1,A,867,867,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f867 slumped figure replaced by blond caricature at podium between US flags (same set as f152)
+EP0036,1,A,880,880,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f880 podium figure arm pose swap: arms up/out -> pointing-out pose
+EP0037,1,A,893,893,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f893 podium figure arms swap back
+EP0038,1,A,906,906,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f906 podium figure arm swap to pointing-out pose
+EP0039,1,A,919,919,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f919 podium figure arm swap back to arms-up pose
+EP0040,1,A,924,924,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f924 podium scene replaced by black-hair smiling stick figure holding brown pointer stick, figure left of centre"
+EP0041,1,A,935,935,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY_PLUS_POSE_SWAP,NO,CORRECTED,USE_SECOND,HIGH,"f935 Japan map with Tokyo label, red curved arrow and dot pops in right; figure arm changes from holding pointer to arm extended right"
+EP0042,1,A,965,965,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f965 figure arm returns to pointer-holding pose; map unchanged
+EP0043,1,A,1005,1005,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f1005 figure+Japan map replaced by red armchair with sleeping figure and one blue Z
+EP0044,1,A,1016,1016,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f1016 second blue Z appears above first
+EP0045,1,A,1034,1034,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f1034 third blue Z appears (stack of three Z)
+EP0046,1,A,1069,1069,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f1069 armchair replaced by Japan map alone at right, no label"
+EP0047,1,A,1082,1082,RECLASSIFIED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,"f1082 old Japanese bond certificate two-page image (green front, grey text back, red stamps) pops in left of map; map stays. Third-party/archival image"
+EP0048,1,A,1130,1130,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f1130 bond+map replaced by third-party meme image 'People IRL'/'Weebs' with text You dont deserve her!, I love her more!, This is my waifu, Also mine, good taste"
+EP0049,1,A,1183,1183,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f1183 meme replaced by cartoon scene: blond figure in blue US cap waving small Japan flag, bubble 'I watch anime!', black-bob figure right"
+EP0050,1,A,1218,1218,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f1218 cartoon replaced by plain black-hair smiling stick figure, one arm out"
+EP0051,1,A,1239,1239,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f1239 smiling stick figure replaced by green Japan-map character with round glasses, stick legs, holding a coin; two translucent banknote strips across map (pre f1238 vs f1239)"
+EP0052,1,A,1289,1289,RECLASSIFIED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f1289 Earth globe with dollar money bag on top and translucent banknote overlay pops in right of Japan character
+EP0053,1,A,1358,1358,CONFIRMED,TEXT_CHANGE,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f1358 red hand lettered '30 years' pops top-left
+EP0054,1,A,1383,1383,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f1383 Japan character+globe+30 years replaced by plain neutral stick figure
+EP0055,1,A,1425,1425,CONFIRMED,EXPRESSION_CHANGE,NO,POSE_AND_EXPRESSION_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f1425 stick figure mouth flat -> open pink mouth, hands raised to chin"
+EP0056,1,A,1445,1445,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f1445 stick figure replaced by teacher scene: smiling figure with pointer stick left, green chalkboard 'Why Japan?' with white Japan outline right"
+EP0057,1,A,1479,1479,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f1479 pointer removed, arm extended out (pose swap); board unchanged"
+EP0058,1,A,1516,1516,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f1516 pointer returns to figure's hand (arm-out -> pointer pose); board unchanged
+EP0059,1,A,1554,1563,RECLASSIFIED,DRAW_ON_OR_REVEAL,YES,HARD_CUT_PLUS_TEXT_WRITE_ON,YES,AGREE,ACCEPT_FIRST,HIGH,"f1554 teacher+board replaced by blank canvas, then black handwriting 'Early' written letter by letter (f1557 Ea, f1560 Ear, f1563 Early)"
+EP0060,1,A,1567,1580,CONFIRMED,DRAW_ON_OR_REVEAL,NO,TEXT_WRITE_ON,NO,AGREE,ACCEPT_FIRST,HIGH,"f1567-1580 '1990s...' typed after Early: f1567 'Early 1', f1571 '199', f1575 '1990s', f1580 '1990s...'"
+EP0061,1,A,1591,1591,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f1591 'Early 1990s...' text replaced by green Japan-map character with big eyes and stick legs, left of centre"
+EP0062,1,A,1626,1626,CONFIRMED,TEXT_CHANGE,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f1626 handwritten '1992' pops top right
+EP0063,1,A,1659,1659,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f1659 large teal glossy bubble pops in right-centre
+EP0064,1,A,1699,1700,RECLASSIFIED,ELEMENT_SWAP,NO,BURST_ANIMATION_PLUS_EXPRESSION,NO,AGREE,ACCEPT_FIRST,HIGH,f1699-1700 bubble replaced by scatter of small teal droplets/streaks (pop); Japan character gets worried brow and hand-on-chin pose
+EP0065,1,A,1704,1704,CONFIRMED,ELEMENT_EXIT,NO,REMOVAL,NO,AGREE,ACCEPT_FIRST,HIGH,f1704 droplets disappear; character unchanged
+EP0066,1,A,1725,1725,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f1725 Japan character+1992 replaced by third-party Nikkei 225 (Tokyo CFD) area chart (investing.com mark) with red hand-drawn down arrow and skyscraper/house doodles bottom-left
+EP0067,1,A,1762,1762,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f1762 stack of four green dollar banknotes pops bottom-right over chart
+EP0068,1,A,1776,1777,CONFIRMED,ELEMENT_EXIT,NO,REMOVAL_ANIMATION,NO,AGREE,ACCEPT_FIRST,HIGH,f1776-1777 banknote stack drops from four notes to three (lower-left note gone)
+EP0069,1,A,1781,1784,CONFIRMED,ELEMENT_EXIT,NO,REMOVAL_ANIMATION,NO,AGREE,ACCEPT_FIRST,HIGH,"f1781-1784 banknotes vanish one at a time: two stacks f1781-83, single note f1784 (viewed f1781-84)"
+EP0070,1,A,1797,1870,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE_PLUS_SLOW_ZOOM_OUT,YES,CORRECTED,USE_SECOND,HIGH,"f1797 I-frame hard cut to Japan map on white. MEASURED+viewed f1800/1833/1866: map bbox shrinks 555x634 to 518x591 px (slow zoom-out, centre fixed); zoom stops f1870, grey dim f1872-1889. First pass said static."
+EP0071,1,A,1875,1875,RECLASSIFIED,WIPE_OR_FADE,NO,TEXT_ENTRY_PLUS_DIM,NO,AGREE,ACCEPT_FIRST,HIGH,"f1875 hand lettered The pops top-left during stepped grey dim (MEASURED mean luma 242.7 at f1870 to 210.6 at f1889, steps f1872-1884, 1889); lost f1882, decades f1889"
+EP0072,1,A,1882,1882,CONFIRMED,TEXT_CHANGE,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f1882 'lost' appears under The
+EP0073,1,A,1889,1889,CONFIRMED,TEXT_CHANGE,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f1889 'decades' appears under lost
+EP0074,1,A,1911,1911,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f1911 grey 'The lost decades' Japan map replaced by plain neutral stick figure on white
+EP0075,1,A,1969,1969,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f1969 stick figure replaced by third-party meme: tall thin figure poking weight labelled you're SCREWED, caption COME ON DO SOMETHING, tiny green Japan character at bottom"
+EP0076,1,A,1978,1980,NOT_A_CHANGE,OTHER,NO,NOT_A_CHANGE,NO,AGREE,ACCEPT_FIRST,MEDIUM,f1978-80 crops identical by eye (meme thin figure and weight static); sub-pixel/codec jitter
+EP0077,1,A,1989,1991,NOT_A_CHANGE,OTHER,NO,NOT_A_CHANGE,NO,AGREE,ACCEPT_FIRST,MEDIUM,f1989-91 identical by eye; jitter
+EP0078,1,A,2000,2002,NOT_A_CHANGE,OTHER,NO,NOT_A_CHANGE,NO,AGREE,ACCEPT_FIRST,MEDIUM,f2000-02 crops identical by eye; jitter
+EP0079,1,A,2011,2016,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"MEASURED changed_frac 0.219 peak at f2016; meme visible f2011,2012,2014 in sheet; f2016 cut to Japan map left plus GDP (US $) bar chart with red ellipse right; cut frame confirmed 2016"
+EP0080,1,A,2057,2057,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f2057 map+GDP chart replaced by third-party FRED chart 'Inflation, consumer prices for Japan' (Percent, source World Bank via FRED) with red ellipse"
+EP0081,1,A,2088,2088,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f2088 FRED chart replaced by third-party blue infographic 'G7 COUNTRIES Real Wage Growth 2000-2022' (left) plus cartoon dark-haired worried figure holding banknote (right)
+EP0082,1,A,2107,2107,CONFIRMED,TEXT_CHANGE,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f2107 hand lettered 'no raise :(' appears between infographic and figure
+EP0083,1,A,2132,2171,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE_PLUS_DRIFT_PLUS_ENTRY,YES,CORRECTED,USE_SECOND,HIGH,"f2132 hard cut to Japan map with bags and banknote; MEASURED+viewed f2134-2170: whole map group drifts down-left (bbox y 42 to 68, x 414 to 401), accelerating; grey bars pop f2171. First pass said hold."
+EP0084,1,A,2192,2192,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f2192 map+bars replaced by living-room scene: couch, lamp, red wall art, tan wall/brown floor, small figure peeking behind couch arm"
+EP0085,1,A,2209,2209,CONFIRMED,ELEMENT_SWAP,NO,POSE_MOVE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f2209 peeking figure behind couch removed; separate figure lying/crawling on floor lower right appears
+EP0086,1,A,2221,2221,CONFIRMED,ELEMENT_SWAP,NO,POSE_MOVE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f2221 floor figure replaced by standing worried stick figure at right edge, hand at head"
+EP0087,2,A,2231,2231,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f2231 red question mark pops above standing figure
+EP0088,2,A,2255,2255,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f2255 living room replaced by Bank of Japan building doodle (green dome, flag with red disc, facade lettering BANK OF JAPAN) right of centre"
+EP0089,2,A,2291,2291,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f2291 smiling black-hair stick figure pops in at left in walking/step pose; building unchanged
+EP0090,2,A,2363,2363,CONFIRMED,ELEMENT_SWAP,YES,SWAP_PROP,NO,CORRECTED,USE_SECOND,HIGH,f2363 left figure replaced by large knife (grey blade brown handle) plus black block text RATES at left; building stays
+EP0091,2,A,2385,2385,CONFIRMED,ELEMENT_SWAP,YES,PROP_ANIMATION_PLUS_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f2385 knife rotates to horizontal slicing through RATES letters; red 0% text pops above; building stays
+EP0092,2,A,2406,2406,RECLASSIFIED,PARTIAL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f2406 building+0%+knife scene replaced by RATES text (upper centre) and vertical knife at right edge only; no building
+EP0093,2,A,2436,2436,CONFIRMED,ADDITIVE_ENTRY,YES,PROP_ANIMATION_PLUS_THIRD_PARTY_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f2436 RATES letters split apart around knife; third-party CNBC card Bank of Japan adopts negative interest rate policy appears lower left; building gone
+EP0094,2,A,2460,2460,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f2460 knife/RATES/CNBC scene replaced by plain neutral stick figure
+EP0095,2,A,2480,2480,CONFIRMED,EXPRESSION_CHANGE,NO,EXPRESSION_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f2480 mouth flat -> frown; right arm extended out
+EP0096,2,A,2512,2512,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f2512 frowning figure replaced by Bank of Japan building at left (shifted left vs f2255)
+EP0097,2,A,2554,2554,CONFIRMED,ADDITIVE_ENTRY,YES,THIRD_PARTY_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f2554 third-party web text card 'What Is Yield Curve Control (YCC)?' with two paragraphs appears right of building
+EP0098,2,A,2599,2599,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f2599 building+YCC text card replaced by hooded dark-green cloaked figure with grey face and angry eyes, text 'I am...' top-left"
+EP0099,2,A,2622,2622,CONFIRMED,PARTIAL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f2622 'I am...' cloaked figure replaced by close-up (larger) cloaked figure plus red hand-lettered YIELD CURVE CONTROL at left
+EP0100,2,A,2649,2649,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f2649 close-up cloak replaced by smiling black-hair stick figure with arms out
+EP0101,2,A,2688,2688,CONFIRMED,PARTIAL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f2688 figure re-laid at left holding pointer stick; third-party YCC text card (What Is Yield Curve Control (YCC)?) appears right
+EP0102,2,A,2744,2744,CONFIRMED,EXPRESSION_CHANGE,NO,EXPRESSION_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f2744 smile -> angry brows/flat mouth; pointer swings from down-left to up-right toward text card
+EP0103,2,A,2795,2795,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f2795 figure+YCC card replaced by green Japan-map character holding small grey bottle with orange cap
+EP0104,2,A,2850,2850,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f2850 yellow percent-sign ball on grey rubble pops in right of Japan character
+EP0105,2,A,2917,2917,CONFIRMED,ELEMENT_EXIT,YES,ELEMENT_EXIT_PLUS_REPOSITION,YES,AGREE,ACCEPT_FIRST,HIGH,"f2917 Japan character removed; percent ball on rubble repositioned/shrunk to left-centre, canvas otherwise empty (viewed)"
+EP0106,2,A,2946,2946,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f2946 two green 'Government of Japan' bond/note sheets with squiggle lines pop in right of ball
+EP0107,2,A,2984,2984,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f2984 ball+notes replaced by third-party chart titled '10-year JGBs and BoJ yield target' (2016-2024, 10Y Yield, Former yield curve control range, source Macrobond)"
+EP0108,2,A,3033,3033,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f3033 JGB chart replaced by Japan map alone at upper right (no label/character)
+EP0109,2,A,3055,3055,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,"f3055 large red jagged down-arrow pops in across left/centre, map stays"
+EP0110,2,A,3085,3085,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,"f3085 bald glasses figure with green tie, hands clasped, plus open briefcase with cash pops in lower left"
+EP0111,2,A,3133,3133,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f3133 arrow+map+businessman replaced by smiling black-hair stick figure, one arm out"
+EP0112,2,A,3162,3162,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f3162 stick figure replaced by tan book with red heart and white caduceus at upper left
+EP0113,2,A,3169,3169,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f3169 second identical heart/caduceus book appears overlapping the first
+EP0114,2,A,3204,3204,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,"f3204 elderly grey-haired figure with bun, cane and hunched pose appears right of books"
+EP0115,2,A,3244,3244,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f3244 Bank of Japan building doodle pops in far right
+EP0116,2,A,3275,3275,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f3275 books+elder+building replaced by dark brown briefcase alone centred
+EP0117,2,A,3279,3279,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f3279 green dollar money bag appears behind briefcase on right
+EP0118,2,A,3283,3285,RECLASSIFIED,ADDITIVE_ENTRY,NO,SEQUENTIAL_POP_IN,NO,AGREE,ACCEPT_FIRST,HIGH,"f3283 second money bag pops in left of briefcase, f3285 banknote pops lower right (viewed f3283,3284,3285)"
+EP0119,2,A,3337,3337,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f3337 bags+briefcase replaced by single green 'Government of Japan' bond/note sheet at upper left
+EP0120,2,A,3341,3341,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f3341 second identical green sheet overlaps first
+EP0121,2,A,3347,3347,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f3347 third green sheet overlaps stack
+EP0122,2,A,3402,3402,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f3402 big red 0% text pops right of sheet stack
+EP0123,2,A,3439,3439,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f3439 sheets+0% replaced by teacher scene: smiling figure with pointer left, green chalkboard 'Two options' right"
+EP0124,2,A,3472,3472,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f3472 pointer removed, arm extended out; board unchanged"
+EP0125,2,A,3503,3503,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f3503 teacher+board replaced by blank canvas with handwritten N°1 top-left
+EP0126,2,A,3519,3519,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f3519 two banknotes pop below N°1
+EP0127,2,A,3531,3531,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f3531 handwritten 'returns' with red X over it pops right of notes
+EP0128,2,A,3558,3558,CONFIRMED,TEXT_CHANGE,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f3558 small tilted handwritten 'we don't know her' pops lower right
+EP0129,2,A,3583,3583,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f3583 N°1 scene replaced by N°2 heading with green Japan map holding small white airplane over Honshu
+EP0130,2,A,3599,3636,CONFIRMED,OBJECT_MOTION,NO,PROP_ANIMATION,NO,AGREE,ACCEPT_FIRST,HIGH,"f3599-3636 'bye!' text and small airplane fly away right: plane leaves map f3611, crosses frame, exits by f3636 (bye! visible f3599,3611 only)"
+EP0131,2,A,3645,3645,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f3645 N°2 map scene replaced by teacher scene: smiling figure with pointer, chalkboard 'N°2 Go bye-bye!'"
+EP0132,2,A,3671,3671,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f3671 pointer removed, arm extended (pose swap); board unchanged"
+EP0133,2,A,3688,3790,RECLASSIFIED,CHARACTER_ANIMATION,YES,HARD_CUT_INTO_ANIMATED_INSERT,YES,AGREE,ACCEPT_FIRST,HIGH,"f3688 cut into 102-frame insert: spiral-eyed Japan with drifting banknotes, hopping GIVE ME text and falling Treasury sheet; cut out MEASURED at f3790 (peak changed 0.465) to open-mouth presenter"
+EP0134,2,A,3813,3813,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f3813 smiling stick figure replaced by large green Japan character holding 'United States Treasury' bond sheet (close-up)
+EP0135,2,A,3890,3890,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f3890 Japan+Treasury bond replaced by third-party chart 'Figure 3 - Foreign Ownership of Agency MBS by Country Share' 2003-2021 stacked bars, source U.S. TIC data as of June 30 2021"
+EP0136,2,A,3981,3981,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f3981 chart replaced by large Japan character wearing pixel sunglasses (deal-with-it style) holding banknotes
+EP0137,2,A,4050,4050,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f4050 sunglasses Japan replaced by smiling stick figure arms out
+EP0138,2,A,4095,4095,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f4095 stick figure replaced by Japan character with money bag and banknote in hand, left of centre"
+EP0139,2,A,4119,4119,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f4119 black equals sign pops right of Japan character
+EP0140,2,A,4138,4138,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,"f4138 grey ATM machine (blue screen, keypad) pops right of equals sign"
+EP0141,2,A,4166,4261,RECLASSIFIED,CHARACTER_ANIMATION,YES,HARD_REPLACE_TO_ANIMATED_INSERT,YES,AGREE,ACCEPT_FIRST,HIGH,"f4166 cut to 95-frame insert: heart-eyed Japan, green USA map, banknote floating into map (viewed f4166,4197,4229); cut out MEASURED f4261 (changed 0.504) to teacher with Math = good! board"
+EP0142,2,A,4291,4291,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f4291 pointer removed from hand; arm extended pointing at board with raised other arm
+EP0143,2,A,4332,4332,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f4332 arm extended pose reverts to pointer-down pose
+EP0144,2,A,4377,4377,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f4377 teacher scene replaced by beige-skin figure with brown topknot hair, smile, waving, small figure centred"
+EP0145,2,A,4401,4401,CONFIRMED,ZOOM_OR_SCALE,YES,SCALE_JUMP_CLOSEUP,YES,AGREE,ACCEPT_FIRST,HIGH,"f4401 single-frame jump of same topknot figure from small to large close-up, surprised O mouth (not smooth zoom); hard cut"
+EP0146,2,A,4457,4457,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f4457 hand-drawn framed screen with green rising arrow chart pops in at right of close-up figure
+EP0147,2,A,4486,4486,CONFIRMED,PARTIAL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f4486 chart+figure replaced by same character, smiling, holding a banknote, at left and taller"
+EP0148,2,A,4509,4509,CONFIRMED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY,NO,CORRECTED,USE_SECOND,HIGH,f4509 green Japan map (no label) pops in right of banknote-holding topknot figure
+EP0149,2,A,4545,4545,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f4545 figure+map replaced by two brown yen banknotes (yen symbol) left-centre
+EP0150,2,A,4594,4594,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f4594 handwritten 'almost 0% interest' stack pops right of yen notes
+EP0151,2,A,4636,4636,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f4636 yen notes+text replaced by topknot figure at far left with stack of three yen notes upper right; text gone
+EP0152,2,A,4656,4656,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f4656 red curved arrow pointing down-right pops below yen notes
+EP0153,2,A,4686,4686,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f4686 stack of green dollar notes pops at end of arrow lower right
+EP0154,2,A,4704,4704,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f4704 figure+yen+arrow+dollars replaced by single grey-green 'United States Treasury' bond sheet at upper left
+EP0155,2,A,4713,4713,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f4713 second Treasury sheet overlaps first
+EP0156,2,A,4722,4722,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f4722 third Treasury sheet overlaps stack
+EP0157,2,A,4755,4755,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f4755 handwritten 4% pops right of sheet stack
+EP0158,2,A,4782,4782,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f4782 Treasury sheets+4% replaced by close-up topknot figure with surprised O mouth at left
+EP0159,2,A,4801,4801,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f4801 handwritten '- costs' pops right of figure
+EP0160,2,A,4813,4813,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f4813 '- fees' pops under '- costs'
+EP0161,2,A,4832,4832,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f4832 figure+text replaced by smiling topknot figure holding dollar note, centred"
+EP0162,2,A,4873,4873,RECLASSIFIED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f4873 topknot dollar figure replaced by black-hair smiling plain stick figure
+EP0163,2,A,4911,4911,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f4911 stick figure replaced by third-party black-background post, The Kobeissi Letter, 'How large is the Yen carry trade?' with Going Abroad chart (487T yen), source Bloomberg"
+EP0164,2,A,4947,4947,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f4947 Kobeissi post replaced by small bald glasses green-tie businessman at left
+EP0165,2,A,4980,4986,RECLASSIFIED,ADDITIVE_ENTRY,NO,ADDITIVE_PROP_ANIMATION,NO,AGREE,ACCEPT_FIRST,HIGH,"f4980-4986 yen notes enter lower right beside businessman, growing: single note f4980-82, two notes f4984-86"
+EP0166,2,A,5011,5011,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5011 handwritten 'almost 0%' pops below businessman and yen notes
+EP0167,2,A,5043,5043,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5043 grey-green Treasury sheet pops at far upper right
+EP0168,2,A,5054,5054,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5054 second Treasury sheet overlaps first at upper right
+EP0169,2,A,5067,5067,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5067 third Treasury sheet overlaps stack
+EP0170,2,A,5090,5090,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5090 green rising jagged arrow pops lower right under sheets (partly cropped at frame bottom)
+EP0171,2,A,5145,5145,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f5145 businessman+sheets+text replaced by teacher scene: figure with pointer, chalkboard 'no borrowing cost?'"
+EP0172,2,A,5222,5222,RECLASSIFIED,TEXT_CHANGE,NO,TEXT_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f5222 chalkboard text 'no borrowing cost?' replaced by 'GO MAD!' in one frame; teacher unchanged
+EP0173,2,A,5266,5266,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f5266 teacher+board replaced by near-empty canvas with small grey closed laptop (logo CF) at upper left
+EP0174,3,B,5304,5304,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5304 house/office tower/red FOR SALE sign cluster pops in; grey CF laptop already present
+EP0175,3,B,5338,5338,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5338 two grey red-eyed robots holding phones pop in right; props present
+EP0176,3,B,5396,5396,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f5396 laptop/props/robots replaced by smiling spiky-hair stick figure, hands on hips"
+EP0177,3,B,5431,5431,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f5431 stick figure replaced by mauve heart left-centre
+EP0178,3,B,5445,5456,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,green check mark scales/grows lower-right of heart f5445-5456; heart unchanged
+EP0179,3,B,5463,5475,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"'>0% returns' text absent f5471, present f5475 (pop-in, not growth); heart/check unchanged"
+EP0180,3,B,5491,5502,CONFIRMED,HIGHLIGHT_ADD,NO,HIGHLIGHT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,second green check grows right of 'returns' f5491-5502
+EP0181,3,B,5509,5520,CONFIRMED,HIGHLIGHT_ADD,NO,MICRO_CHANGE,NO,CORRECTED,USE_SECOND,MEDIUM,check at right already full size at f5508-5520; tiles show no growth; diff box only on heart edge (sub-pixel/codec); first pass claimed check finishing growth
+EP0182,3,B,5532,5532,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f5532 heart/text/checks replaced by stick figure, right arm bent up"
+EP0183,3,B,5549,5549,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f5549 right arm raised-bent to lowered forward arm; rest unchanged
+EP0184,3,B,5565,5565,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f5565 stick figure replaced by single yen note top-left
+EP0185,3,B,5569,5569,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5569 second yen note enters lower-right of first
+EP0186,3,B,5574,5574,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5574 third yen note enters lower-left
+EP0187,3,B,5600,5600,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5600 globe pops in right; three yen notes remain
+EP0188,3,B,5629,5629,RECLASSIFIED,ELEMENT_SWAP,YES,ELEMENT_SWAP,YES,AGREE,ACCEPT_FIRST,HIGH,f5629 three yen notes at left replaced by green Japan-map character with money bag and bill; globe right unchanged
+EP0189,3,B,5663,5663,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f5663 Japan map and globe replaced by one large yen note centre
+EP0190,3,B,5686,5686,CONFIRMED,PARTIAL_REPLACE,YES,ELEMENT_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f5686 large centre yen note replaced by handwritten 'Yen carry trade' above a smaller note at left
+EP0191,3,B,5722,5722,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f5722 black '=' sign pops in right of note; title/note unchanged
+EP0192,3,B,5764,5764,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f5764 third-party photo (man lying on stacks of cash) pops in right of '='; authored? no, stock/meme still"
+EP0193,3,B,5798,5798,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f5798 whole 'Yen carry trade = photo' scene replaced by large globe
+EP0194,3,B,5830,5830,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f5830 globe replaced by close-up green Japan character with grey router and blue wifi arcs
+EP0195,3,B,5856,5856,CONFIRMED,TEXT_CHANGE,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f5856 text 'I control the modem!' pops in above-left of character; no other change
+EP0196,3,B,5895,5895,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f5895 Japan/router scene replaced by stick figure with pointer beside green chalkboard 'ONE assumption'
+EP0197,3,B,5938,5938,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f5938 pointer stick removed, right arm now extended horizontal bent up; board unchanged"
+EP0198,3,B,5991,5991,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f5991 right arm changes from horizontal-raised to down-bent; head/board unchanged
+EP0199,3,B,6021,6021,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f6021 both arms re-posed, left arm raised, pointer stick re-enters touching board; board text unchanged"
+EP0200,3,B,6052,6052,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f6052 teacher+board replaced by handwritten 'yields near 0' with green Japan map right
+EP0201,3,B,6102,6102,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f6102 black infinity symbol pops in under 'yields near 0'
+EP0202,3,B,6130,6135,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE_THEN_TYPING,YES,AGREE,ACCEPT_FIRST,HIGH,"f6130 blank canvas (cut from text/infinity/map); 'But' written on letter-by-letter f6131 'B', f6133 'Bu', f6135 'But'"
+EP0203,3,B,6139,6141,CONFIRMED,DRAW_ON_OR_REVEAL,NO,TEXT_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,'in' written on after 'But' f6139 'i' to f6141 'in'
+EP0204,3,B,6145,6151,CONFIRMED,DRAW_ON_OR_REVEAL,NO,TEXT_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,'2024' written on digit by digit f6145 '2' to f6151 '2024'
+SUB002,3,B,6153,6157,CONFIRMED,TEXT_CHANGE,NO,TEXT_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,"ellipsis typed after '2024': '.' f6153-6154, '..' f6155, '...' f6157; sub-threshold, pure text growth"
+EP0205,3,B,6172,6172,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f6172 'But in 2024...' (ellipsis visible in PRE) replaced by smiling stick figure
+EP0206,3,B,6191,6191,CONFIRMED,EXPRESSION_CHANGE,NO,EXPRESSION_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f6191 smile to open mouth, hands raised to chin; rest unchanged"
+EP0207,3,B,6206,6206,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f6206 stick figure replaced by Bank of Japan building with flag; text 'BANK OF JAPAN' readable
+EP0208,3,B,6247,6247,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f6247 handwritten 'yield curve control' pops in right of Bank of Japan building (single frame, not typed)"
+EP0209,3,B,6272,6272,CONFIRMED,HIGHLIGHT_ADD,NO,HIGHLIGHT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f6272 red X drawn over 'yield curve control' appears fully in one frame
+EP0210,3,B,6306,6306,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f6306 Bank of Japan + crossed text replaced by 'interest rates' text and Japan map
+EP0211,3,B,6320,6320,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f6320 green up arrow pops in right of 'interest rates'
+EP0212,3,B,6372,6372,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f6372 '17 YEARS!' pops in lower-left
+EP0213,3,B,6410,6410,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f6410 interest rates/arrow/17 YEARS/map replaced by stick figure open mouth, hands at chin"
+EP0214,3,B,6423,6423,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f6423 green up arrow pops in top-left
+EP0215,3,B,6431,6431,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f6431 second green up arrow pops in lower-left
+EP0216,3,B,6440,6440,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f6440 third green up arrow pops in right
+EP0217,3,B,6457,6457,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f6457 stick figure and three arrows replaced by smaller Japan map with one up arrow at left
+EP0218,3,B,6545,6545,RECLASSIFIED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f6545 third-party red market heatmap screenshot pops in right of map; tickers read AAPL -5.64%, MSFT -4.78%, GOOG -3.69%, AMZN -7.16%"
+EP0219,3,B,6576,6576,CONFIRMED,TEXT_CHANGE,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f6576 red handwritten '- 6%' pops in below heatmap
+EP0220,3,B,6654,6654,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f6654 map/arrow/heatmap/-6% replaced by red handwritten 'Nikkei 225'
+EP0221,3,B,6694,6694,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f6694 'Nikkei 225' replaced by third-party Investing.com area chart with red hand-drawn down arrow; header reads 'Nikkei 225, Japan, M, Tokyo (CFD)', O53575.37 H58015.08 L52655.18 C56566.49, Market Closed"
+EP0222,3,B,6849,6849,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f6849 chart replaced by zoomed bed scene: dark red-eyed monster under bed, brown blanket"
+EP0223,3,B,6894,6923,RECLASSIFIED,PAN_OR_SCROLL,YES,CAMERA_MOVE,UNCERTAIN,CORRECTED,USE_SECOND,MEDIUM,"f6894-6923 continuous move/zoom (no cut): sleeper enters from top and grows while monster shifts; first pass called this a state boundary YES - it is a 30f motion interval, settled composition starts ~f6923; linear/9px-per-frame speed claim not verifiable from tiles (INFERRED)"
+EP0224,3,B,6945,6945,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f6945 worried sleeper bed scene replaced by Japan character holding money bag and bill
+EP0225,3,B,6981,6981,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f6981 green up arrow pops in right of Japan character
+EP0226,3,B,7030,7030,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f7030 money-bag/arrow scene replaced: Japan character re-posed (side-eye), yen notes lower-right, text starting with 'N' top-left (reads 'N°1'? low)"
+EP0227,3,B,7072,7072,CONFIRMED,TEXT_CHANGE,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f7072 handwritten 'Pay up if you want my yen!' pops in left of Japan character; 'N°1' already present
+EP0228,3,B,7112,7112,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f7112 Japan/yen scene replaced by pink-headed tie-wearing stick figure, house + office tower, text 'N°2' top-left"
+EP0229,3,B,7171,7171,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f7171 green dollar bill pops in below buildings
+EP0230,3,B,7177,7177,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f7177 second dollar bill enters overlapping first
+EP0231,3,B,7182,7182,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,MEDIUM,f7182 third dollar bill added; stack of overlapping bills at right of figure
+EP0232,3,B,7216,7216,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f7216 N°2 scene replaced by teacher stick figure beside green chalkboard 'Free money???'
+EP0233,3,B,7261,7261,RECLASSIFIED,TEXT_CHANGE,NO,TEXT_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f7261 board text 'Free money???' to 'Well, uh...', teacher expression smile to flat mouth, pointer stick re-enters, arm re-posed"
+EP0234,3,B,7303,7303,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f7303 teacher/board replaced by large smiling beige-head stick figure with brown hair curl, left of frame"
+EP0235,3,B,7316,7316,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f7316 text '4%' pops in right of figure
+EP0236,3,B,7332,7332,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f7332 green 'United States Treasury' note illustration pops in right of '4%'; text on it readable as 'United States Treasury'
+EP0237,3,B,7390,7390,CONFIRMED,EXPRESSION_CHANGE,NO,EXPRESSION_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f7390 face smile to flat mouth with raised brows; '4%' and Treasury note unchanged
+EP0238,3,B,7435,7435,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f7435 figure/4%/Treasury note replaced by one large yen note centre
+SUB003,3,B,7476,7507,CONFIRMED,WIPE_OR_FADE,NO,FADE_OUT,NO,AGREE,ACCEPT_FIRST,HIGH,"f7476-7507 yen note fades out progressively (f7486 grey/semi-transparent, f7496 lighter) to blank canvas by f7507: opacity fade over ~30f, not a hard cut"
+EP0239,3,B,7521,7521,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f7521 blank canvas to teacher (open mouth, pointer) beside green board 'Everything's different now!!!'"
+EP0240,3,B,7568,7568,RECLASSIFIED,TEXT_CHANGE,NO,TEXT_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f7568 board text to 'What do we do?', teacher open mouth to smile, pointer lowered"
+EP0241,3,B,7628,7713,RECLASSIFIED,OBJECT_MOTION,YES,CUT_PLUS_REGIONAL_ANIMATION,YES,AGREE,ACCEPT_FIRST,MEDIUM,"window f7627-7713: hard cut f7628 teacher/board to dollar bill circled by three red cycle arrows (slow rotation across ~f7628-7684), second cut ~f7713 to Japan map; window contains TWO boundaries"
+EP0242,3,B,7737,7830,RECLASSIFIED,OBJECT_MOTION,YES,ELEMENT_ANIMATION_THEN_CUT,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f7737-7830: Japan map with small dollar and yen bill sprites moving (f7768, f7799), hard cut by f7830 to teacher + blank board; sprite path details not frame-verified"
+EP0243,3,B,7865,7865,RECLASSIFIED,TEXT_CHANGE,NO,TEXT_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f7865 board text 'Repatriation' pops in, pointer removed, arm extended"
+EP0244,3,B,7896,7896,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f7896 teacher left arm raised, pointer re-enters toward board; text unchanged"
+EP0245,3,B,7986,7986,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f7986 teacher/board replaced by large bald brown-skinned figure with glasses, green tie, hand at chin, worried"
+EP0246,3,B,8080,8080,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f8080 Japan character holding money bag and bill pops in right of worried bald glasses figure
+EP0247,3,B,8184,8184,CONFIRMED,ELEMENT_EXIT,NO,ELEMENT_REMOVAL_POSE,NO,AGREE,ACCEPT_FIRST,MEDIUM,"f8184 money bag and bill removed, Japan character re-posed (side-eye, hand on hip); bald figure unchanged"
+EP0248,3,B,8218,8218,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f8218 bald figure + Japan character replaced by smiling spiky-hair stick figure
+EP0249,3,B,8247,8247,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f8247 right forearm raised-bent to lowered; face unchanged
+EP0250,3,B,8269,8269,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f8269 right forearm lowered back to raised-bent
+EP0251,3,B,8300,8300,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f8300 stick figure replaced by Japan-map character (no props) left-centre
+EP0252,3,B,8334,8334,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f8334 green 'United States Treasury' note pops in right of Japan character
+EP0253,3,B,8400,8400,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f8400 scene replaced by zoomed Japan character with pixelated black sunglasses, dollar bills at top-left and lower-right"
+EP0254,3,B,8447,8447,CONFIRMED,TEXT_CHANGE,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f8447 handwritten 'gimme those treasuries!' pops in right of character
+EP0255,3,B,8465,8465,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f8465 tilted large 'United States Treasury' note pops in at left
+EP0256,3,B,8472,8472,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f8472 tilted 'United States Treasury' note pops in lower-centre overlapping character body
+EP0257,3,B,8477,8477,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f8477 another Treasury note (upper-right, rotated) pops in"
+EP0258,3,B,8483,8483,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f8483 fourth Treasury note pops in lower-right; shard 3 last candidate
+EP0259,4,B,8531,8531,CONFIRMED,FULL_REPLACE,YES,HARD_REPLACE_FULL,YES,AGREE,ACCEPT_FIRST,HIGH,f8531 Treasury-note pile scene replaced by smiling spiky-hair stick figure on blank canvas
+EP0260,4,B,8600,8600,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f8600 arms change from hands-at-hips to both elbows out/raised
+EP0261,4,B,8633,8664,CONFIRMED,FULL_REPLACE,YES,CUT_THIRD_PARTY_CLIP_THEN_BUILDING_SCALE_IN,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f8633 hard cut stick figure to third-party news-style clip (man at podium, banknotes flying) playing ~f8633-8653+, then cartoon FEDERAL RESERVE building appears small (f8664) and scales up by f8672; two boundaries in window; person in footage not identified"
+EP0262,4,B,8699,8699,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f8699 'short-term' with large '%' pops in right of Federal Reserve building
+EP0263,4,B,8740,8740,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f8740 building and 'short-term %' replaced by handwritten '10 year' top-left
+EP0264,4,B,8768,8768,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f8768 '20 year' pops in centre
+EP0265,4,B,8790,8790,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f8790 '30 year' pops in lower-right
+EP0266,4,B,8826,8826,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f8826 '10/20/30 year' text replaced by smiling stick figure (lower-left, large) + third-party screenshot titled 'US Treasuries Yield Curve' (date field 2/17/2026, Fed Funds Target Range, CPI checkboxes; curve rises to right)"
+EP0267,4,B,8899,8899,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f8899 yield-curve screenshot and figure replaced by three brown teddy bears with blue bow ties
+EP0268,4,B,8910,8910,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f8918 baby stick figure with pacifier and diaper holding a teddy pops in right; three teddies unchanged
+EP0269,4,B,8924,8924,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f8924 teddies and baby replaced by stick figure with flat mouth, hands on hips"
+EP0270,4,B,8962,8962,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f8962 arms change from hands-on-hips to crossed/one forearm raised; face unchanged
+EP0271,4,B,9025,9025,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f9025 stick figure replaced by smiling figure at lower-left plus third-party portrait video clip (older man at table) with caption 'YOU NEED TO PAY ATTENTION TO THE BOND MARKETS' and subtitle 'Watch the bond market.'
+EP0272,4,B,9141,9141,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f9141 stick figure forearm re-posed; clip unchanged
+EP0273,4,B,9178,9178,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f9178 forearm re-posed again; clip unchanged
+EP0274,4,B,9206,9238,RECLASSIFIED,ELEMENT_SWAP,NO,ELEMENT_SWAP_PLUS_THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,MEDIUM,"f9206 cartoon figure removed and handwritten 'Thanks Ray!' with 'youtube.com/@principlesbyraydalio' appears lower-right within the 33f window (present at f9206); the man in the clip changes expression through the window = third-party playback, not authored edits"
+SUB004,4,B,9240,9253,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9240-9253 only the man's face/expression changes inside the clip (video playback); overlay 'Thanks Ray!' unchanged; not an authored edit
+EP0275,4,B,9258,9280,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK_PLUS_TEXT_REMOVAL,NO,AGREE,ACCEPT_FIRST,MEDIUM,"f9258 handwritten 'Thanks Ray!' removed in one frame (URL line stays); inside the third-party clip the man speaks and burned-in subtitle changes 'Watch the bond market.' to 'The bond market' (f9280); clip playback, not authored edit"
+SUB005,4,B,9282,9282,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9282 only the man's face/mouth moves inside the clip; subtitle 'The bond market' unchanged
+EP0276,4,B,9284,9298,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9284-9298 man turns/closes mouth in clip; subtitle 'The bond market'; no authored change
+SUB006,4,B,9300,9310,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9300-9310 man's eyes close (blink) inside clip; no authored change
+EP0277,4,B,9312,9334,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9312-9334 man opens eyes and speaks; burned-in subtitle changes 'The bond market' to 'is the basis,'"
+EP0278,4,B,9338,9352,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9338-9352 man speaks, subtitle 'is the basis,' unchanged; clip motion only"
+SUB007,4,B,9354,9356,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9354-9356 small head movement inside clip; subtitle unchanged
+EP0279,4,B,9358,9483,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9358-9483 126f clip playback: man gestures with flat hand, burned-in subtitles 'is the basis,' then 'it's the backbone' then 'of all markets.'; authored overlay (URL) unchanged"
+SUB008,4,B,9486,9486,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9486 left hand extended (clip gesture); subtitle 'of all markets.'
+EP0280,4,B,9488,9529,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9488-9529 hand gesture lowers and flattens, subtitle changes to 'It is'; clip motion only"
+SUB009,4,B,9531,9534,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9531-9534 man's mouth/arm small motion inside clip; burned-in subtitle 'It is'; no authored change
+EP0281,4,B,9537,9554,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9537-9554 clip playback: burned-in subtitle changes 'It is' to 'the risk free, meaning'; flat-hand gesture"
+SUB010,4,B,9556,9557,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9556-9557 minor head/mouth motion inside clip; subtitle 'the risk free, meaning'"
+EP0282,4,B,9559,9622,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9559-9622 64f clip playback: hand swings out and back, subtitle 'the risk free, meaning' to 'default free,'; authored URL overlay unchanged"
+SUB011,4,B,9624,9626,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9624-9626 small head motion inside clip; subtitle 'default free,'"
+EP0283,4,B,9628,9657,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9628-9657 man extends right hand toward camera, subtitle 'default free,'; clip motion only"
+SUB012,4,B,9659,9677,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9659-9677 head/mouth motion with extended hand; subtitle 'default free,'"
+SUB013,4,B,9681,9687,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9681-9687 man looks down/eyes close inside clip; subtitle 'default free,'"
+EP0284,4,B,9689,9706,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9689-9706 subtitle changes 'default free,' to 'probably default free,'; man looks up and speaks; clip only"
+SUB014,4,B,9708,9711,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9708-9711 small mouth/head motion; subtitle 'probably default free,'"
+EP0285,4,B,9713,9717,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9713-9717 man tilts head, extended hand held; subtitle 'probably default free,'; clip only"
+SUB015,4,B,9720,9733,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9720-9733 mouth/head motion in clip; subtitle unchanged
+SUB016,4,B,9737,9738,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9737-9738 mouth motion in clip
+EP0286,4,B,9741,9853,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9741-9853 113f clip: arm retracts then both arms spread; subtitles 'probably default free,' to 'interest rate that determines'; authored overlay unchanged"
+SUB017,4,B,9855,9868,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9855-9868 hands/arms spread, mouth motion in clip; subtitle unchanged"
+EP0287,4,B,9871,9915,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9871-9915 45f; subtitle 'interest rate that determines' to 'what all asset returns'; man leans forward; clip only
+SUB018,4,B,9917,9918,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9917-9918 mouth motion in clip
+EP0288,4,B,9921,9923,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9921-9923 small head motion in clip; subtitle 'what all asset returns'
+SUB019,4,B,9925,9936,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9925-9936 man's eyes close/head lowers in clip
+EP0289,4,B,9938,9947,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9938-9947 man speaks, arms still spread, subtitle unchanged"
+EP0290,4,B,9951,9962,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f9951-9962 man speaks, arms spread; subtitle 'what all asset returns'"
+SUB020,4,B,9964,9967,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9964-9967 mouth motion in clip
+EP0291,4,B,9969,9980,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9969-9980 subtitle 'what all asset returns' to 'are going to be.'; clip only
+SUB021,4,B,9982,9982,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9982 face/mouth motion in clip
+EP0292,4,B,9984,10031,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f9984-10031 48f: subtitle 'are going to be.' to 'And when'; hands raised outward; clip only
+SUB022,4,B,10034,10040,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10034-10040 mouth motion, subtitle 'And when'"
+EP0293,4,B,10042,10061,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10042-10061 subtitle 'And when' to 'there is a breakdown'; hands moving; clip only
+EP0294,4,B,10065,10071,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10065-10071 face/mouth motion; subtitle 'there is a breakdown'
+SUB023,4,B,10074,10075,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10074-10075 mouth motion in clip
+EP0295,4,B,10077,10077,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10077 small facial change in clip; subtitle unchanged
+SUB024,4,B,10079,10079,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10079 minor mouth/face change in clip
+EP0296,4,B,10081,10105,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10081-10105 subtitle 'there is a breakdown' to 'of the supply'; arms out; clip only
+SUB025,4,B,10107,10109,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10107-10109 mouth motion in clip; subtitle 'of the supply'
+EP0297,4,B,10111,10172,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10111-10172 62f: arms come in to clasped hands, subtitle 'of the supply' to 'demand picture'; clip only"
+SUB026,4,B,10174,10175,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10174-10175 small face motion, hands clasped"
+EP0298,4,B,10177,10177,CONFIRMED,TEXT_CHANGE,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10177 burned-in subtitle changes 'demand picture' to 'for the bond market,' (one-frame subtitle swap inside footage)"
+SUB027,4,B,10179,10206,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10179-10206 head/mouth motion over 28f; subtitle 'for the bond market,'"
+SUB028,4,B,10210,10211,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10210-10211 small face motion
+EP0299,4,B,10214,10273,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10214-10273 60f: hands gesture, subtitles 'for the bond market,' then 'you see' then 'a certain type' then 'of market action.'; clip only"
+SUB029,4,B,10275,10283,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10275-10283 head motion; subtitle 'of market action.'
+EP0300,4,B,10285,10295,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10285-10295 man speaks, hands clasped; subtitle 'of market action'; clip only"
+SUB030,4,B,10297,10297,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10297 mouth/head motion in clip
+EP0301,4,B,10299,10420,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10299-10420 122f: raised-hand gestures; burned-in subtitles 'of market action.' then 'You see long rates rising' then 'relative to short rates.'; clip only
+SUB031,4,B,10423,10426,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10423-10426 mouth motion; subtitle 'relative to short rates.'
+EP0302,4,B,10429,10490,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10429-10490 62f: hand gestures, subtitles 'You see the currency' then 'go down.'"
+SUB032,4,B,10492,10510,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10492-10510 man stops speaking, neutral face; subtitle 'go down.'"
+EP0303,4,B,10512,10683,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10512-10683 172f: subtitles 'go down.' to 'You see gold go up' to 'because there's a movement' to 'out of that bond market'; clip only
+SUB033,4,B,10685,10685,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10685 mouth motion; subtitle 'out of that bond market'
+EP0304,4,B,10687,10798,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10687-10798 112f: gestures, subtitles 'out of that bond market' to 'because there's a supply' to 'and demand imbalance.'"
+SUB034,4,B,10801,10809,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10801-10809 hands/mouth motion; subtitle 'and demand imbalance.'
+EP0305,4,B,10811,10811,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10811 small mouth/hand change in clip; subtitle 'and demand imbalance.'
+SUB035,4,B,10813,10824,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10813-10824 mouth/head motion in clip
+EP0306,4,B,10826,10888,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10826-10888 63f: subtitle 'and demand imbalance.' to 'When that happens,'; clip only"
+SUB036,4,B,10891,10891,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10891 small head motion in clip
+EP0307,4,B,10893,10924,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10893-10924 32f: subtitle 'When that happens,' to 'that raises interest rates.'; clip only"
+SUB037,4,B,10926,10926,NOT_A_CHANGE,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10926 small head motion in clip
+EP0308,4,B,10928,10992,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,"f10928-10992 65f: hands come together, subtitle 'that raises interest rates.' to 'And it puts the'; clip only"
+SUB038,4,B,10995,11006,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f10995-11006 head/mouth motion in clip
+SUB039,4,B,11010,11015,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f11010-11015 head/mouth motion in clip
+EP0309,4,B,11017,11018,RECLASSIFIED,OTHER,NO,THIRD_PARTY_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f11017-11018 small hand change in clip; shard 4 last candidate; clip continues at f11019 (subtitles burned in)
+SUB040,5,C,11020,11023,NOT_A_CHANGE,OTHER,NO,FOOTAGE_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,"Sheet SUB040 f11019 vs f11024: Dalio mouth/head shift only; caption 'And it puts the', banner, framing identical. Third-party footage, not authored."
+EP0310,5,C,11025,11035,RECLASSIFIED,TEXT_CHANGE,NO,BURNED_IN_SUBTITLE_CHANGE,NO,CORRECTED,USE_SECOND,HIGH,"EP0310 f11024 caption 'And it puts the' -> f11028 'Federal Reserve' (stays to f11036). Subtitle is burned into third-party clip, not an authored text overlay; first pass called it TEXT_CHANGE."
+SUB041,5,C,11037,11050,NOT_A_CHANGE,OTHER,NO,FOOTAGE_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,SUB041 f11036-f11050: head/mouth movement only; 'Federal Reserve' caption and banner unchanged.
+EP0311,5,C,11052,11052,CONFIRMED,TEXT_CHANGE,NO,BURNED_IN_SUBTITLE_CHANGE,NO,CORRECTED,USE_SECOND,HIGH,"EP0311 f11051 'Federal Reserve' -> f11052 'and other central banks'; one-frame swap of subtitle burned into third-party footage, not an authored edit."
+SUB042,5,C,11055,11055,NOT_A_CHANGE,OTHER,NO,FOOTAGE_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,"SUB042 f11054 vs f11055: face strip, mouth shape differs; caption and banner identical."
+EP0312,5,C,11057,11058,CONFIRMED,OTHER,NO,FOOTAGE_MOTION,NO,AGREE,ACCEPT_FIRST,MEDIUM,EP0312 f11056-f11058: speaker head/shoulder small shift in footage; caption 'and other central banks' unchanged; third-party footage playback not authored edit.
+SUB043,5,C,11060,11086,NOT_A_CHANGE,OTHER,NO,FOOTAGE_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,SUB043 f11059-f11086 (27f): talking head movement; caption 'and other central banks' and banner unchanged.
+EP0313,5,C,11088,11088,CONFIRMED,TEXT_CHANGE,NO,BURNED_IN_SUBTITLE_CHANGE,NO,CORRECTED,USE_SECOND,HIGH,"EP0313 f11087 'and other central banks' -> f11088 'in a bind.'; subtitle burned into third-party footage, not authored text overlay."
+SUB044,5,C,11090,11090,NOT_A_CHANGE,OTHER,NO,FOOTAGE_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,SUB044 f11089 vs f11090: slight head/mouth shift; caption 'in a bind.' unchanged.
+EP0314,5,C,11092,11096,CONFIRMED,OTHER,NO,FOOTAGE_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0314 f11091-f11096: speaker looks down, turns head, mouth closes; caption 'in a bind.' unchanged. Footage motion."
+SUB045,5,C,11098,11098,NOT_A_CHANGE,OTHER,NO,FOOTAGE_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,SUB045 f11097 vs f11098: mouth opens slightly in face crop; nothing else differs.
+EP0315,5,C,11100,11103,CONFIRMED,OTHER,NO,FOOTAGE_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0315 f11099-f11103: mouth opens wide, head leans while talking; caption 'in a bind.' unchanged. Footage motion."
+SUB046,5,C,11105,11108,NOT_A_CHANGE,OTHER,NO,CLIP_PLAYBACK,NO,AGREE,ACCEPT_FIRST,HIGH,f11105-08 expression change in clip only; box wide only because of mouth+head extent.
+EP0316,5,C,11117,11117,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f11116 portrait interview clip (banner, caption 'in a bind.', url) -> f11117 lone smiling presenter hands on hips; clean 1-frame hard cut."
+EP0317,5,C,11145,11145,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f11144 presenter -> f11145 big ponytail girl at left with magnifier, press-conference photo (flags, podium) at right."
+EP0318,5,C,11238,11238,RECLASSIFIED,ELEMENT_SWAP,YES,ELEMENT_SWAP,YES,AGREE,ACCEPT_FIRST,HIGH,f11238 right inset swaps Fed press-conference photo for 'grand theft auto VI COMING 2025' poster; girl identical.
+EP0319,5,C,11263,11263,CONFIRMED,HIGHLIGHT_ADD,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f11263 red X over poster logo and handwritten 'lol nope' appear in one frame.
+EP0320,5,C,11283,11283,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f11283 girl+poster -> 'US Treasuries Yield Curve' web chart screenshot (blue curve, 2/17/2026 date field visible)."
+EP0321,5,C,11343,11343,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f11343 chart screenshot -> large centred beige columned building labelled FEDERAL RESERVE.
+EP0322,5,C,11408,11434,RECLASSIFIED,PARTIAL_REPLACE,YES,PARTIAL_REPLACE+DRAW_ON,YES,AGREE,ACCEPT_FIRST,HIGH,f11407 large centred Federal Reserve building -> f11408 small building top-left + 'many many years' text; red shaft then grows left-to-right with arrowhead by ~f11434.
+EP0323,5,C,11481,11481,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f11481 handwritten 'not so far' appears below first arrow in one frame.
+SUB047,5,C,11483,11504,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,"f11483-11504 red bar under 'not so far' starts as dot and lengthens (tiles f11490,11497,11504)."
+EP0324,5,C,11506,11508,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,f11506-11508 second arrow shaft completes and arrowhead appears; continuation of SUB047 draw-on (one animation f11483-11508).
+EP0325,5,C,11547,11547,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f11547 building+two arrows+text -> 'US Treasuries Yield Curve' chart, same as EP0320 chart."
+EP0326,5,C,11680,11680,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f11680 chart -> lone smiling stick presenter hands on hips.
+EP0327,5,C,11719,11719,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f11719 presenter -> green USA map character with bubble 'Don't worry, I'll pay.' and 'DEFICIT = 100M' + one money bag."
+EP0328,5,C,11739,11739,CONFIRMED,NUMBER_OR_LABEL_CHANGE,NO,NUMBER_OR_LABEL_CHANGE,NO,AGREE,ACCEPT_FIRST,HIGH,f11739 100M -> 500B and second money bag appears.
+EP0329,5,C,11761,11761,CONFIRMED,NUMBER_OR_LABEL_CHANGE,NO,NUMBER_OR_LABEL_CHANGE,NO,AGREE,ACCEPT_FIRST,HIGH,f11761 500B -> 800B and third money bag added.
+EP0330,5,C,11779,11779,CONFIRMED,NUMBER_OR_LABEL_CHANGE,NO,NUMBER_OR_LABEL_CHANGE,NO,AGREE,ACCEPT_FIRST,HIGH,"f11779 800B -> red ONE TRILLION, six bags, bubble 'Someday... I guess...', map eyes droop; all in one frame."
+EP0331,5,C,11828,11828,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f11828 map scene -> stick presenter with flat straight mouth hands on hips.
+EP0332,5,C,11844,11844,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f11844 arms hands-on-hips -> arms folded across chest; face unchanged.
+EP0333,5,C,11903,12079,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE+OBJECT_MOTION+FULL_REPLACE,YES,CORRECTED,USE_SECOND,MEDIUM,"177f interval is composite: f11903 hard cut to small Fed building top-left; DEBT papers appear/drift (tiles f11961,f12020); f12079 tile already presenter+chalkboard 'Where does it go?'. Exact end cut f12078/12079 not separately verified."
+EP0334,5,C,12136,12136,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f12136 presenter smile+extended arm -> flat mouth, long brown pointer across body; board 'Where does it go?' unchanged."
+EP0335,5,C,12187,12187,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f12187 presenter+chalkboard -> text card 'And for the last few decades...' on blank canvas.
+EP0336,5,C,12235,12257,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE+ZOOM_SCALE,YES,AGREE,ACCEPT_FIRST,HIGH,"f12235 text card -> small green Japan map; tiles f12242,12249,12257 show map scaling up to fill frame height."
+EP0337,5,C,12281,12281,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f12281 beige DEBT paper (red DEBT header, scribbles) pops in left of map."
+EP0338,5,C,12287,12287,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f12287 second DEBT paper pops in at right of map.
+EP0339,5,C,12293,12293,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f12293 green note with pale cursive 'United States Treasury' pops in upper centre-left.
+EP0340,5,C,12297,12297,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f12297 second green Treasury note pops in lower right of map.
+EP0341,5,C,12321,12321,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f12321 map+4 papers -> smiling presenter, right arm raised, left hand on hip."
+EP0342,5,C,12396,12396,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f12396 hand-on-hip+raised arm -> both elbows out shrug; face unchanged.
+EP0343,5,C,12434,12434,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f12434 shrug -> hand-on-hip with raised arm (return to earlier pose).
+EP0344,5,C,12462,12462,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f12462 large centred presenter -> smaller presenter at left holding long pointer beside blank green chalkboard (brown frame); no yellow bar in f12470 stable, small yellow bar bottom-left present by f12512 (bar starts f12470-12512)."
+EP0345,5,C,12513,12513,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY+POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f12513 white 'GAMMA' wordmark appears on board; presenter eyes close in happy smile, arm/pointer raised to board, in same frame."
+EP0346,5,C,12537,12537,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f12537 presenter+GAMMA board -> large presenter alone hands on hips, smiling; yellow bar still growing (29px)."
+EP0347,5,C,12584,12584,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f12584 standing presenter -> extreme close-up smiling head at brown desk with grey laptop marked 'CF'.
+EP0348,5,C,12658,12658,CONFIRMED,ADDITIVE_ENTRY,NO,EXPRESSION_CHANGE+ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f12658 smile -> wide open pink mouth and handwritten 'doing research is neat!' appears near head, same frame."
+EP0349,5,C,12697,12697,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f12697 desk close-up -> wide scene: small neutral presenter amid props (monitor, gold bar, cash, papers, closed CF laptop, briefcase, paper plane, dollar sign, line-chart panel)."
+EP0350,5,C,12748,12748,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f12748 handwritten 'this is overwhelming' appears above presenter; props unchanged.
+EP0351,5,C,12786,12786,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f12786 prop scene -> smiling presenter with pointer beside green board reading 'What even is'.
+EP0352,5,C,12863,12863,CONFIRMED,TEXT_CHANGE,NO,TEXT_CHANGE+POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f12863 board gains 'the cross-currency carry trade???'; pointer vanishes, arm extends toward board; single frame."
+EP0353,5,C,12910,12910,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f12910 presenter+board -> close-up neutral-faced presenter head/shoulders at left of blank canvas.
+EP0354,5,C,12922,12922,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f12922 thought bubble with black scribble tangle appears at upper right of head.
+EP0355,5,C,12957,12957,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f12957 presenter+bubble -> five tilted sticky notes IDEA, THOUGHT, CONCEPT, EXPLANATION (EXPLA/NATION) and blue handwritten 'also, do the laundry!'."
+EP0356,5,C,12991,12991,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f12991 sticky notes -> neutral presenter at left facing tilted cork board with pinned papers joined by red string.
+EP0357,5,C,13018,13018,CONFIRMED,EXPRESSION_CHANGE,NO,EXPRESSION_CHANGE+ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f13018 face -> closed eyes, slight smile, blue sweat drop; handwritten 'I swear this'll make sense' appears upper left, same frame."
+EP0358,5,C,13083,13083,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f13083 cork-board scene -> black-framed picture of small smiling presenter between cash and TAX paper, caption 'VIDEO THAT MAKES SENSE!!!'."
+EP0359,5,C,13132,13132,RECLASSIFIED,ELEMENT_SWAP,YES,ELEMENT_SWAP,YES,AGREE,ACCEPT_FIRST,HIGH,f13132 intact frame -> same picture torn with jagged gap through presenter; caption -> 'NEVERMIND!'.
+EP0360,5,C,13169,13169,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f13169 torn picture -> smiling presenter with pointer beside blank green chalkboard.
+EP0361,5,C,13184,13184,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY+POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f13184 white GAMMA wordmark appears on chalkboard; presenter eyes close, arm raises pointer toward board in same frame; repeat of EP0345 beat. Yellow bar visible bottom-left."
+EP0362,5,C,13219,13219,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f13219 presenter+board with white GAMMA -> large navy GAMMA wordmark centred on blank canvas.
+EP0363,5,C,13283,13283,RECLASSIFIED,ZOOM_OR_SCALE,YES,"HARD_REPLACE_LAYOUT (1 frame, not zoom)",YES,CORRECTED,USE_SECOND,HIGH,"f13282 full-width navy GAMMA; f13283 small tilted GAMMA at upper centre plus red down-right arrow; no intermediate frames, so single-frame replace not animated scale."
+EP0364,5,C,13308,13308,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f13308 small neutral presenter (hands on hips) and scribble thought bubble appear upper left; tilted GAMMA and arrow unchanged.
+EP0365,5,C,13345,13393,RECLASSIFIED,ADDITIVE_ENTRY,YES,ADDITIVE_ENTRY(sparkle loop)+FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f13345 grey-framed picture (presenter between cash and TAX paper) appears lower right with glitter sparkles (tiles f13361,13377 differ in sparkle); f13393 cut to lone smiling presenter, one arm lowered."
+EP0366,5,C,13439,13441,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE+UI_MENU_OPEN,YES,AGREE,ACCEPT_FIRST,HIGH,"f13439-40 presenter -> dark chat UI inset 'Hello, night owl', 'How can I help you today?', 'Sonnet 4.6' with hand cursor at plus; f13441 plus menu open (Add files or photos, Take a screenshot, Add to project, Web search, Use style, Add connectors)."
+SUB048,5,C,13473,13475,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,f13473-75 hand cursor moves from plus button down onto first menu row; menu constant; diff bbox right edge equals yellow bar tip (bar also ticks).
+EP0367,5,C,13477,13477,CONFIRMED,HIGHLIGHT_ADD,NO,HOVER_HINT_APPEAR,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13477 hand cursor on 'Add files or photos' and faint 'Ctrl+U' hint appears at row right; one frame.
+SUB049,5,C,13479,13479,NOT_A_CHANGE,OTHER,NO,OTHER,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13479 only 1px cursor shift; Ctrl+U hint already present; bar tip ticks.
+EP0368,5,C,13498,13506,CONFIRMED,ADDITIVE_ENTRY,NO,"UI_STATE_CHANGE (menu closes, attachment added)",NO,AGREE,ACCEPT_FIRST,HIGH,"f13498-13506 menu closes, prompt box grows with grey attachment thumbnail top-left and 'Connect your tools to Claude' bar; small tooltip 'Add files, connectors, and more /' present in f13500/13503 tiles but gone by f13506; I-beam at right."
+SUB050,5,C,13509,13510,NOT_A_CHANGE,OTHER,NO,OTHER,NO,CORRECTED,USE_SECOND,MEDIUM,"f13509-10 diff bbox right edge equals yellow bar tip (x~532); UI inset visually identical; change is progress-bar growth, not a UI event."
+SUB051,5,C,13542,13552,NOT_A_CHANGE,OTHER,NO,PROGRESS_BAR_TICK+CURSOR,NO,CORRECTED,USE_SECOND,MEDIUM,"f13542-52 box bottom edge equals bar tip; I-beam cursor sits at right of placeholder and shifts slightly; no content change; first pass saw a caret blink, actually a mouse I-beam."
+SUB052,5,C,13565,13567,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13565-67 I-beam at right of placeholder gone and small arrow pointer appears lower right (tiles f13565-67); nothing else changes.
+SUB053,5,C,13586,13597,NOT_A_CHANGE,OTHER,NO,PROGRESS_BAR_TICK,NO,CORRECTED,USE_SECOND,MEDIUM,"f13586-97 UI inset identical across tiles; diff bbox right edge 577 equals yellow bar tip 576 (MEASURED), so the only change is bar growth."
+SUB054,5,C,13608,13615,RECLASSIFIED,ELEMENT_SWAP,NO,UI_STATE_CHANGE,NO,AGREE,ACCEPT_FIRST,HIGH,f13608-15 single thumbnail becomes two blank 'PDF' tiles (by f13612) and waveform icon becomes red send-arrow button; staged over several frames.
+EP0369,5,C,13621,13624,CONFIRMED,DRAW_ON_OR_REVEAL,NO,UI_THUMBNAIL_LOAD (4f),NO,AGREE,ACCEPT_FIRST,HIGH,f13621-24 PDF placeholders brighten from grey blocks (f13621) to white document thumbnails with text lines (f13624).
+SUB055,5,C,13626,13626,NOT_A_CHANGE,OTHER,NO,THUMBNAIL_SETTLE,NO,CORRECTED,USE_SECOND,LOW,"f13626 second PDF thumbnail slightly crisper than f13625, no content change; diff also includes bar tip; first pass said identical."
+SUB056,5,C,13631,13644,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13631-44 small arrow cursor moves right to left across lower inset toward plus; becomes I-beam near plus at f13644.
+EP0370,5,C,13650,13650,CONFIRMED,ADDITIVE_ENTRY,NO,TOOLTIP_APPEAR+POINTER,NO,AGREE,ACCEPT_FIRST,HIGH,"f13650 I-beam near plus -> hand cursor on plus with tooltip 'Add files, connectors, and more /' appearing in one frame."
+SUB057,5,C,13652,13655,NOT_A_CHANGE,OTHER,NO,PROGRESS_BAR_TICK,NO,CORRECTED,USE_SECOND,MEDIUM,f13652-55 hand cursor and tooltip unchanged across tiles; bbox right edge 605 equals bar tip 604 (MEASURED) so change is bar growth only.
+SUB058,5,C,13660,13662,NOT_A_CHANGE,OTHER,NO,PROGRESS_BAR_TICK,NO,CORRECTED,USE_SECOND,MEDIUM,f13660-62 hand cursor and tooltip unchanged; bbox right edge 607 equals bar tip 607 (MEASURED); bar growth only.
+EP0371,5,C,13665,13667,CONFIRMED,ADDITIVE_ENTRY,NO,UI_MENU_OPEN,NO,AGREE,ACCEPT_FIRST,HIGH,"f13665-67 tooltip replaced by dropdown menu (Add files or photos, Take a screenshot, Add to project, Web search, Use style, Add connectors) below plus; fully drawn at f13667."
+SUB059,5,C,13683,13685,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13683-85 hand cursor at plus becomes arrow cursor on first row 'Add files or photos' (f13685 tile shows arrow at row start).
+EP0372,5,C,13687,13700,CONFIRMED,ADDITIVE_ENTRY,NO,POINTER_MOTION+UI_SUBMENU_OPEN,NO,AGREE,ACCEPT_FIRST,HIGH,"f13687-700 cursor moves down to 'Use style'; submenu opens right (Normal, Learning, Concise, Explanatory, Formal, Create & edit styles); at f13700 hand cursor is near Add connectors with submenu still open."
+SUB060,5,C,13702,13703,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13702-03 cursor near Add connectors flips hand->arrow at f13703 and back to hand; style submenu still open; bar tip also ticks.
+EP0373,5,C,13705,13705,CONFIRMED,ELEMENT_EXIT,NO,UI_SUBMENU_CLOSE,NO,AGREE,ACCEPT_FIRST,HIGH,f13705 style submenu (Normal...Create & edit styles) disappears in one frame; main menu stays with hand cursor on Add connectors.
+SUB061,5,C,13707,13707,NOT_A_CHANGE,OTHER,NO,POINTER_MOTION+PROGRESS_BAR_TICK,NO,CORRECTED,USE_SECOND,MEDIUM,f13707 hand cursor moves a couple of px; bbox right edge 632 equals bar tip 631 (MEASURED) so bar also grows; menu otherwise identical.
+SUB062,5,C,13713,13713,RECLASSIFIED,PROGRESS_BAR_OR_COUNTER,NO,PROGRESS_BAR_GROWTH,NO,CORRECTED,USE_SECOND,HIGH,"f13713 only the yellow bottom bar grows ~4px at 960 scale (477->481); first-pass 'green end tick' is the evidence-sheet bbox overlay, not a video element."
+EP0374,6,C,13724,13730,RECLASSIFIED,WIPE_OR_FADE,YES,CROSSFADE (7f),YES,AGREE,ACCEPT_FIRST,HIGH,"f13724-30 dark chat home with open attach menu dissolves to dark 'Connectors' modal (Canva, Figma, Slack, monday.com, Gamma, Box, Asana, Excalidraw, Amplitude, Clay, Play Sheet Music, Hex); both layers visible f13726/13728."
+SUB063,6,C,13732,13734,RECLASSIFIED,OTHER,NO,ICON_LOAD_SETTLE,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13732-34 Gamma 'G' and Box icons in Connectors cards sharpen from blurry to rendered; hand cursor on Play Sheet Music card; layout unchanged.
+EP0375,6,C,13738,13791,RECLASSIFIED,ZOOM_OR_SCALE,YES,ZOOM_SCALE+HARD_CUT,YES,AGREE,ACCEPT_FIRST,HIGH,"f13738-13791 Connectors modal progressively scales up (tiles f13738,f13755,f13773) then cut to light 'Import with AI' page (file 'Yen Carry Trade Unwind_s U.S. Impact.pdf', Presentation/Webpage/Document/Social tiles, Continue); cut at or before f13791, exact frame not isolated."
+SUB064,6,C,13809,13810,RECLASSIFIED,PROGRESS_BAR_OR_COUNTER,NO,PROGRESS_BAR_TICK,NO,AGREE,ACCEPT_FIRST,HIGH,f13809-10 Import page identical; bbox right edge 683 equals bar tip 683 (MEASURED).
+SUB065,6,C,13814,13816,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13814-16 small arrow cursor appears on the 'What would you like to create with this content?' line (visible in f13824 stable); bar tip also ticks.
+SUB066,6,C,13845,13845,RECLASSIFIED,PROGRESS_BAR_OR_COUNTER,NO,PROGRESS_BAR_TICK,NO,AGREE,ACCEPT_FIRST,HIGH,f13845 nothing visible changes in the page; bbox edge 703 equals bar tip 703 (MEASURED).
+SUB067,6,C,13864,13868,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13864-68 cursor moves from Presentation tile (hand pointer f13865-66) down toward the Continue button; layout unchanged; bar tip also ticks.
+SUB068,6,C,13872,13872,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION,NO,AGREE,ACCEPT_FIRST,HIGH,f13872 arrow cursor over Continue label becomes hand pointer; button unchanged.
+EP0376,6,C,13874,13874,CONFIRMED,OBJECT_MOTION,NO,HOVER_STATE,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13874 cursor goes from over 'Continue' label to hand at arrow end; button fill darkens slightly (hover state).
+SUB069,6,C,13877,13878,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION+PROGRESS_BAR_TICK,NO,AGREE,ACCEPT_FIRST,MEDIUM,f13877-78 hand cursor shifts a few px right near Continue arrow; button stays dark; bbox right edge 720 equals bar tip 720 (MEASURED) so bar also ticks.
+SUB070,6,C,13896,13896,RECLASSIFIED,OBJECT_MOTION,NO,POINTER_MOTION+PROGRESS_BAR_TICK,NO,AGREE,ACCEPT_FIRST,LOW,f13896 hand cursor/hover micro-change on Continue (button shading differs slightly); bar tip also changes.
+EP0377,6,C,13900,13904,CONFIRMED,TEXT_CHANGE,NO,UI_BUTTON_STATE_CHANGE (5f),NO,AGREE,ACCEPT_FIRST,HIGH,f13900-04 'Continue' becomes spinner + 'Configuring your prompt...' (text partly overlapped by a no-entry cursor) and fill fades dark navy to pale blue across f13900-13904.
+EP0378,6,C,13925,13925,CONFIRMED,FULL_REPLACE,YES,HARD_CUT,YES,AGREE,ACCEPT_FIRST,HIGH,f13925 light 'Import with AI' page (pale 'Configuring your prompt...' button) -> empty dark-grey inset with I-beam at bottom and white strip under it; whole cut-in content swapped in one frame.
+EP0379,6,C,13934,13940,RECLASSIFIED,DRAW_ON_OR_REVEAL,YES,HARD_CUT+UI_MATERIALIZE (7f),YES,AGREE,ACCEPT_FIRST,HIGH,f13934 dark window becomes slide-editor UI (top bar Theme/Share/Agent/Present) with small rounded card box; f13936 card is full size with blue right panel and 'AI generating' chip; banner 'AI Generating: Don't close this tab while generation is in progress.' visible f13938-13940.
+SUB071,6,C,13942,13942,RECLASSIFIED,OBJECT_MOTION,NO,CURSOR_JITTER_UNRESOLVED,NO,CORRECTED,USE_SECOND,LOW,SUB071 f13941 vs f13943: I-beam cursor lower centre y~500->~495 (visible); banner spinner rotation not resolvable in sheet; progress bar tip identical (~x560). Spinner claim unverified.
+EP0380,6,C,13944,13982,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,EP0380 f13944 empty dark/blue card -> f13956 'The Unwinding of the' -> f13969 two-line heading -> f13982 subtitle; right panel blue->grey with spinner; AI chip follows cursor. Third-party screen recording; bar tip grows.
+EP0381,6,C,13986,14002,CONFIRMED,ADDITIVE_ENTRY,NO,SCREEN_RECORDING_TYPING_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0381 f13986 second card 'The' -> f13991 'The Genesis: Japan's ""Lost' -> f14002 full heading + 'AI generating' chip; first card nudges up. Bar grows. Third-party recording."
+EP0382,6,C,14006,14115,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TEXT_STREAM_AND_SCROLL,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0382 f14005->f14115: second card body paragraphs stream in; page scrolls up ~70px (first card heading y170->100, then off top). Progress bar lengthens ~585->590. Third-party recording."
+EP0383,6,C,14121,14121,CONFIRMED,LARGE_PARTIAL_REPLACE,YES,SCREEN_RECORDING_LAYOUT_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0383 f14120 generating view -> f14122: Agent side panel, trading-floor hero photo, skyline image appear; prompt box already shows 'Add this|'. One-frame replace inside third-party recording."
+SUB072,6,C,14123,14123,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,MEDIUM,SUB072 f14122 vs f14128: prompt 'Add this|' -> 'Add this |' (caret/space shift). Bar tip looks same length (~x629) in both; first-pass bar-tick claim not visible here.
+SUB073,6,C,14129,14129,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,"SUB073 f14129 'Add this |' -> f14135 'Add this in|'; one letter typed, rest identical."
+SUB074,6,C,14136,14145,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,SUB074 f14136-f14145: prompt 'Add this in|' -> 'Add this info to|' (f14142 mid); bar tip slightly longer.
+SUB075,6,C,14150,14150,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,SUB075 f14150 'Add this info to|' -> f14153 'Add this info to t|'; one letter.
+SUB076,6,C,14154,14159,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,SUB076 f14154-f14159: 'Add this info to t' -> 'Add this info to the|' (f14157 intermediate).
+SUB077,6,C,14165,14168,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,SUB077 f14165-f14168: 'Add this info to the|' -> 'Add this info to the pre|'.
+SUB078,6,C,14175,14175,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,SUB078 f14175: '...the pre|' -> '...the pres|'; one letter.
+SUB079,6,C,14180,14186,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,SUB079 f14180-f14186: '...the pres' -> '...the present|' (7f); I-beam mouse cursor visible right of field.
+SUB080,6,C,14190,14190,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,"SUB080 f14189 '...the present|' -> f14194 '...the presenta|'; one letter, mouse I-beam at right of field."
+SUB081,6,C,14195,14196,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,SUB081 f14194 '...presenta|' -> f14200 '...presentati|' (read in native crop); one letter.
+SUB082,6,C,14201,14201,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,SUB082 f14200 '...presentati|' -> f14206 '...presentatio|'; one letter.
+SUB083,6,C,14207,14207,RECLASSIFIED,TEXT_CHANGE,NO,SCREEN_RECORDING_TYPING,NO,AGREE,ACCEPT_FIRST,HIGH,SUB083 f14206 '...presentatio' -> f14215 'Add this info to the presentation|'; send arrow at box lower-right visible in both crops.
+EP0384,6,C,14217,14217,CONFIRMED,PARTIAL_REPLACE,NO,SCREEN_RECORDING_PANEL_REPLACE,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0384 f14216: Agent panel (illustration, prompt text, file chip) -> f14218 empty dark chat column, faint fading rows at top, new 'Ask me to edit, create, or style anything' box. Left deck unchanged."
+SUB084,6,C,14219,14220,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,SCREEN_RECORDING_FADE_IN,NO,AGREE,ACCEPT_FIRST,HIGH,SUB084 f14218 faint rows -> f14220 readable 'Add this info to the presentation' + '1 file uploaded' in chat column; fade-in.
+EP0385,6,C,14222,14222,CONFIRMED,TEXT_CHANGE,NO,SCREEN_RECORDING_TEXT_STREAM,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0385 f14221 -> f14222: new line ""I'll integrate"" appears under file row in Agent chat."
+EP0386,6,C,14227,14227,CONFIRMED,TEXT_CHANGE,NO,SCREEN_RECORDING_TEXT_STREAM,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0386 f14226 ""I'll integrate"" -> f14227 two lines ""...comprehensive research report into your presentation. This is""."
+EP0387,6,C,14231,14231,CONFIRMED,TEXT_CHANGE,NO,SCREEN_RECORDING_TEXT_STREAM,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0387 f14230 -> f14231: reply grows to '...detailed institutional-grade document, so I'll create several cards'."
+EP0388,6,C,14237,14237,CONFIRMED,TEXT_CHANGE,NO,SCREEN_RECORDING_TEXT_STREAM,NO,AGREE,ACCEPT_FIRST,HIGH,EP0388 f14236 -> f14237: adds 'cards that capture the key sections while maintaining the visual flow of your existing deck.' legible in sheet.
+EP0389,6,C,14245,14250,CONFIRMED,TEXT_CHANGE,NO,SCREEN_RECORDING_LOG_COLLAPSE,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0389 f14244 full paragraph -> f14250 one-line row ""I'll integrate this comprehensive research report..."" plus blue 'Creating card...' spinner row; header rows brighter."
+EP0390,6,C,14285,14285,RECLASSIFIED,PAN_OR_SCROLL,YES,SCREEN_RECORDING_JUMP_CUT,YES,CORRECTED,USE_SECOND,HIGH,"EP0390 f14284 deck top (hero image, Genesis card) -> f14285 scrolled view with skyline and 'How the Carry Trade Works' chevrons 1-4; Agent log also advances ('Created card', 'Now I'll add a card with the hard data and...'). Not pure scroll: recording elided time."
+EP0391,6,C,14291,14296,RECLASSIFIED,PAN_OR_SCROLL,NO,SCREEN_RECORDING_SCROLL,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0391 f14290->f14296: 'How the Carry Trade Works' card scrolls up ~65px (heading y325->275 in sheet), labels 'Invest Abroad'/'Profit from Spread' enter; Agent panel unchanged; bar tip lengthens."
+EP0392,6,C,14312,14316,RECLASSIFIED,PAN_OR_SCROLL,YES,SCREEN_RECORDING_JUMP_THEN_SETTLE,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0392 f14311 carry-trade card -> f14312 'Hard Data' card with $1.2T / donut rings 3.436%, 2.019%; f14313-f14316 content slides down to title 'Hard Data: The Numbers Behind the Unwind'. Agent log gains 'Created card'."
+EP0393,6,C,14320,14321,RECLASSIFIED,PAN_OR_SCROLL,NO,SCREEN_RECORDING_SCROLL_SETTLE,NO,CORRECTED,USE_SECOND,MEDIUM,EP0393 f14319 -> f14322: Hard Data card moves down ~60px (title y82->141 sheet). First-pass 'Agent panel gains Created card row' not supported: row already present at f14319.
+SUB085,6,C,14323,14323,RECLASSIFIED,PAN_OR_SCROLL,NO,PROGRESS_BAR_TICK,NO,CORRECTED,USE_SECOND,LOW,"SUB085 f14322 vs f14324: title y141, donuts y352, cursor (683,355) identical in sheet and crops; only visible difference is yellow bar tip ~705->707. No scroll settle visible."
+EP0394,6,C,14325,14326,RECLASSIFIED,PAN_OR_SCROLL,NO,SCREEN_RECORDING_SCROLL_SETTLE,NO,AGREE,ACCEPT_FIRST,MEDIUM,"EP0394 f14324 -> f14327: title y141->144, donuts 352->355 (~3px down); contents identical."
+SUB086,6,C,14328,14328,RECLASSIFIED,PAN_OR_SCROLL,NO,PROGRESS_BAR_TICK,NO,CORRECTED,USE_SECOND,LOW,SUB086 f14327 vs f14336: title y144 and donuts y355 identical in both; yellow bar tip ~707->710 only. No scroll shift visible.
+SUB087,6,C,14361,14362,RECLASSIFIED,OBJECT_MOTION,NO,CURSOR_CHANGE,NO,AGREE,ACCEPT_FIRST,HIGH,"SUB087 f14360 arrow cursor at scrollbar gutter -> f14362 hand pointer higher in gutter (crop 800,347). Third-party recording cursor; bar tip ~720->721."
+EP0395,6,C,14364,14365,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE_TO_AUTHORED_ART,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0395 f14363 dark Gamma screen recording (Hard Data card) -> f14364: full-frame doodle office: monitor chart, gold bar, cash, papers, CF laptop, briefcase, plane, $ sign, wall chart. Cut from third-party UI to authored art."
+EP0396,6,C,14434,14434,CONFIRMED,LARGE_PARTIAL_REPLACE,YES,LARGE_PARTIAL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,EP0396 f14433 wide office -> f14434 close-up smiling figure at brown desk with grey CF laptop.
+EP0397,6,C,14502,14502,CONFIRMED,LARGE_PARTIAL_REPLACE,YES,LARGE_PARTIAL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,EP0397 f14501 desk close-up -> f14502 figure at left with pointer beside green board 'Claude' + starburst.
+EP0398,6,C,14534,14534,RECLASSIFIED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0398 f14533 pointer stick + bent arm -> f14534 one arm extended toward board, no stick; face and board unchanged. Bar tip slightly longer."
+EP0399,6,C,14556,14556,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,EP0399 f14555 chalkboard scene -> f14556 white frame with large navy rounded 'GAMMA' wordmark upper centre.
+EP0400,6,C,14583,14583,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0400 f14582 GAMMA wordmark only -> f14583 black circular cat-silhouette (GitHub-style mark) appears below wordmark at left; one-frame pop-in, rest identical."
+EP0401,6,C,14605,14605,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,EP0401 f14604 -> f14605: black cube 'N' (Notion-style) logo pops in right of first icon.
+EP0402,6,C,14627,14627,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,EP0402 f14626 -> f14627: outlined envelope/M mail icon pops in as third icon.
+EP0403,6,C,14661,14661,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,EP0403 f14660 GAMMA + 3 icons -> f14661 presenter (neutral face) left of tilted cork board with six notes joined by red string.
+EP0404,6,C,14725,14725,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0404 f14724 presenter+cork board -> f14725 five tilted sticky notes IDEA, THOUGHT, CONCEPT, EXPLA/NATION, blue handwritten note ('also, do the laundry!')."
+EP0405,6,C,14755,14755,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0405 f14754 sticky notes -> f14755 single centred smiling stick figure, one hand raised, one on hip."
+EP0406,6,C,14824,14824,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY_PLUS_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,EP0406 f14823 -> f14824: handwritten 'gamma.app' appears top; figure changes to both hands on hips and closed-eye smile. Both in same frame.
+EP0407,6,C,14855,14855,CONFIRMED,EXPRESSION_CHANGE,NO,EXPRESSION_CHANGE,NO,AGREE,ACCEPT_FIRST,HIGH,EP0407 f14854 closed-eye smile -> f14855 open dot eyes with lopsided smile; body and 'gamma.app' unchanged.
+EP0408,6,C,14894,14894,CONFIRMED,ELEMENT_SWAP,NO,ELEMENT_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,EP0408 f14893 handwritten 'gamma.app' -> f14894 serif 'Claude' wordmark with coral starburst at top; figure unchanged.
+EP0409,6,C,14933,14933,CONFIRMED,PARTIAL_REPLACE,YES,PARTIAL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0409 f14932 Claude title + centred figure -> f14933 figure larger at left, no title, navy GAMMA wordmark with stick legs/arms at right."
+EP0410,6,C,14957,14957,CONFIRMED,CHARACTER_ANIMATION,NO,CHARACTER_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,MEDIUM,"EP0410 f14956 -> f14957: GAMMA mascot tilted, legs mid-stride, line reaches from presenter's torso up to the G; presenter eyes become closed arcs. Arm ownership ambiguous."
+EP0411,6,C,15004,15004,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,EP0411 f15003 presenter + GAMMA mascot -> f15004 huge green Japan-shaped character with big eyes filling frame; yellow bar gone from f15004.
+EP0412,6,C,15046,15046,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,EP0412 f15045 Japan character right arm hanging in curve -> f15046 arm raised with thick black fist and pointing finger at upper right.
+EP0413,6,C,15090,15090,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0413 f15089 zoomed Japan with raised arm -> f15090 zoomed-out full character left, arm extended holding pale-green note (handwritten 'United States Treasury') over grey trash can."
+EP0414,6,C,15109,15109,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0414 f15108 -> f15109: handwritten ""I don't wanna play with you anymore"" appears upper left of Japan; nothing else differs."
+EP0415,6,C,15149,15149,CONFIRMED,ELEMENT_SWAP,NO,ELEMENT_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0415 f15148 speech text and held note -> f15149 text gone, arm extended empty to right, note now sitting in trash can; one-frame."
+EP0416,6,C,15182,15182,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,EP0416 f15181 extended empty arm -> f15182 curved arm hanging at side; trash can with note unchanged.
+EP0417,6,C,15198,15198,RECLASSIFIED,OBJECT_MOTION,NO,OBJECT_JUMP,NO,AGREE,ACCEPT_FIRST,HIGH,EP0417 f15197 -> f15198: Japan figure shifted left ~250px (legs x280->~95 sheet) so SW islands crop at frame edge; trash can fixed; no tween frames.
+EP0418,6,C,15216,15216,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,EP0418 f15215 Japan + trash -> f15216 green US map with Alaska/Hawaii and two half-lidded eyes.
+EP0419,6,C,15238,15238,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0419 f15237 -> f15238: handwritten 'great yields, I promise!' above map and orange % orb on white column pedestal at right appear in same frame."
+EP0420,6,C,15297,15297,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0420 f15296 US map+pedestal -> f15297 presenter with pointer left of green chalkboard 'If % better, more people want them!'."
+EP0421,6,C,15344,15344,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0421 f15343 pointer stick + bent arm -> f15344 pointer gone, one empty arm extended toward board; board text unchanged."
+EP0422,6,C,15400,15400,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,EP0422 f15399 presenter + chalkboard -> f15400 single centred smiling figure with one arm gesturing.
+EP0423,6,C,15459,15459,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0423 f15458 lone figure -> f15459 columned building 'FEDERAL RESERVE', text 'Federal Funds Rate' top right, upright knife and orange % orb."
+EP0424,6,C,15473,15473,CONFIRMED,ELEMENT_SWAP,NO,ELEMENT_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,EP0424 f15472 whole % orb + upright knife -> f15473 orb in two sliced halves with knife lying diagonally across the cut (blade right); building and 'Federal Funds Rate' unchanged.
+EP0425,6,C,15523,15549,RECLASSIFIED,DRAW_ON_OR_REVEAL,YES,HARD_CUT_THEN_DRAW_ON,YES,AGREE,ACCEPT_FIRST,HIGH,"EP0425 f15522 Fed scene -> f15523 'Short-term' label + small % orb on white; red zigzag down-arrow draws on top-left to bottom-right (f15531, f15540, f15549 progressively longer) through f15549."
+EP0426,6,C,15567,15567,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,EP0426 f15566 'Short-term' + red arrow -> f15567 'Long-term' label in same position with % orb; arrow gone; small green stroke tip at left edge (y~240).
+SUB088,6,C,15569,15571,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,"SUB088 f15568 -> f15571: thick green stroke grows up-right from left edge each frame (f15569, f15570, f15571 longer)."
+EP0427,6,C,15573,15574,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,EP0427 f15572 -> f15574: green line adds a downward zig then upward tick right of the rising segment.
+SUB089,6,C,15576,15577,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,"SUB089 f15575 -> f15577: green line extends as a rising segment right of the dip (crop 210,156)."
+EP0428,6,C,15579,15579,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,EP0428 f15578 -> f15579: green line adds a short downward zig with upward tail at right end.
+SUB090,6,C,15581,15582,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,"SUB090 f15580 -> f15582: green line extends with a small dip and rise (crop 385,145)."
+EP0429,6,C,15584,15588,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,"EP0429 f15583 -> f15588: line grows several wiggles right (f15584, 15585, 15586, 15588 each longer); by my sheet measure ~43px/frame native, first pass said ~60."
+SUB091,6,C,15590,15590,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,"SUB091 f15589 -> f15590: rising segment appended at right end of line (crop 684,165)."
+EP0430,6,C,15592,15592,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,EP0430 f15591 -> f15592: upward then downward hook appended at right end.
+SUB092,6,C,15594,15595,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,"SUB092 f15593 -> f15595: dip then rising stroke appended (crop 842,142)."
+EP0431,7,D,15597,15602,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,"f15597-15602 last zig-zag segment and arrowhead of green arrow drawn on at right (f15598 stub, f15602 arrowhead); 'Long-term' + % coin unchanged"
+EP0432,7,D,15637,15637,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f15637 green arrow, 'Long-term' and coin replaced by teacher with pointer beside blank green chalkboard"
+EP0433,7,D,15685,15685,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ADD_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f15685 'Steepening yield curve' appears on board in one frame; pointer removed and arm extended in same frame
+EP0434,7,D,15735,15735,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f15735 chalkboard scene replaced by 'US Treasuries Yield Curve' web chart (date 2/17/2026) with crossed-arm % coin character at right
+EP0435,7,D,15788,15788,RECLASSIFIED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,MEDIUM,"f15788 coin character shifts right about 30px at 960w (~3% frame width, MEASURED by eye from tiles; first pass said ~5%), pose unchanged"
+EP0436,7,D,15828,15828,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f15828 chart + coin replaced by 'Government of Japan' green bond document with yen note
+EP0437,7,D,15856,15856,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f15856 grey-green 'United States Treasury' document with dollar note pops in right of Japan document
+EP0438,7,D,15900,15939,CONFIRMED,ZOOM_OR_SCALE,YES,ZOOM_OR_SCALE,YES,AGREE,ACCEPT_FIRST,HIGH,"f15900 hard cut from two documents to giant globe (f15900) which scales down to f15939 revealing gold bar, DEBT page, chart, money bags, % coin, TAX/REPORT pages around it; 40f scale-out"
+EP0439,7,D,15966,15966,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f15966 globe+icons cut to beige-background office: bald figure at computer in tie
+EP0440,7,D,16050,16163,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE_PLUS_SEQUENCE,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f16050 hard cut to white canvas with 'discount'; window f16050-16163 also contains diagonal chain of dollar notes (f16087), 'baseline =' + 'long-term' underlined red + % coin (f16125), ends on 'Long-term' + coin (f16163); several events in 114f, not enumerated per frame"
+SUB093,7,D,16165,16167,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f16165-16167 first rising segment of green zig-zag arrow drawn on from left edge; 'Long-term'+coin unchanged
+EP0441,7,D,16169,16170,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f16169-16170 arrow extends: first peak and downstroke revealed (x~.10-.16)
+SUB094,7,D,16172,16173,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f16172-16173 next short rising segment (x~.20-.28) revealed
+EP0442,7,D,16175,16175,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f16175 next arrow notch drawn (x~.27-.34)
+SUB095,7,D,16177,16178,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f16177-16178 further small peak/dip of arrow (x~.34-.42)
+EP0443,7,D,16180,16184,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f16180-16184 larger run of arrow: tall peak then double zig-zag (x~.42-.55)
+SUB096,7,D,16186,16186,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f16186 short rising stroke added (x~.59-.64)
+EP0444,7,D,16188,16188,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f16188 peak and short downstroke (x~.62-.70)
+SUB097,7,D,16190,16191,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f16190-16191 small dip and rising line (x~.69-.78)
+EP0445,7,D,16193,16198,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,"f16193-16198 final run of arrow with arrowhead drawn at top-right; arrow draw-on run f16165-16198 complete (~34f, stepwise 1-5f increments, not continuous)"
+EP0446,7,D,16229,16229,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f16229 arrow/'Long-term'/coin cut to teacher beside board showing 'Value ='
+EP0447,7,D,16302,16302,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f16302 'goes down' appears under 'Value =' in one frame
+EP0448,7,D,16330,16330,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f16330 teacher extended arm swapped for pose holding long brown pointer
+EP0449,7,D,16385,16385,RECLASSIFIED,TEXT_CHANGE,NO,TEXT_CHANGE_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f16385 board text 'Value = goes down' to 'Stocks = sad'; pointer now raised toward board, other arm out"
+EP0450,7,D,16450,16450,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f16450 teacher/board cut to single sage-green 'United States Treasury' document centred
+EP0451,7,D,16479,16479,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f16479 'earnings = pretty good' (3 lines) appears right of document in one frame
+EP0452,7,D,16512,16512,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f16512 glasses-wearing bald figure with green tie and open briefcase of cash pops in at left
+EP0453,7,D,16532,16532,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f16532 speech 'I ain't paying all that!' appears right of figure's head
+EP0454,7,D,16586,16713,RECLASSIFIED,FULL_REPLACE,YES,CUT_AND_REGIONAL_SEQUENCE,YES,AGREE,ACCEPT_FIRST,MEDIUM,"window f16586-16713 (128f): at f16586/16628/16670 left side shows a Panik meme (grey-skinned head, label 'Panik') under crossing red down-arrow and green up-arrow, black vertical divider; first-pass right-half items (BREAKING NEWS text f16675, Kalm meme ~f16691) NOT seen by me (strip only showed left half) = UNVERIFIED; small stick figure already visible at f16713 (scaling in) and full-size at f16721 (first pass said cut f16714)"
+EP0455,7,D,16769,16769,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f16769 stick figure cut to 'US Treasuries Yield Curve' web chart (date 2/17/2026)
+EP0456,7,D,16840,16840,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f16840 dark-haired glasses figure (open mouth, crossed arms) pops in at lower-left over chart"
+EP0457,7,D,16888,16888,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f16888 chart + glasses figure cut to money bag with dollar note at left
+EP0458,7,D,16933,16933,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f16933 gold bar pops in top-right of money bag
+EP0459,7,D,16948,16948,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f16948 brown briefcase pops in right of gold bar
+EP0460,7,D,16965,16965,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f16965 'United States Treasury' document pops in below gold bar
+EP0461,7,D,16985,16985,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f16985 small house + office tower pop in at lower-right
+EP0462,7,D,17021,17021,CONFIRMED,PARTIAL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f17021 icon cluster cut to large house + office tower on blank canvas (scaled up)
+EP0463,7,D,17048,17048,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f17048 orange % coin pops in right of buildings
+EP0464,7,D,17083,17083,CONFIRMED,PARTIAL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f17083 buildings+coin cut to stick figure (arm out) at left with small house+tower top-centre
+EP0465,7,D,17111,17111,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY_THIRD_PARTY_MEME,NO,AGREE,ACCEPT_FIRST,HIGH,"f17111 third-party 'stonks' meme image (man in suit, rising ticker board, text 'stonks') pops in lower-right; figure arm re-posed in same frame"
+EP0466,7,D,17145,17145,CONFIRMED,PARTIAL_REPLACE,YES,LARGE_PARTIAL_REPLACE,YES,AGREE,ACCEPT_FIRST,MEDIUM,f17145 stick figure and stonks meme removed; house+tower now top-left of otherwise blank canvas (moved/scaled from top-centre)
+EP0467,7,D,17156,17156,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f17156 orange % coin pops in right of house+tower
+EP0468,7,D,17191,17217,CONFIRMED,DRAW_ON_OR_REVEAL,NO,ADDITIVE_ENTRY_THEN_DRAW_ON,NO,AGREE,ACCEPT_FIRST,HIGH,"f17191 'long-term' text and FEDERAL RESERVE building present at window start (absent in PRE f17190, so they pop in at f17191); red line draws left-to-right under them (f17199 short, f17208 longer), arrowhead complete by f17217 (27f)"
+EP0469,7,D,17245,17245,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f17245 buildings/coin/'long-term' scene cut to blank canvas with '10Y yield' text and % coin; green draw-on begins at left edge
+SUB098,7,D,17247,17249,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17247-17249 first rising green segment of zig-zag arrow drawn on
+EP0470,7,D,17251,17252,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17251-17252 first peak and downstroke of arrow
+SUB099,7,D,17254,17255,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17254-17255 next notch of arrow
+EP0471,7,D,17257,17257,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17257 next small segment
+SUB100,7,D,17259,17260,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17259-17260 further peak and dip
+EP0472,7,D,17262,17266,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17262-17266 larger run: tall peak then double zig-zag
+SUB101,7,D,17268,17268,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17268 short rising stroke
+EP0473,7,D,17270,17270,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17270 peak and short downstroke at right
+SUB102,7,D,17272,17273,RECLASSIFIED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17272-17273 dip and rising line (x~.69-.78) drawn on
+EP0474,7,D,17275,17280,CONFIRMED,DRAW_ON_OR_REVEAL,NO,DRAW_ON_OR_REVEAL,NO,AGREE,ACCEPT_FIRST,HIGH,f17275-17280 final run with arrowhead at top-right drawn on; green arrow complete; second draw-on run f17245-17280 (~36f) over '10Y yield' + coin
+EP0475,7,D,17341,17341,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f17341 green arrow, '10Y yield', coin cut to teacher beside board 'Mortage rates...' (spelling 'Mortage' as shown)"
+EP0476,7,D,17385,17385,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_AND_FACE_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f17385 board adds 'still bad!'; teacher smile to frown; pointer reappears
+EP0477,7,D,17442,17442,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f17442 teacher+board cut to FEDERAL RESERVE building, title 'Federal Funds Rate', knife and % coin"
+EP0478,7,D,17456,17456,RECLASSIFIED,ELEMENT_SWAP,NO,ELEMENT_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f17456 whole % coin replaced by two cut halves (one left, one lower-right) and knife re-posed flat beneath; building and title unchanged"
+EP0479,7,D,17534,17534,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f17534 Fed scene cut to green Japan-map character holding Treasury document above grey trash can
+EP0480,7,D,17574,17574,RECLASSIFIED,ELEMENT_SWAP,NO,POSE_SWAP_OBJECT_MOVE,NO,AGREE,ACCEPT_FIRST,MEDIUM,f17574 held Treasury document drops from character's hand into trash can; hand empty
+EP0481,7,D,17606,17606,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f17606 Japan/trash scene cut to 'US Treasuries Yield Curve' web chart (2/17/2026)
+EP0482,7,D,17691,17691,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f17691 chart cut to frowning stick figure (hand out)
+EP0483,7,D,17729,17729,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f17729 frowning figure cut to small house + office tower at lower-left
+EP0484,7,D,17736,17736,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f17736 orange % coin pops in right of house+tower
+EP0485,7,D,17752,17752,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f17752 thick red jagged rising arrow appears across top in a single frame (not drawn on, unlike the green arrows)"
+EP0486,7,D,17776,17776,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f17776 houses/coin/red arrow cut to orange-haired worried stick figure holding small brown wallet
+EP0487,7,D,17802,17802,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f17802 thought bubble with small house inside appears upper-right of orange-haired worried figure in one frame
+EP0488,7,D,17842,17842,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f17842 figure + thought bubble cut to house+tower (left) and FEDERAL RESERVE building (right)
+SUB103,7,D,17903,17904,RECLASSIFIED,OTHER,NO,COLOUR_FADE,NO,AGREE,ACCEPT_FIRST,MEDIUM,"f17895-17912 colour drains toward grey on houses and Fed building (PRE f17902 roof dull maroon, STABLE f17911 greyer); geometry unchanged; sub-threshold gradual fade"
+EP0489,7,D,17912,17912,RECLASSIFIED,OTHER,NO,COLOUR_FADE_COMPLETE,NO,AGREE,ACCEPT_FIRST,MEDIUM,"f17912 fade to greyscale completes (red roof/beige columns now grey); I-frame refresh makes it read as one event; full fade ~f17895-17912 (~18f), easing unmeasured"
+EP0490,7,D,17971,17971,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f17971 greyscale scene cut to full-colour smiling stick figure, hands on hips"
+EP0491,7,D,17994,17994,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f17994 right forearm re-posed (down to raised-bent); face unchanged
+EP0492,7,D,18061,18116,CONFIRMED,ZOOM_OR_SCALE,YES,CUT_PLUS_SCALE_ANIMATION,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f18061 hard cut (first-pass measured; I did not re-verify the exact frame) to house+tower cluster; window f18061-18116 shows a BIG BUSINESS glass tower sliding in from the left (f18079 edge visible) and settling smaller (f18116), house+tower shrinking; 56f; path/easing not measured"
+EP0493,7,D,18177,18177,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f18177 tower+houses cut to third-party site screenshot 'U.S. 10 Year Treasury' US10Y:Tradeweb, Yield 6:05 PM EDT 4.138% (-0.008), 5Y chart; footer 'LATEST ON U.S. 10 YEAR TREASURY'"
+EP0494,7,D,18228,18228,CONFIRMED,HIGHLIGHT_ADD,NO,HIGHLIGHT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f18228 hand-drawn red ellipse around early-2022 low appears in one frame
+EP0495,7,D,18336,18336,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f18336 treasury screenshot cut to third-party chart 'Global corporate debt issuance hits record high' (bars 1990-2024, red arrow, source LSEG)"
+EP0496,7,D,18480,18480,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f18480 debt chart cut to BIG BUSINESS tower alone
+EP0497,7,D,18534,18534,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f18534 stack of green dollar notes pops in lower-right of tower
+EP0498,7,D,18586,18593,RECLASSIFIED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY_SEQUENCE,NO,AGREE,ACCEPT_FIRST,HIGH,"f18586-18593 CONTRACT pages stack in: f18586 one page, f18590 two, f18593 four fanned top-right (8f); tower+cash unchanged; includes unowned interval f18586-18593"
+EP0499,7,D,18613,18613,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f18613 tower+cash+contracts cut to large green zig-zag arrow rising bottom-left to top-centre on empty canvas
+EP0500,7,D,18629,18629,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f18629 small BIG BUSINESS tower pops in at far right of arrow
+EP0501,7,D,18651,18651,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f18651 speech bubble with money bag pops in left of tower
+EP0502,7,D,18684,18684,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f18684 arrow/bubble/tower cut to teacher with pointer beside board 'Credit is important!'
+EP0503,7,D,18720,18720,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f18720 pointer removed and arm re-posed to extended; board text unchanged
+EP0504,7,D,18775,18775,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f18775 teacher scene cut to extreme close-up of green USA-map character (eyes half-lidded, two $ money bags) filling frame"
+EP0505,7,D,18810,18810,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f18810 close-up map character cut to large red zig-zag up-arrow on blank canvas
+EP0506,7,D,18839,18839,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f18839 red up-arrow cut to centred smiling stick figure hands on hips
+EP0507,8,D,18873,18901,CONFIRMED,DRAW_ON_OR_REVEAL,YES,CUT_PLUS_DRAW_ON,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f18873-18901 (29f) cut to grey-pink figure (hand to chin, brown tie) at left; large red zig-zag DOWN arrow draws on top-left to bottom-right in steps (f18882, f18891 partial); text 'I'd rather not risk it...' small by f18901 (grows/pops in, entry frame not isolated)"
+EP0508,8,D,18924,18981,CONFIRMED,FULL_REPLACE,YES,CUT_PLUS_SCALE_ANIMATION,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f18924-18981 (58f): cut from figure+red arrow to tiny BIG BUSINESS tower at f18924 that scales up (f18943 mid-size), three dollar bills pop in at right (f18962), ending on smiling hands-on-hips figure by f18981 (cut frame within window not isolated); multiple sub-shots"
+EP0509,8,D,19006,19006,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f19006 right forearm re-posed (down to raised-bent); face unchanged
+EP0510,8,D,19036,19036,RECLASSIFIED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f19036 smiling stick figure cut to large handwritten text 'For 30 years!' on blank canvas
+EP0511,8,D,19074,19074,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f19074 text cut to extreme close-up of green USA-map character eyes (dots) filling frame
+EP0512,8,D,19120,19234,RECLASSIFIED,FULL_REPLACE,YES,CUT_PLUS_OBJECT_MOTION_THEN_CUT,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f19120 cut to whole USA map with many translucent dollar bills fluttering/drifting over it (frames f19120, f19158, f19196 show different bill positions; map character eyes glance/blink, eyes pale-yellow at f19196); ends with hard cut by f19234 to green Japan character (cut frame f19234 per first pass, not re-measured); 115f window"
+EP0513,8,D,19287,19287,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f19287 Japan character cut to smiling closed-eye stick figure at left plus third-party photo of seated suited older man on dark background
+EP0514,8,D,19325,19325,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f19325 figure+photo cut to single green 'Government of Japan' document at top-left
+EP0515,8,D,19331,19331,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f19331 grey-green 'United States Treasury' document pops in overlapping lower-right of Japan document
+EP0516,8,D,19351,19351,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f19351 globe with dollar money bag on top pops in at right of two documents
+EP0517,8,D,19395,19395,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f19395 documents+globe cut to single large % coin at left
+EP0518,8,D,19446,19446,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f19446 brown briefcase pops in right of coin
+EP0519,8,D,19451,19451,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f19451 two gold bars pop in lower-right
+EP0520,8,D,19456,19456,RECLASSIFIED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f19456 teddy bear with blue bow tie pops in lower-centre
+EP0521,8,D,19506,19506,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f19506 coin/briefcase/gold/teddy cut to teacher with pointer beside blank green chalkboard
+EP0522,8,D,19594,19594,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_ADD_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f19594 board text 'BIG things!' appears; pointer removed, arm extended"
+EP0523,8,D,19668,19668,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f19668 teacher+board cut to grey-bob-haired smiling stick figure with purple scarf/tie, hands clasped"
+EP0524,8,D,19698,19698,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f19698 speech bubble 'Changes? What changes?' pops in right of bob-haired figure
+EP0525,8,D,19767,19767,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f19767 bob-haired figure+bubble cut to frowning spiky-hair stick figure
+EP0526,8,D,19812,19812,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE_ELEMENT,YES,AGREE,ACCEPT_FIRST,MEDIUM,f19812 frowning figure cut to dark smartphone with blue bird (Twitter-style) logo on screen and thick black arm curve at lower-left; first pass called this additive-partial; whole scene changes
+EP0527,8,D,19828,19828,CONFIRMED,HIGHLIGHT_ADD,NO,HIGHLIGHT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f19828 red X scribble crosses the bird logo in one frame
+EP0528,8,D,19842,19842,CONFIRMED,TEXT_CHANGE,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f19842 handwritten 'I mean this thing' appears lower-left of logo
+EP0529,8,D,19848,19848,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f19848 black stylised 'X' logo drawn/appears lower-right of text, tilted"
+EP0530,8,D,19863,19863,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f19863 phone scene cut to teacher with pointer beside blank green board
+EP0531,8,D,19894,19894,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_FACE_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f19894 board text 'Non-clickbaity topic' appears; teacher smile to flat mouth; pointer raised to board
+EP0532,8,D,19964,19964,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f19964 pointer lowered across body; arm re-posed
+EP0533,8,D,20060,20060,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f20060 teacher+board cut to flat-mouth stick figure hands on hips centred
+EP0534,8,D,20117,20117,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f20117 both arms swap from hands-on-hips to folded/crossed across body; face unchanged
+EP0535,8,D,20149,20149,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f20149 neutral figure cut to close-up tan-spiky-haired character looking down at dark phone, pale blue light cone behind"
+EP0536,8,D,20181,20181,CONFIRMED,TEXT_CHANGE,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f20181 handwritten '*scroll*' appears left of phone
+EP0537,8,D,20198,20198,CONFIRMED,ELEMENT_EXIT,NO,TEXT_REMOVE_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,MEDIUM,f20198 '*scroll*' removed; hand/arm re-posed (finger position) on phone
+EP0538,8,D,20232,20399,CONFIRMED,FULL_REPLACE,YES,CUT_SEQUENCE_ICON_POPINS_THEN_CUT,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f20232 cut to 'BREAKING NEWS!!!' newspaper alone (SD277 viewed); stacked dollar bills + line chart pop in together in ONE frame at f20272 (SD278 viewed: absent f20270, present f20272); small grey robot present by f20343 (entry frame not isolated); hard cut f20399 (MEASURED) to red-haired figure reading paper with bubble 'THIS EXPLAINS WHY THE ECONOMY IS LIKE THIS!'; 168f window"
+EP0539,8,D,20459,20459,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f20459 red-haired figure+bubble cut to tan-hair phone figure with bubble 'WHY INFLATION IS THE REASON (100% REAL NO CLICKBAIT)'
+EP0540,8,D,20525,20525,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f20525 phone figure+bubble cut to flat-mouth centred stick figure hands on hips
+EP0541,8,D,20640,20640,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f20640 stick figure cut to FEDERAL RESERVE building, title 'Federal Funds Rate', knife and % coin"
+EP0542,8,D,20654,20654,CONFIRMED,ELEMENT_SWAP,NO,ELEMENT_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f20654 whole % coin replaced by two cut halves and knife re-posed flat; building/title unchanged (same pattern as EP0478)
+EP0543,8,D,20682,20682,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f20682 Fed scene cut to two figures: orange-haired figure with wallet (left), black-haired figure holding dollar note (right)"
+EP0544,8,D,20701,20701,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f20701 thought bubble with stack of dollar notes pops in between figures
+EP0545,8,D,20734,20734,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f20734 two figures+bubble cut to frowning stick figure, arm out"
+EP0546,8,D,20760,20760,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f20760 right arm raised-bent to lowered; face unchanged
+EP0547,8,D,20783,20783,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f20783 frowning figure cut to extreme close-up of smirking figure with green tie, bald head, white collar"
+EP0548,8,D,20837,20837,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f20837 close-up cut to FEDERAL RESERVE building alone at left
+EP0549,8,D,20847,20847,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f20847 speech bubble 'Trust me, bro' pops in right of building"
+EP0550,8,D,20897,20897,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f20897 Fed building+bubble cut to single dollar note lower-centre
+EP0551,8,D,20902,20908,CONFIRMED,DRAW_ON_OR_REVEAL,NO,ELEMENT_SCALE_AND_ADDITIVE_SEQUENCE,NO,CORRECTED,USE_SECOND,MEDIUM,"f20902-20908: PRE (f20901) shows ONE large bill centre-left; by f20902 it is TWO smaller bills side by side (scaled down and duplicated), f20906 a third overlaps, f20908 a fourth, pile ends compact; first pass said single bill replaced by pair that scale UP - the tiles show the pair is SMALLER than the original single bill at f20902 and the pile then grows slightly (scale direction partly INFERRED)"
+EP0552,8,D,20912,20912,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f20912 fifth bill pops in on top of stack
+EP0553,8,D,20945,20945,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f20945 bill pile cut to full-width green USA-map character (eyes looking left) with stacks of 'United States Treasury' papers at lower-left and lower-right
+EP0554,8,D,20972,20972,CONFIRMED,TEXT_CHANGE,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f20972 'anyone want this?' appears upper-left on map
+EP0555,8,D,21023,21023,CONFIRMED,TEXT_CHANGE,NO,TEXT_CHANGE,NO,AGREE,ACCEPT_FIRST,HIGH,f21023 'anyone want this?' replaced by 'pretty please?' in one frame
+EP0556,8,D,21055,21055,CONFIRMED,ZOOM_OR_SCALE,YES,SCALE_JUMP_PLUS_REMOVAL,YES,AGREE,ACCEPT_FIRST,HIGH,"f21055 map+papers jump to small centred map in one frame (no tween), caption removed; blank surround"
+EP0557,8,D,21066,21066,CONFIRMED,TEXT_CHANGE,NO,TEXT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,f21066 'hello???' appears upper-right of small map
+EP0558,8,D,21091,21091,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f21091 small map cut to large green Japan-map character (half-lidded eye) filling frame
+EP0559,8,D,21169,21169,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f21169 'I'm out!' text appears upper-left; character's right arm raised with extended finger
+EP0560,8,D,21196,21208,CONFIRMED,WIPE_OR_FADE,YES,FADE_OUT,YES,AGREE,ACCEPT_FIRST,HIGH,"f21196-21208 (13f): Japan character with 'I'm out!' fades to blank white (f21200 ~mid opacity grey-green, f21204 faint, f21208 empty); opacity fade, not a cut; linear easing claim unverified from 3 samples; ends on blank canvas"
+EP0561,8,D,21223,21223,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f21223 blank canvas (end of fade) cut/appear to Earth globe ringed by eight green dollar notes
+EP0562,8,D,21265,21265,CONFIRMED,ELEMENT_EXIT,NO,ELEMENT_EXIT,NO,AGREE,ACCEPT_FIRST,HIGH,f21265 four of the eight notes vanish in one frame; globe and remaining four unchanged
+EP0563,8,D,21291,21291,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f21291 globe+notes cut to single green money bag centred
+EP0564,8,D,21315,21315,RECLASSIFIED,OBJECT_MOTION,NO,ELEMENT_MOVE,NO,AGREE,ACCEPT_FIRST,MEDIUM,"f21315 money bag jumps from right-centre to left-centre in one frame (PRE bag at x~.60, STABLE x~.20)"
+EP0565,8,D,21320,21320,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f21320 thick black '=' sign pops in right of money bag
+EP0566,8,D,21328,21328,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f21328 yellow periodic-table-style tile appears: '8', 'O', 'Oxygen', '15.999'"
+EP0567,8,D,21358,21358,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f21358 bag = Oxygen tile cut to black-haired worried figure holding a dollar note
+EP0568,8,D,21405,21405,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f21405 figure cut to single tall green outlined dollar sign
+EP0569,8,D,21430,21466,CONFIRMED,FULL_REPLACE,YES,HOLD_THEN_FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,MEDIUM,f21430-21466: dollar sign visible at f21430/21442/21454 (small positional drift between samples not quantified); hard cut by f21466 to flat-mouth stick figure hands on hips; cut frame not isolated
+EP0570,8,D,21494,21494,CONFIRMED,EXPRESSION_CHANGE,NO,FACE_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,"f21494 flat mouth to open pink mouth, hands up to chin; body unchanged"
+EP0571,8,D,21526,21526,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f21526 shocked figure cut to third-party 'stonks' meme (suited man, rising orange arrow, blue ticker) left of centre"
+EP0572,8,D,21545,21545,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f21545 third-party 'not stonks' meme (red board, falling arrow) pops in right of 'stonks'"
+EP0573,8,D,21570,21570,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f21570 both memes cut to house+tower+% coin on blank canvas
+EP0574,8,D,21596,21596,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f21596 house/tower/coin cut to BIG BUSINESS tower + two money bags (first pass: partial/additive; whole scene changes)
+EP0575,8,D,21628,21628,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f21628 tower+bags cut to large close-up smiling open-mouth stick figure at left
+EP0576,8,D,21655,21655,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY_THIRD_PARTY,NO,AGREE,ACCEPT_FIRST,HIGH,"f21655 third-party-style channel page screenshot pops in top-right: banner 'Subscribe', name 'Casual Finance', '@CasuallyFinance', '64.7k subscribers - 21 videos', buttons 'Subscribe' 'Community'; figure unchanged"
+EP0577,8,D,21683,21683,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f21683 figure+channel screenshot cut to smaller figure holding black flashlight, dollar note, yen note, green Japan map, paper stack, 'BREAKING NEWS!!!' newspaper"
+EP0578,8,D,21713,21713,CONFIRMED,HIGHLIGHT_ADD,NO,HIGHLIGHT_ADD,NO,AGREE,ACCEPT_FIRST,HIGH,"f21713 yellow flashlight beam cone appears toward yen note and southern Japan, tinting them (single frame)"
+EP0579,8,D,21771,21771,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f21771 flashlight scene cut to extreme close-up of bald figure behind open newspaper marked 'NEWS', fills frame"
+EP0580,8,D,21862,21895,CONFIRMED,FULL_REPLACE,YES,CUT_PLUS_ELEMENT_ANIMATION,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f21862-21895 (34f): newspaper-reader close-up cut to two framed panels: left 'Here's why we are in debt' (smiling figure + dollar note), right 'THIS KID GOT RICH IN 2 SECONDS WITH CRYPTO!!!' (curly-haired figure with phone and note, warning triangle, cursor); a white mouse-cursor arrow moves across the lower area: f21862 lower-left, f21873 right of 'debt', f21884 at 'debt', f21895 over right panel; cut frame not isolated"
+EP0581,8,D,21911,21911,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f21911 two panels cut to centred smiling stick figure hands on hips
+EP0582,8,D,21962,21962,CONFIRMED,POSE_SWAP,NO,POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f21962 right forearm re-posed; smile unchanged
+EP0583,8,D,22022,22022,CONFIRMED,EXPRESSION_CHANGE,NO,EXPRESSION_AND_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f22022 face to closed-eye smile ('^ ^' eyes); right arm lowered to hip
+EP0584,8,D,22035,22035,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,"f22035 large black 'SUBSCRIBE!' text pops in across lower frame, crossing the figure's legs (text drawn over figure)"
+EP0585,8,D,22052,22077,CONFIRMED,ADDITIVE_ENTRY,NO,ELEMENT_ADD_PLUS_CURSOR_ANIMATION,NO,AGREE,ACCEPT_FIRST,MEDIUM,f22052-22077 (26f): bell icon (outline) appears upper-right by f22052; eyes change closed-arc to open dots and forearm re-posed; a white mouse-cursor arrow moves from lower-right (f22060) to the bell (f22068) and away/off (f22077 not visible); text 'SUBSCRIBE!' unchanged
+EP0586,8,D,22092,22092,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f22092 SUBSCRIBE!+figure+bell cut to teacher with pointer beside blank green board
+EP0587,8,D,22135,22135,CONFIRMED,ADDITIVE_ENTRY,NO,TEXT_FACE_POSE_SWAP,NO,AGREE,ACCEPT_FIRST,HIGH,f22135 board text 'Here's what they don't tell you!' appears; closed-eye smile; pointer raised to board
+EP0588,8,D,22193,22273,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE_THEN_HOLD,YES,AGREE,ACCEPT_FIRST,MEDIUM,"f22193 teacher+board cut to small silhouette character in black fedora with angry white eyes, black body (standing); window f22193-22273 (81f): figure appears to scale up gradually (small at f22193, larger at f22273, head crop in STABLE panel larger than at f22193) = slow zoom-in/scale-up INFERRED from 4 samples; first pass called this local animation"
+EP0589,8,D,22283,22283,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f22283 fedora silhouette cut to extreme close-up of angry frowning spiky-hair stick figure, hand raised near chin"
+EP0590,8,D,22326,22326,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,f22326 close-up angry face cut to bald figure behind open newspaper marked 'NEWS' at left
+EP0591,8,D,22360,22360,CONFIRMED,ADDITIVE_ENTRY,NO,ADDITIVE_ENTRY,NO,AGREE,ACCEPT_FIRST,HIGH,f22360 green USA-map character with half-lidded eyes also reading a 'NEWS' newspaper pops in at right
+EP0592,8,D,22405,22405,CONFIRMED,FULL_REPLACE,YES,FULL_REPLACE,YES,AGREE,ACCEPT_FIRST,HIGH,"f22405 two newspaper readers cut to end card: handwritten 'Subscribe for more Casual Finance', small 'only on' with arrow to YouTube logo, Facebook/Instagram/Twitter-style icons struck through in red; static end card f22405-22582 per handoff (not re-checked beyond this frame)"

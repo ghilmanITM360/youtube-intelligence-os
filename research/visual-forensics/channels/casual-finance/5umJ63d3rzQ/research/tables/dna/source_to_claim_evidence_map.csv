@@ -1,0 +1,9 @@
+claim,label,source_video,frames_or_time,evidence_file,reviewer_confidence,note
+Video is 30 fps CFR 22583 frames 752.847 s 1280x720,MEASURED,5umJ63d3rzQ,all,../../CONTINUATION_HANDOFF.md;FULL_FRAME_MEASUREMENTS.csv,n/a,SHA-256 b07b2a4b55e2b83d717b8cb6e4ac7dcbb44726bf595356d0288617183cfa5bc5 rechecked 2026-10-31
+21 state starts have a single-frame hard-cut spike,MEASURED,5umJ63d3rzQ,see integration_summary.json,tables/integrated/integration_summary.json;FULL_FRAME_MEASUREMENTS.csv,n/a,S0260 f14312 and S0263 f14365 also viewed
+S0037 f1700 is a bubble pop not a cut,OBSERVED,5umJ63d3rzQ,f1697-f1702,tables/dna/recheck_frames/montage_S0037.jpg,viewed by analyst,single viewer
+Median composition group 2.15 s; about 20 groups per minute,MEASURED,5umJ63d3rzQ,all groups,tables/dna/dna_stats.json;tables/integrated/composition_groups.csv,n/a,depends on reviewer merge_with_prev decisions
+Dominant motion is instant additive pop-in and hard replace,OBSERVED (reviewer),5umJ63d3rzQ,695 candidates,tables/integrated/candidates_final.csv;tables/dna/motion_ledger.csv,AGREE 652 / CORRECTED 43,7-row visual spot-check consistent (ledger_spotcheck.csv); not a full re-audit
+Embedded third-party clips are playback not authored,OBSERVED (reviewer),5umJ63d3rzQ,e.g. f10174,tables/dna/motion_ledger.csv;tables/dna/recheck_frames/ledger_spotcheck.jpg,HIGH,
+About half of group starts fall inside narration silences,MEASURED,5umJ63d3rzQ,all groups,tables/dna/audio_cut_alignment.csv;tables/dna/audio_silencedetect.txt,n/a,49.8% inside silence vs 8.6% random baseline; silence may also be non-narration gaps; correlation not causation; no human listening
+Narration content and sound cues,UNAVAILABLE,5umJ63d3rzQ,n/a,n/a,n/a,AUDIO_NOT_VERIFIED
