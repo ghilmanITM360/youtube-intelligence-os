@@ -1,0 +1,55 @@
+{
+ "status": "PASS",
+ "video_id": "dlnPr167zII",
+ "nick": "NICK_221",
+ "claims": 15,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 17767,
+ "parent_commit": "aad1139676b29713b9c51ecdc238330545de8ec4",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_221",
+  "NICK_222",
+  "NICK_223"
+ ],
+ "changed_ledger_ids": [
+  "dlnPr167zII"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 496,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 1.02296 TYPICAL (5-peer 0.83163 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 499,
+  "remaining": 1113,
+  "original_pending": 467,
+  "expansion_pending": 646,
+  "changed_cells": "91 cells: dashboard 7 + target rows 492-494 in two sheets",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "067fd8c973a8d0210e76f4edd258018c9cb1ee0d1128b53f6d20185c0cdc4c48"
+ },
+ "semantic_acceptance": "All 17767 stored characters and six dimensions reviewed; 15 located claim groups; sources ACASUB, SEPP. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "ea396d77c42a3a2c32c9c770b74f6153ddb1e0a745943edc989a718faa5bbce8",
+  "NICK_221.json": "01b173ba7a54230c874eca9d9dcffbf5789ae1e459f5936331e198fe8796356f",
+  "NICK_221_READ_RECEIPTS.json": "0807c91d727c3dc9527fd405b811331b7771657c9c93321d4cf51e15b422cabf",
+  "thumbnail": "64098ac1901927e220484936bf3f0e25232d44a882131c912afe77d9489b17f1"
+ }
+}
