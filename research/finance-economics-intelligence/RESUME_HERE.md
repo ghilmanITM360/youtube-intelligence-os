@@ -1,3 +1,26 @@
+# Machine A owner-directed checkpoint — NICK_187–188 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `14962d3b` (NICK_186). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
+
+**NICK_187 `XP-VPkD3N64` — 19 Rules for Financial Freedom.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 23,529 characters read in full; the stored ending is clipped. 14 claim groups.
+- Sources: FEDG19 card rate about 21–22%; IRS Topic 451 (traditional IRA deductible, Roth not).
+- Overstated: the card-debt totals depend on an unstated minimum-payment rule, and the $22K "real cost" double-counts. The car example needs about 13.8% returns. A 20% savings rate means about 37 years to independence, not retirement in your 40s.
+- Performance: 0.62665× TYPICAL.
+
+**NICK_188 `XkhWSzOB7fI` — Why $25K Is Closer to $100K Than You Think.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,887 characters read in full; the stored ending is clipped. 12 claim groups.
+- The "mathematically halfway" claim is unsupported: even the video's own timeline puts $25K at about 33% of the time.
+- Reproduced at 8%: 44/33/28/23 months, and contributions of $64K (not $56K) at $100K.
+- Coffee $4→$40 implies 25.9% a year. The $110 "tax" is 22% of a contribution. The employer-match arithmetic reproduces.
+- Performance: 1.20089× TYPICAL.
+
+**464/1,612 complete; 1,148 remaining = 502 original + 646 expansion.** Both validators, 38 Finance tests and 2 formatting tests pass. Workbook: 63 cells changed (dashboard plus 2 target rows), 0 styles changed.
+
+**Next untouched: NICK_189 `Xtri19wLdJw` — Pawn Shops are Seeing Something the Stock Market Isn't.**
+
+---
+
 # Machine A owner-directed checkpoint — NICK_186 (2026-10-31)
 
 **Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Baseline: canonical `research/finance-economics-intelligence` = PR #36 head `223f44981ee174988574e86d5e23ae83ee60ee5d`. No Machine B release exists; Machine B's unpublished state is unknown. PR #36 is not updated by this branch.

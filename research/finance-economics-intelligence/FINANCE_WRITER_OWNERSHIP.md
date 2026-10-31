@@ -122,3 +122,5 @@ State: `MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED` (owner instructio
 - Reconciliation: before integrating, compare canonical HEAD against this branch by exact Video_ID and packet receipts; never double-count or silently replace an accepted audit.
 
 NICK_186 accepted on Machine A branch, parent `223f4498`: 462 complete / 1,150 remaining.
+
+NICK_187–188 accepted on Machine A branch, parent `14962d3b`: 464 complete / 1,148 remaining.

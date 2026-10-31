@@ -1,0 +1,53 @@
+{
+ "status": "PASS",
+ "video_id": "XP-VPkD3N64",
+ "nick": "NICK_187",
+ "claims": 14,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 23529,
+ "parent_commit": "14962d3b0ce92aca467a5e1a6955fbd67cbea6b8",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_187",
+  "NICK_188"
+ ],
+ "changed_ledger_ids": [
+  "XP-VPkD3N64"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 462,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.62665 TYPICAL (5-peer 0.55278 TYPICAL); K02 analyst arithmetic",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 464,
+  "remaining": 1148,
+  "original_pending": 502,
+  "expansion_pending": 646,
+  "changed_cells": "63: Combined Dashboard C13,D13,G15,C17,D17,B25,B26; 2 target row(s) in All Finance Videos (9 cells each) and Detailed Research (19 cells each)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "82f42f78d0d9222ac0c9dabe5d4c5ffbc4d79671cf929a5276986a7bf0e4813c"
+ },
+ "semantic_acceptance": "All 23529 stored characters and six dimensions reviewed; 14 located claim groups; primary sources FEDG19, IRSTC451. Commercial survey statistics unverified. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "7be177d7763943a05687d0a040a18e1920f59d4538428797098b091391c74562",
+  "NICK_187.json": "90febfc1a77ed5f0ea8545e992c413ccd4e82259d4f693e30e395aeaf8ff889a",
+  "NICK_187_READ_RECEIPTS.json": "292e8b54d2c7ed12fd021d0a8bc75dc9f6cd205afeb7f916d254f700e2651e2a",
+  "thumbnail": "4bab5a417385801ab691d0b5390c0ee8b9b284c7d881c1028bbc85b08c51f2df"
+ }
+}
