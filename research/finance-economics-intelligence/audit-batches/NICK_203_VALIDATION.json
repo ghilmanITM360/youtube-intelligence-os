@@ -1,0 +1,55 @@
+{
+ "status": "PASS",
+ "video_id": "_6Zvfj0ThsQ",
+ "nick": "NICK_203",
+ "claims": 23,
+ "sources": 3,
+ "calculations": 2,
+ "transcript_chars": 20261,
+ "parent_commit": "707dc68756fb7de71e70db3678ca3e0ae62f1681",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_203",
+  "NICK_204",
+  "NICK_205"
+ ],
+ "changed_ledger_ids": [
+  "_6Zvfj0ThsQ"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 478,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 1.01740 TYPICAL (5-peer 1.37953 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 481,
+  "remaining": 1131,
+  "original_pending": 485,
+  "expansion_pending": 646,
+  "changed_cells": "91 cells (dashboard 7 + rows 472-474); styles 0; formulas 0",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "cc1db6a4d58b07bc59b33328050902b3da2cf1d13746e3562d464d114266d6cc"
+ },
+ "semantic_acceptance": "All 20261 stored characters and six dimensions reviewed; 23 located claim groups; sources BLSTEN, METADIV, KFF2025. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "54041ce333874f5c7508274460a0647a790ec946d063d957288bf633d291d4e4",
+  "NICK_203.json": "fa9c6c38ea3118224a4e3f176b40a12f2cb57cd1810e1ab527917c2e915f16b9",
+  "NICK_203_READ_RECEIPTS.json": "3872dfaac54484e15ab9a4238c28b1f110ceb41d72199d69a5e14deebc40f597",
+  "thumbnail": "ffe21a39a883e7f797c99ee50dbc42a2b9dfdef4dc7fbb1df4c77cd05a4cc038"
+ }
+}
