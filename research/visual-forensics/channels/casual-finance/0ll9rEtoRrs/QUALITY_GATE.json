@@ -1,6 +1,6 @@
 {
  "video_id": "0ll9rEtoRrs",
- "checkpoint": "N",
+ "checkpoint": "O",
  "date": "2026-11-01",
  "classification": [
   "VISUAL_STRUCTURE_RECONCILED_PARTIAL",
@@ -34,7 +34,8 @@
   "identity not re-checked against live YouTube",
   "shot count not verified here (historical 283 unverified)",
   "gap boundaries moved by a measured one-frame heuristic; +/-1 frame caveat remains",
-  "807 candidates second-passed by one reviewer at reduced resolution; only 58 flagged rows native-pixel checked (~750 not)"
+  "807 candidates second-passed by one reviewer at reduced resolution; only 58 flagged rows native-pixel checked (~750 not)",
+  "gap absorption is a measured heuristic (not new visual review); 7 gaps unresolved, 7 standalone; 4 splits conflict with second-pass PREV label"
  ],
  "publication": "partial research package; not CT-certified",
  "candidate_second_pass": {
@@ -73,5 +74,20 @@
   "no_real_change": 2,
   "types_updated": 11,
   "note": "native-pixel crops; only these 58 rows"
+ },
+ "gap_absorption": {
+  "absorbed_frames": 2609,
+  "standalone_frames": 276,
+  "unresolved_frames": 112,
+  "gaps": {
+   "absorb_whole": 59,
+   "absorb_prev": 46,
+   "absorb_next": 14,
+   "split_at_cut": 10,
+   "keep_standalone": 7,
+   "unresolved": 7
+  },
+  "method": "measured per-frame diffs + second-pass relation; states unchanged",
+  "negative_tests": "5 DETECTED"
  }
 }

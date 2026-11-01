@@ -1,7 +1,7 @@
-# Video 004 — Production DNA and Original Reconstruction Blueprint (v3 text, checkpoint N, PARTIAL; numbers from integrated_v4)
+# Video 004 — Production DNA and Original Reconstruction Blueprint (v3 text, checkpoint O, PARTIAL; numbers from integrated_v5)
 
 Video `0ll9rEtoRrs` "The World's Safest Market Is Breaking", 1280×720, 24 fps, 24,298 frames (16.87 min). Source SHA-256 `8fd0c2bfd7b89d46e49280b7329626b7656dca7f5f2fd98c8046998af0c95b73`.
-Built from `integrated_v4/` (v3 plus the boundary rule below; see also `PER_STATE` v4 files `per_state_specs_v4.csv`, `dna_statistics_v4.json`, `composition_family_specs_v4.csv`, which supersede the v3 files) (supersedes the v2-based `PRODUCTION_DNA_AND_BLUEPRINT.md`, which is kept as history). Status: `PARTIAL_STRUCTURE_RECONCILED`, NOT `CT_SCAN_COMPLETE`, audio `AUDIO_NOT_VERIFIED`.
+Built from `integrated_v5/` (v4 plus the gap-absorption ownership layer; v5 files `per_state_specs_v5.csv`, `dna_statistics_v5.json`, `composition_family_specs_v5.csv` supersede v4 ones) Lineage: v3 → v4 (boundary rule, final merges, native checks) → v5 (gap absorption); older v3/v4 files are kept as history.
 Labels: MEASURED (computed from ledgers/frames), OBSERVED (seen in frames), INFERRED, UNKNOWN, CREATIVE_INSTRUCTION (guidance for new original work).
 
 ## 0. What changed vs v2 (evidence-backed only)
@@ -14,11 +14,14 @@ Labels: MEASURED (computed from ledgers/frames), OBSERVED (seen in frames), INFE
 ## 0b. Boundary rule (checkpoint L)
 Rule: if the last frame of an unowned gap is an isolated one-frame jump (≥10% of pixels changed vs the previous frame and ≥3× the largest change in the 4 frames before), that frame is the first frame of the next composition and is reassigned to the next state (same convention as the 225 states that already start on a visible cut). Applied to 15 gaps (U010 U024 U031 U035 U044 U045 U074 U077 U088 U096 U099 U120 U123 U131 U141): each next state starts 1 frame earlier, each gap loses 1 frame. NOT applied to U059, U069, U073, U083 (steady converging motion, not a cut). Result: states 21,301 frames, unowned 2,997 frames (12.3%), tiling still 24,298. Rule is a measured heuristic; 1-frame boundary ±1 caveat stays. Gaps are still not absorbed into states.
 
+## 0c. Gap absorption (checkpoint O)
+States are unchanged (21,301 frames). The 143 unowned gaps are assigned to compositions by measured rules (`integrated_v5/gap_absorption_decisions_v5.csv`, `frame_ownership_v5.csv`): same composition on both sides → absorbed whole (59 gaps); otherwise a measured cut ≥50% at/inside the gap splits it (10 gaps; whole gap went to the next composition, 4 of them conflict with a second-pass PREV label, flagged); else the second-pass PREV/NEXT relation (46+14); UNCLEAR relations only if measurement is decisive. 7 gaps kept standalone (third-party playback / hard-cut-inside, SEPARATE) and 7 left UNRESOLVED (UNCLEAR, no decisive measurement). Frames by owner: state 21,301; absorbed 2,609 (10.7%); standalone 276; unresolved 112. Composition span now includes absorbed motion frames. Tiling still 24,298; 5 negative tests DETECTED. The absorption is a measured heuristic, not new visual review.
+
 ## 1. Editing DNA (MEASURED)
 | Metric | Value |
 |---|---|
 | States | 530 (31.4/min); median 1.12 s, mean 1.67 s, p10 0.29 s, p90 3.79 s, max 13.12 s |
-| Compositions | 367 (21.75/min); span median 1.83 s, mean 2.50 s, p90 5.42 s |
+| Compositions | 367 (21.75/min); span incl. absorbed gap frames median 2.08 s, mean 2.71 s, p90 5.62 s (state-only span median 1.83 s) |
 | Edit events (excl. not-a-change/codec) | 996 (59/min); 853 in states, 143 in unowned gaps |
 | Additive entry | 271 (27.2%) |
 | Full replace | 252 (25.3%) |
@@ -63,10 +66,10 @@ Limited to the ASR numeric-sentence index above. Factual claim checking of the v
 | Frame tiling (states + gaps = 24,298) | MEASURED, validator PASS |
 | Merge/composition grouping | 161/161 reviewed + S0080; 0 UNCERTAIN left |
 | Split children | frame-reviewed |
-| Unowned gaps | 143/143 re-reviewed (single reviewer, 29 limited by sampling); 15 boundaries moved by rule; not absorbed |
+| Unowned gaps | 143/143 re-reviewed; 15 boundaries moved by rule; 129 absorbed by measured rules, 7 standalone, 7 unresolved |
 | CONFIRMED candidates | 807/807 independently viewed (single reviewer); 58 flagged rows re-checked at native-pixel crops |
 | ASR alignment | time-overlap only; not listened |
 | Audio / AV | AUDIO_NOT_VERIFIED, AV_CERTIFICATION_BLOCKED |
 
 ## 8. Still not done
-Native check of the other ~750 rows (only the 58 flagged rows were native-checked); ruling on absorbing gaps; 29 sampling-limited gaps; 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.
+Native check of the other ~750 rows (only the 58 flagged rows were native-checked); 29 sampling-limited gaps; 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.
