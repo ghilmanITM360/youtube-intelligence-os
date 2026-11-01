@@ -1,7 +1,7 @@
-# Video 004 — Production DNA and Original Reconstruction Blueprint (v3, PARTIAL)
+# Video 004 — Production DNA and Original Reconstruction Blueprint (v3 text, checkpoint L, PARTIAL; numbers from integrated_v4)
 
 Video `0ll9rEtoRrs` "The World's Safest Market Is Breaking", 1280×720, 24 fps, 24,298 frames (16.87 min). Source SHA-256 `8fd0c2bfd7b89d46e49280b7329626b7656dca7f5f2fd98c8046998af0c95b73`.
-Built from `integrated_v3/` (supersedes the v2-based `PRODUCTION_DNA_AND_BLUEPRINT.md`, which is kept as history). Status: `PARTIAL_STRUCTURE_RECONCILED`, NOT `CT_SCAN_COMPLETE`, audio `AUDIO_NOT_VERIFIED`.
+Built from `integrated_v4/` (v3 plus the boundary rule below; see also `PER_STATE` v4 files `per_state_specs_v4.csv`, `dna_statistics_v4.json`, `composition_family_specs_v4.csv`, which supersede the v3 files) (supersedes the v2-based `PRODUCTION_DNA_AND_BLUEPRINT.md`, which is kept as history). Status: `PARTIAL_STRUCTURE_RECONCILED`, NOT `CT_SCAN_COMPLETE`, audio `AUDIO_NOT_VERIFIED`.
 Labels: MEASURED (computed from ledgers/frames), OBSERVED (seen in frames), INFERRED, UNKNOWN, CREATIVE_INSTRUCTION (guidance for new original work).
 
 ## 0. What changed vs v2 (evidence-backed only)
@@ -10,6 +10,9 @@ Labels: MEASURED (computed from ledgers/frames), OBSERVED (seen in frames), INFE
 - Split children (S0089.*, S0097.*, S0116.*, S0475.*, S0466P/S0466, S0033) re-described from their own frames (`integrated_v3/split_child_corrections_v3.csv`). S0466 hard replace at f21628 is observed in sequential decode, so the earlier "inferred 21628" caveat is closed. S0033 has no visible infographic cut-in through f1294.
 - All 143 unowned intervals (3,012 frames) re-reviewed with dense sheets (up to 12 frames each) plus per-frame diffs: 99 motion-in-composition, 13 continuous animation, 13 static/near-static, 6 hard-cut-ending, 6 third-party playback, 6 fade; 29 flagged limited by sampling; 13 end on a new composition in their last sampled frame (possible boundary corrections, NOT applied). Gaps are still not absorbed into states. For the first 48 priority gaps: Only 6 of the 35 earlier EMBEDDED_VIDEO intervals are third-party playback (221 frames); 24 are PDF/browser/screen scroll inside a composition. The 658-frame embedded-video figure in v2 was an over-label for those intervals.
 - All 807 first-pass CONFIRMED candidates are now independently viewed (before/after frames at 560×315, one reviewer per row): 749 type OK (92.8%), 33 wrong type (4.1%), 25 no visible change (3.1%; 15 LOW, 10 MEDIUM confidence, mostly tiny highlight extensions). 25 types corrected (HIGH/MEDIUM confidence only). This is single-reviewer second pass at reduced resolution, not native-resolution frame-by-frame.
+
+## 0b. Boundary rule (checkpoint L)
+Rule: if the last frame of an unowned gap is an isolated one-frame jump (≥10% of pixels changed vs the previous frame and ≥3× the largest change in the 4 frames before), that frame is the first frame of the next composition and is reassigned to the next state (same convention as the 225 states that already start on a visible cut). Applied to 15 gaps (U010 U024 U031 U035 U044 U045 U074 U077 U088 U096 U099 U120 U123 U131 U141): each next state starts 1 frame earlier, each gap loses 1 frame. NOT applied to U059, U069, U073, U083 (steady converging motion, not a cut). Result: states 21,301 frames, unowned 2,997 frames (12.3%), tiling still 24,298. Rule is a measured heuristic; 1-frame boundary ±1 caveat stays. Gaps are still not absorbed into states.
 
 ## 1. Editing DNA (MEASURED)
 | Metric | Value |
@@ -60,10 +63,10 @@ Limited to the ASR numeric-sentence index above. Factual claim checking of the v
 | Frame tiling (states + gaps = 24,298) | MEASURED, validator PASS |
 | Merge/composition grouping | 161/161 reviewed; 3 UNCERTAIN |
 | Split children | frame-reviewed |
-| Unowned gaps | 143/143 re-reviewed (single reviewer, 29 limited by sampling); not absorbed |
+| Unowned gaps | 143/143 re-reviewed (single reviewer, 29 limited by sampling); 15 boundaries moved by rule; not absorbed |
 | CONFIRMED candidates | 807/807 independently viewed (single reviewer, reduced resolution); 25 no-visible-change flags |
 | ASR alignment | time-overlap only; not listened |
 | Audio / AV | AUDIO_NOT_VERIFIED, AV_CERTIFICATION_BLOCKED |
 
 ## 8. Still not done
-Native-resolution check of the 25 no-visible-change and 33 corrected rows; ruling on absorbing gaps and 13 possible gap-end boundary corrections; 29 sampling-limited gaps; ruling on possible missed merges (S0080, S0212); 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.
+Native-resolution check of the 25 no-visible-change and 33 corrected rows; ruling on absorbing gaps; 29 sampling-limited gaps; ruling on possible missed merges (S0080, S0212); 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.

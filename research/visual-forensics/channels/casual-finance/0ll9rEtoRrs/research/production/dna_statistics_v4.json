@@ -1,0 +1,182 @@
+{
+ "fps": 24,
+ "total_frames": 24298,
+ "minutes": 16.87,
+ "states": 530,
+ "states_per_min": 31.41,
+ "state_dur_s": {
+  "median": 1.12,
+  "mean": 1.67,
+  "p10": 0.29,
+  "p90": 3.79,
+  "max": 13.12
+ },
+ "edit_events_total": 996,
+ "edit_events_per_min": 59.0,
+ "events_in_states": 853,
+ "events_in_unowned_gaps": 143,
+ "event_types": {
+  "ADDITIVE_ENTRY": 268,
+  "FULL_REPLACE": 252,
+  "HIGHLIGHT_ADD": 118,
+  "DRAW_ON_OR_REVEAL": 94,
+  "TEXT_CHANGE": 52,
+  "PAN_OR_SCROLL": 32,
+  "CHARACTER_ANIMATION": 25,
+  "ZOOM_OR_SCALE": 23,
+  "NUMBER_OR_LABEL_CHANGE": 23,
+  "OBJECT_MOTION": 21,
+  "POSE_SWAP": 17,
+  "EXPRESSION_CHANGE": 15,
+  "ELEMENT_SWAP": 15,
+  "PARTIAL_REPLACE": 12,
+  "ELEMENT_EXIT": 9,
+  "WIPE_OR_FADE": 6,
+  "OTHER": 6,
+  "MOTION_ANIMATION": 2,
+  "ZOOM_PAN": 2,
+  "SWAP": 2,
+  "TRANSITION": 1,
+  "EXIT": 1
+ },
+ "unowned_frames": 2997,
+ "unowned_share_pct": 12.3,
+ "unowned_class_frames": {
+  "MOTION_IN_COMPOSITION": 1666,
+  "CONTINUOUS_ANIMATION": 515,
+  "HARD_CUT_INSIDE": 268,
+  "STATIC_OR_NEAR_STATIC": 249,
+  "EMBEDDED_THIRD_PARTY_PLAYBACK": 218,
+  "FADE_OR_TRANSITION": 81
+ },
+ "families": {
+  "F1 character-only": {
+   "states": 67,
+   "share_of_state_frames_pct": 11.6,
+   "median_dur_s": 1.29,
+   "top_events": {
+    "FULL_REPLACE": 48,
+    "POSE_SWAP": 10,
+    "ADDITIVE_ENTRY": 4,
+    "EXPRESSION_CHANGE": 3
+   }
+  },
+  "F10 title/end card": {
+   "states": 2,
+   "share_of_state_frames_pct": 1.1,
+   "median_dur_s": 4.94,
+   "top_events": {
+    "FULL_REPLACE": 1
+   }
+  },
+  "F11 other composite": {
+   "states": 23,
+   "share_of_state_frames_pct": 5.4,
+   "median_dur_s": 0.96,
+   "top_events": {
+    "ADDITIVE_ENTRY": 23,
+    "TEXT_CHANGE": 19,
+    "NUMBER_OR_LABEL_CHANGE": 18,
+    "DRAW_ON_OR_REVEAL": 16
+   }
+  },
+  "F2 character+prop": {
+   "states": 103,
+   "share_of_state_frames_pct": 16.4,
+   "median_dur_s": 1.38,
+   "top_events": {
+    "ADDITIVE_ENTRY": 49,
+    "FULL_REPLACE": 35,
+    "TEXT_CHANGE": 10,
+    "EXPRESSION_CHANGE": 6
+   }
+  },
+  "F3 object/icon cluster": {
+   "states": 101,
+   "share_of_state_frames_pct": 12.7,
+   "median_dur_s": 0.83,
+   "top_events": {
+    "ADDITIVE_ENTRY": 76,
+    "FULL_REPLACE": 35,
+    "DRAW_ON_OR_REVEAL": 9,
+    "PARTIAL_REPLACE": 3
+   }
+  },
+  "F4 full-bleed screenshot/document": {
+   "states": 55,
+   "share_of_state_frames_pct": 14.9,
+   "median_dur_s": 1.17,
+   "top_events": {
+    "HIGHLIGHT_ADD": 56,
+    "FULL_REPLACE": 39,
+    "DRAW_ON_OR_REVEAL": 21,
+    "ADDITIVE_ENTRY": 11
+   }
+  },
+  "F5 screenshot+character": {
+   "states": 112,
+   "share_of_state_frames_pct": 27.2,
+   "median_dur_s": 1.42,
+   "top_events": {
+    "ADDITIVE_ENTRY": 62,
+    "HIGHLIGHT_ADD": 57,
+    "FULL_REPLACE": 22,
+    "CHARACTER_ANIMATION": 16
+   }
+  },
+  "F6 chart/graph": {
+   "states": 28,
+   "share_of_state_frames_pct": 7.0,
+   "median_dur_s": 1.5,
+   "top_events": {
+    "DRAW_ON_OR_REVEAL": 28,
+    "ADDITIVE_ENTRY": 17,
+    "FULL_REPLACE": 14,
+    "HIGHLIGHT_ADD": 4
+   }
+  },
+  "F7 text card": {
+   "states": 4,
+   "share_of_state_frames_pct": 0.3,
+   "median_dur_s": 0.58,
+   "top_events": {
+    "TEXT_CHANGE": 1,
+    "PARTIAL_REPLACE": 1
+   }
+  },
+  "F8 dark-UI capture": {
+   "states": 11,
+   "share_of_state_frames_pct": 0.6,
+   "median_dur_s": 0.29,
+   "top_events": {
+    "FULL_REPLACE": 2,
+    "OBJECT_MOTION": 2
+   }
+  },
+  "F9 full-bleed drawn scene": {
+   "states": 24,
+   "share_of_state_frames_pct": 2.8,
+   "median_dur_s": 0.94,
+   "top_events": {
+    "TEXT_CHANGE": 15,
+    "FULL_REPLACE": 10,
+    "ADDITIVE_ENTRY": 4,
+    "EXPRESSION_CHANGE": 2
+   }
+  }
+ },
+ "compositions": 370,
+ "composition_span_s": {
+  "median": 1.77,
+  "mean": 2.47,
+  "p90": 5.42
+ },
+ "compositions_per_min": 21.93,
+ "candidate_verification": {
+  "REVIEWED_CONFIRMED_TYPE_OK": 749,
+  "REVIEWED_CONFIRMED_TYPE_WRONG": 33,
+  "SECOND_PASSED": 225,
+  "REVIEWED_NO_VISIBLE_CHANGE": 25
+ },
+ "label": "MEASURED from v4 ledgers; all 807 first-pass CONFIRMED candidates now independently viewed; type corrections applied only with HIGH/MEDIUM reviewer confidence; boundary rule applied to 15 gaps; all 143 gaps re-reviewed, not absorbed"
+}

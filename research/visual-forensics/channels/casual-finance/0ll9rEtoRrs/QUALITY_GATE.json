@@ -1,6 +1,6 @@
 {
  "video_id": "0ll9rEtoRrs",
- "checkpoint": "K",
+ "checkpoint": "L",
  "date": "2026-11-01",
  "classification": [
   "VISUAL_STRUCTURE_RECONCILED_PARTIAL",
@@ -11,7 +11,7 @@
  "ct_scan_complete": false,
  "human_audio_listening": "NOT_PERFORMED",
  "identity": "HIGH_CONFIDENCE_NEEDS_REVIEW",
- "frames_covered": "24298/24298 (states 21286 + unowned 3012)",
+ "frames_covered": "24298/24298 (states 21301 + unowned 2997)",
  "states": 530,
  "compositions": 370,
  "candidates": 1032,
@@ -28,13 +28,12 @@
  "validators": "positive PASS; 16 negative tests DETECTED (integrate_v3.py, validate_v3.py)",
  "limits": [
   "3 UNCERTAIN merges; S0080/S0212 possible missed merges not applied",
-  "6 gap hard-cut frames sit at gap end; boundary ownership not corrected",
   "ASR is historical Whisper-base, never listened to; audio never heard",
   "colours/typeface/easing not sampled",
   "identity not re-checked against live YouTube",
   "shot count not verified here (historical 283 unverified)",
   "807 candidates second-passed by one reviewer at reduced resolution (4.1% wrong type, 3.1% no visible change); native-resolution check of 58 flagged rows not done",
-  "143 unowned gaps single-reviewer reviewed on dense sheets, not absorbed; 13 possible boundary corrections not applied"
+  "gap boundaries moved by a measured one-frame heuristic; +/-1 frame caveat remains"
  ],
  "publication": "partial research package; not CT-certified",
  "candidate_second_pass": {
@@ -54,5 +53,16 @@
   "limited_by_sampling": 29,
   "end_on_new_composition_not_applied": 13,
   "method": "single reviewer, <=12 frames per gap + measured per-frame diff"
+ },
+ "boundary_rule": {
+  "applied_gaps": 15,
+  "not_applied": [
+   "U059",
+   "U069",
+   "U073",
+   "U083"
+  ],
+  "rule": "isolated one-frame spike at gap end >=10% and >=3x prior 4-frame max: last gap frame reassigned to next state",
+  "negative_tests": "3 DETECTED"
  }
 }
