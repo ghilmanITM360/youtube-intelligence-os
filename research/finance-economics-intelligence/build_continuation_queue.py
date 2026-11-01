@@ -17,6 +17,9 @@ ROOT = Path(__file__).resolve().parent
 WT = ROOT.parents[1]
 UNIVERSE = ROOT / "reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv"
 DB = WT / "data/catalog/youtube_channel_registry.db"
+EXP_LEDGER = ROOT / "expansion-12-channel-2026-10-20/EXPANSION_AUDIT_LEDGER.jsonl"
+# Transcripts verified read-only but not yet registered; never eligible until the registry holds them.
+VERIFIED_CANDIDATES = ROOT / "EXPANSION_TRANSCRIPT_CANDIDATES_VERIFIED.json"
 DIMS = ("TOPIC", "TITLE", "THUMBNAIL", "SCRIPT", "PERFORMANCE", "VIRALITY")
 PRESERVED_PARTIAL = {"TFtBWn9CWOU"}
 # Established policy: finish the Nick Invests original queue first, then other original channels.
@@ -43,6 +46,11 @@ def packet_commits():
 
 def build():
     ledger = {r["Video_ID"]: r for r in map(json.loads, (ROOT / "VIDEO_AUDIT_966.jsonl").read_text().splitlines())}
+    exp = {r["video_id"]: r for r in map(json.loads, EXP_LEDGER.read_text().splitlines())}
+    if ledger.keys() & exp.keys():
+        raise SystemExit(f"video in both audit ledgers: {sorted(ledger.keys() & exp.keys())}")
+    ledger.update(exp)
+    verified = {v["video_id"] for v in json.loads(VERIFIED_CANDIDATES.read_text())["videos"]}
     master = {r["Video_ID"]: r for r in rows(ROOT / "VIDEO_MASTER.csv")}
     tcov = {r["Video_ID"]: r for r in rows(ROOT / "TRANSCRIPT_COVERAGE.csv")}
     con = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
@@ -61,7 +69,7 @@ def build():
         elif vid in PRESERVED_PARTIAL or "IN_PROGRESS" in st.values():
             elig = "DEFERRED_PRESERVED_PARTIAL"
         elif not has_text:
-            elig = "BLOCKED_MISSING_SOURCE_TRANSCRIPT"
+            elig = "DEFERRED_TRANSCRIPT_VERIFIED_NOT_REGISTERED" if vid in verified else "BLOCKED_MISSING_SOURCE_TRANSCRIPT"
         elif original and m.get("Performance_tier") == "INSUFFICIENT_DATA":
             elig = "DEFERRED_INSUFFICIENT_PEER_BASELINE"
         else:
@@ -97,6 +105,8 @@ def build():
                 r["next_atomic_operation"] = "AUDIT_SIX_DIMENSIONS_ASSIGN_CHANNEL_BATCH_ID_AT_START"
         elif r["eligibility"] == "BLOCKED_MISSING_SOURCE_TRANSCRIPT":
             r["next_atomic_operation"] = "ACQUIRE_AND_REGISTER_TRANSCRIPT_THEN_REQUEUE"
+        elif r["eligibility"] == "DEFERRED_TRANSCRIPT_VERIFIED_NOT_REGISTERED":
+            r["next_atomic_operation"] = "REGISTER_VERIFIED_TRANSCRIPT_THEN_REQUEUE"
         elif r["eligibility"].startswith("DEFERRED"):
             r["next_atomic_operation"] = "HOLD_UNDER_DEFERRAL_RULE"
     with (ROOT / "FINANCE_CONTINUATION_QUEUE.csv").open("w", newline="", encoding="utf-8") as h:
@@ -105,7 +115,7 @@ def build():
     c = Counter((r["population"], r["eligibility"]) for r in out)
     head = next((r for r in out if r["eligibility"] == "ELIGIBLE"), None)
     summary = {
-        "derived_from": ["VIDEO_AUDIT_966.jsonl", "VIDEO_MASTER.csv", "TRANSCRIPT_COVERAGE.csv", str(UNIVERSE.relative_to(ROOT)), "registry transcripts (read-only)", "git history of audit-batches/"],
+        "derived_from": ["VIDEO_AUDIT_966.jsonl", str(EXP_LEDGER.relative_to(ROOT)), VERIFIED_CANDIDATES.name, "VIDEO_MASTER.csv", "TRANSCRIPT_COVERAGE.csv", str(UNIVERSE.relative_to(ROOT)), "registry transcripts (read-only)", "git history of audit-batches/"],
         "counts": {f"{p}:{e}": n for (p, e), n in sorted(c.items())},
         "original_accepted": c["ORIGINAL", "ACCEPTED"], "original_remaining": 966 - c["ORIGINAL", "ACCEPTED"],
         "expansion_accepted": c["EXPANSION", "ACCEPTED"], "expansion_remaining": 646 - c["EXPANSION", "ACCEPTED"],

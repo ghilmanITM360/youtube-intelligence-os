@@ -52,3 +52,9 @@ Machine A never writes the registry. The other 616 expansion rows have no local 
 On 2026-11-01 the owner allowed branch-local registration; it was assessed and not performed because the 30 IDs have no registry
 `videos` rows (a new dataset registration is needed), the registry is a 141 MB LFS binary, and expansion acceptance and K01 baselines are not
 wired. See `registration_readiness` in the JSON.
+
+## Expansion queue and K01 (2026-11-01, Machine A)
+The queue reads the existing expansion ledger and marks the 30 verified candidates `DEFERRED_TRANSCRIPT_VERIFIED_NOT_REGISTERED`
+(never eligible until the registry holds their transcripts). `python3 machine_a_tools/expansion_k01.py` re-derives
+`EXPANSION_K01_CASUALLY_FINANCE.{json,csv}` from a committed snapshot with the unchanged K01 rule (22/30 tiered, 8 INSUFFICIENT_DATA).
+`test_expansion_queue.py` guards both (suite is now 47 tests). Registry/LFS writes remain out of scope here.
