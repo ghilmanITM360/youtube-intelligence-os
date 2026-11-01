@@ -1,0 +1,55 @@
+{
+ "status": "PASS",
+ "video_id": "n4wBnOox0y4",
+ "nick": "NICK_270",
+ "claims": 10,
+ "sources": 3,
+ "calculations": 2,
+ "transcript_chars": 19564,
+ "parent_commit": "701d236135010c1a2a648d9460adbca701983d19",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_268",
+  "NICK_269",
+  "NICK_270"
+ ],
+ "changed_ledger_ids": [
+  "n4wBnOox0y4"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 543,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "47_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.28845 WEAK (5-peer 0.64288 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 546,
+  "remaining": 1066,
+  "original_pending": 420,
+  "expansion_pending": 646,
+  "changed_cells": "91 (dashboard 7 + rows 539-541)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "375928c6bc5ca0672a8d511790d5f642e0cacf69cd06daad3e7210587156f78a"
+ },
+ "semantic_acceptance": "All 19564 stored characters and six dimensions reviewed; 10 located claim groups; sources FREDMSP, FREDINC, FREDCPI. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "fa397f1dd733dce1fef542be4889d10c3c182a685476e5afc774436739f53884",
+  "NICK_270.json": "b6f196527b9358b79d9a34b67c86705decc0bad7db94e8527f6e1212b8fc6076",
+  "NICK_270_READ_RECEIPTS.json": "dffcafca20deea6b06262c5ab52d425fe07b6761d7aeec192c9a3c2f837fc9d6",
+  "thumbnail": "03f31d899e9666a5f5b7b1384629a1fc64a4d7ea586d3498d48f84e0be3d6535"
+ }
+}
