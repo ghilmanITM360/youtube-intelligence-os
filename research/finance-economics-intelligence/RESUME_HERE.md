@@ -1,3 +1,10 @@
+# Machine A owner-directed checkpoint — NICK_275–276 (2026-11-02)
+
+**Parent `0c5eb6e0`.** PR #36 / canonical branch still `223f4498`, untouched. 552/1,612 complete; next `NICK_277 ozcH8vngH08`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 547–548), 0 styles/formulas, 16 hashtag text cells, zip OK. Usage UNKNOWN. NICK_271–274 thumbnails re-opened this session: recorded descriptions match the images.
+
+- **NICK_275 `ofJ8nZG87fA` — Stop Thinking Poor: The Mindset of the 1%.** 0.53622× TYPICAL (5-peer 0.570×, stable); 8 claims. FRED CPI directly inspected: ~3% inflation at upload (Aug 2025 +2.9%, Sep +3.0%). Wrong: "$200K at 40% keeps less than $150K at 20%" (both keep $120,000). FDIC 0.40% savings rate snippet-only; 10% market average recall (Damodaran unreachable, DNS); "80% behaviour" unsupported.
+- **NICK_276 `ohQxPH0-adw` — Path From $100K To $1 Million.** 0.74675× TYPICAL (5-peer 0.862×, stable); 10 claims. $500/mo at 8% recomputed: $100K at 10.6 y (not 12; split $84K/$16K wrong), $200K at 16.3 y ("20 years in" wrong; 20 y = $294,510), 35 y $1.147M from $210K verified, year 40 $1.75M (not "over $2M"; $140K/yr not $160K). 8% called both conservative and inflation-adjusted (real history ~7%). Food >$700/mo true (BLS 2023 $832). Car "over $800" vs Edmunds Q3 2025 ~$754 (snippet; edmunds.com 403).
+
 # Machine A owner-directed checkpoint — NICK_273–274 (2026-11-02)
 
 **Parent `ca099ca3`.** PR #36 / canonical branch still `223f4498`, untouched. 550/1,612 complete; next `NICK_275 ofJ8nZG87fA`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 545–546), 0 styles/formulas, 16 hashtag text cells, zip OK. Usage UNKNOWN. New: `HISTORICAL_QUALITY_UPGRADE_BACKLOG.md`.
