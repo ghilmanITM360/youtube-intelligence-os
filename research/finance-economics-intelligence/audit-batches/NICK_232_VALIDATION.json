@@ -1,0 +1,55 @@
+{
+ "status": "PASS",
+ "video_id": "epr30mUtEMw",
+ "nick": "NICK_232",
+ "claims": 14,
+ "sources": 1,
+ "calculations": 2,
+ "transcript_chars": 17825,
+ "parent_commit": "c4498939a2b36ce8e5d9f809e3ec98cadcf19727",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_230",
+  "NICK_231",
+  "NICK_232"
+ ],
+ "changed_ledger_ids": [
+  "epr30mUtEMw"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 505,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 1.08159 TYPICAL (5-peer 1.81968 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 508,
+  "remaining": 1104,
+  "original_pending": 458,
+  "expansion_pending": 646,
+  "changed_cells": "91 cells: dashboard 7 + target rows 501-503 in two sheets",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "ad70f953475e642752cbdb044296ee3f077169e507fd54711a8dc753395185a7"
+ },
+ "semantic_acceptance": "All 17825 stored characters and six dimensions reviewed; 14 located claim groups; sources SCF22. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "3f0431dee72f89d8b17f234e881818f577b1c2152e43e275578ba92cb0e65ca3",
+  "NICK_232.json": "a5375276c602256eecab8bcfa26d6b6419e7b23a277b5f7eff76ba1c072b66bd",
+  "NICK_232_READ_RECEIPTS.json": "912ae25f90fdc7999c4fd5e1081729529cedba88942cc819a0b97a69e17af0f2",
+  "thumbnail": "e6eab000e8dc8d33b18ddbe1b70a4c9538d6d7e9d58a481f1542f55146108c47"
+ }
+}

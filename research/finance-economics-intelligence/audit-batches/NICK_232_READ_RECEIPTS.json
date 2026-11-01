@@ -1,0 +1,215 @@
+{
+ "batch_id": "NICK_232_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "epr30mUtEMw",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "85e701cb3d80966594e5d02792ec835c0e45bffc4e90aa8ff24bd7626c3aa4fd",
+   "character_count": 17825,
+   "canonical_utf8_bytes": 17825,
+   "canonical_whitespace_word_count": 3074,
+   "coverage_token_count": 3140,
+   "read_character_ranges": [
+    [
+     0,
+     17825
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "You're sitting at the dinner table with your college friends, the ones you haven't seen in 2 years because everyone's busy now, and somehow the conversation drifts, the way it always does after the second bottle of wine, toward money. Not in a serious way, just someone casually mentioning they refinanced, someone else saying they maxed out their Roth this year, and then one guy, the one who became an engineer and married someone in pharma, says, almost as an aside, that they're pretty close to the number. And you smile and nod because you know exactly what the number means, and you are not pretty close to it.",
+   "last_text_witness": "written right now in the decision about this year's raise and whether you finally set up that Roth, in whether you run the real numbers instead of the comfortable ones. None of it feels important in the moment. All of it is. By watching this, you just did something most people never do. You looked the real numbers in the eye. Don't let that be the end of the story.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 17825,
+     "first80": "You're sitting at the dinner table with\nyour college friends, the ones you\nhaven",
+     "last80": " You looked the real numbers in the\neye. Don't let that be the end of the\nstory."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "168_epr30mUtEMw_2026_Average_Net_Worth_By_Age_Are_You_Behind.txt",
+   "archive_member_sha256": "3f69cae7710828797a2b66576203ec6f934bd78320fe939e854104d8cb012453",
+   "archive_member_bytes": 19369,
+   "archive_member_lines": 540,
+   "audio_verified": false,
+   "image_sha256": "e6eab000e8dc8d33b18ddbe1b70a4c9538d6d7e9d58a481f1542f55146108c47",
+   "image_bytes": 138862,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/epr30mUtEMw/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/epr30mUtEMw/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-01"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "SCF22",
+   "url": "https://www.boldin.com/retirement/average-net-worth-by-age/",
+   "source_date": "2023-10-18",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "Federal Reserve 2022 Survey of Consumer Finances (Fed Bulletin October 2023) via secondary age tables",
+   "finding": "Median net worth under 35 about $39,000 ($39,040); 35-44 about $135,300-135,600; 55-64 $364,500; overall mean $1,063,700 and median $192,700.",
+   "limitations": "Fed tables not read directly; homeowner/renter medians not confirmed in these results.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 17015,
+    "age_days": 179.274,
+    "views_per_day": 94.91058379910082,
+    "peer_median_10": 87.75086911552634,
+    "peer_median_5": 52.157949178723065,
+    "peer_ratio_10": 1.0815913820084053,
+    "peer_ratio_5": 1.8196762965867905,
+    "tier_10": "TYPICAL",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "BvkpPOOa7UY",
+     "2DBQnxaDScs",
+     "LUrsFkFfSe0",
+     "6IK8KJUGZMY",
+     "b-Wl948s8Iw",
+     "EjzQXyyREgE",
+     "_6Zvfj0ThsQ",
+     "wzT_EXIFdSU",
+     "O5fuwQGKf_c",
+     "vw_-6WtEXas"
+    ],
+    "peer_ids_5": [
+     "BvkpPOOa7UY",
+     "2DBQnxaDScs",
+     "LUrsFkFfSe0",
+     "6IK8KJUGZMY",
+     "b-Wl948s8Iw"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "BvkpPOOa7UY",
+      "Title": "9 Smart Things to Stop Buying in Your 30s If You Want to Retire Early",
+      "Views": "9404",
+      "Age_days": "180.2985",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "2DBQnxaDScs",
+      "Title": "Why Everything Changes After Paying Off Your House",
+      "Views": "294309",
+      "Age_days": "178.1205",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "LUrsFkFfSe0",
+      "Title": "10 Unsexy Habits That Make Serious Money ($100,000)",
+      "Views": "52677",
+      "Age_days": "181.1033",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "6IK8KJUGZMY",
+      "Title": "At What Age Do Most People Hit $100K, $500K, & $1M?",
+      "Views": "8861",
+      "Age_days": "177.0677",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "b-Wl948s8Iw",
+      "Title": "Why $300,000 Net Worth Feels Like Nothing in 2026",
+      "Views": "7741",
+      "Age_days": "182.2216",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "EjzQXyyREgE",
+      "Title": "This is Why Compounding Feels Slow (Until the 7-5-3-1 Rule Kicks In)",
+      "Views": "80817",
+      "Age_days": "176.1142",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "_6Zvfj0ThsQ",
+      "Title": "Why Stable Jobs Are Financially Riskier Than Ever In 2026",
+      "Views": "15096",
+      "Age_days": "183.1569",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "wzT_EXIFdSU",
+      "Title": "Your Life As Every Level Of Net Worth",
+      "Views": "79349",
+      "Age_days": "175.264",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "O5fuwQGKf_c",
+      "Title": "Why You Can't Afford a New Car in 2026 (The Math is Cruel)",
+      "Views": "11005",
+      "Age_days": "184.1965",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "vw_-6WtEXas",
+      "Title": "What It's Like To Be Financially Free",
+      "Views": "16209",
+      "Age_days": "174.1394",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Mean/median, ratio, annuity and catch-up projections",
+   "results": {
+    "mean_median_ratio": 5.52,
+    "owner_renter_ratio": 38.1,
+    "car_annual": 8976,
+    "start25_7500_8pct": 1942924,
+    "start35_7500_8pct": 849624,
+    "super_catchup_extra": 13000,
+    "derek_7pct": 1311335,
+    "derek_8pct": 1443571,
+    "derek_gap": 349000
+   },
+   "limitations": "Annual compounding; Derek projection assumes max contributions each year including catch-ups and a 4% match on $82,000."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification; one source via search summaries; several figures by analyst recall. No paid purchases."
+}

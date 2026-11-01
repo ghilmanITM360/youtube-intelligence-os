@@ -1,12 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-11-01T06:59:28.591629+00:00",
+ "as_of_utc": "2026-11-01T07:09:36.866827+00:00",
  "status": "MACHINE_A_BRANCH_PUBLISHED_PENDING_PR36_RECONCILIATION",
  "writer": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED",
  "branch": "codex/finance-machine-a-owner-directed",
  "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "note": "NICK_229 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
+  "note": "NICK_232 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
  },
  "batches": [
   {
@@ -430,12 +430,30 @@
    "machine": "A",
    "branch": "codex/finance-machine-a-owner-directed",
    "parent": "36cb78c64822f348e94adac5c4207f16ea791916",
-   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "commit": "c5bbd03491150102ecc97e381f58d07033552797",
    "accepted": 3,
    "blocked": 0,
    "completed": 505,
    "remaining": 1107,
    "original_pending": 461,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": "MACHINE_A_BRANCH_REMOTE_VERIFIED;PR36_NOT_APPLICABLE"
+  },
+  {
+   "nicks": [
+    "NICK_230",
+    "NICK_231",
+    "NICK_232"
+   ],
+   "machine": "A",
+   "branch": "codex/finance-machine-a-owner-directed",
+   "parent": "c4498939a2b36ce8e5d9f809e3ec98cadcf19727",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 3,
+   "blocked": 0,
+   "completed": 508,
+   "remaining": 1104,
+   "original_pending": 458,
    "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
@@ -658,30 +676,66 @@
    "packet_sha256": "aa43018b71714de30e66d03c93323a77a24c49bc5a2d8dd0ce37f0fb5b74f690",
    "read_receipts_sha256": "c60555ec6564b0c1bb9ab9521d07859e9654f2e200ccbfce98fd148a676e69d4",
    "validation_sha256": "9ee1b620656560ca6104eda476e1692aeed36d38a0a0d92b8ee1e54226493b84"
+  },
+  {
+   "nick": "NICK_230",
+   "video_id": "eU2JB3BP4x0",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 19232,
+   "claim_groups": 16,
+   "primary_source_receipts": 2,
+   "calculation_receipts": 2,
+   "packet_sha256": "6db5f4bf93bb1fce465e89bda11e847bceb25024fb029ec285dec6c636365652",
+   "read_receipts_sha256": "a978cb98c60d34fd0dad8b8563e2308eb295ed2454c34c04f09fbf24c84f1b6f",
+   "validation_sha256": "d2c8fa3a207aac3cad71bb29630e7784d424fb105a8a356423317605e3fd68d3"
+  },
+  {
+   "nick": "NICK_231",
+   "video_id": "epARf5FqE_I",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 20150,
+   "claim_groups": 12,
+   "primary_source_receipts": 1,
+   "calculation_receipts": 2,
+   "packet_sha256": "c1eb472901429f6378bf71a41c2fad0997b0324d25c2e5ce9996edfc9ca0f50f",
+   "read_receipts_sha256": "8eec4890d54d67e26b005304d9f0a6919482ccc00dd4d6a7b5f1cf35aa6848f1",
+   "validation_sha256": "7f13aa749ddda4fc776de1963f27f86ca3372dffa1a85015fbf88af9d2897761"
+  },
+  {
+   "nick": "NICK_232",
+   "video_id": "epr30mUtEMw",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 17825,
+   "claim_groups": 14,
+   "primary_source_receipts": 1,
+   "calculation_receipts": 2,
+   "packet_sha256": "a5375276c602256eecab8bcfa26d6b6419e7b23a277b5f7eff76ba1c072b66bd",
+   "read_receipts_sha256": "912ae25f90fdc7999c4fd5e1081729529cedba88942cc819a0b97a69e17af0f2",
+   "validation_sha256": "b0b9f1c450ed50b60260cea4b296c430e527d1ca3de05804181c424298623274"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 505,
-  "remaining": 1107,
+  "completed": 508,
+  "remaining": 1104,
   "original_total": 966,
-  "original_pending": 461,
+  "original_pending": 458,
   "expansion_total": 646,
   "expansion_pending": 646
  },
  "coverage": {
-  "full_stored_text_characters": 898574,
-  "claim_groups": 731,
-  "primary_source_receipt_rows": 140,
-  "source_independence": "Receipt rows include disclosed legitimate reuse;not140independentsources",
-  "calculation_receipts": 96,
-  "authentic_thumbnails_native_and_mobile": 46
+  "full_stored_text_characters": 955781,
+  "claim_groups": 773,
+  "primary_source_receipt_rows": 144,
+  "source_independence": "Receipt rows include disclosed legitimate reuse;not144independentsources",
+  "calculation_receipts": 102,
+  "authentic_thumbnails_native_and_mobile": 49
  },
  "synchronization": {
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "e89aa4a2376dd59ae1e68e66350b3af648463a072294ea2ee5be1ccadb281414",
+  "workbook_sha256": "ad70f953475e642752cbdb044296ee3f077169e507fd54711a8dc753395185a7",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -701,14 +755,14 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "3bb45000b60c325d2d00a49a364e74f62f5dc051bb786011f7e51748ea4bf1b1",
-  "VIDEO_AUDIT_966.csv": "c7437459c2e6dee75122ebd344c765783e56495d1f942524ae42d30a3008b2ba",
-  "VIDEO_COMPLETION_MATRIX.csv": "0fa7d958e55869f99d3e88c5a09b63961fa5390b9a1c1b121d6eeaf3c05d89ca",
-  "THUMBNAIL_ANALYSIS_966.csv": "c1b18cab829d898f7c8e1b82c06687a4d18be6396700ce79535c664bbb3a9767",
-  "SCRIPT_ANALYSIS_966.csv": "b52025d074d39e1fa95fba8614f58413082a63b9ca3b0d956bfca5b998377ea9",
-  "TITLE_ANALYSIS_966.csv": "506096b3a79dc437379e1bcd3ac257586eb4c1c26ca1b0888879f24aae30053a",
-  "TOPIC_ANALYSIS_966.csv": "1dc8ac5f1cecf316d6e06393cc47b703adb9d5be8c129c2abbccd6db5fb29bc2",
-  "VIRALITY_INTELLIGENCE_966.csv": "31b29ac53a70d7f9286aecfed45a6b3501ffbf0cd5f03da9ceaeb26d15f7498a"
+  "VIDEO_AUDIT_966.jsonl": "3f0431dee72f89d8b17f234e881818f577b1c2152e43e275578ba92cb0e65ca3",
+  "VIDEO_AUDIT_966.csv": "89255dff899e3a3c29d6a4d6c7498bbbb58b3519db175bbe87f3690185e972d5",
+  "VIDEO_COMPLETION_MATRIX.csv": "9804d0475efb9a384d4d458d82684551004edccf19c1f4992c74b337ca2ca009",
+  "THUMBNAIL_ANALYSIS_966.csv": "cdd3eb3dd971c5c94027752613586ca5c6a877b6edf496d2fc36d608074bf5dc",
+  "SCRIPT_ANALYSIS_966.csv": "38f55b35206b73e470628ffd42df1270b375669fe6fe066c70d858d59fe93ff4",
+  "TITLE_ANALYSIS_966.csv": "a1cb2e7e28a6630af6c98777f7c7d1f906f4d1af01f6696ed66763cff4c7548b",
+  "TOPIC_ANALYSIS_966.csv": "c685c1eb4cf1719dad29802b0e2054a2a4df58b1398ff3103fc114d5393cad38",
+  "VIRALITY_INTELLIGENCE_966.csv": "cc3e6ff4525831a66f5fc6ed88edac257caa2f365598b5516843ca91f16cafbc"
  },
  "resources": {
   "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
@@ -719,9 +773,9 @@
   "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_230",
-  "video_id": "eU2JB3BP4x0",
-  "title": "What Would ACTUALLY Happen If You Stopped Paying Your Bills"
+  "nick": "NICK_233",
+  "video_id": "f6HIYQUiMoU",
+  "title": "WTF Just Happened To The Housing Market?!"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
  "stop_reason": "IN_SESSION",

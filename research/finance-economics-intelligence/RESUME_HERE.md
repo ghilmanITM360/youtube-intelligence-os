@@ -1,3 +1,11 @@
+# Machine A owner-directed checkpoint — NICK_230–232 (2026-11-01)
+
+**Parent `c4498939`.** PR #36 / canonical branch still `223f4498`, untouched. 508/1,612 complete; next `NICK_233 f6HIYQUiMoU`. Validation: `validate_audit_966` rc=0 (0 errors), `validate_research` rc=0, 47 pytest (38 + 9 expansion) + 2 node tests, workbook 91 cells (dashboard 7 + rows 501–503), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN. Checkpoint fix: NICK_227–229 containing commit recorded as `c5bbd034` (expansion commits `be429c60`, `c4498939` sit between).
+
+- **NICK_230 `eU2JB3BP4x0` — What Would ACTUALLY Happen If You Stopped Paying Your Bills.** 0.25786× WEAK (5 of 10 peers STRONG); 16 claims. Verified: IRS passport threshold >$66,000 (2026). Reproduces: penalty APR +$479/yr, 4¢ debt sale, $7,000 deficiency. Misleading: student-loan garnishment "scaling up every month" — ED paused AWG/Treasury offset ~16 Jan 2026 after ~1,000 notices. Thumbnail "THEY TAKE EVERYTHING" contradicts the calming thesis.
+- **NICK_231 `epARf5FqE_I` — How People Treat You Once You Hit $1,000,000 Invested.** 1.26861× TYPICAL; 12 claims. Stale: Fidelity "595,000" 401(k) millionaires (Q1 2026: 645,000). Reproduces: $1M 1990 ≈ $2.52M; first $100K 7.84 yrs, last $400K 6.37 yrs. Correctly debunks the "70% of lottery winners go bankrupt" myth. Thumbnail red-carpet treatment contradicts the script's answer; faceless-YouTube promotion.
+- **NICK_232 `epr30mUtEMw` — 2026 Average Net Worth By Age (Are You Behind?).** 1.08159× TYPICAL; 14 claims. Verified: SCF 2022 mean $1,063,700 / median $192,700, age medians. Errors: 55–64 median stated as $320,700 then $364,500; $7,500 from 35 → $849,624 not $875,000; Derek's salary shifts ($115K/$75K/$82K); thumbnail numbers ($0.02/$950K/$300) absent from script.
+
 # Machine A owner-directed checkpoint — NICK_227–229 (2026-11-01)
 
 **Parent `36cb78c6`.** PR #36 / canonical branch still `223f4498`, untouched. 505/1,612 complete; next `NICK_230 eU2JB3BP4x0`. Validation: `validate_audit_966` rc=0 (0 errors), `validate_research` rc=0, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 498–500), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN.
