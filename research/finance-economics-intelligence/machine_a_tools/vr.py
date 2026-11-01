@@ -13,7 +13,7 @@ for nick,_ in items:
      'micro_batch':[n for n,_ in items],'changed_ledger_ids':[vid],'csv_projections':7,'source_fingerprints':26,
      'prior_completed_preserved':int(done)-len(items),'legacy_in_progress_preserved':True,
      'canonical_validators':'PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)',
-     'finance_tests':'38_PASS','formatting_tests':'2_PASS',
+     'finance_tests':'47_PASS','formatting_tests':'2_PASS',
      'calculation_verification':f'K01 reproduces master {float(m[vid]["Lifetime_rate_ratio"]):.5f} {k["tier_10"]} (5-peer {k["peer_ratio_5"]:.5f} {k["tier_5"]}); K02 analyst arithmetic',
      'claim_witness_check':'All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches',
      'csv_projection_method':'Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified',

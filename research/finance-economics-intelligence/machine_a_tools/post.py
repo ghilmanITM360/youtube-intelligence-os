@@ -32,7 +32,7 @@ c['next']={'nick':nn,'video_id':nv,'title':title}
 json.dump(c,open(B+'FINANCE_PROGRESS_CHECKPOINT.json','w'),indent=1,ensure_ascii=False)
 f=json.load(open(B+'FINANCE_EXECUTION_FORECAST.json'))
 f.update(as_of=now,batch=nicks,accepted=len(nicks),blocked=0,transcripts=f'{len(nicks)}_of_{len(nicks)}_present',source_receipts=sum(x['primary_source_receipts'] for x in pk),claims=sum(x['claim_groups'] for x in pk),
- calculation_receipts=2*len(nicks),validation='38tests+2formatting+2validators+target_and_workbook checks',usage={'five_hour':'UNKNOWN_NOT_READABLE_FROM_SESSION','weekly':'UNKNOWN_NOT_READABLE_FROM_SESSION'},
+ calculation_receipts=2*len(nicks),validation='47tests+2formatting+2validators+target_and_workbook checks',usage={'five_hour':'UNKNOWN_NOT_READABLE_FROM_SESSION','weekly':'UNKNOWN_NOT_READABLE_FROM_SESSION'},
  forecast=f'Machine A owner-directed branch; resume with {nn} after reading live usage.',next_video_id=nv,next_nick=nn,status='MACHINE_A_OWNER_DIRECTED_BATCHING',session_total_accepted=int(sess),session_total_blocked=0)
 json.dump(f,open(B+'FINANCE_EXECUTION_FORECAST.json','w'),indent=2,ensure_ascii=False)
 open(B+'FINANCE_WRITER_OWNERSHIP.md','a').write(f'\n{"–".join([nicks[0],nicks[-1][5:]]) if len(nicks)>1 else nicks[0]} accepted on Machine A branch, parent `{parent[:8]}`: {done} complete / {1612-done:,} remaining.\n')
