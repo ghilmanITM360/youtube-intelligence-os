@@ -1,0 +1,53 @@
+{
+ "status": "VIDEO_005_PARTIAL_STRUCTURE_SECOND_PASSED",
+ "CT_SCAN_COMPLETE": false,
+ "audio": "AUDIO_NOT_VERIFIED",
+ "av": "AV_CERTIFICATION_BLOCKED",
+ "gates": {
+  "source_sha_verified": true,
+  "frame_partition_complete": true,
+  "unaccounted_frames": 0,
+  "overlaps": 0,
+  "reviewers_R01_R11_output": true,
+  "second_pass_items": 821,
+  "second_pass_viewing": {
+   "INDIVIDUALLY_VIEWED_NATIVE": 176,
+   "INDIVIDUALLY_VIEWED_EVIDENCE_JPG": 343,
+   "SAMPLED": 302
+  },
+  "candidates_first_pass_only": 429,
+  "confirmed_sample": {
+   "n": 143,
+   "of": 572,
+   "verdicts": {
+    "CONFIRMED": 137,
+    "UNVERIFIED": 3,
+    "RECLASSIFIED": 3
+   }
+  },
+  "gaps_all_sampled": true,
+  "gap_status": {
+   "NEW_COMPOSITION_OR_TRANSITION_CLAIM": 33,
+   "CONTINUATION_OF_NEIGHBOUR_CLAIM": 76
+  },
+  "merge_rulings": {
+   "MERGE_ACCEPTED": 194,
+   "KEEP_SEPARATE": 4,
+   "KEEP_SEPARATE_GAP_HAS_NEW_COMPOSITION": 2
+  },
+  "split_proposals": "5 measured-supported, 8 reviewer-claim only",
+  "asr": {
+   "sentences": 214,
+   "within_0_25s_of_boundary": 0.542,
+   "shuffled_baseline_mean": 0.315,
+   "shuffled_p95": 0.355,
+   "numeric_sentences": 50,
+   "unowned_gap_sentences": 39,
+   "label": "MEASURED overlap of machine-ASR (Whisper base) timing vs state/gap starts; text and word timing unverified; not heard"
+  },
+  "cold_start": "PASS retrieval completeness only",
+  "colour_typeface_easing": "UNAVAILABLE",
+  "semantic_certification": false,
+  "validators": "validate_v2.py PASS + 4 negative tests"
+ }
+}
