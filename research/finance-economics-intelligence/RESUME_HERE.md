@@ -1,3 +1,11 @@
+# Machine A owner-directed checkpoint — NICK_227–229 (2026-11-01)
+
+**Parent `36cb78c6`.** PR #36 / canonical branch still `223f4498`, untouched. 505/1,612 complete; next `NICK_230 eU2JB3BP4x0`. Validation: `validate_audit_966` rc=0 (0 errors), `validate_research` rc=0, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 498–500), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN.
+
+- **NICK_227 `eAzo0uvSnus` — The One Financial Trap Every Generation Fall (stored title incomplete).** 0.72657× TYPICAL; 17 claims. Verified: Goldman Sachs Retirement Survey 2025, 41% of $300K–$500K earners self-report paycheck to paycheck (2026 report ~34%). Reproduces: $400/month from 25 vs 35 → $1,396,403 vs $596,144; $700 rent → $2,443,705; $136 → $202,689/$474,777; $312.50 raise → $465,737. Overstated: card debt "$82B in 1980" (G.19 revolving ~$53.7B). BNPL, HELOC 765% and subscription $273/435% figures unsourced.
+- **NICK_228 `eEw52CPOrbE` — What changes After You Hit $100,000 In Savings.** 0.99803× TYPICAL; 7 claims (few concrete claims). "100,000 rule" and "researchers call" labels unsupported; the 8% return is a market assumption applied to "savings" (FDIC national savings 0.40% → ~$400/year, not $8,000). Two closing summaries, repeated sections, heavy ASR filler.
+- **NICK_229 `eU0bOs2J1_E` — How Banks Treat You at Every Level of Wealth.** 0.90647× TYPICAL; 12 claims. Verified: CFPB 9% of accounts pay 79% of overdraft/NSF fees; $5 cap final rule repealed by CRA (S.J.Res. 18, signed 9 May 2025); ProPublica $401B / $13.6B / 3.4%, Bezos 0.98%. Errors: fee walk $15+$35+$35 = $85 not $120 as narrated; Bezos "$1.09 per $100" contradicts 0.98%; Indigo $175 fee (Indigo is $0–99); SBLOC 5.5–7% understates SOFR+4.4%; JPM $10M minimum "recently" is 2021.
+
 # Machine A owner-directed checkpoint — NICK_224–226 (2026-11-01)
 
 **Parent `d5cd987c`.** PR #36 / canonical branch still `223f4498`, untouched. 502/1,612 complete; next `NICK_227 eAzo0uvSnus`. Validation: `validate_audit_966` rc=0 (502 analyzed, 0 errors), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 495–497), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN.
