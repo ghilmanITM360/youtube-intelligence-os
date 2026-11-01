@@ -87,3 +87,6 @@ Remaining: absorbing gaps into states, native check of ~750 other candidates, li
 ## Checkpoint O (2026-11-01) — gap absorption (`integrated_v5/`)
 `v1_scripts/gap_absorb.py` (per-frame measured diffs), `integrate_v5.py`. States unchanged; ownership layer `frame_ownership_v5.csv` + `gap_absorption_decisions_v5.csv`. Decisions: ABSORB_WHOLE 59, ABSORB_PREV 46, ABSORB_NEXT 14, SPLIT_AT_CUT 10 (cut at gap start; whole gap to next composition; 4 conflict with second-pass PREV, flagged `conflict_with_second_pass`), KEEP_STANDALONE 7, UNRESOLVED 7. Frames: state 21,301; absorbed 2,609; standalone 276; unresolved 112. Compositions_v5 add `absorbed_gap_ids`, `full_span_frames` (median 2.08 s). Validator PASS + 5 negatives DETECTED; extended validator v5 PASS; v5 specs/DNA built.
 Remaining: 7 unresolved gaps (U023,U025,U028,U036,U049,U071,U128), 7 standalone (U010,U017,U024,U031,U047,U096,U123), native check of ~750 candidates, listening/AV, colours/typeface, live identity, claim map/scorecard.
+
+## Checkpoint P (2026-11-01) — audio checklist updated
+`production/AUDIO_HUMAN_REVIEW_CHECKLIST.md` now has an 11-sentence ASR spot-check table (Whisper-base text, some visibly wrong) and a sign-off line. Handed to owner; no listening performed: AUDIO_NOT_VERIFIED, AV_CERTIFICATION_BLOCKED unchanged. No ledger changes.
