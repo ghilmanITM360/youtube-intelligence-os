@@ -1,3 +1,10 @@
+# Machine A owner-directed checkpoint — NICK_273–274 (2026-11-02)
+
+**Parent `ca099ca3`.** PR #36 / canonical branch still `223f4498`, untouched. 550/1,612 complete; next `NICK_275 ofJ8nZG87fA`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 545–546), 0 styles/formulas, 16 hashtag text cells, zip OK. Usage UNKNOWN. New: `HISTORICAL_QUALITY_UPGRADE_BACKLOG.md`.
+
+- **NICK_273 `o4t8lSSAsMk` — This Setup Only Happens Once Every 50 Years — It's Happening Again.** 1.12465× TYPICAL (5-peer 1.496×, stable; ~15 days old at snapshot); 11 claims. FRED directly inspected: 1970s CPI peaks (SA 12.1%/14.6%; official NSA 12.3%/14.8%), 1971–81 +124.6%, 45¢/30¢, 1970s +104%, 1966–82 ×2.97; mortgage record 18.63% (1981-10-09); payments $141 and $859 reproduce; 5y5y 2.32% on 2026-08-28; debt $39.46T (2026Q2). Overstated: debt growth "$91,549/second". 2026 Iran/Hormuz/Warsh/gold/silver figures SOURCE_UNAVAILABLE. Thumbnail "BUY NOW!" + crash arrow + "1929" contradicts the script.
+- **NICK_274 `oPbLgCFB4gU` — The Subscription Trap That's Keeping You Poor.** 0.24252× WEAK (5-peer 0.107×, stable); 11 claims. C+R Research inspected directly: $86 estimate vs $219 actual, so the video's "$273" is unsupported. Reproduces: $67,200 car, $3,600 Adobe, $1.34M at 7%. Doubtful/stale: "$3,200 more than average savings", Netflix $150B / Adobe $240B, Fair/Canvas examples; Photoshop $1,200 mixes products.
+
 # Machine A owner-directed checkpoint — NICK_271–272 (2026-11-02)
 
 **Parent `a8e2458c`.** PR #36 / canonical branch still `223f4498`, untouched. 548/1,612 complete; next `NICK_273 o4t8lSSAsMk`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 543–544), 0 styles/formulas, 16 hashtag text cells (not errors), zip OK. Usage UNKNOWN. Source-confidence labels as in NICK_265.

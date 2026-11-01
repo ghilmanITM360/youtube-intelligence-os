@@ -1,12 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-11-01T19:11:50.741397+00:00",
+ "as_of_utc": "2026-11-01T19:18:22.882456+00:00",
  "status": "MACHINE_A_BRANCH_PUBLISHED_PENDING_PR36_RECONCILIATION",
  "writer": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED",
  "branch": "codex/finance-machine-a-owner-directed",
  "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "note": "NICK_272 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
+  "note": "NICK_274 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
  },
  "batches": [
   {
@@ -728,17 +728,51 @@
    "machine": "A",
    "branch": "codex/finance-machine-a-owner-directed",
    "parent": "a8e2458ce9fc66c99c893da2051198baa06522d9",
-   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "commit": "ca099ca3756127937d0a59d6693dd7d675ab90ae",
    "accepted": 2,
    "blocked": 0,
    "completed": 548,
    "remaining": 1064,
    "original_pending": 418,
    "expansion_pending": 646,
+   "remote_and_pr_verified": "MACHINE_A_BRANCH_REMOTE_VERIFIED;PR36_NOT_APPLICABLE"
+  },
+  {
+   "nicks": [
+    "NICK_273",
+    "NICK_274"
+   ],
+   "machine": "A",
+   "branch": "codex/finance-machine-a-owner-directed",
+   "parent": "ca099ca3756127937d0a59d6693dd7d675ab90ae",
+   "commit": "ca099ca3756127937d0a59d6693dd7d675ab90ae",
+   "accepted": 2,
+   "blocked": 0,
+   "completed": 550,
+   "remaining": 1062,
+   "original_pending": 416,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": "MACHINE_A_BRANCH_REMOTE_VERIFIED;PR36_NOT_APPLICABLE"
+  },
+  {
+   "nicks": [
+    "NICK_273",
+    "NICK_274"
+   ],
+   "machine": "A",
+   "branch": "codex/finance-machine-a-owner-directed",
+   "parent": "ca099ca3756127937d0a59d6693dd7d675ab90ae",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 2,
+   "blocked": 0,
+   "completed": 550,
+   "remaining": 1062,
+   "original_pending": 416,
+   "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 2,
+ "session_accepted": 4,
  "session_blocked": 0,
  "packets": [
   {
@@ -764,30 +798,78 @@
    "packet_sha256": "0dbc083a55b8b2f4f28ffd293a3fa0d03e9aacbc9f741b1ac6a74b642564a730",
    "read_receipts_sha256": "c117218c9a5a2829405cee528b3e90187b8ad5958a31ca12bfff3822a46d458e",
    "validation_sha256": "25a2a8906bb2d6b626d08df34f14485a9ab02c61d63f909e704061e63a731dba"
+  },
+  {
+   "nick": "NICK_273",
+   "video_id": "o4t8lSSAsMk",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18398,
+   "claim_groups": 11,
+   "primary_source_receipts": 4,
+   "calculation_receipts": 2,
+   "packet_sha256": "29502f3589134d6630a0758c529743d126fcb14d56e2e262fc9797d8678ef37c",
+   "read_receipts_sha256": "b422c28c6c289185a61ded787095de7bd2e4256f7e4a70220b574fb18528f6d1",
+   "validation_sha256": "1d0c6c7632ea9e1ed48e46d74f42bb5a3cc750ec376ad548ebb218fc3c5489a6"
+  },
+  {
+   "nick": "NICK_274",
+   "video_id": "oPbLgCFB4gU",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 20600,
+   "claim_groups": 11,
+   "primary_source_receipts": 1,
+   "calculation_receipts": 2,
+   "packet_sha256": "adc756dd2b359616f05f5f827009bc386076aa0edc6897f0d9482d47f1e98413",
+   "read_receipts_sha256": "270e89e63a86fb29dafd364d3d8b9158a24fc6abd22fcdd71b6ea80ad221f534",
+   "validation_sha256": "4cf57d5d8646ef3b99eb9a8a92a66b315e3ca08d4cc20c657706210079596a26"
+  },
+  {
+   "nick": "NICK_273",
+   "video_id": "o4t8lSSAsMk",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18398,
+   "claim_groups": 11,
+   "primary_source_receipts": 4,
+   "calculation_receipts": 2,
+   "packet_sha256": "29502f3589134d6630a0758c529743d126fcb14d56e2e262fc9797d8678ef37c",
+   "read_receipts_sha256": "b422c28c6c289185a61ded787095de7bd2e4256f7e4a70220b574fb18528f6d1",
+   "validation_sha256": "1d0c6c7632ea9e1ed48e46d74f42bb5a3cc750ec376ad548ebb218fc3c5489a6"
+  },
+  {
+   "nick": "NICK_274",
+   "video_id": "oPbLgCFB4gU",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 20600,
+   "claim_groups": 11,
+   "primary_source_receipts": 1,
+   "calculation_receipts": 2,
+   "packet_sha256": "adc756dd2b359616f05f5f827009bc386076aa0edc6897f0d9482d47f1e98413",
+   "read_receipts_sha256": "270e89e63a86fb29dafd364d3d8b9158a24fc6abd22fcdd71b6ea80ad221f534",
+   "validation_sha256": "4cf57d5d8646ef3b99eb9a8a92a66b315e3ca08d4cc20c657706210079596a26"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 548,
-  "remaining": 1064,
+  "completed": 550,
+  "remaining": 1062,
   "original_total": 966,
-  "original_pending": 418,
+  "original_pending": 416,
   "expansion_total": 646,
   "expansion_pending": 646
  },
  "coverage": {
-  "full_stored_text_characters": 1839412,
-  "claim_groups": 1437,
-  "primary_source_receipt_rows": 242,
-  "source_independence": "Receipt rows include disclosed legitimate reuse;not242independentsources",
-  "calculation_receipts": 182,
-  "authentic_thumbnails_native_and_mobile": 89
+  "full_stored_text_characters": 1917408,
+  "claim_groups": 1481,
+  "primary_source_receipt_rows": 252,
+  "source_independence": "Receipt rows include disclosed legitimate reuse;not252independentsources",
+  "calculation_receipts": 190,
+  "authentic_thumbnails_native_and_mobile": 93
  },
  "synchronization": {
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "8610307e655e866563692090952733237ecc1f12c345fa8f1dc925c260fec60f",
+  "workbook_sha256": "dde9ef0f9c63fc17189d91d5ff95dac07bc1f4cb18d99871ab813caf5abf49e8",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -807,27 +889,27 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "8eb14c3fa35017882b4427f08984aa37f7f4fd407d188363b696f1b09d0ebaf9",
-  "VIDEO_AUDIT_966.csv": "8e81588890a834394741eb1b7e2e8de899610efa27b68a184b2f21605f497dcd",
-  "VIDEO_COMPLETION_MATRIX.csv": "4f1a32c38582a6ae4352713f1af27048600d1bcdd58caeb64ac84bfcb17c0872",
-  "THUMBNAIL_ANALYSIS_966.csv": "a5bddb1de23ced1e82a39be54c97ff2877b98d104fbfa0fe95375ec305056059",
-  "SCRIPT_ANALYSIS_966.csv": "cf950bb1412f57706148b2386221e4b9d9906c9e69def1a76f21d139286ad7ff",
-  "TITLE_ANALYSIS_966.csv": "dd897429234d1c979d3bb727aa8f58036bf2145d60a3416966c5aca62f98de8c",
-  "TOPIC_ANALYSIS_966.csv": "6c8c42198808814d40d0e16855f88746cc06ef272c126fb239ae98fc8624fae6",
-  "VIRALITY_INTELLIGENCE_966.csv": "e5d59cb60ce958ca27e76f93f309b993d04783db109bdded21f614e3236e280b"
+  "VIDEO_AUDIT_966.jsonl": "df04bd2035f6806250349837ab343588873845815b3d7655e6cfec8b61e00533",
+  "VIDEO_AUDIT_966.csv": "27abaf73c9d6e51b123788abb4baaa8308c32c7ae04da257a002f714da02e57e",
+  "VIDEO_COMPLETION_MATRIX.csv": "f26e8192f81b07177635282e1d319080a0197be2dd42f7d47a44bc1df975fcd0",
+  "THUMBNAIL_ANALYSIS_966.csv": "20fb85feaf332fe724beea1eab94800bd36b2d2c675488de719d826650d459c7",
+  "SCRIPT_ANALYSIS_966.csv": "82c5e4d658e4d52956f963273c64d88fb08a5f907ea1bf980214d78768b60dc2",
+  "TITLE_ANALYSIS_966.csv": "4cd6953832a9a926ed64074b93f9e289d7a5da854fb7352158a9631f9bb445bd",
+  "TOPIC_ANALYSIS_966.csv": "1dfcfee538a57e566a9394d770ebe6625b1e6f1bfe9932ad0c7bec03f7294413",
+  "VIRALITY_INTELLIGENCE_966.csv": "9abea415b57b8efa33b3a823ee6d2edd25a841952cbd9b9b0c8e3d8c5762c76f"
  },
  "resources": {
   "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
   "weekly_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
   "paid_credits_spent": 0,
   "reset_credits_redeemed": 0,
-  "free_disk_gib_rounded": 102,
+  "free_disk_gib_rounded": 103,
   "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_273",
-  "video_id": "o4t8lSSAsMk",
-  "title": "This Setup Only Happens Once Every 50 Years — It's Happening Again"
+  "nick": "NICK_275",
+  "video_id": "ofJ8nZG87fA",
+  "title": "Stop Thinking Poor: The Mindset of the 1%"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
  "stop_reason": "IN_SESSION",

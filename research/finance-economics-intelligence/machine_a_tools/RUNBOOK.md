@@ -30,7 +30,7 @@ is the head; take the next 2–5 `ELIGIBLE` rows. Do not touch `DEFERRED_PRESERV
 ## 3. Integrate (single writer)
 Copy packets and `NICK_{vid}.jpg` into `audit-batches/`; `python3 build_audit_966.py`; rebuild the workbook
 (`node build_workbook_1612.mjs` via the artifact-tool runtime); bump the completed count in
-`test_combined_workbook.py`; `validate_audit_966.py`, `validate_research.py`, `pytest -q test_*.py` (38),
+`test_combined_workbook.py`; `validate_audit_966.py`, `validate_research.py`, `pytest -q test_*.py` (48),
 `node --test test_workbook_formatting.mjs` (2); `machine_a_tools/wbdiff.py old new` (only target rows);
 `machine_a_tools/vr.py`, `machine_a_tools/post.py`; prepend RESUME_HERE; rebuild the queue; commit; push;
 verify local = upstream = remote.
