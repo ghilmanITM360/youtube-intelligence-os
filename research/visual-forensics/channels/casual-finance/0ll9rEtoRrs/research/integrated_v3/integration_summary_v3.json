@@ -1,0 +1,38 @@
+{
+ "status": "MERGE_SPLIT_GAP_RECONCILED_STRUCTURE_STILL_NOT_SEMANTICALLY_CERTIFIED",
+ "states": 530,
+ "compositions": 370,
+ "state_frames": 21286,
+ "unowned_intervals": 143,
+ "unowned_frames": 3012,
+ "total_frames": 24298,
+ "merge_decisions": {
+  "MERGE_CONFIRMED": 158,
+  "UNCERTAIN": 3
+ },
+ "comp_median_span_s": 1.77,
+ "comp_mean_span_s": 2.47,
+ "comp_p90_span_s": 5.42,
+ "gaps_rereviewed": 48,
+ "gap_class_rr": {
+  "EMBEDDED_THIRD_PARTY_PLAYBACK": 6,
+  "HARD_CUT_INSIDE": 6,
+  "STATIC_OR_NEAR_STATIC": 5,
+  "CONTINUOUS_ANIMATION": 2,
+  "FADE_OR_TRANSITION": 3,
+  "MOTION_IN_COMPOSITION": 26
+ },
+ "candidates_second_pass_not_reviewed": 807,
+ "validator_positive": "PASS",
+ "negative_tests": {
+  "bad composition member": "DETECTED",
+  "dropped composition": "DETECTED",
+  "overlap": "DETECTED",
+  "dropped gap": "DETECTED",
+  "lost reviewer provenance": "DETECTED",
+  "missing merge decision": "DETECTED",
+  "uncertain flipped w/o regroup": "DETECTED",
+  "duplicate state id": "DETECTED"
+ },
+ "audio": "AUDIO_NOT_VERIFIED"
+}
