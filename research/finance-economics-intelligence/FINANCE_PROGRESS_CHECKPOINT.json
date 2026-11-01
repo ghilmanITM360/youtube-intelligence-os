@@ -1,12 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-11-01T13:04:09.220156+00:00",
+ "as_of_utc": "2026-11-01T16:12:42.171487+00:00",
  "status": "MACHINE_A_BRANCH_PUBLISHED_PENDING_PR36_RECONCILIATION",
  "writer": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED",
  "branch": "codex/finance-machine-a-owner-directed",
  "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "note": "NICK_255 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
+  "note": "NICK_258 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
  },
  "batches": [
   {
@@ -591,17 +591,35 @@
    "machine": "A",
    "branch": "codex/finance-machine-a-owner-directed",
    "parent": "26fe1f1fa12829eb8adf844e0838a0de713ceca6",
-   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "commit": "669a9d7aed163fdaf59399b903df330858982891",
    "accepted": 2,
    "blocked": 0,
    "completed": 531,
    "remaining": 1081,
    "original_pending": 435,
    "expansion_pending": 646,
+   "remote_and_pr_verified": "MACHINE_A_BRANCH_REMOTE_VERIFIED;PR36_NOT_APPLICABLE"
+  },
+  {
+   "nicks": [
+    "NICK_256",
+    "NICK_257",
+    "NICK_258"
+   ],
+   "machine": "A",
+   "branch": "codex/finance-machine-a-owner-directed",
+   "parent": "669a9d7aed163fdaf59399b903df330858982891",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 3,
+   "blocked": 0,
+   "completed": 534,
+   "remaining": 1078,
+   "original_pending": 432,
+   "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 8,
+ "session_accepted": 3,
  "session_blocked": 0,
  "packets": [
   {
@@ -735,30 +753,66 @@
    "packet_sha256": "fa09b6b0cc98bb2955ccef9b83107012be84d1f6690558c1b1dae71e33056f53",
    "read_receipts_sha256": "82164b20e538bde2ece382ac383bc8f7da4d1d6bcfa9c2ff7151f66d32616059",
    "validation_sha256": "e18c785e4402c38c2b88ebd1a0154d0cb8d803f3835d6c52f9483457a0fb0e25"
+  },
+  {
+   "nick": "NICK_256",
+   "video_id": "l1NjZktMqj8",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 19896,
+   "claim_groups": 17,
+   "primary_source_receipts": 3,
+   "calculation_receipts": 2,
+   "packet_sha256": "d86aad9588002421465a78c618ae6fa21d99731c66aaabc2498300490ba8192b",
+   "read_receipts_sha256": "f54ebfdaf93280a22dcb13c0aa54cf44439ce73d53acb6596fa57765e1ae2346",
+   "validation_sha256": "a65864e0c509013adec237699cd3600033c34f50cb72a9003e05f63660475cf3"
+  },
+  {
+   "nick": "NICK_257",
+   "video_id": "liK92Jhpn14",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 20995,
+   "claim_groups": 9,
+   "primary_source_receipts": 2,
+   "calculation_receipts": 2,
+   "packet_sha256": "d6825825888e4c717a42b968ec4b0864239b6facbe7fee7c9dba3c76a43e8183",
+   "read_receipts_sha256": "ed71daeee8aa5c1b78050a84089ba7d22049d2426c45a404452907bfbbdbbfed",
+   "validation_sha256": "4ee6ec558ae60c0fd4277577250f957515de9ca606d21143d46dcd1a7fcebd43"
+  },
+  {
+   "nick": "NICK_258",
+   "video_id": "lwOIt8woWwA",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18643,
+   "claim_groups": 9,
+   "primary_source_receipts": 1,
+   "calculation_receipts": 2,
+   "packet_sha256": "96b0111794d1766960558e8e5cd1bfd5139b94ab61871f5f6041313040f40080",
+   "read_receipts_sha256": "f8c23a84b0d68777bd0e64dac868cbe5b139df8491403badd3ec3a6c69bcfbd0",
+   "validation_sha256": "a72c00477e1ada166de8ab8582b8086be24560cd895a8a3cb4655db3571e821b"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 531,
-  "remaining": 1081,
+  "completed": 534,
+  "remaining": 1078,
   "original_total": 966,
-  "original_pending": 435,
+  "original_pending": 432,
   "expansion_total": 646,
   "expansion_pending": 646
  },
  "coverage": {
-  "full_stored_text_characters": 1491703,
-  "claim_groups": 1141,
-  "primary_source_receipt_rows": 194,
-  "source_independence": "Receipt rows include disclosed legitimate reuse;not194independentsources",
-  "calculation_receipts": 148,
-  "authentic_thumbnails_native_and_mobile": 72
+  "full_stored_text_characters": 1551237,
+  "claim_groups": 1176,
+  "primary_source_receipt_rows": 200,
+  "source_independence": "Receipt rows include disclosed legitimate reuse;not200independentsources",
+  "calculation_receipts": 154,
+  "authentic_thumbnails_native_and_mobile": 75
  },
  "synchronization": {
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "98f5afddb809dd9de604872211c4a98cfe7ebade1beb99c05e515a4dd984dbaa",
+  "workbook_sha256": "70e43d635a2f2e9261979e7a0f965406f6c019e5babfd5deb392c75487717231",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -778,27 +832,27 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "e5b9c3ac430b7fc8dbee31488f75d78cf7e80591298247797eab2e786b74eaa8",
-  "VIDEO_AUDIT_966.csv": "6b04e1c9cbb75188df2101e444afd4142e6cb7ad9363d22fd32814ab4d9abd2f",
-  "VIDEO_COMPLETION_MATRIX.csv": "60a6d58eeadd2572c54db57198bd078415d690afcfd497375038d307fc8efdae",
-  "THUMBNAIL_ANALYSIS_966.csv": "6961b085cce5454c6f0493f9af18f8e9fcf051ccbb748e100cf48c8504f27e1d",
-  "SCRIPT_ANALYSIS_966.csv": "c354d2fbf381f2126a01c43096ef8973f35964d7cd35faaff46d275e40679b72",
-  "TITLE_ANALYSIS_966.csv": "a1607a633c8570810086e7d095eb5762f1c819cd6baea7a62c958c8578bf0727",
-  "TOPIC_ANALYSIS_966.csv": "6014220352abb82b637a3e8082fed98170ecc00118fc1cbb9f6cf881fec82403",
-  "VIRALITY_INTELLIGENCE_966.csv": "bfc2e2c4ee24cd6a85b11e8c25ad35b1961c625a10bdfb229d09b68979bba677"
+  "VIDEO_AUDIT_966.jsonl": "a453d24b78b1733299ac3a29f2af31783ac39989e98bc6e0a73d86285eb1cfcc",
+  "VIDEO_AUDIT_966.csv": "95520f00b49985b19c5650731598c8f55677c07447293933c0cd59f9b0413334",
+  "VIDEO_COMPLETION_MATRIX.csv": "59f72ac1372828114484e1ce5221ef08841fd4b985fb64de34428ac4624380a2",
+  "THUMBNAIL_ANALYSIS_966.csv": "d38856af2883f54e1f2d7f6ffacf9be735e4eee349229c85f4d9d601a318d5b6",
+  "SCRIPT_ANALYSIS_966.csv": "24f1e8d8f5cf52b0204c47724475bc64aaef3eb31ea8bc17dfdbcbd3bd7e572f",
+  "TITLE_ANALYSIS_966.csv": "76a7a0aa53f9b2ca0502c660d0560be8cdd900ec98b6f99df6e16883d215024a",
+  "TOPIC_ANALYSIS_966.csv": "a7e4dfe8d79e746e11e14987c8a27a699ca8d3e213bfcb054fc61167d12a419a",
+  "VIRALITY_INTELLIGENCE_966.csv": "4e372eee612288404e539385a7b150b9ac23374c318ae0d53549292c05f6b81c"
  },
  "resources": {
   "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
   "weekly_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
   "paid_credits_spent": 0,
   "reset_credits_redeemed": 0,
-  "free_disk_gib_rounded": 28,
+  "free_disk_gib_rounded": 27,
   "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_256",
-  "video_id": "l1NjZktMqj8",
-  "title": "The Crypto Trap That Keeps The Middle Class Poor"
+  "nick": "NICK_259",
+  "video_id": "m28yF-EXg58",
+  "title": "Buying vs Leasing a Car: The “New” Reality in 2026"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
  "stop_reason": "IN_SESSION",
