@@ -9,7 +9,7 @@ Labels: MEASURED (computed from ledgers/frames), OBSERVED (seen in frames), INFE
 - 530 states are grouped into 370 compositions (158 confirmed merges + 2 split-sibling groupings). States and their events are preserved; compositions are a grouping layer only.
 - Split children (S0089.*, S0097.*, S0116.*, S0475.*, S0466P/S0466, S0033) re-described from their own frames (`integrated_v3/split_child_corrections_v3.csv`). S0466 hard replace at f21628 is observed in sequential decode, so the earlier "inferred 21628" caveat is closed. S0033 has no visible infographic cut-in through f1294.
 - All 143 unowned intervals (3,012 frames) re-reviewed with dense sheets (up to 12 frames each) plus per-frame diffs: 99 motion-in-composition, 13 continuous animation, 13 static/near-static, 6 hard-cut-ending, 6 third-party playback, 6 fade; 29 flagged limited by sampling; 13 end on a new composition in their last sampled frame (possible boundary corrections, NOT applied). Gaps are still not absorbed into states. For the first 48 priority gaps: Only 6 of the 35 earlier EMBEDDED_VIDEO intervals are third-party playback (221 frames); 24 are PDF/browser/screen scroll inside a composition. The 658-frame embedded-video figure in v2 was an over-label for those intervals.
-- All 807 first-pass CONFIRMED candidates are now independently viewed (before/after frames at 560×315, one reviewer per row): 749 type OK (92.8%), 33 wrong type (4.1%), 25 no visible change (3.1%; 15 LOW, 10 MEDIUM confidence, mostly tiny highlight extensions). 25 types corrected (HIGH/MEDIUM confidence only). This is single-reviewer second pass at reduced resolution, not native-resolution frame-by-frame.
+- All 807 first-pass CONFIRMED candidates are now independently viewed (before/after frames at 560×315, one reviewer per row): 749 type OK (92.8%), 33 wrong type (4.1%), 25 no visible change (3.1%; 15 LOW, 10 MEDIUM confidence, mostly tiny highlight extensions). 25 types corrected (HIGH/MEDIUM confidence only). This is single-reviewer second pass at reduced resolution. The 58 flagged rows (33 wrong-type + 25 no-visible-change) then got a native-pixel crop check (checkpoint M): of the 25 no-visible-change rows 23 show a real small change (highlight extensions, hair/pupil redraws, fades, added bag, a 78–110 px slide) and only 2 (EP0198, SUB089, both LOW/MEDIUM) are noise-level; 37 of 58 had a different type than claimed, 11 types updated (HIGH/MEDIUM only; 4 LOW suggestions not applied).
 
 ## 0b. Boundary rule (checkpoint L)
 Rule: if the last frame of an unowned gap is an isolated one-frame jump (≥10% of pixels changed vs the previous frame and ≥3× the largest change in the 4 frames before), that frame is the first frame of the next composition and is reassigned to the next state (same convention as the 225 states that already start on a visible cut). Applied to 15 gaps (U010 U024 U031 U035 U044 U045 U074 U077 U088 U096 U099 U120 U123 U131 U141): each next state starts 1 frame earlier, each gap loses 1 frame. NOT applied to U059, U069, U073, U083 (steady converging motion, not a cut). Result: states 21,301 frames, unowned 2,997 frames (12.3%), tiling still 24,298. Rule is a measured heuristic; 1-frame boundary ±1 caveat stays. Gaps are still not absorbed into states.
@@ -20,10 +20,10 @@ Rule: if the last frame of an unowned gap is an isolated one-frame jump (≥10% 
 | States | 530 (31.4/min); median 1.12 s, mean 1.67 s, p10 0.29 s, p90 3.79 s, max 13.12 s |
 | Compositions | 370 (21.9/min); span median 1.77 s, mean 2.47 s, p90 5.42 s |
 | Edit events (excl. not-a-change/codec) | 996 (59/min); 853 in states, 143 in unowned gaps |
-| Additive entry | 268 (26.9%) |
+| Additive entry | 271 (27.2%) |
 | Full replace | 252 (25.3%) |
 | Highlight add | 118 (11.8%) |
-| Draw-on / reveal | 94 (9.4%) |
+| Draw-on / reveal | 93 (9.3%) |
 | Text change | 52 |
 | Pan/scroll | 32; zoom/scale 23; object motion 21; character animation 25 |
 Type labels carry about ±4% uncertainty (second-pass wrong-type rate); 25 rows have no visible change at review resolution and are kept but flagged.
@@ -64,9 +64,9 @@ Limited to the ASR numeric-sentence index above. Factual claim checking of the v
 | Merge/composition grouping | 161/161 reviewed; 3 UNCERTAIN |
 | Split children | frame-reviewed |
 | Unowned gaps | 143/143 re-reviewed (single reviewer, 29 limited by sampling); 15 boundaries moved by rule; not absorbed |
-| CONFIRMED candidates | 807/807 independently viewed (single reviewer, reduced resolution); 25 no-visible-change flags |
+| CONFIRMED candidates | 807/807 independently viewed (single reviewer); 58 flagged rows re-checked at native-pixel crops |
 | ASR alignment | time-overlap only; not listened |
 | Audio / AV | AUDIO_NOT_VERIFIED, AV_CERTIFICATION_BLOCKED |
 
 ## 8. Still not done
-Native-resolution check of the 25 no-visible-change and 33 corrected rows; ruling on absorbing gaps; 29 sampling-limited gaps; ruling on possible missed merges (S0080, S0212); 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.
+Native check of the other ~750 rows (only the 58 flagged rows were native-checked); ruling on absorbing gaps; 29 sampling-limited gaps; ruling on possible missed merges (S0080, S0212); 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.

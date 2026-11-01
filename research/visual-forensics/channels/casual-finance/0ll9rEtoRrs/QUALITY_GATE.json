@@ -1,6 +1,6 @@
 {
  "video_id": "0ll9rEtoRrs",
- "checkpoint": "L",
+ "checkpoint": "M",
  "date": "2026-11-01",
  "classification": [
   "VISUAL_STRUCTURE_RECONCILED_PARTIAL",
@@ -32,8 +32,8 @@
   "colours/typeface/easing not sampled",
   "identity not re-checked against live YouTube",
   "shot count not verified here (historical 283 unverified)",
-  "807 candidates second-passed by one reviewer at reduced resolution (4.1% wrong type, 3.1% no visible change); native-resolution check of 58 flagged rows not done",
-  "gap boundaries moved by a measured one-frame heuristic; +/-1 frame caveat remains"
+  "gap boundaries moved by a measured one-frame heuristic; +/-1 frame caveat remains",
+  "807 candidates second-passed by one reviewer at reduced resolution; only 58 flagged rows native-pixel checked (~750 not)"
  ],
  "publication": "partial research package; not CT-certified",
  "candidate_second_pass": {
@@ -64,5 +64,13 @@
   ],
   "rule": "isolated one-frame spike at gap end >=10% and >=3x prior 4-frame max: last gap frame reassigned to next state",
   "negative_tests": "3 DETECTED"
+ },
+ "native_check_58": {
+  "rows": 58,
+  "type_changed": 37,
+  "type_ok": 19,
+  "no_real_change": 2,
+  "types_updated": 11,
+  "note": "native-pixel crops; only these 58 rows"
  }
 }
