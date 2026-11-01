@@ -1,3 +1,10 @@
+# Machine A owner-directed checkpoint — NICK_263–264 (2026-11-01)
+
+**Parent `342fcace`.** PR #36 / canonical branch still `223f4498`, untouched. 540/1,612 complete; next `NICK_265 mhb_Nd-0VjQ`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 534–535), 0 styles/formulas, zip OK. Usage UNKNOWN; session stopped here as a conservative checkpoint.
+
+- **NICK_263 `mWhpJZrTyNU` — Why Your First Million Feels Impossible (And The Next Comes Fast).** 2.07599× STRONG (5-peer 0.529× TYPICAL — tier unstable across windows); 11 claims. Reproduces: $1M→$2M 9.0 y at 8%, 3→4M 3.7 y, 4→5M 2.9 y; 8% vs 10% on $1M = $434,817 over 10 y; $300@25 $1.05M vs $1,000@45 $589K. Errors: opening "second million in about three years" contradicts its own 9-year math; 2→3M is 5.3 y not 6; hedge funds/PE "lower fees" wrong; "inflation becomes less relevant" misleading. Thumbnail "THE FIRST $1,000,000 IS ALSO A B*$£€".
+- **NICK_264 `maClOD9240k` — Why Everything Changes After You Start Looking Poor.** 1.36662× TYPICAL (5-peer 1.355×); 16 claims. Reproduces: $700/mo × 30 y = $853,980 (7%) / $1.04M (8%); 30-vs-35 gap $321K ($400/mo, 8%). Accurate references (recall): Millionaire Next Door $399/$235, Philadelphia Fed lottery-neighbour bankruptcies (PHLLOT), ~391% payday APR, Credit Karma 43%. Caveats: Toyota stat is from Stop Acting Rich (2009); Experian luxury stats dated; Edmunds values one quarter behind (ED4Q); rent-to-own "$1,000 for $200 TV" exceeds the stated 2–3×. Includes paid-community plug.
+
 # Machine A owner-directed checkpoint — NICK_261–262 (2026-11-01)
 
 **Parent `377308c2`.** PR #36 / canonical branch still `223f4498`, untouched. 538/1,612 complete; next `NICK_263 mWhpJZrTyNU`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 66 cells (dashboard 7 + rows 532–533), 0 styles/formulas, zip OK. Usage UNKNOWN.
