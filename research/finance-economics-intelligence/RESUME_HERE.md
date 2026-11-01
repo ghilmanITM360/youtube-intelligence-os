@@ -1,3 +1,7 @@
+# Machine A owner-directed correction — NICK_260 C17/C20 (2026-11-02)
+
+**Parent `c70a81ac`.** 546/1,612 (unchanged); next `NICK_271 nWkjUETbkkk`. Correction layer `corrections/NICK_260/` (receipt `NICK_260_CORRECTION_2026-11-01.json` + byte-exact copies of the original packet and receipts from `c70a81ac`). NY Fed HHDC 2025Q4 data workbook (released 2026-02-10, before the 2026-04-07 upload) re-opened and re-hashed: **C17 VERIFIED** (card balances 90+ days delinquent 12.70% in 25:Q4; the 7.13% was the separate annualised flow). **C20 PARTIAL**: 14.3% = 25:Q3 student-loan flow (14.26%), historically accurate but not latest at upload (25:Q4 16.19%); $1.696T vs NY Fed $1.66T. Only those two claims, the script analysis line and two added source receipts changed. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest (new `test_nick260_correction.py`), 2 node, workbook 5 cells (row 531 J/K/S + dashboard metadata), 0 styles/formulas, zip ok.
+
 # Machine A owner-directed checkpoint — NICK_268–270 (2026-11-01)
 
 **Parent `701d2361`.** PR #36 / canonical branch still `223f4498`, untouched. 546/1,612 complete; next `NICK_271 nWkjUETbkkk`. Validation: `validate_audit_966` PASS (0 errors), `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 539–541), 0 styles/formulas, 16 hashtag text cells (not errors), zip OK. Usage UNKNOWN. Source-confidence labels as in NICK_265–267.

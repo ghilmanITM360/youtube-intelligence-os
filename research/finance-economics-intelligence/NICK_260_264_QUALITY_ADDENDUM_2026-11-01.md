@@ -1,6 +1,6 @@
 # NICK_260–264 evidence-quality addendum (2026-11-01, Machine A)
 
-Status: **FOCUSED_CORRECTION_RECORDED; ACCEPTED_PACKETS_UNCHANGED.** This follows the NICK_165 precedent. The original packets, receipts, ledger rows and workbook are not edited. This file records what a direct primary-source recheck found. A later narrow correction commit may apply it to the packet and its projections. Earlier packets (≤ NICK_264) are **not** retro-labelled with the new `source_confidence` scale, so they do not meet the standard introduced in NICK_265.
+Status: **FOCUSED_CORRECTION_RECORDED.** Update 2026-11-02: C17 and C20 were applied to `audit-batches/NICK_260.json` and its receipts by the correction layer `corrections/NICK_260/` (receipt, byte-exact original copies); the other packets are unchanged. This follows the NICK_165 precedent. The original packets, receipts, ledger rows and workbook are not edited. This file records what a direct primary-source recheck found. A later narrow correction commit may apply it to the packet and its projections. Earlier packets (≤ NICK_264) are **not** retro-labelled with the new `source_confidence` scale, so they do not meet the standard introduced in NICK_265.
 
 ## Source-confidence profile of the accepted packets
 
