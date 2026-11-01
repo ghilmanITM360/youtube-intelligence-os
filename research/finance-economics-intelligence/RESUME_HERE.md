@@ -1,3 +1,9 @@
+# Machine A owner-directed checkpoint — NICK_260 (2026-11-01)
+
+**Parent `fff72c12`.** PR #36 / canonical branch still `223f4498`, untouched. 536/1,612 complete; next `NICK_261 mKVSk76bOJI`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 35 cells (dashboard 7 + row 531), 0 styles/formulas, zip OK. Single long-form video (2,984 s, 7,292 words, full stored text read); usage UNKNOWN.
+
+- **NICK_260 `mErWx9GiVUc` — You're Not Ready For What's Coming.** 0.77667× TYPICAL (5-peer 1.115× TYPICAL); 57 claim groups, 13 search-summary sources. Verified: Census $83,260→$83,730 (+$470); Yale $3,800→$1,700; NY Fed 94% (Jan–Aug 2025 only; 86% by Nov); NY Fed $1.28T cards; SF Fed $2.1T excess savings gone Mar 2024; NAHB 74.9%/100.6M; Challenger 54,836 AI cuts; DOL $64K fee example; retirement $830K→$342K real→$12,654→$36,354 reproduces. Wrong: 2026 401(k)/HSA limits ($24,000/$31,500/$4,450/$8,950 vs $24,500/$32,500/$4,400/$8,750); 22.5%/1909 credited to Tax Foundation (Yale's); "911K = 10% smaller" (≈0.6%); 2009 home-sales comparison (lowest since 1995); Goldman/JPM "65%" (45%/60%); Klarna "replaced 700". Stale: Morningstar 3.7% (3.9% for 2026). Unsupported: 30.9% panic sellers, 12.7% 90+ stock, version-two $28K/$9K/$31K outcomes. Edmunds values near but not Q4 2025 ($772, 29.3%, $7,214, 20.8%). $2,990 mortgage needs unstated PMI ($2,694 P&I). Thumbnail headline misspelled "IT'S HAPENING!".
+
 # Machine A owner-directed checkpoint — NICK_259 (2026-11-01)
 
 **Parent `fa5a7e42`.** PR #36 / canonical branch still `223f4498`, untouched. 535/1,612 complete; next `NICK_260 mErWx9GiVUc` (about 50 minutes; run it alone or with one short video). Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 35 cells (dashboard 7 + row 530), 0 styles/formulas, zip OK. Single-video batch because usage is UNKNOWN.
