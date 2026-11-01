@@ -6,7 +6,7 @@ def wr(p,rows,fields=None):
 def load():
     S=sorted(rd('integrated_v2/reviewed_states_v2.csv'),key=lambda s:int(s['start']))
     M=[];[M.extend(rd(f'phaseA/merge_review_{i}.csv')) for i in(1,2,3)]
-    G=[];[G.extend(rd(f'phaseA/gap_review_{i}.csv')) for i in(1,2)]
+    G=[];[G.extend(rd(f'phaseA/gap_review_{i}.csv')) for i in(1,2)];[G.extend(rd(f'phaseA/gap_review_r{i}.csv')) for i in(1,2,3,4)]
     return S,M,G
 SIBLING_SAME={'S0089.2':'S0089.1','S0116.2':'S0116.1'}  # own frame review, phaseA/split_children
 CORR={
@@ -42,7 +42,7 @@ def build():
             t['corr_desc']=CORR.get(s['id'],'');t['corr_basis']='phaseA/split_children sheet, sequential decode, own review' if s['id'] in CORR else ''
             states.append(t)
         comps.append(dict(composition_id=cid,n_states=len(g),state_ids=' '.join(s['id'] for s in g),start=g[0]['start'],end=g[-1]['end'],span_frames=int(g[-1]['end'])-int(g[0]['start'])+1,state_frames=sum(int(s['end'])-int(s['start'])+1 for s in g),first_family=g[0]['family']))
-    U=rd('integrated_v2/unowned_intervals_v2.csv');gm={r['gap_id']:r for r in rd('phaseA/gap_dense_metrics.csv')};gr={g['gap_id']:g for g in G}
+    U=rd('integrated_v2/unowned_intervals_v2.csv');gm={r['gap_id']:r for r in rd('phaseA/gap_dense_metrics.csv')+rd('phaseA/gap_dense_metrics_r.csv')};gr={g['gap_id']:g for g in G}
     unowned=[]
     for u in U:
         t=dict(u);g=gr.get(u['gap_id']);m=gm.get(u['gap_id'])
@@ -89,7 +89,7 @@ def check(states,comps,unowned,M,G,orig_states=None,verbose=True):
         if any(i not in order for i in ms):e.append('unknown member in '+c['composition_id']);continue
         idx=[order.index(i) for i in ms]
         if idx!=list(range(idx[0],idx[0]+len(idx))):e.append('noncontiguous '+c['composition_id'])
-    if sum(1 for u in unowned if u['rr_reviewed']=='YES')!=len(G) or len(G)!=48:e.append('gap review coverage')
+    if sum(1 for u in unowned if u['rr_reviewed']=='YES')!=len(G) or len(G)!=143:e.append('gap review coverage')
     for u in unowned:
         if u['rr_reviewed']=='YES' and not u['rr_reason'].strip():e.append('gap reason lost '+u['gap_id'])
     return e
@@ -114,5 +114,5 @@ if __name__=='__main__':
     dur=[c['span_frames']/24 for c in comps]
     summ=dict(status='MERGE_SPLIT_GAP_RECONCILED_STRUCTURE_STILL_NOT_SEMANTICALLY_CERTIFIED',states=len(states),compositions=len(comps),state_frames=sum(int(s['end'])-int(s['start'])+1 for s in states),unowned_intervals=len(unowned),unowned_frames=sum(int(u['n_frames']) for u in unowned),total_frames=N,
       merge_decisions=dict(collections.Counter(m['decision'] for m in M)),comp_median_span_s=round(st.median(dur),2),comp_mean_span_s=round(st.mean(dur),2),comp_p90_span_s=round(sorted(dur)[int(.9*len(dur))],2),
-      gaps_rereviewed=48,gap_class_rr=dict(collections.Counter(u['rr_class'] for u in unowned if u['rr_reviewed']=='YES')),candidates_second_pass_not_reviewed=807,validator_positive='PASS' if not e else 'FAIL',negative_tests={k:('DETECTED' if v else 'MISSED') for k,v in neg.items()},audio='AUDIO_NOT_VERIFIED')
+      gaps_rereviewed=143,gap_class_rr=dict(collections.Counter(u['rr_class'] for u in unowned if u['rr_reviewed']=='YES')),candidates_second_pass_not_reviewed=807,validator_positive='PASS' if not e else 'FAIL',negative_tests={k:('DETECTED' if v else 'MISSED') for k,v in neg.items()},audio='AUDIO_NOT_VERIFIED')
     json.dump(summ,open('integrated_v3/integration_summary_v3.json','w'),indent=1);print(json.dumps(summ,indent=1))
