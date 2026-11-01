@@ -1,3 +1,10 @@
+# Machine A owner-directed checkpoint — NICK_277–278 (2026-11-02)
+
+**Parent `175b79ca`.** PR #36 / canonical branch still `223f4498`, untouched. 554/1,612 complete; next `NICK_279 pTyMmSZ2EVs`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 549–550), 0 styles/formulas, 16 hashtag text cells, zip OK. Usage UNKNOWN.
+
+- **NICK_277 `ozcH8vngH08` — How To Build Wealth If You're Already Behind.** 0.56705× TYPICAL but 5-peer 0.493× WEAK, so the tier is unstable (~13 days old at snapshot); 7 claims. BLS CE 2024 inspected: eating out $3,945 per household (script says per person). $3,500/yr at 10% for 30 y = $575,729 year-end ($633K start-of-year, $659K monthly), so "north of $600,000" depends on convention. Mostly sound sequencing advice; caller anecdote unlocated.
+- **NICK_278 `pFs8QGikczo` — Last Big Wealth Opportunity For The Next 10 Years.** 3.30266× STRONG but 5-peer 1.908× TYPICAL, so the tier is unstable; 14 claims. FRED inspected: Brent $71.32 pre-war, $118.42 on 2026-03-20 (month-end $126.69); S&P Q1 2026 −4.63% verified; dollar +2.7% in March; 1975 unemployment 9.0%. Wrong/overstated: VIX "mid-teens to over 35" (closes ~18–21 to 31.05); "inflation 2.7% / unemployment 4.2%" (latest at upload 2.4% / 4.4%); 1974 "toward 14.5%" (1980 peak); "$450, not $676" impossible; guy one's $18,000 irreproducible; "no manager has beaten the S&P" false. Goldman target, diplomatic signals, productivity SOURCE_UNAVAILABLE.
+
 # Machine A owner-directed checkpoint — NICK_275–276 (2026-11-02)
 
 **Parent `0c5eb6e0`.** PR #36 / canonical branch still `223f4498`, untouched. 552/1,612 complete; next `NICK_277 ozcH8vngH08`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 547–548), 0 styles/formulas, 16 hashtag text cells, zip OK. Usage UNKNOWN. NICK_271–274 thumbnails re-opened this session: recorded descriptions match the images.

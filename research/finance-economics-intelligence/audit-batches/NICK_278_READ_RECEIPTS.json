@@ -1,0 +1,291 @@
+{
+ "batch_id": "NICK_278_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "pFs8QGikczo",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "7a13dba878362f10ec3c27f3d8f209069de19a1c9ad30f64d05b625aa474417a",
+   "character_count": 20195,
+   "canonical_utf8_bytes": 20195,
+   "canonical_whitespace_word_count": 3395,
+   "coverage_token_count": 3452,
+   "read_character_ranges": [
+    [
+     0,
+     10100
+    ],
+    [
+     10100,
+     20195
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "Two guys, same age, 27, same city, same income, both pulling around $58,000 a year.",
+   "last_text_witness": "don't have to be that person. You just have to understand the math clearly enough to act on it when your gut is screaming otherwise. That's the whole thing. The window is open. What you do with it is yours. If this changed how you're thinking about the next few months, drop a comment. I read all of them. Subscribe if you haven't. I'll see you in the next one.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 10100,
+     "first80": "Two guys, same age, 27, same city, same\nincome, both pulling around $58,000 a\nye",
+     "last80": "ir\nlosses, and missed the entire recovery,\nnot some of it, all of it. And this\ni"
+    },
+    {
+     "start": 10100,
+     "end": 20195,
+     "first80": "sn't a unique event, this is the\npattern, every single cycle without\nexception.\n",
+     "last80": "ent. I read all of them. Subscribe\nif you haven't. I'll see you in the next\none."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "150_pFs8QGikczo_Last_Big_Wealth_Opportunity_For_The_Next_10_Years_or_MUCH_longer.txt",
+   "archive_member_sha256": "e8ef265ddc0d7c45465b418ccc1d76b218381b35e3120c9671166cc9a6e40cd1",
+   "archive_member_bytes": 21794,
+   "archive_member_lines": 585,
+   "audio_verified": false,
+   "image_sha256": "f697c6474955793d816e0f5faba217a3ac74489279f05aeabc75d62e2296997e",
+   "image_bytes": 104779,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/pFs8QGikczo/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/pFs8QGikczo/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-02"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "FREDBRENT",
+   "url": "https://fred.stlouisfed.org/series/DCOILBRENTEU",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED DCOILBRENTEU, fredgraph.csv; SHA-256 f3ad22ec3aa8800fc5edfa638d364ae388a5612ed895d233f0b2af67c807a393",
+   "finding": "2026-02-27 $71.32; 2026-03-20 $118.42; 2026-03-31 $126.69.",
+   "limitations": "EIA Europe Brent spot; daily closes.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDSP",
+   "url": "https://fred.stlouisfed.org/series/SP500",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED SP500, fredgraph.csv; SHA-256 49faa5a4f87574084a5e525e44013bad74e831947c2cc98b8031e87508d0d6b9",
+   "finding": "2025-12-31 6,845.50; 2026-03-31 6,528.52 (-4.63%); prior high 6,978.60 (2026-01-27).",
+   "limitations": "Price index only; 10-year window.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDVIX",
+   "url": "https://fred.stlouisfed.org/series/VIXCLS",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED VIXCLS, fredgraph.csv; SHA-256 7cfbdd416b37b45f1fb2ab7d476e9965aed3db8a402a258a56b207df73624702",
+   "finding": "Late-February closes 17.93-21.01; highest March close 31.05 (2026-03-27).",
+   "limitations": "Daily closes; intraday highs not in series.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDCPINSA",
+   "url": "https://fred.stlouisfed.org/series/CPIAUCNS",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED CPIAUCNS, fredgraph.csv; SHA-256 cfab9b9be4a5d4f06253c4dcc3f7e0b28b1d58837e710dd7cb1fd54a49e7ad7c",
+   "finding": "Y/y: Jan 1974 9.4%, Dec 1974 12.3%, Mar 1980 14.8%, Feb 2026 2.4%, Mar 2026 3.3% (released after upload).",
+   "limitations": "Not seasonally adjusted; current vintage.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDUN",
+   "url": "https://fred.stlouisfed.org/series/UNRATE",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED UNRATE, fredgraph.csv; SHA-256 621ff6fadf50910cb7a21ee20ba610c247cb043b29b4e05c4c1a72fadca2a06c",
+   "finding": "May 1975 9.0%; Feb 2026 4.4%; Mar 2026 4.3% (released after upload).",
+   "limitations": "Current vintage; revisions possible.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDUSD",
+   "url": "https://fred.stlouisfed.org/series/DTWEXBGS",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED DTWEXBGS, fredgraph.csv; SHA-256 8080a7d962c8e8976e4394a5dbdb2e4a2ddb984c1c5aefc581aa42b715fd6932",
+   "finding": "2026-02-27 117.82; 2026-03-31 121.04 (+2.7%).",
+   "limitations": "Broad trade-weighted index, not ICE DXY.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 36387,
+    "age_days": 161.2619,
+    "views_per_day": 225.6391621331511,
+    "peer_median_10": 68.32034005434815,
+    "peer_median_5": 118.27402780278126,
+    "peer_ratio_10": 3.302664505967877,
+    "peer_ratio_5": 1.9077659425736164,
+    "tier_10": "STRONG",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "BAK_C8cWfjw",
+     "f6HIYQUiMoU",
+     "8rhg_K7c4O8",
+     "vNu80_63AL4",
+     "4eGrsL5CwBQ",
+     "CjOMCDm57hw",
+     "YbvRMquX3Tc",
+     "mErWx9GiVUc",
+     "nYcSSd5V5_4",
+     "RUVOjfrIemY"
+    ],
+    "peer_ids_5": [
+     "BAK_C8cWfjw",
+     "f6HIYQUiMoU",
+     "8rhg_K7c4O8",
+     "vNu80_63AL4",
+     "4eGrsL5CwBQ"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "BAK_C8cWfjw",
+      "Title": "Why Everything Changes After You Stop Trying to Look Rich",
+      "Views": "19184",
+      "Age_days": "162.1996",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "f6HIYQUiMoU",
+      "Title": "WTF Just Happened To The Housing Market?!",
+      "Views": "361243",
+      "Age_days": "160.0764",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "8rhg_K7c4O8",
+      "Title": "Every Financial Trap You'll Face As Your Net Worth Grows",
+      "Views": "53317",
+      "Age_days": "159.2108",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "vNu80_63AL4",
+      "Title": "Who Can Actually Afford a \"Normal\" Life in 2026 (The Math Is Brutal)",
+      "Views": "9889",
+      "Age_days": "164.097",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "4eGrsL5CwBQ",
+      "Title": "Why Everything Changes After You Get 832 Credit Score",
+      "Views": "10325",
+      "Age_days": "158.0267",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "CjOMCDm57hw",
+      "Title": "POV: You Paid Off Your House... Now What? (How to Handle the Extra Cash)",
+      "Views": "8779",
+      "Age_days": "165.3831",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "YbvRMquX3Tc",
+      "Title": "POV: Your Life With Every Level of Debt (& What To Do)",
+      "Views": "11841",
+      "Age_days": "166.0645",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "mErWx9GiVUc",
+      "Title": "You're Not Ready For What's Coming",
+      "Views": "11367",
+      "Age_days": "156.0207",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "nYcSSd5V5_4",
+      "Title": "The Shocking Cost of Being 'Normal' in 2026",
+      "Views": "9621",
+      "Age_days": "167.0708",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "RUVOjfrIemY",
+      "Title": "Why Your Credit Score Drops Even When You Pay On Time",
+      "Views": "5344",
+      "Age_days": "155.1184",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Percent changes from FRED closes; DCA future values; share-count arithmetic",
+   "results": {
+    "brent_72_to_118": 0.639,
+    "brent_feb_end_to_mar20": 0.66,
+    "brent_feb_end_to_mar_end": 0.776,
+    "sp500_q1_2026": -0.0463,
+    "vix_max_march_close": 31.05,
+    "cpi_feb2026_yoy": 0.0241,
+    "guy2_at_16pct": 206672,
+    "guy2_at_17pct": 222738,
+    "shares_after_30pct_drop": 0.4286,
+    "shares_after_40pct_drop": 0.6667,
+    "dalbar_gap": 6.69,
+    "amzn_multiple": 120.0,
+    "msft_multiple": 25.53,
+    "usd_broad_march": 0.0273
+   },
+   "limitations": "Price-only S&P; FRED current vintage; hypothetical investors as stated."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification. Six FRED series directly inspected; Dalbar, JPMorgan, RBC, IMF and SPIVA figures recall; 2026 political and Goldman claims SOURCE_UNAVAILABLE. No paid purchases."
+}

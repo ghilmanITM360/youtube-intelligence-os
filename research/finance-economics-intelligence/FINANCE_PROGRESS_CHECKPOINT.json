@@ -1,12 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-11-01T19:56:50.894182+00:00",
+ "as_of_utc": "2026-11-01T20:02:04.930884+00:00",
  "status": "MACHINE_A_BRANCH_PUBLISHED_PENDING_PR36_RECONCILIATION",
  "writer": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED",
  "branch": "codex/finance-machine-a-owner-directed",
  "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "note": "NICK_276 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
+  "note": "NICK_278 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
  },
  "batches": [
   {
@@ -779,17 +779,34 @@
    "machine": "A",
    "branch": "codex/finance-machine-a-owner-directed",
    "parent": "0c5eb6e0",
-   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "commit": "175b79ca",
    "accepted": 2,
    "blocked": 0,
    "completed": 552,
    "remaining": 1060,
    "original_pending": 414,
    "expansion_pending": 646,
+   "remote_and_pr_verified": "MACHINE_A_BRANCH_REMOTE_VERIFIED;PR36_NOT_APPLICABLE"
+  },
+  {
+   "nicks": [
+    "NICK_277",
+    "NICK_278"
+   ],
+   "machine": "A",
+   "branch": "codex/finance-machine-a-owner-directed",
+   "parent": "175b79ca",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 2,
+   "blocked": 0,
+   "completed": 554,
+   "remaining": 1058,
+   "original_pending": 412,
+   "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 6,
+ "session_accepted": 8,
  "session_blocked": 0,
  "packets": [
   {
@@ -815,30 +832,54 @@
    "packet_sha256": "632180c85aa1f6c5a64db362e79ff6fe8d21d4493c6791b0b11c7933fc19895b",
    "read_receipts_sha256": "ad486267c863d924bde1404b878524c8a560ecaa0537c64575a5b3c30d1b4a07",
    "validation_sha256": "57e82cb2bdcfa767e947565cf273e5465d107a6babd0f38129374ee1eb4f745f"
+  },
+  {
+   "nick": "NICK_277",
+   "video_id": "ozcH8vngH08",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 20215,
+   "claim_groups": 7,
+   "primary_source_receipts": 1,
+   "calculation_receipts": 2,
+   "packet_sha256": "84e2c94d9620a8f12f53f8114fd4db448d8f4b846e9bcdb74fd3f84dc461094a",
+   "read_receipts_sha256": "7f00a2937534f1b1681e9d071fb438f4f0ad1bcf220784355eec3f4916b0547b",
+   "validation_sha256": "1584f1bb91dddcdbeedd296c73c9cb182b75bbaf531a289eee0b69e623b2221c"
+  },
+  {
+   "nick": "NICK_278",
+   "video_id": "pFs8QGikczo",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 20195,
+   "claim_groups": 14,
+   "primary_source_receipts": 6,
+   "calculation_receipts": 2,
+   "packet_sha256": "74877e4eee649f2bbfbf790ab5fa76598678d48b0bdbb3fd75893ac95385047c",
+   "read_receipts_sha256": "6c282e9d8e9f57d3af4527595b94164e346561fda316e27ef424e3a898aa0a58",
+   "validation_sha256": "dc05112d36dd41a8c85cd8df873f86d15f700975017dede321eae3cef9bc3c7d"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 552,
-  "remaining": 1060,
+  "completed": 554,
+  "remaining": 1058,
   "original_total": 966,
-  "original_pending": 414,
+  "original_pending": 412,
   "expansion_total": 646,
   "expansion_pending": 646
  },
  "coverage": {
-  "full_stored_text_characters": 1957591,
-  "claim_groups": 1499,
-  "primary_source_receipt_rows": 256,
-  "source_independence": "Receipt rows include disclosed legitimate reuse;not256independentsources",
-  "calculation_receipts": 194,
-  "authentic_thumbnails_native_and_mobile": 95
+  "full_stored_text_characters": 1998001,
+  "claim_groups": 1520,
+  "primary_source_receipt_rows": 263,
+  "source_independence": "Receipt rows include disclosed legitimate reuse;not263independentsources",
+  "calculation_receipts": 198,
+  "authentic_thumbnails_native_and_mobile": 97
  },
  "synchronization": {
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "43131ee1da16780e9176c5bf213612fe701738b897b600739b620ae8227a6def",
+  "workbook_sha256": "5523e782fd87ad0c98fad5ef7e61e1b5b87cbe3e9b5128239981ecaac62bbf50",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -858,14 +899,14 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "8fac43785a9dd421753fbe22a017ae17ee6b0a3653e161ac871cbb58600f43c5",
-  "VIDEO_AUDIT_966.csv": "8b87a88e14e49e9590f627fe811b786f6cd4918641aeb0e01d8c55f88ae481b8",
-  "VIDEO_COMPLETION_MATRIX.csv": "4bcf111300e93141b8293b620f661f1b77a7122b1c31a7ebaec4ebea6a1f9186",
-  "THUMBNAIL_ANALYSIS_966.csv": "099c24310371c585496e7d56411c92d08f90188ecb0588785b81706e4e975bff",
-  "SCRIPT_ANALYSIS_966.csv": "2aaa6a0ecf19dd057a0a451a0a197f178c0619de0ab6eeaa2cd78fd9f998a834",
-  "TITLE_ANALYSIS_966.csv": "ca011110dbd8763f0c6ca4463d2900cdacd89079ed3ecd024fba901948ae093b",
-  "TOPIC_ANALYSIS_966.csv": "b480253e61e9a73f3f583d28b25af1bb6a33c0b110d20b3d0c1f2d8ba8f1fb99",
-  "VIRALITY_INTELLIGENCE_966.csv": "a9e32f98eb96f54cbfeffd1905d27dd3b73f84fa66153bd6cc0bcbb42ba638ba"
+  "VIDEO_AUDIT_966.jsonl": "8319c6e7d8807e7de5d34192636b6ffd72201f6ded63eb4c10082b30a14cea36",
+  "VIDEO_AUDIT_966.csv": "5c09d738d56e9ff1089e09fec0f0aea037be1722368d7d75a8c91cf346646d53",
+  "VIDEO_COMPLETION_MATRIX.csv": "9fe783503f0a7b5444cd48160364a3d3efbd7571cc6955ed99b9af1714dbeae3",
+  "THUMBNAIL_ANALYSIS_966.csv": "4b06f07072b66aee7f2d6bd35373e234ed3152e33259503b8fa1d16353691a85",
+  "SCRIPT_ANALYSIS_966.csv": "d33c870b53979ee6528b4f7e35d70c7a7d7c8501a891efa113de25e5428c1e4b",
+  "TITLE_ANALYSIS_966.csv": "513befc5cbde3042492e8505f4b4191efbd7a04d7023810824047ec270dd9106",
+  "TOPIC_ANALYSIS_966.csv": "fc885576a73af2f6d0f7b64e79fd14c76d5b2ff9fd12911083bc79f30321129f",
+  "VIRALITY_INTELLIGENCE_966.csv": "6cc221b86ab799cb0ee4ba1b0ff183ac32b32046a1cd18f760fda85b8e5853b6"
  },
  "resources": {
   "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
@@ -876,9 +917,9 @@
   "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_277",
-  "video_id": "ozcH8vngH08",
-  "title": "How To Build Wealth If You're Already Behind"
+  "nick": "NICK_279",
+  "video_id": "pTyMmSZ2EVs",
+  "title": "You Can't Afford a House. Good."
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
  "stop_reason": "IN_SESSION",
