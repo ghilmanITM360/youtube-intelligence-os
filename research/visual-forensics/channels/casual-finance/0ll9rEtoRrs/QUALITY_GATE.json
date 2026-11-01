@@ -1,6 +1,6 @@
 {
  "video_id": "0ll9rEtoRrs",
- "checkpoint": "I",
+ "checkpoint": "J",
  "date": "2026-11-01",
  "classification": [
   "VISUAL_STRUCTURE_RECONCILED_PARTIAL",
@@ -15,8 +15,7 @@
  "states": 530,
  "compositions": 370,
  "candidates": 1032,
- "candidates_independently_viewed_after_first_pass": 483,
- "candidates_first_pass_only": 549,
+ "candidates_independently_viewed_after_first_pass": 1032,
  "disputes": 148,
  "unowned_intervals": 143,
  "unowned_rereviewed": 48,
@@ -28,14 +27,21 @@
  "asr_sentences_aligned": 192,
  "validators": "positive PASS; 16 negative tests DETECTED (integrate_v3.py, validate_v3.py)",
  "limits": [
-  "549 CONFIRMED candidates are first-pass only; sample type error 8.5%, no-visible-change 5.5%",
   "95 unowned gaps remain first-pass classification; not absorbed",
   "3 UNCERTAIN merges; S0080/S0212 possible missed merges not applied",
   "6 gap hard-cut frames sit at gap end; boundary ownership not corrected",
   "ASR is historical Whisper-base, never listened to; audio never heard",
   "colours/typeface/easing not sampled",
   "identity not re-checked against live YouTube",
-  "shot count not verified here (historical 283 unverified)"
+  "shot count not verified here (historical 283 unverified)",
+  "807 candidates second-passed by one reviewer at reduced resolution (4.1% wrong type, 3.1% no visible change); native-resolution check of 58 flagged rows not done"
  ],
- "publication": "partial research package; not CT-certified"
+ "publication": "partial research package; not CT-certified",
+ "candidate_second_pass": {
+  "ok": 749,
+  "wrong_type": 33,
+  "no_visible_change": 25,
+  "types_corrected": 25,
+  "method": "single reviewer, 560x315 before/after frames"
+ }
 }

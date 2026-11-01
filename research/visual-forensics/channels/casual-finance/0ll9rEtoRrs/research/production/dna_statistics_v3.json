@@ -16,20 +16,20 @@
  "events_in_states": 853,
  "events_in_unowned_gaps": 143,
  "event_types": {
-  "ADDITIVE_ENTRY": 271,
-  "FULL_REPLACE": 250,
+  "ADDITIVE_ENTRY": 268,
+  "FULL_REPLACE": 252,
   "HIGHLIGHT_ADD": 118,
   "DRAW_ON_OR_REVEAL": 94,
   "TEXT_CHANGE": 52,
-  "PAN_OR_SCROLL": 34,
+  "PAN_OR_SCROLL": 32,
   "CHARACTER_ANIMATION": 25,
   "ZOOM_OR_SCALE": 23,
   "NUMBER_OR_LABEL_CHANGE": 23,
   "OBJECT_MOTION": 21,
   "POSE_SWAP": 17,
   "EXPRESSION_CHANGE": 15,
-  "ELEMENT_SWAP": 14,
-  "PARTIAL_REPLACE": 10,
+  "ELEMENT_SWAP": 15,
+  "PARTIAL_REPLACE": 12,
   "ELEMENT_EXIT": 9,
   "WIPE_OR_FADE": 6,
   "OTHER": 6,
@@ -74,10 +74,10 @@
    "share_of_state_frames_pct": 5.4,
    "median_dur_s": 0.96,
    "top_events": {
-    "ADDITIVE_ENTRY": 25,
+    "ADDITIVE_ENTRY": 23,
     "TEXT_CHANGE": 19,
     "NUMBER_OR_LABEL_CHANGE": 18,
-    "DRAW_ON_OR_REVEAL": 14
+    "DRAW_ON_OR_REVEAL": 16
    }
   },
   "F2 character+prop": {
@@ -85,7 +85,7 @@
    "share_of_state_frames_pct": 16.4,
    "median_dur_s": 1.38,
    "top_events": {
-    "ADDITIVE_ENTRY": 51,
+    "ADDITIVE_ENTRY": 49,
     "FULL_REPLACE": 35,
     "TEXT_CHANGE": 10,
     "EXPRESSION_CHANGE": 6
@@ -173,11 +173,10 @@
  },
  "compositions_per_min": 21.93,
  "candidate_verification": {
-  "FIRST_PASS_ONLY": 549,
-  "SAMPLED_CONFIRMED_TYPE_WRONG": 22,
+  "REVIEWED_CONFIRMED_TYPE_OK": 749,
+  "REVIEWED_CONFIRMED_TYPE_WRONG": 33,
   "SECOND_PASSED": 225,
-  "SAMPLED_CONFIRMED_TYPE_OK": 218,
-  "SAMPLED_NO_VISIBLE_CHANGE": 18
+  "REVIEWED_NO_VISIBLE_CHANGE": 25
  },
- "label": "MEASURED from v3 ledgers; 549 CONFIRMED candidates remain first-pass only; type corrections only on independently viewed rows; unowned gaps not absorbed; 48 priority gaps re-reviewed; embedded-video label corrected only for those 48"
+ "label": "MEASURED from v3 ledgers; all 807 first-pass CONFIRMED candidates now independently viewed; type corrections applied only with HIGH/MEDIUM reviewer confidence; unowned gaps not absorbed; 48 priority gaps re-reviewed; embedded-video label corrected only for those 48"
 }

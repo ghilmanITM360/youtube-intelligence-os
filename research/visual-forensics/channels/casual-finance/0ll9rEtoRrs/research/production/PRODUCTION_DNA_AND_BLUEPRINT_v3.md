@@ -9,7 +9,7 @@ Labels: MEASURED (computed from ledgers/frames), OBSERVED (seen in frames), INFE
 - 530 states are grouped into 370 compositions (158 confirmed merges + 2 split-sibling groupings). States and their events are preserved; compositions are a grouping layer only.
 - Split children (S0089.*, S0097.*, S0116.*, S0475.*, S0466P/S0466, S0033) re-described from their own frames (`integrated_v3/split_child_corrections_v3.csv`). S0466 hard replace at f21628 is observed in sequential decode, so the earlier "inferred 21628" caveat is closed. S0033 has no visible infographic cut-in through f1294.
 - 48 priority unowned intervals (1,060 frames) re-reviewed with dense sheets plus per-frame diffs. Only 6 of the 35 earlier EMBEDDED_VIDEO intervals are third-party playback (221 frames); 24 are PDF/browser/screen scroll inside a composition. The 658-frame embedded-video figure in v2 was an over-label for those intervals.
-- 258 of the 807 first-pass CONFIRMED candidates were independently viewed (201 stratified sample + 57 expansion rows of error-prone types); 549 remain first-pass only. Sample result: 86.1% type correct, 8.5% wrong type, 5.5% no visible change. 17 types corrected.
+- All 807 first-pass CONFIRMED candidates are now independently viewed (before/after frames at 560×315, one reviewer per row): 749 type OK (92.8%), 33 wrong type (4.1%), 25 no visible change (3.1%; 15 LOW, 10 MEDIUM confidence, mostly tiny highlight extensions). 25 types corrected (HIGH/MEDIUM confidence only). This is single-reviewer second pass at reduced resolution, not native-resolution frame-by-frame.
 
 ## 1. Editing DNA (MEASURED)
 | Metric | Value |
@@ -17,13 +17,13 @@ Labels: MEASURED (computed from ledgers/frames), OBSERVED (seen in frames), INFE
 | States | 530 (31.4/min); median 1.12 s, mean 1.67 s, p10 0.29 s, p90 3.79 s, max 13.12 s |
 | Compositions | 370 (21.9/min); span median 1.77 s, mean 2.47 s, p90 5.42 s |
 | Edit events (excl. not-a-change/codec) | 996 (59/min); 853 in states, 143 in unowned gaps |
-| Additive entry | 271 (27.2%) |
-| Full replace | 250 (25.1%) |
+| Additive entry | 268 (26.9%) |
+| Full replace | 252 (25.3%) |
 | Highlight add | 118 (11.8%) |
 | Draw-on / reveal | 94 (9.4%) |
 | Text change | 52 |
-| Pan/scroll | 34; zoom/scale 23; object motion 21; character animation 25 |
-The event totals are first-pass for 549 rows; sample error rates above apply as uncertainty (about ±9% on type labels).
+| Pan/scroll | 32; zoom/scale 23; object motion 21; character animation 25 |
+Type labels carry about ±4% uncertainty (second-pass wrong-type rate); 25 rows have no visible change at review resolution and are kept but flagged.
 INFERRED: rhythm = hard cut to a new drawn composition, then build it up piece by piece (typical state 1 s, composition about 1.8 s), with highlights/draw-on for emphasis.
 
 ## 2. Visual DNA (MEASURED families, OBSERVED look)
@@ -61,9 +61,9 @@ Limited to the ASR numeric-sentence index above. Factual claim checking of the v
 | Merge/composition grouping | 161/161 reviewed; 3 UNCERTAIN |
 | Split children | frame-reviewed |
 | Unowned gaps | 48/143 re-reviewed; 95 first-pass only (not absorbed) |
-| CONFIRMED candidates | 258/807 independently viewed; 549 first-pass only |
+| CONFIRMED candidates | 807/807 independently viewed (single reviewer, reduced resolution); 25 no-visible-change flags |
 | ASR alignment | time-overlap only; not listened |
 | Audio / AV | AUDIO_NOT_VERIFIED, AV_CERTIFICATION_BLOCKED |
 
 ## 8. Still not done
-Second pass for 549 candidates; 95 unowned gaps; ruling on possible missed merges (S0080, S0212); 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.
+Native-resolution check of the 25 no-visible-change and 33 corrected rows; 95 unowned gaps; ruling on possible missed merges (S0080, S0212); 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.

@@ -63,3 +63,7 @@ Done (all new files; originals `integrated/`, `integrated_v2/`, reviewer outputs
 Seal: `EVIDENCE_SHA256SUMS_checkpoint_I` (scope: handoff, integrated_v3, phaseA csv/key files + sheets, phaseB, production, v1_scripts; excludes `frames/`, source MP4 and earlier sealed files, which keep their own manifests).
 Not done: 549 candidates, 95 gaps, 3 UNCERTAIN merges, possible merges S0080/S0212, gap-cut boundary ownership, colours/typeface, listening/AV, live identity check, claim map/scorecard of the video.
 Next Video 004 step: second-pass the 549 first-pass candidates (risk-stratified, error-prone types first) and the 95 unreviewed gaps; or hand audio checklist to owner. Next queue video: position 5 `-X6YzlY_8tM`.
+
+## Checkpoint J (2026-11-01) — all 807 first-pass CONFIRMED candidates second-passed
+8 reviewers viewed the remaining 549 rows (`phaseA/cand_rest_review_{1..8}.csv`, sheets `cand_sheets_r/`). Totals over all 807: 749 CONFIRMED_TYPE_OK, 33 CONFIRMED_TYPE_WRONG, 25 NO_VISIBLE_CHANGE (15 LOW/10 MEDIUM). 25 types updated in `final_type_v3` (HIGH/MEDIUM only); `smp_*` columns keep provenance; originals unchanged. Rebuilt per-state specs and `dna_statistics_v3.json`; extended validator PASS, 8 negatives DETECTED.
+Correction to Checkpoint I text: "549 first-pass only" is superseded; remaining Video 004 gaps are the 95 unreviewed unowned gaps, 3 UNCERTAIN merges, S0080/S0212 possible merges, native-resolution check of 58 flagged candidate rows, listening/AV, colours/typeface, live identity.

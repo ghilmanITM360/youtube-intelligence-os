@@ -9,7 +9,7 @@ def run(states,comps,C,A,specs,V2C,src_sha):
     v2={c['id']:c for c in V2C}
     for c in C:
         if c['id'] in v2 and (c['verdict']!=v2[c['id']]['verdict'] or c['desc']!=v2[c['id']]['desc']):e.append('first-pass provenance altered '+c['id']);break
-        if c['smp_status'].startswith('SAMPLED') and not c['smp_reason'].strip():e.append('sample provenance lost '+c['id']);break
+        if c['smp_status'].startswith('REVIEWED') and not c['smp_reason'].strip():e.append('sample provenance lost '+c['id']);break
     for a in A:
         for s in a['states'].split():
             if s not in sid:e.append('asr bad state '+s);break
@@ -30,7 +30,7 @@ if __name__=='__main__':
     a4=copy.deepcopy(A);a4[0]['states']='S9999';n['invalid asr ref']=run(st,cp,C,a4,sp,V2,sha)
     s5=copy.deepcopy(sp);s5.pop();n['missing spec']=run(st,cp,C,A,s5,V2,sha)
     s6=copy.deepcopy(sp);s6[0]['composition_id']='CMP9999';n['bad spec ref']=run(st,cp,C,A,s6,V2,sha)
-    c7=copy.deepcopy(C);k=[x for x in c7 if x['smp_status'].startswith('SAMPLED')][0];k['smp_reason']='';n['lost sample provenance']=run(st,cp,c7,A,sp,V2,sha)
+    c7=copy.deepcopy(C);k=[x for x in c7 if x['smp_status'].startswith('REVIEWED')][0];k['smp_reason']='';n['lost sample provenance']=run(st,cp,c7,A,sp,V2,sha)
     c8=copy.deepcopy(C);c8[1]['id']=c8[0]['id'];n['duplicate candidate id']=run(st,cp,c8,A,sp,V2,sha)
     for k,v in n.items():print('NEG',k,'DETECTED' if v else 'MISSED')
     res['negative']={k:('DETECTED' if v else 'MISSED') for k,v in n.items()};json.dump(res,open('integrated_v3/validation_results_v3_extended.json','w'),indent=1)
