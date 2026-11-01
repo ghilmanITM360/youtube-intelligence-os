@@ -1,12 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-11-01T07:43:35.647118+00:00",
+ "as_of_utc": "2026-11-01T07:54:52.071648+00:00",
  "status": "MACHINE_A_BRANCH_PUBLISHED_PENDING_PR36_RECONCILIATION",
  "writer": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED",
  "branch": "codex/finance-machine-a-owner-directed",
  "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "note": "NICK_235 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
+  "note": "NICK_238 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
  },
  "batches": [
   {
@@ -466,17 +466,35 @@
    "machine": "A",
    "branch": "codex/finance-machine-a-owner-directed",
    "parent": "05616ade8a497e1c0d76311177c204a2f4022714",
-   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "commit": "5d7f78ee65bf12cc57141d0a19935eda7030b155",
    "accepted": 3,
    "blocked": 0,
    "completed": 511,
    "remaining": 1101,
    "original_pending": 455,
    "expansion_pending": 646,
+   "remote_and_pr_verified": "MACHINE_A_BRANCH_REMOTE_VERIFIED;PR36_NOT_APPLICABLE"
+  },
+  {
+   "nicks": [
+    "NICK_236",
+    "NICK_237",
+    "NICK_238"
+   ],
+   "machine": "A",
+   "branch": "codex/finance-machine-a-owner-directed",
+   "parent": "5d7f78ee65bf12cc57141d0a19935eda7030b155",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 3,
+   "blocked": 0,
+   "completed": 514,
+   "remaining": 1098,
+   "original_pending": 452,
+   "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 3,
+ "session_accepted": 6,
  "session_blocked": 0,
  "packets": [
   {
@@ -514,30 +532,66 @@
    "packet_sha256": "6a84e564502413639abc236ed601c44d194f460cf6162e815219b0d45a971eb5",
    "read_receipts_sha256": "90c51a6acbcbd70cc1da14fb7f9107cbd2bab2d59e0c946a7402d911ce925a53",
    "validation_sha256": "f1a8473beeb1ad00c2cb34bdf665d1104cdeb411a0e21c80a3b37a2157271942"
+  },
+  {
+   "nick": "NICK_236",
+   "video_id": "gt8KAc7h9O8",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18289,
+   "claim_groups": 13,
+   "primary_source_receipts": 1,
+   "calculation_receipts": 2,
+   "packet_sha256": "300156277cdf8aad15c957164b0043b8529d8f84af54cf120fef9774792af203",
+   "read_receipts_sha256": "4975ae3c883e551030acd0300fc2a734c14c6b64b7637e17605a4d620c2c99c3",
+   "validation_sha256": "3375d193fa17e29d4870111d0164914c067d7c69bd89d91b221cb3a5567d2d3d"
+  },
+  {
+   "nick": "NICK_237",
+   "video_id": "gwm1Hr5iipU",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 19685,
+   "claim_groups": 13,
+   "primary_source_receipts": 2,
+   "calculation_receipts": 2,
+   "packet_sha256": "c2b8c2113350a7e4b80d93efe6cffe905e2680107881825c63da7abb28f0dbec",
+   "read_receipts_sha256": "e5e6ea8c72298e069884a9248c9b9644888f24c24bdf62b7b62dda408b1cc204",
+   "validation_sha256": "0aa1611a6c1bbafb1d771e43651d2dcf643cc9874364004ae765eb930fb5fdd6"
+  },
+  {
+   "nick": "NICK_238",
+   "video_id": "hDoFNuIDTiI",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18318,
+   "claim_groups": 17,
+   "primary_source_receipts": 1,
+   "calculation_receipts": 2,
+   "packet_sha256": "fef5ee751a1485d08e74963caee795a1c499d80b7948d49146ae84017eeaa4ca",
+   "read_receipts_sha256": "0950024bcc88fe7c01c734211af76d3d47227b0c391ea6c4205c281862334377",
+   "validation_sha256": "506eb76350aef5901641cfcec0cc08f7de8fce5b8e9cd5917a71c97b968f05f2"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 511,
-  "remaining": 1101,
+  "completed": 514,
+  "remaining": 1098,
   "original_total": 966,
-  "original_pending": 455,
+  "original_pending": 452,
   "expansion_total": 646,
   "expansion_pending": 646
  },
  "coverage": {
-  "full_stored_text_characters": 1014488,
-  "claim_groups": 831,
-  "primary_source_receipt_rows": 154,
-  "source_independence": "Receipt rows include disclosed legitimate reuse;not154independentsources",
-  "calculation_receipts": 108,
-  "authentic_thumbnails_native_and_mobile": 52
+  "full_stored_text_characters": 1070780,
+  "claim_groups": 874,
+  "primary_source_receipt_rows": 158,
+  "source_independence": "Receipt rows include disclosed legitimate reuse;not158independentsources",
+  "calculation_receipts": 114,
+  "authentic_thumbnails_native_and_mobile": 55
  },
  "synchronization": {
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "52cee39156aef124bab13293ea57fd803c1b2c3df2f243dd1b7c5653a36da061",
+  "workbook_sha256": "8f2413ba4297ed5d23f9ba7d973e5c476bcc9abfb58d53231b642d5b836ae08a",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -557,14 +611,14 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "719ef267d436178c11e721418b0ae56ac46e4e5e34173a260bfdf8836deaefd3",
-  "VIDEO_AUDIT_966.csv": "fd60be1ed59b4c4a502f5f06e8c9e2bc67ab75dc4d7d35b874d285c6f2061e8a",
-  "VIDEO_COMPLETION_MATRIX.csv": "8e9e2bc29c8db5b12a0fc597a0b3221082067a23e66d09077aab9b79dcb68ba0",
-  "THUMBNAIL_ANALYSIS_966.csv": "bfa70ff7ead1317acfb87b2eff4d4d6ea58b375ad05afe8ba61b4948daf097f0",
-  "SCRIPT_ANALYSIS_966.csv": "612d53ce705065b854827e76be657c3d6a9c5e50d876c653a3421ac9f82088c6",
-  "TITLE_ANALYSIS_966.csv": "20cd454438eb86f6d4e31bb5745ae6056c4d6629515c6dbd7a00b6bb6aa22a02",
-  "TOPIC_ANALYSIS_966.csv": "79ef0152616541cf60049ea0e06b7935fe16683294117f0e48ea06250a1de499",
-  "VIRALITY_INTELLIGENCE_966.csv": "5d3566b3b30bba027b6ff395ff1bdfd5e1a36bc3d5a466f04b0882b8ea287316"
+  "VIDEO_AUDIT_966.jsonl": "684fcb6da9ed3f5fc7025eb5f0bd7485d5e9dd99aaa3b6344752c42baf3d9361",
+  "VIDEO_AUDIT_966.csv": "4b65396c55bd09e68918638778bacd10305d620ff3ffb44823f3c5db3875c6ff",
+  "VIDEO_COMPLETION_MATRIX.csv": "689ded494b9f810461264b5f108af54b4c8797a2dc840bfccdbf90a440dbca49",
+  "THUMBNAIL_ANALYSIS_966.csv": "77a799923c435c8df279b026990396c1cf82639b2d26cdfcfbc43d5adc679359",
+  "SCRIPT_ANALYSIS_966.csv": "48a1e63b0cf38db93fb24c951539b83ed1f401ad6d7ee805ab020a15c0ccd42d",
+  "TITLE_ANALYSIS_966.csv": "110e61bc65d2df5d4f6b6814fa93ea36bd9377549e2997c50622b9e579526d61",
+  "TOPIC_ANALYSIS_966.csv": "c5f11d04136d268215beae07301ccc46f7aba8781f9008059c56332c053fde32",
+  "VIRALITY_INTELLIGENCE_966.csv": "a0fddf0d9b68c930bab38517ed54134b3868d132253b3c4659d3f7805d81e8c8"
  },
  "resources": {
   "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
@@ -575,9 +629,9 @@
   "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_236",
-  "video_id": "gt8KAc7h9O8",
-  "title": "What No One Tells You About Being a Millionaire"
+  "nick": "NICK_239",
+  "video_id": "hHJOdHSeeuU",
+  "title": "30 Unsexy Habits That Make Serious Money ($100,000+)"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
  "stop_reason": "IN_SESSION",
