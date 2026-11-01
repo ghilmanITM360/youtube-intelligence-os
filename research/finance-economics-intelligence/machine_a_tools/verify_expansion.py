@@ -1,6 +1,6 @@
 """Read-only verification of the 30 Casually Finance expansion transcript candidates.
 Reads git blobs from origin refs (never checks out or writes to those branches); writes a packet to argv[1]."""
-import csv, io, json, hashlib, subprocess, sys, collections
+import os, csv, io, json, hashlib, subprocess, sys, collections
 W = '/Users/ghilmankhan/workprojects/yios-finance-machine-a'
 B = W + '/research/finance-economics-intelligence/'
 OUT = sys.argv[1]
@@ -82,6 +82,10 @@ summary = {'generated_by': 'machine_a read-only verifier', 'metadata_source': me
            'failed_checks': dict(collections.Counter(k for p in packet for k, v in p['checks'].items() if not v)),
            'registration': 'NONE; registry writes are outside Machine A authority; audit contract requires registry Text_SHA256 and archive containment',
            'videos': packet}
+if os.path.exists(OUT):  # keep the hand-recorded readiness assessment across re-verification
+    prev = json.load(open(OUT))
+    if 'registration_readiness' in prev:
+        summary['registration_readiness'] = prev['registration_readiness']
 json.dump(summary, open(OUT, 'w'), indent=1, ensure_ascii=False)
 print(json.dumps({k: v for k, v in summary.items() if k != 'videos'}, indent=1))
 for p in packet:

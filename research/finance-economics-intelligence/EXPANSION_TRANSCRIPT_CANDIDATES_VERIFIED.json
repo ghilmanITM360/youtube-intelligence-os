@@ -2266,5 +2266,32 @@
    "verdict": "VERIFIED_CANDIDATE_NOT_REGISTERED",
    "caption_type": "MACHINE_ASR_NOT_CREATOR_CAPTIONS"
   }
- ]
+ ],
+ "registration_readiness": {
+  "checked_utc": "2026-11-01",
+  "owner_authorization": "Owner allowed branch-local registration on Machine A if registry contract constraints are satisfied",
+  "source_identity_recheck": "104 of 104 candidate locators resolve to the recorded git blobs on origin; no fingerprints changed",
+  "status": "INTEGRATION_READY_NOT_REGISTERED",
+  "blockers": [
+   "None of the 30 video IDs exist in the registry videos table; transcripts.youtube_video_id is a foreign key, so registration first needs a new dataset, channel, dataset_videos and video identity rows (a governed dataset registration, not a transcript insert).",
+   "data/catalog/youtube_channel_registry.db is a 141 MB Git LFS binary; a branch-local write publishes a divergent copy of the canonical registry that Machine B must reconcile.",
+   "Expansion acceptance is not wired: build_continuation_queue.py reads statuses only from VIDEO_AUDIT_966.jsonl (original 966), and VIDEO_MASTER.csv has no expansion rows or K01 10-peer baseline.",
+   "Performance evidence exists only in fb1e56d0:research/casually-finance-success-playbook/VIDEO_PERFORMANCE.csv (snapshot 2026-10-11, different tier vocabulary, 0-12 peers; 3 candidates INSUFFICIENT_DATA); adopting it requires a K01-compatible re-benchmark."
+  ],
+  "next_step_for_registry_writer": "Register a Casually Finance dataset (channel, videos, ASR transcripts with Text_SHA256 from the candidate rows above, caption_type ASR_WHISPER_BASE), then extend the queue and ledger to read expansion audits and derive K01 tiers from a dated same-channel snapshot.",
+  "machine_a_queue_and_k01_2026_11_01": {
+   "queue": "build_continuation_queue.py now reads expansion-12-channel-2026-10-20/EXPANSION_AUDIT_LEDGER.jsonl (aborts if a video is in both ledgers) and marks the 30 verified candidates DEFERRED_TRANSCRIPT_VERIFIED_NOT_REGISTERED (next: REGISTER_VERIFIED_TRANSCRIPT_THEN_REQUEUE); the other 616 stay BLOCKED_MISSING_SOURCE_TRANSCRIPT. Original 966 rows unchanged.",
+   "k01": "machine_a_tools/expansion_k01.py froze the 206-row Casually Finance public-view snapshot (2026-10-11, from fb1e56d0) in EXPANSION_K01_CASUALLY_FINANCE.json and applied the unchanged build_baseline.compare rule: 22 of 30 tiered (7 STRONG, 12 TYPICAL, 3 WEAK), 8 INSUFFICIENT_DATA (5 fewer than five age peers, 3 under 7 days old). Snapshot date differs from the original 966 snapshot (2026-09-11).",
+   "lfs": "Registry pointer oid sha256:39e7a28ba592b9022bd1b32f4c288edde519730164a98ea858ce90c44d52f654, size 141373440, materialized locally (read-only). Not modified; any write publishes a new 141 MB LFS object and diverges from Machine B.",
+   "tests": "test_expansion_queue.py (9 tests): 966+646 population, 30 recognized/616 blocked, expansion ledger statuses read, ledgers disjoint and accepted counted once, original tiers unchanged, deterministic regeneration, one K01 row per candidate with stable text fingerprints, K01 reproduces the original rule with same-format same-snapshot peers, insufficient data not forced.",
+   "still_blocking": [
+    "Registry videos/transcripts rows for the 30 (governed dataset registration; LFS write) - registry owner",
+    "No audit-ledger home for REPOSITORY_RECONCILIATION_2026_10_21 expansion rows (the existing expansion ledger covers only the 197-row 12-channel layer); create it only together with the first real expansion audit"
+   ],
+   "registered": 0,
+   "audit_eligible": 0,
+   "accepted": 0
+  },
+  "source_identity_recheck_2": "2026-11-01 re-run: 104/104 blobs unchanged; ref_head of origin/research/casually-finance-editing-forensics advanced to 514ca42d (blob IDs identical)"
+ }
 }
