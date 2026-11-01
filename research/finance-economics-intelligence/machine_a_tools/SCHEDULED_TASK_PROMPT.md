@@ -7,7 +7,8 @@ there is no supported "usage-reset" trigger, so each run checks limits itself).
 ---
 Continue YIOS Finance Intelligence on Machine A. Follow
 `research/finance-economics-intelligence/machine_a_tools/RUNBOOK.md` exactly, starting with section 0 gates.
-If any gate fails (remote moved unexpectedly, usage ≥90% five-hour or ≥95% weekly, lock held, wrong branch),
+Check usage and `df -h /` BEFORE acquiring the lock. If any gate fails (remote moved unexpectedly, usage ≥90%
+five-hour or ≥95% weekly, free disk <10 GiB, lock held by another writer, wrong branch),
 make no research writes, report why in Roman Urdu, and exit. Otherwise take the queue head from
 `build_continuation_queue.py`, audit eligible videos in 2–5 video batches with full six-dimension evidence,
 validate, commit and push only to `codex/finance-machine-a-owner-directed`, verify the remote head, and stop at
