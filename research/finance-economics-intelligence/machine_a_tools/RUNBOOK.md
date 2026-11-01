@@ -39,6 +39,7 @@ verify local = upstream = remote.
 `python3 build_source_readiness.py` (read-only) classifies every BLOCKED row and lists recovery candidates; it never registers a transcript.
 
 ## Limits
+`wbdiff.py` "errs 16" = 16 hashtag text cells (data_type `s`, e.g. `#finance #tariffsexplained`), not formula errors; workbook has 0 `e` cells (checked 2026-11-01).
 No audio/visual review beyond thumbnails, no native Excel recalculation, no inferred impressions/CTR/
 retention/revenue/demographics. Expansion rows are all `BLOCKED_MISSING_SOURCE_TRANSCRIPT` until a
 transcript is registered; metadata alone never makes them complete.
