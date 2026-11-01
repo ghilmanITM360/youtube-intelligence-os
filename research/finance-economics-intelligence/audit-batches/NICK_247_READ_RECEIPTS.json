@@ -1,0 +1,243 @@
+{
+ "batch_id": "NICK_247_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "jFH7Cl6Uc_M",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "0e0b85ff35b0fee1021f2c6676b5716f6c02f160ce39a6d575f7f56e746310e6",
+   "character_count": 17984,
+   "canonical_utf8_bytes": 17984,
+   "canonical_whitespace_word_count": 3277,
+   "coverage_token_count": 3300,
+   "read_character_ranges": [
+    [
+     0,
+     17984
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "You are at a closing table and the loan officer slides a sheet across to you. $400,000 house, $80,000 down, which took you 6 years, $320,000 borrowed. And the number at the bottom, the one you pay every month for 30 years, says $2,129. Your sister Pria bought the same floor plan two streets over in 2021. Same price, same down payment, same loan. Her payment is $1,349, $780 a month between you and your own sister for the same house. Nothing about that house changed. What changed was a decimal point on a government web page neither of you has ever looked at.",
+   "last_text_witness": "It is not free anymore. Nobody sent you a notice. The rate changed and everything built on top of it, including the number on the sheet in front of you, changed with it. You are not bad with money. The price of money moved while you were living your life. So find out what your rate actually is and then make sure that everything you own is earning more than",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 17984,
+     "first80": "You are at a closing table and the loan\nofficer slides a sheet across to you.\n$4",
+     "last80": "rate actually is and then make\nsure that everything you own is earning\nmore than"
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "044_jFH7Cl6Uc_M_Why_Is_the_World_In_So_Much_Debt.txt",
+   "archive_member_sha256": "8c378f98893fb80ea9be054d52b7e53de87762f241f5a871781af80db43d6b9a",
+   "archive_member_bytes": 19546,
+   "archive_member_lines": 505,
+   "audio_verified": false,
+   "image_sha256": "b5caab45c1aee82ba9ccdbe2ab38699ee0da1ab78abcbf817f35bf13ab366c91",
+   "image_bytes": 22190,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     480,
+     360
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/jFH7Cl6Uc_M/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/jFH7Cl6Uc_M/hqdefault.jpg",
+   "image_acquisition": "FRESH_FETCH_HQDEFAULT_MAXRES_404;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-01"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "IIF1",
+   "url": "https://www.iif.com/Products/Global-Debt-Monitor",
+   "source_date": "2026-02-25",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "Institute of International Finance, Global Debt Monitor (February 2026, end-2025 data) and press coverage",
+   "finding": "Global debt $348.3T at end-2025 (+$29T); government $106.7T, non-financial corporate $100.6T, households $64.6T; debt-to-GDP fell for a fifth year to about 308%.",
+   "limitations": "Press summaries; household figure from a single secondary source; release date approximate.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  },
+  {
+   "source_id": "NI1",
+   "url": "https://fiscal.treasury.gov/files/reports-statements/combined-statement/cs2025/outlay.pdf",
+   "source_date": "2025-12-01",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "U.S. Treasury Combined Statement FY2025 outlays; CBO and American Action Forum summaries",
+   "finding": "FY2025 net interest outlays $970.4B (+10.1%), about 3.2% of GDP and 19% of federal revenue.",
+   "limitations": "Summaries; gross interest (about $1.2T) differs; statement date approximate.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  },
+  {
+   "source_id": "NYF1",
+   "url": "https://www.newyorkfed.org/medialibrary/interactives/householdcredit/data/pdf/hhdc_2025q4.pdf",
+   "source_date": "2026-02-10",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "Federal Reserve Bank of New York, Household Debt and Credit Report Q4 2025",
+   "finding": "Total household debt $18.8 trillion, a record.",
+   "limitations": "Reused from NICK_242; Q1-Q2 2026 updates not checked.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 6129,
+    "age_days": 46.1242,
+    "views_per_day": 132.88035348038557,
+    "peer_median_10": 112.09802678127116,
+    "peer_median_5": 131.65970552718167,
+    "peer_ratio_10": 1.1853942241076685,
+    "peer_ratio_5": 1.009271234113097,
+    "tier_10": "TYPICAL",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "GQ7oro2pthQ",
+     "9bJvzv5GknU",
+     "0Ca3uV6lgos",
+     "pmfPNdWGzdo",
+     "XFEndHZQ66Q",
+     "RgaTGzeFcPQ",
+     "Zn5jEbthAHU",
+     "bHZObxKdzxA",
+     "siP-xHD2eVI",
+     "dwbvvyeRonE"
+    ],
+    "peer_ids_5": [
+     "GQ7oro2pthQ",
+     "9bJvzv5GknU",
+     "0Ca3uV6lgos",
+     "pmfPNdWGzdo",
+     "XFEndHZQ66Q"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "GQ7oro2pthQ",
+      "Title": "Use Your Paycheck To Do These 5 Things And Never Work Again",
+      "Views": "5942",
+      "Age_days": "45.1315",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "9bJvzv5GknU",
+      "Title": "Never Finance a Car This Way (2026)",
+      "Views": "7566",
+      "Age_days": "47.138",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "0Ca3uV6lgos",
+      "Title": "EVERY Strategy to Retire Early Explained",
+      "Views": "4022",
+      "Age_days": "44.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "pmfPNdWGzdo",
+      "Title": "Why High-Yield Savings Accounts Are Making a Comeback in 2026",
+      "Views": "4792",
+      "Age_days": "48.1172",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "XFEndHZQ66Q",
+      "Title": "Nick Reacts To 20 People Being Financially Illiterate",
+      "Views": "9674",
+      "Age_days": "43.1381",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "RgaTGzeFcPQ",
+      "Title": "Is Bitcoin going to 0? (What They Won't Tell You)",
+      "Views": "6234",
+      "Age_days": "49.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "Zn5jEbthAHU",
+      "Title": "The Biggest Myths in Personal Finance",
+      "Views": "4257",
+      "Age_days": "42.1381",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "bHZObxKdzxA",
+      "Title": "The Easiest (& Laziest) Way to Get Rich",
+      "Views": "4826",
+      "Age_days": "50.1381",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "siP-xHD2eVI",
+      "Title": "Should You Buy Or Rent In 2026? (The Numbers SHOCKED Us!)",
+      "Views": "5067",
+      "Age_days": "41.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "dwbvvyeRonE",
+      "Title": "The Biggest Wealth Killers in Your 20s and 30s (AVOID At All Costs)",
+      "Views": "4061",
+      "Age_days": "51.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Mortgage payment and interest, per-capita debt, counting-time scale, saver income, interest per day and household, maturity share",
+   "results": {
+    "rate_2129": 7.0,
+    "rate_1349": 3.0,
+    "interest_7pct": 446440,
+    "interest_3pct": 165640,
+    "interest_gap": 280800,
+    "per_person_global": 42963,
+    "days_per_million": 11.6,
+    "years_per_billion": 31.7,
+    "years_per_trillion": 31688,
+    "saver_ratio": 12.5,
+    "federal_debt_per_american": 115497,
+    "interest_per_day_bn": 2.66,
+    "interest_per_household": 7348,
+    "maturing_share": 0.23,
+    "interest_share_revenue": 0.185
+   },
+   "limitations": "Mortgage assumes 30-year fixed, monthly payments; population 8.1B and 342M, households 132M and debt $38.5T assumed."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification; transcript truncated at the end; maxres thumbnail unavailable (hqdefault inspected); several figures by analyst recall. No paid purchases."
+}

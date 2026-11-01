@@ -1,12 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-11-01T08:57:28.775519+00:00",
+ "as_of_utc": "2026-11-01T12:16:33.755620+00:00",
  "status": "MACHINE_A_BRANCH_PUBLISHED_PENDING_PR36_RECONCILIATION",
  "writer": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED",
  "branch": "codex/finance-machine-a-owner-directed",
  "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "note": "NICK_244 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
+  "note": "NICK_247 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
  },
  "batches": [
   {
@@ -520,186 +520,96 @@
    "machine": "A",
    "branch": "codex/finance-machine-a-owner-directed",
    "parent": "421dc0ca445701df27699cf2268f7e5d6187e0cf",
-   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "commit": "47c304561bfb95d21155544d0b2e58a1864e28c3",
    "accepted": 3,
    "blocked": 0,
    "completed": 520,
    "remaining": 1092,
    "original_pending": 446,
    "expansion_pending": 646,
+   "remote_and_pr_verified": "MACHINE_A_BRANCH_REMOTE_VERIFIED;PR36_NOT_APPLICABLE"
+  },
+  {
+   "nicks": [
+    "NICK_245",
+    "NICK_246",
+    "NICK_247"
+   ],
+   "machine": "A",
+   "branch": "codex/finance-machine-a-owner-directed",
+   "parent": "47c304561bfb95d21155544d0b2e58a1864e28c3",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 3,
+   "blocked": 0,
+   "completed": 523,
+   "remaining": 1089,
+   "original_pending": 443,
+   "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 6,
+ "session_accepted": 9,
  "session_blocked": 0,
  "packets": [
   {
-   "nick": "NICK_233",
-   "video_id": "f6HIYQUiMoU",
+   "nick": "NICK_245",
+   "video_id": "ib9B7I8YsRo",
    "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 19584,
+   "transcript_characters": 18874,
+   "claim_groups": 22,
+   "primary_source_receipts": 4,
+   "calculation_receipts": 2,
+   "packet_sha256": "727187c28dfb25bb5cb940ae4dddf92b2c76be99fbb00fd544361ff846e3dced",
+   "read_receipts_sha256": "1255c95c582010bc6ac470ace4c845d1f948e04d4a3666e02246c6f04eb6385b",
+   "validation_sha256": "dd7105cabe7ef4e0daaa5ba4fa27ecf5c7128e7d2d581ae3b94cec3e9899d71a"
+  },
+  {
+   "nick": "NICK_246",
+   "video_id": "ikyXIWuAkLM",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18187,
+   "claim_groups": 17,
+   "primary_source_receipts": 1,
+   "calculation_receipts": 2,
+   "packet_sha256": "9c0dc9b8be1525ce7300e03cea7c4cfe03b5ec7d179aa1025f2541b82cdf9c56",
+   "read_receipts_sha256": "53271db807bdfe417e354445097a7af03c44e90652e3bbed86ade1297f51d162",
+   "validation_sha256": "4ae17b1a0efaead0b5a8516fc885975c0734299624cf860f984c886f83b87caa"
+  },
+  {
+   "nick": "NICK_247",
+   "video_id": "jFH7Cl6Uc_M",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 17984,
    "claim_groups": 21,
-   "primary_source_receipts": 4,
+   "primary_source_receipts": 3,
    "calculation_receipts": 2,
-   "packet_sha256": "b8610c320f7a715bc02aafcb39f53ca9ca6397ddf083c37232725ef7f28bfc86",
-   "read_receipts_sha256": "2e0b57c8a4f0bdb584f7f58789e11633862a4861c7685122d198bd13fbf118b8",
-   "validation_sha256": "af7484b5c7712b3d52d44afb1e975a4b9fc789f2cd89af8d8e0f4429534ce106"
-  },
-  {
-   "nick": "NICK_234",
-   "video_id": "fDdT5xPDdD0",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 19842,
-   "claim_groups": 17,
-   "primary_source_receipts": 4,
-   "calculation_receipts": 2,
-   "packet_sha256": "cc65e5638be084dc5cf5f21e4a6ad4a5c4d8a80c176fb1c520ba79481696dff8",
-   "read_receipts_sha256": "690024a0f1201d87e9dab3a12ba594333b086a10a92fe5391001690c56cc7059",
-   "validation_sha256": "4222196bbb8bf03274820139b770c317d01850c599fa74e32a8aa965f2395104"
-  },
-  {
-   "nick": "NICK_235",
-   "video_id": "g2nNpY3rHaU",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 19281,
-   "claim_groups": 20,
-   "primary_source_receipts": 2,
-   "calculation_receipts": 2,
-   "packet_sha256": "6a84e564502413639abc236ed601c44d194f460cf6162e815219b0d45a971eb5",
-   "read_receipts_sha256": "90c51a6acbcbd70cc1da14fb7f9107cbd2bab2d59e0c946a7402d911ce925a53",
-   "validation_sha256": "f1a8473beeb1ad00c2cb34bdf665d1104cdeb411a0e21c80a3b37a2157271942"
-  },
-  {
-   "nick": "NICK_236",
-   "video_id": "gt8KAc7h9O8",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 18289,
-   "claim_groups": 13,
-   "primary_source_receipts": 1,
-   "calculation_receipts": 2,
-   "packet_sha256": "300156277cdf8aad15c957164b0043b8529d8f84af54cf120fef9774792af203",
-   "read_receipts_sha256": "4975ae3c883e551030acd0300fc2a734c14c6b64b7637e17605a4d620c2c99c3",
-   "validation_sha256": "3375d193fa17e29d4870111d0164914c067d7c69bd89d91b221cb3a5567d2d3d"
-  },
-  {
-   "nick": "NICK_237",
-   "video_id": "gwm1Hr5iipU",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 19685,
-   "claim_groups": 13,
-   "primary_source_receipts": 2,
-   "calculation_receipts": 2,
-   "packet_sha256": "c2b8c2113350a7e4b80d93efe6cffe905e2680107881825c63da7abb28f0dbec",
-   "read_receipts_sha256": "e5e6ea8c72298e069884a9248c9b9644888f24c24bdf62b7b62dda408b1cc204",
-   "validation_sha256": "0aa1611a6c1bbafb1d771e43651d2dcf643cc9874364004ae765eb930fb5fdd6"
-  },
-  {
-   "nick": "NICK_238",
-   "video_id": "hDoFNuIDTiI",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 18318,
-   "claim_groups": 17,
-   "primary_source_receipts": 1,
-   "calculation_receipts": 2,
-   "packet_sha256": "fef5ee751a1485d08e74963caee795a1c499d80b7948d49146ae84017eeaa4ca",
-   "read_receipts_sha256": "0950024bcc88fe7c01c734211af76d3d47227b0c391ea6c4205c281862334377",
-   "validation_sha256": "506eb76350aef5901641cfcec0cc08f7de8fce5b8e9cd5917a71c97b968f05f2"
-  },
-  {
-   "nick": "NICK_239",
-   "video_id": "hHJOdHSeeuU",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 44770,
-   "claim_groups": 26,
-   "primary_source_receipts": 4,
-   "calculation_receipts": 2,
-   "packet_sha256": "753f4c2a51e6763326f316d9e921e831a3261c12265cdb1711d7728795c98864",
-   "read_receipts_sha256": "35c4fa9fb85fd49ff843cc576c99b75181e061c5a9be3b6b8c6839714247d91a",
-   "validation_sha256": "ac62ac65c27be9f025665387cd7d6f3c1c8dcd656ca2d713348ca6c385146a63"
-  },
-  {
-   "nick": "NICK_240",
-   "video_id": "hvcr7gVbcr0",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 19596,
-   "claim_groups": 13,
-   "primary_source_receipts": 1,
-   "calculation_receipts": 2,
-   "packet_sha256": "7c3d2a605765cdaaeadba0629d41fdb41cda163f9b6fba1da6e99036be71e1e6",
-   "read_receipts_sha256": "a561bf59193a6f3a4f35809a94473b3562cebbc439569a3ddd2436cd263f15d0",
-   "validation_sha256": "220b37605b891e45d11f86bb48bf088bff7acdd1f6c5d1d86c68c2aa2ba9e9e0"
-  },
-  {
-   "nick": "NICK_241",
-   "video_id": "hzQsUoXqLQc",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 18529,
-   "claim_groups": 14,
-   "primary_source_receipts": 2,
-   "calculation_receipts": 2,
-   "packet_sha256": "fdf5e933b67a95fb446fc9908c267882f73b26d54b0017a63d6b0e58f9e52c76",
-   "read_receipts_sha256": "9573ce71244f896c08364f1e00e0264e3b550b05f4052fdfab375dbd294728f6",
-   "validation_sha256": "38dc9f0d28251a1c81ade0d2de8371d5104e48bcf06dc70e9db430e67dab4dd6"
-  },
-  {
-   "nick": "NICK_242",
-   "video_id": "i7eR3JUrefg",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 26219,
-   "claim_groups": 13,
-   "primary_source_receipts": 1,
-   "calculation_receipts": 2,
-   "packet_sha256": "34418a041a6725d7f96db690d1d229a5c12c4eb2a2e196ef796db7cb065dd7ca",
-   "read_receipts_sha256": "e1ab8f3c689379ec12baa854a21b47f21caf147e1ce8fc5425dc0bda5b0804c8",
-   "validation_sha256": "b270efbe9408802d4676c59a71cd7a222d12aa0360be26c30aa83274f4f25488"
-  },
-  {
-   "nick": "NICK_243",
-   "video_id": "iAgCkciSMDs",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 19092,
-   "claim_groups": 9,
-   "primary_source_receipts": 2,
-   "calculation_receipts": 2,
-   "packet_sha256": "34ef941126ee4e99cbc05ba5926ae790db6b7aacf8908bf1811c5e8cc297dc38",
-   "read_receipts_sha256": "5c2adcfb240456d17a82f8048fb3cbba19750b6a6a570964f69b641d059ec7a9",
-   "validation_sha256": "b46d6505bd53128d7c25231e86442045b2466d294b8517580532b563cccf0e10"
-  },
-  {
-   "nick": "NICK_244",
-   "video_id": "iUANZCNnJQI",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 47641,
-   "claim_groups": 17,
-   "primary_source_receipts": 4,
-   "calculation_receipts": 2,
-   "packet_sha256": "b240fc72912c73eb533ff35158e06ef58334e16eec8c1dc4f592ea0a0aabf783",
-   "read_receipts_sha256": "e1df871f1f074b4eaee5326740f8057c6baaade8d04ecbcc488af63da5f1df2f",
-   "validation_sha256": "ce61f4fc4c4e71e15e703c6182344316dad7abff0b6497650ebfef7973a44678"
+   "packet_sha256": "3c6e1444efc7109354cc02d58679b761b5c40fd718528ef69920abc39d5d6be5",
+   "read_receipts_sha256": "d91636c7e881b269d31df6f126a10c686716463b5e140c60cb4d3a58ed323c92",
+   "validation_sha256": "993c856e8cd30eb3d0091c319b8c87c55831a1c59d0ce3c07c7d7caf261c57c0"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 520,
-  "remaining": 1092,
+  "completed": 523,
+  "remaining": 1089,
   "original_total": 966,
-  "original_pending": 446,
+  "original_pending": 443,
   "expansion_total": 646,
   "expansion_pending": 646
  },
  "coverage": {
-  "full_stored_text_characters": 1246627,
-  "claim_groups": 966,
-  "primary_source_receipt_rows": 172,
-  "source_independence": "Receipt rows include disclosed legitimate reuse;not172independentsources",
-  "calculation_receipts": 126,
-  "authentic_thumbnails_native_and_mobile": 61
+  "full_stored_text_characters": 1301672,
+  "claim_groups": 1026,
+  "primary_source_receipt_rows": 180,
+  "source_independence": "Receipt rows include disclosed legitimate reuse;not180independentsources",
+  "calculation_receipts": 132,
+  "authentic_thumbnails_native_and_mobile": 64
  },
  "synchronization": {
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "24ecb23977f82ca2558766dae730b2356f827f7f532d3ee6471d06098d8b3efc",
+  "workbook_sha256": "0cf4292af65e5292fc2ef1f129f638cd916cce1f6a04dbcd9192958f29fd1aae",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -719,27 +629,27 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "56277ea217823afa11e2b4854d4aa825a0fab7dbe860d2b95dc717ce7cd6caa3",
-  "VIDEO_AUDIT_966.csv": "ecaa3f54c786afac9d82b2ce7fdbf332212f7f986aab9274cada729ac82d6a99",
-  "VIDEO_COMPLETION_MATRIX.csv": "fe27a9e1ed21d0f2f08bdecda9e84de2b10a821d90433675210fcc808441c9f3",
-  "THUMBNAIL_ANALYSIS_966.csv": "cdc6d7405515e68e62230f6ac135e28674d9a9cfa5a3fd21926382bb7fa7fafb",
-  "SCRIPT_ANALYSIS_966.csv": "aeb3ef6420614dae479c69d70f4e0ec4bd96863cb0005e317fd054802156114c",
-  "TITLE_ANALYSIS_966.csv": "58147180fd4d906af6afb9c7fe8e767f66f041db6038faa3f16f568d48def7e2",
-  "TOPIC_ANALYSIS_966.csv": "74d91158f7b914849c08b179ca3a561586b62c71e5ae984ca1a716749f12e108",
-  "VIRALITY_INTELLIGENCE_966.csv": "24dc7763e23ad534612c830258550f03df839d248c22e2dc21375f58e8ca101e"
+  "VIDEO_AUDIT_966.jsonl": "9b166640574f76c5ce0c159f10b4dc6e9b67fcf7393088ff1cdc6c4846e0b642",
+  "VIDEO_AUDIT_966.csv": "ada98ae09312e751c644692af02d95cb4dd529e82be0fb2e9eead51932f42b59",
+  "VIDEO_COMPLETION_MATRIX.csv": "0d118b82ac13595f75e6cfc1c07a8d5d965a47221fa71533332ec9f1dbd17447",
+  "THUMBNAIL_ANALYSIS_966.csv": "d355aea6b9c061488b5147046ec12f8499413a64e61f480f45c60a49e54aeb86",
+  "SCRIPT_ANALYSIS_966.csv": "a94b933a79a28db1d15e876128bdee8ab921c5b7c901eb816b20f9025d47c811",
+  "TITLE_ANALYSIS_966.csv": "f010ecfd6c52086e5dd465962837e2ac5c0eae8a2b7935a1f793a0303e823866",
+  "TOPIC_ANALYSIS_966.csv": "16d53204bb45c8df8dd943e343ca87b28bc7bb487e7724e6195bc4a55017321b",
+  "VIRALITY_INTELLIGENCE_966.csv": "91aa5aec824605f1e78e37e8afad3788698b7b3cebf99fd3f3a466baa5e3c500"
  },
  "resources": {
   "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
   "weekly_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
   "paid_credits_spent": 0,
   "reset_credits_redeemed": 0,
-  "free_disk_gib_rounded": 7,
+  "free_disk_gib_rounded": 27,
   "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_245",
-  "video_id": "ib9B7I8YsRo",
-  "title": "How Two Incomes Made the Middle Class POORER"
+  "nick": "NICK_248",
+  "video_id": "jVu2-t_RVII",
+  "title": "The Psychology of Money Nobody Talks About (Money Anxiety Explained)"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
  "stop_reason": "IN_SESSION",
@@ -756,5 +666,5 @@
   "commit": "223f44981ee174988574e86d5e23ae83ee60ee5d",
   "pr36": "OPEN_DRAFT_UNMODIFIED_BY_MACHINE_A"
  },
- "_session_marker": "claude-bg-1729c412"
+ "_session_marker": "unknown"
 }

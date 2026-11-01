@@ -1,0 +1,251 @@
+{
+ "batch_id": "NICK_245_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "ib9B7I8YsRo",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "e2558151064d4865b739969a563f560f3d45d903b2f073231634add139a8094e",
+   "character_count": 18874,
+   "canonical_utf8_bytes": 18874,
+   "canonical_whitespace_word_count": 3301,
+   "coverage_token_count": 3357,
+   "read_character_ranges": [
+    [
+     0,
+     18874
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "There's a couple in your neighborhood right now doing everything right. Hazel, 34, makes $82,000 in marketing. Nico, 36, makes $90,000 in IT. Combined, they're pulling $172,000 a year, which puts them in the top 25% of American households. And a smart mirror gym in the garage they used twice. And every month, when the bills clear, they look at each other with that specific quiet panic of people who genuinely don't understand how they're still this broke.",
+   "last_text_witness": "to sleep, ask yourself one question. If one of these two paychecks disappeared tomorrow, what would actually happen? Would you adapt, or would the trap snap shut? Because the answer to that question is the only one that matters. If this was the financial reframe nobody else gave you. Do me a favor and let the next person find it, too. Subscribe and I'll see you in the next one.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 18874,
+     "first80": "There's a couple in your neighborhood\nright now doing everything right. Hazel,\n3",
+     "last80": "nd let the next person find it,\ntoo. Subscribe and I'll see you in the\nnext one."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "106_ib9B7I8YsRo_How_Two_Incomes_Made_the_Middle_Class_POORER.txt",
+   "archive_member_sha256": "d625c4ebd7dc1dd6987e739a7dbf21904c198dc8a858eb06db3a410fd2f311d7",
+   "archive_member_bytes": 20448,
+   "archive_member_lines": 539,
+   "audio_verified": false,
+   "image_sha256": "fc493b2a682667dbdec506e194c80630ca20cb3fd405f75a3b053efdc8f819c2",
+   "image_bytes": 169826,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/ib9B7I8YsRo/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/ib9B7I8YsRo/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-01"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "TIT1",
+   "url": "https://www.basicbooks.com/titles/elizabeth-warren/the-two-income-trap/9780465090907/",
+   "source_date": "2003-09-01",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "Elizabeth Warren and Amelia Warren Tyagi, The Two-Income Trap (Basic Books, 2003)",
+   "finding": "Compares a 1970s single-earner family with an early-2000s dual-earner family; the dual earners have about 75% more income but slightly less discretionary income after fixed costs and taxes.",
+   "limitations": "Book not re-read; family figures by analyst recall; publisher URL approximate.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  },
+  {
+   "source_id": "FJ1",
+   "url": "https://www.census.gov/library/working-papers/2019/adrm/ces-wp-19-19.html",
+   "source_date": "2019-06-01",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "Fisher and Johnson, The Two-Income Trap: Are Two-Earner Households More Financially Vulnerable? CES-WP-19-19",
+   "finding": "Two-earner married couples in 1999 were more likely to file for bankruptcy in 2002-2004 than other married couples; they have a higher average propensity to consume.",
+   "limitations": "Summary only; the 10% effect size was not confirmed; release month approximate.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  },
+  {
+   "source_id": "BOA1",
+   "url": "https://institute.bankofamerica.com/economic-insights/paycheck-to-paycheck.html",
+   "source_date": "2025-11-01",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "Bank of America Institute paycheck-to-paycheck analysis (2025)",
+   "finding": "Nearly a quarter of households (about 24%) estimated to live paycheck to paycheck by account data.",
+   "limitations": "Reused from NICK_241; lower-income 29% not confirmed; page date approximate.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  },
+  {
+   "source_id": "CEN1",
+   "url": "https://www.census.gov/library/publications/2025/demo/p60-286.html",
+   "source_date": "2025-09-09",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "U.S. Census Bureau, Income in the United States: 2024",
+   "finding": "Median household income $83,730 in 2024; upper-quartile thresholds well below $172,000.",
+   "limitations": "Reused from NICK_243; percentile threshold by analyst recall.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 6140,
+    "age_days": 110.1367,
+    "views_per_day": 55.74890113831266,
+    "peer_median_10": 76.92285548174365,
+    "peer_median_5": 71.84880883881299,
+    "peer_ratio_10": 0.7247378011278289,
+    "peer_ratio_5": 0.7759196295568495,
+    "tier_10": "TYPICAL",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "HO4L5NJrUz0",
+     "TdNH3QP3qao",
+     "QlPqXGV491Q",
+     "3iRHI6Fm2cg",
+     "4U8h2uiixL4",
+     "7ChF4Frzc_I",
+     "1D9nBNa6jNE",
+     "vT7IF16WTNg",
+     "08z1JYUQQnM",
+     "Sb0HUHNxF2I"
+    ],
+    "peer_ids_5": [
+     "HO4L5NJrUz0",
+     "TdNH3QP3qao",
+     "QlPqXGV491Q",
+     "3iRHI6Fm2cg",
+     "4U8h2uiixL4"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "HO4L5NJrUz0",
+      "Title": "Who Can Actually Afford to Have a Kid in 2026? (The Math Is Insane)",
+      "Views": "4459",
+      "Age_days": "110.9299",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "TdNH3QP3qao",
+      "Title": "Who Can Actually Afford a $50K Truck in 2026?",
+      "Views": "59539",
+      "Age_days": "109.0722",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "QlPqXGV491Q",
+      "Title": "WTF Is Happening To The Stock Market?!",
+      "Views": "8054",
+      "Age_days": "112.0965",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "3iRHI6Fm2cg",
+      "Title": "Financing a New Car vs Buying a Used One (The Real Math)",
+      "Views": "6061",
+      "Age_days": "108.1646",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "4U8h2uiixL4",
+      "Title": "Wealthy Retirees Stopped Buying These 10 Things to Stay Rich",
+      "Views": "77669",
+      "Age_days": "113.1847",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "7ChF4Frzc_I",
+      "Title": "Psychology of Gen X Money Habits (Why They're SO DIFFERENT)",
+      "Views": "5207",
+      "Age_days": "107.0753",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "1D9nBNa6jNE",
+      "Title": "Once Your Net Worth Hits $250k - Start Buying These Things",
+      "Views": "7988",
+      "Age_days": "106.155",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "vT7IF16WTNg",
+      "Title": "Why Everything Changes Once You Invest $100 Per Month",
+      "Views": "27553",
+      "Age_days": "114.1876",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "08z1JYUQQnM",
+      "Title": "It Started. The US Debt Bomb Just Imploded",
+      "Views": "8263",
+      "Age_days": "105.1309",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "Sb0HUHNxF2I",
+      "Title": "What It's Like When You Reach $1M Invested (Not What You Think)",
+      "Views": "13128",
+      "Age_days": "115.1543",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Family discretionary-income comparison, Hazel net contribution chain, monthly budget and investment future values",
+   "results": {
+    "tom_discretionary": 36400,
+    "jk_discretionary": 17045,
+    "narrated_gap": 19355,
+    "jk_vs_tom_income_pct": -13.5,
+    "jk_fixed_recomputed": 50672,
+    "hazel_after_daycare_correct": 41000,
+    "hazel_after_car_correct": 33000,
+    "hourly_12k": 5.77,
+    "nico_monthly_items": 9800,
+    "lily_40k_10y_7pct": 552658,
+    "ezra_balance_after_10y": 236000,
+    "redfin_premium_2000sqft": 100000
+   },
+   "limitations": "Hourly rate assumes 2,080 hours; Ezra/Lily loan terms (20% down, 3.5%, 30 years) and Lily contribution assumed."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification; book and several studies by analyst recall; Fisher-Johnson effect size unconfirmed. No paid purchases."
+}
