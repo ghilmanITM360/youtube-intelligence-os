@@ -1,6 +1,6 @@
 {
  "video_id": "0ll9rEtoRrs",
- "checkpoint": "M",
+ "checkpoint": "N",
  "date": "2026-11-01",
  "classification": [
   "VISUAL_STRUCTURE_RECONCILED_PARTIAL",
@@ -13,21 +13,22 @@
  "identity": "HIGH_CONFIDENCE_NEEDS_REVIEW",
  "frames_covered": "24298/24298 (states 21301 + unowned 2997)",
  "states": 530,
- "compositions": 370,
+ "compositions": 367,
  "candidates": 1032,
  "candidates_independently_viewed_after_first_pass": 1032,
  "disputes": 148,
  "unowned_intervals": 143,
  "unowned_rereviewed": 143,
  "merge_flags": {
-  "confirmed": 158,
-  "uncertain": 3
+  "confirmed": 161,
+  "keep_separate": 2,
+  "uncertain": 0,
+  "note": "S0022,S0035,S0080 merged; S0056,S0212 separate; rule: continuation only if layout preserved or smoothly animated"
  },
  "per_state_specs": 530,
  "asr_sentences_aligned": 192,
  "validators": "positive PASS; 16 negative tests DETECTED (integrate_v3.py, validate_v3.py)",
  "limits": [
-  "3 UNCERTAIN merges; S0080/S0212 possible missed merges not applied",
   "ASR is historical Whisper-base, never listened to; audio never heard",
   "colours/typeface/easing not sampled",
   "identity not re-checked against live YouTube",

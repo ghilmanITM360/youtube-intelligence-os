@@ -1,12 +1,12 @@
-# Video 004 — Production DNA and Original Reconstruction Blueprint (v3 text, checkpoint L, PARTIAL; numbers from integrated_v4)
+# Video 004 — Production DNA and Original Reconstruction Blueprint (v3 text, checkpoint N, PARTIAL; numbers from integrated_v4)
 
 Video `0ll9rEtoRrs` "The World's Safest Market Is Breaking", 1280×720, 24 fps, 24,298 frames (16.87 min). Source SHA-256 `8fd0c2bfd7b89d46e49280b7329626b7656dca7f5f2fd98c8046998af0c95b73`.
 Built from `integrated_v4/` (v3 plus the boundary rule below; see also `PER_STATE` v4 files `per_state_specs_v4.csv`, `dna_statistics_v4.json`, `composition_family_specs_v4.csv`, which supersede the v3 files) (supersedes the v2-based `PRODUCTION_DNA_AND_BLUEPRINT.md`, which is kept as history). Status: `PARTIAL_STRUCTURE_RECONCILED`, NOT `CT_SCAN_COMPLETE`, audio `AUDIO_NOT_VERIFIED`.
 Labels: MEASURED (computed from ledgers/frames), OBSERVED (seen in frames), INFERRED, UNKNOWN, CREATIVE_INSTRUCTION (guidance for new original work).
 
 ## 0. What changed vs v2 (evidence-backed only)
-- 161 merge flags reviewed on before/after frame pairs: 158 MERGE_CONFIRMED, 3 UNCERTAIN (S0022, S0035, S0056, left separate). Blind control: 6/6 flagged pairs judged same-composition, 10/12 unflagged pairs judged different, 2/12 unflagged judged same (S0080, S0212: possible missed merges, NOT applied).
-- 530 states are grouped into 370 compositions (158 confirmed merges + 2 split-sibling groupings). States and their events are preserved; compositions are a grouping layer only.
+- 161 merge flags reviewed on before/after frame pairs: 158 MERGE_CONFIRMED, 3 UNCERTAIN (since resolved, see above). Blind control: 6/6 flagged pairs judged same-composition, 10/12 unflagged pairs judged different, 2/12 unflagged judged same (S0080, S0212: possible missed merges, NOT applied).
+- 530 states are grouped into 367 compositions (final merge rulings below; 2 split-sibling groupings). Final rulings (checkpoint N, own 6-frame review incl. gap mid-frames): S0022 and S0035 → MERGE_CONFIRMED (same scene mid-animation/zoom); S0056 and S0212 → KEEP_SEPARATE (hard re-layout, no intermediate frames); S0080 (missed merge) → MERGE_CONFIRMED. Rule: a composition continues only if the layout is preserved or smoothly animated; a hard re-layout starts a new one even when assets are reused. Net: of the 161 first-pass flags 160 are confirmed and 1 (S0056) is separate; plus S0080 confirmed and S0212 separate (both unflagged) = 161 confirmed merges + 2 split-sibling groupings = 163 grouped states (530 − 163 = 367). See `integrated_v4/merge_decisions_v4.csv` (`orig_decision` keeps the first review). Composition IDs renumbered: `composition_id_map_pre_merge_final.csv`. States and their events are preserved; compositions are a grouping layer only.
 - Split children (S0089.*, S0097.*, S0116.*, S0475.*, S0466P/S0466, S0033) re-described from their own frames (`integrated_v3/split_child_corrections_v3.csv`). S0466 hard replace at f21628 is observed in sequential decode, so the earlier "inferred 21628" caveat is closed. S0033 has no visible infographic cut-in through f1294.
 - All 143 unowned intervals (3,012 frames) re-reviewed with dense sheets (up to 12 frames each) plus per-frame diffs: 99 motion-in-composition, 13 continuous animation, 13 static/near-static, 6 hard-cut-ending, 6 third-party playback, 6 fade; 29 flagged limited by sampling; 13 end on a new composition in their last sampled frame (possible boundary corrections, NOT applied). Gaps are still not absorbed into states. For the first 48 priority gaps: Only 6 of the 35 earlier EMBEDDED_VIDEO intervals are third-party playback (221 frames); 24 are PDF/browser/screen scroll inside a composition. The 658-frame embedded-video figure in v2 was an over-label for those intervals.
 - All 807 first-pass CONFIRMED candidates are now independently viewed (before/after frames at 560×315, one reviewer per row): 749 type OK (92.8%), 33 wrong type (4.1%), 25 no visible change (3.1%; 15 LOW, 10 MEDIUM confidence, mostly tiny highlight extensions). 25 types corrected (HIGH/MEDIUM confidence only). This is single-reviewer second pass at reduced resolution. The 58 flagged rows (33 wrong-type + 25 no-visible-change) then got a native-pixel crop check (checkpoint M): of the 25 no-visible-change rows 23 show a real small change (highlight extensions, hair/pupil redraws, fades, added bag, a 78–110 px slide) and only 2 (EP0198, SUB089, both LOW/MEDIUM) are noise-level; 37 of 58 had a different type than claimed, 11 types updated (HIGH/MEDIUM only; 4 LOW suggestions not applied).
@@ -18,7 +18,7 @@ Rule: if the last frame of an unowned gap is an isolated one-frame jump (≥10% 
 | Metric | Value |
 |---|---|
 | States | 530 (31.4/min); median 1.12 s, mean 1.67 s, p10 0.29 s, p90 3.79 s, max 13.12 s |
-| Compositions | 370 (21.9/min); span median 1.77 s, mean 2.47 s, p90 5.42 s |
+| Compositions | 367 (21.75/min); span median 1.83 s, mean 2.50 s, p90 5.42 s |
 | Edit events (excl. not-a-change/codec) | 996 (59/min); 853 in states, 143 in unowned gaps |
 | Additive entry | 271 (27.2%) |
 | Full replace | 252 (25.3%) |
@@ -61,7 +61,7 @@ Limited to the ASR numeric-sentence index above. Factual claim checking of the v
 | Area | Status |
 |---|---|
 | Frame tiling (states + gaps = 24,298) | MEASURED, validator PASS |
-| Merge/composition grouping | 161/161 reviewed; 3 UNCERTAIN |
+| Merge/composition grouping | 161/161 reviewed + S0080; 0 UNCERTAIN left |
 | Split children | frame-reviewed |
 | Unowned gaps | 143/143 re-reviewed (single reviewer, 29 limited by sampling); 15 boundaries moved by rule; not absorbed |
 | CONFIRMED candidates | 807/807 independently viewed (single reviewer); 58 flagged rows re-checked at native-pixel crops |
@@ -69,4 +69,4 @@ Limited to the ASR numeric-sentence index above. Factual claim checking of the v
 | Audio / AV | AUDIO_NOT_VERIFIED, AV_CERTIFICATION_BLOCKED |
 
 ## 8. Still not done
-Native check of the other ~750 rows (only the 58 flagged rows were native-checked); ruling on absorbing gaps; 29 sampling-limited gaps; ruling on possible missed merges (S0080, S0212); 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.
+Native check of the other ~750 rows (only the 58 flagged rows were native-checked); ruling on absorbing gaps; 29 sampling-limited gaps; 6 gap-cut boundary ownership; colour/type sampling; listening/AV sign-off; live YouTube identity check; claim map and video scorecard.

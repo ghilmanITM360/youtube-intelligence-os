@@ -1,7 +1,7 @@
 {
  "status": "BOUNDARY_RULE_APPLIED_STRUCTURE_STILL_NOT_SEMANTICALLY_CERTIFIED",
  "states": 530,
- "compositions": 370,
+ "compositions": 367,
  "state_frames": 21301,
  "unowned_intervals": 143,
  "unowned_frames": 2997,
@@ -62,5 +62,15 @@
   "state boundary reverted without gap": "DETECTED",
   "gap boundary reverted without state": "DETECTED",
   "over-extended state": "DETECTED"
- }
+ },
+ "merge_decisions_final": {
+  "MERGE_CONFIRMED": 161,
+  "KEEP_SEPARATE": 2
+ },
+ "merge_final_negative_tests": {
+  "decision changed without regroup": "DETECTED",
+  "KEEP_SEPARATE flipped without regroup": "DETECTED",
+  "dropped added merge decision": "DETECTED"
+ },
+ "merge_continuation_rule": "Continuation rule: a composition continues only if the existing layout is preserved or smoothly animated (intermediate frames); a hard re-layout starts a new composition even when assets are reused."
 }
