@@ -1,3 +1,10 @@
+# Machine A owner-directed checkpoint — NICK_261–262 (2026-11-01)
+
+**Parent `377308c2`.** PR #36 / canonical branch still `223f4498`, untouched. 538/1,612 complete; next `NICK_263 mWhpJZrTyNU`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 66 cells (dashboard 7 + rows 532–533), 0 styles/formulas, zip OK. Usage UNKNOWN.
+
+- **NICK_261 `mKVSk76bOJI` — The One Mindset Shift That Fixes Your Finances.** 0.999× TYPICAL (5-peer 1.163× TYPICAL); 12 claims, few numbers. Identity-habit thesis is opinion; willpower-as-muscle (ego depletion) contested by registered replications (PSYR, recall); "lottery winners go broke" overgeneralised; "$10,000 rewrites brain chemistry" unsupported (scarcity/cortisol evidence exists but not the threshold). Stored text ends on a dangling "Financial".
+- **NICK_262 `mQH1MPWBsy4` — Why The Middle Class Is Being Taxed Into Poverty.** 0.5756× TYPICAL (5-peer 0.949×); 37 claims. Reproduces: FICA $8,415, withholding $8,814/refund $3,871, $39,886 and $62,086 totals, SS-cap 2.18%, FICA +59% since 1970. Errors: paycheck deductions ≠ net pay (Mike $637/$528/$463; Sarah $748 vs $621); "$48 left" is really −$952 (expenses sum $2,845); card balance $3,840 vs narrative ~$1,920; 2020 ITEP zero-tax figures wrong ($40.5B/$8.5B/$3.5B per ITEP20, not $79B/$16.4B/$4.3B); "75% of shareholders top 1%" wrong; $2,000 child credit stale (2025: $2,200); federal total uses pre-credit tax; German benefits overstated. Title contradicted by the script's own "not taxed more overall". Thumbnail hqdefault only (maxres 404).
+
 # Machine A owner-directed checkpoint — NICK_260 (2026-11-01)
 
 **Parent `fff72c12`.** PR #36 / canonical branch still `223f4498`, untouched. 536/1,612 complete; next `NICK_261 mKVSk76bOJI`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 35 cells (dashboard 7 + row 531), 0 styles/formulas, zip OK. Single long-form video (2,984 s, 7,292 words, full stored text read); usage UNKNOWN.
