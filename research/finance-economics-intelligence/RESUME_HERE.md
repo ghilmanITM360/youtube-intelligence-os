@@ -1,3 +1,9 @@
+# Machine A owner-directed checkpoint — NICK_259 (2026-11-01)
+
+**Parent `fa5a7e42`.** PR #36 / canonical branch still `223f4498`, untouched. 535/1,612 complete; next `NICK_260 mErWx9GiVUc` (about 50 minutes; run it alone or with one short video). Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 35 cells (dashboard 7 + row 530), 0 styles/formulas, zip OK. Single-video batch because usage is UNKNOWN.
+
+- **NICK_259 `m28yF-EXg58` — Buying vs Leasing a Car: The "New" Reality in 2026.** 0.94553× TYPICAL (5-peer 0.940×); 14 claims. Reproduces: $629/$37,711/$5,511/$43,511 loan; $389 lease and 0.0025×2,400 = 6%; Odette $60,696/$68,996, gap $25,480 → $31,980 after car value and repairs; $32K → $123,830 at 7%/20y; $4,500 mileage. Edmunds Q1 2026 30.9%/$7,183 verified (ED1) but Q2 (29.6%/$6,884) was out before publication. Hook's "$130 lower for nine years, 108 times" contradicts the 60-month loan. EV shares, EV depreciation and tariff 10.4% unverified.
+
 # Machine A owner-directed checkpoint — NICK_256–258 (2026-11-01)
 
 **Parent `669a9d7a`.** PR #36 / canonical branch still `223f4498`, untouched. 534/1,612 complete; next `NICK_259 m28yF-EXg58`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 527–529), 0 styles/formulas, zip OK. Usage UNKNOWN; disk ~27 GiB free.
