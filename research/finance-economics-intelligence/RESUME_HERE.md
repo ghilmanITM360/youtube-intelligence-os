@@ -1,3 +1,11 @@
+# Machine A owner-directed checkpoint — NICK_251–253 (2026-11-01)
+
+**Parent `e76d7fc5`.** PR #36 / canonical branch still `223f4498`, untouched. 529/1,612 complete; next `NICK_254 ko97I4JNci4`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 522–524), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN; disk ~29 GiB free.
+
+- **NICK_251 `jxeB_FcQrc0` — How Much Car Your Salary Actually Buys You.** 3.9618× STRONG; 15 claims. Reproduces: $50K tier ($8.1K/$6.3K), depreciation 23%/60%, Mike $393 and $68,368, $200×30y = $243,994, $39 add-ons. Errors: higher-tier price ranges understate the script's own payments ($350 → ~$19K, $700 → ~$38K); $150K recap $40K vs $30–35K; Sarah's $900 is 14.4% of gross (17.6% of take-home), and she owes ~$23.7K not $28K after 3 years; $20K loan totals 22,108/23,191/23,745, not 21.66K/22,645/23,712; Buffett did not keep one car for decades.
+- **NICK_252 `kVpJ1Elw680` — Retire on $1,000,000? The Shocking Reality.** 0.15245× WEAK; 11 claims. Reproduces: 3/4/5% incomes, $41,200, $61,600/$83,200, 70–80% replacement. Stale: $1,800 Social Security average vs ~$2,008 (SSA Aug 2025). Summary "$40–60K with Social Security" contradicts the body's $61.6K. Two transcript passages scrambled. "Shocking" overstates a reassuring conclusion.
+- **NICK_253 `kZW4JQj_igg` — The Invisible Prison.** 0.4915× WEAK (5-peer TYPICAL); 11 claims. Transcript TRUNCATED mid-sentence; $2M-lifetime passage duplicated. $300×60 = $18,000, not $30,000; card APR 19% vs Fed G.19 22.30% (Nov 2025); $1,000 fees, $100K ignorance tax and gym-quit claims unsourced. Apartment/cable arithmetic reproduces (cable uses an implicit ~5%).
+
 # Machine A owner-directed checkpoint — NICK_248–250 (2026-11-01)
 
 **Parent `01336bd7`.** PR #36 / canonical branch still `223f4498`, untouched. 526/1,612 complete; next `NICK_251 jxeB_FcQrc0`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 519–521), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows (queue also back-fills the NICK_245–247 commit SHA). Usage UNKNOWN; disk ~29 GiB free; swap ~18 of 19 GB used.
