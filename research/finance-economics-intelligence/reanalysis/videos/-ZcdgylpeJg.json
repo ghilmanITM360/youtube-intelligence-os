@@ -1,0 +1,456 @@
+{
+ "video_id": "-ZcdgylpeJg",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "8482d559e7bdfef116ed253cc684366a5df897b087c9fb88f53258ba06aba37f",
+ "original_packets": [
+  "NICK_001.json"
+ ],
+ "transcript_chars_read": 19147,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 40,
+    "end_char": 117,
+    "text": "a man you'll never meet is quietly\ndeciding what your next mortgage will\ncost"
+   },
+   "judgment": "MET",
+   "rationale": "Concrete personal stake (your mortgage), an unseen decision-maker, and a contrarian turn (not the Fed, not the news) inside the first 25 seconds of text.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 693,
+    "end_char": 755,
+    "text": "It\nlives in Tokyo inside the single most\nboring asset on Earth"
+   },
+   "judgment": "MET",
+   "rationale": "Clear thesis (Japanese government bonds), emotional tone, guide named, and an explicit stake; the intro includes a subscribe ask.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Cartoon man pointing at an easel chart with a red line labelled 2008 at the left and 2026 at the right turning down, beside bold text IT'S HAPPENING AGAIN"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The opening never mentions 2008 or a crash and says the threat is \"so boring that financial media literally cannot turn it into a thumbnail\"; the thumbnail is exactly the alarm-style packaging the script mocks, and its 2008-repeat claim is not made in the video.",
+   "uncertainty": "Expectation match is inferred; viewer reaction is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Brace for Impact..."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title names no topic (Japan, bonds, mortgages) and promises only a mood; concept match is weak and curiosity depends on the thumbnail.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15795,
+    "end_char": 15852,
+    "text": "this whole thing plays out as a slow\nleak over many years"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title and thumbnail imply an imminent crash; the body says it is \"not a button somebody presses on a Tuesday\", that a slow leak is \"probably the most likely version\", and that the outcome may simply be structurally higher borrowing costs. The packaging overpromises relative to the content, which itself is careful.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19127,
+    "end_char": 19146,
+    "text": "So brace for impact"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title loop is paid only by the final line; no concrete \"impact\" (size, timing, trigger) is ever defined beyond higher long-term rates.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "IT'S HAPPENING AGAIN with a 2008-to-2026 chart"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script delivers an explanation of the yen carry trade and repatriation, not a 2008-style repeat; its most careful passages argue against a sudden crash.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2561,
+    "end_char": 2611,
+    "text": "let me introduce you to a guy. We'll\ncall him John"
+   },
+   "judgment": "MET",
+   "rationale": "Clear causal spine: Tokyo, 1992, John, the carry trade, the 2024 break, the August 5 rehearsal, repatriation, US demand and yields, stocks, mortgages, corporate debt, caveat.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7727,
+    "end_char": 7796,
+    "text": "This is the open loop\nI planted at the very start, so let me\nclose it"
+   },
+   "judgment": "MET",
+   "rationale": "The opening Tokyo loop is explicitly closed at about 7,700 characters; further loops include \"Hold on to that because it's the whole game\" and the closing \"what if they don't?\".",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 693,
+    "end_char": 755,
+    "text": "It\nlives in Tokyo inside the single most\nboring asset on Earth"
+   },
+   "judgment": "MET",
+   "rationale": "The gap is layered: who decides, why Tokyo, why a bond, then the John mechanism, then the US consequences.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4509,
+    "end_char": 4523,
+    "text": "that bet broke"
+   },
+   "judgment": "MET",
+   "rationale": "Textbook BUT/THEREFORE: rates stay near zero forever, BUT inflation arrives in 2024, THEREFORE the Bank of Japan hikes and the carry maths flips.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13049,
+    "end_char": 13116,
+    "text": "Mortgage rates tend\nto move closely with the 10-year\nTreasury yield"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Each link is plausible, but \"John's pension\" borrowing yen to buy Treasuries conflates two mechanisms (leveraged carry trades, which are mostly hedge-fund and bank positions, with long-term foreign-bond investing by pension funds and insurers that is not funded by yen loans), so the carry-unwind and the repatriation chains are not separately argued.",
+   "uncertainty": "Analyst reading of market structure; not source-verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6245,
+    "end_char": 6275,
+    "text": "fell about 12%\nin a single day"
+   },
+   "judgment": "MET",
+   "rationale": "The Nikkei closed down 12.4% on August 5, 2024, its worst day since the 14.9% fall on October 20, 1987, as stated.",
+   "uncertainty": "Verified from secondary news reports; the \"trillions vaporized in 72 hours\" figure was not."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4996,
+    "end_char": 5030,
+    "text": "Japan's policy rate sits around\n1%"
+   },
+   "judgment": "MET",
+   "rationale": "The Bank of Japan raised its policy rate to 1.0% on June 16, 2026 (highest since 1995), days before this upload, so \"around 1%\" and \"30-year high\" are accurate.",
+   "uncertainty": "Verified from secondary news reports of the June 16, 2026 decision."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8426,
+    "end_char": 8496,
+    "text": "Japan is the\nsingle largest foreign holder of\nAmerican government debt"
+   },
+   "judgment": "MET",
+   "rationale": "Japan was still the largest foreign holder in 2026 TIC data (about $1.117 trillion, June 2026), ahead of the United Kingdom and China.",
+   "uncertainty": "Verified from secondary summaries of Treasury TIC data; ranking depends on the release and on custodial residence versus beneficial ownership."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3527,
+    "end_char": 3575,
+    "text": "buys US\nTreasury bonds paying four, sometimes\n5%"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The 30-year story rests on a 4-5% US yield that existed mainly from 2022-23; through most of the 2010s US yields were far lower and hedging costs consumed much of the spread, so \"for three straight decades\" is stylised.",
+   "uncertainty": "Analyst recall of yield history; not source-verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11403,
+    "end_char": 11453,
+    "text": "The\ntotal national debt has blown past 37\ntrillion"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The 37 trillion figure dates to mid-2025; for a late-June 2026 upload it understates the level (the deficit of about $1.75 trillion a year alone adds more than $1 trillion in the interval). Moody's 2025 downgrade is accurate.",
+   "uncertainty": "The current debt level was not looked up; the Moody's date is recall."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18909,
+    "end_char": 19007,
+    "text": "The loud\nrisks, the ones screaming at you from\nevery headline, those are usually\nalready priced in"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame (\"the quiet risk takes you out\") that organises the whole video.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 878,
+    "end_char": 903,
+    "text": "And in\n2026, it's peeling"
+   },
+   "judgment": "MET",
+   "rationale": "Time-anchored to 2026 and a recent rate decision; strong timeliness.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14431,
+    "end_char": 14479,
+    "text": "Credit is the bloodstream of the\ncorporate world"
+   },
+   "judgment": "MET",
+   "rationale": "Complex ideas (carry trade, discount rate, yield curve control) are explained with plain analogies (medically induced coma, duct tape, the diner regular).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 982,
+    "end_char": 1067,
+    "text": "Hit subscribe because the\nthreat nobody's watching is always the\none that lands first"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Three asks: a subscribe at about 1,000 characters before the explanation, a mid-video community pitch (about 14,600, \"the rest of the video stands completely on its own\") placed between the last argument and the recap, and a closing subscribe plus community mention.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19009,
+    "end_char": 19062,
+    "text": "The risk that\nactually takes you out is the quiet one"
+   },
+   "judgment": "MET",
+   "rationale": "The close returns to the opening \"boring, quiet\" risk theme and the title line.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 757,
+    "end_char": 783,
+    "text": "a Japanese\ngovernment bond"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title carries no keyword; the opening says \"mortgage\", \"Japanese government bond\" and \"Tokyo\" within the first ~800 characters.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "Brace for Impact...",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Mortgage-rate anxiety is a high-interest broad topic; the Japan-carry-trade angle is a niche explainer.",
+  "2_differentiated_angle": "Personalising an abstract foreign-bond story through \"John\" and a mortgage stake; contrarian to a Fed-centred view.",
+  "3_title": "\"Brace for Impact...\" is a mood, not a topic; relies on the thumbnail.",
+  "4_thumbnail": "Stored 480x360 copy (letterboxed): bold IT'S HAPPENING AGAIN, an easel chart with a red 2008 peak and a 2026 downturn arrow, a cartoon man pointing alarmed. Legible at mobile size; alarm-style packaging at odds with the script. Character resembles a well-known cartoon father; rights not judged.",
+  "5_opening": "Strong personal-stake hook and a clear loop.",
+  "6_loops": "Explicit named loop with an announced callback (\"the open loop I planted at the very start\"); further teasers.",
+  "7_spine": "Cause-and-effect chain with a fair-minded caveat section.",
+  "8_repetition_clarity": "John and the diner regular recur as anchors.",
+  "9_emotion_credibility": "Measured and self-qualifying; several checkable facts hold (August 2024, the 2026 rate, the TIC ranking); a few figures are stylised or stale.",
+  "10_ending_cta": "Subscribe, notifications and community mention; closing line repeats the title.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "Nikkei fell about 12% on August 5, 2024, the worst day since 1987",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Closed -12.4% (31,458.42, a 4,451-point fall, the largest ever) per multiple news reports; worst percentage day since -14.9% on Oct 20, 1987. Holds. (secondary reports; not independently confirmed by the reviewer)"
+  },
+  {
+   "claim": "Bank of Japan ended yield curve control and raised rates \"for the first time in 17 years\" in 2024; policy rate \"around 1%\" in 2026",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Rate reached 1.0% on June 16, 2026 per news reports, after 0.75% in December 2025; the 2024 end of negative rates and YCC in March is recall. \"30-year high\" is accurate (highest since 1995). (secondary reports; not independently confirmed by the reviewer)"
+  },
+  {
+   "claim": "Japan is the largest foreign holder of US Treasuries; Moody's removed its last AAA in 2025",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "TIC data (June 2026): Japan about $1.117 trillion, first; the Moody's downgrade is recall (May 2025). (secondary reports; not independently confirmed by the reviewer)"
+  },
+  {
+   "claim": "Deficit about $1.75 trillion; national debt \"blown past 37 trillion\"; 30-year Treasury \"up around 5%\"",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Deficit figure is in the right range for FY2025; the $37 trillion level is a mid-2025 figure and understates a June 2026 value; the 30-year yield was not checked for June 2026."
+  },
+  {
+   "claim": "US Treasuries paid \"four, sometimes 5%\" through 30 years of the carry trade",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Stylised: US yields were at those levels mainly after 2022; currency-hedged returns were small for much of the period."
+  },
+  {
+   "claim": "Yen carry trade size \"in the trillions\"; Japanese net selling of foreign bonds in 2025; 30- and 40-year JGB record yields; Ray Dalio \"debt death spiral\"; \"trillions of dollars vaporized in about 72 hours\"",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified; the carry-trade size is highly estimate-dependent."
+  }
+ ],
+ "strengths": [
+  "Explicit loop planted and closed.",
+  "Strong BUT/THEREFORE spine and plain analogies.",
+  "Verifiable recent facts (the 2026 rate decision, Nikkei move, TIC ranking).",
+  "Self-limiting caveat section (\"not here to sell you a panic\")."
+ ],
+ "weaknesses": [
+  "Packaging promises a crash the body argues against.",
+  "Title carries no topic keyword.",
+  "Conflates leveraged carry trades with institutional bond investing in the John story.",
+  "Stale debt figure and a stylised 30-year yield claim."
+ ],
+ "contradictions": [
+  "\"So boring that financial media cannot turn it into a thumbnail\" versus an alarm-style \"IT'S HAPPENING AGAIN\" thumbnail.",
+  "Title and thumbnail imply imminent impact versus \"slow leak ... probably the most likely version\".",
+  "Community pitch says \"the rest of the video stands completely on its own\" yet sits between the last argument and the recap.",
+  "\"The Japanese government bonds they're now buying ... those are getting sold off\" in one sentence."
+ ],
+ "improvement_opportunities": [
+  "Title with the topic and a bounded claim, e.g. \"Japan's Bond Market Could Keep Your Mortgage Rate High\".",
+  "Thumbnail from the script's own imagery (a yen-to-dollar flow arrow, a rate line), not a 2008 reference.",
+  "Split the carry-trade unwind (August 2024) from the institutional repatriation argument and state which drives the Treasury demand claim.",
+  "Update the debt and yield figures to the upload month and move the community pitch to the end."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Treasury and BoJ primary documents (secondary reports used)"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "1.41292",
+  "age_days": "80.0965",
+  "views_likes_comments_snapshot": {
+   "views": 9939,
+   "likes": 416,
+   "comments": 44,
+   "published_at": "2026-06-22"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "1.60092",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the alarm-style thumbnail or the topic affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "loop-close position corrected to ~7,700",
+    "community-pitch placement corrected (not inside the corporate-debt segment)",
+    "added sentence-level wording contradiction on JGB buying/selling",
+    "TIC ranking caveat (custodial versus beneficial)",
+    "recent-date facts marked as secondary-report verified"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

@@ -25,3 +25,7 @@ Each new batch adds `reference-framework/comparisons/<batch>_REFERENCE_COMPARISO
 
 ## Historical reanalysis campaign (v1)
 Population frozen at `reanalysis/REANALYSIS_POPULATION_v1.json` (558 unique accepted video IDs; later accepted videos enter the delta queue via `reanalysis/build_population.py`). Ledger: `reanalysis/REANALYSIS_CAMPAIGN_LEDGER.csv`. Per-video layer: `reanalysis/videos/<video_id>.json` (full transcript read, thumbnail inspected, K01 tier revealed only after the content assessment, structural validation only: status becomes `SEMANTIC_REVIEW_PENDING`). Original audits are never edited. Knowledge base and enforcement: `reference-framework/KNOWLEDGE_BASE_README.md`.
+
+
+## Reanalysis notes (checkpoint 2)
+Reassessment records carry `framework_version` and the rules actually compared; `reanalysis/delta_tasks.py` lists rules not yet compared per record, so earlier records never claim rules added later. Structural validation, second-pass review (`review_annex`, same model family) and human semantic review are three distinct states; only the last may set a ledger row beyond `SEMANTIC_REVIEW_PENDING`. Platform and finance claims checked this session are labelled `SECONDARY_SOURCE_VERIFIED_THIS_SESSION` (search-result summaries or news reports; the primary document was not read), `INDEPENDENT_CALCULATION_VERIFIED` or `ANALYST_RECALL_NOT_REVERIFIED`. Thumbnails not stored in the repository are fetched from the registered URL into scratch only; their hash prefixes are recorded in the assessment.

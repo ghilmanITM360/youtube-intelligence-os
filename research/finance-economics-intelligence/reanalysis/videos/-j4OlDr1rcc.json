@@ -1,0 +1,453 @@
+{
+ "video_id": "-j4OlDr1rcc",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "f399746fe0cd6ee8831a344a5b4493797d7caeaec894f472c91e11660df1466d",
+ "original_packets": [
+  "NICK_002.json"
+ ],
+ "transcript_chars_read": 20500,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 61,
+    "end_char": 111,
+    "text": "accidentally stumbled into a luxury\nyacht showroom"
+   },
+   "judgment": "MET",
+   "rationale": "A relatable dealership scene, a shock statistic (\"nearly one in five ... over a thousand dollars\") and a rhetorical set-up for the contrarian frame within the first ~450 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 141,
+    "end_char": 235,
+    "text": "nearly one in five new car buyers is\nwalking out with monthly payments over a\nthousand dollars"
+   },
+   "judgment": "MET",
+   "rationale": "Clear topic, a concrete stake and a named guide; the intro adds a subscribe ask before the data.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Cartoon man with a worried expression beside a red SUV buried under a heap of glowing red cash, bold text $1,500/M and WHO?!, arrow to the car"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The opening and title are about a \"$1,000+\" payment; the thumbnail leads with \"$1,500/M\". The script never states $1,500, but it is derivable from the script's own components ($1,000 + insurance + fuel + maintenance = $1,400-$1,500) and equals the \"over 21%\" figure, while the stored text says $2,500.",
+   "uncertainty": "Expectation match is inferred; viewer reaction is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19921,
+    "end_char": 19982,
+    "text": "The uncomfortable truth is that very few\npeople genuinely can"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"(Almost No One)\" is stronger than the content: by the video's own 15% rule a household earning $100,000-$120,000 gross can afford $1,000, it says older buyers with paid-off homes \"genuinely\" can, and it spends the middle on the households that can.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7832,
+    "end_char": 7878,
+    "text": "who exactly can\nactually afford these payments"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title loop is answered in pieces (the 15% rule, paid-off-home buyers, the high earners) and closed with \"very few\", but the claim \"almost no one\" is never quantified.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "$1,500/M WHO?! beside a red SUV and a pile of red cash"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script delivers the \"who can afford\" question; $1,500 is derivable from its own components and is probably the intended all-in total (the stored text says $2,500).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2443,
+    "end_char": 2467,
+    "text": "So, how did we\nget here?"
+   },
+   "judgment": "MET",
+   "rationale": "Clear spine: statistics, causes (prices, rates, 84-month terms), negative equity, the 15% affordability test, the hidden costs, then the conclusion.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1619,
+    "end_char": 1650,
+    "text": "But wait because it\ngets better"
+   },
+   "judgment": "MET",
+   "rationale": "Repeated, explicit micro-hooks (\"But wait because it gets better\", \"But here's where the math gets ugly fast\") before each escalation.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7883,
+    "end_char": 7927,
+    "text": "the\nanswer might surprise you or terrify\nyou"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The curiosity gap is planted twice but the payoff (\"very few people genuinely can\") is a restatement, not a surprise.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5312,
+    "end_char": 5355,
+    "text": "That negative equity doesn't just\ndisappear"
+   },
+   "judgment": "MET",
+   "rationale": "The negative-equity chain is causal: small down payment and long term, faster depreciation, underwater, rolled into the next loan, higher payment.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12604,
+    "end_char": 12645,
+    "text": "But, here's where the math\ngets ugly fast"
+   },
+   "judgment": "MET",
+   "rationale": "Textbook BUT turn: the $1,000 payment is 14% of take-home, BUT the all-in costs push it higher.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13233,
+    "end_char": 13305,
+    "text": "Your $1,000 car payment is actually a\n$2,500 monthly transportation bill"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The stated components are $1,000 payment, insurance (the stored text is garbled: \"another unit fever plan to $200 a month easily\", read here as $100-$200), fuel $200 and maintenance $100, which total $1,400-$1,500; the next statement (\"over 21% of their net pay\") equals $1,500 / $7,100 = 21.1%, whereas $2,500 would be 35%, and the thumbnail says $1,500/M, which is therefore the likely true total. The stored $2,500 may be a speech or transcription slip (audio not checked) but as stored it is a $1,000 error on a headline calculation.",
+   "uncertainty": "Arithmetic verified; audio unverified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17765,
+    "end_char": 17803,
+    "text": "you'd have over\n$130,000\nafter 7 years"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "$1,000 a month at 8% for seven years is about $112,100 (about $130,700 would need roughly 12%).",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3019,
+    "end_char": 3086,
+    "text": "is\nmore than the median household income in\nstates like Mississippi"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The average new car just below $50,000 is below, not above, the Mississippi median household income (roughly $59,000 in secondary summaries of the 2024 ACS 1-year data); the later \"under $45,000\" Mississippi figure is also low, and \"Maryland highest ... over $94,000\" does not match the 2024 ranking (Massachusetts, New Jersey and Maryland lead, with D.C. above all states).",
+   "uncertainty": "Verified from secondary summaries of the Census 2024 ACS release; exact state figures were not read from the primary table."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2239,
+    "end_char": 2270,
+    "text": "nearly 18% were over a\nthousand"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The \"nearly 20%\" headline and \"nearly 18% were over a thousand\" differ; the \"almost twice as likely\" comparison (18% versus 10%) is correct as stated.",
+   "uncertainty": "The underlying dataset is not named; the Q2 2025 shares were not located."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12450,
+    "end_char": 12522,
+    "text": "A $1,000 car payment would\nrepresent about 14% of their take-home\nincome"
+   },
+   "judgment": "MET",
+   "rationale": "$1,000 / 15% = $6,667 (\"$6,700\" take-home); $120,000 gross to about $85,000 net is $7,083/month and $1,000 is 14.1%; the 20/4/10 version gives about $700. All consistent.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1186,
+    "end_char": 1249,
+    "text": "The average car payment for new vehicles\ncurrently sits at $745"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Close to but not the same as Experian's Q2 2025 average new-vehicle payment of $749; the source is unnamed in the video.",
+   "uncertainty": "Verified from a secondary summary of Experian Q2 2025; other series differ."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7644,
+    "end_char": 7687,
+    "text": "your car payment has\nbecome a status symbol"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame: monthly-payment thinking and status buying are a trap.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6773,
+    "end_char": 6805,
+    "text": "finance a\ntelevision for 7 years"
+   },
+   "judgment": "MET",
+   "rationale": "The 84-month loan, negative equity and trim-level upsell are explained with everyday comparisons (a television, a refrigerator).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 810,
+    "end_char": 848,
+    "text": "make sure to hit that subscribe\nbutton"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The only call to action comes at about character 800, before the first data point (about 1,200); the close has none.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 20432,
+    "end_char": 20499,
+    "text": "impressing strangers at\nred lights with your monthly payment\namount"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The close restates the thesis but does not return to the opening yacht-showroom scene.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14,
+    "end_char": 42,
+    "text": "walked into a car\ndealership"
+   },
+   "judgment": "MET",
+   "rationale": "\"Car payment\" and \"car dealership\" appear in the first sentences.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "Who Can ACTUALLY Afford a $1,000+ Car Payment? (Almost No One)",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Car-affordability shock statistics are a recurring broad topic.",
+  "2_differentiated_angle": "Applies a 15% affordability test to the headline statistic and adds hidden costs.",
+  "3_title": "Question plus a parenthetical verdict; strong curiosity; the verdict overreaches.",
+  "4_thumbnail": "Stored 480x360 copy (letterboxed): worried cartoon man, a red SUV buried in a red cash pile, bold $1,500/M and WHO?!, arrow. Legible at mobile size; the $1,500 is not stated in the script but is derivable from its components.",
+  "5_opening": "Strong: scene plus statistic.",
+  "6_loops": "Many micro-hooks, one answer deferred to the close.",
+  "7_spine": "Statistics, causes, consequences, affordability math, hidden costs, conclusion.",
+  "8_repetition_clarity": "Restates \"a thousand dollars\" frequently.",
+  "9_emotion_credibility": "Vivid and mostly well-sourced in tone; credibility reduced by the $2,500/$130,000 slips and incorrect state-income statements.",
+  "10_ending_cta": "No closing CTA.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$1,000 payment is \"actually a $2,500 monthly transportation bill\" (payment + insurance, garbled in the stored text and read as $100-$200 + fuel $200 + maintenance $100)",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: $1,400-$1,500; and \"over 21%\" of $7,100 corresponds to $1,500."
+  },
+  {
+   "claim": "$1,000/month invested at 8% for 7 years is \"over $130,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: about $112,100."
+  },
+  {
+   "claim": "$1,000 for 7 years is $84,000; \"paying $64,000\" for a car worth \"maybe $20,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Arithmetic holds ($84,000 less $20,000)."
+  },
+  {
+   "claim": "15% rule: $1,000 needs about $6,700 take-home; $120,000 household nets about $85,000 ($7,100/month), $1,000 is 14%; 24/10 rule gives about $700",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "All hold."
+  },
+  {
+   "claim": "Two $1,000 payments are \"$2,000 or 28%\" of take-home; transport \"35 to 40%\" with insurance",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "28.2%; $2,000 + $600-$800 insurance is 37-39%. Holds."
+  },
+  {
+   "claim": "Average new payment $745; Q2 2025 average financed over $42,000",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Experian Q2 2025: $749 average new payment and $41,983 average new loan. Close, but not the video's numbers; source not named."
+  },
+  {
+   "claim": "Mississippi median household income \"under $45,000\"; \"more than the median household income in states like Mississippi\"",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Census 2024 ACS 1-year puts Mississippi at roughly $59,000 (lowest state, from secondary summaries); neither statement holds. Massachusetts, New Jersey and Maryland lead the states."
+  },
+  {
+   "claim": "Nearly 20% of new loans over $1,000; 22% in 84-month loans; 26.6% negative-equity trade-ins, $6,800 average; $915 rolled payment; Gen X 11%, Texas 13%; average rate 7.2% new and 12% used",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified (the share-over-$1,000 and 84-month shares were not located in Experian Q2 2025 coverage)."
+  }
+ ],
+ "strengths": [
+  "Strong hook with a clear causal chain.",
+  "Correct 15% / 20-4-10 affordability arithmetic.",
+  "Names hidden costs and the negative-equity trap.",
+  "Many explicit micro-hooks."
+ ],
+ "weaknesses": [
+  "Headline all-in cost is stored as $2,500 when its own components give $1,500.",
+  "$130,000 investment figure is overstated by ~$18,000.",
+  "State income statements contradict the Census data.",
+  "\"Almost no one\" is stronger than the evidence.",
+  "Thumbnail $1,500/M is the likely true all-in total, but the stored script says $2,500."
+ ],
+ "contradictions": [
+  "\"Nearly 20%\" versus \"nearly 18%\" over $1,000.",
+  "$2,500 all-in versus \"over 21%\" (which is $1,500)."
+ ],
+ "improvement_opportunities": [
+  "Correct the all-in total to $1,500 (or $2,500 if the components are corrected) and show the four-line sum on screen.",
+  "Replace the 8% figure with $112,100 and state the term.",
+  "Retitle to what the video shows (\"Most Households Can't Afford a $1,000 Car Payment\" with the 15% income threshold in the thumbnail).",
+  "Use one dataset name per statistic and update the state-income figures to the latest Census table."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Primary datasets (Experian, Edmunds) for the share statistics"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "1.2279",
+  "age_days": "277.5752",
+  "views_likes_comments_snapshot": {
+   "views": 34395,
+   "likes": 876,
+   "comments": 378,
+   "published_at": "2025-12-07"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.88075",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the thumbnail figure or the overreaching title affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "insurance line marked as a reconstruction of garbled text",
+    "thumbnail $1,500/M restated as derivable and probably the true total",
+    "removed non-contradiction (Maryland versus Massachusetts/New Hampshire wording)",
+    "Mississippi figure softened to roughly $59,000 from secondary summaries",
+    "CTA position corrected (~800)"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

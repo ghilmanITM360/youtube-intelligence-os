@@ -8,6 +8,13 @@ from build_audit_966 import BASE, ROOT, DIMENSIONS, STATUSES, read
 
 COMPLETE={'COMPLETE_EVIDENCE_BACKED','COMPLETE_LIMITED_EVIDENCE'}
 
+def reference_gate_errors():
+    """Framework gate (structural only): every accepted NICK_281+ batch needs a validating reference comparison; every ledger reanalysis file must validate."""
+    import sys
+    sys.path.insert(0,str(BASE/'reference-framework'))
+    import reference_comparison
+    return ['reference gate: '+m for m in reference_comparison.check_coverage()]
+
 def identity_errors(baseline, actual):
     errors=[]
     if len(actual)!=len(set(actual)): errors.append('duplicate IDs')
@@ -201,13 +208,14 @@ def validate():
     readings={'titles':sum(bool(r['title'].get('analysis') or r['title'].get('legacy_review')) for r in rows),
               'thumbnails':sum(bool(r['thumbnail'].get('analysis') or r['thumbnail'].get('legacy_review')) for r in rows),
               'topics':sum(bool(r['topic'].get('analysis') or r['topic'].get('legacy_review')) for r in rows)}
+    errors+=reference_gate_errors()
     batches=[]
     for path in sorted((BASE/'audit-batches').glob('*.json')):
         batch=json.loads(path.read_text())
         if batch.get('reviews'): batches.append({'batch_id':batch['batch_id'],'status':batch.get('status','UNDECLARED'),'registered_reviews':len(batch['reviews'])})
     coverage={d:dict(Counter(r['statuses'][d+'_REVIEW'] for r in rows)) for d in DIMENSIONS}
     outstanding=[r['Video_ID'] for r in rows if any(s in {'NOT_STARTED','IN_PROGRESS'} for s in r['statuses'].values())]
-    report={'validation':'PASS' if not errors else 'FAIL','research_status':'FULL_POPULATION_RESEARCH_IN_PROGRESS' if outstanding else 'ALL_966_COVERED_WITH_EVIDENCE_GAPS','registered':len(rows),'fully_analyzed_complete_evidence':full_evidence,'analyzed_partial_evidence':expanded-full_evidence,'source_blocked_videos':sum(any(s=='BLOCKED_MISSING_SOURCE' for s in r['statuses'].values()) for r in rows),'coverage':coverage,'distinct_readings_including_legacy_and_in_progress':readings,'batches':batches,'distinct_full_stored_text_reads':sum(r['script'].get('review_scope')=='FULL_STORED_TEXT' for r in rows),'outstanding_videos':len(outstanding),'next_master_order_id':outstanding[0] if outstanding else None,'source_hashes_checked':len(frozen['source_hashes']),'errors':errors,'semantic_content_validation':'STRUCTURAL_ONLY; analyst reasoning and source entailment require review','causal_inference':'Public metadata cannot establish causation; private metrics unavailable','exact_head_ci':'CHECK_PR_36_AFTER_PUSH'}
+    report={'validation':'PASS' if not errors else 'FAIL','research_status':'FULL_POPULATION_RESEARCH_IN_PROGRESS' if outstanding else 'ALL_966_COVERED_WITH_EVIDENCE_GAPS','registered':len(rows),'fully_analyzed_complete_evidence':full_evidence,'analyzed_partial_evidence':expanded-full_evidence,'source_blocked_videos':sum(any(s=='BLOCKED_MISSING_SOURCE' for s in r['statuses'].values()) for r in rows),'coverage':coverage,'distinct_readings_including_legacy_and_in_progress':readings,'batches':batches,'distinct_full_stored_text_reads':sum(r['script'].get('review_scope')=='FULL_STORED_TEXT' for r in rows),'outstanding_videos':len(outstanding),'next_master_order_id':outstanding[0] if outstanding else None,'source_hashes_checked':len(frozen['source_hashes']),'errors':errors,'reference_framework_gate':'STRUCTURAL_ONLY_check_coverage','semantic_content_validation':'STRUCTURAL_ONLY; analyst reasoning and source entailment require review','causal_inference':'Public metadata cannot establish causation; private metrics unavailable','exact_head_ci':'CHECK_PR_36_AFTER_PUSH'}
     (BASE/'VALIDATION_966.json').write_text(json.dumps(report,indent=2)+'\n')
     assert not errors, errors
     print(json.dumps(report,indent=2))

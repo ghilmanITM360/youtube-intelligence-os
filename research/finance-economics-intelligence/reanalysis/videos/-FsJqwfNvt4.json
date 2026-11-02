@@ -1,0 +1,461 @@
+{
+ "video_id": "-FsJqwfNvt4",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "05aa87d02d843ab3bee0fa00c5004b95da12367537533274560c2e6842930402",
+ "original_packets": [
+  "NICK_001.json"
+ ],
+ "transcript_chars_read": 17684,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 69,
+    "text": "Brian buys a house. Rachel rents the\nexact same house down the street"
+   },
+   "judgment": "MET",
+   "rationale": "Two characters, one identical house, a stop beat (\"they're both wrong\") and a flip promise (\"the whole thing flips on one detail\"); setup, jolt and turn are all inside the first 100 words.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 525,
+    "end_char": 550,
+    "text": "Let's keep this\ndead fair"
+   },
+   "judgment": "MET",
+   "rationale": "Controlled-experiment setup (same age, income, savings) is clear and gives the viewer a reason to trust the comparison.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Renting Vs Buying a Home — The Real Math"
+   },
+   "judgment": "MET",
+   "rationale": "Title, the thumbnail (RENT OR BUY? with an apartment block, a house and a thinking cartoon man) and the opening story are the same question.",
+   "uncertainty": "Expectation match is inferred; the opening additionally promises a surprising winner, which the title does not."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Renting Vs Buying a Home — The Real Math"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Concept match is exact, but the title carries little curiosity beyond \"real math\"; the opening story is stronger than the packaging.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Renting Vs Buying a Home — The Real Math"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"The Real Math\" promises a reliable calculation; the scenario figures contain several errors (year-3 and year-20 portfolio values, equity, 5:1 leverage) and the conclusion is \"there isn't a winner\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17130,
+    "end_char": 17180,
+    "text": "I promised you a\nwinner at the start of this video"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The hook says \"the winner is not who you think\"; the close says there is no winner and that two variables decide it. The video is honest about breaking the promise but it is still broken.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12601,
+    "end_char": 12661,
+    "text": "And now for the detail\nI promised would flip the whole thing"
+   },
+   "judgment": "MET",
+   "rationale": "The opening loop (\"flips on one detail\") is explicitly called back at ~70% of the runtime and expanded to two details; further mini-loops include the 5% rule and the \"what happens when you do both\" teaser.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 901,
+    "end_char": 955,
+    "text": "one of them is\nright, and the reason is going to sting"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The stinging reason is promised early and resolved into a balanced both-ways conclusion; the gap is layered well but its payoff deflates.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5583,
+    "end_char": 5627,
+    "text": "So, fast forward 3 years and\nsee who's ahead"
+   },
+   "judgment": "MET",
+   "rationale": "Chronological spine (day one, year 3, year 6-7 break-even, year 10, year 20) with the two deciding variables arriving last.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11384,
+    "end_char": 11441,
+    "text": "Then time does something to\nBrian it never does to Rachel"
+   },
+   "judgment": "MET",
+   "rationale": "Each period explains why the standings change (frozen payment versus rising rent, paying down principal, exit costs), so consequences are causal rather than sequential.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7138,
+    "end_char": 7227,
+    "text": "So, let's be fair to Brian because he is\nholding one enormous weapon Rachel does\nnot have"
+   },
+   "judgment": "MET",
+   "rationale": "Clear BUT/THEREFORE structure: renting is ahead early, BUT leverage, tax and fixed payment, THEREFORE the buyer claws back.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5759,
+    "end_char": 5781,
+    "text": "sitting around\n$80,000"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Rachel's year-3 portfolio is stated as about $80,000, but $51,000 plus 36 x $1,400 is $101,400 with zero return and about $118,800 at 7%.",
+   "uncertainty": "Arithmetic verified in this session."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6464,
+    "end_char": 6495,
+    "text": "he's got maybe\n50,000 in equity"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The down payment alone is $41,500, and principal repaid after 36 payments on $373,500 at 6.5% is about $13,400, so equity is at least about $54,900 before any appreciation and about $106,700 with the video's own 4% appreciation. The stated $50,000 is below even the zero-appreciation figure. After a 5.5% exit toll the owner is about -$20K against the $51,500 put in at zero appreciation and about +$29K at 4%, so \"almost nothing\" fits neither case exactly.",
+   "uncertainty": "Arithmetic verified in this session; equity before selling costs."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7466,
+    "end_char": 7517,
+    "text": "Rachel's sensible index fund is not\nleveraged 5 to1"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "$415,000 on $41,500 down is 10-to-1 leverage, not 5-to-1.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12373,
+    "end_char": 12425,
+    "text": "her portfolio lands in that\nsame range,5 to $600,000"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "With a flat $1,400/month and $51,000 over 20 years, $500-600K requires about 3-3.5% a year; at 5% the result is about $714K and at the video's own 7% about $935K, while Brian's equity is about $542K at 3% appreciation. The video also says Brian's \"mortgage is nearly dead\" at year 20, but about $207,900 (56%) of the $373,500 loan is still owed. The \"same ballpark\" conclusion fails on the video's own assumptions. (The monthly gap would shrink as rent rises, which lowers Rachel's figure but is not modelled.)",
+   "uncertainty": "Arithmetic verified; scenario assumptions simplified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1182,
+    "end_char": 1239,
+    "text": "His monthly principal\nand interest come to roughly $2,360"
+   },
+   "judgment": "MET",
+   "rationale": "$373,500 at 6.5% over 30 years is $2,360.77/month; total interest $476,379, which exceeds the $415,000 price (\"nearly the entire price a second time\" understates it). Property tax ($346/month at 1%), the 5% rule ($1,729/month) and the \"$1,400 gap\" ($3,400 less $2,015) also reconstruct.",
+   "uncertainty": "Verified arithmetic. Payment crossover to majority principal is month 233 (year 19.4), not \"around year 18\"."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5260,
+    "end_char": 5309,
+    "text": "If\ncomparable rent costs more, buying pulls\nahead"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "By the video's own 5% rule the buyer's unrecoverable cost is $1,700/month against $2,000 rent, so \"buying pulls ahead on paper\", yet the story has the renter ahead for six years and calls it a coin flip; the rule and the narrative are not reconciled.",
+   "uncertainty": "The 5% rule is a rule of thumb, not a verified method."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16412,
+    "end_char": 16479,
+    "text": "Brian\nbought because Uncle Dave said renting\nis throwing money away"
+   },
+   "judgment": "MET",
+   "rationale": "Challenges both slogans (\"renting is throwing money away\" and \"homeowners are suckers\") and replaces them with a variable-based answer.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14996,
+    "end_char": 15052,
+    "text": "A\nmortgage is a savings plan you are not\nallowed to skip"
+   },
+   "judgment": "MET",
+   "rationale": "Plain-language framing of forced savings, equity, break-even and optionality (\"Rachel bought optionality. Brian bought roots\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14266,
+    "end_char": 14318,
+    "text": "that's the entire reason our\nschool community exists"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A community pitch arrives at the \"second variable\" cliffhanger, interrupting the argument; the stored transcript also ends mid-sentence (\"the only answer worth trusting is the one that\"), so the ending and any closing CTA cannot be assessed.",
+   "uncertainty": "Transcript is truncated at the end; unknown whether the video ends there."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16704,
+    "end_char": 16772,
+    "text": "a confirmation email\nthat just sat there compounding the\nentire time"
+   },
+   "judgment": "MET",
+   "rationale": "Returns to the opening images (the key versus Rachel's confirmation email) and to Uncle Dave.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 20,
+    "end_char": 53,
+    "text": "Rachel rents the\nexact same house"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title says renting versus buying; the first seconds say \"buys\" and \"rents\" (not \"buying a home\"), and the topic is evident from the story.",
+   "uncertainty": "No search-volume data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "Renting Vs Buying a Home — The Real Math",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Rent-versus-buy is a broad evergreen decision topic.",
+  "2_differentiated_angle": "Named-character controlled experiment with identical inputs; a common format but cleanly executed.",
+  "3_title": "Clear, generic; \"The Real Math\" carries the promise.",
+  "4_thumbnail": "Stored 480x360 copy (letterboxed): bold \"RENT OR BUY?\" over an apartment block and a yellow house with a cartoon man in a thinking pose. Very legible at mobile size, no numbers and no tension; a cartoon man resembling a well-known cartoon father appears again (rights not judged).",
+  "5_opening": "Strong; story and stop beat; promises a flip.",
+  "6_loops": "One strong named loop with explicit callback, several small ones.",
+  "7_spine": "Chronological with cause-and-effect.",
+  "8_repetition_clarity": "Repeated callbacks to Uncle Dave, the roof, the confirmation email.",
+  "9_emotion_credibility": "Warm and funny; credibility weakened by several scenario figures that do not follow from the stated inputs.",
+  "10_ending_cta": "Stored transcript ends mid-sentence, so the ending is not assessable; mid-video community pitch observed.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$415,000 house, 10% down ($41,500), 6.5% 30-year: P&I \"roughly $2,360\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$2,360.77/month; total interest $476,379. Holds."
+  },
+  {
+   "claim": "Taxes 1% = $350/month; 5% rule = about $1,700/month; all-in about $3,400 versus renter $2,015, gap about $1,400",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$346; $1,729; $2,360 + 350 + 200 + 150 + ~350 maintenance is about $3,410; gap about $1,395. Holds (the later \"$2,300\" payment is a small slip)."
+  },
+  {
+   "claim": "Rachel at year 3: $51,000 + $1,400/month \"sitting around $80,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: $101,400 contributed with no growth; $113,500 at 5%; $118,800 at 7%."
+  },
+  {
+   "claim": "Brian equity at year 3 \"maybe 50,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: $54,900 with zero appreciation ($41,500 + $13,400 principal); $106,700 at 4% appreciation."
+  },
+  {
+   "claim": "Leverage \"5 to 1\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: $415,000 / $41,500 = 10:1."
+  },
+  {
+   "claim": "4% appreciation on $415,000 is \"$16,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$16,600. Holds (rounded)."
+  },
+  {
+   "claim": "Year 20: Brian equity \"north of $500,000\" and Rachel \"5 to $600,000\", same ballpark",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Brian: $409K / $542K / $701K at 2% / 3% / 4% appreciation. Rachel (flat $1,400, $51,000 start): $387K at 0%, $552K at 3%, $714K at 5%, $935K at 7%. The video's own 7% real return puts Rachel far ahead; the quoted range corresponds to ~3-3.5%. Also: remaining loan balance at year 20 is about $207,900 (56%), not \"nearly dead\"."
+  },
+  {
+   "claim": "Payments become majority principal \"around year 18\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Month 233, about year 19.4."
+  },
+  {
+   "claim": "Rent rising \"about 4% a year\", \"toward nearly three\" thousand",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$2,000 at 4% is $2,960 at year 10 and $4,382 at year 20; \"nearly three\" is the year-10 figure."
+  },
+  {
+   "claim": "Home prices about 1% a year real; stocks about 7% real; break-even about 6 years; about 1 in 10 itemize; \"nearly 40 times\" owner versus renter; median renter has a few hundred to a couple thousand invested",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified. The 1%/7% figures match the figures in the sibling video -DIT32sBkAk (0.3-1% and 7.3%), which is not independent evidence."
+  }
+ ],
+ "strengths": [
+  "Controlled two-character comparison with identical inputs and a clear time-based spine.",
+  "Correct mortgage, 5%-rule and monthly-cost arithmetic.",
+  "Both outcomes framed fairly; the two deciding variables (appreciation rate, whether the renter invests) are the right ones.",
+  "Callbacks and humour strengthen retention design."
+ ],
+ "weaknesses": [
+  "Several year-3 and year-20 scenario figures do not follow from stated inputs, and the final \"same ballpark\" conclusion fails on the video's own 7% assumption.",
+  "Leverage ratio misstated by half.",
+  "Hook promises a surprising winner that the ending withdraws.",
+  "Mid-argument community pitch; stored transcript truncated at the end."
+ ],
+ "contradictions": [
+  "5% rule says buying is ahead at $2,000 rent, but the narrative has the renter ahead and \"a coin flip\".",
+  "\"Five to six percent\" exit cost and \"$2,300 / $2,360\" payment slips.",
+  "Rachel's portfolio $80K at year 3 below zero-growth contributions.",
+  "\"His mortgage is nearly dead\" at year 20 with 56% of the loan still owed."
+ ],
+ "improvement_opportunities": [
+  "Show Rachel's and Brian's balance sheets at years 3, 10 and 20 as one on-screen table built from the stated inputs, with the assumption (appreciation and return) printed under each.",
+  "Rename the promise: replace \"the winner is not who you think\" with a promise the ending keeps, or end with the conditional decision rule earlier.",
+  "Put the community pitch after the two-variable payoff, not before it.",
+  "Give the thumbnail one number or a tension line (\"20 years, same house\") so it carries a curiosity gap beyond the generic question."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "End of the video (stored transcript truncated)",
+  "Description content"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "0.66627",
+  "age_days": "61.1381",
+  "views_likes_comments_snapshot": {
+   "views": 4531,
+   "likes": 169,
+   "comments": 45,
+   "published_at": "2026-07-11"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.71102",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the thumbnail or the scenario errors affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "added year-20 balance contradiction",
+    "reworded equity/exit-cost statement",
+    "interest exceeds the house price",
+    "callback position corrected to ~70%"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

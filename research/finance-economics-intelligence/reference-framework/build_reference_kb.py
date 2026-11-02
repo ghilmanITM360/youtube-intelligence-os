@@ -34,7 +34,7 @@ def build(db, fresh=False):
         con.execute('INSERT INTO ref_section (section_id, member_id, locator, ordinal, extraction_status, char_count, image_count, text_sha256, raw_text) VALUES (?,?,?,?,?,?,?,?,?)',
                     (f"{mid[s['member']]}:{s['locator']}", mid[s['member']], s['locator'], s['ordinal'], s['status'], s['chars'], s['images'], s['text_sha256'], s['text']))
     con.execute("INSERT INTO ref_section_fts(rowid, raw_text) SELECT rowid, raw_text FROM ref_section WHERE raw_text IS NOT NULL")
-    for c in json.load(open(H / 'ALGO_UPDATE_CONSTITUENT_INDEX_v1.json')):
+    for c in json.load(open(H / 'ALGO_UPDATE_CONSTITUENT_INDEX_v2.json')):
         con.execute('INSERT INTO ref_constituent_video VALUES (?,?,?,?,?,?)', (f"CV-{c['n']:03d}", mid['2026 Algorithm Update.docx'], c['n'], c['title'], c['start_line'], c['end_line']))
     for r in csv.DictReader(open(H / 'REFERENCE_RULE_INDEX_v1.csv')):
         con.execute('INSERT INTO ref_rule VALUES (?,?,?,?,?,?,?,?,?)', (r['Rule_ID'], FV, mid.get(r['Source_Member']), r['Locator'], r['Meaning'], r['Audit_Dimension'], OVERRIDE.get(r['Rule_ID'], CLASS[r['Rule_Kind']]), r['Evidence_Required'], r['Applicability_Limits']))

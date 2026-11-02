@@ -1,0 +1,450 @@
+{
+ "video_id": "-DIT32sBkAk",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "d922758e1731ef76e1db3a0204aabbd711b0c2716a0fcf7b6d439b463af2ac5f",
+ "original_packets": [
+  "NICK_001.json"
+ ],
+ "transcript_chars_read": 17271,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 190,
+    "end_char": 236,
+    "text": "Five times worse asset, 38 times richer\nowners"
+   },
+   "judgment": "MET",
+   "rationale": "Number-paradox opening with a scroll-stop line (\"Read that again\") and a contrarian turn (\"the one factor ... has nothing to do with the asset you pick\"). Weakness: \"five times\" is a 30-year, $100,000 comparison, but it is introduced as \"over the last 100 years\".",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 780,
+    "end_char": 872,
+    "text": "the one factor that decides\nthe whole thing, which has nothing to do\nwith the asset you pick"
+   },
+   "judgment": "MET",
+   "rationale": "Clear promise, explicit curiosity gap and a named guide; the promise sits at roughly characters 780-870 (about 150 words in, so a 30-second claim cannot be supported from untimed text). A like-ask follows at about character 890, after the opening paradox figures and before the first data figure (10.4%, about character 1,040).",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Cartoon man with alarmed face beside text YOU'RE CHOOSING WRONG, a green-glowing house, and a bar chart crossed out with a red X; arrow points at the pair"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title asks a neutral question; the thumbnail visually endorses the house and crosses out stocks, while the opening line says stocks beat real estate five-to-one. The first sentence therefore points the opposite way from the thumbnail's picture.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Real Estate Vs Stocks - Which One Will Make You Richer? (Shocking Math)"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Promises a winner and \"shocking\" math; the video concludes \"both\" and \"neither one made a wrong choice\", conditional on behaviour. Not a betrayal, but \"Shocking Math\" oversells figures that include internal errors.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15743,
+    "end_char": 15805,
+    "text": "Real\nestate will compound your discipline\nharder, behaviorally"
+   },
+   "judgment": "MET",
+   "rationale": "The title's which-one loop is paid in the closing contrast: stocks compound money faster, real estate compounds discipline.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "YOU'RE CHOOSING WRONG with the house highlighted green and the stock chart crossed out"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script delivers a conditional both/and answer plus a behavioural thesis; the thumbnail implies one asset is wrong. Content delivers on the title, less on the thumbnail.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14550,
+    "end_char": 14581,
+    "text": "So, here's the honest\nframework"
+   },
+   "judgment": "MET",
+   "rationale": "Spine runs paradox, returns, leverage, leverage risk, costs, behaviour, tax, rentals, who wins, two scenarios, framework, conclusion; each section answers the one before it.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4561,
+    "end_char": 4625,
+    "text": "Stick with me\nbecause we haven't even talked about the\ncosts yet"
+   },
+   "judgment": "MET",
+   "rationale": "Repeated mini-loops: \"Stay with me\", \"before I tell you what happens when that switch flips\", \"I know, this is a lot of numbers. Stick with me\", plus a delayed factor reveal.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 467,
+    "end_char": 563,
+    "text": "something both your realtor and your\nstock broker have a financial interest\nin never telling you"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The planted gap claims a secret withheld for profit (\"you stop needing either of them\"); the payoff (behaviour and staying power) is not something brokers conceal, so the setup is stronger than the delivery.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2935,
+    "end_char": 3008,
+    "text": "But, and there's always a butt in\nfinance because finance is mostly butts"
+   },
+   "judgment": "MET",
+   "rationale": "Explicit BUT turns drive the argument: stocks win on returns, BUT leverage; leverage helps BUT can flip; stocks cost less BUT you are the problem.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2562,
+    "end_char": 2622,
+    "text": "roughly 17.6%\nreturn from a house that barely beat\ninflation"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Specific but inconsistent with its own inputs: $12,000 appreciation plus $3,600 principal on $80,000 is 19.5%, and a 5% year gives 29.5%, not \"closer to 27%\". The calculation also ignores the interest, tax, insurance and maintenance the video itemises later.",
+   "uncertainty": "Arithmetic verified in this session."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1466,
+    "end_char": 1502,
+    "text": "you'd end up with about 1.74\nmillion"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$100,000 at the stated 10.4% for 30 years is about $1.946 million; $1.74M corresponds to 10.0%. The 4% housing figure ($324K) and the 5.4x ratio are consistent. Over the stated 100 years the ratio would be about 392x, not five.",
+   "uncertainty": "Arithmetic verified; the 10.4% and 4% series themselves are unsourced recall."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8844,
+    "end_char": 8887,
+    "text": "The median renter has a net worth of\n10,400"
+   },
+   "judgment": "MET",
+   "rationale": "$396,000 / $10,400 = 38.1x is arithmetically right and matches analyst recall of the Fed 2022 SCF medians. The causal explanation attached (\"the mortgage forced people to save\") is asserted without controlling for who becomes a homeowner.",
+   "uncertainty": "Source figures not re-verified this session."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14308,
+    "end_char": 14333,
+    "text": "sold it at a\nloss in 2027"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The third friend, 32 \"today\", is said to have \"started investing at 32\", panic sold in 2008 and bought a house at the peak in 2022; both dates are before \"today\". \"Sold it at a loss in 2027\" is a future projection told in the past tense. The timeline cannot be real for a 32-year-old; the point is illustrative.",
+   "uncertainty": "Illustrative character; the point is behavioural, but the dates are errors."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11748,
+    "end_char": 11802,
+    "text": "Your cash on cash return is negative\n14.5%\nin year one"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The arithmetic reconstructs (about -$11,300 to -$11,500 a year on $80,000, -14.4%), but it counts only cash flow, while the owner leverage example earlier counted appreciation and principal. The two sections use different yardsticks and the comparison is not stated as such.",
+   "uncertainty": "Reconstruction used standard expense lines the video does not list."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16502,
+    "end_char": 16591,
+    "text": "Stop arguing about\nreal estate versus stocks. That's the\ndumbest argument on the internet"
+   },
+   "judgment": "MET",
+   "rationale": "Clear reframing against the real-estate-versus-stocks default; the reframed question is \"will you keep buying for 30 years\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5515,
+    "end_char": 5571,
+    "text": "Owning a house\nis basically a subscription to a\nbuilding"
+   },
+   "judgment": "MET",
+   "rationale": "Leverage, friction costs and illiquidity are explained through plain analogies (subscription, forced savings account).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 888,
+    "end_char": 922,
+    "text": "Leave a like and let's get into it"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A like-ask at about character 890 (after the opening paradox figures, before the first data figure), another like-and-subscribe at the end, and a disclaimer; placement before the first data figure is the less natural of the two.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16238,
+    "end_char": 16327,
+    "text": "Your realtor and\nyour stock broker both want you to\nbelieve their thing is the only thing"
+   },
+   "judgment": "MET",
+   "rationale": "Closing returns to the opening \"realtor and stock broker\" device and the \"asset you pick\" line.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 68,
+    "text": "Stocks have beaten real estate by five\ntimes over the last 100 years"
+   },
+   "judgment": "MET",
+   "rationale": "Title opens with \"Real Estate Vs Stocks\"; both keywords are spoken in the first sentence.",
+   "uncertainty": "No search-volume data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "Real Estate Vs Stocks - Which One Will Make You Richer? (Shocking Math)",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Rent/buy/invest is a broad evergreen decision topic.",
+  "2_differentiated_angle": "Behavioural reframing (forced savings and illiquidity as the hidden variable) over the standard returns comparison.",
+  "3_title": "Question plus \"(Shocking Math)\" parenthetical; clear, standard.",
+  "4_thumbnail": "Stored 480x360 copy (letterboxed): cartoon man with alarmed expression, bold \"YOU'RE CHOOSING WRONG\", house with green glow versus crossed-out red stock chart. Legible at mobile size, but the picture endorses the house while the opening data favours stocks. Character resembles a well-known cartoon father; rights not judged.",
+  "5_opening": "Paradox-first; strong; compresses 30-year and century figures.",
+  "6_loops": "Many mini-loops; factor reveal delayed to the end; payoff narrower than setup.",
+  "7_spine": "Long but well-sequenced argument; two scenario sections then a framework.",
+  "8_repetition_clarity": "Clear signposting; some figure density.",
+  "9_emotion_credibility": "Energetic and humorous; credibility reduced by internal arithmetic errors and an impossible timeline, helped by several checkable sources.",
+  "10_ending_cta": "Like and subscribe plus a not-a-financial-advisor disclaimer.",
+  "11_metadata_seo": "Only title and first words judged; description not assessed.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$100,000 at 10.4% for 30 years is \"about 1.74 million\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1,945,684 at 10.4%; $1,744,940 at 10.0%. The stated rate and the result disagree."
+  },
+  {
+   "claim": "Housing 4% for 30 years is \"about 324,000\"; ratio \"5.4 times\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$324,340; 1.74/0.324 = 5.37. Holds."
+  },
+  {
+   "claim": "Stocks beat housing \"five times over the last 100 years\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "At 10.4% versus 4% over 100 years the ratio is about 392x; five times is the 30-year figure."
+  },
+  {
+   "claim": "$12,000 appreciation + $3,600 principal on $80,000 = \"roughly 17.6%\"; 5% year \"closer to 27%\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: 19.5% and 29.5% on the stated numbers."
+  },
+  {
+   "claim": "$80,000 down on $400,000 and a 20% price drop leaves zero equity",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$320,000 value against $320,000 loan. Holds."
+  },
+  {
+   "claim": "Property tax 1.1% of $400,000 is $4,400; 1% maintenance is $4,000",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Holds."
+  },
+  {
+   "claim": "Median renter vs owner net worth $10,400 vs $396,000 = 38x",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "38.1x arithmetic holds; the Fed SCF 2022 source is recalled, not re-verified."
+  },
+  {
+   "claim": "Rental $400,000, $2,500 rent, 20% down at 7%: about -$11,500 a year, -14.5% cash on cash",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "P&I $2,129/month ($25,545/year); with 1.1% tax, $2,500 insurance, 1% maintenance and an assumed 8% vacancy and 8% management, cash flow is about -$11,200; -14% on $80,000. Consistent but excludes appreciation and principal."
+  },
+  {
+   "claim": "Friend one: $80,000 grows to about $1.4 million in 30 years; friend two house $400,000 to $1.1 million",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1.396M at 10.0% nominal; house CAGR 3.4%. Neither adjusts for inflation, and the rent versus ownership cash-flow difference that drives the comparison is never given."
+  },
+  {
+   "claim": "\"Average self-made millionaire\" buys at 1.49x income; recommended for $70-100K earners",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "1.49x of $70-100K is $104,300-$149,000, well below the video's own median home price of $408,000; the advice is not reconciled with its own market numbers."
+  },
+  {
+   "claim": "Fidelity: 537,000 401(k) millionaires, average age 59, 26 years in plan",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Matches Fidelity Q4 2024 (537,000, up 27%; down from 544,000 in Q3 2024). It is not the latest count for an April 2026 upload; the \">17% of income\" savings rate is a Q3 2024 figure."
+  },
+  {
+   "claim": "Shiller: homeowners think 7% real, actual 0.4% real since 1890 (17x); DALBAR 3-5 point investor gap; Ramsey millionaire study; Case-Shiller metro falls; S&P recovery \"by March 2013 including dividends\" (price index regained its high in March 2013; the total-return high came earlier, recall)",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified. DALBAR's method is contested; the Shiller expectation figure may mix nominal survey expectations with a real return."
+  },
+  {
+   "claim": "Friend two's $400,000 house is worth \"about 1.1 million\" after 30 years while the video's own housing series is 4% nominal",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "1.1M is a 3.4% CAGR; at the video's 4% it would be about $1.30M. Unreconciled."
+  }
+ ],
+ "strengths": [
+  "Strong paradox opening with memorable, plain analogies.",
+  "Genuinely balanced conclusion with explicit conditions for each choice.",
+  "Several verifiable official figures (SCF medians, VOO expense ratio, capital-gains exclusion).",
+  "Names behaviour (panic selling, forced savings) as the deciding variable."
+ ],
+ "weaknesses": [
+  "Leverage-return arithmetic does not follow its own inputs.",
+  "Thumbnail picture favours the house against the opening data.",
+  "Impossible third-friend timeline.",
+  "Inconsistent yardsticks between the owner-leverage and rental sections.",
+  "Causal claim from the 38x net-worth gap ignores selection into homeownership."
+ ],
+ "contradictions": [
+  "10.4% stated versus 10.0% used for $1.74M.",
+  "17.6% versus 19.5% on its own inputs.",
+  "\"Five times over 100 years\" versus a 30-year table.",
+  "\"32 today\" versus investing \"at 32\" with panic selling in 2008 and a house bought at the 2022 peak (both already past), and a sale \"in 2027\" (future).",
+  "1.49x income advice versus the $408,000 median home.",
+  "$1.1M house value (3.4%) versus the video's own 4% nominal housing return ($1.30M)."
+ ],
+ "improvement_opportunities": [
+  "Show the leverage example as a full table (appreciation, principal, interest, tax, insurance, maintenance) so the owner return is comparable with the rental section.",
+  "Make the thumbnail match the argument, for example both icons with a question mark, or the stock chart green and the house green with \"Which one?\" so neither is crossed out.",
+  "State the horizon next to every comparison (30 years versus 100) and fix 1.74M to 1.95M or state 10%.",
+  "Replace the third-friend dates with relative years and add the rent-versus-ownership cash-flow inputs to the two-friend scenario."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Source documents for Shiller, DALBAR, Ramsey and Case-Shiller metro figures"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "1.98045",
+  "age_days": "146.1717",
+  "views_likes_comments_snapshot": {
+   "views": 27920,
+   "likes": 933,
+   "comments": 190,
+   "published_at": "2026-04-17"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "2.59188",
+   "tier": "STRONG",
+   "agrees_with_ten_peer_tier": false,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; a single video cannot show that the thumbnail, the leverage argument or the length affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "promise position and like-ask offsets corrected",
+    "third-friend timeline error restated precisely",
+    "added unreconciled house-value figure"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}
