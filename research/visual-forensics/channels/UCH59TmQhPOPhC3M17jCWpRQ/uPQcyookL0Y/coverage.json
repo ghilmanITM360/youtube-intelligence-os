@@ -151,5 +151,22 @@
    "82 intra-state bursts still unreviewed",
    "No audio listening, no ASR, no semantic validation"
   ]
+ },
+ "intra_state_burst_review_rest": {
+  "bursts": 82,
+  "montages": "frames/montages8 R01-R21 (external)",
+  "reviewers": "reviewer_7 (rows 1-44, 11 montages), reviewer_8 (rows 45-82, 10 montages); transcripts audited: all montage reads returned images, each wrote its own file",
+  "tally": {
+   "SCALE_OR_CAMERA_MOVE": 33,
+   "FADE_OR_WIPE": 18,
+   "OBJECT_ENTRY_OR_EXIT": 15,
+   "TEXT_OR_GRAPHIC_CHANGE": 5,
+   "HARD_CUT": 4,
+   "UNCLEAR": 4,
+   "CHARACTER_ACTION": 3
+  },
+  "finding": "All 4 HARD_CUT rows (seq 42 f969, 52 f2664, 111 f9664, 147 f13673) sit exactly on existing v3 state starts, so no new hard cut was found among the 82; seq42 and seq111 montages viewed by orchestrator and consistent. 4 UNCLEAR (seq22,125,129,140) left unresolved.",
+  "status": "OBSERVED_sparse (4 frames per burst); now all 113 BURST detector candidates have a sparse review (31 earlier + 82). STILL_ONSET and MOTION_ONSET_AFTER_STILL (52) not reviewed.",
+  "caveat": "Reviewer verdicts for 80 rows not individually spot-checked; only 2 of 4 HARD_CUT montages viewed by orchestrator."
  }
 }
