@@ -1,0 +1,16 @@
+{
+ "channel": "Barely Evolved",
+ "channel_id": "UCH59TmQhPOPhC3M17jCWpRQ",
+ "handle": "@BarelyEvolved",
+ "checkpoint": "ONBOARDING_BLOCKED_NO_MEDIA_NO_NETWORK",
+ "verdict": "PARTIAL - no frame-level forensics performed; nothing here is CT_SCAN_COMPLETE",
+ "executed_in": "claude.ai cloud container (not Machine A/B)",
+ "blockers": {
+  "live_channel_reverification": "UNAVAILABLE - www.youtube.com, i.ytimg.com, googleapis.com return proxy 403 (CONNECT policy denial). Inventory below is carried from the 2026-10-20T12:04:12Z Apify snapshot on origin/research/barely-evolved-metadata (c4212c9), NOT re-measured today.",
+  "source_mp4s": "UNAVAILABLE - the 3 registered MP4s exist only on Machine B (/Users/ghilmanislam360/Documents/YIOS-Media-Library/, per docs/LOCAL_MEDIA_AVAILABILITY.md on origin/research/local-channel-media-library). ~/Downloads absent here; find / found nothing; ffprobe/SHA-256/decoded-frame count could not be run on any source.",
+  "4X3xd3MDZro_Brutal_Punishments": "No local source registered anywhere; no authorized acquisition method reachable from this container (yt-dlp not installed, YouTube blocked).",
+  "locks": "No claim ref created: acquiring a yios claim for work this host cannot execute would block the Mac that can. Casually Finance lock, queue, PR #36 untouched."
+ },
+ "source_identity_evidence": "FILENAME_BRACKETED_YOUTUBE_ID (HIGH per registry) + ffprobe duration within 0.09-0.42 s of YouTube metadata duration for 3/3 (corroborating, not proof; no frame/audio content match yet)",
+ "next_task": "On a Mac holding the MP4s: run uPQcyookL0Y first (see EXECUTOR_RUNBOOK.md)."
+}
