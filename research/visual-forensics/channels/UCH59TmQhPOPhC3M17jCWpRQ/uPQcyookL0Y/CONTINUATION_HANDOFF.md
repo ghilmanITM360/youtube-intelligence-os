@@ -41,3 +41,10 @@ Production tables: narration_state_link_provisional.csv, pacing_metrics_v4.json,
 Open: no native-resolution review; transition onset frames unpinned (W047 <=f8438, W085b fade-in end f13997-14003, W081 hard-cut exact 13164-13174); no art-direction audit / per-state prompts; audio listening; second-model check; sub-state card-swap convention.
 ## Next exact operation
 A) Per-state art-direction audit (palette sampling, type, character/asset IDs) in bounded batches using viewed frames, then per-state prompts (blueprint section D). B) Next eligible source mNLNb-Z4T0M (hash matches registry; start INVENTORY->STRUCTURAL under same lock). C) Reconcile 4X3xd3MDZro separately. Audio listening stays pending human.
+
+## Checkpoint K update (2026-11-03)
+- Starting HEAD 48933d63 (J). Kit: installed SKILL = kit SKILL + routing table + relation section; references 01-14 identical (diffed); refs 01,02,03,04,14 read/applied this session (earlier 04-07,09,13). Refs 08,10,11,12 still unread.
+- States v5 (tables/states_v5_draft.csv, shot_ledger_v5.csv): W047 onset f8438, W086 onset f14059 (first-changed-frame convention); W081 hard cut f13168 confirmed; W085b fade-in f13993-13999. tables/k_boundary_native_metrics.csv, k_boundary_convention_check.csv (automated MAD check of all 88 boundaries: 77 OK; remaining ramps W002/W003/W004/W058 recorded, not re-cut).
+- Native art audit: batch01 only (W001-W010) -> agents/reviewer_12/art_audit_batch01.csv; narration relations for ASR idx 0-8 -> tables/k_narration_relation_assessed_batch01.csv, audio_visual_alignment_v5.csv. Native PNGs under frames/native_rep (not in Git). Seg 0 was UNCERTAIN from reviewer; orchestrator adjudicated from f60/f150 (not independent).
+- COST: one 33-frame reviewer batch consumed ~15 pts of the 5-hour window (56%->71%). Plan ~8 more batches only when 5h usage <=60%; run one per window.
+- NEXT: batch02 = states W011-W020 via k_scripts/be_k_rep_frames.py batch02 10 20; ASR idx 8-?; then production specs; then reconstruction test; then mNLNb-Z4T0M.
