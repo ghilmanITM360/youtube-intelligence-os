@@ -50,6 +50,26 @@
   },
   "thresholds": "derived from this source: still ge12<500; still run>=15f; burst ge12>=100000 and >=8x rolling median",
   "visual_spot_check": "4 of 113 bursts (seq14,57,93,144) viewed: all show real in-scene animation, none are cuts; precision/recall NOT measured",
-  "table": "tables/intra_state_events_detector.csv, tables/long_state_summary.csv"
+  "table": "tables/intra_state_events_detector.csv, tables/long_state_summary.csv",
+  "burst_sample_review": {
+   "scope": "31 of 113 bursts, stratified (strongest + median per state with bursts; NOT random)",
+   "reviewer": "reviewer_3, 8 montages",
+   "tally": {
+    "SCALE_OR_CAMERA_MOVE": 13,
+    "HARD_CUT": 5,
+    "OBJECT_ENTRY_OR_EXIT": 5,
+    "FADE_OR_WIPE": 5,
+    "CHARACTER_ACTION": 1,
+    "TEXT_OR_GRAPHIC_CHANGE": 2
+   },
+   "orchestrator_viewed": "P02 (seq55,49,61,57), P07 (seq113,122,127,141)",
+   "table": "tables/burst_sample_review_sparse_montage.csv"
+  }
+ },
+ "cut_detector_recall": {
+  "status": "KNOWN_INCOMPLETE",
+  "finding": "5 of 31 sampled intra-state bursts are real shot changes missed by the tier-A detector (cf>=0.5 on 320x180 gray); 4 of 5 confirmed by orchestrator frames (seq49 chart->'5. Ice Age' card, seq61 mammoth scene->face close-up, seq113 Toba title->globe, seq141 crowd->corn graphic). Likely cause: mostly-white cards give low changed-fraction.",
+  "implication": "shot count 77+ is a LOWER BOUND; the 86 draft states under-segment shots; the sample is stratified so a total missed-cut count is not estimable",
+  "proposals": "tables/state_split_proposals_unapplied.csv (5 proposed, none applied)"
  }
 }

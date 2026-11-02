@@ -1,4 +1,4 @@
-# Barely Evolved uPQcyookL0Y — continuation handoff (checkpoint D)
+# Barely Evolved uPQcyookL0Y — continuation handoff (checkpoint E)
 Executor: Ghilmans-Laptop.local (user ghilmankhan, macOS 26.5.1 arm64), session af9bd28b. Lock: ~/YIOS-local-audits/barely-evolved/.be_writer_lock (separate from Casually Finance .vf_writer_lock, which was HELD by scheduled CF V006 shard 9 and untouched).
 Workspace: ~/YIOS-local-audits/barely-evolved/2026-11-02-uPQcyookL0Y-deep-ct-scan (external; frames/montages kept out of Git).
 Source: ~/Downloads/videos in mp3/BarelyEvolved-MP4/The Worst Time in History to Be Born as a Human [uPQcyookL0Y].mp4 sha256 1416669f…c69d, 48,986,292 B; all 3 local MP4 hashes match registry.
@@ -12,5 +12,8 @@ reviewer_2 viewed N01-N09 (A037-A077): HARD_CUT 36, TRANSITION 4 (A040,A055,A073
 Combined 85/85 sparse montage-level: HARD_CUT 72, SAME_SCENE_MOTION 6, TRANSITION 5, UNCLEAR 2 (A051 = zoom into box interior, B005). Table: tables/review_verdicts_sparse_montage.csv. Detector tier-A multi-frame runs are not all cuts (A001 zoom/darken); draft states from cuts are therefore NOT validated.
 ## Checkpoint D update
 Intra-state scan (v1_scripts/be_intra_state_scan_reconcile.py): 26 long states, 165 detector candidates (113 BURST, 29 STILL_ONSET, 23 MOTION_ONSET_AFTER_STILL), UNVERIFIED. Orchestrator viewed 4 bursts: real in-scene animation, not cuts. States reconciled against reviewer verdicts: tables/states_reconciled_v1.csv flags 13/86 states (merge decisions NOT made; originals immutable).
+## Checkpoint E update
+reviewer_3 (31 stratified bursts, 8 montages; transcript: 16 image results, own write): SCALE_OR_CAMERA_MOVE 13, HARD_CUT 5, OBJECT_ENTRY_OR_EXIT 5, FADE_OR_WIPE 5, TEXT_OR_GRAPHIC_CHANGE 2, CHARACTER_ACTION 1. Orchestrator viewed P02 and P07.
+KEY FINDING: tier-A cut detector MISSED real shot changes inside states (seq49 S013, seq61 S018, seq113 S071, seq141 S079 confirmed; seq39 S005 reviewer only). Likely mostly-white cards -> low pixel change. Shot count is a lower bound; draft states under-segment. Splits proposed in tables/state_split_proposals_unapplied.csv, NOT applied.
 ## Next exact operation
-1) Decide merges for SPLIT_DOUBTFUL states (S002/S003, S029, S036-S039) and A051 by viewing native-ish frames; 2) bounded reviewer on a sample of intra-state BURST candidates (stratified by state); 3) provisional ASR; 4) independent semantic check; 5) then mNLNb-Z4T0M. Verify EVIDENCE_SHA256SUMS_checkpoint_D first.
+1) Build a second cut detector suited to white-card content (e.g. layout/edge-structure or histogram/perceptual-hash change on a 160x90 frame, thresholds from this source) and rescan ALL frames; compare against the 85 reviewed candidates and the 113 bursts; 2) view a bounded sample of new candidates; 3) rebuild states v2 (originals immutable); 4) provisional ASR; 5) independent semantic check; 6) then mNLNb-Z4T0M. Verify EVIDENCE_SHA256SUMS_checkpoint_E first.
