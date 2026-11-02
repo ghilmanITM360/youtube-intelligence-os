@@ -1,8 +1,11 @@
 import csv
+import hashlib
+import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -81,6 +84,37 @@ class LedgerChecksumTests(unittest.TestCase):
                 self.assertEqual([], v.validate_row(dataset_id, row))
                 checked += 1
         self.assertGreater(checked, 0)
+
+
+class SharedGitattributesPinTests(unittest.TestCase):
+    PINNED = "59cf21851b5f6e57975ab51944b7572a3edf7471"
+
+    def test_gitattributes_rows_pin_ingestion_time_blob_not_current_file(self):
+        for dataset_id, artifact_id in (("DS-000028", "DS-000028-F020"), ("DS-000030", "DS-000030-F019")):
+            row = next(r for r in v.load_ledger_rows(dataset_id) if r["artifact_id"] == artifact_id)
+            self.assertEqual(".gitattributes", row["repository_relative_path"])
+            self.assertEqual(self.PINNED, v.KNOWN_HISTORICAL_SNAPSHOTS[(dataset_id, artifact_id)])
+            self.assertEqual([], v.validate_row(dataset_id, row))
+
+    def test_pinned_blob_tampering_is_still_detected(self):
+        row = {
+            "artifact_id": "X-4", "repository_relative_path": "cfg.txt",
+            "size_bytes": "5", "sha256": "0" * 64, "raw_or_derived_classification": "DERIVED",
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            git = ["git", "-c", "user.name=t", "-c", "user.email=t@t", "-C", directory]
+            subprocess.run(git + ["init", "-q"], check=True)
+            (root / "cfg.txt").write_text("hello", encoding="utf-8")
+            subprocess.run(git + ["add", "cfg.txt"], check=True)
+            subprocess.run(git + ["commit", "-qm", "c"], check=True)
+            commit = subprocess.check_output(git + ["rev-parse", "HEAD"], text=True).strip()
+            row["sha256"] = hashlib.sha256(b"hello").hexdigest()
+            with mock.patch.dict(v.KNOWN_HISTORICAL_SNAPSHOTS, {("DS-TEST", "X-4"): commit}):
+                (root / "cfg.txt").write_text("changed later", encoding="utf-8")
+                self.assertEqual([], v.validate_row("DS-TEST", row, root=root))
+                row["sha256"] = hashlib.sha256(b"tampered").hexdigest()
+                self.assertEqual(["HISTORICAL_BLOB_SHA_MISMATCH"], v.validate_row("DS-TEST", row, root=root))
 
 
 class LedgerRowValidationUnitTests(unittest.TestCase):
