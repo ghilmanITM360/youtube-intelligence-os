@@ -22,3 +22,6 @@ Continuation: run `build_comparisons.py` after `build_baseline.py` to regenerate
 
 ## Reference-comparison annex (v1, from NICK_281)
 Each new batch adds `reference-framework/comparisons/<batch>_REFERENCE_COMPARISON.json` (rule IDs from `REFERENCE_RULE_INDEX_v1.csv`, exact transcript witnesses, judgments with uncertainty) and passes `python3 research/finance-economics-intelligence/reference-framework/reference_comparison.py validate <file>`. Creator/AI heuristics are lenses, not platform facts; conformity is not causation; no CTR/retention is inferred. See `reference-framework/REFERENCE_USAGE_ASSESSMENT_v1.md`.
+
+## Historical reanalysis campaign (v1)
+Population frozen at `reanalysis/REANALYSIS_POPULATION_v1.json` (558 unique accepted video IDs; later accepted videos enter the delta queue via `reanalysis/build_population.py`). Ledger: `reanalysis/REANALYSIS_CAMPAIGN_LEDGER.csv`. Per-video layer: `reanalysis/videos/<video_id>.json` (full transcript read, thumbnail inspected, K01 tier revealed only after the content assessment, structural validation only: status becomes `SEMANTIC_REVIEW_PENDING`). Original audits are never edited. Knowledge base and enforcement: `reference-framework/KNOWLEDGE_BASE_README.md`.

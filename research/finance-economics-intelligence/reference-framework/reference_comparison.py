@@ -58,3 +58,19 @@ def row(rule_id, wit, judgment, rationale, uncertainty):
     r = rules()[rule_id]
     return {'rule_id': rule_id, 'source_member': r['Source_Member'], 'source_locator': r['Locator'], 'witness': wit,
             'judgment': judgment, 'rationale': rationale, 'uncertainty': uncertainty}
+
+def check_coverage():
+    """Gate: every accepted batch NICK_281+ must have a validating comparison; every ledger reanalysis file must validate."""
+    import glob
+    e = []; R = HERE.parent
+    for f in glob.glob(str(R / 'audit-batches/NICK_*.json')):
+        n = pathlib.Path(f).name
+        if n.endswith(('_VALIDATION.json', '_RECEIPTS.json')): continue
+        num = int(n.split('_')[1].split('.')[0]) if n.split('_')[1].split('.')[0].isdigit() else 0
+        if num >= 281 and not (HERE / 'comparisons' / f'NICK_{num}_REFERENCE_COMPARISON.json').exists(): e.append(f'missing comparison NICK_{num}')
+    for r in csv.DictReader(open(R / 'reanalysis/REANALYSIS_CAMPAIGN_LEDGER.csv')):
+        if r['reanalysis_file']:
+            x = validate(str(R / r['reanalysis_file'])); e += [f"{r['video_id']}: {m}" for m in x]
+    return e
+if __name__ == '__main__' and sys.argv[1:2] == ['check-all']:
+    e = check_coverage(); print('OK' if not e else e); sys.exit(bool(e))

@@ -1,3 +1,7 @@
+# Historical reanalysis campaign checkpoint (2026-11-02)
+
+Priority is now the reanalysis of the 558 accepted audits, not new videos (next new video stays NICK_283 `pu7UaN3FemE`). Population frozen: `reanalysis/REANALYSIS_POPULATION_v1.json` (558 unique IDs, baseline `78871b87`). Ledger `reanalysis/REANALYSIS_CAMPAIGN_LEDGER.csv`: 1 SEMANTIC_REVIEW_PENDING (`-CbNGP9H4xw`), 557 PENDING, 0 blocked. Resume with the next PENDING row in ledger order; helper `reanalysis/reanalysis_tools.py finalize(spec)` (see `reanalysis/videos/-CbNGP9H4xw.json` as the template); reload the DB with `build_reference_kb.py data/knowledge/reference_knowledge.db`. Knowledge DB and coverage honesty: `reference-framework/KNOWLEDGE_BASE_README.md`. Not done: rule extraction for most of the corpus, glyph/OCR repair, 557 reanalyses, semantic review.
+
 # Owner-directed takeover checkpoint — NICK_282 (2026-11-02)
 
 **Parent `ed6b76d7`.** 558/1,612 complete; next `NICK_283 pu7UaN3FemE` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, reference-comparison validator OK, workbook rebuilt (558 deep-audited, 1,054 pending; changed cells not measured). Usage UNKNOWN.
