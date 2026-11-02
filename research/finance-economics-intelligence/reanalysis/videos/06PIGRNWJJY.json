@@ -1,0 +1,497 @@
+{
+ "video_id": "06PIGRNWJJY",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "11879a888775e6c581f6336b1cca36d8edf830770ec540b457de61560fec4dff",
+ "original_packets": [
+  "NICK_002.json"
+ ],
+ "transcript_chars_read": 36233,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 469,
+    "end_char": 506,
+    "text": "Have one red scent\nfor anything extra"
+   },
+   "judgment": "MET",
+   "rationale": "A cold open of three clips (only the first states six figures: \"$261 remaining every month\") gives an immediate stake; the first host line arrives at about character 640 and part of the cold open is replayed later in the video.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 766,
+    "end_char": 835,
+    "text": "some of these are math problems\nand some of these are mirror problems"
+   },
+   "judgment": "MET",
+   "rationale": "Clear framework promise (math problems versus mirror problems, told apart \"in seconds\") and a first clip described before it plays.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Cartoon man in glasses pointing both hands at two phone clips: EASY! over a sunglassed man fanning cash captioned \"Living My Day on My Six-Figure Salary\" and FALSE? over a woman in a car fanning cash captioned \"A Day with me\"; bold MAKES NO SENSE"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title and opening are about people complaining that six figures is not enough; the thumbnail shows flashy \"day in my life\" creators labelled EASY! and FALSE?, which are not among the clips discussed.",
+   "uncertainty": "Expectation match is inferred; viewer reaction is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Reacting to People Living Paycheck to Paycheck on a Six-Figure Income"
+   },
+   "judgment": "MET",
+   "rationale": "Names the format, the subject and the paradox in one line.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 667,
+    "end_char": 718,
+    "text": "taking a look at\npeople living paycheck to paycheck"
+   },
+   "judgment": "MET",
+   "rationale": "Delivers 20 clips (including two disguised ads) of people who say six figures is not enough, each followed by an audit; the commentary flags both ads, so the title is honest.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "MAKES NO SENSE with EASY! and FALSE? creator clips"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The thumbnail promises ridicule of flexing creators; the video delivers sympathetic audits of struggling earners with a math-versus-mirror verdict.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11885,
+    "end_char": 11924,
+    "text": "From here, we start\nmeeting the mirrors"
+   },
+   "judgment": "MET",
+   "rationale": "A real organising principle: the first clips are structural math problems (childcare, rent, location), the later ones mirror problems (spending, lifestyle creep, ads), with a closing synthesis intended.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3207,
+    "end_char": 3240,
+    "text": "You're about to watch both\nhalves"
+   },
+   "judgment": "MET",
+   "rationale": "A planted split (\"nearly half say it's by choice\") is explicitly paid by the math-then-mirror clips, plus \"Watch the turn\" and \"the ad detector\" teases.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3154,
+    "end_char": 3184,
+    "text": "nearly\nhalf say it's by choice"
+   },
+   "judgment": "MET",
+   "rationale": "The by-choice statistic is planted at about character 3,150 and paid across the second half; the sponsored-clip reveals add a second layered gap.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8893,
+    "end_char": 8929,
+    "text": "Stories without line items are\nvibes"
+   },
+   "judgment": "MET",
+   "rationale": "Each clip is followed by an audit that links a claim to a figure or a missing figure, and the audit logic carries across clips (\"no line items, no verdict\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2396,
+    "end_char": 2448,
+    "text": "He showed the receipts, so let's\nactually audit them"
+   },
+   "judgment": "MET",
+   "rationale": "The recurring BUT/THEREFORE shape: claim, BUT the numbers, THEREFORE a verdict (math problem or mirror problem).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1649,
+    "end_char": 1720,
+    "text": "After all those expenses I just named,\nthat comes out to $6,339\na month"
+   },
+   "judgment": "MET",
+   "rationale": "The listed expenses (gas read as $300 for four weeks) sum to $6,339 and leave $261 of the $6,600, as stated.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2497,
+    "end_char": 2519,
+    "text": "That's 73%\nof his list"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Rent, daycare and groceries ($4,800) are 75.7% of the $6,339 expense list and 72.7% of the $6,600 take-home; \"73% of his list\" mislabels the denominator.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9677,
+    "end_char": 9746,
+    "text": "But rent\nplus groceries still leaves five figures\nof monthly daylight"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "On the stated $10,500 monthly take-home, $4,000 rent plus groceries leaves roughly $5,000-$6,500 a month (about $60,000-$78,000 a year), so \"five figures\" is a yearly figure called monthly.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 26334,
+    "end_char": 26388,
+    "text": "And yet, roughly\n$20,000 a month comes in and vanishes"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The caller states take-home of $8,000 plus $5,600 (about $13,600) and 15% retirement contributions; the host's \"20 grand or so\" is closer to gross less tax before those deductions ($25,000 a month less 15% retirement is about $16,250 before insurance), and the commentary repeats \"$20,000 a month comes in\" without reconciling it to the caller's $13,600.",
+   "uncertainty": "Arithmetic and quotation verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4549,
+    "end_char": 4618,
+    "text": "$420 a week per kid is about $22,000\na year paid with after tax money"
+   },
+   "judgment": "MET",
+   "rationale": "$420 x 52 is $21,840; two kids $43,680; about $55,000-$60,000 gross to net that; the \"$100,000 ten years ago needs about $135,000\" step is consistent with roughly 35% cumulative CPI inflation.",
+   "uncertainty": "Arithmetic verified; the CPI step is analyst recall."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12273,
+    "end_char": 12359,
+    "text": "That leaves at\nleast $2,300 a month over $27,000 a year\nevaporating with no name on it"
+   },
+   "judgment": "MET",
+   "rationale": "$6,300 less $4,000 is $2,300 a month, which is $27,600 a year, as stated.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 28466,
+    "end_char": 28519,
+    "text": "$78,000 in\ncombined credit card and student loan\ndebt"
+   },
+   "judgment": "MET",
+   "rationale": "$38,000 of card debt plus over $40,000 of student loans is about $78,000, and $115 plus roughly $149 is the $264 stated.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2955,
+    "end_char": 3036,
+    "text": "just over\nsix in 10 people earning $100,000 to\n$150,000 live paycheck to paycheck"
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "The attributed survey (stored as \"Pimps American Paycheck\") and its 46% and \"nearly half by choice\" splits could not be matched to a source.",
+   "uncertainty": "No source located."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12537,
+    "end_char": 12605,
+    "text": "Money never disappears. It\njust goes somewhere you didn't write\ndown"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame against \"six figures is the new 60k\": the answer is usually spending or tracking, not the economy.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 21155,
+    "end_char": 21198,
+    "text": "A\npaycheck isn't the harvest, it's the\nseed"
+   },
+   "judgment": "MET",
+   "rationale": "Plain metaphors (seed money, a 14-day battery, bailing a boat with a teaspoon) translate emergency-fund and debt ordering advice.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 36193,
+    "end_char": 36233,
+    "text": "please leave a like and I'll\ntalk to you"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A like ask and a pointer to the end screen only; no subscribe ask, no next-video pointer and no early interruptions, which fits the video's criticism of ad-driven clips.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 35759,
+    "end_char": 35818,
+    "text": "So, here's the rule this series keeps\nproving one last time"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The close announces \"the rule this series keeps proving one last time\" and then repeats the preceding \"bailing a boat with a teaspoon\" sentence (small round-ups against a 25% card), which may itself be the rule; the opening promise to \"tell the difference in seconds\" is not given as an explicit test, and the stored transcript ends mid-sentence (\"I'll talk to you\").",
+   "uncertainty": "Transcript may be duplicated at the end; audio not checked."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 33708,
+    "end_char": 33789,
+    "text": "Watch the turn. 60 seconds of completely\nreal, completely relatable economic\npain"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "At ~36,000 characters with 20 clips (including the two ads), the pattern repeats (clip, audit, one-liner); several commentary lines restate the previous clip's point.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 643,
+    "end_char": 706,
+    "text": "Today we're going to be taking a look at\npeople living paycheck"
+   },
+   "judgment": "MET",
+   "rationale": "The title phrase \"paycheck to paycheck ... six-figure\" is in the first host sentence.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text (the format alternates clip and commentary).",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "Reacting to People Living Paycheck to Paycheck on a Six-Figure Income",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. \"Six figures but broke\" is a recurring social-media topic.",
+  "2_differentiated_angle": "Math-problem versus mirror-problem classification and per-clip audits with an ad detector.",
+  "3_title": "Format-plus-paradox title.",
+  "4_thumbnail": "Stored 480x360 copy (letterboxed): bold MAKES NO SENSE, a cartoon man in glasses pointing, two phone clips labelled EASY! and FALSE? with cash-fanning creators. A cartoon man resembling a well-known cartoon character (rights not judged). Legible at mobile size; the featured clips are not those discussed in the script.",
+  "5_opening": "Cold-open clips then a framework promise.",
+  "6_loops": "The math-versus-mirror split and the by-choice statistic are planted and paid; the closing rule is not stated.",
+  "7_spine": "Clip playlist ordered from structural to behavioural, with a twist (two ads).",
+  "8_repetition_clarity": "Each audit ends on a one-line rule.",
+  "9_emotion_credibility": "Sympathetic but sceptical; most arithmetic holds; two figures are miscast.",
+  "10_ending_cta": "Like ask only; the closing synthesis rule is missing from the text.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: clip footage and on-screen text are not in the data; the transcript has no speaker labels, so clip speech and commentary were separated by reading."
+ },
+ "financial_checks": [
+  {
+   "claim": "Listed expenses total $6,339 against $6,600 take-home, leaving $261",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$190 + 300 + 85 + 62 + 145 + 57 + 175 + 225 + 1,000 + 300 (gas $75 x 4) + 1,000 + 2,800 = $6,339. Holds."
+  },
+  {
+   "claim": "Rent, daycare and groceries $4,800 is \"73% of his list\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "75.7% of the expense list; 72.7% of take-home."
+  },
+  {
+   "claim": "$200,000 in a high-cost city: \"maybe $10,500 a month after taxes\", rent $4,000; \"rent plus groceries still leaves five figures of monthly daylight\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "About $5,000-$6,500 a month remain; five figures is an annual amount."
+  },
+  {
+   "claim": "Couple earning $300,000: \"roughly $20,000 a month comes in\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "The caller says take-home is $8,000 plus $5,600 = $13,600."
+  },
+  {
+   "claim": "$420/week childcare per child is \"about $22,000 a year\"; two kids over $40,000 after tax; $55,000-$60,000 gross to break even",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$21,840; $43,680; consistent with 25-30% tax."
+  },
+  {
+   "claim": "\"Over $100,000\" a year is about $6,300 a month; expenses $4,000; \"$2,300 a month over $27,000 a year\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$27,600. Holds."
+  },
+  {
+   "claim": "Card debt $38,000 plus student loans over $40,000 is \"$78,000\"; $115 + $149 = $264",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Holds."
+  },
+  {
+   "claim": "A $100,000 salary from 10 years ago needs about $135,000 today; $110,000 twelve years ago needs about $150,000",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Roughly consistent with US CPI since 2013-2015 (about +35-40%); not re-verified."
+  },
+  {
+   "claim": "Six in 10 of $100,000-$150,000 earners live paycheck to paycheck (46% above $150,000; nearly half by choice); the childcare and student-loan advice orderings (emergency fund before aggressive payoff)",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Survey not located; the ordering advice is standard but not sourced."
+  }
+ ],
+ "strengths": [
+  "A genuinely organising framework (math versus mirror) with an audit per clip.",
+  "Most arithmetic reproduces and the corrections are usually fair.",
+  "Calls out two disguised advertisements and the recursive funnel pattern."
+ ],
+ "weaknesses": [
+  "Two miscast figures (monthly daylight, the $20,000 a month).",
+  "The closing \"rule\" is announced and then only restates the preceding line.",
+  "Thumbnail clips are not the clips discussed.",
+  "The source of the headline statistic is unnamed."
+ ],
+ "contradictions": [
+  "\"Five figures of monthly daylight\" versus about $5,000-$6,500 left.",
+  "\"$20,000 a month comes in\" versus the caller's $13,600.",
+  "\"73% of his list\" versus 75.7%.",
+  "Opening promise to \"tell the difference in seconds\" versus no explicit closing test.",
+  "\"The exact same two-week runway as everyone else in this video\" names a runway no clip states."
+ ],
+ "improvement_opportunities": [
+  "State the one-line math-versus-mirror test explicitly on screen at the end (for example, \"if one fixed cost explains more than half the gap it is math; if the gap has no line item it is a mirror\").",
+  "Correct the $20,000 to the caller's $13,600 and the monthly-versus-annual slip.",
+  "Use two of the actual clips in the thumbnail or retitle the thumbnail text to match.",
+  "Add a subscribe ask after the first audited clip and a next-video pointer."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Clip footage, rights and consent for featured individuals",
+  "The cited paycheck-to-paycheck survey"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "INSUFFICIENT_DATA",
+  "lifetime_rate_ratio": "",
+  "age_days": "0.138",
+  "views_likes_comments_snapshot": {
+   "views": 2863,
+   "likes": 57,
+   "comments": 16,
+   "published_at": "2026-09-10"
+  },
+  "five_peer_sensitivity": "NOT_COMPUTED: no peer-sensitivity row for this video",
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the reaction format, the replayed cold open or the thumbnail clips affected views. Upload age is under three weeks at the stored snapshot.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "first host line corrected to ~640 and by-choice statistic to ~3,150",
+    "cold open described as three clips",
+    "removed non-existent lease-clip claim",
+    "clip count corrected to 20 including two ads",
+    "$20,000-a-month item downgraded to PARTLY_MET with reconciliation",
+    "closing-rule claim softened",
+    "added unstated two-week-runway claim; thumbnail likeness noted"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}
