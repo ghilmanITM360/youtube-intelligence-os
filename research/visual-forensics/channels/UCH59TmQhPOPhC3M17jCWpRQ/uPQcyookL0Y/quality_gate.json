@@ -1,6 +1,6 @@
 {
  "video_id": "uPQcyookL0Y",
- "verdict": "PARTIAL - NOT CT_SCAN_COMPLETE (checkpoint C)",
+ "verdict": "PARTIAL - NOT CT_SCAN_COMPLETE (checkpoint D)",
  "gates": {
   "source_hash_equals_registry": "PASS",
   "source_bytes": "PASS 48986292",
@@ -8,10 +8,10 @@
   "decoded_frames_equal_container_nb_frames": "PASS 14647",
   "pts_cfr_unique_monotonic": "PASS (14646 deltas all 1001 ticks)",
   "full_timeline_measured": "PASS",
-  "state_gap_overlap_check_structural": "PASS 0/0 (by construction)",
-  "state_semantic_validation": "FAIL_NOT_DONE",
+  "state_gap_overlap_check_structural": "PASS 0/0 on states_machine.csv and states_reconciled_v1.csv",
+  "state_semantic_validation": "FAIL_NOT_DONE (13 states flagged for reconcile; merges not decided)",
   "candidate_review_complete": "PASS_SPARSE 85/85 montage-level; not native-frame review; 2 UNCLEAR (A051,B005)",
-  "intra_state_motion_scan": "NOT_DONE",
+  "intra_state_motion_scan": "DONE_DETECTOR 165 candidates; 4/113 bursts spot-viewed; not reviewed",
   "identity_vs_youtube_content": "NOT_VERIFIED (filename ID + hash + duration within 0.22s only)",
   "audio_listening": "UNAVAILABLE",
   "asr_transcript": "NOT_RUN",

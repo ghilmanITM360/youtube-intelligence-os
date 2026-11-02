@@ -27,7 +27,8 @@
   "count": 86,
   "gaps": 0,
   "overlaps": 0,
-  "note": "contiguous partition by construction from tier-A cuts; NOT semantically verified; longest state 29.53 s still contains unsegmented intra-state motion"
+  "note": "contiguous partition by construction from tier-A cuts; NOT semantically verified; longest state 29.53 s still contains unsegmented intra-state motion",
+  "reconciled": "tables/states_reconciled_v1.csv: 13 of 86 states flagged (6 SPLIT_DOUBTFUL_SAME_SCENE_MOTION via A001,A026,A033,A034 incl. exits; 5 TRANSITION_STATE_REVIEWER_TRANSITION; 1 ENTRY_UNCLEAR A051; plus S003/S037/S039 exit states counted in the six); original states_machine.csv unchanged; no merges applied"
  },
  "domains": {
   "shots": "PARTIAL",
@@ -38,5 +39,17 @@
   "camera": "NOT_STARTED",
   "audio_alignment": "UNAVAILABLE - audio not listened; no ASR run",
   "art_direction": "NOT_STARTED"
+ },
+ "intra_state_scan": {
+  "status": "DETECTOR_RUN_UNVERIFIED",
+  "scope": "26 states >180 frames (9064 frames, 62% of video)",
+  "events": {
+   "STILL_ONSET": 29,
+   "MOTION_ONSET_AFTER_STILL": 23,
+   "BURST": 113
+  },
+  "thresholds": "derived from this source: still ge12<500; still run>=15f; burst ge12>=100000 and >=8x rolling median",
+  "visual_spot_check": "4 of 113 bursts (seq14,57,93,144) viewed: all show real in-scene animation, none are cuts; precision/recall NOT measured",
+  "table": "tables/intra_state_events_detector.csv, tables/long_state_summary.csv"
  }
 }
