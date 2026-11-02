@@ -1,0 +1,607 @@
+{
+ "video_id": "12kPA19t_Jw",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "013242bcbb49a37aa40a88be586446100354ad42f83c449a6c3d14a60fa24471",
+ "original_packets": [
+  "CARL_001.json"
+ ],
+ "transcript_chars_read": 20505,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 91,
+    "text": "Nick, 48 years old, a civil engineer,\nmakes $85,000 a year, never made a\nbudget in his life"
+   },
+   "judgment": "MET",
+   "rationale": "A paired-character paradox (the non-tracker has $750,000; the three-app tracker earning $20,000 more has $7,000) with a \"$743,000 gap\" inside ~500 characters; the snapback (\"it's one decision made once\") follows immediately.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 647,
+    "end_char": 722,
+    "text": "Nick spends\nwhat's left after saving. Mia saves\nwhat's left after spending."
+   },
+   "judgment": "MET",
+   "rationale": "The mechanism is stated in the first 700 characters as a two-word reversal; the promise of a calculation at the end (\"by the time she retires she could have more money than Nick\") is explicit.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Smiling cartoon man in a navy polo with arms crossed beside an ATM screen reading NEW PAYCHECK that feeds three pipes into a jar, a green piggy bank and a second jar; bold black PAYCHECK ROUTINE over green AUTOMATED SYSTEM"
+   },
+   "judgment": "MET",
+   "rationale": "The \"paycheck goes straight into automated destinations\" picture matches the opening mechanism (money moves before he sees it); the title's \"Do This When You Get Paid\" matches.",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-INTRO-03",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.6 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 774,
+    "end_char": 839,
+    "text": "You might be thinking they're not the\nsame age. I agree with you."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The intro pre-empts the obvious objection (different ages) and sets the later calculation; slight self-contradiction because the objection is conceded and then the same comparison drives the thesis.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1128,
+    "end_char": 1183,
+    "text": "That number will\nbe calculated at the end of the video."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A strong promise (Mia's retirement balance versus Nick's) paid at ~18,400 with $4.3 million against Nick's $750,000 today, which is not a like-for-like comparison.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-01",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.3 s.1 ChatGPT",
+   "witness": {
+    "kind": "TITLE",
+    "text": "This Is The Best Financial Advice You'll Ever Hear — Do This When You Get Paid!"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The first 55 characters are \"This Is The Best Financial Advice You'll Ever Hear — Do This\"; the concrete part (when you get paid) falls beyond 55 characters in a 79-character title, and the opening is an unspecific superlative.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "This Is The Best Financial Advice You'll Ever Hear — Do This When You Get Paid!"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The video does recommend actions at payday (automation, six steps), but the superlative sets a very high bar and the concept is a six-step system rather than one piece of advice.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "This Is The Best Financial Advice You'll Ever Hear — Do This When You Get Paid!"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "\"The best advice you'll ever hear\" (singular advice) is an overpromise for a six-step, 30-minute system with six steps plus a freedom rule; the content is conventional (match, emergency fund, debt, tax-advantaged accounts).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 573,
+    "end_char": 645,
+    "text": "it's one decision\nmade once and then repeated\nautomatically every payday"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The \"do this\" is only a vague \"one decision made once\" at ~570; the concrete six steps start at ~5,080, so the title loop is paid late and in a different form.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-01",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 1",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2668,
+    "end_char": 2726,
+    "text": "most people look at saving\ncompletely wrong from the start"
+   },
+   "judgment": "MET",
+   "rationale": "Names a pain (saving feels like sacrifice) and reframes it as buying freedom in instalments.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-VC-02",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3626,
+    "end_char": 3695,
+    "text": "Saving isn't delaying enjoyment. It's\nbuying freedom in installments."
+   },
+   "judgment": "MET",
+   "rationale": "A clear transformation (independence now rather than at 65) with a 30-minute set-up.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1691,
+    "end_char": 1780,
+    "text": "Recording the symptoms without\nprescribing a treatment is a medical\nrecord, not medicine."
+   },
+   "judgment": "MET",
+   "rationale": "Contrarian: tracking is not the cure; the system matters more than awareness.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5942,
+    "end_char": 6010,
+    "text": "the difference between a 760 score and a\n620 score is $156\nper month"
+   },
+   "judgment": "MET",
+   "rationale": "$156 x 360 = $56,160, which matches the stated $56,103; the implied rate gap (about 6.5% to 7.3%) was not reconciled with a specific myFICO table.",
+   "uncertainty": "Arithmetic recomputed; myFICO table not fetched."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7171,
+    "end_char": 7224,
+    "text": "could mean\ngiving up roughly $58,000\nin future wealth"
+   },
+   "judgment": "MET",
+   "rationale": "$1,336 a year invested monthly at 7% for 20 years is $57,997 (annual contributions give $54,770), so \"$58,000\" matches the monthly convention; the $1,336 and $24 billion match-gap figures were not located.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15675,
+    "end_char": 15745,
+    "text": "could grow to approximately\n$1.54 million by the time you reach age\n65"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The video's $1.54 million and $979,000 reproduce when $1,250 a month is invested at the effective annual rate ($1,541,656 at 10%, $978,802 at 7%); nominal 10%/12 compounding, which the script names (\"monthly compounding\"), gives $1.659 million and $1.013 million, and the later \"$979,000 to $1.47 million\" matches annual end-of-year contributions at 10% ($1,475,206). The three figures use two conventions without saying so; the principal of $375,000 is correct.",
+   "uncertainty": "Arithmetic recomputed under three conventions; the script does not state which it uses."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18364,
+    "end_char": 18402,
+    "text": "The result,\napproximately $4.3 million"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$21,000 a year ($1,750 a month) at 10% for 31 years is $3.99 million at the effective rate used for the $1.54M figure or $4.39 million at nominal monthly compounding; the stated $4.3 million sits between them, so the video switches conventions. Nick's $750,000 at 48 would grow to about $3.79 million by 65 at 10% (before further saving) and $2.37 million at 7%, while Mia's $1,750 a month at 7% reaches only $2.2-$2.3 million, so \"more than Nick\" is not demonstrated at 10% and is reversed at 7%; Mia's existing $7,000 would add about $134,000 at 10%.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17359,
+    "end_char": 17434,
+    "text": "Cutting\nfrom four times a week to twice a month\nsaves $300 to $500 a month."
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "The leak savings ($300-$500 eating out, $80-$120 coffee, $50-$130 subscriptions) are unsourced estimates; their sum is $430-$750 before the trip item (given only as 40-60% more), against the stated $500-$800 a month.",
+   "uncertainty": "No source; arithmetic only."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5342,
+    "end_char": 5439,
+    "text": "A single missed payment that becomes 30\ndays late can lower your credit score by\n60 to 80 points."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The 90-110 point drop for a 780 score and the 170-point 90-day figure resemble FICO's published illustrations; the statement that a first figure of 60-80 points and a second of 90-110 apply to different score tiers is not explained to the viewer.",
+   "uncertainty": "Analyst recall of FICO figures; not re-verified."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5083,
+    "end_char": 5201,
+    "text": "These are the six steps in the exact\norder that delivers the results Nick has\nbeen achieving and continues to achieve."
+   },
+   "judgment": "MET",
+   "rationale": "A clean ladder: minimum payments, match, essentials, emergency fund, high-interest debt, tax-advantaged accounts, then a freedom rule; the Livermore, Ferrari and 20% sections follow as separate chapters.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12053,
+    "end_char": 12129,
+    "text": "However, there is one silent force\ndraining money from the system every\nday."
+   },
+   "judgment": "MET",
+   "rationale": "A planted gap (\"by the time you finish this video, you'll have mastered it\") is paid by the spotlight-effect section at ~12,800 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "PAYCHECK ROUTINE AUTOMATED SYSTEM with an ATM and three destinations"
+   },
+   "judgment": "MET",
+   "rationale": "The video is the automated-system/payday-routine answer, though the six steps are not depicted and the three pipes do not map to them.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9541,
+    "end_char": 9582,
+    "text": "Close the drain\nfirst, then fill the tub."
+   },
+   "judgment": "MET",
+   "rationale": "Each step is justified by what it protects (late payment lowers score, match is free return, emergency fund prevents card debt), giving cause-and-effect ordering.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 20256,
+    "end_char": 20328,
+    "text": "If this system is making you rethink how\nyour paycheck moves, subscribe."
+   },
+   "judgment": "MET",
+   "rationale": "A single subscribe line plus a next-video pointer (the $100 a month video) at the very end, after value; no mid-video interruption.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1128,
+    "end_char": 1183,
+    "text": "That number will\nbe calculated at the end of the video."
+   },
+   "judgment": "MET",
+   "rationale": "The Mia calculation and the \"force\" tease are layered gaps paid late.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7290,
+    "end_char": 7342,
+    "text": "But there's one thing most younger\nworkers overlook."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Some BUT turns (the match, BUT vesting; the system, BUT the silent force) but the middle is a sequential AND-THEN list of steps.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15178,
+    "end_char": 15242,
+    "text": "According to the latest data from the\nBureau of Labor Statistics"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Dated statistics appear in the compounding section; the advice is evergreen.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16170,
+    "end_char": 16224,
+    "text": "If you're not at 20% yet, here's the\npath to get there"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "About 20,500 characters; the Livermore story is repeated at the end and the system is summarised twice in the last ~1,200 characters.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-03",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #3",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-BT-01.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-04",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #4",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-SCR-03.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19807,
+    "end_char": 19854,
+    "text": "It makes the decision\nonce and then repeats it."
+   },
+   "judgment": "MET",
+   "rationale": "One idea runs throughout: decide once, automate every payday.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  },
+  {
+   "rule_id": "FR-16C-07",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12053,
+    "end_char": 12129,
+    "text": "However, there is one silent force\ndraining money from the system every\nday."
+   },
+   "judgment": "MET",
+   "rationale": "The spotlight-effect section opens as the six-step system closes; the Mia calculation reopens the Nick comparison.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2328,
+    "end_char": 2382,
+    "text": "Willpower is a finite resource.\nIt runs out every day."
+   },
+   "judgment": "MET",
+   "rationale": "Clear images (the open drain, a medical record versus medicine, the Ferrari admired for the car).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18833,
+    "end_char": 18895,
+    "text": "Same family, same economy, same grocery\nstore, same pressures."
+   },
+   "judgment": "MET",
+   "rationale": "The close returns to Nick, Mia and the $85,000/$750,000/$105,000/$7,000 figures and to \"decisions made once\"; the $743,000 gap is stated only in the opening.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 522,
+    "end_char": 571,
+    "text": "It's not discipline, it's not\nfinancial knowledge"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "\"Advice\" is never spoken in the stored text; \"payday\" appears at ~630 and \"paycheck\" only at ~3,580; the title phrases \"best financial advice\" and \"when you get paid\" are absent from the first 30 seconds.",
+   "uncertainty": "No search or trends data."
+  }
+ ],
+ "title": "This Is The Best Financial Advice You'll Ever Hear — Do This When You Get Paid!",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. A common \"automate your savings\" topic.",
+  "2_differentiated_angle": "Paired-character paradox (high earner and tracker versus low-key saver) and the spotlight-effect aside.",
+  "3_title": "Superlative plus action; long (79 characters).",
+  "4_thumbnail": "Local file in thumbnail-evidence (1280x720): navy-polo man with arms crossed, ATM feeding three pipes into a jar, a green piggy bank and a second jar, bold black PAYCHECK ROUTINE over green AUTOMATED SYSTEM; legible at 320 px; clear concept; reads as a system diagram.",
+  "5_opening": "Paired profiles; strong.",
+  "6_loops": "Mia calculation and the silent force.",
+  "7_spine": "Characters, tracking versus action, six steps, spotlight effect, compounding, path to 20%, closing.",
+  "8_repetition_clarity": "The \"system\" is restated several times, and the Livermore story is repeated.",
+  "9_emotion_credibility": "Plain and well-structured; credibility is reduced by the $1.54M / $1.659M / $1.47M inconsistency and the Nick-versus-Mia comparison.",
+  "10_ending_cta": "Subscribe and a next-video pointer after value.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$1,250 a month (20% of $75,000) at 10% for 25 years about $1.54 million; at 7% about $979,000; principal $375,000",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Effective-annual-rate monthly deposits: $1,541,656 (10%) and $978,802 (7%) match the video. Nominal monthly: $1,658,542 and $1,012,590. Annual contributions at 10%: $1,475,206, matching \"$1.47 million\". Conventions are mixed and unstated."
+  },
+  {
+   "claim": "Mia: $21,000 a year at 10% for 31 years from 34 to 65 is about $4.3 million, \"more than Nick\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$3.99M (effective rate) to $4.39M (nominal monthly) at 10%; $2.21M-$2.31M at 7%. Nick's $750,000 at 10% to 65 is $3.79M ($2.37M at 7%) before his future saving: the comparison is not shown and reverses at 7%."
+  },
+  {
+   "claim": "Nick $750,000 versus Mia $7,000: \"$743,000 gap\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$743,000 holds; $7,000 is under one month of gross pay ($8,750)."
+  },
+  {
+   "claim": "760 versus 620 credit score on a $300,000 mortgage: $156 a month; $56,103 extra interest over 30 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$156 x 360 = $56,160; internally consistent. The \"according to myFICO\" attribution was not checked; $156 implies about a 6.5% versus 7.3% rate gap."
+  },
+  {
+   "claim": "Missing the full match costs $1,336 a year, about $58,000 over 20 years at 7%; $24 billion unclaimed; one in four workers",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$57,997 (monthly) or $54,770 (annual). The $1,336, $24 billion and one-in-four figures were not located."
+  },
+  {
+   "claim": "Jesse Livermore made about $100 million in 1929 and died broke in 1940; 15% Fidelity savings target; HSA triple tax advantage; Amazon 3-year and Costco 5-year vesting",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified; widely repeated figures."
+  },
+  {
+   "claim": "Text inconsistency (transcript comparison): emergency fund 3-6 months (step four) versus 6-9 months (path to 20%)",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Internal inconsistency: 3-6 months in the six-step list, 6-9 months in the path to 20%."
+  },
+  {
+   "claim": "BLS median earnings of $75,000 for ages 35-44; leak savings ranges; photo trips cost 40-60% more",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not checked this session; the leak ranges and the trip premium are unsourced."
+  }
+ ],
+ "strengths": [
+  "Compelling character paradox and a mechanism that is easy to remember.",
+  "The step ordering is explained causally.",
+  "Well-placed single subscribe ask and next-video pointer."
+ ],
+ "weaknesses": [
+  "Compounding figures contradict each other ($1.54M versus $1.659M versus $1.47M).",
+  "The \"Mia beats Nick\" comparison ignores Nick's own growth.",
+  "Title overpromises a single \"best advice\" and loses the concrete part past character 55."
+ ],
+ "contradictions": [
+  "$1.54 million versus \"$979,000 to $1.47 million\" for the same $1,250 a month.",
+  "3-6 months of emergency fund versus 6-9 months.",
+  "\"Best financial advice you'll ever hear\" versus a six-step list of standard advice.",
+  "Step six says to stop at about 15% (Fidelity) but the path says \"the target is 20%\".",
+  "Livermore made \"approximately $100 million\" in 1929 but \"hundreds of millions\" at the close."
+ ],
+ "improvement_opportunities": [
+  "Retitle: \"Do This The Day You Get Paid (The $743,000 Difference)\" so the concrete action and number appear in the first 55 characters.",
+  "Show the compounding table once: $1,250 a month at 7% = $1.01M and at 10% = $1.66M, and use the same numbers in the closing.",
+  "Compare Mia at 65 with Nick at 65 (his $750,000 grown at the same rate) to make the end result honest.",
+  "Cut the repeated Livermore recap and one of the two system summaries.",
+  "Add the six steps to the thumbnail or on-screen as a numbered list."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Primary myFICO, Financial Engines, Fidelity and BLS documents"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "0.82761",
+  "age_days": "19.4692",
+  "views_likes_comments_snapshot": {
+   "views": 689,
+   "likes": 14,
+   "comments": 3,
+   "published_at": "2026-08-22 12:44:21"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.02188",
+   "tier": "WEAK",
+   "agrees_with_ten_peer_tier": false,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the paired-character hook, the automation thumbnail or the long superlative title affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed; no external-source checks by the reviewer",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "FR-VC-05 compounding changed from NOT_MET to PARTLY_MET: the video's $1.54M and $979K match effective-rate monthly deposits and $1.47M matches annual contributions (three figures, two conventions)",
+    "Mia-versus-Nick comparison restated (reversed at 7%)",
+    "FR-SEO-01 changed to NOT_MET (\"advice\" never spoken)",
+    "FR-TITLE-04 and FR-INTRO-03 changed to PARTLY_MET",
+    "added the 15% versus 20% and Livermore $100M versus \"hundreds of millions\" contradictions",
+    "$743,000 echo claim corrected; leak sum corrected to $430-$750"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

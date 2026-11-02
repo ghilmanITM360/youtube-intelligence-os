@@ -1,0 +1,592 @@
+{
+ "video_id": "14gilFEp_Iw",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "f9a5647c66d5d1f95895e9cf6a7acda28b3296952ad7feab97ebf1afa4a7964d",
+ "original_packets": [
+  "NICK_004.json"
+ ],
+ "transcript_chars_read": 19953,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 132,
+    "text": "Are you unknowingly trapped in financial\nquicksand, slowly sinking deeper into\ndebt while thinking you're living the\nAmerican dream?"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A stacked rhetorical question (quicksand) and a contrarian \"what if I told you\" line; strong framing, but it is generic and template-like with no concrete scene or number.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 290,
+    "end_char": 409,
+    "text": "there are seven deadly\nmoney traps that keep millions of middle\nclass families stuck in a cycle of\nfinancial mediocrity"
+   },
+   "judgment": "MET",
+   "rationale": "Clear promise (seven traps, \"chances are you've fallen into at least three\") but the like/subscribe ask lands at ~700 characters before any value is given.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Smug cartoon man (half-lidded eyes, closed smirk) with arms spread standing on a cracked stack of green coins beside bold MONEY TRAPS over KEEPING YOU BROKE and a curved black arrow pointing at a red car falling into a dark pit and pouring coins"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title and thumbnail text match and the car is trap two of six; the house (trap one) is not shown and the pit-and-coins picture suggests loss, but \"keeping you broke\" is stronger than the script's \"financial mediocrity\".",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-INTRO-03",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.6 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2355,
+    "end_char": 2463,
+    "text": "If you're\nnodding your head right now, you're not\nalone. And more importantly, it's\nprobably not your fault."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The intro runs ~2,800 characters (14% of the video) before trap one, with repeated assurances (\"shock you\", \"not your fault\") that restate the stakes without new information.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 819,
+    "end_char": 885,
+    "text": "Here's something that\nmight shock you. According to recent\nstudies"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "\"Recent studies\" show the middle-class family \"actually worse off than previous generations\" but no study is named, and later the claim is not revisited; the intro's anticlimax is the unsourced statistic.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-01",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.3 s.1 ChatGPT",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Middle Class Money Traps That Keep You Broke"
+   },
+   "judgment": "MET",
+   "rationale": "The entire 44-character title is within the first 55 characters with audience (middle class), topic (money traps) and stake (broke).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Middle Class Money Traps That Keep You Broke"
+   },
+   "judgment": "MET",
+   "rationale": "Traps for the middle class are delivered as a list.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Middle Class Money Traps That Keep You Broke"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The video promises \"seven deadly money traps\" and delivers six (no \"Trap number seven\" appears), and \"keep you broke\" overstates what the script describes (\"financial mediocrity\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Middle Class Money Traps That Keep You Broke"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The \"which traps\" loop is paid for six of seven announced items; the seventh is never named.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-01",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 1",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 621,
+    "end_char": 698,
+    "text": "If\nyou're tired of living paycheck to\npaycheck despite having a decent income"
+   },
+   "judgment": "MET",
+   "rationale": "Names a specific pain (decent income, no progress) that is relatable to the target.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-VC-02",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19754,
+    "end_char": 19804,
+    "text": "Start\nsmall, question everything that feels\nnormal"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The promised outcome (escape the traps) arrives as a generic instruction; no specific first step or number per trap.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2839,
+    "end_char": 2890,
+    "text": "Trap number one\nis buying too much house too early."
+   },
+   "judgment": "MET",
+   "rationale": "Each trap inverts conventional wisdom (rent is not throwing money away, new cars, credit optimisation, 401(k), whole life); some inversions are weakly argued.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3797,
+    "end_char": 3857,
+    "text": "a\n$300,000 mortgage seem manageable at\njust $1,500 per month"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A $1,500 payment on $300,000 over 30 years implies about 4.4%, while the 30-year rate in the week of the registry upload date (11 September 2025) was 6.35%, giving $1,867; if \"$300,000 mortgage\" means a $300,000 house with 20% down, the loan is $240,000 and $1,493 at 6.35% would match, so the figure is outdated or ambiguous depending on the meaning. The later interest-share check uses 6.5%; at the video's implied 4.4% the first-decade interest share would be about 66% rather than 80%.",
+   "uncertainty": "Arithmetic recomputed; FRED MORTGAGE30US fetched this session; the upload date is taken from the registry; the meaning of \"$300,000 mortgage\" is not stated."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4040,
+    "end_char": 4075,
+    "text": "that monthly payment\neasily doubles"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The spoken claims conflict with each other: doubling $1,500 gives $3,000, about 78% of take-home on $55,000 gross, above the stated \"60 to 70%\"; add-ons of 40-60% of the base (analyst estimate, unsourced) give $2,100-$2,400, which is 55-62% of take-home. \"Easily doubles\" is the overstatement.",
+   "uncertainty": "Arithmetic recomputed; add-on costs are analyst estimates."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5101,
+    "end_char": 5147,
+    "text": "vast\nmajority of your payment goes to\ninterest"
+   },
+   "judgment": "MET",
+   "rationale": "On a 30-year, 6.5% loan about 80% of the first 120 payments is interest (principal paid in a decade is about $45,700 of $300,000); but \"you're not building equity, you're paying rent to the bank\" ignores that about $45,700 of principal and any appreciation are equity.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7173,
+    "end_char": 7245,
+    "text": "That $50,000\ncould grow to several hundred,000 over\nyour working career."
+   },
+   "judgment": "MET",
+   "rationale": "\"Historical market returns... over your working career\": $50,000 at 7% is $381,000 over 30 years and $749,000 over 40 (and $336,000 at 10% over 20 years), so \"several hundred thousand\" holds; it treats the full car price as an investable lump sum.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16334,
+    "end_char": 16386,
+    "text": "that $200 per month could grow\nto well over $100,000"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$200 a month for 20 years is $104,185 at 7% (about 4% over $100,000) and $151,874 at 10%; \"well over $100,000\" holds only at higher returns.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19313,
+    "end_char": 19387,
+    "text": "you're wasting $450\nmonthly that could be invested for much\nbetter returns"
+   },
+   "judgment": "MET",
+   "rationale": "$450 a month at 7% for 20 years is $234,000 and for 30 years $549,000, consistent with \"hundreds of thousands\" over 20-30 years; the $500 whole-life versus $50 term premium is not sourced.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5540,
+    "end_char": 5581,
+    "text": "Trap number two is the new car\naddiction."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Six parallel traps with consistent structure (teaser, naming, scenario, psychological impact, opportunity cost) but no escalation or ordering logic; the seventh is missing and the close summarises rather than resolves.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5257,
+    "end_char": 5375,
+    "text": "The\nsecond trap that destroys middle class\nwealth is one that presies on our desire\nfor convenience and social status."
+   },
+   "judgment": "MET",
+   "rationale": "Each trap is introduced by a long teaser sentence that withholds the name until the second sentence, a reliable retention pattern paid within about 280-360 characters; the name arrives in the third sentence.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "MONEY TRAPS KEEPING YOU BROKE with a car falling into a pit"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The traps are delivered; the car is only one of six; the \"broke\" claim is stronger than the delivered argument.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6628,
+    "end_char": 6676,
+    "text": "That $50,000\ncar isn't just costing you $50,000."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Some causal chains hold (financing, depreciation, opportunity cost), but the 401(k) argument (\"you'll be dependent on your employer for your entire working career\") does not follow from putting 8% in a retirement account.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 700,
+    "end_char": 817,
+    "text": "make sure to subscribe to the channel\nand hit the like button if this\ninformation helps you escape these\ncostly traps"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The ask is placed at ~700 characters, before any value; no closing ask appears because the stored text ends mid-sentence (\"Your financial freedom depends on\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 411,
+    "end_char": 495,
+    "text": "And chances are\nyou've fallen into at least three of\nthem without even realizing it."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A planted gap (\"at least three\") is never paid or counted; the per-trap teasers work but the video-level curiosity gap is not closed.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5012,
+    "end_char": 5052,
+    "text": "but here's the harsh\nreality, not equity"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A repeated \"But here's the harsh reality\" turn exists in most traps, but the six sections are parallel AND-THEN items.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1170,
+    "end_char": 1217,
+    "text": "that previous\ngenerations never had to navigate"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The pitch is generational and timeless; no current event or data year is cited.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5582,
+    "end_char": 5649,
+    "text": "This trap is particularly\ninsidious because it feels so\nreasonable."
+   },
+   "judgment": "NOT_MET",
+   "rationale": "About 19,950 characters with repeated stock phrases (\"particularly insidious\" twice, \"particularly\" four times, \"devastating\" three times, \"financial mediocrity\" repeated) and many sentences restating the previous one; the structure suggests a template. Spoken fillers (\"Uh\", \"Um\") occur at least seven times and the transcript contains garbled passages (~2,670 \"flight.\", ~4,880-5,100 \"even worse. They often to keeping...\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-03",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #3",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-BT-01.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-04",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #4",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-SCR-03.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19824,
+    "end_char": 19918,
+    "text": "building real\nwealth often means doing the opposite of\nwhat everyone else considers reasonable"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The throughline is \"common financial choices are traps\", but trap four argues against standard retirement saving while offering no concrete alternative beyond \"dramatically increasing your income\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  },
+  {
+   "rule_id": "FR-16C-07",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13532,
+    "end_char": 13603,
+    "text": "The\nfifth money trap that keeps middle class\nfamilies financially stuck"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The next trap is introduced at the end of each section, but no loop is held across sections.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11863,
+    "end_char": 11888,
+    "text": "Think about it\nlogically."
+   },
+   "judgment": "MET",
+   "rationale": "Plain language throughout, with few jargon terms.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19500,
+    "end_char": 19584,
+    "text": "These seven money traps aren't\naccidents or unfortunate side effects of\nmodern life."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The close returns to \"traps\" and \"dependent on employers\" from the opening but not to the quicksand image, and it counts seven traps after six were shown.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 290,
+    "end_char": 374,
+    "text": "there are seven deadly\nmoney traps that keep millions of middle\nclass families stuck"
+   },
+   "judgment": "MET",
+   "rationale": "\"Money traps\" is first spoken at ~313 and \"middle class\" at ~347, inside about the first 30 seconds.",
+   "uncertainty": "No search or trends data."
+  }
+ ],
+ "title": "Middle Class Money Traps That Keep You Broke",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. A list-style \"money traps\" topic with high competition.",
+  "2_differentiated_angle": "Anti-conventional-wisdom framing (house, car, credit, 401(k), insurance) with a generic template.",
+  "3_title": "Audience-stake-topic title.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, 106,357 bytes) and persisted in thumbnail-evidence: smug cartoon man (half-lidded eyes) on a cracked coin stack, bold MONEY TRAPS and KEEPING YOU BROKE, an arrow to a red car falling into a pit with red coins, nose-down; legible at 320 px; high contrast; the car is the second trap.",
+  "5_opening": "Rhetorical question plus an immediate subscribe ask.",
+  "6_loops": "Per-trap teasers; the \"at least three\" loop is never closed.",
+  "7_spine": "Six repeated sections; the seventh trap is announced but absent.",
+  "8_repetition_clarity": "Heavy repetition of stock phrases.",
+  "9_emotion_credibility": "Confident and generic; the unsourced \"recent studies\" line and the outdated $1,500 payment reduce credibility.",
+  "10_ending_cta": "No closing ask in the stored text (ends mid-sentence).",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$300,000 mortgage \"manageable at just $1,500 per month\"",
+   "kind": "PRIMARY_DATA_FETCHED_THIS_SESSION",
+   "result": "P&I at 6.35% (Freddie Mac, week of 11 September 2025, FRED) is $1,867 for $300,000 and $1,493 for $240,000; $1,500 on $300,000 corresponds to about 4.4%."
+  },
+  {
+   "claim": "Taxes, insurance, maintenance and utilities make the payment \"easily double\"; 60 to 70% of take-home",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Add-ons are unsourced analyst estimates of 40-60% (up to about 65-75% with 1% maintenance); doubling gives $3,000, about 78% of take-home on $55,000 gross."
+  },
+  {
+   "claim": "First decade of a 30-year mortgage: \"vast majority\" of payments is interest",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "At 6.5%, 80% of the first 120 payments is interest; principal paid is $45,672 of $300,000."
+  },
+  {
+   "claim": "$50,000 invested could grow to \"several hundred thousand\" over a working career",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "7%: $193,484 (20 years), $380,613 (30), $748,723 (40)."
+  },
+  {
+   "claim": "$200 a month subscriptions invested for 20 years: \"well over $100,000\"; $450 a month whole-life premium difference over 20-30 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$104,185 at 7% (and $151,874 at 10%); $234,417 (20 years) and $548,987 (30 years) at 7% for $450 a month."
+  },
+  {
+   "claim": "Seven deadly money traps; at least three apply to you; \"recent studies\" show families worse off than previous generations",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Six traps are delivered; no study is named; the unsourced generational claim is not checked here."
+  }
+ ],
+ "strengths": [
+  "Reliable retention structure: a teaser sentence before each trap name.",
+  "Several figures (subscriptions, whole-life difference) reproduce.",
+  "Clear thumbnail with high contrast."
+ ],
+ "weaknesses": [
+  "Seven traps promised, six delivered; the close counts seven.",
+  "$1,500 payment is outdated; \"recent studies\" is unsourced.",
+  "Generic, templated language and heavy repetition; early subscribe ask.",
+  "Thumbnail shows trap two only."
+ ],
+ "contradictions": [
+  "\"Seven deadly money traps\" versus six sections."
+ ],
+ "improvement_opportunities": [
+  "Either add the seventh trap or retitle to six; the first 55 characters can carry the count (\"6 Money Traps Keeping The Middle Class Broke\").",
+  "Update the mortgage payment to the current rate ($1,867 at 6.35%) and show the add-ons as a table.",
+  "Name the \"recent studies\" source on screen or delete the claim.",
+  "Move the subscribe ask after trap one and use the thumbnail to show the house (trap one).",
+  "Cut repeated phrases (about 3,000 characters) and add one worked example per trap."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "The stored transcript ends mid-sentence",
+  "Primary studies behind the generational claim"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "WEAK",
+  "lifetime_rate_ratio": "0.14549",
+  "age_days": "364.5454",
+  "views_likes_comments_snapshot": {
+   "views": 11460,
+   "likes": 399,
+   "comments": 66,
+   "published_at": "2025-09-11 10:54:37"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.13215",
+   "tier": "WEAK",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the list structure, the early subscribe ask or the car thumbnail affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed; no external-source checks by the reviewer",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "$1,500 mortgage payment changed to PARTLY_MET (down-payment reading and registry date noted)",
+    "$50,000 figure changed to MET and the $200 figure to PARTLY_MET (consistent return assumptions)",
+    "\"doubles\" rationale made internally consistent",
+    "unsupported \"worse off versus AEI\" and \"match elsewhere\" contradictions removed; evidence labels relabelled as recall",
+    "filler count and ASR garbles added; positions corrected"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}
