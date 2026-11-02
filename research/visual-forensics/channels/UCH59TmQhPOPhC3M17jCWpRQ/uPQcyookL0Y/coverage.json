@@ -28,7 +28,16 @@
   "gaps": 0,
   "overlaps": 0,
   "note": "contiguous partition by construction from tier-A cuts; NOT semantically verified; longest state 29.53 s still contains unsegmented intra-state motion",
-  "reconciled": "tables/states_reconciled_v1.csv: 13 of 86 states flagged (7 SPLIT_DOUBTFUL_SAME_SCENE_MOTION; 5 TRANSITION_STATE_REVIEWER_TRANSITION; 1 ENTRY_UNCLEAR); original states_machine.csv unchanged; no merges applied"
+  "reconciled": "tables/states_reconciled_v1.csv: 13 of 86 states flagged (7 SPLIT_DOUBTFUL_SAME_SCENE_MOTION; 5 TRANSITION_STATE_REVIEWER_TRANSITION; 1 ENTRY_UNCLEAR); original states_machine.csv unchanged; no merges applied",
+  "v2": {
+   "table": "tables/states_v2_draft.csv",
+   "states": 98,
+   "splits_applied": 12,
+   "gaps": 0,
+   "overlaps": 0,
+   "status": "DRAFT_UNVALIDATED",
+   "v1_unchanged": true
+  }
  },
  "domains": {
   "shots": "PARTIAL",
@@ -67,9 +76,22 @@
   }
  },
  "cut_detector_recall": {
-  "status": "KNOWN_INCOMPLETE",
-  "finding": "5 of 31 sampled intra-state bursts are real shot changes missed by the tier-A detector (cf>=0.5 on 320x180 gray); 4 of 5 confirmed by orchestrator frames (seq49 chart->'5. Ice Age' card, seq61 mammoth scene->face close-up, seq113 Toba title->globe, seq141 crowd->corn graphic). Likely cause: mostly-white cards give low changed-fraction.",
-  "implication": "shot count 77+ is a LOWER BOUND; the 86 draft states under-segment shots; the sample is stratified so a total missed-cut count is not estimable",
-  "proposals": "tables/state_split_proposals_unapplied.csv (5 proposed, none applied)"
+  "status": "IMPROVED_STILL_UNVERIFIED_RECALL",
+  "correction_to_checkpoint_E": "E claimed 5 sampled bursts were cuts 'missed by tier-A'. Re-check: B001(f930), B003(f3767), B007(f13551) were ALREADY tier-B candidates judged HARD_CUT by reviewer_1; draft states v1 had simply not been split on tier-B. Only seq49(f2601) and seq113(f11696) were absent from all candidate lists.",
+  "second_detector": "ink_iou_change>=0.7 on 320x180 gray (ink=gray<200), outside +-4f of A/B, clustered gap<=4f: 42 clusters; threshold picked on 5 known cuts (all >=0.758) -> in-sample, not independent; 7 of 26 known non-cut bursts also exceed it (~27% FP in that stratified sample)",
+  "reviewer_4": {
+   "images_viewed": 9,
+   "rows": 42,
+   "tally": {
+    "SAME_SHOT_MOTION": 29,
+    "HARD_CUT": 7,
+    "TEXT_OR_GRAPHIC_CHANGE": 6
+   },
+   "transcript": "18 image results, own write",
+   "orchestrator_viewed": "Q05 (C021-C025), Q07 (C031-C035)",
+   "contested": "C034 (white '3000' card -> crowd sliding in) may be object entry on a card rather than a hard cut; C023-C025 object swaps on white were judged SAME_SHOT_MOTION"
+  },
+  "hard_cut_total_reviewed": "72 (A/B) + 7 (C) = 79 reviewer-labelled HARD_CUT; still a lower bound: recall of second detector unmeasured, cuts between two colour-heavy full-frame scenes with little ink change and slow dissolves can still be missed",
+  "definitional_note": "On white-card content, 'shot' vs 'object/graphic swap on a continuing white card' is ambiguous; reviewer verdicts are one reading, not ground truth"
  }
 }
