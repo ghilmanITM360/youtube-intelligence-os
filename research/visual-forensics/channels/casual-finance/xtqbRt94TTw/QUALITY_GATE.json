@@ -1,0 +1,42 @@
+{
+ "status": "VIDEO_006_PARTIAL_FIRST_PASS_7_OF_10",
+ "CT_SCAN_COMPLETE": false,
+ "audio": "AUDIO_NOT_VERIFIED",
+ "av": "AV_CERTIFICATION_BLOCKED",
+ "gates": {
+  "source_sha_verified": true,
+  "frames_measured": 19862,
+  "candidates": 766,
+  "draft_states": 447,
+  "first_pass_shards_structurally_validated": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "first_pass_pending": [
+   8,
+   9,
+   10
+  ],
+  "first_pass_structural_validation": "validate_shard.py PASS for shards 1-7 (id coverage/order, enum values, length rules); NOT a semantic review",
+  "semantic_review": "none independent; reviewer self-reported native views (not audited)",
+  "integration": "not started",
+  "frame_partition_complete": false,
+  "draft_state_gaps": {
+   "gaps": 123,
+   "frames": 3116,
+   "over_60_frames": 11,
+   "ref": "research/ledgers/draft_state_gaps_v1.csv"
+  },
+  "scenedetect_disputes_unmatched": 339,
+  "known_issues": "research/ledgers/KNOWN_ISSUES_LEDGER_v1.md",
+  "second_pass": "not started",
+  "asr": "not run",
+  "production_package": "not started",
+  "semantic_certification": false
+ }
+}

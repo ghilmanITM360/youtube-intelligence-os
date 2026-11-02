@@ -1,0 +1,2192 @@
+{
+ "shard": 2,
+ "candidates": [
+  {
+   "id": "EP0047",
+   "verdict": "CONFIRMED",
+   "type": "ADDITIVE_ENTRY",
+   "state_boundary": "NO",
+   "desc": "Orange percent coin and green 'United States Treasury' certificate drawing pop into the lower centre-right in one frame beneath the unchanged dark news-headline card.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0048",
+   "verdict": "CONFIRMED",
+   "type": "ADDITIVE_ENTRY",
+   "state_boundary": "NO",
+   "desc": "Smiling-eyed Earth character (blue/green globe, white swoosh mouth, round eyes) pops in at lower left beside the coin and certificate in one frame.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0049",
+   "verdict": "CONFIRMED",
+   "type": "EXPRESSION_CHANGE",
+   "state_boundary": "NO",
+   "desc": "Earth character's black pupils shift right inside the white eyes (glance); globe body, coin, certificate and headline card unchanged.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "SUB032",
+   "verdict": "UNVERIFIED",
+   "type": "OTHER",
+   "state_boundary": "NO",
+   "desc": "No clear content change visible between pre and stable frames; changed bbox spans headline highlight and upper Earth; possible tiny highlighter or pupil shift, not confirmable.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "LOW"
+  },
+  {
+   "id": "SUB033",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Yellow-green highlighter now covers 'level since' in the headline (previously blue link text); red box around '5.04%' unchanged.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "EP0050",
+   "verdict": "CONFIRMED",
+   "type": "FULL_REPLACE",
+   "state_boundary": "YES",
+   "desc": "Hard cut from Earth/coin/certificate under headline card to a Chrome PDF-viewer capture (dark thumbnail sidebar, white page) of an economics paper; page then scrolls from title block to body text.",
+   "shot_boundary": "YES",
+   "motion": {
+    "path": "Hard cut at f1479 to PDF viewer; page content scrolls up inside the static viewer frame",
+    "easing": "UNKNOWN",
+    "duration_note": "9 frames, about 0.375 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB034",
+   "verdict": "NOT_A_CHANGE",
+   "type": "OTHER",
+   "state_boundary": "NO",
+   "desc": "No visible content change in the PDF viewer between pre and stable; cursor and page identical.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "EP0051",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "PDF page scrolls down from page 1 body to the end of page 1 and start of page 2; thumbnail selection moves from page 1 to page 2; viewer chrome static.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Vertical scroll downward inside viewer, content moves up",
+    "easing": "UNKNOWN",
+    "duration_note": "8 frames, about 0.33 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0052",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "Page 2 text continues scrolling upward inside the PDF viewer, ending near the page-2 footnote and 'Goals and Definitions' heading.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Continued vertical scroll downward in viewer",
+    "easing": "UNKNOWN",
+    "duration_note": "9 frames, about 0.375 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB035",
+   "verdict": "RECLASSIFIED",
+   "type": "OBJECT_MOTION",
+   "state_boundary": "NO",
+   "desc": "Mouse cursor moves from the dark right margin onto the body text, becoming an I-beam near the '2022' line; page itself unchanged.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Cursor drifts leftward from right gutter onto a text line",
+    "easing": "UNKNOWN",
+    "duration_note": "14 frames, about 0.58 s"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "SUB036",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Blue text-selection highlight appears on the word 'the' in the line beginning 'tightening that began in 2022' as the I-beam starts a drag selection.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Selection begins on one word and is about to extend rightward",
+    "easing": "stepped",
+    "duration_note": "6 frames, 0.25 s"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "EP0053",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Blue text selection jumps to cover 'the Federal Reserve has tightened monetary policy' plus the next line 'to combat inflation eleven previous times since 1965' in one frame.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB037",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Blue selection extends to the last characters of '1965' with the I-beam at the end of the selected text; rest of page unchanged.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Selection edge advances a few characters rightward",
+    "easing": "stepped",
+    "duration_note": "4 frames"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "SUB038",
+   "verdict": "RECLASSIFIED",
+   "type": "OBJECT_MOTION",
+   "state_boundary": "NO",
+   "desc": "Cursor leaves the selected text, becoming an arrow, and travels to the dark right margin; selection stays in place.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Cursor glides rightward and slightly upward to the right gutter",
+    "easing": "UNKNOWN",
+    "duration_note": "27 frames, about 1.1 s"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "SUB039",
+   "verdict": "RECLASSIFIED",
+   "type": "OBJECT_MOTION",
+   "state_boundary": "NO",
+   "desc": "Arrow cursor drifts a few pixels in the right margin of the PDF viewer; no page content changes.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Small cursor drift in right gutter",
+    "easing": "UNKNOWN",
+    "duration_note": "3 frames"
+   },
+   "confidence": "LOW"
+  },
+  {
+   "id": "EP0054",
+   "verdict": "CONFIRMED",
+   "type": "FULL_REPLACE",
+   "state_boundary": "YES",
+   "desc": "PDF viewer scrolls quickly through pages to a table page and enlarges, then hard-replaced by a full-frame 'Table 1: The Eleven Monetary Policy Tightenings since 1965' beside a new peach-faced stick-figure presenter with brown pointer.",
+   "shot_boundary": "YES",
+   "motion": {
+    "path": "Viewer scrolls down fast (thumbnail selection descends), page zooms toward table, then cut to table plus stick figure around f1630-1642",
+    "easing": "UNKNOWN",
+    "duration_note": "46 frames, about 1.9 s"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "SUB040",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Yellow highlighter wipes left to right over table row 1 (Sept. 1965-Nov. 1966 ... 'Quite soft-but was it a landing?').",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Left-to-right wipe along row 1",
+    "easing": "linear",
+    "duration_note": "23 frames, about 0.96 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB041",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Second yellow highlighter wipe over table row 4 (Jan. 1977-Apr. 1980 ... Hard), row 1 highlight remaining.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Left-to-right wipe along row 4",
+    "easing": "linear",
+    "duration_note": "23 frames, about 0.96 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0055",
+   "verdict": "CONFIRMED",
+   "type": "POSE_SWAP",
+   "state_boundary": "NO",
+   "desc": "Stick figure's long brown pointer swings from aiming at the table to hanging diagonally down-left across the torso; body, table and highlights unchanged.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0056",
+   "verdict": "CONFIRMED",
+   "type": "ADDITIVE_ENTRY",
+   "state_boundary": "NO",
+   "desc": "Handwritten black marker text '1 1/2 year,' appears at lower centre-right under the table in one frame.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0057",
+   "verdict": "CONFIRMED",
+   "type": "ADDITIVE_ENTRY",
+   "state_boundary": "NO",
+   "desc": "Handwritten text 'added 4%' appears right after '1 1/2 year,' on the same baseline at lower right in one frame.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0058",
+   "verdict": "CONFIRMED",
+   "type": "FULL_REPLACE",
+   "state_boundary": "YES",
+   "desc": "Table-plus-presenter scene replaced by a lone stick figure centred on white: spiky black hair, skeptical raised eyebrow, flat mouth, one hand raised, other on hip; table and text removed.",
+   "shot_boundary": "YES",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0059",
+   "verdict": "CONFIRMED",
+   "type": "FULL_REPLACE",
+   "state_boundary": "YES",
+   "desc": "Lone stick figure replaced by an illustrated brown-haired tan-faced character at left with a tiny green stroke, orange percent coin and Treasury certificate at right.",
+   "shot_boundary": "YES",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB042",
+   "verdict": "CONFIRMED",
+   "type": "DRAW_ON_OR_REVEAL",
+   "state_boundary": "NO",
+   "desc": "Thick green zig-zag rising arrow is drawn on from lower-left start up to an upper-right arrowhead between the character and the coin/certificate.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Stroke grows from lower-left start to upper-right arrowhead along a zig-zag path",
+    "easing": "linear",
+    "duration_note": "29 frames, about 1.2 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0060",
+   "verdict": "CONFIRMED",
+   "type": "POSE_SWAP",
+   "state_boundary": "NO",
+   "desc": "Brown-haired character's idle pose flips: hooked raised hand moves from the right side of the torso to the left and the hair wing swaps; arrow, coin, certificate static.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0061",
+   "verdict": "CONFIRMED",
+   "type": "POSE_SWAP",
+   "state_boundary": "NO",
+   "desc": "Character flips back to the earlier idle pose (hooked hand on right of torso, hair wing left); everything else static.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0062",
+   "verdict": "CONFIRMED",
+   "type": "ADDITIVE_ENTRY",
+   "state_boundary": "NO",
+   "desc": "Speech bubble reading 'Done!' appears right of the character, partly covering the arrow and coin, while the character's arms change to a shrug pose.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0063",
+   "verdict": "CONFIRMED",
+   "type": "FULL_REPLACE",
+   "state_boundary": "YES",
+   "desc": "Character scene replaced by a screenshot of a central-bank website page (Policy Tools / Open Market Operations Archive with 2002 and 2001 rate tables) on the left two-thirds, white margin right.",
+   "shot_boundary": "YES",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0064",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "Website page scrolls down through older yearly rate tables while a profile card (portrait, 'Alan Greenspan', 'Chairman, Board of Governors, 1987-2006', bio paragraph) slides in from the right edge.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Page scrolls upward under a static header; profile card translates leftward from off-screen right and stops at right third",
+    "easing": "UNKNOWN",
+    "duration_note": "39 frames, about 1.6 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0065",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "Website page scrolls a further short distance (1999 table moves off the top) under the static profile card; 6 frames.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Short vertical scroll, content moves up",
+    "easing": "UNKNOWN",
+    "duration_note": "6 frames, 0.25 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB043",
+   "verdict": "NOT_A_CHANGE",
+   "type": "OTHER",
+   "state_boundary": "NO",
+   "desc": "Page, profile card and cursor positions identical in pre and stable; only residual scroll settle at most.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "LOW"
+  },
+  {
+   "id": "EP0066",
+   "verdict": "CONFIRMED",
+   "type": "ZOOM_OR_SCALE",
+   "state_boundary": "YES",
+   "desc": "Page keeps scrolling while the profile card drifts down and out, then the page zooms in about 1.6x to fill centre with 1998-1996 tables; amber highlights appear on the 1997 and 1996 rows.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Scroll plus zoom-in; card exits downward-left; amber row highlights appear",
+    "easing": "UNKNOWN",
+    "duration_note": "28 frames, about 1.2 s"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "EP0067",
+   "verdict": "CONFIRMED",
+   "type": "ADDITIVE_ENTRY",
+   "state_boundary": "NO",
+   "desc": "Stick figure (black spiky hair, smile, one leg kicked up) appears at lower right overlapping the 1997/1996 tables in one frame.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0068",
+   "verdict": "CONFIRMED",
+   "type": "ELEMENT_EXIT",
+   "state_boundary": "NO",
+   "desc": "Stick figure vanishes from the lower right in one frame; an orange-red highlight begins at the left end of the 'September 29' row.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB044",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Orange-red highlighter wipes left to right across the 'September 29' table row (1998).",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Left-to-right wipe along one table row",
+    "easing": "linear",
+    "duration_note": "10 frames, about 0.42 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB045",
+   "verdict": "NOT_A_CHANGE",
+   "type": "OTHER",
+   "state_boundary": "NO",
+   "desc": "No visible content change between pre and stable in the zoomed tables; sub-threshold noise.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "LOW"
+  },
+  {
+   "id": "EP0069",
+   "verdict": "CONFIRMED",
+   "type": "FULL_REPLACE",
+   "state_boundary": "YES",
+   "desc": "Zoomed rate-table page replaced by a central-bank 'Federal Open Market Committee' page (FOMC projections materials, accessible version) with a smiling stick figure and lowered pointer overlapping at right.",
+   "shot_boundary": "YES",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0070",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "FOMC page scrolls down from the text summary into projection tables (GDP, unemployment, inflation, 2021-2029 columns); stick figure at right static.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Continuous vertical scroll, content moves up",
+    "easing": "UNKNOWN",
+    "duration_note": "28 frames, about 1.2 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB046",
+   "verdict": "NOT_A_CHANGE",
+   "type": "OTHER",
+   "state_boundary": "NO",
+   "desc": "Page and stick figure identical between pre and stable; no visible change.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "LOW"
+  },
+  {
+   "id": "EP0071",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "Page scroll continues past unemployment and inflation tables to the 'Figure 2' midpoint table and part of Figure 3.A; figure static.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Continuous vertical scroll, content moves up",
+    "easing": "UNKNOWN",
+    "duration_note": "26 frames, about 1.1 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0072",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "Page scrolls about 50 px while the stick figure's pointer arm swings up so the pointer tip touches the Figure 2 table; 3 frames.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Short scroll plus pointer arm swing upward",
+    "easing": "UNKNOWN",
+    "duration_note": "3 frames"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "EP0073",
+   "verdict": "CONFIRMED",
+   "type": "ZOOM_OR_SCALE",
+   "state_boundary": "YES",
+   "desc": "Page zooms in about 1.9x to full-frame Figure 2 table ('Midpoint of target range...') while the stick figure slides out right; arrow cursor and a blue bar over the '2026' header appear.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Zoom-in toward table centre; figure exits to the right edge",
+    "easing": "UNKNOWN",
+    "duration_note": "11 frames, about 0.46 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB047",
+   "verdict": "CONFIRMED",
+   "type": "DRAW_ON_OR_REVEAL",
+   "state_boundary": "NO",
+   "desc": "Blue vertical stroke is drawn down the left edge of the '2026' column starting from its header.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Stroke extends downward along column edge",
+    "easing": "linear",
+    "duration_note": "6 frames, 0.25 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0074",
+   "verdict": "CONFIRMED",
+   "type": "DRAW_ON_OR_REVEAL",
+   "state_boundary": "NO",
+   "desc": "Blue stroke continues down the left edge to the table bottom, then turns and begins running right along the bottom edge.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Stroke runs downward then turns right along bottom edge",
+    "easing": "linear",
+    "duration_note": "5 frames"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB048",
+   "verdict": "CONFIRMED",
+   "type": "DRAW_ON_OR_REVEAL",
+   "state_boundary": "NO",
+   "desc": "Blue bottom edge of the column box finishes and the right edge begins rising upward.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Stroke runs right along bottom then upward on right edge",
+    "easing": "linear",
+    "duration_note": "7 frames"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0075",
+   "verdict": "CONFIRMED",
+   "type": "DRAW_ON_OR_REVEAL",
+   "state_boundary": "NO",
+   "desc": "Blue column box right edge completes, magenta outlines are drawn around the '4.375' and '4.125' rows, and an orange percent coin pops in at upper right.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Blue edge rises to close box; magenta rectangles drawn left to right across two rows; coin appears near the end",
+    "easing": "linear",
+    "duration_note": "40 frames, about 1.7 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB049",
+   "verdict": "RECLASSIFIED",
+   "type": "ELEMENT_EXIT",
+   "state_boundary": "NO",
+   "desc": "Arrow mouse cursor to the right of the coin disappears; table, boxes and coin unchanged.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Cursor removed over a few frames",
+    "easing": "stepped",
+    "duration_note": "4 frames"
+   },
+   "confidence": "LOW"
+  },
+  {
+   "id": "EP0076",
+   "verdict": "CONFIRMED",
+   "type": "ADDITIVE_ENTRY",
+   "state_boundary": "NO",
+   "desc": "Red-and-white calendar icon with six red dots pops in below the percent coin at right in one frame.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0077",
+   "verdict": "CONFIRMED",
+   "type": "FULL_REPLACE",
+   "state_boundary": "YES",
+   "desc": "Full-frame FOMC dot-plot table with coin and calendar replaced by a smiling stick figure at left and a think-tank article screenshot ('Trusted Insights for What's Ahead' bullets on FOMC) at right.",
+   "shot_boundary": "YES",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB050",
+   "verdict": "RECLASSIFIED",
+   "type": "OBJECT_MOTION",
+   "state_boundary": "NO",
+   "desc": "Mouse cursor moves downward within the article text area at right; figure and page otherwise unchanged.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Cursor drifts downward",
+    "easing": "UNKNOWN",
+    "duration_note": "7 frames, about 0.29 s"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "EP0078",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "Article scrolls up to its top, revealing a dark banner headline about a September FOMC preview; an 'Author' card slides in at right and the pointer swings up toward the headline.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Article scrolls upward to top; author card appears at lower right; pointer arm raised",
+    "easing": "UNKNOWN",
+    "duration_note": "33 frames, about 1.4 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0079",
+   "verdict": "CONFIRMED",
+   "type": "ELEMENT_EXIT",
+   "state_boundary": "NO",
+   "desc": "'Author' card (portrait, name, 'Senior US Economist', 'Read Bio') leaves to the right/down while a thin red stroke starts drawing above the headline.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Author card slides off right; red outline starts at headline",
+    "easing": "UNKNOWN",
+    "duration_note": "15 frames, about 0.6 s"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "SUB051",
+   "verdict": "NOT_A_CHANGE",
+   "type": "OTHER",
+   "state_boundary": "NO",
+   "desc": "Red rectangle around the headline looks complete in both pre and stable; no visible content change.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "LOW"
+  },
+  {
+   "id": "EP0080",
+   "verdict": "RECLASSIFIED",
+   "type": "EXPRESSION_CHANGE",
+   "state_boundary": "NO",
+   "desc": "Stick figure's smile turns to a frown and pointer drops to a lowered diagonal while the article scrolls down about 200 px, moving the red-boxed headline banner off the top.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Brief page scroll plus face and pointer change",
+    "easing": "stepped",
+    "duration_note": "5 frames, about 0.21 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB052",
+   "verdict": "RECLASSIFIED",
+   "type": "OBJECT_MOTION",
+   "state_boundary": "NO",
+   "desc": "Mouse arrow cursor moves up from lower right of the article text to mid-right; frowning figure and page static.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Cursor travels upward",
+    "easing": "UNKNOWN",
+    "duration_note": "9 frames, about 0.38 s"
+   },
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "EP0081",
+   "verdict": "CONFIRMED",
+   "type": "POSE_SWAP",
+   "state_boundary": "NO",
+   "desc": "Pointer arm swings from diagonal across the torso to a horizontal arm pointing right at the third bullet; a yellow highlight appears on the word 'We' at the bullet start.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB053",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Yellow highlighter wipes across the three lines of the bullet 'We now anticipate three consecutive rate hikes in September, October, and December...' line by line.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Left-to-right wipe repeated per line, top to bottom",
+    "easing": "linear",
+    "duration_note": "37 frames, about 1.5 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0082",
+   "verdict": "CONFIRMED",
+   "type": "FULL_REPLACE",
+   "state_boundary": "YES",
+   "desc": "Frowning figure and highlighted article replaced by a Chrome PDF-viewer capture of a New York Fed staff report (title page, authors, Staff Report no. 421, January 2010).",
+   "shot_boundary": "YES",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB054",
+   "verdict": "NOT_A_CHANGE",
+   "type": "OTHER",
+   "state_boundary": "NO",
+   "desc": "Cursor and PDF page identical between pre and stable; no visible change.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "LOW"
+  },
+  {
+   "id": "EP0083",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "PDF page scrolls down from the title page to page 2 start (title block, abstract); thumbnail selection moves to page 2.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Vertical scroll in viewer",
+    "easing": "UNKNOWN",
+    "duration_note": "8 frames, 0.33 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB055",
+   "verdict": "NOT_A_CHANGE",
+   "type": "OTHER",
+   "state_boundary": "NO",
+   "desc": "Viewer, thumbnails and cursor identical in pre and stable; no visible change.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "LOW"
+  },
+  {
+   "id": "EP0084",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "PDF scrolls further through page 2 (abstract, key words, footnote) toward the 'I. Introduction' heading.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Vertical scroll in viewer",
+    "easing": "UNKNOWN",
+    "duration_note": "9 frames, 0.375 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0085",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "PDF scrolls to 'I. Introduction' body text; thumbnail selection moves to page 3.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Vertical scroll in viewer",
+    "easing": "UNKNOWN",
+    "duration_note": "8 frames, 0.33 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0086",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "PDF scrolls through Introduction paragraphs to the next page break and the start of the page with 'Figure 1'.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Vertical scroll in viewer",
+    "easing": "UNKNOWN",
+    "duration_note": "12 frames, 0.5 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0087",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "PDF scrolls to Figure 1 (fed funds rate line chart with grey recession bands); thumbnail selection moves to page 4.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Vertical scroll in viewer",
+    "easing": "UNKNOWN",
+    "duration_note": "11 frames, 0.46 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0088",
+   "verdict": "CONFIRMED",
+   "type": "ZOOM_OR_SCALE",
+   "state_boundary": "YES",
+   "desc": "PDF viewer chrome zooms/crops away so the paper page fills the frame at about 1.7x around Figure 1, and a smiling stick figure with pointer appears at right aiming at the chart.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Zoom-in on the figure with viewer chrome leaving frame; stick figure enters at right",
+    "easing": "UNKNOWN",
+    "duration_note": "22 frames, about 0.9 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0089",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "About fifteen thin magenta vertical lines appear at once over the chart's tightening-cycle grid lines; figure and text static.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0090",
+   "verdict": "RECLASSIFIED",
+   "type": "ELEMENT_EXIT",
+   "state_boundary": "NO",
+   "desc": "Magenta lines vanish; stick figure changes from smiling with raised pointer to flat mouth with pointer lowered diagonally; an arrow cursor appears over the chart's right side.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB056",
+   "verdict": "NOT_A_CHANGE",
+   "type": "OTHER",
+   "state_boundary": "NO",
+   "desc": "Cursor, chart and figure identical in pre and stable; no visible change.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "LOW"
+  },
+  {
+   "id": "EP0091",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "Document scrolls from the chart down through the paragraph and footnote to the page break and next page text; figure static, cursor stays.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Vertical scroll, content moves up",
+    "easing": "UNKNOWN",
+    "duration_note": "15 frames, 0.625 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0092",
+   "verdict": "CONFIRMED",
+   "type": "PAN_OR_SCROLL",
+   "state_boundary": "NO",
+   "desc": "Scroll continues to 'Figure 2' (scatter chart of unemployment increase vs spread); the stick figure's pointer swings up and aims at the text.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Vertical scroll with pointer arm raised near the end",
+    "easing": "UNKNOWN",
+    "duration_note": "11 frames, 0.46 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB057",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Orange highlighter wipes across the first two text lines ('Ten of these tightening cycles were followed by recessions within 18 months...').",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Left-to-right wipe line by line",
+    "easing": "linear",
+    "duration_note": "64 frames, about 2.7 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0093",
+   "verdict": "CONFIRMED",
+   "type": "POSE_SWAP",
+   "state_boundary": "NO",
+   "desc": "Pointer swings from aimed at the text to lowered diagonal; a small yellow highlight begins on 'Of the' in line two.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SUB058",
+   "verdict": "CONFIRMED",
+   "type": "HIGHLIGHT_ADD",
+   "state_boundary": "NO",
+   "desc": "Yellow highlighter continues from 'Of the four monetary cycles' across lines three and four of the paragraph, left to right per line.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Left-to-right wipe line by line",
+    "easing": "linear",
+    "duration_note": "82 frames, about 3.4 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0094",
+   "verdict": "CONFIRMED",
+   "type": "ADDITIVE_ENTRY",
+   "state_boundary": "NO",
+   "desc": "A portrait card (older man in glasses and suit, small bio paragraph, handwritten 'Source: Fullbright') rises from the bottom over the left half of the chart area.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Card slides upward from bottom edge to lower-left half",
+    "easing": "UNKNOWN",
+    "duration_note": "9 frames, 0.375 s"
+   },
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0095",
+   "verdict": "CONFIRMED",
+   "type": "EXPRESSION_CHANGE",
+   "state_boundary": "NO",
+   "desc": "Stick figure's face changes from flat mouth to a worried look: raised angled eyebrows, wider eyes and an open mouth with pink tongue.",
+   "shot_boundary": "NO",
+   "motion": null,
+   "confidence": "HIGH"
+  },
+  {
+   "id": "EP0096",
+   "verdict": "CONFIRMED",
+   "type": "ELEMENT_EXIT",
+   "state_boundary": "NO",
+   "desc": "Portrait card slides back down and out revealing the scatter chart again, and the figure's face returns to a flat-mouth neutral look.",
+   "shot_boundary": "NO",
+   "motion": {
+    "path": "Card slides downward off the bottom; face reverts",
+    "easing": "UNKNOWN",
+    "duration_note": "15 frames, 0.625 s"
+   },
+   "confidence": "HIGH"
+  }
+ ],
+ "states": [
+  {
+   "id": "S0023",
+   "objects": "Dark rounded news-search card across the top-left (x 0.09-0.86, y 0.12-0.36) with small source logo, periwinkle headline, grey snippet and a small photo thumbnail of a columned government building at its right end; orange circular percent coin (centre x 0.55, y 0.77, about 0.14 width); green hand-drawn 'United States Treasury' certificate (x 0.65-0.88, y 0.50-0.87) beside the coin. Rest of canvas empty.",
+   "background": "Plain off-white canvas (#FBFBFB).",
+   "illustration": "Coin and certificate are flat hand-drawn props with thick black outlines, flat orange fill with cream percent glyph, sage-green certificate with cream script lettering and black squiggles; the card is a pasted dark-UI screenshot.",
+   "typography": "Card: system sans-serif, headline about 4% frame height in periwinkle blue, snippet about 3% light grey on charcoal, left-aligned; certificate lettering is cream cursive.",
+   "readable_text": "Financial Times; Ten-year Treasury yield hits highest level since 2007; Benchmark bond yield rises to 5.04% amid concerns over inflation and higher interest rates.; United States Treasury",
+   "unreadable_text": "Squiggle lines and tiny marks on the certificate bottom.",
+   "hierarchy": "Headline card dominates the top as the claim; coin and certificate below act as the visual metaphor for rates on US government debt; eye travels left to right.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Opens when the coin and certificate pop in together in one frame (EP0047); closes when the Earth character pops in at left (EP0048).",
+   "story_function": "INFERRED: sets up the topic of Treasury yields hitting a 2007-level high; props introduce interest rates and US government debt.",
+   "evidence": "OBSERVED: card text, prop positions, single-frame pop-in. INFERRED: story role. Short 14-frame build-up beat; the headline card appears to be carried over from the previous state.",
+   "confidence": "HIGH",
+   "continuity": "Card persists from the previous state and into S0024; coin and certificate persist through S0024; Earth is added next.",
+   "recon": "Layer 1: pasted dark news card at top-left at about 75% width. Layer 2: hand-drawn orange percent coin and green Treasury certificate at lower right, each popping on in a single frame with no easing. Hold about 0.6 s before the next prop; keep the rest of the canvas empty white.",
+   "prompt": "Flat hand-drawn whiteboard-style illustration on a white background: a round orange coin with a cream percent sign and thick black outline beside a sage-green wavy paper certificate with cream cursive lettering and black squiggles, placed lower right, clean marker outlines, flat fills, generous empty space above.",
+   "family": "F11 other composite"
+  },
+  {
+   "id": "S0024",
+   "objects": "Same dark news card, coin and certificate as S0023 plus a smiling Earth character at lower left (x 0.14-0.39, y 0.43-0.88): round globe with navy and green continents and white polar caps, big white round eyes with black pupils, white swoosh mouth. Later a yellow-green highlighter covers the headline text and a red rectangle outlines '5.04%' in the snippet.",
+   "background": "Plain off-white canvas (#FBFBFB).",
+   "illustration": "Earth is a hand-drawn character with thick black outline, flat navy, forest-green and white fills, round googly eyes and a white curved smile; props as in S0023; highlight and red box are drawn overlays.",
+   "typography": "Card sans-serif; headline about 4% frame height, periwinkle turning to highlighted yellow-green; snippet about 3% grey with a red-boxed '5.04%'.",
+   "readable_text": "Ten-year Treasury yield hits highest level since 2007; Benchmark bond yield rises to 5.04% amid concerns over inflation and higher interest rates.; United States Treasury",
+   "unreadable_text": "Squiggles on the certificate.",
+   "hierarchy": "Headline first, then the boxed 5.04% number, with Earth reacting at lower left; coin and certificate are secondary.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins when Earth pops in (EP0048); ends with a hard cut to a PDF viewer (EP0050, SD004). Internal: pupil glance EP0049; highlight sweeps SUB032-SUB033; red box on 5.04% already present by f1437.",
+   "story_function": "INFERRED: personifies the world economy reacting to the yield spike; narrator emphasises headline words and the 5.04% figure.",
+   "evidence": "MERGE_WITH_PREV: same headline-card + coin + certificate composition as S0023 with the Earth character added at EP0048. OBSERVED: pupil shift, highlight on headline words, red box on 5.04%. INFERRED: story role.",
+   "confidence": "HIGH",
+   "continuity": "Reuses S0023 card, coin and certificate; Earth character first appears here.",
+   "recon": "Add the Earth character at lower left in one frame. Over about 3 s sweep a yellow-green highlighter across the headline left to right and draw a red rectangle around '5.04%'. Shift Earth's pupils once for a glance. Hold about 7 s before the cut.",
+   "prompt": "Hand-drawn whiteboard style: a friendly cartoon Earth globe with navy blue oceans, green continents, white polar caps, big round white eyes with black pupils and a white swoosh smile, thick black outline, next to an orange percent coin and a green certificate, on a plain white background.",
+   "family": "F2 character+prop"
+  },
+  {
+   "id": "S0025",
+   "objects": "Chrome-style PDF viewer capture centred (x 0.22-0.78, y 0.06-0.94): dark toolbar with title, page counter and zoom box; dark left sidebar (x 0.22-0.36) with stacked page thumbnails, first thumbnail outlined blue; white page (x 0.40-0.75) with a drop-cap paragraph and a small italic author note near the bottom; a second page starts below; small mouse arrow at right (x 0.75, y 0.5).",
+   "background": "Off-white canvas with a centred Chrome-style PDF viewer capture (dark charcoal chrome, white page).",
+   "illustration": "Real screenshot of a PDF viewer: dark toolbar and thumbnail strip, white page with serif journal typesetting; no hand-drawn illustration.",
+   "typography": "Serif body text about 1.3% frame height, black on white, justified, large drop-cap 'W'; toolbar text tiny white sans on dark.",
+   "readable_text": "Landings, Soft and Hard: The Federal Re...; 1 / 20; 100%; When the Federal Reserve set out to reduce inflation in March 2022, talk of 'hard' versus 'soft' landings was in the air.",
+   "unreadable_text": "Remaining body paragraphs, footnote text and thumbnail contents at tiny scale.",
+   "hierarchy": "Whole viewer reads as a source citation; eye lands on the drop-cap paragraph.",
+   "camera_motion": "STATIC 2D viewer frame; document content scrolls inside it (EP0051).",
+   "entry_exit": "Starts after the hard cut and in-viewer scroll of EP0050 (f1488); 3-frame fragment before the next scroll move (EP0051).",
+   "story_function": "INFERRED: introduces a cited research paper about soft versus hard landings of monetary tightening.",
+   "evidence": "OBSERVED: viewer layout and visible text; 3-frame fragment between two scroll moves. INFERRED: role as citation.",
+   "confidence": "HIGH",
+   "continuity": "First frames of the PDF-viewer composition continued in S0026 and S0027; same paper.",
+   "recon": "Place a PDF-viewer screenshot (dark sidebar with thumbnails, white page) centred at about 57% width. Hard cut to it, scroll the page body upward for 0.35 s, then pause. Leave the mouse arrow resting right of the page.",
+   "prompt": "Flat interface mockup on a plain white canvas: a document-viewer window with a dark charcoal toolbar and left thumbnail strip with one blue-outlined selected thumbnail, a white paper page with serif text and a large drop-cap letter, small mouse arrow cursor at right, crisp clean look.",
+   "family": "F8 dark-UI capture"
+  },
+  {
+   "id": "S0026",
+   "objects": "Same PDF viewer as S0025 scrolled so the end of page 1 (author note) shows at top and page 2 begins with a running header and the first paragraph; sidebar thumbnail 2 outlined blue; arrow cursor at right edge of white page.",
+   "background": "Off-white canvas with a centred Chrome-style PDF viewer capture (dark charcoal chrome, white page).",
+   "illustration": "Real screenshot of a PDF viewer: dark toolbar and thumbnail strip, white page with serif journal typesetting; no hand-drawn illustration.",
+   "typography": "Serif body about 1.3% frame height; running head italic; toolbar tiny sans.",
+   "readable_text": "102 Journal of Economic Perspectives; Soft landings are the holy grail of monetary policy. Conventional wisdom holds that they are nearly as elusive",
+   "unreadable_text": "Most of the page body and thumbnail text.",
+   "hierarchy": "Document as citation; paragraph start in upper centre.",
+   "camera_motion": "SCROLL (vertical, inside static viewer).",
+   "entry_exit": "Begins as EP0051 scroll ends (f1499); ends as EP0052 scroll resumes (f1502). Three-frame mid-scroll fragment.",
+   "story_function": "INFERRED: scrolling through the paper to reach the passage the narrator cites.",
+   "evidence": "MERGE_WITH_PREV: same PDF-viewer composition as S0025, scrolled to page 2. OBSERVED: thumbnail selection moved to page 2.",
+   "confidence": "HIGH",
+   "continuity": "Continues S0025 and precedes S0027; same viewer, same paper.",
+   "recon": "Keep the viewer fixed and scroll the page image upward so page 2 enters; advance the blue thumbnail outline from page 1 to page 2 on the same frame as the scroll stops.",
+   "prompt": "Flat interface mockup on a plain white canvas: document-viewer window with dark toolbar and thumbnail strip, second thumbnail outlined blue, white paper pages with serif text and a page break, small arrow cursor at right, clean crisp style.",
+   "family": "F8 dark-UI capture"
+  },
+  {
+   "id": "S0027",
+   "objects": "PDF viewer scrolled further on page 2: dense serif paragraphs fill the white page (x 0.40-0.75), a footnote near the bottom, 'Goals and Definitions' heading starting page 3 content at bottom; thumbnail 2 outlined blue; blue text-selection bars later cover two lines of a paragraph; a mouse cursor moves between the text and the right margin.",
+   "background": "Off-white canvas with a centred Chrome-style PDF viewer capture (dark charcoal chrome, white page).",
+   "illustration": "Real screenshot of a PDF viewer: dark toolbar and thumbnail strip, white page with serif journal typesetting; no hand-drawn illustration. Selection shown in standard light-blue.",
+   "typography": "Serif body about 1.3% frame height; selection highlight pale blue; toolbar tiny sans.",
+   "readable_text": "Alan S. Blinder 103; Goals and Definitions; the Federal Reserve has tightened monetary policy to combat inflation eleven previous times since 1965",
+   "unreadable_text": "Most paragraph text at this scale.",
+   "hierarchy": "Selected sentence becomes the focal point as the narrator quotes it.",
+   "camera_motion": "SCROLL then STATIC.",
+   "entry_exit": "Begins after the EP0052 scroll (f1511); ends at EP0054 scroll and replace. Internal: cursor move SUB035, selection SUB036/EP0053/SUB037, cursor exit SUB038-039.",
+   "story_function": "INFERRED: pulls out the sentence claiming the Fed has tightened eleven times since 1965, leading into a table of those tightenings.",
+   "evidence": "MERGE_WITH_PREV: same viewer composition as S0025 and S0026 at a later scroll offset. OBSERVED: selection steps and cursor motion. INFERRED: story role.",
+   "confidence": "HIGH",
+   "continuity": "Same viewer as S0025-S0026; the 'eleven tightenings' sentence prefigures the table in S0028.",
+   "recon": "Hold the viewer at the page-2 scroll offset; select a sentence by jumping a pale-blue bar over two lines in one frame, then move the cursor off to the right margin. Hold about 2 s before scrolling away.",
+   "prompt": "Flat interface mockup on a plain white canvas: document-viewer window with dark toolbar and thumbnail strip, white page of dense serif paragraphs with two lines selected in pale blue, small arrow cursor at the right margin, crisp clean style.",
+   "family": "F8 dark-UI capture"
+  },
+  {
+   "id": "S0028",
+   "objects": "Journal table image at upper right (x 0.40-0.92, y 0.08-0.54): italic 'Table 1' caption, bold title, four-column header and eleven numbered rows; stick-figure presenter at left (head about 0.17 width, x 0.14-0.30, brown pointer aimed at the table, body down to y 0.92). Later yellow highlight bars on rows 1 and 4, pointer drops, and handwritten black text appears at lower centre-right (x 0.43-0.90, y 0.68-0.80).",
+   "background": "Plain off-white canvas (#FBFBFB).",
+   "illustration": "Crude marker-style stick figure: thick black strokes, peach head fill, scribbled black hair, dot eyes and simple mouth; pointer is a thin brown stick. Table is a scanned serif journal image.",
+   "typography": "Table serif about 1.3-2% frame height, black; handwritten marker lettering about 8% height, black, left-aligned; highlighter yellow bars.",
+   "readable_text": "Table 1; The Eleven Monetary Policy Tightenings since 1965; Dates; Total basis points (effective rate); Inflation two years later; Landing hard or soft?; Sept. 1965-Nov. 1966 174 Higher Quite soft-but was it a landing?; Jan. 1977-Apr. 1980 1,300 Lower Hard; Nov. 2015-Jan. 2019 228 Lower Hard-but not due to Fed; 1 1/2 year, added 4%",
+   "unreadable_text": "Middle rows partly crossed by the pointer stick.",
+   "hierarchy": "Table is the evidence, presenter's pointer guides the eye, highlighted rows narrow it, handwritten note delivers the takeaway last.",
+   "camera_motion": "STATIC 2D (entered via scroll/zoom and cut in EP0054).",
+   "entry_exit": "Begins at the cut following EP0054 (f1643); ends at the hard cut of EP0058. Internal: highlights SUB040, SUB041; pointer drop EP0055; handwritten text EP0056-EP0057.",
+   "story_function": "INFERRED: shows past Fed tightening cycles and flags the soft versus hard landing outcome; jotted note summarises a tightening that added 4% in a year and a half.",
+   "evidence": "OBSERVED: table text, highlight wipes, pointer drop, text pop-ins. INFERRED: story role and meaning of the note.",
+   "confidence": "HIGH",
+   "continuity": "Table was reached via the paper in S0025-S0027; presenter stick figure reused in S0040+ with the same pointer and face style.",
+   "recon": "Layer 1: table image upper right. Layer 2: stick-figure presenter at left with pointer on the table. Wipe yellow highlighter across row 1 then row 4 (about 1 s each), drop the pointer, then pop handwritten note text in two single-frame steps below the table.",
+   "prompt": "Hand-drawn whiteboard scene on white: a simple stick-figure presenter with peach round head, scribbled black hair and a brown pointer stick aimed at a printed data table with numbered rows, two rows highlighted in yellow marker, handwritten black note text below, clean minimal style.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0029",
+   "objects": "Lone stick figure centred (head x 0.41-0.57, y 0.17-0.49; body to y 0.86): peach head, spiky black scribbled hair, raised angled eyebrow, flat mouth, one forearm raised at chest, other hand on hip, legs apart. Nothing else on canvas.",
+   "background": "Plain off-white canvas (#FBFBFB).",
+   "illustration": "Crude marker-style stick figure: thick black strokes, peach head fill, scribbled black hair, dot eyes and simple mouth; pointer is a thin brown stick.",
+   "typography": "none",
+   "readable_text": "",
+   "unreadable_text": "",
+   "hierarchy": "Single character with skeptical expression is the entire focus.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins with the hard cut from the table scene (EP0058); ends with a hard cut to the brown-haired character scene (EP0059).",
+   "story_function": "INFERRED: a skeptical reaction beat after the note about rate increases.",
+   "evidence": "OBSERVED: single stick figure, skeptical face. INFERRED: story role.",
+   "confidence": "HIGH",
+   "continuity": "Same stick-figure design as S0028 and S0040+, here in a different pose and expression.",
+   "recon": "Cut to a lone centred stick figure on white with a raised eyebrow and flat mouth; hold for about 2.9 s with no motion, then hard cut.",
+   "prompt": "Minimal hand-drawn whiteboard illustration: a single stick figure centred on white, peach round head with spiky scribbled black hair, one raised eyebrow and a flat skeptical mouth, one arm bent at the chest and the other hand on the hip, thick black marker lines.",
+   "family": "F1 character-only"
+  },
+  {
+   "id": "S0030",
+   "objects": "Illustrated character at left (head x 0.11-0.32, y 0.20-0.54, body off the bottom): brown tousled hair, tan face, dot eyes, flat mouth, one hooked arm at chest; orange percent coin (x 0.69-0.77, y 0.50-0.64) and green Treasury certificate (x 0.80-0.92, y 0.40-0.62) at right; a thick green zig-zag arrow is drawn on from lower-left (x 0.48, y 0.60) up to an arrowhead at upper right (x 0.83, y 0.17).",
+   "background": "Plain off-white canvas (#FBFBFB).",
+   "illustration": "Thicker-outline hand-drawn character with brown hair and tan skin (different from the stick presenter), props as before; arrow is a rounded bright-green marker stroke.",
+   "typography": "none",
+   "readable_text": "",
+   "unreadable_text": "Treasury certificate script not legible.",
+   "hierarchy": "Character at left looks toward the rising arrow, which becomes the focal movement as it draws on; coin and certificate anchor the topic.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins with the hard cut from the lone stick figure (EP0059); the arrow draws on over about 1.2 s (SUB042); ends at EP0060 pose flip.",
+   "story_function": "INFERRED: illustrates yields rising on Treasury debt after the sceptical beat.",
+   "evidence": "OBSERVED: character, props, arrow draw-on. INFERRED: story role.",
+   "confidence": "HIGH",
+   "continuity": "Coin and certificate reused from S0023 at smaller scale; new brown-haired character.",
+   "recon": "Cut to the character at left with coin and certificate at right. Draw a green zig-zag arrow from lower-left to upper-right over about 1.2 s. Hold; the character idles with small pose flips.",
+   "prompt": "Hand-drawn whiteboard scene on white: a cartoon character with brown tousled hair and tan face at left, a bold bright-green zig-zag upward arrow across the middle, an orange percent coin and a sage-green paper certificate at right, thick black outlines, flat colours.",
+   "family": "F2 character+prop"
+  },
+  {
+   "id": "S0031",
+   "objects": "Same composition as S0030 with the green arrow complete; character's idle pose flipped: hooked hand now on the left of the torso and the hair wing on the right; coin and certificate unchanged.",
+   "background": "Plain off-white canvas (#FBFBFB).",
+   "illustration": "As S0030; idle two-pose loop on the character.",
+   "typography": "none",
+   "readable_text": "",
+   "unreadable_text": "",
+   "hierarchy": "Character, arrow and props as before; pose flip is only motion.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins with the one-frame pose swap EP0060; ends with the swap back EP0061.",
+   "story_function": "INFERRED: idle-animation beat while narration continues.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0030; the only change is the character's pose flip (EP0060).",
+   "confidence": "HIGH",
+   "continuity": "Identical assets to S0030.",
+   "recon": "Alternate the character between two idle pose drawings every 0.5-1 s while the arrow, coin and certificate stay fixed.",
+   "prompt": "Hand-drawn whiteboard scene on white: a cartoon character with brown tousled hair and tan face at left with one hand hooked at the chest, a big green zig-zag rising arrow, an orange percent coin and a green paper certificate at right, thick black outlines, flat colours.",
+   "family": "F2 character+prop"
+  },
+  {
+   "id": "S0032",
+   "objects": "Same composition again with the character back in the first idle pose (hooked hand on the right of the torso, hair wing left); green arrow, coin and certificate unchanged.",
+   "background": "Plain off-white canvas (#FBFBFB).",
+   "illustration": "As S0030.",
+   "typography": "none",
+   "readable_text": "",
+   "unreadable_text": "",
+   "hierarchy": "Unchanged: character, arrow and props.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins with the swap back EP0061; ends with the 'Done!' bubble and shrug EP0062.",
+   "story_function": "INFERRED: idle beat before the character speaks.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0030-S0031; idle pose only.",
+   "confidence": "HIGH",
+   "continuity": "Identical assets to S0030.",
+   "recon": "Return the character to its first idle drawing; hold 0.6 s.",
+   "prompt": "Hand-drawn whiteboard scene on white: a cartoon character with brown tousled hair and tan face standing at left, a green zig-zag arrow rising above and an orange percent coin with a paper certificate at right, thick black outlines, flat colours.",
+   "family": "F2 character+prop"
+  },
+  {
+   "id": "S0033",
+   "objects": "Character shifted slightly left with a shrug pose (one arm out to the left, one raised right); a white speech bubble with thick black outline (x 0.32-0.73, y 0.35-0.62) reading 'Done!' overlaps the arrow and coin; certificate at right (x 0.80-0.92).",
+   "background": "Plain off-white canvas (#FBFBFB).",
+   "illustration": "Hand-drawn character as before; speech bubble with a tail pointing to the character's mouth; handwritten bubble text.",
+   "typography": "Handwritten marker lettering about 9% frame height, black, centred in the bubble.",
+   "readable_text": "Done!",
+   "unreadable_text": "",
+   "hierarchy": "Speech bubble is the focal element; character left, arrow and props behind.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins with EP0062 (bubble and shrug appear in one frame); ends with a hard cut to a website screenshot (EP0063).",
+   "story_function": "INFERRED: character declares the Fed's rate-hike cycle 'done'.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0030-S0032 with a speech bubble added and a shrug pose. OBSERVED: bubble text 'Done!'.",
+   "confidence": "HIGH",
+   "continuity": "Same character, arrow, coin and certificate as S0030.",
+   "recon": "Pop in an oval speech bubble containing the handwritten word 'Done!' over the arrow and coin, and switch the character to a shrug drawing; hold about 0.7 s before cutting.",
+   "prompt": "Hand-drawn whiteboard scene on white: a brown-haired tan-faced cartoon character shrugging at left, a white oval speech bubble with thick black outline and handwritten word 'Done!', a green zig-zag arrow, an orange percent coin and a paper certificate partly behind the bubble.",
+   "family": "F2 character+prop"
+  },
+  {
+   "id": "S0034",
+   "objects": "Central-bank website screenshot occupying the left two-thirds (x 0.04-0.68, y 0.07-0.92): dark-blue top utility bar, large centred site title over a slate banner, blue nav bar with eight items, breadcrumbs, 'Policy Tools' heading, 'Open Market Operations Archive' with a 2002 table (one row) and 2001 table (several rows), 'Make Full Screen' links; slate-blue scrollbar strip at right edge; mouse arrow at x 0.65, y 0.54. White margin to the right.",
+   "background": "White canvas with a pasted browser screenshot at left; right third empty.",
+   "illustration": "Real website screenshot; serif page title and sans table text; no illustration.",
+   "typography": "Site title serif about 3.5% frame height white on slate; page heading 'Policy Tools' about 3%; tables tiny sans.",
+   "readable_text": "Board of Governors of the Federal Reserve System; The Federal Reserve, the central bank of the United States, provides the nation with a safe, flexible, and stable monetary and financial system.; Policy Tools; Open Market Operations Archive; 2002; November 6; 2001; Make Full Screen; Back to Top",
+   "unreadable_text": "Table values below the first rows are small.",
+   "hierarchy": "Site banner and title first as the source, then archive tables as data.",
+   "camera_motion": "STATIC 2D at entry; SCROLL follows in S0035.",
+   "entry_exit": "Begins with the hard cut from the 'Done!' scene (EP0063); ends when the page starts scrolling and the profile card slides in (EP0064, SD005-SD020).",
+   "story_function": "INFERRED: source page listing past rate changes of the central bank.",
+   "evidence": "OBSERVED: page layout and text. INFERRED: role as source for rate-change history. Short 6-frame hold before scroll.",
+   "confidence": "HIGH",
+   "continuity": "First frames of the website composition continued in S0035-S0036.",
+   "recon": "Hard cut to a browser screenshot of an official rate-history archive page placed in the left two-thirds of an otherwise white frame; hold 0.25 s, then begin scrolling the page.",
+   "prompt": "Flat interface mockup on white: a government-style website page at left with a dark navy header banner, blue navigation strip, serif heading and several small blue-header data tables listing dates and percentages, small arrow cursor at right, empty white space on the right side.",
+   "family": "F4 full-bleed screenshot/document"
+  },
+  {
+   "id": "S0035",
+   "objects": "Same website screenshot scrolled to older yearly tables (1999, 1998, 1997, 1996 visible, each with Date/Increase/Decrease/Level (%) columns); a profile card at right (x 0.54-0.92, y 0.28-0.83): portrait of an older man in glasses and suit in front of bookshelves, bold name, bullet with a job title and years, and a bio paragraph; slate-blue bar at right of page.",
+   "background": "Off-white canvas margin around a pasted central-bank website screenshot (dark navy header, white body, slate-blue vertical bar).",
+   "illustration": "Real website screenshot plus a pasted profile card with a photograph and sans text.",
+   "typography": "Card name about 5% frame height bold sans, black; card bio about 2% sans; tables tiny sans.",
+   "readable_text": "Alan Greenspan; Chairman, Board of Governors, 1987 - 2006; Alan Greenspan served five terms as chairman of the Board of Governors of the Federal Reserve System. He originally took office as chairman on August 11, 1987, to fill an unexpired term as a member of the Board of Governors. His last term ended on January 31, 2006. He was appointed chairman by four different presidents.",
+   "unreadable_text": "Table figures.",
+   "hierarchy": "Portrait and name first (new person), then bio; tables recede.",
+   "camera_motion": "SCROLL (page) with a card slide-in at the start.",
+   "entry_exit": "Begins as EP0064's scroll and card slide-in end (f2027); ends with the further scroll EP0065.",
+   "story_function": "INFERRED: names the central-bank chair of the 1996-2002 rate-change era being shown.",
+   "evidence": "MERGE_WITH_PREV: same website-screenshot composition as S0034 scrolled to older years with a profile card slid in from the right (SD010-SD017). OBSERVED: card text.",
+   "confidence": "HIGH",
+   "continuity": "Same page as S0034; profile card persists through S0036.",
+   "recon": "Scroll the page about 0.6 s so older tables pass up, and slide a profile card (portrait, name, title bullet, bio paragraph) in from the right edge over 0.5 s; hold.",
+   "prompt": "Flat interface mockup on white: a government website page on the left with small blue-header rate tables, and on the right a clean profile card with a portrait of an older man in glasses and a dark suit, bold name heading, a bullet line and a paragraph of grey text.",
+   "family": "F4 full-bleed screenshot/document"
+  },
+  {
+   "id": "S0036",
+   "objects": "Same page and profile card as S0035 scrolled a little further (1999 table cut off at top, 1998-1996 tables below); card position unchanged at right.",
+   "background": "Off-white canvas margin around a pasted central-bank website screenshot (dark navy header, white body, slate-blue vertical bar).",
+   "illustration": "As S0035.",
+   "typography": "As S0035.",
+   "readable_text": "Alan Greenspan; Chairman, Board of Governors, 1987 - 2006; Alan Greenspan served five terms as chairman of the Board of Governors of the Federal Reserve System.",
+   "unreadable_text": "Table figures.",
+   "hierarchy": "As S0035.",
+   "camera_motion": "SCROLL (short).",
+   "entry_exit": "Begins after EP0065's short scroll (f2049); ends when EP0066 scroll/zoom begins.",
+   "story_function": "INFERRED: same beat as S0035; keeps the names and rate tables on screen.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0035, only a further scroll offset; 6 frames. OBSERVED: card unchanged.",
+   "confidence": "HIGH",
+   "continuity": "Identical assets to S0035.",
+   "recon": "Scroll the page a few more pixels under the fixed profile card and hold 0.25 s.",
+   "prompt": "Flat interface mockup on white: a government website page on the left with small blue-header rate tables, a profile card with portrait and bio text on the right, page scrolled slightly further, clean flat style.",
+   "family": "F4 full-bleed screenshot/document"
+  },
+  {
+   "id": "S0037",
+   "objects": "Zoomed full-frame website page: slate-blue vertical bar at left (x 0.155-0.175); serif year headings '1998', '1997', '1996' at x 0.20; three tables spanning x 0.20-0.78, navy header row (Date, Increase, Decrease, Level (%)), 'Make Full Screen' links above and 'Back to Top' links below each; March 25 (1997) and January 31 (1996) rows shaded amber.",
+   "background": "Full-bleed white web page, no margin.",
+   "illustration": "Real website screenshot enlarged about 1.6x with amber highlights.",
+   "typography": "Serif year headings about 2.4% frame height; table sans about 1.4%; link text grey-blue.",
+   "readable_text": "1998; November 17; October 15; September 29; 1997; March 25; 1996; January 31; Make Full Screen; Back to Top; Date; Increase; Decrease; Level (%); 4.75; 5.00; 5.25; 5.50",
+   "unreadable_text": "Increase and Decrease values are small.",
+   "hierarchy": "Amber rows draw the eye, table headers form structure.",
+   "camera_motion": "ZOOM (page enlarged), then STATIC.",
+   "entry_exit": "Begins when EP0066 completes its scroll-and-zoom (f2083); ends with EP0067 figure pop-in.",
+   "story_function": "INFERRED: zooms on the hike entries ahead of 1997-1998 to show the last rate rise before cuts.",
+   "evidence": "OBSERVED: enlarged tables and amber row highlights. INFERRED: purpose.",
+   "confidence": "HIGH",
+   "continuity": "Same page as S0034-S0036, zoomed; stick figure joins in S0038.",
+   "recon": "Zoom the page to about 1.6x so three year-tables fill the frame; shade two rows amber; hold about 0.3 s.",
+   "prompt": "Flat interface mockup full-bleed: a clean white web page with serif year headings and three compact data tables with dark navy header rows and light-blue banded rows, two rows shaded amber, small blue links, slate bar at left edge.",
+   "family": "F4 full-bleed screenshot/document"
+  },
+  {
+   "id": "S0038",
+   "objects": "Same zoomed tables as S0037 with a stick figure peeking at lower right (head x 0.75-0.93, y 0.50-0.80; peach face, spiky black hair, smile; one raised leg and arm crossing the page).",
+   "background": "Full-bleed white web page.",
+   "illustration": "Web screenshot plus the crude stick-figure style used by the presenter.",
+   "typography": "As S0037.",
+   "readable_text": "1998; November 17; October 15; September 29; 1997; March 25; 1996; January 31; Make Full Screen; Back to Top",
+   "unreadable_text": "Table cells.",
+   "hierarchy": "Smiling figure pulls the eye to the lower right against the tables.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins with the figure pop-in (EP0067); ends when the figure vanishes (EP0068).",
+   "story_function": "INFERRED: playful interjection before highlighting the next row.",
+   "evidence": "MERGE_WITH_PREV: same page composition as S0037 with a stick figure added. OBSERVED: figure at lower right, tables unchanged.",
+   "confidence": "HIGH",
+   "continuity": "Stick figure is the presenter character; tables as S0037.",
+   "recon": "Pop the stick figure in at lower right for about 1.3 s over the zoomed tables.",
+   "prompt": "Hand-drawn stick figure with a peach round head, spiky black hair and a smile, one leg kicked up, drawn over a clean data-table web page on white, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0039",
+   "objects": "Same zoomed tables with the stick figure gone; orange-red highlight bar wipes across the 'September 29' row of the 1998 table (x 0.20-0.78, y 0.31-0.35); amber rows unchanged.",
+   "background": "Full-bleed white web page.",
+   "illustration": "As S0037 with an orange-red highlighter overlay.",
+   "typography": "As S0037.",
+   "readable_text": "1998; November 17; October 15; September 29; 25; 5.25; 1997; March 25; 1996; January 31",
+   "unreadable_text": "Small cell values.",
+   "hierarchy": "Orange-red bar becomes the focus as it wipes in.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins with the figure exit (EP0068); highlight wipe SUB044 about 0.4 s; ends with a hard cut to the FOMC page (EP0069).",
+   "story_function": "INFERRED: marks the 1998 September 29 cut as the last move in this table.",
+   "evidence": "MERGE_WITH_PREV: same page composition as S0037. OBSERVED: figure exit and orange-red wipe. INFERRED: role.",
+   "confidence": "HIGH",
+   "continuity": "Same tables as S0037.",
+   "recon": "Remove the stick figure, then wipe an orange-red highlighter across one table row in 0.4 s and hold about 2 s.",
+   "prompt": "Flat interface mockup full-bleed: a white web page with compact data tables, navy header rows, banded light-blue rows, two rows shaded amber and one row shaded orange-red, small blue links, slate bar at left edge.",
+   "family": "F4 full-bleed screenshot/document"
+  },
+  {
+   "id": "S0040",
+   "objects": "Central-bank FOMC page screenshot (x 0.18-0.82, y 0.07-0.94) with dark header, centred title, nav bar, breadcrumbs and heading 'Federal Open Market Committee' then document title and a paragraph block of small text, 'Table 1' caption near the bottom; slate bar at right; a smiling stick figure at right (head x 0.68-0.86, y 0.43-0.57) holding a brown pointer lowered diagonally across its torso.",
+   "background": "Off-white canvas with a pasted website screenshot (dark navy header) and a stick figure overlapping at right.",
+   "illustration": "Website screenshot plus crude stick-figure presenter (peach head, black spiky hair, smile).",
+   "typography": "Page title serif about 3.2% frame height; heading about 2.4%; body about 1.3% sans/serif.",
+   "readable_text": "Board of Governors of the Federal Reserve System; Federal Open Market Committee; September 16, 2026: FOMC Projections materials, accessible version; Accessible version; Summary of Economic Projections; Table 1. Economic projections of Federal Reserve Board members and Federal Reserve Bank presidents, under their individual assumptions of projected appropriate monetary policy, September 2026",
+   "unreadable_text": "Paragraph text under Summary of Economic Projections.",
+   "hierarchy": "Page title then smiling presenter as the narrator's guide.",
+   "camera_motion": "STATIC 2D at entry; SCROLL follows.",
+   "entry_exit": "Begins with the hard cut from the zoomed rate tables (EP0069, 1 frame); page then scrolls (EP0070).",
+   "story_function": "INFERRED: introduces the latest central-bank projections document.",
+   "evidence": "OBSERVED: page layout, text and figure. INFERRED: role. Short 4-frame hold before scroll.",
+   "confidence": "HIGH",
+   "continuity": "Presenter reused from S0028; page continues in S0041-S0043.",
+   "recon": "Hard cut to a pasted official FOMC page screenshot with the stick-figure presenter overlapping at right with its pointer lowered; hold 0.17 s then begin scrolling.",
+   "prompt": "Hand-drawn stick-figure presenter with peach head, spiky black scribbled hair and a smile, standing at the right over a pasted government website page with navy banner, nav strip, serif heading and paragraphs, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0041",
+   "objects": "FOMC page scrolled to projection tables (navy header rows with years 2021-2029 and 'Longer run'; rows Actual, Upper End of Range, Median, etc., then an 'Unemployment rate' table and the start of a 'PCE inflation' table); stick figure at right unchanged.",
+   "background": "Off-white canvas margin around a pasted central-bank website screenshot (dark navy header, white body, slate-blue vertical bar).",
+   "illustration": "As S0040.",
+   "typography": "Table text tiny sans; section labels serif about 1.5%.",
+   "readable_text": "Unemployment rate; Percent; PCE inflation; Actual; Upper End of Range; Median; Lower End of Range; Longer run; Make Full Screen",
+   "unreadable_text": "Table numbers at this scale.",
+   "hierarchy": "Tables as data, presenter as guide.",
+   "camera_motion": "SCROLL.",
+   "entry_exit": "Begins after EP0070's scroll (f2215); ends as EP0071 resumes the scroll.",
+   "story_function": "INFERRED: scrolling to the dot-plot projections.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0040 at another scroll offset; 5 frames. OBSERVED: figure unchanged.",
+   "confidence": "HIGH",
+   "continuity": "Same assets as S0040.",
+   "recon": "Scroll the page upward under the fixed presenter and hold briefly.",
+   "prompt": "Hand-drawn stick-figure presenter at the right over a pasted government website page showing several compact data tables with navy header rows and banded light rows, thick black marker lines for the figure.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0042",
+   "objects": "Page scrolled to a table of numbers by 'Midpoint of target range or target level (Percent)' with rows 4.500 to 2.750 and a following 'Figure 3.A' caption and a multi-column table start; stick figure unchanged at right.",
+   "background": "Off-white canvas margin around a pasted central-bank website screenshot (dark navy header, white body, slate-blue vertical bar).",
+   "illustration": "As S0040.",
+   "typography": "As S0041.",
+   "readable_text": "Figure 3.A. Distribution of participants' projections for the change in real GDP, 2026-29 and over the longer run; Histograms, five panels.; Number of participants; Percent Range; June projections; September projections",
+   "unreadable_text": "Numbers in the dot-plot table.",
+   "hierarchy": "Same as S0041.",
+   "camera_motion": "SCROLL.",
+   "entry_exit": "Begins after EP0071 (f2246); ends as EP0072 scrolls and raises the pointer.",
+   "story_function": "INFERRED: arrives at the Figure 2 dot-plot table.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0040-S0041; 3-frame scroll fragment.",
+   "confidence": "HIGH",
+   "continuity": "Same assets as S0040.",
+   "recon": "Continue the page scroll; hold 0.12 s.",
+   "prompt": "Hand-drawn stick-figure presenter with a peach head and spiky black hair standing at the right over a pasted government website page with a dot-distribution table of rows and columns of small numbers, navy header, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0043",
+   "objects": "Page scrolled so 'Figure 2' heading and its midpoint table fill the page (x 0.20-0.60, y 0.12-0.72); the stick figure's pointer is raised and its tip touches the table around x 0.49, y 0.58; figure at right.",
+   "background": "Off-white canvas margin around a pasted central-bank website screenshot (dark navy header, white body, slate-blue vertical bar).",
+   "illustration": "As S0040 with the pointer raised.",
+   "typography": "Heading serif about 1.8%, table tiny sans.",
+   "readable_text": "Figure 2. FOMC participants' assessments of appropriate monetary policy: Midpoint of target range or target level for the federal funds rate; Number of participants with projected midpoint of target range or target level; Midpoint of target range or target level (Percent); 2026; 2027; 2028; 2029; Longer run; 4.500; 4.375; 4.250; 4.125; 4.000; 3.875",
+   "unreadable_text": "Cell counts in the table.",
+   "hierarchy": "Pointer touches the table, directing attention to the distribution.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins with EP0072 (pointer raised, f2252); ends with EP0073 zoom-in.",
+   "story_function": "INFERRED: presenter points at the projections table before the zoom.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0040-S0042 with the pointer raised. OBSERVED: pointer tip on table.",
+   "confidence": "HIGH",
+   "continuity": "Same assets as S0040; the table is zoomed in S0044.",
+   "recon": "Raise the presenter's pointer so its tip rests on the table in one frame and hold about 1.4 s.",
+   "prompt": "Hand-drawn stick-figure presenter at the right using a brown pointer stick to touch a data table on a pasted website page, table with rows of decimals and a navy header, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0044",
+   "objects": "Full-frame zoomed table (x 0.05-0.71, y 0.07-0.88): heading, subhead, 'Make Full Screen' link, navy header with 'Midpoint of target range or target level (Percent)' and year columns 2026-2029 and 'Longer run', rows 4.500 to 2.750 with small counts, note text beneath; slate bar at left; arrow cursor at right (x 0.94, y 0.56); a blue rectangle outline is drawn around the 2026 column.",
+   "background": "Full-bleed white page, no margins; slate-blue vertical bar at left edge.",
+   "illustration": "Real website screenshot enlarged about 1.9x; blue marker-style rectangle overlay.",
+   "typography": "Heading serif about 2.8% frame height, table header sans about 1.8%, cells about 1.6%.",
+   "readable_text": "Figure 2. FOMC participants' assessments of appropriate monetary policy: Midpoint of target range or target level for the federal funds rate; Number of participants with projected midpoint of target range or target level; Make Full Screen; 2026; 2027; 2028; 2029; Longer run; 4.500; 4.375; 4.250; 4.125; 12; 6; 4",
+   "unreadable_text": "Note paragraph beneath the table (small).",
+   "hierarchy": "Blue box on the 2026 column becomes the focus as it is drawn.",
+   "camera_motion": "ZOOM (EP0073) then STATIC.",
+   "entry_exit": "Begins when EP0073 finishes zooming and the figure has exited (f2296); blue rectangle drawn (SUB047, EP0074, SUB048); ends in EP0075 draw-on of boxes and coin.",
+   "story_function": "INFERRED: isolates the 2026 column of Committee members' rate projections.",
+   "evidence": "OBSERVED: enlarged table, drawn blue outline, cursor. INFERRED: purpose.",
+   "confidence": "HIGH",
+   "continuity": "Same page as S0040-S0043, zoomed with no figure.",
+   "recon": "Zoom the table to full frame, then draw a blue rectangle around the 2026 column stroke by stroke (left edge down, bottom edge right, right edge up) over about 1 s.",
+   "prompt": "Flat interface mockup full-bleed: a white web page with a compact data table, navy header row and banded light-blue rows of small numbers, a thick blue rectangle drawn around one column, small arrow cursor at right, slate bar at left.",
+   "family": "F4 full-bleed screenshot/document"
+  },
+  {
+   "id": "S0045",
+   "objects": "Same zoomed table with the blue 2026-column box complete (x 0.39-0.45 wide, spanning header to bottom), two magenta rectangles around the '4.375' and '4.125' rows (x 0.09-0.46), and an orange percent coin with thick black outline at upper right (x 0.76-0.90, y 0.26-0.50); arrow cursor right.",
+   "background": "Full-bleed white page; slate bar at left.",
+   "illustration": "Blue and magenta marker overlays and a hand-drawn coin.",
+   "typography": "As S0044.",
+   "readable_text": "Figure 2. FOMC participants' assessments of appropriate monetary policy: Midpoint of target range or target level for the federal funds rate; 4.375; 4.125; 2026; 2027; 2028; 2029; Longer run",
+   "unreadable_text": "Cell counts.",
+   "hierarchy": "Magenta boxes highlight the two modal rows; coin links to rate theme.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins as EP0075 draws magenta boxes and pops the coin (f2358); ends with the calendar icon entry EP0076.",
+   "story_function": "INFERRED: emphasises the 4.375 and 4.125 projection rows.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0044 with added drawn boxes and coin. OBSERVED: overlays and coin.",
+   "confidence": "HIGH",
+   "continuity": "Same table as S0044; coin reused from S0023.",
+   "recon": "Draw magenta rectangles around two table rows left to right, then pop in an orange percent coin at upper right; hold about 1.2 s.",
+   "prompt": "Flat interface mockup full-bleed: a white web page table with navy header row and banded rows of small numbers, one blue column outline and two magenta row outlines, an orange percent coin with thick black outline at upper right, small arrow cursor.",
+   "family": "F4 full-bleed screenshot/document"
+  },
+  {
+   "id": "S0046",
+   "objects": "Same table with blue box and magenta row boxes; percent coin at upper right (x 0.76-0.90, y 0.26-0.50) and a new calendar icon below it (x 0.77-0.90, y 0.60-0.83): white page with red header band, ring marks on top and six red squares.",
+   "background": "Full-bleed white page; slate bar at left.",
+   "illustration": "Thick-outlined hand-drawn icons: orange coin and red-and-white calendar.",
+   "typography": "As S0044.",
+   "readable_text": "Figure 2. FOMC participants' assessments of appropriate monetary policy: Midpoint of target range or target level for the federal funds rate",
+   "unreadable_text": "Cell counts.",
+   "hierarchy": "Coin and calendar stacked at right pair rates with dates.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins when the calendar icon pops in (EP0076, 1 frame); ends with a hard cut to the think-tank article scene (EP0077).",
+   "story_function": "INFERRED: ties rate projections to meeting dates.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0044-S0045 with a calendar icon added.",
+   "confidence": "HIGH",
+   "continuity": "Same table and coin as S0045.",
+   "recon": "Pop a hand-drawn calendar icon below the coin in one frame; hold about 1.3 s.",
+   "prompt": "Hand-drawn icons stacked at the right of a clean data-table page: an orange percent coin with thick black outline above a red-and-white wall calendar with ring tabs and six red date squares, flat colours, table with navy header and blue outline behind.",
+   "family": "F3 object/icon cluster"
+  },
+  {
+   "id": "S0047",
+   "objects": "Stick figure at left (head x 0.14-0.30, y 0.25-0.56; smile; brown pointer lowered diagonally across torso; body to y 0.92) and a think-tank article screenshot at right (x 0.46-0.93, y 0.07-0.94): logo header with search and sign-in button, a dark banner strip cut off at top, light grey body with a blue heading and five bullets, accessibility icon on left edge, chat button at bottom right, scrollbar at right.",
+   "background": "White canvas with a pasted website screenshot at right and a stick figure at left.",
+   "illustration": "Crude stick-figure presenter plus real website capture; light grey article body.",
+   "typography": "Article heading about 2.5% frame height, teal-blue; bullets about 1.4% dark grey sans.",
+   "readable_text": "THE CONFERENCE BOARD; Trusted Insights for What's Ahead; The Federal Reserve is widely expected to raise policy rates at the September 15-16 Federal Open Market Committee (FOMC) meeting.; The Federal Reserve now appears likely to respond to renewed inflation pressures with a series of interest rate hikes.",
+   "unreadable_text": "Lower bullets partly faded and small.",
+   "hierarchy": "Presenter at left introduces the article; bullet list is the content.",
+   "camera_motion": "STATIC 2D at entry; SCROLL in S0048.",
+   "entry_exit": "Begins with the hard cut from the calendar/table scene (EP0077); ends as the article scrolls up (EP0078).",
+   "story_function": "INFERRED: introduces a forecaster's expectation of rate hikes at the September FOMC.",
+   "evidence": "OBSERVED: figure, article text. INFERRED: role.",
+   "confidence": "HIGH",
+   "continuity": "Presenter reused from S0040; article continues through S0050.",
+   "recon": "Hard cut to a split layout: stick-figure presenter at left with a lowered pointer, pasted article screenshot at right; hold about 0.75 s before scrolling the article.",
+   "prompt": "Hand-drawn stick-figure presenter at the left with a smile and a lowered brown pointer, beside a pasted website article screenshot on the right showing a teal heading and several short bullet points on a light grey page, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0048",
+   "objects": "Article scrolled to its top: dark banner with a blue tag, white bold headline over a world-map background, date, grey button and icons; light body below with heading and bullets; an 'Author' card at lower right (x 0.76-0.94, y 0.45-0.92) with a portrait, name, role and 'Read Bio'; presenter at left now pointing with raised pointer at the headline.",
+   "background": "White canvas with pasted article screenshot and figure.",
+   "illustration": "Real article capture with a stock-photo avatar in the card; crude stick figure at left.",
+   "typography": "Headline about 4% frame height bold white on dark; card name bold sans about 1.2%.",
+   "readable_text": "ECONOMIC DATA & ANALYSIS; Sept FOMC Preview: More Inflation Coming; the Fed Rarely Stops After One Move; 15 SEPTEMBER 2026 / BRIEF; DOWNLOAD BRIEF; Author; Yelena Shulyatyeva, CFA; Senior US Economist; Read Bio",
+   "unreadable_text": "Bullet text below the banner is partly hidden by the card.",
+   "hierarchy": "Headline first, pointer directs to it, author card secondary.",
+   "camera_motion": "SCROLL.",
+   "entry_exit": "Begins as EP0078's scroll and card slide-in complete (f2470); ends as EP0079 slides the card away.",
+   "story_function": "INFERRED: names the analyst and the headline claiming more inflation and multiple hikes.",
+   "evidence": "MERGE_WITH_PREV: same figure-plus-article composition as S0047, scrolled to the top with a card added. OBSERVED: headline, author card, raised pointer.",
+   "confidence": "HIGH",
+   "continuity": "Same assets as S0047.",
+   "recon": "Scroll the article to its top, slide in an author card at lower right and raise the presenter's pointer toward the headline; hold about 2 s.",
+   "prompt": "Hand-drawn stick-figure presenter at the left pointing a brown stick at a dark news-article banner with a bold white headline over a map background on the right, a small author card with a round portrait in the lower right corner, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0049",
+   "objects": "Same article top with the author card gone and a red rectangle outline drawn around the three-line headline (x 0.48-0.81, y 0.22-0.42); presenter pointing at the headline.",
+   "background": "White canvas with pasted article screenshot and figure.",
+   "illustration": "As S0048 with a red marker rectangle overlay.",
+   "typography": "As S0048.",
+   "readable_text": "ECONOMIC DATA & ANALYSIS; Sept FOMC Preview: More Inflation Coming; the Fed Rarely Stops After One Move; 15 SEPTEMBER 2026 / BRIEF; Trusted Insights for What's Ahead",
+   "unreadable_text": "Bullet text beneath.",
+   "hierarchy": "Red box fixes attention on the headline.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins as the author card leaves (EP0079); red box finishes (SUB051); ends with EP0080 scroll and frown.",
+   "story_function": "INFERRED: emphasises the claim that the Fed rarely stops after one hike.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0047-S0048; author card removed and red box drawn. OBSERVED: red rectangle.",
+   "confidence": "HIGH",
+   "continuity": "Same assets as S0047.",
+   "recon": "Slide the author card away, then draw a red rectangle around the headline; hold about 5 s.",
+   "prompt": "Hand-drawn stick-figure presenter at the left pointing a brown stick at a dark news-article banner with a bold white headline outlined by a red marker rectangle, small light article body below, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0050",
+   "objects": "Article scrolled down (banner cut off at top, heading and five bullets visible); presenter at left now frowning with the pointer lowered or held horizontal pointing right at the third bullet; a yellow highlight bar covers that bullet's three lines (x 0.53-0.83, y 0.58-0.67); cursor arrow right.",
+   "background": "White canvas with pasted article screenshot and figure.",
+   "illustration": "Crude stick figure with a frowning mouth and brows; yellow marker highlight overlay.",
+   "typography": "Bullets about 1.4% frame height dark grey; highlighted words black on yellow.",
+   "readable_text": "Trusted Insights for What's Ahead; We now anticipate three consecutive rate hikes in September, October, and December, because the Fed rarely does 'one and done.'; The latest hotter-than-expected August CPI report was likely the straw that broke the camel's back, as a series of events suggested a hike would be necessary.",
+   "unreadable_text": "Faded last bullets.",
+   "hierarchy": "Highlighted bullet is the focus, frowning presenter signals concern.",
+   "camera_motion": "STATIC 2D (after a brief scroll).",
+   "entry_exit": "Begins with EP0080 (scroll plus frown); pointer swing EP0081; highlight wipe SUB053; ends with a hard cut to the PDF viewer (EP0082).",
+   "story_function": "INFERRED: stresses the forecast of three consecutive hikes and the worry it implies.",
+   "evidence": "MERGE_WITH_PREV: same figure-plus-article composition as S0047 with expression change and highlight. OBSERVED: frown, highlight, cursor.",
+   "confidence": "HIGH",
+   "continuity": "Same assets as S0047; frowning face first seen here.",
+   "recon": "Scroll the article down, change the presenter to a frown, aim the pointer right at the third bullet and wipe a yellow highlight across its three lines over 1.5 s; hold about 3 s.",
+   "prompt": "Hand-drawn stick-figure presenter at the left with a frown holding a brown pointer toward a website article on the right where one bullet-point paragraph is highlighted in yellow marker, other bullets in grey, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0051",
+   "objects": "Chrome-style PDF viewer centred (x 0.22-0.78, y 0.06-0.94) at 76% zoom showing a paper title page: bank name and 'Staff Reports' at top, centred paper title, three author names, 'Staff Report no. 421 January 2010', a small disclaimer paragraph at the bottom; thumbnail strip at left with first thumbnail selected; arrow cursor at x 0.73, y 0.38.",
+   "background": "Off-white canvas with a centred Chrome-style PDF viewer capture (dark charcoal chrome, white page).",
+   "illustration": "Real screenshot of a PDF viewer: dark toolbar and thumbnail strip, white page with serif journal typesetting; no hand-drawn illustration.",
+   "typography": "Serif title page text about 1.2% frame height centred black; toolbar tiny sans.",
+   "readable_text": "Federal Reserve Bank of New York Staff Reports; Monetary Cycles, Financial Cycles, and the Business Cycle; Tobias Adrian; Arturo Estrella; Hyun Song Shin; Staff Report no. 421; January 2010",
+   "unreadable_text": "Disclaimer paragraph at bottom.",
+   "hierarchy": "Title and authors as a citation card.",
+   "camera_motion": "STATIC 2D viewer frame.",
+   "entry_exit": "Begins with the hard cut from the article scene (EP0082, 2 frames); ends as EP0083 scrolls to page 2.",
+   "story_function": "INFERRED: cites a second research paper on monetary cycles and the business cycle.",
+   "evidence": "OBSERVED: title page text. INFERRED: role as citation.",
+   "confidence": "HIGH",
+   "continuity": "Same viewer chrome style as S0025; different paper.",
+   "recon": "Hard cut to a PDF-viewer capture of a staff-report title page; hold 0.25 s then scroll.",
+   "prompt": "Flat interface mockup on a plain white canvas: a document-viewer window with a dark toolbar and left thumbnail strip, a white page with centred small serif title lines, author names and report number, small arrow cursor, crisp clean style.",
+   "family": "F8 dark-UI capture"
+  },
+  {
+   "id": "S0052",
+   "objects": "Viewer scrolled to the page 1 bottom (disclaimer) and page 2 start (title block, 'Abstract' heading and paragraph); thumbnail 2 selected; same cursor position.",
+   "background": "Off-white canvas with a centred Chrome-style PDF viewer capture (dark charcoal chrome, white page).",
+   "illustration": "Real screenshot of a PDF viewer: dark toolbar and thumbnail strip, white page with serif journal typesetting; no hand-drawn illustration.",
+   "typography": "As S0051.",
+   "readable_text": "Abstract; One of the most robust stylized facts in macroeconomics is the forecasting power of the term spread for future real activity.; Key words: monetary policy, financial intermediation",
+   "unreadable_text": "Most abstract body text.",
+   "hierarchy": "Abstract paragraph.",
+   "camera_motion": "SCROLL.",
+   "entry_exit": "Begins as EP0083's scroll ends (f2783); ends as EP0084 scroll resumes. 3-frame fragment.",
+   "story_function": "INFERRED: scrolling to the paper's abstract.",
+   "evidence": "MERGE_WITH_PREV: same PDF-viewer composition as S0051; scrolled.",
+   "confidence": "HIGH",
+   "continuity": "Same viewer as S0051.",
+   "recon": "Scroll the page upward a short distance and move the blue outline to thumbnail 2.",
+   "prompt": "Flat interface mockup on a plain white canvas: document-viewer window with dark toolbar and thumbnails, a white page showing a bold centred heading and a paragraph of serif abstract text, small arrow cursor, clean look.",
+   "family": "F8 dark-UI capture"
+  },
+  {
+   "id": "S0053",
+   "objects": "Viewer scrolled to the end of page 2 (key words, author footnote paragraph) and the 'I. Introduction' heading at the bottom; thumbnail 2 selected.",
+   "background": "Off-white canvas with a centred Chrome-style PDF viewer capture (dark charcoal chrome, white page).",
+   "illustration": "Real screenshot of a PDF viewer: dark toolbar and thumbnail strip, white page with serif journal typesetting; no hand-drawn illustration.",
+   "typography": "As S0051.",
+   "readable_text": "Abstract; Key words: monetary policy, financial intermediation; I. Introduction",
+   "unreadable_text": "Footnote text.",
+   "hierarchy": "Abstract to introduction transition.",
+   "camera_motion": "SCROLL.",
+   "entry_exit": "Begins after EP0084 (f2795); ends as EP0085 scrolls on. 4 frames.",
+   "story_function": "INFERRED: scroll through the document.",
+   "evidence": "MERGE_WITH_PREV: same viewer composition as S0051-S0052; 4 frames.",
+   "confidence": "HIGH",
+   "continuity": "Same viewer as S0051.",
+   "recon": "Keep scrolling the page upward; hold 0.17 s.",
+   "prompt": "Flat interface mockup on a plain white canvas: document-viewer window with a dark toolbar and thumbnail strip, white page with small serif paragraphs and an introduction heading at the bottom, small arrow cursor, clean look.",
+   "family": "F8 dark-UI capture"
+  },
+  {
+   "id": "S0054",
+   "objects": "Viewer scrolled to 'I. Introduction' body paragraphs filling the page; thumbnail 3 selected.",
+   "background": "Off-white canvas with a centred Chrome-style PDF viewer capture (dark charcoal chrome, white page).",
+   "illustration": "Real screenshot of a PDF viewer: dark toolbar and thumbnail strip, white page with serif journal typesetting; no hand-drawn illustration.",
+   "typography": "As S0051.",
+   "readable_text": "I. Introduction; A traditional view in monetary economics is that interest rates are transmitted via the money demand function, and that the level of interest rates affects real consumption and investment.",
+   "unreadable_text": "Remaining paragraphs.",
+   "hierarchy": "Introduction text.",
+   "camera_motion": "SCROLL.",
+   "entry_exit": "Begins after EP0085 (f2807); ends as EP0086 scrolls on. 6 frames.",
+   "story_function": "INFERRED: scrolling through the document.",
+   "evidence": "MERGE_WITH_PREV: same viewer composition; scroll offset and thumbnail 3 selected.",
+   "confidence": "HIGH",
+   "continuity": "Same viewer as S0051.",
+   "recon": "Scroll to the introduction and move the blue outline to thumbnail 3; hold 0.25 s.",
+   "prompt": "Flat interface mockup on a plain white canvas: document-viewer window with a dark toolbar and thumbnail strip, white page with a bold section heading and several serif paragraphs, third thumbnail outlined blue, clean look.",
+   "family": "F8 dark-UI capture"
+  },
+  {
+   "id": "S0055",
+   "objects": "Viewer scrolled to the lower introduction paragraphs and the page break; next page begins with continuing text and a 'Figure 1' caption area; thumbnail 3 selected.",
+   "background": "Off-white canvas with a centred Chrome-style PDF viewer capture (dark charcoal chrome, white page).",
+   "illustration": "Real screenshot of a PDF viewer: dark toolbar and thumbnail strip, white page with serif journal typesetting; no hand-drawn illustration.",
+   "typography": "As S0051.",
+   "readable_text": "In this paper, we re-examine the transmission of monetary policy to the real economy by connecting two strands of literature that have thus far been largely separate: the forecasting power of the term spread",
+   "unreadable_text": "Remaining paragraph text.",
+   "hierarchy": "Body text.",
+   "camera_motion": "SCROLL.",
+   "entry_exit": "Begins after EP0086 (f2825); ends as EP0087 scrolls on. 4 frames.",
+   "story_function": "INFERRED: scrolling toward the first chart.",
+   "evidence": "MERGE_WITH_PREV: same viewer composition; further scroll.",
+   "confidence": "HIGH",
+   "continuity": "Same viewer as S0051.",
+   "recon": "Continue scroll; hold 0.17 s.",
+   "prompt": "Flat interface mockup on a plain white canvas: document-viewer window with a dark toolbar and thumbnails, a white page with serif paragraphs ending at a page break with the start of a new page, third thumbnail outlined blue.",
+   "family": "F8 dark-UI capture"
+  },
+  {
+   "id": "S0056",
+   "objects": "Viewer scrolled to a page with 'Figure 1' caption and a line chart (black series, grey vertical bands, axis labels 0.0 to 20.0, years 1955-2005); thumbnail 4 selected.",
+   "background": "Off-white canvas with a centred Chrome-style PDF viewer capture (dark charcoal chrome, white page).",
+   "illustration": "Real screenshot of a PDF viewer: dark toolbar and thumbnail strip, white page with serif journal typesetting; no hand-drawn illustration.",
+   "typography": "Figure caption bold serif about 0.9% frame height; axis numerals tiny.",
+   "readable_text": "Figure 1: The Fed Funds Rate, Ends of Tightening Cycles (grid), and NBER Recessions (shading); Percent; 20.0; 17.5; 15.0; 12.5; 10.0; 7.5; 5.0; 2.5; 0.0; 1955; 1960; 1965",
+   "unreadable_text": "Footnote text under the chart.",
+   "hierarchy": "Chart is the focal element.",
+   "camera_motion": "SCROLL.",
+   "entry_exit": "Begins after EP0087 (f2840); ends with EP0088 zoom-in and figure entry. 5 frames.",
+   "story_function": "INFERRED: arrives at the fed-funds-rate chart with recession shading.",
+   "evidence": "MERGE_WITH_PREV: same viewer composition; scrolled to the chart page.",
+   "confidence": "HIGH",
+   "continuity": "Chart is reused full-frame in S0057-S0063.",
+   "recon": "Scroll to the chart page and hold 0.2 s before the zoom.",
+   "prompt": "Flat interface mockup on a plain white canvas: a document-viewer window with a dark toolbar and thumbnails, white page with a bold chart caption and a line chart of a jagged black series with grey vertical bands, fourth thumbnail outlined blue.",
+   "family": "F8 dark-UI capture"
+  },
+  {
+   "id": "S0057",
+   "objects": "Full-frame document page crop: bold caption 'Figure 1...' at top (y 0.14), line chart at left (x 0.09-0.58, y 0.20-0.65) with grey vertical bands and thin black verticals, three lines of paragraph text beneath (y 0.74-0.92); smiling stick figure at right (head x 0.71-0.88, y 0.25-0.55) pointing a brown pointer at the chart.",
+   "background": "Full-bleed white document page, figure overlays on the right.",
+   "illustration": "Scanned document figure plus crude marker-style stick figure.",
+   "typography": "Caption bold serif about 1.4% frame height; paragraph serif about 1.6% height.",
+   "readable_text": "Figure 1: The Fed Funds Rate, Ends of Tightening Cycles (grid), and NBER Recessions (shading); Tobias Adrian and Estrella (2008) link monetary tightening cycles and subsequent economic outcomes to the term spread of interest rates. Figure 1 here updates Figure 1 from Adrian and Estrella (2008) with an expanded time series through the end of 2009.",
+   "unreadable_text": "Axis tick labels.",
+   "hierarchy": "Chart left is the evidence, smiling presenter at right points to it.",
+   "camera_motion": "STATIC 2D (after zoom in EP0088).",
+   "entry_exit": "Begins when EP0088 finishes the zoom-in and the figure enters (f2867); ends in the one-frame magenta overlay EP0089.",
+   "story_function": "INFERRED: walks the audience through historical tightening cycles on the chart.",
+   "evidence": "OBSERVED: chart, text, pointing figure. INFERRED: role.",
+   "confidence": "HIGH",
+   "continuity": "Presenter reused from S0040-S0050; chart from S0056 enlarged.",
+   "recon": "Zoom the viewer crop to a full-frame page, slide the presenter in at the right with a raised pointer aimed at the chart; hold about 0.4 s.",
+   "prompt": "Hand-drawn stick-figure presenter at the right, smiling and pointing a brown stick at a line chart with grey vertical bands on a full-bleed white document page with a bold caption above and paragraph text below, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0058",
+   "objects": "Same full-frame chart page and smiling presenter with fifteen thin magenta vertical lines laid over the chart at the tightening-cycle peaks (x 0.09-0.55, y 0.20-0.63).",
+   "background": "Full-bleed white document page scan; page break shown as a thick black bar.",
+   "illustration": "As S0057 with magenta marker lines overlaid.",
+   "typography": "As S0057.",
+   "readable_text": "Figure 1: The Fed Funds Rate, Ends of Tightening Cycles (grid), and NBER Recessions (shading)",
+   "unreadable_text": "Axis labels.",
+   "hierarchy": "Magenta lines mark the tightening-cycle ends over the chart.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins when the lines pop in (EP0089, f2876); ends with their removal and the figure's face change (EP0090).",
+   "story_function": "INFERRED: marks each tightening cycle's end to show how many cycles were followed by recessions.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0057 with magenta lines added in one frame.",
+   "confidence": "HIGH",
+   "continuity": "Same page and presenter as S0057.",
+   "recon": "Pop magenta vertical lines onto the chart in one frame; hold about 2.6 s.",
+   "prompt": "Hand-drawn stick-figure presenter at the right pointing at a line chart with grey recession bands, fifteen thin magenta vertical lines laid over the chart, full-bleed white document page with caption above and text below.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0059",
+   "objects": "Same page with the magenta lines gone; presenter now with a flat mouth and pointer lowered diagonally across its torso; arrow cursor over the chart's right side (x 0.55, y 0.40).",
+   "background": "Full-bleed white document page scan; page break shown as a thick black bar.",
+   "illustration": "As S0057; face neutral.",
+   "typography": "As S0057.",
+   "readable_text": "Figure 1: The Fed Funds Rate, Ends of Tightening Cycles (grid), and NBER Recessions (shading)",
+   "unreadable_text": "Axis labels.",
+   "hierarchy": "Chart and presenter as before.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins at EP0090 (f2940, magenta gone, expression change); ends as EP0091 scrolls the page.",
+   "story_function": "INFERRED: transitional beat before scrolling to the next page of the paper.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0057-S0058; 4 frames.",
+   "confidence": "HIGH",
+   "continuity": "Same assets as S0057.",
+   "recon": "Remove the magenta lines, change the presenter to a flat mouth and lower the pointer; hold 0.17 s.",
+   "prompt": "Hand-drawn stick-figure presenter at the right with a flat neutral mouth and a lowered brown pointer beside a full-bleed white document page with a line chart with grey vertical bands, caption above and text below.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0060",
+   "objects": "Document scrolled so the chart is cut off at the top (axis years at y 0.05), a paragraph and a footnote block mid-frame, page number '2', a thick black page-break bar (y 0.74) and the next page's first lines below; presenter static at right with flat mouth.",
+   "background": "Full-bleed white document page scan; page break shown as a thick black bar.",
+   "illustration": "As S0057.",
+   "typography": "Footnote serif about 1.2% frame height.",
+   "readable_text": "Tobias Adrian and Estrella (2008) link monetary tightening cycles and subsequent economic outcomes to the term spread of interest rates.; monetary tightening cycles are defined as local peaks of the effective Fed Funds rate.; shows fourteen tightening cycles since 1955. Ten of these tightening cycles were followed by recessions within 18 months after the peak of the Fed Funds rate.",
+   "unreadable_text": "Footnote body text.",
+   "hierarchy": "Paragraph and footnote are the content; presenter static.",
+   "camera_motion": "SCROLL.",
+   "entry_exit": "Begins after EP0091's scroll (f2959); ends as EP0092 scroll resumes.",
+   "story_function": "INFERRED: scrolls to the statistic about tightening cycles followed by recessions.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0057; scrolled.",
+   "confidence": "HIGH",
+   "continuity": "Same assets as S0057.",
+   "recon": "Scroll the page upward; hold 0.54 s.",
+   "prompt": "Hand-drawn stick-figure presenter with a peach head, spiky black hair and a flat mouth at the right beside a full-bleed white document page showing paragraphs, a footnote block, a page number and a thick black page-break bar.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0061",
+   "objects": "Document scrolled to the new page: black page-break bar at top (y 0.09), paragraph at left (x 0.07-0.58, y 0.24-0.48), bold 'Figure 2' caption and scatter plot with year-month labels (y 0.55+); presenter pointer raised and aimed at the text; cursor arrow near x 0.55, y 0.40. Orange highlight bars later wipe over the first two text lines (x 0.07-0.58) and yellow highlighter over lines 2-4; after about 3.4 s lines 2-4 are yellow.",
+   "background": "Full-bleed white document page scan; page break shown as a thick black bar.",
+   "illustration": "Scanned document with orange and yellow highlighter overlays; crude stick figure.",
+   "typography": "Paragraph serif about 1.5% frame height; caption bold about 1.4%.",
+   "readable_text": "shows fourteen tightening cycles since 1955. Ten of these tightening cycles were followed by recessions within 18 months after the peak of the Fed Funds rate. Of the four monetary cycles that were not followed by a recession, the peak in 1966 was followed by an increase in unemployment (Milton Friedman (1970) argues that 1967 was, in fact, a recession).; Figure 2: The 10-year minus 3-month spread and subsequent unemployment increases",
+   "unreadable_text": "Scatter plot labels.",
+   "hierarchy": "Highlighted statistic is the focus; presenter points then lowers pointer.",
+   "camera_motion": "SCROLL then STATIC.",
+   "entry_exit": "Begins after EP0092's scroll (f2983); orange wipe SUB057; pointer drop and yellow start EP0093; yellow wipe SUB058; ends with the portrait card rising (EP0094).",
+   "story_function": "INFERRED: stresses that ten of fourteen tightening cycles were followed by recession and the rest were soft landings.",
+   "evidence": "OBSERVED: highlight wipes and text. INFERRED: purpose.",
+   "confidence": "HIGH",
+   "continuity": "Same document and presenter as S0057-S0060.",
+   "recon": "Hold the page at this scroll offset; wipe orange highlight across two lines over 2.7 s, drop the presenter's pointer, then wipe yellow across lines 2-4 over 3.4 s.",
+   "prompt": "Hand-drawn stick-figure presenter at the right with a flat mouth beside a document page where the first two lines of a paragraph are highlighted orange and the next two yellow, a bold figure caption and scatter plot below, thick black marker lines.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0062",
+   "objects": "Highlighted paragraph at top (orange lines 1-2, yellow lines 2-4); a portrait card rising over the lower left (x 0.05-0.67, y 0.53-0.87): photograph of an older man in glasses and a dark suit (x 0.05-0.34) with a bio paragraph at right and handwritten 'Source: Fullbright' beneath; scatter plot fragments below; presenter at right flat then worried face (raised brows, open mouth).",
+   "background": "Full-bleed white document page scan; page break shown as a thick black bar.",
+   "illustration": "Scanned document plus a pasted photograph card; crude stick-figure presenter with a worried face in later frames.",
+   "typography": "Bio text about 1.2% frame height serif-sans; handwritten caption about 2.4%.",
+   "readable_text": "Milton Friedman, PhD, was one of the most influential American economists of the twentieth century, known in academic, political, and popular culture for his promotion of free markets.; Source: Fullbright",
+   "unreadable_text": "Rest of the bio paragraph.",
+   "hierarchy": "Portrait card is the new focal element; presenter reacts with worry.",
+   "camera_motion": "SCROLL (card slides up).",
+   "entry_exit": "Begins as the card rises (EP0094, 9 frames, f3213); worried face EP0095; ends as the card slides away (EP0096).",
+   "story_function": "INFERRED: introduces the economist whose view that 1967 was a recession is cited in the highlighted text.",
+   "evidence": "MERGE_WITH_PREV: same document-plus-presenter composition as S0061 with a portrait card added. OBSERVED: card text, expression change.",
+   "confidence": "HIGH",
+   "continuity": "Same document and presenter as S0061; photograph card appears only here.",
+   "recon": "Slide a portrait card with bio text and handwritten source line up from the bottom over the left half in 0.4 s, change the presenter to a worried face, hold about 2.6 s.",
+   "prompt": "Hand-drawn stick-figure presenter with a worried face at the right beside a document page with highlighted lines, a photograph card of an older bespectacled man in a suit with a short bio paragraph and a handwritten source caption rising over the lower left.",
+   "family": "F5 screenshot+character"
+  },
+  {
+   "id": "S0063",
+   "objects": "Portrait card gone; document page as S0061 with orange and yellow highlights on the first four lines, bold 'Figure 2' caption and scatter plot below; presenter at right neutral again, pointer lowered.",
+   "background": "Full-bleed white document page scan; page break shown as a thick black bar.",
+   "illustration": "As S0061.",
+   "typography": "As S0061.",
+   "readable_text": "shows fourteen tightening cycles since 1955. Ten of these tightening cycles were followed by recessions within 18 months after the peak of the Fed Funds rate. Of the four monetary cycles that were not followed by a recession; Figure 2: The 10-year minus 3-month spread and subsequent unemployment increases",
+   "unreadable_text": "Scatter plot labels.",
+   "hierarchy": "Highlighted paragraph then the scatter plot.",
+   "camera_motion": "STATIC 2D.",
+   "entry_exit": "Begins as EP0096 slides the card out (f3310); runs on beyond this shard.",
+   "story_function": "INFERRED: back to the paper's page after the biographical aside.",
+   "evidence": "MERGE_WITH_PREV: same composition as S0061; card removed. OBSERVED: neutral figure.",
+   "confidence": "HIGH",
+   "continuity": "Same assets as S0061.",
+   "recon": "Slide the card out and return the presenter to a neutral face; hold about 4 s.",
+   "prompt": "Hand-drawn stick-figure presenter at the right with a flat neutral mouth and a lowered brown pointer beside a full-bleed document page with highlighted paragraph lines, a bold figure caption and a scatter plot below.",
+   "family": "F5 screenshot+character"
+  }
+ ],
+ "disputes": [
+  {
+   "id": "SD004",
+   "verdict": "REAL_STATE_CHANGE",
+   "desc": "Earth, coin and certificate scene under headline card is hard-cut to a PDF viewer page; pre tile old scene, cut and post tiles PDF.",
+   "matches_candidate": "EP0050",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD005",
+   "verdict": "REAL_MOTION",
+   "desc": "Website page scrolls upward between tiles; no new composition, tables shift position.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD006",
+   "verdict": "REAL_MOTION",
+   "desc": "Website page scrolls upward between tiles; no new composition, tables shift position.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD007",
+   "verdict": "REAL_MOTION",
+   "desc": "Website page scrolls upward between tiles; no new composition, tables shift position.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD008",
+   "verdict": "REAL_MOTION",
+   "desc": "Website page scrolls upward between tiles; no new composition, tables shift position.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD009",
+   "verdict": "REAL_MOTION",
+   "desc": "Website page scrolls upward between tiles; no new composition, tables shift position.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD010",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls while the profile card slides leftward in from the right edge across the three tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD011",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls while the profile card slides leftward in from the right edge across the three tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD012",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls while the profile card slides leftward in from the right edge across the three tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD013",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls while the profile card slides leftward in from the right edge across the three tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD014",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls while the profile card slides leftward in from the right edge across the three tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD015",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls while the profile card slides leftward in from the right edge across the three tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD016",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls while the profile card slides leftward in from the right edge across the three tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD017",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls while the profile card slides leftward in from the right edge across the three tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD018",
+   "verdict": "REAL_MOTION",
+   "desc": "Page keeps scrolling under the static profile card; table positions shift between tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD019",
+   "verdict": "REAL_MOTION",
+   "desc": "Page keeps scrolling under the static profile card; table positions shift between tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD020",
+   "verdict": "REAL_MOTION",
+   "desc": "Page keeps scrolling under the static profile card; table positions shift between tiles.",
+   "matches_candidate": "EP0064",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD021",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls under the static profile card; tables move up between tiles.",
+   "matches_candidate": "EP0065",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD022",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls and zooms while the profile card drifts down and out; tables enlarge between tiles.",
+   "matches_candidate": "EP0066",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD023",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls and zooms while the profile card drifts down and out; tables enlarge between tiles.",
+   "matches_candidate": "EP0066",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD024",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls and zooms while the profile card drifts down and out; tables enlarge between tiles.",
+   "matches_candidate": "EP0066",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD025",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls and zooms while the profile card drifts down and out; tables enlarge between tiles.",
+   "matches_candidate": "EP0066",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD026",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls and zooms while the profile card drifts down and out; tables enlarge between tiles.",
+   "matches_candidate": "EP0066",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD027",
+   "verdict": "REAL_MOTION",
+   "desc": "Page scrolls and zooms while the profile card drifts down and out; tables enlarge between tiles.",
+   "matches_candidate": "EP0066",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD028",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD029",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD030",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD031",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD032",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD033",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD034",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD035",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD036",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD037",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD038",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD039",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD040",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD041",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD042",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC page scrolls down past the static stick figure; text then tables move upward between tiles.",
+   "matches_candidate": "EP0070",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD043",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC projection tables scroll upward past the static stick figure between tiles.",
+   "matches_candidate": "EP0071",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD044",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC projection tables scroll upward past the static stick figure between tiles.",
+   "matches_candidate": "EP0071",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD045",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC projection tables scroll upward past the static stick figure between tiles.",
+   "matches_candidate": "EP0071",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD046",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC projection tables scroll upward past the static stick figure between tiles.",
+   "matches_candidate": "EP0071",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD047",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC projection tables scroll upward past the static stick figure between tiles.",
+   "matches_candidate": "EP0071",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD048",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC projection tables scroll upward past the static stick figure between tiles.",
+   "matches_candidate": "EP0071",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD049",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC projection tables scroll upward past the static stick figure between tiles.",
+   "matches_candidate": "EP0071",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD050",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC projection tables scroll upward past the static stick figure between tiles.",
+   "matches_candidate": "EP0071",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD051",
+   "verdict": "REAL_MOTION",
+   "desc": "FOMC projection tables scroll upward past the static stick figure between tiles.",
+   "matches_candidate": "EP0071",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD052",
+   "verdict": "REAL_MOTION",
+   "desc": "Page zooms in on Figure 2 table while the stick figure slides off to the right.",
+   "matches_candidate": "EP0073",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD053",
+   "verdict": "REAL_MOTION",
+   "desc": "Page zooms in on Figure 2 table while the stick figure slides off to the right.",
+   "matches_candidate": "EP0073",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD054",
+   "verdict": "REAL_MOTION",
+   "desc": "Page zooms in on Figure 2 table while the stick figure slides off to the right.",
+   "matches_candidate": "EP0073",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD055",
+   "verdict": "REAL_MOTION",
+   "desc": "Page zooms in on Figure 2 table while the stick figure slides off to the right.",
+   "matches_candidate": "EP0073",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD056",
+   "verdict": "REAL_MOTION",
+   "desc": "Page zooms in on Figure 2 table while the stick figure slides off to the right.",
+   "matches_candidate": "EP0073",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD057",
+   "verdict": "REAL_MOTION",
+   "desc": "Page zooms in on Figure 2 table while the stick figure slides off to the right.",
+   "matches_candidate": "EP0073",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD058",
+   "verdict": "REAL_MOTION",
+   "desc": "Page zooms in on Figure 2 table while the stick figure slides off to the right.",
+   "matches_candidate": "EP0073",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD059",
+   "verdict": "REAL_MOTION",
+   "desc": "Page zooms in on Figure 2 table while the stick figure slides off to the right.",
+   "matches_candidate": "EP0073",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD060",
+   "verdict": "REAL_MOTION",
+   "desc": "Page zooms in on Figure 2 table while the stick figure slides off to the right.",
+   "matches_candidate": "EP0073",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD061",
+   "verdict": "REAL_MOTION",
+   "desc": "Article scrolls down moving the red-boxed headline off, while the smiling figure turns to a frown.",
+   "matches_candidate": "EP0080",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD062",
+   "verdict": "REAL_MOTION",
+   "desc": "PDF viewer chrome zooms and crops away so the page enlarges between tiles; cursor remains.",
+   "matches_candidate": "EP0088",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD063",
+   "verdict": "REAL_MOTION",
+   "desc": "PDF viewer chrome zooms and crops away so the page enlarges between tiles; cursor remains.",
+   "matches_candidate": "EP0088",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD064",
+   "verdict": "REAL_MOTION",
+   "desc": "PDF viewer chrome zooms and crops away so the page enlarges between tiles; cursor remains.",
+   "matches_candidate": "EP0088",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD065",
+   "verdict": "REAL_MOTION",
+   "desc": "PDF viewer chrome zooms and crops away so the page enlarges between tiles; cursor remains.",
+   "matches_candidate": "EP0088",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD066",
+   "verdict": "REAL_MOTION",
+   "desc": "PDF viewer chrome zooms and crops away so the page enlarges between tiles; cursor remains.",
+   "matches_candidate": "EP0088",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD067",
+   "verdict": "REAL_MOTION",
+   "desc": "PDF viewer chrome zooms and crops away so the page enlarges between tiles; cursor remains.",
+   "matches_candidate": "EP0088",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD068",
+   "verdict": "REAL_MOTION",
+   "desc": "PDF viewer chrome zooms and crops away so the page enlarges between tiles; cursor remains.",
+   "matches_candidate": "EP0088",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "SD069",
+   "verdict": "REAL_MOTION",
+   "desc": "Document scrolls upward past the footnote and page break while the stick figure stays static.",
+   "matches_candidate": "EP0092",
+   "confidence": "HIGH"
+  }
+ ]
+}
