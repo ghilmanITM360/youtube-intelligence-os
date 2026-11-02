@@ -135,5 +135,21 @@
   "proposals": "tables/v2_reconcile_proposals_unapplied.csv",
   "applied": false,
   "limits": "sparse 4-frame rows; transitions and hidden changes may be missed or mislocated; not native-frame review"
+ },
+ "states_v3": {
+  "status": "DRAFT_UNVALIDATED",
+  "states": 88,
+  "gaps_overlaps": 0,
+  "file": "tables/states_v3_draft.csv",
+  "basis": "v2 with 7 merge groups (9 SPURIOUS boundaries + X043) resolved by orchestrator viewing dense 8-per-state strips; X069 and X088 additionally native consecutive frames (f10347-10356, f13352-13361). v1/v2 immutable.",
+  "hidden_change_resolution": "14/14 resolved in tables/v3_subevents_and_hidden_resolution.csv as camera zoom/pan, in-shot object or board-painting swaps, white-card internal swaps, or transitions; none split as new hard cuts. Sub-event frame brackets are from sparse (8 per state) views except X069/X088 (native).",
+  "definition_caveat": "v3 states are shot-level; graphic swaps on a continuing white card are sub-events, not states. This is one reading, not ground truth; reviewers earlier labelled C034 a HARD_CUT.",
+  "limits": [
+   "Not exhaustive per-frame inspection; dense strips are 8 evenly spaced frames per state",
+   "Single viewer (orchestrator) for these resolutions; no independent second reviewer",
+   "X088 frames f13349-13351 not viewed",
+   "82 intra-state bursts still unreviewed",
+   "No audio listening, no ASR, no semantic validation"
+  ]
  }
 }
