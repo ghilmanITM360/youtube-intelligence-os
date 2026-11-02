@@ -1,0 +1,32 @@
+{
+ "video_id": "uPQcyookL0Y",
+ "mode_requested": "CT_SCAN",
+ "mode_achieved": "STRUCTURAL_PLUS_PARTIAL_REVIEW",
+ "temporal": {
+  "MEASURED": "all 14647 decoded frames, pixel-diff metrics, CFR 30000/1001",
+  "frames_total": 14647
+ },
+ "candidates": {
+  "tierA_hard_cut_or_transition": 77,
+  "tierB_soft_peaks": 8,
+  "reviewed": 44,
+  "review_scope": "A001-A036 + B001-B008 via 9 sparse montages (prev/first/mid/next frames per candidate)",
+  "unreviewed": "A037-A077 (41)"
+ },
+ "draft_states": {
+  "count": 86,
+  "gaps": 0,
+  "overlaps": 0,
+  "note": "contiguous partition by construction from tier-A cuts; NOT semantically verified; longest state 29.53 s still contains unsegmented intra-state motion"
+ },
+ "domains": {
+  "shots": "PARTIAL",
+  "visual_states": "DRAFT",
+  "object_lifecycles": "NOT_STARTED",
+  "motion": "NOT_STARTED (only per-frame diff metrics)",
+  "text_graphics": "NOT_STARTED",
+  "camera": "NOT_STARTED",
+  "audio_alignment": "UNAVAILABLE - audio not listened; no ASR run",
+  "art_direction": "NOT_STARTED"
+ }
+}

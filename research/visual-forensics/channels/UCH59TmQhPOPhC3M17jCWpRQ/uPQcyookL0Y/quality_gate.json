@@ -1,0 +1,28 @@
+{
+ "video_id": "uPQcyookL0Y",
+ "verdict": "PARTIAL - NOT CT_SCAN_COMPLETE",
+ "gates": {
+  "source_hash_equals_registry": "PASS",
+  "source_bytes": "PASS 48986292",
+  "ffprobe_recorded": "PASS",
+  "decoded_frames_equal_container_nb_frames": "PASS 14647",
+  "pts_cfr_unique_monotonic": "PASS (14646 deltas all 1001 ticks)",
+  "full_timeline_measured": "PASS",
+  "state_gap_overlap_check_structural": "PASS 0/0 (by construction)",
+  "state_semantic_validation": "FAIL_NOT_DONE",
+  "candidate_review_complete": "FAIL 44/85 reviewed",
+  "intra_state_motion_scan": "NOT_DONE",
+  "identity_vs_youtube_content": "NOT_VERIFIED (filename ID + hash + duration within 0.22s only)",
+  "audio_listening": "UNAVAILABLE",
+  "asr_transcript": "NOT_RUN",
+  "independent_semantic_check_of_reviewer": "NOT_DONE (orchestrator spot-checked 3 rows vs images only)"
+ },
+ "kit": {
+  "zip": "~/Downloads/YIOS_Visual_Forensics_Intelligence_Kit_v1.0.zip",
+  "zip_sha256": "a89de050280c9bcce94b5baf922bf6c716065f5f2c0a8afc5e4b274384895cff",
+  "extracted": "~/Downloads/videos in mp3/YIOS_Visual_Forensics_Intelligence_Kit_v1.0",
+  "validate_kit.py": "PASS (4 prompts hash-verified, 14 refs, 7 templates)",
+  "installed_skill": "~/.claude/skills/visual-ct-scan - differs from kit SKILL.md (adapted copy, adds source-prompts/INVOCATION_EXAMPLES); kit workflow followed via references, no claim of byte-identical install",
+  "references_actually_read_in_this_session": "SKILL.md only (loaded via Skill tool); refs 01-14 NOT individually read -> kit-specific gate details beyond SKILL.md not applied"
+ }
+}
