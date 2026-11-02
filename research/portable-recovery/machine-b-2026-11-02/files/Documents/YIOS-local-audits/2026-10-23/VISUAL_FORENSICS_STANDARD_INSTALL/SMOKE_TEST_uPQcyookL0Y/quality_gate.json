@@ -1,0 +1,54 @@
+{
+ "video_id": "uPQcyookL0Y",
+ "source_sha256": "1416669f10d7231f8110eb27044986912984dcdbacbd7d9f6440726349a0c69d",
+ "requested_mode": "CT_SCAN (dry run: archived evidence only, no new decoding)",
+ "review_scope": {
+  "source_seconds_total": 488.780045,
+  "frames_decoded": 14647,
+  "fps": "30000/1001",
+  "overview_sampling_hz": 1,
+  "native_intervals_reviewed": [],
+  "unreviewed_or_unverified_intervals": [
+   "sub-second states between 1 fps samples across 0-488.78 s outside dense windows",
+   "transition type at ~20 s (UNRESOLVED in 06)"
+  ]
+ },
+ "gates": {
+  "source_identity": "PASS",
+  "full_temporal_overview": "PASS",
+  "candidate_shots_verified": "PARTIAL",
+  "meaningful_state_timing": "BLOCKED",
+  "motion_design_review": "PARTIAL",
+  "creative_design_review": "PARTIAL",
+  "visual_script_mapping": "PARTIAL",
+  "production_blueprint": "BLOCKED",
+  "audio_human_listening": "BLOCKED",
+  "final_av_signoff": "BLOCKED"
+ },
+ "gate_evidence": {
+  "source_identity": "source re-hashed now = 03 ledger = 08 manifest",
+  "full_temporal_overview": "17 sheet_1fps_*.jpg cover 489/489 s (06 table)",
+  "candidate_shots_verified": "72 scene-score candidates >=0.30 indexed; not each confirmed at frame level (04: detector over/under-counts)",
+  "meaningful_state_timing": "no frame-accurate event ledger (04 C-3 not run); timestamps +-1 s from sheet position",
+  "motion_design_review": "observed at 1 fps (zooms, dimming, blur reveal, redaction wipe); no measured onset/settle PTS",
+  "creative_design_review": "06 Pilot 4 + 07 column; per-state token table not built",
+  "visual_script_mapping": "whisper.cpp small.en ASR spot-checks only: ASR_ONLY_NOT_AUDIO_VERIFIED",
+  "production_blueprint": "no per-state image / image-to-video prompts exist",
+  "audio_human_listening": "no human listening",
+  "final_av_signoff": "requires listening + complete visual"
+ },
+ "ledger_status_before": {
+  "visual": "VISUAL_ANALYSIS_PARTIAL",
+  "audio": "AUDIO_REVIEW_PENDING"
+ },
+ "ledger_status_after": {
+  "visual": "VISUAL_ANALYSIS_PARTIAL",
+  "audio": "AUDIO_REVIEW_PENDING"
+ },
+ "final_video_status": "VISUAL_ANALYSIS_PARTIAL",
+ "limitations": [
+  "dry run read archived evidence only",
+  "no retention/CTR/gaze data exists; none inferred"
+ ],
+ "next_step": "04 C-2 state detector over full video, then dense native-frame windows per candidate/ambiguous span; author shot_ledger.csv + visual_event_ledger.csv at frame accuracy (after Finance handoff gate, per 09)"
+}

@@ -1,3 +1,5 @@
+**Portable sync (2026-11-02):** see `research/portable-recovery/machine-b-2026-11-02/README.md` and `PORTABLE_SYNC_MANIFEST.json` for what is in Git, what is Machine-B-only (`STORAGE_DESTINATION_REQUIRED`), and the CT006 `UNAVAILABLE_ON_THIS_MACHINE` record.
+
 # Historical reanalysis campaign checkpoint 3 (2026-11-02)
 
 **Counts:** 558 accepted videos in the frozen population (hash `73489502a6a6…`); **26 reassessed** (all `SEMANTIC_REVIEW_PENDING`: structurally validated and second-pass reviewed by fresh-context same-model-family subagents, not human-reviewed); 532 `PENDING`; 0 `EVIDENCE_BLOCKED`; 0 semantically reviewed. This checkpoint adds `08z1JYUQQnM`, `0Ca3uV6lgos`, `0J8MtFWsWY8` (batch A, commit `583a3c15`), `0bnMucPlugA`, `0kT4-532n8I`, `106GHTtl4EM` (batch B, same commit) and `11oeh1Xi_Gs`, `12kPA19t_Jw`, `14CS2T6Kz6E`, `14gilFEp_Iw` (batch C). Cohort comparison: `reanalysis/COHORT_COMPARISONS.md` (26 videos; the earlier descriptive pattern weakens and no cross-tier finding is supported).

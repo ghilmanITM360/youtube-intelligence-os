@@ -1,0 +1,17 @@
+# Prioritized unresolved issues
+
+| Priority | Issue | Evidence / limitation | Next step |
+| --- | --- | --- | --- |
+| 1 | Finance publication/writer split | 554accepted exists on separate Machine A branch; canonical/PR36 remains461,44commitsbehindthatbranchbut0behinditsownupstream. | Owner/writer-coordinated validation and explicit reconciliation/handback; preserve both branches, no duplicate audits. |
+| 2 | Missing current CT006 workspace | New CheckpointBonlyhistoricallyreported; olderPR21package/sourceareavailablebutnotthesamenewcheckpoint. | ObtainexactMachine Aworkspace/source/checksummanifest/reviewerresponsesandcurrentwriterrecord;donotregenerateexpensiveevidence. |
+| 3 | Stale Finance universe status projection | FINANCE_UNIVERSE.csv430 completeversusJSONL/workbook461/554. | TreatJSONL+validatedpacketsascompletionauthority;futureowner-scopedprojectionrepairwithprovenance,notrawedits. |
+| 4 | Two failing provenance rows | DS28-F020andDS30-F019fingerprintmutable.gitattributes;fullsuite1fail. | Documenthistoricalconfigurationfingerprint/correctionsemanticsbeforeupdatingledger;rawsourcebytesremainunchanged. |
+| 5 | CT evidence/semantic/audio limits | Sources001–005present;mostprivateframes/audio/workingcropsabsent;allfull AVblocked. | Transferonlyrequiredhash-matchedevidence;separatestructuralchecksfromnativevisualandhumanlisteningacceptance. |
+| 6 | Missing LFS versions | 6payloadversionsabsentlocally,twohistoricalDBsandfourDrRehanproductionmediafiles. | Targetedfetchonlyifneeded;remoteLFSavailabilityunverified;preservefrozencurrentDB. |
+| 7 | Runtime portability | Project3.12works;system3.14XMLbroken;numpy/Whisper/PySceneDetectabsent. | Useexistingproject.venv;futuretask-specificenvironmentrepair/dependenciesonly. |
+| 8 | CI billing blocker | Latestcanonicaljobfailurewith 0 stepsandbillingannotation. | Billing/spendingconfigurationowneraction;do notmisclassifyasexecutedcodefailureorblindlyrerun. |
+| 9 | Historical/status/path drift | 384boundedtextblobversionscontain/Userspaths;oldFinance/CT/SeniorHealthheadlinesandqueuescanbestale. | Useexactbranch/gate/ledgerandhashresolver;retainhistoryandannotatestaleauthoritieswhenowner-scoped. |
+| 10 | Preserved local archives/stash | 2,267stashuntrackeditemsandtrackedledgereditpreserved;oneZIPcontainerhasnoexactothercopymatchestablished. | Keepuntilsemantic/archive-memberandwriterreview;noautocommit/pop/clear orworktreedeletion. |
+| 11 | Coverage vs infrastructure | 0realfirstpartyanalyticsexports;metadata/research/visual/productionacceptanceareseparate. | Useexistingboundedworkflows;donotstartV2/API/RAG/agents/automationfromthisaudit. |
+
+These are findings and follow-up recommendations. No research continuation, financial fact-check, branch integration, PR change, acquisition, environment install or scheduled task was launched.
