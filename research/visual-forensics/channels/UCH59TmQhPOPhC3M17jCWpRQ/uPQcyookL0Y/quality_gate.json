@@ -1,6 +1,6 @@
 {
  "video_id": "uPQcyookL0Y",
- "verdict": "PARTIAL - NOT CT_SCAN_COMPLETE",
+ "verdict": "PARTIAL - NOT CT_SCAN_COMPLETE (checkpoint C)",
  "gates": {
   "source_hash_equals_registry": "PASS",
   "source_bytes": "PASS 48986292",
@@ -10,12 +10,12 @@
   "full_timeline_measured": "PASS",
   "state_gap_overlap_check_structural": "PASS 0/0 (by construction)",
   "state_semantic_validation": "FAIL_NOT_DONE",
-  "candidate_review_complete": "FAIL 44/85 reviewed",
+  "candidate_review_complete": "PASS_SPARSE 85/85 montage-level; not native-frame review; 2 UNCLEAR (A051,B005)",
   "intra_state_motion_scan": "NOT_DONE",
   "identity_vs_youtube_content": "NOT_VERIFIED (filename ID + hash + duration within 0.22s only)",
   "audio_listening": "UNAVAILABLE",
   "asr_transcript": "NOT_RUN",
-  "independent_semantic_check_of_reviewer": "NOT_DONE (orchestrator spot-checked 3 rows vs images only)"
+  "independent_semantic_check_of_reviewer": "PARTIAL: orchestrator viewed montages M01 (A001-A005), M09 (B005-B008), N01 (A037-A041), N03 (A047-A051) in full; reviewer rows there were consistent. Not a full independent re-review (35 of 85 rows seen by orchestrator at most)."
  },
  "kit": {
   "zip": "~/Downloads/YIOS_Visual_Forensics_Intelligence_Kit_v1.0.zip",
