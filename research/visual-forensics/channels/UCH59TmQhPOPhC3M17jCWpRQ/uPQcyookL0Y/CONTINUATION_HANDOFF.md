@@ -48,3 +48,12 @@ A) Per-state art-direction audit (palette sampling, type, character/asset IDs) i
 - Native art audit: batch01 only (W001-W010) -> agents/reviewer_12/art_audit_batch01.csv; narration relations for ASR idx 0-8 -> tables/k_narration_relation_assessed_batch01.csv, audio_visual_alignment_v5.csv. Native PNGs under frames/native_rep (not in Git). Seg 0 was UNCERTAIN from reviewer; orchestrator adjudicated from f60/f150 (not independent).
 - COST: one 33-frame reviewer batch consumed ~15 pts of the 5-hour window (56%->71%). Plan ~8 more batches only when 5h usage <=60%; run one per window.
 - NEXT: batch02 = states W011-W020 via k_scripts/be_k_rep_frames.py batch02 10 20; ASR idx 8-?; then production specs; then reconstruction test; then mNLNb-Z4T0M.
+
+## CHECKPOINT L (2026-11-03) — batch02 native art audit W011-W020 (PARTIAL)
+- Art audit: W001-W020 = 20/89 (sparse representative native frames; NOT exhaustive interval inspection). Reviewers 13 (W011-W015, 14 frames) and 14 (W016-W020, 20 frames); transcript audit: all listed frames opened. Originals: agents/reviewer_13/, agents/reviewer_14/. Combined: tables/k_art_audit_batch02_combined.csv.
+- Narration (provisional ASR, unheard): segs 8-15 assessed -> tables/k_narration_relation_assessed_batch02.csv (seg 11 appears twice: reviewer_13 judged its early part LITERAL, reviewer_14 judged its tail UNCERTAIN; both kept). Coverage segs 0-15 = 16/76 (seg 8 and 11 only partially judged). Seg 8 low confidence. Reviewers noted ASR/visual timing mismatches (title text ~91.8 s after spoken "Ice Age"; cut ~107.4 s leads "frozen wasteland"); unresolved.
+- Boundary exceptions: tables/k_boundary_exception_accounting.csv (11 flagged: 2 corrected W047/W086, W085b kept, 8 unresolved W002/W004/W009/W041/W045/W058/W059/W063 not visually reviewed).
+- Orchestrator spot-check: W011_f2114 viewed (matches). New asset IDs coined independently by reviewers 13/14; cross-reviewer name clashes not checked.
+- STILL PENDING: W001 label swap/panel slide, W010 18 s interval, seg 4 narrowing, seg 8 UNCERTAIN, 8 boundaries visual review, production specs (0), reconstruction test, listening. Kit refs 08/10/11/12 read; applied only as wording rules (salience = hypothesis, no retention numbers, style analogy not influence).
+- COST: two sonnet reviewers (14 + 20 frames) moved 5h usage 78% -> 83%.
+- NEXT: batch03 = W021-W030 via be_k_rep_frames.py batch03 20 30; ASR seg 15 tail/16+; then specs.
