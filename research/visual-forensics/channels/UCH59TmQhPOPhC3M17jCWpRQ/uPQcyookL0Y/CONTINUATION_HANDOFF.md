@@ -1,4 +1,4 @@
-# Barely Evolved uPQcyookL0Y — continuation handoff (checkpoint F)
+# Barely Evolved uPQcyookL0Y — continuation handoff (checkpoint G)
 Executor: Ghilmans-Laptop.local (user ghilmankhan, macOS 26.5.1 arm64), session af9bd28b. Lock: ~/YIOS-local-audits/barely-evolved/.be_writer_lock (separate from Casually Finance .vf_writer_lock, which was HELD by scheduled CF V006 shard 9 and untouched).
 Workspace: ~/YIOS-local-audits/barely-evolved/2026-11-02-uPQcyookL0Y-deep-ct-scan (external; frames/montages kept out of Git).
 Source: ~/Downloads/videos in mp3/BarelyEvolved-MP4/The Worst Time in History to Be Born as a Human [uPQcyookL0Y].mp4 sha256 1416669f…c69d, 48,986,292 B; all 3 local MP4 hashes match registry.
@@ -19,5 +19,9 @@ FINDING (CORRECTED in checkpoint F): see below; seq61/seq141/seq39 were already 
 CORRECTION: checkpoint E overstated misses. B001/B003/B007 were already candidates (reviewed HARD_CUT); v1 states just were not split on tier-B. Genuinely new: seq49 (C013), seq113 (C032).
 Second detector (v1_scripts/be_structure_pass.py + be_second_detector_candidates.py): 42 clusters; reviewer_4 (9 montages, transcript confirmed): SAME_SHOT_MOTION 29, HARD_CUT 7 (C009,C013,C014,C022,C026,C032,C034), TEXT_OR_GRAPHIC_CHANGE 6. Orchestrator viewed Q05,Q07. C034 contested.
 states_v2_draft.csv: 98 states (12 splits from tier-B and C hard cuts), 0 gaps/overlaps, DRAFT_UNVALIDATED. v1 states untouched. 79 reviewer-labelled hard cuts total = lower bound.
+## Checkpoint G update
+states_v2 boundary check: 97/97 boundaries (sparse montage rows) by reviewer_5 and reviewer_6 (transcripts confirmed: 20 image results each, own writes). 80 REAL_SHOT_CHANGE, 8 TRANSITION, 9 SPURIOUS (X002,X041,X042,X044,X052,X069,X088,X092,X095), 14 hidden_change flags. Orchestrator viewed X09,X14,X18 (15 boundaries): consistent.
+Caveats: cluster-start split placement can precede the true change (X088/C034: change ~f13355, split at f13348); X041/X042/X044 are fast zooms (camera move). Reviewer_6 chat tally was inconsistent; JSON used.
+Proposals in tables/v2_reconcile_proposals_unapplied.csv (NOT applied). states_v2_draft.csv unchanged.
 ## Next exact operation
-1) Independent check of states_v2 (sample of boundaries both sides: view frames at each V boundary); 2) bounded intra-state review of remaining bursts (82 unreviewed) now relative to v2; 3) provisional ASR; 4) independent semantic check; 5) then mNLNb-Z4T0M. Verify EVIDENCE_SHA256SUMS_checkpoint_F first.
+1) Resolve proposals: for each SPURIOUS and hidden_change boundary view dense frames (native-frame windows) and decide; fix split frames for multi-frame-cluster entries; build states_v3 (originals immutable); 2) bounded review of the 82 unreviewed bursts relative to v3; 3) provisional ASR; 4) independent semantic check; 5) then mNLNb-Z4T0M. Verify EVIDENCE_SHA256SUMS_checkpoint_G first.

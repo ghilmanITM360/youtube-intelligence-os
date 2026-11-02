@@ -93,5 +93,47 @@
   },
   "hard_cut_total_reviewed": "72 (A/B) + 7 (C) = 79 reviewer-labelled HARD_CUT; still a lower bound: recall of second detector unmeasured, cuts between two colour-heavy full-frame scenes with little ink change and slow dissolves can still be missed",
   "definitional_note": "On white-card content, 'shot' vs 'object/graphic swap on a continuing white card' is ambiguous; reviewer verdicts are one reading, not ground truth"
+ },
+ "states_v2_boundary_review": {
+  "scope": "all 97 boundaries, one sparse montage row each (midL,endL,startR,midR); reviewer_5 X001-X050, reviewer_6 X051-X097; transcripts: 20 image results each, own writes",
+  "tally": {
+   "TRANSITION": 8,
+   "SPURIOUS": 9,
+   "REAL_SHOT_CHANGE": 80
+  },
+  "spurious": [
+   "X002",
+   "X041",
+   "X042",
+   "X044",
+   "X052",
+   "X069",
+   "X088",
+   "X092",
+   "X095"
+  ],
+  "hidden_change": [
+   "X001",
+   "X004",
+   "X017",
+   "X041",
+   "X046",
+   "X059",
+   "X068",
+   "X069",
+   "X074",
+   "X080",
+   "X087",
+   "X088",
+   "X090",
+   "X097"
+  ],
+  "orchestrator_viewed": "X09 (X041-X045), X14 (X066-X070), X18 (X086-X090): 15 of 97 boundaries, all consistent with reviewers",
+  "finding_boundary_placement": "v2 splits from multi-frame second-detector clusters were placed at cluster start, which may precede the visible change (X088: C034 split at f13348 sits on an unchanged '3000' card; crowd appears ~f13355). Boundaries entered via multi-frame clusters: X035,X088",
+  "finding_zoom": "X041/X042/X044 (A033/A034 entries) show fast zoom on the same figure: reviewer SPURIOUS, orchestrator agrees (camera move, not shot change)",
+  "reviewer_6_chat_tally_note": "reviewer_6's chat summary tally was internally inconsistent; JSON tallies used (REAL 38/TRANS 4/SPUR 5 for X051-X097)",
+  "proposals": "tables/v2_reconcile_proposals_unapplied.csv",
+  "applied": false,
+  "limits": "sparse 4-frame rows; transitions and hidden changes may be missed or mislocated; not native-frame review"
  }
 }

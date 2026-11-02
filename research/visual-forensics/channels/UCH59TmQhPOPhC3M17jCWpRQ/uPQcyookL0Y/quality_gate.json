@@ -1,6 +1,6 @@
 {
  "video_id": "uPQcyookL0Y",
- "verdict": "PARTIAL - NOT CT_SCAN_COMPLETE (checkpoint F)",
+ "verdict": "PARTIAL - NOT CT_SCAN_COMPLETE (checkpoint G)",
  "gates": {
   "source_hash_equals_registry": "PASS",
   "source_bytes": "PASS 48986292",
@@ -9,14 +9,15 @@
   "pts_cfr_unique_monotonic": "PASS (14646 deltas all 1001 ticks)",
   "full_timeline_measured": "PASS",
   "state_gap_overlap_check_structural": "PASS 0/0 on states_machine.csv, states_reconciled_v1.csv, states_v2_draft.csv",
-  "state_semantic_validation": "FAIL_NOT_DONE (13 states flagged for reconcile; merges not decided)",
+  "state_semantic_validation": "FAIL_NOT_DONE (v2 has 9 spurious boundaries and 14 hidden-change flags unresolved)",
   "candidate_review_complete": "PASS_SPARSE 85/85 montage-level; not native-frame review; 2 UNCLEAR (A051,B005)",
   "intra_state_motion_scan": "DONE_DETECTOR 165 candidates; 31/113 bursts reviewed (sparse, stratified); 8 viewed by orchestrator",
   "identity_vs_youtube_content": "NOT_VERIFIED (filename ID + hash + duration within 0.22s only)",
   "audio_listening": "UNAVAILABLE",
   "asr_transcript": "NOT_RUN",
   "independent_semantic_check_of_reviewer": "PARTIAL: orchestrator viewed montages M01 (A001-A005), M09 (B005-B008), N01 (A037-A041), N03 (A047-A051) in full; reviewer rows there were consistent. Not a full independent re-review (35 of 85 rows seen by orchestrator at most).",
-  "cut_detector_recall": "PARTIAL: second detector found 7 further reviewer-labelled HARD_CUTs (2 genuinely new to all lists + 5 new); recall still unmeasured; threshold tuned in-sample"
+  "cut_detector_recall": "PARTIAL: second detector found 7 further reviewer-labelled HARD_CUTs (2 genuinely new to all lists + 5 new); recall still unmeasured; threshold tuned in-sample",
+  "states_v2_boundaries_checked": "PARTIAL: 97/97 sparse-montage reviewed (80 real, 8 transition, 9 spurious, 14 hidden-change flags); 15 viewed by orchestrator; boundary frame placement not verified; no v3 built"
  },
  "kit": {
   "zip": "~/Downloads/YIOS_Visual_Forensics_Intelligence_Kit_v1.0.zip",
