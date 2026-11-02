@@ -196,3 +196,17 @@ NICK_273–274 accepted on Machine A branch, parent `ca099ca3`: 550 complete / 1
 NICK_275–276 accepted on Machine A branch, parent `0c5eb6e0`: 552 complete / 1,060 remaining.
 
 NICK_277–278 accepted on Machine A branch, parent `175b79ca`: 554 complete / 1,058 remaining.
+
+## OWNER_DIRECTED_TAKEOVER — 2026-11-02
+
+**State: `OWNER_DIRECTED_TAKEOVER`** (temporary, task/session-scoped; supersedes the historical 2026-10-31 Machine A assignment; not a permanent sole-writer rule). Both machines remain authorized read/write workers.
+
+- Basis: explicit owner directive in chat. No outgoing release receipt exists and none is claimed. The other machine's processes, scheduler and local lock were **not inspected** and are not asserted.
+- Host/user/root: `Users-MacBook-Pro.local` / `ghilmanislam360` / `/Users/ghilmanislam360/Documents/youtube-intelligence-os`.
+- Competing-writer check (2026-11-02T07:21Z): origin Finance heads unchanged on fetch (canonical `223f4498`, Machine A `9c6f42fb`); newest Machine A commit 2026-11-01T20:02Z (about 11 h idle); no other Finance branch or PR #36 movement. No active competing writer evidenced.
+- Integrated: canonical `223f4498` fast-forwarded through Machine A `9c6f42fb` (554 accepted, last `NICK_278`) plus repair `cd2160f9`. Next eligible: `pTyMmSZ2EVs` as `NICK_279`.
+- Hashes (sha256, computed locally from retrieved files): `VIDEO_AUDIT_966.jsonl` `8319c6e7d8807e7de5d34192636b6ffd72201f6ded63eb4c10082b30a14cea36`; `EXPANSION_AUDIT_LEDGER.jsonl` `9e19befdcb2da5109289d7df0ed43fb7991063c3c8bdb46f1ed07383d40ef506`; `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` `5523e782fd87ad0c98fad5ef7e61e1b5b87cbe3e9b5128239981ecaac62bbf50`.
+- Validation: full suite 462 passed / 1 skipped; Finance 50 passed; `validate_dataset_ledgers.py` clean. Hosted CI remains billing-blocked.
+- Preserved: all accepted IDs, NICK_260 correction, frozen `FINANCE_UNIVERSE.csv`, pinned DS-000028/30 `.gitattributes` rows, limited-evidence labels.
+- CT006 (`xtqbRt94TTw`): Checkpoint B evidence not found on this machine; recorded as `EVIDENCE_UNAVAILABLE_ON_THIS_MACHINE`. Nothing reconstructed. Visual Forensics is not touched by this takeover.
+- Handoff: a portable handoff is published after each validated batch so either machine can resume.
