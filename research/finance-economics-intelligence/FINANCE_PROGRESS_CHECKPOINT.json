@@ -1,12 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-11-02T08:13:20.241202+00:00",
+ "as_of_utc": "2026-11-02T08:18:51.783396+00:00",
  "status": "OWNER_DIRECTED_TAKEOVER_ACTIVE_PENDING_PUBLICATION_VERIFY",
  "writer": "OWNER_DIRECTED_TAKEOVER_ghilmanislam360",
  "branch": "research/finance-economics-intelligence",
  "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "note": "NICK_281 commit contains this checkpoint; verify its SHA on origin/research/finance-economics-intelligence and PR #36 head."
+  "note": "NICK_282 commit contains this checkpoint; verify its SHA on origin/research/finance-economics-intelligence and PR #36 head."
  },
  "batches": [
   {
@@ -852,23 +852,27 @@
    "original_pending": 409,
    "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
+  },
+  {
+   "nicks": [
+    "NICK_282"
+   ],
+   "machine": "ghilmanislam360",
+   "branch": "research/finance-economics-intelligence",
+   "parent": "ed6b76d7",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 1,
+   "blocked": 0,
+   "completed": 558,
+   "remaining": 1054,
+   "original_pending": 408,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 3,
+ "session_accepted": 4,
  "session_blocked": 0,
  "packets": [
-  {
-   "nick": "NICK_280",
-   "video_id": "pmfPNdWGzdo",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 17518,
-   "claim_groups": 15,
-   "primary_source_receipts": 4,
-   "calculation_receipts": 2,
-   "packet_sha256": "fad6ba9963840c564aac10abb0759b2a938f2f2f441d6df2d381766de0ceb433",
-   "read_receipts_sha256": "1e44339cb00f3919f8b0e337de41ea81f73e7e6a825602d0a2ddef9bd8fd448e",
-   "validation_sha256": "5db84da9f6bd9a42d4ff64ce987d327561e5ac69b92cbf93b3d7d9e44ab1615e"
-  },
   {
    "nick": "NICK_281",
    "video_id": "poD3PDHgAiE",
@@ -880,30 +884,42 @@
    "packet_sha256": "bd8ac24e5ae54baf9e2bab46ab441029bdd46725f22f0de188cdb8f7cc357e86",
    "read_receipts_sha256": "0612b21b3ba2079f21cb13f29329c371e6b348c8ef534447e05236333bf1fda9",
    "validation_sha256": "c3f3be43e938ae2f5741be7ed38a11dc83d005e5123f3628d578b7b46cb4be83"
+  },
+  {
+   "nick": "NICK_282",
+   "video_id": "pqJLxRMlZkc",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18265,
+   "claim_groups": 16,
+   "primary_source_receipts": 3,
+   "calculation_receipts": 2,
+   "packet_sha256": "f6c8c3a9aba5ab50700e1500cad8c3f571f1ef2994406a915e7fbaeb41b2efbb",
+   "read_receipts_sha256": "c7001f30e2d8570cdbe3b51861bfca09a7a2651e6ba44c8dc02e735e98ca5601",
+   "validation_sha256": "1b22f6d04f4d546553f58b8d8ca0046732e62309ca9a6cbf89c588d740868323"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 557,
-  "remaining": 1055,
+  "completed": 558,
+  "remaining": 1054,
   "original_total": 966,
-  "original_pending": 409,
+  "original_pending": 408,
   "expansion_total": 646,
   "expansion_pending": 646
  },
  "coverage": {
-  "full_stored_text_characters": 2051206,
-  "claim_groups": 1567,
-  "primary_source_receipt_rows": 275,
+  "full_stored_text_characters": 2069471,
+  "claim_groups": 1583,
+  "primary_source_receipt_rows": 278,
   "source_independence": "Receipt rows include disclosed legitimate reuse;not263independentsources",
-  "calculation_receipts": 204,
-  "authentic_thumbnails_native_and_mobile": 100
+  "calculation_receipts": 206,
+  "authentic_thumbnails_native_and_mobile": 101
  },
  "synchronization": {
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "6675f30ff7b60597a777daca53c878ad4696cbed55c6696483722a773f1e517e",
+  "workbook_sha256": "ee0c3228dc0874141986339f2d27c592b2ad1e806c6e41b8a9d5c8927f1ff44c",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -923,14 +939,14 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "6bcc807bf9f1c3a4c3336a85da24d162fb915aacb470faca535887f85319903c",
-  "VIDEO_AUDIT_966.csv": "b3e9c4daad35a040ca47405be11335e7f1b08dbeb7dc8f64c04c1d134fd05302",
-  "VIDEO_COMPLETION_MATRIX.csv": "7a7b63d96a6cca1919ac2f75eae95c05ee98a4001e7f929454a168588c474880",
-  "THUMBNAIL_ANALYSIS_966.csv": "2057290c797e3566157be40729a74dcbdcd4d4d0beffcac3787d0d896b93e544",
-  "SCRIPT_ANALYSIS_966.csv": "3e3a937c0ec63ec7e65e1eec0bb9dbce8d55b4857c1555bd15d28793bbc29909",
-  "TITLE_ANALYSIS_966.csv": "f3467c6ba837678693ad9775ecbef0639e1ca2656dd082488407be35997603fe",
-  "TOPIC_ANALYSIS_966.csv": "f30f4fef3b2ad8788b73addbe7cd5fcede276cce21d9753f92af6d29cde1962d",
-  "VIRALITY_INTELLIGENCE_966.csv": "1a22cf840175706795a07073f1abdb070c483dac46fc97018af60f8a6458ea35"
+  "VIDEO_AUDIT_966.jsonl": "0f7f679a6d68b339717f098c890f1b797126b071013f595fec72c22f31bbe09b",
+  "VIDEO_AUDIT_966.csv": "8b7850a3690fdf047c0c2e6c621b3e88882f164fb72fa6a820cbb0bf3154d246",
+  "VIDEO_COMPLETION_MATRIX.csv": "3a4212bb4d9ff01b6c5d673eef67e46cd823804b789396324539f296ead7cb04",
+  "THUMBNAIL_ANALYSIS_966.csv": "b12283269fad47bc224247e4c50cafc1286536ad84b6b88abfe68bac21fe03a3",
+  "SCRIPT_ANALYSIS_966.csv": "45ea7b42731d5602686f7c74ff3db6d02cb420b7487471e38b0c2152e4bc12a6",
+  "TITLE_ANALYSIS_966.csv": "2f4487b4db78e79ec95b0bfa891e32f1816d0fcbaa7647361cfe89647d302a02",
+  "TOPIC_ANALYSIS_966.csv": "9264fa50f9c64bff888cda51ec508095c0da7a068d9d10d36dd4a540e4ce46f9",
+  "VIRALITY_INTELLIGENCE_966.csv": "f888dcb16f4ecc43ead144aa0666b246b5ca41bbcfb5510bb09ae8c61f5782e5"
  },
  "resources": {
   "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
@@ -941,8 +957,8 @@
   "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_282",
-  "video_id": "pqJLxRMlZkc",
+  "nick": "NICK_283",
+  "video_id": "pu7UaN3FemE",
   "title": "READ_LIVE_QUEUE_AT_RESUME"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",

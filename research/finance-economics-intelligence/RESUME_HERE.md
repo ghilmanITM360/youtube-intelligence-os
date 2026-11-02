@@ -1,3 +1,9 @@
+# Owner-directed takeover checkpoint — NICK_282 (2026-11-02)
+
+**Parent `ed6b76d7`.** 558/1,612 complete; next `NICK_283 pu7UaN3FemE` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, reference-comparison validator OK, workbook rebuilt (558 deep-audited, 1,054 pending; changed cells not measured). Usage UNKNOWN.
+
+- **NICK_282 `pqJLxRMlZkc` — Shocking Finance Stats Of The Average Person.** 1.39970× TYPICAL (5-peer 1.371×, stable; about 60 days old); 16 claims; reference-comparison annex `NICK_282_REFERENCE_COMPARISON.json`. FRED inspected: card rate 22.15% (May 2026) matches 'around 22%'. Contradicted: the opening example ('average income just under $1.5 million' is $1,045,000 from its own inputs; leaving drops it $995,000, not $1.5 million); '$770 a month for 40 years at 8% = $2.4 million' matches annual deposits ($2.39M), monthly deposits give $2.69M; median home price $427,000 does not match FRED MSPUS ($408,500 Q1, $413,500 Q2 2026, new homes); 77% payable after 2032 is 78% in 2026 Trustees secondary reports. Verified: minimum-payment split, 4% of $44,115 = $147/month, 5.1 price-to-income, 5.51 mean/median net-worth ratio. Recall or secondary only: Vanguard $44,000/$167,000, SHED 37%, NY Fed $18.8T, student-loan 90+ day flow, SCF net worth, 401k default rates, wealth shares. Persona stories (Desmond, Renata, Gerald) are not data. Thumbnail inspected natively and at 320x180; calculator '0.0674' has no script counterpart.
+
 # Owner-directed takeover checkpoint — NICK_281 (2026-11-02)
 
 **Parent `c708df8e`** (reference-framework commit on canonical). 557/1,612 complete; next `NICK_282 pqJLxRMlZkc` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, reference-comparison validator OK, workbook rebuilt (557 deep-audited, 1,055 pending; changed cells not measured). Usage UNKNOWN.
