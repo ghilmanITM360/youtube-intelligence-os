@@ -1,12 +1,12 @@
 {
  "schema_version": 1,
- "as_of_utc": "2026-11-01T20:02:04.930884+00:00",
- "status": "MACHINE_A_BRANCH_PUBLISHED_PENDING_PR36_RECONCILIATION",
- "writer": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED",
- "branch": "codex/finance-machine-a-owner-directed",
+ "as_of_utc": "2026-11-02T07:31:05.325650+00:00",
+ "status": "OWNER_DIRECTED_TAKEOVER_ACTIVE_PENDING_PUBLICATION_VERIFY",
+ "writer": "OWNER_DIRECTED_TAKEOVER_ghilmanislam360",
+ "branch": "research/finance-economics-intelligence",
  "published_research_commit": "CONTAINING_COMMIT_VERIFY_LIVE",
  "publication_verification": {
-  "note": "NICK_278 commit contains this checkpoint; verify its SHA on origin/codex/finance-machine-a-owner-directed. PR #36 is not updated by this branch."
+  "note": "NICK_279 commit contains this checkpoint; verify its SHA on origin/research/finance-economics-intelligence and PR #36 head."
  },
  "batches": [
   {
@@ -804,47 +804,27 @@
    "original_pending": 412,
    "expansion_pending": 646,
    "remote_and_pr_verified": "PENDING_AT_WRITE"
+  },
+  {
+   "nicks": [
+    "NICK_279"
+   ],
+   "machine": "ghilmanislam360",
+   "branch": "research/finance-economics-intelligence",
+   "parent": "7ce92a90",
+   "commit": "CONTAINING_COMMIT_VERIFY_LIVE",
+   "accepted": 1,
+   "blocked": 0,
+   "completed": 555,
+   "remaining": 1057,
+   "original_pending": 411,
+   "expansion_pending": 646,
+   "remote_and_pr_verified": "PENDING_AT_WRITE"
   }
  ],
- "session_accepted": 8,
+ "session_accepted": 1,
  "session_blocked": 0,
  "packets": [
-  {
-   "nick": "NICK_275",
-   "video_id": "ofJ8nZG87fA",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 20425,
-   "claim_groups": 8,
-   "primary_source_receipts": 2,
-   "calculation_receipts": 2,
-   "packet_sha256": "b3e06b1a0ee39b2d3717411181228b49f13a48baf31895c4770a5350046d7b69",
-   "read_receipts_sha256": "70fd6f03191b44309f58a4457d07934d818ba4417b1d89a3b9f0e3f0be0edb7b",
-   "validation_sha256": "2bb9471808a786c08040e1cfc5652fba3fd4a248e40d602617ac3add0fbb6630"
-  },
-  {
-   "nick": "NICK_276",
-   "video_id": "ohQxPH0-adw",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 19758,
-   "claim_groups": 10,
-   "primary_source_receipts": 2,
-   "calculation_receipts": 2,
-   "packet_sha256": "632180c85aa1f6c5a64db362e79ff6fe8d21d4493c6791b0b11c7933fc19895b",
-   "read_receipts_sha256": "ad486267c863d924bde1404b878524c8a560ecaa0537c64575a5b3c30d1b4a07",
-   "validation_sha256": "57e82cb2bdcfa767e947565cf273e5465d107a6babd0f38129374ee1eb4f745f"
-  },
-  {
-   "nick": "NICK_277",
-   "video_id": "ozcH8vngH08",
-   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
-   "transcript_characters": 20215,
-   "claim_groups": 7,
-   "primary_source_receipts": 1,
-   "calculation_receipts": 2,
-   "packet_sha256": "84e2c94d9620a8f12f53f8114fd4db448d8f4b846e9bcdb74fd3f84dc461094a",
-   "read_receipts_sha256": "7f00a2937534f1b1681e9d071fb438f4f0ad1bcf220784355eec3f4916b0547b",
-   "validation_sha256": "1584f1bb91dddcdbeedd296c73c9cb182b75bbaf531a289eee0b69e623b2221c"
-  },
   {
    "nick": "NICK_278",
    "video_id": "pFs8QGikczo",
@@ -856,30 +836,42 @@
    "packet_sha256": "74877e4eee649f2bbfbf790ab5fa76598678d48b0bdbb3fd75893ac95385047c",
    "read_receipts_sha256": "6c282e9d8e9f57d3af4527595b94164e346561fda316e27ef424e3a898aa0a58",
    "validation_sha256": "dc05112d36dd41a8c85cd8df873f86d15f700975017dede321eae3cef9bc3c7d"
+  },
+  {
+   "nick": "NICK_279",
+   "video_id": "pTyMmSZ2EVs",
+   "all_six_statuses": "COMPLETE_LIMITED_EVIDENCE",
+   "transcript_characters": 18486,
+   "claim_groups": 15,
+   "primary_source_receipts": 3,
+   "calculation_receipts": 2,
+   "packet_sha256": "e251ed4b1030e9b011cf070cb2ae48d3fad97963c1ff78a085bf5bc47aa8beaa",
+   "read_receipts_sha256": "218f596e2c94d096def9c30398187fb32a2cba57d65bb6ab6b935fe07a38c04f",
+   "validation_sha256": "9851a673bbc58a63a62f86e27119c14bdd93e398f7b296e54a31041de1edbfb2"
   }
  ],
  "population": {
   "total": 1612,
-  "completed": 554,
-  "remaining": 1058,
+  "completed": 555,
+  "remaining": 1057,
   "original_total": 966,
-  "original_pending": 412,
+  "original_pending": 411,
   "expansion_total": 646,
   "expansion_pending": 646
  },
  "coverage": {
-  "full_stored_text_characters": 1998001,
-  "claim_groups": 1520,
-  "primary_source_receipt_rows": 263,
+  "full_stored_text_characters": 2016487,
+  "claim_groups": 1535,
+  "primary_source_receipt_rows": 266,
   "source_independence": "Receipt rows include disclosed legitimate reuse;not263independentsources",
-  "calculation_receipts": 198,
-  "authentic_thumbnails_native_and_mobile": 97
+  "calculation_receipts": 200,
+  "authentic_thumbnails_native_and_mobile": 98
  },
  "synchronization": {
   "jsonl": "PASS",
   "csv_projections": 7,
   "workbook": "PASS",
-  "workbook_sha256": "5523e782fd87ad0c98fad5ef7e61e1b5b87cbe3e9b5128239981ecaac62bbf50",
+  "workbook_sha256": "2164f5c84c63f1ba7736b24080a54495452a7a0d24250df28568ea7a6326fece",
   "workbook_sheets": 4,
   "unique_workbook_ids": 1612,
   "detailed_json_projections": 8694,
@@ -899,14 +891,14 @@
   "hosted_test_steps_executed": 0
  },
  "hashes": {
-  "VIDEO_AUDIT_966.jsonl": "8319c6e7d8807e7de5d34192636b6ffd72201f6ded63eb4c10082b30a14cea36",
-  "VIDEO_AUDIT_966.csv": "5c09d738d56e9ff1089e09fec0f0aea037be1722368d7d75a8c91cf346646d53",
-  "VIDEO_COMPLETION_MATRIX.csv": "9fe783503f0a7b5444cd48160364a3d3efbd7571cc6955ed99b9af1714dbeae3",
-  "THUMBNAIL_ANALYSIS_966.csv": "4b06f07072b66aee7f2d6bd35373e234ed3152e33259503b8fa1d16353691a85",
-  "SCRIPT_ANALYSIS_966.csv": "d33c870b53979ee6528b4f7e35d70c7a7d7c8501a891efa113de25e5428c1e4b",
-  "TITLE_ANALYSIS_966.csv": "513befc5cbde3042492e8505f4b4191efbd7a04d7023810824047ec270dd9106",
-  "TOPIC_ANALYSIS_966.csv": "fc885576a73af2f6d0f7b64e79fd14c76d5b2ff9fd12911083bc79f30321129f",
-  "VIRALITY_INTELLIGENCE_966.csv": "6cc221b86ab799cb0ee4ba1b0ff183ac32b32046a1cd18f760fda85b8e5853b6"
+  "VIDEO_AUDIT_966.jsonl": "94b7c2d9f3674ecdb9a7d700ffc51349a16ffbdbd693abf8979f78f15d2ec08d",
+  "VIDEO_AUDIT_966.csv": "6ad08f563860fe3dcede054eb95f86fd8d591af89fadc92a8e4bdc1d3aba532e",
+  "VIDEO_COMPLETION_MATRIX.csv": "f496e0938b95ac80dcd1a683832ae9f394a167c4d753b862d47a3d96f7bc7fa2",
+  "THUMBNAIL_ANALYSIS_966.csv": "048603608e2805a0a0fa00a9e3415af7d9c6b0319509789fe25512831bdde212",
+  "SCRIPT_ANALYSIS_966.csv": "747b20d4a9eabb6d4976df1f829f833c8896a3cf6a5ae7b4acd11154ba96890f",
+  "TITLE_ANALYSIS_966.csv": "00b3da8c335731b05a01ad596602a8f8d9366c1d2b19b93a417c43a5de44507c",
+  "TOPIC_ANALYSIS_966.csv": "addcb5929becb1e92e5e6a681fa7f3415ac0a92d35a6c47cbe8ee29ba3f3ceb3",
+  "VIRALITY_INTELLIGENCE_966.csv": "3a726130aaad25f6dbbbccbfd028edf9fd2f79a9fa9653c5980739a9185c9ee7"
  },
  "resources": {
   "five_hour_used_percent": "UNKNOWN_NOT_READABLE_FROM_SESSION",
@@ -917,9 +909,9 @@
   "pending_work": "NONE_AFTER_PUSH"
  },
  "next": {
-  "nick": "NICK_279",
-  "video_id": "pTyMmSZ2EVs",
-  "title": "You Can't Afford a House. Good."
+  "nick": "NICK_280",
+  "video_id": "pmfPNdWGzdo",
+  "title": "READ_LIVE_QUEUE_AT_RESUME"
  },
  "continuation": "Resumewithfreshcontextandstrictlivepreflight.Sameownerauthorizationcoversordinaryeligiblebatches.Noagentpromisestokeepoperatingaftersessionstops.",
  "stop_reason": "IN_SESSION",
@@ -930,11 +922,11 @@
   "free_disk_gib_rounded": 46
  },
  "main_checkout": "Machine A canonical checkout untouched on codex/casually-finance-knowledge-navigation; Finance work in linked worktree /Users/ghilmankhan/workprojects/yios-finance-machine-a",
- "writer_provenance": "Owner directed Machine A execution on 2026-10-31 without a Machine B release. MACHINE_B_RELEASE_VERIFIED and MACHINE_B_HAS_NO_UNPUBLISHED_WORK are NOT established. Machine B history is preserved unchanged.",
+ "writer_provenance": "OWNER_DIRECTED_TAKEOVER on ghilmanislam360 (2026-11-02); no outgoing release receipt; other machine processes/scheduler not inspected. Machine A branch 9c6f42fb integrated by fast-forward; repair cd2160f9 preserved. Machine B history preserved.",
  "canonical_baseline": {
   "branch": "research/finance-economics-intelligence",
   "commit": "223f44981ee174988574e86d5e23ae83ee60ee5d",
   "pr36": "OPEN_DRAFT_UNMODIFIED_BY_MACHINE_A"
  },
- "_session_marker": "machine-a-finance-eb009ac7"
+ "_session_marker": "takeover-ghilmanislam360-2026-11-02"
 }

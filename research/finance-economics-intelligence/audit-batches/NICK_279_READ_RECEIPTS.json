@@ -1,0 +1,260 @@
+{
+ "batch_id": "NICK_279_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "pTyMmSZ2EVs",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "e98c5886c199e7dd51cbfdedee4bf6916f597475caadb78e600158fc4fc256ae",
+   "character_count": 18486,
+   "canonical_utf8_bytes": 18486,
+   "canonical_whitespace_word_count": 3109,
+   "coverage_token_count": 3176,
+   "read_character_ranges": [
+    [
+     0,
+     9300
+    ],
+    [
+     9300,
+     18486
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "Your coworker just bought a house. Um, you know this because they won't stop tal",
+   "last_text_witness": "s on a house that owns them more than they own it. Real wealth is being able to say no to things that look like opportunities but calculate out as traps. You just learned how to say no. Now go use it.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 9300,
+     "first80": "Your coworker just bought a house. Um,\nyou know this because they won't stop\ntal",
+     "last80": "ouse as\ncollateral. You haven't won. You've just\nunlocked a new way to owe money"
+    },
+    {
+     "start": 9300,
+     "end": 18486,
+     "first80": ". The\nreal question nobody wants to ask is\nthis. If buying a house is such an\nob",
+     "last80": "ities but calculate out as\ntraps. You just learned how to say no.\nNow go use it."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "218_pTyMmSZ2EVs_You_Cant_Afford_a_House_Good.txt",
+   "archive_member_sha256": "7976ac2e3e7ec26aff91007eb6edcd25756e58da12912af0cf09d1d00d430674",
+   "archive_member_bytes": 20479,
+   "archive_member_lines": 528,
+   "audio_verified": false,
+   "image_sha256": "e816b19448cd23452a215666b1c1e841ed088319fe288805389f382bc8142b58",
+   "image_bytes": 111317,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/pTyMmSZ2EVs/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/pTyMmSZ2EVs/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-02"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "FREDMORT",
+   "url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED MORTGAGE30US, fredgraph.csv; SHA-256 580c7d824e6dce4a3d4fa92ed9954df512c6da63992b073c1fafccc88886fa8d",
+   "finding": "2026-01-08 6.16%; 2026-01-15 6.06%; 2026-01-22 6.09%.",
+   "limitations": "Freddie Mac PMMS weekly average; conforming 30-year fixed, not the borrower rate.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDINC",
+   "url": "https://fred.stlouisfed.org/series/MEHOINUSA646N",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED MEHOINUSA646N, fredgraph.csv; SHA-256 2052185cf05506b963bfe3aaee5dbbc1783e1518b144b74ecd85058b43de4bfc",
+   "finding": "2024 $83,160; 2025-01-01 row $87,460 (current-vintage); 1995 $34,080.",
+   "limitations": "Median household income, nominal; annual Census series.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDMSP",
+   "url": "https://fred.stlouisfed.org/series/MSPUS",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED MSPUS, fredgraph.csv; SHA-256 a9f5886d44aeb6f0bbb14d823b1c2b397e8fb7775fb47b6dfd4c67073fdbea32",
+   "finding": "1995 $130,000; 2024 $426,800; 2025-Q4 $412,300.",
+   "limitations": "Median sales price of houses sold (new and existing), not an affordability measure.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 60178,
+    "age_days": 230.5258,
+    "views_per_day": 261.0467027985588,
+    "peer_median_10": 132.84913545037693,
+    "peer_median_5": 114.29996538579786,
+    "peer_ratio_10": 1.9649860867635636,
+    "peer_ratio_5": 2.283873856981891,
+    "tier_10": "TYPICAL",
+    "tier_5": "STRONG",
+    "peer_ids_10": [
+     "4pnSNmGTGkk",
+     "ZO5VUGD1a84",
+     "Ea9L3t6X2Iw",
+     "KxaodYxKO6s",
+     "_uFxmNBZYzE",
+     "dxLjgAe3Q0M",
+     "T3HINW7Nv14",
+     "mkcfkfPhW1U",
+     "vdMkNfJYqLI",
+     "kZW4JQj_igg"
+    ],
+    "peer_ids_5": [
+     "4pnSNmGTGkk",
+     "ZO5VUGD1a84",
+     "Ea9L3t6X2Iw",
+     "KxaodYxKO6s",
+     "_uFxmNBZYzE"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "4pnSNmGTGkk",
+      "Title": "Why  \"Normal\"  People Are Going Broke in 2026 (The Harsh Truth)",
+      "Views": "43858",
+      "Age_days": "229.5499",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "ZO5VUGD1a84",
+      "Title": "The \"Shadow Portfolio\": How To Get Rich At Work",
+      "Views": "90292",
+      "Age_days": "228.5652",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "Ea9L3t6X2Iw",
+      "Title": "Why Everything Changes When You Get Rid Of Financial Stress",
+      "Views": "26582",
+      "Age_days": "232.5635",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "KxaodYxKO6s",
+      "Title": "The \"Gap\" Strategy: How to Widen the Space Between Income and Expenses",
+      "Views": "20392",
+      "Age_days": "227.5724",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "_uFxmNBZYzE",
+      "Title": "The Financial \"Bulk & Cut\" Strategy - Which Phase Are You In?",
+      "Views": "20260",
+      "Age_days": "233.5714",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "dxLjgAe3Q0M",
+      "Title": "The 3 \"Silent\" Fees Destroying Your Wealth (Not Taxes)",
+      "Views": "17781",
+      "Age_days": "234.5009",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "T3HINW7Nv14",
+      "Title": "The REAL Cost of Being Average in America",
+      "Views": "34297",
+      "Age_days": "226.5349",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "mkcfkfPhW1U",
+      "Title": "The \"Pavement Princess\" Trap (And Why You're Broke)",
+      "Views": "152384",
+      "Age_days": "225.5678",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "vdMkNfJYqLI",
+      "Title": "The 3 Passive Income Milestones That Change Everything",
+      "Views": "50500",
+      "Age_days": "235.5626",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "kZW4JQj_igg",
+      "Title": "The Invisible Prison: How Money Traps You Without You Even Realizing It",
+      "Views": "18897",
+      "Age_days": "224.5376",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     }
+    ]
+   },
+   "limitations": "Same-channel peers only; exposure-confounded; no impressions, traffic sources or CTR."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Closed-form amortisation and future-value arithmetic; FRED price/income ratios",
+   "results": {
+    "payment_350k_7pct_30y": 2328.56,
+    "month1_interest": 2041.67,
+    "month1_principal": 286.89,
+    "year1_interest": 24387.0,
+    "five_year_interest": 119174.0,
+    "five_year_principal": 20539.0,
+    "total_interest_30y": 488281.0,
+    "fv_2000_month_7pct_30y": 2439942,
+    "house_400k_3pct_30y": 970905,
+    "fv_50k_10pct_30y": 872470,
+    "fv_500_month_10pct_30y": 1130244,
+    "fv_6000_year_10pct_30y": 986964,
+    "house_500k_3pct_30y": 1213631,
+    "interest_425k_7pct_30y": 592913,
+    "johnson_expenses": 8250,
+    "johnson_left": 2750,
+    "price_to_income_1995": 3.81,
+    "price_to_income_2024": 5.13,
+    "income_multiple_180k": 2.16
+   },
+   "limitations": "Monthly compounding at nominal rate/12; pre-tax; no selling costs, tax benefits or rent growth."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification. Three FRED series directly inspected; property-tax, insurance, PMI, foreclosure-timing and S&P 10% figures are analyst recall; \"80%\" and 30-year-loan reasoning SOURCE_UNAVAILABLE. No paid purchases."
+}

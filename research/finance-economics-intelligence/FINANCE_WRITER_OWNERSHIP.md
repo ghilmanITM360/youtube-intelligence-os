@@ -210,3 +210,5 @@ NICK_277–278 accepted on Machine A branch, parent `175b79ca`: 554 complete / 1
 - Preserved: all accepted IDs, NICK_260 correction, frozen `FINANCE_UNIVERSE.csv`, pinned DS-000028/30 `.gitattributes` rows, limited-evidence labels.
 - CT006 (`xtqbRt94TTw`): Checkpoint B evidence not found on this machine; recorded as `EVIDENCE_UNAVAILABLE_ON_THIS_MACHINE`. Nothing reconstructed. Visual Forensics is not touched by this takeover.
 - Handoff: a portable handoff is published after each validated batch so either machine can resume.
+
+NICK_279 accepted under OWNER_DIRECTED_TAKEOVER, parent `7ce92a90`: 555 complete / 1,057 remaining.

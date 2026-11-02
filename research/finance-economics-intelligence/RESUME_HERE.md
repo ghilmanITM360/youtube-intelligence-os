@@ -1,3 +1,9 @@
+# Owner-directed takeover checkpoint — NICK_279 (2026-11-02)
+
+**Parent `7ce92a90`** (takeover entry on canonical; integrated Machine A `9c6f42fb` + repair `cd2160f9`). 555/1,612 complete; next `NICK_280 pmfPNdWGzdo` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, workbook rebuilt (555 deep-audited, 1,057 pending; changed cells not measured). Usage UNKNOWN.
+
+- **NICK_279 `pTyMmSZ2EVs` — You Can't Afford a House. Good.** 1.96499× TYPICAL on 10 peers but 5-peer 2.284× STRONG, so the tier is unstable; 15 claims. FRED inspected: MORTGAGE30US 6.06-6.16% in Jan 2026 (video assumes 7%); median household income 2024 $83,160 ($180K = 2.16x); price-to-income 3.8x (1995) to 5.1x (2024). Recomputed: payment $2,328.56 and 30-year interest $488,281 correct; $2,000/month at 7% = $2.44M; $50K at 10% = $872K; $500/month at 10% = $1.13M. Wrong or unsupported: Johnsons 5-year interest is $119,174 not $80,000 (equity $70.5K flat, $134K with 3% appreciation, so "negative return" is false); month-1 principal $287 not $330; $150K maintenance matches neither flat ($120K) nor appreciating ($190K); renting saving $500/month contradicts the earlier $2,000; "2x vs 6x income" and "80%" unsupported; foreclosure timing is recall. Thumbnail inspected natively and at 320x180.
+
 # Machine A owner-directed checkpoint — NICK_277–278 (2026-11-02)
 
 **Parent `175b79ca`.** PR #36 / canonical branch still `223f4498`, untouched. 554/1,612 complete; next `NICK_279 pTyMmSZ2EVs`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 549–550), 0 styles/formulas, 16 hashtag text cells, zip OK. Usage UNKNOWN.
