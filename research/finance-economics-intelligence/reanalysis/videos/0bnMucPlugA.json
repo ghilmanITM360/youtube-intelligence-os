@@ -1,0 +1,672 @@
+{
+ "video_id": "0bnMucPlugA",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "925c8d0fe6dc46b759f06e92e64c82b9f24ff7bdf0632c17cc40eef7124d3b16",
+ "original_packets": [
+  "NICK_003.json"
+ ],
+ "transcript_chars_read": 18787,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 57,
+    "text": "You're staring at your bank account on a\nWednesday night."
+   },
+   "judgment": "MET",
+   "rationale": "A second-person scene with a specific unease (\"never quite as much left as there should be\"), then a contrarian snap (\"almost none of it is your fault\") and a $246 billion stat inside ~1,100 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1289,
+    "end_char": 1347,
+    "text": "10\nconcepts, the real rules of the game\nfinally explained."
+   },
+   "judgment": "MET",
+   "rationale": "Names the format (10 concepts) and the promise at ~1,290 characters; the character (Sarah, 28, $65,000, $4,000) is introduced immediately, so the intro doubles as setup.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Smiling cartoon man in a navy suit and bow tie pointing a ruler at a green chalkboard with four coloured coin icons (dollar, rising dollar chart, bank, rising chart); bold black EASY TO UNDERSTAND with a curved arrow"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The classroom frame matches \"school didn't teach you\" and the teaching tone, but the thumbnail states \"easy to understand\" (the format), not a stake or a number, and the opening is an anxiety scene rather than a classroom.",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-INTRO-03",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.6 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1169,
+    "end_char": 1248,
+    "text": "Nobody's checking\nchlorophyll levels at 32, but\neverybody's getting a mortgage."
+   },
+   "judgment": "MET",
+   "rationale": "The intro spends ~1,200 characters on why the topic matters and ends on a joke that restates the stake; slightly long before the first concept (~1,700).",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1348,
+    "end_char": 1390,
+    "text": "Meet Sarah, she's 28,\nmakes $65,000 a year"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The cold open promises \"that feeling has a name and it has a cause\" (~270) and \"almost none of it is your fault\"; the name is never given and the recap says only \"why her money was melting\", so the opening loop is not paid as framed.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-01",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.3 s.1 ChatGPT",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Explaining Basic Financial Concepts School Didn't Teach You"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The 59-character title puts the generic \"Explaining Basic Financial Concepts\" first; the distinctive \"School Didn't Teach You\" begins at about character 36 and is cut mid-word at 55; the number of concepts (10) is not in the title.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Explaining Basic Financial Concepts School Didn't Teach You"
+   },
+   "judgment": "MET",
+   "rationale": "A broad-promise explainer matching a ten-concept video; the curiosity is \"what did school skip\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Explaining Basic Financial Concepts School Didn't Teach You"
+   },
+   "judgment": "MET",
+   "rationale": "Nothing is overpromised: the ten concepts are delivered, and the recap restates them.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Explaining Basic Financial Concepts School Didn't Teach You"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title opens a \"which concepts\" loop that is closed progressively; no single concealed question holds the viewer beyond list completion.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-01",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 1",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 224,
+    "end_char": 275,
+    "text": "there's never\nquite as much left as there should be"
+   },
+   "judgment": "MET",
+   "rationale": "The pain point (treading water with no explanation) is explicit and relatable.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-VC-02",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18224,
+    "end_char": 18270,
+    "text": "Pick one thing from this video and do it\ntoday"
+   },
+   "judgment": "MET",
+   "rationale": "A tangible, small outcome: open a high-yield savings account, set up $50 automatic investing, check the credit report.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2095,
+    "end_char": 2182,
+    "text": "Leaving money in a checking account is\nlike leaving an ice cube on the kitchen\ncounter."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The contrarian angle is that \"cash feels safe but is melting\" (inflation) and that the system hides its rules, but most of the ten concepts are standard personal-finance advice.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1879,
+    "end_char": 1930,
+    "text": "Since 2020,\ncumulative inflation has run about 25%."
+   },
+   "judgment": "MET",
+   "rationale": "FRED CPIAUCSL: 2020 average 258.86 against January 2026 326.59 is +26.2%, close to \"about 25%\"; the video then applies the all-items rate to \"$100 of groceries\", which is a different index.",
+   "uncertainty": "FRED series fetched this session."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4131,
+    "end_char": 4163,
+    "text": "By 65, she\nhas roughly $480,000."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$200 a month at 8% from 28 to 65 is $543,000 with monthly compounding and $488,000 with annual contributions; her colleague from 38 is $228,000 or $212,000. The video's $480,000 and $220,000 fit the annual convention only approximately; the gap conclusion holds either way.",
+   "uncertainty": "Arithmetic recomputed; the convention is not stated."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4599,
+    "end_char": 4684,
+    "text": "it takes over 14 years\nto pay it off. And she'll pay nearly\n$6,500\nin interest alone."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "At 22% on $6,500, a 1% of balance-plus-interest minimum takes 21 years and about $10,800 of interest; a 2% minimum takes 12.5 years and $5,600. The stated 14 years and $6,500 sit between the two and cannot be reproduced from one stated minimum formula.",
+   "uncertainty": "Simulation under two assumed minimum-payment rules."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6627,
+    "end_char": 6676,
+    "text": "Her actual tax bill works out to roughly\n$11,500."
+   },
+   "judgment": "MET",
+   "rationale": "$90,000 less a $15,000 deduction is $75,000; 2025 single brackets give $11,414, which is 12.7% of gross and 15.2% of taxable income, matching \"13 to 15%\"; the $5,000 raise keeps $3,900 at the 22% rate.",
+   "uncertainty": "Arithmetic recomputed; federal income tax only, no payroll or state tax."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6843,
+    "end_char": 6900,
+    "text": "you will never ever\ntake home less money by earning more."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "True of federal income-tax brackets, but not of benefit cliffs: the ACA subsidy cliff at 400% of the poverty level (described by the same channel in `0Ca3uV6lgos` and `0J8MtFWsWY8`) and some credit phase-outs do reduce net resources when income rises. The absolute is stronger than the evidence.",
+   "uncertainty": "Cross-reference to other records in this campaign; no new data."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7820,
+    "end_char": 7917,
+    "text": "That's $400 a month difference. Over 30\nyears, that's nearly $145,000\nin extra interest payments."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$300,000 at 6.5% is $1,896 and at 8.5% is $2,307: $411 a month and $147,800 over 360 payments; \"nearly $145,000\" is about $3,000 low, which is within rounding of \"$400\".",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8502,
+    "end_char": 8613,
+    "text": "one in five Americans has an\noutright error on their credit report\nright now silently dragging their score\ndown"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The FTC finding behind \"one in five\" is that one in five consumers had at least one error; only a small minority of errors were material to the score, so \"dragging their score down\" overstates the figure. The 41% and 27% survey figures were not re-verified.",
+   "uncertainty": "FTC study recalled by the analyst; not re-read."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11896,
+    "end_char": 11958,
+    "text": "$200 a month invested at 8% over 30\nyears is roughly $293,000."
+   },
+   "judgment": "MET",
+   "rationale": "Monthly compounding gives $298,072; \"roughly $293,000\" is 1.7% low, which is acceptable rounding. The \"$150 gap\" between a $200-300 actual and an $80 guess is $120-$220, so $150 is a mid-value.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15172,
+    "end_char": 15243,
+    "text": "$200 plus $300 plus $150\ninvested at 8% over 25 years is over\n$600,000."
+   },
+   "judgment": "MET",
+   "rationale": "$650 a month for 25 years at 8% is $618,000.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2942,
+    "end_char": 2987,
+    "text": "where you\ncan currently earn 4 to 5% annually"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The repository's own record has the policy rate cut to 3.50-3.75% by December 2025, so \"currently 4 to 5%\" in February 2026 looks high for most accounts; no savings-rate series was checked and the judgment is partial.",
+   "uncertainty": "Repository record of Fed cuts; no savings-rate series fetched."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17381,
+    "end_char": 17439,
+    "text": "Sarah\nstarted this video with $4,000 in a\nchecking account"
+   },
+   "judgment": "MET",
+   "rationale": "A single character threads ten concepts in a deliberate order (inflation, compounding, tax, credit, debt, emergency fund, opportunity cost, investing, lifestyle inflation, insurance) and returns to her in the recap.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3215,
+    "end_char": 3318,
+    "text": "But there's\na bigger opportunity she's still\nmissing. And bigger trap she might\nalready be standing in."
+   },
+   "judgment": "MET",
+   "rationale": "Clear mini-hooks between concepts (the compounding bridge from savings to debt; the raise-refusal tease at the tax section) pay off immediately.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "EASY TO UNDERSTAND with a chalkboard of four coin icons"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script is simple and illustrated, but the thumbnail icons (four) do not map to the ten concepts and the promise is a style, not a list.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4362,
+    "end_char": 4390,
+    "text": "Now,\nflip the snowball over."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Only some handoffs are causal (savings to compounding to debt compounding; raise to lifestyle inflation); the other concepts start fresh (\"Every year, real people turn down raises\", \"There's a number following Sarah around\", \"One Thursday morning\", \"Every dollar you spend has two price tags\", \"Insurance. Not exciting\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18530,
+    "end_char": 18579,
+    "text": "If this changed how you see any of it,\nsubscribe."
+   },
+   "judgment": "MET",
+   "rationale": "A single like-free ask at the very end (~18,570), after the value, plus a share ask; no mid-video interruptions.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5327,
+    "end_char": 5367,
+    "text": "Every year, real people turn down\nraises"
+   },
+   "judgment": "MET",
+   "rationale": "The raise-refusal tease sets a loop paid within ~1,500 characters; the close does not call it back (it recaps lifestyle inflation).",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4362,
+    "end_char": 4390,
+    "text": "Now,\nflip the snowball over."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The compounding-to-debt turn is a genuine BUT; most other concept changes are AND-THEN transitions (next concept) rather than complications.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2942,
+    "end_char": 2987,
+    "text": "where you\ncan currently earn 4 to 5% annually"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Timeliness is limited to \"currently\" rates; the topic is evergreen.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2471,
+    "end_char": 2570,
+    "text": "Hey, which means money sitting in\nchecking loses 2 to 3% of its purchasing\npower every single year."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "About 18,800 characters over ten concepts with an ASR-visible \"Hey,\" interjection and a recap of ~600 characters that repeats each concept; efficient per concept (about 1,700 characters each), padded by the recap.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-03",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #3",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-BT-01.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-04",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #4",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-SCR-03.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18077,
+    "end_char": 18142,
+    "text": "That's not a list of concepts,\nthat's the entire operating manual"
+   },
+   "judgment": "MET",
+   "rationale": "The throughline is \"the system has hidden rules; learning them stops the leak\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  },
+  {
+   "rule_id": "FR-16C-07",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3129,
+    "end_char": 3208,
+    "text": "Sarah just opened\na high-yield savings account and feels\npretty smart about it."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The compounding-to-debt bridge opens the next concept before the previous action is dropped, but most concepts do not end by opening the next one.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15819,
+    "end_char": 15843,
+    "text": "Insurance is a seatbelt."
+   },
+   "judgment": "MET",
+   "rationale": "Plain-language images (ice cube, snowball, buckets, seatbelt, circuit breaker) carry every concept.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17381,
+    "end_char": 17486,
+    "text": "Sarah\nstarted this video with $4,000 in a\nchecking account and a vague sense she\nwas probably doing okay."
+   },
+   "judgment": "MET",
+   "rationale": "The close returns to the opening checking-account image and Sarah; the recap contains a transcription slip (\"why an emergency fund is an optional\", presumably \"not optional\").",
+   "uncertainty": "Transcript slip noted; audio is unavailable."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 913,
+    "end_char": 981,
+    "text": "Financial\nilliteracy costs Americans $246 billion\ndollars every year"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Financial\" is first spoken at ~914 (\"Financial illiteracy\") and \"concepts\" at ~1,292 (\"10 concepts\"), both after the first 30 seconds.",
+   "uncertainty": "No search or trends data."
+  }
+ ],
+ "title": "Explaining Basic Financial Concepts School Didn't Teach You",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. A broad evergreen beginner topic with high competition.",
+  "2_differentiated_angle": "Single-character ten-concept thread and \"the system hides its rules\" framing; the individual concepts are conventional.",
+  "3_title": "Descriptive; \"school didn't teach you\" is the hook.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, 145,804 bytes) and persisted in thumbnail-evidence: cartoon teacher in a bow tie, chalkboard with four coin icons, bold EASY TO UNDERSTAND with an arrow; legible at 320 px; two-colour hierarchy; the promise is a style (easy), not a stake.",
+  "5_opening": "Anxiety scene to $246B stat to Sarah; strong.",
+  "6_loops": "Mini-hooks between concepts; the raise-refusal tease.",
+  "7_spine": "Ten concepts through one character; the recap is clean, but Sarah's income and savings change between sections.",
+  "8_repetition_clarity": "The recap repeats; analogies are fresh per concept.",
+  "9_emotion_credibility": "Confident and specific; reduced by the unconditional \"never take home less\", the credit-error overstatement and an unstated compounding convention.",
+  "10_ending_cta": "One concrete action, then subscribe and share.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "Financial illiteracy costs Americans $246 billion a year, \"nearly a thousand dollars per person\"",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Division only was computed: $734 per resident (335M) and $939 per adult (262M). The $246B figure and population inputs are unsourced here."
+  },
+  {
+   "claim": "Cumulative inflation since 2020 about 25%; $100 of groceries is $125",
+   "kind": "PRIMARY_DATA_FETCHED_THIS_SESSION",
+   "result": "FRED CPIAUCSL: 2020 average 258.86; Jan 2026 326.59; +26.2% on all items. The groceries claim uses all-items CPI."
+  },
+  {
+   "claim": "$10,000 in checking for a decade at 2-3% inflation loses \"about $2,500\"; the bank pays \"roughly 10 bucks\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Real loss $1,797 (2%), $2,188 (2.5%), $2,559 (3%); at 0.01% the bank pays $1 a year or $10 over ten years."
+  },
+  {
+   "claim": "$200 a month at 8%: from 28 to 65 about $480,000; from 38 about $220,000",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Monthly: $543,280 and $228,276. End-of-year annual contributions: $487,369 and $209,642. The video's $480,000/$220,000 sit near the annual convention while its later $293,000 and $618,000 use monthly compounding, so conventions are mixed. Gap conclusion holds."
+  },
+  {
+   "claim": "$6,500 at 22%: minimum payments take over 14 years and about $6,500 of interest; debt doubles in about 3 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Schedules use \"% of balance plus interest\": 1%: 21.4 years, $10,850; 1.75%: 13.8 years, $6,367 (close to the video); 2%: 12.5 years, $5,600. The video's 14 years and $6,500 fit a roughly 1.75% rule that is not stated. Doubling time at 22% is 3.5 years annually and 3.15 years monthly, consistent with \"about 3\"."
+  },
+  {
+   "claim": "Single filer $90,000 less $15,000: tax about $11,500; effective 13-15%; $5,000 raise keeps $3,900",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$11,414; 12.7% of gross and 15.2% of taxable; 22% marginal gives $1,100 tax and $3,900 kept (federal only)."
+  },
+  {
+   "claim": "$300,000 mortgage: 6.5% about $1,900 and 8.5% about $2,300; \"nearly $145,000\" extra interest",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1,896 and $2,307; difference $411 a month; $147,793 over 30 years."
+  },
+  {
+   "claim": "$1,400 repair at 22% over 4 years costs about $2,200",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "A level payment over 48 months totals $2,117. Under \"% of balance plus interest\" minimums: 1% takes 8.7 years and costs $2,900; 2% 6.2 years and $2,329; 3% 4.9 years and $2,078; $2,200 over 4 years corresponds to a minimum of about 3.5%, so the video's figure is plausible."
+  },
+  {
+   "claim": "$200 a month at 8% for 30 years about $293,000; $650 a month for 25 years over $600,000",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$298,072; $618,167."
+  },
+  {
+   "claim": "Buffett wealth after 50; 59% cannot cover $1,000; 41% and 27% credit myths; term life $20-30; appendectomy $35,000; credit score weights 35/30/15",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified this session; the score-weight split is the widely published FICO breakdown."
+  }
+ ],
+ "strengths": [
+  "Single character gives a clean spine and a natural recap.",
+  "Most arithmetic reproduces (tax, mortgage, compounding).",
+  "One well-placed call to action after delivering value."
+ ],
+ "weaknesses": [
+  "Unconditional \"never take home less money\" is false at benefit cliffs.",
+  "Credit-card payoff figures are not reproducible from a stated minimum rule.",
+  "Thumbnail states a style, not a stake or the number of concepts.",
+  "A promised 401(k) tax-lowering follow-up is never delivered; the character's numbers change between sections."
+ ],
+ "contradictions": [
+  "\"You will never ever take home less money by earning more\" versus the ACA cliff described in the same channel's other videos.",
+  "\"Almost none of it is your fault\" versus ten concepts of individual action.",
+  "$480,000 / $220,000 against $543,000 / $228,000 under monthly compounding.",
+  "\"pre-tax 401k ... which we'll come back to shortly\" is never revisited as a tax-bracket tool.",
+  "Sarah's income is $65,000, then $90,000 in the tax example, then $80,000 after the promotion; she has $4,000 in checking yet \"doesn't have $1,400 in savings\"."
+ ],
+ "improvement_opportunities": [
+  "Retitle with the count and stake: \"10 Money Rules School Skipped (They Cost You $246 Billion)\".",
+  "Change the thumbnail text to a number from the script (\"$246B\") or the count (\"10 RULES\") and use ten small icons or a \"1-10\" strip.",
+  "State the compounding convention on screen and use the monthly figures ($543K versus $228K).",
+  "Add \"except at benefit cliffs\" to the tax-bracket claim and reference the ACA cliff as the exception.",
+  "Show the minimum-payment rule used for the credit card example and the resulting schedule."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Primary sources for $246 billion, FTC credit-error study, KFF and AAA documents"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "WEAK",
+  "lifetime_rate_ratio": "0.32143",
+  "age_days": "195.1394",
+  "views_likes_comments_snapshot": {
+   "views": 8648,
+   "likes": 310,
+   "comments": 46,
+   "published_at": "2026-02-27 20:39:15"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.20312",
+   "tier": "WEAK",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the single-character spine or the classroom thumbnail affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed; no external-source checks by the reviewer",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "FR-INTRO-04, FR-SCR-04 and FR-16C-07 changed from MET to PARTLY_MET",
+    "title and SEO positions corrected (title is 59 characters; \"financial\" first at ~914)",
+    "credit-card and compounding checks restated with the stated minimum-payment and annual/monthly conventions",
+    "$246B split into division (computed) and source (unsourced)",
+    "unsupported \"3.5-4.2%\" savings-yield claim removed",
+    "added the unpaid 401(k) promise and character-income inconsistencies"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

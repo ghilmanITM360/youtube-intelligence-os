@@ -1,0 +1,671 @@
+{
+ "video_id": "0Ca3uV6lgos",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "ca211190652e16ee00acbbd210d60bcb9425b1c8b8f234f68739774503bd9403",
+ "original_packets": [
+  "NICK_003.json"
+ ],
+ "transcript_chars_read": 17520,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 99,
+    "text": "Every strategy to retire early works,\nall of them, which is exactly why almost\nnobody pulls it off."
+   },
+   "judgment": "MET",
+   "rationale": "A paradoxical opening sentence, then a second-person scene (the phone calculator at night, \"annual spending times 25\") that names the viewer's private ritual; the contrarian snap is that the strategies work and still fail.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 524,
+    "end_char": 585,
+    "text": "today we're going\nthrough every strategy for hitting it\nearly"
+   },
+   "judgment": "MET",
+   "rationale": "Clear promise (every strategy, plus one equation underneath) and an emotional frame; the character teaser (Dealia, Wendell, \"the hardest part has nothing to do with the market\") is a strong narrative setup. \"My name is Nick\" at ~500 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Cartoon man with both hands on his cheeks and a wide-eyed, open-mouth smile beside bold RETIRE NOW!? with a curved black arrow pointing at six circular FIRE icons (Traditional, Coast, Barista, Fat, Real Estate, Expat FIRE)"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title \"every strategy\" and a six-icon menu match the opening promise; but \"Traditional FIRE\" and \"Expat FIRE\" are never named in the script (Lean, Chubby, Flamingo, Slow and geoarbitrage are), and \"RETIRE NOW!?\" reads as an immediate-retirement promise the video argues against.",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-INTRO-03",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.6 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 694,
+    "end_char": 748,
+    "text": "Underneath it all, one equation\nin different costumes."
+   },
+   "judgment": "MET",
+   "rationale": "The intro states the unifying idea in one line and returns to it; the character names are introduced before they are needed, three names (Nick, Dealia, Wendell) within the first 900 characters, Roman only at ~4,100.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 914,
+    "end_char": 1002,
+    "text": "one of\nthem is about to learn the hardest part\nof this has nothing to do with the\nmarket"
+   },
+   "judgment": "MET",
+   "rationale": "The teaser is a real payoff later (health-insurance cliff at ~8,900 characters) so there is no early anticlimax.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-01",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.3 s.1 ChatGPT",
+   "witness": {
+    "kind": "TITLE",
+    "text": "EVERY Strategy to Retire Early Explained"
+   },
+   "judgment": "MET",
+   "rationale": "Entire 40-character title is inside the first 55 characters.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "EVERY Strategy to Retire Early Explained"
+   },
+   "judgment": "MET",
+   "rationale": "A broad-promise explainer matching a list-of-strategies video; the curiosity is in \"EVERY\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "EVERY Strategy to Retire Early Explained"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Every\" is not met literally (no Traditional or Expat FIRE, no Rule of 55, no Social Security bridge); the video also argues no strategy is a personality, so it delivers less a catalogue than a critique.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 587,
+    "end_char": 693,
+    "text": "Lean, fat, coast, barista,\ngeoarbitrage, real estate, and a\ngovernment loophole almost nobody knows\nabout."
+   },
+   "judgment": "MET",
+   "rationale": "The list loop and the \"government loophole\" loop are both paid (457(b) at ~8,300 characters).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-01",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 1",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 258,
+    "end_char": 338,
+    "text": "Annual spending\ntimes 25, then you looked at it for 4\nseconds and closed the app"
+   },
+   "judgment": "MET",
+   "rationale": "A specific pain point (the 25x number feels impossible) with a shared behaviour.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-VC-02",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16654,
+    "end_char": 16683,
+    "text": "run your\ncoast number tonight"
+   },
+   "judgment": "MET",
+   "rationale": "A tangible, small action: take the 60-year target, divide by 1.07 to the years remaining, \"4 minutes\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14346,
+    "end_char": 14402,
+    "text": "a\ndistribution problem wearing a personal\nvirtue costume"
+   },
+   "judgment": "MET",
+   "rationale": "The central contrarian claim (savings rate is convex in income, so FIRE is mostly a distribution fact) is argued with the Delia/Roman pairing.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2967,
+    "end_char": 3029,
+    "text": "Saving every remaining dollar at 7% she\ngets there in 33 years"
+   },
+   "judgment": "MET",
+   "rationale": "$635 a month at 7% (monthly compounding) to $965,000 takes 32.8 years; $38,580 a year (3,215 x 12) matches \"about 38,600\", and 25 x $38,600 is $965,000. Compounding is nominal 7% against a 25x spending target in constant dollars, which the video itself flags (\"that 5% real return is doing unpaid labor\").",
+   "uncertainty": "Arithmetic recomputed; real versus nominal not reconciled in the script."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6411,
+    "end_char": 6442,
+    "text": "which pulls\n33 years down to 22"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Raising savings to $1,100 a month at 7% reaches $965,000 in 25.9 years, not 22; lowering the target with the $350 rent cut (25 x $34,400 = $860,000) gives about 24.6 years; 22 years would need about $1,545 a month for $965,000 or $1,377 a month for $860,000. A reduced target that also treats the state-tax saving as spending is not supported (the budget lines contain no tax).",
+   "uncertainty": "Arithmetic recomputed; state tax saving not given."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4700,
+    "end_char": 4792,
+    "text": "Get that invested by 30, never add\nanother dollar, and you've got a million\nand a half at 60"
+   },
+   "judgment": "MET",
+   "rationale": "$1.5M / 1.07^30 = $197,051 (factor 7.612), as stated.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1749,
+    "end_char": 1818,
+    "text": "At 5% real\nreturns, save 10% of your take home and\nyou work 51 years."
+   },
+   "judgment": "MET",
+   "rationale": "At 5% real, 25x spending: saving 10% takes 51.4 years, 50% takes 16.6, 75% takes 7.1; the video's 51, 17 and 7 are right (continuous-saving form of the Mr. Money Mustache table).",
+   "uncertainty": "Arithmetic recomputed; attribution to the 2012 table is recall."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13974,
+    "end_char": 14033,
+    "text": "He saves seven\ntimes what she does on four times the\nincome"
+   },
+   "judgment": "MET",
+   "rationale": "Roman: $12,900 x 12 = $154,800 less $100,000 spending leaves $54,800 (35.4%), about 7.2x Delia's $7,620 a year (16.5%); income ratio 240,000/61,000 = 3.9. The 84% is 3,215/3,850 = 83.5%.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12849,
+    "end_char": 12898,
+    "text": "That's an implied savings rate around\n6%, not 50."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "1 - 78,500/83,700 = 6.2%, but it divides average spending by median income, and BLS total expenditures exclude income taxes (analyst recall), so the base is not like-for-like.",
+   "uncertainty": "Arithmetic recomputed; BLS and Census definitions not re-read."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10963,
+    "end_char": 11036,
+    "text": "Retire at 40 and you're planning for 50,\nso your number has to come down."
+   },
+   "judgment": "MET",
+   "rationale": "The 30-year Bengen window (worst case 4.15%) and longer horizons need lower withdrawal rates; Morningstar's 2026 base case is 3.9% (search-result summaries). Bengen's own 4.7% revision and Kitces, 21-country and 9x-ending claims were not located.",
+   "uncertainty": "Secondary summaries for Morningstar only; other figures analyst recall."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9802,
+    "end_char": 9890,
+    "text": "A 60-year-old couple just over that line\nis looking at roughly 22,600\na year in premiums"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "KFF's projection is that a 60-year-old couple earning $85,000 (402% of poverty) would see their premiums RISE by more than $22,600 in 2026; the video says \"in premiums\", which reads as the total. About four million losing coverage matches CBO's order of magnitude.",
+   "uncertainty": "KFF figure from search-result summaries, not the report."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12500,
+    "end_char": 12529,
+    "text": "market did roughly 13% a year"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "S&P 500 2010-2021 compounded about 12.9% a year on price alone but about 15.2% with dividends; \"roughly 13%\" is the price-only figure.",
+   "uncertainty": "Arithmetic from annual returns recalled by the analyst; not re-fetched."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12308,
+    "end_char": 12342,
+    "text": "Now, the honest center of all\nthis"
+   },
+   "judgment": "MET",
+   "rationale": "Setup (one equation), a worked kitchen table, a tour of strategies, the structural hurdles (penalty fence, insurance), the evidence critique (sequence risk, survivorship, 6% savings rate), the Delia/Roman reveal and a takeaway.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5483,
+    "end_char": 5571,
+    "text": "Hold\nthat thought because that window decides\nmore outcomes than your savings rate\ndoes."
+   },
+   "judgment": "MET",
+   "rationale": "Explicit open loop (the withdrawal window) paid ~6,200 characters later by sequence-of-returns; the Wendell loop is held ~8,000 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "RETIRE NOW!? with six FIRE-type icons"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The six-type menu is delivered for five of six ideas; \"Traditional\" is implicit in the 25x section, \"Expat\" only as international geoarbitrage.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10013,
+    "end_char": 10074,
+    "text": "Roth conversions\nraise your income. So does harvesting\ngains."
+   },
+   "judgment": "MET",
+   "rationale": "A tight cause-and-effect turn: the cliff makes the standard early-retirement techniques raise premiums, hence Wendell's $900.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10391,
+    "end_char": 10487,
+    "text": "I\nopened a school community where I break\ndown how to scale a faceless YouTube\nchannel from zero"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A like ask arrives at ~4,900 characters (mid-coast section), the school community is pitched twice (~10,400 and ~16,900) and a disclaimer closes; the ads sit at topic breaks but two pitches in a retirement-math video do not follow from the content.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14999,
+    "end_char": 15043,
+    "text": "the failure mode I promised\nyou at the start"
+   },
+   "judgment": "MET",
+   "rationale": "Layered gaps: the equation, the 635, the Wendell hook (paid ~8,300 characters later), and \"the failure mode I promised you at the start\" (~15,000); the final callback is only loosely matched by the opening (\"almost nobody pulls it off\", \"the hardest part ... nothing to do with the market\") and never names unspent wealth.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1871,
+    "end_char": 1960,
+    "text": "It's just\narithmetic. But that 5% real return is\ndoing an enormous amount of unpaid labor"
+   },
+   "judgment": "MET",
+   "rationale": "Repeated BUT turns (math works, BUT the return assumption; strategies work, BUT the 59.5 fence; rules work, BUT sequence), with THEREFORE steps to the Delia/Roman conclusion.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9523,
+    "end_char": 9554,
+    "text": "Those expired January 1st,\n2026"
+   },
+   "judgment": "MET",
+   "rationale": "The insurance cliff is a dated, current-event reason to watch now.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3802,
+    "end_char": 3827,
+    "text": "Fat FIRE\nis the opposite."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "About 17,500 characters; the strategy tour (lean, fat, chubby, coast, barista, flamingo, slow) is fast and tight, but the video has two community pitches, a like ask mid-section and several repeated reminders of the 635 anchor that add length without new information.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-03",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #3",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-BT-01.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-04",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #4",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-SCR-03.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17224,
+    "end_char": 17286,
+    "text": "every strategy to\nretire early is the same strategy\nunderneath"
+   },
+   "judgment": "MET",
+   "rationale": "One question (\"what are the two numbers in the equation\") holds the video.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  },
+  {
+   "rule_id": "FR-16C-07",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11341,
+    "end_char": 11382,
+    "text": "Meanwhile, Morningstar just put it at\n3.9"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "New loops are opened (sequence risk, the window) before old ones close, but two \"this is the most important sentence/thing in this video\" claims conflict (~4,800 and ~15,400).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8117,
+    "end_char": 8200,
+    "text": "Early retirement stops being a\nsavings problem here and becomes a\nplumbing problem."
+   },
+   "judgment": "MET",
+   "rationale": "Rule 72(t), Roth ladder and direct Roth contributions are explained as three pipes; one line on 72(t) (\"the penalty disappears at 50\") is garbled: the exception needs substantially equal payments for five years or to 59.5, whichever is longer.",
+   "uncertainty": "Regulatory description from analyst recall."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17450,
+    "end_char": 17520,
+    "text": "Don't optimize your way\ninto being the richest person in the\ncemetery."
+   },
+   "judgment": "MET",
+   "rationale": "The close returns to Delia, the closed calculator app and the coast-number action from the opening.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 36,
+    "text": "Every strategy to retire early works"
+   },
+   "judgment": "MET",
+   "rationale": "\"Retire early\" appears in the first sentence; \"strategy\" in the title keywords too.",
+   "uncertainty": "No search or trends data."
+  }
+ ],
+ "title": "EVERY Strategy to Retire Early Explained",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. FIRE/retire early is a large evergreen topic.",
+  "2_differentiated_angle": "One-equation unification, plus the argument that savings rate is convex in income, is the distinguishing view.",
+  "3_title": "\"EVERY ... Explained\" is a catalogue promise.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, 169,799 bytes) and persisted in thumbnail-evidence: cartoon figure with hands on cheeks, bold RETIRE NOW!? and six labelled FIRE icons in a 3x2 grid; text legible at 320 px but icon labels become illegible there.",
+  "5_opening": "Paradox sentence plus a nightly-ritual scene; strong.",
+  "6_loops": "Wendell loop and the withdrawal-window loop are explicit; the \"promised at the start\" callback overreaches.",
+  "7_spine": "Equation, worked example, strategy tour, structural barriers, evidence critique, character reveal.",
+  "8_repetition_clarity": "The 635 is a recurring anchor; the strategy tour is dense.",
+  "9_emotion_credibility": "Mostly calibrated and self-critical (survivorship, sequence risk); weakened by the \"22 years\" figure and the half-correct 72(t) line.",
+  "10_ending_cta": "One action (coast number), two community pitches and a disclaimer.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "Delia: $635 a month at 7% to $965,000 takes 33 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "32.8 years (monthly compounding); 33.8 with annual contributions. Budget lines sum to $3,215; leftover $635; 25 x $38,580 = $964,500."
+  },
+  {
+   "claim": "With rent cut $350 and no state income tax, $635 becomes $1,100 and 33 years becomes 22",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1,100 a month takes 25.9 years to $965,000 (24.6 if the target also falls to $860,000). 22 would need about $1,377-$1,545 a month."
+  },
+  {
+   "claim": "$1.5M at 60 from age 30 needs $197,000 at 7%",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "1.07^30 = 7.612; $197,051. Holds."
+  },
+  {
+   "claim": "Mr. Money Mustache table at 5% real: 10% saved is 51 years, 50% is 17, 75% is 7",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "51.4, 16.6, 7.1. Hold. The video says \"drop it to two and 17 years quietly becomes a lot more\": at 2% real, 50% saving takes 20.5 years."
+  },
+  {
+   "claim": "Lean: $25,000 needs $714,000 and $40,000 needs $1.14M at 3.5%; \"gap $400,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$714,286 and $1,142,857; the gap is $428,571. Delia is described as \"already there\" at $38,600, but her 25x number used 4%; at 3.5% it is $1.10M."
+  },
+  {
+   "claim": "Roman: $12,900 monthly take-home, $100,000 spending, \"4500 a month\" saved, 35%; saves seven times Delia on four times the income",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$54,800 saved (35.4%) = $4,567 a month; 7.2x Delia; income ratio 3.9. Hold."
+  },
+  {
+   "claim": "Median household income $83,700; average spending $78,500; implied savings rate about 6%",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "6.2%, but median income against mean spending is not a like-for-like base."
+  },
+  {
+   "claim": "Premium cliff: 60-year-old couple over 400% of poverty \"looking at roughly 22,600 a year in premiums\"; about 4 million lose coverage",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "KFF (30 September 2025, via search summaries) projected a premium increase of more than $22,600 for a 60-year-old couple at $85,000 (402% of poverty); the video's wording drops \"increase\"."
+  },
+  {
+   "claim": "Safe withdrawal: Bengen 4.15% (1994), Kitces 3.5% at 45 years, 21 countries 3-3.5%, Morningstar 3.9%, Bengen now 4.7%, 4% rule leaves more than double the start in two thirds of periods, 3.5% over 50 years ends at nine times half the time",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Only Morningstar's 3.9% (2026, 90% over 30 years) was located in search-result summaries; Bengen 4.15%/4.7%, Kitces, 21-country and nine-times figures are analyst recall."
+  },
+  {
+   "claim": "Market did roughly 13% a year in 2010-2021",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "About 12.9% (price) or 15.2% (total return), computed from annual S&P 500 returns recalled by the analyst, not re-fetched."
+  },
+  {
+   "claim": "Vanguard 2026 median 401(k) $44,115, average $167,970; Federal Reserve 46% of households have no retirement account; AARP 28% retired too early; 7% returned to work",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified here; the same Vanguard pair recurs in `0J8MtFWsWY8` from the same channel (not independent evidence)."
+  },
+  {
+   "claim": "\"Roman hits his coast number in two years. Delia needs 11\"; barista \"a 40% cut in withdrawals\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "No inputs are given for the 2 and 11 years (for Delia at 34 with $635 a month at 7%, a $197,000-style coast target takes about 10.6-13.3 years depending on the target age), so the figures cannot be audited; $15,000 of $40,000 is a 37.5% cut."
+  }
+ ],
+ "strengths": [
+  "Unifying equation and a genuinely clarifying kitchen-table example whose arithmetic mostly reproduces.",
+  "Self-critical evidence section (survivorship, sequence risk, 6% savings rate, unspent wealth).",
+  "A closing action that is small and measurable (the coast number)."
+ ],
+ "weaknesses": [
+  "The \"22 years\" geoarbitrage payoff is not reproduced.",
+  "Garbled 72(t) line and an unattributed \"$22,600\" total.",
+  "Thumbnail types and title \"every\" outrun the script.",
+  "Two community pitches inside a retirement-math video."
+ ],
+ "contradictions": [
+  "\"The one thing I'd want you to take\" (coast) versus \"the most important sentence in this video\" (nine times).",
+  "\"The failure mode I promised you at the start\" versus an opening that only loosely plants it (\"almost nobody pulls it off\") without naming unspent wealth.",
+  "25x spending at 4% versus lean FIRE costed at 3.5%.",
+  "\"RETIRE NOW!?\" versus the video's argument that this is mostly out of reach."
+ ],
+ "improvement_opportunities": [
+  "Fix the geoarbitrage payoff: show Delia's years at $1,100 a month (25.9) and, separately, with a lower target (24), in one on-screen table.",
+  "Name Traditional and Expat FIRE in the script or replace those two icons with Lean and Flamingo so the thumbnail matches the content.",
+  "State the 22,600 as the premium INCREASE (KFF, 60-year-old couple at 402% of poverty) and put the source on screen.",
+  "Replace \"the failure mode I promised you at the start\" with a real early plant (\"the way this fails is the opposite of what you expect\") so the callback pays.",
+  "Drop one of the two community pitches or move it after the closing action."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Primary Bengen, Kitces, Morningstar and KFF documents",
+  "Audio and screen visuals"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "0.70494",
+  "age_days": "44.1378",
+  "views_likes_comments_snapshot": {
+   "views": 4022,
+   "likes": 156,
+   "comments": 30,
+   "published_at": "2026-07-28"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.69212",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the character-led structure or the six-icon thumbnail affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed; no external-source checks by the reviewer",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "thumbnail description corrected (hands on cheeks, wide smile; the arrow points, not the man)",
+    "\"five names in 900 characters\" corrected to three",
+    "sequence-risk payoff distance corrected to ~6,200 characters",
+    "FR-SCR-06 witness moved to the \"promised at the start\" sentence; opening plant described as loose, not absent",
+    "22-year payoff shown to need $1,377-$1,545 a month; speculative $822,000 target scenario removed",
+    "Roman/Delia coast years recorded as unauditable; 37.5% noted",
+    "evidence labels for withdrawal-rate and 13% rows changed to recall"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}
