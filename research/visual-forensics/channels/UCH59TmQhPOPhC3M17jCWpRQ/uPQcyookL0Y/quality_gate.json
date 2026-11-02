@@ -1,6 +1,6 @@
 {
  "video_id": "uPQcyookL0Y",
- "verdict": "PARTIAL - NOT CT_SCAN_COMPLETE (checkpoint I)",
+ "verdict": "PARTIAL - NOT CT_SCAN_COMPLETE (checkpoint J)",
  "gates": {
   "source_hash_equals_registry": "PASS",
   "source_bytes": "PASS 48986292",
@@ -8,16 +8,19 @@
   "decoded_frames_equal_container_nb_frames": "PASS 14647",
   "pts_cfr_unique_monotonic": "PASS (14646 deltas all 1001 ticks)",
   "full_timeline_measured": "PASS",
-  "state_gap_overlap_check_structural": "PASS 0/0 on states_machine.csv, states_reconciled_v1.csv, states_v2_draft.csv",
-  "state_semantic_validation": "FAIL_NOT_DONE (v2 has 9 spurious boundaries and 14 hidden-change flags unresolved)",
-  "candidate_review_complete": "PASS_SPARSE 85/85 montage-level; not native-frame review; 2 UNCLEAR (A051,B005)",
-  "intra_state_motion_scan": "DONE_DETECTOR 165 candidates; 31/113 bursts reviewed (sparse, stratified); 8 viewed by orchestrator",
+  "state_gap_overlap_check_structural": "PASS 0/0 on states_machine, reconciled_v1, v2_draft, v3_draft (88) and v4_draft (89; script-asserted contiguous 0..14646)",
+  "state_semantic_validation": "FAIL_NOT_DONE (v4 draft, single-viewer downscaled reviews; no native-1080p review of any window; boundary onset frames of transitions not pinned, e.g. W047 entry <=f8438)",
+  "candidate_review_complete": "PASS_SPARSE 85/85 candidates; 113/113 bursts sparse + 4 UNCLEAR resolved dense; 52/52 onsets at 320px; 3 in-state candidates dense (480x270)",
+  "intra_state_motion_scan": "DONE_DETECTOR 165 candidates; ALL reviewed (113 bursts sparse, 52 onsets 6-tile 320px); not native-resolution",
   "identity_vs_youtube_content": "NOT_VERIFIED (filename ID + hash + duration within 0.22s only)",
-  "audio_listening": "UNAVAILABLE",
-  "asr_transcript": "NOT_RUN",
+  "audio_listening": "UNAVAILABLE - PENDING human listening (asr/LISTENING_BACKLOG.md)",
+  "asr_transcript": "PROVISIONAL_ASR_DONE (faster-whisper 1.2.1 small.en int8; ASR_UNCERTIFIED; not listening)",
   "independent_semantic_check_of_reviewer": "PARTIAL: orchestrator viewed montages M01 (A001-A005), M09 (B005-B008), N01 (A037-A041), N03 (A047-A051) in full; reviewer rows there were consistent. Not a full independent re-review (35 of 85 rows seen by orchestrator at most).",
   "cut_detector_recall": "PARTIAL: second detector found 7 further reviewer-labelled HARD_CUTs (2 genuinely new to all lists + 5 new); recall still unmeasured; threshold tuned in-sample",
-  "states_v2_boundaries_checked": "PARTIAL: 97/97 sparse-montage reviewed (80 real, 8 transition, 9 spurious, 14 hidden-change flags); 15 viewed by orchestrator; boundary frame placement not verified; no v3 built"
+  "states_v2_boundaries_checked": "PARTIAL: 97/97 sparse-montage reviewed (80 real, 8 transition, 9 spurious, 14 hidden-change flags); 15 viewed by orchestrator; boundary frame placement not verified; no v3 built",
+  "states_v3_dense_review": "DONE_SINGLE_REVIEWER: reviewers 9,10,11 (same-model fresh-context, transcripts audited) -> v4 corrections C01-C11 in tables/v4_corrections_and_annotations.csv; v1-v3 immutable",
+  "kit_references_read": "13 (completion gates), 04,05,06,07,09 read at checkpoint J; 01-03, 08, 10-12, 14 not individually read",
+  "kit_ledgers": "shot_ledger.csv, visual_event_ledger.csv, audio_visual_alignment.csv (ASR_ONLY_NOT_AUDIO_VERIFIED), visual_ct_scan_report.md, reconstruction_blueprint.md PRESENT as PARTIAL; per-state prompts NOT produced"
  },
  "kit": {
   "zip": "~/Downloads/YIOS_Visual_Forensics_Intelligence_Kit_v1.0.zip",
@@ -25,6 +28,6 @@
   "extracted": "~/Downloads/videos in mp3/YIOS_Visual_Forensics_Intelligence_Kit_v1.0",
   "validate_kit.py": "PASS (4 prompts hash-verified, 14 refs, 7 templates)",
   "installed_skill": "~/.claude/skills/visual-ct-scan - differs from kit SKILL.md (adapted copy, adds source-prompts/INVOCATION_EXAMPLES); kit workflow followed via references, no claim of byte-identical install",
-  "references_actually_read_in_this_session": "SKILL.md only (loaded via Skill tool); refs 01-14 NOT individually read -> kit-specific gate details beyond SKILL.md not applied"
+  "references_actually_read_in_this_session": "SKILL.md + refs 13,04,05,06,07,09 (checkpoint J); others not read"
  }
 }

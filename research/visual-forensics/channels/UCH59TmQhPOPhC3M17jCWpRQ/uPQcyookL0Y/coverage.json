@@ -168,5 +168,29 @@
   "finding": "All 4 HARD_CUT rows (seq 42 f969, 52 f2664, 111 f9664, 147 f13673) sit exactly on existing v3 state starts, so no new hard cut was found among the 82; seq42 and seq111 montages viewed by orchestrator and consistent. 4 UNCLEAR (seq22,125,129,140) left unresolved.",
   "status": "OBSERVED_sparse (4 frames per burst); now all 113 BURST detector candidates have a sparse review (31 earlier + 82). STILL_ONSET and MOTION_ONSET_AFTER_STILL (52) not reviewed.",
   "caveat": "Reviewer verdicts for 80 rows not individually spot-checked; only 2 of 4 HARD_CUT montages viewed by orchestrator."
+ },
+ "states_v4": {
+  "file": "tables/states_v4_draft.csv",
+  "states": 89,
+  "change": "W085 split at f13993 -> W085a/W085b",
+  "gaps": 0,
+  "overlaps": 0,
+  "status": "DRAFT_UNVALIDATED"
+ },
+ "review_scope_checkpoint_J": {
+  "reviewers": [
+   "reviewer_9 33 imgs",
+   "reviewer_10 13 imgs",
+   "reviewer_11 6 imgs"
+  ],
+  "resolution": "480x270 consecutive/step montages, 320x180 onset tiles; no native 1080p",
+  "independence": "same-model fresh-context subagents; not human/different-model",
+  "audio": "ASR provisional only; no listening"
+ },
+ "asr": {
+  "tool": "faster-whisper 1.2.1 / ctranslate2 4.8.5 / small.en int8",
+  "words": 1141,
+  "segments": 76,
+  "label": "PROVISIONAL_ASR_NOT_LISTENING"
  }
 }
