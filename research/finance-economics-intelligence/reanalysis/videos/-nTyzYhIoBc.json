@@ -1,0 +1,438 @@
+{
+ "video_id": "-nTyzYhIoBc",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "bbd4c981044028e7999531b79d3f3bb2bd71a29e7388f2742fc11c435aed99c0",
+ "original_packets": [
+  "LUCAS_001.json"
+ ],
+ "transcript_chars_read": 21712,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 53,
+    "text": "You could be the one who leases the 330i\nthis weekend"
+   },
+   "judgment": "MET",
+   "rationale": "A binary second-person choice (leased badge versus an unnamed $40 transfer) with a concrete $211.40 stake, inside the first ~400 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 249,
+    "end_char": 326,
+    "text": "a version of you who\nalready knows how to get rich without\nanyone catching on"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Emotion and setup are strong; the promise is implicit and the concrete scene starts early ($211.40 at about character 420, the aunt's porch at about 590).",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Cartoon man in a navy cap kneeling to coil a green garden hose beside a garage, a white BMW SUV driven by a sunglassed blonde woman with a CHANEL bag on the passenger seat; no title overlay (CHANEL and a licence plate are legible)"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The humble-versus-flashy contrast matches the opening, but the details differ from the script: the script has a leased 330i (a sedan), a Coach Tabby bag and a Tampa setting; the thumbnail has an X5-style SUV, a Chanel bag, a California-style plate and a hose-coiling chore not in the script; its flashy foil is a woman while the script's foil is the male cousin Danny.",
+   "uncertainty": "Expectation match is inferred; viewer reaction is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17725,
+    "end_char": 17802,
+    "text": "which two years ago would have sounded\nlike a number from someone else's life"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"How to Get Rich\" is delivered as a story ending in a $650,000 house and a rental share, but the salary and deposits that made it possible are never given (the $6,410 card debt is quantified but never paid down).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 20652,
+    "end_char": 20754,
+    "text": "a long string of Tuesdays nobody watched\nadding up to a life nobody would guess\nthat from the driveway"
+   },
+   "judgment": "MET",
+   "rationale": "The title's \"without anyone noticing\" is paid by the closing images (the Civic still in the driveway, the account no one sees).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Hose-coiling man beside a white BMW SUV and a CHANEL bag"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The theme is delivered; the specific props are not in the script.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13638,
+    "end_char": 13657,
+    "text": "What\nyou don't post"
+   },
+   "judgment": "MET",
+   "rationale": "Clear act structure with spoken section cards (\"The number you finally look at\", \"The math you run in silence\", \"What you don't post\", \"The house on nobody's radar\"; also \"The weight of looking rich\" and \"The Tuesdays nobody watched\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10160,
+    "end_char": 10241,
+    "text": "Three\nweeks later, the growth stops mattering\nbecause something else breaks first"
+   },
+   "judgment": "MET",
+   "rationale": "Explicit chapter-end teases (the hand-off \"You just can't see it from here. Three weeks later...\" leads into the water heater) pull the viewer into the next act; the sell-button tension is paid in the same scene.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3603,
+    "end_char": 3646,
+    "text": "Not to\nspend anything, just to finally look"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The balance reveal is planted and paid, but the final outcomes (the $650,000 house, the LLC share) are not previewed or layered.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13541,
+    "end_char": 13567,
+    "text": "you notice you didn't\nsell"
+   },
+   "judgment": "MET",
+   "rationale": "BUT/THEREFORE turns carry the scenes: the $4,000 raise BUT the temptation listings, THEREFORE the 401k bump; the water heater BUT the emergency fund, THEREFORE no sale.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17002,
+    "end_char": 17077,
+    "text": "The account\nclimbing back past where it was, then\npast where it's ever been"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Causes are local and clear, but the jump from a $11,200 brokerage balance and $211 checking to a $650,000 house and a second rental property has no stated income, deposit or timeline.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4014,
+    "end_char": 4020,
+    "text": "$6,410"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The $6,410 card balance at \"almost 24%\" is shown as \"a hand around your ankle\" and then never paid down; the story builds a Roth, a 401k at 15% and an $11,200 brokerage account while carrying a guaranteed 24% cost (about $1,540 a year of interest), against a long-run average market return the script mentions without a figure (about 10% nominal is the analyst's reference).",
+   "uncertainty": "Arithmetic verified; no payoff is mentioned anywhere in the stored text."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13203,
+    "end_char": 13271,
+    "text": "it's enough to\ncover the water heater without selling a\nsingle share"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The water heater costs $2,400 and the savings account holds $1,900 (checking is $490, \"most of it already promised to rent\"), so the stated sufficiency does not follow; the \"2 months of your real expenses\" label also implies about $950 a month of expenses.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8181,
+    "end_char": 8255,
+    "text": "you'd be looking at\nsomething over a million dollars by the\ntime you're 60"
+   },
+   "judgment": "MET",
+   "rationale": "$611 a month at 8% for about 35 years is about $1.4 million (7% is about $1.1 million), so \"over a million\" is conservative and correct.",
+   "uncertainty": "Arithmetic verified; start age assumed from \"second year out of college\"."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11206,
+    "end_char": 11235,
+    "text": "The\nbrokerage account, 11,200"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The $11,200 brokerage balance appears with no deposits to explain it (the only stated flows are $50 to a Roth, a 401k percentage and a $4,000 raise), and no income is given.",
+   "uncertainty": "Not reconstructible from the stored text."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9038,
+    "end_char": 9070,
+    "text": "this\nyear's contribution ceiling"
+   },
+   "judgment": "MET",
+   "rationale": "The 2026 401(k) employee limit is $24,500 per IRS Notice 2025-67, as stated.",
+   "uncertainty": "Verified from IRS newsroom summary earlier this session."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3189,
+    "end_char": 3254,
+    "text": "the right\ndecision in the moment feels exactly\nlike the wrong one"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame: winning at money feels like nothing, and quiet wealth is the opposite of status display.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4254,
+    "end_char": 4283,
+    "text": "It's a\nhand around your ankle"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The 24% store-card trap is made vivid in one sensory sentence (\"a hand around your ankle\"); the Roth IRA is only named (\"something called a Roth IRA ... You looked it up\") and never explained, so plain-language explanation is partial.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 21637,
+    "end_char": 21711,
+    "text": "already rehearsing what\nthey'll say when someone asks how things\nare going"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The stored transcript has no like, subscribe, community, next-video or disclaimer call anywhere, including the close.",
+   "uncertainty": "Description, end screen and pinned comment are not in the data."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 21569,
+    "end_char": 21619,
+    "text": "Somewhere tonight\nsomeone's driving home with $211"
+   },
+   "judgment": "MET",
+   "rationale": "The close returns to the opening $211.40 checking balance and the binary choice.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16599,
+    "end_char": 16635,
+    "text": "Nobody thanks you. Nobody even\nknows"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "At ~21,700 characters the story repeats \"quiet\", \"nobody\" and \"Tuesdays\" many times; some scenes (the drive-thru, the open house) restate the theme without new information.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 284,
+    "end_char": 326,
+    "text": "how to get rich without\nanyone catching on"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title phrase appears in a close variant (\"get rich without anyone catching on\") in the first ~400 characters.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "POV: How to Get Rich Without ANYONE Noticing",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. \"Quiet wealth\" and anti-status saving is a recurring theme in the sibling channel videos.",
+  "2_differentiated_angle": "Same POV second-person story format as the channel's other videos; the status-versus-silence frame is the angle.",
+  "3_title": "POV frame plus a promise and a curiosity word (\"ANYONE\"); no number.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, SHA-256 prefix 47a346340ecde07e; not in the repository): warm illustrated suburban driveway, hose-coiling cartoon man in a navy cap, a white BMW SUV with a sunglassed blonde driver and a CHANEL bag. No title overlay, so mobile legibility depends on the pictured contrast only. Asset appears AI-generated; not rights-judged.",
+  "5_opening": "Binary choice with a concrete $211.40.",
+  "6_loops": "Chapter-end teasers; card debt left open.",
+  "7_spine": "Four-act life path with section cards.",
+  "8_repetition_clarity": "The Danny watch, the $211.40 and \"nobody watched\" recur as anchors.",
+  "9_emotion_credibility": "Warm and plausible; credibility reduced by the unaddressed 24% card, the $1,900 versus $2,400 shortfall and unexplained outcomes.",
+  "10_ending_cta": "No CTA, no disclaimer.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$6,410 card balance at \"almost 24%\" while building Roth, 401k and brokerage",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "About $1,540 a year of interest at 24%; no payoff in the story, against a guaranteed 24% cost versus about 10% market return."
+  },
+  {
+   "claim": "Water heater $2,400; savings $1,900; checking $490",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1,900 + $490 = $2,390, just under $2,400; savings alone do not cover it; \"2 months of expenses\" implies ~$950/month."
+  },
+  {
+   "claim": "$611/month (the lease) invested in an index fund for about 35 years gives \"over a million dollars\" at 60",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1.1M at 7%, $1.4M at 8%, $2.3M at 10%. Holds."
+  },
+  {
+   "claim": "2026 401(k) ceiling \"$24,500\"",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "IRS announcement IR-2025-111: $24,500 for 2026 (search-result summary of the IRS page). Holds. 15% of salary reaches it only at about $163,000 of salary, which the script does not state."
+  },
+  {
+   "claim": "Cartier Tank Must quartz \"a little over three grand\"; Coach Tabby 26 \"$295\"; the 330i lease \"$611\"",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified."
+  }
+ ],
+ "strengths": [
+  "Strong opening choice and a clear four-act spine.",
+  "Section cards and a clean echo.",
+  "Honest \"it feels like nothing\" framing."
+ ],
+ "weaknesses": [
+  "A 24% card balance is raised and never addressed while the protagonist invests.",
+  "The water-heater arithmetic does not close.",
+  "Outcomes (brokerage, $650,000 house, rental) are unexplained.",
+  "No CTA or disclaimer.",
+  "Thumbnail props differ from the script."
+ ],
+ "contradictions": [
+  "Savings $1,900 \"enough to cover\" a $2,400 repair.",
+  "Coworker named Elena then Alina.",
+  "Thumbnail SUV/Chanel/California plate versus a 330i sedan, Coach bag and Tampa."
+ ],
+ "improvement_opportunities": [
+  "Add one scene where the $6,410 balance is paid before the brokerage grows (24% beats a ~10% market return) and show the payoff on screen.",
+  "Fix the sums ($2,400 repair against $1,900 plus $490) or raise the fund to $2,500.",
+  "State income and deposits so the $11,200 and the $650,000 house can be derived, or label them as an illustrative composite.",
+  "Add a one-line disclaimer and a closing next-video pointer; align the thumbnail to the 330i/Civic/Coach details."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "1.61504",
+  "age_days": "69.5055",
+  "views_likes_comments_snapshot": {
+   "views": 15225,
+   "likes": 317,
+   "comments": 36,
+   "published_at": "2026-07-03"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "2.25543",
+   "tier": "STRONG",
+   "agrees_with_ten_peer_tier": false,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the unaddressed card debt, the thumbnail props or the lack of a CTA affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "removed the claim that the script cites a 10% return",
+    "removed a non-existent quoted word",
+    "FR-16C-13 downgraded to PARTLY_MET (Roth IRA never explained)",
+    "intro position corrected",
+    "\"debts never quantified\" corrected",
+    "thumbnail text/foil description corrected"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}
