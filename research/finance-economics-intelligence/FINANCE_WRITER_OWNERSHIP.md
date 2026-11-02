@@ -212,3 +212,5 @@ NICK_277–278 accepted on Machine A branch, parent `175b79ca`: 554 complete / 1
 - Handoff: a portable handoff is published after each validated batch so either machine can resume.
 
 NICK_279 accepted under OWNER_DIRECTED_TAKEOVER, parent `7ce92a90`: 555 complete / 1,057 remaining.
+
+NICK_280 accepted under OWNER_DIRECTED_TAKEOVER, parent `7594fc40`: 556 complete / 1,056 remaining.

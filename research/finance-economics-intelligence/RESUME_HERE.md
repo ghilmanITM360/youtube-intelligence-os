@@ -1,3 +1,9 @@
+# Owner-directed takeover checkpoint — NICK_280 (2026-11-02)
+
+**Parent `7594fc40`.** 556/1,612 complete; next `NICK_281 poD3PDHgAiE` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, workbook rebuilt (556 deep-audited, 1,056 pending; changed cells not measured). Usage UNKNOWN.
+
+- **NICK_280 `pmfPNdWGzdo` — Why High-Yield Savings Accounts Are Making a Comeback in 2026.** 0.77044× TYPICAL (5-peer 0.756×, stable; ~48 days old at snapshot); 15 claims. FRED inspected: CPI June 2026 +3.53% and core +2.57% (match the video); six Fed cuts Sep 2024-Dec 2025 confirmed (video quotes lower-bound 5.25 to 3.50; upper 5.50 to 3.75); 1-year Treasury 4.15% on 2026-07-23. Recomputed and correct: $330 on $8,000, $1,320/hour, $32,395 and $46,589 compounding, $45 for 15 bp. Contradicted: 'first time in 15 years savings beats inflation' (video's own 5% in 2023 vs CPI about 3.2%); $4,000 forgone over two years not reproducible (about $2,475 on $30,000); California T-bill advantage is 15% at the 4.15% bill (2.61 vs 2.28), not 27%. Recall or unavailable: FDIC 0.375%, SCF $62,410/$8,000, Raisin $396B, Synapse figures, 9-of-19 FOMC dots, Vanguard forecast. Yvette and Curtis are personas. Thumbnail inspected natively and at 320x180.
+
 # Owner-directed takeover checkpoint — NICK_279 (2026-11-02)
 
 **Parent `7ce92a90`** (takeover entry on canonical; integrated Machine A `9c6f42fb` + repair `cd2160f9`). 555/1,612 complete; next `NICK_280 pmfPNdWGzdo` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, workbook rebuilt (555 deep-audited, 1,057 pending; changed cells not measured). Usage UNKNOWN.
