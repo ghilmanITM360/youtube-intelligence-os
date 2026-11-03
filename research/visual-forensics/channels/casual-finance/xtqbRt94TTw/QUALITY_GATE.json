@@ -1,42 +1,36 @@
 {
- "status": "VIDEO_006_PARTIAL_FIRST_PASS_7_OF_10",
- "CT_SCAN_COMPLETE": false,
- "audio": "AUDIO_NOT_VERIFIED",
- "av": "AV_CERTIFICATION_BLOCKED",
- "gates": {
-  "source_sha_verified": true,
-  "frames_measured": 19862,
-  "candidates": 766,
-  "draft_states": 447,
+  "status": "VIDEO_006_PARTIAL_INTEGRATION_STARTED",
+  "CT_SCAN_COMPLETE": false,
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
   "first_pass_shards_structurally_validated": [
-   1,
-   2,
-   3,
-   4,
-   5,
-   6,
-   7
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
   ],
-  "first_pass_pending": [
-   8,
-   9,
-   10
-  ],
-  "first_pass_structural_validation": "validate_shard.py PASS for shards 1-7 (id coverage/order, enum values, length rules); NOT a semantic review",
-  "semantic_review": "none independent; reviewer self-reported native views (not audited)",
-  "integration": "not started",
-  "frame_partition_complete": false,
-  "draft_state_gaps": {
-   "gaps": 123,
-   "frames": 3116,
-   "over_60_frames": 11,
-   "ref": "research/ledgers/draft_state_gaps_v1.csv"
+  "first_pass_pending": [],
+  "integration": "integrated_v1 includes immutable reviewer provenance; 123 unowned gaps explicitly retained",
+  "frames_measured": 19862,
+  "frame_partition": "numerical account PASS; semantic coverage PARTIAL",
+  "gaps": 123,
+  "gap_frames": 3116,
+  "merge_requests": 142,
+  "split_requests": 3,
+  "scenedetect_disputes": 339,
+  "dispute_first_pass_counts": {
+    "REAL_MOTION": 314,
+    "REAL_STATE_CHANGE": 25
   },
-  "scenedetect_disputes_unmatched": 339,
-  "known_issues": "research/ledgers/KNOWN_ISSUES_LEDGER_v1.md",
-  "second_pass": "not started",
-  "asr": "not run",
-  "production_package": "not started",
-  "semantic_certification": false
- }
+  "independent_semantic_review": "gap batch01 active; not complete",
+  "native_read_status": "actual successful image results verified; scaled vs mixed artifacts disclosed",
+  "audio": "AUDIO_NOT_VERIFIED",
+  "actual_listening_seconds": 0,
+  "av": "AV_CERTIFICATION_BLOCKED",
+  "next_task": "finish gap_review_01 then02/03; adjudicate merges/splits; ASR alignment and production package"
 }
