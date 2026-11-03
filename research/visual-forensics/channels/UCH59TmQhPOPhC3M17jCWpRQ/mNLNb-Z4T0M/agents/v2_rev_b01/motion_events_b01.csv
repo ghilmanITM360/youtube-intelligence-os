@@ -1,0 +1,18 @@
+state,strip_path,first_frame,last_frame,event_type,description,evidence_label
+S003,frames/motion_strips/b01/S003_peak21.png,18,25,CHARACTER_MOTION,"Head and torso hold position; only the mouth shape and eye pupils change tile to tile (mouth open ellipse at f21/f22/f23, flatter at f24); detector peak value is small (1.65).",OBSERVED
+S006,frames/motion_strips/b01/S006_peak117.png,114,121,CAMERA_SCALE,"Banners, columns and carpet edges shift position between tiles and the throne grows slightly, consistent with a slow push-in or reframing; the seated character does not visibly move.",OBSERVED;INFERRED(camera push)
+S006,frames/motion_strips/b01/S006_peak327.png,324,326,CHARACTER_MOTION,Seated character tilted while the hand with extended finger sits at right; little change among these three tiles.,OBSERVED
+S006,frames/motion_strips/b01/S006_peak327.png,327,327,CAMERA_SCALE,"At f327 the throne and hand appear larger and shifted versus f326 (columns and window larger), a sudden reframing rather than a gradual one.",OBSERVED;INFERRED(jump zoom)
+S006,frames/motion_strips/b01/S006_peak327.png,328,330,CHARACTER_MOTION,"Character is flicked off the throne: tilted off the seat at f328, rotated and moving left at f329, nearly gone at the left edge at f330; the hand stays at right with the finger extended.",OBSERVED
+S006,frames/motion_strips/b01/S006_peak327.png,330,331,ELEMENT_EXIT,Character has left frame by f331 leaving an empty throne and the hand held in place.,OBSERVED
+S009,frames/motion_strips/b01/S009_peak415.png,412,419,NO_VISIBLE_CHANGE,The peasant lies sideways near the path and the cottage and castle remain; only very small shifts (a slight scale change of the cottage) are visible across tiles.,OBSERVED;INFERRED(slow push)
+S010,frames/motion_strips/b01/S010_peak531.png,528,529,NO_VISIBLE_CHANGE,Empty room with window and posts; no bed yet.,OBSERVED
+S010,frames/motion_strips/b01/S010_peak531.png,530,535,ELEMENT_ENTER,"Sack bed enters from the top edge at f530, moves down and left through f531-f532, then back right to settle on the floor by f534-f535 (path read from tile positions).",OBSERVED
+S010,frames/motion_strips/b01/S010_peak558.png,555,562,ELEMENT_ENTER,"Barrel with a bowl and the shelf unit drop in from the top at f555, move down and settle to the right of the bed and ring by f562; the bed and stone ring are already in place at f555.",OBSERVED
+S011,frames/motion_strips/b01/S011_peak788.png,785,789,CHARACTER_MOTION,Goat on white moves left across the frame; it is mostly cropped by f789.,OBSERVED
+S011,frames/motion_strips/b01/S011_peak788.png,789,790,ELEMENT_EXIT,Goat exits left; only a sliver remains at f790.,OBSERVED
+S011,frames/motion_strips/b01/S011_peak788.png,790,792,TEXT_REVEAL,Hand-lettered word 'maybe' is already fully formed at f790 with no visible partial letters in the sampled tiles.,OBSERVED
+S012,frames/motion_strips/b01/S012_peak857.png,854,855,NO_VISIBLE_CHANGE,Room with the peasant and animals and no label at f854; a tiny scribble-like mark appears at f855 where the label will go.,OBSERVED
+S012,frames/motion_strips/b01/S012_peak857.png,855,856,TEXT_REVEAL,"White 'dirt' word and arrow appear: tiny mark at f855, then full word and arrow at f856, so the reveal takes about 2 tile frames.",OBSERVED
+S012,frames/motion_strips/b01/S012_peak857.png,857,861,NO_VISIBLE_CHANGE,Label and scene hold unchanged.,OBSERVED
+S014,frames/motion_strips/b01/S014_peak999.png,996,1003,OTHER,Tiles are near-identical; the scene may darken or add haze slightly across the strip but no object motion is discernible at 480x270.,OBSERVED;UNAVAILABLE(subtle)
