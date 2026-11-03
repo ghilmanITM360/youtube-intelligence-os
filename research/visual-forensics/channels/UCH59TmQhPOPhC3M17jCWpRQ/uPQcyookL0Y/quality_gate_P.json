@@ -1,0 +1,28 @@
+{
+  "status": "PARTIAL",
+  "video_id": "uPQcyookL0Y",
+  "checkpoint": "P",
+  "parent": "91c15464b41b6e90508e36cb7f87339c29542b53",
+  "art": "89/89 sparse native; 133 motion strips reviewed (W001-W088 where measured peak>=1.0), 178 motion events",
+  "narration": {
+    "partial_visual_assessment": "segments 0-75 (76/76)",
+    "audio_verified": 0
+  },
+  "per_state_prompts": "89/89",
+  "asset_crosswalk": "tables/o_asset_family_crosswalk_ext.csv (13 families, keyword links INFERRED_FROM_AUDIT_TEXT, raw IDs untouched)",
+  "production_specs": "v2 (7 modules) + v2.1 (post-RT-01 style additions, untested); v1 preserved",
+  "reconstruction_test": "RT-01 PASS timing/geometry M1/M3/M5; style FAIL_BY_OMISSION; full scene NOT tested",
+  "report": "visual_ct_scan_report_v2.md",
+  "blueprint": "reconstruction_blueprint_v2.md",
+  "listening": "BLOCKED_CAPABILITY",
+  "kit_gates": {
+    "source_identity": "PASS",
+    "temporal": "PARTIAL (contiguous states; sparse samples + peak strips; UBC-001..003 open)",
+    "creative_reconstruction": "PARTIAL (all-state prompts; 1 bounded test)",
+    "audio": "BLOCKED",
+    "validation": "PASS for reviewer outputs (o_validation_*), seals"
+  },
+  "review_relationship": "all reviewers Claude sonnet subagents; orchestrator Claude opus-5-5; same vendor; no human",
+  "CT_SCAN_COMPLETE": false,
+  "next_operation": "optional: dense review of W001 (28 s) and states without strips; RT-02 layout/style test; human listening of asr/LISTENING_BACKLOG.md intervals"
+}

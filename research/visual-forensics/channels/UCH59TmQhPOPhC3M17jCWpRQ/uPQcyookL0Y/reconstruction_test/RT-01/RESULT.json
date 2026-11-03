@@ -1,0 +1,16 @@
+{
+ "test": "RT-01 bounded reconstruction test (kit ref 09): modules M1 clip reveal, M3 pop/overshoot, M5 pose swap from production_specs/specifications_v2.json",
+ "worker": "fresh Claude sonnet subagent; received only BRIEF.md + SPEC_GIVEN_TO_WORKER.json; transcript Read calls limited to RT-01 folder (+font); transcript sha256 b28ce9eebf9fe12d292c23193e9636e5f3726378e51a47402d48ac75d408a802",
+ "isolation_caveat": "Claude Code SessionStart/file-context hooks (claude-mem, ponytail) inject project memory text into every subagent; the worker was therefore not guaranteed free of indirect project context. No source frames/video were read.",
+ "evaluation": "reconstruction_test/evaluate_rt01.py measured pixels of rt01.mp4 (sha256 35883e89dded503a511e7df008c9f0f5cbc58f3e7c6b0bfa14058692de3efb7a): format PASS, background 250/250/250 vs #fcfcfc within tol 4 (yuv420 rounding) PASS, M1 5-frame left-to-right reveal with fixed left ink edge PASS, M3 peak at onset+2 then 102->89 px settle PASS, M5 two single-frame swaps PASS",
+ "overall_measured": "PASS for timing/geometry criteria M1/M3/M5 only",
+ "primary_visual_check": "eval_f42.png viewed by orchestrator: original stick figure + own text; no source characters or wording",
+ "discrepancies_and_spec_revisions": [
+  "Spec gave no typography class: worker chose a slanted cursive (Bradley Hand); source cards are an upright rounded handwritten-like sans (reviewer art audits W031/W044). -> v2.1 adds typography_class guidance (descriptive, font identity still UNAVAILABLE).",
+  "Spec gave no character/illustration vocabulary: worker produced a generic stick figure; source uses outlined cartoon heads with textured hair over thin stick arms (family PRIMARY:CHAR_BEARDED_HAIRY_STICKARM_MAN). -> v2.1 adds original-design shape-grammar rule.",
+  "Spec gave no layout boxes: worker placed text at x 0.32-0.91. Source normalized layout not measured -> PENDING (RT-02).",
+  "M3 overshoot magnitude and settle length unspecified (worker chose 1.15 and 3 frames). Source magnitude not measured -> remains production choice.",
+  "Ink anti-aliasing/edge texture not specified; not compared."
+ ],
+ "status": "RT-01_PASS_TIMING_SUBSET; full-scene reconstruction NOT tested; style fidelity FAIL_BY_OMISSION (spec gap, now revised in v2.1 text but v2.1 untested)"
+}

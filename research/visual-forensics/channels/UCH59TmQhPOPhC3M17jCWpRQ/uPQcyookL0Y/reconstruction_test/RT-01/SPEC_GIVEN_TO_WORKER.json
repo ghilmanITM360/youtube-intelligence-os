@@ -1,0 +1,56 @@
+{
+ "version": "v2",
+ "implementation_limit": "Compressed output reveals output geometry and frame timing only; source software, fonts, layer stack, easing curves and asset origin are UNAVAILABLE. Frame counts below are OBSERVED at 29.97 fps in 8-frame strips with +-1 frame tolerance.",
+ "canvas": {
+  "label": "MEASURED",
+  "resolution": "1920x1080",
+  "fps": "30000/1001 CFR",
+  "white_card_bg": "#fcfcfc (kmeans 98-100% share on W031/W044/W046 native frames)",
+  "ink": "#050505 (kmeans 1.2-1.3%)"
+ },
+ "modules": [
+  {
+   "id": "M1_WHITE_CARD_CLIP_REVEAL",
+   "label": "OBSERVED",
+   "observation": "Handwritten-style black text on white card is uncovered left-to-right by a hard vertical clip edge; first characters appear first.",
+   "evidence": [
+    "W018 f3127-3129 (3 frames, '10 F (6 C)')",
+    "W045 f8028-8033 (6 frames, '13th cen...')",
+    "W034 f6260-6267 (black block widens then thins to bar while text uncovered)"
+   ],
+   "spec": {
+    "duration_frames": "3-6",
+    "direction": "left_to_right",
+    "edge": "hard (no feather observed at 480px tile scale)",
+    "text_static_during_reveal": true
+   },
+   "original_production_choice": "Use own handwritten-style font; text content is new; reveal via rectangular mask whose right edge moves linearly (linearity is a PROPOSAL, not observed easing)."
+  },
+  {
+   "id": "M3_POP_SCALE_OVERSHOOT",
+   "label": "OBSERVED",
+   "observation": "Second title line appears at centre tiny, grows past final size, settles.",
+   "evidence": [
+    "W034 f6284 tiny, f6285 mid, f6286 larger than final, then settles"
+   ],
+   "spec": {
+    "frames_to_peak": 2,
+    "overshoot": "visible (magnitude not measured)",
+    "settle_frames": "1-3 (not fully observed)"
+   }
+  },
+  {
+   "id": "M5_POSE_SWAP",
+   "label": "OBSERVED",
+   "observation": "Facial/prop states change by single-frame replacement, not interpolation.",
+   "evidence": [
+    "W040 f7229->7230 and f7298->7299 (mouth closed<->open)",
+    "W039 f6894->6895 (closed->open book)"
+   ],
+   "spec": {
+    "swap_frames": 1,
+    "hold_between_swaps_frames": ">=60 observed in W040"
+   }
+  }
+ ]
+}
