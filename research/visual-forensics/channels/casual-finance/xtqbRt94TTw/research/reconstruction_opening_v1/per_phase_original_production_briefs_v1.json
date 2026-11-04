@@ -1,0 +1,187 @@
+{
+  "briefs": [
+    {
+      "phase": "BLANK",
+      "render_frames": [
+        0,
+        0
+      ],
+      "source_timing_ref": "integrated_v4/opening_object_lifecycles_v1.json",
+      "image_brief": "Use only SPEC asset IDs and proposed geometry: narrow navy console, two coral/teal status lights and white editorial panels with live typeset generic labels. Maintain the same palette, proportions and scene coordinates across phases.",
+      "animation_brief": "none",
+      "static_anchors": "cream background",
+      "negative_prompt": "No bank facade, googly eyes, news logos, copied headlines, invented extra props, camera shake, morphing or random text.",
+      "originality_status": "Analyst original proposal, not authenticated source layers.",
+      "audio": "silent; no hearing claim"
+    },
+    {
+      "phase": "CONSOLE_ENTRY",
+      "render_frames": [
+        1,
+        5
+      ],
+      "source_timing_ref": "integrated_v4/opening_object_lifecycles_v1.json",
+      "image_brief": "Use only SPEC asset IDs and proposed geometry: narrow navy console, two coral/teal status lights and white editorial panels with live typeset generic labels. Maintain the same palette, proportions and scene coordinates across phases.",
+      "animation_brief": "console rises from below; lights and both panels absent",
+      "static_anchors": "camera/background",
+      "negative_prompt": "No bank facade, googly eyes, news logos, copied headlines, invented extra props, camera shake, morphing or random text.",
+      "originality_status": "Analyst original proposal, not authenticated source layers.",
+      "audio": "silent; no hearing claim"
+    },
+    {
+      "phase": "CONSOLE_AND_PANEL_ENTRY",
+      "render_frames": [
+        6,
+        11
+      ],
+      "source_timing_ref": "integrated_v4/opening_object_lifecycles_v1.json",
+      "image_brief": "Use only SPEC asset IDs and proposed geometry: narrow navy console, two coral/teal status lights and white editorial panels with live typeset generic labels. Maintain the same palette, proportions and scene coordinates across phases.",
+      "animation_brief": "console continues rising; panel1 moves diagonally from offscreen; lights absent",
+      "static_anchors": "camera/background, panel internal text",
+      "negative_prompt": "No bank facade, googly eyes, news logos, copied headlines, invented extra props, camera shake, morphing or random text.",
+      "originality_status": "Analyst original proposal, not authenticated source layers.",
+      "audio": "silent; no hearing claim"
+    },
+    {
+      "phase": "LIGHTS_AND_BODY_HOLD",
+      "render_frames": [
+        12,
+        22
+      ],
+      "source_timing_ref": "integrated_v4/opening_object_lifecycles_v1.json",
+      "image_brief": "Use only SPEC asset IDs and proposed geometry: narrow navy console, two coral/teal status lights and white editorial panels with live typeset generic labels. Maintain the same palette, proportions and scene coordinates across phases.",
+      "animation_brief": "panel1 continues diagonally while partly clipped",
+      "static_anchors": "console body, two status lights, camera/background",
+      "negative_prompt": "No bank facade, googly eyes, news logos, copied headlines, invented extra props, camera shake, morphing or random text.",
+      "originality_status": "Analyst original proposal, not authenticated source layers.",
+      "audio": "silent; no hearing claim"
+    },
+    {
+      "phase": "FULL_PANEL_TRAVEL",
+      "render_frames": [
+        23,
+        31
+      ],
+      "source_timing_ref": "integrated_v4/opening_object_lifecycles_v1.json",
+      "image_brief": "Use only SPEC asset IDs and proposed geometry: narrow navy console, two coral/teal status lights and white editorial panels with live typeset generic labels. Maintain the same palette, proportions and scene coordinates across phases.",
+      "animation_brief": "fully visible panel1 continues diagonally toward final pose",
+      "static_anchors": "console/lights, camera/background",
+      "negative_prompt": "No bank facade, googly eyes, news logos, copied headlines, invented extra props, camera shake, morphing or random text.",
+      "originality_status": "Analyst original proposal, not authenticated source layers.",
+      "audio": "silent; no hearing claim"
+    },
+    {
+      "phase": "SECOND_PANEL_AND_HOLD",
+      "render_frames": [
+        32,
+        36
+      ],
+      "source_timing_ref": "integrated_v4/opening_object_lifecycles_v1.json",
+      "image_brief": "Use only SPEC asset IDs and proposed geometry: narrow navy console, two coral/teal status lights and white editorial panels with live typeset generic labels. Maintain the same palette, proportions and scene coordinates across phases.",
+      "animation_brief": "panel2 appears once at32; no motion after32",
+      "static_anchors": "all assets, text, camera/background",
+      "negative_prompt": "No bank facade, googly eyes, news logos, copied headlines, invented extra props, camera shake, morphing or random text.",
+      "originality_status": "Analyst original proposal, not authenticated source layers.",
+      "audio": "silent; no hearing claim"
+    }
+  ],
+  "asset_scene_graph": {
+    "status": "ORIGINAL_BOUNDED_TIMING_TRANSFER_PROPOSAL_NOT_SOURCE_REPLICA",
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 37,
+    "background_bgr": [
+      235,
+      244,
+      251
+    ],
+    "ink_bgr": [
+      90,
+      55,
+      30
+    ],
+    "accent_bgr": [
+      100,
+      110,
+      230
+    ],
+    "teal_bgr": [
+      155,
+      125,
+      75
+    ],
+    "console": {
+      "x": 750,
+      "width": 420,
+      "height": 600,
+      "top_at_frame1": 1078,
+      "top_at_frame12": 620,
+      "first_visible": 1,
+      "settle": 12,
+      "lights_first": 12,
+      "light_centers": [
+        [
+          880,
+          770
+        ],
+        [
+          1040,
+          770
+        ]
+      ],
+      "light_radius": 24
+    },
+    "first_card": {
+      "width": 620,
+      "height": 200,
+      "first_visible": 6,
+      "first_fully_inside": 23,
+      "last_translation": 32,
+      "start_xy": [
+        -618,
+        -198
+      ],
+      "end_xy": [
+        327,
+        105
+      ],
+      "label": "POLICY UPDATE",
+      "sub_label": "Original timing study"
+    },
+    "second_card": {
+      "width": 620,
+      "height": 180,
+      "first_visible": 32,
+      "xy": [
+        1120,
+        70
+      ],
+      "label": "GROWTH NOTE",
+      "sub_label": "Original timing study"
+    },
+    "source_observed_timing_ref": "integrated_v4/opening_object_lifecycles_v1.json",
+    "source_frame_clock": "Visual ordinals0\u201336 map to source0\u201336; sourcePTS=(ordinal+1)/24, render-relativePTS=ordinal/24; no AV claim.",
+    "proposed_implementation": "New geometric policy console with status lights, white editorial panels and navy/coral/teal/cream tokens reused from existing original test. Console uses a chosen quadratic ease-out; card1 chosen linear path. These are production proposals, not recovered source presets.",
+    "asset_originality": "No Greek pediment, source mascot eyes, news-outlet marks, real source headlines or competitor artwork. Source eye appearance maps to two non-anthropomorphic status lights.",
+    "audio": "Intentionally silent local test; qualified source listening remains0.",
+    "static_anchors": "Camera/background always fixed. Console body fixed after12; lights fixed after12; card1 fixed after32; card2 fixed from32. All assets fixed32\u201336.",
+    "checkpoints": [
+      0,
+      1,
+      5,
+      6,
+      11,
+      12,
+      22,
+      23,
+      31,
+      32,
+      36
+    ],
+    "quality_scope": "One37-frame source-timing-transfer unit. Not a whole-video or global production/cold-start/AV pass.",
+    "CT_SCAN_COMPLETE": false
+  },
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false
+}

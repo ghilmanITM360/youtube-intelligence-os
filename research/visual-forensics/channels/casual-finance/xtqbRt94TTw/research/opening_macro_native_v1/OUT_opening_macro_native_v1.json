@@ -1,0 +1,803 @@
+{
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "status": "COMPLETE_FOR_SUPPLIED_SCOPE",
+  "scope": {
+    "new_native_frames": [
+      3,
+      36
+    ],
+    "new_native_frame_count": 34,
+    "consecutive": true,
+    "source_pts_formula": "(zero_based_frame+1)/24",
+    "source_decode_provenance": "Full nonseeking OpenCV0–36, positionschecked, sameRGBpipeline",
+    "prior_frames_reused_without_redisplay": [
+      0,
+      1,
+      2
+    ]
+  },
+  "objects": [
+    {
+      "id": "OPEN_BUILDING",
+      "label": "Federal Reserve building body/roof",
+      "first_visible_frame_or_bracket": {
+        "frame": 1,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "proof": "Reused qualified native0blank/native1roof; no new redisplay."
+      },
+      "first_full_visible_frame_or_bracket": {
+        "frame": null,
+        "status": "NOT_FULLY_VISIBLE_IN_SUPPLIED_WINDOW",
+        "reason": "The lower body/base remains cropped below bottom through36; complete roof becomes visible at6."
+      },
+      "last_substantive_change_frame_or_bracket": {
+        "frame": 12,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "component": "Last visible upward building translation; roof pose thereafter visually holds through36.",
+        "qualification": "Visible substantive movement, not a subpixel equality/curve measurement."
+      },
+      "hold_samples": {
+        "consecutive_frames": [
+          12,
+          36
+        ],
+        "hold_confirmed_by_following_frames": [
+          13,
+          36
+        ],
+        "milestone_frames": [
+          12,
+          13,
+          18,
+          23,
+          31,
+          32,
+          33,
+          36
+        ]
+      },
+      "path": {
+        "type": "UPWARD_TRANSLATION_FROM_BELOW",
+        "description": "Roof tip first enters bottom-center at1. Roof and then columns rise into view without observed rotation/scale change. Early upward steps are larger than the late steps approaching12; the observed travel slows near its final visible placement. After12 the building is a static anchor while the NYT card continues moving.",
+        "reference_geometry": "Roof apex stays near horizontal center (slightly left of exact image center); roof/column proportions remain stable. Lower asset never fully enters.",
+        "source_curve": "UNKNOWN; observed slowing does not identify a source easing preset."
+      },
+      "expression_or_pose": {
+        "description": "Body/roof has no mouth or limbs visible. The independent eye graphic appears at12, detailed separately below.",
+        "crop_vs_morph": "Progressive roof/body visibility is consistent with vertical cropping during translation, not asserted morphing."
+      },
+      "static_anchors": {
+        "within_asset": [
+          "FEDERAL RESERVE lettering within pediment",
+          "roof outline and column spacing"
+        ],
+        "after_settle": "Building stays fixed bottom-center relative to image edges from12 through36."
+      },
+      "readable_text": {
+        "literal": "FEDERAL RESERVE",
+        "fully_readable_by_frame": 5,
+        "first_readability_limit": "Frame4 has partial lower word; full lettering appears at5. Readability is a visual criterion, not OCR/semantic truth."
+      },
+      "confidence": "HIGH_FOR_OBSERVED_ONSET_TRANSLATION_AND_BOUNDED_HOLD",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00003_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00004_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00005_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00006_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00009_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00011_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00012_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00013_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00023_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00033_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+      ],
+      "limitations": [
+        "Building onset1 reuses audited prior observations; the new reads begin3.",
+        "Full building visibility is not achieved in this window. No unseen base geometry is inferred.",
+        "No scale/position tracking or source-easing fit was performed; last substantive change excludes hypothetical subpixel codec variation.",
+        "Hold is certified only within the supplied window, not permanently after36."
+      ]
+    },
+    {
+      "id": "OPEN_BUILDING_EYES",
+      "label": "Two open oval eyes on building columns",
+      "first_visible_frame_or_bracket": {
+        "frame": 12,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "before_frame": 11
+      },
+      "first_full_visible_frame_or_bracket": {
+        "frame": 12,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS"
+      },
+      "last_substantive_change_frame_or_bracket": {
+        "frame": 12,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "change": "Both eyes first appear together in their held geometry."
+      },
+      "hold_samples": {
+        "consecutive_frames": [
+          12,
+          36
+        ],
+        "milestone_frames": [
+          12,
+          13,
+          18,
+          23,
+          31,
+          32,
+          36
+        ]
+      },
+      "path": {
+        "type": "DISCRETE_GRAPHIC_APPEARANCE_THEN_HOLD",
+        "description": "Both complete eyes appear at12 in the column area. At11 that area is already visible but has no eyes, so the eye onset is a separate graphic change rather than merely the roof/body becoming uncropped.",
+        "independent_translation_after_onset": "No visible independent eye movement through36."
+      },
+      "expression_or_pose": {
+        "literal_geometry": "Two tall white ovals with thick black outlines and small black pupils near their centers; pupil heights are slightly asymmetric. Both remain open. No visible blink, mouth or expression replacement is observed after12.",
+        "interpretation_limit": "An attentive/surprised look is an interpretation; geometry is the observation."
+      },
+      "static_anchors": [
+        "Eyes remain fixed relative to central columns and roof after12."
+      ],
+      "readable_text": [],
+      "confidence": "HIGH_FOR_ONSET_AND_VISIBLE_GEOMETRY",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00011_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00012_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00013_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00018_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00023_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+      ],
+      "limitations": [
+        "Source animation layers/rig are unknown.",
+        "No claims about eye motion after36 or speech synchronization."
+      ]
+    },
+    {
+      "id": "OPEN_CARD_NYT",
+      "label": "Left New York Times dark headline card",
+      "first_visible_frame_or_bracket": {
+        "frame": 6,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "before_frame": 5,
+        "appearance": "Tiny dark sliver at extreme top-left."
+      },
+      "first_full_visible_frame_or_bracket": {
+        "frame": 23,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "before_frame": 22,
+        "criterion": "All four card corners/edges inside image;22 still slightly clipped at top-left/left edge."
+      },
+      "last_substantive_change_frame_or_bracket": {
+        "frame": 32,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "component": "Last visible down/right translation;33–36 hold at same visible placement."
+      },
+      "hold_samples": {
+        "consecutive_frames": [
+          32,
+          36
+        ],
+        "following_hold_frames": [
+          33,
+          36
+        ]
+      },
+      "path": {
+        "type": "DIAGONAL_DOWN_RIGHT_TRANSLATION",
+        "description": "A dark sliver appears at the top-left6, followed by progressively more tilted card content. The card moves down and right from partly offscreen to fully inside23 and continues to its visible placement32. Its counterclockwise tilt, dimensions, thumbnail and internal text relationships stay visibly fixed during travel. No overshoot or later bounce is visible in3–36.",
+        "observed_output_trajectory": "Broadly regular down/right stepping through the later travel; no numerical motion-curve fit or exact speed is claimed.",
+        "relative_anchor": "The building holds after12 while this card keeps moving, supporting separate object movement rather than a common camera move."
+      },
+      "expression_or_pose": {
+        "asset_pose": "Fixed counterclockwise-tilted rectangular news card; static podium thumbnail at right within the card."
+      },
+      "static_anchors": [
+        "Text, source icon and podium thumbnail stay fixed within the moving card.",
+        "Card holds upper-left after32; it is above and left of the building roof."
+      ],
+      "readable_text": {
+        "source_label": "The New York Times",
+        "headline": "Fed Raises Rates in First Major Step by Warsh to Contain Inflation",
+        "body": "The Federal Reserve's first increase to interest rates since July 2023 comes less than two months before the midterm elections.",
+        "relative_time_label": "6 hours ago",
+        "readability_milestones": [
+          {
+            "frame": 9,
+            "observation": "Trailing body-copy fragments visible; full headline not yet exposed."
+          },
+          {
+            "frame": 15,
+            "observation": "Source-label/headline fragments visible but left clipping remains."
+          },
+          {
+            "frame": 22,
+            "observation": "Complete headline and body line starts are legible despite remaining card-border clipping."
+          },
+          {
+            "frame": 23,
+            "observation": "Complete card visible and its text readable."
+          }
+        ],
+        "status": "Literal source-video text, not authenticated news/economic fact."
+      },
+      "confidence": "HIGH_FOR_FIRST_SLIVER_FULL_VISIBILITY_AND_VISIBLE_TRAVEL",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00005_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00006_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00007_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00009_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00015_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00021_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00022_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00023_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00027_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00030_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00033_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00034_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00035_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+      ],
+      "limitations": [
+        "First pixel visibility6 differs from readability and full asset visibility23.",
+        "Readability varies with the visual criterion; no separate exact semantic-readability onset is certified.",
+        "Source easing, software, provider and true color values are unknown."
+      ]
+    },
+    {
+      "id": "OPEN_CARD_CONDUIT",
+      "label": "Upper-center/right Conduit Street Blog dark headline card",
+      "first_visible_frame_or_bracket": {
+        "frame": 32,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "before_frame": 31,
+        "appearance": "Whole card appears inside image in one observed frame."
+      },
+      "first_full_visible_frame_or_bracket": {
+        "frame": 32,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS"
+      },
+      "last_substantive_change_frame_or_bracket": {
+        "frame": 32,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "change": "Initial complete-card appearance; no visible movement thereafter through36."
+      },
+      "hold_samples": {
+        "consecutive_frames": [
+          32,
+          36
+        ],
+        "following_hold_frames": [
+          33,
+          36
+        ]
+      },
+      "path": {
+        "type": "DISCRETE_ADDITIVE_APPEARANCE_THEN_HOLD",
+        "description": "Upper-center/right area has no second card through31. A complete clockwise-tilted card appears32 above the NYT card and building, then remains fixed through36. No descending path, clipping phase or intervening pose is observed for this second card.",
+        "native_vs_coarse_description": "The native adjacent31/32 pair supports a discrete full-card appearance, refining the earlier coarse description that both cards drop in."
+      },
+      "expression_or_pose": {
+        "asset_pose": "Fixed clockwise tilt with Federal Reserve seal thumbnail at right."
+      },
+      "static_anchors": [
+        "All internal text/seal positions stay fixed.",
+        "Card remains upper-center/right while NYT card sits lower-left; white gap separates it from the building."
+      ],
+      "readable_text": {
+        "source_label": "Conduit Street Blog",
+        "headline": "Fed Raises Interest Rates for First Time Since 2023",
+        "body": "The Federal Reserve raised interest rates by a quarter percentage point this week, its first rate hike in more than three years,...",
+        "relative_time_label": "3 hours ago",
+        "first_readable_frame": 32,
+        "status": "Literal source-video text, not independently authenticated news/economic fact."
+      },
+      "confidence": "HIGH_FOR_FIRST_FULL_APPEARANCE_AND_BOUNDED_HOLD",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00029_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00030_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00033_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00034_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00035_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+      ],
+      "limitations": [
+        "No source mechanism is identified: a layer visibility switch or other instantaneous edit could produce this result.",
+        "No slide-in/drop trajectory is inferred from the coarse first pass.",
+        "Hold ends at the review boundary36, not a certified permanent offset."
+      ]
+    }
+  ],
+  "global_camera": {
+    "ruling": "NO_OBSERVED_COMMON_CAMERA_PAN_ZOOM_OR_ROTATION",
+    "description": "Independent entry paths, stable asset proportions and the fixed building from12 while the NYT card travels support object animation on a static near-white canvas. The second card appears discretely. The background itself has no textured anchor for proving all possible global transformations.",
+    "confidence": "HIGH_FOR_VISIBLE_RELATIVE_ANCHORS; SOURCE_TRANSFORM_STACK_UNKNOWN",
+    "evidence_paths": [
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00006_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00011_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00012_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00013_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00023_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+    ]
+  },
+  "distinct_states": [
+    {
+      "id": "OPEN_S0",
+      "frames": [
+        0,
+        0
+      ],
+      "description": "Blank near-white canvas; qualified prior native observation reused.",
+      "new_views": 0
+    },
+    {
+      "id": "OPEN_S1",
+      "frames": [
+        1,
+        5
+      ],
+      "description": "Building roof rising from bottom; no headline cards or eyes visible.",
+      "onset_frame": 1
+    },
+    {
+      "id": "OPEN_S2",
+      "frames": [
+        6,
+        11
+      ],
+      "description": "Building continues upward while first card enters from top-left; no eyes yet.",
+      "onset_frame": 6
+    },
+    {
+      "id": "OPEN_S3",
+      "frames": [
+        12,
+        31
+      ],
+      "description": "Open eyes appear and building holds; NYT card continues down/right. First full card visibility23 is a lifecycle milestone within this state.",
+      "onset_frame": 12
+    },
+    {
+      "id": "OPEN_S4",
+      "frames": [
+        32,
+        36
+      ],
+      "description": "Second card appears fully; first card reaches last visible travel position. Both cards/building/eyes hold through36.",
+      "onset_frame": 32
+    }
+  ],
+  "extra_exact_frames_needed": [],
+  "new_evidence_reads": [
+    {
+      "frame": 3,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00003_native.png",
+      "sha256": "4a956ff1cfa9957b5223c414db940b0176452beb0fa6c6d8191575396a2ae7d4",
+      "source_pts_s": 0.16666666666666666,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Roof apex low at bottom-center; only roof upper portion enters, lettering clipped by bottom; no cards/eyes visible."
+    },
+    {
+      "frame": 4,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00004_native.png",
+      "sha256": "257fd2c17bb235c23ffebd75eedd97232e019d72b8d6a17257b7f97974b7c5ea",
+      "source_pts_s": 0.20833333333333334,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building roof higher than3; FEDERAL visible, lower lettering still partly cropped at bottom; no cards/eyes."
+    },
+    {
+      "frame": 5,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00005_native.png",
+      "sha256": "e1e83dc3d8a269feffb0bbf16ebd75979cf91626df4eb69246ba60e4b6eea567",
+      "source_pts_s": 0.25,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Roof rises farther; FEDERAL RESERVE fully readable within triangular pediment, lower building still below frame; no cards/eyes."
+    },
+    {
+      "frame": 6,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00006_native.png",
+      "sha256": "8919786d295050983bde50e0d95789f1beef0206eddad2b5280b5933185b1bb5",
+      "source_pts_s": 0.2916666666666667,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building roof continues rising, top of columns enters at bottom. First dark card sliver appears at extreme top-left; previous5 has no sliver. No eyes/right card."
+    },
+    {
+      "frame": 7,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00007_native.png",
+      "sha256": "ed1427a10dce0fb0f83bee50055850ead404c0e64de61571104322493fefebb6",
+      "source_pts_s": 0.3333333333333333,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Roof/columns higher; dark tilted card strip wider along top-left, descending into frame. No eyes/right card."
+    },
+    {
+      "frame": 8,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00008_native.png",
+      "sha256": "442fc341d65ef1ef0f4efd68839fcf990db69cc8cdb3ab8884631fcbfae37cb3",
+      "source_pts_s": 0.375,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building continues upward, more columns exposed; left dark card strip deepens/widens across top-left. No eyes/right card."
+    },
+    {
+      "frame": 9,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00009_native.png",
+      "sha256": "c77ade56777b0ebc8e4f73a975729662883ee19585140d46fb0596e824f7decb",
+      "source_pts_s": 0.4166666666666667,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building continues upward with unchanged roof/column geometry; lower body clipped. Left card has readable trailing fragment about midterm elections near top-left but headline remains above frame; right card absent."
+    },
+    {
+      "frame": 10,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00010_native.png",
+      "sha256": "1c1c17fb4a53e461e7e1874067b4b7bf4d3f1587729d3b111d41ece0a60a31b3",
+      "source_pts_s": 0.4583333333333333,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Roof rises smaller distance than early steps; columns still bottom-clipped. More body-copy fragments enter on tilted left card; no eyes/right card."
+    },
+    {
+      "frame": 11,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00011_native.png",
+      "sha256": "dd679ee0ccdb5da32e4a98b1221cda5bc4e0d60d85ee04836021ca4222d132b7",
+      "source_pts_s": 0.5,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building slightly higher, still lower-body clipped, no eyes visible. Left tilted card descends farther, partial body copy exposed; top/headline still clipped, right card absent."
+    },
+    {
+      "frame": 12,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00012_native.png",
+      "sha256": "d607635c69ae7d7bc98018c6cde673a58646960a1f7953c4d2e19b796f8051e5",
+      "source_pts_s": 0.5416666666666666,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building reaches a near-fixed roof position; two large white black-outlined eyes with black pupils appear on columns, absent11 despite that region being visible. Lower building still bottom-cropped. Left card continues descending; right card absent."
+    },
+    {
+      "frame": 13,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00013_native.png",
+      "sha256": "96376afddf5e93b04e11498191f949d59e05969d8ccf429a0c23007e87946026",
+      "source_pts_s": 0.5833333333333334,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building roof and newly open eyes hold visibly in same pose/location as12; pupils near middle, no mouth. Left card moves down/right, partial headline begins entering at top; right absent."
+    },
+    {
+      "frame": 14,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00014_native.png",
+      "sha256": "1a4ed500a017322dee44ddee3abaa61fb87f037b8fec024cd25624468dea300a",
+      "source_pts_s": 0.625,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building/open eyes remain fixed; left tilted card farther down/right with more headline/body copy visible but top and left edges still clipped; right card absent."
+    },
+    {
+      "frame": 15,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00015_native.png",
+      "sha256": "aad16491d1a68c641a7949223bc40456a6b409918d54fec0fb94e0adad6d01a3",
+      "source_pts_s": 0.6666666666666666,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building/eyes stay fixed at bottom-center; left card descends/rightward, New York Times label and partial headline now visible, left text still clipped; no right card."
+    },
+    {
+      "frame": 16,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00016_native.png",
+      "sha256": "ff72efc46c59b1401f19ba30b15355c3c0d552ac44083576d5e4963c14bef537",
+      "source_pts_s": 0.7083333333333334,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Same fixed building/eyes. Left card farther down/right; card top-left begins nearing frame but asset still edge-clipped; podium thumbnail visible at its right. No right card."
+    },
+    {
+      "frame": 17,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00017_native.png",
+      "sha256": "175073db2b180ad89382085d4e9eac46e06a411073e709b7b817a70c3d5625b3",
+      "source_pts_s": 0.75,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building holds. Left card continues diagonal down/right with tilted orientation, partially cut at left/top; no second card visible."
+    },
+    {
+      "frame": 18,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00018_native.png",
+      "sha256": "a8df27542d04d2528d8b20cd926be9cf40e200b6eacfd1cb6bf3047f9a4d0b7a",
+      "source_pts_s": 0.7916666666666666,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Fixed building/eyes. Left card lower/rightward; nearly all card vertically inside but left content remains clipped; second card absent."
+    },
+    {
+      "frame": 19,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00019_native.png",
+      "sha256": "32f19ad5a881795dc97ac01e1c4dfd27b751064a0c38961dc7378c3188540aad",
+      "source_pts_s": 0.8333333333333334,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building/eyes hold. Left card continues down/right; full top edge now within frame at right, left edge still outside, headline beginning clipped. No second card."
+    },
+    {
+      "frame": 20,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00020_native.png",
+      "sha256": "08fbdea2d51a9e9d5554d02e6cd3034fc942d10e8577c1843a39a2ee2cc22ce1",
+      "source_pts_s": 0.875,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building/eyes hold. Left card farther down/right with NYT icon beginning visible at left edge; left card not fully enclosed by white margin. No right card."
+    },
+    {
+      "frame": 21,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00021_native.png",
+      "sha256": "adcfe073d39ce24cd4e6a67ffbbc0b4598b457d3d89dac185113600574d8e4c1",
+      "source_pts_s": 0.9166666666666666,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building/eyes fixed. Left headline now essentially readable, Fed Raises Rates in First Major Step by Warsh to Contain Inflation; card still clipped at left boundary. No right card."
+    },
+    {
+      "frame": 22,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00022_native.png",
+      "sha256": "f8bf61977457e164de3127e8eca6c926038dd4ef55eaec5cd9538c1b808dc1c8",
+      "source_pts_s": 0.9583333333333334,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Building/eyes fixed. Left card headline and text legible, but top-left card corner remains slightly outside the image while lower-left is inside; no right card."
+    },
+    {
+      "frame": 23,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00023_native.png",
+      "sha256": "e2499f0fd1d8b34b9e67b1ac82a8186308b1a04d637736f39333143eb9b1195d",
+      "source_pts_s": 1,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. All four corners/edges of the tilted NYT card are now inside frame with a narrow white left margin; first full-asset visibility after22 left-edge clipping. Building/eyes hold; no right card."
+    },
+    {
+      "frame": 24,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00024_native.png",
+      "sha256": "d0180a87897f54c465f5a3194025cf2e8b5bf926e878edd668d41ad8fcc9a3e5",
+      "source_pts_s": 1.0416666666666667,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. NYT card fully within upper-left, still translating down/right; text/static thumbnail fixed within card. Building/eyes hold, right card absent."
+    },
+    {
+      "frame": 25,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00025_native.png",
+      "sha256": "7d4dcb6f2de893171c274e9a15a51e5b7976d33ea468fedb66b85311275e1fa0",
+      "source_pts_s": 1.0833333333333333,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Left card lower/rightward, same counterclockwise tilt and internal text geometry; building/eyes fixed; no right card."
+    },
+    {
+      "frame": 26,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00026_native.png",
+      "sha256": "070900806568cb4b9f6e8bd51c1e31dcd20be930747533192c5b612050510372",
+      "source_pts_s": 1.125,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Left card continues down/right toward upper-left resting region; building/eyes hold. Right half above building remains blank."
+    },
+    {
+      "frame": 27,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00027_native.png",
+      "sha256": "5225b019fbc924e7d8eeee6d41b2806d5a9070ccd8c780ce44c12116cdc564ea",
+      "source_pts_s": 1.1666666666666667,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Fully visible NYT card continues diagonal down/right; building/open eyes stationary; second card absent."
+    },
+    {
+      "frame": 28,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00028_native.png",
+      "sha256": "a97f5ba32b8f317ea6792d2a4d7bfc69d69baad5a0769453f0ed2a49e9c07d8e",
+      "source_pts_s": 1.2083333333333333,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. NYT card lower/rightward again, unchanged text/tilt/size; building/eyes fixed; second card absent."
+    },
+    {
+      "frame": 29,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00029_native.png",
+      "sha256": "b2aa344a70bb742f6580674ba8e705b52a8b1331eca91378f8dc6f032ba0f50f",
+      "source_pts_s": 1.25,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. NYT card still moving down/right in upper-left, building/eyes fixed; second card not visible."
+    },
+    {
+      "frame": 30,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00030_native.png",
+      "sha256": "6132fb6b9eb722b6a47b486d2d57f57dcea18c0bd871a1173e37125863f74cbb",
+      "source_pts_s": 1.2916666666666667,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. NYT card continues down/right; building and eye pose fixed; second card absent."
+    },
+    {
+      "frame": 31,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+      "sha256": "2d3d644c132621c1f96ddf7328c35ee71b08477169538cce6aa0d9235d2b5c54",
+      "source_pts_s": 1.3333333333333333,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. NYT card still down/right from30; white upper-center/right remains empty, no second card."
+    },
+    {
+      "frame": 32,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+      "sha256": "7dc4f6a1ad4aeb579a94b50e27ff3ac6681da9b0c7822c210544754eab06051f",
+      "source_pts_s": 1.375,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Second complete dark Conduit Street Blog card suddenly present upper-center/right, all corners inside image, clockwise tilted, Fed seal at right; headline Fed Raises Interest Rates for First Time Since2023. Previous31 lacked it. NYT card continues down/right; building/eyes hold."
+    },
+    {
+      "frame": 33,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00033_native.png",
+      "sha256": "99da91f6b0e3d9b4bb633226f94451a02d0143021074290b243a1ceb5222571a",
+      "source_pts_s": 1.4166666666666667,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Both cards and building/eyes appear in same positions as32; NYT card stops its preceding down/right travel. Conduit card holds complete at upper-center/right."
+    },
+    {
+      "frame": 34,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00034_native.png",
+      "sha256": "c0a0cdff7254923f50846770d8ee8a799328ae70e2ea3d8be47811285fb785ce",
+      "source_pts_s": 1.4583333333333333,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Same two-card/building arrangement holds; no visible eye/pose, scale, tilt or content change versus33."
+    },
+    {
+      "frame": 35,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00035_native.png",
+      "sha256": "b11ea42eab3118a46498b567c7ca59c6f67c8746a2fed77573787d7e46101f6f",
+      "source_pts_s": 1.5,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Two cards/building/open-eyed geometry continue holding as32–34; no visible new asset or movement."
+    },
+    {
+      "frame": 36,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png",
+      "sha256": "d10c77bf9261111f8ce6c64ee79c479e31be3c8365a841ba68b5a341edb6219b",
+      "source_pts_s": 1.5416666666666667,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "successful": true,
+      "witness": "Native1920x1080 displayed once. Same two headline cards, bottom-cropped Fed building and open eyes hold through final supplied frame36; no visible new graphic, pose change or camera change."
+    }
+  ],
+  "pending_new_image_paths": [],
+  "reused_prior_observations": [
+    {
+      "frame": 0,
+      "observation": "Blank near-white canvas",
+      "audit_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/session_20261104/opening_frame0_1_reused_native_audit_v1.json",
+      "actual_prior_return_sha256": "5497f1dfddc289cba560e61004a5b3c3a70983aa62691f487bf456eeef3b40ba",
+      "redisplayed": false
+    },
+    {
+      "frame": 1,
+      "observation": "Tiny black roof tip at bottom edge",
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f00001.jpg",
+      "sha256": "141cb50d83140d17441da636b0045486e83662f590b38a65e658e6cef0d4717c",
+      "review_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/OUT_gap_review_01.json#G001",
+      "redisplayed": false
+    },
+    {
+      "frame": 2,
+      "observation": "Roof tip rises farther into frame",
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f00002.jpg",
+      "sha256": "1c340721487c7a607adc6b595258053d44320d35c067a59313cef9dfb8ab1849",
+      "review_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/OUT_gap_review_01.json#G001",
+      "redisplayed": false
+    }
+  ],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "usage_at_stop": {
+    "primary_used_percent": 56,
+    "weekly_used_percent": 40,
+    "paid_credits_balance": "0",
+    "measurement": "Fresh check after final successful native36 return;34 new images displayed in11 batches of3 plus1 final image. No reset/credits spent."
+  },
+  "limitations": [
+    "Scope is only the opening0–36 context, with34 new consecutive native3–36 reads and3 prior observations reused without redisplay.",
+    "Candidate2–32 does not describe each object's exact lifecycle; building entry1, first-card entry6, eye entry12 and second-card appearance32 are separate events.",
+    "No permanent hold/offset after36, global100ms semantic/facial/production floor, source software/easing/assets, audio, or CT-completion claim.",
+    "No new shot is asserted for every graphic/eye/visibility milestone."
+  ]
+}
