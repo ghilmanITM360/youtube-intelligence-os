@@ -1,0 +1,6 @@
+# Continuation handoff — -1-ldW4kpLM
+- Source sha256 dce7aed164da0da8979608392520c88e295185550c0d8b18950e58666a3c26b3; path /Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if Earth grew 1cm every second？ [-1-ldW4kpLM].mp4; machine A (Ghilmans-Laptop), xkcd stream lock ~/YIOS-local-audits/xkcd-whatif/.xkcd_writer_lock.
+- Status VISUAL_ANALYSIS_PARTIAL; gates {"source_identity": "PASS", "full_temporal_overview": "PASS", "candidate_shots_verified": "PASS", "meaningful_state_timing": "PARTIAL", "motion_design_review": "PARTIAL", "creative_design_review": "PARTIAL", "visual_script_mapping": "PARTIAL", "production_blueprint": "PARTIAL", "audio_human_listening": "BLOCKED", "final_av_signoff": "BLOCKED"}.
+- Pending: meaningful_state_timing, motion_design_review, creative_design_review, visual_script_mapping, production_blueprint, audio_human_listening, final_av_signoff; unresolved segments ['G0006', 'G0012', 'G0018', 'G0080', 'G0176']; partially viewed activities 17.
+- Tools: scripts/xk_ingest.sh, xk_segment.py, xk_sheets.py, xk_build.py, xk_palette.py, xk_asr_check.py, xk_finalize.py (python -I; cv2 venv ~/YIOS-local-audits/tooling/visual-ct-scan-venv).
+- Next exact operation: listening by a human (intervals = all speech 0–315.675283s); optional full-frame strips for partially viewed activities.
