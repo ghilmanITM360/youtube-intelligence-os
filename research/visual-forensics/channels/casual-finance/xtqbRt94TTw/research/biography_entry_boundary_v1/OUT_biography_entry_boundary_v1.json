@@ -1,0 +1,84 @@
+{
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "status": "COMPLETE_FOR_SUPPLIED_SCOPE",
+  "event_type": "ADDITIVE_BIOGRAPHY_SLIDE_ENTRY_AFTER_POSE_PROP_SWAP",
+  "exact_onset_or_bracket": {
+    "frame": 750,
+    "source_pts_s": 31.291666666666668,
+    "frame_index": "0-based",
+    "boundary_precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS_REUSING_749",
+    "previous_pose_laptop_change_frame": 749
+  },
+  "description": "The biography first becomes visibly present at750, after the previously verified pose/laptop substitution at749. Frame750 shows a narrow strip of photograph/suit and clipped text at the right edge, so this is more than a bare border sliver. Frames751 and752 expose progressively more portrait/text by leftward entry while the pointer narrator remains at left. The incoming content is identified as the Warsh biography using the prior G005 context; first readable full-card content is not equated with first pixel appearance. This is an additive graphic entry and does not create a new shot ruling.",
+  "confidence": {
+    "first_visible_entry_frame": "HIGH_USING_NEW750_PLUS_REUSED749_BEFORE_STATE",
+    "visible_leftward_progression_750_752": "HIGH",
+    "first_fully_readable_identity_or_card": "NOT_ESTABLISHED",
+    "motion_offset_or_easing": "NOT_ESTABLISHED"
+  },
+  "evidence_paths": [
+    "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/biography_entry_boundary_v1/f00750_native.png",
+    "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/biography_entry_boundary_v1/f00751_native.png",
+    "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/biography_entry_boundary_v1/f00752_native.png"
+  ],
+  "reused_prior_observations": [
+    {
+      "review_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/OUT_gap_review_01.json#G005",
+      "source_frame": 749,
+      "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f00749.jpg",
+      "sha256": "80c58e554d706a6143d8bf09c0acb50356b8311d3b3d91104fad7bfffae4c95a",
+      "prior_literal_witness": "Smiling standing narrator holds pointer; laptop disappears.",
+      "context": "G005 and EP0029 retain the prior749 before-state and biography-entry bracket750–752; new750 resolves that bracket.",
+      "redisplayed": false
+    },
+    {
+      "review_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/ambiguous_cut_review_v1/OUT_ambiguous_cut_review_v1.json#EP0029",
+      "context": "The749 pose/prop substitution and subsequent biography slide remain distinct component events; the prior non-shot classification is unchanged.",
+      "redisplayed": false
+    }
+  ],
+  "new_evidence_reads": [
+    {
+      "frame": 750,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/biography_entry_boundary_v1/f00750_native.png",
+      "sha256": "6c527cf8560d1723cf8cf35f6b26b716542d40695c04ca9ab864c5c2f8569de3",
+      "source_pts_s": 31.291666666666668,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully once at native1920x1080. Smiling standing pointer narrator remains left. At the extreme right, a narrow but definite portion of the incoming biography is visible: textured dark photographic/suit area, a horizontal rule, and clipped black text line fragments. This is visible source content, not just a blank border; no full portrait identity or complete biography line is yet readable."
+    },
+    {
+      "frame": 751,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/biography_entry_boundary_v1/f00751_native.png",
+      "sha256": "9855e14234360178c4a45ebbf2a14e7b322b6938e38924abd7e949845575340a",
+      "source_pts_s": 31.333333333333332,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully once at native1920x1080. Biography content has shifted farther left: larger part of portrait including a portion of the man's face and suit, rule, and partial name/body-line starts are visible at right. Narrator pose at left is retained."
+    },
+    {
+      "frame": 752,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/biography_entry_boundary_v1/f00752_native.png",
+      "sha256": "ee718db25a7f3e56eaddbecff07094faa98cebe8a5c2b8ba08b5679bc6ee3a8d",
+      "source_pts_s": 31.375,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully once at native1920x1080. Still more portrait and biography text are visible at right; the man's face and suit are much clearer and the name line extends farther into view, while its right end/body lines remain clipped by the frame edge. The page continues entering leftward; no settled offset is established."
+    }
+  ],
+  "pending_new_image_paths": [],
+  "limitations": [
+    "Exactly3 dispatched native fullframes were displayed once; prior749 was reused without redisplay.",
+    "First visible incoming content at750 is not the same as a fully legible portrait, name line or full biography card.",
+    "These3 frames do not establish total slide duration, final offset, speed curve, source easing or layer implementation.",
+    "No new shot, source hearing, ASR, audiovisual synchronization, financial truth or CT-completion claim."
+  ],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "usage_at_stop": {
+    "primary_used_percent": 44,
+    "weekly_used_percent": 38,
+    "paid_credits_balance": "0",
+    "measurement": "Fresh check after one batch of3 new native returns; no credits/reset used."
+  }
+}
