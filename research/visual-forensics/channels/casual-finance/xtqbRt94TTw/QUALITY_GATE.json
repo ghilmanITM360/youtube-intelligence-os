@@ -1,5 +1,5 @@
 {
-  "status": "VISUAL_ANALYSIS_PARTIAL_INTEGRATED_V4_EVENTS_V5_CHECKPOINT_Q",
+  "status": "VISUAL_ANALYSIS_PARTIAL_PARTITION_V4_EVENTS_V6_CHECKPOINT_R",
   "CT_SCAN_COMPLETE": false,
   "video_id": "xtqbRt94TTw",
   "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
@@ -21,7 +21,7 @@
     "source_hash_and_stream_identity": "PASS_USER_SUPPLIED_ID_HASH_MATCH",
     "all_frame_numeric_timeline": "PASS",
     "all_gap_ownership": "PASS_WITH_SAMPLED_INTERIORS",
-    "full_semantic_event_timing": "PARTIAL;4NATIVE_ROI_SUPPLEMENTS_WITH2REFINEDBOUNDS;MACRO_BOUNDS_SUB101_SUB151_AND_GLOBAL_ONSET_FLOOR_OPEN",
+    "full_semantic_event_timing": "PARTIAL;NATIVE_SELECTION_APPEARANCE_WRAP_CONTRACTION_VERIFIED;CHART_MACRO_UNINTEGRATED_GLOBAL_ONSET_FLOOR_OPEN",
     "independent_gap_review": "PASS_BOUNDED_123_GAPS",
     "merge_split_adjudication": "PASS146_OF146_WITH_EXPLICIT_DISTINCT_AND_NONCONTIGUOUS_RULINGS",
     "narration_visual_semantics": "199SAMPLED_ROWS_REVIEWED;0OUTSIDE_INTERVAL_SAMPLES;PARTIAL21UNDETERMINED_7POTENTIAL_MISMATCH_ASR_ONLY",
@@ -58,17 +58,17 @@
     "actual_listening_seconds": 0,
     "status": "VISUAL_ANALYSIS_PARTIAL_NOT_CT_COMPLETE"
   },
-  "coverage_ref": "research/session_20261104/coverage_checkpoint_Q.json",
-  "known_issues": "research/session_20261104/KNOWN_ISSUES_LEDGER_v6.md",
-  "event_ledger": "research/integrated_v4/visual_event_ledger_v5.csv",
+  "coverage_ref": "research/session_20261104/coverage_checkpoint_R.json",
+  "known_issues": "research/session_20261104/KNOWN_ISSUES_LEDGER_v7.md",
+  "event_ledger": "research/integrated_v4/visual_event_ledger_v6.csv",
   "asr": {
     "segments": 199,
     "segment_union_seconds": 820.52,
     "actual_listening_seconds": 0,
     "label": "ASR_UNCERTIFIED_NOT_LISTENING"
   },
-  "active_task": "NONE_REVIEWERS_FINISHED;root sealing/publication",
-  "next_task": "Native macro lifecycles EP0233/SUB101/EP0234 andSUB151/EP0540;remainingsemantic/nativecut/onset andoriginalproductionQA; qualifiedfullsourcehearing required",
+  "active_task": "Chartmacroreview separate;inspectactual live task/output before resuming",
+  "next_task": "Validate actual chartmacro finished/partial output andpendingpaths; thennative exactboundaryframes,remainingsemantic/productionQA andqualifiedsourcehearing",
   "narration_review": {
     "ASR_segments_total": 199,
     "sampled_relation_rows_reviewed": 199,
@@ -175,5 +175,20 @@
     "event_rows": 948,
     "motion_index_rows": 766,
     "status": "FOUR_BOUNDED_MOTION_SUPPLEMENTS_INTEGRATED;NOT_GLOBAL_CT_MOTION_PASS"
+  },
+  "selection_macro": {
+    "candidate": "EP0234",
+    "raw_claim": "second and later lines unchanged",
+    "ruling": "CONTRADICTED_IN_NATIVE_ROI_SECOND_LINE_SELECTION8017\u20138025",
+    "raw_source": "agents/shard_5/OUT_shard_5.json",
+    "curated_source": "selection_macro_review_v1/OUT_selection_macro_review_v1.json",
+    "raw_file_unchanged": true,
+    "dominant_frame_partition": "v4unchanged; boundedselectionvariants separate",
+    "cursor_velocity_from_line_width_jump": "NOT_ESTABLISHED",
+    "selection_removal": "UNKNOWN_BEYOND8045",
+    "easing": "UNKNOWN",
+    "event_rows": 948,
+    "bounded_graphic_variant_rows": 7,
+    "CT_SCAN_COMPLETE": false
   }
 }

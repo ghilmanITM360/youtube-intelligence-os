@@ -1,0 +1,630 @@
+{
+  "macro_id": "SELECTION_MACRO_EP0233_SUB101_EP0234_f07996_f08045",
+  "verdict": "CONFIRMED_WITH_MULTILINE_EXCURSION_AND_NONMONOTONIC_RANGE_ADJUSTMENT",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "window_frames": [
+    7996,
+    8045
+  ],
+  "source_pts_formula": "(frame+1)/24",
+  "observed_before": "New nativeROIs7996\u20138001 show no semantic blue text-selection range. Arrow/cursor is near beginning of paragraph; tiny2qualifying-blue-pixel count at8000 does not form a selection.",
+  "observed_change": "Blue selection first appears8002 at start of Chatham\u2026; left anchor stays near sourcex198. It expands through first line, jumps to a two-line range8017, keeps extending on second line through8024, briefly holds8025, contracts to first-line sentence8026 and refines right edge8027\u20138028. Later reused endpoint review confirms cursor/selection adjustment8034\u20138038 including4px mask retraction8037.",
+  "observed_after": "Single-line selection retained at source mask bounds198\u2026923 through8045. Reused8033\u20138045 observations cover right-end subregion only;all50first-line mask values are measured source evidence rather than50newfullwidth image views. Eventual selection exit/removal beyond8045 remains unknown.",
+  "events": [
+    {
+      "event_type": "TEXT_SELECTION_APPEAR",
+      "onset_frame": 8002,
+      "last_change_frame": 8002,
+      "hold_start_frame": null,
+      "offset_frame": null,
+      "description": "No semantic selection8001; blue rectangle covering the start of Chatham appears8002. Exact appearance transition8001\u21928002 is newly natively viewed. Mask left198/right223,PTS333.458333s.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08000_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08001_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08002_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08003_nativeROI.png"
+      ],
+      "measurement_refs": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/items.json#measurements",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/new_ROI_line_mask_measurements_v1.json"
+      ],
+      "limitations": [
+        "Onset is blue-selection visibility, not proof of mouse-button-down timing.",
+        "offset=null refers to unknown overall selection removal, not disappearance after appearance beat."
+      ]
+    },
+    {
+      "event_type": "TEXT_SELECTION_RANGE_GROWTH_WITH_SECOND_LINE_EXCURSION",
+      "onset_frame": 8003,
+      "last_change_frame": 8024,
+      "hold_start_frame": 8025,
+      "offset_frame": null,
+      "description": "Fixed left198; first-line right239at8003\u2192705at8016. At8017 first line fills to1079 and selection also wraps onto second line198\u2026743. Second-line right extends743\u2192783\u2192811\u2192849\u2192859\u2192871\u2192895\u2192911 from8017 through8024;8025 repeats911. First-line-only right is constant1079 during8017\u20138025, but entire range continues changing until8024. First subsequent unchanged whole-range frame is8025, a one-frame pause before contraction8026.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08003_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08008_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08009_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08016_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08017_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08018_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08020_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08021_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08024_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08025_nativeROI.png"
+      ],
+      "measurement_refs": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/items.json#measurements",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/new_ROI_line_mask_measurements_v1.json"
+      ],
+      "limitations": [
+        "A first-line-width hold is not a whole-selection hold; second-line expansion cannot be inferred from supplied first-line mask alone.",
+        "No single monotonic width-growth/easing claim across the macro.",
+        "Visual selection range is observed; physical drag/button state unverified.",
+        "offset=null preserves unknown eventual selection removal."
+      ]
+    },
+    {
+      "event_type": "TEXT_SELECTION_CONTRACT_TO_ONE_LINE_AND_ENDPOINT_REFINE",
+      "onset_frame": 8026,
+      "last_change_frame": 8028,
+      "hold_start_frame": 8029,
+      "offset_frame": null,
+      "description": "At8026 second-line blue range clears and first line retracts from1079 to919;8027right923,8028right927. Single-line range holds unchanged from8029 through8036 by supplied first-line trace, with newly viewed fullwidth8029\u20138032 and reused endpoint8033\u20138036. This range contraction is not camera/text motion.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08024_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08025_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08026_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08027_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08028_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08029_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08030_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08031_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08032_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08033_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08036_nativeROI.png"
+      ],
+      "measurement_refs": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/items.json#measurements",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/new_ROI_line_mask_measurements_v1.json"
+      ],
+      "limitations": [
+        "Mask-boundary precision is heuristic and affected by antialiasing/cursor overlap; values are not exact source curve coordinates.",
+        "Subsequent endpoint event overlaps retained selection.",
+        "offset=null is unknown final highlight exit."
+      ]
+    },
+    {
+      "event_type": "CURSOR_AND_SELECTION_ENDPOINT_ADJUSTMENT_REUSED_SUB103",
+      "onset_frame": 8034,
+      "last_change_frame": 8038,
+      "hold_start_frame": 8039,
+      "offset_frame": 8038,
+      "description": "Reuse curated SUB103: arrow\u2192Ibeam and small local cursor changes8034\u20138038. First-line blue right927through8036 retracts to923at8037 and remains923through8045. Cursor has substantive raster/shape change at8038 after selection-width change8037; first unchanged adjacent endpoint geometry at8039, with only1level pixel differences until8040 then pixel-identical8040\u20138045. offset8038 is the local cursor-adjustment endpoint only; selection remains.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08033_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08034_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08035_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08036_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08037_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08038_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08039_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08040_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08045_nativeROI.png"
+      ],
+      "measurement_refs": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/items.json#measurements",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/OUT_motion_missing_fields_review_v1.json#SUB103",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/adjacent_pixel_measurements_v1.json#SUB103"
+      ],
+      "limitations": [
+        "This endpoint event uses13reusedSUB103native receipts from19total reused prior receipts;not newly displayed fullwidth derivatives.",
+        "SUB103 frame views are572x121right-end nativeROI;fullwidth hold after8032 is measured,not newly visually reviewed.",
+        "Does not change prior curated motion conclusion or imply selection removal."
+      ]
+    }
+  ],
+  "motion_object": {
+    "object": "blue text-selection range, with independent cursor endpoint state",
+    "properties": [
+      "first-line right boundary",
+      "second-line selected range presence and right boundary",
+      "cursor arrow/Ibeam substitution"
+    ],
+    "path": {
+      "coordinate_system": "source1920x1080pixels; first-line maskY604:627,second-line supplementY628:650 inclusive",
+      "left_anchor_source_x": 198,
+      "first_line_keyframes": [
+        {
+          "frame": 8002,
+          "right": 223
+        },
+        {
+          "frame": 8016,
+          "right": 705
+        },
+        {
+          "frame": 8017,
+          "right": 1079
+        },
+        {
+          "frame": 8025,
+          "right": 1079
+        },
+        {
+          "frame": 8026,
+          "right": 919
+        },
+        {
+          "frame": 8027,
+          "right": 923
+        },
+        {
+          "frame": 8028,
+          "right": 927
+        },
+        {
+          "frame": 8036,
+          "right": 927
+        },
+        {
+          "frame": 8037,
+          "right": 923
+        },
+        {
+          "frame": 8045,
+          "right": 923
+        }
+      ],
+      "second_line_range": [
+        8017,
+        8025
+      ],
+      "second_line_right_start": 743,
+      "second_line_right_max": 911,
+      "second_line_absent_from": 8026
+    },
+    "easing": "UNKNOWN",
+    "duration_note": "Visible selection8002\u20138045 spans44frames=1.833333s exposure,43PTSintervals=1.791667s; survives final reviewed frame. Appearance8002\u2192lastinitialrangegrowth8024=22/24=0.916667s. Two-line excursion8017\u20138025 spans9frames=0.375s; return to one line8026. Endpoint refinement8026\u20138028 spans3frames=0.125s exposure; stable adjacent frame8029. These are reviewed intervals, not total selection lifetime.",
+    "measurement_rule": "SourceY604:627,X171:1595; B>120,B-R>40,B-G>20; densecolumn pixelcount>=12. Heuristic selection-mask measurement, not source curves/true color.",
+    "physical_mouse_gesture": "UNVERIFIED;screen selection/cursor behavior observed,button state not recorded"
+  },
+  "static_anchors": [
+    "article paragraph line positions/baselines",
+    "selection start near sourcex198",
+    "presenter head/eyes/glasses visible at right edge of new nativeROI",
+    "overall article/presenter/laptop/desk composition in newscaled7996context and prior reviewed contexts"
+  ],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "pending_new_image_paths": [],
+  "new_evidence_reads": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f07996_nativeROI.png",
+      "sha256": "cda1975ffc03c6d30c3320de56b74e8ae1e0ae615c3f602fb2f5276160bfef76",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame7996: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f07997_nativeROI.png",
+      "sha256": "ff7644a7af22d6525fe10c402a6b1f4dc17c46d44548d960bb214b6215f972a7",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame7997: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f07998_nativeROI.png",
+      "sha256": "c0166100658bc5bf5605c490e3d0e5a49475765f7c82ac24b4ae936199ec811f",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame7998: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f07999_nativeROI.png",
+      "sha256": "c57ced37da2ffd3e36337de2d2db880eb841f01ff94a388a43da055feed22e93",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame7999: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08000_nativeROI.png",
+      "sha256": "f88cb056f141e17b2761dae040520aac0ec4da0064c539fc4727ad65cae0cb43",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8000: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08001_nativeROI.png",
+      "sha256": "04fb8acd8db895169261287dd0dcdd555903e852f0f99bc0b544cee002157e97",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8001: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08002_nativeROI.png",
+      "sha256": "1e5afea5cc946c99efbbe8894a3d3f65788ed145ff02db6748bd7de8563e2a68",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8002: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08009_nativeROI.png",
+      "sha256": "f15db153bf4c5994fd20fc983ff2405212ca79b7107b06a5337904749d6373f9",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8009: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08010_nativeROI.png",
+      "sha256": "afeeb124d1bac6898b964958f81775f8c4d07a7b79bd957e4b06a6c21da67a30",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8010: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08011_nativeROI.png",
+      "sha256": "198efef503f65324032f1c76cbc58415fbf266de11adc3bf85da1f8dd9d201b5",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8011: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08012_nativeROI.png",
+      "sha256": "d137a9a0e2c0ce6a05f502727c5b3c48cd70a6a2f71cc77b0c1db22db6d0e986",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8012: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08013_nativeROI.png",
+      "sha256": "0bc636a6163eb400455c7c22770cb030872d31747c6d68c8fc0bb89cae8ce4d1",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8013: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08014_nativeROI.png",
+      "sha256": "8f65bb86dfa89154805e88205405c9d9f8ca9e43ad8cf13fa5781459707108ed",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8014: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08015_nativeROI.png",
+      "sha256": "b34f2b8454f96059e11a1f20049c591123214c5793f25db9761f3fc40ca676a0",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8015: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08016_nativeROI.png",
+      "sha256": "c6d19138f327a45f6d3ed4ca853701538d1720d1ae19cc8310101efc119e4fd4",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8016: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08017_nativeROI.png",
+      "sha256": "0650afe9744d22339d4d92b00fe2768baae418ca3ef6dd2526125e25b71db9ac",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8017: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08018_nativeROI.png",
+      "sha256": "545f2e68846088c945382c1e5ee44649559ed80364f0cc66f77bdd46add398a6",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8018: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08019_nativeROI.png",
+      "sha256": "2cce48223d71b1f7f8aee855c56e731f4d435a8a7978cab147c39a38469a1e64",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8019: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08020_nativeROI.png",
+      "sha256": "ee5d3712794e225797c0ab3f13ff151c1a356ef922a0dfebb002cf2d361224b4",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8020: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08021_nativeROI.png",
+      "sha256": "c5f6fe2890da15dce36b54b478b651a7da6153eaaeca03e74e091402a7aa1cd5",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8021: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08022_nativeROI.png",
+      "sha256": "c1e8dc4dba16d3d5401faff648505beee645a3f53c25eef4f944bf4e6ca4b755",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8022: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08023_nativeROI.png",
+      "sha256": "4f2a83fa7ae725ba1293f2f8435a75b7612b1f266ce4f52edabee745997cf9a1",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8023: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08024_nativeROI.png",
+      "sha256": "7bc1c45698886ee4ef627c5169740cb13f0301f54261d9fed2d3bd1c0d499714",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8024: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08025_nativeROI.png",
+      "sha256": "f4b12fe5a1acb57f3be4d534cc0303a9cadeb3a90c02e18e67d06ce87b6b9d24",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8025: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08026_nativeROI.png",
+      "sha256": "277b06d0e25eb13d6a4a6b3cb7e642cccd637c1863aa5b25c399112aa0ce7e1f",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8026: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08027_nativeROI.png",
+      "sha256": "0384779520a216366efbe57512652e38ec7944d0fa128177617673f4eabf6161",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8027: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08028_nativeROI.png",
+      "sha256": "7376d8ed5c2d2d19120f69921d24fd8a16dac467d1706939a769c39e4d5c4bf1",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8028: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08029_nativeROI.png",
+      "sha256": "e03aace9427edd78d0f40a54e50ae2dbfa2dd703db3ee57186dc653ab24ba30e",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8029: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08030_nativeROI.png",
+      "sha256": "ebfdc3c89f7f53c494c38733b930c263a063be068acc7e0c821c273b9a10e783",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8030: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08031_nativeROI.png",
+      "sha256": "b56b0195b459070115efc539f8b6068c3dd667bbd197838a87b9259b1961c1b7",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8031: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f08032_nativeROI.png",
+      "sha256": "12ac18ed8f4bf79138cc88437e2ae20f52126c1be02ec713f3929b1e3ffcea44",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Selection macro frame8032: new returned NATIVE_1to1_ROI_NOT_FULLFRAME; inspected first-line and visible neighboring line."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/f07996_context960.jpg",
+      "sha256": "41ed81dfb60623f34bda19ec05fdf39e2c1e015f9367655dd13dc7b3c11dd261",
+      "scale": "SCALED_CONTEXT960x540",
+      "successful": true,
+      "witness": "Selection macro context frame7996: new returned scaled960x540; article/presenter/laptop anchors inspected."
+    }
+  ],
+  "reused_prior_evidence_reads": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08003_nativeROI.png",
+      "sha256": "1737859e2346ba06869ad1471ada74fc497945ed2b52c4e1a6f8150484898956",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8003: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior1425x412 nativeROI included this first-line range;not a new display of the prepared115px-high derivative."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08004_nativeROI.png",
+      "sha256": "b40c7faa7b232061ab93d88db8f10d9fd32a52072fa1b286e19977058d4e598e",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8004: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior1425x412 nativeROI included this first-line range;not a new display of the prepared115px-high derivative."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08005_nativeROI.png",
+      "sha256": "208c415beedda103a7fb334968922f701d5a54c1dc5b1fddaa705e58a5e27f24",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8005: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior1425x412 nativeROI included this first-line range;not a new display of the prepared115px-high derivative."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08006_nativeROI.png",
+      "sha256": "96d2fbd639ea14a784be125394388f444c2db356a3f9d555e44b1aa31067e628",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8006: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior1425x412 nativeROI included this first-line range;not a new display of the prepared115px-high derivative."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08007_nativeROI.png",
+      "sha256": "37c6f4e270988103a72325957ed722d2f165ee316222cf7b6b34ccb71f0a9c9b",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8007: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior1425x412 nativeROI included this first-line range;not a new display of the prepared115px-high derivative."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08008_nativeROI.png",
+      "sha256": "efba68bbb051d3ca16e42e2810beecb48ecdc443612f93a0b13d2331fdc8f3be",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8008: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior1425x412 nativeROI included this first-line range;not a new display of the prepared115px-high derivative."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08033_nativeROI.png",
+      "sha256": "5491fac1a899aee6440d291e0bbc719f65d74f1f905c5a54bc68c9786180b617",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8033: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08034_nativeROI.png",
+      "sha256": "b44ec241bd10c606406cc38f1aaf5d822484ec3c835bb2fd020c1e38d3d79525",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8034: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08035_nativeROI.png",
+      "sha256": "e067203c1e61468d31c5728b685d1715802cfdbbd683809e1cb22ea6b6f3bb4c",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8035: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08036_nativeROI.png",
+      "sha256": "cb9e657e5bfe47c6a4b65c2b494689a1a3ec47660535c9e37e9b86ff3ca2359b",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8036: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08037_nativeROI.png",
+      "sha256": "76c9238cf7331089f177e4b0b2624eed971c87ed7ba111a6f529bd60328afe74",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8037: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08038_nativeROI.png",
+      "sha256": "d5091b4eb66ed39e581e50eb429b5d64e269cf21e193b8f1d82672417be87eb5",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8038: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08039_nativeROI.png",
+      "sha256": "46e56542f1001a3fe3bee2cd78c13427c6dfcdd105e1c2f7c1a1c3df4f121b99",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8039: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08040_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8040: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08041_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8041: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08042_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8042: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08043_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8043: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08044_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8044: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08045_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8045: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reused_without_new_display": true,
+      "coverage_note": "Prior572x121 right-end native subregion only;not a fullwidth1425x115 view."
+    }
+  ],
+  "measurement_refs": [
+    "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/items.json#measurements",
+    "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/new_ROI_line_mask_measurements_v1.json"
+  ],
+  "prior_review_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/OUT_motion_missing_fields_review_v1.json",
+  "limitations": [
+    "Exactly31newnative1425x115ROIs+1newscaled960x540context returned;19priornativeSUB101/SUB103receipts reused without new display.",
+    "Prepared fullwidthROIs markedrequest_new_actual_view=false were not newly displayed or counted as new visual coverage.",
+    "50framefirst-line masktrace supplied from sequential source decode;numerical trace is not proof of50newROIviews.",
+    "NativeROI is not nativefullframe;contextscaled960x540.",
+    "Newsecond-line measurement supplement uses only31newly viewedROIs and same channel/densecolumn thresholds in fixed second-line band.",
+    "Blue maskbounds areheuristic;software,exactcolors,easing/sourcecurves and physical button timing unestablished.",
+    "No new shot/state for each maskstep;overlapping selection and cursor events kept distinct.",
+    "Selection removal/eventexit beyond8045 unknown;audio0seconds;nofinancialtruth/globalCTclaim.",
+    "Source,raw drafts,priorcuratedoutputs,Git/lock/process/scheduler untouched."
+  ],
+  "usage_start": {
+    "primary": 58,
+    "weekly": 25
+  },
+  "usage_at_stop": {
+    "primary": 65,
+    "weekly": 26,
+    "reset_credits_used_by_reviewer": 0,
+    "paid_credits_spent": 0,
+    "remaining_reset_credits": 1
+  }
+}
