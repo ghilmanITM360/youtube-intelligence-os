@@ -8,11 +8,11 @@ WS = pathlib.Path.home() / "YIOS-local-audits/xkcd-whatif"; REPO = "/Users/ghilm
 BR = "research/xkcd-whatif-visual-forensics"; PREFIX = "research/visual-forensics/channels/UC6IxnFzHofFJ5X2PycSMsww/"
 run = lambda *a, **k: subprocess.check_output(a, cwd=REPO, text=True, **k).strip()
 INCLUDE = ["census/census.csv", "census/census_summary.json", "census/tab_listings.json", "census/catalog_ch000004_ids.json",
-           "selection/*.json", "selection/*.txt", "campaign/*", "scripts/*.py", "scripts/*.sh", "scripts/*.md"]
+           "selection/*.json", "selection/*.txt", "campaign/*", "campaign/strip_review/*.md", "campaign/strip_review/*.csv", "campaign/strip_review/*/*.csv", "scripts/*.py", "scripts/*.sh", "scripts/*.md"]
 VID = ["source_manifest.json", "coverage.json", "shot_ledger.csv", "visual_event_ledger.csv", "audio_visual_alignment.csv",
        "visual_ct_scan_report.md", "reconstruction_blueprint.md", "quality_gate.json", "continuation_handoff.md",
        "tables/state_ledger.csv", "tables/segments_v1.csv", "tables/detector_calibration.json", "tables/palette_measured.json",
-       "tables/sheet_index.csv", "tables/scenedetect_candidates.csv", "evidence/source_sha256.txt", "evidence/ffprobe_full.json", "evidence/ebur128.txt",
+       "tables/sheet_index.csv", "tables/strip_index.csv", "tables/strip_refinement.csv", "tables/scenedetect_candidates.csv", "evidence/source_sha256.txt", "evidence/ffprobe_full.json", "evidence/ebur128.txt",
        "asr/asr_small_en.json", "asr/asr_vs_catalog_caption.json", "review/*.csv", "review/*.json", "review/*/*", "review_brief_*.md"]
 files = set()
 for g in INCLUDE: files |= {p for p in WS.glob(g) if p.is_file()}

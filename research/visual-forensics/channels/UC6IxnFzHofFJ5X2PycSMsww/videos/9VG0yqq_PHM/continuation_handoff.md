@@ -1,0 +1,6 @@
+# Continuation handoff — 9VG0yqq_PHM
+- Source sha256 1a5c6363860a5c2c90c608602c8c9a9e3a8241238c8d75d0d4c94a16ac6016ac; path /Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/If you put a toaster in a freezer, which wins？ [9VG0yqq_PHM].mp4; machine A (Ghilmans-Laptop), xkcd stream lock ~/YIOS-local-audits/xkcd-whatif/.xkcd_writer_lock.
+- Status VISUAL_ANALYSIS_PARTIAL; gates {"source_identity": "PASS", "full_temporal_overview": "PASS", "candidate_shots_verified": "PASS", "meaningful_state_timing": "PARTIAL", "motion_design_review": "PARTIAL", "creative_design_review": "PARTIAL", "visual_script_mapping": "PARTIAL", "production_blueprint": "PARTIAL", "audio_human_listening": "BLOCKED", "final_av_signoff": "BLOCKED"}.
+- Pending: meaningful_state_timing, motion_design_review, creative_design_review, visual_script_mapping, production_blueprint, audio_human_listening, final_av_signoff; unresolved segments ['G0018', 'G0026', 'G0028', 'G0030', 'G0036', 'G0136']; partially viewed activities 17.
+- Tools: scripts/xk_ingest.sh, xk_segment.py, xk_sheets.py, xk_build.py, xk_palette.py, xk_asr_check.py, xk_finalize.py (python -I; cv2 venv ~/YIOS-local-audits/tooling/visual-ct-scan-venv).
+- Next exact operation: listening by a human (intervals = all speech 0–162.261043s); optional full-frame strips for partially viewed activities.
