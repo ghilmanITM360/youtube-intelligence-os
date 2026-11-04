@@ -1,0 +1,6 @@
+event_id,state_v4,start_frame,end_frame,event_class,observation,evidence,label
+NAC-V1-E01,W085b,13993,13999,GRAPHIC/TEXT:FADE_IN,"""and yet"" handwritten-style white text fades in on black (per-frame diff 0.17-0.34, then 0.00 from f14000)",FULL_FRAME_MEASUREMENTS.csv f13990-14062; nonaudio_completion/frames_local_only/v1_W085b_gain.png,MEASURED+OBSERVED
+NAC-V1-E02,W085b,14029,14029,GRAPHIC/TEXT:SINGLE_FRAME_WORD_SWAP,"""and yet"" replaced by ""somehow"" in one frame, same position, no fade (diff 2.83 at f14029 only; 0.00 either side)",same,MEASURED+OBSERVED
+NAC-V1-E03,W085b,14058,14059,SHOT_CUT:EXIT_NO_FADE,"Text card is static to f14058 (mean luma 2, diff 0.00); f14059 is the first frame of W086 cave scene fading in (luma 2->18->30). W085b has NO fade-out.",same,MEASURED+OBSERVED
+NAC-V1-E04,W016,2835,2835,CAMERA:DIGITAL_ZOOM_PUNCH_IN,"1-frame discontinuous scale-up on the same globe/ice artwork (diff 0.01 -> 38.95 -> 0.26), followed by a continuous accelerating move from f2837 (0.56,0.84,1.15,1.43,1.71). Cut-vs-keyframe UNDECIDABLE from output pixels.",VC-14; FULL_FRAME_MEASUREMENTS.csv f2828-2841,MEASURED+OBSERVED
+NAC-V1-E05,W032,5429,5429,CAMERA:DIGITAL_ZOOM_PUNCH_IN,1-frame wide->closer punch-in on the same two cavemen (0.05 -> 31.35 -> 0.74). Cut-vs-keyframe UNDECIDABLE.,VC-15,MEASURED+OBSERVED

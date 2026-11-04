@@ -1,0 +1,74 @@
+{
+ "test": "RT-V2-01 camera module, post-FAIL diagnosis (2026-11-04, session 1e8761b1). Original FAIL and criterion preserved unchanged in ../../../2026-11-03-mNLNb-Z4T0M-deep-ct-scan/reconstruction_test/RT-V2-01/EVALUATION.json",
+ "instrument": "scripts/cam_traj.py: ORB(4000)+BF cross-check, top 1500 matches, RANSAC partial-affine vs window first frame; MEASURED",
+ "source_S080": {
+  "window": "f8172-8200",
+  "scale_range": [
+   1.0,
+   1.00141
+  ],
+  "ty_range": [
+   -0.4,
+   0.03
+  ],
+  "tx_total_px": 137.47,
+  "moving_frames": "f8178-f8193 (16 frames; per-frame |dtx|>0.5 px)",
+  "rest_from": "f8194",
+  "per_frame_velocity_px_f8178_8193": [
+   3.4,
+   4.86,
+   6.71,
+   8.59,
+   10.66,
+   12.2,
+   14.19,
+   15.25,
+   14.11,
+   12.52,
+   10.58,
+   8.37,
+   6.29,
+   5.2,
+   3.03,
+   1.51
+  ],
+  "progress_f8177_8193": [
+   0.0,
+   0.0247,
+   0.0601,
+   0.1089,
+   0.1714,
+   0.2489,
+   0.3377,
+   0.4409,
+   0.5518,
+   0.6545,
+   0.7455,
+   0.8225,
+   0.8834,
+   0.9291,
+   0.967,
+   0.989,
+   1.0
+  ],
+  "peak_velocity_frame": "f8185 (index 7 of 16)",
+  "peak_to_mean_velocity": 1.77,
+  "classification": "HORIZONTAL PAN (image content moves right ~137.5 px = 7.2% of width), ease-in-out, scale constant within 0.15% (no push-in), vertical drift <0.4 px"
+ },
+ "source_S088_reference": {
+  "window": "f9130-9160",
+  "finding": "slow combined push (scale +1.2% over 30 frames) with diagonal drift; a DIFFERENT move type from S080, still moving at f9160; not used for RT-V2-02"
+ },
+ "render_RT_V2_01": {
+  "design": "render.py: uniform scale 1->1.25 with smoothstep over 16 frames (f100-f115)",
+  "measured": "scale 1.0->1.249 by f114; ORB inliers 7-32 on the flat board so f101-104 tracking failed (reported scale 1.0 while pixel diff shows change)",
+  "classification": "PUSH-IN; follows the spec it was given"
+ },
+ "diagnosis": {
+  "incorrect_reference_measurement": "YES: the spec labelled S080 a 'push-in/reframe' from mean_abs_diff alone; mean diff cannot tell scale from translation; magnitude and axis were never measured. Geometric tracking shows a pan.",
+  "incorrect_reconstruction": "NO for the given spec (worker implemented the stated push with ease); YES relative to the source (wrong move type) as a consequence of the spec error",
+  "unsuitable_criterion": "YES: absolute mean_abs_diff>0.3 is texture-dependent; the same motion on the source's textured art gives peak 10.2 but on the flat test board 1.4, so first/last moving frames (0.204, 0.165) fall under 0.3 -> 14 counted. Also a flat board defeats geometric tracking, so the test scene itself must be textured.",
+  "verdict": "COMBINATION: wrong reference measurement (primary defect) + unsuitable criterion + unsuitable flat test scene"
+ },
+ "fix": "RT-V2-02: spec re-derived from geometric trajectory (pan, magnitude, per-frame progress); textured test scene; evaluator measures trajectory with the same instrument on source and render; criterion pre-registered in RT-V2-02_PREREGISTERED_CRITERION.json before rendering."
+}
