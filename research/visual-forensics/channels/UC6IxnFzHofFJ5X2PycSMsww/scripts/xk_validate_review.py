@@ -36,7 +36,7 @@ if T.exists():
     missing = [s for s in sheets if s not in opened]
     if missing: errs.append(f"sheets never opened: {missing}")
     if imgs < len(sheets): errs.append(f"image results {imgs} < sheets {len(sheets)}")
-    other_writes = [p for p in re.findall(r'"name":"(?:Write|Edit)","input":\{"file_path":"([^"]+)"', txt) if not p.startswith(str(R))]
+    other_writes = [p for p in re.findall(r'"name":"(?:Write|Edit)","input":\{"file_path":"([^"]+)"', txt) if not (p.startswith(str(R)) or p.startswith(str(R.resolve())))]  # rv1 may be a symlink to rvH*
     if other_writes: errs.append(f"writes outside review dir: {other_writes}")
     prov = dict(transcript=str(T), transcript_sha256=hashlib.sha256(T.read_bytes()).hexdigest(), sheet_read_calls=len(sheet_reads),
                 unique_sheets_opened=len(opened), image_results=imgs, sheets_expected=len(sheets))

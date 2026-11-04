@@ -31,3 +31,9 @@ Read first: campaign/CAMPAIGN_GOAL_v1.md, CHANNEL_PRODUCTION_MANUAL_v0.2.md (v0.
 - RT3 long-form structure PASS (reconstruction/RT3/RT_EVALUATION.md); object-detail density still weak in renders.
 - Session d2a98830 stopped 2026-11-04T16:39Z at weekly 89% / 5h 78% (90% weekly no-new-reviewer rule). Checkpoint H f2187c44. Lock released.
 - 2026-11-04T17:22:47Z held-out-3 started (HELDOUT_PROTOCOL_v3.md pre-registered before ingest). All 3 ingested+measured; 19/19 evaluated checks PASS (HELDOUT_EVALUATION_v3.md). FYoHYq8VRt0 fully reviewed+built (reviewer dir rvH3_* symlinked as rv1_*; G0058 CSV quoting fixed via primary_corrections.csv; xk_correct.py now drops overflow cells). NEXT: reviewer for TFhrRrRdUbA (18 sheets) and 4ZVtHknKuvg (22 sheets) using existing briefs, then symlink rv1_<id>, spot-check, xk_process.sh, add Q2 + qualitative to v3 evaluation. Stopped at 5h 85% / weekly 90%.
+- 2026-11-04T17:24:15Z checkpoint I 97dde04c published (1082 files, 0 mismatches, seal verified via gh api). Lock released. Resume after 5h reset 2026-11-04T20:00Z; weekly 90% (CLAUDE.md hard stop 95%).
+
+## Update 2026-11-05 (checkpoint J)
+- TFhrRrRdUbA and 4ZVtHknKuvg reviewers (rvH3) done, spot-checked, processed. HELDOUT_EVALUATION_v3.md FINAL: 21/21 quantitative PASS, all evaluated qualitative rules PASS; caveats on hold floor (4ZVt 1.17 s) and R2 colour wording.
+- xk_validate_review.py patched to accept rv1->rvH* symlink write paths.
+- Next: manual v0.5 (R2 colour note, 2026 hold-floor review), re-review of 30 remaining strips, 9:16 Short RT, Phase 7 knowledge links. Weekly usage ~92% at this checkpoint; resume after weekly reset 2026-11-06T22:00Z.
