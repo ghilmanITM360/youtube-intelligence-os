@@ -1,0 +1,70 @@
+{
+  "status": "VISUAL_ANALYSIS_PARTIAL_INTEGRATED_V3",
+  "CT_SCAN_COMPLETE": false,
+  "video_id": "xtqbRt94TTw",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "first_pass_shards_structurally_validated": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "first_pass_pending": [],
+  "frames_measured_and_independently_counted": 19862,
+  "gates": {
+    "source_hash_and_stream_identity": "PASS_USER_SUPPLIED_ID_HASH_MATCH",
+    "all_frame_numeric_timeline": "PASS",
+    "all_gap_ownership": "PASS_WITH_SAMPLED_INTERIORS",
+    "full_semantic_event_timing": "PARTIAL",
+    "independent_gap_review": "PASS_BOUNDED_123_GAPS",
+    "merge_split_adjudication": "PARTIAL20_OF146;126PENDING",
+    "narration_visual_semantics": "PARTIAL_ASR_NUMERIC_OVERLAP_ONLY",
+    "production_state_prompts": "DRAFT447;originality_and_motion_validation_pending",
+    "bounded_original_render_test": "PASS_SCHEDULE_ANCHORS_AND6INDEPENDENT_IMAGE_CHECKPOINTS;notwholevideo",
+    "actual_source_listening": "BLOCKED_NO_QUALIFIED_AUDIO_PERCEPTION",
+    "full_av_signoff": "BLOCKED"
+  },
+  "integration": {
+    "frames": 19862,
+    "numerical_missing": 0,
+    "numerical_overlaps": 0,
+    "gap_items_reviewed": 123,
+    "gap_frames_reviewed": 3116,
+    "unresolved_gap_frames": 0,
+    "unresolved_brackets": [],
+    "targeted_items_completed": 20,
+    "targeted_items_pending": 126,
+    "merge_ruling_counts": {
+      "MERGE_CONTIGUOUS": 18,
+      "KEEP_DISTINCT": 2
+    },
+    "merges_applied": 18,
+    "split_ruling_counts": {
+      "NOT_REQUESTED": 17,
+      "SPLIT": 3
+    },
+    "splits_pending_exact_timing": [],
+    "composition_intervals": 453,
+    "partition_intervals": 625,
+    "semantic_full_video_certification": false,
+    "actual_listening_seconds": 0,
+    "status": "VISUAL_ANALYSIS_PARTIAL_NOT_CT_COMPLETE"
+  },
+  "coverage_ref": "research/session_20261103/coverage_checkpoint_N.json",
+  "known_issues": "research/session_20261103/KNOWN_ISSUES_LEDGER_v3.md",
+  "event_ledger": "research/integrated_v3/visual_event_ledger_v3a.csv",
+  "asr": {
+    "segments": 199,
+    "segment_union_seconds": 820.52,
+    "actual_listening_seconds": 0,
+    "label": "ASR_UNCERTIFIED_NOT_LISTENING"
+  },
+  "active_task": "remaining126_merge_review continuation; do not duplicate",
+  "next_task": "validate new remaining-merge output then integrated_v4; semantic narration/production/micro-event QA; actual listening still blocked"
+}
