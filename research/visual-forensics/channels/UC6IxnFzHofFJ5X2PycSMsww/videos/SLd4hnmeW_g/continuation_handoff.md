@@ -1,0 +1,6 @@
+# Continuation handoff — SLd4hnmeW_g
+- Source sha256 893ebff4dda30f790f56131052879b3353d75af7ba35edece8f95bf5810a3ac5; path /Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Weird and worrying questions [SLd4hnmeW_g].mp4; machine A (Ghilmans-Laptop), xkcd stream lock ~/YIOS-local-audits/xkcd-whatif/.xkcd_writer_lock.
+- Status VISUAL_ANALYSIS_PARTIAL; gates {"source_identity": "PASS", "full_temporal_overview": "PASS", "candidate_shots_verified": "PASS", "meaningful_state_timing": "PARTIAL", "motion_design_review": "PARTIAL", "creative_design_review": "PARTIAL", "visual_script_mapping": "PARTIAL", "production_blueprint": "PARTIAL", "audio_human_listening": "BLOCKED", "final_av_signoff": "BLOCKED"}.
+- Pending: meaningful_state_timing, motion_design_review, creative_design_review, visual_script_mapping, production_blueprint, audio_human_listening, final_av_signoff; unresolved segments ['G0006', 'G0014', 'G0030', 'G0040', 'G0052', 'G0054']; partially viewed activities 6.
+- Tools: scripts/xk_ingest.sh, xk_segment.py, xk_sheets.py, xk_build.py, xk_palette.py, xk_asr_check.py, xk_finalize.py (python -I; cv2 venv ~/YIOS-local-audits/tooling/visual-ct-scan-venv).
+- Next exact operation: listening by a human (intervals = all speech 0–47.508027s); optional full-frame strips for partially viewed activities.
