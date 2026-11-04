@@ -1,0 +1,80 @@
+{
+ "test": "RT-V2-S04",
+ "criterion_sha256": "0803c6ae53dfa290037d6db71a04de7978a5bf129e0bb1eab3c7dc23cfe5c33c",
+ "render_sha256": "19d7c55dfdb0d5cd7aca1487933bf44461cb228d9a648dc4839e02a971a4b0c3",
+ "deterministic": {
+  "C1": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames_ffprobe": 208,
+   "frames_decoded_cv2": 208
+  },
+  "C2": {
+   "ok": true,
+   "water": 0.384,
+   "grass": 0.265,
+   "sky": 0.12
+  },
+  "C3": {
+   "ok": true,
+   "version": "v2 direct vs f0",
+   "max_tx": 0.0,
+   "max_ty": 0.0,
+   "max_scale_dev": 0.0
+  },
+  "C3_v1_reported": {
+   "ok": false,
+   "sum_dscale": -0.0352,
+   "sum_dx": 46.6,
+   "scored": false
+  },
+  "C4": {
+   "ok": true,
+   "onsets": [
+    56,
+    77,
+    98,
+    123
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "longest_local_run": 78
+  }
+ },
+ "deterministic_overall": "PASS",
+ "C6_visual": {
+  "evaluator": "orchestrator, render frames f0,60,90,120,150,207 only",
+  "items": {
+   "hand_drawn_outline_style": {
+    "ok": true,
+    "obs": "jittered dark outlines on hills/river/trees, flat fills, sparse static texture"
+   },
+   "handwritten_labels": {
+    "ok": true,
+    "obs": "connected handwriting-style labels, white with dark outline, dotted arrows to items"
+   },
+   "perspective_drift": {
+    "ok": true,
+    "obs": "three rigid groups drift and shrink toward the horizon in order; figure rises from bottom edge and ends small near horizon"
+   },
+   "original_content": {
+    "ok": true,
+    "obs": "new words (bugs/mud/rotten fish), items and character"
+   }
+  },
+  "ok": true,
+  "non_scored_observations": [
+   "figure at f207 still moderately sized (spec: small near centre)",
+   "sand banks added (not in spec, harmless)"
+  ]
+ },
+ "overall": "PASS",
+ "history": "S01 FAIL (C3 v1 featureless + C6 typography), S02 FAIL (C2), S03 FAIL (C3 v1 cumulative bias), S04 PASS under criterion v2",
+ "scope": "style + full-scene for one bounded scene; font/software UNKNOWN; sound NOT tested"
+}

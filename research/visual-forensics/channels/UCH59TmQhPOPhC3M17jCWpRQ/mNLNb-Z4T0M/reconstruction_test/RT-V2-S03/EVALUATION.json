@@ -1,0 +1,45 @@
+{
+ "test": "RT-V2-S03",
+ "criterion_sha256": "626e59746ca845e74292a2b88e906418e296aa401873f5ab22542b1ff9efb1da",
+ "render_sha256": "30212198d56b29d42b53530e27687d234a026a0d2018ee2cf1fcadb86a4aefbb",
+ "deterministic": {
+  "C1": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames_ffprobe": 208,
+   "frames_decoded_cv2": 208
+  },
+  "C2": {
+   "ok": true,
+   "water": 0.45,
+   "grass": 0.312,
+   "sky": 0.109
+  },
+  "C3": {
+   "ok": false,
+   "sum_dscale": -0.0043,
+   "sum_dx": 16.6
+  },
+  "C4": {
+   "ok": true,
+   "onsets": [
+    57,
+    89,
+    123
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "longest_local_run": 78
+  }
+ },
+ "overall": "FAIL",
+ "C6_visual": "not scored (deterministic FAIL already decides; visual check deferred to S04)",
+ "diagnosis": "C2 fixed (grass 0.312). C3 sum_dx 16.6 > 15: background pixel-static (max 1.9% px changed vs f0, all moving groups); dx is a cumulative sum of sub-pixel same-sign per-frame fit biases (0.1-0.4 px). Measurement weakness of summed frame-to-previous fits on long static scenes.",
+ "retest": "RT-V2-S04 under criterion v2 (registered after this result; S03 keeps v1 FAIL)"
+}

@@ -1,0 +1,18 @@
+{
+ "test": "RT-V2-S04",
+ "version": "v2",
+ "registered_before_render": true,
+ "registered_utc": "2026-11-04T20:5xZ",
+ "supersedes": "v1 (sha256 626e5974...) kept; v1 C3 (summed frame-to-previous dx/dscale) accumulates sub-pixel bias on long static scenes (S03: 16.6 px from a pixel-static background)",
+ "criteria": [
+  "C1 format exact; frames 206-210",
+  "C2 palette at mid frame: >=30% within L1<=50 of #68c8d8/#68b8d8; >=8% within L1<=60 of #789838; >=8% within L1<=50 of #c8f8f8/#d8f8f8",
+  "C3 v2 no camera: every frame fitted DIRECTLY vs frame 0 (cam_traj.py, ORB+RANSAC similarity): max |tx| <= 6 px, max |ty| <= 6 px, max |scale-1| <= 0.003. Calibration: source max tx 3.73 / ty 5.08 / s 0.0019 (passes); synthetic 8 px pan of source max tx 9.5 (fails). Detection floor ~6 px.",
+  "C3 v1 metric (summed dx/dscale) still reported, not scored",
+  "C4 >=3 distinct label onsets: local-change spikes (residual_frac12 peak) separated by >=20 frames, all within f40-130",
+  "C5 a sustained local-motion run >=40 frames in f130-207 (figure drift)",
+  "C6 visual: hand-drawn style, white handwritten labels with arrows, perspective drift toward horizon, original content \u2014 each PASS/FAIL"
+ ],
+ "measurement": "deterministic C1-C5 by scripts/evaluate_style_rt.py on rendered pixels; C6 visual by orchestrator on render frames only; overall PASS only if all C1-C6 PASS",
+ "scope": "style + full-scene (characters, background, typography, layout, motion) for one bounded scene; font/software UNKNOWN; sound NOT tested"
+}

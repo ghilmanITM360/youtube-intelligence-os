@@ -1,0 +1,72 @@
+{
+ "test": "RT-V2-S02",
+ "criterion_sha256": "626e59746ca845e74292a2b88e906418e296aa401873f5ab22542b1ff9efb1da",
+ "render_sha256": "76f446a1aa697e3fa7a9d7c703f68cc15ac38986421647ba66621b74c94f3e69",
+ "deterministic": {
+  "C1": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames_ffprobe": 208,
+   "frames_decoded_cv2": 208
+  },
+  "C2": {
+   "ok": false,
+   "water": 0.331,
+   "grass": 0.069,
+   "sky": 0.219
+  },
+  "C3": {
+   "ok": true,
+   "sum_dscale": -0.0016,
+   "sum_dx": 3.0
+  },
+  "C4": {
+   "ok": true,
+   "onsets": [
+    56,
+    90,
+    120
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "longest_local_run": 78
+  }
+ },
+ "deterministic_overall": "FAIL",
+ "C6_visual": {
+  "evaluator": "orchestrator, render frames f0,60,90,120,150,207 only",
+  "items": {
+   "hand_drawn_outline_style": {
+    "ok": true,
+    "obs": "jittered outlines, flat fills + static hand-drawn texture"
+   },
+   "handwritten_labels": {
+    "ok": true,
+    "obs": "Bradley Hand with per-letter jitter, white with dark outline; dotted arrows"
+   },
+   "perspective_drift": {
+    "ok": true,
+    "obs": "groups stay rigid, drift and shrink toward horizon; figure rises from bottom and ends small near horizon"
+   },
+   "original_content": {
+    "ok": true,
+    "obs": "new words/items/character"
+   }
+  },
+  "ok": true,
+  "non_scored_observations": [
+   "dense dark grass strokes cover most of the #789838 hill fill (cause of C2 FAIL)",
+   "mud item drawn blue-grey, spec said brown",
+   "labels small (closest cap height ~25px at 1080p) vs source labels noticeably larger"
+  ]
+ },
+ "overall": "FAIL",
+ "diagnosis": "C3 fixed by static whole-frame texture (sum dx 3.0). C2 grass 0.069 < 0.08: texture strokes too dense/dark over the hill fill. Real palette defect, not measurement.",
+ "retest": "RT-V2-S03"
+}

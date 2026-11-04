@@ -1,0 +1,51 @@
+{
+ "test": "RT-V2-S01",
+ "mp4": "/Users/ghilmankhan/YIOS-local-audits/barely-evolved/2026-11-03-mNLNb-Z4T0M-deep-ct-scan/reconstruction_test/RT-V2-S04/rt.mp4",
+ "criteria": {
+  "C1": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames_ffprobe": 208,
+   "frames_decoded_cv2": 208
+  },
+  "C2": {
+   "ok": true,
+   "water": 0.384,
+   "grass": 0.265,
+   "sky": 0.12
+  },
+  "C3": {
+   "ok": true,
+   "version": "v2 direct vs f0",
+   "max_tx": 0.0,
+   "max_ty": 0.0,
+   "max_scale_dev": 0.0
+  },
+  "C3_v1_reported": {
+   "ok": false,
+   "sum_dscale": -0.0352,
+   "sum_dx": 46.6,
+   "scored": false
+  },
+  "C4": {
+   "ok": true,
+   "onsets": [
+    56,
+    77,
+    98,
+    123
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "longest_local_run": 78
+  }
+ },
+ "deterministic": "PASS",
+ "C6": "visual, recorded separately"
+}
