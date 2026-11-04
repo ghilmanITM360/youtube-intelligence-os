@@ -5,6 +5,8 @@ W = pathlib.Path(sys.argv[1]); tag = sys.argv[2]; inc = "--include-heldout" in s
 sel = json.load(open(W / "selection/selection_v1.json"))
 role = {**{i: "LONG_DEV" for i in sel["long_dev"]}, **{i: "LONG_HELDOUT" for i in sel["long_heldout"]},
         **{i: "SHORT_DEV" for i in sel["short_dev"]}, **{i: "SHORT_HELDOUT" for i in sel["short_heldout"]}}
+s2 = W / "selection/selection_v2_heldout2.json"
+if s2.exists(): role.update({i: "LONG_HELDOUT2" for i in json.load(open(s2))["long_heldout2"]})
 rows = []
 for vid, r in role.items():
     V = W / "videos" / vid
