@@ -1,0 +1,56 @@
+{
+ "test": "RT-V1-S01",
+ "mp4": "src_RT-V1-S01.mp4",
+ "criteria": {
+  "C1": {
+   "ok": false,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames": 149
+  },
+  "C2": {
+   "ok": true,
+   "bg": 0.7,
+   "brown": 0.22
+  },
+  "C3": {
+   "ok": true,
+   "run": [
+    24,
+    37
+   ],
+   "sum_dscale": -0.828,
+   "length": 14
+  },
+  "C4": {
+   "ok": true,
+   "peak_offset": 6,
+   "profile": [
+    -0.007,
+    -0.029,
+    -0.048,
+    -0.061,
+    -0.092,
+    -0.101,
+    -0.121,
+    -0.111,
+    -0.087,
+    -0.064,
+    -0.048,
+    -0.034,
+    -0.019,
+    -0.007
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "camera_frames_outside": []
+  }
+ },
+ "deterministic": "FAIL",
+ "C6": "visual, recorded separately"
+}

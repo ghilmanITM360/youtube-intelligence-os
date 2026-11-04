@@ -1,0 +1,7 @@
+# Style RT evaluator — pre-render calibration on source scenes
+
+Calibration ran BEFORE any worker render. Pre-registered criteria hashes (PREREGISTRATION_HASHES.json) are unchanged; only measurement code was fixed.
+
+1. **Attempt 1 extraction** (ffmpeg `select`, audio kept): OpenCV stopped early (149/199/170 of 158/208/179 frames; ffprobe counted all). Kept as `SOURCE_CALIBRATION_*_attempt1_extraction_dropped_frames.json`. Fix: extraction uses `-an`; C1 now checks ffprobe frame count and requires the cv2 decoded count to match, so a truncated decode cannot pass.
+2. **V3 run detection:** dense |dscale|>0.002 caught only the fast middle (f18-46, 29 frames), missing slow ease frames, so the source itself failed C3. Fix: run = frames where full-clip cam_traj progress is between 2% and 98%. Thresholds of C3/C4 unchanged.
+3. **RT-V3-S01 criterion v1 failed on the source itself** (run f13-77, half at 0.33): its push window and half-point were mis-specified, and the spec omitted a slow creep after the push (scale 1.697 -> 1.736 over f60-178). v1 criterion and spec kept (`*_v1_*`). Criterion v2 + spec v2 registered BEFORE any render (hash in PREREGISTRATION_HASHES.json). Source result under v2: `SOURCE_CALIBRATION_RT-V3-S01_v2.json`.
