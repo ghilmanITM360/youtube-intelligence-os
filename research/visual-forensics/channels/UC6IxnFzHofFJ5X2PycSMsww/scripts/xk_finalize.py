@@ -12,8 +12,8 @@ L = [f"# Reconstruction blueprint — {vid} (source sha {sm['sha256'][:12]})", "
      "Two uses, kept separate: (A) **evidence-matched reconstruction test** of this source's observable output (internal QA only; source artwork, script, voice and branding remain the creator's and are not reusable assets); (B) **original transfer** — the same mechanics applied to a NEW topic, new drawings and new script (see the channel production manual).", "",
      "## Global tokens (MEASURED unless marked)",
      f"- Aspect {ar}, {sm['frame_rate_avg']} fps CFR.",
-     f"- Canvas background exact {pal['background_exact_rgb']}; ink near-black (bin #101010); light grey fills (bin #D0D0D0); red accent only for marks (bins ~#D03040). Mean settled ink coverage {pal['mean_dark_ink_frac']*100:.1f}% (max {pal['max_dark_ink_frac']*100:.1f}%).",
-     "- Line art: uniform-weight black hand-drawn strokes, slight wobble (OBSERVED); stick figures minimal, objects detailed (OBSERVED). Exact brush/stroke width in px, typeface, software: UNAVAILABLE.",
+     f"- Canvas background exact {pal['background_exact_rgb']}; top quantised bins {', '.join(b['hex_bin_centre'] for b in pal['top_bins'][:5])}; red accent in {pal['holds_with_red_accent']}/{pal['holds']} holds; any saturated colour in {pal['holds_with_any_saturation']}/{pal['holds']} holds. Mean settled ink coverage {pal['mean_dark_ink_frac']*100:.1f}% (max {pal['max_dark_ink_frac']*100:.1f}%).",
+     "- Line art: hand-drawn strokes (black on light canvases, white on dark scenes where present - see state descriptions); stick figures minimal, objects detailed (channel-typical, OBSERVED in reviewed videos). Exact brush/stroke width in px, typeface, software: UNAVAILABLE.",
      "- Lettering: hand-lettered all-caps for titles/labels (OBSERVED). Footnotes may use a small serif text block (OBSERVED where present).", "",
      "## Per-state prompts (derived from reviewed descriptions; ESTIMATED layout)", "",
      "| State | Source interval (s) | Image prompt (reconstruction) | Motion into next state | Must stay static | Negative |", "|---|---|---|---|---|---|"]
@@ -22,7 +22,7 @@ for i, x in enumerate(S):
     nxt = next((y for y in S[i + 1:] if y["kind"] == "ACTIVITY"), None)
     move = f"{nxt['subtype']} at {nxt['start_pts']}s over {nxt['frames']} frame(s)" if nxt else "end of video (hold)"
     desc = x["description"].replace("|", "/")
-    L.append(f"| {x['visual_state_id']} ({x['seg']}) | {x['start_pts']}–{x['end_pts_exclusive']} | {ar} flat {pal['background_exact_rgb']} canvas, black hand-drawn line art: {desc} | {move} | all elements not named in the next event | no gradients/shading/texture, no colour except red marks and grey fills, no extra props or text, no camera shake |")
+    L.append(f"| {x['visual_state_id']} ({x['seg']}) | {x['start_pts']}–{x['end_pts_exclusive']} | {ar}, canvas/lighting as described (video background mode {pal['background_exact_rgb']}), hand-drawn line art: {desc} | {move} | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |")
 L += ["", "## Editor construction (OBSERVED grammar → steps)",
       "1. Build each composition as separate layers: canvas, persistent anchors (e.g., ruler/axis), object drawings, labels, red marks.",
       "2. Cuts = replace whole composition on the same canvas (hard cut, 0 frames).",

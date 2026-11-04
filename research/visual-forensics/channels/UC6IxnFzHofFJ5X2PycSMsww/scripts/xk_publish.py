@@ -12,7 +12,7 @@ INCLUDE = ["census/census.csv", "census/census_summary.json", "census/tab_listin
 VID = ["source_manifest.json", "coverage.json", "shot_ledger.csv", "visual_event_ledger.csv", "audio_visual_alignment.csv",
        "visual_ct_scan_report.md", "reconstruction_blueprint.md", "quality_gate.json", "continuation_handoff.md",
        "tables/state_ledger.csv", "tables/segments_v1.csv", "tables/detector_calibration.json", "tables/palette_measured.json",
-       "tables/sheet_index.csv", "tables/scenedetect_candidates.csv", "evidence/source_sha256.txt", "evidence/ffprobe_full.json",
+       "tables/sheet_index.csv", "tables/scenedetect_candidates.csv", "evidence/source_sha256.txt", "evidence/ffprobe_full.json", "evidence/ebur128.txt",
        "asr/asr_small_en.json", "asr/asr_vs_catalog_caption.json", "review/*.csv", "review/*.json", "review/*/*", "review_brief_*.md"]
 files = set()
 for g in INCLUDE: files |= {p for p in WS.glob(g) if p.is_file()}
@@ -51,5 +51,7 @@ if PUSH:
         b = subprocess.run(["git", "cat-file", "blob", f"{after}:{PREFIX}{p.relative_to(WS)}"], cwd=REPO, capture_output=True).stdout
         bad += hashlib.sha256(b).hexdigest() != hashlib.sha256(p.read_bytes()).hexdigest()
     rec.update(commit=commit, remote_head=after, readback_files=len(files), readback_mismatches=bad)
+    for v in (WS / "videos").iterdir():
+        if (v / "quality_gate.json").exists(): (v / "PUBLISHED").write_text(f"checkpoint {X} commit {after} branch {BR}\n")
 idx.unlink(missing_ok=True)
 (WS / f"campaign/PUBLICATION_{X}.json").write_text(json.dumps(rec, indent=1)); print(rec)

@@ -9,7 +9,7 @@ errs = []; warn = []
 segs = list(csv.DictReader(open(V / "tables/segments_v1.csv")))
 sheets = sorted({r["sheet"] for r in csv.DictReader(open(V / "tables/sheet_index.csv"))})
 try:
-    ann = list(csv.DictReader(open(R / "annotations.csv")))
+    ann = list(csv.DictReader(open(R / ("annotations_corrected.csv" if (R / "annotations_corrected.csv").exists() else "annotations.csv"))))
 except Exception as e:
     ann = []; errs.append(f"annotations unreadable: {e}")
 if ann:

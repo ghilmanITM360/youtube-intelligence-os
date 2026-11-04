@@ -15,3 +15,6 @@ Kit DEEP mode with frame-precise onsets: all frames measured; every frame in exa
 
 ## Expansion and adequacy (practical saturation, not proof)
 After the initial sample: add long videos in batches of 3 and Shorts in batches of 5 only when a material new production rule or a reconstruction/held-out failure justifies it. Adequacy = (1) observed formats and eras covered, (2) held-out evaluation passes, (3) two consecutive expansion batches with no material new rule OR exhaustive coverage, (4) kit gates satisfied or limitations listed. The goal is never shrunk to declare completion.
+
+## Finding recorded 2026-11-04T02:55Z — Shorts are mostly narration excerpts (campaign/short_long_text_reuse_population.csv)
+Text reuse (catalog plaintext captions, >=6-word matching blocks): 38 of 40 caption-available Shorts reuse >=90% of their words from one long-form video (several non-obvious by title, e.g. kNry0bf7eC0<-8fADp43wJwU, sFTRRdHqZIQ<-EsUBRd1O2dU, 5k8ciEx__5w<--1-ldW4kpLM, mEUqVgGf4e0<-DiWFXv9N0Vs). 2 standalone: oLoxdLfB6Gs, SLd4hnmeW_g (both already selected). 6 unregistered Shorts pending ASR-based check. Text reuse is not proof of visual reuse; visual re-layout is compared per pair in the manual. Selection v1 unchanged (both standalone Shorts already included).
