@@ -1,5 +1,5 @@
 # Primitive Education — channel production manual v0.1 (INTERIM)
-Evidence: 6 dev videos built (long qB_EKkMyuUE, 3AsDdMQr_nQ, KyBWJPaF1KI; Shorts IUur04eOd4A, f1vIzsTFrp4, uIG2U_1xynQ), all VISUAL_ANALYSIS_PARTIAL. n=3 per format: ranges below are provisional and may not hold for the channel. Not yet evaluated on held-out videos. Metrics: campaign/aggregate_dev_interim3.csv; reuse: campaign/reuse_dev.json. No audio listening; narration relations ASR_UNCERTIFIED. Public views are snapshots; no retention/CTR claims.
+Evidence for tables below: 6 dev videos (long qB_EKkMyuUE, 3AsDdMQr_nQ, KyBWJPaF1KI; Shorts IUur04eOd4A, f1vIzsTFrp4, uIG2U_1xynQ), all VISUAL_ANALYSIS_PARTIAL; W8AVd7RhTME built after the table was written, included in aggregate csv but not in these figures. n=3 per format: ranges below are provisional and may not hold for the channel. Not yet evaluated on held-out videos. Metrics: campaign/aggregate_dev_interim3.csv; reuse: campaign/reuse_dev.json. No audio listening; narration relations ASR_UNCERTIFIED. Public views are snapshots; no retention/CTR claims.
 
 ## A. Observed source features
 | Feature | Long (n=3): median, range | Short (n=3): median, range | Label |

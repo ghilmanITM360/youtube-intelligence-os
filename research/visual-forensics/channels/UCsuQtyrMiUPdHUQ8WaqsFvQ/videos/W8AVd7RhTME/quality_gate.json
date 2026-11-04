@@ -1,0 +1,50 @@
+{
+ "video_id": "W8AVd7RhTME",
+ "source_sha256": "c0b57fc6946f7a8ff4a5430693a3e1ba4bdb87e52578f0db907aeb560ca3bae2",
+ "requested_mode": "DEEP",
+ "generated_utc": "2026-11-04T16:14:12Z",
+ "review_scope": {
+  "source_seconds_total": 40.333061,
+  "overview_sampling_hz": "every decoded frame measured",
+  "native_intervals_reviewed": "settled frame of every HOLD + sampled ACTIVITY frames at 1/4 scale (see coverage.json)",
+  "unreviewed_or_unverified_intervals": []
+ },
+ "gates": {
+  "source_identity": "PASS",
+  "full_temporal_overview": "PASS",
+  "candidate_shots_verified": "PASS",
+  "meaningful_state_timing": "PARTIAL",
+  "motion_design_review": "PASS",
+  "creative_design_review": "PARTIAL",
+  "native_art_review": "PASS",
+  "independent_review": "PARTIAL",
+  "reconstruction_test": "PENDING",
+  "visual_script_mapping": "PARTIAL",
+  "production_blueprint": "PARTIAL",
+  "audio_human_listening": "BLOCKED",
+  "final_av_signoff": "BLOCKED"
+ },
+ "gate_evidence": {
+  "source_identity": "source_manifest.json + census/census.csv (channel tab listing)",
+  "full_temporal_overview": "tables/FULL_FRAME_MEASUREMENTS.csv all frames; tables/segments_v1.csv covers every frame",
+  "candidate_shots_verified": "tables/state_ledger.csv every segment classified from viewed tiles",
+  "meaningful_state_timing": "frame-precise onsets from measurements; unresolved: ['G0049']",
+  "motion_design_review": "24/24 activities viewed at every frame",
+  "creative_design_review": "visual_ct_scan_report.md \u00a74 + tables/palette_measured.json (tile-scale)",
+  "visual_script_mapping": "audio_visual_alignment.csv + review/*/narration_visual.csv, ASR_UNCERTIFIED; no catalog transcript exists for this channel",
+  "production_blueprint": "reconstruction_blueprint.md (derived prompts; no render test yet)",
+  "audio_human_listening": "campaign/AUDIO_LISTENING_CAPABILITY.json BLOCKED_CAPABILITY"
+ },
+ "final_video_status": "VISUAL_ANALYSIS_PARTIAL",
+ "overall": "PARTIAL",
+ "ct_scan_complete": false,
+ "full_av_signoff": false,
+ "limitations": [
+  "no actual listening",
+  "activity in-between frames sampled where noted",
+  "state review at 1/4 tile scale; native review covers sampled key states only",
+  "reconstruction not render-tested per video"
+ ],
+ "reviewer": "rv1_W8AVd7RhTME",
+ "next_step": "independent review sample; reconstruction test via channel manual"
+}
