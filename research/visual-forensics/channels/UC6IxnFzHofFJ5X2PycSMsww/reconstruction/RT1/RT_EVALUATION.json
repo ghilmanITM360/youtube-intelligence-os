@@ -1,0 +1,200 @@
+{
+ "measured": {
+  "frames": 576,
+  "duration_s": 24.0,
+  "segments": 39,
+  "activities": 19,
+  "events_per_min": 47.5,
+  "d2_cut_candidates_per_min": 5.0,
+  "hold_median_s": 0.96,
+  "one_frame_activity_share": 0.74,
+  "activity_frame_share": 0.095
+ },
+ "rhythm_checks": {
+  "events_per_min": {
+   "value": 47.5,
+   "target": [
+    18.4,
+    39.2
+   ],
+   "result": "FAIL"
+  },
+  "hold_median_s": {
+   "value": 0.96,
+   "target": [
+    1.13,
+    2.84
+   ],
+   "result": "FAIL"
+  },
+  "one_frame_activity_share": {
+   "value": 0.74,
+   "target": [
+    0.5,
+    1.0
+   ],
+   "result": "PASS"
+  },
+  "activity_frame_share": {
+   "value": 0.095,
+   "target": [
+    0.013,
+    0.243
+   ],
+   "result": "PASS"
+  }
+ },
+ "intended_events": 21,
+ "intended_matched": 19,
+ "unexplained_measured_onsets": [],
+ "matches": [
+  {
+   "intended": 0,
+   "device": "write-on type",
+   "nearest_measured": 1,
+   "delta": 1,
+   "matched": true
+  },
+  {
+   "intended": 84,
+   "device": "pop-on",
+   "nearest_measured": 84,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 108,
+   "device": "write-on stroke",
+   "nearest_measured": 108,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 116,
+   "device": "pop-on",
+   "nearest_measured": 108,
+   "delta": -8,
+   "matched": false
+  },
+  {
+   "intended": 144,
+   "device": "hard cut",
+   "nearest_measured": 144,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 176,
+   "device": "state swap",
+   "nearest_measured": 176,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 200,
+   "device": "state swap",
+   "nearest_measured": 200,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 204,
+   "device": "pop-on",
+   "nearest_measured": 204,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 216,
+   "device": "write-on stroke",
+   "nearest_measured": 216,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 240,
+   "device": "hard cut",
+   "nearest_measured": 240,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 264,
+   "device": "pop-on",
+   "nearest_measured": 264,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 300,
+   "device": "pop-on",
+   "nearest_measured": 300,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 336,
+   "device": "slide/pan with motion blur",
+   "nearest_measured": 336,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 344,
+   "device": "state swap",
+   "nearest_measured": 336,
+   "delta": -8,
+   "matched": false
+  },
+  {
+   "intended": 368,
+   "device": "pop-on",
+   "nearest_measured": 368,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 392,
+   "device": "pop-on",
+   "nearest_measured": 392,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 416,
+   "device": "pop-on",
+   "nearest_measured": 416,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 432,
+   "device": "cross-dissolve",
+   "nearest_measured": 432,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 456,
+   "device": "pop-on",
+   "nearest_measured": 456,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 504,
+   "device": "hard cut",
+   "nearest_measured": 504,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 528,
+   "device": "pop-on",
+   "nearest_measured": 528,
+   "delta": 0,
+   "matched": true
+  }
+ ],
+ "note": "Silent render; audio/narration sync not testable. Device-type correctness requires visual review of the render (separate)."
+}

@@ -7,7 +7,7 @@ Read first: campaign/CAMPAIGN_GOAL_v1.md, CHANNEL_PRODUCTION_MANUAL_v0.2.md (v0.
 - ALL 32 selected videos built (27 dev + 5 held-out): every frame measured, every segment classified by a transcript-audited sonnet reviewer (all sheets opened) except wBLVmEZV2Oc (primary-only annotations), primary 0.6-scale image spot-check recorded on 26/32 videos (others: validator + transcript audit only, see each review/primary_spotcheck.json). Status per video VISUAL_ANALYSIS_PARTIAL; listening BLOCKED.
 - Dense-strip pass: 34 long activities of the 22 earlier dev videos re-reviewed (campaign/strip_review); 16 hidden internal cuts; 1 contradiction corrected (-1-ldW4kpLM G0118). 12 strips of 5 newer dev videos + 18 held-out strips NOT re-reviewed.
 - Held-out: PARTIAL PASS (Shorts 18/18 quantitative; long rhythm Q1–Q3 failed v0.1 ranges; opening 'typed question' detail failed). See HELDOUT_EVALUATION.md.
-- Reconstruction test: NOT STARTED (see step 3 below).
+- Reconstruction test RT1: PARTIAL (spec-only worker; grammar reproduced, rhythm too dense, object detail missing) — reconstruction/RT1/RT_EVALUATION.md.
 - Publication: branch research/xkcd-whatif-visual-forensics; checkpoints A 591c2d84, B b2de413b, C 32471d3e, D 5a233d56, E (see PUBLICATION_E.json).
 
 ## Exact next operations
@@ -25,3 +25,5 @@ Read first: campaign/CAMPAIGN_GOAL_v1.md, CHANNEL_PRODUCTION_MANUAL_v0.2.md (v0.
 - Barely Evolved lock dir ~/YIOS-local-audits/barely-evolved/.be_writer_lock names pid 4391 which was not running at 2026-11-04T01:50Z; not touched (other stream).
 - (old) Session d2a98830 paused at 2026-11-04T04:40Z: 5h usage 87% (>=85% checkpoint rule), weekly 78%. Background jobs still running at pause: scripts/xk_ingest.sh (held-out ingest) and scripts/xk_prep_loop.sh (brief generation) — measurement-only, safe to let finish; check ingest_progress.txt. Lock released.
 - Reviewer error rate is not zero: primary found 2 classification errors in jVy3qd70AqU (zoom direction; pop-off vs camera) and 1 in -1-ldW4kpLM via strips.
+- RT1 done: RECONSTRUCTION_TEST_PARTIAL (reconstruction/RT1/RT_EVALUATION.md); v0.3 §9 must add event budget (~0.33–0.5 events/s) and object-detail rule, then RT2.
+- RT2 (manual v0.3 §9, fresh worker): PASS on all measured rhythm checks + device grammar (reconstruction/RT2/RT_EVALUATION.md). Not tested: narration sync, long-form structure, 9:16 re-layout. Manual v0.3 written (campaign/CHANNEL_PRODUCTION_MANUAL_v0.3.md); because held-out videos now inform v0.3, a NEW held-out set is needed to test it (handoff step 2).

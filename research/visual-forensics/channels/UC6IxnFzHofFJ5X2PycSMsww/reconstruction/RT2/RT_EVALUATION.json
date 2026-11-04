@@ -1,0 +1,123 @@
+{
+ "measured": {
+  "frames": 576,
+  "duration_s": 24.0,
+  "segments": 21,
+  "activities": 10,
+  "events_per_min": 25.0,
+  "d2_cut_candidates_per_min": 10.0,
+  "hold_median_s": 2.21,
+  "one_frame_activity_share": 0.7,
+  "activity_frame_share": 0.056
+ },
+ "rhythm_checks": {
+  "events_per_min": {
+   "value": 25.0,
+   "target": [
+    18.4,
+    39.2
+   ],
+   "result": "PASS"
+  },
+  "hold_median_s": {
+   "value": 2.21,
+   "target": [
+    1.13,
+    2.84
+   ],
+   "result": "PASS"
+  },
+  "one_frame_activity_share": {
+   "value": 0.7,
+   "target": [
+    0.5,
+    1.0
+   ],
+   "result": "PASS"
+  },
+  "activity_frame_share": {
+   "value": 0.056,
+   "target": [
+    0.013,
+    0.243
+   ],
+   "result": "PASS"
+  }
+ },
+ "intended_events": 10,
+ "intended_matched": 10,
+ "unexplained_measured_onsets": [],
+ "matches": [
+  {
+   "intended": 0,
+   "device": "write-on",
+   "nearest_measured": 1,
+   "delta": 1,
+   "matched": true
+  },
+  {
+   "intended": 48,
+   "device": "hard cut + anchor pop",
+   "nearest_measured": 48,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 96,
+   "device": "pop",
+   "nearest_measured": 96,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 150,
+   "device": "hard cut",
+   "nearest_measured": 150,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 204,
+   "device": "pop",
+   "nearest_measured": 204,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 252,
+   "device": "slide/pan with blur 8f",
+   "nearest_measured": 252,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 306,
+   "device": "deadpan narrator aside",
+   "nearest_measured": 306,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 360,
+   "device": "hard cut",
+   "nearest_measured": 360,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 420,
+   "device": "state swap (1f)",
+   "nearest_measured": 420,
+   "delta": 0,
+   "matched": true
+  },
+  {
+   "intended": 490,
+   "device": "write-on",
+   "nearest_measured": 491,
+   "delta": 1,
+   "matched": true
+  }
+ ],
+ "note": "Silent render; audio/narration sync not testable. Device-type correctness requires visual review of the render (separate)."
+}

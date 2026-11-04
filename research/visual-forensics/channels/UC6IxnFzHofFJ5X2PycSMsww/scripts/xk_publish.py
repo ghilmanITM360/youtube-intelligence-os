@@ -8,7 +8,7 @@ WS = pathlib.Path.home() / "YIOS-local-audits/xkcd-whatif"; REPO = "/Users/ghilm
 BR = "research/xkcd-whatif-visual-forensics"; PREFIX = "research/visual-forensics/channels/UC6IxnFzHofFJ5X2PycSMsww/"
 run = lambda *a, **k: subprocess.check_output(a, cwd=REPO, text=True, **k).strip()
 INCLUDE = ["census/census.csv", "census/census_summary.json", "census/tab_listings.json", "census/catalog_ch000004_ids.json",
-           "selection/*.json", "selection/*.txt", "campaign/*", "campaign/strip_review/*.md", "campaign/strip_review/*.csv", "campaign/strip_review/*/*.csv", "scripts/*.py", "scripts/*.sh", "scripts/*.md"]
+           "selection/*.json", "selection/*.txt", "campaign/*", "campaign/strip_review/*.md", "campaign/strip_review/*.csv", "campaign/strip_review/*/*.csv", "scripts/*.py", "scripts/*.sh", "scripts/*.md", "reconstruction/*/*.md", "reconstruction/*/*.csv", "reconstruction/*/*.json", "reconstruction/*/*.py", "reconstruction/*/tables/segments_v1.csv", "reconstruction/*/evidence/source_sha256.txt"]
 VID = ["source_manifest.json", "coverage.json", "shot_ledger.csv", "visual_event_ledger.csv", "audio_visual_alignment.csv",
        "visual_ct_scan_report.md", "reconstruction_blueprint.md", "quality_gate.json", "continuation_handoff.md",
        "tables/state_ledger.csv", "tables/segments_v1.csv", "tables/detector_calibration.json", "tables/palette_measured.json",
