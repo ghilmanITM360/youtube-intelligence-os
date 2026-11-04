@@ -24,6 +24,7 @@ def run(th):  # longest run of frames with |dscale|>th
         if cur and cur[1] - cur[0] > best[1] - best[0]: best = cur
     return best
 C = {}; fmt = (pr['width'], pr['height'], pr['r_frame_rate'], pr['codec_name']) == (1920, 1080, '30000/1001', 'h264')
+V2v2 = tid == 'RT-V2-S04'; tid = 'RT-V2-S01' if V2v2 else tid
 rng = {'RT-V1-S01': (156, 160), 'RT-V2-S01': (206, 210), 'RT-V3-S01': (177, 181)}[tid]
 nf = int(subprocess.check_output(['ffprobe', '-v', 'error', '-count_frames', '-select_streams', 'v:0', '-show_entries', 'stream=nb_read_frames', '-of', 'csv=p=0', mp4]).decode().strip())
 C['C1'] = dict(ok=fmt and rng[0] <= nf <= rng[1] and nf == n, got=pr, frames_ffprobe=nf, frames_decoded_cv2=n)
@@ -38,6 +39,10 @@ elif tid == 'RT-V2-S01':
     m = F[n // 2]; a = frac(m, ['#68c8d8', '#68b8d8'], 50); g = frac(m, ['#789838'], 60); sk = frac(m, ['#c8f8f8', '#d8f8f8'], 50)
     C['C2'] = dict(ok=a >= .30 and g >= .08 and sk >= .08, water=a, grass=g, sky=sk)
     sd = sum(r['dscale'] for r in D[1:]); sx = sum(r['dx'] for r in D[1:]); C['C3'] = dict(ok=abs(sd) < .01 and abs(sx) < 15, sum_dscale=round(sd, 4), sum_dx=round(sx, 1))
+    if V2v2:
+        tj = out.with_suffix('.traj.json'); subprocess.run([PY, H / 'cam_traj.py', mp4, '0', str(n - 1), tj], check=True, capture_output=True); A = json.loads(tj.read_text())['rows']
+        mt, my, ms = max(abs(r['tx']) for r in A), max(abs(r['ty']) for r in A), max(abs(r['scale'] - 1) for r in A)
+        C['C3_v1_reported'] = dict(C['C3'], scored=False); C['C3'] = dict(ok=mt <= 6 and my <= 6 and ms <= .003, version='v2 direct vs f0', max_tx=round(mt, 2), max_ty=round(my, 2), max_scale_dev=round(ms, 4))
     rf = [(int(r['frame']), r['residual_frac12']) for r in D[1:]]; on = []
     for f, v in sorted([x for x in rf if 40 <= x[0] <= 130], key=lambda x: -x[1]):
         if v > 0.0005 and all(abs(f - o) >= 20 for o in on): on.append(f)
@@ -59,5 +64,5 @@ else:
     C['C4'] = dict(ok=.35 <= half <= .6 and max(p[:max(1, int(.15 * k))]) < .15 and min(p[k - max(1, int(.15 * k)):]) > .85, half_at=round(half, 3), progress=[round(x, 2) for x in p[::4]])
     bad = [int(r['frame']) for r in D if r['frame'] >= e + 2 and (abs(r['dscale']) >= .003 or abs(r['dx']) >= 2) and r['inliers'] >= 12]
     extra = S[-1] / scf; C['C5'] = dict(ok=not bad and 1.0 <= extra <= 1.06, camera_frames_after=bad[:20], extra_scale=round(extra, 4))
-res = dict(test=tid, mp4=mp4, criteria=C, deterministic='PASS' if all(v['ok'] for v in C.values()) else 'FAIL', C6='visual, recorded separately')
+res = dict(test=tid, mp4=mp4, criteria=C, deterministic='PASS' if all(v['ok'] for k, v in C.items() if v.get('scored', True)) else 'FAIL', C6='visual, recorded separately')
 out.write_text(json.dumps(res, indent=1, default=lambda x: x if not hasattr(x, 'item') else x.item())); print(json.dumps({k: (v['ok'], {a: b for a, b in v.items() if a not in ('got', 'profile', 'progress')}) for k, v in C.items()}))
