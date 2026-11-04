@@ -18,8 +18,8 @@ Read: selection/selection_v1.json, campaign/campaign_ledger.csv, campaign/progre
 ## Limits
 Listening BLOCKED_CAPABILITY. Never award CT_SCAN_COMPLETE/FULL_AV_SIGNOFF. Gates: five-hour >=0.85 checkpoint, weekly >=0.95 stop. Meter: scripts/pe_usage.sh.
 
-## State at checkpoint D (2026-11-04)
-Built (VISUAL_ANALYSIS_PARTIAL): qB_EKkMyuUE, IUur04eOd4A, 3AsDdMQr_nQ, f1vIzsTFrp4, KyBWJPaF1KI, uIG2U_1xynQ, W8AVd7RhTME. Prepped with briefs (check videos/<id>/review_brief_*): RmTdnXHbI8s, DekaeZPzTAQ, Nv4xJ_NsFdo, RM_KBLDLsnQ. Held-out ingested but NOT prepped, do not open: xBJ6suQSt98, 6YHva7Me2ls, C_jSOXP_XWY, 5gSIU30yiVs.
-Exact next operation: acquire lock; run pe_prep.sh RmTdnXHbI8s if no brief; launch one sonnet reviewer on RmTdnXHbI8s; then DekaeZPzTAQ, Nv4xJ_NsFdo, RM_KBLDLsnQ. Then rerun scripts/pe_reuse.py (venv python), steps 7-10. Add "Write the output files with the Write tool, not scripts." to each reviewer prompt.
-Reviewer gotchas: sheet-position illusions and enc_artifact_frames are not drift (template warns). Hold-drift detectors added after IUur/3As: D4C. Primary spot-check corrected 1-2 rows per video.
-Measured cost: seven reviewers about 761,000 subagent tokens total (66k-207k each; KyB 30 sheets = 207k). Five-hour meter is shared with other active sessions.
+## State at checkpoint G (2026-11-04T20:55Z)
+DEV set complete: all 11 DEV videos built (VISUAL_ANALYSIS_PARTIAL); checkpoints E ac58cc33 (RmT, Dekae), F 29c11c39 (Nv4, RM_KBL). reuse_dev.json + aggregate_dev_final run. CHANNEL_PRODUCTION_MANUAL_v1.md and HELDOUT_PROTOCOL_v1.md frozen (campaign/HELDOUT_PROTOCOL_v1.sha256) BEFORE any held-out prep.
+Read budget clause worked: reviewers opened each image once (RmT 19/19, Dekae 24/24, Nv4 10/10, RM_KBL 25/25 image results; 89k-154k subagent tokens each).
+Exact next operation: acquire lock; for each held-out in order xBJ6suQSt98, 6YHva7Me2ls, C_jSOXP_XWY, 5gSIU30yiVs: pe_prep.sh <id> (adds briefs from template incl. read budget), one sonnet reviewer, steps 3-5; then pe_reuse.py with held-out (extend or run ad hoc, do not overwrite reuse_dev.json) and pe_aggregate.py . heldout --include-heldout; score every check in HELDOUT_PROTOCOL_v1 into HELDOUT_EVALUATION.md without editing v1. Then step 9 reconstruction (one landscape, one portrait; render + evaluate). Publish H after held-out.
+First full scheduled worker ran 2026-11-04T20:31:26Z, found lock BUSY, exited 0 in 23 s (worker_last.json).
