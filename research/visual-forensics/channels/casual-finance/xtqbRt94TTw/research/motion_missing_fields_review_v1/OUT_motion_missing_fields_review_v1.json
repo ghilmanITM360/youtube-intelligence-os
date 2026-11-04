@@ -1,0 +1,2025 @@
+{
+  "items": [
+    {
+      "id": "SUB101",
+      "verdict": "CONFIRMED",
+      "event_type": "TEXT_SELECTION_EXTEND",
+      "observed_before": "Blue selection already covers the beginning of \u201cChatham\u2026\u201d at f8003; fixed article and glasses-wearing presenter/laptop context.",
+      "observed_change": "Right edge of the first-line selection advances while left edge and line remain fixed, extending through \u201cChatham Finan\u2026\u201d by f8008. This is a changing selection width, not translation of the selected text.",
+      "observed_after": "Selection remains visible and is still longer at final f8008; final supplied frame is not evidence that the drag has ended.",
+      "first_observed_change_frame": 8004,
+      "last_observed_change_frame": 8008,
+      "motion_object": {
+        "properties": [
+          "selection width/right edge",
+          "text color under selection",
+          "cursor endpoint"
+        ],
+        "path": "Left edge remains near source x198; dense-blue right edge approximately source x239\u2192261\u2192265\u2192271\u2192285\u2192303 at f8003\u20268008. These are mask-derived bounds, not cursor-tip measurements.",
+        "easing": "UNKNOWN",
+        "duration_note": "Candidate f8004\u20138007 is4frames. Reviewed pre-through-final f8003\u20138008 is6frames/0.25s exposure; five PTS intervals=0.208333s. Selection already exists at8003 and extends again8008, so true event onset/offset are outside or unresolved at window bounds.",
+        "static_anchors": [
+          "article heading/body line positions",
+          "selection left edge",
+          "presenter head/glasses",
+          "laptop/desk in scaled contexts"
+        ]
+      },
+      "confidence": "HIGH",
+      "event_onset_frame": null,
+      "event_offset_frame": null,
+      "limitations": [
+        "Native1:1ROI1425x412, not native fullframe; context is scaled960x540.",
+        "First/last observed-change fields describe changes inside supplied window only; they do not certify total event onset/offset.",
+        "Dense-blue detection can include antialiasing/cursor fringes; column threshold gives approximate selection boundary with about1\u20132pixel uncertainty.",
+        "No easing/source curve or software implementation inferred."
+      ],
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08003_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08003_context960.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08004_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08005_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08006_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08007_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08008_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08008_context960.jpg"
+      ],
+      "candidate_window": {
+        "start": 8004,
+        "end": 8007
+      },
+      "review_window": {
+        "start": 8003,
+        "end": 8008
+      },
+      "ROI_xyxy_inclusive": [
+        171,
+        341,
+        1595,
+        752
+      ],
+      "frame_measurements": {
+        "coordinate_system": "ROI pixels unless source coordinates explicitly stated;source=ROI+origin",
+        "source_origin": [
+          171,
+          341
+        ],
+        "against_pre": [
+          {
+            "frame": 8003,
+            "selection_bbox_roi": [
+              27,
+              263,
+              68,
+              286
+            ],
+            "mask_rule": "B>120,B-R>40,B-G>20;roiY240:299,X<900",
+            "pts_s": 333.5
+          },
+          {
+            "frame": 8004,
+            "selection_bbox_roi": [
+              27,
+              263,
+              92,
+              286
+            ],
+            "mask_rule": "B>120,B-R>40,B-G>20;roiY240:299,X<900",
+            "pts_s": 333.5416666666667
+          },
+          {
+            "frame": 8005,
+            "selection_bbox_roi": [
+              27,
+              263,
+              94,
+              286
+            ],
+            "mask_rule": "B>120,B-R>40,B-G>20;roiY240:299,X<900",
+            "pts_s": 333.5833333333333
+          },
+          {
+            "frame": 8006,
+            "selection_bbox_roi": [
+              27,
+              263,
+              118,
+              286
+            ],
+            "mask_rule": "B>120,B-R>40,B-G>20;roiY240:299,X<900",
+            "pts_s": 333.625
+          },
+          {
+            "frame": 8007,
+            "selection_bbox_roi": [
+              27,
+              263,
+              115,
+              286
+            ],
+            "mask_rule": "B>120,B-R>40,B-G>20;roiY240:299,X<900",
+            "pts_s": 333.6666666666667
+          },
+          {
+            "frame": 8008,
+            "selection_bbox_roi": [
+              27,
+              263,
+              132,
+              286
+            ],
+            "mask_rule": "B>120,B-R>40,B-G>20;roiY240:299,X<900",
+            "pts_s": 333.7083333333333
+          }
+        ],
+        "adjacent": [
+          {
+            "frame": 8003,
+            "dense_blue_columns_roi": [
+              27,
+              68
+            ]
+          },
+          {
+            "frame": 8004,
+            "dense_blue_columns_roi": [
+              27,
+              90
+            ],
+            "adjacent_pixels_delta_gt35": 619,
+            "adjacent_delta_max": 250,
+            "adjacent_bbox_delta_gt35": [
+              56,
+              263,
+              95,
+              286
+            ]
+          },
+          {
+            "frame": 8005,
+            "dense_blue_columns_roi": [
+              27,
+              94
+            ],
+            "adjacent_pixels_delta_gt35": 164,
+            "adjacent_delta_max": 191,
+            "adjacent_bbox_delta_gt35": [
+              87,
+              263,
+              105,
+              286
+            ]
+          },
+          {
+            "frame": 8006,
+            "dense_blue_columns_roi": [
+              27,
+              100
+            ],
+            "adjacent_pixels_delta_gt35": 288,
+            "adjacent_delta_max": 204,
+            "adjacent_bbox_delta_gt35": [
+              86,
+              263,
+              120,
+              286
+            ]
+          },
+          {
+            "frame": 8007,
+            "dense_blue_columns_roi": [
+              27,
+              114
+            ],
+            "adjacent_pixels_delta_gt35": 426,
+            "adjacent_delta_max": 201,
+            "adjacent_bbox_delta_gt35": [
+              101,
+              263,
+              128,
+              286
+            ]
+          },
+          {
+            "frame": 8008,
+            "dense_blue_columns_roi": [
+              27,
+              132
+            ],
+            "adjacent_pixels_delta_gt35": 475,
+            "adjacent_delta_max": 204,
+            "adjacent_bbox_delta_gt35": [
+              105,
+              263,
+              162,
+              286
+            ]
+          }
+        ],
+        "measurement_method": "Existing supplied PNGs only;cv2 decoded RGB/BGR channel absolute delta>35 to localize substantial changes;connected components area>=3;blue mask B>120,B-R>40,B-G>20 with dense-column count>=12 for selection edge. Heuristic detection rules, not exact source color tokens or source motion curves."
+      }
+    },
+    {
+      "id": "SUB103",
+      "verdict": "CONFIRMED",
+      "event_type": "CURSOR_SHAPE_SUBSTITUTION_AND_SMALL_TRANSLATION_WITH_SELECTION_EDGE_ADJUSTMENT",
+      "observed_before": "At f8033 an arrow cursor is visible just below the end of a long blue selection, next to following unselected text.",
+      "observed_change": "Cursor changes to I-beam near the selection endpoint at8034 and shifts slightly through8038. Selection is anchored but its right edge retracts about4pixels at8037; no additional blue range is added in this window.",
+      "observed_after": "I-beam rests at the selected-line endpoint through8045. Adjacent pixel changes after8038 are at most1channel level until8040, then nativeROI bytes/pixels hold through8045.",
+      "first_observed_change_frame": 8034,
+      "last_observed_change_frame": 8038,
+      "motion_object": {
+        "properties": [
+          "cursor shape arrow\u2192I-beam",
+          "cursor small local position",
+          "selection right boundary retracts"
+        ],
+        "path": "Local change remains within ROI x514\u2013530,y40\u201379 (source x922\u2013938,y604\u2013643). This union includes erased old cursor and selection edge, so it is not an isolated cursor path. Dense-blue right edge source x927 at8033\u20138036\u2192923 at8037\u20138045.",
+        "easing": "UNKNOWN",
+        "duration_note": "Candidate8034\u20138037 is4frames; substantive local cursor/edge change continues at8038, one frame beyond candidate end. First\u2192last observed change PTS interval=4/24=0.166667s; inclusive5-frame exposure=0.208333s. Settled local geometry observed8038\u20138045; no claim about later cursor behavior.",
+        "static_anchors": [
+          "selected text baseline",
+          "article paragraph positions",
+          "blue selection body except its right edge",
+          "presenter and laptop in scaled contexts"
+        ]
+      },
+      "confidence": "HIGH",
+      "event_onset_frame": 8034,
+      "event_offset_frame": 8038,
+      "limitations": [
+        "Native1:1ROI572x121, not native fullframe.",
+        "Substantive local image-change endpoint8038 uses adjacent displayed frames and >35channel-difference support; tiny later1level differences do not establish motion.",
+        "Bounds include old-cursor erasure and selection boundary; no exact cursor tip centroid claimed.",
+        "Arrow-to-Ibeam interpretation is observed; cause/software and source easing unknown."
+      ],
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08033_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08033_context960.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08034_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08035_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08036_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08037_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08038_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08039_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08040_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08041_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08042_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08043_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08044_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08045_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08045_context960.jpg"
+      ],
+      "candidate_window": {
+        "start": 8034,
+        "end": 8037
+      },
+      "review_window": {
+        "start": 8033,
+        "end": 8045
+      },
+      "ROI_xyxy_inclusive": [
+        408,
+        564,
+        979,
+        684
+      ],
+      "frame_measurements": {
+        "coordinate_system": "ROI pixels unless source coordinates explicitly stated;source=ROI+origin",
+        "source_origin": [
+          408,
+          564
+        ],
+        "against_pre": [
+          {
+            "frame": 8033,
+            "difference_components_vs_pre_threshold35": [],
+            "max_abs_delta": 0,
+            "changed_pixels_threshold35": 0,
+            "pts_s": 334.75
+          },
+          {
+            "frame": 8034,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  520,
+                  53,
+                  524,
+                  53
+                ],
+                "area": 5,
+                "centroid_roi": [
+                  522.0,
+                  53.0
+                ]
+              },
+              {
+                "bbox_roi": [
+                  518,
+                  56,
+                  530,
+                  79
+                ],
+                "area": 97,
+                "centroid_roi": [
+                  522.49,
+                  68.97
+                ]
+              }
+            ],
+            "max_abs_delta": 231,
+            "changed_pixels_threshold35": 102,
+            "pts_s": 334.7916666666667
+          },
+          {
+            "frame": 8035,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  516,
+                  52,
+                  520,
+                  55
+                ],
+                "area": 11,
+                "centroid_roi": [
+                  518.82,
+                  53.09
+                ]
+              },
+              {
+                "bbox_roi": [
+                  517,
+                  58,
+                  530,
+                  79
+                ],
+                "area": 82,
+                "centroid_roi": [
+                  522.63,
+                  70.13
+                ]
+              }
+            ],
+            "max_abs_delta": 206,
+            "changed_pixels_threshold35": 93,
+            "pts_s": 334.8333333333333
+          },
+          {
+            "frame": 8036,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  516,
+                  52,
+                  530,
+                  79
+                ],
+                "area": 108,
+                "centroid_roi": [
+                  521.58,
+                  67.34
+                ]
+              }
+            ],
+            "max_abs_delta": 194,
+            "changed_pixels_threshold35": 109,
+            "pts_s": 334.875
+          },
+          {
+            "frame": 8037,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  514,
+                  40,
+                  530,
+                  79
+                ],
+                "area": 206,
+                "centroid_roi": [
+                  519.16,
+                  59.32
+                ]
+              }
+            ],
+            "max_abs_delta": 207,
+            "changed_pixels_threshold35": 206,
+            "pts_s": 334.9166666666667
+          },
+          {
+            "frame": 8038,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  514,
+                  40,
+                  530,
+                  79
+                ],
+                "area": 213,
+                "centroid_roi": [
+                  518.95,
+                  59.04
+                ]
+              }
+            ],
+            "max_abs_delta": 205,
+            "changed_pixels_threshold35": 214,
+            "pts_s": 334.9583333333333
+          },
+          {
+            "frame": 8039,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  514,
+                  40,
+                  530,
+                  79
+                ],
+                "area": 213,
+                "centroid_roi": [
+                  518.95,
+                  59.04
+                ]
+              }
+            ],
+            "max_abs_delta": 205,
+            "changed_pixels_threshold35": 214,
+            "pts_s": 335.0
+          },
+          {
+            "frame": 8040,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  514,
+                  40,
+                  530,
+                  79
+                ],
+                "area": 213,
+                "centroid_roi": [
+                  518.95,
+                  59.04
+                ]
+              }
+            ],
+            "max_abs_delta": 205,
+            "changed_pixels_threshold35": 214,
+            "pts_s": 335.0416666666667
+          },
+          {
+            "frame": 8041,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  514,
+                  40,
+                  530,
+                  79
+                ],
+                "area": 213,
+                "centroid_roi": [
+                  518.95,
+                  59.04
+                ]
+              }
+            ],
+            "max_abs_delta": 205,
+            "changed_pixels_threshold35": 214,
+            "pts_s": 335.0833333333333
+          },
+          {
+            "frame": 8042,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  514,
+                  40,
+                  530,
+                  79
+                ],
+                "area": 213,
+                "centroid_roi": [
+                  518.95,
+                  59.04
+                ]
+              }
+            ],
+            "max_abs_delta": 205,
+            "changed_pixels_threshold35": 214,
+            "pts_s": 335.125
+          },
+          {
+            "frame": 8043,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  514,
+                  40,
+                  530,
+                  79
+                ],
+                "area": 213,
+                "centroid_roi": [
+                  518.95,
+                  59.04
+                ]
+              }
+            ],
+            "max_abs_delta": 205,
+            "changed_pixels_threshold35": 214,
+            "pts_s": 335.1666666666667
+          },
+          {
+            "frame": 8044,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  514,
+                  40,
+                  530,
+                  79
+                ],
+                "area": 213,
+                "centroid_roi": [
+                  518.95,
+                  59.04
+                ]
+              }
+            ],
+            "max_abs_delta": 205,
+            "changed_pixels_threshold35": 214,
+            "pts_s": 335.2083333333333
+          },
+          {
+            "frame": 8045,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  514,
+                  40,
+                  530,
+                  79
+                ],
+                "area": 213,
+                "centroid_roi": [
+                  518.95,
+                  59.04
+                ]
+              }
+            ],
+            "max_abs_delta": 205,
+            "changed_pixels_threshold35": 214,
+            "pts_s": 335.25
+          }
+        ],
+        "adjacent": [
+          {
+            "frame": 8033,
+            "dense_blue_columns_roi": [
+              0,
+              519
+            ]
+          },
+          {
+            "frame": 8034,
+            "dense_blue_columns_roi": [
+              0,
+              519
+            ],
+            "adjacent_pixels_delta_gt35": 102,
+            "adjacent_delta_max": 231,
+            "adjacent_bbox_delta_gt35": [
+              518,
+              53,
+              530,
+              79
+            ]
+          },
+          {
+            "frame": 8035,
+            "dense_blue_columns_roi": [
+              0,
+              519
+            ],
+            "adjacent_pixels_delta_gt35": 66,
+            "adjacent_delta_max": 223,
+            "adjacent_bbox_delta_gt35": [
+              516,
+              52,
+              525,
+              67
+            ]
+          },
+          {
+            "frame": 8036,
+            "dense_blue_columns_roi": [
+              0,
+              519
+            ],
+            "adjacent_pixels_delta_gt35": 45,
+            "adjacent_delta_max": 193,
+            "adjacent_bbox_delta_gt35": [
+              516,
+              52,
+              523,
+              66
+            ]
+          },
+          {
+            "frame": 8037,
+            "dense_blue_columns_roi": [
+              0,
+              515
+            ],
+            "adjacent_pixels_delta_gt35": 131,
+            "adjacent_delta_max": 194,
+            "adjacent_bbox_delta_gt35": [
+              514,
+              40,
+              522,
+              66
+            ]
+          },
+          {
+            "frame": 8038,
+            "dense_blue_columns_roi": [
+              0,
+              515
+            ],
+            "adjacent_pixels_delta_gt35": 48,
+            "adjacent_delta_max": 143,
+            "adjacent_bbox_delta_gt35": [
+              514,
+              51,
+              521,
+              65
+            ]
+          },
+          {
+            "frame": 8039,
+            "dense_blue_columns_roi": [
+              0,
+              515
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 1,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8040,
+            "dense_blue_columns_roi": [
+              0,
+              515
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 1,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8041,
+            "dense_blue_columns_roi": [
+              0,
+              515
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8042,
+            "dense_blue_columns_roi": [
+              0,
+              515
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8043,
+            "dense_blue_columns_roi": [
+              0,
+              515
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8044,
+            "dense_blue_columns_roi": [
+              0,
+              515
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8045,
+            "dense_blue_columns_roi": [
+              0,
+              515
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          }
+        ],
+        "measurement_method": "Existing supplied PNGs only;cv2 decoded RGB/BGR channel absolute delta>35 to localize substantial changes;connected components area>=3;blue mask B>120,B-R>40,B-G>20 with dense-column count>=12 for selection edge. Heuristic detection rules, not exact source color tokens or source motion curves."
+      }
+    },
+    {
+      "id": "SUB104",
+      "verdict": "CONFIRMED",
+      "event_type": "CURSOR_TRANSLATION_WITH_REPEATED_SHAPE_SUBSTITUTIONS",
+      "observed_before": "At f8048 I-beam rests at end of selected first paragraph line; blue selection fixed.",
+      "observed_change": "Cursor traverses down near the same horizontal position. Arrow at8049, I-beam8050, arrow8051, I-beam8052\u20138054, arrow8055 onward. It moves through a later paragraph and ends in the white space below; small final settling changes continue through8057.",
+      "observed_after": "Arrow has settled below the later paragraph by8057;8058 differs only low-level raster values (max15channel levels) and8058\u20138063 are pixel-identical. The selected line and article stay fixed.",
+      "first_observed_change_frame": 8049,
+      "last_observed_change_frame": 8057,
+      "motion_object": {
+        "properties": [
+          "cursor y translation",
+          "small cursor x deviations",
+          "arrow/I-beam shape state"
+        ],
+        "path": "Difference-support cursor boxes versus pre, in source coordinates:8049[922,634,933,651];8050[926,671,933,686];8051[931,710,942,727];8052[929,744,935,758];8053[927,750,933,765];8054[925,754,932,769];8055[925,762,936,779];8056[924,763,935,780];8057[924,763,935,781]. These are thresholded changed-pixel boxes, not complete cursor silhouettes.",
+        "easing": "UNKNOWN",
+        "duration_note": "Candidate8049\u20138055 is7frames; translation/raster settling continues through8057. First\u2192last substantive change8/24=0.333333s; inclusive9-frame exposure0.375s. Static end checked through8063. Speed appears to reduce near the end but exact easing is unestablished.",
+        "static_anchors": [
+          "blue selection ending at source x923",
+          "text baselines and paragraph positions",
+          "article/page composition",
+          "presenter/laptop/desk in scaled contexts"
+        ]
+      },
+      "confidence": "HIGH",
+      "event_onset_frame": 8049,
+      "event_offset_frame": 8057,
+      "limitations": [
+        "Native1:1ROI96x250, not fullframe.",
+        "Cursor pixel support estimated against pre with threshold35; antialiased edges and underlying text affect exact boxes by about1\u20132pixels.",
+        "Final8057 difference includes1pixel lower support change; this does not establish source subpixel curve or easing.",
+        "First-pass single Ibeam\u2192arrow description was incomplete: multiple shape substitutions occur during the downward traversal."
+      ],
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08048_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08048_context960.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08049_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08050_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08051_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08052_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08053_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08054_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08055_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08056_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08057_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08058_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08059_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08060_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08061_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08062_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08063_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08063_context960.jpg"
+      ],
+      "candidate_window": {
+        "start": 8049,
+        "end": 8055
+      },
+      "review_window": {
+        "start": 8048,
+        "end": 8063
+      },
+      "ROI_xyxy_inclusive": [
+        882,
+        573,
+        977,
+        822
+      ],
+      "frame_measurements": {
+        "coordinate_system": "ROI pixels unless source coordinates explicitly stated;source=ROI+origin",
+        "source_origin": [
+          882,
+          573
+        ],
+        "against_pre": [
+          {
+            "frame": 8048,
+            "difference_components_vs_pre_threshold35": [],
+            "max_abs_delta": 0,
+            "changed_pixels_threshold35": 0,
+            "pts_s": 335.375
+          },
+          {
+            "frame": 8049,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  40,
+                  61,
+                  51,
+                  78
+                ],
+                "area": 83,
+                "centroid_roi": [
+                  44.24,
+                  70.39
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 86,
+            "pts_s": 335.4166666666667
+          },
+          {
+            "frame": 8050,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  44,
+                  98,
+                  51,
+                  113
+                ],
+                "area": 53,
+                "centroid_roi": [
+                  47.43,
+                  105.66
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 53,
+            "pts_s": 335.4583333333333
+          },
+          {
+            "frame": 8051,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  49,
+                  137,
+                  60,
+                  154
+                ],
+                "area": 66,
+                "centroid_roi": [
+                  53.45,
+                  147.33
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 66,
+            "pts_s": 335.5
+          },
+          {
+            "frame": 8052,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  47,
+                  171,
+                  53,
+                  185
+                ],
+                "area": 25,
+                "centroid_roi": [
+                  49.84,
+                  176.44
+                ]
+              }
+            ],
+            "max_abs_delta": 226,
+            "changed_pixels_threshold35": 27,
+            "pts_s": 335.5416666666667
+          },
+          {
+            "frame": 8053,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  45,
+                  177,
+                  51,
+                  192
+                ],
+                "area": 48,
+                "centroid_roi": [
+                  48.04,
+                  185.08
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 50,
+            "pts_s": 335.5833333333333
+          },
+          {
+            "frame": 8054,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  43,
+                  181,
+                  50,
+                  196
+                ],
+                "area": 51,
+                "centroid_roi": [
+                  46.43,
+                  188.61
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 52,
+            "pts_s": 335.625
+          },
+          {
+            "frame": 8055,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  43,
+                  189,
+                  54,
+                  206
+                ],
+                "area": 79,
+                "centroid_roi": [
+                  46.99,
+                  198.22
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 79,
+            "pts_s": 335.6666666666667
+          },
+          {
+            "frame": 8056,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  42,
+                  190,
+                  53,
+                  207
+                ],
+                "area": 78,
+                "centroid_roi": [
+                  45.97,
+                  199.27
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 78,
+            "pts_s": 335.7083333333333
+          },
+          {
+            "frame": 8057,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  42,
+                  190,
+                  53,
+                  208
+                ],
+                "area": 79,
+                "centroid_roi": [
+                  45.95,
+                  200.13
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 79,
+            "pts_s": 335.75
+          },
+          {
+            "frame": 8058,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  42,
+                  190,
+                  53,
+                  208
+                ],
+                "area": 78,
+                "centroid_roi": [
+                  45.94,
+                  200.21
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 78,
+            "pts_s": 335.7916666666667
+          },
+          {
+            "frame": 8059,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  42,
+                  190,
+                  53,
+                  208
+                ],
+                "area": 78,
+                "centroid_roi": [
+                  45.94,
+                  200.21
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 78,
+            "pts_s": 335.8333333333333
+          },
+          {
+            "frame": 8060,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  42,
+                  190,
+                  53,
+                  208
+                ],
+                "area": 78,
+                "centroid_roi": [
+                  45.94,
+                  200.21
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 78,
+            "pts_s": 335.875
+          },
+          {
+            "frame": 8061,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  42,
+                  190,
+                  53,
+                  208
+                ],
+                "area": 78,
+                "centroid_roi": [
+                  45.94,
+                  200.21
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 78,
+            "pts_s": 335.9166666666667
+          },
+          {
+            "frame": 8062,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  42,
+                  190,
+                  53,
+                  208
+                ],
+                "area": 78,
+                "centroid_roi": [
+                  45.94,
+                  200.21
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 78,
+            "pts_s": 335.9583333333333
+          },
+          {
+            "frame": 8063,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  42,
+                  190,
+                  53,
+                  208
+                ],
+                "area": 78,
+                "centroid_roi": [
+                  45.94,
+                  200.21
+                ]
+              }
+            ],
+            "max_abs_delta": 215,
+            "changed_pixels_threshold35": 78,
+            "pts_s": 336.0
+          }
+        ],
+        "adjacent": [
+          {
+            "frame": 8048,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ]
+          },
+          {
+            "frame": 8049,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 133,
+            "adjacent_delta_max": 215,
+            "adjacent_bbox_delta_gt35": [
+              38,
+              42,
+              53,
+              78
+            ]
+          },
+          {
+            "frame": 8050,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 140,
+            "adjacent_delta_max": 161,
+            "adjacent_bbox_delta_gt35": [
+              40,
+              61,
+              53,
+              113
+            ]
+          },
+          {
+            "frame": 8051,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 120,
+            "adjacent_delta_max": 157,
+            "adjacent_bbox_delta_gt35": [
+              44,
+              98,
+              60,
+              154
+            ]
+          },
+          {
+            "frame": 8052,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 93,
+            "adjacent_delta_max": 226,
+            "adjacent_bbox_delta_gt35": [
+              47,
+              137,
+              60,
+              185
+            ]
+          },
+          {
+            "frame": 8053,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 72,
+            "adjacent_delta_max": 215,
+            "adjacent_bbox_delta_gt35": [
+              45,
+              171,
+              53,
+              192
+            ]
+          },
+          {
+            "frame": 8054,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 87,
+            "adjacent_delta_max": 187,
+            "adjacent_bbox_delta_gt35": [
+              43,
+              177,
+              51,
+              196
+            ]
+          },
+          {
+            "frame": 8055,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 116,
+            "adjacent_delta_max": 187,
+            "adjacent_bbox_delta_gt35": [
+              43,
+              181,
+              54,
+              206
+            ]
+          },
+          {
+            "frame": 8056,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 100,
+            "adjacent_delta_max": 117,
+            "adjacent_bbox_delta_gt35": [
+              42,
+              189,
+              54,
+              207
+            ]
+          },
+          {
+            "frame": 8057,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 36,
+            "adjacent_delta_max": 109,
+            "adjacent_bbox_delta_gt35": [
+              43,
+              190,
+              53,
+              208
+            ]
+          },
+          {
+            "frame": 8058,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 15,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8059,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8060,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8061,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8062,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          },
+          {
+            "frame": 8063,
+            "dense_blue_columns_roi": [
+              0,
+              41
+            ],
+            "adjacent_pixels_delta_gt35": 0,
+            "adjacent_delta_max": 0,
+            "adjacent_bbox_delta_gt35": null
+          }
+        ],
+        "measurement_method": "Existing supplied PNGs only;cv2 decoded RGB/BGR channel absolute delta>35 to localize substantial changes;connected components area>=3;blue mask B>120,B-R>40,B-G>20 with dense-column count>=12 for selection edge. Heuristic detection rules, not exact source color tokens or source motion curves."
+      }
+    },
+    {
+      "id": "SUB151",
+      "verdict": "CONFIRMED",
+      "event_type": "CURSOR_TRANSLATION",
+      "observed_before": "At17779 a small faint cursor-like mark exists left of the chart zero label; the ROI does not establish clean cursor absence.",
+      "observed_change": "A clear arrow is visible at17780 and translates right near constant y through17783 toward the$0 label. Chart axis/label and plotted line remain anchored.",
+      "observed_after": "Arrow reaches/overlaps the left side of the$0 label at17783; it is still farther right than17782, so this final frame is not proof of motion offset.",
+      "first_observed_change_frame": 17780,
+      "last_observed_change_frame": 17783,
+      "motion_object": {
+        "properties": [
+          "cursor x translation",
+          "cursor visibility/shape clarity"
+        ],
+        "path": "Dominant new cursor difference-support source boxes:17780[193,797,207,819];17781[209,797,223,819];17782[237,797,251,819];17783[256,797,270,819]. Relative top-left x steps+16,+28,+19px; y constant at797 within threshold bounds. Pre17779 tiny mark source x178\u2013181,y808\u2013818 is retained as uncertain cursor-like precursor.",
+        "easing": "UNKNOWN",
+        "duration_note": "Candidate17780\u201317782 is3frames; rightward motion continues at17783 beyond candidate end. First\u2192last clear-arrow change PTS interval3/24=0.125s; inclusive4frame exposure0.166667s. Reviewed17779\u201317783 is5frames; total onset/offset not established.",
+        "static_anchors": [
+          "$0 text and baseline",
+          "vertical chart axis/grid",
+          "brown/red plotted line segment",
+          "whole chart/page in scaled contexts"
+        ]
+      },
+      "confidence": "HIGH_FOR_TRANSLATION_MEDIUM_FOR_PRECURSOR_IDENTITY",
+      "event_onset_frame": null,
+      "event_offset_frame": null,
+      "first_pass_correction": {
+        "appearance_claim": "UNVERIFIED",
+        "description": "Replace \u201cpointer appears\u201d with visible rightward cursor translation. A prior faint mark at17779 prevents certifying absence-to-appearance onset. Motion itself is confirmed."
+      },
+      "limitations": [
+        "Native1:1ROI175x104, not fullframe.",
+        "Small pre17779 mark cannot be confidently classified as full arrow versus partial/low-contrast cursor raster.",
+        "Boxes are thresholded changed-pixel support versus pre, excluding separate erased-precursor components; antialiasing uncertainty about1\u20132pixels.",
+        "No exact onset/offset, easing or software inferred."
+      ],
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17779_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17779_context960.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17780_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17781_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17782_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17783_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17783_context960.jpg"
+      ],
+      "candidate_window": {
+        "start": 17780,
+        "end": 17782
+      },
+      "review_window": {
+        "start": 17779,
+        "end": 17783
+      },
+      "ROI_xyxy_inclusive": [
+        138,
+        757,
+        312,
+        860
+      ],
+      "frame_measurements": {
+        "coordinate_system": "ROI pixels unless source coordinates explicitly stated;source=ROI+origin",
+        "source_origin": [
+          138,
+          757
+        ],
+        "against_pre": [
+          {
+            "frame": 17779,
+            "difference_components_vs_pre_threshold35": [],
+            "max_abs_delta": 0,
+            "changed_pixels_threshold35": 0,
+            "pts_s": 740.8333333333334
+          },
+          {
+            "frame": 17780,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  55,
+                  40,
+                  69,
+                  62
+                ],
+                "area": 116,
+                "centroid_roi": [
+                  60.51,
+                  52.55
+                ]
+              },
+              {
+                "bbox_roi": [
+                  40,
+                  51,
+                  43,
+                  55
+                ],
+                "area": 14,
+                "centroid_roi": [
+                  41.5,
+                  53.43
+                ]
+              },
+              {
+                "bbox_roi": [
+                  40,
+                  59,
+                  41,
+                  61
+                ],
+                "area": 5,
+                "centroid_roi": [
+                  40.4,
+                  59.8
+                ]
+              }
+            ],
+            "max_abs_delta": 173,
+            "changed_pixels_threshold35": 135,
+            "pts_s": 740.875
+          },
+          {
+            "frame": 17781,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  71,
+                  40,
+                  85,
+                  62
+                ],
+                "area": 122,
+                "centroid_roi": [
+                  76.66,
+                  52.82
+                ]
+              },
+              {
+                "bbox_roi": [
+                  40,
+                  51,
+                  43,
+                  55
+                ],
+                "area": 14,
+                "centroid_roi": [
+                  41.5,
+                  53.43
+                ]
+              },
+              {
+                "bbox_roi": [
+                  40,
+                  59,
+                  41,
+                  61
+                ],
+                "area": 5,
+                "centroid_roi": [
+                  40.4,
+                  59.8
+                ]
+              }
+            ],
+            "max_abs_delta": 141,
+            "changed_pixels_threshold35": 141,
+            "pts_s": 740.9166666666666
+          },
+          {
+            "frame": 17782,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  99,
+                  40,
+                  113,
+                  62
+                ],
+                "area": 120,
+                "centroid_roi": [
+                  104.51,
+                  52.19
+                ]
+              },
+              {
+                "bbox_roi": [
+                  40,
+                  51,
+                  43,
+                  55
+                ],
+                "area": 14,
+                "centroid_roi": [
+                  41.5,
+                  53.43
+                ]
+              },
+              {
+                "bbox_roi": [
+                  40,
+                  59,
+                  41,
+                  61
+                ],
+                "area": 5,
+                "centroid_roi": [
+                  40.4,
+                  59.8
+                ]
+              }
+            ],
+            "max_abs_delta": 164,
+            "changed_pixels_threshold35": 139,
+            "pts_s": 740.9583333333334
+          },
+          {
+            "frame": 17783,
+            "difference_components_vs_pre_threshold35": [
+              {
+                "bbox_roi": [
+                  118,
+                  40,
+                  132,
+                  62
+                ],
+                "area": 122,
+                "centroid_roi": [
+                  123.65,
+                  52.21
+                ]
+              },
+              {
+                "bbox_roi": [
+                  40,
+                  51,
+                  43,
+                  55
+                ],
+                "area": 14,
+                "centroid_roi": [
+                  41.5,
+                  53.43
+                ]
+              },
+              {
+                "bbox_roi": [
+                  40,
+                  59,
+                  41,
+                  61
+                ],
+                "area": 5,
+                "centroid_roi": [
+                  40.4,
+                  59.8
+                ]
+              }
+            ],
+            "max_abs_delta": 157,
+            "changed_pixels_threshold35": 141,
+            "pts_s": 741.0
+          }
+        ],
+        "adjacent": [
+          {
+            "frame": 17779
+          },
+          {
+            "frame": 17780,
+            "adjacent_pixels_delta_gt35": 135,
+            "adjacent_delta_max": 173,
+            "adjacent_bbox_delta_gt35": [
+              40,
+              40,
+              69,
+              62
+            ]
+          },
+          {
+            "frame": 17781,
+            "adjacent_pixels_delta_gt35": 238,
+            "adjacent_delta_max": 173,
+            "adjacent_bbox_delta_gt35": [
+              55,
+              40,
+              85,
+              62
+            ]
+          },
+          {
+            "frame": 17782,
+            "adjacent_pixels_delta_gt35": 242,
+            "adjacent_delta_max": 164,
+            "adjacent_bbox_delta_gt35": [
+              71,
+              40,
+              113,
+              62
+            ]
+          },
+          {
+            "frame": 17783,
+            "adjacent_pixels_delta_gt35": 242,
+            "adjacent_delta_max": 164,
+            "adjacent_bbox_delta_gt35": [
+              99,
+              40,
+              132,
+              62
+            ]
+          }
+        ],
+        "measurement_method": "Existing supplied PNGs only;cv2 decoded RGB/BGR channel absolute delta>35 to localize substantial changes;connected components area>=3;blue mask B>120,B-R>40,B-G>20 with dense-column count>=12 for selection edge. Heuristic detection rules, not exact source color tokens or source motion curves."
+      }
+    }
+  ],
+  "pending_ids": [],
+  "evidence_reads": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08003_nativeROI.png",
+      "sha256": "1737859e2346ba06869ad1471ada74fc497945ed2b52c4e1a6f8150484898956",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8003: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08003_context960.jpg",
+      "sha256": "b5f966d9c3fd0a25f5f2390240c4e6bf6681875062b5d093e3e7f85d08678d2d",
+      "scale": "SCALED_CONTEXT960x540",
+      "successful": true,
+      "witness": "SUB101 source frame8003: actual returned SCALED_CONTEXT960x540 inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08004_nativeROI.png",
+      "sha256": "b40c7faa7b232061ab93d88db8f10d9fd32a52072fa1b286e19977058d4e598e",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8004: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08005_nativeROI.png",
+      "sha256": "208c415beedda103a7fb334968922f701d5a54c1dc5b1fddaa705e58a5e27f24",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8005: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08006_nativeROI.png",
+      "sha256": "96d2fbd639ea14a784be125394388f444c2db356a3f9d555e44b1aa31067e628",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8006: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08007_nativeROI.png",
+      "sha256": "37c6f4e270988103a72325957ed722d2f165ee316222cf7b6b34ccb71f0a9c9b",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8007: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08008_nativeROI.png",
+      "sha256": "efba68bbb051d3ca16e42e2810beecb48ecdc443612f93a0b13d2331fdc8f3be",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB101 source frame8008: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB101/f08008_context960.jpg",
+      "sha256": "303e13ce0012a7fe8dcd3cf6762e47851f3b2d928102a01e96f604268604277a",
+      "scale": "SCALED_CONTEXT960x540",
+      "successful": true,
+      "witness": "SUB101 source frame8008: actual returned SCALED_CONTEXT960x540 inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08033_nativeROI.png",
+      "sha256": "5491fac1a899aee6440d291e0bbc719f65d74f1f905c5a54bc68c9786180b617",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8033: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08033_context960.jpg",
+      "sha256": "491d3e5deed06293035b320389098373e7154a01646bac72fdcb045c804b1a1d",
+      "scale": "SCALED_CONTEXT960x540",
+      "successful": true,
+      "witness": "SUB103 source frame8033: actual returned SCALED_CONTEXT960x540 inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08034_nativeROI.png",
+      "sha256": "b44ec241bd10c606406cc38f1aaf5d822484ec3c835bb2fd020c1e38d3d79525",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8034: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08035_nativeROI.png",
+      "sha256": "e067203c1e61468d31c5728b685d1715802cfdbbd683809e1cb22ea6b6f3bb4c",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8035: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08036_nativeROI.png",
+      "sha256": "cb9e657e5bfe47c6a4b65c2b494689a1a3ec47660535c9e37e9b86ff3ca2359b",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8036: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08037_nativeROI.png",
+      "sha256": "76c9238cf7331089f177e4b0b2624eed971c87ed7ba111a6f529bd60328afe74",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8037: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08038_nativeROI.png",
+      "sha256": "d5091b4eb66ed39e581e50eb429b5d64e269cf21e193b8f1d82672417be87eb5",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8038: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08039_nativeROI.png",
+      "sha256": "46e56542f1001a3fe3bee2cd78c13427c6dfcdd105e1c2f7c1a1c3df4f121b99",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8039: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08040_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8040: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08041_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8041: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08042_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8042: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08043_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8043: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08044_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8044: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08045_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB103 source frame8045: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08045_context960.jpg",
+      "sha256": "9c940dd32158bdb5be654f245f877464512e307d0948ae2cce0b382afb7a7900",
+      "scale": "SCALED_CONTEXT960x540",
+      "successful": true,
+      "witness": "SUB103 source frame8045: actual returned SCALED_CONTEXT960x540 inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08048_nativeROI.png",
+      "sha256": "20fc70949c6e2807aadb6d34429faa05dee78e5bbdd1874ac549e7793d30bc5f",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8048: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08048_context960.jpg",
+      "sha256": "f91d20b8e607eed4f2d83b1f8bc28eb6cdca6068a4a093221f5b9410cb16ac34",
+      "scale": "SCALED_CONTEXT960x540",
+      "successful": true,
+      "witness": "SUB104 source frame8048: actual returned SCALED_CONTEXT960x540 inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08049_nativeROI.png",
+      "sha256": "41d838f5f9fa419c37db9739639bfbfd7dba01a59d8b7380a55f61de3b52ba73",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8049: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08050_nativeROI.png",
+      "sha256": "dd7d21631552643ad8f2e107e86c7063464779eedbbe35ffd458ffba9340a0b0",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8050: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08051_nativeROI.png",
+      "sha256": "31d096f81fe7fdfd6dc826b56a17656989677c9db3b334ffa8cea74892caa476",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8051: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08052_nativeROI.png",
+      "sha256": "95bf94ab52b5a857d2fea2f3910714c501a88e4e21cd6546c345cf748774085b",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8052: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08053_nativeROI.png",
+      "sha256": "355de92892282bab0e08d4bcd54db762fc915eb8c1281da091d5741773cc7a5b",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8053: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08054_nativeROI.png",
+      "sha256": "d7c51f1a98158363d35ccf626e220350adc574601279611e7fbddfd4944399e0",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8054: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08055_nativeROI.png",
+      "sha256": "29e5c4dca44c03ffc3f1eb7c0233dc81fcd652b41b15913dc60742b56963eda0",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8055: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08056_nativeROI.png",
+      "sha256": "47a69fef5643c46dd0633a7696c89846f1916ec090fda70e2de21ed8df7519d3",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8056: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08057_nativeROI.png",
+      "sha256": "bdfac06c898aa857683498027ab5ae75519259bb80ef7ab70ee624f112311866",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8057: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08058_nativeROI.png",
+      "sha256": "2ec06353897b3d06c7aaa06725cd63f96c95f128e88c6023887fccf24aa60c9a",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8058: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08059_nativeROI.png",
+      "sha256": "2ec06353897b3d06c7aaa06725cd63f96c95f128e88c6023887fccf24aa60c9a",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8059: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08060_nativeROI.png",
+      "sha256": "2ec06353897b3d06c7aaa06725cd63f96c95f128e88c6023887fccf24aa60c9a",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8060: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08061_nativeROI.png",
+      "sha256": "2ec06353897b3d06c7aaa06725cd63f96c95f128e88c6023887fccf24aa60c9a",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8061: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08062_nativeROI.png",
+      "sha256": "2ec06353897b3d06c7aaa06725cd63f96c95f128e88c6023887fccf24aa60c9a",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8062: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08063_nativeROI.png",
+      "sha256": "2ec06353897b3d06c7aaa06725cd63f96c95f128e88c6023887fccf24aa60c9a",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB104 source frame8063: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB104/f08063_context960.jpg",
+      "sha256": "90d94f528036d0959234f55e2f2ac8d9bf6c934762e793bffcf426975450cfc3",
+      "scale": "SCALED_CONTEXT960x540",
+      "successful": true,
+      "witness": "SUB104 source frame8063: actual returned SCALED_CONTEXT960x540 inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17779_nativeROI.png",
+      "sha256": "6596b7f855797af23730ac13678054abdd7171994fcf29a8f8d1101e269d5708",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17779: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17779_context960.jpg",
+      "sha256": "92c7980084ae0e24c70c1bc55c34ce3aaf00e78a9282354020305f0787c2381d",
+      "scale": "SCALED_CONTEXT960x540",
+      "successful": true,
+      "witness": "SUB151 source frame17779: actual returned SCALED_CONTEXT960x540 inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17780_nativeROI.png",
+      "sha256": "415f4d0a91eef9c4decc85e275d662210e07c18ca665799943fa31389a364985",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17780: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17781_nativeROI.png",
+      "sha256": "312085893680c63f7f50e901089f31a67dbe8d6a10e0006919997fe9fdedaa39",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17781: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17782_nativeROI.png",
+      "sha256": "cc0467dba2aed9fc8d0c697956b5ee2906477f50524a0f0d54b451e2e9b74c4d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17782: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17783_nativeROI.png",
+      "sha256": "0134fcb25b1151b83a5309d8f47ff40549b54e9811581aeb488ba15551ab8129",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17783: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17783_context960.jpg",
+      "sha256": "04fdf86edc38697ff7d8bf79304d63786382ebd642a0cf2f979c671b88d71f50",
+      "scale": "SCALED_CONTEXT960x540",
+      "successful": true,
+      "witness": "SUB151 source frame17783: actual returned SCALED_CONTEXT960x540 inspected."
+    }
+  ],
+  "actual_listening_seconds": 0,
+  "full_CT_claim": false,
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "source_pts_formula": "(frame+1)/24",
+  "usage_start": {
+    "primary": 16,
+    "weekly": 18
+  },
+  "usage_at_stop": {
+    "primary": 32,
+    "weekly": 21,
+    "reset_credits_used_by_reviewer": 0,
+    "paid_credits_spent": 0,
+    "remaining_reset_credits_reported": 1
+  },
+  "integrity_note": {
+    "status": "ROOT_REPORTED_PASS",
+    "audit_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/session_20261104/sequential_same_decoder_seek_integrity_audit_v1.json",
+    "scope": "Root reported88/88 newly prepared source derivatives exact to non-seeking same-decoder sequential decode;includes these40nativeROIs. Root reported cross-pipeline RGB conversion differences, cause unestablished;no exact color-token claim.",
+    "pause_respected": "Paused after41actual image returns;resumed only pending5native+2scaledSUB151 after root clearance;no repeat views."
+  },
+  "limitations": [
+    "Bounded4candidate review only;40native1:1ROIs and8scaled contexts actually returned.",
+    "NativeROI is not native fullframe and scaledcontext is not native proof.",
+    "Candidate windows are not automatically event onset/offset; SUB101andSUB151 remain open at review bounds.",
+    "Easing UNKNOWN for all4; no source curves/software or audible cues inferred.",
+    "Raw first-pass outputs, prior146rulings, source and extraction manifest preserved."
+  ]
+}
