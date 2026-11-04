@@ -1,0 +1,43 @@
+{
+ "test": "RT-V2-02",
+ "criterion_file": "nonaudio_completion/camera_ease/RT-V2-02_PREREGISTERED_CRITERION.json",
+ "criteria": {
+  "C1_axis": {
+   "ok": true,
+   "ty_max": 0.05,
+   "scale_range": 0.00017000000000000348
+  },
+  "C2_magnitude": {
+   "ok": true,
+   "total_tx": 137.34
+  },
+  "C3_duration": {
+   "ok": true,
+   "moving_frames": 16,
+   "held": [],
+   "first_last": [
+    20,
+    35
+   ]
+  },
+  "C4_profile": {
+   "ok": true,
+   "rms": 0.0012,
+   "max_err": 0.003
+  },
+  "C5_peak": {
+   "ok": true,
+   "peak_index": 7,
+   "n": 16
+  },
+  "C6_rest": {
+   "ok": true
+  },
+  "C7_tracking": {
+   "ok": true,
+   "min_inliers": 1300
+  }
+ },
+ "overall": "PASS",
+ "scope": "camera pan trajectory only; scene art is an original procedural stand-in, not a style test"
+}
