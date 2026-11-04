@@ -1,0 +1,17 @@
+{
+ "test": "RT-V3-S01",
+ "version": "v2",
+ "registered_before_render": true,
+ "registered_utc": "2026-11-04T20:1xZ",
+ "supersedes": "PREREGISTERED_CRITERION_v1_FAILED_SOURCE_CALIBRATION.json (source itself failed v1 C3/C4: window and half-point mis-specified; kept)",
+ "criteria": [
+  "C1 format exact; frames 177-181 (ffprobe count == cv2 decoded count)",
+  "C2 palette at last frame: >=25% within L1<=50 of #484828/#485828; >=6% within L1<=60 of #c89858; >=5% within L1<=60 of #683818",
+  "C3 main push (cam_traj vs frame 0): end = first frame f with scale[f+8]-scale[f] < 0.01; start = first frame with (scale-1) > 2% of (scale[end]-1); scale[end] in [1.55,1.85]; tx[end] in [-800,-540]; length 40-60; start in f5-16",
+  "C4 ease: progress reaches 0.5 between 35% and 60% of the run; first 15% of run progress<0.15; last 15% progress>0.85",
+  "C5 after end+2: per-frame |dscale|<0.003 and |dx|<2; total extra scale from end to last frame between 1.00x and 1.06x",
+  "C6 visual: hand-drawn style, chalk cursive text, classroom layout, discrete pointer pose swaps, original content \u2014 each PASS/FAIL"
+ ],
+ "measurement": "deterministic C1-C5 by scripts/evaluate_style_rt.py; C6 visual by orchestrator on render frames only; overall PASS only if all pass",
+ "scope": "style + full-scene for one bounded scene; font/software UNKNOWN; sound NOT tested"
+}

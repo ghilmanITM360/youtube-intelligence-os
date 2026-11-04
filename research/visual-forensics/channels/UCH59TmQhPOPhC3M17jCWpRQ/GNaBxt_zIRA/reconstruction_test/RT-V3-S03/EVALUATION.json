@@ -1,0 +1,89 @@
+{
+ "test": "RT-V3-S03",
+ "criterion_sha256": "f810b406fca7b9f347362048028fd1874ece31bea65d3b2e899c270d0f692981",
+ "render_sha256": "a133c780e4df60b91870ad0ad65d7433f70e5decfa6a93223942b5e208a67307",
+ "deterministic": {
+  "C1": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames_ffprobe": 179,
+   "frames_decoded_cv2": 179
+  },
+  "C2": {
+   "ok": true,
+   "board": 0.312,
+   "wall": 0.401,
+   "wood": 0.063
+  },
+  "C3": {
+   "ok": true,
+   "run": [
+    13,
+    54
+   ],
+   "scale": 1.689,
+   "tx": -662,
+   "length": 42
+  },
+  "C4": {
+   "ok": true,
+   "half_at": 0.512,
+   "progress": [
+    0.02,
+    0.05,
+    0.1,
+    0.18,
+    0.31,
+    0.48,
+    0.65,
+    0.78,
+    0.89,
+    0.95,
+    0.99
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "camera_frames_after": [],
+   "extra_scale": 1.0281
+  }
+ },
+ "deterministic_overall": "PASS",
+ "C6_visual": {
+  "evaluator": "orchestrator, render frames f0,20,34,58,100,178 only",
+  "items": {
+   "hand_drawn_outline_style": {
+    "ok": true,
+    "obs": "jittered outlines, flat fills, static wall/wood texture"
+   },
+   "chalk_cursive_text": {
+    "ok": true,
+    "obs": "joined-script chalk text, fully in frame at final framing"
+   },
+   "classroom_layout": {
+    "ok": true,
+    "obs": "wide classroom at f0; push ends on board text with teacher+lectern at right edge, visible every frame"
+   },
+   "pointer_pose_swaps": {
+    "ok": true,
+    "obs": "pointer angle changes in discrete steps (worker timeline: taps f72/96/120/146)"
+   },
+   "original_content": {
+    "ok": true,
+    "obs": "new bearded elder, posters, text"
+   }
+  },
+  "ok": true,
+  "non_scored_observations": [
+   "teacher layer is screen-anchored per spec v4 (source behaviour ESTIMATED from tiles)"
+  ]
+ },
+ "overall": "PASS",
+ "history": "criterion v1 failed on source (kept); S01 FAIL (spec pan error + ease + print chalk), S02 FAIL (teacher layer spec gap), S03 PASS",
+ "scope": "style + full-scene for one bounded scene; font/software UNKNOWN; sound NOT tested"
+}

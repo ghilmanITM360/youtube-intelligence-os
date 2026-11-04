@@ -1,0 +1,86 @@
+{
+ "test": "RT-V3-S02",
+ "criterion_sha256": "f810b406fca7b9f347362048028fd1874ece31bea65d3b2e899c270d0f692981",
+ "render_sha256": "8f940a772ea7aee921c16a20e4fb10deb87a0e196b3081af37b754ce6bb15943",
+ "deterministic": {
+  "C1": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames_ffprobe": 179,
+   "frames_decoded_cv2": 179
+  },
+  "C2": {
+   "ok": true,
+   "board": 0.371,
+   "wall": 0.201,
+   "wood": 0.072
+  },
+  "C3": {
+   "ok": true,
+   "run": [
+    13,
+    53
+   ],
+   "scale": 1.687,
+   "tx": -660,
+   "length": 41
+  },
+  "C4": {
+   "ok": true,
+   "half_at": 0.525,
+   "progress": [
+    0.02,
+    0.05,
+    0.1,
+    0.18,
+    0.31,
+    0.48,
+    0.65,
+    0.79,
+    0.89,
+    0.96,
+    1.0
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "camera_frames_after": [],
+   "extra_scale": 1.0299
+  }
+ },
+ "deterministic_overall": "PASS",
+ "C6_visual": {
+  "evaluator": "orchestrator, render frames f0,20,34,58,100,178 only",
+  "items": {
+   "hand_drawn_outline_style": {
+    "ok": true,
+    "obs": "outlines, flat fills, static wood/wall texture"
+   },
+   "chalk_cursive_text": {
+    "ok": true,
+    "obs": "joined script chalk text, fully in frame"
+   },
+   "classroom_layout": {
+    "ok": false,
+    "obs": "teacher leaves frame right by f58; spec final framing requires teacher at right edge"
+   },
+   "pointer_pose_swaps": {
+    "ok": true,
+    "obs": "discrete pointer steps"
+   },
+   "original_content": {
+    "ok": true,
+    "obs": "new teacher, posters, text"
+   }
+  },
+  "ok": false
+ },
+ "overall": "FAIL",
+ "diagnosis": "SPEC GAP (orchestrator): in the source the teacher stays at ~0.85-0.9 frame width through the push (480x270 tiles +0/+50/+76) while the background zooms 1.7x about (960,50); a background-locked teacher would land at x~2200. The source teacher is therefore a separate screen-anchored layer (ESTIMATED from tiles). Spec v3 did not say this.",
+ "retest": "RT-V3-S03 (spec v4; criterion v2 unchanged)"
+}
