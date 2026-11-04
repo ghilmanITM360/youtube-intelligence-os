@@ -1,0 +1,15 @@
+{
+  "status": "PARTIAL",
+  "video_id": "GNaBxt_zIRA",
+  "checkpoint": "A",
+  "source": "source_manifest.json: sha256 cbe7a3af... matches registry; 16319 frames CFR 30000/1001; measurement PTS mismatches 0",
+  "measurement": "FULL_FRAME_MEASUREMENTS.csv all 16319 frames (scripts/measure_all.py)",
+  "detectors": "tables/detector_calibration.json (fixed JSON key, see detector_calibration_fix_note.txt); D1+D2+D3 -> 247 clustered candidates; D3 here = motion-event candidates",
+  "boundary_review": "agents/v3_boundary_01 (42 montages, 247 rows); validation tables/v3_boundary_01_validation.json errors 0",
+  "states": "tables/states_v1.csv 113 contiguous, kinds {'STABLE_OR_MOTION_STATE': 109, 'TRANSITION_STATE': 4}; intra_state_events_v1.csv 139; DRAFT",
+  "asr": "asr/asr_small_en (faster-whisper small.en, 172 segments) PROVISIONAL, not listened",
+  "art_batches_done": "none (b01 reviewer running); b07 superseded by b07a/b07b",
+  "listening": "BLOCKED_CAPABILITY",
+  "CT_SCAN_COMPLETE": false,
+  "next_operation": "reviewers v3_rev_b01..b06,b07a,b07b one at a time; then consolidate, prompts, specs, report"
+}
