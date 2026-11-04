@@ -1,0 +1,14 @@
+{
+ "version": "RT-V3-01 spec (final-audit 2026-11-04), derived from GNaBxt_zIRA native-frame measurements",
+ "implementation_limit": "Compressed output reveals geometry and frame timing only; source software, fonts, layer stack, easing curves and asset origin are UNAVAILABLE. Frame numbers at 30000/1001 fps, +-1 frame.",
+ "canvas": {"label":"MEASURED","resolution":"1920x1080","fps":"30000/1001 CFR","codec":"h264 mp4"},
+ "test_scene": {"board_colour":"#3b4f3a (uniform, you must use exactly this flat colour for the board area)","board_box_px":[300,80,1500,820],"wall_colour":"#c9a46a outside the board"},
+ "modules": [
+  {"id":"M_INSET_POP_OVERSHOOT","label":"MEASURED (S015 f2074-2090, inset height px: 35,0,266,363,362,344,344,... settled 344)",
+   "observation":"An old picture inset on the board collapses to a line and vanishes; a new picture inset then appears and scales up vertically past its final size before settling.",
+   "spec":{"collapse_frames":"1-2 (old inset shrinks to a line, then gone for 1 frame)","new_inset_height_fraction_of_settled":"frame0 0.77, frame1 1.055, frame2 1.05, frame3 onward 1.00 (hold)","overshoot":"+5% (+-2%) for 2 frames, then settle","width":"UNAVAILABLE in source (clipped measurement): keep width constant"}},
+  {"id":"M_SINGLE_FRAME_POP_IN","label":"MEASURED (S003 f299->300: mean_abs_diff 0.24 -> 3.11 -> 0.13; px_diff>=150 2076 -> 25285 -> 1078)",
+   "observation":"An element (silhouette) is absent on one frame and fully present at full size on the next, with no intermediate scale or fade frame.",
+   "spec":{"appear_frames":1,"intermediate_frames":0,"hold_after":">=30 frames static"}}
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "test": "RT-V3-01",
+ "frames": 180,
+ "criteria": {
+  "format": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001",
+    "nb_frames": "180"
+   }
+  },
+  "board_colour": {
+   "ok": true,
+   "got_bgr": [
+    58,
+    77,
+    58
+   ]
+  },
+  "M_INSET_POP_OVERSHOOT": {
+   "ok": true,
+   "onset": 32,
+   "height_fraction_seq": [
+    0.773,
+    1.058,
+    1.052,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "heights": {
+    "28": 344,
+    "29": 344,
+    "30": 36,
+    "31": 0,
+    "32": 266,
+    "33": 364,
+    "34": 362,
+    "35": 344,
+    "36": 344,
+    "37": 344,
+    "38": 344,
+    "39": 344,
+    "40": 344,
+    "41": 344,
+    "42": 344,
+    "43": 344
+   },
+   "gap_frames": [
+    31
+   ],
+   "want": "0.77, ~1.055, ~1.05, then 1.00"
+  },
+  "M_SINGLE_FRAME_POP_IN": {
+   "ok": true,
+   "change_frames": [
+    100
+   ],
+   "per_frame_change": [
+    0.0,
+    0.0,
+    0.0,
+    59.94,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "want": "exactly one changing frame at appearance, no intermediate"
+  },
+  "claims": {
+   "POP_old_collapse_start": 30,
+   "POP_gap_frame": 31,
+   "POP_new_onset": 32,
+   "POP_peak_frames": [
+    33,
+    34
+   ],
+   "POP_settle": 35,
+   "PIN_appear": 100
+  }
+ },
+ "overall": "PASS",
+ "scope": "timing/geometry of named modules only; style, characters, sound NOT tested"
+}
