@@ -1,0 +1,22 @@
+{
+ "encoder_artifact_frames": [
+  119,
+  120,
+  257,
+  955,
+  1057
+ ],
+ "encoder_artifact_I_frames": 4,
+ "encoder_rule": "D3-only frames with px_diff_ge150==0 and max_abs_diff<80 are ENCODER_REFRESH candidates absorbed into holds (visual spot-check required)",
+ "source": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could We Harvest Power From Lightning\uff1f [_efsqO-4OoQ].mp4",
+ "frames": 1164,
+ "T1_changed_frac": 0.002,
+ "noise_floor_px12_p99_quiet": 0.0,
+ "N3_px12": 40.0,
+ "scenedetect_starts": 5,
+ "holds": 23,
+ "activities": 22,
+ "drift_flagged_holds": 0,
+ "coverage_frames": 1164,
+ "method": "xkcd per-video candidate segmentation into HOLD states and ACTIVITY events (candidates, not verified truth).\nDetectors (complementary):\n  D1 low-res global change: changed_frac_thr10_320 >= T1\n  D2 PySceneDetect ContentDetector(12) scene starts\n  D3 full-res sparse-ink change: px_diff_ge12 >= N3 (calibrated from this source's own noise floor)\n  D4 hold drift: first-vs-last frame of a candidate hold differs (catches slow sub-threshold pans/fades)\nCalibration (per source, written to tables/detector_calibration.json):\n  noise floor = 99th percentile of px_diff_ge12 over frames whose low-res MAD is in the lowest 60% ; N3 = max(3*floor, 40 px)\nEvery frame is assigned to exactly one HOLD or ACTIVITY interval (full timeline coverage by construction).\n"
+}
