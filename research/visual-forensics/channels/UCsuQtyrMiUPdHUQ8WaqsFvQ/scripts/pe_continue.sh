@@ -20,6 +20,8 @@ if /usr/bin/python3 -c "import sys;sys.exit(0 if float('$f')>=0.85 else 1)"; the
 if [ -f $C/.supervised_test ]; then
   say "SUPERVISED TEST start"; cd $WS && claude -p "Reply with the single word READY then the value of the final_status column of the first row of campaign/campaign_ledger.csv." --model haiku --allowedTools "Read" --max-turns 3 --setting-sources "" --strict-mcp-config --mcp-config '{"mcpServers":{}}' < /dev/null >> $C/scheduler_test_output.txt 2>&1; say "SUPERVISED TEST exit $?"; rm -f $C/.supervised_test; exit 0
 fi
-say "LAUNCH worker"
+say "LAUNCH worker"; t0=$(date +%s)
 cd $HOME/workprojects/youtube-intelligence-os && claude -p "$(cat $C/RESUME_PROMPT.md)" --model claude-opus-5-5 --permission-mode acceptEdits --allowedTools "Read,Write,Edit,Bash,Agent,Glob,Grep" --output-format json < /dev/null > $C/worker_last.json 2>> $C/worker_stderr.log
-say "WORKER exit $?"
+rc=$?; say "WORKER exit $rc after $(( $(date +%s)-t0 ))s"
+# crash-loop guard: a quick failure waits 2 h rather than relaunching on every 30-min tick
+if [ $rc -ne 0 ] && [ $(( $(date +%s)-t0 )) -lt 300 ]; then date -v+2H +%s > $WAKE; say "quick failure -> wait 2h"; fi

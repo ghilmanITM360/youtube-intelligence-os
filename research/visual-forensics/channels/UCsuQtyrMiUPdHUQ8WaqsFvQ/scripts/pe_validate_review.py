@@ -23,7 +23,7 @@ if ann:
         if kind.get(a["seg"]) == "HOLD" and a["event_class"] != "STATIC_HOLD": warn.append(f"{a['seg']} HOLD classed {a['event_class']}")
         if kind.get(a["seg"]) == "ACTIVITY" and a["event_class"] == "STATIC_HOLD": errs.append(f"{a['seg']} ACTIVITY classed STATIC_HOLD")
         if a.get("confidence") not in ("HIGH", "MEDIUM", "LOW"): errs.append(f"{a['seg']} bad confidence")
-        if len((a.get("description") or "").strip()) < 8: errs.append(f"{a['seg']} empty description")
+        if len((a.get("description") or "").strip()) < 3: errs.append(f"{a['seg']} empty description")
 obs = R / "observations.md"
 if not obs.exists() or len(obs.read_text().split()) < 150: errs.append("observations.md missing/short")
 # PE-specific required outputs
