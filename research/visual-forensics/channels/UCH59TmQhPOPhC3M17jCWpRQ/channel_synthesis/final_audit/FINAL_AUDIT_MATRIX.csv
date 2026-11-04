@@ -1,0 +1,23 @@
+req_id,requirement,uPQcyookL0Y,mNLNb-Z4T0M,GNaBxt_zIRA,evidence_uPQcyookL0Y,evidence_mNLNb-Z4T0M,evidence_GNaBxt_zIRA,checked_this_audit
+R01,Source identity + SHA-256 + bytes vs registry,PASS,PASS,PASS,1416669f... 48986292 B = registry row,e6799e8f... 57325446 B = registry row,cbe7a3af... 101042486 B = registry row,ANEW (rehash of MP4 + registry readback)
+R02,Decoded timeline (CFR 30000/1001; frames),PASS,PASS,PASS,14647 frames FULL_FRAME_MEASUREMENTS.csv,16689 frames,16319 frames,ANEW (row counts) + reused ffprobe
+R03,State partition covers every frame; no gaps/overlaps,PASS,PASS,PASS,states_v6_draft 89 states 0-14646,states_v1 136 states 0-16688,states_v1 113 states 0-16318,ANEW (FINAL_VALIDATION.json)
+R04,Boundary candidates verified; unresolved boundaries,PARTIAL,PASS,PASS,UBC-001..003 adjudicated VC-14..16; UBC-002/003 punch-ins not re-partitioned in v6; W085b fade-out unobserved,boundary review 217 rows; 121 'NSF' flags explained FC-08,boundary review 247 rows; 0 validation errors,ANEW (native frames + diffs)
+R05,Intra-state motion / transitions / camera / drawing changes,PARTIAL,PARTIAL,PARTIAL,178 strip events; strips only at measured peaks,192 strip events; PC-002 camera MEASURED,173 strip events,REUSED + targeted VC-11..13
+R06,Native art direction per state (characters/assets/palette/type/layout),PASS (state-level; sparse frames),PASS (state-level; sparse frames),PASS (state-level; sparse frames),89/89 o_art_consolidated.csv,136/136 consolidated_art_audit.csv,113/113,ANEW coverage count + 10 spot frames MATCH (VC-01..10)
+R07,Fine visual detail inside long states,PARTIAL,PARTIAL,PARTIAL,W001 28 s sampled,long-state interiors sampled,long-state interiors sampled,REUSED
+R08,Narration coverage + visual alignment,PARTIAL,PARTIAL,PARTIAL,76/76 ASR segs assessed; segment-level timing,101/101 unique segs (7 boundary dups),172/172 unique segs (6 dups); 58 UNCERTAIN,ANEW counts
+R09,Actual listening (not ASR),BLOCKED,BLOCKED,BLOCKED,AUDIO_LISTENING_CAPABILITY_2026-11-03.json: no audio playback/hearing,same,same,ANEW capability re-check: Read tool returns images/text only; no audio path
+R10,Asset aliases + cross-video consistency,PARTIAL,PARTIAL,PARTIAL,o_asset_family_crosswalk_ext.csv 13 families (INFERRED_FROM_AUDIT_TEXT),per-batch asset IDs; no video-level crosswalk,per-batch asset IDs; no video-level crosswalk,ANEW CROSS_VIDEO_ASSET_ALIASES.csv (2 families OBSERVED 3/3)
+R11,Production specifications,PARTIAL,PARTIAL,PARTIAL,specifications_v2 + v2.1 (v2.1 untested),specifications_v1 DRAFT + RT-V2-01 MEASURED spec,specifications_v1 DRAFT + RT-V3-01 MEASURED spec,ANEW measured specs
+R12,Kit-required image + image-to-video prompts per distinct state,PASS,PASS,PASS,89/89 (now consolidated FC-05),136/136,113/113,ANEW coverage count
+R13,Independent review,PARTIAL,PARTIAL,PARTIAL,Claude sonnet subagents; orchestrator Claude opus (same vendor); no human,same,same,REUSED provenance; described accurately
+R14,Supported corrections + disputes resolved,PASS,PASS,PASS,o_primary_corrections + FC-04 UBC adjudication,PC-001/002 + FC-03,PC-001 (now MEASURED) / PC-002,ANEW
+R15,Reconstruction / render tests,PARTIAL,PARTIAL,PARTIAL,RT-01 PASS timing; style FAIL_BY_OMISSION,RT-V2-01 squash PASS; camera FAIL (pre-registered),RT-V3-01 PASS (2 modules; timing/geometry only),ANEW RT-V2-01 + RT-V3-01 executed
+R16,Final report + blueprint + production manual,PASS (report v2; blueprint v2),PARTIAL (report/blueprint v1 DRAFT),PARTIAL (report/blueprint v1 DRAFT),visual_ct_scan_report_v2.md,visual_ct_scan_report_v1.md,visual_ct_scan_report_v1.md,ANEW: FINAL_THREE_VIDEO_AUDIT.md production-manual section (scoped)
+R17,Kit mandatory files (manifest/coverage/shot/event/AV/blueprint/gate/handoff),PASS,PASS,PASS,existing + kit_outputs/uPQcyookL0Y_1416669f,kit_outputs/mNLNb-Z4T0M_e6799e8f (derived FC-07),kit_outputs/GNaBxt_zIRA_cbe7a3af (derived FC-07),ANEW
+R18,Checksum seals verify,PASS,PASS,PASS,seal P 1076 entries 0 mismatch,seal C1 2/0; seal C 624 with 1 expected (calibration file superseded by C1),seal C 662/0,ANEW
+R19,Published artifact readback (remote blob = local),PASS,PASS,PASS,281 remote files 0 mismatch,160/0,153/0,ANEW (pre-publish); re-verified after publish
+R20,Evidence portability,PARTIAL,PARTIAL,PARTIAL,tables/reports/specs in Git; MP4 frames PNG WAV local-only Machine A,same,same,ANEW
+R21,Audio gate / FULL_AV_SIGNOFF,BLOCKED,BLOCKED,BLOCKED,no listening,no listening,no listening,
+R22,Kit completion contract (CT_SCAN_COMPLETE),FAIL,FAIL,FAIL,status VISUAL_ANALYSIS_PARTIAL,VISUAL_ANALYSIS_PARTIAL,VISUAL_ANALYSIS_PARTIAL,

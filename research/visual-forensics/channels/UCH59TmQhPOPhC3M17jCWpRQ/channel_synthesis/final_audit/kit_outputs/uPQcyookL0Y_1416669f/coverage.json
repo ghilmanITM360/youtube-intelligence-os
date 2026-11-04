@@ -1,0 +1,32 @@
+{
+ "video_id": "uPQcyookL0Y",
+ "source_sha256": "1416669f10d7231f8110eb27044986912984dcdbacbd7d9f6440726349a0c69d",
+ "mode_requested": "CT_SCAN",
+ "mode_achieved": "DEEP within declared sparse visual coverage (VISUAL_ANALYSIS_PARTIAL)",
+ "temporal": {
+  "MEASURED": "all 14647 decoded frames (FULL_FRAME_MEASUREMENTS.csv)",
+  "states": 89,
+  "gaps": [],
+  "overlaps": [],
+  "covers_all": true
+ },
+ "visual_review": {
+  "native_frames": "2-5 sparse native frames per state + 8-frame motion strips at measured peaks (480x270 tiles)",
+  "blind_spots": "long-state interiors between sampled frames; motion outside measured peaks; strip windows truncate spans >8 frames"
+ },
+ "art_states": 89,
+ "prompt_states": 89,
+ "narration_rows": 76,
+ "audio": {
+  "listening": "BLOCKED_CAPABILITY (no audio playback/hearing in this agent)",
+  "asr": "ASR_UNCERTIFIED",
+  "audio_verified": 0
+ },
+ "ledgers": {
+  "shot": "shot_ledger_v6.csv",
+  "events": "visual_event_ledger.csv",
+  "audio_visual": "audio_visual_alignment_v5.csv"
+ },
+ "final_audit_utc": "2026-11-04",
+ "supersedes": "coverage.json kept as historical"
+}
