@@ -1,4 +1,4 @@
-# xkcd What If campaign — continuation handoff (updated 2026-11-04T17:55Z, checkpoint E)
+# xkcd What If campaign — continuation handoff (updated 2026-11-04T15:50Z [corrected; earlier hand-typed time was wrong], checkpoint E)
 
 Read first: campaign/CAMPAIGN_GOAL_v1.md, CHANNEL_PRODUCTION_MANUAL_v0.2.md (v0.1 kept), HELDOUT_PROTOCOL_v1.md, HELDOUT_EVALUATION.md, IMAGE_READ_INTEGRITY_NOTE.md, campaign_matrix.csv.
 

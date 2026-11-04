@@ -1,4 +1,4 @@
-# Held-out evaluation protocol v1 (pre-registered 2026-11-04T15:20Z, before any held-out reviewer output exists)
+# Held-out evaluation protocol v1 (pre-registered 2026-11-04T15:06Z [corrected; earlier hand-typed time was wrong], before any held-out reviewer output exists)
 Held-out: long JcXpCyPc2Xw, BnGqPxnQh9A; Shorts Ny9m2l6h478, jVy3qd70AqU, rGZ6TsXvi8E. Rules frozen = CHANNEL_PRODUCTION_MANUAL_v0.1.md + dev ranges from aggregate_dev_interim2.csv (LONG n=6, SHORT n=16). Tolerance: PASS if inside dev [min,max] widened by 15 % of the range on each side; otherwise FAIL (recorded, not rewritten into rules before this file's results section is written).
 
 ## Quantitative rules (MEASURED + reviewer classes)

@@ -1,4 +1,4 @@
-# Held-out evaluation v1 (2026-11-04T17:45Z) — against frozen HELDOUT_PROTOCOL_v1.md (manual v0.1)
+# Held-out evaluation v1 (2026-11-04T15:50Z [corrected; earlier hand-typed time was wrong]) — against frozen HELDOUT_PROTOCOL_v1.md (manual v0.1)
 
 Order of events (file mtimes, local GMT+5): protocol 20:06:10 → manual v0.2 written from dev only 20:34:28 → first held-out annotations 20:38:51. No held-out output was used to write v0.1 or v0.2.
 Held-out: long JcXpCyPc2Xw (2023-12, "What if NASCAR had no rules?"), BnGqPxnQh9A (2026-05, bananas radioactivity); Shorts Ny9m2l6h478 (2025-11), jVy3qd70AqU (2026-06), rGZ6TsXvi8E (2026-08). All 5: full ingest, all frames measured, every segment classified by a fresh sonnet reviewer (all sheets opened, transcript-audited), primary 0.6-scale spot-check of 1 sheet each (2 corrections in jVy3qd70AqU). Raw: campaign/heldout_quant.csv, campaign/aggregate_heldout.csv.
