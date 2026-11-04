@@ -9,7 +9,7 @@ Bounded fresh-context visual reviewer. Work ONLY inside `VIDEO_DIR`. Write ONLY 
 4. `frames/strips/<seg>.jpg` (STRIP_COUNT strips; may be 0) — dense frames of long ACTIVITY segments, labelled frame + changed-fraction.
 5. `asr/asr_small_en_segments.csv` — provisional machine ASR (not listening; may contain errors).
 
-**Open every sheet and every strip with the Read tool, one per call, sheets in order. Never claim a view you did not make.**
+**Open every sheet and every strip with the Read tool, one per call, sheets in order. Never claim a view you did not make.** **Read budget: open each image exactly once (no navigation pass, no re-reads unless a specific tile is ambiguous; name that tile in notes). Draft the rows for a sheet immediately after viewing it. Write the output files with the Write tool (not scripts), each once at the end or in at most 3 appends; do not make per-row Edits.**
 
 ## Critical classification rule (known failure of automatic detectors on this channel)
 Shot cut ≠ pose change ≠ camera move ≠ text event. A stepped or smooth **zoom of the same drawing is CAMERA, not SHOT_CUT**. The same character redrawn in a new pose/expression with same framing is CHARACTER (POSE_SWAP). SHOT_CUT = whole composition replaced by a different subject/setting. If a zoom proceeds in steps, each step is CAMERA (ZOOM_STEP).
