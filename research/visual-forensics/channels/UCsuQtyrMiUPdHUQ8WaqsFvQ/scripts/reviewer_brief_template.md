@@ -16,6 +16,8 @@ Shot cut ≠ pose change ≠ camera move ≠ text event. A stepped or smooth **z
 
 Holds with detector `D4` or `D4C` changed gradually (slow move or colour drift); they show first/mid/last tiles: describe the change and keep `STATIC_HOLD` class with subtype `DRIFT_COLOUR` or `DRIFT_MOTION`. Column `enc_artifact_frames` lists compression refreshes, not visible motion; do not treat it as drift.
 
+Tiles sit at different places on a sheet: never infer framing or position change by comparing tiles across rows or columns unless you compare position inside each tile. A hold shows only its last frame; do not report drift from that comparison.
+
 ## Output 1 — `annotations.csv`, exact header `seg,event_class,subtype,description,confidence`
 One row per segment, same IDs, same order. HOLD rows: `STATIC_HOLD`. ACTIVITY rows: `SHOT_CUT`, `GRAPHIC/TEXT`, `CAMERA`, `CHARACTER`, `LIGHT/COLOR/EFFECT`, `FALSE_POSITIVE`, or `+` combos using these exact strings (the class is literally `GRAPHIC/TEXT`). `subtype` UPPER_SNAKE (e.g. SCENE_SWAP, POSE_SWAP, EXPRESSION_SWAP, ZOOM_STEP, ZOOM_IN, ZOOM_OUT, PAN, POP_ON_OBJECT, POP_ON_TEXT, POP_OFF, SLIDE_ON, SLIDE_OFF, BOUNCE, SCALE_POP, SHAKE, CROSS_DISSOLVE, FADE, OPENING_STATE, ENDING_STATE, HOLD). `description` = literal visible facts: subjects, pose, expression, position (left/right/upper/lower), relative size, readable text in quotes, colours. Unreadable text → `unreadable at tile scale`. Undeterminable → say so, confidence LOW and word `UNRESOLVED`. `confidence` HIGH/MEDIUM/LOW. Quote fields with commas.
 

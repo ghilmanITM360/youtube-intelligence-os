@@ -1,0 +1,28 @@
+seg,event_class,subtype,description,confidence
+G0001,STATIC_HOLD,OPENING_STATE,White portrait frame. Black handwritten caps title upper centre 'CAVEMAN EXPLAIN' and lower 'HOW GET GIRLFRIEND'. Centre: small grumpy frowning man in bowler hat and bow tie with yellow leopard-spot vest holding a flower in left hand (viewer's left); eyes look sideways. Static to tile scale.,HIGH
+G0002,CHARACTER,POSE_SWAP,Single-frame change. Title text unchanged. Small grumpy flower man replaced by bearded caveman with open mouth (smiling/talking) and both arms spread wide in shrug; yellow leopard-spot tunic; same centre position and slightly larger. Replacement is instant (no in-between visible at tile scale).,HIGH
+G0003,STATIC_HOLD,HOLD,"Same title. Bearded caveman centre, arms spread, open smiling mouth with visible teeth/tongue, yellow spotted tunic. Matches G0002 last tile.",HIGH
+G0004,CHARACTER,EXPRESSION_SWAP,"Single-frame change on caveman face: eyes/nose/mouth gone, face area white/blank inside beard and hair. Body, arms, text unchanged. INFERRED by primary: face removal literalises ASR words ""forget bad face"" (ASR_UNCERTIFIED).",MEDIUM
+G0005,STATIC_HOLD,HOLD,Same title. Caveman with arms spread still has blank face (no eyes/nose/mouth) in beard and hair. Long hold 2.58-5.32s. Face state differs from G0003.,HIGH
+G0006,SHOT_CUT,SCENE_SWAP,"Whole composition replaced. Title text gone. Full-height large bearded caveman in plain white body-length garment with vertical lines with striped arm marks, standing frontal, heavy brow, frown, mouth hidden in beard, arms hanging. Fills frame vertically; different drawing and scale than previous. INFERRED by primary: vertical grain lines read as log body, ASR ""built like log"".",HIGH
+G0007,STATIC_HOLD,HOLD,"Large frowning caveman in plain white smock standing, no chest marks visible. Same as G0006.",HIGH
+G0008,CHARACTER,POP_ON_OBJECT,Single-frame change: two small chest nipple marks appear on smock upper chest of the large caveman. Rest unchanged. Small change at tile scale.,MEDIUM
+G0009,STATIC_HOLD,HOLD,"Large caveman with two small nipple marks on chest, otherwise same frown and pose.",HIGH
+G0010,SHOT_CUT,SCENE_SWAP,Whole composition replaced by white frame with red caps text 'MISSION:' centre-upper. No character.,HIGH
+G0011,STATIC_HOLD,HOLD,"Red 'MISSION:' centred upper, nothing else.",HIGH
+G0012,GRAPHIC/TEXT,POP_ON_TEXT,Black bold caps word 'MAKE' appears under red 'MISSION:'.,HIGH
+G0013,STATIC_HOLD,HOLD,'MISSION:' red over 'MAKE' black. Very short hold.,HIGH
+G0014,GRAPHIC/TEXT,POP_ON_TEXT,Black word 'WOMAN' appears under 'MAKE'. Text block lines: 'MISSION:' red; 'MAKE'; 'WOMAN'.,HIGH
+G0015,STATIC_HOLD,HOLD,"'MISSION: MAKE WOMAN' stacked, short hold.",HIGH
+G0016,GRAPHIC/TEXT,POP_ON_TEXT,Black word 'LAUGH' appears as third black line; block now 'MISSION: / MAKE / WOMAN / LAUGH'. Text block sits slightly higher than in earlier lines (block recentred upward).,MEDIUM
+G0017,STATIC_HOLD,HOLD,"'MISSION: MAKE WOMAN LAUGH' complete, red first line then black three lines.",HIGH
+G0018,SHOT_CUT,SCENE_SWAP,"Text replaced by new scene: bearded caveman left in yellow spotted tunic, angry mouth open, left hand raised palm out, right hand pointing at an easel-mounted sign on the right. Sign has caption 'HOT?' above a small photographic (real-image) picture of a creature/woman figure, brownish. Black tripod easel stand.",HIGH
+G0019,STATIC_HOLD,HOLD,"Caveman pointing at easel photo captioned 'HOT?'. Same as G0018, held about 1.5s.",HIGH
+G0020,SHOT_CUT,SCENE_SWAP,"Whole composition replaced: black gorilla/ape with yellow spotted tunic, mouth wide open round, sunglasses-like brow band, fists clenched at chest, small motion lines at upper left. Centre frame.",HIGH
+G0021,STATIC_HOLD,HOLD,"Gorilla in yellow spotted tunic with open round mouth and fists at chest, small shout lines upper left. Held about 0.9s.",HIGH
+G0022,CHARACTER+CAMERA,SLIDE_OFF,"Scene replaced at 11.12s by tall rocky cliff drawn right side, white background. Small caveman (yellow spotted tunic, arms up, frowning) falls from upper left diagonally downward-right then down past left of cliff face and exits at bottom edge by 12.16s. Per strip: f556 start, ~52 in-between frames, steady movement; no camera move, cliff fixed. Fall of a drawn figure across screen.",HIGH
+G0023,STATIC_HOLD,HOLD,"Empty cliff on right side, white background, figure gone. Very short hold (5 frames).",HIGH
+G0024,SHOT_CUT,SCENE_SWAP,"Whole composition replaced: man with sunglasses, beard and black leather jacket and jeans walking left-to-right, pointing leftwards with one hand, arm around smiling woman with long dark hair in yellow spotted dress; small black heart upper right. Barefoot/walking pose on ground scribble line.",HIGH
+G0025,STATIC_HOLD,HOLD,"Same couple walking, heart upper right. Held 12.3-14.2s. enc_artifact frames only compression refreshes.",HIGH
+G0026,SHOT_CUT,SCENE_SWAP,"Whole composition replaced: caveman in yellow spotted tunic seated on stone block at stone-block desk typing on a keyboard with desktop CRT monitor; mouth wide open screaming, angry brows, small shake marks near monitor. Faint grey smudge/background texture around edges.",HIGH
+G0027,STATIC_HOLD,ENDING_STATE,"Screaming caveman at computer desk, last frame of clip. No CTA/end card or text visible. Held 14.24-17.06s.",HIGH
