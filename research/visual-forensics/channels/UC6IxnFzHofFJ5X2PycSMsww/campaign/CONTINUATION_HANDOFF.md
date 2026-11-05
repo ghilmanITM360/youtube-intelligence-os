@@ -45,3 +45,17 @@ Read first: campaign/CAMPAIGN_GOAL_v1.md, CHANNEL_PRODUCTION_MANUAL_v0.2.md (v0.
 - Checkpoints: L 6bae7cdf24810b906ece42322a07f050fc3f8d71 (1240 files), M d6b006ff6b2b3e30e90003ee2739bd59a188c56a (1279), N 87a757751bcc18ab9eef364bffedc7002240c0cc (1337); all readback 0 mismatches, seals match, 0 media.
 - Reviewer scratch dir /private/tmp/claude-501/scratch unchanged (no new deviations).
 - Next: population measurement-only run on the 20 remaining local long videos against frozen v4 ranges (pre-register before ingest); re-review 30 strips; 9:16 RT; Phase 7 links.
+
+## Update 2026-11-05T19:15Z (checkpoint O published 2f0f1293ec0566a6f70803ff81eefe197e85a41b; session ea35c26f continuing campaign under token 70E8A861…; heartbeat renewed, prior holder pid 45018 dead)
+- Population-6 prep completed this session (last 4 preps + loudness 20/20 + source sha 20/20 verified). Quant: 116/120 = 96.7 % PASS (frozen ≥90 %); 4 FAIL (UXA-Af-JeCE Q3 2.71 s; aIIBBj6KR-Y Q3 2.96 s; jgafb8G7i4o Q7 HOLD 231 f; DiWFXv9N0Vs Q7 ACTIVITY 1 f). Q2/qualitative NOT_EVALUATED. See campaign/HELDOUT_EVALUATION_v6.md. 21 Shorts in the corpus are narration excerpts of Pop-6 longs (text-level exposure). Manual unchanged (v0.7).
+- Pop-6 per-video tables are NOT in checkpoint O (publisher only includes built videos): local-only under videos/<id>/ for the 20 ids in selection/selection_v6_pop6.json; sources are in ~/Downloads/videos in mp3/xkcd Channel (same Mac, not off-device backup). Hashes: campaign/source_hashes_all_2026-11-06.json.
+- RT4_916 portrait Short: acceptance criteria frozen 19:09:06Z (reconstruction/RT4_916/ACCEPTANCE_CRITERIA_RT4_916.sha256) before render; attempt 1 worker launched.
+- Strip re-review rv2: 31 strips of 9 videos (JcXpCyPc2Xw 11, lLlwvmu1ZeA 6, rGZ6TsXvi8E 6, BO8rOs05v48 3, WH4g1ptJ-70 2, 9VG0yqq_PHM, BnGqPxnQh9A, r7B0MzvwDcA 1 each) in campaign/strip_review/strip_tasks_rv2.csv; reviewer launched, output strip_rv2/strip_annotations.csv (validate before integrating).
+- Phase 7: no authoritative xkcd-specific definition found; docs/Phases.md Phase 7 = Opportunity Engine (not requested; not started). 'Phase 7 knowledge links' needs owner clarification.
+- Next: when RT4 attempt 1 returns → measure (xk_segment/xk_measure + xk_rt_eval on RT4_916/attempt_1), view sheets, score vs frozen criteria; when strip_rv2 returns → validate rows/format, compare with prior, record corrections; then checkpoint P, release lock.
+
+## Update 2026-11-05T19:35Z (checkpoint P)
+- strip_rv2 done: 31/31 strips, CONFIRMS 21 / REFINES 10 / CONTRADICTS 0, 16 internal cuts (campaign/strip_review/STRIP_RV2_SUMMARY.md). Not integrated into ledgers; transcript image-read audit not run.
+- RT4_916 attempt 1: RT4_916_PASS_PORTRAIT (reconstruction/RT4_916/attempt_1/RT_EVALUATION.md); frozen criteria sha a27f4b41…; only 8 frames viewed; mp4 local-only (sha 8e63c969…). Not a long-form or audio claim.
+- Phase 7 links: unresolved scope, owner clarification needed (repo Phase 7 = Opportunity Engine, not started).
+- Remaining non-audio work: (a) optional xk_validate_review.py audit of strip_rv2 transcript; (b) integrate rv2 refinements into ledgers if owner wants; (c) full-frame review of RT4 + narration sync need audio/more evidence; (d) Phase 7 scope. Lock released at checkpoint P.
