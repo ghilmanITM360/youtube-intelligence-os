@@ -8,6 +8,7 @@ v1 = {r['interval_id']: r for r in csv.DictReader(open(D / f'DENSE_REVIEW_{vid}_
 cf = D / f'DENSE_REVIEW_{vid}_v2_crop_corrections.csv'; v2 = {r['interval_id']: r for r in csv.DictReader(open(cf))} if cf.exists() else {}
 pk = {r['interval_id']: r['tiles'] for r in csv.DictReader(open(D / f'PACK_INDEX_{vid}.csv'))}
 ck = {r['interval_id']: r['frames'] for r in csv.DictReader(open(D / f'CROP_INDEX_{vid}.csv'))} if (D / f'CROP_INDEX_{vid}.csv').exists() else {}
+cc = D / f'CAMERA_CLAIM_CROSSCHECK_{vid}.csv'; ccm = {r['interval_id']: r['verdict_vs_dense_measurement'] for r in csv.DictReader(open(cc))} if cc.exists() else {}
 rows = []; miss = []
 for iid, m in iv.items():
     a = v1.get(iid); c = v2.get(iid)
@@ -21,6 +22,7 @@ for iid, m in iv.items():
         what_changes=(fin or a)['what_changes_v2' if fin else 'what_changes'], review_status=status, crop_verdict=c['verdict'] if c else '',
         interior_frames_seen_tiles=seen, interior_frames_seen_crop=seen_c, density=f'{max(seen, seen_c)}/{n} interior frames viewed',
         limitation=('all frames viewed' if max(seen, seen_c) >= n else 'changes between viewed frames are measured (dense CSV) but not visually seen'),
+        camera_claim_crosscheck=('NOT_CORROBORATED (sum |dscale|<0.01 and |dx|<10 px: below tracker noise floor; treat camera claim as UNCERTAIN)' if ccm.get(iid) == 'NOT_SUPPORTED_BY_DENSE' else 'SUPPORTED by dense measurement' if iid in ccm else ''),
         v1_confidence=a['confidence'], v1_note=a['note'], v2_note=c['note'] if c else ''))
 out = D / f'DENSE_REVIEW_LEDGER_{vid}.csv'
 with open(out, 'w', newline='') as f: w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
