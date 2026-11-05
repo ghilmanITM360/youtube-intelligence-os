@@ -1,0 +1,236 @@
+{
+  "report_type": "INDEPENDENT_BOUNDED_SELECTION_SUPPLEMENT",
+  "reviewer": "Codex independent subagent /root/video006_bounded_qa",
+  "created_at_utc": "2026-11-05T19:20:54.003140+00:00",
+  "video_id": "xtqbRt94TTw",
+  "channel": "Casual Finance",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "source_identity_limit": "Inherited freshly verified source identity from task owner and prior report. No new raw MP4 hash or source re-decoding performed by this reviewer.",
+  "scope": "Only batch4 selection observations, v18 to v19 ledger deltas, G063N01 specification v2 delta, and indexv7 to v8 attachment delta. Previous reviewed scopes and later root batches not re-reviewed.",
+  "bounded_verdict": "PASS",
+  "prior_independent_report": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/independent_QA_report.json",
+  "prior_report_sha256_preserved": "3a55a64c0618323f38ab343ae4ed0bd6ae6984a8e403f51c646badcbe0d0534f",
+  "gates": {
+    "date_selection_native_lifecycle": {
+      "status": "PASS",
+      "evidence": "highlight_motion_batch/date_native103-185.png",
+      "actual_native_date_ROI_frames_viewed": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185
+      ],
+      "observed": "No blue selection103-106. Blue first appears at107 at right end of date. Selection extends leftward across the date, reaching full visible date by116 and remaining blue selected through185. No date-selection toggle is visible166-184.",
+      "numeric_check": "Independently loaded all83 source-derivative paths from date_selection_measurements.json and recomputed a blue-color mask. First blue107 and selection presence166-184 confirmed. Edge pixels vary slightly with threshold, compression and cursor overlap; this is not treated as additional selection growth. Native displayed date crops support the full-date116 milestone.",
+      "limits": "Date ROI evidence does not establish click/button events, physical application focus or cursor lifecycle elsewhere on page."
+    },
+    "blue_to_gray_retained_bar_boundary": {
+      "status": "PASS",
+      "actual_fullframe_views": [
+        8089,
+        8090,
+        8106,
+        8131,
+        8200,
+        8250
+      ],
+      "observed": "At8089 the Chatham/$830b text has a blue filled bar and white text. At adjacent8090 the retained bar is gray with dark text while the article enlarges/repositions. It is a color/style transition rather than selection-bar removal. Later8106/8131/8200/8250 fullframes visibly retain gray filled bar beneath the same text.",
+      "first_gray_source_frame": 8090,
+      "reported_source_pts": 337.125,
+      "pts_limit": "Source timestamp inherited from established24fps source timebase; no new raw ffprobe performed in this supplement.",
+      "limits": [
+        "Physical focus/click state unknown.",
+        "Sampled later witnesses do not certify uninterrupted visibility8086-8250.",
+        "Final actual bar removal beyond8250 unknown.",
+        "Exact final article motion/zoom settling unknown.",
+        "Displayed financial article wording is a source-screen observation, not independent factual authentication."
+      ]
+    },
+    "ledger_v18_to_v19_delta": {
+      "status": "PASS",
+      "changed_event_ids": [
+        "SUB005",
+        "EP0235"
+      ],
+      "rows": 948,
+      "unique_event_ids": 948,
+      "candidate_only_before": 700,
+      "candidate_only_after": 700,
+      "checks": [
+        "Identical event ID sets; only two authorized rows differ.",
+        "SUB005 changes description, macro_review_ref and native_vs_firstpass_conflict. Its date-toggle portion is explicitly contradicted while cursor bounds stay unresolved; timing_precision is unchanged.",
+        "EP0235 changes description and macro_review_ref to attach exact8090 color transition plus sampled gray witnesses and retained unknowns. Source candidate timing fields are unchanged.",
+        "No other row differences, new shot boundaries, event-ID additions or global candidate closures."
+      ],
+      "new_color_transition_requirements_resolved": 1,
+      "additional_global_candidate_rows_closed": 0
+    },
+    "specification_v2_narrow_attachment": {
+      "status": "PASS",
+      "artifact": "remaining_25_original_state_specifications_v2.json",
+      "changed_state_ids": [
+        "G063N01"
+      ],
+      "checks": [
+        "Top-level metadata, all25 state IDs/order and source intervals unchanged. Only G063N01 differs.",
+        "G063N01 adds source_observation_supplement and revises original_animation_prompt, source_unknowns_retained and acceptance to transfer retained blue-through8089/gray-at8090 bar behavior.",
+        "Physical focus, final removal, source zoom curve/last motion and uninterrupted later persistence remain unknown. Original interpolation remains explicitly proposed.",
+        "Other24 specification objects are exactly equal to original. No new rendering or production acceptance claimed."
+      ],
+      "limits": "Only this delta reviewed; the prior report governs earlier specification-presence findings."
+    },
+    "indexv8_narrow_attachment": {
+      "status": "PASS",
+      "artifact": "integrated_production_interval_index_v8.json",
+      "checks": [
+        "Same627 rows/order, numeric intervals and475 states;151 remaining extended spans unchanged.",
+        "Exactly25 row references redirect to the corresponding same-state anchors in specificationv2; all anchors resolve. G063.01 additionally attaches batch4 source supplement.",
+        "Top-level spec path redirects tov2; independent_QA_ref resolves to prior unchanged report; G002 attempt02 bounded independent-pass metadata matches prior QA.",
+        "No other row changes. Whole-production status remains pending."
+      ]
+    },
+    "remaining_cursor_and_selection_offset": {
+      "status": "PARTIAL",
+      "finding": "SUB005 cursor lifecycle, physical focus, uninterrupted later persistence, final actual bar removal and final zoom settling remain unresolved."
+    },
+    "global_CT_scan_and_production": {
+      "status": "PARTIAL",
+      "finding": "No global completion change. Candidate-only700 and extended-span remainder151 unchanged. Prior bounded reconstruction verdicts retained without rerunning them."
+    },
+    "audio_AV": {
+      "status": "BLOCKED",
+      "actual_listening_seconds": 0,
+      "finding": "No listening or AV alignment performed."
+    }
+  },
+  "actual_image_views": {
+    "files": [
+      "highlight_motion_batch/date_native103-185.png",
+      "selection_offset_batch/frames/f08089.png",
+      "selection_offset_batch/frames/f08090.png",
+      "selection_offset_batch/frames/f08106.png",
+      "selection_offset_batch/frames/f08131.png",
+      "selection_offset_batch/frames/f08200.png",
+      "selection_offset_batch/frames/f08250.png"
+    ],
+    "file_count": 7,
+    "date_sheet_native_crop_count": 83,
+    "date_sheet_display_dimensions": [
+      1190,
+      660
+    ],
+    "fullframe_source_indices": [
+      8089,
+      8090,
+      8106,
+      8131,
+      8200,
+      8250
+    ],
+    "not_claimed": "No fresh views of8086/8087/8088, no continuous full-interval playback, no historical scope rereview. Numeric image loading is separate from visual viewing."
+  },
+  "defects": [],
+  "reviewed_artifact_sha256": {
+    "batch4_selection_observations.json": "78d4dde156e9848589dd6b3bed75c51d91e8ece207036ed57de0d461d3628102",
+    "visual_event_ledger_v18.csv": "5329306990b5895b136c89ecd140539fe2fe4551de57a353a5af84eb4248c778",
+    "visual_event_ledger_v19.csv": "a3253fce18c7e38189a5fc4866e14e67ea314f011f35b39660257ff9d7a2057d",
+    "highlight_motion_batch/date_selection_measurements.json": "19f5a9a86608f63c3cea92024572f5ef40200b1800388a16b94bb6ec9d0301a8",
+    "selection_offset_batch/blue_transition_measurements.json": "16b75a8450973f7dc40edadb171dd54eefe7ea46f51516cedfcd5d007575800b",
+    "remaining_25_original_state_specifications.json": "616b5a030611dac10af844aba87fb91a4c85a3232b5dd510f8339eda1dd52587",
+    "remaining_25_original_state_specifications_v2.json": "b1daf04fa3127173bb58e10cd50fa04d8dc2cc41637c910e4c19197634afd8da",
+    "integrated_production_interval_index_v7.json": "9b8a8786cd1d635a3c9698195cb249036ae6f51da70ee1c8f6c63eb7ed9ec653",
+    "integrated_production_interval_index_v8.json": "b0302a2a0bbaf20d3115e50cbca2f0aa72f282acc2d00fa08640b261ce0a8f43",
+    "highlight_motion_batch/date_native103-185.png": "f38932ced4fbb7d1d6eeab3d9b0710c09e3beb7b63456252d3cc1c33b394203e",
+    "selection_offset_batch/frames/f08089.png": "f015a7cdc7ba367fba5ba6b2ead07d8bdbb7412192fec069afb843ccc528c5f4",
+    "selection_offset_batch/frames/f08090.png": "76aced445c21de5a7aa24746c7fd94857dde0103468322437c0994ce43847391",
+    "selection_offset_batch/frames/f08106.png": "3d885fd094df1e935a68597ca5b0605b0f3c6560e9d8e17f1126c81c90036017",
+    "selection_offset_batch/frames/f08131.png": "747c17066b80e9b69b893a96da59378f700b143ee707081d84813e6345f553e2",
+    "selection_offset_batch/frames/f08200.png": "f64445ceaa17754420e36148e5c057863bea8b7c1bc284521def032c7ab39188",
+    "selection_offset_batch/frames/f08250.png": "e720a05db27f95930458d3c22c7268bd76894844419fd308ee4349d1342bbfea"
+  },
+  "actual_listening_seconds": 0,
+  "audio": "BLOCKED_NO_QUALIFIED_LISTENING",
+  "CT_SCAN_COMPLETE": false,
+  "FULL_AV_SIGNOFF_COMPLETE": false,
+  "whole_video_production_QA": "PENDING",
+  "operational_limits": "Only this separate supplement report was written. Prior QA preserved unchanged. No locks, source/media/repo/branch changes, protected worker interaction, new agents, publication, installations, paid-credit changes or raw-video transport. Later root native batch excluded."
+}

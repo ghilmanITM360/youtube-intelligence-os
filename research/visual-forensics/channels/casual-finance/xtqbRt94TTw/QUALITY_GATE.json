@@ -1,5 +1,5 @@
 {
-  "status": "VISUAL_ANALYSIS_PARTIAL_PARTITION_V6_EVENTS_V15_CHECKPOINT_V_LOCAL_SEALED",
+  "status": "VISUAL_ANALYSIS_PARTIAL_VALIDATED_CONTINUATION_EVENTS_V25",
   "CT_SCAN_COMPLETE": false,
   "video_id": "xtqbRt94TTw",
   "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
@@ -21,12 +21,12 @@
     "source_hash_and_stream_identity": "PASS_USER_SUPPLIED_ID_HASH_MATCH",
     "all_frame_numeric_timeline": "PASS19862ONCE_PARTITION_V6;NOT_SEMANTIC_COMPLETION",
     "all_gap_ownership": "PASS_WITH_SAMPLED_INTERIORS",
-    "full_semantic_event_timing": "PARTIAL;712CANDIDATE_ONLY_ROWS_PLUS_OTHER_PARTIAL_GATES;50PARTIAL_CUT_ONSETS;NOT_SHOTCOUNT",
+    "full_semantic_event_timing": "PARTIAL;633CANDIDATE_ONLY;74NEW_EXACT_ROWS_AND5CONTINUOUS_FRAGMENT_RULINGS;51PARTIAL_CUT_ONSETS_NOT_SHOTCOUNT",
     "independent_gap_review": "PASS_BOUNDED_123_GAPS",
     "merge_split_adjudication": "PASS146_OF146_WITH_EXPLICIT_DISTINCT_AND_NONCONTIGUOUS_RULINGS",
     "narration_visual_semantics": "199SAMPLED_ASR_ROWS;21UNDETERMINED/7POTENTIALFLAGS;LATER_ANNUAL_RATE_TABLE_CONTEXT_ADDED178/179;NOT_HEARD",
-    "production_state_prompts": "DRAFT447;28MISSING_INTEGRATED_SPECS;152EXTENDED_SPANS;WHOLE_VIDEO_STATIC_ANCHOR_COLD_START_RECONSTRUCTION_PENDING",
-    "bounded_original_render_test": "PRIOR75FRAME_TEST_AND_NEW37FRAME_ORIGINAL_OPENING_TEST_PASS_THEIR_BOUNDED_GATES;15NEW_PREVIEW_RETURNS_AUDITED;NOT_WHOLE_VIDEO_OR_BLIND_COLDSTART",
+    "production_state_prompts": "447HISTORICAL_DRAFTS_PLUS28NEW_ORIGINAL_SPEC_MAPPINGS;0MISSING_SPEC_PRESENCE;151EXTENDED_SPANS;GLOBAL_RENDER_QA_PENDING",
+    "bounded_original_render_test": "NEW28FRAME_ATTEMPT02_INDEPENDENT_BOUNDED_PASS;ATTEMPT01_DESIGN_FAIL_PRESERVED;NOT_WHOLE_VIDEO_BLIND_COLD_START",
     "actual_source_listening": "BLOCKED_NO_QUALIFIED_AUDIO_PERCEPTION",
     "full_av_signoff": "BLOCKED",
     "full_required_motion_field_schema": "FOUR_CURATED_SUPPLEMENTS_PRESENT;RAW_FIRSTPASS4NULLS_PRESERVED;NOT_GLOBAL_NATIVE_MOTION_PASS",
@@ -45,17 +45,17 @@
     "merge_split_rulings": 146,
     "semantic_status": "Native refinements plus prior independent firstpass/gap rulings; global semantic/native floor remains partial"
   },
-  "coverage_ref": "research/session_20261105/coverage_checkpoint_V.json",
-  "known_issues": "research/session_20261105/KNOWN_ISSUES_LEDGER_v11.md",
-  "event_ledger": "research/integrated_v4/visual_event_ledger_v15.csv",
+  "coverage_ref": "research/continuation_20261105_EP0002/CURRENT_REQUIREMENTS.json",
+  "known_issues": "research/continuation_20261105_EP0002/CURRENT_NATIVE_QUEUE.json",
+  "event_ledger": "research/continuation_20261105_EP0002/visual_event_ledger_v25.csv",
   "asr": {
     "segments": 199,
     "segment_union_seconds": 820.52,
     "actual_listening_seconds": 0,
     "label": "ASR_UNCERTIFIED_NOT_LISTENING"
   },
-  "active_task": "ALL_REVIEWERS_STOPPED;resource/publication reserve",
-  "next_task": "Inspect LOCAL_SEALED_HANDOFF_V.md and live remote parent. Publish V superset by normal push once GitHub ref-rule failure permits; then only exact pending early-PDF paths if any, otherwise global candidate timing/native floor and remaining motion/production/hearing gates.",
+  "active_task": "RESOURCE_RESERVE_VALIDATION_PUBLICATION; see external end-state for lock release",
+  "next_task": "EP0014native305/306 selection continuation/onset reconciliation; then EP0015native337 compound pose/highlight",
   "narration_review": {
     "ASR_segments_total": 199,
     "sampled_relation_rows_reviewed": 199,
@@ -169,7 +169,7 @@
   "selection_macro": {
     "candidate": "EP0234",
     "raw_claim": "second and later lines unchanged",
-    "ruling": "CONTRADICTED_IN_NATIVE_ROI_SECOND_LINE_SELECTION8017\u20138025",
+    "ruling": "CONTRADICTED_IN_NATIVE_ROI_SECOND_LINE_SELECTION8017–8025",
     "raw_source": "agents/shard_5/OUT_shard_5.json",
     "curated_source": "selection_macro_review_v1/OUT_selection_macro_review_v1.json",
     "raw_file_unchanged": true,
@@ -229,12 +229,11 @@
     "CT_SCAN_COMPLETE": false
   },
   "production_current": {
-    "draft": "production_v1/per_state_production_spec_DRAFT_v4.csv",
-    "retrieval_index": "production_integrated_v1/integrated_production_interval_index_v4.json",
-    "original_prompt_states": 447,
-    "missing_integrated_states": 28,
-    "extended_prompt_spans": 152,
-    "global_production_pass": false
+    "index": "research/continuation_20261105_EP0002/integrated_production_interval_index_v8.json",
+    "missing_original_specs": 0,
+    "extended_spans_remaining": 151,
+    "new_spec_presence": 28,
+    "global_production_QA": "PENDING"
   },
   "resource_policy": {
     "five_hour_used_ceiling": 95,
@@ -345,7 +344,7 @@
     "remote_sha": "4d625184deb606b9c0585e63cafb9b80b62e9974",
     "previous_local_U_commit": "df22c7e07748f0701816e95f5e0e7acf723d68ae",
     "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
-    "source_path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We\u2019re About to Break It - Casual Finance (1080p, h264).mp4",
+    "source_path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We’re About to Break It - Casual Finance (1080p, h264).mp4",
     "first_pass_shards_reused": 10,
     "new_first_pass_shards": 0,
     "pending_first_pass_shards": 0,
@@ -380,6 +379,16 @@
     "early_PDF_native_returns": 31,
     "early_PDF_pending_paths": [],
     "source_media": "DURABLE_LOCAL_ONLY;NO_RAW_MEDIA_OR_FRAMES_IN_GIT",
+    "CT_SCAN_COMPLETE": false
+  },
+  "continuation_20261105_EP0002": {
+    "source_root": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z",
+    "counts": "research/continuation_20261105_EP0002/CURRENT_REQUIREMENTS.json",
+    "queue": "research/continuation_20261105_EP0002/CURRENT_NATIVE_QUEUE.json",
+    "independent_QA": "Separate bounded reports in continuation directory; final later-object report required before seal",
+    "original_frozen_criteria_sha256": "6f0c962bba486a9163e5abd0281f4b36c6bab0049dca4ad7e612f16c55ddc236",
+    "historical_checkpoint_T_U_V_objects": "Preserved as historical snapshots, not current counts",
+    "actual_listening_seconds": 0,
     "CT_SCAN_COMPLETE": false
   }
 }

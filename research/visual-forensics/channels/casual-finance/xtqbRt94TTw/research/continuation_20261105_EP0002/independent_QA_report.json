@@ -1,0 +1,302 @@
+{
+  "report_type": "INDEPENDENT_BOUNDED_QA",
+  "reviewer": "Codex independent subagent /root/video006_bounded_qa",
+  "created_at_utc": "2026-11-05T19:13:51.295991+00:00",
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "run_root": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z",
+  "baseline_root": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "source_hash_verification_scope": "Fresh source SHA supplied by task owner and matches new observation/identity artifacts; raw source MP4 not independently rehashed or decoded by this reviewer. Source evidence assessed through supplied native derivatives and receipts.",
+  "overall_bounded_verdict": "PASS",
+  "verdict_scope": "New bounded source-event corrections through ledger v18; 28 original state-specification presence mappings; current original 28-frame attempt02 timing/design contract; indexv7 accounting. No whole-video, whole-production, source-art fidelity or AV signoff.",
+  "gates": {
+    "authorized_delta_and_ledger_integrity": {
+      "status": "PASS",
+      "evidence": [
+        "visual_event_ledger_v17.csv",
+        "visual_event_ledger_v18.csv",
+        "baseline integrated_v4/visual_event_ledger_v15.csv"
+      ],
+      "findings": [
+        "v15 to v17 changes exactly EP0002/EP0003/EP0004/EP0008/EP0011/EP0012/SUB001; all other rows equal. 948 rows and 948 unique IDs retained.",
+        "v17 to v18 changes SUB001 parent/reference metadata plus EP0006/SUB002/EP0007/SUB003 fragment classifications and SUB004 bounds. v15 to v18 changes12 unique rows; all source subevents retain shot_boundary_claim=NO.",
+        "Candidate-only timing rows712 before,705 afterv17,700 afterv18. Twelve resolved candidate rows comprise eight exact onset/motion rows and four reconciled fragments, not twelve independent new exact events."
+      ]
+    },
+    "coin_card_eye_bounded_source_claims": {
+      "status": "PASS",
+      "evidence": [
+        "native_observations.json",
+        "coin_native_ROI_37.png",
+        "coin_native_ROI_44.png",
+        "coin_native_ROI_51.png",
+        "coin_native_ROI_58.png",
+        "eyes_native37-64.png",
+        "frames/f00048.png",
+        "frames/f00049.png",
+        "frames/f00064.png",
+        "frames/f00065.png",
+        "frames/f00081.png",
+        "frames/f00082.png"
+      ],
+      "observed": [
+        "Rim absent38, first exposed39; orange first40. Roof still contacts/occludes at52; white gap/full detachment53. Continued upward displacement to59, then held60-64.",
+        "NBC card absent48/complete49; Fox absent64/complete65; WSJ absent81/complete82. These are additions within retained composition.",
+        "Open eyes retain high pupils across native eye crops37-64; no new gaze-onset or blink supported in this interval."
+      ],
+      "independent_numeric_check": "Own orange threshold on stored source frames confirms orange first40, top y612 at40 declining to288 at59, top/bounds stable60-64. Threshold measurements describe visible color only, not hidden coin geometry or source animation curves.",
+      "limits": "No lifecycle exit beyond reviewed window, exact rig/easing preset, hidden pre39 motion or continuous full-video coverage certified."
+    },
+    "pointer_calendar_and_initial_highlight_source_claims": {
+      "status": "PASS",
+      "evidence": [
+        "batch2_native_observations.json",
+        "frames/f00102.png",
+        "frames/f00103.png",
+        "frames/f00142.png",
+        "frames/f00143.png",
+        "frames/f00197.png",
+        "frames/f00198.png",
+        "frames/f00207.png",
+        "frames/f00208.png"
+      ],
+      "observed": [
+        "Pointer pose changes low across-body142 to raised diagonal143; head/smile retained.",
+        "Calendar count one at197, two at198/207, three at208.",
+        "Montage persists102; page appears103 with tiny yellow starts on both first and second body lines. Candidate105 is already progressing."
+      ],
+      "limits": "Pointer subsequent hold, calendar later motion/exits, date-selection lifecycle and cursor motion remain outside acceptance."
+    },
+    "supplemental_continuous_highlight_and_fragment_reconciliation": {
+      "status": "PASS",
+      "evidence": [
+        "highlight_motion_batch/native_observations.json",
+        "highlight_motion_batch/yellow_measurements.json",
+        "visual_event_ledger_v18.csv",
+        "highlight_motion_batch/ROI_103_114.png",
+        "highlight_motion_batch/ROI_115_126.png",
+        "highlight_motion_batch/ROI_127_138.png",
+        "highlight_motion_batch/ROI_139_150.png",
+        "highlight_motion_batch/ROI_151_162.png",
+        "highlight_motion_batch/ROI_163_165.png"
+      ],
+      "observed": "All63 consecutive native text crops103-165 were actually viewed in six sheets. First two bands extend continuously103-143 with no reset at machine fragment breaks107/118/135/138; third band absent143, starts144, extends through159, holds160-165. First two bands hold after143. Pointer143 remains separate.",
+      "receipt_check": "All63 derivative SHA-256s match measurement receipts. Tiny antialiased103 edge is visually observed; strict strong-yellow detector first104 is preserved, not relabeled.",
+      "limits": "Acceptance applies to text ROIs and stated bounded visible band growth. It does not verify date selection, whole-frame motion, highlight removal after165 or underlying editor curves."
+    },
+    "attempt01_frozen_original_design": {
+      "status": "FAIL",
+      "finding": "Frozen original_design says rounded console; viewed attempt01 has square rectangular console. Timing/stream/occlusion/anchor checks pass, but that does not override the visible design requirement.",
+      "evidence": [
+        "RECONSTRUCTION_CRITERIA_FROZEN.json#original_design",
+        "original_render_attempt01/decoded/f00049.png",
+        "original_render_attempt01/independent_defect_receipt.json"
+      ],
+      "disposition": "Failed attempt preserved; master remains b8b602299068bf7fab24cf869f67ffaad2eaa9dfab5b64d915cb761e74bfa7c1. Corrected separately in attempt02."
+    },
+    "attempt02_frozen_bounded_original_render": {
+      "status": "PASS",
+      "evidence": [
+        "RECONSTRUCTION_CRITERIA_FROZEN.json",
+        "render_original_attempt02.py",
+        "original_render_attempt02/render_receipt.json",
+        "original_render_attempt02/validation.json"
+      ],
+      "independent_checks": {
+        "criteria_sha256_unchanged": "6f0c962bba486a9163e5abd0281f4b36c6bab0049dca4ad7e612f16c55ddc236",
+        "master_sha256": "045bc84b0200d8d5185d7dcd8a141374b2a13b1ea7e6d718c75a5f3304ec0006",
+        "fresh_ffprobe": "One video stream;1920x1080;24/1fps;28 decoded frames;no audio stream",
+        "fresh_decode": "In-memory FFmpeg RGB decode matches all28 saved decoded PNGs exactly",
+        "rim39_fill40_separation53": true,
+        "panelC_absent48_complete49_and_fixed_to64": true,
+        "monotonic_badge_top40_to59_and_fullframe_hold59_to64": true,
+        "console_lights_and_earlier_panels_static": true,
+        "rounded_console_visible": true
+      },
+      "actual_visual_checkpoint_frames": [
+        39,
+        40,
+        49,
+        52,
+        53,
+        59,
+        64
+      ],
+      "interpretation": "Navy/coral/cream/teal original console, badge and NOTE panels satisfy this bounded abstract timing/design contract. Seven checkpoint views plus all-frame numeric checks; no continuous real-time playback claimed. Script inspection finds no source imagery input; geometry, lookup motion and font choices are original implementation choices.",
+      "limits": "No competitor-art fidelity test, whole-video cold-start reconstruction, AI generator quality test or source audio alignment."
+    },
+    "new_original_state_specification_presence_and_provenance": {
+      "status": "PASS",
+      "evidence": [
+        "G003_missing_state_specifications.json",
+        "remaining_25_original_state_specifications.json",
+        "integrated_production_interval_index_v7.json"
+      ],
+      "counts": {
+        "G003_reused_prior_test_specs": 3,
+        "other_new_specs_not_render_accepted": 25,
+        "unique_new_state_ids": 28,
+        "missing_presence_mappings": 0
+      },
+      "checks": [
+        "All28 state IDs are unique and map once to matching exact numeric index intervals. All archived source-observation files and cited anchors exist.",
+        "Compared source-description and timing/uncertainty text against cited archived review records; G003 original local0-35/36-52/53-74 correctly maps source226-261/262-278/279-300.",
+        "Other25 prompts include state-specific original visual/motion ideas, anchors, continuity/camera/layer/render contracts and acceptance checks. They explicitly label source observations as reused, original choices as proposed, and internal sampled unknowns as unresolved.",
+        "Examples of retained uncertainty: G063 selection removal; G078 logo onsets; G090/G092 scroll; G097 runner entry bracket; G116 cursor/title timing; G118 timeline entrance; S0396/S0406 draw completions; G121 card sliver/path; G123 caption/acting onset."
+      ],
+      "prior_acceptance_reused": "baseline reconstruction_test_v2/independent_QA_completed.json records bounded75-frame original test acceptance for G003. Prior source scenes and75-frame media were not newly visually re-inspected in this review.",
+      "limits": "Presence/provenance acceptance only. No claim of newly viewing25 historical source scenes or accepting25 renders. Proposed exact geometry, copy/data, curves and cross-state production continuity still require implementation and render QA."
+    },
+    "indexv7_partition_and_accounting": {
+      "status": "PASS",
+      "evidence": [
+        "frame_partition_v7.csv",
+        "integrated_production_interval_index_v7.json"
+      ],
+      "checks": [
+        "627 index intervals match partition IDs, state IDs and numeric bounds. Contiguous0-19861 with no gaps/overlaps;19862 numeric frames once;475 distinct states and329 composition groups.",
+        "447 inherited draft state mappings plus28 new spec mappings account for475 states; inherited draft quality not revalidated.",
+        "Baseline152 extended-span interval IDs minus G002.01 equals remaining151 unique IDs exactly. G002 has explicit frozen original contract and current attempt02 bounded acceptance; whole-production QA remains separate.",
+        "Indexv6 stale limitations text fixed in separately versionedv7; v7 rows remain unchanged fromv6. Index pre-review independent-pending strings describe prior state; this separate report supplies current bounded independent verdict."
+      ]
+    },
+    "global_native_semantic_coverage": {
+      "status": "PARTIAL",
+      "finding": "700 candidate-only rows remain. No whole-video native/100ms semantic or cold-start acceptance."
+    },
+    "whole_production_reconstruction": {
+      "status": "PARTIAL",
+      "finding": "151 extended-span specifications remain;25 newly mapped states still require rendering and independent output QA; inherited447 drafts are not newly production-approved."
+    },
+    "audio_and_AV": {
+      "status": "BLOCKED",
+      "actual_listening_seconds": 0,
+      "finding": "No audio listening occurred; silent render stream checks do not establish source audio or AV alignment. FULL_AV_SIGNOFF_COMPLETE is not granted."
+    }
+  },
+  "defects": [
+    {
+      "id": "QA001",
+      "severity": "DESIGN_CONTRACT",
+      "artifact": "original_render_attempt01",
+      "status": "PRESERVED_FAIL_CORRECTED_IN_ATTEMPT02",
+      "action": "Keep failed attempt and defect receipt; use attempt02 for this bounded render gate."
+    },
+    {
+      "id": "QA002",
+      "severity": "METADATA",
+      "artifact": "integrated_production_interval_index_v6.json#limitations",
+      "status": "CORRECTED_IN_INDEXV7",
+      "finding": "Old prose said28 missing/152 extended without current remaining status.",
+      "action": "Usev7 reconciled baseline152/current151 and zero missing presence mappings in the handoff."
+    }
+  ],
+  "unresolved_defects_in_current_bounded_artifacts": [],
+  "actual_image_views": {
+    "count": 43,
+    "paths": [
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00048.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00049.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00064.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00065.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00081.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00082.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00102.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00103.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00142.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00143.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00197.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00198.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00207.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f00208.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/coin_native_ROI_37.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/coin_native_ROI_44.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/coin_native_ROI_51.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/coin_native_ROI_58.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/eyes_native37-64.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/highlight_native96-103.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/EP0003_0004_overview.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/highlight_motion_batch/ROI_103_114.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/highlight_motion_batch/ROI_115_126.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/highlight_motion_batch/ROI_127_138.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/highlight_motion_batch/ROI_139_150.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/highlight_motion_batch/ROI_151_162.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/highlight_motion_batch/ROI_163_165.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/decoded/f00038.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/decoded/f00039.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/decoded/f00040.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/decoded/f00048.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/decoded/f00049.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/decoded/f00052.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/decoded/f00053.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/decoded/f00059.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/decoded/f00064.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt02/decoded/f00039.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt02/decoded/f00040.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt02/decoded/f00049.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt02/decoded/f00052.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt02/decoded/f00053.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt02/decoded/f00059.png",
+      "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt02/decoded/f00064.png"
+    ],
+    "source_fullframe_indices": [
+      48,
+      49,
+      64,
+      65,
+      81,
+      82,
+      102,
+      103,
+      142,
+      143,
+      197,
+      198,
+      207,
+      208
+    ],
+    "source_coin_and_eye_native_ROI_frames": [
+      37,
+      64
+    ],
+    "source_highlight_native_ROI_frames": [
+      103,
+      165
+    ],
+    "scaled_context_only": [
+      "highlight_native96-103.png (tool display resized3200x200 to2048x128; onset accepted using fullframe103 and native batch3 crop)",
+      "EP0003_0004_overview.png (tool display resized; adjacent native fullframes64/65/81/82 also viewed)"
+    ],
+    "not_image_review": "Numeric loading/hash comparison of other PNGs is not counted as a visual read."
+  },
+  "reviewed_input_sha256": {
+    "visual_event_ledger_v17.csv": "8bc576fd3021a770161a453f5302a1d5a00b47c343916f813721adeb112e12ca",
+    "visual_event_ledger_v18.csv": "5329306990b5895b136c89ecd140539fe2fe4551de57a353a5af84eb4248c778",
+    "native_observations.json": "abfa2e44b447ac75dcf088156b01cee4b921c23a467a6202d1fb2a671cd3fda8",
+    "batch2_native_observations.json": "349cc1c27ed9e4eea76e16d96b88786c7bb67e012077a2d1ebca95813106a516",
+    "highlight_motion_batch/native_observations.json": "d3be986a35f93cdbfee1b2713f2bc2d7ca899f8bc118d31d1d690d8a0152e74b",
+    "highlight_motion_batch/yellow_measurements.json": "243418f75ac36a153861e36ea6aed26e32531d36e9fcd757a056bb175665b407",
+    "RECONSTRUCTION_CRITERIA_FROZEN.json": "6f0c962bba486a9163e5abd0281f4b36c6bab0049dca4ad7e612f16c55ddc236",
+    "original_render_attempt01/original_timing_master.mkv": "b8b602299068bf7fab24cf869f67ffaad2eaa9dfab5b64d915cb761e74bfa7c1",
+    "original_render_attempt02/original_timing_master.mkv": "045bc84b0200d8d5185d7dcd8a141374b2a13b1ea7e6d718c75a5f3304ec0006",
+    "original_render_attempt01/independent_defect_receipt.json": "2f6c4763f2e72dccc3f98d780f7cc87134dd04eaa27bd27a8a679a1a28c0c4b9",
+    "original_render_attempt02/validation.json": "f526199b5c85adb465ba88ffb7185168fba653905f8e7c905fccf889114223aa",
+    "G003_missing_state_specifications.json": "282e47a28897de1da1be611c30d6981298c82ecb9d0b9a1c66193ce79d35d817",
+    "remaining_25_original_state_specifications.json": "616b5a030611dac10af844aba87fb91a4c85a3232b5dd510f8339eda1dd52587",
+    "integrated_production_interval_index_v6.json": "6be4ce8a875baa1e21a49f1c843968fde66eee74a022af480feaa3e4c4d2176f",
+    "integrated_production_interval_index_v7.json": "9b8a8786cd1d635a3c9698195cb249036ae6f51da70ee1c8f6c63eb7ed9ec653",
+    "frame_partition_v7.csv": "826927fa36c3427b794232197371d0083c877883b55fcee0bcbe2d1cbe601bd2"
+  },
+  "baseline_ledger_sha256": "b6cc9acdd3ed3bd9d29da9d73f7ad8e9d6d8dd838f8fda4ab077d63abdec9eaf",
+  "actual_listening_seconds": 0,
+  "audio": "BLOCKED_NO_QUALIFIED_LISTENING",
+  "CT_SCAN_COMPLETE": false,
+  "FULL_AV_SIGNOFF_COMPLETE": false,
+  "whole_video_production_QA": "PENDING",
+  "operational_limits": [
+    "Only this new report file was written by reviewer. No locks acquired/recovered/released, branches switched, repository/source/media altered, protected Claude sessions touched, agents launched or outputs published.",
+    "No paid credits, installation, new source-media extraction or raw-video transport. Live usage/context/credit indicators were not independently available to this bounded reviewer; task owner governs resource checks.",
+    "This is a bounded independent artifact review; it does not repeat or supersede accepted historic whole-source reviews."
+  ]
+}

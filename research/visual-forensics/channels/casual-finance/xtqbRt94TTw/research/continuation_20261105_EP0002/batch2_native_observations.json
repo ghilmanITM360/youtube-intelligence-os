@@ -1,0 +1,70 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "bounded_cases": [
+    {
+      "event_id": "EP0008",
+      "frame": 143,
+      "pts": 6.0,
+      "before": 142,
+      "finding": "Pointer-arm pose changes discontinuously between142 and143: low across-body pointer becomes raised diagonal toward upper-left page. Facial smile/head retained; yellow highlighting also advances concurrently.",
+      "precision": "EXACT_NATIVE_POSE_CHANGE_ONSET_ONLY"
+    },
+    {
+      "event_id": "EP0011",
+      "frame": 198,
+      "pts": 8.291666666666666,
+      "before": 197,
+      "finding": "Second complete identical red/white calendar icon appears at198 to the right of first; absent197. No new shot.",
+      "precision": "EXACT_NATIVE_ADDITIVE_ONSET_ONLY"
+    },
+    {
+      "event_id": "EP0012",
+      "frame": 208,
+      "pts": 8.708333333333334,
+      "before": 207,
+      "finding": "Third complete identical calendar icon appears at208 to the right of second; absent207. No new shot.",
+      "precision": "EXACT_NATIVE_ADDITIVE_ONSET_ONLY"
+    },
+    {
+      "event_id": "SUB001",
+      "frame": 103,
+      "pts": 4.333333333333333,
+      "before": 102,
+      "finding": "Thin yellow vertical highlight starts are already exposed on BOTH first and second body lines when page appears103; source102 retains earlier news-card montage. Highlight widens104-106. Candidate105 is an already-progressing highlight, not true onset.",
+      "precision": "EXACT_NATIVE_FIRST_VISIBLE_ONSET_LIFECYCLE_CONTINUES"
+    }
+  ],
+  "actual_native_fullframe_views": [
+    103,
+    104,
+    105,
+    106,
+    142,
+    143,
+    197,
+    198,
+    207,
+    208
+  ],
+  "native_ROI_views": [
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103
+  ],
+  "additional_decoded_not_claimed_viewed": [
+    144,
+    199,
+    209
+  ],
+  "specific_repeat_justification": "102/103 accepted cut not re-counted. Revisited only to fix SUB001 incorrectly described highlight onset105, after104 already showed yellow.",
+  "remaining_uncertainty": "Full highlight sweep bounds/fragment reconciliation; pointer hold after143 not certified here; calendar exits and any subsequent motions not certified.",
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false
+}

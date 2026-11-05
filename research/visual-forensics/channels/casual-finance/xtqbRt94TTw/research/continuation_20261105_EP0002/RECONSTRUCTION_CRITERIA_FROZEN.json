@@ -1,0 +1,40 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "scope": "Bounded reconstruction timing-transfer for EP0002 f37-64, not source-art fidelity, not whole-video cold-start or independent signoff",
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": "24/1",
+  "frame_labels": [
+    37,
+    64
+  ],
+  "frame_count": 28,
+  "input": "renderer reads only frozen original production spec, never source frames or MP4",
+  "original_design": "Reuse prior navy/coral/cream/teal console vocabulary; rounded console and two static status lights, rising square coral badge with rounded corners (no percent symbol), three generic editorial panels labelled NOTE A/B/C; no source text/logos/character",
+  "timeline": {
+    "badge_first_rim": 39,
+    "badge_first_fill": 40,
+    "badge_first_detached": 53,
+    "badge_last_translation": 59,
+    "badge_hold": [
+      60,
+      64
+    ],
+    "panel_c_first_complete": 49,
+    "status_lights": "static entire37-64"
+  },
+  "criteria_before_render": [
+    "Decoded lossless output exactly28 frames,24fps,1920x1080, no audio",
+    "No badge pixels at37/38; outline visible39 and fill first40",
+    "Badge remains occluded through52, fully separated from console by53",
+    "PanelC absent48, complete49, fixed49-64",
+    "Badge moves monotonically up through59 and holds60-64; fixed status lights, console and earlier panels throughout",
+    "Save decoded output frames and visually inspect fullframe checkpoints39/40/49/52/53/59/64",
+    "Preserve any failures; do not revise criteria after render to manufacture pass"
+  ],
+  "independent_qa": "NOT_PERFORMED; internal deterministic and visible-output checks only",
+  "audio": "BLOCKED; actual listening0"
+}

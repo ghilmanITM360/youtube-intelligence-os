@@ -1,0 +1,1260 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "state_count": 25,
+  "scope": "Missing-spec presence closed using qualified archived source observations; no new visual/semantic/timing gate is claimed by drafting specifications",
+  "states": [
+    {
+      "state_id": "S0051_STAGE1_2769",
+      "source_interval": [
+        2769,
+        2769
+      ],
+      "source_pts_interval": [
+        115.41666666666667,
+        115.45833333333333
+      ],
+      "source_observed_description": "One-frame hybrid: new large PDF foreground and removed presenter while prior Conference Board article strip remains behind; existing PDF composition group, not a new shot.",
+      "source_observation_ref": "compound_cut_followup_v1/OUT_compound_cut_followup_v1.json#EP0082",
+      "source_boundary_precision": "EXACT_NATIVE2768_2769_2770",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Large cream financial-report panel over a narrow navy editorial strip; presenter omitted. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "At2769 replace foreground document and remove presenter together; retain previous strip behind for exactly one frame. At2770 replace background strip in following state.",
+      "static_anchors": "Report scale, panel crop, strip alignment; no extra transitional fade.",
+      "source_unknowns_retained": "Underlying source compositor/layer implementation unknown.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "2768 retains previous foreground;2769 hybrid;2770 new background. A one-frame stage must survive final encode.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G051N01",
+      "source_interval": [
+        6771,
+        6829
+      ],
+      "source_pts_interval": [
+        282.1666666666667,
+        284.625
+      ],
+      "source_observed_description": "Repeated translucent green banknotes begin raining across the retained company logos and gray data-center illustration.",
+      "source_observation_ref": "agents/gap_review_02/OUT_gap_review_02.json#G051",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Three unbranded compute blocks behind translucent teal rectangular value tokens. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Begin token rain at6771; use seeded downward trajectories across6771-6829. Cut entire composition at6830. Proposed token paths are original.",
+      "static_anchors": "Compute blocks, generic company labels, camera, background.",
+      "source_unknowns_retained": "Individual token trajectories, cadence and opacity source values not measured.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "No token before6771; moving foreground overlay throughout interval; retain stationary infrastructure and cut6830.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G063N01",
+      "source_interval": [
+        8085,
+        8131
+      ],
+      "source_pts_interval": [
+        336.9166666666667,
+        338.875
+      ],
+      "source_observed_description": "Host, desk and laptop disappear; highlighted Global Finance article remains alone and enlarges/recenters.",
+      "source_observation_ref": "agents/gap_review_02/OUT_gap_review_02.json#G063",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Cream article panel with editable body text and retained annotation bands on navy field; host and desk absent. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Remove host/desk/laptop at8085. Enlarge/recenter article toward next map overlay at8132; linear interpolation is proposed, not recovered.",
+      "static_anchors": "Article aspect, typography hierarchy, relative annotation placement within page.",
+      "source_unknowns_retained": "Blue-selection removal remains unknown after8086; do not erase it at8085 by assumption. Exact source zoom curve not recovered.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "First frame8085 contains no host/desk/laptop; retained selection at8086 if enabled; later removal parameter stays unresolved; no invented endpoint timing.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G065N01",
+      "source_interval": [
+        8412,
+        8429
+      ],
+      "source_pts_interval": [
+        350.5416666666667,
+        351.2916666666667
+      ],
+      "source_observed_description": "Hard cut from company logos alone to two closed brown doors flanking a live-action meme inset. Inset subject moves while doors remain closed.",
+      "source_observation_ref": "agents/gap_review_02/OUT_gap_review_02.json#G065",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Two closed navy cabinet doors framing an original abstract moving inset, cream field. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Hard cut at8412. Animate only inset during8412-8429; hold doors closed. Do not reuse meme footage.",
+      "static_anchors": "Door frames, inset crop and camera.",
+      "source_unknowns_retained": "Original insert actions proposed; source insert motion path not fully natively verified.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Both doors closed through8429; inset motion cannot move door geometry.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G065N02",
+      "source_interval": [
+        8430,
+        8491
+      ],
+      "source_pts_interval": [
+        351.2916666666667,
+        353.875
+      ],
+      "source_observed_description": "Doors snap to open poses and reveal company-logo stick figures behind them; doorway layout and live-action inset remain in place and inset action continues.",
+      "source_observation_ref": "agents/gap_review_02/OUT_gap_review_02.json#G065",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Same cabinets in discrete open poses; two geometric company agents visible behind; same central inset. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "At8430 snap door poses and reveal agents in one step; continue original inset action through8491.",
+      "static_anchors": "Cabinet frames, agent identity, inset placement; no invented walking.",
+      "source_unknowns_retained": "Source reveals a pose swap; smooth opening angles or agent locomotion not established.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "No intermediary smooth door swing; closed8429/open8430; cut to independent title scene8492.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G065N03",
+      "source_interval": [
+        8492,
+        8542
+      ],
+      "source_pts_interval": [
+        353.875,
+        356.0
+      ],
+      "source_observed_description": "Hard cut to shocked hands-on-cheeks host below red NUMBERS BIG AF title; title grows until its ends are cropped.",
+      "source_observation_ref": "agents/gap_review_02/OUT_gap_review_02.json#G065",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original navy block-face character holding cheeks under coral label LARGE VALUES. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Cut8492. Scale only title about center until outer letters crop at frame edges by end8542; next chart cut8543.",
+      "static_anchors": "Character face, hands, body, field and camera.",
+      "source_unknowns_retained": "Title growth curve/crop first frame not measured; proposed route must remain separate from source claim.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Host anchors do not scale with title; title becomes cropped; entire scene replaced8543.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G071N02",
+      "source_interval": [
+        9412,
+        9442
+      ],
+      "source_pts_interval": [
+        392.2083333333333,
+        393.5
+      ],
+      "source_observed_description": "Host mouth becomes open and speech balloon Much more convenient! appears above host; app grid and desk layout remain.",
+      "source_observation_ref": "agents/gap_review_02/OUT_gap_review_02.json#G071",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original rectangular host at desk beside a generic 3x3 utility app grid; speech panel SIMPLER. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "At9412 switch host mouth to open pose and add speech panel together; hold through9442; cut9443.",
+      "static_anchors": "Desk, grid layout, host identity, camera.",
+      "source_unknowns_retained": "Any intra-interval cursor micro-path remains sampled.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Both face/text events start9412 with prior layout retained; no unsupported voice synchrony.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G073N01",
+      "source_interval": [
+        10070,
+        10124
+      ],
+      "source_pts_interval": [
+        419.625,
+        421.9166666666667
+      ],
+      "source_observed_description": "Hard cut from scattered paperwork/reluctant host to smiling host beside Odoo logo and dark app grid; layout holds as cursor moves.",
+      "source_observation_ref": "agents/gap_review_02/OUT_gap_review_02.json#G073",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Smiling geometric host next to unbranded work-suite label and dark utility grid. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Cut10070 to new orderly composition. Move a single cursor over grid by proposed route; next pose/text change10125.",
+      "static_anchors": "Host smile/position, label and app-cell positions.",
+      "source_unknowns_retained": "Source cursor route not frame-exact.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "No leftover scattered paperwork; camera fixed; next overlay10125 handled as a separate state.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G078N01",
+      "source_interval": [
+        11325,
+        11374
+      ],
+      "source_pts_interval": [
+        471.9166666666667,
+        474.0
+      ],
+      "source_observed_description": "Hard cut from money-bag array to dense animated banknote rain; company logos progressively appear behind moving notes.",
+      "source_observation_ref": "agents/gap_review_02/OUT_gap_review_02.json#G078",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Dense teal value-token rain in foreground, generic company-name tiles progressively revealed behind. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Cut11325. Seed token motion; reveal underlying tiles during11325-11374 using explicitly proposed editorial scheduling; cut11375.",
+      "static_anchors": "Company tile positions after reveal and camera; rain in front.",
+      "source_unknowns_retained": "Individual source logo-addition onsets were scaled observations and remain unverified.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Do not label proposed per-tile frames as observed; foreground occlusion and separate reveal tracks required.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G079N01",
+      "source_interval": [
+        11478,
+        11486
+      ],
+      "source_pts_interval": [
+        478.2916666666667,
+        478.6666666666667
+      ],
+      "source_observed_description": "Hard cut from sad host/medal/logos to JPMorgan free-cash-flow chart and Market dynamics article; page scrolls upward.",
+      "source_observation_ref": "agents/gap_review_02/OUT_gap_review_02.json#G079",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Editable original free-cash-flow chart and MARKET STRUCTURE article column; no presenter. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Cut11478; vertically scroll article upward through11486. Factory icon belongs to following state11487.",
+      "static_anchors": "Chart axes/units, chart placement, article aspect and readable text.",
+      "source_unknowns_retained": "Exact source scroll displacement/curve not measured.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "No factory before11487; scroll confined to article column; chart values must use an approved dataset or EXAMPLE labels.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G090N01",
+      "source_interval": [
+        13266,
+        13328
+      ],
+      "source_pts_interval": [
+        552.7916666666666,
+        555.4166666666666
+      ],
+      "source_observed_description": "Dark Mercatus GPU ROI article scrolls from headline/hero through payback/IRR to NPV material.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G090",
+      "source_boundary_precision": "SAMPLED_BRACKET",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original navy financial-model explainer page with hero, payback, IRR and NPV sections. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Traverse sections vertically during13266-13328 in given order; original speed chosen for readability, no recovered curve claim.",
+      "static_anchors": "Page width, type scale, section order and neutral background.",
+      "source_unknowns_retained": "Bounds sampled, no exact internal section or motion onsets.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "All four sections appear in order; use illustrative labels until factual calculations approved; do not call frame positions source-exact.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G092N01",
+      "source_interval": [
+        13499,
+        13531
+      ],
+      "source_pts_interval": [
+        562.5,
+        563.875
+      ],
+      "source_observed_description": "Article scrolls/zooms through financing structure and FAQ passages, without presenter; this intermediate page traversal differs from either endpoint state.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G092",
+      "source_boundary_precision": "SAMPLED_BRACKET",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Same original model page, financing and FAQ sections; no presenter. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Continue scroll and proposed mild page scale through13499-13531; retain traversal through13533 in next substate.",
+      "static_anchors": "Page text hierarchy and article identity.",
+      "source_unknowns_retained": "Source camera/scroll path sampled; corrected presenter onset13534 comes from adjudication.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "No presenter before13534; scrolling intermediate composition not replaced with endpoint hold.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G092RN1",
+      "source_interval": [
+        13532,
+        13533
+      ],
+      "source_pts_interval": [
+        563.875,
+        563.9583333333334
+      ],
+      "source_observed_description": "FAQ page without presenter continues intermediate page traversal. Presenter remains absent13533; native13534 introduces pointer presenter, so both unresolved frames belong to existing NEW page-traversal segment, not following presenter state.",
+      "source_observation_ref": "agents/merge_split_review/OUT_targeted_adjudication.json#G092",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Two-frame continuation of original FAQ page, no host. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Render13532-13533 as traversal continuation; add presenter only in following state13534.",
+      "static_anchors": "Page transform continuity and no host.",
+      "source_unknowns_retained": "No exact recovered page transform at these frames.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Presenter absent13532/13533, present13534 in separate following state. Avoid a phantom intermediate character.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G097N01",
+      "source_interval": [
+        14340,
+        14373
+      ],
+      "source_pts_interval": [
+        597.5416666666666,
+        598.9583333333334
+      ],
+      "source_observed_description": "Cut from presenter to red Way 1 heading on white, followed by blue drawn running-character insert crossing left-to-right with Gotta go fast caption and ground strip; trailing strip remains at14373.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G097",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Cream METHOD 1 heading; original teal courier icon crosses left-to-right with MOVE QUICKLY caption and thin ground strip. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Cut14340; introduce courier only within observed14341-14343 onset bracket, chosen exact implementation explicitly PROPOSED; travel right through14373.",
+      "static_anchors": "Heading, backdrop and ground baseline.",
+      "source_unknowns_retained": "Runner onset bracket and internal poses not exact; no copied blue character/meme.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "At14373 trailing strip remains; next DEBT card14374 may overlap strip. Preserve overlap rather than impose premature clean exit.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G109N01",
+      "source_interval": [
+        15820,
+        15853
+      ],
+      "source_pts_interval": [
+        659.2083333333334,
+        660.625
+      ],
+      "source_observed_description": "Cut from robot/GPU/money scene to orange percent disk encircled by three red arrows; arrows rotate and ring reduces.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G109",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Coral rounded-square rate badge inside three navy circular arrow segments. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Cut15820; rotate arrow ring and reduce its scale around badge through15853.",
+      "static_anchors": "Badge center and camera; ring pivot shared with badge.",
+      "source_unknowns_retained": "Rotation angles, speed and exact scale curve not recovered.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Three arrows persist; no accidental badge rotation if only ring rotates; no map-like character before15854.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G109N02",
+      "source_interval": [
+        15854,
+        15909
+      ],
+      "source_pts_interval": [
+        660.625,
+        662.9583333333334
+      ],
+      "source_observed_description": "Green US-map character added at lower left beside rotating, shrinking red arrow ring and orange percent disk.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G109",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Retain badge/ring; add original geometric public-sector agent lower-left. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Add agent at15854 while ring continues rotation/shrink through15909. Replace composition at15910.",
+      "static_anchors": "Agent identity after reveal, badge center, camera.",
+      "source_unknowns_retained": "Internal ring keyframes unknown.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Agent absent15853/present15854; ring continuity across state boundary; complete replacement15910.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G111N01",
+      "source_interval": [
+        16782,
+        16836
+      ],
+      "source_pts_interval": [
+        699.2916666666666,
+        701.5833333333334
+      ],
+      "source_observed_description": "Burning green ChatGPT-logo stick character replaces laptop/player scene; large repeated A letters progressively fill three rows behind it.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G111",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original unbranded green compute mascot with stylized coral heat marks; repeated OH tiles build behind. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Cut16782; progressively populate three text rows behind mascot through16836; cut16837.",
+      "static_anchors": "Mascot asset identity and foreground layer.",
+      "source_unknowns_retained": "Flame cycle and individual letter timings sampled; source letters do not establish audible screams.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Three-row background build remains behind mascot; no sound claim or brand imitation.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G116N01",
+      "source_interval": [
+        17784,
+        17874
+      ],
+      "source_pts_interval": [
+        741.0416666666666,
+        744.8333333333334
+      ],
+      "source_observed_description": "On unchanged OWID monthly US data-center-construction chart, yellow title highlight builds and cursor tooltip traverses dates from2014 toward2026; tooltip then holds May2026 at $3.99billion. New graph-reading animation within existing chart composition.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G116",
+      "source_boundary_precision": "SAMPLED_BRACKET",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original editable monthly construction chart with title highlight and a single data tooltip. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Within17784-17874 progressively reveal title band and traverse tooltip from earlier years toward final sampled date. Treat original timing as proposed until native cursor phases measured.",
+      "static_anchors": "Axes, chart data/units, series geometry and page layout.",
+      "source_unknowns_retained": "Source title/cursor timings sampled. May2026 $3.99b is a source-display observation; later June value and annual-rate table must not be conflated.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Tooltip data/date pair come from one supplied dataset; no annual-rate table values substituted. No up57% overlay before17875.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "S0396b",
+      "source_interval": [
+        18086,
+        18123
+      ],
+      "source_pts_interval": [
+        753.625,
+        755.2083333333334
+      ],
+      "source_observed_description": "Table/factory layout continues with third factory; BIG BUSINESS skyscraper appears at18086 (native crop absent18085/present18086). Preserve separate graphic state and yellow General/Financial outline draw events at18088 and18094 with sampled completion, not cut claims.",
+      "source_observation_ref": "agents/merge_split_review/OUT_targeted_adjudication.json#S0396",
+      "source_boundary_precision": "EXACT_NATIVE_SPLIT_ONSET_WITH_INTERNAL_SAMPLED_MOTION",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original editable construction table, three compute-building blocks and a new office-tower block labelled OFFICES. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Retain table/factories; add office block at18086. Start two outline draws at18088/18094 using sampled completion windows, not invented measured offsets.",
+      "static_anchors": "Table, existing three factories, row identities and numeric data.",
+      "source_unknowns_retained": "General/Financial outline completion frames remain sampled; source annual-rate units preserved.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Office absent18085/present18086; no new shot. Correctly label annual-rate millions and never mix monthly/constant-dollar chart data.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G118N01",
+      "source_interval": [
+        18352,
+        18384
+      ],
+      "source_pts_interval": [
+        764.7083333333334,
+        766.0833333333334
+      ],
+      "source_observed_description": "J.P.Morgan wordmark rises/shrinks; horizontally travelling reverse year timeline shows2025/2024 through2020 then exits, a transient composition absent from endpoint references.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G118",
+      "source_boundary_precision": "SAMPLED_BRACKET",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Unbranded research wordmark upper-right; reversed year labels traveling horizontally on cream field. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Wordmark rises/shrinks; reverse timeline traverses2025/2024 through2020 during18352-18384. New tile stack replaces timeline18385.",
+      "static_anchors": "Wordmark identity, type baseline and neutral field.",
+      "source_unknowns_retained": "Timeline first entrance only bracketed18360-18364; do not certify a chosen render onset as source fact.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Years ordered in reverse, no skipped identity; entire timeline absent after replacement18385.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "S0406b",
+      "source_interval": [
+        18563,
+        18610
+      ],
+      "source_pts_interval": [
+        773.5,
+        775.5
+      ],
+      "source_observed_description": "Logos/money-bags scene changes to cash-flow chart. Within chart, pointer presenter absent18562 and present18563 in native crop; split there. Red41 starts at18586 (native crop versus18585) and develops through sampled18594; preserve an additional text event. Green trace is already complete in18562 representative, exact completion unverified.",
+      "source_observation_ref": "agents/merge_split_review/OUT_targeted_adjudication.json#S0406",
+      "source_boundary_precision": "EXACT_NATIVE_SPLIT_ONSET_WITH_INTERNAL_SAMPLED_MOTION",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original free-cash-flow chart with navy geometric pointer presenter bottom-center and coral handwritten-style annotation. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Presenter appears18563. Red41 starts18586 and develops over sampled18594; use a separate annotation layer and explicit proposed stroke path.",
+      "static_anchors": "Chart axes, data/units, green trace already complete by18562 witness.",
+      "source_unknowns_retained": "Green-trace exact completion unverified; red41 final completion sampled, not exact.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Presenter absent18562/present18563; red41 absent18585/starts18586. Never claim earlier machine trace completion18535 as accepted native fact.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "S0409b",
+      "source_interval": [
+        18644,
+        18673
+      ],
+      "source_pts_interval": [
+        776.875,
+        778.125
+      ],
+      "source_observed_description": "Robot/briefcase/bag composition continues with second bag; native crops show no third bag18643 and third bag18644. Preserve this additive graphic state even if grouped under one dominant composition.",
+      "source_observation_ref": "agents/merge_split_review/OUT_targeted_adjudication.json#S0409",
+      "source_boundary_precision": "EXACT_NATIVE_SPLIT_ONSET_WITH_INTERNAL_SAMPLED_MOTION",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original gray cuboid assistant with briefcase left; three teal value containers arranged at right. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Retain prior two containers; add third behind/between at18644 in one discrete state change.",
+      "static_anchors": "Robot/briefcase identity, first two container positions, camera.",
+      "source_unknowns_retained": "No proven source rig/easing; later exits beyond this state not assigned.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Exactly three containers from18644; absent third18643; do not animate unsupported container bounce.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G121RN4",
+      "source_interval": [
+        19282,
+        19282
+      ],
+      "source_pts_interval": [
+        803.4583333333334,
+        803.5
+      ],
+      "source_observed_description": "Thin dark article-card strip first visible at right edge19282, absent19281. This starts the existing NEW NYT-card entrance segment one frame earlier than prior sampled claim19283, not the later FOLLOWING Conduit card.",
+      "source_observation_ref": "agents/merge_split_review/OUT_targeted_adjudication.json#G121",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original presenter below FOLLOW FOR UPDATES, editorial card first entering at right edge. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "At19282 reveal only a thin right-edge card strip; continue same card trajectory into next state19283.",
+      "static_anchors": "Presenter, heading and same card identity across boundary.",
+      "source_unknowns_retained": "Strip onset verified but full card path/settle remains sampled.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "No strip19281; strip19282; do not substitute the later second article card.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G121N03",
+      "source_interval": [
+        19283,
+        19300
+      ],
+      "source_pts_interval": [
+        803.5,
+        804.25
+      ],
+      "source_observed_description": "New York Times rate-hike news card slides in from right beside presenter under SUBSCRIBE heading.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G121",
+      "source_boundary_precision": "SAMPLED_BRACKET",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Continue original unbranded editorial card beside geometric presenter and FOLLOW FOR UPDATES heading. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Slide same card leftward through19283-19300; next card replaces at19301 while lateral movement may continue.",
+      "static_anchors": "Card aspect/text, presenter and heading; no source news/logo reproduction.",
+      "source_unknowns_retained": "First sliver was19282, not19283; exact full visibility/settle not verified.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Seamless strip-to-card continuity; correct card replacement19301; no unverified hold or full visibility milestone.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    },
+    {
+      "state_id": "G123N01",
+      "source_interval": [
+        19651,
+        19711
+      ],
+      "source_pts_interval": [
+        818.8333333333334,
+        821.375
+      ],
+      "source_observed_description": "Cut from US-map face close-up to wide full US-map character left and DEBT paper right. Paper enlarges; map lowers arms and looks toward debt; white oh f*ck he BIG caption visible by19695 and natively readable19711.",
+      "source_observation_ref": "agents/gap_review_03/OUT_gap_review_03.json#G123",
+      "source_boundary_precision": "EXACT_NATIVE",
+      "truth_labels": {
+        "source": "REUSED_QUALIFIED_OBSERVATION;NOT_NEW_NATIVE_REVIEW",
+        "original_visual_and_motion": "ORIGINAL_PROPOSAL",
+        "coordinates_curves_and_font": "PROPOSED_NOT_SOURCE_MEASURED"
+      },
+      "original_image_prompt": "Original geometric public-sector agent at left, growing liability document at right, short reaction caption. 1920x1080. Cream/navy/coral/teal coherent original vector-like design; generous negative space, readable editorial type. No competitor logos, characters, screenshots, article wording or meme footage. Use exact approved text/numbers as separately authored editable layers.",
+      "original_animation_prompt": "Cut19651 to wide composition. Enlarge document; lower agent arms and redirect eyes toward it; add original caption visibly by selected sampled phase; cut19712.",
+      "static_anchors": "Agent identity, document label/shape, camera and caption readability.",
+      "source_unknowns_retained": "Expression/text internal onset sampled; source text only readable19711, visible by19695. Proposed caption wording and exact render timing are not recovered facts.",
+      "layer_plan": [
+        "original background",
+        "retained fixed base objects",
+        "independent motion/prop tracks",
+        "editable text/annotation layers",
+        "optional foreground mask with explicit occlusion order"
+      ],
+      "camera": "Keep fixed unless original motion plan explicitly identifies page scaling/traversal; visible source camera and object transforms remain distinct.",
+      "continuity": "Asset IDs derive from state_id; neighboring retained objects share IDs and geometry. Preserve prior state handoff before applying named state change.",
+      "render_contract": {
+        "fps": "24/1",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "source_index_mapping": "local index = source frame - interval start",
+        "keyframe_source": "Motion prompt: exact onsets only when qualified; otherwise source brackets and explicitly proposed interpolation",
+        "silent": true
+      },
+      "acceptance": [
+        "Document grows without morphing; reaction comes from distinct arm/eye tracks; preserve source uncertainty instead of asserting first caption frame19695.",
+        "Validate output duration/frame count, required object count, anchors, text, occlusion and predecessor/successor continuity before approval",
+        "Compare only within declared source evidence precision; preserve failures; independent render QA pending"
+      ],
+      "generation_status": "ORIGINAL_SPEC_PRESENT;NOT_RENDERED_OR_INDEPENDENTLY_APPROVED",
+      "audio": "BLOCKED; actual listening0; no source sound/music/AV cue inferred",
+      "actual_listening_seconds": 0
+    }
+  ],
+  "whole_video_production_QA": "PENDING",
+  "CT_SCAN_COMPLETE": false
+}
