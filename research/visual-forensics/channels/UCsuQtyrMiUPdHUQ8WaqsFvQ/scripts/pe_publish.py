@@ -8,8 +8,8 @@ WS = pathlib.Path.home() / "YIOS-local-audits/primitive-education"; REPO = "/Use
 BR = "research/primitive-education-visual-forensics"; PREFIX = "research/visual-forensics/channels/UCsuQtyrMiUPdHUQ8WaqsFvQ/"
 run = lambda *a, **k: subprocess.check_output(a, cwd=REPO, text=True, **k).strip()
 INCLUDE = ["census/source_census.csv", "census/census_summary.json",
-           "selection/*.json", "selection/*.txt", "campaign/*.md", "campaign/*.csv", "campaign/*.json", "campaign/*.txt", "scripts/*.py", "scripts/*.sh", "scripts/*.md",
-           "reconstruction/*.md", "reconstruction/*.sha256", "reconstruction/*/*.md", "reconstruction/*/*.csv", "reconstruction/*/*.py",
+           "selection/*.json", "selection/*.txt", "campaign/*.md", "campaign/*.csv", "campaign/*.json", "campaign/*.txt", "campaign/band_review/*.csv", "campaign/band_review/*.md", "scripts/*.py", "scripts/*.sh", "scripts/*.md",
+           "reconstruction/*.md", "reconstruction/*.sha256", "reconstruction/*.txt", "reconstruction/*/*.md", "reconstruction/*/*.csv", "reconstruction/*/*.py",
            "reconstruction/*/attempt_*/*.md", "reconstruction/*/attempt_*/*.csv", "reconstruction/*/attempt_*/*.json", "reconstruction/*/attempt_*/*.py",
            "reconstruction/*/attempt_*/evidence/*.txt", "reconstruction/*/attempt_*/evidence/*.json", "reconstruction/*/attempt_*/tables/*.json", "reconstruction/*/attempt_*/tables/segments_v1.csv"]
 VID = ["source_manifest.json", "coverage.json", "shot_ledger.csv", "visual_event_ledger.csv", "audio_visual_alignment.csv",

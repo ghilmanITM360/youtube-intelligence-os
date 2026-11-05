@@ -14,8 +14,11 @@ FONT = "/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf"
 S = 1.2
 
 
+C0 = (960, 540); C1 = (960, 540)
+
+
 def tp(p):
-    return (960 + (p[0] - 960) * S, 540 + (p[1] - 540) * S)
+    return (C1[0] + (p[0] - C0[0]) * S, C1[1] + (p[1] - C0[1]) * S)
 
 
 def new():
@@ -109,7 +112,7 @@ def mascot(img, cx, cy, s=1.0, eyes="open", mouth="smile", arms="down", lie=Fals
     for dx in (-0.38, 0.38):
         ex = cx + dx * R
         if eyes == "open":
-            dot(img, (ex, ey), 15 * s + 3)
+            dot(img, (ex, ey), 22 * s + 3)
         elif eyes == "closed":
             line(img, [(ex - 28 * s, ey), (ex, ey + 12 * s), (ex + 28 * s, ey)], LW)
         elif eyes == "angry":
@@ -168,7 +171,7 @@ def hammer(img, x, y, s=1.0, ang=-30):
     base = np.array([x, y]); tip = base + d * 260 * s
     line(img, [base, tip], 28)
     h = [tip - nrm * 90 * s + d * 20 * s, tip + nrm * 90 * s + d * 20 * s, tip + nrm * 90 * s - d * 60 * s, tip - nrm * 90 * s - d * 60 * s]
-    poly(img, h, (170, 170, 170))
+    poly(img, h, INK)
 
 
 def pickaxe(img, x, y):
@@ -181,13 +184,13 @@ def clock(img, c, r):
     ell(img, c, r)
     line(img, [c, (c[0], c[1] - r * 0.6)], LW + 3)
     line(img, [c, (c[0] + r * 0.45, c[1] + r * 0.2)], LW + 3)
-    dot(img, c, 14)
+    dot(img, c, 16)
 
 
 def coins(img, x, y):
     for i, (dx, dy) in enumerate([(0, 0), (150, 20), (75, -120)]):
-        ell(img, (x + dx, y + dy), 80, fill=YEL)
-        text(img, "$", (x + dx, y + dy), 90)
+        ell(img, (x + dx, y + dy), 90, fill=YEL)
+        text(img, "$", (x + dx, y + dy), 130)
 
 
 def sun(img, c, r):
@@ -207,7 +210,9 @@ def chair(img, x, y):
 
 def ball(img, c, r):
     ell(img, c, r)
-    poly(img, [(c[0] + r * 0.4 * np.cos(a), c[1] + r * 0.4 * np.sin(a)) for a in np.radians(np.arange(-90, 270, 72))], INK, w=6)
+    poly(img, [(c[0] + r * 0.5 * np.cos(a), c[1] + r * 0.5 * np.sin(a)) for a in np.radians(np.arange(-90, 270, 72))], INK, w=6)
+    for a in np.radians(np.arange(-54, 306, 72)):
+        ell(img, (c[0] + r * 0.88 * np.cos(a), c[1] + r * 0.88 * np.sin(a)), r * 0.2, fill=INK, w=6)
 
 
 def heart(img, c, s):
@@ -234,7 +239,7 @@ def alarm(img, c, r, ring=True):
 def factory(img, x, y):
     poly(img, [(x, y), (x, y - 200), (x + 130, y - 120), (x + 130, y - 200), (x + 260, y - 120), (x + 260, y - 200), (x + 390, y - 120), (x + 390, y)], BG)
     for k in range(4):
-        rect(img, x + 30 + k * 90, y - 90, x + 85 + k * 90, y - 35, YEL, 9)
+        rect(img, x + 30 + k * 90, y - 90, x + 85 + k * 90, y - 35, INK, 9)
     rect(img, x + 300, y - 380, x + 360, y - 200, BG)
     for i, (dx, dy, r) in enumerate([(340, -430, 40), (390, -500, 52), (460, -590, 66)]):
         ell(img, (x + dx, y + dy), r, fill=BG, w=10)
@@ -248,9 +253,9 @@ def bed(img, x0, y0, x1):
     line(img, [(x0 + 260, y0 + 20), (x1, y0 + 20)], 8)
 
 
-def zzz(img, x, y):
-    for i, sz in enumerate((90, 130, 180)):
-        text(img, "Z", (x + i * 120, y - i * 150), sz)
+def zzz(img, x, y, dy=150, dx=120):
+    for i, sz in enumerate((130, 190, 260)):
+        text(img, "Z", (x + i * dx, y - i * dy), sz)
 
 
 # ---------------- states ----------------
@@ -266,18 +271,9 @@ WORDS = ["WHY", "WEEKENDS", "EXIST?"]
 
 
 def s_words(k):
-    global S
-    S = 1.0
-    i = new()
-    full = " ".join(WORDS)
-    sz = 140
-    f = ImageFont.truetype(FONT, sz)
-    wfull = ImageDraw.Draw(Image.new("RGB", (10, 10))).textlength(full, font=f)
-    assert wfull <= 0.9 * W, wfull
-    x = 960 - wfull / 2
-    shown = " ".join(WORDS[:k])
-    # reserve blank space for upcoming words: draw left-anchored at fixed x
-    text(i, shown, (x, 540), sz, anchor="lm")
+    i = new(); 
+    for n, wd in enumerate(WORDS[:k]):  # each line's slot is fixed, so space for later words stays blank
+        text(i, wd, (960, 230 + n * 235), 235)
     return i
 
 
@@ -294,28 +290,28 @@ def s_bed():
 
 
 def s_allwork():
-    i = new(); calendar(i, 280, 600, cw=200, ch=200, label=False)
+    i = new(); calendar(i, 280, 640, cw=200, ch=200, label=False)
     for k in range(7):
-        hammer(i, 280 + k * 200 + 100, 760, 0.45, -25)
-    mascot(i, 960, 300, 1.15, eyes="angry", mouth="frown", sweat=True, arms="hips"); return i
+        hammer(i, 280 + k * 200 + 100, 800, 0.45, -25)
+    mascot(i, 960, 380, 0.95, eyes="angry", mouth="frown", sweat=True, arms="hips"); return i
 
 
 def s_allwork_x():
-    i = s_allwork(); xmark(i, (960, 700), 330); return i
+    i = s_allwork(); xmark(i, (960, 740), 330); return i
 
 
 def s_tablet():
-    i = new(); poly(i, [(560, 140), (1360, 140), (1360, 820), (560, 820)], BG); sun(i, (1040, 340), 80)
-    text(i, "1", (960, 600), 400); text(i, "DAY OFF", (960, 770), 110)
+    i = new(); poly(i, [(560, 140), (1360, 140), (1360, 820), (560, 820)], BG); sun(i, (1200, 300), 60)
+    text(i, "1", (860, 470), 380); text(i, "DAY OFF", (960, 770), 110)
     mascot(i, 330, 760, 0.9, eyes="open", mouth="smile", arms="up"); return i
 
 
 def s_factory():
-    i = new(); factory(i, 760, 900); return i
+    i = new(); factory(i, 700, 900); text(i, "9-5", (1400, 640), 330); return i
 
 
 def s_money():
-    i = new(); clock(i, (560, 480), 260); text(i, "=", (1010, 480), 260); coins(i, 1250, 500)
+    i = new(); clock(i, (560, 480), 210); text(i, "=", (1010, 480), 340); coins(i, 1250, 500)
     return i
 
 
@@ -324,7 +320,7 @@ def s_two():
 
 
 def s_cal52():
-    i = new(); calendar(i, 280, 400, yellow=(5, 6)); text(i, "5 + 2", (960, 200), 150); text(i, "WORK  REST", (960, 800), 110); return i
+    i = new(); calendar(i, 280, 400, yellow=(5, 6)); text(i, "5 + 2", (960, 200), 150); text(i, "WORK  REST", (960, 800), 150); return i
 
 
 def s_beach():
@@ -334,7 +330,7 @@ def s_beach():
 
 
 def s_beach2():
-    i = new(); sun(i, (1500, 230), 130); chair(i, 1000, 600); line(i, [(330, 930), (1590, 930)], 20)
+    i = new(); sun(i, (1650, 230), 130); chair(i, 1000, 600); text(i, "SAT SUN", (1000, 170), 130); line(i, [(330, 930), (1590, 930)], 20)
     mascot(i, 520, 640, 1.5, eyes="closed", mouth="smile", arms="up"); return i
 
 
@@ -352,18 +348,17 @@ def s_sleepalarm():
 
 
 def s_hide():
-    i = new(); calendar(i, 280, 560, yellow=(5, 6)); ell(i, (280 + 100, 660), 120, fill=BG, w=LW)
-    ell(i, (380, 660), 150, 150, fill=BG, w=LW, a0=0, a1=360)
-    text(i, "MON", (380, 660), 95); return i
+    i = new(); calendar(i, 280, 560, yellow=(5, 6)); ell(i, (380, 380), 150, 150, fill=BG, w=LW, a0=0, a1=360)
+    text(i, "MON", (380, 380), 120); text(i, "!!", (1100, 360), 400); return i
 
 
 def s_peek():
-    i = new(); mascot(i, 960, 600, 1.5, eyes="angry", mouth="frown", arms="hips"); return i
+    i = new(); mascot(i, 760, 600, 1.4, eyes="angry", mouth="frown", arms="hips"); text(i, "!", (1550, 540), 620); return i
 
 
 def s_final():
-    i = new(); bed(i, 300, 800, 1500); mascot(i, 780, 750, 1.5, eyes="closed", mouth="smile", arms="hips")
-    text(i, "5 MORE MINUTES", (960, 180), 200); zzz(i, 1180, 640); return i
+    i = new(); bed(i, 300, 760, 1500); mascot(i, 780, 700, 1.4, eyes="closed", mouth="smile", arms="hips")
+    text(i, "5 MORE MINUTES", (960, 130), 170); zzz(i, 1250, 640, 100, 110); return i
 
 
 # ---------------- timeline ----------------
@@ -394,6 +389,23 @@ T = [
 ]
 
 
+def fit(fn, seed, free=True, smax=1.22):
+    # render once at S=1 to get the bbox, then scale up as far as the 90% safe area allows
+    global S, C0, C1, rng
+    S = 1.0; C0 = C1 = (960, 540); rng = np.random.default_rng(seed)
+    im = fn()
+    if not free:
+        return im
+    ys, xs = np.where(np.abs(im.astype(int) - 253).sum(2) > 30)
+    x0, x1, y0, y1 = xs.min() - 8, xs.max() + 8, ys.min() - 8, ys.max() + 8
+    S = min(smax, 1728 / (x1 - x0), 972 / (y1 - y0))
+    C0 = ((x0 + x1) / 2, (y0 + y1) / 2); C1 = (960, 540)
+    rng = np.random.default_rng(seed)
+    out = fn()
+    S = 1.0; C0 = C1 = (960, 540)
+    return out
+
+
 def noyel(fn):
     def g():
         global YEL
@@ -417,13 +429,12 @@ def main():
     states = {}
     for st, dev, d, fn in T:
         if fn:
-            S = 1.0 if st in (100, 140, 180) else 1.2
-            states[st] = (noyel(fn) if st in NOY else fn)()
+            states[st] = fit(noyel(fn) if st in NOY else fn, st, free=st not in (0, 100, 140, 180))
     ink = []
     # dip bookkeeping
     last_before = states[500]
     after = states[650 - 0] if False else None
-    tablet = s_tablet()
+    tablet = fit(s_tablet, 568)
     ny = [(np.abs(im.astype(int) - np.array(YEL)[None, None]).sum(2) < 40).any() for im in list(states.values()) + [tablet]]
     for k, im in states.items():
         ys, xs = np.where(np.abs(im.astype(int) - 253).sum(2) > 30)
@@ -451,7 +462,7 @@ def main():
         for k, (st, dev, d, fn) in enumerate(T):
             w.writerow([st, starts[k + 1] - 1, dev, d])
             if fn:
-                im = states[st]; ink.append((im.mean(axis=2) < 70).mean())
+                im = states[st]; ink.append((im.mean(axis=2) < 90).mean()); print(st, round(ink[-1], 3))
     print("mean ink coverage held states: %.3f" % np.mean(ink[1:]))
     subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", os.path.join(FR, "f%05d.png"),
                            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", str(FPS), "-fps_mode", "cfr", "-crf", "14",

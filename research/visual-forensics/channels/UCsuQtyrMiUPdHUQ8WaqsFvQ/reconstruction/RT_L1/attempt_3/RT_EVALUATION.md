@@ -1,0 +1,4 @@
+# RT_L1 attempt 3 - evaluation (ACCEPTANCE_RT_v1, sha c0ee184e)
+Fix for attempt 2 (ink too low): drawings scaled up to 1.22x, many props turned into solid black, title stacked on 3 lines. Measured 8/10: overshoot. C6 FAIL: mean dark-ink 0.1098 > 0.104. C8 FAIL: pe_stroke median 36.0 px on the final hold native frame. The frozen pe_stroke measure counts solid black fills (method note), so large solid black bed frame/slabs dominate the ridge median; source videos keep solids small (beards, ovals), which is why their medians are 10-14 px.
+Observed checks not re-judged (measured FAIL decides the attempt).
+RESULT attempt 3: FAIL (C6, C8). Fix request: keep the scaling, but turn the large solid-black props (factory, ground slabs, bed frames, clock face, coins) back into outlined shapes, keeping solid black only for small elements (pupils, text, ball spots, hammer heads); target ink ~8.5-9.5%.

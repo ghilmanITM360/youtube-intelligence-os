@@ -1,0 +1,1 @@
+Primary opened BAND_01..04 once each (166 hold strips of the band hidden by the sheet label; index band_index.csv). OBSERVED: feet, hands, tunic hems, beards, photo edges. No CTA, caption or end-card element. Text found: RmTdnXHbI8s G0009 "pervy neighbour". Limits: HOLD end frames only; portrait strips cropped to 44 of about 57 px; jpg strips are review aids, not published.

@@ -1,0 +1,40 @@
+# Reconstruction blueprint — 5gSIU30yiVs (source sha ac73e9e433ac)
+
+Two uses, kept separate: (A) **evidence-matched reconstruction test** of this source's observable output (internal QA only; source artwork, script, voice and branding remain the creator's and are not reusable assets); (B) **original transfer** — the same mechanics applied to a NEW topic, new drawings and new script (see the channel production manual).
+
+## Global tokens (MEASURED unless marked)
+- Aspect 9:16 1080x1920, 50/1 fps CFR.
+- Canvas background exact #FDFDFD; top quantised bins #F0F0F0, #101010, #303030, #D0D0D0, #505050; yellow in 6/15 holds (mean share 0.94%); red in 1/15 holds; any saturated colour in 13/15 holds. Mean settled dark-ink coverage 8.7% (max 37.1%).
+- Line art and character specifics: see review/*/observations.md, review/*/asset_inventory.csv and review/native_art_review.md (OBSERVED). Exact stroke width, typeface, software, layer structure: UNAVAILABLE.
+
+## Per-state prompts (derived from reviewed descriptions; ESTIMATED layout)
+
+| State | Source interval (s) | Image prompt (reconstruction) | Motion into next state | Must stay static | Negative |
+|---|---|---|---|---|---|
+| VS001 (G0001) | 0.0–1.84 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: White background; header text 'CAVEMAN EXPLAIN' upper and 'MODERN THINGS' lower in black hand-lettered caps; centre: Instagram gradient camera-logo icon (purple/orange/pink). | SCENE_SWAP at 1.84s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS002 (G0003) | 1.86–4.4 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Same cavemen/UGG scene held; header 'CAVEMAN EXPLAIN' and footer 'MODERN THINGS' unchanged. | SCENE_SWAP at 4.4s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS003 (G0005) | 4.42–6.06 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: 3D printer photo held centre; header/footer unchanged. | SCENE_SWAP at 6.06s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS004 (G0007) | 6.08–8.2 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Line-drawn stone printer with nozzle above empty slab held; header/footer unchanged. | POP_ON_TEXT at 8.2s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS005 (G0009) | 8.22–8.58 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Stone printer with yellow 'LIE' on slab held; header/footer unchanged. | SCENE_SWAP at 8.58s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS006 (G0011) | 8.6–10.56 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Photographic phone held; no header/footer text visible. | SCENE_SWAP at 10.56s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS007 (G0013) | 10.58–12.06 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Hand-drawn blank-screen phone held. | EXPRESSION_SWAP at 12.06s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS008 (G0015) | 12.08–12.84 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Angry-faced drawn phone held. | SCENE_SWAP at 12.84s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS009 (G0017) | 12.86–14.12 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Sofa photo held. | SCENE_SWAP at 14.12s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS010 (G0019) | 14.14–16.54 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Slumped caveman in armchair held. | SCENE_SWAP at 16.54s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS011 (G0021) | 16.56–17.92 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Alarm clock photo held. | SCENE_SWAP at 17.92s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS012 (G0023) | 17.94–19.66 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Alarm-clock monster held. | SCENE_SWAP at 19.66s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS013 (G0025) | 19.68–21.54 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Smart bulb photo held. | SCENE_SWAP at 21.54s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS014 (G0027) | 21.56–23.84 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Line-drawn bulb same drawing and position; bulb fill changes yellow (first tile 21.56s) to cyan (22.68s) to magenta/pink (23.82s); rays and outline unchanged. Colour-cycling. | SCENE_SWAP at 23.84s over 1 frame(s) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+| VS015 (G0029) | 23.86–24.94 | 9:16 1080x1920, canvas/lighting as described (video background mode #FDFDFD), drawn state: Same standing frowning caveman pose and position; tunic colour changes magenta (first 23.86s) to pink (24.38s) to yellow (last 24.92s); line art unchanged. Last tile is video end. | end of video (hold) | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |
+
+## Editor construction (OBSERVED grammar → steps)
+1. Build each composition as separate layers: canvas, character pose drawing(s), props, text (one possible route; source layers are UNAVAILABLE).
+2. Cuts = replace whole composition on the same canvas (hard cut, 0 frames).
+3. Pops/pose swaps = visibility on a single frame; moves = translate/scale over the measured frame count; dissolves = cross-fade over the measured frame count. Use the measured duration of each event from visual_event_ledger.csv.
+4. Align each event onset to the narration word that names the element (ASR_UNCERTIFIED in source; verify by listening in production).
+
+## QA
+- Frame-compare each state against its source tile at native resolution (internal test only).
+- Onset tolerance target: ±2 frames of source event onset (MEASURED source values in visual_event_ledger.csv).
+- Legibility at 320 px width; numbers on screen must equal narrated numbers.
+- Listening/AV pass requires a human listener (source analysis has none).

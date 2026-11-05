@@ -38,3 +38,11 @@ Held-out sources readable from the interactive session (TCC block applies to the
 Processed: xBJ6suQSt98 (rv1, 17/17 images once, 1 correction G0105), 6YHva7Me2ls (rv1, 21/21 once, 0 disagreements). Pending reviewers: C_jSOXP_XWY (2 sheets), 5gSIU30yiVs (4 sheets) - briefs ready.
 Reconstruction: ACCEPTANCE_RT_v1 frozen (sha c0ee184e) before render. RT_L1 attempt_1 FAIL (C7 yellow 0.955, C8 stroke 16 px, V3/V6 title clipped), attempt_2 FAIL (C6 ink 0.068); attempt_3 in progress. RT_P1 not started (brief ready).
 Next: finish RT_L1 attempt_3 eval; reviewers C_jSO, 5gSI (one at a time) + spot-check + pe_process; pe_reuse.py --include-heldout; pe_aggregate.py . heldout --include-heldout; HELDOUT_EVALUATION.md; RT_P1; publish I.
+
+## State at checkpoint I (2026-11-05T18:39:53Z, interactive session 85559743)
+Paused at five-hour 0.86 (gate 0.85), reset 2026-11-05T22:00:00Z, weekly 0.71. All 15 selected videos built, status VISUAL_ANALYSIS_PARTIAL. Held-out scored in HELDOUT_EVALUATION.md: measured 23/32 (LONG 14/16, SHORT 9/16), observed 14/16, reuse 3/3. Manual v2 written; v1 and protocol unchanged.
+Reconstruction: RT_L1 PASS at attempt 5 (attempts 1-4 FAIL retained). RT_P1 measured 10/10 at attempt 5, V1-V6 NOT judged. Audio sync BLOCKED.
+Evidence limit: sheet label hid bottom band (see HELDOUT_EVALUATION.md). RmTdnXHbI8s G0009 text "pervy neighbour" awaits a targeted row correction. ACTIVITY tiles not band-audited.
+Storage: renders and media are local only; hashes in reconstruction/RENDER_SHA256_LOCAL_ONLY.txt. Off-device backup BLOCKED: no destination available (boot volume only, per the 2026-11-05 check).
+Scheduler: unattended runs cannot read sources under ~/Downloads (TCC, inferred). No successful unattended research cycle is recorded. Its only full run so far exited on lock BUSY: that proves launch and duplicate prevention only.
+Exact next operation: after reset and five-hour <0.85, open reconstruction/RT_P1/attempt_5/frames/sheets/SHEET_01..04 once each, judge V1-V6 into its RT_EVALUATION.md (on V6 FAIL: specific fix, attempt_6, re-measure with scripts/pe_rt_measure.sh). Then publish J. Do not create CAMPAIGN_COMPLETE on folder count; listening stays BLOCKED, no CT_SCAN_COMPLETE.
