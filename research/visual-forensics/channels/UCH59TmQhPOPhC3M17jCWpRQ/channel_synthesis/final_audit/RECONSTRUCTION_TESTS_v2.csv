@@ -1,0 +1,14 @@
+test,video,scope,criterion_sha8,render_sha8,result,notes
+RT-01,uPQcyookL0Y,timing: clip reveal / pop overshoot / pose swap,,,PASS (timing),reused; style FAIL_BY_OMISSION at the time
+RT-V1-S01,uPQcyookL0Y,style + full scene (W021),25305444,f6e741cf,PASS,fresh sonnet worker
+RT-V1-P01,uPQcyookL0Y,single-frame punch-in reframe,59c2c34f,d05539ee,PASS,criterion v1 failed on source (kept 4a40dedb); v2 preregistered before render; incremental 2.139 about (627 818); C5 re-viewed N14
+RT-V2-01,mNLNb-Z4T0M,squash swap + camera push,,f91ab6f5,FAIL (kept),squash PASS; camera FAIL as preregistered; not re-scored
+RT-V2-02,mNLNb-Z4T0M,camera pan trajectory (S080),ef7b5533,477e0568,PASS,criterion preregistered; RT-V2-01 render as negative control fails 6/7
+RT-V2-S01,mNLNb-Z4T0M,style + full scene (S067),626e5974,5f77e3b7,FAIL (kept),C3 tracker locked on labels; C6 italic sans
+RT-V2-S02,mNLNb-Z4T0M,style + full scene (S067),626e5974,76f446a1,FAIL (kept),C2 grass fraction 0.069
+RT-V2-S03,mNLNb-Z4T0M,style + full scene (S067),626e5974,30212198,FAIL (kept),C3 v1 cumulative bias sum_dx 16.6
+RT-V2-S04,mNLNb-Z4T0M,style + full scene (S067),0803c6ae,19d7c55d,PASS,C3 v2 (direct fit vs f0) preregistered before render; v1 metric reported unscored
+RT-V3-01,GNaBxt_zIRA,inset pop overshoot + single-frame pop-in,,e7eeea36,PASS,
+RT-V3-S01,GNaBxt_zIRA,style + full scene (S057),f810b406,37a2b240,FAIL (kept),spec error: added pan; source is pure zoom about (960 50)
+RT-V3-S02,GNaBxt_zIRA,style + full scene (S057),f810b406,8f940a77,FAIL (kept),spec gap: teacher exits (screen-anchored layer missing)
+RT-V3-S03,GNaBxt_zIRA,style + full scene (S057),f810b406,a133c780,PASS,teacher on screen-anchored layer (ESTIMATED from tiles); criterion v1 bddb1940 failed on source (kept)
