@@ -1,0 +1,16 @@
+{
+ "test": "RT-V1-P01",
+ "version": "v2",
+ "registered_before_render": true,
+ "registered_utc": "2026-11-05T03:5xZ",
+ "supersedes": "v1 (sha 4a40dedb...) failed on the source itself: source has slow drift (~1.5-1.9%) around the jump, so vs-frame-0 checks and fixed point were mis-specified",
+ "criteria": [
+  "C1 format exact; frames 88-92 (ffprobe == cv2 count)",
+  "C2 exactly one frame j where cam_traj scale (vs frame 0) changes by > 0.5 vs the previous frame; j in 40-50",
+  "C3 incremental jump (cam_traj on frames j-1..j, vs frame j-1): scale in [2.00, 2.30]; fixed point (tx/(1-s), ty/(1-s)) within 60 px of (627, 818)",
+  "C4 no other step: every other frame-to-frame scale change < 0.02; total drift before j and after j each < 3%",
+  "C5 visual (orchestrator, render frames only): same artwork before/after (no redraw), original content"
+ ],
+ "measurement": "deterministic C1-C4 by scripts/evaluate_punchin_rt.py (v2); calibrated on source f5384-5473 before render",
+ "scope": "camera-reframe module timing/geometry only; style not scored"
+}

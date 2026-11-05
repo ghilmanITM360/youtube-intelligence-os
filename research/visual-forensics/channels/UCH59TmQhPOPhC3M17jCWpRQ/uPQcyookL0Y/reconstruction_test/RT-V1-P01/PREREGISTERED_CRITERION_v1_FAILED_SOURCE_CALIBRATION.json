@@ -1,0 +1,15 @@
+{
+ "test": "RT-V1-P01",
+ "registered_before_render": true,
+ "registered_utc": "2026-11-05T03:4xZ",
+ "source": "uPQcyookL0Y f5429 (UBC-003): cam_traj scale 1.000 -> 2.140 in one frame, fixed point ~(627,818), held",
+ "criteria": [
+  "C1 format exact; frames 88-92 (ffprobe == cv2 count)",
+  "C2 cam_traj vs frame 0: every frame before the jump |scale-1| < 0.003",
+  "C3 single-frame jump: exactly one frame index j where scale changes by > 0.5 vs previous frame; scale[j] in [2.00, 2.30]; zoom fixed point (tx/(1-s), ty/(1-s)) at j within 60 px of (627, 818)",
+  "C4 hold after: for every frame after j, |scale - scale[j]| < 0.01",
+  "C5 visual (orchestrator, render frames only): same artwork before/after (no redraw), original content"
+ ],
+ "measurement": "deterministic C1-C4 by scripts/evaluate_punchin_rt.py; C5 visual; calibrated on source window f5384-5473 before render",
+ "scope": "camera-reframe module timing/geometry only; style not scored"
+}
