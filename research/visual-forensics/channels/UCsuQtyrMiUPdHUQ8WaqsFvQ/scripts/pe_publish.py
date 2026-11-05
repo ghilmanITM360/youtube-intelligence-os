@@ -8,12 +8,15 @@ WS = pathlib.Path.home() / "YIOS-local-audits/primitive-education"; REPO = "/Use
 BR = "research/primitive-education-visual-forensics"; PREFIX = "research/visual-forensics/channels/UCsuQtyrMiUPdHUQ8WaqsFvQ/"
 run = lambda *a, **k: subprocess.check_output(a, cwd=REPO, text=True, **k).strip()
 INCLUDE = ["census/source_census.csv", "census/census_summary.json",
-           "selection/*.json", "selection/*.txt", "campaign/*.md", "campaign/*.csv", "campaign/*.json", "campaign/*.txt", "scripts/*.py", "scripts/*.sh", "scripts/*.md"]
+           "selection/*.json", "selection/*.txt", "campaign/*.md", "campaign/*.csv", "campaign/*.json", "campaign/*.txt", "scripts/*.py", "scripts/*.sh", "scripts/*.md",
+           "reconstruction/*.md", "reconstruction/*.sha256", "reconstruction/*/*.md", "reconstruction/*/*.csv", "reconstruction/*/*.py",
+           "reconstruction/*/attempt_*/*.md", "reconstruction/*/attempt_*/*.csv", "reconstruction/*/attempt_*/*.json", "reconstruction/*/attempt_*/*.py",
+           "reconstruction/*/attempt_*/evidence/*.txt", "reconstruction/*/attempt_*/evidence/*.json", "reconstruction/*/attempt_*/tables/*.json", "reconstruction/*/attempt_*/tables/segments_v1.csv"]
 VID = ["source_manifest.json", "coverage.json", "shot_ledger.csv", "visual_event_ledger.csv", "audio_visual_alignment.csv",
        "visual_ct_scan_report.md", "reconstruction_blueprint.md", "quality_gate.json", "continuation_handoff.md",
        "tables/state_ledger.csv", "tables/segments_v1.csv", "tables/detector_calibration.json", "tables/palette_measured.json",
        "tables/sheet_index.csv", "tables/strip_index.csv", "tables/strip_frames.csv", "tables/scenedetect_candidates.csv", "evidence/source_sha256.txt", "evidence/ffprobe_full.json", "evidence/ebur128.txt",
-       "asr/asr_small_en.json", "asr/asr_small_en_segments.csv", "review/*.csv", "review/*.json", "review/*/*", "review_brief_*.md"]
+       "asr/asr_small_en.json", "asr/asr_small_en_segments.csv", "review/*.csv", "review/*.json", "review/*.md", "review/*/*", "review_brief_*.md"]
 files = set()
 for g in INCLUDE: files |= {p for p in WS.glob(g) if p.is_file()}
 for v in sorted((WS / "videos").iterdir()):

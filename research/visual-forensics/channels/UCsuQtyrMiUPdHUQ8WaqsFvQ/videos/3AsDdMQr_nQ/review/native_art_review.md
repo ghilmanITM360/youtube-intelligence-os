@@ -1,0 +1,5 @@
+Primary reviewer (Claude Opus session 85559743) opened `frames/native/NATIVE_000146.jpg` (G0001, frame 146, 2.92 s, 1:1 native crop 576x636 of 1920x1080).
+OBSERVED: caveman seated in plain armchair, pipe with single wavy smoke line, book reading "WORD BOOK" in black hand-drawn-looking caps. Thick black outline, measured median stroke about 6 px at this scale (tables/stroke_measured.json); solid black beard with spiky edge; flat yellow fill with oval black spots and zigzag hem; no gradient or shadow; soft edge at native scale consistent with compression. Sheet SHEET_05 also shows real photographic cutouts (dome camera G0052) next to drawn equivalents (eyeball camera G0054): mixed media, not drawing only.
+MEASURED event: full hue rotation of the coloured fill f3254-f3422 (yellow-green-cyan-blue-magenta-red-yellow) across cut G0090; matches ASR "magic orb that change color" (timing ASR_UNCERTIFIED).
+INFERRED (medium): photo = real thing, drawing = caveman's reinterpretation; alternative: stock-photo economy.
+UNAVAILABLE: software, typeface, generation method. NATIVE_000568 and NATIVE_000592 extracted, not opened.

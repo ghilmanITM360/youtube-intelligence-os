@@ -23,3 +23,18 @@ DEV set complete: all 11 DEV videos built (VISUAL_ANALYSIS_PARTIAL); checkpoints
 Read budget clause worked: reviewers opened each image once (RmT 19/19, Dekae 24/24, Nv4 10/10, RM_KBL 25/25 image results; 89k-154k subagent tokens each).
 Exact next operation: acquire lock; for each held-out in order xBJ6suQSt98, 6YHva7Me2ls, C_jSOXP_XWY, 5gSIU30yiVs: pe_prep.sh <id> (adds briefs from template incl. read budget), one sonnet reviewer, steps 3-5; then pe_reuse.py with held-out (extend or run ad hoc, do not overwrite reuse_dev.json) and pe_aggregate.py . heldout --include-heldout; score every check in HELDOUT_PROTOCOL_v1 into HELDOUT_EVALUATION.md without editing v1. Then step 9 reconstruction (one landscape, one portrait; render + evaluate). Publish H after held-out.
 First full scheduled worker ran 2026-11-04T20:31:26Z, found lock BUSY, exited 0 in 23 s (worker_last.json).
+
+## BLOCKER at 2026-11-05T04:38:06Z (scheduled worker, held-out step 8)
+pe_prep.sh xBJ6suQSt98: pe_segment.py hung in kernel open() on the source MP4 (sample: cv::VideoCapture -> avpriv_open -> __open, 0.18s CPU for >10 min). Plain `head -c 16` on the same file also blocks; ls/stat work. Diagnosis (INFERRED): macOS TCC privacy gate on ~/Downloads for this unattended process tree; all 4 held-out sources live under ~/Downloads/videos in mp3/PrimitiveEducation-MP4/. Stuck processes killed; no outputs written (no segments_v1.csv, no sheets, no brief) for xBJ6suQSt98. Nothing else touched; ledger unchanged; frozen protocol hashes re-verified OK.
+OWNER ACTION NEEDED (one of): grant Downloads/Full Disk Access to the scheduler's process chain (launchd -> claude -> python/ffmpeg), OR copy the 4 held-out MP4s to durable storage outside Downloads (verify SHA-256 against videos/<id>/evidence/source_sha256.txt) and update source_path.txt.
+Worker guard: before pe_prep, test readability with a bounded probe, e.g. ( head -c 16 "$(cat videos/<id>/evidence/source_path.txt)" >/dev/null ) & sleep 8; if still running -> BLOCKED, kill, checkpoint, exit. Never wait on an unbounded open().
+Exact next operation unchanged: held-out xBJ6suQSt98, 6YHva7Me2ls, C_jSOXP_XWY, 5gSIU30yiVs via steps 1-5, then evaluation, then reconstruction (step 9; no beat list/reconstruction plan file exists yet).
+
+## Recheck at 2026-11-05T12:54:40Z (scheduled worker)
+Bounded probe (head -c 16, 6 s cap) on all 4 held-out sources: all BLOCKED (same ~/Downloads paths). No stray readers left. mdfind shows no copy outside ~/Downloads; no external volumes. Usage five_hour 0.02, weekly 0.78. No prep, no reviewer, no ledger/publication change. Blocker and OWNER ACTION above still apply; exact next operation unchanged.
+
+## State at checkpoint H (2026-11-05T16:32:17Z, interactive session 85559743)
+Held-out sources readable from the interactive session (TCC block applies to the unattended launchd chain only); source sha256 re-verified = ingest receipts. HELDOUT_PROTOCOL_v1.sha256 re-verified OK. Prep + native + stroke + enc-audit done for all 4 held-outs; native_art_review.md written for all 4.
+Processed: xBJ6suQSt98 (rv1, 17/17 images once, 1 correction G0105), 6YHva7Me2ls (rv1, 21/21 once, 0 disagreements). Pending reviewers: C_jSOXP_XWY (2 sheets), 5gSIU30yiVs (4 sheets) - briefs ready.
+Reconstruction: ACCEPTANCE_RT_v1 frozen (sha c0ee184e) before render. RT_L1 attempt_1 FAIL (C7 yellow 0.955, C8 stroke 16 px, V3/V6 title clipped), attempt_2 FAIL (C6 ink 0.068); attempt_3 in progress. RT_P1 not started (brief ready).
+Next: finish RT_L1 attempt_3 eval; reviewers C_jSO, 5gSI (one at a time) + spot-check + pe_process; pe_reuse.py --include-heldout; pe_aggregate.py . heldout --include-heldout; HELDOUT_EVALUATION.md; RT_P1; publish I.

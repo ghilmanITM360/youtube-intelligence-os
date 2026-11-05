@@ -1,7 +1,8 @@
 """Deterministic reuse tests over BUILT DEV videos only: (a) Short-vs-long ASR word overlap, (b) settled-frame reuse via dHash of hold ink crops. Writes campaign/reuse_dev.json. Usage: python -I pe_reuse.py"""
-import csv, difflib, json, pathlib, re, cv2, numpy as np, collections
+import csv, difflib, json, pathlib, re, sys, cv2, numpy as np, collections
+INC = "--include-heldout" in sys.argv; OUTN = "reuse_all.json" if INC else "reuse_dev.json"
 W = pathlib.Path.home() / "YIOS-local-audits/primitive-education"; sel = json.load(open(W / "selection/selection_v1.json"))["videos"]
-built = [r for r in sel if r["split"] == "DEV" and (W / "videos" / r["video_id"] / "quality_gate.json").exists()]
+built = [r for r in sel if (INC or r["split"] == "DEV") and (W / "videos" / r["video_id"] / "quality_gate.json").exists()]
 T = {r["video_id"]: re.findall(r"[a-z0-9']+", " ".join(s["text"] for s in json.load(open(W / "videos" / r["video_id"] / "asr/asr_small_en.json"))["segments"]).lower()) for r in built}
 text = []
 for s in [r for r in built if r["displayed_format"] == "9:16"]:
@@ -26,4 +27,4 @@ for i in range(n):
         if abs(H[i][2] - H[j][2]) < .03 and (H[i][3] != H[j][3]).sum() <= 10:
             k = tuple(sorted((H[i][0], H[j][0]))); pairs[k] += 1; ex.setdefault(k, (H[i][1], H[j][1]))
 out = dict(method="ASR SequenceMatcher (ASR_UNCERTIFIED); dHash 16x16 of ink crop, Hamming<=10 and aspect within .03 (candidate reuse incl. re-scaled)", holds_hashed=n, text_overlap=sorted(text, key=lambda x: -x["share_of_short"]), hold_reuse_pairs=[dict(a=k[0], b=k[1], matches=v, example=ex[k]) for k, v in pairs.most_common()])
-(W / "campaign/reuse_dev.json").write_text(json.dumps(out, indent=1)); print(json.dumps(out)[:1500])
+(W / "campaign" / OUTN).write_text(json.dumps(out, indent=1)); print(json.dumps(out)[:1500])

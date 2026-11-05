@@ -1,0 +1,4 @@
+Primary reviewer (Claude Opus session 85559743) opened `frames/native/NATIVE_002474.jpg` (G0081, frame 2474, 1:1 native crop 908x967 of 1080x1920).
+Smirking caveman making a two-finger sign with one hand and pointing toward the viewer with the other; heavy brow bar, oversized nose, small tooth, spiky solid-black beard, 3 tick marks on forearm, yellow tunic with black ovals and zigzag hem. House treatment also in sheet review: black outline, flat yellow tunic with black ovals, curly-hair variant with bead necklace (G0036), thick red X overlay with rounded ends covering the figure, text left-placed to reserve space for the next word (G0040-G0042). No shading or gradients on drawn figures; full-black frames used as a beat (G0044-G0045).
+INFERRED (low): red X marks negation of each listed item. Alternative: generic emphasis.
+UNAVAILABLE: software, typeface, generation method. NATIVE_001035 and NATIVE_001376 extracted, not opened.
