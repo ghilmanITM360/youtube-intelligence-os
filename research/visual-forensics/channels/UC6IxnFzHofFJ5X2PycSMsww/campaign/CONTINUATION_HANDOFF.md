@@ -37,3 +37,11 @@ Read first: campaign/CAMPAIGN_GOAL_v1.md, CHANNEL_PRODUCTION_MANUAL_v0.2.md (v0.
 - TFhrRrRdUbA and 4ZVtHknKuvg reviewers (rvH3) done, spot-checked, processed. HELDOUT_EVALUATION_v3.md FINAL: 21/21 quantitative PASS, all evaluated qualitative rules PASS; caveats on hold floor (4ZVt 1.17 s) and R2 colour wording.
 - xk_validate_review.py patched to accept rv1->rvH* symlink write paths.
 - Next: manual v0.5 (R2 colour note, 2026 hold-floor review), re-review of 30 remaining strips, 9:16 Short RT, Phase 7 knowledge links. Weekly usage ~92% at this checkpoint; resume after weekly reset 2026-11-06T22:00Z.
+
+## Update 2026-11-05T17:01:42Z (checkpoint N) — session d2a98830, owner-directed run to 100 % weekly (owner override of 95 % rule, 2026-11-05)
+- Held-out-4 (protocol v4 sha c5cc516a…; oTzW-mTQd5w, s3oLIDaElaE, qu8nx1qUwEU): FINAL 20/23 quant (all 3 fails oTzW: continuous-journey rhythm), 27/27 qual. v0.5 2026 hold claim falsified → manual v0.6.
+- Held-out-5 (protocol v5 sha c24b3249… + addendum; Z_xJ40QXu7Q, IdlQsjq5vKo, p2M8Y0z9Rl0): FINAL 21/21 quant, qual PASS; title-only story-type predictions substantive 1/3 → manual v0.7 demotes the story rule to a descriptive n=1 note; adds short blurred scale-reveal zoom device.
+- Loudness: ingest's ebur128.txt lacks Summary for heldout3+ (ffmpeg -v error); always run scripts/xk_loudness.sh after ingest. heldout3_quant.csv was regenerated once and Q2 restored from HELDOUT_EVALUATION_v3.md (21/21).
+- Checkpoints: L 6bae7cdf24810b906ece42322a07f050fc3f8d71 (1240 files), M d6b006ff6b2b3e30e90003ee2739bd59a188c56a (1279), N 87a757751bcc18ab9eef364bffedc7002240c0cc (1337); all readback 0 mismatches, seals match, 0 media.
+- Reviewer scratch dir /private/tmp/claude-501/scratch unchanged (no new deviations).
+- Next: population measurement-only run on the 20 remaining local long videos against frozen v4 ranges (pre-register before ingest); re-review 30 strips; 9:16 RT; Phase 7 links.
