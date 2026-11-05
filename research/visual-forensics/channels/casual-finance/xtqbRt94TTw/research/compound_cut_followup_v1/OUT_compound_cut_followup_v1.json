@@ -1,0 +1,264 @@
+{
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "status": "COMPLETE_FOR_SUPPLIED_SCOPE",
+  "base_review": {
+    "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/OUT_native_cut_batch02_v1.json",
+    "sha256": "29213721a63fb61a7764667ce1d42d4a0c207b82ea167d1933fbe2b8b23ff5ae",
+    "immutable": true
+  },
+  "items": [
+    {
+      "id": "EP0054",
+      "boundary_verdict": "NO_FULL_COMPOSITION_REPLACEMENT_AT1642; EARLIER_COMPOUND_CUT_UNDETERMINED",
+      "shot_boundary_for_entire_compound": "UNDETERMINED",
+      "observed_frames": {
+        "new": [
+          1641,
+          1642
+        ],
+        "reused_without_redisplay": [
+          1596,
+          1597
+        ]
+      },
+      "description": "Table1 is already enlarged on a white field at1641 with no PDF chrome or presenter. At1642 the same table content remains upper-right, slightly larger/repositioned, its clipped lower paragraph line disappears, and a smiling pointer presenter appears at left. This proves presenter entry/final crop reframe at1642 rather than first table appearance or a single viewer-to-table hard replacement on that edge. Reused1597 is still a scrolling PDF viewer. The intervening viewer-to-enlarged-table change could include zoom/crop or a cut; these sparse endpoints do not decide it.",
+      "exact_onset_or_unknown": {
+        "presenter_first_visible_frame": 1642,
+        "presenter_boundary_precision": "EXACT_NATIVE_1641_1642",
+        "table_reframe_changed_frame": 1642,
+        "table_already_present_without_viewer_chrome_by": 1641,
+        "exact_whole_composition_cut_frame": null,
+        "unreviewed_interval_for_viewer_to_table_change": [
+          1598,
+          1641
+        ],
+        "interval_is_not_a_verified_cut_bracket": true
+      },
+      "event_taxonomy": "RETAINED_TABLE_REFRAME_PLUS_ADDITIVE_PRESENTER_ENTRY; EARLIER_VIEWER_TRANSITION_UNRESOLVED",
+      "confidence": "HIGH_FOR_ENDPOINT_CONSTRUCTION; CUT_IN_INTERVENING_INTERVAL_NOT_ESTABLISHED",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/compound_cut_followup_v1/f01641_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/compound_cut_followup_v1/f01642_native.png"
+      ],
+      "limitations": [
+        "A retained/enlarging table plus presenter addition is not automatically a shot cut.",
+        "Do not assign any exact earlier cut or full compound certification from1597/1641 endpoints.",
+        "Presenter entry is exact1642; earlier table enlargement/cropping trajectory is unreviewed."
+      ]
+    },
+    {
+      "id": "EP0082",
+      "boundary_verdict": "TWO_STAGE_REPLACEMENT_CONFIRMED; NO_SINGLE_FULL_SCENE_CUT",
+      "shot_boundary_as_single_full_replace": "NO",
+      "observed_frames": {
+        "new": [
+          2770
+        ],
+        "reused_without_redisplay": [
+          2768,
+          2769
+        ]
+      },
+      "description": "Reused2768 shows article/presenter, then2769 removes the presenter and adds a large PDF foreground while retaining a visible strip of the old Conference Board article behind it. At2770 the PDF stays in the same visible position/scale and the article strip disappears into white margin. The compound is a staged composition replacement: PDF foreground/presenter phase at2769, old-backdrop clearance at2770. Calling2769 alone a full article-to-PDF scene replacement or2770 a fresh full-PDF cut would erase the retained foreground/backdrop phases.",
+      "exact_onset_or_unknown": {
+        "pdf_foreground_first_visible_frame": 2769,
+        "presenter_removed_frame": 2769,
+        "prior_article_backdrop_last_visible_frame": 2769,
+        "prior_article_backdrop_removed_frame": 2770,
+        "composition_replacement_complete_by_frame": 2770,
+        "single_full_frame_hard_cut_frame": null,
+        "boundary_precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS_2768_2769_REUSED_AND_2770_NEW"
+      },
+      "event_taxonomy": "HYBRID_FOREGROUND_DOCUMENT_REPLACEMENT_AND_PRESENTER_REMOVAL_THEN_BACKDROP_REMOVAL",
+      "confidence": "HIGH_FOR_VISIBLE_TWO_STAGE_CONSTRUCTION",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/compound_cut_followup_v1/f02770_native.png"
+      ],
+      "limitations": [
+        "Source layer/edit command is unknown; this taxonomy describes observable retained and replaced elements.",
+        "No whole-shot duration, later PDF motion or speech is certified.",
+        "The new2770 image is compared with the prior qualified2769 observation without redisplaying2769."
+      ]
+    }
+  ],
+  "new_evidence_reads": [
+    {
+      "frame": 1641,
+      "source_pts_s": 68.41666666666667,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/compound_cut_followup_v1/f01641_native.png",
+      "sha256": "94cd041818aceb655471186e2ac635ac49775ba46243e6f447f5a3c2e7144580",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "COMPOUND_EP0054",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Enlarged Table1 Eleven Monetary Policy Tightenings since1965 already occupies upper-right on white; no PDF viewer chrome or presenter. A clipped body-text line remains just below the table.",
+      "request_order": 1,
+      "display_count_this_task": 1,
+      "hash_status": "LOCAL_PNG_SHA256_MATCHED_SUPPLIED_MANIFEST",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN"
+    },
+    {
+      "frame": 1642,
+      "source_pts_s": 68.45833333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/compound_cut_followup_v1/f01642_native.png",
+      "sha256": "18d6b1c0cd2770ccd1ae320578b584802d8d706406327337cc51a0bc1f3c57a6",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "COMPOUND_EP0054",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Same Table1 content retained upper-right, slightly enlarged/repositioned; lower clipped body line removed. Smiling pointer presenter newly occupies left and points into table. This is not first table appearance.",
+      "request_order": 2,
+      "display_count_this_task": 1,
+      "hash_status": "LOCAL_PNG_SHA256_MATCHED_SUPPLIED_MANIFEST",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN"
+    },
+    {
+      "frame": 2770,
+      "source_pts_s": 115.45833333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/compound_cut_followup_v1/f02770_native.png",
+      "sha256": "6aed904368dbedfbd045432597a5d5471b18e49be7588d74f4760c14c3429594",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "COMPOUND_EP0082",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Same NYFed StaffReports PDF viewer/title page remains centered-left at same visible size/position as reused2769; the exposed Conference Board header/body/chat-icon backdrop is now absent, replaced by white margins. No presenter.",
+      "request_order": 3,
+      "display_count_this_task": 1,
+      "hash_status": "LOCAL_PNG_SHA256_MATCHED_SUPPLIED_MANIFEST",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN"
+    }
+  ],
+  "reused_prior_receipts": [
+    {
+      "frame": 1596,
+      "source_pts_s": 66.54166666666667,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01596_native.png",
+      "sha256": "ad65f1bd7664bf01929fa4df5492ced27435ef46bff2211a81519aeef37b08e3",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0054",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Same Landings PDF viewer at100%, counter2/20; main pane shows lower page2 with blue-selected sentence and start of next page below; dark sidebar/toolbars retained.",
+      "request_order": 7,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit.",
+      "reused_without_redisplay": true,
+      "new_display_count": 0,
+      "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/OUT_native_cut_batch02_v1.json",
+      "base_review_sha256": "29213721a63fb61a7764667ce1d42d4a0c207b82ea167d1933fbe2b8b23ff5ae"
+    },
+    {
+      "frame": 1597,
+      "source_pts_s": 66.58333333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01597_native.png",
+      "sha256": "37f09ee1f330c7124f258f969bbfb61b2dbebaf8c05fd9e939a5f007bbd8808c",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0054",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Same PDF viewer size/chrome at100%, counter3/20; same selected sentence/page2 footer has moved far upward, page3 Goals and Definitions occupies main pane. No presenter/full-table replacement.",
+      "request_order": 8,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit.",
+      "reused_without_redisplay": true,
+      "new_display_count": 0,
+      "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/OUT_native_cut_batch02_v1.json",
+      "base_review_sha256": "29213721a63fb61a7764667ce1d42d4a0c207b82ea167d1933fbe2b8b23ff5ae"
+    },
+    {
+      "frame": 2768,
+      "source_pts_s": 115.375,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02768_native.png",
+      "sha256": "c82e6577c2e3daea4b4c062221707eb9b2e32dc2ba6ac175b226e6076c34f3d5",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0082",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Frowning pointer narrator left and Conference Board article right; yellow-highlighted bullet about three consecutive hikes, site header/chat icon visible.",
+      "request_order": 19,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit.",
+      "reused_without_redisplay": true,
+      "new_display_count": 0,
+      "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/OUT_native_cut_batch02_v1.json",
+      "base_review_sha256": "29213721a63fb61a7764667ce1d42d4a0c207b82ea167d1933fbe2b8b23ff5ae"
+    },
+    {
+      "frame": 2769,
+      "source_pts_s": 115.41666666666667,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02769_native.png",
+      "sha256": "68a0059f72faa769d15d04c395486404eff423dc0afac31e725ad2e9c0764f4d",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0082",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Narrator absent; large PDF viewer/title page centered-left, showing NYFed Staff Reports/Monetary Cycles,Financial Cycles,and the Business Cycle/no421/January2010. Conference Board header/body/chat icon remain visibly exposed behind PDF along right edge.",
+      "request_order": 20,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit.",
+      "reused_without_redisplay": true,
+      "new_display_count": 0,
+      "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/OUT_native_cut_batch02_v1.json",
+      "base_review_sha256": "29213721a63fb61a7764667ce1d42d4a0c207b82ea167d1933fbe2b8b23ff5ae"
+    }
+  ],
+  "pending_paths": [],
+  "pending_case_ids": [],
+  "extra_exact_frames_needed": [
+    {
+      "id": "EP0054",
+      "frames": [
+        1619
+      ],
+      "reason": "Smallest next midpoint sample between the reused viewer state1597 and enlarged-table state1641. Determine whether1619 still shows viewer chrome, is transitioning by enlargement/cropping, or already shows the enlarged table; then narrow adaptively instead of guessing a cut.",
+      "requested_not_viewed": true,
+      "precision_limit": "One midpoint narrows the construction/timing question; it does not itself guarantee an exact cut. Additional adaptive adjacency frames may be needed after its actual observation."
+    }
+  ],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "usage_at_stop": {
+    "primary_used_percent": 26,
+    "weekly_used_percent": 82,
+    "paid_credits_balance": "0",
+    "measurement": "Fresh usage after EP0054 pair25%/82%, then after new2770 final26%/82%. No reset/paid credits used."
+  },
+  "limitations": [
+    "Exactly3 new native1920x1080 source derivatives displayed once; no prior images redisplayed or new extraction performed.",
+    "Complete supplied-scope status accounts for all3 images and2 cases, not full resolution of EP0054's intervening transition.",
+    "No source economic/authenticity fact-check, hearing, ASR, global shot count, complete semantic/100ms floor or CT completion."
+  ]
+}

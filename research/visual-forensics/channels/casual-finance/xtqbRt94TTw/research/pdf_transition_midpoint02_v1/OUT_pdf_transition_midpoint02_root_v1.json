@@ -1,0 +1,49 @@
+{
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "reviewer": "ROOT_DIRECT_NATIVE_OBSERVATION",
+  "status": "COMPLETE_BOUNDED_ONE_FRAME;LATE_ZOOM_CONSTRUCTION_STILL_OPEN",
+  "frame": 1630,
+  "source_pts_s": 67.95833333333333,
+  "observed": "Monetary-tightening Table1 is visible inside an enlarged PDF page. Dark left thumbnail sidebar and scrollbar persist at left; upper toolbar is mostly clipped above image. Table and body paragraph are still part of visible page with running header119. No presenter. This is an enlarged/cropped viewer construction, not yet the isolated final table-only construction described at1641.",
+  "inference_label": "OBSERVED",
+  "confidence": "HIGH_FOR_VISIBLE_COMPONENTS;CONTINUOUS_ZOOM_PATH_NOT_ESTABLISHED_FROM_ONE_FRAME",
+  "new_evidence_reads": [
+    {
+      "frame": 1630,
+      "source_pts_s": 67.95833333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/pdf_transition_midpoint02_v1/f01630_native.png",
+      "sha256": "3b000254057891ac13a887d3d32856121de8939eaeef12422d83e68c9c543058",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Native1920x1080 actually returned; left PDF sidebar/scrollbar persists beside enlarged Table1 and body text, no presenter."
+    }
+  ],
+  "pending_paths": [],
+  "extra_exact_frames_needed": [
+    {
+      "id": "EP0054",
+      "frames": [
+        1631,
+        1632,
+        1633,
+        1634,
+        1635,
+        1636,
+        1637,
+        1638,
+        1639,
+        1640
+      ],
+      "reuse_without_redisplay": [
+        1630,
+        1641,
+        1642
+      ],
+      "reason": "Consecutive native late-zoom interval to distinguish smooth/reframed crop from abrupt full-composition replacement as viewer chrome leaves. Earlier page traversal already sampled inG013."
+    }
+  ],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false
+}
