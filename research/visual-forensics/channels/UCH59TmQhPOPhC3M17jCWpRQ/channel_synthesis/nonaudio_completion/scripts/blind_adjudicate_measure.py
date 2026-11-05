@@ -1,10 +1,11 @@
 # Deterministic support for reconciling BLIND_REVIEW.csv: for every sampled interval, chained ORB+RANSAC similarity over
 # <=10-frame steps from start to end frame (same frozen thresholds as cam_endpoint.py), plus the largest single-frame
 # full-frame mean-abs-diff jump inside [start-1, end+1] with its frame (cut candidate) and whether it is the boundary.
-import csv, cv2, numpy as np
+import csv, cv2, numpy as np, sys
 from pathlib import Path
 N = Path(__file__).resolve().parents[1]; SRC = Path.home() / 'Downloads/videos in mp3/BarelyEvolved-MP4'
-S = list(csv.DictReader(open(N / 'r13_blind/BLIND_SAMPLE_INDEX.csv'))); L = {}
+D = N / (sys.argv[1] if len(sys.argv) > 1 else 'r13_blind'); RV = sys.argv[2] if len(sys.argv) > 2 else 'BLIND_REVIEW.csv'
+S = list(csv.DictReader(open(D / 'BLIND_SAMPLE_INDEX.csv'))); L = {}
 for v in ['uPQcyookL0Y', 'mNLNb-Z4T0M', 'GNaBxt_zIRA']:
     for r in csv.DictReader(open(N / f'dense_review/DENSE_REVIEW_LEDGER_{v}.csv')): L[r['interval_id']] = r
 orb = cv2.ORB_create(4000); out = []
@@ -42,10 +43,10 @@ for vid in ['uPQcyookL0Y', 'mNLNb-Z4T0M', 'GNaBxt_zIRA']:
         jm, jf = max(d) if d else (0, None)
         out.append(dict(video=vid, interval_id=s['interval_id'], start=a, end=b, links=len(fs) - 1, min_link_inliers=mn if len(fs) > 1 else 0, scale=round(sc, 5), centre_shift_px=round(t, 2), camera_measured=v, inlier_spread=round(float(sp), 3) if len(fs) > 1 else 0,
                         max_jump_mad=round(jm, 2), max_jump_frame=jf, jump_at=('NEXT_STATE_BOUNDARY' if jf == b + 1 else 'INTERVAL_START' if jf == a else 'INSIDE') if jf else ''))
-with open(N / 'r13_blind/BLIND_ADJUDICATION_MEASURE.csv', 'w', newline='') as f:
+with open(D / 'BLIND_ADJUDICATION_MEASURE.csv', 'w', newline='') as f:
     w = csv.DictWriter(f, fieldnames=list(out[0])); w.writeheader(); w.writerows(out)
 import collections; print(collections.Counter(o['camera_measured'] for o in out))
-B = {r['interval_id']: r for r in csv.DictReader(open(N / 'r13_blind/BLIND_REVIEW.csv'))}
+B = {r['interval_id']: r for r in csv.DictReader(open(D / RV))}
 for o in out:
     b = B[o['interval_id']]
     if b['event_class'] == 'SHOT_CUT' or b['camera_move'] not in ('NONE', 'UNSURE') or o['max_jump_mad'] > 20:
