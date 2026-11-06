@@ -45,6 +45,12 @@ jobs:
       - name: Exercise partial catalog rebuilder against disposable database
         run: |
           python -m scripts.rebuild_inventory_catalog --database "$RUNNER_TEMP/bootstrap_inventory_catalog.db"
+      # Before the registry rebuild: validate_audit_966 pins the committed registry DB by SHA-256.
+      - name: Finance and reference framework gates
+        run: |
+          python -m pytest -q research/finance-economics-intelligence/reference-framework/test_reference_comparison.py
+          python research/finance-economics-intelligence/reference-framework/reference_comparison.py check-all
+          python research/finance-economics-intelligence/validate_audit_966.py
       - name: Build channel registry from committed canonical sources
         run: python -m scripts.build_youtube_channel_registry --write-ledgers
       - name: Validate provenance and registry
@@ -53,11 +59,6 @@ jobs:
           python -m scripts.validate_youtube_channel_registry
       - name: Run distributable suite
         run: python -m pytest -q
-      - name: Finance and reference framework gates
-        run: |
-          python -m pytest -q research/finance-economics-intelligence/reference-framework/test_reference_comparison.py
-          python research/finance-economics-intelligence/reference-framework/reference_comparison.py check-all
-          python research/finance-economics-intelligence/validate_audit_966.py
       - name: Reject unapproved databases and generated junk
         run: |
           test -z "$(git ls-files '*.db-wal' '*.db-shm' 'outputs/**' '*.pyc')"

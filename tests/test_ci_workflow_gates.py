@@ -56,3 +56,8 @@ def test_hosted_ci_runs_finance_reference_gates():
     assert "reference_comparison.py check-all" in script
     assert "validate_audit_966.py" in script
     assert "reference-framework/test_reference_comparison.py" in script
+
+
+def test_finance_gates_see_the_committed_registry():
+    """validate_audit_966 pins the committed registry DB by SHA-256, so it must run before CI rebuilds that DB."""
+    assert WORKFLOW.index("name: Finance and reference framework gates") < WORKFLOW.index("name: Build channel registry")
