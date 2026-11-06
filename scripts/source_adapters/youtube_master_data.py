@@ -54,6 +54,8 @@ def _resolve_sheet_paths(zf):
         target = rid_to_target.get(rid)
         if not target:
             raise SourceFormatError("Sheet '{}' has no resolvable target in workbook.xml.rels".format(name))
+        # OOXML allows package-absolute targets ("/xl/worksheets/sheet1.xml"); openpyxl writes them.
+        target = target.lstrip("/")
         paths[name] = "xl/" + target if not target.startswith("xl/") else target
     return paths
 
