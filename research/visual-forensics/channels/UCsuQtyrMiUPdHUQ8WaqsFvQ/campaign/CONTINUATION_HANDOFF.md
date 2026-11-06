@@ -76,3 +76,7 @@ Publisher: preflight run first (no --push, receipt PUBLICATION_<X>_PREFLIGHT.jso
 Verify a seal against its own commit, not against working files. Ledger publication column names the last substantive checkpoint, K fa118b9b28.
 Pending required items unchanged: listening, final AV signoff, narration sync, visual-script audio side, off-device transfer. HOLD_NO_EXECUTABLE_WORK stays.
 Checkpoint M: corrects one sentence of the L report (PUBLICATION_INTEGRITY_M.md) and publishes the L receipts. No other change.
+
+## State at checkpoint N (restore/rebuild, session 58b184f1 closing work of session 85559743)
+Read campaign/RESTORE_REBUILD_N.md. Verdict REBUILD_EXECUTED_PARTIAL: deterministic visual pipeline and accepted animatics reproduced; ASR varies run to run on KyBWJPaF1KI and uIG2U_1xynQ; 3AsDdMQr_nQ rebuilds 4 extra hold tiles (cause not established, not reviewed). Session 85559743 died holding the lock; it was recovered on PID-death proof and is preserved under .vf_recovered.
+Pending required items unchanged: listening, final AV signoff, narration sync, visual-script audio side, off-device transfer. HOLD_NO_EXECUTABLE_WORK stays. Stopped at 99% weekly usage.
