@@ -1,0 +1,32 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "defects": [
+    {
+      "id": "EVID-001",
+      "file": "table_boundary_native2.png",
+      "status": "INVALID_SUPERSEDED_RETAINED",
+      "finding": "520x380 ROI source crop pasted into sheet with insufficient lower panel height; coin bottom clipped by montage canvas. Blank panel is not source absence evidence.",
+      "replacement": "coin_bottom_firstpixels_native.png + table_native/f02344.png + f02345.png + f02346.png",
+      "counts_effect": 0
+    },
+    {
+      "id": "MEASURE-001",
+      "file": "arrow_region_supplement.json",
+      "status": "SUPERSEDED_BY_VERIFIED_V2",
+      "finding": "First8rows used extra R-G>60 predicate absent original method prose; three counts differ under pure documentedmethod; exactbboxes/timingunchanged.",
+      "replacement": "arrow_region_supplement_v2.json",
+      "counts_effect": 0
+    },
+    {
+      "id": "ROOT-B2-001",
+      "file": "NATIVE_BATCH2.json",
+      "status": "CORRECTED_BEFORE_ACCEPTANCE",
+      "finding": "SUB048 rightturn erroneously2311 in originalrootdraft; nativefirstturn2310.",
+      "replacement": "NATIVE_BATCH2_v2.json; visual_event_ledger_v42.csv",
+      "counts_effect": 0
+    }
+  ],
+  "attempt01_production_defects": "ATTEMPT01_DEFECTS.json retained",
+  "scope": "Artifact/measurement/rootdraft defects preserved, not source-media modification; no global semantic approval"
+}

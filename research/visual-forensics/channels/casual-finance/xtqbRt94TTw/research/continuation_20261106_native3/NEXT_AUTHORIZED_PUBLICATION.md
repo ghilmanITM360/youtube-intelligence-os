@@ -1,0 +1,3 @@
+# Casual Finance — Video006 xtqbRt94TTw
+
+Oneverifiedv3writer,terminalworkers,FINAL_VALIDATIONPASS,privateindex,nocheckout/refchanges. Parentefeacb0f7adebf57d20f55733947ea5dbb57c26c mustmatchremote. Existingpublication_preflight fullVideo006tree beforecommit ANDbefore normalpush,zero-mediaexceptions;9regressiontests. Textonly;no new/raw/source-derived/originalrender media. Preserve dependency-awarebundlebeforepush;boundedretryonlydiagnosedtransient,no force/protectionbypass/historyrewrite. Currentreceiptsexcludedfromowncommit;prior8includedandvalidated. All4JPGs alreadyabsent,preserveexternalexactbytes+historicalbyteslimitation. Reservevalidation/publication early;weekly99nonewanalysis/reviewer;no paidextra.

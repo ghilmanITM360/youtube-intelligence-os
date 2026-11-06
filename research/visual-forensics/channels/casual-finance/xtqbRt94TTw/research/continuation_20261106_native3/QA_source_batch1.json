@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "reviewer": "independent agent /root/video006_bounded_qa",
+  "created_utc": "2026-11-06T16:04:20.585530+00:00",
+  "scope": "One bounded source review: v39→v40 four strict candidate rows, two added component observations, G005.01/G006.01 source readiness only. No production, new table batch, old accepted work or global audit.",
+  "status": "PASS_BOUNDED_WITH_VERIFIED_V2_RECEIPT",
+  "original_input_verdict": "CONDITIONAL_PASS: arrow_region_supplement.json has three count/provenance discrepancies; timings and bboxes pass. This original finding is preserved below.",
+  "supplemented_verdict": "PASS for defined source gates after independent reproduction of arrow_region_supplement_v2.json. Original receipt remains historically PARTIAL; its narrow count/provenance condition is closed by separate v2 only.",
+  "resource_checks": {
+    "start": {
+      "five_hour_used_percent": 54,
+      "weekly_used_percent": 38,
+      "ordinary_usage_allowed": true,
+      "credits_balance": "0"
+    },
+    "near_completion": {
+      "five_hour_used_percent": 67,
+      "weekly_used_percent": 40,
+      "ordinary_usage_allowed": true,
+      "credits_balance": "0"
+    },
+    "no_credit_spend_or_reset": true
+  },
+  "ownership": {
+    "parent_claim": "root-owned writer claim; parent commit efeacb0f7adebf57d20f55733947ea5dbb57c26c supplied, not Git-queried",
+    "mutations": "Only this new QA report written. No locks, Git, raw/media/source mutations, extraction, render, or publication."
+  },
+  "input_pins": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/NATIVE_BATCH1.json",
+      "sha256": "57c9824f379a64fef63a6edd0f29d1ca916c1b9381acea6e48ac77fc48b61a2e"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/SOURCE_SPANS.json",
+      "sha256": "42ae12048f67bab3d77e6a3dcbcbd114ac3697c0e8aacdf53a5c48a427d86fd9"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/visual_event_ledger_v40.csv",
+      "sha256": "46abdbc8ad7e23b16235a2ae42d3a84a4813017013bda6592003b741ab8d84f1"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/shared_measurements.json",
+      "sha256": "e24f6f52fe6f2e45540041f1b1136ce8fb04e46496c6a6a0d99acef3670c85d2"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/arrow_region_supplement.json",
+      "sha256": "a2bfdde65dae1076dc4a0cbd0941438b129a9b71361f43ba76068172ea512bcf"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/arrow_region_supplement_v2.json",
+      "sha256": "e23a4e81a15fcd1529388cf6e2156398cda00d48701f1291759d9c7de1d36888"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/SOURCE_VERIFICATION.json",
+      "sha256": "5d5f85309b975cd70ac99f3e6d75087cc7d8eb80c330d3a4bd2579fb838cd1fb"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/CURRENT_NATIVE_QUEUE_v16.json",
+      "sha256": "d944b864c52812cc74a4fbcfac01bedb9cbc5aa4953af1b07b210441db4b2d82"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/measure_shared.py",
+      "sha256": "88875c46307c8502494dff1a51d0307502502b242fef4745ab49d81802adc78d"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/prepare_analysis.py",
+      "sha256": "a690df04ffe584223aad4b9ad48652b93e5d1ed195f9af4de29d6b2e53bc4dab"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/bio_749_766/measurements.json",
+      "sha256": "7882b222c332e8a105da778a74881eea30230b08a357c4e1c7542677a821e534"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/quote_837_857/measurements.json",
+      "sha256": "77717df2548e8a19196d75d4c232a87a025c86d1bdabe720d5b091ed42e55252"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_2183_2218/measurements.json",
+      "sha256": "2b0c7794c4727faa5dbef9d0d124ff095be475cbfc745ed7324f908be868c7ab"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/visual_event_ledger_v39.csv",
+      "sha256": "c8e628f7a2d55afb66474336f2dafe3daad59d41f4292c598bc17476a338db57"
+    },
+    {
+      "path": "/Users/ghilmankhan/.agents/skills/visual-ct-scan/SKILL.md",
+      "sha256": "d308d87d0e1144e2b8a6f234847104856e9fac561d9f4dc63ea0ae263b4868e7"
+    }
+  ],
+  "source_verification": {
+    "status": "PASS",
+    "path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We’re About to Break It - Casual Finance (1080p, h264).mp4",
+    "fresh_SHA256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+    "bytes": 49993573,
+    "native_dimensions": [
+      1920,
+      1080
+    ],
+    "fps": "24/1",
+    "time_base": "1/12288",
+    "PTS_convention": "zero-based decoded frame n has timestamp512*(n+1), hence(n+1)/24 seconds",
+    "independent_checks": "Fresh source file SHA256; ffprobe stream dimensions/rates/timebase; 120 scoped native frame PTS indices checked against source metadata with no mismatch. No source pixel re-extraction."
+  },
+  "ledger_gate": {
+    "status": "PASS",
+    "baseline": "v39",
+    "output": "v40",
+    "rows": 948,
+    "unique_event_ids": 948,
+    "changed_ids": [
+      "EP0029",
+      "EP0032",
+      "EP0070",
+      "SUB046",
+      "EP0071",
+      "EP0072"
+    ],
+    "new_strict_closure_ids": [
+      "EP0070",
+      "SUB046",
+      "EP0071",
+      "EP0072"
+    ],
+    "strict_candidates_before": 572,
+    "strict_candidates_after": 568,
+    "classification": "3 exact motion-phase rows +1 no meaningful visible event row; not4 new authored events. EP0029 offset/EP0032 arrow components do not reduce strict count.",
+    "reused_not_new": [
+      "749 pose",
+      "750 first-visible biography",
+      "837 cut"
+    ],
+    "queue_v16": "568 entries; exact ID set equality to ledger strict-candidate predicate verified.",
+    "boundaries": "No shot_boundary_claim or source_start/source_end field changed in these six rows. New observed timing fields separate exact observed motion from inherited source spans."
+  },
+  "rulings": {
+    "EP0070": {
+      "status": "PASS_BOUNDED",
+      "page_up_phases": [
+        [
+          2187,
+          2194
+        ],
+        [
+          2197,
+          2204
+        ],
+        [
+          2207,
+          2214
+        ]
+      ],
+      "geometry_holds": [
+        [
+          2195,
+          2196
+        ],
+        [
+          2205,
+          2206
+        ],
+        [
+          2215,
+          2219
+        ]
+      ],
+      "assessment": "Page movement is separate from held smiling presenter/arms/pointer. Large masthead leaves during initial scroll; compact navigation persists. Representative native/contact-sheet views and all consecutive ROI measurements support phase boundaries. No independent cursor translation observed in displayed contexts; not exhaustive cursor/glyph/face pixel review."
+    },
+    "SUB046": {
+      "status": "PASS_BOUNDED",
+      "frame": 2216,
+      "assessment": "Held table/presenter/pointer context shows no meaningful visible event. Independently reproduced450 full-frame pixels with sum(absRGB)>60 and max-channel delta60 against2215. This is not exact equality or proof of no authored event; pixel cause unproven."
+    },
+    "EP0071": {
+      "status": "PASS_BOUNDED",
+      "page_up_phases": [
+        [
+          2220,
+          2229
+        ],
+        [
+          2232,
+          2245
+        ]
+      ],
+      "geometry_holds": [
+        [
+          2230,
+          2231
+        ],
+        [
+          2246,
+          2248
+        ]
+      ],
+      "assessment": "Document advances into Figure2 midpoint table with Figure3.A below. Compact navigation, smiling face and lowered pointer remain geometrically held. No new cut or separate facial event established."
+    },
+    "EP0072": {
+      "status": "PASS_BOUNDED",
+      "page_down": [
+        2249,
+        2251
+      ],
+      "pointer_pose_onset": 2251,
+      "following_geometry_hold": [
+        2252,
+        2255
+      ],
+      "assessment": "Full native2248/2249/2250/2251/2252 views confirm downward document reversal; lowered pointer through2250 then discrete extended up-left pose2251. Face/torso remain held; no interpolated arm swing inferred."
+    },
+    "EP0029_component": {
+      "status": "PASS_BOUNDED",
+      "new_component": "Last leftward card translation766; geometry held767–769. Final portrait/card support x884, top112/bottom453. Presenter ROI has0 threshold changes across all adjacent749–769 frames.",
+      "assessment": "Overview shows leftward entry and native766/767 show final/held position; consecutive measurements support continuation/offset. Accepted749/750 onsets reused; no new closure or cut."
+    },
+    "EP0032_component": {
+      "status": "PASS_BOUNDED",
+      "new_component": "Arrow-only first visible839 after837/838 absent; rightward group translation through857; geometry held858–862.",
+      "assessment": "Native first-pixel crop and full-context thumbnails show clipped rightmost arrow at left, followed by rightward group entry and five visible arrows at final position. All26 arrow-only bbox measurements reproduced. Growing visible height of clipped group does not establish vertical growth. Accepted837 cut reused."
+    }
+  },
+  "source_readiness": {
+    "G005.01": {
+      "status": "PASS_BOUNDED_SOURCE_READY",
+      "span": [
+        749,
+        766
+      ],
+      "unknowns": [
+        "Hidden/offscreen authored onset",
+        "Underlying source curve, assets and software"
+      ]
+    },
+    "G006.01": {
+      "status": "PASS_BOUNDED_SOURCE_READY",
+      "span": [
+        837,
+        857
+      ],
+      "unknowns": [
+        "Hidden/offscreen authored group onset",
+        "Underlying source curves/layers"
+      ]
+    },
+    "meaning": "Sufficient bounded source behavior to inform original proposals. This is not specification/render acceptance, source-art fidelity, or an extended-span production closure."
+  },
+  "measurement_reproduction": {
+    "status_shared": "PASS",
+    "decoded_PNG_RGB_hashes_matched": 120,
+    "windows": {
+      "bio": [
+        749,
+        769
+      ],
+      "quote": [
+        837,
+        862
+      ],
+      "scroll": [
+        2183,
+        2255
+      ]
+    },
+    "initial_fullRGB_hash_overlap": 75,
+    "initial_fullRGB_delta_records_reproduced": "All non-initial adjacent records in the original75-frame receipts match full-frame pixel counts and max-channel deltas.",
+    "new_extended_frames_without_initial_reference": 45,
+    "shared_ROI_records": "All consecutive shared ROI threshold-count/max-channel records match PNG computations.",
+    "nonoverlap_semantics": "reused_hash_match=false on45 newly extended frames means no earlier reference, not a hash mismatch.",
+    "global_red_mask_limit": "Original broad mask includes desk/brows; initial x250 arrow ROI misses first x0 fragments. Arrow-only supplement used for onset and motion geometry.",
+    "semantic_limit": "Numerical review of120 frames is not120 full-frame semantic image inspections. Geometry holds allow residual pixels."
+  },
+  "defects": [
+    {
+      "id": "SRC-QA-01",
+      "severity": "P3",
+      "original_status": "OPEN_CONDITION_ON_ORIGINAL_RECEIPT",
+      "file": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/arrow_region_supplement.json",
+      "finding": "Stated uniform R>150,G<100,B<100 ROI method does not reproduce three original red-pixel counts. Bounding boxes and timing do reproduce.",
+      "mismatches": [
+        {
+          "frame": 841,
+          "recorded": 6323,
+          "reproduced": 6324
+        },
+        {
+          "frame": 842,
+          "recorded": 11488,
+          "reproduced": 11490
+        },
+        {
+          "frame": 844,
+          "recorded": 15808,
+          "reproduced": 15826
+        }
+      ],
+      "requested_resolution": "Preserve original and provide a separately versioned receipt with uniform documented predicate or accurate original implementation provenance.",
+      "root_explanation": "Root reports extra R-G>60 predicate on first8 v1 records omitted from prose. This explanation is recorded as supplied, not an independently executed original generator.",
+      "repair_file": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/arrow_region_supplement_v2.json",
+      "repair_verification": "All26 counts, bboxes, and PNG file hashes independently reproduce exact uniform documented ROI method. All bboxes identical to v1; onset839/last857/hold858–862 unchanged.",
+      "current_status": "RESOLVED_BY_V2_ONLY; v1 historical conditional/PARTIAL retained"
+    }
+  ],
+  "actual_images_viewed": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/bio_749_766_overview.jpg",
+      "sha256": "b334c189509ef12dd094584cb8646ee1ebbc4b4252901cfb3f68827e113d9ba7",
+      "view": "overview;749–766 thumbnails; display downscaled, not native pixel adjudication"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/bio_native/f00766.png",
+      "sha256": "3a4c193ab03c8bc8a5e6d63ef5a2cd90c96990e033e09d04ddd3e3b9c847b01d",
+      "view": "native1920x1080 final card position"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/bio_native/f00767.png",
+      "sha256": "f8f77973205411303dcea37138b71995ce710b5eaad04022f426f7b2efea597a",
+      "view": "native1920x1080 first following hold"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/arrow_firstpixels_native.png",
+      "sha256": "f7a9c711b07c3c9ac9083a19588c441d508df08fb23a2f4f2f41f5bb72bf4162",
+      "view": "lossless native boundary crops837–840"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/quote_review_0.jpg",
+      "sha256": "644ed48f5382cbe4213cc288f4f4ab6ec44b390bb8e53be970be2b8fd0da5c35",
+      "view": "full-frame thumbnails837–840"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/quote_review_5.jpg",
+      "sha256": "476e39789d11b1a1896337e69f14282d694e3b58ebb4d12c017d762b85f5742a",
+      "view": "full-frame thumbnails857–860"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/quote_review_6.jpg",
+      "sha256": "8fabbb1461d4c162e33e4942e336c26bc9f7febda745f6bb37875969aab9455e",
+      "view": "full-frame thumbnails861–862"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_2183_2218_sheet0.jpg",
+      "sha256": "a583771325af81fedc14e2787c64c130e14819b85fa239cf7e06ea7807cb4101",
+      "view": "full-frame thumbnails2185,2186,2187,2188"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_2183_2218_sheet1.jpg",
+      "sha256": "7a84c59eec2a412e4a9401d5c6a5ae5a0babe3260785a740c8a92a7f98f8428b",
+      "view": "full-frame thumbnails2196,2197,2198,2209"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_2183_2218_sheet2.jpg",
+      "sha256": "c5116be547db5198e58f7a28c58c5c2f3a281e92f57130e6e7efea0ef7336bbd",
+      "view": "full-frame thumbnails2210,2211,2214,2215"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_2183_2218_sheet3.jpg",
+      "sha256": "3c9ef769471ea54a62d226aff63736d855e2d5c41e9c521eb73a051ab7f99d6e",
+      "view": "full-frame thumbnails2216,2217,2218"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_review_0.jpg",
+      "sha256": "74d950c08fe91623ed575befe22a13320640bb27a71e39c673fb2cc63ea54dfd",
+      "view": "full-frame thumbnails2219–2222"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_review_2.jpg",
+      "sha256": "95f012f25b535306f425dca337975b774e42bd032661268def0d6d016a5a585f",
+      "view": "full-frame thumbnails2227–2230"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_review_3.jpg",
+      "sha256": "161c555e5bba52d51430f3fd0d70bb302ddd1b06fb6b85b5b11532d1c1ad48c6",
+      "view": "full-frame thumbnails2231–2234"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_review_6.jpg",
+      "sha256": "fec22b8d734df8918d2c3f951b2f6a04af2e4d729860484a98616e7e2a69626b",
+      "view": "full-frame thumbnails2243–2246"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_review_7.jpg",
+      "sha256": "6a821977b296875d71700390708f42e50805a7a952ed02dbe2a79a3baf65af56",
+      "view": "full-frame thumbnails2247–2250"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_review_8.jpg",
+      "sha256": "b74947b06fa1c1f04a1b9f5b23c6463ee5dae369dd2a2b1bb5b6b511799dd14f",
+      "view": "full-frame thumbnails2251–2254"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_review_9.jpg",
+      "sha256": "cae1605c0fcaa4d0e06d26057925817e4ea6d881f0604542feac20baf6fda1ed",
+      "view": "full-frame thumbnails2255–2255"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02216.png",
+      "sha256": "d3bcb69280704620ae27625a9f8abef92f0cd706e1f77a4eac672a21205cf3d6",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02248.png",
+      "sha256": "9c7bdbd13894078bb0898b82e744a2d205e907ae962039e976d83e92d9af6e59",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02249.png",
+      "sha256": "4fdb5297d5bfb990f335fd8ab48bd6d8f4e775f16b3fe014a1d13920ed69cb10",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02250.png",
+      "sha256": "1451d46dd7b2fb0bfe0d29fba41a9a01590ba31ed983752d55790c4d60926fae",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02251.png",
+      "sha256": "80d9d529cb88aa52bb0a19d4e18df34b10c60755b0f021c41417cca46fa6abc7",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02252.png",
+      "sha256": "ca76e42ad026f87336826d632cefae9d9f7c0f41958aac11f9ee023f9f2b8878",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02194.png",
+      "sha256": "4c8e6e83269c8bf73ddf239c15b9cf76330e6f413cc66ecfd73d5505e852253c",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02195.png",
+      "sha256": "fbae5976ada575c94b48120089422b5becc92a94c3dee2426713a2bef94c87f6",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02204.png",
+      "sha256": "615fae2ee60cf3b9ff2405770dc03263c6e92cdbc9905ff06a61ed24efe8c1b8",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02205.png",
+      "sha256": "78e033ea81774c12da4c461891d39cde9aa6d7191fccd4cb019918ca7be73da2",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02206.png",
+      "sha256": "c9d54e3d62005760205d2e884170e753c01a71f98d102b49f6af820cac160789",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/scroll_native/f02207.png",
+      "sha256": "c6255bcfec6df99ad71b40b3d2178ea0906dbdf234d54a50546780cbdb2ad58b",
+      "view": "native1920x1080 full-frame semantic boundary inspection"
+    }
+  ],
+  "visual_coverage": {
+    "actual_image_files_displayed": 30,
+    "native_full_frame_files": 14,
+    "native_boundary_crop_files": 1,
+    "overview_or_contact_sheet_files": 15,
+    "method": "Actual image tool displays; native PNG boundaries plus existing reduced context sheets. Overview749–766 display resized; reduced sheets not represented as native-pixel inspections.",
+    "limitations": [
+      "No semantic display of every120 measured frame.",
+      "No redundant adjudication of accepted749/750/837 onsets.",
+      "No finance-fact, biography-content or quote authenticity review.",
+      "No source easing/scale/layer/keyframe inference.",
+      "No production scripts/renders/specifications/cold-start review in this source task.",
+      "Later table2280–2365 and all root subsequent work excluded."
+    ]
+  },
+  "completion_boundaries": {
+    "audio_listening_count": 0,
+    "ASR_undetermined": 21,
+    "ASR_potential": 7,
+    "audiovisual": "BLOCKED",
+    "CT_SCAN_COMPLETE": false,
+    "whole_video_signoff": false,
+    "global_100ms_or_lifecycle_coverage": "NOT_CLAIMED",
+    "terminal_for_assigned_source_scope": true
+  }
+}
