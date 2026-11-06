@@ -29,3 +29,21 @@ New tests were run on the old code first and failed: 5 in the framework file and
 - Plan provenance is page-level, not rule-level.
 - `THUMBNAIL_OBSERVATION` text is unverified analyst text.
 - **Registry pin:** `validate_audit_966.py` freezes the registry DB hash, so with this gate on, any registry change fails CI until the owner decides how a new registry version relates to the audit baseline. See `docs/VISUAL_FORENSICS_IDENTITY_CONTRACT.md`.
+
+## Addendum: frozen registry separation (`9c31d952`)
+Not independently reviewed: same author session, tests only.
+
+The frozen audit reads `audit-baseline/youtube_channel_registry.frozen.db`, an LFS pointer to the original `39e7a28b…` object. `MANIFEST.json` and `BASELINE_VALIDATION.json` are unchanged. `validate_audit_966.py --current-registry` runs after the CI rebuild and requires the live registry to keep every audited video and transcript.
+
+Local trials in a disposable clone with real Git history, CI order:
+
+| Tree | Gates | Suite |
+|---|---|---|
+| Head | Pass | 495 passed, 1 skipped |
+| Head + PR #20 (registry `5538db9f…`) | Pass | 494 passed, 1 failed, 1 skipped |
+| Head + #37, #43, #39 | Pass | 495 passed, 1 skipped; the 3 earlier ledger failures came from the non-Git export |
+| Head + #20, pinned copy overwritten by the live DB | Frozen audit fails `source drift` | Not run |
+
+The one failure is the crosswalk test: it requires a crosswalk rebuild, because #20 registers two listed xkcd videos. Rebuild it when #20 is integrated.
+
+Limit: `check-all` still reads the live registry, so a changed witnessed transcript fails there. That is intended.
