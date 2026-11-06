@@ -8,7 +8,7 @@ WS = pathlib.Path.home() / "YIOS-local-audits/xkcd-whatif"; REPO = "/Users/ghilm
 BR = "research/xkcd-whatif-visual-forensics"; PREFIX = "research/visual-forensics/channels/UC6IxnFzHofFJ5X2PycSMsww/"
 run = lambda *a, **k: subprocess.check_output(a, cwd=REPO, text=True, **k).strip()
 INCLUDE = ["census/census.csv", "census/census_summary.json", "census/tab_listings.json", "census/catalog_ch000004_ids.json",
-           "selection/*.json", "selection/*.txt", "campaign/*", "campaign/strip_review/*.md", "campaign/strip_review/*.csv", "campaign/strip_review/*/*.csv", "scripts/*.py", "scripts/*.sh", "scripts/*.md", "reconstruction/*/*.md", "reconstruction/*/*/*.md", "reconstruction/*/*/*.csv", "reconstruction/*/*/*.json", "reconstruction/*/*.csv", "reconstruction/*/*.json", "reconstruction/*/*.py", "reconstruction/*/tables/segments_v1.csv", "reconstruction/*/evidence/source_sha256.txt"]
+           "selection/*.json", "selection/*.txt", "campaign/*", "campaign/strip_review/*.md", "campaign/strip_review/*.csv", "campaign/strip_review/*/*.csv", "scripts/*.py", "scripts/*.sh", "scripts/*.md", "reconstruction/*/*.md", "reconstruction/*/*/*.md", "reconstruction/*/*/*.csv", "reconstruction/*/*/*.json", "reconstruction/*/*/*.py", "reconstruction/*/*/rv_full/*.csv", "reconstruction/*/*/rv_full/*.json", "reconstruction/*/*/rv_full/*.py", "reconstruction/*/*/tables/segments_v1.csv", "reconstruction/*/*/tables/detector_calibration.json", "reconstruction/*/*/evidence/source_sha256.txt", "reconstruction/*/*.csv", "reconstruction/*/*.json", "reconstruction/*/*.py", "reconstruction/*/tables/segments_v1.csv", "reconstruction/*/evidence/source_sha256.txt"]
 VID = ["source_manifest.json", "coverage.json", "shot_ledger.csv", "visual_event_ledger.csv", "audio_visual_alignment.csv",
        "visual_ct_scan_report.md", "reconstruction_blueprint.md", "quality_gate.json", "continuation_handoff.md",
        "tables/state_ledger.csv", "tables/segments_v1.csv", "tables/detector_calibration.json", "tables/palette_measured.json",
@@ -19,7 +19,17 @@ for g in INCLUDE: files |= {p for p in WS.glob(g) if p.is_file()}
 for v in sorted((WS / "videos").iterdir()):
     if not (v / "quality_gate.json").exists(): continue  # publish only built videos
     for g in VID: files |= {p for p in v.glob(g) if p.is_file()}
+# Population-6 per-video measurement tables (no reviewer => no quality_gate.json): explicit allowlist, text only, no per-frame tables/ASR transcripts.
+POP6_VID = ["tables/segments_v1.csv", "tables/detector_calibration.json", "tables/palette_measured.json", "tables/sheet_index.csv", "tables/scenedetect_candidates.csv",
+            "evidence/source_sha256.txt", "evidence/ffprobe_full.json", "evidence/ebur128.txt", "asr/asr_vs_catalog_caption.json"]
+_p6 = WS / "selection/selection_v6_pop6.json"
+if _p6.exists():
+    for vid in json.load(open(_p6))["long_pop6"]:
+        for g in POP6_VID: files |= {p for p in (WS / "videos" / vid).glob(g) if p.is_file()}
 files = sorted(p for p in files if p.suffix not in (".jpg", ".png", ".mp4", ".wav", ".index") and "/raw/" not in str(p))
+_OK = {".csv", ".json", ".md", ".txt", ".py", ".sh", ".sha256", ".log", ".err"}
+_bad = [str(p.relative_to(WS)) for p in files if p.suffix not in _OK or p.stat().st_size > 3_000_000 or p.name.startswith(".")]
+assert not _bad, f"unexpected/junk/oversize files rejected: {_bad}"
 now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 seal = WS / f"campaign/EVIDENCE_SHA256SUMS_{X}.txt"
 seal.write_text("".join(f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(WS)}\n" for p in files if p != seal))
