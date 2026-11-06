@@ -26,6 +26,9 @@ _p6 = WS / "selection/selection_v6_pop6.json"
 if _p6.exists():
     for vid in json.load(open(_p6))["long_pop6"]:
         for g in POP6_VID: files |= {p for p in (WS / "videos" / vid).glob(g) if p.is_file()}
+# Phase 7 sidecar: published into the repo derived-intelligence layout (research branch only), not under the research prefix
+EXTRA = {WS / "derived/CH-000004/forensic-knowledge-links-v1.json": "data/intelligence/channels/CH-000004/forensic-knowledge-links-v1.json"}
+files |= {k for k in EXTRA if k.exists()}
 files = sorted(p for p in files if p.suffix not in (".jpg", ".png", ".mp4", ".wav", ".index") and "/raw/" not in str(p))
 _OK = {".csv", ".json", ".md", ".txt", ".py", ".sh", ".sha256", ".log", ".err"}
 _bad = [str(p.relative_to(WS)) for p in files if p.suffix not in _OK or p.stat().st_size > 3_000_000 or p.name.startswith(".")]
@@ -40,9 +43,9 @@ run("git", "cat-file", "-e", base)  # must exist locally
 idx = WS / f"campaign/.{X}_publication.index"; idx.unlink(missing_ok=True)
 env = dict(os.environ, GIT_INDEX_FILE=str(idx)); run("git", "read-tree", base, env=env)
 for p in files:
-    run("git", "update-index", "--add", "--cacheinfo", "100644", run("git", "hash-object", "-w", str(p)), PREFIX + str(p.relative_to(WS)), env=env)
+    run("git", "update-index", "--add", "--cacheinfo", "100644", run("git", "hash-object", "-w", str(p)), EXTRA.get(p, PREFIX + str(p.relative_to(WS))), env=env)
 tree = run("git", "write-tree", env=env); paths = run("git", "diff", "--name-only", base, tree).splitlines()
-assert paths and all(x.startswith(PREFIX) for x in paths), "scope violation"
+assert paths and all(x.startswith(PREFIX) or x in EXTRA.values() for x in paths), "scope violation"
 assert not any(x.endswith((".jpg", ".png", ".mp4", ".wav")) for x in paths)
 rec = dict(checkpoint=X, prepared_utc=now, branch=BR, base=base, base_is_new_branch_from_main=not remote, tree=tree,
            files=len(files), changed_paths=len(paths), seal=str(seal.relative_to(WS)))
@@ -58,7 +61,7 @@ if PUSH:
     run("git", "fetch", "origin", f"refs/heads/{BR}")
     bad = 0
     for p in files:
-        b = subprocess.run(["git", "cat-file", "blob", f"{after}:{PREFIX}{p.relative_to(WS)}"], cwd=REPO, capture_output=True).stdout
+        b = subprocess.run(["git", "cat-file", "blob", f"{after}:{EXTRA.get(p, PREFIX + str(p.relative_to(WS)))}"], cwd=REPO, capture_output=True).stdout
         bad += hashlib.sha256(b).hexdigest() != hashlib.sha256(p.read_bytes()).hexdigest()
     rec.update(commit=commit, remote_head=after, readback_files=len(files), readback_mismatches=bad)
     for v in (WS / "videos").iterdir():
