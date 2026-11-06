@@ -1,0 +1,76 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "input_ledger": "v36",
+  "output_ledger": "v37",
+  "shared_native_windows": [
+    [
+      1884,
+      1922
+    ],
+    [
+      1983,
+      2087
+    ]
+  ],
+  "rulings": {
+    "SUB042": {
+      "onset": 1888,
+      "last": 1917,
+      "precision": "EXACT_NATIVE_VISIBLE_ONSET_AND_DRAW_ENDPOINT",
+      "kind": "exact_onset_or_declared_motion_phase_rows",
+      "description": "Green rising zigzag starts visibly1888 (693greenpixels at sourcebbox922,622..959,659),1887none; old1889start is late. Draw follows two backtracking notches to an upper-right arrowhead, lastgrowth1917; held1918\u20131922 (0fullRGBthresholdpixels). First/notched/final native views corroborate direction; presenter brown-haired pose, neutral face/raised arm, coin and certificate geometry held in reviewed samples after1887 pose change. Tiny compression differences elsewhere are not new objectmotion. No sound inference.",
+      "evidence": "zigzag_native_edges.jpg; zigzag_1884_1922_overview.jpg; zigzag_1884_1922/measurements.json; batch5_region_measurements.json"
+    },
+    "EP0064": {
+      "onset": 1988,
+      "last": 2026,
+      "precision": "EXACT_NATIVE_COMPOUND_VISIBLE_PHASE_BOUNDS_COMPONENTS_SEPARATE",
+      "kind": "exact_onset_or_declared_motion_phase_rows",
+      "description": "First page upward scroll begins1988 after1987heldgeometry; scroll phases1988\u20131995,2000\u20132010,2016\u20132026 separated by holds. Card first visible1994 only as thin divider at rightedge, portrait first1995; slides left to finalportraitbbox1049,310..1255,587 by2015 and geometry holds2016\u20132054. Source native1993/1994/1995edge crops distinguish divider fromportrait; hidden offscreen authored onset unknown. Website header stays fixed during internal scroll; right biography with portrait/Alan Greenspan heading and body is separately moving thenstatic. 2027\u20132042 pagegeometryheld despite codec pixel variations, before later2043scroll. Originalcompoundwindow1988\u20132026 retained, finercomponentphases documented.",
+      "evidence": "profile_phase1.jpg; profile_firstvisible_native.png; profile_1983_2087/measurements.json; batch5_region_measurements.json"
+    },
+    "EP0065": {
+      "onset": 2043,
+      "last": 2048,
+      "precision": "EXACT_NATIVE_VISIBLE_SCROLL_PHASE_BOUNDS",
+      "kind": "exact_onset_or_declared_motion_phase_rows",
+      "description": "Independent short upward page scroll starts2043 after2042staticgeometry and lasts2048; entireframe threshold-diff0 at2049\u20132051. 1999table moves towards top under fixednavigation; 1998/1997/1996tables shiftup. Biography/portrait held in place throughout2043\u20132048: profileROI diff0. Native2042/2043/2048/2049 samples establish meaningfulmotion, not residual settle.",
+      "evidence": "profile_phase2_native.jpg; profile_1983_2087/measurements.json; batch5_region_measurements.json"
+    },
+    "SUB043": {
+      "onset": null,
+      "last": null,
+      "precision": "NATIVE_NO_MEANINGFUL_VISUAL_EVENT_IN_CANDIDATE_WINDOW",
+      "kind": "no_meaningful_event_rows",
+      "description": "No meaningful page/profile/cursor event2052\u20132053. 409/415thresholdpixels differ in thin table text/edge regions and reverse, comparedwith fullframe0at2049\u20132051; nativepage/tablealignment and profilegeometry held. Do not call frames identical or inventscrollsettling. Zoom starts2055 separately. Audio presence unknown.",
+      "evidence": "profile_phase2_native.jpg; profile_1983_2087/measurements.json; batch5_region_measurements.json"
+    },
+    "EP0066": {
+      "onset": 2055,
+      "last": 2082,
+      "precision": "EXACT_NATIVE_COMPOUND_PHASE_BOUNDS_COMPONENTS_SEPARATE",
+      "kind": "exact_onset_or_declared_motion_phase_rows",
+      "description": "Page zoom/translation starts2055,2054geometryheld; expands and shifts until2071,tablegeometryheld2072onwards. Biographyportrait remainsfixeduntil2062 then movesdown-left2063\u20132067(lastwarm portrait pixels); exactlast biography text disappearance not adjudicated, bracket2067\u20132071 remainsOPEN. Parallel amber highlights on March25/January31 rows firstvisible2072 (2071none), sweep together to rightedge1283 by2082, held2083\u20132087; no continuation pan through2082. Source scale/easing parameters unknown; no unsupported1.6xclaim. Compoundphase2055\u20132082 retained but zoom and reveal distinguished.",
+      "evidence": "profile_phase2_native.jpg; profile_1983_2087/f02055.jpg; profile_1983_2087/f02082.jpg; parallel_amber_native.png; profile_boundary_supplement.json; profile_1983_2087/measurements.json"
+    }
+  },
+  "resolved_row_ids": [
+    "SUB042",
+    "EP0064",
+    "EP0065",
+    "SUB043",
+    "EP0066"
+  ],
+  "before": 580,
+  "remaining": 575,
+  "exact_phase_rows": 4,
+  "no_meaningful_event_rows": 1,
+  "uncertainties": [
+    "EP0064 hidden offscreen card authoredonset UNKNOWN, firstVISIBLEdivider1994 andportrait1995",
+    "EP0066 exactlast biographytext disappearance OPEN2067\u20132071",
+    "No nativeaudio or sourceeasing parameters established"
+  ],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false
+}

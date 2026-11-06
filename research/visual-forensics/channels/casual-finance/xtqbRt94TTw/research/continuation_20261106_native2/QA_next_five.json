@@ -1,0 +1,358 @@
+{
+  "schema": "YIOS_INDEPENDENT_TARGETED_QA_NEXT_FIVE_V1",
+  "created_utc": "2026-11-06T15:25:07.323254+00:00",
+  "reviewer": "/root/video006_bounded_qa",
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "status": "PARTIAL_CONDITIONAL_ON_EP0064_HEADER_TEXT_CORRECTION",
+  "summary": "All five timing/no-event classifications are supported within the bounded evidence. EP0064 has an overbroad fixed-header description requiring a precise correction. Root accepted a future text-only correction, with zero timing/closure change; corrected v38 is outside this report.",
+  "scope": {
+    "ids": [
+      "SUB042",
+      "EP0064",
+      "EP0065",
+      "SUB043",
+      "EP0066"
+    ],
+    "ledger_delta": "v36 to v37 only",
+    "shared_windows": [
+      [
+        1884,
+        1922
+      ],
+      [
+        1983,
+        2087
+      ]
+    ],
+    "mode": "Existing shared native receipts and targeted native image review; no per-row extraction",
+    "excluded": [
+      "Prior QA/source/production scopes",
+      "Future root2118-2157 or v38 timing scope",
+      "Global semantic/shot audit",
+      "Source easing/scale reconstruction",
+      "Audio/AV",
+      "Repository/publication/locks"
+    ]
+  },
+  "resources": {
+    "fresh_five_hour_used_percent": 19,
+    "fresh_weekly_used_percent": 32,
+    "ordinary_usage_allowed": true,
+    "paid_credits_spent": 0,
+    "new_agents": 0,
+    "context_pressure": "No serious context-pressure indication"
+  },
+  "source": {
+    "path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We’re About to Break It - Casual Finance (1080p, h264).mp4",
+    "sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+    "fresh_hash_verified": true,
+    "independent_PTS_check": "All144frames in1884-1922/1983-2087 have512*(n+1)ticks at1/12288, equal(n+1)/24seconds; verified with bounded ffprobe metadata read.",
+    "pixel_decode_limit": "Existing144full-native rawhash receipts and regional re-verification receipt reused. Reviewer did not perform a new source-pixel decode/extraction in this scope."
+  },
+  "gates": {
+    "ledger_integrity": {
+      "status": "PASS",
+      "rows_before": 948,
+      "rows_after": 948,
+      "unique_ids_after": 948,
+      "row_order_unchanged": true,
+      "changed_ids": [
+        "SUB042",
+        "EP0064",
+        "EP0065",
+        "SUB043",
+        "EP0066"
+      ],
+      "other_rows_changed": false,
+      "strict_measured_candidate_before": 580,
+      "strict_measured_candidate_after": 575,
+      "source_bound_delta": "OnlySUB042 source_start_frame1889->1888 and matching startPTS78.75->78.70833333333333 change among source frame/PTS fields; other source bounds remain.",
+      "shot_claim_changes": 0,
+      "classification": "Four exact onset/compound-phase rows plus one no-meaningful-event row; not five independent physical events or cuts."
+    },
+    "queue_integrity": {
+      "status": "PASS",
+      "version": 13,
+      "count": 575,
+      "items": 575,
+      "baseline": "visual_event_ledger_v37.csv",
+      "exact_candidate_row_match": true,
+      "qualification": "Queue definition is exact timing_precision MEASURED_CANDIDATE_WINDOW_NOT_EXACT_VISUAL_ONSET. Other partial gates/unknowns remain separate."
+    },
+    "SUB042": {
+      "status": "PASS_BOUNDED",
+      "observed": "Native1887/1888 ROI pair actually viewed: no green1887, first diagonal green segment1888. Native1916/1917/1918 ROI shows completion/hold; actual full1888/1917 images show two backtracking notches and upper-right arrowhead, with brown-haired raised-arm narrator/coin/certificate held in these samples.",
+      "measurements": "693greenpixels first1888,bbox922,622..959,659. Existing fullframe receipt lastchange1917,0pixels>RGBsum60 each1918-1922.",
+      "correction": "Old1889candidate is one frame late. Accepted1887presenter pose change is context only, not re-adjudicated.",
+      "limits": "No authoring curve, all-frame character review, sound, or shot inference."
+    },
+    "EP0064": {
+      "timing_status": "PASS_BOUNDED_COMPOUND_PHASES",
+      "semantic_status": "PARTIAL_FIXED_HEADER_WORDING",
+      "observed": "Source phase1 sheet supports page phases1988-1995,2000-2010,2016-2026 separated by page holds while card moves independently. Lossless native right-edge crops distinguish absent1993, thin divider1994, portrait1995; firstvisible is not hidden authored onset.",
+      "card_anchor": "Regional warm-portrait bbox moves1066,309..1272,587 at2013 to1054,308..1259,587 at2014 and1049,310..1255,587 at2015, then holds geometrically in reviewed samples. Tiny codec/color-mask variations do not imply renewed portrait movement.",
+      "page_hold": "2027-2042 page geometry held despite small raw differences; later2043scroll separate.",
+      "defect": "The description says Website header stays fixed during internal scroll. Actual native1987 has full masthead/nav lower on canvas;1993 has masthead removed and lower navigation temporarily absent, with narrow top strip still visible. A later compact navigation state is stable, but the whole header is not fixed throughout the initial phase.",
+      "required_correction": "Separate initial masthead/navigation scroll-away from the persistent narrow top strip and later compact-navigation hold; do not assign a new exact header-transition frame without review.",
+      "unknown": "Hidden/offscreen card authored-onset remains UNKNOWN."
+    },
+    "EP0065": {
+      "status": "PASS_BOUNDED_SCROLL_PHASE",
+      "observed": "Actual native2043/2048 images show upward table motion under compact navigation with portrait/biography fixed.",
+      "measurements": "Independent phase bounds2043-2048 agree with existing receipt; profileROI changed0each2043-2048. Fullframe threshold changes0at2049-2051.",
+      "limits": "Geometry hold is distinct from byte identity; no easing/intent/finance fact claim."
+    },
+    "SUB043": {
+      "status": "PASS_NO_MEANINGFUL_MOTION",
+      "observed": "Actual native2052/2053 and2048 context images show held table/profile alignment, not a renewed scroll.",
+      "measurements": "409/415thresholdpixels at2052/2053 in thin table/edge regions,bbox126,430..859,869; maxchannel43/45; profileROI0bothframes.",
+      "limits": "Not an identical-frame claim, no invented scroll-settling/physical interaction or audio-noise observation. Later zoom starts2055."
+    },
+    "EP0066": {
+      "status": "PASS_BOUNDED_COMPONENT_PHASES_WITH_OPEN_TEXT_EXIT",
+      "observed": "Actual2055/2063/2067/2071 native fullframes show page enlargement/translation, portrait down-left exit, and later stable table geometry.2071 has no amber;2072 has both March25/January31 starting highlights;2082 shows both reaching final edge. Lossless first-band crop additionally shows2070/2071none,2072first and2081->2082growth/2083hold.",
+      "phases": {
+        "page_zoom_translation": [
+          2055,
+          2071
+        ],
+        "portrait_down_left_visible_motion": [
+          2063,
+          2067
+        ],
+        "parallel_amber_reveal": [
+          2072,
+          2082
+        ],
+        "bounded_hold": [
+          2083,
+          2087
+        ]
+      },
+      "measurement": "Whole-native amber detector includes other warm portrait/page colors before exit; it is not an isolated-highlight count then. After card exit:0amber2068-2071;2072bbox378,638..461,959; grows to1283rightedge2082; samebboxthrough2087. Fullframe threshold changes0at2083-2087.",
+      "critical_uncertainty": "Last full biography-text disappearance remains OPEN2067-2071. Last warm portrait pixels2067 do not establish last text visibility.",
+      "limits": "No pan-through2082 claim, no exact source easing or numeric scale factor, and no source-layer/intent attribution."
+    },
+    "shared_receipt_consistency": {
+      "status": "PASS_ON_REUSED_RECEIPTS",
+      "raw_fullframe_records": {
+        "zigzag": 39,
+        "profile": 105
+      },
+      "regional_records": {
+        "zigzag": 39,
+        "profile": 105
+      },
+      "supplemental_amber_records": 105,
+      "raw_hash_format_and_frame_sequences_valid": true,
+      "regional_full_RGB_hash_reverified_flags": 144,
+      "method_review": "Read measure_batch5.py and profile_boundary_supplement.py. They check shared fullRGB hashes before computing regional masks; measurement receipts report all144matching and105supplement matches. No output-producing scripts run by reviewer.",
+      "numerical_semantics_limit": "Per-frame numerical receipt coverage is not per-frame visual semantic review. Masks are detectors; profile warm-mask and amber detector can include non-target pixels."
+    }
+  },
+  "defects": [
+    {
+      "id": "QA-NEXT5-001",
+      "severity": "P2",
+      "status": "OPEN_TEXT_CORRECTION_ACCEPTED_BY_ROOT",
+      "files": [
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/NATIVE_BATCH5.json#/rulings/EP0064/description",
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/visual_event_ledger_v37.csv#EP0064"
+      ],
+      "evidence": [
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f01987.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f01993.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_phase1.jpg"
+      ],
+      "issue": "Unqualified whole-header fixed claim contradicts initial masthead/navigation movement.",
+      "required_action": "Correct in separately versioned text/evidence, preserving v37. State large masthead/nav scroll away initially, narrow top strip remains visible, later compact navigation holds in reviewed phases.",
+      "timing_or_closure_effect": 0,
+      "future_input_limit": "Root plans v38 correction; not yet certified by this report."
+    }
+  ],
+  "unknowns": [
+    {
+      "row": "EP0064",
+      "detail": "offscreen/hidden card authored onset",
+      "status": "UNKNOWN"
+    },
+    {
+      "row": "EP0066",
+      "detail": "full biography-text last disappearance",
+      "bracket": [
+        2067,
+        2071
+      ],
+      "status": "OPEN"
+    },
+    {
+      "rows": [
+        "SUB042",
+        "EP0064",
+        "EP0065",
+        "EP0066"
+      ],
+      "detail": "source easing, authoring layers, numerical scale/interaction intent",
+      "status": "UNKNOWN"
+    }
+  ],
+  "actual_images_viewed": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/zigzag_native_edges.jpg",
+      "sha256": "08acce49eb3bb4e95769d2b3c4c95746005b923bbdcb6cf04b8372f742b90c81"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_firstvisible_native.png",
+      "sha256": "6c2016b0d97f59f75b02ac15e3877d4ae28803bbf1056543d8249d611a8e59f8"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_phase1.jpg",
+      "sha256": "9ed4b777f2eb0153a6f56eccd71c21daa50a2d1aa3c2e58a14d83de0eee4c267"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02043.jpg",
+      "sha256": "e6e041cc3284e2c456892da8889e4118fe63f1df4606006b44d8f8300175bc89"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02048.jpg",
+      "sha256": "4e4fb05007663892647e8f4e0d223b30dc4cef4270ad789650898490dd1e3bff"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02052.jpg",
+      "sha256": "139125bee1ec4de317a547c05b8d03f6ab3cef5fc5020e8cc3c1cb69fcd48ec3"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02053.jpg",
+      "sha256": "b68a5b64c10e6d58341d79f688181775fab02e421caa0c1fafa4d5bd5f79a12c"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f01987.jpg",
+      "sha256": "5041265e2995a0692276ae1e28a1959c377c0f66c85eb10b2ace2b2b7986b315"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f01993.jpg",
+      "sha256": "4b1c586dd061870b8eec1ae63e3b99354010245558efa469bd99a86c058b9e95"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02055.jpg",
+      "sha256": "06e802de3b5530614052c5f5c1d0eed0fb76d6d8775000b84c455d9e8db8d562"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02063.jpg",
+      "sha256": "04a4d0b2de284869dfbd22dab0e63ce6eb8ba907043bdf7b8f3a7443605e33b6"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02067.jpg",
+      "sha256": "76e3866958db7877f3bc4e49a54484c04405ba133682cad3a61bc999e1b0c940"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02071.jpg",
+      "sha256": "3c471612c0ad24a9e0a029c8b64c30c939e49de8b663b8de1f35632d4b705a19"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02072.jpg",
+      "sha256": "e52dfeeb3dfac35c577e7d7b77457df8828b218b8d6776cb562c4bc9af6d3f56"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/profile_1983_2087/f02082.jpg",
+      "sha256": "da85e2a1401c59cee57c635703e1dcd048afd1f85e0485e1edc96b62f61da7ff"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/parallel_amber_native.png",
+      "sha256": "60a2625d9e1175d3c2d7a1eee9f2bdecd3614272dd26bdbc2f4ea52d9f705727"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/zigzag_1884_1922/f01888.jpg",
+      "sha256": "634464403eba3bbe3f37e38672cd803500e52fca8f3001c6c8331923f9150a83"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/zigzag_1884_1922/f01917.jpg",
+      "sha256": "631a2a38f67ad107b866cc19abd0e6d861792d1ac4a069e6fae3bd8d848d0d99"
+    }
+  ],
+  "visual_coverage": {
+    "image_file_count": 18,
+    "native_individual_fullframes": [
+      1888,
+      1917,
+      1987,
+      1993,
+      2043,
+      2048,
+      2052,
+      2053,
+      2055,
+      2063,
+      2067,
+      2071,
+      2072,
+      2082
+    ],
+    "zigzag_ROI_frames": [
+      1887,
+      1888,
+      1889,
+      1916,
+      1917,
+      1918
+    ],
+    "firstvisible_lossless_edge_frames": [
+      1993,
+      1994,
+      1995
+    ],
+    "profile_phase1_sample_frames": [
+      1987,
+      1988,
+      1993,
+      1994,
+      1999,
+      2007,
+      2015,
+      2016,
+      2023,
+      2026,
+      2027
+    ],
+    "lossless_amber_firstband_frames": [
+      2070,
+      2071,
+      2072,
+      2081,
+      2082,
+      2083
+    ],
+    "display_limits": [
+      "profile_phase1 uses half-scale source samples and was displayed1920x3384->1162x2048; exact firstvisible edge checked separately in native lossless PNG.",
+      "parallel_amber_native.png covers March25 first-band crop only; full2072/2082 images separately verify both rows.",
+      "Native ROI/context witnesses are selected samples, not every-frame semantic review.",
+      "Displayed biography/finance text is on-screen evidence, not external authentication of those statements."
+    ]
+  },
+  "input_sha256": {
+    "NATIVE_BATCH5.json": "8d698fa6d4d1b41a7a57838a4e22bfb91e7107c7491a81167bdbc9562e8c424d",
+    "visual_event_ledger_v36.csv": "5a0bfb428da3dd579857426ce41cb11f6613d806200efd5a3e81555b4cf14b5a",
+    "visual_event_ledger_v37.csv": "6caba4fc1f1b6c7c7b8cb520f2e051be557c4f61dfd52accff20b6c69852fcea",
+    "CURRENT_NATIVE_QUEUE_v13.json": "e8eb8cfd8440e770f4007e2a2ade6e2187f36d345799c620aff0fb4b8c38876b",
+    "SOURCE_VERIFICATION.json": "921b121000938118f1b058ffbdf5647d3bc16ddf9782ed46d0a05e4f701e10d1",
+    "zigzag_1884_1922/measurements.json": "a06708d2cc18cb88c6678758aaf002f9da3d4b970b6ab007d1726228e09d796e",
+    "profile_1983_2087/measurements.json": "4fead1675dbb1a8bb4ab61c921e9254152b72feeb7c568032d58345c45258953",
+    "batch5_region_measurements.json": "e6acb0106269f270be605e673624a687417021bc39674b2e1025ab51b76686ee",
+    "profile_boundary_supplement.json": "7326d0da576a3fabfc468cf17185253c736447347bf772b7706cf2686fbe715a",
+    "measure_batch5.py": "cacfa689a8c0f9ff68efd07ba989f62b0b26d63cc23e0385de1fe53734409a5a",
+    "profile_boundary_supplement.py": "091fad3f7465028549ae7c32a96c92618b2a26192b8c2ac8c170052384a63fdb"
+  },
+  "retained_global_status": {
+    "visual": "PARTIAL",
+    "production": "OUT_OF_SCOPE_NOT_SIGNED_OFF",
+    "actual_listening_seconds": 0,
+    "ASR_undetermined": 21,
+    "ASR_potential_flags": 7,
+    "AV": "BLOCKED",
+    "CT_SCAN_COMPLETE": false,
+    "strict_candidate_only_in_reviewed_v37": 575
+  },
+  "write_boundary": "Only new QA_next_five.json written. Source/media/ledgers/prior reports/root evidence/repository/Git/locks/publication untouched; no new source extraction or agents.",
+  "terminal": true
+}

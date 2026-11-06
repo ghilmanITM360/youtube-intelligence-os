@@ -1,0 +1,378 @@
+{
+  "schema": "YIOS_INDEPENDENT_TARGETED_PRIOR_EIGHT_QA_V1",
+  "created_utc": "2026-11-06T11:57:01.769547+00:00",
+  "reviewer": "/root/video006_bounded_qa",
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "status": "PARTIAL_CONDITIONAL_ON_EXACT_EP0025_TEXT_CORRECTION",
+  "summary": "All eight timing/continuation classifications are supported within the declared coverage. One cursor-shape/hover description in EP0025 requires correction before unqualified semantic acceptance. No new closure count or exact event is justified by that correction.",
+  "scope": {
+    "ids": [
+      "EP0022",
+      "SUB015",
+      "EP0023",
+      "SUB016",
+      "EP0024",
+      "SUB017",
+      "EP0025",
+      "SUB018"
+    ],
+    "ledger_delta": "v30 to v32 only",
+    "source_measurement_windows": [
+      "561-600 full frames and header anchors",
+      "566-650 fixed ROI90,430,1790,280",
+      "574-576 full-width highlight-onset refinement"
+    ],
+    "mode": "TARGETED_INDEPENDENT_QA; limited native visual display plus reproduction of existing measurements",
+    "excluded": [
+      "Prior accepted nine-row scope",
+      "Prior production/render/preflight scopes",
+      "Global shot or100ms semantic review",
+      "New current-root production/native batches",
+      "Audio listening and AV signoff"
+    ]
+  },
+  "resource_check": {
+    "five_hour_used_percent": 8,
+    "weekly_used_percent": 24,
+    "ordinary_usage_allowed": true,
+    "credits_balance": 0,
+    "credits_spent": 0,
+    "disk_free_GiB": 66.17,
+    "context": "No serious context-pressure indication during review",
+    "new_agents": 0
+  },
+  "contract": {
+    "skill": "/Users/ghilmankhan/.agents/skills/visual-ct-scan/SKILL.md",
+    "references_read_current": [
+      "01_evidence_authority_and_scope",
+      "02_workflow_and_modes",
+      "03_temporal_ingestion_and_event_detection",
+      "05_motion_animation_camera_facial",
+      "13_completion_gates_validation_handoffs",
+      "14_source_prompts_traceability"
+    ],
+    "acceptance": "Original native source/PTS has priority. Measurements and visual observations are separate; sampled visual display is not an all-frame semantic audit; source events/continuations are not shot counts. Existing per-video status remains PARTIAL."
+  },
+  "source": {
+    "path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We’re About to Break It - Casual Finance (1080p, h264).mp4",
+    "sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+    "fresh_hash_verified": true,
+    "pts": "Independent ffprobe confirms561-650 timestamps512*(n+1) ticks at1/12288, equal(n+1)/24 seconds. ffmpeg select uses zero-based native frame indices."
+  },
+  "gates": {
+    "ledger_integrity": {
+      "status": "PASS",
+      "rows_before": 948,
+      "rows_after": 948,
+      "unique_ids_before": 948,
+      "unique_ids_after": 948,
+      "row_order_unchanged": true,
+      "exact_changed_ids": [
+        "EP0022",
+        "SUB015",
+        "EP0023",
+        "SUB016",
+        "EP0024",
+        "SUB017",
+        "EP0025",
+        "SUB018"
+      ],
+      "other_rows_unchanged": true,
+      "source_frame_windows_and_shot_claim_fields_unchanged": true,
+      "measured_candidate_only_before": 618,
+      "measured_candidate_only_after": 610,
+      "new_exact_rows": [
+        "EP0022",
+        "EP0024"
+      ],
+      "new_continuation_rows": [
+        "SUB015",
+        "EP0023",
+        "SUB016",
+        "SUB017",
+        "EP0025",
+        "SUB018"
+      ],
+      "qualification": "Eight reclassified rows are not eight distinct physical events. Text correction adds zero closures."
+    },
+    "measurement_reproduction": {
+      "status": "PASS",
+      "full_frame_records": 40,
+      "full_frame_hash_and_previous_difference_mismatches": 0,
+      "header_row_records": 40,
+      "header_anchor_mismatches": 0,
+      "fixed_ROI_records": 85,
+      "ROI_hash_highlight_counts_extents_and_change_bbox_mismatches": 0,
+      "full_width_onset_records": 3,
+      "onset_count_bbox_mismatches": 0,
+      "methods": {
+        "full": "ffmpeg select561-600 RGB24 full1920x1080; rawSHA256 and previous absolute RGBsum>60 count/bbox independently reproduced.",
+        "headers": "row92 darkmaskR<150,B<180; runs>20pixels; all40 records independently reproduced.",
+        "ROI": "ffmpeg select566-650,crop1790:280:90:430 before RGB24; all85 raw hashes. YellowR>200,G>180,B<120; right bands600-619/634-651/658-676, restrictedx>=1000; pixel counts/x-extents and previous RGBsum>60 change boxes independently reproduced.",
+        "refinement": "Full-width decoded RGB at574-576; yellow threshold; y600-619 and634-651 counts/bboxes independently reproduced."
+      },
+      "not_recomputed": "Stored date_blue_pixels and orange pixel-count fields were inspected, not independently recalculated; adjacent608/609 actual native images establish visible color change.",
+      "all_frames_semantic_review": false
+    },
+    "timing_and_continuation": {
+      "status": "PASS_BOUNDED",
+      "rows": {
+        "EP0022": {
+          "status": "PASS",
+          "observed": "Presenter/pointer visible565, absent566; header remains96..1325. New fragment/layout change appears567. Header anchors change through584; at584 two clipped pages occupy side-by-side positions.",
+          "measured_hold": "Header dark-run endpoints76..943 and1002..1867 are unchanged584-600. This does not imply every page pixel/layer or cursor/highlight is static.",
+          "limits": "567-583 compositing mechanism and exact hidden layer transformations remain unknown; no simple whole-page/man pan or authored easing claim."
+        },
+        "SUB015": {
+          "status": "PASS",
+          "observed": "Existing layout anchors hold in586-596 while new page yellow reveals/cursor continue. No independent content onset586 or continuing pan settlement is established."
+        },
+        "EP0023": {
+          "status": "PASS",
+          "observed": "New page first/second highlight bands are already visible during575 and continue598-599. At574 no new-page bands appear in the native left-edge view.",
+          "first_visible575": {
+            "line1_bbox": [
+              0,
+              600,
+              87,
+              617
+            ],
+            "line2_bbox": [
+              0,
+              634,
+              91,
+              651
+            ]
+          },
+          "limits": "575 is first visible source evidence, not the hidden offscreen authored onset. The x90 fixed ROI missed this first visibility; full-width refinement correctly supersedes its initial576 hypothesis."
+        },
+        "SUB016": {
+          "status": "PASS",
+          "observed": "Line1 andline2 reveal concurrently and reach final right edges1761/1779 at606; no third-line yellow606, first tiny third-line yellow607 atx1048..1055.",
+          "visual_check": "606/607 native right-text crops decoded and displayed in memory; supports third-line start607 rather than new second-line start601."
+        },
+        "EP0024": {
+          "status": "PASS",
+          "observed": "Actual608 native ROI shows left July firstline yellow;609 shows orange. Right firsttwo lines held, third-line reveal continuing. No new page motion observed in these adjacent ROI witnesses."
+        },
+        "SUB017": {
+          "status": "PASS",
+          "observed": "Third-line right edge progresses from1157 at621 to1163 at622, then remains1163 through650;623-624 are holds in the highlight track while cursor continues.",
+          "visual_check": "621/622 native right-text crops displayed; final word/comma becomes covered622. No separate onset611."
+        },
+        "EP0025": {
+          "timing_classification": "PASS_CONTINUATION",
+          "semantic_description": "PARTIAL_TEXT_CORRECTION_REQUIRED",
+          "observed": "625 arrow lies over Share icon.626 hand lies over underlined Share text.627 arrow is below-left and underline absent. Date remains blue and highlight bands held in these witnesses.",
+          "defect": "Current description calls this cursor arrow crossing Share626; native shape/hover transition must be distinguished. No click or physical-focus event follows from these images."
+        },
+        "SUB018": {
+          "status": "PASS",
+          "observed": "All three right yellow-band extents held after622. Cursor continues through648;85-record ROI check has last nonempty difference bbox648 [1786,593,1802,619], then empty649/650 atRGBsum>60. Native648-650 ROI images show held cursor/highlights.",
+          "limits": "648 is bounded last cursor change inside declared ROI, not a universal motion/lifetime offset.649-650 is threshold-static, not byte-identical decoding. Cursor arc is sampled visually, not a recovered Bezier curve."
+        }
+      }
+    },
+    "semantic_acceptance": {
+      "status": "PARTIAL",
+      "condition": "Correct EP0025 description in separately versioned ledger/evidence, preserving v32. Root accepted this correction during review; corrected new file is not an input certified by this report."
+    }
+  },
+  "defects": [
+    {
+      "id": "QA-PRIOR8-001",
+      "severity": "P2",
+      "status": "OPEN_TEXT_CORRECTION_ACCEPTED_BY_ROOT",
+      "files": [
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/RIGHT_HIGHLIGHT_BATCH_566_650.json#/rulings/EP0025/description",
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/visual_event_ledger_v32.csv:43"
+      ],
+      "claim": "Cursor arrow ... crosses Share region626",
+      "actual": "Hand cursor plus underlined Share626, between arrow625 and arrow below-left/no underline627.",
+      "native_evidence": [
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00625.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00626.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00627.jpg"
+      ],
+      "required_correction": "Cursor already moves before626: arrow over Share icon625 changes to hand over underlined Share626, then arrow below-left without underline627. Date and highlights remain held. This remains a cursor continuation, with no independent cursor/content onset626.",
+      "count_effect": 0,
+      "preservation": "Do not overwrite reviewed v32 or prior receipts; attach correction to new version."
+    }
+  ],
+  "actual_image_files_viewed": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/slide_561_600/f00565.jpg",
+      "sha256": "6dd7e8a19a58adb5b0746a46001204fdf5c0dd6c84a98c31cebbd4a5c08502b5"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/slide_561_600/f00566.jpg",
+      "sha256": "4625880ebc888b121216f3f724b51e9e92c378c63c8cf4f785024741a79ae497"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/slide_561_600/f00567.jpg",
+      "sha256": "abf3e55c68b988e8719674e60a04d1c83dfba1ef2d4e756c6468a7769158b470"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/slide_561_600/f00584.jpg",
+      "sha256": "5621cf698c2dc3d2f90c2762df67b0ffc27099ddadb5831a9357d32a9e971178"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/first_visible_highlight_574_576.jpg",
+      "sha256": "d834c5412ef01756e891f559b82c17660d141cc0210e83ca242a4ad39c89e229"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/slide_561_600/f00585.jpg",
+      "sha256": "e558f6c9621d4d610069fd6b979f8ca13e807d1f803ce2e0379bfcef1f8108da"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00608.jpg",
+      "sha256": "0044733a0314a967f20e6202067b756c6f61641e9d30e69c743cd44cb4c05e7b"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00609.jpg",
+      "sha256": "3210e1637fc3cd01a3d13f0804ac9d949b0ca63e87961d71e03e89c7f94a15eb"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/newpage.jpg",
+      "sha256": "7e61b6a681d035f6583ad0c11986954b9544e47e38f21774d5d2c78f3cf9aa05"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00625.jpg",
+      "sha256": "5d617c77ad940372ee1fe6e5b0e695771feb61edba5c796d42d906019f80c805"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00626.jpg",
+      "sha256": "6bf627233fe6f8497d8bb2dda174a495e8019739e6bdb3a1273e197daf808312"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00627.jpg",
+      "sha256": "c5c6f42e5b254d7a780ff25b70f7a6d3cf8e98b1585b628fd3fae3f1a6a38924"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00648.jpg",
+      "sha256": "75cdd89fe08251276a2c9854420927258bc10d32a31ad013938eaec423561a10"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00649.jpg",
+      "sha256": "15ecbcbfb5a5cfc913dfdb902e1f1b50cefb3090cfe5ef71f94322db52392e8a"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/right_highlight_566_650/f00650.jpg",
+      "sha256": "915c59ef5761a7ce0174bae658415582dfcda37b95f4468fad56f7e1682f66d4"
+    }
+  ],
+  "additional_native_display": {
+    "artifact": "In-memory-only4-row JPEG display; no file written",
+    "frames": [
+      606,
+      607,
+      621,
+      622
+    ],
+    "source_ROI": {
+      "x": 1000,
+      "y": 590,
+      "width": 810,
+      "height": 100
+    },
+    "display": "Four native-size crops stacked with frame labels; no interpolation.",
+    "display_JPEG_sha256": "44ad121a3ab34d8d8088943f866cc0b4ea8be33c417a2ee537e183ea669bf700"
+  },
+  "exact_visual_coverage": {
+    "individual_full_frames": [
+      565,
+      566,
+      567,
+      584,
+      585
+    ],
+    "individual_saved_ROI_frames": [
+      608,
+      609,
+      625,
+      626,
+      627,
+      648,
+      649,
+      650
+    ],
+    "consecutive_left_edge_sheet_frames": [
+      574,
+      575,
+      576
+    ],
+    "sampled_newpage_sheet_frames": [
+      584,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      605,
+      608,
+      609,
+      610,
+      618,
+      624,
+      625,
+      626,
+      627,
+      628,
+      638,
+      648,
+      650
+    ],
+    "additional_in_memory_native_text_frames": [
+      606,
+      607,
+      621,
+      622
+    ],
+    "image_file_count": 15,
+    "sampling_limits": [
+      "newpage.jpg uses half-scale samples and was displayed resized1790x1600 to1664x1487; it is overview evidence.",
+      "Not every561-650 source frame was semantically displayed. Numerical records cover every frame within their separate stated windows.",
+      "Header anchors verified584-600; full-frame all-layer equivalence beyond these anchors is not claimed.",
+      "No source audio was decoded for listening, and displayed financial text was not externally authenticated as financial fact."
+    ]
+  },
+  "remaining_unknowns": [
+    "Authored new-page highlight onset while hidden/offscreen",
+    "Exact compositing, camera-versus-layer implementation and easing during567-583",
+    "Exact cursor path interpolation, physical clicks/focus and behavior outside reviewed ROI/time",
+    "Later whole-video event timings, offsets and global100ms semantic coverage"
+  ],
+  "input_sha256": {
+    "visual_event_ledger_v30.csv": "84fde2d7b7823505811f116ef94388564c6eae0d5e1f82d3451abfd59162cf26",
+    "visual_event_ledger_v32.csv": "d6215590ee1a5ebd1bb8ae7ca1006e04e793d2fd074433ada464f73fb48f474c",
+    "SLIDE_BATCH_561_600.json": "de28e5602751915b179b32a1edfcc24ebe7ec2a4ffaa75164cf1e448e2f9328a",
+    "RIGHT_HIGHLIGHT_BATCH_566_650.json": "b3846c98a84216cd8a096712937feb0727e7db9a4ff1d1ec246d2de451181ef8",
+    "slide_561_600/measurements.json": "5b3142b056d5f196346c2fa03ad13e513f57073377e855becdb5f6fa43a66b13",
+    "slide_561_600/header_anchor_measurements.json": "5044db868045ef88f1a24bf2459728937d41aedfbc269eb87a56f1ce3aa44106",
+    "right_highlight_566_650/measurements.json": "f50e01492684d841bf6d504ff480b82b90f64179f9bf7c5b3b9941d584831a0f",
+    "right_highlight_566_650/onset_refinement.json": "0b153afd7d642e11d124f04e0779d76dff372d2a8e1de4ae7d58c6e80962e335",
+    "SOURCE_VERIFICATION.json": "566ba40bbd9fec6761353174313c98a8e3455514ad1270b2bfd2273fbffff325",
+    "QUALITY_GATE.json": "2bcf2712b4de1dda3a17b54a0d4728edfa9eadf3b0002814016f4dd4d0adbdd4",
+    "CURRENT_REQUIREMENTS.json": "bcc759f6020ce9452546993f99d892fdda42efff1cc1b81e3211302465e7e156",
+    "FINAL_LEDGER_VALIDATION.json": "d16d3eedef756fd4fc0ffa0bd7fc216761ff315c011490cff5f566e606e40f17",
+    "independent_QA_followup.json": "119f21485ff5a5942709bc5acd098a54347c7865ae167ba4fac3da820331cf5d"
+  },
+  "retained_global_status": {
+    "visual": "PARTIAL",
+    "remaining_measured_candidate_only_in_reviewed_v32": 610,
+    "other_retained_unknown_rows": [
+      "SUB101",
+      "SUB151"
+    ],
+    "actual_listening_seconds": 0,
+    "ASR_undetermined": 21,
+    "ASR_potential_flags": 7,
+    "AV": "BLOCKED",
+    "CT_SCAN_COMPLETE": false,
+    "whole_video_signoff": false
+  },
+  "mutation_boundary": "Only new QA_prior_eight.json and its authorized parent directory may be created. Reviewed inputs, prior reports, sources, media, locks, repository, Git and other workers are untouched.",
+  "terminal": true
+}

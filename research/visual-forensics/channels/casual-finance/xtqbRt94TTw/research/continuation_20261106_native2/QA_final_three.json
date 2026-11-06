@@ -1,0 +1,226 @@
+{
+  "schema": "YIOS_INDEPENDENT_TARGETED_QA_FINAL_THREE_V1",
+  "created_utc": "2026-11-06T15:31:37.896252+00:00",
+  "reviewer": "/root/video006_bounded_qa",
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "status": "PARTIAL_CONDITIONAL_ON_SUB045_WORDING",
+  "summary": "All three bounded timing/continuation/no-meaningful-change rulings are supported, and EP0064 header wording repair satisfies the prior QA condition. One SUB045 phrase overstates absence of an authored event; root accepted the exact text-only replacement recorded below for v39. No new source review is needed for that replacement; final v39 itself is not reviewed here.",
+  "scope": {
+    "new_rows": [
+      "EP0068",
+      "SUB044",
+      "SUB045"
+    ],
+    "text_repair": "EP0064 only, zero timing closures",
+    "ledger_delta": "v37 to v38",
+    "shared_source_window": [
+      2118,
+      2157
+    ],
+    "mode": "Existing fullframe/nativeROI images and40-frame receipts, with fresh source identity/PTS and ledger/queue checks",
+    "excluded": [
+      "Global/all-frame semantic audit",
+      "Other prior source/production work",
+      "Futurev39 except the explicit exactwording acceptance condition",
+      "Git/lock/publication",
+      "Audio/AV"
+    ]
+  },
+  "resources": {
+    "five_hour_used_percent": 32,
+    "weekly_used_percent": 34,
+    "ordinary_usage_allowed": true,
+    "paid_credits_spent": 0,
+    "agents_spawned": 0,
+    "context": "No serious context-pressure indication"
+  },
+  "source": {
+    "path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We’re About to Break It - Casual Finance (1080p, h264).mp4",
+    "sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+    "fresh_sha256_verified": true,
+    "independent_PTS_check": "All40scoped video frames have512*(n+1)ticks at1/12288, equal(n+1)/24seconds. ffprobe metadata read is not semantic frame review.",
+    "source_pixel_decode": "No new pixel extraction/decode jobs launched; existing shared rawhash/region receipts reused."
+  },
+  "gates": {
+    "ledger_integrity": {
+      "status": "PASS",
+      "rows_before": 948,
+      "rows_after": 948,
+      "unique_ids_after": 948,
+      "order_preserved": true,
+      "changed_ids": [
+        "EP0064",
+        "EP0068",
+        "SUB044",
+        "SUB045"
+      ],
+      "other_rows_changed": false,
+      "strict_candidate_before": 575,
+      "strict_candidate_after": 572,
+      "new_closures": 3,
+      "EP0064_closure_count": 0,
+      "source_frame_PTS_fields_unchanged": true,
+      "shot_boundary_claims_unchanged": true,
+      "qualification": "One compound visible exit/highlight onset row, one continuous reveal fragment and one no-meaningful-change row; not three independent physical events or shots."
+    },
+    "queue_integrity": {
+      "status": "PASS",
+      "version": 14,
+      "count": 572,
+      "exact_items_match": "All572items exactly equal the v38 rows whose timing_precision is MEASURED_CANDIDATE_WINDOW_NOT_EXACT_VISUAL_ONSET. Other unresolved gates/labels are not counted by this scalar."
+    },
+    "EP0064_header_repair": {
+      "status": "PASS_PRIOR_CONDITION_RESOLVED",
+      "prior_QA_path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/QA_next_five.json",
+      "prior_QA_sha256": "0a554abce8a0b478ecf36ac39db23469fc443e0ac0f7faf13ce8018e6273a286",
+      "prior_report_immutable_hash_verified": true,
+      "changed_fields": [
+        "description",
+        "macro_review_ref",
+        "native_vs_firstpass_conflict"
+      ],
+      "v38_description": "First page upward scroll begins1988 after1987heldgeometry; scroll phases1988–1995,2000–2010,2016–2026 separated by holds. Card first visible1994 only as thin divider at rightedge, portrait first1995; slides left to finalportraitbbox1049,310..1255,587 by2015 and geometry holds2016–2054. Source native1993/1994/1995edge crops distinguish divider fromportrait; hidden offscreen authored onset unknown. Large Board-of-Governors masthead and lower navigation scroll away during initialphase; narrow top strip persists and compact navigation is held in later table-scroll phases. Do not claim the entire header fixed throughout1988–2026; right biography with portrait/Alan Greenspan heading and body is separately moving thenstatic. 2027–2042 pagegeometryheld despite codec pixel variations, before later2043scroll. Originalcompoundwindow1988–2026 retained, finercomponentphases documented.",
+      "assessment": "Correctly separates initial large masthead/lower-navigation scroll-away, persistent narrow top strip, and later compact navigation hold. Overbroad whole-header-fixed assertion is explicitly withdrawn. Originalv37 and conditionalreport preserved. Source/timing/count fields unchanged. Prior native evidence reused, not re-viewed."
+    },
+    "EP0068": {
+      "status": "PASS_BOUNDED_COMPOUND_ONSET",
+      "observed": "Actual full2121 shows smiling tilted presenter at lower right; full2122 shows complete presenter removal while document/table geometry and existing amber rows hold. Lossless native boundary crop2121 has no red,2122 has first narrow reddish strip,2123 cleargrowth.",
+      "measurement": "Red mask0through2121;40pixels2122,bbox378,346..379,365,two-pixel width. Presenter removal and first visible red share sourceframe2122; fullframe diff92108pixels includes both changes.",
+      "limits": "Simultaneous source-frame visibility does not establish authored keyframe/edit implementation, exact easing or audible cue. No whole-page cut observed."
+    },
+    "SUB044": {
+      "status": "PASS_CONTINUOUS_REVEAL",
+      "observed": "Native2132/2133/2134 boundary images show2132stillshort of final5.25 region,2133completed with2134hold. Candidate2124-2133 is continuation of2122reveal, not an independent onset. Earlier amber March25/January31 rows remain in fullframe witnesses.",
+      "measurements": "Rightedge1211at2132->1295at2133. Redbbox378,340..1295,367 and24363maskpixels remain from2133through2157. Entireframe sumRGB>60differences0each2134-2151.",
+      "limits": "Bounded threshold hold, not byte identity or source curve recovery."
+    },
+    "SUB045": {
+      "visible_event_status": "PASS_NO_MEANINGFUL_VISIBLE_CHANGE",
+      "authorship_wording_status": "PARTIAL_CORRECTION_REQUIRED",
+      "observed": "Actual full2151/2152/2153 images and native boundary rows2151-2154 show held page/table/highlight and presenter absence. No meaningful geometric/content/cursor motion is visible in this candidate window.",
+      "measurements": "Adjacent fullframe differences1810pixels at both2152and2153; maximum adjacent channel delta39both. Relative to2151 specifically, maxdelta39at2152 then2at2153, supporting transient/reversed numeric variation. Redmask24363andbbox378,340..1295,367 unchanged.",
+      "limits": "Frames are not identical. Pixel cause is unproven. No sound or absence of hidden/subpixel/authored activity can be established from the visible hold.",
+      "defect": "Currentv38/NATIVE_BATCH6 phrase confirms no new authored event overstates what source pixels establish."
+    },
+    "receipt_integrity": {
+      "status": "PASS_ON_REUSED_EVIDENCE",
+      "full_native_records": 40,
+      "regional_records": 40,
+      "frame_sequences": "Both contiguous2118-2157,valid rawSHA256strings and rational sourcePTS labels. Critical onset/endpoint/hold/reference2151metrics checked for internal consistency.",
+      "method_review": "Read measure_redrow.py: fullnativeRGB24 rawhash assertion against each shared receipt, ROIx370:1510,y335:375,redmaskR>180,R-G>20,G-B>10; retained wholeRGB equality/maxdelta against2151. Existing receipt reports all40sourcehashmatches.",
+      "independence_limit": "Reviewer freshly verified source fileSHA/PTS and consistency of existing receipts; did not independently recompute all40rawpixel measurements from source in this scope. Numerical coverage does not imply all40frames were semantically displayed."
+    }
+  },
+  "defects": [
+    {
+      "id": "QA-FINAL3-001",
+      "severity": "P2",
+      "status": "OPEN_EXACT_TEXT_REPLACEMENT_ACCEPTED_BY_ROOT",
+      "locations": [
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/NATIVE_BATCH6.json#/rulings/SUB045/description",
+        "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/visual_event_ledger_v38.csv#SUB045"
+      ],
+      "issue": "No meaningful visible event observed does not prove no new authored event; pixel origin is unproven.",
+      "exact_old_phrase": "Native table/highlight/presenterabsence context confirms no new authored event in bounded window; pixelcause unproven.",
+      "exact_required_replacement": "Native table/highlight/presenterabsence context supports no meaningful visible event observed in this bounded window; pixelcause unproven and authored-event absence not established.",
+      "root_plan": "Apply replacement in separately versioned v39 description/native_vs_firstpass_conflict only; preservev38/NATIVE_BATCH6 and this report. Root finalvalidator will assert exactreplacement and limitedfielddelta.",
+      "count_or_timing_effect": 0
+    }
+  ],
+  "conditional_acceptance": {
+    "timing_source_gate": "PASS_BOUNDED",
+    "EP0064_repair": "PASS",
+    "SUB045_semantics": "Accepted if and only if exactreplacement above removes authored-event-absence assertion while preserving unknown pixel cause; no new source review required.",
+    "v39_review_status": "NOT_AN_INPUT_OF_THIS_REPORT; finalvalidator evidence is root-owned, not asserted executed by reviewer."
+  },
+  "actual_images_viewed": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/redrow_2118_2157/f02121.jpg",
+      "sha256": "3aacd8cfb49bfd237a2bd3edc12d705416ac9143c09837ea72d6542225686353"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/redrow_2118_2157/f02122.jpg",
+      "sha256": "db2c7b71548d4d726f68a313b39f289243259145ce202398e01d6c15a7658d1d"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/redrow_native_boundaries.png",
+      "sha256": "a8a26640f2eb79521fa64d18af69d3879b7469c35b329b92278d5fd21d851971"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/redrow_2118_2157/f02151.jpg",
+      "sha256": "48a044e51368bec008a58018482839a621e5e6b86c54d63044177690fe4d4f4d"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/redrow_2118_2157/f02152.jpg",
+      "sha256": "75276a4d52c8fd5802755746ffe37040d01d6546f8f8ab49d49e458cc09d94b6"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/redrow_2118_2157/f02153.jpg",
+      "sha256": "08bcdaa122a7dd2275275acc71cbdedbce1d8b2d5c545af36c2ad103a36f4526"
+    }
+  ],
+  "visual_coverage": {
+    "image_file_count": 6,
+    "native_individual_fullframes": [
+      2121,
+      2122,
+      2151,
+      2152,
+      2153
+    ],
+    "lossless_native_row_crop_frames": [
+      2121,
+      2122,
+      2123,
+      2132,
+      2133,
+      2134,
+      2151,
+      2152,
+      2153,
+      2154
+    ],
+    "crop_coordinates": {
+      "x": [
+        370,
+        1510
+      ],
+      "y": [
+        335,
+        375
+      ]
+    },
+    "limitations": "Lossless boundary sheet displayed atnative1140x640 with1:1croppedrows. Selected native witnesses only; not continuous playback/every-frame semantics. No audio listening."
+  },
+  "unknowns": [
+    "Source pixel cause of2152transient remains UNPROVEN",
+    "Hidden authored keyframes/easing and authored-event absence not established",
+    "Audio presence/cues uninspected; zero actual listening",
+    "Unreviewed global visual/production intervals remain outside this gate"
+  ],
+  "input_sha256": {
+    "NATIVE_BATCH6.json": "c935594d7e2de33287e475df27b9fea8a8b95522fdafe501b758fa390d545ba4",
+    "visual_event_ledger_v37.csv": "6caba4fc1f1b6c7c7b8cb520f2e051be557c4f61dfd52accff20b6c69852fcea",
+    "visual_event_ledger_v38.csv": "ca61732438d8fcfe450df8d1c3e3503d00987812763a8846f19daa77efd78821",
+    "CURRENT_NATIVE_QUEUE_v14.json": "efa9b355a289485085440cc9f1b4ecd0d2fd7434c1daaa56fdec49f4c830bae5",
+    "QA_next_five.json": "0a554abce8a0b478ecf36ac39db23469fc443e0ac0f7faf13ce8018e6273a286",
+    "SOURCE_VERIFICATION.json": "921b121000938118f1b058ffbdf5647d3bc16ddf9782ed46d0a05e4f701e10d1",
+    "redrow_2118_2157/measurements.json": "0360eaea1fe6c50da170ccabd5f1dac6490edecc4e52d898e3a6d71cb8f7f164",
+    "redrow_region_measurements.json": "75650a01ec0fde07d8a9687e7a1c8bf4194e2a21aaa1d65aaae1ad569284eccb",
+    "measure_redrow.py": "710ae51fe2d02f95849821fa9e1fe192be0144b629a14992573c93775f835547"
+  },
+  "global_status": {
+    "visual": "PARTIAL",
+    "production": "OUT_OF_SCOPE_NOT_GLOBALLY_SIGNED_OFF",
+    "actual_listening_seconds": 0,
+    "ASR_undetermined": 21,
+    "ASR_potential_flags": 7,
+    "AV": "BLOCKED",
+    "CT_SCAN_COMPLETE": false,
+    "strict_candidate_only_in_reviewed_v38": 572
+  },
+  "write_boundary": "Only new QA_final_three.json written. No input/otherreport/source/media/repository/Git/lock/publication mutation and no new agents or pixel extraction.",
+  "terminal": true,
+  "further_work_pending_for_this_reviewer": false
+}

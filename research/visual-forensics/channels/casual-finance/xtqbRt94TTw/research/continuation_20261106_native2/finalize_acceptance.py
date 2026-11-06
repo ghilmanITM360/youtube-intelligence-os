@@ -1,0 +1,35 @@
+from pathlib import Path
+import csv,json,hashlib,datetime
+P=Path(__file__).parent;B=Path('/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z')
+def read(n):return json.loads((P/n).read_text())
+def save(n,d):(P/n).write_text(json.dumps(d,indent=2)+'\n')
+reports=['QA_prior_eight.json','QA_batch1_production.json','QA_later_fourteen.json','QA_next_five.json','QA_final_three.json']
+for n in reports:assert read(n)['terminal']is True,n
+assert read('QA_final_three.json')['status']=='PARTIAL_CONDITIONAL_ON_SUB045_WORDING';assert [x['id']for x in read('QA_final_three.json')['defects']]==['QA-FINAL3-001'];assert read('QA_final_three.json')['conditional_acceptance']['timing_source_gate']=='PASS_BOUNDED'
+rows=list(csv.DictReader((P/'visual_event_ledger_v38.csv').open()));old=list(csv.DictReader((B/'visual_event_ledger_v32.csv').open()));closed=[r['event_id']for a,r in zip(old,rows)if a['timing_precision']=='MEASURED_CANDIDATE_WINDOW_NOT_EXACT_VISUAL_ONSET'and r['timing_precision']!=a['timing_precision']];assert len(closed)==38
+review={}
+for nums,name in [([1,2],'QA_batch1_production.json'),([3,4],'QA_later_fourteen.json'),([5],'QA_next_five.json'),([6],'QA_final_three.json')]:
+ for i in nums:
+  for eid in read(f'NATIVE_BATCH{i}.json')['resolved_row_ids']:review[eid]=name
+for r in rows:
+ if r['event_id']=='SUB045':
+  oldtext='Native table/highlight/presenterabsence context confirms no new authored event in bounded window; pixelcause unproven.';newtext='Native table/highlight/presenterabsence context supports no meaningful visible event observed in this bounded window; pixelcause unproven and authored-event absence not established.';assert oldtext in r['description'];r['description']=r['description'].replace(oldtext,newtext);r['native_vs_firstpass_conflict']=r['description']
+ if r['event_id']in review:
+  r['review_scope']='BOUNDED_NATIVE_INDEPENDENT_QA_COMPLETED; COMPONENT_UNKNOWNS_RETAINED';r['macro_review_ref']+='; '+str(P/review[r['event_id']])
+  if r['event_id']=='EP0064':r['macro_review_ref']+='; '+str(P/'QA_final_three.json')+'#header_correction'
+with(P/'visual_event_ledger_v39.csv').open('w',newline='')as f:w=csv.DictWriter(f,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
+pending=[r for r in rows if r['timing_precision']=='MEASURED_CANDIDATE_WINDOW_NOT_EXACT_VISUAL_ONSET'];assert len(pending)==572
+q=read('CURRENT_NATIVE_QUEUE_v14.json');assert q['items']==pending;q.update({'baseline':str(P/'visual_event_ledger_v39.csv'),'queue_version':15});save('CURRENT_NATIVE_QUEUE_v15.json',q)
+req=read('CURRENT_REQUIREMENTS.json');req.update({'current_event_ledger':str(P/'visual_event_ledger_v39.csv'),'ledger_version':39,'queue':str(P/'CURRENT_NATIVE_QUEUE_v15.json'),'queue_file_name':'CURRENT_NATIVE_QUEUE_v15.json','queue_version':15,'newly_resolved_timing_rows':38,'candidate_only_current':572,'resolved_row_ids':closed,'independent_scope':'prior8 targetedconditionEP0025repaired; new38 individuallywithin5defined boundedreports, EP0064header correctionverified;3productionspansPASS; no globalapproval','publication_media_status':'4knownJPGs externallyexactbytepreserved; authorizednormalcurrent-tree deletion validatedbeforepush; historybytesremain'})
+req['breakdown'].update({'exact_onset_or_declared_motion_phase_rows':17,'continuous_fragment_rows':16,'no_meaningful_event_rows':4});save('CURRENT_REQUIREMENTS.json',req)
+o=read('OPEN_REQUIREMENTS.json');o['strict_candidate_only_rows']=572;o['category_warning']=o['category_warning'].replace('outside575','outside572');save('OPEN_REQUIREMENTS.json',o)
+w=read('WHOLE_VIDEO_COLD_START_PACKAGE_v2.json');w['latest_event_ledger']=req['current_event_ledger']
+for k in ['required_before_full_render','remaining_prerequisites']:w[k]['strict_candidate_rows']=572
+save('WHOLE_VIDEO_COLD_START_PACKAGE_v2.json',w)
+r=read('ROOT_REVIEW_VALIDATION.json');r.update({'changed_rows_including_EP0025':39,'newly_resolved_strict_rows':closed,'remaining':572,'independent_QA':'38newrowsbounded+prior8conditionalrepaircompleted; EP0064wordingrepair0newclosure'});save('ROOT_REVIEW_VALIDATION.json',r)
+quality=read('QUALITY_GATE.json');quality['requirements']=req;quality['new_native_batch_gate']='38row adjudications independentlyreviewed indefinedscopes:17exactphase,16continuation,1reconciledcompound,4noevent. Prior8targetedQAconditionsrepaired. No948physicaleventclaim.';save('QUALITY_GATE.json',quality)
+s=(P/'OWNER_HANDOFF.md').read_text().replace('610→575:35','610→572:38').replace('Sixteen exact visible onset/declared motionphase rows,15continuousfragments,1existingcompoundreconciliation,3no meaningfulevent','Seventeen exact visible onset/declared motionphase rows,16continuousfragments,1existingcompoundreconciliation,4no meaningfulevent').replace('NATIVE_BATCH1–5','NATIVE_BATCH1–6').replace('ledger v37/queue v13','ledger v39/queue v15').replace('Last5rows definedtargeted QA required beforeseal; final receipt updates result.','Next5 conditionalPASS repairedEP0064header wording in v38; final3newrows and thatcorrection independentlyPASS beforeseal. All38newclosures independentlycovered.').replace('outside575','outside572').replace('thisrun35closed','thisrun38closed').replace('one sharednative2118–2157 for EP0068/SUB044/SUB045: presenterexit versus firstredhighlight onset, continuouswipe endpoint, and allegednoise; compare2118–2123/lastgrowth2133+/2151–2154. No soundinference.','one sharednative2183–2218 for EP0070: projectionpage scrollcandidate2187–2214, verify preciseonset/lastmotion versus cursor/presenterholds. EP0068/SUB044/SUB045nowaccepted:presenterexit+first2pxred2122,wipe2133held2134–2151,no meaningful2152/53event. No soundinference.')
+s+='\nAcceptance metadata v39 adds scoped QA refs/status plus the exact QA-requestedSUB045wording correction (visibleobservation, not authored-eventabsence) to v38source findings; independent source inputs v33–v38 remain immutable. EP0064 large masthead initialscroll-away correction verified; no timingclosure added.\n';(P/'OWNER_HANDOFF.md').write_text(s)
+save('WORKER_TERMINAL_RECEIPT.json',{'channel':'Casual Finance','video_id':'xtqbRt94TTw','all_this_run_workers_terminal':True,'reviewer':'/root/video006_bounded_qa','reports':[{'file':n,'status':read(n)['status'],'sha256':hashlib.sha256((P/n).read_bytes()).hexdigest()}for n in reports],'no_active_source_extraction_or_render_in_this_run':True,'other_workers_preserved':True,'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+save('ACCEPTANCE_CONDITIONS.json',{'prior_EP0025':'hand+underlinedShare626 repairedv34; independentlyverified','EP0064':'mastheadinitialscroll-away repairedv38; QA_final_three verified','SUB045':'finalv39 replaces authored-eventabsenceclaim with no meaningfulvisibleeventobserved; exactconditionalwording retained, pixelcauseUNKNOWN','source_inputs':'v33–v38 and originalQAreports immutable','QA_B1P_001':'OPEN_P3_contextual622_wordboundary; notconditionforG004.01closure','zero_extra_timing_closures_from_text_repairs':True})
+print('accepted38row scope; ledger39 queue15 pending572; workerterminal receipt written')
