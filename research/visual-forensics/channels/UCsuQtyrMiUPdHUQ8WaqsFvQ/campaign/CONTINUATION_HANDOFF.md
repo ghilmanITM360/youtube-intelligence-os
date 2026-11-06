@@ -75,3 +75,4 @@ Bookkeeping only: no analysis repeated, visual-coverage limits unchanged. See ca
 Publisher: preflight run first (no --push, receipt PUBLICATION_<X>_PREFLIGHT.json), then --push (receipt PUBLICATION_<X>_FINAL.json). A label already on the remote is refused. Receipts of X are published by the next checkpoint, so PUBLICATION_L_PREFLIGHT.json and PUBLICATION_L_FINAL.json stay local until one exists. Test: python3 -I scripts/test_pe_publish.py.
 Verify a seal against its own commit, not against working files. Ledger publication column names the last substantive checkpoint, K fa118b9b28.
 Pending required items unchanged: listening, final AV signoff, narration sync, visual-script audio side, off-device transfer. HOLD_NO_EXECUTABLE_WORK stays.
+Checkpoint M: corrects one sentence of the L report (PUBLICATION_INTEGRITY_M.md) and publishes the L receipts. No other change.
