@@ -19,6 +19,16 @@
 15. Future live web research will complement supplied internal data, not replace it.
 16. The system will eventually support multiple YouTube channels; channel-specific intelligence must remain separated.
 
+## Writer coordination
+
+Owner decision, recorded 2026-11-06. It replaces any wording that makes one Mac or session a permanent sole writer.
+
+- Machine A and Machine B are both eligible writers.
+- Disjoint tasks may run at the same time.
+- The same task, and any shared integration or publication step, needs one exclusive claim.
+- A claim ends only by explicit release. Inactivity or an expired heartbeat never permits a takeover.
+- Older ownership records stay as dated history. This text is a rule, not proof: no two-Mac acceptance test has been run against it.
+
 ## graphify
 
 The project-scoped Graphify Codex skill is installed, but no knowledge graph has been built.
