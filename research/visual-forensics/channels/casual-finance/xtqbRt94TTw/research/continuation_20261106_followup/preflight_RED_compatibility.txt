@@ -1,0 +1,31 @@
+test_NUL_binary_rejected (__main__.PublicationGateTests) ... ok
+test_exact_inherited_defect_reported_but_unchanged_allowed (__main__.PublicationGateTests) ... ok
+test_existing_versioned_text_seals_and_shell_allowed (__main__.PublicationGateTests) ... FAIL
+test_nonUTF8_rejected (__main__.PublicationGateTests) ... ok
+test_real_W2_W3_JPGs_rejected (__main__.PublicationGateTests) ... ok
+test_renamed_JPEG_rejected (__main__.PublicationGateTests) ... ok
+test_symlink_and_out_of_scope_rejected (__main__.PublicationGateTests) ... ok
+test_uppercase_and_unknown_extension_rejected (__main__.PublicationGateTests) ... ok
+test_valid_text_and_deletion_allowed (__main__.PublicationGateTests) ... ok
+
+======================================================================
+FAIL: test_existing_versioned_text_seals_and_shell_allowed (__main__.PublicationGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/test_publication_preflight.py", line 31, in test_existing_versioned_text_seals_and_shell_allowed
+    self.assertEqual(self.m.violations({'EVIDENCE_SHA256SUMS_checkpoint_W4':b'abc  file.json\n','SHA256SUMS_roster_v1':b'abc  roster.csv\n','vf_lock.sh':b'#!/bin/sh\necho status\n'},{}),[])
+AssertionError: Lists differ: [['EVIDENCE_SHA256SUMS_checkpoint_W4', 'no[118 chars]at']] != []
+
+First list contains 3 additional elements.
+First extra element 0:
+['EVIDENCE_SHA256SUMS_checkpoint_W4', 'not approved text format']
+
++ []
+- [['EVIDENCE_SHA256SUMS_checkpoint_W4', 'not approved text format'],
+-  ['SHA256SUMS_roster_v1', 'not approved text format'],
+-  ['vf_lock.sh', 'not approved text format']]
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.081s
+
+FAILED (failures=1)

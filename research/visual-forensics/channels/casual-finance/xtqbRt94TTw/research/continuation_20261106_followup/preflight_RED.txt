@@ -1,0 +1,77 @@
+test_NUL_binary_rejected (__main__.PublicationGateTests) ... FAIL
+test_exact_inherited_defect_reported_but_unchanged_allowed (__main__.PublicationGateTests) ... FAIL
+test_nonUTF8_rejected (__main__.PublicationGateTests) ... FAIL
+test_real_W2_W3_JPGs_rejected (__main__.PublicationGateTests) ... FAIL
+test_renamed_JPEG_rejected (__main__.PublicationGateTests) ... FAIL
+test_symlink_and_out_of_scope_rejected (__main__.PublicationGateTests) ... FAIL
+test_uppercase_and_unknown_extension_rejected (__main__.PublicationGateTests) ... FAIL
+test_valid_text_and_deletion_allowed (__main__.PublicationGateTests) ... FAIL
+
+======================================================================
+FAIL: test_NUL_binary_rejected (__main__.PublicationGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/test_publication_preflight.py", line 6, in setUp
+    self.assertTrue((P/'publication_preflight.py').exists(), 'Publication lacks a mandatory candidate-tree media gate')
+AssertionError: False is not true : Publication lacks a mandatory candidate-tree media gate
+
+======================================================================
+FAIL: test_exact_inherited_defect_reported_but_unchanged_allowed (__main__.PublicationGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/test_publication_preflight.py", line 6, in setUp
+    self.assertTrue((P/'publication_preflight.py').exists(), 'Publication lacks a mandatory candidate-tree media gate')
+AssertionError: False is not true : Publication lacks a mandatory candidate-tree media gate
+
+======================================================================
+FAIL: test_nonUTF8_rejected (__main__.PublicationGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/test_publication_preflight.py", line 6, in setUp
+    self.assertTrue((P/'publication_preflight.py').exists(), 'Publication lacks a mandatory candidate-tree media gate')
+AssertionError: False is not true : Publication lacks a mandatory candidate-tree media gate
+
+======================================================================
+FAIL: test_real_W2_W3_JPGs_rejected (__main__.PublicationGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/test_publication_preflight.py", line 6, in setUp
+    self.assertTrue((P/'publication_preflight.py').exists(), 'Publication lacks a mandatory candidate-tree media gate')
+AssertionError: False is not true : Publication lacks a mandatory candidate-tree media gate
+
+======================================================================
+FAIL: test_renamed_JPEG_rejected (__main__.PublicationGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/test_publication_preflight.py", line 6, in setUp
+    self.assertTrue((P/'publication_preflight.py').exists(), 'Publication lacks a mandatory candidate-tree media gate')
+AssertionError: False is not true : Publication lacks a mandatory candidate-tree media gate
+
+======================================================================
+FAIL: test_symlink_and_out_of_scope_rejected (__main__.PublicationGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/test_publication_preflight.py", line 6, in setUp
+    self.assertTrue((P/'publication_preflight.py').exists(), 'Publication lacks a mandatory candidate-tree media gate')
+AssertionError: False is not true : Publication lacks a mandatory candidate-tree media gate
+
+======================================================================
+FAIL: test_uppercase_and_unknown_extension_rejected (__main__.PublicationGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/test_publication_preflight.py", line 6, in setUp
+    self.assertTrue((P/'publication_preflight.py').exists(), 'Publication lacks a mandatory candidate-tree media gate')
+AssertionError: False is not true : Publication lacks a mandatory candidate-tree media gate
+
+======================================================================
+FAIL: test_valid_text_and_deletion_allowed (__main__.PublicationGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/test_publication_preflight.py", line 6, in setUp
+    self.assertTrue((P/'publication_preflight.py').exists(), 'Publication lacks a mandatory candidate-tree media gate')
+AssertionError: False is not true : Publication lacks a mandatory candidate-tree media gate
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+FAILED (failures=8)
