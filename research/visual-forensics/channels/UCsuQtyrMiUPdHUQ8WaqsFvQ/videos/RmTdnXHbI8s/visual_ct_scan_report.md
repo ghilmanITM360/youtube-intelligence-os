@@ -93,3 +93,6 @@ G0098,confidence,HIGH,MEDIUM,Checkpoint J gap review (gap reviewer),campaign/gap
 
 ## 9. Limits
 Hold interiors verified by measurement, not by viewing every frame; activity in-between frames sampled where noted in coverage.json; state review at tile scale 1/4; reviewer is same model family as orchestrator (not independent human review).
+
+## 10. Attention and emotional hypotheses (INFERRED, no eye tracking, no retention data)
+See review/attention_hypotheses.md and review/attention_timeline.csv; composition measures in review/state_composition.csv.

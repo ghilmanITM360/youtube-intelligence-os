@@ -64,3 +64,8 @@ Read campaign/NON_AUDIO_GATE_MATRIX.md first. RT_P1 attempt 5 FAIL on V6, attemp
 Sources for any run: evidence/source_path.txt -> source_media copies. Do not read ~/Downloads unattended.
 Exact next operation: none executable without a new capability or owner decision. campaign/HOLD_NO_EXECUTABLE_WORK makes the scheduler skip model calls; delete it to resume. Waiting on owner: (1) audio listening capability, (2) off-device destination, (3) optional: outside-family independent review, native review of more states, unseen v2 protocol.
 Do not create CAMPAIGN_COMPLETE: audio gates are BLOCKED.
+
+## State at checkpoint K (acceptance reconciliation, interactive session 85559743)
+Supersedes earlier exact-next-operation notes. Required non-audio analysis is complete within declared coverage; all 15 stay VISUAL_ANALYSIS_PARTIAL. See campaign/NON_AUDIO_GATE_MATRIX.md for each PARTIAL's class.
+Pending required items: listening, final AV signoff, narration sync, visual-script audio side (capability); off-device transfer (destination). Do not run new visual review to fill these.
+HOLD_NO_EXECUTABLE_WORK stays. Delete it only when an authorized executable task exists. Preflight PASS; full unattended cycle NOT_PROVEN. J seal is historical: verify it against commit 7fd90bb459, since working files moved on.

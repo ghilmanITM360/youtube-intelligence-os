@@ -14,14 +14,22 @@ L = [f"# Reconstruction blueprint — {vid} (source sha {sm['sha256'][:12]})", "
      f"- Canvas background exact {pal['background_exact_rgb']}; top quantised bins {', '.join(b['hex_bin_centre'] for b in pal['top_bins'][:5])}; yellow in {pal['holds_with_yellow']}/{pal['holds']} holds (mean share {pal['mean_yellow_frac']*100:.2f}%); red in {pal['holds_with_red_accent']}/{pal['holds']} holds; any saturated colour in {pal['holds_with_any_saturation']}/{pal['holds']} holds. Mean settled dark-ink coverage {pal['mean_dark_ink_frac']*100:.1f}% (max {pal['max_dark_ink_frac']*100:.1f}%).",
      "- Line art and character specifics: see review/*/observations.md, review/*/asset_inventory.csv and review/native_art_review.md (OBSERVED). Exact stroke width, typeface, software, layer structure: UNAVAILABLE.",
      "",
-     "## Per-state prompts (derived from reviewed descriptions; ESTIMATED layout)", "",
-     "| State | Source interval (s) | Image prompt (reconstruction) | Motion into next state | Must stay static | Negative |", "|---|---|---|---|---|---|"]
+     "## Per-state prompts (derived from reviewed descriptions; layout MEASURED on the settled frame, review/state_composition.csv)", "",
+     "| State | Source interval (s) | Image prompt (reconstruction) | Image-to-video prompt into next state | Must stay static (MEASURED) | Negative |", "|---|---|---|---|---|---|"]
+comp_p = V / "review/state_composition.csv"; C = {r["seg"]: r for r in csv.DictReader(open(comp_p))} if comp_p.exists() else {}
+def layout(seg):
+    c = C.get(seg)
+    return f" Measured layout: non-background x {c['x']} y {c['y']} w {c['w']} h {c['h']}, coverage {float(c['coverage']) * 100:.1f}%." if c and c["x"] != "" else ""
 for i, x in enumerate(S):
     if x["kind"] != "HOLD": continue
-    nxt = next((y for y in S[i + 1:] if y["kind"] == "ACTIVITY"), None)
-    move = f"{nxt['subtype']} at {nxt['start_pts']}s over {nxt['frames']} frame(s)" if nxt else "end of video (hold)"
+    nxt = next((y for y in S[i + 1:] if y["kind"] == "ACTIVITY"), None); nh = next((y for y in S[i + 1:] if y["kind"] == "HOLD"), None); c = C.get(nh["seg"]) if nh else None
+    move = f"Start on this frame, static until {nxt['start_pts']}s. {nxt['subtype']} over {nxt['frames']} frame(s): {nxt['description']}".replace("|", "/") if nxt else "End of video: stay on this frame."
+    if nh: move += f" End on {nh['visual_state_id']}: {nh['description']}".replace("|", "/")
+    static = "all elements (no change follows)" if not c or c.get("chg_frac", "") == "" else "nothing: whole composition replaced" if nxt["event_class"] == "SHOT_CUT" or float(c["chg_frac"]) > .35 else f"everything outside changed box x {c['chg_x']} y {c['chg_y']} w {c['chg_w']} h {c['chg_h']} ({float(c['chg_frac']) * 100:.1f}% of frame changes)"
     desc = x["description"].replace("|", "/")
-    L.append(f"| {x['visual_state_id']} ({x['seg']}) | {x['start_pts']}–{x['end_pts_exclusive']} | {ar}, canvas/lighting as described (video background mode {pal['background_exact_rgb']}), drawn state: {desc} | {move} | all elements not named in the next event | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |")
+    L.append(f"| {x['visual_state_id']} ({x['seg']}) | {x['start_pts']}–{x['end_pts_exclusive']} | {ar}, canvas/lighting as described (video background mode {pal['background_exact_rgb']}), drawn state: {desc.rstrip('. ')}.{layout(x['seg'])} | {move} | {static} | no elements, colours, gradients or effects not described for this state; no extra props or text; no camera shake |")
+inv_p = V / f"review/{S[0]['reviewer']}/asset_inventory.csv"; aliases = [r["alias"] for r in csv.DictReader(open(inv_p))] if inv_p.exists() else []
+L += ["", "## Continuity locks", f"- Asset IDs: {', '.join(aliases)} (review/{S[0]['reviewer']}/asset_inventory.csv, segments listed per alias).", "- Do not change between states of one asset: outline weight, tunic and limb grammar, canvas colour, text lettering. No morphing, no spontaneous objects. In-betweens only where the event's measured frame count shows them.", "- Source characters are the creator's: use B in the header means new drawings under these rules, not copies."]
 L += ["", "## Editor construction (OBSERVED grammar → steps)",
       "1. Build each composition as separate layers: canvas, character pose drawing(s), props, text (one possible route; source layers are UNAVAILABLE).",
       "2. Cuts = replace whole composition on the same canvas (hard cut, 0 frames).",
@@ -51,20 +59,20 @@ qg = dict(video_id=vid, source_sha256=sm["sha256"], requested_mode="DEEP", gener
                              candidate_shots_verified="tables/state_ledger.csv every segment classified from viewed tiles",
                              meaningful_state_timing=f"frame-precise onsets from measurements; unresolved: {unres}",
                              motion_design_review=f"{cov['activities_fully_viewed']}/{cov['activities']} activities viewed at every frame",
-                             creative_design_review="visual_ct_scan_report.md §4 + tables/palette_measured.json (tile-scale)" if "--art-done" in flags else "not yet written",
+                             creative_design_review="visual_ct_scan_report.md §3-4,10; review/attention_hypotheses.md; review/attention_timeline.csv; review/state_composition.csv; tables/palette_measured.json (state review at tile scale, native sampled)" if "--art-done" in flags else "not yet written",
                              visual_script_mapping="audio_visual_alignment.csv + review/*/narration_visual.csv, ASR_UNCERTIFIED; no catalog transcript exists for this channel",
-                             production_blueprint="reconstruction_blueprint.md (derived prompts; no render test yet)",
+                             production_blueprint="reconstruction_blueprint.md: image and image-to-video prompt per HOLD state, measured layout, continuity locks, editor steps, QA; prompts draft, not rendered per video",
                              audio_human_listening="campaign/AUDIO_LISTENING_CAPABILITY.json BLOCKED_CAPABILITY"),
           final_video_status="VISUAL_ANALYSIS_PARTIAL", overall="PARTIAL", ct_scan_complete=False, full_av_signoff=False,
           limitations=["no actual listening", "activity in-between frames sampled where noted", "state review at 1/4 tile scale; native review covers sampled key states only",
                        "reconstruction not render-tested per video"],
-          reviewer=S[0]["reviewer"], next_step="independent review sample; reconstruction test via channel manual")
+          reviewer=S[0]["reviewer"], next_step="audio listening when a capability exists; no required non-audio step (campaign/NON_AUDIO_GATE_MATRIX.md)")
 (V / "quality_gate.json").write_text(json.dumps(qg, indent=1))
 (V / "continuation_handoff.md").write_text(f"""# Continuation handoff — {vid}
 - Source sha256 {sm['sha256']}; path {sm['file_path']}; machine A (Ghilmans-Laptop), Primitive Education stream lock ~/YIOS-local-audits/primitive-education/.pe_writer_lock.
 - Status {qg['final_video_status']}; gates {json.dumps(gates)}.
 - Pending: {', '.join(k for k, v in gates.items() if v != 'PASS')}; unresolved segments {unres}; partially viewed activities {len(cov['partially_viewed_activity_intervals'])}.
 - Tools: scripts/pe_ingest.sh, pe_segment.py, pe_sheets.py, pe_build.py, pe_palette.py, pe_asr_check.py, pe_finalize.py (python -I; cv2 venv ~/YIOS-local-audits/tooling/visual-ct-scan-venv).
-- Next exact operation: listening by a human (intervals = all speech 0–{sm['duration_seconds']}s); optional full-frame strips for partially viewed activities.
+- Next exact operation: listening by a human (intervals = all speech 0–{sm['duration_seconds']}s); non-audio remainder is classified in campaign/NON_AUDIO_GATE_MATRIX.md.
 """)
 print(vid, gates)

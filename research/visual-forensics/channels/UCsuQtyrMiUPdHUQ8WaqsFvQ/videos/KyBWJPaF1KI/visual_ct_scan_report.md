@@ -103,7 +103,11 @@ G0308,description,"Small pixel change (about 7 percent) while hole and caveman k
 G0308,confidence,LOW,MEDIUM,Checkpoint J gap review (gap reviewer),campaign/gap_review/UNRES_03.jpg
 G0158,description,Replaced by blank white (2 frames),Replaced by a mostly white frame (2 frames) with a single small black handwritten numeral '2' left of centre at about mid height; the rest is blank (f5107 sampled).,Checkpoint J gap review (gap reviewer),campaign/gap_review/UNV_06.jpg
 G0210,description,"Wavy-numeral clock (f6435) is replaced by a blue-purple black hole at left-centre on white with the caveman (yellow leopard tunic, frown) standing at right; both are already present in f6437, so the caveman appears at f6436 or f6437 at the latest (f6436 itself not in this crop).","Replaced by blue-purple black hole at left-centre on white; caveman (yellow leopard tunic, frown) at right is already present together with the hole at f6437, so he appears at f6436 or f6437 (the start of this 2-frame segment).",Checkpoint J gap review (gap reviewer),campaign/gap_review/UNV_06.jpg
+G0120,description,"Replaced by sepia parchment cave-painting poster: brown standing caveman, text 'KRUD GONE' and 'SCREAM IF FOUND' at bottom (second line partly clipped)","Replaced by sepia parchment cave-painting poster: brown standing caveman, text 'KRUD GONE' and 'SCREAM IF FOUND' at bottom (both lines inside the native frame; the earlier 'partly clipped' note came from the sheet label)",Checkpoint K recount: native frame shows the full second line,"campaign/hidden_audit/recount_index.csv, native f4038"
 
 
 ## 9. Limits
 Hold interiors verified by measurement, not by viewing every frame; activity in-between frames sampled where noted in coverage.json; state review at tile scale 1/4; reviewer is same model family as orchestrator (not independent human review).
+
+## 10. Attention and emotional hypotheses (INFERRED, no eye tracking, no retention data)
+See review/attention_hypotheses.md and review/attention_timeline.csv; composition measures in review/state_composition.csv.
