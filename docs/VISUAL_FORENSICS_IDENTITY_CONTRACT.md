@@ -24,8 +24,17 @@ Event, frame and evidence-row counts are not video counts.
 `data/manifests/VISUAL_FORENSICS_REGISTRY_CROSSWALK.csv` is rebuilt by `scripts/build_visual_forensics_crosswalk.py` from pinned commits. It copies only an ID and a source title, and it never writes a database. `in_registry=false` means not registered; it does not mean the video is unavailable or unresearched.
 
 ## What the registry database still needs
-The crosswalk makes these videos findable. It does not register them. A registry row needs an ingested metadata package, so that no field is invented:
-- Casual Finance: inventory in draft PR #37, not merged.
-- Barely Evolved: metadata in draft PR #43, not merged; the channel is not in the registry.
-- Primitive Education: only a source census is on its branch, so full video metadata must be sourced first.
-- xkcd's What If? 8 videos: census metadata only. PR #20 has a transcript-pending route to review.
+The crosswalk makes these videos findable. It does not register them. A registry row comes from `scripts/register_supplied_channel.py`, which writes the inventory catalog; the registry is then rebuilt from it. The importer reads a workbook with sheets `Channel Overview` and `All Videos`. No workbook named below has that shape today, so one must be materialized from the source and reviewed, keeping the source bytes unchanged. Fields the source lacks stay empty.
+
+| Channel | Videos to register | Metadata source | Blocked by |
+|---|---|---|---|
+| Casual Finance | 210 | PR #37, `CASUALLY_FINANCE_VIDEO_INVENTORY.csv`, `metadata_receipt.jsonl` | Not merged. The channel row exists as `IDENTITY_ONLY` |
+| Barely Evolved | 4 | PR #43, `VIDEO_MASTER.csv`, raw Apify rows | Not merged. No channel row |
+| Primitive Education | 45 | PR #39, `ALL_PUBLIC_VIDEOS.csv`, all 45 census IDs and titles match | Not merged. No channel row |
+| xkcd's What If? | 2: `9VG0yqq_PHM`, `X97DDWvxaqQ` | PR #20, `DS-000035` | Not merged |
+| xkcd's What If? | 6: the other census-only IDs | `census/census.csv` at the pinned commit | No reviewed workbook yet. The 2026-11-04 snapshot postdates DS-000035 |
+
+Every video here has no transcript evidence in these sources, so each needs `--transcript-pending-id`. Video URL must be the `watch?v=` form even when the census lists a Shorts URL. Transcript File and Transcript Words stay empty, including where PR #37's CSV holds a placeholder. In the xkcd census, likes and comments read `UNAVAILABLE_LOGGED_OUT_PLAYER`: leave them empty, never 0. This route has not been trial-run for these channels.
+
+## Registry pin
+`validate_audit_966.py` pins `data/catalog/youtube_channel_registry.db` by SHA-256 (`39e7a28b…`) as immutable Finance audit input, and hosted CI enforces it. Any registry change, including PR #20 (`5538db9f…`), fails with `source drift` once that gate is on the same branch. Do not edit the frozen hash to pass: the owner has to decide how a new registry version relates to the audit baseline. After any registry change, rebuild the crosswalk.

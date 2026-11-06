@@ -1,4 +1,5 @@
-import json, os, pathlib, sqlite3, unittest, copy, tempfile
+import io, json, os, pathlib, re, sqlite3, unittest, copy, tempfile
+from contextlib import redirect_stderr
 from unittest import mock
 import reference_comparison as rc
 H = pathlib.Path(__file__).resolve().parent
@@ -97,6 +98,28 @@ class AuditRegressionTests(unittest.TestCase):
             d['comparisons'][i]['witness']['text'] = fake
             self.assertTrue(any('title' in m or 'empty' in m for m in rc.validate(_dump(d))), fake)
 
+    def test_title_witness_rejects_trivial_fragments(self):
+        d = self.real(); i = next(n for n, c in enumerate(d['comparisons']) if (c.get('witness') or {}).get('kind') == 'TITLE')
+        title = 'What Warren Buffett Would Do With $10,000 Today'
+        self.assertEqual(rc.canonical_video(d['video_id'])[0], title)
+        for fake in ('a', 'W', 'Buffett', 'rren Buffett Wo'):
+            d['comparisons'][i]['witness']['text'] = fake
+            self.assertTrue(any('title' in m for m in rc.validate(_dump(d))), fake)
+        for honest in ('Warren Buffett', title):
+            d['comparisons'][i]['witness']['text'] = honest
+            self.assertEqual([], rc.validate(_dump(d)), honest)
+
+    def test_unhashable_mode_and_judgment_return_errors(self):
+        for field, target in (('assessment_mode', 'doc'), ('judgment', 'row')):
+            for bad in (['x'], {'a': 1}):
+                d = self.real(); (d if target == 'doc' else d['comparisons'][0])[field] = bad
+                self.assertTrue(rc.validate(_dump(d)), (field, bad))
+
+    def test_unreadable_registry_is_a_gate_failure(self):
+        import sqlite3
+        with mock.patch.object(rc, 'canonical_video', side_effect=sqlite3.OperationalError('no db')):
+            self.assertTrue(any('registry' in m for m in rc.validate(_dump(self.real()))))
+
     def test_every_tracked_title_witness_still_matches(self):
         import glob
         files = glob.glob(str(H / 'comparisons/*.json')) + glob.glob(str(H.parent / 'reanalysis/videos/*.json'))
@@ -185,6 +208,20 @@ class PlanGateTests(unittest.TestCase):
         p['applications'] = [{'stage': a['stage'], 'exception': reason} for a in p['applications']]
         self.assertTrue(any('no rule' in m.lower() for m in self.errs(p)))
 
+    def test_superseded_rule_cannot_be_implemented_but_can_be_declined(self):
+        import content_plan_check as cp, sqlite3
+        con = sqlite3.connect(f'file:{DB}?mode=ro', uri=True)
+        rid, locator, member = con.execute("select rule_id, locator, member_id from ref_rule where rule_class='DUPLICATED_OR_SUPERSEDED' and audit_dimension='SCRIPT'").fetchone()
+        sid = next(s for s, in con.execute('select section_id from ref_section where member_id=? and locator=?', (member, 'p.' + re.findall(r'p\.(\d+)', locator)[0])))
+        text = 'Declined because a newer rule replaces this one for the hook stage.'
+        for fields, ok in (({'implementation': text}, False), ({'exception': text}, True)):
+            p = self.swap('HOOK_SCRIPT', rule_id=rid, **fields); p['retrieved'] = [*p['retrieved'], sid]
+            self.assertEqual(not any('superseded' in m for m in self.errs(p)), ok, fields)
+
+    def test_missing_database_is_a_gate_failure(self):
+        import content_plan_check as cp
+        self.assertTrue(any('database' in m for m in cp.check('/nonexistent/knowledge.db', plan())))
+
     def test_ambiguous_and_malformed_rejected(self):
         both = self.swap('TOPIC', rule_id='FR-VC-01', implementation='A concrete sentence about the plan.', exception='A concrete sentence about the exception.')
         self.assertTrue(self.errs(both))
@@ -210,9 +247,11 @@ class FrameworkClaimTests(unittest.TestCase):
 
     def test_claim_without_plan_is_refused_before_any_output(self):
         o = self.orch(); out = tempfile.mkdtemp()
-        with mock.patch.object(o, 'build_plan') as build, self.assertRaises(SystemExit) as stop:
+        err = io.StringIO()
+        with mock.patch.object(o, 'build_plan') as build, redirect_stderr(err), self.assertRaises(SystemExit) as stop:
             o.main(['--channel', 'CH-X', '--opportunity', 'OP-X', '--output-dir', out, '--framework-guided'])
         self.assertEqual(stop.exception.code, 2); build.assert_not_called(); self.assertEqual(os.listdir(out), [])
+        self.assertIn('--framework-guided requires --framework-plan', err.getvalue())
 
     def test_generic_run_does_not_need_framework(self):
         o = self.orch()

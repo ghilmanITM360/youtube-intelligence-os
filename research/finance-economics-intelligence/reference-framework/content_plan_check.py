@@ -11,6 +11,9 @@ def trivial(text):
     """Shape only: rejects placeholders such as 'x' or 'TODO'. ponytail: a long meaningless sentence still passes; that is the reviewer's job."""
     return not isinstance(text, str) or len(text.strip()) < 20 or len(set(re.findall(r'[^\W\d_]{2,}', text.lower()))) < 3
 def check(db, plan):
+    try: return _check(db, plan)
+    except sqlite3.Error as exc: return [f'knowledge database unreadable: {exc}']
+def _check(db, plan):
     if not isinstance(plan, dict): return ['plan is not a JSON object']
     apps, retrieved = plan.get('applications', []), plan.get('retrieved')
     if not isinstance(apps, list) or not all(isinstance(a, dict) for a in apps): return ['applications must be a list of objects']
@@ -36,6 +39,7 @@ def check(db, plan):
         r = con.execute('select rule_class, audit_dimension, member_id, locator from ref_rule where rule_id=? and framework_version=?', (rid, 'v1')).fetchone() if isinstance(rid, str) else None
         if not r: e.append('unknown rule ' + str(rid)); continue
         if r[0] == 'NOT_APPLICABLE': e.append('rule not applicable ' + rid)
+        if impl and r[0] == 'DUPLICATED_OR_SUPERSEDED': e.append('superseded rule cannot be implemented ' + rid)
         if impl and stage in STAGES and r[1] not in STAGE_DIMENSIONS[stage]: e.append(f'rule dimension {r[1]} of {rid} does not fit stage {stage}')
         if not any((r[2], 'p.' + page) in sections for page in re.findall(r'p\.(\d+)', r[3])): e.append(f'rule {rid} source section not retrieved')
         implemented += bool(impl)

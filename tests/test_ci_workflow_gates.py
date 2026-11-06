@@ -32,6 +32,12 @@ def guard(tmp_path, tracked):
     return subprocess.run(["bash", "-e", "-c", script], cwd=tmp_path, capture_output=True, text=True)
 
 
+def test_raw_evidence_outputs_folder_stays_allowed(tmp_path):
+    """Only repo-root outputs/ is junk: 341 tracked raw-evidence files live under nested outputs/ folders."""
+    result = guard(tmp_path, [*APPROVED, "data/raw/forensic-analysis/DS-1/outputs/report.md"])
+    assert result.returncode == 0, result.stdout + result.stderr
+
+
 def test_approved_databases_pass(tmp_path):
     result = guard(tmp_path, APPROVED)
     assert result.returncode == 0, result.stdout + result.stderr
@@ -46,6 +52,14 @@ def test_approved_databases_pass(tmp_path):
     "data/catalog/youtube_inventory.db-shm",
     "outputs/generated.json",
     "scripts/cache.pyc",
+    "nested/dir/x.db-journal",
+    "nested/A.DB-WAL",
+    "nested/A.DB-SHM",
+    "nested/f.DB",
+    "nested/f.sqlite",
+    "nested/f.sqlite3",
+    "sp ace/a.db-shm",
+    "scripts/x.Pyc",
 ])
 def test_unapproved_files_fail(tmp_path, junk):
     assert guard(tmp_path, [*APPROVED, junk]).returncode != 0
@@ -63,6 +77,14 @@ def test_finance_gates_see_the_committed_registry():
     assert WORKFLOW.index("name: Finance and reference framework gates") < WORKFLOW.index("name: Build channel registry")
 
 
+def test_rebuilt_registry_is_validated_after_the_rebuild():
+    order = [WORKFLOW.index(f"name: {step}") for step in (
+        "Build channel registry", "Validate provenance and registry", "Run distributable suite")]
+    assert order == sorted(order)
+    script = step_script("Validate provenance and registry")
+    assert "validate_dataset_ledgers" in script and "validate_youtube_channel_registry" in script
+
+
 def test_visual_forensics_crosswalk_keeps_counts_separate():
     import collections
     import csv
@@ -78,4 +100,4 @@ def test_visual_forensics_crosswalk_keeps_counts_separate():
         assert known.get(row["video_id"], row["youtube_channel_id"]) == row["youtube_channel_id"], row["video_id"]
         assert len(row["source_commit"]) == 40
     xkcd = collections.Counter(r["in_registry"] for r in rows if r["youtube_channel_id"] == "UC6IxnFzHofFJ5X2PycSMsww")
-    assert (xkcd["true"], xkcd["false"]) == (83, 8)
+    assert xkcd["true"] + xkcd["false"] == 91, "census snapshot 2026-11-04; registered rows may grow, the census does not"

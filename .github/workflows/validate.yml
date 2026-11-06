@@ -61,6 +61,9 @@ jobs:
         run: python -m pytest -q
       - name: Reject unapproved databases and generated junk
         run: |
-          test -z "$(git ls-files '*.db-wal' '*.db-shm' 'outputs/**' '*.pyc')"
-          UNAPPROVED_DBS="$(git ls-files '*.db' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' -e 'data/knowledge/reference_knowledge.db' || true)"
+          # -z: git quotes unusual paths otherwise, and a quoted name would slip past these anchors.
+          TRACKED="$(git ls-files -z | tr '\0' '\n')"
+          JUNK="$(echo "$TRACKED" | grep -iE '\.(db-wal|db-shm|db-journal|sqlite3?|pyc)$|^outputs/' || true)"
+          test -z "$JUNK" || { echo "Tracked database sidecar or generated junk:"; echo "$JUNK"; exit 1; }
+          UNAPPROVED_DBS="$(echo "$TRACKED" | grep -iE '\.db$' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' -e 'data/knowledge/reference_knowledge.db' || true)"
           test -z "$UNAPPROVED_DBS" || { echo "Unapproved tracked database(s):"; echo "$UNAPPROVED_DBS"; exit 1; }

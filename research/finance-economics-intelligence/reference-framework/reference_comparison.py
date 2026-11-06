@@ -29,6 +29,11 @@ def witness(text, phrase):
     assert len(m) == 1, f'{len(m)} matches for {phrase[:40]!r}'
     return {'kind': 'TRANSCRIPT_RANGE', 'start_char': m[0].start(), 'end_char': m[0].end(), 'text': m[0].group(0)}
 
+def title_witness_ok(text, title):
+    """The whole title, or whole words of it (two or more). ponytail: shape only; which words matter is the reviewer's call."""
+    if not text.strip(): return False
+    return text == title or (len(text.split()) >= 2 and re.search(rf'(?<!\w){re.escape(text)}(?!\w)', title) is not None)
+
 def load(path):
     """Parsed comparison object, or None if the file is missing, not JSON, or not an object."""
     try: d = json.load(open(path))
@@ -39,18 +44,19 @@ def validate(path):
     d = load(path)
     if d is None: return ['unreadable or malformed comparison file']
     if not d.get('comparisons') or not isinstance(d['comparisons'], list): return ['no comparisons']
-    video = canonical_video(d.get('video_id')) if isinstance(d.get('video_id'), str) else None
+    try: video = canonical_video(d.get('video_id')) if isinstance(d.get('video_id'), str) else None
+    except sqlite3.Error as exc: return [f'registry unreadable: {exc}']
     if not video: return [f"unknown video {d.get('video_id')}"]
     title, t = video[0] or '', video[1] or ''
     R = rules(); e = []; seen = set()
-    if d.get('assessment_mode') not in MODES: e.append('bad assessment_mode')
+    if not isinstance(d.get('assessment_mode'), str) or d['assessment_mode'] not in MODES: e.append('bad assessment_mode')
     for i, c in enumerate(d['comparisons']):
         if not isinstance(c, dict): e.append(f'malformed comparison #{i}'); continue
         k = f"{c.get('rule_id')}#{i}"; r = R.get(str(c.get('rule_id')))
         if not r: e.append('unknown rule ' + k); continue
         seen.add(c['rule_id'])
         if c.get('source_locator') != r['Locator'] or c.get('source_member') != r['Source_Member']: e.append('locator mismatch ' + k)
-        if c.get('judgment') not in JUDGMENTS: e.append('bad judgment ' + k)
+        if not isinstance(c.get('judgment'), str) or c['judgment'] not in JUDGMENTS: e.append('bad judgment ' + k)
         w = c.get('witness') or {}
         if not isinstance(w, dict): e.append('malformed witness ' + k); continue
         if c.get('judgment') not in ('NOT_APPLICABLE', 'NOT_EVALUABLE') or w:
@@ -59,7 +65,7 @@ def validate(path):
                 a, b = w.get('start_char'), w.get('end_char')
                 if not (isinstance(a, int) and isinstance(b, int) and text and t[a:b] == text): e.append('witness offset mismatch ' + k)
             elif w.get('kind') == 'TITLE':
-                if not text.strip() or text not in title: e.append('witness not in canonical title ' + k)
+                if not title_witness_ok(text, title): e.append('witness not in canonical title ' + k)
             elif w.get('kind') == 'THUMBNAIL_OBSERVATION':
                 if not text.strip(): e.append('empty witness ' + k)
             else: e.append('missing witness ' + k)
