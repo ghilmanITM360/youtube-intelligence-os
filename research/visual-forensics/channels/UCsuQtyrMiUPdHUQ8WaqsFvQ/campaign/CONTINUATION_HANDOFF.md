@@ -7,7 +7,7 @@ Read: selection/selection_v1.json, campaign/campaign_ledger.csv, campaign/progre
 3. ~/YIOS-local-audits/tooling/visual-ct-scan-venv/bin/python3 -I scripts/pe_native.py videos/<id> 3 ; pe_stroke.py videos/<id> ; python3 -I scripts/pe_enc_audit.py videos/<id>. Read one native crop; write review/native_art_review.md (OBSERVED/INFERRED/UNAVAILABLE, state which crops were and were not opened).
 4. Read one sheet; compare rows; write review/primary_spotcheck.json (fields reviewer, sheet, rows_compared, disagreements, summary). Fix class-name slips only via review/primary_corrections.csv (seg,field,old,new,reason,evidence).
 5. scripts/pe_process.sh <id> <agent_id>.
-6. Every 2-3 videos: python3 -I scripts/pe_publish.py <LABEL> --push and verify PUBLICATION_<LABEL>.json readback_mismatches==0.
+6. Every 2-3 videos: python3 -I scripts/pe_publish.py <LABEL> --push and verify PUBLICATION_<LABEL>_FINAL.json readback_mismatches==0 (run the preflight first: same command without --push, receipt PUBLICATION_<LABEL>_PREFLIGHT.json).
 
 ## After dev set
 7. python3 -I scripts/pe_aggregate.py . dev_final; write campaign/CHANNEL_PRODUCTION_MANUAL_v1.md (observed vs proposed separated).
@@ -69,3 +69,9 @@ Do not create CAMPAIGN_COMPLETE: audio gates are BLOCKED.
 Supersedes earlier exact-next-operation notes. Required non-audio analysis is complete within declared coverage; all 15 stay VISUAL_ANALYSIS_PARTIAL. See campaign/NON_AUDIO_GATE_MATRIX.md for each PARTIAL's class.
 Pending required items: listening, final AV signoff, narration sync, visual-script audio side (capability); off-device transfer (destination). Do not run new visual review to fill these.
 HOLD_NO_EXECUTABLE_WORK stays. Delete it only when an authorized executable task exists. Preflight PASS; full unattended cycle NOT_PROVEN. J seal is historical: verify it against commit 7fd90bb459, since working files moved on.
+
+## State at checkpoint L (publication integrity, interactive session 85559743)
+Bookkeeping only: no analysis repeated, visual-coverage limits unchanged. See campaign/PUBLICATION_INTEGRITY_L.md.
+Publisher: preflight run first (no --push, receipt PUBLICATION_<X>_PREFLIGHT.json), then --push (receipt PUBLICATION_<X>_FINAL.json). A label already on the remote is refused. Receipts of X are published by the next checkpoint, so PUBLICATION_L_PREFLIGHT.json and PUBLICATION_L_FINAL.json stay local until one exists. Test: python3 -I scripts/test_pe_publish.py.
+Verify a seal against its own commit, not against working files. Ledger publication column names the last substantive checkpoint, K fa118b9b28.
+Pending required items unchanged: listening, final AV signoff, narration sync, visual-script audio side, off-device transfer. HOLD_NO_EXECUTABLE_WORK stays.

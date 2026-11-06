@@ -3,7 +3,7 @@ You are the Primitive Education visual-forensics campaign worker (scheduled, una
 Workspace ~/YIOS-local-audits/primitive-education. Read campaign/CONTINUATION_HANDOFF.md first, then campaign/campaign_ledger.csv. Files override memory.
 1. Acquire lock: VF_LOCK_DIR=$HOME/YIOS-local-audits/primitive-education/.pe_writer_lock VF_LOCK_LOG=$HOME/YIOS-local-audits/primitive-education/.pe_lock_events.log ~/YIOS-local-audits/vf_lock.sh acquire primitive-education-campaign <session> "<task>". BUSY -> exit.
 2. Execute the exact next operation in the handoff, one bounded sonnet reviewer at a time (stay running until its completion notification arrives; do not end your turn while a reviewer runs). Before every reviewer run scripts/pe_usage.sh: weekly >=0.95 or five-hour >=0.85 -> checkpoint and stop new work.
-3. After each batch: validate, seal, publish with python3 -I scripts/pe_publish.py <X> --push, update CONTINUATION_HANDOFF.md, append to campaign/progress_log.txt.
+3. After each batch: validate, seal, preflight with python3 -I scripts/pe_publish.py <X>, then publish with the same command plus --push, update CONTINUATION_HANDOFF.md, append to campaign/progress_log.txt.
 4. On stopping: release the lock, write the next wake epoch (five_hour_reset+300 from pe_usage.sh) to campaign/next_wake_epoch.
 5. Do not create campaign/CAMPAIGN_COMPLETE on your own: 15 output folders or finished non-audio work do not earn it. It needs the required evidence named in the handoff. Audio remains BLOCKED. If the handoff names no executable operation, touch campaign/HOLD_NO_EXECUTABLE_WORK with one reason line and stop.
 6. Sources: evidence/source_path.txt points to verified copies under source_media/. Never read ~/Downloads unattended (TCC prompt hang).
