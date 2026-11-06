@@ -1,12 +1,38 @@
-"""Validate full-population identity, evidence preservation and completion honesty."""
+"""Validate full-population identity, evidence preservation and completion honesty.
+Default: the frozen audit, against its pinned registry copy. --current-registry: only that the live registry still carries the audited evidence."""
 import hashlib
 import json
 import sqlite3
+import sys
 import zipfile
 from collections import Counter
-from build_audit_966 import BASE, ROOT, DIMENSIONS, STATUSES, read
+from build_audit_966 import BASE, ROOT, DIMENSIONS, FROZEN_REGISTRY, STATUSES, read
 
 COMPLETE={'COMPLETE_EVIDENCE_BACKED','COMPLETE_LIMITED_EVIDENCE'}
+REGISTRY_KEY='data/catalog/youtube_channel_registry.db'
+
+def source_drift_errors(source_hashes):
+    """Each frozen source must keep its bytes. The registry entry is checked through its pinned copy, never the live database."""
+    errors=[]
+    for path,expected in source_hashes.items():
+        file=FROZEN_REGISTRY if path==REGISTRY_KEY else ROOT/path
+        if not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest()!=expected: errors.append('source drift '+path)
+    return errors
+
+def current_registry_errors(rows,db=ROOT/REGISTRY_KEY):
+    """The live registry may gain videos and metrics. It must not lose an audited video or change its audited transcript."""
+    errors=[]
+    try:
+        con=sqlite3.connect(f'file:{db}?mode=ro',uri=True)
+        known={v for v, in con.execute('select youtube_video_id from videos')}
+        for r in rows:
+            vid=r['Video_ID'];digest=r['script']['source'].get('Text_SHA256')
+            if vid not in known: errors.append('current registry lost video '+vid);continue
+            if not digest: continue
+            text=con.execute('select transcript_text from transcripts where youtube_video_id=?',(vid,)).fetchone()
+            if not text or hashlib.sha256((text[0] or '').encode()).hexdigest()!=digest: errors.append('current registry changed transcript '+vid)
+    except sqlite3.Error as exc: errors.append(f'current registry unreadable: {exc}')
+    return errors
 
 def reference_gate_errors():
     """Framework gate (structural only): every accepted NICK_281+ batch needs a validating reference comparison; every ledger reanalysis file must validate."""
@@ -172,10 +198,9 @@ def validate():
     assert len(ids)==len({r['Video_ID'] for r in ids})==966
     errors+=identity_errors([r['Video_ID'] for r in ids],[r['Video_ID'] for r in rows])
     assert hashlib.sha256((BASE/'audit-baseline/VIDEO_MASTER.csv').read_bytes()).hexdigest()==frozen['frozen_master_sha256']
-    for path,expected in frozen['source_hashes'].items():
-        if hashlib.sha256((ROOT/path).read_bytes()).hexdigest()!=expected: errors.append('source drift '+path)
+    errors+=source_drift_errors(frozen['source_hashes'])
     channel={r['Video_ID']:r['Channel_ID'] for r in ids}
-    con=sqlite3.connect(f'file:{ROOT}/data/catalog/youtube_channel_registry.db?mode=ro',uri=True)
+    con=sqlite3.connect(f'file:{FROZEN_REGISTRY}?mode=ro',uri=True)
     for r in rows:
         vid=r['Video_ID'];errors += [vid+': '+e for e in semantic_errors(r)]
         if r['Channel_ID']!=channel.get(vid): errors.append('channel mismatch '+vid)
@@ -221,4 +246,8 @@ def validate():
     print(json.dumps(report,indent=2))
     return report
 
-if __name__=='__main__':validate()
+if __name__=='__main__':
+    if sys.argv[1:]==['--current-registry']:
+        e=current_registry_errors([json.loads(s) for s in (BASE/'VIDEO_AUDIT_966.jsonl').read_text().splitlines()])
+        print('OK' if not e else e);sys.exit(bool(e))
+    validate()

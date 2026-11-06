@@ -6,7 +6,8 @@ import pytest
 
 WORKFLOW = (Path(__file__).resolve().parents[1] / ".github/workflows/validate.yml").read_text(encoding="utf-8")
 APPROVED = ["data/catalog/youtube_inventory.db", "data/catalog/youtube_channel_registry.db",
-            "data/knowledge/reference_knowledge.db"]
+            "data/knowledge/reference_knowledge.db",
+            "research/finance-economics-intelligence/audit-baseline/youtube_channel_registry.frozen.db"]
 
 
 def step_script(name):
@@ -83,6 +84,7 @@ def test_rebuilt_registry_is_validated_after_the_rebuild():
     assert order == sorted(order)
     script = step_script("Validate provenance and registry")
     assert "validate_dataset_ledgers" in script and "validate_youtube_channel_registry" in script
+    assert "validate_audit_966.py --current-registry" in script
 
 
 def test_visual_forensics_crosswalk_keeps_counts_separate():

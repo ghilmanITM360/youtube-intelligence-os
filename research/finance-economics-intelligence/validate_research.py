@@ -33,7 +33,7 @@ def main():
         r=rows(name);assert len(r)==966 and {x['Video_ID'] for x in r}==ids,name
     texts=rows('TRANSCRIPT_COVERAGE.csv');valid=[r for r in texts if r['Status']=='TEXT_AVAILABLE']
     assert len(valid)==955 and len({r['Text_SHA256'] for r in valid})==955
-    db=ROOT/'data/catalog/youtube_channel_registry.db'
+    db=BASE/'audit-baseline/youtube_channel_registry.frozen.db'
     assert sha(db)==json.loads((BASE/'BASELINE_VALIDATION.json').read_text())['db_sha256_before']
     con=sqlite3.connect(f'file:{db}?mode=ro',uri=True)
     for r in valid:

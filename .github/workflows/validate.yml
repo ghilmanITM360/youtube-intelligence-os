@@ -45,7 +45,7 @@ jobs:
       - name: Exercise partial catalog rebuilder against disposable database
         run: |
           python -m scripts.rebuild_inventory_catalog --database "$RUNNER_TEMP/bootstrap_inventory_catalog.db"
-      # Before the registry rebuild: validate_audit_966 pins the committed registry DB by SHA-256.
+      # The frozen audit reads its pinned copy. These gates run first so that committed evidence is judged before any rebuild.
       - name: Finance and reference framework gates
         run: |
           python -m pytest -q research/finance-economics-intelligence/reference-framework/test_reference_comparison.py
@@ -57,6 +57,7 @@ jobs:
         run: |
           python -m scripts.validate_dataset_ledgers
           python -m scripts.validate_youtube_channel_registry
+          python research/finance-economics-intelligence/validate_audit_966.py --current-registry
       - name: Run distributable suite
         run: python -m pytest -q
       - name: Reject unapproved databases and generated junk
@@ -65,5 +66,5 @@ jobs:
           TRACKED="$(git ls-files -z | tr '\0' '\n')"
           JUNK="$(echo "$TRACKED" | grep -iE '\.(db-wal|db-shm|db-journal|sqlite3?|pyc)$|^outputs/' || true)"
           test -z "$JUNK" || { echo "Tracked database sidecar or generated junk:"; echo "$JUNK"; exit 1; }
-          UNAPPROVED_DBS="$(echo "$TRACKED" | grep -iE '\.db$' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' -e 'data/knowledge/reference_knowledge.db' || true)"
+          UNAPPROVED_DBS="$(echo "$TRACKED" | grep -iE '\.db$' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' -e 'data/knowledge/reference_knowledge.db' -e 'research/finance-economics-intelligence/audit-baseline/youtube_channel_registry.frozen.db' || true)"
           test -z "$UNAPPROVED_DBS" || { echo "Unapproved tracked database(s):"; echo "$UNAPPROVED_DBS"; exit 1; }
