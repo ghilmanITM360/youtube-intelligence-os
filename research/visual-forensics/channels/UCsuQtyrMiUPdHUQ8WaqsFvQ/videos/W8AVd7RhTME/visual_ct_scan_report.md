@@ -5,7 +5,7 @@
 - Mode DEEP with frame-precise onsets. Status **VISUAL_ANALYSIS_PARTIAL** (listening BLOCKED_CAPABILITY). Segment classification by fresh reviewer `rv1_W8AVd7RhTME` (Claude Code sonnet subagent; transcript audit: 6/6 sheets opened, 13 image results, validator errors 0); primary spot-check: primary opened SHEET_03 and native NATIVE_000277; 10 rows compared, 0 disagreements. G0049 D4 drift flagged by detector and left as reviewer LOW.
 
 ## 1. Coverage (MEASURED)
-All 2013 frames measured. 49 segments = 25 HOLD states (1989 frames, measured static; settled frame viewed) + 24 ACTIVITY events (24 frames; 24 viewed in tiles; 24 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 36. Unresolved segments: G0049.
+All 2013 frames measured. 49 segments = 25 HOLD states (1989 frames, measured static; settled frame viewed) + 24 ACTIVITY events (24 frames; 24 viewed in tiles; 24 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 36. Unresolved segments: none.
 
 ## 2. Structure (OBSERVED, from ledgers)
 - 18 shots (composition replacements incl. cuts back), 24 activity events: GRAPHIC/TEXT 1, CAMERA 0, CHARACTER 6, LIGHT/COLOR/EFFECT 0, SHOT_CUT 17, FALSE_POSITIVE 0.
@@ -58,7 +58,10 @@ UNAVAILABLE: software, typeface, generation method. NATIVE_001241 and NATIVE_002
 `review/rv1_W8AVd7RhTME/narration_visual.csv` (ASR_UNCERTIFIED). Asset aliases: `review/rv1_W8AVd7RhTME/asset_inventory.csv`.
 
 ## 8. Primary corrections (reviewer text in §3 is preserved verbatim; corrected rows govern the ledgers)
-none
+seg,field,old,new,reason,evidence
+G0049,description,Bare tree held; a small translucent pale ghost of the old yellow caveman appears above treetop at upper left (faint at 38.44s then more opaque and positioned higher by 40.24s tile); tree static. Ghost fade-in plus slight movement; exact path UNRESOLVED at three-tile scale,"Bare tree held. A ghost of the old yellow-tunic caveman (frowning, heavy brow, beard, spotted tunic, wispy tail) above the treetop fades in slowly during this hold: absent at f1832, pale at f1922, darker at f2012.",Checkpoint J gap review (primary),campaign/gap_review/R2 sheets + alignment
+G0049,confidence,MEDIUM,HIGH,Checkpoint J gap review (primary),campaign/gap_review/R2 sheets + alignment
+
 
 ## 9. Limits
 Hold interiors verified by measurement, not by viewing every frame; activity in-between frames sampled where noted in coverage.json; state review at tile scale 1/4; reviewer is same model family as orchestrator (not independent human review).

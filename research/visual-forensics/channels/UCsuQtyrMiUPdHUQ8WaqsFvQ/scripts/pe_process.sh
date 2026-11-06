@@ -9,5 +9,6 @@ A=review/$R/annotations.csv; [ -f review/$R/annotations_corrected.csv ] && A=rev
 python3 -I $WS/scripts/pe_build.py . $A $R > /dev/null
 python3 -I $WS/scripts/pe_finalize.py . --art-done
 python3 -I $WS/scripts/pe_report.py . $R
+python3 -I $WS/scripts/pe_gate_corrections.py .
 python3 -I $WS/scripts/pe_ledger.py
 echo "$(date -u +%FT%TZ) $id processed reviewer=$R agent=$AG" >> $WS/campaign/progress_log.txt

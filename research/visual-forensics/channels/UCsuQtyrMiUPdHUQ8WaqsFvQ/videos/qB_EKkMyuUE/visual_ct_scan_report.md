@@ -5,7 +5,7 @@
 - Mode DEEP with frame-precise onsets. Status **VISUAL_ANALYSIS_PARTIAL** (listening BLOCKED_CAPABILITY). Segment classification by fresh reviewer `rv1_qB_EKkMyuUE` (Claude Code sonnet subagent; transcript audit: 18/18 sheets opened, 41 image results, validator errors 0); primary spot-check: primary opened SHEET_09 and native NATIVE_002473; 12 rows compared; 1 disagreement (G0098 effect class removed). G0078/G0079 offset rejected by measured bbox. Observations calls KrudTalks a channel title: not supported; canonical channel is Primitive Education, KrudTalks is on-screen text inside this video only, and its meaning is INFERRED as an in-video gag.
 
 ## 1. Coverage (MEASURED)
-All 6837 frames measured. 205 segments = 103 HOLD states (6691 frames, measured static; settled frame viewed) + 102 ACTIVITY events (146 frames; 140 viewed in tiles; 96 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 20. Unresolved segments: G0174, G0202.
+All 6837 frames measured. 205 segments = 103 HOLD states (6691 frames, measured static; settled frame viewed) + 102 ACTIVITY events (146 frames; 146 viewed in tiles; 102 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 20. Unresolved segments: none.
 
 ## 2. Structure (OBSERVED, from ledgers)
 - 69 shots (composition replacements incl. cuts back), 102 activity events: GRAPHIC/TEXT 31, CAMERA 3, CHARACTER 15, LIGHT/COLOR/EFFECT 4, SHOT_CUT 68, FALSE_POSITIVE 0.
@@ -107,6 +107,8 @@ G0079,description,"Same realistic crying face, but framed shifted left/larger th
 G0079,confidence,MEDIUM,HIGH,Measured,measured bbox; frames/sheets/SHEET_09.jpg
 G0078,description,"Realistic grey-scale painted close-up of a weeping caveman face: tears, mucus, mouth open wailing. Style differs sharply from line cartoons. In this single frame the face sits offset toward right and upper.","Realistic grey-scale painted close-up of a weeping caveman face: tears, mucus, mouth open wailing. Style differs sharply from line cartoons.",Offset claim rejected by bbox measurement,measured bbox; frames/sheets/SHEET_09.jpg
 G0098,event_class,SHOT_CUT+LIGHT/COLOR/EFFECT,SHOT_CUT,No light/effect event visible; scene swap only (primary viewed SHEET_09),measured bbox; frames/sheets/SHEET_09.jpg
+G0174,description,"Woman centre, arms crossed, angry frown, long dark hair; looks like the G0084 drawing, reuse vs redraw UNRESOLVED.","Woman centre, arms crossed, angry frown, long dark hair, yellow leopard dress (replaces fish with spear, f5849). Same design and pose as G0084, about 20 px offset; translation-only pixel reuse excluded by alignment residual (MEASURED 66k px); scaled reuse versus redraw not separated.",Checkpoint J gap review (primary),campaign/gap_review/R2 sheets + alignment
+G0202,description,"Couple cuddled over fire, eyes closed smiling; looks like G0106 drawing, identical reuse vs redraw UNRESOLVED.","Couple cuddled over a campfire, eyes closed smiling (replaces a lounging caveman with bottle and donut, f6599). Same design as G0106 at a different size; translation-only pixel reuse excluded by alignment residual (MEASURED 241k px); scaled reuse versus redraw not separated.",Checkpoint J gap review (primary),campaign/gap_review/R2 sheets + alignment
 
 
 ## 9. Limits

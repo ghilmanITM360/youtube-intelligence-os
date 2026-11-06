@@ -5,7 +5,7 @@
 - Mode DEEP with frame-precise onsets. Status **VISUAL_ANALYSIS_PARTIAL** (listening BLOCKED_CAPABILITY). Segment classification by fresh reviewer `rv1_Nv4xJ_NsFdo` (Claude Code sonnet subagent; transcript audit: 10/10 sheets opened, 20 image results, validator errors 0); primary spot-check: primary opened SHEET_07 and native NATIVE_002618; 10 rows compared, 0 disagreements. G0068 'goated' moving up when trophy pops on is a layout reflow between two tiles (state change), not an observed camera move. No D4/D4C flags in this video..
 
 ## 1. Coverage (MEASURED)
-All 3005 frames measured. 93 segments = 47 HOLD states (2958 frames, measured static; settled frame viewed) + 46 ACTIVITY events (47 frames; 46 viewed in tiles; 45 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 8. Unresolved segments: G0086.
+All 3005 frames measured. 93 segments = 47 HOLD states (2958 frames, measured static; settled frame viewed) + 46 ACTIVITY events (47 frames; 47 viewed in tiles; 46 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 8. Unresolved segments: none.
 
 ## 2. Structure (OBSERVED, from ledgers)
 - 23 shots (composition replacements incl. cuts back), 46 activity events: GRAPHIC/TEXT 17, CAMERA 0, CHARACTER 7, LIGHT/COLOR/EFFECT 0, SHOT_CUT 22, FALSE_POSITIVE 0.
@@ -59,7 +59,10 @@ NATIVE_002016 (G0057) and NATIVE_001842 (G0053) extracted, not opened. Encoding 
 `review/rv1_Nv4xJ_NsFdo/narration_visual.csv` (ASR_UNCERTIFIED). Asset aliases: `review/rv1_Nv4xJ_NsFdo/asset_inventory.csv`.
 
 ## 8. Primary corrections (reviewer text in §3 is preserved verbatim; corrected rows govern the ledgers)
-none
+seg,field,old,new,reason,evidence
+G0086,description,"Word 'of' appears on third line; 'goated' block sits lower in tile than prior hold (layout shifted, UNRESOLVED whether stack re-centred)","Word 'of' appears on the third line below 'goated' and 'greatest'. The first two lines do not move (f2836 vs f2837), so the stack is not re-centred; the word just adds below.",Checkpoint J gap review (primary),campaign/gap_review/R2 sheets + alignment
+G0086,confidence,MEDIUM,HIGH,Checkpoint J gap review (primary),campaign/gap_review/R2 sheets + alignment
+
 
 ## 9. Limits
 Hold interiors verified by measurement, not by viewing every frame; activity in-between frames sampled where noted in coverage.json; state review at tile scale 1/4; reviewer is same model family as orchestrator (not independent human review).

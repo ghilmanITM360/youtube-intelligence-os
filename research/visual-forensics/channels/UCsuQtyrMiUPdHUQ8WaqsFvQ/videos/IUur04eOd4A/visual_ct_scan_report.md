@@ -5,7 +5,7 @@
 - Mode DEEP with frame-precise onsets. Status **VISUAL_ANALYSIS_PARTIAL** (listening BLOCKED_CAPABILITY). Segment classification by fresh reviewer `rv1_IUur04eOd4A` (Claude Code sonnet subagent; transcript audit: 8/8 sheets opened, 24 image results, validator errors 0); primary spot-check: primary opened SHEET_02 (10 tiles) and native crop NATIVE_001165; 10 rows compared, 0 disagreements; G0014 tiny far-away caveman could be a scale change of the same asset rather than scene cut, classified SHOT_CUT at MEDIUM by reviewer, kept.
 
 ## 1. Coverage (MEASURED)
-All 2038 frames measured. 63 segments = 32 HOLD states (1918 frames, measured static; settled frame viewed) + 31 ACTIVITY events (120 frames; 120 viewed in tiles; 31 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 33. Unresolved segments: G0056.
+All 2038 frames measured. 63 segments = 32 HOLD states (1918 frames, measured static; settled frame viewed) + 31 ACTIVITY events (120 frames; 120 viewed in tiles; 31 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 33. Unresolved segments: none.
 
 ## 2. Structure (OBSERVED, from ledgers)
 - 17 shots (composition replacements incl. cuts back), 31 activity events: GRAPHIC/TEXT 6, CAMERA 5, CHARACTER 7, LIGHT/COLOR/EFFECT 0, SHOT_CUT 16, FALSE_POSITIVE 0.
@@ -58,5 +58,12 @@ Not viewed natively: NATIVE_000203 and NATIVE_000239 were extracted but not open
 ## 7. Narration-to-visual crosswalk
 `review/rv1_IUur04eOd4A/narration_visual.csv` (ASR_UNCERTIFIED). Asset aliases: `review/rv1_IUur04eOd4A/asset_inventory.csv`.
 
-## 8. Limits
+## 8. Primary corrections (reviewer text in §3 is preserved verbatim; corrected rows govern the ledgers)
+seg,field,old,new,reason,evidence
+G0056,event_class,GRAPHIC/CAMERA,GRAPHIC/TEXT+CAMERA,reviewer shorthand not in class list; meaning preserved,brief class list
+G0060,event_class,CAMERA+GRAPHIC,CAMERA+GRAPHIC/TEXT,reviewer shorthand not in class list; meaning preserved,brief class list
+G0056,description,Fire smaller and moved to right; caveman at left holding stick with hamburger over fire; reads as zoom-out plus new characters/prop; exact mechanism UNRESOLVED,"Before f1807: large campfire (red/orange/yellow flames on logs, small smoke tick) centred. After f1808: the fire is the same drawing scaled down (about 45 percent, same flame, log and tick shapes) and moved to the lower right; newly present at left: bearded scowling caveman in yellow leopard tunic holding a stick with a hamburger over the fire. Fire is scaled, not redrawn; caveman and burger are new.",Checkpoint J gap review (gap reviewer),campaign/gap_review/UNRES_02.jpg
+
+
+## 9. Limits
 Hold interiors verified by measurement, not by viewing every frame; activity in-between frames sampled where noted in coverage.json; state review at tile scale 1/4; reviewer is same model family as orchestrator (not independent human review).

@@ -8,7 +8,8 @@ Read v1 for all sections not changed here.
 3. Art (A4): "flat fills, no gradient" applies to drawn elements, not all held states. Photographs appear as literal props and backgrounds (5gSIU30yiVs G0021, G0024; xBJ6suQSt98 G0004; 3AsDdMQr_nQ 26 rows; 6YHva7Me2ls G0189). Added subject and colour variants: personified triangle (6YHva7Me2ls G0137), tunic-less caveman with belly hole (C_jSOXP_XWY G0012), magenta tunic with colour drift (5gSIU30yiVs G0027-G0029).
 4. Reuse (A10), replaces v1 claim: 6 of 7 portrait videos are narration excerpts of a landscape video (0.849-0.991 ASR overlap). Only Nv4xJ_NsFdo has no sibling (0.083). Portrait independent production evidence is therefore n=1 plus recomposed excerpts.
 5. Text (A6): word-by-word build is common but not universal. Title text can sit static from frame 0 in series Shorts (C_jSOXP_XWY G0001-G0005, 5gSIU30yiVs G0001-G0009).
-6. Evidence limit: contact sheets hid the bottom 8.1% landscape / 4.6% portrait; see HELDOUT_EVALUATION.md.
+6. Evidence limit: contact sheets hid the bottom 8.1% landscape / 4.6% portrait; see HELDOUT_EVALUATION.md. Audited for all 15 videos in HIDDEN_REGION_AUDIT.md: no CTA, caption or end card there, one text line corrected. No rule changes.
+7. Validation gap: v2 stays unvalidated on unseen data. RT_L1 attempt 5 and RT_P1 attempt 6 pass as bounded animatic conformance to v1, not as validation of v2 or of source-level drawing quality.
 
 ## Reconstruction note
 ACCEPTANCE_RT_v1 tests rule conformance, not art richness or narration sync. See reconstruction/RT_*/attempt_*/RT_EVALUATION.md.

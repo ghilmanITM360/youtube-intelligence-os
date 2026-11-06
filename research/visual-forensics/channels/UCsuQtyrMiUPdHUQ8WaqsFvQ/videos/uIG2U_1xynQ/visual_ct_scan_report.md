@@ -5,7 +5,7 @@
 - Mode DEEP with frame-precise onsets. Status **VISUAL_ANALYSIS_PARTIAL** (listening BLOCKED_CAPABILITY). Segment classification by fresh reviewer `rv1_uIG2U_1xynQ` (Claude Code sonnet subagent; transcript audit: 10/10 sheets opened, 25 image results, validator errors 0); primary spot-check: primary opened SHEET_05 and native NATIVE_002474; 10 rows compared; 1 disagreement (G0040 position) corrected. Text builds with reserved space for following word: BLACK sits left, then HOLE. completes a centred line.
 
 ## 1. Coverage (MEASURED)
-All 2693 frames measured. 87 segments = 44 HOLD states (2547 frames, measured static; settled frame viewed) + 43 ACTIVITY events (146 frames; 97 viewed in tiles; 42 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 22. Unresolved segments: G0024, G0025, G0074, G0080.
+All 2693 frames measured. 87 segments = 44 HOLD states (2547 frames, measured static; settled frame viewed) + 43 ACTIVITY events (146 frames; 146 viewed in tiles; 43 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 22. Unresolved segments: G0024, G0025.
 
 ## 2. Structure (OBSERVED, from ledgers)
 - 18 shots (composition replacements incl. cuts back), 43 activity events: GRAPHIC/TEXT 16, CAMERA 3, CHARACTER 10, LIGHT/COLOR/EFFECT 1, SHOT_CUT 17, FALSE_POSITIVE 0.
@@ -58,6 +58,13 @@ UNAVAILABLE: software, typeface, generation method. NATIVE_001035 and NATIVE_001
 ## 8. Primary corrections (reviewer text in §3 is preserved verbatim; corrected rows govern the ledgers)
 seg,field,old,new,reason,evidence
 G0040,description,Word 'BLACK' appears centre-right in black caps,"Word 'BLACK' appears left of centre in black caps, leaving space for the next word.",Inside-tile position is left of centre; centre-right was sheet position,frames/sheets/SHEET_05.jpg
+G0024,description,Two white rounded outline lumps appear beneath the hole under the X; shape unclear at tile scale (possibly buttock-like outline; INFERRED); UNRESOLVED,"Black hole with red X (red V-shaped bars); at f646 two white rounded outline lumps appear beneath the X: two adjacent rounded lobes outlined in black meeting at a central cusp, white fill (about 10.8k px); shape observed, identity UNRESOLVED (buttock-like is INFERRED only); missing: wider crop showing the lumps in context or a later frame at higher scale.",Checkpoint J gap review (gap reviewer),campaign/gap_review/UNRES_09.jpg
+G0024,confidence,LOW,MEDIUM,Checkpoint J gap review (gap reviewer),campaign/gap_review/UNRES_09.jpg
+G0025,description,Black hole with red X and two rounded outline lumps underneath; UNRESOLVED identity of lumps,"Black hole with red X and two rounded outline lumps underneath; the segment is static (0 px changed between f647 and f678). Lump shape as in G0024 (two rounded lobes with a central cusp); identity UNRESOLVED; this crop is full-frame at about 110 px wide, too small; missing: native-resolution crop of the lumps.",Checkpoint J gap review (gap reviewer),campaign/gap_review/UNRES_10.jpg
+G0025,confidence,LOW,MEDIUM,Checkpoint J gap review (gap reviewer),campaign/gap_review/UNRES_10.jpg
+G0074,description,Same worried face drawing reduced to about half size centred on white; could be camera zoom out or object scale (UNRESOLVED which),"Worried face (round head, frown, two raised open hands) reduced to about half size centred on white: proportions, features and line-weight relation match the large version, so a scaled copy of the same drawing, not a redraw. Camera zoom versus object scale cannot be separated because the background is plain white.",Checkpoint J gap review (gap reviewer),campaign/gap_review/UNRES_10.jpg
+G0080,description,Dot replaced by smug caveman smirking pointing at viewer with one hand and raising index finger with the other; faint grey smudges at top edge UNRESOLVED,"Tiny grey dot (f2356) replaced by smug caveman in yellow leopard tunic smirking, pointing at viewer with one hand and raising fingers (index raised) with the other; the faint grey smudges at the top edge are not visible in this crop (crop starts below the top edge) so remain unconfirmed.",Checkpoint J gap review (gap reviewer),campaign/gap_review/UNRES_10.jpg
+G0080,confidence,HIGH,MEDIUM,Checkpoint J gap review (gap reviewer),campaign/gap_review/UNRES_10.jpg
 
 
 ## 9. Limits

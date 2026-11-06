@@ -31,7 +31,7 @@ durs = {round(float(x[1]), 6) for x in ptsl if len(x) > 1 and x[1] not in ("", "
 git = subprocess.run(["git", "-C", "/Users/ghilmankhan/workprojects/youtube-intelligence-os", "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
 sm = {"schema_version": "1.0", "source": {
     "channel_id": "UCsuQtyrMiUPdHUQ8WaqsFvQ", "channel_handle": "Primitive Education", "video_id": vid,
-    "file_path": (V / "evidence/source_path.txt").read_text().strip(), "sha256": sha,
+    "file_path": (V / ("evidence/source_path_original.txt" if (V / "evidence/source_path_original.txt").exists() else "evidence/source_path.txt")).read_text().strip(), "sha256": sha,
     "bytes": int((V / "evidence/source_bytes.txt").read_text()), "duration_seconds": float(probe["format"]["duration"]),
     "time_base": vs["time_base"], "frame_rate_avg": vs["avg_frame_rate"], "r_frame_rate": vs["r_frame_rate"],
     "decoded_frames": cal["frames"], "nb_frames_container": vs.get("nb_frames"),

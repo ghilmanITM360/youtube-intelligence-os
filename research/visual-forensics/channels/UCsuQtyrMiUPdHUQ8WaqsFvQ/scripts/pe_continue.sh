@@ -5,12 +5,17 @@ WS=$HOME/YIOS-local-audits/primitive-education; C=$WS/campaign; LOG=$C/scheduler
 export PATH=$HOME/.local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export VF_LOCK_DIR=$WS/.pe_writer_lock VF_LOCK_LOG=$WS/.pe_lock_events.log; LK=$HOME/YIOS-local-audits/vf_lock.sh
 say() { echo "$(date -u +%FT%TZ) $*" >> $LOG; }
+# One-time model-free receipt that launchd context can read the verified copies.
+[ -f $C/.source_probe_done ] || { if perl -e 'alarm 6; exec @ARGV' head -c 16 $WS/source_media/RmTdnXHbI8s.mp4 > /dev/null 2>&1; then say "PROBE source_media read OK (launchd context)"; touch $C/.source_probe_done; else say "PROBE source_media read FAILED"; fi; }
+# Owner-visible hold: nothing executable without a new capability; no model call. Delete the file to resume.
+[ -f $C/HOLD_NO_EXECUTABLE_WORK ] && { say "HOLD $(head -1 $C/HOLD_NO_EXECUTABLE_WORK)"; exit 0; }
 if [ -f $C/CAMPAIGN_COMPLETE ]; then say "COMPLETE -> disabling"; launchctl bootout gui/$(id -u)/com.yios.primitive-education-continue; exit 0; fi
 [ -f $WAKE ] && [ "$(date +%s)" -lt "$(cat $WAKE)" ] && exit 0
 if [ "$($LK status | head -1)" != FREE ]; then
   r=$($LK recover 2>&1 | head -1); case "$r" in RECOVERED*) say "lock $r";; *) say "SKIP lock held: $r"; exit 0;; esac
 fi
-[ -d "$HOME/Downloads/videos in mp3/PrimitiveEducation-MP4" ] && [ -f $WS/selection/selection_v1.json ] || { say "BLOCK sources/workspace missing"; exit 0; }
+# Sources: verified copies in the workspace (campaign/SOURCE_MEDIA_COPIES.json). Downloads triggers a TCC prompt nobody can answer unattended (tccd AUTHREQ_PROMPTING 2026-11-05 12:27Z), so this script must not touch it.
+[ -s $WS/source_media/RmTdnXHbI8s.mp4 ] && head -c 16 $WS/source_media/RmTdnXHbI8s.mp4 > /dev/null && [ -f $WS/selection/selection_v1.json ] || { say "BLOCK sources/workspace missing"; exit 0; }
 free=$(df -g $HOME | tail -1 | awk '{print $4}'); [ "$free" -ge 5 ] || { say "BLOCK disk ${free}GiB"; exit 0; }
 u=$($WS/scripts/pe_usage.sh) || { say "SKIP usage UNKNOWN"; date -v+30M +%s > $WAKE; exit 0; }
 read w wr f fr <<< "$(/usr/bin/python3 -c "import json,sys;d=json.loads(sys.argv[1]);print(d['seven_day'],d['seven_day_reset'],d['five_hour'],d['five_hour_reset'])" "$u")"

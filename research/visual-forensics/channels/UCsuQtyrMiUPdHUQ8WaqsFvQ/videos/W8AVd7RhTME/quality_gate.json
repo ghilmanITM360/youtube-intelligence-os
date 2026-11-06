@@ -1,50 +1,71 @@
 {
- "video_id": "W8AVd7RhTME",
- "source_sha256": "c0b57fc6946f7a8ff4a5430693a3e1ba4bdb87e52578f0db907aeb560ca3bae2",
- "requested_mode": "DEEP",
- "generated_utc": "2026-11-04T16:14:12Z",
- "review_scope": {
-  "source_seconds_total": 40.333061,
-  "overview_sampling_hz": "every decoded frame measured",
-  "native_intervals_reviewed": "settled frame of every HOLD + sampled ACTIVITY frames at 1/4 scale (see coverage.json)",
-  "unreviewed_or_unverified_intervals": []
- },
- "gates": {
-  "source_identity": "PASS",
-  "full_temporal_overview": "PASS",
-  "candidate_shots_verified": "PASS",
-  "meaningful_state_timing": "PARTIAL",
-  "motion_design_review": "PASS",
-  "creative_design_review": "PARTIAL",
-  "native_art_review": "PASS",
-  "independent_review": "PARTIAL",
-  "reconstruction_test": "PENDING",
-  "visual_script_mapping": "PARTIAL",
-  "production_blueprint": "PARTIAL",
-  "audio_human_listening": "BLOCKED",
-  "final_av_signoff": "BLOCKED"
- },
- "gate_evidence": {
-  "source_identity": "source_manifest.json + census/census.csv (channel tab listing)",
-  "full_temporal_overview": "tables/FULL_FRAME_MEASUREMENTS.csv all frames; tables/segments_v1.csv covers every frame",
-  "candidate_shots_verified": "tables/state_ledger.csv every segment classified from viewed tiles",
-  "meaningful_state_timing": "frame-precise onsets from measurements; unresolved: ['G0049']",
-  "motion_design_review": "24/24 activities viewed at every frame",
-  "creative_design_review": "visual_ct_scan_report.md \u00a74 + tables/palette_measured.json (tile-scale)",
-  "visual_script_mapping": "audio_visual_alignment.csv + review/*/narration_visual.csv, ASR_UNCERTIFIED; no catalog transcript exists for this channel",
-  "production_blueprint": "reconstruction_blueprint.md (derived prompts; no render test yet)",
-  "audio_human_listening": "campaign/AUDIO_LISTENING_CAPABILITY.json BLOCKED_CAPABILITY"
- },
- "final_video_status": "VISUAL_ANALYSIS_PARTIAL",
- "overall": "PARTIAL",
- "ct_scan_complete": false,
- "full_av_signoff": false,
- "limitations": [
-  "no actual listening",
-  "activity in-between frames sampled where noted",
-  "state review at 1/4 tile scale; native review covers sampled key states only",
-  "reconstruction not render-tested per video"
- ],
- "reviewer": "rv1_W8AVd7RhTME",
- "next_step": "independent review sample; reconstruction test via channel manual"
+  "video_id": "W8AVd7RhTME",
+  "source_sha256": "c0b57fc6946f7a8ff4a5430693a3e1ba4bdb87e52578f0db907aeb560ca3bae2",
+  "requested_mode": "DEEP",
+  "generated_utc": "2026-11-06T03:30:13Z",
+  "review_scope": {
+    "source_seconds_total": 40.333061,
+    "overview_sampling_hz": "every decoded frame measured",
+    "native_intervals_reviewed": "settled frame of every HOLD + sampled ACTIVITY frames at 1/4 scale (see coverage.json)",
+    "unreviewed_or_unverified_intervals": []
+  },
+  "gates": {
+    "source_identity": "PASS",
+    "full_temporal_overview": "PASS",
+    "candidate_shots_verified": "PASS",
+    "meaningful_state_timing": "PASS",
+    "motion_design_review": "PASS",
+    "creative_design_review": "PARTIAL",
+    "native_art_review": "PASS",
+    "independent_review": "PARTIAL",
+    "reconstruction_test": "NOT_APPLICABLE",
+    "visual_script_mapping": "PARTIAL",
+    "production_blueprint": "PARTIAL",
+    "audio_human_listening": "BLOCKED",
+    "final_av_signoff": "BLOCKED"
+  },
+  "gate_evidence": {
+    "source_identity": "source_manifest.json + census/census.csv (channel tab listing)",
+    "full_temporal_overview": "tables/FULL_FRAME_MEASUREMENTS.csv all frames; tables/segments_v1.csv covers every frame",
+    "candidate_shots_verified": "tables/state_ledger.csv every segment classified from viewed tiles",
+    "meaningful_state_timing": "frame-precise onsets from measurements; unresolved: []",
+    "motion_design_review": "24/24 activities viewed at every frame",
+    "creative_design_review": "visual_ct_scan_report.md \u00a74 + tables/palette_measured.json (tile-scale)",
+    "visual_script_mapping": "audio_visual_alignment.csv + review/*/narration_visual.csv, ASR_UNCERTIFIED; no catalog transcript exists for this channel",
+    "production_blueprint": "reconstruction_blueprint.md (derived prompts; no render test yet)",
+    "audio_human_listening": "campaign/AUDIO_LISTENING_CAPABILITY.json BLOCKED_CAPABILITY",
+    "reconstruction_test": "No per-video render test run or required. RT_L1 attempt 5 and RT_P1 attempt 6 pass as bounded animatic conformance at channel level only; that says nothing about reconstructing this video. production_blueprint stays PARTIAL, production_spec DRAFT_NOT_RENDERED."
+  },
+  "final_video_status": "VISUAL_ANALYSIS_PARTIAL",
+  "overall": "PARTIAL",
+  "ct_scan_complete": false,
+  "full_av_signoff": false,
+  "limitations": [
+    "no actual listening",
+    "activity in-between frames sampled where noted",
+    "state review at 1/4 tile scale; native review covers sampled key states only",
+    "reconstruction not render-tested per video"
+  ],
+  "reviewer": "rv1_W8AVd7RhTME",
+  "next_step": "independent review sample; reconstruction test via channel manual",
+  "gate_corrections": [
+    {
+      "gate": "reconstruction_test",
+      "old": "PENDING",
+      "new": "NOT_APPLICABLE",
+      "checkpoint": "J",
+      "reason": "Stale hardcoded default in pe_finalize.py. Campaign brief section 5 and reconstruction/ACCEPTANCE_RT_v1.md define only channel-level RT_L1 and RT_P1; kit reference 13 asks per-state prompts and blueprint, not a per-video render."
+    }
+  ],
+  "hidden_region_audit": {
+    "tiles": 51,
+    "ACTIVITY": 24,
+    "EMPTY": 49,
+    "COVERED_V1": 1,
+    "DUP": 0,
+    "TO_REVIEW": 1,
+    "ring_only": 0,
+    "method": "campaign/HIDDEN_REGION_AUDIT.md",
+    "unreviewed": "Tiles marked DUP were compared numerically, not opened. Frames that were never sheet tiles are outside this audit unless listed in tables/strip_frames.csv."
+  }
 }

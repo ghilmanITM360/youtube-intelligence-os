@@ -5,7 +5,7 @@
 - Mode DEEP with frame-precise onsets. Status **VISUAL_ANALYSIS_PARTIAL** (listening BLOCKED_CAPABILITY). Segment classification by fresh reviewer `rv1_3AsDdMQr_nQ` (Claude Code sonnet subagent; transcript audit: 8/8 sheets opened, 19 image results, validator errors 0); primary spot-check: primary opened SHEET_05, native crop, and G0029/G0089 montages; 12 rows compared; 2 disagreements (G0047, G0053 false drift flags: reviewer misread tile positions and enc_artifact_frames) corrected via primary_corrections.csv; reviewer G0089/G0091 colour flags led to real detector gap, D4C added. Protocol note: reviewer wrote files via inline python (brief said no scripts); transcript audit shows writes only inside its review dir.
 
 ## 1. Coverage (MEASURED)
-All 3423 frames measured. 91 segments = 46 HOLD states (3348 frames, measured static; settled frame viewed) + 45 ACTIVITY events (75 frames; 75 viewed in tiles; 45 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 53. Unresolved segments: G0008.
+All 3423 frames measured. 91 segments = 46 HOLD states (3348 frames, measured static; settled frame viewed) + 45 ACTIVITY events (75 frames; 75 viewed in tiles; 45 activities viewed at every frame). Encoder-refresh frames absorbed by rule: 53. Unresolved segments: none.
 
 ## 2. Structure (OBSERVED, from ledgers)
 - 38 shots (composition replacements incl. cuts back), 45 activity events: GRAPHIC/TEXT 8, CAMERA 1, CHARACTER 6, LIGHT/COLOR/EFFECT 1, SHOT_CUT 37, FALSE_POSITIVE 0.
@@ -99,6 +99,7 @@ G0047,description,"Same lightning demon held; measured drift 3819 suggests minor
 G0059,description,"Same phone-tapping caveman held; drift px 3623, minor motion UNRESOLVED.",Same phone-tapping caveman held.,Reviewer read enc_artifact_frames as drift; measured D4=0 D4C=0,tables/segments_v1.csv
 G0067,description,"Same 3D printer photo held; drift px 2413 minor, UNRESOLVED.",Same 3D printer photo held.,Reviewer read enc_artifact_frames as drift; measured D4=0 D4C=0,tables/segments_v1.csv
 G0081,description,"Same sleeping caveman held; drift px 3993 minor, UNRESOLVED.",Same sleeping caveman held.,Reviewer read enc_artifact_frames as drift; measured D4=0 D4C=0,tables/segments_v1.csv
+G0008,description,First frame (f352) cuts from elevator to drawn white igloo-like cave with black opening and ground dashes at centre; strip f353-f382 shows same cave drawing with small continuous positional drift (changed fraction rises 0.018 to 0.045 then falls to 0.021); direction of drift UNRESOLVED at tile scale.,"First frame (f352) cuts from elevator interior to drawn white igloo-like cave with black opening and ground dashes on white; f353, f367, f382 show the same cave drawing at different positions (centre, higher, lower right): position changes of one drawing, no redraw visible.",Checkpoint J gap review (primary),campaign/gap_review/R2 sheets + alignment
 
 
 ## 9. Limits
