@@ -53,8 +53,13 @@ jobs:
           python -m scripts.validate_youtube_channel_registry
       - name: Run distributable suite
         run: python -m pytest -q
+      - name: Finance and reference framework gates
+        run: |
+          python -m pytest -q research/finance-economics-intelligence/reference-framework/test_reference_comparison.py
+          python research/finance-economics-intelligence/reference-framework/reference_comparison.py check-all
+          python research/finance-economics-intelligence/validate_audit_966.py
       - name: Reject unapproved databases and generated junk
         run: |
-          test -z "$(git ls-files 'data/catalog/*.db-wal' 'data/catalog/*.db-shm' 'outputs/**' '*.pyc')"
-          UNAPPROVED_DBS="$(git ls-files '*.db' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' || true)"
+          test -z "$(git ls-files '*.db-wal' '*.db-shm' 'outputs/**' '*.pyc')"
+          UNAPPROVED_DBS="$(git ls-files '*.db' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' -e 'data/knowledge/reference_knowledge.db' || true)"
           test -z "$UNAPPROVED_DBS" || { echo "Unapproved tracked database(s):"; echo "$UNAPPROVED_DBS"; exit 1; }

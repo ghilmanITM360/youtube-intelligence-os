@@ -799,7 +799,11 @@ def framework_plan_errors(path):
     sys.path.insert(0, str(REPO_ROOT / "research" / "finance-economics-intelligence" / "reference-framework"))
     import content_plan_check
     db = REPO_ROOT / "data" / "knowledge" / "reference_knowledge.db"
-    return content_plan_check.check(str(db), json.loads(Path(path).read_text(encoding="utf-8")))
+    try:
+        plan = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return [f"unreadable framework plan: {exc}"]
+    return content_plan_check.check(str(db), plan)
 
 
 def main(argv=None):
@@ -812,6 +816,8 @@ def main(argv=None):
     parser.add_argument("--framework-plan",
                          help="Reference-framework plan JSON (retrieved sections + per-stage rule applications or exceptions). "
                               "Structurally validated against data/knowledge/reference_knowledge.db before any plan is written; this is not a semantic approval.")
+    parser.add_argument("--framework-guided", action="store_true",
+                         help="Claim this output is framework-guided. Requires --framework-plan. Generic runs omit both.")
     parser.add_argument("--capability-registry", action="store_true",
                          help="Emit the global capability registry instead of a single plan.")
     args = parser.parse_args(argv)
@@ -826,6 +832,9 @@ def main(argv=None):
 
     if not args.channel or not args.opportunity:
         parser.error("--channel and --opportunity are required unless --capability-registry is set")
+
+    if args.framework_guided and not args.framework_plan:
+        parser.error("--framework-guided requires --framework-plan")
 
     framework = None
     if args.framework_plan:
