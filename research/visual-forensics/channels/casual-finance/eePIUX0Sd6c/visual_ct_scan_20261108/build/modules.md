@@ -1,0 +1,13 @@
+## Modules (original rebuild; derived from measured patterns)
+1. **Cast and set kit**: a small reusable cast (stick-man host with pointer, four national-costume figures, a star-banded top-hat figure, a detective, a lone suited boardroom figure, a turtle, a dragon) and a few reusable sets (green chalkboard, city boardroom with projector, fork-in-road, iceberg, burning Earth). Redraw originals; reuse the same assets across the video (the boardroom with the gold screen returns at f81, f1725, f4222, f12015, f14434).
+2. **Hard-cut scene chain**: 119 hard cuts, median shot 3.2 s (0.6-17.9 s); the encoder places an I-frame on 116 of them, so cuts must be authored as true edits and the codec will follow.
+3. **Slow push-in on held illustrations**: apply a continuous scale-up of about 0.8 percent per second (interquartile range 0.64-0.97, extremes 0.25-4.4 on very short shots, measured on 56 shots) starting at the cut; leave screen recordings and monitor sketches locked.
+4. **24 fps motion on a 30 fps timeline**: character and background animation is drawn at 24 fps and conformed to 30 by repeating every fifth frame (4 of 5 frames change); reproduce the cadence for animated runs, not for held scenes.
+5. **Text-card beat**: small black rounded-handwriting text centred on white, replaced in place by a single-frame swap for lists of short beats ('Cute.' / 'Respectable.'; 'Not Dumping.' / 'Diversifying.' / 'Slowly.' / 'Strategically.'; When/Then pairs built line by line).
+6. **Annotation pop-ins**: red marker circles, arrows and labels (CPI, Gold, ~70%, 58%, -12%) appear in one frame on top of a chart screenshot, never drawn on; use your own chart and numbers.
+7. **Sponsor block in house style**: sponsor card, host at a desk, mascot-cube character, hand-drawn monitor over screen recordings, a meme card; about 69 s; replace with your own sponsor assets and disclosure.
+8. **Third-party insert slot**: photographs, news snippets, marketplace listing, meme, banknote images, forum posts and chart screenshots are replaced with licensed or self-made equivalents; never copy the source items.
+9. **Eased zoom reveal**: one eased push-in (about 2.8x over 5 s, fastest in the middle) lands on faces before a hard cut (f8238-f8398); use for a punch-in beat.
+10. **Callback structure**: open and close on the chalkboard host (f0, f11581, f13994) and repeat the iceberg, fork-in-road, burning Earth and central-bank-purchases visuals as motifs.
+11. **Codec note**: do not reproduce the sub-2,000-px MICRO states; in zoom shots they are the quantization steps of the push-in, elsewhere their cause is unresolved.
+12. **End card**: 'Subscribe for more Casual Finance', platform mark with social icons, button, waving stick man; hold about 5.0 s.

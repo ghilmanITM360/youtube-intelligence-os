@@ -1,0 +1,13 @@
+{
+ "native_windows": [
+  "winA rows (the 6 non-I-frame cuts plus 2 checks): f122-f126 (board to man at desk, cut at f124), f958-f962 (photo to kid and professor, f960), f1094-f1098 (Speculation 101 board to professor and book, f1096), f9980-f9984 (text to S&P chart, f9982), f10346-f10350 (returns chart to text card, f10348), f10814-f10818 (chapter card to Mag 7 chart, f10816), f10456-f10460 (text card to megaphone scene, f10458), f5638-f5644 (megaphone scene clears to blank at f5642)",
+  "winB rows: f14296-f14299 (Nvidia logo appears at f14298), f14356-f14360 (Tesla marker at f14358), f7282-f7286 (McDonald's arches visible at f7284, BOUND), f4616-f4620 (scene clears to blank at f4618)"
+ ],
+ "stepped_sheets": [
+  "overview 1 fps (531 tiles, 30 sheets, all viewed)",
+  "episode change-crop sheets epc_01-28 (218 episodes: context frame with changed-pixel bbox, crop at start-1, crop at start; all 28 sheets viewed)",
+  "state_rep (181 states, 11 sheets, all viewed)"
+ ],
+ "episode_view": "per episode: context frame at its first changed frame with the changed-pixel bbox, plus bbox crops at start-1 and start (adjacent decoded frames); every multi-frame episode (17) and every frame of 8,000 changed px or more was checked against frame_metrics to place state boundaries (found a missed cut at f10458 and a missed logo at f14298)",
+ "text_gate": "PARTIAL_OPEN_LIMITATION (headings, bubbles, bullets, card text and logo names read from decoded frames; small body text inside article, chart and table screenshots flagged not transcribed or quoted only in part; people in photographs not identified beyond on-screen names)"
+}

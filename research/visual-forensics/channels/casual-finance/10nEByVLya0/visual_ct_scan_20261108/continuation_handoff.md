@@ -1,0 +1,3 @@
+# Handoff - 10nEByVLya0 (2026-11-08)
+Visual-only CT scan built; validator `build/validate.py`. Pending outside scope: human listening (AV BLOCKED), live thumbnail/title identity. Source SHA-256 c009f63bbb2d4d35606870b2ad59ded481c5ee7c4426c98c9d75048a1c0ff8c5. Workspace /Users/ghilmankhan/YIOS-local-audits/2026-11-08-10nEByVLya0-deep-ct-scan (local only; media never in Git).
+Tools: ~/YIOS-local-audits/tooling/cf15/*.py (ingest, measure, episodes, sheets, windows, stepsheet, repsheets, build_all, build_docs, validate) + tooling/visual-ct-scan-venv; ASR with system python3 -E whisper small.en. Machine A; writer lock claude-cf15-20261108.

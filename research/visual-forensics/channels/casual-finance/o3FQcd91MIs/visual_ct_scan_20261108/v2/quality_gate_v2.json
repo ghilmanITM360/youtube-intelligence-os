@@ -1,0 +1,344 @@
+{
+ "video_id": "o3FQcd91MIs",
+ "version": "v2",
+ "source_sha256": "82ab2b63ce250723f37e569d15ecf0a8b67c22f1841ec14637216d34e4a89c85",
+ "gates": {
+  "technical_frame_coverage": "PASS",
+  "visual_state_coverage": "PASS",
+  "native_frame_transition_verification": "PASS",
+  "deep_art_direction_creative_analysis": "PASS",
+  "visual_to_script_mapping": "PASS_ASR_UNCERTIFIED",
+  "reconstruction_blueprint": "PASS"
+ },
+ "ct_scan": "CT_SCAN_COMPLETE_WITH_EVIDENCE",
+ "ct_scan_contract_note": "Contract = refs 02/03/13 temporal + creative/reconstruction gates plus sub-second frame-event ledger; the 'audible synchronization' item of SKILL.md CT_SCAN is delivered as ASR_ONLY_NOT_AUDIO_VERIFIED per ref 07; human listening gates FULL_AV_SIGNOFF (ref 13), not CT_SCAN. Owner may overrule by treating listening as a CT prerequisite.",
+ "human_listening": "BLOCKED",
+ "full_av_signoff": "BLOCKED",
+ "shot_grouping": "INFERRED (47 reviewer-defined shots; 46 boundaries coincide 100% with verified state boundaries; pixel-persistence cannot separate shot from intra-shot changes; EV002 and EV036 are additive yet flagged as shot boundaries)",
+ "unresolved_small_text_states": [
+  "S001.4",
+  "S001.8",
+  "S001.17",
+  "S002.0",
+  "S004.0",
+  "S005.1",
+  "S007.2",
+  "S009.14",
+  "S021.1"
+ ],
+ "sensitivity": "320x180 pass: ~0.06% pixels; full-res pass: localized changes >=~1.2k px at contrast>=150 would be seen; low-contrast changes <~600 px are indistinguishable from codec noise (BLIND SPOT)",
+ "checks": [
+  {
+   "gate": "G1",
+   "check": "source sha256 recomputed equals manifest+registry",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "8338 frames measured at 320x180 and full-res",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "PTS(i)=(i+1)/30 for every frame (CFR proven)",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "every measured episode accounted: boundary + codec + micro == total",
+   "pass_": true,
+   "detail": "89 episodes"
+  },
+  {
+   "gate": "G1",
+   "check": "all 11 codec episodes within 1 frame of an I-frame",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "codec episodes max abs diff <=120 (diffuse, below content contrast)",
+   "pass_": true,
+   "detail": "[96, 114, 87, 94, 99, 98, 75, 63, 85, 80, 71]"
+  },
+  {
+   "gate": "G1",
+   "check": ">=95% of periodic I-frames show diffuse edge-dominant diff (median edge fraction>=0.85)",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "I-frame inside a zero-texture black hold shows zero diff (codec signature, no content)",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "3 micro-events are high-contrast and localized (max diff>=150, bbox<=70%)",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "no non-event, non-micro frame has max abs diff >=150 (nothing missed above stated sensitivity)",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "76 state records",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "every state has all required fields non-trivially filled",
+   "pass_": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "G2",
+   "check": "states tile all frames (+2 black-dip frames)",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "exact durations = frames/30",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "all referenced evidence sheets exist",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "entry/mid/exit frames referenced for every state",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "sub-state events recorded for S007.1,S009.2,S009.8",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "75 boundary verification rows",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "each boundary has pre-8, pre-1, change, post+1, stable frames recorded",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "each boundary change frames correct (74 single, 1 dip)",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "sheets exist for all boundaries",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "windows unstable only where an I-frame sits in window (explained)",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "every boundary has classification and motion/camera/animation class",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "black dip = frames 7233-7234 pts 241.1333-241.1667, arrival f7235",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "micro-event crops exist and 3 events verified",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "attention hypotheses labelled INFERRED, no retention claim",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "measured palette + contrast present for every state",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "unresolved small text explicitly flagged UNVERIFIED (not invented)",
+   "pass_": true,
+   "detail": "9 states: ['S001.4', 'S001.8', 'S001.17', 'S002.0', 'S004.0', 'S005.1', 'S007.2', 'S009.14', 'S021.1']"
+  },
+  {
+   "gate": "G5",
+   "check": "78 audio alignment rows, ASR_UNCERTIFIED, no listening claim",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G5",
+   "check": "15 events outside +-0.2 s classified; 11 consistent in both ASR runs, 4 disagree",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G5",
+   "check": "every state carries ASR status line",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "original prompts contain no source names/brands/characters",
+   "pass_": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "G6",
+   "check": "production package contains no source names/brands/characters",
+   "pass_": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "G6",
+   "check": "package section 1 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 2 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 3 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 4 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 5 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 6 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 7 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 8 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 9 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 10 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 11 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 12 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "package section 13 present",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "near-duplicate prompts (Jaccard>=0.7) are explicit documented reuses only",
+   "pass_": true,
+   "detail": "[('S005.7', 'S017.6', 0.83), ('S009.7', 'S009.9', 0.71), ('S010.0', 'S012.0', 0.81)]"
+  },
+  {
+   "gate": "G6",
+   "check": "every prompt pair with Jaccard>=0.5 is a documented reuse/template pair",
+   "pass_": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "G6",
+   "check": ">=65% of prompts are below 0.5 similarity to all others (rest are documented reuses)",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "G6",
+   "check": "each prompt >= 25 words state-specific text",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "TRACE",
+   "check": "report embeds KEY_FACTS and equals recomputed key_facts.json",
+   "pass_": true,
+   "detail": ""
+  },
+  {
+   "gate": "TRACE",
+   "check": "report states CT scan status and AV sign-off blocked",
+   "pass_": true,
+   "detail": ""
+  }
+ ]
+}

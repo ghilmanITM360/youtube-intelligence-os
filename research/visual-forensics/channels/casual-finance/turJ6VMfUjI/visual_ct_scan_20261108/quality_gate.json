@@ -1,0 +1,33 @@
+{
+ "video_id": "turJ6VMfUjI",
+ "source_sha256": "7691036072d955c22d340443dc4988087524c08ac9093fa6eb567f76be917fcc",
+ "requested_mode": "CT_SCAN",
+ "scope": "visual-only; audio/AV tracked separately",
+ "reviewer": "Claude Sonnet 5.5, Machine A, 2026-11-08",
+ "gates": {
+  "source_identity": "PASS (hash computed; filename ID/registry attribution; live YouTube not re-checked)",
+  "full_temporal_overview": "PASS (all 1901 frames measured; 1 fps overview)",
+  "candidate_shots_verified": "PASS (25 hard cuts verified on adjacent decoded frames; 50/50 episodes viewed)",
+  "meaningful_state_timing": "PASS_WITH_DECLARED_BOUNDS (54 EXACT, 4 BOUND, rest measured activity edges)",
+  "motion_design_review": "PASS (classified; easing UNAVAILABLE)",
+  "creative_design_review": "PASS (palette measured; typography labelled)",
+  "on_screen_text": "PARTIAL_OPEN_LIMITATION (220 caption changes measured, caption text not individually read; small bubble/label text flagged not guessed)",
+  "visual_script_mapping": "PROVISIONAL_ASR_ONLY (38 semantic pairs, control baseline reported)",
+  "production_blueprint": "PASS (62 per-state prompts, modules, timeline, acceptance tests)",
+  "audio_human_listening": "NOT_COMPLETED",
+  "final_av_signoff": "BLOCKED",
+  "ct_scan_complete": "PASS_VISUAL_ONLY"
+ },
+ "final_video_status": "VISUAL_CT_SCAN_COMPLETE_WITH_EVIDENCE (visual-only, declared coverage)",
+ "full_av_signoff": "NO",
+ "limitations": [
+  "no human listening",
+  "ASR unverified",
+  "quiet-frame interiors not individually viewed",
+  "sub-threshold changes undetectable",
+  "pan/ease curves and typefaces not measured",
+  "live thumbnail/title not re-fetched",
+  "on-screen figures not fact-checked"
+ ],
+ "next_step": "counts only if validate.py exits 0"
+}

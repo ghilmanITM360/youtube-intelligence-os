@@ -1,0 +1,813 @@
+[
+ {
+  "visual_state_id": "S001",
+  "frames": "f0-f0",
+  "seconds": "0.0-0.0333",
+  "duration_frames": 1,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A columned bank building balanced on a green money-bag-laden beam held up by a small calculator-bodied figure, centred Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class START (Bank held up by calculator man), 1 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_CALCULATOR_MAN",
+   "OBJ_BANK_BUILDING",
+   "ICON_MONEYBAG"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 0 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.000)."
+ },
+ {
+  "visual_state_id": "S002",
+  "frames": "f1-f77",
+  "seconds": "0.0333-2.6",
+  "duration_frames": 77,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The bank tilts as briefcases, banknotes and papers pile onto it and the Earth is lowered on top (interior sampled at 6-frame steps) Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class STACK_ANIM (Briefcases and papers pile on; Earth lowered on top), 77 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision MEAS. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_BANK_BUILDING",
+   "OBJ_BRIEFCASE",
+   "OBJ_PAPERS",
+   "CH_EARTH"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.072)."
+ },
+ {
+  "visual_state_id": "S003",
+  "frames": "f78-f96",
+  "seconds": "2.6-3.2333",
+  "duration_frames": 19,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The Earth with worried eyes and a blue sweat drop, alone and centred Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POSE (Earth sweating), 19 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision MEAS. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_EARTH_SWEAT"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 78 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.076)."
+ },
+ {
+  "visual_state_id": "S004",
+  "frames": "f97-f211",
+  "seconds": "3.2333-7.0667",
+  "duration_frames": 115,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a collage: a banknote and a paper stack at left, a small video clip of a bearded man writing on a whiteboard in the middle, a computer monitor and red up-arrows at right (clip animates to f211) Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT+CLIP (Collage: bills, papers, monitor, whiteboard clip), 115 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_BILL",
+   "ICON_PAPERS",
+   "ICON_MONITOR",
+   "VID_CLIP_MAN_WHITEBOARD",
+   "OBJ_ARROWS_RED_UP"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 97 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.147)."
+ },
+ {
+  "visual_state_id": "S005",
+  "frames": "f212-f251",
+  "seconds": "7.0667-8.4",
+  "duration_frames": 40,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a dark grey stone slab engraved with \"2%\" centred Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Stone tablet \"2%\"), 40 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_STONE_2PCT"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 212 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.117)."
+ },
+ {
+  "visual_state_id": "S006",
+  "frames": "f252-f310",
+  "seconds": "8.4-10.3667",
+  "duration_frames": 59,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A bald man with glasses and a red tie and a speech bubble appear in one frame and the stone is replaced Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Ancient-knowledge man and bubble), 59 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_STONE_2PCT",
+   "CH_SCHOLAR",
+   "OBJ_SPEECH_BUBBLE"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 252 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.065)."
+ },
+ {
+  "visual_state_id": "S007",
+  "frames": "f311-f335",
+  "seconds": "10.3667-11.2",
+  "duration_frames": 25,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a small smiling stick-figure man centred Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Stick man), 25 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 311 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.051)."
+ },
+ {
+  "visual_state_id": "S008",
+  "frames": "f336-f352",
+  "seconds": "11.2-11.7667",
+  "duration_frames": 17,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to an empty canvas and a black silhouette of a pointing hand slides in from the left (f336-f352) Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT+SLIDE (Black pointing hand slides in), 17 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_HAND_POINT"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 336 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.017)."
+ },
+ {
+  "visual_state_id": "S009",
+  "frames": "f353-f373",
+  "seconds": "11.7667-12.4667",
+  "duration_frames": 21,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Large red handwritten \"2%\" appears at the hand's fingertip in one frame Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Red \"2%\"), 21 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_HAND_POINT",
+   "TXT_2PCT_RED"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 353 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.027)."
+ },
+ {
+  "visual_state_id": "S010",
+  "frames": "f374-f392",
+  "seconds": "12.4667-13.1",
+  "duration_frames": 19,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a stick-figure teacher with a pointer beside a green blackboard in a brown frame Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Teacher and empty blackboard), 19 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_TEACHER",
+   "OBJ_BLACKBOARD"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 374 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.143)."
+ },
+ {
+  "visual_state_id": "S011",
+  "frames": "f393-f418",
+  "seconds": "13.1-13.9667",
+  "duration_frames": 26,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Chalk-style \"Why 2%?\" appears on the board and the pointer touches it Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Chalk text \"Why 2%?\"), 26 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_TEACHER",
+   "OBJ_BLACKBOARD",
+   "TXT_CHALK"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 393 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.009)."
+ },
+ {
+  "visual_state_id": "S012",
+  "frames": "f419-f439",
+  "seconds": "13.9667-14.6667",
+  "duration_frames": 21,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a blue car, a house, a grocery bag and a spilled oil barrel around four red up-arrows Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Inflation icons with red arrows), 21 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_CAR",
+   "ICON_HOUSE",
+   "ICON_GROCERY_BAG",
+   "ICON_OIL_BARREL",
+   "OBJ_ARROWS_RED_UP"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 419 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.157)."
+ },
+ {
+  "visual_state_id": "S013",
+  "frames": "f440-f454",
+  "seconds": "14.6667-15.1667",
+  "duration_frames": 15,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A yellow price tag pops onto the car Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Price tag on car), 15 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_CAR",
+   "OBJ_PRICE_TAG"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 440 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.002)."
+ },
+ {
+  "visual_state_id": "S014",
+  "frames": "f455-f477",
+  "seconds": "15.1667-15.9333",
+  "duration_frames": 23,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A second price tag pops in Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Price tag on house), 23 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_HOUSE",
+   "OBJ_PRICE_TAG"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 455 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.002)."
+ },
+ {
+  "visual_state_id": "S015",
+  "frames": "f478-f497",
+  "seconds": "15.9333-16.6",
+  "duration_frames": 20,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A third price tag pops in Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Price tag on barrel), 20 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_OIL_BARREL",
+   "OBJ_PRICE_TAG"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 478 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.002)."
+ },
+ {
+  "visual_state_id": "S016",
+  "frames": "f498-f519",
+  "seconds": "16.6-17.3333",
+  "duration_frames": 22,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A further price tag pops in near the house roof Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Price tag on roof/bag), 22 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_HOUSE",
+   "ICON_GROCERY_BAG",
+   "OBJ_PRICE_TAG"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 498 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.013)."
+ },
+ {
+  "visual_state_id": "S017",
+  "frames": "f520-f572",
+  "seconds": "17.3333-19.1",
+  "duration_frames": 53,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A stick man with a hand on his chin pops in among the arrows; held to the cut Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Stick man in the middle), 53 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN_CHIN"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 520 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.020)."
+ },
+ {
+  "visual_state_id": "S018",
+  "frames": "f573-f604",
+  "seconds": "19.1-20.1667",
+  "duration_frames": 32,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a grey paper card with a tiny \"inflation\" heading at right Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Blank paper card \"inflation\"), 32 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_PAPER_CARD"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 573 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.129)."
+ },
+ {
+  "visual_state_id": "S019",
+  "frames": "f605-f653",
+  "seconds": "20.1667-21.8",
+  "duration_frames": 49,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A big green \"0%\" appears on the card Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Green \"0%\"), 49 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_PAPER_CARD",
+   "TXT_0PCT_GREEN"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 605 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.005)."
+ },
+ {
+  "visual_state_id": "S020",
+  "frames": "f654-f683",
+  "seconds": "21.8-22.8",
+  "duration_frames": 30,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A bald beige face with tears of laughter pops in at the left of the card Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Laughing-crying face), 30 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_PAPER_CARD",
+   "CH_FACE_LAUGH"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 654 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.036)."
+ },
+ {
+  "visual_state_id": "S021",
+  "frames": "f684-f712",
+  "seconds": "22.8-23.7667",
+  "duration_frames": 29,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a stick man with a frown Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Stick man frowning), 29 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 684 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.099)."
+ },
+ {
+  "visual_state_id": "S022",
+  "frames": "f713-f739",
+  "seconds": "23.7667-24.6667",
+  "duration_frames": 27,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The stick man's arm position changes Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POSE (Arm pose change), 27 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 713 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.001)."
+ },
+ {
+  "visual_state_id": "S023",
+  "frames": "f740-f755",
+  "seconds": "24.6667-25.2",
+  "duration_frames": 16,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a character made of blue bars with eyes and legs, a red arrow sloping down behind it Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Blue bar-chart character falling), 16 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_BARCHART_CHAR"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 740 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.042)."
+ },
+ {
+  "visual_state_id": "S024",
+  "frames": "f756-f778",
+  "seconds": "25.2-25.9667",
+  "duration_frames": 23,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The character's eyes change to a worried narrowed look Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POSE (Chart character narrows eyes), 23 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_BARCHART_CHAR"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 756 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.001)."
+ },
+ {
+  "visual_state_id": "S025",
+  "frames": "f779-f788",
+  "seconds": "25.9667-26.3",
+  "duration_frames": 10,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a columned central-bank building centred Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Central-bank building), 10 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_FED_BUILDING"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 779 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.077)."
+ },
+ {
+  "visual_state_id": "S026",
+  "frames": "f789-f810",
+  "seconds": "26.3-27.0333",
+  "duration_frames": 22,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A kitchen knife and an orange coin with a percent sign pop in at right Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Knife and orange % coin), 22 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_FED_BUILDING",
+   "OBJ_KNIFE",
+   "OBJ_COIN_PCT"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 789 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.013)."
+ },
+ {
+  "visual_state_id": "S027",
+  "frames": "f811-f850",
+  "seconds": "27.0333-28.3667",
+  "duration_frames": 40,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The knife is lowered and the coin is shown cut into two halves Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Coin sliced in halves), 40 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_FED_BUILDING",
+   "OBJ_KNIFE",
+   "OBJ_COIN_HALVES"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 811 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.023)."
+ },
+ {
+  "visual_state_id": "S028",
+  "frames": "f851-f868",
+  "seconds": "28.3667-28.9667",
+  "duration_frames": 18,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to the Earth with eyes at right Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Earth), 18 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_EARTH"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 851 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.108)."
+ },
+ {
+  "visual_state_id": "S029",
+  "frames": "f869-f902",
+  "seconds": "28.9667-30.1",
+  "duration_frames": 34,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Red handwritten \"0% inflation\" appears at left of the Earth Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (\"0% inflation\"), 34 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_EARTH",
+   "TXT_0PCT_INFLATION_RED"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 869 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.006)."
+ },
+ {
+  "visual_state_id": "S030",
+  "frames": "f903-f957",
+  "seconds": "30.1-31.9333",
+  "duration_frames": 55,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a single orange percent coin that drifts slowly downward toward the floor (f903-f939) Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT+DRIFT (Orange % coin sinks), 55 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_COIN_PCT"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 903 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.070)."
+ },
+ {
+  "visual_state_id": "S031",
+  "frames": "f958-f978",
+  "seconds": "31.9333-32.6333",
+  "duration_frames": 21,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to the stick man Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Stick man), 21 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 958 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.030)."
+ },
+ {
+  "visual_state_id": "S032",
+  "frames": "f979-f979",
+  "seconds": "32.6333-32.6667",
+  "duration_frames": 1,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The stick man puts a hand to his chin Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POSE (Hand on chin), 1 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN_CHIN"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 979 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.004)."
+ },
+ {
+  "visual_state_id": "S033",
+  "frames": "f980-f1040",
+  "seconds": "32.6667-34.7",
+  "duration_frames": 61,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The blue bar-chart character slides in from the right edge (first sliver f980, settled by f996) Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class SLIDE_IN (Bar-chart character slides in), 61 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN_CHIN",
+   "CH_BARCHART_CHAR"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 980 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.001)."
+ },
+ {
+  "visual_state_id": "S034",
+  "frames": "f1041-f1062",
+  "seconds": "34.7-35.4333",
+  "duration_frames": 22,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut back to the building with knife and whole coin Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Central bank, knife, coin), 22 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_FED_BUILDING",
+   "OBJ_KNIFE",
+   "OBJ_COIN_PCT"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1041 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.089)."
+ },
+ {
+  "visual_state_id": "S035",
+  "frames": "f1063-f1082",
+  "seconds": "35.4333-36.1",
+  "duration_frames": 20,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Coin shown in two halves Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Coin sliced), 20 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_FED_BUILDING",
+   "OBJ_KNIFE",
+   "OBJ_COIN_HALVES"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1063 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.023)."
+ },
+ {
+  "visual_state_id": "S036",
+  "frames": "f1083-f1092",
+  "seconds": "36.1-36.4333",
+  "duration_frames": 10,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Coin shown in smaller slices Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Coin sliced again), 10 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_FED_BUILDING",
+   "OBJ_KNIFE",
+   "OBJ_COIN_PIECES"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1083 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.009)."
+ },
+ {
+  "visual_state_id": "S037",
+  "frames": "f1093-f1110",
+  "seconds": "36.4333-37.0333",
+  "duration_frames": 18,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Coin pieces smaller again (f1093-f1094 change) Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Smaller slices), 18 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_FED_BUILDING",
+   "OBJ_KNIFE",
+   "OBJ_COIN_PIECES"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1093 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.015)."
+ },
+ {
+  "visual_state_id": "S038",
+  "frames": "f1111-f1133",
+  "seconds": "37.0333-37.8",
+  "duration_frames": 23,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to the whole orange coin alone, centred Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Whole coin alone), 23 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_COIN_PCT"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1111 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.072)."
+ },
+ {
+  "visual_state_id": "S039",
+  "frames": "f1134-f1158",
+  "seconds": "37.8-38.6333",
+  "duration_frames": 25,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a row of small orange coin fragments under the handwritten line \"Can't cut any more!\" Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (\"Can't cut any more!\"), 25 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "OBJ_COIN_PIECES",
+   "TXT_CANT_CUT"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1134 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.035)."
+ },
+ {
+  "visual_state_id": "S040",
+  "frames": "f1159-f1189",
+  "seconds": "38.6333-39.6667",
+  "duration_frames": 31,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a green United States map character with two eyes, centred Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (US-map character), 31 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_USMAP"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1159 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.101)."
+ },
+ {
+  "visual_state_id": "S041",
+  "frames": "f1190-f1217",
+  "seconds": "39.6667-40.6",
+  "duration_frames": 28,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The map character is enlarged and shows a downcast expression Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POSE (US map enlarges and frowns), 28 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_USMAP"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1190 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.135)."
+ },
+ {
+  "visual_state_id": "S042",
+  "frames": "f1218-f1274",
+  "seconds": "40.6-42.5",
+  "duration_frames": 57,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to the blue bar-chart character with a red downward arrow Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Falling bar-chart character), 57 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_BARCHART_CHAR"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1218 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.190)."
+ },
+ {
+  "visual_state_id": "S043",
+  "frames": "f1275-f1342",
+  "seconds": "42.5-44.7667",
+  "duration_frames": 68,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a very large close-up of the chart character's eyes and a small collapsed green animal with x-eyes at right, red arrow above (static through f1343) Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT+ZOOM (Zoom on chart character and fallen green critter), 68 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_BARCHART_CHAR",
+   "OBJ_GREEN_CRITTER"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1275 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.131)."
+ },
+ {
+  "visual_state_id": "S044",
+  "frames": "f1343-f1393",
+  "seconds": "44.7667-46.4667",
+  "duration_frames": 51,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to the stick man Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Stick man), 51 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1343 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.128)."
+ },
+ {
+  "visual_state_id": "S045",
+  "frames": "f1394-f1415",
+  "seconds": "46.4667-47.2",
+  "duration_frames": 22,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A vertical ladder of red percentages scrolls upward at right until \"4%\" over \"3%\" rests (f1394-f1415) Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class SCROLL (Percent numbers scroll), 22 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN",
+   "TXT_PCT_LADDER_RED"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1394 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.009)."
+ },
+ {
+  "visual_state_id": "S046",
+  "frames": "f1416-f1440",
+  "seconds": "47.2-48.0333",
+  "duration_frames": 25,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Stick man with 4% and 3% held 25 frames Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class HOLD (\"4% 3%\" held), 25 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision MEAS. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_STICKMAN",
+   "TXT_PCT_LADDER_RED"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1416 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.000)."
+ },
+ {
+  "visual_state_id": "S047",
+  "frames": "f1441-f1460",
+  "seconds": "48.0333-48.7",
+  "duration_frames": 20,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a grocery bag, an equals sign and a banknote with a small \"Today\" label Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Grocery bag equals banknote), 20 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_GROCERY_BAG",
+   "ICON_BILL"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1441 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.068)."
+ },
+ {
+  "visual_state_id": "S048",
+  "frames": "f1461-f1492",
+  "seconds": "48.7-49.7667",
+  "duration_frames": 32,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The small label changes to \"18 years later\" and the banknote enlarges Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (\"18 years later\" label), 32 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_GROCERY_BAG",
+   "ICON_BILL",
+   "TXT_18_YEARS"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1461 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.015)."
+ },
+ {
+  "visual_state_id": "S049",
+  "frames": "f1493-f1520",
+  "seconds": "49.7667-50.7",
+  "duration_frames": 28,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a blue office building with a red sign and a stack of cardboard boxes Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Office building and boxes), 28 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_OFFICE_BUILDING",
+   "ICON_BOXES"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1493 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.071)."
+ },
+ {
+  "visual_state_id": "S050",
+  "frames": "f1521-f1559",
+  "seconds": "50.7-52.0",
+  "duration_frames": 39,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A speech bubble asking about cost in a year appears above the building Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Speech bubble about cost), 39 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "ICON_OFFICE_BUILDING",
+   "ICON_BOXES",
+   "OBJ_SPEECH_BUBBLE"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1521 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.013)."
+ },
+ {
+  "visual_state_id": "S051",
+  "frames": "f1560-f1578",
+  "seconds": "52.0-52.6333",
+  "duration_frames": 19,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a bald man in a green tie beside a paper headed CONTRACT Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Bald man and contract), 19 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_BALD_MAN",
+   "ICON_CONTRACT"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1560 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.072)."
+ },
+ {
+  "visual_state_id": "S052",
+  "frames": "f1579-f1632",
+  "seconds": "52.6333-54.4333",
+  "duration_frames": 54,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A green dollar sign pops in between the man and the contract Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Green dollar sign), 54 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_BALD_MAN",
+   "ICON_CONTRACT",
+   "ICON_DOLLAR_SIGN"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1579 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.007)."
+ },
+ {
+  "visual_state_id": "S053",
+  "frames": "f1633-f1655",
+  "seconds": "54.4333-55.2",
+  "duration_frames": 23,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A tiny handwritten \"uhh.. 5%?\" appears over the man Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Tiny \"uhh.. 5%?\" thought), 23 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_BALD_MAN",
+   "ICON_CONTRACT",
+   "ICON_DOLLAR_SIGN",
+   "TXT_THOUGHT_SMALL"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1633 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.005)."
+ },
+ {
+  "visual_state_id": "S054",
+  "frames": "f1656-f1679",
+  "seconds": "55.2-56.0",
+  "duration_frames": 24,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a black \"2%\" centred on white Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (\"2%\" in black), 24 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "TXT_2PCT_BLACK"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1656 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.058)."
+ },
+ {
+  "visual_state_id": "S055",
+  "frames": "f1680-f1711",
+  "seconds": "56.0-57.0667",
+  "duration_frames": 32,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The \"2%\" becomes yellow with a black outline in one frame Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (\"2%\" turns yellow with outline), 32 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "TXT_2PCT_YELLOW"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1680 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.016)."
+ },
+ {
+  "visual_state_id": "S056",
+  "frames": "f1712-f1735",
+  "seconds": "57.0667-57.8667",
+  "duration_frames": 24,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A small stick man appears left of the 2% (visible f1712-f1728, gone by f1736) Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Small stick man beside \"2%\"), 24 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision BOUND(1705-1712). Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "TXT_2PCT_YELLOW",
+   "CH_STICKMAN_SMALL"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1712 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.000)."
+ },
+ {
+  "visual_state_id": "S057",
+  "frames": "f1736-f1767",
+  "seconds": "57.8667-58.9333",
+  "duration_frames": 32,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: The 2% sits on a beige cushion shape; the stick man is gone Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (\"2%\" on a cushion), 32 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision BOUND(1729-1736). Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "TXT_2PCT_YELLOW",
+   "OBJ_CUSHION"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1736 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.003)."
+ },
+ {
+  "visual_state_id": "S058",
+  "frames": "f1768-f1783",
+  "seconds": "58.9333-59.4667",
+  "duration_frames": 16,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Four green money bags sit on top of the cushion Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Four money bags on cushion), 16 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision BOUND(1761-1768). Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "TXT_2PCT_YELLOW",
+   "OBJ_CUSHION",
+   "ICON_MONEYBAG"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1768 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.002)."
+ },
+ {
+  "visual_state_id": "S059",
+  "frames": "f1784-f1805",
+  "seconds": "59.4667-60.2",
+  "duration_frames": 22,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Orange flames appear along the bottom edge under the cushion Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Flames along the bottom), 22 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision BOUND(1777-1784). Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "TXT_2PCT_YELLOW",
+   "OBJ_CUSHION",
+   "ICON_MONEYBAG",
+   "OBJ_FLAMES"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1784 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.009)."
+ },
+ {
+  "visual_state_id": "S060",
+  "frames": "f1806-f1833",
+  "seconds": "60.2-61.1333",
+  "duration_frames": 28,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: Hard cut to a man in sunglasses and a red jacket at left with a small red \"2%\" at right Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class CUT (Sunglasses man and red \"2%\"), 28 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_SUNGLASSES_MAN",
+   "TXT_2PCT_RED_SMALL"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1806 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.132)."
+ },
+ {
+  "visual_state_id": "S061",
+  "frames": "f1834-f1848",
+  "seconds": "61.1333-61.6333",
+  "duration_frames": 15,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A small change in the man's pose or face (not resolvable at tile scale); held 15 frames Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POSE (Micro change on the man), 15 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision MEAS. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_SUNGLASSES_MAN",
+   "TXT_2PCT_RED_SMALL"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1834 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.025)."
+ },
+ {
+  "visual_state_id": "S062",
+  "frames": "f1849-f1900",
+  "seconds": "61.6333-63.3667",
+  "duration_frames": 52,
+  "image_prompt": "ORIGINAL asset, 9:16 1080x1920, flat 2D hand-drawn explainer style on near-white (#FCFCFC) canvas, thick uneven black outlines, flat fills. Layout to rebuild: A speech bubble reading \"Ah, forgot that was there.\" appears; held to the end Replace every third-party item (none here) with your own licensed or self-made equivalent using your own data; no logos, no meme footage, no copied screenshots. Negative: gradients, glow, photoreal shading, 3D.",
+  "animation_prompt": "Entry class POP_IN (Bubble \"Ah, forgot that was there.\"), 52 frames at 24 fps. Keep all unchanged anchors pixel-still; only the entering element(s) move. Onset precision EXACT. Camera: locked. Sound: pending (no listening done).",
+  "anchors_static": [
+   "CH_SUNGLASSES_MAN",
+   "TXT_2PCT_RED_SMALL",
+   "OBJ_SPEECH_BUBBLE"
+  ],
+  "qa_acceptance": "Nearest-frame check: the first frame of this state must equal frame 1849 +/-0 for EXACT onsets (+/-bound otherwise); the prior state's last frame must differ by the measured entry change (0.015)."
+ }
+]
