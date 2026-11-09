@@ -16,7 +16,7 @@ Single entry point for the research workstreams. It indexes; it does not move ev
 ## Integrity flags (read before trusting a seal)
 
 - **4 published Casual Finance seals do not verify:** `CFrVTZBYa3Q`, `SYSUh-oow6M`, `Xkk9GnnJHBg`, `dPoDyl9Ys38`. In each, `VALIDATION_RESULTS.json` differs from the hash in its `SHA256SUMS`; the file reports `failed: 0`, so the validator was most likely re-run after the seal. The original seals were **not rewritten or repaired**. A refreshed seal is an owner decision. Per-seal result for all 28 seals: [VISUAL_SEAL_VERIFICATION.csv](../research/consolidation/VISUAL_SEAL_VERIFICATION.csv).
-- **Heavy evidence has one copy.** Frames and audio under `~/YIOS-local-audits` (about 15 GB) and the 454 MP4s (4.4 GB) exist only on this Mac.
+- **Heavy evidence has one verified copy.** Frames and audio under `~/YIOS-local-audits` (about 15 GB) and the 454 MP4s (4.4 GB) are verified only on this Mac. Off-device copies are **unverified** (Machine B's manifest is a lead only).
 - **Open: 4 Casual Finance closures are local only** (`7K991LgY3tc`, `Im-N3K9Pnf0`, `KTnp2OlQJHA`, `WCS1bK3KB3U`), 16 roster videos are not closed, milestones 20 and 25 are open.
 
 ## Workstreams
@@ -51,7 +51,7 @@ Transcript bodies (398 `.json`/`.txt` files, 12.9 MB) stay on the pinned branch 
 - [FINANCE_1612_RECONCILIATION.csv](../research/consolidation/FINANCE_1612_RECONCILIATION.csv): membership, registry presence and verification, kept in separate columns.
 - [LOCAL_EVIDENCE_PINS.sha256](../research/consolidation/LOCAL_EVIDENCE_PINS.sha256): hashes of the local ledgers and databases on 2026-11-09.
 - [CF_FINANCE_LINE_FILES_NOT_IMPORTED.txt](../research/consolidation/CF_FINANCE_LINE_FILES_NOT_IMPORTED.txt): 202 Casual Finance evidence files that exist on the Finance line but not on the consolidated branch; listed with blob IDs and **not copied here** (see the consolidation README).
-- [tools/build_phase2_batch1.py](../research/consolidation/tools/build_phase2_batch1.py): provenance record of how the CSVs were built. It reads the local workspace and pinned branch checkouts, so it cannot be re-run from `main` alone.
+- [tools/build_phase2_batch1.py](../research/consolidation/tools/build_phase2_batch1.py): historical record of how the CSVs were built. It is not runnable: it exits with a message before reading any source or writing any map, even with `--historical-rerun`.
 
 Paths inside these CSVs point at the pinned branches or the local workspace, not at this tree.
 
@@ -62,7 +62,7 @@ Paths inside these CSVs point at the pinned branches or the local workspace, not
 
 ## Where the media is
 
-New raw media (MP4, frames, audio) stays on the owner's Mac. It is not committed to git and not to Git LFS. This tree contains no media and no LFS pointers.
+New raw media (MP4, frames, audio) stays on the owner's Mac. It is not committed to git and not to Git LFS. This PR's 20-file diff adds no media and no LFS pointers. The checkout it lands in already tracks older files: 4 WAV files and the Git LFS pointer `data/catalog/youtube_channel_registry.db`.
 
 The older Casual Finance hub on the pinned branch (`research/casually-finance-consolidated` @ `9a4023af…`) holds **17 legacy Git LFS pointers**: Casual Finance source MP4s under `data/raw/forensic-analysis/casually-finance/source-videos/` (261,336,715 bytes). Local LFS objects exist; **whether GitHub holds those remote objects is NOT CHECKED**.
 

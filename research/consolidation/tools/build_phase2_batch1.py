@@ -1,15 +1,30 @@
 #!/usr/bin/env python3
-"""Phase 2 batch 1: rebuild the consolidation maps. Read-only on every source.
+"""HISTORICAL RECORD of the Phase 2 Batch 1 map build (2026-11-09). NOT a runnable tool.
 
-Writes only into research/consolidation/ (next to this tools/ dir):
-  VISUAL_EVIDENCE_MAP.csv, VISUAL_SEAL_VERIFICATION.csv,
-  FINANCE_1612_RECONCILIATION.csv, PHASE2_BATCH1_FACTS.json
+Running this file exits immediately with a message, before any source read or map write. The
+--historical-rerun flag is NOT honored. The body below is kept unchanged as provenance of how the
+committed maps were produced; do not treat it as a regeneration path.
 
-Inputs (all read-only): local MP4s (hashed again), local ledgers under ~/YIOS-local-audits,
-the repo working tree, `git show` of pinned refs, and the registry DB opened mode=ro&immutable=1.
-Run from the repo root:  python3 research/consolidation/tools/build_phase2_batch1.py
+Exact input context of the recorded run (read-only on every source, writes only the four map files
+in research/consolidation/: VISUAL_EVIDENCE_MAP.csv, VISUAL_SEAL_VERIFICATION.csv,
+FINANCE_1612_RECONCILIATION.csv, PHASE2_BATCH1_FACTS.json):
+  - Git inputs, pinned by full SHA below: #45 tip (FIN_REF), #41 head (MB_REF), and the pinned
+    Casual Finance branch (CF_REF). The run used the local Batch 1 checkpoint 34a79e46dc33b0469657d83a2af03458214c87e2
+    as HEAD, which is local only and has the same 20 published video directories as CF_REF.
+  - Not pinned in git: the local MP4s, local ledgers under ~/YIOS-local-audits, the working-tree
+    research/casually-finance/INDEX.csv, and the materialized LFS registry DB
+    (sha256 39e7a28ba592b9022bd1b32f4c288edde519730164a98ea858ce90c44d52f654).
+  - The PR #48 head has zero published Casual Finance video directories, so a run from it would
+    mislabel every Casual Finance row LOCAL_ONLY. That is one reason this file refuses to run.
 """
 import csv, glob, hashlib, io, json, os, re, sqlite3, subprocess, sys, collections
+
+# Refuse before any source read or map write. No flag overrides this.
+raise SystemExit(
+    "build_phase2_batch1.py is a historical record, not a runnable tool. It exits before reading "
+    "sources or writing maps, even with --historical-rerun. The committed maps in "
+    "research/consolidation/ are the recorded output; see the docstring for the input context."
+)
 
 HOME = os.path.expanduser("~")
 ROOT = os.getcwd()
@@ -19,8 +34,9 @@ AUD = f"{HOME}/YIOS-local-audits"
 XK = f"{AUD}/xkcd-whatif"
 CT = f"{XK}/asset_library/_channel/ct_closure"
 CF = f"{AUD}/CASUALLY_FINANCE_35_VIDEO_TARGET_20261104"
-FIN_REF = "origin/fix/finance-audit-validators"      # #45 tip
-MB_REF = "origin/research/local-channel-media-library"  # #41 (Machine B media manifest)
+FIN_REF = "5d487623d1f20a2388527a1611ce77fbf65ec203"  # #45 tip at run time (fix/finance-audit-validators)
+MB_REF = "78e8fd2de654b622a5b1a093851886ef138c4d6a"   # #41 head at run time (Machine B media manifest)
+CF_REF = "9a4023af358ad15eec24a11cc5c2818a9d0994c6"   # research/casually-finance-consolidated; run-time HEAD 34a79e46 has the same 20 video dirs
 FOLDERS = ["BarelyEvolved-MP4", "CasuallyFinance", "MonkeBiznis-MP4", "PrimateEconomics-MP4",
            "PrimitiveEducation-MP4", "casual_economics", "xkcd Channel"]
 
@@ -58,7 +74,7 @@ cf_baseline = {r["video_id"]: r for r in json.load(open(f"{CF}/source_identity_b
 cf_closed = {e["video_id"] for e in cf_ledger["videos"]}
 cf_index = {r["video_id"]: r for r in csv.DictReader(open("research/casually-finance/INDEX.csv", encoding="utf-8"))}
 
-tree = git("ls-tree", "-r", "--name-only", "HEAD").split("\n")
+tree = git("ls-tree", "-r", "--name-only", CF_REF).split("\n")
 def published_dir(vid):
     d = f"research/visual-forensics/channels/casual-finance/{vid}"
     return d if any(f.startswith(d + "/") for f in tree) else "LOCAL_ONLY"
