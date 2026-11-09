@@ -1,0 +1,97 @@
+{
+  "batch_id": "NICK_105",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "JVVsyYbuzLo",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": ["VIDEO_MASTER.csv:JVVsyYbuzLo", "TRANSCRIPT_COVERAGE.csv:JVVsyYbuzLo", "audit-batches/NICK_105_READ_RECEIPTS.json"],
+        "analysis": "Exact: \"Buying vs Leasing A Car - What's Actually The Better Choice?\" (60 characters, 11 whitespace-delimited words). The first five words state the comparison; \"actually\" adds corrective curiosity and the question promises a decision. Broad search intent is strong, but no price, rate, model or year narrows the audience. The transcript subverts the binary by recommending used ownership and long holding, so the title is aligned but less specific than the actual payoff.",
+        "peer_comparison_ids": ["vXBhBlBIUDs", "8LncpNMNPW8", "3V3uUy6zR0I", "3iRHI6Fm2cg", "hfpR_9DstRg", "2j1dfreBHuw", "2dNngkX99Bs"],
+        "search_demand": "Historical Trends/search volume unavailable. Frozen public evidence contradicts a reliable comparison-title formula: target 0.42826 WEAK; previously reviewed buy/lease/finance explainer 3V3uUy6zR0I 1.65085 TYPICAL; new-versus-used math 3iRHI6Fm2cg 0.72846 TYPICAL; same-car-for-10-years wealth framing hfpR_9DstRg 3.24958 STRONG; car-payments-not-normal 2j1dfreBHuw 0.35309 WEAK.",
+        "script_alignment": "The script answers the title by rejecting repeated leasing and repeated replacement loans, then recommends buying a two- or three-year-old car and keeping it after payoff. The thumbnail's $120K, $1,200 and 28% contract is not the transcript's worked $45K, roughly $754-$767 and 6.37% case, creating a material packaging-to-script mismatch."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": ["VIDEO_MASTER.csv:JVVsyYbuzLo", "TRANSCRIPT_COVERAGE.csv:JVVsyYbuzLo", "audit-batches/NICK_105_READ_RECEIPTS.json"],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_JVVsyYbuzLo.jpg",
+        "image_source": "https://i.ytimg.com/vi/JVVsyYbuzLo/maxresdefault.jpg",
+        "image_sha256": "4eec8bc9f95250426eb703d4fb1e1bc487ccd20b504566649379fe4a4ac04d3d",
+        "dimensions": [1280, 720],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White background; anxious sweating cartoon man pointing right; large black \"YOU'RE DOING IT WRONG\"; arrow; luxury SUV crossed by an oversized red X; and a contract reading PRICE $120,000 / MONTHLY $1,200 / INTEREST 28%. The red X, face and headline remain clear at mobile size, while the contract's small labels are marginal but circled numbers remain visible. The design signals mistake/fear rather than a balanced comparison. Its extreme $120K/28% example is not analyzed in the script, which uses a $45K car and 6.37% loan, so the visual exaggerates the financial case and weakens promise consistency."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": ["VIDEO_MASTER.csv:JVVsyYbuzLo", "TRANSCRIPT_COVERAGE.csv:JVVsyYbuzLo", "audit-batches/NICK_105_READ_RECEIPTS.json"],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "You're sitting in traffic on a Tuesday\nafternoon and the car in front of you is\na brand new BMW X5 with the dealer\nplates still on it. The driver looks\nlike he's about 32 years old wearing a\nCarhartt jacket, eating a gas station\nhot dog, and your brain does that thing\nit always does. It tries to solve the math.",
+        "ending_words": "The truly rich move in 2026 is the one\nnobody can see because it's parked in a\ndriveway, paid off and has been quietly\nmaking its owner wealthier every month\nfor the last 4 years just by existing.\nThat's the real answer to buying versus\nleasing. The better choice is the one\nyou can stop making. If this video\nhelped, drop a like, subscribe for more\nand I'll catch you in the next one.",
+        "analysis": "All 16,592 canonical stored characters read in four verified contiguous ranges. Opening traffic scene asks how a young BMW driver affords the car, then reframes buy-versus-lease as an industry-created monthly-payment choice. Structure: market-price/payment context; lease depreciation, due-at-signing, mileage and wear; long-loan amortization and negative equity; life-stakes rehook; three leasing exceptions; used-car/shorter-loan recommendation; personal Accord story; three nine-year paths; industry-incentive explanation; BMW callback and payoff. Humor, recurring friends and strong analogies make a complex choice accessible. Credibility is weakened by multiple unreconciled calculations, an ASR-truncated depreciation sentence, one-sided dealer motives and a lease-versus-buy model without transparent insurance, maintenance, taxes, fees or resale assumptions.",
+        "beat_map": [
+          {"character_range": [0, 4200], "beat": "BMW/hot-dog hook; abnormal market statistics; dealer monthly-payment frame; lease depreciation, fees and initial 36-month cost"},
+          {"character_range": [4200, 8400], "beat": "Due-at-signing and mileage/wear costs; long loan; amortization; depreciation; negative-equity rollover story"},
+          {"character_range": [8400, 12600], "beat": "Life-stakes rehook; real-question reframe; three lease exceptions; used-car/48-month recommendation; personal Accord example"},
+          {"character_range": [12600, 16592], "beat": "Three nine-year paths; claimed investment gap; industry incentives; lifestyle objection; market-warning claims; BMW callback and CTA"}
+        ],
+        "claim_audit": [
+          "0:4200 The market-average price/payment/share figures are dated vendor statistics and were not reproduced from an identified primary dataset in the transcript. A $45K car falling to $26K has $19K forecast depreciation, but a lease payment cannot be derived from those values alone without residual, money factor, acquisition fee, taxes and term. At $613 for 36 months the base payments total $22,068, not $24,000, though upfront/other fees could exceed that figure. Saying the lessee has no equity is directionally correct at ordinary return, but purchase options and residual risk are omitted.",
+          "4200:8400 A $3,999 due-at-signing amount spread over 36 months adds $111.08, so $299 becomes about $410 before taxes/fees; that narrow calculation is correct. Six thousand excess miles at $0.25 would be $1,500, but actual allowance and charge vary by contract. The transcript's $45,000, 72-month, 6.37% loan recalculates to $753.66 monthly, $54,263.85 total and $9,263.85 interest, not $767/$55,246/$10,000. First-36-payment interest is about $6,769.65, not $7,700. \"Bought it twice\" is false rhetoric: interest is about 20.6% of principal, not another car price. The stored captions lose the vehicle-value figure before the negative-equity explanation. CFPB guidance does support that longer terms raise total interest and rolling negative equity into a new loan increases financed cost.",
+          "8400:12600 Business vehicle tax treatment does not establish that leasing beats ownership: IRS Publication 463 limits deductions to business use, requires consistent method choices and can reduce high-value lease deductions by an inclusion amount. Leasing a fast-depreciating luxury car does not make the dealer simply \"eat\" depreciation; expected depreciation is embedded in the lease and the lessee mainly transfers residual-value risk. A $27K, 48-month loan at the same 6.37% recalculates to $638.69, not $665; taxes, fees or a higher APR could explain the difference but are unstated. A three-year-old car does not necessarily retain the same warranty, and the $45K-to-$27K comparison needs a named make/model/condition to be reproducible.",
+          "12600:16592 Three $613 payments for 108 months total $66,204 before extras; reaching $77K requires $10,796 of unitemized drive-off, disposition, mileage and wear charges. The new-car loan itself totals $54,264, so $61K likewise embeds unstated costs; the used-car loan totals $30,657, so $40K does too. Without consistent insurance, maintenance, tax, repair, residual and transaction assumptions, the three paths are not a reproducible comparison. The direct $37K gap merely subtracts the stated rounded totals, and the claimed $70K wealth gap lacks an investment contribution schedule, rate and timing. Tariff price effects, repossession since-2009 and 32-year subprime-delinquency claims are news-sensitive and uncited here; they should not support an inevitable forecast."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": ["VIDEO_MASTER.csv:JVVsyYbuzLo", "TRANSCRIPT_COVERAGE.csv:JVVsyYbuzLo", "audit-batches/NICK_105_READ_RECEIPTS.json"],
+        "analysis": "Consumer auto-finance decision: lease new, finance new or buy used and hold. Primary audience is ordinary salaried drivers choosing a vehicle; secondary audience includes business owners and luxury-car buyers. The problem is monthly-payment framing, depreciation, negative equity and repeated replacement. Motivations are fear, savings, status resistance and long-term security. The decision principles are evergreen, while prices, APRs, tariffs, delinquency and repossession claims are news-sensitive. CONTEXT_ONLY: CFPB/IRS guidance supports comparing total loan cost and qualified business-use tax treatment. UNAVAILABLE: historical search demand and private analytics.",
+        "novelty_and_corpus_angle": "Original alternative: compare one named vehicle under lease, new-loan, used-loan and cash/hold paths with identical miles, insurance, maintenance, taxes, fees, residual values and time horizon. Publish the spreadsheet and sensitivity to APR, mileage and holding period; separate lifestyle preference from lowest expected cost.",
+        "competition": "Exact age-peer pool: STRONG wealthy-signs 5.60724, paid-off-car 3.43336 and compound-interest 2.03193; TYPICAL real-estate-vs-stocks 1.98045, $500K milestone 1.54694, stopped-normal-advice 1.00027, $100K-income 0.60981, boring-tasks 0.59678 and crash-prep 0.54346; target 0.42826 WEAK and broad financial-questions 0.31287 WEAK. Topical reviewed counterexamples: hfpR_9DstRg same-car-for-10-years 3.24958 STRONG; 3V3uUy6zR0I buy/lease/finance 1.65085 TYPICAL; 3iRHI6Fm2cg new-versus-used 0.72846 TYPICAL; 2j1dfreBHuw car-payments-not-normal 0.35309 WEAK. Car-finance warnings and comparison formats span tiers."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": ["VIDEO_MASTER.csv:JVVsyYbuzLo", "TRANSCRIPT_COVERAGE.csv:JVVsyYbuzLo", "PERFORMANCE_SENSITIVITY.csv:JVVsyYbuzLo", "audit-batches/NICK_105_READ_RECEIPTS.json"],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "8,338 frozen public views at 145.0811 days, 18:34; 0.42826x WEAK against 10 same-channel LONG_FORM age peers and stable at 0.30088x WEAK in the five-peer sensitivity check. The exact pool has three STRONG results (5.60724, 3.43336, 2.03193), six TYPICAL (1.98045 to 0.54346), and another WEAK at 0.31287. A direct earlier buy/lease/finance explainer was 1.65085 TYPICAL, while a later new-versus-used math video was 0.72846 TYPICAL; the same-car-for-10-years wealth frame was 3.24958 STRONG and a car-payments-not-normal warning 0.35309 WEAK. This target therefore supplies a weak counterexample to broad comparison intent, frightening face and corrective headline. Candidate differences include generic wording, an extreme thumbnail contract absent from the script, high internal topic repetition and a promised binary answer that becomes a third used-and-hold option. These are testable explanations only; CTR, impressions, retention, satisfaction and recommendation exposure are unavailable.",
+        "observed_result": "8,338 views; 145.0811 days; 1,114 seconds; 0.42826x WEAK; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Topical car videos span STRONG, TYPICAL and WEAK; current historical query demand is unavailable.",
+        "trend_timing": "Published 2026-04-18 with 2026 market and tariff framing, but no registered publication-window event or historical Trends series links demand to views.",
+        "competition": "High same-channel saturation across payments, financing, cash purchases, used vehicles and long-hold stories.",
+        "format_fit": "18:34 narrative comparison with recurring fictional characters, humor, cost examples and a personal anecdote; audience retention is unobserved.",
+        "channel_context": "Same-channel age-matched normalization; cross-channel car examples differ in audience and are context only.",
+        "alternative_explanations": [
+          "APPEAL TESTABLE_HYPOTHESIS: mobile packaging is clear, but generic \"doing it wrong\" plus a $120K/28% contract may look exaggerated rather than personally relevant; CTR unavailable.",
+          "ENGAGEMENT TESTABLE_HYPOTHESIS: stories and rehooks may aid continuation, while arithmetic inconsistencies and long preamble before the used-and-hold answer may add friction; retention unavailable.",
+          "SATISFACTION RISK: actionable total-cost framing matches CFPB guidance, but the opaque nine-year model and lease-tax simplifications weaken trust; satisfaction unavailable.",
+          "Unknown distribution, competition, returning-viewer fatigue or traffic-source mix could explain the weak outcome without a reusable creative cause."
+        ],
+        "original_content_lesson": {
+          "test": "Test a named-model total-cost comparison with one transparent table against a generic mistake-warning package. Keep identical miles and ownership costs, reveal used-and-hold early, and measure own CTR, first-30-second retention, table-section retention, traffic sources and calculator downloads.",
+          "confidence": "HIGH that generic corrective car packaging is not sufficient in this corpus; LOW causal confidence about why this upload was weak"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified historical search series or registered publication-window event; market claims are dated context only.",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

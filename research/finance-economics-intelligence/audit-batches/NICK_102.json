@@ -1,0 +1,134 @@
+{
+  "batch_id": "NICK_102",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "HcGoQkyhNjQ",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HcGoQkyhNjQ",
+          "TRANSCRIPT_COVERAGE.csv:HcGoQkyhNjQ",
+          "audit-batches/NICK_102_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"Why Everything Changes When You Learn These Money Secrets.\" Transformation template plus \"secrets\" curiosity. The content is a basics explainer answering 15 commonly searched questions, so \"secrets\" overstates novelty; title does not signal the Q&A format shown in the thumbnail.",
+        "peer_comparison_ids": [
+          "37hwqt_CoDc",
+          "uU64zaQKd30",
+          "W-j0_v9cXuQ",
+          "0bnMucPlugA",
+          "LUrsFkFfSe0"
+        ],
+        "search_demand": "Historical query volume unknown. Channel basics explainers: 37hwqt_CoDc financial literacy 4.25985 STRONG, uU64zaQKd30 basic concepts 0.89727 TYPICAL, W-j0_v9cXuQ financial system 0.77455 TYPICAL, 0bnMucPlugA basic concepts 0.32143 WEAK; this 1.07236 TYPICAL.",
+        "script_alignment": "Partial: delivers 15 basics (inflation, credit scores, tax brackets, markets, stocks, compounding, 401k, saving vs investing, good/bad debt, net worth, housing prices, how banks earn, hedge funds, FDIC, recessions) with composite Alex; not \"secrets\"."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HcGoQkyhNjQ",
+          "TRANSCRIPT_COVERAGE.csv:HcGoQkyhNjQ",
+          "audit-batches/NICK_102_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_HcGoQkyhNjQ.jpg",
+        "image_source": "https://i.ytimg.com/vi/HcGoQkyhNjQ/maxresdefault.jpg",
+        "image_sha256": "538e876ad06128b358a0f9efb92250fb5477c92522cc2968ba98e95670bd6495",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a calm cartoon man with open arms; right a 3x2 grid of colored circular icons labeled SAVING MONEY, CURRENCY BASICS, UNDERSTANDING DEBT, INVESTING BASICS, HOME OWNERSHIP, TAXES & NET WORTH; heavy black \"SIMPLY EXPLAINING / (FINANCIAL QUESTIONS)\". Mobile: headline legible, icon labels small. Accurately signals a basics Q&A (closer to the script than the title is); educational, low-tension packaging."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HcGoQkyhNjQ",
+          "TRANSCRIPT_COVERAGE.csv:HcGoQkyhNjQ",
+          "audit-batches/NICK_102_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "You got paid this week. You saw the\nnumber. It looked fine. It actually it\nlooked pretty good. And then you watched\nit leave. Rent, car payment, that\nsubscription you forgot was still\nrunning, a minimum payment on a card\nyou've been meaning to pay off for 8\nmonths, a fee you don't fully understand\nfrom your bank. And somewhere in there\ntaxes took a chunk before you even saw\nit. You're left with less than you\nexpected from a number that sounded li",
+        "ending_words": "ency,\nand dependency creates customers. The\nmore intimidating it feels, the more\nproducts someone can sell you to\nnavigate it. The confusion isn't a bug.\nFor a lot of people, it's the business\nmodel. The $948 this video was supposed\nto save you, multiply that by 40 years\nof adult life, that's not a rounding\nerror. That's life-changing money, and\nit doesn't require a hedge fund, a\nfinancial advisor, or a trust fund. It\nrequires knowing the basics well enough\nto not get quietly taken advantage of by\nsystems designed with great care to do\nexactly that. Just the basics, explained\nclearly, finally.",
+        "analysis": "All 19,813 stored characters read in two contiguous ranges with canonical hash match. Hook: paycheck disappears; Americans lose ~$948/year from financial illiteracy. Composite Alex (26, $55K). Fifteen Q&As: inflation (9.1% June 2022 peak, groceries +24%, ~2.4% early 2026); credit score factors and mortgage cost of fair vs excellent credit; progressive brackets (myth that raises reduce take-home) with standard deduction; why markets move (hypothetical \"April 2027\" tariff shock); stock ownership vs gambling, 62% own stocks, top 1% ~50%; compounding $250/month from 25 vs 35; 401k and match, participation; savings 0.39% vs index fund; good vs bad debt, card debt and APR; net worth; housing prices (record median, undersupply, lock-in, super-prime lending); how banks earn and overdraft fees; hedge funds and Buffett bet; FDIC and SVB; recessions frequency and best-days; Alex's progress and close. Clear, broad, mostly accurate, with several stale or misstated figures. No community CTA. ASR not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              9900
+            ],
+            "beat": "Paycheck hook, $948 illiteracy cost, Alex, inflation, credit score, tax brackets, why markets move (hypothetical tariff), stocks, compounding, 401k and match, savings vs investing start"
+          },
+          {
+            "character_range": [
+              9900,
+              19813
+            ],
+            "beat": "Savings vs index fund, good vs bad debt, net worth, housing prices, how banks earn, hedge funds and Buffett bet, FDIC and SVB, recessions, Alex progress, close"
+          }
+        ],
+        "claim_audit": [
+          "0:9900 CPI peak 9.1% (June 2022) correct; food-at-home ~+24% 2020-2024 consistent; ~2.4% early-2026 inflation plausible. Credit score weights 35%/30% correct. Brackets quoted ($11,925 10% ceiling, ~$48K 12% ceiling, 37% above ~$626K, $15,750 standard deduction) are 2025 tax-year values; 2026 values are higher (~$12,400 / ~$50,400 / ~$640,600 / $16,100) - stale but labeled \"current guidelines\". A raise never reduces take-home under brackets - correct (ignoring benefit cliffs). The \"hypothetical April 2027\" tariff shock ($5.8T loss, 9% one-day gain) mirrors actual April 2025 events, oddly framed as hypothetical. ~62% of adults own stocks (Gallup) and top 1% ~50% of equities (Fed DFA) consistent. $250/month at 8% from 25 vs 35 to 65: ~$873K vs ~$373K - correct. 2026 401k limit is $24,500, not $24,000. $60K x 6% = $3,600 + $1,800 match correct. \"Only 52% of workers with access use it\" conflates overall participation (~half of all workers) with take-up among those with access (~three-quarters per BLS).",
+          "9900:19813 $10,000 for 20 years at 0.39% = ~$10,810 vs 10% = ~$67,275 - correct. Card debt ~$1.28T consistent. \"90% of millionaires built their wealth through real estate\" is a misattributed popular quote, unsupported by wealth surveys. Median home price record ~$435-446K (2025) consistent; \"$2,000/month with 20% down\" understates P&I at ~6.5% (~$2,250). Housing undersupply estimates range widely (1-5M); 1.2M is the low end. Overdraft revenue ~$5-6B consistent with CFPB. Buffett bet: $1M in the index gaining ~$854K vs funds-of-funds ~$220K consistent with Buffett's letters. FDIC $250K per depositor per bank per ownership category; no insured losses since 1933; SVB ~$209B assets, ~$42B withdrawn in a day, ~90% uninsured; 157 failures in 2010 - consistent. NBER: 34 recessions since 1854 and ~10-month average post-war recessions correct; average expansion is ~5 years (script \"nearly 4\") - understated."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HcGoQkyhNjQ",
+          "TRANSCRIPT_COVERAGE.csv:HcGoQkyhNjQ",
+          "audit-batches/NICK_102_READ_RECEIPTS.json"
+        ],
+        "analysis": "Financial literacy basics via 15 common questions, framed against a cost-of-illiteracy statistic. Very broad beginner audience; evergreen; competitive. Mostly accurate, accessible explanations with a running character.",
+        "novelty_and_corpus_angle": "Original angle: a searchable chaptered explainer with each answer tied to one dated source and a 30-second action, kept current each tax year.",
+        "competition": "Exact pool: STRONG LUrsFkFfSe0 unsexy habits 3.61262; TYPICAL X6_FpDN3XD8 1.61477, YDI8nD9lgA4 1.22037, DeoEUmhOXF4 1.20584, _6Zvfj0ThsQ 1.0174, W-j0_v9cXuQ 0.77455, O5fuwQGKf_c 0.74205, b-Wl948s8Iw 0.51233; WEAK aHunm6XYO8k 0.43848, F9dpxZP8UXU 0.43388."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HcGoQkyhNjQ",
+          "TRANSCRIPT_COVERAGE.csv:HcGoQkyhNjQ",
+          "audit-batches/NICK_102_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "14,638 views at 186.2167 days, 23:04; 1.07236x TYPICAL against 10 same-channel LONG_FORM peers published 2026-03-03 to 03-13, frozen 2026-09-11. Exact pool: strong LUrsFkFfSe0 unsexy habits 3.61262; typical X6_FpDN3XD8 WW3 invest order 1.61477, YDI8nD9lgA4 investments beat salary 1.22037, DeoEUmhOXF4 broke in 40s 1.20584, _6Zvfj0ThsQ stable jobs 1.0174, W-j0_v9cXuQ financial system 0.77455, O5fuwQGKf_c new car 0.74205, b-Wl948s8Iw $300K 0.51233; weak aHunm6XYO8k WW3 net worth 0.43848, F9dpxZP8UXU 20s mistakes 0.43388. Target mid TYPICAL. Basics-explainer counterexamples: 37hwqt_CoDc \"Financial Literacy in 50 Minutes\" 4.25985 STRONG (Oct 2025) vs this and W-j0_v9cXuQ TYPICAL - format alone does not reproduce the earlier outlier. Descriptive only.",
+        "observed_result": "14,638 views; 186.2167 days; 1,384 seconds; 1.07236x TYPICAL; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Basics explainers range from STRONG to WEAK on the channel; historical search interest unknown.",
+        "trend_timing": "2026-03-08 publication during tax season; no event link.",
+        "competition": "Pool contains one STRONG habits list and WW3-themed uploads.",
+        "format_fit": "23-minute 15-question explainer with a recurring character; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 181-191 days old.",
+        "alternative_explanations": [
+          "Appeal: \"secrets\" title vs basics thumbnail send mixed signals; CTR unknown.",
+          "Engagement: question-by-question structure suits skimming; retention unavailable.",
+          "Satisfaction: clear explanations likely satisfying for beginners; satisfaction unknown.",
+          "Saturation of basics content and channel competition from WW3-themed uploads could explain the result."
+        ],
+        "original_content_lesson": {
+          "test": "Test a basics explainer titled to its actual format (\"15 Money Questions Answered Simply\") versus \"secrets\"; measure own CTR, chapter retention and search traffic.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "batch_id": "NICK_085",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "EqeP_KiIhTI",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EqeP_KiIhTI",
+          "TRANSCRIPT_COVERAGE.csv:EqeP_KiIhTI",
+          "audit-batches/NICK_085_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"Why Everyone Seems Richer Than You.\" Social-comparison question in second person with \"Seems\" implying illusion. Short, relatable, no number or mechanism named. Search intent overlaps \"why does everyone have money\" and \"how do people afford\". Curiosity depends on viewers already feeling behind.",
+        "peer_comparison_ids": [
+          "xDNv6FJR9TY",
+          "KcHTM8_Ygss",
+          "WVTUWtwILXc",
+          "vCoiiSXkjW0",
+          "Rd40d0XZLpQ",
+          "14gilFEp_Iw"
+        ],
+        "search_demand": "Historical query volume unknown. Near-identical topic xDNv6FJR9TY \"How They Afford It: The Fake Rich Illusion\" 6.18329 STRONG (Jan 2026) versus this 0.13346 WEAK (Sep 2025); Carl KcHTM8_Ygss secretly broke friends 1.34876 TYPICAL, Carl WVTUWtwILXc looking rich 0.34899 WEAK.",
+        "script_alignment": "Aligned: credit-card debt, side hustles, selective spending trade-offs, image performance, social media highlight reels, quiet wealth, starting-point differences, family support, delayed gratification and advertising."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EqeP_KiIhTI",
+          "TRANSCRIPT_COVERAGE.csv:EqeP_KiIhTI",
+          "audit-batches/NICK_085_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_EqeP_KiIhTI.jpg",
+        "image_source": "https://i.ytimg.com/vi/EqeP_KiIhTI/maxresdefault.jpg",
+        "image_sha256": "1299495f6f8acb8a7a3abde27f3642a74bb3aee3a3b4dd81f3b74e48163354ab",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a seated, bored cartoon man in a navy T-shirt looking at a phone; center a smaller suited man in sunglasses strides across a bridge of green bills over a red glowing pit, holding shopping bags and boxes; heavy black \"WHY DO THEY / LOOK RICH\" with a curved arrow. Mobile: text legible, pit-and-bridge metaphor small but readable. Image directly illustrates \"fake rich over a debt pit\", consistent with the script; viewer stand-in on phone matches the social-media framing."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EqeP_KiIhTI",
+          "TRANSCRIPT_COVERAGE.csv:EqeP_KiIhTI",
+          "audit-batches/NICK_085_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "Have you ever scrolled through social\nmedia and felt like you're the only\nperson on the planet who checks their\nbank balance before buying a coffee? It\nseems like everyone around you is living\ntheir best life, posting vacation photos\nfrom Bali, showing off their brand new\ncar, or casually mentioning they just\ndropped $300 on dinner without batting\nan eye. Meanwhile, you're over whether\nhere calculating you can afford the name\nbrand cereal or if y",
+        "ending_words": "e you're\nscrolling through social media feeling\nlike everyone else got invited to some\nexclusive millionaires club while you're\nstill waiting for your membership card\nin the mail, just remember that most of\nthose people are probably checking their\nbank balance just as nervously as you\nare. The difference is they're better at\nhiding it behind carefully curated\nInstagram posts and designer debt. Focus\non building real wealth instead of\nperforming fake wealth. And you'll sleep\nbetter at night knowing your financial\nfoundation is actually solid instead of\nmade of credit cards and wishful\nthinking.",
+        "analysis": "All 20,009 stored characters read in two contiguous ranges with canonical hash match. Hook: social media comparison and generic-cereal joke; subscribe/like CTA. Sections: about one in three carry credit-card debt at 20-30%; nearly 40% have side hustles averaging ~$800/month; selective spending trade-offs (traveler in thrift clothes, house-rich peanut-butter lunches); fake-it-till-you-make-it performance; social-media highlight reels; quiet real wealth; different starting points and timing luck; $1,000 emergency fragility; dollars as employees; instant vs delayed gratification; BMW friend shuffling card balances; family financial support as stealth advantage; savers happier; advertising and social-media consumption arms race; close: stop comparing to highlight reels. Observational, joke-heavy monologue without data visualization, few sourced numbers, one anecdote and repetitive phrasing; balanced acknowledgment of structural advantages. ASR noise (\"you're over whether here calculating\", \"bake your noodle\") preserved; not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              10000
+            ],
+            "beat": "Social-media hook, CTA, credit-card debt, side hustles, selective spending trade-offs, image performance, social media, quiet wealth, starting points"
+          },
+          {
+            "character_range": [
+              10000,
+              20009
+            ],
+            "beat": "Starting points and luck, $1,000 fragility, dollar employees, gratification psychology, BMW anecdote, family money, savers happier, advertising and arms race, close"
+          }
+        ],
+        "claim_audit": [
+          "0:10000 \"Roughly one in three Americans carry credit-card debt\" is in the range of survey estimates of adults revolving balances (unsourced). Card APRs 20-30% plausible for 2025. \"Fancy dinner will cost double by the time they pay it off\" requires years of minimum payments at ~22%; overstated as a general claim. \"Nearly 40% have a side hustle averaging ~$800/month\" resembles Bankrate side-hustle surveys (~36%, several hundred dollars monthly); unverified exact.",
+          "10000:20009 \"Huge percentage can't cover $1,000\" consistent with Bankrate-type surveys. \"Research consistently shows savers are happier\" is directionally supported by liquid-savings well-being studies but unsourced here. Family support and starting conditions acknowledged accurately as advantages. BMW card-shuffling acquaintance is an unverifiable persona anecdote. No tax or product claims."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EqeP_KiIhTI",
+          "TRANSCRIPT_COVERAGE.csv:EqeP_KiIhTI",
+          "audit-batches/NICK_085_READ_RECEIPTS.json"
+        ],
+        "analysis": "Social comparison and conspicuous consumption: why peers appear wealthier (debt, side income, trade-offs, family support, curated media). Broad emotional relevance; saturated topic. This early-channel version is observational without concrete numbers or a narrative case.",
+        "novelty_and_corpus_angle": "Original angle: reconstruct two lookalike lifestyles with real balance sheets (debt-funded vs family-funded vs self-funded) and show the monthly cash flows behind each visible purchase.",
+        "competition": "Same channel later: xDNv6FJR9TY fake-rich illusion 6.18329 STRONG, BAK_C8cWfjw stop looking rich 1.64088 TYPICAL; exact pool strong vCoiiSXkjW0 after $10,000 8.30841, Rd40d0XZLpQ stats 19.76486."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EqeP_KiIhTI",
+          "TRANSCRIPT_COVERAGE.csv:EqeP_KiIhTI",
+          "audit-batches/NICK_085_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "11,222 views at 366.5729 days, 19:57; 0.13346x WEAK against 10 same-channel LONG_FORM peers published 2025-09-03 to 09-15, frozen 2026-09-11. Exact pool: strong Rd40d0XZLpQ stats 19.76486, vCoiiSXkjW0 after $10,000 8.30841, BL1eTZxWc4A $1,000 dividends 4.15859, mWhpJZrTyNU first million 2.07599; typical 4a4sOKLCPJE net worth by age 1.93336, 5i7hLRdnbIc live on low income 1.33161, 3EgFmRtnMXo rich/middle/poor 0.99319, LJM5qILr3SE $1M dividends 0.55686; weak uXkF1LtRZso retire with one house 0.21768, 14gilFEp_Iw middle-class traps 0.14549. Target is the lowest in pool. Strongest counterexample: same fake-rich topic packaged as \"How They Afford It: The Fake Rich Illusion\" reached 6.18329 STRONG four months later; differences include title specificity, channel stage and timing - not causal. Abstract comparison titles (this, 14gilFEp_Iw) sit at the bottom while concrete dollar milestones lead; descriptive only.",
+        "observed_result": "11,222 views; 366.5729 days; 1,197 seconds; 0.13346x WEAK; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Fake-rich/social-comparison topics range from STRONG to WEAK across Nick and Carl; historical search interest unknown.",
+        "trend_timing": "2025-09-09 publication during the channel's early growth; no event link; seasonality unknown.",
+        "competition": "Pool contains the channel's two largest early outliers (stats, $10K) and several dollar-milestone hits.",
+        "format_fit": "20-minute observational monologue without numbers; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 360-373 days old; early-channel period.",
+        "alternative_explanations": [
+          "Appeal: vague \"Why Everyone Seems Richer\" title versus peers' concrete dollar promises; CTR unknown.",
+          "Engagement: joke-heavy generic observations without a case may lose viewers; retention unavailable.",
+          "Satisfaction: reassurance that peers are pretending may satisfy some viewers, but little actionable content; satisfaction unknown.",
+          "Early-channel recommendation patterns concentrated on breakout peers in the same fortnight could explain the WEAK result."
+        ],
+        "original_content_lesson": {
+          "test": "Test a fake-rich topic with a mechanism-specific title (\"How They Afford It\") and a reconstructed balance-sheet case versus a vague comparison title; measure own CTR, retention and comments.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

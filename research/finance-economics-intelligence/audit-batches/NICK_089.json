@@ -1,0 +1,133 @@
+{
+  "batch_id": "NICK_089",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "GAkjt2_csRk",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GAkjt2_csRk",
+          "TRANSCRIPT_COVERAGE.csv:GAkjt2_csRk",
+          "audit-batches/NICK_089_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"If You're 30 and Broke Watch This Immediately.\" Conditional self-identification (age + broke) plus urgent imperative. Strong direct-address hook for a defined cohort; no number or mechanism. Search/browse intent overlaps \"broke at 30 what to do\".",
+        "peer_comparison_ids": [
+          "C1CqdnB321o",
+          "F9dpxZP8UXU",
+          "BvkpPOOa7UY",
+          "ACf6WuzpZoA"
+        ],
+        "search_demand": "Historical query volume unknown. Performance comparison unavailable (publication date literal \"(date only)\"); semantically related C1CqdnB321o (thumbnail \"30 AND BROKE?\") 1.51432 TYPICAL is not a matched peer.",
+        "script_alignment": "Aligned: structural reasons for being broke at 30, income over cutting, 24-month \"gap strategy\" (freeze lifestyle, raise income 30%, debt -> $2,000 buffer -> invest), skills arbitrage with AI tools, remote geographic arbitrage, job switching, worked $50K -> $65K example."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GAkjt2_csRk",
+          "TRANSCRIPT_COVERAGE.csv:GAkjt2_csRk",
+          "audit-batches/NICK_089_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_GAkjt2_csRk.jpg",
+        "image_source": "https://i.ytimg.com/vi/GAkjt2_csRk/maxresdefault.jpg",
+        "image_sha256": "27c84f75087622e0c7a5e64b9687f8d972808259226960b3cc1325710ea5096f",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a stubbled cartoon man in a gray T-shirt glancing sideways; bottom a cracked pink piggy bank (red glow, one coin on top) with a curved arrow to a glowing pile of banded green cash; heavy black \"BROKE AT 30? / THE FIX\". Mobile: two-line text very legible. Problem-to-solution promise matches the title and the gap-strategy script; no figures."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GAkjt2_csRk",
+          "TRANSCRIPT_COVERAGE.csv:GAkjt2_csRk",
+          "audit-batches/NICK_089_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "You're 30 years old and you just\nrealized you're broke. Not the fun kind\nof broke where you're 23 eating ramen,\nironically, and telling yourself you're\nfinding yourself. The actual kind of\nbroke where your high school friends are\nbuying houses and you're avoiding eye\ncontact with your landlord because rent\nis 3 days late again. Now, here's what\nmakes this moment uniquely terrifying.\nYou're old enough to understand compound\ninterest, but young eno",
+        "ending_words": "equity. You\nhave excuses. Your nephew asks why you\nstill rent. You tell him you're figuring\nit out. He's 12. He doesn't believe you.\nOpen your eyes. That person exists in a\ntimeline where you did nothing after\nwatching this video. The only thing\nstanding between you and that future is\nwhether you're willing to be weird for\n730 days. Not forever. Just 730 days of\nfrozen lifestyle, aggressive income\ngrowth, and relentless gap widening.\nThat's it. That's the entire game.\nYou're 30. You have 3,650\ndays until you're 40. The math is\nsimple. The execution is hard. But\nstaying broke is harder. Choose.",
+        "analysis": "All 19,176 stored characters read in two contiguous ranges with canonical hash match. Hook: broke at 30 with friends buying houses and $43 in checking. Structural framing: home price-to-income 2.9x (1990) / 3.6x (2010) / 5.8x (2026), degree as baseline for $58K entry jobs, inflation-adjusted purchasing power, boomer contrast. Pivot: 30s as earning decade; income problem not spending problem; \"gap strategy\" (widen earn-minus-ego spending); 24-month frugal sprint; AI-accelerated skill learning, video-editor example ($400/video, 20/month, \"$6,800\"), remote-work geographic arbitrage; three-step order (debt, $2,000 buffer, invest); $500/$1,000 gap at 8% for 10 years; 30% income target, frozen expenses; job-switch claim; ego spending; $50K -> $65K worked example; future-self visualization and 3,650-days close. Motivational, second-person, no sponsor CTA; mixes structural empathy with personal-responsibility pressure. ASR not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              9600
+            ],
+            "beat": "Broke-at-30 hook, price-to-income and wage framing, 30s as earning decade, income vs spending, gap strategy, 24-month sprint, AI skill arbitrage and video-editor example, remote arbitrage"
+          },
+          {
+            "character_range": [
+              9600,
+              19176
+            ],
+            "beat": "Obligations objection, three-step order, gap math at 8%, discomfort tolerance, 30% income target and frozen expenses, job-switch claim, ego spending, $50K->$65K example, future-self visualization close"
+          }
+        ],
+        "claim_audit": [
+          "0:9600 Home price-to-income 2.9x (1990), 3.6x (2010), 5.8x (2026) is in the range of published ratios (e.g., Harvard JCHS reported ~5x nationally in 2023) but the 2026 value is unsourced. \"$58,000 today has the purchasing power of $28,000 in 1990\" is ambiguous; by CPI alone $58K today is roughly $23K in 1990 dollars, and a housing-adjusted comparison needs a source. Video editor: $400 x 20 videos = $8,000/month gross, not $6,800 (costs/taxes unstated), at ~60 hours/month. \"Skill timelines collapsed from 18 months to six weeks\" and AI-tutor claims are unsupported.",
+          "9600:19176 $500/month at 8% for 10 years = ~$91,500 and $1,000/month = ~$183,000 - correct. \"People who stay at a company more than two years earn 50% less over their lifetime\" traces to a widely shared 2014 media claim without rigorous evidence; unsupported. Worked example: $65,000 - $48,000 = $17,000 \"gap\" ignores income/payroll tax on the $15,000 raise and assumes the full raise from month one; \"$34,000 banked in 2 years\" therefore overstates; the $34K -> $5K fund + $29K invested split is internally consistent. \"After 40 the window is closing\" is rhetorical."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GAkjt2_csRk",
+          "TRANSCRIPT_COVERAGE.csv:GAkjt2_csRk",
+          "audit-batches/NICK_089_READ_RECEIPTS.json"
+        ],
+        "analysis": "Recovery plan for 30-year-olds with no savings: income growth, lifestyle freeze, skills, relocation and job switching, framed against structural housing/wage pressures. Large relatable audience; saturated genre, differentiated by the 24-month sprint framing.",
+        "novelty_and_corpus_angle": "Original angle: after-tax gap simulation with a realistic raise ramp, local cost-of-living data for relocation, and a documented skills path with earnings evidence rather than anecdote.",
+        "competition": "Related channel videos (not matched peers): C1CqdnB321o 30-year-old stats 1.51432 TYPICAL, F9dpxZP8UXU 20s mistakes 0.43388 WEAK, BvkpPOOa7UY 30s stop buying 0.58497 TYPICAL, ACf6WuzpZoA truth about 30s 1.08944 TYPICAL."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GAkjt2_csRk",
+          "TRANSCRIPT_COVERAGE.csv:GAkjt2_csRk",
+          "audit-batches/NICK_089_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "INSUFFICIENT_DATA: 14,339 frozen views, 21:12; publication date literally \"(date only)\" in the frozen master, so Age_days, lifetime-rate ratio and peer pool are blank (Tier_basis MISSING_DATE_FORMAT_VIEWS_OR_YOUNG). No eligible performance tier. Semantic comparators (C1CqdnB321o 1.51432 TYPICAL, ACf6WuzpZoA 1.08944 TYPICAL, F9dpxZP8UXU 0.43388 WEAK) are unmatched by age and cannot benchmark this video. No inference from raw views or title.",
+        "observed_result": "14,339 frozen views; 1,272 seconds; publication date MISSING; normalized ratio NOT_ELIGIBLE; peer pool UNAVAILABLE.",
+        "topic_demand": "Historical \"broke at 30\" query interest UNKNOWN.",
+        "trend_timing": "UNAVAILABLE: missing publication date; script references 2026, no event linkage.",
+        "competition": "No eligible comparables; related channel age-cohort videos listed only as unmatched context.",
+        "format_fit": "21-minute motivational plan with one worked example; retention unknown.",
+        "channel_context": "Cannot place within a channel period without a publication date; do not repair the frozen baseline.",
+        "alternative_explanations": [
+          "Appeal: direct cohort callout plus \"THE FIX\" could attract viewers; CTR unknown.",
+          "Engagement: second-person urgency may hold or fatigue viewers; retention unavailable.",
+          "Satisfaction: concrete sprint plan may satisfy; overstated claims could reduce trust; satisfaction unknown.",
+          "Without a publication date, views cannot be normalized; any performance reading would be invented."
+        ],
+        "original_content_lesson": {
+          "test": "If republished, test the gap-strategy script with an after-tax worked example and sourced job-switch data; measure own CTR and retention with a known publication date.",
+          "confidence": "LOW: performance evidence unavailable"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "BLOCKED_MISSING_SOURCE",
+        "PERFORMANCE_REVIEW": "BLOCKED_MISSING_SOURCE"
+      }
+    }
+  ]
+}

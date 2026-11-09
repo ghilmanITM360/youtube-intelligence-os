@@ -1,0 +1,134 @@
+{
+  "batch_id": "NICK_098",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "HR6wU9Hb6xk",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HR6wU9Hb6xk",
+          "TRANSCRIPT_COVERAGE.csv:HR6wU9Hb6xk",
+          "audit-batches/NICK_098_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"Wall Street Just Gave a Dire Warning (You're Not Ready).\" News-alert framing (\"Just\"), institutional authority (\"Wall Street\"), fear (\"Dire\") and personal challenge. The underlying \"warning\" is a late-2024 Goldman Sachs 10-year return forecast, so \"Just\" overstates recency. Browse-oriented; search intent for \"Goldman 3% forecast\" partial.",
+        "peer_comparison_ids": [
+          "bv5qS6sR4Bs",
+          "-ZcdgylpeJg",
+          "TIrIi752GSc",
+          "QlPqXGV491Q",
+          "Ctpvnr2OmNU"
+        ],
+        "search_demand": "Historical query volume unknown. Channel market-warning titles: bv5qS6sR4Bs \"Are You Ready For What's Coming?\" 4.79096 STRONG, -ZcdgylpeJg \"Brace for Impact...\" 1.41292 TYPICAL, this 1.21959 TYPICAL, TIrIi752GSc bond market breaking 0.61547 TYPICAL.",
+        "script_alignment": "Partial: the \"warning\" is a low-return decade (3% S&P forecast, 72% odds stocks trail bonds) plus valuation and Magnificent Seven concentration, explicitly \"not a video about a crash\"; \"Just\" and \"Dire\" overstate an October 2024 research note."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HR6wU9Hb6xk",
+          "TRANSCRIPT_COVERAGE.csv:HR6wU9Hb6xk",
+          "audit-batches/NICK_098_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_HR6wU9Hb6xk.jpg",
+        "image_source": "https://i.ytimg.com/vi/HR6wU9Hb6xk/maxresdefault.jpg",
+        "image_sha256": "adb1c8d12dcc728430cce1678b14a72aec8c787753977de3fa63eec3f324dded",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a terrified cartoon man biting his fists; right a rising red zigzag chart peaking at a red-circled \"NOW\" with a black arrow pointing to it and a large red arrow plunging down; heavy black \"IT'S COMING...\" Mobile: text and crash arrow very legible. The image depicts an imminent crash, which the script explicitly says it is not forecasting (its thesis is a slow, low-return decade); packaging/script divergence."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HR6wU9Hb6xk",
+          "TRANSCRIPT_COVERAGE.csv:HR6wU9Hb6xk",
+          "audit-batches/NICK_098_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "It's late, you're half asleep, and you\nopen the app to check your retirement\naccount. There's the little green number\nat the bottom, and there's that quiet\nhit of okay, I'm doing this right. That\nnumber might be the most comforting\nassumption in your financial life.\nBecause the scariest forecast on Wall\nStreet isn't a crash, it's a single\nquiet number that slid past you. 3%\nThat's the annualized return Goldman\nSachs calculates we're stuck with fo",
+        "ending_words": "ntioned is\nwhere I break down exactly how I dig\nthis stuff up if you want it. I make\nthis channel for exactly this reason to\nshine a light on the quiet stuff that\nactually decides your money, the stories\nthe financial news skips because boring\nforecasts don't get clicks. If that's\nthe kind of thing you'd rather be early\non than late to, subscribe and turn\nnotifications on because the warnings\nthat matter are almost never the loud\nones. The loud risks are already priced\nin. It's the quiet 3% hiding in plain\nsight inside the fund you trusted that\ngets you. Don't be the last one to read\nthe memo.",
+        "analysis": "All 19,773 stored characters read in two contiguous ranges with canonical hash match. Hook: late-night retirement-app comfort vs a quiet \"3%\" forecast; subscribe framing. Characters Daniel (57, near retirement) and Catherine (28, expects 10-12%). Goldman late-2024 forecast (~3% annualized, 72% probability of trailing bonds, ~1 in 3 of trailing inflation), other firms' lower expectations, Berkshire cash pile, CAPE ~17 average and Buffett indicator, $100K at 10/7/3% over 10 years, Magnificent Seven concentration (~a third), 2022 drawdowns, Natixis expectation gap (~15% vs ~7%), Dalbar behavior gap, sequence risk with 2000-2009 lost decade and Japan 1989-2024, mid-late community CTA and disclaimer, fair bull case (profitable megacaps vs dot-com, AI productivity, valuation warnings that failed in 2017-2021), action: diversify (equal-weight, international, value, bonds), Daniel's safe bucket, Catherine keeps buying; close and second CTA. Balanced and well-sourced core; vague in places (\"we've seen the same volatility through '25\"). ASR not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              9900
+            ],
+            "beat": "3% hook, Daniel and Catherine, Goldman forecast and probabilities, other firms and Berkshire cash, CAPE/Buffett indicator, $100K scenarios, Magnificent Seven concentration and 2022 drawdown"
+          },
+          {
+            "character_range": [
+              9900,
+              19773
+            ],
+            "beat": "Natixis expectation gap, Dalbar, sequence risk, 2000s lost decade, Japan 34 years, community CTA, bull case, what to do (diversify), Daniel and Catherine fixes, close"
+          }
+        ],
+        "claim_audit": [
+          "0:9900 Goldman Sachs (Oct 2024) projected ~3% annualized nominal S&P 500 returns for the next decade, ~72% probability of underperforming bonds and ~33% of trailing inflation - consistent with widely reported note; \"Just gave\" overstates recency (published ~20 months earlier). Vanguard/JPMorgan below-history US equity outlooks consistent. Berkshire's record cash pile consistent with 2024-2025 reports. CAPE long-run ~17 consistent. $100,000 for 10 years at 10%/7%/3% = ~$259K/~$197K/~$134K, gap ~$62-63K - correct. Magnificent Seven roughly a third of the S&P 500 and ~40% 2022 declines vs ~-19% index consistent.",
+          "9900:19773 Natixis surveys reported individual investors expecting ~15%+ real returns versus professionals far lower (~7%) - consistent with published survey framing. S&P 500 2000-2009 roughly -1%/year total return - correct. Nikkei 1989 peak regained in early 2024 (~34 years) - correct. Dalbar behavior gap characterized correctly. Bull-case points (megacap profitability vs dot-com, valuation warnings that missed gains 2017-2021, CAPE as long-horizon not timing tool) are fair. Equal-weight, international, value and bond diversification suggestions are generic and reasonable."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HR6wU9Hb6xk",
+          "TRANSCRIPT_COVERAGE.csv:HR6wU9Hb6xk",
+          "audit-batches/NICK_098_READ_RECEIPTS.json"
+        ],
+        "analysis": "Low expected US equity returns, valuation and index concentration risk, sequence risk for near-retirees. Broad investor audience; timely in a high-valuation 2026 market. Competitive macro-warning genre; this version is balanced and avoids crash prediction.",
+        "novelty_and_corpus_angle": "Original angle: plot the viewer's plan at 3/5/7/10% with a Monte Carlo band, show their fund's top-10 concentration, and compare equal-weight and global allocations over prior high-CAPE decades.",
+        "competition": "Exact pool all TYPICAL: -CbNGP9H4xw 1.60821, -ZcdgylpeJg brace for impact 1.41292, maClOD9240k 1.36662, xrzV3G-Iorg 25 minutes 1.30154, dlnPr167zII 1.02296, 4-XefbqKnPo 0.79661, ztNMEqJUgUk payday 0.76001, ED3pUaLp5g8 0.72684, Kgdvr1tkPNQ invest order 2026 0.6868, TIrIi752GSc 0.61547."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HR6wU9Hb6xk",
+          "TRANSCRIPT_COVERAGE.csv:HR6wU9Hb6xk",
+          "audit-batches/NICK_098_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "7,394 views at 77.1035 days, 21:27; 1.21959x TYPICAL against 10 same-channel LONG_FORM peers published 2026-06-20 to 06-30, frozen 2026-09-11. Every peer is TYPICAL (0.6154-1.6082), so the pool cannot discriminate; target is upper-middle. Older warning-style counterexample: bv5qS6sR4Bs \"Are You Ready For What's Coming?\" 4.79096 STRONG (March 2026) versus this similar warning frame TYPICAL, so alarm framing alone is not sufficient. Peer images/scripts not re-inspected.",
+        "observed_result": "7,394 views; 77.1035 days; 1,287 seconds; 1.21959x TYPICAL; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Market-warning titles recur on the channel with mostly TYPICAL outcomes and occasional STRONG; historical search interest unknown.",
+        "trend_timing": "2026-06-25 publication; references a 2024 forecast; no event linkage.",
+        "competition": "All-TYPICAL pool; external macro-warning saturation.",
+        "format_fit": "21-minute two-character macro explainer with bull case and actions; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 72-82 days old.",
+        "alternative_explanations": [
+          "Appeal: crash-imminent thumbnail and \"Dire Warning\" title may attract fearful clicks; CTR unknown.",
+          "Engagement: two-character frame and balanced bull case may hold viewers; retention unavailable.",
+          "Satisfaction: viewers expecting a crash call get a low-return-decade thesis; may satisfy or disappoint; satisfaction unknown.",
+          "Mid-2026 channel compression and saturation of warning content could explain the result."
+        ],
+        "original_content_lesson": {
+          "test": "Test packaging that states the actual thesis (\"Goldman: 3% a Year for a Decade?\") against crash-imminent imagery; measure own CTR, early drop-off and bait-related comments.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "batch_id": "NICK_096",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "HJ5GZ2R3n2I",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HJ5GZ2R3n2I",
+          "TRANSCRIPT_COVERAGE.csv:HJ5GZ2R3n2I",
+          "audit-batches/NICK_096_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"WTF Just Happened To Your Retirement Accounts?!\" Alarm/news framing implying a recent sudden event, with profanity acronym and double punctuation. Browse-oriented; search intent weak. The script's thesis is structural (pension-to-401k shift since 1978), not a recent crash, so the title creates an event expectation the content reframes.",
+        "peer_comparison_ids": [
+          "qUcdSBhm9us",
+          "f6HIYQUiMoU",
+          "v7uG773-wAY",
+          "ED3pUaLp5g8",
+          "gt8KAc7h9O8"
+        ],
+        "search_demand": "Historical query volume unknown. \"WTF Just Happened\" template: f6HIYQUiMoU housing market 33.03103 STRONG (Apr 2026) versus this retirement version 0.94962 TYPICAL; same template does not reproduce the outlier.",
+        "script_alignment": "Partial: explains what \"happened\" as the historical shift of retirement risk to individuals (sequence risk, fees, behavior, inflation, Social Security uncertainty) rather than a current event; title urgency is reframed in the first minute (\"it wasn't the crash you think\")."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HJ5GZ2R3n2I",
+          "TRANSCRIPT_COVERAGE.csv:HJ5GZ2R3n2I",
+          "audit-batches/NICK_096_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_HJ5GZ2R3n2I.jpg",
+        "image_source": "https://i.ytimg.com/vi/HJ5GZ2R3n2I/hqdefault.jpg",
+        "image_sha256": "f5bc16121b25fdb87974cd7ad138d57cb57c9e59c27c4edd67010acda3e41507",
+        "dimensions": [
+          480,
+          360
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Only hqdefault available: 480x360 with letterbox bars, inspected full size and 320x240. White field; left a dismayed cartoon man in a gray T-shirt; right a cracked glass jar labeled \"401K\" with a few bills spilling out; heavy black \"WHERE'D IT GO?!\" with a curved arrow. Mobile: text and 401K label legible. Image implies sudden loss of 401k money, matching the alarm title but not the script's structural explanation; no crash chart or figure."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HJ5GZ2R3n2I",
+          "TRANSCRIPT_COVERAGE.csv:HJ5GZ2R3n2I",
+          "audit-batches/NICK_096_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "Ray retired on a Friday and on Monday\nmorning he did the most radical thing in\nmodern American finance. Nothing. He\npoured his coffee, watered his tomatoes,\nand never once opened an app to check\nwhat the market did overnight because it\ndidn't matter. Ray worked 41 years at\none company and on the first of every\nmonth, the same $3,200 lands in his\naccount whether the market's on fire or\non the floor. His daughter Cara works at\nthat same company now",
+        "ending_words": "ering her\ntomatoes, ignoring the market on\npurpose. Except the number she gets to\nignore is bigger than any pension ever\npromised him, and every dollar of it is\nhers.\nWhat happened to your retirement account\nwasn't the crash.\nIt was a job that got handed to you in\n1978 without so much as an email. And\nthe good news, the only news that\nactually matters, is that once you know\nyou're holding the wheel, you get to\ndecide where the bus goes. That's the\nwhole game. If you want the playbook for\nbuilding income you actually own, our\nschool community is in the description.\nI'll see you in the next one.",
+        "analysis": "All 17,749 stored characters read in two contiguous ranges with canonical hash match. Story frame: retired Ray with a $3,200/month pension vs daughter Cara refreshing her 401k at night; subscribe CTA. Vanguard: record 86% participation (vs ~65% 25 years ago), ~12% savings rate, ~$168K average vs ~$44K median (Bezos-in-a-room analogy). History: 1978 Revenue Act Section 401(k), Ted Benna 1980, pension coverage ~4 in 10 (1980) to ~1 in 10; job of pension manager handed to workers. Three risks: sequence of returns ($500K/$40K illustration, 2008 retiree), fees (1% eating ~a quarter), behavior (Dalbar), plus hardship withdrawals and loans, inflation (+20%), Social Security 2033 shortfall. Age map (20s/40s-50s/late 50s-60s) and the ~4 in 10 with no account; no-villain framing; late community CTA; levers (match, fees, auto-escalation, catch-ups including super catch-up 60-63, behavioral non-action); Ray/Cara resolution. Coherent, empathetic and mostly accurate. ASR glitch (\"worth about $70 each\" for ~$70 billion) preserved; not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              8900
+            ],
+            "beat": "Ray vs Cara hook, Vanguard averages vs median, 401(k) origin and pension decline, risk transfer, sequence risk, fees, behavior and hardship withdrawals, inflation start"
+          },
+          {
+            "character_range": [
+              8900,
+              17749
+            ],
+            "beat": "Inflation, Social Security 2033, age map, no-account group, no-villain framing, community CTA, levers (match, fees, escalation, catch-ups, non-action), Ray/Cara resolution"
+          }
+        ],
+        "claim_audit": [
+          "0:8900 Revenue Act of 1978 created Section 401(k) and Ted Benna's 1980 plan design correctly described. Vanguard-style figures (86% participation, ~12% total savings rate, ~$168K average vs ~$44K median) consistent with the 2026 How America Saves pattern noted in other records. Private-sector defined-benefit coverage falling from roughly 4 in 10 (1980) to about 1 in 10 participating today is broadly consistent with BLS/EBRI series. A 1% annual fee reducing a 40-year contribution stream's value by ~22% (7% vs 6%) supports \"roughly a quarter\". Hardship withdrawals ~triple pre-pandemic and ~1 in 8 with loans consistent with Vanguard. Bezos analogy stored as \"$70 each\" is an ASR omission (should be ~$70 billion).",
+          "8900:17749 US prices up ~20%+ over the prior five years consistent with CPI; standing still loses ~17% of purchasing power (\"a fifth\" approximate). Trustees: ~2033 depletion with ~77% payable; \"3/4 ... very roughly 20% cut\" approximately consistent (77% implies ~23%). Roughly four in 10 adults without retirement accounts consistent with SCF (~46% of families). Employer match as 50-100% return, auto-escalation and 2026 super catch-up (ages 60-63) correctly referenced. Sequence-of-returns $500K example is illustrative, not historical."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HJ5GZ2R3n2I",
+          "TRANSCRIPT_COVERAGE.csv:HJ5GZ2R3n2I",
+          "audit-batches/NICK_096_READ_RECEIPTS.json"
+        ],
+        "analysis": "Retirement-risk transfer from employers to workers: 401(k) history, sequence risk, fees, behavior, inflation and Social Security uncertainty. Broad audience of 401k holders; alarm packaging over an explanatory, mostly calming script. Competitive retirement-explainer genre.",
+        "novelty_and_corpus_angle": "Original angle: compare a pension-equivalent annuity cost with a typical 401k balance, and quantify each lever (match, fees, escalation) on one worker's statement.",
+        "competition": "Exact pool: STRONG gt8KAc7h9O8 millionaire 4.29824; TYPICAL qUcdSBhm9us record highs 1.2619, v7uG773-wAY debt collapse 1.11089, Ctpvnr2OmNU crash investing 0.98931, EOVnm1nKCns saving to investing 0.94602, wOVEF-cb5XI 0.8394, ULkTn-jHBBc 0.81094, 4-XefbqKnPo inflation 0.79661, CBzVGI_K3bQ 0.75709, ED3pUaLp5g8 retiree stats 0.72684; no WEAK peer."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:HJ5GZ2R3n2I",
+          "TRANSCRIPT_COVERAGE.csv:HJ5GZ2R3n2I",
+          "audit-batches/NICK_096_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "4,760 views at 67.138 days, 18:48; 0.94962x TYPICAL against 10 same-channel LONG_FORM peers published 2026-06-29 to 07-10, frozen 2026-09-11. Exact pool (above) has one STRONG (gt8KAc7h9O8) and no WEAK; target mid TYPICAL. Template counterexample: \"WTF Just Happened To The Housing Market?!\" (f6HIYQUiMoU) reached 33.03103 STRONG in April 2026, while this retirement version is TYPICAL - topic, timing and actual market events differ, so the template is not sufficient. Peer images/scripts not re-inspected.",
+        "observed_result": "4,760 views; 67.138 days; 1,128 seconds; 0.94962x TYPICAL; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Retirement-account anxiety recurs; historical search interest unknown.",
+        "trend_timing": "2026-07-05 publication; no specific market event identified in the script; seasonality unknown.",
+        "competition": "Compressed mid-2026 channel outcomes; external retirement content heavy.",
+        "format_fit": "19-minute story-framed explainer with levers; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 62-73 days old.",
+        "alternative_explanations": [
+          "Appeal: alarm title and \"WHERE'D IT GO?!\" jar may attract worried 401k holders; hqdefault-only availability noted; CTR unknown.",
+          "Engagement: Ray/Cara frame and historical reveal may sustain viewing; the reframing away from a crash could disappoint some; retention unavailable.",
+          "Satisfaction: practical levers and calm tone may satisfy; satisfaction unknown.",
+          "Absence of an actual market shock at publication (unlike the housing outlier), mid-2026 compression and distribution could explain the result."
+        ],
+        "original_content_lesson": {
+          "test": "Test structural-explainer packaging that names the real cause (\"Your Pension Was Replaced in 1978\") against event-alarm packaging; measure own CTR, early drop-off and comments about bait.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "audit_timestamp_utc": "2026-10-16T02:36:09Z",
+  "audit_type": "AUDIT_ONLY_NO_DEVELOPMENT",
+  "repository": "ghilmanITM360/youtube-intelligence-os",
+  "working_path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os",
+  "checked_shas": {
+    "working_branch_head": "53db0e68fd7eecee9e26e0797383b779053859d7",
+    "origin_working_branch": "53db0e68fd7eecee9e26e0797383b779053859d7",
+    "main_local_and_origin": "08e719264e31ecd82de24f8eeb8f065c08359fe5",
+    "pr34_head": "65caa88",
+    "pr32_head": "c867af8",
+    "pr30_head": "30e0ef2",
+    "pr25_head": "fce8167",
+    "pr21_head": "043b85b",
+    "pr28_head": "fb1e56d",
+    "pr20_head": "e9b5696",
+    "historical_handoff_checkpoint": "03a6cd0e98c9fb10b7d6a954bc1ef1f1c3ec8566"
+  },
+  "git_state": {
+    "branch": "research/finance-economics-intelligence",
+    "ahead_behind_vs_origin_branch": "0/0",
+    "ahead_of_main": 6,
+    "behind_main": 0,
+    "tracked_changes": 0,
+    "untracked": [
+      "finance-short-02-visual-calibration/",
+      "productions/",
+      "research/casually-finance-script-intelligence/"
+    ],
+    "stashes": 1,
+    "worktrees": 2,
+    "local_branches": 25,
+    "remote_only_branches": 9,
+    "fetch": "git fetch origin --prune (read-only)"
+  },
+  "github": {
+    "open_prs": [
+      36,
+      34,
+      32,
+      30,
+      28,
+      26,
+      25,
+      24,
+      22,
+      21,
+      20
+    ],
+    "closed_unmerged_prs": [
+      29
+    ],
+    "merged_prs": 19,
+    "open_issues": [
+      35,
+      33,
+      31,
+      27,
+      23
+    ]
+  },
+  "ci": {
+    "pr36_head_run": {
+      "id": 38840548627,
+      "sha": "53db0e6",
+      "status": "completed",
+      "conclusion": "success",
+      "tests": "460 passed, 1 skipped"
+    },
+    "main_08e7192": "success",
+    "open_pr_heads": "validate SUCCESS for #34,#32,#30,#28,#26,#25,#24,#22,#21,#20",
+    "ci_scope_gap": "pytest testpaths=tests and ruff scope scripts+tests exclude research/ and knowledge/ validators"
+  },
+  "local_checks_rerun": {
+    "validate_research.py": "PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION (phase_complete=false)",
+    "finance_unit_tests": "6/6 OK",
+    "validate_knowledge.py": {
+      "local_hashes_checked": 2732,
+      "source_rows": 5976,
+      "git_blobs_resolve": 2819,
+      "markdown_documents": 37,
+      "errors": 0
+    },
+    "scan_tracked_secrets.py": "tracked_secret_findings=0",
+    "git_diff_check": "clean",
+    "ruff": "NOT_RUN (not installed locally; CI ran static checks successfully)",
+    "full_pytest_local": "NOT_RUN (exact-head CI used)"
+  },
+  "count_reconciliation": {
+    "canonical_channels": {
+      "historical_claim": 13,
+      "current": 13,
+      "match": true
+    },
+    "canonical_videos": {
+      "historical_claim": 966,
+      "current_recount_csv": 966,
+      "match": true
+    },
+    "transcript_records": {
+      "historical_claim": 955,
+      "current_recount_csv": 955,
+      "placeholders": 11,
+      "match": true
+    },
+    "source_version_records": {
+      "historical_claim": 5976,
+      "current": 5976,
+      "match": true
+    },
+    "duplicate_records": {
+      "historical_claim": 299,
+      "current": 299,
+      "match": true
+    },
+    "unavailable_historical_paths": {
+      "historical_claim": 26,
+      "current": 26,
+      "match": true
+    },
+    "drive_candidates": {
+      "historical_claim": 128,
+      "current": 128,
+      "match": true
+    },
+    "drive_content_reviewed": {
+      "historical_claim": 5,
+      "current": "5 (KB) + 5 finance triages = 10 distinct candidates",
+      "match": "UPDATED"
+    },
+    "thumbnail_urls": {
+      "present": 807,
+      "missing": 159,
+      "mobile_reviewed": 27,
+      "attempted": 30,
+      "sampled_404": 3
+    },
+    "formats": {
+      "LONG_FORM": 794,
+      "SHORTS": 13,
+      "UNKNOWN": 159
+    },
+    "tiers": {
+      "STRONG": 179,
+      "TYPICAL": 383,
+      "WEAK": 161,
+      "INSUFFICIENT_DATA": 243,
+      "labelled": 723
+    },
+    "semantic_reviews": {
+      "total": 30,
+      "full_stored_text": 17,
+      "excerpt_only": 13,
+      "keyword_heuristic_topic_rows": 936
+    },
+    "ci_state_previous_vs_current": {
+      "previous": "running",
+      "current": "success"
+    },
+    "head_previous_vs_current": {
+      "previous": "03a6cd0",
+      "current": "53db0e6",
+      "commits_added": 5
+    }
+  },
+  "finance_progress": {
+    "weighted_research_completion_measurable_pct": 42.1,
+    "weighted_lower_bound_pct": 34.1,
+    "interpretive_layer_pct": 3.0,
+    "sampling_plan_executed_pct": 100.0,
+    "weights_justified": "audit judgment of analyst effort; MEDIUM-LOW confidence",
+    "overall_repo_pct": "NOT_MEASURABLE"
+  },
+  "usage_at_audit": {
+    "five_hour_pct": 2,
+    "weekly_pct": 54,
+    "context_pct": 12,
+    "stop_thresholds": "90% five-hour / 95% weekly"
+  },
+  "files_modified_outside_reports": [],
+  "limitations": [
+    "No deep forensic re-analysis, acquisition, rendering or playback review performed",
+    "Weights for Finance WBS are audit judgment, not project-documented",
+    "Local ruff and full pytest not run",
+    "Contents of untracked folders not inspected beyond size and diff counts",
+    "PR #21/#25/#28 bodies read in summary only",
+    "Private metrics and context-warning history UNKNOWN",
+    "Filesystem dates not used as research dates"
+  ],
+  "report_files": [
+    "COMPLETE_PROJECT_STATUS_AUDIT.md",
+    "CLIENT_PROGRESS_REPORT.md",
+    "WORKSTREAM_PROGRESS.csv",
+    "BRANCH_PR_WORKTREE_AUDIT.csv",
+    "REMAINING_WORK_BACKLOG.csv",
+    "PROJECT_TIMELINE.md",
+    "AUDIT_VALIDATION.json"
+  ],
+  "final_status": "AUDIT_COMPLETE"
+}

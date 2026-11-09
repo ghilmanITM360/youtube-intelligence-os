@@ -1,0 +1,136 @@
+{
+  "batch_id": "NICK_082",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "EOVnm1nKCns",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EOVnm1nKCns",
+          "TRANSCRIPT_COVERAGE.csv:EOVnm1nKCns",
+          "audit-batches/NICK_082_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"How The Rich Turn Saving Into Investing (Step by Step).\" Process promise with an aspirational group (\"The Rich\") and a tutorial parenthetical. Search intent overlaps \"how to start investing savings\", \"move savings to investments\". Practical, low-drama framing; no number.",
+        "peer_comparison_ids": [
+          "9PHPEV9MKOg",
+          "gt8KAc7h9O8",
+          "wOVEF-cb5XI",
+          "pqJLxRMlZkc",
+          "Fzdn89C2YXo"
+        ],
+        "search_demand": "Historical query volume unknown. Frozen result 0.94602 TYPICAL in an all-TYPICAL-but-two pool.",
+        "script_alignment": "Aligned: four explicit steps (emergency-fund line, order of operations: match/debt/tax-advantaged/HSA, automation, low-cost index fund and fees) plus compounding and a surplus caveat, framed by Greg vs Grace."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EOVnm1nKCns",
+          "TRANSCRIPT_COVERAGE.csv:EOVnm1nKCns",
+          "audit-batches/NICK_082_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_EOVnm1nKCns.jpg",
+        "image_source": "https://i.ytimg.com/vi/EOVnm1nKCns/hqdefault.jpg",
+        "image_sha256": "54a7b2cc4587cbbf7dc63d79342f7bb392855ca7c31458bf49646c68eb45e188",
+        "dimensions": [
+          480,
+          360
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Only hqdefault available (maxresdefault not served): 480x360 with letterbox bars inspected at full size and 320x240. White field inside bars; left a smirking cartoon man in a blue hoodie pointing right; center a dark-green piggy bank with a $ sitting on cracked ground; behind it a rising green zigzag arrow on a grid; heavy black \"SAVE LIKE THIS\". Mobile: text and arrow legible. \"SAVE LIKE THIS\" emphasizes saving while the script argues that saving alone is insufficient and money must be invested; image implies a saving method, partially mismatched to the \"turn saving into investing\" thesis. No numbers."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EOVnm1nKCns",
+          "TRANSCRIPT_COVERAGE.csv:EOVnm1nKCns",
+          "audit-batches/NICK_082_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "You've got a savings account you're\nquietly proud of. $41,000\nbuilt one paycheck at a time, sitting\nthere like proof that you did something\nright. You check it sometimes just to\nfeel the number. Responsible, safe,\nyours. Now, meet Grace. Same company as\nyou, same job title, same $52,000\nsalary, two floors up in the same\napartment building. She started saving\nthe exact same month you did 10 years\nago. Her account today isn't at 41,000,\nit's at jus",
+        "ending_words": ". Look at\nyour own money right now, not what you\nearn, what you're doing with what's\nalready there. Is it working, or is it\njust sitting at the edge of the line\nwaiting for permission you were always\nallowed to give it?\nCross the line.\nEverything else is just steps.\nIf you want the full free walk-through\non building an income stream of your\nown, our school community is waiting for\nyou. Links in the description. And quick\nreminder, I'm not a financial advisor.\nThis video is for educational purposes\nonly, and what happens next depends\nentirely on your own decisions. I'll see\nyou in the next one.",
+        "analysis": "All 19,258 stored characters read in two contiguous ranges with canonical hash match. Hook: your $41,000 savings vs coworker Grace's ~$300,000 on the same $52,000 salary over 10 years, attributed to one 20-minute decision; like CTA. Inflation erosion ($1 in 2000 -> ~51 cents), HYSA ~4% vs inflation ~4%, asset composition by wealth group (bottom half home/car; top 1% ~2% cash; top 10% own ~90% of stocks), honest surplus caveat flagged early. Step 1 emergency-fund \"line\" and automatic overflow; Step 2 order (match, toxic debt, tax-advantaged, HSA); Step 3 automation (64% opt-in vs 94% auto-enroll participation) and behavior gap; Step 4 index fund, 1% fee example, active underperformance; buy-borrow aside; compounding table for $500/month; start-at-25 vs 35; surplus caveat (59% can't cover $1,000); late \"faceless YouTube\" community CTA (claims 10+ successful channels), disclaimer, close. Clear stepwise structure with a framing story, but the central Grace result and several figures are inconsistent. ASR not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              9700
+            ],
+            "beat": "Greg/Grace hook, CTA, inflation and HYSA, wealth composition by class, surplus caveat preview, Step 1 emergency-fund line, Step 2 order of operations, Step 3 automation start"
+          },
+          {
+            "character_range": [
+              9700,
+              19258
+            ],
+            "beat": "Automation and behavior gap, Step 4 index fund and fee drag, borrow-against-assets aside, compounding table, start-age gap, surplus caveat, community CTA, close and disclaimer"
+          }
+        ],
+        "claim_audit": [
+          "0:9700 Grace vs Greg: if Greg accumulated ~$41,000 of savings over 10 years (~$4,100/year), investing the same deposits at 10% would reach only ~$65,000; reaching ~$300,000 in 10 years requires ~$18,800/year (~36% of a $52,000 salary) even at 10%. The \"$260,000 cost\" of not investing is therefore not supported by \"same habit of putting money aside\". $1 in 2000 buying ~51 cents today is roughly consistent with CPI. \"Inflation around 4%\" in July 2026 not verified and likely above recent CPI prints; HYSA ~4% plausible.",
+          "0:9700 Top 10% owning ~90% of US stocks consistent with Federal Reserve Distributional Financial Accounts (~93%). Top 1% holding ~2% in cash unverified. Opt-in ~64% vs auto-enroll ~94% participation consistent with Vanguard How America Saves. HSA triple tax advantage correct federally.",
+          "9700:19258 $500/month at 7%: 10y ~$86,500, 20y ~$260,500, 30y ~$610,000, 40y ~$1.31M - all consistent. But start at 25 vs 35 to 65 at 7% gives ~$1.31M vs ~$610,000, not \"$1.37M vs $740,000\" - the $740K contradicts the script's own 30-year figure; the ~$700K gap and $60K skipped deposits are approximately right. 1% fee on $10,000 over 30 years costs ~$18,700 at 7% (vs 6%), ~$41,800 at 10% (vs 9%); \"around $40,000\" requires ~10% returns, inconsistent with the 7% real return used later. Active-manager underperformance and investor behavior gap correctly characterized in general terms.",
+          "9700:19258 Borrowing against assets presented as a rich-person gear without leverage/margin-call risk caveats. 59% unable to cover a $1,000 expense from savings consistent with Bankrate 2025 survey. Community CTA claim of \"more than 10 successful channels\" is a self-claim, unverified."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EOVnm1nKCns",
+          "TRANSCRIPT_COVERAGE.csv:EOVnm1nKCns",
+          "audit-batches/NICK_082_READ_RECEIPTS.json"
+        ],
+        "analysis": "Evergreen investing on-ramp: emergency fund threshold, contribution priority, automation, index funds, fees, compounding. Broad audience of savers who have not started investing. Competitive beginner-investing topic; differentiated by the \"line\" metaphor and an explicit surplus caveat.",
+        "novelty_and_corpus_angle": "Original angle: realistic Greg/Grace with identical deposits shown in a year-by-year table, after-tax and real; show the emergency-fund line and order of operations with 2026 limits and a match example.",
+        "competition": "Exact pool: strong gt8KAc7h9O8 millionaire 4.29824, 9PHPEV9MKOg why most never become millionaires 2.31511; others TYPICAL (pqJLxRMlZkc stats 1.3997, qUcdSBhm9us record highs 1.2619, i7eR3JUrefg above means 1.23717, wOVEF-cb5XI index funds 0.8394, -FsJqwfNvt4 rent vs buy 0.66627). Related channel Fzdn89C2YXo $500/month millionaire 3.67806 STRONG."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EOVnm1nKCns",
+          "TRANSCRIPT_COVERAGE.csv:EOVnm1nKCns",
+          "audit-batches/NICK_082_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "5,604 views at 62.1381 days, 20:56; 0.94602x TYPICAL against 10 same-channel LONG_FORM peers published 2026-07-05 to 07-15, frozen 2026-09-11. Exact pool: strong gt8KAc7h9O8 millionaire 4.29824, 9PHPEV9MKOg most never millionaires 2.31511; typical pqJLxRMlZkc finance stats 1.3997, qUcdSBhm9us record highs 1.2619, i7eR3JUrefg above means 1.23717, HJ5GZ2R3n2I retirement accounts 0.94962, wOVEF-cb5XI index funds 0.8394, ULkTn-jHBBc rich with debt 0.81094, 2Q_h21K6MAo retire in 10 years 0.77705, -FsJqwfNvt4 rent vs buy 0.66627. No WEAK peer; target mid TYPICAL. Both STRONG peers use millionaire framing; this practical step-by-step video sits in the TYPICAL middle. Related semantic counterexample: Fzdn89C2YXo \"$500 a month makes you a millionaire\" STRONG 3.67806 covers similar compounding math with a concrete outcome promise. Descriptive only.",
+        "observed_result": "5,604 views; 62.1381 days; 1,256 seconds; 0.94602x TYPICAL; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Beginner investing process videos land TYPICAL; millionaire-outcome framings more often STRONG on this channel; historical search interest unknown.",
+        "trend_timing": "2026-07-10 publication; no event link; young snapshot (62 days).",
+        "competition": "Mid-2026 compressed channel outcomes; external beginner-investing saturation.",
+        "format_fit": "21-minute stepwise tutorial with framing story; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 57-68 days old.",
+        "alternative_explanations": [
+          "Appeal: \"SAVE LIKE THIS\" with piggy bank may read as basic saving advice rather than a wealth outcome; low-resolution hqdefault-only availability may also reflect an uncustomized or replaced thumbnail; CTR unknown.",
+          "Engagement: Greg/Grace contrast and four-step structure may hold viewers; retention unavailable.",
+          "Satisfaction: concrete steps and the honest surplus caveat may satisfy, while the implausible Grace number may undermine trust; satisfaction unknown.",
+          "Young age, channel-wide compression and competition from millionaire-framed peers could explain the TYPICAL result."
+        ],
+        "original_content_lesson": {
+          "test": "Test a saving-to-investing tutorial with a concrete millionaire-path outcome in the packaging and a realistic same-deposit comparison in the script, against process-only packaging; measure own CTR, retention by step and comments questioning numbers.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}
