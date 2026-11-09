@@ -1,0 +1,59 @@
+{
+ "video_id": "o3FQcd91MIs",
+ "source_sha256": "82ab2b63ce250723f37e569d15ecf0a8b67c22f1841ec14637216d34e4a89c85",
+ "requested_mode": "DEEP+CT_SCAN+RECONSTRUCTION",
+ "review_scope": {
+  "source_seconds_total": 277.933,
+  "total_frames": 8338,
+  "overview_sampling_hz": 30,
+  "measurement": "EVERY frame decoded and diffed (320x180 gray); 89 episodes; 75/75 prior state boundaries reproduced",
+  "native_frames_viewed": {
+   "state_representative_frames": 76,
+   "transition_windows": 12,
+   "transition_window_frames_viewed": 51,
+   "other": [
+    "thumbnail",
+    "1 contrast crop"
+   ]
+  },
+  "native_intervals_reviewed": [
+   "f39-f43 (1.333-1.467s)",
+   "f172-f175",
+   "f998-f1001",
+   "f1352-f1355",
+   "f2682-f2685",
+   "f4547-f4550",
+   "f5551-f5554",
+   "f7230-f7235 (black dip)",
+   "f1821-f1824",
+   "f8166-f8169",
+   "f8335-f8337",
+   "f396-f399"
+  ],
+  "unreviewed_or_unverified_intervals": [
+   "frames between state representatives were measured (unchanged within threshold) but not individually viewed",
+   "changes below ~0.06% pixels (blind spot)",
+   "small on-screen text (<~8px): S001.4, S001.5 asides, S001.12 captions, S021.1 forum body",
+   "audio: no human listening"
+  ]
+ },
+ "domains": {
+  "structure": "MEASURED",
+  "states_and_shots": "MEASURED+OBSERVED",
+  "motion": "MEASURED (0 eased/continuous; 74/75 hard 1-frame; 1 black dip)",
+  "art_direction": "OBSERVED+MEASURED(palette)",
+  "typography": "OBSERVED (font names not asserted)",
+  "camera": "MEASURED none",
+  "facial_object_motion": "MEASURED none within states",
+  "audio_alignment": "ASR_ONLY (uncertified)",
+  "attention": "INFERRED",
+  "reconstruction": "DERIVED"
+ },
+ "codec_refresh_artifacts": "~48 low-magnitude single/double-frame blips at 120-frame spacing (I-frames); excluded from content events",
+ "ocr": "OPTIONAL_DEFERRED (Tesseract not installed by owner decision); vision-read text only",
+ "audio": {
+  "human_listening": "PENDING",
+  "asr": "openai-whisper small.en local, cross-checked with prior base: median word-start diff 0.02s",
+  "status": "ASR_UNCERTIFIED"
+ }
+}

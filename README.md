@@ -6,6 +6,8 @@ An evidence-based intelligence system for multiple YouTube channels. **YouTube I
 
 Catalogs have distinct populations: the selected inventory and the broader channel registry must not be treated as interchangeable sample counts. See `docs/YOUTUBE_CHANNEL_REGISTRY.md` and `data/catalog/README.md`.
 
+**New here? Start with [docs/START_HERE.md](docs/START_HERE.md):** one page that links the Casual Finance and xkcd visual-forensics work, the Finance/Economics corpus and the lower-priority campaigns, with pinned commit SHAs and what is blocked.
+
 ## Channel visual research
 
 - [Casually Finance: source-backed visual research index](research/visual-forensics/channels/UCrNfRFWnLC3tCy1TnyhVQ7g/START_HERE.md) links the existing draft forensic corpus, Machine A CT checkpoints, original-media hashes, and evidence limits. It does not merge the draft corpus into `main`.
