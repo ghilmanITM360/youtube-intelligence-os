@@ -1,0 +1,1577 @@
+{
+  "status": "COMPLETE_FOR_SUPPLIED_SCOPE",
+  "video_id": "xtqbRt94TTw",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "source_pts_formula": "0-based source frame f; PTS=(f+1)/24 seconds",
+  "source_decode_provenance": "Full non-seeking OpenCV source decode0–17882, checked positions; declared same conversion pipeline; no interpolation/seek",
+  "coverage": {
+    "new_requested": 64,
+    "new_successful_returns": 64,
+    "native_fullframes": 51,
+    "native_ROIs": 13,
+    "prior_native_ROI_reuses": 5,
+    "new_reads_on_resumption": 5,
+    "duplicate_path_displays": 0,
+    "fullframe_context": 17766,
+    "fullframe_sequence": {
+      "start": 17784,
+      "end": 17882,
+      "step_frames": 2,
+      "interval_ms": 83.33333333333333,
+      "first_to_last_seconds": 4.083333333333333,
+      "inclusive_source_span_seconds": 4.125
+    },
+    "ROI_sequence": {
+      "start": 17766,
+      "end": 17778,
+      "step_frames": 1,
+      "width": 175,
+      "height": 104,
+      "fullframe": false
+    },
+    "meaning": "All supplied new PNG requests were actually displayed exactly once across interrupted/resumed work. Complete only for this supplied scope, not all source frames, global100ms coverage or complete cursor lifecycle."
+  },
+  "events": [
+    {
+      "event_type": "STATIC_CHART_CONTEXT",
+      "onset_frame_or_bracket": {
+        "observed_at": 17766,
+        "precision": "OBSERVED_CONTEXT_ONLY"
+      },
+      "last_change_frame_or_bracket": null,
+      "hold_frame": 17766,
+      "description": "Our World in Data page and complete brown/red line chart already occupy the frame. No tooltip, yellow title highlight or red hand-lettered annotation is visible. A new cut/entry boundary is not certified without preceding17765.",
+      "readable_text": "Monthly spending on data center construction in the United States",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17766_native.png"
+      ],
+      "limitations": [
+        "No native17765 supplied; chart entry/cut onset unknown.",
+        "No global cursor absence claim from this context still."
+      ]
+    },
+    {
+      "event_type": "CURSOR_PRECURSOR_AND_TRANSLATION",
+      "onset_frame_or_bracket": {
+        "first_confident_arrow": 17780,
+        "appearance_onset": null,
+        "precision": "UNRESOLVED_PRECURSOR_IDENTITY"
+      },
+      "last_change_frame_or_bracket": {
+        "observed_through": 17783,
+        "continues": true
+      },
+      "hold_frame": null,
+      "description": "New native crops17766–17778 do not show a confidently identifiable full arrow. Reused SUB151 observation retains faint cursor-like mark at17779 and clear arrow moving right17780–17783 toward $0 label. These establish translation and changing clarity, not clean absence-to-appearance. The small crop cannot establish where a cursor was elsewhere in the frame.",
+      "readable_text": "$0",
+      "confidence": "HIGH_FOR_REUSED_TRANSLATION_LOW_FOR_EARLY_CURSOR_IDENTITY",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17766_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17767_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17768_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17769_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17770_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17771_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17772_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17773_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17774_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17775_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17776_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17777_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17778_cursor_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17779_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17780_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17781_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17782_nativeROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17783_nativeROI.png"
+      ],
+      "limitations": [
+        "Five prior native ROI receipts reused without redisplay.",
+        "17766–17777 ROI file bytes are identical; each requested path was actually returned separately. Hash equality is not used as visual classification.",
+        "Faint precursor identity and global cursor position before clear arrow remain unknown."
+      ]
+    },
+    {
+      "event_type": "TITLE_HIGHLIGHT_REVEAL",
+      "onset_frame_or_bracket": {
+        "after_unhighlighted_context": 17766,
+        "first_supplied_visible": 17784,
+        "possible_onset_frames": [
+          17767,
+          17784
+        ],
+        "precision": "SAMPLED_BRACKET"
+      },
+      "last_change_frame_or_bracket": {
+        "last_expanding_sample": 17822,
+        "first_complete_sample": 17824,
+        "completion_frames": [
+          17823,
+          17824
+        ],
+        "precision": "SAMPLED_BRACKET"
+      },
+      "hold_frame": 17824,
+      "description": "A thin yellow stroke is visible immediately left of the title at17784. Its right edge expands left-to-right behind the fixed title, reaching the final word by17822 and fully covering it by17824. The completed yellow bar remains in all subsequent supplied full-frame samples through17882.",
+      "readable_text": "Monthly spending on data center construction in the United States",
+      "confidence": "HIGH_FOR_REVEAL_AND_HOLD_MEDIUM_FOR_BOUNDARIES",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17766_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17784_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17786_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17798_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17810_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17822_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17824_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17826_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17874_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17882_native.png"
+      ],
+      "limitations": [
+        "No supplied native fullframes17767–17783; first visible sample is not certified first source frame.",
+        "17823 needed to resolve completion; exact source easing/software not inferred."
+      ]
+    },
+    {
+      "event_type": "TOOLTIP_ENTER_AND_TRAVERSE",
+      "onset_frame_or_bracket": {
+        "after_absent_context": 17766,
+        "first_supplied_visible": 17784,
+        "possible_onset_frames": [
+          17767,
+          17784
+        ],
+        "precision": "SAMPLED_BRACKET"
+      },
+      "last_change_frame_or_bracket": {
+        "last_sample_with_new_date_during_fast_traverse": 17854,
+        "previous_sample": 17852,
+        "may_update_frames": [
+          17853,
+          17854
+        ],
+        "precision": "SAMPLED_BRACKET"
+      },
+      "hold_frame": null,
+      "description": "Clear arrow travels right across the fixed chart, initially near the low line, then upward toward the high right end. A moving white tooltip, vertical guide and emphasized data point accompany it. Tooltip dates/values update from Jan2014/$158million at17784 through May2026/$3.99billion at17854. Some dates/values persist over adjacent samples while card/cursor position keeps changing. These are UI/graphic events within one chart composition.",
+      "readable_text": "Tooltip includes date; in constant 2021 US$; United States; sampled monetary value.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17784_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17786_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17788_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17790_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17792_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17806_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17820_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17832_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17844_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17846_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17848_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17852_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17854_native.png"
+      ],
+      "limitations": [
+        "Every2-frame samples do not reveal every intervening tooltip label or its exact onset.",
+        "Tooltip source values are transcribed visual content, not verified economic facts.",
+        "No shot cut is inferred from tooltip update."
+      ]
+    },
+    {
+      "event_type": "TOOLTIP_SIDE_REPOSITION",
+      "onset_frame_or_bracket": {
+        "right_of_hover_last_sample": 17790,
+        "left_of_hover_first_sample": 17792,
+        "possible_change_frames": [
+          17791,
+          17792
+        ],
+        "precision": "SAMPLED_BRACKET"
+      },
+      "last_change_frame_or_bracket": null,
+      "hold_frame": null,
+      "description": "Tooltip lies right of the hover guide early, then switches to the left side by17792, while cursor continues rightward and page/chart anchors stay fixed.",
+      "readable_text": "Jun 2015 / $425 million at17790; Jan 2016 / $297 million at17792.",
+      "confidence": "HIGH_FOR_LAYOUT_CHANGE",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17788_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17790_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17792_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17794_native.png"
+      ],
+      "limitations": [
+        "Layout flip exact frame17791 or17792 unverified; no cut implied."
+      ]
+    },
+    {
+      "event_type": "TOOLTIP_MAY_CONTENT_HOLD_WITH_POSITION_CHANGE",
+      "onset_frame_or_bracket": {
+        "last_non_may_sample": 17852,
+        "first_may_sample": 17854,
+        "possible_onset_frames": [
+          17853,
+          17854
+        ],
+        "precision": "SAMPLED_BRACKET"
+      },
+      "last_change_frame_or_bracket": {
+        "last_confirmed_may_sample": 17878,
+        "precision": "OBSERVED_SAMPLE"
+      },
+      "hold_frame": 17854,
+      "description": "May2026/$3.99billion tooltip content persists across all supplied samples17854–17878. Card and pointer continue small upward/right movement; the visible content hold is not a confirmed motion offset or a wholly static frame. Red annotation is added during this content hold.",
+      "readable_text": "May 2026 | in constant 2021 US$ | United States $3.99 billion",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17852_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17854_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17856_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17862_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17868_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17872_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17874_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17876_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17878_native.png"
+      ],
+      "limitations": [
+        "Hold_frame denotes first observed content hold value, not exact settling.",
+        "Intervening odd frames not displayed; no uninterrupted pixel-identical hold claimed."
+      ]
+    },
+    {
+      "event_type": "RED_ANNOTATION_ADD_AND_HOLD",
+      "onset_frame_or_bracket": {
+        "frame": 17875,
+        "precision": "EXACT_NATIVE_REUSED_PRIOR_G116"
+      },
+      "last_change_frame_or_bracket": {
+        "first_observed_added": 17875,
+        "provenance": "Prior reviewer-native17874/17875 adjacency; reused, not newly redisplayed"
+      },
+      "hold_frame": 17876,
+      "description": "Large red hand-lettered up57% annotation is absent at17874 and present in supplied17876,17878,17880,17882 samples. Exact first frame17875 reuses prior independent G116 adjacent-native proof.",
+      "readable_text": "up 57%",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_03/native_f17874.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_03/native_f17875.jpg",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17874_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17876_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17878_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17880_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17882_native.png"
+      ],
+      "limitations": [
+        "Exact onset reused from prior G116; no new extraction or redisplay of old native JPGs.",
+        "Annotation claim is visible source text; percentage calculation and economic interpretation not factchecked.",
+        "No disappearance/offset supplied."
+      ]
+    },
+    {
+      "event_type": "TOOLTIP_FINAL_JUNE_UPDATE_AND_CONTENT_HOLD",
+      "onset_frame_or_bracket": {
+        "last_may_sample": 17878,
+        "first_june_sample": 17880,
+        "possible_update_frames": [
+          17879,
+          17880
+        ],
+        "precision": "SAMPLED_BRACKET"
+      },
+      "last_change_frame_or_bracket": {
+        "last_observed_sample": 17882,
+        "precision": "OBSERVED_SAMPLE"
+      },
+      "hold_frame": 17880,
+      "description": "Tooltip changes from May2026/$3.99billion to Jun2026/$4.36billion between17878 and17880; June content persists at17882. Pointer sits near the highest/rightmost endpoint. This bounded sequence does not establish the final cursor/card settling frame or interaction offset.",
+      "readable_text": "Jun 2026 | in constant 2021 US$ | United States $4.36 billion",
+      "confidence": "HIGH_FOR_CONTENT_UPDATE_MEDIUM_FOR_EXACT_BOUNDARY",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17876_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17878_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17880_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17882_native.png"
+      ],
+      "limitations": [
+        "17879 required for exact date/value update frame.",
+        "17882 is scope end, not certified motion/event end; small card/pointer movement remains possible."
+      ]
+    }
+  ],
+  "distinct_visual_states": [
+    {
+      "id": "CHART_BASE_CONTEXT",
+      "observed_frames": [
+        17766
+      ],
+      "description": "Complete fixed OWID chart without title highlight, tooltip or red annotation; cursor not confidently identifiable."
+    },
+    {
+      "id": "HOVER_AND_TITLE_REVEAL",
+      "observed_sample_range": [
+        17784,
+        17822
+      ],
+      "description": "Hover tooltip/vertical guide/data point traverse while yellow title bar reveals left-to-right. No camera/page movement observed."
+    },
+    {
+      "id": "FULL_TITLE_HIGHLIGHT_WITH_TRAVERSAL",
+      "observed_sample_range": [
+        17824,
+        17852
+      ],
+      "description": "Completed yellow bar remains while hover tooltip continues through2023–2026; date/value holds can coexist with cursor/card movement."
+    },
+    {
+      "id": "MAY_TOOLTIP_CONTENT_HOLD",
+      "observed_sample_range": [
+        17854,
+        17874
+      ],
+      "description": "May2026/$3.99billion text persists with small cursor/card position changes; complete title highlight remains; no red annotation through17874."
+    },
+    {
+      "id": "RED_ANNOTATION_WITH_MAY_TOOLTIP",
+      "observed_frames": [
+        17876,
+        17878
+      ],
+      "prior_exact_annotation_onset": 17875,
+      "description": "Red up57% overlays chart while May2026/$3.99billion remains."
+    },
+    {
+      "id": "RED_ANNOTATION_WITH_JUNE_TOOLTIP",
+      "observed_frames": [
+        17880,
+        17882
+      ],
+      "description": "June2026/$4.36billion tooltip replaces May reading; full title highlight and red annotation persist. Final settle unverified."
+    }
+  ],
+  "motion_object": [
+    {
+      "object": "cursor",
+      "status": "OBSERVED_TRANSLATION_WITH_UNRESOLVED_EARLY_IDENTITY",
+      "description": "Clear arrow in reused17780–83 ROIs moves right toward $0 label. In fullframes17784 onward it continues across chart toward upper-right endpoint; rightward progress slows near the end while upward displacement continues. No clean disappearance-to-appearance onset or final offset established.",
+      "path": "Lower-left/chart baseline toward right and then upward with line's rising section; coarse source-frame visual observation, not a measured source curve.",
+      "easing": "UNKNOWN",
+      "software": "UNKNOWN",
+      "exact_onset": null,
+      "exact_offset": null
+    },
+    {
+      "object": "tooltip_card_and_selection",
+      "status": "OBSERVED",
+      "description": "Card, vertical guide and selected-point marker change along the fixed chart. Card initially right of hover guide, then left by17792; date/value changes are UI graphic events. In late May content hold, card keeps moving slightly upward. June content appears17880.",
+      "content_hold_is_motion_hold": false,
+      "easing": "UNKNOWN",
+      "exact_last_motion_frame": null
+    },
+    {
+      "object": "yellow_title_highlight",
+      "status": "OBSERVED",
+      "description": "Yellow rectangle expands horizontally behind stationary title; left edge stays at title start. Thin leading stroke17784; complete bar by17824; hold in every later supplied fullframe.",
+      "completion_bracket": [
+        17823,
+        17824
+      ],
+      "true_color": "UNKNOWN; visible yellow in declared extraction pipeline",
+      "easing": "UNKNOWN"
+    },
+    {
+      "object": "red_up_57_percent_annotation",
+      "status": "OBSERVED_WITH_REUSED_EXACT_ONSET",
+      "description": "Large hand-lettered annotation added over center-right chart; persists through last supplied sample.",
+      "exact_onset_frame_reused": 17875,
+      "offset": null
+    }
+  ],
+  "static_anchors": {
+    "status": "OBSERVED",
+    "description": "No pan/zoom/page scroll or global chart transform observed across supplied fullframes. This is visual anchor comparison, not a subpixel motion measurement.",
+    "anchors": [
+      "Dark blue Our World in Data header and search/navigation controls",
+      "Chart title/subtitle and Table/Line controls",
+      "Y-axis $0–$5billion labels and horizontal grid",
+      "2015/2020/2025 x-axis labels",
+      "Brown/red plotted line geometry and endpoint",
+      "Jan2014–Jun2026 slider and play button",
+      "Source/footer text and Download/Share/Enter full-screen controls"
+    ],
+    "limitations": [
+      "Small cursor/card/UI regions move; unchanged page anchors do not imply all pixels are identical.",
+      "Exact production software, source easing and source color tokens unavailable."
+    ]
+  },
+  "source_text_panel": {
+    "status": "OBSERVED_SOURCE_TEXT_NOT_FINANCIAL_FACTCHECK",
+    "title": "Monthly spending on data center construction in the United States",
+    "subtitle": "Cost of privately-funded construction of data centers each month, including materials and labor. It excludes the cost of IT hardware like servers and storage, which can account for a large share of total investment. This data is expressed in US dollars, adjusted for inflation.",
+    "y_axis_labels": [
+      "$0",
+      "$1 billion",
+      "$2 billion",
+      "$3 billion",
+      "$4 billion",
+      "$5 billion"
+    ],
+    "x_axis_labels": [
+      "2015",
+      "2020",
+      "2025"
+    ],
+    "slider_end_labels": [
+      "Jan 2014",
+      "Jun 2026"
+    ],
+    "footnote": "Note: This data is expressed in constant 2021 US$.",
+    "source_credit": "Data source: United States Census Bureau (2026); U.S. Bureau of Labor Statistics (2026).",
+    "visible_site_reference": "OurWorldinData.org/artificial-intelligence | CC BY",
+    "tooltip_common_units": "in constant 2021 US$",
+    "sampled_tooltips": [
+      {
+        "frame": 17784,
+        "date": "Jan 2014",
+        "country": "United States",
+        "value": "$158 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17784_native.png"
+      },
+      {
+        "frame": 17786,
+        "date": "Apr 2014",
+        "country": "United States",
+        "value": "$185 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17786_native.png"
+      },
+      {
+        "frame": 17788,
+        "date": "Dec 2014",
+        "country": "United States",
+        "value": "$168 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17788_native.png"
+      },
+      {
+        "frame": 17790,
+        "date": "Jun 2015",
+        "country": "United States",
+        "value": "$425 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17790_native.png"
+      },
+      {
+        "frame": 17792,
+        "date": "Jan 2016",
+        "country": "United States",
+        "value": "$297 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17792_native.png"
+      },
+      {
+        "frame": 17794,
+        "date": "Jul 2016",
+        "country": "United States",
+        "value": "$452 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17794_native.png"
+      },
+      {
+        "frame": 17796,
+        "date": "Dec 2016",
+        "country": "United States",
+        "value": "$435 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17796_native.png"
+      },
+      {
+        "frame": 17798,
+        "date": "May 2017",
+        "country": "United States",
+        "value": "$531 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17798_native.png"
+      },
+      {
+        "frame": 17800,
+        "date": "Oct 2017",
+        "country": "United States",
+        "value": "$479 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17800_native.png"
+      },
+      {
+        "frame": 17802,
+        "date": "Apr 2018",
+        "country": "United States",
+        "value": "$625 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17802_native.png"
+      },
+      {
+        "frame": 17804,
+        "date": "Oct 2018",
+        "country": "United States",
+        "value": "$730 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17804_native.png"
+      },
+      {
+        "frame": 17806,
+        "date": "Apr 2019",
+        "country": "United States",
+        "value": "$703 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17806_native.png"
+      },
+      {
+        "frame": 17808,
+        "date": "Oct 2019",
+        "country": "United States",
+        "value": "$812 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17808_native.png"
+      },
+      {
+        "frame": 17810,
+        "date": "Mar 2020",
+        "country": "United States",
+        "value": "$809 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17810_native.png"
+      },
+      {
+        "frame": 17812,
+        "date": "Aug 2020",
+        "country": "United States",
+        "value": "$841 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17812_native.png"
+      },
+      {
+        "frame": 17814,
+        "date": "Apr 2021",
+        "country": "United States",
+        "value": "$814 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17814_native.png"
+      },
+      {
+        "frame": 17816,
+        "date": "Jan 2022",
+        "country": "United States",
+        "value": "$758 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17816_native.png"
+      },
+      {
+        "frame": 17818,
+        "date": "Aug 2022",
+        "country": "United States",
+        "value": "$897 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17818_native.png"
+      },
+      {
+        "frame": 17820,
+        "date": "Jan 2023",
+        "country": "United States",
+        "value": "$932 million",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17820_native.png"
+      },
+      {
+        "frame": 17822,
+        "date": "Jun 2023",
+        "country": "United States",
+        "value": "$1.19 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17822_native.png"
+      },
+      {
+        "frame": 17824,
+        "date": "Dec 2023",
+        "country": "United States",
+        "value": "$1.49 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17824_native.png"
+      },
+      {
+        "frame": 17826,
+        "date": "Jun 2024",
+        "country": "United States",
+        "value": "$2.27 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17826_native.png"
+      },
+      {
+        "frame": 17828,
+        "date": "Oct 2024",
+        "country": "United States",
+        "value": "$2.55 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17828_native.png"
+      },
+      {
+        "frame": 17830,
+        "date": "Jan 2025",
+        "country": "United States",
+        "value": "$2.71 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17830_native.png"
+      },
+      {
+        "frame": 17832,
+        "date": "Apr 2025",
+        "country": "United States",
+        "value": "$3.34 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17832_native.png"
+      },
+      {
+        "frame": 17834,
+        "date": "Jun 2025",
+        "country": "United States",
+        "value": "$3.02 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17834_native.png"
+      },
+      {
+        "frame": 17836,
+        "date": "Sep 2025",
+        "country": "United States",
+        "value": "$3.32 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17836_native.png"
+      },
+      {
+        "frame": 17838,
+        "date": "Dec 2025",
+        "country": "United States",
+        "value": "$3.31 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17838_native.png"
+      },
+      {
+        "frame": 17840,
+        "date": "Jan 2026",
+        "country": "United States",
+        "value": "$3.27 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17840_native.png"
+      },
+      {
+        "frame": 17842,
+        "date": "Feb 2026",
+        "country": "United States",
+        "value": "$3.27 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17842_native.png"
+      },
+      {
+        "frame": 17844,
+        "date": "Mar 2026",
+        "country": "United States",
+        "value": "$3.50 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17844_native.png"
+      },
+      {
+        "frame": 17846,
+        "date": "Mar 2026",
+        "country": "United States",
+        "value": "$3.50 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17846_native.png"
+      },
+      {
+        "frame": 17848,
+        "date": "Apr 2026",
+        "country": "United States",
+        "value": "$3.80 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17848_native.png"
+      },
+      {
+        "frame": 17850,
+        "date": "Apr 2026",
+        "country": "United States",
+        "value": "$3.80 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17850_native.png"
+      },
+      {
+        "frame": 17852,
+        "date": "Apr 2026",
+        "country": "United States",
+        "value": "$3.80 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17852_native.png"
+      },
+      {
+        "frame": 17854,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17854_native.png"
+      },
+      {
+        "frame": 17856,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17856_native.png"
+      },
+      {
+        "frame": 17858,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17858_native.png"
+      },
+      {
+        "frame": 17860,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17860_native.png"
+      },
+      {
+        "frame": 17862,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17862_native.png"
+      },
+      {
+        "frame": 17864,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17864_native.png"
+      },
+      {
+        "frame": 17866,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17866_native.png"
+      },
+      {
+        "frame": 17868,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17868_native.png"
+      },
+      {
+        "frame": 17870,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17870_native.png"
+      },
+      {
+        "frame": 17872,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17872_native.png"
+      },
+      {
+        "frame": 17874,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17874_native.png"
+      },
+      {
+        "frame": 17876,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17876_native.png"
+      },
+      {
+        "frame": 17878,
+        "date": "May 2026",
+        "country": "United States",
+        "value": "$3.99 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17878_native.png"
+      },
+      {
+        "frame": 17880,
+        "date": "Jun 2026",
+        "country": "United States",
+        "value": "$4.36 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17880_native.png"
+      },
+      {
+        "frame": 17882,
+        "date": "Jun 2026",
+        "country": "United States",
+        "value": "$4.36 billion",
+        "units": "in constant 2021 US$",
+        "evidence_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17882_native.png"
+      }
+    ],
+    "annotation": "up 57%",
+    "evidence_paths": [
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17766_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17784_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17824_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17880_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17882_native.png"
+    ],
+    "limitations": [
+      "Transcriptions describe pixels in the competitor video; underlying economic values, percentage calculation, publication dates and data provenance are not independently verified.",
+      "No ASR, spoken claim, sound or audio synchronization certified."
+    ]
+  },
+  "extra_exact_boundary_frames_needed": [
+    {
+      "priority": "HIGH",
+      "frames": [
+        17783
+      ],
+      "purpose": "Native fullframe immediately before first supplied tooltip/yellow-stroke sample17784, to narrow both first-tooltip and highlight onset. Prior17783ROI cannot certify full title or complete tooltip state.",
+      "current_bracket": [
+        17767,
+        17784
+      ],
+      "conditional_note": "If already present at17783, additional preceding fullframes would be needed to resolve onset; do not assume absence."
+    },
+    {
+      "priority": "HIGH",
+      "frames": [
+        17823
+      ],
+      "purpose": "Resolve title-highlight completion between incomplete17822 and complete17824.",
+      "current_bracket": [
+        17823,
+        17824
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "frames": [
+        17879
+      ],
+      "purpose": "Resolve final tooltip content update between May at17878 and June at17880.",
+      "current_bracket": [
+        17879,
+        17880
+      ]
+    },
+    {
+      "priority": "CONTEXT_ONLY_IF_EXACT_ENTRY_REQUIRED",
+      "frames": [
+        17765
+      ],
+      "purpose": "Compare preceding native frame with chart context17766; current task does not certify a chart-entry cut."
+    },
+    {
+      "priority": "ONLY_IF_FINAL_MOTION_OFFSET_REQUIRED",
+      "frames": [
+        17881,
+        17883
+      ],
+      "purpose": "Inspect consecutive context around scope end to test cursor/card settle. These frames are a next check, not a guarantee of proving offset; movement may continue afterward."
+    }
+  ],
+  "pending_new_image_paths": [],
+  "new_evidence_reads": [
+    {
+      "frame": 17766,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17766_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17766,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17766_native.png",
+      "sha256": "1d7109e142819b3b34865bdbb3427e55a6385c73c51678ee4dfb88142f4bf8cc",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Full page/chart without tooltip, yellow title highlight or red annotation; cursor not confidently identifiable.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17767,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17767_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17768,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17768_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17769,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17769_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17770,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17770_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17771,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17771_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17772,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17772_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17773,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17773_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17774,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17774_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17775,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17775_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17776,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17776_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17777,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17777_cursor_nativeROI.png",
+      "sha256": "308ea99d91d47d6cfb6ef098876139c44a2da3b128447f3c8fcd46c07ebf7b87",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17778,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17778_cursor_nativeROI.png",
+      "sha256": "e6b5cb2d87ca9eab6d3bd0a8745421124e81b373921aa126fa0506df876e8b5b",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Native 175x104 crop of left chart axis, $0 label and low red/brown line; no confidently identifiable full arrow in this crop. This does not prove cursor absence elsewhere or classify faint precursor pixels.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17784,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17784_native.png",
+      "sha256": "b5f42ad78fc8e1f4b507b31289c3fc845a04d1f4a2203ea91157903f588d7351",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jan 2014 | in constant 2021 US$ | United States $158 million. Thin yellow leading stroke just before title M; clear arrow at lower left by tooltip.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17786,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17786_native.png",
+      "sha256": "9faeeb01449b77b1321fe2bfeb624d7971603837cef1ab131cf39377536975cd",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Apr 2014 | United States $185 million; yellow covers initial portion of Monthly; cursor/guide advance right.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17788,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17788_native.png",
+      "sha256": "6bc6937b71b63d9d699daac070e2534e3f66a439fe7b77694b35f1022c66bb25",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Dec 2014 | United States $168 million; yellow extends across most of Monthly; tooltip right of hover guide.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17790,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17790_native.png",
+      "sha256": "8d1781e292ebd3780d5748946932b304149a3c30d57bf95f86373097ddb12c1b",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jun 2015 | United States $425 million; yellow covers Monthly and starts spending; pointer further right.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17792,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17792_native.png",
+      "sha256": "eaed4ae083de8f352f707286653330583858db47e3dbed2ef50bb327a5e87b4d",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jan 2016 | United States $297 million; tooltip now placed left of hover point; highlight partway through spending.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17794,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17794_native.png",
+      "sha256": "278637f2bfbc0b820e66246532f2be79902f895a0438bf0c85b7d21b414f47d0",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jul 2016 | United States $452 million; highlight covers Monthly spending.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17796,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17796_native.png",
+      "sha256": "e60de11dc56883747a129aeb7e7acfd2949c594f6fbb2ff1776a26b8c8a8be21",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Dec 2016 | United States $435 million; highlight reaches on.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17798,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17798_native.png",
+      "sha256": "9d3729742d75b7e55bd497404363c8b035121d9a46a54b347369e0d834ca65fc",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2017 | United States $531 million; highlight enters data.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17800,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17800_native.png",
+      "sha256": "2cdbc9afedb40164e0f231a2580d25ec5934d32359c635e169e7b087878fa128",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Oct 2017 | United States $479 million; highlight through data, reaches center.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17802,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17802_native.png",
+      "sha256": "a5567294506aa23759e5a2283d0b338fd4533d421d19390ed41a86f74de56c6c",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Apr 2018 | United States $625 million; highlight extends into center.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17804,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17804_native.png",
+      "sha256": "4a12a0a89b9efef20a57601c80e04da81a461c115f03119a3e98feffa292155f",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Oct 2018 | United States $730 million; highlight completes data center and reaches construction.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17806,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17806_native.png",
+      "sha256": "3e8657f702db7efe56b972d34f94f6bab2543ea24eaa5c04f32066447bae8253",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Apr 2019 | United States $703 million; highlight advances into construction.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17808,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17808_native.png",
+      "sha256": "1986a893512dfe5a274ab5f0d2e750ebec6af22ca2becc9a8efec14cf2726aa3",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Oct 2019 | United States $812 million; title highlight advances within construction.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17810,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17810_native.png",
+      "sha256": "d1c2888ecce9a91bc778b82d305534e90c9271a687e396c71a9d686643c151b3",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Mar 2020 | United States $809 million; highlight through construction.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17812,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17812_native.png",
+      "sha256": "87e4478a0b93294d2c55904487664f3e2d1c37655347fc863e15f3fbcae8926b",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Aug 2020 | United States $841 million; highlight reaches in.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17814,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17814_native.png",
+      "sha256": "4060241425de20124265075d8ea0e0752077735cb9c024875640151c256b7e3a",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Apr 2021 | United States $814 million; highlight reaches the.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17816,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17816_native.png",
+      "sha256": "0f4f9940ac1164f3b53939c5bb8819e3ba89c64642c6d44bce6c673b10c45246",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jan 2022 | United States $758 million; highlight reaches United.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17818,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17818_native.png",
+      "sha256": "cc3a6b1bb4cfb74b2153bfc6f9ee680a29eabdbd8418f35636056edd358d1724",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Aug 2022 | United States $897 million; highlight through most of United.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17820,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17820_native.png",
+      "sha256": "c8c63764f4cff7632369a0b788ef64b9237b3e9e0512e2193a96f108fc6e39b7",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jan 2023 | United States $932 million; highlight reaches initial States.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17822,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17822_native.png",
+      "sha256": "0313240d1f86ffcbeb31ef84ebaaf2e4e9024474faa392c59762ef64abd7a081",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jun 2023 | United States $1.19 billion; highlight nearly completes final States but leaves trailing edge uncovered.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17824,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17824_native.png",
+      "sha256": "6ff52994e9372d7abecf991310c3a8392272f77a71400281ce81ebd77ff512eb",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Dec 2023 | United States $1.49 billion; full title highlight complete.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17826,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17826_native.png",
+      "sha256": "5a5e3c1610ecee9df23b8398a5bd391a359027d60db82562e927d546569b115a",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jun 2024 | United States $2.27 billion; completed title highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17828,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17828_native.png",
+      "sha256": "d62c716c2c3fd9614113624b5aea94f8c7cb66008ece89775977722ab69df882",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Oct 2024 | United States $2.55 billion; completed highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17830,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17830_native.png",
+      "sha256": "da342b56da6de4af70d9a824a5d39b41d5196570543f37668b5b8606fd0f80db",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jan 2025 | United States $2.71 billion; completed highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17832,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17832_native.png",
+      "sha256": "11b2a0afb7ab33bc2d53775a633f27b8afb0a56cf33e06fdc6b002880ce88c8c",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Apr 2025 | United States $3.34 billion; full highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17834,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17834_native.png",
+      "sha256": "c36057cfb68085289b0fa2bec31857fa2e1eb884a6a54c27231dd38736af676e",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jun 2025 | United States $3.02 billion; full highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17836,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17836_native.png",
+      "sha256": "e63d35dd2d7e18e81fe25e9903de90f81a078d47342268dddb4b69c6bcd5da2e",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Sep 2025 | United States $3.32 billion; full highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17838,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17838_native.png",
+      "sha256": "7a3e7aefeb3e612a09b405643b687bd3e1760c77ddf489fbc153fbf364f75a2d",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Dec 2025 | United States $3.31 billion; full highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17840,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17840_native.png",
+      "sha256": "ad4b0788a62a366e89db6e035188a96f4d8d32e983cbc6a8188e60090bb1a498",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jan 2026 | United States $3.27 billion; full highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17842,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17842_native.png",
+      "sha256": "14fb7b30c2199017bb74afb2a8cfc06e059e4de9de441c0a7629a1dab9256c29",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Feb 2026 | United States $3.27 billion; full highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17844,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17844_native.png",
+      "sha256": "5d6b0b1e495c0f5d720da17bba411869b4a685d6265865d4910ec858912401fd",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Mar 2026 | United States $3.50 billion; full highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17846,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17846_native.png",
+      "sha256": "9e90eb53b4b0057fc5e8ddec721b99459b2ec93cbae7be934ca44cd7dd6d7220",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Mar 2026 | United States $3.50 billion remains; cursor/card positioning still shifts slightly.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17848,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17848_native.png",
+      "sha256": "3b2e8db31a88a587a761d9abc25bcb123a966558d90b86f7facf47ce26d0d5b3",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Apr 2026 | United States $3.80 billion; full highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17850,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17850_native.png",
+      "sha256": "9a409168aed3dbad71d7b8e059a406f30d6fa1ba3232071ba81f203255a7450e",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Apr 2026 | United States $3.80 billion; content unchanged from17848 while cursor/card shift upward slightly.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17852,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17852_native.png",
+      "sha256": "3fade9ef57b7bdf2b929d5a11a0bf1206beb606e483044ab8bf9f0203b9b6012",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Apr 2026 | United States $3.80 billion; content remains, cursor/card continue small upward movement.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17854,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17854_native.png",
+      "sha256": "0ec4fe53bcdb3fdd1c66b88b69a3d95de6dc4814783d167f5557e06c99cb0299",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; date/value update; full title highlight holds.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17856,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17856_native.png",
+      "sha256": "1de78d173e3dcfc7262549e59dbd2fc15dc62bd63ef53def756ccc5b49b1fcd1",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; content holds; card/pointer slightly higher.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17858,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17858_native.png",
+      "sha256": "1965e0ca2c9569f71b3d606efeaad4d6d8dc1bd3445c92ebf4c8705a39f0f361",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; content holds; card/pointer slightly higher.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17860,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17860_native.png",
+      "sha256": "2c86bba8decc529d77d3be323aee30a8dceccd27843575447bf50738e8ed4ed6",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; content holds; card/pointer slightly higher.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17862,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17862_native.png",
+      "sha256": "4f3323e7cb246a9ef6bb7f91ba5c9467e67e13c082b830b50e5d0e0a73d93bc2",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; content holds; card/pointer slightly higher.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17864,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17864_native.png",
+      "sha256": "f2f8b3e1c233acc472ffd2536bd8eb15b238fa78cac3a73e6bc4f7dc382bdfab",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; content holds; card/pointer slightly higher.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17866,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17866_native.png",
+      "sha256": "85f8701588c81e97b568dcf8d6f75dfc5cc4aa41057ca72e39cfc660b4615291",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; content holds; card/pointer slightly higher.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17868,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17868_native.png",
+      "sha256": "c8df36c89745218ffcde49103d7fcf08cd247fc2e1080ab93b632695c055a8b9",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; content holds; card/pointer slightly higher.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17870,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17870_native.png",
+      "sha256": "452a1c4bb4e2c1963e419f3c0df48a0d6402ae4334650e573d0d3ebac61dfabe",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; content holds; card/pointer slightly higher.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17872,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17872_native.png",
+      "sha256": "a493472b8c34d56da4e82ad424f229c7438eab1bcb498ffa6c21968cd9b57b1a",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | United States $3.99 billion; content holds; full title highlight holds; red annotation absent.",
+      "return_audit": "session_20261104/chart_saved59_path_order_audit_v2.json; original call/path order and byte multiplicity independently audited"
+    },
+    {
+      "frame": 17874,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17874_native.png",
+      "sha256": "76023ab0a41d38ef5d7e531a971a8bc4b07fcf178bad7e5cf90d0a99a1ed91c4",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | in constant 2021 US$ | United States $3.99 billion; full yellow title highlight; no red annotation.",
+      "return_audit": "New successful view_image return in resumed review; no earlier display of this PNG path"
+    },
+    {
+      "frame": 17876,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17876_native.png",
+      "sha256": "3ff210a64f88a9f28e32d7fe7216ca2a4ff8d49dd86dcabb39fb7ce49760a384",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | in constant 2021 US$ | United States $3.99 billion; red up 57% annotation present; title highlight holds.",
+      "return_audit": "New successful view_image return in resumed review; no earlier display of this PNG path"
+    },
+    {
+      "frame": 17878,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17878_native.png",
+      "sha256": "a39d0915346312fc49925bb4a030a4f1f5139f7aac1c6186ef19cf32a7d9ccfa",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. May 2026 | in constant 2021 US$ | United States $3.99 billion remains; pointer at upper-right plot endpoint; red annotation holds.",
+      "return_audit": "New successful view_image return in resumed review; no earlier display of this PNG path"
+    },
+    {
+      "frame": 17880,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17880_native.png",
+      "sha256": "ac4e70f3ac622feeaeb199ec7ec9e886ab5aff9dbe2d83684c024c74e8cf9486",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jun 2026 | in constant 2021 US$ | United States $4.36 billion; red up 57% holds; cursor at upper-right endpoint; full title highlight holds.",
+      "return_audit": "New successful view_image return in resumed review; no earlier display of this PNG path"
+    },
+    {
+      "frame": 17882,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17882_native.png",
+      "sha256": "da25750a7300162c654be90593a2dfa5366270aeb0ae4ed216de08c379d2c86a",
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed once at supplied native dimensions. Jun 2026 | in constant 2021 US$ | United States $4.36 billion; red annotation/title highlight hold; tooltip still near upper-right endpoint; total motion offset not established.",
+      "return_audit": "New successful view_image return in resumed review; no earlier display of this PNG path"
+    }
+  ],
+  "reused_prior_evidence_reads": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17779_nativeROI.png",
+      "sha256": "6596b7f855797af23730ac13678054abdd7171994fcf29a8f8d1101e269d5708",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17779: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reuse_only": true,
+      "redisplayed_in_this_task": false,
+      "observation_source": "motion_missing_fields_review_v1/OUT_motion_missing_fields_review_v1.json#SUB151"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17780_nativeROI.png",
+      "sha256": "415f4d0a91eef9c4decc85e275d662210e07c18ca665799943fa31389a364985",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17780: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reuse_only": true,
+      "redisplayed_in_this_task": false,
+      "observation_source": "motion_missing_fields_review_v1/OUT_motion_missing_fields_review_v1.json#SUB151"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17781_nativeROI.png",
+      "sha256": "312085893680c63f7f50e901089f31a67dbe8d6a10e0006919997fe9fdedaa39",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17781: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reuse_only": true,
+      "redisplayed_in_this_task": false,
+      "observation_source": "motion_missing_fields_review_v1/OUT_motion_missing_fields_review_v1.json#SUB151"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17782_nativeROI.png",
+      "sha256": "cc0467dba2aed9fc8d0c697956b5ee2906477f50524a0f0d54b451e2e9b74c4d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17782: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reuse_only": true,
+      "redisplayed_in_this_task": false,
+      "observation_source": "motion_missing_fields_review_v1/OUT_motion_missing_fields_review_v1.json#SUB151"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB151/f17783_nativeROI.png",
+      "sha256": "0134fcb25b1151b83a5309d8f47ff40549b54e9811581aeb488ba15551ab8129",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "witness": "SUB151 source frame17783: actual returned NATIVE_1to1_ROI_NOT_FULLFRAME inspected.",
+      "reuse_only": true,
+      "redisplayed_in_this_task": false,
+      "observation_source": "motion_missing_fields_review_v1/OUT_motion_missing_fields_review_v1.json#SUB151"
+    }
+  ],
+  "reused_exact_annotation_boundary": {
+    "frames": [
+      17874,
+      17875
+    ],
+    "event_first_frame": 17875,
+    "prior_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_03/OUT_gap_review_03.json#G116",
+    "evidence_paths": [
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_03/native_f17874.jpg",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_03/native_f17875.jpg"
+    ],
+    "redisplayed_old_JPGs": false,
+    "counts_as_new_chart_request": false
+  },
+  "prior_return_audit": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/session_20261104/chart_saved59_path_order_audit_v2.json",
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "usage_at_stop": {
+    "primary_used_percent": 6,
+    "weekly_used_percent": 32,
+    "paid_credit_balance": "0",
+    "credits_spent_or_reset": false,
+    "previous_interruption": {
+      "primary_used_percent": 83,
+      "weekly_used_percent": 29,
+      "reads_then": 59,
+      "pending_then": 5
+    },
+    "resumed_read_batches": [
+      3,
+      2
+    ],
+    "fresh_usage_tool": "mcp__codex_app__get_usage_limits",
+    "current_authorized_ceiling": "Primary95%; weekly user-authorized100%; no reset/paid spending"
+  },
+  "observation_recovery": {
+    "lost_observations": [],
+    "method": "Persistent receipt/observation stores recovered; remaining observations recovered from this agent's retained actual image-return history. No previously read PNG redisplayed."
+  },
+  "limitations": [
+    "COMPLETE_FOR_SUPPLIED_SCOPE concerns64new file requests only. Fullframe sequence covers every2sourceframes17784–17882,83.333ms sample interval across4.125s inclusive source exposure; no global100ms or all-frame review claim.",
+    "Only native175x104left-chart crops supplied17766–17778; an unidentifiable arrow within crop is not evidence of global cursor absence. Prior faint17779mark remains unresolved.",
+    "First-tooltip/title-highlight onsets and highlight completion remain bounded as recorded. Every tooltip label update is not independently localized or counted as a shot.",
+    "May/June content holds do not certify stationary cursor/card pixels or final interaction offset.",
+    "Red annotation first17875 reuses prior G116 exact-native proof; old native JPGs and five prior SUB151ROIs were not redisplayed.",
+    "All source claims remain source text. No financial factcheck, original software/easing reconstruction, source true-color claim, listening, ASR certification, audiovisual alignment or CT_SCAN completion.",
+    "Prepared source decoding/hash provenance supplied by root retained. No extra extraction, source edits, Git/publication, locks, scheduler or process changes performed."
+  ]
+}

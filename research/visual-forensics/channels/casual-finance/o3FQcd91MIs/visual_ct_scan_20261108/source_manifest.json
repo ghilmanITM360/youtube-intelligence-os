@@ -1,0 +1,62 @@
+{
+ "video_id": "o3FQcd91MIs",
+ "channel": "Casual Finance (Casually Finance)",
+ "title": "Why The Dumbest Investors Win (it's not why you think)",
+ "source_path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/Why The Dumbest Investors Win (it's not why you think) - Casual Finance (720p, h264).mp4",
+ "source_sha256": "82ab2b63ce250723f37e569d15ecf0a8b67c22f1841ec14637216d34e4a89c85",
+ "sha256_prefix": "82ab2b63",
+ "bytes": 5896501,
+ "duplicate_copy_seen": "/Users/ghilmankhan/Downloads/Why The Dumbest Investors Win (it's not why you think) - Casual Finance (720p, h264).mp4 (same size; SOURCE.json registered this path; both under Downloads, neither modified)",
+ "container_duration_s": 278.09229,
+ "video": {
+  "codec": "h264",
+  "width": 1280,
+  "height": 720,
+  "frame_rate_mode": "CFR 30/1 (30 fps, per-frame PTS delta uniform 0.033333 s across all 8337 intervals)",
+  "time_base": "1/15360",
+  "frames_decoded": 8338,
+  "first_pts_s": 0.033333,
+  "last_pts_s": 277.933333,
+  "pts_note": "first frame PTS=1/30 s; frame index i has PTS (i+1)/30"
+ },
+ "audio": {
+  "codec": "aac",
+  "sample_rate": "44100",
+  "channels": 2
+ },
+ "identity": {
+  "status": "SOURCE_VERIFIED",
+  "evidence": [
+   "SHA-256 recomputed today equals registered SOURCE.json sha256",
+   "title in registry = owner-supplied title",
+   "duration 277.93 s vs public 278 s",
+   "on-screen content matches title question ('Why do the dumbest investors win in the stock market?', S003.0/S011.0) and channel end card 'Casual Finance' (S021.4)",
+   "registered thumbnail (sha 62fc9699...) shows same character 'Dave' and Dave-vs-Warren-Buffett chart motif"
+  ],
+  "caveat": "Live YouTube page/thumbnail not re-fetched (offline, no acquisition)."
+ },
+ "thumbnail": {
+  "path": "/Users/ghilmankhan/Downloads/CasuallyFinance-Forensic-Research/02_VIDEO_FORENSICS/o3FQcd91MIs/evidence/thumbnail_maxresdefault.jpg",
+  "sha256": "62fc96998c387e4815623136b42f598e1e3912bb48eeabb1bc6a51e8517521bc",
+  "size": "1280x720",
+  "status": "SHA matches LOCAL_THUMBNAIL_INDEX; viewed; live-thumbnail equivalence UNAVAILABLE"
+ },
+ "repo": {
+  "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os",
+  "branch": "research/finance-economics-intelligence",
+  "head": "4cc60c36e4121735aeb135d6fff3b1fc927d1c15",
+  "modified_by_this_task": false
+ },
+ "tools": {
+  "python": "3.12.14 (visual-ct-scan-venv)",
+  "opencv": "opencv-python-headless 5.0.0.93",
+  "scenedetect": "scenedetect-headless 0.7.2",
+  "ffmpeg": "9.0.1",
+  "whisper": "openai-whisper 20240930 small.en (CPU, local) - UNCERTIFIED ASR; prior run: base"
+ },
+ "recovered_scripts_from": "git commit 090f84b3 research/casually-finance-editing-forensics/scripts (read via git show; external copies in recovered_scripts/ with SHA256SUMS; repo untouched). Long-form pipeline scripts also exist locally in Downloads/CasuallyFinance-Forensic-Research/_pipeline",
+ "prior_evidence": {
+  "path": "/Users/ghilmankhan/Downloads/CasuallyFinance-Forensic-Research/02_VIDEO_FORENSICS/o3FQcd91MIs",
+  "status": "PASS_STRUCTURAL (every frame decoded, 76 states) - treated as HISTORICAL input, independently re-measured and visually spot-verified here, not copied as truth"
+ }
+}

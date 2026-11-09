@@ -1,0 +1,107 @@
+{
+  "decode_command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-i",
+    "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We\u2019re About to Break It - Casual Finance (1080p, h264).mp4",
+    "-vf",
+    "select='between(n,1434,1440)'",
+    "-fps_mode",
+    "passthrough",
+    "-pix_fmt",
+    "rgb24",
+    "-f",
+    "rawvideo",
+    "pipe:1"
+  ],
+  "method": "Full native decoded RGB24 SHA; adjacent pixel sum abs RGB difference >60, max channel delta. Measurements do not establish semantic or audio status.",
+  "rows": [
+    {
+      "frame": 1434,
+      "pts_fraction": "1435/24",
+      "decoded_RGB_sha256": "70fdf37c7956767ffee55343170b17f6326f1abf407aa7b699fcff0e50d3e0bd",
+      "changed_gt60": null,
+      "changed_bbox": null,
+      "maximum_channel_delta": null
+    },
+    {
+      "frame": 1435,
+      "pts_fraction": "1436/24",
+      "decoded_RGB_sha256": "fe1db2b60105df844d8b5f338adfaff68a2174d93698bd8fe2b74e1a060f173e",
+      "changed_gt60": 313,
+      "changed_bbox": [
+        744,
+        216,
+        767,
+        255
+      ],
+      "maximum_channel_delta": 252
+    },
+    {
+      "frame": 1436,
+      "pts_fraction": "1437/24",
+      "decoded_RGB_sha256": "68bb55f7be8b003abfa814edea3f4103fec4d9d921067fd535de824bf47d0360",
+      "changed_gt60": 590,
+      "changed_bbox": [
+        761,
+        216,
+        785,
+        259
+      ],
+      "maximum_channel_delta": 255
+    },
+    {
+      "frame": 1437,
+      "pts_fraction": "1438/24",
+      "decoded_RGB_sha256": "930f6f6b43a105821280423524ec5a8a0f41d791953fd33b1b457c3455d42909",
+      "changed_gt60": 652,
+      "changed_bbox": [
+        416,
+        218,
+        811,
+        925
+      ],
+      "maximum_channel_delta": 255
+    },
+    {
+      "frame": 1438,
+      "pts_fraction": "1439/24",
+      "decoded_RGB_sha256": "22fded0c8f9581d7d86572dee5886565443a8ebde0a0b38c8ac5f3ded355e62e",
+      "changed_gt60": 464,
+      "changed_bbox": [
+        806,
+        217,
+        831,
+        251
+      ],
+      "maximum_channel_delta": 248
+    },
+    {
+      "frame": 1439,
+      "pts_fraction": "1440/24",
+      "decoded_RGB_sha256": "2c52fc3965145ce711bfb9b7d949e099c695230918f0b95579688dbd5ae824c8",
+      "changed_gt60": 495,
+      "changed_bbox": [
+        832,
+        224,
+        855,
+        251
+      ],
+      "maximum_channel_delta": 255
+    },
+    {
+      "frame": 1440,
+      "pts_fraction": "1441/24",
+      "decoded_RGB_sha256": "ca6988c5db60d0ffe59a1e2bc2462c1c24859598f18925baa1c0fc4a4c367acb",
+      "changed_gt60": 442,
+      "changed_bbox": [
+        624,
+        222,
+        879,
+        255
+      ],
+      "maximum_channel_delta": 255
+    }
+  ]
+}

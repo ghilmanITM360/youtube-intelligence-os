@@ -1,0 +1,79 @@
+{
+  "decode_command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-i",
+    "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We\u2019re About to Break It - Casual Finance (1080p, h264).mp4",
+    "-vf",
+    "select='between(n,1340,1345)'",
+    "-fps_mode",
+    "passthrough",
+    "-pix_fmt",
+    "rgb24",
+    "-f",
+    "rawvideo",
+    "pipe:1"
+  ],
+  "method": "Full native decoded RGB24 SHA; adjacent pixel sum abs RGB difference >60, max channel delta. Measurements do not establish semantic or audio status.",
+  "rows": [
+    {
+      "frame": 1340,
+      "pts_fraction": "1341/24",
+      "decoded_RGB_sha256": "aa5eb765b734fd15c4b6176927fde89faf1debbe7c8b66c3b02333ded457bd36",
+      "changed_gt60": null,
+      "changed_bbox": null,
+      "maximum_channel_delta": null
+    },
+    {
+      "frame": 1341,
+      "pts_fraction": "1342/24",
+      "decoded_RGB_sha256": "8d2d6e2a732a9291629229b9ab5f1889c71fe274fb11a0cb8caf703adeaa7c9b",
+      "changed_gt60": 0,
+      "changed_bbox": null,
+      "maximum_channel_delta": 1
+    },
+    {
+      "frame": 1342,
+      "pts_fraction": "1343/24",
+      "decoded_RGB_sha256": "b04511647523736613459932b9bd48426d39a39bb573107622a9a44712e893e3",
+      "changed_gt60": 0,
+      "changed_bbox": null,
+      "maximum_channel_delta": 11
+    },
+    {
+      "frame": 1343,
+      "pts_fraction": "1344/24",
+      "decoded_RGB_sha256": "65668160961956666858abb839cc40cd17a83eafa51eb0e07c98064e186e0600",
+      "changed_gt60": 1693,
+      "changed_bbox": [
+        462,
+        696,
+        575,
+        727
+      ],
+      "maximum_channel_delta": 255
+    },
+    {
+      "frame": 1344,
+      "pts_fraction": "1345/24",
+      "decoded_RGB_sha256": "c464472764ea61ddcf917dc3bc1acb6ddfe62d27f64019734878a6cd4fbc7581",
+      "changed_gt60": 0,
+      "changed_bbox": null,
+      "maximum_channel_delta": 15
+    },
+    {
+      "frame": 1345,
+      "pts_fraction": "1346/24",
+      "decoded_RGB_sha256": "53d04fd59177272d55dea698fbb8dddf9394f08b9bc2e35609f78e685d452b9d",
+      "changed_gt60": 1,
+      "changed_bbox": [
+        575,
+        735,
+        575,
+        735
+      ],
+      "maximum_channel_delta": 50
+    }
+  ]
+}

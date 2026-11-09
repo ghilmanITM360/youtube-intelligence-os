@@ -1,0 +1,18 @@
+{
+ "video_id": "Uumnx2Fo6cE",
+ "decoded_frames": 22097,
+ "decoded_frames_all_measured": true,
+ "frames_with_model_visual_inspection": "episode windows: 715 episodes x ~6 decoded tiles (about 4.3k frames shown) + 42 clusters x 4-5; state tiles: 507 representative frames x 2 reviews; plus a handful of native crops. Decoding != viewing: unchanged stable stretches were not viewed frame-by-frame.",
+ "states": 507,
+ "episodes": 715,
+ "subthreshold_clusters": 42,
+ "intra_events": 218,
+ "motion_intervals": 169,
+ "blind_spots": [
+  "changes < ~18x18 px at contrast>=150 (synthetic test: 18 px square detected, 14 px not)",
+  "low-contrast changes (<~600 px) ",
+  "sub-threshold sweep covered only p150 8-39 non-I frames",
+  "small text unverified in 219 states"
+ ],
+ "audio": "ASR only; human listening NOT_COMPLETED"
+}

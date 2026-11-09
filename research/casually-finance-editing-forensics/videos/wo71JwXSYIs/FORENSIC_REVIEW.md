@@ -1,0 +1,27 @@
+# Forensic review — wo71JwXSYIs "What Everybody Got Wrong About the Debt Crisis"
+
+Status: `VISUAL_FORENSICS_COMPLETE_AT_DEPTH_B_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
+
+## Source (MEASURED)
+`What-Everybody-Got-SnapYT.App.mp4` (`CFSRC-047`), SHA256 `1e3eb3fb...aeb23`, H.264/AAC, 360x640, 30.0 fps, 2122 frames (decoded = ffprobe), 70.805 s. SHORT uploaded 2026-09-05, 13,106 views at the 2026-10-19 snapshot. Identity = title+duration match (not cryptographic). 360p limits line weight and small-motion measurement.
+
+## Depth
+DEPTH_B (banded layout; scenes cut-delimited; every HARD/ANIMATION auto stage event seen on lean pre/active/post sheets; operations authored for the main events, remaining detected changes kept as UNRESOLVED_CHANGE rows; caption words measured against ASR). Audio: whole track measured (78 % voiced, 16 pauses >=0.25 s, 14 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-2121.
+
+## Measured statistics
+- 14 scenes (median 4.52 s, p10 1.97, p90 9.03, longest 11.30); 13 hard cuts (11.02/min); 43 events (36.44/min), 31 of them one-frame.
+- Operations: HARD_CUT_REPLACE 13, UNRESOLVED_CHANGE 9, POP_IN 9, HIGHLIGHT_SWEEP 5, POINTER_TRANSLATE 2, CAMERA_SCROLL_ZOOM 2, OVERLAY_POP 1, SLIDE_IN 1, POSE_SWAP 1.
+- Frame-weighted: static hold 76.5 %, plausibly conventional keyframe/compositing 23.3 %, screen recording 0.0 %, complex continuous animation 0.0 %, change of undetermined method 0.2 %; generated/video-based: none identified.
+- Hard cuts relative to the nearest ASR word onset: median -87 ms (p10 -150, p90 43; negative = visual first; ASR uncertainty ~100 ms).
+- Cadence: 24 fps timeline conformed to 30 fps by repeating every 5th frame (MEASURED: 41 of 41 duplicates share one phase mod 5; 5-frame gaps 36).
+
+## Findings
+- **Banded era (eighth example).** Persistent headline "The REAL Reason the Bond Market's Panicking" (zero change over the video); the public title is different ("What Everybody Got Wrong About the Debt Crisis") and the headline matches no title among the 48 local videos (`DIRECTLY_OBSERVED`); it shares the opening words 'The REAL Reason' with the public title of `44ggG2I6JPY` ("The REAL Reason Everyone Is Panicking"), which is not an equality. Banded headlines that equal another local upload's title: still 2 of 8 banded videos analysed. Caption band aligned to ASR with the weakest fit of the banded sample so far (median +53 ms, 64.1 % within ±100 ms, n = 206; `ji2qFfcgSB4` 79.5 %, `YST8eMG3_Z8` 82.6 %, `xrNPr3YrWdw` 74.5 %).
+- **Country tour as the visual spine.** The first three beats each bring a country-map character and a source page: the UK-map character (opening, 0-1.2 s) then the debt-office page, the green Japan-map character on a Ministry-of-Finance page, and the US-map character holding a paper ('Short and sweet!' bubble at f1098, 36.6 s, 0.08 s after the ASR 'short'); the OECD part drops the characters for chart/text pages and a pointing host (`DIRECTLY_OBSERVED`).
+- **Cuts lead the word.** 13 hard cuts in 70.8 s (11.0/min, median scene 4.5 s); hard cuts sit a median 87 ms before the nearest ASR word onset (n = 13, range -293 to +67 ms, ASR uncertainty ~100 ms), consistent with the sample median of about -76 ms.
+- **24 fps timeline measured, cleanly.** All 41 isolated duplicate frames in motion share one phase modulo 5 and 36 of them are exactly 5 frames apart: a 24 fps timeline conformed to 30 fps by repeating every fifth frame (`MEASURED`, the strongest case so far; same result as `xrNPr3YrWdw`).
+- **Two measured camera moves, one linear and one decelerating.** S10: the OECD chart page enlarges to 1.85x and pans left by about 88 px (analysis size) over 52 frames (f1409-1459), linear on scale, pan_x and pan_y (`camera_1408_1460.json`); the host then pops in at the right (f1459-1460). S11: the OECD text page zooms to 1.66x over 90 frames (f1745-1834) with an ease-out cubic scale fit (SUPPORTED, margin 0.092; pan_y agrees) while a yellow highlight grows (`camera_1744_1836.json`).
+- **Pointer arrow in two measured moves.** The red arrow pops at f105, drifts about 0.067 of the frame width right and 0.013 down over 20 frames (x linear, y ambiguous linear), holds to f178, then travels to the end of the falling line over 25 frames (f179-203; x linear SUPPORTED, y ease-in SUPPORTED, i.e. it follows the curve) (`blob_105_125.json`, `blob_178_204.json`).
+- **Highlights again measured by colour.** Five sweeps, each 2-3 s: yellow on S03 (f385-468), S06 (f905-992), S09 (f1232-1297; already partly present at the cut) and S11 (f1774-1832), and a light-green one on S08 (f1135-1203) (`color_yellow.json`, `color_lgreen.json`); monotone fractions 0.91-0.94.
+- **ASR limit on a gag.** The narration's 'ex ante' is transcribed as 'X and T' by Whisper while the on-screen dictionary page for 'ex ante' (S12, host at a desk with a laptop, a composition also seen in `YST8eMG3_Z8` S02) is readable: the joke 'which is Latin for beforehand' sits on a cut at f1844 (61.47 s), 0.25 s before the ASR 'Latin' (61.72 s).
+- **Number and label pops.** Red '17T' pops at f792 (26.4 s) while the ASR is on '17' (26.08-26.74 s), the money bag follows at f825 (27.5 s); '30 yrs' and '5 yrs' labels pop at f1995 and f2010 in the final scene. No generated motion identified; 11 detected changes of at most 0.7 % of the frame stay as unresolved rows.

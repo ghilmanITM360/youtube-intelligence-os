@@ -1,0 +1,487 @@
+{
+  "schema_version": 1,
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "reviewer": "independent agent /root/video006_bounded_qa",
+  "created_utc": "2026-11-06T16:13:20.874806+00:00",
+  "status": "PASS_BOUNDED",
+  "scope": "Only six new strict rows v40→v42, plus G005.01/G006.01 original attempt02 production/cold-package acceptance. Sourcebatch1 accepted review reused, not repeated. No global audit or additional spans.",
+  "resource_check": {
+    "fresh_at_start_five_hour_percent": 70,
+    "fresh_at_start_weekly_percent": 40,
+    "ordinary_usage_allowed": true,
+    "credits_balance": "0",
+    "latest_parent_supplied_usage_percent": [
+      78,
+      42
+    ],
+    "limit_action": "No broader work or subsequent review begun; terminal after this atomic report."
+  },
+  "input_pins": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/NATIVE_BATCH2.json",
+      "sha256": "af68d257f42b0f6f75ed38947603219a3f133035e54cbe85f44e231c971a893a"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/NATIVE_BATCH2_v2.json",
+      "sha256": "c5e0ec944f938bef1f8169161ea606222b7957c0eae4b5efb57361b8f8b2b78b"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/visual_event_ledger_v40.csv",
+      "sha256": "46abdbc8ad7e23b16235a2ae42d3a84a4813017013bda6592003b741ab8d84f1"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/visual_event_ledger_v42.csv",
+      "sha256": "28ddf405ab5c9ee9960ed9ac4a790d27b5ae3151f95a9c8d7748139c95d1c936"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/CURRENT_NATIVE_QUEUE_v18.json",
+      "sha256": "77c0db32bd27750dd6a0b0c2c565d6cc9e10f997056cf323ae4bbc19c7a82eb9"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_region_measurements.json",
+      "sha256": "702bc241fceb25840ef5121f91eb8579fc45bfe37f3e774f6842f6516c43efd1"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_2280_2365/measurements.json",
+      "sha256": "cb0c393ee8915c15839062bc65254969c0f9447a26640fe36d321933e0227925"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_boundary_supplement.json",
+      "sha256": "f45937e1b3a22f26fc4351881ad47a697709399547f69e87762a1be6c524d4f0"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/outline_phase_measurements.json",
+      "sha256": "698c4f3c17ff509134bf0e7a3fa9e9714b1f4c9222c4f9499ad35c586f47e574"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/rightturn_supplement.json",
+      "sha256": "86d9b6f30ba254ba970744f25a8c25b02ee7b005cf5dbbaf8c5c525899e9ce1d"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/measure_table.py",
+      "sha256": "c4ed3433786408d19b52b1a6a6ecd468d2711e5e96d731f0907b2155cd36cc64"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/SOURCE_VERIFICATION.json",
+      "sha256": "5d5f85309b975cd70ac99f3e6d75087cc7d8eb80c330d3a4bd2579fb838cd1fb"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/QA_source_batch1.json",
+      "sha256": "c195771724082e64d90b7d08dc1e70c1ab8a19c2365295dcf4be37b147cb93ad"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/ORIGINAL_SPAN_SPEC.json",
+      "sha256": "f1ffff7a1b0b4ec534b7e06d4debd03e8d4a631052e75232a3800083e4731daa"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/ACCEPTANCE_FROZEN.json",
+      "sha256": "d471b14b9c1c9127356b6755f60ed81e4890e54a30d15783583d86298bef4bd3"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/FREEZE_RECEIPT.json",
+      "sha256": "4623f4d42084fe75bd6ff0d8229bb56b3d8d46718972acfd1467831599b4f278"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/render_original_attempt02.py",
+      "sha256": "8384b8303e6f7eeb5db4ebc46577a6e5db910e7b58abe89a9b4097dd6225d00c"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/validate_original_attempt02.py",
+      "sha256": "2c353dc443de7a23b6edaa862e58696bafe81db041f6c686ebd03bcd22513032"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/ORIGINAL_VALIDATION_attempt02.json",
+      "sha256": "a6772b7c5f95c6e530e00f4101b104c7f677f2b22e4c3a0f2641804536747bd9"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/render_manifest.json",
+      "sha256": "fddfd5ebd637ac69acc7f9b5de8ea79384ca811a96e79b1274377ddd4cc61890"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G005.mp4",
+      "sha256": "8fbbbb7d9e09799b864f33ebe47d8a0d04d30715aa6dae4877aea3ffbd10efd8"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G006.mp4",
+      "sha256": "2dde5899d8cb86131b2a22143fe1761d7c1d765ea0934e730ac95be7d7b99939"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/COLD_START_EXECUTION.json",
+      "sha256": "554ee9d7aaaac68779f26c90e12e1e9db04d978cf0e36804d7e216bce4444a54"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/cold_start.py",
+      "sha256": "2fb1809401a6784025088d883d7e2316d50c4950f63a225f71a50c6664b6b7d3"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/cold_package/cold_runner.py",
+      "sha256": "9e443fdaa9925f6c8aef71d038f61d7b9b5773ed8a834336aec5e137d600fa9c"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/cold_package/render_original_attempt02.py",
+      "sha256": "8384b8303e6f7eeb5db4ebc46577a6e5db910e7b58abe89a9b4097dd6225d00c"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/cold_package/ORIGINAL_SPAN_SPEC.json",
+      "sha256": "f1ffff7a1b0b4ec534b7e06d4debd03e8d4a631052e75232a3800083e4731daa"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/cold_package/output/render_manifest.json",
+      "sha256": "fddfd5ebd637ac69acc7f9b5de8ea79384ca811a96e79b1274377ddd4cc61890"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/ATTEMPT01_DEFECTS.json",
+      "sha256": "c523889d8453b010941566532ad7c2a1fd276469edbd0779f2e29f78d37d8218"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/EVIDENCE_RECONCILIATION.json",
+      "sha256": "7ea9939523bf99eada344848992bcc81dedb8fae7e0a331f85c94198b4678c44"
+    }
+  ],
+  "source_gate": {
+    "status": "PASS_BOUNDED",
+    "changed_ids": [
+      "EP0073",
+      "SUB047",
+      "EP0074",
+      "SUB048",
+      "EP0075",
+      "SUB049"
+    ],
+    "row_count": 948,
+    "unique_event_ids": 948,
+    "strict_candidate_count": [
+      568,
+      562
+    ],
+    "classification": "3 exact/reconciled compound-phase rows +3 continuous fragments. Six reclassified rows are not six independent physical/authored event onsets.",
+    "ledger_delta": "Exactly the six requested IDs differ from v40. No source_start/source_end or shot_boundary_claim fields change. v42 has562 strict candidates; queuev18 count562.",
+    "source_integrity": "All86 saved native PNGs2280–2365 reproduce both initial fullRGB and table_region RGB hashes. All original adjacent fullRGB threshold/max-channel records and table_region masks/ROI counts reproduce. Scoped source ffprobe PTS checked for86 frame indices:512*(n+1) ticks at1/12288 = (n+1)/24s; no mismatch. Original source SHA reused from pinned SOURCE_VERIFICATION + prior QA_source_batch1, not claimed as freshly rehashed in this followup.",
+    "semantic_limit": "Actual displayed source evidence is21 files comprising5 native fullframes,7 native ROI/crop sheets (one invalid),9 reduced context sheets. Numerical86-frame review does not assert86 native full-frame semantic views.",
+    "rulings": {
+      "EP0073": {
+        "status": "PASS_BOUNDED",
+        "zoom": [
+          2285,
+          2293
+        ],
+        "presenter_last_visible": 2292,
+        "presenter_absent": 2293,
+        "cursor_first_visible": 2285,
+        "blue_first_visible": 2294,
+        "cursor_settle": 2295,
+        "assessment": "Native2292/2293 fullframes show tiny presenter edge/pointer then absence. Boundary crops support last table geometry change2293 then new blue overlay2294. First cursor appearance near hair2285 is firstVISIBLE, with preceding occlusion and hidden authored onset unknown. Approx1.57 table-width ratio is apparent geometry, not an identified source scale parameter. Detailed later cursor path remains open."
+      },
+      "SUB047": {
+        "status": "PASS_CONTINUOUS_FRAGMENT",
+        "assessment": "2297–2302 continues blue overlay beginning2294. Top stroke extends left2294–2295; left vertical starts2296. No independent onset2297."
+      },
+      "EP0074": {
+        "status": "PASS_CONTINUOUS_FRAGMENT",
+        "assessment": "2304–2308 continues same outline. Left stroke reaches bottom2307; horizontal bottom turn first2308. No independent graphic onset2304 or camera motion inferred. Cursor movement remains separate."
+      },
+      "SUB048": {
+        "status": "PASS_CONTINUOUS_FRAGMENT",
+        "assessment": "Right edge begins upturn2310, not2311, and continues to full closure2321. At2316 only partial height. Native2309/2310 ROI and all16 rightturn support records independently confirm corrected boundary."
+      },
+      "EP0075": {
+        "status": "PASS_RECONCILED_COMPOUND",
+        "assessment": "Blue completion2321 continues original2294 stroke. Two magenta row outlines first simultaneously2322 after2321 none, final closure2349 then geometry held. Coin first bottom-clipped2345 after2344 none, translates up through2357 then holds2358–2365. Constant observed horizontal warm-bbox width242px once equator visible supports translation rather than growth. Full-frame warmmask includes other artwork and is not a coin-only onset detector.",
+        "component_onsets": {
+          "magenta_outlines": 2322,
+          "coin_first_visible": 2345
+        },
+        "last_motion": {
+          "magenta": 2349,
+          "coin": 2357
+        }
+      },
+      "SUB049": {
+        "status": "PASS_BOUNDED",
+        "tail_motion": [
+          2358,
+          2361
+        ],
+        "first_fully_offscreen": 2362,
+        "assessment": "Native cursor crops show held2354–2357, down/right tail2358–2361, fully out2362. Coin/outline/table geometry stays held; no teleport or source-event absence proof. Hidden subsequent cursor motion unknown."
+      }
+    },
+    "supplement_reproduction": "All83 blue-table and warm-coin ROI bboxes reproduce documented crops. All16 rightturn y-ranges reproduce blue crop x860:870,y280:930. Outline-phase receipt was inspected as support; its entire57 records and gray-cursor thresholds are not claimed independently recomputed. Source geometry/semantics assessed using listed witnesses, not masks alone."
+  },
+  "production_gate": {
+    "status": "PASS_BOUNDED",
+    "accepted_spans": [
+      "G005.01",
+      "G006.01"
+    ],
+    "criteria_SHA256": "d471b14b9c1c9127356b6755f60ed81e4890e54a30d15783583d86298bef4bd3",
+    "spec_SHA256": "f1ffff7a1b0b4ec534b7e06d4debd03e8d4a631052e75232a3800083e4731daa",
+    "freeze": "FREEZE_RECEIPT spec/criteria hashes match current files. Receipt records outputs absent before freeze; not an independent historical filesystem/process trace. Criteria unchanged for attempt02.",
+    "rendered_frames": 48,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "G005": {
+      "status": "PASS",
+      "context": [
+        749,
+        769
+      ],
+      "checks": "All21 PNGs independently checked against final card pixels translated by specified integer x track; robot/face/pointer and background remain pixel-static. Card absent749, first750, last left translation766, exact full-frame hold767–769. Native final checkpoint shows all fictional header/body copy legible and fitted; font metrics independently fit chosen card width. Six-sided badge and amber three-dot motif present."
+    },
+    "G006": {
+      "status": "PASS",
+      "context": [
+        836,
+        862
+      ],
+      "checks": "836 equals prior final profilecontext; cut837. All26 subsequent PNGs match a fixed scene plus a translated fixed-height five-bar group. No bars837/838, first839, last movement857, exact full-frame hold858–862. Five final components atx325/405/485/565/645; final bbox325,605..663,935. Quote/face/desk/laptop held; amber reading visor border visible; fictional quote legible/unclipped."
+    },
+    "independent_checks": "15 bounded hash/translation/hold/copy-fit/component/video metadata assertions passed, separately computed in memory. Existing14-check root validation receipt was read and manifest/frozen pins verified; its output-producing validator was not rerun.",
+    "MP4s": {
+      "G005": {
+        "frames": 21,
+        "fps": "24/1",
+        "duration_seconds": 0.875,
+        "audio_streams": 0,
+        "decoded_RGB_MAE_to_ordered_PNG_range": [
+          0.6960857124485597,
+          0.8511905221193415
+        ]
+      },
+      "G006": {
+        "frames": 27,
+        "fps": "24/1",
+        "duration_seconds": 1.125,
+        "audio_streams": 0,
+        "decoded_RGB_MAE_to_ordered_PNG_range": [
+          0.8476175090020576,
+          0.9067928562242799
+        ]
+      },
+      "method": "ffprobe count/rate/dimensions/audio metadata; ffmpeg decoded all48 MP4 frames into memory and compared in order to PNGs. Decoded MP4 frames were not separately displayed; visual checkpoints are source PNGs."
+    },
+    "limits": "Original temporal/anchor behavior transfer using fictional robot/profile/quote and teal rectangles. No source-art fidelity, uniquely inferred curve, finance-content validation or full-video production acceptance."
+  },
+  "cold_start_gate": {
+    "status": "PASS_BOUNDED_RECEIPT_AND_HASH_RECONCILIATION",
+    "matching_PNGs": 48,
+    "checks": "Both manifests identical; all48 original PNG file hashes and all48 cold output PNG hashes individually match manifest. Packaged spec/renderer byte-identical to inputs; cold_runner hash matches execution receipt. Renderer code reads spec and system font, constructs artwork procedurally, never opens source_ref string/media.",
+    "execution_scope": "Root fresh-process execution receipt exit0/PASS inspected; independent reviewer did not rerun renderer or create another package.",
+    "dependency_limits": "Python/Pillow runtime + system Arial font required. Audit hook installed after PIL import permits package, Python prefixes, Pillow, system font roots; only Python open events checked, not OS sandbox or complete syscall/file access trace. No whole-video cold start claimed."
+  },
+  "defect_history": [
+    {
+      "id": "EVID-001",
+      "file": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_boundary_native2.png",
+      "finding": "Lower2345/2346 panels are blank despite native coin pixels, so sheet cannot support source absence.",
+      "status": "RESOLVED_AS_INVALID_SUPERSEDED_RETAINED",
+      "resolution": "EVIDENCE_RECONCILIATION records montage canvas clipping, preserves original, points to coin_bottom_firstpixels_native.png + native PNGs. Valid replacement native crop displays2344 none/2345 first coin and matches hash-pinned native measurements. No timing/count change."
+    },
+    {
+      "id": "ROOT-B2-001",
+      "file": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/NATIVE_BATCH2.json",
+      "finding": "Original SUB048 right turn stated2311.",
+      "status": "RESOLVED_BEFORE_ACCEPTANCE",
+      "resolution": "Preserved v1; v2/v42 state first upturn2310; independently verified source crop/16 support records. No additional closure."
+    },
+    {
+      "id": "PROD-001/PROD-002",
+      "file": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/ATTEMPT01_DEFECTS.json",
+      "status": "FAILED_ATTEMPT_PRESERVED_REPAIR_ACCEPTED_ATTEMPT02",
+      "finding": "Historical attempt01 five-vertex badge and missing reading-visor border, plus NumPy bool serialization tooling failure, remain recorded. Attempt02 six-sided badge and border inspected; frozen timing unchanged. Attempt01 not silently promoted."
+    }
+  ],
+  "open_unknowns": [
+    "Hidden authored cursor onset before visible2285; preceding occlusion prevents pure onset claim.",
+    "Intermediate cursor path/glyph semantics2304–2325 not fully closed.",
+    "Source zoom/stroke easing, authored keyframes, drawing/layer method and hidden onsets unknown.",
+    "Residual mask/pixel differences do not establish authored changes or prove exact source equality.",
+    "Existing contextual G004 third-band word-boundary P3 remains open outside this scope.",
+    "Audio listening0; source audiovisual sync blocked."
+  ],
+  "actual_images_viewed": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/cursor_first_zoom_native.png",
+      "sha256": "e4bc29fd5f4111e252d5c189bbc5508cbfd78dff800151533c8a1f74e395363d",
+      "coverage": "native1:1 ROIs2283–2286; first visible cursor near hair, occlusion limit"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/rightturn_native.png",
+      "sha256": "5aa55db56a1bc14dfd6a1936fc528ad7f33cd143e794d4fd2945985438a08b26",
+      "coverage": "native1:1 ROIs2309–2312; first upward turn2310"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/coin_bottom_firstpixels_native.png",
+      "sha256": "c5e4986034300181b5d28599cbfd5f9b96fa7b477c8ceb27ba817cfacab774a3",
+      "coverage": "native1:1 ROIs2343–2346; valid bottom first-pixel witness"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/cursor_tail_complete_native.png",
+      "sha256": "f201ae56e5c06a4dcbac22fdc80f03305901d93a8d94758927c95d49e6223940",
+      "coverage": "native1:1 ROIs2354–2362; down/right exit"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_review_0.jpg",
+      "sha256": "4bb6389ed1c1e5d5baba6cdeb4c9083f64b641426949d6f755b03967efee0b74",
+      "coverage": "reduced full-frame contexts2283–2286"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_review_2.jpg",
+      "sha256": "2f9aab4bbb228e0b9ba40c3890e7348283f21c44f03c47e57291df237ba54aa3",
+      "coverage": "reduced full-frame contexts2302,2303,2304,2308"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_review_3.jpg",
+      "sha256": "024873a600b7131858148286515a2a82ae837eb3c8d75f2f34ebeed98e22b296",
+      "coverage": "reduced full-frame contexts2310,2316,2317,2318"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_review_4.jpg",
+      "sha256": "c15999c2624afca24ca956438f36e49819e0bfc349ffc8e6fffdb8da34aaf146",
+      "coverage": "reduced full-frame contexts2320,2324,2328,2332"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_review_5.jpg",
+      "sha256": "a315f753b9a5e995decb6e669193e1051be1dbe0d0a9f3196d95c66b6d526787",
+      "coverage": "reduced full-frame contexts2336,2340,2344,2348"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_review_6.jpg",
+      "sha256": "64f50509ca412ee9770b2eafe1d05f77c004aa805ab10ccedb7fe2a038cff94a",
+      "coverage": "reduced full-frame contexts2352,2356,2357,2358"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_review_7.jpg",
+      "sha256": "70865750807c70cc052325460fdda684bb183e19279eff1647c82776619e5eff",
+      "coverage": "reduced full-frame contexts2359–2362"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_review_8.jpg",
+      "sha256": "e96dc13d6da1cd5de252ade43e28e88a6aef26df9ca0d13285c73e033e5a33dc",
+      "coverage": "reduced full-frame contexts2363–2365"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_review_1.jpg",
+      "sha256": "14dfa9dbb791a86e9012e6ada1a6d467f68491a089ca107ae589c4b262ebbb00",
+      "coverage": "reduced full-frame contexts2294–2297"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_native/f02321.png",
+      "sha256": "570d6bc3b8c4929b45cd22c8e950b2079a77ec35f4d25ec0ece5241d828a6754",
+      "coverage": "native1920x1080 full-frame source semantic checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_native/f02322.png",
+      "sha256": "7b33792fa8f4194c7d3d75e62a606e9b5d0ee3aa792590a212f8b2fbd63e5389",
+      "coverage": "native1920x1080 full-frame source semantic checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_native/f02349.png",
+      "sha256": "beee501a13d2d557fad9788830dbdc5f7b006b867e9bb6139ca7c720c49b3f12",
+      "coverage": "native1920x1080 full-frame source semantic checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_native/f02292.png",
+      "sha256": "3a3843b9dc6e0111ddc6d8fee6add372c7a44db19890e50279ce771861c7a726",
+      "coverage": "native1920x1080 full-frame source semantic checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_native/f02293.png",
+      "sha256": "d622e6925196e0a7a5f4730b5c5968fcef6cf9ec38b1d5842cf5a1039de342c1",
+      "coverage": "native1920x1080 full-frame source semantic checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G005/f00749.png",
+      "sha256": "ca72eb7dbef4db6a464cc2dcb0efe6202a6bcadfa69c4c1a87608f0152bb8aca",
+      "coverage": "native1920x1080 original production semantic/layout checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G005/f00750.png",
+      "sha256": "2f913d82a0aefc8f29959b55926082ea4729159a6f5bc759a953ae6f3f247697",
+      "coverage": "native1920x1080 original production semantic/layout checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G005/f00758.png",
+      "sha256": "e2ae864d36614c234b61558e90cde183cf74387be152f3d3290f656da49beab5",
+      "coverage": "native1920x1080 original production semantic/layout checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G005/f00766.png",
+      "sha256": "d5f8b38a176133e0bd4cd413438cae893ac551989e77d1d4017e5f27f36f5442",
+      "coverage": "native1920x1080 original production semantic/layout checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G006/f00836.png",
+      "sha256": "d5f8b38a176133e0bd4cd413438cae893ac551989e77d1d4017e5f27f36f5442",
+      "coverage": "native1920x1080 original production semantic/layout checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G006/f00837.png",
+      "sha256": "3eb18f54d8e6a1b674958063710f12eeac672847960841828f936d79db628c83",
+      "coverage": "native1920x1080 original production semantic/layout checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G006/f00839.png",
+      "sha256": "79d52c897c37dfe277c4c826f0a5f2f049eccf791f4697df9c990e1129651dab",
+      "coverage": "native1920x1080 original production semantic/layout checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G006/f00848.png",
+      "sha256": "c04d68be665096f5f03e90cac1d209de52d02fef84d2491e0e627a22525b5ab2",
+      "coverage": "native1920x1080 original production semantic/layout checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/original_attempt02/G006/f00857.png",
+      "sha256": "abc75f9261c8be5dacf104477982dbf0df984b2b70854167973db42fe032f3f1",
+      "coverage": "native1920x1080 original production semantic/layout checkpoint"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_boundary_native0.png",
+      "sha256": "4f86e2840ae99f21920d8089d92e69ff3993155de5157a61694ceaf49f756c1f",
+      "coverage": "native1:1 ROIs2291–2294; final zoom then blue firstvisible"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_boundary_native1.png",
+      "sha256": "26f3a02a744cfa33337cb17136d37b2e42bc0a09f1b3afcfd32deda795570055",
+      "coverage": "native1:1 ROIs2320–2323; blue completion then magenta firstvisible"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/table_boundary_native2.png",
+      "sha256": "a9b8e5c9803f3721f853dc6de9d324cb6157e2afea354048f5e2d7053e22a420",
+      "coverage": "INVALID montage: lower2345/2346 panels blank from clipping; reviewed to identify defect, excluded as source absence evidence"
+    }
+  ],
+  "image_coverage_counts": {
+    "source_files_displayed": 21,
+    "source_native_fullframes": 5,
+    "source_native_ROI_sheets": 7,
+    "source_reduced_context_sheets": 9,
+    "source_invalid_sheet_excluded_from_acceptance": 1,
+    "production_native_fullframes_displayed": 9,
+    "total_actual_image_files_displayed": 30,
+    "PNG_numerical_validation_only": {
+      "source": 86,
+      "production": 48,
+      "cold_hashes": 48
+    },
+    "not_everyframe_semantic_view": true
+  },
+  "final_boundaries": {
+    "terminal": true,
+    "written_only": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native3-20261106/QA_batch2_production.json",
+    "no_Git_lock_or_input_mutation": true,
+    "strict_candidates_after_this_source_batch": 562,
+    "new_production_spans_accepted": 2,
+    "source_batch1_rereviewed": false,
+    "audio_actual_listening": 0,
+    "ASR_undetermined": 21,
+    "ASR_potential": 7,
+    "AV": "BLOCKED",
+    "CT_SCAN_COMPLETE": false,
+    "whole_video_PASS": false,
+    "publication_action": "Not performed by independent reviewer"
+  }
+}

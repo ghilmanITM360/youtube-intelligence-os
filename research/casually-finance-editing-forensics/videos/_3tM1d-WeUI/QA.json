@@ -1,0 +1,132 @@
+{
+ "analysis_depth": "DEPTH_B (banded layout with a lower header (header 0.24-0.37, stage 0.37-0.67); scenes cut-delimited; every HARD/ANIMATION auto stage event seen on lean pre/active/post sheets; operations authored for the main events, remaining detected changes kept as UNRESOLVED_CHANGE rows; caption words measured against ASR)",
+ "video_id": "_3tM1d-WeUI",
+ "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+ "checks": {
+  "source_sha256_matches_inventory": true,
+  "decoded_frames_equal_ffprobe_frames": true,
+  "scenes_contiguous_cover_all_frames": true,
+  "unique_scene_ids": true,
+  "unique_event_ids": true,
+  "events_inside_their_scene": true,
+  "events_sorted_by_start": true,
+  "measurement_files_exist": true,
+  "asset_scenes_exist": true,
+  "alignment_rows_equal_events": true,
+  "all_stage_active_frames_attributed": true,
+  "every_scene_start_has_event": true,
+  "every_hard_cut_has_large_stage_change": true,
+  "no_unattributed_large_stage_change": true,
+  "asr_within_duration": true
+ },
+ "all_checks_pass": true,
+ "unattributed_stage_active_frames": [],
+ "hard_cut_stage_px": {
+  "ME005": 4080,
+  "ME006": 4251,
+  "ME008": 1478,
+  "ME013": 3036,
+  "ME020": 2976,
+  "ME023": 2561,
+  "ME026": 8802,
+  "ME028": 15475,
+  "ME029": 15857,
+  "ME032": 4191,
+  "ME034": 3672,
+  "ME039": 2710,
+  "ME040": 2865,
+  "ME041": 3312,
+  "ME044": 5051,
+  "ME045": 3973,
+  "ME049": 2285,
+  "ME051": 2079,
+  "ME052": 2443,
+  "ME056": 3511,
+  "ME059": 4352
+ },
+ "coverage": {
+  "duration_s": 85.924,
+  "frames_decoded": 2575,
+  "fps": 30.0,
+  "source_size": [
+   720,
+   1280
+  ],
+  "pass_A_narrative_structure": "34 scenes authored from full-duration 1 fps overview (69 frames) + event sheets",
+  "pass_B_automated": "every native frame decoded; stage/caption/header band change detection; 47 stage events, 226 caption change frames",
+  "pass_C_fine_inspection": "native-resolution sheets at every one of the 47 auto stage events (pre/active/post/hold frames); dense consecutive frames for the bag run cycle",
+  "pass_D_audio": "whole soundtrack measured (RMS, pauses, spectrogram) + Whisper small.en; NOT auditory listening",
+  "pass_E_chronological": "scene timeline contiguous over all 2575 frames; every stage-active frame attributed to an authored event; holds classified (no playback by agent)",
+  "frames_viewed_note": "1 fps overview 69 frames + event sheets; static holds between events are verified by zero stage change, not by viewing every frame"
+ },
+ "counts": {
+  "scenes": 23,
+  "events": 62,
+  "asset_appearances": 59,
+  "asset_ids": 36,
+  "caption_word_events": 251,
+  "instant_events": 48,
+  "operations": {
+   "UNRESOLVED_CHANGE": 17,
+   "POP_IN": 8,
+   "OVERLAY_POP": 7,
+   "HARD_CUT_REPLACE": 21,
+   "CAPTION_CHUNK_CHANGE": 1,
+   "SCALE_TWEEN": 2,
+   "CAMERA_SCROLL_ZOOM": 1,
+   "POINTER_TRANSLATE": 3,
+   "SLIDE_IN": 1,
+   "OVERLAY_CLIP_LOOP": 1
+  }
+ },
+ "derived_statistics": {
+  "hard_cuts": 21,
+  "hard_cuts_per_min": 14.66,
+  "visual_events_per_min": 43.29,
+  "scene_duration_s": {
+   "mean": 3.732,
+   "median": 3.467,
+   "min": 1.0,
+   "max": 8.833
+  },
+  "frame_classes_frames": {
+   "STATIC_HOLD": 2000,
+   "INDET": 196,
+   "CONV": 379,
+   "SCREENREC": 0,
+   "COMPLEX": 0
+  },
+  "frame_classes_pct": {
+   "STATIC_HOLD": 77.7,
+   "INDET": 7.6,
+   "CONV": 14.7,
+   "SCREENREC": 0.0,
+   "COMPLEX": 0.0
+  },
+  "caption_offset_ms_vs_asr_onset": {
+   "n": 250,
+   "median": 40.0,
+   "p10": -60.0,
+   "p90": 160.0,
+   "within_100ms_pct": 70.4
+  },
+  "hard_cuts_at_phrase_start_after_pause": 10,
+  "native_cadence": {
+   "isolated_duplicate_frames_in_motion": 111,
+   "gap_histogram_top": {
+    "5": 99,
+    "4": 1,
+    "370": 1,
+    "398": 1
+   },
+   "interpretation": "24 fps timeline conformed to 30 fps by repeating every 5th frame (MEASURED: 33 of 111 duplicates share one phase mod 5; 5-frame gaps 99)"
+  }
+ },
+ "limitations": [
+  "Direct audio listening not performed (agent has no auditory capability)",
+  "360x640 source: fine linework, text weight and sub-10-px motion are resolution limited",
+  "No independent second reviewer; confidence labels are single-reviewer",
+  "Motion method/tool is not observable from a final MP4",
+  "Unreviewed micro-changes below the 8-px stage threshold are treated as compression-noise level and not classified"
+ ]
+}

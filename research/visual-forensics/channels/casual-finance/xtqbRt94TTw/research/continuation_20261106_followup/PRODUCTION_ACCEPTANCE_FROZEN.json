@@ -1,0 +1,50 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "freeze_before_render": true,
+  "scope": "Two original production systems, opening0-36 plus bulletin entry301-303; no whole-video reconstruction claim. Existing28-frameattempt02 unchanged.",
+  "source_evidence": [
+    "Published per_state_production_spec_DRAFT_v4#S0001 with native0-36 geometry/lifecycles",
+    "Published integrated_production_interval_index_v8#OPENING_F00001/G001.01/G003.04",
+    "ep0014_native_batch/frames/f00301.png and f00302.png viewed for missing span entry, not EP0014/15 repeated timing review"
+  ],
+  "requirements": {
+    "OPENING_F00001": {
+      "class": "shared_specification_with_interval_specific_parameters",
+      "system": "opening_original_v1",
+      "range": [
+        1,
+        1
+      ],
+      "parameter": "first nonblank roof tip; own geometry not source pixel copy"
+    },
+    "G001.01": {
+      "class": "shared_specification_with_interval_specific_parameters",
+      "system": "opening_original_v1",
+      "range": [
+        2,
+        32
+      ],
+      "parameter": "building rise2-12, eyes12, left card entry6-full23-last32, second card explicitcut32; do not infer hidden source layers"
+    },
+    "G003.04": {
+      "class": "genuinely_new_specification",
+      "system": "bulletin_entry_original_v1",
+      "range": [
+        301,
+        301
+      ],
+      "parameter": "complete bulletin+smiling presenter already at301, no blend/motion-in; nextframe302 holds"
+    }
+  },
+  "acceptance": [
+    "24fps 1920x1080 deterministic frames; opening37frames0..36, bulletin3frames301..303; encoded streams silent",
+    "Frame0 fully background; only tiny roof at1, body rise completes12; open eyes first12 with>=1px separation",
+    "Card1 firstvisible6, fullvisible23, finalposition32; card2 absent31/full32. Stable33-36 exactpixel anchors",
+    "Original fictional labels, modular shapes; source screenshot/card/character/media may not be embedded or loaded; no copied institutional masthead/headlines",
+    "Bulletin and smiling original presenter both full at301; no highlights/date selection301..303; stable301=302=303",
+    "Cold-start subprocess gets only frozen spec JSON+renderer Python+system font, no source pixels or old evidence; render hashes match two executions",
+    "Independent global/whole-video/audio approval not granted by this self-QA; whole-video cold-start package readiness checked separately"
+  ],
+  "failure_policy": "Preserve each attempt output/defect JSON; do not silently overwrite. Any failed scope stays pending until newattempt passes."
+}

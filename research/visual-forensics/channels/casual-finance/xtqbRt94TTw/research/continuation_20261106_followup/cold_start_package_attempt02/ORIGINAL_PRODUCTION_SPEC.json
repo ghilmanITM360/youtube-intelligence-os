@@ -1,0 +1,144 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "status": "ORIGINAL_SPECIFICATION_PENDING_BOUNDED_RENDER",
+  "canvas": [
+    1920,
+    1080
+  ],
+  "fps": 24,
+  "font": "/System/Library/Fonts/Supplemental/Arial.ttf",
+  "palette": {
+    "background": "#f8faf8",
+    "ink": "#253139",
+    "building": "#c1d7c7",
+    "card": "#203c4a",
+    "accent": "#f3c969",
+    "skin": "#bcd9da"
+  },
+  "originality": "New civic hall with rectangular clockless facade and two oval window-eyes; imaginary editorial cards and teal robot presenter. No source screenshots, brand names, headlines, artwork or raw pixels. Source timings transferred as design grammar only.",
+  "opening_original_v1": {
+    "roof_target_y": 580,
+    "base_y": 1080,
+    "building_x": [
+      620,
+      1300
+    ],
+    "building_final_roof_y": 580,
+    "rise_frames": [
+      1,
+      12
+    ],
+    "roof_tip_y_at1": 1076,
+    "eyes_first": 12,
+    "eyes_centers": [
+      [
+        870,
+        775
+      ],
+      [
+        1050,
+        775
+      ]
+    ],
+    "eye_radii": [
+      44,
+      58
+    ],
+    "card1_enter6_full23_settle32": true,
+    "card1_final_box": [
+      110,
+      210,
+      760,
+      390
+    ],
+    "card2_cut_on32": true,
+    "card2_box": [
+      750,
+      90,
+      1460,
+      250
+    ],
+    "card1_text": [
+      "CREDIT CONDITIONS",
+      "A fictional policy example"
+    ],
+    "card2_text": [
+      "EXPECTATIONS UPDATE",
+      "Illustrative bulletin"
+    ]
+  },
+  "bulletin_entry_original_v1": {
+    "page_box": [
+      96,
+      90,
+      1260,
+      1014
+    ],
+    "page_title": "POLICY BULLETIN",
+    "subtitle": "FICTIONAL COUNCIL / ILLUSTRATION ONLY",
+    "date": "Sample cycle A",
+    "body": [
+      "Members review credit conditions.",
+      "A policy decision follows discussion.",
+      "This is an illustrative production test."
+    ],
+    "presenter": {
+      "head_center": [
+        1510,
+        640
+      ],
+      "radius": 155,
+      "body_x": 1510,
+      "smile": true,
+      "pointer_endpoints": [
+        [
+          1400,
+          930
+        ],
+        [
+          1740,
+          835
+        ]
+      ]
+    },
+    "entry_first_frame": 301,
+    "hold_through": 303,
+    "highlight": false,
+    "date_selection": false
+  },
+  "interval_bindings": {
+    "OPENING_F00001": {
+      "class": "shared_specification_with_interval_specific_parameters",
+      "system": "opening_original_v1",
+      "range": [
+        1,
+        1
+      ],
+      "parameter": "first nonblank roof tip; own geometry not source pixel copy"
+    },
+    "G001.01": {
+      "class": "shared_specification_with_interval_specific_parameters",
+      "system": "opening_original_v1",
+      "range": [
+        2,
+        32
+      ],
+      "parameter": "building rise2-12, eyes12, left card entry6-full23-last32, second card explicitcut32; do not infer hidden source layers"
+    },
+    "G003.04": {
+      "class": "genuinely_new_specification",
+      "system": "bulletin_entry_original_v1",
+      "range": [
+        301,
+        301
+      ],
+      "parameter": "complete bulletin+smiling presenter already at301, no blend/motion-in; nextframe302 holds"
+    }
+  },
+  "source_uncertainties": [
+    "Hidden original layer order/authoring curves unavailable; implementation decisions here are original production parameters.",
+    "Original source card2 appears fully32; this test uses explicit cut32 and does not invent easing.",
+    "Extended spans beyond listed3 remainpending; static source equivalence not inferred from shared state IDs."
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "source_review": "opening_macro_native_v1/OUT_opening_macro_native_v1.json",
+  "objects": [
+    {
+      "id": "OPEN_BUILDING",
+      "label": "Federal Reserve building body/roof",
+      "first_visible_frame_or_bracket": {
+        "frame": 1,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "proof": "Reused qualified native0blank/native1roof; no new redisplay."
+      },
+      "first_full_visible_frame_or_bracket": {
+        "frame": null,
+        "status": "NOT_FULLY_VISIBLE_IN_SUPPLIED_WINDOW",
+        "reason": "The lower body/base remains cropped below bottom through36; complete roof becomes visible at6."
+      },
+      "last_substantive_change_frame_or_bracket": {
+        "frame": 12,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "component": "Last visible upward building translation; roof pose thereafter visually holds through36.",
+        "qualification": "Visible substantive movement, not a subpixel equality/curve measurement."
+      },
+      "hold_samples": {
+        "consecutive_frames": [
+          12,
+          36
+        ],
+        "hold_confirmed_by_following_frames": [
+          13,
+          36
+        ],
+        "milestone_frames": [
+          12,
+          13,
+          18,
+          23,
+          31,
+          32,
+          33,
+          36
+        ]
+      },
+      "path": {
+        "type": "UPWARD_TRANSLATION_FROM_BELOW",
+        "description": "Roof tip first enters bottom-center at1. Roof and then columns rise into view without observed rotation/scale change. Early upward steps are larger than the late steps approaching12; the observed travel slows near its final visible placement. After12 the building is a static anchor while the NYT card continues moving.",
+        "reference_geometry": "Roof apex stays near horizontal center (slightly left of exact image center); roof/column proportions remain stable. Lower asset never fully enters.",
+        "source_curve": "UNKNOWN; observed slowing does not identify a source easing preset."
+      },
+      "expression_or_pose": {
+        "description": "Body/roof has no mouth or limbs visible. The independent eye graphic appears at12, detailed separately below.",
+        "crop_vs_morph": "Progressive roof/body visibility is consistent with vertical cropping during translation, not asserted morphing."
+      },
+      "static_anchors": {
+        "within_asset": [
+          "FEDERAL RESERVE lettering within pediment",
+          "roof outline and column spacing"
+        ],
+        "after_settle": "Building stays fixed bottom-center relative to image edges from12 through36."
+      },
+      "readable_text": {
+        "literal": "FEDERAL RESERVE",
+        "fully_readable_by_frame": 5,
+        "first_readability_limit": "Frame4 has partial lower word; full lettering appears at5. Readability is a visual criterion, not OCR/semantic truth."
+      },
+      "confidence": "HIGH_FOR_OBSERVED_ONSET_TRANSLATION_AND_BOUNDED_HOLD",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00003_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00004_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00005_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00006_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00009_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00011_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00012_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00013_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00023_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00033_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+      ],
+      "limitations": [
+        "Building onset1 reuses audited prior observations; the new reads begin3.",
+        "Full building visibility is not achieved in this window. No unseen base geometry is inferred.",
+        "No scale/position tracking or source-easing fit was performed; last substantive change excludes hypothetical subpixel codec variation.",
+        "Hold is certified only within the supplied window, not permanently after36."
+      ]
+    },
+    {
+      "id": "OPEN_BUILDING_EYES",
+      "label": "Two open oval eyes on building columns",
+      "first_visible_frame_or_bracket": {
+        "frame": 12,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "before_frame": 11
+      },
+      "first_full_visible_frame_or_bracket": {
+        "frame": 12,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS"
+      },
+      "last_substantive_change_frame_or_bracket": {
+        "frame": 12,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "change": "Both eyes first appear together in their held geometry."
+      },
+      "hold_samples": {
+        "consecutive_frames": [
+          12,
+          36
+        ],
+        "milestone_frames": [
+          12,
+          13,
+          18,
+          23,
+          31,
+          32,
+          36
+        ]
+      },
+      "path": {
+        "type": "DISCRETE_GRAPHIC_APPEARANCE_THEN_HOLD",
+        "description": "Both complete eyes appear at12 in the column area. At11 that area is already visible but has no eyes, so the eye onset is a separate graphic change rather than merely the roof/body becoming uncropped.",
+        "independent_translation_after_onset": "No visible independent eye movement through36."
+      },
+      "expression_or_pose": {
+        "literal_geometry": "Two tall white ovals with thick black outlines and small black pupils near their centers; pupil heights are slightly asymmetric. Both remain open. No visible blink, mouth or expression replacement is observed after12.",
+        "interpretation_limit": "An attentive/surprised look is an interpretation; geometry is the observation."
+      },
+      "static_anchors": [
+        "Eyes remain fixed relative to central columns and roof after12."
+      ],
+      "readable_text": [],
+      "confidence": "HIGH_FOR_ONSET_AND_VISIBLE_GEOMETRY",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00011_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00012_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00013_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00018_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00023_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+      ],
+      "limitations": [
+        "Source animation layers/rig are unknown.",
+        "No claims about eye motion after36 or speech synchronization."
+      ]
+    },
+    {
+      "id": "OPEN_CARD_NYT",
+      "label": "Left New York Times dark headline card",
+      "first_visible_frame_or_bracket": {
+        "frame": 6,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "before_frame": 5,
+        "appearance": "Tiny dark sliver at extreme top-left."
+      },
+      "first_full_visible_frame_or_bracket": {
+        "frame": 23,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "before_frame": 22,
+        "criterion": "All four card corners/edges inside image;22 still slightly clipped at top-left/left edge."
+      },
+      "last_substantive_change_frame_or_bracket": {
+        "frame": 32,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "component": "Last visible down/right translation;33\u201336 hold at same visible placement."
+      },
+      "hold_samples": {
+        "consecutive_frames": [
+          32,
+          36
+        ],
+        "following_hold_frames": [
+          33,
+          36
+        ]
+      },
+      "path": {
+        "type": "DIAGONAL_DOWN_RIGHT_TRANSLATION",
+        "description": "A dark sliver appears at the top-left6, followed by progressively more tilted card content. The card moves down and right from partly offscreen to fully inside23 and continues to its visible placement32. Its counterclockwise tilt, dimensions, thumbnail and internal text relationships stay visibly fixed during travel. No overshoot or later bounce is visible in3\u201336.",
+        "observed_output_trajectory": "Broadly regular down/right stepping through the later travel; no numerical motion-curve fit or exact speed is claimed.",
+        "relative_anchor": "The building holds after12 while this card keeps moving, supporting separate object movement rather than a common camera move."
+      },
+      "expression_or_pose": {
+        "asset_pose": "Fixed counterclockwise-tilted rectangular news card; static podium thumbnail at right within the card."
+      },
+      "static_anchors": [
+        "Text, source icon and podium thumbnail stay fixed within the moving card.",
+        "Card holds upper-left after32; it is above and left of the building roof."
+      ],
+      "readable_text": {
+        "source_label": "The New York Times",
+        "headline": "Fed Raises Rates in First Major Step by Warsh to Contain Inflation",
+        "body": "The Federal Reserve's first increase to interest rates since July 2023 comes less than two months before the midterm elections.",
+        "relative_time_label": "6 hours ago",
+        "readability_milestones": [
+          {
+            "frame": 9,
+            "observation": "Trailing body-copy fragments visible; full headline not yet exposed."
+          },
+          {
+            "frame": 15,
+            "observation": "Source-label/headline fragments visible but left clipping remains."
+          },
+          {
+            "frame": 22,
+            "observation": "Complete headline and body line starts are legible despite remaining card-border clipping."
+          },
+          {
+            "frame": 23,
+            "observation": "Complete card visible and its text readable."
+          }
+        ],
+        "status": "Literal source-video text, not authenticated news/economic fact."
+      },
+      "confidence": "HIGH_FOR_FIRST_SLIVER_FULL_VISIBILITY_AND_VISIBLE_TRAVEL",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00005_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00006_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00007_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00009_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00015_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00021_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00022_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00023_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00027_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00030_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00033_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00034_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00035_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+      ],
+      "limitations": [
+        "First pixel visibility6 differs from readability and full asset visibility23.",
+        "Readability varies with the visual criterion; no separate exact semantic-readability onset is certified.",
+        "Source easing, software, provider and true color values are unknown."
+      ]
+    },
+    {
+      "id": "OPEN_CARD_CONDUIT",
+      "label": "Upper-center/right Conduit Street Blog dark headline card",
+      "first_visible_frame_or_bracket": {
+        "frame": 32,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "before_frame": 31,
+        "appearance": "Whole card appears inside image in one observed frame."
+      },
+      "first_full_visible_frame_or_bracket": {
+        "frame": 32,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS"
+      },
+      "last_substantive_change_frame_or_bracket": {
+        "frame": 32,
+        "precision": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "change": "Initial complete-card appearance; no visible movement thereafter through36."
+      },
+      "hold_samples": {
+        "consecutive_frames": [
+          32,
+          36
+        ],
+        "following_hold_frames": [
+          33,
+          36
+        ]
+      },
+      "path": {
+        "type": "DISCRETE_ADDITIVE_APPEARANCE_THEN_HOLD",
+        "description": "Upper-center/right area has no second card through31. A complete clockwise-tilted card appears32 above the NYT card and building, then remains fixed through36. No descending path, clipping phase or intervening pose is observed for this second card.",
+        "native_vs_coarse_description": "The native adjacent31/32 pair supports a discrete full-card appearance, refining the earlier coarse description that both cards drop in."
+      },
+      "expression_or_pose": {
+        "asset_pose": "Fixed clockwise tilt with Federal Reserve seal thumbnail at right."
+      },
+      "static_anchors": [
+        "All internal text/seal positions stay fixed.",
+        "Card remains upper-center/right while NYT card sits lower-left; white gap separates it from the building."
+      ],
+      "readable_text": {
+        "source_label": "Conduit Street Blog",
+        "headline": "Fed Raises Interest Rates for First Time Since 2023",
+        "body": "The Federal Reserve raised interest rates by a quarter percentage point this week, its first rate hike in more than three years,...",
+        "relative_time_label": "3 hours ago",
+        "first_readable_frame": 32,
+        "status": "Literal source-video text, not independently authenticated news/economic fact."
+      },
+      "confidence": "HIGH_FOR_FIRST_FULL_APPEARANCE_AND_BOUNDED_HOLD",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00029_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00030_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00033_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00034_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00035_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+      ],
+      "limitations": [
+        "No source mechanism is identified: a layer visibility switch or other instantaneous edit could produce this result.",
+        "No slide-in/drop trajectory is inferred from the coarse first pass.",
+        "Hold ends at the review boundary36, not a certified permanent offset."
+      ]
+    }
+  ],
+  "global_camera": {
+    "ruling": "NO_OBSERVED_COMMON_CAMERA_PAN_ZOOM_OR_ROTATION",
+    "description": "Independent entry paths, stable asset proportions and the fixed building from12 while the NYT card travels support object animation on a static near-white canvas. The second card appears discretely. The background itself has no textured anchor for proving all possible global transformations.",
+    "confidence": "HIGH_FOR_VISIBLE_RELATIVE_ANCHORS; SOURCE_TRANSFORM_STACK_UNKNOWN",
+    "evidence_paths": [
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00006_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00011_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00012_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00013_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00023_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00031_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00032_native.png",
+      "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/opening_macro_native_v1/f00036_native.png"
+    ]
+  },
+  "source_geometry": "session_20261104/opening_source_geometry_measurements_v1.json",
+  "native_agent_views": 34,
+  "independent_root_repeat_views": 5,
+  "reused_prior_native_frames": [
+    0,
+    1,
+    2
+  ],
+  "source_frame_scope": [
+    0,
+    36
+  ],
+  "conflict": "Original both-cards-drop claim is contradicted: Conduit card absent31/full32; no descending path observed. Building center also differs from old x.75 estimate.",
+  "source_layers": "Unknown. Eyes are visibly absent11/present12; an independent source-project layer is not established.",
+  "lower_building_fully_visible": false,
+  "source_easing_preset": "UNKNOWN",
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false
+}

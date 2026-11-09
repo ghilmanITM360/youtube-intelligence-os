@@ -1,0 +1,54 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "input_rows": [
+    "EP0022",
+    "SUB015"
+  ],
+  "native_window": [
+    561,
+    600
+  ],
+  "visual_native_witnesses": [
+    561,
+    565,
+    566,
+    567,
+    570,
+    576,
+    584,
+    585,
+    586,
+    590,
+    596,
+    597,
+    600
+  ],
+  "views": "Native566/567/576/584/596 full-frame witnesses displayed; other samples preserved for checks.",
+  "rulings": {
+    "EP0022": {
+      "kind": "EXACT_SEQUENTIAL_DISAPPEARANCE_AND_LAYOUT_TRANSITION",
+      "presenter_disappearance": 566,
+      "layout_first_change": 567,
+      "layout_last_change": 584,
+      "description": "Presenter/pointer disappears566 while original page header retains96..1325. From567 page fragments shift/duplicate; September page visible by576. At584 two side-by-side clipped pages: July left, September right. This is not simply old page/man sliding away together. Layout/header anchors hold585-600, though highlight and cursor continue."
+    },
+    "SUB015": {
+      "kind": "RECLASSIFIED_CONTINUATION_NOT_PAN_SETTLE",
+      "parent": "EP0022/new_page_highlight_track",
+      "description": "Header/page anchors are already fixed584 and identical585-600 at x76..943 and1002..1867. 586-596 shows continuing yellow reveals and cursor movement, not a settling pan. New page first/second-line highlights were already present584; no independent content onset586."
+    }
+  },
+  "corrections": [
+    "Presenter removed566 before layout begins567",
+    "Two pages remain side by side; right page does not replace entire canvas",
+    "No page pan in586-596; static layout established584"
+  ],
+  "remaining_uncertainty": [
+    "Exact source compositing/wrap/tiling mechanism and layer timing during567-583 not identified; do not assert simple camera pan or unique Bezier curve.",
+    "New right-page highlight track begins during transition; exact first pixel requires a dedicated ROI/track analysis. SUB015 is continuation, not independently timed physical event.",
+    "Header row measurements do not alone prove all-layer static; native witnesses show cursor/highlight changes separately."
+  ],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false
+}

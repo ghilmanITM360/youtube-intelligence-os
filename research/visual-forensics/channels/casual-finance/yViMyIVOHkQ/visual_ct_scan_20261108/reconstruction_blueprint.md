@@ -1,0 +1,434 @@
+# Reconstruction blueprint - original asset system derived from yViMyIVOHkQ
+New ORIGINAL assets and motion only. No source screenshot, footage, logo or character drawing is copied; third-party items (`IMG_*`, `ICON_*`) are replaced with licensed or self-made equivalents and your own data. Timings at 24 fps, 1920x1080.
+
+## Modules (original rebuild; derived from measured patterns)
+1. **Cast and set kit**: a stick-man host with pointer, a green USA map character, a bar-chart character with eyes, a grey-haired woman, a topknot shopper, a rider with a red delivery box and a barista, plus a green chalkboard, a dashboard and a starry sky. Redraw originals and reuse the same assets all video (stick man 80 states, USA character 30).
+2. **Hard-cut scene chain**: 190 hard cuts, median shot 2.3 s (0.46-12.9 s); 181 cuts land on encoder I-frames and 9 do not, so author cuts as true edits and let the encoder place keyframes.
+3. **One-frame pop-in vocabulary**: text, bubbles, arrows and props appear in a single frame with no easing; 348 of 407 change episodes are one frame. Reuse one drawn asset for each prop so repeated pop-ins match pixel for pixel.
+4. **Chart-stack builder**: cut to a chart, then pop in a second chart (+12 frames), a third (+22) and a character at lower left (+35); reuse four times (f4103, f7333, f8545, f11551). Use your own charts and numbers.
+5. **Annotation marks**: red and green ellipses, red arrows and a yellow highlight drawn stepwise (about 770 px per frame) on top of a chart or article; never copy the source.
+6. **Bubble and text swap**: pop in a speech bubble, then swap its text in place (11 swaps, 11,000-20,000 px); a replayed block may reuse the same swap timing.
+7. **Chalkboard host beat**: cut to the host at an empty board, pop in chalk text about 1-2 s later (13 chalkboard cuts); the pointer arm shifts as a POSE change.
+8. **Stepped redraw**: for background fire redraw the flames every fifth frame (4.8 per second); for a foreground character redraw on nearly every frame; do not apply either to held shots.
+9. **Third-party insert slot**: articles, headline cards, a news photograph, charts and a cartoon clip are replaced with licensed or self-made equivalents; never copy the source items.
+10. **Scale moves used sparingly**: a few quick push-ins (x1.18 over 1.0 s, x1.46 over 2.0 s) and one decelerating push-in on the starry sky (about 9 then 8 then 3 percent per second); keep the other 46 measured states locked.
+11. **Dark-ground motif**: glowing handwriting fading in over a starry sky and a speedometer with three warning lights popping in at 22-28 frame intervals; call back the sky near the end.
+12. **Pre-cut overlay**: optionally show the next actor for one frame over the outgoing scene before the hard cut (f5586-f5587, f9175-f9176).
+13. **Codec note**: 24 fps constant frame rate, 215 I-frames about every 2.4 s on average; do not expect interpolated frames or 30 fps pulldown.
+
+
+## Editor timeline (frames)
+- S001 f0-f8 (9 fr): START - Stick man opens on blank canvas
+- S002 f9-f30 (22 fr): POSE - Stick man forearm shifts
+- S003 f31-f55 (25 fr): CUT - USA map character with money bags
+- S004 f56-f73 (18 fr): POP_IN - Banknotes and bag over the east coast
+- S005 f74-f98 (25 fr): CUT - Unemployment rate chart with small USA
+- S006 f99-f121 (23 fr): POP_IN - Green ellipse circles the tooltip
+- S007 f122-f151 (30 fr): CUT - Stick man with pointer at statista chart
+- S008 f152-f183 (32 fr): POSE - Stick man pointer arm raised
+- S009 f184-f209 (26 fr): CUT - FRED GDP line chart
+- S010 f210-f216 (7 fr): POP_IN - USA character peeks over the FRED chart
+- S011 f217-f233 (17 fr): POP_IN - lovely! speech text
+- S012 f234-f260 (27 fr): CUT - Sceptical stick man
+- S013 f261-f317 (57 fr): CUT - USA character with banknotes
+- S014 f318-f338 (21 fr): CUT - Stick man smiling hands on hips
+- S015 f339-f369 (31 fr): CUT - Blue bars with falling red arrow
+- S016 f370-f386 (17 fr): CUT - Angry bar-chart character close-up
+- S017 f387-f397 (11 fr): POP_IN - Im here b!&<# text
+- S018 f398-f413 (16 fr): CUT - Topknot character looks worried
+- S019 f414-f446 (33 fr): POP_IN - Coloured line-chart board
+- S020 f447-f487 (41 fr): CUT - Stick man smiling hands on hips
+- S021 f488-f541 (54 fr): CUT - NBER Business Cycle Dating document
+- S022 f542-f553 (12 fr): CUT - Stick man gesturing
+- S023 f554-f625 (72 fr): CUT - NBER logo with bar character and banknote
+- S024 f626-f652 (27 fr): POP_IN - This looks bad speech bubble
+- S025 f653-f674 (22 fr): TEXT_SWAP - But cant confirm replaces bubble text
+- S026 f675-f791 (117 fr): CUT - NBER Business Cycle Dating document again
+- S027 f792-f826 (35 fr): CUT - Earth character with money bag
+- S028 f827-f854 (28 fr): POP_IN - 2008 numerals and tear
+- S029 f855-f899 (45 fr): CUT - Stick man at board When did it start
+- S030 f900-f942 (43 fr): TEXT_SWAP - Board text becomes December 2007
+- S031 f943-f968 (26 fr): CUT - NBER logo on blank canvas
+- S032 f969-f984 (16 fr): POP_IN - We've got a problem bubble
+- S033 f985-f1016 (32 fr): POP_IN - December 2008 calendar
+- S034 f1017-f1044 (28 fr): CUT - Calendar icon with A full YEAR text
+- S035 f1045-f1077 (33 fr): CUT - Lehman Brothers wordmark
+- S036 f1078-f1095 (18 fr): CUT - Photo of two men carrying Lehman sign
+- S037 f1096-f1147 (52 fr): CUT - Earth on fire with spiral eyes
+- S038 f1148-f1174 (27 fr): CUT - 2001 numerals
+- S039 f1175-f1187 (13 fr): POP_IN - Falling bars character appears
+- S040 f1188-f1210 (23 fr): POP_IN - dot com bubble
+- S041 f1211-f1217 (7 fr): POSE - dot com bubble bursts
+- S042 f1218-f1225 (8 fr): CUT - Stick man at blank chalkboard
+- S043 f1226-f1239 (14 fr): POP_IN - March 2001 on board
+- S044 f1240-f1260 (21 fr): CUT - NBER logo blank canvas
+- S045 f1261-f1273 (13 fr): POP_IN - We've got a problem bubble
+- S046 f1274-f1290 (17 fr): POP_IN - November 2001 calendar
+- S047 f1291-f1318 (28 fr): CUT - Calendar icons EIGHT months
+- S048 f1319-f1335 (17 fr): CUT - Stick man board Are they dum dums
+- S049 f1336-f1367 (32 fr): POP_IN - Strike-through line on board
+- S050 f1368-f1388 (21 fr): TEXT_SWAP - Board text No its the methodology
+- S051 f1389-f1447 (59 fr): CUT - NBER logo centred on blank canvas
+- S052 f1448-f1481 (34 fr): POP_IN - Breaking News newspaper and paper sheets
+- S053 f1482-f1525 (44 fr): POP_IN - ok NOW we can confirm bubble
+- S054 f1526-f1541 (16 fr): CUT - Stick man smiling arm out
+- S055 f1542-f1577 (36 fr): POSE - Stick man mouth and arms change
+- S056 f1578-f1595 (18 fr): CUT - Punch-in to a larger stick man
+- S057 f1596-f1619 (24 fr): POSE - Stick man mouth opens
+- S058 f1620-f1629 (10 fr): POP_IN - Falling bars appear at upper left
+- S059 f1630-f1649 (20 fr): POP_IN - Calendar icon appears at upper right
+- S060 f1650-f1674 (25 fr): CUT - Small USA character on blank canvas
+- S061 f1675-f1688 (14 fr): CUT - USA character face close-up
+- S062 f1689-f1698 (10 fr): POP_IN - oh no text
+- S063 f1699-f1738 (40 fr): CUT - Stick man pointing at unemployment chart
+- S064 f1739-f1772 (34 fr): POSE - Pointer arm extends to the tooltip
+- S065 f1773-f1798 (26 fr): CUT - USA character neutral
+- S066 f1799-f1830 (32 fr): POP_IN - Pretty good speech bubble
+- S067 f1831-f1845 (15 fr): CUT - Stick man at board What is it missing
+- S068 f1846-f1881 (36 fr): POSE - Pointer arm repositioned
+- S069 f1882-f1899 (18 fr): CUT - Three stick men with glasses
+- S070 f1900-f1923 (24 fr): POP_IN - Got an interview next week bubble
+- S071 f1924-f1955 (32 fr): POP_IN - You'll get it this time bubble
+- S072 f1956-f1968 (13 fr): CUT - Smiling stick man centred
+- S073 f1969-f1974 (6 fr): CUT - Grey-haired woman with tower factory and shop
+- S074 f1975-f1991 (17 fr): POP_IN - Curriculum vitae sheets
+- S075 f1992-f2012 (21 fr): POSE - CV sheets shuffle beside the woman
+- S076 f2013-f2031 (19 fr): POP_IN - 4 weeks text
+- S077 f2032-f2070 (39 fr): CUT - Woman sits among CV sheets
+- S078 f2071-f2141 (71 fr): CUT - But since 2020 text with virus icon
+- S079 f2142-f2168 (27 fr): POP_IN - USA map beside 1.6 MILLION crowd
+- S080 f2169-f2179 (11 fr): CUT - Crouched sad figure
+- S081 f2180-f2201 (22 fr): POP_IN - I give up bubble
+- S082 f2202-f2209 (8 fr): POSE - Bubble removed and figure shrinks
+- S083 f2210-f2251 (42 fr): POP_IN - 1.6 million people text
+- S084 f2252-f2271 (20 fr): POP_IN - Red cross over the text and figure
+- S085 f2272-f2292 (21 fr): POP_IN - NOT unemployed text
+- S086 f2293-f2367 (75 fr): CUT+MICRO - Unemployment chart with woman at laptop
+- S087 f2368-f2395 (28 fr): CUT - Smiling stick man
+- S088 f2396-f2439 (44 fr): CUT - FRED labor force participation chart
+- S089 f2440-f2451 (12 fr): POP_IN - Red ellipse at the right end
+- S090 f2452-f2491 (40 fr): POP_IN+MICRO - Red arrow at the legend
+- S091 f2492-f2538 (47 fr): POP_IN - Virus icon over the 2020 dip
+- S092 f2539-f2563 (25 fr): CUT - Unemployment chart with small USA
+- S093 f2564-f2623 (60 fr): POP_IN - Green ellipse round the tooltip
+- S094 f2624-f2645 (22 fr): CUT - Stick man at blank chalkboard
+- S095 f2646-f2677 (32 fr): POP_IN - There's more chalk text
+- S096 f2678-f2701 (24 fr): CUT - Breaking News newspaper
+- S097 f2702-f2743 (42 fr): POP_IN - SO MANY JOBS bubble
+- S098 f2744-f2763 (20 fr): CUT - Stick man neutral
+- S099 f2764-f2772 (9 fr): CUT - Figure lying in bed
+- S100 f2773-f2813 (41 fr): POP_IN - Why even try anymore thought bubble
+- S101 f2814-f2823 (10 fr): CUT - Sad stick man
+- S102 f2824-f2839 (16 fr): POSE - Stick man forearm change
+- S103 f2840-f2845 (6 fr): CUT - Single brown briefcase
+- S104 f2846-f2852 (7 fr): POP_IN - Second briefcase
+- S105 f2853-f2885 (33 fr): POP_IN - Third briefcase
+- S106 f2886-f2903 (18 fr): POP_IN - Not-equal sign
+- S107 f2904-f2950 (47 fr): POP_IN+MICRO - Three dark briefcases
+- S108 f2951-f2991 (41 fr): CUT - Stick man at blank chalkboard
+- S109 f2992-f3033 (42 fr): POP_IN - Whats happening to jobs chalk text
+- S110 f3034-f3074 (41 fr): CUT - Four job vignettes
+- S111 f3075-f3134 (60 fr): TEXT_SWAP - Captions change to gig-work wording
+- S112 f3135-f3206 (72 fr): CUT - USA character says Uh
+- S113 f3207-f3234 (28 fr): POP_IN - Banknote over the east coast
+- S114 f3235-f3290 (56 fr): CUT - Crouched figure with tie
+- S115 f3291-f3313 (23 fr): CUT - Larger figure hand on chin
+- S116 f3314-f3327 (14 fr): POP_IN - Part-time label with small figure
+- S117 f3328-f3366 (39 fr): POP_IN - Second Part-time figure in green apron
+- S118 f3367-f3377 (11 fr): CUT - USA close-up with pixel sunglasses
+- S119 f3378-f3421 (44 fr): POP_IN - oh yeah thats def two new jobs text
+- S120 f3422-f3426 (5 fr): CUT - Number of jobs label on blank canvas
+- S121 f3427-f3434 (8 fr): POP_IN - Green rising arrow starts drawing
+- S122 f3435-f3461 (27 fr): POP_IN - Small USA character appears above the arrow
+- S123 f3462-f3480 (19 fr): CUT - Stick man at board 1/2 + 1/2 somehow 2
+- S124 f3481-f3500 (20 fr): POSE - Pointer arm shifts
+- S125 f3501-f3604 (104 fr): CUT - NBC News headline screenshot with woman at laptop
+- S126 f3605-f3630 (26 fr): CUT - Frowning stick man
+- S127 f3631-f3697 (67 fr): CUT - Dark article card on involuntary part-time workers
+- S128 f3698-f3744 (47 fr): CUT - Grey-haired woman seated among CV sheets
+- S129 f3745-f3807 (63 fr): CUT - Barista figure with cup
+- S130 f3808-f3836 (29 fr): CUT - Barista close-up saying fml
+- S131 f3837-f3852 (16 fr): CUT - Works for one company with woman at laptop
+- S132 f3853-f3869 (17 fr): POP_IN - Red arrow to the right
+- S133 f3870-f3894 (25 fr): POP_IN - Freelances for companies online caption
+- S134 f3895-f3907 (13 fr): CUT - Teaches math full time at a school
+- S135 f3908-f3919 (12 fr): POP_IN - Red arrow to the right
+- S136 f3920-f3945 (26 fr): POP_IN - Takes different subjects at 4 schools caption
+- S137 f3946-f3954 (9 fr): CUT - Head chef at a restaurant
+- S138 f3955-f3962 (8 fr): POP_IN - Red arrow to the right
+- S139 f3963-f3983 (21 fr): POP_IN - Works part-time at 3 restaurants caption
+- S140 f3984-f4001 (18 fr): CUT - USA close-up asking about health coverage
+- S141 f4002-f4026 (25 fr): TEXT_SWAP - Text becomes pfff and eyes roll
+- S142 f4027-f4065 (39 fr): CUT - Banknote pile on blank canvas
+- S143 f4066-f4085 (20 fr): CUT - Parachute with dangling figure
+- S144 f4086-f4102 (17 fr): POSE - Parachute gone and figure tumbles
+- S145 f4103-f4114 (12 fr): CUT - Unemployment chart with tooltip
+- S146 f4115-f4124 (10 fr): POP_IN - Statista job growth chart appears
+- S147 f4125-f4137 (13 fr): POP_IN - FRED labor force chart over the stack
+- S148 f4138-f4163 (26 fr): POP_IN - USA character pops in at lower left
+- S149 f4164-f4174 (11 fr): CUT - Stick man neutral
+- S150 f4175-f4208 (34 fr): CUT - House and tower block
+- S151 f4209-f4231 (23 fr): CUT - Small grey-haired woman standing
+- S152 f4232-f4262 (31 fr): POP_IN - Well people still have homes bubble
+- S153 f4263-f4283 (21 fr): CUT - Stick man neutral
+- S154 f4284-f4302 (19 fr): CUT - Large house with bushes
+- S155 f4303-f4314 (12 fr): POP_IN - Red arrow right of the house
+- S156 f4315-f4346 (32 fr): POP_IN - Framed picture of woman with cat
+- S157 f4347-f4417 (71 fr): CUT - Visual Capitalist inflation text card
+- S158 f4418-f4466 (49 fr): POP_IN - Source The Visual Capitalist caption
+- S159 f4467-f4498 (32 fr): CUT+ZOOM_IN - Figure lying in bed
+- S160 f4499-f4535 (37 fr): POP_IN - Dark creature with red eyes under the bed
+- S161 f4536-f4538 (3 fr): CUT - Blank white canvas
+- S162 f4539-f4608 (70 fr): POP_IN - Headband runner chasing a dollar sign slides in
+- S163 f4609-f4646 (38 fr): CUT - Woman seated with piggy bank
+- S164 f4647-f4685 (39 fr): CUT - Woman with My Finances note
+- S165 f4686-f4715 (30 fr): CUT - Yellow credit card
+- S166 f4716-f4743 (28 fr): CUT - Frowning stick man
+- S167 f4744-f4785 (42 fr): POP_IN - Green card held out
+- S168 f4786-f4818 (33 fr): CUT - Three banknotes
+- S169 f4819-f4835 (17 fr): POP_IN - Rent and tax bills with groceries
+- S170 f4836-f4875 (40 fr): CUT - Shopper says Ill put this on my credit card
+- S171 f4876-f4879 (4 fr): CUT - Single DEBT paper
+- S172 f4880-f4885 (6 fr): POP_IN - Second DEBT paper
+- S173 f4886-f4892 (7 fr): POP_IN - Third DEBT paper
+- S174 f4893-f4913 (21 fr): POP_IN - Fourth larger DEBT paper
+- S175 f4914-f4959 (46 fr): CUT - CNBC New York Fed credit card debt card
+- S176 f4960-f5038 (79 fr): POP_IN - Red ellipse round tops $1.28 trillion
+- S177 f5039-f5074 (36 fr): CUT - Article on new credit card interest rates with man holding card
+- S178 f5075-f5136 (62 fr): POP_IN - Yellow highlight drawn over the APR sentence
+- S179 f5137-f5153 (17 fr): POP_IN - Source Lending Tree caption
+- S180 f5154-f5196 (43 fr): CUT - Rich man in red armchair with top hat and sunglasses
+- S181 f5197-f5242 (46 fr): POP_IN - Breaking News People are spending money
+- S182 f5243-f5273 (31 fr): CUT - Banknote at lower left on blank canvas
+- S183 f5274-f5285 (12 fr): POP_IN - Laughing figure holding banknotes
+- S184 f5286-f5306 (21 fr): POP_IN - Red cross over the figure
+- S185 f5307-f5329 (23 fr): CUT - Banknote at lower left on blank canvas
+- S186 f5330-f5363 (34 fr): POP_IN - Shopper with grocery bag and green card
+- S187 f5364-f5412 (49 fr): CUT - Stick man at board Savings are in trouble too
+- S188 f5413-f5461 (49 fr): CUT - FRED Personal Saving Rate chart
+- S189 f5462-f5521 (60 fr): POP_IN - Green ellipse and red arrow at left of the chart
+- S190 f5522-f5538 (17 fr): POSE - Red arrow moves to the middle of the series
+- S191 f5539-f5585 (47 fr): POSE - Red arrow moves to the 2020 spike
+- S192 f5586-f5586 (1 fr): POP_IN - Stick man appears in front of the chart
+- S193 f5587-f5609 (23 fr): CUT - Stick man alone on white
+- S194 f5610-f5640 (31 fr): POP_IN - Falling bars appear beside the stick man
+- S195 f5641-f5656 (16 fr): CUT - Orange-haired man holding wallet
+- S196 f5657-f5663 (7 fr): POP_IN - DEBT paper beside the man
+- S197 f5664-f5667 (4 fr): POP_IN - More DEBT papers
+- S198 f5668-f5737 (70 fr): POP_IN+MICRO - Fourth DEBT paper beside the man
+- S199 f5738-f5784 (47 fr): CUT - Banknote pile
+- S200 f5785-f5801 (17 fr): CUT - Smiling stick man
+- S201 f5802-f5829 (28 fr): POSE - Stick man mouth opens
+- S202 f5830-f5845 (16 fr): CUT - Figure with brown tie hand on chin
+- S203 f5846-f5868 (23 fr): POP_IN - What does this remind me of thought bubble
+- S204 f5869-f5907 (39 fr): CUT - 2007 label on blank canvas
+- S205 f5908-f5919 (12 fr): POP_IN - Breaking News newspaper
+- S206 f5920-f5974 (55 fr): POP_IN - THINGS GOING SO GOOD bubble
+- S207 f5975-f5993 (19 fr): CUT - 2 minutes later card
+- S208 f5994-f6020 (27 fr): CUT - Earth on fire with spiral eyes
+- S209 f6021-f6060 (40 fr): CUT - Stick man smiling
+- S210 f6061-f6091 (31 fr): CUT - Earth close-up with sweat drop
+- S211 f6092-f6140 (49 fr): POP_IN - oh this is gonna be bad text
+- S212 f6141-f6179 (39 fr): CUT - Stick man at board Recession
+- S213 f6180-f6221 (42 fr): CUT - Conference Board LEI chart
+- S214 f6222-f6286 (65 fr): POP_IN - Stick man peeks in at the lower left
+- S215 f6287-f6400 (114 fr): POP_IN+MICRO - Red down arrow at upper right of the chart
+- S216 f6401-f6419 (19 fr): POP_IN - Red ellipse at the left dip
+- S217 f6420-f6488 (69 fr): POP_IN - Second red ellipse at the 2008 dip
+- S218 f6489-f6523 (35 fr): CUT - Curly-haired woman with My Finances note
+- S219 f6524-f6561 (38 fr): POP_IN - Orange-haired man with wallet appears
+- S220 f6562-f6618 (57 fr): CUT+ZOOM_IN - Blue tower labelled BIG BUSINESS
+- S221 f6619-f6666 (48 fr): CUT - Commercial bankruptcy filings article card
+- S222 f6667-f6697 (31 fr): POP_IN - Red ellipse round 7.1% increase
+- S223 f6698-f6757 (60 fr): POP_IN - Red ellipse round to 24,737
+- S224 f6758-f6785 (28 fr): POP_IN - Yellow highlight drawn on the last sentence
+- S225 f6786-f6819 (34 fr): CUT - Tower block labelled BIG BUSINESS
+- S226 f6820-f6851 (32 fr): POP_IN - help me pls bubble
+- S227 f6852-f6878 (27 fr): POP_IN - Virus icon at upper right
+- S228 f6879-f6919 (41 fr): POP_OUT+ANIM - Bubble and virus removed
+- S229 f6920-f6925 (6 fr): POP_IN - ouch text
+- S230 f6926-f6932 (7 fr): POP_IN - Money bag
+- S231 f6933-f6939 (7 fr): POP_IN - Red arrow right of the bag
+- S232 f6940-f6955 (16 fr): POP_IN - Banknote at the arrow tip
+- S233 f6956-f7010 (55 fr): CUT - Smiling stick man
+- S234 f7011-f7038 (28 fr): CUT - USA character
+- S235 f7039-f7064 (26 fr): POP_IN - Im alright bubble
+- S236 f7065-f7101 (37 fr): CUT - USA close-up saying OR AM I
+- S237 f7102-f7123 (22 fr): CUT - FRED labor force participation chart
+- S238 f7124-f7156 (33 fr): POP_IN - Red arrow appears near the right end
+- S239 f7157-f7180 (24 fr): CUT - Grey-brown briefcase
+- S240 f7181-f7204 (24 fr): POSE - Briefcase becomes tattered and stitched
+- S241 f7205-f7234 (30 fr): CUT - Blue car and equals sign
+- S242 f7235-f7254 (20 fr): CUT - Green card alone
+- S243 f7255-f7259 (5 fr): POP_IN - Grocery bag
+- S244 f7260-f7263 (4 fr): POP_IN - Apple and bananas
+- S245 f7264-f7267 (4 fr): POP_IN - DEBT paper
+- S246 f7268-f7278 (11 fr): POP_IN - RENT paper
+- S247 f7279-f7298 (20 fr): CUT - Curly-haired woman with piggy bank
+- S248 f7299-f7332 (34 fr): POP_IN - DEBT sheets stack up beside the woman
+- S249 f7333-f7344 (12 fr): CUT - Unemployment chart with tooltip
+- S250 f7345-f7354 (10 fr): POP_IN - Statista job growth chart appears
+- S251 f7355-f7367 (13 fr): POP_IN - FRED labor force chart appears
+- S252 f7368-f7393 (26 fr): POP_IN - USA character pops in at lower left
+- S253 f7394-f7419 (26 fr): CUT - Starry night sky
+- S254 f7420-f7463 (44 fr): POP_IN - Star dots gather into a pattern
+- S255 f7464-f7506 (43 fr): TEXT_STREAM - WE ARE IN TROUBLE glowing text
+- S256 f7507-f7530 (24 fr): CUT - Car dashboard speedometer
+- S257 f7531-f7552 (22 fr): POP_IN - Orange engine warning light
+- S258 f7553-f7580 (28 fr): POP_IN - Yellow fuel warning light
+- S259 f7581-f7636 (56 fr): POP_IN - Red brake warning light
+- S260 f7637-f7653 (17 fr): CUT - Smiling stick man
+- S261 f7654-f7695 (42 fr): POSE - Stick man eyes half closed
+- S262 f7696-f7723 (28 fr): CUT - Dashboard with three warning lights
+- S263 f7724-f7779 (56 fr): CUT - Stick man with hands at chin
+- S264 f7780-f7830 (51 fr): CUT - Stick man at blank chalkboard
+- S265 f7831-f7886 (56 fr): POP_IN - Why dont the numbers look bad chalk text
+- S266 f7887-f7936 (50 fr): CUT - Close-up man holding a banknote
+- S267 f7937-f7958 (22 fr): CUT - USA character
+- S268 f7959-f7969 (11 fr): POP_IN - Money bag
+- S269 f7970-f7999 (30 fr): POP_IN - Ruler under the bag
+- S270 f8000-f8031 (32 fr): CUT - Stick man at blank chalkboard
+- S271 f8032-f8051 (20 fr): POP_IN - Old af system from the 40s chalk text
+- S272 f8052-f8060 (9 fr): CUT - Stick man with magnifying glass and black zig-zag arrows
+- S273 f8061-f8070 (10 fr): POP_IN - Black arrow head at lower right
+- S274 f8071-f8122 (52 fr): POP_IN+MICRO - Second black zig-zag arrow at upper right
+- S275 f8123-f8162 (40 fr): CUT - Unemployment chart with tooltip
+- S276 f8163-f8198 (36 fr): CUT - Stick man smiling
+- S277 f8199-f8224 (26 fr): CUT - 1 hour per week text
+- S278 f8225-f8236 (12 fr): POP_IN - Equals sign
+- S279 f8237-f8258 (22 fr): POP_IN - Youve got a job text
+- S280 f8259-f8309 (51 fr): CUT - Red scooter and delivery rider
+- S281 f8310-f8345 (36 fr): CUT - Small delivery rider alone
+- S282 f8346-f8376 (31 fr): POP_IN - Bucket labelled EMPLOYED around the rider
+- S283 f8377-f8425 (49 fr): POP_IN - Man in teal tie enters the bucket
+- S284 f8426-f8461 (36 fr): CUT - FRED GDP chart
+- S285 f8462-f8490 (29 fr): CUT - Green card alone
+- S286 f8491-f8510 (20 fr): POP_IN - Equals sign
+- S287 f8511-f8544 (34 fr): POP_IN - Banknotes after equals sign
+- S288 f8545-f8556 (12 fr): CUT - Unemployment chart with tooltip
+- S289 f8557-f8566 (10 fr): POP_IN - Statista job growth chart appears
+- S290 f8567-f8579 (13 fr): POP_IN - FRED labor force chart appears
+- S291 f8580-f8624 (45 fr): POP_IN - USA character pops in at lower left
+- S292 f8625-f8663 (39 fr): CUT - Close-up girl with magnifying glass on dark vignette
+- S293 f8664-f8699 (36 fr): POP_IN - Faint STUDY and REPORT sheets fade in at left
+- S294 f8700-f8709 (10 fr): CUT - Smiling stick man
+- S295 f8710-f8728 (19 fr): POSE - Stick man forearm shifts
+- S296 f8729-f8741 (13 fr): POSE - Stick man forearm shifts back
+- S297 f8742-f8784 (43 fr): CUT - Goodharts Law scene with USA and NBER logo
+- S298 f8785-f8819 (35 fr): POP_IN - Delivery rider and barista with part-timers bubble
+- S299 f8820-f8854 (35 fr): TEXT_SWAP - Bubble text becomes So Ill just count those in the metric too
+- S300 f8855-f8889 (35 fr): TEXT_SWAP - Bubble text becomes Thats technically more jobs right
+- S301 f8890-f8924 (35 fr): CUT - Grey-haired woman at right edge
+- S302 f8925-f8947 (23 fr): POP_IN - Federal Reserve building
+- S303 f8948-f8983 (36 fr): POP_IN - Line chart board
+- S304 f8984-f9022 (39 fr): CUT - You MUST reach this TARGET with a pillar
+- S305 f9023-f9070 (48 fr): POP_IN - NBER logo and bubble about 1 hour as employed
+- S306 f9071-f9093 (23 fr): CUT - Scooter and delivery rider
+- S307 f9094-f9131 (38 fr): POP_IN - Im not earning a lot bubble
+- S308 f9132-f9147 (16 fr): CUT - USA close-up with banknote at the east coast
+- S309 f9148-f9174 (27 fr): POP_IN - ayy were doing so well text
+- S310 f9175-f9175 (1 fr): POP_IN - Stick man appears in front of the USA close-up
+- S311 f9176-f9197 (22 fr): CUT - Stick man alone one frame later
+- S312 f9198-f9212 (15 fr): POP_IN - Ruler at upper left
+- S313 f9213-f9238 (26 fr): POP_IN - Money bag
+- S314 f9239-f9256 (18 fr): CUT - NBER logo with a ruler
+- S315 f9257-f9312 (56 fr): POP_IN - Ill just use a different measuring stick bubble
+- S316 f9313-f9350 (38 fr): CUT - Rich figure and poor figure with a red double arrow
+- S317 f9351-f9398 (48 fr): POP_IN - Stats say caption
+- S318 f9399-f9449 (51 fr): POP_IN - But reality is caption
+- S319 f9450-f9497 (48 fr): CUT - Delivery rider and barista with part-timers bubble
+- S320 f9498-f9534 (37 fr): TEXT_SWAP - Bubble text becomes So Ill just count those in the metric too
+- S321 f9535-f9590 (56 fr): CUT - Tattered briefcase
+- S322 f9591-f9614 (24 fr): CUT - USA close-up cropped at left
+- S323 f9615-f9663 (49 fr): POP_IN - Were doing good bubble
+- S324 f9664-f9680 (17 fr): CUT - Shopper with grocery bag
+- S325 f9681-f9702 (22 fr): POP_IN - this is stressful text
+- S326 f9703-f9734 (32 fr): CUT - Eyed banknote with red up arrows
+- S327 f9735-f9785 (51 fr): POP_IN - Ruler under the banknote
+- S328 f9786-f9847 (62 fr): CUT - Banknotes per square meter with framed portrait
+- S329 f9848-f9878 (31 fr): CUT - Smiling stick man
+- S330 f9879-f9910 (32 fr): CUT - Stick man at blank chalkboard
+- S331 f9911-f9942 (32 fr): POP_IN - CONSEQUENCES chalk text
+- S332 f9943-f9985 (43 fr): CUT - Goodharts Law scene with USA and NBER logo
+- S333 f9986-f10020 (35 fr): POP_IN - Delivery rider and barista with part-timers bubble
+- S334 f10021-f10055 (35 fr): TEXT_SWAP - Bubble text becomes So Ill just count those in the metric too
+- S335 f10056-f10102 (47 fr): TEXT_SWAP - Bubble text becomes Thats technically more jobs right
+- S336 f10103-f10123 (21 fr): CUT - Smiling stick man
+- S337 f10124-f10147 (24 fr): POP_IN - Ruler at right of the stick man
+- S338 f10148-f10192 (45 fr): POP_IN - Earth with flames at upper left
+- S339 f10193-f10225 (33 fr): CUT - Small tumbling bar character on dark vignette
+- S340 f10226-f10271 (46 fr): CUT - Large angry bar-chart character
+- S341 f10272-f10314 (43 fr): CUT - Stick man
+- S342 f10315-f10345 (31 fr): POSE - Stick man frowns
+- S343 f10346-f10382 (37 fr): CUT - NBER logo on blank canvas
+- S344 f10383-f10416 (34 fr): POP_IN - So uh bubble
+- S345 f10417-f10439 (23 fr): TEXT_SWAP - Bubble text becomes Were kinda screwed
+- S346 f10440-f10469 (30 fr): CUT - You think bubble with burning Earth
+- S347 f10470-f10508 (39 fr): CUT - Stick man
+- S348 f10509-f10564 (56 fr): CUT - Woman at desk laptop
+- S349 f10565-f10579 (15 fr): CUT+ANIM - USA character in front of flames
+- S350 f10580-f10667 (88 fr): POP_IN+ANIM - its fine haha text
+- S351 f10668-f10702 (35 fr): CUT - Man reading newspaper
+- S352 f10703-f10722 (20 fr): POP_IN - More jobs bubble
+- S353 f10723-f10736 (14 fr): CUT - Close-up figure with orange tie
+- S354 f10737-f10763 (27 fr): POP_IN - Delivery rider appears
+- S355 f10764-f10781 (18 fr): CUT - Man reading newspaper
+- S356 f10782-f10804 (23 fr): POP_IN - Better wages bubble
+- S357 f10805-f10812 (8 fr): CUT - Grocery bag
+- S358 f10813-f10817 (5 fr): POP_IN - Equals sign
+- S359 f10818-f10838 (21 fr): POP_IN - Money bag after equals sign
+- S360 f10839-f10856 (18 fr): CUT - Man reading newspaper
+- S361 f10857-f10883 (27 fr): POP_IN - People buy things bubble
+- S362 f10884-f10887 (4 fr): CUT - Green credit card
+- S363 f10888-f10915 (28 fr): POP_IN - DEBT sheet appears beside the card
+- S364 f10916-f10987 (72 fr): CUT - Stick man with magnifying glass
+- S365 f10988-f11056 (69 fr): CUT - Magnifier over Breaking News newspaper
+- S366 f11057-f11103 (47 fr): CUT - Curly-haired woman with piggy bank
+- S367 f11104-f11144 (41 fr): CUT - Three figures with banknote sunglasses and crown
+- S368 f11145-f11183 (39 fr): CUT - Frowning stick man
+- S369 f11184-f11202 (19 fr): CUT - Orange-haired man with wallet
+- S370 f11203-f11240 (38 fr): POP_IN - Something is VERY wrong bubble
+- S371 f11241-f11266 (26 fr): CUT - Starry night sky
+- S372 f11267-f11302 (36 fr): POP_IN - Star dots gather into a pattern
+- S373 f11303-f11322 (20 fr): TEXT_STREAM+ANIM - WE ARE IN TROUBLE glowing text fades in
+- S374 f11323-f11362 (40 fr): POP_IN+ZOOM_IN - Tiny figure with raised hand at left
+- S375 f11363-f11394 (32 fr): POP_IN+ZOOM_IN - Green credit card at lower left
+- S376 f11395-f11430 (36 fr): POP_IN+ZOOM_IN - Piggy bank at lower right
+- S377 f11431-f11462 (32 fr): CUT - Stick man at blank chalkboard
+- S378 f11463-f11516 (54 fr): POP_IN - Take a look at history chalk text
+- S379 f11517-f11550 (34 fr): POSE - Pointer arm shifts
+- S380 f11551-f11562 (12 fr): CUT - Unemployment chart with tooltip
+- S381 f11563-f11572 (10 fr): POP_IN - Statista job growth chart appears
+- S382 f11573-f11598 (26 fr): POP_IN - FRED labor force chart appears
+- S383 f11599-f11628 (30 fr): POP_IN - USA character pops in at lower left
+- S384 f11629-f11680 (52 fr): CUT - Smiling stick man
+- S385 f11681-f11704 (24 fr): POP_IN - SUBSCRIBE text and arms-up pose
+- S386 f11705-f11729 (25 fr): CUT - Stick man with flashlight
+- S387 f11730-f11768 (39 fr): POP_IN - Money bag lit by flashlight beam
+- S388 f11769-f11826 (58 fr): CUT - Smiling stick man
+- S389 f11827-f11848 (22 fr): POP_IN - COMMENT text and arms-up pose
+- S390 f11849-f11875 (27 fr): CUT - Pensive figure with orange tie
+- S391 f11876-f11907 (32 fr): POP_IN - This is what Ive noticed bubble
+- S392 f11908-f11916 (9 fr): CUT - Small topknot figure with raised hand
+- S393 f11917-f11923 (7 fr): POP_IN - Second figure with bow tie
+- S394 f11924-f11932 (9 fr): POP_IN - Elderly bearded man with cane
+- S395 f11933-f11941 (9 fr): POP_IN - Two women holding hands
+- S396 f11942-f11960 (19 fr): POP_IN - Elderly grey-haired woman with cane
+- S397 f11961-f11974 (14 fr): CUT - Man on corded phone
+- S398 f11975-f11999 (25 fr): POP_IN - Red cross over the phone man
+- S399 f12000-f12043 (44 fr): CUT - Smiling stick man
+- S400 f12044-f12084 (41 fr): POSE - Stick man forearm shifts
+- S401 f12085-f12116 (32 fr): POP_OUT - Stick man removed leaving a blank canvas
+- S402 f12117-f12150 (34 fr): CUT - Red-haired figure holding a paper
+- S403 f12151-f12194 (44 fr): CUT - Blonde woman at a glowing computer
+- S404 f12195-f12338 (144 fr): CUT - End card Subscribe for more Casual Finance
+
+## Per-state prompts
+All 404 image and animation prompts with static anchors and nearest-frame QA: `PER_STATE_RECONSTRUCTION_SPECIFICATIONS.json`.
+
+## Acceptance tests
+1. Cut frames equal the ledger exactly (31, 74, 122, 184, 234, 261, 318, 339, 370, 398, 447, 488, 542, 554, 675, 792, 855, 943, 1017, 1045, 1078, 1096, 1148, 1218, 1240, 1291, 1319, 1389, 1526, 1578, 1650, 1675, 1699, 1773, 1831, 1882, 1956, 1969, 2032, 2071, 2169, 2293, 2368, 2396, 2539, 2624, 2678, 2744, 2764, 2814, 2840, 2951, 3034, 3135, 3235, 3291, 3367, 3422, 3462, 3501, 3605, 3631, 3698, 3745, 3808, 3837, 3895, 3946, 3984, 4027, 4066, 4103, 4164, 4175, 4209, 4263, 4284, 4347, 4467, 4536, 4609, 4647, 4686, 4716, 4786, 4836, 4876, 4914, 5039, 5154, 5243, 5307, 5364, 5413, 5587, 5641, 5738, 5785, 5830, 5869, 5975, 5994, 6021, 6061, 6141, 6180, 6489, 6562, 6619, 6786, 6956, 7011, 7065, 7102, 7157, 7205, 7235, 7279, 7333, 7394, 7507, 7637, 7696, 7724, 7780, 7887, 7937, 8000, 8052, 8123, 8163, 8199, 8259, 8310, 8426, 8462, 8545, 8625, 8700, 8742, 8890, 8984, 9071, 9132, 9176, 9239, 9313, 9450, 9535, 9591, 9664, 9703, 9786, 9848, 9879, 9943, 10103, 10193, 10226, 10272, 10346, 10440, 10470, 10509, 10565, 10668, 10723, 10764, 10805, 10839, 10884, 10916, 10988, 11057, 11104, 11145, 11184, 11241, 11431, 11551, 11629, 11705, 11769, 11849, 11908, 11961, 12000, 12117, 12151, 12195).
+2. EXACT onsets match to the frame; BOUND onsets fall inside their window.
+3. Static anchors are pixel-still between events.
+4. Total length 12339 frames.
+5. Sound unspecified (nobody listened); ASR lines are timing reference only.

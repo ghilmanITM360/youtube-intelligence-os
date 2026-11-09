@@ -1,0 +1,444 @@
+{
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "status": "COMPLETE_FOR_SUPPLIED_SCOPE",
+  "review_version": "native_cut_batch01_resume_v2",
+  "sealed_prior_output": {
+    "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/OUT_native_cut_batch01_v1.json",
+    "sha256": "5717e79642984ac9bdd32e625b92dfd573a49bf21918ec7b961075b3dcf2d644",
+    "new_image_reads_in_that_version": 0,
+    "preservation": "Byte-for-byte preserved; this is a separate output."
+  },
+  "source_decode_provenance": {
+    "manifest": "items.json",
+    "frames_manifest_present": false,
+    "declared_method": "Full nonseeking OpenCV0–1171 positionschecked; same declaredRGBpipeline",
+    "independent_action_this_resume": "Verified all12 saved PNG file SHA256 values against supplied requests; inspected their actual successful native image returns. No new source decode/extraction performed.",
+    "source_video_sha_verification": "Root supplied a fresh source SHA verification in the dispatch; this reviewer did not reread the raw video."
+  },
+  "shot_boundary_rule": "YES indicates a discontinuous foreground composition replacement/reframing. An isolated pose/prop/graphic change would not alone establish a new shot; white-background continuity alone decides neither way.",
+  "items": [
+    {
+      "id": "EP0005",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT",
+      "onset_frame_or_bracket": {
+        "frame": 103,
+        "before_frame": 102,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 4.333333333333333
+      },
+      "description": "Cards/percent-disc/Fed-character montage at102 is replaced at103 by a large press-release page left and pointer narrator right; all principal foreground subjects/layout change discontinuously.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00102_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00103_native.png"
+      ],
+      "limitations": [
+        "Only102/103 adjacency is certified; no whole-shot duration, source layers, page authenticity, speech or highlight trajectory is established."
+      ],
+      "review_status": "NATIVE_PAIR_REVIEWED"
+    },
+    {
+      "id": "EP0010",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT",
+      "onset_frame_or_bracket": {
+        "frame": 186,
+        "before_frame": 185,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 7.791666666666667
+      },
+      "description": "Full press-release/narrator layout at185 is replaced at186 by a lone calendar upper-left on white. This is a foreground composition replacement, not just removal of a single overlay while the page remains.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00185_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00186_native.png"
+      ],
+      "limitations": [
+        "Only185/186 boundary is verified; later calendar entrances/whole-shot duration are not reviewed."
+      ],
+      "review_status": "NATIVE_PAIR_REVIEWED"
+    },
+    {
+      "id": "EP0028",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT_AND_CHARACTER_RESTAGING",
+      "onset_frame_or_bracket": {
+        "frame": 721,
+        "before_frame": 720,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 30.083333333333332
+      },
+      "description": "Side-by-side highlighted release pages with a bottom-center skeptical narrator at720 give way at721 to an otherwise white scene with seated/leaning narrator and CF laptop. Document backdrop, prop layout and character placement/pose all change; this exceeds an isolated facial/prop swap.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00720_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00721_native.png"
+      ],
+      "limitations": [
+        "No I-frame/source-codec assertion is made from pixels. Pair verifies the721 boundary only, not prior page movement or later laptop/pose lifecycle."
+      ],
+      "review_status": "NATIVE_PAIR_REVIEWED"
+    },
+    {
+      "id": "EP0033",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT_AND_CHARACTER_RESTAGING",
+      "onset_frame_or_bracket": {
+        "frame": 1065,
+        "before_frame": 1064,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 44.416666666666664
+      },
+      "description": "At1065 a centered standing dictionary-holding narrator replaces the1064 quote/arrows/desk/CF-laptop scene. Principal supporting graphics disappear and actor scale/placement/prop change; this is a new composition rather than a local pose swap within the retained desk scene.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01064_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01065_native.png"
+      ],
+      "limitations": [
+        "Pair proves1065 discontinuity only; no prior quote-highlight motion, dictionary hold duration, audio or source-layer implementation is certified."
+      ],
+      "review_status": "NATIVE_PAIR_REVIEWED"
+    },
+    {
+      "id": "EP0034",
+      "shot_boundary": "YES",
+      "event_type": "HARD_SUBJECT_AND_COMPOSITION_REPLACEMENT",
+      "onset_frame_or_bracket": {
+        "frame": 1087,
+        "before_frame": 1086,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 45.333333333333336
+      },
+      "description": "The entire dictionary-holding human composition at1086 is removed; a distinct eye-bearing rising-arrow graphic is present at right-center1087. Subject identity and staging are replaced, not a pose/prop modification of the retained narrator.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01086_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01087_native.png"
+      ],
+      "limitations": [
+        "White background continuity does not determine source-layer mechanism. The pair certifies1087 replacement, not subsequent arrow/eye animation or source emotion/intent."
+      ],
+      "review_status": "NATIVE_PAIR_REVIEWED"
+    },
+    {
+      "id": "EP0040",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT",
+      "onset_frame_or_bracket": {
+        "frame": 1171,
+        "before_frame": 1170,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 48.833333333333336
+      },
+      "description": "Multi-object percent-disc/speech-bubble/rising-arrow/banknote layout at1170 is removed and replaced at1171 by a lone centered open-arm smiling narrator. Entire foreground composition changes; this is not a local eye or prop substitution.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01170_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01171_native.png"
+      ],
+      "limitations": [
+        "Only1170/1171 boundary is verified; no speech-bubble timing, spoken words, preceding graphic trajectories or whole-shot duration is certified."
+      ],
+      "review_status": "NATIVE_PAIR_REVIEWED"
+    }
+  ],
+  "new_evidence_reads": [
+    {
+      "frame": 102,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00102_native.png",
+      "sha256": "eb4dfa010525db2390f09365cfb6d87ed81f995eca298ef128a1ef395cde858a",
+      "source_pts_s": 4.291666666666667,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0005",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Five dark news cards surround a large orange percent disc; eye-bearing Fed building fills bottom-center and is cropped at bottom. No press-release browser page/pointer narrator composition.",
+      "request_order": 1,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 103,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00103_native.png",
+      "sha256": "6d7bd20e6a6e27cff27c32e2bd74a96ea165ee2e948a802d4a661da68caa5a3b",
+      "source_pts_s": 4.333333333333333,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0005",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Previous cards/disc/building are absent; a large Federal Reserve press-release page occupies left, with September16,2026 header and a smiling black-haired pointer narrator at right. Entire foreground layout is replaced.",
+      "request_order": 2,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 185,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00185_native.png",
+      "sha256": "5cbfe05123faa6e7fe3b2cea554beae6b9fec6e043d10644a119b9d3c14faa73",
+      "source_pts_s": 7.75,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0010",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Large Fed press-release page left with blue-selected date and yellow paragraph highlights; smiling narrator at right points diagonally toward text.",
+      "request_order": 3,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 186,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00186_native.png",
+      "sha256": "51f7a95a5166f7ba4ba8268a1ffa86101c422430295590b3a8aac34dafd07bc8",
+      "source_pts_s": 7.791666666666667,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0010",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Browser page, highlights and narrator all absent; a single outlined red calendar icon sits upper-left on otherwise near-white canvas.",
+      "request_order": 4,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 720,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00720_native.png",
+      "sha256": "98422c2bce496d111c403c2e566e8cd329fae3d1a1129ab50010d3b62e617a18",
+      "source_pts_s": 30.041666666666668,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0028",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Two large Fed press-release pages side by side, July29,2026 left and September16,2026 right, with colored highlights/date selection. A skeptical black-haired narrator overlays lower center, body cropped by bottom.",
+      "request_order": 5,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 721,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f00721_native.png",
+      "sha256": "532b276c9f949317b87fc9a2abcac44f97fe4248bc7f5f441a5f72252bb1be2f",
+      "source_pts_s": 30.083333333333332,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0028",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Both pages/highlights absent. White canvas contains seated/leaning stick narrator left of center with raised hands/straight mouth and a gray open laptop marked CF at right.",
+      "request_order": 6,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 1064,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01064_native.png",
+      "sha256": "c01012c892b181082bcc45dc00a7242949c2c8b1a0dcd08db844c9acc80824f7",
+      "source_pts_s": 44.375,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0033",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Large quote text across upper canvas with yellow emphasis, Source:American Banker below; five red rising arrows at lower-left; glasses-wearing smiling narrator behind desk with CF laptop lower-right.",
+      "request_order": 7,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 1065,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01065_native.png",
+      "sha256": "bed5791ad839ae8591f8ef973f65f1902a9fd271ac8bbe36b557286b23d745c9",
+      "source_pts_s": 44.416666666666664,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0033",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Quote/arrows/desk/laptop are absent; lone full-body centered narrator with closed-eye smile holds an open tan DICTIONARY book bearing Union Jack; otherwise white.",
+      "request_order": 8,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 1086,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01086_native.png",
+      "sha256": "4815702d3c0abe9ab36a9b7fc0d47074374b1a264be95b61c1447a8222361804",
+      "source_pts_s": 45.291666666666664,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0034",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Lone centered full-body closed-eye smiling narrator holding tan DICTIONARY with Union Jack; white background.",
+      "request_order": 9,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 1087,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01087_native.png",
+      "sha256": "7bd356fd0d71b71705923ca1dee473be6f048b4490e61acc2beae914a0604c76",
+      "source_pts_s": 45.333333333333336,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0034",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Dictionary/narrator are absent; five red upward arrows at right-center, overlaid by two large white oval eyes with heavy inward-slanted upper lids/brows and black pupils. Rest of canvas empty white.",
+      "request_order": 10,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 1170,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01170_native.png",
+      "sha256": "5e1c8eafaab88831ad814b714e7f66443487c833d53bb004a842a19415ec75e8",
+      "source_pts_s": 48.791666666666664,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0040",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Eye-bearing orange percent disc at left, speech bubble with censored insult in center, eye-bearing five red up-arrows right, and four green dollar bills across lower canvas. No human narrator.",
+      "request_order": 11,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    },
+    {
+      "frame": 1171,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch01_v1/f01171_native.png",
+      "sha256": "c5ccae48ae4c4a767785443bf8b539278b9c6cd0db9b8e747a3577f588c8650b",
+      "source_pts_s": 48.833333333333336,
+      "scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT_RESUME_EP0040",
+      "tool_call_id": null,
+      "witness": "Actually displayed once at native1920x1080. Disc/bubble/arrows/eyes/bills all absent; a lone full-body black-haired smiling stick narrator stands centered with forearms open on white.",
+      "request_order": 12,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_MANIFEST",
+      "display_count_this_resume": 1,
+      "returned_image_scale": "NATIVE_SOURCE_FULLFRAME1920x1080",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "Exactly one case/two images per functions.exec batch; batch_id and request_order preserve the mapping for the parent session audit."
+    }
+  ],
+  "pending_new_image_paths": [],
+  "pending_case_ids": [],
+  "extra_exact_frames_needed": [],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "coverage": {
+    "completed_cases": 6,
+    "new_successful_native_fullframe_returns": 12,
+    "scaled_image_returns": 0,
+    "source_frames_read": [
+      102,
+      103,
+      185,
+      186,
+      720,
+      721,
+      1064,
+      1065,
+      1086,
+      1087,
+      1170,
+      1171
+    ],
+    "prior_source_or_prototype_redisplays": 0
+  },
+  "usage_at_stop": {
+    "primary_used_percent": 10,
+    "weekly_used_percent": 48,
+    "paid_credits_balance": "0",
+    "start_primary_used_percent": 4,
+    "start_weekly_used_percent": 47,
+    "post_case_usage": [
+      {
+        "case_id": "EP0005",
+        "primary": 4,
+        "weekly": 47
+      },
+      {
+        "case_id": "EP0010",
+        "primary": 6,
+        "weekly": 48
+      },
+      {
+        "case_id": "EP0028",
+        "primary": 7,
+        "weekly": 48
+      },
+      {
+        "case_id": "EP0033",
+        "primary": 8,
+        "weekly": 48
+      },
+      {
+        "case_id": "EP0034",
+        "primary": 9,
+        "weekly": 48
+      },
+      {
+        "case_id": "EP0040",
+        "primary": 10,
+        "weekly": 48
+      }
+    ],
+    "measurement": "Fresh usage after each complete two-native-frame case. Capacity was naturally available; no paid credits or reset used.",
+    "stop_new_reads_policy": "83%primary or weekly near95 per resume dispatch."
+  },
+  "limitations": [
+    "Each of six cases has two actual successful adjacent native fullframe returns; no whole-shot duration or intervening trajectory is certified.",
+    "The view_image return exposes only image_url, not a provider call ID. Call-ID fields remain null rather than fabricated; parent tool-trace audit can supply the actual invocation IDs independently.",
+    "Scene descriptions are literal source-video observations. News/page text, economic truth, identity claims, speech, listening, source layers/software/easing and audiovisual alignment are not independently verified.",
+    "No global shot-count, all-frame/100ms semantic floor, complete visual story, production or CT-completion claim.",
+    "No other task started; no extra extraction or old-output mutation."
+  ]
+}

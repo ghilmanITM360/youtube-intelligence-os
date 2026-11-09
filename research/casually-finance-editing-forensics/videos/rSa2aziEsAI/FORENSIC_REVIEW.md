@@ -1,0 +1,29 @@
+# Forensic review — rSa2aziEsAI "Why Japan's Economy Is Awful"
+
+Status: `VISUAL_FORENSICS_COMPLETE_AT_DEPTH_B_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
+
+## Source (MEASURED)
+`Why Japan's Economy Is Awful - Casual Finance (720p, h264).mp4` (`CFSRC-051`), SHA256 `73641860...d3a70`, H.264/AAC, 720x1280, 30.0 fps, 1815 frames (decoded = ffprobe), 60.591 s. SHORT uploaded 2026-08-26, 280,259 views at the 2026-10-19 snapshot. Identity = title+duration match (not cryptographic). 
+
+## Depth
+DEPTH_B (cut-delimited scenes + all CUT/BIG/ANIMATION and >=0.8%-area SMALL auto events reviewed on compact sheets; sub-0.8% changes such as caption words and thin strokes counted, not individually reviewed). Audio: whole track measured (76 % voiced, 16 pauses >=0.25 s, 11 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-1814.
+
+## Measured statistics
+- 18 scenes (median 3.35 s, p10 2.35, p90 4.52, longest 5.23); 17 hard cuts (16.83/min); 67 events (66.35/min), 45 of them one-frame.
+- Operations: HARD_CUT_REPLACE 17, UNRESOLVED_CHANGE 11, POP_IN 11, OVERLAY_POP 10, PROP_DRIFT 7, STROKE_REVEAL 3, CHARACTER_RISE_IN 3, OVERLAY_CLIP_LOOP 1, CHARACTER_LOOP_ANIMATION 1, CAMERA_SCROLL_ZOOM 1, CAPTION_CHUNK_CHANGE 1, VIDEO_CLIP_INSERT 1.
+- Frame-weighted: static hold 63.4 %, plausibly conventional keyframe/compositing 23.9 %, screen recording 0.0 %, complex continuous animation 10.7 %, change of undetermined method 2.1 %; generated/video-based: none identified.
+- Hard cuts relative to the nearest ASR word onset: median -40 ms (p10 -169, p90 15; negative = visual first; ASR uncertainty ~100 ms).
+- Cadence: irregular duplicates; cadence unresolved.
+
+## Findings
+- **Full-bleed, no headline and no band.** White page with a hand-lettered typed caption in white-with-outline lettering on the dark and photo scenes; the file is 30 fps with 18 isolated duplicate frames in motion (11 gaps of 2 frames, consistent with the 15-picture-per-second clip), so no 24-to-30 fps conform can be tested (`MEASURED`).
+- **Cutting.** 17 hard cuts in 60.6 s (16.8/min), 18 scenes (median 3.35 s, p10 2.35, p90 4.52, longest 5.23 s); 67 table rows (66/min), 11 of them unresolved sub-0.8 %-area changes; 63.4 % of frames are static holds, 23.9 % conventional keyframe motion, 10.7 % continuous character/overlay animation and 2.1 % indeterminate (the meme clip) (`MEASURED`). This was the most-viewed of the five Shorts analysed in this session so far (280,259 views at the 2026-10-19 snapshot); no causal link to the editing is claimed.
+- **Hard cuts sit on the word.** Median 40 ms before the nearest ASR word onset (n = 17, range -240 to +80 ms; 6 lead by more than 100 ms, 11 within ±100 ms, none lag; ASR uncertainty ~100 ms), the tightest cut-to-word timing of the five Shorts analysed in this session (`MEASURED`). At 14 of 17 cuts the frame before has 0 changed px (caption and picture change together); the other three (f227, f456, f1471) follow continuous motion (865, 24935 and 2918 px in the preceding frame).
+- **Two continuous high-motion scenes.** S02 (f109-226, 118 frames) keeps a dark-red vignette, a monster silhouette and the map character moving on every frame (228-2660 px per frame; bright-red area 0 to 824 px over f108-128, to 1532 px by f222) and S05 (f380-455, 76 frames) changes 21-33 k px per frame (37-58 % of the frame) while bond papers multiply into a full-page pile; together they are 10.7 % of all frames and neither can be split into layers from changed-pixel counts (`MEASURED`).
+- **Chart draw-ons and drawn boxes.** The rate-chart line is drawn in over ~34 frames in S03 (ease-in-out `SUPPORTED`, margin 0.039) and over ~41 frames in S07 (linear but `AMBIGUOUS`, margin 0.0035); in S06 red boxes are drawn in two strokes over f458-495 (red area 0 to 152 and 152 to 311 px) while the chart shifts left by ~94 px at the analysis size over f467-485 (cross-correlation; tracker returned no motion) (`MEASURED`).
+- **Pop pacing.** Yen notes pop in at gaps of 4-5 frames (f684/685, 686, 691, 695, 699, 704; about 7 per second), three bank buildings land at f1127, f1137 and f1147 (10-frame gaps) and two gold coins at f646 and f660 (14 frames) (`MEASURED`).
+- **Marks around the narrated phrase.** Red 'that's a horrible deal' appears at f1634 (54.47 s), 0.4 s before ASR 'horrible' (54.86 s); the figure and briefcase pop in 0.3 s before ASR 'chase' (24.42 s); red crosses cover the bag and papers 0.4 s after ASR 'can't' (59.48 s); the final bond papers pop 0.2 s after ASR 'afford' (58.34 s) (`MEASURED`, ASR uncertainty ~100 ms).
+- **A 15-per-second meme clip.** The 'I CAN'T DO THIS RIGHT NOW' clip (f1068-1105) updates every 2 frames (one 3-frame gap): 15 pictures per second on a 30 fps timeline; origin `UNKNOWN`.
+- **Script re-use.** A run of 18 identical ASR words ('so investors dump the yen chase the higher yield in dollars and drive the currency off a cliff') is shared with f_ZCoPKLpyU (uploaded 2026-08-31; this video 2026-08-26), whose cliff scene resembles S09 at low resolution (correlation 0.57; not identical) (`MEASURED`; same cliff asset is a `PLAUSIBLE_HYPOTHESIS`).
+- **Characters over sources.** Source charts and pages (MacroMicro charts, a BOJ-share chart, a CFI page) carry only 4 of 18 scenes (S03, S06, S07, S17); the Japan-map character appears in 7 (S01, S02, S05, S06, S11, S12, S18) and the Bank of Japan building in 5 (S04, S13, S14, S15, S16) (`DIRECTLY_OBSERVED`).
+- **Asides and borrowed assets.** A third-party-looking 3-D green-shirted character with the text 'OH S#!T NOT THE BAD MATH AGAIN!' (S17), a reality-TV meme clip (S12) and the bubbles 'This s#!t is easy!', 'Who decided on this low rate????' and 'Oh wait it was me...' are not in the ASR (`DIRECTLY_OBSERVED`, asset identity and origin `UNKNOWN`).

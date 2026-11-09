@@ -1,0 +1,81 @@
+{
+  "decode_command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-i",
+    "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We\u2019re About to Break It - Casual Finance (1080p, h264).mp4",
+    "-vf",
+    "select='between(n,1441,1445)'",
+    "-fps_mode",
+    "passthrough",
+    "-pix_fmt",
+    "rgb24",
+    "-f",
+    "rawvideo",
+    "pipe:1"
+  ],
+  "method": "Full native decoded RGB24 SHA; adjacent pixel sum abs RGB difference >60, max channel delta. Measurements do not establish semantic or audio status.",
+  "rows": [
+    {
+      "frame": 1441,
+      "pts_fraction": "1442/24",
+      "decoded_RGB_sha256": "f184b246c2b7d6a15ad6547d4098a23f854111d4a70771e180eb9f6cfddaab2e",
+      "changed_gt60": null,
+      "changed_bbox": null,
+      "maximum_channel_delta": null
+    },
+    {
+      "frame": 1442,
+      "pts_fraction": "1443/24",
+      "decoded_RGB_sha256": "0cac1abefe2ada3003004e836a153a67c02c8def62261b3dcaeba7d3abbf8579",
+      "changed_gt60": 578,
+      "changed_bbox": [
+        902,
+        216,
+        925,
+        251
+      ],
+      "maximum_channel_delta": 255
+    },
+    {
+      "frame": 1443,
+      "pts_fraction": "1444/24",
+      "decoded_RGB_sha256": "905913a54e3e10299f7e2c59234bd296d93aea595b50da267560bb416cca53ae",
+      "changed_gt60": 433,
+      "changed_bbox": [
+        924,
+        224,
+        949,
+        252
+      ],
+      "maximum_channel_delta": 255
+    },
+    {
+      "frame": 1444,
+      "pts_fraction": "1445/24",
+      "decoded_RGB_sha256": "b4ca5a69d0948a1bd4236d4d19690e87492dbdab6703934c2edf9029a7f23919",
+      "changed_gt60": 466,
+      "changed_bbox": [
+        945,
+        224,
+        973,
+        251
+      ],
+      "maximum_channel_delta": 255
+    },
+    {
+      "frame": 1445,
+      "pts_fraction": "1446/24",
+      "decoded_RGB_sha256": "edcd3fa5acc270332182a0b1312cd57e3b6dfa21caf5652c96fd73e42bad3d98",
+      "changed_gt60": 449,
+      "changed_bbox": [
+        968,
+        216,
+        987,
+        255
+      ],
+      "maximum_channel_delta": 255
+    }
+  ]
+}

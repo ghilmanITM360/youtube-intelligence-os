@@ -1,0 +1,602 @@
+{
+ "shard": 2,
+ "results": [
+  {
+   "id": "S0073",
+   "own": "Large circular navy agency seal with house glyph, red stars and FHFA monogram on right; left half of white canvas empty.",
+   "match": "MINOR",
+   "fixes": {
+    "readable_text": "FEDERAL HOUSING FINANCE AGENCY (curved on seal); FHFA (red monogram at centre)"
+   }
+  },
+  {
+   "id": "S0074",
+   "own": "Two lender wordmarks stacked at left, one serif teal, one big green-teal, with the seal at right and a tiny handwritten caption below it.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Three elements on white: small serif wordmark with house-in-circle glyph upper left (x~0.11-0.48,y~0.16-0.31); larger green-and-teal rounded wordmark with roof glyph left (x~0.09-0.52,y~0.45-0.64); circular agency seal right (x~0.56-0.90,y~0.15-0.78); tiny handwritten caption under the seal (x~0.82-0.93,y~0.80).",
+    "readable_text": "Fannie Mae; Freddie Mac; FEDERAL HOUSING FINANCE AGENCY; FHFA",
+    "unreadable_text": "Tiny handwritten caption under the seal (~2% height), probably a short sarcastic remark about the names; not reliably legible at this size."
+   },
+   "confidence_cap": "MEDIUM"
+  },
+  {
+   "id": "S0075",
+   "own": "Full stacked-area chart of agency mortgage securities: grey, black and blue bands with gold total line, legend on top, end labels, footnotes.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Stacked area chart screenshot (x~0.11-0.88,y~0.08-0.90): title and legend row top-left, y-axis in trillions, x-axis labels 01-26, grey base band, black middle band, blue top band, gold total line rising to the right; end labels 9.4, 2.8, 3.1, 3.5 at x~0.89; source and note footnotes below left."
+   }
+  },
+  {
+   "id": "S0076",
+   "own": "Same stacked-area chart with a green cartoon country character entering from the left edge, worried eyes, overlapping the axis numbers.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Same chart as S0075 in the same position (x~0.12-0.86,y~0.10-0.85) with a green cartoon country-shaped character entering from the left edge (x~0.0-0.20,y~0.09-0.64), round worried eyes and open mouth, overlapping the y-axis labels."
+   }
+  },
+  {
+   "id": "S0077",
+   "own": "Bare stacked-area mortgage-securities chart, same as before, no characters; legend, end labels 9.4, 2.8, 3.1, 3.5 and footnotes visible.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Chart only (x~0.12-0.86,y~0.10-0.85), identical to S0076 without the character; end labels 9.4, 2.8, 3.1, 3.5 at x~0.87-0.9; footnotes below left.",
+    "continuity": "Same chart position as S0075/S0076; precedes the S0078 money-sack overlay."
+   }
+  },
+  {
+   "id": "S0078",
+   "own": "Chart whose grey and black bands are replaced by tiled money-sack doodles with yellow dollar signs; blue band and gold line remain.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Chart (x~0.12-0.86,y~0.10-0.85) whose grey and black bands are replaced by a tiled pattern of olive money-sack doodles with yellow dollar signs (x~0.16-0.84,y~0.39-0.67); blue band, gold line, axes and end labels remain."
+   }
+  },
+  {
+   "id": "S0079",
+   "own": "Money-sack chart with a smiling curly-haired stick presenter at lower right, one thin arm raised toward the right edge.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Money-sack chart (x~0.12-0.86,y~0.10-0.85) with a smiling stick presenter at lower right: round beige head with curly black hair (x~0.73-0.94,y~0.43-0.67), thin arm reaching to x~0.95, body line running down to the frame bottom."
+   }
+  },
+  {
+   "id": "S0080",
+   "own": "Narrow government web page screenshot centred: blue header with nav, red kicker, blue serif paper title, dense abstract, accessibility icon.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Web-page screenshot centred (x~0.22-0.78,y~0.0-0.94): blue header band with seal glyph, agency name and nav row, white page with red 'Staff Working Papers' kicker, blue serif title, small author line and dense abstract; blue accessibility icon at lower right of page."
+   }
+  },
+  {
+   "id": "S0081",
+   "own": "Zoomed paper title and abstract with one orange highlight, a smiling spiky-haired presenter bust at left holding a thin pointer.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0082",
+   "own": "Medium-zoom paper page with dark-blue rule on top, red kicker, blue serif title, dateline, authors, abstract with two yellow highlighted lines.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0083",
+   "own": "Same paper page with a doodle cluster at left: small house, grey tower block and a red SALE sign.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Same document as S0082 plus one doodle cluster at left (x~0.09-0.34,y~0.33-0.60): small cream house with red roof, grey tower block with window grid, red 'SALE' sign on a post at its lower right."
+   }
+  },
+  {
+   "id": "S0084",
+   "own": "Paper page with two identical house, tower and SALE-sign doodle clusters side by side over the abstract.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Document with two identical doodle clusters (x~0.09-0.34 and x~0.37-0.62, y~0.33-0.60), each a small house, grey tower and red 'SALE' sign; highlight covers two text lines."
+   }
+  },
+  {
+   "id": "S0085",
+   "own": "Paper page with a row of three identical house, tower and SALE-sign clusters across the abstract.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Document with three identical doodle clusters (x~0.09-0.34, 0.37-0.61, 0.64-0.87; y~0.34-0.61), each a house, grey tower and red 'SALE' sign over the abstract; yellow highlight below."
+   }
+  },
+  {
+   "id": "S0086",
+   "own": "Paper page with orange percent badge top left and the lower end of a green rising arrow crossing the text bottom left.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0087",
+   "own": "Blank white canvas with an orange percent badge upper left and a long green zig-zag rising arrow from lower left to upper right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Blank canvas with orange percent badge at upper left (x~0.10-0.24,y~0.06-0.33) and a long green zig-zag rising arrow from lower left (x~0.01,y~0.97) to arrowhead at upper right (x~0.45,y~0.31)."
+   }
+  },
+  {
+   "id": "S0088",
+   "own": "Orange percent badge top left, big green rising arrow across the left, and a weathered brown house at lower right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Orange percent badge upper left (x~0.10-0.24,y~0.06-0.33); thick green zig-zag arrow rising from lower left (x~0.0,y~0.95) to arrowhead at upper right (x~0.66,y~0.09); worn olive-brown house with cracked brown roof at lower right (x~0.68-0.88,y~0.43-0.88).",
+    "readable_text": "",
+    "unreadable_text": "A small handwritten scrawl near the house may appear in later frames; not visible in this tile."
+   },
+   "confidence_cap": "MEDIUM"
+  },
+  {
+   "id": "S0089",
+   "own": "Small government paper web page centred on white, blue header and title, tiny abstract and accessibility icon.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Small web-page screenshot centred (x~0.23-0.77,y~0.0-0.95) with blue header band and nav, red kicker, blue serif title, tiny dense abstract and blue accessibility icon at lower right of the page."
+   }
+  },
+  {
+   "id": "S0090",
+   "own": "Zoomed paper text filling frame with a small yellow highlight and a smiling spiky-haired presenter at right holding a pointer.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0091",
+   "own": "Same small government paper web page centred on white, blue header, blue title, tiny abstract.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Small web-page screenshot centred (x~0.23-0.77,y~0.0-0.95): blue header band and nav, red kicker, blue serif title, tiny dense abstract, blue accessibility icon lower right of page; identical to S0089."
+   }
+  },
+  {
+   "id": "S0092",
+   "own": "Zoomed paper text with a yellow highlight near the upper left and a red-roofed mansion doodle overlapping text at lower right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Zoomed document text fills frame; yellow highlight on 'The supply' (x~0.20-0.28,y~0.20); hand-drawn red-roofed mansion with brown wings and green bushes at lower right (x~0.59-0.77,y~0.54-0.85) overlapping the text; blue accessibility icon at right (x~0.96,y~0.60)."
+   }
+  },
+  {
+   "id": "S0093",
+   "own": "Scrolled paper text with a yellow highlight in the upper right, accessibility icon, a link line, and a large empty lower half.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Scrolled document text across the upper half (x 0-1,y 0-0.45) with yellow highlight on 'These findings' (x~0.64-0.73,y~0.19); blue accessibility icon at right (x~0.945,y~0.55); underlined blue bullet link 'Supplemental data for figures' (x~0.08-0.24,y~0.58); lower half empty."
+   }
+  },
+  {
+   "id": "S0094",
+   "own": "Scrolled paper text with two-line yellow highlight and a large orange percent badge at lower centre.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0095",
+   "own": "Orange percent badge with black padlock at its left, and a frowning messy-haired stick presenter with pointer at lower right.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0096",
+   "own": "Percent badge with padlock at lower centre-left, a green dollar sign at right, and longer yellow highlight above.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0097",
+   "own": "Paper text with long yellow highlight, an orange percent badge and tilted black padlock at lower left, right side empty.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0098",
+   "own": "Badge and padlock at lower left, a small blue house with trees and a grey-haired stick figure scratching its head at right.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0099",
+   "own": "Badge and padlock lower left, green dollar sign lower right and a red jagged rising arrow pointing up toward the right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Scrolled paper text with yellow highlight; orange percent badge (x~0.40,y~0.74) with black padlock at its left (x~0.24-0.34,y~0.6-0.9); green dollar sign at right (x~0.80-0.88,y~0.60-0.90); bold red jagged rising arrow from lower centre-right (x~0.53,y~0.91) to upper right (x~0.90,y~0.43)."
+   }
+  },
+  {
+   "id": "S0100",
+   "own": "Stick man in green tie with neutral face at left, small cream red-roofed house at upper right of him, blank white background.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Stick figure with round beige head, dot eyes, flat mouth and green tie (x~0.20-0.34,y~0.28-1.0) at left-centre; cream house with red roof, two blue windows and brown door (x~0.56-0.79,y~0.24-0.64) to its right."
+   }
+  },
+  {
+   "id": "S0101",
+   "own": "Same green-tie stick man now smiling at left with the cream red-roofed house at right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Smiling stick figure with round beige head and green tie (x~0.22-0.36,y~0.28-1.0) at left-centre; cream house with red roof, blue windows and brown door (x~0.56-0.79,y~0.24-0.64) at right."
+   }
+  },
+  {
+   "id": "S0102",
+   "own": "Single smiling green-tie stick man alone on white, house gone.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Single smiling stick figure with round beige head and green tie (x~0.22-0.37,y~0.28-1.0), left of centre; rest of the canvas empty."
+   }
+  },
+  {
+   "id": "S0103",
+   "own": "Green-tie stick man with a handwritten speech bubble at upper right of him reading maybe later.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Smiling green-tie stick figure (x~0.21-0.37,y~0.28-1.0) with a round speech bubble at upper right (x~0.41-0.66,y~0.10-0.46) containing two lines of handwritten text."
+   }
+  },
+  {
+   "id": "S0104",
+   "own": "Narrow news article capture left of centre: bullet sentences, body line, two crimson bar charts titled Home Relistings Are on the Rise.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "News-article screenshot cropped at top (x~0.08-0.51,y~0.0-0.92): share-icon row, three italic bullet lines, a short paragraph, bold chart title with two side-by-side crimson bar charts, footnote line and a last text line; right half of frame empty.",
+    "readable_text": "Nearly 45,000 sellers who delisted their homes last year relisted them in January; Home Relistings Are on the Rise; Published on March 5th, 2026"
+   }
+  },
+  {
+   "id": "S0105",
+   "own": "Same article with cyan highlight on its first body line and three doodle buildings in the right half: pink house, tower, blue house.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Article as S0104 (x~0.08-0.52) with cyan highlight on the first body line (x~0.08-0.19,y~0.47); at right three doodle buildings: pink house (x~0.58-0.70,y~0.27-0.50), grey tower with annex (x~0.75-0.90,y~0.16-0.49), small blue house (x~0.70-0.84,y~0.54-0.78)."
+   }
+  },
+  {
+   "id": "S0106",
+   "own": "Large dark-grey phone with white rounded app icon centred on screen, held by a thick black curved arm from lower left.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Large dark-grey phone with black bezel (x~0.37-0.64,y~0.0-0.93) with a white rounded-square app icon showing a bold black H-like glyph at screen centre (x~0.50,y~0.5); thick black arm curving in from lower left (x~0.27-0.37,y~0.5-1.0).",
+    "prompt": "A white background with a big dark-grey smartphone filling the left-centre of the frame, a thick black curved arm holding it from the lower left, and a small white rounded-square app icon with a bold black letter-like glyph in the middle of the otherwise blank grey screen."
+   }
+  },
+  {
+   "id": "S0107",
+   "own": "Doubtful stick presenter with messy black hair holds a small phone, handwritten wait caption beside his head.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Stick presenter with round peach head, messy black hair, dot eyes and flat mouth (x~0.20-0.41,y~0.16-0.57), body and hips below; small dark phone in his right hand (x~0.38-0.45,y~0.61-0.80); handwritten 'wait...' at right of head (x~0.43-0.53,y~0.31)."
+   }
+  },
+  {
+   "id": "S0108",
+   "own": "Giant grinning presenter head with spiky hair, phone at bottom, and a two-line handwritten caption to the right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Close-up of presenter: huge round head with spiky black hair, dot eyes and wide open grin with pink tongue (x~0.14-0.46,y~0.09-0.70); small dark phone at lower centre (x~0.31-0.39,y~0.79-1.0); two-line handwritten caption right of head (x~0.48-0.70,y~0.19-0.33)."
+   }
+  },
+  {
+   "id": "S0109",
+   "own": "Same large dark-grey phone and thick black arm, but the screen is empty apart from a tiny dot.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Large dark-grey phone with black bezel (x~0.37-0.64,y~0.0-0.93) with a tiny white speck of an icon at screen centre (x~0.50,y~0.5); thick black arm curving in from lower left."
+   }
+  },
+  {
+   "id": "S0110",
+   "own": "Small worried stick figure with teal tears and wavy mouth, hands near hips, centred on white.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0111",
+   "own": "Huge close-up of the worried face with teal tear dots, spiky hair and wavy mouth, centred.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Close-up worried face: very large round peach head with spiky black hair, teal tear dots at the eyes and wavy frown (x~0.34-0.67,y~0.09-0.75); short neck and shoulder lines at the bottom."
+   }
+  },
+  {
+   "id": "S0112",
+   "own": "Small smiling stick presenter with spiky hair and arms open, full body, centred on white.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Full-body stick presenter with round peach head, spiky black hair and gentle smile (head x~0.41-0.59,y~0.12-0.40), arms open at sides, legs apart, body centred (x~0.42-0.57,y~0.12-0.85)."
+   }
+  },
+  {
+   "id": "S0113",
+   "own": "Small green country character at lower left and a big red jagged arrow sweeping downward to the lower right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Green country-shaped cartoon character with two round upturned eyes and short legs at lower left (x~0.09-0.38,y~0.52-0.91); large red zig-zag arrow descending from top left-centre (x~0.21,y~0.0) to arrowhead at lower right (x~0.89,y~0.90)."
+   }
+  },
+  {
+   "id": "S0114",
+   "own": "Mostly empty line chart for median asking price: title, dollar axis, years, source credits, with the line starting to draw.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Line-chart screenshot (x~0.19-0.81,y~0.05-0.88): title top-left, y-axis labels $300K-$650K, x-axis labels 2019 Jan-2026 Jan, light gridlines, empty plot area at first, source and credit lines bottom-left."
+   }
+  },
+  {
+   "id": "S0115",
+   "own": "Finished blue line chart rising to a 2022 peak then falling, with a smiling presenter at lower centre pointing right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Chart as S0114 (x~0.19-0.81) with completed blue line peaking in early 2022 near $630K then declining to ~$460K; smiling spiky-haired presenter at lower centre (head x~0.46-0.61,y~0.45-0.76) with a thin brown pointer toward the right end."
+   }
+  },
+  {
+   "id": "S0116",
+   "own": "One large tilted yellow luggage-style price tag with red dollar signs and a curved black string on white.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "One tilted yellow price tag with thick black outline, red $$$ marks and a curled black string at upper right (x~0.35-0.70,y~0.13-0.73)."
+   }
+  },
+  {
+   "id": "S0117",
+   "own": "Same yellow price tag split by a white jagged tear across the middle.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Yellow price tag with red dollar marks and curled string, torn across the middle by a diagonal white gap (x~0.29-0.64,y~0.13-0.73)."
+   }
+  },
+  {
+   "id": "S0118",
+   "own": "Narrow article page at left with masthead, serif headline about Austin housing construction, subtitle and a city street photo.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Article screenshot at left (x~0.06-0.49,y~0.0-0.93): serif masthead logo, small topic tags, large serif headline in three lines, short subtitle, author line, share icons and a street-scene photo at the bottom; right half empty.",
+    "readable_text": "Austin's Surge of New Housing Construction Drove Down Rents; Pew (masthead)",
+    "unreadable_text": "Subtitle, author line and tags are tiny; subtitle seems to mention 120,000 new homes from 2015 to 2024."
+   }
+  },
+  {
+   "id": "S0119",
+   "own": "Zoomed article paragraphs on cream about Austin rent reforms, with an astonished presenter, open mouth and hand on chin, at right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Zoomed article body on a cream page (x~0.09-0.81,y~0.0-0.85), three paragraphs; astonished presenter at right (head x~0.71-0.91,y~0.27-0.64) with open oval mouth, hand under chin, body line down; no highlight visible in this tile."
+   }
+  },
+  {
+   "id": "S0120",
+   "own": "Small smiling stick presenter, hands out, standing alone left of centre on white.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Small smiling stick presenter with round peach head, spiky hair and dot eyes (head x~0.37-0.54,y~0.40-0.76), arms out, body to bottom edge; canvas otherwise empty."
+   }
+  },
+  {
+   "id": "S0121",
+   "own": "A crowd of six hand-drawn buildings fills the top; a smiling walking stick presenter stands below the centre.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Six building doodles across the upper half: pink house (x~0.12-0.20), grey tower (x~0.22-0.34), blue house (x~0.20-0.31,y~0.4-0.55), large brick mansion with red roof (x~0.45-0.77,y~0.07-0.52), small cream house and dark tower (x~0.69-0.92,y~0.5-0.78); smiling walking presenter (head x~0.37-0.54,y~0.40-0.78)."
+   }
+  },
+  {
+   "id": "S0122",
+   "own": "Same buildings with the presenter replaced by a tiny hooded stick figure in sunglasses holding green cash.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Same six building doodles in upper half; small grey hooded stick figure with black sunglasses holding green banknotes (x~0.30-0.42,y~0.54-0.88) below the mansion.",
+    "readable_text": "",
+    "unreadable_text": "A speech bubble may appear in later frames; no text visible in this tile."
+   },
+   "confidence_cap": "MEDIUM"
+  },
+  {
+   "id": "S0123",
+   "own": "Green dollar sign and cream house at left, large red jagged arrow descending from the top toward lower right.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0124",
+   "own": "Wide city skyline photo in autumn under cloudy sky, centred, with a small photo credit below it.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Wide skyline photo (x~0.21-0.79,y~0.22-0.78) of a small downtown with trees in autumn colour under a cloudy sky; small handwritten photo-credit caption below its lower-left corner (x~0.21-0.33,y~0.80)."
+   }
+  },
+  {
+   "id": "S0125",
+   "own": "Handwritten place-name title above a skyline photo at right, with a green country mascot at left.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Skyline photo at right (x~0.46-1.0,y~0.22-0.78) with credit caption below and handwritten place-name title above (x~0.55-0.95,y~0.10-0.18); green country mascot with round eyes at left (x~0.10-0.40,y~0.37-0.90).",
+    "unreadable_text": ""
+   }
+  },
+  {
+   "id": "S0126",
+   "own": "A single grey office-tower doodle at upper left on a blank white canvas.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "One grey tower doodle with window grid and annex (x~0.13-0.27,y~0.10-0.40); rest of canvas blank.",
+    "hierarchy": "Lone tower at upper left is the only object; large empty canvas around it sets up the scatter that follows.",
+    "prompt": "A blank white canvas with one small hand-drawn grey office tower, thick black outline, grid of tiny windows and a lower annex block, placed near the upper left corner with generous empty space around it."
+   }
+  },
+  {
+   "id": "S0127",
+   "own": "Two grey tower doodles, one at upper left and one at right, on blank white.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Two grey tower doodles: upper left (x~0.13-0.27,y~0.09-0.40) and right (x~0.79-0.93,y~0.21-0.52).",
+    "hierarchy": "Two similar towers at opposite sides balance each other; eye jumps left to right.",
+    "prompt": "A blank white canvas with two identical hand-drawn grey office towers, thick black outline and small window grids, one near the upper left and one on the right side slightly lower, wide empty gap between them."
+   }
+  },
+  {
+   "id": "S0128",
+   "own": "Three grey tower doodles scattered at upper left, lower centre-left and right on white.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Three grey towers: upper left (x~0.13-0.27,y~0.09-0.40), lower centre-left (x~0.26-0.39,y~0.50-0.80), right (x~0.79-0.93,y~0.21-0.52).",
+    "hierarchy": "Third tower fills the gap in a loose triangle; no tower dominates.",
+    "prompt": "A blank white canvas with three identical hand-drawn grey office towers, thick outlines, small window grids, scattered in a loose triangle: one upper left, one lower centre-left, one on the right."
+   }
+  },
+  {
+   "id": "S0129",
+   "own": "Four scattered grey tower doodles on white, upper left, upper centre-right, lower centre-left and right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Four grey towers: upper left (x~0.13-0.27,y~0.09-0.40), upper centre-right (x~0.40-0.53,y~0.20-0.50), lower centre-left (x~0.26-0.39,y~0.50-0.80), right (x~0.79-0.93,y~0.21-0.52).",
+    "hierarchy": "Evenly scattered identical towers read as a growing count; no focal point.",
+    "prompt": "A blank white canvas with four identical hand-drawn grey office towers, thick black outlines and window grids, scattered in a loose ring with empty space between them."
+   }
+  },
+  {
+   "id": "S0130",
+   "own": "Five scattered identical grey tower doodles fill the white canvas, mostly in left and lower areas.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Five grey towers: upper left (x~0.13-0.27,y~0.10-0.40), centre (x~0.40-0.53,y~0.21-0.51), lower left-centre (x~0.26-0.39,y~0.50-0.80), lower centre-right (x~0.61-0.74,y~0.55-0.85), right (x~0.79-0.93,y~0.21-0.52).",
+    "hierarchy": "Five equal towers form an even scatter; the count, not any one tower, is the point.",
+    "prompt": "A blank white canvas with five identical hand-drawn grey office towers, thick black outlines, small window grids and annex blocks, spread loosely across the frame with similar spacing and no overlap."
+   }
+  },
+  {
+   "id": "S0131",
+   "own": "Ranked metro table with a blue box around the first row and a shocked presenter with open mouth at lower right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Table screenshot (x~0.16-0.73,y~0.0-1.0) with a short bullet line above, header row of long column titles, eight ranked rows, blue outline around the first row (x~0.16-0.23,y~0.4); shocked presenter at right (head x~0.70-0.91,y~0.43-0.84) with open mouth and raised brow, small mouse cursor above his head.",
+    "readable_text": "Shop smart; Hartford, CT; Buffalo, NY; New York, NY; Providence, RI; San Jose, CA; Philadelphia, PA; Boston, MA; Los Angeles, CA; header words Metropolitan Area, Zillow Home Value Index, Heat Index; first-row values $381,760, 4.3 %, 3.9 %, 89.6, -63.0 %"
+   },
+   "confidence_cap": "MEDIUM"
+  },
+  {
+   "id": "S0132",
+   "own": "Early frame of a Hartford median sales price line chart with bold title; only a short teal squiggle drawn on the left.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Line chart screenshot (x~0.21-0.79,y~0.10-0.87): bold two-line title, y-axis labels 200-420, x-axis labels 2016-2025, light gridlines, source credit below; only a short teal line segment around 2016-2018 drawn in this frame.",
+    "readable_text": "Median Sales Price of Existing Single Family Homes, Hartford, CT (Thousands $)",
+    "unreadable_text": "Axis tick labels and source credit are tiny; any later red label or box overlay is not visible in this tile."
+   }
+  },
+  {
+   "id": "S0133",
+   "own": "Falling jagged teal months-supply chart with presenter at lower left holding a pointer toward the axis.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Line chart (x~0.20-0.80,y~0.13-0.82) titled with city name, jagged teal line high in 2016 falling and flattening after 2021; presenter at lower left (head x~0.10-0.21,y~0.57-0.80) with thin pointer toward the x-axis."
+   }
+  },
+  {
+   "id": "S0134",
+   "own": "Same falling teal chart and presenter, with a red-roofed brick mansion doodle at upper right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Chart as S0133 (x~0.20-0.80) and presenter at lower left (x~0.10-0.21); red-roofed mansion with bushes at upper right (x~0.61-0.87,y~0.19-0.46)."
+   }
+  },
+  {
+   "id": "S0135",
+   "own": "Dark news-headline card at top with thumbnail, and green country mascot with round eyes at lower right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Dark rounded news-headline card at top (x~0.10-0.67,y~0.09-0.37) with tiny publisher tag, two-line blue headline, grey summary, timestamp and small house thumbnail at right; green country mascot with round eyes at lower right (x~0.55-0.94,y~0.42-0.90)."
+   }
+  },
+  {
+   "id": "S0136",
+   "own": "Dark headline card at upper left and the green country mascot with round eyes at lower right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Dark rounded headline card at upper left (x~0.10-0.67,y~0.09-0.37) with publisher tag, blue two-line headline, grey summary, timestamp and house thumbnail; green country mascot at lower right (x~0.55-0.93,y~0.42-0.90).",
+    "hierarchy": "Card headline is the first read; mascot is the large green counterweight lower right.",
+    "prompt": "A white canvas with a dark rounded news-headline card at the upper left carrying a small publisher tag, a two-line blue headline about selling a home as loan rates near seven percent, a short grey summary and a small house thumbnail; a big green country-shaped cartoon mascot with round eyes stands at lower right."
+   }
+  },
+  {
+   "id": "S0137",
+   "own": "Dark news card at upper left about selling being harder at seven percent rates, with the green mascot at lower right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Dark rounded headline card at upper left (x~0.10-0.67,y~0.12-0.37) with publisher tag, one-line headline, two-line grey summary, timestamp and for-sale house thumbnail at right; green country mascot lower right (x~0.55-0.93,y~0.42-0.90).",
+    "hierarchy": "Card headline reads first; the green mascot anchors the lower right.",
+    "prompt": "A white canvas with a dark rounded news card at upper left: small publisher tag, a one-line blue headline about selling getting harder as loan rates rise, a short grey summary and a thumbnail of a house with a for-sale sign; a large green country-shaped cartoon mascot with round eyes at lower right."
+   }
+  },
+  {
+   "id": "S0138",
+   "own": "Dark news card at upper left about struggling buyers facing hurdles, with the green mascot at lower right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Dark rounded headline card at upper left (x~0.10-0.67,y~0.09-0.37) with publisher tag, two-line blue headline, grey summary, timestamp and house thumbnail; green country mascot lower right (x~0.55-0.94,y~0.42-0.90).",
+    "hierarchy": "Card headline reads first; mascot balances it at lower right.",
+    "prompt": "A white canvas with a dark rounded news card at upper left: small publisher tag, a two-line blue headline about homebuyers facing new hurdles as loan rates climb, grey summary text, timestamp and a small house thumbnail; a big green country-shaped cartoon mascot with round eyes at lower right."
+   }
+  },
+  {
+   "id": "S0139",
+   "own": "Smaller dark news card at upper left about a stagnant housing market, with the green mascot at lower right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Dark rounded headline card at upper left (x~0.10-0.67,y~0.09-0.31) with publisher tag, two-line blue headline, two-line grey summary, timestamp and dark house thumbnail; green country mascot lower right (x~0.55-0.93,y~0.42-0.90).",
+    "hierarchy": "Card headline reads first; mascot anchors the lower right.",
+    "prompt": "A white canvas with a dark rounded news card at upper left: small publisher tag, a two-line blue headline about a stagnant housing market facing higher loan rates, short grey summary, timestamp and a dark house thumbnail; a large green country-shaped cartoon mascot with round eyes at lower right."
+   }
+  },
+  {
+   "id": "S0140",
+   "own": "Two line charts side by side, Hartford rising and Austin peaking then falling, with a smiling running presenter between them.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0141",
+   "own": "Same two charts with a small cluster of three building doodles under the left chart and no presenter.",
+   "match": "MINOR",
+   "fixes": {
+    "hierarchy": "Charts dominate; the small pastel building cluster at lower left is the new element that draws the eye second."
+   }
+  },
+  {
+   "id": "S0142",
+   "own": "Two charts with lower position, thick cyan Austin line, two building clusters below, and an upside-down presenter head at top.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Hartford chart at left (x~0.09-0.52,y~0.07-0.62) and Austin chart at right (x~0.55-0.95,y~0.45-0.85) with a thick cyan line; two clusters of three building doodles (pink house, tower, blue house) at lower left (x~0.15-0.28 and x~0.33-0.45,y~0.62-0.90); upside-down presenter head at top (x~0.66-0.83,y~0.0-0.28).",
+    "hierarchy": "Thick cyan line and the upside-down head draw the eye first; the building clusters read second."
+   }
+  },
+  {
+   "id": "S0143",
+   "own": "Curly grey-haired stick figure with hand on head stands at right beside a small blue castle-like house with trees.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Grey curly-haired stick figure, head resting on raised hand (head x~0.70-0.87,y~0.13-0.45), body and legs to the lower area; small blue house with cupola and green trees at left of it (x~0.48-0.70,y~0.33-0.52)."
+   }
+  },
+  {
+   "id": "S0144",
+   "own": "Tall worried stick figure with a brown swoosh ponytail, pale head, raised brows and small flat mouth, left of centre.",
+   "match": "OK",
+   "fixes": {}
+  },
+  {
+   "id": "S0145",
+   "own": "Worried ponytail stick figure at left and a hand-drawn clock with both hands near twelve and three at right.",
+   "match": "MINOR",
+   "fixes": {
+    "objects": "Ponytail stick figure at left (head x~0.18-0.37,y~0.12-0.50, swoosh hair above) with worried face; hand-drawn wall clock at right of it (x~0.54-0.82,y~0.19-0.72) with numerals 1-12, short hand up toward twelve and long hand toward three.",
+    "readable_text": "12 1 2 3 4 5 6 7 8 9 10 11 (clock numerals)"
+   }
+  }
+ ]
+}

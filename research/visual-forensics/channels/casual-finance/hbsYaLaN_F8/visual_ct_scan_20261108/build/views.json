@@ -1,0 +1,18 @@
+{
+ "native_windows": [
+  "winA rows: f2468-f2470 (thought-bubble figure to TV clip, f2469), f2518-f2524 (credit caption and clip motion), f2564-f2566 (clip to couch clip, f2565), f2616-f2618 (clip to Bitcoin moon, f2617)",
+  "winB rows: f7870-f7872, f7926-f7928, f7936-f7938 (cut to forest, f7937), f7946-f7948, f7974-f7976, f7998-f8001 (cut to detective, f8000), f8064-f8066 (cut to CoinGecko logo, f8066)",
+  "winC rows: f7957-f7966 (pan from forest to casino hut), f9471-f9472 (caption cleared, f9472), f11883-f11885 (poster to press photo, f11884), f11921-f11923 (photo to arena, f11923), f10565-f10567 and f10594-f10596 (Clever in theory. to Disastrous in practice., f10596)",
+  "winD rows: f12727-f12729 (Sequoia page to dark card, f12728), f12852-f12853 (dark card to FTX logo, f12853)",
+  "winE rows: f16321-f16323 (chalkboard to It's the: card, f16322), f16799-f16801 (end card to black, f16800)",
+  "winF rows: f5103-f5105, f5125-f5126, f5150-f5151, f5175-f5176, f5205-f5206, f5230-f5231, f5242-f5244 (doodle scroll morphing into the 3D banner, then the casino cut at f5244)",
+  "winG rows: f6378-f6380 (f6379), f6494-f6496 (f6495), f10563-f10565 (f10564), f11522-f11524 (f11523), f12927-f12929 (f12928); all five non-I cuts are one-frame replacements"
+ ],
+ "stepped_sheets": [
+  "overview 1 fps (562 tiles, 32 sheets, all viewed)",
+  "episode change-crop sheets epc_01-33 (257 episodes: context frame with changed-pixel bbox, crop at start-1, crop at start; all 33 sheets viewed)",
+  "state_rep (223 states, 13 sheets, all viewed)"
+ ],
+ "episode_view": "per episode: context frame at its first changed frame with the changed-pixel bbox, plus bbox crops at start-1 and start (adjacent decoded frames); every multi-frame episode and every frame of 8,000 changed px or more was checked against frame_metrics to place state boundaries (cuts sitting on the last or a later frame of a multi-frame episode were found at f81, f2469, f2565, f2617, f2884, f5244, f7937, f8000, f10321, f10564, f11884, f12728 and f16322; 223 states were placed in total)",
+ "text_gate": "PARTIAL_OPEN_LIMITATION (headings, labels, quotes, card text and logo names read from decoded frames; small body text inside articles, charts, search results and UI screenshots flagged not transcribed or quoted only in part; people in photographs and clips not identified beyond on-screen names)"
+}

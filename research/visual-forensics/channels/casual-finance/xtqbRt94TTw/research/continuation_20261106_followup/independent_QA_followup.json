@@ -1,0 +1,330 @@
+{
+  "schema": "YIOS_INDEPENDENT_BOUNDED_QA_FOLLOWUP_V1",
+  "created_utc": "2026-11-06T03:43:43.383597+00:00",
+  "reviewer": "/root/video006_bounded_qa",
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "status": "PASS_BOUNDED_AFTER_SEPARATE_PRODUCTION_REPAIR",
+  "scope": {
+    "native": "Nine rulings in NATIVE_BATCH_449_550.json and ledger v29 to v30 only; native evidence445-550, cursor refinement430-462. Existing EP0014/EP0015 and earlier accepted source rulings not re-adjudicated.",
+    "production": [
+      "OPENING_F00001",
+      "G001.01",
+      "G003.04"
+    ],
+    "production_support_frames": [
+      "opening0-36",
+      "bulletin301-303"
+    ],
+    "publication": "publication_preflight.py behavior and regression tests, published baseline5e4979705f871c37f0ab3d2a52dce44c9c90e876 only; no final candidate commit/tree certification",
+    "excluded": [
+      "Root later561-650 native work and ledgersv31 onward",
+      "Earlier independent reports and accepted source scopes",
+      "Other extended-span requirements",
+      "Whole-video visual fidelity or cold-start approval",
+      "Audio listening and audiovisual sync"
+    ]
+  },
+  "resources": {
+    "fresh_usage_at_review_start_percent": {
+      "five_hour": 18,
+      "weekly": 19
+    },
+    "paid_credits_used": 0,
+    "new_agents": 0
+  },
+  "source": {
+    "path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We’re About to Break It - Casual Finance (1080p, h264).mp4",
+    "sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+    "independently_rehashed": true,
+    "independent_pts_check": "ffprobe first551 video-frame timestamps equal512*(n+1) ticks at1/12288; sourcePTS=(n+1)/24, including all445-550."
+  },
+  "gates": {
+    "native_rulings": {
+      "status": "PASS_BOUNDED",
+      "exact_timing_rows": [
+        "SUB010",
+        "EP0018"
+      ],
+      "continuation_rows": [
+        "SUB011",
+        "EP0019",
+        "SUB012",
+        "EP0020",
+        "SUB013",
+        "EP0021",
+        "SUB014"
+      ],
+      "observations": {
+        "SUB010": "Arrow absent448 in viewed ROI, appears449 near global1276,752; moves left/down450-460. Phase end460 is not a global cursor stop.",
+        "EP0018": "Pointer/pointing arm switch at461; lower yellow text absent461, first present462. Sequential onsets, not simultaneous.",
+        "SUB011": "Same first-line reveal continues463-487; no independent onset463.",
+        "EP0019": "Same first-line reveal through Neel Kashkari; consecutive487-504 crop supports hand/email488-489 to arrow490.",
+        "SUB012": "First-line right edge reaches867 at501; second line begins502 at144-161, not492.",
+        "EP0020": "Second-line reveal continues through514-515; sampled overview plus every-frame measurements support continuation, not a fresh onset.",
+        "SUB013": "Same second-line reveal advances517-537; visible pose is held in sampled overview, no independently established new onset517.",
+        "EP0021": "Second-line edge reaches867 at541, completing the two lower lines within this batch; cursor continues.",
+        "SUB014": "After highlight completion541, cursor tail continues through547. ROI difference threshold>60 has zero changed pixels548-550; this is bounded threshold evidence, not a global lifetime/offset claim."
+      },
+      "independent_measurement_checks": {
+        "native_ROI_records": 106,
+        "native_ROI_pipeline": "ffmpeg select445-550, crop1640:510:100:550 before RGB24 conversion; all106 raw SHA256 values, previous RGB-sum>60 change counts/bboxes, and pointer-region counts reproduced in memory with zero mismatches.",
+        "lower_line_records": 106,
+        "lower_line_pipeline": "ffmpeg select445-550,crop800:110:100:850 before RGB24; yellowR>200,G>180,B<120; local rows30:48 and52:72; x+100. All106 line1/line2 pixel counts and x-extents reproduced with zero mismatches.",
+        "pipeline_correction": "An initial independent check reused the larger1640x510 conversion and found small pixel-count differences. Exact800x110 pipeline then reproduced every record. Full-frame RGB conversion also reproduced these records. Conversion order/width affects threshold-edge RGB rounding; no semantic contradiction.",
+        "yellow_edges": "No backward x-right progression in either line; first462/502, first right-edge867 at501/541 respectively.",
+        "semantics_limit": "Every-frame numerical reproduction does not constitute every-frame semantic image review; individual native JPEG and contact-sheet views are enumerated below."
+      }
+    },
+    "ledger_delta": {
+      "status": "PASS",
+      "baseline_path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/visual_event_ledger_v29.csv",
+      "reviewed_path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/visual_event_ledger_v30.csv",
+      "baseline_sha256": "6291e66a59286784257189bfff45c391ef5c985e08317e353777c22ffaa57c57",
+      "rows_before": 948,
+      "rows_after": 948,
+      "unique_ids_before": 948,
+      "unique_ids_after": 948,
+      "exact_changed_ids": [
+        "SUB010",
+        "EP0018",
+        "SUB011",
+        "EP0019",
+        "SUB012",
+        "EP0020",
+        "SUB013",
+        "EP0021",
+        "SUB014"
+      ],
+      "measured_candidate_only_before": 627,
+      "measured_candidate_only_after": 618,
+      "exact_rows_added": 2,
+      "continuation_rows_added": 7,
+      "other_rows_unchanged": true,
+      "source_frame_windows_and_cut_claim_fields_unchanged": true,
+      "count_qualification": "Nine row adjudications are not nine new independent physical events; seven are continuation fragments. Two other differently labeled candidate-retained rows remain outside the627/618 category."
+    },
+    "production_attempt01": {
+      "status": "FAIL_PRESERVED",
+      "defect_id": "QA-FOLLOWUP-001",
+      "severity": "P1_BOUND_MILESTONE",
+      "requirement": "G001.01 card1 first full visibility23",
+      "observed": "Original render PNG13 is clipped; PNG14 is already fully inside viewport. Renderer old y=-178+388*(n-6)/17 crosses0 at14. These are original render images, not source scene views.",
+      "files": [
+        "render_original.py",
+        "production_attempt01/opening/f00013.png",
+        "production_attempt01/opening/f00014.png",
+        "production_attempt01/DEFECTS.json"
+      ],
+      "initial_self_check_limitation": "Historical12checks all true did not test firstfull23 and were insufficient for frozen acceptance.",
+      "resolution": "Separate render_original_attempt02.py / production_attempt02; attempt01 preserved.",
+      "separate_tooling_issue": "NumPybool JSON serialization failure retained in validation_tooling_failure.json; distinct from visual milestone failure."
+    },
+    "production_attempt02": {
+      "status": "PASS_BOUNDED",
+      "frozen_criteria_sha256": "9302e5b127fbe17345154d1e6e957ec6cda2b5438702251c4d96119b01c304eb",
+      "frozen_criteria_unchanged_during_review": true,
+      "renderer_delta": "Only card1 y expression changes: y6=-178 to y23=0, then y32=210; x settlement and other systems unchanged.",
+      "requirements": {
+        "OPENING_F00001": "PASS: frame0 background; first tiny roof1 bbox950,1076..970,1079.",
+        "G001.01": "PASS: building rise completed12, eyes absent0-11/present12 with spatial separation; card1 absent5/present6, clipped through22, first complete181-pixel height23; card1 finaly210..390 at32; card2 absent31/full32; exact full-frame hold32-36.",
+        "G003.04": "PASS: original bulletin and smiling teal presenter already composed301; no highlighted body or date selection in viewed original image; exact identical301/302/303."
+      },
+      "independent_card_column_check": {
+        "x": 200,
+        "visible_card_pixel_rows": {
+          "5": 0,
+          "6": 3,
+          "13": 76,
+          "14": 87,
+          "22": 171,
+          "23": 181,
+          "31": 181,
+          "32": 181
+        },
+        "first_full_height_frame": 23,
+        "final_y_range_frame32": [
+          210,
+          390
+        ]
+      },
+      "self_validation_receipt": "PRODUCTION_VALIDATION_attempt02_reconciled.json15checksPASS, corroborated by independent pixel/hash/stream checks and enumerated image views.",
+      "preserved_validator_issue": "production_attempt02/validation_false_positive.json records erroneous touchingy0-is-clipped detector; correct firstfull includesy0. No render or frozen-criteria changes for this detector repair.",
+      "encoded_streams": {
+        "opening": {
+          "width": 1920,
+          "height": 1080,
+          "fps": "24/1",
+          "frames": 37,
+          "audio_streams": 0
+        },
+        "bulletin": {
+          "width": 1920,
+          "height": 1080,
+          "fps": "24/1",
+          "frames": 3,
+          "audio_streams": 0
+        }
+      },
+      "art_and_assets": "Reviewed code/spec use procedural modular shapes, original fictional text, and system font. No source pixels/media or source institutional masthead/headline are loaded by renderer. This does not claim source-art fidelity."
+    },
+    "bounded_cold_start": {
+      "status": "PASS_ON_REVIEWED_EXECUTION_EVIDENCE",
+      "attempt": "cold_start_package_attempt02",
+      "packaged_spec_and_renderer_byte_equal": true,
+      "original_frames": 40,
+      "manifest_hash_mismatches": 0,
+      "cold_frame_hash_mismatches": 0,
+      "recorded_subprocess_exit": 0,
+      "audit_unique_open_paths": 99,
+      "unexpected_source_or_old_evidence_paths": 0,
+      "audit_review": "run_cold.py, static renderer/spec, exit receipt and full opened-path list reviewed; source/evidence accesses outside package absent. Python audit log is not an OS-wide filesystem trace.",
+      "independent_execution_limitation": "Reviewer did not re-run output-producing renderer because only the new QA report may be written; independently compared all40 existing outputs and audited the recorded separate subprocess.",
+      "whole_video_readiness": "PENDING"
+    },
+    "publication_preflight": {
+      "status": "PASS_BOUNDED_WITH_DOCUMENTED_INHERITED_MEDIA",
+      "regression_tests_run": 9,
+      "regression_failures": 0,
+      "additional_in_memory_check_tree_cases": [
+        "new JPG rejected",
+        "JPEG bytes renamed.json rejected",
+        "symlink mode rejected",
+        "submodule mode rejected",
+        "changed path outsideVideo006 rejected"
+      ],
+      "additional_case_failures": 0,
+      "actual_published_baseline_tree_check": {
+        "parent_and_tree": "5e4979705f871c37f0ab3d2a52dce44c9c90e876",
+        "scoped_blobs_checked": 615,
+        "status": "PASS_WITH_DOCUMENTED_INHERITED_MEDIA",
+        "violations": 0,
+        "inherited_JPGs": 4,
+        "all_four_present_and_exact_parent_byte_pins_match": true
+      },
+      "known_media": "Four inherited JPGs in MEDIA_DEFECT.json remain documented violations; PASS does not certify a media-clean historical tree. New or modified media must reject.",
+      "publication_limitation": "No candidate Git tree was created or certified by reviewer. Root must run gate on the actual final candidate immediately before publication."
+    }
+  },
+  "actual_images_viewed": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt01/opening_contact.jpg",
+      "sha256": "4d6847ae4a478c8a5870a0ab96011f8a4602072f6e4514c61e50c452e7ddb78d"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt01/bulletin/f00301.png",
+      "sha256": "3de73da052f63a159580ca0e32a981272668b1617bd537984971447cea9587ac"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/onset_448_463.jpg",
+      "sha256": "9fd6d43ebc860e5d512f62bcdbf2f07fba6310cb8bf2ec1b4e3f0eab115e358a"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/wrap_487_504.jpg",
+      "sha256": "13eea7540b27f772488ee0c5567af389a82469781e3356c764dd388786a6e034"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/finish_537_550.jpg",
+      "sha256": "9a6649fcf910fd191d9e0ef5ef5ed6be3f2d9cc19f0e96f583f06e7771c4a1e8"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt01/opening/f00013.png",
+      "sha256": "8c8f5a9c18f3ddeb09cd72215af99a6551b1147b55c0ec995786b1fb78e61ae2"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt01/opening/f00014.png",
+      "sha256": "63cb687ace4bf9a26e838d19d5b372448b154f5cbcdbbd60b184867d9066353d"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/native_445_550/f00448.jpg",
+      "sha256": "684e58873f37c40b3d93fc874b8180e914f623fad8d1a11b89d1a108e1a65fda"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/native_445_550/f00449.jpg",
+      "sha256": "11f4e63fb8e051124f4574e4307ac90f2a4acd2e9b6ad80dd125665e998894be"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/native_445_550/f00460.jpg",
+      "sha256": "fd6068aad82e41b754f52f983533c7232c7bf83ed0c3cd493c42bf39ccd4a2e4"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/native_445_550/f00461.jpg",
+      "sha256": "d528685ebed755e3e32398418d05249719d2b2fe4aaceda4d3fc3f4f88e722a9"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/native_445_550/f00462.jpg",
+      "sha256": "a972dc28cc5df909132fd9c3e5c171ad50c85edec26eef0f4aa68fd723f86a15"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/sweep_462_550.jpg",
+      "sha256": "0de478942dbae7be9009f27e6903d0375cb7e8213689fdd3f4c93a0bb8b196f3"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt02/opening/f00001.png",
+      "sha256": "a5f567dfa49aba2619710d5d4affd0090a6dd32233f4a046ee7f2dc65f292b89"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt02/opening/f00012.png",
+      "sha256": "a32ae99c8188995f44bb95d9a1350abbbec20fb766a5a0011465cd9808deb163"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt02/opening/f00022.png",
+      "sha256": "2a757bb311a7e3af5b5fd8f1beb5a4bd7517a86211b6a40bfbf1619f7928f873"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt02/opening/f00023.png",
+      "sha256": "32ccf358f2b5f1ef3654430b075e0e07bb5c21bc4ccfa937a065632195878383"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt02/opening/f00031.png",
+      "sha256": "4f726d23e852e8d35a565c1b8adb13f3cdc226682d1dce23e0b637a44b09af24"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt02/opening/f00032.png",
+      "sha256": "8e9388862283103dd7dfecccb4f0ec2425d963ce2031ae0504d7efbf4ef27455"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-followup-20261106T0330Z/production_attempt02/bulletin/f00301.png",
+      "sha256": "3de73da052f63a159580ca0e32a981272668b1617bd537984971447cea9587ac"
+    }
+  ],
+  "image_view_limits": [
+    "Twenty actual image files viewed: nine source JPEG/ROI-sheet files and eleven original production PNG/contact files. File existence alone was not treated as image review.",
+    "onset_448_463 is a consecutive half-scale overview; wrap_487_504 and finish_537_550 contain consecutive lower-text crops; sweep_462_550 is every4frames plus549/550, not all intervening semantic views.",
+    "sweep_462_550 display was resized from1640x3640 to923x2048. Exact small boundaries were checked in separate native ROI views/consecutive text crops and independently reproduced numerical records.",
+    "Source ROI is x100,y550,w1640,h510; unrelated frame regions and timeline remain outside this visual gate.",
+    "Production image views are original render PNG/contact checkpoints; video stream format/framecount/silence were checked with ffprobe."
+  ],
+  "evidence_sha256": {
+    "NATIVE_BATCH_449_550.json": "c88445a65cdcce18fe2a57422c16751e67d74f20d4f37eebc74f54178cd25294",
+    "native_measurements.json": "e246fdf7fdb26fe99894a961b643390eea84db0c5dca577d7dbb467a23e0f5cf",
+    "lower_line_measurements.json": "871076eb743c9fe65e6113fec81faa3c0f351f8fea5a961456774390d4048df1",
+    "cursor_boundary_refinement_430_462.json": "4a12318997b8a0d0d45ad21ae66bafc173aba14774bc2d97adead4807ec84471",
+    "visual_event_ledger_v30.csv": "84fde2d7b7823505811f116ef94388564c6eae0d5e1f82d3451abfd59162cf26",
+    "PRODUCTION_ACCEPTANCE_FROZEN.json": "9302e5b127fbe17345154d1e6e957ec6cda2b5438702251c4d96119b01c304eb",
+    "ORIGINAL_PRODUCTION_SPEC.json": "e736059432d9f751885f03fc72a1ef7e3dd237cc586b32f2263e44af21764791",
+    "render_original.py": "87da255ce01656a1aa43c28e555068344636d9991b9a6cf88574f0855433010d",
+    "render_original_attempt02.py": "f62455d2b9d1976b65a9b67cfe617b37f232942983fc921cbe1f959e606c8e58",
+    "publication_preflight.py": "5db847f7c87747ceed4024b72e576477f4cb2f3fd1b481fdd227d6c7c69de247",
+    "test_publication_preflight.py": "d8e0f8082a051020d5aa820c402a6c08a6023b9bd60e5ed7ceab6f0549f5f923",
+    "PRODUCTION_VALIDATION_attempt02_reconciled.json": "a5e1a90e4f6afce4c95a83cec2b059f69fe4d2010a95788817b533ac6f716488",
+    "production_attempt01/DEFECTS.json": "1c48e555a65fb3914ad08c7b1ec3e2317eccb8f53b7a126aaa8317a04c9f650a",
+    "production_attempt01/validation_tooling_failure.json": "78637f6394e849fc34eb0f6302c0e30527228fb4d95ad72bc6da994b858de5ce",
+    "production_attempt02/validation_false_positive.json": "5580a00d930399f4bafa757a44b233f276118080cd3aaf4049b7cff34f0dc53d",
+    "production_attempt02/render_manifest.json": "cef661eae5f58e35cea5bf42006564ea7ce3de2440eda76f4eae8c9c88bc9084",
+    "cold_start_package_attempt02/read_audit.json": "56bc49a54cd247ca5a8596e7c3967dfd5506c9de65b16303eff8171c945f8d11",
+    "cold_start_execution_attempt02.json": "a1747b04e5303c59c6ccec0667f501313d7a25e6f1491042656c99b2977e659a"
+  },
+  "outstanding_blockers": {
+    "whole_video_visual_review": "PENDING",
+    "global_100ms_semantic_pass": "PENDING",
+    "other_extended_span_acceptance": "NOT_REVIEWED",
+    "source_authoring_curves_and_layers": "UNKNOWN",
+    "actual_listening_seconds": 0,
+    "ASR_undetermined": 21,
+    "ASR_potential_flags": 7,
+    "AV": "BLOCKED",
+    "CT_SCAN_COMPLETE": false
+  },
+  "write_boundary": "Only this new independent_QA_followup.json written by reviewer. No source/media/repository/Git/lock edits, output rerenders, branch actions, publication, or other-worker mutations."
+}

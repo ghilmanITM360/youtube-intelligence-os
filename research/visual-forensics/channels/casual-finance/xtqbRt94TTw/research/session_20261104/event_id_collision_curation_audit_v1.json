@@ -1,0 +1,28 @@
+{
+  "status": "PASS_VERSIONED_CANONICAL_ID_DISAMBIGUATION",
+  "original_v6_rows": 948,
+  "original_unique_event_ids": 947,
+  "new_v7_rows": 948,
+  "new_unique_event_ids": 948,
+  "changes": [
+    {
+      "old_id": "G121_TARGETED",
+      "new_id": "G121_TARGETED_19280_19281",
+      "span": [
+        "19280",
+        "19281"
+      ]
+    },
+    {
+      "old_id": "G121_TARGETED",
+      "new_id": "G121_TARGETED_19282_19282",
+      "span": [
+        "19282",
+        "19282"
+      ]
+    }
+  ],
+  "old_ledgers_immutable": true,
+  "legacy_event_id_column_preserves_source_labels": true,
+  "scope": "Two distinct targeted G121 segments had shared label; canonical IDs now include exact original interval. No frame/event dropped, no semantic cut inferred from ID change."
+}
