@@ -1,0 +1,79 @@
+{
+ "video_id": "2EZzwupIa80",
+ "checks": {
+  "state_timeline_starts_at_zero": true,
+  "state_timeline_ends_at_duration": true,
+  "every_inter_state_gap_explained_by_a_motion_row": true,
+  "no_overlapping_states": true,
+  "state_time_plus_transition_gaps_equals_duration": true,
+  "shots_cover_duration": true,
+  "all_auto_states_annotated": true,
+  "no_orphan_annotations": true,
+  "unique_state_ids": true,
+  "unique_shot_ids": true,
+  "unique_motion_ids": true,
+  "unique_sync_ids": true,
+  "unique_audio_event_ids": true,
+  "unique_asset_ids": true,
+  "motion_states_resolve": true,
+  "sync_links_resolve": true,
+  "asset_refs_resolve": true,
+  "transcript_monotonic_nonneg_durations": true,
+  "transcript_within_video_duration": true,
+  "audio_events_within_duration": true,
+  "every_shot_has_purpose": true
+ },
+ "coverage": {
+  "video_duration_sec": 75.167,
+  "frames_decoded": 1804,
+  "fps": 24.0,
+  "stable_state_sec": 51.581,
+  "transition_gap_sec": 23.586,
+  "speech_first_word_sec": 0.0,
+  "speech_last_word_end_sec": 74.82,
+  "visual_method": "EVERY frame decoded (native fps, gray low-res) for change detection; one representative full-res frame per state reviewed on labelled contact sheets (not every frame viewed)",
+  "audio_method": "Whole soundtrack analysed by signal processing (loudness/pauses/transient flux) and spectrogram strips inspected; NOT auditory listening"
+ },
+ "counts": {
+  "label_vs_measure_conflicts": 0,
+  "words": 238,
+  "sentences": 16,
+  "states": 53,
+  "shots_reviewed": 10,
+  "auto_boundary_episodes": 9,
+  "motion_rows": 52,
+  "micro_change_episodes_not_tabulated": 21,
+  "assets": 33,
+  "audio_events": 15,
+  "sync_rows": 62,
+  "beats": 9,
+  "low_confidence_words": 7,
+  "speech_onsets_non_speech": 0
+ },
+ "caveats": [
+  "ASR transcript is machine output (Whisper base): proper nouns and some numbers are unverified; on-screen text is the better source where visible.",
+  "Pixel-difference thresholds cannot see changes confined to <0.03% of pixels; 'MICRO_CHANGE' episodes are counted but not tabulated.",
+  "Easing cannot be distinguished from linear motion with this evidence; recorded as NOT_ASSESSED.",
+  "Audio: no listening panel; 'music' and 'SFX' claims are limited to what spectrograms and measured loudness show."
+ ],
+ "stats": {
+  "state_dur_median": 0.5,
+  "state_dur_mean": 0.97,
+  "shot_dur_median": 6.46,
+  "shot_dur_mean": 7.52,
+  "states_per_min": 42.3,
+  "shots_per_min": 8.0,
+  "words_per_min": 190.9
+ },
+ "missing_annotations": [],
+ "orphan_annotations": [],
+ "status": "PASS_STRUCTURAL",
+ "independent_motion_review": {
+  "original_candidates": 12,
+  "reviewed": 12,
+  "confirmed_existing_labels": 3,
+  "corrected_labels": 9,
+  "insufficient_evidence": 0,
+  "scope": "Nine source samples per candidate at native-frame-adjacent start and distributed follow-on points; not continuous playback"
+ }
+}

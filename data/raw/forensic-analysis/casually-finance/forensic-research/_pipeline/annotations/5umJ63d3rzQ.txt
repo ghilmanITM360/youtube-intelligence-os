@@ -1,0 +1,604 @@
+# FORMAT: state_id|literal description|exact visible text ('-' none)|layout/focal|assets (KEY=desc on first use; ';' sep)|change entering this state
+#H1|Hook: the biggest risk to the US economy was never the AI bubble, China or the man in the Oval Office|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S001.0|Small figure lying anxiously in a bed at the upper left of a blank canvas|-|bed upper left|OBJ_BED_WORRIED=hand-drawn bed with an anxious figure under red covers|START: worried sleeper
+S001.1|A dark monster with glowing red eyes peeks out from under the bed|-|bed upper left|OBJ_BED_WORRIED;CHAR_BED_MONSTER=small dark monster with red eyes under the bed|POP_IN: monster under the bed
+S001.2|Large green USA-map shape (no face) appears at the right|-|bed upper left, map right|OBJ_BED_WORRIED;CHAR_BED_MONSTER;MAP_USA_PLAIN=large plain green USA-map shape without a face|POP_IN: US map
+S001.3|Map smaller with money bags and banknotes drawn on it|-|bed upper left, map centre-right|OBJ_BED_WORRIED;CHAR_BED_MONSTER;MAP_USA_PLAIN;OBJ_MONEY_BAG_BIG=hand-drawn green money bag with a dollar sign;OBJ_BANKNOTE_BIG=hand-drawn green banknote|REFRAME+POP_IN: map shrinks, money added
+S001.4|Host with a flat mouth and hands on hips, alone|-|host centre|HOST=hand-drawn stick-figure presenter (round peach head, spiky black hair)|CUT: host
+S001.5|Grey robot with red eyes and a phone at its ear blowing soap bubbles that carry AI-company logos|-|robot left, bubbles upper right|CHAR_ROBOT=grey stick robot with red eyes, an antenna and an apron panel;OBJ_BUBBLES_AI=soap bubbles holding AI-company logos (a knot, a whale and a starburst);OBJ_BUBBLE_WAND=bubble wand|CUT: AI bubble robot
+S001.6|Large red X drawn across the bubbles|-|robot left, bubbles crossed|CHAR_ROBOT;OBJ_BUBBLES_AI;OBJ_BUBBLE_WAND;HL_RED_X=large red hand-drawn X|STRIKE: AI bubble crossed out
+S002.0|Green China-shaped silhouette alone|-|shape centre|MAP_CHINA=green China-shaped silhouette|CUT: China
+S002.1|Red X across the China shape|-|shape centre|MAP_CHINA;HL_RED_X|STRIKE: China crossed out
+S003.0|Orange-faced, blond-haired figure in a suit and red tie behind a lectern between two US flags, arms out|-|figure centre, flags either side|CHAR_ORANGE_LEADER=stick figure with swept blond hair, orange face, suit and red tie at a lectern between US flags (a caricature of a head of state; identity not asserted)|CUT: lectern figure
+S003.1|Figure's pose changes with one arm gesturing out|-|figure centre|CHAR_ORANGE_LEADER|POSE_CHANGE: arm gesture
+S003.2|Figure's pose changes again|-|figure centre|CHAR_ORANGE_LEADER|POSE_CHANGE: pose
+S003.3|Large red X drawn across the lectern figure|-|figure centre crossed|CHAR_ORANGE_LEADER;HL_RED_X|STRIKE: leader crossed out
+S003.4|Figure's pose shifts under the X|-|figure centre crossed|CHAR_ORANGE_LEADER;HL_RED_X|POSE_CHANGE: pose
+S003.5|Figure's pose shifts again under the X|-|figure centre crossed|CHAR_ORANGE_LEADER;HL_RED_X|POSE_CHANGE: pose
+#H2|It's something much more boring that you've likely never heard of unless you've gone down the finance rabbit hole|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S004.0|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host
+S004.1|Pale figure in an orange tie with a hand at his chin and five black question marks|?????|figure left, marks right|CHAR_BEWILDERED=pale bald stick figure in an orange tie with a hand at his chin;ICON_QUESTION_MARKS=row of five black hand-drawn question marks|CUT: bewildered man
+S004.2|Dark-haired woman with a fringe hunched over and a hand raised, alone|-|figure left|CHAR_BLACK_BOB_WOMAN=stick woman with a black fringe, hunched posture|CUT: hunched woman
+S004.3|A hole in the ground with a small orange signpost at its edge|FINANCE LORE|woman left, hole and sign lower right|CHAR_BLACK_BOB_WOMAN;OBJ_RABBIT_HOLE=hand-drawn hole in the ground with a signpost lettered FINANCE LORE|POP_IN: finance-lore rabbit hole
+#H3|And that's exactly why nobody's paying attention|ORIGINAL_DRAWING
+S004.4|Blond-haired figure with a pale face lit by a phone screen, scrolling|-|figure left|CHAR_PHONE_SCROLLER=blond stick figure lit by a smartphone glow;OBJ_PHONE_HELD=dark smartphone held in hand|CUT: phone scroller
+S004.5|Same figure with a bobbing posture, still scrolling|-|figure left|CHAR_PHONE_SCROLLER;OBJ_PHONE_HELD|POSE_CHANGE: figure shifts
+#H4|If you've been wondering why mortgage rates refuse to fall|ORIGINAL_DRAWING
+S004.6|Pale bald figure in an orange tie with a hand at his chin, alone at the left|-|figure left|CHAR_BEWILDERED|CUT: bewildered man
+S004.7|Speech bubble beside the man|Why?|figure left, bubble right|CHAR_BEWILDERED;TXT_SPEECH_WHY=hand-lettered speech bubble|POP_IN: Why? bubble
+S004.8|Three small cream houses appear at the right|Why?|figure left, houses right|CHAR_BEWILDERED;TXT_SPEECH_WHY;BLDG_HOUSES_SMALL=three small hand-drawn cream houses|POP_IN: houses
+#H5|Why stocks randomly freak out every few months|SCREEN_CAPTURE;COMPOSITED_STILLS
+S004.9|A dark stock-quote card with a one-year chart annotated with green and red arrows beside a distorted-head meme figure captioned Panik|Microsoft Corp / NASDAQ: MSFT / 396.79 USD / -12.85 (-3.14%) past year / Panik|meme left, card right|IMG_PANIK_MEME=third-party 'Panik' meme image of a distorted pale head;SS_MSFT_CARD=dark stock-quote card for Microsoft with a one-year chart and hand-drawn arrows|CUT: stock chart with a Panik meme
+#H6|The Federal Reserve can talk about cutting rates but financial conditions still feel tight|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S005.0|Host smiling with hands on hips beside the Board of Governors seal|BOARD OF GOVERNORS OF THE FEDERAL RESERVE SYSTEM|host left, seal right|HOST;LOGO_FED_SEAL=Board of Governors of the Federal Reserve System seal|CUT: host with the central-bank seal
+S005.1|Hand-drawn central-bank building with a Federal Reserve sign alone|FEDERAL RESERVE|building centre|BLDG_FED=hand-drawn columned Federal Reserve building with a lettered pediment|CUT: Fed building
+S005.2|Speech bubble from the building|We're cutting rates lads!|building left, bubble right|BLDG_FED;TXT_SPEECH_CUTTING=hand-lettered speech bubble|POP_IN: cutting-rates bubble
+S006.0|A large round head resting on a bar counter beside a glass of amber drink, drawn from behind|-|figure right, counter lower|CHAR_SLUMPED_DRINKER=large round head slumped on a bar beside a glass;OBJ_BAR_COUNTER=hand-drawn bar counter with a glass of amber drink|CUT: slumped drinker
+S006.1|A tiny aside appears above the figure|(still broke)|aside upper centre|CHAR_SLUMPED_DRINKER;OBJ_BAR_COUNTER;TXT_SMALL_CAPTION=small handwritten caption|TEXT_REVEAL: still broke
+#H7|The answer doesn't start in Washington|ORIGINAL_DRAWING
+S007.0|Orange-faced, blond-haired figure at a lectern between US flags, arms out|-|figure centre, flags either side|CHAR_ORANGE_LEADER|CUT: lectern figure
+S007.1|Pose shifts, one arm out to the side|-|figure centre|CHAR_ORANGE_LEADER|POSE_CHANGE: pose
+S007.2|Pose shifts again|-|figure centre|CHAR_ORANGE_LEADER|POSE_CHANGE: pose
+S007.3|Pose shifts again, arm pointing|-|figure centre|CHAR_ORANGE_LEADER|POSE_CHANGE: pose
+S007.4|Pose shifts back with the arm up|-|figure centre|CHAR_ORANGE_LEADER|POSE_CHANGE: pose
+#H8|It starts in Tokyo|ORIGINAL_DRAWING
+S008.0|Host smiling with a pointer lowered, alone at the left|-|host left|HOST;POINTER=long brown pointer stick|CUT: host with pointer
+S008.1|Host at left and a green Japan-shaped island map at right with a handwritten label and a red arrow to a red dot on the main island|Tokyo|host left, map right|HOST;MAP_JAPAN=hand-drawn green Japan-shaped archipelago;TXT_LABEL_TOKYO=handwritten label Tokyo with a red arrow to a dot|CUT: Japan map with Tokyo marked
+S008.2|Host's pointer returns across his body|Tokyo|host left, map right|HOST;POINTER;MAP_JAPAN;TXT_LABEL_TOKYO|POSE_CHANGE: pointer lowered
+#H9|The most boring asset on earth: Japanese government bonds|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S008.3|A red armchair with a sleeping figure and blue Z letters at the upper right|-|armchair right|OBJ_ARMCHAIR_SLEEPER=hand-drawn red armchair with a sleeping figure and Z marks|CUT: sleeping in an armchair (boring)
+S008.4|Japan-shaped map alone at the right|-|map right|MAP_JAPAN|CUT: Japan map
+S008.5|Two scanned antique bond certificates with green borders and a red SPECIMEN mark at the left of the map|-|certificates left, map right|MAP_JAPAN;IMG_JGB_CERTS=scanned antique government bond certificates with green borders and red specimen marks|POP_IN: bond certificates
+#H10|The country best known for attracting American weebs|COMPOSITED_STILLS;ORIGINAL_DRAWING
+S009.0|Third-party meme panel contrasting two crying cartoon faces on a woman with two bearded caricature faces on an anime character|People IRL / You dont deserve her! / I love her more! / Weebs / This is my waifu / Also mine, good taste|panel centre|IMG_WEEB_MEME=third-party two-row meme contrasting people in real life with anime fans|CUT: weeb meme
+S009.1|Blond figure in a blue US cap waving a small Japanese flag and a dark-haired woman beside him with a speech bubble|I watch anime!|figure left, woman right|CHAR_AMERICAN_TOURIST=blond stick figure in a blue US cap holding a small Japanese flag;CHAR_BLACK_BOB_WOMAN;TXT_SPEECH_ANIME=hand-lettered speech bubble|CUT: American anime fan
+#H11|Has also been the duct tape quietly holding the global financial system together for 30 years|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S009.2|Host smiling with arms slightly out, alone|-|host centre|HOST|CUT: host
+S009.3|Japan map as a character with glasses and a ring, wrapped in strips of tan duct tape holding up a banknote|-|map centre|CHAR_JAPAN=Japan-shaped character with glasses and a small ring, with duct-tape strips and a banknote;OBJ_DUCT_TAPE=hand-drawn strips of tan duct tape|CUT: Japan wrapped in duct tape
+S010.0|Japan character at the left and a cartoon Earth at the right with duct tape across it and a money bag on top|-|Japan left, Earth right|CHAR_JAPAN;OBJ_DUCT_TAPE;CHAR_EARTH=hand-drawn cartoon Earth with duct-tape strips;OBJ_MONEY_BAG_BIG|POP_IN: taped Earth with a money bag
+S010.1|Red handwritten duration at the upper left|30 years|text upper left|CHAR_JAPAN;OBJ_DUCT_TAPE;CHAR_EARTH;OBJ_MONEY_BAG_BIG;TXT_RED_30YEARS=red handwritten 30 years|TEXT_REVEAL: 30 years
+#H12|And that duct tape is starting to peel|ORIGINAL_DRAWING
+S011.0|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host sceptical
+S011.1|Host with an open mouth and hands pressed to his chin, alone|-|host centre|HOST|FACE_CHANGE: host aghast
+#H13|To understand why Japan is so important, you first have to rewind to the early 90s|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S012.0|Host smiling with a pointer beside a chalkboard with a heading and a white chalk outline of Japan|Why Japan?|host left, board right|HOST;POINTER;OBJ_CHALKBOARD=green chalkboard in a brown frame;TXT_CHALK_WHYJAPAN=white chalk-style Why Japan? with a chalk outline of Japan|CUT: chalkboard 'Why Japan?'
+S012.1|Host's arm extends toward the board|Why Japan?|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_WHYJAPAN|POSE_CHANGE: arm extends
+S012.2|Board enlarged, host's pointer lowered|Why Japan?|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_WHYJAPAN|ZOOM_IN+POSE_CHANGE: board enlarged
+S013.0|Single word on a blank canvas|Early|text centre|TXT_TITLE_EARLY=black handwritten title words|CUT: Early
+S013.1|Line completes|Early 1990s...|text centre|TXT_TITLE_EARLY|TEXT_REVEAL: 1990s...
+#H14|In 1992 Japan's asset bubble burst: real estate and equities collapsed, and Japan entered the Lost Decades|ORIGINAL_DRAWING;SCREEN_CAPTURE;MOTION_GRAPHICS
+S013.2|Japan character with wide eyes and stick legs at the left|-|Japan left|CHAR_JAPAN_FACE=Japan-shaped character with wide eyes and stick legs|CUT: Japan character
+S013.3|A year appears at the upper right|1992|Japan left, year upper right|CHAR_JAPAN_FACE;TXT_YEAR=handwritten year|TEXT_REVEAL: 1992
+S013.4|A large glossy teal bubble appears below the year|1992|Japan left, bubble right|CHAR_JAPAN_FACE;TXT_YEAR;OBJ_BUBBLE_BIG=large glossy teal soap bubble|POP_IN: bubble
+S013.5|Bubble gone and Japan's face turns worried with a hand at its mouth|1992|Japan left, year upper right|CHAR_JAPAN_FACE;TXT_YEAR|EXIT+FACE_CHANGE: bubble pops, worried face
+S013.6|Nikkei 225 long-run chart with a red downward arrow, a yellow office tower and a cream house at the lower left|Nikkei 225, Japan, M, Tokyo (CFD) / Investing.com|chart centre, icons lower left|SS_NIKKEI_CHART=Investing.com monthly Nikkei 225 line chart with a peak and a long decline;HL_RED_ARROW=red hand-drawn arrow;BLDG_OFFICE_TOWER=hand-drawn yellow office tower;BLDG_HOUSE_SMALL=small cream house|CUT: Nikkei chart with a red arrow
+S013.7|A stack of banknotes appears at the lower right|Nikkei 225, Japan, M, Tokyo (CFD)|chart centre, icons lower left and right|SS_NIKKEI_CHART;HL_RED_ARROW;BLDG_OFFICE_TOWER;BLDG_HOUSE_SMALL;OBJ_BANKNOTE_STACK=pile of green banknotes|POP_IN: banknotes
+S013.8|Chart with the red arrow pointing down, the tower and house at lower left and a single banknote at lower right|Nikkei 225, Japan, M, Tokyo (CFD)|chart centre, icons lower left and right|SS_NIKKEI_CHART;HL_RED_ARROW;BLDG_OFFICE_TOWER;BLDG_HOUSE_SMALL;OBJ_BANKNOTE_BIG|EXIT+REPOSITION: chart shifts, one banknote left
+S013.9|Grey background with a dark-greyed Japan silhouette at the right and a handwritten caption stacked at the upper left|The lost decades|text upper left, Japan right|TXT_LOSTDECADES=handwritten caption The lost decades;MAP_JAPAN_GREY=dark-grey Japan silhouette on a pale grey background|CUT: lost decades title
+#H15|It was a three-decade-long period of being financially f**ked: no real growth, no inflation, no wage expansion|ORIGINAL_DRAWING;SCREEN_CAPTURE;COMPOSITED_STILLS
+S014.0|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host
+S014.1|Meme panel: a hunched bald figure leaning over a heavy weight marked with a joke label while a tiny Japan character is crushed under it, with an imperative caption at the top|COME ON DO SOMETHING / you're SCREWED|panel centre|IMG_DOSOMETHING_MEME=third-party 'come on do something' meme panel of a hunched figure poking a heavy weight labelled you're screwed;CHAR_JAPAN_CRUSHED=small Japan character with glasses pinned under a weight|CUT: do-something meme
+S014.2|Meme panel held; weight shifts slightly|COME ON DO SOMETHING / you're SCREWED|panel centre|IMG_DOSOMETHING_MEME;CHAR_JAPAN_CRUSHED|ANIM: meme panel shifts
+S014.3|Meme panel held again|COME ON DO SOMETHING / you're SCREWED|panel centre|IMG_DOSOMETHING_MEME;CHAR_JAPAN_CRUSHED|ANIM: meme panel shifts
+S014.4|Meme panel held again|COME ON DO SOMETHING / you're SCREWED|panel centre|IMG_DOSOMETHING_MEME;CHAR_JAPAN_CRUSHED|ANIM: meme panel shifts
+S014.5|Japan map at the left of a bar chart of Japan's GDP in US dollars with a red ellipse around the post-1990 plateau|GDP (US $) / 1960 ... 2020|map left, chart right|MAP_JAPAN;SS_GDP_JAPAN_CHART=bar chart of Japan's nominal GDP 1960-2020 in US dollars;HL_RED_ELLIPSE=red hand-drawn ellipse around a part of a chart|CUT: GDP plateau circled
+S014.6|FRED chart of consumer-price inflation for Japan with a red ellipse around the near-zero stretch after 1990|FRED / Inflation, consumer prices for Japan / Percent / 1965 ... 2020 / Source: World Bank via FRED / fred.stlouisfed.org|chart fills frame|SS_FRED_JP_CPI=FRED line chart of consumer-price inflation in Japan 1960-2023;HL_RED_ELLIPSE|CUT: inflation near zero circled
+S015.0|Blue infographic of G7 real wage growth 2000-2022 at the left and a dark-haired figure holding a banknote and looking dejected at the right|G7 COUNTRIES' / Real Wage Growth / 2000-2022 / USA $77.5k / JPN $41.5k|infographic left, figure right|SS_G7_WAGE_INFOGRAPHIC=infographic of real wage growth in G7 countries 2000-2022 showing Japan at the bottom;CHAR_WAGE_EARNER=dark-haired stick figure holding a banknote with a downcast look|CUT: wage-growth infographic
+#H16|It was like the economy hit pause and nobody could find the remote|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S015.1|Japan map with two money bags and a banknote drawn across it|-|map centre|MAP_JAPAN;OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG|CUT: Japan with money
+S016.0|Two translucent grey pause bars overlay the map|-|map centre|MAP_JAPAN;OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG;ICON_PAUSE_BARS=two translucent grey vertical bars forming a pause symbol|POP_IN: pause symbol over Japan
+#H17|Nobody could find the remote: a figure searching a living room|ORIGINAL_DRAWING;RASTER_ART
+S017.0|Living-room scene: an orange sofa, a floor lamp and a red wall picture with a small figure sliding off the sofa's arm|-|sofa left, figure right of sofa|OBJ_LIVINGROOM=richly shaded hand-drawn living room with an orange sofa, a floor lamp and a wall picture;CHAR_REMOTE_SEEKER=small stick figure searching for something|CUT: living room scene
+S017.1|The figure lies on the floor in front of the sofa searching|-|sofa left, figure lower right|OBJ_LIVINGROOM;CHAR_REMOTE_SEEKER|POSE_CHANGE: figure on the floor
+S017.2|The figure stands at the right edge scratching its head|-|sofa left, figure right|OBJ_LIVINGROOM;CHAR_REMOTE_SEEKER|POSE_CHANGE: figure stands up
+S017.3|A red question mark appears above the figure|-|sofa left, figure right|OBJ_LIVINGROOM;CHAR_REMOTE_SEEKER;ICON_QUESTION_RED=red hand-drawn question mark|POP_IN: question mark
+#H18|So the Bank of Japan cut rates to zero and then below zero|ORIGINAL_DRAWING;SCREEN_CAPTURE;MOTION_GRAPHICS
+S018.0|Hand-drawn domed central-bank building with a small Japanese flag and a Bank of Japan sign at the right of a blank canvas|BANK OF JAPAN|building right|BLDG_BOJ=hand-drawn domed central-bank building with a Japanese flag and a lettered BANK OF JAPAN sign|CUT: Bank of Japan
+S018.1|Host appears at the lower left, smiling|BANK OF JAPAN|host left, building right|HOST;BLDG_BOJ|POP_IN: host
+S018.2|Host gone; the word RATES at the lower left under a hovering kitchen knife|RATES|word lower left, knife above, building right|BLDG_BOJ;TXT_RATES=black hand-lettered word RATES;OBJ_KNIFE=hand-drawn kitchen knife|SWAP: word and knife
+S018.3|Knife slices through the word; a large red figure appears above|0%|figure upper left, cut word lower left, building right|BLDG_BOJ;TXT_RATES;OBJ_KNIFE;TXT_RED_0PCT=large red hand-lettered 0%|ANIM+POP_IN: rates cut, 0%
+S018.4|Building gone; the word RATES and the knife at the upper right|RATES|word upper right|TXT_RATES;OBJ_KNIFE|CLEAR+REPOSITION: word and knife at the top right
+S018.5|The knife cuts again, letters falling apart; a news headline card appears at the lower left|RATES / CNBC / BANK OF JAPAN / Bank of Japan adopts negative interest rate policy|word upper right, card lower left|TXT_RATES;OBJ_KNIFE;SS_CNBC_BOJ_NEGATIVE=news-site headline card 'Bank of Japan adopts negative interest rate policy'|ANIM+POP_IN: word cut again, negative-rate headline
+S018.6|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host
+S018.7|Host frowning, one arm out|-|host centre|HOST|FACE_CHANGE+POSE_CHANGE: frown
+#H19|Then they introduced yield curve control, which sounds like a Marvel villain|ORIGINAL_DRAWING;SCREEN_CAPTURE;COMPOSITED_STILLS
+S018.8|Bank of Japan building alone at the left|BANK OF JAPAN|building left|BLDG_BOJ|CUT: Bank of Japan
+S018.9|Definition text appears at the right of the building|What Is Yield Curve Control (YCC)? / Yield curve control (YCC) involves targeting a longer-term interest rate by a central bank, then buying or selling as many bonds as necessary to hit that rate target. […]|building left, text right|BLDG_BOJ;SS_YCC_DEFINITION=finance-education article text defining yield curve control|POP_IN: YCC definition
+S019.0|Hooded villain figure in a green cloak with a masked grey face and a line of text at the upper left|I am...|villain right, text upper left|CHAR_VILLAIN=hooded stick figure in a green cloak and a grey metallic mask (a comic-book-villain parody)|CUT: villain figure
+S020.0|Villain enlarged at the right with a red hand-lettered name stacked at the left|YIELD CURVE CONTROL|villain right, text left|CHAR_VILLAIN;TXT_RED_YCC=large red hand-lettered YIELD CURVE CONTROL|ZOOM_IN+TEXT_REVEAL: YIELD CURVE CONTROL
+S021.0|Host smiling with arms slightly out, alone|-|host centre|HOST|CUT: host
+#H20|It just means we're going to cap long-term bond yields whether the market likes it or not|SCREEN_CAPTURE;ORIGINAL_DRAWING
+S021.1|Host with a pointer at left and the YCC definition text at the right|What Is Yield Curve Control (YCC)?|host left, text right|HOST;POINTER;SS_YCC_DEFINITION|CUT: host with the definition
+S021.2|Host's face turns stern and the text moves left under the pointer|What Is Yield Curve Control (YCC)?|host left, text centre|HOST;POINTER;SS_YCC_DEFINITION|FACE_CHANGE+REPOSITION: stern host, text shifts
+#H21|The Japanese government superglued interest rates to the floor|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S021.3|Japan character with glasses holding a small tube of glue in one hand|-|Japan left|CHAR_JAPAN;OBJ_GLUE_TUBE=small hand-drawn tube of glue|CUT: Japan with a glue tube
+S021.4|A yellow percent disc stuck to the ground by glue at the right|-|Japan left, disc right|CHAR_JAPAN;OBJ_GLUE_TUBE;ICON_PERCENT_GLUED=yellow percent disc glued to the ground with grey glue|POP_IN: percent glued down
+S021.5|Percent disc alone at the lower left|-|disc lower left|ICON_PERCENT_GLUED|CLEAR: disc alone
+#H22|For decades Japanese government bonds yielded pretty much nothing|SCREEN_CAPTURE;ORIGINAL_DRAWING
+S021.6|Two pale-green hand-drawn government bond documents lettered Government of Japan beside the glued percent disc|Government of Japan|disc left, bonds right|ICON_PERCENT_GLUED;OBJ_JGB_DOCS=two hand-drawn pale-green Government of Japan bond documents|POP_IN: Japanese government bonds
+S021.7|Line chart of 10-year Japanese government bond yields with a grey band for the former yield-curve-control range|10-year JGBs and BoJ yield target / Yield (%) / 1.5 1.0 0.5 0.0 -0.5 -1.0 / 2016 ... 2024 / 10Y Yield / Former yield curve control range / Source: Macrobond|chart fills frame|SS_JGB10_CHART=chart of 10-year Japanese government bond yields 2016-2024 with the yield-curve-control range shaded|CUT: JGB yield chart
+#H23|That created massive problems for Japanese investors: a life insurer, pension fund or bank|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S021.8|Japan map alone at the upper right of a blank canvas|-|map upper right|MAP_JAPAN|CUT: Japan map
+S021.9|A large red jagged downward arrow sweeps from the upper left across the frame|-|arrow diagonal, map upper right|MAP_JAPAN;OBJ_ARROW_RED_DOWN=large red hand-drawn jagged downward arrow|DRAW_ON: red downward arrow
+S021.10|Bald, bespectacled figure in a green tie with a briefcase of cash at the lower left (a life-insurer type)|-|figure lower left, arrow diagonal|MAP_JAPAN;OBJ_ARROW_RED_DOWN;CHAR_INSURER=bald stick figure with round glasses and a green tie standing by a briefcase of cash;OBJ_BRIEFCASE_CASH=hand-drawn briefcase stuffed with banknotes|POP_IN: investor with a briefcase
+S021.11|Host smiling with arms slightly out, alone|-|host centre|HOST|CUT: host
+S021.12|Two health-insurance policy booklets with heart and medical-caduceus emblems at the upper left|-|booklets upper left|OBJ_INSURANCE_BOOKS=two hand-drawn tan booklets with a red heart and a medical caduceus|CUT: insurance booklets
+S021.13|A bent grey-haired elderly woman with a cane appears beside the booklets (a pensioner)|-|booklets left, woman right|OBJ_INSURANCE_BOOKS;CHAR_PENSIONER=hunched grey-haired stick woman with a cane|POP_IN: pensioner
+S021.14|The Bank of Japan building appears at the right|BANK OF JAPAN|booklets and woman left, building right|OBJ_INSURANCE_BOOKS;CHAR_PENSIONER;BLDG_BOJ|POP_IN: bank
+S022.0|Large brown briefcase alone at the centre|-|briefcase centre|OBJ_BRIEFCASE_BROWN=hand-drawn brown briefcase|CUT: briefcase (billion-dollar portfolio)
+S022.1|Two money bags and a banknote surround the briefcase|-|briefcase centre, bags and note around|OBJ_BRIEFCASE_BROWN;OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG|POP_IN: money around the briefcase
+#H24|Your domestic government bonds are paying you 0%|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S023.0|Single pale-green Government of Japan bond document at the upper left|Government of Japan|bond upper left|OBJ_JGB_DOCS|CUT: one bond
+S023.1|Three overlapping bond documents|Government of Japan|bonds left|OBJ_JGB_DOCS|BUILD: three bonds
+S023.2|Large red percent figure at the right|0%|bonds left, figure right|OBJ_JGB_DOCS;TXT_RED_0PCT|TEXT_REVEAL: 0%
+#H25|This leaves you with two choices|ORIGINAL_DRAWING
+S024.0|Host with a pointer beside a chalkboard reading a short heading|Two options|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_TWOOPTIONS=white chalk-style Two options|CUT: chalkboard 'Two options'
+S024.1|Host's arm extends toward the board|Two options|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_TWOOPTIONS|POSE_CHANGE: arm extends
+#H26|Option one: accept no return on your cash|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S025.0|Heading at the upper left of a blank canvas|N°1|text upper left|TXT_OPTION_NUM=black handwritten option number|CUT: option 1
+S025.1|Heading and a stack of two banknotes below it|N°1|heading upper left, notes centre-left|TXT_OPTION_NUM;OBJ_BANKNOTE_BIG|POP_IN: banknotes
+S025.2|Handwritten word at the right struck through with a red X|returns|heading upper left, notes left, word right|TXT_OPTION_NUM;OBJ_BANKNOTE_BIG;TXT_RETURNS_CROSSED=handwritten word returns struck through with a red X;HL_RED_X|POP_IN+STRIKE: returns crossed out
+S025.3|A tiny aside appears under the crossed word|we don't know her|aside lower right|TXT_OPTION_NUM;OBJ_BANKNOTE_BIG;TXT_RETURNS_CROSSED;HL_RED_X;TXT_SMALL_CAPTION|TEXT_REVEAL: we don't know her
+#H27|Option two: go shopping overseas, and they chose option two|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S025.4|Heading and a Japan map with a small white airplane flying out of it|N°2|heading upper left, map left|TXT_OPTION_NUM;MAP_JAPAN;OBJ_AIRPLANE=small white hand-drawn airplane|CUT: option 2, a plane leaves Japan
+S025.5|Airplane gone, Japan alone under the heading|N°2|heading upper left, map left|TXT_OPTION_NUM;MAP_JAPAN|EXIT: airplane out
+S026.0|Host with a pointer beside a board with the option and a farewell|N°2 / Go bye-bye!|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_BYEBYE=white chalk-style N°2 Go bye-bye!|CUT: chalkboard 'Go bye-bye!'
+#H28|Japan entered a multi-decade global shopping spree|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S026.1|Japan character with spiral eyes and long wavy arms surrounded by flying banknotes and a demanding caption|GIVE ME|Japan fills frame, banknotes around|CHAR_JAPAN_SPIRAL=Japan-shaped character with spiral eyes and long arms;OBJ_BANKNOTE_FLYING=many green banknotes drifting through the frame;TXT_GIVEME=black handwritten caption GIVE ME|CUT: shopping spree
+S027.0|Host grinning with hands on hips, alone|-|host centre|HOST|CUT: host
+#H29|Japan became the largest foreign holder of US Treasuries|ORIGINAL_DRAWING
+S028.0|Large Japan character with wide eyes holding a green United States Treasury certificate up at the right|United States Treasury|Japan fills frame, certificate right|CHAR_JAPAN_FACE;OBJ_TREASURY_NOTE=hand-drawn green certificate lettered United States Treasury|CUT: Japan holds a Treasury note
+#H30|One of the largest buyers of US mortgage-backed securities|SCREEN_CAPTURE
+S029.0|Stacked-bar chart of foreign ownership of agency mortgage-backed securities by country share, 2003 to 2021, with the legend and a source line|Figure 3 - Foreign Ownership of Agency MBS by Country Share / 100% 90% ... 0% / 2003 ... 2021 / 26.0% / 20.5% / 17.9% / Japan / Taiwan / China / Canada / South Korea / United Kingdom / Luxembourg / Cayman Islands / Switzerland / Bermuda / Rest of World / Source: U.S. TIC data. As of June 30, 2021.|chart fills frame|SS_MBS_FOREIGN_CHART=stacked-bar chart of foreign ownership of agency mortgage-backed securities by country share 2003-2021 from US TIC data|CUT: foreign MBS ownership chart
+#H31|The world's largest net creditor nation: Japan became the world's ATM|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S030.0|Japan character with pixel sunglasses and arms flinging banknotes around|-|Japan fills frame, notes around|CHAR_JAPAN;ICON_PIXEL_SUNGLASSES=pixelated black sunglasses added over the eyes;OBJ_BANKNOTE_FLYING|CUT: Japan flings money in sunglasses
+S031.0|Host smiling with arms slightly out, alone|-|host centre|HOST|CUT: host
+#H32|It's not because Japan just loves sending capital to America; the math made sense|ORIGINAL_DRAWING
+S031.1|Japan character at the left with a money bag at its feet and a banknote in one arm|-|Japan left|CHAR_JAPAN_FACE;OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG|CUT: Japan with money
+S031.2|A large equals sign appears at the right|=|Japan left, equals right|CHAR_JAPAN_FACE;OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG;ICON_EQUALS=large hand-drawn black equals sign|POP_IN: equals sign
+S031.3|Japan character with heart eyes lunges at the lower left; a US map holding banknotes appears at the right|-|Japan left, US map right|CHAR_JAPAN_HEARTS=Japan-shaped character with heart-shaped eyes;MAP_USA_PLAIN;OBJ_BANKNOTE_BIG|CUT+POP_IN: Japan loves the US map
+S032.0|Host with a pointer beside a chalkboard reading an equation|Math = good!|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_MATH=white chalk-style Math = good!|CUT: chalkboard 'Math = good!'
+S032.1|Host points at the board with an arm out|Math = good!|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_MATH|POSE_CHANGE: pointing
+S032.2|Host's pointer lowered across his body|Math = good!|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_MATH|POSE_CHANGE: pointer lowered
+#H33|Meet Bob: he wants to start making money through investing|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S033.0|Small stick figure with a curled topknot and a gentle smile, waving, in the centre|-|figure centre small|CHAR_BOB=small stick figure with a curled topknot and a smile|CUT: Bob
+S033.1|Bob enlarged at the left with a thoughtful look|-|Bob left|CHAR_BOB|ZOOM_IN+FACE_CHANGE: Bob close-up
+S033.2|A framed green rising line chart appears at the right of Bob|-|Bob left, chart right|CHAR_BOB;CHART_GREEN_RISING=hand-drawn film-frame-edged chart with a rising green line and arrow|POP_IN: rising chart
+#H34|Bob goes to the Japanese markets and borrows money in yen at near-zero interest rates|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S033.3|Bob standing at the left holding a small dollar banknote, a gentle smile|-|Bob left|CHAR_BOB;OBJ_BANKNOTE_SMALL=small green banknote held in hand|CUT: Bob with a banknote
+S033.4|Japan map appears at the right|-|Bob left, Japan right|CHAR_BOB;OBJ_BANKNOTE_SMALL;MAP_JAPAN|POP_IN: Japan map
+S033.5|Pair of pinkish yen banknotes with a yen symbol alone at the centre|-|notes centre|OBJ_YEN_NOTES=hand-drawn pink yen banknotes with a yen symbol|CUT: yen banknotes
+S033.6|A handwritten rate beside the notes|almost 0% interest|notes left, text right|OBJ_YEN_NOTES;TXT_ALMOST0=handwritten almost 0% interest|TEXT_REVEAL: almost 0% interest
+#H35|Then Bob converts that yen into dollars and buys US Treasuries yielding 4%|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S033.7|Bob at the left with three yen notes at the upper right|-|Bob left, notes upper right|CHAR_BOB;OBJ_YEN_NOTES|CUT: Bob and three yen notes
+S033.8|A curved red arrow descends from the yen notes|-|Bob left, notes upper right, arrow below|CHAR_BOB;OBJ_YEN_NOTES;OBJ_ARROW_CURVED_RED=curved red hand-drawn arrow|DRAW_ON: arrow from yen
+S033.9|The arrow lands on a pair of dollar notes at the lower right|-|Bob left, yen upper right, dollars lower right|CHAR_BOB;OBJ_YEN_NOTES;OBJ_ARROW_CURVED_RED;OBJ_DOLLAR_PAIR=two green banknotes lying together|POP_IN: dollar notes
+S033.10|Single green United States Treasury certificate alone at the upper left|United States Treasury|certificate upper left|OBJ_TREASURY_CERT=hand-drawn green certificate lettered United States Treasury|CUT: Treasury certificate
+S033.11|A second certificate stacked in front|United States Treasury|certificates left|OBJ_TREASURY_CERT|BUILD: second certificate
+S033.12|Three certificates stacked and enlarged|United States Treasury|certificates left, large|OBJ_TREASURY_CERT|BUILD+ZOOM_IN: third certificate
+S033.13|A handwritten yield appears at the right|4%|certificates left, text right|OBJ_TREASURY_CERT;TXT_4PCT=large black handwritten 4%|TEXT_REVEAL: 4%
+#H36|After hedging costs and fees he pockets the spread|ORIGINAL_DRAWING
+S033.14|Bob in a close-up with a small surprised mouth|-|Bob fills left|CHAR_BOB|CUT: Bob close-up
+S033.15|Bob with a handwritten deduction at the right|- costs|Bob left, text right|CHAR_BOB;TXT_COSTS_FEES=handwritten deductions with minus signs|TEXT_REVEAL: - costs
+S033.16|Second deduction line|- costs / - fees|Bob left, text right|CHAR_BOB;TXT_COSTS_FEES|TEXT_REVEAL: - fees
+S033.17|Bob smiling and holding up a banknote|-|Bob centre|CHAR_BOB;OBJ_BANKNOTE_SMALL|CUT+FACE_CHANGE: Bob pockets the spread
+#H37|That's what became known as the yen carry trade: investors borrow in yen at near zero and invest in higher-yielding foreign assets|ORIGINAL_DRAWING;SCREEN_CAPTURE
+S033.18|Host smiling with hands on hips, alone|-|host centre|HOST|CUT: host
+S033.19|Dark social-media post explaining the size of the carry trade with an embedded chart of Japan's net international investments rising to about 487 trillion yen|The Kobeissi Letter / How large is the Yen carry trade? / On Monday, global markets experienced significant losses due to growing fears that the Yen carry trade is unwinding. […] / Going Abroad / 487T yen|post centre|SS_KOBEISSI_POST=dark-mode social-media post from a market-commentary account about the size of the yen carry trade with a rising chart|CUT: carry-trade size post
+S033.20|Bald bespectacled figure in a green tie (an investor) alone at the left of the canvas|-|figure left|CHAR_INVESTOR_GLASSES=bald stick figure with round glasses and a green tie|CUT: investor figure
+S033.21|Yen notes appear at the figure's feet|-|figure left, notes lower right|CHAR_INVESTOR_GLASSES;OBJ_YEN_NOTES|POP_IN: yen notes
+S033.22|Rate caption appears below|almost 0%|figure left, caption lower centre|CHAR_INVESTOR_GLASSES;OBJ_YEN_NOTES;TXT_ALMOST0|TEXT_REVEAL: almost 0%
+S033.23|A Treasury certificate appears at the upper right|almost 0% / United States Treasury|figure left, certificate upper right|CHAR_INVESTOR_GLASSES;OBJ_YEN_NOTES;TXT_ALMOST0;OBJ_TREASURY_CERT|POP_IN: Treasury certificate
+S033.24|Second certificate added|almost 0%|figure left, certificates right|CHAR_INVESTOR_GLASSES;OBJ_YEN_NOTES;TXT_ALMOST0;OBJ_TREASURY_CERT|BUILD: second certificate
+S033.25|Third certificate added|almost 0%|figure left, certificates right|CHAR_INVESTOR_GLASSES;OBJ_YEN_NOTES;TXT_ALMOST0;OBJ_TREASURY_CERT|BUILD: third certificate
+S033.26|A green rising arrow draws in at the lower right|almost 0%|figure left, certificates right, arrow lower right|CHAR_INVESTOR_GLASSES;OBJ_YEN_NOTES;TXT_ALMOST0;OBJ_TREASURY_CERT;OBJ_ARROW_GREEN=green hand-drawn rising arrow|DRAW_ON: return arrow
+#H38|When borrowing costs are near zero they don't just buy Treasuries; they buy tech stocks, real estate and emerging markets|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S034.0|Host with a pointer beside a chalkboard reading a question|no borrowing cost?|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_NOBORROW=white chalk-style no borrowing cost?|CUT: chalkboard question
+S034.1|Board text replaced by an exclamation|GO MAD!|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_GOMAD=white chalk-style GO MAD!|TEXT_SWAP: GO MAD!
+S035.0|A grey laptop marked CF closed at the upper left|CF|laptop upper left|OBJ_LAPTOP_CF=grey laptop bearing a CF logo|CUT: laptop (tech stocks)
+S035.1|A small house and an office tower with a red FOR SALE sign appear beneath it|SALE!|laptop upper left, house and tower centre|OBJ_LAPTOP_CF;BLDG_HOUSE_SMALL=small red-roofed cream house;BLDG_OFFICE_TOWER;OBJ_FOR_SALE=red FOR SALE sign|POP_IN: real estate
+S035.2|Two small grey robots with red eyes appear at the lower right (emerging markets)|SALE!|laptop upper left, property centre, robots lower right|OBJ_LAPTOP_CF;BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;OBJ_FOR_SALE;CHAR_ROBOT_SMALL=two small grey stick robots with red eyes and antennas|POP_IN: emerging-market robots
+#H39|If it's got a pulse and it yields more than 0%, they'll buy it|ORIGINAL_DRAWING
+S035.3|Host smiling with hands on hips, alone|-|host centre|HOST|CUT: host
+S035.4|A pinkish heart alone at the left|-|heart left|OBJ_HEART=hand-drawn muted pink heart|CUT: heart (pulse)
+S035.5|A green check mark and a figure line appear at the right|>0% returns|heart left, text right|OBJ_HEART;HL_GREEN_CHECK=large green hand-drawn check mark;TXT_RETURNS_POS=black handwritten >0% returns|POP_IN: >0% returns
+S035.6|A second green check mark appears beside the text|>0% returns|heart left, text right|OBJ_HEART;HL_GREEN_CHECK;TXT_RETURNS_POS|BUILD: second check
+#H40|This trade became one of the largest sources of global liquidity|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S035.7|Host smiling with a small hand raised, alone|-|host centre|HOST|CUT: host
+S035.8|Three yen banknotes stacked down the left|-|notes left|OBJ_YEN_NOTES|CUT: yen notes
+S035.9|A cartoon Earth appears at the right of the yen notes|-|notes left, Earth right|OBJ_YEN_NOTES;CHAR_EARTH|POP_IN: Earth
+S035.10|Japan character with a money bag and a banknote at the left beside the cartoon Earth|-|Japan left, Earth right|CHAR_JAPAN_FACE;OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG;CHAR_EARTH|CUT: Japan and the world
+#H41|At its peak the yen carry trade was estimated by some banks to be in the trillions|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S036.0|Single large pinkish yen banknote at the centre|-|note centre|OBJ_YEN_NOTES|CUT: yen note
+S036.1|Note smaller with a handwritten label above it|Yen carry trade|label upper left, note below|OBJ_YEN_NOTES;TXT_LABEL_YENCARRY=handwritten label Yen carry trade|SCALE_DOWN+TEXT_REVEAL: Yen carry trade
+S036.2|Equals sign at the right of the note|Yen carry trade / =|label upper left, note left, equals right|OBJ_YEN_NOTES;TXT_LABEL_YENCARRY;ICON_EQUALS|POP_IN: equals
+S036.3|Photo of a man in a dark coat lying back on a bed of banknote bundles appears after the equals sign|Yen carry trade / =|label, note, equals, photo right|OBJ_YEN_NOTES;TXT_LABEL_YENCARRY;ICON_EQUALS;IMG_MONEY_BED=third-party meme photo of a man in a dark coat lying on a pile of banknote bundles|POP_IN: money-pile photo
+#H42|It was like the global markets were running on Japanese Wi-Fi|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S037.0|Cartoon Earth alone at the centre-right|-|Earth centre-right|CHAR_EARTH|CUT: Earth
+S038.0|Large Japan character with half-lidded eyes holding a black Wi-Fi router with blue signal arcs|-|Japan left, router and waves right|CHAR_JAPAN_FACE;OBJ_ROUTER=hand-drawn black Wi-Fi router with blue signal arcs|CUT: Japan as the router
+S038.1|A tiny caption appears at the left|I control the modem!|Japan left, caption upper left|CHAR_JAPAN_FACE;OBJ_ROUTER;TXT_SMALL_CAPTION=small handwritten caption|TEXT_REVEAL: I control the modem!
+#H43|The trade relied on one assumption: Japanese yields would stay near zero forever|ORIGINAL_DRAWING
+S039.0|Host with a pointer beside a chalkboard heading|ONE assumption|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_ONEASSUMPTION=white chalk-style ONE assumption|CUT: chalkboard 'ONE assumption'
+S039.1|Host's arm extended toward the board, pointer gone|ONE assumption|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_ONEASSUMPTION|POSE_CHANGE: arm extended
+S039.2|Host's arm lowered|ONE assumption|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_ONEASSUMPTION|POSE_CHANGE: arm lowered
+S039.3|Pointer back in the host's hand, touching the board|ONE assumption|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_ONEASSUMPTION|POSE_CHANGE: pointer to the board
+S040.0|Handwritten text at the upper left and a Japan map at the right|yields near 0|text upper left, map right|TXT_YIELDS_NEAR0=handwritten yields near 0;MAP_JAPAN|CUT: yields near 0
+S040.1|A black infinity sign appears under the text|yields near 0|text upper left, infinity lower left, map right|TXT_YIELDS_NEAR0;MAP_JAPAN;ICON_INFINITY=large black hand-drawn infinity sign|POP_IN: forever
+#H44|But in 2024 that assumption broke when the Bank of Japan ended its yield curve control policy|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S040.2|Two words alone|But in|text centre|TXT_BUTIN=large black handwritten But in 2024...|CUT: But in
+S040.3|Line completes|But in 2024...|text centre|TXT_BUTIN|TEXT_REVEAL: 2024...
+S040.4|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host
+S040.5|Host aghast with hands at his chin|-|host centre|HOST|FACE_CHANGE: host aghast
+S040.6|Bank of Japan building alone at the left|BANK OF JAPAN|building left|BLDG_BOJ|CUT: Bank of Japan
+S040.7|Policy name appears at the right|yield curve control|building left, text right|BLDG_BOJ;TXT_YCC_TEXT=handwritten yield curve control|TEXT_REVEAL: yield curve control
+S040.8|Red X across the policy name|yield curve control|building left, text crossed|BLDG_BOJ;TXT_YCC_TEXT;HL_RED_X|STRIKE: policy ended
+#H45|And Japan raised interest rates for the first time in 17 years|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S040.9|Handwritten label at the upper left and the Japan map at the right|interest rates|text upper left, map right|TXT_INTEREST_RATES=handwritten interest rates label;MAP_JAPAN|CUT: interest rates
+S040.10|Green up arrow appears beside the label|interest rates|text upper left, arrow centre, map right|TXT_INTEREST_RATES;MAP_JAPAN;OBJ_ARROW_UP_GREEN=green hand-drawn up arrow|POP_IN: rates up
+S040.11|Duration appears at the lower left|interest rates / 17 YEARS!|text left, arrow centre, duration lower left, map right|TXT_INTEREST_RATES;MAP_JAPAN;OBJ_ARROW_UP_GREEN;TXT_17YEARS=handwritten 17 YEARS!|TEXT_REVEAL: 17 YEARS!
+#H46|And then they raised them again|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S040.12|Host aghast with hands at his chin, alone|-|host centre|HOST|CUT: host aghast
+S040.13|Two green up arrows appear at the left of the host|-|host centre, arrows left|HOST;OBJ_ARROW_UP_GREEN|POP_IN: two arrows
+S040.14|A third arrow appears at the right|-|host centre, arrows both sides|HOST;OBJ_ARROW_UP_GREEN|BUILD: third arrow
+#H47|Immediately after the second hike the S&P 500 dropped 6% and Japan's Nikkei 225 plummeted over 12% in a day|SCREEN_CAPTURE;ORIGINAL_DRAWING
+S040.15|Japan map with a single green up arrow at its left|-|arrow left, map centre|MAP_JAPAN;OBJ_ARROW_UP_GREEN|CUT: Japan and rates up
+S040.16|A US equity heat-map screenshot in solid red appears at the right|-|arrow left, map centre, heat-map right|MAP_JAPAN;OBJ_ARROW_UP_GREEN;SS_SP_HEATMAP_RED=stock-market heat-map screenshot almost entirely red with company tickers|POP_IN: red heat map
+S040.17|Red handwritten drop under the heat map|- 6%|heat-map right, label below|MAP_JAPAN;OBJ_ARROW_UP_GREEN;SS_SP_HEATMAP_RED;TXT_RED_6PCT=red handwritten - 6%|TEXT_REVEAL: -6%
+S040.18|Red handwritten index name alone|Nikkei 225|text centre|TXT_RED_NIKKEI=red handwritten Nikkei 225|CUT: Nikkei 225
+S040.19|Long-run Nikkei line chart with a red downward arrow|Nikkei 225, Japan, M, Tokyo (CFD) / Investing.com|chart centre|SS_NIKKEI_CHART;HL_RED_ARROW|CUT: Nikkei chart
+#H48|It was a clear signal that markets were officially spooked|ORIGINAL_DRAWING;RASTER_ART
+S041.0|Close-up of the bed with the dark red-eyed monster peeking out from under it|-|bed fills frame|OBJ_BED_WORRIED;CHAR_BED_MONSTER|CUT: monster under the bed
+S041.1|Close-up of the worried sleeper's face on the pillow|-|sleeper fills frame|OBJ_BED_WORRIED;CHAR_BED_MONSTER|CUT: worried sleeper
+#H49|Because when Japanese yields rise, two things happen: borrowing in yen gets more expensive|ORIGINAL_DRAWING
+S042.0|Japan character with a money bag at its feet and a banknote in its arm|-|Japan left|CHAR_JAPAN_FACE;OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG|CUT: Japan with money
+S042.1|Green up arrow appears at the right|-|Japan left, arrow right|CHAR_JAPAN_FACE;OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG;OBJ_ARROW_UP_GREEN|POP_IN: yields up
+S042.2|Heading at the upper left, Japan character with a hand on hip and yen notes at the lower right|N°1|heading upper left, Japan centre, yen right|TXT_OPTION_NUM;CHAR_JAPAN_FACE;OBJ_YEN_NOTES|CUT: effect one with yen notes
+S042.3|Tiny remark from Japan|N°1 / Pay up if you want my yen!|heading upper left, Japan centre, caption left|TXT_OPTION_NUM;CHAR_JAPAN_FACE;OBJ_YEN_NOTES;TXT_SMALL_CAPTION|TEXT_REVEAL: Pay up if you want my yen!
+#H50|And two, hedging currency risk becomes more expensive too|ORIGINAL_DRAWING
+S042.4|Heading and a pale bald figure in an orange tie with a hand at his chin beside a small house and an office tower|N°2|heading upper left, figure centre, property right|TXT_OPTION_NUM;CHAR_BEWILDERED;BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER|CUT: effect two with the bewildered man
+S042.5|Figure shifts left and a pair of dollar notes appears under the property|N°2|heading upper left, figure left, property and notes right|TXT_OPTION_NUM;CHAR_BEWILDERED;BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;OBJ_DOLLAR_PAIR|REPOSITION+POP_IN: dollar notes
+#H51|And suddenly the free-money trade isn't so free anymore|ORIGINAL_DRAWING
+S043.0|Host with an arm out beside a chalkboard asking a question|Free money???|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_FREEMONEY=white chalk-style Free money???|CUT: chalkboard 'Free money???'
+S043.1|Board text replaced by a hesitation; host's pointer lowered across his body|Well, uh...|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_WELLUH=white chalk-style Well, uh...|TEXT_SWAP: Well, uh...
+#H52|And that 4% US Treasury Bob was looking at doesn't look so good anymore|ORIGINAL_DRAWING
+S044.0|Bob with a small smile in a close-up at the left|-|Bob left|CHAR_BOB|CUT: Bob
+S044.1|A handwritten yield appears at the right|4%|Bob left, yield right|CHAR_BOB;TXT_4PCT|TEXT_REVEAL: 4%
+S044.2|Bob's face turns doubtful; a Treasury certificate appears at the right|4% / United States Treasury|Bob left, yield centre, certificate right|CHAR_BOB;TXT_4PCT;OBJ_TREASURY_CERT|FACE_CHANGE+POP_IN: doubtful Bob, certificate
+#H53|This was the beginning of the end for the yen carry trade|ORIGINAL_DRAWING
+S045.0|Large pale grey, faded yen banknote with a grey outline|-|note fills frame|OBJ_YEN_FADED=hand-drawn yen banknote faded to grey|CUT: faded yen
+#H54|Because now the math had flipped; when the math flips, the capital flows flip too|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S046.0|Host with an open mouth and a pointer beside a chalkboard line|Everything's different now!!!|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_DIFFERENT=white chalk-style Everything's different now!!!|CUT: chalkboard 'Everything's different now!!!'
+S046.1|A dollar banknote encircled by three red curved arrows forming a loop|-|loop centre|OBJ_BANKNOTE_BIG;OBJ_LOOP_ARROWS=three thick red curved arrows forming a loop|CUT: capital-flow loop
+#H55|And the money that flowed out of Japan for decades was starting to return home|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S047.0|Japan map in the centre with small dollar and yen banknotes scattered around it (returning)|-|map centre, notes around|MAP_JAPAN;OBJ_BANKNOTE_SMALL;OBJ_YEN_NOTES|CUT: notes around Japan
+#H56|This is what's called repatriation|ORIGINAL_DRAWING
+S048.0|Host with a pointer beside an empty green chalkboard|-|host left, board right|HOST;POINTER;OBJ_CHALKBOARD|CUT: empty chalkboard
+S048.1|Board gains a term in white chalk; host's arm extends|Repatriation|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_REPATRIATION=white chalk-style Repatriation|TEXT_REVEAL: Repatriation
+S048.2|Board enlarged with the host's pointer touching the word, arms apart|Repatriation|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_REPATRIATION|ZOOM_IN+POSE_CHANGE: board enlarged, pointer on the word
+#H57|And it's one of the biggest threats in global markets today: investors realize the cheapest source of liquidity is no longer cheap|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S049.0|Bald bespectacled figure in a green tie with a hand at his chin and a worried face, alone at the left|-|figure left|CHAR_INVESTOR_GLASSES|CUT: worried investor
+S049.1|Japan character with a money bag and a banknote appears at the right|-|investor left, Japan right|CHAR_INVESTOR_GLASSES;CHAR_JAPAN_FACE;OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG|POP_IN: Japan with money
+S049.2|Japan character empties its hands and rests one hand on its hip; the investor larger at the left|-|investor left, Japan right|CHAR_INVESTOR_GLASSES;CHAR_JAPAN_FACE|POSE_CHANGE: Japan holds nothing
+S049.3|Host smiling with arms slightly out, alone|-|host centre|HOST|CUT: host
+#H58|For decades Japan was one of the most consistent, price-insensitive buyers of long-term Treasuries|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S049.4|Japan character with a hand on its hip, empty-handed|-|Japan left|CHAR_JAPAN_FACE|CUT: Japan
+S049.5|A green United States Treasury certificate appears at the right|United States Treasury|Japan left, certificate right|CHAR_JAPAN_FACE;OBJ_TREASURY_CERT|POP_IN: Treasury certificate
+S050.0|Japan character in pixel sunglasses holding banknotes in both arms, filling the frame|-|Japan fills frame|CHAR_JAPAN;ICON_PIXEL_SUNGLASSES;OBJ_BANKNOTE_BIG|CUT: Japan buys everything
+S050.1|A small demand appears beside Japan|gimme those treasuries!|Japan left, caption right|CHAR_JAPAN;ICON_PIXEL_SUNGLASSES;OBJ_BANKNOTE_BIG;TXT_SMALL_CAPTION|TEXT_REVEAL: gimme those treasuries!
+S050.2|Japan character in sunglasses surrounded by large Treasury certificates and banknotes flying in|United States Treasury / gimme those treasuries!|Japan centre, certificates around|CHAR_JAPAN;ICON_PIXEL_SUNGLASSES;OBJ_TREASURY_CERT;OBJ_BANKNOTE_BIG;TXT_SMALL_CAPTION|BUILD: certificates pile in
+#H59|The yields on long-term Treasuries aren't set by the Fed chair: the Fed controls short-term rates|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S051.0|Host smiling with arms slightly out, alone|-|host centre|HOST|CUT: host
+S052.0|Hand-drawn Federal Reserve building alone|FEDERAL RESERVE|building centre-left|BLDG_FED=hand-drawn columned Federal Reserve building with a lettered pediment|CUT: Fed building
+S052.1|Label and a big percent sign appear at the right|FEDERAL RESERVE / short-term %|building left, label right|BLDG_FED;TXT_SHORTTERM=handwritten short-term label over a percent sign|TEXT_REVEAL: short-term %
+S052.2|Maturity label alone at the upper left|10 year|text upper left|TXT_MATURITY=handwritten maturity labels|CUT: 10 year
+S052.3|Second maturity label appears lower right|10 year / 20 year|two labels diagonal|TXT_MATURITY|BUILD: 20 year
+S052.4|Third maturity label appears at the lower right|10 year / 20 year / 30 year|three labels diagonal|TXT_MATURITY|BUILD: 30 year
+#H60|Those yields are largely determined by supply and demand|SCREEN_CAPTURE;ORIGINAL_DRAWING
+S052.5|Host rising at the lower left looking at a US Treasuries yield-curve chart with a smooth rising curve at the long end|US Treasuries Yield Curve / A charting app for interest rates and macroeconomic indicators / 2/17/2026|chart right, host lower left|SS_YIELD_CURVE_CHART=charting-app US Treasuries yield curve with a smooth line rising at long maturities;HOST|CUT: yield-curve chart
+#H61|The problem is everyone's staring at the wrong lever|ORIGINAL_DRAWING
+S052.6|Three brown teddy bears with blue bow ties at the upper left|-|bears upper left|OBJ_TEDDY_BEARS=three hand-drawn brown teddy bears with blue bow ties|CUT: teddy bears
+S052.7|A pale baby figure with a pacifier clutching a fourth bear and a nappy, sitting at the right|-|bears left, baby right|OBJ_TEDDY_BEARS;CHAR_BABY=hand-drawn pale baby with a pacifier clutching a teddy bear|POP_IN: baby with a bear
+S052.8|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host sceptical
+S052.9|Host with a flat mouth and one arm out|-|host centre|HOST|POSE_CHANGE: arm out
+#H62|Legendary investor and founder of the world's largest hedge fund explains it: watch the bond market (third-party interview clip)|FOOTAGE_CLIP;ORIGINAL_DRAWING;MOTION_GRAPHICS
+S053.0|Host at the lower left beside a vertical third-party interview clip of a grey-haired man in a dark cardigan seated at a table under a white title banner and a burned-in caption line at the bottom|YOU NEED TO PAY ATTENTION TO THE BOND MARKETS / [burned-in subtitle line from the clip]|clip centre-left, host lower left|FOOTAGE_DALIO_CLIP=third-party vertical interview clip of an investor seated at a table with a banner about paying attention to the bond markets and burned-in subtitles (identity per the narration; not asserted from the image);HOST|CUT: interview clip, host beside it
+S053.1|Host gone; handwritten thanks at the lower right and the clip's channel credit beneath it|Thanks Ray! / youtube.com/@principlesbyraydalio|clip centre, credit lower right|FOOTAGE_DALIO_CLIP;TXT_THANKS=handwritten Thanks Ray! with the clip's channel address|EXIT+TEXT_REVEAL: Thanks Ray! and source credit
+S053.2|Clip continues: speaker gestures with an outstretched hand; the channel credit stays|YOU NEED TO PAY ATTENTION TO THE BOND MARKETS / [burned-in subtitle line]|clip centre|FOOTAGE_DALIO_CLIP|FOOTAGE_CUT: clip advances
+S053.3|Clip continues: speaker gestures toward the camera|YOU NEED TO PAY ATTENTION TO THE BOND MARKETS / [burned-in subtitle line]|clip centre|FOOTAGE_DALIO_CLIP|FOOTAGE_CUT: clip advances
+S053.4|Clip continues: speaker hands clasped|YOU NEED TO PAY ATTENTION TO THE BOND MARKETS / [burned-in subtitle line]|clip centre|FOOTAGE_DALIO_CLIP|FOOTAGE_CUT: clip advances
+S053.5|Clip continues: speaker with an open palm|YOU NEED TO PAY ATTENTION TO THE BOND MARKETS / [burned-in subtitle line]|clip centre|FOOTAGE_DALIO_CLIP|FOOTAGE_CUT: clip advances
+S053.6|Clip continues: speaker with both palms up|YOU NEED TO PAY ATTENTION TO THE BOND MARKETS / [burned-in subtitle line]|clip centre|FOOTAGE_DALIO_CLIP|FOOTAGE_CUT: clip advances
+S053.7|Clip continues: speaker with hands together|YOU NEED TO PAY ATTENTION TO THE BOND MARKETS / [burned-in subtitle line]|clip centre|FOOTAGE_DALIO_CLIP|FOOTAGE_CUT: clip advances
+S053.8|Clip continues: speaker leaning forward|YOU NEED TO PAY ATTENTION TO THE BOND MARKETS / [burned-in subtitle line]|clip centre|FOOTAGE_DALIO_CLIP|FOOTAGE_CUT: clip advances
+S053.9|Clip continues: final shot of the segment|YOU NEED TO PAY ATTENTION TO THE BOND MARKETS / [burned-in subtitle line]|clip centre|FOOTAGE_DALIO_CLIP|FOOTAGE_CUT: clip advances
+#H63|While everyone is hyper-analysing the Fed chair's press conferences like a new game-trailer|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S053.10|Host smiling with hands on hips, alone|-|host centre|HOST|CUT: host
+S054.0|Ponytailed figure with a magnifying glass at the left and a photo of a man speaking at a press-conference podium with a seal and flags at the right|-|figure left, photo right|CHAR_ANALYST_PONYTAIL=stick figure with a brown ponytail holding a magnifying glass;IMG_PRESSCONF_PHOTO=third-party photo of an official at a central-bank press-conference podium with flags (narration names the Fed chair here; identity not asserted from the image)|CUT: analyst scrutinising a press conference
+S054.1|Third-party poster for a video-game sequel appears at the right of the ponytailed analyst|grand theft auto VI COMING 2025|analyst left, poster right|CHAR_ANALYST_PONYTAIL;IMG_GAME_POSTER=third-party poster for a crime video game with two characters on a car and palm trees|SWAP: game poster replaces the press-conference photo
+S054.2|Red strike through the release year and a handwritten reply under the poster|grand theft auto VI COMING 2025 / lol nope|analyst left, poster right, caption lower right|CHAR_ANALYST_PONYTAIL;IMG_GAME_POSTER;HL_RED_X;TXT_SMALL_CAPTION|STRIKE+TEXT_REVEAL: year struck through, lol nope
+#H64|They're looking at the wrong end of the yield curve: the Fed controls the short end, the overnight rate|SCREEN_CAPTURE;ORIGINAL_DRAWING
+S055.0|Yield-curve chart alone with the long end sweeping up|US Treasuries Yield Curve / A charting app for interest rates and macroeconomic indicators|chart fills frame|SS_YIELD_CURVE_CHART|CUT: yield-curve chart
+S055.1|Federal Reserve building enlarged at the centre|FEDERAL RESERVE|building centre|BLDG_FED|CUT: Fed building
+S055.2|Fed building small at the upper left with two red arrows of different lengths labelled by horizon|many many years / not so far|building upper left, arrows lower right|BLDG_FED;OBJ_ARROW_RED_LONG=long red hand-drawn arrow;TXT_ARROW_LABELS=handwritten arrow labels|CUT: short versus long reach of the Fed
+S055.3|Yield-curve chart again|US Treasuries Yield Curve|chart fills frame|SS_YIELD_CURVE_CHART|CUT: yield-curve chart (reprise)
+#H65|The long end is driven by supply and demand; the US runs trillion-dollar deficits annually, so even a slight reduction in demand matters|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S055.4|Host smiling with hands on hips, alone|-|host centre|HOST|CUT: host
+S055.5|US map character with a speech bubble and a single money bag, a deficit label at the upper right|DEFICIT = 100M / Don't worry, I'll pay.|map left, label upper right, bag lower right|MAP_USA_CHAR=hand-drawn green USA-map character with eyes;OBJ_MONEY_BAG_BIG;TXT_DEFICIT_AMOUNT=handwritten DEFICIT = amount label;TXT_SPEECH_ILLPAY=hand-lettered speech bubble|CUT: deficit 100M
+S055.6|Label grows and a second bag appears|DEFICIT = 500B / Don't worry, I'll pay.|map left, label upper right, two bags|MAP_USA_CHAR;OBJ_MONEY_BAG_BIG;TXT_DEFICIT_AMOUNT;TXT_SPEECH_ILLPAY|TEXT_SWAP+BUILD: 500B, second bag
+S055.7|Label grows again with three bags|DEFICIT = 800B / Don't worry, I'll pay.|map left, label upper right, three bags|MAP_USA_CHAR;OBJ_MONEY_BAG_BIG;TXT_DEFICIT_AMOUNT;TXT_SPEECH_ILLPAY|TEXT_SWAP+BUILD: 800B, three bags
+S055.8|Label turns red with a pile of seven bags; the map's reply changes to a doubtful line|DEFICIT = ONE TRILLION / Someday... I guess...|map left, label upper right, bag pile lower right|MAP_USA_CHAR;OBJ_MONEY_BAG_BIG;TXT_DEFICIT_AMOUNT;TXT_SPEECH_ILLPAY;TXT_RED_TRILLION=red hand-lettered ONE TRILLION|TEXT_SWAP+BUILD: one trillion, a heap of bags
+#H66|The Treasury has to issue massive amounts of new debt every year just to keep the lights on|ORIGINAL_DRAWING
+S056.0|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host sceptical
+S056.1|Federal Reserve building small at the upper left with a DEBT document beside it and a second one entering at the lower right|FEDERAL RESERVE / DEBT|building upper left, documents lower|BLDG_FED;OBJ_DEBT_DOC=hand-drawn DEBT document with red title and scribbled lines|CUT: Fed with debt documents
+#H67|And as this debt issuance keeps growing, someone has to absorb it: where does it go?|ORIGINAL_DRAWING
+S057.0|Host with an arm out beside a chalkboard asking a question|Where does it go?|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_WHEREGO=white chalk-style Where does it go?|CUT: chalkboard 'Where does it go?'
+S057.1|Host's pointer returns across his body; his face goes flat|Where does it go?|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_WHEREGO|FACE_CHANGE+POSE_CHANGE: flat mouth, pointer
+#H68|For the last few decades Japan was a key part of that absorption machine|ORIGINAL_DRAWING
+S058.0|Two-line statement alone|And for the last few decades...|text centre|TXT_LASTDECADES=black handwritten And for the last few decades...|CUT: And for the last few decades...
+S058.1|Japan map alone at the right|-|map centre-right|MAP_JAPAN|CUT: Japan
+S058.2|DEBT documents and Treasury certificates appear around the Japan map|DEBT / United States Treasury|map centre, documents around|MAP_JAPAN;OBJ_DEBT_DOC;OBJ_TREASURY_CERT|POP_IN: debt and Treasuries around Japan
+S058.3|Host smiling with arms slightly out, alone|-|host centre|HOST|CUT: host
+#H69|Sponsor segue: a quick pause, because this video is sponsored by Gamma|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S059.0|Host with a pointer and an empty chalkboard; a tiny yellow tick starts at the lower-left corner (a progress bar begins)|-|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;UI_SPONSOR_BAR=thin yellow progress bar along the bottom edge that lengthens through the sponsor segment|CUT: empty chalkboard, sponsor bar starts
+S059.1|White sponsor wordmark on the board; host with closed smiling eyes pointing at it|GAMMA|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;LOGO_GAMMA_CHALK=white GAMMA wordmark on the chalkboard;UI_SPONSOR_BAR|TEXT_REVEAL: GAMMA
+S060.0|Host smiling with hands on hips, alone|-|host centre|HOST;UI_SPONSOR_BAR|CUT: host
+#H70|I personally use Gamma because the hardest part about creating finance videos isn't the research|ORIGINAL_DRAWING
+S061.0|Large host smiling at a desk with the CF laptop at the lower right|CF|host left, laptop right|HOST;OBJ_DESK=hand-drawn brown wooden desk;OBJ_LAPTOP_CF=grey laptop bearing a CF logo;UI_SPONSOR_BAR|CUT: host at the laptop
+S061.1|Host's grin widens and a small caption appears|doing research is neat!|host left, caption upper centre, laptop right|HOST;OBJ_DESK;OBJ_LAPTOP_CF;UI_SPONSOR_BAR;TXT_SMALL_CAPTION|FACE_CHANGE+TEXT_REVEAL: doing research is neat!
+#H71|It's turning scattered ideas into a clear structure|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S062.0|Host seated amid clutter: a trading monitor and keyboard, a gold bar, banknotes, paper stacks, a briefcase, a paper plane, a dollar sign and a chart poster on the wall|-|host centre, clutter around|HOST;OBJ_CLUTTER_SCENE=hand-drawn desktop clutter with a trading monitor, gold bar, banknotes, paper stacks, a closed laptop, a briefcase, a paper plane and a wall chart;UI_SPONSOR_BAR|CUT: overwhelming clutter
+S062.1|Caption appears beside the host|this is overwhelming|caption upper left, host centre|HOST;OBJ_CLUTTER_SCENE;UI_SPONSOR_BAR;TXT_SMALL_CAPTION|TEXT_REVEAL: this is overwhelming
+#H72|When I'm breaking down complex topics like the cross-currency carry trade, the thinking is messy at first|ORIGINAL_DRAWING
+S063.0|Host with a pointer beside a chalkboard beginning a question|What even is|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_WHATEVENIS=white chalk-style What even is...|CUT: chalkboard question start
+S063.1|Board enlarged with the full question; host's arm out|What even is the cross-currency carry trade???|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_WHATEVENIS|ZOOM_IN+TEXT_REVEAL: the cross-currency carry trade???
+S064.0|Host with a flat mouth and hands on hips in a close-up, alone|-|host centre|HOST;UI_SPONSOR_BAR|CUT: host unimpressed
+S064.1|A thought bubble holds a black scribble tangle|-|host left, bubble upper right|HOST;UI_SPONSOR_BAR;OBJ_THOUGHT_BUBBLE=hand-drawn thought bubble;OBJ_SCRIBBLE=dense black scribble tangle|POP_IN: tangled thought
+S064.2|Five coloured sticky notes scattered across the canvas with single words|IDEA / THOUGHT / also, do the laundry! / CONCEPT / EXPLANATION|notes scattered|UI_SPONSOR_BAR;OBJ_STICKY_NOTES=five coloured sticky notes labelled IDEA, THOUGHT, CONCEPT, EXPLANATION and a laundry reminder|CUT: sticky notes
+#H73|Notes everywhere, half-formed arguments, and connections that make sense in my head|ORIGINAL_DRAWING
+S065.0|Host with a flat mouth beside a cork board of pinned notes joined by red strings|-|host left, board right|HOST;OBJ_CORKBOARD=hand-drawn cork board with pinned notes and red string;UI_SPONSOR_BAR|CUT: cork board
+S065.1|Host smiling nervously with a sweat drop and a caption|I swear this'll make sense|caption upper left, host left, board right|HOST;OBJ_CORKBOARD;UI_SPONSOR_BAR;TXT_SMALL_CAPTION|FACE_CHANGE+TEXT_REVEAL: I swear this'll make sense
+#H74|If the structure isn't clear, the whole thing falls apart|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S066.0|Framed picture with banknotes, the host and a tax form and a caption|VIDEO THAT MAKES SENSE!!!|frame centre|OBJ_FRAME_VIDEO=hand-drawn white frame holding banknotes, the host and a tax form;UI_SPONSOR_BAR;TXT_FRAME_CAPTION=handwritten caption under the frame|CUT: framed video that makes sense
+S066.1|The frame tears down the middle, pieces separate and the caption changes|NEVERMIND!|torn frame centre|OBJ_FRAME_VIDEO;UI_SPONSOR_BAR;TXT_FRAME_CAPTION|ANIM+TEXT_SWAP: frame tears, NEVERMIND!
+S067.0|Host with a pointer and an empty chalkboard|-|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;UI_SPONSOR_BAR|CUT: empty chalkboard
+#H75|That's where Gamma comes in: it isn't just a presentation tool, it's the bridge between raw ideas and polished output|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S067.1|Host with closed smiling eyes and a pointer on the chalkboard wordmark|GAMMA|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;LOGO_GAMMA_CHALK;UI_SPONSOR_BAR|TEXT_REVEAL: GAMMA
+S068.0|Navy sponsor wordmark large alone at the centre|GAMMA|logo centre|LOGO_GAMMA=navy GAMMA wordmark;UI_SPONSOR_BAR|CUT: sponsor logo
+S068.1|Logo smaller and tilted over a red arrow pointing right|GAMMA|logo upper right, arrow below|LOGO_GAMMA;UI_SPONSOR_BAR;OBJ_ARROW_RED_BRIDGE=red hand-drawn arrow under the logo|REFRAME+POP_IN: logo with arrow
+S068.2|Host at the left with a scribble thought bubble and the logo-with-arrow at the right|GAMMA|host left, logo and arrow right|HOST;OBJ_THOUGHT_BUBBLE;OBJ_SCRIBBLE;LOGO_GAMMA;OBJ_ARROW_RED_BRIDGE;UI_SPONSOR_BAR|REPOSITION+POP_IN: host's messy thoughts to the logo
+S068.3|Host smiling with arms slightly out, alone|-|host centre|HOST;UI_SPONSOR_BAR|CUT: host
+#H76|Here's how I've been using it: start inside an AI assistant and upload research and notes|SCREEN_CAPTURE
+S069.0|Dark AI-assistant home page in a window on white with a greeting, a prompt box and an open attachment menu|Hello, night owl / How can I help you today? / Add files or photos / Take a screenshot / Add to project / Web search / Use style / Add connectors|window centre|SS_AI_ASSISTANT_HOME=dark-mode AI-assistant home screen with a prompt box and an attachment menu;UI_SPONSOR_BAR|CUT: assistant home page, attachment menu
+S069.1|Window enlarged with a loading file chip in the prompt box|Hello, night owl / How can I help you today?|window centre|SS_AI_ASSISTANT_HOME;UI_SPONSOR_BAR|REFRAME+UI_STATE: file chip loading
+S069.2|Two document thumbnails appear in the prompt box|Hello, night owl / How can I help you today?|window centre|SS_AI_ASSISTANT_HOME;UI_SPONSOR_BAR|UI_STATE: two uploaded documents
+S069.3|Window shifted right and the attachment menu opens again|Add files or photos / Take a screenshot / Add to project / Web search / Use style / Add connectors|window right of centre|SS_AI_ASSISTANT_HOME;UI_SPONSOR_BAR|REPOSITION+UI_STATE: attachment menu opens
+#H77|From there I go into the assistant's settings and enable the new Gamma connector|SCREEN_CAPTURE
+S069.4|Window shifted again and the cursor on Add connectors|Add connectors|window centre|SS_AI_ASSISTANT_HOME;UI_SPONSOR_BAR|REPOSITION+UI_STATE: cursor on Add connectors
+S069.5|Connector directory zoomed in: tiles for design, chat, project-management and storage integrations with plus buttons and the cursor over the Gamma tile|Canva / Figma / Slack / monday.com / Gamma / Create presentations, docs, socials, and sites with AI / Box / Asana / Excalidraw / Amplitude / Clay|directory fills frame|SS_CONNECTOR_DIRECTORY=dark-mode AI-assistant connector directory with integration tiles including Gamma;UI_SPONSOR_BAR|ZOOM_IN+UI_STATE: connector directory with the Gamma tile
+S070.0|Light-blue sponsor dialog on white: an import-with-AI file picker with a selected file name, content-type options and a Continue button|Import with AI / Select the file you'd like to transform / Yen Carry Trade Unwind_s U.S. Impact.pdf / What would you like to create with this content? / Presentation / Webpage / Document / Social / Continue|dialog centre|SS_GAMMA_IMPORT=sponsor product dialog 'Import with AI' with a PDF selected and Presentation chosen;UI_SPONSOR_BAR|CUT: Gamma import dialog
+#H78|All I have to do is ask Gamma to create a presentation; in seconds it builds a clean structured deck|SCREEN_CAPTURE
+S070.1|Import dialog with the Continue button now showing a configuring state|Import with AI / Yen Carry Trade Unwind_s U.S. Impact.pdf / Presentation / [configuring button]|dialog centre|SS_GAMMA_IMPORT;UI_SPONSOR_BAR|UI_STATE: continue becomes configuring
+S071.0|Empty dark rectangle window (loading) at the centre of white|-|window centre|SS_GAMMA_WINDOW=dark empty product-window rectangle;UI_SPONSOR_BAR|CUT: loading window
+S071.1|Dark presentation editor mid-generation with a title card and a highlighted second card|The Unwinding of the Yen Carry Trade / A structural transformation in global liquidity threatening U.S. financial stability / The Genesis: Japan's "Lost Decades" / Following Japan's asset bubble collapse in the 1990s […]|editor centre|SS_GAMMA_DECK=sponsor product editor showing a generated dark-themed presentation with title and section cards;UI_SPONSOR_BAR|CUT: deck generating
+S072.0|Editor enlarged with an assistant panel at the right inviting a prompt and the title card with a skyline photo|The Unwinding of the Yen Carry Trade / The Genesis: Japan's "Lost Decades" / Agent / Work keeping you up, Casually Editor? Pass it to me|editor fills frame|SS_GAMMA_DECK;UI_SPONSOR_BAR|ZOOM_IN: editor with assistant panel
+S072.1|Assistant panel shows a text reply being typed|The Unwinding of the Yen Carry Trade / The Genesis: Japan's "Lost Decades" / Agent|editor fills frame|SS_GAMMA_DECK;UI_SPONSOR_BAR|UI_STATE: assistant reply
+S072.2|Assistant panel shows a card being created|The Unwinding of the Yen Carry Trade / Creating card…|editor fills frame|SS_GAMMA_DECK;UI_SPONSOR_BAR|UI_STATE: creating a card
+S073.0|Deck scrolled down to a dark skyline image and a new section card|The Genesis: Japan's "Lost Decades" / How the Carry Trade Works|editor fills frame|SS_GAMMA_DECK;UI_SPONSOR_BAR|SCROLL: next section
+S073.1|Section card title and two numbered step tiles|How the Carry Trade Works / 1 Borrow Yen / 2 Convert to Dollars / 3 Invest Abroad / 4 Profit from Spread|editor fills frame|SS_GAMMA_DECK;UI_SPONSOR_BAR|SCROLL: steps
+S073.2|Data card with three headline figures and two ring gauges|Hard Data: The Numbers Behind the Unwind / $1.2T Japan's Treasury Holdings / ¥40T/$25… BIS Carry Trade Estimate / $1T-$2T Consensus Carry Trade Range / 3.436% 30-Year JGB Record High / 2.019% 10-Year JGB Yield|editor fills frame|SS_GAMMA_DECK;UI_SPONSOR_BAR|SCROLL: data card
+#H79|Gamma allows you to go from brainstorming to a finished deck without losing momentum|ORIGINAL_DRAWING
+S074.0|Host seated amid the earlier clutter: monitor, gold bar, banknotes, paper stacks, closed laptop, briefcase, paper plane, dollar sign, chart poster|-|host centre, clutter around|HOST;OBJ_CLUTTER_SCENE;UI_SPONSOR_BAR|CUT: back to the clutter
+S075.0|Large smiling host at a desk with the CF laptop|CF|host left, laptop right|HOST;OBJ_DESK;OBJ_LAPTOP_CF;UI_SPONSOR_BAR|CUT: host at the laptop
+#H80|It's not just limited to the AI assistant|ORIGINAL_DRAWING
+S076.0|Host with a pointer and a chalkboard carrying the assistant's wordmark|Claude|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;LOGO_CLAUDE_CHALK=white asterisk-and-wordmark Claude logo on the chalkboard;UI_SPONSOR_BAR|CUT: chalkboard with the assistant's name
+S076.1|Host's arm extends toward the board|Claude|host left, board right|HOST;OBJ_CHALKBOARD;LOGO_CLAUDE_CHALK;UI_SPONSOR_BAR|POSE_CHANGE: arm extends
+#H81|Gamma can connect to your GitHub, Notion and even your Gmail|COMPOSITED_STILLS;MOTION_GRAPHICS
+S077.0|Navy sponsor wordmark alone at the upper centre|GAMMA|logo upper centre|LOGO_GAMMA;UI_SPONSOR_BAR|CUT: sponsor wordmark
+S077.1|A black code-hosting cat logo appears under the wordmark|GAMMA|logo upper centre, icon lower left|LOGO_GAMMA;UI_SPONSOR_BAR;LOGO_GITHUB=black circular code-hosting cat logo|POP_IN: code-hosting logo
+S077.2|Wordmark shifts left and a notes-app logo appears beside the code-hosting logo|GAMMA|logo upper left, icons lower left|LOGO_GAMMA;UI_SPONSOR_BAR;LOGO_GITHUB;LOGO_NOTION=black notes-app N logo|REPOSITION+POP_IN: notes-app logo
+S077.3|Wordmark centred again and an email logo appears as the third icon|GAMMA|logo upper centre, three icons lower centre|LOGO_GAMMA;UI_SPONSOR_BAR;LOGO_GITHUB;LOGO_NOTION;LOGO_GMAIL=black envelope email logo|REPOSITION+POP_IN: email logo
+#H82|Gamma makes sure your ideas don't stay trapped as notes|ORIGINAL_DRAWING
+S078.0|Host with a flat mouth beside the cork board of pinned notes joined by red strings|-|host left, board right|HOST;OBJ_CORKBOARD;UI_SPONSOR_BAR|CUT: cork board of trapped ideas
+S079.0|Five coloured sticky notes scattered|IDEA / THOUGHT / also, do the laundry! / CONCEPT / EXPLANATION|notes scattered|OBJ_STICKY_NOTES;UI_SPONSOR_BAR|CUT: sticky notes (reprise)
+#H83|If you're interested, head to gamma.app or find it inside the assistant's connectors|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S079.1|Host smiling with one hand raised, alone|-|host centre|HOST;UI_SPONSOR_BAR|CUT: host
+S079.2|Web address above the host|gamma.app|text top, host centre|HOST;UI_SPONSOR_BAR;TXT_URL_GAMMA=large black handwritten gamma.app|TEXT_REVEAL: gamma.app
+S079.3|Assistant logo above the host|Claude|logo top, host centre|HOST;UI_SPONSOR_BAR;LOGO_CLAUDE=salmon asterisk and black Claude wordmark|SWAP: Claude logo
+#H84|Thank you again to Gamma for sponsoring this video|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S079.4|Host smiling at left and the sponsor wordmark drawn as a character with stick legs at the right|GAMMA|host left, logo character right|HOST;UI_SPONSOR_BAR;CHAR_GAMMA=GAMMA wordmark drawn as a stick character with legs|CUT: sponsor character
+S079.5|Host eyes closed and an arm stretched to the sponsor character in a thank-you|GAMMA|host left, logo character right|HOST;UI_SPONSOR_BAR;CHAR_GAMMA|POSE_CHANGE: thank-you pose
+#H85|Now back to how Japan might wreck our economy: if one of the largest buyers stops buying, yields have to rise|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S079.6|Large Japan character with half-lidded eyes and a hand on its hip, filling the frame (sponsor bar gone)|-|Japan fills frame|CHAR_JAPAN_FACE|CUT: Japan close-up, return from the sponsor
+S079.7|Japan raises one finger|-|Japan fills frame|CHAR_JAPAN_FACE|POSE_CHANGE: finger raised
+S079.8|Japan smaller, dropping a Treasury certificate toward a grey trash can|-|Japan left, trash can lower right|CHAR_JAPAN_FACE;OBJ_TREASURY_CERT;OBJ_TRASH_CAN=grey hand-drawn trash can|REFRAME+POP_IN: Japan bins a Treasury note
+S079.9|A line of speech appears beside Japan|I don't wanna play with you anymore|Japan left, caption upper left, trash can right|CHAR_JAPAN_FACE;OBJ_TREASURY_CERT;OBJ_TRASH_CAN;TXT_SMALL_CAPTION|TEXT_REVEAL: I don't wanna play with you anymore
+S079.10|Certificate now sticks out of the trash can; Japan's arm extended|-|Japan left, trash can right|CHAR_JAPAN_FACE;OBJ_TREASURY_CERT;OBJ_TRASH_CAN|POSE_CHANGE: note in the bin
+S079.11|Japan's arm lowered, certificate still in the bin|-|Japan left, trash can right|CHAR_JAPAN_FACE;OBJ_TREASURY_CERT;OBJ_TRASH_CAN|POSE_CHANGE: arm lowered
+S079.12|Japan moves toward the left edge leaving the trash can|-|Japan far left, trash can centre|CHAR_JAPAN_FACE;OBJ_TREASURY_CERT;OBJ_TRASH_CAN|REPOSITION: Japan walks away
+S079.13|US map character with half-lidded eyes alone|-|map centre|MAP_USA_CHAR|CUT: US map
+S079.14|Caption and an orange percent circle on a pedestal at the right (an enticement)|great yields, I promise!|map left, caption upper, circle right|MAP_USA_CHAR;ICON_PERCENT_PEDESTAL=orange percent circle on a white pedestal;TXT_SMALL_CAPTION|POP_IN: percent circle, great yields
+#H86|And that's how supply and demand shape long-term bond yields|ORIGINAL_DRAWING
+S080.0|Host with a pointer beside a chalkboard line|If % better, more people want them!|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_IFBETTER=white chalk-style If % better, more people want them!|CUT: chalkboard rule
+S080.1|Host's arm extended toward the board|If % better, more people want them!|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_IFBETTER|POSE_CHANGE: arm extended
+S081.0|Host smiling with a small raised hand, alone|-|host centre|HOST|CUT: host
+#H87|The Fed cuts the federal funds rate and short-term yields fall, but long-term yields stay elevated|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S081.1|Federal Reserve building at left with a rate label and a kitchen knife poised over an orange percent disc|FEDERAL RESERVE / Federal Funds Rate|building left, label upper right, knife and disc right|BLDG_FED;TXT_LABEL_FFR=handwritten Federal Funds Rate label;OBJ_KNIFE;ICON_PERCENT_ORANGE|CUT: Fed with a knife over the rate
+S081.2|Knife slices the percent disc in two|FEDERAL RESERVE / Federal Funds Rate|building left, label upper right, cut disc lower right|BLDG_FED;TXT_LABEL_FFR;OBJ_KNIFE;ICON_PERCENT_ORANGE|ANIM: disc cut in half
+S081.3|Large red jagged downward arrow with a small percent disc and a label|Short-term|arrow diagonal, label lower left|OBJ_ARROW_RED_DOWN;TXT_SHORTTERM_LABEL=handwritten Short-term label;ICON_PERCENT_ORANGE|CUT: short-term falls
+S081.4|Green rising zigzag arrow across the frame with a label and a small percent disc|Long-term|arrow upper, label lower left|OBJ_ARROW_GREEN_ZIG=green hand-drawn jagged rising arrow;TXT_LONGTERM_LABEL=handwritten Long-term label;ICON_PERCENT_ORANGE|CUT: long-term rises
+#H88|And that's how you get what's called a steepening yield curve|ORIGINAL_DRAWING;SCREEN_CAPTURE
+S082.0|Host with a pointer beside an empty chalkboard|-|host left, board right|HOST;POINTER;OBJ_CHALKBOARD|CUT: empty chalkboard
+S082.1|Term written on the board; host's arm out|Steepening yield curve|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_STEEPENING=white chalk-style Steepening yield curve|TEXT_REVEAL: Steepening yield curve
+#H89|If long-term rates stop cooperating it stops being a bond-market story and becomes an everything story|ORIGINAL_DRAWING;SCREEN_CAPTURE
+S083.0|Yield-curve chart at the left and an arms-crossed percent-disc character at the right|US Treasuries Yield Curve / A charting app for interest rates and macroeconomic indicators|chart left, disc character right|SS_YIELD_CURVE_CHART;CHAR_PERCENT_STUBBORN=orange percent disc character with stick legs and crossed arms (uncooperative rates)|CUT: stubborn long rates
+S083.1|Same scene, character's pose shifts slightly|US Treasuries Yield Curve|chart left, disc character right|SS_YIELD_CURVE_CHART;CHAR_PERCENT_STUBBORN|POSE_CHANGE: pose
+S083.2|Pale-green Government of Japan bond with a yen note placed over its lower left|Government of Japan|bond centre-left, yen over it|OBJ_JGB_DOCS;OBJ_YEN_NOTES|CUT: JGB and yen
+S083.3|Cartoon Earth large at the centre|-|Earth centre|CHAR_EARTH|CUT: Earth (everything story)
+S084.0|Earth with a gold bar, DEBT document, money bags, a percent disc, a tax form, a REPORT sheet and a chart around it|DEBT / TAX / REPORT|Earth centre, items around|CHAR_EARTH;OBJ_GOLD_BAR=hand-drawn yellow gold bar;OBJ_DEBT_DOC;OBJ_MONEY_BAG_BIG;ICON_PERCENT_ORANGE;OBJ_TAX_FORM=hand-drawn tax form with a red TAX title;OBJ_REPORT_SHEET=hand-drawn REPORT sheet;OBJ_CHART_POSTER=hand-drawn multi-line chart on a board|BUILD: assets orbit the Earth
+#H90|When analysts build models to value stocks they discount cash flows using long-term yields as a baseline|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S085.0|A curved chain of banknotes across the upper left and two handwritten terms with a red arrow to a percent disc at the lower right|discount / baseline = / long-term|banknote chain upper left, terms lower right|OBJ_BANKNOTE_CHAIN=curved chain of overlapping dollar notes;TXT_DISCOUNT_BASELINE=handwritten discount and baseline = long-term labels;ICON_PERCENT_ORANGE;OBJ_ARROW_RED_BRIDGE|CUT: discounting cash flows
+#H91|When long-term yields remain elevated the present value of future cash flows falls, valuations compress and stocks trade at lower multiples|ORIGINAL_DRAWING
+S086.0|Green rising zigzag arrow with a long-term label and a percent disc|Long-term|arrow upper, label lower left|OBJ_ARROW_GREEN_ZIG;TXT_LONGTERM_LABEL;ICON_PERCENT_ORANGE|CUT: long-term yields up
+S087.0|Host with an arm out beside a chalkboard starting an equation|Value =|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_VALUE=white chalk-style value equations|CUT: chalkboard 'Value ='
+S087.1|Equation completes|Value = goes down|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_VALUE|TEXT_REVEAL: goes down
+S087.2|Board enlarged with the equation, host's pointer lowered|Value = goes down|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_VALUE|ZOOM_IN+POSE_CHANGE: board enlarged
+S087.3|Next equation replaces the first, pointer touching the board|Stocks = sad|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_VALUE|TEXT_SWAP: Stocks = sad
+#H92|So even if earnings are fine, the price investors are willing to pay for those earnings changes|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S088.0|A green United States Treasury certificate alone at the centre|United States Treasury|certificate centre|OBJ_TREASURY_CERT|CUT: Treasury certificate
+S088.1|Certificate larger at the left with an earnings label at the right|earnings = pretty good|certificate left, text right|OBJ_TREASURY_CERT;TXT_EARNINGS_GOOD=handwritten earnings = pretty good|ZOOM_IN+TEXT_REVEAL: earnings = pretty good
+S088.2|Bald bespectacled figure in a green tie with a briefcase of cash appears at the left|earnings = pretty good|investor left, certificate centre, text right|OBJ_TREASURY_CERT;TXT_EARNINGS_GOOD;CHAR_INVESTOR_GLASSES;OBJ_BRIEFCASE_CASH|POP_IN: investor with a briefcase
+S088.3|Investor's line appears beside his head|I ain't paying all that!|investor left, caption centre, certificate, text right|OBJ_TREASURY_CERT;TXT_EARNINGS_GOOD;CHAR_INVESTOR_GLASSES;OBJ_BRIEFCASE_CASH;TXT_SMALL_CAPTION|TEXT_REVEAL: I ain't paying all that!
+#H93|Markets can suddenly feel unstable even when the headlines look calm|ORIGINAL_DRAWING;SCREEN_CAPTURE
+S088.4|Host smiling with arms slightly out, alone|-|host centre|HOST|CUT: host
+S088.5|Yield-curve chart with the long end sweeping up|US Treasuries Yield Curve|chart fills frame|SS_YIELD_CURVE_CHART|CUT: yield-curve chart
+S088.6|Bespectacled brown-haired figure with a worried look rises at the lower left|US Treasuries Yield Curve|chart centre, figure lower left|SS_YIELD_CURVE_CHART;CHAR_ANALYST_GLASSES=brown-haired stick figure with round glasses and a worried face|POP_IN: worried analyst
+#H94|The 10-year yield sets the price of money and is the foundation of nearly every asset valuation|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S088.7|Large money bag with a dollar note beside it at the upper left|-|bag upper left|OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG|CUT: money bag and note
+S088.8|A gold bar appears at the upper right|-|bag left, gold bar upper right|OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG;OBJ_GOLD_BAR|POP_IN: gold bar
+S088.9|A briefcase appears beside the gold bar|-|bag left, gold and briefcase right|OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG;OBJ_GOLD_BAR;OBJ_BRIEFCASE_BROWN|POP_IN: briefcase
+S088.10|A Treasury certificate appears under the gold bar|-|bag left, assets right|OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG;OBJ_GOLD_BAR;OBJ_BRIEFCASE_BROWN;OBJ_TREASURY_CERT|POP_IN: Treasury note
+S088.11|A house and tower appear at the lower right|-|bag left, assets right, property lower right|OBJ_MONEY_BAG_BIG;OBJ_BANKNOTE_BIG;OBJ_GOLD_BAR;OBJ_BRIEFCASE_BROWN;OBJ_TREASURY_CERT;BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER|POP_IN: property
+#H95|Mortgage rates are another example|ORIGINAL_DRAWING
+S088.12|House and office tower alone at the left|-|property left|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER|CUT: house and tower
+S088.13|Large orange percent disc appears at the right of the property|-|property left, disc right|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;ICON_PERCENT_ORANGE|POP_IN: percent disc
+#H96|Like stock valuations, mortgage rates are largely anchored to long-term Treasury yields|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S088.14|Host pointing at property that has moved to the upper right|-|host left, property upper right|HOST;BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER|CUT: host with property
+S088.15|A 'stonks' meme image (a suited mannequin-like figure before rising numbers with an orange arrow) appears at the lower right|stonks|host left, property upper right, meme lower right|HOST;BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;IMG_STONKS_MEME=widely circulated 'stonks' meme image: a suited mannequin-like man in front of rising stock numbers and an orange arrow|POP_IN: stonks meme
+S088.16|Property alone at the upper left|-|property upper left|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER|CUT: property
+S088.17|Small percent disc beside the property|-|property upper left, disc right|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;ICON_PERCENT_ORANGE|POP_IN: percent disc
+S088.18|Federal Reserve building at the lower right with a label and a long red arrow pointing right|long-term|property and disc upper left, Fed lower right|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;ICON_PERCENT_ORANGE;BLDG_FED;TXT_LONGTERM_ARROW=handwritten long-term label with a long red arrow;OBJ_ARROW_RED_LONG|POP_IN: Fed with a long arrow
+#H97|If the 10-year yield doesn't meaningfully fall, mortgage rates don't magically drift back to 3%|ORIGINAL_DRAWING
+S088.19|Green rising zigzag arrow with a label and a percent disc|10Y yield|arrow upper, label lower left|OBJ_ARROW_GREEN_ZIG;TXT_10Y_LABEL=handwritten 10Y yield label;ICON_PERCENT_ORANGE|CUT: 10-year yield up
+S089.0|Host with an arm out beside a chalkboard line|Mortage rates...|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_MORTGAGE=white chalk-style Mortage rates... (spelled so on screen)|CUT: chalkboard 'Mortage rates...'
+S089.1|Board gains a second line; host frowns and holds the pointer across his body|Mortage rates... still bad!|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_MORTGAGE|TEXT_REVEAL+FACE_CHANGE: still bad!
+#H98|So the Fed can cut the federal funds rate all they want, but if global demand for Treasuries weakens the long end stays pinned|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S090.0|Federal Reserve building with a label and a knife over an orange percent disc (reprise)|FEDERAL RESERVE / Federal Funds Rate|building left, label upper right, knife and disc right|BLDG_FED;TXT_LABEL_FFR;OBJ_KNIFE;ICON_PERCENT_ORANGE|CUT: Fed cuts the rate (reprise)
+S090.1|Knife slices the disc|Federal Funds Rate|building left, cut disc right|BLDG_FED;TXT_LABEL_FFR;OBJ_KNIFE;ICON_PERCENT_ORANGE|ANIM: disc cut
+S090.2|Japan character dropping a Treasury note toward a trash can (reprise)|-|Japan left, trash can right|CHAR_JAPAN_FACE;OBJ_TREASURY_CERT;OBJ_TRASH_CAN|CUT: Japan bins a Treasury (reprise)
+S090.3|Treasury certificate now in the bin, Japan's arm out|-|Japan left, trash can right|CHAR_JAPAN_FACE;OBJ_TREASURY_CERT;OBJ_TRASH_CAN|POSE_CHANGE: note in the bin
+S090.4|Yield-curve chart with the long end sweeping up|US Treasuries Yield Curve|chart fills frame|SS_YIELD_CURVE_CHART|CUT: yield-curve chart (reprise)
+#H99|When that happens mortgage rates stay high, housing affordability stays strained, refinancing is muted and transactions slow|ORIGINAL_DRAWING
+S090.5|Host frowning with an arm out, alone|-|host centre|HOST|CUT: host frowns
+S090.6|House and tower with an orange percent disc at the lower left|-|property and disc lower left|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;ICON_PERCENT_ORANGE|CUT: housing and rates
+S090.7|A large red rising zigzag arrow draws across the top|-|arrow top, property and disc lower left|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;ICON_PERCENT_ORANGE;OBJ_ARROW_RED_UP=large red hand-drawn rising zigzag arrow|DRAW_ON: rates up
+S090.8|Orange-haired figure with a worried look holding a small brick at the lower right (a would-be buyer)|-|figure lower centre|CHAR_BUYER_ORANGE=orange-haired stick figure with a worried face holding a small brown block|CUT: stalled buyer
+S090.9|Buyer with a thought bubble holding a small house and a brick in his hand|-|figure left, bubble upper right|CHAR_BUYER_ORANGE;OBJ_THOUGHT_BUBBLE;BLDG_HOUSE_SMALL|CUT+POP_IN: dream house in a thought bubble
+S090.10|House and tower at the left of the Federal Reserve building|FEDERAL RESERVE|property left, Fed right|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;BLDG_FED|CUT: property and the Fed
+S090.11|Everything greyed out|FEDERAL RESERVE|property left, Fed right (grey)|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;BLDG_FED;FX_GREYSCALE=whole scene desaturated to grey to show muted activity|HIGHLIGHT: scene desaturated (refinancing muted)
+S090.12|Host smiling with arms slightly out, alone|-|host centre|HOST|CUT: host
+#H100|It's not just mortgage rates and equity valuations: if you zoom out to corporate credit it's the same story|ORIGINAL_DRAWING;SCREEN_CAPTURE
+S090.13|A tall blue glass skyscraper with a red BIG BUSINESS lettering and a small house and tower at its right|BIG BUSINESS|skyscraper left, property right|BLDG_BIGBUSINESS=hand-drawn blue glass skyscraper with red BIG BUSINESS lettering;BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER|CUT: big business and property
+S090.14|Market-data page for the US 10-year Treasury with a 5-year chart|U.S. 10 Year Treasury / US10Y:Tradeweb / Yield - 6:05 PM EDT / 4.138% ▼ -0.008 / LATEST ON U.S. 10 YEAR TREASURY|page centre|SS_US10Y_PAGE=market-data page for the US 10-year Treasury yield with a five-year chart|CUT: 10-year yield page
+S090.15|Page shifted left and smaller|U.S. 10 Year Treasury / 4.138%|page left|SS_US10Y_PAGE|REFRAME: page shifts
+#H101|When capital was cheap in 2020 and 2021 and rates were suppressed, companies issued debt like it was Black Friday|SCREEN_CAPTURE;ORIGINAL_DRAWING
+S091.0|Red ellipse around the early part of the five-year chart where yields were lowest|U.S. 10 Year Treasury|page left, ellipse lower left|SS_US10Y_PAGE;HL_RED_ELLIPSE=red hand-drawn ellipse around a chart region|HIGHLIGHT: 2020-2021 lows circled
+S092.0|Global corporate debt-issuance bar chart with a red rising arrow and a source line|Global corporate debt issuance hits record high / Syndicated bond and leveraged loan volumes ($tn) / Investment-grade corporate bonds / Leveraged loans / High-yield corporate bonds / 1990 ... 2024 / Source: LSEG|chart centre|SS_CORP_DEBT_ISSUANCE=news-site stacked-bar chart of global corporate bond and leveraged-loan issuance 1990-2024 with a red arrow added;HL_RED_ARROW=red hand-drawn arrow|CUT: corporate debt issuance chart
+#H102|Credit is the bloodstream of the corporate world; with cheap financing we see more deal flow and higher valuations|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S092.1|Blue skyscraper with red BIG BUSINESS lettering alone at the left|BIG BUSINESS|skyscraper left|BLDG_BIGBUSINESS|CUT: big business
+S092.2|A pair of banknotes appears at the lower right|BIG BUSINESS|skyscraper left, notes lower right|BLDG_BIGBUSINESS;OBJ_BANKNOTE_PAIR=two green banknotes lying together|POP_IN: cash
+S092.3|Four overlapping CONTRACT documents appear at the right of the skyscraper|BIG BUSINESS / CONTRACT|skyscraper left, notes lower, contracts right|BLDG_BIGBUSINESS;OBJ_BANKNOTE_PAIR;OBJ_CONTRACT_DOCS=four overlapping hand-drawn CONTRACT documents with signatures|POP_IN: contracts (deal flow)
+S092.4|Green rising zigzag arrow across the frame and a small skyscraper at the lower right|BIG BUSINESS|arrow left to upper centre, skyscraper lower right|OBJ_ARROW_GREEN_ZIG;BLDG_BIGBUSINESS|CUT: valuations up
+S092.5|A speech bubble with a money bag appears beside the skyscraper|BIG BUSINESS|arrow, bubble and skyscraper right|OBJ_ARROW_GREEN_ZIG;BLDG_BIGBUSINESS;OBJ_BUBBLE_MONEYBAG=white speech bubble holding a money bag|POP_IN: money-bag bubble
+S093.0|Host with a pointer beside a chalkboard line|Credit is important!|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_CREDIT=white chalk-style Credit is important!|CUT: chalkboard 'Credit is important!'
+S093.1|Board enlarged, host's arm out|Credit is important!|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_CREDIT|ZOOM_IN+POSE_CHANGE: board enlarged
+#H103|If borrowing costs stay elevated we see the opposite: risk appetite falls, growth slows and capital tightens|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S094.0|Extreme close-up of the US map character with tired eyes and two money bags on it|-|map fills frame|MAP_USA_CHAR;OBJ_MONEY_BAG_BIG|CUT: map with money bags
+S095.0|Red jagged rising arrow across the frame (costs up)|-|arrow across|OBJ_ARROW_RED_UP|CUT: costs rise
+S095.1|Host smiling with hands on hips, alone|-|host centre|HOST|CUT: host
+S095.2|Large red downward arrow and a pale figure in an orange tie with a hand at his chin and a caution line|I'd rather not risk it...|figure left, arrow diagonal|OBJ_ARROW_RED_DOWN;CHAR_BEWILDERED;TXT_SMALL_CAPTION|CUT: risk appetite falls
+S095.3|Host smiling with an arm slightly out, alone|-|host centre|HOST|CUT: host
+#H104|And this is the main point of the video: for 30 years the US benefited from being on the receiving end of the world's largest carry trade|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S095.4|Statement alone|For 30 years!|text centre|TXT_30YEARS_BANG=black handwritten For 30 years!|CUT: For 30 years!
+S096.0|US map character with tired eyes covered by a shower of translucent banknotes|-|map centre, notes all over|MAP_USA_CHAR;OBJ_BANKNOTE_FLYING|CUT: the US showered with cash
+#H105|And now that trade is unwinding|ORIGINAL_DRAWING
+S097.0|Large Japan character with wary half-lidded eyes and a hand on its hip|-|Japan fills frame|CHAR_JAPAN_FACE|CUT: Japan close-up
+#H106|As the investor said, the bond market is the backbone of all markets and the interest rate that determines what all asset returns are going to be|COMPOSITED_STILLS;ORIGINAL_DRAWING
+S098.0|Host with closed smiling eyes at the left beside a landscape photo of a smiling suited man in a red patterned tie seated on a stage|-|host left, photo right|HOST;IMG_INVESTOR_STAGE=third-party landscape photo of a smiling grey-haired man in a dark suit and a red patterned tie seated on a stage (narration names the investor; identity not asserted from the image)|CUT: host with the investor's photo
+#H107|And what we are currently seeing is a tangible catalyst reshaping the foundation of the bond markets|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S099.0|A pale-green Government of Japan bond alone at the upper left|Government of Japan|bond upper left|OBJ_JGB_DOCS|CUT: JGB
+S099.1|A green Treasury certificate overlaps its lower right|Government of Japan / United States Treasury|bonds upper left|OBJ_JGB_DOCS;OBJ_TREASURY_CERT|POP_IN: Treasury note
+S099.2|Both bonds at the left and a cartoon Earth carrying a money bag at the right|Government of Japan / United States Treasury|bonds left, Earth right|OBJ_JGB_DOCS;OBJ_TREASURY_CERT;CHAR_EARTH;OBJ_MONEY_BAG_BIG|REPOSITION+POP_IN: Earth with a money bag
+#H108|There's a reason traditional financial media is ignoring this: it's not clickable and wouldn't trend|ORIGINAL_DRAWING
+S100.0|Large orange percent disc alone at the left|-|disc left|ICON_PERCENT_ORANGE|CUT: percent disc
+S100.1|A briefcase, two gold bars and a teddy bear appear at the right|-|disc left, items right|ICON_PERCENT_ORANGE;OBJ_BRIEFCASE_BROWN;OBJ_GOLD_BAR;OBJ_TEDDY_BEARS|POP_IN: boring finance props
+S101.0|Host with a pointer beside an empty chalkboard|-|host left, board right|HOST;POINTER;OBJ_CHALKBOARD|CUT: empty chalkboard
+S101.1|Board gains a line; host's arm out|BIG things!|host left, board right|HOST;OBJ_CHALKBOARD;TXT_CHALK_BIGTHINGS=white chalk-style BIG things!|TEXT_REVEAL: BIG things!
+#H109|Because it requires patience and nuance; instead the narratives become dramatically oversimplified|ORIGINAL_DRAWING
+S102.0|Grey-bobbed, purple-tied figure smiling with hands together, alone|-|figure left|CHAR_PROMISER|CUT: politician figure
+S102.1|Speech bubble from the figure|Changes? What changes?|figure left, bubble right|CHAR_PROMISER;TXT_SPEECH_CHANGES=hand-lettered speech bubble|POP_IN: Changes? What changes?
+S102.2|Host frowning with one arm out, alone|-|host centre|HOST|CUT: host frowns
+S102.3|Large black smartphone with the social-network bird logo struck through with a red X|-|phone centre-right|OBJ_PHONE_BIG=large black hand-drawn smartphone;LOGO_BIRD_APP=blue bird social-network logo;HL_RED_X|CUT+STRIKE: social network crossed out (won't trend)
+S102.4|A small correction appears next to the crossed-out bird logo, with a black X logo beside it|I mean this thing|phone centre-left|OBJ_PHONE_BIG;LOGO_BIRD_APP;HL_RED_X;LOGO_X_APP=black X logo of the renamed social network;TXT_SMALL_CAPTION|POP_IN: the platform's new logo, I mean this thing
+#H110|Nobody wants to hear 'let's discuss the cross-currency carry trade' because that requires patience and nuance|ORIGINAL_DRAWING
+S103.0|Host with a pointer beside an empty chalkboard|-|host left, board right|HOST;POINTER;OBJ_CHALKBOARD|CUT: empty chalkboard
+S103.1|Host with a flat mouth pointing at the board|Non-clickbaity topic|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_NONCLICKBAIT=white chalk-style Non-clickbaity topic|TEXT_REVEAL: Non-clickbaity topic
+S103.2|Board enlarged, pointer lowered|Non-clickbaity topic|host left, board right|HOST;POINTER;OBJ_CHALKBOARD;TXT_CHALK_NONCLICKBAIT|ZOOM_IN+POSE_CHANGE: board enlarged
+S104.0|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host
+S104.1|Host with one arm slightly out|-|host centre|HOST|POSE_CHANGE: arm out
+#H111|And more brain cells than doom-scrolling allows for|ORIGINAL_DRAWING
+S104.2|Blond-haired figure lit by a phone screen, scrolling with a thoughtful hand at his chin|-|figure centre|CHAR_PHONE_SCROLLER;OBJ_PHONE_HELD|CUT: doom-scroller
+S104.3|A tiny scroll sound caption appears|*scroll*|figure centre, caption lower left|CHAR_PHONE_SCROLLER;OBJ_PHONE_HELD;TXT_SMALL_CAPTION|TEXT_REVEAL: scroll
+#H112|Instead people want inflation, AI and whatever Nvidia did last week: visible, loud topics|ORIGINAL_DRAWING
+S104.4|Banknotes, a BREAKING NEWS newspaper, a multi-line chart poster and a small robot winking with a thumbs-up|BREAKING NEWS!!!|items across|OBJ_BANKNOTE_PAIR;OBJ_NEWS_BREAKING=small hand-drawn newspaper reading BREAKING NEWS!!!;OBJ_CHART_POSTER;CHAR_ROBOT_SMALL|CUT: loud headline items
+#H113|The narratives become dramatically oversimplified: if the Fed cuts rates, financial conditions will ease|ORIGINAL_DRAWING
+S105.0|Red-haired figure reading a sheet of paper with a speech bubble in a serif font|THIS EXPLAINS WHY THE ECONOMY IS LIKE THIS!|figure left, bubble right|CHAR_PUNDIT_RED=red-haired stick figure reading a paper;TXT_SPEECH_EXPLAINS=speech bubble in a serif typeface|CUT: pundit oversimplifies
+S106.0|Phone-lit blond figure with a clickbait-style bubble|WHY INFLATION IS THE REASON (100% REAL NO CLICKBAIT)|figure right, bubble left|CHAR_PHONE_SCROLLER;OBJ_PHONE_HELD;TXT_SPEECH_CLICKBAIT=speech bubble in a serif typeface|CUT: clickbait claim
+S106.1|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host
+S106.2|Federal Reserve building with a rate label and a knife over a percent disc (third use)|FEDERAL RESERVE / Federal Funds Rate|building left, label upper right, knife and disc right|BLDG_FED;TXT_LABEL_FFR;OBJ_KNIFE;ICON_PERCENT_ORANGE|CUT: Fed cuts the rate (reprise)
+S106.3|Knife slices the disc|Federal Funds Rate|building left, cut disc right|BLDG_FED;TXT_LABEL_FFR;OBJ_KNIFE;ICON_PERCENT_ORANGE|ANIM: disc cut
+S106.4|Two figures face each other: the orange-haired buyer holding a brick and a dark-haired seller holding a banknote|-|buyer left, seller right|CHAR_BUYER_ORANGE;CHAR_SELLER_DARK=dark-haired stick figure holding a green banknote|CUT: buyer and seller
+S106.5|A thought bubble over them holds a pile of banknotes|-|buyer left, bubble centre, seller right|CHAR_BUYER_ORANGE;CHAR_SELLER_DARK;OBJ_THOUGHT_BUBBLE;OBJ_BANKNOTE_PAIR|POP_IN: money in a thought bubble
+#H114|And that's the lie we're being sold: one rate cut fixes everything, liquidity is automatic, and someone will always show up to buy our debt|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S106.6|Host frowning with an arm out, alone|-|host centre|HOST|CUT: host frowns
+S106.7|Host frowning with a different arm pose|-|host centre|HOST|POSE_CHANGE: arm pose
+S106.8|Bald grinning figure in a green tie with narrowed eyes in a close-up (the salesman)|-|figure fills frame|CHAR_SALESMAN_GREEN=bald stick figure in a green tie with narrowed eyes and a smirk|CUT: smirking salesman
+S106.9|Federal Reserve building alone|FEDERAL RESERVE|building centre|BLDG_FED|CUT: Fed building
+S106.10|Speech bubble from the building|Trust me, bro|building left, bubble right|BLDG_FED;TXT_SPEECH_TRUSTME=hand-lettered speech bubble|POP_IN: Trust me, bro
+S106.11|Pile of banknotes alone|-|notes centre|OBJ_BANKNOTE_PILE=small pile of green banknotes|CUT: banknote pile
+#H115|But what if they don't? What if the largest foreign holder of US Treasuries steps back?|ORIGINAL_DRAWING
+S107.0|US map character with wary eyes and Treasury certificates piled on both coasts|United States Treasury|map centre, certificates at the edges|MAP_USA_CHAR;OBJ_TREASURY_CERT|CUT: map surrounded by unsold Treasuries
+S107.1|A tiny aside appears on the map|anyone want this?|map centre, caption upper left|MAP_USA_CHAR;OBJ_TREASURY_CERT;TXT_SMALL_CAPTION|TEXT_REVEAL: anyone want this?
+S107.2|Map enlarged with a second tiny plea|pretty please?|map centre, caption upper left|MAP_USA_CHAR;OBJ_TREASURY_CERT;TXT_SMALL_CAPTION|TEXT_SWAP: pretty please?
+S108.0|Map small and alone at the centre|-|map centre small|MAP_USA_CHAR;OBJ_TREASURY_CERT|ZOOM_OUT: map shrinks
+S108.1|A tiny call appears above the map|hello???|map centre, caption upper right|MAP_USA_CHAR;OBJ_TREASURY_CERT;TXT_SMALL_CAPTION|TEXT_REVEAL: hello???
+#H116|Then you see global liquidity tighten; liquidity is the oxygen in markets|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S108.2|Large Japan character with half-lidded eyes and a hand on its hip|-|Japan fills frame|CHAR_JAPAN_FACE|CUT: Japan close-up
+S108.3|A defiant line and a raised finger|I'm out!|Japan right, text upper left|CHAR_JAPAN_FACE;TXT_IMOUT=large black handwritten I'm out!|POSE_CHANGE+TEXT_REVEAL: I'm out!
+S108.4|Empty white canvas held about 1 s|-|empty|-|CLEAR: blank beat
+S108.5|Cartoon Earth ringed by eight dollar banknotes|-|Earth centre, notes around|CHAR_EARTH;OBJ_BANKNOTE_SMALL|CUT: Earth ringed by liquidity
+S108.6|Four of the banknotes disappear, leaving four|-|Earth centre, four notes|CHAR_EARTH;OBJ_BANKNOTE_SMALL|EXIT: notes leave (liquidity tightens)
+S108.7|Money bag alone at the centre|-|bag centre|OBJ_MONEY_BAG_BIG|CUT: money bag
+S108.8|Money bag equals a periodic-table tile for oxygen|Oxygen / 8 / O / 15.999|bag left, tile right|OBJ_MONEY_BAG_BIG;ICON_EQUALS;OBJ_OXYGEN_TILE=periodic-table style tile reading 8 O Oxygen 15.999|POP_IN: money equals oxygen
+#H117|And when it tightens the cost of money changes everywhere|ORIGINAL_DRAWING
+S108.9|Dark-haired figure with a worried look holding a banknote|-|figure centre|CHAR_SELLER_DARK;OBJ_BANKNOTE_SMALL|CUT: worried holder of cash
+S108.10|Large green dollar sign alone|-|dollar sign centre|ICON_DOLLAR_GREEN=large green outlined dollar sign|CUT: dollar sign
+#H118|Like I covered, it affects everything from stock valuations to mortgage rates to corporate credit (recap)|ORIGINAL_DRAWING;COMPOSITED_STILLS
+S108.11|Host with a flat mouth and hands on hips, alone|-|host centre|HOST|CUT: host
+S108.12|Host aghast with hands at his chin|-|host centre|HOST|FACE_CHANGE: host aghast
+S108.13|The 'stonks' meme image (a suited mannequin-like figure before rising numbers and an orange arrow)|stonks|meme left of centre|IMG_STONKS_MEME|CUT: stonks meme
+S108.14|A second meme panel with the same figure before falling red numbers appears beside it|stonks / not stonks|two panels across|IMG_STONKS_MEME;IMG_NOTSTONKS_MEME=companion meme panel with the same suited figure before falling red numbers captioned not stonks|POP_IN: not-stonks meme
+S109.0|House, office tower and a percent disc in a row (mortgages)|-|row centre|BLDG_HOUSE_SMALL;BLDG_OFFICE_TOWER;ICON_PERCENT_ORANGE|CUT: property and rates
+S109.1|Blue glass skyscraper with BIG BUSINESS lettering and two money bags (corporate credit)|BIG BUSINESS|skyscraper left, bags right|BLDG_BIGBUSINESS;OBJ_MONEY_BAG_BIG|CUT: corporate credit
+#H119|That's why I made this channel: to shine a light on the issues that actually matter|ORIGINAL_DRAWING;SCREEN_CAPTURE
+S109.2|Host in an extreme close-up with a wide open grin and arms out|-|host fills left|HOST|CUT: grinning host
+S110.0|Channel-page screenshot with a skyline banner, a Subscribe lettering and a profile avatar, beside the grinning host|Subscribe / Casual Finance / @CasuallyFinance / [subscriber and video counts] / Subscribe / Community|host left, page right|HOST;SS_CHANNEL_PAGE_DARK=dark-mode screenshot of the channel's page with a city skyline banner reading Subscribe, a profile picture and a Subscribe button|CUT: channel page beside the host
+S111.0|Host pointing a torch at a Japan map with banknotes, documents and a BREAKING NEWS newspaper scattered around|BREAKING NEWS!!!|host left, items right|HOST;OBJ_TORCH=hand-drawn flashlight;MAP_JAPAN;OBJ_BANKNOTE_SMALL;OBJ_YEN_NOTES;OBJ_REPORT_SHEET;OBJ_NEWS_BREAKING|CUT: host shines a torch on the issue
+S111.1|The torch emits a yellow beam over the map and notes|BREAKING NEWS!!!|host left, beam across, items right|HOST;OBJ_TORCH;OBJ_TORCH_BEAM=yellow light beam from the torch;MAP_JAPAN;OBJ_BANKNOTE_SMALL;OBJ_YEN_NOTES;OBJ_REPORT_SHEET;OBJ_NEWS_BREAKING|POP_IN: light beam
+#H120|The issues that traditional financial media won't touch because they don't get clicks|ORIGINAL_DRAWING
+S112.0|Bald figure reading a large open newspaper with a NEWS masthead, eyes over the top|NEWS|figure fills frame|CHAR_NEWS_READER_BIG;OBJ_NEWSPAPER|CUT: newspaper reader
+S113.0|Two framed video thumbnails: the host with a banknote under a caption, and a curly-haired figure with a warning triangle holding a phone and cash under a clickbait caption|Here's why we are in debt / THIS KID GOT RICH IN 2 SECONDS WITH CRYPTO!!!|frames side by side|OBJ_FRAME_THUMB_HOST=hand-drawn frame holding the host and a banknote;OBJ_FRAME_THUMB_CLICKBAIT=hand-drawn frame holding a curly-haired figure with a phone, cash and a warning triangle;TXT_FRAME_CAPTIONS=handwritten captions under each frame|CUT: boring versus clickbait thumbnails
+#H121|If you're interested in what's actually happening in markets, hit subscribe and turn notifications on|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S113.1|Host smiling with one arm out, alone|-|host centre|HOST|CUT: host
+S113.2|Host with closed smiling eyes and hands on hips|-|host centre|HOST|FACE_CHANGE: eyes closed
+S113.3|Large black handwritten command across the lower half in front of the host's torso|SUBSCRIBE!|text lower centre, host above|HOST;TXT_SUBSCRIBE=large black handwritten SUBSCRIBE! lettering|TEXT_REVEAL: SUBSCRIBE!
+S113.4|Lettering moves to the lower left and an outline notification bell appears at the upper right|SUBSCRIBE!|text lower left, host centre, bell upper right|HOST;TXT_SUBSCRIBE;ICON_BELL=black outline notification bell|REPOSITION+POP_IN: bell
+#H122|The real threats in markets aren't the loud ones; those are usually priced in|ORIGINAL_DRAWING
+S114.0|Host with a pointer and an empty chalkboard|-|host left, board right|HOST;POINTER;OBJ_CHALKBOARD|CUT: empty chalkboard
+S114.1|Black silhouette of a hatted figure with glowing white eyes and a menacing grin|-|silhouette centre|CHAR_SHADOW_FIGURE=black silhouette stick figure in a hat with white angry eyes and a grin|CUT: shadowy threat
+#H123|The real threats are the ones hiding in plain sight|ORIGINAL_DRAWING
+S115.0|Silhouette closer and centred|-|silhouette centre-left|CHAR_SHADOW_FIGURE|REFRAME: silhouette shifts
+S115.1|Large host close-up with a stern frown and a hand at his chin|-|host fills left|HOST|CUT: stern host
+S115.2|Bald figure behind an open NEWS newspaper at the lower left|NEWS|reader left|CHAR_NEWS_READER_BIG;OBJ_NEWSPAPER|CUT: newspaper reader
+S115.3|Second newspaper held up by the US map character at the right of the bald reader|NEWS|two readers across|CHAR_NEWS_READER_BIG;OBJ_NEWSPAPER;MAP_USA_CHAR|POP_IN: map reads the news
+#H124|End card: subscribe for more, only on this platform|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S116.0|White end card: a small lead-in and the video-platform logo above three crossed-out round social-media icons at left and the title at the right, rest of the card empty|only on / YouTube / Subscribe for more / Casual Finance|logo and icons upper left, title upper right|TXT_ENDCARD_TEXT=hand-lettered end-card text;LOGO_YOUTUBE=video-platform logo with red play icon;LOGO_SOCIAL_ICONS=three round social-media icons (Facebook, Instagram, Twitter) crossed out;HL_RED_X=large red hand-drawn X|CUT: end card (no supporter block)
