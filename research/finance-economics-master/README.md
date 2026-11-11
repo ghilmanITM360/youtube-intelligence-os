@@ -1,0 +1,16 @@
+# Finance / investing / economics master data (2026-11-11)
+
+One rebuildable SQLite DB with every Finance, investing and economics channel the repo knows: `data/catalog/finance_economics_complete.db`
+(built by `scripts/build_finance_economics_complete_db.py build`; read-only on the frozen `youtube_channel_registry.db`).
+
+Tables: `channels` (availability, data_category), `videos` (metadata, thumbnail_url, `thumbnail_source` = captured | derived_standard_pattern,
+`metadata_level` FULL/PARTIAL/TITLE_ONLY), `transcripts` (one row per video+source; plain text; caption_type; status), `apify_rows` (raw actor rows), `meta`.
+
+Sources (all under `sources/`): registry slice; Apify 2026-11-10 (24 ch) and 2026-11-11 (21 ch, $4.352 of the $5 cap; run ids in the batch CHANNEL_STATUS.csv);
+Machine A research (expansion masters, universe, landscape, queue; commit in `machine_a/SOURCE_COMMIT.txt`); Casual Finance catalog + Whisper-base ASR
+(`casual_finance/`, ASR_UNCERTIFIED, commit in `SOURCE_COMMIT.txt`; kept here as its own copy because that channel also carries visual-forensics data on its research branch).
+Transcripts: YouTube creator/auto captions via free paced yt-dlp backfill (never translations; stops on bot-check). Timestamped copies: `sources/transcripts_*.tar.gz`; raw json3 stays local.
+
+Known gaps: Wealth Logic removed by YouTube (UNAVAILABLE_OR_DELETED); Tom Lazy Investor, Ivan Invests, Mark Retired at 55, Alicia Invests, Tom Talks Money
+captured only newest 40 each (full catalogs exceed the $5 budget); videos with no caption track stay without a transcript (status in the coverage CSVs).
+Per-channel completeness: `CHANNEL_DATA_FINAL.csv`.
