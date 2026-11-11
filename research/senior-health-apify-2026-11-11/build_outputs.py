@@ -2,6 +2,7 @@
 import json, os, csv, sqlite3, hashlib, collections
 H = os.path.dirname(os.path.abspath(__file__)); R = os.path.join(H, 'raw')
 RUNS = {'run1_QSwBSjJff8yJXnnNK': dict(run_id='QSwBSjJff8yJXnnNK', started='2026-11-11T21:43:10', max_results=50, cap=4.3, usd=1.840, note='21 channels, regular videos, limit 50 each'),
+        'run3_SP5SUebSwSb5rQOei': dict(run_id='SP5SUebSwSb5rQOei', started='2026-11-11T22:05:00', max_results=0, cap=2.3, usd=0.084, note='Shorts probe: 21 channels, shorts limit 25; every channel returned CHANNEL_HAS_NO_SHORTS (21 error rows, no videos)'),
         'run2_ffSoyEykFOE9HdWax': dict(run_id='ffSoyEykFOE9HdWax', started='2026-11-11T21:55:51', max_results=200, cap=1.0, usd=0.564, note='top-up: Dr. Waterling + Vital Years Wellness, limit 200')}
 sha = lambda p: hashlib.sha256(open(p, 'rb').read()).hexdigest()
 db = os.path.join(H, 'senior_health_apify.db')
@@ -18,7 +19,9 @@ vids = {}
 for key, meta in RUNS.items():
     p = os.path.join(R, key + '_dataset.json'); rows = json.load(open(p))
     c.execute('INSERT INTO runs VALUES(?,?,?,?,?,?,?,?,?,?,?)', (meta['run_id'], 'streamers/youtube-scraper', '0.0.332', meta['started'], meta['max_results'], meta['cap'], meta['usd'], len(rows), 'raw/' + key + '_dataset.json', sha(p), meta['note']))
-    for r in rows: vids[r['id']] = (r, meta['run_id'])  # later run wins (superset of the 50 newest)
+    for r in rows:
+        if 'id' not in r: continue  # run3 error rows: CHANNEL_HAS_NO_SHORTS
+        vids[r['id']] = (r, meta['run_id'])  # later run wins (superset of the 50 newest)
 chs = {}
 for vid, (r, rid) in vids.items():
     cid = r['channelId']; chs.setdefault(cid, []).append((r, rid))
