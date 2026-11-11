@@ -16,8 +16,8 @@ Single in-repo home for the senior-health niche. Everything here is derived read
 
 ## Files
 - `MASTER_CHANNELS.csv` — one row per channel with tier and per-source counts.
-- `senior_health_master.db` — tables `channels`, `videos` (one row per unique video ID, `sources` lists where it appears).
-- `build_master.py` — rebuild script. `SHA256SUMS.txt` — checksums.
+- **Complete DB: `data/catalog/senior_health_complete.db`** (72 MB; build: `python3 scripts/build_senior_health_complete_db.py`) — tables `channels` (with descriptions, subs, tier), `videos` (5,370 unique, full metadata + raw_json), `transcripts` (459 full texts), `ds34_records` (5,007 raw records).
+- `build_master.py` — builds `MASTER_CHANNELS.csv`. `SHA256SUMS.txt` — checksums.
 
 ## Where the underlying data lives
 | Source | Path |
@@ -29,4 +29,5 @@ Single in-repo home for the senior-health niche. Everything here is derived read
 
 ## Not done
 - Tier 2 and 3 channels are not in the registry DB; no transcripts for them yet.
-- Registry was not modified.
+- The canonical registry DB was not modified: its validator pins fixed totals (75 channels / 2,303 videos) and rebuilds from manifests, so adding these needs a builder change.
+- Tier 3 (55) and tier 4 (75) channels need a paid Apify run for full metadata (~4,500 videos ≈ $18).
