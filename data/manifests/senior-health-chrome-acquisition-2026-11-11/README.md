@@ -25,3 +25,23 @@ PANEL_EMPTY videos: VFQ83cfPhus, sXXGA2oHx1g, et6XTfv-wQE, zMv12xxy4TU.
 
 ## Validation
 No duplicate video IDs; all Doctor Laura rows have the expected channel_id; all Neal rows share one channel_id; 0 fetch errors.
+
+## Addendum — Registry (September-snapshot) channels refreshed to 2026-11-11
+
+Method: Chrome (logged-out-equivalent public pages), $0, no Apify. Each channel's /videos page was read newest-first and diffed by video ID against the 7 registry channels in `01-unified-video-table.csv` (batch `B_REGISTRY_SEP`). Only IDs not already present were collected (metadata from `ytInitialPlayerResponse`, likes label, UI transcript panel — YouTube's new `transcript-segment-view-model` element). Output: `REGISTRY_CHANNELS_INCREMENTAL_NEW_VIDEOS.jsonl` (46 new videos; none duplicate existing IDs).
+
+| Channel | Registry (Sep) | New videos | New with transcript | New publish range |
+|---|---|---|---|---|
+| Senior Health Hub | 122 | 5 | 5 | 2026-09-23..2026-10-06 |
+| Better Health While Aging | 98 | 2 | 2 | 2026-10-12..2026-10-30 |
+| Dr. Okoro | 66 | 0 | - | none since 2026-07-20 (inactive) |
+| Dr. Ares Senior | 35 | 12 | 12 | 2026-09-21..2026-10-28 |
+| Dr. Aliza Wright | 32 | 3 | 3 | 2026-11-02..2026-11-05 |
+| Dr. Elias Senior Health | 29 | 24 | 23 | 2026-09-10..2026-11-04 |
+| Doctor Thomas | 22 | UNAVAILABLE | - | channel page empty; sampled video `fj4TaPrLl8U` reports "removed for violating Terms of Service" (channel likely terminated; other 21 videos not individually checked) |
+
+Limits (NOT VERIFIED / not done):
+- Views/likes of the ~404 older registry videos were NOT refreshed (still Sep values); only new videos carry Nov values.
+- BHWA/Hub Shorts tabs were not enumerated; only the /videos tab was diffed. Only the first ~30–53 newest items per channel were loaded (enough to reach known IDs on every channel except where noted).
+- `cwgUAeZWydc` (Elias): transcript panel empty after 2 attempts; metadata present.
+- Not merged into `01-unified-video-table.csv` or Reports 1–6; earlier conclusions unchanged.
