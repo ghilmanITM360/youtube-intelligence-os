@@ -183,6 +183,18 @@ create table meta(k text primary key, v text);
         T(d["video_id"], "casual_finance:whisper_base", "whisper-base", d.get("language"), d.get("status", "ASR_UNCERTIFIED"),
           (d.get("text") or "").strip(), "casual_finance_asr_20261109")
 
+    # ---- yt-dlp top-up (2026-11-12): videos 41-100 of the 5 channels Apify capped at 40 (metadata + captions, free, paced)
+    Y = f"{S}/ytdlp_2026-11-12"
+    if os.path.exists(f"{Y}/metadata.jsonl.gz"):
+        ytar = {os.path.basename(k): v for k, v in read_tar("ytdlp_2026-11-12").items()}
+        for r in rjsonl_gz(f"{Y}/metadata.jsonl.gz"):
+            pub = datetime.datetime.fromtimestamp(r["timestamp"], datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z") if r.get("timestamp") else None
+            V("ytdlp_2026-11-12", "FULL", video_id=r["id"], channel_id=r["channel_id"], url=r["webpage_url"], title=r["title"], published=pub,
+              duration_seconds=r.get("duration"), video_type="VIDEO", views=r.get("view_count"), likes=r.get("like_count"), comments=r.get("comment_count"),
+              description=r.get("description"), keywords=json.dumps(r["tags"]) if r.get("tags") else None, thumbnail_url=r.get("thumbnail"))
+            c = r.get("caption")
+            if c and f"{r['id']}.transcript.txt" in ytar:
+                T(r["id"], c["source"], c["track"], c["language"], c["status"], plain(ytar[f"{r['id']}.transcript.txt"]), "ytdlp_2026-11-12")
     # ---- thumbnails: actor URL where captured, else the standard YouTube pattern (labelled)
     for v in vids.values():
         if v.get("thumbnail_url"): v["thumbnail_source"] = "captured"
@@ -202,11 +214,13 @@ create table meta(k text primary key, v text);
             if len(keep) >= total: break
             keep.add(v["video_id"])
         return keep
+    BIG5 = {"UCFPfloFwa6X2UddqRH83rAA", "UCDokTQePVxNZUqmzevDM7NQ", "UCegPlgZVNg0g1pAzZtGH4dw", "UCHKwo7_qXD8ixLZmpPlIb_w", "UCKqgbX0MOmE5ZzyFpTP524g"}
     bych = {}
     for v in vids.values(): bych.setdefault(v["channel_id"], []).append(v)
     kept, targets, dropped = {}, set(), 0
     for cid, vs in bych.items():
         if cid == CF: k = {v["video_id"] for v in vs}; targets |= k
+        elif cid in BIG5: k = pick(vs, 100, 0, 0, 100); targets |= pick([v for v in vs if v["video_id"] in k], 60, 0, 0, 60)  # owner 2026-11-12: newest 100
         else:
             k = pick(vs, 50, 30, 20, 100) if len(vs) > 100 else {v["video_id"] for v in vs}
             kv = [v for v in vs if v["video_id"] in k]; targets |= pick(kv, 30, 20, 10, 60) if len(kv) > 60 else k

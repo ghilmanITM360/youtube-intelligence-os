@@ -20,3 +20,11 @@ Per-channel completeness: `CHANNEL_DATA_FINAL.csv`.
 - Cap rule: per channel 100 videos (newest 50, top-viewed 30, lowest-viewed older than 90d 20), 60 transcript targets (30/20/10). Casual Finance is exempt (full 206-video catalog + Whisper-base ASR transcripts, ASR_UNCERTIFIED, kept as separate copy too). 445 videos dropped by the cap; raw data remains in `sources/`.
 - Channels by category: Finance 32 COMPLETE, 7 PARTIAL_TRANSCRIPTS, 7 PARTIAL_VIDEOS, 1 UNAVAILABLE_OR_DELETED (Wealth Logic); Economics 13 COMPLETE, 1 PARTIAL_TRANSCRIPTS; Machine A landscape 6 PARTIAL_TRANSCRIPTS, 2 METADATA_ONLY.
 - Apify spend $4.352 of $5 cap. Caption backfill: 969 targets, 967 complete, 1 partial (64% coverage), 1 without usable captions; no bot-check.
+
+## Update 2026-11-12 — newest-100 top-up for the 5 Apify-capped channels
+Tom Lazy Investor, Ivan Invests, Mark Retired at 55, Alicia Invests and Tom Talks Money had only the newest 40 videos from Apify.
+Videos 41-100 (302 videos) were added with free, paced yt-dlp (metadata + creator/auto captions, one request per video, no bot-check, 0 failures).
+Source: `sources/ytdlp_2026-11-12/` (metadata.jsonl.gz, extract.py, run.log) + `sources/transcripts_ytdlp_2026-11-12.tar.gz`.
+These 5 channels now keep the newest 100 videos (not the 50/30/20 mix) and are all COMPLETE (100 videos, 100 transcripts, 100 thumbnails).
+DB totals: 67 channels, 3,634 videos, 3,450 transcripts, 3,410 videos with transcript, 3,089 captured thumbnails. DB size 97.8 MB (close to the 100 MB limit; next growth needs LFS or a split).
+No additional Apify spend (total stays $4.352).
