@@ -6,6 +6,8 @@ An evidence-based intelligence system for multiple YouTube channels. **YouTube I
 
 Catalogs have distinct populations: the selected inventory and the broader channel registry must not be treated as interchangeable sample counts. See `docs/YOUTUBE_CHANNEL_REGISTRY.md` and `data/catalog/README.md`.
 
+**New here? Start with [docs/START_HERE.md](docs/START_HERE.md):** one page that indexes the Casual Finance and xkcd visual-forensics work, the Finance/Economics corpus and the lower-priority campaigns, with pinned commit SHAs and what is blocked. It links evidence that stays on research branches; it adds no media.
+
 ## Bootstrap (clean clone)
 
 `youtube_channel_registry.db` is Git LFS-tracked; a clean clone gets only the pointer file until LFS materializes it:
