@@ -14,3 +14,9 @@ Transcripts: YouTube creator/auto captions via free paced yt-dlp backfill (never
 Known gaps: Wealth Logic removed by YouTube (UNAVAILABLE_OR_DELETED); Tom Lazy Investor, Ivan Invests, Mark Retired at 55, Alicia Invests, Tom Talks Money
 captured only newest 40 each (full catalogs exceed the $5 budget); videos with no caption track stay without a transcript (status in the coverage CSVs).
 Per-channel completeness: `CHANNEL_DATA_FINAL.csv`.
+
+## Final state (2026-11-12)
+- DB `data/catalog/finance_economics_complete.db` (89.3 MB, integrity ok): 67 channels, 3,332 videos, 3,148 transcripts (3,108 videos with transcript), 2,787 captured thumbnail URLs (rest derived).
+- Cap rule: per channel 100 videos (newest 50, top-viewed 30, lowest-viewed older than 90d 20), 60 transcript targets (30/20/10). Casual Finance is exempt (full 206-video catalog + Whisper-base ASR transcripts, ASR_UNCERTIFIED, kept as separate copy too). 445 videos dropped by the cap; raw data remains in `sources/`.
+- Channels by category: Finance 32 COMPLETE, 7 PARTIAL_TRANSCRIPTS, 7 PARTIAL_VIDEOS, 1 UNAVAILABLE_OR_DELETED (Wealth Logic); Economics 13 COMPLETE, 1 PARTIAL_TRANSCRIPTS; Machine A landscape 6 PARTIAL_TRANSCRIPTS, 2 METADATA_ONLY.
+- Apify spend $4.352 of $5 cap. Caption backfill: 969 targets, 967 complete, 1 partial (64% coverage), 1 without usable captions; no bot-check.
