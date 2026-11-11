@@ -1,0 +1,2235 @@
+{
+ "repo_head": "d987510b966eaabba6cc2990290b52d2ecf3fe8e",
+ "branch": "research/finance-economics-intelligence",
+ "pr44_ref": "badec432bbf5610748123b3f0e0bcb9cdb25fa10",
+ "worktree_dirty_files": 0,
+ "sqlite": [
+  {
+   "path": "data/catalog/youtube-intelligence-os.db",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "tables": [],
+   "status": "EMPTY_FILE_ZERO_BYTES"
+  },
+  {
+   "path": "data/catalog/youtube_channel_registry.db",
+   "bytes": 141373440,
+   "sha256": "39e7a28ba592b9022bd1b32f4c288edde519730164a98ea858ce90c44d52f654",
+   "tables": [
+    {
+     "table": "actor_runs",
+     "rows": 19,
+     "columns": 7,
+     "pk": [
+      "actor_run_id"
+     ],
+     "pk_distinct": 19,
+     "null_or_empty": {
+      "raw_json": 2
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "artifacts",
+     "rows": 318,
+     "columns": 8,
+     "pk": [
+      "artifact_id"
+     ],
+     "pk_distinct": 318,
+     "null_or_empty": {
+      "dataset_id": 3,
+      "canonical_channel_id": 238,
+      "unavailable_reason": 318
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "availability_gaps",
+     "rows": 216,
+     "columns": 5,
+     "pk": [
+      "gap_id"
+     ],
+     "pk_distinct": 216,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "channel_aliases",
+     "rows": 142,
+     "columns": 5,
+     "pk": [
+      "alias_id"
+     ],
+     "pk_distinct": 142,
+     "null_or_empty": {
+      "submission_global_row": 75
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "channel_data_layers",
+     "rows": 825,
+     "columns": 6,
+     "pk": [
+      "canonical_channel_id",
+      "layer_name"
+     ],
+     "pk_distinct": 825,
+     "null_or_empty": {
+      "limitation_reason": 319
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "channels",
+     "rows": 75,
+     "columns": 23,
+     "pk": [
+      "canonical_channel_id"
+     ],
+     "pk_distinct": 75,
+     "null_or_empty": {
+      "current_handle": 1,
+      "completed_tick": 43,
+      "handle_unavailable_reason": 74,
+      "limitations": 61
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "dataset_channels",
+     "rows": 50,
+     "columns": 3,
+     "pk": [
+      "dataset_id",
+      "canonical_channel_id",
+      "relationship"
+     ],
+     "pk_distinct": 50,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "dataset_videos",
+     "rows": 2303,
+     "columns": 3,
+     "pk": [
+      "dataset_id",
+      "youtube_video_id"
+     ],
+     "pk_distinct": 2303,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "datasets",
+     "rows": 33,
+     "columns": 5,
+     "pk": [
+      "dataset_id"
+     ],
+     "pk_distinct": 33,
+     "null_or_empty": {
+      "evidence_scope": 33,
+      "limitations": 33
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "identity_evidence",
+     "rows": 75,
+     "columns": 8,
+     "pk": [
+      "evidence_id"
+     ],
+     "pk_distinct": 75,
+     "null_or_empty": {
+      "observed_handle": 1,
+      "raw_json": 75
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "intelligence_capabilities",
+     "rows": 8,
+     "columns": 2,
+     "pk": [
+      "capability_id"
+     ],
+     "pk_distinct": 8,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "intelligence_coverage",
+     "rows": 600,
+     "columns": 8,
+     "pk": [
+      "canonical_channel_id",
+      "capability_id"
+     ],
+     "pk_distinct": 600,
+     "null_or_empty": {
+      "limitation_reason": 13
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "non_channel_subjects",
+     "rows": 4,
+     "columns": 6,
+     "pk": [
+      "subject_id"
+     ],
+     "pk_distinct": 4,
+     "null_or_empty": {
+      "canonical_channel_id": 4
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "registry_metadata",
+     "rows": 4,
+     "columns": 2,
+     "pk": [
+      "key"
+     ],
+     "pk_distinct": 4,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "subject_datasets",
+     "rows": 4,
+     "columns": 2,
+     "pk": [
+      "subject_id",
+      "dataset_id"
+     ],
+     "pk_distinct": 4,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "submissions",
+     "rows": 67,
+     "columns": 11,
+     "pk": [
+      "global_row"
+     ],
+     "pk_distinct": 67,
+     "null_or_empty": {
+      "duplicate_of_global_row": 63
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "subtitle_tracks",
+     "rows": 2455,
+     "columns": 6,
+     "pk": [
+      "subtitle_track_id"
+     ],
+     "pk_distinct": 2455,
+     "null_or_empty": {
+      "track_type": 18,
+      "raw_json": 2455
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "transcript_fts",
+     "rows": 2291,
+     "columns": 1,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "transcript_fts_config",
+     "rows": 1,
+     "columns": 2,
+     "pk": [
+      "k"
+     ],
+     "pk_distinct": 1,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "transcript_fts_content",
+     "rows": 2291,
+     "columns": 2,
+     "pk": [
+      "id"
+     ],
+     "pk_distinct": 2291,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "transcript_fts_data",
+     "rows": 3807,
+     "columns": 2,
+     "pk": [
+      "id"
+     ],
+     "pk_distinct": 3807,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "transcript_fts_docsize",
+     "rows": 2291,
+     "columns": 2,
+     "pk": [
+      "id"
+     ],
+     "pk_distinct": 2291,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "transcript_fts_idx",
+     "rows": 3421,
+     "columns": 3,
+     "pk": [
+      "segid",
+      "term"
+     ],
+     "pk_distinct": 3421,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "transcripts",
+     "rows": 2303,
+     "columns": 11,
+     "pk": [
+      "transcript_id"
+     ],
+     "pk_distinct": 2303,
+     "null_or_empty": {
+      "caption_type": 18,
+      "unavailable_reason": 2291
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "videos",
+     "rows": 2303,
+     "columns": 14,
+     "pk": [
+      "youtube_video_id"
+     ],
+     "pk_distinct": 2303,
+     "null_or_empty": {
+      "video_type": 159,
+      "views": 10,
+      "description": 17,
+      "description_unavailable_reason": 2286,
+      "thumbnail_url": 396,
+      "raw_json": 667
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "visual_coverage",
+     "rows": 75,
+     "columns": 11,
+     "pk": [
+      "canonical_channel_id"
+     ],
+     "pk_distinct": 75,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    }
+   ],
+   "integrity_check": "ok",
+   "foreign_key_violations": 0,
+   "foreign_key_violations_by_table": {}
+  },
+  {
+   "path": "data/catalog/youtube_intelligence.db",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "tables": [],
+   "status": "EMPTY_FILE_ZERO_BYTES"
+  },
+  {
+   "path": "data/catalog/youtube_inventory.db",
+   "bytes": 52391936,
+   "sha256": "277c09f64bc71678a0ae52c0084be8bde4f38db87dba52b12bbac59c6914618d",
+   "tables": [
+    {
+     "table": "apify_result_records",
+     "rows": 480,
+     "columns": 7,
+     "pk": [
+      "apify_result_record_id"
+     ],
+     "pk_distinct": 480,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "apify_run_cost_observations",
+     "rows": 10,
+     "columns": 10,
+     "pk": [
+      "cost_observation_id"
+     ],
+     "pk_distinct": 10,
+     "null_or_empty": {
+      "charged_event_counts_json": 4,
+      "event_usage_json": 4,
+      "notes": 8
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "apify_source_runs",
+     "rows": 9,
+     "columns": 24,
+     "pk": [
+      "apify_source_run_id"
+     ],
+     "pk_distinct": 9,
+     "null_or_empty": {
+      "actor_build_id": 1,
+      "actor_build_version": 6,
+      "notes": 9
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "batch_roots",
+     "rows": 12,
+     "columns": 13,
+     "pk": [
+      "batch_root_id"
+     ],
+     "pk_distinct": 12,
+     "null_or_empty": {
+      "notes": 12
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "channel_dataset_links",
+     "rows": 22,
+     "columns": 7,
+     "pk": [
+      "channel_id",
+      "dataset_id",
+      "relationship_type"
+     ],
+     "pk_distinct": 22,
+     "null_or_empty": {
+      "notes": 10
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "channel_snapshots",
+     "rows": 12,
+     "columns": 9,
+     "pk": [
+      "channel_snapshot_id"
+     ],
+     "pk_distinct": 12,
+     "null_or_empty": {
+      "video_count": 1,
+      "notes": 2
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "channels",
+     "rows": 10,
+     "columns": 9,
+     "pk": [
+      "channel_id"
+     ],
+     "pk_distinct": 10,
+     "null_or_empty": {
+      "notes": 2
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "content_classifications",
+     "rows": 604,
+     "columns": 14,
+     "pk": [
+      "classification_id"
+     ],
+     "pk_distinct": 604,
+     "null_or_empty": {
+      "method_version": 302
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "dataset_relationships",
+     "rows": 1,
+     "columns": 10,
+     "pk": [
+      "relationship_id"
+     ],
+     "pk_distinct": 1,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "datasets",
+     "rows": 26,
+     "columns": 12,
+     "pk": [
+      "dataset_id"
+     ],
+     "pk_distinct": 26,
+     "null_or_empty": {
+      "notes": 14
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "discovered_files",
+     "rows": 45774,
+     "columns": 18,
+     "pk": [
+      "discovered_file_id"
+     ],
+     "pk_distinct": 45774,
+     "null_or_empty": {
+      "extension": 3705,
+      "mime_type": 6058,
+      "size_bytes": 3096,
+      "sha256": 3096,
+      "dataset_id": 39654,
+      "source_file_id": 39654,
+      "duplicate_of_discovered_file_id": 41717,
+      "notes": 45774
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "document_records",
+     "rows": 17,
+     "columns": 16,
+     "pk": [
+      "document_id"
+     ],
+     "pk_distinct": 17,
+     "null_or_empty": {
+      "notes": 15
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "entity_classifications",
+     "rows": 9,
+     "columns": 16,
+     "pk": [
+      "classification_id"
+     ],
+     "pk_distinct": 9,
+     "null_or_empty": {
+      "sub_niche": 9,
+      "target_audience": 9,
+      "packaging_style": 8,
+      "thumbnail_style": 9,
+      "presenter_style": 9
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "field_provenance",
+     "rows": 12335,
+     "columns": 17,
+     "pk": [
+      "provenance_id"
+     ],
+     "pk_distinct": 12335,
+     "null_or_empty": {
+      "source_file_id": 4,
+      "channel_id": 12287,
+      "channel_snapshot_id": 12312,
+      "video_id": 10995,
+      "video_snapshot_id": 5096,
+      "transcript_id": 8650,
+      "observed_at": 962,
+      "notes": 3171
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "file_relationships",
+     "rows": 0,
+     "columns": 8,
+     "pk": [
+      "relationship_id"
+     ],
+     "pk_distinct": 0,
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "ingestion_errors",
+     "rows": 0,
+     "columns": 12,
+     "pk": [
+      "error_id"
+     ],
+     "pk_distinct": 0,
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "ingestion_runs",
+     "rows": 37,
+     "columns": 13,
+     "pk": [
+      "run_id"
+     ],
+     "pk_distinct": 37,
+     "null_or_empty": {
+      "source_file_count": 1,
+      "archive_member_count": 1,
+      "total_size_bytes": 1
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "schema_meta",
+     "rows": 10,
+     "columns": 3,
+     "pk": [
+      "schema_version"
+     ],
+     "pk_distinct": 10,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "source_batches",
+     "rows": 1,
+     "columns": 8,
+     "pk": [
+      "batch_id"
+     ],
+     "pk_distinct": 1,
+     "null_or_empty": {
+      "notes": 1
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "source_files",
+     "rows": 6953,
+     "columns": 23,
+     "pk": [
+      "file_id"
+     ],
+     "pk_distinct": 6953,
+     "null_or_empty": {
+      "parent_file_id": 6729,
+      "canonical_path": 4894,
+      "archive_member_path": 6729,
+      "mime_type": 339,
+      "notes": 241
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "source_locations",
+     "rows": 34,
+     "columns": 7,
+     "pk": [
+      "source_location_id"
+     ],
+     "pk_distinct": 34,
+     "null_or_empty": {
+      "notes": 26
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "thumbnail_evidence",
+     "rows": 479,
+     "columns": 11,
+     "pk": [
+      "thumbnail_evidence_id"
+     ],
+     "pk_distinct": 479,
+     "null_or_empty": {},
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "transcripts",
+     "rows": 668,
+     "columns": 17,
+     "pk": [
+      "transcript_id"
+     ],
+     "pk_distinct": 668,
+     "null_or_empty": {
+      "caption_type": 1,
+      "language": 1,
+      "word_count": 1,
+      "transcript_sha256": 2,
+      "notes": 159,
+      "transcript_format": 160,
+      "canonical_reference": 2,
+      "timing_quality": 639
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "video_snapshots",
+     "rows": 668,
+     "columns": 20,
+     "pk": [
+      "video_snapshot_id"
+     ],
+     "pk_distinct": 668,
+     "null_or_empty": {
+      "views_per_day": 480,
+      "engagement_rate": 480,
+      "description_char_count": 3,
+      "transcript_word_count": 1,
+      "notes": 159,
+      "description": 162,
+      "video_type": 159,
+      "thumbnail_url": 639
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "videos",
+     "rows": 667,
+     "columns": 8,
+     "pk": [
+      "video_id"
+     ],
+     "pk_distinct": 667,
+     "null_or_empty": {
+      "notes": 159
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "visual_assets",
+     "rows": 5172,
+     "columns": 17,
+     "pk": [
+      "visual_asset_id"
+     ],
+     "pk_distinct": 5172,
+     "null_or_empty": {
+      "frame_sequence_id": 122,
+      "frame_index": 122,
+      "visual_state_cluster_id": 122,
+      "notes": 5172
+     },
+     "scan": "FULL_RECORD_SCAN"
+    },
+    {
+     "table": "visual_observations",
+     "rows": 244,
+     "columns": 11,
+     "pk": [
+      "visual_observation_id"
+     ],
+     "pk_distinct": 244,
+     "null_or_empty": {
+      "source_surface": 244,
+      "extracted_text": 123,
+      "confidence": 122,
+      "notes": 244
+     },
+     "scan": "FULL_RECORD_SCAN"
+    }
+   ],
+   "integrity_check": "ok",
+   "foreign_key_violations": 0,
+   "foreign_key_violations_by_table": {}
+  }
+ ],
+ "registry_checks": {
+  "video_type_labels": [
+   [
+    "<NULL>",
+    159
+   ],
+   [
+    "Short",
+    14
+   ],
+   [
+    "regular video",
+    890
+   ],
+   [
+    "shorts",
+    90
+   ],
+   [
+    "video",
+    1150
+   ]
+  ],
+  "videos_without_channel_row": 0,
+  "videos_in_multiple_datasets": 0,
+  "videos_in_no_dataset": 0,
+  "transcripts_placeholder": [
+   12,
+   2303
+  ],
+  "transcripts_short_lt200chars": 12,
+  "duplicate_transcript_hash_groups": 2,
+  "duplicate_titles_within_channel": 5,
+  "views_null": 10,
+  "published_at_not_iso_datetime": 771,
+  "channels_with_videos": 46,
+  "channels_total": 75,
+  "first_party_analytics_status": [
+   [
+    "SCHEMA_READY_NO_DATA",
+    75
+   ]
+  ],
+  "forensic_video_status": [
+   [
+    "AVAILABLE_WITH_LIMITATIONS",
+    1
+   ],
+   [
+    "NOT_AVAILABLE",
+    74
+   ]
+  ]
+ },
+ "flat_files": [
+  {
+   "path": "research/finance-economics-intelligence/BASELINE_COVERAGE.csv",
+   "bytes": 877,
+   "sha256": "0bbb4aee6afa629cb9c144bcddaa81f857b37e64770e4a9aefffcc47f0f0543e",
+   "rows": 13,
+   "columns": 9,
+   "id_column": "Channel_ID",
+   "distinct_ids": 13,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Channel": 0,
+    "Channel_ID": 0,
+    "Videos": 0,
+    "Titles": 0,
+    "Transcript_records": 0,
+    "Thumbnail_URLs": 0,
+    "Mobile_images_reviewed": 0,
+    "Dated_metrics": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/CANONICAL_CHANNELS.csv",
+   "bytes": 1560,
+   "sha256": "a38fabea24de39bd695cb94163af4710c7829257c5f9138804375e83813de08f",
+   "rows": 13,
+   "columns": 8,
+   "id_column": "Channel_ID",
+   "distinct_ids": 13,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Channel_ID": 0,
+    "Channel": 0,
+    "Scope": 0,
+    "Dataset": 0,
+    "Videos": 0,
+    "Niche": 0,
+    "Research_depth": 0,
+    "Current_growth": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/CHANNEL_UNIVERSE.csv",
+   "bytes": 2962,
+   "sha256": "d9372c4e3097ce13417e6e59304c4918e1a0deba9c10ed665e528ce097dac177",
+   "rows": 21,
+   "columns": 8,
+   "id_column": "Channel_ID",
+   "distinct_ids": 21,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Channel_ID": 0,
+    "Channel": 0,
+    "Scope": 0,
+    "Dataset": 0,
+    "Videos": 0,
+    "Niche": 0,
+    "Research_depth": 0,
+    "Current_growth": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/DATE_SENSITIVITY.csv",
+   "bytes": 217190,
+   "sha256": "88dac1c8c946af8d77b0b7590143174f47c43650c29ee0aeb37b3b1b986dc29d",
+   "rows": 1190,
+   "columns": 9,
+   "id_column": "Video_ID",
+   "distinct_ids": 595,
+   "duplicate_ids": 595,
+   "empty_cells_by_column_top": {
+    "Ratio": 97,
+    "Peer_count": 90,
+    "Peer_Video_IDs": 90,
+    "Video_ID": 0,
+    "Snapshot_shift_days": 0,
+    "Primary_tier": 0,
+    "Shifted_tier": 0,
+    "Agrees": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/DEEP_SCRIPT_MAPS.csv",
+   "bytes": 6236,
+   "sha256": "9855d09db3a2e3d2fb141e89b1f670bf17b90e21898335d4146fef05849b629d",
+   "rows": 8,
+   "columns": 15,
+   "id_column": "Video_ID",
+   "distinct_ids": 8,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Review_scope": 0,
+    "Text_SHA256": 0,
+    "Hook_anchor": 0,
+    "Hook_char_offset": 0,
+    "Mechanism_anchor": 0,
+    "Mechanism_char_offset": 0,
+    "Payoff_anchor": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/DRIVE_CONTENT_TRIAGE.csv",
+   "bytes": 3046,
+   "sha256": "277eacd42b488caf45ab147c5eec0758f49e92b6238c2d1f64aa9105bb99e455",
+   "rows": 5,
+   "columns": 13,
+   "empty_cells_by_column_top": {
+    "Drive_ID": 0,
+    "Title": 0,
+    "URL": 0,
+    "MIME": 0,
+    "Modified_time": 0,
+    "Fetched_at_UTC": 0,
+    "Readable_text_SHA256": 0,
+    "Readable_text_characters": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/DRIVE_FINANCE_COMPARISON.csv",
+   "bytes": 47598,
+   "sha256": "d049c0355993c87c6be76cad182684613b9de7b6ba00040d5e683232fc3187d0",
+   "rows": 206,
+   "columns": 10,
+   "id_column": "Video_ID",
+   "distinct_ids": 206,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Title": 0,
+    "Public_Views": 0,
+    "Format": 0,
+    "Tier": 0,
+    "Drive_snapshot_text": 0,
+    "Frozen_snapshot_text": 0,
+    "Frozen_version": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/EXISTING_DATA_INVENTORY.csv",
+   "bytes": 19020,
+   "sha256": "defe7199a270691945a45f41c43c4851f3ed760f5e5eb82abc57cff48e4d14e2",
+   "rows": 39,
+   "columns": 16,
+   "id_column": "Channel_ID",
+   "distinct_ids": 37,
+   "duplicate_ids": 2,
+   "empty_cells_by_column_top": {
+    "Limitations": 29,
+    "Dataset": 18,
+    "Unique_Videos": 2,
+    "Channel": 0,
+    "Channel_ID": 0,
+    "Scope": 0,
+    "Readiness": 0,
+    "Nonplaceholder_Transcripts": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/EXPANDED_PERFORMANCE_EXAMPLES.csv",
+   "bytes": 5238,
+   "sha256": "59ee2d860ba4551b8af506def73781089974efea9dc73ef0f80808a70de19683",
+   "rows": 16,
+   "columns": 14,
+   "id_column": "Video_ID",
+   "distinct_ids": 16,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Channel": 0,
+    "Title": 0,
+    "Published_at_raw": 0,
+    "Metric_snapshot_date": 0,
+    "Views": 0,
+    "Format": 0,
+    "Ratio": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/FEATURE_COMPARISONS.csv",
+   "bytes": 12869,
+   "sha256": "1628f059c2f97855a140d897d0bad7f74efc63287191d209bd8ef29b4e893878",
+   "rows": 36,
+   "columns": 15,
+   "empty_cells_by_column_top": {
+    "Channel": 0,
+    "Format": 0,
+    "Tier": 0,
+    "N": 0,
+    "Video_IDs": 0,
+    "Word_count_median": 0,
+    "Sentence_word_mean_proxy_median": 0,
+    "Causal_marker_count_median": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/FINANCE_SOURCE_MAP.csv",
+   "bytes": 1102634,
+   "sha256": "a6ff605f27ae00579fcc9326a62bf1c4fd12b52e2cf08b82b5602a8bbe41603d",
+   "rows": 2081,
+   "columns": 14,
+   "empty_cells_by_column_top": {
+    "Duplicate_Of": 1299,
+    "SHA256_if_local": 4,
+    "Size_bytes": 1,
+    "Source_ID": 0,
+    "Title": 0,
+    "Type": 0,
+    "Category": 0,
+    "Original_Path_or_URL": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/LANDSCAPE_CHANNELS.csv",
+   "bytes": 1582,
+   "sha256": "993d87d740be45f2ac3895fd33ba49f85f99954628bdf92673cefd043fbdfd86",
+   "rows": 6,
+   "columns": 10,
+   "id_column": "Channel_ID",
+   "distinct_ids": 6,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Handle": 0,
+    "Channel_ID": 0,
+    "Name": 0,
+    "Depth": 0,
+    "URL": 0,
+    "Retrieved_at": 0,
+    "Visible_videos": 0,
+    "Status": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/LANDSCAPE_VIDEOS.csv",
+   "bytes": 40159,
+   "sha256": "3c6b7e31bad1abdd3c4764242025e247587c171588c029de3df5edf50480f6a9",
+   "rows": 180,
+   "columns": 11,
+   "id_column": "Video_ID",
+   "distinct_ids": 180,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Channel_ID": 0,
+    "Channel": 0,
+    "Video_ID": 0,
+    "Title": 0,
+    "Views_display": 0,
+    "Published_relative": 0,
+    "Duration_display": 0,
+    "Format_basis": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/LOCAL_THUMBNAIL_INDEX.csv",
+   "bytes": 10669,
+   "sha256": "1990393b279dac2879f6fc8614cb1b9ead167414472e6aa5ca9a3838b856174b",
+   "rows": 38,
+   "columns": 5,
+   "empty_cells_by_column_top": {
+    "Path": 0,
+    "SHA256": 0,
+    "Size_bytes": 0,
+    "Readiness": 0,
+    "Limitations": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/METRIC_DATE_EVIDENCE.csv",
+   "bytes": 2281,
+   "sha256": "e6f5f6e8863cee0491495fe00e3ec7e379a6826c8576e189c5ebb60c70b7606e",
+   "rows": 4,
+   "columns": 12,
+   "id_column": "Channel_ID",
+   "distinct_ids": 4,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Channel_ID": 0,
+    "Channel": 0,
+    "Dataset": 0,
+    "Metric_snapshot_date": 0,
+    "Snapshot_precision": 0,
+    "Source_path": 0,
+    "Source_SHA256": 0,
+    "Source_cell": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/PERFORMANCE_SENSITIVITY.csv",
+   "bytes": 28423,
+   "sha256": "40c2e92a6fede8a478bfa0a7565be92961c76874c62651a1bc78565db33d2daa",
+   "rows": 723,
+   "columns": 5,
+   "id_column": "Video_ID",
+   "distinct_ids": 723,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Primary_tier": 0,
+    "Five_peer_ratio": 0,
+    "Five_peer_tier": 0,
+    "Agrees": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/REUSED_SOURCE_REGISTER.csv",
+   "bytes": 6697,
+   "sha256": "76ad32345d061d61a652e033b0e8f6f63d8265efc86dad2dcc9ef208be69cf79",
+   "rows": 12,
+   "columns": 9,
+   "empty_cells_by_column_top": {
+    "Source_ID": 0,
+    "Type": 0,
+    "Locator": 0,
+    "Version": 0,
+    "Commit": 0,
+    "URL": 0,
+    "SHA256": 0,
+    "Reviewed": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/REVIEW_SAMPLE.csv",
+   "bytes": 22938,
+   "sha256": "d32cd4b519ff7d38eb64b533da68b11aaeda90bbcd751832ce064bbe08c456d1",
+   "rows": 30,
+   "columns": 28,
+   "id_column": "Video_ID",
+   "distinct_ids": 30,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Metric_snapshot_date": 2,
+    "Format_source_value": 2,
+    "Age_days": 2,
+    "Peer_count": 2,
+    "Lifetime_rate_ratio": 2,
+    "Peer_Video_IDs": 2,
+    "Video_ID": 0,
+    "Channel_ID": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/SCRIPT_ANALYSIS_966.csv",
+   "bytes": 2680568,
+   "sha256": "21651cf0ed7c4a41c9b146c07d1979a5f22c0bf9f692a137088583355526cf94",
+   "rows": 966,
+   "columns": 26,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "description_chapters_as_declared_by_creator": 962,
+    "legacy_beat_map": 958,
+    "blocker": 956,
+    "recovery_attempt": 955,
+    "legacy_review": 936,
+    "evidence_kind": 678,
+    "analysis": 511,
+    "beat_map": 511
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/SCRIPT_FEATURES.csv",
+   "bytes": 619649,
+   "sha256": "9cafc9fb4af35f14d0075d23ae0a87cd95b306d601edcb95ca769e4ab86d1548",
+   "rows": 955,
+   "columns": 17,
+   "id_column": "Video_ID",
+   "distinct_ids": 955,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Dataset": 0,
+    "Text_SHA256": 0,
+    "Word_count": 0,
+    "Opening_40_words": 0,
+    "Ending_40_words": 0,
+    "Sentence_word_mean_proxy": 0,
+    "Question_marks": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/SEMANTIC_REVIEWS.csv",
+   "bytes": 10433,
+   "sha256": "f04673e51c35343018d7bd29b46b00107a308eb7fff7c2510afcdff3cc943c3a",
+   "rows": 30,
+   "columns": 12,
+   "id_column": "Video_ID",
+   "distinct_ids": 30,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Review_scope": 0,
+    "Sub_niche": 0,
+    "Audience_problem": 0,
+    "Economic_mechanism": 0,
+    "Narrative_angle": 0,
+    "Demand_type": 0,
+    "Evidence_kind": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/SOURCE_GAP_DISPOSITIONS.csv",
+   "bytes": 7815,
+   "sha256": "cb7b050a90586560eb5347d00956295942870828d5a48017f02a3ea1e0724e9e",
+   "rows": 26,
+   "columns": 6,
+   "empty_cells_by_column_top": {
+    "Dataset": 0,
+    "Original_Path": 0,
+    "Availability": 0,
+    "Task_relevance": 0,
+    "Disposition": 0,
+    "Evidence": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/SOURCE_REGISTER.csv",
+   "bytes": 21483,
+   "sha256": "5eaa0306a12cef88fa7489823261b61c2144699607dfcdfb0b67802b774dd634",
+   "rows": 75,
+   "columns": 7,
+   "empty_cells_by_column_top": {
+    "Version": 8,
+    "Locator": 2,
+    "Source_ID": 0,
+    "Kind": 0,
+    "Observed_date": 0,
+    "Use": 0,
+    "Limit": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/THUMBNAIL_ANALYSIS_966.csv",
+   "bytes": 945796,
+   "sha256": "de9b2e50ef67f7033b22be63f2877993643f6f88530984e180c9e488603f31c3",
+   "rows": 966,
+   "columns": 22,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "legacy_review": 939,
+    "recovery_attempt": 807,
+    "content_correspondence": 696,
+    "review_scope": 501,
+    "analysis": 501,
+    "source_refs": 501,
+    "image_path": 501,
+    "image_source": 501
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/THUMBNAIL_COVERAGE.csv",
+   "bytes": 104424,
+   "sha256": "7b8ab5e1ab46b92d53442d191f4f3fe14532803f2762e86e15514d7c1ed59c91",
+   "rows": 966,
+   "columns": 7,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Local_asset": 939,
+    "Thumbnail_URL": 159,
+    "Video_ID": 0,
+    "URL_status": 0,
+    "Association_verified": 0,
+    "Mobile_review": 0,
+    "Historical_design": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/THUMBNAIL_FALLBACK_REGISTER.csv",
+   "bytes": 1080,
+   "sha256": "32b2952af76fb4aca418da20dd623fa0a36f04951d6766f966f0c1e69eee706d",
+   "rows": 5,
+   "columns": 7,
+   "id_column": "Video_ID",
+   "distinct_ids": 5,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Path": 3,
+    "SHA256": 3,
+    "Video_ID": 0,
+    "URL": 0,
+    "URL_basis": 0,
+    "Fetch_date": 0,
+    "Status": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/THUMBNAIL_FETCH_REGISTER.csv",
+   "bytes": 7340,
+   "sha256": "fd60e48a6376c2bb5fc1bac1d3b1b62a4d0d9b03c121e6e246701c944ef3aa40",
+   "rows": 30,
+   "columns": 8,
+   "id_column": "Video_ID",
+   "distinct_ids": 30,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Path": 5,
+    "SHA256": 5,
+    "Dimensions": 5,
+    "URL": 2,
+    "Video_ID": 0,
+    "Fetch_date": 0,
+    "Status": 0,
+    "Historical_design": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/THUMBNAIL_REVIEWS.csv",
+   "bytes": 7017,
+   "sha256": "5126b5d592bd904f965a177e65af4557b69f75ab2900ea7334850781bbd08fcd",
+   "rows": 27,
+   "columns": 13,
+   "id_column": "Video_ID",
+   "distinct_ids": 27,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Focal_element": 0,
+    "Face_expression": 0,
+    "Visible_text": 0,
+    "Palette_contrast": 0,
+    "Mobile_320_review": 0,
+    "Curiosity_interpretation": 0,
+    "Title_consistency": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/TITLE_ANALYSIS_966.csv",
+   "bytes": 710383,
+   "sha256": "69a2ab7cb5f71af74fe63a8c5a61ebcb5d62937c5b61a10808355ba64a5688c0",
+   "rows": 966,
+   "columns": 16,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "legacy_review": 936,
+    "expanded_rubric": 674,
+    "script_alignment": 535,
+    "review_scope": 501,
+    "analysis": 501,
+    "source_refs": 501,
+    "search_demand": 501,
+    "peer_comparison_ids": 501
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/TITLE_FEATURES.csv",
+   "bytes": 65351,
+   "sha256": "ea06356f545a7b2b876ae2f9e1e6e576d47d98c5935de1060fb9500788782ebb",
+   "rows": 966,
+   "columns": 11,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Title_characters": 0,
+    "Title_words": 0,
+    "Question_mark": 0,
+    "Question_opener": 0,
+    "Numbers": 0,
+    "Financial_stakes_tokens": 0,
+    "Negative_tokens": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/TITLE_SEMANTIC_REVIEWS.csv",
+   "bytes": 15980,
+   "sha256": "03da59d66b3faa460d58051da08fe0c990bbe7a75fb6147578952f4db99b302a",
+   "rows": 30,
+   "columns": 20,
+   "id_column": "Video_ID",
+   "distinct_ids": 30,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Title": 0,
+    "Grammatical_structure": 0,
+    "Curiosity_gap_interpretation": 0,
+    "Paradox_interpretation": 0,
+    "Specificity": 0,
+    "Financial_stakes": 0,
+    "Framing": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/TOPIC_ANALYSIS_966.csv",
+   "bytes": 611312,
+   "sha256": "ab1f905cdbb3bb84462e7133186377bb1c63edfd0ef7b7644bb1756ba57cfff5",
+   "rows": 966,
+   "columns": 22,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "blocker": 956,
+    "partial_note_from_title_and_description_only": 956,
+    "audience_problem": 944,
+    "economic_mechanism": 944,
+    "demand_type": 944,
+    "time_sensitivity": 944,
+    "narrative_angle": 944,
+    "legacy_review": 936
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/TOPIC_IDEA_BACKLOG.csv",
+   "bytes": 4109,
+   "sha256": "d0c0c6c3ecd59a7cad01f8b3f5e254313130b677ef355df1ec529b3e9c2c2f32",
+   "rows": 12,
+   "columns": 19,
+   "empty_cells_by_column_top": {
+    "Idea_ID": 0,
+    "Original_working_title": 0,
+    "Cluster": 0,
+    "Timing_type": 0,
+    "Format": 0,
+    "Evidence_Video_IDs": 0,
+    "Demand_editorial": 0,
+    "Evidence_strength": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/TRANSCRIPT_COVERAGE.csv",
+   "bytes": 318370,
+   "sha256": "940d99fd9b0da3007b1d9f0aae01faa5129db0b299e1251d68742dca64dcf62e",
+   "rows": 966,
+   "columns": 10,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Duplicate_of": 966,
+    "Text_SHA256": 11,
+    "Video_ID": 0,
+    "Dataset": 0,
+    "Status": 0,
+    "Words": 0,
+    "Caption_type": 0,
+    "Evidence_locator": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/VIDEO_AUDIT_966.csv",
+   "bytes": 9074621,
+   "sha256": "df206551a9471e6a17611c5e94b3dab88883c7818492ff3865cfe136027ce4ce",
+   "rows": 966,
+   "columns": 48,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "description_unavailable_reason": 953,
+    "Lifetime_rate_ratio": 243,
+    "Peer_Video_IDs": 220,
+    "Peer_count": 219,
+    "Age_days": 174,
+    "Metric_snapshot_date": 159,
+    "Format_source_value": 159,
+    "description": 13
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/VIDEO_AUDIT_966.jsonl",
+   "bytes": 9739399,
+   "sha256": "27cd175ec9910d71c1df90e5094e155a4dcee720f57270fcda631399f1787184",
+   "rows": 966,
+   "columns": 44,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/VIDEO_COMPLETION_MATRIX.csv",
+   "bytes": 164887,
+   "sha256": "b730eb757a988491ee7e893dfb56f116f40defc95acc0a07f5726482a230ecb0",
+   "rows": 966,
+   "columns": 9,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Video_ID": 0,
+    "Channel_ID": 0,
+    "TITLE_REVIEW": 0,
+    "THUMBNAIL_REVIEW": 0,
+    "SCRIPT_REVIEW": 0,
+    "TOPIC_REVIEW": 0,
+    "PERFORMANCE_REVIEW": 0,
+    "VIRALITY_REVIEW": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/VIDEO_MASTER.csv",
+   "bytes": 629177,
+   "sha256": "15e5af152344944f3f9b7f041289a92cc365cf9d0bfad43cd95df84822f95615",
+   "rows": 966,
+   "columns": 28,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "Lifetime_rate_ratio": 243,
+    "Peer_Video_IDs": 220,
+    "Peer_count": 219,
+    "Age_days": 174,
+    "Metric_snapshot_date": 159,
+    "Format_source_value": 159,
+    "Views": 10,
+    "Video_ID": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/VIRALITY_INTELLIGENCE_966.csv",
+   "bytes": 1382632,
+   "sha256": "0418c02c9c823e5333bdc7f3700a993857c6ead958fcafee420272d4e587c08f",
+   "rows": 966,
+   "columns": 21,
+   "id_column": "Video_ID",
+   "distinct_ids": 966,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "blocker": 956,
+    "analysis": 511,
+    "topic_demand": 511,
+    "trend_timing": 511,
+    "competition": 511,
+    "format_fit": 511,
+    "channel_context": 511,
+    "alternative_explanations": 511
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-12-channel-2026-10-20/CHANNEL_CLASSIFICATION_SUMMARY.csv",
+   "bytes": 1457,
+   "sha256": "26b8c2133d506e6ce9205fb4127a40a1b52499c340151320fddaef5dcb1599d4",
+   "rows": 12,
+   "columns": 10,
+   "id_column": "channel_id",
+   "distinct_ids": 12,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "channel_name": 0,
+    "channel_id": 0,
+    "captured": 0,
+    "finance_eligible": 0,
+    "baseline_duplicates": 0,
+    "unique_expansion": 0,
+    "excluded": 0,
+    "channel_verification": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-12-channel-2026-10-20/DUPLICATE_OVERLAP_WITH_BASELINE.csv",
+   "bytes": 4753,
+   "sha256": "2a62fbab06934dc398e76ab17f31c33f9cdc3416ccf2014b5a628414afff0e13",
+   "rows": 28,
+   "columns": 7,
+   "id_column": "video_id",
+   "distinct_ids": 28,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "video_id": 0,
+    "channel_id": 0,
+    "channel_name": 0,
+    "title": 0,
+    "baseline_channel_id": 0,
+    "channel_owner_match": 0,
+    "disposition": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-12-channel-2026-10-20/EXPANSION_AUDIT_LEDGER.jsonl",
+   "bytes": 166630,
+   "sha256": "9e19befdcb2da5109289d7df0ed43fb7991063c3c8bdb46f1ed07383d40ef506",
+   "rows": 197,
+   "columns": 19,
+   "id_column": "video_id",
+   "distinct_ids": 197,
+   "duplicate_ids": 0,
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-12-channel-2026-10-20/FINANCE_EXPANSION_MASTER.csv",
+   "bytes": 794983,
+   "sha256": "5163a9e4bd3088d283d507928646be3645b4cf8ecda79d82d8dc82450351e76b",
+   "rows": 197,
+   "columns": 65,
+   "id_column": "video_id",
+   "distinct_ids": 197,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "tags": 197,
+    "missing_fields": 194,
+    "hashtags": 68,
+    "channel_name": 0,
+    "channel_id": 0,
+    "channel_handle": 0,
+    "channel_url": 0,
+    "video_id": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-12-channel-2026-10-20/FINANCE_INCLUSION_CROSSWALK.csv",
+   "bytes": 241804,
+   "sha256": "4db7afba480ec750029e51ab8942a5a71fecedf8d4178492cf7438339fb094ec",
+   "rows": 445,
+   "columns": 20,
+   "id_column": "video_id",
+   "distinct_ids": 445,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "video_id": 0,
+    "channel_id": 0,
+    "channel_name": 0,
+    "title": 0,
+    "finance_decision": 0,
+    "decision_uncertainty": 0,
+    "scope_label": 0,
+    "decision_reason": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/CHANNEL_CLASSIFICATION_SUMMARY.csv",
+   "bytes": 308,
+   "sha256": "059954d1813a3dcdfa746e89dd5f27ab14fc700ac9ab874a42724aad9b75f146",
+   "rows": 1,
+   "columns": 11,
+   "id_column": "channel_id",
+   "distinct_ids": 1,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "channel_name": 0,
+    "channel_id": 0,
+    "public_captured": 0,
+    "regular": 0,
+    "shorts": 0,
+    "restricted_excluded_from_public_count": 0,
+    "finance_eligible": 0,
+    "prior_population_duplicates": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/DUPLICATE_OVERLAP_WITH_PRIOR_POPULATION.csv",
+   "bytes": 223,
+   "sha256": "cd031ed8507f456cc51e0908f264295a3dd2d771fd2594d54ab686fdcdf3fcda",
+   "rows": 0,
+   "columns": 0,
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/FINANCE_EXPANSION_MASTER.csv",
+   "bytes": 168288,
+   "sha256": "59f7d3ba2f20fc48655cabbb650485f8730d064c5bdd545af422c10af7e35b35",
+   "rows": 63,
+   "columns": 60,
+   "id_column": "video_id",
+   "distinct_ids": 63,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "tags": 63,
+    "missing_fields": 60,
+    "hashtags": 56,
+    "channel_name": 0,
+    "channel_id": 0,
+    "channel_handle": 0,
+    "channel_url": 0,
+    "video_id": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/FINANCE_INCLUSION_CROSSWALK.csv",
+   "bytes": 140784,
+   "sha256": "94d84f1c5145c60b7194b63d2f4d0d824d58cfcb62b380e6268baa3571c52ad3",
+   "rows": 76,
+   "columns": 15,
+   "id_column": "video_id",
+   "distinct_ids": 76,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "video_id": 0,
+    "channel_id": 0,
+    "channel_name": 0,
+    "video_type": 0,
+    "title": 0,
+    "description": 0,
+    "finance_decision": 0,
+    "decision_confidence": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/FULL_CHANNEL_SOURCE.csv",
+   "bytes": 182396,
+   "sha256": "14055f9fb06d309b4c6a3276f36cf5e160119c79a7722bb33e1c684f11ec5ead",
+   "rows": 76,
+   "columns": 52,
+   "id_column": "video_id",
+   "distinct_ids": 76,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "tags": 76,
+    "missing_fields": 73,
+    "hashtags": 69,
+    "channel_name": 0,
+    "channel_id": 0,
+    "channel_handle": 0,
+    "channel_url": 0,
+    "video_id": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/CHANNEL_DIRECTORY.csv",
+   "bytes": 7769,
+   "sha256": "7ea3dab30e2ecbf4b270e03d832176286ac7c3005eab642025cbf3b84422bb29",
+   "rows": 42,
+   "columns": 7,
+   "id_column": "channel_id",
+   "distinct_ids": 42,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "notes": 27,
+    "channel_id": 0,
+    "channel_name": 0,
+    "channel_url": 0,
+    "status": 0,
+    "eligible_video_count": 0,
+    "source": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv",
+   "bytes": 802621,
+   "sha256": "7a64a65814403ef07329021fb438679d8878a3f36e0a37bcb07036243fd42913",
+   "rows": 1612,
+   "columns": 21,
+   "id_column": "video_id",
+   "distinct_ids": 1612,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "duplicate_of": 1612,
+    "blocker": 430,
+    "video_id": 0,
+    "channel_id": 0,
+    "channel_name": 0,
+    "channel_url": 0,
+    "niche": 0,
+    "sub_niche": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/MONKEY_MEDIUM_CONFIDENCE_REVIEW.csv",
+   "bytes": 18348,
+   "sha256": "417c25ac300918490a51e240f8aded22a339ac6245179ae5b2838c9ceb896566",
+   "rows": 10,
+   "columns": 9,
+   "id_column": "video_id",
+   "distinct_ids": 10,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "video_id": 0,
+    "title": 0,
+    "description": 0,
+    "prior_decision": 0,
+    "review_decision": 0,
+    "review_confidence": 0,
+    "evidence_review": 0,
+    "transcript_status": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/NEW_ELIGIBLE_ADDITIONS.csv",
+   "bytes": 222218,
+   "sha256": "902f81a2fd709aaecf4b0fd700e61a24d7bd8d2128f91e7a1cdf690b36760de5",
+   "rows": 386,
+   "columns": 21,
+   "id_column": "video_id",
+   "distinct_ids": 386,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "duplicate_of": 386,
+    "video_id": 0,
+    "channel_id": 0,
+    "channel_name": 0,
+    "channel_url": 0,
+    "niche": 0,
+    "sub_niche": 0,
+    "population_layer": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/INDEX.csv",
+   "bytes": 631,
+   "sha256": "0824f285401d4a17628f8f5c54e9a6c39d5f3c52cad50e73dd4a0836c3e3385f",
+   "rows": 2,
+   "columns": 7,
+   "id_column": "video_id",
+   "distinct_ids": 2,
+   "duplicate_ids": 0,
+   "empty_cells_by_column_top": {
+    "video_id": 0,
+    "channel": 0,
+    "title": 0,
+    "source_sha256": 0,
+    "contract": 0,
+    "git_manifest": 0,
+    "external_evidence_status": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  }
+ ],
+ "what_if_pr44": [
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/01_master_data/MASTER_ASSETS.csv",
+   "bytes": 117943,
+   "sha256": "eea462598dcd49a813a10475bcab4fe55dd9d6693710346c76e20d3ba8c6c798",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 448,
+   "columns": 12,
+   "empty_cells_by_column_top": {
+    "OTHER_APPEARANCES": 138,
+    "NOTES": 101,
+    "VIDEO_SLUG": 0,
+    "ASSET_ID": 0,
+    "TYPE": 0,
+    "DESCRIPTION": 0,
+    "MEDIA_FORMAT_NEEDED": 0,
+    "TRANSPARENT_BG": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/01_master_data/MASTER_AUDIO_EVENTS.csv",
+   "bytes": 3924,
+   "sha256": "5a663e0657f475f64f345dd0ae33e5326210d30746df25f54e35d3e318525633",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 29,
+   "columns": 10,
+   "empty_cells_by_column_top": {
+    "AUDIO_EVENT_ID": 0,
+    "VIDEO_SLUG": 0,
+    "START_SEC": 0,
+    "END_SEC": 0,
+    "TYPE": 0,
+    "DESCRIPTION": 0,
+    "INTENSITY": 0,
+    "SOURCE_METHOD": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/01_master_data/MASTER_AUDIO_VISUAL_SYNC.csv",
+   "bytes": 347396,
+   "sha256": "a1c43b6f9af77b11a2b256c215fb9fdde3be6b1518cf9b524caec7ea7810374f",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 1421,
+   "columns": 21,
+   "empty_cells_by_column_top": {
+    "TARGET_SHOT_ID": 1419,
+    "AUDIO_EVENT_ID": 1414,
+    "TARGET_STATE": 581,
+    "WORD_ID": 514,
+    "TRIGGER_WORD": 200,
+    "WORD_START_SEC": 200,
+    "WORD_END_SEC": 200,
+    "SENTENCE_ID": 150
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/01_master_data/MASTER_MOTIONS.csv",
+   "bytes": 134939,
+   "sha256": "807784d0c5cecb0f7e979856dd861e0e34b0fecb8fa2c50833cc2abc1dc89a77",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 438,
+   "columns": 19,
+   "empty_cells_by_column_top": {
+    "TARGET_SHOT_ID": 437,
+    "VIDEO_SLUG": 0,
+    "MOTION_ID": 0,
+    "SHOT_ID": 0,
+    "SOURCE_STATE": 0,
+    "TARGET_STATE": 0,
+    "START_SEC": 0,
+    "END_SEC": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/01_master_data/MASTER_SENTENCES.csv",
+   "bytes": 87684,
+   "sha256": "d89e51a07f421fbcb3c5f954d5d2a15981d1a57a4db3972706f41e7126dac3f0",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 604,
+   "columns": 10,
+   "empty_cells_by_column_top": {
+    "CONFIDENCE": 604,
+    "NOTES": 604,
+    "VIDEO_SLUG": 0,
+    "SENTENCE_ID": 0,
+    "START_SEC": 0,
+    "END_SEC": 0,
+    "TEXT": 0,
+    "FIRST_WORD_ID": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/01_master_data/MASTER_SHOTS.csv",
+   "bytes": 30814,
+   "sha256": "3aada112d321eef90581dcc8b28a949c90e73ae15632e2cff458cb60fb276add",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 200,
+   "columns": 15,
+   "empty_cells_by_column_top": {
+    "TRANSITION_OUT": 15,
+    "SCRIPT_OR_AUDIO_CONTEXT": 15,
+    "TRANSITION_IN": 2,
+    "ASSET_IDS": 1,
+    "VIDEO_SLUG": 0,
+    "SHOT_ID": 0,
+    "START_SEC": 0,
+    "END_SEC": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/01_master_data/MASTER_STATES.csv",
+   "bytes": 241420,
+   "sha256": "ce6856f77950629439c361273e9bf986facb2af8bc2bcc1e4cad5f89f85a5baf",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 581,
+   "columns": 16,
+   "empty_cells_by_column_top": {
+    "MOTION_IDS": 134,
+    "TRANSITION_OUT": 32,
+    "TRANSITION_IN": 31,
+    "ASSET_IDS": 4,
+    "STATIC_ANCHORS": 1,
+    "VIDEO_SLUG": 0,
+    "SHOT_ID": 0,
+    "STATE_ID": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/01_master_data/MASTER_WORDS.csv",
+   "bytes": 813107,
+   "sha256": "33d740ccc1e04ff9845ccb4ead7f73157828c4e91765ad590a5e9977bf90a8cb",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 7864,
+   "columns": 12,
+   "empty_cells_by_column_top": {
+    "CONFIDENCE": 7864,
+    "NOTES": 7864,
+    "VIDEO_SLUG": 0,
+    "WORD_ID": 0,
+    "SENTENCE_ID": 0,
+    "WORD_INDEX": 0,
+    "START_SEC": 0,
+    "END_SEC": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/04_patterns/AUDIO_TRIGGER_PATTERNS.csv",
+   "bytes": 114008,
+   "sha256": "2c094139d53f3a49ec55de35348e3b2898a9ae53a17425f4d8bf3b612c103748",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 1221,
+   "columns": 9,
+   "empty_cells_by_column_top": {
+    "AUDIO_EVENT_ID": 1221,
+    "VIDEO_SLUG": 0,
+    "SYNC_ID": 0,
+    "TRIGGER_WORD": 0,
+    "SENTENCE_ID": 0,
+    "VISUAL_EVENT_TYPE": 0,
+    "OFFSET_MS": 0,
+    "SYNC_RELATION": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/04_patterns/MOTION_PATTERNS.csv",
+   "bytes": 71537,
+   "sha256": "cc0774181011b44232070385e126196f838fe904283856dff708970fc5e1de72",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 438,
+   "columns": 8,
+   "empty_cells_by_column_top": {
+    "VIDEO_SLUG": 0,
+    "MOTION_ID": 0,
+    "SOURCE_STATE": 0,
+    "TARGET_STATE": 0,
+    "DURATION_SEC": 0,
+    "ACTION": 0,
+    "DIRECTION_OR_PATH": 0,
+    "CONFIDENCE": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/04_patterns/SHOT_PATTERNS.csv",
+   "bytes": 16077,
+   "sha256": "1865e96011b5d847f457ed9e3c2ada790b6d98cda2a32fada7e16b63ca31b156",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 200,
+   "columns": 8,
+   "empty_cells_by_column_top": {
+    "TRANSITION_OUT": 15,
+    "TRANSITION_IN": 2,
+    "VIDEO_SLUG": 0,
+    "SHOT_ID": 0,
+    "DURATION_SEC": 0,
+    "STATE_COUNT": 0,
+    "VISUAL_SYNC_EVENTS": 0,
+    "CONFIDENCE": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/04_patterns/STATE_PATTERNS.csv",
+   "bytes": 57344,
+   "sha256": "61aae13e174662b00f5fd4a9637cda4279536a72b346421f1e51222f6b86d924",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 581,
+   "columns": 8,
+   "empty_cells_by_column_top": {
+    "VIDEO_SLUG": 0,
+    "STATE_ID": 0,
+    "SHOT_ID": 0,
+    "DURATION_SEC": 0,
+    "MOTION_IDS_COUNT": 0,
+    "ASSET_IDS_COUNT": 0,
+    "VISUAL_FUNCTION": 0,
+    "CAMERA_STATE": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/04_patterns/TRANSITION_PATTERNS.csv",
+   "bytes": 3114,
+   "sha256": "71ae41dcd87f5131baf2458bb327c58c0e538539eef974372e386193cab454f8",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 82,
+   "columns": 4,
+   "empty_cells_by_column_top": {
+    "TRANSITION_TYPE": 0,
+    "OCCURRENCE_COUNT": 0,
+    "TYPICAL_DURATION_SEC": 0,
+    "CONTEXT": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/04_patterns/VISUAL_CHANGE_PATTERNS.csv",
+   "bytes": 161,
+   "sha256": "49063a2ec69c0bb9c2aeb182ed1466bbf505c26489037a86948bf67a45ed84de",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 3,
+   "columns": 4,
+   "empty_cells_by_column_top": {
+    "VISUAL_EVENT_TYPE": 0,
+    "OCCURRENCE_COUNT": 0,
+    "AVG_OFFSET_MS": 0,
+    "COMMON_SYNC_RELATION": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/SOURCE_TO_FORENSIC_MAP.csv",
+   "bytes": 4505,
+   "sha256": "f60727b6dfde0cf6756d2cab57fd58c4280df15e96b1c713e259b0cdb7d03393",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 14,
+   "columns": 8,
+   "empty_cells_by_column_top": {
+    "NOTES": 13,
+    "SOURCE_VIDEO_ID": 0,
+    "SOURCE_FILENAME": 0,
+    "VIDEO_SLUG": 0,
+    "FORENSIC_FOLDER": 0,
+    "MATCH_METHOD": 0,
+    "AUDIO_REANALYSIS_REQUIRED": 0,
+    "STATUS": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  },
+  {
+   "path": "research/visual-forensics/channels/CH-000004/what-if-source-package/production_intelligence_brain/SOURCE_VIDEO_INDEX.csv",
+   "bytes": 5217,
+   "sha256": "0d04f0fc27e12d06cc356d407e4c0d6dae8f6842af34222fb772509daa79b3a1",
+   "source": "git show origin/codex/what-if-archive-main-integration",
+   "rows": 14,
+   "columns": 16,
+   "empty_cells_by_column_top": {
+    "SOURCE_VIDEO_ID": 0,
+    "FILENAME": 0,
+    "ABSOLUTE_PATH": 0,
+    "FILE_SIZE_BYTES": 0,
+    "FILE_SIZE_MB": 0,
+    "SHA256": 0,
+    "AUDIO_PRESENT": 0,
+    "DURATION_SEC": 0
+   },
+   "scan": "FULL_RECORD_SCAN"
+  }
+ ],
+ "checksum_verification": [
+  {
+   "manifest": "research/finance-economics-intelligence/expansion-12-channel-2026-10-20/FILE_CHECKSUMS_SHA256.json",
+   "match": 6,
+   "mismatch": 1,
+   "missing": 0,
+   "mismatched_paths": [
+    "README.md"
+   ]
+  },
+  {
+   "manifest": "research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/FILE_CHECKSUMS_SHA256.json",
+   "match": 8,
+   "mismatch": 0,
+   "missing": 0,
+   "mismatched_paths": []
+  },
+  {
+   "manifest": "research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/FILE_CHECKSUMS_SHA256.json",
+   "match": 6,
+   "mismatch": 0,
+   "missing": 0,
+   "mismatched_paths": []
+  }
+ ],
+ "population": {
+  "finance_universe_ids": 1612,
+  "finance_universe_layers": {
+   "FROZEN_ORIGINAL_966": 966,
+   "EXPANSION_12_CHANNEL_197": 197,
+   "EXPANSION_MONKEY_63": 63,
+   "REPOSITORY_RECONCILIATION_2026_10_21": 386
+  },
+  "universe_audit_status_frozen_2026_10_21": {
+   "DEEP_AUDIT_COMPLETE": 430,
+   "NOT_DEEP_AUDITED": 536,
+   "METADATA_ONLY_NOT_DEEP_AUDITED": 646
+  },
+  "live_ledger_records": 966,
+  "live_ledger_all_six_complete": 449,
+  "live_ledger_status_patterns": {
+   "PERF=COMPLETE|SCRI=COMPLETE|THUM=COMPLETE|TITL=COMPLETE|TOPI=COMPLETE|VIRA=COMPLETE": 449,
+   "PERF=COMPLETE|SCRI=BLOCKED_|THUM=COMPLETE|TITL=COMPLETE|TOPI=BLOCKED_|VIRA=BLOCKED_": 4,
+   "PERF=BLOCKED_|SCRI=BLOCKED_|THUM=COMPLETE|TITL=COMPLETE|TOPI=BLOCKED_|VIRA=BLOCKED_": 6,
+   "PERF=BLOCKED_|SCRI=COMPLETE|THUM=COMPLETE|TITL=COMPLETE|TOPI=COMPLETE|VIRA=BLOCKED_": 6,
+   "PERF=COMPLETE|SCRI=IN_PROGR|THUM=IN_PROGR|TITL=IN_PROGR|TOPI=IN_PROGR|VIRA=NOT_STAR": 13,
+   "PERF=COMPLETE|SCRI=NOT_STAR|THUM=NOT_STAR|TITL=NOT_STAR|TOPI=NOT_STAR|VIRA=NOT_STAR": 484,
+   "PERF=COMPLETE|SCRI=IN_PROGR|THUM=NOT_STAR|TITL=IN_PROGR|TOPI=IN_PROGR|VIRA=NOT_STAR": 3,
+   "PERF=COMPLETE|SCRI=BLOCKED_|THUM=NOT_STAR|TITL=NOT_STAR|TOPI=NOT_STAR|VIRA=NOT_STAR": 1
+  },
+  "expansion_ledger_records": 197,
+  "registry_db_videos": 2303,
+  "inventory_db_videos": 667,
+  "universe_in_registry_db": 966,
+  "universe_in_inventory_db": 159,
+  "registry_and_inventory_overlap": 667,
+  "deep_complete_in_original_966": 449,
+  "what_if_registry_videos": 83
+ }
+}
