@@ -10,6 +10,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q1 | 2026-11-12 | Overall tiers, top 10, weak 10, common model, repeatable pattern, ek asal baat |
 | Q2 | 2026-11-12 | Thumbnails ka analysis hua? Packaging se click ka andaza (+ update: 35 baaki channels ka visual score test) |
 | Q3 | 2026-11-12 | Research kahan rakhi hai + dusre agent ke liye handoff prompt |
+| Q4 | 2026-11-12 | Wahi 6 sawal dobara (tiers, top 10, weak 10, model, pattern, ek baat) — Q1 ka compact dohrao + thumbnail update |
 
 ---
 
@@ -177,5 +178,22 @@ Local evidence (not in git): ~/YIOS-local-audits/finance-viral-forensics-2026-11
 Rules: use VERIFIED/INFERRED/HYPOTHESIS/UNKNOWN labels; no CTR/retention claims (not in data); never modify raw evidence; answer owner questions in simple Hinglish and append each one to OWNER_QA_REPORT.md as the next Q number with the index updated; commit locally, push only when the owner says so; stop expensive work near 90% 5-hour usage.
 Next task: visual thumbnail review for the 36 channels not yet inspected (032-036, 038-068): build missing montages for 061-068, score each thumbnail (one idea? number? complements title? emotion), test score vs PI, add results to Q2.
 ```
+
+---
+
+## Q4 — Q1 wale 6 sawal dobara (2026-11-12)
+
+**Sawal:** Q1 jaisa hi paste: tiers, top 10, weak 10, common model, repeatable pattern, ek asal baat; names, video examples, numbers, evidence gap. Poora jawab **Q1** mein hai (data badla nahi); neeche compact dohrao + Q2 ka thumbnail nateeja jo Q1 ke baad aaya.
+
+1. **Tiers (VERIFIED count, INFERRED paimana: typical long-form median views):** 20 successful (≥20k) · 21 average (5k–20k) · 27 underperforming (<5k) · 1 removed (Wealth Logic).
+2. **Top 10:** Patrick Boyle 1.4M (personality brand) · How Money Works 775k (National Debt Default 3.0M) · Economics Explained 546k (Australia Housing 1.5M) · Casual Finance 485k · Primate Economics 449k (Inflation Short 15.7M) · MonkeyExplains 348k · Modern MBA 282k (Crumbl 2.2M) · Crayon Capital 250k (Wolf of Wall Street 4.2M) · Money & Macro 229k · Capital Case 54k.
+3. **Weakest 10:** Max Invests 178 (failing clone, CFD affiliate) · Ronnie Finance 405 (revenge-POV lottery, hit 282k) · Finance Simplified 536 · Nostalgic Wheels 653 · Madeline 661 (hit galat claim par) · Housing 669 (13/24 near-duplicate scripts) · Mark Invests 1,430 · Uncle Frank Retirement 1,593 · Finance ANALYST 1,696 · Carl Invests 1,697.
+4. **Common models (5):** rozmarra business economics; retirement adequacy; decision duels (rent vs buy); second-person POV/secret wealth; senior benefits (breakout share 24%, policy risk bhi sabse zyada).
+5. **Repeatable?** Pattern repeatable, asal lever topic: Mr. Finance 401 → 266k (sirf business badla); Matty ~200 → 1M (audience badli); Finance ANALYST 367 → 368k (title/packaging). Support nahi: upload frequency, 8+ min, micro-cliffhangers.
+6. **Ek baat:** viewer title mein khud ko dekhe (apni umar/balance/dukaan/faisla) + ek concrete number ya scene + faida/hifazat framing, dar/gussa nahi.
+
+**Q2 se naya (INFERRED):** 68-channel thumbnail review (35 channels blind-scored) ne dikhaya ke thumbnail ka style/rubric score views ko predict nahi karta (score vs PI Spearman −0.11, correction ke baad kuch significant nahi). Isliye "ek baat" mein thumbnail lever nahi; topic + title ka angle hi lever hai. Misaal: Marcus Retires — winners 74k–245k aur losers 93–242 views, thumbnail style lagbhag same.
+
+**Evidence gaps:** CTR/retention/impressions UNKNOWN; zyada tar channels ke latest ≤100 videos; 6 bade brands undated; channel 057 thumbnails UNKNOWN; network/ownership rishte INFERRED.
 
 ---
