@@ -24,3 +24,7 @@ Run with the audit venv: `~/YIOS-local-audits/finance-viral-forensics-2026-11-12
 
 ## Evidence discipline
 VERIFIED / INFERRED / HYPOTHESIS / UNKNOWN labels; no CTR, retention, impressions or traffic-source claims (not in data); correlation ≠ causation; Shorts separated from long-form; views always age-adjusted against the channel's own baseline.
+
+## Status (2026-11-12)
+All 69 channel reports saved (`MASTER_TRACKER.csv`: 69 COMPLETE, incl. 3 documented low-data exceptions — 064 Chronofold, 068 The Wealth Engine (6 videos), 069 Wealth Logic (removed by YouTube)). Cross-channel findings in `03_CROSS_CHANNEL_FINDINGS/`, final answers and blueprint in `04_FINAL_SYNTHESIS/`.
+Evidence ledgers: `02_SHARED_EVIDENCE/CROSS_CHANNEL_CONCEPT_LEDGER.csv` (concept × channel × date × PI — serves as the EVIDENCE_LEDGER), `PDF_PRINCIPLE_EVALUATION.csv` (final verdicts) and `_AUTO.csv` (rule drafts), `RESEARCH_SOURCE_REGISTER.csv` (external checks). Start reading at `04_FINAL_SYNTHESIS/FINAL_RESEARCH_CONCLUSIONS.md`.
