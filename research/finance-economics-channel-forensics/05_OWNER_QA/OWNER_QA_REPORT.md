@@ -9,6 +9,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 |---|---|---|
 | Q1 | 2026-11-12 | Overall tiers, top 10, weak 10, common model, repeatable pattern, ek asal baat |
 | Q2 | 2026-11-12 | Thumbnails ka analysis hua? Packaging se click ka andaza |
+| Q3 | 2026-11-12 | Research kahan rakhi hai + dusre agent ke liye handoff prompt |
 
 ---
 
@@ -127,5 +128,26 @@ Sirf aadha. Views = impressions × CTR; humare paas impressions nahi, is liye ka
 
 ### Pending (agla kaam)
 Baaki 36 channels ka visual review (028 se aage ke 29 montages + 061–068 ke montage banana), har thumbnail ko score karna (one idea? number? title ko complement karta hai? emotion), aur score vs PI test. 5-hour usage 93% tha, is liye 2026-11-12 ko roka; reset ke baad.
+
+---
+
+## Q3 — Research kahan hai + handoff prompt (2026-11-12)
+
+### Jagah (VERIFIED)
+| Kya | Kahan | GitHub par? |
+|---|---|---|
+| Saari reports (69 channel reports, cross-channel, final synthesis, owner Q&A) | `/Users/ghilmankhan/workprojects/yios-audit-fixes/research/finance-economics-channel-forensics/` | Haan, branch `data/finance-economics-complete-2026-11-11` (pushed tak `93657440`; Q&A commits `979f82ea`, `d96dff9e` + yeh Q3 sirf local) |
+| Database | `/Users/ghilmankhan/workprojects/yios-audit-fixes/data/catalog/finance_economics_complete.db` | Haan (same branch) |
+| Thumbnails (3,577), montages, feature CSVs, scripts, venv, HANDOFF.md | `~/YIOS-local-audits/finance-viral-forensics-2026-11-12/` | Nahi — sirf is Mac par |
+
+### Handoff prompt
+```
+You are taking over the Finance/Economics 69-channel forensic study (YouTube Intelligence OS).
+Work only in /Users/ghilmankhan/workprojects/yios-audit-fixes on branch data/finance-economics-complete-2026-11-11 (do not create worktrees/clones or switch branches).
+Read first: research/finance-economics-channel-forensics/00_PROJECT_OVERVIEW/README.md, 04_FINAL_SYNTHESIS/FINAL_RESEARCH_CONCLUSIONS.md, 05_OWNER_QA/OWNER_QA_REPORT.md.
+Local evidence (not in git): ~/YIOS-local-audits/finance-viral-forensics-2026-11-12/ (thumbs/, montage_forensics/, deliverables/, HANDOFF.md, .venv). Open the DB read-only.
+Rules: use VERIFIED/INFERRED/HYPOTHESIS/UNKNOWN labels; no CTR/retention claims (not in data); never modify raw evidence; answer owner questions in simple Hinglish and append each one to OWNER_QA_REPORT.md as the next Q number with the index updated; commit locally, push only when the owner says so; stop expensive work near 90% 5-hour usage.
+Next task: visual thumbnail review for the 36 channels not yet inspected (032-036, 038-068): build missing montages for 061-068, score each thumbnail (one idea? number? complements title? emotion), test score vs PI, add results to Q2.
+```
 
 ---
