@@ -8,6 +8,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q | Date | Topic |
 |---|---|---|
 | Q1 | 2026-11-12 | Overall tiers, top 10, weak 10, common model, repeatable pattern, ek asal baat |
+| Q2 | 2026-11-12 | Thumbnails ka analysis hua? Packaging se click ka andaza |
 
 ---
 
@@ -87,5 +88,44 @@ Finance channel tab chalta hai jab viewer title padh kar **khud ko usmein dekh l
 
 ### Evidence gaps
 CTR/retention/traffic nahi; zyada tar channels ke sirf latest ≤100 videos; 6 bade brands undated; Google Trends, comments, VidIQ, timed transcripts use nahi hue; external fact-check sirf 3 claims; network/ownership rishte INFERRED.
+
+---
+
+## Q2 — Thumbnails aur packaging (2026-11-12)
+
+**Sawal (khulasa):** Kya 68 channels ke thumbnails analyze nahi kiye? Thumbnail performance par asar dalta hai; exact CTR nahi, lekin andaza to lag sakta hai ke packaging kaisi thi aur user click karega ya nahi.
+
+### Kya hua aur kya nahi (VERIFIED — files se)
+| Kaam | Coverage |
+|---|---|
+| Thumbnails download | 3,577 images (`~/YIOS-local-audits/.../thumbs/`, commit nahi) |
+| Automatic features (brightness, contrast, colour, face, text words via OCR) | sab images; 3,001 long-form videos par statistical test (`deliverables/08_thumbnail_feature_tests.csv`) |
+| Winners vs losers montage (6 best + 6 weakest) | 60 channels ke bane (001–060); 061–068 ke nahi bane |
+| **Aankh se visual review** | sirf **32 channels** (001–031 + 037 Casual Finance). Baaki **36 channels sirf OCR/automatic** — yeh asal gap hai |
+
+### Automatic test ka nateeja (VERIFIED numbers, INFERRED reading)
+Apne hi channel ke andar style features ka asar **taqreeban zero**:
+- Face/character: 1.12x (q=0.13, sirf 21/37 channels mein positive) — kamzor, cartoon faces detector miss karta hai.
+- ≤4 words text: 0.97x (no effect); >8 words: 1.11x (no effect).
+- Brightness, contrast, saturation, red colour: ρ ≈ 0.
+- Sirf edge density (detail) ρ=0.054 (q=0.048) — statistically chhota sa, amali taur par bekar.
+
+Matlab: **thumbnail ka style channel ki pehchaan hai, views ka faisla karne wala lever nahi.** Lana Maynes: winners aur losers ek jaise dikhte hain. Mr. Finance: same layout 65 videos, views 401 → 266k sirf topic se.
+
+### Visual review se jo pattern mila (32 channels, INFERRED)
+Pixels nahi, **idea** farq dalta hai — thumbnail ek baat kahe aur title ki baat ko aage badhaye:
+- **Binary choice + numbers:** Mark Invests BUY −$88k / RENT +$70k (Renting vs Buying 495k); Finance Simplified GROWTH vs DIVIDENDS $54K vs $7K (205k). Losers: 3–5 options, crowded infographic.
+- **Ek goal + ek amount:** Carl $100/$500/$1,000 jar; Mark Retired at 55 freedom metaphor + amount. Losers: trap, gauge, shocked face.
+- **Calm hero vs show-off (bina text):** Lucas Grant, POV Wealth, Finance POV. Losers: text overlay ya akela scene.
+- **Physical risk metaphor:** Tom Talks Money umbrella in rain of zeros; losers abstract numbers ("Rule of 173").
+- **Senior channels:** Nia ke winners mein date ya "$0 bill"; losers "YOUR MONEY IS AT RISK" jaisi dhamki.
+- **Exception:** Kevin Explains 8–10 words wale thumbnails bhi winners — few-words rule universal nahi.
+- **Packaging ka sabse saaf saboot:** Finance ANALYST — same kahani, title+packaging badla, 367 → 368k.
+
+### Click ka andaza lag sakta hai?
+Sirf aadha. Views = impressions × CTR; humare paas impressions nahi, is liye kam views ka matlab "bura thumbnail" bhi ho sakta hai aur "YouTube ne dikhaya hi nahi" bhi (UNKNOWN). Behtareen proxy: **same channel, same topic, alag packaging** ke pairs (Finance ANALYST jaise). Asal CTR sirf channel owner ke YouTube Studio mein hai.
+
+### Pending (agla kaam)
+Baaki 36 channels ka visual review (028 se aage ke 29 montages + 061–068 ke montage banana), har thumbnail ko score karna (one idea? number? title ko complement karta hai? emotion), aur score vs PI test. 5-hour usage 93% tha, is liye 2026-11-12 ko roka; reset ke baad.
 
 ---
