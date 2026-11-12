@@ -26,6 +26,9 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q17 | 2026-11-12 | (owner Q13) Titles aur thumbnails: 15 title-pattern test, 5 winners + 5 losers har pattern, thumbnail inspection method |
 | Q18 | 2026-11-12 | (owner Q14) Audience retention proxies (transcript-based, retention NAHI) |
 | Q19 | 2026-11-12 | (owner Q15) Failure diagnosis framework, 13 reasons + top 5 failure patterns |
+| Q20 | 2026-11-12 | (owner Q16) Copying, saturation, self-repeats, rulebook |
+| Q21 | 2026-11-12 | (owner Q17) Upload cadence aur consistency |
+| Q22 | 2026-11-12 | (owner Q18+Q19) PDF ko judge: 22-principle scorecard + '46 channels' discrepancy |
 
 ---
 
@@ -881,3 +884,77 @@ Same-channel length check (Q16): 32/48 channels mein winners lambe, weak signal.
 4. **Generic cliché topics** (F7, >=8 ch).
 5. **Windfall/outrage/fear framing** (F1+F2, 6+6 ch; loss words 15% win vs 24% lose).
 **Cause proven?** Nahi. Koi randomized test nahi; sirf same-channel pairs. Impressions/CTR **DATA NOT AVAILABLE**, to "bura title" aur "dikhaya hi nahi" alag nahi. Packaging style ka null result (Q2/Q17) failure ko packaging se explain nahi karta.
+
+
+---
+
+## Q20 — (owner Q16) Copying aur saturation (2026-11-12)
+
+**Source (VERIFIED):** `02_SHARED_EVIDENCE/CROSS_CHANNEL_CONCEPT_LEDGER.csv` (510 videos, 18 concepts), `03_CROSS_CHANNEL_FINDINGS/FAILURE_PATTERNS.md` F5/F6, `REPEATED_WINNING_PATTERNS.md` W4/W9. **Limit:** "pehla" = dataset mein sabse purani date (har channel ke newest <=100 uploads); asli originator UNKNOWN. Sirf 18 concepts, LOW-MODERATE CONFIDENCE.
+
+1. **Kaun kisko copy karta lagta hai:** sabse bade concept clusters: Silent/secret millionaire POV 18 channels (66 videos); "Never keep more than X in bank" 16 ch; "Every level of wealth / how banks treat you" 15 ch; "After paying off your house" 13; Compounding/wealth levels 13; Medicare deadlines 12. Senior network mein near-verbatim hooks: "7 Types of Income the IRS Cannot Touch" Lana -> Nia -> Calloway -> Housing -> Marcus (synthesis Q5). Same script copies: Housing 13/24, Sarah Rickshaw 8/12, Kevin 14 near-duplicates (F11).
+2. **Original win, baad ki copies fail:** IRS "cannot touch" list: Lana `SpkCqoL5D2Y` 178,377 views (PI 46.3); Robin `4qh99smo30w` 369 views (PI 0.84). Real estate vs stocks: Mark Invests `k-ZxdjawYDs` 374,961 (PI 99.5) vs later copies median PI 0.95. Direct-deposit rule changes: Lana first PI 30.9, baad ki median 3.3 (copies kam par zinda).
+3. **Evergreen search topics mein copying chalti hai?** Haan, zyada: Rent vs buy 8 channels: first PI 1.31, baad ki median 1.53 (n chhota). Real estate vs stocks (6 ch) mein nahi chali. W9 aur F6 ka sar: perennial search topics = exception; browse-driven concepts mein late copies fail.
+4. **Apna hit dobara banana:** 82 same-channel repeat pairs mein dusra video pehle se kam 49 baar (60%). Misaal: Kevin 3 remakes PI 0.04-0.08; Dark Ledger IRS ladder 3 din baad 0.13; Business Decoded furniture after mattress 0.33; Nick "Milestones in your 40s" 0.41.
+5. **Format vs topic copy:** alag cheezein. Format copy jahan naya promise ho chalta hai (Carl $100/$500/$1,000, Robin Costco->Aldi parameter series, W4). Topic copy browse concept par late fail (F6).
+
+**Position effect (18 concepts, >=3 channels, channel ka pehla video per concept):** 1st/2nd channel median PI 2.40/2.42 (win share 44%/50%, loser share 6%/6%); 3rd 0.91 (28% win, 22% loser); 4th+ 1.12 (39% win, 25% loser). n=18+18+18+105, LOW CONFIDENCE.
+
+**Rulebook (INFERRED):**
+- **Replicate:** perennial search decisions (rent vs buy, real estate vs stocks) jab apna matched-character angle ho; parameter series (ek variable badlo).
+- **Adapt:** browse-driven concept sirf jab 1-2 channels ne abhi jeeta ho aur apna naya number/scene/angle lao.
+- **Avoid:** 10+ channels par pehle se hit concept (silent millionaire, never keep more than X), apna hit hafton mein dobara, verbatim scripts (policy risk, F11).
+
+---
+
+## Q21 — (owner Q17) Upload cadence aur consistency (2026-11-12)
+
+**Source:** 52 channels jinke >=10 dated long-form videos aur >=1 month span hai (baaki 17 undated/chhote). Uploads per month = videos / (latest-earliest date). Newest <=100 uploads window, isliye span chhota ho sakta hai (cadence bias).
+
+1. **Successful channels kitna upload karte hain:** SUCCESSFUL (n=10) median **3.5/mo** (IQR 1.8-8.2); AVERAGE (18) 17.3/mo; UNDERPERFORMING (24) 12.7/mo. Misaal: Primate Economics 0.9/mo (449k median), Capital Case 1.6, Crayon Capital 1.8, Casual Finance 2.3 (484k), MonkeyExplains 2.9, Neu 4.1, Kevin Explains 20.1 (28k).
+2. **Consistency = performance?** Nahi. Spearman(cadence, median views) = **-0.25** (n=52): zyada uploads thoda kam median views se jude (correlation; channel-type confounded: network/factory channels). Within-channel gap/cadence ka PI se asar ~0 (F-series null result).
+3. **Daily uploads zaroori?** Nahi, evidence ulta hai (upar).
+4. **Low-frequency successful?** Haan: 0.9-4/mo wale channels top mein (animated/allegory craft channels).
+5. **Timing pattern?** Weekday-wise median PI: Mon 1.02, Tue 0.90, Wed 0.97, Thu 1.08, Fri 0.97, Sat 0.96, Sun 0.95 (n~400 har din) = **koi pattern nahi**. Publish time of day DATA NOT AVAILABLE.
+6. **Reliability:** LOW-MODERATE. Snapshot ek din, newest <=100 uploads, 6 channels undated (final synthesis), 17 channels is analysis se bahar, causal direction unknown. PDF P20 cadence **not supported**.
+**Recommendation (HYPOTHESIS):** quality/subject par focus; 1-2 research-heavy videos/week realistic start; cadence ko proven cause mat kaho.
+
+---
+
+## Q22 — (owner Q18+Q19) PDF ko judge bana kar scorecard (2026-11-12)
+
+**Source (VERIFIED):** `02_SHARED_EVIDENCE/PDF_PRINCIPLE_EVALUATION_AUTO.csv` (69 channels x 22 principles = 1,518 rows), page refs `00_PROJECT_OVERVIEW/PDF_KNOWLEDGE_MAP.md`. Verdicts automatic proxies hain.
+
+**Tier-wise FOLLOWED (tested channels mein se):** successful vs underperforming. Strength = tier-separation + case evidence (INFERRED).
+| P | Principle (PDF ref) | FOLLOWED / PARTIAL / NOT / CONTRA / INSUFF | Succ vs Under follow-rate | Strength | Practical lesson |
+|---|---|---|---|---|---|
+| P01 | Outlier exploit (pp.6-9) | 9/36/14/0/10 | 1/14 vs 6/25 | WEAK-CONDITIONAL | parameter series, quick remake nahi |
+| P02 | Niche = audience (p.11) | 32/30/6/0/1 | 6/20 vs 14/27 | INCONCLUSIVE (Matty case supports) | audience sentence |
+| P03 | Many formats (pp.12-13) | 40/20/8/0/1 | 9/20 vs 17/27 | INCONCLUSIVE | - |
+| P04 | Avoid repetitive (p.13) | 53/11/0/4/1 | 15/20 vs 20/27 | MODERATE (negatively, copy-fail cases) | no verbatim scripts |
+| P05 | Format arbitrage (2.3-2.4) | 0/0/0/0/NOT TESTABLE 68 | - | NOT TESTABLE | analyst only |
+| P06 | Competitor research (pp.28-30) | 20/20/28/0/1 | 2/17 vs 7/25 | CONDITIONAL (Q20) | perennial only |
+| P07 | Title templates (pp.39-64) | 10/35/23/0/1 | 6/ vs 2 (low n) | WEAK | - |
+| P08 | 5-part title (p.53,66) | 38/12/18/0/1 | 8/20 vs 17/27 | INCONCLUSIVE (Q17 null) | - |
+| P09 | 12 title mistakes (p.68) | 65/3/0/0/1 | 19/19 vs 27/27 | NO VARIATION (sab follow) | table stakes |
+| P10 | Title+thumb one promise (p.66,68) | 51/6/4/0/8 | 15 vs 19 | NOT SUPPORTED (Q17: complement q=0.24) | - |
+| P11 | Thumbnail teardown (p.28) | 56/11/0/0/2 | 19 vs 21 | NOT SUPPORTED (rubric q=0.52) | table stakes |
+| P12 | Opening hook (pp.265,320) | 56/9/0/0/4 | 13/17 vs 26/27 | NOT SUPPORTED (Q16) | near universal |
+| P13 | Stakes frame (p.320,283) | 0/8/57/0/4 | none follow | UNTESTED-lexicon proxy weak | - |
+| P14 | Open loop <30s (p.320,350) | 7/26/32/0/4 | 2/17 vs 4/27 | NOT SUPPORTED | - |
+| P15 | Micro-cliffhangers (pp.267,272) | 1/17/47/0/4 | 0 vs 1 | NOT SUPPORTED (rare in winners too) | - |
+| P16 | Authority drops (p.273) | 26/39/0/0/4 | 2/17 vs 14/27 | NOT SUPPORTED | - |
+| P17 | Direct address (p.271) | 40/11/14/0/4 | 4/17 vs 17/27 | NOT SUPPORTED (Q16 you: 24:24) | - |
+| P18 | Future pacing/CTA (pp.280-284) | 18/39/8/0/4 | 5/17 vs 8/27 | NOT SUPPORTED (Q16) | - |
+| P19 | 8+ min (p.19) | 67/0/1/0/1 | 19 vs 27 | NO VARIATION | length not a lever |
+| P20 | Cadence (p.29) | 27/18/14/0/10 | 7/12 vs 9/26 | NOT SUPPORTED (Q21) | - |
+| P21 | Topic selection IS production (p.33) | 30/12/0/11/16 | 6/12 vs 15/23 | MODERATE (case + within-channel; see below) | pick subject first |
+| P22 | Deliver title promise (p.40,68,345) | 18/30/17/0/4 | 3/17 vs 10/27 | INCONCLUSIVE (Q18: 56% vs 50%) | - |
+
+(Opposing examples aur relevant video IDs: P01/P06 Q20; P09/P11 Q17; P12/P17/P18 Q16; P21 neeche.)
+**Kaun se successful aur failed channels follow karte hain:** P04/P09/P11/P12/P19 par successful aur underperforming dono lagbhag **sab** follow karte hain, isliye yeh principles performance **separate nahi** karte. Aur kai principles mein underperforming channels ka follow-rate successful se zyada hai (P12 26/27 vs 13/17; P17 17/27 vs 4/17) = jo "follow" proxy se measure hota hai woh success ka marker nahi.
+
+### "Topic selection is the production" - 46 channels ka sawal
+**Discrepancy (VERIFIED):** `FINAL_RESEARCH_CONCLUSIONS.md` "46 channels FOLLOWED" likhta hai. CSV mein P21 = **30 FOLLOWED + 12 PARTIAL (=42), 11 CONTRADICTED, 16 INSUFFICIENT**. 46 yahan reproduce nahi hota. **Is line ko 30 (ya 42 with partial) se badalna chahiye** - file maine abhi edit nahi ki; aap kahein to sudhar dunga.
+**"FOLLOWED" ka matlab:** channel ke andar topic-groups ke median PI ka best/worst ratio title-format groups se bada hai (within-channel). Yeh test hai ki principle ka dawa data mein dikhta hai ya nahi, "channels ne principle follow kiya" nahi.
+**Kya iska matlab topic > packaging?** Is dataset mein haan lagta hai: Mr. Finance 65 videos same template, 401 -> 266k (par date effect bhi bada, Q12 R^2 date 0.67 > category 0.14); Q2/Q17 mein thumbnail aur title style null. **Boundaries:** (a) 11 channels (16%) mein contradiction; (b) topic tags rule-based; (c) packaging ka CTR/impressions kabhi measure nahi hua; (d) Finance ANALYST (title+packaging badalne se 367 -> 368k) dikhata hai packaging bhi bada ho sakta hai jab subject achha ho; (e) correlation.
