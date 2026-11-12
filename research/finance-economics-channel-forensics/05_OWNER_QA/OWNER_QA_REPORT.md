@@ -15,6 +15,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q6 | 2026-11-12 | 69 channels se practical WINNING CHANNEL MODEL (10 components, examples, reusable formula) |
 | Q7 | 2026-11-12 | Channel 032 aur 033 ke blind montage dobara bana ke re-score |
 | Q8 | 2026-11-12 | Channel 060 (Sarah Rickshaw) ka blind montage dobara bana ke re-score |
+| Q9 | 2026-11-12 | Top 10 most instructive channels (repeatable lessons, sirf views nahi) |
 
 ---
 
@@ -277,3 +278,104 @@ Q7 wala tareeqa: 060 ke 8 thumbnails naye shuffle (seed 1060) + naye labels, JPE
 | Mean Spearman | -0.11 | -0.088 | -0.071 (n=31, p=0.37) |
 
 **Nateeja:** koi bhi criterion BH ke baad significant nahi; "thumbnail style PI ko predict nahi karta" badla nahi. Original C p=0.048 sirf uncorrected tha, ab 0.13 hai. Bache hue: 057 ke thumbnails local mein nahi (UNKNOWN); scorer ek hi (Claude) hai isliye inter-rater reliability UNKNOWN.
+
+
+## Q9 — Top 10 most instructive channels (2026-11-12)
+
+**Selection rule (INFERRED):** sirf highest views nahi. Maine yeh dekha: (1) ek clear repeatable format ho, (2) hamare data mein kaafi videos ho (winners aur flops dono), (3) copy karne layak ho (personality-dependent nahi). Isliye Patrick Boyle (1.4M median, magar personality/credentials-driven), How Money Works aur Money & Macro chhode; unke reports mein replicable format kam hai. Nateeja: 37, 55, 39, 24, 40, 22, 12, 59, 58, 62.
+
+**Thumbnail caveat (VERIFIED, Q2/Q8):** 35-channel blind test mein thumbnail style PI ko predict nahi karta (q=0.52). Isliye neeche thumbnail "strategy" = ye channel kya karta hai (descriptive), "yeh jeetne ki wajah hai" nahi. Kai reports mein montage inspect hi nahi hua (55, 39, 40, 59, 58, 62) - wahan UNKNOWN.
+
+Note: views = DB snapshot. PI = video ki views / channel ke 15 nearest uploads ka median. CTR/retention data nahi hai (UNKNOWN).
+
+### 1. Casual Finance (037) — ../01_CHANNEL_REPORTS/037_casual_finance/CHANNEL_REPORT.md §1, §5, §7, §10-§18
+1. **Sub-niche:** macro/markets/housing crisis explainers, history ko evidence banake (stick-figure animation).
+2. **Audience (INFERRED):** 20-40 retail investors, "crash aane wala hai?" wali anxiety.
+3. **Top videos (VERIFIED):** Housing Crisis Has Landed `Uumnx2Fo6cE` 2.35M (PI 3.3); Brace For Impact. `5umJ63d3rzQ` 2.04M (PI 7.2); SpaceX IPO… Worse Than You Think `-X6YzlY_8tM` 1.71M (3.5); 1973 Stock Market Crash that Nobody Remembers `DKyJABtbF2o` 1.28M (PI 9.2). URL = youtube.com/watch?v=<ID>.
+4. **Topic pattern:** current anxiety + historical parallel (1973, 2008 vs 2026) + ek concrete anchor ($1.75T, Redfin %).
+5. **Title/thumb:** chhote ominous titles; thumbnail = stick figure + 1 chart + 2-4 words ("History is Repeating"). Winners mein title numbers 25% vs 12%, fear words 31% vs 44% (kam).
+6. **Hook/script:** contrarian reframe ya source ke saath data point pehle sentence mein; 8-15 min; jokes + data; open loops 0.08-0.12/100 words.
+7. **Schedule:** long-form ~2-3/month; Shorts milake ~14/month; har long se 3-5 Shorts.
+8. **Kya chalta hai:** broad relevance + concrete anchor.
+9. **Kya fail:** insider niches (MicroStrategy `dlBhLhn8lL0` 50k, PI 0.26; Private Credit `7uu6qaCGZsY` 48k, PI 0.25), vague contrarian titles.
+10. **Seekh:** "Aaj ki anxiety -> history parallel -> ek chart -> mazaak -> aam investor ke liye matlab". Visual brand sasta aur ownable rakho.
+
+### 2. Primate Economics (055) — ../01_CHANNEL_REPORTS/055_primate_economics/CHANNEL_REPORT.md §1, §5, §11, §18, §20
+1. **Sub-niche:** finance concepts ELI5, bandar ki pidgin narration. 2. **Audience:** broad young, Shorts-first.
+3. **Top:** Inflation Explained with Bananas `MAvHgmewRDM` 1.76M (PI 3.9); Tax… `LYsqkGRpv_k` 1.56M (3.5); Tariffs… `lRV6U82vgjI` 1.46M (3.2). Channel max 15.7M ek Short ("Inflation #animation #finance").
+4. **Pattern:** ek mass-audience concept (inflation, tax, tariffs). 5. **Title:** "[Concept] Explained with Bananas" series; thumbnail UNKNOWN (montage nahi dekha).
+6. **Hook:** pehli line mein pidgin concept statement; 2.5-11 min; Shorts long se recut.
+7. **Schedule:** irregular, Shorts Apr-Jul 2025 mein concentrated. 
+8. **Chalta hai:** sabke saath relatable macro concepts. 9. **Fail:** niche/product topics: Biggest Ponzi Scheme `dB10EUmjHyc` 136k (PI 0.30), 401k `Fd2jzWdcOHY` 119k (0.27); self-deprecating "boring" openers.
+10. **Seekh:** ek memorable character + ek fixed title template; broad topic pehle, niche baad mein. Caveat: sample 30 videos, ek 15.7M Short ne numbers ko skew kiya (INFERRED).
+
+### 3. Crayon Capital (039) — ../01_CHANNEL_REPORTS/039_crayon_capital/CHANNEL_REPORT.md §1, §5, §7, §11-§18
+1. **Sub-niche:** financial history / famous money stories, ELI5 crayon animation. 2. **Audience:** 18-40 general curiosity.
+3. **Top:** Wolf of Wall Street Scam Explained Like You're 5 `HawmGu7oNrc` 4.22M (PI 9.6); Great Depression… `LuEcoqizj0o` 2.76M (7.0); 2008 Financial Crisis… `KE-WJevx-7c` 2.29M (5.8); Rockefeller `sMH8WchxQR8` 1.33M (4.4).
+4. **Pattern:** duniya bhar jaana-pehchana crisis/scam/tycoon. 5. **Title:** "[Event] Explained Like You're 5" (simplicity promise); thumb UNKNOWN (OCR: ROCKEFELLER etc.).
+6. **Hook:** pehle sentence mein paradox/outrage ("lied about $1 stock… sirf 22 months jail"); 10-20 min, comedy skits.
+7. **Schedule:** ~1.8 uploads/month (slow, high-production), sponsors (VPN etc.).
+8. **Chalta hai:** central character + dramatic event. 9. **Fail:** Epstein Situation `AKrjI9m6fpk` 48.9k (PI 0.30), "Greatest Slave System Ever Created" `GdpGd0U2wmo` 40.6k (0.25) = sensitive non-finance, unclear title.
+10. **Seekh:** ek template + ek globally known story + pehli line mein paradox. Note: yahan titles mein numbers winners mein kam (67% vs 87%).
+
+### 4. MonkeyExplains (024) — ../01_CHANNEL_REPORTS/024_monkeyexplains/CHANNEL_REPORT.md §1, §5, §7, §10-§18
+1. **Sub-niche:** satirical macro/tech-bubble/scandal explainers (bandar = asli log). 2. **Audience:** 18-35 anti-establishment humour.
+3. **Top:** US National Debt Crisis… Bananas `bz0OGtrkjv0` 1.92M (4.5); OpenAI Bubble Worse Than You Think `LfQIJgU_W2w` 1.33M (3.9); SpaceX Bubble Crash `sy4HzG_qzKw` 1.0M (3.6); How did Apestein Get So Rich? `TSJQ8SjcTPk` 838k (3.5).
+4. **Pattern:** is hafte ka scandal/bubble. 5. **Thumb:** ape in suit + ek punchline ("THIS CAN'T BE LEGAL, RIGHT?"), logo ya chart; winners mein 5 words vs 3. Title "[X] is Worse Than You Think".
+6. **Hook:** fixed "This is [Name], and he's got a huge problem." 7-16 min. 7. **Schedule:** ~3.8/month, median gap 7 din.
+8. **Chalta hai:** current event timing. 9. **Fail:** evergreen definitions; Iran War `BHg5pLQmIew` 102k (0.46), REAL Wolf of Wall Street `JY-mDrPh5nY` 88k (0.39) - Crayon Capital pehle le chuka tha.
+10. **Seekh:** fixed opener + absurd metaphor for numbers. Risk: real log ki caricature (satire disclaimer zaroori).
+
+### 5. Economics Explained (040) — ../01_CHANNEL_REPORTS/040_economics_explained/CHANNEL_REPORT.md §1, §5, §11-§18, §20
+1. **Sub-niche:** global macro / country economics, sardonic Australian voice. 2. **Audience:** global English economics fans.
+3. **Top:** Australia May Have Just Solved The Housing Crisis `QtZfbWOkoIY` 1.5M (PI 2.7); Finally a Country Is Taxing Its Billionaires `jknb1YE6zdY` 1.3M; Economics Is A Junk Science `TsfsoaNFyTQ` 1.2M; NZ Only Safe Haven Left `4kSd7zyXGo0` 1.1M.
+4. **Pattern:** sab ko mehsoos hone wali problem (housing, tax) + ek desh ka case. 5. **Title:** declarative verdicts; thumb UNKNOWN. 6. **Hook:** witty metaphor/verdict pehle sentence mein; 13-21 min.
+7. **Schedule:** UNKNOWN (dates DB mein missing).
+8. **Chalta hai:** "Big grievance, surprising verdict". 9. **Fail:** How to Rebuild an Economy `01f3r_DnOPc` 206k (0.38), Get Rich Or Die Tryin' `JwklXWLy2UA` 149k (0.27); distant geopolitics.
+10. **Seekh:** ghar ke kharche se jude macro mudde + verdict. Caveat: view numbers rounded (1.5M etc.), PI floor 2.0+ - flops bhi 100k+ hain, yaani channel ka floor brand-driven (INFERRED).
+
+### 6. Neu (022) — ../01_CHANNEL_REPORTS/022_neu/CHANNEL_REPORT.md §1, §5, §7, §10-§18
+1. **Sub-niche:** maritime/logistics economics (jahaz, container, port). 2. **Audience (INFERRED):** 20-50, "duniya kaise chalti hai".
+3. **Top (PI sabse strong):** World's Largest Ship Graveyard `HyUjsfhX4-Y` 1.12M (PI 24.4); Economics of Owning A Ship `cQ4f-24Lp0U` 650k (14.1); Why It's Cheaper to Abandon This Container `eh4-CioOx6s` 505k (13.9); Only Three Companies Control Shipping Containers `ueZcDQAVofk` 404k (11.1).
+4. **Pattern:** ek dikhne wali physical cheez + paradox/ownership. 5. **Thumb:** ek bada photoreal object + 2-4 bold words yellow box ("STILL WORTH MILLIONS", "SO YOU WANT TO BUY A SHIP"); losers = maps/orange renders. Titles mein number/"you" nahi.
+6. **Hook:** "Here's something weird…" ya object biography; 10 sec mein pehla fact; ~1,300-1,500 words, 9 min; end mein related video link.
+7. **Schedule:** ~4/month, median gap 5 din, 63 din ka pause.
+8. **Chalta hai:** economics of a physical thing. 9. **Fail:** Why Nobody Wants To Work Anymore `W0bZNfoOreI` 7.6k (0.17), Data Centers… Nuclear `x3GF5mO7Ebk` 2.9k (0.06): geopolitics/off-niche.
+10. **Seekh:** sabse "chhote channel se bhi copy karne layak" format. Mr. Finance ka "So you want to own X" template ek naye object par laga. Caveat: sirf ek channel, causation UNKNOWN.
+
+### 7. Kevin Explains (012) — ../01_CHANNEL_REPORTS/012_kevin_explains/CHANNEL_REPORT.md §1, §5, §7, §10-§20
+1. **Sub-niche:** retiree tax/benefit deadlines + Social Security/Medicare. 2. **Audience:** US seniors 60+ (aur unke bachche).
+3. **Top (PI 35-76, channel median sirf 28k):** Good News for US Seniors: 3 Checks `FBT55AI0kvo` 559k (PI 62.6); 3 New Rules Taking Money From Your Check `YJGG5JnDwGo` 440k (75.7); Sign These 4 Documents Before Jan 2027 `9cerzBnd8hE` 412k (73.8); Move These 7 Assets `XmGpdPAtaRY` 388k (35.4).
+4. **Pattern:** dated change + institution + dollar amount + N actions. 5. **Title:** "[Verb] These N [Things] Before [Date] Or [Authority] Takes $[Amount]"; thumb: presenter + red-stamped document + 8-10 words (rule ke khilaf, phir bhi winners; title repeat).
+6. **Hook:** embodied ("Look at your right hand") ya contrarian truth; 28-34 min; share-to-a-senior CTA; 14 near-duplicate-script flags.
+7. **Schedule:** ~20/month, kai same-day; remakes Aug 2026 mein.
+8. **Chalta hai:** concept ka pehla video + Medicare savings/Social Security. 9. **Fail:** remake/tax mechanics: $6,000 Deduction `3OsS1lku4XI` 590 views (PI 0.11), Property Tax `7PgxKWmzzCE` 326 (0.06).
+10. **Seekh:** deadline+dollar template. Risk: introduced bills ko law bolna, recycled scripts (spam policy risk), 20/month remake. Caveat: 100 videos mein breakout share 24% magar median sirf 28k - lottery jaisa spread.
+
+### 8. Capital Case (059) — ../01_CHANNEL_REPORTS/059_capital_case/CHANNEL_REPORT.md §1, §5, §11-§20
+1. **Sub-niche:** financial history + current-event ELI5, faceless ~10-12 min. 2. **Audience:** UNKNOWN (INFERRED: Crayon Capital jaisa).
+3. **Top:** Rockefeller Explained in 10 Minutes `sGtEBUIppYc` 380k (PI 7.0); How the Great Depression Actually Happened `CAsim5HC-uI` 294k (5.4); Strait of Hormuz Explained Like You're 5 `0k5C-MrLjAI` 250k (4.6).
+4. **Pattern:** canonical subject. 5. **Title:** "[Subject] Explained in 10 Minutes / Like You're 5"; thumb UNKNOWN. 6. **Hook:** paradox/irony; 7. **Schedule:** 13 videos/8 months.
+8. **Chalta hai:** canonical history. 9. **Fail:** FTX Collapse Explained Like You're 5 `F0q0tg7JHKI` 5.4k (0.06), BlackRock Conspiracies `Fv3STb4g23Q` 5.1k (0.06): conspiracy/riddle titles; FTX flop bhi dikhata hai ki wahi template har topic par nahi chalta.
+10. **Seekh:** Crayon Capital ka format chhote channel par bhi 380k tak chal sakta hai (13 videos, kam sample). Caveat: sample chhota.
+
+### 9. This make cents (058) — ../01_CHANNEL_REPORTS/058_this_make_cents/CHANNEL_REPORT.md §1, §5, §11-§20
+1. **Sub-niche:** "wealth revenge POV drama" (second-person). Pivot: 2-9 Oct first-person explainers -> 11-24 Oct revenge dramas (VERIFIED dates). 2. **Audience:** UNKNOWN (INFERRED: story/drama).
+3. **Top:** Family Cut You Out of Grandpa's Will — Not Knowing You Already Own… `M0AcqoZ8zQg` 611k (PI 28.3); Wife Divorced You for a Richer Man — Now He Pays You Rent `po7HUg_7yYE` 432k (20.0); Ex-Wife Called You Worthless Repairman `ce_tknjWnX4` 113k (5.3).
+4. **Pattern:** "You own what they need". 5. **Title:** "[Humiliation] — Not Knowing You [Own X]"; thumb UNKNOWN. 6. **Hook:** family-holiday/document scene; 15-22 min. 7. **Schedule:** ~20 videos in 5 hafte.
+8. **Chalta hai:** revenge + hidden ownership. 9. **Fail:** 4 Stages of Compounding `ggFY_2P_sH4` 1.2k (0.04), AI Dropshipping `cgEpjpaFF5o` 888 (0.03): generic explainer drama channel par.
+10. **Seekh:** sabse tez, magar luck-heavy: poore POV niche mein 3 lottery jaise channels (Q1). Tabhi lo jab sirf pattern test karna ho. Caveat: 20 videos, 5 hafte.
+
+### 10. Millionaire Problems (062) — ../01_CHANNEL_REPORTS/062_millionaire_problems/CHANNEL_REPORT.md §1, §11, §18, §20 + VIDEO_INVENTORY.csv
+1. **Sub-niche:** business-ownership economics ("lose nine figures with dignity"), faceless 10-16 min. 2. **Audience:** business/money fantasy viewers (INFERRED).
+3. **Top (VERIFIED inventory):** Economics of Owning a Casino `HE5xgQS53gc` 700k; Offshore Oil Rig `XiDvK1r2l_k` 264k; McDonald's Franchise `CcyLLvUj5jY` 199k; Private Military Company `TFiTzviGMAE` 123k; Bank `RbBLk-l-xIc` 107k.
+4. **Pattern:** "Economics of Owning a [X]" (X = recognisable business). 5. **Title:** fixed template; thumb UNKNOWN. 6. **Hook:** UNKNOWN (sample chhota).
+7. **Schedule:** 9 videos, ruka Jul 2026 (dates 21 Apr-26 Jul).
+8. **Chalta hai:** casino/oil rig/McDonald's. 9. **Fail:** Football Team `N0t9Vj8r7pc` 11.6k, Car Dealership `l6YFg01TuX0` 18.6k, Cemetery 43.5k: billionaire-only ya morbid/boring assets.
+10. **Seekh:** Neu (#6) ke ownership video ke saath milke ek hi template dikhta hai. Caveat: sirf 9 videos, channel ruk gaya.
+
+### Cross-channel jo in 10 se nikalta hai (INFERRED)
+- **Repeatable:** ek fixed title template (Bananas / Like You're 5 / Economics of Owning / Worse Than You Think) + mass-relevant topic + pehle sentence mein paradox/number. In 10 channels ke reports ke flops mein common cheez niche/sensitive/off-niche topic hai (template wahi, topic alag); gino ka formal count nahi kiya.
+- **Lottery-like:** 12 (Kevin), 58, POV channels: PI bahut high, median kam.
+- **Thumbnail:** isse "jeeta" nahi sabit hota (null test); consistent ownable style hi common hai.
+- **UNKNOWN:** CTR, retention, thumbnails for 55/39/40/59/58/62 (montage inspect nahi hua), Economics Explained ki dates, 057 thumbnails.
