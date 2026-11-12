@@ -29,6 +29,8 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q20 | 2026-11-12 | (owner Q16) Copying, saturation, self-repeats, rulebook |
 | Q21 | 2026-11-12 | (owner Q17) Upload cadence aur consistency |
 | Q22 | 2026-11-12 | (owner Q18+Q19) PDF ko judge: 22-principle scorecard + '46 channels' discrepancy |
+| Q23 | 2026-11-12 | (owner Q20) Reliability audit: RED/AMBER/GREEN table |
+| Q24 | 2026-11-12 | (owner Q21) Missing datasets aur unki research value |
 
 ---
 
@@ -958,3 +960,58 @@ Same-channel length check (Q16): 32/48 channels mein winners lambe, weak signal.
 **Discrepancy (VERIFIED):** `FINAL_RESEARCH_CONCLUSIONS.md` "46 channels FOLLOWED" likhta hai. CSV mein P21 = **30 FOLLOWED + 12 PARTIAL (=42), 11 CONTRADICTED, 16 INSUFFICIENT**. 46 yahan reproduce nahi hota. **Is line ko 30 (ya 42 with partial) se badalna chahiye** - file maine abhi edit nahi ki; aap kahein to sudhar dunga.
 **"FOLLOWED" ka matlab:** channel ke andar topic-groups ke median PI ka best/worst ratio title-format groups se bada hai (within-channel). Yeh test hai ki principle ka dawa data mein dikhta hai ya nahi, "channels ne principle follow kiya" nahi.
 **Kya iska matlab topic > packaging?** Is dataset mein haan lagta hai: Mr. Finance 65 videos same template, 401 -> 266k (par date effect bhi bada, Q12 R^2 date 0.67 > category 0.14); Q2/Q17 mein thumbnail aur title style null. **Boundaries:** (a) 11 channels (16%) mein contradiction; (b) topic tags rule-based; (c) packaging ka CTR/impressions kabhi measure nahi hua; (d) Finance ANALYST (title+packaging badalne se 367 -> 368k) dikhata hai packaging bhi bada ho sakta hai jab subject achha ho; (e) correlation.
+
+
+---
+
+## Q23 — (owner Q20) Kya hum apne results par trust kar sakte hain? (2026-11-12)
+
+**Source (VERIFIED):** `~/YIOS-local-audits/finance-viral-forensics-2026-11-12/deliverables/coverage_audit/COVERAGE_AUDIT_REPORT.md` (local, commit nahi) + `REPORT.md` §7-9 + yeh session ke naye numbers (`01_CHANNEL_REPORTS/*/VIDEO_INVENTORY.csv`).
+
+1. **Meaningful analysis wale channels:** **60 of 69** (jin mein >=1 classified long-form). 56 mein >=15, 45 mein >=30, 27 mein >=50 PI videos. Baaki 9 (Wealth Logic 0 videos; Chronofold, David Explains Money, Built On You, Millionaire Problems, The Wealth Engine, Econ in a Nutshell, Frank Law, Primitive Education) 3,056 mein kuch nahi dete.
+2. **Har stage ki videos:** classification 3,056 (60 ch); title 3,056; hook/intro/script 2,858 (60); thumbnail 3,001 (59); topic clustering fit 3,634 (68); matched pairs 692+692 (54 ch); held-out prediction 1,605 (60); cadence 3,035 (47 ch); views-per-subscriber 2,449 (45); near-duplicate 3,402 (66); Shorts 201 (3 ch).
+3. **Numbers ka matlab:** 3,056 long-form = performance classes lagi (398 Breakout, 424 Successful, 1,451 Average, 783 Underperforming). 2,858 = unme se woh jinka transcript >=200 chars (198 bina transcript). 3,001 = unme se jinki thumbnail image aa gayi (55 ke URL 404/SSL). 201 = Shorts classified, sirf 3 channels (Casual Finance 173, MonkeyExplains 15, Primate 13). Baaki 306 long-form last 14 din ke recent videos hain, jaan-boojh kar bahar.
+4. **Insufficient data channels:** 9 upar wale + ~15 aur channels jin mein <30 classified (data_flags). Casual Finance: 206 videos, sirf 33 long-form.
+5. **Missing transcripts/dates/thumbnails ka asar:** 198 videos bina transcript (Finance Simplified, Max Invests, Rick Finance, Tom Lazy Dividend 40-40, Wise Future 33). 192 classified videos undated: channel-median baseline use hua; 6 established channels (040-045) mein dates nahi, to age-adjusted PI nahi. 372 thumbnail URLs derived (constructed), image phir bhi download hui. Thumbnail features `mqdefault.jpg` se; visual review alag (Q2: 67 channels aankh se, 057 UNKNOWN).
+6. **Held-out mein Average kyun nahi:** model Breakout+Successful vs Underperforming (n=1,605) tha, 1,451 middle videos bahar. Faida: clean extremes. Nuksan: AUC sirf extremes par; middle par kuch nahi pata. Missing features median-imputed.
+7. **Hook proxies mein missing transcript = FALSE:** 3 proxies (snapback, "but" any, named entity in 30s) aur Viral Checklist score 198 videos ko "no" ginte hain. Asar: un rows mein halka bias; null/flat nateeje shayad bachte hain, **par rerun nahi hua**.
+8. **Strong vs rerun:** table neeche.
+9. **1-2 channels par tiki findings:** Shorts (Casual Finance ~86% of Shorts, 173/201); Mr. Finance "Economics of Owning" pattern (one channel, ~65 videos); Matty pivot (4 pre-pivot videos); Primate 15.7M ek hi Short; Sarah Rickshaw/Housing/Kevin duplicates (Q11/F11); retirement sub-niche ka "proof" bhi mostly Matty (Q15).
+
+### RED / AMBER / GREEN
+| Level | Finding | Kyun |
+|---|---|---|
+| GREEN | Counts reconcile with DB (3,634 videos, 3,412 long, 222 Shorts, 3,410 transcripts); PI replay matches | audit script ne har number DB se dobara bana kar match kiya |
+| GREEN | **Channel ka asar bada**: channel log-view variance ka ~44-53% explain karta hai | consistent across tests |
+| GREEN | Within-channel title/hook/thumbnail style ka asar ~null (17 title features FDR survive nahi, held-out AUC 0.50-0.59, rubric q=0.52, Q16-Q18 nulls) | 4 alag method, same disha |
+| GREEN | Tier ranking (20/21/27) | median long-form views rule se |
+| AMBER | "Topic selection" P21 (30 FOLLOWED, 11 CONTRADICTED; final doc ka "46" reproduce nahi hota) | Q22 |
+| AMBER | Sub-niche ranking, winning models (topic/format tags rule-based) | tag errors possible, small n |
+| AMBER | Copy/saturation position effect (18 concepts) | n chhota, originator UNKNOWN |
+| AMBER | Cadence (n=52, Spearman -0.25) | confounded, newest-100 window |
+| AMBER | Script length signal (+160 words, 32/48 channels) | weak |
+| RED | Hook proxy rows h_snapback3/h_but_any/h_named_entity_30s aur Checklist | FALSE-for-missing (finding A), rerun chahiye |
+| RED | Shorts conclusions | 3 channels, ek channel dominant |
+| RED | Matty pre-pivot "audience change" ka asar | n=4 |
+| RED | Koi bhi CTR/retention/impressions/traffic claim | DATA NOT AVAILABLE |
+| RED | External demand evidence (VidIQ, Google Trends) | NOT COLLECTED |
+| RED | "46 channels P21", "Mr. Finance only business", "Matty identical scripts" (final doc ke lines) | overstated, edit baaki |
+
+**Rerun karna chahiye:** hook proxy rows 2,858 par; matched pairs mein Average videos; thumbnail rubric second rater se; P21 count final doc mein theek.
+
+---
+
+## Q24 — (owner Q21) Research mein abhi kya missing hai (2026-11-12)
+
+| Dataset | Kaun sa sawal solve | Value | Public se? | Private/permission? | Iske baghair provisional |
+|---|---|---|---|---|---|
+| Google Trends | Konsa topic demand mein hai, evergreen vs spike (rent vs buy, SpaceX IPO, "never keep more than X") | HIGH (topic ka asli lever) | Haan (free) | Nahi | demand-based topic ranking, "evergreen" tags |
+| YouTube comments | Viewer ko kya chahiye, audience ka asli sawal, topic gaps | HIGH | Haan (public, API ya export) | Nahi (par scale pe terms) | audience-problem tags, content gaps (Q30) |
+| VidIQ data | competitor keyword volume/competition, estimated views | MEDIUM | Paid tool | Account chahiye | niche-opportunity "competition" fields |
+| Actual thumbnail visual inspection | packaging ka subjective score ke saath second rater | MEDIUM-LOW (Q2/Q17 pehle hi null) | Haan | Nahi | rubric ke nateeje |
+| Historical views over time | kab breakout hua, trend/decay, age-adjusted comparison | HIGH (age effect Q12) | Partial (Wayback/tracking nahi); ab se daily snapshot lo | Nahi | har "views" comparison (age confound) |
+| Studio impressions/CTR/retention/traffic | packaging aur script ka asli asar, dikhaya gaya vs click | **HIGHEST** | **Nahi** | **Haan, sirf channel owner** | packaging/hook/retention ke sab conclusions |
+| Monetization history | RPM/earnings by sub-niche, finance CPM | MEDIUM | Nahi (public nahi) | Haan | monetization routes (HYPOTHESIS) |
+| Competitor upload dates + topic trends | originator, copy lag, cadence | MEDIUM-HIGH | Haan (6 undated channels dobara fetch, newest >100) | Nahi | Q20 copying, cadence |
+
+**Sirf woh recommend jo decision badle:** (1) Google Trends + comments (public, topic/audience decisions improve), (2) historical views (aaj se weekly snapshot, age confound hatane ko), (3) **tumhare apne Studio data (CTR/retention) pehle 30 videos ke baad** - yahi packaging/script ke sawal ka asli jawab hai. VidIQ/monetization baad mein.
