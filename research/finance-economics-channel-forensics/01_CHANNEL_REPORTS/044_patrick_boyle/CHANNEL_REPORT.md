@@ -89,9 +89,6 @@ Every cluster sits at PI 0.86-1.5 — topic barely matters at this brand level (
 **Scott Bessent Is at War With Prices — and Prices Are Winning!** (wZaYyNAXHK4, 2.5M), **Why Germany Stopped Working** (ajH6YVhdOZU, 2.4M: "a trillion euros… the first visible sign… traffic cones"), **Anthropic Just Filed to Go Public. Does the Math Add Up?** (T-oXyXwD6sE, 2.3M), **How Did the Metaverse Fail So Badly?** (8BaSBjxNg-M, 2.3M: "$88 billion"), **SpaceX: The Biggest Money Loser in IPO History** (IHD8BDFYyGI, 2.1M: S-1 prospectus reading).
 Pattern: **a headline-scale event + primary documents (S-1 filings) + wit.**
 
-## failures (relative)
-**The Dumbest Takeover Bid!** (iBlu45HFruk, 640k: GameStop–eBay), **What Trump's China Visit Actually Achieved.** (765k), **Is Inflation About to Get Much Worse?** (812k), **Where is Venezuela's oil money?** (894k), **How to Be Right and Lose Everything** (996k).
-
 ### Evidence: top-PI long-form videos
 - **Scott Bessent Is at War With Prices — and Prices Are Winning!** — [wZaYyNAXHK4](https://www.youtube.com/watch?v=wZaYyNAXHK4) · nan · 46.27 min · 2,500,000 views · PI 1.79 (Average) · macro_economy/statement_other · face=True · thumb text: “BIG/BET!”
   - 0-30s: “This week, the president of the United States suggested that the ongoing problem of high interest rates might, if necessary, be solved by the military. Did you direct Secretary Mnuchin to intervene in the bond market? No, not at all. No, he's a very capable man. He wanted to do it. He's very good at it. He has a good touch. Very good natural touch for the bonds and interest and uh he did that,”
@@ -110,7 +107,8 @@ Pattern: **a headline-scale event + primary documents (S-1 filings) + wit.**
   - end: “feel that you were misled that he didn't do the stuff he promised to do, well, that's kind of his whole thing. If you found this video interesting, you should watch this video on private credit next. Don't forget to chec…” · sources: Company filings / earnings; News outlets
 
 ## 6. Underperforming video analysis
-_Not written._
+_Relative underperformers (still large absolute views for this channel)._
+**The Dumbest Takeover Bid!** (iBlu45HFruk, 640k: GameStop–eBay), **What Trump's China Visit Actually Achieved.** (765k), **Is Inflation About to Get Much Worse?** (812k), **Where is Venezuela's oil money?** (894k), **How to Be Right and Lose Everything** (996k).
 
 ### Evidence: bottom-PI long-form videos
 - **The Dumbest Takeover Bid!** — [iBlu45HFruk](https://www.youtube.com/watch?v=iBlu45HFruk) · nan · 32.23 min · 640,000 views · PI 0.46 (Underperforming) · investing_stocks/statement_other · face=True · thumb text: “PLEASE/SELECT/PAYMENT/TYPE/LF/CASH/HALF/STOCK”

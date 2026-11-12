@@ -15,7 +15,8 @@ Debt/inflation/banking and big-company stress (median PI ~1.0-1.9); geopolitics 
 5. **How Is Everything Outpacing Inflation At The Same Time?** (yU2raZftgmE, 1.5M): everyday paradox.
 Pattern: **a systemic risk the viewer half-fears, phrased as a sceptical question, with a big scale comparison.**
 
-## failures (relative)
+## failures
+_Relative underperformers (still large absolute views for this channel)._
 - **Why We (Probably) Shouldn't Give Iran $300 Billion Dollars** (Ts26T7AEHS8, 288k) — geopolitics.
 - **Have We Made The World Too Convenient?** (r4fQzqtqdPo, 405k) and **"Dude I'm Broke" Why Is My Data Worth Harvesting?** (6BOxK_JrghY, 565k) — essays off the money-risk core.
 - **bUt wE cAn"T lEt cHinA WiN tHe AI aRmS rAcE!!** (UgDEyQ1h-EA, 466k) — sarcasm-case title (meme formatting) underperforms.

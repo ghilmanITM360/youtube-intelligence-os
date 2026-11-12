@@ -14,7 +14,8 @@ Consumer businesses dominate both halves; geopolitical (Ukraine minerals) and me
 4. **Why Self-Checkout Failed to Replace Cashiers** (oPeX6FO2zls, 718k) and **Why Texas BBQ Joints Rarely Survive** (Gi1GDBEp1yA, 696k).
 Pattern: **a familiar consumer place/trend + a decline or failure verdict.**
 
-## failures (relative)
+## failures
+_Relative underperformers (still large absolute views for this channel)._
 **Inside the Cutthroat Business of Eating** (mOEPb8pvsiA, 91k: meta-essay about food content), **Why Everyone Stopped Buying GoPro** (vJi0SzEws9s, 119k), **Why Ukraine's Minerals Are Worthless** (NbvPSqAXC1k, 127k: geopolitics), **How Wall Street Ruined Your Favorite Snacks** (evArab8oOoo, 150k: abstract "value extraction" essay), **US Airlines Make More Money by Treating You Worse** (yXlKVghVQbo, 151k).
 
 ## comparison

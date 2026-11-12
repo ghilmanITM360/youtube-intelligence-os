@@ -89,9 +89,6 @@ Retirement (1.33), crisis (1.45), housing (1.66, n=1) above baseline; thematic i
 5. **Vanguard's New ETFs Compared: Worth It?** (4ggYePA755I, 84k: "0.07%… fee cut of roughly 70%").
 Pattern: **core portfolio decision + precise number + presenter's own practice.**
 
-## failures (relative)
-**The Defence Boom: Should You Invest?** (9.3k), **Your Mortgage & Savings: Bank of England's Impossible Choice** (13k), **Gold, Oil & Commodities: Is It Worth Investing?** (19k), **Retiring Abroad** (23k), **SpaceX IPO: The Hidden Risk for Passive Investors** (26k — the SpaceX topic won for Casual Finance and Patrick Boyle but not for a UK passive audience).
-
 ### Evidence: top-PI long-form videos
 - **Best Index Funds For Long Term: One ETF To Rule Them All (2026)** — [rAA3fSUu9JQ](https://www.youtube.com/watch?v=rAA3fSUu9JQ) · nan · 12.43 min · 123,000 views · PI 2.96 (Successful) · investing_stocks/news_change_update · face=True · thumb text: “iW/~~/One/RU/LE/ALL”
   - 0-30s: “People are usually surprised to hear that my entire core stock portfolio is just plain global stock funds, nothing else. No regional tilts, no sector bets. So, in this video, we'll look at the cheapest global funds available to UK investors right now. I'll tell you which ones I hold and why. And at the end, I'll show you a hidden fee that I think matters more than most of the fee differences that we're”
@@ -110,7 +107,8 @@ Pattern: **core portfolio decision + precise number + presenter's own practice.*
   - end: “first place. So, if you do want to discuss this with other like-minded people, remember we've got our membership. There's more about that in the link on screen right now. And tell me in the comments whether you're decidi…”
 
 ## 6. Underperforming video analysis
-_Not written._
+_Relative underperformers (still large absolute views for this channel)._
+**The Defence Boom: Should You Invest?** (9.3k), **Your Mortgage & Savings: Bank of England's Impossible Choice** (13k), **Gold, Oil & Commodities: Is It Worth Investing?** (19k), **Retiring Abroad** (23k), **SpaceX IPO: The Hidden Risk for Passive Investors** (26k — the SpaceX topic won for Casual Finance and Patrick Boyle but not for a UK passive audience).
 
 ### Evidence: bottom-PI long-form videos
 - **The Defence Boom: Should You Invest?** — [P_EshMarZ-I](https://www.youtube.com/watch?v=P_EshMarZ-I) · nan · 13.28 min · 9,300 views · PI 0.22 (Underperforming) · investing_stocks/question · face=True · thumb text: “sf”

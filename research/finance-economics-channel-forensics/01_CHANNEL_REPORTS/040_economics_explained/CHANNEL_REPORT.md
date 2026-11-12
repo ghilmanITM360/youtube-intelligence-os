@@ -90,11 +90,6 @@ Housing (median PI 1.59) and taxes (1.91) highest; macro (1.01); geopolitics (0.
 4. **Why New Zealand Is the Only Safe Haven Left** (4kSd7zyXGo0, 1.1M) and **The Economy Gave Up On Young People… It's Starting To Show** (J9PzjUlyzAY, 1.1M: "262 million young people…" NEET statistic, ILO-type figure).
 Pattern: **broad, relatable economic grievance (housing, inequality, youth) + surprising verdict**.
 
-## failures (relative)
-- **Get Rich Or Die Tryin'… Literally** (JwklXWLy2UA, 149k, PI 0.27): income-longevity essay (health economics) — cluttered chart thumbnail.
-- **How to Rebuild an Economy** (01f3r_DnOPc, 206k): Rwanda case — distant.
-- **Cuba Was Barely Holding On…**, **No One Is Talking About the "Winners" of the Iran War**, **Where Has Venezuela's Oil Gone?** (233-252k): war/sanction geopolitics — as on Brimm and Neu, geopolitics underperforms the channel norm.
-
 ### Evidence: top-PI long-form videos
 - **Australia May Have Just Solved The Housing Crisis** — [QtZfbWOkoIY](https://www.youtube.com/watch?v=QtZfbWOkoIY) · nan · 14.15 min · 1,500,000 views · PI 2.75 (Successful) · housing_real_estate/news_change_update · face=False · thumb text: “THE/BUBBLE/HAS/BLOWN)”
   - 0-30s: “For the last three decades, the Australian economy has been defined by two distinct types of dirt. The mineral-rich dirt that we dig up and export to developing industrial countries in Asia, and the blocks of dirt that we trade back and forth between one another for progressively higher prices. The first kind has made Australia incredibly rich, but buying and selling the second kind has also made Australians incredibly indebte…”
@@ -113,7 +108,10 @@ Pattern: **broad, relatable economic grievance (housing, inequality, youth) + su
   - end: “get old. Now, for the first time since the Industrial Revolution, younger generations in wealthy countries are struggling to exceed their parents' wealth despite overall economic growth. And this is changing our economie…” · sources: Academic / research study
 
 ## 6. Underperforming video analysis
-_Not written._
+_Relative underperformers (still large absolute views for this channel)._
+- **Get Rich Or Die Tryin'… Literally** (JwklXWLy2UA, 149k, PI 0.27): income-longevity essay (health economics) — cluttered chart thumbnail.
+- **How to Rebuild an Economy** (01f3r_DnOPc, 206k): Rwanda case — distant.
+- **Cuba Was Barely Holding On…**, **No One Is Talking About the "Winners" of the Iran War**, **Where Has Venezuela's Oil Gone?** (233-252k): war/sanction geopolitics — as on Brimm and Neu, geopolitics underperforms the channel norm.
 
 ### Evidence: bottom-PI long-form videos
 - **Get Rich Or Die Tryin' ... Literally** — [JwklXWLy2UA](https://www.youtube.com/watch?v=JwklXWLy2UA) · nan · 19.32 min · 149,000 views · PI 0.27 (Underperforming) · wealth_psychology_habits/statement_other · face=False · thumb text: “LIFE/EXPECTANCY/SSM/SIM/S20K/$60K/40/60/70/80/90”

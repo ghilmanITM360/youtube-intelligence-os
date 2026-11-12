@@ -14,7 +14,8 @@ Housing (median PI 1.59) and taxes (1.91) highest; macro (1.01); geopolitics (0.
 4. **Why New Zealand Is the Only Safe Haven Left** (4kSd7zyXGo0, 1.1M) and **The Economy Gave Up On Young People… It's Starting To Show** (J9PzjUlyzAY, 1.1M: "262 million young people…" NEET statistic, ILO-type figure).
 Pattern: **broad, relatable economic grievance (housing, inequality, youth) + surprising verdict**.
 
-## failures (relative)
+## failures
+_Relative underperformers (still large absolute views for this channel)._
 - **Get Rich Or Die Tryin'… Literally** (JwklXWLy2UA, 149k, PI 0.27): income-longevity essay (health economics) — cluttered chart thumbnail.
 - **How to Rebuild an Economy** (01f3r_DnOPc, 206k): Rwanda case — distant.
 - **Cuba Was Barely Holding On…**, **No One Is Talking About the "Winners" of the Iran War**, **Where Has Venezuela's Oil Gone?** (233-252k): war/sanction geopolitics — as on Brimm and Neu, geopolitics underperforms the channel norm.

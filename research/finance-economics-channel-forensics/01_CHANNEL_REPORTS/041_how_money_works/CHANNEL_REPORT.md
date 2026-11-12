@@ -93,12 +93,6 @@ Debt/inflation/banking and big-company stress (median PI ~1.0-1.9); geopolitics 
 5. **How Is Everything Outpacing Inflation At The Same Time?** (yU2raZftgmE, 1.5M): everyday paradox.
 Pattern: **a systemic risk the viewer half-fears, phrased as a sceptical question, with a big scale comparison.**
 
-## failures (relative)
-- **Why We (Probably) Shouldn't Give Iran $300 Billion Dollars** (Ts26T7AEHS8, 288k) — geopolitics.
-- **Have We Made The World Too Convenient?** (r4fQzqtqdPo, 405k) and **"Dude I'm Broke" Why Is My Data Worth Harvesting?** (6BOxK_JrghY, 565k) — essays off the money-risk core.
-- **bUt wE cAn"T lEt cHinA WiN tHe AI aRmS rAcE!!** (UgDEyQ1h-EA, 466k) — sarcasm-case title (meme formatting) underperforms.
-- **Why Haven't We Had That Oil Crisis… Yet?** (e-2GoFws3yE, 483k) — news-dependent.
-
 ### Evidence: top-PI long-form videos
 - **Why A National Debt Default Now Looks Genuinely Possible... (sort of)** — [QmWyQ-BCD8E](https://www.youtube.com/watch?v=QmWyQ-BCD8E) · nan · 18.63 min · 3,000,000 views · PI 3.87 (Successful) · macro_economy/explainer · face=True · thumb text: “EVEN/THE/ADULTS/ARE/SCARED”
   - 0-30s: “If we are clearly never going to pay down our debt, why are people still lending us money? And well, what happens if they stop? In the past, this kind of question was basically dismissed by most people in the no as a little more than an absurd hypothetical. But well, it seems these days, even the Treasury is kind of taking it seriously. Last month, our national debt passed $40 trillion, more than doubling”
@@ -117,7 +111,11 @@ Pattern: **a systemic risk the viewer half-fears, phrased as a sceptical questio
   - end: “cost of living is rising much faster than this single measurement might suggest. And if you want further proof of that, go and watch this video next to find out how things are not only getting more expensive, but also sy…” · sources: BLS / CPI data; News outlets; Academic / research study
 
 ## 6. Underperforming video analysis
-_Not written._
+_Relative underperformers (still large absolute views for this channel)._
+- **Why We (Probably) Shouldn't Give Iran $300 Billion Dollars** (Ts26T7AEHS8, 288k) — geopolitics.
+- **Have We Made The World Too Convenient?** (r4fQzqtqdPo, 405k) and **"Dude I'm Broke" Why Is My Data Worth Harvesting?** (6BOxK_JrghY, 565k) — essays off the money-risk core.
+- **bUt wE cAn"T lEt cHinA WiN tHe AI aRmS rAcE!!** (UgDEyQ1h-EA, 466k) — sarcasm-case title (meme formatting) underperforms.
+- **Why Haven't We Had That Oil Crisis… Yet?** (e-2GoFws3yE, 483k) — news-dependent.
 
 ### Evidence: bottom-PI long-form videos
 - **Why We (Probably) Shouldn't Give Iran $300 Billion Dollars** — [Ts26T7AEHS8](https://www.youtube.com/watch?v=Ts26T7AEHS8) · nan · 19.68 min · 288,000 views · PI 0.37 (Underperforming) · macro_economy/explainer · face=False · thumb text: “THIS/VIDEO/IS/ALREADY”

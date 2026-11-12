@@ -89,9 +89,6 @@ Housing (1.35), crisis (1.29), taxes (1.18), retirement (1.68, n=1) above baseli
 5. **Who will pay for 100 million boomer pensions?** (uqSwRHc-1MQ, 385k): worker-to-pensioner ratio (OECD).
 Pattern: **a money-policy question with a stat or historical arc, framed for the viewer's wallet.**
 
-## failures (relative)
-**Why Hungary's election may soon disappoint** (88k), **The distorted economics of mass media** (91k), **Why do right-wing populists keep coming back?** (96k), **If the strait opens, what happens to the economy?** (101k), **How scientists radically reduced US gun violence** (126k) — politics/news/social policy rather than personal money.
-
 ### Evidence: top-PI long-form videos
 - **What happens when you stop taxing billionaires?** — [Y9LOOvJ7hKw](https://www.youtube.com/watch?v=Y9LOOvJ7hKw) · nan · 19.77 min · 510,000 views · PI 2.23 (Successful) · taxes_irs/warning_mistake · face=False · thumb text: “nan”
   - 0-30s: “Billionaires. They are richer today than they've been in decades. But according to economists like Gabriel Zucman, they do not pay their fair share in taxes. While average Americans pay an effective tax rate of about 30%. Forbes 400 richest individuals pay only 28%. And paradoxically, in Europe, things are even more extreme. Whereas middle-class Europeans pay around 50% and taxes billionaires pay only about 20 to 30%. However,…”
@@ -110,7 +107,8 @@ Pattern: **a money-policy question with a stat or historical arc, framed for the
   - end: “up on the global economy during the weekend, sitting down with a nice cup of coffee and the paper edition. You'll always stay on top of the latest global developments no matter where you are. So don't miss out. Click the…” · sources: News outlets; Academic / research study; World Bank / IMF / OECD
 
 ## 6. Underperforming video analysis
-_Not written._
+_Relative underperformers (still large absolute views for this channel)._
+**Why Hungary's election may soon disappoint** (88k), **The distorted economics of mass media** (91k), **Why do right-wing populists keep coming back?** (96k), **If the strait opens, what happens to the economy?** (101k), **How scientists radically reduced US gun violence** (126k) — politics/news/social policy rather than personal money.
 
 ### Evidence: bottom-PI long-form videos
 - **Why Hungary's election may soon disappoint** — [_RKESHFcm54](https://www.youtube.com/watch?v=_RKESHFcm54) · nan · 10.78 min · 88,000 views · PI 0.39 (Underperforming) · macro_economy/explainer · face=True · thumb text: “Can/he/be/trusted?/ly/XN”

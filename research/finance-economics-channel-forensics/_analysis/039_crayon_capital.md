@@ -15,7 +15,8 @@ Scams (median views 2.2M) and crises (415k) dominate; famous tycoons/companies (
 5. **NVIDIA Explained Like You're 5** (1GowFTjbUnk, 585k, PI 3.7): Denny's origin story (VERIFIED founding lore, 1993).
 Pattern: **a globally famous money story + a paradox or outrage in the first sentence + childlike visuals that promise simplicity.**
 
-## failures (relative)
+## failures
+_Relative underperformers (still large absolute views for this channel)._
 - **Every Financial Crisis Explained in 10 Minutes** (KHLY6SyLvgQ, 69k, PI 0.16): compilation — no single story, no protagonist.
 - **The Rise of Paypal Explained Like You're 5** (EedHneVKmpo, 109k, PI 0.25) and **Bitcoin Explained Like You're 5** (_pUOpoihjA4, 118k): less dramatic or heavily supplied subjects.
 - **Epstein Situation Explained Like You're 5** (AKrjI9m6fpk, 49k): non-financial/sensitive topic (monetisation and recommendation constraints — HYPOTHESIS).

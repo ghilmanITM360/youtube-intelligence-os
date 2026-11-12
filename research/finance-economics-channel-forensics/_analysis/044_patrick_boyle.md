@@ -11,7 +11,8 @@ Every cluster sits at PI 0.86-1.5 — topic barely matters at this brand level (
 **Scott Bessent Is at War With Prices — and Prices Are Winning!** (wZaYyNAXHK4, 2.5M), **Why Germany Stopped Working** (ajH6YVhdOZU, 2.4M: "a trillion euros… the first visible sign… traffic cones"), **Anthropic Just Filed to Go Public. Does the Math Add Up?** (T-oXyXwD6sE, 2.3M), **How Did the Metaverse Fail So Badly?** (8BaSBjxNg-M, 2.3M: "$88 billion"), **SpaceX: The Biggest Money Loser in IPO History** (IHD8BDFYyGI, 2.1M: S-1 prospectus reading).
 Pattern: **a headline-scale event + primary documents (S-1 filings) + wit.**
 
-## failures (relative)
+## failures
+_Relative underperformers (still large absolute views for this channel)._
 **The Dumbest Takeover Bid!** (iBlu45HFruk, 640k: GameStop–eBay), **What Trump's China Visit Actually Achieved.** (765k), **Is Inflation About to Get Much Worse?** (812k), **Where is Venezuela's oil money?** (894k), **How to Be Right and Lose Everything** (996k).
 
 ## comparison

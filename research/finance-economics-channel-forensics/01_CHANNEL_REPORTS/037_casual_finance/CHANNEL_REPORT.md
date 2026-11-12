@@ -280,11 +280,6 @@ Long-form (33): macro, investing, crisis, housing, crypto — all near PI 1, i.e
 5. **Crypto Is a Brilliant Scam and I Can Prove It** (hbsYaLaN_F8, 587k, PI 4.2): comedic contrarian take.
 Pattern: **a big, current anxiety (crash, housing, IPO, crypto) + a historical or statistical anchor + a calm stick-figure visual + a 3-5 word ominous headline.**
 
-## failures (relative)
-- **Private Credit: The Secret Industry Taking Over Wall Street** (7uu6qaCGZsY, 48k, PI 0.25) and **MicroStrategy: The Crypto Scam Hiding in Plain Sight** (dlBhLhn8lL0, 50k, PI 0.26): insider-finance subjects, fewer stakes for the average viewer.
-- **The $12 Billion Trading Scam That Only Works If You Fail** (965yZYhY_f4, 94k, PI 0.26): prop-firm economics — niche.
-- **Why the Oil Crisis Is (Secretly) Good…** (Xkk9GnnJHBg, 137k, PI 0.28) and **The Stock Market is BROKEN (just accept it)** (RXFBHYxyqdk, 116k, PI 0.32): contrarian/vague stances without a dated anchor; thumbnail "Everyone's Missing This." and a question-mark stick figure — weaker single idea.
-
 ### Evidence: top-PI long-form videos
 - **The 1973 Stock Market Crash that Nobody Remembers** — [DKyJABtbF2o](https://www.youtube.com/watch?v=DKyJABtbF2o) · 2025-10-03 · 8.82 min · 1,281,284 views · PI 9.24 (Breakout) · investing_stocks/statement_other · face=False · thumb text: “History/is/Repeating”
   - 0-30s: “It's no secret that history repeats itself. And when it comes to the stock market, investors will do whatever mental gymnastics they need to convince themselves that this time it's different. In fact, legendary investor Sir John Templeton, who averaged 15% annual growth for 38 years, called those the foremost expensive words in the English language. And he's right, because nothing empties a brokerage account faster than the mi…”
@@ -303,7 +298,10 @@ Pattern: **a big, current anxiety (crash, housing, IPO, crypto) + a historical o
   - end: “ones whose rich daddy can cover it instead. And the only people who get to skip that bill are the ones who are the ones who are the ones who are the ones whose rich daddy can cover it instead. And the only people who get…” · sources: Federal Reserve; Census / government statistics; Company filings / earnings; Academic / research study; VA
 
 ## 6. Underperforming video analysis
-_Not written._
+_Relative underperformers (still large absolute views for this channel)._
+- **Private Credit: The Secret Industry Taking Over Wall Street** (7uu6qaCGZsY, 48k, PI 0.25) and **MicroStrategy: The Crypto Scam Hiding in Plain Sight** (dlBhLhn8lL0, 50k, PI 0.26): insider-finance subjects, fewer stakes for the average viewer.
+- **The $12 Billion Trading Scam That Only Works If You Fail** (965yZYhY_f4, 94k, PI 0.26): prop-firm economics — niche.
+- **Why the Oil Crisis Is (Secretly) Good…** (Xkk9GnnJHBg, 137k, PI 0.28) and **The Stock Market is BROKEN (just accept it)** (RXFBHYxyqdk, 116k, PI 0.32): contrarian/vague stances without a dated anchor; thumbnail "Everyone's Missing This." and a question-mark stick figure — weaker single idea.
 
 ### Evidence: bottom-PI long-form videos
 - **Private Credit: The Secret Industry Taking Over Wall Street** — [7uu6qaCGZsY](https://www.youtube.com/watch?v=7uu6qaCGZsY) · 2025-10-17 · 8.18 min · 48,404 views · PI 0.25 (Underperforming) · banking_cash/statement_other · face=False · thumb text: “nan”

@@ -97,12 +97,6 @@ Scams (median views 2.2M) and crises (415k) dominate; famous tycoons/companies (
 5. **NVIDIA Explained Like You're 5** (1GowFTjbUnk, 585k, PI 3.7): Denny's origin story (VERIFIED founding lore, 1993).
 Pattern: **a globally famous money story + a paradox or outrage in the first sentence + childlike visuals that promise simplicity.**
 
-## failures (relative)
-- **Every Financial Crisis Explained in 10 Minutes** (KHLY6SyLvgQ, 69k, PI 0.16): compilation — no single story, no protagonist.
-- **The Rise of Paypal Explained Like You're 5** (EedHneVKmpo, 109k, PI 0.25) and **Bitcoin Explained Like You're 5** (_pUOpoihjA4, 118k): less dramatic or heavily supplied subjects.
-- **Epstein Situation Explained Like You're 5** (AKrjI9m6fpk, 49k): non-financial/sensitive topic (monetisation and recommendation constraints — HYPOTHESIS).
-- **The Greatest Slave System Ever Created** (GdpGd0U2wmo, 41k): essay with a provocative, unclear title.
-
 ### Evidence: top-PI long-form videos
 - **The Wolf of Wall Street Scam Explained Like You're 5** — [HawmGu7oNrc](https://www.youtube.com/watch?v=HawmGu7oNrc) · 2025-10-03 · 16.55 min · 4,219,017 views · PI 9.63 (Breakout) · scams_fraud/explainer · face=True · thumb text: “Or”
   - 0-30s: “He lied about $1 stock, made millions, and only served 22 months in jail. Then Hollywood turned his crimes into a blockbuster. This is the story of Jordan Belelfford, the man who scammed America and got rich again doing it. And the wildest part, people still cheer for him. Bayside, Queens, 1962. A working-class Jewish neighborhood where dreams were modest and ambition had a ceiling. But one kid, Jordan Belelfford, had no inter…”
@@ -121,7 +115,11 @@ Pattern: **a globally famous money story + a paradox or outrage in the first sen
   - end: “of Google, ahead of Apple. Not bad for a company that once had 30 days of cash left and one very wrong chip. None of it was supposed to work. Every single bet looked insane from the outside, and every single one paid off…” · sources: Academic / research study · desc links: betterhelp.com docs.google.com
 
 ## 6. Underperforming video analysis
-_Not written._
+_Relative underperformers (still large absolute views for this channel)._
+- **Every Financial Crisis Explained in 10 Minutes** (KHLY6SyLvgQ, 69k, PI 0.16): compilation — no single story, no protagonist.
+- **The Rise of Paypal Explained Like You're 5** (EedHneVKmpo, 109k, PI 0.25) and **Bitcoin Explained Like You're 5** (_pUOpoihjA4, 118k): less dramatic or heavily supplied subjects.
+- **Epstein Situation Explained Like You're 5** (AKrjI9m6fpk, 49k): non-financial/sensitive topic (monetisation and recommendation constraints — HYPOTHESIS).
+- **The Greatest Slave System Ever Created** (GdpGd0U2wmo, 41k): essay with a provocative, unclear title.
 
 ### Evidence: bottom-PI long-form videos
 - **Every Financial Crisis Explained in 10 Minutes** — [KHLY6SyLvgQ](https://www.youtube.com/watch?v=KHLY6SyLvgQ) · 2025-04-22 · 10.88 min · 69,270 views · PI 0.16 (Underperforming) · crisis_collapse/explainer · face=False · thumb text: “Great/1773/Crisis/Global/Financial/Pandemic”

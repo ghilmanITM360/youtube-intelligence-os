@@ -15,7 +15,8 @@ Long-form (33): macro, investing, crisis, housing, crypto — all near PI 1, i.e
 5. **Crypto Is a Brilliant Scam and I Can Prove It** (hbsYaLaN_F8, 587k, PI 4.2): comedic contrarian take.
 Pattern: **a big, current anxiety (crash, housing, IPO, crypto) + a historical or statistical anchor + a calm stick-figure visual + a 3-5 word ominous headline.**
 
-## failures (relative)
+## failures
+_Relative underperformers (still large absolute views for this channel)._
 - **Private Credit: The Secret Industry Taking Over Wall Street** (7uu6qaCGZsY, 48k, PI 0.25) and **MicroStrategy: The Crypto Scam Hiding in Plain Sight** (dlBhLhn8lL0, 50k, PI 0.26): insider-finance subjects, fewer stakes for the average viewer.
 - **The $12 Billion Trading Scam That Only Works If You Fail** (965yZYhY_f4, 94k, PI 0.26): prop-firm economics — niche.
 - **Why the Oil Crisis Is (Secretly) Good…** (Xkk9GnnJHBg, 137k, PI 0.28) and **The Stock Market is BROKEN (just accept it)** (RXFBHYxyqdk, 116k, PI 0.32): contrarian/vague stances without a dated anchor; thumbnail "Everyone's Missing This." and a question-mark stick figure — weaker single idea.

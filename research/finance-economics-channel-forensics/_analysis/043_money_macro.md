@@ -15,7 +15,8 @@ Housing (1.35), crisis (1.29), taxes (1.18), retirement (1.68, n=1) above baseli
 5. **Who will pay for 100 million boomer pensions?** (uqSwRHc-1MQ, 385k): worker-to-pensioner ratio (OECD).
 Pattern: **a money-policy question with a stat or historical arc, framed for the viewer's wallet.**
 
-## failures (relative)
+## failures
+_Relative underperformers (still large absolute views for this channel)._
 **Why Hungary's election may soon disappoint** (88k), **The distorted economics of mass media** (91k), **Why do right-wing populists keep coming back?** (96k), **If the strait opens, what happens to the economy?** (101k), **How scientists radically reduced US gun violence** (126k) — politics/news/social policy rather than personal money.
 
 ## comparison

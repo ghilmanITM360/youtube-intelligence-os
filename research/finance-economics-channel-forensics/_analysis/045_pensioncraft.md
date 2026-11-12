@@ -15,7 +15,8 @@ Retirement (1.33), crisis (1.45), housing (1.66, n=1) above baseline; thematic i
 5. **Vanguard's New ETFs Compared: Worth It?** (4ggYePA755I, 84k: "0.07%… fee cut of roughly 70%").
 Pattern: **core portfolio decision + precise number + presenter's own practice.**
 
-## failures (relative)
+## failures
+_Relative underperformers (still large absolute views for this channel)._
 **The Defence Boom: Should You Invest?** (9.3k), **Your Mortgage & Savings: Bank of England's Impossible Choice** (13k), **Gold, Oil & Commodities: Is It Worth Investing?** (19k), **Retiring Abroad** (23k), **SpaceX IPO: The Hidden Risk for Passive Investors** (26k — the SpaceX topic won for Casual Finance and Patrick Boyle but not for a UK passive audience).
 
 ## comparison

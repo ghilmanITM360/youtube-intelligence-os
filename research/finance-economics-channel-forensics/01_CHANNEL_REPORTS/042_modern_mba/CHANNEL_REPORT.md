@@ -92,9 +92,6 @@ Consumer businesses dominate both halves; geopolitical (Ukraine minerals) and me
 4. **Why Self-Checkout Failed to Replace Cashiers** (oPeX6FO2zls, 718k) and **Why Texas BBQ Joints Rarely Survive** (Gi1GDBEp1yA, 696k).
 Pattern: **a familiar consumer place/trend + a decline or failure verdict.**
 
-## failures (relative)
-**Inside the Cutthroat Business of Eating** (mOEPb8pvsiA, 91k: meta-essay about food content), **Why Everyone Stopped Buying GoPro** (vJi0SzEws9s, 119k), **Why Ukraine's Minerals Are Worthless** (NbvPSqAXC1k, 127k: geopolitics), **How Wall Street Ruined Your Favorite Snacks** (evArab8oOoo, 150k: abstract "value extraction" essay), **US Airlines Make More Money by Treating You Worse** (yXlKVghVQbo, 151k).
-
 ### Evidence: top-PI long-form videos
 - **Why Crumbl Cookies Can't Survive** — [Ha2oNXDZuSg](https://www.youtube.com/watch?v=Ha2oNXDZuSg) · nan · 29.82 min · 2,200,000 views · PI 7.80 (Breakout) · banking_cash/explainer · face=False · thumb text: “econo/Cook!/MBA”
   - 0-30s: “Every decade has its dessert trends. In the 2000s, it was cupcakes and frozen yogurt. Then in the 2010s, it was unicorn drinks, monster milkshakes, edible dough, and donuts. Now in the 2020s, it's massive, thick topped 800-calorie cookies that come in extravagant flavors and have twice as much sugar as a can of Coke. It's impossible to not see the thousands gorging themselves on these cookies in their car every week for millio…”
@@ -113,7 +110,8 @@ Pattern: **a familiar consumer place/trend + a decline or failure verdict.**
   - end: “top had to climb to get there. While some may have had it easier with a publicity boost, they still had to work to capitalize on that exposure. In this angle, Texas barbecue remains one of the last expressions of America…”
 
 ## 6. Underperforming video analysis
-_Not written._
+_Relative underperformers (still large absolute views for this channel)._
+**Inside the Cutthroat Business of Eating** (mOEPb8pvsiA, 91k: meta-essay about food content), **Why Everyone Stopped Buying GoPro** (vJi0SzEws9s, 119k), **Why Ukraine's Minerals Are Worthless** (NbvPSqAXC1k, 127k: geopolitics), **How Wall Street Ruined Your Favorite Snacks** (evArab8oOoo, 150k: abstract "value extraction" essay), **US Airlines Make More Money by Treating You Worse** (yXlKVghVQbo, 151k).
 
 ### Evidence: bottom-PI long-form videos
 - **Inside the Cutthroat Business of Eating** — [mOEPb8pvsiA](https://www.youtube.com/watch?v=mOEPb8pvsiA) · nan · 38.77 min · 91,000 views · PI 0.32 (Underperforming) · housing_real_estate/statement_other · face=False · thumb text: “Se”
