@@ -174,7 +174,9 @@ data/catalog/*.sqlite3
 # Owner-required durable catalog snapshots. SQLite journals remain ignored.
 !data/catalog/youtube_inventory.db
 !data/catalog/youtube_channel_registry.db
-!data/catalog/senior_health_complete.db
+# senior_health_complete.db = local working DB (written by the backfill); git carries the split files below (each < 100 MB)
+!data/catalog/senior_health/
+!data/catalog/senior_health/*.db
 
 # Private first-party YouTube Analytics exports and derived diagnoses stay local.
 # Only capability contracts/status and synthetic test fixtures are versioned.
