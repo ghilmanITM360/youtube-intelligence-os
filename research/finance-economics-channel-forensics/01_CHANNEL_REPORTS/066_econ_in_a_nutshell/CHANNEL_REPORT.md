@@ -1,5 +1,8 @@
 # Econ in a Nutshell — Channel Forensic Report
 
+> **Live Chrome pass (2026-11-13):** see [LIVE_EVIDENCE_2026-11-13.md](LIVE_EVIDENCE_2026-11-13.md) for the Roman Urdu verdict, vidIQ/Trends/competitor evidence. It supersedes §9-§14 'not analysed' lines here.
+
+
 Channel #066 of 69 · investigation tier 4 (data-availability order, not a quality rank) · research date 2026-11-12 · source DB `finance_economics_complete.db` sha256 fa6fd1b2…d20 (branch data/finance-economics-complete-2026-11-11 @933f236e).
 
 Evidence labels used: **VERIFIED** (directly in DB / public page), **INFERRED** (derived from DB text by rule or analyst reading), **HYPOTHESIS** (plausible, untested), **UNKNOWN**. Public view counts do not reveal CTR, retention or traffic sources; none of those are claimed.
