@@ -18,6 +18,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q9 | 2026-11-12 | Top 10 most instructive channels (repeatable lessons, sirf views nahi) |
 | Q10 | 2026-11-12 | Neu (022) ka format thora detail mein samjhao |
 | Q11 | 2026-11-12 | Mr. Finance (016): same packaging, views 401 se 265,588 - kyun? (topic vs upload-date vs familiarity) |
+| Q12 | 2026-11-12 | Mr. Finance ke upload-date effect ko test karna (age, cadence, topic-control, engagement) |
 
 ---
 
@@ -501,3 +502,76 @@ Topic ka rank do channels mein same nahi chalta (casino 50x farq, dealership/spo
 - Mann-Whitney p-values multiple-test correction ke bina (exploratory).
 - Upload date vs algorithm dynamics ka kaaran UNKNOWN; CTR/impressions/retention data nahi.
 - Views snapshot ek hi date ka hai (metadata_level FULL), per-video views history nahi.
+
+
+## Q12 — Mr. Finance: upload-date effect ka test (2026-11-12)
+
+Data: `01_CHANNEL_REPORTS/*/VIDEO_INVENTORY.csv`, long-form only, snapshot 2026-11-12. 016 mein 62 dated videos (cafe/cinema/hospital undated, date-tests se bahar). Sab numbers local python se (VERIFIED computation); reading INFERRED jahan likha.
+
+### Sawal
+Q11 mein views upload date se jude nikle (rho -0.83 = naya video, kam views). Kya yeh (A) sirf time-accumulation hai, (B) 34 video/month ki saturation, (C) topic ka khel, ya (D) koi aur series-level asar?
+
+### Test 1 — Variance kitna kisse (VERIFIED)
+| Model (log views, n=62) | R² |
+|---|---|
+| Sirf business category (familiar/exotic/credentialed) | 0.14 |
+| Sirf upload date | **0.67** |
+| Date + category | 0.74 |
+Date akela ~5x zyada variance explain karta hai; category date ke upar sirf +0.07 jodti hai. (Category coding mera judgment hai - INFERRED.)
+
+### Test 2 — Date effect har category ke andar (VERIFIED)
+Median views, upload quartile ke hisaab se (Q1 = sabse purana):
+| | Q1 | Q2 | Q3 | Q4 |
+|---|---|---|---|---|
+| Familiar consumer (n=6/6/9/7) | 94,893 | 44,687 | 6,871 | 3,239 |
+| Large/exotic (n=10/6/5/6) | 45,763 | 15,065 | 9,130 | 2,584 |
+Dono mein girawat 18-29x. Yaani date effect topic se alag chal raha hai.
+
+### Test 3 — Kya topic effect date control ke baad bachta hai? (stratified permutation, 5,000 shuffles)
+- Date quartile ke andar z-score: familiar vs baaki = +0.65 SD, **p=0.003**.
+- Sakht coding (12 ambiguous businesses - hospital, school, hotel, gas station, dealership etc. - hata ke, 17 familiar): +0.66 SD, p=0.011.
+- Matlab topic effect **real magar chhota** hai (uncorrected, exploratory).
+
+### Test 4 — Kya sirf "time" (accumulation) yeh samjha sakta hai? (VERIFIED)
+Doosre channels mein same age band (80-137 din purane videos), 30 channels (n>=8, 5+ alag ages):
+- Median slope: **~1.2x views per extra mahina** (IQR 0.84-1.77x). Yaani 80 din ke baad views lagbhag plateau.
+- Mr. Finance (same band, n=62): **~7.9x per mahina**.
+- 30 mein se sirf 3 channels ka slope isse zyada/barabar (047 The Expensive Part ~50x, 036 Nostalgic Wheels ~23x, 019 Robin MBA ~11x; teeno chhote sample, n=20-23).
+- **Nateeja:** sirf accumulation 7.9x nahi samjhata (INFERRED: baaki channels ka benchmark yahan lagu maan ke). Magar yeh asar kuch aur channels mein bhi dikhta hai, 016 akela nahi.
+
+### Test 5 — Kya 34/month cadence ("saturation") yeh karta hai? (VERIFIED)
+- 57 channels: upload cadence vs age-views rho ka rishta = **0.008, p=0.95** (koi rishta nahi).
+- Kevin Explains (~20/month): rho 0.04; Tom Lazy Investor (~41/month, 016 se zyada): 0.18; Ivan Invests (~24/month): -0.53 (ulta).
+- Matlab "zyada upload = naye video ke views kam" ek **general rule nahi**. 016 par lagu hone ka saboot nahi (cadence-hypothesis kamzor). Cadence+is-channel-ka-combination UNKNOWN.
+
+### Test 6 — Engagement (VERIFIED numbers, reading INFERRED)
+| Upload quartile | median like rate | median comment rate |
+|---|---|---|
+| Q1 (purane) | 2.2% | 0.14% |
+| Q2 | 2.5% | 0.31% |
+| Q3 | 2.9% | 0.46% |
+| Q4 (naye) | 3.3% | 0.77% |
+Like rate date ke saath ulta chalta hai (rho -0.70 age~like rate, p<1e-9): naye videos ko kam log mile magar jo mile unka engagement zyada. Yeh **accumulation se alag** pattern hai (accumulation mein rate roughly constant rehta). INFERRED: naye videos zyada tar existing/engaged audience ko dikhaye gaye (HYPOTHESIS - impressions data nahi).
+
+### Test 7 — Smoothness
+Rolling median (10 videos) views order mein: 56k -> 53k -> 21k -> 19k -> 7k -> 6.5k -> 3.1k: ek **seedhi girawat**, jhatke nahi. Topic-random effect noisy hota; yeh systematic lagta hai (INFERRED).
+
+### Verdict
+| Hypothesis | Verdict |
+|---|---|
+| Date effect real hai | **Strongly supported** (R² 0.67, har category mein 18-29x) |
+| Sirf accumulation | **Not supported akela** (7.9x vs typical 1.2x/mahina) |
+| 34/month cadence saturation | **Not supported as general rule** (57 channels, p=0.95) |
+| Topic effect | **Supported magar chhota** (+0.65 SD, p=0.003 after date control) |
+| Series-level decay / audience-reach shift (naye video kam promote) | **Consistent with data** (engagement rate badhna) - **HYPOTHESIS, test nahi hua** |
+
+### Jo test nahi ho sakta (UNKNOWN)
+- Asli kaaran: YouTube ka impression/promotion data nahi.
+- Views ka time-series nahi, sirf ek snapshot.
+- Undated 3 videos (cafe 108k, cinema 57k, hospital 41k): unka PI channel-median baseline se hai, date-neighbours se nahi.
+
+### Pakka karne ka tareeka (owner ka faisla; abhi nahi kiya)
+Mr. Finance ke 65 videos ke views 2-4 hafte baad dobara fetch karo (Apify metadata, chhota kharcha). Agar naye videos tez badhte hain -> time/accumulation; agar flat rehte hain -> decay/low promotion. Isse A vs D alag hoga. Cost aur approval aap decide karo.
+
+### Topic-selection par asar
+Topic scoring ko bonus factor maano, primary nahi. Test design mein publish-order randomize karo aur pehle 10 din ke views alag record karo.
