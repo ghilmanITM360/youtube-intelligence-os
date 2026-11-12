@@ -13,7 +13,8 @@ Macro concepts (median PI 3.58) and crises (2.28) win; retirement (0.27), scams 
 3. **Tariffs Explained with Bananas** (lRV6U82vgjI, 1.46M, May 2025 — during the 2025 tariff news cycle, INFERRED timing benefit).
 Pattern: **the most-searched economic concepts, explained absurdly simply, in very short form first.**
 
-## failures (2026)
+## failures
+_2026 underperformers._
 **401k Explained with Bananas** (Fd2jzWdcOHY, 119k, PI 0.27: opens "Uh, this video's going to be so boring" — self-deprecating, time-machine skit), **The Biggest Ponzi Scheme Explained with Bananas** (dB10EUmjHyc, 136k), **Options Trading Explained with Bananas (No AI)** (HjlVexL2Lxk, 141k — the "(No AI)" title suggests viewer suspicion of AI production, INFERRED).
 
 ## comparison

@@ -97,9 +97,6 @@ Macro concepts (median PI 3.58) and crises (2.28) win; retirement (0.27), scams 
 3. **Tariffs Explained with Bananas** (lRV6U82vgjI, 1.46M, May 2025 — during the 2025 tariff news cycle, INFERRED timing benefit).
 Pattern: **the most-searched economic concepts, explained absurdly simply, in very short form first.**
 
-## failures (2026)
-**401k Explained with Bananas** (Fd2jzWdcOHY, 119k, PI 0.27: opens "Uh, this video's going to be so boring" — self-deprecating, time-machine skit), **The Biggest Ponzi Scheme Explained with Bananas** (dB10EUmjHyc, 136k), **Options Trading Explained with Bananas (No AI)** (HjlVexL2Lxk, 141k — the "(No AI)" title suggests viewer suspicion of AI production, INFERRED).
-
 ### Evidence: top-PI long-form videos
 - **Inflation Explained with Bananas** — [MAvHgmewRDM](https://www.youtube.com/watch?v=MAvHgmewRDM) · 2025-03-28 · 2.50 min · 1,761,567 views · PI 3.92 (Successful) · macro_economy/explainer · face=False · thumb text: “nan”
   - 0-30s: “if monkeys have one banana banana rare banana valuable but if monkeys grow more bananas banana become common banana not as valuable demand pole inflation if monkeys demand more banana but banana farmer makes same amount banana price go up because banana more rare cost push inflation if banana demand is the same but banana farmer have less banana to sell banana price go up because banana become more rare production cost inflati…”
@@ -112,7 +109,8 @@ Pattern: **the most-searched economic concepts, explained absurdly simply, in ve
   - end: “20 years before Euroms finally gave US monkeys lower tariffs on bananas as well. Thank you to say thank you to all 240,000 monkeys that are now in troop Primate Economics has donated $500 to Save the Chimps, a chimpanzee…” · sources: Academic / research study · desc links: savethechimps.org
 
 ## 6. Underperforming video analysis
-_Not written._
+_2026 underperformers._
+**401k Explained with Bananas** (Fd2jzWdcOHY, 119k, PI 0.27: opens "Uh, this video's going to be so boring" — self-deprecating, time-machine skit), **The Biggest Ponzi Scheme Explained with Bananas** (dB10EUmjHyc, 136k), **Options Trading Explained with Bananas (No AI)** (HjlVexL2Lxk, 141k — the "(No AI)" title suggests viewer suspicion of AI production, INFERRED).
 
 ### Evidence: bottom-PI long-form videos
 - **401k Explained with Bananas** — [Fd2jzWdcOHY](https://www.youtube.com/watch?v=Fd2jzWdcOHY) · 2026-10-27 · 10.07 min · 119,327 views · PI 0.27 (Underperforming) · retirement_accounts_tax/explainer · face=False · thumb text: “nan”
