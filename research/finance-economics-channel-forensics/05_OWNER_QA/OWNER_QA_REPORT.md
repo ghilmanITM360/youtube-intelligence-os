@@ -441,7 +441,7 @@ Source: `01_CHANNEL_REPORTS/016_mr_finance/CHANNEL_REPORT.md` §1, §4-§7, §10
 | 13 - 26 Jul | 18 | 27,997 | 1.05 |
 | 27 Jul - 9 Aug | 15 | 6,871 | 1.04 |
 | 10 - 24 Aug | 15 | 2,964 | 0.78 |
-- Sabse kam views waale 5 mein se 4 upload 18-24 Aug ke aas-paas hain (Ski Resort 24 Aug, Accounting Firm `Nq0FwNlv8_c` 794 views 24 Aug, Laundromat `ev2HYq2HdnA` 1,771 23 Aug, Cement Plant `l0sy1sZX8Ig` 2,031 23 Aug).
+- Sabse kam views waale paanchon video 18-24 Aug ke upload hain (Ski Resort 24 Aug, Accounting Firm `Nq0FwNlv8_c` 794 views 24 Aug, Laundromat `ev2HYq2HdnA` 1,771 23 Aug, Cement Plant `l0sy1sZX8Ig` 2,031 23 Aug).
 - **PI age se uncorrelated** (rho 0.07, p=0.59) kyunki PI apne 15 nearest uploads se compare hota hai. Isliye topic ka asar PI par dekhna zyada safe hai, raw views par nahi.
 - Is date-effect ka KAARAN UNKNOWN: (a) naye video ko kam time (sirf 80-136 din ka farq - itna bada gap sirf time se nahi samjhta, INFERRED), (b) ek hi template ka 34/month spam -> viewer/algorithm thakan (HYPOTHESIS), (c) channel ke shuruaati videos ko zyada push (HYPOTHESIS). Test nahi ho sakta.
 
