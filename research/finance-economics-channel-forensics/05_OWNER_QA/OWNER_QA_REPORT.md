@@ -20,6 +20,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q11 | 2026-11-12 | Mr. Finance (016): same packaging, views 401 se 265,588 - kyun? (topic vs upload-date vs familiarity) |
 | Q12 | 2026-11-12 | Mr. Finance ke upload-date effect ko test karna (age, cadence, topic-control, engagement) |
 | Q13 | 2026-11-12 | (owner Q3) Top 10 channels: Q9 list final + asli hook lines ka supplement |
+| Q14 | 2026-11-12 | (owner Q4) Mr. Finance 7 sub-sawal: Q11/Q12 mapping + synthesis correction |
 
 ---
 
@@ -625,3 +626,20 @@ Topic scoring ko bonus factor maano, primary nahi. Test design mein publish-orde
 - Primate (30 videos), Capital Case (13), This make cents (20), Millionaire Problems (9) = **LOW CONFIDENCE** samples.
 
 **Report links:** `../01_CHANNEL_REPORTS/<NNN_name>/CHANNEL_REPORT.md` §10-§15 har channel ka; Q9 (poora breakdown), Q10 (Neu).
+
+
+## Q14 — (owner Q4) Mr. Finance 7 sub-sawal, Q11/Q12 se mapping + correction (2026-11-12)
+
+Naya analysis nahi; numbers Q11/Q12 se (VERIFIED computation, local python, snapshot 2026-11-12).
+
+| Owner sub-sawal | Jawab | Kahan |
+|---|---|---|
+| 1. Same packaging, views alag kyun | Upload date sabse bada factor: R² 0.67 (date) vs 0.14 (category). Naye video kam views (rho -0.83, n=62). | Q12 Test 1 |
+| 2. Kya business selection main factor | **Nahi, main nahi.** Real magar chhota: +0.65 SD (p=0.003) date control ke baad. | Q12 Test 3 |
+| 3. Highest vs lowest | Gym 265,588; Ranch 170,828; Mall 132,815 vs Ski Resort 401; Accounting 794; Laundromat 1,771. | Q11 |
+| 4. Common characteristics | High = roz ka familiar business; low = license/skill ya fantasy-scale. Familiar flops bhi hain (laundromat, grocery, pet store). | Q11 |
+| 5. Familiarity/curiosity/brand/relevance | Familiarity aur "main khol sakta hoon" partly supported; curiosity akele nahi; brand UNKNOWN. | Q11 table |
+| 6. Dataset kya support karta hai | Date effect strong; accumulation akela nahi (7.9x/mahina vs typical 1.2x); 34/month cadence rule nahi (57 channels, p=0.95). | Q12 verdict |
+| 7. Apne model mein | PI se compare, 3-sawal topic score, publish-order randomize, topic ko bonus factor maano. | Q11, Q12 |
+
+**Correction (important):** `04_FINAL_SYNTHESIS/FINAL_RESEARCH_CONCLUSIONS.md` Q1 kehta hai Mr. Finance ne "401 se 266k views sirf business choose karne se" paye. Q11/Q12 ke baad yeh **overstated** hai: topic ka asar real hai par upload date bada hai. Final synthesis file ko maine abhi badla nahi (raw/final evidence owner ke bina nahi chhedta); owner bole to wahan sentence sudhar dunga.
