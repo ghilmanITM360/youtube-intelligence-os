@@ -22,6 +22,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q13 | 2026-11-12 | (owner Q3) Top 10 channels: Q9 list final + asli hook lines ka supplement |
 | Q14 | 2026-11-12 | (owner Q4) Mr. Finance 7 sub-sawal: Q11/Q12 mapping + synthesis correction |
 | Q15 | 2026-11-12 | (owner Q5) Matty Invests: young budgeting vs retirees, audience pivot, script comparison |
+| Q16 | 2026-11-12 | (owner Q12) Script ka winning structure: transcript proxies, winners vs losers, reusable template |
 
 ---
 
@@ -697,3 +698,67 @@ Audience ko title mein naam do ("Retirees") aur uski ek specific cheez par video
 - Views ka ek snapshot; CTR, retention, traffic source **DATA NOT AVAILABLE**.
 - Sirf 4 pre-pivot videos, **LOW CONFIDENCE**.
 - Hook sirf 7 videos ki opening se dekha; poore channel ka hook-pattern gino se confirm nahi kiya.
+
+
+---
+
+## Q16 — (owner Q12) Script ka winning structure (2026-11-12)
+
+**Method (VERIFIED):** `finance_economics_complete.db` transcripts + `01_CHANNEL_REPORTS/*/VIDEO_INVENTORY.csv` (PI). Long-form, transcript COMPLETE, >=500 words. 2,823 videos / 60 channels. **Winners** = PI >= 3 (559 videos, 56 channels). **Losers** = PI <= 0.4 (553 videos, 57 channels). PI channel ke andar relative hai, isliye "winner" ka matlab "apne channel ke normal se bahut upar".
+**Limit:** transcripts mein **timestamps nahi hain** (DATA NOT AVAILABLE). "First 5 sec" = pehle ~12 words, "first 30 sec" = pehle 80 words (proxy, ~150 wpm). Auto-captions mein punctuation adhoora hai, to "?" ginti kam-ginti ho sakti hai.
+
+### Sabse bada finding
+**Winners aur losers ka script structure lagbhag same hai.** Hook, number, "you", sentence length, curiosity-gap phrases, CTA - kisi mein winners alag nahi nikle:
+
+| Proxy | Winners (559) | Losers (553) |
+|---|---|---|
+| Median words | 3,051 | 2,788 |
+| Pehle 80 words mein koi number | 78% | 77% |
+| Pehla number kis word par (median) | 18 | 20 |
+| Pehle 80 words mein "you" (median) | 4 | 3 |
+| Numbers per 100 words | 2.49 | 2.52 |
+| Median sentence length (words) | 13.6 | 13.4 |
+| "Here's the catch / wait / later in this" per 1000 words | 0.47 | 0.46 |
+| "Imagine / for example / say you" per 1000 words | 0.37 | 0.38 |
+| Opening mein "welcome / my name is" | 2% | 2% |
+| Aakhri 90 words mein CTA | 44% | 45% |
+| Aakhri 90 words mein next-video bridge | 7% | 9% |
+
+**Same-channel check (48 channels jahan dono taraf >=3 videos):** length winners mein zyada 32 channels mein, kam 16 mein (median +160 words) = **weak signal**. "you", numbers, gap phrases, sentence length = 24:24, 29:19, 21:20, 26:22 = **koi signal nahi**.
+**Matlab (INFERRED):** yeh structure "table stakes" hai. Winners ko jo alag karta hai woh **topic/subject** hai (Q11, Q13 se match), script ka template nahi. Template copy karne se video "theek" banegi, hit nahi.
+Proof ek hi channel se: Neu `HyUjsfhX4-Y` Ship Graveyard (1,120,820 views) aur `G66MoHRtoYw` Airplane Graveyard (9,533) dono "ek jagah ki scene -> scale -> economy" opening aur "Thanks for watching, see you in the next video" ending use karte hain.
+
+### Tumhare 8 sawal
+
+1. **Pehle 5 sec:** winners mein pehla number median word 18 par aata hai (~7 sec). Data mein 3 opening styles: (a) location/scene - Ship Graveyard: "Somewhere in the Indian Ocean, a massive container ship is steaming north"; (b) claim - Matty `5V1gCUvdqMs` (1,084,237): "The retirees who actually keep their money... they all share one weird habit. They quit buying stuff."; (c) number-first. Sirf 7-8% mein named age/person ya exact-time scene hai (regex proxy). Losers ka bhi yahi pattern -> opening style predictor nahi.
+2. **Pehle 15-30 sec ka promise:** 78% winners pehle 80 words mein ek number dete hain, par 77% losers bhi. Matty ka example: 7 cheezein + "wealthy retirees" + "habit" - title ka promise dobara confirm. Intro/"welcome" 2% = winners mein bhi lagbhag nahi.
+3. **Main question/conflict:** pehla "?" winners mein median word ~475, losers ~527. Punctuation kam hone se **LOW CONFIDENCE**. Conflict aam taur par pehle ~80 words mein statement ki shakal mein aata hai (e.g. data-centre loser: "there's a little issue here" - 80 words mein, phir bhi 2,862 views).
+4. **Examples/numbers/stories ka order (200 winners ka random sample, 10 hisse mein):** numbers/100 words 2.45 (pehla hissa) -> 3.3 (hisse 3-4, peak) -> 2.3 (hissa 9) -> 1.8 (aakhri). "he/she/they" (story) 1.2 -> 1.8 (hisse 3 aur 8) -> 1.3. "you" aakhir mein 3.7 (call to action). **Shape: number se shuru, beech mein peak, aakhir mein verdict + seedha "you".** Yeh flat shape hai, koi strong build-up nahi.
+5. **Simple ya technical:** sentence median 13.6 words (simple). "Imagine/for example" sirf ~0.4 per 1000 words. Analogy kam, number+narration zyada. (Primate/Crayon jaise allegory channels alag, unka alag craft hai.)
+6. **Curiosity gaps/transitions:** explicit phrases ("here's the catch", "wait", "later in this video") ~0.47 per 1000 words = rare, winners aur losers mein barabar (`PDF P15 not supported` se match karta hai).
+7. **Character/situation:** winners mein "he/she/they" ~1.5 per 100 words. Named person/scene wale openings sirf 7-8% - dono taraf barabar. Matty ke retiree winners mein named older person (Q15) alag, sample chhota.
+8. **Ending/next-video:** 44% winners aakhir mein subscribe/comment CTA, 7% next-video bridge (losers 45% / 9%). Ending style **predictor nahi**. Example winner ending: Ship Graveyard ek line mein thesis ("cheap ships require a cheap place to die") phir "see you in the next video"; Matty: comment prompt + "skip that Amazon cart tonight".
+
+### Actual excerpts (VERIFIED, DB se)
+| Video | Views | Opening (pehle ~40 words) |
+|---|---|---|
+| `HyUjsfhX4-Y` Ship Graveyard (Neu) | 1,120,820 | "Somewhere in the Indian Ocean, a massive container ship is steaming north. For 25 years, this vessel has been the invisible engine of the global economy..." |
+| `5V1gCUvdqMs` 7 Things Wealthy Retirees Stopped Buying (Matty) | 1,084,237 | "The retirees who actually keep their money... they all share one weird habit. They quit buying stuff." |
+| `G66MoHRtoYw` Airplane Graveyard (Neu, same format, flop) | 9,533 | "In the desert outside Tucson, Arizona, there's a patch of land roughly 2600 acres in size where nearly 4,000 aircraft set parked..." |
+| `x3GF5mO7Ebk` Data Centers (Neu, flop) | 2,862 | "Where we are right now is Microsoft's newest AI data center in Wisconsin... 900 megawatt... a city of 250,000..." |
+
+### Reusable template (INFERRED - structure table-stakes hai, jeet nahi dilata)
+1. **0-12 words:** ek concrete scene ya claim (jagah, cheez, ya sawal) - title ka wahi subject.
+2. **Pehle ~80 words:** ek number + "you"/viewer se jodna; promise confirm; intro/channel naam nahi.
+3. **~Pehla 10-20%:** conflict/paradox statement ("cheap ships need a cheap place to die" type) - gap yahin banao, phrase-based gap par depend mat karo.
+4. **Hisse 3-8:** numbers + mini-stories ka mix (peak ~3 numbers/100 words), simple sentences (~13 words).
+5. **Aakhri 10%:** ek verdict line + "you" action; CTA optional (winners-losers barabar).
+6. **Template se zyada zaroori:** subject chunna (Q11/Q13). Neu ka ship vs airplane graveyard yeh dikhata hai.
+
+### Limits / UNKNOWN
+- Timestamps, CTR, retention **DATA NOT AVAILABLE**. 5/15/30 sec proxies words-based hain.
+- Regex proxies (named person, scene, gap phrases) approximate; "?" ginti caption punctuation par nirbhar.
+- PI >= 3 aur <= 0.4 ke beech ke videos (middle) exclude hain.
+- Sirf 4 excerpts quote kiye; baaki sirf ginti se.
+- Failed excerpt comparison sirf Neu pair mein poori dekhi.
+- Script: `/private/tmp` scratch mein tha, repo mein nahi (numbers reproduce karne ke liye tumhari kahne par `_scripts/` mein daal sakta hoon).
