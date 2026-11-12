@@ -24,6 +24,8 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q15 | 2026-11-12 | (owner Q5) Matty Invests: young budgeting vs retirees, audience pivot, script comparison |
 | Q16 | 2026-11-12 | (owner Q12) Script ka winning structure: transcript proxies, winners vs losers, reusable template |
 | Q17 | 2026-11-12 | (owner Q13) Titles aur thumbnails: 15 title-pattern test, 5 winners + 5 losers har pattern, thumbnail inspection method |
+| Q18 | 2026-11-12 | (owner Q14) Audience retention proxies (transcript-based, retention NAHI) |
+| Q19 | 2026-11-12 | (owner Q15) Failure diagnosis framework, 13 reasons + top 5 failure patterns |
 
 ---
 
@@ -819,3 +821,63 @@ Misal: "7 Things ... Can't Take From You" - Mark Calloway `wafLcwHvn5U` 723,626 
 - PI channel ke andar relative hai, isliye bade channel ka "average" video bhi cross-channel zyada views le sakta hai; cross-channel pooling channel ki reach ko pattern par thop sakti hai (same-channel check isliye diya).
 - Impressions/CTR **DATA NOT AVAILABLE**: kam views "bura packaging" ya "YouTube ne dikhaya nahi" dono ho sakta hai - UNKNOWN.
 - Thumbnail rubric mera subjective score (ek rater), 057 UNKNOWN.
+
+
+---
+
+## Q18 — (owner Q14) Audience retention: transcript proxies (2026-11-12)
+
+**Zaroori:** YouTube Studio retention graphs **DATA NOT AVAILABLE**. Neeche sab **transcript-based proxies** hain, retention nahi. Sample wahi: 559 winners (PI>=3) vs 553 losers (PI<=0.4), Q16 jaisa.
+
+| Proxy | Winners | Losers |
+|---|---|---|
+| Title ke key words pehle 100 words mein (median share) | 29% | 29% |
+| Title ke key words pehle 300 words mein | 56% | 50% |
+| Repeated 4-word phrases ka share (padding proxy) | 2.5% | 2.1% |
+| Filler words ("basically, actually, literally...") /1000 | 2.07 | 2.11 |
+| Recap phrases /1000 words | 0.00 | 0.00 |
+| Opening mein welcome/intro | 2% | 2% |
+| Pehle 80 words mein number | 78% | 77% |
+| Winner-share, length 1.5-2.5k words / 2.5-3.5k / 3.5-5k / 5k+ | 41% / 57% / 50% / 65% | (sirf W+L ke andar) |
+
+Same-channel length check (Q16): 32/48 channels mein winners lambe, weak signal. Length **success ka lever nahi** (PDF P19 "8+ min" ke saath consistent: not supported).
+
+1. **Opening promise kaise deliver:** title ke aadhe key words 300 words ke andar dobara aate hain (56% winners). Fark chhota. (INFERRED)
+2. **Story vs information:** "he/she/they" ~1.5 per 100 words, numbers ~2.5 per 100: **information-heavy narration, story pronouns kam** (Q16 profile). Winners aur losers mein same.
+3. **Examples/numbers kab:** pehla number word ~18 par, peak hisse 3-4 mein (Q16).
+4. **Repeated curiosity questions:** "?" ~1.1-1.7 per 1000 words (caption punctuation kam, LOW CONFIDENCE); gap phrases 0.47/1000. Rare, winners mein bhi.
+5. **Topic progression logical?** Ladder/list/race structure winners mein (Dark Ledger ladder 1.11M, Neu ship story 1.12M, Logical Money 20-year race 1.73M) - VERIFIED titles/views, "logical" judgement INFERRED. Koi automatic measure nahi.
+6. **Unnecessary introductions/filler:** intro 2%, filler 2 per 1000: **dono taraf rare**, isliye failure ki wajah nahi.
+7. **Failed videos ki structural weaknesses (FINAL_RESEARCH_CONCLUSIONS Q9, F-series, INFERRED):** (a) opening title ka promise confirm nahi karti - Mark Invests wealth-levels video Prop 13 se shuru; (b) promise jo video poora nahi karta - Robin "NEW TAX RATES WILL SHOCK AMERICA", script khud routine indexing kehti hai; (c) 25-35 min padding with repetitive list. **Meri naye proxies ye weaknesses detect nahi karte** (padding proxy 2.5% vs 2.1%), isliye yeh qualitative cases hain, gino se proven nahi.
+
+**Nateeja:** transcript-proxies se engagement ya retention measure nahi ho sakti. Jo measure hua woh winners/losers mein lagbhag same hai. **UNKNOWN** retention. Files: report Q16 + yeh section.
+
+---
+
+## Q19 — (owner Q15) Failure diagnosis framework (2026-11-12)
+
+**Source (VERIFIED):** `03_CROSS_CHANNEL_FINDINGS/FAILURE_PATTERNS.md` (F1-F11) + tier ranking (27 Underperforming channels, `CHANNEL_TIER_RANKING.csv`) + Q16/Q17 nayi null tests. Sab **correlation/inference**; "cause" tabhi jab same-channel comparison ho.
+
+| Owner ka reason | Channels / videos (evidence) | Same-channel comparison? | Cause ya correlation? |
+|---|---|---|---|
+| Wrong sub-niche / topic-channel fit | F9: >=10 channels. Ronnie Finance explainers 28-319 views; Finance POV `$5/day` flop vs Carl $100/month win; Mr. Ranks crime/addiction ladders; Max Invests silver call; Business Decoded ransomware | Haan (Carl vs Finance POV same concept) | **Strong correlation**, near-causal in pairs |
+| Weak topic demand | F4 narrow mechanics >=6 ch (IRMAA, RMD: Tom Lazy x4, Uncle John, Uncle Frank); F3 Medicare deadlines 12 ch, median PI 0.47, 14 flops vs 6 wins | Haan (Nia Medicare ANOC PI 85 = money framing) | Correlation, strong breadth |
+| Audience mismatch | Matty young budgeting n=4 ~273 vs retirees median 4,283 (Q15); Marcus/Walter "UK" title on US script | Haan, small n | Correlation, LOW CONFIDENCE |
+| Repeated/saturated topics | F6 late copies >=8 ch: $5-a-day, wealthy retirees, IRS list, stepdad revenge; F7 cliches >=8 ch (Alicia 0.38, Max, Mark Invests 0.25) | Haan (originals won, copies lost) | Correlation, strong |
+| Weak title | F1 windfall 6 ch (Nia PI 0.10, Lana 0.07-0.08, Walter 0.04-0.05); F2 outrage 6 ch (Calloway 0.14, Robin 0.16, Capital Case 0.06); Q17: loss/fear words win 15% vs lose 24% | Haan | Correlation |
+| Weak thumbnail | Rubric score does not predict PI (Q2, Q17); Marcus Retires same style 74-245k vs 93-242 | Haan | **Null** (style), CTR UNKNOWN |
+| Poor opening | Mark Invests Prop 13; Nick/Ivan/Max intros before promise; but intro 2% both sides (Q16) | Haan | Case-level only; population test null |
+| Unnecessary information | 25-35 min padding (qualitative); padding proxy 2.5% vs 2.1% | Weak | Inconclusive |
+| Lack of original angle | F6/F7 (copies, clichés, book summaries: Wise Future 0.07, Mark Invests Psychology of Money 0.11) | Partly | Correlation |
+| Poor timing | F5 self-remakes (Kevin 3 remakes 0.04-0.08; Dark Ledger IRS ladder 3 days after banks 0.13), F6 late copies | Haan | Correlation |
+| Misleading promise | F1/F2/F11: Kevin H.R. 9064, Madeline $600 rule (VERIFIED contradictions), Robin tax "shock" | Haan | Correlation; policy risk separate |
+| Weak channel identity | F10 >=6 ch: Max Invests (archetype), Nostalgic Wheels, Housing, Ronnie, name/handle mismatch | Nahi | Correlation, LOW CONFIDENCE |
+| Inconsistent audience targeting | F9 + F10 combined; Lucas Grant introspection, Finance POV thrift | Partly | Inference |
+
+**Top 5 failure patterns (rank = breadth x evidence, INFERRED):**
+1. **Topic-channel/audience mismatch** (F9, >=10 ch, pairs like Carl vs Finance POV).
+2. **Narrow mechanics / deadline topics** (F3+F4, 12 + 6 ch, 14 Medicare flops vs 6 wins).
+3. **Late copies of browse-driven concepts** (F6, >=8 ch).
+4. **Generic cliché topics** (F7, >=8 ch).
+5. **Windfall/outrage/fear framing** (F1+F2, 6+6 ch; loss words 15% win vs 24% lose).
+**Cause proven?** Nahi. Koi randomized test nahi; sirf same-channel pairs. Impressions/CTR **DATA NOT AVAILABLE**, to "bura title" aur "dikhaya hi nahi" alag nahi. Packaging style ka null result (Q2/Q17) failure ko packaging se explain nahi karta.
