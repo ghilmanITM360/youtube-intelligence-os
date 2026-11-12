@@ -19,6 +19,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q10 | 2026-11-12 | Neu (022) ka format thora detail mein samjhao |
 | Q11 | 2026-11-12 | Mr. Finance (016): same packaging, views 401 se 265,588 - kyun? (topic vs upload-date vs familiarity) |
 | Q12 | 2026-11-12 | Mr. Finance ke upload-date effect ko test karna (age, cadence, topic-control, engagement) |
+| Q13 | 2026-11-12 | (owner Q3) Top 10 channels: Q9 list final + asli hook lines ka supplement |
 
 ---
 
@@ -576,26 +577,51 @@ Mr. Finance ke 65 videos ke views 2-4 hafte baad dobara fetch karo (Apify metada
 ### Topic-selection par asar
 Topic scoring ko bonus factor maano, primary nahi. Test design mein publish-order randomize karo aur pehle 10 din ke views alag record karo.
 
-## Q13 — (owner Q3) Top 10 channel breakdown, supplement for the chosen model (2026-11-12)
+## Q13 — (owner Q3) Top 10: Q9 ki list hi final, hook ka gap bhara gaya (2026-11-12)
 
-Owner Q3 ka pehla jawab upar "Q9" mein hai (Casual Finance, Primate, Crayon, MonkeyExplains, Economics Explained, Neu, Kevin, Capital Case, This make cents, Millionaire Problems). Yeh Q13 un 9 channels ko cover karta hai jo "everyday money economics" model ke liye sabse zyada instructive hain; Neu ke liye Q9 #6 dekho. Data: VIDEO_INVENTORY.csv (long-form only), CHANNEL_REPORT.md §10-§11. Cadence sirf newest <=100 uploads ke window se (INFERRED). Hook/script format yahan UNKNOWN jahan likha nahi.
+**Correction:** pehle Q13 mein maine 9 alag channels (Mr. Finance, Business Decoded, Matty...) "everyday money economics" model ke liye daale the. Woh meri apni suggestion thi, owner Q3 ka jawab nahi. Woh version hata diya. **Q3 ke top 10 wahi hain jo Q9 mein chune gaye the** (Selection rule Q9 mein likha hai): Casual Finance 037, Primate Economics 055, Crayon Capital 039, MonkeyExplains 024, Economics Explained 040, Neu 022, Kevin Explains 012, Capital Case 059, This make cents 058, Millionaire Problems 062. Unka poora 10-point breakdown Q9 mein hai; Neu ka format Q10 mein.
 
-| Channel (report) | Sub-niche | Top videos (ID, views) | Median / spread |
-|---|---|---|---|
-| Mr. Finance 016 | business-ownership economics | Gym 4nYkN0wTi2Q 265,588; Ranch n1DXp7Y3xA4 170,828; Shopping Mall gooYkWPzqjc 132,815; flops Ski Resort KmQ7koHwuqY 401, Accounting Firm Nq0FwNlv8_c 794 | 16,037; 65 videos, 17 at PI>=2, 13 below 0.5 |
-| Business Decoded 035 | "Why [place] irrational behaviour" | Buffets 2T8JrUE_bz4 1,463,404; Free Bread nt2Zn2GftOQ 179,079; Outlet Stores YDTDdDZVtfk 137,971; flops Ransomware yiuFx4WOkbY 184, Fake Medicines GPoQlVLqChM 161 | 2,561; 42 videos |
-| Matty Invests 003 | retirees 55-75 | 7 Things Wealthy Retirees Stopped Buying 5V1gCUvdqMs 1,084,237; Why People Get Richer After Retirement 7mqI2YgRW1w 223,088; 10 Things Retirees Stopped Caring About A-lvYmMpGSA 219,096; flops 171-201 views (young budgeting) | 3,984; 94 videos, 27 at PI>=2 |
-| Carl Invests 013 | monthly-amount parameter series | 9 Signs Someone is Secretly Wealthy -HeOz5CF9ys 125,946; Invest $1,000 a Month w7Xu8O5TNHQ 81,930; Invest $100 Every Month 7sbA9WZrfHk 49,117 | 1,696; 80 videos, 27 PI>=2, 32 below 0.5 |
-| Robin MBA 019 | seniors x store perks | Costco A4hPtQsiWoA 569,470; Aldi BfOcC1094eo 348,055; Never Keep This Much in One Bank 0na9DiXBEK8 269,948 | 1,801; 56 videos |
-| Mark Invests 005 | A vs B decision duels | Renting vs Buying pnJCpIhshX4 495,096; Real Estate vs Stocks k-ZxdjawYDs 374,961; After Paying Off Your House sj7tGa1-WWM 372,131 | 1,429; 98 videos, 22 PI>=2 |
-| Logical Money 050 | A vs B duels | Renting vs Buying nkT_K8l1rEw 1,730,664; Real Estate vs Stocks bbP8Mr_MThk 225,706; 8 Minimalist Habits MpRWRSHlXd8 159,806 | 3,716; 25 videos |
-| Uncle John Financial 023 | retirement tax order, honest AI disclosure | Claiming Order Tax m-UIaaTzuvg 631,759; Paid-Off Home Worth in Retirement qjeLnPoGZ24 439,707; Withdrawal Order FDsE1xaiAKA 435,126 | 13,722; 52 videos; PI of these only 7-17 because channel already large |
-| Finance POV 015 | secret-wealth POV | POV Won the Lottery Told No One ZrXnvw9MqAE 340,689; Silent Businessman 3sLl-DmC_zE 244,445 and 86LiyytGuA4 220,425 | 4,295; 77 videos, 19 PI>=2 |
+**Gap jo Q9 mein tha:** 6 channels ke reports (§12) mein hook sirf ek line ka tha ya "not analysed". Yeh section top videos ke asli transcript ki pehli lines se hook bharta hai (VERIFIED: `data/catalog/finance_economics_complete.db`, tables videos+transcripts; views = DB snapshot).
 
-Cadence (INFERRED, long-form per week): Mr. Finance ~8 (65 in 2 months), Robin ~3.7, Matty ~3.3, Mark ~3.3, Finance POV ~3, Carl ~2.7, Logical ~1.4, Uncle John ~1.2, Business Decoded ~2.7. Volume ne success predict nahi kiya (Q1/Q15).
+### Hook, asli opening lines (VERIFIED) + type (INFERRED)
+| Channel | Video (ID) | Views | Length | Opening (shortened) | Hook type |
+|---|---|---|---|---|---|
+| Casual Finance | Housing Crisis Has Landed `Uumnx2Fo6cE` | 2,352,982 | 15m21 | "58% more people trying to sell than buy... largest gap Redfin has seen since 2013" | named-source number first |
+| Casual Finance | Brace For Impact `5umJ63d3rzQ` | 2,038,798 | 12m33 | "The biggest risk... was never the AI bubble... it's something much more boring" | contrarian reframe |
+| Casual Finance | 1973 Crash `DKyJABtbF2o` | 1,281,284 | 8m49 | "History repeats itself... Sir John Templeton called those the most expensive words" | quote + history |
+| Primate | Inflation `MAvHgmewRDM` | 1,761,567 | 2m30 (329 words) | "If monkeys have one banana, banana rare, banana valuable..." | concept in pidgin, no intro |
+| Primate | Tax `LYsqkGRpv_k` | 1,555,788 | 9m21 | "What is tax? Monkey work at banana farm..." | question + mini-story |
+| Crayon | Wolf of Wall Street `HawmGu7oNrc` | 4,219,017 | 16m33 | "He lied about $1 stock, made millions, and only served 22 months in jail. Then Hollywood..." | outrage in 1 sentence, then dated scene ("Bayside, Queens, 1962") |
+| Crayon | Great Depression `LuEcoqizj0o` | 2,762,821 | 16m29 | "You woke up rich, then went to bed broke... $200 billion wiped" | second-person + scale |
+| Crayon | 2008 Crisis `KE-WJevx-7c` | 2,285,772 | 13m26 | "158-year-old bank collapsed overnight. $600 billion gone... real cause started with a lie fit on a billboard" | number + curiosity gap |
+| MonkeyExplains | Debt `bz0OGtrkjv0` | 1,920,233 | 6m56 | "This is Uncle Dawn, and he's got a huge problem... 37 trillion bananas" | FIXED opener |
+| MonkeyExplains | OpenAI `LfQIJgU_W2w` | 1,325,113 | 13m57 | "This is Sam and he's got a huge problem." | same fixed opener |
+| MonkeyExplains | Apestein `TSJQ8SjcTPk` | 838,476 | 15m21 | "This is Uncle Don, and he's got a huge problem... 3 million pages" | same fixed opener |
+| Economics Explained | Australia housing `QtZfbWOkoIY` | ~1.5M (rounded) | 14m09 | "two distinct types of dirt... mineral-rich dirt... blocks of dirt we trade" | witty metaphor |
+| Economics Explained | Billionaires `jknb1YE6zdY` | ~1.3M | 13m30 | "China is currently cracking down on tax avoidance..." | news fact |
+| Economics Explained | Junk Science `TsfsoaNFyTQ` | ~1.2M | 17m07 | "Nobody can predict the future, least of all economists... 15 out of the last two recessions" | joke + verdict |
+| Neu | Ship Graveyard `HyUjsfhX4-Y` | 1,120,820 | 9m14 | "Somewhere in the Indian Ocean, a massive container ship is steaming north..." | object biography |
+| Neu | Owning A Ship `cQ4f-24Lp0U` | 649,970 | 8m09 | "So, you want to buy a ship... after you wire the money" | "so you want to buy" |
+| Kevin | 3 Checks `FBT55AI0kvo` | 559,346 | 32m55 (6,181 words) | "A program will pay your Medicare premium. Not reduce it, pay it. Nobody's job is to tell you" | entitlement claim |
+| Kevin | 3 New Rules `YJGG5JnDwGo` | 439,856 | 29m39 | "A raise is coming to your Social Security check... three things are taking money back" | good news, then loss |
+| Capital Case | Rockefeller `sGtEBUIppYc` | 380,137 | 10m02 | "At its peak, one company controlled 90% of America's oil... richest human in recorded history" | irony in 4 sentences |
+| Capital Case | Great Depression `CAsim5HC-uI` | 294,004 | 11m29 | "In 1928 a Harvard economist said poverty was nearly solved. One year later, a quarter had nowhere to go" | dramatic irony |
+| This make cents | Grandpa's Will `M0AcqoZ8zQg` | 611,170 | 21m34 | "First Thanksgiving without Grandpa... Uncle Dale slid a pocketknife down the table" | exact-scene, 2nd person |
+| This make cents | Divorced `po7HUg_7yYE` | 431,764 | 14m38 | "A rental application on your kitchen table. Two names: Trent and Vanessa Holloway" | object + names, 2nd person |
+| Millionaire Problems | Casino `HE5xgQS53gc` | 700,164 | 16m23 | "So you want to buy a casino... only legal business where math guarantees a profit" | "so you want to buy" + paradox |
+| Millionaire Problems | Oil Rig `XiDvK1r2l_k` | 264,000 | 16m05 | "So you want to buy an offshore oil rig... price list" | "so you want to buy" |
 
-Title/thumbnail (report §10-§11): Mr. Finance fixed "The Economics of Owning a [X]", thumbnail "SO YOU WANT TO OWN A [X]" + building + cost icons; Matty "Retirees" + paradox, yellow keyword; Carl mascot + one big $ number; Robin store logo + "$0 / FREE JUST ASK" (brand-logo risk); Mark binary visual (BUY vs RENT); Uncle John 2-4 words; Finance POV calm protagonist, 0-2 words; Business Decoded and Logical Money montage not inspected = UNKNOWN. Thumbnail style PI predict nahi karta (q=0.52).
+### Jo naya nikla (VERIFIED, opening text se)
+1. **Hook ek hi kaam karta hai: pehle 1-2 sentence mein stake.** Number (Casual Finance, Crayon, Capital Case), fixed character line (Monkey), ya scene (This make cents). Kisi top video mein "welcome to my channel" nahi.
+2. **Neu aur Millionaire Problems ka opener lagbhag same hai** ("So you want to buy a ship/casino..."). Data se yahi dikhta hai ki do alag channels same template chalate hain; kaun pehle tha aur kisne copy kiya, **UNKNOWN** (publish dates alag verify nahi kiye).
+3. **Length alag-alag hai, ek rule nahi:** Primate 2.5-9 min, Neu 8-9, Capital Case 10-11, Casual Finance 9-15, Crayon 13-16, Kevin 30-33 min. Isliye "length se success" ka koi sabot in 10 mein nahi (Q1 aur final synthesis ke saath consistent).
+4. **Kevin ka hook alag family ka hai:** institution + paisa + "kisi ne bataya nahi". Baaki 9 curiosity/story se khulte hain.
 
-Consistent pattern: subject/audience choice (gym, buffets, retirees, rent vs buy, Costco). Fail: same template on morbid/billionaire/niche subjects (ski resort, accounting firm), young-audience budgeting (Matty), crowded infographics (Mark), CAPS/"something is changing" (Robin).
-Learning: Mr. Finance = subject test; Business Decoded = place paradox; Matty = audience pivot; Carl = parameter series; Robin = perennial perk lists (policy-risk caveat); Mark/Logical = duels; Uncle John = disclosure + sources; Finance POV = fiction (lottery-like, avoid as core).
-Caveats: no CTR/retention; samples <=100 uploads; hook/script format not re-extracted here (UNKNOWN).
+### Abhi bhi UNKNOWN / LOW CONFIDENCE
+- **Thumbnails** Primate, Crayon, Economics Explained, Capital Case, This make cents, Millionaire Problems ke **dekhe nahi gaye** (montage inspect nahi hua). Isliye in 6 ka thumbnail jawab Q9 mein "UNKNOWN" hi rahega jab tak montage review na ho.
+- **Economics Explained** ki upload dates DB mein missing; schedule **DATA NOT AVAILABLE**. Views rounded (1.5M).
+- **CTR, retention, comments: DATA NOT AVAILABLE.**
+- Sirf top 2-3 videos ki opening dekhi; poore channel ka hook-pattern gino se confirm nahi kiya (**LOW CONFIDENCE** generalization).
+- Primate (30 videos), Capital Case (13), This make cents (20), Millionaire Problems (9) = **LOW CONFIDENCE** samples.
+
+**Report links:** `../01_CHANNEL_REPORTS/<NNN_name>/CHANNEL_REPORT.md` §10-§15 har channel ka; Q9 (poora breakdown), Q10 (Neu).
