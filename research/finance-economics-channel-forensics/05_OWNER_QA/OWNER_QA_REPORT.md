@@ -33,6 +33,14 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q24 | 2026-11-12 | (owner Q21) Missing datasets aur unki research value |
 | Q25 | 2026-11-12 | (owner Q22) 3 channel concepts, Concept A selected (chat answer ka record) |
 | Q26 | 2026-11-12 | (owner Q23) 30 video ideas ranked + 30-day calendar (chat answer ka record) |
+| Q27 | 2026-11-12 | (owner Q24) First 10 videos production system + series |
+| Q28 | 2026-11-12 | (owner Q25) FINAL verdict + one-page channel playbook |
+| Q29 | 2026-11-12 | (owner Q26) 100k/500k/1M+ videos ki anatomy |
+| Q30 | 2026-11-12 | (owner Q27) Small channels ka breakthrough (views/subscriber) |
+| Q31 | 2026-11-12 | (owner Q28) Multiple formats vs ek promise, content architecture |
+| Q32 | 2026-11-12 | (owner Q29) Series aur repeatability (Carl + 10 series concepts) |
+| Q33 | 2026-11-12 | (owner Q30) Competitor gap analysis, top 20 gaps |
+| Q34 | 2026-11-12 | (owner Q31) 90-day growth model |
 
 ---
 
@@ -1301,3 +1309,207 @@ Top 6 mein 3 ke paas direct dataset proof hai (cafe, gym, Why-does format), baak
 - Laundromat, car wash, storage jaise subjects ke liye maine dataset ke titles mein abhi search nahi kiya. Chaho to Q23 ke baad ek chhota title-search chala sakta hoon taaki 30 mein se kaun se subjects dataset mein pehle se hain, yeh pata chale.
 
 Files: `04_FINAL_SYNTHESIS/FINANCE_ECONOMICS_WINNING_MODELS.md` §A, §B, §C; `03_CROSS_CHANNEL_FINDINGS/SUB_NICHE_COMPARISON.md`; `05_OWNER_QA/CHANNEL_TIER_RANKING.csv`.
+
+---
+
+## Q27 — (owner Q24) First 10 videos ka production system (2026-11-12)
+
+**Model:** Concept A "So You Want to Own a ___" (Q25/Q26 mein selected). Ranks #1-#10 Q26 se. **Sab subject-level claims HYPOTHESIS** jahan dataset mein direct proof nahi (Q26 mein likha). Har number script se pehle khud verify karna hai. Koi competitor ka exact title/script/thumbnail copy nahi.
+
+**Har video ka common flow:** (1) Research question -> (2) sources (SBA, FDD Item 19, 10-K, industry association, BLS) -> (3) 10-12 numbers ki sheet + source link -> (4) angle = "dream -> hidden numbers -> verdict" -> (5) 2 title options, 1 chuno -> (6) thumbnail: ek number ya ek contrast, <=4 words -> (7) script ~2,400-3,000 words (~13-18 min; length lever nahi, Q16) -> (8) opening 30s: ek scene/claim + ek number + promise (Q16 template) -> (9) ending: ek verdict line + next-video tease.
+
+| # | Research question | Angle / promise | Title options (2) | Thumbnail | Main sections | Next-video link |
+|---|---|---|---|---|---|---|
+| 1 Cafe | Ek independent cafe ka monthly P&L kya hai; break-even kitne saal? | "$4.50 latte mein owner ke paas kitna bachta hai" | "Why Most Cafe Owners Earn Less Than Their Baristas" / "The Real Cost of a $4.50 Latte" | cup + "$4.50 -> $0.31" | latte ka cost split; rent+staff; break-even; verdict | -> #21 (rent parameter) aur #7 (duel) |
+| 2 Gym | 300-400 member boutique gym ko chalne ke liye kitne members? | "400 members magic number" | "The Gym Owner's Secret: 400 Members" / "Why Gyms Want Members Who Never Show Up" | treadmill + "400" | member math; no-show economics; rent; verdict | -> #22 (gym 200/400/800) |
+| 3 Laundromat | Laundromat "passive" hai ya nahi? | boring business ka reality check | "The Laundromat Nobody Admits Is a Gold Mine (Or Is It?)" / "How Much Does One Washer Really Earn?" | washer + "$0.25 -> ?" | machine revenue; utilities; attendant; verdict | -> #23 (town vs city) |
+| 4 Cinema | Cinema ke paas ticket ka kitna reh jata hai? | concession hi asli profit | "Why Cinemas Would Go Broke Without Your $9 Popcorn" / "Where Your Movie Ticket Money Actually Goes" | popcorn + "90%" | ticket split; concession margin; verdict | -> #5 (Why-does series) |
+| 5 Gas station | Petrol pump store se kyun kamata hai? | gas ka margin cents mein | "Why Gas Stations Don't Care If You Buy Gas" / "The 1-Cent Gas Station" | pump + "1c vs 40c" | fuel margin; card fees; store margin; verdict | -> #9 |
+| 6 Car wash | $20/mo membership genius ya trap? | subscription math | "The $20/Month Car Wash: Genius or Trap?" / "Why Car Washes Love Members Who Never Come" | car + "$20 x 1,000" | capex; subscriber churn; water cost; verdict | -> #24 |
+| 7 Duel | Same $200K: franchise vs independent cafe, 5-year race | matched pair | "Same $200K: Franchise Cafe vs Your Own Cafe" / "5-Year Race: Franchise vs Independent" | do cups + do numbers | setup; year-by-year; fees; verdict | -> #26/#28 (duel series) |
+| 8 Self-storage | Self-storage kyun "quiet cash machine"? | hidden real-estate math | "Why Self-Storage Is the Quiet Cash Machine" / "People Pay $140/Month for Stuff They Forget" | door + "$140/mo" | occupancy; rate increases; cost; verdict | -> #3/#6 |
+| 9 Dollar store | $1.25 price ke peeche ka math | everyday price shock | "The Dollar Store Math That Broke the $1 Price" / "Why Dollar Stores Stopped Selling for $1" | "$1 -> $1.25" | cost stack; margins; 10-K data; verdict | -> #5 |
+| 10 Food truck | Food truck vs restaurant: paisa kahan jata hai | low-capital sapna | "Food Truck vs Restaurant: Where the Money Really Goes" / "The Hidden Cost of a Food Truck" | truck + "$80K vs $500K" | startup; permits; commissary; verdict | -> #25 |
+
+**Openings (30 sec) template per video:** pehle 12 words = ek scene/claim ("Aap $4.50 ka latte kharidte ho. Owner ke paas us mein se 31 cents bachte hain.") -> 80 words ke andar ek source-backed number + promise ("is video ke end tak aap dekhoge ki break-even kitne saal mein aata hai") -> intro/channel naam nahi. **Evidence:** Q16 (opening style predictor nahi, par title-confirm zaroori; INFERRED).
+**Endings:** ek verdict line ("kamayega ya nahi") + ek viewer action + agla video (Q16: ending predictor nahi, to chhota rakho).
+
+**Series jo viewer ko agla video dikhate hain (HYPOTHESIS; retention/session data DATA NOT AVAILABLE):**
+- **Series 1 "Economics of ___":** #1 cafe, #2 gym, #3 laundromat, #6 car wash, #8 storage, #10 food truck (place badalta hai; template same).
+- **Series 2 "Why does ___ do ___?":** #4 cinema, #5 gas station, #9 dollar store (+ hotels, airlines baad mein). Format ka flop share 20.0% (Q11 format A, 124 videos, 13 channels - VERIFIED).
+- **Series 3 "Same $X duels":** #7 franchise vs independent, phir #26-#29 (Q26).
+- **Chain:** #1 -> #21 (cafe rent $5k/$10k/$15k) tabhi jab #1 achha chale (Carl-style parameter series, Q32).
+**Limit:** Mr. Finance ka "Economics of" template 65 videos par median PI 1.04 hai (Q32), yaani template series khud kaam nahi karti, **subject chunna** zaroori hai. Cafe 187k aur gym 266k proof ek-ek channel ke hain (LOW-MEDIUM).
+
+---
+
+## Q28 — (owner Q25) FINAL DECISION + "MY FINANCE YOUTUBE CHANNEL PLAYBOOK" (2026-11-12)
+
+**Seedha jawab.** Sab recommendations **INFERRED/HYPOTHESIS** hain, koi guaranteed virality nahi. Is dataset mein sabse pakka (VERIFIED) cheez yeh hai ki **channel, topic aur subject** packaging se zyada predict karte hain (channel ~44-53% of log-view variance; title/hook/thumbnail style within channel ~null, Q16-Q19).
+
+1. **Sub-niche:** everyday-business economics ("So You Want to Own a ___", "Why does [place] do [X]?"). Evidence: median 12.4k vs 5.2k/6.7k (SUB_NICHE_COMPARISON, VERIFIED); par yeh meri recommendation hai, 10 channels (327 videos) par tiki (LOW-MEDIUM). **Warning:** 1M+ videos mostly macro-brand channels (Q29) alag model hai.
+2. **Audience:** 25-45, side-business sapna ya "yeh jagah paise kaise banati hai" curiosity (HYPOTHESIS, comments data nahi).
+3. **Benchmark channels:** Business Decoded (buffets 1.46M), Neu (ship graveyard 1.12M), Mr. Finance (gym 266k, subject-selection), Millionaire Problems (casino 700k), Brimm (airline 536k), Logical Money (duel 1.73M). **Careful:** Business Decoded median sirf 2.6k, Mr. Finance Q11/Q12 date-confounded.
+4. **Format:** (a) own-a-___ (b) Why-does-place-do-X (c) matched duels (d) parameter series baad mein.
+5. **Topics banao:** jahan viewer weekly jata hai + ek hidden number, ya ek perennial decision (rent vs buy).
+6. **Avoid:** windfall promises, outrage/fear, Medicare/narrow mechanics, geopolitics, 10+ channel pe pehle se hit concepts, late browse copies, verbatim scripts (Q19, Q20).
+7. **Title/thumbnail:** title = subject + situation + stake (specific number); thumbnail ek idea (number ya contrast), <=4 words. Dhyan: thumbnail style aur title pattern PI predict nahi karte (Q17) - enabler hain, driver nahi.
+8. **Script:** Q16 template (scene/claim -> number+promise -> paradox -> numbers+mini-stories -> verdict).
+9. **Weekly publish:** 1-2 per week research-heavy videos (HYPOTHESIS; cadence proven cause nahi, Q21: successful channels median 3.5/mo, Spearman -0.25).
+10. **First 30 videos ka objective:** learning, virality nahi: kaun sa subject type, kaun sa format, kaun si length aapke channel par median se upar jaata hai.
+11. **30 videos ke baad metrics (Studio):** CTR, impressions, 30-sec retention, avg view duration, returning viewers, traffic source (browse/search/suggested); public: views vs apne median (PI-style).
+12. **Strategy kab badlo:** subject type par 3 flops (<0.5x apna median) -> backlog se hatao; format 2/3 mein >=2x median -> expand; CTR kam par impressions zyada -> retitle; retention 30s par gir rahi ho -> opening badlo (Studio data zaroori).
+
+### MY FINANCE YOUTUBE CHANNEL PLAYBOOK (ek page)
+- **Promise:** "Aapki rozmarra ki jagahon ka asli business math." Ek channel, ek promise, ek viewer.
+- **Mix:** 60% own-a-___, 25% Why-does-place-do-X, 10% duel, 5% retitle/maintenance (HYPOTHESIS).
+- **Har video:** subject test ("viewer ne yeh jagah dekhi hai? hidden number hai?") -> 8-12 titles -> 1 chuno -> 1 thumbnail idea -> script Q16 template -> sources description mein -> publish.
+- **Cadence:** 1-2/week, first 10 videos Q27 ke order mein.
+- **First 10:** #1 cafe, #2 gym, #4 cinema, #3 laundromat, #7 duel, #5 gas, #21/22 parameter, #6 car wash, #8 storage, #9/#10.
+- **Review (har 5 video):** subject-type median, format median, flop-streak rule.
+- **Kabhi nahi:** exact copy, outrage, windfall, invented quotes, undisclosed synthetic voice, numbers bina source.
+- **Honest risk:** 10 competitors (Q25 caveats), visuals ki mehnat, ek hit se channel nahi banta (Business Decoded median 2.6k), monetization data DATA NOT AVAILABLE.
+
+---
+
+## Q29 — (owner Q26) Million-view videos ki anatomy (2026-11-12)
+
+**Source (VERIFIED):** `VIDEO_INVENTORY.csv`, 3,402 long-form videos. Views ek snapshot (2026-11-12). 6 established channels (040-045) undated, isliye age sirf dated videos ka.
+
+| Threshold | Videos | Channels | Median length | Median age (dated) | Median PI | Title mein number / $ / "?" / POV |
+|---|---|---|---|---|---|---|
+| >=100k | 529 | 61 | 17.7 min | 136 days | 2.19 | 36% / 8% / 13% / 5% |
+| >=500k | 163 | 31 | 18.3 | 217 | 1.98 | 25% / 9% / 18% / 1% |
+| >=1M | **73** | **17** | 19.5 | 257 | 2.02 | 19% / 5% / 15% / **0%** |
+
+- **Topics (>=1M):** macro_economy 17, banking_cash 11, housing 8, crisis_collapse 8, investing 7, taxes_irs 5. (>=100k: macro 83, banking 61, housing 59, retirement tax 50, investing 42, crisis 36.)
+- **Formats (title-based):** statement_other 28, explainer 23, news_change_update 8, question 7, list 3, warning 2.
+- **Sub-niche (jahan tagged):** markets/housing/macro-crisis 8, business/company & ELI5 5, finance-concepts ELI5 5, macro/tech 2. 44 of 73 untagged (established macro brands).
+- **Concentration:** >=1M mein **Patrick Boyle 25 of 73 (34%)**, How Money Works 11, Casual Finance 8, Economics Explained 6, Crayon Capital 5, Primate Economics 5. Top examples: Crayon Capital `HawmGu7oNrc` Wolf of Wall Street Explained Like You're 5 (4,219,017); How Money Works `QmWyQ-BCD8E` (3,000,000); Boyle `wZaYyNAXHK4` (2,500,000); Casual Finance `Uumnx2Fo6cE` New American Housing Crisis (2,352,982); MonkeyExplains `bz0OGtrkjv0` (1,920,233); Modern MBA `Ha2oNXDZuSg` Why Crumbl Cookies Can't Survive (2,200,000).
+- **Thumbnail patterns:** alag se nahi nikale; 1M+ ke thumbnails ka blind rubric nahi bana (UNKNOWN). Q2/Q17: style PI predict nahi karta.
+
+**Kya 1M+ model alag hai? Haan (INFERRED).** 1M+ club **brand/established macro-commentary aur ELI5 channels** ka hai (Boyle, How Money Works, Casual Finance, Crayon, Monkey, Primate), POV/list/threshold-benefit titles (jo 100k-1M mein common hain) 1M par lagbhag gayab (POV 0%, numbers 19%). Senior/POV channels ka ceiling ~0.5-1.1M (Nia 1.13M, Matty 1.08M, Dark Ledger 1.11M). Business-everyday ke 1M+: Business Decoded buffets 1,463,404, Neu ship graveyard 1,120,820, Logical Money 1,730,664 (rent vs buy).
+**Matlab:** 1M+ ko copy-target mat banao. Naye channel ke liye 100k-500k "peer outlier" model zyada realistic hai (Q30).
+**Limits:** views cumulative (purane videos zyada); 6 channels undated; channel size/brand se confound (63% of 100k+ videos successful-tier channels se).
+
+---
+
+## Q30 — (owner Q27) Small channels ka breakthrough (2026-11-12)
+
+**Source:** `CHANNEL_TIER_RANKING.csv` subscribers (snapshot) + inventory views. Ratio = views / subscribers. **Ratio reach ya unique viewers nahi hai.** Subscriber count video ke baad ka hai (channel hit se bada hua ho sakta hai), isliye ratio overstated ho sakta hai. 45 channels ke subs maujood, 40 mein <=50k.
+
+| Ratio | Channel (subs) | Video | Views | Topic / format |
+|---|---|---|---|---|
+| 282x | Nate's Money Map (1,140) | `V7vssWL3sdA` Boss cut your pay 15% POV | 322,060 | POV revenge |
+| 252x | Business Decoded (5,810) | `2T8JrUE_bz4` Why Buffets Don't Care How Much You Eat | 1,463,404 | everyday-business paradox |
+| 228x | Econ in a Nutshell (4,550) | `XgIo6SrSxS4` Every Money Laundering Technique | 1,039,289 | explainer (undated) |
+| 169x | Ronnie Finance (1,670) | `piJ-diS4zng` Stepdad POV $6.3M | 281,847 | POV |
+| 142x | Sarah Rickshaw (1,950) | `06XLtP1gyM0` Every Senior Should Check 7 Benefits | 276,511 | senior benefits |
+| 129x | Finance ANALYST (2,850) | `3L4Mypm3uWo` 10-Year Reunion POV | 367,569 | POV |
+| 124x | This make cents (4,950) | `M0AcqoZ8zQg` Family Cut You Out of Grandpa's Will | 611,170 | POV |
+| 117x | POV Wealth (5,810) | `evtp6soM62Y` You Won the Lottery POV | 681,604 | POV |
+| 95x | The Wealth Engine (5,140) | `YqAiWBFwbpg` How Economy Actually Work? | 489,223 | explainer |
+| 76x | Frank Law (10,100) | `V7lLK0JhzBQ` Never Keep More Than This After 65 | 767,510 | senior threshold |
+| 71x | Madeline (3,430) | `sNpbDH7IUKw` IRS $600 Threshold | 243,085 | senior/IRS |
+| 61x | Logical Money (28,500) | `nkT_K8l1rEw` Renting vs Buying | 1,730,664 | decision duel |
+| 56x | Finance Simplified (3,690) | `4bg3bjvjCjE` Dividend vs Growth | 205,350 | duel |
+| 53x | Robin MBA (10,800) | `A4hPtQsiWoA` Costco Owes You 15 Free Things | 569,470 | senior perk |
+
+**Repeatable opportunity?** Haan, partly (INFERRED): ek-do outlier har chhote channel mein aate hain jab topic ek **recognisable thing** ho (buffet, rent vs buy, Costco, $600 threshold, POV fantasy). **Par** yeh aksar **ek hit** hote hain: Business Decoded median sirf 2.6k, POV channels fast premise decay (Q20). Evergreen-ish (Business Decoded, Logical Money, Finance Simplified) hi model ke kaam ke hain.
+**Kya chhota channel realistically use kar sakta hai?** Haan, 40 channels <=50k subs mein outlier mila - par **ek hit != repeatable system**; 2nd/3rd hit sabit karna hoga (Q31 90-day test).
+
+---
+
+## Q31 — (owner Q28) Ek channel multiple formats chala sakta hai? (2026-11-12)
+
+**Data (VERIFIED, 58 channels >=15 long-form):** top format share median: SUCCESSFUL 0.45, AVERAGE 0.45, UNDERPERFORMING 0.40; formats used ~6 sab mein. Top topic share: SUCCESSFUL **0.30** (10.5 topics), AVERAGE 0.48 (8.5), UNDERPERFORMING 0.41 (8.5). Titles se tagged, rule-based.
+- **Matlab (INFERRED):** successful channels **topic mein broad, par ek promise ke andar** (Boyle/HMW macro commentary); small hits ek format par (Primate bananas, Crayon, Dark Ledger ladders, Neu). Underperformers ka topic mix narrow nahi, to "sirf ek topic" jeet nahi.
+- **Audience mismatch:** haan, jahan format ya topic channel ke promise se bahar gaya (F9, >=10 channels): Finance POV $5/day flop vs Carl $100/month win; Mr. Ranks crime/addiction ladders; Business Decoded ransomware.
+- **Different formats same audience?** Haan jab ek hi audience-promise ho: Mark Invests duels + Japan habits (0.25 flop) mixed, so format variety safe nahi, promise safe hai.
+**Recommended architecture (HYPOTHESIS):** ek promise ("rozmarra ki jagahon ka business math"), 3 formats (own-a-___, Why-does-place-do-X, matched duel) + parameter series ek hit ke baad. Naye format ko pehle 2 test videos do (PDF P03 rotation), phir median se compare. Unrelated topic (macro, fear, benefits) nahi.
+
+---
+
+## Q32 — (owner Q29) Content series aur repeatability (2026-11-12)
+
+**VERIFIED:** Carl Invests (013): `7sbA9WZrfHk` Invest $100 a Month 49,117 views (PI 71.3, 2026-08-18); `TDEme_uxx4c` $500 a Month 37,612 (PI 25.5, 08-27); `w7Xu8O5TNHQ` $1,000 a Month 81,930 (PI 55.5, 09-05). **Ek hi variable (amount) badalta hai, teeno apne baseline se bahut upar, 3 hafte mein.**
+**Aur channels (same 3-word title start, >=5 videos):**
+| Channel / template | n | Median PI | Winners PI>=3 | Max PI |
+|---|---|---|---|---|
+| Mr. Finance "The economics of ___" | 65 | 1.04 | 7 | 8.7 |
+| Mr. Ranks "Your life as ___" | 27 | 1.05 | 11 | 47.1 |
+| Nostalgic Wheels "Economics of" | 19 | 1.30 | 3 | 124.9 |
+| The Expensive Part "Economics of" | 19 | 0.88 | 3 | 10.2 |
+| Lana "Born before 1966?" | 11 | 1.98 | 3 | 81.6 |
+| Kevin "Every senior must" | 8 | 5.36 | 6 | 8.6 |
+| Wise Future "The psychology of" | 8 | 4.21 | 5 | 9.4 |
+| Lucas Grant "POV: your life" | 8 | 0.81 | 0 | 2.8 |
+| Robin "If you're over" | 7 | 1.74 | 2 | 445.6 (Costco) |
+1. **Series use karne wale:** Carl, Mr. Finance, Mr. Ranks, Nostalgic Wheels, Expensive Part, Lana, Kevin, Robin.
+2. **Ek topic kitne variations:** Carl 3; Mr. Finance 65 variations - par median PI 1.04 = **template khud series ko jeet nahi dilata**; har variation ka subject viewer ko pehchana hua hona chahiye.
+3. **Har episode mein ek variable?** Carl: haan (amount). Mr. Finance/Neu: subject badalta hai. Mr. Ranks: character.
+4. **Series agla episode dekhne ka reason deti hai?** **UNKNOWN** (session/retention data nahi). Carl ke teeno >baseline ek consistent sign hai, proof nahi.
+5. **10 repeatable series concepts (Concept A, HYPOTHESIS; Carl-pattern VERIFIED):**
+   1. "[Business] at $5k / $10k / $15k rent" (rent variable)
+   2. "[Business] at 200 / 400 / 800 customers" (volume)
+   3. "Same $200K: franchise vs independent" cafe/gym/car wash/pizza (duel)
+   4. "Why does [place] do [X]?" cinema, gas station, dollar store, hotel fee, airline baggage
+   5. "Who makes the money in one [latte/popcorn/burger/haircut]?" (value split)
+   6. "[Business] in a small town vs big city" (location)
+   7. "Year 1 vs Year 3 vs Year 5 of owning a [business]" (time)
+   8. "Owning a [business] with $50K / $200K / $1M" (capital)
+   9. "Buy the building vs rent it" for small shops (Logical Money precedent 1.73M: personal home, business version HYPOTHESIS)
+   10. "Why did [chain] fail/survive?" (Modern MBA Crumbl 2.2M; brand-dependent, LOW)
+
+---
+
+## Q33 — (owner Q30) Competitor gap analysis (2026-11-12)
+
+**Source (VERIFIED):** 3,402 long-form videos topic tags (rule-based). Audience-question gaps: comments/Trends **DATA NOT AVAILABLE**, isliye "missing audience questions" sirf title-coverage se INFERRED.
+**Bahut covered:** retirement_accounts_tax 656 videos/55 channels (median PI 0.96); investing_stocks 362/47; wealth_psychology 355/38; banking_cash 340/61; macro_economy 265/40; housing 263/53; social_security 220/28.
+**Kam covered (kuch channels):** company_business_case 96/25 (median PI 1.11, breakout 19%); senior_perks_discounts 35/11 (1.63, 25%); money_history 17/7 (1.50, 20%); veterans_benefits 22/6 (median views 21k); uk_pension 22/3 (13.5k); crypto 14/8 (30k); scams_fraud 15/10.
+**Underused formats:** ELI5 allegory (3 channels: Primate, Crayon, Monkey, ceilings 1.9-4.2M); parameter series (5 channels); decision duel outside retirement; "Why does [place] do X" (13 channels, flop 20%).
+**Better-research candidates (crowded concept, naya angle):** "Silent millionaire POV" (18 channels), "Never keep more than X in bank" (16), "wealth levels" (13-15).
+
+| # | Gap | Evidence | Possible video idea (HYPOTHESIS) |
+|---|---|---|---|
+| 1 | Company business-case | 96 videos/25 ch, breakout 19% | "How a dollar store makes money at $1.25" |
+| 2 | Money history ELI5 | 17/7, PI 1.50, 20% | "How credit-card swipe fees started" |
+| 3 | Senior perks (what X owes you) | 35/11, PI 1.63, 25% | careful: saturated; avoid for A |
+| 4 | Veterans benefits | 22/6, 21k median | skip unless expertise |
+| 5 | UK pension/benefits | 22/3, 13.5k | skip (not A) |
+| 6 | Crypto explainers | 14/8, 30k | skip (not A, volatile) |
+| 7 | Scams/fraud | 15/10, 130k median, PI 0.47 spread | skip |
+| 8 | ELI5 allegory | Primate/Crayon/Monkey, 1.9-4.2M | "Cafe economics explained like you're 5" (craft heavy) |
+| 9 | Parameter series | Carl 3x; 5 channels | rent/volume/capital series |
+| 10 | Business duels | Logical Money, Mark Invests | franchise vs independent |
+| 11 | "Why does [place] do X" | 124 videos/13 ch, flop 20% | cinema popcorn |
+| 12 | Everyday-business breakdowns | Mr. Finance, Business Decoded, Neu | laundromat |
+| 13 | Place + hidden fee (hotels, airlines) | Brimm 536k | resort fee math |
+| 14 | Retail margins (dollar store, pharmacy) | Business Decoded 1.46M | pharmacy counter |
+| 15 | Franchise economics | FDD Item 19 data free; few channels (HYPOTHESIS) | "Franchise fees explained" |
+| 16 | Small-town vs city business | no direct coverage found | town vs city laundromat |
+| 17 | Seasonal/low-capital businesses | tavern 88k | food truck/ice cream |
+| 18 | "Who makes the money in one X" | pattern-level | latte/popcorn split |
+| 19 | Crowded concept re-angled (silent millionaire) | 18 channels | original characters only |
+| 20 | Perennial decisions (rent vs buy) business version | 8 ch, copies hold | "Buy the building or rent" |
+**Limit:** gap = low coverage in this 60-channel set, not proven demand (Google Trends NOT COLLECTED).
+
+---
+
+## Q34 — (owner Q31) 90-day growth model (2026-11-12)
+
+**Public competitor data aur tumhara future Studio data alag rakhna.** Cadence plan HYPOTHESIS (cadence proven cause nahi, Q21). 30 videos in 90 days = ~2.3/week; research-heavy scripts ke liye 1-2/week realistic, to **phases video-count se**, din se nahi.
+
+| Phase | Videos | Objective | KPIs (Studio, apna data) | Public KPI (competitor/own PI) |
+|---|---|---|---|---|
+| 1 Learn | 1-10 | kaun sa subject type/format apne channel par chalta hai | impressions, CTR, 30s retention, AVD, traffic source | har video views vs apna median (28 din baad) |
+| 2 Improve | 11-20 | winners ke parameter variants, flops retitle | CTR vs impressions, retention dips, returning viewers | PI >=2 share |
+| 3 Scale | 21-30 | jo pattern 2+ baar chala usko series | returning viewers, browse/suggested share, subs per video | breakout share |
+
+- **Topic testing:** har subject type (retail/service/venue/finance-duel) ke 3 videos; compare median.
+- **Packaging testing:** same video par title/thumbnail change **7-14 din baad** agar impressions achhe par CTR kam (Studio). Finance ANALYST 367 -> 368k precedent (VERIFIED, ek case). Studio ka "Test & Compare" tool optional.
+- **Format testing:** own-a-___ vs Why-does vs duel, har ke 3-4 videos.
+- **Cluster stop:** 3 flops (<0.5x apna median) ek subject type par -> backlog se hatao. **Expand series:** 2/3 episodes >=2x median.
+- **Studio metrics ka matlab:** CTR = impressions ka click share (packaging); retention 30s = opening; AVD = pace/promise; returning viewers = channel loyalty; traffic source: browse = packaging+topic, search = evergreen demand, suggested = related-video pull. **CTR ki koi benchmark value is dataset mein nahi (DATA NOT AVAILABLE) - apne channel ke baseline se compare karo.**
+**Limit:** nuances (impressions, CTR numbers) dataset mein nahi; sab thresholds HYPOTHESIS.
