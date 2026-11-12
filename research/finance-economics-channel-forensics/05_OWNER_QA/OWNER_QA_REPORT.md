@@ -1513,3 +1513,16 @@ Files: `04_FINAL_SYNTHESIS/FINANCE_ECONOMICS_WINNING_MODELS.md` §A, §B, §C; `
 - **Cluster stop:** 3 flops (<0.5x apna median) ek subject type par -> backlog se hatao. **Expand series:** 2/3 episodes >=2x median.
 - **Studio metrics ka matlab:** CTR = impressions ka click share (packaging); retention 30s = opening; AVD = pace/promise; returning viewers = channel loyalty; traffic source: browse = packaging+topic, search = evergreen demand, suggested = related-video pull. **CTR ki koi benchmark value is dataset mein nahi (DATA NOT AVAILABLE) - apne channel ke baseline se compare karo.**
 **Limit:** nuances (impressions, CTR numbers) dataset mein nahi; sab thresholds HYPOTHESIS.
+
+---
+
+## Q35 (2026-11-12) — Millionaire Problems deep dive (channel 062)
+
+Sources: DB `finance_economics_complete.db` (read-only; 9 videos, 9 transcripts), `01_CHANNEL_REPORTS/062_millionaire_problems/`, 9 thumbnails viewed in a 3x3 montage.
+
+**VERIFIED:** 9 long videos, 2026-04-21 to 2026-07-26, then silent; 29.1k subs; total 1,562,319 views; median 106,963; casino 700,164 = 45% of all views. Views: oil rig 264,000; McDonald's 198,864; casino 700,164; PMC 123,269; cemetery 43,539; bank 106,963; airport 95,313; football 11,583; car dealership 18,624. Like rate 1.86-4.87% (PMC highest). Every title "The Economics of Owning a ___"; every thumbnail "SO YOU WANT TO BUY A ___" + underline + grid paper + one illustration, no numbers. All 9 scripts open "So, you want to buy ..." (casino adds a paradox + "by the end of this video you'll know"). No CTA or next-video tease in script endings (punchline/verdict endings). Incogni sponsor lines appear only on the last 3 uploads (bank, football, dealership). 1,438-2,440 words, numbers 2.9-4.6 per 100 words.
+**INFERRED:** Winners = recognisable business + a hidden-number paradox (casino house edge vs bankrupt operators; Blackwater 200 shots in 40,000 missions; McDonald's "isn't for sale"). The earlier "billionaire-only fantasy" explanation for the football flop is contradicted: oil rig, airport, bank and PMC are also unaffordable yet got 95k-264k.
+**CORRECTION:** Q25 cited Millionaire Problems (700k casino) as evidence for everyday-business economics. It is evidence for high-stakes/glamour subjects. Its only everyday-ish pair, McDonald's 199k vs car dealership 19k, is split 10x. Everyday-business proof stays with Mr. Finance (cafe 187k, gym 266k).
+**HYPOTHESIS:** early uploads rode an algorithm push; late decline (football, dealership) is topic, saturation or sponsor/gap effect. Not separable with n=9.
+**UNKNOWN / DATA NOT AVAILABLE:** CTR, retention, first-week views, traffic sources; why the channel stopped; 50k/100k subscriber dates.
+**LOW CONFIDENCE:** all patterns (n=9, PI not classifiable: fewer than 15 comparables).
