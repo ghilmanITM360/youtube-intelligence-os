@@ -13,6 +13,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q4 | 2026-11-12 | Wahi 6 sawal dobara (tiers, top 10, weak 10, model, pattern, ek baat) — Q1 ka compact dohrao + thumbnail update |
 | Q5 | 2026-11-12 | "Sirf 35 channels ka thumbnail analysis hua, baaki 33 ka nahi?" — coverage ka sahi breakdown |
 | Q6 | 2026-11-12 | 69 channels se practical WINNING CHANNEL MODEL (10 components, examples, reusable formula) |
+| Q7 | 2026-11-12 | Channel 032 aur 033 ke blind montage dobara bana ke re-score |
 
 ---
 
@@ -238,3 +239,21 @@ Source: `04_FINAL_SYNTHESIS/FINANCE_ECONOMICS_WINNING_MODELS.md`, `03_CROSS_CHAN
 **Channel level:** (1) ek sentence: "yeh un logon ke liye hai jo ___". (2) 15+ channels ka outlier list; sirf wahi concept jo >=2 channels par >=5x ho aur perennial ho. (3) Pehle 10 videos: 5 cross-validated subjects + 3 parameter variants of best + 2 doosre format ke tests. (4) Flop par abandon nahi, specific scene/stake ke saath retitle. (5) Original scripts, sources description mein, synthetic presenter disclose.
 
 **Sabse bada rule:** subject > packaging (46 channels follow, 3 contradict). **Risk:** senior-benefits mein accuracy/policy risk sabse zyada (ek channel terminated); late copies of browse concepts flop.
+
+---
+
+## Q7 — 032 aur 033 ke montage dobara bana ke re-score (2026-11-12)
+
+**Kya kiya (VERIFIED, local files):** dono channels ke 8-8 thumbnails naye random shuffle (seed 1000+n) aur naye labels ke saath **JPEG** montage mein banaye (`montage_blind_v2/032.jpg, 033.jpg`; purane PNG decode nahi ho rahe the). Dono naye montage image viewer mein decode hue. Scoring blind thi: titles dikhe, PI/views nahi; naya answer key alag file `out/thumb_review_key_v2_032_033.csv` mein, scoring ke baad hi kholi. Rubric wahi (I, N, C, E). Purani files `*_v1` naam se backup hain (`thumb_review_scores_v1.txt`, `..._results_v1.csv`, `..._scored_v1.csv`).
+
+**Nateeja:**
+| | Purana (v1) | Re-score (v2) |
+|---|---|---|
+| 032 mean total/tile | 2.625 | 2.875 |
+| 033 mean total/tile | 2.250 | 2.625 |
+| 35-channel Wilcoxon, total: W vs L | 1.85 vs 2.01, p=0.131, q=0.33 | 1.87 vs 2.02, p=0.183, q=0.46 |
+| W-higher / L-higher / tie channels | 9 / 18 / 8 | 11 / 17 / 7 |
+| Criterion C (title ko complement) | p=0.048, q=0.24 | p=0.063, q=0.31 |
+| Mean within-channel Spearman | -0.11 | -0.088 (n=31, t-test p=0.26) |
+
+**Matlab:** purane scores 032/033 ke bhi zyada door nahi the (zyadatar tiles ke scores same ya 1 point ka farq). Kuch bhi BH-correction ke baad significant nahi, **thumbnail style PI ko predict nahi karta** wala nateeja badla nahi. 032/033 ab VERIFIED-rescored hain; ek hi scorer (Claude) ne dono baar score kiya, isliye inter-rater reliability UNKNOWN. **Baaki khula:** channel 060 ka montage bhi decode nahi hua tha (dobara check baaki), aur 057 ke thumbnails local mein nahi hain (UNKNOWN).
