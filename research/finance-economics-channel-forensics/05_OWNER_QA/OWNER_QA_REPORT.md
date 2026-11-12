@@ -1,0 +1,91 @@
+# Owner Q&A Report — Finance/Economics 69-Channel Study
+
+Owner ke sawal aur unke jawab, ek jagah, tareekh ke saath. Har naya sawal neeche naye number ke saath add hota hai. Sources: `04_FINAL_SYNTHESIS/`, `01_CHANNEL_REPORTS/*/CHANNEL_REPORT.md`, `01_CHANNEL_REPORTS/*/VIDEO_INVENTORY.csv`, DB `data/catalog/finance_economics_complete.db` (read-only).
+
+Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **HYPOTHESIS**, **UNKNOWN**. Data mein CTR, retention, traffic sources nahi hain.
+
+## Index
+| Q | Date | Topic |
+|---|---|---|
+| Q1 | 2026-11-12 | Overall tiers, top 10, weak 10, common model, repeatable pattern, ek asal baat |
+
+---
+
+## Q1 — Overall success picture (2026-11-12)
+
+**Sawal (owner ke alfaz, khulasa):** FINAL_RESEARCH_CONCLUSIONS.md aur 69 reports se simple language mein: (1) kitne channels successful / average / underperform; (2) top 10 successful, naam + reason; (3) weakest 10, naam + reason; (4) koi common business/content model?; (5) repeatable pattern ya topic-specific?; (6) ek baat — Finance/Economics mein channel kyun chalta hai? Har conclusion ke saath channel names, video examples, numbers; evidence na ho to clearly batao.
+
+### Method (INFERRED — naya paimana, 2026-11-12)
+Reports ka PI har channel ko **uske apne** baseline se compare karta hai, is liye channels ko aapas mein rank nahi karta. Cross-channel ranking ke liye: **ek normal long-form video ke median views** (Shorts-only channel par saare videos). Tiers: Successful ≥ 20,000 · Average 5,000–20,000 · Underperforming < 5,000. Poori table: `CHANNEL_TIER_RANKING.csv` (is folder mein).
+
+### 1. Kitne successful / average / weak
+| Tier | Channels |
+|---|---|
+| Successful (≥20k typical) | **20** |
+| Average (5k–20k) | **21** |
+| Underperforming (<5k) | **27** |
+| Removed by YouTube | **1** (Wealth Logic — VERIFIED, DB `availability_note`) |
+
+Caveats:
+- 20 successful mein 7 purane established brands (Patrick Boyle, How Money Works, Economics Explained, Money & Macro, Modern MBA, Casual Finance, PensionCraft) — naye creator ke liye seedha comparison nahi; inke 6 undated hain (age-adjusted PI nahi).
+- Chhota sample: Chronofold 2, David Explains Money 4, Millionaire Problems 9, Built On You 10 videos — "promising", proven nahi.
+- Kai "weak" channels ke 1–2 bade hits hain lekin typical video nahi chalta — wahan success lottery jaisi hai.
+
+### 2. Top 10 successful
+| # | Channel | Typical | Best video | Main reason |
+|---|---|---|---|---|
+| 1 | Patrick Boyle | 1.4M | Scott Bessent vs Prices (2.5M) | Personality brand; creator ki pehchaan views tay karti hai (29/30 videos ek hi band) |
+| 2 | How Money Works | 775k | National Debt Default… (3.0M) | Aam aadmi ke paise ko chhoone wala systemic risk, sawal ki shakal mein |
+| 3 | Economics Explained | 546k | Australia May Have Solved the Housing Crisis (1.5M) | Ghar ki economy + surprising answer; war/geopolitics kam chala |
+| 4 | Casual Finance | 485k | The New American Housing Crisis Has Landed (2.35M) | Data + history ka milta-julta waqia + aaj ki fikr |
+| 5 | Primate Economics | 449k | Inflation Short (15.7M) | "Explained with Bananas" format ka originator; core concepts |
+| 6 | MonkeyExplains | 348k | US National Debt Explained with Bananas (1.92M) | Satire format + timely scandals/bubbles |
+| 7 | Modern MBA | 282k | Why Crumbl Cookies Can't Survive (2.2M) | "Mashhoor consumer business kyun fail ho raha hai" |
+| 8 | Crayon Capital | 250k | Wolf of Wall Street Scam Explained Like You're 5 (4.2M) | Mashhoor scams/crises ELI5, ~2 uploads/month |
+| 9 | Money & Macro | 229k | What happens when you stop taxing billionaires? (510k) | Policy sawal jo sab ki jeb ko lagta hai |
+| 10 | Capital Case | 54k (13 videos) | Rockefeller Explained in 10 Minutes (380k) | Canonical financial-history; BlackRock conspiracy/FTX ~5k par flop |
+
+Bilkul bahar: **Neu** (46k; Ship Graveyard 1.12M — slow upload aur ~9-min videos ke bawajood), **Kevin Explains** (28k; Born Before 1967? 696k).
+
+### 3. Weakest 10
+| # | Channel | Typical | Best video | Main reason |
+|---|---|---|---|---|
+| 1 | Max Invests | 178 | 34.8k | "<Name> Invests" template ka failing clone; 98% descriptions mein CFD affiliate link |
+| 2 | Ronnie Finance | 405 | Stepdad Kicked You Out… (282k) | Revenge-POV lottery: same genre 671 views; explainers 28–319 |
+| 3 | Finance Simplified | 536 | Dividend vs Growth Stocks (205k) | Sirf ek vein chali; consumer comparisons ~400–560 |
+| 4 | Nostalgic Wheels | 653 | Economics of Owning a Cafe (187k) | Naam/handle/description teeno alag — identity unclear |
+| 5 | Madeline | 661 | IRS $600 Threshold (243k) | Hit galat claim par (IRS IR-2025-107: threshold $20,000 — VERIFIED); Kevin ka presenter reuse |
+| 6 | Housing | 669 | Never Keep More Than This in the Bank (185k) | 24 mein 13 near-duplicate scripts; Nia ka hook copy → 43 views |
+| 7 | Mark Invests | 1,430 | Renting vs Buying (495k) | Sirf A-vs-B decisions chalte hain; psychology/"levels" ~600 |
+| 8 | Uncle Frank Retirement | 1,593 | $500k in Retirement (37k) | Matty concept ki late copy 148 views; narrow topics (RMD, spouse tax) |
+| 9 | Finance ANALYST | 1,696 | 10-Year Reunion as Secret Multimillionaire (368k) | Generic titles; wahi kahani generic title ke saath 367 views |
+| 10 | Carl Invests | 1,697 | 9 Signs Someone is Secretly Wealthy (126k) | Library weak; "$100/$500/$1,000 a month" series se turnaround (PI 25–71) |
+
+Alag se: Wealth Logic removed; The Wealth Engine sirf 6 videos (insufficient); Tom Talks Money 67.7k subs magar typical 1.8k — subscribers views ki guarantee nahi.
+
+### 4. Common model?
+Haan — 5 models baar-baar:
+1. Rozmarra business economics — Mr. Finance (Gym 266k), Millionaire Problems (Casino 700k), Business Decoded (Buffets 1.46M), Neu (1.12M).
+2. Retirement adequacy "kya mere paas kaafi hai?" — Matty (1.08M), Uncle John (632k), Tom Lazy (282k).
+3. Decision duels — Logical Money Renting vs Buying (1.73M), Mark Invests (495k).
+4. Second-person POV / secret wealth — POV Wealth (682k), Lucas Grant (705k), This make cents (611k), Dark Ledger (1.11M).
+5. Senior benefits/protection — Nia (1.13M), Mark Calloway (724k), Kevin (696k); breakout share sabse zyada (24%), policy risk bhi sabse zyada.
+
+Bade brands ka model "expert personality" hai — naye creator ke liye copy karna mushkil.
+
+### 5. Repeatable pattern ya topic-specific?
+Dono: pattern repeatable hai, asal lever **topic choice** hai.
+- Mr. Finance: ek template, 65 videos, 401 → 266k sirf business badalne se.
+- Matty Invests: wahi scripts, audience retirees ki taraf → ~200 se 1M.
+- Finance ANALYST: same kahani, behtar title → 367 se 368k.
+- Hamesha search hone wale topics par copy chalti hai (rent vs buy, 10 channels); browse-topic ki late copy fail (Uncle Frank 148).
+- Apna hit kuch hafton mein dobara banana fail (6 channels CONTRADICTED); parameter series kaam karti hai (Carl, Robin Costco → Aldi).
+- Support nahi hua: upload frequency (correlation ≈ 0), "8+ min = zyada views", micro-cliffhangers.
+
+### 6. Ek asal baat
+Finance channel tab chalta hai jab viewer title padh kar **khud ko usmein dekh le** — apni umar, balance, dukaan ya faisla — saath mein ek concrete number ya scene ho, aur framing faida/ijazat/hifazat ki ho, dar ya gussa ki nahi.
+
+### Evidence gaps
+CTR/retention/traffic nahi; zyada tar channels ke sirf latest ≤100 videos; 6 bade brands undated; Google Trends, comments, VidIQ, timed transcripts use nahi hue; external fact-check sirf 3 claims; network/ownership rishte INFERRED.
+
+---

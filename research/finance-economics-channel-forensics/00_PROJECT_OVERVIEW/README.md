@@ -15,6 +15,7 @@ Started 2026-11-12. One investigation area inside the existing YIOS repository (
 02_SHARED_EVIDENCE/    PDF_PRINCIPLE_EVALUATION(_AUTO).csv, RESEARCH_SOURCE_REGISTER.csv, EVIDENCE_LEDGER.csv
 03_CROSS_CHANNEL_FINDINGS/   written only after all channel reports
 04_FINAL_SYNTHESIS/          written only after cross-channel findings
+05_OWNER_QA/                 OWNER_QA_REPORT.md (owner questions + answers, appended per question), CHANNEL_TIER_RANKING.csv
 _analysis/             analyst text per channel (merged into CHANNEL_REPORT.md by _scripts/04_assemble.py)
 _scripts/              01 build evidence · 02 dossiers · 03 PDF-principle metrics · 04 assemble reports
 ```
