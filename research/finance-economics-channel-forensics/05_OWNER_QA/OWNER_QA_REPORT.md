@@ -14,6 +14,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q5 | 2026-11-12 | "Sirf 35 channels ka thumbnail analysis hua, baaki 33 ka nahi?" — coverage ka sahi breakdown |
 | Q6 | 2026-11-12 | 69 channels se practical WINNING CHANNEL MODEL (10 components, examples, reusable formula) |
 | Q7 | 2026-11-12 | Channel 032 aur 033 ke blind montage dobara bana ke re-score |
+| Q8 | 2026-11-12 | Channel 060 (Sarah Rickshaw) ka blind montage dobara bana ke re-score |
 
 ---
 
@@ -257,3 +258,22 @@ Source: `04_FINAL_SYNTHESIS/FINANCE_ECONOMICS_WINNING_MODELS.md`, `03_CROSS_CHAN
 | Mean within-channel Spearman | -0.11 | -0.088 (n=31, t-test p=0.26) |
 
 **Matlab:** purane scores 032/033 ke bhi zyada door nahi the (zyadatar tiles ke scores same ya 1 point ka farq). Kuch bhi BH-correction ke baad significant nahi, **thumbnail style PI ko predict nahi karta** wala nateeja badla nahi. 032/033 ab VERIFIED-rescored hain; ek hi scorer (Claude) ne dono baar score kiya, isliye inter-rater reliability UNKNOWN. **Baaki khula:** channel 060 ka montage bhi decode nahi hua tha (dobara check baaki), aur 057 ke thumbnails local mein nahi hain (UNKNOWN).
+
+---
+
+## Q8 — Channel 060 ka re-score (2026-11-12)
+
+Q7 wala tareeqa: 060 ke 8 thumbnails naye shuffle (seed 1060) + naye labels, JPEG montage (`montage_blind_v2/060.jpg`, decode hua), titles only, PI hidden, key alag (`out/thumb_review_key_v2_060.csv`), scoring ke baad kholi. Backup: `thumb_review_scores_v2.txt` (Q7 ke baad ki state).
+
+**060 ka asar (VERIFIED):** winners vs losers total 3.0 vs 2.5 (v2 mein). Purane aur naye scores mein 4 tiles same rahe, baaki mein 1-2 point ka farq; naye mein crowded/multi-element tiles (B, D, F) ko "one idea = 0" mila.
+
+**Final 35-channel test (032, 033, 060 re-scored):**
+| Metric | Original | Q7 ke baad | Q8 ke baad |
+|---|---|---|---|
+| total W vs L | 1.85 vs 2.01 | 1.87 vs 2.02 | 1.92 vs 2.06 |
+| Wilcoxon p / q | 0.131 / 0.33 | 0.183 / 0.46 | 0.271 / 0.52 |
+| W-higher / L-higher / tie | 9/18/8 | 11/17/7 | 12/16/7 |
+| Criterion C p / q | 0.048 / 0.24 | 0.063 / 0.31 | 0.133 / 0.52 |
+| Mean Spearman | -0.11 | -0.088 | -0.071 (n=31, p=0.37) |
+
+**Nateeja:** koi bhi criterion BH ke baad significant nahi; "thumbnail style PI ko predict nahi karta" badla nahi. Original C p=0.048 sirf uncorrected tha, ab 0.13 hai. Bache hue: 057 ke thumbnails local mein nahi (UNKNOWN); scorer ek hi (Claude) hai isliye inter-rater reliability UNKNOWN.
