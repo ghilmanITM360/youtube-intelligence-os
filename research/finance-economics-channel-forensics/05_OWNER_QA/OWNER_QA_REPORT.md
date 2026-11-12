@@ -575,3 +575,27 @@ Mr. Finance ke 65 videos ke views 2-4 hafte baad dobara fetch karo (Apify metada
 
 ### Topic-selection par asar
 Topic scoring ko bonus factor maano, primary nahi. Test design mein publish-order randomize karo aur pehle 10 din ke views alag record karo.
+
+## Q13 — (owner Q3) Top 10 channel breakdown, supplement for the chosen model (2026-11-12)
+
+Owner Q3 ka pehla jawab upar "Q9" mein hai (Casual Finance, Primate, Crayon, MonkeyExplains, Economics Explained, Neu, Kevin, Capital Case, This make cents, Millionaire Problems). Yeh Q13 un 9 channels ko cover karta hai jo "everyday money economics" model ke liye sabse zyada instructive hain; Neu ke liye Q9 #6 dekho. Data: VIDEO_INVENTORY.csv (long-form only), CHANNEL_REPORT.md §10-§11. Cadence sirf newest <=100 uploads ke window se (INFERRED). Hook/script format yahan UNKNOWN jahan likha nahi.
+
+| Channel (report) | Sub-niche | Top videos (ID, views) | Median / spread |
+|---|---|---|---|
+| Mr. Finance 016 | business-ownership economics | Gym 4nYkN0wTi2Q 265,588; Ranch n1DXp7Y3xA4 170,828; Shopping Mall gooYkWPzqjc 132,815; flops Ski Resort KmQ7koHwuqY 401, Accounting Firm Nq0FwNlv8_c 794 | 16,037; 65 videos, 17 at PI>=2, 13 below 0.5 |
+| Business Decoded 035 | "Why [place] irrational behaviour" | Buffets 2T8JrUE_bz4 1,463,404; Free Bread nt2Zn2GftOQ 179,079; Outlet Stores YDTDdDZVtfk 137,971; flops Ransomware yiuFx4WOkbY 184, Fake Medicines GPoQlVLqChM 161 | 2,561; 42 videos |
+| Matty Invests 003 | retirees 55-75 | 7 Things Wealthy Retirees Stopped Buying 5V1gCUvdqMs 1,084,237; Why People Get Richer After Retirement 7mqI2YgRW1w 223,088; 10 Things Retirees Stopped Caring About A-lvYmMpGSA 219,096; flops 171-201 views (young budgeting) | 3,984; 94 videos, 27 at PI>=2 |
+| Carl Invests 013 | monthly-amount parameter series | 9 Signs Someone is Secretly Wealthy -HeOz5CF9ys 125,946; Invest $1,000 a Month w7Xu8O5TNHQ 81,930; Invest $100 Every Month 7sbA9WZrfHk 49,117 | 1,696; 80 videos, 27 PI>=2, 32 below 0.5 |
+| Robin MBA 019 | seniors x store perks | Costco A4hPtQsiWoA 569,470; Aldi BfOcC1094eo 348,055; Never Keep This Much in One Bank 0na9DiXBEK8 269,948 | 1,801; 56 videos |
+| Mark Invests 005 | A vs B decision duels | Renting vs Buying pnJCpIhshX4 495,096; Real Estate vs Stocks k-ZxdjawYDs 374,961; After Paying Off Your House sj7tGa1-WWM 372,131 | 1,429; 98 videos, 22 PI>=2 |
+| Logical Money 050 | A vs B duels | Renting vs Buying nkT_K8l1rEw 1,730,664; Real Estate vs Stocks bbP8Mr_MThk 225,706; 8 Minimalist Habits MpRWRSHlXd8 159,806 | 3,716; 25 videos |
+| Uncle John Financial 023 | retirement tax order, honest AI disclosure | Claiming Order Tax m-UIaaTzuvg 631,759; Paid-Off Home Worth in Retirement qjeLnPoGZ24 439,707; Withdrawal Order FDsE1xaiAKA 435,126 | 13,722; 52 videos; PI of these only 7-17 because channel already large |
+| Finance POV 015 | secret-wealth POV | POV Won the Lottery Told No One ZrXnvw9MqAE 340,689; Silent Businessman 3sLl-DmC_zE 244,445 and 86LiyytGuA4 220,425 | 4,295; 77 videos, 19 PI>=2 |
+
+Cadence (INFERRED, long-form per week): Mr. Finance ~8 (65 in 2 months), Robin ~3.7, Matty ~3.3, Mark ~3.3, Finance POV ~3, Carl ~2.7, Logical ~1.4, Uncle John ~1.2, Business Decoded ~2.7. Volume ne success predict nahi kiya (Q1/Q15).
+
+Title/thumbnail (report §10-§11): Mr. Finance fixed "The Economics of Owning a [X]", thumbnail "SO YOU WANT TO OWN A [X]" + building + cost icons; Matty "Retirees" + paradox, yellow keyword; Carl mascot + one big $ number; Robin store logo + "$0 / FREE JUST ASK" (brand-logo risk); Mark binary visual (BUY vs RENT); Uncle John 2-4 words; Finance POV calm protagonist, 0-2 words; Business Decoded and Logical Money montage not inspected = UNKNOWN. Thumbnail style PI predict nahi karta (q=0.52).
+
+Consistent pattern: subject/audience choice (gym, buffets, retirees, rent vs buy, Costco). Fail: same template on morbid/billionaire/niche subjects (ski resort, accounting firm), young-audience budgeting (Matty), crowded infographics (Mark), CAPS/"something is changing" (Robin).
+Learning: Mr. Finance = subject test; Business Decoded = place paradox; Matty = audience pivot; Carl = parameter series; Robin = perennial perk lists (policy-risk caveat); Mark/Logical = duels; Uncle John = disclosure + sources; Finance POV = fiction (lottery-like, avoid as core).
+Caveats: no CTR/retention; samples <=100 uploads; hook/script format not re-extracted here (UNKNOWN).
