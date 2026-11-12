@@ -16,6 +16,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q7 | 2026-11-12 | Channel 032 aur 033 ke blind montage dobara bana ke re-score |
 | Q8 | 2026-11-12 | Channel 060 (Sarah Rickshaw) ka blind montage dobara bana ke re-score |
 | Q9 | 2026-11-12 | Top 10 most instructive channels (repeatable lessons, sirf views nahi) |
+| Q10 | 2026-11-12 | Neu (022) ka format thora detail mein samjhao |
 
 ---
 
@@ -379,3 +380,44 @@ Note: views = DB snapshot. PI = video ki views / channel ke 15 nearest uploads k
 - **Lottery-like:** 12 (Kevin), 58, POV channels: PI bahut high, median kam.
 - **Thumbnail:** isse "jeeta" nahi sabit hota (null test); consistent ownable style hi common hai.
 - **UNKNOWN:** CTR, retention, thumbnails for 55/39/40/59/58/62 (montage inspect nahi hua), Economics Explained ki dates, 057 thumbnails.
+
+
+## Q10 — Neu (022) ka format explain (2026-11-12)
+
+Source: `01_CHANNEL_REPORTS/022_neu/CHANNEL_REPORT.md` §1, §4, §5, §6, §13, §18-§22 aur `VIDEO_INVENTORY.csv` (56 videos, 2025-09 se 2026-11).
+
+**Ek line:** "Samundar/transport ki ek dikhne wali cheez (jahaz, container, port) chuno -> usmein ek ajeeb economic sach (paradox) dhundo -> 9 minute mein numbers ke saath samjhao."
+
+### Format ke 5 hisse (VERIFIED report se; kaaran INFERRED)
+1. **Topic = object, idea nahi.** Jahaz, container, port, crane, tanker. Seedha dikhne wali cheez.
+2. **Paradox title.** "Cheaper to Abandon This Container" `eh4-CioOx6s` 505k; "Largest Ship Graveyard" `HyUjsfhX4-Y` 1.12M (PI 24.4); "Economics of Owning A Ship" `cQ4f-24Lp0U` 650k (PI 14.1). Titles mein number/"you" nahi.
+3. **Thumbnail:** ek bada photoreal object + 2-4 bold words yellow box mein ("STILL WORTH MILLIONS", "SO YOU WANT TO BUY A SHIP", "THE CARTEL OF CONTAINERS"). Losers: map, orange 3-D render.
+4. **Script:** ~1,300-1,500 words, 8-10 min. Pehle 10 sec mein ek ajeeb fact ("Here's something weird about global shipping" / "Somewhere in the Indian Ocean, a massive container ship..."). Numbers bohot (2.45 per 100 words winners mein), "you" kam. End mein agla related video.
+5. **Cadence:** ~4/month, har video 8-10 min (median 9.0).
+
+### Do tarah ke jeetne wale video
+- **Story-of-one-object:** Ship Graveyard - ek jahaz ki zindagi, end Alang beach par.
+- **Ownership template:** "Economics of Owning A Ship" - "So you want to buy a ship... $50M, $120M". Yeh template Mr. Finance (016) se liya gaya (idea source INFERRED, title overlap 0%).
+- **Paradox:** Container chhodna sasta kyun. **Concentration:** Sirf 3 companies containers banati hain `ueZcDQAVofk` 404k (PI 11.1).
+
+### Jo kaam NAHI karta (VERIFIED numbers)
+- **Object dikhta nahi / alag jagah:** Airplane Graveyard `G66MoHRtoYw` 9.5k (PI 0.19) - wahi "graveyard" frame jahaz par 1.12M, plane par 9.5k. Economics of Owning A Plane `c5xQuVIkN58` 58.9k (PI 1.17) vs Ship 650k. Matlab template object badalne se transfer nahi hota (1 jodi ka tulna - INFERRED).
+- **Geopolitics/crime:** Nuclear Icebreakers `rDe9wmDfwGo` 10k, Pirates Ransom `vQCNXbm2jjU` 8.6k.
+- **Off-niche:** Data Centers `x3GF5mO7Ebk` 2.9k (PI 0.06), Nobody Wants To Work `W0bZNfoOreI` 7.6k.
+- **Variant-spam:** "How A Single Company Owns/Dominates..." 5-6 versions, sab 36k-102k (PI ~0.7-2.8) - pehla container wala 404k tha, baad ke sab kamzor (INFERRED: audience repeat se thak gayi, HYPOTHESIS).
+
+### Numbers (VERIFIED)
+56 videos, median ~45.6k views. Top 5 (1.12M, 650k, 505k, 404k, 337k) PI 7-24. Zyada tar winners Dec 2025-Apr 2026 ke hain; Jul-Nov 2026 mein BYD `nWUcDEfUiBU` 240k, Singapore port `rqTJoriWdFk` 337k jaise kuch hi bade hit aaye (UNKNOWN: kya channel growth ya algorithm ka asar). Length aur PI ka rishta negative (rho -0.27): chhote video behtar.
+
+### Aap kaise apply karoge (INFERRED, ek checklist)
+1. Ek niche chuno jahan "dikhne wali cheez" ho (jahaz/trucks/airports/supermarkets).
+2. Har cheez ke liye pucho: "Yeh ajeeb kyun hai?" (waste, cartel, sasta-mehnga ulta).
+3. Title paradox ya "So you want to own X"; thumbnail = object + 2-4 words.
+4. Script 9 min, pehle 10 sec mein ajeeb fact, har minute mein ek number.
+5. Test: pehle 3 video alag objects par, phir jo chale wahi doharao (variant-spam se bacho).
+
+### Caveats
+- Ek hi channel, causation UNKNOWN; CTR/retention data nahi.
+- Production quality (photoreal visuals) copy karna mehnga/skill-heavy hai - cost UNKNOWN.
+- PI 24 ek single outlier hai; baaki top 4 PI 7-14.
+- Claims plausibility-check hue, har number primary source se verify nahi.
