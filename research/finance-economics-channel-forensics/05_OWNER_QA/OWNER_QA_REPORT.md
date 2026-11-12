@@ -8,7 +8,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q | Date | Topic |
 |---|---|---|
 | Q1 | 2026-11-12 | Overall tiers, top 10, weak 10, common model, repeatable pattern, ek asal baat |
-| Q2 | 2026-11-12 | Thumbnails ka analysis hua? Packaging se click ka andaza |
+| Q2 | 2026-11-12 | Thumbnails ka analysis hua? Packaging se click ka andaza (+ update: 35 baaki channels ka visual score test) |
 | Q3 | 2026-11-12 | Research kahan rakhi hai + dusre agent ke liye handoff prompt |
 
 ---
@@ -126,8 +126,36 @@ Pixels nahi, **idea** farq dalta hai — thumbnail ek baat kahe aur title ki baa
 ### Click ka andaza lag sakta hai?
 Sirf aadha. Views = impressions × CTR; humare paas impressions nahi, is liye kam views ka matlab "bura thumbnail" bhi ho sakta hai aur "YouTube ne dikhaya hi nahi" bhi (UNKNOWN). Behtareen proxy: **same channel, same topic, alag packaging** ke pairs (Finance ANALYST jaise). Asal CTR sirf channel owner ke YouTube Studio mein hai.
 
-### Pending (agla kaam)
-Baaki 36 channels ka visual review (028 se aage ke 29 montages + 061–068 ke montage banana), har thumbnail ko score karna (one idea? number? title ko complement karta hai? emotion), aur score vs PI test. 5-hour usage 93% tha, is liye 2026-11-12 ko roka; reset ke baad.
+### Pending (agla kaam) — ab POORA hua, neeche "Q2 update" dekhein
+
+### Q2 update — baaki channels ka visual review + score test (2026-11-12)
+
+**Kya kiya (VERIFIED):** Channels 032–036 aur 038–068 (36 mein se **35**) ke thumbnails aankh se dekhe. Har channel se 4 sabse bade (PI) + 4 sabse chhote videos (kam videos wale channel mein kam), **262 thumbnails**. Sheets **blind** thi: tiles shuffle, sirf title dikha, PI/views chhupe; answer key alag file mein. **Channel 057 (Shaami Finance) UNKNOWN:** uske 13 thumbnail files local folder mein hain hi nahi (download nahi hue the; purana montage khali).
+
+**Score (har thumbnail par 0/1, INFERRED — meri subjective padhai):** I = ek hi idea? · N = number/amount dikhta hai? · C = title ko complement karta hai (nayi baat/angle, sirf title ki copy nahi)? · E = saaf emotion/stakes? Total 0–4.
+
+**Test:** har channel ke andar winners ka average minus losers ka average, phir 35 channels par Wilcoxon (BH-corrected).
+| Score | Winners avg | Losers avg | Winners ahead / Losers ahead / tie (channels) | p | q (corrected) |
+|---|---|---|---|---|---|
+| One idea | 0.94 | 0.92 | 7 / 3 / 25 | 0.37 | 0.52 |
+| Number | 0.34 | 0.38 | 9 / 14 / 12 | 0.42 | 0.52 |
+| Complements title | 0.32 | 0.44 | 6 / 16 / 13 | 0.048 | 0.24 |
+| Emotion | 0.24 | 0.27 | 9 / 12 / 14 | 0.63 | 0.63 |
+| **Total (0–4)** | **1.85** | **2.01** | 9 / 18 / 8 | 0.13 | 0.33 |
+Channel ke andar total score vs views ka average Spearman = **−0.11** (31 channels, p=0.17).
+
+**Nateeja (INFERRED):** Rubric score **PI ko predict nahi karta** — koi bhi test correction ke baad significant nahi, aur disha thodi ulti hai (winners ka score kam). Pehle ka automatic-feature nateeja (style ≈ zero asar) yahan visual rubric se bhi confirm hua. "One idea" lagbhag sab thumbnails mein hai (93%), isliye ceiling effect hai — yeh farq nahi kar sakta.
+Misaalein (VERIFIED numbers):
+- **Marcus Retires:** winners 74k–245k views, losers 93–242 views; thumbnail style almost same (text banner + senior-benefit prop). Farq topic/hook ka hai, packaging ka nahi.
+- **Uncle Frank Retirement:** sabse zyada score wale thumbnails (3–4: "$6,000 Tax Surprise", "Before You Withdraw $50,000") losers the (148–408 views); winners 7k–27k.
+- **The Expensive Part:** winners (Tavern 88k, Blacksmith 37k) ke thumbnails busy infographic-style (score 0); losers (Brothel 713) saaf scene — fir bhi hare.
+- **PensionCraft:** winners ka score zyada (2–3 vs 0–2) — 35 mein se sirf 9 channels aise.
+
+**Limits:** score maine diya (ek rater, human-coded second opinion nahi); title dikhne se topic ka asar poori tarah hat nahi sakta; PI-top/bottom compare hota hai, poora spectrum nahi; 064 aur 067 mein sirf 1 pair; Shorts-style/AI-faces ka alag test nahi. CTR/impressions UNKNOWN — "bura thumbnail" aur "YouTube ne dikhaya nahi" alag nahi kiye ja sakte.
+
+**Files:** local (commit nahi) `~/YIOS-local-audits/finance-viral-forensics-2026-11-12/out/thumb_review_{scores.txt,key.csv,scored.csv,results.csv}`, sheets `montage_blind/`; scripts `_scripts/15_thumb_review_sheets.py`, `16_thumb_review_stats.py` (repo).
+
+**Baaki UNKNOWN:** 057 ke thumbnails (fetch karne ki ijazat chahiye); human second rater.
 
 ---
 
