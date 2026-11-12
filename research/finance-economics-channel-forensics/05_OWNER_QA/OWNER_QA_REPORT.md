@@ -23,6 +23,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q14 | 2026-11-12 | (owner Q4) Mr. Finance 7 sub-sawal: Q11/Q12 mapping + synthesis correction |
 | Q15 | 2026-11-12 | (owner Q5) Matty Invests: young budgeting vs retirees, audience pivot, script comparison |
 | Q16 | 2026-11-12 | (owner Q12) Script ka winning structure: transcript proxies, winners vs losers, reusable template |
+| Q17 | 2026-11-12 | (owner Q13) Titles aur thumbnails: 15 title-pattern test, 5 winners + 5 losers har pattern, thumbnail inspection method |
 
 ---
 
@@ -762,3 +763,59 @@ Proof ek hi channel se: Neu `HyUjsfhX4-Y` Ship Graveyard (1,120,820 views) aur `
 - Sirf 4 excerpts quote kiye; baaki sirf ginti se.
 - Failed excerpt comparison sirf Neu pair mein poori dekhi.
 - Script: `/private/tmp` scratch mein tha, repo mein nahi (numbers reproduce karne ke liye tumhari kahne par `_scripts/` mein daal sakta hoon).
+
+
+---
+
+## Q17 — (owner Q13) Titles aur thumbnails ka forensic comparison (2026-11-12)
+
+**Method (VERIFIED):** `VIDEO_INVENTORY.csv` ke 3,056 long-form videos, 60 channels. Winner = PI >= 3 (19% of videos), Loser = PI <= 0.4 (20%). Title patterns regex se tag kiye (approximate). Thumbnails: **seedha dekha** 32 channels (001-031, 037) + 35 channels blind sheets (262 thumbnails, Q2 update), baaki OCR/automatic features; 057 UNKNOWN. Retention/CTR **DATA NOT AVAILABLE**.
+
+### Seedha jawab
+Title pattern aur thumbnail pattern dono **akele win ya loss predict nahi karte**. Ek hi title formula 700k aur 242 views dono deta hai.
+Misal: "7 Things ... Can't Take From You" - Mark Calloway `wafLcwHvn5U` 723,626 views (PI 350) vs channel 048 `LPxn5Mq8Sqk` 242 views (PI 0.02). "Stop/Bills after 65" - 006 `boC96bE_7Os` 397,508 vs 048 `t3lEL9Zv7Ks` 388. Farq channel ki reach/audience aur topic ka hai (Q11, Q16 se match).
+
+### Title patterns - winners vs losers (win% base 19, lose% base 20)
+| Pattern | n | Win% | Lose% | Median PI vs rest | Same-channel (channels jahan pattern wala > baaki) | Padh |
+|---|---|---|---|---|---|---|
+| Koi number | 1565 | 21 | 22 | 0.98 / 0.96 | 30/50 | koi asar nahi |
+| "N things/ways/signs" list | 376 | 19 | 19 | 0.98 / 0.98 | 16/27 | koi asar nahi |
+| Money amount ($ / k / million) | 488 | 18 | 21 | 0.98 / 0.98 | 17/36 | koi asar nahi |
+| Age/year (after 65, 30-year) | 474 | 23 | 27 | 0.93 / 0.98 | 20/37 | dono taraf zyada (polarised) |
+| vs/comparison | 137 | 18 | 21 | 1.07 / 0.97 | 10/16 | thoda +, LOW CONFIDENCE |
+| Sawaliya ("?") | 275 | **12** | 19 | 0.95 / 0.98 | 12/29 | win% kam, same-channel mein confirm nahi |
+| "you/your" | 1464 | 20 | 21 | 0.94 / 1.00 | 21/43 | koi asar nahi |
+| POV | 295 | 21 | 22 | 0.85 / 0.98 | 5/9 | channel-specific, LOW CONFIDENCE |
+| Secret/hidden/truth | 209 | 20 | 20 | 0.96 / 0.98 | 17/27 | koi asar nahi |
+| Gain/permission ("keep", "enough", "tax-free") | 163 | 21 | **16** | 0.98 / 0.98 | 10/26 | thoda +, same-channel nahi |
+| Protection ("can't touch/protect") | 27 | 30 | 15 | 1.01 / 0.98 | 3/4 | **LOW CONFIDENCE** (27 videos, 4 channels) |
+| Loss/fear words ("mistake", "trap", "stop", "crash") | 309 | **15** | **24** | **0.86 / 0.98** | 17/36 | sabse saaf ulta signal, par same-channel mein 17/36 = ~50% |
+
+**Gain/permission/protection ka evidence:** gain aur protection ki taraf thoda jhukav hai (21% vs 19%; 30% vs 19%), loss/fear ulti taraf (15% win, 24% lose), par koi pattern same-channel check mein pakka nahi nikla. **INFERRED, LOW-MODERATE**; "proven" nahi.
+**Kamzor title patterns (VERIFIED numbers, correlation):** loss/fear words, sawaliya titles jo sirf poochte hain, "POV: your investments start making..." (generic), age wale jahan topic narrow ho (UK pensioners).
+
+### 5 winners / 5 losers har pattern ke (VERIFIED, PI = channel ke andar relative)
+- **List "N things":** W: `5V1gCUvdqMs` 7 Things Wealthy Retirees Stopped Buying (Matty, 1,084,237); `wafLcwHvn5U` 7 Things They Can't Take From You After 65 (Calloway, 723,626); `ff8litp2qfQ` 7 Types of Income the IRS Cannot Touch (Nia, 258,793); `BfOcC1094eo` Aldi 14 Things (Robin, 348,055); `oPZjqx_6d1g` 3 Banking Changes 2026 (051, 126,232). L: `LPxn5Mq8Sqk` 7 Things IRS Can't Take (048, 242); `Zam1zZqkL8M` Joint Account 3 Things (009, 1,238); `lar24fyeTog` 5 Changes Veteran (012, 2,499); `F5MooA-Swbk` 9 Signs Never Broke (013, 119); `iYFBlEr1puA` POV Old Fisherman 5 Rules (058, 2,302).
+- **Money amount:** W: `2LXED3ENhck` $0 to $25M (034, 1,112,119); `dwSfdH1K7Zk` POV $1 Trillion (049, 592,649); `piJ-diS4zng` POV $6.3 Million (021, 281,847); `sNpbDH7IUKw` $600 threshold (027, 243,085); `BEvQcR323uI` $650 Million (015, 190,706). L: `-oWpfkh0mGY` $6,000 Senior Deduction (023, 2,167); `c49Mx_mGZNY` $250,000 Still Feels Broke (030, 361); `ggFY_2P_sH4` 4 Stages Compounding (058, 1,179); `AjuX4Ap_VGY` 4 Forms $50,000 (012, 2,753); `gMos6YxA2K0` GIS Trap $13,000 (018, 1,539).
+- **Age/year:** W: Calloway 7 Things After 65 (723,626); `3L4Mypm3uWo` POV 10-Year Reunion (046, 367,569); `boC96bE_7Os` 5 Bills After 65 (006, 397,508); `hNuWYk9YQsc` 7 Types After 65 (051, 96,911); `piJ-diS4zng` (281,847). L: `KQlnU39MdOQ` UK Pensioners After 60 (048, 303); `DttiTU2UZPU` $40,000 After 30 Years (029, 499); `huAZalqBkno` Medicare at 65 (023, 2,573); `74TqdaOqGbg` Retiring Early After 50 (030, 543); `jJu-T_WWQvI` Stop Paying 15 Things After 60 UK (056, 1,360).
+- **vs/comparison:** W: `nkT_K8l1rEw` Renting vs Buying (050, 1,730,664); `pnJCpIhshX4` Renting vs Buying (Mark Invests, 495,096); `eh4-CioOx6s` Cheaper to Abandon Container (Neu, 504,906); `hkRXzD3CH3c` Growth vs Dividend (029, 128,902); `TdXe2zRnTZs` SS 62 vs 70 (008, 31,225). L: `xn5wQuIpoWQ` Debt Payoff vs Investing (Matty, 171); `YzImd_a_pos` 401(k) vs Roth (038, 561); `padJBWbaCHo` EV vs Hybrid (029, 563); `X7HfWigRN7Q` SCHD vs Aristocrats (032, 394); `qprDtL-g6Lc` Banks Recommend vs (031, 1,318).
+- **Sawaliya:** W: `k-ZxdjawYDs` Real Estate vs Stocks? (005, 374,961); `Iagjpu1NgcM` Born Before 1966? (Lana, 383,202); `f6HIYQUiMoU` WTF Just Happened To The Housing Market (001, 361,243); `HZ9GXxQCxGs` Over 65 Paid-Off Home? (019, 115,119); `S81NPqovOT8` Why Are Dutch So Good at Ecommerce? (026, 295,240). L: `Zam1zZqkL8M` (1,238); `AjuX4Ap_VGY` (2,753); `DttiTU2UZPU` (499); `HA1BLrrkYjg` If Every Country Is in Debt (059, 6,379); `nzFUrIuUkrs` Medicare Dropping 1M? (010, 315).
+- **Loss/fear:** W: `hkRXzD3CH3c` Stop Guessing! (128,902); `O9YfXilMgC8` Grew Up Broke (027,948); `0na9DiXBEK8` Never Keep This Much... Mistake That Can Freeze (019, 269,948); `boC96bE_7Os` (397,508); `eOFlWP9yHak` Going Broke Almost Impossible (007, 186,697). L: `W30ihrvNRKU` Middle Class Trap (030, 155); `t3lEL9Zv7Ks` Stop Paying 5 Bills (048, 388); `RBGsBXmWkwY` Convenience Trap (003, 201); `YL3stNaRSRc` Stop Making RMD Mistake (038, 33); `ggFY_2P_sH4` (1,179).
+  Note: winners mein loss words aksar **gain ke saath** hain ("Never keep this much... " = protection), losers mein akele dar.
+- **Gain/permission:** W: "Never Keep More Than This in the Bank After 65" 5 alag channels - 019 `0na9DiXBEK8` 269,948; 051 `NXhhbwvx3Fg` 185,127; 010 `SQNY38k8QNU` 122,350; 027 `LMhA9A1QLYA` 9,303; 060 `NXbwK51_1n8` 72,315. L: `3_RmYBhThDQ` Why Americans Keep Buying $50K Cars (029, 478); `dIiJJMigQbA` POV Keep Small House (052, 931); `yuDsG8SLavU` Mom Needed $41,200 to Keep Her House (025, 2,448); `YjCAIYDwmes` How Much Cash Retirees Keep (031, 1,934); `OhWmgcwpqZ4` IRS Keep $1.2 Billion (010, 1,542). **Caveat:** yeh 5 winners ek hi concept ka copy hain (ledger: 18 channels), to "independent" evidence nahi.
+- **POV:** W: `piJ-diS4zng` (021), `3L4Mypm3uWo` (046), `dwSfdH1K7Zk` (049, 592,649), `0VqARlMwRiw` Neighbors (025, 157,129), `l0svo03j00M` Holding Company (015, 207,202). L: `Z5FKuB7wZJA` Investments... (054, 971); `qkyhSeiQizw` Mortgage vs Investing (011, 795); `U2KRQdwpJIU` Stepmom (021, 671); `iYFBlEr1puA` (058); `dIiJJMigQbA` (052).
+
+### Thumbnails (Q2 + Q2 update se, nayi ginti nahi)
+- **Main subject:** binary choice + do numbers (Mark Invests BUY -$88k / RENT +$70k), ek goal + ek amount (Carl jars), calm hero vs show-off (Lucas Grant, POV Wealth), physical risk metaphor (Tom Talks Money umbrella), senior channels mein date ya "$0 bill".
+- **Text:** <=4 words ka asar 0.97x (no effect); >8 words 1.11x (no effect); Kevin Explains 8-10 words wale winners bhi.
+- **Face/expression:** face detector 1.12x (q=0.13, 21/37 channels) - cartoon faces miss hote hain.
+- **Money/objects/logos:** number score (N): winners 0.34, losers 0.38 (q=0.52).
+- **Title-thumbnail overlap:** "complements title" winners 0.32, losers 0.44 (p=0.048, q=0.24) = **supported nahi**.
+- **Total rubric:** winners 1.85, losers 2.01, Spearman -0.11, **PI predict nahi karta**.
+- **Misaalein:** Marcus Retires winners 74k-245k aur losers 93-242 views, thumbnail style same. Uncle Frank ke "$6,000 Tax Surprise" thumbnails high score par 148-408 views. Finance ANALYST 367 -> 368k, jo title+packaging badalne se hua.
+
+### Limits
+- Title patterns regex hain; ek video kai patterns mein aa sakta hai; correlation, causation nahi.
+- PI channel ke andar relative hai, isliye bade channel ka "average" video bhi cross-channel zyada views le sakta hai; cross-channel pooling channel ki reach ko pattern par thop sakti hai (same-channel check isliye diya).
+- Impressions/CTR **DATA NOT AVAILABLE**: kam views "bura packaging" ya "YouTube ne dikhaya nahi" dono ho sakta hai - UNKNOWN.
+- Thumbnail rubric mera subjective score (ek rater), 057 UNKNOWN.
