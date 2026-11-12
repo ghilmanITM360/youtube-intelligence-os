@@ -21,6 +21,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q12 | 2026-11-12 | Mr. Finance ke upload-date effect ko test karna (age, cadence, topic-control, engagement) |
 | Q13 | 2026-11-12 | (owner Q3) Top 10 channels: Q9 list final + asli hook lines ka supplement |
 | Q14 | 2026-11-12 | (owner Q4) Mr. Finance 7 sub-sawal: Q11/Q12 mapping + synthesis correction |
+| Q15 | 2026-11-12 | (owner Q5) Matty Invests: young budgeting vs retirees, audience pivot, script comparison |
 
 ---
 
@@ -643,3 +644,56 @@ Naya analysis nahi; numbers Q11/Q12 se (VERIFIED computation, local python, snap
 | 7. Apne model mein | PI se compare, 3-sawal topic score, publish-order randomize, topic ko bonus factor maano. | Q11, Q12 |
 
 **Correction (important):** `04_FINAL_SYNTHESIS/FINAL_RESEARCH_CONCLUSIONS.md` Q1 kehta hai Mr. Finance ne "401 se 266k views sirf business choose karne se" paye. Q11/Q12 ke baad yeh **overstated** hai: topic ka asar real hai par upload date bada hai. Final synthesis file ko maine abhi badla nahi (raw/final evidence owner ke bina nahi chhedta); owner bole to wahan sentence sudhar dunga.
+
+
+## Q15 — (owner Q5) Matty Invests (003): young budgeting ~200 views vs retirees up to 1.08M (2026-11-12)
+
+Source: `01_CHANNEL_REPORTS/003_matty_invests/CHANNEL_REPORT.md` §1-§3 + `VIDEO_INVENTORY.csv` (94 videos, 92 dated) + transcripts in `data/catalog/finance_economics_complete.db`. Numbers computed locally (VERIFIED computation); readings INFERRED unless stated. 2 undated videos excluded from date splits.
+
+### Seedha jawab
+Audience badalne ke baad channel ka **median** ~16x badha, magar yeh pakka "audience ne karaya" sabit nahi hota (sirf 4 purane videos, channel ke pehle 6 din). Aur 1.08M ek akela video hai.
+
+### Numbers (VERIFIED)
+- **Young/general budgeting, 24-29 Jan 2026 (n=4):** 646 / 201 / 346 / 171 views; median 273.5.
+- **Retiree-focused, 31 Jan onwards (n=88):** median 4,283.5; min 582; max 1,084,237. 26 videos >=10k, 5 >=100k, 18 <2k, 7 <1k.
+- Channel ka median 3,984 = tier rule (<5k) se **UNDERPERFORMING** (`CHANNEL_TIER_RANKING.csv`); channel hit-driven hai, 16% breakout.
+- Monthly median (retiree videos): Feb 7,753; Mar 4,299; Apr 2,412; May 2,176; Jun 2,668; Jul 12,373; Aug 8,669.
+
+### 1. Kya audience change ne performance badla?
+- **Support:** 88 mein se sirf 3 retiree videos 700 se neeche gaye; purane 4 mein 646 max.
+- **Against "sirf audience":** (a) n=4 aur channel ke pehle 6 din = cold start confound; (b) retirement hote hue bhi flops: How Much You Need to Retire `Xnr2DD_fwI4` 1,596 (2 Feb), Sell These 5 Things `3vOefiaKRzg` 839 (3 Feb), Social Security Strategies `vHn0KvE_ku0` 582; (c) retiree videos ke andar 582 se 1.08M tak spread. (d) Topic, title style aur audience ek saath badle; alag karke test nahi hua. Purane audience par dobara test nahi kiya gaya, counterfactual **UNKNOWN**.
+
+### 2. Kaun se retiree topics/angles chale (VERIFIED titles/views)
+**>=100k:** 7 Things Wealthy Retirees Stopped Buying `5V1gCUvdqMs` 1,084,237; Why People Get Richer After Retirement `7mqI2YgRW1w` 223,088; 10 Things Retirees Just Stopped Caring About `A-lvYmMpGSA` 219,096; What Retirement Looks Like With $2 Million `6U9jXkpQBzE` 146,923; Simple Routines Thriving Retirees Practice `Q1RP8c_9bKs` 122,987.
+**50-100k:** $500,000 Retirement Reality `gR3EWBGXP2c` 95,382; Average Person Retires With This `OYOOB6eOong` 71,159; When a Retiree is Considered Wealthy `W-cQ90FFbi0` 63,942; 8 Signs You're Doing Better Than Most Retirees 48,964.
+Do angle families (INFERRED): (1) "Retirees ne kya chhoda/chhoda parwah karna" behaviour list + paradox; (2) dollar-amount reality check ($500k, $2M, average savings, "wealthy" threshold).
+**Kam chale:** tax/Social Security strategies (776 / 582), mortgage vs invest 652, 4% rule 1,344, "6 Signs You Will Be Broke" 2,268, "Worst Retirement Lies" 2,136 = mechanics ya fear/advice.
+
+### 3. Script same tha ya alag?
+**Same format, alag script (VERIFIED):** 0 near-duplicate flags; 6-word-phrase overlap sirf 0.1-1.9%. Dono mein ~2,150-2,650 words (~13-15 min) aur narrator-scene opening.
+| Measure | Young 4 | Retiree winners (4) |
+|---|---|---|
+| "you/your" per 100 words | 3.2-9.2 | 3.5-6.4 |
+| "retire*" per 100 words | 0.0-0.12 | 0.8-1.7 |
+| Avg words per sentence | 7.8-10.9 | 10.6-13.7 |
+| Opening | viewer ka apna 11pm phone/bank scene, ya "Lucy, 28" | named older person ("Steve, 68", "Ray, 76") ya retirees ke baare mein ek claim ("sab ek weird habit share karte hain") |
+Matlab "same script" kehna **overstated** hai (final synthesis Q1 mein "identical scripts" likha hai; maine file badli nahi). Sahi: same host, same length, same scene-opening shape; subject, audience aur title badle. Named people real hain ya nahi **UNKNOWN** (faceless channel, anecdote verify nahi hota).
+
+### 4. Audience selection se kya seekhein (INFERRED)
+Audience ko title mein naam do ("Retirees") aur uski ek specific cheez par video banao. Pehle 4-5 videos mein audience test karo, jo respond kare usi par jao. Limit: ek channel ka ek pivot, n chhota.
+
+### 5. Kya retirement ek promising alag sub-niche hai?
+**Partly.** Support: Matty ke 26/88 >=10k; final synthesis Model 2 (Uncle John 440k, Mark Retired at 55 103k, Tom Lazy 282k...) steady, low policy risk. Against: Matty ka median 4.3k (tier UNDERPERFORMING), Kevin Explains ka senior-benefit sub-niche saturated aur policy-exposed. "Retirement adequacy/lifestyle" promising hai; "alag aur proven" **LOW CONFIDENCE** (ek channel ka pivot).
+
+### 6. Exact structure (sirf jo winners mein VERIFIED hai)
+1. **Title:** "[N] Things [Wealthy/Smart/Thriving] Retirees [Stopped/Quit/Don't] ..." ya "What Retirement Looks Like With $[amount]" / "If You Have Saved $[amount]...".
+2. **Thumbnail (report §1):** white background, 3-4 bold words, ek yellow keyword. Thumbnail style PI predict nahi karta (q=0.52), isliye yeh sirf "kya karta hai".
+3. **Length:** ~14 min, ~2,400 words.
+4. **Opening:** retirees ke baare mein ek surprising claim, ya ek named older person ke saath ek scene (3 winners ki opening dekhi; baaki nahi).
+5. **Cadence:** ~13 uploads/month; Jul-Aug median Apr-Jun se zyada (behaviour-list wale titles ke saath, INFERRED).
+**Nahi copy karna:** mechanics/strategy titles, fear titles. Aur ek hit (5V1, PI 498) lottery jaisa hai - uspe plan mat banao.
+
+### Limits
+- Views ka ek snapshot; CTR, retention, traffic source **DATA NOT AVAILABLE**.
+- Sirf 4 pre-pivot videos, **LOW CONFIDENCE**.
+- Hook sirf 7 videos ki opening se dekha; poore channel ka hook-pattern gino se confirm nahi kiya.
