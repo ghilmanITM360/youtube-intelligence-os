@@ -17,6 +17,7 @@ Labels: **VERIFIED** (DB/public source), **INFERRED** (analyst reading/rule), **
 | Q8 | 2026-11-12 | Channel 060 (Sarah Rickshaw) ka blind montage dobara bana ke re-score |
 | Q9 | 2026-11-12 | Top 10 most instructive channels (repeatable lessons, sirf views nahi) |
 | Q10 | 2026-11-12 | Neu (022) ka format thora detail mein samjhao |
+| Q11 | 2026-11-12 | Mr. Finance (016): same packaging, views 401 se 265,588 - kyun? (topic vs upload-date vs familiarity) |
 
 ---
 
@@ -421,3 +422,82 @@ Source: `01_CHANNEL_REPORTS/022_neu/CHANNEL_REPORT.md` §1, §4, §5, §6, §13,
 - Production quality (photoreal visuals) copy karna mehnga/skill-heavy hai - cost UNKNOWN.
 - PI 24 ek single outlier hai; baaki top 4 PI 7-14.
 - Claims plausibility-check hue, har number primary source se verify nahi.
+
+
+## Q11 — Mr. Finance (016): same packaging, views 401 se 265,588 (2026-11-12)
+
+Source: `01_CHANNEL_REPORTS/016_mr_finance/CHANNEL_REPORT.md` §1, §4-§7, §10-§13, §15, §18, §22 + `VIDEO_INVENTORY.csv` (65 videos, sab "The Economics of Owning a [X]"). Naya analysis (VERIFIED numbers, local python): views/PI vs upload date, business category (mera coding - INFERRED), cross-channel check Millionaire Problems (062) se.
+
+### Premise check
+- **VERIFIED:** title 100% ek template; thumbnail layout same ("SO YOU WANT TO OWN A [X]" + building illustration); hook same ("Okay, so you want to own a [X]..."). Spread 401 (Ski Resort `KmQ7koHwuqY`) se 265,588 (Gym `4nYkN0wTi2Q`) = ~662x.
+- **Exception:** Pharmaceutical Company `LPk-WVb7bcw` ka hook template todta hai (Turing/Daraprim story) - report §6.
+- Thumbnail ka visual appeal (inviting storefront) UNTESTED - constant hai isliye test nahi ho sakta.
+
+### Sabse bada naya finding: upload date (VERIFIED)
+- Saare 65 video 28 Jun - 24 Aug 2026 ke beech (~34/month). Views upload date se bohot jude hain: Spearman rho = -0.83 (n=62 dated, p<1e-16): jitna naya, utne kam views.
+| Upload window | n | median views | median PI |
+|---|---|---|---|
+| 28 Jun - 12 Jul | 14 | 53,405 | 1.13 |
+| 13 - 26 Jul | 18 | 27,997 | 1.05 |
+| 27 Jul - 9 Aug | 15 | 6,871 | 1.04 |
+| 10 - 24 Aug | 15 | 2,964 | 0.78 |
+- Sabse kam views waale 5 mein se 4 upload 18-24 Aug ke aas-paas hain (Ski Resort 24 Aug, Accounting Firm `Nq0FwNlv8_c` 794 views 24 Aug, Laundromat `ev2HYq2HdnA` 1,771 23 Aug, Cement Plant `l0sy1sZX8Ig` 2,031 23 Aug).
+- **PI age se uncorrelated** (rho 0.07, p=0.59) kyunki PI apne 15 nearest uploads se compare hota hai. Isliye topic ka asar PI par dekhna zyada safe hai, raw views par nahi.
+- Is date-effect ka KAARAN UNKNOWN: (a) naye video ko kam time (sirf 80-136 din ka farq - itna bada gap sirf time se nahi samjhta, INFERRED), (b) ek hi template ka 34/month spam -> viewer/algorithm thakan (HYPOTHESIS), (c) channel ke shuruaati videos ko zyada push (HYPOTHESIS). Test nahi ho sakta.
+
+### Business category vs result (category coding mera hai - INFERRED, sensitivity possible)
+| Category | n | median views | median PI |
+|---|---|---|---|
+| Familiar consumer (gym, cafe, restaurant, supermarket, car dealership, hotel...) | 31 | 20,636 | 1.37 |
+| Large/exotic/capital-heavy (airport, bank, ranch, F1 team, ski resort...) | 27 | 16,753 | 0.78 |
+| Credentialed/specialist (pharmacy, martial arts, accounting, firearms...) | 7 | 3,440 | 0.27 |
+- PI par: familiar vs exotic p=0.008; familiar vs credentialed p<0.001 (Mann-Whitney, no multiple-correction, exploratory). Raw views par familiar vs exotic: p=0.67 (kyunki exotic wale jaldi upload hue).
+- Date-adjusted regression (log views ~ age + category, n=62): familiar ~1.6x exotic (t=2.2), credentialed ~0.5x (t=-2.3); har ek mahina purana video ~7.6x zyada views (t=11.7). Yaani date ka asar category se kaafi bada.
+- Same-window check: 13-26 Jul: familiar median 55,493 vs exotic 16,037 vs credentialed 4,288. 28 Jun-12 Jul: familiar 70,576 vs exotic 45,763. 27 Jul ke baad teeno ~3-8k par barabar (floor effect).
+
+### Highest aur lowest (VERIFIED)
+**Top 10:** Gym 265,588 (PI 8.7); Ranch `n1DXp7Y3xA4` 170,828 (2.9); Shopping Mall `gooYkWPzqjc` 132,815 (2.2); Cafe 108,250 (6.75, undated); Gas Station `yHCOgKumhxE` 96,360 (3.1); Car Dealership `2ppyMGoHsoc` 93,426 (2.8); Sports Team `v9uxAPuD8Ko` 73,062 (1.2); Bank `37NXosi2ipA` 67,864 (1.1); Airport `RXmZ_BcAzAM` 65,170 (1.1); Five-Star Hotel `1s6asmohIqo` 61,876 (3.3).
+**Bottom 10:** Ski Resort 401 (0.14); Accounting Firm 794 (0.27); Laundromat 1,771 (0.60); Cement Plant 2,031 (0.69); RV Parks `00MQZk_UBdk` 2,122 (0.72); Firearms Store `KjEMeBten3k` 2,482 (0.84); Beauty Salon `nMQZGcVQsRA` 2,692 (0.67); Shooting Range `-sogmfhdJcM` 2,965 (1.0); Pet Store `LQpOwnBXZBc` 2,964 (0.53); Fish Boat `lAiTx8muoAw` 3,046 (0.78).
+**Sabse kam PI (aur date se bacha hua):** Martial Arts Club `zcgFKPC44ds` 4,288 (0.13), Gold Mine `mcwwVYj7izI` (0.22), Pharmacy `-A1Yc9rk5_c` (0.22), Private Island `KnZ_LUXBOPo` (0.20), Pharma Co. (0.18).
+**Cafe/gym PI** 8.7 / 6.75 - sabse strong signal.
+
+### Common characteristics
+- **High:** gym, cafe, food truck, cinema, hotel, car dealership, gas station = log roz dekhte/jaate hain + "yeh to aasaan dikhta hai" wala romantic picture (hook ke saath fit). Magar Ranch 171k, Bank 68k, Airport 65k, Sports Team 73k bhi top-10 mein - yaani "sirf relatable plan" wali theory poori sahi nahi.
+- **Low PI:** license/skill chahiye (pharmacy, martial arts, accounting, firearms) ya fantasy-scale (private island, gold mine, private jet) - viewer khud "main khol sakta hoon" nahi soch pata.
+- **Familiar hokar bhi low (counter-examples):** Laundromat 1,771, Grocery Store `KJr3CKAgu78` 3,560, Dry Cleaning `_B0cASirKyE` 3,239, Hardware 6,237, Pet Store 2,964, Hair Salon `2reQHHkQV-g` 4,307 - sab 3-24 Aug ke upload. Report §22 ne laundromat copy karne ko kaha - yeh data se support nahi hota.
+
+### Cross-channel check (VERIFIED, n=5 same topics, anecdotal)
+Millionaire Problems (062), wahi template, mai-jun 2026:
+| Topic | Millionaire Problems | Mr. Finance |
+|---|---|---|
+| Casino | 700,164 | 14,092 (PI 0.74) |
+| Bank | 106,963 | 67,864 |
+| Airport | 95,313 | 65,170 |
+| Car Dealership | 18,624 | 93,426 |
+| Sports/Football Team | 11,583 | 73,062 |
+Topic ka rank do channels mein same nahi chalta (casino 50x farq, dealership/sports ulta). Matlab topic akela nahi - channel, upload time ya audience pehle se kaam kar rahi hai (UNKNOWN kaun sa).
+
+### Kaun si explanation support hoti hai
+| Explanation | Verdict |
+|---|---|
+| Familiarity (viewer ne wahan kadam rakha hai) | **Partly supported** - PI par significant; raw views par date confound; 6 familiar flops. |
+| Economic relevance / "kya main kar sakta hoon" | **Partly supported** - credentialed/fantasy sabse neeche (PI 0.13-0.27). |
+| Curiosity (fantasy cheezein) | **Not supported akele** - casino 14k, gold mine 10k, private island 9k. |
+| Brand recognition | **UNKNOWN** - titles mein koi brand naam nahi (generic businesses). |
+| Upload date / saturation | **Strongly supported (VERIFIED correlation), kaaran UNKNOWN.** |
+| Packaging | **Test nahi ho sakta** - constant. |
+| Video length | Weak (rho 0.07 views, report: 0.23 PI). |
+
+### Apne topic-selection model mein kaise lo (INFERRED)
+1. **Raw views nahi, PI se tulna karo.** Ya same-week ke videos ke beech tulna.
+2. **Topic ko 3 sawalon se score karo (0-2 har ek):** (a) kya viewer ne personally ye jagah dekhi hai? (b) kya woh sach mein "main khol sakta hoon" sochta hai (koi license nahi)? (c) kya ek romantic picture hai jo numbers se toote?
+3. **Fantasy/credentialed topics avoid karo** jab tak koi timeliness na ho (Data Center PI 4.1 apwaad, 16k views).
+4. **34 video/month ek template par mat dalo** - date-effect ka ek possible kaaran. Pehle 6-8 alag topics test karo, rotate karo, publish order randomize karo taaki order aur topic alag ho sakein.
+5. **Report §22 ki laundromat recommendation tab tak mat maano** jab tak woh topic jaldi upload hoke test na ho.
+6. **Pehle apna channel baseline** dekho (Millionaire Problems ke casino 700k bante Mr. Finance 14k ye dikhata hai ki topic ka transfer guaranteed nahi).
+
+### Caveats
+- Business category coding mera judgment hai; chhota sample (n=7 credentialed).
+- Mann-Whitney p-values multiple-test correction ke bina (exploratory).
+- Upload date vs algorithm dynamics ka kaaran UNKNOWN; CTR/impressions/retention data nahi.
+- Views snapshot ek hi date ka hai (metadata_level FULL), per-video views history nahi.
