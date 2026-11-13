@@ -128,3 +128,14 @@ Primary sources padhe: NY Fed Q3 2026 report PDF (hhdc_2026q3.pdf, pdftotext se 
 **Daily Dollar Doodles** (d4hXjS18hCM, 966 s, 2026-11-12, 1 view): transcript NOT READ. The caption endpoint returned HTTP 429 (rate limit) on 3 tries. Retry later; the "Myth 3" chapter is unchecked.
 
 **Effect on C2 decision:** strict rule (same question and payoff already public = REJECT) now points to REJECT for the plain "why did student loan delinquency fall" framing. A possible survivor is the **by-age angle from NY Fed p.28** (not found in any video, but it is read from a chart image, INFERRED, reuse terms UNKNOWN). Status: **NEEDS MORE RESEARCH, leaning REJECT for the base-effect framing**. Pilot PASS total still 0.
+
+## 10. vidIQ side-panel test (2026-11-14, Chrome, video c4mEwSRCGno)
+
+Owner rule: the only extra data source is what the YouTube page and the vidIQ side panel show. Studio CTR, retention and traffic stay UNKNOWN.
+
+Test result (VERIFIED, one video, free vidIQ plan; "Upgrade to Boost" locks some blocks):
+- SHOWN: video views (23), comments (0), likes (0), SEO score 35 and 0/20 for "Ranked Tags", channel subs ("-"), channel total views (202), video count (6), channel tags, video tags, Best Practices checklist, a small views-over-time chart, and views-per-hour (VPH) with a "x" multiple on the related-video cards.
+- LOCKED / NOT SEEN: controversial keywords (paywalled). Search volume and competition scores were not in the panel on this page (UNKNOWN whether they sit in a separate vidIQ tool).
+- Label rule: every vidIQ number is a third-party display, not Studio data. Use INFERRED. It does not replace Trends for demand.
+- How it is used from now on: for each candidate, open the closest existing video, record views, age, VPH, tags, SEO score. This feeds "is the topic already served" and "does the packaging get views", not CTR.
+- Side finding (VERIFIED): the Tredy video has 23 views and the channel 202 total views over 6 videos, so the overlap with C2 is a content overlap, not proof of audience demand either way.
