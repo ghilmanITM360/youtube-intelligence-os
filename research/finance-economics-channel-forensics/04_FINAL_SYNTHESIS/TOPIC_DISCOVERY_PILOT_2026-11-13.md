@@ -139,3 +139,18 @@ Test result (VERIFIED, one video, free vidIQ plan; "Upgrade to Boost" locks some
 - Label rule: every vidIQ number is a third-party display, not Studio data. Use INFERRED. It does not replace Trends for demand.
 - How it is used from now on: for each candidate, open the closest existing video, record views, age, VPH, tags, SEO score. This feeds "is the topic already served" and "does the packaging get views", not CTR.
 - Side finding (VERIFIED): the Tredy video has 23 views and the channel 202 total views over 6 videos, so the overlap with C2 is a content overlap, not proof of audience demand either way.
+
+## 11. Batch 2 candidates (2026-11-14): event-based, 5 YouTube searches each
+
+Method: web search for November 2026 events, then 5 yt-dlp YouTube searches per candidate (search result titles, channels, views read; transcripts NOT read). Search results are a snapshot of public YouTube search, not Studio data. Candidate events come from web-search snippets, so each is "reported", not primary-document VERIFIED, unless stated.
+
+| id | event | YouTube coverage found (5 searches) | decision |
+|---|---|---|---|
+| C3 | Redeemer Health (PA Catholic system) Chapter 11, filed about 2026-11-01, E.D. Pa., lead case 26-14631-djb, about $87M tax-exempt bonds defaulted (Sept 2026 payment missed), about $441M liabilities (reported by Becker's, MLex, Bondoro, Inquirer; docket NOT opened) | No video explaining the bankruptcy. Only the system's own promo videos and unrelated hospital-bankruptcy news (Steward, YesCare, St. Christopher's). Closest: "What Happened to Steward Health Care?" (Empires Crumble, 26 views), different event. | NEEDS MORE RESEARCH (leading). Not PASS: demand UNKNOWN (tiny local topic, Trends not run), first-day declaration not read, rights and channel-model fit not judged. |
+| C4 | Visa/Mastercard $38B swipe-fee settlement (prelim. approval June 2026, final approval pending) | 25+ videos incl. TODAY, NewsNation, many small explainers ("Explained", "What it means") | REJECT: same question and payoff already public. |
+| C5 | Leslie's pool supplies Chapter 11 (filed 2026-09-30 per sec-api list) | 10+ small-channel bankruptcy autopsies ("Why did Leslie's file...", "The balance sheet that sank Leslie's", "What the filing says") | REJECT: saturated, same payoff. |
+| C6 | Fed G.19 September consumer credit +$27.84B vs about $13.8B expected, revolving +$16.3B (TheStreet snippet; G.19 PDF not opened) | "Americans Just Borrowed $27.8 Billion In One Month (Explained Like You're 5)" exists (0 views), plus many generic card-debt videos | REJECT: same headline payoff already public. |
+
+Observation (INFERRED, from these searches): a small-channel pipeline covers bankruptcies and Fed prints within days. Recency alone is not an edge; an uncovered event is rare and short-lived. The surviving angle must be a document-level reading (what the filing actually says about the bonds) that those videos do not do, which is HYPOTHESIS until a transcript of the closest video is read.
+
+Pilot PASS total after batch 2: 0.
