@@ -218,3 +218,18 @@ Reading (INFERRED): where demand exists (private credit), large channels already
 Strict-rule result for the whole pilot: C1 to C6 and E1 to E5 all REJECT or leaning REJECT. Pilot PASS total: **0 of 11 candidates.** Limits of this pilot (so the 0 is not over-read): 11 candidates only; searches read by title, not by transcript, so a REJECT based on a similar title could miss a different payoff (a transcript check can only turn REJECT into "needs more research", never invent a PASS); Trends read by eye; Studio data unavailable.
 
 Consequence for the deliverables: PDF 13 (Approved First 10 Videos) will state "no candidate passed the strict rule" with this screening table as evidence, not a list of 10 topics. The launch plan (PDF 14) must say the first videos need a topic screen at launch time, with this method and kill rule.
+
+## 15. Autocomplete-led candidates F1 to F4 (2026-11-14)
+
+Method: YouTube autocomplete (suggestqueries, ds=yt, gl=us) as a demand signal (a phrase appearing as a suggestion means people type it; VERIFIED that the suggestion appeared, it gives no volume), then 5 YouTube searches per candidate (titles, channels, views; transcripts NOT read). Autocomplete is not personalised to the US reliably (generic seeds returned many non-finance and South-Asian results), so only finance-specific suggestions were used.
+
+| id | question (autocomplete phrase) | closest existing videos (examples) | decision |
+|---|---|---|---|
+| F1 | "why are central banks buying gold" | Bloomberg Television 516k, Money & Macro 155k, Kitco/World Gold Council 77k, WION 28k, many 2026 explainers | REJECT: same question and payoff public. |
+| F2 | "who owns us debt / america's debt" | Bloomberg Television "Who Is Buying America's Debt These Days?" 493k, Economics Help 244k, PBS NewsHour 170k, "Who does America owe $40 trillion" x3 small channels | REJECT: saturated. |
+| F3 | "what happened to dollar tree" (Family Dollar sale) | CNBC 1.1M, WSJ 213k, Company Man 142k, Michael Girdley 102k, "Dollar Tree paid $9 billion for Family Dollar. It sold for $1 billion." (small) | REJECT: saturated, same payoff. |
+| F4 | gold falling (Nov 2026 event) | 15+ forecast and "why is gold falling" videos in the last two weeks (Chart Origins 21k, Forex Insights 24k, Kitco) | REJECT: saturated. |
+
+Pilot total: C1 to C6, E1 to E5, F1 to F4 = 15 candidates, **0 PASS**.
+
+Pattern across all 15 (INFERRED, MEDIUM): a finance question that is typed into YouTube often enough to show in autocomplete is already answered by at least one large channel and several small ones. The strict rule ("same question and payoff already public = REJECT") therefore rejects almost any topic with measurable demand. This is a property of the rule plus this niche, not proof that no good video exists: the rule treats a different angle, depth or format as insufficient, so it cannot pass a "better version of a covered topic". Whether to loosen the rule (for example allow a document-depth angle on a covered topic) is an owner decision; it is not made here, and nothing was force-filled.
