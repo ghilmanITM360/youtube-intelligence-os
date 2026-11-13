@@ -47,3 +47,20 @@ New York Fed Q3 2026 Household Debt and Credit Report, 2026-11-10: https://www.n
 - Isliye PDFs 12-15 ka content abhi **nahi** ban sakta: first-10 shortlist mein 0 candidate. Forcefully fill nahi kiya.
 - Baaqi kaam: C1 ke closest video ka transcript, older-video search, C2 ki research, aur naye event-based candidates (filings, court docs, data releases) jo is pilot mein nahi aaye (WebSearch ne is hafte ke SEC/court/Fed events nahi diye).
 - Tool note: YouTube-Search Trends mein specific queries par aksar "not enough data"; pura 6-window check sirf broad parent term par ho saka.
+
+## 4. C1 full research (2026-11-13, same day, Chrome + descriptions)
+Transcripts: YouTube transcript panel Chrome mein khula magar DOM se segments nahi nikle (0 chars), caption-URL fetch bhi khali. Isliye payoff **title + poori description + chapters** se parha (transcript NOT READ, VERIFIED limitation).
+
+Extra searches (5): "credit card vintage delinquency pandemic originations subprime cards issued 2021" (zyadatar irrelevant); "did banks cause credit card delinquencies pandemic lending boom"; "credit card delinquencies falling is the credit card crisis over"; "credit card delinquency by neighborhood income New York Fed"; plus pehli 4 searches (section 2).
+
+**Decisive finding (VERIFIED, description):** *"$1.29 trillion in credit card debt, and the Fed's note buries the real story."* (M81o4LQUa_M), Second Start Money, 2026-11-11, 179 s, 1 view. Description: balances +4% YoY, share 90-days-late **decreased**; "New York Fed reports indicate cards issued between 2020 and 2022 are driving a significant portion of these new delinquencies"; "widening gap between ... richer and poorer neighborhoods". Yaani C1 ka asli payoff (2020-22 vintage + neighborhood-income gap, same Liberty Street source) 11 Nov ko hi ek chhoti video mein aa chuka hai. Qualifier: video sirf 3 min, 1 view, aur maine uska transcript nahi parha, to depth UNKNOWN.
+
+Baaqi closest: Mike the Credit Guy (SZ7AkgUGVuw) 695 s, 2,045 views in ~1 din (VERIFIED): NY Fed headline + 30/60/90/180-din late ka credit-score asar + dispute-letter funnel; vintage angle description mein nahi. Finance, Simply Explained (U21GfeVM3Cc, 51 views, 2026-08): stock vs flow delinquency (13% vs ~7%), vintage nahi.
+
+Demand signals (VERIFIED jab dekha): headline NY Fed video 2K in ~1 din; credit-card-trouble framing par bade view: Wall Street Truthbombs "$1.26T Credit Card Trap" 28K (2 mahine), Snyder Reports 18K (2 mahine). Ye alarmist framing hai; "echo fading" contrarian angle ki demand ka evidence nahi (UNKNOWN).
+
+**Decision C1 (as stated): REJECT.** Strict rule: same source, same question, same headline payoff (2020-22 vintage + income gap) pehle se public. Hamara farq sirf depth/visuals hota, jo rule ke mutabiq kafi nahi.
+
+**Reframe jo bacha (NEEDS MORE RESEARCH, PASS nahi):** Liberty Street kehta hai 2023 ke baad ke cards ke origination scores *behtar* hain; Stank Finance ke description ka TransUnion data kehta hai below-prime share 38.7% -> 40.6% -> 42.3% (alag score model/source). Agar dono primary reports (NY Fed + TransUnion Q3 2026) khud verify hon aur sach mein farq ho, to "kya banks dobara riskier lending kar rahe hain?" ek naya comparison ho sakta hai. Abhi TransUnion ka koi primary source maine nahi khola; sirf ek 1-view video ka description hai, isliye ye figures **UNVERIFIED** hain aur is reframe ko evidence mat maano.
+
+Reference model/feasibility: check nahi kiya (candidate abhi PASS ke qareeb nahi).
