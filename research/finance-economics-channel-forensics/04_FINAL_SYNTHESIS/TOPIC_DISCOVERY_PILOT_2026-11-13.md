@@ -96,3 +96,12 @@ Transcripts NOT READ (description/chapters sirf).
 Agla qadam (agar chaho): NY Fed Q3'26 report PDF (hhdc_2026q3) mein student table/footnotes se wajah primary verify, aur Tredy / Daily Dollar Doodles ke transcript.
 
 **Pilot total: PASS 0** (C1 REJECT, C3 REJECT, C2 NEEDS MORE RESEARCH, closer to PASS than C1).
+
+## 7. C2 primary verify (2026-11-13)
+Primary sources padhe: NY Fed Q3 2026 report PDF (hhdc_2026q3.pdf, pdftotext se local parha) aur Q2 2026 press release (2026-08-11, WebFetch).
+- **VERIFIED (Q3'26 PDF):** student balances $1.66T (+$5B, 0.3%); stock 90+ share **10.9%, up from 10.6% in Q2'26**; "transition rates into serious delinquency slightly improved for credit cards and student loans". Report mein student flow ka age-wise chart bhi hai (p.28 list mein) -- maine chart ki values nahi padhi.
+- **VERIFIED (Q2'26 release):** "Student loan delinquencies were an exception" aur wajah Fed ke alfaaz mein "the continued impact of the re-reporting of defaulted student debt causing some distortions". Flow 12.88% (Q2'25) -> 7.83% (Q2'26).
+- **VERIFIED (Q3'25 release, pehle):** 14.26% flow, 9.4% stock; wajah = pehle report na hue missed payments ab credit reports mein.
+- **Default Resolution Group:** kisi NY Fed primary mein nahi mila -> claim hata do / UNVERIFIED rahega.
+- **Ab INFERRED -> mazboot:** saal-ba-saal giraawat par Fed khud kehta hai ke defaulted debt ki re-reporting figures ko distort kar rahi hai; Q3'26 ke liye alag sabab Fed ne nahi diya. "Base effect" ab Fed ke Q2 wording se supported hai, magar Q3'26 ka explicit explanation phir bhi nahi. Stock-up/flow-down paradox primary se VERIFIED.
+- **Decision C2: abhi bhi NEEDS MORE RESEARCH**, magar rukawat (1) ab bhari hui hai. Baaqi: competing transcripts (Tredy, Daily Dollar Doodles), specific demand, reference model, feasibility, age-wise chart se kaun sa cohort.
