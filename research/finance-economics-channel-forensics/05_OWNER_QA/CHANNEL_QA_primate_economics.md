@@ -32,3 +32,6 @@ Niche product topics (options, 401k); self-deprecating 'boring' opener; '(No AI)
 ## 9. New channel blueprint: kaun sa sub-niche aur content model?
 Sub-niche: finance concepts ELI5. Model: top-searched concept + original allegory + Short first, long cut baad mein.
 
+
+## Correction 2026-11-13 (live evidence pass)
+Live Chrome + Trends pass: `01_CHANNEL_REPORTS/055_primate_economics/LIVE_EVIDENCE_2026-11-13.md` §7.5. Changes: "Shorts-first / Short-pehle" withdrawn (long came first in 6/6 pairs; Short = recut of long, VERIFIED for Inflation and Tariffs); "most-searched concepts" true only for tax and inflation (Trends, US, 12 months); niche-product explanation for 401k/Options not supported by Trends; "boring opener" is a single-video observation (401k), not a pattern.
