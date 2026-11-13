@@ -177,3 +177,24 @@ Decision: **REJECT for now.** Reason: no measurable YouTube search demand (below
 Method lesson (INFERRED): "no videos yet" and "no search demand" look identical in the first check. Run Trends before searches when ranking candidates.
 
 Pilot PASS total: 0 (C1 REJECT-leaning, C2 leaning REJECT, C3 REJECT, C4 to C6 REJECT).
+
+## 13. Trends-first screen (2026-11-14): which terms have durable demand?
+
+Method change (owner approved): run Google Trends (United States, YouTube Search) before the YouTube competition searches. Compare view, 5 terms per chart, screenshots read by eye. Trends shows relative interest inside each chart only (100 = peak of the highest term), never absolute searches. Reading is by eye from half-scale screenshots: LOW to MEDIUM confidence on levels.
+
+| chart | window | what the screenshot shows |
+|---|---|---|
+| private credit / Fed rate hike / bond yields / credit card debt / student loan default | 12 months | "credit card debt" is the only sustained line (about 40 to 65, one peak 100 near Nov 2026). "private credit" rose to about 45 around Mar 2026 then fell to about 10. "Fed rate hike" one spike about 35 (about Oct 2026). "student loan default" one spike about 35 (about Nov 2026, same time as the NY Fed C2 release). "bond yields" near 0 to 20. |
+| First Brands / Tricolor / Spirit Airlines / Steward Health Care / Children's Place | 12 months | Only "Spirit Airlines" shows a spike (peak 100 around Mar-Apr 2026, then back to about 5). The other four are near 0 against it (relative scale; they may still have small real demand). |
+| BNPL / car repossessions / subprime auto / mortgage rates / debt collectors | 12 months | "mortgage rates" is sustained (about 25 to 90). "debt collectors" one spike 100 near Nov 2026. BNPL about 5 to 15 flat. Car repossessions and subprime auto near 0. |
+| debt collectors / debt collection / CFPB / debt collector calls / statute of limitations debt | 90 days | Flat 0 until mid-Oct, then one burst (peak about 100) lasting a few days, a smaller CFPB spike earlier, back near 0 by Nov 8. |
+
+Reading (INFERRED, MEDIUM-LOW):
+1. News-event terms (a bankruptcy, a rule, a report) show a few days of search interest and then fall to near zero. Even a large bankruptcy (Spirit Airlines) decays to about 5% of its peak within weeks.
+2. Durable demand sits on evergreen terms (mortgage rates, credit card debt). Those are also where YouTube competition is thickest (Section 11 found 25+ videos on a single card-fee story).
+3. So the two checks pull in opposite directions: an uncovered event has no durable demand, and a durable-demand term is already covered. A PASS candidate needs both an evergreen demand term and a question that existing videos do not answer. None of C1 to C6 has both.
+4. "student loan default" spiking with the NY Fed release shows C2 had a demand burst; but the burst is also the window in which Tredy and others published, so the window was short.
+
+Not done in this section: the other Trends windows (7 days, 30 days, 5 years, all-time) for each term; vidIQ panel check on the closest video per term; channel-model fit.
+
+Decision: no new candidate promoted. Pilot PASS total remains 0. Implication for the master plan: if no candidate passes the strict rule, the "Approved First 10 Videos" document says so and lists the screening evidence instead of naming 10 topics.
