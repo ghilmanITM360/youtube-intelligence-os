@@ -127,4 +127,4 @@ Result: **647 videos, 647 transcripts** — nothing to do; just include them in 
 5. Commit and push regularly; report to the owner in Hinglish with real numbers.
 
 ## 8. Definition of "48-channel research set"
-`{25 channels in §3a} ∪ {23 channels in §3b}` = 48 channels; videos = 1,760; transcripts = 1,400.
+`{25 channels in §3a} ∪ {23 channels in §3b}`. **WARNING (found when writing this): 4 channels appear in BOTH lists** (Dr. Aliza Wright / Advice, Dr. Ares Senior, Dr. Elias Senior Health, Healing & Health), and the 25-list also contains one terminated channel with 0 videos (Dr. Aliza Wright Senior Health). So the real union is **44 unique channels = 1,625 videos, 1,265 transcripts**, not 48. Ask the owner whether the missing channels should be added (candidates: the 6 channels in §3c, or other tier 3 channels); until then use the 44-channel union.
