@@ -1,5 +1,8 @@
 # PENNY @pennyexplainsfinance (070, outside the 69-channel DB) — Apify + Chrome + vidIQ pass, 2026-11-13
 
+
+> **Correction 2026-11-13:** this channel was not in the DB/tracker, but an earlier Apify spot scrape of it exists in `05_OWNER_QA/` (`APIFY_SPOT_SCRAPES_README.md`, `CHANNEL_QA_pennyexplainsfinance.md`, snapshot 2026-11-12, 13 of 18 videos, 7.69k subs). I missed it because a repo-wide search errored. This 2026-11-13 pass supersedes that snapshot (now 13 long + 5 Shorts = 18 of 18, 7.83k subs); the two agree on the main numbers (e.g. $40T video 1,151,039 then vs 1,151,493 now).
+
 Labels: VERIFIED / INFERRED / HYPOTHESIS / UNKNOWN. Studio CTR, retention, traffic-source split are UNKNOWN (no Studio access).
 **Source:** this channel is NOT in `finance_economics_complete.db` (69 channels) or MASTER_TRACKER. Data = Apify "YouTube Scraper" run `dnL4zjyF4Ec7G4yLa` (owner's Apify account, 2026-11-13 16:44, 21 requests, $0.068, input: channel UCrq_LwknwB3P9rSWy5CLTvQ, 30 videos + 30 shorts). Raw file: `raw/apify_youtube_scraper_dnL4zjyF4Ec7G4yLa.json`, SHA-256 `a3b6a802b97820badc718834d99fd46bb26dbe04b423151c2d121715c39b8dd6` (same as Downloads copy). Not added to the DB or tracker.
 

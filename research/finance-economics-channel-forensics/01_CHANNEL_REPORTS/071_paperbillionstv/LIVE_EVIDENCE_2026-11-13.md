@@ -1,5 +1,8 @@
 # Paper Billions @PaperBillionsTV (071, outside the 69-channel DB) — Apify + Chrome + vidIQ pass, 2026-11-13
 
+
+> **Correction 2026-11-13:** this channel was not in the DB/tracker, but an earlier Apify spot scrape of it exists in `05_OWNER_QA/` (`APIFY_SPOT_SCRAPES_README.md`, `CHANNEL_QA_paperbillionstv.md`, snapshot 2026-11-12, 3 videos, 9.65k subs). I missed it because a repo-wide search errored. This 2026-11-13 pass supersedes that snapshot (now 4 of 4 videos, 14.1k subs); the two agree on the main numbers (e.g. Nvidia-spy 1,467,942 then vs 2,101,211 now; views were still rising).
+
 Labels: VERIFIED / INFERRED / HYPOTHESIS / UNKNOWN. Studio CTR, retention, traffic split are UNKNOWN.
 **Source:** channel is NOT in `finance_economics_complete.db` or MASTER_TRACKER. Data = Apify "YouTube Scraper" run `JsyvS0PVokzdfwCAb` (owner's Apify account, 2026-11-13 17:02, 6 requests, $0.020, channel UCMQDlRCUK5Lh7kxp_fqFK3w). Raw: `raw/apify_youtube_scraper_JsyvS0PVokzdfwCAb.json`, SHA-256 `0dc7e70158345104afe374715a2f802692d537eb1876b6382cc8bdeabe53da01` (identical to Downloads copy). The file has 5 rows: 4 videos + 1 "channel has no Shorts" note row.
 

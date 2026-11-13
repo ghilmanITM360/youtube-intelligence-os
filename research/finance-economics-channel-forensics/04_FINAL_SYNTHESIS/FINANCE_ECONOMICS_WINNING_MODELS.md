@@ -12,7 +12,7 @@ Built from the 69 channel reports, the cross-channel concept ledger and the PDF 
 | 4 | **Second-person money POV with dramatic irony** (secret wealth, boss/family reversal) | Finance POV, POV Wealth (682k), Lucas Grant (705k), Nate (322k ×3), This make cents (611k), Dark Ledger (1.11M ladder) | fantasy + vindication + status contrast | rapid copying, fiction fatigue, fast premise decay |
 | 5 | **Senior entitlement/protection — accuracy-first version** | Nia (1.13M), Lana (593k), Mark Calloway (724k), Kevin (559k), Robin (569k), Walter (300k), Frank Law (768k) | money they can keep/claim before a date; shareable to parents | **highest policy/accuracy risk**; network saturation; one channel terminated |
 
-Plus two craft-heavy models with huge ceilings but skill barriers: **satire/allegory ELI5** (Primate Economics 15.7M Short; MonkeyExplains median 228k; Crayon Capital 4.2M) and **expert macro commentary** (brand-dependent).
+Plus two craft-heavy models with huge ceilings but skill barriers: **satire/allegory ELI5** (Primate Economics 15.7M Short [2026-11-13: the "Shorts-first" discovery claim was not supported by the live check; its 2026 long videos fell to median ~162k]; MonkeyExplains median 228k [2026-11-13 live pass: DB median 348k over 48 long videos (63 total); the 228k figure was not re-derived and the difference is unreconciled]; Crayon Capital 4.2M) and **expert macro commentary** (brand-dependent).
 
 ## B. The winning content pipeline (each stage: what winners do → evidence → PDF principle → do → avoid)
 
@@ -33,3 +33,10 @@ Plus two craft-heavy models with huge ceilings but skill barriers: **satire/alle
 - **Packaging test:** for every flop with a good subject, retitle with a specific scene/stake (Finance ANALYST precedent) rather than abandoning it.
 - **Compliance:** original scripts (no cross-channel paragraphs), disclose synthetic presenters/characters (Uncle John model), cite sources in descriptions (Nia/Wise Future model), no look-alikes or invented quotes.
 - **Measure:** Studio CTR, 30-second retention and traffic sources — none of which this public dataset can show (PDF Part D §6, §10).
+
+## D. Live-pass reconciliation (2026-11-13)
+See `01_CHANNEL_REPORTS/*/LIVE_EVIDENCE_2026-11-13.md` and `04_FINAL_SYNTHESIS/NINE_CHANNEL_LIVE_COMPARISON_AND_LAUNCH_MODEL_2026-11-13.md`.
+- **Scope:** the 9 live-checked channels are all explainer/animation channels, so they test the "satire/allegory ELI5" craft models and parts of Model 3, not Models 1, 2, 4, 5.
+- **Launch-model difference (owner decision):** section C above recommends a first niche of everyday-business economics or retirement adequacy + decision duels. The 9-channel launch model is a topic/opening rule (real, dated event tied to the viewer's money; claim-first opening; 11-14 min). They are not contradictory: the 9-channel rule can be applied inside Model 1 or 3, but they were derived from different channels and have not been tested against each other.
+- **Consistent across both:** one topic per video, no sponsors or Shorts in the first videos, parameter angles instead of remakes, change packaging with timestamps, judge against the channel's own median.
+- **Softer than stated above:** "late copies flop" and "hooks are near-universal" hold; but the claim that topic choice explains success is MEDIUM-LOW where checked live (age/size confound, hit concentration).

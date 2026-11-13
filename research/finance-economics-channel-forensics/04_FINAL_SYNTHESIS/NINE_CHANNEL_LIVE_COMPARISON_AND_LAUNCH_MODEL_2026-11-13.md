@@ -16,7 +16,7 @@ Labels: VERIFIED / INFERRED / HYPOTHESIS / UNKNOWN. Source = the nine `LIVE_EVID
 | 070 | PENNY | 7.83k | 13 of 13 long (+5 Shorts) | 3.3k–1.15M; median 13k; 1 video = ~74% of views | ~4 weeks (joined 2026-10-16) | coin-head cartoon ELI5, 6–17 min |
 | 071 | Paper Billions | 14.1k | 4 of 4 | 144k–2.1M; median ~807k | videos 2026-11-06 to 11-13 (join date 2022 UNKNOWN meaning) | drawn-on-paper, 14–20 min |
 
-Coverage is not equal: three of the nine (Capital Case, PENNY, Paper Billions) are whole channels; the others are 15-video samples. 070 and 071 are not in the 69-channel DB.
+Coverage is not equal: three of the nine (Capital Case, PENNY, Paper Billions) are whole channels; the others are 15-video samples. 070 and 071 are not in the 69-channel DB, but earlier Apify spot scrapes (2026-11-12: PENNY 13 of 18 videos, Paper Billions 3 of 3) exist in `05_OWNER_QA/`; this pass supersedes them (PENNY 18/18, Paper Billions 4/4). Reconciled with `FINAL_RESEARCH_CONCLUSIONS.md` (section A1-A7) and `FINANCE_ECONOMICS_WINNING_MODELS.md` (section D) on 2026-11-13.
 
 ## 2. Jo baat kai channels mein baar baar mili (VERIFIED numbers, INFERRED explanation)
 
