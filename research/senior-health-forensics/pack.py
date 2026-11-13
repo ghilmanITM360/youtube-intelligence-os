@@ -6,7 +6,7 @@ D=os.path.join(os.path.dirname(__file__),'../../data/catalog/senior_health_compl
 n=sys.argv[1]; q={r['n']:r for r in csv.DictReader(open(os.path.join(os.path.dirname(__file__),'queue.csv')))}[n]
 cid=q['channel_id']; c=sqlite3.connect(f'file:{D}?mode=ro',uri=True)
 ch=c.execute("select name,handle,subscribers,channel_total_videos,channel_total_views,joined,tier from channels where channel_id=?",(cid,)).fetchone()
-V=c.execute("select video_id,title,substr(published,1,10),duration_seconds,video_type,views,likes,comments,has_transcript,published_source from videos where channel_id=? order by views desc",(cid,)).fetchall()
+V=c.execute("select video_id,title,substr(published,1,10),duration_seconds,video_type,views,likes,comments,has_transcript,published_source from videos where channel_id=? order by coalesce(views,-1) desc",(cid,)).fetchall()
 T={r[0]:r[1] for r in c.execute("select t.video_id,t.text from transcripts t join videos v using(video_id) where v.channel_id=?",(cid,))}
 o=[]; P=o.append
 P(f"# Data pack {n} — {q['channel']} ({cid})\n\nFacts from `data/catalog/senior_health_complete.db` (read-only). Views/likes/comments are the snapshot in that DB (DS-000034 player capture 2026-09-28 unless noted); live Chrome numbers are recorded separately in the report.\n")
@@ -22,7 +22,7 @@ ds=sorted(v[2] for v in V if v[2]); P(f"## Performance\nviews: median {med:,.0f}
 if ds:
     d0=datetime.date.fromisoformat(ds[0]);d1=datetime.date.fromisoformat(ds[-1]);days=max((d1-d0).days,1);P(f"cadence: {N} videos over {days} days = {N/days*7:.1f}/week\n")
 P("| # | id | date | dur s | views | x median | likes | cmts | title |\n|--|--|--|--|--|--|--|--|--|")
-for i,v in enumerate(V,1): P(f"| {i} | {v[0]} | {v[2]} | {v[3]} | {v[5]:,} | {v[5]/med:.1f} | {v[6] or ''} | {v[7] or ''} | {v[1]} |")
+for i,v in enumerate(V,1): P(f"| {i} | {v[0]} | {v[2]} | {v[3]} | {(format(v[5],',') if v[5] is not None else 'n/a')} | {(format(v[5]/med,'.1f') if v[5] is not None else 'n/a')} | {v[6] or ''} | {v[7] or ''} | {v[1]} |")
 # selection
 S=[v for v in V if v[5] is not None]
 strong=S[:5]; weak=S[-3:]; mid=sorted(S,key=lambda v:abs(v[5]-med))[:3]
