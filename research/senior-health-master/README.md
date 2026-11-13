@@ -41,3 +41,4 @@ Single in-repo home for the senior-health niche. Everything here is derived read
 ## Update 2026-11-13 (2) — final batch run 8LIogmlj1NrUohbPJ
 - 73 more transcripts imported (3 failed). Total transcripts in DB: 2,336 of 5,802 videos. Split DB rebuilt, all files <100 MB.
 - Remaining for a second Apify account (60-video plan): 309 missing = 166 live (~$0.83, input in `APIFY_INPUT_REMAINING_LIVE.json`) + 143 dead/removed (untranscribable).
+- Run F35KcnFwDBctRSuLP (last budget run, 44 IDs): only 3 delivered, 41 failed (free, likely actor-side throttling; retry them on the second account). Total transcripts 2,339. Remaining: 306 missing = 163 live (~$0.82) + 143 dead.
