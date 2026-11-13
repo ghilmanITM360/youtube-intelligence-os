@@ -291,3 +291,10 @@ Strict PASS: 0 of 16. PASS-DEPTH (conditional, not approved): 1 (C1 reframed). A
 
 **Status after the re-check:** PASS-DEPTH (conditional) stands, not approved. Still open: Second Start Money and Mike the Credit Guy transcripts, TransUnion reuse terms and metrics file, demand for the exact question, a day-of-production coverage re-check (a video could appear any day: one TransUnion-only video appeared on 2026-11-09 and others within days of the NY Fed release).
 Closed: NY Fed terms (c); same-day re-check done once (e); one new transcript read (a, partly). Transcripts are in the session scratchpad, not in the repo.
+
+### 16.5 TransUnion reuse terms + transcript retry (2026-11-14)
+- **VERIFIED (live page transcunion.com/legal/terms-of-use):** TransUnion Content (articles, videos, infographics, graphics) is TransUnion property; it may not be copied, displayed, distributed, published, reused or used for "public or commercial purposes" without express written permission (requests go to the Law Department, Chicago).
+- **Asar (INFERRED, legal raay nahi):** TransUnion ke charts/infographic video mein nahi dikhane; sirf apne banaye chart mein numbers likh kar source cite karna ek alag sawal hai, jise permission/legal check chahiye. NY Fed side attribution ke saath allowed hai, TransUnion side **nahi**. Isliye C1-reframed ka "do primary sources" wala payoff TransUnion visuals ke bina banana hoga, ya permission leni hogi. Ye C1 ko aur conditional banata hai.
+- Transcripts Second Start Money (M81o4LQUa_M) aur Mike the Credit Guy (SZ7AkgUGVuw): dobara try kiya, phir HTTP 429. **NOT READ** rahe.
+- Withdrawn Planet Fitness / Dollar General / Costco drafts: finance folder mein grep kiya; sirf doosre channels (035, 036, 061, 019, 066) ke video titles/reports mein company naam aate hain. Koi withdrawn draft file nahi mili, isliye archive karne ko kuch nahi (UNKNOWN: shayad doosri branch/repo mein).
+- Abhi bhi open: TransUnion "additional metrics" file, exact-question demand (UNKNOWN), production-day coverage check.
