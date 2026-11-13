@@ -26,6 +26,6 @@ else:
     for _ in range(N):
         sh={}
         for c,v in by.items():
-            fl=[x[0] for x in v];random.shuffle(fl);sh[c]=[(f,x[1]) for f,(_,x) in zip(fl,v)]
+            fl=[x[0] for x in v];random.shuffle(fl);sh[c]=[(f,y[1]) for f,y in zip(fl,v)]
         ge+=stat(sh)>=obs
     print('pooled STAKE-nonSTAKE mean log rel diff %.2f  p=%.4f'%(obs,(ge+1)/(N+1)))
