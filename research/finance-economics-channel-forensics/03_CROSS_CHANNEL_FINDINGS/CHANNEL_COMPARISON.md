@@ -43,3 +43,6 @@
 | P22 Deliver the title's promise | 17 | 30 | 18 | 0 | 4 | Breaches (tax "shock", "$600 IRS rule") are visible; sometimes still win short-term |
 
 Automated verdicts are rule-based drafts with analyst overrides recorded per channel; proxies (P13-P15) under-detect scene-based stakes and loops.
+
+
+> **Note 2026-11-13:** is file ka "46 channels FOLLOWED" ek rule-based scorecard count hai. 9-channel live pass mein topic, age aur channel size alag nahi ho sake (MEDIUM-LOW); dekho `04_FINAL_SYNTHESIS/FINAL_RESEARCH_CONCLUSIONS.md` A1. Original line unedited.

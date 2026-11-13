@@ -56,3 +56,6 @@ POV/second-person (Lucas Grant, Finance POV, POV Wealth, Ronnie, Nate), "every r
 
 ## W10. Shorts work as discovery for allegory/concept formats
 Primate Economics (inflation Short 15.7M), Casual Finance (macro Shorts 200-390k). Shorts on niche topics (robo-advisors, compounding stages) or milestone announcements get hundreds of views.
+
+
+> **Note 2026-11-13:** is file ka "46 channels FOLLOWED" ek rule-based scorecard count hai. 9-channel live pass mein topic, age aur channel size alag nahi ho sake (MEDIUM-LOW); dekho `04_FINAL_SYNTHESIS/FINAL_RESEARCH_CONCLUSIONS.md` A1. Original line unedited.
