@@ -154,3 +154,26 @@ Method: web search for November 2026 events, then 5 yt-dlp YouTube searches per 
 Observation (INFERRED, from these searches): a small-channel pipeline covers bankruptcies and Fed prints within days. Recency alone is not an edge; an uncovered event is rare and short-lived. The surviving angle must be a document-level reading (what the filing actually says about the bonds) that those videos do not do, which is HYPOTHESIS until a transcript of the closest video is read.
 
 Pilot PASS total after batch 2: 0.
+
+## 12. C3 Redeemer Health: full check (2026-11-14)
+
+Facts (VERIFIED from Bondoro case summary dated 2026-11-05, a secondary source that summarises court filings; docket and first-day declaration NOT opened): Redeemer Health + 11 affiliates filed Chapter 11 on 2026-11-01, E.D. Pa., lead case 26-14631. Nonprofit Catholic system, Holy Redeemer Hospital (239 licensed beds). Hospital and physician network lost $31.6M to $48.9M a year for five years; FY2026 operating loss through 4/30 was $34.6M vs $17.1M budget. Obligors defaulted on a September 2026 bond payment; UMB Bank is master trustee; hospital parcel is mortgaged for the bonds; board decided to sell or close the hospital. S&P cut BB+ to BB (Aug 2023) to B+ (Jul 2024); Moody's Ba2 to B1 (Oct 2024). FY2025 revenue $479.9M; about 3,200 employees plus 155 physicians; first-day wages motion about $16.6M. Bond principal "about $87M" and liabilities "about $441M" come from web-search snippets (Becker's, MLex) and were NOT confirmed on a page I read: UNKNOWN until checked.
+
+Demand (VERIFIED screenshots, Google Trends, United States, YouTube Search):
+| term | window | result |
+|---|---|---|
+| Redeemer Health | past 7 days | one spike on about Nov 7, otherwise 0 |
+| Redeemer Health | past 90 days | "not enough data" |
+| Redeemer Health | past 12 months | "not enough data" |
+| Redeemer Health | past 5 years | 3 small spikes (one near Nov 2021, the biggest), otherwise 0 |
+| hospital bankruptcy | past 12 months | "not enough data" |
+| hospital bankruptcy | past 90 days | one spike late Oct to early Nov, otherwise 0 |
+6 windows not run in full for either term (past 30 days and all-time skipped): LOW CONFIDENCE, but 4 of 6 shown windows say "not enough data" or one-day spike.
+
+Competition (from Section 11): no video explains this bankruptcy yet.
+
+Decision: **REJECT for now.** Reason: no measurable YouTube search demand (below Trends threshold; the one spike is the news day), and a regional hospital bankruptcy is not a topic the 9 studied channels' audiences search for. Empty competition here means no demand, not an opening. Reopen only if later evidence shows search demand (for example the Steward Health Care benchmark, or a broader "hospital bonds default" angle with demand).
+
+Method lesson (INFERRED): "no videos yet" and "no search demand" look identical in the first check. Run Trends before searches when ranking candidates.
+
+Pilot PASS total: 0 (C1 REJECT-leaning, C2 leaning REJECT, C3 REJECT, C4 to C6 REJECT).
