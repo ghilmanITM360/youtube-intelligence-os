@@ -33,7 +33,7 @@ For each candidate, in this order (Trends first, as learned in the pilot):
 2. YouTube autocomplete and 5 YouTube searches (Chrome or yt-dlp); read the 3 closest videos (title, views, age, vidIQ VPH and tags).
 3. Read the transcript of the closest video. If the same question and payoff is already public, REJECT.
 4. Check the primary source (filing, release, court docket) and its reuse terms.
-5. Decide PASS, REJECT or NEEDS MORE RESEARCH and write the decision with sources.
+5. Decide PASS, PASS-DEPTH (conditional), REJECT or NEEDS MORE RESEARCH and write the decision with sources. PASS-DEPTH (owner-approved second tier, 2026-11-14) means: durable parent-term demand, closest videos read and none holds at least two checkable specifics of the primary documents or joins two primary sources, numbers copied from the primary documents, a different answer to a viewer-money question (not more charts), and reuse terms checked. It is conditional until every open item is closed; the first example is C1 reframed (pilot Section 16).
 Cost seen in the pilot: 16 candidates went through the screen, 0 passed; budget a day of screening per two videos.
 
 ## 7. Production workflow (HYPOTHESIS; creator/team workflow of the studied channels is UNKNOWN)
@@ -49,6 +49,7 @@ Durable demand (Trends) / not already answered (strict rule) / viewer-money link
 
 ## 10. Test and kill rule
 - After 10 videos: if none reaches 3x the median of the first 3 videos (with Studio CTR and 30 s retention), the model is weak. If one reaches 10x, re-test that topic framing once before treating it as repeatable (hit concentration was 74% to 91% in two studied channels).
+- Depth tier: if PASS-DEPTH videos do not beat strict-PASS or ordinary videos on the channel's own median (Studio CTR and 30 s retention), drop the tier.
 - Opening lever: if the median views of stake-first and other openings differ by about 1.0x in the first 10 videos, stop treating the opening as a lever.
 
 ## 11. UNKNOWN and not done

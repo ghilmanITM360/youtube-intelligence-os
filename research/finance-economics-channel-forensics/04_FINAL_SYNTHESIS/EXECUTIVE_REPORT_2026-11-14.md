@@ -18,11 +18,11 @@ Nine channels: Econ in a Nutshell, Casual Finance, Primate Economics, Crayon Cap
 Scorecard below (compiled from each channel report's section 16; PENNY and Paper Billions not scored). Most common gaps: stakes in 5 to 15 s (P13), an open loop before 30 s (P14), direct address (P17). Counts of F/P/N per channel are in the scorecard; they describe rule match, not channel quality.
 
 ## 4. Topic discovery result
-16 candidates screened (C1 to C3, D1 to D4, E1 to E5, F1 to F4) with Trends, autocomplete, 5 YouTube searches each and closest-video checks; **0 PASS**. Reasons: events lose search interest in days; terms with durable demand are covered by large channels; a small-channel pipeline covers news within days. Limits: titles not transcripts for most rejects; Trends read by eye. Full table in PDF 13, detail in PDF 12.
+16 candidates screened (C1 to C3, D1 to D4, E1 to E5, F1 to F4) with Trends, autocomplete, 5 YouTube searches each and closest-video checks; **0 strict PASS**. After the owner allowed a depth tier, one candidate (C1 reframed: two NY Fed and TransUnion releases read side by side) reached **PASS-DEPTH (conditional, not approved)**; its gap check used two transcripts and two primary documents, and two more transcripts are still unread. Reasons: events lose search interest in days; terms with durable demand are covered by large channels; a small-channel pipeline covers news within days. Limits: titles not transcripts for most rejects; Trends read by eye. Full table in PDF 13, detail in PDF 12.
 
 ## 5. Decision for the owner
 - **Approved first-10 list: empty by design** (PDF 13). Nothing was force-filled.
-- **Open decision:** keep the strict rule, or allow a document-depth angle on a covered topic as a tested HYPOTHESIS (PDF 14 has the kill rule). No decision was taken.
+- **Depth tier (owner allowed 2026-11-14):** a document-depth angle on a covered topic is a conditional second tier, tested as a HYPOTHESIS with a kill rule (PDF 14). It is not tested on audience performance.
 - **Launch model** (PDF 14) is a HYPOTHESIS: real dated event with a viewer-money link, stake-first opening, one source chart on screen, 11 to 14 minutes, no Shorts or sponsors in the first 10; judged after 10 videos against the channel's own median with Studio CTR and 30 s retention.
 
 ## 6. What is not done (honest list)
@@ -34,7 +34,7 @@ Scorecard below (compiled from each channel report's section 16; PENNY and Paper
 | Per-video watch log | only samples were watched, the rest NOT WATCHED |
 | Winning-technique table with video link and timestamp | not built; PDF 11 has patterns without timestamps |
 | Rubric for PENNY and Paper Billions | not scored (no transcripts) |
-| Transcript of Daily Dollar Doodles (d4hXjS18hCM) | NOT READ (HTTP 429) |
+| Transcripts of Second Start Money (M81o4LQUa_M) and Mike the Credit Guy (SZ7AkgUGVuw) | NOT READ (HTTP 429 on retries); Daily Dollar Doodles and Stank Finance were read |
 | Withdrawal of Planet Fitness, Dollar General, Costco drafts (archive, not delete) | not checked in the finance folder |
 | Frames for opening and payoff | one video only (Capital Case) |
 

@@ -4,7 +4,7 @@ Labels: VERIFIED / INFERRED / HYPOTHESIS / UNKNOWN. Studio CTR, retention and tr
 
 ## 1. Result
 
-**Approved topics: 0 of 10. No candidate passed the strict rule, so no topic is approved.** The list is not filled. The rule used: a candidate is approved only if its question and payoff are not already public on YouTube, demand is shown, and the angle fits the channel model. A repackage with only a different title, animation or narrator does not pass.
+**Approved topics: 0 of 10. No candidate passed the strict rule, so no topic is approved.** The list is not filled. After the owner allowed a second tier (2026-11-14), one candidate passed the depth-rule gap check as **PASS-DEPTH (conditional)**: C1 reframed (section 3a). It is not approved until its open items close. The rule used: a candidate is approved only if its question and payoff are not already public on YouTube, demand is shown, and the angle fits the channel model. A repackage with only a different title, animation or narrator does not pass.
 
 ## 2. Candidates screened (16) and why each failed
 
@@ -29,6 +29,10 @@ Labels: VERIFIED / INFERRED / HYPOTHESIS / UNKNOWN. Studio CTR, retention and tr
 
 Detail, queries and sources: `TOPIC_DISCOVERY_PILOT_2026-11-13.md` (PDF 12). Candidate ids C1 to C3 are Sections 2 to 9; D1 to D4 are Sections 11 to 12; E1 to E5 Section 14; F1 to F4 Section 15.
 
+## 3a. PASS-DEPTH (conditional, not approved): C1 reframed
+
+Question: is the pandemic-card echo fading while the next set of cards is originated at lower quality? Two primary documents opened: NY Fed Liberty Street post (2026-11-10) and TransUnion Q3 2026 CIIR (2026-11-05). Two closest transcripts read (Daily Dollar Doodles, Stank Finance): each uses one source, none joins them. Payoff is INFERRED from two series with different score models, so it must be framed as two datasets read side by side. Open before approval: transcripts of Second Start Money and Mike the Credit Guy (HTTP 429), exact-question demand, live NY Fed terms, TransUnion data tables, a same-day coverage re-check. Full test in `TOPIC_DISCOVERY_PILOT_2026-11-13.md` Section 16 (PDF 12). Not tested on audience performance.
+
 ## 3. Why the list is empty (INFERRED, MEDIUM)
 
 - News-event terms keep search interest for days, then fall to near zero (Spirit Airlines peaked at 100 and was about 5 within weeks).
@@ -38,12 +42,12 @@ Detail, queries and sources: `TOPIC_DISCOVERY_PILOT_2026-11-13.md` (PDF 12). Can
 
 ## 4. What would change the result (owner decisions, none taken here)
 
-1. **Loosen the rule** to allow a document-depth angle on a covered topic (for example, what a filing or release actually says that the existing videos do not show). This is an owner decision and would be tested as a HYPOTHESIS, with the kill rule in PDF 14.
+1. **Depth rule (owner allowed 2026-11-14):** a document-depth angle on a covered topic is a second tier, PASS-DEPTH (conditional), tested as a HYPOTHESIS with the kill rule in PDF 14. One candidate reached it (3a).
 2. **Screen at launch time**, not now: the topic set that is open today will be gone in weeks, so the first 10 are chosen with the method in PDF 14 section 6, one or two videos at a time.
 3. **Add demand evidence** the study could not get: Studio search-term data from a channel the owner controls, a paid vidIQ plan check (search volume and competition were not shown on the free panel).
 
 ## 5. Conditional ideas (NOT approved, NOT counted as PASS)
 
 These are written down only so they are not lost. None passed the rule and none may be called a first video.
-- By-age split of student-loan delinquency (C2): conditional on reuse terms for NY Fed charts and a transcript check of Daily Dollar Doodles.
-- A document-reading series ("what the filing says") applied to a fresh bankruptcy or release: conditional on the owner loosening the rule and on a Trends check showing durable demand for the company or term.
+- By-age split of student-loan delinquency (C2): the Daily Dollar Doodles transcript is now read and does not explain it; Tredy finance (Q2 data) does. Still NEEDS MORE RESEARCH: by-age numbers are INFERRED from a chart image.
+- A document-reading series ("what the release says") applied to other fresh releases: each needs the depth-rule gap check and a Trends check showing durable demand for the term.
