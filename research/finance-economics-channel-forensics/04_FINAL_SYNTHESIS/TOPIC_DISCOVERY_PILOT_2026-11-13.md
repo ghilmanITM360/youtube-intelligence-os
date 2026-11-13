@@ -64,3 +64,15 @@ Demand signals (VERIFIED jab dekha): headline NY Fed video 2K in ~1 din; credit-
 **Reframe jo bacha (NEEDS MORE RESEARCH, PASS nahi):** Liberty Street kehta hai 2023 ke baad ke cards ke origination scores *behtar* hain; Stank Finance ke description ka TransUnion data kehta hai below-prime share 38.7% -> 40.6% -> 42.3% (alag score model/source). Agar dono primary reports (NY Fed + TransUnion Q3 2026) khud verify hon aur sach mein farq ho, to "kya banks dobara riskier lending kar rahe hain?" ek naya comparison ho sakta hai. Abhi TransUnion ka koi primary source maine nahi khola; sirf ek 1-view video ka description hai, isliye ye figures **UNVERIFIED** hain aur is reframe ko evidence mat maano.
 
 Reference model/feasibility: check nahi kiya (candidate abhi PASS ke qareeb nahi).
+
+## 5. C1 reframe verify ("kya banks dobara riskier lending kar rahe hain?"), 2026-11-13
+**TransUnion figures (VERIFIED, press release text, WebSearch + WebFetch via GlobeNewswire/Finviz copy; TransUnion ka original PDF khud nahi khola):** Q3 2026 Credit Industry Insights Report, released 2026-11-05. Below-prime (VantageScore 4.0 <= 660) share of card originations: Q3'23 40.0%, Q3'24 38.7%, Q3'25 40.6%, Q3'26 42.3%. Balance-level 90+ DPD: 1.91% / 2.17% / 2.05% / 1.99%. Borrower-level 90+ DPD: 2.34% / 2.43% / 2.37% / 2.50%. Charge-offs $15.79B -> $15.76B. TransUnion exec (Jason Laky): balance-level delinquency fell "even as a greater share of lending has gone to higher-risk borrowers". Yaani pehle 38.7% -> 40.6% -> 42.3% wala figure ab verified hai (UNVERIFIED label hata).
+
+**Competition (Chrome YouTube, "credit card below prime originations TransUnion riskier lending", Videos filter):**
+- "The Subprime Credit Comeback: Banks Are Lending $1.16T to Risky Borrowers Again (2026)" (~4 din purani, 2 views): description mein TransUnion Q3 2026 aur "banks opened the credit tap for riskiest borrowers". Yeh reframe ka headline payoff hai.
+- Stank Finance "22.4 Million New Credit Cards..." (5 din, 1 view): TransUnion borrower vs balance, 8 chapters ("Who Gets the Cards", "Why the Split").
+Transcripts NOT READ (description/chapters sirf).
+
+**Decision: REJECT (as stated).** "Banks dobara riskier lending" ka payoff 2 videos mein pehle se public hai (chhote views, par rule: same payoff = reject). Ek chhoti jagah bachti hai: NY Fed (vintage 2020-22 behtar ho raha) vs TransUnion (below-prime share badh raha) ka *cross-source* comparison; kisi video ke description mein nahi dikha, magar yeh sirf search-snippet se INFERRED hai aur demand evidence nahi. NEEDS MORE RESEARCH nahi banaya: ek hi hafte ke angle par 3-4 chhote channels pehle se hain.
+
+**Pilot total ab: PASS 0.** C1 REJECT, C3 REJECT, C2 NEEDS MORE RESEARCH. Agla: naye event-based candidates (C2 + alag source).
