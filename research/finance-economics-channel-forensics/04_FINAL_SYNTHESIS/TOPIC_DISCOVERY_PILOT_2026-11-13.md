@@ -105,3 +105,12 @@ Primary sources padhe: NY Fed Q3 2026 report PDF (hhdc_2026q3.pdf, pdftotext se 
 - **Default Resolution Group:** kisi NY Fed primary mein nahi mila -> claim hata do / UNVERIFIED rahega.
 - **Ab INFERRED -> mazboot:** saal-ba-saal giraawat par Fed khud kehta hai ke defaulted debt ki re-reporting figures ko distort kar rahi hai; Q3'26 ke liye alag sabab Fed ne nahi diya. "Base effect" ab Fed ke Q2 wording se supported hai, magar Q3'26 ka explicit explanation phir bhi nahi. Stock-up/flow-down paradox primary se VERIFIED.
 - **Decision C2: abhi bhi NEEDS MORE RESEARCH**, magar rukawat (1) ab bhari hui hai. Baaqi: competing transcripts (Tredy, Daily Dollar Doodles), specific demand, reference model, feasibility, age-wise chart se kaun sa cohort.
+
+## 8. C2 age chart, transcripts, feasibility (2026-11-13)
+**Age chart (VERIFIED, NY Fed Q3'26 PDF p.28 "Transition into Serious Delinquency (90+) for Student Loans by Age", chart image dekhi, exact values nahi parhi):** 4-quarter moving sum, isliye 14.26%/7.72% (ek quarter ka annualized flow) se seedha match nahi. Dikha: 2021-2024 mein sab age groups ~0-2% (pause ka daur), 2025 mein tez spike, 2026 ke shuru mein peak (50+ ~22%, 40-49 ~17%, 30-39 ~14.5%, 18-29 ~10.5%), phir sab giri; aakhri point par 50+ aur 40-49 thoda wapas upar, 18-29 aur 30-39 ~5.5-6.5% par. Matlab spike har umar mein tha, sabse zyada 50+ mein; pichli giraawat ke baad purani umar wale thodi dobara chadh rahe hain (chart se andaza, exact numbers UNKNOWN). Yeh angle ke liye ek visual hook ho sakta hai.
+
+**Transcripts: NOT READ (dobara try kiya, JS scrape khali).** Tredy (23 views) aur Daily Dollar Doodles (1 view) ka sirf description/chapters level overlap hi pata hai; depth UNKNOWN. Limitation: is session mein transcript ka koi chalne wala tareeqa nahi mila; owner ke paas koi transcript tool ho to wahi use karo.
+
+**Feasibility (INFERRED):** data free aur primary (NY Fed PDF + charts public); chart reuse NY Fed publication hai, attribution ke saath reuse ki permission/terms maine check nahi kiye (UNKNOWN). Reference model aur production cost check nahi hue.
+
+**Decision C2: NEEDS MORE RESEARCH (PASS nahi).** PASS ke liye baaqi: (1) competing transcripts, (2) specific-query demand (Trends insufficient), (3) NY Fed chart reuse terms, (4) kaunsa channel-model fit hai (11 channels mein se). Pilot total: PASS 0.
