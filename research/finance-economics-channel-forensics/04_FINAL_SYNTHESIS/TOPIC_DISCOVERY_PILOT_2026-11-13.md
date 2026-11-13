@@ -198,3 +198,23 @@ Reading (INFERRED, MEDIUM-LOW):
 Not done in this section: the other Trends windows (7 days, 30 days, 5 years, all-time) for each term; vidIQ panel check on the closest video per term; channel-model fit.
 
 Decision: no new candidate promoted. Pilot PASS total remains 0. Implication for the master plan: if no candidate passes the strict rule, the "Approved First 10 Videos" document says so and lists the screening evidence instead of naming 10 topics.
+
+## 14. Evergreen-angle screen under the strict rule (2026-11-14)
+
+Owner decision: keep the strict rule (same question and payoff already public = REJECT) AND test evergreen angles. Each candidate: 5 YouTube searches (yt-dlp search results: titles, channels, views; transcripts NOT read), then Google Trends (United States, YouTube Search). Trends 12-month chart for the combined 5 terms did not load (blank); the 5-year chart loaded and was read by eye (LOW to MEDIUM confidence).
+
+| id | evergreen angle | closest existing videos (examples from the 5 searches) | strict-rule decision |
+|---|---|---|---|
+| E1 | who is behind on credit cards, by age (NY Fed) | "Gen Z's Credit Card Debt Crisis Is Getting Worse" (28 views), "NY Federal Reserve: Gen Z has largest % of credit card debt" (25), "Is Credit Card Debt Really Exploding? What 2026 Fed Data Shows" (24), "Household Debt Fell. So Why Are Credit Card Balances Rising?" (17) | REJECT: question and payoff (which age group, what the Fed data shows) already public. |
+| E2 | mortgage lock-in effect | 25+ videos incl. Fox Business (56k), "Golden handcuffs" set, "Lock-In Trap" | REJECT: saturated. |
+| E3 | why banks pay little on savings / net interest margin | WSJ "Why Are Bank Savings Interest Rates So Low?" (34k), "Your Bank Earns 4% on Your Savings. You Get 0.37%. Here's Why." (2 views), many "how banks make money" | REJECT: same payoff public. |
+| E4 | student loan wage garnishment | many TV-news explainers (10k to 38k views) | REJECT: saturated by news stations. |
+| E5 | private credit risk | CNBC (412k), PBS NewsHour (501k), How Money Works (1.2M), Second Thought (242k), The Economist (107k) | REJECT: heavily covered by large channels. |
+
+Trends 5-year chart, read by eye: "private credit" is the only line with sustained interest (rising, peak 100 around early 2026, still about 20 to 30 at the end); "wage garnishment" has one recent spike to 100 at the far right (about Nov 2026); credit card delinquency, mortgage lock-in and net interest margin are at or near 0 on this scale. Relative scale only, set by the strongest term in each chart.
+
+Reading (INFERRED): where demand exists (private credit), large channels already cover it; where the topic is narrow (credit card delinquency by age, lock-in share), search demand on this scale is near zero and small channels still cover it. This repeats Section 13.
+
+Strict-rule result for the whole pilot: C1 to C6 and E1 to E5 all REJECT or leaning REJECT. Pilot PASS total: **0 of 11 candidates.** Limits of this pilot (so the 0 is not over-read): 11 candidates only; searches read by title, not by transcript, so a REJECT based on a similar title could miss a different payoff (a transcript check can only turn REJECT into "needs more research", never invent a PASS); Trends read by eye; Studio data unavailable.
+
+Consequence for the deliverables: PDF 13 (Approved First 10 Videos) will state "no candidate passed the strict rule" with this screening table as evidence, not a list of 10 topics. The launch plan (PDF 14) must say the first videos need a topic screen at launch time, with this method and kill rule.
