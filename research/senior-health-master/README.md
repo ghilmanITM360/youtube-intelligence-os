@@ -42,3 +42,5 @@ Single in-repo home for the senior-health niche. Everything here is derived read
 - 73 more transcripts imported (3 failed). Total transcripts in DB: 2,336 of 5,802 videos. Split DB rebuilt, all files <100 MB.
 - Remaining for a second Apify account (60-video plan): 309 missing = 166 live (~$0.83, input in `APIFY_INPUT_REMAINING_LIVE.json`) + 143 dead/removed (untranscribable).
 - Run F35KcnFwDBctRSuLP (last budget run, 44 IDs): only 3 delivered, 41 failed (free, likely actor-side throttling; retry them on the second account). Total transcripts 2,339. Remaining: 306 missing = 163 live (~$0.82) + 143 dead.
+
+Update 2026-11-13 (3): second Apify account, run uR1ZcpdcJ3rYAskrK (residential proxy, 163 IDs): 94 delivered ($0.47), 69 failed ("video unavailable"/private, free). Total transcripts 2,433. The 69 failed + 143 dead stay in REMAINING_FOR_SECOND_APIFY_ACCOUNT.csv (now labelled); they are unavailable to the actor, not a budget gap. Note: without proxyConfiguration in the input the actor fails everything ("IP block").
