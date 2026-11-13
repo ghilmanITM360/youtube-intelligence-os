@@ -146,16 +146,16 @@ Method: web search for November 2026 events, then 5 yt-dlp YouTube searches per 
 
 | id | event | YouTube coverage found (5 searches) | decision |
 |---|---|---|---|
-| C3 | Redeemer Health (PA Catholic system) Chapter 11, filed about 2026-11-01, E.D. Pa., lead case 26-14631-djb, about $87M tax-exempt bonds defaulted (Sept 2026 payment missed), about $441M liabilities (reported by Becker's, MLex, Bondoro, Inquirer; docket NOT opened) | No video explaining the bankruptcy. Only the system's own promo videos and unrelated hospital-bankruptcy news (Steward, YesCare, St. Christopher's). Closest: "What Happened to Steward Health Care?" (Empires Crumble, 26 views), different event. | NEEDS MORE RESEARCH (leading). Not PASS: demand UNKNOWN (tiny local topic, Trends not run), first-day declaration not read, rights and channel-model fit not judged. |
-| C4 | Visa/Mastercard $38B swipe-fee settlement (prelim. approval June 2026, final approval pending) | 25+ videos incl. TODAY, NewsNation, many small explainers ("Explained", "What it means") | REJECT: same question and payoff already public. |
-| C5 | Leslie's pool supplies Chapter 11 (filed 2026-09-30 per sec-api list) | 10+ small-channel bankruptcy autopsies ("Why did Leslie's file...", "The balance sheet that sank Leslie's", "What the filing says") | REJECT: saturated, same payoff. |
-| C6 | Fed G.19 September consumer credit +$27.84B vs about $13.8B expected, revolving +$16.3B (TheStreet snippet; G.19 PDF not opened) | "Americans Just Borrowed $27.8 Billion In One Month (Explained Like You're 5)" exists (0 views), plus many generic card-debt videos | REJECT: same headline payoff already public. |
+| D1 | Redeemer Health (PA Catholic system) Chapter 11, filed about 2026-11-01, E.D. Pa., lead case 26-14631-djb, about $87M tax-exempt bonds defaulted (Sept 2026 payment missed), about $441M liabilities (reported by Becker's, MLex, Bondoro, Inquirer; docket NOT opened) | No video explaining the bankruptcy. Only the system's own promo videos and unrelated hospital-bankruptcy news (Steward, YesCare, St. Christopher's). Closest: "What Happened to Steward Health Care?" (Empires Crumble, 26 views), different event. | NEEDS MORE RESEARCH (leading). Not PASS: demand UNKNOWN (tiny local topic, Trends not run), first-day declaration not read, rights and channel-model fit not judged. |
+| D2 | Visa/Mastercard $38B swipe-fee settlement (prelim. approval June 2026, final approval pending) | 25+ videos incl. TODAY, NewsNation, many small explainers ("Explained", "What it means") | REJECT: same question and payoff already public. |
+| D3 | Leslie's pool supplies Chapter 11 (filed 2026-09-30 per sec-api list) | 10+ small-channel bankruptcy autopsies ("Why did Leslie's file...", "The balance sheet that sank Leslie's", "What the filing says") | REJECT: saturated, same payoff. |
+| D4 | Fed G.19 September consumer credit +$27.84B vs about $13.8B expected, revolving +$16.3B (TheStreet snippet; G.19 PDF not opened) | "Americans Just Borrowed $27.8 Billion In One Month (Explained Like You're 5)" exists (0 views), plus many generic card-debt videos | REJECT: same headline payoff already public. |
 
 Observation (INFERRED, from these searches): a small-channel pipeline covers bankruptcies and Fed prints within days. Recency alone is not an edge; an uncovered event is rare and short-lived. The surviving angle must be a document-level reading (what the filing actually says about the bonds) that those videos do not do, which is HYPOTHESIS until a transcript of the closest video is read.
 
 Pilot PASS total after batch 2: 0.
 
-## 12. C3 Redeemer Health: full check (2026-11-14)
+## 12. D1 Redeemer Health: full check (2026-11-14)
 
 Facts (VERIFIED from Bondoro case summary dated 2026-11-05, a secondary source that summarises court filings; docket and first-day declaration NOT opened): Redeemer Health + 11 affiliates filed Chapter 11 on 2026-11-01, E.D. Pa., lead case 26-14631. Nonprofit Catholic system, Holy Redeemer Hospital (239 licensed beds). Hospital and physician network lost $31.6M to $48.9M a year for five years; FY2026 operating loss through 4/30 was $34.6M vs $17.1M budget. Obligors defaulted on a September 2026 bond payment; UMB Bank is master trustee; hospital parcel is mortgaged for the bonds; board decided to sell or close the hospital. S&P cut BB+ to BB (Aug 2023) to B+ (Jul 2024); Moody's Ba2 to B1 (Oct 2024). FY2025 revenue $479.9M; about 3,200 employees plus 155 physicians; first-day wages motion about $16.6M. Bond principal "about $87M" and liabilities "about $441M" come from web-search snippets (Becker's, MLex) and were NOT confirmed on a page I read: UNKNOWN until checked.
 
@@ -176,7 +176,7 @@ Decision: **REJECT for now.** Reason: no measurable YouTube search demand (below
 
 Method lesson (INFERRED): "no videos yet" and "no search demand" look identical in the first check. Run Trends before searches when ranking candidates.
 
-Pilot PASS total: 0 (C1 REJECT-leaning, C2 leaning REJECT, C3 REJECT, C4 to C6 REJECT).
+Pilot PASS total: 0 (C1 REJECT, C2 leaning REJECT, C3 REJECT [HELOC, earlier section], D1 Redeemer REJECT, D2 to D4 REJECT).
 
 ## 13. Trends-first screen (2026-11-14): which terms have durable demand?
 
@@ -192,7 +192,7 @@ Method change (owner approved): run Google Trends (United States, YouTube Search
 Reading (INFERRED, MEDIUM-LOW):
 1. News-event terms (a bankruptcy, a rule, a report) show a few days of search interest and then fall to near zero. Even a large bankruptcy (Spirit Airlines) decays to about 5% of its peak within weeks.
 2. Durable demand sits on evergreen terms (mortgage rates, credit card debt). Those are also where YouTube competition is thickest (Section 11 found 25+ videos on a single card-fee story).
-3. So the two checks pull in opposite directions: an uncovered event has no durable demand, and a durable-demand term is already covered. A PASS candidate needs both an evergreen demand term and a question that existing videos do not answer. None of C1 to C6 has both.
+3. So the two checks pull in opposite directions: an uncovered event has no durable demand, and a durable-demand term is already covered. A PASS candidate needs both an evergreen demand term and a question that existing videos do not answer. None of C1 to C3 and D1 to D4 has both.
 4. "student loan default" spiking with the NY Fed release shows C2 had a demand burst; but the burst is also the window in which Tredy and others published, so the window was short.
 
 Not done in this section: the other Trends windows (7 days, 30 days, 5 years, all-time) for each term; vidIQ panel check on the closest video per term; channel-model fit.
@@ -215,7 +215,7 @@ Trends 5-year chart, read by eye: "private credit" is the only line with sustain
 
 Reading (INFERRED): where demand exists (private credit), large channels already cover it; where the topic is narrow (credit card delinquency by age, lock-in share), search demand on this scale is near zero and small channels still cover it. This repeats Section 13.
 
-Strict-rule result for the whole pilot: C1 to C6 and E1 to E5 all REJECT or leaning REJECT. Pilot PASS total: **0 of 11 candidates.** Limits of this pilot (so the 0 is not over-read): 11 candidates only; searches read by title, not by transcript, so a REJECT based on a similar title could miss a different payoff (a transcript check can only turn REJECT into "needs more research", never invent a PASS); Trends read by eye; Studio data unavailable.
+Strict-rule result for the whole pilot: C1 to C3, D1 to D4 and E1 to E5 all REJECT or leaning REJECT. Pilot PASS total: **0 of 12 candidates.** Limits of this pilot (so the 0 is not over-read): 12 candidates only; searches read by title, not by transcript, so a REJECT based on a similar title could miss a different payoff (a transcript check can only turn REJECT into "needs more research", never invent a PASS); Trends read by eye; Studio data unavailable.
 
 Consequence for the deliverables: PDF 13 (Approved First 10 Videos) will state "no candidate passed the strict rule" with this screening table as evidence, not a list of 10 topics. The launch plan (PDF 14) must say the first videos need a topic screen at launch time, with this method and kill rule.
 
@@ -230,6 +230,8 @@ Method: YouTube autocomplete (suggestqueries, ds=yt, gl=us) as a demand signal (
 | F3 | "what happened to dollar tree" (Family Dollar sale) | CNBC 1.1M, WSJ 213k, Company Man 142k, Michael Girdley 102k, "Dollar Tree paid $9 billion for Family Dollar. It sold for $1 billion." (small) | REJECT: saturated, same payoff. |
 | F4 | gold falling (Nov 2026 event) | 15+ forecast and "why is gold falling" videos in the last two weeks (Chart Origins 21k, Forex Insights 24k, Kitco) | REJECT: saturated. |
 
-Pilot total: C1 to C6, E1 to E5, F1 to F4 = 15 candidates, **0 PASS**.
+Pilot total: C1 to C3, D1 to D4, E1 to E5, F1 to F4 = 16 candidates, **0 PASS**.
 
 Pattern across all 15 (INFERRED, MEDIUM): a finance question that is typed into YouTube often enough to show in autocomplete is already answered by at least one large channel and several small ones. The strict rule ("same question and payoff already public = REJECT") therefore rejects almost any topic with measurable demand. This is a property of the rule plus this niche, not proof that no good video exists: the rule treats a different angle, depth or format as insufficient, so it cannot pass a "better version of a covered topic". Whether to loosen the rule (for example allow a document-depth angle on a covered topic) is an owner decision; it is not made here, and nothing was force-filled.
+
+Correction (2026-11-14): Sections 11 to 14 first labelled batch 2 as C3 to C6, which collided with the earlier C3 (HELOC, Section 2). Batch 2 is now D1 (Redeemer Health), D2 (Visa/Mastercard), D3 (Leslie's), D4 (G.19). Earlier text in Sections 13 and 14 that says '11 candidates' or '15 candidates' is superseded: the full count is 16 (C1 to C3, D1 to D4, E1 to E5, F1 to F4), 0 PASS.
