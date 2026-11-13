@@ -114,3 +114,17 @@ Primary sources padhe: NY Fed Q3 2026 report PDF (hhdc_2026q3.pdf, pdftotext se 
 **Feasibility (INFERRED):** data free aur primary (NY Fed PDF + charts public); chart reuse NY Fed publication hai, attribution ke saath reuse ki permission/terms maine check nahi kiye (UNKNOWN). Reference model aur production cost check nahi hue.
 
 **Decision C2: NEEDS MORE RESEARCH (PASS nahi).** PASS ke liye baaqi: (1) competing transcripts, (2) specific-query demand (Trends insufficient), (3) NY Fed chart reuse terms, (4) kaunsa channel-model fit hai (11 channels mein se). Pilot total: PASS 0.
+
+## 9. C2 transcript check (2026-11-13, auto-captions via yt-dlp, owner said "khud nikal lo")
+
+**Tredy finance** (c4mEwSRCGno, 599 s, uploaded 2026-11-11, 23 views): transcript READ (271 caption lines, auto-captions, not saved in repo).
+- It already separates **stock** (share of balance 90+ days late, 10.6%) from **flow** (new slippage, annualized) and says "two different ways to measure".
+- It gives the flow path 0.7% (end 2024) -> 16.19% (end 2025) -> Q2'25 12.88% -> Q2'26 7.83%, and says "the explosion already happened".
+- It attributes the oddity to "defaulted loans being reported again" (the NY Fed Q2 wording, matches my section 7) and says "the system just stopped counting" during the pause.
+- It uses **Q2'26 data (10.6%)**, not Q3'26 (10.9%). It does not cover the Q3 14.26 -> 7.72 move, and not the age split.
+- Its Default Resolution Group claim ("about a million borrowers >120 days past due", "Fed's end-of-year report") is still UNVERIFIED by me (not in NY Fed primaries I read).
+- Verdict (VERIFIED from transcript): the core payoff (stock vs flow plus reporting-restart base effect) is **already public**, in a tiny-view video. Only the Q3'26 update and the by-age angle are not covered.
+
+**Daily Dollar Doodles** (d4hXjS18hCM, 966 s, 2026-11-12, 1 view): transcript NOT READ. The caption endpoint returned HTTP 429 (rate limit) on 3 tries. Retry later; the "Myth 3" chapter is unchecked.
+
+**Effect on C2 decision:** strict rule (same question and payoff already public = REJECT) now points to REJECT for the plain "why did student loan delinquency fall" framing. A possible survivor is the **by-age angle from NY Fed p.28** (not found in any video, but it is read from a chart image, INFERRED, reuse terms UNKNOWN). Status: **NEEDS MORE RESEARCH, leaning REJECT for the base-effect framing**. Pilot PASS total still 0.
