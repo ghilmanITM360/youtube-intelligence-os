@@ -76,3 +76,23 @@ Transcripts NOT READ (description/chapters sirf).
 **Decision: REJECT (as stated).** "Banks dobara riskier lending" ka payoff 2 videos mein pehle se public hai (chhote views, par rule: same payoff = reject). Ek chhoti jagah bachti hai: NY Fed (vintage 2020-22 behtar ho raha) vs TransUnion (below-prime share badh raha) ka *cross-source* comparison; kisi video ke description mein nahi dikha, magar yeh sirf search-snippet se INFERRED hai aur demand evidence nahi. NEEDS MORE RESEARCH nahi banaya: ek hi hafte ke angle par 3-4 chhote channels pehle se hain.
 
 **Pilot total ab: PASS 0.** C1 REJECT, C3 REJECT, C2 NEEDS MORE RESEARCH. Agla: naye event-based candidates (C2 + alag source).
+
+## 6. C2 full research: student loan serious-delinquency flow 14.26% -> 7.72% (2026-11-13)
+**Cause (primary, VERIFIED + INFERRED):**
+- NY Fed Q3 2026 release (2026-11-10, WebFetch): table 14.26% (Q3'25) -> 7.72% (Q3'26); student balances $1.656T (+$5B qoq); text sirf "slightly improved" (qoq). Release **koi wajah nahi deti** aur reporting/collections/garnishment ka zikr nahi.
+- NY Fed Q3 2025 release (2025-11-05, WebFetch): Q3'25 flow 14.26% vs 0.77% in Q3'24; stock 9.4% (Q2'25 10.2%, Q1'25 7.8%). Wajah (Fed ke apne alfaaz): pehle report na hue missed federal payments ab credit reports mein aa rahe hain, isliye rates "remained elevated after a sharp rise in the first half of 2025" (VERIFIED).
+- Q2'26 flow 7.83% aur Q3'26 stock share 10.9% (Q2'26 10.6%) WebSearch summary se (secondary, primary table nahi kholi). Aur "Default Resolution Group transfer" / "Aug 2026 re-reporting distortions" wali baat bhi secondary WebSearch hai, primary mein nahi mili (Q3'25 release mein DRG ka zikr nahi) -> UNVERIFIED.
+- **INFERRED (HIGH-ish, magar Fed ne likha nahi):** saal-ba-saal giraawat zyadatar Q3'25 ke reporting-restart spike ka base effect hai; Q3'26 ka asli qoq move chhota (7.83 -> 7.72). Isi ke saath *stock* barha (10.6 -> 10.9%), yaani "flow gira magar bimar balances badhte rahe". Yeh stock-vs-flow kahani hai; angle kaam ka lagta hai.
+
+**Competition (Chrome, YouTube, Videos filter, 5 searches: "student loan delinquency New York Fed 2026"; "why student loan delinquencies dropped reporting restart"; "student loan defaults Default Resolution Group wage garnishment credit scores"; "student loan 90 days delinquent 10.9 percent New York Fed"; "student loan delinquency rate falling but balances rising"):** transcripts NOT READ.
+- Koi video nahi mili jo 14.26 -> 7.72 ya reporting-restart base effect explain kare (VERIFIED jo results mein dikha; sirf search-snippets, har video nahi khola).
+- Qareeb: "10.9% of student loan borrowers are delinquent or in default according to the Federal Reserve" (345 views, 26.8K-sub channel, 1 din); "Every Debt Went Flat - Except Student Loans" (Shorts, 6 views); Tredy finance "why 7.5 million americans just stopped paying..." (23 views, Q2 data 10.6%, stock/flow ka zikr); Daily Dollar Doodles "$19.1 Trillion... (2 Ledgers)" (1 view, 31 chapters, ek chapter "Myth 3: Student Loan Delinquency Explained"); "Student Loan Delinquency 2026: Why It Jumped" Short (10 views); Weekly Student Loan News Round Up (456 views).
+- Zyada demand wali videos default/garnishment/RAP par hain: "How Many Student Loan Borrowers Are in Default? 'I Don't Know'" 1.6K (1 din).
+- YouTube Studio tool (Search Companion, search-term stats) har query par "Volume very low, Competition very low".
+
+**Trends (YouTube Search, US, Chrome screenshots):** "student loan delinquency" 12m = INSUFFICIENT DATA. Parent "student loans" (normalized): 4h/24h akele spikes (sparse); 7d bohat aate-jaate peaks (24h ke andar daily rhythm); 30d aur 90d: late-Oct ek bara peak (100) phir ~20-30 par; 12m: pichle saal ~10-20 flat, 2026 ke aakhir mein ek bara spike (100) phir giraawat. Matlab parent topic mein haal ki spike thi (shayad default/RAP/garnishment news, wajah UNKNOWN), ab utar chuki. Specific "delinquency" query ka demand evidence nahi (UNKNOWN). Screenshots saved nahi.
+
+**Decision C2: NEEDS MORE RESEARCH (PASS nahi).** Positive: angle ("flow giri kyun, aur stock kyun badha") kisi video mein nahi dikha. Rukawatein: (1) wajah Q3'26 ke liye Fed ne nahi likhi, base-effect meri inference hai; (2) DRG/re-reporting claims primary se verify nahi; (3) 3-4 chhote videos stock-vs-flow chhoo rahe hain, unke transcripts nahi padhe; (4) specific query ka demand nahi; (5) reference model, production feasibility, chart/source reuse check nahi hue.
+Agla qadam (agar chaho): NY Fed Q3'26 report PDF (hhdc_2026q3) mein student table/footnotes se wajah primary verify, aur Tredy / Daily Dollar Doodles ke transcript.
+
+**Pilot total: PASS 0** (C1 REJECT, C3 REJECT, C2 NEEDS MORE RESEARCH, closer to PASS than C1).
