@@ -37,3 +37,7 @@ Single in-repo home for the senior-health niche. Everything here is derived read
 - Split DB rebuilt (`scripts/build_senior_health_split.py`), all files <100 MB (core 66 MB).
 - Remaining for a second Apify account: `REMAINING_FOR_SECOND_APIFY_ACCOUNT.csv` (401 missing in 60-video plan; 192 live, 209 dead/removed on YouTube and untranscribable). Ready-to-paste actor input for the 192 live IDs (~$0.96): `APIFY_INPUT_REMAINING_LIVE.json`. Export result as JSON, then `python3 scripts/import_apify_transcripts.py <file.json>` and rebuild the split DB.
 - Terminated channel: Dr. Aliza Wright Senior Health (UC1SDr8dfs0uED3GQIBW6edg).
+
+## Update 2026-11-13 (2) — final batch run 8LIogmlj1NrUohbPJ
+- 73 more transcripts imported (3 failed). Total transcripts in DB: 2,336 of 5,802 videos. Split DB rebuilt, all files <100 MB.
+- Remaining for a second Apify account (60-video plan): 309 missing = 166 live (~$0.83, input in `APIFY_INPUT_REMAINING_LIVE.json`) + 143 dead/removed (untranscribable).
