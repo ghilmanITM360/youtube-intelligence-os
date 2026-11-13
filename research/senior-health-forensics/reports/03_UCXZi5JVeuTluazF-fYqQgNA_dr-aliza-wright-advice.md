@@ -30,7 +30,7 @@ Checked 2026-11-13. Sources: senior_health_complete.db (DS-000034 snapshot 2026-
 | Thumbnails | 4 of 11 inspected (current versions) |
 | Chrome playback | NOT done (0/11); comments NOT read |
 | vidIQ / Trends | not run |
-Pending IDs: 5SoeGK7V-1M PL8WqRzI41A mXOG62URJho GA8LvzyWNAk Ss0B2ICl0YI zzQjq71nrGk 4VIT6Q-1Igc (7 still public? only first two are; others removed).
+Pending IDs: 5SoeGK7V-1M PL8WqRzI41A mXOG62URJho GA8LvzyWNAk Ss0B2ICl0YI zzQjq71nrGk 4VIT6Q-1Igc (per live channel page only 5SoeGK7V-1M and PL8WqRzI41A of these are still public; the rest are not in the live list, not individually re-checked).
 
 ## E. Evidence ledger
 | Claim | Evidence | Conf |
