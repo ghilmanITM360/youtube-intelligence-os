@@ -31,3 +31,9 @@ Single in-repo home for the senior-health niche. Everything here is derived read
 - Tier 2 and 3 channels are not in the registry DB; no transcripts for them yet.
 - The canonical registry DB was not modified: its validator pins fixed totals (75 channels / 2,303 videos) and rebuilds from manifests, so adding these needs a builder change.
 - Tier 3 (55) and tier 4 (75) channels need a paid Apify run for full metadata (~4,500 videos ≈ $18).
+
+## Update 2026-11-13 — Apify transcript run (free plan, $4.4/$5 used)
+- Run plGekyopZRj2rzQhI (srd836/youtube-transcript-pro): 307 transcripts imported (5 errors), total transcripts in DB: 2,244.
+- Split DB rebuilt (`scripts/build_senior_health_split.py`), all files <100 MB (core 66 MB).
+- Remaining for a second Apify account: `REMAINING_FOR_SECOND_APIFY_ACCOUNT.csv` (401 missing in 60-video plan; 192 live, 209 dead/removed on YouTube and untranscribable). Ready-to-paste actor input for the 192 live IDs (~$0.96): `APIFY_INPUT_REMAINING_LIVE.json`. Export result as JSON, then `python3 scripts/import_apify_transcripts.py <file.json>` and rebuild the split DB.
+- Terminated channel: Dr. Aliza Wright Senior Health (UC1SDr8dfs0uED3GQIBW6edg).
