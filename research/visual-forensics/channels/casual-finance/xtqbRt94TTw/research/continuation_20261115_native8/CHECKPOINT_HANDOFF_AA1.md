@@ -1,0 +1,6 @@
+# V006 xtqbRt94TTw checkpoint AA1 (scheduled run 2026-11-15)
+SUB051 (2587) verified on native decode 2580-2595 (16 frames measured, 10 JPEG samples viewed, one reviewer, no independent QA). Frame 2587 is NOT an event onset: it is mid-stroke of the thin red stroke drawing the right edge of the headline rectangle upward (x~1542-1551, first measured change 2581); last stroke change 2593; 2594-2595 static (0 px >60, max delta 11-12). Rectangle closed in 2595. Sparse full-frame change at 2586 (2270 px) and 2587 (361 px) with no visible content change; cause undetermined (not asserted).
+Open: red-stroke track start (<2510) and 2546-2580 not measured; no ledger event owns the track; production-draft S0015 [1141,1155] not applied.
+Integrated: visual_event_ledger_v48.csv (only SUB051 changed vs v47, 948 rows; positive + negative check PASS); CURRENT_NATIVE_QUEUE_v24.json (558 strict rows).
+Source sha256 030a85ad...a7a66 verified; Z2 sums OK; remote head at start 4539188f (=Z2). Frames kept local only. Audio 0, CT_SCAN_COMPLETE=false, 0 of 35.
+Next exact operation: verify queue item EP0080 (2661-2665) with adjacent native context (optionally measure red-stroke 2546-2580 in a same-decode window).
