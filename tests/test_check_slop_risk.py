@@ -57,3 +57,17 @@ def test_front_matter_and_script_paths():
     assert not is_script(ROOT / 'productions/fs-01/FACT_CHECK.md')
     assert not is_script(ROOT / 'research/x/SCRIPT_INTELLIGENCE.md')
     assert not is_script(ROOT / 'productions/fs-01/FINAL_SCRIPT.md.slop-risk.json')
+
+
+def test_claude_hook_session_and_prompt_events():
+    import io, json, contextlib
+    from check_slop_risk import claude_hook
+    for name in ('SessionStart', 'UserPromptSubmit'):
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            sys.stdin = io.StringIO(json.dumps({'hook_event_name': name}))
+            claude_hook()
+        o = json.loads(out.getvalue())
+        assert o['hookSpecificOutput']['hookEventName'] == name and 'productions/' in o['hookSpecificOutput']['additionalContext']
+        assert ('systemMessage' in o) == (name == 'SessionStart')
+    sys.stdin = sys.__stdin__

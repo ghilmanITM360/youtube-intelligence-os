@@ -8,7 +8,7 @@ Production scripts live at productions/<project>/**/*SCRIPT*.md|txt and start wi
   ---
   title: ...      channel: CH-...      images: path/to/thumbnail-or-frames (repo-relative)
   ---
-Automatic triggers: Claude Code PostToolUse hook (--claude-hook), .githooks/pre-commit and CI (--only-scripts),
+Automatic triggers: Claude Code SessionStart/UserPromptSubmit/PostToolUse hooks (--claude-hook), .githooks/pre-commit and CI (--only-scripts),
 production_pipeline.py validate. Manual (repo root):
   uv run python scripts/check_slop_risk.py SCRIPT... [--title T] [--channel CH] [--images P ...]
       [--verified-presenter] [--exception R5="reason"]
@@ -208,16 +208,32 @@ def summary(r):
                      [f"  report: {r['script']}.slop-risk.json  rules: {r['rules']}"])
 
 
+GUARD = ("AI-slop gate ACTIVE (docs/policies/AI-SLOP-RISK-RULES.md). Any script, voiceover or video package you produce "
+         "must be saved as productions/<project>/**/*SCRIPT*.md (header: title/channel/images) so the gate runs on it; "
+         "never deliver a script only in chat. Show the user the gate verdict, findings and checklist with every delivery; "
+         "a PASS is a proxy, never 'won't be detected'.")
+
+
 def claude_hook():
-    """Claude Code PostToolUse hook: gate production scripts as soon as Claude writes/edits them."""
-    path = (json.load(sys.stdin).get('tool_input') or {}).get('file_path')
+    """Claude Code hook (SessionStart / UserPromptSubmit / PostToolUse), dispatched on stdin's hook_event_name.
+    systemMessage is shown to the user directly; additionalContext/reason go to Claude."""
+    ev = json.load(sys.stdin); name = ev.get('hook_event_name', 'PostToolUse')
+    if name == 'SessionStart':
+        print(json.dumps({'systemMessage': 'AI-slop gate active: every new script/video in productions/ is checked; '
+                          'FAIL blocks delivery.', 'hookSpecificOutput': {'hookEventName': name, 'additionalContext': GUARD}}))
+        return 0
+    if name == 'UserPromptSubmit':
+        print(json.dumps({'hookSpecificOutput': {'hookEventName': name, 'additionalContext': GUARD}})); return 0
+    path = (ev.get('tool_input') or {}).get('file_path')
     if not path or not Path(path).is_file() or not is_script(path): return 0
     r = run(path); s = summary(r)
+    alert = f"AI-slop gate {r['verdict']}: {r['script']}" + ''.join(f"\n  {f['level']} {f['rule']}: {f['detail']}" for f in r['findings'])
     if r['delivery_blocked']:
-        print(json.dumps({'decision': 'block', 'reason': s + '\nFix with original work (no paraphrasing/noise to beat thresholds) '
+        print(json.dumps({'systemMessage': alert + '\nDelivery BLOCKED.', 'decision': 'block', 'reason': s +
+                          '\nFix with original work (no paraphrasing/noise to beat thresholds) '
                           'before delivering, or record a reasoned --exception the user sees.'}))
     else:
-        print(json.dumps({'hookSpecificOutput': {'hookEventName': 'PostToolUse', 'additionalContext': s +
+        print(json.dumps({'systemMessage': alert, 'hookSpecificOutput': {'hookEventName': 'PostToolUse', 'additionalContext': s +
                           '\nShow this verdict, findings and checklist to the user with the delivery.'}}))
     return 0
 
@@ -228,7 +244,7 @@ def main(argv=None):
     a.add_argument('--images', nargs='*', default=[]); a.add_argument('--verified-presenter', action='store_true')
     a.add_argument('--exception', action='append', default=[], help='RULE=reason; downgrades that rule\'s FAIL, recorded in report')
     a.add_argument('--only-scripts', action='store_true', help='skip paths that are not production scripts (hooks/CI)')
-    a.add_argument('--claude-hook', action='store_true', help='read a Claude Code PostToolUse event from stdin')
+    a.add_argument('--claude-hook', action='store_true', help='read a Claude Code hook event from stdin')
     o = a.parse_args(argv)
     if o.claude_hook: return claude_hook()
     paths = [p for p in o.scripts if not o.only_scripts or (Path(p).is_file() and is_script(p))]
