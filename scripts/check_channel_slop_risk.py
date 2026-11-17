@@ -102,7 +102,11 @@ def flags(f, n):
     c, out = f['cadence'], []
     if c['max_uploads_in_7_days'] >= 7 or c['extra_same_day_uploads'] >= 3: out.append('CADENCE: burst uploads')
     if f['titles']['mean_pair_jaccard'] >= 0.3 or len(f['titles']['near_duplicate_pairs']) >= 3: out.append('TITLES: templated within channel')
-    if f['script_reuse_within']['hits']: out.append(f"SCRIPT: {len(f['script_reuse_within']['hits'])} videos reuse ≥{COPY_FAIL:.0%} of another own video {f['script_reuse_within']['hit_types']}")
+    # Shorts<->long-form pairs are a creator re-cutting their own video, reported apart from same-format reuse.
+    hits = f['script_reuse_within']['hits']
+    same = [h for h in hits if h['type'] == h['other_type']]
+    if same: out.append(f"SCRIPT: {len(same)} videos reuse ≥{COPY_FAIL:.0%} of another own video of the same format")
+    if len(hits) - len(same): out.append(f"INFO: {len(hits) - len(same)} Shorts<->long-form pairs share script (own-content re-cut, not cross-channel)")
     if f['script_reuse_cross_channel']['over_threshold'] or f['titles_cross_channel']: out.append('NETWORK: script/title overlap with other channels')
     if f['thumbnails']['within'] or f['thumbnails']['cross']: out.append('THUMBNAILS: near-identical hashes')
     if f['persona_boilerplate']['persona_videos']: out.append('PERSONA: expert self-claims')
@@ -117,7 +121,9 @@ def main():
     a = ap.parse_args()
     own, others, thumbs = load(a.channel)
     f = scan(own, others, thumbs)
-    rep = dict(channel=a.channel, title=f"{own[0]['ch']}", generated=datetime.now().isoformat(timespec='seconds'),
+    with sqlite3.connect(f'file:{REGISTRY}?mode=ro', uri=True) as con:
+        name = (con.execute('select channel_name from channels where canonical_channel_id=?', (a.channel,)).fetchone() or (a.channel,))[0]
+    rep = dict(channel=a.channel, title=name, generated=datetime.now().isoformat(timespec='seconds'),
                source=str(REGISTRY.relative_to(ROOT)), note='Proxy signals only; not a platform detection verdict.',
                proxy_flags=flags(f, len(own)), findings=f)
     out = ROOT / a.out; out.mkdir(parents=True, exist_ok=True)
