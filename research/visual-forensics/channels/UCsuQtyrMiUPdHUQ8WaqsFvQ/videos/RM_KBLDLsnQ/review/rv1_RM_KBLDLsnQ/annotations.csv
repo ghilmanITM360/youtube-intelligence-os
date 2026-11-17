@@ -1,0 +1,158 @@
+seg,event_class,subtype,description,confidence
+G0001,STATIC_HOLD,OPENING_STATE,"Left: bearded caveman (black hair and beard, yellow leopard-spot tunic, half-lidded scowling eyes) points right at a framed grayscale photo on a stand; photo shows two tornado funnels and a small dark long-neck dinosaur silhouette between them; white background.",HIGH
+G0002,CHARACTER,EXPRESSION_SWAP,"One-frame change; composition unchanged (caveman left, photo right). Fine face detail (eyelid or mouth) not resolvable at tile scale; UNRESOLVED exact change.",LOW
+G0003,STATIC_HOLD,HOLD,"Same composition as G0001: caveman pointing at tornado photo with dinosaur silhouette.",HIGH
+G0004,CHARACTER,EXPRESSION_SWAP,"One-frame change; same framing. Face slightly different (brow/eyelid); UNRESOLVED exact change at tile scale.",LOW
+G0005,STATIC_HOLD,HOLD,"Same composition: caveman pointing at tornado photo.",HIGH
+G0006,CAMERA,ZOOM_IN,"Smooth per-frame zoom into the framed photo: big caveman head and pointing hand grow then slide off to the left edge while the grayscale tornado photo expands to fill the whole frame (strip f39-f68, change fraction falls from 0.31 to 0.001). A small cartoon caveman (yellow tunic) stands on the photo ground lower left from about f49 and scales with the zoom. Thumb of small caveman points right.",MEDIUM
+G0007,STATIC_HOLD,HOLD,"Full-frame grayscale tornado photo with two funnels; small cartoon caveman lower left thumbing right; small dark long-neck silhouette between funnels.",HIGH
+G0008,CHARACTER,POSE_SWAP,"Small caveman head/face redrawn (head tilt or expression) while body and photo unchanged; exact expression unresolved at tile scale.",LOW
+G0009,STATIC_HOLD,HOLD,"Small caveman lower left on grayscale tornado photo, grinning/smirking toward right; photo unchanged.",MEDIUM
+G0010,CHARACTER,EXPRESSION_SWAP,"Small caveman face changes again (more frontal frown); body and background unchanged.",LOW
+G0011,STATIC_HOLD,HOLD,"Small caveman lower left on tornado photo; face frowning.",MEDIUM
+G0012,FALSE_POSITIVE,SUBPIXEL_CHANGE,"Only 634 pixels changed; no visible change at tile scale. UNRESOLVED whether a tiny blink.",LOW
+G0013,STATIC_HOLD,HOLD,"Small caveman lower left on tornado photo; no visible change.",HIGH
+G0014,SHOT_CUT+CHARACTER+LIGHT/COLOR/EFFECT,SCENE_SWAP,"At f136 whole frame replaced: white background, smiling cartoon long-neck dinosaur (spotted back) left, grey sketchy tornado spiral rising right and growing in width until about f248. From f252 the dino neck spins like a rotor: several ghost heads stacked on a vertical swirl axis, rings around it, then dino tilts and drifts up-left out of frame (f314-f332) leaving debris specks; frame empty f336-f344; then a new dino drawing (whisker lines at mouth, grass tufts at feet) pops in left-centre f348. Continuous in-betweens every frame at 4-frame sampling.",MEDIUM
+G0015,STATIC_HOLD,HOLD,"White background; medium dino centre-left with whisker lines at mouth and two grass tufts at feet; calm smile.",HIGH
+G0016,CHARACTER,POSE_SWAP,"Dino redrawn larger with neck bent down and head low at left, small smiling face; centre of frame; no grass.",HIGH
+G0017,STATIC_HOLD,HOLD,"Large dino with head drooping down at left of body, tail up right; white background.",HIGH
+G0018,CHARACTER+LIGHT/COLOR/EFFECT,POSE_SWAP,"Dino redrawn slightly smaller; neck end now drooped to lower left, ending in a grey pixelated circular mosaic block instead of a head.",MEDIUM
+G0019,STATIC_HOLD,HOLD,"Dino with neck hanging down to lower left ending in a pixelated grey ball; white background.",HIGH
+G0020,CHARACTER,POSE_SWAP,"Dino redrawn with neck stretched horizontally to the left ending in the pixelated grey ball; short speed marks on neck; body lower and legs apart.",MEDIUM
+G0021,STATIC_HOLD,HOLD,"Dino body right, neck extended straight left like a rigid shaft ending in pixelated ball.",HIGH
+G0022,SHOT_CUT,SCENE_SWAP,"Whole frame replaced by full-body front-facing caveman centred, grinning, both thumbs up at chest, yellow leopard tunic with jagged hem, barefoot.",HIGH
+G0023,STATIC_HOLD,HOLD,"Full-body caveman, grin, two thumbs up.",HIGH
+G0024,SHOT_CUT,SCENE_SWAP,"Close bust of caveman filling frame: heavy brow, big nose, gap-toothed grin, thick beard, small heart tattoo reading GRUG on chest. Possibly punch-in of same character; drawing detail differs from full-body so treated as new image.",MEDIUM
+G0025,STATIC_HOLD,HOLD,"Caveman bust, wide grin, brow level.",HIGH
+G0026,CHARACTER,EXPRESSION_SWAP,"Caveman brow changes to an angled-up arch and eye shape shifts; framing unchanged.",MEDIUM
+G0027,STATIC_HOLD,HOLD,"Caveman bust, angled brow, grin.",HIGH
+G0028,CHARACTER,EXPRESSION_SWAP,"Subtle brow/eye change; framing unchanged; fine detail unresolved at tile scale.",LOW
+G0029,STATIC_HOLD,HOLD,"Caveman bust, grin, brow raised.",HIGH
+G0030,CHARACTER,EXPRESSION_SWAP,"Subtle brow/eye change; fine detail unresolved at tile scale.",LOW
+G0031,STATIC_HOLD,HOLD,"Caveman bust, grin.",HIGH
+G0032,CHARACTER,EXPRESSION_SWAP,"Subtle brow/eye change; fine detail unresolved at tile scale.",LOW
+G0033,STATIC_HOLD,HOLD,"Caveman bust, grin, brow raised.",HIGH
+G0034,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: white background, frowning dino with spotted back, a cloud of swirly wind puffs with speed lines wrapping its neck from the left.",HIGH
+G0035,STATIC_HOLD,HOLD,"Dino with wind puffs wrapping neck from left, long hold.",HIGH
+G0036,SHOT_CUT,SCENE_SWAP,"Black solid silhouette of long-neck dino, facing left, centred on white.",HIGH
+G0037,STATIC_HOLD,HOLD,"Black dino silhouette, centred.",HIGH
+G0038,GRAPHIC/TEXT,POP_ON_OBJECT,"Small curved black arrow appears above the silhouette head pointing right (clockwise).",HIGH
+G0039,STATIC_HOLD,HOLD,"Black dino silhouette with one arrow above head pointing right.",HIGH
+G0040,GRAPHIC/TEXT,POP_ON_OBJECT,"Second curved arrow appears on the neck/back area pointing left (opposite direction to head arrow).",HIGH
+G0041,STATIC_HOLD,HOLD,"Black silhouette with two opposing curved arrows: one above head pointing right, one on body pointing left.",HIGH
+G0042,SHOT_CUT,SCENE_SWAP,"Whole frame replaced by a very large crop of dino lower body: belly spots at top, four legs, two small knee faces with worried open mouths and wiggle lines at the sides.",HIGH
+G0043,STATIC_HOLD,HOLD,"Dino legs with two panicked knee faces and shake lines; long hold.",HIGH
+G0044,SHOT_CUT,SCENE_SWAP,"Small dino centred whose neck is twisted into a corkscrew; head has googly spiral eyes and tongue out.",HIGH
+G0045,STATIC_HOLD,HOLD,"Dino with corkscrew neck and dizzy face.",HIGH
+G0046,SHOT_CUT,SCENE_SWAP,"Whole frame replaced by a rendered green cartoon dino (Yoshi-like 3D character with red shoes) running to the right, centred on white; photo-style, not line art.",HIGH
+G0047,STATIC_HOLD,HOLD,"Green running dino character centred on white.",HIGH
+G0048,SHOT_CUT,SCENE_SWAP,"Whole frame replaced by line-art feathered raptor standing upright, tongue out, wide eyes, heavy brow, arms bent left; centred.",HIGH
+G0049,STATIC_HOLD,HOLD,"Feathered raptor standing, tongue out.",HIGH
+G0050,LIGHT/COLOR/EFFECT,FADE,"Raptor line art begins to fade: outlines turn from black to mid grey over frames 1460-1466.",HIGH
+G0051,STATIC_HOLD,DRIFT_COLOUR,"Slow colour drift: first tile raptor outlines mid-grey, mid tile (f1487) very light grey, last tile (f1507) blank white. Continuation of fade-out.",HIGH
+G0052,LIGHT/COLOR/EFFECT+CHARACTER,FADE_IN_THEN_JITTER,"New raptor pose fades in from white (f1508-f1516): flying with arms spread, eyes closed contented smile, curved wind lines around body. After f1518 the drawing is visually constant; changed fraction pulses (0.01-0.05) in bursts around f1528-f1534 and f1544-f1600, consistent with subtle wobble or wind-line shift; exact element UNRESOLVED.",MEDIUM
+G0053,STATIC_HOLD,HOLD,"Flying raptor, arms spread, eyes closed smile, wind lines.",HIGH
+G0054,SHOT_CUT,SCENE_SWAP,"Frames f1630-f1635 still full-body flying raptor with small wind-line shifts; by f1638 whole frame replaced with large close-up of raptor head: star-shaped eyes, tear streak, wide open smile, sparkle lines at upper left.",MEDIUM
+G0055,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes, tear, big smile, sparkle lines.",HIGH
+G0056,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Tiny change (2.5k px) on otherwise constant close-up; element unresolved at tile scale, possibly eye stars or tear; UNRESOLVED.",LOW
+G0057,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes, tear, smile.",HIGH
+G0058,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change as G0056; UNRESOLVED element.",LOW
+G0059,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0060,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0061,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0062,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0063,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0064,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0065,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0066,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0067,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0068,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0069,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0070,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0071,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0072,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0073,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0074,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0075,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0076,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0077,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0078,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0079,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0080,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0081,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0082,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0083,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0084,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0085,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0086,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0087,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0088,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0089,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes.",HIGH
+G0090,LIGHT/COLOR/EFFECT,LOOP_FLICKER,"Same tiny recurring change; UNRESOLVED element.",LOW
+G0091,STATIC_HOLD,HOLD,"Raptor head close-up, star eyes, tear, smile, last frame before expression change.",HIGH
+G0092,CHARACTER,EXPRESSION_SWAP,"Same head framing; expression switches from joy to terror: wide round eyes, open jaw with sharp teeth, sweat drops, jagged alarm marks upper left.",HIGH
+G0093,STATIC_HOLD,HOLD,"Raptor head close-up, terrified wide eyes, teeth showing, sweat drops.",HIGH
+G0094,SHOT_CUT+CHARACTER,SCENE_SWAP,"At f1815 whole frame replaced: raptor falling head-down toward lower left, terrified face, claws up, diagonal speed lines; small jitter pulses (change fraction 0.02-0.06) while falling; at f1853 last frame cut to a blank outline rock.",MEDIUM
+G0095,STATIC_HOLD,HOLD,"Large empty outline boulder centred on white.",HIGH
+G0096,CHARACTER+LIGHT/COLOR/EFFECT,SLIDE_ON_IMPACT,"Small falling raptor slides in from the right edge (f1880, f1882) and at f1885 appears splatted on the right side of the rock as a grey pixelated mosaic shape with red blood splatter.",HIGH
+G0097,STATIC_HOLD,HOLD,"Boulder with pixelated grey raptor splat and red marks on its right side.",HIGH
+G0098,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: small line-art long-neck dino with heavy brow standing centred, facing right, tail left.",HIGH
+G0099,STATIC_HOLD,HOLD,"Small heavy-browed long-neck dino centred.",HIGH
+G0100,CAMERA,ZOOM_IN,"Single-step jump to large scale of the same dino (head near top, legs cropped at bottom); drawing appears same; could instead be a cut to a redrawn larger version.",MEDIUM
+G0101,STATIC_HOLD,HOLD,"Large dino, head upper right, legs cropped by frame bottom.",HIGH
+G0102,CAMERA+GRAPHIC/TEXT,ZOOM_OUT_POP_ON_OBJECT,"Dino scaled down and standing on left pan of a balance scale; empty right pan; scale post and base appear.",MEDIUM
+G0103,STATIC_HOLD,HOLD,"Dino on left pan of balance scale, right pan empty and raised.",HIGH
+G0104,GRAPHIC/TEXT,POP_ON_OBJECT,"Small house with windows and door appears on the right pan of the scale.",HIGH
+G0105,STATIC_HOLD,HOLD,"Dino on left pan, house on right pan, beam tilted with dino side lower.",HIGH
+G0106,CAMERA,ZOOM_IN,"Scale and house removed; dino shown large again, same framing as G0101 (head top, legs cropped). May be a cut to the earlier large drawing; UNRESOLVED.",MEDIUM
+G0107,STATIC_HOLD,HOLD,"Large dino alone, no text.",HIGH
+G0108,GRAPHIC/TEXT,POP_ON_TEXT,"Yellow rounded label with lowercase black handwritten-style text patagotitan appears upper left of the large dino.",HIGH
+G0109,STATIC_HOLD,HOLD,"Large dino with yellow label patagotitan upper left.",HIGH
+G0110,SHOT_CUT,SCENE_SWAP,"Label gone; dino redrawn smaller and centred, smirking, with two small wings on its sides. Could be zoom-out plus wings pop-on of same character; treated as new image.",MEDIUM
+G0111,STATIC_HOLD,HOLD,"Smaller dino with two tiny wings, smirk.",HIGH
+G0112,CHARACTER+GRAPHIC/TEXT,EXPRESSION_SWAP,"Dino expression to worried frown; red target crosshair appears on its body side; wings remain.",HIGH
+G0113,STATIC_HOLD,HOLD,"Worried winged dino with red crosshair on side.",HIGH
+G0114,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: angry muscular tornado character with fanged grin holding a bazooka-like cannon labelled DEBRIS GUN, aimed left.",HIGH
+G0115,STATIC_HOLD,HOLD,"Muscular tornado with DEBRIS GUN cannon, left of centre.",HIGH
+G0116,SHOT_CUT,SCENE_SWAP,"Whole frame replaced by blank white.",HIGH
+G0117,STATIC_HOLD,HOLD,"Blank white frame.",HIGH
+G0118,GRAPHIC/TEXT,SLIDE_ON_SLIDE_OFF,"Props slide right to left across white with in-betweens: outline tree branch (f2698-f2742), outline rock (f2742-f2780), green rendered T-rex toy (f2772-f2814), then flying caveman in brown tunic with yellow cape and fist forward, slightly rotated (f2816-f2884); frame ends blank.",HIGH
+G0119,STATIC_HOLD,HOLD,"Blank white frame.",HIGH
+G0120,GRAPHIC/TEXT,SLIDE_ON_SLIDE_OFF,"Outline trampoline slides in from the right (f2891), tilts slightly, passes centre and exits left (f2944); frame ends blank.",HIGH
+G0121,STATIC_HOLD,HOLD,"Very pale grey ghost of a forest (three trees, bushes) at near-zero opacity on white; start of fade-in.",MEDIUM
+G0122,LIGHT/COLOR/EFFECT,FADE,"Forest fades in from very light grey to full black outline over about 12 frames; trees and bushes unchanged in position.",HIGH
+G0123,STATIC_HOLD,HOLD,"Intact forest line art: three trees, ferns, bushes, ground.",HIGH
+G0124,SHOT_CUT,SCENE_SWAP,"Forest replaced by smaller wrecked version: broken tree trunk, fallen log, leaves in the air, flattened bushes.",MEDIUM
+G0125,STATIC_HOLD,HOLD,"Wrecked forest with fallen logs and flying leaves.",HIGH
+G0126,GRAPHIC/TEXT,SLIDE_ON_SLIDE_OFF,"From blank white, a dense field of black spear-like arrows pointing right enters from the left (f3106-f3122), fills the frame, then exits right (f3184-f3204); arrow heads appear blurred as if with motion blur; ends blank.",HIGH
+G0127,STATIC_HOLD,HOLD,"Blank white frame.",HIGH
+G0128,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: caveman in yellow mortarboard cap with tassel stands right beside a blackboard reading lesson, pointer touching the word, grumpy brow.",HIGH
+G0129,STATIC_HOLD,HOLD,"Teacher caveman, blackboard reading lesson.",HIGH
+G0130,CHARACTER,EXPRESSION_SWAP,"Minor face change of teacher caveman (about 15k px); unresolved detail at tile scale.",LOW
+G0131,STATIC_HOLD,HOLD,"Teacher caveman, blackboard lesson.",HIGH
+G0132,CHARACTER,EXPRESSION_SWAP,"Minor face change again; unresolved detail.",LOW
+G0133,STATIC_HOLD,HOLD,"Teacher caveman, blackboard lesson.",HIGH
+G0134,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: feathered raptor standing upright, tongue out, wide eyes, arms bent left, upper right of frame; appears to be the G0048 drawing re-used.",MEDIUM
+G0135,STATIC_HOLD,HOLD,"Feathered raptor standing, tongue out.",HIGH
+G0136,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: blank boulder with pixelated grey raptor splat and red marks on its right side; appears to be the G0097 image re-used.",MEDIUM
+G0137,STATIC_HOLD,HOLD,"Boulder with raptor splat.",HIGH
+G0138,GRAPHIC/TEXT+LIGHT/COLOR/EFFECT,SLIDE_ON_BLUR,"A cartoon eyeball with trailing optic nerve falls from upper left to lower left with motion lines (f3356-f3364) while the boulder fades to a soft blur.",HIGH
+G0139,STATIC_HOLD,HOLD,"Eyeball on ground lower left, blurred boulder with splat behind.",HIGH
+G0140,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: smiling spotted long-neck dino standing centre-left; appears to be the G0014 first drawing re-used.",MEDIUM
+G0141,STATIC_HOLD,HOLD,"Smiling spotted long-neck dino.",HIGH
+G0142,CHARACTER,POSE_SWAP,"Dino redrawn smaller with neck folded like paper at a sharp angle and head down with small impact marks.",HIGH
+G0143,STATIC_HOLD,HOLD,"Dino with folded neck, head low at left.",HIGH
+G0144,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: large calm standing dino, heavy brow, no label; same design as G0107.",MEDIUM
+G0145,STATIC_HOLD,HOLD,"Large calm long-neck dino.",HIGH
+G0146,SHOT_CUT,SCENE_SWAP,"Dino redrawn smaller and sad-eyed, covered with twigs and branches stuck on body and tail. Possibly same character redrawn; treated as new image.",MEDIUM
+G0147,STATIC_HOLD,HOLD,"Sad dino covered in twigs.",HIGH
+G0148,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: smiling tornado character with heart eyes, open happy mouth, puffy cloud-like arms spread, left of frame.",HIGH
+G0149,STATIC_HOLD,HOLD,"Heart-eyed tornado left, empty space right.",HIGH
+G0150,CHARACTER,POP_ON_OBJECT,"Caveman with heart eyes appears at right, hands clasped to cheek, one leg lifted as if skipping; tornado unchanged.",HIGH
+G0151,STATIC_HOLD,HOLD,"Heart-eyed tornado left, heart-eyed caveman right.",HIGH
+G0152,SHOT_CUT,SCENE_SWAP,"Whole frame replaced: small T-rex-like dino standing centred, heavy drooping eyelids, frown, spiky back, small arms.",HIGH
+G0153,STATIC_HOLD,HOLD,"Grumpy standing dino centred.",HIGH
+G0154,CHARACTER,POSE_SWAP,"Same standing dino redrawn larger with meat-like texture: drumstick thighs, rib cage and armoured plate back, stippled shading; frown kept.",MEDIUM
+G0155,STATIC_HOLD,HOLD,"Meat-textured dino with drumstick legs and rib spine.",HIGH
+G0156,LIGHT/COLOR/EFFECT,FADE,"Dino outlines begin fading from black to grey over f3878-f3882.",HIGH
+G0157,STATIC_HOLD,DRIFT_COLOUR,"Colour drift to white: first tile dino mid-grey, mid tile (f3900) very pale, last tile (f3917) near blank; fade-out continues to end of video. No text or call to action visible.",HIGH

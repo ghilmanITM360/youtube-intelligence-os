@@ -1,0 +1,42 @@
+#!/bin/bash
+# One-off checks for checkpoint N; every write goes under the isolated tree except the test sandbox.
+cd "$HOME/YIOS-local-audits/primitive-education" || exit 1
+R=/private/tmp/claude-501/-Users-ghilmankhan-workprojects-youtube-intelligence-os/85559743-9e84-400b-9a9a-0f4cec83d7e4/scratchpad/restore_N
+H=$R/rbhome; WSB=$H/YIOS-local-audits/primitive-education; B=$WSB/videos; TR=$HOME/.claude/projects/-Users-ghilmankhan-workprojects-youtube-intelligence-os
+echo "VALIDATE"
+sed -i '' '/,validate,/d' "$R/rebuild_steps.csv"
+miss=0
+while read -r l; do
+  id=$(echo "$l" | awk '{print $2}'); ag=$(echo "$l" | sed -E 's/.*agent=//')
+  [ -n "$(ls "$TR"/*/subagents/agent-"$ag".jsonl 2>/dev/null)" ] || { miss=$((miss+1)); echo "no transcript $id $ag"; }
+  ( cd "$B/$id" || exit 1; HOME=$H python3 -I "$WSB/scripts/pe_validate_review.py" . "rv1_$id" "$ag" >/dev/null 2>&1; echo "$id,validate,$?" >> "$R/rebuild_steps.csv" )
+done < <(grep ' processed reviewer=' campaign/progress_log.txt | awk '!s[$2]++')
+echo "transcripts missing $miss"; grep ',validate,' "$R/rebuild_steps.csv" | cut -d, -f3 | sort | uniq -c
+echo "AGGREGATE"
+V=$H/YIOS-local-audits/tooling/visual-ct-scan-venv/bin/python3
+( cd "$WSB" || exit 1
+  export HOME=$H
+  python3 -I scripts/pe_aggregate.py . dev_final > /dev/null 2>&1; echo "aggregate_dev exit $?"
+  python3 -I scripts/pe_aggregate.py . heldout --include-heldout > /dev/null 2>&1; echo "aggregate_heldout exit $?"
+  "$V" -I scripts/pe_reuse.py > /dev/null 2>&1; echo "reuse_dev exit $?"
+  "$V" -I scripts/pe_reuse.py --include-heldout > /dev/null 2>&1; echo "reuse_all exit $?"
+  "$V" -I scripts/pe_hidden_recount.py > /dev/null 2>"$R/logs/recount.err"; echo "recount exit $?"
+)
+for f in aggregate_dev_final.json aggregate_dev_final.csv aggregate_heldout.json aggregate_heldout.csv reuse_dev.json reuse_all.json hidden_audit/recount_summary.json hidden_audit/recount_tiles.csv; do
+  cmp -s "campaign/$f" "$WSB/campaign/$f" && echo "IDENTICAL $f" || echo "DIFFERENT $f"
+done
+tail -2 "$R/logs/recount.err" | cut -c1-200
+echo "OFFLINE VENV"
+"$HOME/YIOS-local-audits/tooling/visual-ct-scan-venv/bin/python3" -m pip install --no-index --dry-run --ignore-installed -r "$HOME/YIOS-local-audits/tooling/visual-ct-scan-requirements.lock" 2>&1 | tail -1 | cut -c1-160
+"$HOME/YIOS-local-audits/tooling/visual-ct-scan-venv/bin/python3" -m pip freeze | diff -q - "$HOME/YIOS-local-audits/tooling/visual-ct-scan-requirements.lock"
+echo "PUBLISHER TEST"
+cp -p "$R/restored/scripts/test_pe_publish.py" /dev/null
+python3 -I scripts/test_pe_publish.py 2>&1 | tail -1
+echo "HASHES"
+shasum -a 256 "$(readlink -f /opt/homebrew/bin/ffmpeg)" "$(readlink -f /opt/homebrew/bin/ffprobe)" "/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf" "$HOME/YIOS-local-audits/tooling/visual-ct-scan-requirements.lock"
+hash_tree() { (cd "$1" && find -L . -type f ! -name '*.pyc' -print0 | sort -z | xargs -0 shasum -a 256 | shasum -a 256 | cut -d' ' -f1; find -L . -type f ! -name '*.pyc' | wc -l | tr -d ' '); }
+echo "venv $(hash_tree "$HOME/YIOS-local-audits/tooling/visual-ct-scan-venv" | tr '\n' ' ')"
+echo "asrvenv $(hash_tree "$HOME/YIOS-local-audits/barely-evolved/asr-venv" | tr '\n' ' ')"
+echo "smallen $(hash_tree "$HOME/.cache/huggingface/hub/models--Systran--faster-whisper-small.en/snapshots/d1d751a5f8271d482d14ca55d9e2deeebbae577f" | tr '\n' ' ')"
+du -sh "$TR/85559743-9e84-400b-9a9a-0f4cec83d7e4/subagents" 2>/dev/null
+find . -path ./.pe_writer_lock -prune -o -type f -mmin -4 -print | head

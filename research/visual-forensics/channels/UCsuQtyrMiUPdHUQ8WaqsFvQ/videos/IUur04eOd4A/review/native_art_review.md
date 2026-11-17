@@ -1,0 +1,5 @@
+Primary reviewer (Claude Opus session 85559743) opened `frames/native/NATIVE_001165.jpg` (G0037, frame 1165, 23.30 s, 1:1 native crop 886x667 of 1080x1920).
+OBSERVED: two cavemen facing each other. Left: black hair/beard, yellow tunic with dark oval spots, zigzag hem. Right: same body type, green tunic plus green feather headdress. Thick black outline with rounded ends, mostly even weight; hair/beard built from dark spiky strokes; flat single-colour fills with no gradient or cast shadow; large bulbous noses, open speaking mouths, 3 short lines on left forearm as a recurring mark. Edge softness at native scale consistent with video compression; cannot separate source softness from encode.
+INFERRED (low): colour swap on an otherwise near-identical body encodes "other tribe". Alternative: simple asset re-colour for production economy.
+UNAVAILABLE: software, typeface, whether drawings are hand-made or generated.
+Not viewed natively: NATIVE_000203 and NATIVE_000239 were extracted but not opened in this pass.
