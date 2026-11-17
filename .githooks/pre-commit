@@ -1,0 +1,9 @@
+#!/bin/sh
+# AI-slop risk gate on staged production scripts (AGENTS.md, docs/policies/AI-SLOP-RISK-RULES.md).
+# Install once per clone: sh .githooks/install.sh
+# (shim in .git/hooks, not core.hooksPath: that would disable the Git LFS hooks)
+cd "$(git rev-parse --show-toplevel)" || exit 1
+PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+if command -v uv >/dev/null 2>&1; then PY="uv run --quiet python"; else PY=python3; fi
+git diff --cached -z --name-only --diff-filter=AM -- productions | xargs -0 $PY scripts/check_slop_risk.py --only-scripts \
+  || { echo "Commit blocked by the AI-slop risk gate. Fix the script (or record a reasoned --exception) and retry."; exit 1; }
