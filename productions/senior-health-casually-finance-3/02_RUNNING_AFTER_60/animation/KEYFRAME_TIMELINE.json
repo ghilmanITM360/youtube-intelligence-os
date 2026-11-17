@@ -1,0 +1,1247 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "frames": 958,
+ "duration_seconds": 31.927438,
+ "transform": "world=cam_center+(xy-cam_center)*cam; rotate about pivot*scale; scale uniform",
+ "scenes": [
+  {
+   "id": "S01",
+   "in_frame": 0,
+   "out_frame_exclusive": 81,
+   "headline": "Running after 60?",
+   "label": "",
+   "camera": [
+    1.0,
+    1.035
+   ]
+  },
+  {
+   "id": "S02",
+   "in_frame": 81,
+   "out_frame_exclusive": 139,
+   "headline": "A very good exercise",
+   "label": "",
+   "camera": [
+    1.0,
+    1.035
+   ]
+  },
+  {
+   "id": "S03",
+   "in_frame": 139,
+   "out_frame_exclusive": 341,
+   "headline": "Knees and ankles?",
+   "label": "",
+   "camera": [
+    1.0,
+    1.06
+   ]
+  },
+  {
+   "id": "S04",
+   "in_frame": 341,
+   "out_frame_exclusive": 433,
+   "headline": "In moderation",
+   "label": "",
+   "camera": [
+    1.0,
+    1.03
+   ]
+  },
+  {
+   "id": "S05",
+   "in_frame": 433,
+   "out_frame_exclusive": 590,
+   "headline": "Speaker's limit: 3x a week",
+   "label": "",
+   "camera": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "id": "S06",
+   "in_frame": 590,
+   "out_frame_exclusive": 721,
+   "headline": "With a normal heart",
+   "label": "",
+   "camera": [
+    1.0,
+    1.04
+   ]
+  },
+  {
+   "id": "S07",
+   "in_frame": 721,
+   "out_frame_exclusive": 853,
+   "headline": "Oxygen and the heart",
+   "label": "",
+   "camera": [
+    1.0,
+    1.04
+   ]
+  },
+  {
+   "id": "S08",
+   "in_frame": 853,
+   "out_frame_exclusive": 958,
+   "headline": "Endurance + stamina",
+   "label": "",
+   "camera": [
+    1.0,
+    1.03
+   ]
+  }
+ ],
+ "tracks": [
+  {
+   "scene": "S01",
+   "layer": "S01--park--path",
+   "asset": "park",
+   "part": "path",
+   "z": 0,
+   "in_frame": 0,
+   "out_frame_exclusive": 81,
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 20,
+     "y": 960,
+     "scale": 1.15,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--park--tree",
+   "asset": "park",
+   "part": "tree",
+   "z": 1,
+   "in_frame": 0,
+   "out_frame_exclusive": 81,
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 20,
+     "y": 960,
+     "scale": 1.15,
+     "entry": "cut"
+    },
+    {
+     "frame_in": 0,
+     "frame_out": 139,
+     "x": -109.91999999999999
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--park--grass",
+   "asset": "park",
+   "part": "grass",
+   "z": 2,
+   "in_frame": 0,
+   "out_frame_exclusive": 81,
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 20,
+     "y": 960,
+     "scale": 1.15,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--sam-run-warm",
+   "asset": "sam-run-warm",
+   "part": null,
+   "z": 3,
+   "in_frame": 0,
+   "out_frame_exclusive": 81,
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 120,
+     "y": 600,
+     "scale": 1.3,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "bob",
+    7,
+    0.42
+   ]
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--score7",
+   "asset": "score7",
+   "part": null,
+   "z": 4,
+   "in_frame": 43,
+   "out_frame_exclusive": 81,
+   "pivot": [
+    165,
+    155
+   ],
+   "keys": [
+    {
+     "frame": 43,
+     "x": 650,
+     "y": 380,
+     "scale": 1.0,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S02",
+   "layer": "S02--park--path",
+   "asset": "park",
+   "part": "path",
+   "z": 0,
+   "in_frame": 81,
+   "out_frame_exclusive": 139,
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 81,
+     "x": 20,
+     "y": 960,
+     "scale": 1.15,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S02",
+   "layer": "S02--park--tree",
+   "asset": "park",
+   "part": "tree",
+   "z": 1,
+   "in_frame": 81,
+   "out_frame_exclusive": 139,
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 81,
+     "x": 20,
+     "y": 960,
+     "scale": 1.15,
+     "entry": "cut"
+    },
+    {
+     "frame_in": 0,
+     "frame_out": 139,
+     "x": -109.91999999999999
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S02",
+   "layer": "S02--park--grass",
+   "asset": "park",
+   "part": "grass",
+   "z": 2,
+   "in_frame": 81,
+   "out_frame_exclusive": 139,
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 81,
+     "x": 20,
+     "y": 960,
+     "scale": 1.15,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S02",
+   "layer": "S02--sam-run-warm",
+   "asset": "sam-run-warm",
+   "part": null,
+   "z": 3,
+   "in_frame": 81,
+   "out_frame_exclusive": 139,
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 81,
+     "x": 120,
+     "y": 600,
+     "scale": 1.3,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "bob",
+    7,
+    0.42
+   ]
+  },
+  {
+   "scene": "S02",
+   "layer": "S02--heart",
+   "asset": "heart",
+   "part": null,
+   "z": 4,
+   "in_frame": 96,
+   "out_frame_exclusive": 139,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 96,
+     "x": 660,
+     "y": 400,
+     "scale": 0.8,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--sam-concern-concern",
+   "asset": "sam-concern-concern",
+   "part": null,
+   "z": 0,
+   "in_frame": 139,
+   "out_frame_exclusive": 341,
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 139,
+     "x": 20,
+     "y": 640,
+     "scale": 1.3,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--joint--upper-bone",
+   "asset": "joint",
+   "part": "upper-bone",
+   "z": 1,
+   "in_frame": 184,
+   "out_frame_exclusive": 341,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 184,
+     "x": 640,
+     "y": 480,
+     "scale": 0.9,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--joint--lower-bone",
+   "asset": "joint",
+   "part": "lower-bone",
+   "z": 2,
+   "in_frame": 184,
+   "out_frame_exclusive": 341,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 184,
+     "x": 640,
+     "y": 480,
+     "scale": 0.9,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--joint--space",
+   "asset": "joint",
+   "part": "space",
+   "z": 3,
+   "in_frame": 184,
+   "out_frame_exclusive": 341,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 184,
+     "x": 640,
+     "y": 480,
+     "scale": 0.9,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--joint--ring",
+   "asset": "joint",
+   "part": "ring",
+   "z": 4,
+   "in_frame": 230,
+   "out_frame_exclusive": 341,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 230,
+     "x": 640,
+     "y": 480,
+     "scale": 0.9,
+     "entry": "pop"
+    }
+   ],
+   "loop": [
+    "pulse",
+    0.05,
+    [
+     8.08
+    ]
+   ]
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--shoe",
+   "asset": "shoe",
+   "part": null,
+   "z": 5,
+   "in_frame": 251,
+   "out_frame_exclusive": 341,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 251,
+     "x": 660,
+     "y": 1000,
+     "scale": 0.7,
+     "entry": "rise"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--nora-open-explain",
+   "asset": "nora-open-explain",
+   "part": null,
+   "z": 0,
+   "in_frame": 341,
+   "out_frame_exclusive": 433,
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 341,
+     "x": 40,
+     "y": 620,
+     "scale": 1.3,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--stopwatch--case",
+   "asset": "stopwatch",
+   "part": "case",
+   "z": 1,
+   "in_frame": 381,
+   "out_frame_exclusive": 433,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 650,
+     "y": 560,
+     "scale": 0.85,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--stopwatch--crown",
+   "asset": "stopwatch",
+   "part": "crown",
+   "z": 2,
+   "in_frame": 381,
+   "out_frame_exclusive": 433,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 650,
+     "y": 560,
+     "scale": 0.85,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--stopwatch--dial",
+   "asset": "stopwatch",
+   "part": "dial",
+   "z": 3,
+   "in_frame": 381,
+   "out_frame_exclusive": 433,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 650,
+     "y": 560,
+     "scale": 0.85,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--stopwatch--hands",
+   "asset": "stopwatch",
+   "part": "hands",
+   "z": 4,
+   "in_frame": 381,
+   "out_frame_exclusive": 433,
+   "pivot": [
+    199.0,
+    218.5
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 650,
+     "y": 560,
+     "scale": 0.85,
+     "entry": "pop"
+    }
+   ],
+   "loop": [
+    "spin",
+    90
+   ]
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--stopwatch--button",
+   "asset": "stopwatch",
+   "part": "button",
+   "z": 5,
+   "in_frame": 381,
+   "out_frame_exclusive": 433,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 650,
+     "y": 560,
+     "scale": 0.85,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--nora-point-concern",
+   "asset": "nora-point-concern",
+   "part": null,
+   "z": 0,
+   "in_frame": 433,
+   "out_frame_exclusive": 590,
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 433,
+     "x": 30,
+     "y": 700,
+     "scale": 1.25,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--calendar--paper",
+   "asset": "calendar",
+   "part": "paper",
+   "z": 1,
+   "in_frame": 443,
+   "out_frame_exclusive": 590,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 443,
+     "x": 520,
+     "y": 520,
+     "scale": 1.25,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--calendar--binding",
+   "asset": "calendar",
+   "part": "binding",
+   "z": 2,
+   "in_frame": 443,
+   "out_frame_exclusive": 590,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 443,
+     "x": 520,
+     "y": 520,
+     "scale": 1.25,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--calendar--days",
+   "asset": "calendar",
+   "part": "days",
+   "z": 3,
+   "in_frame": 461,
+   "out_frame_exclusive": 590,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 461,
+     "x": 520,
+     "y": 520,
+     "scale": 1.25,
+     "entry": "wipe"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--calendar--note",
+   "asset": "calendar",
+   "part": "note",
+   "z": 4,
+   "in_frame": 478,
+   "out_frame_exclusive": 590,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 478,
+     "x": 520,
+     "y": 520,
+     "scale": 1.25,
+     "entry": "rise"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--shoe",
+   "asset": "shoe",
+   "part": null,
+   "z": 5,
+   "in_frame": 520,
+   "out_frame_exclusive": 590,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 520,
+     "x": 660,
+     "y": 1060,
+     "scale": 0.6,
+     "entry": "rise"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S06",
+   "layer": "S06--sam-stand-warm",
+   "asset": "sam-stand-warm",
+   "part": null,
+   "z": 0,
+   "in_frame": 590,
+   "out_frame_exclusive": 721,
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 590,
+     "x": 20,
+     "y": 640,
+     "scale": 1.3,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S06",
+   "layer": "S06--heart",
+   "asset": "heart",
+   "part": null,
+   "z": 1,
+   "in_frame": 631,
+   "out_frame_exclusive": 721,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 631,
+     "x": 640,
+     "y": 560,
+     "scale": 0.95,
+     "entry": "pop"
+    }
+   ],
+   "loop": [
+    "pulse",
+    0.06,
+    [
+     22.98
+    ]
+   ]
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--lungs--left",
+   "asset": "lungs",
+   "part": "left",
+   "z": 0,
+   "in_frame": 721,
+   "out_frame_exclusive": 853,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 721,
+     "x": 60,
+     "y": 560,
+     "scale": 1.05,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--lungs--right",
+   "asset": "lungs",
+   "part": "right",
+   "z": 1,
+   "in_frame": 721,
+   "out_frame_exclusive": 853,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 721,
+     "x": 60,
+     "y": 560,
+     "scale": 1.05,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--lungs--airway",
+   "asset": "lungs",
+   "part": "airway",
+   "z": 2,
+   "in_frame": 721,
+   "out_frame_exclusive": 853,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 721,
+     "x": 60,
+     "y": 560,
+     "scale": 1.05,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--lungs--oxygen",
+   "asset": "lungs",
+   "part": "oxygen",
+   "z": 3,
+   "in_frame": 798,
+   "out_frame_exclusive": 853,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 798,
+     "x": 60,
+     "y": 560,
+     "scale": 1.05,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--heart",
+   "asset": "heart",
+   "part": null,
+   "z": 4,
+   "in_frame": 779,
+   "out_frame_exclusive": 853,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 779,
+     "x": 650,
+     "y": 640,
+     "scale": 0.85,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--arrow",
+   "asset": "arrow",
+   "part": null,
+   "z": 5,
+   "in_frame": 814,
+   "out_frame_exclusive": 853,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 814,
+     "x": 380,
+     "y": 960,
+     "scale": 0.75,
+     "entry": "wipe"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--park--path",
+   "asset": "park",
+   "part": "path",
+   "z": 0,
+   "in_frame": 853,
+   "out_frame_exclusive": 958,
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 853,
+     "x": 20,
+     "y": 960,
+     "scale": 1.15,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--park--tree",
+   "asset": "park",
+   "part": "tree",
+   "z": 1,
+   "in_frame": 853,
+   "out_frame_exclusive": 958,
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 853,
+     "x": 20,
+     "y": 960,
+     "scale": 1.15,
+     "entry": "cut"
+    },
+    {
+     "frame_in": 853,
+     "frame_out": 958,
+     "x": -77.64826399999993
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--park--grass",
+   "asset": "park",
+   "part": "grass",
+   "z": 2,
+   "in_frame": 853,
+   "out_frame_exclusive": 958,
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 853,
+     "x": 20,
+     "y": 960,
+     "scale": 1.15,
+     "entry": "cut"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--sam-run-warm",
+   "asset": "sam-run-warm",
+   "part": null,
+   "z": 3,
+   "in_frame": 853,
+   "out_frame_exclusive": 958,
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 853,
+     "x": 120,
+     "y": 600,
+     "scale": 1.3,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "bob",
+    7,
+    0.42
+   ]
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--case",
+   "asset": "stopwatch",
+   "part": "case",
+   "z": 4,
+   "in_frame": 921,
+   "out_frame_exclusive": 958,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 650,
+     "y": 400,
+     "scale": 0.8,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--crown",
+   "asset": "stopwatch",
+   "part": "crown",
+   "z": 5,
+   "in_frame": 921,
+   "out_frame_exclusive": 958,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 650,
+     "y": 400,
+     "scale": 0.8,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--dial",
+   "asset": "stopwatch",
+   "part": "dial",
+   "z": 6,
+   "in_frame": 921,
+   "out_frame_exclusive": 958,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 650,
+     "y": 400,
+     "scale": 0.8,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--hands",
+   "asset": "stopwatch",
+   "part": "hands",
+   "z": 7,
+   "in_frame": 921,
+   "out_frame_exclusive": 958,
+   "pivot": [
+    199.0,
+    218.5
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 650,
+     "y": 400,
+     "scale": 0.8,
+     "entry": "pop"
+    }
+   ],
+   "loop": [
+    "spin",
+    120
+   ]
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--button",
+   "asset": "stopwatch",
+   "part": "button",
+   "z": 8,
+   "in_frame": 921,
+   "out_frame_exclusive": 958,
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 650,
+     "y": 400,
+     "scale": 0.8,
+     "entry": "pop"
+    }
+   ],
+   "loop": null
+  }
+ ],
+ "sfx": [
+  {
+   "t": 1.42,
+   "kind": "chime",
+   "event": "S01--score7"
+  },
+  {
+   "t": 3.2,
+   "kind": "pop",
+   "event": "S02--heart"
+  },
+  {
+   "t": 6.12,
+   "kind": "pop",
+   "event": "S03--joint"
+  },
+  {
+   "t": 8.36,
+   "kind": "soft",
+   "event": "S03--shoe"
+  },
+  {
+   "t": 12.7,
+   "kind": "pop",
+   "event": "S04--stopwatch"
+  },
+  {
+   "t": 14.78,
+   "kind": "pop",
+   "event": "S05--calendar"
+  },
+  {
+   "t": 15.38,
+   "kind": "tick",
+   "event": "S05--calendar--days"
+  },
+  {
+   "t": 17.32,
+   "kind": "soft",
+   "event": "S05--shoe"
+  },
+  {
+   "t": 21.02,
+   "kind": "pop",
+   "event": "S06--heart"
+  },
+  {
+   "t": 26.6,
+   "kind": "pop",
+   "event": "S07--lungs--oxygen"
+  },
+  {
+   "t": 25.96,
+   "kind": "pop",
+   "event": "S07--heart"
+  },
+  {
+   "t": 27.14,
+   "kind": "soft",
+   "event": "S07--arrow"
+  },
+  {
+   "t": 30.7,
+   "kind": "pop",
+   "event": "S08--stopwatch"
+  }
+ ]
+}

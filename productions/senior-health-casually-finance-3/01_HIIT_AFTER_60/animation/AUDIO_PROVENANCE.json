@@ -1,0 +1,102 @@
+{
+ "voice": {
+  "file": "source_audio/original_audio.m4a",
+  "sha256": "c24c89901fa3484ff6589811497f7d253efa79b230b4222cf96b25d987746cc5",
+  "treatment": "decoded unchanged; one whole-mix gain x0.871 to keep peak <= -1 dBFS; no trim, speed, pitch or word change"
+ },
+ "source_music_check": "source gaps measure ~-56 dB mean, noise floor ~-69 dB: no audible music bed in source (measurement, not listening certification)",
+ "music": {
+  "source": "synthesised in tools/anim.py from sine chords (no samples, no library track)",
+  "chords_hz": [
+   [
+    261.6,
+    329.6,
+    392.0
+   ],
+   [
+    174.6,
+    220.0,
+    261.6
+   ],
+   [
+    196.0,
+    246.9,
+    293.7
+   ],
+   [
+    220.0,
+    261.6,
+    329.6
+   ]
+  ],
+  "seconds_per_chord": 2.0,
+  "level_db_below_speech": 22,
+  "rights": "created in this project; no third-party material; rights opinion not given"
+ },
+ "sfx": [
+  {
+   "t": 0.16,
+   "kind": "tick",
+   "event": "S01--intervals--work-1"
+  },
+  {
+   "t": 0.66,
+   "kind": "tick",
+   "event": "S01--intervals--work-2"
+  },
+  {
+   "t": 1.26,
+   "kind": "tick",
+   "event": "S01--intervals--work-3"
+  },
+  {
+   "t": 1.98,
+   "kind": "chime",
+   "event": "S01--score7"
+  },
+  {
+   "t": 5.42,
+   "kind": "pop",
+   "event": "S02--heart"
+  },
+  {
+   "t": 6.48,
+   "kind": "soft",
+   "event": "S02--arrow"
+  },
+  {
+   "t": 9.86,
+   "kind": "pop",
+   "event": "S03--question"
+  },
+  {
+   "t": 13.42,
+   "kind": "pop",
+   "event": "S04--nora-point-explain"
+  },
+  {
+   "t": 17.62,
+   "kind": "pop",
+   "event": "S05--question"
+  },
+  {
+   "t": 23.04,
+   "kind": "pop",
+   "event": "S06--heart"
+  },
+  {
+   "t": 26.36,
+   "kind": "pop",
+   "event": "S07--stopwatch"
+  },
+  {
+   "t": 29.4,
+   "kind": "chime",
+   "event": "S08--score7"
+  }
+ ],
+ "measured": {
+  "speech_rms_db": -14.1,
+  "mix_peak": 0.89
+ }
+}

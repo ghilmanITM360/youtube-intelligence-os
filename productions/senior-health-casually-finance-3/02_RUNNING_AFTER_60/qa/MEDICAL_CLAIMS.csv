@@ -1,0 +1,9 @@
+claim_id,start_seconds,end_seconds,source_claim_ASR_or_paraphrase,status,reason,source_id,visual_handling
+R1,0,2.7,Seven out of ten rating,OPINION_NOT_EVIDENCE,Not a validated medical score.,,Attribute speaker.
+R2,2.7,4.64,Running is good exercise,BROADLY_SUPPORTED_CONDITIONAL,CDC lists running as vigorous aerobic activity; suitability varies.,CDC_ACTIVITY,No guaranteed benefit.
+R3,4.64,11.36,"Problems for knees, ankles, musculoskeletal system",CLINICIAN_REVIEW,"Audio implies a broad consequence; no population, injury history or risk estimate supplied. Do not infer inevitable damage.",CDC_ACTIVITY,"An intact joint illustration, no cracking cartilage."
+R4,11.36,14.42,Exercise in moderation,CONTEXT_REQUIRED,Moderation is undefined; not individualized dosing.,CDC_ACTIVITY,Stopwatch is symbolic; no target time.
+R5,14.42,19.66,No more than three times per week; moderate distance,CLINICIAN_REVIEW,No evidence supplied for a universal frequency limit. General older-adult guidance does not impose this cap.,CDC_ACTIVITY,"Calendar is explicitly speaker advice, not universal prescription."
+R6,19.66,24.04,Normal heart: improves cardiac function,CONTEXT_REQUIRED,Normal heart not defined; broad exercise benefit is not a guarantee.,AHA_PLAN,"Symbolic heart, no before/after scan."
+R7,24.04,28.44,VO2 / maximum oxygen extraction of blood [ASR],ASR_AND_CLINICIAN_REVIEW,Terminology may conflate oxygen uptake with extraction; no correction silently added to speech.,,Proposed visual label VO₂; no values or fabricated physiology.
+R8,28.44,31.927438,Endurance and stamina benefit,BROADLY_SUPPORTED_CONDITIONAL,Individual response varies.,CDC_ACTIVITY,Runner continuity; no numerical improvement.
