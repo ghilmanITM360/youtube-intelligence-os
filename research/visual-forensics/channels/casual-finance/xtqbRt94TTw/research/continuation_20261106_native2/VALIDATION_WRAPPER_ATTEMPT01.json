@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_WRAPPER; NO_SEAL_OR_COMMIT",
+  "stage": "finalize_acceptance then premature dependentvalidation",
+  "errors": [
+    "AssertionError: PARTIAL_CONDITIONAL_ON_SUB045_WORDING",
+    "FileNotFoundError: visual_event_ledger_v39.csv"
+  ],
+  "cause": "Root wrapper expected PASSprefix although reviewer explicitly conditioned semantic acceptance on exact text replacement; dependentvalidation thenran before output existed. This is a wrapper error, not a failed source/production gate.",
+  "resolution": "Allow only this exact named conditionalstatus with its recorded exacttextreplacement and matching root assertions; keep independent report immutable. Re-run finalization first, validate only after success.",
+  "prior_source_inputs_modified": false
+}

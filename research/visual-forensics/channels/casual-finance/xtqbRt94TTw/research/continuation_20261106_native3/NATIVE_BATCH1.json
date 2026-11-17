@@ -1,0 +1,81 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "input_ledger": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/visual_event_ledger_v39.csv",
+  "output_ledger": "v40",
+  "shared_source_window": [
+    2183,
+    2255
+  ],
+  "rulings": {
+    "EP0070": {
+      "precision": "EXACT_NATIVE_SCROLL_PHASES_WITH_STATIC_PRESENTER",
+      "onset": 2187,
+      "last": 2214,
+      "phases": [
+        [
+          2187,
+          2194
+        ],
+        [
+          2197,
+          2204
+        ],
+        [
+          2207,
+          2214
+        ]
+      ],
+      "description": "Page content moves upward in three distinct scroll phases2187\u20132194,2197\u20132204,2207\u20132214; geometry holds2195\u20132196,2205\u20132206,2215\u20132219. First phase scrolls large masthead away; compact navigation strip then persists above changing document content. GDP/unemployment/PCE tables replace summary. Right-side smiling presenter, hair, mouth, arms and brown pointer pose remain held. No independent cursor translation observed in reviewed contexts; tiny residual pixel changes are not semantic motion or proof of exact frame equality. Source scroll command/easing unobserved.",
+      "verdict": "CONFIRMED_NATIVE"
+    },
+    "SUB046": {
+      "precision": "NATIVE_NO_MEANINGFUL_VISUAL_EVENT_IN_CANDIDATE_WINDOW",
+      "onset": null,
+      "last": null,
+      "description": "No meaningful visible page/presenter/pointer event observed2216 within held2215\u20132219geometry. Numerical450fullframe thresholdpixels at2216 are not identicalframe proof or authored-event absence; cause unproven. Existing table layout/face/pointer held.",
+      "verdict": "NOT_A_CHANGE"
+    },
+    "EP0071": {
+      "precision": "EXACT_NATIVE_TWO_SCROLL_PHASES",
+      "onset": 2220,
+      "last": 2245,
+      "phases": [
+        [
+          2220,
+          2229
+        ],
+        [
+          2232,
+          2245
+        ]
+      ],
+      "description": "Page content moves upward2220\u20132229,holds2230\u20132231,then upward2232\u20132245 into Figure2 midpoint table and Figure3.A below. Firstmotion2220after2219hold; last2245before2246\u20132248hold. Compact top navigation, smiling presenter and lowered pointer pose held. No new shot or separate facial action observed; tiny codec-like residual cause not established.",
+      "verdict": "CONFIRMED_NATIVE"
+    },
+    "EP0072": {
+      "precision": "EXACT_NATIVE_REVERSE_SCROLL_AND_DISCRETE_POINTER_POSE",
+      "onset": 2249,
+      "last": 2251,
+      "description": "Short reverse scroll moves document content DOWN2249\u20132251 after2248hold, then geometryheld2252\u20132255. Pointer/arm remains lowered at2249/2250 and changes DISCRETELY to extended up-left pointing pose2251, face/torso unchanged. No interpolated arm swing established. Brown pointer tip points into Figure2 table. Page movement and pose onset separated; no wholepage cut.",
+      "verdict": "CORRECTED_NATIVE"
+    }
+  },
+  "before": 572,
+  "resolved_row_ids": [
+    "EP0070",
+    "SUB046",
+    "EP0071",
+    "EP0072"
+  ],
+  "remaining_provisional": 568,
+  "independent_qa": "PENDING",
+  "exact_motion_phase_rows": 3,
+  "no_meaningful_visible_event_rows": 1,
+  "continuous_fragment_rows": 0,
+  "component_updates_not_strict_closures": [
+    "EP0029 offset",
+    "EP0032 arrow entrance"
+  ],
+  "uncertainty": "No sound inference; hidden source keyframes/easing unknown; numerical differences not semanticverification."
+}

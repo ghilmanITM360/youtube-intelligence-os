@@ -1,0 +1,101 @@
+{
+ "status": "GAPS_ABSORBED_WHERE_EVIDENCE_SUPPORTS_STRUCTURE_STILL_NOT_SEMANTICALLY_CERTIFIED",
+ "states": 530,
+ "compositions": 367,
+ "state_frames": 21301,
+ "unowned_intervals": 143,
+ "unowned_frames": 2997,
+ "total_frames": 24298,
+ "merge_decisions": {
+  "MERGE_CONFIRMED": 158,
+  "UNCERTAIN": 3
+ },
+ "comp_median_span_s": 1.77,
+ "comp_mean_span_s": 2.47,
+ "comp_p90_span_s": 5.42,
+ "gaps_rereviewed": 143,
+ "gap_class_rr": {
+  "MOTION_IN_COMPOSITION": 99,
+  "CONTINUOUS_ANIMATION": 13,
+  "EMBEDDED_THIRD_PARTY_PLAYBACK": 6,
+  "HARD_CUT_INSIDE": 6,
+  "STATIC_OR_NEAR_STATIC": 13,
+  "FADE_OR_TRANSITION": 6
+ },
+ "candidates_second_pass_not_reviewed": 807,
+ "validator_positive": "PASS",
+ "negative_tests": {
+  "bad composition member": "DETECTED",
+  "dropped composition": "DETECTED",
+  "overlap": "DETECTED",
+  "dropped gap": "DETECTED",
+  "lost reviewer provenance": "DETECTED",
+  "missing merge decision": "DETECTED",
+  "uncertain flipped w/o regroup": "DETECTED",
+  "duplicate state id": "DETECTED"
+ },
+ "audio": "AUDIO_NOT_VERIFIED",
+ "boundary_rule_gaps": [
+  "U010",
+  "U024",
+  "U031",
+  "U035",
+  "U044",
+  "U045",
+  "U074",
+  "U077",
+  "U088",
+  "U096",
+  "U099",
+  "U120",
+  "U123",
+  "U131",
+  "U141"
+ ],
+ "boundary_rule_not_applied": [
+  "U059",
+  "U069",
+  "U073",
+  "U083"
+ ],
+ "boundary_negative_tests": {
+  "state boundary reverted without gap": "DETECTED",
+  "gap boundary reverted without state": "DETECTED",
+  "over-extended state": "DETECTED"
+ },
+ "merge_decisions_final": {
+  "MERGE_CONFIRMED": 161,
+  "KEEP_SEPARATE": 2
+ },
+ "merge_final_negative_tests": {
+  "decision changed without regroup": "DETECTED",
+  "KEEP_SEPARATE flipped without regroup": "DETECTED",
+  "dropped added merge decision": "DETECTED"
+ },
+ "merge_continuation_rule": "Continuation rule: a composition continues only if the existing layout is preserved or smoothly animated (intermediate frames); a hard re-layout starts a new composition even when assets are reused.",
+ "frames_by_owner": {
+  "STATE": 21301,
+  "GAP_ABSORBED": 2609,
+  "GAP_STANDALONE": 276,
+  "GAP_UNRESOLVED": 112
+ },
+ "gap_decisions": {
+  "ABSORB_NEXT": 14,
+  "ABSORB_WHOLE": 59,
+  "SPLIT_AT_CUT": 10,
+  "KEEP_STANDALONE": 7,
+  "ABSORB_PREV": 46,
+  "UNRESOLVED": 7
+ },
+ "composition_full_span_s": {
+  "median": 2.08,
+  "mean": 2.71
+ },
+ "absorption_negative_tests": {
+  "dropped gap ownership": "DETECTED",
+  "gap run overlaps next": "DETECTED",
+  "unknown composition": "DETECTED",
+  "absorbed into non-adjacent composition": "DETECTED",
+  "lost basis": "DETECTED"
+ }
+}

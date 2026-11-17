@@ -1,0 +1,4 @@
+# Actual listening remains unavailable
+Current tool harness has image inspection and local ASR execution but no qualified source-audio listening/perception channel. No human listening receipt was found. Actual listening: 0 seconds. ASR processed the full decoded source audio into199 tentative sentence segments; transcription is not hearing.
+Do not certify speech stress, music, SFX, BPM, silence, auditory synchronization or full AV sign-off. An actual qualified listener must play the source from audio0 through827.670522 seconds, log time spans, compare numeric words and on-screen values, and inspect claimed cuts/sound reveals together. The final untranscribed interval820.76–827.670522 especially needs hearing; do not label it silent.
+Numerical overlap table is not semantic narration/visual alignment. All financial assertions remain unverified source claims; no external fact-checking was requested/performed.

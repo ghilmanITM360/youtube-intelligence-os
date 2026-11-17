@@ -1,0 +1,423 @@
+{
+  "status": "PASS_BOUNDED_PREVIEW_QA",
+  "review_scope": {
+    "render_frame_count": 37,
+    "visual_fullframe_checkpoints": [
+      0,
+      1,
+      5,
+      6,
+      11,
+      12,
+      22,
+      23,
+      31,
+      32,
+      36
+    ],
+    "independence": "Independent of root implementation, with known prior source context; not a blind whole-video cold-start review.",
+    "spec_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/SPEC.json",
+    "design_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/DESIGN_AND_QA_PLAN.md",
+    "numeric_validation_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/render_validation.json",
+    "lossless_master_sha256": "40cbb3ff350523233a7c605e5d21ff5b9bca447444d5cc29e31c512b9a334cfe",
+    "preview_sha256": "58f646df1c90c32955fe7f9802bbcaa196beb4b83d1829549344425c59bd99a8",
+    "numeric_checks": "Read as supplied numeric decoded-master/probe evidence; not substituted for preview image inspection or rerun here."
+  },
+  "checks": [
+    {
+      "gate": "BLANK_FRAME0",
+      "evidenceframes": [
+        0
+      ],
+      "verdict": "PASS",
+      "description": "Fullframe0 and its bottom-center nativeROI show a blank cream field.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f000.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f000_body_tip_ROI.png"
+      ],
+      "limitations": []
+    },
+    {
+      "gate": "TINY_CONSOLE_FIRST1",
+      "evidenceframes": [
+        0,
+        1,
+        5
+      ],
+      "verdict": "PASS",
+      "description": "NativeROI confirms a thin dark console-top edge at1 and none at0;5 establishes the later identifiable console. The1 fullframe appearance is barely visible at native scale.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f000.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f001.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f005.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f000_body_tip_ROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f001_body_tip_ROI.png"
+      ],
+      "limitations": [
+        "Only first tiny edge visibility is established at1; full console identity is supplied by later checkpoints."
+      ]
+    },
+    {
+      "gate": "TINY_PANEL1_FIRST6",
+      "evidenceframes": [
+        5,
+        6,
+        11
+      ],
+      "verdict": "PASS_WITH_TINY_FEATURE_LIMIT",
+      "description": "Top-leftROI5 has no visible panel corner;ROI6 has a tiny dark corner/dot at the extreme top-left, consistent with the entering panel seen at11.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f005.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f006.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f011.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f005_card_tip_ROI.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f006_card_tip_ROI.png"
+      ],
+      "limitations": [
+        "Moderate confidence in the barely visible corner. It is visible as a mark, not independently recognizable as a panel at6; declared numeric gate and later panel geometry provide context."
+      ]
+    },
+    {
+      "gate": "STATUS_LIGHTS_FIRST12",
+      "evidenceframes": [
+        11,
+        12
+      ],
+      "verdict": "PASS",
+      "description": "Console display is empty at11; coral and teal solid circular status lights are present12. The lights have no irises, pupil animation or mascot-eye outlines.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f011.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f012.png"
+      ],
+      "limitations": []
+    },
+    {
+      "gate": "PANEL1_CLIPPED22_INSIDE23",
+      "evidenceframes": [
+        22,
+        23
+      ],
+      "verdict": "PASS",
+      "description": "Panel/text remain clipped at top-left22. At23 the entire outlined620x200 panel is within the image, flush with top-left boundary; POLICY UPDATE and Original timing study are legible.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f022.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f023.png"
+      ],
+      "limitations": [
+        "First-full-inside here permits a border aligned with image edge; it does not imply a safe margin."
+      ]
+    },
+    {
+      "gate": "PANEL2_ABSENT31_PRESENT32",
+      "evidenceframes": [
+        31,
+        32
+      ],
+      "verdict": "PASS",
+      "description": "Upper-right is empty31; complete GROWTH NOTE / Original timing study panel is present32. It is visibly separate from the first panel.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f031.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f032.png"
+      ],
+      "limitations": []
+    },
+    {
+      "gate": "CONSOLE_ANCHORS_AFTER12",
+      "evidenceframes": [
+        12,
+        22,
+        23,
+        31,
+        32,
+        36
+      ],
+      "verdict": "PASS_AT_SUPPLIED_CHECKPOINTS",
+      "description": "Console top/body width, display, light positions and two horizontal bars retain the same visible anchors at the supplied checkpoints while panel1 moves.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f012.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f022.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f023.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f031.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f032.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f036.png"
+      ],
+      "limitations": [
+        "Only the listed preview checkpoints were viewed. Every intervening frame's numeric anchor check is reported by render_validation, not independently visually rereviewed here."
+      ]
+    },
+    {
+      "gate": "PANEL1_TRAVEL_AND_FINAL_HOLD",
+      "evidenceframes": [
+        6,
+        11,
+        12,
+        22,
+        23,
+        31,
+        32,
+        36
+      ],
+      "verdict": "PASS_AT_SUPPLIED_CHECKPOINTS",
+      "description": "Panel1 progresses from tiny corner to clipped panel to fully inside23 and moves farther down/right by31/32. Its32 and36 placements match visually; second panel and console also match across32/36.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f006.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f011.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f012.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f022.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f023.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f031.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f032.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f036.png"
+      ],
+      "limitations": [
+        "This is checkpoint validation, not continuous playback or independent visual certification of every frame33–35. No exact source motion curve is recovered."
+      ]
+    },
+    {
+      "gate": "READABILITY_AND_GEOMETRY",
+      "evidenceframes": [
+        5,
+        12,
+        23,
+        31,
+        32,
+        36
+      ],
+      "verdict": "PASS",
+      "description": "POLICY CORE, POLICY UPDATE, GROWTH NOTE and Original timing study are clearly legible when exposed. Bordered panels, display and rounded console remain coherent; final panels do not overlap each other or the console.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f005.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f012.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f023.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f031.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f032.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f036.png"
+      ],
+      "limitations": [
+        "Early text clipping is intentional entry behavior. This simple timing study has no developed explanatory content or final channel identity."
+      ]
+    },
+    {
+      "gate": "ORIGINAL_ASSET_IDENTITY",
+      "evidenceframes": [
+        12,
+        23,
+        32,
+        36
+      ],
+      "verdict": "PASS_BOUNDED_VISUAL_OBSERVATION",
+      "description": "Visible assets are an abstract navy console, solid status lamps and white editorial panels with coral/teal rules. No bank pediment/facade, outlet marks, googly-eye asset or source headlines are visible.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f012.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f023.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f032.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f036.png"
+      ],
+      "limitations": [
+        "Visual observation supports originality relative to known source context; it is not a universal originality/IP certification or code/dependency audit."
+      ]
+    },
+    {
+      "gate": "PREVIEW_CODEC_APPEARANCE",
+      "evidenceframes": [
+        1,
+        6,
+        12,
+        23,
+        32,
+        36
+      ],
+      "verdict": "PASS_NO_BLOCKING_VISUAL_DEFECT",
+      "description": "No severe blocking, corruption, missing component or unreadable final text is visible in the supplied previews. Fine pixel stair-stepping/edge texture is visible around curves/type and the tiny entry edges.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f001.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f006.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f012.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f023.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f032.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f036.png"
+      ],
+      "limitations": [
+        "Native still previews do not establish full temporal compression quality or playback smoothness; no lossless-master images were independently displayed in this QA."
+      ]
+    }
+  ],
+  "visual_findings": [
+    "Specified event order is represented in the actual viewed preview checkpoints: blank0, console-edge1, first-panel-corner6, lamps12, panel fully inside23, second panel32 and matching final layout36.",
+    "Console remains bottom-cropped as designed; the status lamps read as simple instrument dots rather than source character eyes.",
+    "Panel1 is axis-aligned in this original design; source card tilt/appearance is not being replicated. The design transfers timing gates and object independence only.",
+    "Final layout has strong text contrast and generous separation. The sparse placeholder panels are appropriate to this timing test but do not constitute a production-ready content sequence.",
+    "NativeROIs confirm the tiny visible marks, with the6 corner retaining a deliberate semantic-identification limit."
+  ],
+  "failures": [],
+  "originality_observation": {
+    "ruling": "VISIBLY_DISTINCT_ORIGINAL_PRIMITIVES_FOR_BOUNDED_TEST",
+    "description": "Preview geometry, palette, text and asset identities differ from the known source composition. The declared mapping substitutes a console/lights/editorial panels for the building/eyes/news cards.",
+    "renderer_source_access": "Brief states renderer consumed only SPEC/primitives and no competitor frames. That declaration was read; this visual QA did not independently audit the renderer's file accesses.",
+    "source_frames_redisplayed": 0
+  },
+  "fullframe_reads11": 11,
+  "nativeROIreads4": 4,
+  "new_evidence_reads": [
+    {
+      "frame": 0,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f000.png",
+      "sha256": "374fd8ca50635fbc5b38b47fef79db5cfeca0a788d85640aba6dd446b8aad29c",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. Entire frame appears uniform cream; no console/panel visible."
+    },
+    {
+      "frame": 1,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f001.png",
+      "sha256": "5abd6deebcc1ef58600a451ac4cbaa5c076134d903af0a1556755dd7cae1fa57",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. Cream field with an extremely thin navy console top edge at bottom-center; tiny first appearance is barely visible fullframe and requires supplied ROI corroboration."
+    },
+    {
+      "frame": 5,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f005.png",
+      "sha256": "7dcb801330707ce34f9170070b77a75933b44abe5be816a1fea89f1d08d67562",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. POLICY CORE console rises from bottom-center; rounded navy frame and cream rectangular display, white label legible. No panel visible at top-left; console bottom remains cropped."
+    },
+    {
+      "frame": 6,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f006.png",
+      "sha256": "9a176092512b0284a67158031fd5db39eba8f9285ce9fd12ac05649c3f75d02a",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. Console higher than5; tiny dark corner at extreme top-left is barely visible, requiring native ROI to judge. No status lights yet."
+    },
+    {
+      "frame": 11,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f011.png",
+      "sha256": "87b446a76da1912c0e1408ffbab60aab22f1b5afbd48b2813c4e614f343a1938",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. Console near final height, blank cream display without lights; coral/teal bars below. First white panel only partial at top-left, text still offscreen."
+    },
+    {
+      "frame": 12,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f012.png",
+      "sha256": "6fb4935cd88ab509a86616843fb6d1fbf33d16a5a56e7bea9fcc305862581061",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. Two coral/teal solid circular status lights newly visible within console display, absent11. Console slightly higher than11; first panel continues entry upper-left; original geometric instrument appearance."
+    },
+    {
+      "frame": 22,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f022.png",
+      "sha256": "392930b6edb363cf9bb1cc07e34357af0a9011123fa557a22c8cfe6e429edd9c",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. First editorial panel remains clipped at top/left; POLICY UPDATE and Original timing study begin offscreen. Console/lights same visible anchors as12; second panel absent."
+    },
+    {
+      "frame": 23,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f023.png",
+      "sha256": "bb2f9d0fc2f01797e97f32c6debb44c63afef76f32b55b4c8c189df70f94b17d",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. Complete first rectangular panel now fits from top-left image boundary, all border sides visible. POLICY UPDATE / Original timing study legible, coral rule above. Console/lights held."
+    },
+    {
+      "frame": 31,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f031.png",
+      "sha256": "39b538066be9d7d4d2e0601bdfc390af99b13014d664525a3a33b048c70b85d7",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. First panel fully visible upper-left with readable text, translated down/right from23. Console and lights fixed bottom-center; no second panel in upper-right."
+    },
+    {
+      "frame": 32,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f032.png",
+      "sha256": "3e3833c6063519cabcb1831397cebc55b8ec0d748bcfbe236bd12563a0eab18c",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. GROWTH NOTE / Original timing study panel newly complete upper-right, absent31; first panel slightly farther down/right than31. POLICY CORE console/status lights remain fixed, clear separation between panels and console."
+    },
+    {
+      "frame": 36,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f036.png",
+      "sha256": "4c289f4a10e77eec189fd30c8430dd1aa07d0d235739719504d165a1707e4c2f",
+      "scale": "NATIVE_RENDER_FULLFRAME1920x1080_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1920x1080 preview displayed once. Same two white panels, console and lights appear at same placement as32; text remains legible, no overlap or visible layout drift."
+    },
+    {
+      "frame": 0,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f000_body_tip_ROI.png",
+      "sha256": "cddfe828e6928cdfaee1601c59dbdee165d31dee8d61eeb37e9446ed8f9aff8c",
+      "crop_xywh": [
+        700,
+        1000,
+        520,
+        80
+      ],
+      "scale": "NATIVE_RENDER_ROI_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1:1 ROI520x80 displayed once. Cream bottom-center crop; no dark console edge visible."
+    },
+    {
+      "frame": 1,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f001_body_tip_ROI.png",
+      "sha256": "292564826c1b57e200596d17a6a9ca80cefcc610d7e024a7e5536a1b7cf3ad4d",
+      "crop_xywh": [
+        700,
+        1000,
+        520,
+        80
+      ],
+      "scale": "NATIVE_RENDER_ROI_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1:1 ROI520x80 displayed once. A thin navy/dark horizontal rounded console-top edge is visibly present along the bottom of the crop, unlike0. This is only the first tiny edge, not an identifiable full console."
+    },
+    {
+      "frame": 5,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f005_card_tip_ROI.png",
+      "sha256": "15422861163bb411cd922dcc16e46d7d638514ee1258a35cdd7542cce1b75baf",
+      "crop_xywh": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "scale": "NATIVE_RENDER_ROI_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1:1 ROI64x64 displayed once. Top-left crop appears cream with no dark panel corner visible."
+    },
+    {
+      "frame": 6,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_opening_v1/check_f006_card_tip_ROI.png",
+      "sha256": "e652425f73e2bf5f58897f7cd1837e6c610037756c3e48c791e8ce21ee7d86f6",
+      "crop_xywh": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "scale": "NATIVE_RENDER_ROI_NOT_SOURCE_EVIDENCE",
+      "successful": true,
+      "witness": "Rendered native1:1 ROI64x64 displayed once. A tiny dark corner/dot is visible at the extreme top-left, absent5. The tiny mark alone is not semantically identifiable as a panel; later fullframes supply that identity."
+    }
+  ],
+  "pending_image_paths": [],
+  "actual_listening_seconds": 0,
+  "source_visual_coverage_added": 0,
+  "CT_SCAN_COMPLETE": false,
+  "usage_at_stop": {
+    "primary_used_percent": 78,
+    "weekly_used_percent": 43,
+    "paid_credits_balance": "0",
+    "measurement": "Fresh check after final four nativeROI returns;11 fullframes viewed in batches3/3/3/2 with a fresh check after each. No reset/credits used."
+  },
+  "limitations": [
+    "Only15 requested rendered previewimages were displayed:11 fullframes and4 native1:1ROIs. These are render evidence, not new source-frame observations.",
+    "37-frame bounded timing-transfer unit only; no whole-video, full-production, global-native, blind cold-start, sound/ASR or audiovisual alignment award.",
+    "Silence is a supplied output declaration/probe context, not an actual hearing result. Actual listening remains0.",
+    "No source frames were redisplayed, no new render/extraction was performed, and prior source reviews remain unchanged."
+  ]
+}

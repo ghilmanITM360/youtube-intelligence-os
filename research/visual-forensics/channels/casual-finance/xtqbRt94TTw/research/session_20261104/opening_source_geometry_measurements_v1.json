@@ -1,0 +1,232 @@
+{
+  "status": "MEASURED_DECLARED_PIPELINE_MASK_GEOMETRY",
+  "frame": 36,
+  "method": "max BGR <100, components >5000 pixels; remove fully bbox-contained components (inner roof triangle is nested). Semantic outer-component labels assigned after root native visual QA. Roof trajectory in x500:1450/y500:1080 on saved frames3\u201336.",
+  "raw_components": [
+    [
+      632,
+      63,
+      684,
+      178,
+      84520
+    ],
+    [
+      75,
+      236,
+      674,
+      219,
+      104059
+    ],
+    [
+      530,
+      615,
+      902,
+      465,
+      60536
+    ],
+    [
+      658,
+      659,
+      641,
+      191,
+      22364
+    ]
+  ],
+  "components": {
+    "CONDUIT_CARD": {
+      "xywh": [
+        632,
+        63,
+        684,
+        178
+      ],
+      "area": 84520,
+      "normalized_xywh": [
+        0.32916666666666666,
+        0.058333333333333334,
+        0.35625,
+        0.1648148148148148
+      ],
+      "scope": "Axis-aligned threshold-component bounds; not hidden full-asset geometry"
+    },
+    "NYT_CARD": {
+      "xywh": [
+        75,
+        236,
+        674,
+        219
+      ],
+      "area": 104059,
+      "normalized_xywh": [
+        0.0390625,
+        0.21851851851851853,
+        0.35104166666666664,
+        0.20277777777777778
+      ],
+      "scope": "Axis-aligned threshold-component bounds; not hidden full-asset geometry"
+    },
+    "BUILDING_OUTLINE": {
+      "xywh": [
+        530,
+        615,
+        902,
+        465
+      ],
+      "area": 60536,
+      "normalized_xywh": [
+        0.2760416666666667,
+        0.5694444444444444,
+        0.46979166666666666,
+        0.4305555555555556
+      ],
+      "scope": "Axis-aligned threshold-component bounds; not hidden full-asset geometry"
+    }
+  },
+  "roof_trajectory": [
+    {
+      "frame": 3,
+      "roof_dark_mask_top_y": 960
+    },
+    {
+      "frame": 4,
+      "roof_dark_mask_top_y": 904
+    },
+    {
+      "frame": 5,
+      "roof_dark_mask_top_y": 850
+    },
+    {
+      "frame": 6,
+      "roof_dark_mask_top_y": 799
+    },
+    {
+      "frame": 7,
+      "roof_dark_mask_top_y": 752
+    },
+    {
+      "frame": 8,
+      "roof_dark_mask_top_y": 710
+    },
+    {
+      "frame": 9,
+      "roof_dark_mask_top_y": 673
+    },
+    {
+      "frame": 10,
+      "roof_dark_mask_top_y": 643
+    },
+    {
+      "frame": 11,
+      "roof_dark_mask_top_y": 623
+    },
+    {
+      "frame": 12,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 13,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 14,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 15,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 16,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 17,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 18,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 19,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 20,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 21,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 22,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 23,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 24,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 25,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 26,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 27,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 28,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 29,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 30,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 31,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 32,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 33,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 34,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 35,
+      "roof_dark_mask_top_y": 615
+    },
+    {
+      "frame": 36,
+      "roof_dark_mask_top_y": 615
+    }
+  ],
+  "old_firstpass_building_x_estimate": 0.75,
+  "current_visible_building_bbox_center_x": 0.5109375,
+  "limitations": [
+    "Visible building component touches bottom; hidden full asset height is unknown.",
+    "Threshold and declared-pipeline measurements, not true colors or source layers.",
+    "All34 frames reviewed by agent; root spot-QA five existing files."
+  ],
+  "actual_new_image_views_in_computation": 0,
+  "actual_listening_seconds": 0
+}

@@ -1,0 +1,22 @@
+{
+  "disposition": "ALL88_DERIVATIVES_VALIDATED_AGAINST_FULL_NONSEEKING_SAME_PIPELINE_DECODE",
+  "evidence_warnings": "Four h264 mmco unref short failure warnings occurred during later random-seek ASR frame extraction. No warnings shown in motion extraction.",
+  "same_pipeline_full_sequential_decode_frames": 18674,
+  "all_saved_random_seek_derivative_pixels_match_sequential": true,
+  "saved_derivatives_modified": false,
+  "source_modified": false,
+  "system_ffmpeg_sequential_returncode": 0,
+  "system_ffmpeg_stderr": "",
+  "cross_pipeline_RGB_differences": {
+    "derivatives": 88,
+    "minimum_mean_abs_channel_delta": 1.5265485146604938,
+    "maximum_mean_abs_channel_delta": 2.895242573302469,
+    "maximum_abs_channel_delta": 33,
+    "precise_conversion_cause": "UNESTABLISHED; decoder/converter/version/color-metadata behavior differs; not proof of seek/frame-index corruption",
+    "limitation": "Do not mix numerical RGB/palette/threshold measurements across pipelines or call exact color tokens canonical without a color-managed method."
+  },
+  "native_definition": "Original source spatial resolution or1:1ROI within the declared OpenCV decoded BGR pipeline; not a claim of raw coded-YUV bytes or unique RGB representation.",
+  "review_permission": "Continue pending bounded motion review and later source-aligned QA using existing validated images, no repeats.",
+  "actual_listening_seconds": 0,
+  "recorded_UTC": "2026-11-04T15:32:14.366364+00:00"
+}

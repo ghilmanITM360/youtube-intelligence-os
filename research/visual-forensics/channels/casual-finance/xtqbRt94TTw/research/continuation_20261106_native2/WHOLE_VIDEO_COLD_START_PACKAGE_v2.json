@@ -1,0 +1,57 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "status": "PREREQUISITES_INCOMPLETE",
+  "source_manifest": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/SOURCE_VERIFICATION.json",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "canonical_partition": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frame_partition_v7.csv",
+  "latest_event_ledger": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/visual_event_ledger_v39.csv",
+  "interval_index_input": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/integrated_production_interval_index_v10.json",
+  "new_specification_systems": [
+    "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/G004_ORIGINAL_SPEC.json",
+    "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/TOKEN_VOUCHER_ORIGINAL_SPEC.json"
+  ],
+  "bounded_cold_start_package": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/cold_start_package",
+  "required_before_full_render": {
+    "strict_candidate_rows": 572,
+    "outside_category_unknowns": [
+      "SUB101",
+      "SUB151"
+    ],
+    "extended_spans": 145,
+    "global_native_semantics": "PARTIAL",
+    "global_original_render_and_anchor_QA": "PENDING; cannot assemble authoritative fullvideo spec/time-coverage yet",
+    "production_P3": [
+      "QA-B1P-001"
+    ]
+  },
+  "audio_dependent_gates": "SeparateBLOCKED; actual0secondslistening;21ASRundetermined7potentialflags",
+  "whole_video_execution": "NOT_RUN; missing prerequisites; bounded tests not a substitute",
+  "CT_SCAN_COMPLETE": false,
+  "this_run_ready_dependencies_closed": [
+    "G004.01neworiginalspec +86frame source-independent behavior test",
+    "G007.01constant-size rise originalspec andG008.01exacttwo-ticketinterval +42frametest",
+    "128hash-matchingcoldstart;Pillow+font dependency pins/ready package",
+    "Prior8independentsemanticcheckandEP0025description repair"
+  ],
+  "remaining_prerequisites": {
+    "strict_candidate_rows": 572,
+    "outside_category_unknowns": [
+      "SUB101",
+      "SUB151"
+    ],
+    "extended_spans": 145,
+    "global_native_semantics": "PARTIAL",
+    "global_original_render_and_anchor_QA": "PENDING; cannot assemble authoritative fullvideo spec/time-coverage yet",
+    "production_P3": [
+      "QA-B1P-001"
+    ]
+  },
+  "historical_previous_required_before_full_render": [
+    "Remaining610candidate timingrows reviewed orcontinuationruled withevidence",
+    "Remaining148extended-span specifications classified/completed afterindependent3spanapproval",
+    "Global interval native/semanticgate closed; no authoritativependingintervalscalar",
+    "Originalspecs fullyboundforeach627interval,475states; global production/anchorQA",
+    "Frozen full-video acceptance criteria + independently executable complete originalasset/render dependencyclosure"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "review": {
+    "status": "PASS_BOUNDED_CHECKPOINT_REVIEW",
+    "scope": "Silent original 75-frame,24fps,3.125s timing-transfer unit only; not whole-video reconstruction.",
+    "spec_path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/reconstruction_test_v2/SPEC.json",
+    "inspected_frames": [
+      0,
+      35,
+      36,
+      52,
+      53,
+      74
+    ],
+    "schedule": {
+      "no_bubble": [
+        0,
+        35
+      ],
+      "plan_a": [
+        36,
+        52
+      ],
+      "plan_b": [
+        53,
+        74
+      ],
+      "verdict": "Six viewed checkpoints agree with SPEC; not every interior frame inspected."
+    },
+    "anchors": "All six viewed checkpoints retain four navy rounded rectangular faces/block bodies and table at fixed positions; eyes/mouths/colors consistent. PLAN A bubble upper right, PLAN B bubble upper left.",
+    "originality": "Viewed design uses block characters, navy/coral/teal palette, cream field and clean elliptical table/bubbles. Visibly different from source hand-drawn stick presenter sampled elsewhere. Source G003 composition was not independently reread in this bounded review; full originality audit unavailable.",
+    "audio": "SPEC declares silent; no listening or audio validation performed.",
+    "limitations": [
+      "75-frame count and24fps accepted from SPEC; media stream not independently probed.",
+      "Source G003 timing origins226,262,279,300 not independently natively revisited.",
+      "Only six checkpoint images inspected; no continuous render verification."
+    ]
+  },
+  "stream_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "24/1",
+        "duration": "3.125000",
+        "nb_read_frames": "75"
+      }
+    ]
+  },
+  "status": "BOUNDED_ORIGINAL_TIMING_TRANSFER_PASS_NOT_WHOLE_VIDEO",
+  "actual_listening_seconds": 0
+}

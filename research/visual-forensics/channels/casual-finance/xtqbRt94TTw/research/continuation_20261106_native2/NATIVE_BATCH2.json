@@ -1,0 +1,56 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "input_ledger": "v33",
+  "output_ledger": "v34",
+  "input_native_windows": [
+    [
+      1115,
+      1165
+    ],
+    [
+      1225,
+      1230
+    ]
+  ],
+  "rulings": {
+    "EP0036": {
+      "kind": "EXACT_VISIBLE_ENTRY_AND_MOTION_OFFSET",
+      "onset": 1120,
+      "last_change": 1141,
+      "class": "ADDITIVE_ENTRY",
+      "description": "Orange percent disc first appears fully within canvas1120 (1119 absent), without eyes; x/width remain fixed while it rises through1141. Orange bbox x271..526 has width256 throughout1120\u20131144; initial y648..903, final328..583. Thus no measured shrinking. Eyes appear1141 per accepted G007.02, not present throughout entry. Rise settles1141 with body held1142\u20131144; sampled native facial expression is downturned/worried after eyes appear. Arrow/eyes/speech-bubble background fixed in reviewed samples.",
+      "uncertainty": "BBox mask is orange interior, not complete black outline; no unique easing function inferred."
+    },
+    "EP0038": {
+      "kind": "RECONCILED_EXACT_COMPOUND_BILL_ONSETS",
+      "onset": 1156,
+      "last_change": 1159,
+      "class": "ADDITIVE_ENTRY",
+      "description": "Second green banknote first visible1156 (1155 one); third first visible1159 (1158 two). Existing first note onset1151 reused from EP0037; existing G008.01/G008.02 exact rulings corroborated by shared native window. Notes are separate sequential additions, not one simultaneous event. Native count held1160\u20131161; later fourth1163 is already accepted EP0039 and not a new closure here.",
+      "uncertainty": "Underlying note asset/keyframe implementation unknown."
+    },
+    "SUB031": {
+      "kind": "RECLASSIFIED_NO_MEANINGFUL_VISUAL_EVENT",
+      "onset": null,
+      "last_change": null,
+      "class": "CODEC_LEVEL_PIXEL_VARIATION",
+      "description": "Native1225\u20131228 shows held smiling narrator with open arms and four certificates;1227 vs1226 has one pixel at1039,652 above sumRGB60, maxchannel23.1228 reverses the same pixel. No semantic torso/face/object event is visible. Arms change1229 (already accepted EP0045); do not move that change to1227 or interpret pixel noise as sound.",
+      "uncertainty": "Cannot prove every possible subpixel authored change absent; ruling is no meaningful visible event at this resolution."
+    }
+  },
+  "resolved_row_ids": [
+    "EP0036",
+    "EP0038",
+    "SUB031"
+  ],
+  "before": 597,
+  "remaining": 594,
+  "new_exact_rows": 1,
+  "reconciled_existing_exact_compound_rows": 1,
+  "no_meaningful_event_rows": 1,
+  "prior_accepted_EP0025_correction": "hand+underline626,arrow627; QAconditionimplemented; zero closure",
+  "semantics": "Selected fullframe witnesses; allnative measurements; not entireframe semantics",
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false
+}

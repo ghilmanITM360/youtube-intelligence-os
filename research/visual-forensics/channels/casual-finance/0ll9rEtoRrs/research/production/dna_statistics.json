@@ -1,0 +1,177 @@
+{
+ "fps": 24,
+ "total_frames": 24298,
+ "minutes": 16.87,
+ "states": 530,
+ "states_per_min": 31.41,
+ "state_dur_s": {
+  "median": 1.12,
+  "mean": 1.67,
+  "p10": 0.29,
+  "p90": 3.79,
+  "max": 13.12
+ },
+ "edit_events_total": 996,
+ "edit_events_per_min": 59.0,
+ "events_in_states": 853,
+ "events_in_unowned_gaps": 143,
+ "event_types": {
+  "ADDITIVE_ENTRY": 262,
+  "FULL_REPLACE": 247,
+  "HIGHLIGHT_ADD": 118,
+  "DRAW_ON_OR_REVEAL": 93,
+  "TEXT_CHANGE": 57,
+  "PAN_OR_SCROLL": 34,
+  "OBJECT_MOTION": 26,
+  "CHARACTER_ANIMATION": 25,
+  "ZOOM_OR_SCALE": 24,
+  "NUMBER_OR_LABEL_CHANGE": 23,
+  "POSE_SWAP": 18,
+  "EXPRESSION_CHANGE": 15,
+  "PARTIAL_REPLACE": 13,
+  "ELEMENT_SWAP": 13,
+  "ELEMENT_EXIT": 8,
+  "WIPE_OR_FADE": 6,
+  "OTHER": 6,
+  "MOTION_ANIMATION": 2,
+  "ZOOM_PAN": 2,
+  "SWAP": 2,
+  "TRANSITION": 1,
+  "EXIT": 1
+ },
+ "unowned_frames": 3012,
+ "unowned_share_pct": 12.4,
+ "unowned_class_frames": {
+  "MOTION_IN_COMPOSITION": 1712,
+  "EMBEDDED_VIDEO": 658,
+  "CONTINUOUS_ANIMATION": 515,
+  "FADE_OR_TRANSITION": 74,
+  "DISTINCT_COMPOSITION": 50,
+  "UNCERTAIN": 3
+ },
+ "families": {
+  "F1 character-only": {
+   "states": 67,
+   "share_of_state_frames_pct": 11.5,
+   "median_dur_s": 1.29,
+   "top_events": {
+    "FULL_REPLACE": 47,
+    "POSE_SWAP": 10,
+    "ADDITIVE_ENTRY": 4,
+    "EXPRESSION_CHANGE": 3
+   }
+  },
+  "F10 title/end card": {
+   "states": 2,
+   "share_of_state_frames_pct": 1.1,
+   "median_dur_s": 4.94,
+   "top_events": {
+    "FULL_REPLACE": 1
+   }
+  },
+  "F11 other composite": {
+   "states": 23,
+   "share_of_state_frames_pct": 5.4,
+   "median_dur_s": 0.96,
+   "top_events": {
+    "ADDITIVE_ENTRY": 25,
+    "TEXT_CHANGE": 19,
+    "NUMBER_OR_LABEL_CHANGE": 18,
+    "DRAW_ON_OR_REVEAL": 14
+   }
+  },
+  "F2 character+prop": {
+   "states": 103,
+   "share_of_state_frames_pct": 16.4,
+   "median_dur_s": 1.38,
+   "top_events": {
+    "ADDITIVE_ENTRY": 48,
+    "FULL_REPLACE": 35,
+    "TEXT_CHANGE": 12,
+    "EXPRESSION_CHANGE": 6
+   }
+  },
+  "F3 object/icon cluster": {
+   "states": 101,
+   "share_of_state_frames_pct": 12.7,
+   "median_dur_s": 0.83,
+   "top_events": {
+    "ADDITIVE_ENTRY": 74,
+    "FULL_REPLACE": 34,
+    "DRAW_ON_OR_REVEAL": 8,
+    "PARTIAL_REPLACE": 4
+   }
+  },
+  "F4 full-bleed screenshot/document": {
+   "states": 55,
+   "share_of_state_frames_pct": 14.9,
+   "median_dur_s": 1.17,
+   "top_events": {
+    "HIGHLIGHT_ADD": 56,
+    "FULL_REPLACE": 39,
+    "DRAW_ON_OR_REVEAL": 21,
+    "ADDITIVE_ENTRY": 11
+   }
+  },
+  "F5 screenshot+character": {
+   "states": 111,
+   "share_of_state_frames_pct": 26.9,
+   "median_dur_s": 1.42,
+   "top_events": {
+    "ADDITIVE_ENTRY": 60,
+    "HIGHLIGHT_ADD": 57,
+    "FULL_REPLACE": 21,
+    "CHARACTER_ANIMATION": 16
+   }
+  },
+  "F6 chart/graph": {
+   "states": 28,
+   "share_of_state_frames_pct": 7.0,
+   "median_dur_s": 1.5,
+   "top_events": {
+    "DRAW_ON_OR_REVEAL": 28,
+    "ADDITIVE_ENTRY": 16,
+    "FULL_REPLACE": 14,
+    "HIGHLIGHT_ADD": 4
+   }
+  },
+  "F7 text card": {
+   "states": 4,
+   "share_of_state_frames_pct": 0.3,
+   "median_dur_s": 0.58,
+   "top_events": {
+    "TEXT_CHANGE": 1,
+    "PARTIAL_REPLACE": 1
+   }
+  },
+  "F8 dark-UI capture": {
+   "states": 11,
+   "share_of_state_frames_pct": 0.6,
+   "median_dur_s": 0.29,
+   "top_events": {
+    "FULL_REPLACE": 2,
+    "OBJECT_MOTION": 2
+   }
+  },
+  "F9 full-bleed drawn scene": {
+   "states": 24,
+   "share_of_state_frames_pct": 2.8,
+   "median_dur_s": 0.94,
+   "top_events": {
+    "TEXT_CHANGE": 15,
+    "FULL_REPLACE": 10,
+    "ADDITIVE_ENTRY": 4,
+    "EXPRESSION_CHANGE": 2
+   }
+  },
+  "UNKNOWN": {
+   "states": 1,
+   "share_of_state_frames_pct": 0.3,
+   "median_dur_s": 2.46,
+   "top_events": {
+    "FULL_REPLACE": 1
+   }
+  }
+ },
+ "label": "MEASURED from second-pass-integrated ledgers (structure only; 807 CONFIRMED candidates not second-passed; unowned gaps not absorbed; embedded-video label INFERRED)"
+}

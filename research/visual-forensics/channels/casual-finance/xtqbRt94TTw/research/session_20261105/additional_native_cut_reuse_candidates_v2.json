@@ -1,0 +1,204 @@
+{
+  "status": "REUSE_CANDIDATES_ONLY_NOT_AUTOMATIC_CUT_RULINGS",
+  "baseline": "integrated_v4/visual_event_ledger_v13.csv",
+  "items": [
+    {
+      "event_id": "EP0109",
+      "candidate_frame": 3810,
+      "candidate_end": 3841,
+      "firstpass_description": "Chalkboard scene replaced at f3810 by white canvas; green zigzag rising arrow draws on from bottom-left to upper right while orange percent circle slides to top-left.",
+      "prior_native_before": [
+        {
+          "review_ref": "agents/gap_review_01/OUT_gap_review_01.json",
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f03809.jpg",
+          "sha256": "3aa8291c1cebbf7103ab229d8fd4fac1d0953390bd97d68f78fc9ae416365e0f",
+          "scale": "NATIVE_1920x1080"
+        }
+      ],
+      "prior_native_after": [
+        {
+          "review_ref": "agents/gap_review_01/OUT_gap_review_01.json",
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f03810.jpg",
+          "sha256": "5497f1dfddc289cba560e61004a5b3c3a70983aa62691f487bf456eeef3b40ba",
+          "scale": "NATIVE_1920x1080"
+        }
+      ],
+      "prior_native_semantic_segments_at_boundary": [
+        {
+          "ref": "agents/gap_review_01/OUT_gap_review_01.json#G035",
+          "segment": {
+            "start": 3810,
+            "end": 3841,
+            "owner": "FOLLOWING",
+            "description": "History chalkboard cuts to white, then percent disc rises/bobs while green jagged upward arrow draws on.",
+            "event_type": "COMPOSITION_TRANSITION",
+            "evidence_frames": [
+              3810,
+              3811,
+              3814,
+              3818,
+              3822,
+              3826,
+              3830,
+              3834,
+              3838,
+              3841
+            ],
+            "confidence": "HIGH",
+            "boundary_precision": "SAMPLED_BRACKET"
+          },
+          "notes": "Native3809/3810 verifies white transition frame;3811 has initial green stroke/disc rim. Scaled interiors verify continuing arrow build."
+        }
+      ]
+    },
+    {
+      "event_id": "EP0128",
+      "candidate_frame": 4245,
+      "candidate_end": 4328,
+      "firstpass_description": "House and skyscraper shatter into fragment tiles (white grid squares) and a bordered 'Figure 1' dot chart scrolls into the full frame, ending on its top.",
+      "prior_native_before": [
+        {
+          "review_ref": "agents/gap_review_01/OUT_gap_review_01.json",
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f04244.jpg",
+          "sha256": "b8d594757332a1d97fb8ba43b09e3b4259ff0eb83f7cca6fced96797c1d02cb6",
+          "scale": "NATIVE_1920x1080"
+        }
+      ],
+      "prior_native_after": [
+        {
+          "review_ref": "agents/gap_review_01/OUT_gap_review_01.json",
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f04245.jpg",
+          "sha256": "0a5280c95846a1444ba88bd95a9db4465741a72e60eb6fe7e189e5a62ca7853e",
+          "scale": "NATIVE_1920x1080"
+        }
+      ],
+      "prior_native_semantic_segments_at_boundary": [
+        {
+          "ref": "agents/gap_review_01/OUT_gap_review_01.json#G037",
+          "segment": {
+            "start": 4245,
+            "end": 4269,
+            "owner": "PREVIOUS",
+            "description": "House/buildings fracture into rectangular rotating fragments that spread outward and leave frame.",
+            "event_type": "FRAGMENTATION_EXIT",
+            "evidence_frames": [
+              4245,
+              4249,
+              4250,
+              4251,
+              4253,
+              4257,
+              4261,
+              4265,
+              4269
+            ],
+            "confidence": "HIGH",
+            "boundary_precision": "SAMPLED_BRACKET"
+          },
+          "notes": "Native4244/4245 verifies fragmentation onset. Native4269/4270 proves chart cut4270;4271\u20134273,4301,4328 and all three scaled sheets verify chart interior progression. No additional third composition observed."
+        }
+      ]
+    },
+    {
+      "event_id": "EP0159",
+      "candidate_frame": 5448,
+      "candidate_end": 5491,
+      "firstpass_description": "Bank building and percent circle cut to white, then a profile page (portrait and bio) appears left and a Federal speech web page slides in from the right edge.",
+      "prior_native_before": [
+        {
+          "review_ref": "agents/gap_review_01/OUT_gap_review_01.json",
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f05447.jpg",
+          "sha256": "cbd7cb876a6a4a0de7844b47d6355c75f46e2afe294115e0b95e72248d8de7d5",
+          "scale": "NATIVE_1920x1080"
+        }
+      ],
+      "prior_native_after": [
+        {
+          "review_ref": "agents/gap_review_01/OUT_gap_review_01.json",
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f05448.jpg",
+          "sha256": "4265c9f4f45e683848731bef1812294651cab2d3a6b86e4fd3f039f0219c9c86",
+          "scale": "NATIVE_1920x1080"
+        }
+      ],
+      "prior_native_semantic_segments_at_boundary": [
+        {
+          "ref": "agents/gap_review_01/OUT_gap_review_01.json#G041",
+          "segment": {
+            "start": 5448,
+            "end": 5491,
+            "owner": "FOLLOWING",
+            "description": "Fed/percent composition cuts to white; Kevin Warsh biography slides in from left, then Fed speech page slides in from right and settles beside it.",
+            "event_type": "COMPOSITION_TRANSITION",
+            "evidence_frames": [
+              5448,
+              5449,
+              5452,
+              5456,
+              5460,
+              5464,
+              5468,
+              5471,
+              5472,
+              5476,
+              5480,
+              5484,
+              5488,
+              5491
+            ],
+            "confidence": "HIGH",
+            "boundary_precision": "SAMPLED_BRACKET"
+          },
+          "notes": "Native5447/5448 verifies blank transition;5449 shows biography edge;5471/5472 confirm speech-page travel. Biography-only buildup is part of following dual-panel entry, not assigned to Fed/percent preceding state. Speech-page first entry not claimed exact."
+        }
+      ]
+    },
+    {
+      "event_id": "EP0192",
+      "candidate_frame": 6771,
+      "candidate_end": 6830,
+      "firstpass_description": "Many semi-transparent green dollar-bill sprites tumble down over the logo cluster and chip prop for about 58 frames, then a hard cut to a presenter beside an empty green chalkboard.",
+      "prior_native_before": [
+        {
+          "review_ref": "agents/gap_review_02/OUT_gap_review_02.json",
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_02/native_f06770.jpg",
+          "sha256": "e17a0714df42667d32bed5728aba1f5c6a3cd934635201db01022aec7058d0bd",
+          "scale": "NATIVE_1920x1080"
+        }
+      ],
+      "prior_native_after": [
+        {
+          "review_ref": "agents/gap_review_02/OUT_gap_review_02.json",
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_02/native_f06771.jpg",
+          "sha256": "9910f7f1490bfc1d560dfd09d4d11dddac6f0dc514a8d043185ebd3a1cd1f3d0",
+          "scale": "NATIVE_1920x1080"
+        }
+      ],
+      "prior_native_semantic_segments_at_boundary": [
+        {
+          "ref": "agents/gap_review_02/OUT_gap_review_02.json#G051",
+          "segment": {
+            "start": 6771,
+            "end": 6829,
+            "owner": "NEW",
+            "description": "Repeated translucent green banknotes begin raining across the retained company logos and gray data-center illustration.",
+            "event_type": "GRAPHIC_OVERLAY_ENTER_MOTION",
+            "evidence_frames": [
+              6770,
+              6771,
+              6779,
+              6791,
+              6803,
+              6815,
+              6829
+            ],
+            "confidence": "HIGH",
+            "boundary_precision": "EXACT_NATIVE"
+          },
+          "notes": "Both f6770/f6771 overlay onset and f6829/f6830 composition cut inspected at native resolution. All five sheets inspected; the rain interval is not a static hold."
+        }
+      ]
+    }
+  ],
+  "actual_new_image_reads": 0,
+  "CT_SCAN_COMPLETE": false
+}

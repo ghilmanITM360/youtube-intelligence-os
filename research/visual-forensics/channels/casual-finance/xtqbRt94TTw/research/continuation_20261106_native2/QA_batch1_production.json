@@ -1,0 +1,460 @@
+{
+  "schema": "YIOS_INDEPENDENT_QA_BATCH1_PRODUCTION_V1",
+  "created_utc": "2026-11-06T12:13:05.169090+00:00",
+  "reviewer": "/root/video006_bounded_qa",
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "status": "PASS_BOUNDED_WITH_OPEN_CONTEXTUAL_P3",
+  "summary": "Sixteen new row adjudications and the three specified production spans pass their bounded gates. EP0025 description correction is verified. One open P3 text-polish defect affects contextual G004 third-line highlighting outside the566-584 closure. This is not global production readiness or whole-video signoff.",
+  "scope": {
+    "ledger": "v32 to v34,16 new closures plus existing EP0025 text correction",
+    "new_row_ids": [
+      "EP0027",
+      "SUB019",
+      "SUB020",
+      "SUB021",
+      "SUB022",
+      "SUB023",
+      "SUB024",
+      "SUB025",
+      "SUB026",
+      "SUB027",
+      "SUB028",
+      "SUB029",
+      "SUB030",
+      "EP0036",
+      "EP0038",
+      "SUB031"
+    ],
+    "production_spans": {
+      "G004.01": [
+        566,
+        584
+      ],
+      "G007.01": [
+        1120,
+        1140
+      ],
+      "G008.01": [
+        1156,
+        1158
+      ]
+    },
+    "production_context": {
+      "g004_attempt01": [
+        565,
+        650
+      ],
+      "token_attempt02": [
+        1119,
+        1160
+      ]
+    },
+    "excluded": [
+      "Root later headline/PDF batches and their ledgers/requirements",
+      "Previously accepted source scopes except targetedEP0025 text reconciliation",
+      "Global shot count/100ms semantic audit",
+      "Other extended spans and whole-video production readiness",
+      "Audio/AV review"
+    ]
+  },
+  "resources": {
+    "fresh_five_hour_used_percent": 24,
+    "fresh_weekly_used_percent": 26,
+    "ordinary_usage_allowed": true,
+    "paid_credits_spent": 0,
+    "agents_spawned": 0,
+    "serious_context_pressure": false
+  },
+  "source": {
+    "path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We’re About to Break It - Casual Finance (1080p, h264).mp4",
+    "sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+    "fresh_sha256_verified": true,
+    "PTS_verification": "Independent ffprobe timestamps equal512*(n+1)ticks at1/12288 for all scoped680-684,925-1060,1115-1165,1225-1230 frames. PTS=(n+1)/24seconds."
+  },
+  "gates": {
+    "ledger_integrity": {
+      "status": "PASS",
+      "rows_before": 948,
+      "rows_after": 948,
+      "unique_ids_after": 948,
+      "row_order_preserved": true,
+      "measured_candidate_only_before": 610,
+      "measured_candidate_only_after": 594,
+      "changed_ids": [
+        "EP0025",
+        "EP0027",
+        "SUB019",
+        "SUB020",
+        "SUB021",
+        "SUB022",
+        "SUB023",
+        "SUB024",
+        "SUB025",
+        "SUB026",
+        "SUB027",
+        "SUB028",
+        "SUB029",
+        "SUB030",
+        "EP0036",
+        "EP0038",
+        "SUB031"
+      ],
+      "unrequested_other_rows_changed": false,
+      "source_window_change": "OnlySUB019 source_start_frame931->930 and matching source_start_pts38.833333333333336->38.791666666666664 changed among source frame/PTS fields. Original candidate931 is preserved separately. Other source windows and all shot-boundary claims unchanged.",
+      "classification_counts": {
+        "new_exact_rows": 3,
+        "reconciled_compound_exact_row": 1,
+        "continuous_fragments": 11,
+        "no_meaningful_event_row": 1
+      },
+      "qualification": "16 closures are row adjudications, not16new physical events or cuts. EP0038 reuses accepted1156/1159 additions and SUB031 is a rejection of meaningful change."
+    },
+    "EP0025_prior_condition": {
+      "status": "PASS_CORRECTION_IMPLEMENTED",
+      "prior_report": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/QA_prior_eight.json",
+      "verified_v34_description": "Cursor interaction continues from the existing track: arrow on Share icon625; hand cursor and underlined Share626; arrow below-left627 with underline removed. Highlights already held; no independent reveal onset626. Exact cursor-state detail corrects prior arrow-only wording, without changing accepted continuation classification.",
+      "changed_fields": [
+        "description",
+        "macro_review_ref",
+        "native_vs_firstpass_conflict"
+      ],
+      "timing_precision_unchanged": true,
+      "new_closures": 0,
+      "new_native_image_review": "Not repeated; prior625/626/627 native evidence reused."
+    },
+    "native_batch1": {
+      "status": "PASS_BOUNDED",
+      "EP0027": "Adjacent native681 yellow and682 bright green viewed; color onset682 supported. Presenter skeptical/raised-arm pose and page layout held in these witnesses. Prior noise-only/NOT_A_CHANGE claim is refuted; no audible-noise inference.",
+      "SUB019": "First quote yellow at930, absent929. Dedicated native textROI measurement has76threshold pixels at930,bbox1000,274..1001,311; fullnative930 and consecutive927-933 sheet actually viewed. Firstvisible is distinct from unknown authored-layer timing.",
+      "SUB020_SUB030": "Eleven fragments of the same reveal, not independent authored onsets. Line2 ends980 atx1645; line3 begins981 atx240, last growth1053 to1111; first quote line remains unhighlighted. Consecutive974-983 and1047-1056 sheets support wrap/completion. Full-frame threshold holds1054-1060, not byte identity.",
+      "context": "Fullnative930 shows smiling glasses narrator, desk/laptop and five red upward arrows. Hold assertions remain bounded to sampled visuals plus existing fullframe numeric receipts."
+    },
+    "native_batch2": {
+      "status": "PASS_BOUNDED",
+      "EP0036": "Disc absent1119 by measured mask; fully in canvas1120 with no eyes in actual native1120. Orange-interior width256 for every1120-1144 record, fixedx271..526; rises from648..903 to328..583, first finalbbox1141. Body held1142-1144. Native1141 shows downturned/worried eye geometry. No shrinking or unique easing claim.",
+      "EP0038": "Native1155 one banknote;1156 two;1158 two;1159 three. Sequential additions confirmed. Existing1151 first note and1163 fourth-note rulings are context/reuse, not new closures here.",
+      "SUB031": "1225-1230 overview actually viewed: narrator/four certificates held1225-1228; arms change1229. Independent fullRGB1226->1227->1228 verifies same one-pixel change/reversal at1039,652 with maxchannel23 and sumRGB>60; no meaningful torso/face/object change1227 at this resolution. No claim every possible subpixel authored change is absent."
+    },
+    "source_measurement_reproduction": {
+      "status": "PASS",
+      "quote_ROI_records": 136,
+      "coin_ROI_records": 30,
+      "limited_fullframe_records": {
+        "ep0027": 5,
+        "sub031": 6,
+        "quote1053_1060": 8
+      },
+      "mismatches": 0,
+      "reproduced_fields": "All dedicated136quote rawSHA256 values and per-band pixel counts/bboxes; all30coin rawSHA256/count/bbox values;19selected fullframe SHA256 values and internal adjacent>60RGBsum count/bbox/maxchannel differences.",
+      "pipelines": [
+        "Quote crop1920:250:0:170 beforeRGB24; yellowR>200,G>180,B<180,R-B>40; bands200-239/270-314/340-379.",
+        "Coin crop640:850:0:200 beforeRGB24; orangeR>180,80<G<180,B<100; bbox is orange interior, not full black outline.",
+        "Full frame source1920x1080 RGB24; adjacent sum absoluteRGB>60."
+      ],
+      "existing_receipts_reused": "Other fullframe measurements and accepted contextual first-note/eyes/fourth-note onsets reused rather than redundantly re-adjudicated. No claim all newly bounded source frames were semantically displayed."
+    },
+    "G004_frozen_acceptance": {
+      "status": "PASS_BOUNDED",
+      "attempt": "g004_attempt01",
+      "span": [
+        566,
+        584
+      ],
+      "frozen_sha256": "25388de56dff62c570bb31030f61344c82dca24f7c660ba688cdd312065f70bc",
+      "checks": "13read-only validation computations rerun against preserved images/MP4; all pass. Validator output-writing tails were excluded. Additional every-frame band monotonicity checks pass.",
+      "milestones": [
+        "Robot565 present566 absent; layout differs566/567 and583/584.",
+        "Two headers hold pixel-identically584-650 in declared headerstrip.",
+        "Firstvisible575 uses the explicitly declared original clippedaccent strip; no hidden source onset inferred.",
+        "Original parallel bands strictly grow584-606 in final anchor coordinates; procedural localfraction begins575 while panel is entering.",
+        "Third band absent606/first607/full declared band622; strictly grows607-622 and holds thereafter.",
+        "Left yellow608/orange609; cursor changes through648 then648=649=650."
+      ],
+      "originality": "Procedural teal robot and fictional Council panels; no source screens/art read. The declared transient accentstrip and chosen wipe/tile path are original implementation choices, not source-identical compositing.",
+      "contextual_defect": "QA-B1P-001 openP3 affects607-622 context outsideG004.01 closure."
+    },
+    "token_voucher_frozen_acceptance": {
+      "status": "PASS_BOUNDED",
+      "attempt": "token_attempt02",
+      "spans": {
+        "G007.01": [
+          1120,
+          1140
+        ],
+        "G008.01": [
+          1156,
+          1158
+        ]
+      },
+      "frozen_sha256": "8ba04ba20ab287d644105eead1dc34613bf089b19882792bc6be4e5859835622",
+      "checks": "Seven read-only validation computations rerun; all42images match nativecanvas, tokenbbox follows everydeclared center with constant size, visor first1141, allfive bars fixed, vouchers0before1151/1through1155/2through1158/3from1159.",
+      "semantic_visual_check": "Native original1140 has no visor;1141 has raised inner/descending outer brow segments. These support the intended worried reading rather than the preserved attempt01 inward-down geometry. Emotion is a visual interpretation, not measured viewer affect. RATE/CREDIT/ILLUSTRATIVE labels readable and unclipped in viewed native frames.",
+      "context_only": [
+        "G007.02eyes1141",
+        "G008.02thirdvoucher1159"
+      ],
+      "originality": "Original navy hexagon/amber visor and noncurrency tickets transfer timing/continuity, not source artwork or a uniquely established source curve."
+    },
+    "cold_start": {
+      "status": "PASS_ON_REVIEWED_EXECUTION_EVIDENCE",
+      "recorded_exit_code": 0,
+      "G004_images": 86,
+      "token_images": 42,
+      "total_images": 128,
+      "independently_verified_manifest_and_cold_hash_mismatches": 0,
+      "packaged_specs_and_renderers_byte_identical": true,
+      "Python_audit_read_paths": 174,
+      "unexpected_source_or_external_evidence_paths": 0,
+      "scope": "Python open audit hook plus static script/read-list inspection; systemlibraries/fonts and tooling allowed. Not an OS-level filesystem trace or sandbox.",
+      "independent_reexecution": "No output-producing rerender performed because reviewer may only write this QA report. Existing recorded separate subprocess and all128imagehashes independently checked."
+    },
+    "encoded_outputs": {
+      "status": "PASS",
+      "g004": {
+        "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/g004_attempt01/g004_silent.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": "24/1",
+        "frames": 86,
+        "audio_streams": 0
+      },
+      "token": {
+        "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/token_attempt02/token_silent.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": "24/1",
+        "frames": 42,
+        "audio_streams": 0
+      },
+      "method": "Independent ffprobe of bothactual streams; rendered PNG checkpoint images inspected visually."
+    }
+  },
+  "open_defects": [
+    {
+      "id": "QA-B1P-001",
+      "severity": "P3",
+      "status": "OPEN_PRODUCTION_TEXT_POLISH",
+      "file": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/g004_attempt01/f00622.png",
+      "spec_locator": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/G004_ORIGINAL_SPEC.json#/original_system/highlight_local_bands/2",
+      "observed": "Final125px third yellow band stops in the middle of illustration in This illustration carries no forecast.",
+      "recommended_fix": "In a future separately preserved production attempt, align the final band or fictional wording to a whole-word boundary while retaining declared onset/completion timing.",
+      "frozen_timing_geometry_failure": false,
+      "inside_G004_01_closure": false,
+      "context_range": [
+        607,
+        622
+      ],
+      "root_acknowledgment": "Root accepted this as openP3, no rerender requested for this bounded QA."
+    }
+  ],
+  "preserved_failures": {
+    "token_attempt01": "42images retained; actual native1141 viewed and supports inward-down/angry-looking brow defect. Numerical PASS after ROI repair did not establish semantic facial acceptance.",
+    "validator_false_failure": "TOKEN_VALIDATOR_DEFECT.json documents early low-token detector clipping at815. Original failed receipt and repaired numerical receipt retained; not an actual radius/trajectory failure.",
+    "attempt02": "Separate renderer and outputs; worried brow geometry repaired without altering frozen acceptance criteria."
+  },
+  "actual_images_viewed": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/g004_attempt01_overview.jpg",
+      "sha256": "8049c8e834d1236a09ff7e6935ad9c331c88ce6ec87dfea6ae04fad15e1ca47d"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/g004_attempt01/f00575.png",
+      "sha256": "29e16187ea3b5adc525e25a0a2ef065cb336192c718ecb0f9479723b163adbbf"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/g004_attempt01/f00622.png",
+      "sha256": "615e82216dd9a5e3339cdbd4d3e073b102f5343913d56679be58490cb78ada13"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/token_attempt02_overview.jpg",
+      "sha256": "61eebb9c4993e84be78e31b4656e026744eea8b66c197d7b6f7a141308680bdd"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/token_attempt02/f01141.png",
+      "sha256": "108a83d82a8db3821c4703d7675e3fe616b0d893086c044bdc84bb0b6b34d0e5"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/token_attempt02/f01159.png",
+      "sha256": "99af17d59edcaf300cc4413db6bca0d8bbbde094ef0d2652deb58d11c35e8568"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/ep0027/f00681.jpg",
+      "sha256": "8d0a857d60bcddf59daa64ccca14fc1bc33a9f37b88ea58232d8529fae87deab"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/ep0027/f00682.jpg",
+      "sha256": "ca985870d2230d9f1d1923dc69ad6d64db436d66701c0e6097bfa700f776a9c6"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/native_onset_927_933.jpg",
+      "sha256": "01d2d4614bf0a922792485ccd174ff998722161ac65999a738e9daabc58b2bb3"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/native_wrap_974_983.jpg",
+      "sha256": "05cdb107ed9a2bb018f92283b33f31c5551112e47ba4c3d7aace24855d104191"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/native_finish_1047_1056.jpg",
+      "sha256": "ad3403fd88f6a0fe77c769480ca9fdfa14356815d9861169135bbf141290009c"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/coin_notes_1115_1165/f01120.jpg",
+      "sha256": "ce0655d5cae7821c0a4f4ebd6764f76e9fab2354215a589c50dbaf099f658b1b"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/coin_notes_1115_1165/f01141.jpg",
+      "sha256": "557aed79fdab1084ba21eb6a75ad579b5cb01f781ce19c80bf01400a8e3d4cb2"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/coin_notes_1115_1165/f01155.jpg",
+      "sha256": "c939ebd37eeed756a0716d2df06a8306a8e677c58563a113072f45721a76d928"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/coin_notes_1115_1165/f01156.jpg",
+      "sha256": "ab48309311d142fd7abc6803d2045d8685ce3aa4d9d21819e0adc707fa00a1ad"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/coin_notes_1115_1165/f01158.jpg",
+      "sha256": "77c304f2f3d366e0390cb696d0b4db84a423d97bd8f7199766ad400772530418"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/coin_notes_1115_1165/f01159.jpg",
+      "sha256": "53e555937b9e0e7d17e5307d69cd295864b6b8e45ed972e1577b5f467ed12b07"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/sub031_overview.jpg",
+      "sha256": "d93840be1e5f1c860b44ab184b61f399ac6ae5140f632e67065b163ed16e3c37"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/quote_925_1060/f00930.jpg",
+      "sha256": "884499e73aaba390c2f20a34e348c61338b27a4be207930fb3f5169d79205516"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/g004_attempt01/f00606.png",
+      "sha256": "c98ff08bd5f561fc39a17957bc3edc73ccd0a0581ed92c9de239eebf4cc9ea7c"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/g004_attempt01/f00607.png",
+      "sha256": "3f5a686fc8c9928134968df20b3241d8db7e2462450a55ee6b4ab03a5fa45ae1"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/token_attempt02/f01140.png",
+      "sha256": "1e0b408726506f0fb809df7dc424ece8f8aa84e54c1c707bd7d38df672995272"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/token_attempt01/f01141.png",
+      "sha256": "67e15a9ee6da094d50232d36643426eecad981f8c946036c4969a1795f852953"
+    }
+  ],
+  "image_coverage": {
+    "image_file_count": 23,
+    "source_image_files": 13,
+    "original_production_image_files": 10,
+    "source_native_individual_frames": [
+      681,
+      682,
+      930,
+      1120,
+      1141,
+      1155,
+      1156,
+      1158,
+      1159
+    ],
+    "consecutive_source_text_sheet_ranges": [
+      [
+        927,
+        933
+      ],
+      [
+        974,
+        983
+      ],
+      [
+        1047,
+        1056
+      ]
+    ],
+    "source_SUB031_sheet": [
+      1225,
+      1230
+    ],
+    "G004_original_native_PNGs": [
+      575,
+      606,
+      607,
+      622
+    ],
+    "token02_original_native_PNGs": [
+      1140,
+      1141,
+      1159
+    ],
+    "token01_original_native_PNGs": [
+      1141
+    ],
+    "production_contact_sheets": [
+      "g004_attempt01_overview.jpg",
+      "token_attempt02_overview.jpg"
+    ],
+    "resolution_limits": "Quote sheets are half-scale;SUB031 overview is1/3-scale; production contacts are1/4-scale. G004overview display resized960x2058to955x2048. Exact tiny onset corroborated in nativefull930 and independently reproduced sourceRGB. Not every source/rendered frame was visually displayed."
+  },
+  "unknowns": [
+    "Hidden/offscreen authored onset and source layer/easing implementations remain UNKNOWN",
+    "Source-art fidelity and unique authored curve not established by original behavior transfer",
+    "Unreviewed source intervals/global100ms semantics and remaining production spans",
+    "OS-wide readtrace not available; audit is Python-level only"
+  ],
+  "input_sha256": {
+    "NATIVE_BATCH1.json": "46d1ec6893dc5eb0d4e4ad40e7dbde396db6df31f40157338873b3d08d820e14",
+    "NATIVE_BATCH2.json": "d0272daea2eb069f2853b5e2e899f5a70a2b73755f8a5e66384d4b3d35e2eb2d",
+    "visual_event_ledger_v33.csv": "b3f8f5ce2d396998e4808d6d88b8e16e941e3092cdaa539c7319401613432a9c",
+    "visual_event_ledger_v34.csv": "aaa33bd1d791b2bfa2e30e9d4c66c709e7cb7d75422c9041f82ad8f55c9421e4",
+    "QA_prior_eight.json": "e3f67a2a091e7ffc1262a40d99c4f948d847eee08bc7b53396a5430a3dc3fceb",
+    "SOURCE_VERIFICATION.json": "921b121000938118f1b058ffbdf5647d3bc16ddf9782ed46d0a05e4f701e10d1",
+    "quote_line_measurements.json": "7dbfd2b29cc7723e39e950f0a381332141f29e147870d6f3a0291ef68e1a9522",
+    "coin_measurements.json": "65bad5e122706f663bbd3c8b7a83fa29102b9d800d59bada32f0ebb3640389a7",
+    "ep0027/measurements.json": "ade5c31e6048a3b316268d1abe336cf41219bcda691967c8104c22b97587b1ba",
+    "quote_925_1060/measurements.json": "47df8c8d70287a1131cf9ad3d8ac6fb9161f27826dc8e956078ac8e0c301a95d",
+    "coin_notes_1115_1165/measurements.json": "355848aaef35eb060854a5c76d159641a43fba3d13eb0231fba19b7a034eba09",
+    "sub031/measurements.json": "1f70733476ff2019a040afbdaebfadb3f11f81b693d6a9bb328d1320017ae9e1",
+    "measure_quote.py": "9a8acd75344ca6333af0abfb4d2cbf54fc3c409a24e2969c5e0c0ec2ea12e267",
+    "measure_coin.py": "683cf00148618701d5c79d6a68cb3817b8f727ce6174f9543439ffd7f28441cc",
+    "G004_ACCEPTANCE_FROZEN.json": "25388de56dff62c570bb31030f61344c82dca24f7c660ba688cdd312065f70bc",
+    "TOKEN_VOUCHER_ACCEPTANCE_FROZEN.json": "8ba04ba20ab287d644105eead1dc34613bf089b19882792bc6be4e5859835622",
+    "G004_ORIGINAL_SPEC.json": "48ee8d8aad12c33e6cfd2010c71a4a82e43fbe197d6eb298cead407a51c401ae",
+    "TOKEN_VOUCHER_ORIGINAL_SPEC.json": "3972944a049561d022db329e7ac8452aab80c8e97b622ccae0a7a7fc5dc34768",
+    "render_g004.py": "84f37a4f60266759638e5c8a3742d934726b5c333c84a5bd0f45c1c9e28deaca",
+    "render_token.py": "fb18967b71eb1ce0fc63be0ba808b6cfa2aec7df1ff24da9394d72612f254b48",
+    "render_token_attempt02.py": "3142c246be1489e7e8e44d10b92e2c6209f4a513d85ea7df37e75e8e5a20a568",
+    "validate_g004.py": "2b4218f98c016df76613e1b0cae2d03507e33f7de2a63c1db089f8e5b14602a1",
+    "validate_token_attempt02.py": "10baf6d31a68de592491965b209c57e439b0a92a3e7240707c09b6c2c6e80826",
+    "G004_VALIDATION_attempt01.json": "02ddef25e3713eba81c346b106564904a4360ffc2026ef8795b9f8c1e259a56f",
+    "TOKEN_VALIDATION_attempt02.json": "bebb168146e8c8af6e2a73646b662ee8afd50d13f28d6723363798123261fade",
+    "TOKEN_VISUAL_DEFECT_attempt01.json": "593488aecb2aabbd0835c64f60ae1b78b938577327299e7ccfa6bf953828f134",
+    "TOKEN_VALIDATOR_DEFECT.json": "fe461fc59e06f5553668022c454636ea031d0e620662c954ffc9e5e384b41f64",
+    "TOKEN_VALIDATION_attempt01.json": "064caa1c7caab4a7a2fb72ef7958cb6ee09e887f0288480424226e1e0c325840",
+    "TOKEN_VALIDATION_attempt01_reconciled.json": "bebb168146e8c8af6e2a73646b662ee8afd50d13f28d6723363798123261fade",
+    "cold_start.py": "b7ddd74660919827b9f72abf79057bd85c6018372eeafed951bd7b10d4468598",
+    "COLD_START_EXECUTION.json": "4bb88c32309036c4471a5825b2bf845cad423a545cd602b854729a2abba410f7",
+    "cold_start_package/run.py": "e2168b7da7aeb86c5e96f51720c74fbdc6671341214815322c55a40c908b64e9",
+    "cold_start_package/read_audit.json": "9772b76cb9abc4c65e431ab3893c474d236e40a2a61ca01d563e9fd168e7557b",
+    "g004_attempt01/render_manifest.json": "4bab782b5bb905a134c025ead0d3607c484d575d57771090e38174da85eedc70",
+    "token_attempt02/render_manifest.json": "6eb94dc06ca31a7f95fd34bdf83d0f8950dc37a6eae18e4881715c60130653d5"
+  },
+  "baseline_v32_sha256": "d6215590ee1a5ebd1bb8ae7ca1006e04e793d2fd074433ada464f73fb48f474c",
+  "global_status": {
+    "whole_video_visual": "PARTIAL",
+    "whole_video_production_ready": false,
+    "whole_video_cold_start": "BLOCKED_BY_REMAINING_REQUIREMENTS",
+    "actual_listening_seconds": 0,
+    "ASR_undetermined": 21,
+    "ASR_potential_flags": 7,
+    "AV": "BLOCKED",
+    "CT_SCAN_COMPLETE": false,
+    "strict_candidate_count_only_for_reviewed_v34": 594
+  },
+  "write_boundary": "Only new QA_batch1_production.json written. No other source/media/evidence/repository files or prior reports changed; no renderer/encoder output generated, locks/Git/publication actions or new agents.",
+  "terminal": true
+}

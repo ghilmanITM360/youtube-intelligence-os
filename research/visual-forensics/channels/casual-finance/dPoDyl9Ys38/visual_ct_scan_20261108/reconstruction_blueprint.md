@@ -1,0 +1,450 @@
+# Reconstruction blueprint - original asset system derived from dPoDyl9Ys38
+New ORIGINAL assets and motion only. No source screenshot, footage, logo or character drawing is copied; third-party items (`IMG_*`, `ICON_*`) are replaced with licensed or self-made equivalents and your own data. Timings at 24 fps, 1920x1080.
+
+## Modules (original rebuild; derived from measured patterns)
+1. **Cast and prop kit**: a generic stick man, a cap figure, a coin character with legs and a cane, a top-hat figure, a hoodie figure, ponytail figure and props (chalkboard, treasure chest, gold bars, bills, block tower, turtle, truck, machine). Redraw all as new original assets; do not trace the source.
+2. **Hard-cut scene chain**: 193 hard cuts, median shot 2.8 s (0.67-12.7 s); 160 cuts land on I-frames and 33 do not, so author cuts as true edits and let the encoder place keyframes.
+3. **One-frame pop-in vocabulary**: text lines, bubbles, X marks, arrows, coins and logos appear in a single frame with no easing; 359 of 410 episodes are one frame.
+4. **Chalkboard argument frame**: pointer-stick figure beside a green board whose text is swapped in place for each step of the argument.
+5. **Comment-card runs**: dark cards added one per 15-20 frames with short handwritten reply captions.
+6. **Recap replay**: reuse earlier scene sets as a late recap instead of building new ones.
+7. **Locked-off camera**: no push-ins; put motion in redraws and diagram build-ups (cycle diagram, block tower, rug lift).
+8. **Third-party insert slot**: charts, articles, screenshots, photographs, memes, clip and logos are replaced with licensed or self-made equivalents; never copy the source items.
+9. **Annotation marks**: red X marks, arrows and circles, yellow highlight bars as the accent system.
+10. **End card**: white card with Subscribe for more, channel name, YouTube mark and crossed-out social icons held 5 s.
+11. **Codec note**: 24 fps constant frame rate, 232 I-frames about every 2.6 s on average.
+
+
+## Editor timeline (frames)
+- S001 f0-f6 (7 fr): START - Stick figure standing on white canvas
+- S002 f7-f18 (12 fr): POSE - Arm micro-move
+- S003 f19-f37 (19 fr): CUT - Close-up of figure, arms raised
+- S004 f38-f48 (11 fr): POP_IN - Ethereum and Bitcoin coins appear
+- S005 f49-f89 (41 fr): POP_IN - Red prohibition ring over Ethereum
+- S006 f90-f108 (19 fr): CUT - Small figure standing alone
+- S007 f109-f132 (24 fr): POSE - Face and arm micro-move
+- S008 f133-f141 (9 fr): POP_IN - YouTube channel card appears
+- S009 f142-f150 (9 fr): POP_IN - Video thumbnail: Trojan horse
+- S010 f151-f156 (6 fr): POSE - Thumbnail title micro-change
+- S011 f157-f192 (36 fr): POP_IN - Yellow highlight on 7 months ago
+- S012 f193-f218 (26 fr): CUT - MicroStrategy logo card
+- S013 f219-f253 (35 fr): POP_IN - Glasses stick figure appears
+- S014 f254-f297 (44 fr): POP_IN - Dollar bills stack up
+- S015 f298-f322 (25 fr): POP_IN - Bitcoin coin appears
+- S016 f323-f335 (13 fr): CUT - Hair-figure standing alone
+- S017 f336-f358 (23 fr): POSE - Arm micro-move
+- S018 f359-f387 (29 fr): CUT - Photo of a seated man
+- S019 f388-f408 (21 fr): POP_IN - MicroStrategy logo beside photo
+- S020 f409-f412 (4 fr): CUT - Small MicroStrategy logo only
+- S021 f413-f444 (32 fr): POP_IN - Red zigzag line drawn
+- S022 f445-f453 (9 fr): POP_IN - Red arrow appears
+- S023 f454-f464 (11 fr): POP_IN - Two dollar bills appear
+- S024 f465-f484 (20 fr): POP_IN - Dynamite bundle with 00:30 timer
+- S025 f485-f508 (24 fr): CUT - Hair-figure standing alone
+- S026 f509-f525 (17 fr): POSE - Arm micro-move
+- S027 f526-f535 (10 fr): CUT - Bitcoin coin alone at upper left
+- S028 f536-f553 (18 fr): POP_IN - Green dollar sign beside coin
+- S029 f554-f580 (27 fr): POP_IN - Green arrow drawn upward
+- S030 f581-f598 (18 fr): CUT - YouTube comment card 1
+- S031 f599-f615 (17 fr): POP_IN - YouTube comment card 2
+- S032 f616-f626 (11 fr): POP_IN - YouTube comment card 3
+- S033 f627-f647 (21 fr): POP_IN - YouTube comment card 4
+- S034 f648-f691 (44 fr): CUT - Hair-figure standing alone
+- S035 f692-f721 (30 fr): POSE - Skeptical pose change
+- S036 f722-f758 (37 fr): POP_IN - Photo of seated man appears
+- S037 f759-f782 (24 fr): CUT - Trojan horse thumbnail alone
+- S038 f783-f809 (27 fr): POP_IN - Stink lines, fly and green spots on thumbnail
+- S039 f810-f838 (29 fr): CUT - Figure with closed-eye smile
+- S040 f839-f866 (28 fr): CUT - Figure holding gold trophy
+- S041 f867-f888 (22 fr): CUT - Small figure standing alone
+- S042 f889-f917 (29 fr): POP_IN - Trojan horse thumbnail appears
+- S043 f918-f944 (27 fr): CUT - Text card: Meanwhile at MicroStrategy...
+- S044 f945-f994 (50 fr): POP_IN+ANIM - Burning office clip appears
+- S045 f995-f1002 (8 fr): CUT - Stock price chart
+- S046 f1003-f1021 (19 fr): POP_IN - Thumbnail with down arrow over price chart
+- S047 f1022-f1057 (36 fr): POP_IN - Large red diagonal arrow over chart
+- S048 f1058-f1065 (8 fr): CUT - Figure standing, arm out
+- S049 f1066-f1135 (70 fr): POP_IN - Two video thumbnails appear
+- S050 f1136-f1179 (44 fr): POSE - Arm micro-move
+- S051 f1180-f1246 (67 fr): CUT+ZOOM_OUT - Earth globe fills frame
+- S052 f1247-f1287 (41 fr): CUT - Meme: What people think crypto is like
+- S053 f1288-f1335 (48 fr): POP_IN - Meme: What crypto is actually like
+- S054 f1336-f1356 (21 fr): CUT - Figure with sweat drop
+- S055 f1357-f1369 (13 fr): CUT - YouTube comment card 1
+- S056 f1370-f1385 (16 fr): POP_IN - YouTube comment card 2
+- S057 f1386-f1398 (13 fr): POP_IN - YouTube comment card 3
+- S058 f1399-f1409 (11 fr): POP_IN - YouTube comment card 4
+- S059 f1410-f1440 (31 fr): POP_IN - Editor's note overlay
+- S060 f1441-f1470 (30 fr): CUT - Figure and SCAM video thumbnail
+- S061 f1471-f1486 (16 fr): POSE - Arm micro-move
+- S062 f1487-f1505 (19 fr): CUT - Price chart fills frame
+- S063 f1506-f1535 (30 fr): POP_IN - Thumbnail with down arrow over chart
+- S064 f1536-f1594 (59 fr): POP_IN - Large red diagonal arrow over chart
+- S065 f1595-f1620 (26 fr): CUT - Bitcoin, Ethereum and Dogecoin coins
+- S066 f1621-f1631 (11 fr): POP_IN - Equals sign appears
+- S067 f1632-f1660 (29 fr): POP_IN - Panik meme with -30%
+- S068 f1661-f1688 (28 fr): CUT - Figure standing, hands on hips
+- S069 f1689-f1728 (40 fr): POSE - Face change to open smile
+- S070 f1729-f1740 (12 fr): CUT - Figure runs at red finish ribbon
+- S071 f1741-f1763 (23 fr): POSE - Ribbon breaks as figure crosses
+- S072 f1764-f1783 (20 fr): CUT - YouTube comment card 1
+- S073 f1784-f1798 (15 fr): POP_IN - YouTube comment card 2
+- S074 f1799-f1810 (12 fr): POP_IN - YouTube comment card 3
+- S075 f1811-f1830 (20 fr): POP_IN - Handwritten reply: grounded
+- S076 f1831-f1875 (45 fr): CUT - Figure holding pointer stick
+- S077 f1876-f1909 (34 fr): POP_IN - Two video thumbnails appear
+- S078 f1910-f1957 (48 fr): POSE - Pointer move
+- S079 f1958-f1971 (14 fr): CUT - Figure in blue cap, arms crossed
+- S080 f1972-f2010 (39 fr): POP_IN - Speech bubble: Trust me, bro!
+- S081 f2011-f2047 (37 fr): CUT - Bitcoin character with cane
+- S082 f2048-f2110 (63 fr): POP_IN - Speech bubble: Ouch! My stocks!
+- S083 f2111-f2162 (52 fr): CUT - Rug being lifted
+- S084 f2163-f2215 (53 fr): POP_IN - Caption: a bunch of problems!
+- S085 f2216-f2275 (60 fr): CUT - Chalkboard: So...
+- S086 f2276-f2307 (32 fr): TEXT_SWAP - Chalkboard: What about Bitcoin?
+- S087 f2308-f2339 (32 fr): CUT - Bitcoin coin character standing
+- S088 f2340-f2358 (19 fr): CUT - Bitcoin character close-up
+- S089 f2359-f2380 (22 fr): POP_IN - Photo of assorted crypto coins
+- S090 f2381-f2448 (68 fr): CUT - Block chain network on a bar
+- S091 f2449-f2477 (29 fr): CUT - Tower of wooden blocks with Bitcoin block
+- S092 f2478-f2530 (53 fr): POSE+ANIM - Tower wobbles
+- S093 f2531-f2558 (28 fr): POSE+ZOOM_OUT - Tower leans further
+- S094 f2559-f2574 (16 fr): CUT - Figure standing, arm out
+- S095 f2575-f2611 (37 fr): POSE - Face micro-change
+- S096 f2612-f2651 (40 fr): CUT - Dollar sign and Bitcoin coin
+- S097 f2652-f2684 (33 fr): POP_IN - Blue-cap figure appears
+- S098 f2685-f2701 (17 fr): CUT - Bitcoin character alone
+- S099 f2702-f2714 (13 fr): POP_IN - Equals sign appears
+- S100 f2715-f2721 (7 fr): POP_IN - Gold bar appears
+- S101 f2722-f2728 (7 fr): POP_IN - Second gold bar appears
+- S102 f2729-f2744 (16 fr): POP_IN - Third gold bar stacked
+- S103 f2745-f2756 (12 fr): CUT - Person lying with phone and dollar bill
+- S104 f2757-f2777 (21 fr): POP_IN - Speech bubble: Dollar is out, Bitcoin is in!
+- S105 f2778-f2802 (25 fr): CUT - Large Bitcoin coin
+- S106 f2803-f2821 (19 fr): CUT - Rising red arrows and cartoon dollar bill
+- S107 f2822-f2837 (16 fr): POP_IN - Close-up of man in green tie
+- S108 f2838-f2896 (59 fr): CUT - Figure standing, smiling
+- S109 f2897-f2959 (63 fr): POP_IN - Second figure with speech bubble
+- S110 f2960-f2985 (26 fr): CUT - Text card: But here's the problem
+- S111 f2986-f3005 (20 fr): TEXT_SWAP - Caption cleared, Bitcoin coin remains
+- S112 f3006-f3041 (36 fr): CUT - Girl with magnifying glass and Bitcoin coin
+- S113 f3042-f3059 (18 fr): CUT - Headband figure and small Bitcoin character
+- S114 f3060-f3084 (25 fr): POP_IN - Speech bubble: I'm the best thing ever!
+- S115 f3085-f3090 (6 fr): POSE - Headband figure pose change
+- S116 f3091-f3123 (33 fr): POSE - Bitcoin character and bubble shift
+- S117 f3124-f3159 (36 fr): CUT - Research items around Bitcoin coin
+- S118 f3160-f3189 (30 fr): POSE - Magnifying glass sweeps over bills
+- S119 f3190-f3364 (175 fr): CUT - Red circular arrows
+- S120 f3365-f3413 (49 fr): CUT - Chalkboard: Bitcoin's value
+- S121 f3414-f3465 (52 fr): POSE - Pointer move at chalkboard
+- S122 f3466-f3525 (60 fr): TEXT_SWAP - Chalkboard: What's the purpose?
+- S123 f3526-f3557 (32 fr): CUT - Photo of an older man in glasses
+- S124 f3558-f3582 (25 fr): POP_IN - Bitcoin coin under photo
+- S125 f3583-f3636 (54 fr): POP_IN - Paper page appears
+- S126 f3637-f3683 (47 fr): CUT - Chalkboard: The idea?
+- S127 f3684-f3720 (37 fr): POSE - Pointer move
+- S128 f3721-f3780 (60 fr): TEXT_SWAP - Chalkboard: Peer-to-peer electronic cash system
+- S129 f3781-f3797 (17 fr): CUT - Large Bitcoin coin
+- S130 f3798-f3817 (20 fr): CUT - Small Bitcoin coin and dollar bill
+- S131 f3818-f3841 (24 fr): POP_IN - Equals sign appears
+- S132 f3842-f3865 (24 fr): POSE - Dollar bill turns glowing cyan
+- S133 f3866-f3903 (38 fr): CUT - Large glowing cyan bill
+- S134 f3904-f3915 (12 fr): CUT - Bank building and cyan bill
+- S135 f3916-f3937 (22 fr): POP_IN - Grey-haired figure in purple tie
+- S136 f3938-f3950 (13 fr): CUT - Two figures, one holding cyan bill
+- S137 f3951-f3997 (47 fr): POSE - Cyan bill passes to the left figure
+- S138 f3998-f4004 (7 fr): POP_IN - Bank of Japan building appears
+- S139 f4005-f4029 (25 fr): POP_IN - Red X over the building
+- S140 f4030-f4055 (26 fr): CUT - Chalkboard: If Bitcoin succeeded...
+- S141 f4056-f4082 (27 fr): POSE - Pointer move
+- S142 f4083-f4118 (36 fr): TEXT_SWAP - Chalkboard: THE FUTURE!!!
+- S143 f4119-f4141 (23 fr): CUT - Figure with flat mouth
+- S144 f4142-f4162 (21 fr): POSE - Frown
+- S145 f4163-f4178 (16 fr): CUT - Bitcoin coin character
+- S146 f4179-f4200 (22 fr): CUT - Small sad Bitcoin character
+- S147 f4201-f4235 (35 fr): CUT - Thinking figure with orange tie
+- S148 f4236-f4258 (23 fr): POP_IN - Dollar bill appears
+- S149 f4259-f4303 (45 fr): POP_IN - Numbered list 1 to 3 with icons
+- S150 f4304-f4346 (43 fr): CUT - List label 1 only
+- S151 f4347-f4382 (36 fr): POP_IN - Hoodie figure and ponytail figure with exchange arrows
+- S152 f4383-f4421 (39 fr): CUT - Hoodie figure, cash stack, car and ponytail figure
+- S153 f4422-f4468 (47 fr): POSE - Car and cash stack shift
+- S154 f4469-f4511 (43 fr): CUT - List label 2 only
+- S155 f4512-f4519 (8 fr): POP_IN - Treasure chest appears
+- S156 f4520-f4535 (16 fr): FADE_IN - Faint dollar bill over chest
+- S157 f4536-f4570 (35 fr): CUT - Figure in green tie with bill and money bag
+- S158 f4571-f4592 (22 fr): CUT - Small figure and today equation
+- S159 f4593-f4641 (49 fr): POP_IN - Line: in a month
+- S160 f4642-f4684 (43 fr): CUT - List label 3 only
+- S161 f4685-f4708 (24 fr): POP_IN - Red-haired figure and equation card
+- S162 f4709-f4735 (27 fr): CUT - Equation: 10 bills = teddy bear
+- S163 f4736-f4771 (36 fr): POP_IN - Equation: 15,000 bills = car
+- S164 f4772-f4807 (36 fr): POP_IN - Equation: 100,000 bills = house
+- S165 f4808-f4852 (45 fr): POP_IN - Thinking figure appears
+- S166 f4853-f4886 (34 fr): CUT - Large Bitcoin coin
+- S167 f4887-f4949 (63 fr): POP_IN - Numbered list 1 to 3 appears
+- S168 f4950-f4965 (16 fr): CUT - Bitcoin coin character
+- S169 f4966-f4983 (18 fr): POSE - Hands on hips
+- S170 f4984-f4992 (9 fr): CUT - Figure standing, smiling
+- S171 f4993-f5015 (23 fr): POSE - Arm micro-move
+- S172 f5016-f5057 (42 fr): CUT - List label 1 only
+- S173 f5058-f5081 (24 fr): POP_IN - Turtle carrying Bitcoin coin
+- S174 f5082-f5104 (23 fr): POP_IN - Dollar bills appear around turtle
+- S175 f5105-f5131 (27 fr): POSE - Dollar bills drift around turtle
+- S176 f5132-f5226 (95 fr): CUT - Chart: Bitcoin Transactions Per Day
+- S177 f5227-f5272 (46 fr): CUT - Figure standing
+- S178 f5273-f5293 (21 fr): POSE - Arm micro-move
+- S179 f5294-f5332 (39 fr): CUT - Large Bitcoin coin at left
+- S180 f5333-f5352 (20 fr): POP_IN - VISA logo appears
+- S181 f5353-f5388 (36 fr): CUT - VISA logo at upper left
+- S182 f5389-f5394 (6 fr): POP_IN - Caption: 65,000 transactions
+- S183 f5395-f5445 (51 fr): POSE - Caption micro-change
+- S184 f5446-f5508 (63 fr): POP_IN - Clock and caption A SECOND
+- S185 f5509-f5572 (64 fr): POP_IN - Caption: (humble 500,000)
+- S186 f5573-f5657 (85 fr): POP_IN - Clock and VISA return over the Bitcoin caption
+- S187 f5658-f5750 (93 fr): CUT - Chart: Bitcoin Energy Consumption
+- S188 f5751-f5812 (62 fr): CUT - Caption: 1.5 MILLION transactions VISA
+- S189 f5813-f5889 (77 fr): CUT - Card: Single Bitcoin Transaction Footprints
+- S190 f5890-f6032 (143 fr): POP_IN - Red circle around Electrical Energy
+- S191 f6033-f6049 (17 fr): CUT - Earth globe
+- S192 f6050-f6053 (4 fr): POP_IN - Bitcoin icons on globe
+- S193 f6054-f6060 (7 fr): POP_IN - More Bitcoin icons on globe
+- S194 f6061-f6066 (6 fr): POP_IN - Bitcoin icon at globe's upper right
+- S195 f6067-f6088 (22 fr): POP_IN - Bitcoin icon at globe's left edge
+- S196 f6089-f6136 (48 fr): POP_IN - Red X over globe
+- S197 f6137-f6170 (34 fr): CUT - Running Bitcoin coin character
+- S198 f6171-f6186 (16 fr): CUT - Stern figure standing
+- S199 f6187-f6206 (20 fr): CUT - Bitcoin coin at left
+- S200 f6207-f6237 (31 fr): POP_IN - Treasure chest appears
+- S201 f6238-f6279 (42 fr): CUT - Headband figure and Bitcoin coin
+- S202 f6280-f6296 (17 fr): POSE - Thumbs-up
+- S203 f6297-f6331 (35 fr): CUT - Tiny Bitcoin coin at upper left
+- S204 f6332-f6386 (55 fr): POP_IN - Top-hat monocle figure appears
+- S205 f6387-f6405 (19 fr): POP_IN - Gold bars appear
+- S206 f6406-f6458 (53 fr): CUT - Treasure chest alone
+- S207 f6459-f6485 (27 fr): CUT - Figure with closed-eye smile
+- S208 f6486-f6505 (20 fr): CUT - Flat-mouth close-up
+- S209 f6506-f6513 (8 fr): CUT - Blank chalkboard with figure
+- S210 f6514-f6541 (28 fr): POP_IN - Chalkboard text: Two reasons
+- S211 f6542-f6557 (16 fr): CUT - List label 1 only
+- S212 f6558-f6583 (26 fr): POP_IN - Green zigzag line
+- S213 f6584-f6638 (55 fr): POP_IN - Treasure chest appears
+- S214 f6639-f6642 (4 fr): POP_IN - Blue car appears
+- S215 f6643-f6646 (4 fr): POP_IN - House appears
+- S216 f6647-f6663 (17 fr): POP_IN - Teddy bear appears
+- S217 f6664-f6757 (94 fr): CUT - Price chart: 70,304.86 US$
+- S218 f6758-f6783 (26 fr): CUT - Hoodie figure with sunglasses
+- S219 f6784-f6810 (27 fr): POP_IN - Dollar bills in hand
+- S220 f6811-f6864 (54 fr): POP_IN - Speech bubble: oh yeah I'll spend it all on Bitcoin!
+- S221 f6865-f6895 (31 fr): CUT - Dancing Bitcoin character
+- S222 f6896-f6974 (79 fr): CUT - Text card: 20% in ONE month!
+- S223 f6975-f6981 (7 fr): CUT - Cleared to white
+- S224 f6982-f7016 (35 fr): POP_IN - Orange chart line drawn
+- S225 f7017-f7034 (18 fr): POP_IN - Building labelled BUSINESS
+- S226 f7035-f7054 (20 fr): POP_IN - House and apartment block
+- S227 f7055-f7105 (51 fr): POP_IN - Three people with clipboards
+- S228 f7106-f7153 (48 fr): CUT - Text card: SPECULATIVE investment
+- S229 f7154-f7163 (10 fr): CUT - Treasure chest
+- S230 f7164-f7189 (26 fr): POP_IN - Red X over chest
+- S231 f7190-f7273 (84 fr): CUT - List label 2 only
+- S232 f7274-f7296 (23 fr): POP_IN - Sign: PROPERTY OF
+- S233 f7297-f7350 (54 fr): CUT - Office worker at computer
+- S234 f7351-f7394 (44 fr): POP_IN - Speech bubble: Everyone can have it!
+- S235 f7395-f7399 (5 fr): CUT - Single Bitcoin coin on white
+- S236 f7400-f7407 (8 fr): POP_IN - Second Bitcoin coin
+- S237 f7408-f7414 (7 fr): POP_IN - Third Bitcoin coin
+- S238 f7415-f7419 (5 fr): POP_IN - Fourth Bitcoin coin
+- S239 f7420-f7426 (7 fr): POP_IN - Fifth Bitcoin coin
+- S240 f7427-f7443 (17 fr): POP_IN - Sixth Bitcoin coin
+- S241 f7444-f7480 (37 fr): CUT - Figure on coin pile and ponytail figure
+- S242 f7481-f7579 (99 fr): CUT - Article: Bitcoin Ownership in 2025
+- S243 f7580-f7583 (4 fr): POP_IN - Yellow highlight in article text
+- S244 f7584-f7632 (49 fr): CUT - Coin pile scene returns
+- S245 f7633-f7652 (20 fr): CUT - Dollar sign and Bitcoin coin
+- S246 f7653-f7680 (28 fr): POP_IN - Orange chart line
+- S247 f7681-f7690 (10 fr): POP_IN - Smirking figure in green tie, first
+- S248 f7691-f7697 (7 fr): POP_IN - Smirking figure, second
+- S249 f7698-f7749 (52 fr): POP_IN - Smirking figure, third
+- S250 f7750-f7813 (64 fr): CUT - News article: Jane Street accused of insider trading
+- S251 f7814-f7929 (116 fr): CUT - News article text: Terraform collapse
+- S252 f7930-f7950 (21 fr): CUT - Wallpaper of dollar bills
+- S253 f7951-f7986 (36 fr): POSE - Wallpaper edge shifts
+- S254 f7987-f8041 (55 fr): CUT - Bitcoin coin and chest
+- S255 f8042-f8069 (28 fr): CUT - Block chain network on a bar
+- S256 f8070-f8131 (62 fr): POP_IN - Red X over block chain network
+- S257 f8132-f8160 (29 fr): CUT - Figure with flat mouth standing
+- S258 f8161-f8195 (35 fr): CUT - List label 3 only
+- S259 f8196-f8242 (47 fr): POP_IN - Equation card appears
+- S260 f8243-f8273 (31 fr): CUT - Figure smiling, standing
+- S261 f8274-f8292 (19 fr): POSE - Mouth and arm micro-change
+- S262 f8293-f8329 (37 fr): POP_IN - Small running coin: I can't do anything right
+- S263 f8330-f8363 (34 fr): CUT - BUSINESS tower with 3. label
+- S264 f8364-f8374 (11 fr): POP_IN - Speech bubble: Oh yeah! We accept Bitcoin
+- S265 f8375-f8409 (35 fr): POSE - Bubble micro-change
+- S266 f8410-f8459 (50 fr): TEXT_SWAP - Speech bubble: So that'll be uh...
+- S267 f8460-f8495 (36 fr): CUT - 15,000 bills and blue car
+- S268 f8496-f8532 (37 fr): POP_IN - Line: 0,000014 BTC
+- S269 f8533-f8542 (10 fr): POP_IN - Caption: at the time of transaction
+- S270 f8543-f8572 (30 fr): POSE - Caption micro-change
+- S271 f8573-f8611 (39 fr): CUT - Text: How many BTC for a car?
+- S272 f8612-f8652 (41 fr): POP_IN - Red X over the question
+- S273 f8653-f8722 (70 fr): CUT - Bitcoin character passing through
+- S274 f8723-f8777 (55 fr): CUT - List 1 to 3
+- S275 f8778-f8806 (29 fr): POP_IN - Running Bitcoin coin appears beside list
+- S276 f8807-f8853 (47 fr): POP_IN - Caption: waaaaaaaa
+- S277 f8854-f8933 (80 fr): CUT - Flat-mouth close-up
+- S278 f8934-f9005 (72 fr): CUT - Figure in orange cap, pointing up
+- S279 f9006-f9034 (29 fr): CUT - Figure smiling, standing
+- S280 f9035-f9063 (29 fr): POSE - Face micro-change
+- S281 f9064-f9120 (57 fr): CUT - Large Bitcoin coin
+- S282 f9121-f9148 (28 fr): CUT - Figure holding a dollar bill
+- S283 f9149-f9175 (27 fr): POSE - Bill in hand becomes a Bitcoin coin
+- S284 f9176-f9214 (39 fr): CUT - Red-haired figure reading paper
+- S285 f9215-f9248 (34 fr): POSE - Paper micro-change
+- S286 f9249-f9264 (16 fr): POSE - Mouth opens, hands to chin
+- S287 f9265-f9307 (43 fr): CUT - Text card: In 2021
+- S288 f9308-f9360 (53 fr): CUT - El Salvador and country map
+- S289 f9361-f9374 (14 fr): POSE - Country map becomes a character: we like u
+- S290 f9375-f9387 (13 fr): POP_IN - Small Bitcoin character
+- S291 f9388-f9412 (25 fr): POP_IN - Caption: LET'S GOOOO!
+- S292 f9413-f9458 (46 fr): CUT - Country outline alone
+- S293 f9459-f9481 (23 fr): POP_IN - Chivo logo
+- S294 f9482-f9509 (28 fr): CUT - Restaurant building
+- S295 f9510-f9536 (27 fr): POP_IN - Speech bubble: Uh yeah... You can pay here with it
+- S296 f9537-f9557 (21 fr): CUT - Figure looking at a phone
+- S297 f9558-f9610 (53 fr): POP_IN - Caption: $30 in Bitcoin
+- S298 f9611-f9660 (50 fr): POP_IN - Speech bubble: Free? I could try it then...
+- S299 f9661-f9670 (10 fr): CUT - Bitcoin character with arms up
+- S300 f9671-f9695 (25 fr): POP_IN - Caption: my time to SHINE
+- S301 f9696-f9707 (12 fr): CUT - Small Bitcoin character
+- S302 f9708-f9739 (32 fr): POP_IN - Caption: I'm nervous
+- S303 f9740-f9759 (20 fr): TEXT_SWAP - Caption: oh lord oh lord oh lord
+- S304 f9760-f9812 (53 fr): CUT - Block chain network on a bar
+- S305 f9813-f9841 (29 fr): CUT - Bitcoin character and cartoon bill: forget the dollar!
+- S306 f9842-f9868 (27 fr): TEXT_SWAP - Caption: I'M BETTER!
+- S307 f9869-f9898 (30 fr): CUT - Chalkboard: Results?
+- S308 f9899-f9931 (33 fr): POSE - Pointer move
+- S309 f9932-f9950 (19 fr): TEXT_SWAP - Chalkboard: Not good
+- S310 f9951-f9990 (40 fr): CUT - IMF page: El Salvador Selected Issues
+- S311 f9991-f10082 (92 fr): CUT - Country outline and report excerpt
+- S312 f10083-f10133 (51 fr): CUT - Country character with eyes
+- S313 f10134-f10167 (34 fr): CUT - Bitcoin character with blue ribbon
+- S314 f10168-f10192 (25 fr): CUT - Figure looking at a phone
+- S315 f10193-f10206 (14 fr): POP_IN - FREE! Bitcoin coin
+- S316 f10207-f10211 (5 fr): CUT - Text: 98% chose traditional, small figure
+- S317 f10212-f10217 (6 fr): POP_IN - Glasses figure appears
+- S318 f10218-f10219 (2 fr): POP_IN - Smiling figure with briefcase of cash
+- S319 f10220-f10223 (4 fr): POP_IN - Another figure joins the row
+- S320 f10224-f10296 (73 fr): POP_IN - Another figure joins the row
+- S321 f10297-f10329 (33 fr): POP_IN - Baby with pacifier and phone
+- S322 f10330-f10361 (32 fr): CUT - Figure with raised arms, smiling
+- S323 f10362-f10405 (44 fr): CUT - Bitcoin character with arms up
+- S324 f10406-f10463 (58 fr): POP_IN - Caption: oh yes! My specialty!
+- S325 f10464-f10598 (135 fr): CUT - Earth globe with Bitcoin icons
+- S326 f10599-f10617 (19 fr): CUT - Figure looking at a phone
+- S327 f10618-f10676 (59 fr): POP_IN - Speech bubble: Pay using Bitcoin?
+- S328 f10677-f10707 (31 fr): TEXT_SWAP - Speech bubble: Nah...
+- S329 f10708-f10734 (27 fr): CUT - Figure with flat mouth
+- S330 f10735-f10780 (46 fr): CUT - Chivo logo
+- S331 f10781-f10831 (51 fr): CUT - Crowd of small figures
+- S332 f10832-f10967 (136 fr): CUT - Report page with Active accounts chart
+- S333 f10968-f11062 (95 fr): CUT - Curly-haired figure with phone and bill, running coin
+- S334 f11063-f11098 (36 fr): POSE - Expression change to surprise
+- S335 f11099-f11111 (13 fr): CUT - Coin with caption: don't leave me :(
+- S336 f11112-f11124 (13 fr): POP_IN - Editor's note: This is HILARIOUS
+- S337 f11125-f11161 (37 fr): CUT - Figure standing, smiling
+- S338 f11162-f11269 (108 fr): CUT - Survey excerpt: failed project
+- S339 f11270-f11303 (34 fr): CUT - Running coin: waaaaaaaa
+- S340 f11304-f11436 (133 fr): CUT - Survey excerpt returns
+- S341 f11437-f11499 (63 fr): CUT - Small Bitcoin character
+- S342 f11500-f11524 (25 fr): CUT - Hoodie figure, cash, car and ponytail figure
+- S343 f11525-f11571 (47 fr): POSE - Car and cash stack shift
+- S344 f11572-f11572 (1 fr): CUT - List label 2 only
+- S345 f11573-f11579 (7 fr): POP_IN - Figure with bill and today equation appear
+- S346 f11580-f11594 (15 fr): POSE - Scene micro-change
+- S347 f11595-f11621 (27 fr): POP_IN - Line: in a month
+- S348 f11622-f11638 (17 fr): CUT - Equation: 10 bills = teddy bear with 3. label
+- S349 f11639-f11673 (35 fr): POP_IN - Equation: 15,000 bills = car
+- S350 f11674-f11674 (1 fr): POP_IN - Thinking figure appears
+- S351 f11675-f11687 (13 fr): POP_IN - Equation: 100,000 bills = house
+- S352 f11688-f11744 (57 fr): CUT - Chalkboard: To be or not to be
+- S353 f11745-f11810 (66 fr): TEXT_SWAP - Chalkboard: Where does the VALUE come from?
+- S354 f11811-f11853 (43 fr): CUT+ZOOM_OUT - Large block chain network
+- S355 f11854-f11892 (39 fr): POSE+ZOOM_IN - Block chain network zooms out
+- S356 f11893-f11923 (31 fr): CUT - Blue-cap figure: It works bro!
+- S357 f11924-f11944 (21 fr): POP_IN - Red X over the figure
+- S358 f11945-f11953 (9 fr): CUT - Bitcoin character: become a MILLIONAIRE!
+- S359 f11954-f11972 (19 fr): POP_IN - Red X over the character
+- S360 f11973-f12003 (31 fr): CUT+ZOOM_IN - Film still of a man in a tuxedo
+- S361 f12004-f12090 (87 fr): CUT - Walking Bitcoin character with cane
+- S362 f12091-f12124 (34 fr): CUT - Figure standing, smiling
+- S363 f12125-f12170 (46 fr): CUT - Article: Fool Theory in Investing
+- S364 f12171-f12194 (24 fr): CUT - Chalkboard: The Greater Fool Theory
+- S365 f12195-f12215 (21 fr): CUT - Green dollar sign alone
+- S366 f12216-f12275 (60 fr): POP_IN - Bitcoin coin appears
+- S367 f12276-f12279 (4 fr): POP_IN - Dollar bill appears
+- S368 f12280-f12287 (8 fr): POP_IN - Second dollar bill
+- S369 f12288-f12319 (32 fr): POP_IN - Third dollar bill
+- S370 f12320-f12358 (39 fr): POP_IN - Orange-cap figure slides in from the left
+- S371 f12359-f12436 (78 fr): POP_IN - Caption: actually this is so worth it
+- S372 f12437-f12496 (60 fr): CUT - Bitcoin character standing
+- S373 f12497-f12555 (59 fr): POP_IN - Photo of assorted crypto coins
+- S374 f12556-f12607 (52 fr): CUT - Figure with magnifying glass
+- S375 f12608-f12644 (37 fr): CUT - Bitcoin coin at left
+- S376 f12645-f12662 (18 fr): POP_IN - Pile of dollar bills
+- S377 f12663-f12685 (23 fr): CUT - Stonks meme image
+- S378 f12686-f12701 (16 fr): CUT - Green truck
+- S379 f12702-f12736 (35 fr): POP_IN - Boxy machine with hose and cogs
+- S380 f12737-f12758 (22 fr): CUT - Large Bitcoin coin
+- S381 f12759-f12778 (20 fr): CUT - Small Bitcoin character
+- S382 f12779-f12811 (33 fr): POP_IN - Caption: uh... but I can dance?
+- S383 f12812-f12867 (56 fr): CUT - Price chart: 70,304.86 US$
+- S384 f12868-f12895 (28 fr): CUT - Orange-cap figure pointing up
+- S385 f12896-f12937 (42 fr): POP_IN - Speech bubble: You all just don't see my vision!
+- S386 f12938-f12957 (20 fr): CUT - Text: Buy because you could earn a lot!
+- S387 f12958-f12979 (22 fr): POP_IN - Bitcoin coin under the quote
+- S388 f12980-f12996 (17 fr): CUT - Dollar sign and Bitcoin coin
+- S389 f12997-f13025 (29 fr): POP_IN - Green rising arrow drawn
+- S390 f13026-f13057 (32 fr): CUT - Framed chart with green rising arrow
+- S391 f13058-f13088 (31 fr): POP_IN - Surprised ponytail figure
+- S392 f13089-f13137 (49 fr): CUT - Red circular arrows
+- S393 f13138-f13190 (53 fr): CUT - Red-haired figure reading paper
+- S394 f13191-f13240 (50 fr): POP_IN - Bitcoin coin appears beside figure
+- S395 f13241-f13256 (16 fr): CUT - Bitcoin coin alone at left
+- S396 f13257-f13262 (6 fr): POP_IN - Glowing cyan dollar bill
+- S397 f13263-f13284 (22 fr): POP_IN - Gold bar appears
+- S398 f13285-f13296 (12 fr): CUT - Smirking figure striding
+- S399 f13297-f13320 (24 fr): POP_IN - Speech bubble: Get with the times, old man!
+- S400 f13321-f13340 (20 fr): CUT - Bitcoin coin at left
+- S401 f13341-f13368 (28 fr): POP_IN - Rising red arrows and cartoon dollar bill
+- S402 f13369-f13404 (36 fr): CUT - Figure standing, smiling
+- S403 f13405-f13436 (32 fr): POSE - Arm micro-move
+- S404 f13437-f13498 (62 fr): CUT - Ponytail figure with framed chart
+- S405 f13499-f13578 (80 fr): CUT - Boxy machine with hose and cogs
+- S406 f13579-f13602 (24 fr): POSE - Arm micro-move
+- S407 f13603-f13632 (30 fr): CUT - Close-up of laughing-crying figure
+- S408 f13633-f13649 (17 fr): POP_IN - Thought bubble: figure holding cash
+- S409 f13650-f13692 (43 fr): CUT - Figure asking: Is this even worth it?
+- S410 f13693-f13758 (66 fr): TEXT_SWAP - Caption: Guess I can sell it to some dum dum later
+- S411 f13759-f13788 (30 fr): CUT - Chalkboard: Bitcoin good?
+- S412 f13789-f13851 (63 fr): POSE - Pointer move; text crossed out
+- S413 f13852-f13904 (53 fr): TEXT_SWAP - Chalkboard: It's just...
+- S414 f13905-f13934 (30 fr): TEXT_SWAP - Chalkboard: Are you the next greater fool?
+- S415 f13935-f13979 (45 fr): POSE - Mouth opens
+- S416 f13980-f14010 (31 fr): CUT - Figure standing, smiling
+- S417 f14011-f14052 (42 fr): POSE - Arm micro-move
+- S418 f14053-f14074 (22 fr): POSE - Leg micro-move
+- S419 f14075-f14097 (23 fr): CUT - Orange-cap figure: Actually...
+- S420 f14098-f14124 (27 fr): TEXT_SWAP - Bubble: Oops lost all my money
+- S421 f14125-f14149 (25 fr): TEXT_SWAP - Bubble: Well I won't be buying this again...
+- S422 f14150-f14260 (111 fr): CUT - End card: Subscribe for more Casual Finance
+
+## Per-state prompts
+All 422 image and animation prompts with static anchors and nearest-frame QA: `PER_STATE_RECONSTRUCTION_SPECIFICATIONS.json`.
+
+## Acceptance tests
+1. Cut frames equal the ledger exactly (19, 90, 193, 323, 359, 409, 485, 526, 581, 648, 759, 810, 839, 867, 918, 995, 1058, 1180, 1247, 1336, 1357, 1441, 1487, 1595, 1661, 1729, 1764, 1831, 1958, 2011, 2111, 2216, 2308, 2340, 2381, 2449, 2559, 2612, 2685, 2745, 2778, 2803, 2838, 2960, 3006, 3042, 3124, 3190, 3365, 3526, 3637, 3781, 3798, 3866, 3904, 3938, 4030, 4119, 4163, 4179, 4201, 4304, 4383, 4469, 4536, 4571, 4642, 4709, 4853, 4950, 4984, 5016, 5132, 5227, 5294, 5353, 5658, 5751, 5813, 6033, 6137, 6171, 6187, 6238, 6297, 6406, 6459, 6486, 6506, 6542, 6664, 6758, 6865, 6896, 6975, 7106, 7154, 7190, 7297, 7395, 7444, 7481, 7584, 7633, 7750, 7814, 7930, 7987, 8042, 8132, 8161, 8243, 8330, 8460, 8573, 8653, 8723, 8854, 8934, 9006, 9064, 9121, 9176, 9265, 9308, 9413, 9482, 9537, 9661, 9696, 9760, 9813, 9869, 9951, 9991, 10083, 10134, 10168, 10207, 10330, 10362, 10464, 10599, 10708, 10735, 10781, 10832, 10968, 11099, 11125, 11162, 11270, 11304, 11437, 11500, 11572, 11622, 11688, 11811, 11893, 11945, 11973, 12004, 12091, 12125, 12171, 12195, 12437, 12556, 12608, 12663, 12686, 12737, 12759, 12812, 12868, 12938, 12980, 13026, 13089, 13138, 13241, 13285, 13321, 13369, 13437, 13499, 13603, 13650, 13759, 13980, 14075, 14150).
+2. EXACT onsets match to the frame; BOUND onsets fall inside their window.
+3. Static anchors are pixel-still between events.
+4. Total length 14261 frames.
+5. Sound unspecified (nobody listened); ASR lines are timing reference only.

@@ -1,0 +1,49 @@
+## 2. Structure (MEASURED frames; interpretation labelled)
+| Part | Frames | Seconds | States | OBSERVED content |
+|---|---|---|---|---|
+| Cold open + setup | f0-f685 | 0-22.9 | S001-S013 | trading-floor illustration (S001, 38 fr), Wall Street building with pointing man and hooded figure (S002-S005), lab scientist and marker stick man (S006-S009), "-67%" confusion (S010), "And... Today..." (S011), grey pinwheel then a market/meme collage (S012-S013) |
+| 1. The Value Investor | f686-f2307 | 22.9-76.9 | S014-S042 | title card, meditating golden figure over seated crowd, older-man photo, file shelves, mug, night reading, party sketch, blue board (Moats / Intrinsic Value / Compound Growth), 2 AM desk, YTD dialogue, S&P 500 vs "The Value Investor" chart, bed-argument |
+| 2. The 'Wolf of Wall Street' Investor | f2308-f4058 | 76.9-135.3 | S043-S074 | sunglasses man, coin icons, forex book, officer, cold-plunge / headphones / meditation strip, thought-bubble photo, desk with feet up, Hustle Harder sign, bed with cans, cart dialogue, "3 Investments" board, cartoon lawn / rainbow / car crash |
+| 3. The Chart Whisperer | f4059-f5319 | 135.3-177.3 | S075-S094 | glasses man and chart board, monitor wall picture, shocked man with chart cup, indicator whisper, "Who cares", "Boomer", painter at easel, photo with red X and painter photo, "Your charts stink", quote card |
+| 4. The Crypto Bro | f5320-f7054 | 177.3-235.2 | S095-S124 | Bitcoin-forehead man with phone chart, Discord desk, "-67%", FartCoin, pixel-cat collage, van, tax / future bubbles, blue-shirt man, Web3 list |
+| 5. The Wall Street Bets 'Investor' | f7055-f8628 | 235.2-287.6 | S125-S155 | line-art pointing man with options graphic, video still, forum screenshot, energy cans and Hot Pockets, "-40%", Battle Scars, Roth IRA piggy, money book, All in / Weekly $SPY Calls, pattern grid, SEC panel, crystal ball |
+| 6. The Guy Who Watched 'The Big Short' | f8629-f10461 | 287.6-348.7 | S156-S192 | hooded figure at 2 AM desk, bedroom, thought collage, kneeling with film poster, red-chart desk, "One day..." bubbles, Dow screenshot, flag, burning globe, rubble, water jugs, papers |
+| Outro | f10462-f10996 | 348.7-366.6 | S193-S201 | "What have we learned today?", "Absolutely nothing..", smiling man and photo, desk trade, "One universal truth...", "Nobody knows what the h*ll is going on" |
+| End card | f10997-f11208 | 366.6-373.6 | S202-S203 | "Subscribe for more Casual Finance", YouTube logo with crossed-out social icons, SUBSCRIBE button, smiling stick man |
+
+Section lengths (s): cold open 22.9, ch1 54.1, ch2 58.4, ch3 42.0, ch4 57.8, ch5 52.5, ch6 61.1, outro 17.8, end card 7.1 (MEASURED from the frames above). Each of the six chapter title cards is exactly 121 frames (4.033 s): S014, S043+S044, S075, S095+S096, S125+S126, S156+S157 (MEASURED). INFERRED: the video is a six-chapter list with a fixed card template; the six archetypes (value investor, wolf, chart whisperer, crypto bro, WSB trader, Big Short fan) are each drawn as a different stick-figure variant (OBSERVED): plain, sunglasses, messy hair with round glasses, Bitcoin mark on forehead, unshaded line-art man, hooded cloaked figure. The line-art man (S003, f65) and hooded figure (S004, f90) are already shown in the first 4 s and in the collage S013, i.e. chapters 5 and 6 are visually foreshadowed in the cold open (OBSERVED; intent INFERRED).
+
+## 3. Shots and cut rhythm (MEASURED)
+- 83 shots, 82 hard cuts after the opening state. Shot length median 4.03 s, mean 4.50 s, min 0.77 s (SH062 f8165 "All in" text card, 23 fr), max 10.70 s (SH026 f3240 cart dialogue, 321 fr). 9 shots are under 2 s, 46 are over 4 s.
+- Cut entry change: every cut state has a measured entry change (changed fraction >= 0.01 or >= 2,000 full-res px) at its first frame, verified on adjacent decoded frames (validator).
+- 16 cuts land on a text-only card (chapter titles, "And... Today...", "Every morning...", "Battle Scars", "All in", "Weekly $SPY Calls", "Until that day comes...", "What have we learned today?", "Absolutely nothing..", "One universal truth...", "Nobody knows what the h*ll is going on"); two cuts land on a blank white frame (f2867, f6781) and one on a near-black frame (f7482).
+- 76 of the 82 cuts start exactly on an encoder I-frame (file has 152 I-frames). INFERRED: the encoder placed keyframes at scene changes, so this agrees with, but does not add evidence to, the cut positions.
+
+## 4. Motion and animation (MEASURED + OBSERVED)
+- Longest activity episode in the whole file is 4 frames (EP0159); 198 episodes in 11,209 frames, 185 of them a single frame. There is no continuous animation, no pan, no zoom, no tween: every change is a discrete step between two held composites (OBSERVED on adjacent frames in the change-crop sheets). The enlarged board at S070 (f3750) is a hard cut to a larger composition, not a measured zoom.
+- State classes: 82 CUT, 45 POP_IN (an element or set of elements appears in one frame, no ease), 11 POSE (a face or pose and its bubble swap in one frame), 64 MICRO, 1 START.
+- Bubbles: a bubble appears by a POP_IN (e.g. S028 f1670 "How are you doing YTD?") and its text is replaced by a single-frame swap (S176 f9728 "...the Fed will be exposed", S177 f9787 "...you'll all see").
+- MICRO changes (64 states, 2,653 frames): small local changes with median 1,512 changed full-res px (max 7,487, i.e. <= 0.8 % of the frame). 62 of 64 start exactly on an I-frame. INFERRED: these are codec keyframe refreshes of static content, not authored animation; they are ledgered because the measurement flags them, and a reconstruction must not copy them. Two do not sit on I-frames: f3165 (a white pouch appears on the nightstand, reclassified POP_IN, S062) and f9599 (27 px, near-invisible, S172).
+- Four multi-frame episodes hid a larger change at their last frame, found only by native consecutive-frame windows: f2522 (book appears, S048), f7406 (screenshot removed, belly rub and cans appear, S132), f8247 (hard cut from the "Weekly $SPY Calls" card to the manipulation scene, S149), f9088 (collapse bubble appears, S164). Their first frames are ledgered as separate MICRO states (S047, S131, S148, S163).
+
+## 5. Art direction and graphics
+- Canvas (MEASURED): k-means over 203 representative frames gives white (#FFFFFF) 81.4 % of sampled pixels, pale blue #C6E7F7 4.3 %, beige #D2C4B7 3.7 %, near-black #131314 3.3 %, greys 2.7 %, dark brown 2.6 % (`tables/palette.json`).
+- Characters (OBSERVED): round-head stick figures with thick black outlines and flat skin-tone fill; sunglasses, glasses, hood, cap and beret are the only accessories that change identity. 26 character ids are used (see `asset_ids`).
+- Mixed media (OBSERVED): flat stick-figure scenes are interleaved with colour cartoon scenes (lawn S072, rainbow S073, car crash S074, van S108), photograph-like pictures (older man in S016, S088-S089, S135-S136, S195-S196; man at wall S042; painter photo S090), and third-party items (film posters S013/S168, book covers S048/S144, product packs S060/S133, a video still S128, a forum screenshot S130, an SEC panel S152, coin icons S046/S071). 32 raster-style asset ids and 12 icon ids are listed in `asset_ids`; none is identified as to rights.
+- Recurring prop (OBSERVED): the pale-blue "bed-frame board" scene appears in chapters 1-3 (S022-S025, S069-S071, S076-S077, S082) with text lines or a chart on the board.
+- Typography (OBSERVED, typeface UNAVAILABLE): one rounded handwriting-style face for titles, bubbles and labels; chapter titles are black on white with no outline or shadow; 123 of 203 states carry readable text.
+
+## 6. Object lifecycles (OBSERVED)
+Objects mostly appear by POP_IN and leave only at the next CUT; within a shot elements accumulate (S022-S025 board lines; S002-S005 building, pointing man, hooded figure; S046-S049 coins, book, officer). Exceptions that remove content inside a shot: S098 and S106 (phone chart and coin removed, face and bubble change), S160-S166 (scene content replaced inside the hooded-figure chapter), S130-S132 (screenshot removed at f7406).
+
+## 7. Attention hypotheses (INFERRED, no retention or CTR data)
+1. A new picture or text step about every 4 s (cut median 4.03 s) with single-frame pops gives frequent re-orientation points; unverified against viewer data.
+2. The fixed 4.033 s chapter card gives a recognisable beat that resets attention at about 54 s intervals.
+3. Visual gags extend the narrator line: in the 80 retained phrase pairs the picture appears before the paired word in 71 (median lead 0.53 s, p10 1.15 s, p90 0.03 s). INFERRED: pictures are placed slightly ahead of the line they illustrate, so speech confirms what the eye has just seen; the pairing and the ASR word starts are provisional (ASR only, nobody listened).
+4. Bookend: the narrator's "Nobody knows what the hell is going on" at about 10.8 s (ASR) returns as the final text card S201 (f10913).
+
+## 8. Uncertainties and limits
+- ASR is Whisper small.en; nobody listened. Phrase pairs with a visual-word lag above 1.5 s were dropped as probable mismatches (21 of 101 candidates), which biases the reported lags toward small values; the random-time control in the audio section shows that, in this densely narrated video, an unrelated time already falls within 0.1 s of some word start 46 % of the time, so closeness alone is not evidence; only the semantic match and the consistent lead are.
+- Cause of the faint whole-scene changes at f120 (S005) and the lab-half bbox at f299 (S009) is unresolved; both are ledgered as measured changes.
+- Quiet frames inside holds are measured unchanged but not individually viewed; sub-threshold changes cannot be excluded.
+- Photographs of real people are not identified; on-screen claims (e.g. -67 %, -40 %, 137 wrong calls) are narrator or joke content, not fact-checked.

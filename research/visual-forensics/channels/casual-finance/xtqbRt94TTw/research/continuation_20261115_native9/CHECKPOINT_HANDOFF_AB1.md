@@ -1,0 +1,6 @@
+# V006 xtqbRt94TTw checkpoint AB1 (scheduled run 2026-11-15)
+EP0080 (2661-2665) verified on native decode 2655-2672 (18 frames measured, 10 JPEG samples viewed, one reviewer, no independent QA). Static 2656-2660; onset EXACT 2661 (358528 px >60, article scrolls down, figure still smiling); 2662 frown + pointer lowered + further scroll; 2663-2665 scroll settle; last substantive change 2665; 2666 residual 22 px (max delta 62, cause undetermined); 2667-2672 static. Candidate window 2661-2665 equals measured window. Sub-object phase boundaries only visually sampled, not measured per object.
+Open: red-stroke track start (<2510) and 2546-2580 not measured; no ledger event owns the track; production-draft S0015 [1141,1155] not applied.
+Integrated: visual_event_ledger_v49.csv (only EP0080 changed vs v48, 948 rows; positive + negative check PASS); CURRENT_NATIVE_QUEUE_v25.json (557 strict rows).
+Source sha256 030a85ad...a7a66 re-verified at entry; AA1 sums OK; remote head at start b38055c4 (=AA1). Frames kept local only. Audio 0, CT_SCAN_COMPLETE=false, 0 of 35.
+Next exact operation: verify queue item SUB052 (2674-2682) with adjacent native context (optionally measure red-stroke 2546-2580).

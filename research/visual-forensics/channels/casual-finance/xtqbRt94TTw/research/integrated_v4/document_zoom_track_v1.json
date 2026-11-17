@@ -1,0 +1,70 @@
+{
+  "parent_event_id": "EP0054",
+  "source_review": "pdf_late_zoom_native_v1/OUT_pdf_late_zoom_native_v1.json",
+  "native_window": [
+    1631,
+    1640
+  ],
+  "construction": {
+    "taxonomy": "PROGRESSIVE_SAME_PAGE_ENLARGEMENT_AND_TRANSLATION_WITH_ADVANCING_VIEWPORT_CROP",
+    "description": "Table1, its11 rows/rules, page119 running header and associated prose retain matching content while the page enlarges each frame. Table top-left moves up/left and right rule endpoint moves right. White crop edges progressively eliminate viewer/sidebar material and lower prose. No sudden substitute page or whole-composition replacement is visible across the ten consecutive native frames.",
+    "source_mechanism": "UNVERIFIED: visible result supports zoom/reframe plus crop; exact editor layers, UI operation, transform curve or mask mechanism unknown.",
+    "component_exit_boundaries": [
+      {
+        "component": "THUMBNAIL_PAGE_FRAGMENTS",
+        "last_visible_frame": 1632,
+        "first_absent_frame": 1633,
+        "boundary_precision": "EXACT_ADJACENT_NATIVE",
+        "qualification": "Disappearance of thumbnail fragments, not all dark viewer/sidebar material."
+      },
+      {
+        "component": "OUTER_DARK_SIDEBAR_REMNANT",
+        "last_visible_frame": 1635,
+        "first_absent_frame": 1636,
+        "boundary_precision": "EXACT_ADJACENT_NATIVE",
+        "qualification": "Inner dark page/viewer gutter remains through1638; white/pale separator functional identity not fully determined."
+      },
+      {
+        "component": "FINAL_DARK_LEFT_VIEWER_GUTTER",
+        "last_visible_frame": 1638,
+        "first_absent_frame": 1639,
+        "boundary_precision": "EXACT_ADJACENT_NATIVE",
+        "qualification": "Geometry/crop exit within retained page enlargement; this is not a full-scene cut."
+      }
+    ],
+    "content_anchors": "Matching table title,11-row ordering, horizontal rules, page119 running header and prose identify retained page content. These anchors move with the enlargement; no fixed object anchor besides plain external white background is established.",
+    "motion_continues_through_frame": 1640,
+    "settle_frame": null,
+    "settle_limit": "Every new frame still changes table geometry/cropping. Prior1641/1642 observations also describe retained-table reframe; no settle/hold boundary certified."
+  },
+  "shot_verdict_in_native_window": {
+    "frames": [
+      1631,
+      1640
+    ],
+    "verdict": "NO",
+    "meaning": "No observable whole-scene cut between consecutive frames in this native window; progressive retained-page enlargement/cropping instead.",
+    "exact_full_scene_cut_frame": null,
+    "confidence": "HIGH",
+    "adjacent_context": "Prior1630 enlarged-table-in-viewer state is consistent with start of this progression; prior1641 isolated enlarged table and1642 additive host entry are reused without redisplay."
+  },
+  "earlier_compound_gate": {
+    "event_id": "EP0054",
+    "entire_compound_exact_native_certification": "NOT_AWARDED",
+    "earlier_native_coverage": "Reused1596/1597 PDF-viewer content repositioning; root native1619 retained viewer/prose, root1630 enlarged table within viewer. Earlier interval1598\u20131630 is not consecutively natively reviewed here.",
+    "earlier_sampled_coverage": "G013 sampled document-scroll/zoom progression reused from the dispatched prior context; sampled/scaled evidence is not promoted to continuous native coverage.",
+    "conclusion": "Late viewer-to-table construction is resolved as progressive enlargement/crop. This alone does not certify every earlier page traversal or rule out an unviewed edit in the earlier compound interval.",
+    "earlier_exact_cut_frame": null,
+    "earlier_interval_is_verified_cut_bracket": false,
+    "existing_claim_handling": "The coarse full-cut label is unsupported for this observed late construction; do not convert the bounded NO into complete exact-event certification for the entire compound."
+  },
+  "qualified_context_refs": [
+    "agents/gap_review_01/OUT_gap_review_01.json#G013",
+    "compound_cut_followup_v1/OUT_compound_cut_followup_v1.json#EP0054",
+    "pdf_transition_midpoint_v1/OUT_pdf_transition_midpoint_root_v1.json",
+    "pdf_transition_midpoint02_v1/OUT_pdf_transition_midpoint02_root_v1.json"
+  ],
+  "entire_compound_native_certification": false,
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false
+}

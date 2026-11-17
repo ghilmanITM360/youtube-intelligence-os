@@ -1,0 +1,512 @@
+{
+  "schema": "YIOS_TARGETED_INDEPENDENT_QA_LATER_FOURTEEN_V1",
+  "created_utc": "2026-11-06T15:15:49.880303+00:00",
+  "reviewer": "/root/video006_bounded_qa",
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "status": "PASS_BOUNDED_WITH_OPEN_DETAILS",
+  "summary": "Fourteen later row adjudications are supported by the reviewed native witnesses and existing measurements. Exact thumbnail switching and two cursor-glyph conversion timings remain open. No global semantic, production or AV completion is granted.",
+  "scope": {
+    "rows": [
+      "EP0049",
+      "SUB032",
+      "SUB033",
+      "SUB034",
+      "EP0051",
+      "EP0052",
+      "SUB035",
+      "SUB036",
+      "EP0053",
+      "SUB037",
+      "SUB038",
+      "SUB039",
+      "SUB040",
+      "SUB041"
+    ],
+    "ledger_delta": "v34 to v36",
+    "source_windows": [
+      [
+        1340,
+        1345
+      ],
+      [
+        1405,
+        1478
+      ],
+      [
+        1485,
+        1595
+      ],
+      [
+        1655,
+        1725
+      ]
+    ],
+    "mode": "Targeted independent review of existing receipts/native image evidence; no per-row source extraction launches",
+    "excluded": [
+      "Previously accepted timings/production scopes",
+      "Global/whole-video semantic or shot audit",
+      "Audio listening or AV",
+      "Any root work beyond these14rows",
+      "Repository/publication/lock operations"
+    ]
+  },
+  "resources": {
+    "fresh_five_hour_used_percent": 42,
+    "fresh_weekly_used_percent": 29,
+    "ordinary_usage_allowed": true,
+    "credits_spent": 0,
+    "agents_spawned": 0,
+    "context": "No serious context-pressure indication; interrupted review resumed without restarting completed checks."
+  },
+  "source": {
+    "path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We’re About to Break It - Casual Finance (1080p, h264).mp4",
+    "sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+    "fresh_rehash_passed": true,
+    "PTS": "Independent ffprobe verifies all source frames in scoped windows equal512*(n+1)ticks at1/12288, hence(n+1)/24seconds. Metadata verification is not semantic frame review."
+  },
+  "gates": {
+    "ledger_delta": {
+      "status": "PASS",
+      "rows_before": 948,
+      "rows_after": 948,
+      "unique_ids_before": 948,
+      "unique_ids_after": 948,
+      "row_order_preserved": true,
+      "changed_ids": [
+        "EP0049",
+        "SUB032",
+        "SUB033",
+        "SUB034",
+        "EP0051",
+        "EP0052",
+        "SUB035",
+        "SUB036",
+        "EP0053",
+        "SUB037",
+        "SUB038",
+        "SUB039",
+        "SUB040",
+        "SUB041"
+      ],
+      "other_rows_changed": false,
+      "measured_candidate_only_before": 594,
+      "measured_candidate_only_after": 580,
+      "new_shot_boundary_claim_changes": 0,
+      "source_bound_field_changes_v34_to_v36": [
+        {
+          "event_id": "SUB036",
+          "fields": {
+            "source_start_frame": {
+              "before": "1535",
+              "after": "1541"
+            },
+            "source_end_frame": {
+              "before": "1540",
+              "after": "1541"
+            },
+            "source_start_pts": {
+              "before": "64.0",
+              "after": "64.25"
+            },
+            "source_end_exclusive_pts": {
+              "before": "64.25",
+              "after": "64.29166666666667"
+            }
+          }
+        },
+        {
+          "event_id": "SUB040",
+          "fields": {
+            "source_start_frame": {
+              "before": "1661",
+              "after": "1660"
+            },
+            "source_start_pts": {
+              "before": "69.25",
+              "after": "69.20833333333333"
+            }
+          }
+        },
+        {
+          "event_id": "SUB041",
+          "fields": {
+            "source_start_frame": {
+              "before": "1696",
+              "after": "1695"
+            },
+            "source_end_frame": {
+              "before": "1718",
+              "after": "1720"
+            },
+            "source_start_pts": {
+              "before": "70.70833333333333",
+              "after": "70.66666666666667"
+            },
+            "source_end_exclusive_pts": {
+              "before": "71.66666666666667",
+              "after": "71.75"
+            }
+          }
+        }
+      ],
+      "source_bound_row_changes_v32_to_v36": [
+        "SUB019",
+        "SUB036",
+        "SUB040",
+        "SUB041"
+      ],
+      "qualification": "SUB019931->930 was already incorporated before this scope; onlySUB036/SUB040/SUB041 source bounds change in v34->v36. Original candidate windows remain separate provenance. Fourteen closures are row adjudications, not fourteen independent physical events or cuts.",
+      "EP0025": "Corrected hand626/arrow627 description remains unchanged from v34; prior QA evidence reused, no repeated native review."
+    },
+    "EP0049": {
+      "status": "PASS_BOUNDED",
+      "observed": "Native1342/1343 fullframes actually viewed. Globe pupils shift right1343; round white eye outlines and other composition held.",
+      "measurement": "1342 has0changed pixels>RGBsum60;1343 has1693 withbbox462,696..575,727;1344 returns to0threshold changes.",
+      "limits": "No source authoring/interaction/shot/camera inference."
+    },
+    "SUB032_SUB033": {
+      "status": "PASS_CONTINUATIONS",
+      "observed": "Existing leading-edge1410/1411 crop shows first tint1411, blue1410. Consecutive onset sheet gives clear yellow-green letter growth1412. Sweep samples1437/1442 are continuing reveal, not independent onsets or pupil changes.",
+      "measurements": "Mask0through1410;4pixels1411 at204,219..205,221;157pixels1412. Leading right edge1201 at1454 reaches1209 at1455, then remains1209 through1478.",
+      "endpoint_qualification": "1455 reaches final word2007 region; pixel counts continue5070->5081->5119 at1455/1456/1457 and later5117. Exact authored/AA/codec pixel-settle timing remains unknown.",
+      "anchors": "Red5.04% box remains held in reviewed headline views.",
+      "limits": "Native onset/sweep sheets were displayed resized; separate smaller1410/1411 leading-edge image was viewed without resizing. No all-face semantic review."
+    },
+    "SUB034": {
+      "status": "PASS_NO_MEANINGFUL_PAGE_EVENT",
+      "observed": "Existing1488/1489/1490 overview shows held document/chrome layout.",
+      "measurement": "1489 pagebody0 andchrome0pixels>RGBsum60;368fullframe changed pixels outside those measured regions. Interpage gap787..800 is fixed1487-1490.",
+      "limits": "Does not claim byte-identical fullframe, no possible subpixel effect, or audible noise."
+    },
+    "EP0051": {
+      "status": "PASS_FOR_SCROLL_PHASE",
+      "observed": "Sheet1 shows upward content motion after1490, fixed toolbar geometry, page1->page2 thumbnail state bracketed between sampled1492/1497.",
+      "measurement": "Scroll1491-1498: gap751..764 at1491 to287..300 at1498. Gap holds1499-1501;1499 has compression/residual page differences, not a new geometric phase.",
+      "open_detail": "Exact thumbnail-selection switching frame within1492-1497 remains OPEN.",
+      "toolbar_qualification": "Fixed toolbar means geometry, not every pixel unchanged: existing chrome metric has38changed pixels at1495. This does not establish exact thumbnail or counter-switch timing and is not promoted into a new event."
+    },
+    "EP0052": {
+      "status": "PASS_FOR_SCROLL_PHASE",
+      "observed": "Distinct resumed scroll1502-1510 in existing sheets; actual native1510fullframe viewed, showing page2footnote and next-page Goals-and-Definitions heading.",
+      "measurement": "Gap287..300 duringhold1499-1501 changes286..299 at1502; following separator reaches861..874 at1510. Same separator coordinates remain1510-1595.",
+      "limits": "Page geometry holds, while cursor and selection continue. Exact authored easing/scroll physics unavailable."
+    },
+    "SUB035": {
+      "status": "PASS_FOR_CURSOR_APPROACH",
+      "observed": "Native margin strip1515/1516/1517 and cursor sheet show arrow leaving dark margin1516, down-left travel and I-beam near targetline by1529; no meaningful position shift1530-1534 in reviewed crops.",
+      "open_detail": "Exact arrow-to-Ibeam conversion frame1516-1529 remains OPEN.",
+      "mask_limit": "Margin mask includes a bottom rasterline; its bbox is not a pure cursor bbox."
+    },
+    "SUB036": {
+      "status": "PASS_CORRECTED_SELECTION_ONSET",
+      "observed": "Actual consecutive1532-1549 native textROI sheet: no blue1535-1540, first selected wordthe1541.",
+      "measurement": "Blue mask0each1535-1540;309pixels1541 withbbox1034,638..1055,654.",
+      "bounds": "Verified event1541 lies outside old1535-1540 candidate phase; newsourcebound1541 preserves separate originalcandidate provenance.",
+      "limits": "No click/drag/physical-focus mechanism inferred."
+    },
+    "EP0053": {
+      "status": "PASS_CONTINUATION_MULTILINE_EXTENSION",
+      "observed": "At1542 selection expands from prior wordthe onto remaining firstline and secondline; target1965tail incomplete.",
+      "measurement": "309pixels1541 ->7891pixels1542.",
+      "count_limit": "Exact extension of1541selection, not a separate independent selection onset."
+    },
+    "SUB037": {
+      "status": "PASS_CONTINUOUS_TAIL",
+      "observed": "Consecutive native textROI1544-1549 shows target1965tail completed1547 and same visible endpoint1548/1549.",
+      "qualification": "Small blue pixel counts keep changing; no authored endpoint inferred from numerical pixel settling. No new onset1544."
+    },
+    "SUB038": {
+      "status": "PASS_FOR_CURSOR_TAIL",
+      "observed": "Actual1556/1557/1583/1584/1588 native cursor crops show departure from selection endpoint1557 and arrival as arrow at dark margin1583, then hold. Selection remains.",
+      "measurement": "1583differencebbox1437,609..1449,629; small residuals1584/1585 then0fullframethreshold changes1586-1588.",
+      "open_detail": "Exact I-beam-to-arrow conversion1557-1583 remains OPEN."
+    },
+    "SUB039": {
+      "status": "PASS_FOR_SECOND_CURSOR_PHASE",
+      "observed": "Native1588/1589/1591/1592 crops actually viewed: arrow crosses left off dark margin onto white page1589-1591; it is not merely a few-pixel move within margin. Blue selection retained.",
+      "measurement": "Fullframe changed159/147/136pixels at1589/1590/1591;0each1592-1595.",
+      "limits": "Static claim is bounded to threshold/time; interaction intent unknown."
+    },
+    "SUB040": {
+      "status": "PASS_BOUNDED_ONSET_COMPLETION",
+      "observed": "Native table sheet plus original-size in-memory crop confirms narrow strip1660 after none1659. First row sweeps to complete1683, held1684-1694.",
+      "measurement": "1660 has66changed pixels,bbox762,252..763,285 (two-pixel width).1683 has1379changed pixels at1672,252..1715,283;0threshold changes each1684-1694.",
+      "correction": "Original1661start is oneframe late; corrected1660."
+    },
+    "SUB041": {
+      "status": "PASS_BOUNDED_ONSET_COMPLETION",
+      "observed": "Fourth-row strip first1695; native1718/1719 remain partial acrossHard; full1720 and held1721-1725. First row highlight remains.",
+      "measurement": "1695 has64changed pixels,bbox762,336..763,367.1718/1719 have954/951changed pixels across row tail;1720 includes both reveal completion and presenter pose change.0threshold changes each1721-1725.",
+      "correction": "Original1696start late; original1718end premature, corrected1695-1720.",
+      "event_separation": "Presenter swap1720 is separate contextual observation, not a newly closed pose row or same physical event."
+    },
+    "receipt_integrity": {
+      "status": "PASS_BOUNDED",
+      "reviewed_record_counts": {
+        "pupil_fullframe": 6,
+        "headline_ROI": 74,
+        "PDF_fullframe_region": 111,
+        "PDF_margin": 111,
+        "table_fullframe": 71
+      },
+      "checks": "Contiguous frame sequences/schema/hash-string format checked;111PDFrawhashes cross-match existing initial extraction receipt. Source/PTS independently verified. Critical metrics and image evidence compared directly.",
+      "reproduction_limit": "Existing raw measurement receipts reused; no new source pixel extraction or per-row decoder launches. Numerical fields were inspected/checked for consistency, not all independently recomputed from source in this scope.",
+      "semantic_limit": "Per-frame numerical records do not imply per-frame semantic visual display."
+    }
+  },
+  "new_actionable_defects": [],
+  "open_details": [
+    {
+      "row": "EP0051",
+      "detail": "thumbnail-selection switch",
+      "bracket": [
+        1492,
+        1497
+      ],
+      "status": "OPEN"
+    },
+    {
+      "row": "SUB035",
+      "detail": "arrow-to-Ibeam exactconversion",
+      "bracket": [
+        1516,
+        1529
+      ],
+      "status": "OPEN"
+    },
+    {
+      "row": "SUB038",
+      "detail": "Ibeam-to-arrow exactconversion",
+      "bracket": [
+        1557,
+        1583
+      ],
+      "status": "OPEN"
+    },
+    {
+      "rows": [
+        "SUB032",
+        "SUB033"
+      ],
+      "detail": "source mask/easing and exact authored-versus-codec headline pixel settling",
+      "status": "UNKNOWN"
+    }
+  ],
+  "actual_image_files_viewed": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/ep0049/f01342.jpg",
+      "sha256": "1f071b5bca2c3105def4bd4bfbbf49003ee79634f3b02fc7aef2334cbbe52145"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/ep0049/f01343.jpg",
+      "sha256": "f823523d81a83c6eddf2d94db7c2336dfeac951e28ab629509f773d135f467cd"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/headline_1410_1411_leading_edge.jpg",
+      "sha256": "922383c5edfe9f7c1464fafa78218e3f5e18944087332d570144e90f0dd51350"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/headline_onset.jpg",
+      "sha256": "6a44dc7470f7944f86d0ac7124f256ed727e6614b69d19248220ae24f7dddf89"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/headline_sweep.jpg",
+      "sha256": "f4adee148c00d1a7c566ef0ec14e16b476aefe485b85eccc6636b2f8cd206fe7"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/pdf_sheet_1.jpg",
+      "sha256": "09e386b6309091a337138f789ca418c6ed2855ac8bc5c85087bb02aa43f8839a"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/pdf_sheet_2.jpg",
+      "sha256": "580c331c287d69748d229f41bad8ac20b3d4244c9aaeeb53822cffa2a076da37"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/pdf_selection_1532_1549.jpg",
+      "sha256": "35790e61a480758b9bae698b897f1bec3e4aa927747d1b401442bc0bacc1ca1d"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/pdf_cursor_1510_1541.jpg",
+      "sha256": "29a2272f81283c4f0e354d9d9ae20fcc11ee905433e6bb05ee725dc81ca51fb5"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/pdf_cursor_tail_1556_1592.jpg",
+      "sha256": "d243ba60ea9d5b56ebfb222bb36c7c4685f5125d8fd05a647e5f947ecbeb67d9"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/pdf_margin_native_pointers.jpg",
+      "sha256": "967d63fe4bef1ff3b4e6ac2490bf9be626894265c107612f322dc18a2ba79e2c"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/table_two_reveals_native.jpg",
+      "sha256": "6f9721dbab476996950419d68c4e5da08019af1b459ad442b07c1ffdcc8ec8f4"
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-native2-20261106/pdf_1485_1595/f01510.jpg",
+      "sha256": "7b036d8d4245a736f403b350511f11d1472e8f1cefc388c1e71cf0082603c3c5"
+    }
+  ],
+  "additional_native_display": {
+    "type": "Existing table_two_reveals_native.jpg onset strips cropped in memory; no file write/source extraction",
+    "frames": [
+      1660,
+      1695
+    ],
+    "crop": "First150pixels of the two native-size225pixel rows, stacked150x450 without resampling",
+    "JPEG_sha256": "a9db9f1905334a056019628f38b2394fc5c44df3c765f48ed1435a071b38afd4"
+  },
+  "visual_coverage": {
+    "image_file_count": 13,
+    "native_individual_fullframes": [
+      1342,
+      1343,
+      1510
+    ],
+    "headline_leading_edge_pair": [
+      1410,
+      1411
+    ],
+    "headline_onset_sheet": [
+      1405,
+      1415
+    ],
+    "headline_sweep_samples": [
+      1420,
+      1434,
+      1437,
+      1442,
+      1450,
+      1455,
+      1460,
+      1465,
+      1470,
+      1475,
+      1478
+    ],
+    "PDF_overview_sheet1": [
+      1485,
+      1488,
+      1489,
+      1490,
+      1491,
+      1492,
+      1497,
+      1498,
+      1499,
+      1501,
+      1502,
+      1509
+    ],
+    "PDF_overview_sheet2": [
+      1510,
+      1511,
+      1515,
+      1516,
+      1529,
+      1530,
+      1534,
+      1535,
+      1536,
+      1539,
+      1540,
+      1541
+    ],
+    "consecutive_selection_textROI": [
+      1532,
+      1549
+    ],
+    "cursor_approach_samples": [
+      1510,
+      1511,
+      1515,
+      1516,
+      1529,
+      1530,
+      1534,
+      1535,
+      1536,
+      1539,
+      1540,
+      1541
+    ],
+    "cursor_tail_samples": [
+      1556,
+      1557,
+      1583,
+      1584,
+      1588,
+      1589,
+      1591,
+      1592
+    ],
+    "margin_native_samples": [
+      1488,
+      1489,
+      1510,
+      1511,
+      1515,
+      1516,
+      1517,
+      1520,
+      1557,
+      1583,
+      1588,
+      1589,
+      1590,
+      1591,
+      1592
+    ],
+    "table_native_samples": [
+      1659,
+      1660,
+      1661,
+      1683,
+      1684,
+      1695,
+      1696,
+      1718,
+      1719,
+      1720,
+      1723
+    ],
+    "display_limits": [
+      "Headline onset/sweep1500x2145 displayed1312x1876; tiny1411tint separately read in smaller native-leading-edge image.",
+      "PDF sheets are1/3-scale fullframe overviews1280x2304 displayed1138x2048; semantic glyph/selection checks use separate nativeROI sheets.",
+      "Table1040x2475 displayed861x2048; tiny1660/1695strips additionally viewed via smaller crop at original raster size.",
+      "Not all source frames semantically displayed. No playback/audio listening performed."
+    ]
+  },
+  "input_sha256": {
+    "NATIVE_BATCH3.json": "28b32b37f0931d48a0a8c8f5518af49c89843cf66aaa601925e207bab5a43152",
+    "NATIVE_BATCH4.json": "c396f2ac7e71f62500cfbd6c6fee460934782a0147d3a08a744747c143d7077e",
+    "visual_event_ledger_v34.csv": "aaa33bd1d791b2bfa2e30e9d4c66c709e7cb7d75422c9041f82ad8f55c9421e4",
+    "visual_event_ledger_v35.csv": "f5351b9fb20539b4d97b7a3d781f4729f56ca8b02529e7bb66afff181b9141e6",
+    "visual_event_ledger_v36.csv": "5a0bfb428da3dd579857426ce41cb11f6613d806200efd5a3e81555b4cf14b5a",
+    "SOURCE_VERIFICATION.json": "921b121000938118f1b058ffbdf5647d3bc16ddf9782ed46d0a05e4f701e10d1",
+    "ep0049/measurements.json": "6930622f8ed08a458a4a3d3dd15c00f7a83655606dba0128381618c1552e48cc",
+    "sub032/measurements.json": "f8dac466dbb170b9b30977c455513dcb61751faf2dfd0e7e065ce6fd1ae42b2f",
+    "sub033/measurements.json": "6482748de72c175c8001fa864df4898399ffad8744552ecfd816f5ef69cbc04f",
+    "headline_measurements.json": "85f866a9e44c0d32157aef40fc11b851cfc6354175abceceb956b47cd5decbf1",
+    "measure_headline_extended.py": "58ecbd142e4efce02323c82d330cb4912767e998b56e5727c58d8a4bceb3ee2b",
+    "pdf_1485_1595/measurements.json": "9b5dc1d705fe61c3583110aba7d9a16cff8ad2443635b4a1977a689282fc65ba",
+    "pdf_region_measurements.json": "ad2c9b4b13b87b7b6cd0d46ecc01a092cc933a5d48bcac6dec78d0ca2550a07b",
+    "pdf_pointer_margin_measurements.json": "89f601aece2f3b9d861b2ba3295ac08845f14d1dd9c6f1cf25ea3265f0a60795",
+    "measure_pdf.py": "fc36fd29fada00c97ddd720060ceac53b983e874f181bc6f5d7439027ec0bc50",
+    "pdf_next_1655_1725/measurements.json": "96ee3d88be1d8fe9eb619ce2e88479ecba662e8cc93a70e43534346c20bfd0a0"
+  },
+  "v32_source_bounds_reference_sha256": "d6215590ee1a5ebd1bb8ae7ca1006e04e793d2fd074433ada464f73fb48f474c",
+  "global_status": {
+    "whole_video_visual": "PARTIAL",
+    "whole_video_production": "OUT_OF_SCOPE_AND_NOT_SIGNED_OFF",
+    "actual_listening_seconds": 0,
+    "ASR_undetermined": 21,
+    "ASR_potential_flags": 7,
+    "AV": "BLOCKED",
+    "CT_SCAN_COMPLETE": false,
+    "strict_candidate_only_in_reviewed_v36": 580,
+    "full_semantic_row_completion_not_implied": true
+  },
+  "write_boundary": "Only new QA_later_fourteen.json written. No source/media/other evidence/prior report/ledger/repository/Git/lock/publication modifications; no new agents.",
+  "terminal": true
+}

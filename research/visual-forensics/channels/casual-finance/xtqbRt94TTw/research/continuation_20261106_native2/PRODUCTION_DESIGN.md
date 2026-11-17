@@ -1,0 +1,3 @@
+# Casual Finance — Video006 xtqbRt94TTw
+
+G004.01 extends the existing approved fictional Council bulletin/teal robot system. Owner requested bounded reconstruction and frozen criteria, so no new product/design approval is needed. Pillow/native procedural renderer and existing font are retained. Transfer observed disappear/reveal/header-hold milestones; use an explicit original wipe-and-tile implementation because hidden source compositing is unknown. Direct source-art recreation and a late settling-pan model are rejected by evidence/contract. Acceptance scope is 566–584 span plus contextual565–650 track tests, not whole-video approval. All media external.

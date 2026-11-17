@@ -1,0 +1,44 @@
+{
+  "results": {
+    "J": {
+      "immutable_or_current_local_pass": 23,
+      "current_local_mismatches": [
+        "CONTINUATION_HANDOFF.md"
+      ],
+      "historical_published_byte_matches": [
+        {
+          "commit": "198a37f01a38fcfd4ab82e6d71d989da2f762788",
+          "path": "research/visual-forensics/channels/casual-finance/xtqbRt94TTw/research/CONTINUATION_HANDOFF.md",
+          "sha256": "705fb7babb6196c7a2ea395b500a3de140acc0f5fb28e2579f564662c2aec29f"
+        }
+      ],
+      "status": "PASS_HISTORICAL_CHECKPOINT_BYTES_NOT_CURRENT_MUTABLE_POINTER"
+    },
+    "O": {
+      "immutable_or_current_local_pass": 48,
+      "current_local_mismatches": [],
+      "historical_published_byte_matches": [],
+      "status": "PASS_ALL_LOCAL_ENTRIES"
+    },
+    "P": {
+      "immutable_or_current_local_pass": 31,
+      "current_local_mismatches": [],
+      "historical_published_byte_matches": [],
+      "status": "PASS_ALL_LOCAL_ENTRIES"
+    },
+    "Q": {
+      "immutable_or_current_local_pass": 35,
+      "current_local_mismatches": [],
+      "historical_published_byte_matches": [],
+      "status": "PASS_ALL_LOCAL_ENTRIES"
+    },
+    "R": {
+      "immutable_or_current_local_pass": 21,
+      "current_local_mismatches": [],
+      "historical_published_byte_matches": [],
+      "status": "PASS_ALL_LOCAL_ENTRIES"
+    }
+  },
+  "root_cause": "CheckpointJ sealed mutable CONTINUATION_HANDOFF.md; current continuation intentionally advancedR. Its exact sealed bytes remain in publishedJ commit, while all23otherJentries and O/P/Q/Rentries matchlocal. No source or seal edits.",
+  "no_old_seal_or_evidence_mutated": true
+}

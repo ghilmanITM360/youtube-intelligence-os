@@ -1,0 +1,25 @@
+{
+  "status": "PASS_PRIOR_ACTUAL_NATIVE_RETURN_REUSE",
+  "native0_observation": "OBSERVED blank near-white canvas",
+  "native0_actual_returns": [
+    {
+      "call_id": "call_1854739a6b884efe8b66c8ed04017dc2",
+      "timestamp": "2026-11-04T01:32:26.989Z",
+      "sha256": "5497f1dfddc289cba560e61004a5b3c3a70983aa62691f487bf456eeef3b40ba"
+    }
+  ],
+  "native1_observation": {
+    "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_01/native_gap_review/f00001.jpg",
+    "sha256": "141cb50d83140d17441da636b0045486e83662f590b38a65e658e6cef0d4717c",
+    "successful": true,
+    "scale": "NATIVE_1920x1080",
+    "witness": "White frame with tiny black roof tip at bottom edge.",
+    "source_frame": 1,
+    "source_pts_seconds": 0.08333333333333333,
+    "read_method": "functions.view_image actual display in gap_review_01 rollout"
+  },
+  "prior_gap_return_audit": "session_20261103/gap_review_01_tool_read_audit_v1.json",
+  "ruling": "Sourceframe0blank;sourceframe1alreadyhasroof tip. Opening-element first visibleframe1, not2. Historicalblankstate0\u20131 needsversionedcorrection; originaldraft/rawreviewsunchanged.",
+  "new_visual_reads": 0,
+  "actual_listening_seconds": 0
+}

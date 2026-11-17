@@ -1,0 +1,949 @@
+{
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "status": "COMPLETE_FOR_SUPPLIED_SCOPE",
+  "scope": {
+    "supplied_cases": 12,
+    "supplied_image_requests": 24,
+    "reviewed_cases": 12,
+    "native_successful_returns": 24,
+    "scaled_returns": 0,
+    "exact_cut_pairs_confirmed": 10,
+    "compound_cut_rulings_unresolved": [
+      "EP0054",
+      "EP0082"
+    ],
+    "description": "Complete review of the supplied adjacent pairs only. Unresolved compound timing remains explicitly open."
+  },
+  "source_decode_provenance": {
+    "declared_method": "Full nonseeking OpenCV0–3540, source position checked; same existing declared BGR-to-PNG pipeline; no interpolation",
+    "manifest": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/items.json",
+    "source_sha_verification": "Root supplied unchanged fresh sourceSHA verification; reviewer did not reread the raw video.",
+    "reviewer_actions": "All24 saved PNG SHA256 values independently checked against supplied manifest, and every requested native image actually displayed once. No source decode, extraction or interpolation performed by reviewer."
+  },
+  "shot_boundary_operational_rule": "YES denotes a discontinuous foreground scene/layout replacement at the inspected boundary. A retained-background overlay, local graphic/pose substitution or document scroll is not automatically a whole scene cut. The broader inherited compound event may remain UNDETERMINED when only its opening pair is supplied.",
+  "items": [
+    {
+      "id": "EP0032",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT_WITH_LATER_GRAPHIC_PHASE_UNREVIEWED",
+      "onset_frame_or_bracket": {
+        "frame": 837,
+        "before_frame": 836,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 34.916666666666664
+      },
+      "description": "Biography/portrait and pointer narrator at836 are replaced at837 by quote text plus glasses-wearing desk/laptop narrator. The cut is established at837. Red-arrow entrance described later in the compound837–857 candidate is not visible or timed by this pair.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f00836_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f00837_native.png"
+      ],
+      "limitations": [
+        "Only836/837 boundary is verified; no later arrow entrance trajectory/offset or whole-shot duration is certified."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY",
+      "compound_event_certified": false,
+      "component_coverage": {
+        "certified_components": [
+          "Entry composition cut at837"
+        ],
+        "unreviewed_components": [
+          "Arrow first visibility/path/settle later in837–857"
+        ]
+      }
+    },
+    {
+      "id": "EP0046",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT_WITH_PARTIAL_CARD_ENTRY",
+      "onset_frame_or_bracket": {
+        "frame": 1255,
+        "before_frame": 1254,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 52.333333333333336
+      },
+      "description": "Narrator/four-certificate composition at1254 disappears at1255. A cropped dark headline-card strip is already visible at the far right of the otherwise white1255 canvas. The full foreground replacement is exact at1255; a separate fully blank intermediate frame is not established.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01254_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01255_native.png"
+      ],
+      "limitations": [
+        "Later right-to-left card travel across1255–1278 is not timed by this pair. No blank frame or first card pixel earlier than1255 is inferred."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY",
+      "compound_event_certified": false,
+      "component_coverage": {
+        "certified_components": [
+          "Removal/replacement at1255 with incoming card already partly visible"
+        ],
+        "unreviewed_components": [
+          "Full card travel/settle1255–1278",
+          "Any alleged blank intermediate frame"
+        ]
+      }
+    },
+    {
+      "id": "EP0050",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT_TO_DOCUMENT_VIEWER",
+      "onset_frame_or_bracket": {
+        "frame": 1479,
+        "before_frame": 1478,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 61.666666666666664
+      },
+      "description": "Earth/percent-disc/Treasury drawing under FT card at1478 is replaced by a PDF viewer/title page at1479. The entry cut is exact; subsequent document scroll in the1479–1487 compound candidate is not certified by this pair.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01478_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01479_native.png"
+      ],
+      "limitations": [
+        "Title/author are visible source-video text, not publication/authenticity verification. Only1478/1479 entry is reviewed."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY",
+      "compound_event_certified": false,
+      "component_coverage": {
+        "certified_components": [
+          "Entry cut to PDF viewer/title page at1479"
+        ],
+        "unreviewed_components": [
+          "Subsequent document scroll1479–1487"
+        ]
+      }
+    },
+    {
+      "id": "EP0054",
+      "shot_boundary": "UNDETERMINED",
+      "event_type": "DOCUMENT_SCROLL_AT_CANDIDATE_START_LATER_CUT_UNVERIFIED",
+      "onset_frame_or_bracket": {
+        "observed_motion_frame": 1597,
+        "before_frame": 1596,
+        "observed_boundary_shot": "NO",
+        "precision_at_supplied_boundary": "EXACT_NATIVE_ADJACENT_OBSERVATIONS",
+        "exact_cut_frame": null,
+        "surviving_inherited_candidate_window": [
+          1598,
+          1642
+        ],
+        "candidate_window_is_not_native_verified": true,
+        "frame_index": "0-based"
+      },
+      "description": "1596/1597 preserves the same PDF viewer/chrome while content scrolls upward from page2 toward page3 and the counter changes2/20 to3/20. This pair establishes document scrolling at1597, not a scene cut. The later enlarged Table1-plus-presenter replacement described within the compound window is not shown, so its existence/timing remain unverified here.",
+      "confidence": "HIGH_FOR_SCROLL_AT1597; NOT_ESTABLISHED_FOR_LATER_CUT",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01596_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01597_native.png"
+      ],
+      "limitations": [
+        "Do not promote candidate start1597 to cut onset.",
+        "Surviving1598–1642 interval is inherited candidate metadata, not an observed before/after bracket for the later cut.",
+        "Additional supplied frames would be required to locate any later replacement."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY",
+      "compound_event_certified": false,
+      "component_coverage": {
+        "certified_components": [
+          "Same-viewer document scrolling at1597"
+        ],
+        "unreviewed_components": [
+          "Later viewer enlargement",
+          "Claimed full table/presenter replacement somewhere later in inherited window"
+        ]
+      }
+    },
+    {
+      "id": "EP0058",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT_AND_CHARACTER_RESTAGING",
+      "onset_frame_or_bracket": {
+        "frame": 1816,
+        "before_frame": 1815,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 75.70833333333333
+      },
+      "description": "Table/caption plus left pointer narrator1815 is replaced by lone enlarged/recentered skeptical narrator1816. Document/caption removal and character relocation/pose constitute a composition replacement beyond an isolated face change.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01815_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01816_native.png"
+      ],
+      "limitations": [
+        "No whole-shot duration or caption arithmetic/economic validation is implied."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY"
+    },
+    {
+      "id": "EP0059",
+      "shot_boundary": "YES",
+      "event_type": "HARD_CHARACTER_AND_LAYOUT_REPLACEMENT",
+      "onset_frame_or_bracket": {
+        "frame": 1887,
+        "before_frame": 1886,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 78.66666666666667
+      },
+      "description": "Centered black-haired narrator1886 is replaced by enlarged brown-haired character left and percent-disc/Treasury-paper pair right1887. Character asset/scale/staging plus supporting graphics change discontinuously; not just a pose alteration of the retained narrator.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01886_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01887_native.png"
+      ],
+      "limitations": [
+        "A tiny green stroke mentioned in the candidate description is not confidently identified; its existence/onset is not asserted.",
+        "Pair establishes1887 composition only, not later prop animation."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY"
+    },
+    {
+      "id": "EP0063",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT_TO_WEBSITE",
+      "onset_frame_or_bracket": {
+        "frame": 1982,
+        "before_frame": 1981,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 82.625
+      },
+      "description": "Character/speech-bubble/arrow/percent/Treasury layout1981 is replaced by the Policy Tools archive website capture1982 with no character. Full foreground scene replacement at1982.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01981_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01982_native.png"
+      ],
+      "limitations": [
+        "Visible page/table wording is not independently verified financial/history evidence. Pair establishes entry only."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY"
+    },
+    {
+      "id": "EP0069",
+      "shot_boundary": "YES",
+      "event_type": "HARD_DOCUMENT_AND_LAYOUT_REPLACEMENT_WITH_PRESENTER_ENTRY",
+      "onset_frame_or_bracket": {
+        "frame": 2183,
+        "before_frame": 2182,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 91
+      },
+      "description": "Zoomed archive rate-table content2182 is replaced at2183 by a distinct wider FOMC projections page and right-side pointer narrator. Replaced document content/framing and added presenter establish a new composition, not continuous scrolling within the old visible archive.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02182_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02183_native.png"
+      ],
+      "limitations": [
+        "No browser navigation/source edit mechanism is inferred; only2182/2183 discontinuity is certified."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY"
+    },
+    {
+      "id": "EP0077",
+      "shot_boundary": "YES",
+      "event_type": "HARD_DOCUMENT_AND_COMPOSITION_REPLACEMENT",
+      "onset_frame_or_bracket": {
+        "frame": 2419,
+        "before_frame": 2418,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 100.83333333333333
+      },
+      "description": "FOMC projection table with boxed cells/disc/calendar2418 is replaced at2419 by a Conference Board article capture and left-side pointer narrator. Document and supporting graphics/actor layout all replace the foreground composition.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02418_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02419_native.png"
+      ],
+      "limitations": [
+        "No article facts/projection data or preceding annotation lifecycles are certified; pair establishes2419 entry only."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY"
+    },
+    {
+      "id": "EP0082",
+      "shot_boundary": "UNDETERMINED",
+      "event_type": "LARGE_DOCUMENT_OVERLAY_AND_PRESENTER_REMOVAL_AT_START",
+      "onset_frame_or_bracket": {
+        "observed_change_frame": 2769,
+        "before_frame": 2768,
+        "precision_at_supplied_boundary": "EXACT_NATIVE_ADJACENT_PAIR",
+        "observed_construction": "PARTIAL_COMPOSITION_SUBSTITUTION_WITH_RETAINED_ARTICLE_BACKDROP",
+        "exact_whole_composition_cut_frame": null,
+        "remaining_candidate_frame": 2770,
+        "frame_index": "0-based"
+      },
+      "description": "At2769 a large PDF viewer appears over the article region and the narrator disappears. The old Conference Board article remains visible behind it at the right edge, including header/text/chat icon. Thus2769 is not an observed complete replacement of the article composition. Whether the two-frame2769–2770 candidate completes a full cut at2770 is unverified.",
+      "confidence": "HIGH_FOR_RETAINED_BACKDROP_AND_NEW_PDF; NOT_ESTABLISHED_FOR_WHOLE_WINDOW_CUT",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02768_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02769_native.png"
+      ],
+      "limitations": [
+        "Do not flatten the retained-background hybrid into a full replacement at2769.",
+        "Only2768/2769 seen; one additional native2770 compared with reused2769 is the smallest next boundary check.",
+        "Source-layer implementation/intent remains unknown."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY",
+      "compound_event_certified": false
+    },
+    {
+      "id": "EP0097",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT",
+      "onset_frame_or_bracket": {
+        "frame": 3407,
+        "before_frame": 3406,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 142
+      },
+      "description": "Highlighted paper excerpt/scatterplot plus pointer narrator3406 is replaced at3407 by the US-map mascot and3times label. Principal document, character and graphic layout are all replaced.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f03406_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f03407_native.png"
+      ],
+      "limitations": [
+        "No interpretation of3times as an economic truth or spoken phrase; only3406/3407 boundary certified."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY"
+    },
+    {
+      "id": "EP0101",
+      "shot_boundary": "YES",
+      "event_type": "HARD_COMPOSITION_REPLACEMENT",
+      "onset_frame_or_bracket": {
+        "frame": 3540,
+        "before_frame": 3539,
+        "precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based",
+        "source_pts_s": 147.54166666666666
+      },
+      "description": "Map mascot/3times-in50years/percent-disc/speech-bubble3539 gives way at3540 to an NYT headline card over Fed-building/Treasury-paper icons. Foreground subject set and layout are replaced.",
+      "confidence": "HIGH",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f03539_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f03540_native.png"
+      ],
+      "limitations": [
+        "No headline authentication, source audio or prior eye/gesture lifecycle is certified; pair establishes3540 entry only."
+      ],
+      "review_status": "SUPPLIED_NATIVE_PAIR_REVIEWED",
+      "reviewed_boundary_scope": "SUPPLIED_ADJACENT_PAIR_ONLY"
+    }
+  ],
+  "new_evidence_reads": [
+    {
+      "frame": 836,
+      "source_pts_s": 34.875,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f00836_native.png",
+      "sha256": "a6c9309299055935734cae9b50bc18387115ba8b349b8b555fdb3bcd98eeaeea",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0032",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Smiling pointer narrator left; Kevin M.Warsh portrait/biography text and heading occupy right. Narrator points toward portrait.",
+      "request_order": 1,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 837,
+      "source_pts_s": 34.916666666666664,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f00837_native.png",
+      "sha256": "100323a7afa58206b2e48a497770dc478c074a34cbcb6606f531ef0d6a596a5c",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0032",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Biography/pointer composition removed; large quote text upper canvas, Source:American Banker below, glasses-wearing smiling narrator at desk with CF laptop lower-right. No red arrow group visible yet.",
+      "request_order": 2,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1254,
+      "source_pts_s": 52.291666666666664,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01254_native.png",
+      "sha256": "8a1ad569c6fc5249cf0c2eee50357b431f1df1306956eab358a6283f228e6d8f",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0046",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Centered smiling hands-on-hips narrator surrounded by four drawn certificates: UK TreasuryBond upper-left, United States Treasury lower-left, BOND upper-right, Government of Japan lower-right.",
+      "request_order": 3,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1255,
+      "source_pts_s": 52.333333333333336,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01255_native.png",
+      "sha256": "9254c01c464a8f0d8607ae2e39de3989f7511ef86485211729e3c65dfb9dd25d",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0046",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Narrator and all four certificate drawings absent. Canvas near-white except narrow cropped dark financial-news card strip already visible at extreme upper-right with clipped source/text fragments; not a wholly blank frame.",
+      "request_order": 4,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1478,
+      "source_pts_s": 61.625,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01478_native.png",
+      "sha256": "aec712d70634a13c081506c5034691e267b419ae2755d31b67cb09be2e0213ba",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0050",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Large FT headline card top with highlighted Treasury-yield headline/red5.04% box; eye-bearing Earth lower-left, orange percent disc lower-middle, United States Treasury paper lower-right.",
+      "request_order": 5,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1479,
+      "source_pts_s": 61.666666666666664,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01479_native.png",
+      "sha256": "459d28addedaeba8db5d9768616f0647dea6fa74d4d2679b0c0064b7fc69572b",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0050",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Headline/Earth/disc/Treasury graphics absent; PDF viewer with dark toolbar/sidebar and page1/20 at100% shows Landings,Soft and Hard:The Federal Reserve,1965–2022, Alan S.Blinder title/body page.",
+      "request_order": 6,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1596,
+      "source_pts_s": 66.54166666666667,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01596_native.png",
+      "sha256": "ad65f1bd7664bf01929fa4df5492ced27435ef46bff2211a81519aeef37b08e3",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0054",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Same Landings PDF viewer at100%, counter2/20; main pane shows lower page2 with blue-selected sentence and start of next page below; dark sidebar/toolbars retained.",
+      "request_order": 7,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1597,
+      "source_pts_s": 66.58333333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01597_native.png",
+      "sha256": "37f09ee1f330c7124f258f969bbfb61b2dbebaf8c05fd9e939a5f007bbd8808c",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0054",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Same PDF viewer size/chrome at100%, counter3/20; same selected sentence/page2 footer has moved far upward, page3 Goals and Definitions occupies main pane. No presenter/full-table replacement.",
+      "request_order": 8,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1815,
+      "source_pts_s": 75.66666666666667,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01815_native.png",
+      "sha256": "2d14460f01b82abc77d9bcc6c4e6419e1be3e63a6776011c5c4d8b6b635fdb2b",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0058",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Smiling pointer narrator left; enlarged Table1 Eleven Monetary Policy Tightenings since1965 upper-right with yellow row highlights; handwritten1½year,added4% lower-right.",
+      "request_order": 9,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1816,
+      "source_pts_s": 75.70833333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01816_native.png",
+      "sha256": "dfd5749bbcfdf750f87c09078f5fe30b346b8d7917f8ef13c7a7fbed4ccfbe22",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0058",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Table, caption and pointer absent; lone centered full-body skeptical black-haired narrator with uneven brows, flat mouth, raised forearm and other hand at hip.",
+      "request_order": 10,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1886,
+      "source_pts_s": 78.625,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01886_native.png",
+      "sha256": "319df884a5ce278e47cfa98c1280733cb7d4d44b4aa6e6a2330c4a1320869ea1",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0059",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Lone centered full-body skeptical black-haired narrator with raised forearm/flat mouth, white canvas.",
+      "request_order": 11,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1887,
+      "source_pts_s": 78.66666666666667,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01887_native.png",
+      "sha256": "970bf7811400cdac08a0eac60f4e5c39bd2303225c41afe16fe849ddbe8021d6",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0059",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. New much larger brown-haired tan-faced character at left, body bottom-cropped, one forearm raised. Small orange percent disc and United States Treasury paper occupy right. No confident tiny green stroke identified.",
+      "request_order": 12,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1981,
+      "source_pts_s": 82.58333333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01981_native.png",
+      "sha256": "8f2e12569d6d27fcc8a2814545aefad9f45b70f40abed55a4f34ae6f212295db",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0063",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Brown-haired character left with open arms; large Done! speech bubble center, green rising zigzag behind, orange percent disc and Treasury paper right.",
+      "request_order": 13,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 1982,
+      "source_pts_s": 82.625,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f01982_native.png",
+      "sha256": "bd7ef296425a78dc820aeb77a1d54fd75803689dc3f27140d86d2191d40a10f6",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0063",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. All character/graphic elements absent; Fed Policy Tools/Open Market Operations Archive website screenshot occupies left two-thirds,2002/2001 rate tables visible, wide white margin right.",
+      "request_order": 14,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 2182,
+      "source_pts_s": 90.95833333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02182_native.png",
+      "sha256": "6e14d8ad8b0060e9041fce633156caf0d9e72b02dfadcbce91c34a341719cc7b",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0069",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Enlarged website archive crop with1998/1997/1996 rate tables and orange/yellow highlighted rows; no narrator, site header outside crop.",
+      "request_order": 15,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 2183,
+      "source_pts_s": 91,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02183_native.png",
+      "sha256": "453e43e2a6db974fb95b7d482a78b783657088d7ac6f37e66213129273433640",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0069",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. New wider Fed Federal Open Market Committee page with September16,2026 projections-materials accessible-version heading/paragraph; smiling pointer narrator overlays right/bottom. Old rate-table crop absent.",
+      "request_order": 16,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 2418,
+      "source_pts_s": 100.79166666666667,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02418_native.png",
+      "sha256": "d98c6a3cb2bc8cab543539b88f72b0aa96642eb43117ae6cd05e49c2741987e0",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0077",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Enlarged FOMC rate-projection table fills left/center, blue2026column box and magenta row boxes; orange percent disc upper-right and red calendar lower-right; no narrator.",
+      "request_order": 17,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 2419,
+      "source_pts_s": 100.83333333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02419_native.png",
+      "sha256": "7e788dc1ab9adf115ff68764be150b86bcfe27f82827adf306f7131ea3c4e239",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0077",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Old table/disc/calendar absent; smiling pointer narrator left and Conference Board webpage right showing Trusted Insights for What's Ahead and bullet text.",
+      "request_order": 18,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 2768,
+      "source_pts_s": 115.375,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02768_native.png",
+      "sha256": "c82e6577c2e3daea4b4c062221707eb9b2e32dc2ba6ac175b226e6076c34f3d5",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0082",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Frowning pointer narrator left and Conference Board article right; yellow-highlighted bullet about three consecutive hikes, site header/chat icon visible.",
+      "request_order": 19,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 2769,
+      "source_pts_s": 115.41666666666667,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f02769_native.png",
+      "sha256": "68a0059f72faa769d15d04c395486404eff423dc0afac31e725ad2e9c0764f4d",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0082",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Narrator absent; large PDF viewer/title page centered-left, showing NYFed Staff Reports/Monetary Cycles,Financial Cycles,and the Business Cycle/no421/January2010. Conference Board header/body/chat icon remain visibly exposed behind PDF along right edge.",
+      "request_order": 20,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 3406,
+      "source_pts_s": 141.95833333333334,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f03406_native.png",
+      "sha256": "9fe97b6940864ebf25168bc4b69a94ccdaff01287b35e607b55d25a509b58aa9",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0097",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Enlarged paper excerpt left with orange/yellow/green text emphasis, scatterplot below and dark horizontal strip at top; neutral pointer narrator right.",
+      "request_order": 21,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 3407,
+      "source_pts_s": 142,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f03407_native.png",
+      "sha256": "886a99c7624946eca27de44627b8e5148b2d18d32ec178f1c0be20257eb74f67",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0097",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Paper/chart/narrator absent. Green US-map mascot with Alaska/Hawaii, oval eyes, bent arms and legs occupies left/center; handwritten3times upper-right on white.",
+      "request_order": 22,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 3539,
+      "source_pts_s": 147.5,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f03539_native.png",
+      "sha256": "31ca238ca47a71c4ad4be52660fca9a66333100aa3930c1d986c153ea2b3f8c3",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0101",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. US-map mascot left with half-lidded eyes and raised thumb;3times/in50years text upper-right, orange percent disc right, Crisis averted! bubble lower-right.",
+      "request_order": 23,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    },
+    {
+      "frame": 3540,
+      "source_pts_s": 147.54166666666666,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/native_cut_batch02_v1/f03540_native.png",
+      "sha256": "e526352ffd8941df902a44b6f2e1d9464b8fc4301b10c03f3d0d69f083da51d6",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "batch_id": "CUT2_EP0101",
+      "tool_call_id": null,
+      "witness": "Actual native1920x1080 return inspected once. Map/text/disc/bubble absent; large NYT headline card across top, small Federal Reserve building lower-left and United States Treasury paper lower-right on white.",
+      "request_order": 24,
+      "hash_status": "LOCAL_PNG_SHA256_VERIFIED_AGAINST_SUPPLIED_MANIFEST",
+      "display_count_this_task": 1,
+      "source_or_render": "SOURCE_VIDEO_NATIVE_DERIVATIVE",
+      "tool": "functions.exec -> tools.view_image; image(result.image_url)",
+      "tool_call_id_status": "NOT_EXPOSED_BY_VIEW_IMAGE_RETURN",
+      "tool_trace_binding": "One complete case/two images per functions.exec batch; batch_id and request_order preserve native-return mapping for independent parent trace audit."
+    }
+  ],
+  "pending_new_image_paths": [],
+  "pending_case_ids": [],
+  "unresolved_case_ids": [
+    "EP0054",
+    "EP0082"
+  ],
+  "extra_exact_frames_needed": [
+    {
+      "id": "EP0054",
+      "frames": [
+        1641,
+        1642
+      ],
+      "reason": "Small adjacent endpoint check at the end of the inherited compound window to test whether the alleged table/presenter replacement occurs on that edge. Existing1596/1597 only proves same-viewer scrolling.",
+      "precision_limit": "These are requested tests, not an assertion that the cut occurs1642. If both show the same later state, its earlier onset still needs an adaptive native-boundary search within1598–1641; no arbitrary exact cut frame is assigned.",
+      "required_for": "LOCATE_OR_REFUTE_LATER_COMPOUND_CUT",
+      "requested_now_not_viewed": true
+    },
+    {
+      "id": "EP0082",
+      "frames": [
+        2770
+      ],
+      "reuse_without_redisplay_frame": 2769,
+      "reason": "Only remaining frame of the supplied two-frame compound candidate. Compare new2770 with already-reviewed2769 to see whether retained Conference Board backdrop disappears or the foreground overlay persists.",
+      "precision_limit": "No disappearance/cut at2770 is presumed.",
+      "required_for": "RESOLVE_REMAINING_ONE_FRAME_COMPOUND_BOUNDARY",
+      "requested_now_not_viewed": true
+    }
+  ],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "usage_at_stop": {
+    "primary_used_percent": 18,
+    "weekly_used_percent": 81,
+    "paid_credits_balance": "0",
+    "post_case_usage": [
+      {
+        "case_id": "EP0032",
+        "primary_used_percent": 1,
+        "weekly_used_percent": 78
+      },
+      {
+        "case_id": "EP0046",
+        "primary_used_percent": 2,
+        "weekly_used_percent": 79
+      },
+      {
+        "case_id": "EP0050",
+        "primary_used_percent": 3,
+        "weekly_used_percent": 79
+      },
+      {
+        "case_id": "EP0054",
+        "primary_used_percent": 4,
+        "weekly_used_percent": 79
+      },
+      {
+        "case_id": "EP0058",
+        "primary_used_percent": 6,
+        "weekly_used_percent": 79
+      },
+      {
+        "case_id": "EP0059",
+        "primary_used_percent": 8,
+        "weekly_used_percent": 79
+      },
+      {
+        "case_id": "EP0063",
+        "primary_used_percent": 9,
+        "weekly_used_percent": 80
+      },
+      {
+        "case_id": "EP0069",
+        "primary_used_percent": 10,
+        "weekly_used_percent": 80
+      },
+      {
+        "case_id": "EP0077",
+        "primary_used_percent": 11,
+        "weekly_used_percent": 80
+      },
+      {
+        "case_id": "EP0082",
+        "primary_used_percent": 12,
+        "weekly_used_percent": 80
+      },
+      {
+        "case_id": "EP0097",
+        "primary_used_percent": 16,
+        "weekly_used_percent": 81
+      },
+      {
+        "case_id": "EP0101",
+        "primary_used_percent": 18,
+        "weekly_used_percent": 81
+      }
+    ],
+    "measurement": "Fresh usage after each two-native-image case, including final EP0101. Start snapshot was0%primary/78%weekly; no credits/reset used.",
+    "stop_policy": "Stop NEW reads at83%primary or near95%weekly."
+  },
+  "preserved_prior_outputs": {
+    "batch01_sealed_v1_sha256": "5717e79642984ac9bdd32e625b92dfd573a49bf21918ec7b961075b3dcf2d644",
+    "batch01_resume_v2_sha256": "cf447363c3a391b53185117e63e5478314637911f71156c69163b1c052b9e3d0"
+  },
+  "limitations": [
+    "All24 supplied requests have actual successful native returns; zero supplied paths remain pending. Unresolved semantic/cut timing is distinct from pending image reads.",
+    "Exact cut rulings certify only the inspected adjacent boundary; no complete compound animation, surrounding trajectory or whole-shot duration is certified.",
+    "EP0054 and EP0082 remain unresolved for their broader inherited cut claims. They are not upgraded to full exact-event certification.",
+    "Provider invocation IDs are not exposed by tools.view_image, so tool_call_id is null rather than invented; batch/order/path/hash/witness receipts support the parent independent call-ID audit.",
+    "No old source/prototype images redisplayed, no new agents/extraction, and no raw source, prior outputs, Git, locks or schedulers changed.",
+    "No hearing, source factual/economic authentication, global shot count,100ms/semantic floor, whole-video production or CT completion claimed."
+  ]
+}

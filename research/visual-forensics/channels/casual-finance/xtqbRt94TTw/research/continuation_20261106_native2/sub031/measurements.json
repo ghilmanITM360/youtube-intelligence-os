@@ -1,0 +1,89 @@
+{
+  "decode_command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-i",
+    "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We\u2019re About to Break It - Casual Finance (1080p, h264).mp4",
+    "-vf",
+    "select='between(n,1225,1230)'",
+    "-fps_mode",
+    "passthrough",
+    "-pix_fmt",
+    "rgb24",
+    "-f",
+    "rawvideo",
+    "pipe:1"
+  ],
+  "method": "Full native decoded RGB24 SHA; adjacent pixel sum abs RGB difference >60, max channel delta. Measurements do not establish semantic or audio status.",
+  "rows": [
+    {
+      "frame": 1225,
+      "pts_fraction": "1226/24",
+      "decoded_RGB_sha256": "0d2146e10f170bab65572ff1dd1b097123f1cb8cc52898267e9f1938309ae555",
+      "changed_gt60": null,
+      "changed_bbox": null,
+      "maximum_channel_delta": null
+    },
+    {
+      "frame": 1226,
+      "pts_fraction": "1227/24",
+      "decoded_RGB_sha256": "affdc0b5181eb3b8c9dbb4899e273b9c7f8592494ee93b3998ed2c87c5db63ad",
+      "changed_gt60": 0,
+      "changed_bbox": null,
+      "maximum_channel_delta": 3
+    },
+    {
+      "frame": 1227,
+      "pts_fraction": "1228/24",
+      "decoded_RGB_sha256": "4c32b55704300ac53ee4cc6af781be68485150b1ffa9e5dc41fbb3c0e5f5ec00",
+      "changed_gt60": 1,
+      "changed_bbox": [
+        1039,
+        652,
+        1039,
+        652
+      ],
+      "maximum_channel_delta": 23
+    },
+    {
+      "frame": 1228,
+      "pts_fraction": "1229/24",
+      "decoded_RGB_sha256": "ddc5c93de6e0e813b10c6be73c743f321cd78857a199dc36e67bb8ac8508e6b2",
+      "changed_gt60": 1,
+      "changed_bbox": [
+        1039,
+        652,
+        1039,
+        652
+      ],
+      "maximum_channel_delta": 23
+    },
+    {
+      "frame": 1229,
+      "pts_fraction": "1230/24",
+      "decoded_RGB_sha256": "ca5ed617e7e188ca3bef0fd766df8b314be28cd9a0b11551a8d18248775aaa7d",
+      "changed_gt60": 5758,
+      "changed_bbox": [
+        799,
+        192,
+        1121,
+        935
+      ],
+      "maximum_channel_delta": 255
+    },
+    {
+      "frame": 1230,
+      "pts_fraction": "1231/24",
+      "decoded_RGB_sha256": "eca9ef44191ecc6c1ef113b53f3a967f344e363b2e762b0d9755a2009714ffbe",
+      "changed_gt60": 3,
+      "changed_bbox": [
+        802,
+        361,
+        945,
+        626
+      ],
+      "maximum_channel_delta": 41
+    }
+  ]
+}

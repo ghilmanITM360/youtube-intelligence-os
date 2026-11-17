@@ -1,0 +1,488 @@
+# Reconstruction blueprint - original asset system derived from Xkk9GnnJHBg
+New ORIGINAL assets and motion only. No source screenshot, footage, logo or character drawing is copied; third-party items (`IMG_*`, `ICON_*`) are replaced with licensed or self-made equivalents and your own data. Timings at 24 fps, 1920x1080.
+
+## Modules (original rebuild; derived from measured patterns)
+1. **Cast and set kit**: a stick-man host with pointer, green country map characters (USA, China, Russia, Japan, a South-American country), an Earth with eyes and teardrop, oil barrels, gas cylinders, derricks, a green chalkboard, grey robots and a desk-and-laptop scene. Redraw all of it as new original assets; do not trace the source.
+2. **Hard-cut scene chain**: 206 hard cuts, median shot 2.1 s (0.29-14.96 s); 190 cuts land on encoder I-frames and 16 do not, so author cuts as true edits and let the encoder place keyframes.
+3. **One-frame pop-in vocabulary**: text, bubbles, arrows, flags and props appear in a single frame with no easing; 360 of 442 change episodes are one frame. Reuse one drawn asset per prop so repeated pop-ins match pixel for pixel.
+4. **Counting cadence**: add counted items at fixed gaps (small props every 4-8 frames, flags every 13-19 frames) so an enumerated list reads as a build, as in the barrel pile, red arrows, robots and flags.
+5. **Barrel-row fade**: show six barrels, then fade four out over ten frames to mark scarcity; reuse the same fade each time (f4099, f4578, f6900).
+6. **Price zigzag**: dollar sign and barrel at upper left with a red zigzag drawn over 19 frames (f1957, f3884, f4163, f4593).
+7. **Chalkboard host beat**: cut to the host at a board; either text is already present or it is swapped in 11-52 frames after a blank-board cut (15 chalkboard cuts); the pointer arm shifts as a POSE change.
+8. **Stock-card montage**: a quick run of dark stock cards 7-8 frames apart (f6840-f6876) after a logo and one card held with a red ellipse and a wow! caption; use your own charts and tickers.
+9. **Annotation marks**: red ellipses, red arrows and red crosses placed over a chart, map or collage; a red cross can be redrawn in a second variant after a two-frame gap (f2984, f2988, f2990).
+10. **Sponsor block**: a bridge sentence, an interface screen-recording insert with scroll bursts (three steps of 267,000-397,000 px per frame), a host pitch, and a 28-pixel yellow progress bar that grows 1.25 px per frame over 1,541 frames; replace with your own disclosed sponsor and keep the disclosure explicit.
+11. **Scale moves used sparingly**: a push-in on a map (x1.5 over 2.5 s), an interface crop (x1.2), an Earth shrink (x0.4) and a map grow (x1.8); the other 42 measured states stay locked.
+12. **Third-party insert slot**: maps, charts, cards, posters, logos and two live-action reaction clips are replaced with licensed or self-made equivalents; never copy the source items.
+13. **Codec note**: 24 fps constant frame rate, 219 I-frames about every 2.4 s on average; do not expect interpolated frames or 30 fps pulldown.
+
+
+## Editor timeline (frames)
+- S001 f0-f15 (16 fr): START - Stick man opens on blank canvas
+- S002 f16-f32 (17 fr): CUT - Earth globe without a face
+- S003 f33-f42 (10 fr): POSE - Earth shrinks left and gets eyes
+- S004 f43-f63 (21 fr): POP_IN - Black oil barrel at right
+- S005 f64-f78 (15 fr): POP_IN - Barrel tips over spilling oil
+- S006 f79-f105 (27 fr): CUT - Frowning stick man
+- S007 f106-f135 (30 fr): POSE - Stick man smiles
+- S008 f136-f155 (20 fr): CUT - Tumbling oil barrel on blank canvas
+- S009 f156-f193 (38 fr): POP_IN - Green gas cylinder tumbles in from the top right
+- S010 f194-f241 (48 fr): CUT - USA and Russia characters at a round table
+- S011 f242-f300 (59 fr): POP_IN - Speech bubble What do we do now
+- S012 f301-f307 (7 fr): CUT - Japan map character alone
+- S013 f308-f315 (8 fr): POP_IN - Brazil map character appears
+- S014 f316-f324 (9 fr): POP_IN - USA map character appears
+- S015 f325-f345 (21 fr): POP_IN - Red arrows toward the centre
+- S016 f346-f373 (28 fr): POP_IN - Question mark
+- S017 f374-f386 (13 fr): CUT - Strait of Hormuz map
+- S018 f387-f454 (68 fr): POP_IN+ZOOM_IN - Red ellipse over the strait
+- S019 f455-f488 (34 fr): POP_IN - Red ellipse replaced by curved arrow
+- S020 f489-f539 (51 fr): POP_IN - Second red arrow at left
+- S021 f540-f579 (40 fr): CUT - Stick man at green board Every day
+- S022 f580-f643 (64 fr): TEXT_SWAP - Board text becomes 20 percent of all oil
+- S023 f644-f694 (51 fr): CUT - Dark quote card about the Strait of Hormuz
+- S024 f695-f721 (27 fr): CUT - Hormuz map with rosette badge
+- S025 f722-f751 (30 fr): CUT - Smiling stick man
+- S026 f752-f769 (18 fr): POSE - Stick man forearm change
+- S027 f770-f802 (33 fr): CUT - Strait of Hormuz hand lettering
+- S028 f803-f815 (13 fr): POP_IN - Earth globe at right
+- S029 f816-f828 (13 fr): POP_IN - Money bags on the Earth
+- S030 f829-f846 (18 fr): POSE - Earth eyes look forward
+- S031 f847-f865 (19 fr): POP_IN - Worried Earth with teardrop
+- S032 f866-f890 (25 fr): CUT - Stick man at board What's going on
+- S033 f891-f916 (26 fr): POSE - Pointer arm lowers
+- S034 f917-f958 (42 fr): TEXT_SWAP - Board text becomes What's really going on
+- S035 f959-f983 (25 fr): CUT - Hormuz map after the board
+- S036 f984-f990 (7 fr): POP_IN - Green map character peeks in at top left
+- S037 f991-f996 (6 fr): POP_IN - Single oil barrel at right
+- S038 f997-f1002 (6 fr): POP_IN - Barrel cluster
+- S039 f1003-f1008 (6 fr): POP_IN - Big business tower
+- S040 f1009-f1025 (17 fr): POP_IN - Banknotes drop in
+- S041 f1026-f1091 (66 fr): CUT - Stick man at board What
+- S042 f1092-f1133 (42 fr): TEXT_SWAP - Board text becomes WHO
+- S043 f1134-f1165 (32 fr): CUT - Spilled oil barrel
+- S044 f1166-f1189 (24 fr): POP_IN - Earth globe at right
+- S045 f1190-f1201 (12 fr): CUT - Frowning stick man
+- S046 f1202-f1213 (12 fr): POSE - Stick man forearm change
+- S047 f1214-f1258 (45 fr): CUT - You're screwed weight with tiny green character
+- S048 f1259-f1276 (18 fr): CUT - USA map character with banknote
+- S049 f1277-f1294 (18 fr): POP_IN - heh text on the USA
+- S050 f1295-f1320 (26 fr): CUT - Neutral stick man
+- S051 f1321-f1340 (20 fr): POSE - Stick man forearm change
+- S052 f1341-f1350 (10 fr): CUT - Headband character with hands behind head
+- S053 f1351-f1379 (29 fr): POP_IN - Red cross over the headband character
+- S054 f1380-f1390 (11 fr): CUT - Stick man at blank green board
+- S055 f1391-f1414 (24 fr): TEXT_SWAP - Board text POSITIONING
+- S056 f1415-f1454 (40 fr): CUT - Muted figure with brown tie
+- S057 f1455-f1497 (43 fr): POP_IN - Speech bubble This must be like the 2000s
+- S058 f1498-f1545 (48 fr): CUT - Middle East political map
+- S059 f1546-f1570 (25 fr): POP_IN - Oil barrel beside the Middle East map
+- S060 f1571-f1592 (22 fr): CUT - Close-up of green USA character
+- S061 f1593-f1616 (24 fr): POP_IN - oh no text
+- S062 f1617-f1644 (28 fr): CUT - Stick man neutral
+- S063 f1645-f1667 (23 fr): POSE - Stick man smiles
+- S064 f1668-f1695 (28 fr): CUT - Stick man erased, 20 years ago text starts
+- S065 f1696-f1727 (32 fr): CUT - USA map character replaces text
+- S066 f1728-f1762 (35 fr): POP_IN - Speech bubble I need oil now
+- S067 f1763-f1777 (15 fr): CUT - Smiling stick man
+- S068 f1778-f1805 (28 fr): CUT - EIA energy chart with 60 percent barrel
+- S069 f1806-f1874 (69 fr): POP_IN - Red ellipse around the chart tooltip
+- S070 f1875-f1882 (8 fr): CUT - Earth globe after the chart
+- S071 f1883-f1889 (7 fr): POP_IN - Single barrel beside the Earth
+- S072 f1890-f1906 (17 fr): POP_IN - Barrel stack of three
+- S073 f1907-f1922 (16 fr): POSE - Barrels tipped into a diagonal pile
+- S074 f1923-f1936 (14 fr): CUT - Smiling stick man
+- S075 f1937-f1956 (20 fr): POSE - Stick man looks shocked
+- S076 f1957-f1981 (25 fr): CUT - Dollar sign and barrel with rising red zigzag
+- S077 f1982-f2008 (27 fr): CUT - Crying banknote character
+- S078 f2009-f2047 (39 fr): CUT - USA with money bags and pause icon
+- S079 f2048-f2058 (11 fr): CUT - Middle East map and oil barrel
+- S080 f2059-f2078 (20 fr): POP_IN - Red arrow right of the barrel
+- S081 f2079-f2100 (22 fr): POP_IN - USA character with oh no my economy
+- S082 f2101-f2166 (66 fr): CUT - Earth on a canvas that fades to grey
+- S083 f2167-f2170 (4 fr): CUT - 2000s lettering
+- S084 f2171-f2176 (6 fr): POP_IN - Red arrow down-right
+- S085 f2177-f2182 (6 fr): POP_IN - 2010s lettering
+- S086 f2183-f2187 (5 fr): POP_IN - Second red arrow
+- S087 f2188-f2209 (22 fr): POP_IN - 2020s lettering
+- S088 f2210-f2236 (27 fr): POP_IN - Stick man peeks in at lower left
+- S089 f2237-f2250 (14 fr): CUT - Horizontal drilling rig cross-section
+- S090 f2251-f2273 (23 fr): POP_IN - Fracking water layer and fractures
+- S091 f2274-f2278 (5 fr): CUT - USA map character with plain eyes
+- S092 f2279-f2288 (10 fr): POP_IN - First oil derrick on the map
+- S093 f2289-f2294 (6 fr): POP_IN - Derricks across the USA
+- S094 f2295-f2332 (38 fr): POP_IN - Derrick in the south-west
+- S095 f2333-f2347 (15 fr): POSE - USA eyes change
+- S096 f2348-f2364 (17 fr): POP_IN - Translucent green barrels stack up
+- S097 f2365-f2386 (22 fr): CUT - Smiling stick man
+- S098 f2387-f2414 (28 fr): CUT - USA character asks for oil
+- S099 f2415-f2419 (5 fr): TEXT_SWAP - Bubble becomes Wait I can get it myself
+- S100 f2420-f2460 (41 fr): POP_IN - Three derricks below the map
+- S101 f2461-f2480 (20 fr): CUT - Close-up USA with banknote and barrel
+- S102 f2481-f2504 (24 fr): POP_IN - yeah mama text
+- S103 f2505-f2551 (47 fr): CUT - Timeline 2000s to 2010s arrow
+- S104 f2552-f2573 (22 fr): CUT - USA character with pixel sunglasses
+- S105 f2574-f2580 (7 fr): CUT - USA close-up with oil producers chart
+- S106 f2581-f2588 (8 fr): POP_IN - Black barrels at left of the chart
+- S107 f2589-f2622 (34 fr): POP_IN - More barrels
+- S108 f2623-f2623 (1 fr): CUT - Middle East map and barrel
+- S109 f2624-f2634 (11 fr): POP_IN - Red arrow right of the barrel
+- S110 f2635-f2658 (24 fr): POP_IN - USA character with oh no my economy
+- S111 f2659-f2682 (24 fr): POP_IN - Red cross over the map, barrel and USA
+- S112 f2683-f2701 (19 fr): CUT - Smiling stick man
+- S113 f2702-f2722 (21 fr): CUT - USA character with three derricks
+- S114 f2723-f2773 (51 fr): POP_IN - Speech bubble My precious children
+- S115 f2774-f2810 (37 fr): CUT - Stick man at empty green board
+- S116 f2811-f2850 (40 fr): TEXT_SWAP - Board text Who is in danger then
+- S117 f2851-f2901 (51 fr): CUT - Stick man reading a newspaper
+- S118 f2902-f2968 (67 fr): CUT - Hormuz map with two barrels
+- S119 f2969-f2983 (15 fr): CUT - Plain USA map
+- S120 f2984-f2987 (4 fr): POP_IN - Red cross over the USA
+- S121 f2988-f2989 (2 fr): POP_OUT - Red cross blinks off
+- S122 f2990-f3017 (28 fr): POP_IN - Red cross returns
+- S123 f3018-f3039 (22 fr): CUT - Stick man with oil flow chart
+- S124 f3040-f3055 (16 fr): POP_IN - Red ellipse on the chart's smallest flow
+- S125 f3056-f3079 (24 fr): POP_IN - tiny text
+- S126 f3080-f3084 (5 fr): CUT - Single barrel
+- S127 f3085-f3088 (4 fr): POP_IN - Second barrel
+- S128 f3089-f3093 (5 fr): POP_IN - Third barrel in the pile
+- S129 f3094-f3099 (6 fr): POP_IN - Fourth barrel
+- S130 f3100-f3104 (5 fr): POP_IN - Fifth barrel
+- S131 f3105-f3108 (4 fr): POP_IN - Sixth barrel
+- S132 f3109-f3152 (44 fr): POP_IN - Middle East map above the barrels
+- S133 f3153-f3176 (24 fr): POP_IN - Asia political map replaces the Middle East map
+- S134 f3177-f3204 (28 fr): POP_OUT - Asia map disappears
+- S135 f3205-f3220 (16 fr): POP_IN - China flag and a barrel
+- S136 f3221-f3237 (17 fr): POP_IN - India flag
+- S137 f3238-f3244 (7 fr): POP_IN - Japan flag
+- S138 f3245-f3256 (12 fr): POP_IN - Barrel by the Japan flag
+- S139 f3257-f3260 (4 fr): POP_IN - South Korea flag
+- S140 f3261-f3284 (24 fr): POSE - Barrels shuffle in the pile
+- S141 f3285-f3301 (17 fr): POSE - Barrels fade out
+- S142 f3302-f3355 (54 fr): POSE+ANIM - Flags slide into a stair layout
+- S143 f3356-f3388 (33 fr): POP_IN - 75 percent lettering
+- S144 f3389-f3438 (50 fr): POP_IN - of all lettering and barrel
+- S145 f3439-f3443 (5 fr): CUT - Strait of Hormuz oil flow chart
+- S146 f3444-f3447 (4 fr): POP_IN - First red arrow at the chart
+- S147 f3448-f3452 (5 fr): POP_IN - Second red arrow
+- S148 f3453-f3457 (5 fr): POP_IN - Third red arrow
+- S149 f3458-f3521 (64 fr): POP_IN - Fourth red arrow
+- S150 f3522-f3544 (23 fr): CUT - Frowning stick man
+- S151 f3545-f3607 (63 fr): CUT - Four country characters
+- S152 f3608-f3644 (37 fr): CUT - Stick man at board Who is affected
+- S153 f3645-f3691 (47 fr): POSE - Stick man mouth change
+- S154 f3692-f3724 (33 fr): CUT - USA map with derricks
+- S155 f3725-f3753 (29 fr): POP_IN - Three barrels below the map
+- S156 f3754-f3783 (30 fr): POP_IN - Green dollar sign
+- S157 f3784-f3816 (33 fr): CUT - Dollar sign and one barrel
+- S158 f3817-f3837 (21 fr): POP_IN - Earth globe appears
+- S159 f3838-f3848 (11 fr): CUT - Supply lettering
+- S160 f3849-f3864 (16 fr): POP_IN - Three barrels under Supply
+- S161 f3865-f3870 (6 fr): POP_OUT - One barrel removed
+- S162 f3871-f3883 (13 fr): POP_OUT - Second barrel removed
+- S163 f3884-f3928 (45 fr): POP_IN - Dollar sign and barrel at lower right
+- S164 f3929-f3951 (23 fr): CUT - Frowning stick man
+- S165 f3952-f3980 (29 fr): POSE - Stick man smiles
+- S166 f3981-f4031 (51 fr): CUT - Asia political map
+- S167 f4032-f4050 (19 fr): CUT - Large dollar sign and barrel
+- S168 f4051-f4074 (24 fr): POP_IN - Red cross over dollar and barrel
+- S169 f4075-f4098 (24 fr): CUT - Row of six barrels
+- S170 f4099-f4119 (21 fr): POSE - Four barrels fade out
+- S171 f4120-f4143 (24 fr): CUT - Neutral stick man
+- S172 f4144-f4162 (19 fr): POSE - Stick man forearm change
+- S173 f4163-f4192 (30 fr): CUT - Dollar sign and barrel with rising zigzag
+- S174 f4193-f4217 (25 fr): POP_IN - Japan map character
+- S175 f4218-f4239 (22 fr): CUT - Russia close-up
+- S176 f4240-f4267 (28 fr): POP_IN - oh no text
+- S177 f4268-f4294 (27 fr): CUT - Stick man at empty green board
+- S178 f4295-f4313 (19 fr): TEXT_SWAP - Board text PROBLEMS
+- S179 f4314-f4327 (14 fr): CUT - Smoking factory
+- S180 f4328-f4343 (16 fr): POSE - Smoke from two chimneys vanishes
+- S181 f4344-f4365 (22 fr): CUT - Grey-haired person says no energy for heating
+- S182 f4366-f4399 (34 fr): CUT - Two machines with green pipes
+- S183 f4400-f4430 (31 fr): CUT - Neutral stick man
+- S184 f4431-f4476 (46 fr): POSE - Stick man forearm change
+- S185 f4477-f4516 (40 fr): CUT - Stick man erased, The story shifts types in
+- S186 f4517-f4532 (16 fr): CUT - Tipped barrel and oil spill
+- S187 f4533-f4553 (21 fr): CUT - Stick man at board POSITIONING
+- S188 f4554-f4577 (24 fr): CUT - Row of six barrels
+- S189 f4578-f4592 (15 fr): POSE - Four barrels fade out
+- S190 f4593-f4625 (33 fr): CUT - Dollar sign and barrel with rising zigzag
+- S191 f4626-f4653 (28 fr): CUT - Headband man giving a thumbs up
+- S192 f4654-f4677 (24 fr): POP_IN - Second man holding a brown box
+- S193 f4678-f4699 (22 fr): CUT - Smiling stick man
+- S194 f4700-f4750 (51 fr): CUT - USA close-up with pixel sunglasses
+- S195 f4751-f4797 (47 fr): CUT - USA character with dollar sign and barrel
+- S196 f4798-f4837 (40 fr): CUT - USA close-up with banknote
+- S197 f4838-f4859 (22 fr): CUT - Derrick on the horizon
+- S198 f4860-f4882 (23 fr): CUT - USA with barrels and Earth
+- S199 f4883-f4893 (11 fr): CUT - Big business tower
+- S200 f4894-f4916 (23 fr): POP_IN - Three derricks
+- S201 f4917-f4944 (28 fr): CUT - Oil producers bar chart
+- S202 f4945-f4969 (25 fr): POP_IN - Small USA character at the chart
+- S203 f4970-f5007 (38 fr): POP_IN - Three small barrels at the chart
+- S204 f5008-f5056 (49 fr): CUT - Tipped barrel and oil spill
+- S205 f5057-f5076 (20 fr): POP_IN - Worried Earth with teardrop
+- S206 f5077-f5112 (36 fr): CUT - USA character with banknote
+- S207 f5113-f5126 (14 fr): POP_IN - Big business tower returns
+- S208 f5127-f5145 (19 fr): POP_IN - Derrick beside the tower
+- S209 f5146-f5192 (47 fr): CUT - Derrick, spill and reaction-video inset
+- S210 f5193-f5232 (40 fr): CUT - Stick man with flashlight
+- S211 f5233-f5236 (4 fr): POP_IN - Flashlight beam on
+- S212 f5237-f5240 (4 fr): POP_OUT - Beam off
+- S213 f5241-f5269 (29 fr): POP_IN - Beam flickers on
+- S214 f5270-f5276 (7 fr): CUT - Green gas cylinder and Natural
+- S215 f5277-f5299 (23 fr): POP_IN - gas lettering
+- S216 f5300-f5341 (42 fr): CUT - Middle East map
+- S217 f5342-f5425 (84 fr): POP_IN - Gas cylinders pile in beside the map
+- S218 f5426-f5467 (42 fr): CUT - Hormuz map with two barrels
+- S219 f5468-f5528 (61 fr): POSE - Barrels on the map become gas cylinders
+- S220 f5529-f5557 (29 fr): CUT - Single gas cylinder
+- S221 f5558-f5581 (24 fr): POP_IN - 20 percent of supply lettering
+- S222 f5582-f5654 (73 fr): POP_IN - Earth globe at right
+- S223 f5655-f5659 (5 fr): CUT - Stick man at Natural gas exports document
+- S224 f5660-f5754 (95 fr): POP_IN+MICRO - Yellow highlight on the first line
+- S225 f5755-f5827 (73 fr): POP_IN - Gas cylinder beside the stick man
+- S226 f5828-f5850 (23 fr): CUT - Hormuz map
+- S227 f5851-f5869 (19 fr): POP_IN - Red cross over the map
+- S228 f5870-f5903 (34 fr): CUT - Three black barrels
+- S229 f5904-f5920 (17 fr): POSE - Two barrels fade out
+- S230 f5921-f5935 (15 fr): POP_IN - Cylinder trio next to a barrel
+- S231 f5936-f5960 (25 fr): POSE - Cylinders fade
+- S232 f5961-f5983 (23 fr): CUT - Smiling stick man
+- S233 f5984-f5997 (14 fr): POSE - Stick man forearm change
+- S234 f5998-f6031 (34 fr): POP_IN - USA map slides in from the left edge
+- S235 f6032-f6064 (33 fr): CUT - Over the past decade text
+- S236 f6065-f6114 (50 fr): CUT - USA with sunglasses, barrels and speech bubble
+- S237 f6115-f6147 (33 fr): POP_IN - Three cylinders and I've got both babe
+- S238 f6148-f6205 (58 fr): CUT - EIA LNG exports chart
+- S239 f6206-f6224 (19 fr): CUT - Stick man with pointer
+- S240 f6225-f6260 (36 fr): CUT - Stick man and video-game clip inset
+- S241 f6261-f6283 (23 fr): CUT - Hormuz map
+- S242 f6284-f6300 (17 fr): POP_IN - Red cross over the Hormuz map
+- S243 f6301-f6313 (13 fr): CUT - USA character with banknote
+- S244 f6314-f6342 (29 fr): POP_IN - Gas cylinder beside the USA
+- S245 f6343-f6363 (21 fr): CUT - Trading monitor and keyboard
+- S246 f6364-f6414 (51 fr): POP_IN - Worried figure with curl of hair
+- S247 f6415-f6440 (26 fr): CUT - Stick man at board Some benefit
+- S248 f6441-f6472 (32 fr): POSE - Pointer arm change
+- S249 f6473-f6482 (10 fr): CUT - Barrel and gas cylinder
+- S250 f6483-f6508 (26 fr): POP_IN - Grinning man holding banknotes
+- S251 f6509-f6539 (31 fr): CUT - Venture Global logo
+- S252 f6540-f6592 (53 fr): POP_IN - Gas cylinders line up under the logo
+- S253 f6593-f6631 (39 fr): CUT - Venture Global stock card
+- S254 f6632-f6652 (21 fr): POP_IN - Red ellipse round the price
+- S255 f6653-f6679 (27 fr): POP_IN - wow text
+- S256 f6680-f6704 (25 fr): CUT - Cheniere logo
+- S257 f6705-f6733 (29 fr): POP_IN - Three cylinders under the logo
+- S258 f6734-f6760 (27 fr): POP_IN - Small USA map under the logo
+- S259 f6761-f6776 (16 fr): CUT - Cheniere stock card
+- S260 f6777-f6806 (30 fr): POP_IN - Red ellipse round the price
+- S261 f6807-f6839 (33 fr): CUT - Tipped barrel and oil spill
+- S262 f6840-f6846 (7 fr): CUT - Exxon Mobil stock card
+- S263 f6847-f6854 (8 fr): CUT - Chevron stock card
+- S264 f6855-f6861 (7 fr): CUT - ConocoPhillips stock card
+- S265 f6862-f6875 (14 fr): CUT - Valero stock card
+- S266 f6876-f6899 (24 fr): CUT - Row of six barrels
+- S267 f6900-f6942 (43 fr): POSE - Four barrels fade out
+- S268 f6943-f6956 (14 fr): CUT - Stick man at empty board
+- S269 f6957-f6981 (25 fr): TEXT_SWAP - Board text OPPORTUNITY
+- S270 f6982-f6989 (8 fr): CUT - Smiling stick man
+- S271 f6990-f6991 (2 fr): POP_IN - Yellow progress bar starts at the bottom edge
+- S272 f6992-f7004 (13 fr): POSE - Stick man forearm change
+- S273 f7005-f7045 (41 fr): CUT - Hormuz map
+- S274 f7046-f7070 (25 fr): CUT - Tipped barrel and oil spill
+- S275 f7071-f7083 (13 fr): CUT - Glowing phone
+- S276 f7084-f7115 (32 fr): POP_IN - Closed laptop with CF logo
+- S277 f7116-f7131 (16 fr): CUT - Smiling stick man
+- S278 f7132-f7148 (17 fr): CUT - Grey robot with red eyes
+- S279 f7149-f7160 (12 fr): POP_IN - Second robot tumbles in from the left
+- S280 f7161-f7176 (16 fr): POP_IN - Third robot tilted at right
+- S281 f7177-f7183 (7 fr): CUT - Single small robot
+- S282 f7184-f7190 (7 fr): POP_IN - Second robot beside it
+- S283 f7191-f7198 (8 fr): POP_IN - Third robot
+- S284 f7199-f7206 (8 fr): POP_IN - Fourth robot
+- S285 f7207-f7232 (26 fr): POP_IN - Fifth robot with raised hand
+- S286 f7233-f7260 (28 fr): CUT - Woman at a computer monitor
+- S287 f7261-f7289 (29 fr): POSE - Woman's face and arm change
+- S288 f7290-f7339 (50 fr): POP_IN - uhh text
+- S289 f7340-f7391 (52 fr): CUT - Stick man at empty green board
+- S290 f7392-f7423 (32 fr): TEXT_SWAP - Board shows ABACUS.AI logo
+- S291 f7424-f7448 (25 fr): CUT - Smiling stick man
+- S292 f7449-f7487 (39 fr): POSE - Stick man legs change
+- S293 f7488-f7510 (23 fr): CUT - ChatLLM Teams promo screenshot
+- S294 f7511-f7515 (5 fr): TEXT_SWAP - Small-print price line changes
+- S295 f7516-f7531 (16 fr): CUT - Abacus app interface screenshot
+- S296 f7532-f7558 (27 fr): POSE - Card grid changes under the cursor
+- S297 f7559-f7581 (23 fr): POSE - Dropdown hover in the interface
+- S298 f7582-f7595 (14 fr): POP_IN - Model list dropdown opens
+- S299 f7596-f7653 (58 fr): POSE+ZOOM_IN - Interface shrinks to the dropdown column
+- S300 f7654-f7691 (38 fr): POSE - Highlight moves down the list
+- S301 f7692-f7740 (49 fr): POSE - Highlight reaches Nano Banana 2
+- S302 f7741-f7785 (45 fr): CUT - Stick man at a desk with laptop
+- S303 f7786-f7820 (35 fr): POP_IN - what do I choose text
+- S304 f7821-f7837 (17 fr): CUT - Abacus interface screenshot
+- S305 f7838-f7842 (5 fr): POSE - Interface hover change
+- S306 f7843-f7850 (8 fr): POSE - Interface hover change
+- S307 f7851-f7868 (18 fr): POSE+MICRO - Interface hover change
+- S308 f7869-f7877 (9 fr): POP_IN - Model dropdown opens
+- S309 f7878-f7909 (32 fr): CUT - Stick man at desk with laptop
+- S310 f7910-f7961 (52 fr): POSE - Stick man face changes
+- S311 f7962-f7994 (33 fr): CUT+MICRO - Abacus interface screenshot
+- S312 f7995-f8028 (34 fr): POSE - Interface shrinks to a narrow panel
+- S313 f8029-f8045 (17 fr): POP_IN - Stick man with pointer beside the panel
+- S314 f8046-f8080 (35 fr): POSE - Pointer arm raised
+- S315 f8081-f8107 (27 fr): CUT - Stick man alone
+- S316 f8108-f8163 (56 fr): CUT+MICRO - Interface with Welcome to Deep Agent dialog
+- S317 f8164-f8179 (16 fr): POSE - Dialog closes and prompt box changes
+- S318 f8180-f8189 (10 fr): POSE - Interface scrolls down, first burst
+- S319 f8190-f8206 (17 fr): POSE - Interface scrolls down, second burst
+- S320 f8207-f8219 (13 fr): POSE - Interface scrolls down, third burst
+- S321 f8220-f8258 (39 fr): CUT - Smiling stick man
+- S322 f8259-f8285 (27 fr): POP_IN - 10 dollars a month lettering
+- S323 f8286-f8310 (25 fr): POP_OUT - Price lettering removed
+- S324 f8311-f8320 (10 fr): POP_IN - OpenAI logo
+- S325 f8321-f8329 (9 fr): POP_IN - Orange starburst logo
+- S326 f8330-f8359 (30 fr): POP_IN - Gemini star logo
+- S327 f8360-f8383 (24 fr): POP_OUT - Three logos removed
+- S328 f8384-f8418 (35 fr): POP_IN - Check out Abacus.AI lettering
+- S329 f8419-f8461 (43 fr): POP_IN - links below lettering
+- S330 f8462-f8490 (29 fr): CUT - Close-up stick man and Abacus.AI logo with legs
+- S331 f8491-f8530 (40 fr): POP_IN - Heart above the logo
+- S332 f8531-f8545 (15 fr): CUT - Stick man alone
+- S333 f8546-f8567 (22 fr): CUT - Single oil barrel
+- S334 f8568-f8619 (52 fr): CUT - Hormuz map
+- S335 f8620-f8646 (27 fr): CUT - USA with sunglasses, barrels and cylinders
+- S336 f8647-f8676 (30 fr): POP_IN - Speech bubble You want some
+- S337 f8677-f8702 (26 fr): TEXT_SWAP - Bubble becomes Buy from ME
+- S338 f8703-f8739 (37 fr): CUT - Frowning stick man
+- S339 f8740-f8750 (11 fr): CUT - Stick man with pointer
+- S340 f8751-f8777 (27 fr): POP_IN - The Biggest Loser poster
+- S341 f8778-f8801 (24 fr): CUT - Stick man alone, eyes closed smile
+- S342 f8802-f8828 (27 fr): CUT - China map outline
+- S343 f8829-f8853 (25 fr): CUT - Red-haired man reading a paper
+- S344 f8854-f8881 (28 fr): POP_IN - Scribble speech bubble
+- S345 f8882-f8901 (20 fr): CUT - China character with angry eyes
+- S346 f8902-f8924 (23 fr): POP_IN - you dare challenge me text
+- S347 f8925-f8949 (25 fr): CUT - China character with a dumbbell
+- S348 f8950-f8974 (25 fr): POSE - China lifts the barbell
+- S349 f8975-f8996 (22 fr): CUT - Small China character
+- S350 f8997-f9007 (11 fr): POP_IN - Big business tower
+- S351 f9008-f9018 (11 fr): POP_IN - Man in tie with briefcase
+- S352 f9019-f9028 (10 fr): POP_IN - South-American map character
+- S353 f9029-f9033 (5 fr): CUT - Single black barrel
+- S354 f9034-f9037 (4 fr): POP_IN - First gas cylinder
+- S355 f9038-f9042 (5 fr): POP_IN - Second gas cylinder
+- S356 f9043-f9066 (24 fr): POP_IN - Barrel between the cylinders
+- S357 f9067-f9080 (14 fr): CUT - Small China outline
+- S358 f9081-f9085 (5 fr): POP_IN - First barrel beside China
+- S359 f9086-f9091 (6 fr): POP_IN - Second barrel
+- S360 f9092-f9118 (27 fr): POP_IN - Third barrel
+- S361 f9119-f9131 (13 fr): POP_IN - Russia flag
+- S362 f9132-f9144 (13 fr): POP_IN - Brazil flag
+- S363 f9145-f9171 (27 fr): POP_IN - Venezuela flag
+- S364 f9172-f9194 (23 fr): CUT - China character with eyes
+- S365 f9195-f9255 (61 fr): POP_IN - China shrinks under bubble wrap with barrels
+- S366 f9256-f9304 (49 fr): CUT - Small China character
+- S367 f9305-f9339 (35 fr): CUT - Tiny China character
+- S368 f9340-f9368 (29 fr): CUT - China close-up holding a barrel
+- S369 f9369-f9400 (32 fr): POP_IN - ahh text and eyes shift
+- S370 f9401-f9424 (24 fr): POP_IN - tasty oil text
+- S371 f9425-f9445 (21 fr): CUT - China close-up panned right
+- S372 f9446-f9512 (67 fr): POP_IN - China crude oil imports bar chart
+- S373 f9513-f9578 (66 fr): CUT - China's Oil Imports infographic
+- S374 f9579-f9611 (33 fr): CUT - Neutral stick man
+- S375 f9612-f9633 (22 fr): POSE - Stick man forearm change
+- S376 f9634-f9654 (21 fr): CUT - Middle East map
+- S377 f9655-f9683 (29 fr): CUT - China's Oil Imports infographic
+- S378 f9684-f9710 (27 fr): POP_IN - Red ellipse round the Gulf shares
+- S379 f9711-f9784 (74 fr): CUT - Bubble-wrapped China close-up
+- S380 f9785-f9813 (29 fr): POP_IN - wdym my bubble wrap isn't perfect text
+- S381 f9814-f9841 (28 fr): CUT - Smiling stick man
+- S382 f9842-f9861 (20 fr): CUT - China character with angry eyes
+- S383 f9862-f9889 (28 fr): POP_IN - strong text
+- S384 f9890-f9925 (36 fr): CUT - Three barrels and a cylinder
+- S385 f9926-f9947 (22 fr): POP_OUT - One barrel removed
+- S386 f9948-f9968 (21 fr): POP_OUT - Cylinder removed
+- S387 f9969-f10027 (59 fr): CUT - Stick man at board Long-term
+- S388 f10028-f10076 (49 fr): CUT - China close-up with raised brows
+- S389 f10077-f10113 (37 fr): CUT - China character and a wooden block tower
+- S390 f10114-f10145 (32 fr): POP_IN - ok I gotta rethink this text
+- S391 f10146-f10182 (37 fr): CUT - China outline without a face
+- S392 f10183-f10204 (22 fr): POP_IN - Barrels, cylinders and a spill around China
+- S393 f10205-f10228 (24 fr): CUT - Smiling stick man
+- S394 f10229-f10237 (9 fr): CUT - Smoking factory
+- S395 f10238-f10260 (23 fr): POP_IN - Second factory
+- S396 f10261-f10273 (13 fr): POP_IN - Order boxes pile up
+- S397 f10274-f10280 (7 fr): POP_IN - yes even your temu rubbish text
+- S398 f10281-f10314 (34 fr): POP_IN - Blue car and aeroplane
+- S399 f10315-f10397 (83 fr): CUT+MICRO - China with a pink heart
+- S400 f10398-f10418 (21 fr): CUT - Single black barrel
+- S401 f10419-f10440 (22 fr): CUT - Tipped barrel and oil spill
+- S402 f10441-f10477 (37 fr): CUT - China close-up with sad eyes
+- S403 f10478-f10573 (96 fr): CUT - Stick man at board So what now
+- S404 f10574-f10626 (53 fr): POSE - Pointer arm change
+- S405 f10627-f10645 (19 fr): CUT - Large Earth globe
+- S406 f10646-f10714 (69 fr): POSE+ZOOM_OUT - Earth shrinks
+- S407 f10715-f10721 (7 fr): POP_IN - Earth eyes appear
+- S408 f10722-f10739 (18 fr): POP_IN - hmm text
+- S409 f10740-f10779 (40 fr): CUT - Smiling stick man
+- S410 f10780-f10798 (19 fr): CUT - Stick man at a desk with laptop
+- S411 f10799-f10824 (26 fr): POP_IN - everyone hates everyone text
+- S412 f10825-f10844 (20 fr): CUT - Middle East map
+- S413 f10845-f10859 (15 fr): POP_IN - not the chillest area text
+- S414 f10860-f10888 (29 fr): CUT - Analogue clock at twelve
+- S415 f10889-f10969 (81 fr): CUT+ZOOM_IN - Small Hormuz map starts to grow
+- S416 f10970-f11009 (40 fr): POP_IN - Stick man at lower left of the map
+- S417 f11010-f11031 (22 fr): CUT - USA and China characters facing off
+- S418 f11032-f11059 (28 fr): POP_IN - murica best text
+- S419 f11060-f11092 (33 fr): TEXT_SWAP - Text becomes u dumb
+- S420 f11093-f11117 (25 fr): TEXT_SWAP - Text becomes how dare u
+- S421 f11118-f11121 (4 fr): CUT - First tariff sheet
+- S422 f11122-f11125 (4 fr): POP_IN - Second tariff sheet
+- S423 f11126-f11146 (21 fr): POP_IN - Third tariff sheet
+- S424 f11147-f11179 (33 fr): POP_IN - Phone at upper right
+- S425 f11180-f11214 (35 fr): POP_IN - Smoking factory
+- S426 f11215-f11235 (21 fr): CUT - For YEARS lettering
+- S427 f11236-f11268 (33 fr): CUT - USA and China insult exchange
+- S428 f11269-f11306 (38 fr): TEXT_SWAP - Text becomes no u
+- S429 f11307-f11334 (28 fr): TEXT_SWAP - Text becomes how dare u
+- S430 f11335-f11376 (42 fr): CUT - Boxing-glove close-up of USA and China
+- S431 f11377-f11444 (68 fr): CUT - Stick man alone
+- S432 f11445-f11475 (31 fr): CUT - USA and China trade barrel for money bag
+- S433 f11476-f11501 (26 fr): TEXT_SWAP - Text becomes you give me that
+- S434 f11502-f11528 (27 fr): TEXT_SWAP - Text becomes ok fair
+- S435 f11529-f11547 (19 fr): CUT - Stick man at empty green board
+- S436 f11548-f11568 (21 fr): TEXT_SWAP - Board text LEVERAGE
+- S437 f11569-f11591 (23 fr): CUT - Smiling stick man
+- S438 f11592-f11633 (42 fr): POSE - Stick man forearm change
+- S439 f11634-f11638 (5 fr): CUT - Single banknote
+- S440 f11639-f11662 (24 fr): POP_IN - Second banknote
+- S441 f11663-f11713 (51 fr): POP_IN - Line chart card
+- S442 f11714-f11742 (29 fr): POP_IN - Tipped barrel with spill
+- S443 f11743-f11787 (45 fr): CUT - Hormuz map with a magnifying glass
+- S444 f11788-f11815 (28 fr): POSE - Magnifying glass moves down the map
+- S445 f11816-f11865 (50 fr): CUT - Stick man with a magnifying glass
+- S446 f11866-f11885 (20 fr): CUT - Single barrel
+- S447 f11886-f11918 (33 fr): CUT - Stick man at empty green board
+- S448 f11919-f11953 (35 fr): TEXT_SWAP - Board text Geopolitics
+- S449 f11954-f12005 (52 fr): CUT - Boxing-glove close-up of USA and China
+- S450 f12006-f12062 (57 fr): CUT - USA character with pixel sunglasses
+- S451 f12063-f12094 (32 fr): CUT - China character
+- S452 f12095-f12135 (41 fr): POP_IN - Wooden block tower
+- S453 f12136-f12159 (24 fr): CUT - USA character with two derricks
+- S454 f12160-f12187 (28 fr): POP_IN - heh text
+- S455 f12188-f12280 (93 fr): CUT - Hormuz map with barrels over the strait
+- S456 f12281-f12299 (19 fr): CUT - Stick man alone
+- S457 f12300-f12349 (50 fr): CUT - Green close-up of two characters
+- S458 f12350-f12498 (149 fr): CUT - End card Subscribe for more Casual Finance
+
+## Per-state prompts
+All 458 image and animation prompts with static anchors and nearest-frame QA: `PER_STATE_RECONSTRUCTION_SPECIFICATIONS.json`.
+
+## Acceptance tests
+1. Cut frames equal the ledger exactly (16, 79, 136, 194, 301, 374, 540, 644, 695, 722, 770, 866, 959, 1026, 1134, 1190, 1214, 1259, 1295, 1341, 1380, 1415, 1498, 1571, 1617, 1668, 1696, 1763, 1778, 1875, 1923, 1957, 1982, 2009, 2048, 2101, 2167, 2237, 2274, 2365, 2387, 2461, 2505, 2552, 2574, 2623, 2683, 2702, 2774, 2851, 2902, 2969, 3018, 3080, 3439, 3522, 3545, 3608, 3692, 3784, 3838, 3929, 3981, 4032, 4075, 4120, 4163, 4218, 4268, 4314, 4344, 4366, 4400, 4477, 4517, 4533, 4554, 4593, 4626, 4678, 4700, 4751, 4798, 4838, 4860, 4883, 4917, 5008, 5077, 5146, 5193, 5270, 5300, 5426, 5529, 5655, 5828, 5870, 5961, 6032, 6065, 6148, 6206, 6225, 6261, 6301, 6343, 6415, 6473, 6509, 6593, 6680, 6761, 6807, 6840, 6847, 6855, 6862, 6876, 6943, 6982, 7005, 7046, 7071, 7116, 7132, 7177, 7233, 7340, 7424, 7488, 7516, 7741, 7821, 7878, 7962, 8081, 8108, 8220, 8462, 8531, 8546, 8568, 8620, 8703, 8740, 8778, 8802, 8829, 8882, 8925, 8975, 9029, 9067, 9172, 9256, 9305, 9340, 9425, 9513, 9579, 9634, 9655, 9711, 9814, 9842, 9890, 9969, 10028, 10077, 10146, 10205, 10229, 10315, 10398, 10419, 10441, 10478, 10627, 10740, 10780, 10825, 10860, 10889, 11010, 11118, 11215, 11236, 11335, 11377, 11445, 11529, 11569, 11634, 11743, 11816, 11866, 11886, 11954, 12006, 12063, 12136, 12188, 12281, 12300, 12350).
+2. EXACT onsets match to the frame; BOUND onsets fall inside their window.
+3. Static anchors are pixel-still between events.
+4. Total length 12499 frames.
+5. Sound unspecified (nobody listened); ASR lines are timing reference only.

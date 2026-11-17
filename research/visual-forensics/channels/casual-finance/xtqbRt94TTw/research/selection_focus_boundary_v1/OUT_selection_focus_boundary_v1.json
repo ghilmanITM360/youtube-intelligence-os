@@ -1,0 +1,165 @@
+{
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "status": "COMPLETE_BOUNDED_TWO_FRAME_REVIEW",
+  "source_pts_formula": "(zero_based_frame+1)/24",
+  "per_frame_observations": [
+    {
+      "frame": 8057,
+      "source_pts_s": 335.75,
+      "selection_present": true,
+      "visible_fill_color": "BLUE",
+      "selected_text_color": "WHITE_OR_NEAR_WHITE",
+      "selected_phrase": "Chatham Financial estimates that 2026 capital expenditure for AI infrastructure will be over $830 billion,",
+      "description": "Single blue selection band spans the first sentence of the paragraph. Article occupies left/background; smiling host with glasses, CF laptop and desk occupy right/lower region. Pale arrow pointer is visible below the selected line near the following quotation paragraph.",
+      "approx_selection_bbox_xyxy": [
+        198,
+        605,
+        924,
+        628
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "frame": 8086,
+      "source_pts_s": 336.9583333333333,
+      "selection_present": true,
+      "visible_fill_color": "BLUE",
+      "selected_text_color": "WHITE_OR_NEAR_WHITE",
+      "selected_phrase": "Chatham Financial estimates that 2026 capital expenditure for AI infrastructure will be over $830 billion,",
+      "description": "Same first sentence remains selected with blue fill and white text. Host, desk and laptop are absent. Article is enlarged/repositioned compared with8057; selection band lies higher and is wider in source-frame coordinates. No gray-selection or deselection state is visible.",
+      "approx_selection_bbox_xyxy": [
+        205,
+        588,
+        954,
+        612
+      ],
+      "confidence": "HIGH"
+    }
+  ],
+  "selection_visible_lifecycle": {
+    "prior_onset_frame": 8002,
+    "prior_onset_basis": "Reused selection_macro OUT records no semantic selection8001 and blue appearance8002; not redisplayed.",
+    "current_verified_visible_frames": [
+      8057,
+      8086
+    ],
+    "last_current_native_visible_frame": 8086,
+    "color_at_current_frames": "Blue fill with white/near-white text at both8057 and8086.",
+    "continuous_visibility_between_current_frames": "NOT_CERTIFIED_BY_TWO_ENDPOINT_VIEWS",
+    "exact_color_switch_frame": null,
+    "exact_removal_frame": null,
+    "physical_focus_state": "UNKNOWN",
+    "interpretation": "Selection is still visible in the article-only enlarged composition at8086. This packet observes no removal or color-switch event and cannot assign either boundary."
+  },
+  "host_desk_transition": {
+    "current_observed_present_frame": 8057,
+    "current_observed_absent_frame": 8086,
+    "reused_exact_exit_frame": 8085,
+    "reused_basis": "G063 successful native8084/8085 receipts; prior witness places host/desk/laptop disappearance and article enlargement/recentering at8085.",
+    "highlight_color_at_8084": "UNKNOWN_FROM_REUSED_WITNESS",
+    "highlight_color_at_8085": "UNKNOWN_FROM_REUSED_WITNESS",
+    "limitation": "Generic host-exit witness does not establish highlight color at8084/8085; no new display of those frames."
+  },
+  "known_vs_unknown": {
+    "known": [
+      "Blue selection with same first sentence visible at both newly viewed endpoints8057/8086.",
+      "Host/desk/laptop present8057 and absent8086; prior exact exit8085 reused.",
+      "Article changes position/scale; fixed source-coordinate line band cannot track the selection across that motion."
+    ],
+    "unknown": [
+      "Uninterrupted color/visibility at every frame8058–8085.",
+      "Exact eventual removal or color-switch boundary.",
+      "Physical application focus, click/button state or input action.",
+      "Highlight color at8084/8085 from the reused generic host witness."
+    ]
+  },
+  "confidence": "HIGH_FOR_TWO_VISIBLE_ENDPOINT_STATES;UNVERIFIED_FOR_UNOBSERVED_BOUNDARIES",
+  "limitations": [
+    "Exactly two new native fullframe returns8057/8086; no extraction, audio/listening or complete-video claim.",
+    "8057 had a previously reviewed cursor ROI; current fullframe adds source area/context rather than making that prior ROI independent new evidence.8086 is new fullframe evidence according to supplied census.",
+    "87 fixed-band measurements are indexing data, not87 image views. Fixed-band blue-count disappearance after page movement does not prove selection removal.",
+    "Bounding boxes are approximate visual locations, not measured masks or original selection coordinates.",
+    "No physical focus, input action, exact source color, offset or continuous endpoint-to-endpoint persistence is inferred.",
+    "Prepared8084/8085 derivatives and original four-frame snapshot were not displayed or modified."
+  ],
+  "new_evidence_reads": [
+    {
+      "frame": 8057,
+      "source_pts_s": 335.75,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_focus_boundary_v1/f08057_native.png",
+      "sha256": "21d4a6995ec628ca892811678c3c1b7a86e1a3296cfa2652fdb1ad3628c332a2",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "tool": "view_image",
+      "tool_call_id": null,
+      "batch_id": "selection_focus_boundary_v1_two_new_fullframes",
+      "request_order": 1,
+      "witness": "Actual successful view_image return displayed and inspected, native1920x1080 source f8057. Single blue selection band spans the first sentence of the paragraph. Article occupies left/background; smiling host with glasses, CF laptop and desk occupy right/lower region. Pale arrow pointer is visible below the selected line near the following quotation paragraph.",
+      "call_id_note": "Tool returned image_url only, no call ID; batch ID and original request order retained for independent call-log audit."
+    },
+    {
+      "frame": 8086,
+      "source_pts_s": 336.9583333333333,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_focus_boundary_v1/f08086_native.png",
+      "sha256": "b2ce99190dfa94113b8c77351405ac2cf9b148d94dc538a83930acc960c16217",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "tool": "view_image",
+      "tool_call_id": null,
+      "batch_id": "selection_focus_boundary_v1_two_new_fullframes",
+      "request_order": 2,
+      "witness": "Actual successful view_image return displayed and inspected, native1920x1080 source f8086. Same first sentence remains selected with blue fill and white text. Host, desk and laptop are absent. Article is enlarged/repositioned compared with8057; selection band lies higher and is wider in source-frame coordinates. No gray-selection or deselection state is visible.",
+      "call_id_note": "Tool returned image_url only, no call ID; batch ID and original request order retained for independent call-log audit."
+    }
+  ],
+  "reused_prior_receipts": [
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_02/native_f08084.jpg",
+      "sha256": "4941fcedd9bdf3cf9ee1df67da2b99793fb23b93031dfdd176654b7f03927f56",
+      "successful": true,
+      "scale": "NATIVE_1920x1080",
+      "witness": "Actual view_image native image return inspected; zero-based source f8084, PTS=336.875000; G063. Adjacent native contextual witness immediately before a recorded onset.",
+      "reused_without_new_display": true,
+      "scope": "G063 host/desk/laptop exit and article enlargement; no explicit highlight-color proof."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/agents/gap_review_02/native_f08085.jpg",
+      "sha256": "40be1ae81b7764dc3e267e2a1cd8475dcb5309648a9844352de3b5a1f6e075ce",
+      "successful": true,
+      "scale": "NATIVE_1920x1080",
+      "witness": "Actual view_image native image return inspected; zero-based source f8085, PTS=336.916667; G063. Host, desk and laptop disappear; highlighted Global Finance article remains alone and enlarges/recenters.",
+      "reused_without_new_display": true,
+      "scope": "G063 host/desk/laptop exit and article enlargement; no explicit highlight-color proof."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/selection_macro_review_v1/OUT_selection_macro_review_v1.json",
+      "reused_without_new_display": true,
+      "kind": "PRIOR_REVIEW_TEXT",
+      "scope": "Earlier blue appearance8002 and retained single-line range through8045; only JSON text read in this packet."
+    },
+    {
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/motion_missing_fields_review_v1/SUB103/f08045_nativeROI.png",
+      "sha256": "ef3e597eb77a65f44f6a5cf3afeaa1d8efd8e001990b572f68652aed17c4312d",
+      "scale": "NATIVE_1to1_ROI_NOT_FULLFRAME",
+      "successful": true,
+      "reused_without_new_display": true,
+      "witness": "Prior SUB103 successful right-end nativeROI8045 receipt recovered from selection_macro OUT; not a new fullwidth/fullframe display."
+    }
+  ],
+  "pending_paths": [],
+  "extra_exact_frames_needed": [],
+  "extra_frames_note": "No additional request needed for these two endpoint color/persistence questions. Eventual offset remains unknown with no verified disappearance bracket; no redisplay8084/8085 requested.",
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "usage_at_stop": {
+    "primary_used_percent": 39,
+    "weekly_used_percent": 84,
+    "paid_credits_balance": "0",
+    "reset_used": false,
+    "new_reads_stop_primary_percent": 83
+  }
+}

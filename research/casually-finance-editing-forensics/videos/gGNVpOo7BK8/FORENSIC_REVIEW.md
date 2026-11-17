@@ -1,0 +1,29 @@
+# Forensic review — gGNVpOo7BK8 "What Happens When America's Biggest Lender Wants Its Money Back?"
+
+Status: `VISUAL_FORENSICS_COMPLETE_AT_DEPTH_B_AUDIO_LISTENING_BLOCKED` (single reviewer, no independent QA). Machine checks: all pass (`QA.json`).
+
+## Source (MEASURED)
+`What-Happens-When-SnapYT.App.mp4` (`CFSRC-048`), SHA256 `d1830e44...839e6`, H.264/AAC, 360x640, 30.0 fps, 2236 frames (decoded = ffprobe), 74.581 s. SHORT uploaded 2026-09-03, 15,596 views at the 2026-10-19 snapshot. Identity = title+duration match (not cryptographic). 360p limits line weight and small-motion measurement.
+
+## Depth
+DEPTH_B (banded layout with a headline to f406 only; scenes cut-delimited; every HARD/ANIMATION auto stage event seen on lean pre/active/post sheets at 360p; operations authored for the main events, remaining detected changes kept as UNRESOLVED_CHANGE rows; caption words measured against ASR). Audio: whole track measured (78 % voiced, 17 pauses >=0.25 s, 1 of them within 120 ms of a visual event) plus Whisper small.en; **not listened to**. Scenes are contiguous over frames 0-2235.
+
+## Measured statistics
+- 27 scenes (median 2.23 s, p10 1.13, p90 5.50, longest 9.47); 26 hard cuts (20.92/min); 64 events (51.49/min), 49 of them one-frame.
+- Operations: HARD_CUT_REPLACE 26, UNRESOLVED_CHANGE 12, PROP_DRIFT 8, POP_IN 7, OVERLAY_POP 6, VIDEO_CLIP_INSERT 2, CAPTION_CHUNK_CHANGE 1, STROKE_REVEAL 1, SCALE_TWEEN 1.
+- Frame-weighted: static hold 81.1 %, plausibly conventional keyframe/compositing 16.3 %, screen recording 0.0 %, complex continuous animation 0.0 %, change of undetermined method 2.6 %; generated/video-based: none identified.
+- Hard cuts relative to the nearest ASR word onset: median -140 ms (p10 -270, p90 134; negative = visual first; ASR uncertainty ~100 ms).
+- Cadence: too little continuous motion to test cadence (0 isolated duplicates, 0 with a 5-frame gap).
+
+## Findings
+- **Headline for 13.5 s, then none.** The headline 'the secret exit we had to built for them' (sic) sits in the header band from the first frame and is removed at the cut f406 (13.5 s); one-line captions continue to the end. It matches neither the public title ('What Happens When America's Biggest Lender Wants Its Money Back?') nor any local title (`DIRECTLY_OBSERVED`).
+- **Captions track the words.** 241 caption changes matched to ASR word onsets: median +13 ms, p10 -73, p90 +133 ms, 79.3 % within ±100 ms (`MEASURED`; ASR uncertainty ~100 ms), against a median of +53 ms in `06pN9dDvVVU`.
+- **Cutting.** 26 hard cuts in 74.6 s (20.9/min), 27 scenes (median 2.2 s, shortest 0.9 s, longest 9.5 s); 63 table rows (51/min); 81.1 % of frames are static holds, 16.3 % conventional keyframe motion, 2.6 % indeterminate (the clip inserts). Hard cuts sit a median 140 ms before the nearest ASR word onset (n = 26, range -307 to +380 ms; 15 lead by more than 100 ms, 8 within ±100 ms, 3 lag) (`MEASURED`).
+- **Re-composed kit from `bF9WVzzS4ds`.** The narration block 'there's a tool at the Federal Reserve ... it's a pawn shop for governments' (17.7-28.7 s here) is word-identical to the opening of `bF9WVzzS4ds`, and the same props return: Fed building (grows over ~46 frames here), Japan-side building with paper and bags, the green 'TWO WEEKS LATER' card, the shop clip and the 'US BONDS FOR SALE' stall; but the layouts differ (the buildings sit side by side here, stacked there), so the clips are re-composed, not re-used (`MEASURED` on ASR words; props judged by eye).
+- **Cards cover the pun.** 'TWO WEEKS LATER' appears at f702 (23.40 s), 1.1 s before ASR 'later' (24.48 s) and goes at f747 (24.90 s); 'THE NEXT DAY' appears at f1480 (49.33 s), 0.15 s before ASR 'Then' (49.48 s) and goes at f1511 (50.37 s) (`MEASURED`).
+- **Shop clip at a 10-fps cadence again.** The 'PAWN' clip at f151-157 updates every third frame and the larger clip at f816-867 updates on f816, 819, 822, 825, 828, 831, 840, 841, 846, 852, 855, 858, 861, 864 and 867, the same cadence as in `bF9WVzzS4ds`; the clip pops 0.15 s before ASR 'pawn' (f151, 5.03 s vs 5.18 s) and the cut to the large clip leads ASR 'It's' by 0.16 s (`MEASURED`; clip identity not verified across Shorts).
+- **Numbers lead the spoken number here.** The green '$101' appears at f1567 (52.23 s), 0.53 s before ASR '$101' (52.76 s), and the green '$1' at f1618 (53.93 s), 0.31 s before ASR '$1' (54.24 s), unlike the red numbers in `-WJDfT-MwmY` that pop within 80 ms of the word (`MEASURED`).
+- **Red marks.** A red vertical line draws beside the SELL paper over ~17 frames (f105-121, red area 0 to 343 px) and a red X lands across the 'US BONDS FOR SALE' stall within two frames (f2121-2122, +550 px), 0.06 s before ASR 'a' and 0.3 s before 'seller' (`MEASURED`).
+- **Bubbles and bag drifts carry the plot.** Bubble and bag motions (eight prop drifts over 14-60 frames, paths not tracked) and bubble text swaps ('This is fine!', then a final exchange of two bubbles at f2182-2198) are the main motion; there are no camera moves, no chart pages and no highlights in this Short (`DIRECTLY_OBSERVED`).
+- **Cadence not testable.** No isolated duplicate frames in continuous motion, so a 24-to-30 fps conform cannot be tested (`MEASURED`).
+- **360p limits.** 12 sub-0.8 %-area changes stay as unresolved rows, mostly bubble and caption text (`MEASURED` counts; identity not reviewed).

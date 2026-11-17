@@ -1,0 +1,3 @@
+# Casual Finance — Video006 xtqbRt94TTw
+
+Owner requested continuation of existing original reconstruction. Extend the approved cream/navy/teal robot system in Pillow. Two genuine new systems: fictional geometric biography card and fictional quote/desk with five teal bars. Reuse verified source timing and anchor constraints; explicitly choose new artwork/type/implementation. A pure copied state specification lacks interval parameters; direct artwork recreation violates the no-source-media production contract. Freeze criteria before rendering. Bounded tests cover749–769 and836–862 only; global production/whole-video remain pending. No new product approval or install is needed under the existing authorization.

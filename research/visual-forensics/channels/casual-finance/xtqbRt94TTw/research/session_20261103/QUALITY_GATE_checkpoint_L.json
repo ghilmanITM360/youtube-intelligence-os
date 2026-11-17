@@ -1,0 +1,38 @@
+{
+  "status": "VIDEO_006_PARTIAL_GAP_REVIEW_01_COMPLETE",
+  "CT_SCAN_COMPLETE": false,
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "first_pass_shards_structurally_validated": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "first_pass_pending": [],
+  "integration": "integrated_v1 includes immutable reviewer provenance; 123 unowned gaps explicitly retained",
+  "frames_measured": 19862,
+  "frame_partition": "numerical account PASS; semantic coverage PARTIAL",
+  "gaps": 123,
+  "gap_frames": 3116,
+  "merge_requests": 142,
+  "split_requests": 3,
+  "scenedetect_disputes": 339,
+  "dispute_first_pass_counts": {
+    "REAL_MOTION": 314,
+    "REAL_STATE_CHANGE": 25
+  },
+  "independent_semantic_review": "41/123 gap items;923/3116 gap frames;57scaled+96native actual image returns independently bytehash matched; gap02 active",
+  "native_read_status": "actual successful image results verified; scaled vs mixed artifacts disclosed",
+  "audio": "AUDIO_NOT_VERIFIED",
+  "actual_listening_seconds": 0,
+  "av": "AV_CERTIFICATION_BLOCKED",
+  "next_task": "validate gap_review_02 then singly gap_review_03; merge/split adjudication and integrated_v2",
+  "asr": "199 machine sentence segments; NOT_LISTENED",
+  "semantic_narration_alignment": "numerical overlap only; pending review"
+}

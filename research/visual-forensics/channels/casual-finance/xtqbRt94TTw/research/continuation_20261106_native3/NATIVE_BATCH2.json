@@ -1,0 +1,72 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "input_ledger": "v40",
+  "output_ledger": "v41",
+  "source_window": [
+    2280,
+    2365
+  ],
+  "before": 568,
+  "resolved_row_ids": [
+    "EP0073",
+    "SUB047",
+    "EP0074",
+    "SUB048",
+    "EP0075",
+    "SUB049"
+  ],
+  "remaining_provisional": 562,
+  "rulings": {
+    "EP0073": {
+      "precision": "EXACT_NATIVE_COMPOUND_ZOOM_AND_VISIBLE_CURSOR_HIGHLIGHT",
+      "onset": 2285,
+      "last": 2295,
+      "description": "Page scale/translation starts2285 after2284held and last geometric change2293; page/table geometryheld2294 onward while annotations draw. Presenter moves down/right with composite enlargement, tiny edge hair/pointer remains2292, completely absent2293. FirstVISIBLEwhite arrowcursor2285 just above presenter hair; preceding occlusion means hidden authored cursor onset UNKNOWN. Cursor shifts during zoom and settles at2295 (exact later cursor path separatelyOPEN). Blue header stroke firstVISIBLE2294,2293none in tableROI; extends left2295 and turns down2296, continuing to2321. Old1.9x uncalibrated estimate withdrawn: apparent tablewidth about751\u21921178px, approximate1.57x, not a known source scale parameter. Zoom doesnotcontinue2294/2295 and no hardcut established.",
+      "verdict": "CORRECTED_NATIVE"
+    },
+    "SUB047": {
+      "precision": "NATIVE_CONTINUATION_OF_BLUE_COLUMN_OUTLINE2294",
+      "onset": null,
+      "last": 2302,
+      "description": "Candidate2297\u20132302 is continuation of blue outline firstVISIBLE2294. Topedge extends LEFT2294\u20132295; leftvertical begins2296 and reachesbottom2307, so SUB047 not independentonset. Table/pageraster held after2293; line is new overlay. Source hidden stroke/keyframes unknown.",
+      "verdict": "CONTINUOUS_FRAGMENT_NOT_NEW_ONSET"
+    },
+    "EP0074": {
+      "precision": "NATIVE_CONTINUATION_LEFT_EDGE_TO_BOTTOM_TURN",
+      "onset": null,
+      "last": 2308,
+      "description": "2304\u20132308 belongs to same continuous blue outline2294\u20132321. Leftedge reachesbottom2307, bottomturn firstvisible2308; bottomedgecontinuesafter2308. No independentgraphic onset2304; no pagecamera motion. Cursor moves in margin during2304\u20132308; detailed glyph/path notclosedby line ruling.",
+      "verdict": "CONTINUOUS_FRAGMENT_NOT_NEW_ONSET"
+    },
+    "SUB048": {
+      "precision": "NATIVE_CONTINUATION_BOTTOM_EDGE_TO_RIGHT_EDGE",
+      "onset": null,
+      "last": 2316,
+      "description": "2310\u20132316 is same blue outline continuation. Bottomedge grows RIGHT to2310; rightedge turns upward2311 and continues through2321. At2316 rightedge onlypartwayup (notfinished). Tablegeometryheld, source drawingmethod unknown.",
+      "verdict": "CONTINUOUS_FRAGMENT_NOT_NEW_ONSET"
+    },
+    "EP0075": {
+      "precision": "NATIVE_CONTINUOUS_BLUE_END_AND_TWO_INDEPENDENT_ONSETS",
+      "onset": 2322,
+      "last": 2357,
+      "description": "Inherited2318\u20132357compound reconciled: blue rightedge continues tocompleteoutline2321 (began2294, notnewonset2318). Two magenta row outlines firstVISIBLE simultaneously2322after2321none; topedges drawLEFT across4.375 and4.125 rows, leftturn2335 then bottomedgesdrawRIGHT, finalclosinggeometry2349, held2350\u20132365. Orangepercentcoin firstVISIBLE2345after2344none (blackrim1026+, warmfill1040+, bottomclipped); enters UP through2357 with constant fullyvisible warmbboxwidth242px, finalwarmbbox1480,290..1721,531,held2358\u20132365. It is translation, not simple instantaneouspop/growth. Cursor has independent movements; no soundcue inferred.",
+      "verdict": "CORRECTED_NATIVE"
+    },
+    "SUB049": {
+      "precision": "EXACT_NATIVE_CURSOR_EXIT_AFTER_TRANSLATION",
+      "onset": 2358,
+      "last": 2362,
+      "description": "Candidate2359\u20132362 is tail of cursor movementstarting2358 after2357held. ArrowmovesDOWN/RIGHT:graybbox1746,511..1765,541at2357\u21921771,519..1791,550at2358\u21921803,532..1823,562at2359\u21921844,546..1863,577at2360\u21921896,568..1919,599at2361. Fullyoffscreen2362,absent2363\u20132365. Coin/table/blue/magenta geometryheld duringtail; no teleport/disappearance-onlyclaim. Hidden offscreen subsequentmotionunknown.",
+      "verdict": "CORRECTED_NATIVE"
+    }
+  },
+  "exact_or_reconciled_compound_phase_rows": 3,
+  "continuous_fragment_rows": 3,
+  "independent_QA": "PENDING",
+  "new_component_unknowns": [
+    "Cursor hidden before firstVISIBLE2285; pure authored appearance unknown",
+    "Intermediate cursor path during2304\u20132325 not fully closed; source supplied fullframe hashes do not bythemselves close semantics"
+  ],
+  "not_physical_event_count": true
+}

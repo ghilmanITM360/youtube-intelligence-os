@@ -1,0 +1,223 @@
+[
+ {
+  "id": "S01",
+  "f0": 0,
+  "f1": 57,
+  "label": "Federal Reserve building grows under the hand-lettered caption 'There's a tool at the Federal Reserve where a'",
+  "layers": "building; caption",
+  "assets": "PR_BANK",
+  "transition_in": "START",
+  "purpose": "A tool at the Fed [ART_DIRECTION_INFERENCE]",
+  "notes": "",
+  "no_auto_cut": true
+ },
+ {
+  "id": "S02",
+  "f0": 57,
+  "f1": 175,
+  "label": "Small Fed building above a Japan-side building character holding a paper; paper and a money bag move; caption 'foreign government can hand over its American bonds' then 'take dollars in exchange'",
+  "layers": "two buildings; paper; bag; caption",
+  "assets": "PR_BANK,PR_BLDG,PR_DOC,PR_BAG",
+  "transition_in": "HARD_CUT",
+  "purpose": "A foreign government hands over bonds and takes dollars [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S03",
+  "f0": 175,
+  "f1": 220,
+  "label": "Green palm-leaf card with red 'TWO WEEKS LATER' text; caption 'and buy the bonds back later'",
+  "layers": "title card; caption",
+  "assets": "FX_TIMECARD",
+  "transition_in": "HARD_CUT",
+  "purpose": "Time passes before the buy-back [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S04",
+  "f0": 220,
+  "f1": 289,
+  "label": "Buildings again; money bags and paper trade places: 'at a slightly higher repurchase price'",
+  "layers": "two buildings; bags; paper; caption",
+  "assets": "PR_BANK,PR_BLDG,PR_BAG,PR_DOC",
+  "transition_in": "HARD_CUT",
+  "purpose": "The buy-back price is slightly higher [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S05",
+  "f0": 289,
+  "f1": 348,
+  "label": "Third-party video clip of a bald man in a shop above the Japan-map character holding a bag and paper; 'It's a pawn shop for governments', then 'only 20????'",
+  "layers": "video clip; map character; bag; paper; caption",
+  "assets": "PHOTO_CLIP,CH_JAPAN,PR_BAG,PR_DOC",
+  "transition_in": "HARD_CUT",
+  "purpose": "It is a pawn shop for governments [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S06",
+  "f0": 348,
+  "f1": 445,
+  "label": "US-map character with a bag next to a small Japan-map character; bubble 'Pls don't leave me!' then 'I'll stay for them dollars'; the bag glides across",
+  "layers": "map characters; bag; bubbles",
+  "assets": "CH_USMAP,CH_JAPAN,PR_BAG,OV_BUBBLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "A creditor you cannot afford to lose [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S07",
+  "f0": 445,
+  "f1": 647,
+  "label": "Treasury seal on white; 'Ministry of Finance, JAPAN' kanji pops; seal and text shrink to the corner; caption 'executed a joint market operation'; US-map character and a yen note pop",
+  "layers": "seal; kanji text; map character; yen note; caption",
+  "assets": "LOGO_TREASURY,LOGO_MOF,CH_USMAP,PR_CASH",
+  "transition_in": "HARD_CUT",
+  "purpose": "The joint market operation to prop up the yen [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S08",
+  "f0": 647,
+  "f1": 718,
+  "label": "Dark news-card at the top, yen note at the lower left, red down arrow draws across the page",
+  "layers": "news card; yen note; red arrow",
+  "assets": "SS_NEWS_CARD,PR_CASH,OV_REDARROW",
+  "transition_in": "HARD_CUT",
+  "purpose": "The yen keeps falling [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S09",
+  "f0": 718,
+  "f1": 772,
+  "label": "White card with '48 hours later...' typed on",
+  "layers": "text card",
+  "assets": "TY_CARD",
+  "transition_in": "HARD_CUT",
+  "purpose": "48 hours later [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S10",
+  "f0": 772,
+  "f1": 1062,
+  "label": "Grey-haired official figure rises from the bottom; a social-post card with a red oval slides in; caption 'these people LOVE announcing things on Twitter'; the card zooms and pans",
+  "layers": "official; social post screenshot (zoom/pan); red oval; caption",
+  "assets": "CH_OFFICIAL,SS_TWEET,OV_REDOVAL",
+  "transition_in": "HARD_CUT",
+  "purpose": "The Treasury Secretary announces on social media [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S11",
+  "f0": 1062,
+  "f1": 1136,
+  "label": "Caption 'But here's the detail that makes the request strange' with a puzzled man rising in from the lower left",
+  "layers": "caption; man",
+  "assets": "CH_MAN",
+  "transition_in": "HARD_CUT",
+  "purpose": "The detail that makes the request strange [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S12",
+  "f0": 1136,
+  "f1": 1182,
+  "label": "'Nobody was using it.' with large yellow outlined lettering 'FIMA Repo Facility' and a '*crickets*' aside",
+  "layers": "caption; big lettering; aside",
+  "assets": "TY_BIGTITLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "Nobody was using the facility [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S13",
+  "f0": 1182,
+  "f1": 1278,
+  "label": "Fed statement page with a yellow highlight that grows; five money bags rise from the bottom; '$60B' pops",
+  "layers": "page screenshot; highlight; bags; text",
+  "assets": "SS_FED_PAGE,OV_HIGHLIGHT,PR_BAGS,TY_AMOUNT",
+  "transition_in": "HARD_CUT",
+  "purpose": "Ceiling of 60 billion dollars per country [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S14",
+  "f0": 1278,
+  "f1": 1332,
+  "label": "Pointing host beside a Bloomberg chart that pans; caption 'and the balance was sitting at zero' with red 'zero'",
+  "layers": "host; chart (pan); caption; red word",
+  "assets": "CH_HOST,SS_REPO_CHART,TY_RED",
+  "transition_in": "HARD_CUT",
+  "purpose": "The balance was sitting at zero [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S15",
+  "f0": 1332,
+  "f1": 1469,
+  "label": "Official figure: 'Days after he asked,' then bubbles 'More money, please!', 'My guy...', 'It's been unused for 8 weeks!', a Bloomberg wordmark and eight calendar icons",
+  "layers": "official; bubbles; wordmark; calendar icons; caption",
+  "assets": "CH_OFFICIAL,OV_BUBBLE,LOGO_BLOOMBERG,PR_CALENDAR",
+  "transition_in": "HARD_CUT",
+  "purpose": "Days after the request it had gone unused for eight weeks [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S16",
+  "f0": 1469,
+  "f1": 1551,
+  "label": "Round-head man and a pink piggy bank: 'So he wasn't asking for more room'; the piggy bank is replaced by the leaning official with a bag: 'because he'd run out.'",
+  "layers": "man; piggy bank; official; bag; caption",
+  "assets": "CH_MAN,PR_PIG,CH_OFFICIAL,PR_BAG",
+  "transition_in": "HARD_CUT",
+  "purpose": "He was not asking because he had run out [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S17",
+  "f0": 1551,
+  "f1": 1612,
+  "label": "Pointing host beside the Bloomberg chart: 'Nobody was anywhere near the ceiling'",
+  "layers": "host; chart; caption",
+  "assets": "CH_HOST,SS_REPO_CHART",
+  "transition_in": "HARD_CUT",
+  "purpose": "Nobody was near the ceiling [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S18",
+  "f0": 1612,
+  "f1": 1768,
+  "label": "Large official figure beneath the social-post card with a red oval; static hold",
+  "layers": "official; social post screenshot",
+  "assets": "CH_OFFICIAL,SS_TWEET,OV_REDOVAL",
+  "transition_in": "HARD_CUT",
+  "purpose": "Asking publicly, 48 hours after the operation [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S19",
+  "f0": 1768,
+  "f1": 1856,
+  "label": "Host beside the Bloomberg chart: 'to build capacity for something that hadn't happened yet.'; three red question marks pop one by one",
+  "layers": "host; chart; caption; red question marks",
+  "assets": "CH_HOST,SS_REPO_CHART,TY_RED",
+  "transition_in": "HARD_CUT",
+  "purpose": "Capacity for something that has not happened [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S20",
+  "f0": 1856,
+  "f1": 2010,
+  "label": "Treasury seal above the waving official: bubbles 'More money pls!', 'That's kinda sus...', 'But OK I guess?'",
+  "layers": "seal; official; bubbles",
+  "assets": "LOGO_TREASURY,CH_OFFICIAL,OV_BUBBLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "You don't ask publicly unless you know something is coming [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ }
+]
