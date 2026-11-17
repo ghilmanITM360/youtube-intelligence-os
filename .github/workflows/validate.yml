@@ -71,5 +71,5 @@ jobs:
           TRACKED="$(git ls-files -z | tr '\0' '\n')"
           JUNK="$(echo "$TRACKED" | grep -iE '\.(db-wal|db-shm|db-journal|sqlite3?|pyc)$|^outputs/' || true)"
           test -z "$JUNK" || { echo "Tracked database sidecar or generated junk:"; echo "$JUNK"; exit 1; }
-          UNAPPROVED_DBS="$(echo "$TRACKED" | grep -iE '\.db$' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' -e 'data/knowledge/reference_knowledge.db' -e 'research/finance-economics-intelligence/audit-baseline/youtube_channel_registry.frozen.db' || true)"
+          UNAPPROVED_DBS="$(echo "$TRACKED" | grep -iE '\.db$' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' -e 'data/knowledge/reference_knowledge.db' -e 'research/finance-economics-intelligence/audit-baseline/youtube_channel_registry.frozen.db' -e 'data/catalog/finance_economics_complete.db' -e 'data/catalog/senior_health/senior_health_core.db' -e 'data/catalog/senior_health/senior_health_transcripts_1.db' -e 'data/catalog/senior_health/senior_health_transcripts_2.db' -e 'data/catalog/senior_health/senior_health_transcripts_3.db' -e 'research/senior-health-apify-2026-11-11/senior_health_apify.db' || true)"
           test -z "$UNAPPROVED_DBS" || { echo "Unapproved tracked database(s):"; echo "$UNAPPROVED_DBS"; exit 1; }
