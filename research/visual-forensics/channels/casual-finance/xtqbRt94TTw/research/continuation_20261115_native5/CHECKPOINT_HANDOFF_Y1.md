@@ -1,0 +1,4 @@
+# V006 xtqbRt94TTw checkpoint Y1 (scheduled run 2026-11-15)
+Production G007.02 frame 1141 classified (G007_02_RULING.json): onset of the worried-eyes state of S0015, NOT a separate state; prior draft S0015 [1142,1155] is off by one (onset 1141). Disc region 1141 == 1155 (0.0% changed), 1140->1141 changes only the disc (11.3%), rest 0.0%. Mid-span 1142-1154 not individually compared (inferred static). Ledger v44 / queue v20 NOT changed; integration proposed only. No new media. Single reviewer, no independent QA, audio 0, CT_SCAN_COMPLETE=false, 0 of 35.
+Source sha256 030a85ad...a7a66 re-verified; X2 sums all OK; remote head at start 722c2318 (= X2).
+Next exact operation: integrate G007.02 ruling into ledger v45 (S0015 production binding [1141,1155]) with positive+negative checks, then next item of CURRENT_NATIVE_QUEUE_v20.json.

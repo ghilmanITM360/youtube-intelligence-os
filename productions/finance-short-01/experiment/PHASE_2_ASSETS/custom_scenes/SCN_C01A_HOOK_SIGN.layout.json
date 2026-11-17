@@ -1,0 +1,45 @@
+{
+ "scene_id": "SCN_C01A_HOOK_SIGN",
+ "shots": [
+  "S01A"
+ ],
+ "camera": "none",
+ "note": "Open on the promise. Sign swings in (pivot = string tops), Remy shrugs on 'No interest?'.",
+ "world": [
+  {
+   "z": 0,
+   "instance": "env_stage__stage_bg",
+   "asset_id": "ENV_STAGE_L_STAGE_BG",
+   "transform": "none"
+  },
+  {
+   "z": 1,
+   "instance": "env_stage__stage_floor",
+   "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+   "transform": "none"
+  },
+  {
+   "z": 2,
+   "instance": "promo_sign",
+   "asset_id": "PRP_PROMO_SIGN",
+   "transform": "translate(540 170) scale(1.4)"
+  },
+  {
+   "z": 3,
+   "instance": "remy",
+   "asset_id": "CHR_REMY_POSE_SHRUG",
+   "transform": "translate(163.2 804.0) scale(1.2)",
+   "pose": "shrug",
+   "expr": {
+    "preset": "confused"
+   },
+   "feet": [
+    540,
+    2040
+   ],
+   "scale": 1.2,
+   "flip": false
+  }
+ ],
+ "ui": []
+}

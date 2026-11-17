@@ -1,0 +1,77 @@
+# What if you tried to print Wikipedia?
+
+| Field | Value |
+|---|---|
+| Video ID | `RgBYohJ7mIk` |
+| URL | https://www.youtube.com/watch?v=RgBYohJ7mIk |
+| Format | long |
+| Published | 2024-07-09 |
+| Duration | 00:02:57 |
+| Views (at acquisition) | 2,928,871 |
+| Words | 624 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/RgBYohJ7mIk.txt` |
+| Source SHA-256 | `c300e62aeed3319d5072b42590ed63e9be3bf34e5f2ce689857051cda204e750` |
+
+## Script
+
+This question comes from Susanne, who asks: If you had a printed version of the whole of Wikipedia, how many printers would you need in order to keep up with the changes made to the live version?
+
+For English Wikipedia, you’d need this many.
+
+Six printers is surprisingly few!
+
+But before you try to create a live-updating paper version of Wikipedia, let's look at what those printers would be doing... and how much they'd cost.
+
+People have considered printing out Wikipedia before.
+
+In 2012, Rob Matthews printed every featured article creating a book several feet thick, and in 2015, Michael Mandiberg created an art installation to show the scope of Wikipedia by printing around 1% of its articles, although without images.
+
+The entire encyclopedia would be a lot bigger.
+
+Wikipedia user Tompw has set up a wikipedia page that calculates the current size of the whole English Wikipedia, without images, in printed volumes.
+
+It would currently fill a lot of bookshelves, but most libraries have far more books.
+
+Keeping up with the edits would be harder.
+
+English Wikipedia currently receives about 150,000 edits each day, or 100 per minute.
+
+We could try to define a way to measure the "word count" of the average edit, but that's hard bordering on impossible.
+
+Fortunately, we don't need to –we can just estimate that each change is going to require us to reprint a page somewhere.
+
+Now, many edits will actually change multiple pages –but many other edits are reverts, which would let us put back pages we've already printed. So, one page per edit seems like a reasonable middle ground.
+
+For a mix of photos, tables, and text typical of Wikipedia, a good inkjet printer might put out 15 pages per minute.
+
+That means you'd only need about six printers running at any given time to keep pace with the roughly 100 edits each minute.
+
+The paper would stack up quickly. Using Rob Matthews' book as a starting point, I did my own back-of-the-envelope estimate for the size of the current English Wikipedia.
+
+And based on the average length of featured articles vs. all articles, I came up with an estimate of 300 cubic meters for a printout of the whole thing.
+
+By comparison, if you were trying to keep up with the edits, you'd print out 300 cubic meters every month.
+
+Six printers isn't that many, but they'd be running all the time. And that gets expensive.
+
+The electricity to run them would be cheap—a few dollars a day.
+
+The paper would be about one cent per sheet, which means you'll be spending about a thousand dollars a day.
+
+You'd want to hire people to manage the printers 24/7; depending on wages in your area, this could cost less than the paper –or much less, if you can figure out a way to trick Wikipedia’s volunteer editors into helping you.
+
+Even the printers themselves wouldn't be too expensive, despite the terrifyingly fast replacement cycle.
+
+But the ink cartridges would be a nightmare.
+
+Various sources estimate that for a typical inkjet printer, the real-life cost of ink runs from 5 cents per page for black-and-white to around 10 cents per page for color.
+
+With 150,000 daily page-edits, that means you'd be spending around ten thousand dollars per day on ink cartridges.
+
+So you definitely want to invest in a laser printer. Otherwise, in just a month or two, this project could end up costing you half a million dollars.
+
+But that's not even the worst part.
+
+If, someday, Wikipedia decides to go dark again, like they did in 2012, and you want to join the protest… You'll have to get a crate of markers and color every page solid black.
+
+I would definitely stick to digital.

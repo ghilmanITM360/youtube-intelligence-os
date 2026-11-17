@@ -1,0 +1,7 @@
+- Rendered via render.py (numpy/cv2/PIL + ffmpeg pipe), 208 frames, 1920x1080, 30000/1001, h264 yuv420p.
+- Background drawn once (static, seeded); groups and figure composited on top; no camera motion.
+- Labels: Bradley Hand Bold TTF, white fill, 3px dark outline; items: bugs dots, brown #7a5230 mud, grey fish.
+- Onsets f55/85/115, 5-frame left-to-right write-on; drift to f195 (start max(70,onset)), shrink to .42/.45/.5.
+- Figure (chest-up, eyes closed) enters f140, ends f207 at scale .28 near centre.
+- Group bboxes checked: no overlaps in any frame.
+- f104: pixels within L1<=60 of #789838 = ~31%; water (L1<=30 of #68c8d8) ~44.6%.

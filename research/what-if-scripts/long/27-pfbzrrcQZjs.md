@@ -1,0 +1,85 @@
+# What if you funneled Niagara Falls through a straw?
+
+| Field | Value |
+|---|---|
+| Video ID | `pfbzrrcQZjs` |
+| URL | https://www.youtube.com/watch?v=pfbzrrcQZjs |
+| Format | long |
+| Published | 2025-06-17 |
+| Duration | 00:03:36 |
+| Views (at acquisition) | 5,147,802 |
+| Words | 818 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/pfbzrrcQZjs.txt` |
+| Source SHA-256 | `83ef19df9d74a09f7728906e6335d8a7e8dee9f4bfe297b2634ffac231a611db` |
+
+## Script
+
+This question comes from David, who asks: what would happen if one tried to funnel Niagara Falls through a straw?
+
+The short answer is: one would get in trouble with the International Niagara Committee, the International Niagara Board of Control, the International Joint Commission, the International Niagara Board Working Committee, and probably the Great Lakes–St. Lawrence River Adaptive Management Committee.
+
+Also, the Earth would be destroyed.
+
+Well, that's not quite right.
+
+At the risk of stating the obvious, the real answer is, "Niagara Falls wouldn’t fit through a straw."
+
+If you try to force it by, say, building a dam across the falls with a single straw-sized opening, what will actually happen is that a very small part of Niagara falls will flow out through the straw and the rest of the water will build up behind the dam until the dam overflows.
+
+There are limits to how fast you can push fluids through openings.
+
+If you pump a fluid from a wide, contained channel into a narrower one, it speeds up, but only to a point – eventually, the flow becomes “choked”.
+
+For example, water always "wants" to boil, but is normally held together by air pressure.
+
+When a fluid flows through an opening fast enough, the pressure within the fluid drops due to the Bernoulli principle.
+
+Without enough pressure to keep the water from boiling, bubbles of steam form in a process called cavitation.
+
+Increasing the pressure –to try to push the water through harder– surprisingly only makes it boil faster (page 17 of this “Fluid Flow Basics of Throttling Valves” pdf has a detailed description).
+
+Cavitation limits the total flow of water making it through the opening – though the higher the pressure, the faster the water-steam mix will move, because more of it will expand into vapor bubbles.
+
+Cavitation is also bad for the pipe itself, because when the bubbles do eventually collapse, the force of the implosion can erode the walls of the pipe and lead to structural failure.
+
+A rough calculation shows that Niagara falls, at its base, could only be funneled into a pipe as small as around 10 meters across before cavitation starts to become likely .
+
+Another limit on the water flow rate comes from the speed of sound. You can't use pressure to accelerate a fluid through an opening faster than the speed of sound in that fluid.
+
+However, water very rarely reaches this limit in practice, because "the speed of sound in water" is very fast.
+
+If you try to make water –which is pretty heavy– go that fast, it tends to start ignoring the turns in your pipes.
+
+So how fast does Niagara Falls need to go to fit through a straw? This is easy to figure out; all we need to know is the flow rate over the falls and how much area it needs to fit through.
+
+The flow rate over Niagara Falls is at least 100,000 cubic feet per second, which is actually mandated by law.
+
+The Niagara river supplies a total of about 300,000 cubic feet per second to the falls, but much of it is diverted into tunnels to generate electric power.
+
+Since people get mad if you turn off the world's most famous waterfall, they're required to leave at least 100,000 of those cubic feet per second flowing over the falls for everyone to look at (50,000 at night or during the off-season).
+
+Needless to say, if you divert the water into a straw, you'll be in violation of the 1950 international treaty establishing the "100,000 cubic feet per second" minimum.
+
+A typical straw is about 7mm in diameter.
+
+To find out how fast the water flows, we just divide the flow rate by that area.
+
+Apparently, our water will be going one-quarter of the speed of light.
+
+On the plus side, we don't have to worry about cavitation anymore, because at those high energies, everything is a plasma, and the concepts of boiling and cavitation don't even apply.
+
+Instead, the water molecules will be causing all kinds of exciting nuclear reactions.
+
+On the downside, no machine could actually accelerate that much water to relativistic speeds.
+
+Particle accelerators can get things going that fast, but they're typically fed from a small bottle of gas.
+
+You can't just plug Niagara Falls into the accelerator input.
+
+Or, at least, if you could, the scientists would get awfully mad.
+
+But that’s maybe for the best, since the power of the particle jet created by this scenario would be greater than the power of all the sunlight that falls on Earth.
+
+Your "waterfall" would have a power output equivalent to that of a small star, and its heat and light would quickly raise the temperature of the planet, boil away the oceans, and render the whole place uninhabitable.
+
+In which case, one would be in very, very big trouble with the International Niagara Committee.

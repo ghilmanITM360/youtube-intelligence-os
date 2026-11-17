@@ -1,0 +1,18 @@
+# Story structure — ud1ESmogrFY "America Has No Plan B"
+
+Short, 86.8 s, 720x1280, 30 fps file, uploaded 2026-08-19 (see `FORENSIC_REVIEW.md` for the view snapshot). Persistent headline "it's boring, but it's what bursts the bubble" for the first 8.1 s only (differs from the public title). Narration = Whisper small.en (uncertified); DEPTH_B (full-bleed analysis).
+
+| Beat | Time | Scenes | Narration (ASR) | Visual device |
+|---|---|---|---|---|
+| 1 Thesis | 0-8.1 | S01-S03 | "The single biggest threat to America isn't the national debt. It's not the Strait of Hormuz, and it's not even the AI bubble itself. It's energy." | Ghost figure; crossed-out maps and a robot with an AI bubble; 'ENERGY' title and props under the headline |
+| 2 Not that kind of energy | 8.1-14.1 | S04-S06 | "But not energy in the way you're probably thinking. It's not blackouts or your monthly utility bill." | Lone figure; two children and black-screen flickers; boy with a bubble |
+| 3 The wager | 14.1-23.4 | S07-S09 | "It's that America has pushed all its chips to the center of the table and bet the entire economy on one wager that AI arrives on schedule. But if something's gonna pop the AI bubble, it's energy." | US-map character at a roulette table, wheel, robot, logo bubble that pops |
+| 4 Wrong question | 23.4-41.0 | S10-S16 | "And here's the thing about all those bubble takes. Every single one of them is arguing about the wrong question. They're arguing about whether AI is here to stay, whether it's truly going to revolutionize every industry, and whether a chatbot that can't count the letters in strawberry is maybe about to take your job. But that was never the right question." | ENERGY title with lightning; three arguing figures crossed out; orange room pulling back to a laptop; chatbot window; woman's photo |
+| 5 The real bet | 41.0-52.0 | S17-S20 | "The real bet isn't whether AI works. It's actually about whether we can even physically deliver it on time. Whether the AI future can arrive fast enough to justify the insane prices we're paying for it today." | Roulette scene with a robot; lightning character and a slow machine; tiny falling figure; futuristic-city picture with money bags |
+| 6 Money disappearing | 52.0-68.0 | S21-S27 | "Because right now, money is disappearing into AI faster than Thanos can snap his fingers. It's the fastest and largest build out in history, yet nobody's actually making any money on it. Which is fine, for now. Investors will happily fund losses as long as they think a payoff is on its way." | Thanos with bills; conference photo; article screenshots with a bill; figure and face; investor with a red falling graph; 'the MONEY we'll make' bubble |
+| 7 The payoff | 68.0-86.8 | S28-S35 | "But eventually, the investors, the companies, and the lenders funding all of this need that payoff to actually show up. Eventually, the capital has to come home with a return. That's how the AI bubble pops. It's not when it fails, but when it's late. When the capital starts to get sick of waiting around and decides to go somewhere else." | Typed 'B', logos, bank and data-centre icon with arrows; bubble 'Can't wait for my money babe!'; giant 'OR IT'S OVER'; money bag; sparkling logo bubble; robot falling; clock; figure and bubble with the second figure spinning away |
+
+## Observed practices (this video only)
+- Densest visual rhythm in the Aug-Sep sample: a new prop or picture every 2-3 s, each explaining one clause; metaphors (roulette, Thanos, clock) carry the thesis.
+- The only measured camera work is the two-stage linear pull-back that turns a picture into a laptop screen.
+- The closing is a visual exit gag (second figure spinning away) timed to 'go somewhere else'.

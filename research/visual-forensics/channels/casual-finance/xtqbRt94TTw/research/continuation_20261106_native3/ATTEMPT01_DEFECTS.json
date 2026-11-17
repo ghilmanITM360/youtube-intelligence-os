@@ -1,0 +1,18 @@
+{
+  "status": "FAILED_ATTEMPT_PRESERVED",
+  "validator": "numpy.bool_ values could not serialize to JSON; TypeError Object of type bool is not JSON serializable; no passing test receipt created",
+  "root_visual_defects": [
+    {
+      "id": "PROD-001",
+      "severity": "P3",
+      "finding": "Frozen spec calls hexagonal badge but attempt01 uses five vertices; repair renderer shape without changing timing/frozencriteria."
+    },
+    {
+      "id": "PROD-002",
+      "severity": "P3",
+      "finding": "Frozen spec calls amber reading visor frame in desk mode; attempt01 lacks frame; add desk-only amber outline without changing timing."
+    }
+  ],
+  "outputs": "original_attempt01 remains immutable",
+  "source_claims_affected": false
+}

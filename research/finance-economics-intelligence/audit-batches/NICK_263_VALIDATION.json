@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "mWhpJZrTyNU",
+ "nick": "NICK_263",
+ "claims": 11,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 20143,
+ "parent_commit": "342fcace51a2cd32140510fb85bb4e95addc836c",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_263",
+  "NICK_264"
+ ],
+ "changed_ledger_ids": [
+  "mWhpJZrTyNU"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 538,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "47_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 2.07599 STRONG (5-peer 0.52869 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 540,
+  "remaining": 1072,
+  "original_pending": 426,
+  "expansion_pending": 646,
+  "changed_cells": "63 (dashboard 7 + rows 534-535 target cells)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "c1693c0d9c31a2dacbf942243d726b46827af62a5b17bcf0fcf129bb39bf7ce1"
+ },
+ "semantic_acceptance": "All 20143 stored characters and six dimensions reviewed; 11 located claim groups; sources CEN24, SECAI. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "363d1b9c171e0b69fe8ac761529865c321d64a7de29987bc9c9e77b322f6ea05",
+  "NICK_263.json": "593e22d1523eb3f6e59c1313fcdf31a5a49b20931f8040a87dd0f009b1896aac",
+  "NICK_263_READ_RECEIPTS.json": "ba32d8777ee02a282f9958ed5df8441b0aec71279567a8e3cec695fcbad59c92",
+  "thumbnail": "a2ed33c4003e68118572bbbf29bf6f53876acbd74161a58042dbd25de0ce962a"
+ }
+}

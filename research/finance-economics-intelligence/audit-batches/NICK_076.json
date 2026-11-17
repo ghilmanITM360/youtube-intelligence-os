@@ -1,0 +1,135 @@
+{
+  "batch_id": "NICK_076",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "DbLgEsEUojA",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DbLgEsEUojA",
+          "TRANSCRIPT_COVERAGE.csv:DbLgEsEUojA",
+          "audit-batches/NICK_076_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"The 9–5 Traps Keeping You Underpaid (Most People Never Escape).\" Employment-grievance framing: \"9-5\" identifies salaried workers, \"Traps\" implies hidden mechanisms, \"Underpaid\" names a personal loss, and the parenthetical adds exclusivity/fear. Search intent overlaps \"why am I underpaid\", \"how to get a raise\", \"job hopping salary\". No number in title despite a 14-item script.",
+        "peer_comparison_ids": [
+          "AzJkAWt5zr4",
+          "1JynDORGRis",
+          "A1Ix8wUhrRo",
+          "7W0uvrGuOW4",
+          "WAbZSrUMdk0"
+        ],
+        "search_demand": "Historical query volume unknown. Channel job/salary titles cluster TYPICAL (1JynDORGRis 1.11497, AzJkAWt5zr4 0.90656, A1Ix8wUhrRo 0.53194); this video 1.58543 TYPICAL, upper end.",
+        "script_alignment": "Strong: fourteen enumerated career-pay traps (employer incentives, tenure plateau, market value, asking, risk aversion, first offers, busy work, firm-specific skills, permission, experience vs progress, networking, lane, benefits, imagined ceilings)."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DbLgEsEUojA",
+          "TRANSCRIPT_COVERAGE.csv:DbLgEsEUojA",
+          "audit-batches/NICK_076_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_DbLgEsEUojA.jpg",
+        "image_source": "https://i.ytimg.com/vi/DbLgEsEUojA/maxresdefault.jpg",
+        "image_sha256": "4fa78edd2c1f4856b875b55e2f28818e02524650fe51aba31ca7aa248a8a4cb7",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a bored half-lidded cartoon man in a light-blue shirt, hands in pockets, standing on a small stack of red coins; center a grinning suited boss in glasses hands over a \"PAYCHECK\" slip while a red conveyor belt behind him carries stacked red money and a red money bag with gears; heavy black \"THE 9-5 TRAP\" across the top with a curved arrow to the bag. Mobile: title text and boss/paycheck legible, conveyor details small. Visual narrative: employer captures the value the worker produces - matches trap one (employer interest) and the grievance title."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DbLgEsEUojA",
+          "TRANSCRIPT_COVERAGE.csv:DbLgEsEUojA",
+          "audit-batches/NICK_076_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "You know that feeling when you look at\nyour paycheck and think about everything\nyou could do with an extra thousand\ndollars per month, but instead it just\nsits there barely budging year after\nyear. You get your 3% raise, you're\ngrateful for it, and then inflation eats\nit up before the year's over. So, you're\nright back where you started. The the\nthing is, and this is what most people\nnever quite figure out, that uh stagnant\nsalary isn't an accide",
+        "ending_words": " understands their market value and\nis actively building it. You can stay\ncomfortable. You can keep collecting\nyour 3% annual raises and wondering why\nyou never seem to get ahead. Or you can\nstart escaping these traps one by one\nand actually build the career and the\nincome that matches your abilities. The\nchoice is really up to you. But I\nguarantee that in 5 years, the person\nwho took the risk and made the moves\nwill be in a completely different\nfinancial position than the person who\nstayed put and kept hoping things would\nget better on their own. They won't.\nThat you have to make them better.",
+        "analysis": "All 18,554 stored characters read in two contiguous ranges with canonical hash match. Hook: 3% raise eaten by inflation, stagnation framed as decisions not made; early subscribe/like CTA. Fourteen traps delivered sequentially with brief explanations: (1) employer not your friend + 12-year loyalty anecdote, (2) tenure plateau and job-switch premium, (3) market-value research tools, (4) not asking, (5) risk aversion, (6) first offers, (7) busy vs high-impact, (8) firm-specific skills, (9) waiting for permission, (10) experience vs repetition, (11) networking, (12) staying in lane, (13) benefits negotiation, (14) imagined ceilings; close \"in 5 years\". List structure with numbered signposting and almost no data, sources or worked negotiation examples; one anecdote. Advice is mostly mainstream career guidance but presented with absolute claims (\"guarantee\", \"most ceilings are imaginary\") and no acknowledgment of labor-market, credential, location or discrimination constraints. ASR artifacts (\"9-to-F5\", \"ER8s\") preserved; not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              9500
+            ],
+            "beat": "3%-raise hook, CTA, traps 1-6: employer incentives and loyalty anecdote, tenure plateau and switching math, market value tools, asking, risk, first offer"
+          },
+          {
+            "character_range": [
+              9500,
+              18554
+            ],
+            "beat": "Traps 7-14: busy work, transferable skills, permission, experience, network, lane, benefits, imagined ceilings; 5-year guarantee close"
+          }
+        ],
+        "claim_audit": [
+          "0:9500 $40,000 to $50,000 over 12 years = ~1.88%/year (script \"basically 2%\"), correct; whether that lags inflation depends on the period (2010s US CPI averaged ~1.8-2%, so roughly flat, not clearly negative). \"30% bump by switching\" a few years ago and \"20% premium\" today are unsourced; Atlanta Fed Wage Growth Tracker data show job switchers' median annual wage growth only a few percentage points above stayers even at the 2022 peak, so 20-30% per move is not typical. Four 20% jumps in 10 years = 2.07x versus 3%/year 10 years = 1.34x - arithmetic correct but premised on the unsupported 20% figure.",
+          "0:9500 \"Company's goal is to pay you as little as possible\" is a simplification (retention, morale and market rates also matter). \"$50,000 left on the table\" is an unquantified possibility. Glassdoor, Payscale and LinkedIn salary data are real tools but self-reported and noisy - presented as \"real numbers from real people\" without caveats. Offers often have budget room, but \"everything is negotiable\" overstates for structured pay scales (government, unions).",
+          "9500:18554 Traps 7-14 are qualitative; claims like \"Python developer valuable everywhere\" and \"most ceilings are imaginary\" are unsupported generalizations; the closing \"I guarantee\" outcome promise is not supportable. No tax, statistical or product claims requiring primary-source checks."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DbLgEsEUojA",
+          "TRANSCRIPT_COVERAGE.csv:DbLgEsEUojA",
+          "audit-batches/NICK_076_READ_RECEIPTS.json"
+        ],
+        "analysis": "Career income growth for salaried workers: negotiation, job switching, skills, networks. Broad audience of employees with stagnant pay; practical but saturated career-advice genre framed through a finance channel. Evergreen; Dec 2025 timing near year-end reviews.",
+        "novelty_and_corpus_angle": "Original angle: quantify job-switch versus stay outcomes with Atlanta Fed tracker data by period and occupation, include a real negotiation script with ranges, and show the lifetime compounding of a starting-salary difference; acknowledge structural limits.",
+        "competition": "Exact pool: strong 7W0uvrGuOW4 buy-borrow-die 5.76468; typical P9HyBrS2qjs 1.44641, VREo0Hj_tyQ 1.14397; weak WAbZSrUMdk0 0.39625. Cross-channel employment-escape: Lucas DRgicj5qNCE escaped rat race 5.49291 STRONG, Lucas ZT_9WsQLd_o 7 signs rat race 0.73536 TYPICAL; Carl eZ-SNfBH-6s millionaire on low salary 7.94268 STRONG."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DbLgEsEUojA",
+          "TRANSCRIPT_COVERAGE.csv:DbLgEsEUojA",
+          "audit-batches/NICK_076_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "38,598 views at 269.5756 days, 19:15; 1.58543x TYPICAL against 10 same-channel LONG_FORM peers published 2025-12-10 to 12-20, frozen 2026-09-11. Exact pool: strong 7W0uvrGuOW4 buy-borrow-die 5.76468; typical P9HyBrS2qjs math of being broke 1.44641, VREo0Hj_tyQ quit before snowball 1.14397, ciWCTKap5ZM first $1,000 0.96779, EwbXdhQ0qrw 80/20 0.90095, QtlJUTJ58ZU inversion 0.6914, MKSPz6cWlwc growing up poor 0.62535, tzsM2f6dsEE atomic habits 0.6133, D-8FxjgbCeY $70K survival 0.59518; weak WAbZSrUMdk0 psychology of saving 0.39625. Target is second-highest in the pool, upper TYPICAL; a workplace-grievance list performed above cost-of-living and psychology peers of the same fortnight but well below the tax-strategy outlier. Descriptive only; peer images/scripts not re-inspected.",
+        "observed_result": "38,598 views; 269.5756 days; 1,155 seconds; 1.58543x TYPICAL; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Employment-escape and salary topics range from STRONG (Lucas rat race, Carl low-salary millionaire) to TYPICAL on Nick; historical search interest unknown.",
+        "trend_timing": "2025-12-15 publication near year-end performance reviews/raise season; no verified event linkage; seasonality untested.",
+        "competition": "Saturated career-advice genre externally; same-fortnight Nick uploads mostly TYPICAL.",
+        "format_fit": "19-minute 14-item list with short segments; easy to sample, little evidence; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 264-275 days old.",
+        "alternative_explanations": [
+          "Appeal: boss-paycheck-conveyor image and \"Underpaid\" grievance may resonate with a broad employed audience; CTR unknown.",
+          "Engagement: short numbered segments may sustain browsing; repetitive motivational phrasing could reduce completion; retention unavailable.",
+          "Satisfaction: actionable negotiation themes may satisfy, while absence of data or scripts could feel generic; satisfaction unknown.",
+          "Year-end raise season, broader-than-finance audience and recommendation allocation could explain the upper-TYPICAL result."
+        ],
+        "original_content_lesson": {
+          "test": "Test a career-pay video built on one sourced switch-versus-stay dataset and a scripted negotiation example against a generic numbered-trap list; measure own CTR, retention by trap and comments reporting raises.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

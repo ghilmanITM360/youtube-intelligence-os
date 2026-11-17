@@ -1,0 +1,255 @@
+{
+ "batch_id": "NICK_282_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "pqJLxRMlZkc",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "30b5b3dc50b94c429376db2a343ae57ffe5c6a4c9feeaf5c52e9764c6c0a019e",
+   "character_count": 18265,
+   "canonical_utf8_bytes": 18265,
+   "canonical_whitespace_word_count": 3300,
+   "coverage_token_count": 3340,
+   "read_character_ranges": [
+    [
+     0,
+     8000
+    ],
+    [
+     8000,
+     18265
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "You're sitting at a kitchen table with a retirement statement in your hand, and ",
+   "last_text_witness": "as spent his entire working life comparing himself to a ghost and quietly concluding he was the one who came up short. You didn't come up short. You were handed the wrong number. Go get the right one.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 8000,
+     "first80": "You're sitting at a kitchen table with a\nretirement statement in your hand, and\n",
+     "last80": "ot a\ndecline. That's a trapdoor. All right,\nthat's the debt. Now, let's go look "
+    },
+    {
+     "start": 8000,
+     "end": 18265,
+     "first80": "at\nwhat's supposed to be sitting on the\nother side of the ledger. Back to\nDesmon",
+     "last80": "ou didn't come up short. You were\nhanded the wrong number. Go get the\nright one."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "058_pqJLxRMlZkc_Shocking_Finance_Stats_Of_The_Average_Person.txt",
+   "archive_member_sha256": "aaf96441eacc50252d105809a570e06f2f8ee60c9e8feeadd18459061bf8dfb6",
+   "archive_member_bytes": 19839,
+   "archive_member_lines": 523,
+   "audio_verified": false,
+   "image_sha256": "8da6f3b93bb49d70f7ebcec037584e28326d9c7fefa8dd4d6128efbbf38eb77f",
+   "image_bytes": 153958,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/pqJLxRMlZkc/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/pqJLxRMlZkc/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-02"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "FREDCARD",
+   "url": "https://fred.stlouisfed.org/series/TERMCBCCINTNS",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED TERMCBCCINTNS, fredgraph.csv; SHA-256 0518edf09e18bd6b0c3b3c4977d3c405e28b1106fbe55bc502c575e5e9103d49",
+   "finding": "Interest rate on credit card plans, accounts assessed interest: 22.15% in May 2026 (22.36% Aug 2026).",
+   "limitations": "Quarterly/monthly Fed G.19-type series; current vintage; \"new general purpose card\" 25% figure not inspected.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDMSP",
+   "url": "https://fred.stlouisfed.org/series/MSPUS",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED MSPUS, fredgraph.csv; SHA-256 a9f5886d44aeb6f0bbb14d823b1c2b397e8fb7775fb47b6dfd4c67073fdbea32",
+   "finding": "Median sales price of houses sold (new): $408,500 Q1 2026, $413,500 Q2 2026.",
+   "limitations": "New homes sold only; existing-home median not inspected.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDINC",
+   "url": "https://fred.stlouisfed.org/series/MEHOINUSA646N",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED MEHOINUSA646N, fredgraph.csv; SHA-256 2052185cf05506b963bfe3aaee5dbbc1783e1518b144b74ecd85058b43de4bfc",
+   "finding": "Median household income $83,160 (2024); 2025 value $87,460 published after the video date.",
+   "limitations": "Current vintage; Census-reported 2024 value recalled as $83,730.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 7430,
+    "age_days": 60.11,
+    "views_per_day": 123.60672101147895,
+    "peer_median_10": 88.30939670159202,
+    "peer_median_5": 90.18621425502228,
+    "peer_ratio_10": 1.3997006618577725,
+    "peer_ratio_5": 1.3705722324916811,
+    "tier_10": "TYPICAL",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "i7eR3JUrefg",
+     "-FsJqwfNvt4",
+     "2Q_h21K6MAo",
+     "EOVnm1nKCns",
+     "9PHPEV9MKOg",
+     "qUcdSBhm9us",
+     "sZEOSY3MODg",
+     "wOVEF-cb5XI",
+     "pv4-6zgdPfM",
+     "ULkTn-jHBBc"
+    ],
+    "peer_ids_5": [
+     "i7eR3JUrefg",
+     "-FsJqwfNvt4",
+     "2Q_h21K6MAo",
+     "EOVnm1nKCns",
+     "9PHPEV9MKOg"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "i7eR3JUrefg",
+      "Title": "29 Minutes of People Living Above Their Means and Going BROKE",
+      "Views": "6992",
+      "Age_days": "59.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "-FsJqwfNvt4",
+      "Title": "Renting Vs Buying a Home — The Real Math",
+      "Views": "4531",
+      "Age_days": "61.1381",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "2Q_h21K6MAo",
+      "Title": "Over 30? How To Retire in 10 Years Starting With $50K",
+      "Views": "5025",
+      "Age_days": "58.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "EOVnm1nKCns",
+      "Title": "How The Rich Turn Saving Into Investing (Step by Step)",
+      "Views": "5604",
+      "Age_days": "62.1381",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "9PHPEV9MKOg",
+      "Title": "Why Most People Never Become Millionaires - And Why SOME Do",
+      "Views": "14335",
+      "Age_days": "57.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "qUcdSBhm9us",
+      "Title": "If the World is F*cked... Why Are Stocks At Record Highs?",
+      "Views": "6581",
+      "Age_days": "63.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "sZEOSY3MODg",
+      "Title": "Once Your Portfolio Hits This Number, Saving More Barely Matters",
+      "Views": "7935",
+      "Age_days": "56.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "wOVEF-cb5XI",
+      "Title": "What If YOU Invest $10k In The 3 Best Index Funds",
+      "Views": "4548",
+      "Age_days": "64.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "pv4-6zgdPfM",
+      "Title": "Day Trading vs Index Funds - Which One Will Make You More?",
+      "Views": "3057",
+      "Age_days": "55.1171",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "ULkTn-jHBBc",
+      "Title": "6 Ways People Become Rich With Debt",
+      "Views": "4462",
+      "Age_days": "65.1336",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Same-channel peers only; exposure-confounded; no impressions, traffic sources or CTR."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Mean versus median example, minimum-payment split, annuity future value, 4% rule, ratios",
+   "results": {
+    "room_mean": 1045000,
+    "room_mean_after_leaving": 50000,
+    "room_mean_drop": 995000,
+    "card_min_payment": 40,
+    "card_interest_month": 36.67,
+    "card_principal": 3.33,
+    "fv_770_monthly_8pct_40y": 2688076,
+    "fv_9240_annual_8pct_40y": 2393682,
+    "four_pct_of_44115": 1764.6,
+    "monthly_from_four_pct": 147.05,
+    "price_to_income_427_83_7": 5.1,
+    "net_worth_mean_median_ratio": 5.514,
+    "optin_vs_default_gap_points": 30,
+    "implied_balance_for_318_per_month": 95400
+   },
+   "limitations": "Constant rates; nominal; pre-tax; persona examples are illustrative; SCF/Vanguard/SSA/NY Fed figures not primary-inspected."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification. FRED TERMCBCCINTNS, MSPUS and MEHOINUSA646N inspected directly; NY Fed household debt and the 2026 Social Security Trustees Report only via search snippets; Vanguard, SHED, SCF, wealth shares, car payments, BNPL, hardship-withdrawal and lottery figures are analyst recall or unavailable. Personas are not data. No paid purchases."
+}

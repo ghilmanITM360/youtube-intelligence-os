@@ -1,0 +1,96 @@
+{
+ "correction_id": "NICK_260_CORRECTION_2026-11-01",
+ "video_id": "mErWx9GiVUc",
+ "nick": "NICK_260",
+ "upload_date": "2026-04-07",
+ "basis": "NICK_260_264_QUALITY_ADDENDUM_2026-11-01.md; sources re-opened and re-hashed in this correction",
+ "original_packet": {
+  "commit": "c70a81acc70ffe5fe75b30753a4ac66d382014c9",
+  "blob": "dcb4e1830bed3000364863e26b3a6e6aaed770d8",
+  "sha256": "46c6a074c7d7cfa420880c19ccb5d57eb9398194f0bc234085406f504dfcda54",
+  "copy": "corrections/NICK_260/ORIGINAL_NICK_260.json"
+ },
+ "original_receipts": {
+  "blob": "b0a548ce0945001f6560ce901bf5562e092fbc9a",
+  "sha256": "ae1a3499224d3dca05ed68a7b86cb6ee3d9443174e121129589b86bbb0e6519a",
+  "copy": "corrections/NICK_260/ORIGINAL_NICK_260_READ_RECEIPTS.json"
+ },
+ "rulings": {
+  "C17": "VERIFIED (was UNSUPPORTED): 12.70% stock share of card balances 90+ days delinquent, 2025Q4; 7.13% is the separate annualised flow measure.",
+  "C20": "PARTIAL: 14.3% = 2025Q3 student-loan flow into serious delinquency (14.26%), historically accurate but not latest at upload (2025Q4 16.19%, public 2026-02-10); $1.696T does not match NY Fed $1.66T; other parts unchecked."
+ },
+ "not_used_as_proof": "Post-upload sources (2026Q1 report, Liberty Street Economics Aug 2026) are not used to date any ruling.",
+ "unchanged": "Transcript, Text_SHA256, K01 tier, thumbnail, statuses, accepted count, all other claims and rows.",
+ "before": {
+  "C17": {
+   "claim_id": "C17",
+   "claim": "12.7% of all credit card balances are 90+ days delinquent.",
+   "start_char": 10413,
+   "end_char": 10573,
+   "stored_text_witness": "12.7% of all credit card\nbalances, more than one in eight\ndollars, are now 90 or more days\ndelinquent. Fed Chair Jerome Powell\nacknowledged what he called a bif",
+   "assessment": "NYF4Q: the NY Fed reports an annualised flow into serious delinquency of about 7.1% for cards in Q4 2025. The 12.7% figure was not found and may be a different stock measure or a misquote. Unsupported as stated.",
+   "source_ids": [
+    "NYF4Q"
+   ],
+   "evidence_kind": "ANALYST_FACT_CHECK_OR_EXPLICIT_UNVERIFIED_CREATOR_ASSERTION",
+   "date_scope": "Video publication context 2026-04-07; source dates and access limitations in companion receipts"
+  },
+  "C20": {
+   "claim_id": "C20",
+   "claim": "Student loans $1.696 trillion, 43 million borrowers, average $39,633; serious-delinquency transition 14.3%, fastest since 2000; 7 million in default; SAVE ruled unlawful, 7.5 million transition by July 2026.",
+   "start_char": 11927,
+   "end_char": 12087,
+   "stored_text_witness": "Then, there are student\nloans, $1.696\ntrillion total. 43 million borrowers\naverage debt of $39,633\nper person. When payments fully resumed\nand the grace period ",
+   "assessment": "The SAVE plan court loss and wind-down consistent by analyst recall, not fetched. The total, borrower count, average and delinquency figures are not checked. UNVERIFIED_CREATOR_ASSERTION",
+   "source_ids": [],
+   "evidence_kind": "ANALYST_FACT_CHECK_OR_EXPLICIT_UNVERIFIED_CREATOR_ASSERTION",
+   "date_scope": "Video publication context 2026-04-07; source dates and access limitations in companion receipts"
+  },
+  "analysis": "Full 42635 canonical characters read. A long-form composite-character essay: grocery-checkout hook; flat real median income vs prices; Elijah and real wages; shrinkflation; tariffs (Vietnam shoes, Yale, NY Fed pass-through); Isabella and card, auto and student debt; depleted savings and BNPL; Luna and AI layoffs, U-6, the benchmark revision, Challenger, Klarna; Calyx and retirement math, 401(k) fees, Social Security depletion, 401(k) history; Jordan and Alex and housing lock-in; recession odds and fiscal room; psychology (normalcy bias, anchoring, doom spending, loss aversion); action plan (emergency fund, debt, keep investing, HSA, housing math, Roth conversions); two-futures close. Verified: Census income, Yale tariff cost, NY Fed 94% (Jan-Aug 2025), NY Fed card balances, SF Fed excess savings, NAHB 74.9%, Challenger AI cuts, DOL fee example, retirement arithmetic. Wrong or misattributed: 2026 401(k)/HSA limits (all four), the 22.5% tariff rate credited to the Tax Foundation, \"10% smaller\" labour market, 2009 home-sales comparison, Goldman/JPMorgan 65%, Klarna framing, stale 3.7% Morningstar rate. Unsupported: 30.9% panic sellers, 12.7% 90+ delinquency stock, the version-two outcomes. Several Edmunds values approximate but do not match Q4 2025. The stored ending is complete."
+ },
+ "after": {
+  "C17": {
+   "claim_id": "C17",
+   "claim": "12.7% of all credit card balances are 90+ days delinquent.",
+   "start_char": 10413,
+   "end_char": 10573,
+   "stored_text_witness": "12.7% of all credit card\nbalances, more than one in eight\ndollars, are now 90 or more days\ndelinquent. Fed Chair Jerome Powell\nacknowledged what he called a bif",
+   "assessment": "[PRIMARY_SOURCE_DIRECTLY_INSPECTED] CORRECTED 2026-11-01 (corrections/NICK_260/NICK_260_CORRECTION_2026-11-01.json). NYFX25Q4: NY Fed HHDC 2025Q4 data workbook (released 2026-02-10, before the 2026-04-07 upload), sheet \"Page 12 Data\" (Percent of Balance 90+ Days Delinquent by Loan Type), row 25:Q4, CC = 12.70% (25:Q3 12.41%). The creator's 12.7% stock share is VERIFIED; \"more than one in eight\" (12.5%) is consistent. The original verdict confused it with the different flow measure (\"Page 14 Data\", new seriously delinquent balances, 25:Q4 CC = 7.13% annualised). Original verdict \"Unsupported as stated\" is superseded.",
+   "source_ids": [
+    "NYFX25Q4",
+    "NYF4Q"
+   ],
+   "evidence_kind": "ANALYST_FACT_CHECK_OR_EXPLICIT_UNVERIFIED_CREATOR_ASSERTION",
+   "date_scope": "Video publication context 2026-04-07; source dates and access limitations in companion receipts"
+  },
+  "C20": {
+   "claim_id": "C20",
+   "claim": "Student loans $1.696 trillion, 43 million borrowers, average $39,633; serious-delinquency transition 14.3%, fastest since 2000; 7 million in default; SAVE ruled unlawful, 7.5 million transition by July 2026.",
+   "start_char": 11927,
+   "end_char": 12087,
+   "stored_text_witness": "Then, there are student\nloans, $1.696\ntrillion total. 43 million borrowers\naverage debt of $39,633\nper person. When payments fully resumed\nand the grace period ",
+   "assessment": "[PRIMARY_SOURCE_DIRECTLY_INSPECTED] CORRECTED 2026-11-01 (partial). NYFX25Q4 \"Page 14 Data\" (new seriously delinquent balances, annualised percent of balance), student loans: 25:Q3 = 14.26%, 25:Q4 = 16.19%. The \"14.3%\" matches the 2025Q3 value (released November 2025) and is historically accurate for that quarter, but at the 2026-04-07 upload the 2025Q4 report (16.19%, released 2026-02-10) was already public, so the figure was not the latest and understates it. NYFPDF25Q4: the report states outstanding student loan debt of $1.66 trillion in 2025Q4, not $1.696 trillion (the $1.696T may be a Department of Education federal-portfolio figure, not checked). [ANALYST_RECALL_NOT_REVERIFIED] SAVE court loss and wind-down consistent; \"fastest since 2000\", 43 million borrowers, $39,633 average and 7 million in default not checked. UNVERIFIED_CREATOR_ASSERTION for the unchecked parts.",
+   "source_ids": [
+    "NYFX25Q4",
+    "NYFPDF25Q4"
+   ],
+   "evidence_kind": "ANALYST_FACT_CHECK_OR_EXPLICIT_UNVERIFIED_CREATOR_ASSERTION",
+   "date_scope": "Video publication context 2026-04-07; source dates and access limitations in companion receipts"
+  },
+  "analysis": "Full 42635 canonical characters read. A long-form composite-character essay: grocery-checkout hook; flat real median income vs prices; Elijah and real wages; shrinkflation; tariffs (Vietnam shoes, Yale, NY Fed pass-through); Isabella and card, auto and student debt; depleted savings and BNPL; Luna and AI layoffs, U-6, the benchmark revision, Challenger, Klarna; Calyx and retirement math, 401(k) fees, Social Security depletion, 401(k) history; Jordan and Alex and housing lock-in; recession odds and fiscal room; psychology (normalcy bias, anchoring, doom spending, loss aversion); action plan (emergency fund, debt, keep investing, HSA, housing math, Roth conversions); two-futures close. Verified: Census income, Yale tariff cost, NY Fed 94% (Jan-Aug 2025), NY Fed card balances, SF Fed excess savings, NAHB 74.9%, Challenger AI cuts, DOL fee example, retirement arithmetic. Wrong or misattributed: 2026 401(k)/HSA limits (all four), the 22.5% tariff rate credited to the Tax Foundation, \"10% smaller\" labour market, 2009 home-sales comparison, Goldman/JPMorgan 65%, Klarna framing, stale 3.7% Morningstar rate. Unsupported: 30.9% panic sellers, the version-two outcomes. Corrected 2026-11-01 from the NY Fed 2025Q4 data workbook: the 12.7% card 90+ delinquency stock is verified (12.70%); the 14.3% student-loan transition rate matches 2025Q3 but was not the latest at upload (2025Q4 16.19%); $1.696T vs NY Fed $1.66T. Several Edmunds values approximate but do not match Q4 2025. The stored ending is complete."
+ },
+ "sources_added": [
+  "NYFX25Q4",
+  "NYFPDF25Q4"
+ ],
+ "validation": {
+  "validate_audit_966": "rc 0, errors []",
+  "validate_research": "rc 0",
+  "pytest": "48 passed (47 + test_nick260_correction.py)",
+  "node": "2 passed",
+  "projections": "build_audit_966.py: one changed line each in VIDEO_AUDIT_966.jsonl, VIDEO_AUDIT_966.csv, SCRIPT_ANALYSIS_966.csv (mErWx9GiVUc)",
+  "workbook": "5 cells: Detailed Research J531/K531/S531 + dashboard Generated UTC/Base HEAD; styles 0, formulas 0, zip ok; 16 hashtag text cells pre-existing",
+  "accepted_count": "546 (unchanged)",
+  "native_excel_recalc": "NOT_PERFORMED"
+ }
+}

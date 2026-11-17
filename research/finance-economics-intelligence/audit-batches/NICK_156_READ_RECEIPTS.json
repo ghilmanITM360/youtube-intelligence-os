@@ -1,0 +1,45 @@
+{
+  "batch_id": "NICK_156_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [{
+    "Video_ID": "RgaTGzeFcPQ",
+    "scope": "FULL_STORED_TEXT",
+    "Text_SHA256": "531fd437e4ceebef6787d4325aa0a4084a7aa89c818930a46d35de1fc937d57a",
+    "character_count": 18592,
+    "canonical_utf8_bytes": 18592,
+    "canonical_whitespace_word_count": 3307,
+    "coverage_token_count": 3335,
+    "read_character_ranges": [[0, 6500], [6500, 13000], [13000, 18592]],
+    "first_text_witness": "Nobody who says Bitcoin is going to zero actually believes Bitcoin is going to zero.",
+    "last_text_witness": "That is the whole test. Everything else is just somebody's story about why the next buyer is going to show up.",
+    "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+    "archive_member": "047_RgaTGzeFcPQ_Is_Bitcoin_going_to_0_What_They_Wont_Tell_You.txt",
+    "archive_member_sha256": "ace939c657afd441ed55b7f71b13783486e3108f464e04ead76f526e480ffbac",
+    "archive_member_bytes": 20172,
+    "archive_member_lines": 521,
+    "audio_verified": false,
+    "image_sha256": "751b4a780d8560eb78149759178bf16d2ca33a8ce2db317893731cc54beef1cf",
+    "image_bytes": 128018,
+    "image_media_type": "image/jpeg",
+    "image_inspected_sizes": [[1280, 720], [320, 180]],
+    "registered_image_url": "https://i.ytimg.com/vi/RgaTGzeFcPQ/maxresdefault.jpg",
+    "fetched_image_url": "https://i.ytimg.com/vi/RgaTGzeFcPQ/maxresdefault.jpg",
+    "image_acquisition": "SINGLE_FETCH_FROM_REGISTERED_YTIMG_URL; HTTP_SUCCESS; HASHED_AND_PRESERVED; NO_PAGE_SCRAPING",
+    "acquired_date": "2026-10-21"
+  }],
+  "primary_source_receipts": [
+    {"claim": "Bitcoin 2025 high and 2026 price context", "url": "https://www.sec.gov/Archives/edgar/data/2073545/000121390026022663/ea0254428-08.htm", "accessed": "2026-10-21", "source_date": "2026 SEC FILING; RETROSPECTIVE 2025 MARKET RANGE", "access_scope": "PRIMARY_REGULATORY_FILING", "finding": "The filing states Bitcoin traded above $126,000 in 2025 and fell from above $126,000 to below $81,000 between October and November 2025. It supports the approximate peak, not the transcript's full endpoint series or source timestamp."},
+    {"claim": "Q2 2026 spot Bitcoin ETF outflows", "url": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm", "accessed": "2026-10-21", "source_date": "QUARTER_ENDED_2026-06-30; FILED_POST_VIDEO", "access_scope": "PRIMARY_ISSUER_SEC_FILING_RETROSPECTIVE", "finding": "IBIT reported that U.S. spot Bitcoin products experienced their largest quarterly net outflows since launch in Q2 2026. The filing does not reproduce exact June aggregate outflows, a 79% IBIT share or 45% weekly-price explanatory power."},
+    {"claim": "Strategy Bitcoin monetization program", "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526295586/mstr-20260706.htm", "accessed": "2026-10-21", "source_date": "2026-07-06; PREDATES_VIDEO", "access_scope": "PRIMARY_SEC_FILING", "finding": "Strategy stated that its June 29 program could generate up to $1.25 billion for the USD Reserve and that the full capacity remained available as of July 5. This was authorization, not a completed 20,000-coin sale."},
+    {"claim": "Public miner liquidity-driven Bitcoin sales", "url": "https://www.sec.gov/Archives/edgar/data/1507605/000150760526000014/q126shareholderletter.htm", "accessed": "2026-10-21", "source_date": "Q1_2026; FILED_2026-05", "access_scope": "PRIMARY_ISSUER_SEC_FILING", "finding": "MARA reported about $1.5 billion of Q1 Bitcoin sales used to retire debt and reduce a credit line. It supports liquidity-driven selling by one large miner, not the transcript's industry-wide 32,000-BTC total."},
+    {"claim": "U.S. adult cryptocurrency use", "url": "https://www.federalreserve.gov/publications/files/2025-report-economic-well-being-us-households-202605.pdf", "accessed": "2026-10-21", "source_date": "2025 SURVEY; RELEASED_2026-05; PREDATES_VIDEO", "access_scope": "PRIMARY_OFFICIAL_REPORT", "finding": "The probability-based SHED of nearly 13,000 adults reports 10% used cryptocurrency for investment or transactions in 2025. The report warns its online sample may be more technologically connected; the measure is prior-year use, not all-time ownership."},
+    {"claim": "BIP-360 status and purpose", "url": "https://github.com/bitcoin/bips/blob/master/bip-0360.mediawiki", "accessed": "2026-10-21", "source_date": "DRAFT_BIP; REPOSITORY_STATE_ACCESSED_2026-10-21", "access_scope": "PRIMARY_PROTOCOL_PROPOSAL", "finding": "BIP-360 is a draft Pay-to-Merkle-Root proposal in the BIP repository. Repository acceptance is not Bitcoin Core activation, and the proposal does not prove quantum timing."},
+    {"claim": "BIP-361 migration and legacy-signature sunset", "url": "https://github.com/bitcoin/bips/blob/master/bip-0361.mediawiki", "accessed": "2026-10-21", "source_date": "DRAFT_ASSIGNED_2026-02-11", "access_scope": "PRIMARY_PROTOCOL_PROPOSAL", "finding": "BIP-361 is a draft describing phased migration, restrictions and proposed rescue protocols. It cites more than 34% of bitcoin with revealed public keys but is not adopted code or a settled plan to confiscate one-third of supply."},
+    {"claim": "Bitcoin subsidy halving schedule", "url": "https://bitcoin.org/bip/42/", "accessed": "2026-10-21", "source_date": "PROTOCOL_RULE_DOCUMENTATION", "access_scope": "PRIMARY_PROTOCOL_DOCUMENTATION", "finding": "The subsidy begins at 50 BTC and halves every 210,000 blocks. From 3.125 BTC, three further halvings yield 0.390625 BTC, one eighth; timing around 2036 remains block-dependent."}
+  ],
+  "calculation_receipts": [
+    {"method": "Frozen lifetime-view-rate medians from VIDEO_MASTER.csv", "assumptions": "Frozen views and age_days; exact listed same-channel long-form peers under build_baseline.compare; first five listed peers for sensitivity.", "results": {"target_views_per_day": 126.86744854786224, "peer_median_views_per_day_10": 108.36844260703745, "peer_ratio_10": 1.1707047318923403, "peer_ratio_5": 1.2738953245549243, "tier_10": "TYPICAL", "tier_5": "TYPICAL", "peer_ids_10": ["bHZObxKdzxA", "pmfPNdWGzdo", "9bJvzv5GknU", "dwbvvyeRonE", "hzQsUoXqLQc", "jFH7Cl6Uc_M", "7z56bYxEQu4", "GQ7oro2pthQ", "mlJsPniO5lQ", "0Ca3uV6lgos"], "peer_ids_5": ["bHZObxKdzxA", "pmfPNdWGzdo", "9bJvzv5GknU", "dwbvvyeRonE", "hzQsUoXqLQc"]}},
+    {"method": "Direct percentage calculations from script inputs", "assumptions": "Simple price change; no fees, taxes or timing interpolation.", "results": {"126000_to_65000_drawdown_percent": 48.41269841269841, "67600_to_15700_drawdown_percent": 76.77514792899409, "recovery_after_43_percent_loss_percent": 75.43859649122808, "112500_to_65000_loss_percent": 42.22222222222222, "recovery_from_65000_to_112500_percent": 73.07692307692308}},
+    {"method": "Subsidy and fee-share sensitivity", "assumptions": "Current subsidy 3.125 BTC; three halvings; current transaction-fee share 0.61% accepted only as a script input; constant total miner revenue in comparable real units.", "results": {"subsidy_after_three_halvings_btc": 0.390625, "subsidy_fraction_of_current": 0.125, "fee_multiplier_needed_if_current_fee_share_is_0_61_percent": 143.56762295081968, "disposition": "ARITHMETIC_REPRODUCES_CONDITIONALLY; INPUT_AND_CONSTANT_SECURITY_BUDGET_UNVERIFIED"}}
+  ]
+}

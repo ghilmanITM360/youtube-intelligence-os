@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "oPbLgCFB4gU",
+ "nick": "NICK_274",
+ "claims": 11,
+ "sources": 1,
+ "calculations": 2,
+ "transcript_chars": 20600,
+ "parent_commit": "ca099ca3756127937d0a59d6693dd7d675ab90ae",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_273",
+  "NICK_274"
+ ],
+ "changed_ledger_ids": [
+  "oPbLgCFB4gU"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 548,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "48_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.24252 WEAK (5-peer 0.10670 WEAK); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 550,
+  "remaining": 1062,
+  "original_pending": 416,
+  "expansion_pending": 646,
+  "changed_cells": "63 (dashboard 7 + rows 545-546)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "dde9ef0f9c63fc17189d91d5ff95dac07bc1f4cb18d99871ab813caf5abf49e8"
+ },
+ "semantic_acceptance": "All 20600 stored characters and six dimensions reviewed; 11 located claim groups; sources CRR. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "df04bd2035f6806250349837ab343588873845815b3d7655e6cfec8b61e00533",
+  "NICK_274.json": "adc756dd2b359616f05f5f827009bc386076aa0edc6897f0d9482d47f1e98413",
+  "NICK_274_READ_RECEIPTS.json": "270e89e63a86fb29dafd364d3d8b9158a24fc6abd22fcdd71b6ea80ad221f534",
+  "thumbnail": "7aabc4890c364bc1c451a79260733be31755ced7f390435a79c1bade261e8d21"
+ }
+}

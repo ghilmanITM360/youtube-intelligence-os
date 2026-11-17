@@ -1,0 +1,9 @@
+{
+ "assessed_utc": "2026-11-03T17:00Z",
+ "session": "7a28d062-11cb-4600-a99d-27b9caa812d6 (Claude Code, model claude-opus-5-5)",
+ "status": "BLOCKED_CAPABILITY",
+ "finding": "No genuine audio playback/perception capability is available to this session or its subagents. Tools accept text and images only; the browser extension is disconnected; no audio-input model is installed or authorised. Faster-whisper ASR, waveform/RMS and spectrogram measurements are machine signals, NOT listening.",
+ "consequence": "audio_verified segments = 0 for all three videos; narration delivery, pauses, music, SFX and AV sync remain UNAVAILABLE (not PASS). CT_SCAN_COMPLETE cannot be awarded under kit ref 07/13 without actual listening.",
+ "unblock_options": ["Owner or a human listener reviews the listed intervals and records judgments", "An explicitly approved audio-capable model/tool is provided"],
+ "does_not_block": ["visual art/motion review", "ASR-based provisional narration relations", "videos 2 and 3"]
+}

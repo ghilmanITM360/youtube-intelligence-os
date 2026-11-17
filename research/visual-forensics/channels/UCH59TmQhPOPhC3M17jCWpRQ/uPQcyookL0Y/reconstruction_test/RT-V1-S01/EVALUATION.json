@@ -1,0 +1,83 @@
+{
+ "test": "RT-V1-S01",
+ "criterion_sha256": "25305444bfb1a32e6c8568aa900072c242aae216f93732db1368caa79d0225a5",
+ "render_sha256": "f6e741cf6d52e951385dc992786fa70a9e4d962d3367f5ea3b3b347380375feb",
+ "deterministic": {
+  "C1": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames_ffprobe": 158,
+   "frames_decoded_cv2": 158
+  },
+  "C2": {
+   "ok": true,
+   "bg": 0.81,
+   "brown": 0.146
+  },
+  "C3": {
+   "ok": true,
+   "run": [
+    26,
+    37
+   ],
+   "sum_dscale": -0.806,
+   "length": 12
+  },
+  "C4": {
+   "ok": true,
+   "peak_offset": 6,
+   "profile": [
+    -0.015,
+    -0.031,
+    -0.054,
+    -0.074,
+    -0.094,
+    -0.109,
+    -0.116,
+    -0.114,
+    -0.096,
+    -0.066,
+    -0.032,
+    -0.006
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "camera_frames_outside": []
+  }
+ },
+ "C6_visual": {
+  "evaluator": "orchestrator (Claude session 1e8761b1), render frames f0,16,30,44,67,157 only",
+  "items": {
+   "hand_drawn_outline_style": {
+    "ok": true,
+    "obs": "jittered dark outlines, flat fills, no gradients/glow"
+   },
+   "handwritten_labels": {
+    "ok": true,
+    "obs": "marker-style labels \"4 ft 11 in (150 cm) / 110 lbs (50 kg)\" and \"13 ft 1 in (400 cm) / 9,900 lbs (4,500 kg)\""
+   },
+   "layout": {
+    "ok": true,
+    "obs": "f0 villager ~80% height centre-left; bracket+label left of villager at f16; after zoom villager small lower-left, creature ~86% height right with taller bracket+label at its upper-left"
+   },
+   "original_characters": {
+    "ok": true,
+    "obs": "new villager and creature; no source character copied"
+   }
+  },
+  "ok": true,
+  "non_scored_observations": [
+   "creature reads as a bear with box-shaped detached arms, not the specified ground-sloth-like form; hand shading minimal (fidelity defect vs spec text, not a registered C6 item)",
+   "villager face unfilled white vs source tan-filled faces (spec did not state face fill: spec gap)",
+   "leaf skirt olive green (spec gave no colour)"
+  ]
+ },
+ "overall": "PASS",
+ "scope": "style + full-scene (characters, background, typography, layout, camera) for one bounded scene; font/software UNKNOWN; sound NOT tested"
+}

@@ -1,0 +1,1831 @@
+# 76-state visual specification — o3FQcd91MIs (FORENSIC description of the SOURCE)
+
+Each record separates OBSERVED/MEASURED facts from INFERRED interpretation. Prompts for the new original production are in `original_prompts.md` (no source IP). Positions in 'objects_and_positions' are approximate verbal estimates from viewed frames; `measured_blobs_norm_bbox` is the computed layout.
+
+## S001.0  ·  1.3667 s  ·  f0–f40 (41 frames)  ·  pts 0.0333–1.3667
+- **shot_id**: SH001
+- **frame_refs**: entry f0 viewed in frames/first_last.jpg; exit f40 viewed in v2/boundary_sheet_01.jpg; mid f20 viewed in frames/state_sheet_01.jpg
+- **objects_and_positions**: LEAD figure small, low-centre (x~0.50,y~0.55-1.0), tiny handwritten name tag top-left of head with arrow pointing at head; nothing else
+- **measured_blobs_norm_bbox**: [[0.489, 0.481, 0.7, 1.0]]
+- **pose_expression**: neutral grin, arms out/open palms, standing, facing viewer
+- **art_direction**: Intro/pose-on-canvas (F1); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.77% of pixels; negative space 97.2%; content centroid [0.61, 0.71]
+- **typography_text**: visible_text: Dave | handwritten script tag, ~3% frame height; black on canvas
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.973], ["#f4d3b8", 0.018], ["#050302", 0.006]]; max contrast vs bg 20.2:1
+- **hierarchy_focal**: figure is sole focal point; tag secondary
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 41 frames; no in-state motion
+- **entry_transition**: start of video (f0)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f41-41 (1.4 s)
+- **story_purpose**: cold-open introduction of the protagonist
+- **narration_asr**: Meet Dave.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.817; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: single-focus empty frame makes the first element unmissable (H2)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: establishes LEAD face, hair mark count, outline weight and canvas colour used for the entire video
+- **reconstruction_requirement**: LEAD base pose PNG small scale; tag + arrow as separate layer; hold 41 frames then hard replace
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.1  ·  4.4333 s  ·  f41–f173 (133 frames)  ·  pts 1.4–5.8
+- **shot_id**: SH001
+- **frame_refs**: entry f41 viewed in v2/boundary_sheet_01.jpg; exit f173 viewed in v2/boundary_sheet_01.jpg; mid f107 viewed in frames/state_sheet_01.jpg
+- **objects_and_positions**: LEAD enlarged left-centre (x 0.18-0.60, head y~0.4), arm raised right holding trophy (x~0.55-0.65,y~0.5); ribbon banner above trophy (y~0.37); tag top-left
+- **measured_blobs_norm_bbox**: [[0.178, 0.339, 0.597, 1.0]]
+- **pose_expression**: wide open-mouth grin, one arm up holding the prize
+- **art_direction**: Pose + prop (F2); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 7.35% of pixels; negative space 92.7%; content centroid [0.396, 0.568]
+- **typography_text**: visible_text: Dave / 2 Years Trading | banner lettering small rounded sans reading a duration claim
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.926], ["#efb227", 0.025], ["#f3d3b8", 0.025], ["#090606", 0.016], ["#5b4d39", 0.005]]; max contrast vs bg 19.7:1
+- **hierarchy_focal**: trophy + ribbon banner is the focal object (gold/orange saturation) after the face
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 133 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f41-41 (1.4 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f174-174 (5.8333 s)
+- **story_purpose**: establish protagonist's false confidence (badge = 'two years' of experience)
+- **narration_asr**: Dave's been trading for two years, which in Wall Street years is the equivalent of being a
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.953; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: first saturated accent colours (gold) pull gaze to the prop (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same face/tag as S001.0 at larger scale; trophy art persists into S001.2
+- **reconstruction_requirement**: swap to LEAD-large-with-trophy PNG on one frame; do not animate the scale; banner is part of prop layer
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.2  ·  2.4 s  ·  f174–f245 (72 frames)  ·  pts 5.8333–8.2
+- **shot_id**: SH002
+- **frame_refs**: entry f174 viewed in v2/boundary_sheet_01.jpg; exit f245 viewed in v2/boundary_sheet_01.jpg; mid f209 viewed in frames/state_sheet_01.jpg
+- **objects_and_positions**: S001.1 composition unchanged (left 0.18-0.60) + right-pointing arrow (x~0.62-0.68) + tiny blue baby figure (x~0.70,y~0.75) beside a large flame (x~0.73-0.80,y~0.55-0.70)
+- **measured_blobs_norm_bbox**: [[0.178, 0.339, 0.597, 1.0], [0.652, 0.464, 0.822, 0.828], [0.544, 0.675, 0.634, 0.797]]
+- **pose_expression**: LEAD unchanged grin
+- **art_direction**: Pose + prop (F2); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 9.28% of pixels; negative space 90.7%; content centroid [0.465, 0.588]
+- **typography_text**: visible_text: Dave / 2 Years Trading | none new
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.906], ["#ecb325", 0.03], ["#f0d3b7", 0.028], ["#120e0c", 0.022], ["#747d82", 0.007]]; max contrast vs bg 18.9:1
+- **hierarchy_focal**: baby+flame gag at far right; arrow guides from trophy to gag
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 72 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f174-174 (5.8333 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f246-246 (8.2333 s)
+- **story_purpose**: visual joke that mirrors the spoken simile (novice compared to a toddler who found fire)
+- **narration_asr**: toddler who just discovered fire.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.961; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: additive pop-in gives the eye a second target while the voice delivers the punchline (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: trophy state retained; additive layers only
+- **reconstruction_requirement**: add arrow + baby + flame layers on a single frame; keep LEAD/trophy layers untouched
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.3  ·  1.8667 s  ·  f246–f301 (56 frames)  ·  pts 8.2333–10.0667
+- **shot_id**: SH003
+- **frame_refs**: entry f246 viewed in v2/boundary_sheet_01.jpg; exit f301 viewed in v2/boundary_sheet_01.jpg; mid f273 viewed in frames/state_sheet_01.jpg
+- **objects_and_positions**: LEAD small left (x~0.12-0.27,y~0.60-1.0) hands on hips; hand-drawn axes chart right (x~0.38-0.62,y~0.42-0.78) with a rising green zig-zag line and arrowhead
+- **measured_blobs_norm_bbox**: [[0.264, 0.275, 0.4, 0.786], [0.522, 0.364, 0.736, 0.669]]
+- **pose_expression**: relaxed half-smile, hands on hips (smug)
+- **art_direction**: Hand-drawn chart doodle (F3); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.8% of pixels; negative space 97.2%; content centroid [0.393, 0.464]
+- **typography_text**: visible_text: - | no text
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.972], ["#f4d3b9", 0.015], ["#060504", 0.007]]; max contrast vs bg 20.0:1
+- **hierarchy_focal**: rising green line is focal; figure secondary
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 56 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f246-246 (8.2333 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f302-302 (10.1 s)
+- **story_purpose**: evidence-by-doodle of early gains
+- **narration_asr**: His portfolio is up 13
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.978; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: upward green line signals success at a glance (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: LEAD changes to smug hands-on-hips pose used again in S005.7, S017.6
+- **reconstruction_requirement**: full composition replace; chart drawn with same marker weight; line colour #4FAE57-like green
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.4  ·  3.2333 s  ·  f302–f398 (97 frames)  ·  pts 10.1–13.3
+- **shot_id**: SH003
+- **frame_refs**: entry f302 viewed in v2/boundary_sheet_01.jpg; exit f398 viewed in v2/boundary_sheet_01.jpg; mid f350 viewed in frames/state_sheet_01.jpg
+- **objects_and_positions**: S001.3 layout + small handwritten aside from LEAD's head (x~0.25-0.38,y~0.50) + tiny green label above chart (x~0.53,y~0.60)
+- **measured_blobs_norm_bbox**: [[0.264, 0.275, 0.541, 0.786], [0.522, 0.364, 0.736, 0.669]]
+- **pose_expression**: same smug pose
+- **art_direction**: Hand-drawn chart doodle (F3); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.02% of pixels; negative space 97.0%; content centroid [0.402, 0.459]
+- **typography_text**: visible_text: +13% YTD / Its no big deal | micro-text ~1.5% frame height: handwritten aside and a green percentage label (read as an annual-gain claim; micro text partly UNVERIFIED)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.97], ["#f3d4ba", 0.016], ["#060505", 0.008]]; max contrast vs bg 20.0:1
+- **hierarchy_focal**: chart still focal; aside is tertiary micro-text
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 97 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f302-302 (10.1 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f399-399 (13.3333 s)
+- **story_purpose**: understatement joke (nonchalant brag)
+- **narration_asr**: % year to date, he just hit it big on
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.931; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: micro-text rewards close reading, low comprehension risk because spoken
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: chart + pose persist
+- **reconstruction_requirement**: add aside + label layers on one frame; keep label green
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.5  ·  3.0667 s  ·  f399–f490 (92 frames)  ·  pts 13.3333–16.3667
+- **shot_id**: SH004
+- **frame_refs**: entry f399 viewed in v2/boundary_sheet_01.jpg; exit f490 viewed in v2/boundary_sheet_01.jpg; mid f444 viewed in frames/state_sheet_01.jpg
+- **objects_and_positions**: LEAD left (x~0.12-0.27) hands on hips; long slanted handwritten pitch text up-right from head (x~0.28-0.46,y~0.40-0.55); orange coin-shaped blob right (x~0.52-0.67,y~0.60-0.80) lettered with a joke coin name
+- **measured_blobs_norm_bbox**: [[0.298, 0.258, 0.673, 0.761], [0.536, 0.456, 0.702, 0.675]]
+- **pose_expression**: smug unchanged
+- **art_direction**: Gag prop alone (F10); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 4.7% of pixels; negative space 95.3%; content centroid [0.507, 0.483]
+- **typography_text**: visible_text: FartCoin / The Future of Crypto / You just understand. It's a revolutionary blockchain-based DeFi token that has mass utility | blob has cream lettering name + smaller tagline; slanted three-line handwritten pitch
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.952], ["#da8a08", 0.017], ["#eed2ba", 0.015], ["#0f0c0b", 0.007], ["#5a4f42", 0.004]]; max contrast vs bg 19.1:1
+- **hierarchy_focal**: orange coin blob is focal (strong colour vs white)
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 92 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f399-399 (13.3333 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f491-491 (16.4 s)
+- **story_purpose**: introduce the meme-coin gag (reused at S021.2)
+- **narration_asr**: a crypto meme coin, and his confidence is at
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.978; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: callback set-up: first exposure builds recognition for the final repeat (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: coin blob art reused at 266 s
+- **reconstruction_requirement**: coin as separate transparent layer; wobbly outline; keep slant of pitch text ~-15 deg
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.6  ·  1.7667 s  ·  f491–f543 (53 frames)  ·  pts 16.4–18.1333
+- **shot_id**: SH005
+- **frame_refs**: entry f491 viewed in v2/boundary_sheet_01.jpg; exit f543 viewed in v2/boundary_sheet_01.jpg; mid f517 viewed in frames/state_sheet_02.jpg
+- **objects_and_positions**: LEAD centred (x 0.20-0.60,y 0.12-0.80), arms raised in flex, drawn abdominal muscles on torso, nothing else
+- **measured_blobs_norm_bbox**: [[0.395, 0.244, 0.605, 0.756]]
+- **pose_expression**: smug smile, flexing biceps pose with drawn abs
+- **art_direction**: Pose + prop (F2); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.56% of pixels; negative space 97.4%; content centroid [0.49, 0.422]
+- **typography_text**: visible_text: - | none
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.974], ["#f2d2b9", 0.015], ["#050302", 0.005]]; max contrast vs bg 20.2:1
+- **hierarchy_focal**: exaggerated body is the only subject
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 53 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f491-491 (16.4 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f544-544 (18.1667 s)
+- **story_purpose**: ego gag (confidence at all-time high)
+- **narration_asr**: an all -time high.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.95; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: visual hyperbole with zero distractors (H2)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: unique flex pose, not reused
+- **reconstruction_requirement**: dedicated flex pose PNG with abs as line drawing
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.7  ·  3.5333 s  ·  f544–f649 (106 frames)  ·  pts 18.1667–21.6667
+- **shot_id**: SH006
+- **frame_refs**: entry f544 viewed in v2/boundary_sheet_01.jpg; exit f649 viewed in v2/boundary_sheet_02.jpg; mid f596 viewed in frames/state_sheet_02.jpg
+- **objects_and_positions**: LEAD small crouching/leaning left (x~0.18-0.34,y~0.40-0.75); small film-poster photo upper right of him (x~0.48-0.54,y~0.18-0.52)
+- **measured_blobs_norm_bbox**: [[0.275, 0.325, 0.411, 0.761], [0.461, 0.239, 0.566, 0.492]]
+- **pose_expression**: crouched sideways, half smile, arms folded in
+- **art_direction**: Photo insert (F6); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.91% of pixels; negative space 96.1%; content centroid [0.418, 0.427]
+- **typography_text**: visible_text: THE WOLF OF WALL STREET | poster has its own printed title (third party)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.961], ["#f2d2b7", 0.015], ["#0f0c0b", 0.013], ["#4c4134", 0.006]]; max contrast vs bg 19.1:1
+- **hierarchy_focal**: poster photo (only photographic element) draws focus
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 106 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f544-544 (18.1667 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f650-650 (21.7 s)
+- **story_purpose**: character's hobby gag (watching a finance film)
+- **narration_asr**: Dave's hobbies include watching The Wolf of Wall Street,
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.936; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: photographic texture against flat doodle is a contrast cue (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: crouch pose reused S001.8–S001.10, S013.0, S017.4
+- **reconstruction_requirement**: third-party photo MUST be replaced by licensed/original image; poster scale ~7% frame width
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.8  ·  2.9667 s  ·  f650–f738 (89 frames)  ·  pts 21.7–24.6333
+- **shot_id**: SH006
+- **frame_refs**: entry f650 viewed in v2/boundary_sheet_02.jpg; exit f738 viewed in v2/boundary_sheet_02.jpg; mid f694 viewed in frames/state_sheet_02.jpg
+- **objects_and_positions**: S001.7 + quoted line of tiny text lower right (x~0.45-0.58,y~0.58-0.68)
+- **measured_blobs_norm_bbox**: [[0.275, 0.325, 0.411, 0.761], [0.461, 0.239, 0.566, 0.492], [0.48, 0.544, 0.697, 0.672]]
+- **pose_expression**: same crouched pose and half smile as S001.7 (no expression change)
+- **art_direction**: Photo insert (F6); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 4.46% of pixels; negative space 95.5%; content centroid [0.439, 0.449]
+- **typography_text**: visible_text: "it's a cutting-edge genome editing company that trades at a sub-$100M market cap" | ~1.3% frame height typed quote in rounded sans, three lines; quoted claim (small text, partly UNVERIFIED)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.955], ["#f0d2ba", 0.016], ["#120f0d", 0.015], ["#50463b", 0.007], ["#9a918a", 0.005]]; max contrast vs bg 18.7:1
+- **hierarchy_focal**: poster first, caption second
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 89 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f650-650 (21.7 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f739-739 (24.6667 s)
+- **story_purpose**: quote = what the character tells girls at the bar (joke)
+- **narration_asr**: telling girls at the bar about emerging biotech companies,
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.986; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: long text while voice reads it: redundancy supports comprehension
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: poster persists
+- **reconstruction_requirement**: add quote layer on one frame
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.9  ·  1.0 s  ·  f739–f768 (30 frames)  ·  pts 24.6667–25.6333
+- **shot_id**: SH006
+- **frame_refs**: entry f739 viewed in v2/boundary_sheet_02.jpg; exit f768 viewed in v2/boundary_sheet_02.jpg; mid f753 viewed in frames/state_sheet_02.jpg
+- **objects_and_positions**: S001.8 + round product tin photo right of poster (x~0.60-0.69,y~0.20-0.37)
+- **measured_blobs_norm_bbox**: [[0.275, 0.325, 0.411, 0.761], [0.461, 0.239, 0.566, 0.492], [0.48, 0.544, 0.698, 0.672], [0.591, 0.264, 0.706, 0.458]]
+- **pose_expression**: same crouched pose and half smile as S001.8 (no expression change)
+- **art_direction**: Photo insert (F6); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 5.28% of pixels; negative space 94.7%; content centroid [0.471, 0.436]
+- **typography_text**: visible_text: "it's a cutting-edge genome editing company that trades at a sub-$100M market cap" / ZYN | tin carries brand lettering (third party)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.941], ["#141713", 0.019], ["#f5d2b6", 0.014], ["#d7dad8", 0.01], ["#524e42", 0.008]]; max contrast vs bg 17.7:1
+- **hierarchy_focal**: green tin adds saturated accent (#1F5A3C-like) – focal
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 30 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f739-739 (24.6667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f769-769 (25.6667 s)
+- **story_purpose**: third gag object paired with spoken hobby list
+- **narration_asr**: and zinning. It's
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.737; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: pop-in on spoken noun (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: S001.8 composition persists (poster + quote) and the tin is added to its right
+- **reconstruction_requirement**: replace with generic fictional product tin; ≥1.0 s dwell
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.10  ·  4.8333 s  ·  f769–f913 (145 frames)  ·  pts 25.6667–30.4667
+- **shot_id**: SH007
+- **frame_refs**: entry f769 viewed in v2/boundary_sheet_02.jpg; exit f913 viewed in v2/boundary_sheet_02.jpg; mid f841 viewed in frames/state_sheet_02.jpg
+- **objects_and_positions**: LEAD small left (x~0.13-0.27); hooded figure in brown cloak at right (x~0.49-0.68,y~0.12-0.50) with short speech line at left of its head
+- **measured_blobs_norm_bbox**: [[0.467, 0.225, 0.822, 0.686], [0.255, 0.414, 0.384, 0.828]]
+- **pose_expression**: LEAD crouched, half smile; hooded figure: flat grey face, bangs, stern
+- **art_direction**: Photo insert (F6); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 7.16% of pixels; negative space 92.8%; content centroid [0.594, 0.505]
+- **typography_text**: visible_text: You're finally ready | tiny handwritten speech line
+- **colors**: bg #fdfdfd; palette [["#fcfdfc", 0.923], ["#9a7848", 0.025], ["#ebd6c5", 0.02], ["#584128", 0.016], ["#140f0a", 0.011]]; max contrast vs bg 18.7:1
+- **hierarchy_focal**: hooded figure (brown mass) is focal
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 145 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f769-769 (25.6667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f914-914 (30.5 s)
+- **story_purpose**: introduce the 'sage' voice telling him he is ready (parody)
+- **narration_asr**: safe to say, Dave has what it takes to become a full -time trader.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.977; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: large new character = state-level novelty (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: hooded cut-out is a meme-style raster, not line-drawn: mixed media
+- **reconstruction_requirement**: replace with an original drawn or licensed meme-style asset; keep brown cloak colour mass
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.11  ·  2.8333 s  ·  f914–f998 (85 frames)  ·  pts 30.5–33.3
+- **shot_id**: SH008
+- **frame_refs**: entry f914 viewed in v2/boundary_sheet_02.jpg; exit f998 viewed in v2/boundary_sheet_02.jpg; mid f956 viewed in frames/state_sheet_02.jpg
+- **objects_and_positions**: LEAD enlarged lower-right (x~0.67-0.93,y~0.62-1.0) holding phone to ear; phone with ring marks; tiny 'ring ring' text upper left of head (x~0.63-0.70,y~0.55)
+- **measured_blobs_norm_bbox**: [[0.472, 0.481, 0.725, 1.0], [0.4, 0.486, 0.541, 0.569]]
+- **pose_expression**: wide grin, raised arm with phone
+- **art_direction**: Pose + prop (F2); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.6% of pixels; negative space 96.4%; content centroid [0.621, 0.647]
+- **typography_text**: visible_text: "ring ring" "ring ring" | micro handwritten ring text, quoted
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.964], ["#f5d3b8", 0.021], ["#040303", 0.01]]; max contrast vs bg 20.2:1
+- **hierarchy_focal**: head and phone cluster; ring text micro
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 85 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f914-914 (30.5 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f999-999 (33.3333 s)
+- **story_purpose**: start of broker phone-call gag
+- **narration_asr**: So Dave does what any rational person would do. He
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.972; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: off-centre placement leaves left space that the next state fills (H2)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: phone pose reappears S001.12
+- **reconstruction_requirement**: pose PNG with phone arm raised; keep the left half empty
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.12  ·  4.1 s  ·  f999–f1121 (123 frames)  ·  pts 33.3333–37.4
+- **shot_id**: SH008
+- **frame_refs**: entry f999 viewed in v2/boundary_sheet_02.jpg; exit f1121 viewed in v2/boundary_sheet_02.jpg; mid f1060 viewed in frames/state_sheet_03.jpg
+- **objects_and_positions**: split screen: left scene (x~0.07-0.22) broker at desk with computer/phone and tiny speech; black vertical zig-zag divider (x~0.31-0.36, full height); right scene LEAD with phone (x~0.50-0.62)
+- **measured_blobs_norm_bbox**: [[0.65, 0.519, 0.939, 1.0], [0.127, 0.458, 0.377, 0.903], [0.442, 0.0, 0.555, 1.0]]
+- **pose_expression**: LEAD grin with phone; broker smiling, suited, seated
+- **art_direction**: Time-skip / split (F7); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 6.65% of pixels; negative space 93.3%; content centroid [0.537, 0.643]
+- **typography_text**: visible_text: Sir, are you sure you have $1m worth of collateral? / As a matter of fact, I do | two tiny speech lines (~1.2% height)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.933], ["#030303", 0.029], ["#f2d2b9", 0.022], ["#3e3d3c", 0.007], ["#b1aeac", 0.005]]; max contrast vs bg 20.2:1
+- **hierarchy_focal**: zig-zag divider organises two parallel halves; faces are focal
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 123 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f999-999 (33.3333 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1122-1122 (37.4333 s)
+- **story_purpose**: show both ends of the phone call at once
+- **narration_asr**: calls his broker, lies about his net worth, and gets approved for options trading.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.991; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: split-screen = simultaneity cue (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: broker figure style differs (more realistic line art): mixed illustration
+- **reconstruction_requirement**: divider as layer; two sub-compositions; keep left-right balance
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.13  ·  3.6333 s  ·  f1122–f1230 (109 frames)  ·  pts 37.4333–41.0333
+- **shot_id**: SH009
+- **frame_refs**: entry f1122 viewed in v2/boundary_sheet_02.jpg; exit f1230 viewed in v2/boundary_sheet_02.jpg; mid f1176 viewed in frames/state_sheet_03.jpg
+- **objects_and_positions**: left: thick black right-pointing brush arrow (x~0.05-0.25,y~0.62) with caption above (x~0.07-0.20); right: LEAD at x~0.55-0.75 holding a phone showing a dollar sign, small name tag + arrow top-right, hand waving left
+- **measured_blobs_norm_bbox**: [[0.592, 0.506, 0.895, 1.0], [0.116, 0.669, 0.414, 0.814], [0.138, 0.569, 0.389, 0.656]]
+- **pose_expression**: big grin, one hand waving, other holding phone with money symbol
+- **art_direction**: Time-skip / split (F7); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 4.37% of pixels; negative space 95.6%; content centroid [0.602, 0.684]
+- **typography_text**: visible_text: 3 Months Later / Dave | caption in typed rounded sans (a time-skip phrase); tag handwritten
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.956], ["#030202", 0.018], ["#f1d4c0", 0.016]]; max contrast vs bg 20.3:1
+- **hierarchy_focal**: LEAD + phone; arrow/caption is the time-skip device
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 109 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1122-1122 (37.4333 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f1231-1231 (41.0667 s)
+- **story_purpose**: time-skip: 3 months later, positive result
+- **narration_asr**: Fast forward three months, and Dave is now leveraged to the max on out
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.879; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: repeated time-skip device creates rhythm (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: very faint near-white rectangle upper left of LEAD's head (matte of the later logo card), OBSERVED at 16x contrast
+- **reconstruction_requirement**: time-skip caption+arrow layer reused at S001.14, S001.18
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.14  ·  1.7 s  ·  f1231–f1281 (51 frames)  ·  pts 41.0667–42.7333
+- **shot_id**: SH009
+- **frame_refs**: entry f1231 viewed in v2/boundary_sheet_02.jpg; exit f1281 viewed in v2/boundary_sheet_03.jpg; mid f1256 viewed in frames/state_sheet_03.jpg
+- **objects_and_positions**: S001.13 composition + red carmaker wordmark and logo mark dropping in above LEAD (x~0.45-0.62,y~0.08-0.16) with a curved black arrow pointing down to him
+- **measured_blobs_norm_bbox**: [[0.591, 0.289, 0.895, 1.0], [0.111, 0.669, 0.414, 0.814], [0.138, 0.569, 0.389, 0.656]]
+- **pose_expression**: same wide grin and waving arm as S001.13 (no expression change)
+- **art_direction**: Time-skip / split (F7); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 4.95% of pixels; negative space 95.0%; content centroid [0.612, 0.652]
+- **typography_text**: visible_text: 3 Months Later / TESLA / Dave | third-party brand lettering
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.95], ["#060505", 0.021], ["#eed3c0", 0.018], ["#4d4c4b", 0.005], ["#a29294", 0.005]]; max contrast vs bg 20.0:1
+- **hierarchy_focal**: red logo is the new focal accent (#E62B2C-like)
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 51 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f1231-1231 (41.0667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1282-1282 (42.7667 s)
+- **story_purpose**: gag: he invested into a famous car company
+- **narration_asr**: -of -the -money Tesla calls.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.922; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: brand logo = recognition shortcut (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: logo drops on one frame, not animated
+- **reconstruction_requirement**: replace with fictional brand logo; curved arrow as separate layer
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.15  ·  2.4333 s  ·  f1282–f1354 (73 frames)  ·  pts 42.7667–45.1667
+- **shot_id**: SH010
+- **frame_refs**: entry f1282 viewed in v2/boundary_sheet_03.jpg; exit f1354 viewed in v2/boundary_sheet_03.jpg; mid f1318 viewed in frames/state_sheet_03.jpg
+- **objects_and_positions**: two text blocks centred: left 'strategy' label (x~0.05-0.20,y~0.50), thick arrow (x~0.25-0.30), right result phrase (x~0.35-0.60)
+- **measured_blobs_norm_bbox**: [[0.547, 0.403, 0.891, 0.5], [0.084, 0.403, 0.308, 0.5], [0.348, 0.397, 0.503, 0.486]]
+- **pose_expression**: n/a (text only)
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 1.26% of pixels; negative space 98.7%; content centroid [0.507, 0.447]
+- **typography_text**: visible_text: The Strategy / Buy High, Sell Higher | rounded comic-style sans ~4% height, black on canvas; arrow marker-drawn
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.987], ["#030303", 0.007]]; max contrast vs bg 20.2:1
+- **hierarchy_focal**: phrase pair read left-to-right
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 73 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1282-1282 (42.7667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1355-1355 (45.2 s)
+- **story_purpose**: mock 'strategy' reveal
+- **narration_asr**: His strategy? By high, sell higher.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.891; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: pure text card makes the voice the carrier (H2)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: template reused S001.16 (second line pair)
+- **reconstruction_requirement**: text + arrow layers; baseline aligned; centred vertically ~0.50
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.16  ·  1.7 s  ·  f1355–f1405 (51 frames)  ·  pts 45.2–46.8667
+- **shot_id**: SH010
+- **frame_refs**: entry f1355 viewed in v2/boundary_sheet_03.jpg; exit f1405 viewed in v2/boundary_sheet_03.jpg; mid f1380 viewed in frames/state_sheet_03.jpg
+- **objects_and_positions**: same layout as S001.15 with different label pair (x~0.05-0.62,y~0.51)
+- **measured_blobs_norm_bbox**: [[0.123, 0.378, 0.398, 0.475], [0.608, 0.378, 0.809, 0.461], [0.423, 0.372, 0.578, 0.464]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: same
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 1.16% of pixels; negative space 98.8%; content centroid [0.453, 0.421]
+- **typography_text**: visible_text: Risk Management / Not Needed | same font; text swap on a single frame (no transition)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.988], ["#030303", 0.006]]; max contrast vs bg 20.2:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 51 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1355-1355 (45.2 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1406-1406 (46.9 s)
+- **story_purpose**: second mock 'principle' line (risk management: not needed)
+- **narration_asr**: His risk management? Prayer?
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.989; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: repeating template makes the joke predictable then violates it (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: template parity with S001.15; exact same arrow position within ~2 px
+- **reconstruction_requirement**: swap text layers only; keep arrow
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.17  ·  4.5 s  ·  f1406–f1540 (135 frames)  ·  pts 46.9–51.3667
+- **shot_id**: SH011
+- **frame_refs**: entry f1406 viewed in v2/boundary_sheet_03.jpg; exit f1540 viewed in v2/boundary_sheet_03.jpg; mid f1473 viewed in frames/state_sheet_03.jpg
+- **objects_and_positions**: FOIL figure centred (x~0.46-0.63,y~0.50-1.0) with bob haircut, name tag + arrow top-left (x~0.43), speech line right (x~0.60-0.72,y~0.55)
+- **measured_blobs_norm_bbox**: [[0.355, 0.278, 0.705, 0.797]]
+- **pose_expression**: frown, shrug with open palms
+- **art_direction**: Intro/pose-on-canvas (F1); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.14% of pixels; negative space 96.9%; content centroid [0.479, 0.495]
+- **typography_text**: visible_text: Eve / Why is $13k missing from our savings account? | micro speech (~1.2%) quoting a savings question (small text partly UNVERIFIED)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.968], ["#f3d7ba", 0.013], ["#020101", 0.013]]; max contrast vs bg 20.4:1
+- **hierarchy_focal**: face + shrug; speech line micro
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 135 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1406-1406 (46.9 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1541-1541 (51.4 s)
+- **story_purpose**: introduce the spouse-like foil reacting to the losses
+- **narration_asr**: His wife's concern? Why is $13 ,000 missing from our savings account? Fast
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.981; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: first appearance of a second character resets attention (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: FOIL base design (bob hair) reused S009.14, S019.0
+- **reconstruction_requirement**: FOIL asset with 3 poses; tag + speech separate layers
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.18  ·  4.4 s  ·  f1541–f1672 (132 frames)  ·  pts 51.4–55.7667
+- **shot_id**: SH012
+- **frame_refs**: entry f1541 viewed in v2/boundary_sheet_03.jpg; exit f1672 viewed in v2/boundary_sheet_03.jpg; mid f1606 viewed in frames/state_sheet_04.jpg
+- **objects_and_positions**: left time-skip arrow+caption (x~0.05-0.25,y~0.50); right meme photo (x~0.58-0.72,y~0.30-0.68) of a grey-haired man in glasses and white vest with falling red candlesticks over his hand
+- **measured_blobs_norm_bbox**: [[0.57, 0.3, 0.83, 0.811], [0.105, 0.483, 0.408, 0.628], [0.131, 0.383, 0.383, 0.469]]
+- **pose_expression**: photo subject stern, hand flinging red candle bars
+- **art_direction**: Time-skip / split (F7); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 12.36% of pixels; negative space 87.6%; content centroid [0.653, 0.549]
+- **typography_text**: visible_text: 3 Months Later | time-skip caption typed
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.876], ["#100e17", 0.029], ["#3f363b", 0.027], ["#bcb6c8", 0.025], ["#765253", 0.025]]; max contrast vs bg 18.7:1
+- **hierarchy_focal**: photo is focal (high texture)
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 132 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1541-1541 (51.4 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1673-1673 (55.8 s)
+- **story_purpose**: time-skip + external shock (rate hike) delivered by meme photo
+- **narration_asr**: forward three more months, and the Federal Reserve decides to hike rates.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.957; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: meme-photo humour (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: third-party meme photo; do not identify the person from the face
+- **reconstruction_requirement**: replace with original illustration of a stern official throwing red chart bars
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S001.19  ·  4.4333 s  ·  f1673–f1805 (133 frames)  ·  pts 55.8–60.2
+- **shot_id**: SH012
+- **frame_refs**: entry f1673 viewed in v2/boundary_sheet_03.jpg; exit f1805 viewed in v2/boundary_sheet_03.jpg; mid f1739 viewed in frames/state_sheet_04.jpg
+- **objects_and_positions**: LEAD distressed left-centre (x~0.28-0.34,y~0.30-0.80) with steam marks above head, phone showing dollar sign; right red downward chart (x~0.55-0.62,y~0.30-0.45) with a negative percent label
+- **measured_blobs_norm_bbox**: [[0.388, 0.258, 0.562, 0.753], [0.575, 0.242, 0.728, 0.469]]
+- **pose_expression**: wide-open frown mouth, sweat/steam lines, worried eyes
+- **art_direction**: Hand-drawn chart doodle (F3); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.59% of pixels; negative space 97.4%; content centroid [0.499, 0.456]
+- **typography_text**: visible_text: -67% | handwritten red percentage label ~2.5% height
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.973], ["#efd5c0", 0.012], ["#090707", 0.008]]; max contrast vs bg 19.7:1
+- **hierarchy_focal**: red falling line + big negative number
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 133 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1673-1673 (55.8 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1806-1806 (60.2333 s)
+- **story_purpose**: payoff of the escalation: huge loss
+- **narration_asr**: Dave's portfolio is now down 67%, and his wife's new favorite hobby is
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.972; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: red accent + negative value signals stakes (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: LEAD in distressed pose (unique)
+- **reconstruction_requirement**: distressed pose PNG; red chart in same marker weight
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S002.0  ·  3.7333 s  ·  f1806–f1917 (112 frames)  ·  pts 60.2333–63.9333
+- **shot_id**: SH013
+- **frame_refs**: entry f1806 viewed in v2/boundary_sheet_03.jpg; exit f1917 viewed in v2/boundary_sheet_03.jpg; mid f1861 viewed in frames/state_sheet_04.jpg
+- **objects_and_positions**: full dark-mode search page: wordmark top-centre (x~0.38-0.62,y~0.15-0.35), search field centre (x~0.35-0.65,y~0.40-0.52) with a typed query, two buttons below (y~0.60)
+- **measured_blobs_norm_bbox**: [[0.331, 0.189, 0.609, 0.378], [0.2, 0.417, 0.589, 0.517], [0.619, 0.406, 0.742, 0.497], [0.475, 0.569, 0.598, 0.633], [0.345, 0.569, 0.453, 0.633]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: wordmark then typed query
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #1e2021 field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.02% of pixels; negative space 98.0%; content centroid [0.46, 0.364]
+- **typography_text**: visible_text: Google / how to divorce a man who calls himself a 'market wizard?' / Google Search / I'm Feeling Lucky | UI sans text; query is the gag (a divorce-search joke); text UNVERIFIED for small words
+- **colors**: bg #1e2021; palette [["#1e2021", 0.908], ["#2e3031", 0.072], ["#fafbfc", 0.01]]; max contrast vs bg 1.0:1
+- **hierarchy_focal**: wordmark then typed query
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 112 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f1806-1806 (60.2333 s)
+- **exit_transition**: PARTIAL_REPLACE (some content persists) at f1918-1918 (63.9667 s)
+- **story_purpose**: spouse's reaction told through a search query
+- **narration_asr**: googling how to divorce a man who calls himself a market wizard.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.863; words<0.5 prob: 2
+- **attention_hypothesis**: INFERRED: UI realism contrasts doodle world (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: first dark-field state (#1E2021); 5-frame dark cards recur S004, S006, S008
+- **reconstruction_requirement**: produce an original mock search page with fictional brand; avoid real logos
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S003.0  ·  4.8 s  ·  f1918–f2061 (144 frames)  ·  pts 63.9667–68.7333
+- **shot_id**: SH014
+- **frame_refs**: entry f1918 viewed in v2/boundary_sheet_03.jpg; exit f2061 viewed in v2/boundary_sheet_04.jpg; mid f1989 viewed in frames/state_sheet_04.jpg
+- **objects_and_positions**: one centred question line (x~0.07-0.93,y~0.50) on canvas
+- **measured_blobs_norm_bbox**: [[0.059, 0.458, 0.939, 0.558]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: question line only
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 1.6% of pixels; negative space 98.4%; content centroid [0.495, 0.504]
+- **typography_text**: visible_text: Why do the dumbest investors win in the stock market? | rounded comic sans ~5% height, black
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.983], ["#040404", 0.009]]; max contrast vs bg 20.1:1
+- **hierarchy_focal**: question line only
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 144 frames; no in-state motion
+- **entry_transition**: PARTIAL_REPLACE (some content persists) at f1918-1918 (63.9667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2062-2062 (68.7667 s)
+- **story_purpose**: state the video's central question
+- **narration_asr**: This brings us to the question for the video today. Why do the dumbest investors win?
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.978; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: isolated question focuses the viewer on the premise (H2)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same card re-used at S011.0 (exact repeat)
+- **reconstruction_requirement**: reuse text layer unchanged for S011.0
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S004.0  ·  4.1333 s  ·  f2062–f2185 (124 frames)  ·  pts 68.7667–72.8667
+- **shot_id**: SH015
+- **frame_refs**: entry f2062 viewed in v2/boundary_sheet_04.jpg; exit f2185 viewed in v2/boundary_sheet_04.jpg; mid f2123 viewed in frames/state_sheet_04.jpg
+- **objects_and_positions**: left dark dictionary-style card (x~0.00-0.52,y~0.00-0.45) above a dark-green strip (y~0.55-1.0) with five orange evolution silhouettes ape-to-human (x~0.05-0.50); right a light chart (x~0.53-1.0,y~0.18-0.85) with a green curve
+- **measured_blobs_norm_bbox**: [[0.0, 0.0, 1.0, 1.0]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: orange silhouettes + dictionary headword
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #bba041 field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 99.36% of pixels; negative space 0.6%; content centroid [0.501, 0.497]
+- **typography_text**: visible_text: Dictionary / Dar-win-ism / the theory of the evolution of species by natural selection advanced by Charles Darwin. / Dunning-Kruger Effect / Confidence / Competence / Peak of "Mount Stupid" / Valley of Despair / Slope of Enlightenment / Plateau of Sustainability / Know nothing / Guru | UI text small; chart labels ~1% height (partly UNVERIFIED)
+- **colors**: bg #bba041; palette [["#fcfcfc", 0.46], ["#1e1e1e", 0.261], ["#032a23", 0.217], ["#e5a142", 0.031], ["#676b5f", 0.02]]; max contrast vs bg 6.5:1
+- **hierarchy_focal**: orange silhouettes + dictionary headword
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 124 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2062-2062 (68.7667 s)
+- **exit_transition**: PARTIAL_REPLACE (some content persists) at f2186-2186 (72.9 s)
+- **story_purpose**: analogy: concept as 'Darwinism' with a concept chart
+- **narration_asr**: The Dunning -Kruger effect is the financial market's version of Darwinism.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.891; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: two-panel composition = high density, brief dwell 4.1 s
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: chart appears again S005.0 enlarged
+- **reconstruction_requirement**: two separate source assets: card+silhouette strip left, concept chart right (original recreations)
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.0  ·  10.8 s  ·  f2186–f2509 (324 frames)  ·  pts 72.9–83.6667
+- **shot_id**: SH016
+- **frame_refs**: entry f2186 viewed in v2/boundary_sheet_04.jpg; exit f2509 viewed in v2/boundary_sheet_04.jpg; mid f2347 viewed in frames/state_sheet_04.jpg
+- **objects_and_positions**: concept chart enlarged centre (x~0.28-0.88,y~0.18-0.85); tiny LEAD figure on first peak (x~0.30,y~0.30) with handwritten tag; small portrait photo near right plateau (x~0.81,y~0.38) with handwritten caption
+- **measured_blobs_norm_bbox**: [[0.247, 0.222, 0.759, 0.808], [0.375, 0.225, 0.558, 0.289]]
+- **pose_expression**: LEAD tiny, smiling
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.19% of pixels; negative space 97.8%; content centroid [0.466, 0.473]
+- **typography_text**: visible_text: Dave / Mr. Buffett / Dunning-Kruger Effect / Peak of "Mount Stupid" / Plateau of Sustainability | chart labels ~1%, handwritten overlays (names)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.978], ["#4b5047", 0.005], ["#cfd3ca", 0.005], ["#9c9f97", 0.005], ["#707a6a", 0.004]]; max contrast vs bg 18.3:1
+- **hierarchy_focal**: curve then the two markers
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 324 frames; no in-state motion
+- **entry_transition**: PARTIAL_REPLACE (some content persists) at f2186-2186 (72.9 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2510-2510 (83.7 s)
+- **story_purpose**: place two characters on the curve (confident novice vs celebrated investor)
+- **narration_asr**: It explains why dumb people think they're Warren Buffett, why smart people think they're dumb, and why Dave believes market manipulation is why his calls expired worthless.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.911; words<0.5 prob: 2
+- **attention_hypothesis**: INFERRED: annotated chart = explanatory beat (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same chart as S004.0 but cropped and annotated
+- **reconstruction_requirement**: chart as base layer; overlays (marker, photo, handwritten tags) separate
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.1  ·  5.2 s  ·  f2510–f2665 (156 frames)  ·  pts 83.7–88.8667
+- **shot_id**: SH017
+- **frame_refs**: entry f2510 viewed in v2/boundary_sheet_04.jpg; exit f2665 viewed in v2/boundary_sheet_04.jpg; mid f2587 viewed in frames/state_sheet_05.jpg
+- **objects_and_positions**: dark market quote card centre (x~0.26-0.74,y~0.21-0.79) with a 5-year line chart rising; blue follow button right
+- **measured_blobs_norm_bbox**: [[0.252, 0.189, 0.748, 0.811]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: card as a unit; line chart is focal
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 27.66% of pixels; negative space 72.3%; content centroid [0.5, 0.499]
+- **typography_text**: visible_text: S&P 500 / INDEXSP: .INX / 6,243.76 / +3,019.03 (93.62%) past 5 years / 5Y / 2022 2023 2024 2025 | UI numerals; headline value ~2% height (read as a market index value) – other small text UNVERIFIED
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.723], ["#1e1e1e", 0.25], ["#323935", 0.011], ["#5d6462", 0.008], ["#939996", 0.006]]; max contrast vs bg 16.3:1
+- **hierarchy_focal**: card as a unit; line chart is focal
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 156 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2510-2510 (83.7 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2666-2666 (88.9 s)
+- **story_purpose**: evidence: market rose over five years
+- **narration_asr**: Since 2020, you could have invested in pretty much any stock, and you would have made money.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.983; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: dark card on white = strong contrast (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: dark card scale ~48% width reused S007.0 (smaller)
+- **reconstruction_requirement**: original mock-up with plausible figures labelled illustrative
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.2  ·  3.9667 s  ·  f2666–f2784 (119 frames)  ·  pts 88.9–92.8333
+- **shot_id**: SH018
+- **frame_refs**: entry f2666 viewed in v2/boundary_sheet_04.jpg; exit f2784 viewed in v2/boundary_sheet_04.jpg; mid f2725 viewed in frames/state_sheet_05.jpg
+- **objects_and_positions**: concept chart again (x~0.27-0.88) + a hand-drawn red circle around the first peak and marker (x~0.28-0.42,y~0.12-0.58)
+- **measured_blobs_norm_bbox**: [[0.202, 0.189, 0.791, 0.814]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: red circle is focal
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.16% of pixels; negative space 96.8%; content centroid [0.448, 0.463]
+- **typography_text**: visible_text: Dave / Mr. Buffett / Dunning-Kruger Effect / Peak of "Mount Stupid" / Valley of Despair | red hand-drawn circle stroke ~6 px
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.966], ["#968e8a", 0.01], ["#515a4d", 0.007], ["#cec8c3", 0.007], ["#d10c31", 0.006]]; max contrast vs bg 17.8:1
+- **hierarchy_focal**: red circle is focal
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 119 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2666-2666 (88.9 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2785-2785 (92.8667 s)
+- **story_purpose**: emphasis: where beginners sit on the curve
+- **narration_asr**: And if you were on the left side of the Dunning -Kruger curve, where Dave was, you
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.953; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: red annotation ring directs gaze (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same chart as S005.0
+- **reconstruction_requirement**: red circle separate layer, hand-drawn ellipse, not perfect
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.3  ·  3.6667 s  ·  f2785–f2894 (110 frames)  ·  pts 92.8667–96.5
+- **shot_id**: SH018
+- **frame_refs**: entry f2785 viewed in v2/boundary_sheet_04.jpg; exit f2894 viewed in v2/boundary_sheet_04.jpg; mid f2839 viewed in frames/state_sheet_05.jpg
+- **objects_and_positions**: hand-drawn axes (x~0.30-0.58,y~0.28-0.65) with two jagged lines green above red, tiny stick figure on the green line's end (x~0.58,y~0.20); legend at bottom-left (x~0.30-0.55,y~0.70-0.75) green swatch->name, red swatch->index
+- **measured_blobs_norm_bbox**: [[0.305, 0.222, 0.684, 0.764]]
+- **pose_expression**: tiny figure arms up
+- **art_direction**: Hand-drawn chart doodle (F3); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 1.57% of pixels; negative space 98.4%; content centroid [0.482, 0.575]
+- **typography_text**: visible_text: 2020 / 2025 / Dave / S&P 500 | handwritten legend ~2%; year labels small
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.985], ["#bfc0b2", 0.005]]; max contrast vs bg 18.2:1
+- **hierarchy_focal**: green line above red = the claim
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 110 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2785-2785 (92.8667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2895-2895 (96.5333 s)
+- **story_purpose**: visual proof that the character beat the index
+- **narration_asr**: you would have significantly outperformed the S &P.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.967; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: legend + two lines read in <2 s (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same two-colour logic as the thumbnail chart
+- **reconstruction_requirement**: draw two polylines with identical vertices offset; legend swatch squares
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.4  ·  3.0333 s  ·  f2895–f2985 (91 frames)  ·  pts 96.5333–99.5333
+- **shot_id**: SH019
+- **frame_refs**: entry f2895 viewed in v2/boundary_sheet_04.jpg; exit f2985 viewed in v2/boundary_sheet_04.jpg; mid f2940 viewed in frames/state_sheet_05.jpg
+- **objects_and_positions**: suited figure at desk with computer, phone at ear, centre-left (x~0.15-0.34,y~0.30-0.85); empty right
+- **measured_blobs_norm_bbox**: [[0.281, 0.258, 0.472, 0.708]]
+- **pose_expression**: smile, phone to ear, seated
+- **art_direction**: Intro/pose-on-canvas (F1); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.5% of pixels; negative space 97.5%; content centroid [0.352, 0.469]
+- **typography_text**: visible_text: - | none
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.974], ["#020101", 0.013], ["#eecfb2", 0.006]]; max contrast vs bg 20.4:1
+- **hierarchy_focal**: desk figure sole subject
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 91 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f2895-2895 (96.5333 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f2986-2986 (99.5667 s)
+- **story_purpose**: introduce traditional 'value investor' character
+- **narration_asr**: Traditional value investors think investing is about fundamentals
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.966; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: new character blank space prepares text pop-ins (H2)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: desk character reused S005.5–S005.6
+- **reconstruction_requirement**: desk figure PNG with computer
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.5  ·  1.6333 s  ·  f2986–f3034 (49 frames)  ·  pts 99.5667–101.1667
+- **shot_id**: SH019
+- **frame_refs**: entry f2986 viewed in v2/boundary_sheet_04.jpg; exit f3034 viewed in v2/boundary_sheet_05.jpg; mid f3010 viewed in frames/state_sheet_05.jpg
+- **objects_and_positions**: S005.4 figure (x~0.15-0.34) + quoted word right (x~0.50-0.68,y~0.30)
+- **measured_blobs_norm_bbox**: [[0.281, 0.258, 0.472, 0.708], [0.512, 0.319, 0.708, 0.397]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: the quoted keyword at right of the seated character, then the character
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.8% of pixels; negative space 97.2%; content centroid [0.38, 0.457]
+- **typography_text**: visible_text: "Fundamentals" | rounded sans ~3% height in quotes
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.97], ["#060506", 0.015], ["#514f4e", 0.004], ["#f5ceac", 0.004]]; max contrast vs bg 19.9:1
+- **hierarchy_focal**: the quoted keyword at right of the seated character, then the character
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 49 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f2986-2986 (99.5667 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f3035-3035 (101.2 s)
+- **story_purpose**: what value investors say (first term)
+- **narration_asr**: or fair
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.785; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: text pop on spoken word (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: seated desk character persists unchanged from S005.4 (same transform)
+- **reconstruction_requirement**: text layer only: add one quoted word at right of the desk figure on the cut frame; keep figure layer untouched
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.6  ·  2.1 s  ·  f3035–f3097 (63 frames)  ·  pts 101.2–103.2667
+- **shot_id**: SH019
+- **frame_refs**: entry f3035 viewed in v2/boundary_sheet_05.jpg; exit f3097 viewed in v2/boundary_sheet_05.jpg; mid f3066 viewed in frames/state_sheet_05.jpg
+- **objects_and_positions**: S005.5 + second quoted term below (y~0.45)
+- **measured_blobs_norm_bbox**: [[0.281, 0.258, 0.472, 0.708], [0.503, 0.464, 0.717, 0.539], [0.512, 0.319, 0.708, 0.397]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: stack of two terms
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.1% of pixels; negative space 96.9%; content centroid [0.402, 0.461]
+- **typography_text**: visible_text: "Fundamentals" / "Fair Valuations" | same font
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.967], ["#040304", 0.015], ["#e7cfba", 0.007], ["#5f5d5c", 0.004]]; max contrast vs bg 20.2:1
+- **hierarchy_focal**: stack of two terms
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 63 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f3035-3035 (101.2 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3098-3098 (103.3 s)
+- **story_purpose**: second term completes the pair
+- **narration_asr**: valuations. But the
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.72; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: cumulative list build (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: character and first quoted term persist unchanged from S005.5; the second term sits one line below with the same left edge
+- **reconstruction_requirement**: text layer only: add the second quoted term under the first on the cut frame
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.7  ·  2.8667 s  ·  f3098–f3183 (86 frames)  ·  pts 103.3–106.1333
+- **shot_id**: SH020
+- **frame_refs**: entry f3098 viewed in v2/boundary_sheet_05.jpg; exit f3183 viewed in v2/boundary_sheet_05.jpg; mid f3140 viewed in frames/state_sheet_06.jpg
+- **objects_and_positions**: LEAD very large left (x~0.08-0.40,y~0.00-1.0), long handwritten label with arrow above head reaching top edge (x~0.12-0.43,y~0.00-0.08)
+- **measured_blobs_norm_bbox**: [[0.097, 0.006, 0.688, 0.994]]
+- **pose_expression**: smug half smile, hands on hips
+- **art_direction**: Intro/pose-on-canvas (F1); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 6.3% of pixels; negative space 93.7%; content centroid [0.224, 0.399]
+- **typography_text**: visible_text: Dave 'the outperformer' | handwritten ~4% height label in quotes
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.936], ["#f4d4b6", 0.04], ["#050303", 0.015]]; max contrast vs bg 20.1:1
+- **hierarchy_focal**: head + long label
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 86 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3098-3098 (103.3 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3184-3184 (106.1667 s)
+- **story_purpose**: introduce the outperformer label
+- **narration_asr**: investors who have outperformed over recent years buy
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.926; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: scale jump signals importance of this identity (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: label text reused S005.8–S005.10, S017.6
+- **reconstruction_requirement**: large LEAD pose swap; label overlaps frame top edge intentionally
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.8  ·  3.0667 s  ·  f3184–f3275 (92 frames)  ·  pts 106.1667–109.2
+- **shot_id**: SH020
+- **frame_refs**: entry f3184 viewed in v2/boundary_sheet_05.jpg; exit f3275 viewed in v2/boundary_sheet_05.jpg; mid f3229 viewed in frames/state_sheet_06.jpg
+- **objects_and_positions**: LEAD small left (x~0.10-0.26,y~0.35-0.75) with label; dark stock quote card right (x~0.50-0.75,y~0.23-0.77) with long-run line chart and a red-circled ratio line
+- **measured_blobs_norm_bbox**: [[0.502, 0.214, 0.877, 0.786], [0.13, 0.233, 0.456, 0.764]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: red-circled data row on dark card
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 20.49% of pixels; negative space 79.5%; content centroid [0.648, 0.495]
+- **typography_text**: visible_text: Dave 'the outperformer' / Palantir Technologies Inc / NASDAQ: PLTR / 149.15 USD / +139.95 (1,521.20%) all time / P/E ratio | UI card numerals; red circle hand-drawn
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.793], ["#1e1e1e", 0.176], ["#f2d3ba", 0.011], ["#4d4a4a", 0.01], ["#7a7d7c", 0.008]]; max contrast vs bg 16.3:1
+- **hierarchy_focal**: red-circled data row on dark card
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 92 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3184-3184 (106.1667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3276-3276 (109.2333 s)
+- **story_purpose**: evidence: extreme valuation ratio held by the 'outperformer' pick
+- **narration_asr**: companies at 650 times earnings,
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.934; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: red circle on a data cell gives a precise reading target (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same long handwritten label as S005.7 but the character now sits at small scale beside the card
+- **reconstruction_requirement**: original card; circle separate layer
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.9  ·  3.8 s  ·  f3276–f3389 (114 frames)  ·  pts 109.2333–113.0
+- **shot_id**: SH020
+- **frame_refs**: entry f3276 viewed in v2/boundary_sheet_05.jpg; exit f3389 viewed in v2/boundary_sheet_05.jpg; mid f3332 viewed in frames/state_sheet_06.jpg
+- **objects_and_positions**: LEAD small left with label and 'Yum!' speech (x~0.24,y~0.48); food photo right (x~0.52-0.90,y~0.28-0.70) pineapple pizza
+- **measured_blobs_norm_bbox**: [[0.506, 0.275, 0.875, 0.725], [0.13, 0.233, 0.456, 0.764]]
+- **pose_expression**: smug, mouth open slightly
+- **art_direction**: Photo insert (F6); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 15.47% of pixels; negative space 84.5%; content centroid [0.632, 0.497]
+- **typography_text**: visible_text: Dave 'the outperformer' / Yum! | micro speech
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.844], ["#f2dda9", 0.049], ["#954f32", 0.046], ["#bfa188", 0.024], ["#dfb742", 0.022]]; max contrast vs bg 16.3:1
+- **hierarchy_focal**: pizza photo (warm saturated)
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 114 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3276-3276 (109.2333 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3390-3390 (113.0333 s)
+- **story_purpose**: absurd comparison for 'silly-but-works' investments
+- **narration_asr**: ride trends that make less sense than pineapple on pizza,
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.984; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: food image = high-salience unexpected object (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: photo is rectangular cut-out
+- **reconstruction_requirement**: original or licensed food photo; ~35% frame width
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S005.10  ·  3.5333 s  ·  f3390–f3495 (106 frames)  ·  pts 113.0333–116.5333
+- **shot_id**: SH020
+- **frame_refs**: entry f3390 viewed in v2/boundary_sheet_05.jpg; exit f3495 viewed in v2/boundary_sheet_05.jpg; mid f3442 viewed in frames/state_sheet_06.jpg
+- **objects_and_positions**: LEAD small left with a two-line speech (x~0.12-0.25) and label; sparse line-drawn bald figure with hands on hips right (x~0.66-0.80,y~0.35-0.95)
+- **measured_blobs_norm_bbox**: [[0.13, 0.233, 0.5, 0.764], [0.606, 0.294, 0.742, 0.794]]
+- **pose_expression**: LEAD smug; bald figure neutral
+- **art_direction**: Pose + prop (F2); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.82% of pixels; negative space 97.2%; content centroid [0.336, 0.462]
+- **typography_text**: visible_text: Dave 'the outperformer' / Look I know it may be expensive, but it's worth is | micro speech two lines ~1.4%
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.97], ["#efd4be", 0.012], ["#0a0909", 0.007]]; max contrast vs bg 19.5:1
+- **hierarchy_focal**: speech text then second figure
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 106 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3390-3390 (113.0333 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3496-3496 (116.5667 s)
+- **story_purpose**: foil for the 'value investor' reply; counter-argument
+- **narration_asr**: and pump their bags to anyone with a pulse. In fact, I believe it
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.989; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: added character gives contrast (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: sparse figure style is thinner/wireframe (different from LEAD)
+- **reconstruction_requirement**: separate asset set; wireframe figure
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S006.0  ·  4.6667 s  ·  f3496–f3635 (140 frames)  ·  pts 116.5667–121.2
+- **shot_id**: SH021
+- **frame_refs**: entry f3496 viewed in v2/boundary_sheet_05.jpg; exit f3635 viewed in v2/boundary_sheet_05.jpg; mid f3565 viewed in frames/state_sheet_06.jpg
+- **objects_and_positions**: full-bleed black quote card: large red opening-quote glyph (x~0.11,y~0.37), 2-line white quote left (x~0.11-0.50,y~0.40-0.56), attribution below (y~0.66); right 55% a close-up portrait photo of an elderly man in suit and red tie
+- **measured_blobs_norm_bbox**: [[0.655, 0.033, 1.0, 1.0], [0.105, 0.292, 0.511, 0.475], [0.236, 0.497, 0.512, 0.572], [0.069, 0.2, 0.122, 0.286], [0.889, 0.947, 0.945, 1.0]]
+- **pose_expression**: photo subject calm, slight smile
+- **art_direction**: Photo insert (F6); flat marker-doodle on #000000 field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 23.67% of pixels; negative space 76.3%; content centroid [0.765, 0.486]
+- **typography_text**: visible_text: Why buy Apple when you can buy FartCoin / - Maybe Warren Buffett | bold white sans ~4% height, red glyph; third-party photo
+- **colors**: bg #000000; palette [["#000000", 0.641], ["#1f1715", 0.143], ["#70423c", 0.091], ["#ac6a62", 0.082], ["#bb9d9b", 0.025]]; max contrast vs bg 1.0:1
+- **hierarchy_focal**: quote text, then the face at right
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 140 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3496-3496 (116.5667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3636-3636 (121.2333 s)
+- **story_purpose**: satirical fake quote attributed ('Maybe …') to a famous investor
+- **narration_asr**: was Warren Buffett that once said, why buy Apple when you can buy FARC coin?
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.847; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: rare full-bleed photo = pattern interrupt (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: only full-field photographic state besides S004/S016
+- **reconstruction_requirement**: replace with original illustration/quote card with fictional speaker; keep red quote glyph + white text on near-black
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S007.0  ·  6.1667 s  ·  f3636–f3820 (185 frames)  ·  pts 121.2333–127.3667
+- **shot_id**: SH022
+- **frame_refs**: entry f3636 viewed in v2/boundary_sheet_05.jpg; exit f3820 viewed in v2/boundary_sheet_06.jpg; mid f3728 viewed in frames/state_sheet_06.jpg
+- **objects_and_positions**: dark market quote card centre-left (see auto blobs); price header upper-left; long-run line chart
+- **measured_blobs_norm_bbox**: [[0.197, 0.211, 0.562, 0.789]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: rising long-run line
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 18.51% of pixels; negative space 81.5%; content centroid [0.379, 0.499]
+- **typography_text**: visible_text: S&P 500 / 6,268.56 / +5,019.86 (737.26%) all time / Max / 2001 ... 2025 | UI numerals ~2%
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.815], ["#1e1e1e", 0.159], ["#292b2a", 0.01], ["#4f5150", 0.009]]; max contrast vs bg 16.3:1
+- **hierarchy_focal**: rising long-run line
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 185 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3636-3636 (121.2333 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f3821-3821 (127.4 s)
+- **story_purpose**: zoom-out evidence: long-run index history
+- **narration_asr**: And if you zoom out even further, it gets more evident. We've been in the greatest bull market in history,
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.992; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: same card as S005.1 at different range = recognition (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: card scale smaller (~30% width) and left of centre to make room for the text pop
+- **reconstruction_requirement**: original mock-up, 'MAX' tab selected
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S007.1  ·  3.6 s  ·  f3821–f3928 (108 frames)  ·  pts 127.4–130.9667
+- **shot_id**: SH023
+- **frame_refs**: entry f3821 viewed in v2/boundary_sheet_06.jpg; exit f3928 viewed in v2/boundary_sheet_06.jpg; mid f3874 viewed in frames/state_sheet_07.jpg
+- **objects_and_positions**: card left (x~0.10-0.28? x~0.21-0.37,y~0.23-0.77); right text 'duration' line (x~0.43-0.54,y~0.33) then, from f3855 (128.533 s), a green bold percentage below it (x~0.54-0.76,y~0.50) — INTRA-STATE EVENT not in the original 76-state table
+- **measured_blobs_norm_bbox**: [[0.197, 0.211, 0.562, 0.789], [0.642, 0.319, 0.802, 0.406], [0.656, 0.492, 0.781, 0.581]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: two stacked stats at right
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 18.97% of pixels; negative space 81.0%; content centroid [0.388, 0.497]
+- **typography_text**: visible_text: 17 Years / +715% | duration line black rounded sans ~4%; percentage bold green ~6%
+- **colors**: bg #fdfdfd; palette [["#fcfdfc", 0.806], ["#1e1f1e", 0.171], ["#545755", 0.012], ["#99a7aa", 0.005], ["#e0e2e0", 0.005]]; max contrast vs bg 16.2:1
+- **hierarchy_focal**: two stacked stats at right
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 108 frames; no in-state motion except sub-state element entry
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f3821-3821 (127.4 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3929-3929 (131.0 s)
+- **story_purpose**: express the zoom-out as two numbers (years, gain)
+- **narration_asr**: 17 years, 715 % returns. The S
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.889; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: second number appearing mid-state paces the reveal (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: sub-state S007.1a (f3821-3854) -> S007.1b (f3855-3928)
+- **sub_state_events**: sub-state split at f3855 (pts 128.5333): see intra_state_events.csv
+- **reconstruction_requirement**: TWO timeline cuts: text1 at cut, text2 on later word; percentage colour #00A64F-like green
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S007.2  ·  4.3 s  ·  f3929–f4057 (129 frames)  ·  pts 131.0–135.2667
+- **shot_id**: SH023
+- **frame_refs**: entry f3929 viewed in v2/boundary_sheet_06.jpg; exit f4057 viewed in v2/boundary_sheet_06.jpg; mid f3993 viewed in frames/state_sheet_07.jpg
+- **objects_and_positions**: framed award-style plaque centre-left (x~0.27-0.37,y~0.30-0.75) with a circular emblem and a joke title; snowflakes scattered right (x~0.52-0.75,y~0.10-0.60); small snowman lower right (x~0.68,y~0.72)
+- **measured_blobs_norm_bbox**: [[0.266, 0.247, 0.48, 0.753], [0.609, 0.569, 0.727, 0.75], [0.678, 0.256, 0.745, 0.367], [0.544, 0.619, 0.602, 0.714], [0.533, 0.383, 0.589, 0.478], [0.498, 0.561, 0.542, 0.633], [0.62, 0.242, 0.662, 0.308]]
+- **pose_expression**: no character in frame (Gag prop alone state); subject is: plaque
+- **art_direction**: Gag prop alone (F10); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 6.4% of pixels; negative space 93.6%; content centroid [0.381, 0.514]
+- **typography_text**: visible_text: CERTIFICATE / World's Longest Co*ai*n* Bender | plaque text tiny; censoring asterisks in the title (UNVERIFIED reading)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.903], ["#d6dae0", 0.044], ["#171f2f", 0.021], ["#a0a3aa", 0.015], ["#2b3344", 0.012]]; max contrast vs bg 16.2:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 129 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f3929-3929 (131.0 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4058-4058 (135.3 s)
+- **story_purpose**: joke award for a record-length 'bender'
+- **narration_asr**: &P's basically been on a f***ing bender since 2009. So
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.909; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: prop gag with winter snowflakes (pun) (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: plaque reused S009.3–S009.4
+- **reconstruction_requirement**: original plaque art (fictional body); snowflake sprites as separate layers
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S008.0  ·  8.5 s  ·  f4058–f4312 (255 frames)  ·  pts 135.3–143.7667
+- **shot_id**: SH024
+- **frame_refs**: entry f4058 viewed in v2/boundary_sheet_06.jpg; exit f4312 viewed in v2/boundary_sheet_06.jpg; mid f4185 viewed in frames/state_sheet_07.jpg
+- **objects_and_positions**: full dark answer-box page: top label (x~0.33,y~0.30), paragraph left (x~0.33-0.75,y~0.33-0.72) with a highlighted sentence; small video thumbnail right (x~0.82-0.90,y~0.34-0.50)
+- **measured_blobs_norm_bbox**: [[0.227, 0.261, 0.755, 0.731]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: highlighted sentence
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #1e1e1e field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 6.85% of pixels; negative space 93.2%; content centroid [0.479, 0.479]
+- **typography_text**: visible_text: AI Overview / The Midas curse, in Greek mythology, refers to the wish of King Midas to have everything he touched turn into gold, a gift that ultimately became a curse. […] | UI sans 1.5% height, blue highlight
+- **colors**: bg #1e1e1e; palette [["#1d1e1e", 0.928], ["#41445f", 0.023], ["#d8dae0", 0.015], ["#a9a9ae", 0.012], ["#73737c", 0.011]]; max contrast vs bg 1.0:1
+- **hierarchy_focal**: highlighted sentence
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 255 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4058-4058 (135.3 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4313-4313 (143.8 s)
+- **story_purpose**: search-overview definition of a myth (Midas) used as a metaphor
+- **narration_asr**: So over the past 17 years, anything you've invested in would likely have generated a positive return. And because of this, investment strategies characterized by high
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.98; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: highlighted sentence + voice sync (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: dark card; text readable only at full-res; partial UNVERIFIED
+- **reconstruction_requirement**: original mock-up with fictional brand; highlight band #3B5FA8-like
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.0  ·  0.6667 s  ·  f4313–f4332 (20 frames)  ·  pts 143.8–144.4333
+- **shot_id**: SH024
+- **frame_refs**: entry f4313 viewed in v2/boundary_sheet_06.jpg; exit f4332 viewed in v2/boundary_sheet_06.jpg; mid f4322 viewed in frames/state_sheet_07.jpg
+- **objects_and_positions**: one term centred top (x~0.43-0.57,y~0.31)
+- **measured_blobs_norm_bbox**: [[0.414, 0.225, 0.588, 0.322]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: term
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 0.34% of pixels; negative space 99.7%; content centroid [0.496, 0.27]
+- **typography_text**: visible_text: High-Beta | rounded sans ~4%
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.996]]; max contrast vs bg 20.3:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 20 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4313-4313 (143.8 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f4333-4333 (144.4667 s)
+- **story_purpose**: start of formula build (term 1)
+- **narration_asr**: beta and irrational
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.888; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: build-up structure creates anticipation (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: three-line formula S009.0->S009.2: the term stays at the same position in the next two states
+- **reconstruction_requirement**: text layer only: one term near the upper centre on the first frame; hold the measured duration, then cut to the stacked version
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.1  ·  1.6 s  ·  f4333–f4380 (48 frames)  ·  pts 144.4667–146.0333
+- **shot_id**: SH024
+- **frame_refs**: entry f4333 viewed in v2/boundary_sheet_06.jpg; exit f4380 viewed in v2/boundary_sheet_06.jpg; mid f4356 viewed in frames/state_sheet_07.jpg
+- **objects_and_positions**: S009.0 + plus sign (y~0.42) + second term below (y~0.48)
+- **measured_blobs_norm_bbox**: [[0.327, 0.406, 0.672, 0.503], [0.414, 0.225, 0.588, 0.322], [0.481, 0.328, 0.519, 0.392]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: stack
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 1.01% of pixels; negative space 99.0%; content centroid [0.499, 0.389]
+- **typography_text**: visible_text: High-Beta / + / Irrational Approaches | same font
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.989], ["#040404", 0.006]]; max contrast vs bg 20.2:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 48 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f4333-4333 (144.4667 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f4381-4381 (146.0667 s)
+- **story_purpose**: formula step 2: adds the second term below with a plus sign between
+- **narration_asr**: approaches have outperformed
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.95; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: short step in a three-step build paces the reveal (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: first term persists unchanged from S009.0; plus sign and second term are centred under it
+- **reconstruction_requirement**: text layers only: add plus sign and second term on the cut frame; keep the first term position identical
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.2  ·  2.2 s  ·  f4381–f4446 (66 frames)  ·  pts 146.0667–148.2333
+- **shot_id**: SH024
+- **frame_refs**: entry f4381 viewed in v2/boundary_sheet_06.jpg; exit f4446 viewed in v2/boundary_sheet_06.jpg; mid f4413 viewed in frames/state_sheet_07.jpg
+- **objects_and_positions**: S009.1 + equals sign + result word (y~0.80); from f4417 (147.267 s) a tiny line-drawn figure icon appears right of the equals sign (x~0.55-0.60,y~0.56-0.66) — INTRA-STATE EVENT
+- **measured_blobs_norm_bbox**: [[0.327, 0.406, 0.672, 0.503], [0.37, 0.631, 0.63, 0.728], [0.414, 0.225, 0.588, 0.322], [0.481, 0.328, 0.519, 0.392], [0.483, 0.533, 0.517, 0.594]]
+- **pose_expression**: icon: tiny stick figure, neutral
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 1.53% of pixels; negative space 98.5%; content centroid [0.498, 0.486]
+- **typography_text**: visible_text: High-Beta / + / Irrational Approaches / = / Outperformance | same font; icon marker-line
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.983], ["#060606", 0.009]]; max contrast vs bg 19.8:1
+- **hierarchy_focal**: result word is focal, icon secondary
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 66 frames; no in-state motion except sub-state element entry
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f4381-4381 (146.0667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4447-4447 (148.2667 s)
+- **story_purpose**: completes formula; icon = the character's mark
+- **narration_asr**: and generated alpha.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.938; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: late micro-icon rewards attention (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: sub-state S009.2a (f4381-4416) -> S009.2b (f4417-4446)
+- **sub_state_events**: sub-state split at f4417 (pts 147.2667): see intra_state_events.csv
+- **reconstruction_requirement**: two cuts; icon layer added on word
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.3  ·  3.4 s  ·  f4447–f4548 (102 frames)  ·  pts 148.2667–151.6333
+- **shot_id**: SH025
+- **frame_refs**: entry f4447 viewed in v2/boundary_sheet_06.jpg; exit f4548 viewed in v2/boundary_sheet_07.jpg; mid f4497 viewed in frames/state_sheet_08.jpg
+- **objects_and_positions**: plaque alone centre (x~0.41-0.59,y~0.29-0.73)
+- **measured_blobs_norm_bbox**: [[0.398, 0.261, 0.603, 0.742]]
+- **pose_expression**: no character in frame (Gag prop alone state); subject is: plaque
+- **art_direction**: Gag prop alone (F10); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 5.46% of pixels; negative space 94.5%; content centroid [0.492, 0.512]
+- **typography_text**: visible_text: CERTIFICATE / World's Longest Co*ai*n* Bender | plaque text tiny
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.922], ["#d9dbe3", 0.029], ["#1e2537", 0.025], ["#bdbfc7", 0.01], ["#94969e", 0.009]]; max contrast vs bg 14.9:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 102 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4447-4447 (148.2667 s)
+- **exit_transition**: PARTIAL_REPLACE (some content persists) at f4549-4549 (151.6667 s)
+- **story_purpose**: callback to the joke award as the 'bender' ends
+- **narration_asr**: Although it hasn't happened yet, like all great benders, it
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.984; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: isolating a prop emphasises it (H2)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same plaque as S007.2, now without snow
+- **reconstruction_requirement**: reuse the plaque asset from S007.2 without the snow layers; centre it
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.4  ·  2.0 s  ·  f4549–f4608 (60 frames)  ·  pts 151.6667–153.6333
+- **shot_id**: SH025
+- **frame_refs**: entry f4549 viewed in v2/boundary_sheet_07.jpg; exit f4608 viewed in v2/boundary_sheet_07.jpg; mid f4578 viewed in frames/state_sheet_08.jpg
+- **objects_and_positions**: plaque centre-top (x~0.43-0.59) with a red X across it (x~0.37-0.64,y~0.09-0.55); large red-orange cartoon flames at bottom-left (x~0.00-0.18,y~0.50-1.0) and bottom-right (x~0.77-1.0,y~0.62-1.0)
+- **measured_blobs_norm_bbox**: [[0.352, 0.228, 0.722, 0.714], [0.0, 0.503, 0.264, 1.0], [0.717, 0.617, 1.0, 1.0]]
+- **pose_expression**: no character in frame (Gag prop alone state); subject is: red X then flames
+- **art_direction**: Gag prop alone (F10); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 22.07% of pixels; negative space 77.9%; content centroid [0.466, 0.735]
+- **typography_text**: visible_text: CERTIFICATE / World's Longest Co*ai*n* Bender | none
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.765], ["#e34a29", 0.082], ["#e92031", 0.056], ["#c6c3c9", 0.04], ["#262938", 0.034]]; max contrast vs bg 14.1:1
+- **hierarchy_focal**: red X then flames
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 60 frames; no in-state motion
+- **entry_transition**: PARTIAL_REPLACE (some content persists) at f4549-4549 (151.6667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4609-4609 (153.6667 s)
+- **story_purpose**: the party/bender 'ends': cancel + fire
+- **narration_asr**: must come to an end eventually.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.994; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: saturated red/orange blocks = strongest accent state (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: flames are glossy emoji-style art (not marker line); red X is hand-drawn
+- **reconstruction_requirement**: flame sprites (original) anchored to lower corners; X as separate layer
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.5  ·  1.9 s  ·  f4609–f4665 (57 frames)  ·  pts 153.6667–155.5333
+- **shot_id**: SH026
+- **frame_refs**: entry f4609 viewed in v2/boundary_sheet_07.jpg; exit f4665 viewed in v2/boundary_sheet_07.jpg; mid f4637 viewed in frames/state_sheet_08.jpg
+- **objects_and_positions**: one line centred-right (x~0.36-0.64? y~0.48)
+- **measured_blobs_norm_bbox**: [[0.272, 0.444, 0.73, 0.536]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: line
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 0.69% of pixels; negative space 99.3%; content centroid [0.523, 0.487]
+- **typography_text**: visible_text: ... But when is this end coming? | rounded sans ~3.5%
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.993]]; max contrast vs bg 20.1:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 57 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4609-4609 (153.6667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4666-4666 (155.5667 s)
+- **story_purpose**: central question 2 part 1
+- **narration_asr**: But when is this end coming?
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.938; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: ellipsis opening makes it sound spoken (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: paired with S009.6: the next state replaces this line with a lower-left line
+- **reconstruction_requirement**: text layer only: one line, ellipsis first; hold until the second question cut
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.6  ·  1.7 s  ·  f4666–f4716 (51 frames)  ·  pts 155.5667–157.2333
+- **shot_id**: SH026
+- **frame_refs**: entry f4666 viewed in v2/boundary_sheet_07.jpg; exit f4716 viewed in v2/boundary_sheet_07.jpg; mid f4691 viewed in frames/state_sheet_08.jpg
+- **objects_and_positions**: second question line replaces the first (x~0.14-0.36? y~0.74)
+- **measured_blobs_norm_bbox**: [[0.269, 0.442, 0.731, 0.536]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: line
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 0.72% of pixels; negative space 99.3%; content centroid [0.495, 0.487]
+- **typography_text**: visible_text: And how can you prepare for it? | same font
+- **colors**: bg #fdfdfd; palette [["#fcfdfc", 0.992], ["#060606", 0.004]]; max contrast vs bg 19.8:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 51 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4666-4666 (155.5667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4717-4717 (157.2667 s)
+- **story_purpose**: central question 2 part 2
+- **narration_asr**: And how can you prepare for it?
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.995; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: two-line question stack = chapter break (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: follows S009.5: positions differ (second line sits lower and left)
+- **reconstruction_requirement**: text; mind the position change
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.7  ·  2.9667 s  ·  f4717–f4805 (89 frames)  ·  pts 157.2667–160.2
+- **shot_id**: SH027
+- **frame_refs**: entry f4717 viewed in v2/boundary_sheet_07.jpg; exit f4805 viewed in v2/boundary_sheet_07.jpg; mid f4761 viewed in frames/state_sheet_08.jpg
+- **objects_and_positions**: LEAD large left-centre (x~0.13-0.33,y~0.28-0.90); raised hand with two-finger gesture at right of head (x~0.28); tiny note text right (x~0.37-0.42,y~0.60-0.69)
+- **measured_blobs_norm_bbox**: [[0.323, 0.236, 0.484, 0.764], [0.495, 0.256, 0.667, 0.375]]
+- **pose_expression**: big grin, waving, raised hand
+- **art_direction**: Pose + prop (F2); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.32% of pixels; negative space 96.7%; content centroid [0.423, 0.398]
+- **typography_text**: visible_text: "he's supposed to be holding up two fingers, it was hard to draw" | micro handwritten note (4th-wall joke about drawing difficulty)
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.966], ["#f4d3b8", 0.019], ["#060403", 0.008]]; max contrast vs bg 20.1:1
+- **hierarchy_focal**: face and hand
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 89 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4717-4717 (157.2667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4806-4806 (160.2333 s)
+- **story_purpose**: comic aside while introducing option one
+- **narration_asr**: Well, there's two ways. The first,
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.909; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: meta-humour rewards close reading (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same pose returns S009.9 (callback)
+- **reconstruction_requirement**: LEAD wave pose PNG; note layer
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.8  ·  7.6667 s  ·  f4806–f5035 (230 frames)  ·  pts 160.2333–167.8667
+- **shot_id**: SH027
+- **frame_refs**: entry f4806 viewed in v2/boundary_sheet_07.jpg; exit f5035 viewed in v2/boundary_sheet_07.jpg; mid f4920 viewed in frames/state_sheet_08.jpg
+- **objects_and_positions**: news-article image left (x~0.22-0.37,y~0.10-0.82) with headline and a blue bar chart whose last bars are boxed red with an arrow; LEAD sitting on a pile of green banknotes (x~0.62-0.70,y~0.62-0.88); from f4916 (163.9 s) a bold word appears above him (x~0.57-0.66,y~0.22-0.30)
+- **measured_blobs_norm_bbox**: [[0.2, 0.111, 0.505, 0.914], [0.63, 0.297, 0.8, 0.733], [0.375, 0.278, 0.464, 0.328]]
+- **pose_expression**: LEAD smile, one hand raised, sitting on cash
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 6.02% of pixels; negative space 94.0%; content centroid [0.488, 0.537]
+- **typography_text**: visible_text: Warren Buffett has a record amount of cash on the sidelines. Here's how experts recommend balancing saving and investing / Berkshire Hathaway's cash pile swells to new record / Cash and cash equivalents ($bn) / Boring | article headline ~1.8%; bold rounded sans ~4% for the later word
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.803], ["#faede2", 0.143], ["#b7cb98", 0.015], ["#89796f", 0.015], ["#21261c", 0.014]]; max contrast vs bg 15.2:1
+- **hierarchy_focal**: red-boxed bars then the cash-pile character
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 230 frames; no in-state motion except sub-state element entry
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f4806-4806 (160.2333 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f5036-5036 (167.9 s)
+- **story_purpose**: option 1: sit on cash = boring (word pops with the spoken word)
+- **narration_asr**: sit on cash like Buffett has been doing. But that's boring and you're not looking to compound at the risk -free rate. So
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.952; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: late bold word = punchline accent (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: sub-state S009.8a (f4806-4915) -> S009.8b (f4916-5035)
+- **sub_state_events**: sub-state split at f4916 (pts 163.9): see intra_state_events.csv
+- **reconstruction_requirement**: article mock-up original; cash pile green blob; word layer on cut
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.9  ·  2.2 s  ·  f5036–f5101 (66 frames)  ·  pts 167.9–170.0667
+- **shot_id**: SH028
+- **frame_refs**: entry f5036 viewed in v2/boundary_sheet_07.jpg; exit f5101 viewed in v2/boundary_sheet_07.jpg; mid f5068 viewed in frames/state_sheet_09.jpg
+- **objects_and_positions**: LEAD enlarged left-centre (x~0.15-0.30,y~0.15-0.95) wave pose + note right (x~0.38-0.47)
+- **measured_blobs_norm_bbox**: [[0.323, 0.236, 0.484, 0.764], [0.495, 0.256, 0.667, 0.375]]
+- **pose_expression**: grin, waving
+- **art_direction**: Pose + prop (F2); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.32% of pixels; negative space 96.7%; content centroid [0.423, 0.398]
+- **typography_text**: visible_text: "he's supposed to be holding up two fingers, it was hard to draw" | same micro note as S009.7
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.966], ["#f3d2b9", 0.02], ["#040202", 0.007]]; max contrast vs bg 20.3:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 66 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f5036-5036 (167.9 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f5102-5102 (170.1 s)
+- **story_purpose**: return to the wave to move to option two
+- **narration_asr**: So that brings us to our second option.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.981; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: callback = recognition (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: reuse of S009.7 art at a different scale/position (see auto blobs)
+- **reconstruction_requirement**: reuse asset at new transform
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.10  ·  5.2333 s  ·  f5102–f5258 (157 frames)  ·  pts 170.1–175.3
+- **shot_id**: SH028
+- **frame_refs**: entry f5102 viewed in v2/boundary_sheet_07.jpg; exit f5258 viewed in v2/boundary_sheet_08.jpg; mid f5180 viewed in frames/state_sheet_09.jpg
+- **objects_and_positions**: green round poker table centre (x~0.35-0.55,y~0.45-0.65) with chip stacks; five round heads around it: centre grinning (x~0.46), four others scowling or sad
+- **measured_blobs_norm_bbox**: [[0.338, 0.347, 0.662, 0.7]]
+- **pose_expression**: five distinct face expressions: 1 grin, 4 scowl/frown/sad
+- **art_direction**: Gag prop alone (F10); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 5.62% of pixels; negative space 94.4%; content centroid [0.499, 0.548]
+- **typography_text**: visible_text: - | none
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.943], ["#f3d6b6", 0.023], ["#51b25a", 0.015], ["#4d482b", 0.007], ["#13120a", 0.007]]; max contrast vs bg 18.4:1
+- **hierarchy_focal**: grinning centre head among scowls
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 157 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f5102-5102 (170.1 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f5259-5259 (175.3333 s)
+- **story_purpose**: option 2: gambling = winner among losers
+- **narration_asr**: Continue to go all in and then blame others when the markets inevitably reverse. You
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.911; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: expression contrast reads instantly (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: faces drawn without bodies except legs; style differs from LEAD (heads only)
+- **reconstruction_requirement**: 5 head variants + table; green #4FAE57
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.11  ·  1.5667 s  ·  f5259–f5305 (47 frames)  ·  pts 175.3333–176.8667
+- **shot_id**: SH029
+- **frame_refs**: entry f5259 viewed in v2/boundary_sheet_08.jpg; exit f5305 viewed in v2/boundary_sheet_08.jpg; mid f5282 viewed in frames/state_sheet_09.jpg
+- **objects_and_positions**: small cut-out photo top-centre (x~0.38-0.50,y~0.07-0.45) of a suited man with raised arms holding red cans spraying a cloud of banknotes
+- **measured_blobs_norm_bbox**: [[0.231, 0.131, 0.464, 0.467]]
+- **pose_expression**: photo subject triumphant
+- **art_direction**: Photo insert (F6); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 1.34% of pixels; negative space 98.7%; content centroid [0.338, 0.305]
+- **typography_text**: visible_text: - | none
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.983], ["#dddbde", 0.005], ["#352e3d", 0.005]]; max contrast vs bg 12.7:1
+- **hierarchy_focal**: the single small photo is the only element on the canvas
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 47 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f5259-5259 (175.3333 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f5306-5306 (176.9 s)
+- **story_purpose**: blame-target 1 (first of three photos) / money-spray gag
+- **narration_asr**: can blame Jerome Powell,
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.997; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: small isolated photo = quick-read gag (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: third-party photo; do not identify the person
+- **reconstruction_requirement**: original illustration; ~12% frame width
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.12  ·  1.6 s  ·  f5306–f5353 (48 frames)  ·  pts 176.9–178.4667
+- **shot_id**: SH029
+- **frame_refs**: entry f5306 viewed in v2/boundary_sheet_08.jpg; exit f5353 viewed in v2/boundary_sheet_08.jpg; mid f5329 viewed in frames/state_sheet_09.jpg
+- **objects_and_positions**: S009.11 photo left (x~0.20-0.35) + second photo right (x~0.50-0.68,y~0.12-0.42): a suited man pointing up against blue curtains
+- **measured_blobs_norm_bbox**: [[0.547, 0.144, 0.781, 0.467], [0.231, 0.131, 0.464, 0.467]]
+- **pose_expression**: photo subject pointing up, stern
+- **art_direction**: Photo insert (F6); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 7.08% of pixels; negative space 92.9%; content centroid [0.602, 0.302]
+- **typography_text**: visible_text: - | none
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.927], ["#1b2753", 0.029], ["#0d0d19", 0.016], ["#c9c4c5", 0.01], ["#69565c", 0.009]]; max contrast vs bg 18.9:1
+- **hierarchy_focal**: the newly added second photo at right of the first
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 48 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f5306-5306 (176.9 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f5354-5354 (178.5 s)
+- **story_purpose**: blame-target 2
+- **narration_asr**: Donald Trump, or even market
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.958; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: pop-in on spoken name (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: third-party; no identification
+- **reconstruction_requirement**: original illustration
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.13  ·  1.4667 s  ·  f5354–f5397 (44 frames)  ·  pts 178.5–179.9333
+- **shot_id**: SH029
+- **frame_refs**: entry f5354 viewed in v2/boundary_sheet_08.jpg; exit f5397 viewed in v2/boundary_sheet_08.jpg; mid f5375 viewed in frames/state_sheet_09.jpg
+- **objects_and_positions**: S009.12 two photos + third photo lower centre (x~0.37-0.54,y~0.58-0.83) of figures in dark suits wearing golden animal-head masks
+- **measured_blobs_norm_bbox**: [[0.547, 0.144, 0.781, 0.467], [0.378, 0.561, 0.622, 0.864], [0.231, 0.131, 0.464, 0.467]]
+- **pose_expression**: photo subjects masked
+- **art_direction**: Photo insert (F6); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 12.85% of pixels; negative space 87.2%; content centroid [0.556, 0.485]
+- **typography_text**: visible_text: - | none
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.872], ["#1d0f14", 0.039], ["#202b57", 0.033], ["#dbc9a6", 0.02], ["#ad7d5b", 0.019]]; max contrast vs bg 18.2:1
+- **hierarchy_focal**: third photo (warm gold)
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 44 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f5354-5354 (178.5 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f5398-5398 (179.9667 s)
+- **story_purpose**: blame-target 3 (shadowy elites)
+- **narration_asr**: makers. But
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.973; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: third addition completes a triplet (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: triplet layout: two on top row, one centred below
+- **reconstruction_requirement**: original illustration; triplet layout
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S009.14  ·  5.1667 s  ·  f5398–f5552 (155 frames)  ·  pts 179.9667–185.1
+- **shot_id**: SH030
+- **frame_refs**: entry f5398 viewed in v2/boundary_sheet_08.jpg; exit f5552 viewed in v2/boundary_sheet_08.jpg; mid f5475 viewed in frames/state_sheet_09.jpg
+- **objects_and_positions**: LEAD left-centre (x~0.20-0.36) scowling with a speech line (x~0.22-0.34,y~0.52) reading a complaint; FOIL right (x~0.50-0.62) worried face shrugging
+- **measured_blobs_norm_bbox**: [[0.566, 0.389, 0.742, 0.839], [0.258, 0.344, 0.55, 0.792]]
+- **pose_expression**: LEAD scowl; FOIL worried shrug
+- **art_direction**: Intro/pose-on-canvas (F1); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 4.84% of pixels; negative space 95.2%; content centroid [0.528, 0.519]
+- **typography_text**: visible_text: The Market is Rigged!!! | micro speech ~1.3% height (UNVERIFIED small text, read as 'The Market is Rigged!!!')
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.952], ["#f4d5b9", 0.025], ["#020101", 0.016]]; max contrast vs bg 20.4:1
+- **hierarchy_focal**: speech line then FOIL face
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 155 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f5398-5398 (179.9667 s)
+- **exit_transition**: BLACK_HOLD_ENTRY at f5553-5553 (185.1333 s)
+- **story_purpose**: blame punchline: the market is rigged
+- **narration_asr**: you've got to blame someone because taking losses on the chin isn't how investing works.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.964; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: repeat of this pair later (S019.0) = callback payoff (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: two-character composition reused at S019.0
+- **reconstruction_requirement**: two-character pose set (scowl/shrug)
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S010.0  ·  3.3333 s  ·  f5553–f5652 (100 frames)  ·  pts 185.1333–188.4333
+- **shot_id**: SH031
+- **frame_refs**: entry f5553 viewed in v2/boundary_sheet_08.jpg; exit f5652 viewed in v2/boundary_sheet_08.jpg; mid f5602 viewed in frames/state_sheet_10.jpg
+- **objects_and_positions**: full black frame #110F10
+- **measured_blobs_norm_bbox**: NONE (solid field; 0 content blobs measured)
+- **pose_expression**: no character in frame (Black beat state); subject is: none (voice carries: 'All this brings us to the answer…')
+- **art_direction**: Black beat (F8); flat marker-doodle on #110f10 field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 0.0% of pixels; negative space 100.0%; content centroid [None, None]
+- **typography_text**: visible_text: - | none
+- **colors**: bg #110f10; palette [["#110e0f", 1.0]]; max contrast vs bg 1.0:1
+- **hierarchy_focal**: none (voice carries: 'All this brings us to the answer…')
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 100 frames; no in-state motion
+- **entry_transition**: BLACK_HOLD_ENTRY at f5553-5553 (185.1333 s)
+- **exit_transition**: BLACK_HOLD_EXIT at f5653-5653 (188.4667 s)
+- **story_purpose**: drum-roll / reset before answer
+- **narration_asr**: All this brings us to the answer to the question of today's video.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.889; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: spoken setup over a blank screen focuses on voice (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: near-black not #000 (std 0.82 dither)
+- **reconstruction_requirement**: hold the measured duration (see timing fields) as solid #110F10
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S011.0  ·  2.3 s  ·  f5653–f5721 (69 frames)  ·  pts 188.4667–190.7333
+- **shot_id**: SH032
+- **frame_refs**: entry f5653 viewed in v2/boundary_sheet_08.jpg; exit f5721 viewed in v2/boundary_sheet_08.jpg; mid f5687 viewed in frames/state_sheet_10.jpg
+- **objects_and_positions**: title question centred (x~0.15-0.85,y~0.50)
+- **measured_blobs_norm_bbox**: [[0.108, 0.461, 0.892, 0.553]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: question
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 1.3% of pixels; negative space 98.7%; content centroid [0.496, 0.504]
+- **typography_text**: visible_text: Why do the dumbest investors win in the stock market? | rounded sans ~4%
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.986], ["#050505", 0.007]]; max contrast vs bg 20.0:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 69 frames; no in-state motion
+- **entry_transition**: BLACK_HOLD_EXIT at f5653-5653 (188.4667 s)
+- **exit_transition**: BLACK_HOLD_ENTRY at f5722-5722 (190.7667 s)
+- **story_purpose**: restate the central question
+- **narration_asr**: Why do the dumbest investors win?
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.975; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: isolated question between black beats (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: exact repeat of S003.0
+- **reconstruction_requirement**: reuse S003.0 text layer
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S012.0  ·  2.0667 s  ·  f5722–f5783 (62 frames)  ·  pts 190.7667–192.8
+- **shot_id**: SH033
+- **frame_refs**: entry f5722 viewed in v2/boundary_sheet_08.jpg; exit f5783 viewed in v2/boundary_sheet_09.jpg; mid f5752 viewed in frames/state_sheet_10.jpg
+- **objects_and_positions**: full black frame
+- **measured_blobs_norm_bbox**: NONE (solid field; 0 content blobs measured)
+- **pose_expression**: no character in frame (Black beat state); subject is: none (voice: 'And the answer is simple.')
+- **art_direction**: Black beat (F8); flat marker-doodle on #110f10 field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 0.0% of pixels; negative space 100.0%; content centroid [None, None]
+- **typography_text**: visible_text: - | none
+- **colors**: bg #110f10; palette [["#110e0f", 1.0]]; max contrast vs bg 1.0:1
+- **hierarchy_focal**: none (voice: 'And the answer is simple.')
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 62 frames; no in-state motion
+- **entry_transition**: BLACK_HOLD_ENTRY at f5722-5722 (190.7667 s)
+- **exit_transition**: BLACK_HOLD_EXIT at f5784-5784 (192.8333 s)
+- **story_purpose**: second beat of suspense
+- **narration_asr**: And the answer is simple.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.962; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: short black hold (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same asset as S010.0 (reuse)
+- **reconstruction_requirement**: hold the measured duration (see timing fields)
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S013.0  ·  4.0 s  ·  f5784–f5903 (120 frames)  ·  pts 192.8333–196.8
+- **shot_id**: SH033
+- **frame_refs**: entry f5784 viewed in v2/boundary_sheet_09.jpg; exit f5903 viewed in v2/boundary_sheet_09.jpg; mid f5843 viewed in frames/state_sheet_10.jpg
+- **objects_and_positions**: LEAD crouched left (x~0.13-0.27,y~0.30-0.78) with a small shout (x~0.19-0.26,y~0.50); jagged chart doodle (x~0.43-0.55,y~0.20-0.38) above a large handwritten letter B (x~0.44-0.55,y~0.55-0.80)
+- **measured_blobs_norm_bbox**: [[0.27, 0.297, 0.541, 0.761], [0.558, 0.242, 0.719, 0.439], [0.595, 0.464, 0.683, 0.706]]
+- **pose_expression**: crouch, happy 'shout' eyes, small smile
+- **art_direction**: Pose + prop (F2); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.51% of pixels; negative space 96.5%; content centroid [0.423, 0.452]
+- **typography_text**: visible_text: Yes! Yes! Yes! | large handwritten letter ~9% height; shout micro
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.964], ["#f2d3b9", 0.017], ["#030202", 0.008], ["#242322", 0.004]]; max contrast vs bg 20.3:1
+- **hierarchy_focal**: jagged line + letter
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 120 frames; no in-state motion
+- **entry_transition**: BLACK_HOLD_EXIT at f5784-5784 (192.8333 s)
+- **exit_transition**: BLACK_HOLD_ENTRY at f5904-5904 (196.8333 s)
+- **story_purpose**: the answer arrives: B (beta)/volatility
+- **narration_asr**: Because retail investors love volatile high beta stocks.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.883; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: character + symbol = answer visual (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same doodle at S017.4
+- **reconstruction_requirement**: symbol set + crouch pose
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S014.0  ·  2.6667 s  ·  f5904–f5983 (80 frames)  ·  pts 196.8333–199.4667
+- **shot_id**: SH034
+- **frame_refs**: entry f5904 viewed in v2/boundary_sheet_09.jpg; exit f5983 viewed in v2/boundary_sheet_09.jpg; mid f5943 viewed in frames/state_sheet_10.jpg
+- **objects_and_positions**: full black frame
+- **measured_blobs_norm_bbox**: NONE (solid field; 0 content blobs measured)
+- **pose_expression**: no character in frame (Black beat state); subject is: none (voice: 'Let's get a little more technical real quick')
+- **art_direction**: Black beat (F8); flat marker-doodle on #110f10 field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 0.0% of pixels; negative space 100.0%; content centroid [None, None]
+- **typography_text**: visible_text: - | none
+- **colors**: bg #110f10; palette [["#110e0f", 1.0]]; max contrast vs bg 1.0:1
+- **hierarchy_focal**: none (voice: 'Let's get a little more technical real quick')
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 80 frames; no in-state motion
+- **entry_transition**: BLACK_HOLD_ENTRY at f5904-5904 (196.8333 s)
+- **exit_transition**: BLACK_HOLD_EXIT at f5984-5984 (199.5 s)
+- **story_purpose**: reset before the explainer segment
+- **narration_asr**: Let's get a little more technical real quick.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.986; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: third black hold (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same #110F10
+- **reconstruction_requirement**: hold the measured duration (see timing fields)
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S015.0  ·  1.9667 s  ·  f5984–f6042 (59 frames)  ·  pts 199.5–201.4333
+- **shot_id**: SH034
+- **frame_refs**: entry f5984 viewed in v2/boundary_sheet_09.jpg; exit f6042 viewed in v2/boundary_sheet_09.jpg; mid f6013 viewed in frames/state_sheet_10.jpg
+- **objects_and_positions**: question centred (x~0.38-0.55,y~0.50)
+- **measured_blobs_norm_bbox**: [[0.391, 0.461, 0.608, 0.542]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: question
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 0.35% of pixels; negative space 99.7%; content centroid [0.497, 0.502]
+- **typography_text**: visible_text: What is Beta? | rounded sans ~3.5%
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.996]]; max contrast vs bg 19.9:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 59 frames; no in-state motion
+- **entry_transition**: BLACK_HOLD_EXIT at f5984-5984 (199.5 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6043-6043 (201.4667 s)
+- **story_purpose**: section header: define the term
+- **narration_asr**: What is beta and why does it matter?
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.962; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: question card = chapter marker (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: third single-line question card of the video (after S003.0 and S011.0); same font and baseline as those cards
+- **reconstruction_requirement**: text layer only: one centred line, baseline y~0.50
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S016.0  ·  4.8 s  ·  f6043–f6186 (144 frames)  ·  pts 201.4667–206.2333
+- **shot_id**: SH035
+- **frame_refs**: entry f6043 viewed in v2/boundary_sheet_09.jpg; exit f6186 viewed in v2/boundary_sheet_09.jpg; mid f6114 viewed in frames/state_sheet_11.jpg
+- **objects_and_positions**: full light-blue (#90B7F9) definition card: roller-coaster line drawing left (x~0.20-0.52,y~0.22-0.75); term, pronunciation and 3-line definition right (x~0.53-0.75,y~0.31-0.60); small publisher mark bottom-centre-left (x~0.45,y~0.80)
+- **measured_blobs_norm_bbox**: [[0.222, 0.347, 0.52, 0.675], [0.519, 0.436, 0.755, 0.633], [0.519, 0.303, 0.6, 0.439], [0.436, 0.769, 0.567, 0.842]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: term then drawing
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #90b7fa field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.38% of pixels; negative space 96.6%; content centroid [0.471, 0.532]
+- **typography_text**: visible_text: Beta / [bā-tə] / A measure of the volatility of a security compared to the market as a whole (usually the S&P 500). / Investopedia | bold sans term ~3.5%, body ~1.8% dark grey on blue; third-party card
+- **colors**: bg #90b7fa; palette [["#90b7f9", 0.962], ["#546c90", 0.011], ["#7f9dc8", 0.008], ["#6681a8", 0.008], ["#30486e", 0.006]]; max contrast vs bg 7.6:1
+- **hierarchy_focal**: term then drawing
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 144 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6043-6043 (201.4667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6187-6187 (206.2667 s)
+- **story_purpose**: definition of the key concept with a metaphor drawing
+- **narration_asr**: Beta is a measure of the volatility of a stock when compared to the market as a whole.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.989; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: only saturated-blue full-field = section change (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: one of 4 full-field states
+- **reconstruction_requirement**: original definition card (fictional publisher), roller-coaster metaphor drawing original
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S017.0  ·  10.0 s  ·  f6187–f6486 (300 frames)  ·  pts 206.2667–216.2333
+- **shot_id**: SH036
+- **frame_refs**: entry f6187 viewed in v2/boundary_sheet_09.jpg; exit f6486 viewed in v2/boundary_sheet_09.jpg; mid f6336 viewed in frames/state_sheet_11.jpg
+- **objects_and_positions**: company wordmark left-centre (x~0.31-0.51,y~0.30-0.45) with a thin arrow and handwritten value text right (x~0.54-0.75,y~0.31-0.40); a small stray dot below (x~0.56,y~0.53) = pre-stroke mark
+- **measured_blobs_norm_bbox**: [[0.186, 0.308, 0.814, 0.511], [0.647, 0.558, 0.673, 0.608]]
+- **pose_expression**: no character in frame (Gag prop alone state); subject is: wordmark then value
+- **art_direction**: Gag prop alone (F10); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.65% of pixels; negative space 97.4%; content centroid [0.41, 0.39]
+- **typography_text**: visible_text: amazon / Beta: 1.33 | third-party wordmark; handwritten ~5% value text
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.974], ["#20201f", 0.016]]; max contrast vs bg 20.1:1
+- **hierarchy_focal**: wordmark then value
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 300 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6187-6187 (206.2667 s)
+- **exit_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f6487-6487 (216.2667 s)
+- **story_purpose**: worked example: a large company's beta value
+- **narration_asr**: Here's a real example of beta in play. Let's say Amazon has a beta of 1 .33. This is essentially saying Amazon is 33
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.93; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: large wordmark gives instant context (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: stray dot = the start of the next handwritten line
+- **reconstruction_requirement**: replace wordmark with fictional brand; keep dot out of the clean version or use as cue
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S017.1  ·  3.6 s  ·  f6487–f6594 (108 frames)  ·  pts 216.2667–219.8333
+- **shot_id**: SH036
+- **frame_refs**: entry f6487 viewed in v2/boundary_sheet_09.jpg; exit f6594 viewed in v2/boundary_sheet_09.jpg; mid f6540 viewed in frames/state_sheet_11.jpg
+- **objects_and_positions**: S017.0 + second handwritten line below (x~0.45? y~0.50-0.62): percent claim 'more volatile'
+- **measured_blobs_norm_bbox**: [[0.186, 0.308, 0.814, 0.511], [0.211, 0.55, 0.748, 0.689]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: the second handwritten line under the wordmark/value pair
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.56% of pixels; negative space 96.4%; content centroid [0.424, 0.448]
+- **typography_text**: visible_text: amazon / Beta: 1.33 / 33% More Volatile | handwritten ~6% height
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.965], ["#212120", 0.018], ["#050505", 0.007], ["#c0bcb3", 0.004]]; max contrast vs bg 20.0:1
+- **hierarchy_focal**: the second handwritten line under the wordmark/value pair
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 108 frames; no in-state motion
+- **entry_transition**: ADDITIVE_ELEMENT_ENTRY (existing content unchanged) at f6487-6487 (216.2667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6595-6595 (219.8667 s)
+- **story_purpose**: translate the number into plain language
+- **narration_asr**: % more volatile than the overall market.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.983; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: plain-language gloss reduces cognitive load (H2)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same handwriting as S017.0
+- **reconstruction_requirement**: handwritten line layer
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S017.2  ·  10.8667 s  ·  f6595–f6920 (326 frames)  ·  pts 219.8667–230.7
+- **shot_id**: SH037
+- **frame_refs**: entry f6595 viewed in v2/boundary_sheet_09.jpg; exit f6920 viewed in v2/boundary_sheet_10.jpg; mid f6757 viewed in frames/state_sheet_11.jpg
+- **objects_and_positions**: spreadsheet-style screenshot centre-left (x~0.17-0.33,y~0.12-0.88): two cases (market up 2%, down 2%), a beta row, results 2.66% and -2.66% with formulas; header row dark
+- **measured_blobs_norm_bbox**: [[0.248, 0.136, 0.752, 0.919], [0.484, 0.756, 0.638, 0.858], [0.489, 0.378, 0.619, 0.481], [0.506, 0.628, 0.556, 0.692], [0.512, 0.253, 0.556, 0.314]]
+- **pose_expression**: no character in frame (Evidence/UI card state); subject is: result cells
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 9.26% of pixels; negative space 90.7%; content centroid [0.428, 0.43]
+- **typography_text**: visible_text: S&P 500 / Increases by / 2% / Amazon / Beta / 1.33 / Expected Price Move / 2.66% / =B5*B2 / S&P 500 / Decreases by / -2% / Expected Price Move / -2.66% / =B11*B14 | UI mono/sans ~1.4% height; numerals legible (OBSERVED), formulas read as =B5*B2 and =B11*B14
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.903], ["#171717", 0.041], ["#000001", 0.019], ["#cececd", 0.016], ["#4b4c4c", 0.012]]; max contrast vs bg 20.6:1
+- **hierarchy_focal**: result cells
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 326 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6595-6595 (219.8667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6921-6921 (230.7333 s)
+- **story_purpose**: show the arithmetic of beta symmetrically
+- **narration_asr**: So if the markets rise 2%, Amazon is expected to rise 2 .66%. And then if the markets fall 2%, Amazon is expected to fall 2 .66%. So
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.97; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: dense table, 10.8 s dwell (longest card), relies on voice (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: table scale ~28% width; black separator row
+- **reconstruction_requirement**: original spreadsheet screenshot with correct numbers; cell highlighting optional
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S017.3  ·  1.3667 s  ·  f6921–f6961 (41 frames)  ·  pts 230.7333–232.0667
+- **shot_id**: SH038
+- **frame_refs**: entry f6921 viewed in v2/boundary_sheet_10.jpg; exit f6961 viewed in v2/boundary_sheet_10.jpg; mid f6941 viewed in frames/state_sheet_11.jpg
+- **objects_and_positions**: question centred (x~0.28-0.57,y~0.50)
+- **measured_blobs_norm_bbox**: [[0.308, 0.425, 0.692, 0.519]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: question
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 0.61% of pixels; negative space 99.4%; content centroid [0.503, 0.469]
+- **typography_text**: visible_text: So, why does this matter? | rounded sans ~3.5%
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.993]]; max contrast vs bg 19.6:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 41 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6921-6921 (230.7333 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6962-6962 (232.1 s)
+- **story_purpose**: section pivot: why it matters
+- **narration_asr**: why does this matter?
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.995; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: question header (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same template as S015.0 and S003.0 (single centred question line)
+- **reconstruction_requirement**: text layer only: one centred line, baseline y~0.50, enters on the cut frame
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S017.4  ·  3.5667 s  ·  f6962–f7068 (107 frames)  ·  pts 232.1–235.6333
+- **shot_id**: SH039
+- **frame_refs**: entry f6962 viewed in v2/boundary_sheet_10.jpg; exit f7068 viewed in v2/boundary_sheet_10.jpg; mid f7015 viewed in frames/state_sheet_11.jpg
+- **objects_and_positions**: LEAD crouched left (x~0.13-0.27) with shout; jagged chart doodle and letter B right (x~0.43-0.55)
+- **measured_blobs_norm_bbox**: [[0.27, 0.297, 0.541, 0.761], [0.558, 0.242, 0.719, 0.436], [0.595, 0.464, 0.683, 0.706]]
+- **pose_expression**: crouch, happy
+- **art_direction**: Pose + prop (F2); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 3.51% of pixels; negative space 96.5%; content centroid [0.423, 0.452]
+- **typography_text**: visible_text: Yes! Yes! Yes! | same as S013.0
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.964], ["#f2d3b9", 0.017], ["#030202", 0.008], ["#222121", 0.004]]; max contrast vs bg 20.3:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 107 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f6962-6962 (232.1 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7069-7069 (235.6667 s)
+- **story_purpose**: callback: the answer symbol again
+- **narration_asr**: Because when the market is up, a high beta portfolio,
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.993; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: repetition cements the concept (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: exact reuse of S013.0 composition
+- **reconstruction_requirement**: reuse S013.0
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S017.5  ·  3.0333 s  ·  f7069–f7159 (91 frames)  ·  pts 235.6667–238.6667
+- **shot_id**: SH039
+- **frame_refs**: entry f7069 viewed in v2/boundary_sheet_10.jpg; exit f7159 viewed in v2/boundary_sheet_10.jpg; mid f7114 viewed in frames/state_sheet_12.jpg
+- **objects_and_positions**: LEAD small lower-right (x~0.50-0.57,y~0.55-1.0) with name tag; empty elsewhere
+- **measured_blobs_norm_bbox**: [[0.489, 0.481, 0.7, 1.0]]
+- **pose_expression**: grin, arms out
+- **art_direction**: Intro/pose-on-canvas (F1); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 2.77% of pixels; negative space 97.2%; content centroid [0.61, 0.71]
+- **typography_text**: visible_text: Dave | tag ~3%
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.973], ["#f4d3b8", 0.018], ["#040202", 0.006]]; max contrast vs bg 20.3:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 91 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7069-7069 (235.6667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7160-7160 (238.7 s)
+- **story_purpose**: reset to the opening pose before the final contrast
+- **narration_asr**: aka a retail investor portfolio, will
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.901; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: echo of S001.0 (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: exact reuse of S001.0 art at slightly different offset
+- **reconstruction_requirement**: reuse S001.0 asset
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S017.6  ·  2.4333 s  ·  f7160–f7232 (73 frames)  ·  pts 238.7–241.1
+- **shot_id**: SH039
+- **frame_refs**: entry f7160 viewed in v2/boundary_sheet_10.jpg; exit f7232 viewed in v2/boundary_sheet_10.jpg; mid f7196 viewed in frames/state_sheet_12.jpg
+- **objects_and_positions**: LEAD very large left (x~0.05-0.40,y~0.00-1.0), long label top (x~0.12-0.45,y~0.00-0.08)
+- **measured_blobs_norm_bbox**: [[0.097, 0.006, 0.688, 0.994]]
+- **pose_expression**: smug, hands on hips
+- **art_direction**: Intro/pose-on-canvas (F1); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 6.3% of pixels; negative space 93.7%; content centroid [0.224, 0.399]
+- **typography_text**: visible_text: Dave 'the outperformer' | same label as S005.7
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.936], ["#f4d3b6", 0.04], ["#050303", 0.015]]; max contrast vs bg 20.1:1
+- **hierarchy_focal**: large face + label
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 73 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7160-7160 (238.7 s)
+- **exit_transition**: BLACK_DIP_2F_THEN_REPLACE at f7233-7235 (241.1333 s)
+- **story_purpose**: emphasise the label before the bull/bear scenes
+- **narration_asr**: outperform versus the market. And
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.82; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: scale jump signals a payoff coming (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: exact reuse of S005.7
+- **reconstruction_requirement**: reuse S005.7
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S018.0  ·  5.6667 s  ·  f7235–f7404 (170 frames)  ·  pts 241.2–246.8333
+- **shot_id**: SH040
+- **frame_refs**: entry f7235 viewed in v2/boundary_sheet_10.jpg; exit f7404 viewed in v2/boundary_sheet_10.jpg; mid f7319 viewed in frames/state_sheet_12.jpg
+- **objects_and_positions**: full-bleed beach restaurant scene: caption top-left (x~0.04-0.30,y~0.05-0.12); sign 'name' centre-top (x~0.45-0.55,y~0.15-0.20); LEAD big centre (x~0.43-0.57,y~0.20-0.75) at a table with a sushi plate lower centre (x~0.42-0.55,y~0.80-0.92); other diners left and right; sea band behind
+- **measured_blobs_norm_bbox**: [[0.0, 0.214, 1.0, 1.0], [0.047, 0.083, 0.456, 0.208], [0.83, 0.825, 1.0, 1.0], [0.0, 0.825, 0.166, 1.0]]
+- **pose_expression**: LEAD huge grin, arms out, seated
+- **art_direction**: Full-bleed scene (F9); flat marker-doodle on #e0bc9b field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 45.4% of pixels; negative space 54.6%; content centroid [0.495, 0.603]
+- **typography_text**: visible_text: When Market is ↑ / NOBU MALIBU | handwritten caption '↑' + boxed sign in typed caps
+- **colors**: bg #e0bc9b; palette [["#deba9a", 0.322], ["#efd2b3", 0.228], ["#ddf1fb", 0.17], ["#b28867", 0.13], ["#161210", 0.094]]; max contrast vs bg 10.5:1
+- **hierarchy_focal**: LEAD at centre of symmetric tableau
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 170 frames; no in-state motion
+- **entry_transition**: BLACK_DIP_2F_THEN_REPLACE at f7233-7235 (241.1333 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7405-7405 (246.8667 s)
+- **story_purpose**: bull-market payoff: celebratory dinner
+- **narration_asr**: now you got Dave, who's looking to book a table at Nobu to celebrate his genius. But when
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.937; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: warm tan palette + symmetrical frame = reward image (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: LEAD drawn in same style but integrated into a drawn background; entered through a 2-frame black dip (f7233-7234)
+- **reconstruction_requirement**: original drawn scene; colour tokens #DEBA9B, #EFD2B2, #CBE9F9; entry through 2-frame #000000
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S019.0  ·  5.4 s  ·  f7405–f7566 (162 frames)  ·  pts 246.8667–252.2333
+- **shot_id**: SH041
+- **frame_refs**: entry f7405 viewed in v2/boundary_sheet_10.jpg; exit f7566 viewed in v2/boundary_sheet_11.jpg; mid f7485 viewed in frames/state_sheet_12.jpg
+- **objects_and_positions**: LEAD scowling left (x~0.17-0.33) with complaint speech; FOIL right (x~0.50-0.62) worried shrug
+- **measured_blobs_norm_bbox**: [[0.566, 0.389, 0.742, 0.839], [0.258, 0.344, 0.55, 0.792]]
+- **pose_expression**: LEAD scowl; FOIL worried shrug
+- **art_direction**: Intro/pose-on-canvas (F1); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 4.85% of pixels; negative space 95.2%; content centroid [0.528, 0.519]
+- **typography_text**: visible_text: The Market is Rigged!!! | same micro speech as S009.14
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.952], ["#f3d5b9", 0.025], ["#030202", 0.016]]; max contrast vs bg 20.3:1
+- **hierarchy_focal**: speech then FOIL
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 162 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7405-7405 (246.8667 s)
+- **exit_transition**: PARTIAL_REPLACE (some content persists) at f7567-7567 (252.2667 s)
+- **story_purpose**: callback of the complaint pair (after the good-market scene, the bad-market setup)
+- **narration_asr**: the market is down, a high beta portfolio is feeling the effects of gravity.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.987; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: exact repeat = joke payoff (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: exact reuse of S009.14
+- **reconstruction_requirement**: reuse S009.14
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S020.0  ·  2.9333 s  ·  f7567–f7654 (88 frames)  ·  pts 252.2667–255.1667
+- **shot_id**: SH042
+- **frame_refs**: entry f7567 viewed in v2/boundary_sheet_11.jpg; exit f7654 viewed in v2/boundary_sheet_11.jpg; mid f7610 viewed in frames/state_sheet_12.jpg
+- **objects_and_positions**: full-bleed beige counter scene: caption top-left (x~0.04-0.30,y~0.05-0.12); dark rounded sign with red emblem and wordmark centre-top (x~0.37-0.56,y~0.10-0.30); LEAD frowning behind counter centre (x~0.48-0.55,y~0.35-0.68); four head silhouettes of customers in foreground (x~0.00-1.0,y~0.62-1.0); grey counter lower third
+- **measured_blobs_norm_bbox**: [[0.0, 0.083, 1.0, 1.0]]
+- **pose_expression**: LEAD frown, arms down, behind counter
+- **art_direction**: Full-bleed scene (F9); flat marker-doodle on #e1d6b5 field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 30.4% of pixels; negative space 69.6%; content centroid [0.488, 0.731]
+- **typography_text**: visible_text: When Market is ↓ / PEI WEI | handwritten caption '↓'; third-party chain logo
+- **colors**: bg #e1d6b5; palette [["#e2d4b4", 0.7], ["#5c5b5b", 0.194], ["#232320", 0.055], ["#050202", 0.035], ["#860b22", 0.01]]; max contrast vs bg 14.2:1
+- **hierarchy_focal**: LEAD under the sign
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 88 frames; no in-state motion
+- **entry_transition**: PARTIAL_REPLACE (some content persists) at f7567-7567 (252.2667 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7655-7655 (255.2 s)
+- **story_purpose**: bear-market payoff: LEAD works a counter
+- **narration_asr**: And now Dave is looking to see if payway is hiring.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.956; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: muted beige + grey = negative mirror of S018 (H1)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: mirrors S018 composition (centre sign, centre LEAD)
+- **reconstruction_requirement**: original drawn scene; colour tokens #E1D4B3 (field), #5D5C5B (counter); replace logo
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S021.0  ·  5.0 s  ·  f7655–f7804 (150 frames)  ·  pts 255.2–260.1667
+- **shot_id**: SH043
+- **frame_refs**: entry f7655 viewed in v2/boundary_sheet_11.jpg; exit f7804 viewed in v2/boundary_sheet_11.jpg; mid f7729 viewed in frames/state_sheet_12.jpg
+- **objects_and_positions**: LEAD small left (x~0.22-0.37) hands on hips; equals sign (x~0.58); portrait photo right (x~0.62-0.82,y~0.30-0.60) of an older man speaking into a microphone against dark blue; caption top-left (x~0.04-0.25,y~0.05-0.12)
+- **measured_blobs_norm_bbox**: [[0.478, 0.358, 0.788, 0.706], [0.214, 0.294, 0.35, 0.8], [0.064, 0.128, 0.475, 0.256], [0.403, 0.503, 0.445, 0.567]]
+- **pose_expression**: LEAD smug: hands-on-hips pose with a closed-mouth smile (same pose family as S001.3/S005.7)
+- **art_direction**: Photo insert (F6); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 11.72% of pixels; negative space 88.3%; content centroid [0.545, 0.496]
+- **typography_text**: visible_text: When Market is ↑ / = | handwritten caption '↑'; equals sign marker
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.883], ["#090f2a", 0.067], ["#efd1ba", 0.017], ["#a27a6a", 0.013], ["#baa299", 0.01]]; max contrast vs bg 18.5:1
+- **hierarchy_focal**: equals sign pairs LEAD with the portrait
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 150 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7655-7655 (255.2 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7805-7805 (260.2 s)
+- **story_purpose**: bull-market: LEAD = famous macro investor (named in the voice; the frame carries no name caption — subject not identified here)
+- **narration_asr**: In a bull market, Dave's high beta portfolio makes him the next George Soros. And
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.992; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: equals-sign comparison is a fast logic cue (H5)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same layout in S021.1
+- **reconstruction_requirement**: original portrait illustration; equals sign layer
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S021.1  ·  6.2 s  ·  f7805–f7990 (186 frames)  ·  pts 260.2–266.3667
+- **shot_id**: SH044
+- **frame_refs**: entry f7805 viewed in v2/boundary_sheet_11.jpg; exit f7990 viewed in v2/boundary_sheet_11.jpg; mid f7897 viewed in frames/state_sheet_13.jpg
+- **objects_and_positions**: LEAD scowling left (x~0.22-0.37); equals sign (x~0.58); forum-post screenshot right (x~0.62-0.82,y~0.28-0.62) with small text; caption top-left
+- **measured_blobs_norm_bbox**: [[0.477, 0.292, 0.767, 0.764], [0.228, 0.275, 0.364, 0.781], [0.083, 0.103, 0.472, 0.228], [0.411, 0.481, 0.453, 0.544]]
+- **pose_expression**: LEAD angry brow, hands on hips
+- **art_direction**: Evidence/UI card (F5); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 4.81% of pixels; negative space 95.2%; content centroid [0.417, 0.428]
+- **typography_text**: visible_text: When Market is ↓ / = / Looking to marry someone with $1m+ of short-term capital gains (LA California) for tax savings (I have $1m+ in losses) and split the savings […] | forum text ~0.9% height — body UNVERIFIED; headline legible only partially
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.942], ["#d8d8da", 0.015], ["#f5d3b8", 0.014], ["#aeaeaf", 0.014], ["#0b0a09", 0.01]]; max contrast vs bg 19.4:1
+- **hierarchy_focal**: post screenshot headline
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 186 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7805-7805 (260.2 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7991-7991 (266.4 s)
+- **story_purpose**: bear-market: LEAD = the author of a desperate post
+- **narration_asr**: in a bear market, Dave's high beta portfolio makes him the next trending post on Wall Street bets. So
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.963; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: mirror of S021.0 (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: exact mirror layout of S021.0 with arrow flipped
+- **reconstruction_requirement**: original mock-up post; text fictional
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S021.2  ·  3.7333 s  ·  f7991–f8102 (112 frames)  ·  pts 266.4–270.1
+- **shot_id**: SH045
+- **frame_refs**: entry f7991 viewed in v2/boundary_sheet_11.jpg; exit f8102 viewed in v2/boundary_sheet_11.jpg; mid f8046 viewed in frames/state_sheet_13.jpg
+- **objects_and_positions**: orange coin blob alone centre (x~0.37-0.58,y~0.33-0.68)
+- **measured_blobs_norm_bbox**: [[0.347, 0.3, 0.653, 0.697]]
+- **pose_expression**: no character in frame (Gag prop alone state); subject is: blob
+- **art_direction**: Gag prop alone (F10); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 8.27% of pixels; negative space 91.7%; content centroid [0.506, 0.496]
+- **typography_text**: visible_text: FartCoin / The Future of Crypto | cream lettering ~3% in the blob
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.918], ["#dc8a05", 0.066], ["#0a0705", 0.008]]; max contrast vs bg 19.7:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 112 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f7991-7991 (266.4 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f8103-8103 (270.1333 s)
+- **story_purpose**: callback to the opening meme coin
+- **narration_asr**: next time your friend brags about their 10 -bagger meme coin, just remember,
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.889; words<0.5 prob: 1
+- **attention_hypothesis**: INFERRED: closing callback (H3)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: exact reuse of the S001.5 blob
+- **reconstruction_requirement**: reuse S001.5 asset
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S021.3  ·  2.2333 s  ·  f8103–f8169 (67 frames)  ·  pts 270.1333–272.3333
+- **shot_id**: SH046
+- **frame_refs**: entry f8103 viewed in v2/boundary_sheet_11.jpg; exit f8169 viewed in v2/boundary_sheet_11.jpg; mid f8136 viewed in frames/state_sheet_13.jpg
+- **objects_and_positions**: closing line centred (x~0.28-0.56,y~0.50)
+- **measured_blobs_norm_bbox**: [[0.25, 0.442, 0.75, 0.525]]
+- **pose_expression**: no character in frame (Text-only card state); subject is: line
+- **art_direction**: Text-only card (F4); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 0.84% of pixels; negative space 99.2%; content centroid [0.5, 0.486]
+- **typography_text**: visible_text: Everone's a Genius in a Bull Market | rounded sans ~3.5%; source contains a misspelling (preserve for forensics, correct in original production)
+- **colors**: bg #fdfdfd; palette [["#fcfdfc", 0.991]]; max contrast vs bg 19.8:1
+- **hierarchy_focal**: single line of text is the whole hierarchy
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 67 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f8103-8103 (270.1333 s)
+- **exit_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f8170-8170 (272.3667 s)
+- **story_purpose**: takeaway line
+- **narration_asr**: everyone's a genius in a bull market.
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob 0.971; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: isolated final thought (H2)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: same template as S003.0 and other single-line text cards
+- **reconstruction_requirement**: text; do not copy the typo
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+
+## S021.4  ·  5.6 s  ·  f8170–f8337 (168 frames)  ·  pts 272.3667–277.9333
+- **shot_id**: SH047
+- **frame_refs**: entry f8170 viewed in v2/boundary_sheet_11.jpg; exit f8337 viewed in frames/first_last.jpg; mid f8253 viewed in frames/state_sheet_13.jpg
+- **objects_and_positions**: title lines top-centre (x~0.31-0.69,y~0.07-0.20); handwritten note left (x~0.05-0.34,y~0.74-0.80) with arrow to three round social icons (x~0.07-0.20,y~0.82-0.88); LEAD right (x~0.66-0.75,y~0.62-0.92) grinning, pressing a red subscribe button (x~0.64-0.81,y~0.86-0.95)
+- **measured_blobs_norm_bbox**: [[0.083, 0.467, 0.462, 0.85], [0.628, 0.439, 0.889, 0.861], [0.308, 0.117, 0.694, 0.219], [0.488, 0.225, 0.683, 0.339], [0.316, 0.225, 0.483, 0.336]]
+- **pose_expression**: LEAD grin, leaning on the button
+- **art_direction**: End card (F11); flat marker-doodle on #fdfdfd field; third-party/UI material as rectangular cut-outs where present
+- **composition_negative_space**: non-background content 7.04% of pixels; negative space 93.0%; content centroid [0.577, 0.571]
+- **typography_text**: visible_text: Subscribe for more / Casual Finance / you can't find me on any of these / so you'll never see my videos again, unless you subscribe / SUBSCRIBE | handwritten lines ~1.5% + bold rounded title ~4.5%; red button #E62B2C-like
+- **colors**: bg #fdfdfd; palette [["#fcfcfc", 0.929], ["#0d0b0b", 0.021], ["#decabd", 0.021], ["#e81c1f", 0.015], ["#766672", 0.009]]; max contrast vs bg 19.2:1
+- **hierarchy_focal**: title then character+button
+- **camera_framing**: static frontal 2D; no camera motion (MEASURED)
+- **motion_or_hold**: static hold 168 frames; no in-state motion
+- **entry_transition**: FULL_COMPOSITION_REPLACE (hard cut) at f8170-8170 (272.3667 s)
+- **exit_transition**: end of video (f8337)
+- **story_purpose**: call to action
+- **narration_asr**: (no ASR words starting in interval)
+- **asr_status**: ASR_UNCERTIFIED small.en; mean word prob None; words<0.5 prob: 0
+- **attention_hypothesis**: INFERRED: last state held ~5.6 s for the end card (H4)
+- **retention_claim**: NONE (no retention data; hypotheses only)
+- **continuity**: final frames 8336-8337 identical (duplicate last frame)
+- **reconstruction_requirement**: end-card layers; held to the end
+- **verification_status**: ENTRY/EXIT/MID FRAMES VIEWED; description OBSERVED; purpose/attention INFERRED; small-text items flagged UNVERIFIED in typography_text where marked
+

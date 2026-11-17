@@ -1,0 +1,1040 @@
+[
+ {
+  "i": 1,
+  "Video_ID": "5SoeGK7V-1M",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "DOCTOR",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 10,
+    "specificity": 10,
+    "curiosity": 12,
+    "promise_strength": 7,
+    "credibility": 11,
+    "audience_fit": 8,
+    "concision": 2
+   },
+   "total": 60,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 2,
+  "Video_ID": "IBEuMbgO50M",
+  "blind": {
+   "archetype": "DOCTOR_WARNS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "CARDIOLOGIST",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 13,
+    "specificity": 11,
+    "curiosity": 16,
+    "promise_strength": 10,
+    "credibility": 7,
+    "audience_fit": 8,
+    "concision": 3
+   },
+   "total": 68,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Topic",
+    "current": "0",
+    "proposed": "1",
+    "reason": "Title makes a disease-from-nails symptom claim; Health_Topic and empty Health_Claim_Type contradict the analyst MISLEADING_RISK flag."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "WARNING",
+    "proposed": "DOCTOR_WARNS",
+    "reason": "'Cardiologist Warns:' is coded DOCTOR_WARNS for 'Doctor Warns' in item 5 and 3; inconsistent; SYMPTOM/SIGNS also missing from Title_Archetypes_All."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "orientation",
+    "current": "SEARCH",
+    "proposed": "BROWSE",
+    "reason": "'NAILS Look Like THIS' is a curiosity-gap hook; identical-frame item 6 is BROWSE."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "NAILS;THIS;May be",
+    "proposed": "THIS;May be",
+    "reason": "NAILS is the topic noun; cutting it removes the subject of the title."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Soften: '4 Nail Changes After 60 Worth Showing Your Doctor'",
+    "proposed": "a wording different from item 6",
+    "reason": "Near-duplicate of item 6's improvement ('4 Nail Changes After 60 That Are Worth a Doctor Visit'); protocol requires non-repeated improvements."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 3,
+  "Video_ID": "CSf4uoBQPWQ",
+  "blind": {
+   "archetype": "SECRET",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 11,
+    "specificity": 12,
+    "curiosity": 14,
+    "promise_strength": 8,
+    "credibility": 8,
+    "audience_fit": 8,
+    "concision": 2
+   },
+   "total": 63,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Secret_Frame",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'Doctors Won't Tell You' is a hidden-information/secret hook; archetype should be SECRET rather than DOCTOR_WARNS."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Authority_Cue",
+    "current": "DOCTOR",
+    "proposed": "NONE",
+    "reason": "Doctors are the concealing antagonist here, not an authority being cited."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "mechanism_reliance",
+    "current": "FEAR;AUTHORITY;CURIOSITY",
+    "proposed": "FEAR;CURIOSITY;SPECIFICITY",
+    "reason": "No authority is invoked in support of the claim; four named drugs supply specificity."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 4,
+  "Video_ID": "oYMK-ISuXhI",
+  "blind": {
+   "archetype": "DOCTOR_WARNS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "CARDIOLOGIST",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 9,
+    "curiosity": 14,
+    "promise_strength": 8,
+    "credibility": 8,
+    "audience_fit": 8,
+    "concision": 3
+   },
+   "total": 64,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "WARNING",
+    "proposed": "DOCTOR_WARNS",
+    "reason": "Same 'Cardiologist Warns' pattern coded DOCTOR_WARNS elsewhere; inconsistent."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "orientation",
+    "current": "SEARCH",
+    "proposed": "BROWSE",
+    "reason": "Curiosity-gap 'NAILS Look Like THIS' title is browse-oriented."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "NAILS;THIS;Cardiologist Warns",
+    "proposed": "THIS;Cardiologist Warns",
+    "reason": "NAILS is the topic noun and should not be listed as cuttable."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 5,
+  "Video_ID": "3oLAFgelVRg",
+  "blind": {
+   "archetype": "DOCTOR_WARNS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "DOCTOR",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 11,
+    "curiosity": 14,
+    "promise_strength": 10,
+    "credibility": 6,
+    "audience_fit": 8,
+    "concision": 3
+   },
+   "total": 66,
+   "overpromise_risk": "HIGH",
+   "medical_flag": "MISLEADING_RISK",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "core_topic",
+    "current": "Japanese centenarian doctor warning",
+    "proposed": "Morning habits raising stroke risk",
+    "reason": "Topic of the title is morning habits and stroke risk; the doctor is the authority cue."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 6,
+  "Video_ID": "95kkamSxHr8",
+  "blind": {
+   "archetype": "SIGNS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "EXPERT",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 12,
+    "specificity": 11,
+    "curiosity": 15,
+    "promise_strength": 10,
+    "credibility": 8,
+    "audience_fit": 8,
+    "concision": 3
+   },
+   "total": 67,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Topic",
+    "current": "0",
+    "proposed": "1",
+    "reason": "Disease-from-symptom claim ('Hiding 4 Diseases'); Health_Topic, Fear_Frame, Warning_Frame and Health_Claim_Type all unset despite analyst MISLEADING_RISK."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "AFTER_60",
+    "proposed": "SIGNS",
+    "reason": "Title is a symptom-signs frame; AFTER_60 is only the age qualifier; SIGNS/SYMPTOM absent from Title_Archetypes_All."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Hedge it: \"4 Nail Changes After 60 That Are Worth a Doctor Visit\"",
+    "proposed": "a different wording",
+    "reason": "Near-duplicate of item 2's improvement text."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 7,
+  "Video_ID": "2FI17OW6awk",
+  "blind": {
+   "archetype": "SECRET",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "EXPERT",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "Y",
+   "scores": {
+    "clarity": 12,
+    "specificity": 11,
+    "curiosity": 15,
+    "promise_strength": 10,
+    "credibility": 8,
+    "audience_fit": 7,
+    "concision": 3
+   },
+   "total": 66,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Topic",
+    "current": "0",
+    "proposed": "1",
+    "reason": "Straining/laxatives/constipation remedy is a health claim; Health_Topic and Health_Claim_Type left empty."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 8,
+  "Video_ID": "nPqrcrxdrdE",
+  "blind": {
+   "archetype": "SIGNS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "DOCTOR",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "Y",
+   "scores": {
+    "clarity": 13,
+    "specificity": 10,
+    "curiosity": 13,
+    "promise_strength": 9,
+    "credibility": 9,
+    "audience_fit": 8,
+    "concision": 2
+   },
+   "total": 64,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Urgency_Frame",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'Never Ignore' is an urgency/imperative frame; analyst lists FEAR mechanism but Fear_Frame also 0."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Claim_Type",
+    "current": "SYMPTOM_DIAGNOSIS|EXERCISE_CLAIM",
+    "proposed": "SYMPTOM_DIAGNOSIS",
+    "reason": "Walking signs are gait warning signs, not an exercise claim."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 9,
+  "Video_ID": "JcXpCyPc2Xw",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 17,
+    "specificity": 8,
+    "curiosity": 15,
+    "promise_strength": 8,
+    "credibility": 13,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 72,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 10,
+  "Video_ID": "etM0sm23fpg",
+  "blind": {
+   "archetype": "OTHER",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 10,
+    "specificity": 5,
+    "curiosity": 7,
+    "promise_strength": 6,
+    "credibility": 12,
+    "audience_fit": 5,
+    "concision": 5
+   },
+   "total": 50,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 11,
+  "Video_ID": "ggFpIjvXQi4",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 11,
+    "curiosity": 14,
+    "promise_strength": 10,
+    "credibility": 12,
+    "audience_fit": 8,
+    "concision": 5
+   },
+   "total": 76,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Question_Form",
+    "current": "1",
+    "proposed": "0",
+    "reason": "Title has no question mark and is a declarative 'How ... Beat' clause."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "QUESTION",
+    "proposed": "EXPLANATION",
+    "reason": "Not a question; explanation/case-study of BYD vs Tesla."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 12,
+  "Video_ID": "__oYeEwDDsI",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 17,
+    "specificity": 5,
+    "curiosity": 11,
+    "promise_strength": 8,
+    "credibility": 13,
+    "audience_fit": 5,
+    "concision": 5
+   },
+   "total": 64,
+   "overpromise_risk": "LOW",
+   "medical_flag": "MEDICAL_PACKAGING_SAFE",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "medical_title_flag",
+    "current": "NOT_HEALTH",
+    "proposed": "MEDICAL_PACKAGING_SAFE",
+    "reason": "Snoring is a health topic; item 16 (sleepwalking) is MEDICAL_PACKAGING_SAFE, so flagging is inconsistent."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 13,
+  "Video_ID": "SLd4hnmeW_g",
+  "blind": {
+   "archetype": "OTHER",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 6,
+    "specificity": 3,
+    "curiosity": 9,
+    "promise_strength": 5,
+    "credibility": 11,
+    "audience_fit": 4,
+    "concision": 5
+   },
+   "total": 43,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 14,
+  "Video_ID": "rVMUaWoW0G0",
+  "blind": {
+   "archetype": "POV",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 13,
+    "specificity": 10,
+    "curiosity": 13,
+    "promise_strength": 9,
+    "credibility": 12,
+    "audience_fit": 7,
+    "concision": 5
+   },
+   "total": 69,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "OTHER",
+    "proposed": "POV",
+    "reason": "'Your Life as a ...' is a second-person POV frame; Title_Archetypes_All empty."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "exact_promise",
+    "current": "Experience life as a Nepali child worshipped as a goddess",
+    "proposed": "Experience life as a Kumari goddess",
+    "reason": "'Nepali child' is outside knowledge not in the title; protocol says judge only the title."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "specificity_score",
+    "current": "4",
+    "proposed": "7",
+    "reason": "'Kumari Goddess' is a named, concrete, uncommon entity; 4/15 is under 30% without a visible defect (blind total gap 13)."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 15,
+  "Video_ID": "TIcDyhS_4yY",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 8,
+    "curiosity": 14,
+    "promise_strength": 8,
+    "credibility": 13,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 70,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 16,
+  "Video_ID": "K2mlPzlcPqI",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 17,
+    "specificity": 5,
+    "curiosity": 11,
+    "promise_strength": 8,
+    "credibility": 13,
+    "audience_fit": 5,
+    "concision": 5
+   },
+   "total": 64,
+   "overpromise_risk": "LOW",
+   "medical_flag": "MEDICAL_PACKAGING_SAFE",
+   "orientation": "SEARCH"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 17,
+  "Video_ID": "b-dam2LdHzM",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 10,
+    "curiosity": 6,
+    "promise_strength": 8,
+    "credibility": 13,
+    "audience_fit": 9,
+    "concision": 3
+   },
+   "total": 64,
+   "overpromise_risk": "LOW",
+   "medical_flag": "MEDICAL_PACKAGING_SAFE",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Claim_Type",
+    "current": "INSTANT_CURE",
+    "proposed": "",
+    "reason": "'Instant' modifies oatmeal; no cure claim exists; this false positive also inflates Overpromise_Risk_Proxy to 3."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "curiosity_score",
+    "current": "9",
+    "proposed": "6",
+    "reason": "Informational 'should know' title with no open loop; 9/20 is generous."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 18,
+  "Video_ID": "k-3BY-naQ0M",
+  "blind": {
+   "archetype": "AVOID",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 12,
+    "specificity": 6,
+    "curiosity": 10,
+    "promise_strength": 7,
+    "credibility": 8,
+    "audience_fit": 6,
+    "concision": 4
+   },
+   "total": 53,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "OTHER",
+    "proposed": "AVOID",
+    "reason": "'Say No to These Medications' is an avoid/stop frame; Title_Archetypes_All empty and Warning/Negative frames 0."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 19,
+  "Video_ID": "asdCF2RSC44",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 10,
+    "curiosity": 5,
+    "promise_strength": 7,
+    "credibility": 14,
+    "audience_fit": 9,
+    "concision": 3
+   },
+   "total": 63,
+   "overpromise_risk": "LOW",
+   "medical_flag": "MEDICAL_PACKAGING_SAFE",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Topic",
+    "current": "0",
+    "proposed": "1",
+    "reason": "COVID/flu vaccines is a health topic; Health_Topic 0 while item 17 gets 1."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "OTHER",
+    "proposed": "EXPLANATION",
+    "reason": "'What Older Adults Need to Know' is an explainer frame."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 20,
+  "Video_ID": "gV4jWkRo4Lg",
+  "blind": {
+   "archetype": "HOW_TO",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 9,
+    "curiosity": 8,
+    "promise_strength": 8,
+    "credibility": 11,
+    "audience_fit": 9,
+    "concision": 2
+   },
+   "total": 61,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Question_Form",
+    "current": "1",
+    "proposed": "0",
+    "reason": "No question mark; declarative how-to title."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "FOODS",
+    "proposed": "HOW_TO",
+    "reason": "'How Seniors Should Drink Water...' is HOW_TO; HOW_TO missing from Title_Archetypes_All."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Claim_Type",
+    "current": "REVERSAL|FOOD_CLAIM",
+    "proposed": "FOOD_CLAIM",
+    "reason": "'Support Blood Sugar' is not a reversal claim."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 21,
+  "Video_ID": "ybP8g6xzCIs",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 7,
+    "curiosity": 6,
+    "promise_strength": 7,
+    "credibility": 13,
+    "audience_fit": 5,
+    "concision": 5
+   },
+   "total": 57,
+   "overpromise_risk": "LOW",
+   "medical_flag": "MEDICAL_PACKAGING_SAFE",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Topic",
+    "current": "0",
+    "proposed": "1",
+    "reason": "Ozempic is a medication; analyst flags MEDICAL_PACKAGING_SAFE, so Health_Topic 0 contradicts it."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "mechanism_reliance",
+    "current": "HOPE;NOVELTY",
+    "proposed": "NOVELTY",
+    "reason": "No hope/payoff wording in the title; HOPE is not visible."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 22,
+  "Video_ID": "A0ikBtGKsGE",
+  "blind": {
+   "archetype": "DOCTOR_WARNS",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "CARDIOLOGIST",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 8,
+    "specificity": 4,
+    "curiosity": 15,
+    "promise_strength": 6,
+    "credibility": 6,
+    "audience_fit": 5,
+    "concision": 3
+   },
+   "total": 47,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "WARNING",
+    "proposed": "DOCTOR_WARNS",
+    "reason": "'Cardiologist Warns:' pattern; DOCTOR_WARNS missing from Title_Archetypes_All."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Problem_Solution_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "No solution offered in the title; unnamed risk only."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Cardiologist Warns: Skipping Water Before Coffee Strains Your Heart Each Morning",
+    "proposed": "Cardiologist Warns: 1 Morning Habit Many Seniors Repeat That May Strain the Heart",
+    "reason": "Improvement fabricates an assertive unsupported medical claim, the kind this protocol flags."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 23,
+  "Video_ID": "M1iFdQHrDGo",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 1,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 10,
+    "curiosity": 13,
+    "promise_strength": 9,
+    "credibility": 12,
+    "audience_fit": 8,
+    "concision": 2
+   },
+   "total": 69,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Claim_Type",
+    "current": "REVERSAL",
+    "proposed": "",
+    "reason": "No reversal/cure claim; 'Hidden Causes' is explanatory."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "AFTER_60",
+    "proposed": "QUESTION",
+    "reason": "Title opens with 'Why You Always...'; AFTER_60 is only the age tag; SYMPTOM missing from list."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 24,
+  "Video_ID": "ktfog3MhqJY",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 12,
+    "specificity": 7,
+    "curiosity": 8,
+    "promise_strength": 6,
+    "credibility": 12,
+    "audience_fit": 5,
+    "concision": 3
+   },
+   "total": 53,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 25,
+  "Video_ID": "HEJoPEEndG8",
+  "blind": {
+   "archetype": "SYMPTOM",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 8,
+    "specificity": 4,
+    "curiosity": 15,
+    "promise_strength": 8,
+    "credibility": 4,
+    "audience_fit": 5,
+    "concision": 3
+   },
+   "total": 47,
+   "overpromise_risk": "HIGH",
+   "medical_flag": "MISLEADING_RISK",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Overpromise_Risk_Proxy",
+    "current": "1",
+    "proposed": "3",
+    "reason": "Absolute symptom-to-diagnosis claim scored 1 while 'Instant Oatmeal' scores 3; proxy inverted."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ }
+]

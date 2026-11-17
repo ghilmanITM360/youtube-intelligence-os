@@ -1,0 +1,680 @@
+{
+ "video_id": "08z1JYUQQnM",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "923e79fd29d182358bbeb22cfacf76d683313fc567c91eaf07ab53bbc40163f7",
+ "original_packets": [
+  "NICK_002.json"
+ ],
+ "transcript_chars_read": 16780,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 38,
+    "text": "By the time this red light turns green"
+   },
+   "judgment": "MET",
+   "rationale": "A concrete, repeatable image (red light, TikToks, coffee) converts the national debt into a ticking meter, then snaps to \"nobody in Washington is even pretending to slow it down\"; context lean, stop beat and turn all sit in the first ~400 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 888,
+    "end_char": 989,
+    "text": "So, let me walk you through what\njust imploded, why it matters, and what\nyou can actually do about it"
+   },
+   "judgment": "MET",
+   "rationale": "Clear three-part promise (what, why, what to do) with a striking opening stat ($38.9T, interest above military spending); \"My name is Nick\" lands at ~366 characters, before any padding.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Alarmed cartoon man with hands on cheeks beside bold black IT STARTED... and a rising red line chart on a grid ending in an exploding starburst with burning dollar bills; a black arrow points at the line"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title, thumbnail and opening all stage \"the debt crisis has begun\", but the title says \"imploded\" and the thumbnail shows an explosion, while the script says \"the bomb went off in slow motion\"; implode, explode and slow-motion are three different pictures.",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-INTRO-03",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.6 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1163,
+    "end_char": 1221,
+    "text": "The bomb went off in slow\nmotion across the last 12 months"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The explanatory frame (the fuse, a dated timeline) is delivered quickly, but about 4,000 characters of dated headlines precede the first household figure ($288,000); the over-explanation is of political events, the under-explanation is of how interest cost reaches a household.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3777,
+    "end_char": 3871,
+    "text": "Every one of\nthose headlines individually would have\nbeen ignored. Together, they're the\nbomb."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The \"It Started\" payoff is a stack of unrelated events (rating cut, bill, weak auction, China selling, yield, new Fed chair) presented as a single trigger; the payoff is asserted rather than shown, so the opening promise of a discrete event lands softer than the thumbnail suggests.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-01",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.3 s.1 ChatGPT",
+   "witness": {
+    "kind": "TITLE",
+    "text": "It Started. The US Debt Bomb Just Imploded"
+   },
+   "judgment": "MET",
+   "rationale": "The whole 42-character title sits inside the first 55 characters: topic (US debt) and stakes (bomb) are both present.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "It Started. The US Debt Bomb Just Imploded"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Concept (US debt crisis) matches, but \"just imploded\" implies one recent collapse; the content is a 12-month slow build plus advice, so the curiosity is stronger than the promise.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "It Started. The US Debt Bomb Just Imploded"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "No collapse event occurs; the script itself reframes (\"that's not what happened\") and ends on \"the slow grind is not the end of the world\". The reframing is honest in-video, but a title-only viewer is promised a bigger event.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1137,
+    "end_char": 1162,
+    "text": "That's not what\nhappened."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The loop \"what started?\" is paid by redefining the bomb as a slow 12-month sequence at ~1,100 characters, early; it then reopens as \"how does this end\" and is paid by the four-doors section.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-01",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 1",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13062,
+    "end_char": 13117,
+    "text": "I have a\nmortgage and a 401k and a kid who needs\nbraces"
+   },
+   "judgment": "MET",
+   "rationale": "The pain point (what does sovereign debt mean for my mortgage, retirement and prices) is voiced directly at ~12,900 characters and answered with a mortgage example, Social Security and portfolio positioning; it arrives late, after about 75% of the video.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-VC-02",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15419,
+    "end_char": 15466,
+    "text": "You don't have to be all in to\ntake an umbrella"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The promised \"what you can actually do\" is a portfolio framework (gold 10-15%, 5-7 year Treasuries, I bonds and TIPS, real assets) with a disclaimer; there is no sizing for a household and no cost of being wrong, so the outcome is a posture rather than a plan.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7447,
+    "end_char": 7520,
+    "text": "More and more, ourselves. And that\nshould make you nervous, not relieved."
+   },
+   "judgment": "MET",
+   "rationale": "A real contrarian turn: reduced foreign ownership is usually read as reassuring; the video reads it as fragility. It is argued by analogy (Argentina), not evidence.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5183,
+    "end_char": 5228,
+    "text": "they pay roughly 30,000 in\nfederal income tax"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "A married couple earning $145,000 with two children pays about $10,400 federal income tax (2025 brackets, $31,500 standard deduction, two $2,200 child credits); even with no credits it is $14,800. Twenty percent of $10,400 is about $2,100, not \"about six grand\". The spoken $30,000 is close to total federal taxes once both halves of payroll tax are added (income tax $10,398 + employee FICA $11,092 + employer FICA = about $32,600), so the figure may be a payroll-inclusive total mislabelled as \"income tax\"; on that reading 20% is about $6,500, but the 20% interest share applies to all federal receipts.",
+   "uncertainty": "Arithmetic recomputed; interest-share-of-tax is an average attribution, not a household bill."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13495,
+    "end_char": 13556,
+    "text": "Over\n30 years, a third of a million dollars\nin extra interest"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$450,000 at 6.5% has principal-and-interest of $2,844 against $1,897 at 3%, a $947 gap and $341,000 over 360 payments; the video's own $850 gap (3,400 versus 2,550, which implies about $556 of tax and insurance) gives $306,000. The headline survives, the stated monthly gap does not.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1744,
+    "end_char": 1770,
+    "text": "in peacetime, on a Tuesday"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Moody's announced the downgrade on Friday 16 May 2025 (the date the video gives); \"on a Tuesday\" is wrong.",
+   "uncertainty": "Calendar computed; downgrade date from the video itself."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9245,
+    "end_char": 9285,
+    "text": "up over 25% since the start of last\nyear"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Gold rose roughly 64-67% during 2025 alone and was near $4,370 at its end; $5,000 in January 2026 is about +90% from the start of 2025. \"Over 25%\" is wrong for any reading of \"since the start of last year\" and understates the argument's own evidence.",
+   "uncertainty": "Search-result summaries; arithmetic against recalled January 2025 price."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14039,
+    "end_char": 14110,
+    "text": "You'll hit full retirement\nage right as the old age trust fund runs\ndry"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "A person aged 50 in 2026 reaches full retirement age (67) in 2043, a decade after the 2033 depletion date the video cites; someone reaching 67 in 2033 is about 60 today.",
+   "uncertainty": "Arithmetic; depletion year is the 2025 Trustees figure (the 2026 report, after upload, says late 2032)."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3287,
+    "end_char": 3324,
+    "text": "the 30-year Treasury\nyield hits 5.19%"
+   },
+   "judgment": "MET",
+   "rationale": "FRED DGS30 shows 5.18% on 19 May 2026 (5.03% on 12 May, peak 5.18-5.19 that week); 5.19 differs by one basis point, which is a close or intraday difference.",
+   "uncertainty": "FRED series fetched this session."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13681,
+    "end_char": 13727,
+    "text": "Freddie\nMac reports the 30-year fixed at 6.51%"
+   },
+   "judgment": "MET",
+   "rationale": "FRED MORTGAGE30US is 6.51% for the week of 21 May 2026 and 6.53% on 28 May; the figure and the \"6 and 1/2\" assumption match.",
+   "uncertainty": "FRED series fetched this session."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4016,
+    "end_char": 4056,
+    "text": "That works out to $288,000\nper household"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Treasury debt-to-the-penny was $38.95T on 14 May and $39.18T on 28 May (upload date), so \"just crossed 38.9\" was about two weeks stale; $288,000 implies about 135 million households, which is plausible but the household count is unsourced. \"More than the median home price in 30 states\" was not tested.",
+   "uncertainty": "Treasury FiscalData API fetched this session; household denominator not located."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4583,
+    "end_char": 4622,
+    "text": "$970\nbillion in interest, just interest"
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Net interest of about $970 billion for FY2025, \"more than Medicare\" and \"more than defense\" were not re-checked against CBO or Treasury this session; the defense comparison is plausible, the Medicare comparison depends on gross versus net Medicare outlays.",
+   "uncertainty": "Not re-verified; analyst recall only."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 991,
+    "end_char": 1034,
+    "text": "Here's the\nthing about the phrase debt bomb"
+   },
+   "judgment": "MET",
+   "rationale": "Setup (stakes and a definition), tension (fuse timeline, interest burden, Ferguson's Law), escalation (four exits), resolution (what to own and what not to fear) in a clean order.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6825,
+    "end_char": 6839,
+    "text": "Quick re-hook."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Open loops are used (the four doors, \"what you can do\"), but the transcript contains the literal words \"Quick re-hook\" (~6,800) and \"Re-hook\" (~15,000), i.e. a production cue appears in spoken text; whether it is audible or a transcription of a read-aloud script note cannot be told without audio, and a spoken cue would name the retention device to the viewer.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "IT STARTED... with a rising line chart ending in an exploding starburst with burning dollar bills"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script supplies the crisis and the response, but no single \"it started\" event; the explosion visual is a metaphor the script itself rejects as \"cinematic\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7265,
+    "end_char": 7305,
+    "text": "That's not a forecast,\nthat's arithmetic"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Strong causal chain in the interest section (rates 1.49% to 3.37%, a third refinanced yearly, so the bill grows) but weak where the household example breaks (tax miscomputed) and where the four-doors argument leaps from \"three exits locked\" to Dalio's prediction.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16758,
+    "end_char": 16780,
+    "text": "You have time. Use it."
+   },
+   "judgment": "NOT_MET",
+   "rationale": "No like, subscribe, comment, next-video or product ask anywhere in the stored text; the video ends on a line, so the viewer is given no next step on the channel.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8102,
+    "end_char": 8144,
+    "text": "Here's the part the news\ndoesn't tell you."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Gaps are planted (\"here's where it gets interesting\", \"the one nobody talks about at dinner parties\") and paid within a few hundred characters; the long-range gap (what to do) is held ~15,000 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12944,
+    "end_char": 12970,
+    "text": "There's only one\ndoor left"
+   },
+   "judgment": "MET",
+   "rationale": "The four-doors section is a genuine BUT/THEREFORE sequence: cut spending, BUT $827B a year is the whole Pentagon; grow, BUT CBO sees 1.6%; default, BUT it ends the dollar; THEREFORE inflation.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 301,
+    "end_char": 364,
+    "text": "nobody in\nWashington is even pretending to slow it\ndown anymore"
+   },
+   "judgment": "MET",
+   "rationale": "Timeliness is built in (a dated 12-month timeline, May 2026 yields and a new Fed chair).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4200,
+    "end_char": 4234,
+    "text": "Congratulations. And it's growing."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "About 16,800 characters; the closing \"gold silently judging your other investments\" line is repeated almost verbatim ~6,100 characters apart, and several jokes restate rather than advance the argument.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-03",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #3",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-BT-01.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-04",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #4",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-SCR-03.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16635,
+    "end_char": 16693,
+    "text": "The bomb already went off. You\njust got here a little late"
+   },
+   "judgment": "MET",
+   "rationale": "One pursuit holds the video: the interest burden is turning into inflation, so protect purchasing power.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  },
+  {
+   "rule_id": "FR-16C-07",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9829,
+    "end_char": 9851,
+    "text": "So, how does\nthis end?"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"So, how does this end?\" (~9,830) opens after the owed-to-ourselves loop has closed (~7,500) rather than before it; door four (\"the one nobody talks about\", ~11,500) opens after door three closes (~11,300). Loops are sequential; the long-range \"what you can do\" loop is the only one held open across sections.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2858,
+    "end_char": 2945,
+    "text": "Of every five neighbors who said they'd\nshow up, only about two and a half\nactually did"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Plain-language analogies carry most of the complexity (credit card, yard sale, restaurant ordinance), but the yard-sale line may misdescribe auction demand: bidders are normally more than the offering (a bid-to-cover of 2.5 means 2.5 times as many bids as the amount sold); the underlying ratio is not given, so the analogy cannot be checked.",
+   "uncertainty": "Auction data not located; assessment of the analogy rests on the standard definition of bid-to-cover."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16604,
+    "end_char": 16634,
+    "text": "The line is starting\nto break."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The close returns to the \"bomb\" and \"line on the chart\" images but not to the red light and credit-card opening.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 991,
+    "end_char": 1034,
+    "text": "Here's the\nthing about the phrase debt bomb"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title keyword \"debt bomb\" is first spoken at ~1,025 characters, after the 30-second mark; \"debt\" and \"38.9 trillion\" appear earlier.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3153,
+    "end_char": 3202,
+    "text": "more than the\nentire gold reserves of Switzerland"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The Swiss National Bank holds about 1,040 tonnes (analyst recall), so 225 tonnes cannot be \"more than the entire gold reserves of Switzerland\"; the comparison is the video's rhetorical flourish and is arithmetically impossible.",
+   "uncertainty": "Analyst recall of the Swiss reserve; not re-verified this session."
+  }
+ ],
+ "title": "It Started. The US Debt Bomb Just Imploded",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Timely macro-fear topic with a dated news hook (May 2026 yields, new Fed chair).",
+  "2_differentiated_angle": "Debt-service-above-defence \"Ferguson's Law\" frame plus four exits is the distinguishing structure; the household translation is the weak part.",
+  "3_title": "Short, event-framed; \"Just Imploded\" over-states the slow-motion content.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, 159,898 bytes) and persisted in thumbnail-evidence: alarmed cartoon man, IT STARTED... and an exploding red line chart with burning cash; legible at 320 px; one idea, high contrast, text-and-arrow hierarchy; the explosion matches \"bomb\" not \"implode\".",
+  "5_opening": "Red-light analogy and a stat stack; strong, with the channel name inside the first ~370 characters.",
+  "6_loops": "Fuse to math to doors to household to action; the re-hook cues appear in the text.",
+  "7_spine": "Clear but long; sections are well signposted and end with a framework.",
+  "8_repetition_clarity": "The gold line repeats; the \"one in five tax dollars\" idea is stated twice.",
+  "9_emotion_credibility": "High: confident, numbers throughout. Credibility is cut by the miscomputed couple's tax, the Tuesday, the gold percentage and the age-50 retirement-age slip.",
+  "10_ending_cta": "No call to action; ends with reassurance and a one-line push to act.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "Married couple, $145,000, two children: federal income tax \"roughly 30,000\"; about \"six grand\" to bondholders (20%)",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$14,798 before credits; $10,398 after two $2,200 child credits (2025 rules); 20% is $2,080. The $30,000 and $6,000 are about three times too high. Including employee and employer FICA the total is about $32,600, so $30,000 is roughly a payroll-inclusive figure mislabelled as income tax."
+  },
+  {
+   "claim": "$450,000 mortgage: 6.5% gives about $3,400 with taxes and insurance; 3% gives $2,550; gap $850/month, $10,200/year, \"a third of a million\" over 30 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "P&I $2,844 vs $1,897; gap $947 ($340,952 over 360 months). With the video's implied $556 tax and insurance, 3% costs $2,453, not $2,550. $850 x 360 = $306,000."
+  },
+  {
+   "claim": "Moody's lost the AAA \"on a Tuesday\" (16 May 2025)",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "16 May 2025 was a Friday."
+  },
+  {
+   "claim": "Gold \"up over 25% since the start of last year\" at $5,000",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Gold gained roughly 64-67% in 2025 (near $4,370 at year end); $5,000 is about +90% over start-2025 (analyst recall of about $2,650). The 25% figure is wrong. (2025 gain from search-result summaries; start-2025 price and the 2026 level are analyst recall.)"
+  },
+  {
+   "claim": "Age 50 reaches full retirement age as the OASI fund depletes in 2033",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Arithmetic only: age 50 in 2026 turns 67 in 2043, ten years after 2033."
+  },
+  {
+   "claim": "30-year Treasury yield 5.19% on 19 May 2026; Freddie Mac 6.51%",
+   "kind": "PRIMARY_DATA_FETCHED_THIS_SESSION",
+   "result": "FRED DGS30 5.18 on 19 May (peak of that week); FRED MORTGAGE30US 6.51 on 21 May. Both match to rounding."
+  },
+  {
+   "claim": "Debt \"just crossed 38.9 trillion\"; $288,000 per household",
+   "kind": "PRIMARY_DATA_FETCHED_THIS_SESSION",
+   "result": "Treasury debt to the penny: $38.95T on 14 May; $39.00T on 15 May; $39.18T on 28 May (upload). $288,000 x 135M households = $38.9T."
+  },
+  {
+   "claim": "Average interest rate 1.49% (2021) to 3.37%; Ferguson's Law and the 500-year record; CRFB $827B a year; Bank of America survey 62% see 6%; Dalio \"heart attack in 3 years\"; Druckenmiller 15-20% short; Buffett $325B cash; CBO 1.6% growth",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified this session; some were seen only as secondary summaries in earlier work."
+  },
+  {
+   "claim": "GENIUS Act requires stablecoins to be \"backed by short-term Treasury bills\"; Bessent expects $3T by 2030",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "The act permits several reserve assets (cash, insured deposits, short-dated Treasuries, repo); the single-asset wording is a simplification (analyst recall, not re-read)."
+  },
+  {
+   "claim": "2025 Trustees: OASI depleted 2033, 77% payable (video: 23% smaller check); 2026 Trustees (9 June 2026): late 2032, 78% payable",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Search-result summaries of the Trustees reports; the 2025 figures match the video, the 2026 report was published after upload."
+  },
+  {
+   "claim": "China bought \"225 tons of gold last year alone, more than the entire gold reserves of Switzerland\"",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Switzerland's official gold reserve is about 1,040 tonnes (recall), so 225 tonnes cannot exceed it; the 225-tonne figure itself was not checked."
+  }
+ ],
+ "strengths": [
+  "Strong cold open and a clear four-exit structure with real BUT/THEREFORE logic.",
+  "Contrarian reading of falling foreign ownership.",
+  "Several market figures reproduce exactly (30-year yield, mortgage rate, dated debt)."
+ ],
+ "weaknesses": [
+  "Household examples carry the most visible numerical errors, in the section meant to make the stakes personal.",
+  "Title and thumbnail promise a discrete collapse the script disclaims.",
+  "No call to action; a spoken \"Quick re-hook\" cue appears in the text."
+ ],
+ "contradictions": [
+  "\"Imploded\" and an exploding chart versus \"went off in slow motion\".",
+  "\"Roughly 30,000\" tax versus the same couple's $145,000 income.",
+  "\"Up over 25% since the start of last year\" versus 2025 alone.",
+  "Age 50 reaching retirement age in 2033.",
+  "\"Door is mostly locked\" (door two) versus \"three of the four exits are locked\".",
+  "\"225 tons of gold ... more than the entire gold reserves of Switzerland\" (Switzerland holds about 1,040 tonnes by analyst recall)."
+ ],
+ "improvement_opportunities": [
+  "Recompute the Phoenix couple (about $10,400 tax, about $2,100 to interest) and state the share as an average attribution; this is the most re-quotable number in the video.",
+  "Retitle toward what the video delivers: \"The US Now Pays More On Interest Than On Its Military - What Happens Next\" keeps the stakes without a collapse event.",
+  "Put the thumbnail text at the interest-above-military fact instead of \"IT STARTED...\" so the visual states the payoff.",
+  "Move the household section (mortgage, Social Security) before the Ferguson history so the personal stake arrives by ~5,000 characters instead of ~12,900.",
+  "Add a closing ask tied to the content (check I bond limits this week) and an on-screen source line for the 5.19% yield and the $970B interest figure."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Primary CBO/Treasury interest series, Ferguson, CRFB, Bank of America survey documents"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "0.68698",
+  "age_days": "105.1309",
+  "views_likes_comments_snapshot": {
+   "views": 8263,
+   "likes": 297,
+   "comments": 67,
+   "published_at": "2026-05-28"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "1.0445",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the dramatic title, the exploding-chart thumbnail or the household examples affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed; no external-source checks by the reviewer",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "FICA caveat added to the couple's tax check ($30,000 resembles a payroll-inclusive total)",
+    "invented \"none of the doors\" contradiction replaced with the real \"mostly locked\" versus \"three locked\" one",
+    "added the Switzerland gold-reserve impossibility",
+    "FR-16C-07 changed from MET to PARTLY_MET (loops are sequential)",
+    "intro-length claim corrected to 4,000 characters",
+    "gold and Trustees evidence labels split/relabelled to reflect recall inputs",
+    "bid-to-cover analogy softened to \"may misdescribe\""
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

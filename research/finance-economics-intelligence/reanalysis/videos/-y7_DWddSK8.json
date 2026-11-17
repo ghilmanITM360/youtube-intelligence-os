@@ -1,0 +1,477 @@
+{
+ "video_id": "-y7_DWddSK8",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "28aeb84d2be9819b8088fffcde41c0cc9a54b4d303d1c1183d283d38876de138",
+ "original_packets": [
+  "CARL_001.json"
+ ],
+ "transcript_chars_read": 19080,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 62,
+    "text": "You're invited to the home of someone\nyou know is very wealthy"
+   },
+   "judgment": "MET",
+   "rationale": "A second-person scene with a reversed expectation (\"what isn't there\") and an immediate loop (\"seven things missing\"); strong.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 679,
+    "end_char": 800,
+    "text": "And the seven things missing from that\nhouse are also the seven things quietly\nrich people stopped buying a long time\nago"
+   },
+   "judgment": "MET",
+   "rationale": "Clear promise (seven items), named stakes and a planted curiosity gap about item five by about character 850.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Large text RICH NEVER BUY; a stern-looking cartoon man on a brown leather armchair with a laptop; seven numbered red-X icons: house, white sedan, warranty clipboard, purple phone, sale shopping bags with %, streaming-app tiles, a coffee machine arrow to a newer machine"
+   },
+   "judgment": "MET",
+   "rationale": "The thumbnail shows seven numbered items in the script's order (icon 7, a coffee-machine upgrade, stands for the script's general \"upgrade when the current one still works\" item), matching the title's list promise; the title's \"Quietly\" is not on the thumbnail.",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "7 Things Quietly Rich People Never Buy (Not What You Expect)"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Seven items are delivered, but the first two (a bigger house, a luxury car) are what the script itself calls \"the obvious ones\", which sits against \"Not What You Expect\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 839,
+    "end_char": 898,
+    "text": "but\nnumber five,\nthat one catches almost everyone off\nguard"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The item-five loop is paid at the right place, but the reveal (never buy because it is on sale; $320,000) is smaller than items one ($640,000) and two ($750,000), so the promised shock is an anticlimax.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 900,
+    "end_char": 960,
+    "text": "And when you hear how much it\nactually costs over a lifetime"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The intro frames item five as the costliest surprise, but its $320,000 figure is below the house ($640,000) and truck ($750,000) figures, so the setup outruns the payoff (it is above the $107,000, $45,000 and $40,000 figures).",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Seven red-X icons numbered 1-7 under RICH NEVER BUY"
+   },
+   "judgment": "MET",
+   "rationale": "Delivers the seven things promised, in the same order as the thumbnail.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18204,
+    "end_char": 18235,
+    "text": "It was not empty, it was\nedited"
+   },
+   "judgment": "MET",
+   "rationale": "Frame story (the plain home) opens and closes the list, with a one-line recap of all seven and a \"money decision\" through-line.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19010,
+    "end_char": 19079,
+    "text": "And the last\nthree items on this list are the ones\nnobody sees coming"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The final sentence promises \"the last three items\" after all seven have been delivered, so it points at items that do not exist in this list (it may be a leftover from an earlier script or a teaser for the next video). The other loops (the item-five tease, \"the list gets strange\") are paid.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15843,
+    "end_char": 15886,
+    "text": "One upgrade that quietly demanded five\nmore"
+   },
+   "judgment": "MET",
+   "rationale": "Item seven's cascade (sofa, rug, curtains, table, paint) is a clear cause-and-effect chain, as is the house-to-garage-to-furniture chain in item one.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5741,
+    "end_char": 5798,
+    "text": "But the first two items on this list are\nthe obvious ones"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Transitions between items use \"But the next item...\" handoffs that read as BUT, but they link topics, not causes.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2872,
+    "end_char": 2897,
+    "text": "grows to roughly $640,000"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "$1,100 a month at 7% for 20 years is about $573,000 (about $648,000 needs 8%). The $1,100 monthly difference also does not follow from \"45%\" versus \"25%\" of take-home on $110,000 unless take-home is about $5,500 a month.",
+   "uncertainty": "Arithmetic verified; take-home pay is not stated."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5414,
+    "end_char": 5450,
+    "text": "that money grows to roughly $750,000"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The $620 a month payment lasts five years; invested for five years and left to grow to year 30 it is about $250,000 with monthly compounding (about $230,000 with annual compounding). $750,000 needs 30 years of $620 contributions (a replacement truck every five years), which the script does not state, and Curtis himself keeps a 16-year-old truck.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8824,
+    "end_char": 8859,
+    "text": "saves roughly $500 to $600\nper year"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Buying one $1,200 phone instead of two over four years saves $1,200 in total, or about $300 a year; the stated $500-$600 a year (and the $40,000 built on it) is double that.",
+   "uncertainty": "Arithmetic verified; the $40,000 at 7% for 25 years is correct for $600 a year."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18096,
+    "end_char": 18149,
+    "text": "The retired 55-year-old with a\nseven-figure portfolio"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The opening says \"an eight-figure investment portfolio\" and the close says \"a seven-figure portfolio\", so the headline wealth of the frame character changes by a factor of ten.",
+   "uncertainty": "Not a computation error; internal inconsistency."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13833,
+    "end_char": 13849,
+    "text": "roughly $107,000"
+   },
+   "judgment": "MET",
+   "rationale": "The subscription gap ($219 less $86 = $133 a month) at 7% for 25 years is about $107,700, as stated; the living-room cycle ($6,000 to $45,000 at 7% for 30 years) and the $282 impulse figure (about $344,000, stated $320,000) are also close.",
+   "uncertainty": "Arithmetic verified; the underlying C+R survey (named \"CNR Research\" in the stored text) and the $282 average are recall."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16353,
+    "end_char": 16407,
+    "text": "Add those up and you\nare looking at well over $100,000"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The sentence says \"well over $100,000 spent\", but three or four cycles of $6,000 are $18,000-$24,000 spent, and as an invested value three or four cycles spread over 30 years come to roughly $80,000-$90,000, so the figure is unsupported either way.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3776,
+    "end_char": 3835,
+    "text": "The average new car payment in America\nhas hit $770 a month"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Experian's Q2 2025 average new-vehicle payment was $749 (other series and quarters differ); the video names no source for $770 or \"more than one in five over a thousand\", and neither that share nor the Millionaire Next Door \"1% of net worth on a car\" figure was located.",
+   "uncertainty": "Experian figure verified from a search-result summary; the other two statements are recall."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11852,
+    "end_char": 11921,
+    "text": "A discount on\nsomething you do not need is not 40%\noff. It is 100% on"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame (sales, warranties and upgrades as spending triggers), with a behavioural-economics name (anchoring) and concrete examples.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7293,
+    "end_char": 7335,
+    "text": "Glenn is running his own insurance\ncompany"
+   },
+   "judgment": "MET",
+   "rationale": "Self-insurance versus a retailer warranty and the broken-by-function-or-feeling test are explained in plain language.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18847,
+    "end_char": 18908,
+    "text": "If this list is making you\nrethink a few purchases, subscribe"
+   },
+   "judgment": "MET",
+   "rationale": "A single subscribe ask at the end, preceded by a next-video pointer (nine specific signs), placed after delivered value.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18055,
+    "end_char": 18094,
+    "text": "Go back to that home from the beginning"
+   },
+   "judgment": "MET",
+   "rationale": "Explicit return to the opening house with a restated thesis (\"it was not empty, it was edited\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 733,
+    "end_char": 784,
+    "text": "the seven things quietly\nrich people stopped buying"
+   },
+   "judgment": "MET",
+   "rationale": "\"Seven things quietly rich people stopped buying\" is spoken within the first ~700 characters (\"never buy\" is rendered as \"stopped buying\").",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "7 Things Quietly Rich People Never Buy (Not What You Expect)",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. \"Quiet wealth\" lists are a recurring topic on this channel.",
+  "2_differentiated_angle": "Item-by-item cost framing with a \"broken by function or by feeling\" test and an edited-home frame.",
+  "3_title": "Number, \"Quietly\", an explicit promise and a curiosity parenthetical.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, SHA-256 prefix 6dbdd2c79d462071; not in the repository): bold green RICH and brown NEVER BUY, a stern-looking cartoon creator on a leather chair with a laptop, seven numbered red-X icons. Very legible at mobile size; matches the script order. Likeness of the channel avatar; rights not judged.",
+  "5_opening": "Strong scene-first hook with a planted loop.",
+  "6_loops": "Item-five loop paid; closing \"last three items\" loop dangles.",
+  "7_spine": "Frame story around a numbered list with a recap.",
+  "8_repetition_clarity": "Each item ends in an \"invested at 7%\" figure.",
+  "9_emotion_credibility": "Measured and concrete; credibility reduced by several miscalculated headline figures and a ten-fold change in the frame character's wealth.",
+  "10_ending_cta": "End subscribe ask and next-video pointer; one dangling teaser.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$1,100/month at 7% for 20 years is \"roughly $640,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: about $573,000 (about $648,000 at 8%)."
+  },
+  {
+   "claim": "Take-home on $110,000: 45% versus 25% gives a \"roughly $1,100\" monthly difference",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "20 points of take-home is about $1,430 at $7,150 a month; $1,100 requires about $5,500 a month of take-home."
+  },
+  {
+   "claim": "$620/month truck payment invested at 7% for 30 years is \"roughly $750,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED for a five-year payment: about $250,000 (monthly compounding; about $230,000 annual); $756,000 needs 30 years of contributions."
+  },
+  {
+   "claim": "Phone: stretching from 2 to 4 years \"saves roughly $500 to $600 per year\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "About $300 a year ($1,200 saved over four years); $600 a year at 7% for 25 years is about $37,900 with annual contributions (about $40,500 at $50 a month), so \"roughly $40,000\" holds for $600 a year."
+  },
+  {
+   "claim": "Subscriptions: $219 actual versus $86 estimated is a $133 gap; $133 a month at 7% for 25 years is \"roughly $107,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$133 gap holds; about $107,700. Holds."
+  },
+  {
+   "claim": "$282/month impulse purchases at 7% for 30 years is \"roughly $320,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "About $344,000 (stated figure is 7% low)."
+  },
+  {
+   "claim": "$6,000 living-room cycle at 7% for 30 years is \"about $45,000\"; \"well over $100,000 spent\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$45,700 holds. \"$100,000 spent\" is wrong as spent (3-4 cycles are $18,000-$24,000) and not supported as an invested value either (three or four cycles spread over 30 years come to roughly $80,000-$90,000)."
+  },
+  {
+   "claim": "Maintenance \"roughly 2 to 3% of the home's value\" ($8,000-$12,000 on $400,000); median home about $434,000",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Arithmetic holds; the 2-3% rate is above the 1% rule used in sibling videos (rule of thumb, unsourced)."
+  },
+  {
+   "claim": "Average new car payment $770; more than one in five over $1,000",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Experian Q2 2025: $749 average new-vehicle payment (search-result summary); the video may reference a different quarter or source and names none for $770 or the one-in-five share, which was not located."
+  },
+  {
+   "claim": "Millionaire Next Door: millionaires spend about 1% of net worth on a car; Toyota/Honda/Ford brand lists; warranty retailers keep 50% or more; C+R Research $86 versus $219 (stored as \"CNR Research\"); $282 impulse average; Black Friday anecdote",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified."
+  }
+ ],
+ "strengths": [
+  "Clear list with an echoing frame story and thumbnail-script match.",
+  "Strong behavioural tests (broken by function versus by feeling) and restoration alternatives with prices.",
+  "Well-placed end CTA with a next-video pointer."
+ ],
+ "weaknesses": [
+  "Four headline investment figures are miscalculated (house, truck, phone, \"spent\").",
+  "The frame character is eight-figure then seven-figure wealthy.",
+  "The closing \"last three items\" line dangles.",
+  "The promised item-five shock is smaller than the first two items."
+ ],
+ "contradictions": [
+  "\"Eight-figure portfolio\" versus \"seven-figure portfolio\".",
+  "\"The last three items on this list\" after seven of seven were delivered.",
+  "\"Not What You Expect\" versus \"the first two ... are the obvious ones\".",
+  "Curtis keeps a 16-year-old truck, yet the $750,000 figure needs a replacement truck every five years."
+ ],
+ "improvement_opportunities": [
+  "Recompute the house ($573,000), truck (state the five-year payment or a lifetime replacement cycle), phone ($300 a year) and \"spent versus invested\" lines and show each on screen.",
+  "Pick one wealth level for the frame character and use it at the open and the close.",
+  "Move the biggest-cost item to number five, or reword the promise to match its size.",
+  "Delete the final \"last three items\" sentence and keep the single subscribe ask."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "WEAK",
+  "lifetime_rate_ratio": "0.33125",
+  "age_days": "28.4533",
+  "views_likes_comments_snapshot": {
+   "views": 247,
+   "likes": 9,
+   "comments": 2,
+   "published_at": "2026-08-13"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.50993",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": false,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the miscalculated figures, the thumbnail match or the end CTA affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "truck figure restated (~$250K monthly / ~$230K annual) with the replacement-cycle contradiction",
+    "phone-figure convention clarified",
+    "\"well over $100,000\" corrected for both spent and invested readings",
+    "anticlimax rationale corrected ($320K is third-largest)",
+    "item-five tease position and SEO wording corrected",
+    "FR-SCR-02 \"leftover\" softened",
+    "thumbnail icon 7 and expression wording corrected",
+    "Experian comparison softened (different quarter possible)"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

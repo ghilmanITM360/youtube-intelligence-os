@@ -1,0 +1,15 @@
+{
+ "test": "RT-V3-S01",
+ "registered_before_render": true,
+ "registered_utc": "2026-11-04T19:0xZ",
+ "criteria": [
+  "C1 format exact; frames 177-181",
+  "C2 palette at last frame: >=25% within L1<=50 of #484828/#485828; >=6% within L1<=60 of #c89858; >=5% within L1<=60 of #683818",
+  "C3 push-in: cam_traj.py (vs first frame of run) total scale in [1.55,1.85]; total tx in [-800,-540] px; run length 45-62 frames starting f3-10",
+  "C4 ease: progress curve (normalised scale change) reaches 0.5 between 40% and 60% of the run; first 15% of run progress<0.15; last 15% of run progress>0.85",
+  "C5 static after: frames run_end+2 .. end have |dscale|<0.003, |dx|<2",
+  "C6 visual: hand-drawn style, chalk cursive text, classroom layout, discrete pointer pose swaps, original content \u2014 each PASS/FAIL"
+ ],
+ "measurement": "deterministic C1-C5 by scripts/evaluate_style_rt.py on rendered pixels; C6 visual by orchestrator on render frames only; overall PASS only if all C1-C6 PASS",
+ "scope": "style + full-scene (characters, background, typography, layout, motion) for one bounded scene; font/software UNKNOWN; sound NOT tested"
+}

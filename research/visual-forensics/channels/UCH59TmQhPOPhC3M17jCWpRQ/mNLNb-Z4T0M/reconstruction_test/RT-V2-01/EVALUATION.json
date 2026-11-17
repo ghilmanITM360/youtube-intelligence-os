@@ -1,0 +1,85 @@
+{
+ "test": "RT-V2-01",
+ "frames": 180,
+ "criteria": {
+  "format": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001",
+    "nb_frames": "180"
+   }
+  },
+  "board_colour": {
+   "ok": true,
+   "got_bgr": [
+    58,
+    77,
+    58
+   ]
+  },
+  "M_SQUASH_SWAP": {
+   "ok": true,
+   "heights": {
+    "27": 500,
+    "28": 500,
+    "29": 500,
+    "30": 370,
+    "31": 240,
+    "32": 112,
+    "33": 112,
+    "34": 240,
+    "35": 372,
+    "36": 500,
+    "37": 500,
+    "38": 500,
+    "39": 500
+   },
+   "changed_frames": 6,
+   "band_frames": [
+    32,
+    33
+   ],
+   "overshoot": false,
+   "band_frac": 0.224,
+   "want": "collapse 2 + band 2 + expand 2 frames (+-1), band 0.20-0.25, no overshoot"
+  },
+  "M_CAMERA_PUSH_EASE": {
+   "ok": false,
+   "moving_frames": 14,
+   "held_frames": [],
+   "peak_offset": 6,
+   "profile": [
+    0.48,
+    0.72,
+    0.92,
+    1.1,
+    1.24,
+    1.35,
+    1.4,
+    1.37,
+    1.22,
+    1.08,
+    0.95,
+    0.8,
+    0.63,
+    0.43
+   ],
+   "want": "16-18 moving frames, no held frames, ease-in-out peak in middle third"
+  },
+  "claims": {
+   "SQ_collapse_start": 30,
+   "SQ_band_frames": [
+    32,
+    33
+   ],
+   "SQ_settled": 36,
+   "CAM_start": 100,
+   "CAM_end": 115
+  }
+ },
+ "overall": "FAIL",
+ "scope": "timing/geometry of named modules only; style, characters, sound NOT tested"
+}

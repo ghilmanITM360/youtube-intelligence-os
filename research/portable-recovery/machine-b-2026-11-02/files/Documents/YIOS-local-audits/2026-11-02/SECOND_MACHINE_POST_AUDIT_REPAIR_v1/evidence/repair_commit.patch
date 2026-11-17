@@ -1,0 +1,160 @@
+From cd2160f9f6b61da3891819b56eb2726fe0894521 Mon Sep 17 00:00:00 2001
+From: ghilmankhan <khanghilman96@gmail.com>
+Date: Mon, 2 Nov 2026 11:00:54 +0500
+Subject: [PATCH] fix(provenance): pin DS-000028/30 .gitattributes rows to
+ ingestion-time blob; freeze-label universe snapshot
+
+DS-000028-F020 and DS-000030-F019 fingerprint the 627-byte .gitattributes blob
+introduced at 59cf2185 (2026-09-22); the file later legitimately grew. Pin both
+rows to that blob (same mechanism as the other mutable snapshots) with a
+tamper-detection regression test. Add SNAPSHOT_NOTICE.md for the 2026-10-21
+universe CSV and a completion-consistency test across live projections.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ .../SNAPSHOT_NOTICE.md                        | 14 +++++++
+ .../test_completion_projection_consistency.py | 39 +++++++++++++++++++
+ scripts/validate_dataset_ledgers.py           |  5 +++
+ tests/test_dataset_ledger_provenance.py       | 34 ++++++++++++++++
+ 4 files changed, 92 insertions(+)
+ create mode 100644 research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/SNAPSHOT_NOTICE.md
+ create mode 100644 research/finance-economics-intelligence/test_completion_projection_consistency.py
+
+diff --git a/research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/SNAPSHOT_NOTICE.md b/research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/SNAPSHOT_NOTICE.md
+new file mode 100644
+index 00000000..1c91058e
+--- /dev/null
++++ b/research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/SNAPSHOT_NOTICE.md
+@@ -0,0 +1,14 @@
++# FROZEN SNAPSHOT NOTICE
++
++Everything in this directory is a point-in-time reconciliation as of 2026-10-21
++(checksums in `FILE_CHECKSUMS_SHA256.json`; `README.md` and `VALIDATION.json`
++state 430 deep-complete). Do not regenerate or edit it to track later audits.
++
++`FINANCE_UNIVERSE.csv` stays authoritative for identity, URL, provenance and
++inclusion decision. Its `audit_status` and `blocker` columns are NOT current.
++
++Current completion authority (see `test_completion_projection_consistency.py`):
++`VIDEO_AUDIT_966.jsonl` -> `VIDEO_COMPLETION_MATRIX.csv`,
++`build_combined_workbook_data.py` (workbook/dashboard) and
++`FINANCE_PROGRESS_CHECKPOINT.json`. Canonical and Machine A branches carry
++different accepted counts; read the ledger on the branch you are on.
+diff --git a/research/finance-economics-intelligence/test_completion_projection_consistency.py b/research/finance-economics-intelligence/test_completion_projection_consistency.py
+new file mode 100644
+index 00000000..f06aa56f
+--- /dev/null
++++ b/research/finance-economics-intelligence/test_completion_projection_consistency.py
+@@ -0,0 +1,39 @@
++"""Current Finance completion must agree across live projections; the 2026-10-21
++universe CSV is a frozen snapshot and must stay labelled as such."""
++import csv
++import hashlib
++import json
++import subprocess
++import sys
++import unittest
++from pathlib import Path
++
++ROOT = Path(__file__).resolve().parent
++SNAPSHOT = ROOT / "reconciliation-all-repository-2026-10-21"
++COMPLETE = {"COMPLETE_EVIDENCE_BACKED", "COMPLETE_LIMITED_EVIDENCE"}
++
++
++class CompletionProjectionConsistency(unittest.TestCase):
++    def test_live_projections_agree_with_audit_ledger(self):
++        ledger = [json.loads(line) for line in (ROOT / "VIDEO_AUDIT_966.jsonl").read_text().splitlines()]
++        live = sum(all(s in COMPLETE for s in r["statuses"].values()) for r in ledger)
++        with (ROOT / "VIDEO_COMPLETION_MATRIX.csv").open(newline="") as f:
++            matrix = sum(all(v in COMPLETE for k, v in r.items() if k.endswith("_REVIEW")) for r in csv.DictReader(f))
++        checkpoint = json.loads((ROOT / "FINANCE_PROGRESS_CHECKPOINT.json").read_text())["population"]
++        built = json.loads(subprocess.check_output([sys.executable, str(ROOT / "build_combined_workbook_data.py")], text=True))["summary"]
++        self.assertEqual(live, matrix)
++        self.assertEqual(live, checkpoint["completed"])
++        self.assertEqual(live, built["deep_audited"])
++        self.assertEqual(1612 - live, checkpoint["remaining"])
++
++    def test_universe_csv_is_a_checksummed_frozen_snapshot(self):
++        sums = json.loads((SNAPSHOT / "FILE_CHECKSUMS_SHA256.json").read_text())
++        digest = hashlib.sha256((SNAPSHOT / "FINANCE_UNIVERSE.csv").read_bytes()).hexdigest()
++        self.assertEqual(sums["FINANCE_UNIVERSE.csv"], digest)
++        readme = (SNAPSHOT / "SNAPSHOT_NOTICE.md").read_text()
++        self.assertIn("FROZEN SNAPSHOT", readme)
++        self.assertEqual(430, json.loads((SNAPSHOT / "VALIDATION.json").read_text())["deep_complete_original"])
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/scripts/validate_dataset_ledgers.py b/scripts/validate_dataset_ledgers.py
+index bffde1d7..a637fe3f 100644
+--- a/scripts/validate_dataset_ledgers.py
++++ b/scripts/validate_dataset_ledgers.py
+@@ -74,6 +74,11 @@ KNOWN_HISTORICAL_SNAPSHOTS = {
+     ("DS-000028", "DS-000028-F019"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
+     ("DS-000030", "DS-000030-F017"): "57491326ec76c7763c9da7b0affcc473a962b7e7",
+     ("DS-000030", "DS-000030-F018"): "c740f89212dd7a1c59c273fce07e2613f24a68c4",
++    # .gitattributes is shared mutable repo configuration; the ledgers captured
++    # the 627-byte blob introduced at 59cf2185 (2026-09-22). Later commits
++    # (71bb5946, c5c3d60e, b28f0484) legitimately extended it.
++    ("DS-000028", "DS-000028-F020"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
++    ("DS-000030", "DS-000030-F019"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
+ }
+ 
+ 
+diff --git a/tests/test_dataset_ledger_provenance.py b/tests/test_dataset_ledger_provenance.py
+index 79adac7e..b54ac3c6 100644
+--- a/tests/test_dataset_ledger_provenance.py
++++ b/tests/test_dataset_ledger_provenance.py
+@@ -1,8 +1,11 @@
+ import csv
++import hashlib
++import subprocess
+ import sys
+ import tempfile
+ import unittest
+ from pathlib import Path
++from unittest import mock
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ sys.path.insert(0, str(ROOT / "scripts"))
+@@ -83,6 +86,37 @@ class LedgerChecksumTests(unittest.TestCase):
+         self.assertGreater(checked, 0)
+ 
+ 
++class SharedGitattributesPinTests(unittest.TestCase):
++    PINNED = "59cf21851b5f6e57975ab51944b7572a3edf7471"
++
++    def test_gitattributes_rows_pin_ingestion_time_blob_not_current_file(self):
++        for dataset_id, artifact_id in (("DS-000028", "DS-000028-F020"), ("DS-000030", "DS-000030-F019")):
++            row = next(r for r in v.load_ledger_rows(dataset_id) if r["artifact_id"] == artifact_id)
++            self.assertEqual(".gitattributes", row["repository_relative_path"])
++            self.assertEqual(self.PINNED, v.KNOWN_HISTORICAL_SNAPSHOTS[(dataset_id, artifact_id)])
++            self.assertEqual([], v.validate_row(dataset_id, row))
++
++    def test_pinned_blob_tampering_is_still_detected(self):
++        row = {
++            "artifact_id": "X-4", "repository_relative_path": "cfg.txt",
++            "size_bytes": "5", "sha256": "0" * 64, "raw_or_derived_classification": "DERIVED",
++        }
++        with tempfile.TemporaryDirectory() as directory:
++            root = Path(directory)
++            git = ["git", "-c", "user.name=t", "-c", "user.email=t@t", "-C", directory]
++            subprocess.run(git + ["init", "-q"], check=True)
++            (root / "cfg.txt").write_text("hello", encoding="utf-8")
++            subprocess.run(git + ["add", "cfg.txt"], check=True)
++            subprocess.run(git + ["commit", "-qm", "c"], check=True)
++            commit = subprocess.check_output(git + ["rev-parse", "HEAD"], text=True).strip()
++            row["sha256"] = hashlib.sha256(b"hello").hexdigest()
++            with mock.patch.dict(v.KNOWN_HISTORICAL_SNAPSHOTS, {("DS-TEST", "X-4"): commit}):
++                (root / "cfg.txt").write_text("changed later", encoding="utf-8")
++                self.assertEqual([], v.validate_row("DS-TEST", row, root=root))
++                row["sha256"] = hashlib.sha256(b"tampered").hexdigest()
++                self.assertEqual(["HISTORICAL_BLOB_SHA_MISMATCH"], v.validate_row("DS-TEST", row, root=root))
++
++
+ class LedgerRowValidationUnitTests(unittest.TestCase):
+     def test_validate_row_flags_size_and_sha_mismatch(self):
+         with tempfile.TemporaryDirectory() as directory:
+-- 
+2.50.1 (Apple Git-155)
+

@@ -1,0 +1,2097 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "frames": 958,
+ "duration_seconds": 31.927438,
+ "transform": "child world = parent xy + child xy * parent scale ratio; camera: world=cam_center+(xy-cam_center)*k",
+ "camera_keys": [
+  {
+   "t": 0,
+   "frame": 0,
+   "scale": 1.0,
+   "center": [
+    540,
+    900
+   ]
+  },
+  {
+   "t": 3.26,
+   "frame": 98,
+   "scale": 1.05,
+   "center": [
+    400,
+    1050
+   ]
+  },
+  {
+   "t": 5.0600000000000005,
+   "frame": 152,
+   "scale": 1.0,
+   "center": [
+    540,
+    1000
+   ]
+  },
+  {
+   "t": 24.659999999999997,
+   "frame": 740,
+   "scale": 1.08,
+   "center": [
+    640,
+    860
+   ]
+  },
+  {
+   "t": 29.03,
+   "frame": 871,
+   "scale": 1.0,
+   "center": [
+    540,
+    1000
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "S01",
+   "in_frame": 0,
+   "out_frame_exclusive": 80,
+   "headline": "Running after 60?",
+   "label": "and your heart?"
+  },
+  {
+   "id": "S02",
+   "in_frame": 80,
+   "out_frame_exclusive": 137,
+   "headline": "A very good exercise",
+   "label": ""
+  },
+  {
+   "id": "S03",
+   "in_frame": 137,
+   "out_frame_exclusive": 334,
+   "headline": "Knees and ankles?",
+   "label": "the speaker's caution"
+  },
+  {
+   "id": "S04",
+   "in_frame": 334,
+   "out_frame_exclusive": 440,
+   "headline": "In moderation",
+   "label": ""
+  },
+  {
+   "id": "S05",
+   "in_frame": 440,
+   "out_frame_exclusive": 587,
+   "headline": "3 runs a week?",
+   "label": "the speaker's suggestion"
+  },
+  {
+   "id": "S06",
+   "in_frame": 587,
+   "out_frame_exclusive": 719,
+   "headline": "With a normal heart",
+   "label": "the speaker's view"
+  },
+  {
+   "id": "S07",
+   "in_frame": 719,
+   "out_frame_exclusive": 853,
+   "headline": "Oxygen + heart",
+   "label": ""
+  },
+  {
+   "id": "S08",
+   "in_frame": 853,
+   "out_frame_exclusive": 961,
+   "headline": "Endurance + stamina",
+   "label": ""
+  }
+ ],
+ "tracks": [
+  {
+   "scene": "S01",
+   "layer": "S01--park--path",
+   "asset": "park",
+   "part": "path",
+   "z": 0,
+   "parent": null,
+   "in_frame": 0,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 0,
+     "y": 850.6,
+     "scale": 1.2,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--park--tree",
+   "asset": "park",
+   "part": "tree",
+   "z": 0,
+   "parent": null,
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 330,
+     "y": 850.6,
+     "scale": 1.2,
+     "entry": "cut"
+    },
+    {
+     "frame_in": 0,
+     "frame_out": 137,
+     "ease": "linear",
+     "x": -820
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--park--grass",
+   "asset": "park",
+   "part": "grass",
+   "z": 0,
+   "parent": null,
+   "in_frame": 0,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 0,
+     "y": 850.6,
+     "scale": 1.2,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--park--tree",
+   "asset": "park",
+   "part": "tree",
+   "z": 0,
+   "parent": null,
+   "in_frame": 866,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    450.0,
+    225.0
+   ],
+   "keys": [
+    {
+     "frame": 866,
+     "x": 400,
+     "y": 850.6,
+     "scale": 1.2,
+     "entry": "cut"
+    },
+    {
+     "frame_in": 866,
+     "frame_out": 958,
+     "ease": "linear",
+     "x": 40
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--sam-run-warm--root",
+   "asset": "sam-run-warm",
+   "part": null,
+   "z": 5,
+   "parent": null,
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": -20,
+     "y": 653.5999999999999,
+     "scale": 1.1,
+     "entry": "cut"
+    },
+    {
+     "frame_in": 0,
+     "frame_out": 128,
+     "ease": "out",
+     "x": 60
+    }
+   ],
+   "loop": [
+    "hop",
+    9,
+    0.3
+   ],
+   "speed": [
+    [
+     3.7600000000000007,
+     0.55
+    ]
+   ]
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--sam-run-warm--legs",
+   "asset": "sam-run-warm",
+   "part": "legs",
+   "z": 5,
+   "parent": "S01--sam-run-warm--root",
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "swing",
+    3.5,
+    0.6,
+    0.25
+   ],
+   "speed": [
+    [
+     3.7600000000000007,
+     0.55
+    ]
+   ]
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--sam-run-warm--rear-arm",
+   "asset": "sam-run-warm",
+   "part": "rear-arm",
+   "z": 5,
+   "parent": "S01--sam-run-warm--root",
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    143,
+    244
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "swing",
+    20,
+    0.6,
+    0.5
+   ],
+   "speed": [
+    [
+     3.7600000000000007,
+     0.55
+    ]
+   ]
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--sam-run-warm--torso",
+   "asset": "sam-run-warm",
+   "part": "torso",
+   "z": 5,
+   "parent": "S01--sam-run-warm--root",
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": [
+    [
+     3.7600000000000007,
+     0.55
+    ]
+   ]
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--sam-run-warm--neck",
+   "asset": "sam-run-warm",
+   "part": "neck",
+   "z": 5,
+   "parent": "S01--sam-run-warm--root",
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": [
+    [
+     3.7600000000000007,
+     0.55
+    ]
+   ]
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--sam-run-warm--head-hair",
+   "asset": "sam-run-warm",
+   "part": "head-hair",
+   "z": 5,
+   "parent": "S01--sam-run-warm--root",
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": [
+    [
+     3.7600000000000007,
+     0.55
+    ]
+   ]
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--sam-run-warm--face",
+   "asset": "sam-run-warm",
+   "part": "face",
+   "z": 5,
+   "parent": "S01--sam-run-warm--root",
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": [
+    [
+     3.7600000000000007,
+     0.55
+    ]
+   ]
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--sam-run-warm--front-arm",
+   "asset": "sam-run-warm",
+   "part": "front-arm",
+   "z": 5,
+   "parent": "S01--sam-run-warm--root",
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    258,
+    244
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "swing",
+    20,
+    0.6,
+    0.0
+   ],
+   "speed": [
+    [
+     3.7600000000000007,
+     0.55
+    ]
+   ]
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--heart",
+   "asset": "heart",
+   "part": null,
+   "z": 6,
+   "parent": "S01--sam-run-warm--root",
+   "in_frame": 0,
+   "out_frame_exclusive": 137,
+   "exit": "cut",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 0,
+     "x": 188.00000000000003,
+     "y": 298.0,
+     "scale": 0.16,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "pulse",
+    0.12,
+    [
+     0.0,
+     0.55,
+     1.1,
+     1.65,
+     2.2,
+     2.75,
+     3.3
+    ]
+   ],
+   "speed": null
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--score7--circle",
+   "asset": "score7",
+   "part": "circle",
+   "z": 6,
+   "parent": null,
+   "in_frame": 43,
+   "out_frame_exclusive": 81,
+   "exit": "fade",
+   "pivot": [
+    165,
+    155
+   ],
+   "keys": [
+    {
+     "frame": 43,
+     "x": 640,
+     "y": 560,
+     "scale": 0.82,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--score7--value",
+   "asset": "score7",
+   "part": "value",
+   "z": 6,
+   "parent": null,
+   "in_frame": 43,
+   "out_frame_exclusive": 81,
+   "exit": "fade",
+   "pivot": [
+    165,
+    155
+   ],
+   "keys": [
+    {
+     "frame": 43,
+     "x": 640,
+     "y": 560,
+     "scale": 0.82,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S01",
+   "layer": "S01--text--speaker's rating",
+   "asset": "text:speaker's rating",
+   "part": null,
+   "z": 6,
+   "parent": null,
+   "in_frame": 47,
+   "out_frame_exclusive": 81,
+   "exit": "fade",
+   "pivot": [
+    143.0,
+    27.166666666666668
+   ],
+   "keys": [
+    {
+     "frame": 47,
+     "x": 631.48,
+     "y": 778.8333333333334,
+     "scale": 1.0,
+     "entry": "fade"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--sam-concern-concern--root",
+   "asset": "sam-concern-concern",
+   "part": null,
+   "z": 5,
+   "parent": null,
+   "in_frame": 137,
+   "out_frame_exclusive": 334,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 137,
+     "x": 60,
+     "y": 633.8,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--sam-concern-concern--legs",
+   "asset": "sam-concern-concern",
+   "part": "legs",
+   "z": 5,
+   "parent": "S03--sam-concern-concern--root",
+   "in_frame": 137,
+   "out_frame_exclusive": 334,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 137,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--sam-concern-concern--rear-arm",
+   "asset": "sam-concern-concern",
+   "part": "rear-arm",
+   "z": 5,
+   "parent": "S03--sam-concern-concern--root",
+   "in_frame": 137,
+   "out_frame_exclusive": 334,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 137,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--sam-concern-concern--torso",
+   "asset": "sam-concern-concern",
+   "part": "torso",
+   "z": 5,
+   "parent": "S03--sam-concern-concern--root",
+   "in_frame": 137,
+   "out_frame_exclusive": 334,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 137,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--sam-concern-concern--neck",
+   "asset": "sam-concern-concern",
+   "part": "neck",
+   "z": 5,
+   "parent": "S03--sam-concern-concern--root",
+   "in_frame": 137,
+   "out_frame_exclusive": 334,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 137,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--sam-concern-concern--head-hair",
+   "asset": "sam-concern-concern",
+   "part": "head-hair",
+   "z": 5,
+   "parent": "S03--sam-concern-concern--root",
+   "in_frame": 137,
+   "out_frame_exclusive": 334,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 137,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--sam-concern-concern--face",
+   "asset": "sam-concern-concern",
+   "part": "face",
+   "z": 5,
+   "parent": "S03--sam-concern-concern--root",
+   "in_frame": 137,
+   "out_frame_exclusive": 334,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 137,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--sam-concern-concern--front-arm",
+   "asset": "sam-concern-concern",
+   "part": "front-arm",
+   "z": 5,
+   "parent": "S03--sam-concern-concern--root",
+   "in_frame": 137,
+   "out_frame_exclusive": 334,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 137,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--joint--ring",
+   "asset": "joint",
+   "part": "ring",
+   "z": 7,
+   "parent": "S03--sam-concern-concern--root",
+   "in_frame": 230,
+   "out_frame_exclusive": 334,
+   "exit": "cut",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 230,
+     "x": 98.80000000000001,
+     "y": 401.4,
+     "scale": 0.6,
+     "entry": "pop"
+    },
+    {
+     "frame_in": 251,
+     "frame_out": 263,
+     "ease": "out",
+     "y": 500.4
+    },
+    {
+     "frame_in": 287,
+     "frame_out": 302,
+     "ease": "out",
+     "x": -72.89999999999998,
+     "y": 268.55,
+     "s": 1.45
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--joint--upper-bone",
+   "asset": "joint",
+   "part": "upper-bone",
+   "z": 6,
+   "parent": null,
+   "in_frame": 184,
+   "out_frame_exclusive": 334,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 184,
+     "x": 620,
+     "y": 560,
+     "scale": 1.0,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--joint--lower-bone",
+   "asset": "joint",
+   "part": "lower-bone",
+   "z": 6,
+   "parent": null,
+   "in_frame": 184,
+   "out_frame_exclusive": 334,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 184,
+     "x": 620,
+     "y": 560,
+     "scale": 1.0,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--joint--space",
+   "asset": "joint",
+   "part": "space",
+   "z": 6,
+   "parent": null,
+   "in_frame": 184,
+   "out_frame_exclusive": 334,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 184,
+     "x": 620,
+     "y": 560,
+     "scale": 1.0,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--arrow",
+   "asset": "arrow",
+   "part": null,
+   "z": 6,
+   "parent": null,
+   "in_frame": 232,
+   "out_frame_exclusive": 334,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 232,
+     "x": 330,
+     "y": 852,
+     "scale": 1.0,
+     "entry": "wipe"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S03",
+   "layer": "S03--text--bones \u00b7 joints \u00b7 m",
+   "asset": "text:bones \u00b7 joints \u00b7 muscles",
+   "part": null,
+   "z": 7,
+   "parent": null,
+   "in_frame": 287,
+   "out_frame_exclusive": 334,
+   "exit": "fade",
+   "pivot": [
+    232.0,
+    29.5
+   ],
+   "keys": [
+    {
+     "frame": 287,
+     "x": 528.0,
+     "y": 1050.5,
+     "scale": 1.0,
+     "entry": "fade"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--sam-stand-warm--root",
+   "asset": "sam-stand-warm",
+   "part": null,
+   "z": 5,
+   "parent": null,
+   "in_frame": 334,
+   "out_frame_exclusive": 866,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 334,
+     "x": 60,
+     "y": 633.8,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--sam-stand-warm--legs",
+   "asset": "sam-stand-warm",
+   "part": "legs",
+   "z": 5,
+   "parent": "S04--sam-stand-warm--root",
+   "in_frame": 334,
+   "out_frame_exclusive": 866,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 334,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--sam-stand-warm--rear-arm",
+   "asset": "sam-stand-warm",
+   "part": "rear-arm",
+   "z": 5,
+   "parent": "S04--sam-stand-warm--root",
+   "in_frame": 334,
+   "out_frame_exclusive": 866,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 334,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--sam-stand-warm--torso",
+   "asset": "sam-stand-warm",
+   "part": "torso",
+   "z": 5,
+   "parent": "S04--sam-stand-warm--root",
+   "in_frame": 334,
+   "out_frame_exclusive": 866,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 334,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--sam-stand-warm--neck",
+   "asset": "sam-stand-warm",
+   "part": "neck",
+   "z": 5,
+   "parent": "S04--sam-stand-warm--root",
+   "in_frame": 334,
+   "out_frame_exclusive": 866,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 334,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--sam-stand-warm--head-hair",
+   "asset": "sam-stand-warm",
+   "part": "head-hair",
+   "z": 5,
+   "parent": "S04--sam-stand-warm--root",
+   "in_frame": 334,
+   "out_frame_exclusive": 866,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 334,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--sam-stand-warm--face",
+   "asset": "sam-stand-warm",
+   "part": "face",
+   "z": 5,
+   "parent": "S04--sam-stand-warm--root",
+   "in_frame": 334,
+   "out_frame_exclusive": 866,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 334,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--sam-stand-warm--front-arm",
+   "asset": "sam-stand-warm",
+   "part": "front-arm",
+   "z": 5,
+   "parent": "S04--sam-stand-warm--root",
+   "in_frame": 334,
+   "out_frame_exclusive": 866,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 334,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--nora-open-explain--root",
+   "asset": "nora-open-explain",
+   "part": null,
+   "z": 5,
+   "parent": null,
+   "in_frame": 381,
+   "out_frame_exclusive": 587,
+   "exit": "fade",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 600,
+     "y": 633.8,
+     "scale": 1.1,
+     "entry": "slide_r"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--nora-open-explain--legs",
+   "asset": "nora-open-explain",
+   "part": "legs",
+   "z": 5,
+   "parent": "S04--nora-open-explain--root",
+   "in_frame": 381,
+   "out_frame_exclusive": 587,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--nora-open-explain--rear-arm",
+   "asset": "nora-open-explain",
+   "part": "rear-arm",
+   "z": 5,
+   "parent": "S04--nora-open-explain--root",
+   "in_frame": 381,
+   "out_frame_exclusive": 587,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--nora-open-explain--torso",
+   "asset": "nora-open-explain",
+   "part": "torso",
+   "z": 5,
+   "parent": "S04--nora-open-explain--root",
+   "in_frame": 381,
+   "out_frame_exclusive": 587,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--nora-open-explain--neck",
+   "asset": "nora-open-explain",
+   "part": "neck",
+   "z": 5,
+   "parent": "S04--nora-open-explain--root",
+   "in_frame": 381,
+   "out_frame_exclusive": 587,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--nora-open-explain--head-hair",
+   "asset": "nora-open-explain",
+   "part": "head-hair",
+   "z": 5,
+   "parent": "S04--nora-open-explain--root",
+   "in_frame": 381,
+   "out_frame_exclusive": 587,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--nora-open-explain--face",
+   "asset": "nora-open-explain",
+   "part": "face",
+   "z": 5,
+   "parent": "S04--nora-open-explain--root",
+   "in_frame": 381,
+   "out_frame_exclusive": 587,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S04",
+   "layer": "S04--nora-open-explain--front-arm",
+   "asset": "nora-open-explain",
+   "part": "front-arm",
+   "z": 5,
+   "parent": "S04--nora-open-explain--root",
+   "in_frame": 381,
+   "out_frame_exclusive": 587,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 381,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--calendar--paper",
+   "asset": "calendar",
+   "part": "paper",
+   "z": 6,
+   "parent": null,
+   "in_frame": 443,
+   "out_frame_exclusive": 587,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 443,
+     "x": 360.0,
+     "y": 420,
+     "scale": 0.9,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--calendar--binding",
+   "asset": "calendar",
+   "part": "binding",
+   "z": 6,
+   "parent": null,
+   "in_frame": 443,
+   "out_frame_exclusive": 587,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 443,
+     "x": 360.0,
+     "y": 420,
+     "scale": 0.9,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--calendar--days",
+   "asset": "calendar",
+   "part": "days",
+   "z": 6,
+   "parent": null,
+   "in_frame": 461,
+   "out_frame_exclusive": 587,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 461,
+     "x": 360.0,
+     "y": 420,
+     "scale": 0.9,
+     "entry": "wipe"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S05",
+   "layer": "S05--shoe",
+   "asset": "shoe",
+   "part": null,
+   "z": 6,
+   "parent": null,
+   "in_frame": 520,
+   "out_frame_exclusive": 587,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 520,
+     "x": 430,
+     "y": 700,
+     "scale": 0.45,
+     "entry": "fade"
+    },
+    {
+     "frame_in": 523,
+     "frame_out": 544,
+     "ease": "out",
+     "x": 520
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S06",
+   "layer": "S06--heart",
+   "asset": "heart",
+   "part": null,
+   "z": 6,
+   "parent": null,
+   "in_frame": 638,
+   "out_frame_exclusive": 869,
+   "exit": "cut",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 638,
+     "x": 248.0,
+     "y": 931.8,
+     "scale": 0.16,
+     "entry": "fade"
+    },
+    {
+     "frame_in": 638,
+     "frame_out": 655,
+     "ease": "out",
+     "x": 580.0,
+     "y": 660.0,
+     "s": 0.7
+    },
+    {
+     "frame_in": 853,
+     "frame_out": 868,
+     "ease": "inout",
+     "x": 248.0,
+     "y": 931.8,
+     "s": 0.16,
+     "o": 0.0
+    }
+   ],
+   "loop": [
+    "pulse",
+    0.07,
+    [
+     22.98,
+     28.14
+    ]
+   ],
+   "speed": null
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--lungs--left",
+   "asset": "lungs",
+   "part": "left",
+   "z": 6,
+   "parent": null,
+   "in_frame": 755,
+   "out_frame_exclusive": 862,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 755,
+     "x": 596.0,
+     "y": 436.0,
+     "scale": 0.62,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--lungs--right",
+   "asset": "lungs",
+   "part": "right",
+   "z": 6,
+   "parent": null,
+   "in_frame": 755,
+   "out_frame_exclusive": 862,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 755,
+     "x": 596.0,
+     "y": 436.0,
+     "scale": 0.62,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--lungs--airway",
+   "asset": "lungs",
+   "part": "airway",
+   "z": 6,
+   "parent": null,
+   "in_frame": 755,
+   "out_frame_exclusive": 862,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 755,
+     "x": 596.0,
+     "y": 436.0,
+     "scale": 0.62,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S07",
+   "layer": "S07--lungs--oxygen",
+   "asset": "lungs",
+   "part": "oxygen",
+   "z": 7,
+   "parent": null,
+   "in_frame": 798,
+   "out_frame_exclusive": 856,
+   "exit": "fade",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 798,
+     "x": 596.0,
+     "y": 436.0,
+     "scale": 0.62,
+     "entry": "fade"
+    },
+    {
+     "frame_in": 814,
+     "frame_out": 844,
+     "ease": "inout",
+     "y": 646.0
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--sam-run-warm--root",
+   "asset": "sam-run-warm",
+   "part": null,
+   "z": 5,
+   "parent": null,
+   "in_frame": 866,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 866,
+     "x": 60,
+     "y": 653.5999999999999,
+     "scale": 1.1,
+     "entry": "cut"
+    },
+    {
+     "frame_in": 866,
+     "frame_out": 958,
+     "ease": "linear",
+     "x": 320
+    }
+   ],
+   "loop": [
+    "hop",
+    9,
+    0.3
+   ],
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--sam-run-warm--legs",
+   "asset": "sam-run-warm",
+   "part": "legs",
+   "z": 5,
+   "parent": "S08--sam-run-warm--root",
+   "in_frame": 866,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 866,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "swing",
+    3.5,
+    0.6,
+    0.25
+   ],
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--sam-run-warm--rear-arm",
+   "asset": "sam-run-warm",
+   "part": "rear-arm",
+   "z": 5,
+   "parent": "S08--sam-run-warm--root",
+   "in_frame": 866,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    143,
+    244
+   ],
+   "keys": [
+    {
+     "frame": 866,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "swing",
+    20,
+    0.6,
+    0.5
+   ],
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--sam-run-warm--torso",
+   "asset": "sam-run-warm",
+   "part": "torso",
+   "z": 5,
+   "parent": "S08--sam-run-warm--root",
+   "in_frame": 866,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 866,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--sam-run-warm--neck",
+   "asset": "sam-run-warm",
+   "part": "neck",
+   "z": 5,
+   "parent": "S08--sam-run-warm--root",
+   "in_frame": 866,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 866,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--sam-run-warm--head-hair",
+   "asset": "sam-run-warm",
+   "part": "head-hair",
+   "z": 5,
+   "parent": "S08--sam-run-warm--root",
+   "in_frame": 866,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 866,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--sam-run-warm--face",
+   "asset": "sam-run-warm",
+   "part": "face",
+   "z": 5,
+   "parent": "S08--sam-run-warm--root",
+   "in_frame": 866,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200,
+    380
+   ],
+   "keys": [
+    {
+     "frame": 866,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--sam-run-warm--front-arm",
+   "asset": "sam-run-warm",
+   "part": "front-arm",
+   "z": 5,
+   "parent": "S08--sam-run-warm--root",
+   "in_frame": 866,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    258,
+    244
+   ],
+   "keys": [
+    {
+     "frame": 866,
+     "x": 0,
+     "y": 0,
+     "scale": 1.1,
+     "entry": "cut"
+    }
+   ],
+   "loop": [
+    "swing",
+    20,
+    0.6,
+    0.0
+   ],
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--case",
+   "asset": "stopwatch",
+   "part": "case",
+   "z": 6,
+   "parent": null,
+   "in_frame": 921,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 680,
+     "y": 520,
+     "scale": 0.7,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--crown",
+   "asset": "stopwatch",
+   "part": "crown",
+   "z": 6,
+   "parent": null,
+   "in_frame": 921,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 680,
+     "y": 520,
+     "scale": 0.7,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--dial",
+   "asset": "stopwatch",
+   "part": "dial",
+   "z": 6,
+   "parent": null,
+   "in_frame": 921,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 680,
+     "y": 520,
+     "scale": 0.7,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--hands",
+   "asset": "stopwatch",
+   "part": "hands",
+   "z": 6,
+   "parent": null,
+   "in_frame": 921,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    199.0,
+    218.5
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 680,
+     "y": 520,
+     "scale": 0.7,
+     "entry": "pop"
+    }
+   ],
+   "loop": [
+    "spin",
+    90
+   ],
+   "speed": null
+  },
+  {
+   "scene": "S08",
+   "layer": "S08--stopwatch--button",
+   "asset": "stopwatch",
+   "part": "button",
+   "z": 6,
+   "parent": null,
+   "in_frame": 921,
+   "out_frame_exclusive": 961,
+   "exit": "cut",
+   "pivot": [
+    200.0,
+    200.0
+   ],
+   "keys": [
+    {
+     "frame": 921,
+     "x": 680,
+     "y": 520,
+     "scale": 0.7,
+     "entry": "pop"
+    }
+   ],
+   "loop": null,
+   "speed": null
+  }
+ ],
+ "sfx": [
+  {
+   "t": 1.42,
+   "kind": "chime",
+   "event": "S01--score7"
+  },
+  {
+   "t": 7.68,
+   "kind": "pop",
+   "event": "S03--joint--ring"
+  },
+  {
+   "t": 6.12,
+   "kind": "soft",
+   "event": "S03--joint"
+  },
+  {
+   "t": 14.76,
+   "kind": "pop",
+   "event": "S05--calendar"
+  },
+  {
+   "t": 15.38,
+   "kind": "tick",
+   "event": "S05--calendar--days"
+  },
+  {
+   "t": 17.32,
+   "kind": "soft",
+   "event": "S05--shoe"
+  },
+  {
+   "t": 21.28,
+   "kind": "pop",
+   "event": "S06--heart"
+  },
+  {
+   "t": 25.16,
+   "kind": "pop",
+   "event": "S07--lungs"
+  },
+  {
+   "t": 30.7,
+   "kind": "pop",
+   "event": "S08--stopwatch"
+  }
+ ]
+}

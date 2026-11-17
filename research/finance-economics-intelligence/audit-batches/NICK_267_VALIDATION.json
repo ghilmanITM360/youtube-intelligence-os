@@ -1,0 +1,55 @@
+{
+ "status": "PASS",
+ "video_id": "mkcfkfPhW1U",
+ "nick": "NICK_267",
+ "claims": 14,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 19084,
+ "parent_commit": "d2541e25fe0220603f56fc96ca95ac717b4c0052",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_265",
+  "NICK_266",
+  "NICK_267"
+ ],
+ "changed_ledger_ids": [
+  "mkcfkfPhW1U"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 540,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "47_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 3.94533 STRONG (5-peer 4.46212 STRONG); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 543,
+  "remaining": 1069,
+  "original_pending": 423,
+  "expansion_pending": 646,
+  "changed_cells": "91 (dashboard 7 + rows 536-538)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "383a50fb3babd6f03fd4c2449dae34680e69f5d73ce14a1f2525f1d907922cdb"
+ },
+ "semantic_acceptance": "All 19084 stored characters and six dimensions reviewed; 14 located claim groups; sources CENSUS2024, KBBDEC. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "6f02f496c5ce3d62316bd2adb81c8875cdfb45da56d0f212a175580ea3ddb069",
+  "NICK_267.json": "ec683cad7a7e33e089f050d85e734049daec825b138c5c6ef7efa939944faad4",
+  "NICK_267_READ_RECEIPTS.json": "7b37d3ac36f3c1a161fca63e5fc7af5535cf3ed05dce067f54cf0799e2dc5157",
+  "thumbnail": "9e1fffc1fa8e4a761d171f5325eb57a92494279c16e5bbf2c968027073226c74"
+ }
+}

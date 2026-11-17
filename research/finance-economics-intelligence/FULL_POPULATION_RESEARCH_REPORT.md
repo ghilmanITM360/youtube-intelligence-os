@@ -1,0 +1,118 @@
+## Population extension — 2026-10-21
+
+The frozen 966-video audit remains unchanged at 429 complete and 537 remaining.
+The existing 197-video expansion also remains unchanged and 0 deep-complete.
+PR #38 contributes a separate 76-public-video MonkeyExplains1999 collection (61
+regular, 15 Shorts); individual title/description classification yields 63
+eligible unique Finance/Economics additions, 13 exclusions, and zero overlap
+with the prior 1,163 IDs. Combined population is 1,226. All 63 additions remain
+`METADATA_ONLY_NOT_DEEP_AUDITED`; see
+`expansion-monkey-explains-1999-2026-10-21/` for the source, crosswalk,
+provenance, checksums, and validation.
+
+## Latest continuation — 2026-10-18: Nick14/363; 281 expanded
+
+Fourteen individually authored reviews added in NICK_001/002/003; 281/966 expanded (29.09%), 685 remaining, title/actual-image291 each. Full stored script/topic/virality281 each. Carl, Brimm, Primate, Crayon complete; Lucas95 handled including10partial. Next14gilFEp_Iw, no reading begun. Details and primary source receipts reside in the batch JSON and EVENT_SOURCES; read receipts certify contiguous stored-text coverage, not original audio.
+
+Payday4.33976xSTRONG contrasts2030doom0.4549xWEAK/basicliteracy0.32143xWEAK and upgrade1.60821xTYPICAL. Actual inspected white/cartoon templates and financial anxiety occur across different outcomes. Realestate1.98045x versusrentbuy0.66627x bothTYPICAL; paired images show categorical stock rejection versus neutral question, but age/distribution/topic differences prohibit causal interpretation. Genuine BOJ and jobs publication windows likewise produced typical frozen outcomes. Two new records have no defensible normalized tier (0.138-day upload and missing date); ratios/peer pools remain blank.
+
+Claims checked include debt-cohort retirement arithmetic, compound-value errors, selected survey denominators, hypothetical homeowner cashflow, flood coverage and loan-policy timing. Selected/reused social clips are not independent prevalence evidence. Five-year inflation projections, gross/net wages and real/nominal returns must remain distinct. Missing11transcripts/6performance-source blockers/10handledpartials/privateanalytics/Trends preserved.
+
+JSONL and allsevenCSVviews966uniqueIDs;952outside-sessionrecords unchanged. Fresh16tests/two validators and26immutablehashes PASS. Workbook refreshed281/291 with307legacy-inclusive readings, cachedsourcehash/counts/IDs and3previews verified; artifact recalculation tested, nativeExcel recalculation UNTESTED. Live90percentfivehour/28weekly resource stop. Exact next14gilFEp_Iw. See latest RESUME section for commit/CI verification instructions.
+
+## Current continuation checkpoint — 2026-10-18 (CARL_008 consolidated resource stop)
+
+This section supersedes historical checkpoints below. Read this section only for recovery; do not reload the historical handoff.
+
+- Expanded **267/966 (27.64%)**, **699 remaining**, including 10 handled members-only partials. Title/actual-thumbnail **277 each**; full stored-script/topic/individual-virality **267 each**. This continuation adds18 reviews (CARL_007 ten, CARL_008 eight). Carl Invests **80/80 complete handling**, all COMPLETE_LIMITED_EVIDENCE. Brimm44/44, Primate28/28, Crayon30/30 complete; Lucas95 handled(85 expanded,10 partial).
+- Exact next **-CbNGP9H4xw**, **Nick Invests** (0/363), “Once You Get Money, Upgrade These 10 Things Immediately”. No next source acquisition, thumbnail inspection, transcript extraction or authored review was started. Resume Nick in immutable VIDEO_MASTER order with a new batch; reuse existing sources/receipts where present.
+- Carl reconciliation and full80-row comparison: **CARL_COMPLETE_AUDIT.md**. Frozen tiers23STRONG/25TYPICAL/28WEAK/4INSUFFICIENT_DATA. The four young-window records retain blank normalized ratio/peer pools; source revalidation is complete, not a fabricated eligible tier. Eleven transcript-source gaps, six performance-source blockers and private-metric limitations unchanged population-wide.
+- New counterexamples: compounding threshold rnbg51.38486xSTRONG versus100krulew50.10915xWEAK andsavingthresholdo20.76652xTYPICAL. Average-salarynd3.02327xSTRONG versuswindfallow0.16343xWEAK. GenuineJune12SpaceXdebutqf0.99004xTYPICAL; genuineApril1survey/April14retirementlieog0.20843xWEAK. The1,000monthlysequelw7 has81930savedviewsat5.486daysbutINSUFFICIENT_DATA; do not call normalizedSTRONG. Findings are descriptive associations/hypotheses, not causal packaging explanations.
+- Material discrepancies include actual18Mthumbnailversus1.4–1.8mscript, rnbg108kcontributionsstated18k/Lisa75%versus99%, o2SSAportfoliooffset900k→300knot600k, qymloan852.45not750, qfhidden8xterminalmultiple/unverifiedcrashchart, t_Qcoffee7/10yearclockandstaleCPI, savings/networth/providerpopulationconflation, Roth/FDIC/inherited-basis/withdrawal-horizonqualifications. HistoricalTrendsseries unavailable; no privateCTR/impressions/retention/satisfaction invented. Individual receipts preserve external-access limitations, including S1 numerical tables not fully retrieved.
+- All18newstoredtexts were read in bounded sequential chunks; CARL_007/008_READ_RECEIPTS record contiguous character ranges and SHA256. All18actualimages inspected individually. StoredASR is not audio certification; unfinished stored endings flagged. 948 JSONL records outside18newreviews unchanged againststarting8acec59731ee58bc4a2a7f394af7a2c689c17c69;958outsideCARL_008 unchanged againstparent e81bcc838cc21ce5bff2b550806903c5ac4c5ccb.
+- Fresh16researchtests andbothvalidators PASS;26immutablebaselinehashes checked; source/image/reference checks and18contiguous-reading/hash checks PASS. SevenCSVviews each966uniqueIDs reconcile. Validators are structural, not independent semantic-entailment certification. Secrets and whitespace checked before commit.
+- **Excel refreshed to267expanded/277title-image, zero lag**. Coverage277/277/267/267/960/267;966populationIDs/293readingsincludinglegacy, distinctcounts293titles/290images/283topics/271fulltexts. Existing builder reused unchanged; artifact-engine recalculation/inputmutation-restore/formula-error scan0 performed; allthreepreviews inspected. Exportedcachedcounts/sourcehash independentlychecked; tablesA4:U970/A4:L297. Worksheetdimensionmetadata omitted byexport, so actual bounded IDs/tableXMLverified instead of assuming openpyxl max_row. NativeExcelapplicationrecalculation **UNTESTED**.
+- Workbook auditSHA256 **c80055b54aba60440205312d181fe9505b0eff4654067dc05535053924452219**, visiblebaseGitHEAD **e81bcc838cc21ce5bff2b550806903c5ac4c5ccb** plusCARL_008workingdata. Do not describe it as containing the later commit hash.
+- ParentCARL_007 local/remote/PRhead **e81bcc838cc21ce5bff2b550806903c5ac4c5ccb** verified; its exact-headCI **39113504663 SUCCESS**. Finalconsolidation commit follows: read live local/remote/PRSHA and its own CI, never transferparentSUCCESS. ExistingdraftPR36open/no merge; existingbranch,threeunrelatedfolders,stash/worktrees/rawbaselinepreserved.
+- **Resource gate:** spreadsheet-skill tool output was actually truncated (“Warning: truncated output”), including a later bounded read. User says to stop initiating expensive work after truncated tool output. Only active Carl validation/consolidation/workbook/persistence continued; no Nick research started. LatestLIVE five-hour **42%**, weekly **20%**; context percentage unavailable. This is a tool-truncation gate, not a claim that usage90% or measuredcontextcapacity was reached. Next session check fresh indicators before research.
+
+### Previous continuation checkpoint — 2026-10-18 (CARL_007)
+
+This section supersedes historical checkpoints below.
+
+- Expanded **259/966 (26.81%)**, **707 remaining**, including 10 handled partials. Carl Invests **72/80**, eight remaining. Title/actual thumbnail **269 each**; full stored script/topic/individual virality **259 each**. Brimm44/44, Primate28/28, Crayon30/30 complete; Lucas95 handled (85 expanded,10 partial).
+- CARL_007 adds ten consecutive IDs nWlaR6AnbuQ through s4w8cyfnXUA. Exact next **s_G83pcoOhE**, “Average Savings by Age in 2026 (You Might Be Doing Better Than Most Americans)”. No next acquired/unreviewed item. All ten stored transcripts extracted locally and read in bounded sequential character ranges; receipts record contiguous coverage and hashes. Actual saved images inspected individually. Original audio/ASR accuracy remains unverified.
+- Counterexamples: compounding threshold rnbg **51.38486x STRONG** versus saving threshold o2 **0.76652x TYPICAL**; ten-year retirement nW **1.07945x TYPICAL** versus100/500monthly strong. Average-salary nd **3.02327x STRONG** versus windfall ow **0.16343x WEAK**. Retirement-lie og **0.20843x WEAK** despite genuine April1 survey context; SpaceX IPO qf **0.99004x TYPICAL** despite genuine June12 debut. Public normalized performance is descriptive, not causal packaging proof.
+- Material discrepancies: rnbg contributions108k stated18k, Lisa growth75% not99%; qs actual thumbnail18M unsupported by1.4–1.8m script and HSA55 catch-up counted from50; o2 SSA offset900k should300k not600k; qym50k/7%/72 loan852.45 not750, coffee time16.67 not24; qf566b terminal revenue assumes unstated~8x sales multiple and crash chart unverified; ow growth-only conversion tax24162 not30762 and inherited-basis/FDIC/Roth-heir caveats. Full individual reviews retain qualifications.
+- Eleven transcript-source gaps, ten handled partials and six performance blockers preserved. Historical Google Trends series and privateCTR/impressions/retention/satisfaction unavailable. Primary receipts often search-excerpt-only; S1 numerical-table access gap explicit, no endpoint retry loop.
+- JSONL and seven CSVs reconcile966 unique IDs;956 outside-batch JSONL records unchanged against8acec59731ee58bc4a2a7f394af7a2c689c17c69. Both validators and16research tests PASS;26immutable hashes checked. Structural validation is not semantic entailment certification. Secrets/whitespace rechecked before commit.
+- Excel remains at249expanded/259title-image: **ten-review lag**, refresh at Carl consolidation. No workbook recalculation claimed forCARL_007.
+- Recovery local/remote/PR8acec59731ee58bc4a2a7f394af7a2c689c17c69 matched; its exact-headCI39080663073 SUCCESS. New commit identity/CI must be checked after push. Existing draft PR36 remains open; no merge. Three unrelated folders, stash/worktrees and source baselines preserved.
+- Fresh LIVE five-hour16%, weekly16%; context percentage unavailable, no new truncation warning. Continue remaining eight Carl records after atomic persistence; no resource stop gate reached.
+
+
+## Current continuation checkpoint — 2026-10-18 (CARL_006 resource stop)
+
+This section supersedes historical checkpoints below.
+
+- Expanded **249/966 (25.78%)**, **717 remaining**, including 10 handled partials. Carl Invests **62/80**, 18 remaining. Title/actual thumbnail **259 each**; full stored script/topic/individual virality **249 each**. This continuation adds 32 reviews across CARL_004 (15), CARL_005 (15), CARL_006 (2). Brimm 44/44, Primate 28/28, Crayon 30/30 complete; Lucas 95 handled (85 expanded, 10 partial).
+- Exact next **nWlaR6AnbuQ**, Carl Invests, “How Much You NEED To Invest Every Month to RETIRE in 10 Years? (So FEW)”. Thumbnail acquisition receipt exists; transcript extraction was attempted but output exceeded available context. **Full transcript reading and actual-image inspection are not certified; review not authored or complete.** Reuse saved image, read complete stored text and author next review; never repeat completed research.
+- CARL_006 contains only ljtRgiCw3V8 and meCLHj5dGho, consecutive frozen-master IDs. Fake-rich list **0.19913x WEAK** versus earlier secret-wealth **24.31439x STRONG**; age-40 milestones **4.44892x STRONG** versus age-40 upgrades **0.26516x WEAK** and age-45 signs **0.96965x TYPICAL**. Status detection, age and list packaging alone do not explain outcomes. Comparisons are descriptive public performance, not causal explanations or measured CTR/satisfaction.
+- Credibility: 1,100 monthly for ten years at 8% produces about 201k, not 250k without different assumptions; financing does not prove fake wealth. Age-40 script has useful conditional mortgage/insurance caveats and correct 2026 contribution limit, but retirement investment projections omit delay while clearing debt. Official BLS wage and SSA disability sources retained with population/date limitations. No historical Google Trends series or private metrics fabricated.
+- Eleven transcript-source gaps and six performance-source blockers unchanged. Stored ASR is not original-audio certification; source access and hypothetical cases remain qualified.
+- Resource stop: fresh live five-hour **84%**, weekly **13%**, context percentage unavailable. Actual tool warning: “Output exceeded the available model context and was truncated.” This is the user-specified serious-context stop condition. Finish validation/workbook/persistence only, then resume next session with fresh usage. No new expensive research.
+- JSONL and seven CSVs rebuilt at 249 expanded / 259 title-image. Workbook refresh and final validation are recorded below after actual checks. Parent local/remote/PR head **218ae9f08dedcdcde4b8ab2c1f26b0ed57b47ba7**, own exact-head CI **39080344591 SUCCESS**. New commit head must be read live after push; never reuse parent CI. Existing draft PR #36 remains open; no merge. Unrelated folders, stash/worktrees and immutable raw evidence preserved.
+
+- Final checks: 16 research tests and both validators PASS; 26 immutable baseline hashes verified by validator. All seven CSVs reconcile 966 unique IDs; 964 records outside CARL_006 unchanged against parent. Workbook refreshed to 249/259 with 966 population rows and 275 legacy-inclusive readings; artifact-engine recalculation, input mutation/restore, zero formula errors and all three previews checked. Exported cached counts and JSONL SHA independently verified. Native Excel application recalculation UNTESTED. Workbook base HEAD is 218ae9f08dedcdcde4b8ab2c1f26b0ed57b47ba7 plus CARL_006 data; audit SHA256 b8304a054635a91d9fd9322231829457a66d1667a4de89a6c2f81df7c448f139. Final commit/CI identity must be read live from PR #36.
+
+## 2026-10-18 continuation: CARL_005 and consolidated workbook
+
+247/966 expanded, title/thumbnail257 and script/topic/virality247; Carl60/80. JSONL/7CSVs/workbook agree, zero lag. Two young new reviews retain INSUFFICIENT_DATA/blank ratios while original automated performance-revalidation status remains complete; six original performance-source blockers and11transcript gaps preserved. Thirty new reviews this continuation, no previous reviews overwritten.
+
+Counterexamples:20ksecurity3.43x versus20khowto0.45x; wealthranking10.45x versusemotionallevels0.32x; age45milestones7.75x versus45signs0.97x; low-salarymillionaire7.94x versusearliersalarypath0.78x. Controlled tests warranted, not causal success rules. Yencrisis0.17x has genuinepreuploadJuly31intervention confirmedbyMOFAug3, showing timelinessaloneinsufficient. MOFsaysFIMAuseplannedinthefuture; scriptclaimsactualdeploymentwithouttransactionproof. Details inCARL_005/EVENT_SOURCES.
+
+Workbook artifact-engine recalculation, mutation/restore, formula scan and3preview inspections performed; exportedcachedcounts/sourcehash independentlychecked, nativeExceluntested. Currentdatahash b6356d3f342d4435c456d443a1c12ccfa26b6c789579bcef9ef2a8926cf9d074.16researchtests andbothvalidatorsPASS,26immutablehashes unchanged.
+
+## 2026-10-18 continuation: CARL_004
+
+232/966 expanded reviews; title/actual thumbnail242, script/topic/virality232. Carl45/80. Fifteen new individual reviews in immutable order, no prior records overwritten. JSONL/CSV current; Excel217expanded/227title-image,15-review lag pending consolidation. Public-only framework and source limits remain: no private appeal/engagement/satisfaction metrics, no recovered historical Trends series,11transcript gaps and6performance blockers.
+
+Promising hypothesis: accessible monthly-contribution map (500monthly55.63x, prior100monthly160.55x) versus first20khowto0.45x. Counterexamples prohibit claiming all numerical finance packages win. Milestones40s5.43x versus upgrades40s0.27x and ahead45signs0.97x similarly limit age-based explanations. Strong performance does not validate arithmetic:500million condition includes employer match and case ending balances change. Other material errors include20kallocation missing4k, three missed matches modeled as20yearannuity, mortgage comparison mixing total assets with interest savings, HYSA fictional worst-case guarantee, and machine-business revenue called passive income. Full details, image observations, complete-stored-text receipts, calculations and source limitations are in CARL_004 and EVENT_SOURCES.
+
+Current checkpoint (2026-10-18, CARL_003/workbook):217/966expanded,749remaining;227title/actualimage;217storedscript/topic/individualvirality;Carl30/80,Brimm44/44. Excel/JSONL/seven966rowCSVs reconciled withzero lag. NextI9Yscvqrrt0. Fresh16tests/bothvalidators/26sourcehashesPASS. Context-capacity handoff;fivehour25%/weekly4%notthresholdstops. Details in RESUME_HERE.md. Historical summaries below superseded.
+
+Current checkpoint (2026-10-18, CARL_002):215/966expanded;225title/actualimage;215storedscript/topic/individualvirality;Carl28/80,Brimm44/44. Seven966rowCSVs/JSONLvalidated;Excel remains200/210 consolidated with15reviewlag. NextH5n8dGfAmVE. Details/source limitations in RESUME_HERE.md and audit-batches/CARL_002.json. Historical checkpoints below are superseded.
+
+Current continuation checkpoint: 200/966 expanded; 766 not expanded; title/image210 each; script/topic/virality200 each. Brimm44/44, Carl Invests13/80. Refreshed workbook200 expanded/227 readings, seven CSV populations reconciled. See RESUME_HERE.md for resource stop and exact next ID7sbA9WZrfHk. Historical report below.
+
+# Finance and Economics: 966-video audit
+
+Status: **FULL_POPULATION_RESEARCH_IN_PROGRESS**. Scope is all 966 canonical videos across 13 channels. The old 30-video sampling ceiling is revoked. File presence does not establish analytical completion.
+
+The immutable universe is `audit-baseline/VIDEO_IDS.csv`; the source master is preserved byte-for-byte in `audit-baseline/VIDEO_MASTER.csv`. `MANIFEST.json` records 26 source hashes. One row per ID exists in each requested audit table. Pending rows contain identity/source/status, not invented interpretations.
+
+Current consolidated checkpoint (2026-10-17): **187/966 expanded individual assessments**, **779 not expanded** including ten handled members-only partial records. Title and actual-image review coverage is **197 each**; full stored script, topic and individual virality coverage is **187 each**. All expanded completions remain `COMPLETE_LIMITED_EVIDENCE`; none certifies original audio, editing or private analytics.
+
+Completed channels: Primate Economics 28/28, Crayon Capital 30/30, Brimm 44/44. Lucas Grant is 95/95 handled: 85 expanded and ten title/image-only members records with other dimensions blocked. Brimm’s channel synthesis and meaningful strong/typical/weak counterexamples are in `BRIMM_COMPLETE_AUDIT.md`. Next immutable master-order record is Carl Invests `-HeOz5CF9ys`, “9 Signs Someone is Secretly Wealthy”.
+
+The workbook and all derived 966-row CSVs reconcile to authoritative JSONL at this checkpoint: 197 title/image and 187 script/topic/virality assessments, with 214 reading rows including legacy material. Workbook coverage formulas were recalculated in the artifact engine, mutation-tested and restored; exported cached counts, filters and source hash were independently checked. Native Excel application recalculation was not tested. Do not confuse legacy reading totals with expanded completion.
+
+Performance classifications remain 179 strong, 383 typical, 161 weak and 243 insufficient across the full population. Current source-aware component statuses mark 960 performance reviews complete and six blocked, preserving missing public performance sources. Automated metadata classification is distinct from the 187 individual virality interpretations. Brimm contains 13 strong, 13 typical, 14 weak and four insufficient records; insufficient records receive no invented ratio.
+
+Primary-reference checks reveal material credibility issues even in strong videos. Berlin’s thumbnail claims Berghain closure while its script presents a protected surviving venue; the airline-layout outlier mixes return fares and a one-flight profit framing. Near-identical tourism titles and related local/property illustrations produce both strong and weak results. These are counterexamples to universal formulas, not causal findings. Full details, calculations, dated source URLs and access limitations live in each batch record. Many primary pages were available only as search excerpts; this does not constitute full-source validation.
+
+Eleven population transcript gaps remain. Historical Google Trends acquisition was inaccessible; no values were inferred. No first-party CTR, retention, impressions, traffic, satisfaction or causal view explanation exists. YouTube appeal, engagement and satisfaction are interpretation questions; topic interest and competition remain unmeasured external factors.
+
+Rebuild with `build_audit_966.py`, validate with `validate_audit_966.py`. `VALIDATION_966.json` is the authoritative machine coverage report; the legacy `VALIDATION.json` describes only legacy tables. Research validation is explicit and separate from general repository CI.
+
+The missing-URL acquisition pass stopped on its first metadata HTTP 429 (`-UdMJ-EtLDI`); 158 remaining requests were not attempted. No retry/bypass or permanent unavailability inference. See LEGACY_THUMBNAIL_RECOVERY_001.json.
+# Repository-wide synchronized universe (2026-10-21)
+
+The authoritative combined index is now
+`reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv`: 1,612 unique
+Video IDs, comprising the immutable 966, the existing 197 and 63 expansions,
+180 committed landscape records, and 206 Casually Finance records pinned to
+commit `fb1e56d03e5ad53086c74247cd2972b262d09b78`. The 386 new records are
+metadata-only. After `NICK_154`, deep-audit completion is 430 complete and 1,182
+remaining. See the versioned directory README and validation JSON for exact
+provenance, channel coverage and blockers.

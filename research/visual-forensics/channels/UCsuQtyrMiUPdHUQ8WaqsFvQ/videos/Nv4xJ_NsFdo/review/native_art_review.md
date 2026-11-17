@@ -1,0 +1,5 @@
+Primary reviewer (Claude Opus session 85559743) opened `frames/native/NATIVE_002618.jpg` (G0073, frame 2618, PTS 52.36 s, 1:1 native crop 821x948 of 1080x1920 portrait).
+OBSERVED: cute standing goat in black line on white (two curved banded horns, floppy ears, large glossy black eyes with white highlights, small smile, fluffy tufts at chest/tail, dark hooves) with a thick flat red X laid over the whole figure, X drawn beneath part of the black outlines (outline passes over red at eyes/legs) — layered as a fill behind line art or drawn into the same plate. Heavier stroke than landscape titles (median 20 px, p25-p75 18-21.2 for portrait 1080 width). Flat colour, no gradient. Rendering style is softer/"kawaii" (glossy eye highlights) compared with the caveman grammar.
+INFERRED (medium): red X negation mark (also seen in uIG2U_1xynQ, W8AVd7RhTME) — "not a goat"/rejection beat. Alternative: elimination in a list.
+UNAVAILABLE: software, typeface, generation method; whether X is a separate overlay layer.
+NATIVE_002016 (G0057) and NATIVE_001842 (G0053) extracted, not opened. Encoding audit: 8 encoder-artifact frames (4 I-frames).

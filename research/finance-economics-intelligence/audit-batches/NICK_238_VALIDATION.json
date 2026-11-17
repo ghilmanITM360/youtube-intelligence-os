@@ -1,0 +1,55 @@
+{
+ "status": "PASS",
+ "video_id": "hDoFNuIDTiI",
+ "nick": "NICK_238",
+ "claims": 17,
+ "sources": 1,
+ "calculations": 2,
+ "transcript_chars": 18318,
+ "parent_commit": "5d7f78ee65bf12cc57141d0a19935eda7030b155",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_236",
+  "NICK_237",
+  "NICK_238"
+ ],
+ "changed_ledger_ids": [
+  "hDoFNuIDTiI"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 511,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "47_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.53610 TYPICAL (5-peer 1.05173 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 514,
+  "remaining": 1098,
+  "original_pending": 452,
+  "expansion_pending": 646,
+  "changed_cells": "91 (dashboard 7 + rows 507-509)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "8f2413ba4297ed5d23f9ba7d973e5c476bcc9abfb58d53231b642d5b836ae08a"
+ },
+ "semantic_acceptance": "All 18318 stored characters and six dimensions reviewed; 17 located claim groups; sources SHED1. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "684fcb6da9ed3f5fc7025eb5f0bd7485d5e9dd99aaa3b6344752c42baf3d9361",
+  "NICK_238.json": "fef5ee751a1485d08e74963caee795a1c499d80b7948d49146ae84017eeaa4ca",
+  "NICK_238_READ_RECEIPTS.json": "0950024bcc88fe7c01c734211af76d3d47227b0c391ea6c4205c281862334377",
+  "thumbnail": "adcbe87b19f1e656ad2de8f7a6ef87712317fb3a1edcd55d7054b1c159aacddf"
+ }
+}

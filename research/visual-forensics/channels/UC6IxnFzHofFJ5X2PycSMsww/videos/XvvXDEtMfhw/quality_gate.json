@@ -1,0 +1,132 @@
+{
+ "video_id": "XvvXDEtMfhw",
+ "source_sha256": "3c3aec53cae1be7d81b90ce8d9e341abe1a4e125e2206d318184830341c9ad31",
+ "requested_mode": "DEEP",
+ "generated_utc": "2026-11-04T16:33:52Z",
+ "review_scope": {
+  "source_seconds_total": 106.022313,
+  "overview_sampling_hz": "every decoded frame measured",
+  "native_intervals_reviewed": "settled frame of every HOLD + sampled ACTIVITY frames at 1/4 scale (see coverage.json)",
+  "unreviewed_or_unverified_intervals": [
+   {
+    "seg": "G0014",
+    "start": 13.5833,
+    "end": 14.0417,
+    "unviewed_frames": 7
+   },
+   {
+    "seg": "G0016",
+    "start": 15.1667,
+    "end": 15.6667,
+    "unviewed_frames": 7
+   },
+   {
+    "seg": "G0018",
+    "start": 17.0417,
+    "end": 17.5834,
+    "unviewed_frames": 8
+   },
+   {
+    "seg": "G0020",
+    "start": 20.0417,
+    "end": 20.4584,
+    "unviewed_frames": 6
+   },
+   {
+    "seg": "G0032",
+    "start": 37.9167,
+    "end": 38.4167,
+    "unviewed_frames": 7
+   },
+   {
+    "seg": "G0048",
+    "start": 67.9167,
+    "end": 68.4167,
+    "unviewed_frames": 7
+   },
+   {
+    "seg": "G0050",
+    "start": 70.125,
+    "end": 70.4167,
+    "unviewed_frames": 4
+   },
+   {
+    "seg": "G0054",
+    "start": 72.6667,
+    "end": 72.9167,
+    "unviewed_frames": 3
+   },
+   {
+    "seg": "G0064",
+    "start": 81.75,
+    "end": 82.0417,
+    "unviewed_frames": 4
+   },
+   {
+    "seg": "G0066",
+    "start": 84.375,
+    "end": 84.625,
+    "unviewed_frames": 3
+   },
+   {
+    "seg": "G0068",
+    "start": 88.4583,
+    "end": 88.7084,
+    "unviewed_frames": 3
+   },
+   {
+    "seg": "G0070",
+    "start": 93.75,
+    "end": 94.0,
+    "unviewed_frames": 3
+   },
+   {
+    "seg": "G0072",
+    "start": 98.0,
+    "end": 98.25,
+    "unviewed_frames": 3
+   },
+   {
+    "seg": "G0076",
+    "start": 103.125,
+    "end": 103.3334,
+    "unviewed_frames": 3
+   }
+  ]
+ },
+ "gates": {
+  "source_identity": "PASS",
+  "full_temporal_overview": "PASS",
+  "candidate_shots_verified": "PASS",
+  "meaningful_state_timing": "PARTIAL",
+  "motion_design_review": "PARTIAL",
+  "creative_design_review": "PARTIAL",
+  "visual_script_mapping": "PARTIAL",
+  "production_blueprint": "PARTIAL",
+  "audio_human_listening": "BLOCKED",
+  "final_av_signoff": "BLOCKED"
+ },
+ "gate_evidence": {
+  "source_identity": "source_manifest.json + census/census.csv (channel tab listing)",
+  "full_temporal_overview": "tables/FULL_FRAME_MEASUREMENTS.csv all frames; tables/segments_v1.csv covers every frame",
+  "candidate_shots_verified": "tables/state_ledger.csv every segment classified from viewed tiles",
+  "meaningful_state_timing": "frame-precise onsets from measurements; unresolved: ['G0074']",
+  "motion_design_review": "24/38 activities viewed at every frame",
+  "creative_design_review": "visual_ct_scan_report.md \u00a74 + tables/palette_measured.json (tile-scale)",
+  "visual_script_mapping": "audio_visual_alignment.csv ASR_UNCERTIFIED; ASR-vs-caption ratio 0.9644",
+  "production_blueprint": "reconstruction_blueprint.md (derived prompts; no render test yet)",
+  "audio_human_listening": "campaign/AUDIO_LISTENING_CAPABILITY.json BLOCKED_CAPABILITY"
+ },
+ "final_video_status": "VISUAL_ANALYSIS_PARTIAL",
+ "overall": "PARTIAL",
+ "ct_scan_complete": false,
+ "full_av_signoff": false,
+ "limitations": [
+  "no actual listening",
+  "activity in-between frames sampled where noted",
+  "tile-scale (1/4) art review; small text partly illegible",
+  "reconstruction not render-tested per video"
+ ],
+ "reviewer": "rv1_XvvXDEtMfhw",
+ "next_step": "independent review sample; reconstruction test via channel manual"
+}

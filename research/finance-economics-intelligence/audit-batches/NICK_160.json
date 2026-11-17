@@ -1,0 +1,91 @@
+{
+  "batch_id": "NICK_160",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "reviews": [
+    {
+      "Video_ID": "SLFcypMv6I0",
+      "review_date": "2026-10-21",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": ["VIDEO_MASTER.csv:SLFcypMv6I0", "TRANSCRIPT_COVERAGE.csv:SLFcypMv6I0", "audit-batches/NICK_160_READ_RECEIPTS.json"],
+        "peer_comparison_ids": ["BvL3P2wSWPM", "iUANZCNnJQI", "1Ygx1AP3hDA", "vS_FN5rpfis", "Kgdvr1tkPNQ", "epARf5FqE_I", "xrzV3G-Iorg", "Xtri19wLdJw", "-ZcdgylpeJg", "ztNMEqJUgUk"],
+        "analysis": "The title combines a just-happened market event with a direct warning and a knowledge-gap promise. SpaceX had gone public five days before publication, so the timing premise was accurate. The phrasing implies evidence strong enough to justify not buying, while the script's more defensible conclusion is conditional: distinguish an exceptional company from an extreme entry valuation and size exposure for uncertainty. Frozen performance is 1.03859x TYPICAL against ten peers and 1.47811x TYPICAL against five; public counts cannot isolate a title effect.",
+        "search_demand": "Event-driven demand around the June 2026 SpaceX IPO; historical query volume, recommendation exposure and traffic sources are unavailable.",
+        "script_alignment": "Strong alignment on IPO valuation, float, governance and patience, but the categorical warning and crash-coded thumbnail are stronger than the script's allowance that long-term buyers could still succeed."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": ["VIDEO_MASTER.csv:SLFcypMv6I0", "THUMBNAIL_COVERAGE.csv:SLFcypMv6I0", "audit-batches/NICK_160_READ_RECEIPTS.json"],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_SLFcypMv6I0.jpg",
+        "image_source": "https://i.ytimg.com/vi/SLFcypMv6I0/hqdefault.jpg",
+        "image_sha256": "570462b09fe4e27f09352c6d4dc2c33fefb21061097426de05173bfe6c5c7e36",
+        "dimensions": [480, 360],
+        "mobile_review_width": 240,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "The registered 480x360 image uses large black 'A TRAP?!' text, a skeptical cartoon figure, a green run-up turning into a red vertical fall, an arrow and a small SPACEX label. At 240x180 the warning, figure and rise-then-crash pattern remain legible; SPACEX is readable but secondary. The design communicates downside certainty more strongly than the script, and the image is the registered hqdefault rendition with black letterboxing rather than a native 1280x720 asset. Historical art, impressions, CTR and tests are unavailable."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": ["VIDEO_MASTER.csv:SLFcypMv6I0", "TRANSCRIPT_COVERAGE.csv:SLFcypMv6I0", "audit-batches/NICK_160_READ_RECEIPTS.json"],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; auto-generated captions; original audio, timed delivery and editing unverified",
+        "opening_words": "Jerome refreshes the app for the fourth time in 90 seconds. Friday morning, the ticker finally goes live and there it is, SPCE climbing 170, 180, 200. He's waited 18 months for this, the chance to own a piece of the company that lands rockets like it's parallel parking.",
+        "ending_words": "There is no trophy for buying first. There's no medal for catching the top of the pop. The prize in investing doesn't go to the person who's earliest or loudest. It goes to the person who's still standing, still calm, still buying good things at fair prices long after everyone else has moved on to the next shiny rocket. Be that person, watch, wait, run the numbers, and let the confetti settle before you decide it's a party worth paying for. If this helped you think a little more clearly, the community links down below, and I'll see you in the next one.",
+        "beat_map": ["Jerome buys the post-IPO surge", "Great-company versus sane-price thesis", "Offering size and record framing", "Revenue, loss and price-to-sales valuation", "Bull case and execution dependencies", "Small float and anticipated index demand", "First-day underpricing transfer", "Dual-class governance and key-person risk", "IPO base-rate and named losers", "ARM, Reddit and Tesla counterexamples", "Great company versus good stock callback", "Lock-up supply and patience", "Alternative entry methods and closing discipline"],
+        "analysis": "The script opens with a concrete FOMO vignette, states its price-versus-quality thesis early, then moves through valuation, float, governance, historical base rates and counterexamples before returning to Jerome. It is unusually balanced for a warning video because it names successful IPO counterexamples and concedes that SpaceX may compound for decades. The central valuation arithmetic is reproducible, but several statements overstate what was known on publication day: the opening ticker is misnamed SPCE rather than SPCX; the actual debut opened at $150, not around $170-$200; Nasdaq-100 inclusion was not announced until June 26; and index trackers buy because they track an index, not because every index fund is universally forced to own every qualifying company. The script also treats a broad IPO base rate and later share unlocks as if they predict SpaceX's path, which they do not.",
+        "claim_audit": [
+          "IDENTITY ERROR: The opening says ticker SPCE, which is Virgin Galactic. SpaceX listed as SPCX. This is material because the story purports to quote live app prices for the target security.",
+          "PRICE SEQUENCE OVERSTATED: Nasdaq says SPCX opened at $150 on June 12, 11% above the $135 offer. It later traded above $200 during the first week, so a $206 purchase was possible, but not at the initial opening described. The $206/$135 premium is 52.59%, reasonably rounded to 50%.",
+          "OFFERING MATH SUPPORTED WITH GROSS/NET DISTINCTION: 555,555,555 shares at $135 equals about $75.0 billion gross. After the full 15% over-allotment, 638,888,888 shares imply $86.25 billion gross; the later 10-Q reports $85.675 billion net after $575 million of commissions and costs. Calling $85.7 billion the total is accurate only as net proceeds, not gross offering size.",
+          "VALUATION MULTIPLE REPRODUCES: $1.77 trillion divided by 2025 revenue of $18.674 billion is about 94.79x sales. The filing supports roughly $4.94 billion GAAP net loss and a roughly $41.3 billion accumulated deficit, but those consolidated figures include acquired xAI/X history and should not be presented as pure legacy rocket-company economics.",
+          "STARLINK CLAIM PARTLY SUPPORTED: The S-1 reports about 10.3 million subscribers at March 31, 2026 and profitable Connectivity segment operations. 'Mostly buying Starlink' and software-like margins are valuation interpretations; the listed company also contains Space and AI segments and their assets, liabilities and growth options.",
+          "FLOAT APPROXIMATION: The base 555.6 million offering was about 4.4% of approximately 12.52 billion post-conversion shares; the fully exercised 638.9 million offering was about 4.9%. Saying only 4% floated is a reasonable base-offering approximation but excludes the greenshoe.",
+          "INDEX TIMING ERROR: At the June 17 upload, accelerated Nasdaq-100 inclusion was anticipated, not completed or announced. Nasdaq announced on June 26 that SPCX would join July 7. The later event cannot validate the script's present-tense statement that a low-cost index fund 'now owns' SpaceX.",
+          "INDEX MECHANISM OVERSIMPLIFIED: Funds contractually tracking the Nasdaq-100 generally rebalance to the constituent change, but SpaceX did not automatically qualify for every major index and all index funds are not compelled to buy it. Nasdaq later found additions often weakened after inclusion, which supports uncertainty rather than a guaranteed price prop.",
+          "UNDERPRICING CALCULATION PLAUSIBLE, FRAMING IMPRECISE: Using the $160.95 first-day close and 638.9 million issued shares gives about $16.58 billion of first-day money left on the table, close to $17 billion. This is issuer value transferred to allocated buyers; it is not simply the difference between what all insiders paid and what retail buyers paid.",
+          "GOVERNANCE SUPPORTED: The prospectus establishes one vote for Class A and ten votes for Class B and disclosed roughly 85% Musk voting control before dilution from the offering. Public investors have limited voting influence. Claims that no shareholder vote can stop any action overstate legal, board, fiduciary, regulatory and class-specific constraints.",
+          "LOCK-UP DIRECTIONALLY SUPPORTED, OUTCOME NOT GUARANTEED: The offering document provides staggered releases beginning after Q2 2026 earnings for portions of non-Musk holdings and longer restrictions for Musk and selected insiders. Eligible supply can rise; a price decline is possible, not mechanically required.",
+          "BASE-RATE BOUNDARY: Jay Ritter's research archive supports long-run IPO underperformance as a historical research topic and documents substantial underpricing. It does not establish that every hyped, low-float IPO underperforms or that SpaceX will follow Facebook, Rivian, Coinbase or Robinhood. ARM, Reddit and Tesla counterexamples correctly expose heterogeneity.",
+          "INVESTMENT GUIDANCE REMAINS CONDITIONAL: Waiting, dollar-cost averaging and diversified index exposure can reduce timing or concentration risk, but none guarantees a better entry. Suitability depends on valuation assumptions, horizon, risk capacity, taxes and portfolio concentration."
+        ],
+        "source": {"Caption_type": "auto_generated", "Dataset": "DS-000022", "Duplicate_of": "", "Evidence_locator": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip::083_SLFcypMv6I0_SpaceX_IPO_Just_went_public_Dont_Buy_Until_You_See_This.txt", "Human_verified": "NO", "Status": "TEXT_AVAILABLE", "Text_SHA256": "04838759d4a9f8d4ad130cdbda71ec1ac6874edf6f6199cd8ac12c6416dbc1c1", "Timing": "PLAINTEXT_NO_TIMED_SEGMENTS_EXTRACTED", "Video_ID": "SLFcypMv6I0", "Words": "3246"}
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": ["VIDEO_MASTER.csv:SLFcypMv6I0", "TRANSCRIPT_COVERAGE.csv:SLFcypMv6I0", "audit-batches/NICK_160_READ_RECEIPTS.json"],
+        "analysis": "The exact topic is post-IPO valuation discipline: separate admiration for SpaceX's business from the price paid for SPCX, then assess sales multiples, segment economics, float, governance, unlocks and IPO base rates. The audience is retail investors tempted by a famous company's debut. The strongest defensible promise is a decision framework for price and position sizing, not a forecast that the stock must crash.",
+        "audience_problem": "Retail investors need to distinguish company quality from security valuation and resist event-driven FOMO without assuming that waiting guarantees a lower price.",
+        "economic_mechanism": "VALUATION_EXPECTATIONS_LOW_FLOAT_INDEX_REBALANCING_GOVERNANCE_AND_POST_LOCKUP_SUPPLY",
+        "demand_type": "TIME_SENSITIVE_IPO_EVENT_ANALYSIS_WITH_DURABLE_VALUATION_LESSON",
+        "time_sensitivity": "VERY_HIGH_FOR_PRICE_INDEX_STATUS_AND_UNLOCKS; MEDIUM_FOR_FINANCIALS; LOW_FOR_PRICE_VERSUS_QUALITY_FRAMEWORK",
+        "narrative_angle": "THE_GREATEST_COMPANY_CAN_STILL_BE_AN_OVERPRICED_STOCK",
+        "novelty_and_corpus_angle": "Build a dated valuation scenario table separating Space, Connectivity and AI, with explicit revenue growth, margin and dilution assumptions; update index and lock-up facts only from contemporaneous filings and avoid a deterministic crash image.",
+        "competition": "Target is 1.03859x TYPICAL against ten peers and 1.47811x TYPICAL against five. The exact ten-peer cohort contains nine TYPICAL and one WEAK record; the tier is stable but ratio magnitude is cohort-sensitive."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": ["VIDEO_MASTER.csv:SLFcypMv6I0", "TRANSCRIPT_COVERAGE.csv:SLFcypMv6I0", "audit-batches/NICK_160_READ_RECEIPTS.json", "PERFORMANCE_SENSITIVITY.csv:SLFcypMv6I0"],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "The frozen result is 8,416 views, 328 likes and 74 comments at 85.1378 days: 98.85151 views/day, 1.03859x TYPICAL against ten peers and 1.47811x TYPICAL against five. A globally salient IPO, warning language and crash-coded image plausibly increased relevance, but the outcome is not a breakout in the ten-peer frame and missing impressions, traffic, CTR, retention and packaging history prevent attribution.",
+        "observed_result": "8,416 frozen views, 328 likes, 74 comments and 1,179 seconds; 1.03859x ten-peer TYPICAL and 1.47811x five-peer TYPICAL.",
+        "topic_demand": "SpaceX's IPO created a brief high-attention window; historical search demand and recommendation exposure are unavailable.",
+        "trend_timing": "Published 2026-06-17, five days after trading began and before Nasdaq announced June 26 inclusion effective July 7. Later inclusion and price declines cannot be treated as evidence available to the original viewer.",
+        "competition": "Exact ten-peer cohort: BvL3P2wSWPM, iUANZCNnJQI, 1Ygx1AP3hDA, vS_FN5rpfis, Kgdvr1tkPNQ, epARf5FqE_I, xrzV3G-Iorg, Xtri19wLdJw, -ZcdgylpeJg and ztNMEqJUgUk. Their own tiers are nine TYPICAL and one WEAK; first-five and ten-peer medians differ materially.",
+        "format_fit": "19:39 long-form event analysis using a fictional buyer, numerical valuation, structural risks, historical losers, successful counterexamples and a patience callback. Runtime is not watch time; audio, timed delivery and edits were not inspected.",
+        "channel_context": "This is evidence that an urgent IPO warning can perform within the channel's normal band, not proof that fear packaging or SpaceX caused views. The 1.47811x five-peer ratio versus 1.03859x ten-peer ratio demonstrates cohort sensitivity.",
+        "alternative_explanations": ["Unknown impressions and traffic sources", "Unknown CTR and historical thumbnail", "One-time SpaceX IPO news demand", "Ticker error and overstatement may affect trust", "Five-peer versus ten-peer median sensitivity", "Unknown retention through the dense valuation section", "Public engagement counts do not measure investment outcomes"],
+        "original_content_lesson": {"test": "Compare a filing-led valuation thumbnail and neutral scenario title against crash-coded warning packaging while holding the analysis constant. Measure owned CTR, first-minute retention, completion of the valuation section and returning-viewer behavior.", "confidence": "HIGH for stored-text/image coverage, filing arithmetic and cohort reproduction; MEDIUM for offering-day price and index mechanics; LOW for causal performance explanation and any future price path."}
+      },
+      "event": {
+        "status": "RESEARCHED_DATED_PRIMARY_AND_ORIGINAL_SOURCES",
+        "confidence": "HIGH_FOR_SEC_OFFERING_FINANCIALS_NASDAQ_DEBUT_AND_PEER_CALCULATION_MEDIUM_FOR_IPO_BASE_RATE_LOW_FOR_CAUSAL_PRICE_FORECAST",
+        "trends_status": "UNAVAILABLE",
+        "linkage": "SEC and Nasdaq sources support the record offering, valuation arithmetic, subscriber scale, dual-class structure and later index addition. They also expose ticker, opening-price, gross-versus-net and publication-timing errors. Historical IPO evidence is a base rate, not a SpaceX forecast.",
+        "source_ids": ["SPACEX_S1_2026", "SPACEX_FWP_OFFERING_2026", "NASDAQ_SPACEX_DEBUT_2026", "SPACEX_10Q_2026Q2", "NASDAQ_SPACEX_NDX_2026", "RITTER_IPO_DATA_2026"]
+      },
+      "statuses": {"TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE", "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE", "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE", "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE", "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE", "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE"}
+    }
+  ]
+}

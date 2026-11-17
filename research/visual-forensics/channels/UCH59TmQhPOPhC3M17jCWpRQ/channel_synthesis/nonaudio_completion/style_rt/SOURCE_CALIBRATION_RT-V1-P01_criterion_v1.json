@@ -1,0 +1,31 @@
+{
+ "test": "RT-V1-P01",
+ "mp4": "src_RT-V1-P01.mp4",
+ "criteria": {
+  "C1": {
+   "ok": true,
+   "frames": 90,
+   "cv2": 90
+  },
+  "C2": {
+   "ok": false,
+   "pre_max_dev": 0.0151
+  },
+  "C3": {
+   "ok": false,
+   "jump_frames": [
+    45
+   ],
+   "scale": 2.169,
+   "fixed_point": [
+    373,
+    809
+   ]
+  },
+  "C4": {
+   "ok": false,
+   "post_max_dev": 0.0192
+  }
+ },
+ "deterministic": "FAIL"
+}

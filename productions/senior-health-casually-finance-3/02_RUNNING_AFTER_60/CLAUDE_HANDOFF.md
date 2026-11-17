@@ -1,0 +1,17 @@
+# 02_RUNNING_AFTER_60 — Claude animation handoff
+
+**Status: draft artwork built; QA_BLOCKED for publication.** Read qa/PUBLICATION_GATE.md and script/UNCERTAINTIES.json first. No final video has been generated.
+
+1. Verify assets/FILE_HASHES.json and source_audio/AUDIO_TRANSFER_MANIFEST.json. Git excludes WAV/M4A; the local delivery ZIP includes both. If audio is absent, transfer the exact manifest file, do not synthesize narration. SOURCE_PROVENANCE.json identifies the original video. No competitor references are needed to assemble this package.
+2. Review script/TRANSCRIPT_SMALL_EN.txt against original_audio.m4a continuously, especially the flagged clinical intervals. ASR.json and ASR_SMALL_EN.json are independent model runs of the SAME source, not independent evidence. WORDS_SMALL_EN.csv controls draft timing. DRAFT_ASR.srt is not publication-ready caption text. Clinical review must settle MEDICAL_CLAIMS.csv before any publishing decision.
+3. Read storyboard/STORYBOARD.csv; use animation_plan/KEYFRAME_PLAN.json (1080×1920, 30fps, absolute frame indices, out exclusive). Audio remains at t=0, speed 1, pitch unchanged. Container duration and audio/video stream tails differ by milliseconds; do not shorten the supplied voice.
+4. Import each full editable SVG or transparent PNG at its plan x/y/scale. assets/ASSET_REGISTER.json lists dimensions, pivots and separate component files. Parts stack in ascending z, on the SAME full asset canvas; do not crop/recenter individual pieces. Character pose swapping is supported; arbitrary bending requires additional rig work.
+5. Keyframes are proposed reproducible methods, not reconstructed competitor project data. Hold prior values; easeOutCubic interpolates x/y/scale/opacity over the following segment. Draw objects in z order; hard-cut at scene boundaries. component_visibility overrides child visibility for staged work/recovery builds. fixed_text_layers sit above objects. White background. The scene SVGs include a small review footer and context label; keep these in review exports. Remove review footer only after signoffs, not by treating it as final viewer copy.
+6. Compare start/mid/end scene_states and qa contact sheets. Stage one new explanatory object at a time. Do not fabricate diagnostic heart rhythms, risk percentages, efficacy scores, or dose prescriptions. Display ratings as speaker opinion. Proposed overlay copy is explicitly separate from ASR; it does not silently repair the unchanged audio.
+7. Music/SFX: none supplied as isolated stems, none added. Background music presence is not listening-certified. Do not use destructive vocal separation or infer a clean voice stem. Any later music choice requires a licensed source and must remain below intelligible speech.
+
+## Assembly limits
+No video render, lip-sync, walk-cycle, physiological simulation, inverse-kinematics rig or human art-direction signoff is delivered. Poses/expressions and entrances are usable static building blocks. This is an original interpretation of the referenced visual grammar, not a claim of illustration parity. qa/VALIDATION.json verifies files/timing/source integrity, not clinical accuracy.
+
+## Next concrete action
+Listen end-to-end while reviewing UNCERTAINTIES.json, obtain clinical decisions for flagged claims, then retime entrance cues to the approved transcript and assemble a review animation. Preserve original audio and all provenance if a new narration version is approved.

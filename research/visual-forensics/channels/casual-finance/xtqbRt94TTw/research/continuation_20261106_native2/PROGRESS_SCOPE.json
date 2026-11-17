@@ -1,0 +1,39 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "table": [
+    {
+      "requirement": "Strict candidate-only timing ledger rows",
+      "before": 610,
+      "newly_resolved": 38,
+      "remaining": 572,
+      "evidence": "visual_event_ledger_v39.csv; NATIVE_BATCH1\u20136.json; definedindependentQAreports, final39acceptanceconditionsvalidated"
+    },
+    {
+      "requirement": "Extended-span original specifications",
+      "before": 148,
+      "newly_resolved": 3,
+      "remaining": 145,
+      "evidence": "integrated_production_interval_index_v10.json;3neworiginalbindings;EXTENDED_SPAN_CLASSIFICATION_v2.json"
+    },
+    {
+      "requirement": "Missing original specification mapping presence",
+      "before": 0,
+      "newly_resolved": 0,
+      "remaining": 0,
+      "evidence": "Mappingpresenceonly; globalproduction/renderQAPENDING"
+    },
+    {
+      "requirement": "SUB101/SUB151 unknown-full-timing outside strict category",
+      "before": 2,
+      "newly_resolved": 0,
+      "remaining": 2,
+      "evidence": "OPEN_REQUIREMENTS.json; samepreciselabelsunchanged"
+    }
+  ],
+  "not_additive": "Rows, intervals, spans and underlying physical events overlap; do not add them. Newphaseclosure does not settle componentunknowns.",
+  "global_semantics": "PARTIAL; no authoritative pendingintervalscalar",
+  "review_work": "Prior8 targetedspecificacceptancegap and2wordingcorrections verified; new38sourceadjudicationsplus3productionspans. No repeatedglobalreview or packetcounts used as progress.",
+  "elapsed_work": "No reliable elapsedwork breakdown available; no timeestimate invented.",
+  "blocker_diagnosis": "Source/access/tools operational inthisrun. Remainingbottleneck is exactnative/semantic rows +145unassessedextendedspecs + globaloriginalproduction/anchorQA. Audio blocksAVonly, no independentvisualstop. Publicationoutcome pendingnormalpush/readback."
+}

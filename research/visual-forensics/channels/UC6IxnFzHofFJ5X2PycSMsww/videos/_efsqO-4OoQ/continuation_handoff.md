@@ -1,0 +1,6 @@
+# Continuation handoff — _efsqO-4OoQ
+- Source sha256 3f3f2e4ef121b0ce610fc7978c1121636197e267cf74218c2e009af562b1c996; path /Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could We Harvest Power From Lightning？ [_efsqO-4OoQ].mp4; machine A (Ghilmans-Laptop), xkcd stream lock ~/YIOS-local-audits/xkcd-whatif/.xkcd_writer_lock.
+- Status VISUAL_ANALYSIS_PARTIAL; gates {"source_identity": "PASS", "full_temporal_overview": "PASS", "candidate_shots_verified": "PASS", "meaningful_state_timing": "PARTIAL", "motion_design_review": "PARTIAL", "creative_design_review": "PARTIAL", "visual_script_mapping": "PARTIAL", "production_blueprint": "PARTIAL", "audio_human_listening": "BLOCKED", "final_av_signoff": "BLOCKED"}.
+- Pending: meaningful_state_timing, motion_design_review, creative_design_review, visual_script_mapping, production_blueprint, audio_human_listening, final_av_signoff; unresolved segments ['G0035']; partially viewed activities 5.
+- Tools: scripts/xk_ingest.sh, xk_segment.py, xk_sheets.py, xk_build.py, xk_palette.py, xk_asr_check.py, xk_finalize.py (python -I; cv2 venv ~/YIOS-local-audits/tooling/visual-ct-scan-venv).
+- Next exact operation: listening by a human (intervals = all speech 0–48.552925s); optional full-frame strips for partially viewed activities.

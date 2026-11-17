@@ -1,0 +1,84 @@
+{
+ "video_id": "xtqbRt94TTw",
+ "contract_name": "CT006 / Video 006 Checkpoint B",
+ "status": "UNAVAILABLE_ON_THIS_MACHINE",
+ "machine_checked": "Users-MacBook-Pro.local (Machine B, user ghilmanislam360)",
+ "checked_utc": "2026-11-02T12:48:39Z",
+ "search_performed": [
+  "filesystem find on / (-xdev) for *xtqbRt94TTw* and *CT006* names: no files",
+  "Spotlight mdfind: no files",
+  "all fetched origin branch tips (46+): no Video 006 / Checkpoint B handoff, manifest, shard map or reviewer output in Git",
+  "origin/research/casually-finance-editing-forensics @ f067ad22: lists xtqbRt94TTw only as a planned/inventoried video in STATUS.json; its published checkpoints are Video 004 0ll9rEtoRrs, Video 005 -X6YzlY_8tM, 5umJ63d3rzQ"
+ ],
+ "not_a_substitute": "older xtqbRt94TTw forensics CSVs on codex/casually-finance-forensic-research (PR21-era package)",
+ "present_on_this_machine": {
+  "source_mp4": {
+   "inventory_id": "CFSRC-043",
+   "filename": "To Save the Economy... We’re About to Break It - Casual Finance (1080p, h264).mp4",
+   "bytes": 49993573,
+   "sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+   "duration_s": 827.671,
+   "match_basis": "sha256 equals SOURCE_MEDIA_INVENTORY.csv entry and size/duration agree with STATUS.json '828 s, 1080p, 24 fps'; that this is video xtqbRt94TTw is INFERRED from duration/resolution, the inventory does not name the video id",
+   "machine_b_path": "~/Documents/YIOS-Media-Library/CasuallyFinance/ (and duplicate copies listed in LOCAL_EVIDENCE_INVENTORY.csv)",
+   "remote_status": "LOCAL_ONLY_STORAGE_DESTINATION_REQUIRED"
+  }
+ },
+ "missing_known_to_be_needed": [
+  {
+   "item": "workspace root path",
+   "path": "UNKNOWN",
+   "bytes": "UNKNOWN",
+   "sha256": "UNKNOWN",
+   "expected_holder": "Machine A or another unsynced machine"
+  },
+  {
+   "item": "latest CONTINUATION_HANDOFF.md / BRIEF for Video 006",
+   "path": "UNKNOWN",
+   "bytes": "UNKNOWN",
+   "sha256": "UNKNOWN"
+  },
+  {
+   "item": "EVIDENCE_SHA256SUMS_checkpoint_B (and any later)",
+   "path": "UNKNOWN",
+   "bytes": "UNKNOWN",
+   "sha256": "UNKNOWN"
+  },
+  {
+   "item": "shard map",
+   "path": "UNKNOWN",
+   "bytes": "UNKNOWN",
+   "sha256": "UNKNOWN"
+  },
+  {
+   "item": "original reviewer outputs OUT_shard_1.json, OUT_shard_3.json (and any others)",
+   "path": "UNKNOWN",
+   "bytes": "UNKNOWN",
+   "sha256": "UNKNOWN"
+  },
+  {
+   "item": "validators/scripts used by Checkpoint B",
+   "path": "UNKNOWN",
+   "bytes": "UNKNOWN",
+   "sha256": "UNKNOWN"
+  },
+  {
+   "item": "source imagery referenced by shard outputs",
+   "path": "UNKNOWN",
+   "bytes": "UNKNOWN",
+   "sha256": "UNKNOWN"
+  },
+  {
+   "item": "writer-lock record ~/YIOS-local-audits/vf_lock.sh state",
+   "path": "UNKNOWN",
+   "bytes": "UNKNOWN",
+   "sha256": "UNKNOWN"
+  }
+ ],
+ "rules": [
+  "Reviewer outputs must never be reconstructed from summary text.",
+  "The older PR21 package is not a Checkpoint B substitute.",
+  "Transfer by hash; do not overwrite on collision.",
+  "CT006 does not block Finance reanalysis."
+ ],
+ "related_prior_request": "research/portable-recovery/machine-b-2026-11-02/files/Documents/YIOS-local-audits/2026-11-02/SECOND_MACHINE_POST_AUDIT_REPAIR_v1/CT_TRANSFER_REQUEST.md"
+}

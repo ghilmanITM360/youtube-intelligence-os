@@ -1,0 +1,1086 @@
+[
+ {
+  "i": 1,
+  "Video_ID": "U7d_IwfL4b0",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "DOCTOR",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 7,
+    "curiosity": 6,
+    "promise_strength": 7,
+    "credibility": 12,
+    "audience_fit": 6,
+    "concision": 4
+   },
+   "total": 58,
+   "overpromise_risk": "LOW",
+   "medical_flag": "MEDICAL_PACKAGING_SAFE",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Topic",
+    "current": "0",
+    "proposed": "1",
+    "reason": "Hypertension causes is a health topic; flag is 0 and Health_Claim_Type is empty."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "OTHER",
+    "proposed": "EXPLANATION",
+    "reason": "Title outlines causes of a condition; Authority_Frame=1 and DOCTOR cue present but archetype left OTHER."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 2,
+  "Video_ID": "Bhz44NW3Mcw",
+  "blind": {
+   "archetype": "HOW_TO",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 17,
+    "specificity": 8,
+    "curiosity": 9,
+    "promise_strength": 9,
+    "credibility": 13,
+    "audience_fit": 8,
+    "concision": 4
+   },
+   "total": 68,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Question_Form",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'How To Talk To ...' is an imperative how-to with no question; Title_Archetypes_All adds QUESTION from the same error."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "To An Older Adult",
+    "proposed": "",
+    "reason": "'To An Older Adult' is the audience; cutting it leaves 'How To Talk About Their Driving', unclear."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "core_topic",
+    "current": "Talking to an older adult about driving (short)",
+    "proposed": "Talking to an older adult about driving",
+    "reason": "'(short)' is not in the title; format metadata leaked into topic."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "medical_title_flag",
+    "current": "MEDICAL_PACKAGING_SAFE",
+    "proposed": "NOT_HEALTH",
+    "reason": "Title makes no health claim and the programmatic row has Health_Topic=0; NOT_HEALTH fits."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 3,
+  "Video_ID": "j9VqMB6yTXQ",
+  "blind": {
+   "archetype": "FOODS",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 13,
+    "specificity": 8,
+    "curiosity": 9,
+    "promise_strength": 10,
+    "credibility": 5,
+    "audience_fit": 4,
+    "concision": 2
+   },
+   "total": 51,
+   "overpromise_risk": "HIGH",
+   "medical_flag": "MISLEADING_RISK",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Topic",
+    "current": "0",
+    "proposed": "1",
+    "reason": "Pills and potassium foods for the heart is clearly health; Health_Claim_Type empty (should be food/medication-replacement type)."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "OTHER",
+    "proposed": "FOODS",
+    "reason": "'Potassium Foods That Actually Work' is a foods-claim title; Title_Archetypes_All empty."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "intended_viewer",
+    "current": "Hypertensive adults wary of pills",
+    "proposed": "Adults wary of pills seeking food remedies",
+    "reason": "Title never mentions hypertension or blood pressure; viewer inferred beyond the text (same inference in improvement)."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 4,
+  "Video_ID": "gWwYtfnXUng",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 11,
+    "specificity": 5,
+    "curiosity": 8,
+    "promise_strength": 5,
+    "credibility": 9,
+    "audience_fit": 3,
+    "concision": 4
+   },
+   "total": 45,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "orientation",
+    "current": "SEARCH",
+    "proposed": "BROWSE",
+    "reason": "Novelty-animal Shorts title reads as browse; search-oriented is defensible but arguable."
+   }
+  ],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 5,
+  "Video_ID": "E3meurMewRY",
+  "blind": {
+   "archetype": "WARNING",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "Y",
+   "scores": {
+    "clarity": 15,
+    "specificity": 8,
+    "curiosity": 13,
+    "promise_strength": 10,
+    "credibility": 9,
+    "audience_fit": 5,
+    "concision": 3
+   },
+   "total": 63,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "Hits",
+    "proposed": "Early Warnings You Should Never Ignore!",
+    "reason": "'Hits' is part of the idiom 'before it hits'; the real redundancy is the repeated warning tag at the end."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "medical_title_flag",
+    "current": "MISLEADING_RISK",
+    "proposed": "NEEDS_CONTEXT",
+    "reason": "Protocol lists diagnosis-from-symptom; HIGH/MISLEADING_RISK is defensible, MEDIUM/NEEDS_CONTEXT also fits."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 6,
+  "Video_ID": "ItD7_sPZvKg",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 6,
+    "curiosity": 13,
+    "promise_strength": 8,
+    "credibility": 12,
+    "audience_fit": 5,
+    "concision": 4
+   },
+   "total": 63,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "medical_title_flag",
+    "current": "MEDICAL_PACKAGING_SAFE",
+    "proposed": "NOT_HEALTH",
+    "reason": "Evolutionary-history question, no health advice or claim; 'FEAR' in mechanism_reliance is also unsupported."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 7,
+  "Video_ID": "4ByUo2N_C-I",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 1,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 17,
+    "specificity": 9,
+    "curiosity": 12,
+    "promise_strength": 8,
+    "credibility": 12,
+    "audience_fit": 8,
+    "concision": 4
+   },
+   "total": 70,
+   "overpromise_risk": "LOW",
+   "medical_flag": "MEDICAL_PACKAGING_SAFE",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "AVOID",
+    "proposed": "QUESTION",
+    "reason": "'Is X Good or Bad' is a question/comparison; AVOID is not supported (Archetypes_All lists QUESTION and COMPARISON)."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 8,
+  "Video_ID": "ufroDDfZQmU",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 9,
+    "curiosity": 10,
+    "promise_strength": 8,
+    "credibility": 8,
+    "audience_fit": 8,
+    "concision": 2
+   },
+   "total": 60,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "List_Form",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'The 5 most dangerous fish' is a numbered list title."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "WARNING",
+    "proposed": "LIST",
+    "reason": "Numbered countdown list; LIST missing from Title_Archetypes_All."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "core_topic",
+    "current": "Dangerous fish for seniors short",
+    "proposed": "Dangerous fish for seniors",
+    "reason": "'short' is not in the title."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 9,
+  "Video_ID": "qEewvJWrB7M",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 10,
+    "curiosity": 12,
+    "promise_strength": 9,
+    "credibility": 8,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 66,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Topic",
+    "current": "0",
+    "proposed": "1",
+    "reason": "Testosterone-lowering habits is a health topic; flag and Health_Claim_Type empty."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "concision_score",
+    "current": "3",
+    "proposed": "5",
+    "reason": "8 words/51 chars with no filler; 'Boring' and 'Quietly' are the hook, so cutting them (unnecessary_words) is arguable."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 10,
+  "Video_ID": "jxoMnTrVziA",
+  "blind": {
+   "archetype": "DOCTOR_WARNS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "DOCTOR",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 7,
+    "specificity": 6,
+    "curiosity": 12,
+    "promise_strength": 8,
+    "credibility": 8,
+    "audience_fit": 4,
+    "concision": 2
+   },
+   "total": 47,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Claim_Type",
+    "current": "REVERSAL",
+    "proposed": "",
+    "reason": "'Doctors Recommend This 10 Second Test' has no reversal/cure language; type is wrongly assigned."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "medical_title_flag",
+    "current": "UNRESOLVED",
+    "proposed": "NEEDS_CONTEXT",
+    "reason": "Unnamed doctors + unnamed test is unsupported authority; NEEDS_CONTEXT matches the stated note."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Doctors Recommend the 10-Second One-Leg Balance Test for Seniors",
+    "proposed": "The 10-Second Test Doctors Recommend for Seniors: Here's What It Checks",
+    "reason": "Invents a specific test not in the title and keeps the unsupported 'Doctors Recommend' authority the analyst itself flagged."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 11,
+  "Video_ID": "1qX7MUv54j4",
+  "blind": {
+   "archetype": "SIGNS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 9,
+    "curiosity": 12,
+    "promise_strength": 8,
+    "credibility": 11,
+    "audience_fit": 6,
+    "concision": 4
+   },
+   "total": 66,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "intended_viewer",
+    "current": "average earners",
+    "proposed": "people unsure of their financial standing",
+    "reason": "Not visible from title; 'ahead of most people' targets general viewers comparing themselves, not a stated earner class."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 12,
+  "Video_ID": "6-tlQ0ym7UE",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 11,
+    "curiosity": 12,
+    "promise_strength": 9,
+    "credibility": 8,
+    "audience_fit": 6,
+    "concision": 2
+   },
+   "total": 64,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "OTHER",
+    "proposed": "EXPLANATION",
+    "reason": "'The ENTIRE History of X in 7 Minutes' is a condensed explainer."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 13,
+  "Video_ID": "7S2RlvSrzBE",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 12,
+    "curiosity": 10,
+    "promise_strength": 9,
+    "credibility": 12,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 70,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "List_Form",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'All 32 ...' is an enumerated-set title; arguably a list form."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 14,
+  "Video_ID": "0JzkDPA3XF4",
+  "blind": {
+   "archetype": "POV",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 13,
+    "specificity": 10,
+    "curiosity": 15,
+    "promise_strength": 9,
+    "credibility": 8,
+    "audience_fit": 5,
+    "concision": 4
+   },
+   "total": 64,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "NO ONE;POV:;Your Life After",
+    "proposed": "POV:",
+    "reason": "'NO ONE' is the core tension and the analyst's own improvement keeps it; 'Your Life After' carries the premise."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 15,
+  "Video_ID": "3TOvF8JcOzo",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 10,
+    "curiosity": 13,
+    "promise_strength": 8,
+    "credibility": 12,
+    "audience_fit": 6,
+    "concision": 4
+   },
+   "total": 68,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Question_Form",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'How Banks Treat You ...' is declarative, no question."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "QUESTION",
+    "proposed": "EXPLANATION",
+    "reason": "Not a question; explanatory comparison across wealth levels. Hope_Frame=1 and Problem_Solution_Frame=1 are also unsupported."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unanswered_question",
+    "current": "How bad does it start, and where does it flip?",
+    "proposed": "How does bank treatment change from $0 to $50M?",
+    "reason": "'Bad' and 'flip' are not in the title; presumes a direction."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 16,
+  "Video_ID": "tRwMoqQtzTY",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 7,
+    "curiosity": 14,
+    "promise_strength": 8,
+    "credibility": 11,
+    "audience_fit": 5,
+    "concision": 5
+   },
+   "total": 65,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 17,
+  "Video_ID": "MX4hkD4rFv0",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 7,
+    "curiosity": 13,
+    "promise_strength": 8,
+    "credibility": 7,
+    "audience_fit": 7,
+    "concision": 5
+   },
+   "total": 62,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "WARNING",
+    "proposed": "EXPLANATION",
+    "reason": "Counterintuitive claim about retirees, not a warning; Warning_Frame=1 is driven by 'never' only."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 18,
+  "Video_ID": "9QiRWq17YWk",
+  "blind": {
+   "archetype": "POV",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 13,
+    "specificity": 10,
+    "curiosity": 14,
+    "promise_strength": 9,
+    "credibility": 8,
+    "audience_fit": 5,
+    "concision": 4
+   },
+   "total": 63,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Authority_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "No authority cue in the title; Authority_Cue is NONE so the two fields conflict."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "SECRET",
+    "proposed": "POV",
+    "reason": "'Your Life as a Silent Millionaire' is second-person role-play, same format as the POV titles."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "Nobody Knows.;You Have",
+    "proposed": "",
+    "reason": "'Nobody Knows.' is the hook and is retained in the analyst's own improvement."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 19,
+  "Video_ID": "JnQy5hbgEwE",
+  "blind": {
+   "archetype": "SIGNS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 10,
+    "curiosity": 12,
+    "promise_strength": 8,
+    "credibility": 10,
+    "audience_fit": 6,
+    "concision": 4
+   },
+   "total": 64,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Hope_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'Fake Rich ... Cosplaying Success' is critical/ironic, not hope; Positive_Frame=1 is a keyword misread of 'Success'."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "intended_viewer",
+    "current": "Social media viewers",
+    "proposed": "People wary of people faking wealth",
+    "reason": "Not visible from the title and too vague to be useful."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 20,
+  "Video_ID": "vHn0KvE_ku0",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 17,
+    "specificity": 11,
+    "curiosity": 9,
+    "promise_strength": 10,
+    "credibility": 10,
+    "audience_fit": 9,
+    "concision": 3
+   },
+   "total": 69,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "overpromise_risk",
+    "current": "MEDIUM",
+    "proposed": "LOW",
+    "reason": "'Saves You Money' with no amount is a mild benefit claim; MEDIUM defensible but arguable."
+   },
+   {
+    "class": "STYLE_ONLY",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Add the claim: 4 Social Security Strategies for Couples: Spousal, Survivor, Delay and Split",
+    "proposed": "4 Social Security Strategies for Couples: Spousal, Survivor, Delay and Split",
+    "reason": "Instruction prefix 'Add the claim:' is inside the title text."
+   }
+  ],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 21,
+  "Video_ID": "eKOogK4o2mg",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 8,
+    "curiosity": 13,
+    "promise_strength": 7,
+    "credibility": 12,
+    "audience_fit": 5,
+    "concision": 5
+   },
+   "total": 66,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "WARNING",
+    "proposed": "QUESTION",
+    "reason": "'Where was the most dangerous place' is a history question, not a warning to the viewer."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 22,
+  "Video_ID": "I3mUug_XsWo",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 10,
+    "curiosity": 10,
+    "promise_strength": 9,
+    "credibility": 11,
+    "audience_fit": 8,
+    "concision": 3
+   },
+   "total": 67,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Topic",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'Protect Wealth' is finance, not health; Health_Claim_Type=PREVENTION and Person_Address=SENIORS (from 'retirees') are keyword misreads. Analyst NOT_HEALTH is right."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 23,
+  "Video_ID": "r30ujBFB50A",
+  "blind": {
+   "archetype": "HOW_TO",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 8,
+    "curiosity": 9,
+    "promise_strength": 9,
+    "credibility": 10,
+    "audience_fit": 5,
+    "concision": 3
+   },
+   "total": 59,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Question_Form",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'How to Activate ...' is a how-to, not a question."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "mechanism_reliance",
+    "current": "CURIOSITY;HOPE;AUTHORITY",
+    "proposed": "CURIOSITY;HOPE",
+    "reason": "No authority cue anywhere in the title."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "promise_strength_score",
+    "current": "12",
+    "proposed": "9",
+    "reason": "Total 71 vs my 59 (gap 12, within tolerance); a generic how-to with no stated outcome size."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 24,
+  "Video_ID": "uWz8r8SMNIY",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 12,
+    "curiosity": 10,
+    "promise_strength": 9,
+    "credibility": 12,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 70,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "List_Form",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'All 20 ...' is an enumerated-set title; arguably a list form."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Italy's 20 Regions Explained: North vs South and Everything Between",
+    "proposed": "All 20 Italian Regions: The Stereotypes From North to South",
+    "reason": "Drops 'stereotypes', the actual topic, so it changes the promise instead of testing a packaging edit."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 25,
+  "Video_ID": "rTzPAH4mHrk",
+  "blind": {
+   "archetype": "HOW_TO",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 9,
+    "curiosity": 8,
+    "promise_strength": 9,
+    "credibility": 8,
+    "audience_fit": 5,
+    "concision": 3
+   },
+   "total": 56,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Question_Form",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'How To Get Abs...' is an imperative how-to, not a question."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ }
+]

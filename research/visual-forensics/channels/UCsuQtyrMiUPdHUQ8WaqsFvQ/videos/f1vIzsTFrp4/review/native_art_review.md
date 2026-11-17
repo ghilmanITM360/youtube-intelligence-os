@@ -1,0 +1,4 @@
+Primary reviewer (Claude Opus session 85559743) opened `frames/native/NATIVE_000853.jpg` (G0027, frame 853, 17.06 s, 1:1 native crop 916x849 of 1080x1920).
+OBSERVED: caveman at stone desk with CRT-style monitor and keyboard, seated on stone block, screaming, three motion ticks above typing hand. Rough black ink line with irregular wobble and dry edge; solid black hair and beard with spiky edges; flat yellow tunic; stone indicated by short crack marks only; no gradient, no shadow except dark hatching under the seat. Modern object remade in stone is the world-building device.
+INFERRED (medium): stone-furniture translation of modern objects carries the premise without text. Alternative: simple prop economy.
+UNAVAILABLE: software, typeface, generation method. Other crops extracted, not opened.

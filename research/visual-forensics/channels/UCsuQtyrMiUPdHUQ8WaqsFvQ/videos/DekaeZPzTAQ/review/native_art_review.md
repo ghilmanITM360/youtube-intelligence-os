@@ -1,0 +1,5 @@
+Primary reviewer (Claude Opus session 85559743) opened `frames/native/NATIVE_006028.jpg` (G0139, frame 6028, PTS 120.56 s, 1:1 native crop 893x1017 of 1920x1080).
+OBSERVED: full-body caveman (channel head grammar: big bulbous nose, single dot eye under heavy black brow bar, solid black scribbled beard, round ear with inner tick) with an oversized white brain drawn on top of the head (fold lines, short radiating "spark" ticks at right); yellow one-shoulder tunic with black irregular spots and zig-zag hem; holds two test tubes — left violet liquid with a wavy vapour line, right red. Thick even black outline (stroke median 12 px, p25-p75 10.8-12.4), hands drawn as rounded mitts with finger lines, toes as scalloped bumps, flat fills, no shading or gradient. Accent colours: yellow, violet, red on white.
+INFERRED (medium): exposed brain + test tubes = "smart/experimenting caveman" visual metaphor. Alternative: literal chemistry scene.
+UNAVAILABLE: software, typeface, generation method.
+NATIVE_009367 (G0211) and NATIVE_009631 (G0221) extracted, not opened. Encoding audit: 82 encoder-artifact frames (24 I-frames) — not visual events.

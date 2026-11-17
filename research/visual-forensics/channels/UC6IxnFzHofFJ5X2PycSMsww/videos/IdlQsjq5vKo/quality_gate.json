@@ -1,0 +1,156 @@
+{
+ "video_id": "IdlQsjq5vKo",
+ "source_sha256": "3961fc65194672d670462cee63a3987e11f4b3f37432ac9115deeb4a457ebbba",
+ "requested_mode": "DEEP",
+ "generated_utc": "2026-11-05T16:59:47Z",
+ "review_scope": {
+  "source_seconds_total": 277.803537,
+  "overview_sampling_hz": "every decoded frame measured",
+  "native_intervals_reviewed": "settled frame of every HOLD + sampled ACTIVITY frames at 1/4 scale (see coverage.json)",
+  "unreviewed_or_unverified_intervals": [
+   {
+    "seg": "G0002",
+    "start": 0.2083,
+    "end": 0.5417,
+    "unviewed_frames": 5
+   },
+   {
+    "seg": "G0008",
+    "start": 7.875,
+    "end": 9.9167,
+    "unviewed_frames": 43
+   },
+   {
+    "seg": "G0022",
+    "start": 23.25,
+    "end": 26.1667,
+    "unviewed_frames": 64
+   },
+   {
+    "seg": "G0034",
+    "start": 34.5833,
+    "end": 34.9167,
+    "unviewed_frames": 5
+   },
+   {
+    "seg": "G0036",
+    "start": 36.0417,
+    "end": 36.2917,
+    "unviewed_frames": 3
+   },
+   {
+    "seg": "G0040",
+    "start": 39.5833,
+    "end": 39.8334,
+    "unviewed_frames": 3
+   },
+   {
+    "seg": "G0102",
+    "start": 125.7917,
+    "end": 126.4167,
+    "unviewed_frames": 9
+   },
+   {
+    "seg": "G0104",
+    "start": 126.8333,
+    "end": 129.7084,
+    "unviewed_frames": 63
+   },
+   {
+    "seg": "G0106",
+    "start": 131.7917,
+    "end": 132.0834,
+    "unviewed_frames": 4
+   },
+   {
+    "seg": "G0108",
+    "start": 132.4167,
+    "end": 132.7084,
+    "unviewed_frames": 4
+   },
+   {
+    "seg": "G0132",
+    "start": 156.4583,
+    "end": 158.875,
+    "unviewed_frames": 52
+   },
+   {
+    "seg": "G0142",
+    "start": 173.75,
+    "end": 175.9584,
+    "unviewed_frames": 47
+   },
+   {
+    "seg": "G0144",
+    "start": 181.0417,
+    "end": 185.0834,
+    "unviewed_frames": 91
+   },
+   {
+    "seg": "G0182",
+    "start": 245.9167,
+    "end": 246.2917,
+    "unviewed_frames": 5
+   },
+   {
+    "seg": "G0184",
+    "start": 246.5417,
+    "end": 246.9584,
+    "unviewed_frames": 6
+   },
+   {
+    "seg": "G0186",
+    "start": 247.4583,
+    "end": 249.4167,
+    "unviewed_frames": 41
+   },
+   {
+    "seg": "G0188",
+    "start": 249.7917,
+    "end": 251.5834,
+    "unviewed_frames": 37
+   },
+   {
+    "seg": "G0190",
+    "start": 252.1667,
+    "end": 255.7084,
+    "unviewed_frames": 79
+   }
+  ]
+ },
+ "gates": {
+  "source_identity": "PASS",
+  "full_temporal_overview": "PASS",
+  "candidate_shots_verified": "PASS",
+  "meaningful_state_timing": "PARTIAL",
+  "motion_design_review": "PARTIAL",
+  "creative_design_review": "PARTIAL",
+  "visual_script_mapping": "PARTIAL",
+  "production_blueprint": "PARTIAL",
+  "audio_human_listening": "BLOCKED",
+  "final_av_signoff": "BLOCKED"
+ },
+ "gate_evidence": {
+  "source_identity": "source_manifest.json + census/census.csv (channel tab listing)",
+  "full_temporal_overview": "tables/FULL_FRAME_MEASUREMENTS.csv all frames; tables/segments_v1.csv covers every frame",
+  "candidate_shots_verified": "tables/state_ledger.csv every segment classified from viewed tiles",
+  "meaningful_state_timing": "frame-precise onsets from measurements; unresolved: ['G0008', 'G0022', 'G0078', 'G0132', 'G0143', 'G0144', 'G0146', 'G0172', 'G0202']",
+  "motion_design_review": "86/104 activities viewed at every frame",
+  "creative_design_review": "visual_ct_scan_report.md \u00a74 + tables/palette_measured.json (tile-scale)",
+  "visual_script_mapping": "audio_visual_alignment.csv ASR_UNCERTIFIED; ASR-vs-caption ratio 0.9691",
+  "production_blueprint": "reconstruction_blueprint.md (derived prompts; no render test yet)",
+  "audio_human_listening": "campaign/AUDIO_LISTENING_CAPABILITY.json BLOCKED_CAPABILITY"
+ },
+ "final_video_status": "VISUAL_ANALYSIS_PARTIAL",
+ "overall": "PARTIAL",
+ "ct_scan_complete": false,
+ "full_av_signoff": false,
+ "limitations": [
+  "no actual listening",
+  "activity in-between frames sampled where noted",
+  "tile-scale (1/4) art review; small text partly illegible",
+  "reconstruction not render-tested per video"
+ ],
+ "reviewer": "rv1_IdlQsjq5vKo",
+ "next_step": "independent review sample; reconstruction test via channel manual"
+}

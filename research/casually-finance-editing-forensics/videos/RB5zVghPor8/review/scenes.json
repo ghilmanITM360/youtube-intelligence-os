@@ -1,0 +1,223 @@
+[
+ {
+  "id": "S01",
+  "f0": 0,
+  "f1": 98,
+  "label": "Giant BILL receipt unrolling downward; US-map character with 'I should buy less chocolate' bubble",
+  "layers": "receipt (grows); map character; bubble; caption",
+  "assets": "PR_BILL,CH_USMAP,OV_BUBBLE",
+  "transition_in": "START",
+  "purpose": "Hook: spending problem is not many small items [ART_DIRECTION_INFERENCE]",
+  "notes": "",
+  "no_auto_cut": true
+ },
+ {
+  "id": "S02",
+  "f0": 98,
+  "f1": 339,
+  "label": "Federal spending bar chart: zoom, five bars recoloured, bars rearranged into a stacked block, '78%', map character and money bags",
+  "layers": "chart (zoom); recolour; stack morph; red/black 78%; map character slide-in; bag pops; caption",
+  "assets": "SS_SPENDING_CHART,TY_EMPHASIS,CH_USMAP,PR_BAGS",
+  "transition_in": "HARD_CUT",
+  "purpose": "Five categories are 78% of spending [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S03",
+  "f0": 339,
+  "f1": 444,
+  "label": "Kitchen knife swinging; bar-chart strip sliding in beside it",
+  "layers": "knife (rotation); chart strip; caption (red 'have')",
+  "assets": "PR_KNIFE,SS_SPENDING_CHART",
+  "transition_in": "HARD_CUT",
+  "purpose": "Any real cuts have to come out of that list [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S04",
+  "f0": 444,
+  "f1": 488,
+  "label": "Host on white: 'Anything else is theatrics'",
+  "layers": "host; caption",
+  "assets": "CH_HOST",
+  "transition_in": "HARD_CUT",
+  "purpose": "Dismiss small cuts as theatrics [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S05",
+  "f0": 488,
+  "f1": 533,
+  "label": "Knife with the word SPENDING being cut",
+  "layers": "knife; scaled SPENDING; caption",
+  "assets": "PR_KNIFE,TY_WORD",
+  "transition_in": "HARD_CUT",
+  "purpose": "Cut spending (option one) [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S06",
+  "f0": 533,
+  "f1": 571,
+  "label": "US-map character growing; up arrow and cash; DEBT documents piling up",
+  "layers": "map character (scale-in); arrow; cash; DEBT docs; caption",
+  "assets": "CH_USMAP,PR_DEBTDOC,PR_CASH",
+  "transition_in": "HARD_CUT",
+  "purpose": "Cut spending, raise revenue, or grow faster than you borrow [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S07",
+  "f0": 571,
+  "f1": 603,
+  "label": "Host smiling: 'That's the entire list'",
+  "layers": "host; caption",
+  "assets": "CH_HOST",
+  "transition_in": "HARD_CUT",
+  "purpose": "Closing the list [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S08",
+  "f0": 603,
+  "f1": 901,
+  "label": "Grey-haired official with a quote bubble holding long article text, highlighted passages",
+  "layers": "figure; bubble; quote text (scroll); yellow highlight; caption",
+  "assets": "CH_OFFICIAL,OV_BUBBLE,SS_QUOTE,OV_HIGHLIGHT",
+  "transition_in": "HARD_CUT",
+  "purpose": "Bessent on defense and entitlements [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S09",
+  "f0": 901,
+  "f1": 935,
+  "label": "Host close-up: 'So, not a cut'",
+  "layers": "host close-up; caption",
+  "assets": "CH_HOST",
+  "transition_in": "HARD_CUT",
+  "purpose": "Conclusion of option one [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S10",
+  "f0": 935,
+  "f1": 983,
+  "label": "Bars with host pointing; face changes to frown",
+  "layers": "bar chart; host with pointer; caption",
+  "assets": "SS_SPENDING_CHART,CH_HOST",
+  "transition_in": "HARD_CUT",
+  "purpose": "'In fact, the opposite of a cut' [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S11",
+  "f0": 983,
+  "f1": 1059,
+  "label": "Brown door that swings open with cash and a green up arrow",
+  "layers": "door (swing); cash; green arrow; green 'raising revenues'; caption",
+  "assets": "PR_DOOR,PR_CASH,OV_GREENARROW",
+  "transition_in": "HARD_CUT",
+  "purpose": "Door number two: raising revenues [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S12",
+  "f0": 1059,
+  "f1": 1163,
+  "label": "Grey-haired official alone; caption 'A few months ago...'",
+  "layers": "figure; caption",
+  "assets": "CH_OFFICIAL",
+  "transition_in": "HARD_CUT",
+  "purpose": "Setup for the Senate quote [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S13",
+  "f0": 1163,
+  "f1": 1271,
+  "label": "Quote bubble from Senate transcript with highlight sweeping",
+  "layers": "figure; bubble; transcript text (scroll); highlight; caption",
+  "assets": "CH_OFFICIAL,OV_BUBBLE,SS_QUOTE,OV_HIGHLIGHT",
+  "transition_in": "HARD_CUT",
+  "purpose": "'We have a spending problem and a growth problem' [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S14",
+  "f0": 1271,
+  "f1": 1303,
+  "label": "Host with a confused meme photo popping in (with ??? bubble)",
+  "layers": "host; meme image (scale); caption",
+  "assets": "CH_HOST,MEME_PHOTO",
+  "transition_in": "HARD_CUT",
+  "purpose": "'Which is very strange' reaction [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S15",
+  "f0": 1303,
+  "f1": 1418,
+  "label": "Transcript strip then article text with yellow highlight",
+  "layers": "page text; highlight; caption",
+  "assets": "SS_QUOTE,OV_HIGHLIGHT",
+  "transition_in": "HARD_CUT",
+  "purpose": "Names spending as a problem, then says now is not the time [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S16",
+  "f0": 1418,
+  "f1": 1483,
+  "label": "Closed door that swings open to reveal a tiny US-map character with a document; green 'growth'",
+  "layers": "door (swing); map character; document; green word; caption",
+  "assets": "PR_DOOR,CH_USMAP,PR_DOC_SMALL,TY_EMPHASIS",
+  "transition_in": "HARD_CUT",
+  "purpose": "'So we're left with one door standing, growth' [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S17",
+  "f0": 1483,
+  "f1": 1526,
+  "label": "Host sliding in from the left; red 'not' on 'But growth is not a decision'",
+  "layers": "host (slide); red word; caption",
+  "assets": "CH_HOST,TY_EMPHASIS",
+  "transition_in": "HARD_CUT",
+  "purpose": "Growth is not a decision [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S18",
+  "f0": 1526,
+  "f1": 1582,
+  "label": "Smiling green-tie man with 'Vote for me, 3% growth guaranteed!' bubble crossed out",
+  "layers": "figure; bubble; red X; caption",
+  "assets": "CH_OFFICIAL,OV_BUBBLE,OV_REDX",
+  "transition_in": "HARD_CUT",
+  "purpose": "Nobody can vote for 3% growth [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S19",
+  "f0": 1582,
+  "f1": 1635,
+  "label": "Host with a bill document and quill sliding in: 'no bill you can pass'",
+  "layers": "host; bill document (slide); quill; caption",
+  "assets": "CH_HOST,PR_BILL_DOC",
+  "transition_in": "HARD_CUT",
+  "purpose": "No legislation produces growth [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S20",
+  "f0": 1635,
+  "f1": 1689,
+  "label": "Tiny figure with a crystal ball: 'All you can do is build the conditions and hope'",
+  "layers": "figure; crystal ball; caption (end hold)",
+  "assets": "CH_CRYSTAL",
+  "transition_in": "HARD_CUT",
+  "purpose": "Closing: build conditions and hope [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ }
+]

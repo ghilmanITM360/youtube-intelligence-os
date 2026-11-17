@@ -1,0 +1,61 @@
+# Machine A Finance continuation runbook
+
+Durable copy of the per-batch helpers that produced NICK_189 onward. A fresh session
+(manual or scheduled) must start here, never from a NICK number remembered in chat.
+
+## 0. Gates (stop without research writes if any fails)
+1. `cd /Users/ghilmankhan/workprojects/yios-finance-machine-a`; branch is
+   `codex/finance-machine-a-owner-directed`; `git fetch`; local = upstream = `git ls-remote` head.
+   If the remote moved and the change is not yours, stop and report.
+2. Read live five-hour and weekly usage. Unreadable → record `UNKNOWN`. ≥90% five-hour or ≥95%
+   weekly → no new audit; exit. Never buy, spend or redeem credits.
+3. `python3 build_continuation_queue.py lock acquire <session-id>` — `LOCKED ...` means another
+   writer is running: exit. Release with `lock release` when the session ends.
+4. Record `gh pr view 36 --json headRefOid,state` and `git ls-remote origin
+   research/finance-economics-intelligence`. Never push there or modify PR #36.
+
+## 1. Pick work
+`python3 build_continuation_queue.py` → the `next` field of `FINANCE_CONTINUATION_QUEUE_SUMMARY.json`
+is the head; take the next 2–5 `ELIGIBLE` rows. Do not touch `DEFERRED_PRESERVED_PARTIAL`
+(includes `TFtBWn9CWOU`) or `BLOCKED_*` rows.
+
+## 2. Per video (`export FINANCE_WORK=<local dir outside git>`; `FINANCE_SESSION=<session-id>`)
+- `python3 machine_a_tools/src.py VID $FINANCE_WORK/nXXX/text.txt` — master, peers, transcript SHA, archive containment.
+- Read the whole stored transcript; fetch `i.ytimg.com/vi/VID/maxresdefault.jpg` (fallback hqdefault),
+  inspect native and `sips -z 180 320` mobile.
+- Check material claims against primary sources; reproduce arithmetic.
+- Write `nXXX/spec.py` (shape: `example_spec_NICK_194.py`; `FIRST_END` must be a short phrase without newlines).
+- `python3 machine_a_tools/gen2.py nXXX/spec.py` → packet + READ_RECEIPTS.
+
+## 3. Integrate (single writer)
+Copy packets and `NICK_{vid}.jpg` into `audit-batches/`; `python3 build_audit_966.py`; rebuild the workbook
+(`node build_workbook_1612.mjs` via the artifact-tool runtime); bump the completed count in
+`test_combined_workbook.py`; `validate_audit_966.py`, `validate_research.py`, `pytest -q test_*.py` (48),
+`node --test test_workbook_formatting.mjs` (2); `machine_a_tools/wbdiff.py old new` (only target rows);
+`machine_a_tools/vr.py`, `machine_a_tools/post.py`; prepend RESUME_HERE; rebuild the queue; commit; push;
+verify local = upstream = remote.
+
+## Blocked rows
+`python3 build_source_readiness.py` (read-only) classifies every BLOCKED row and lists recovery candidates; it never registers a transcript.
+
+## Limits
+`wbdiff.py` "errs 16" = 16 hashtag text cells (data_type `s`, e.g. `#finance #tariffsexplained`), not formula errors; workbook has 0 `e` cells (checked 2026-11-01).
+No audio/visual review beyond thumbnails, no native Excel recalculation, no inferred impressions/CTR/
+retention/revenue/demographics. Expansion rows are all `BLOCKED_MISSING_SOURCE_TRANSCRIPT` until a
+transcript is registered; metadata alone never makes them complete.
+
+## Expansion transcript candidates (read-only)
+`python3 -I machine_a_tools/verify_expansion.py EXPANSION_TRANSCRIPT_CANDIDATES_VERIFIED.json` re-verifies the 30 Casually Finance
+candidates from origin blobs: video ID in path and rows, identical copies across branches, ASR end time ≥ 0.9 × duration, no
+duplicate text across IDs. As of 2026-11-01 all 30 pass, as `VERIFIED_CANDIDATE_NOT_REGISTERED`. They are machine ASR (Whisper), not
+YouTube captions. They cannot be audited until the registry writer (Machine B) registers them with Text_SHA256 and archive containment;
+Machine A never writes the registry. The other 616 expansion rows have no local source, so do not search for them again.
+On 2026-11-01 the owner allowed branch-local registration; it was assessed and not performed because the 30 IDs have no registry
+`videos` rows (a new dataset registration is needed), the registry is a 141 MB LFS binary, and expansion acceptance and K01 baselines are not
+wired. See `registration_readiness` in the JSON.
+
+## Expansion queue and K01 (2026-11-01, Machine A)
+The queue reads the existing expansion ledger and marks the 30 verified candidates `DEFERRED_TRANSCRIPT_VERIFIED_NOT_REGISTERED`
+(never eligible until the registry holds their transcripts). `python3 machine_a_tools/expansion_k01.py` re-derives
+`EXPANSION_K01_CASUALLY_FINANCE.{json,csv}` from a committed snapshot with the unchanged K01 rule (22/30 tiered, 8 INSUFFICIENT_DATA).
+`test_expansion_queue.py` guards both (suite is now 47 tests). Registry/LFS writes remain out of scope here.

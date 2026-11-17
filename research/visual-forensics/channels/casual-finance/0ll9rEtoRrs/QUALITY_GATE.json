@@ -1,0 +1,93 @@
+{
+ "video_id": "0ll9rEtoRrs",
+ "checkpoint": "P",
+ "date": "2026-11-01",
+ "classification": [
+  "VISUAL_STRUCTURE_RECONCILED_PARTIAL",
+  "NOT_SEMANTICALLY_CERTIFIED",
+  "AUDIO_NOT_VERIFIED",
+  "AV_CERTIFICATION_BLOCKED"
+ ],
+ "ct_scan_complete": false,
+ "human_audio_listening": "NOT_PERFORMED",
+ "identity": "HIGH_CONFIDENCE_NEEDS_REVIEW",
+ "frames_covered": "24298/24298 (states 21301 + unowned 2997)",
+ "states": 530,
+ "compositions": 367,
+ "candidates": 1032,
+ "candidates_independently_viewed_after_first_pass": 1032,
+ "disputes": 148,
+ "unowned_intervals": 143,
+ "unowned_rereviewed": 143,
+ "merge_flags": {
+  "confirmed": 161,
+  "keep_separate": 2,
+  "uncertain": 0,
+  "note": "S0022,S0035,S0080 merged; S0056,S0212 separate; rule: continuation only if layout preserved or smoothly animated"
+ },
+ "per_state_specs": 530,
+ "asr_sentences_aligned": 192,
+ "validators": "positive PASS; 16 negative tests DETECTED (integrate_v3.py, validate_v3.py)",
+ "limits": [
+  "ASR is historical Whisper-base, never listened to; audio never heard",
+  "colours/typeface/easing not sampled",
+  "identity not re-checked against live YouTube",
+  "shot count not verified here (historical 283 unverified)",
+  "gap boundaries moved by a measured one-frame heuristic; +/-1 frame caveat remains",
+  "807 candidates second-passed by one reviewer at reduced resolution; only 58 flagged rows native-pixel checked (~750 not)",
+  "gap absorption is a measured heuristic (not new visual review); 7 gaps unresolved, 7 standalone; 4 splits conflict with second-pass PREV label"
+ ],
+ "publication": "partial research package; not CT-certified",
+ "candidate_second_pass": {
+  "ok": 749,
+  "wrong_type": 33,
+  "no_visible_change": 25,
+  "types_corrected": 25,
+  "method": "single reviewer, 560x315 before/after frames"
+ },
+ "unowned_gap_review": {
+  "motion": 99,
+  "continuous": 13,
+  "static": 13,
+  "hard_cut_ending": 6,
+  "third_party_playback": 6,
+  "fade": 6,
+  "limited_by_sampling": 29,
+  "end_on_new_composition_not_applied": 13,
+  "method": "single reviewer, <=12 frames per gap + measured per-frame diff"
+ },
+ "boundary_rule": {
+  "applied_gaps": 15,
+  "not_applied": [
+   "U059",
+   "U069",
+   "U073",
+   "U083"
+  ],
+  "rule": "isolated one-frame spike at gap end >=10% and >=3x prior 4-frame max: last gap frame reassigned to next state",
+  "negative_tests": "3 DETECTED"
+ },
+ "native_check_58": {
+  "rows": 58,
+  "type_changed": 37,
+  "type_ok": 19,
+  "no_real_change": 2,
+  "types_updated": 11,
+  "note": "native-pixel crops; only these 58 rows"
+ },
+ "gap_absorption": {
+  "absorbed_frames": 2609,
+  "standalone_frames": 276,
+  "unresolved_frames": 112,
+  "gaps": {
+   "absorb_whole": 59,
+   "absorb_prev": 46,
+   "absorb_next": 14,
+   "split_at_cut": 10,
+   "keep_standalone": 7,
+   "unresolved": 7
+  },
+  "method": "measured per-frame diffs + second-pass relation; states unchanged",
+  "negative_tests": "5 DETECTED"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "video_id": "hbsYaLaN_F8",
+ "source_sha256": "7d97c9bd8065b23565191621db75e63f8f4333340487bdc5fb215667fcf4e699",
+ "requested_mode": "CT_SCAN",
+ "scope": "visual-only; audio/AV tracked separately",
+ "reviewer": "Claude Sonnet 5.5, Machine A, 2026-11-08",
+ "gates": {
+  "source_identity": "PASS (hash computed; filename ID/registry attribution; live YouTube not re-checked)",
+  "full_temporal_overview": "PASS (all 16802 frames measured; 1 fps overview)",
+  "candidate_shots_verified": "PASS (158 hard cuts verified on adjacent decoded frames; 257/257 episodes viewed)",
+  "meaningful_state_timing": "PASS_WITH_DECLARED_BOUNDS (223 EXACT, 0 BOUND, rest measured activity edges)",
+  "motion_design_review": "PASS (classified; easing UNAVAILABLE)",
+  "creative_design_review": "PASS (palette measured; typography labelled)",
+  "on_screen_text": "PARTIAL_OPEN_LIMITATION (headings, labels, quotes, card text and logo names read from decoded frames; small body text inside articles, charts, search results and UI screenshots flagged not transcribed or quoted only in part; people in photographs and clips not identified beyond on-screen names)",
+  "visual_script_mapping": "PROVISIONAL_ASR_ONLY (202 semantic pairs, control baseline reported)",
+  "production_blueprint": "PASS (223 per-state prompts, modules, timeline, acceptance tests)",
+  "audio_human_listening": "NOT_COMPLETED",
+  "final_av_signoff": "BLOCKED",
+  "ct_scan_complete": "PASS_VISUAL_ONLY"
+ },
+ "final_video_status": "VISUAL_CT_SCAN_COMPLETE_WITH_EVIDENCE (visual-only, declared coverage)",
+ "full_av_signoff": "NO",
+ "limitations": [
+  "no human listening",
+  "ASR unverified",
+  "quiet-frame interiors not individually viewed",
+  "sub-threshold changes undetectable",
+  "pan/ease curves and typefaces not measured",
+  "live thumbnail/title not re-fetched",
+  "on-screen figures not fact-checked"
+ ],
+ "next_step": "counts only if validate.py exits 0"
+}

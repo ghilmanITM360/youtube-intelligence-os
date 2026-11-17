@@ -1,0 +1,9 @@
+# Casual Finance — Video006 xtqbRt94TTw
+
+Parentefeacb0f7adebf57d20f55733947ea5dbb57c26c. Ledger43/queue19:572→562strictrows,10adjudications (6exact/reconciledcompound,3continuous,1no meaningfulvisibleevent). AdditionalEP0029offset/EP0032arrows outside strict category,notadded. 145→143spans,2genuinelynew G005.01/G006.01 originalspecs and48boundedframes/coldstarthashPASS/independentQA. Firstattemptdefects/validatorfailure preserved. All948IDs stable,notphysicaleventcount.
+
+2outsideunknownsSUB101/SUB151OPEN; hidden cursor onset2285precursor andintermediatecursorpath2304–2325remainOPEN. PriorG004contextP3andglobalnative/semantics/production/whole-video prerequisites remainOPEN; wholevideoNOT_RUN. Audio0seconds/ASR21+7/AVBLOCKED/CTfalse/0of35certified.
+
+Prior8postpublicationreceiptsincluded;currentreceiptsLOCAL_ONLY untilnextauthorizedpublication. Zero-mediaexceptions requiredbeforecommit/push;4removedJPGhistorybytesremain;U28preservationunchanged. Canonicalcheckout/index/stash/unrelatedworkers preserved;claimreleaseactualresultwillbeinlocalLOCK_RELEASE.json.
+
+Next: freshusage/remote/handoff/ledger/source/ownership; BUSY→separatehandoff+exit. FREE→ownv3claim. SUB050frames2421–2427 withnative2417–2431context, verify independentchangevscontinuation; thenadjacentqueue. Productionnext G007.02 explicitintervalparams and sourceevidence; do notautomaticallyreuse G007.01. Noautomaticresetcontinuationpromised.

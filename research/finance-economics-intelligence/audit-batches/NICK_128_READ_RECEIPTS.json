@@ -1,0 +1,124 @@
+{
+  "batch_id": "NICK_128_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "MLPeWnrpI8Y",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "e5fbba1be097a02ad62c7e844cd78e68910bdb962d7314da35be0445b232c71f",
+      "character_count": 17729,
+      "source_word_count": 3208,
+      "coverage_token_count": 3145,
+      "read_character_ranges": [
+        [
+          0,
+          11000
+        ],
+        [
+          11000,
+          17729
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED",
+      "archive_member": "124_MLPeWnrpI8Y_When_Should_The_Average_American_Buy_A_House_And_When_Not_To.txt",
+      "archive_member_sha256": "2bc25d8c013ad11f075e07b1087779ffb3bd51731c5ee97889e12879cf875214",
+      "archive_member_bytes": 19322,
+      "archive_member_lines": 529,
+      "audio_verified": false,
+      "image_sha256": "4bbd292cc1973f23137e2b0f635f3c612772364e08405644ac8c07fa0b4b57e4",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/MLPeWnrpI8Y/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/MLPeWnrpI8Y/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Datedmedianprice",
+      "url": "https://www.nar.realtor/news/real-estate-news/slow-sales-high-home-prices-whats-going-on",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_PDF_OR_SEARCH_EXCERPT; limitations in finding",
+      "finding": "March2026existingmedian408800supported,notallpropertyquotes."
+    },
+    {
+      "claim": "Mortgagevintage",
+      "url": "https://www.freddiemac.com/pmms/archive",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_PDF_OR_SEARCH_EXCERPT; limitations in finding",
+      "finding": "April30,2026thirtyyearFRM6.30supported;borrowertermsvary."
+    },
+    {
+      "claim": "Householdincome",
+      "url": "https://www.census.gov/library/publications/2025/demo/p60-286.html",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_PDF_OR_SEARCH_EXCERPT; limitations in finding",
+      "finding": "2024median83730releasedSept2025;doesnotsubstantiate86185projection."
+    },
+    {
+      "claim": "Operatingversusmaintenance",
+      "url": "https://www.nahb.org/-/media/NAHB/news-and-economics/docs/housing-economics-plus/special-studies/2021/special-study-operating-costs-of-owning-a-home-january-2021.pdf",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_PDF_OR_SEARCH_EXCERPT; limitations in finding",
+      "finding": "2019AHS/2021report:totaloperatingnear5%,maintenance950average,notmaintenance5%."
+    },
+    {
+      "claim": "Fivepercentrule",
+      "url": "https://pwlcapital.com/rent-or-own-your-home-5-rule/",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_PDF_OR_SEARCH_EXCERPT; limitations in finding",
+      "finding": "Originalheuristic:tax,maintenance,costcapitalassumptions;notuniversalcurrent6-7."
+    },
+    {
+      "claim": "QMnotuniversal43cap",
+      "url": "https://www.consumerfinance.gov/rules-policy/final-rules/qualified-mortgage-definition-under-truth-lending-act-regulation-z-general-qm-loan-definition/",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_PDF_OR_SEARCH_EXCERPT; limitations in finding",
+      "finding": "GeneralQMamendmentremoved43%DTIcap,replacedwithpricebasedthresholds;notallapprovalrules."
+    },
+    {
+      "claim": "Marketgeography",
+      "url": "https://www.redfin.com/news/buyers-vs-sellers-march-2026/",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_PDF_OR_SEARCH_EXCERPT; limitations in finding",
+      "finding": "38of50buyersmarkets;modeledseasonallyadjustedestimatesrevision-prone."
+    },
+    {
+      "claim": "Ownerselection",
+      "url": "https://www.federalreserve.gov/publications/october-2023-changes-in-us-family-finances-from-2019-to-2022.htm",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_PDF_OR_SEARCH_EXCERPT; limitations in finding",
+      "finding": "2022owner396200/renter-other10400;observationalnotcausalbuyingreturn."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Independent amortization rate/12,30yearlevelmonthlypayments and explicit scenario arithmetic;no full rent-buyendpoint reproduction possible from missing assumptions",
+      "results": {
+        "median_PandI": 2024.2886106593955,
+        "allin_implied_extra": 975.7113893406045,
+        "income28pct": 128571.42857142857,
+        "gap_vs_script86185": 42386.428571428565,
+        "couple_priceincome": 4.166666666666667,
+        "couple_down_fraction": 0.14782608695652175,
+        "couple_PandI": 3032.966668368101,
+        "couple_housing_share": 0.41739130434782606,
+        "SanJose_price_rent": 23.086654016445287,
+        "builder13_3pct450K": 59850.0,
+        "unrecoverable6pct500Kmonthly": 2500.0,
+        "unrecoverable7pct500Kmonthly": 2916.6666666666665,
+        "peer_ratio_10": 0.7063644583324973,
+        "peer_ratio_5": 0.6203426268378467
+      }
+    }
+  ]
+}

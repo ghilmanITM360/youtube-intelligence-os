@@ -1,0 +1,76 @@
+{
+  "decode_command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-i",
+    "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We\u2019re About to Break It - Casual Finance (1080p, h264).mp4",
+    "-vf",
+    "select='between(n,680,684)'",
+    "-fps_mode",
+    "passthrough",
+    "-pix_fmt",
+    "rgb24",
+    "-f",
+    "rawvideo",
+    "pipe:1"
+  ],
+  "method": "Full native decoded RGB24 SHA; adjacent pixel sum abs RGB difference >60, max channel delta. Measurements do not establish semantic or audio status.",
+  "rows": [
+    {
+      "frame": 680,
+      "pts_fraction": "681/24",
+      "decoded_RGB_sha256": "f537e7999b25ddc4016e93bc5f5a3246325835badf1d3d76eeeff85f8ffb21d6",
+      "changed_gt60": null,
+      "changed_bbox": null,
+      "maximum_channel_delta": null
+    },
+    {
+      "frame": 681,
+      "pts_fraction": "682/24",
+      "decoded_RGB_sha256": "decb5e0a8bb87ce83109b7650ae42d7cfd0c5daecf028d4fd3356230356a49a1",
+      "changed_gt60": 0,
+      "changed_bbox": null,
+      "maximum_channel_delta": 14
+    },
+    {
+      "frame": 682,
+      "pts_fraction": "683/24",
+      "decoded_RGB_sha256": "10d7c96767cf0ed720a5325f30f557821e31ff0e677ac97765826c9779c443bf",
+      "changed_gt60": 12917,
+      "changed_bbox": [
+        1048,
+        599,
+        1761,
+        971
+      ],
+      "maximum_channel_delta": 149
+    },
+    {
+      "frame": 683,
+      "pts_fraction": "684/24",
+      "decoded_RGB_sha256": "4794a4bdabab9cf51ce87cc975842d220b1c1d5e44bbbd769eadb11fe8297686",
+      "changed_gt60": 5,
+      "changed_bbox": [
+        996,
+        968,
+        1053,
+        1037
+      ],
+      "maximum_channel_delta": 34
+    },
+    {
+      "frame": 684,
+      "pts_fraction": "685/24",
+      "decoded_RGB_sha256": "8b5267f3397400765b8d71e940424ad369b93fe593aad857269a64f50be03c05",
+      "changed_gt60": 3,
+      "changed_bbox": [
+        1053,
+        968,
+        1053,
+        970
+      ],
+      "maximum_channel_delta": 34
+    }
+  ]
+}

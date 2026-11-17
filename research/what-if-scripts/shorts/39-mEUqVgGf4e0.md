@@ -1,0 +1,35 @@
+# What if the Moon were made of Protons?
+
+| Field | Value |
+|---|---|
+| Video ID | `mEUqVgGf4e0` |
+| URL | https://www.youtube.com/shorts/mEUqVgGf4e0 |
+| Format | shorts |
+| Published | 2026-08-11 |
+| Duration | 00:01:28 |
+| Views (at acquisition) | 679,884 |
+| Words | 322 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/mEUqVgGf4e0.txt` |
+| Source SHA-256 | `5e70cd1c5ef5997d2fc6cc77e7c3db42dc36135af3b942996b314d55d8305fe2` |
+
+## Script
+
+What if the Earth were made entirely of protons, and the Moon were made entirely of electrons?
+
+This is, by far, the most destructive What-If scenario to date.
+
+You might imagine an electron Moon orbiting a proton Earth, sort of like a gigantic hydrogen atom. On one level it makes sense: electrons orbit protons, and moons orbit planets.
+
+However, electron moons do not orbit proton planets: if you put two negatively charged electrons together, they try to fly apart with a force about 20 orders of magnitude stronger than the gravity pulling them together.
+
+If you put 10^53 electrons together –to build a Moon– they push each other apart with an unbelievable amount of energy.
+
+The Moon and Earth would have no chance to gravitationally or even electrostatically influence each other; the forces trying to blow each one apart would be far more powerful..
+
+But There's a huge amount of potential energy in this scenario – the energy that we imagined would blast all these electrons apart. That energy warps space and time just like mass does. The amount of energy in our electron Moon, it turns out, is about equal to the total mass and energy of the entire observable universe.
+
+An entire observable universe worth of mass-energy concentrated into the space of our (relatively small) Moon would warp space-time so strongly that it would easily overpower even the repulsion of those 10^53 electrons.
+
+Would the attraction of this universe-mass black hole cause the rest of the universe to collapse? Hard to say. The answer depends on what the deal with dark energy is, and nobody knows what the deal with dark energy is.
+
+For the mean time, at least, nearby galaxies would be safe, since the gravitational influence of the black hole can only expand outward at the speed of light. Most of the universe around us would remain blissfully unaware of our ridiculous electron experiment, until they suddenly u––.

@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/ghilmanislam360/Documents/youtube-intelligence-os/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests"
+  ],
+  "cwd": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+  "at": "2026-11-02T03:50:06.650273+00:00",
+  "code": 1,
+  "stdout": "........................................................................ [ 15%]\n............................................................F........... [ 31%]\n........................................................................ [ 46%]\n......................................s................................. [ 62%]\n........................................................................ [ 78%]\n........................................................................ [ 93%]\n.............................                                            [100%]\n=================================== FAILURES ===================================\n__________ LedgerChecksumTests.test_all_csv_ledger_datasets_are_clean __________\n\nself = <test_dataset_ledger_provenance.LedgerChecksumTests testMethod=test_all_csv_ledger_datasets_are_clean>\n\n    def test_all_csv_ledger_datasets_are_clean(self):\n        for dataset_id in DATASETS:\n            problems = v.validate_dataset(dataset_id)\n>           self.assertEqual({}, problems, \"{} has unresolved ledger issues\".format(dataset_id))\nE           AssertionError: {} != {'DS-000028-F020': ['SIZE_MISMATCH', 'SHA_MISMATCH']}\nE           - {}\nE           + {'DS-000028-F020': ['SIZE_MISMATCH', 'SHA_MISMATCH']} : DS-000028 has unresolved ledger issues\n\ntests/test_dataset_ledger_provenance.py:53: AssertionError\n=============================== warnings summary ===============================\ntests/test_register_batch.py::RegisterBatchTestCase::test_image_pipeline_extracts_metadata\ntests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image\ntests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image\ntests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image\n  /Users/ghilmanislam360/Documents/youtube-intelligence-os/scripts/image_pipeline.py:43: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n    pixels = list(small.getdata())\n\ntests/test_register_structured_source.py::RegisterStructuredSourceTestCase::test_register_rejects_duplicate_workbook_video_id_without_duplicate_entity\n  /Users/ghilmanislam360/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'ChannelA/sameid00001.txt'\n    return self._open_to_write(zinfo, force_zip64=force_zip64)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED tests/test_dataset_ledger_provenance.py::LedgerChecksumTests::test_all_csv_ledger_datasets_are_clean\n1 failed, 459 passed, 1 skipped, 5 warnings in 48.37s\n",
+  "stderr": "",
+  "elapsed_seconds": 48.687,
+  "name": "repository-tests"
+}

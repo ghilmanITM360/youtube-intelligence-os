@@ -1,0 +1,3 @@
+# RT4_916 attempt 2 (versioned; attempt_1 preserved unchanged)
+Trigger: attempt_1 M4 miss at intended f1372 (GOOD NIGHT write-on). Visual check of attempt_1 (rv_full/) showed the write-on IS rendered (f1371 absent, f1380 present) but the segmenter absorbed f1372-1379 as ENCODER_REFRESH (D3-only, px_diff_ge150==0, max_abs_diff 65 < 80) because the label is low-contrast teal (#1F8A8A) on the navy night panel. Defect = low contrast label (weak legibility + undetectable by the source pipeline), not a rhythm failure.
+Single change: GOOD NIGHT colour TEAL -> ink (235,235,235). Nothing else edited; frozen criteria unchanged (sha a27f4b41…).

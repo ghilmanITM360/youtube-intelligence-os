@@ -1,0 +1,142 @@
+{
+ "batch": "B002-02",
+ "rows": [
+  {
+   "seq": 7,
+   "thumbnail_id": "THB-a2b8ad2dd16501e312967b85af7fd674bb4dab8e0008500e1bf8f75ec9e4fa53",
+   "wrong_image_contamination": false,
+   "visible_text_errors": [],
+   "object_description_errors": [],
+   "title_linkage_errors": [],
+   "mobile_readability_disagreement": [],
+   "tag_errors": [
+    "warning_color_used=N conflicts with the row's own colors field, which says the red alarm clock 'supplies urgency' (red is a visible warning-type accent); either set Y or drop the urgency claim."
+   ],
+   "score_issues": [],
+   "template_or_vague_prose": [],
+   "other": [
+    "typography calls ALMOST AT 'small'; it is large bold black type about 60% the height of the number, so 'smaller than the number' is accurate but 'small' is not.",
+    "psychology says 'ticking clock'; a static alarm clock is drawn, nothing ticks.",
+    "title_relation=CONTRADICTS is defensible (almost at $1M vs 1/3 of the way) but rests on inference since the thumbnail never shows $100,000; text and scene fields otherwise verified correct."
+   ],
+   "severity": "MINOR",
+   "verdict": "PASS"
+  },
+  {
+   "seq": 9,
+   "thumbnail_id": "THB-cb610036de9facbd9cf8c5202f2f30ffcebf63dcee052aa289a90adec491f28b",
+   "wrong_image_contamination": false,
+   "visible_text_errors": [],
+   "object_description_errors": [
+    "colors: 'tiny green-roofed town' is wrong; the town has red/orange roofs on a green circular base (scene field correctly says red-roofed houses), so the two fields contradict."
+   ],
+   "title_linkage_errors": [],
+   "mobile_readability_disagreement": [
+    "bottleneck says the tiny town that carries the concept is small at 160x90, yet mobile_readability_160=PASS and mobile_readability_score=8 with strength 'instantly visual'; on sheet_160 the headline and slab survive but the town is a few pixels, so PARTIAL or a lower component is more consistent."
+   ],
+   "tag_errors": [],
+   "score_issues": [
+    "mobile_readability_score 8 contradicts the row's own bottleneck about the town being small at 160x90."
+   ],
+   "template_or_vague_prose": [],
+   "other": [
+    "hero_object 'six-hollow slab' and weakness 'six-versus-five count is slightly off' are slightly inconsistent: the slab has six recesses (one filled, five empty), so six is arguably matched; the weakness claim is shaky."
+   ],
+   "severity": "MINOR",
+   "verdict": "REPAIR"
+  },
+  {
+   "seq": 23,
+   "thumbnail_id": "THB-3da0601598e954cef34990d8462e409b1209837f6e0fdbefede7a983b0887249",
+   "wrong_image_contamination": false,
+   "visible_text_errors": [],
+   "object_description_errors": [
+    "scene/mechanism/hero_object say he 'slaps one stone against another' / 'clapped rocks'; in the image his open black hand is pressed flat against the left rock with the arm extended, the two rocks sit side by side with impact ticks; he is not holding or clapping two stones together."
+   ],
+   "title_linkage_errors": [],
+   "mobile_readability_disagreement": [],
+   "tag_errors": [
+    "face_scale=MEDIUM understates: the caveman head spans roughly 45% of image height and is the largest face in the packet; LARGE is more accurate (and fits the row's own 'face at the left')."
+   ],
+   "score_issues": [],
+   "template_or_vague_prose": [],
+   "other": [
+    "counterexample says seq 12 has 'the caveman's face large'; on the sheet seq 12 has a tiger as the large subject and a medium face, so the contrast is overstated.",
+    "typography 'among the largest in the batch' is an unverifiable batch-wide claim."
+   ],
+   "severity": "MINOR",
+   "verdict": "REPAIR"
+  },
+  {
+   "seq": 14,
+   "thumbnail_id": "THB-20ef81627a914844d7ceb20dd078ca2464ef1022f6c467ace0a1b7108adf1032",
+   "wrong_image_contamination": false,
+   "visible_text_errors": [],
+   "object_description_errors": [],
+   "title_linkage_errors": [],
+   "mobile_readability_disagreement": [],
+   "tag_errors": [],
+   "score_issues": [
+    "title_partnership_score 12/15 for a title_relation=DUPLICATES row whose own weakness says the thumbnail adds no extra mystery; high for pure repetition."
+   ],
+   "template_or_vague_prose": [],
+   "other": [
+    "psychology: 'guilt-like worry' is an inferred inner state; protocol allows visible cues only (sweat drop, wide eyes, open mouth, clutching bag).",
+    "art: 'wobbly hand-drawn line' and 'slightly aged character design' do not match the clean, uniform-weight illustration; also scene omits the visible grey beard."
+   ],
+   "severity": "MINOR",
+   "verdict": "REPAIR"
+  },
+  {
+   "seq": 3,
+   "thumbnail_id": "THB-72520552352a59c25cf5d366e84147f3e103628fc1fa60e20b6dcc617040aeea",
+   "wrong_image_contamination": false,
+   "visible_text_errors": [],
+   "object_description_errors": [],
+   "title_linkage_errors": [],
+   "mobile_readability_disagreement": [],
+   "tag_errors": [
+    "title_relation=DUPLICATES while partnership/typography say the thumbnail adds 'nursing homes'; COMPLEMENTS fits better. Defensible either way."
+   ],
+   "score_issues": [],
+   "template_or_vague_prose": [],
+   "other": [
+    "scene: upper tile wall is not strictly 'plain'; a small shelf with objects is visible.",
+    "art: 'Canva-like fill' guesses the authoring tool; not evidenced.",
+    "composition says text and tiles compete while hierarchy_clear=Y; mild tension. Text, captions, word_count 14, logo, mobile claims verified correct."
+   ],
+   "severity": "MINOR",
+   "verdict": "PASS"
+  },
+  {
+   "seq": 19,
+   "thumbnail_id": "THB-b8142aa8dc4245de7a742b1aeb3db977b5385d77d233c982963bf88457499f20",
+   "wrong_image_contamination": false,
+   "visible_text_errors": [],
+   "object_description_errors": [],
+   "title_linkage_errors": [],
+   "mobile_readability_disagreement": [],
+   "tag_errors": [],
+   "score_issues": [
+    "composition_score 7 and hierarchy_score 8 sit somewhat high given the row's weakness/bottleneck that three similar-size subjects share attention and none leads."
+   ],
+   "template_or_vague_prose": [],
+   "other": [
+    "psychology/mechanism call the hard-hat worker an 'engineer' and the cube 'modern'; only a hard hat and clipboard are visible, so these labels are inferred.",
+    "composition says 'moderate scene density' but background_complexity=LOW; and bottleneck says no object leads while hierarchy_score=8/hierarchy_clear=Y (headline likely carries hierarchy, so mild).",
+    "partnership 'hinting at Roman concrete' is analyst inference, not visible; stated as hint so acceptable."
+   ],
+   "severity": "MINOR",
+   "verdict": "PASS"
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 6,
+  "rows_with_material_errors": 0,
+  "visible_text_error_count": 0,
+  "object_error_count": 2,
+  "title_linkage_error_count": 0,
+  "mobile_disagreement_count": 1,
+  "tag_error_count": 3
+ }
+}

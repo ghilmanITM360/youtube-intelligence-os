@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "ozcH8vngH08",
+ "nick": "NICK_277",
+ "claims": 7,
+ "sources": 1,
+ "calculations": 2,
+ "transcript_chars": 20215,
+ "parent_commit": "175b79ca",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_277",
+  "NICK_278"
+ ],
+ "changed_ledger_ids": [
+  "ozcH8vngH08"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 552,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "48_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.56705 TYPICAL (5-peer 0.49321 WEAK); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 554,
+  "remaining": 1058,
+  "original_pending": 412,
+  "expansion_pending": 646,
+  "changed_cells": "63 (dashboard 7 + rows 549-550)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "5523e782fd87ad0c98fad5ef7e61e1b5b87cbe3e9b5128239981ecaac62bbf50"
+ },
+ "semantic_acceptance": "All 20215 stored characters and six dimensions reviewed; 7 located claim groups; sources BLSCE277. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "8319c6e7d8807e7de5d34192636b6ffd72201f6ded63eb4c10082b30a14cea36",
+  "NICK_277.json": "84e2c94d9620a8f12f53f8114fd4db448d8f4b846e9bcdb74fd3f84dc461094a",
+  "NICK_277_READ_RECEIPTS.json": "7f00a2937534f1b1681e9d071fb438f4f0ad1bcf220784355eec3f4916b0547b",
+  "thumbnail": "66a277218a70c109c08743c0e523469f89cc6ea15ce5db6edb334df815684419"
+ }
+}

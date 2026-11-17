@@ -1,0 +1,201 @@
+{
+  "parent_event_id": "EP0054",
+  "source_review": "pdf_late_zoom_native_v1/OUT_pdf_late_zoom_native_v1.json",
+  "native_window": [
+    1631,
+    1640
+  ],
+  "construction": {
+    "taxonomy": "PROGRESSIVE_SAME_PAGE_ENLARGEMENT_AND_TRANSLATION_WITH_ADVANCING_VIEWPORT_CROP",
+    "description": "Table1, its11 rows/rules, page119 running header and associated prose retain matching content while the page enlarges each frame. Table top-left moves up/left and right rule endpoint moves right. White crop edges progressively eliminate viewer/sidebar material and lower prose. No sudden substitute page or whole-composition replacement is visible across the ten consecutive native frames.",
+    "source_mechanism": "UNVERIFIED: visible result supports zoom/reframe plus crop; exact editor layers, UI operation, transform curve or mask mechanism unknown.",
+    "component_exit_boundaries": [
+      {
+        "component": "THUMBNAIL_PAGE_FRAGMENTS",
+        "last_visible_frame": 1632,
+        "first_absent_frame": 1633,
+        "boundary_precision": "EXACT_ADJACENT_NATIVE",
+        "qualification": "Disappearance of thumbnail fragments, not all dark viewer/sidebar material."
+      },
+      {
+        "component": "OUTER_DARK_SIDEBAR_REMNANT",
+        "last_visible_frame": 1635,
+        "first_absent_frame": 1636,
+        "boundary_precision": "EXACT_ADJACENT_NATIVE",
+        "qualification": "Inner dark page/viewer gutter remains through1638; white/pale separator functional identity not fully determined."
+      },
+      {
+        "component": "FINAL_DARK_LEFT_VIEWER_GUTTER",
+        "last_visible_frame": 1638,
+        "first_absent_frame": 1639,
+        "boundary_precision": "EXACT_ADJACENT_NATIVE",
+        "qualification": "Geometry/crop exit within retained page enlargement; this is not a full-scene cut."
+      }
+    ],
+    "content_anchors": "Matching table title,11-row ordering, horizontal rules, page119 running header and prose identify retained page content. These anchors move with the enlargement; no fixed object anchor besides plain external white background is established.",
+    "motion_continues_through_frame": 1640,
+    "settle_frame": null,
+    "settle_limit": "Every new frame still changes table geometry/cropping. Prior1641/1642 observations also describe retained-table reframe; no settle/hold boundary certified."
+  },
+  "shot_verdict_in_native_window": {
+    "frames": [
+      1631,
+      1640
+    ],
+    "verdict": "NO",
+    "meaning": "No observable whole-scene cut between consecutive frames in this native window; progressive retained-page enlargement/cropping instead.",
+    "exact_full_scene_cut_frame": null,
+    "confidence": "HIGH",
+    "adjacent_context": "Prior1630 enlarged-table-in-viewer state is consistent with start of this progression; prior1641 isolated enlarged table and1642 additive host entry are reused without redisplay."
+  },
+  "earlier_compound_gate": {
+    "event_id": "EP0054",
+    "entire_compound_exact_native_certification": "NOT_AWARDED",
+    "earlier_native_coverage": "Reused1596/1597 PDF-viewer content repositioning; root native1619 retained viewer/prose, root1630 enlarged table within viewer. Earlier interval1598\u20131630 is not consecutively natively reviewed here.",
+    "earlier_sampled_coverage": "G013 sampled document-scroll/zoom progression reused from the dispatched prior context; sampled/scaled evidence is not promoted to continuous native coverage.",
+    "conclusion": "Late viewer-to-table construction is resolved as progressive enlargement/crop. This alone does not certify every earlier page traversal or rule out an unviewed edit in the earlier compound interval.",
+    "earlier_exact_cut_frame": null,
+    "earlier_interval_is_verified_cut_bracket": false,
+    "existing_claim_handling": "The coarse full-cut label is unsupported for this observed late construction; do not convert the bounded NO into complete exact-event certification for the entire compound."
+  },
+  "qualified_context_refs": [
+    "agents/gap_review_01/OUT_gap_review_01.json#G013",
+    "compound_cut_followup_v1/OUT_compound_cut_followup_v1.json#EP0054",
+    "pdf_transition_midpoint_v1/OUT_pdf_transition_midpoint_root_v1.json",
+    "pdf_transition_midpoint02_v1/OUT_pdf_transition_midpoint02_root_v1.json"
+  ],
+  "entire_compound_native_certification": "PASS_BOUNDED_VISIBLE_CONSTRUCTION_ONLY;NOT_SOURCE_EDITOR_MECHANISM_OR_GLOBAL_PASS",
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "aggregate_native_window": [
+    1596,
+    1642
+  ],
+  "aggregate_native_accounting_ref": "session_20261105/pdf_compound_47frame_independent_coverage_audit_v1.json",
+  "source_early_review": "pdf_early_traversal_native_v1/OUT_pdf_early_traversal_native_v1.json",
+  "phase_segments": [
+    {
+      "start": 1596,
+      "end": 1596,
+      "phase": "REUSED_BEFORE_CONTEXT",
+      "description": "Same PDF viewer at100%, page2/20, selected sentence on lower page2 and next page below; not a new view."
+    },
+    {
+      "start": 1597,
+      "end": 1621,
+      "phase": "RETAINED_VIEWER_RAPID_PAGE_CONTENT_TRAVERSAL",
+      "description": "Main-pane content advances upward through successive numbered pages while toolbar, viewer bounds and100% indicator remain fixed. Corresponding page boundaries/headings/prose move between adjacent recorded positions; thumbnail selection and scrollbar update. Large uneven displacements are visible; this is not a claim of smooth physical UI scrolling or uninterrupted underlying capture.",
+      "native_reuse_inside": [
+        1597,
+        1619
+      ]
+    },
+    {
+      "start": 1622,
+      "end": 1622,
+      "phase": "TABLE1_PARTIAL_MAIN_PANE_ENTRY",
+      "description": "Page19 header119 and Table1 title/upper rows enter from bottom within retained viewer. Last prior frame1621 has no main-pane Table1."
+    },
+    {
+      "start": 1623,
+      "end": 1624,
+      "phase": "FULL_TABLE_UPWARD_POSITIONING_WITH_FIXED_VIEWER_SCALE",
+      "description": "All11 rows visible1623; table and surrounding page translate upward through1624 while roughly same table width and viewer bounds retained."
+    },
+    {
+      "start": 1625,
+      "end": 1632,
+      "phase": "VIEWER_AND_TABLE_ENLARGEMENT_WITH_ADVANCING_CROP",
+      "description": "First visible enlargement1625; toolbar/page/sidebar/table scale and reframe together while PDF100% label remains. Top toolbar clips away; thumbnails and scrollbar remain initially, with thumbnail fragments last visible1632.1630\u201332 are qualified reuse."
+    },
+    {
+      "start": 1633,
+      "end": 1635,
+      "phase": "THUMBNAILS_GONE_DARK_SIDEBAR_REMNANTS_CROPPING",
+      "description": "Retained page/Table1 continues enlarging. Thumbnail fragments absent1633; outer dark remnant and inner gutter remain. Last outer dark remnant1635. Qualified late native reuse."
+    },
+    {
+      "start": 1636,
+      "end": 1638,
+      "phase": "FINAL_INNER_VIEWER_GUTTER_CROPPING",
+      "description": "Outer sidebar remnant absent1636. Single inner dark gutter narrows through1638 while same table/page enlarges and lower prose is cropped. Qualified late native reuse."
+    },
+    {
+      "start": 1639,
+      "end": 1641,
+      "phase": "ENLARGED_RETAINED_TABLE_ON_WHITE",
+      "description": "Final dark viewer gutter absent1639. Same table continues enlarging/repositioning on white with lower prose progressively cropped; host absent through1641. Qualified native reuse; no settle/hold boundary established."
+    },
+    {
+      "start": 1642,
+      "end": 1642,
+      "phase": "RETAINED_TABLE_REFRAME_AND_ADDITIVE_HOST_ENTRY",
+      "description": "Prior exact1641/42 proof: same table retained slightly enlarged/repositioned; lower clipped prose line clears and smiling pointer host enters left. Not first table appearance or full-scene replacement."
+    }
+  ],
+  "component_onsets_and_offsets": {
+    "main_pane_table1_first_visible": {
+      "frame": 1622,
+      "prior_absent_frame": 1621,
+      "precision": "EXACT_ADJACENT_NATIVE",
+      "scope": "Main-pane Table1 title/upper rows; not sidebar thumbnail appearance or global document first use."
+    },
+    "table1_first_fully_visible": {
+      "frame": 1623,
+      "prior_partial_frame": 1622,
+      "precision": "EXACT_ADJACENT_NATIVE",
+      "scope": "Title and all11 rows visible within main pane."
+    },
+    "visible_viewer_table_enlargement_first_change": {
+      "frame": 1625,
+      "prior_fixed_scale_frame": 1624,
+      "precision": "EXACT_ADJACENT_NATIVE",
+      "scope": "Visible screenshot/viewer/table geometry; original editor transform or physical PDF zoom command not inferred."
+    },
+    "thumbnail_fragments_first_absent": {
+      "frame": 1633,
+      "last_visible": 1632,
+      "precision": "REUSED_EXACT_ADJACENT_NATIVE"
+    },
+    "outer_dark_sidebar_remnant_first_absent": {
+      "frame": 1636,
+      "last_visible": 1635,
+      "precision": "REUSED_EXACT_ADJACENT_NATIVE"
+    },
+    "final_inner_dark_gutter_first_absent": {
+      "frame": 1639,
+      "last_visible": 1638,
+      "precision": "REUSED_EXACT_ADJACENT_NATIVE"
+    },
+    "host_entry": {
+      "frame": 1642,
+      "prior_absent": 1641,
+      "precision": "REUSED_EXACT_ADJACENT_NATIVE"
+    },
+    "toolbar_full_disappearance_frame": null,
+    "toolbar_limit": "New1629 toolbar is mostly clipped at top; prior1630 generic witness says mostly clipped, late1631 no recognizable toolbar. No exact last toolbar pixel claimed from generic prior wording.",
+    "global_page_traversal_onset": null,
+    "in_window_first_document_position_change": 1597,
+    "zoom_settle_frame": null,
+    "unknown": [
+      "Exact physical scrolling/click/page-navigation inputs or speed-up/edit mechanism.",
+      "Exact editor/crop/layer/preset/easing and source transform center.",
+      "Motion settle/hold after1642 and any offscreen content.",
+      "Invisible edits preserving the same visible construction."
+    ]
+  },
+  "aggregate_shot_verdict": {
+    "event_id": "EP0054",
+    "coarse_full_replace_claim": "REJECTED",
+    "shot_boundary_as_whole_scene_replacement": "NO",
+    "adjudicated_window": [
+      1596,
+      1642
+    ],
+    "reason": "Complete distinct-frame native observation accounting now spans the compound: rapid retained-viewer page-content traversal, partial Table1 entry1622, full table1623, enlargement/crop from1625 through late viewer-remnant exits, and retained-table host addition1642. No observable whole-scene hard replacement explains this construction. Page-content updates within the viewer are not counted as separate whole-scene shots.",
+    "distinction": "A retained viewport alone would not prove scrolling. Here matching successive page edges/headings/prose plus ordered counter/sidebar changes support document traversal. Large discrete per-frame position changes are acknowledged; exact input/editor operation and any invisible content-preserving edits remain unknown.",
+    "exact_full_scene_cut_frame": null,
+    "confidence": "HIGH_FOR_VISIBLE_WHOLE_SCENE_TAXONOMY_WITHIN_THE47_FRAME_WINDOW",
+    "global_limit": "No whole-video shot count, whole-shot duration or generic guarantee against invisible edits."
+  }
+}

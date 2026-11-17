@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "asr_id": 156,
+  "reviewer": "root direct bounded supplemental review",
+  "parent_checkpoint": "217671d5aaf3c706ffdce947e75224a389430645",
+  "source_asr_interval_s": [
+    671.28,
+    675.68
+  ],
+  "text_ASR_uncertified": "This time, the biggest impact lands on the supply side, on companies carrying enormous",
+  "relation": "LITERAL",
+  "confidence_scope": "Moderate, sampled relation to unverified ASR only",
+  "observations": [
+    {
+      "frame": 16146,
+      "source_pts_s": 672.7916666666666,
+      "observed": "White field, green rising zigzag arrow, United States Treasury paper, orange percent-symbol disc. No business building is visible in this sample."
+    },
+    {
+      "frame": 16212,
+      "source_pts_s": 675.5416666666666,
+      "observed": "Rising green arrow, Treasury paper and percent disc remain; right-side building labelled BIG BUSINESS with two documents labelled DEBT is visible."
+    }
+  ],
+  "relation_reasoning": "The BIG BUSINESS/DEBT composition provides a literal company/debt illustration alongside ASR referring to companies carrying enormous [sentence continues]. The earlier rate/Treasury imagery supplies context. These two samples do not prove the largest supply-side impact claim or an economic fact.",
+  "limitations": [
+    "Only two saved scaled representatives were actually viewed; no continuous clip or animation onset reviewed.",
+    "Both sample PTS are inside the provisional ASR interval; ASR clock and wording are uncertified.",
+    "The reviewed ASR segment ends mid-sentence; do not invent its continuation.",
+    "No actual listening or audible synchronization review.",
+    "Images are scaled960x540 from1920x1080 source, not native fullframes.",
+    "Successful view_image returns were observed in the root tool turn; independent transcript byte-return audit and integrated-table update are still pending."
+  ],
+  "evidence_images": [
+    {
+      "frame": 16146,
+      "source_pts": 672.7916666666666,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/frames/stable/SUB143.jpg",
+      "scale": "SCALED_STABLE_960x540",
+      "sample_within_ASR_interval": true,
+      "saved_file_sha256": "0d439a4be573025b3cd1b8973ade739e91afb776dbc063ff9a3ae8e1b5b0cd51"
+    },
+    {
+      "frame": 16212,
+      "source_pts": 675.5416666666666,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/frames/stable/EP0493.jpg",
+      "scale": "SCALED_STABLE_960x540",
+      "sample_within_ASR_interval": true,
+      "saved_file_sha256": "11e4cdbcf29d05afddd782f010dc1878c183f79d84d4e9fb64599aea587c2b1e"
+    }
+  ],
+  "actual_image_returns": 2,
+  "native_fullframe_returns": 0,
+  "scaled_image_returns": 2,
+  "actual_listening_seconds": 0,
+  "status": "DIRECT_REVIEW_SAVED_AWAITING_INDEPENDENT_READ_AUDIT_AND_INTEGRATION",
+  "recorded_UTC": "2026-11-04T02:22:18.555215+00:00"
+}

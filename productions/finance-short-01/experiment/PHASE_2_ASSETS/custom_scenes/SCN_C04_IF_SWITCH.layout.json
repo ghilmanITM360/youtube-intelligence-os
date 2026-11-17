@@ -1,0 +1,38 @@
+{
+ "scene_id": "SCN_C04_IF_SWITCH",
+ "shots": [
+  "S03"
+ ],
+ "camera": "none",
+ "note": "Macro push from the offer's IF; fingertip lands on the switch lever.",
+ "world": [
+  {
+   "z": 0,
+   "instance": "paper_bg",
+   "asset_id": "ENV_PAPER_MACRO",
+   "transform": "none"
+  },
+  {
+   "z": 1,
+   "instance": "if_switch",
+   "asset_id": "PRP_IF_SWITCH_UP",
+   "transform": "translate(760 820) scale(1.35)"
+  },
+  {
+   "z": 2,
+   "instance": "remy_arm",
+   "asset_id": "CHR_REMY_POSE_POINT_FORWARD",
+   "transform": "translate(-1229.5 73.3) scale(2.4)",
+   "pose": "point_forward",
+   "crop": "arm/hand only; body off-frame left",
+   "scale": 2.4
+  }
+ ],
+ "ui": [
+  {
+   "instance": "qualifier",
+   "asset_id": "TYP_LABEL_IF_PAID_IN_FULL",
+   "transform": "translate(540 300)"
+  }
+ ]
+}

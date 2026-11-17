@@ -1,0 +1,5 @@
+#!/bin/sh
+# Anchor the tools to their published checkout, even inside older task branches.
+YIOS_TOOL_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd) || exit 2
+export PYTHONPATH="$YIOS_TOOL_ROOT${PYTHONPATH:+:$PYTHONPATH}"
+exec "${YIOS_PYTHON:-python3}" -m scripts.yios "$@"

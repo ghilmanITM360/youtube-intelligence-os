@@ -1,0 +1,37 @@
+# How fast could a human accellerate (while staying alive)?
+
+| Field | Value |
+|---|---|
+| Video ID | `eSPcp-tfGbA` |
+| URL | https://www.youtube.com/shorts/eSPcp-tfGbA |
+| Format | shorts |
+| Published | 2025-08-26 |
+| Duration | 00:01:23 |
+| Views (at acquisition) | 1,992,809 |
+| Words | 325 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/eSPcp-tfGbA.txt` |
+| Source SHA-256 | `b36abed254509d063bd1cf981323e782a67d4eec802b21d23476f5870447ba63` |
+
+## Script
+
+what if you ignored all the rules of car racing and had a contest which was simply to get a human being around a track 200 times as fast as possible. Let’s say the racer has to survive.
+
+regardless of strategy, the best you’ll be able to do is about 90 minutes.
+
+There are lots of ways you could build your vehicle— but in each case, the human is the weakest part.
+
+The problem is acceleration. On the curved parts of the track, drivers will feel powerful G forces.
+
+Fighter pilots can experience up to 10 Gs during maneuvers - However, very briefly.
+
+Our driver would be experiencing them, in pulses, for minutes and probably hours.
+
+There’s a good NASA document on the physical effects of acceleration, and the data shows that for periods on the order of an hour, normal humans can only handle 3 to 6 Gs of acceleration. If we limit our vehicle to 4 Gs, its top speed on the turns at Daytona will be about 240 mph. At this speed, the course will take about 2 hours to complete.
+
+Keep in mind that the direction of the acceleration would keep changing depending on whether the vehicle is going around a curve or speeding up or slowing down. Every direction of acceleration has its particular consequences, but humans can survive acceleration best if they're accelerated in the direction of their chest, like a driver accelerating forward.
+
+So to keep our driver alive, we'll need to swivel them around so they're always being pressed against their back.
+
+If limited to 4 Gs in this way, our driver will finish the course in a little under an hour and 45 minutes. If we raise the limit to 6 Gs, the time drops to an hour and 20 minutes. At 10 Gs continuously—well past human tolerability—it would still take over an hour.
+
+So, human biology limits us to Daytona finishing times over an hour.

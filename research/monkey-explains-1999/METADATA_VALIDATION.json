@@ -1,0 +1,55 @@
+{
+  "generated_at_utc": "2026-10-20T06:29:52.293Z",
+  "status": "PASS",
+  "checks": {
+    "unique_video_ids": {
+      "pass": true,
+      "duplicates": 0
+    },
+    "watch_urls_match_video_ids": {
+      "pass": true,
+      "failures": []
+    },
+    "all_records_match_verified_channel": {
+      "pass": true,
+      "failures": []
+    },
+    "raw_rows_to_master_reconciliation": {
+      "pass": true,
+      "raw_video_rows": 121,
+      "unique_raw_video_ids": 121,
+      "excluded_members_only": 45,
+      "public_master_rows": 76
+    },
+    "classification_values_valid": {
+      "pass": true
+    },
+    "no_estimated_public_counts": {
+      "pass": true
+    },
+    "timestamps_preserve_source_precision": {
+      "pass": true
+    },
+    "missing_fields_visible": {
+      "pass": true
+    }
+  },
+  "metadata_completeness": {
+    "core_fields": [
+      "video_id",
+      "title",
+      "watch_url",
+      "video_type",
+      "publication_timestamp_utc",
+      "duration",
+      "view_count",
+      "like_count",
+      "comment_count",
+      "description",
+      "thumbnail_url"
+    ],
+    "known_values": 833,
+    "possible_values": 836,
+    "percentage": 0.9964114832535885
+  }
+}

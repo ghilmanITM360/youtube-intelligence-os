@@ -1,0 +1,231 @@
+{
+ "reviewer": "PKQA-3",
+ "rows": [
+  {
+   "Package_ID": "PKG-wFGvAwrzq0Q",
+   "pk": "PK-05",
+   "seq": 24,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "package_promise",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "A scenario where the viewer meets a flashy man and learns why the rich stay quiet.",
+     "corrected_value": "A POV scenario where the viewer (YOU) meets a muscular man in a locker room and learns why the rich stay quiet.",
+     "reason": "'Flashy' is an inference; the man is only fit and points at his own wristwatch, nothing in the image says showy or wealthy.",
+     "evidence": "Image: muscular man in navy tank top and black shorts, one wristwatch, no cash or luxury cue."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-ZCJcr5K0U6A",
+   "pk": "PK-06",
+   "seq": 4,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "improvement",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Cut the headline to 'STOP GRINDING' and let the before/after drawing carry 'without burnout' so the image no longer repeats the title.",
+     "corrected_value": "Remove the headline words and let the before/after drawing carry 'without burnout'; add a '?' beside the AUTO-INVEST laptop so the method stays open.",
+     "reason": "'STOP GRINDING' is the title's own opening words, so the edit keeps repeating the title it claims to stop repeating.",
+     "evidence": "Title begins 'Stop Grinding:'."
+    },
+    {
+     "field": "thumbnail_escalates_beyond_title",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Y",
+     "corrected_value": "N",
+     "reason": "Image adds a method hint (AUTO-INVEST) but makes no bigger claim than 'without sacrificing your life'; specificity is not escalation.",
+     "evidence": "Headline 'WEALTH WITHOUT BURNOUT' vs title 'Build Wealth Without Sacrificing Your Life'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-QBSAjCUZooU",
+   "pk": "PK-06",
+   "seq": 8,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "contradiction",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "The image shows leopard, bear and hyena visibly sweating and wide-eyed, i.e. frightened, against a title saying animals 'aren't SCARED of you'. The row's own weakest_element names this clash yet contradiction is N.",
+     "evidence": "Sweat/tear drops on all three animals; weakest_element: 'look scared of the human, clashing with aren't scared of you'."
+    },
+    {
+     "field": "relationships",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": [
+      "CURIOSITY_GAP",
+      "UNCLEAR"
+     ],
+     "corrected_value": [
+      "CURIOSITY_GAP",
+      "CONTRADICTORY"
+     ],
+     "reason": "Visible fear in the animals opposes the title's premise; CONTRADICTORY fits better than UNCLEAR (primary can stay CURIOSITY_GAP).",
+     "evidence": "Same sweat drops and 'WHY WON'T THEY?' with no verb."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-c1mnsD2t4PQ",
+   "pk": "PK-06",
+   "seq": 12,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "improvement",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Show two animals in the frame, such as a dolphin and a dog, with a '?' so the picture fits 'wild animals' in general.",
+     "corrected_value": "Show two wild animals in the frame, such as a dolphin and a bear, with a '?' so the picture fits 'wild animals' in general.",
+     "reason": "A dog is a domestic animal and does not widen the image to 'wild animals', which is the stated aim of the edit.",
+     "evidence": "Title: 'Why Do Wild Animals Sometimes Rescue Us?'."
+    },
+    {
+     "field": "thumbnail_repeats_title",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "'WHY DID IT SAVE HIM?' restates the title's question for one case, which the row's own shared_information describes; REINFORCING may fit better than COMPLEMENTARY.",
+     "evidence": "Headline is the title's why-rescue question in the singular."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-sOsJsPnpknE",
+   "pk": "PK-06",
+   "seq": 13,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "improvement",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Remove the lesion-covered organs and show only the glass of clove water with a modest benefit, such as 'Sleep & digestion'.",
+     "corrected_value": "Remove the lesion-covered organs and show only the glass of clove water with the title's 7-day claim, no stated health benefit.",
+     "reason": "'Sleep & digestion' invents a medical benefit that appears nowhere in the package; the protocol bars invented medical claims in improvements.",
+     "evidence": "Neither title nor image mentions sleep or digestion."
+    },
+    {
+     "field": "title_escalates_beyond_thumbnail",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "Y",
+     "corrected_value": "N",
+     "reason": "Both escalation flags are Y, which is contradictory; the thumbnail's tumour-like organ imagery is the larger claim. The title's 'unrecognizable' is not bigger than that.",
+     "evidence": "thumbnail_escalates_beyond_title=Y and title_escalates_beyond_thumbnail=Y in the same row; four lesion-covered organs."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-Z5ft4EhlrLw",
+   "pk": "PK-06",
+   "seq": 17,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "unnecessary_duplication",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "Headline is near word-for-word the title, per the row's own weakest_element; defensible as N since the image adds the circled foot, doctor and sign #3.",
+     "evidence": "'8 SIGNS YOUR FEET HAVE NERVE DAMAGE FROM DIABETES' vs title '8 Signs Your Feet Have Diabetic Nerve Damage'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-fAjvhtlKU6w",
+   "pk": "PK-07",
+   "seq": 5,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-wp-wk_Zm6NU",
+   "pk": "PK-07",
+   "seq": 16,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-VGA73CKlS2w",
+   "pk": "PK-07",
+   "seq": 18,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-Gp6rgMibw-8",
+   "pk": "PK-07",
+   "seq": 20,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-7vcwTykGUkM",
+   "pk": "PK-07",
+   "seq": 24,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "improvement",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Test replacing They Own Everything with a PRIVATE EQUITY tag on the hand's cuff so the owner is named in the image.",
+     "corrected_value": "Keep They Own Everything and add a small PRIVATE EQUITY tag on the cuff.",
+     "reason": "The edit removes the thumbnail's strongest hook and copies the title's 'private equity' into the image; defensible but weakens complementarity.",
+     "evidence": "Title already says 'Private Equity'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-5GV8Rsl7N9U",
+   "pk": "PK-08",
+   "seq": 8,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "primary_relationship",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "COMPLEMENTARY",
+     "corrected_value": "REINFORCING",
+     "reason": "thumbnail_repeats_title is Y and the headline echoes the title; primary label arguably REINFORCING, though image does add rich-state props.",
+     "evidence": "HOW THEY TREAT YOU vs 'How Your FAMILY Treats You'."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 12,
+  "material": 0,
+  "minor_factual": 3,
+  "classification": 3,
+  "subjective": 6,
+  "style_only": 0
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "test": "RT-V1-P01",
+ "criterion_sha256": "59c2c34f4127806ab47e8c6572c882c48b062649852a140199d876516c6f1a11",
+ "render_sha256": "d05539eeff459120a15a1907fae5854a36805080c1d80f2ab8f66ec0077e3ed7",
+ "deterministic": {
+  "C1": {
+   "ok": true,
+   "frames": 90,
+   "cv2": 90
+  },
+  "C2": {
+   "ok": true,
+   "jump_frames": [
+    45
+   ]
+  },
+  "C3": {
+   "ok": true,
+   "incremental_scale": 2.139,
+   "fixed_point": [
+    627,
+    818
+   ]
+  },
+  "C4": {
+   "ok": true,
+   "max_other_step": 0.0002,
+   "drift_pre": 0.0,
+   "drift_post": 0.0
+  }
+ },
+ "C5_visual": {
+  "ok": true,
+  "evaluator": "orchestrator, render frames f44,f45,f89",
+  "obs": "f45 is the same artwork (figure, pot, grass tufts) scaled ~2.14x about lower-left point; no redraw/new elements; held to f89; original content"
+ },
+ "overall": "PASS",
+ "history": "criterion v1 failed on source (kept); v2 registered before render",
+ "scope": "camera-reframe module timing/geometry; style not scored"
+}

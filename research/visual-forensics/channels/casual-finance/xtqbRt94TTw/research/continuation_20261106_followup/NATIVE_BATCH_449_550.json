@@ -1,0 +1,119 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "input": "Published ledger v29 / queuev5 at5e497970; shared native ROI frames445-550 plus full-frame difference refinement430-462. Existing EP0014/EP0015 not re-adjudicated.",
+  "measurements": [
+    "native_measurements.json",
+    "lower_line_measurements.json",
+    "cursor_boundary_refinement_430_462.json"
+  ],
+  "visual_views": [
+    "native_445_550/f00461.jpg (native ROI)",
+    "onset_448_463.jpg (16 consecutive ROI samples at half-scale)",
+    "sweep_462_550.jpg (every4frames plus549/550, overview only)",
+    "wrap_487_504.jpg (18 consecutive lower-text ROI native 1:1)",
+    "finish_537_550.jpg (14 consecutive lower-text ROI native 1:1)"
+  ],
+  "rulings": {
+    "SUB010": {
+      "kind": "EXACT_CURSOR_APPEARANCE_AND_PHASE",
+      "onset": 449,
+      "phase": [
+        449,
+        460
+      ],
+      "description": "Arrow appears at449 near x1276 y752 after date selection becomes gray448 (existing EP0017). Moves left/down450-460 toward lower paragraph. This is the pre-pose cursor phase; cursor activity continues into EP0018/highlight gesture, not a global stop460."
+    },
+    "EP0018": {
+      "kind": "EXACT_COMPOUND_SEQUENTIAL_ONSETS",
+      "onset": 461,
+      "phase": [
+        461,
+        462
+      ],
+      "description": "Brown pointer and pointing arm change to leftward lowered pose at461; neutral mouth/open eyes hold in visible ROI. Lower yellow highlight first appears462 on Voting at x144-161 y880-897. Pose461 and highlight462 are sequential, not simultaneous."
+    },
+    "SUB011": {
+      "kind": "CONTINUATION_NO_INDEPENDENT_ONSET",
+      "parent": "EP0018",
+      "phase": [
+        463,
+        487
+      ],
+      "description": "Continuous first-line yellow reveal from parent onset462. No independent onset463. Extends through monetary policy action and Beth M. Hammack; cursor travels separately."
+    },
+    "EP0019": {
+      "kind": "CONTINUATION_NO_INDEPENDENT_ONSET",
+      "parent": "EP0018",
+      "phase": [
+        489,
+        490
+      ],
+      "description": "Same first-line sweep continues through Neel Kashkari. Cursor hand over email at488-489 changes back to arrow490; contact hover is not new highlighted content."
+    },
+    "SUB012": {
+      "kind": "CONTINUATION_WITH_EXACT_LINE_WRAP",
+      "parent": "EP0018",
+      "phase": [
+        492,
+        512
+      ],
+      "description": "First-line sweep continues492-501 through Lorie K. Logan, to right edge867. Wrap to line2 occurs502 (not492); reveal starts who at x144-161 and continues through target. Same parent highlight gesture."
+    },
+    "EP0020": {
+      "kind": "CONTINUATION_NO_INDEPENDENT_ONSET",
+      "parent": "EP0018",
+      "phase": [
+        514,
+        515
+      ],
+      "description": "Line2 sweep continues across range; cursor crosses contact/phone text. No new highlight onset514."
+    },
+    "SUB013": {
+      "kind": "CONTINUATION_NO_INDEPENDENT_ONSET",
+      "parent": "EP0018",
+      "phase": [
+        517,
+        537
+      ],
+      "description": "Same line2 reveal advances across federal funds rate by 1/4 percentage point at this; no independent onset517. Brown pointer and visible face held after461."
+    },
+    "EP0021": {
+      "kind": "CONTINUATION_WITH_EXACT_COMPLETION",
+      "parent": "EP0018",
+      "phase": [
+        539,
+        541
+      ],
+      "description": "Line2 sweep advances through meeting; right edge867 at541 completes both lower lines. Cursor still moves after completion; no independent onset539."
+    },
+    "SUB014": {
+      "kind": "CONTINUATION_CURSOR_TAIL",
+      "parent": "EP0018",
+      "phase": [
+        543,
+        547
+      ],
+      "description": "Lower highlights complete541; cursor-only movement continues542-547 including arrow to I-beam over meeting. At >=60 RGB-sum threshold ROI is static548-550. No new content highlight in543-547."
+    }
+  },
+  "semantic_scope": "Bounded listed event/continuation rulings only; numerical measurement is separate. Not a full native/100ms semantic pass of every interval.",
+  "corrections": [
+    "EP0018 pointer461 versus highlight462",
+    "SUB012 line wrap502 versus implied492",
+    "SUB010 cursor appears449 before oldcandidate450",
+    "Initial lower yellow measurement band excluded y921; refined decoded RGB band902-921 before closure."
+  ],
+  "uncertainties": [
+    "Exact source cursor Bezier/interpolation unavailable; trajectory visually sampled except consecutive native views listed.",
+    "Codec low-amplitude residue below threshold is not classified as semantic event; static548-550 means no visible change within reviewed ROI at declared threshold.",
+    "New highlight has linear-looking right edge ~18px/frame; authoring curve/layer implementation inferred, not source fact.",
+    "Source face outside ROI y550..1060 and unrelated timeline not certified by this batch."
+  ],
+  "actual_listening_seconds": 0,
+  "ASR_undetermined": 21,
+  "ASR_potential_flags": 7,
+  "AV": "BLOCKED",
+  "CT_SCAN_COMPLETE": false
+}

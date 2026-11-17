@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "ohQxPH0-adw",
+ "nick": "NICK_276",
+ "claims": 10,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 19758,
+ "parent_commit": "0c5eb6e0",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_275",
+  "NICK_276"
+ ],
+ "changed_ledger_ids": [
+  "ohQxPH0-adw"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 550,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "48_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.74675 TYPICAL (5-peer 0.86194 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 552,
+  "remaining": 1060,
+  "original_pending": 414,
+  "expansion_pending": 646,
+  "changed_cells": "63 (dashboard 7 + rows 547-548)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "43131ee1da16780e9176c5bf213612fe701738b897b600739b620ae8227a6def"
+ },
+ "semantic_acceptance": "All 19758 stored characters and six dimensions reviewed; 10 located claim groups; sources BLSCE276, EDQ325. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "8fac43785a9dd421753fbe22a017ae17ee6b0a3653e161ac871cbb58600f43c5",
+  "NICK_276.json": "632180c85aa1f6c5a64db362e79ff6fe8d21d4493c6791b0b11c7933fc19895b",
+  "NICK_276_READ_RECEIPTS.json": "ad486267c863d924bde1404b878524c8a560ecaa0537c64575a5b3c30d1b4a07",
+  "thumbnail": "936681d483bb84ed7f5a22eb64d7ba967ffeb7ecc9a05f7f8b7f8e99bdfc289b"
+ }
+}

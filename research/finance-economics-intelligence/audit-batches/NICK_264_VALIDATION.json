@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "maClOD9240k",
+ "nick": "NICK_264",
+ "claims": 16,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 19494,
+ "parent_commit": "342fcace51a2cd32140510fb85bb4e95addc836c",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_263",
+  "NICK_264"
+ ],
+ "changed_ledger_ids": [
+  "maClOD9240k"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 538,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "47_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 1.36662 TYPICAL (5-peer 1.35514 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 540,
+  "remaining": 1072,
+  "original_pending": 426,
+  "expansion_pending": 646,
+  "changed_cells": "63 (dashboard 7 + rows 534-535 target cells)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "c1693c0d9c31a2dacbf942243d726b46827af62a5b17bcf0fcf129bb39bf7ce1"
+ },
+ "semantic_acceptance": "All 19494 stored characters and six dimensions reviewed; 16 located claim groups; sources ED4Q, PHLLOT. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "363d1b9c171e0b69fe8ac761529865c321d64a7de29987bc9c9e77b322f6ea05",
+  "NICK_264.json": "f858bf916bdf7b637e1b819854375aa7982b58bc33c1b5dfd9e7eb16d38efc2f",
+  "NICK_264_READ_RECEIPTS.json": "5c8ce4cd4746cbb2d80cf2123f25650cbc778430176c0c4ae502f41b4fe2b3bf",
+  "thumbnail": "9716e888758058823ce0ef3250d4789a63deb8c5ed1dbd85cf96fef8053d12eb"
+ }
+}

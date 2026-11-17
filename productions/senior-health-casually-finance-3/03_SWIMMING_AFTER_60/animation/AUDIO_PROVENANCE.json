@@ -1,0 +1,67 @@
+{
+ "voice": {
+  "file": "source_audio/original_audio.m4a",
+  "sha256": "bebc1a4db46fedab2db5b79e9c5e2a4c39dfe16a70e7a07f34511b7d5f620cf0",
+  "treatment": "decoded unchanged; one whole-mix gain x0.855 to keep peak <= -1 dBFS; no trim, speed, pitch or word change"
+ },
+ "source_music_check": "source gaps measure ~-56 dB mean, noise floor ~-69 dB: no audible music bed in source (measurement, not listening certification)",
+ "music": {
+  "source": "synthesised in tools/anim.py from sine chords (no samples, no library track)",
+  "chords_hz": [
+   [
+    174.6,
+    220.0,
+    261.6
+   ],
+   [
+    130.8,
+    164.8,
+    196.0
+   ],
+   [
+    146.8,
+    174.6,
+    220.0
+   ],
+   [
+    116.5,
+    146.8,
+    174.6
+   ]
+  ],
+  "seconds_per_chord": 2.4,
+  "level_db_below_speech": 22,
+  "rights": "created in this project; no third-party material; rights opinion not given"
+ },
+ "sfx": [
+  {
+   "t": 1.1,
+   "kind": "chime",
+   "event": "S01--score95"
+  },
+  {
+   "t": 5.08,
+   "kind": "pop",
+   "event": "S02--heart"
+  },
+  {
+   "t": 9.18,
+   "kind": "pop",
+   "event": "S03--stopwatch"
+  },
+  {
+   "t": 13.02,
+   "kind": "pop",
+   "event": "S05--joint"
+  },
+  {
+   "t": 15.28,
+   "kind": "chime",
+   "event": "S06--score95"
+  }
+ ],
+ "measured": {
+  "speech_rms_db": -14.3,
+  "mix_peak": 0.89
+ }
+}

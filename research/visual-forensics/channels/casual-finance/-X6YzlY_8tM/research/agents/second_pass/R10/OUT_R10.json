@@ -1,0 +1,1625 @@
+{
+ "shard": "R10",
+ "items": [
+  {
+   "id": "EP0341",
+   "assigned_id": "EP0341",
+   "original_verdict": "CONFIRMED",
+   "original_type": "HIGHLIGHT_ADD",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    10007,
+    10008
+   ],
+   "frame_range": "10008-10008",
+   "evidence_file": "evidence/EP0341.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "exact-frame psnr confirmed (16.8 dB between 10007/10008); crops not individually viewed natively",
+   "desc": "Red hand-drawn ellipse appears around 'nearly $5 billion in' in the news card snippet at upper right; absent at 10007, present at 10008 and stable after."
+  },
+  {
+   "id": "EP0566",
+   "assigned_id": "EP0566",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    16057,
+    16058
+   ],
+   "frame_range": "16058-16058",
+   "evidence_file": "evidence/EP0566.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "exact-frame psnr confirmed (10.7 dB between 16057/16058)",
+   "desc": "Red handwritten '5%' pops in at left of the Rules sheet, upper-left area; everything else unchanged."
+  },
+  {
+   "id": "EP0388",
+   "assigned_id": "EP0388",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    11539,
+    11540
+   ],
+   "frame_range": "11540-11540",
+   "evidence_file": "evidence/EP0388.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "A scribbled paper sheet appears on the desk at lower left in front of the laptop at 11540; absent at 11539."
+  },
+  {
+   "id": "EP0644",
+   "assigned_id": "EP0644",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none (it is the SpaceX wordmark, first pass said 'company wordmark')",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    19190,
+    19191
+   ],
+   "frame_range": "19191-19191",
+   "evidence_file": "evidence/EP0644.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Black SpaceX wordmark appears at upper centre-right beside the left character at 19191; absent at 19190; stable afterwards."
+  },
+  {
+   "id": "EP0167",
+   "assigned_id": "EP0167",
+   "original_verdict": "CONFIRMED",
+   "original_type": "EXPRESSION_CHANGE",
+   "independent_verdict": "RECLASSIFIED",
+   "corrected_type": "OBJECT_MOTION",
+   "state_boundary": "NO",
+   "correction": "Native crops show the whole face (brows, eyes, mouth) shifted ~15 px together with unchanged neutral expression and it stays shifted; a head jitter/position step, not an expression change.",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    3897,
+    3898
+   ],
+   "frame_range": "3898-3898",
+   "evidence_file": "evidence/EP0167.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_NATIVE",
+   "remaining_uncertainty": "none",
+   "desc": "Large character's head/face offsets a few pixels at 3898 with the same neutral expression; body and money bags unchanged."
+  },
+  {
+   "id": "EP0253",
+   "assigned_id": "EP0253",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OBJECT_MOTION",
+   "independent_verdict": "RECLASSIFIED",
+   "corrected_type": "OBJECT_MOTION",
+   "state_boundary": "NO",
+   "correction": "Not a discrete one-frame step: adjacent-frame psnr is ~39.5 dB for 6967-68, 6968-69 and 6969-70 alike, i.e. continuous sub-pixel drift every frame; the sampled frame is not special.",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    6967,
+    6968,
+    6969,
+    6970
+   ],
+   "frame_range": "6969-6969",
+   "evidence_file": "evidence/EP0253.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_NATIVE",
+   "remaining_uncertainty": "whether drift counts as an event at all is a taxonomy choice",
+   "desc": "Satellites drift by sub-pixel amounts every frame; nothing distinctive at 6969. Dish and arrows static."
+  },
+  {
+   "id": "EP0326",
+   "assigned_id": "EP0326",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OBJECT_MOTION",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none; exact-frame check shows change begins at 9620 (psnr 63/21.8/67 across 9618-19/9619-20/9620-21)",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    9618,
+    9619,
+    9620,
+    9621
+   ],
+   "frame_range": "9620-9620",
+   "evidence_file": "evidence/EP0326.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_NATIVE",
+   "remaining_uncertainty": "flicker cycle has more than two poses (pose at 9557 differs from 9592); first pass 'alternate pose' is loose",
+   "desc": "Flames beside the money bags (left cluster and right bag) switch to the alternate flicker pose; news card and bags static. Repeats on a 7-frame cycle."
+  },
+  {
+   "id": "EP0317",
+   "assigned_id": "EP0317",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OBJECT_MOTION",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none; exact-frame transition at 9557 confirmed numerically",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    9556,
+    9557
+   ],
+   "frame_range": "9557-9557",
+   "evidence_file": "evidence/EP0317.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "exact-frame psnr 21.7 dB at 9556/9557, stable neighbours not viewed natively; flicker cycle has >2 poses",
+   "desc": "Flames beside the money bags (left cluster and right bag) switch to the alternate flicker pose; news card and bags static. Repeats on a 7-frame cycle."
+  },
+  {
+   "id": "EP0322",
+   "assigned_id": "EP0322",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OBJECT_MOTION",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    9591,
+    9592
+   ],
+   "frame_range": "9592-9592",
+   "evidence_file": "evidence/EP0322.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "evidence jpg only; same flame flicker cycle (>2 poses) as EP0326",
+   "desc": "Flames beside the money bags (left cluster and right bag) switch to the alternate flicker pose; news card and bags static. Repeats on a 7-frame cycle."
+  },
+  {
+   "id": "EP0464",
+   "assigned_id": "EP0464",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OTHER",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    13570,
+    13571
+   ],
+   "frame_range": "13571-13571",
+   "evidence_file": "evidence/EP0464.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_NATIVE",
+   "remaining_uncertainty": "speckle/glint is subtle (32.8 dB); could be rendered light-flare overlay",
+   "desc": "Light-glint speckles on the Nasdaq 'daq' letters and swoosh shift between 13570 and 13571; layout unchanged."
+  },
+  {
+   "id": "EP0327",
+   "assigned_id": "EP0327",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OBJECT_MOTION",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none; exact-frame transition at 9627 confirmed numerically",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    9626,
+    9627
+   ],
+   "frame_range": "9627-9627",
+   "evidence_file": "evidence/EP0327.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "exact-frame psnr 21.7 dB at 9626/9627; flicker cycle has >2 poses",
+   "desc": "Flames beside the money bags (left cluster and right bag) switch to the alternate flicker pose; news card and bags static. Repeats on a 7-frame cycle."
+  },
+  {
+   "id": "EP0686",
+   "assigned_id": "EP0686",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ELEMENT_EXIT",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    20398,
+    20399
+   ],
+   "frame_range": "20399-20399",
+   "evidence_file": "evidence/EP0686.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "return of the check mark not verified; exact-frame psnr 14.2 dB at 20398/20399",
+   "desc": "Green check mark disappears at 20399 while robot stays."
+  },
+  {
+   "id": "SUB089",
+   "assigned_id": "SUB089",
+   "original_verdict": "CONFIRMED",
+   "original_type": "HIGHLIGHT_ADD",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    12951,
+    12952,
+    12962
+   ],
+   "frame_range": "12952-12962",
+   "evidence_file": "evidence/SUB089.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Left highlights finish on 'OPEC oil', 'forty years' and '89%'; right fourth line reaches 'still on one side of 88%'."
+  },
+  {
+   "id": "SUB102",
+   "assigned_id": "SUB102",
+   "original_verdict": "CONFIRMED",
+   "original_type": "WIPE_OR_FADE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    14084,
+    14085,
+    14086
+   ],
+   "frame_range": "14085-14086",
+   "evidence_file": "evidence/SUB102.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Grey 'A newly listed company' text at right of the scroll becomes slightly darker as it fades in."
+  },
+  {
+   "id": "SUB086",
+   "assigned_id": "SUB086",
+   "original_verdict": "CONFIRMED",
+   "original_type": "TEXT_CHANGE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    12930,
+    12931,
+    12932
+   ],
+   "frame_range": "12931-12932",
+   "evidence_file": "evidence/SUB086.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Fourth line gains 'years' after '40' at right-panel centre; caret moves."
+  },
+  {
+   "id": "SUB007",
+   "assigned_id": "SUB007",
+   "original_verdict": "CONFIRMED",
+   "original_type": "HIGHLIGHT_ADD",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    2531,
+    2532,
+    2562
+   ],
+   "frame_range": "2532-2562",
+   "evidence_file": "evidence/SUB007.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Yellow highlight extends along the second-paragraph phrase from that term through the $250 billion figure, sweeping rightward."
+  },
+  {
+   "id": "SUB083",
+   "assigned_id": "SUB083",
+   "original_verdict": "CONFIRMED",
+   "original_type": "TEXT_CHANGE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    12900,
+    12901,
+    12904
+   ],
+   "frame_range": "12901-12904",
+   "evidence_file": "evidence/SUB083.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Fourth line begins in the right panel: '30 years' typed; a small I-beam mouse pointer appears lower-left of the left panel."
+  },
+  {
+   "id": "SUB017",
+   "assigned_id": "SUB017",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    5917,
+    5918
+   ],
+   "frame_range": "5918-5918",
+   "evidence_file": "evidence/SUB017.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "White handwritten word 'rockets' appears in the separated pie slice at 5918; absent at 5917."
+  },
+  {
+   "id": "SUB095",
+   "assigned_id": "SUB095",
+   "original_verdict": "CONFIRMED",
+   "original_type": "TEXT_CHANGE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    13014,
+    13015,
+    13029
+   ],
+   "frame_range": "13015-13029",
+   "evidence_file": "evidence/SUB095.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Appended grey text extended: \"let's change that to 89%\" typed on the last right-panel line."
+  },
+  {
+   "id": "SUB106",
+   "assigned_id": "SUB106",
+   "original_verdict": "CONFIRMED",
+   "original_type": "WIPE_OR_FADE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    14151,
+    14152
+   ],
+   "frame_range": "14151-14152",
+   "evidence_file": "evidence/SUB106.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_NATIVE",
+   "remaining_uncertainty": "very small grey-level change (40.7 dB)",
+   "desc": "Fourth line 'can be added to the' grey text becomes slightly darker between 14151 and 14152 as it fades in; scroll and other lines static."
+  },
+  {
+   "id": "SUB039",
+   "assigned_id": "SUB039",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OTHER",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    7826,
+    7827,
+    7835
+   ],
+   "frame_range": "7827-7835",
+   "evidence_file": "evidence/SUB039.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "source podcast footage speech movement; not an editor-authored event",
+   "desc": "Footage: man's mouth and brow move."
+  },
+  {
+   "id": "SUB042",
+   "assigned_id": "SUB042",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OTHER",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    7934,
+    7936
+   ],
+   "frame_range": "7935-7936",
+   "evidence_file": "evidence/SUB042.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_NATIVE",
+   "remaining_uncertainty": "source podcast footage lip movement; not an editor-authored event",
+   "desc": "Footage: mouth micro-movement."
+  },
+  {
+   "id": "SUB044",
+   "assigned_id": "SUB044",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OTHER",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    7990,
+    7991,
+    7997
+   ],
+   "frame_range": "7991-7997",
+   "evidence_file": "evidence/SUB044.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "source podcast footage head/mouth movement; not an editor-authored event",
+   "desc": "Footage: head down, mouth moves."
+  },
+  {
+   "id": "SUB047",
+   "assigned_id": "SUB047",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OTHER",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    8038,
+    8039,
+    8047
+   ],
+   "frame_range": "8039-8047",
+   "evidence_file": "evidence/SUB047.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "source podcast footage mouth movement; not an editor-authored event",
+   "desc": "Footage: mouth micro-movement."
+  },
+  {
+   "id": "SUB046",
+   "assigned_id": "SUB046",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OTHER",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "LOW",
+   "frames_viewed": [
+    8025,
+    8026,
+    8028
+   ],
+   "frame_range": "8026-8028",
+   "evidence_file": "evidence/SUB046.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "source podcast footage tiny head movement; barely visible; not an editor-authored event",
+   "desc": "Footage: tiny head movement."
+  },
+  {
+   "id": "SUB020",
+   "assigned_id": "SUB020",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OBJECT_MOTION",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none, but note it is continuous drift (same family as EP0253)",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    6940,
+    6941,
+    6948
+   ],
+   "frame_range": "6941-6948",
+   "evidence_file": "evidence/SUB020.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "continuous slow drift, not a discrete event; exact-frame psnr 23.7 dB between 6940 and 6948",
+   "desc": "Continuing slow idle drift of the three satellites; dish and arrows static."
+  },
+  {
+   "id": "SUB058",
+   "assigned_id": "SUB058",
+   "original_verdict": "CONFIRMED",
+   "original_type": "CHARACTER_ANIMATION",
+   "independent_verdict": "RECLASSIFIED",
+   "corrected_type": "OTHER",
+   "state_boundary": "NO",
+   "correction": "Visible change is real (eyes open at 9318, closed at 9320, head tilt at 9322) but it is animation inside the embedded Scooby-Doo meme clip, not an editor-authored character animation.",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    9318,
+    9320,
+    9322
+   ],
+   "frame_range": "9319-9322",
+   "evidence_file": "evidence/SUB058.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_NATIVE",
+   "remaining_uncertainty": "none",
+   "desc": "Inside the embedded cartoon clip the blond man's eyes close and head tilts between 9318 and 9322; Starlink badge and caption static."
+  },
+  {
+   "id": "SUB026",
+   "assigned_id": "SUB026",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OTHER",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    7268,
+    7269,
+    7274
+   ],
+   "frame_range": "7269-7274",
+   "evidence_file": "evidence/SUB026.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "translucent pause bars are baked into the source footage player UI, not an editor overlay",
+   "desc": "Pause bars fade out over the man's face while footage plays."
+  },
+  {
+   "id": "SUB050",
+   "assigned_id": "SUB050",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OBJECT_MOTION",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    8190,
+    8191,
+    8257
+   ],
+   "frame_range": "8191-8257",
+   "evidence_file": "evidence/SUB050.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "slow ~7 px drift over 67 frames, continuous",
+   "desc": "Slow idle drift of the drawn satellite at top left (a few px to the right); news card static."
+  },
+  {
+   "id": "SUB107",
+   "assigned_id": "SUB107",
+   "original_verdict": "CONFIRMED",
+   "original_type": "WIPE_OR_FADE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    14159,
+    14160,
+    14173
+   ],
+   "frame_range": "14160-14173",
+   "evidence_file": "evidence/SUB107.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Fifth text line 'Nasdaq-100 index.' fades in from invisible to grey under the four-line sentence right of the document prop."
+  },
+  {
+   "id": "SUB109",
+   "assigned_id": "SUB109",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    15064,
+    15065
+   ],
+   "frame_range": "15065-15065",
+   "evidence_file": "evidence/SUB109.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "only a thin sliver visible at 15065; identification as logo tip depends on later frames",
+   "desc": "Thin dark curved sliver appears at bottom-right edge: the first visible tip of the logo that rises in over the next frames."
+  },
+  {
+   "id": "SUB100",
+   "assigned_id": "SUB100",
+   "original_verdict": "CONFIRMED",
+   "original_type": "OTHER",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "MEDIUM",
+   "frames_viewed": [
+    13572,
+    13573,
+    13580
+   ],
+   "frame_range": "13573-13580",
+   "evidence_file": "evidence/SUB100.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "subtle glint overlay",
+   "desc": "Glint on the logo icon and wordmark continues across the left element; card static."
+  },
+  {
+   "id": "EP0285",
+   "assigned_id": "EP0285",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    8188,
+    8189
+   ],
+   "frame_range": "8189-8189",
+   "evidence_file": "evidence/EP0285.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Badge, heading and map screenshot cut to a drawn satellite at top left and a dark news-card screenshot with headline, snippet and thumbnail below."
+  },
+  {
+   "id": "EP0449",
+   "assigned_id": "EP0449",
+   "original_verdict": "CONFIRMED",
+   "original_type": "PARTIAL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    13308,
+    13309
+   ],
+   "frame_range": "13309-13309",
+   "evidence_file": "evidence/EP0449.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Headline and promo text removed; figure rescaled and moved to left, hands on hips, and a mascot logo creature appears right of centre. New layout."
+  },
+  {
+   "id": "EP0441",
+   "assigned_id": "EP0441",
+   "original_verdict": "CONFIRMED",
+   "original_type": "PARTIAL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    12986,
+    12987
+   ],
+   "frame_range": "12987-12987",
+   "evidence_file": "evidence/EP0441.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Right panel's text block is replaced by a five-line black paragraph (the dictated draft cleaned and committed, grey changes to black); left panel, headings and layout unchanged."
+  },
+  {
+   "id": "EP0235",
+   "assigned_id": "EP0235",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    6526,
+    6527
+   ],
+   "frame_range": "6527-6527",
+   "evidence_file": "evidence/EP0235.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Large round speech bubble appears right of the laughing character: 'Comcast but in SPACE!' with smaller 'I'm so brilliant ohohohoho'."
+  },
+  {
+   "id": "EP0293",
+   "assigned_id": "EP0293",
+   "original_verdict": "CONFIRMED",
+   "original_type": "PARTIAL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    8505,
+    8506
+   ],
+   "frame_range": "8506-8506",
+   "evidence_file": "evidence/EP0293.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Same chalkboard scene: board text changes to 'EFFICIENCY!', teacher's mouth goes from smile to open 'o' and the pointer stick swings up to touch the board."
+  },
+  {
+   "id": "EP0684",
+   "assigned_id": "EP0684",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    20336,
+    20337
+   ],
+   "frame_range": "20337-20337",
+   "evidence_file": "evidence/EP0684.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Subscribe scene replaced by grey antenna robot with red eyes holding phone at left and dark navy index-fund infographic screenshot at right."
+  },
+  {
+   "id": "EP0487",
+   "assigned_id": "EP0487",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    14271,
+    14272
+   ],
+   "frame_range": "14272-14272",
+   "evidence_file": "evidence/EP0487.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Hard cut from teacher and chalkboard to a figure with dark hair curl at left edge and framed chart panel with green rising line at right."
+  },
+  {
+   "id": "EP0096",
+   "assigned_id": "EP0096",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    2052,
+    2053
+   ],
+   "frame_range": "2053-2053",
+   "evidence_file": "evidence/EP0096.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Blue bird logo (flat cyan) appears on the right half, centre, beside the box and black logo, in one frame."
+  },
+  {
+   "id": "EP0228",
+   "assigned_id": "EP0228",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    6209,
+    6210
+   ],
+   "frame_range": "6210-6210",
+   "evidence_file": "evidence/EP0228.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Green dollar-sign money bag appears under the FEE paper (x0.78-0.9, y0.54-0.85)."
+  },
+  {
+   "id": "EP0601",
+   "assigned_id": "EP0601",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    17317,
+    17318
+   ],
+   "frame_range": "17318-17318",
+   "evidence_file": "evidence/EP0601.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Lone figure replaced by teacher at left with pointer and a green chalkboard reading 'Retail allocation'."
+  },
+  {
+   "id": "EP0348",
+   "assigned_id": "EP0348",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    10318,
+    10319
+   ],
+   "frame_range": "10319-10319",
+   "evidence_file": "evidence/EP0348.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Three-chart layout replaced by a large close-up stick figure, centred, smiling, hands on hips, cropped at the bottom."
+  },
+  {
+   "id": "EP0401",
+   "assigned_id": "EP0401",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    11670,
+    11671
+   ],
+   "frame_range": "11671-11671",
+   "evidence_file": "evidence/EP0401.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Grey 'REPORT' document appears at left-centre below the debt sheet."
+  },
+  {
+   "id": "EP0693",
+   "assigned_id": "EP0693",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    20568,
+    20569
+   ],
+   "frame_range": "20569-20569",
+   "evidence_file": "evidence/EP0693.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Trio of suited stick figures appears right: grey-haired woman on corded phone, brown-haired man, pale figure with clipboard."
+  },
+  {
+   "id": "EP0634",
+   "assigned_id": "EP0634",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    18687,
+    18688
+   ],
+   "frame_range": "18688-18688",
+   "evidence_file": "evidence/EP0634.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Replaced by a top row of four cardboard boxes labelled 'SHARE' and 'FRAGILE', across the upper third on blank canvas."
+  },
+  {
+   "id": "EP0413",
+   "assigned_id": "EP0413",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    12013,
+    12014
+   ],
+   "frame_range": "12014-12014",
+   "evidence_file": "evidence/EP0413.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Red-and-white Gmail envelope icon appears at top centre at 12014, between the Docs icon and the Wispr Flow logo."
+  },
+  {
+   "id": "EP0627",
+   "assigned_id": "EP0627",
+   "original_verdict": "CONFIRMED",
+   "original_type": "POSE_SWAP",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    18464,
+    18465
+   ],
+   "frame_range": "18465-18465",
+   "evidence_file": "evidence/EP0627.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Pose toggle again on the X-shirt character; arms and torso shift, head fixed."
+  },
+  {
+   "id": "EP0596",
+   "assigned_id": "EP0596",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    17087,
+    17088
+   ],
+   "frame_range": "17088-17088",
+   "evidence_file": "evidence/EP0596.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Replaced by teacher stick figure at left with pointer and a green chalkboard reading 'a class of privileged companies'."
+  },
+  {
+   "id": "EP0376",
+   "assigned_id": "EP0376",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    11220,
+    11221
+   ],
+   "frame_range": "11221-11221",
+   "evidence_file": "evidence/EP0376.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Hard cut from chalkboard scene to a centred stick figure holding a black microphone at chest height on white."
+  },
+  {
+   "id": "EP0137",
+   "assigned_id": "EP0137",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    3054,
+    3055
+   ],
+   "frame_range": "3055-3055",
+   "evidence_file": "evidence/EP0137.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Brown-haired stick figure holding an orange hand saw appears at left of the logo, in one frame."
+  },
+  {
+   "id": "EP0201",
+   "assigned_id": "EP0201",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    4892,
+    4893
+   ],
+   "frame_range": "4893-4893",
+   "evidence_file": "evidence/EP0201.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Second grey carton labelled 'Business 2' appears to the right of the first (x0.42-0.59, y0.37-0.63)."
+  },
+  {
+   "id": "EP0236",
+   "assigned_id": "EP0236",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    6585,
+    6586
+   ],
+   "frame_range": "6586-6586",
+   "evidence_file": "evidence/EP0236.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Cartoon character at left with green tie and large speech bubble at right is cut to a centred plain stick figure with spiky black hair on white."
+  },
+  {
+   "id": "EP0332",
+   "assigned_id": "EP0332",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    9678,
+    9679
+   ],
+   "frame_range": "9679-9679",
+   "evidence_file": "evidence/EP0332.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "A grey cartoon rocket with orange flame appears to the right of the plus sign."
+  },
+  {
+   "id": "EP0365",
+   "assigned_id": "EP0365",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ELEMENT_SWAP",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "Rules sheet appears in the same centred area the stick figure occupied (about x0.37-0.62), not 'right of centre'; otherwise confirmed.",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    11052,
+    11053
+   ],
+   "frame_range": "11053-11053",
+   "evidence_file": "evidence/EP0365.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Centred sweating stick figure disappears and a tilted parchment 'Rules' sheet with four bullet lines appears in the same central area at 11053."
+  },
+  {
+   "id": "EP0628",
+   "assigned_id": "EP0628",
+   "original_verdict": "CONFIRMED",
+   "original_type": "POSE_SWAP",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    18473,
+    18474
+   ],
+   "frame_range": "18474-18474",
+   "evidence_file": "evidence/EP0628.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Pose toggle again on the X-shirt character, repeating the two-pose loop."
+  },
+  {
+   "id": "EP0371",
+   "assigned_id": "EP0371",
+   "original_verdict": "CONFIRMED",
+   "original_type": "POSE_SWAP",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "NO",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    11117,
+    11118
+   ],
+   "frame_range": "11118-11118",
+   "evidence_file": "evidence/EP0371.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Seated character on the red band swaps between two body poses (leaning upright vs crouched with hips lowered) in the right-centre; background unchanged (fourth swap of a 9-frame loop)."
+  },
+  {
+   "id": "EP0078",
+   "assigned_id": "EP0078",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    1567,
+    1568
+   ],
+   "frame_range": "1568-1568",
+   "evidence_file": "evidence/EP0078.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Second box ('Business 2') appears stacked on top of the first."
+  },
+  {
+   "id": "EP0549",
+   "assigned_id": "EP0549",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    15663,
+    15664
+   ],
+   "frame_range": "15664-15664",
+   "evidence_file": "evidence/EP0549.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Hard cut from logo card to teacher at left and green chalkboard reading '4% now means...' at top of board."
+  },
+  {
+   "id": "EP0364",
+   "assigned_id": "EP0364",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    11023,
+    11024
+   ],
+   "frame_range": "11024-11024",
+   "evidence_file": "evidence/EP0364.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Hard cut: calendar timeline with captions and frowning head replaced by a plain centred stick figure with sweat drop and folded arms on white."
+  },
+  {
+   "id": "EP0378",
+   "assigned_id": "EP0378",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    11286,
+    11287
+   ],
+   "frame_range": "11287-11287",
+   "evidence_file": "evidence/EP0378.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Hard cut from mic figure to a large close-up of the host smiling at a grey laptop on a brown desk."
+  },
+  {
+   "id": "EP0636",
+   "assigned_id": "EP0636",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    18728,
+    18729
+   ],
+   "frame_range": "18729-18729",
+   "evidence_file": "evidence/EP0636.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Boxes and silhouette replaced by a spread scene: green-tie figure with one box and briefcase at left; elderly woman, two women and a hatted man at right."
+  },
+  {
+   "id": "EP0446",
+   "assigned_id": "EP0446",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    13111,
+    13112
+   ],
+   "frame_range": "13112-13112",
+   "evidence_file": "evidence/EP0446.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Seated character, laptop, bubble and mascot all vanish; replaced by a single standing stick figure, hands on hips, centred on white."
+  },
+  {
+   "id": "EP0418",
+   "assigned_id": "EP0418",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    12125,
+    12126
+   ],
+   "frame_range": "12126-12126",
+   "evidence_file": "evidence/EP0418.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Speech bubble 'Hey, write this:' appears above the host and his mouth opens wide."
+  },
+  {
+   "id": "EP0231",
+   "assigned_id": "EP0231",
+   "original_verdict": "CONFIRMED",
+   "original_type": "POSE_SWAP",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none; note the change is both expression (smile to sceptical brow) and pose, POSE_SWAP is acceptable",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    6431,
+    6432
+   ],
+   "frame_range": "6432-6432",
+   "evidence_file": "evidence/EP0231.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Stick figure changes from smile to a sceptical look (one raised brow, tilted flat mouth) with right fist raised and left arm bent."
+  },
+  {
+   "id": "EP0089",
+   "assigned_id": "EP0089",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    1872,
+    1873
+   ],
+   "frame_range": "1873-1873",
+   "evidence_file": "evidence/EP0089.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Pink-faced cartoon character (teary-eyed happy face, orange tie, hands at chin) appears at far left beside the box in one frame; box unchanged."
+  },
+  {
+   "id": "EP0399",
+   "assigned_id": "EP0399",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    11660,
+    11661
+   ],
+   "frame_range": "11661-11661",
+   "evidence_file": "evidence/EP0399.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Hard cut from the three bank buildings to an 'AGREEMENT' document at upper centre and a brown-skinned bow-tie character at right."
+  },
+  {
+   "id": "EP0620",
+   "assigned_id": "EP0620",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    18298,
+    18299
+   ],
+   "frame_range": "18299-18299",
+   "evidence_file": "evidence/EP0620.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Scene replaced by frowning teacher figure with pointer at left and an empty green chalkboard at right."
+  },
+  {
+   "id": "EP0386",
+   "assigned_id": "EP0386",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    11518,
+    11519
+   ],
+   "frame_range": "11519-11519",
+   "evidence_file": "evidence/EP0386.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Hard cut from barrel and banknote to the host with spiky black hair at a grey laptop on a brown desk."
+  },
+  {
+   "id": "EP0256",
+   "assigned_id": "EP0256",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    7128,
+    7129
+   ],
+   "frame_range": "7129-7129",
+   "evidence_file": "evidence/EP0256.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Stick figure replaced by a photo of a bald bearded man in glasses and black sweater with crossed arms, on grey backdrop, left of centre."
+  },
+  {
+   "id": "EP0514",
+   "assigned_id": "EP0514",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    14717,
+    14718
+   ],
+   "frame_range": "14718-14718",
+   "evidence_file": "evidence/EP0514.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Hard cut from meme still, money character and dark-haired character to a single spiky-haired smiling stick figure, hands on hips, centred on blank canvas."
+  },
+  {
+   "id": "EP0618",
+   "assigned_id": "EP0618",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    18143,
+    18144
+   ],
+   "frame_range": "18144-18144",
+   "evidence_file": "evidence/EP0618.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "A speech bubble containing 'So uh,' appears at the right, pointing toward the three figures."
+  },
+  {
+   "id": "EP0631",
+   "assigned_id": "EP0631",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    18544,
+    18545
+   ],
+   "frame_range": "18545-18545",
+   "evidence_file": "evidence/EP0631.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "A smaller full-body smug figure with green tie holding a banknote appears at the left, beside the large worried figure."
+  },
+  {
+   "id": "EP0202",
+   "assigned_id": "EP0202",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    4900,
+    4901
+   ],
+   "frame_range": "4901-4901",
+   "evidence_file": "evidence/EP0202.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Third grey carton labelled 'Business 3' appears right of the second (x0.67-0.83), completing a row of three."
+  },
+  {
+   "id": "EP0422",
+   "assigned_id": "EP0422",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    12201,
+    12202
+   ],
+   "frame_range": "12202-12202",
+   "evidence_file": "evidence/EP0422.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Hard cut to a full-bleed bar-and-line chart screenshot (AuM vs oil price) with a smiling host and laptop in the lower left corner."
+  },
+  {
+   "id": "EP0688",
+   "assigned_id": "EP0688",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    20419,
+    20420
+   ],
+   "frame_range": "20420-20420",
+   "evidence_file": "evidence/EP0688.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Robot and check mark replaced by teacher scene: smiling stick figure with pointer at left, green chalkboard at right showing '- Low fees'."
+  },
+  {
+   "id": "EP0189",
+   "assigned_id": "EP0189",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    4792,
+    4793
+   ],
+   "frame_range": "4793-4793",
+   "evidence_file": "evidence/EP0189.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Centred stick figure replaced by a dark news-headline card across the top (source tag, blue headline, two-line snippet, date, small phone photo at right) and two groups of money bags with flames at bottom-left and bottom-right."
+  },
+  {
+   "id": "EP0471",
+   "assigned_id": "EP0471",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    13853,
+    13854
+   ],
+   "frame_range": "13854-13854",
+   "evidence_file": "evidence/EP0471.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Character and speech scribble replaced by the large exchange logo with '100' at right of centre; left half empty."
+  },
+  {
+   "id": "EP0477",
+   "assigned_id": "EP0477",
+   "original_verdict": "CONFIRMED",
+   "original_type": "FULL_REPLACE",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    14052,
+    14053
+   ],
+   "frame_range": "14053-14053",
+   "evidence_file": "evidence/EP0477.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Photo replaced by a hand-drawn parchment scroll titled 'The Old Rules' with four bullet lines, centred on white."
+  },
+  {
+   "id": "EP0474",
+   "assigned_id": "EP0474",
+   "original_verdict": "CONFIRMED",
+   "original_type": "ADDITIVE_ENTRY",
+   "independent_verdict": "CONFIRMED",
+   "corrected_type": null,
+   "state_boundary": "YES",
+   "correction": "none",
+   "confidence": "HIGH",
+   "frames_viewed": [
+    13941,
+    13942
+   ],
+   "frame_range": "13942-13942",
+   "evidence_file": "evidence/EP0474.jpg",
+   "viewing": "INDIVIDUALLY_VIEWED_EVIDENCE_JPG",
+   "remaining_uncertainty": "none",
+   "desc": "Speech bubble 'Guess I'll buy' pops in at upper right of the man's head."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "version": "RT-V2-02 spec (2026-11-04), re-derived from geometric per-frame trajectory of mNLNb-Z4T0M S080 f8177-8194 (supersedes the camera module of RT-V2-01 spec; that spec is preserved)",
+ "implementation_limit": "Source software, easing function name, layer stack and asset origin are UNAVAILABLE; only the measured trajectory below is known. Frame numbers at 30000/1001 fps.",
+ "canvas": {
+  "resolution": "1920x1080",
+  "fps": "30000/1001 CFR",
+  "codec": "h264 mp4 (yuv420p)",
+  "total_frames": 60
+ },
+ "scene": {
+  "requirement": "An original, richly textured illustrated scene (many distinct shapes, edges and colours across the whole frame, e.g. a seeded procedural landscape of hills, trees, rocks and clouds drawn with outlines). It must be WIDER than the frame by at least 200 px so the pan never reveals an empty edge. No text. Nothing inside the scene moves on its own.",
+  "label": "functional requirement; source artwork is not to be copied"
+ },
+ "module": {
+  "id": "M_CAMERA_PAN_EASE",
+  "label": "MEASURED (ORB+RANSAC similarity tracking per frame)",
+  "observation": "Horizontal camera pan across a static illustrated scene: image content moves RIGHT (camera moves left), no zoom, no vertical drift; speed rises smoothly then falls smoothly to rest.",
+  "spec": {
+   "pan_start_frame": 20,
+   "moving_frames": 16,
+   "total_content_shift_px_x": 137.5,
+   "content_shift_direction": "+x (content moves right on screen)",
+   "vertical_shift_px": 0,
+   "scale": "constant 1.0",
+   "cumulative_progress_per_frame": {
+    "note": "fraction of total shift reached at the END of each frame, frame 19 = 0 (still), frame 20.. = moving; after the last value the image is static",
+    "values_frames_19_to_35": [
+     0.0,
+     0.0247,
+     0.0601,
+     0.1089,
+     0.1714,
+     0.2489,
+     0.3377,
+     0.4409,
+     0.5518,
+     0.6545,
+     0.7455,
+     0.8225,
+     0.8834,
+     0.9291,
+     0.967,
+     0.989,
+     1.0
+    ]
+   },
+   "per_frame_velocity_px": [
+    3.4,
+    4.86,
+    6.71,
+    8.59,
+    10.66,
+    12.2,
+    14.19,
+    15.25,
+    14.11,
+    12.52,
+    10.58,
+    8.37,
+    6.29,
+    5.2,
+    3.03,
+    1.51
+   ],
+   "rest": "static from frame 36 to end; static before frame 20"
+  }
+ }
+}

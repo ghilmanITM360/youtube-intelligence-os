@@ -1,0 +1,53 @@
+{
+ "status": "PASS",
+ "video_id": "XkhWSzOB7fI",
+ "nick": "NICK_188",
+ "claims": 12,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 19887,
+ "parent_commit": "14962d3b0ce92aca467a5e1a6955fbd67cbea6b8",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_187",
+  "NICK_188"
+ ],
+ "changed_ledger_ids": [
+  "XkhWSzOB7fI"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 462,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 1.20089 TYPICAL (5-peer 1.12700 TYPICAL); K02 analyst arithmetic",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 464,
+  "remaining": 1148,
+  "original_pending": 502,
+  "expansion_pending": 646,
+  "changed_cells": "63: Combined Dashboard C13,D13,G15,C17,D17,B25,B26; 2 target row(s) in All Finance Videos (9 cells each) and Detailed Research (19 cells each)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "82f42f78d0d9222ac0c9dabe5d4c5ffbc4d79671cf929a5276986a7bf0e4813c"
+ },
+ "semantic_acceptance": "All 19887 stored characters and six dimensions reviewed; 12 located claim groups; primary sources FINRADCA, IRSTC451. Commercial survey statistics unverified. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "7be177d7763943a05687d0a040a18e1920f59d4538428797098b091391c74562",
+  "NICK_188.json": "897cb91e68f4c424f5b9940c3b930180e2f4034760faa36f708f3390a22f0219",
+  "NICK_188_READ_RECEIPTS.json": "e62eb131f5c58de9fc4aa08a9064cc9c519935c72aa93c587a3708dfdcfb46ea",
+  "thumbnail": "2799b48db2a2aafa170cce6d2367853dda43c8680b630c810593526f36c8605c"
+ }
+}

@@ -1,0 +1,4 @@
+{"assessed_utc":"2026-11-04T02:10Z","session":"d2a98830 (Claude Code desktop, claude-opus-5-5)","status":"BLOCKED_CAPABILITY",
+ "finding":"This session's tools accept text and images only; no audio playback/perception tool or audio-input model is available. faster-whisper ASR, ebur128 loudness and waveform measures are machine signals, NOT listening. Same finding as ~/YIOS-local-audits/barely-evolved/AUDIO_LISTENING_CAPABILITY_2026-11-03.json.",
+ "consequence":"Actual listening and AV sign-off are BLOCKED for every xkcd video; ASR-based narration-to-visual relations are labelled ASR_UNCERTIFIED; CT_SCAN_COMPLETE / FULL_AV_SIGNOFF_COMPLETE are never awarded.",
+ "unblock":["human listener reviews intervals and records judgments","explicitly approved audio-capable tool"]}

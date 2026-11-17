@@ -1,0 +1,258 @@
+{
+ "version": "v1",
+ "source_video": "GNaBxt_zIRA",
+ "source_sha256": "cbe7a3afac6c6b7b13db10b7ce2493715f5299208d6f3ebffb7fd74e2bf5c0f7",
+ "status": "DRAFT_SPEC from validated reviewer batches; no reconstruction test run for this video",
+ "audio": "ASR_UNCERTIFIED (faster-whisper small.en); listening BLOCKED_CAPABILITY; no SFX/music/sync rules specified",
+ "implementation_limit": "Compressed output reveals output geometry and frame timing only; source software, fonts, layer stack, easing curves and asset origin are UNAVAILABLE. Frame numbers at 30000/1001 fps, +-1 frame.",
+ "canvas": {
+  "label": "MEASURED",
+  "resolution": "1920x1080",
+  "fps": "30000/1001 CFR"
+ },
+ "modules": [
+  {
+   "id": "M_ELEMENT_ENTER_EXIT",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "ELEMENT_ENTER",
+    "ELEMENT_EXIT"
+   ],
+   "n_events": 41,
+   "n_states": 30,
+   "observed_span_frames": {
+    "min": 1,
+    "median": 5,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 1,
+    "drop_from_top": 0,
+    "slide_from_side": 12,
+    "typing": 2,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S010 f1155-1162 [b01]: Lecturer figure enters from the right edge and drifts slightly leftward, still cropped by the edge in all eight tiles; room static.",
+    "S052 f6767-6770 [b04]: Backpack slides left out of frame between f6767 and f6770.",
+    "S052 f6770-6774 [b04]: Headband villager slides in from the right edge at f6770 and decelerates to rest left of centre by f6774.",
+    "S058 f7704-7711 [b04]: Terror-bird walks in from the right edge toward left with leg stepping; head moves about 0.69 to 0.53 of tile width.",
+    "S063 f8230-8237 [b05]: 'ft (3 m)' label slides out left by f8231 while a long measuring line swings from vertical to diagonal and shortens; bird shifts left across f8230-f8234. Whole-",
+    "S063 f8298-8305 [b05]: '330 lbs (150 kg)' text and arrow slide off right (clipped f8300-f8301; arrow only f8302; gone f8303) while the bird walks through a stride cycle."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_CAMERA_SCALE_PAN",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "CAMERA_SCALE",
+    "CAMERA_PAN"
+   ],
+   "n_events": 33,
+   "n_states": 29,
+   "observed_span_frames": {
+    "min": 6,
+    "median": 8,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 1,
+    "drop_from_top": 0,
+    "slide_from_side": 4,
+    "typing": 1,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S011 f1384-1391 [b01]: Pull-back: giant sloth goes from partial claws at top right to nearly full body with tail by f1391 while the modern sloth shrinks and moves toward lower left.",
+    "S012 f1580-1587 [b01]: Scene content shifts rightward and down: chalk text, sign and lectern move right, projector enters from the left at f1582, leaf skirt becomes visible from f1584",
+    "S022 f3315-3320 [b02]: Wide classroom view becomes a tighter view on the man across f3315-f3320 (man grows, board shrinks off-screen); settled by ~f3320. Measured peak f3318 diff 21.1",
+    "S032 f4320-4327 [b03]: Scene slides leftward across all 8 tiles: big tree moves from right edge toward centre and animal moves off left; displacement continues f4320-f4327; easing not",
+    "S056 f7449-7456 [b04]: Entire timeline graphic slides left with ease-out; numerals move about 58 px of 480 at tile scale across 8 frames; bear silhouette fully enters by f7451.",
+    "S086 f11709-11716 [b06]: Inside the laptop-video the scene pans right; rocks and a distant mammoth enter from the right."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_FADES",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "FADE"
+   ],
+   "n_events": 4,
+   "n_states": 4,
+   "observed_span_frames": {
+    "min": 4,
+    "median": 6,
+    "max": 6,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 0,
+    "drop_from_top": 0,
+    "slide_from_side": 0,
+    "typing": 0,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S011 f1384-1389 [b01]: \"modern sloth\" arrow label and \"2 feet\" bracket shrink and fade from legible (f1384) to near invisible (f1389).",
+    "S016 f2472-2475 [b02]: Focus blur and corner darkening ramp up across f2472-f2475 (f2472 slightly soft, f2473 softer, f2474 strongly blurred). Measured peak at f2473 mean diff 12.99.",
+    "S049 f6428-6431 [b04]: Background blurs and darkens at the edges while the figure stays crisp, onset f6428-6431.",
+    "S059 f7801-7806 [b04]: Dark vignette grows around edges; map shifts slightly left."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_CHARACTER_MOTION_POSE",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "CHARACTER_MOTION"
+   ],
+   "n_events": 49,
+   "n_states": 40,
+   "observed_span_frames": {
+    "min": 2,
+    "median": 8,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 0,
+    "drop_from_top": 0,
+    "slide_from_side": 3,
+    "typing": 0,
+    "word_swap": 1
+   },
+   "evidence": [
+    "S001 f28-35 [b01]: Grey long-necked bird moves leftward into the frame from the right edge, neck and head lowering across the tiles; it is already partly visible at f28.",
+    "S001 f28-30 [b01]: Hunter stick arms absent at f28, a left arm line appears at f29 and both by f30 (arm pose swap or swing; mechanism unclear).",
+    "S051 f6661-6668 [b04]: Figure tips from upright to horizontal and slides left-down across the grass in about 8 frames (f6662-6668); body rotates.",
+    "S069 f9343-9350 [b05]: Bird stands on animal f9343-9344, lifts feet f9345-9346 and rises out of the top of frame by f9347-9350 while animal slides right.",
+    "S002 f196-203 [b01]: Mammoth lurches/steps leftward and lowers; its spears stay lodged in its back.",
+    "S002 f199-203 [b01]: Right-hand hunter raises a spear (f199-f200) and the spear is then in flight leftward and upward (f201-f203)."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_TEXT_REVEAL_SWAP",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "TEXT_REVEAL",
+    "CUT_WITHIN_STRIP"
+   ],
+   "n_events": 16,
+   "n_states": 16,
+   "observed_span_frames": {
+    "min": 1,
+    "median": 3,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 2,
+    "drop_from_top": 1,
+    "slide_from_side": 0,
+    "typing": 4,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S005 f466-467 [b01]: Small \"5\" glyph shows partial at f466 and complete from f467.",
+    "S016 f2475-2475 [b02]: Title text \"step 1 : attack first!\" first present at f2475, fully formed in that tile; no partial letters seen in sampled frames.",
+    "S041 f5288-5293 [b03]: '440 lbs (200 kg)' label enters from top (partly cropped f5288), moves down and settles about f5292-f5293.",
+    "S059 f7800-7803 [b04]: '62 million' drops in from the top and settles at left-centre.",
+    "S069 f9083-9088 [b05]: Quote caption fragments appear at top-left f9083 and are fully legible by f9088; caption moves with narrator rather than typing on (INFERRED).",
+    "S088 f12410-12417 [b06]: Sign static; line 1 appears: \"1.\" at f12415, partial words f12416 and f12417."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_HOLDS",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "NO_VISIBLE_CHANGE"
+   ],
+   "n_events": 16,
+   "n_states": 12,
+   "observed_span_frames": {
+    "min": 2,
+    "median": 8,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 0,
+    "drop_from_top": 0,
+    "slide_from_side": 0,
+    "typing": 0,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S009 f944-951 [b01]: Room and lecturer look unchanged at tile resolution; detector peak value is low (1.43).",
+    "S009 f963-970 [b01]: Room and lecturer look unchanged at tile resolution; detector peak value is low (1.63).",
+    "S016 f2470-2471 [b02]: Scene sharp and nearly unchanged between f2470 and f2471.",
+    "S016 f2476-2477 [b02]: Blurred scene and title unchanged f2475-f2477.",
+    "S016 f2507-2509 [b02]: Title at full size over blurred scene, static.",
+    "S016 f2512-2514 [b02]: Sharp sloth back view static, small slight pose shifts at tile scale only."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_OTHER",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "OTHER"
+   ],
+   "n_events": 14,
+   "n_states": 14,
+   "observed_span_frames": {
+    "min": 1,
+    "median": 7,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 0,
+    "drop_from_top": 1,
+    "slide_from_side": 0,
+    "typing": 0,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S047 f6209-6212 [b04]: Wooden basket drops from the figure and falls into the water, tilting as it goes.",
+    "S007 f754-761 [b01]: Frame-to-frame brightness flicker (lamp glow and wall tone vary) with soft blur; door and green light jitter a few pixels; no new objects (camera shake or flick",
+    "S013 f1690-1690 [b01]: Black jagged crack line appears between V and S at f1690, absent in f1688-f1689.",
+    "S016 f2510-2510 [b02]: Title narrows/shrinks to a small squeezed form at f2510 while scene still blurred (scale-down of text).",
+    "S021 f3250-3257 [b02]: Blurred background trunks and canopies shift horizontally/change layout across tiles, consistent with scrolling background (INFERRED, loop vs pan unknown).",
+    "S023 f3514-3521 [b02]: Blurred background trees shift/rearrange across tiles (scrolling, mechanism unknown). Measured peak f3517 diff 13.00."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  }
+ ],
+ "primary_corrections": [
+  {
+   "id": "PC-001",
+   "state": "S015",
+   "status": "CORRECTION_APPLIES"
+  },
+  {
+   "id": "PC-002",
+   "state": "S016",
+   "status": "REVIEWER_CLAIM_REJECTED"
+  }
+ ],
+ "per_state_prompts": "tables/consolidated_state_prompts.csv",
+ "motion_type_totals": {
+  "CHARACTER_MOTION": 49,
+  "TEXT_REVEAL": 15,
+  "ELEMENT_ENTER": 23,
+  "CAMERA_PAN": 20,
+  "CAMERA_SCALE": 13,
+  "OTHER": 14,
+  "NO_VISIBLE_CHANGE": 16,
+  "FADE": 4,
+  "ELEMENT_EXIT": 18,
+  "CUT_WITHIN_STRIP": 1
+ }
+}

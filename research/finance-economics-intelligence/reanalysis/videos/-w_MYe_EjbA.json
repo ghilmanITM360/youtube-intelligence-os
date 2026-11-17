@@ -1,0 +1,408 @@
+{
+ "video_id": "-w_MYe_EjbA",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "b94c6f21b2d0ebf00a11c3734b4c269091d7d5713a74ccb33ca692bd52765e49",
+ "original_packets": [
+  "BRIMM_001.json"
+ ],
+ "transcript_chars_read": 7914,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 41,
+    "end_char": 105,
+    "text": "Britain's shores. To most, they look\nlike ordinary cargo vessels"
+   },
+   "judgment": "MET",
+   "rationale": "A cinematic scene-setting opening (ships, locked doors, a stolen car in Kent ending up in Kinshasa) creates a stop beat and a withheld mechanism; the contrarian turn follows (\"a more uncomfortable reality\").",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 614,
+    "end_char": 714,
+    "text": "This is the hidden highway of\norganized crime running silently through\nthe arteries of world's trade"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Strong imagery and a clear thesis for the cars-and-phones export trade, but no narrator or channel is introduced and the title's broader claim (\"endless crime\") is not set up.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Large black text BROKEN BRITAIN over a red map of the UK crossed by blue-and-white POLICE LINE DO NOT CROSS tape, a REC indicator and camera-viewfinder frame"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The opening is specifically about stolen cars and phones exported abroad; the thumbnail and title promise a general crime-and-decline story.",
+   "uncertainty": "Expectation match is inferred; viewer reaction is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "How Endless Crime is Destroying Britain"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title is a broad thesis; the content is a narrow case study of organised theft-for-export (vehicles, phones).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6776,
+    "end_char": 6840,
+    "text": "Britain's streets will remain a showroom\nfor international crime"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Endless Crime ... Destroying Britain\" overreaches the evidence: the stated statistics concern vehicle and phone theft for export, and the close escalates to a hypothetical (\"Britain risks becoming a nation where law falters\"), which is an opinion rather than a finding.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "BROKEN BRITAIN with police tape across a red UK map"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The video delivers the theft-for-export story, not a general account of \"broken Britain\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5230,
+    "end_char": 5251,
+    "text": "Consider\nfour factors"
+   },
+   "judgment": "MET",
+   "rationale": "Clear documentary spine: image, politicians' claims, statistics, global triggers, the operation, phones, four enabling factors, costs and a call.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2853,
+    "end_char": 2889,
+    "text": "the crime starts much closer to home"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A few forward handoffs (\"But, cars are only the beginning\", \"Consider four factors\") but no sustained loop; the narrator never poses a question to the viewer.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3815,
+    "end_char": 3847,
+    "text": "But, cars are only the beginning"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "BUT-style turns exist (boast of world-leading, BUT one area where Britain truly leads; cars, BUT phones) but the four factors are listed with \"Firstly / Second / The third / Finally\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1434,
+    "end_char": 1489,
+    "text": "In 2024, a vehicle was stolen every 5\nminutes in the UK"
+   },
+   "judgment": "MET",
+   "rationale": "Matches the Thatcham Research and NaVCIS June 2025 report (a vehicle stolen every five minutes in 2024).",
+   "uncertainty": "Verified from search-result summaries; other outlets give a four-minute interval."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1562,
+    "end_char": 1620,
+    "text": "nearly 40% were headed to\nthe Democratic Republic of Congo"
+   },
+   "judgment": "MET",
+   "rationale": "NaVCIS 2021-2024 seizure data puts 38.5% in the Democratic Republic of Congo and 20.1% in the UAE, then Cyprus, Jamaica and Georgia; the video correctly frames these as intercepted vehicles.",
+   "uncertainty": "Verified from search-result summaries of the Thatcham/NaVCIS data."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4207,
+    "end_char": 4271,
+    "text": "Some 70,000 mobile phones were\nstolen in the capital during 2024"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The Met's 2024 total is reported as about 81,000 (a rise of about 36%), not 70,000; the 2025 total fell to about 71,000. \"Britain accounts for 40% of the phones stolen in Europe\" was not found (the 40% in the sources is a gang's share of London thefts).",
+   "uncertainty": "Verified from search-result summaries; Europe-wide share not located."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5420,
+    "end_char": 5474,
+    "text": "Border Force inspects less\nthan 2% of outbound freight"
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "The sub-2% outbound inspection rate and \"more than 77% of car thefts go unsolved\" are given without a named source.",
+   "uncertainty": "No source located for either figure."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3654,
+    "end_char": 3680,
+    "text": "for stealing one overnight"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The Hilux (£40,000 new, £1,500 to the thief, resale above the UK new price) and Range Rover Sport (£80,000 to above £120,000 in the UAE) figures are plausible, specific and unsourced.",
+   "uncertainty": "No source located."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1144,
+    "end_char": 1228,
+    "text": "And there is one area where Britain\ntruly does lead, but it's nothing to be\nproud of"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian turn using archival politicians' claims (\"world beating\") against a negative leadership claim.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3480,
+    "end_char": 3527,
+    "text": "ready to be sold as if it had never been\nstolen"
+   },
+   "judgment": "MET",
+   "rationale": "The theft-to-export pipeline (theft, GPS neutralised, logistics, forged papers, a new identity) is explained in plain steps.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6842,
+    "end_char": 6940,
+    "text": "The question is\nno longer whether the problem exists,\nbut whether there is the will to\nconfront it"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "No channel call to action, subscribe, next video or source list; the closing call is a political appeal (\"tougher border checks, coordinated international policing, and pressure on the platforms\") that is the narrator's opinion.",
+   "uncertainty": "Description, end screen and pinned comment are not in the data."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7588,
+    "end_char": 7727,
+    "text": "Without\ntougher border checks, coordinated\ninternational policing, and pressure on\nthe platforms that enable trade, the\ncycle will continue"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The close restates the thesis and prescription but does not return to the opening ship image.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 41,
+    "end_char": 66,
+    "text": "Britain's shores. To most"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Britain\" is in the first sentence and \"organized crime\" at about character 650; \"endless\" is never used.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 716,
+    "end_char": 796,
+    "text": "Behind the image of ordinary trade lies\na more uncomfortable reality for\nBritain"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The stored transcript carries 28 \"[music]\" caption tags (artefacts, not script length) and the close repeats one point several times (\"cynicism takes root, and cynicism spreads quickly ... resignation breeds silence\"); the witness shows the abstract register.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "How Endless Crime is Destroying Britain",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. UK crime and decline narratives are a high-interest news-commentary topic.",
+  "2_differentiated_angle": "Follows a single supply chain (theft to container to market) rather than a list of crime statistics.",
+  "3_title": "Broad, emotive thesis with \"Endless\" and \"Destroying\"; no number.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, SHA-256 prefix 18e7837f58231756; not in the repository): BROKEN BRITAIN in heavy black type, a textured red UK map, police tape, camera REC overlay. Legible at mobile size; photographic style, alarm-framed.",
+  "5_opening": "Cinematic and image-led; no host.",
+  "6_loops": "Weak: no explicit viewer question; one \"but\" turn after the opening.",
+  "7_spine": "Documentary chain of evidence and consequences.",
+  "8_repetition_clarity": "Restates the cost-to-trust theme at the close.",
+  "9_emotion_credibility": "Authoritative narration; credibility helped by verifiable seizure figures, reduced by unsourced statistics and an unmatched phone total.",
+  "10_ending_cta": "Political appeal only; no channel CTA.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: archival clips, music and visuals are not in the data (the transcript includes caption [music] tags and clip speech without speaker labels)."
+ },
+ "financial_checks": [
+  {
+   "claim": "A vehicle was stolen every 5 minutes in the UK in 2024",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Thatcham Research/NaVCIS (June 2025) reports a vehicle stolen every five minutes in 2024; other outlets report four minutes. Holds. (from search snippets; not independently confirmed)"
+  },
+  {
+   "claim": "Seized stolen vehicles 2021-2024: nearly 40% to the Democratic Republic of Congo, 20% to the UAE, then Cyprus, Jamaica, Georgia",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "NaVCIS: DRC 38.5%, UAE 20.1%, Cyprus 6.7%, Jamaica 5.7%, Georgia 5.1% (seizure-based). Holds. (from search snippets; not independently confirmed)"
+  },
+  {
+   "claim": "About 70,000 phones stolen in London in 2024, \"up by more than 30%\"; Britain accounts for 40% of phones stolen in Europe; three quarters of UK phone thefts are in London",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Met data summarised in news: about 81,365-81,439 in 2024 (up about 36%), then about 71,391 in 2025 (down 12%). One source gives 40% as a gang's share of London phone theft; the Europe-wide 40% and the three-quarters London share (attributed to the Met Police in the narration) were not located. (from search snippets; not independently confirmed)"
+  },
+  {
+   "claim": "Hilux £40,000, thief paid £1,500; Range Rover Sport £80,000 to £120,000+ in the UAE; 25 days to Jebel Ali; Border Force inspects under 2% of outbound freight; over 77% of car thefts unsolved; prosecutions halved in a decade",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not verified; the narration attributes only the \"three quarters of phone thefts are in London\" claim to the Met Police; the other statistics carry no attribution in the video."
+  },
+  {
+   "claim": "Time reference \"flooding in the UAE ... in April last year\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Dubai flooding was April 2024; \"last year\" is correct for a 2025 script but the registry publication date is 2026-08-13, so the phrase is stale."
+  }
+ ],
+ "strengths": [
+  "Strong image-led hook and a clear end-to-end pipeline explanation.",
+  "Key vehicle statistics are accurate and correctly framed as seizure data.",
+  "Plain-step explanation of how a stolen car gets a new identity."
+ ],
+ "weaknesses": [
+  "Title and thumbnail overreach the narrow case study.",
+  "Phone statistics do not match the Met totals and the Europe share is unlocated.",
+  "Several unsourced statistics.",
+  "Editorial prescriptions presented as conclusions; no channel CTA; stale \"last year\".",
+  "Causal and comparative claims (UAE flooding to UK SUV thefts, Georgia sanctions re-exports, \"Britain truly does lead\") are asserted without sources."
+ ],
+ "contradictions": [
+  "\"Endless crime destroying Britain\" versus a content scope of vehicle and phone theft for export.",
+  "\"April last year\" versus a 2026 publication date."
+ ],
+ "improvement_opportunities": [
+  "Retitle to the evidence (\"How Stolen UK Cars and Phones Are Shipped Abroad\") and align the thumbnail with a container-ship image.",
+  "Show on-screen sources (Thatcham/NaVCIS, Met Police) and correct the phone figure to about 81,000.",
+  "Replace \"last year\" with the year and add a closing next-video pointer.",
+  "Separate the evidence section from the policy opinion with a spoken label."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Archival clips and on-screen text",
+  "Primary sources for Border Force, unsolved-theft and Europe phone-theft shares"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "WEAK",
+  "lifetime_rate_ratio": "0.48594",
+  "age_days": "30.2703",
+  "views_likes_comments_snapshot": {
+   "views": 3133,
+   "likes": 107,
+   "comments": 13,
+   "published_at": "2026-08-13"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.40257",
+   "tier": "WEAK",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video from a different channel and topic cannot show that the broad title or the missing CTA affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "[music] tag count corrected to 28 and described as caption artefacts",
+    "\"organized crime\" position corrected (~650)",
+    "attribution wording corrected (the Met is named for one claim)",
+    "secondary-source statements marked as from search snippets",
+    "added unsourced causal claims to weaknesses"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

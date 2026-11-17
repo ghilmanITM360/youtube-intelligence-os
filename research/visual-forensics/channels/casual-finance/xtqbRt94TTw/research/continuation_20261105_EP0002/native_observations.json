@@ -1,0 +1,131 @@
+{
+  "channel": "Casual Finance",
+  "video_id": "xtqbRt94TTw",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "scope": {
+    "newly_decoded_source_frames": [
+      37,
+      83
+    ],
+    "prior_accepted_endpoint": 36,
+    "fullframe_native_views": [
+      38,
+      39,
+      40,
+      48,
+      49,
+      64,
+      65,
+      81,
+      82,
+      83
+    ],
+    "native_pixel_coin_ROI_contiguous": [
+      37,
+      64
+    ],
+    "native_pixel_eyes_ROI_contiguous": [
+      37,
+      64
+    ],
+    "scaled_fullframe_context_sheets": [
+      [
+        37,
+        64
+      ],
+      [
+        65,
+        83
+      ]
+    ],
+    "not_claimed": "Every fullframe viewed at native display scale; entire-video 100ms/native semantic pass"
+  },
+  "qualified_prior_review": "agents/gap_review_01/OUT_gap_review_01.json#G001,G002,G003; opening_macro_native_v1/OUT_opening_macro_native_v1.json",
+  "objects": [
+    {
+      "id": "OPEN_PERCENT_COIN",
+      "onset_frame": 39,
+      "onset_pts": 1.6666666666666667,
+      "before_frame": 38,
+      "first_orange_fill_frame": 40,
+      "first_orange_fill_pts": 1.7083333333333333,
+      "first_fully_detached_frame": 53,
+      "before_detached_frame": 52,
+      "last_translation_frame": 59,
+      "hold_verified_frames": [
+        60,
+        64
+      ],
+      "appearance": "Black rim first becomes exposed along right roof slope at39; orange fill first40. White/yellow percent glyph is carried with the disc, progressively revealed by roof occlusion.",
+      "motion": "Upward translation behind stationary foreground roof. Visible orange bbox top decreases612 at40 to288 at59; x bounds824..1080 stable after43. No observed scale/rotation change or overshoot in this window. Late steps diminish to2px from58 to59.",
+      "geometry_measurement": "orange_bbox_measurements.json; RGB threshold describes visible fill, not hidden full object or production curve",
+      "unknown": "Offscreen/fully occluded movement before39, exact source easing preset, rig and source layers; no lifecycle exit established beyond83"
+    },
+    {
+      "id": "OPEN_CARD_NBC",
+      "onset_frame": 49,
+      "onset_pts": 2.0833333333333335,
+      "before_frame": 48,
+      "first_full_visible_frame": 49,
+      "hold_verified_frames": [
+        49,
+        83
+      ],
+      "motion": "Complete near-horizontal dark card appears in a single adjacent-frame step at right. No visible sliding-entry phase in37-49.",
+      "literal_source_text": {
+        "label": "NBC News",
+        "headline": "Fed raises interest rates for first time since 2023, defying Trump as inflation mounts",
+        "body": "“The plain fact is that inflation is too high and has been for too long,” Federal Reserve Chair Kevin Warsh said. 0 seconds of 0 seconds.",
+        "relative_time": "23 hours ago"
+      },
+      "text_status": "Visible source-video text only, not authenticated news/economic facts"
+    },
+    {
+      "id": "OPEN_BUILDING_EYES",
+      "status": "OBSERVED_UPWARD_POSE_HOLD",
+      "frames": [
+        37,
+        64
+      ],
+      "description": "Pupils remain high within two open oval eyes. No new upward gaze change, blink or deformation observed in native contiguous eye ROIs. Prior accepted pose exists through36; do not invent gaze onset37.",
+      "limitation": "Difference vs old OpenCV-decoded36 includes decoder/color differences; static_anchor_metrics is diagnostic, not exact pixel equality proof."
+    },
+    {
+      "id": "OPEN_CARD_FOX",
+      "onset_frame": 65,
+      "onset_pts": 2.75,
+      "before_frame": 64,
+      "first_full_visible_frame": 65,
+      "hold_verified_frames": [
+        65,
+        83
+      ],
+      "description": "Complete counterclockwise-tilted Fox Business card pops into lower left below NYT card. No new shot.",
+      "literal_source_headline": "Federal Reserve hikes interest rates for first time since 2023 amid stubborn inflation"
+    },
+    {
+      "id": "OPEN_CARD_WSJ",
+      "onset_frame": 82,
+      "onset_pts": 3.4583333333333335,
+      "before_frame": 81,
+      "first_full_visible_frame": 82,
+      "hold_verified_frames": [
+        82,
+        83
+      ],
+      "description": "Complete clockwise-tilted WSJ card pops into lower right. No new shot.",
+      "literal_source_headline": "Fed Delivers First Rate Hike in Years With Unanimous Vote"
+    }
+  ],
+  "static_anchors": "Building body/roof and earlier NYT/Conduit cards retain their placements. Independent moving coin against retained anchors supports object motion; no camera movement observed.",
+  "corrections": [
+    "EP0002 candidate37 is not first visible coin: exact rim39/fill40.",
+    "Third card entry is discrete full appearance49, not an observed rightward sliding entrance.",
+    "Building upward eyes are retained pose, not a newly verified reaction in37-59.",
+    "S0002 draft x≈.75 coin and stick-man description do not match bounded source: coin center≈952/1920=.496, no separate stick-man in37-83."
+  ],
+  "actual_listening_seconds": 0,
+  "audio": "BLOCKED_NO_QUALIFIED_LISTENING",
+  "CT_SCAN_COMPLETE": false,
+  "reviewer": "root Codex; internal source review, not independent signoff"
+}

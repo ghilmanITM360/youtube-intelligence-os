@@ -1,0 +1,98 @@
+{
+  "batch_id": "NICK_134_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "NAg-Xx_xy8U",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "e0c876cbbc740e24e8aecc92bfe972e7e27ee8e39c1fbf05879ff7d385dfd723",
+      "character_count": 20613,
+      "source_word_count": 3246,
+      "coverage_token_count": 3248,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          20000
+        ],
+        [
+          20000,
+          20613
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "281_NAg-Xx_xy8U_7_Hidden_Ways_Society_Programs_You_to_Stay_Poor.txt",
+      "archive_member_sha256": "de98ba5e80730dcac5d67dd65a3f9fb08979aceb8ffe3124012267e79f1387c4",
+      "archive_member_bytes": 22050,
+      "archive_member_lines": 575,
+      "audio_verified": false,
+      "image_sha256": "b4c73010aa12d3e400089768b9691eccc94eb430ccdb179d9052a4573d707255",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/NAg-Xx_xy8U/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/NAg-Xx_xy8U/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/NAg-Xx_xy8U/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Average car payment and loan terms available before publication",
+      "url": "https://www.experian.com/blogs/ask-experian/average-car-payment/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_EXPERIAN_PAGE_CITING_Q3_2025_STATE_OF_AUTOMOTIVE_FINANCE; full report not opened",
+      "finding": "Q3 2025 average payment $748 new, $532 used; new loans averaged $42,332 at 6.56% over about 69 months; used $27,128 at 11.40% over about 67 months."
+    },
+    {
+      "claim": "Average savings rate versus inflation at publication",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10242025.htm",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_RELEASE; FDIC national rate taken from Fortune secondary coverage (https://fortune.com/article/best-savings-account-rates-11-11-2025), FDIC page not opened",
+      "finding": "CPI-U up 3.0% for 12 months ending September 2025 (released October 24, 2025); FDIC national average savings rate about 0.40-0.41% in November 2025."
+    },
+    {
+      "claim": "Financial disagreements and divorce",
+      "url": "https://scholarsarchive.byu.edu/facpub/4526",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_ABSTRACT_RECORD; full paper not opened",
+      "finding": "Dew, Britt and Huston (2012), Family Relations 61:615-628, NSFH 4,574 couples: financial disagreements were the strongest disagreement type predicting divorce; financial well-being no longer predicted divorce once disagreements were included."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Standard amortized monthly payment P*i/(1-(1+i)^-n), i=APR/12; present value of a $700 x 60 payment stream; real return = (1+nominal)/(1+CPI)-1; peer ratios from ev json",
+      "results": {
+        "car_700x60": 42000,
+        "principal_repaid_by_700x60_at_6_56pct": 35725,
+        "interest_inside_700x60_at_6_56pct": 6275,
+        "new_avg_terms_payment": 738.13,
+        "new_avg_terms_total_interest": 8599,
+        "used_avg_terms_payment": 549.19,
+        "used_avg_terms_total_interest": 9668,
+        "real_return_savings_0_40_vs_cpi_3_0_pct": -2.52,
+        "purchasing_power_loss_10k_one_year": 252.43,
+        "like_rate_pct": 3.8,
+        "comment_rate_pct": 0.35,
+        "peer_ratio_10": 0.49779784158857804,
+        "peer_ratio_5": 0.4564328801368736
+      }
+    }
+  ]
+}

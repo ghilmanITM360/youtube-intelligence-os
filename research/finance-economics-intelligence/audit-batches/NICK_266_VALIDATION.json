@@ -1,0 +1,55 @@
+{
+ "status": "PASS",
+ "video_id": "mihh7ki_13g",
+ "nick": "NICK_266",
+ "claims": 7,
+ "sources": 1,
+ "calculations": 2,
+ "transcript_chars": 19498,
+ "parent_commit": "d2541e25fe0220603f56fc96ca95ac717b4c0052",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_265",
+  "NICK_266",
+  "NICK_267"
+ ],
+ "changed_ledger_ids": [
+  "mihh7ki_13g"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 540,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "47_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 9.08991 STRONG (5-peer 14.78613 STRONG); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 543,
+  "remaining": 1069,
+  "original_pending": 423,
+  "expansion_pending": 646,
+  "changed_cells": "91 (dashboard 7 + rows 536-538)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "383a50fb3babd6f03fd4c2449dae34680e69f5d73ce14a1f2525f1d907922cdb"
+ },
+ "semantic_acceptance": "All 19498 stored characters and six dimensions reviewed; 7 located claim groups; sources BRICKMAN1978. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "6f02f496c5ce3d62316bd2adb81c8875cdfb45da56d0f212a175580ea3ddb069",
+  "NICK_266.json": "5c0e0bacf4c7d26059367818000440518497113d05e1aea0b9936eb0b5aa85f4",
+  "NICK_266_READ_RECEIPTS.json": "aa4794fe73cd67b53a4f3f295a9f79377796ea77d9693d767c96fea8f5bc065a",
+  "thumbnail": "086df3901a5976fcc2328a2ca28cda9577850bbd278776e6583d50427a0a2e3d"
+ }
+}

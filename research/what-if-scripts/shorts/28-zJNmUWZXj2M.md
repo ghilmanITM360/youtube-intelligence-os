@@ -1,0 +1,25 @@
+# What would happen in Minnesota if the world rotated by 90 degrees?
+
+| Field | Value |
+|---|---|
+| Video ID | `zJNmUWZXj2M` |
+| URL | https://www.youtube.com/shorts/zJNmUWZXj2M |
+| Format | shorts |
+| Published | 2026-04-21 |
+| Duration | 00:01:02 |
+| Views (at acquisition) | 244,598 |
+| Words | 210 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/zJNmUWZXj2M.txt` |
+| Source SHA-256 | `dd444880491ca0bcdea432d5c04c29edb59e531c9dd392c50af5936f8708b097` |
+
+## Script
+
+What would the world be like if the land masses were INSTANTLY rotated by 90 degrees?
+
+It would profoundly alter our world in general and the weirdly Minnesota-heavy world of 1990s cinema in particular.
+
+We’re assuming that all the material is magically shifted around, so there are no massive tsunamis or earthquakes. Even so, it would definitely still be a catastrophe. The ice caps would melt long before new ones could develop, pushing the ocean up by a few hundred feet. The reshuffling of climate zones would come as a huge shock to the biosphere, leading to ecological chaos and possibly mass extinctions.
+
+But if the shift happened just right –and Michael Bay were telling the story– then as the waters of the Gulf of Mexico began to cool and the Mississippi slowed and became an estuary, the region’s wildlife would spread inland.
+
+And one morning, all those Minnesotans we know from 90s cinema would wake up to the sight of floating rafts of fire ants, followed by five million lost, hungry alligators… who would wallow in the mighty ducks’ now-melted skating rink, add yet more for the characters in “Grumpy Old Men” to complain about, and lead to a similarly gruesome, if more reptilian, ending to the movie “Fargo.”

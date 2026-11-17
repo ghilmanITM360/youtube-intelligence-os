@@ -1,0 +1,518 @@
+{
+ "video_id": "-yKTjoV37qc",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "b785cb89b4c64c71ac16b019a67888956779ae7a96d5551fa121e28dae48054f",
+ "original_packets": [
+  "CARL_001.json"
+ ],
+ "transcript_chars_read": 18539,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 113,
+    "text": "Most people believe becoming a\nmillionaire requires a high salary, a\nlarge inheritance, or a genius business\nidea"
+   },
+   "judgment": "MET",
+   "rationale": "A myth-then-truth opening backed immediately by a specific statistic (Ramsey, 79%), which sets a contrarian turn within ~150 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1083,
+    "end_char": 1228,
+    "text": "I'll show you the exact mechanisms along\nwith the actual math that allow two\npeople with the same income to end up in\ncompletely different places"
+   },
+   "judgment": "MET",
+   "rationale": "Clear promise (mechanisms plus math, two same-income people diverging) and an emotional stake; the intro runs ~1,500 characters including a parking-lot image.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Large black text UNLUCKY - NO INHERITANCE above a lineup of ten figures with red net-worth tags ($30K, $85K, $120K, $47K, $320K, $511K, $260K, $88K, $451K) around a smiling tradesman named MIKE with a green $2.8M tag, stacks of cash at his feet, and a pointing creator avatar"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The theme (no inheritance, income is not decisive) matches the opening, but the script never mentions a tradesman, doctors, suited professionals or any of these net-worth figures; the picture asserts a specific ranking the video does not support.",
+   "uncertainty": "Expectation match is inferred; viewer reaction is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Why Some People Become Millionaires — And Most Don't"
+   },
+   "judgment": "MET",
+   "rationale": "The video answers \"why\" with five barriers, four life disruptions and seven mechanisms; the \"most don't\" half is rhetorical and never quantified.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6690,
+    "end_char": 6721,
+    "text": "Savings rate outperforms income"
+   },
+   "judgment": "MET",
+   "rationale": "The title loop is paid by a clear rule (savings rate and consistency over income), restated in the recap.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "UNLUCKY - NO INHERITANCE with MIKE $2.8M among lower net-worth professionals"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script delivers the no-inheritance thesis but not the tradesman-beats-professionals picture.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17551,
+    "end_char": 17593,
+    "text": "Here are three things you can\ndo this week"
+   },
+   "judgment": "MET",
+   "rationale": "Clear architecture: myth, who millionaires are, typical profile, five barriers, four disruptions, seven mechanisms, one worked example, three actions.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5067,
+    "end_char": 5129,
+    "text": "The answer is\nexactly what you'll discover in the next\nsection"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Explicit section hand-offs (\"The first barrier\", \"Mechanism one\") keep structure clear, but there is no concealed question beyond the opening myth; the parking-lot image is not revisited.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1962,
+    "end_char": 2015,
+    "text": "But here's something most people have\nnever been told"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Some BUT turns (income is not the deciding factor, BUT savings rate is) but the barriers and mechanisms are a parallel list, so the middle is AND-THEN.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 638,
+    "end_char": 743,
+    "text": "The person who owns it is very\nlikely part of the 79% who have already\nreached the seven-figure milestone"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Ramsey's 79% is the share of millionaires who received no inheritance, not the share of old-car owners who are millionaires, and it does not mean \"built wealth from nothing\" (no inheritance is not the same as no help); the sentence turns a statistic about millionaires into a probability about a stranger's car.",
+   "uncertainty": "The 79% no-inheritance figure was confirmed from search-result summaries; the inference drawn from it is the analyst's reading."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4280,
+    "end_char": 4346,
+    "text": "Just a 5-year delay from age 35 to 40\ncosts you more than $269,000"
+   },
+   "judgment": "MET",
+   "rationale": "$500 a month at 8% reaches $1.745M from 25, $745K from 35 and $476K from 40; the 35-to-40 gap is $270K and the 25-to-40 gap is $1.27M, all as stated.",
+   "uncertainty": "Arithmetic verified (monthly compounding)."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5732,
+    "end_char": 5813,
+    "text": "It's 15\nseparate years each carrying that same\ncost stacked on top of one another"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Each missed year does not carry \"that same cost\": the first missed year costs about $139,500, but later years cost less because they have less time to compound (the 15 years sum to $1.27M, about $85,000 on average).",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6200,
+    "end_char": 6312,
+    "text": "Double your savings rate and you double\nyour outcome and actually more than\ndouble it because of compound growth"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The video's own numbers ($594,000 at 10% and $1,189,000 at 20%) are exactly double; the outcome is linear in the savings rate for a fixed return, so \"more than double\" is wrong.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7376,
+    "end_char": 7409,
+    "text": "grows\ninto approximately $785,000"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The $785,000 is reproduced only if all seven half-raises ($1,500-$3,000) are invested for the full 20 years (about $720,000 annual or $773,000 monthly at a $2,250 midpoint; $785,000 needs an average of about $2,285); one raise a year to a common end gives about $540,000-$576,000 and one every two years about $409,000, and the script does not state the timing.",
+   "uncertainty": "Arithmetic verified under stated timing assumptions; raise timing is not given."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7986,
+    "end_char": 8024,
+    "text": "means giving up\napproximately $368,000"
+   },
+   "judgment": "MET",
+   "rationale": "$625 a month at 8% for 20 years is about $368,100; the wording \"investment growth\" is loose, since this is the full balance, of which $150,000 is contributions.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10687,
+    "end_char": 10735,
+    "text": "costs\napproximately $78,000\nin lost growth alone"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$78,000 equals three years of 8% growth on the existing $300,000 ($77,900), which is still earned if the balance stays invested; the loss from a caregiving break is the growth on the contributions not made, which is not given.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12908,
+    "end_char": 13013,
+    "text": "the average equity investor earned\nonly about 5.5% per year while the S&P\n500 returned approximately 9.9%"
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "The attributed DALBAR 2024 figures could not be matched to a source; the 5.5-point gap resembles a single-year gap, not a per-year long-run difference, and DALBAR's method is contested.",
+   "uncertainty": "No source located for the 5.5% and 9.9%."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1778,
+    "end_char": 1846,
+    "text": "In 2025 alone, the US\ncreated an additional 736,000\nnew millionaires"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Capgemini's World Wealth Report 2026 reports 736,000 new US millionaires in 2025 (US population of high-net-worth individuals 8.7 million), but the same passage cites 23.8 million and 14.5 million \"millionaires\" on other definitions, and Capgemini's own investable-asset measure for the US is far below 14.5 million; the three bases are not reconciled.",
+   "uncertainty": "Verified from search-result summaries of Capgemini releases; the other counts are unsourced in the video."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15014,
+    "end_char": 15065,
+    "text": "effectively owns about 1,875,000\nin future earnings"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$75,000 times 25 years is $1.875M undiscounted and without raises; its present value at a 3% discount rate is about $1.31M, so \"owns $1,875,000\" overstates the asset.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16890,
+    "end_char": 16931,
+    "text": "After 30 years, you'll surpass\n$1,397,000"
+   },
+   "judgment": "MET",
+   "rationale": "15% of $75,000 invested monthly at 8% gives $171,500, $552,200 and $1,397,200 at 10, 20 and 30 years, matching the stated figures (monthly compounding, no raises); the other savings-rate comparison ($1,699,000 versus $850,000) uses annual contributions, a different convention.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4771,
+    "end_char": 4803,
+    "text": "Income isn't the deciding factor"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame against income-based explanations, supported by savings-rate comparisons.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17235,
+    "end_char": 17297,
+    "text": "The\nmechanism never changes, the foundation\nunderneath it does"
+   },
+   "judgment": "MET",
+   "rationale": "Compound interest, avalanche versus snowball and human-capital risk are explained in plain sentences with concrete figures.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18275,
+    "end_char": 18320,
+    "text": "I'll\nbe reading and replying to every\ncomment"
+   },
+   "judgment": "MET",
+   "rationale": "A comment prompt and like/subscribe ask arrive at the end, after delivered value, with no earlier interruption.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17299,
+    "end_char": 17388,
+    "text": "The 79% of self-made\nmillionaires didn't do anything\ndifferent from what you've just seen"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The close returns to the opening 79% statistic but not to the parking-lot image.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 42,
+    "text": "Most people believe becoming a\nmillionaire"
+   },
+   "judgment": "MET",
+   "rationale": "\"Millionaire\" is in the first sentence, matching the title keywords.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "Why Some People Become Millionaires — And Most Don't",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. \"How to become a millionaire\" is a broad evergreen topic.",
+  "2_differentiated_angle": "Barriers-and-mechanisms framework with a worked example; the savings-rate-over-income comparison is the distinguishing numeric device.",
+  "3_title": "Question-style thesis with a curiosity contrast (\"And Most Don't\").",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, SHA-256 prefix 8e3290a042be993b; not in the repository): bold UNLUCKY - NO INHERITANCE, ten figures with net-worth tags, the central tradesman MIKE at $2.8M, cash stacks, pointing cartoon avatar. Legible at mobile size apart from the small tags; the specific lineup is not in the script. Asset appears AI-generated; likeness of the channel avatar not rights-judged.",
+  "5_opening": "Myth plus statistic, then a parking-lot image.",
+  "6_loops": "Structural hand-offs; few concealed questions.",
+  "7_spine": "Long but well-signposted: myth, profile, barriers, disruptions, mechanisms, numbers, actions.",
+  "8_repetition_clarity": "Savings rate versus income is restated several times.",
+  "9_emotion_credibility": "Measured and number-heavy; credibility reduced by the 79% misuse, the \"same cost\" error, the \"more than double\" claim and unsourced attributions.",
+  "10_ending_cta": "Three actions, then a comment prompt and like/subscribe after value.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$500/month at 8%: $1,740,000 from 25, $745,000 from 35, $475,000 from 40; delay costs $269,000 (35 to 40) and $1.27M (25 to 40)",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1,745,000; $745,000; $475,500; gaps $270,000 and $1.27M. Holds."
+  },
+  {
+   "claim": "Starting at 26 instead of 25 costs \"$139,521\"; the 15 missed years \"each carr[y] that same cost\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "First missed year about $140,000 (holds); later years cost progressively less, so the \"same cost\" claim is wrong."
+  },
+  {
+   "claim": "$75,000 income, save 10% or 20% for 25 years at 8%: $594,000 and $1,189,000; \"more than double\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$594,400 and $1,188,800; exactly double."
+  },
+  {
+   "claim": "$75,000 saving 20% for 30 years is $1,699,000; $150,000 saving 5% is $850,000",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1.699M and $0.850M with annual contributions (monthly would be $1.863M and $0.932M); consistent ratio, different convention from the $500/month examples."
+  },
+  {
+   "claim": "Seven raises of $3,000-$6,000, half invested at 8% for 20 years, \"approximately $785,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "About $720,000-$773,000 if all seven half-raises are invested for the full 20 years; $540,000-$576,000 if one raise a year; $409,000 if every two years. Timing is not stated."
+  },
+  {
+   "claim": "$625/month at 8% for 20 years is \"approximately $368,000\"; $1,000 from 25 is $21,725 and from 40 is $6,848",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$368,100; $21,725 and $6,848. Hold."
+  },
+  {
+   "claim": "A 3-year caregiving break on a $300,000 portfolio at 8% costs \"$78,000 in lost growth\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$77,900 is the 3-year growth on the existing balance, not growth lost by missing contributions."
+  },
+  {
+   "claim": "Automatic plans 12.1% versus 7.6% savings: 4.5 points of $75,000 over 25 years at 8% is \"$267,476\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$267,500 with monthly contributions; arithmetic holds. The cause attributed to automation is not controlled for who enrols."
+  },
+  {
+   "claim": "15% of $75,000 at 8%: $171,500 / $552,000 / over $1,397,000 at 10 / 20 / 30 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$171,500; $552,200; $1,397,200. Hold."
+  },
+  {
+   "claim": "$75,000 for 25 years is \"about 1,875,000 in future earnings\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Undiscounted; present value at 3% is about $1.31M."
+  },
+  {
+   "claim": "736,000 new US millionaires in 2025 (Capgemini)",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Capgemini World Wealth Report 2026 (via search-result summaries): US added 736,000; US HNWI population 8.7 million. The video's 23.8M / 14.5M / 6M bases are not Capgemini's. (search-result summaries only)"
+  },
+  {
+   "claim": "79% of millionaires had no inheritance; only 3% inherited $1M or more; only 16% over $100,000",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Ramsey Solutions National Study of Millionaires (search-result summaries): 79% no inheritance, 3% received $1M+; the 16% figure was not located. The \"built wealth from nothing\" gloss is stronger than the data. (search-result summaries only)"
+  },
+  {
+   "claim": "Ohio State divorce study: 77% decline in net worth; medical bankruptcy \"the leading cause\"; Vanguard 2026 12.1% vs 7.6%; DALBAR 5.5% vs 9.9%; disability insurance 1-2% of income; millionaires' home equity 19% of assets",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified; the medical-bankruptcy claim is contested in the literature and the DALBAR pair could not be matched."
+  }
+ ],
+ "strengths": [
+  "Clear structure and unusually precise compounding examples, most of which reproduce.",
+  "Concrete actions and a well-placed end CTA.",
+  "Explains avalanche versus the freed-payment redirect, which is the useful behavioural step."
+ ],
+ "weaknesses": [
+  "The 79% statistic is misapplied in the hook and glossed as \"from nothing\".",
+  "Three arithmetic or logic errors in the barrier section (\"same cost\", \"more than double\", $785,000 timing).",
+  "Thumbnail lineup not in the script.",
+  "Very long for one video (~18,500 characters)."
+ ],
+ "contradictions": [
+  "\"Each carrying that same cost\" versus the declining cost of later missed years.",
+  "\"Double ... and actually more than double\" versus $594,000 to $1,189,000.",
+  "\"Millionaires\" at 23.8M, 14.5M and 6M versus Capgemini's 8.7M US HNWI on an investable basis.",
+  "\"25 to 30 years\" from \"a few hundred dollars a month\" versus the video's own $500/month reaching $745,000 at 30 years ($1 million takes about 33 years)."
+ ],
+ "improvement_opportunities": [
+  "Reword the hook to \"79% of millionaires received no inheritance\" and drop the old-car inference.",
+  "Show the 25-to-40 delay as a table of years versus cost (first year $140K shrinking) instead of \"the same cost\".",
+  "Replace the thumbnail lineup with a figure from the script (the $500/month 25-versus-35 comparison) or add the Mike example to the video.",
+  "Fix the \"more than double\" line and state raise timing or use $540,000."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Primary Ramsey, Capgemini, DALBAR and Vanguard documents"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "0.63867",
+  "age_days": "58.4397",
+  "views_likes_comments_snapshot": {
+   "views": 359,
+   "likes": 8,
+   "comments": 0,
+   "published_at": "2026-07-14"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.84562",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the number-heavy structure or the thumbnail lineup affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "three rounded figures corrected ($552,200; $368,100; $475,500)",
+    "$785,000 timing explanation corrected",
+    "added the 25-30 years versus $745,000-at-30 contradiction",
+    "\"lawyers\" removed from thumbnail description",
+    "secondary-source results marked as search-summary only"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

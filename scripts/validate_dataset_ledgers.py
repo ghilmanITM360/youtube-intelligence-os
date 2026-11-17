@@ -40,6 +40,11 @@ DEFAULT_DATASETS = [
 # do not add an entry here without doing the same and recording the commit
 # that actually matched.
 KNOWN_HISTORICAL_SNAPSHOTS = {
+    # Finance added legitimate LFS/CSV attributes. These two configuration
+    # snapshots reconcile byte-for-byte with the original 627-byte blob;
+    # the canonical manifests and immutable raw evidence remain unchanged.
+    ("DS-000028", "DS-000028-F020"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
+    ("DS-000030", "DS-000030-F019"): "c740f89212dd7a1c59c273fce07e2613f24a68c4",
     ("DS-000021", "DS-000021-F034"): "78ad5d728380873d67422d71e67f613ff28c37cf",
     ("DS-000021", "DS-000021-F035"): "78ad5d728380873d67422d71e67f613ff28c37cf",
     ("DS-000021", "DS-000021-F037"): "78ad5d728380873d67422d71e67f613ff28c37cf",
@@ -74,6 +79,11 @@ KNOWN_HISTORICAL_SNAPSHOTS = {
     ("DS-000028", "DS-000028-F019"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
     ("DS-000030", "DS-000030-F017"): "57491326ec76c7763c9da7b0affcc473a962b7e7",
     ("DS-000030", "DS-000030-F018"): "c740f89212dd7a1c59c273fce07e2613f24a68c4",
+    # .gitattributes is shared mutable repo configuration; the ledgers captured
+    # the 627-byte blob introduced at 59cf2185 (2026-09-22). Later commits
+    # (71bb5946, c5c3d60e, b28f0484) legitimately extended it.
+    ("DS-000028", "DS-000028-F020"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
+    ("DS-000030", "DS-000030-F019"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
 }
 
 

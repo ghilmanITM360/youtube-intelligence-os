@@ -1,0 +1,57 @@
+{
+ "test": "RT-V3-S01",
+ "mp4": "/Users/ghilmankhan/YIOS-local-audits/barely-evolved/2026-11-03-GNaBxt_zIRA-deep-ct-scan/reconstruction_test/RT-V3-S02/rt.mp4",
+ "criteria": {
+  "C1": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames_ffprobe": 179,
+   "frames_decoded_cv2": 179
+  },
+  "C2": {
+   "ok": true,
+   "board": 0.371,
+   "wall": 0.201,
+   "wood": 0.072
+  },
+  "C3": {
+   "ok": true,
+   "run": [
+    13,
+    53
+   ],
+   "scale": 1.687,
+   "tx": -660,
+   "length": 41
+  },
+  "C4": {
+   "ok": true,
+   "half_at": 0.525,
+   "progress": [
+    0.02,
+    0.05,
+    0.1,
+    0.18,
+    0.31,
+    0.48,
+    0.65,
+    0.79,
+    0.89,
+    0.96,
+    1.0
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "camera_frames_after": [],
+   "extra_scale": 1.0299
+  }
+ },
+ "deterministic": "PASS",
+ "C6": "visual, recorded separately"
+}

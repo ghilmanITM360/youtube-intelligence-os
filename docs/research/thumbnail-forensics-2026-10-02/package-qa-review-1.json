@@ -1,0 +1,242 @@
+{
+ "reviewer": "PKQA-1",
+ "rows": [
+  {
+   "Package_ID": "PKG-4ZVtHknKuvg",
+   "pk": "PK-01",
+   "seq": 3,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_only_information",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The falling boat, sailor, tuna and dolphin, the stark white void, and the series badge with a hanging dinosaur.",
+     "corrected_value": "The falling boat, sailor, two fish and a dolphin, the stark white void, and the series badge with a hanging dinosaur.",
+     "reason": "Image has two fish (a tuna-like one left and a small one right) plus the dolphin; audit names only one fish.",
+     "evidence": "Image: fish at left-centre and a smaller fish at right, dolphin bottom centre."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-KlTFqZbc8J0",
+   "pk": "PK-01",
+   "seq": 12,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "shared_information",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The ~$1.8 billion figure and a young founder are common to both.",
+     "corrected_value": "The ~$1.8 billion figure and a founder-style wealth story are common to both.",
+     "reason": "Title never says 'young' or 'founder'; it only says 'You Built $1.8 Billion... First in Your Family'. Shared info should not credit the title with a young founder.",
+     "evidence": "Title text: 'POV: You Built $1.8 Billion in Silence \u2014 First in Your Family to Ever Do It'."
+    },
+    {
+     "field": "title_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "POV of building a $1.8 billion company quietly as the first in your family.",
+     "corrected_value": "POV of building $1.8 billion in silence as the first in your family.",
+     "reason": "'Company' is not in the title; it is an inference.",
+     "evidence": "Title wording."
+    },
+    {
+     "field": "thumbnail_escalates_beyond_title",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Y",
+     "corrected_value": "N",
+     "reason": "Both halves carry the same figure ($1.8B / $1.84B); the image adds a refusal scene, not a bigger claim. 'Extends' is already captured by the primary relationship.",
+     "evidence": "Cheque reads $1.84 Billion; title says $1.8 Billion."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-XO1-4FH1X1I",
+   "pk": "PK-01",
+   "seq": 16,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-HASlGILlzFo",
+   "pk": "PK-01",
+   "seq": 17,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "shared_information",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Older people, legs, and eating foods as the fix appear in both.",
+     "corrected_value": "Legs and eating foods as the fix appear in both; the older-age framing ('OVER 60') is thumbnail-only.",
+     "reason": "Title has no age cue ('Your Legs Weaken First! Eat These 6 Foods...'), and the row's own thumbnail_only_information lists the 'over 60' gate, so shared_information contradicts it.",
+     "evidence": "Image text 'IF YOU ARE OVER 60'; title contains no age."
+    },
+    {
+     "field": "thumbnail_only_information",
+     "error_class": "STYLE_ONLY",
+     "original_value": "a visible plate of five or six foods",
+     "corrected_value": "a visible plate of five foods (sweet potato, blueberries, eggs, sardines, lentils)",
+     "reason": "Plate shows five distinct foods, one fewer than the title's six; the hedge hides a small title/image count gap.",
+     "evidence": "Image: plate with sweet-potato cubes, blueberries, halved eggs, three sardines, lentils."
+    },
+    {
+     "field": "improvement",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Replace 'DEATH STARTS IN YOUR LEGS' with 'LEGS WEAKEN FIRST' and keep the plate so both halves claim equally.",
+     "corrected_value": "Replace the death line with a non-title phrase such as 'OVER 60? BUILD LEG POWER' and keep the plate.",
+     "reason": "Proposed text is the title's own opening words, which would make the thumbnail repeat the title and cut complementarity; protocol asks that improvement not already be the title.",
+     "evidence": "Title: 'Your Legs Weaken First!'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-qCDslNcd84U",
+   "pk": "PK-01",
+   "seq": 19,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_repeats_title",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "'RUN FROM US?' over fleeing animals restates the title's premise (animals fear humans); the row itself labels the package REINFORCING and says the image 'only dramatises the premise'. Rows 7 and 11 (same channel style) flag Y for the same pattern.",
+     "evidence": "Image: animals fleeing a calm human; title: 'Why Do Animals Fear Humans So Much?'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-sdGRQ2LRgoI",
+   "pk": "PK-02",
+   "seq": 4,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A cartoon van worker hands out cash to a man and a woman, with pressure washers, no text.",
+     "corrected_value": "A cartoon van worker exchanges cash with a man and a woman beside a pressure-washing van, no headline text.",
+     "reason": "Direction of payment is wrong/ambiguous: each customer holds a wad that meets the worker's hand, and the same row's thumbnail_only_information and weakest_element describe customers paying cash for a service. Garbled clipboard text also exists.",
+     "evidence": "Image: both customers' hands hold banknotes touching the worker's hands; van-door clipboard shows 'BOOKING SCHEDULE'-like text."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-jxoMnTrVziA",
+   "pk": "PK-02",
+   "seq": 6,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "shared_information",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Seniors' fitness check implied; a test linked to balance and leg strength.",
+     "corrected_value": "A senior-oriented test or check is implied in both; balance and leg strength appear only in the thumbnail caption.",
+     "reason": "Title never mentions balance or legs; it says 'Doctors Recommend This 10 Second Test' with #healthyaging #seniorcheck. Balance/legs is thumbnail-only (and listed so in thumbnail_only_information).",
+     "evidence": "Image caption 'GOOD BALANCE / STRONG LEGS'; title has neither word."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-UwtwCQWEzA8",
+   "pk": "PK-02",
+   "seq": 7,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-tXSQg9eS09U",
+   "pk": "PK-02",
+   "seq": 16,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "thumbnail_only_information",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A cracked glowing heart, a red alarm and a stethoscope doctor pressing under his eye.",
+     "corrected_value": "A cracked glowing heart, a bedside clock with red 3:00 AM digits and a scrubs-and-stethoscope man pressing a finger under his eye.",
+     "reason": "There is no 'red alarm'; the inset shows a bedside digital clock reading 3:00 AM (the clock itself is in the title/thumbnail shared '3 AM' idea).",
+     "evidence": "Image inset: digital clock on a night table beside a glowing heart with red crack."
+    },
+    {
+     "field": "shared_information",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Waking at 3 AM, aimed at older people.",
+     "corrected_value": "Waking at 3 AM; the thumbnail has no explicit older-age cue (age is title-only).",
+     "reason": "Thumbnail text never mentions seniors or age; the row's title_only_information already credits the over-60 qualifier to the title alone, so 'aimed at older people' is not shared.",
+     "evidence": "Image text: 'WAKE UP AT 3 AM? YOUR HEART IS WARNING YOU'; no age wording."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-N3vR3PIIyQI",
+   "pk": "PK-02",
+   "seq": 17,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-sXtYu17sOSU",
+   "pk": "PK-03",
+   "seq": 2,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "primary_relationship",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "REINFORCING",
+     "corrected_value": "THUMBNAIL_OVERPROMISE",
+     "reason": "Row marks credible NO, misleading_risk HIGH, medical MISLEADING_RISK and says the image gives a graphic claim 'nothing shown supports'; rows for the other health packages put OVERPROMISE first. Keeping both labels, order is defensible either way.",
+     "evidence": "Image: colon packed with brown waste on a bloated belly; title says only 'THIS' and 'Doctors Are Shocked'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-JRMGda9pW5Y",
+   "pk": "PK-03",
+   "seq": 7,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "improvement",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Test enlarging the green stink lines and dropping campfire and hut so the smell hint becomes the secondary focus.",
+     "corrected_value": "Test dropping the campfire and hut to simplify the 160px frame, keeping the stink lines at current size so the smell hint does not pre-answer the question.",
+     "reason": "Enlarging the smell cue risks revealing the answer (the sibling hippo row names stink lines as pre-answering); the clutter removal is the valid part.",
+     "evidence": "Image: stink lines above the lion and steak; campfire and hut in the background."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 12,
+  "material": 0,
+  "minor_factual": 6,
+  "classification": 0,
+  "subjective": 5,
+  "style_only": 3
+ }
+}

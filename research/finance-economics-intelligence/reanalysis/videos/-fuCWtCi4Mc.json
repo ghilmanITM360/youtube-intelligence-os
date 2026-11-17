@@ -1,0 +1,437 @@
+{
+ "video_id": "-fuCWtCi4Mc",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "b6ced1017e0c684dce603422deceec8f13a7d68cd2d0027eccd9eb501068f4fa",
+ "original_packets": [
+  "NICK_002.json"
+ ],
+ "transcript_chars_read": 34023,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 281,
+    "end_char": 349,
+    "text": "$14 on my personal checking account, 20k\nin my business bank account"
+   },
+   "judgment": "MET",
+   "rationale": "A cold open of three distressed clips (\"fell immediately into poverty\", \"$14 on my personal checking account\", \"Who let me do this?\") is a strong scroll-stop, though it runs ~500 characters before the host speaks.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 506,
+    "end_char": 593,
+    "text": "Today, we're going to be taking a look\nat people who can't afford the house\nthey bought"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The promise is clear and curiosity high, but the host is never introduced by name and the format (reaction to 19 viewer clips) is only implied.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Alarmed cartoon man (hands on head, sweating) beside bold BIGGEST MISTAKE... and two phone clips of real people labelled ERROR? and STUPID!, arrow to the clips"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The opening matches the title (people who cannot afford the house they bought), but the thumbnail promises \"the biggest mistake\" and labels real people (apparently TikTok creators; the host cites 500,000 followers for one) \"STUPID!\", framing the video as ridicule while the commentary is mostly sympathetic and rule-based.",
+   "uncertainty": "Expectation match is inferred; viewer reaction is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Let's Watch 36 Minutes of People Who Can't Afford the House They Bought"
+   },
+   "judgment": "MET",
+   "rationale": "Title states the format (\"Let's Watch\"), the duration and the theme; the stored transcript length (~34,000 characters) is consistent with about 36 minutes.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1545,
+    "end_char": 1603,
+    "text": "Now, technically, he didn't buy a house.\nHe signed a lease"
+   },
+   "judgment": "MET",
+   "rationale": "Fair to the title: the commentary itself corrects the one clip that is a lease and later flags the 19th clip as an advertisement, so the 18 real confessions are accurately counted.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "BIGGEST MISTAKE... over two phone clips labelled ERROR? and STUPID!"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "No single \"biggest mistake\" is ever named; the commentary distils several rules (do not buy at the maximum pre-approval, keep the down payment from taking you to zero, budget for upkeep and escrow changes, treat an ad as an ad), so the thumbnail loop stays open.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 33553,
+    "end_char": 33606,
+    "text": "We just watched 18 real people\nconfess real disasters"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A playlist of 19 clips with commentary between; the arc is thematic (rules accumulating) and ends with a twist (the 19th clip is an ad), not an escalating narrative.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5308,
+    "end_char": 5361,
+    "text": "And as for\nwho let me do this, the answer is a\nlender"
+   },
+   "judgment": "MET",
+   "rationale": "The cold-open question (\"Who let me do this?\") is explicitly answered in the third commentary (about 5,300 characters); a later loop (\"Did you catch it? Watch the turn at the halfway point\") is paid at the final clip.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 33040,
+    "end_char": 33093,
+    "text": "Did you catch it? Watch the turn at the\nhalfway point"
+   },
+   "judgment": "MET",
+   "rationale": "A deliberate planted reveal: the last confession becomes an advertisement for a rate-shopping product, with the commentator showing how the story does not match the product.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11057,
+    "end_char": 11105,
+    "text": "This is the rule the\nlast few clips keep proving"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Each commentary links clip to rule, but the clips themselves are unconnected; the connective tissue is \"this is the rule\" rather than cause and effect between segments.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3948,
+    "end_char": 4033,
+    "text": "The catch is that rent\nis the most you'll pay in a month, and a\nmortgage is the least"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The commentary regularly turns a clip with a catch or a \"but\", but this line is garbled (it reads as rent is the maximum, mortgage the minimum) and the sequence is otherwise AND-THEN across clips.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 22998,
+    "end_char": 23043,
+    "text": "So let's total year one of the American\ndream"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The $31,000 total is internally fine ($15,828 interest + about $5,000 taxes + $10,000 repairs; the stored tax figure reads \"$5,67.89\", reconstructed as $5,678.89, and the host says \"$5,000\"), but \"year one\" implies about eight months of interest: $15,828 at 6.375% on $364,500 is $1,936 a month, so roughly 8.2 months; the closing date is not given.",
+   "uncertainty": "Arithmetic verified in this session."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 23491,
+    "end_char": 23564,
+    "text": "the typical buyer would be spending\nnearly 38% of their income on housing"
+   },
+   "judgment": "MET",
+   "rationale": "$109,796 at 30% housing is $32,939 a year, which is 37.6% of the stated $87,599 median household income; consistent.",
+   "uncertainty": "Arithmetic verified; the Redfin figures were not re-verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19333,
+    "end_char": 19361,
+    "text": "is about 26%\nof their income"
+   },
+   "judgment": "MET",
+   "rationale": "The stored \"$20,300 a month\" on $9,000 take-home reads as $2,300 (the clip says \"about $2,300 a month\") and $2,300 / $9,000 is 25.6%, matching 26%.",
+   "uncertainty": "The stored figure is a transcription slip; the check uses the clip's $2,300."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 21102,
+    "end_char": 21173,
+    "text": "Two years of payments. 8,174\nwent to his house. 20,000 went to the\nbank"
+   },
+   "judgment": "MET",
+   "rationale": "£352 principal + £890 interest is £1,242 (stated £1,244); 23-24 months give about £8,100-£8,400 principal and £20,000-£21,000 interest, approximately consistent with £8,174 and £20,000, and the amortisation explanation is correct.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 25333,
+    "end_char": 25415,
+    "text": "When the bank makes you put\n$330,000\ndown because your income can't carry the\nloan"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The clip says a 30% down payment on a $910,000 townhome is \"roughly $330,000\", but $330,000 is 36.3%; the commentary agrees with the maths but does not catch the percentage.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5367,
+    "end_char": 5435,
+    "text": "a lender's approval is not\nadvice. It's an invoice waiting to\nhappen"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame against \"approved means affordable\", reinforced by the max-dose, down-payment-to-zero and survivorship-bias lines.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3703,
+    "end_char": 3786,
+    "text": "Buying at the max is like a doctor\ntelling you the maximum dose that won't\nkill you"
+   },
+   "judgment": "MET",
+   "rationale": "Escrow, amortisation, leasehold service charges and negative equity are each explained with a one-sentence analogy.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 33855,
+    "end_char": 33908,
+    "text": "Let me know what you guys think\nin the comments below"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The close asks for comments and points to the end-screen video, with no subscribe ask anywhere; because the 19th clip is an advert the host criticises, the absence of a self-promotion CTA fits the message.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 33723,
+    "end_char": 33790,
+    "text": "When the\nbreakdown ends in a product link, it was\nnever a breakdown"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The close lands the ad-detection rule rather than returning to the cold open; the cold-open callback happens mid-video instead.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 548,
+    "end_char": 593,
+    "text": "people who can't afford the house\nthey bought"
+   },
+   "judgment": "MET",
+   "rationale": "The title phrase is spoken verbatim in the first host sentence.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text (the format switches clip to commentary frequently).",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "Let's Watch 36 Minutes of People Who Can't Afford the House They Bought",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. \"House poor\" regret is a recurring social-media topic.",
+  "2_differentiated_angle": "Reaction format with rule extraction and a self-aware ad reveal.",
+  "3_title": "Format, duration and theme in one line; unusually long.",
+  "4_thumbnail": "Stored 480x360 copy (letterboxed): sweating cartoon man, BIGGEST MISTAKE... and two phone-clip frames of real people labelled ERROR? and STUPID!. Legible at mobile size; uses third-party TikTok creators' faces and insulting labels (rights and privacy not judged).",
+  "5_opening": "Three-clip cold open, then a promise.",
+  "6_loops": "Cold-open question answered; ad twist planted and paid; thumbnail loop unpaid.",
+  "7_spine": "Clip playlist with consistent rule commentary and an ad reveal.",
+  "8_repetition_clarity": "Each commentary ends on a rule line.",
+  "9_emotion_credibility": "Sympathetic commentary; arithmetic mostly right; ad reveal strengthens credibility.",
+  "10_ending_cta": "Comment ask and end-screen mention; no subscribe ask.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: clip footage, on-screen text and audio are not in the data; the transcript has no speaker labels, so clip speech and commentary were separated by reading."
+ },
+ "financial_checks": [
+  {
+   "claim": "Year-one totals: principal $364,500 to $359,681 ($4,818); interest $15,828; taxes $5,678.89; repairs $10,000; \"$31,000 out the door\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Principal fall $4,819; sum $15,828 + $5,679 + $10,000 = $31,507 (\"$31,000\" uses $5,000 for taxes). Interest at 6.375% on $364,500 is $1,936/month, so $15,828 is about 8.2 months, not a full year."
+  },
+  {
+   "claim": "Redfin: $109,796 needed versus $87,599 median household income; \"nearly 38%\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "37.6% at a 30% housing share. Holds; Redfin source not re-verified."
+  },
+  {
+   "claim": "$2,300/month housing on $9,000 take-home is \"about 26%\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "25.6%. Holds (stored \"$20,300\" is a transcription slip)."
+  },
+  {
+   "claim": "UK mortgage £1,244 = £352 principal + £890 interest; two years £8,174 and £20,000",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "£1,242; 24 months about £8,400 and £21,000. Holds."
+  },
+  {
+   "claim": "$330,000 down on a $910,000 townhome described as \"30% down\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "36.3%."
+  },
+  {
+   "claim": "$330,000 house with $60,000 down is \"18%\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "18.2%. Holds."
+  },
+  {
+   "claim": "Inspectors cap liability at the inspection fee in many states; UK leasehold service charge and ground rent; cladding crisis after Grenfell; early closing-table exit \"usually costs you your earnest money deposit, a few thousand\"",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified. The earnest-money statement depends on contract contingencies and jurisdiction; \"almost never actually too late until you sign\" is stated without that caveat."
+  }
+ ],
+ "strengths": [
+  "Strong cold open and a deliberate twist (the ad).",
+  "Commentary adds a distinct rule or correction to each clip.",
+  "Arithmetic in the commentary is mostly right (26%, 38%, amortisation).",
+  "Transparent about the lease clip and the sponsored clip."
+ ],
+ "weaknesses": [
+  "Thumbnail promises a \"biggest mistake\" that is never named and labels strangers \"STUPID!\".",
+  "Reuses third-party creators' clips (rights and consent unreviewed).",
+  "\"Year one\" is about eight months; a 30%-versus-36% down-payment discrepancy is missed.",
+  "Long runtime with an interchangeable clip order.",
+  "The Fincast commentary (\"isn't an interest rate problem. It's escrow\") assumes a fixed-rate loan the clip never states."
+ ],
+ "contradictions": [
+  "Thumbnail \"STUPID!\" versus largely sympathetic commentary.",
+  "\"Rent is the most you'll pay, a mortgage the least\" is garbled.",
+  "\"Year one\" versus about 8 months of interest.",
+  "\"It's escrow, not interest rate\" asserted for a clip that gives no loan type."
+ ],
+ "improvement_opportunities": [
+  "Either name the biggest mistake explicitly (buying at the maximum pre-approval) and pay off the thumbnail, or change the thumbnail text.",
+  "Replace \"STUPID!\" with a neutral label and obscure or license the clips.",
+  "Label the interest period \"first 8 months\" and use $5,679 in the sum.",
+  "Add one chapter list and a closing next-video pointer; consider a shorter edit."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Clip footage, rights and consent for featured individuals",
+  "Primary sources for Redfin, inspector-liability and earnest-money statements"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "0.93561",
+  "age_days": "23.138",
+  "views_likes_comments_snapshot": {
+   "views": 4326,
+   "likes": 158,
+   "comments": 36,
+   "published_at": "2026-08-18"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.94069",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the reaction format, runtime or thumbnail labels affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "cold-open length corrected (~500)",
+    "\"who let me do this\" answer located in the third commentary (~5,300)",
+    "tax figure marked as reconstructed",
+    "\"year one\" softened to implies ~8 months",
+    "UK amortisation check wording: approximately consistent",
+    "clip creators described as TikTok creators",
+    "added unsupported escrow-versus-rate assertion"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

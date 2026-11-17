@@ -1,0 +1,94 @@
+{
+  "video_id": "APlGPpM-nBo",
+  "status": "PASS_STRUCTURAL",
+  "source_sha256": "e5d720fb126b2589dceca99f8c99c746472f65e1ef1f89677c6edd74199b8a9e",
+  "deep_forensic_status": "PARTIAL_SAMPLED_VISUAL_AND_TEMPORAL_COVERAGE",
+  "independent_visual_review": "NOT_PERFORMED",
+  "direct_audio_listening": "NOT_PERFORMED",
+  "full_audiovisual_signoff": "NOT_COMPLETE",
+  "limitations": [
+    "4-second samples are point observations, not an exhaustive shot/state segmentation.",
+    "31 targeted sequences do not certify all intervening motion or frame-exact timing/easing.",
+    "Source SHA256 re-verified before extraction; seeking emitted H.264 mmco reference warnings (see REVIEW_EVIDENCE decoder_warning); full decode integrity unverified.",
+    "Audio decoded for signal measurements only; direct listening and exact narration/music/SFX sync unverified.",
+    "Charts, dramatized dialogue and economic claims remain source-video claims until external fact checks.",
+    "Current CDN thumbnail cannot certify upload-time packaging.",
+    "All frames reviewed at contact-sheet scale by the same primary agent; no native-resolution independent QA."
+  ],
+  "validation_count": 49,
+  "checks": {
+    "manifest_source_identity": true,
+    "source_stream_records": true,
+    "timeline_nonempty": true,
+    "timeline_unique": true,
+    "timeline_source": true,
+    "timeline_bounds": true,
+    "assets_nonempty": true,
+    "assets_unique": true,
+    "assets_source": true,
+    "motions_nonempty": true,
+    "motions_unique": true,
+    "motions_source": true,
+    "motions_bounds": true,
+    "beats_nonempty": true,
+    "beats_unique": true,
+    "beats_source": true,
+    "beats_bounds": true,
+    "av_nonempty": true,
+    "av_unique": true,
+    "av_source": true,
+    "av_bounds": true,
+    "point_samples_not_fake_segments": true,
+    "timeline_asset_links": true,
+    "asset_observation_links": true,
+    "asset_occurrence_counts": true,
+    "motion_observation_links": true,
+    "beat_observation_links": true,
+    "av_motion_links": true,
+    "beats_partition_duration": true,
+    "evidence_identity": true,
+    "all_stills_evidence_linked": true,
+    "all_sequences_evidence_linked": true,
+    "sequence_timestamps_match": true,
+    "sequence_bounds": true,
+    "sequence_monotonic": true,
+    "no_unverified_workflow_claim": true,
+    "audio_labels_honest": true,
+    "caption_hashes": true,
+    "caption_cue_links": true,
+    "thumbnail_hash": true,
+    "audio_signal_decode": true,
+    "coverage_counts": true,
+    "coverage_gap": true,
+    "coverage_endpoints": true,
+    "no_false_exhaustiveness": true,
+    "review_notes_complete": true,
+    "reports_present": true,
+    "compact_no_source_media": true,
+    "qa_limitations_present": true
+  },
+  "validated_at": "2026-10-14T18:05:16.343914+00:00",
+  "validation_scope": "Sampled point/temporal package integrity; not exhaustive scene census or AV signoff",
+  "files": {
+    "VISUAL_TIMELINE.csv": {
+      "bytes": 59063,
+      "sha256": "ebef525f514f4bec20ae15278a419018d425fa70ab73560699ebdbc1b6110772"
+    },
+    "AUDIO_VISUAL_EVENTS.csv": {
+      "bytes": 20868,
+      "sha256": "6497c355770157b129f8635e78c55fcc7fe0f500533567e32d60e72b4a7f9239"
+    },
+    "STORY_AND_EDITING_BEATS.csv": {
+      "bytes": 7393,
+      "sha256": "97d4bbbe1bc6f12f12aace0ac69c8c179f43381b6fae2c8f9b21fd019a6adf15"
+    },
+    "MOTION_SEQUENCES.csv": {
+      "bytes": 40631,
+      "sha256": "cb6e4d563d949f6ecceb85936e80c8b68538ac9b015fbe97811334f2e11674ec"
+    },
+    "ASSET_OBSERVATIONS.csv": {
+      "bytes": 23552,
+      "sha256": "3359892cc3f5ab7c58882636190ac065cf5543dbe0719041f613adbd4c1e5d32"
+    }
+  }
+}

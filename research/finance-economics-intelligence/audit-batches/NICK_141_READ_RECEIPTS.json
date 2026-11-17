@@ -1,0 +1,103 @@
+{
+  "batch_id": "NICK_141_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "P9HyBrS2qjs",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "1b1b84347aea97d4d8b8c034298030bca86eac9341523edc1447322001bf5ab7",
+      "character_count": 18988,
+      "source_word_count": 3183,
+      "coverage_token_count": 3200,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          18988
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "253_P9HyBrS2qjs_The_Math_of_Being_Broke_Why_You_Pay_More_for_Everything.txt",
+      "archive_member_sha256": "781e401ecb0aafe244d099404ab15a6a08609755002868684c791d566502f527",
+      "archive_member_bytes": 20633,
+      "archive_member_lines": 527,
+      "audio_verified": false,
+      "image_sha256": "bd3f509503116fdb0c3c2ec173e1bcbf136b2fec617c41e8921785d15310690f",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/P9HyBrS2qjs/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/P9HyBrS2qjs/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/P9HyBrS2qjs/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Overdraft revenue over $11B previously and nearly $6B now",
+      "url": "https://www.consumerfinance.gov/data-research/research-reports/data-spotlight-overdraft-nsf-revenue-in-2023-down-more-than-50-versus-pre-pandemic-levels-saving-consumers-over-6-billion-annually/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_CFPB_DATA_SPOTLIGHT; 2019 $11.9B figure from trade coverage of the same data",
+      "finding": "Combined overdraft+NSF revenue ~$11.9B in 2019 and $5.8B in 2023 at banks >$1B assets; published 2024, before video publication. Figures are overdraft+NSF combined; '<$1,000 balance' concentration claim UNVERIFIED."
+    },
+    {
+      "claim": "Financial stress reduces cognitive capacity by about 13 IQ points",
+      "url": "https://princeton.edu/news/2013/08/29/poor-concentration-poverty-reduces-brainpower-needed-navigating-other-areas-life",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPTS_OF_UNIVERSITY_RELEASE_AND_PRESS_COVERAGE; Science paper (Mani et al. 2013) not opened",
+      "finding": "Coverage reports effect of up to ~13 IQ points, compared to losing a night's sleep; Harvard summary says as many as 10; technical comment disputed findings; 'legally drunk' comparison not found (UNVERIFIED)."
+    },
+    {
+      "claim": "Payday loans at 400% interest",
+      "url": "https://nafcu.org/node/1681",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_SECONDARY_SUMMARY_OF_CFPB_2013_WHITE_PAPER; CFPB paper not opened",
+      "finding": "Median $15 per $100 on a 14-day loan = 391% APR; consistent with claim."
+    },
+    {
+      "claim": "Credit card interest 22%",
+      "url": "https://www.federalreserve.gov/releases/g19/20250908/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_G19_RELEASES; exact month columns not confirmed",
+      "finding": "Rate on accounts assessed interest ~21.9-23.4% in 2024-2025; consistent with 22%."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Analyst recomputation of narrator arithmetic: simple fee ratios, simple annualized overdraft APR (365 days / 730 half-days), standard amortization with monthly compounding (rate/12), cost per year for durable goods; narrator gives no compounding convention",
+      "results": {
+        "hook_fee_over_shortfall_35_2": 17.5,
+        "hook_ratio_if_shortfall_5": 7.0,
+        "overdraft_apr_pct_12h": 425833.33,
+        "overdraft_apr_pct_24h": 212916.67,
+        "detergent_ratio_60_15": 4.0,
+        "payday_apr_pct_15per100_14d": 390.0,
+        "bhph_12000_24pct_60mo_payment": 345.22,
+        "bhph_12000_24pct_60mo_total": 20712.94,
+        "civic_15000_4pct_60mo_total_assumed_term": 16574.87,
+        "shoes_30_every_3mo_per_year": 120,
+        "boots_120_over_3yr_per_year": 40.0,
+        "likes_pct_views": 2.94,
+        "comments_pct_views": 0.64,
+        "peer_ratio_10": 1.4464119581648893,
+        "peer_ratio_5": 1.1698681349065068
+      }
+    }
+  ]
+}

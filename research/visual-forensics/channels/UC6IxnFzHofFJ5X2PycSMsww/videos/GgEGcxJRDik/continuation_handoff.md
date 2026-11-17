@@ -1,0 +1,6 @@
+# Continuation handoff — GgEGcxJRDik
+- Source sha256 647deda9b0ce3ea54b60aa842ad0bf69daa7cbde4aa4356ddd3fa9e3a62ffce7; path /Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What would the world_s largest cities be like if the land masses were rotated by 90 degrees？ [GgEGcxJRDik].mp4; machine A (Ghilmans-Laptop), xkcd stream lock ~/YIOS-local-audits/xkcd-whatif/.xkcd_writer_lock.
+- Status VISUAL_ANALYSIS_PARTIAL; gates {"source_identity": "PASS", "full_temporal_overview": "PASS", "candidate_shots_verified": "PASS", "meaningful_state_timing": "PARTIAL", "motion_design_review": "PARTIAL", "creative_design_review": "PARTIAL", "visual_script_mapping": "PARTIAL", "production_blueprint": "PARTIAL", "audio_human_listening": "BLOCKED", "final_av_signoff": "BLOCKED"}.
+- Pending: meaningful_state_timing, motion_design_review, creative_design_review, visual_script_mapping, production_blueprint, audio_human_listening, final_av_signoff; unresolved segments ['G0002', 'G0022', 'G0034']; partially viewed activities 14.
+- Tools: scripts/xk_ingest.sh, xk_segment.py, xk_sheets.py, xk_build.py, xk_palette.py, xk_asr_check.py, xk_finalize.py (python -I; cv2 venv ~/YIOS-local-audits/tooling/visual-ct-scan-venv).
+- Next exact operation: listening by a human (intervals = all speech 0–83.406077s); optional full-frame strips for partially viewed activities.

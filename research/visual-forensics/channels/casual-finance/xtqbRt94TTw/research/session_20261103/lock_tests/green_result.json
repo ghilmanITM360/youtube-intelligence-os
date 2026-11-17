@@ -1,0 +1,122 @@
+[
+  {
+    "test": "acquire",
+    "pass_": true,
+    "detail": [
+      0,
+      "ACQUIRED token=BD1C9757-2E98-414F-8B4D-96128910A719"
+    ]
+  },
+  {
+    "test": "real_live_session_owner",
+    "pass_": true,
+    "detail": {
+      "pid": "1455",
+      "comm": "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex"
+    }
+  },
+  {
+    "test": "busy",
+    "pass_": true,
+    "detail": [
+      1,
+      "BUSY: label=regression run=test acquired=2026-11-03T18:37:44Z lease_age_s=0"
+    ]
+  },
+  {
+    "test": "wrong_heartbeat",
+    "pass_": true,
+    "detail": [
+      1,
+      "NOT_OWNER"
+    ]
+  },
+  {
+    "test": "wrong_release",
+    "pass_": true,
+    "detail": [
+      1,
+      "NOT_OWNER"
+    ]
+  },
+  {
+    "test": "own_heartbeat",
+    "pass_": true,
+    "detail": [
+      0,
+      "RENEWED"
+    ]
+  },
+  {
+    "test": "active_recover",
+    "pass_": true,
+    "detail": [
+      1,
+      "REFUSED: owner pid 1455 still alive (same start) -> ACTIVE"
+    ]
+  },
+  {
+    "test": "live_owner_expired_lease_refused",
+    "pass_": true,
+    "detail": [
+      1,
+      "REFUSED: owner pid 1455 still alive (same start) -> ACTIVE"
+    ]
+  },
+  {
+    "test": "dead_v3_recovers",
+    "pass_": true,
+    "detail": [
+      0,
+      "RECOVERED: owner pid 99999999 dead or reused (start 'Tue Nov 3 21:28:19 2026 ' vs '')"
+    ]
+  },
+  {
+    "test": "legacy_dead_pid_alone_refused",
+    "pass_": true,
+    "detail": [
+      1,
+      "REFUSED: legacy PID may be a short-lived shell; require expired lease AND --session-dead after session audit"
+    ]
+  },
+  {
+    "test": "legacy_fresh_lease_refused",
+    "pass_": true,
+    "detail": [
+      1,
+      "REFUSED: legacy PID may be a short-lived shell; require expired lease AND --session-dead after session audit"
+    ]
+  },
+  {
+    "test": "legacy_audited_expired_recovers",
+    "pass_": true,
+    "detail": [
+      0,
+      "RECOVERED: owner pid 99999999 dead or reused (start 'Tue Nov 3 21:28:19 2026 ' vs '')"
+    ]
+  },
+  {
+    "test": "foreign_host_refused",
+    "pass_": true,
+    "detail": [
+      1,
+      "REFUSED: other or unknown host; local PID cannot prove owner death"
+    ]
+  },
+  {
+    "test": "token_release_compatibility",
+    "pass_": true,
+    "detail": [
+      0,
+      "RELEASED"
+    ]
+  },
+  {
+    "test": "idempotent_release",
+    "pass_": true,
+    "detail": [
+      0,
+      "NOT_HELD"
+    ]
+  }
+]

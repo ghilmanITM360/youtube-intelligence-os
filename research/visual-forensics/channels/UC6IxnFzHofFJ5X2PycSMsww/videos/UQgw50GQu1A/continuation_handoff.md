@@ -1,0 +1,6 @@
+# Continuation handoff — UQgw50GQu1A
+- Source sha256 5049f27c6312d3dc6f5b08522230ac717cbb038377e9fbaed9d880e008e7899d; path /Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the moon turned into a black hole？ [UQgw50GQu1A].mp4; machine A (Ghilmans-Laptop), xkcd stream lock ~/YIOS-local-audits/xkcd-whatif/.xkcd_writer_lock.
+- Status VISUAL_ANALYSIS_PARTIAL; gates {"source_identity": "PASS", "full_temporal_overview": "PASS", "candidate_shots_verified": "PASS", "meaningful_state_timing": "PARTIAL", "motion_design_review": "PARTIAL", "creative_design_review": "PARTIAL", "visual_script_mapping": "PARTIAL", "production_blueprint": "PARTIAL", "audio_human_listening": "BLOCKED", "final_av_signoff": "BLOCKED"}.
+- Pending: meaningful_state_timing, motion_design_review, creative_design_review, visual_script_mapping, production_blueprint, audio_human_listening, final_av_signoff; unresolved segments ['G0010', 'G0022', 'G0030', 'G0046', 'G0078']; partially viewed activities 17.
+- Tools: scripts/xk_ingest.sh, xk_segment.py, xk_sheets.py, xk_build.py, xk_palette.py, xk_asr_check.py, xk_finalize.py (python -I; cv2 venv ~/YIOS-local-audits/tooling/visual-ct-scan-venv).
+- Next exact operation: listening by a human (intervals = all speech 0–220.937868s); optional full-frame strips for partially viewed activities.

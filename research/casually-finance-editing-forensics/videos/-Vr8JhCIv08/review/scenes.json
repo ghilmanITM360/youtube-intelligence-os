@@ -1,0 +1,201 @@
+[
+ {
+  "id": "S01",
+  "f0": 0,
+  "f1": 117,
+  "label": "US-map character; news card; DEBT papers pop in; red '$40T' pops",
+  "layers": "map character; news card; DEBT papers x6; red $40T; caption",
+  "assets": "CH_USMAP,SS_NEWS_CARD,PR_DEBTDOC,TY_RED",
+  "transition_in": "START",
+  "purpose": "Hook: America crossed $40 trillion [ART_DIRECTION_INFERENCE]",
+  "notes": "",
+  "no_auto_cut": true
+ },
+ {
+  "id": "S02",
+  "f0": 117,
+  "f1": 206,
+  "label": "National-debt-clock banner screenshot; two figures with a gift box appear",
+  "layers": "banner screenshot; figures; caption",
+  "assets": "SS_DEBT_CLOCK,CH_FIG,CH_PEOPLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "More than $117,000 per person [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S03",
+  "f0": 206,
+  "f1": 250,
+  "label": "Gross National Debt article page with a surprised man; red 'doubled'",
+  "layers": "article; man; red word; caption",
+  "assets": "SS_ARTICLE,CH_MAN,TY_RED",
+  "transition_in": "HARD_CUT",
+  "purpose": "Doubled in 10 years [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S04",
+  "f0": 250,
+  "f1": 280,
+  "label": "Same article; 'and quadrupled in the last 20'",
+  "layers": "article; man; caption",
+  "assets": "SS_ARTICLE,CH_MAN",
+  "transition_in": "HARD_CUT",
+  "purpose": "Quadrupled in 20 years [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S05",
+  "f0": 280,
+  "f1": 303,
+  "label": "Debt-clock banner with map character",
+  "layers": "banner; map character; caption",
+  "assets": "SS_DEBT_CLOCK,CH_USMAP",
+  "transition_in": "HARD_CUT",
+  "purpose": "Hit $40 trillion ahead of schedule [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S06",
+  "f0": 303,
+  "f1": 391,
+  "label": "Debt-clock banner + map character reaction",
+  "layers": "banner; map character; caption",
+  "assets": "SS_DEBT_CLOCK,CH_USMAP",
+  "transition_in": "HARD_CUT",
+  "purpose": "Hit $40 trillion ahead of schedule [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S07",
+  "f0": 391,
+  "f1": 582,
+  "label": "CBO baseline projections page with red '2028' and a host figure; map character grows; 'only deadline Washington has ever beaten'",
+  "layers": "CBO document pages (scroll/zoom); red 2028; host; map character; caption",
+  "assets": "SS_CBO_DOC,TY_RED,CH_HOST,CH_USMAP",
+  "transition_in": "HARD_CUT",
+  "purpose": "CBO projected 2028; we got there two years early [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S08",
+  "f0": 582,
+  "f1": 692,
+  "label": "Giant red '$40T' with DEBT papers and a man",
+  "layers": "red $40T (large); DEBT papers; man; caption",
+  "assets": "TY_RED,PR_DEBTDOC,CH_MAN",
+  "transition_in": "HARD_CUT",
+  "purpose": "The $40 trillion number is the least interesting thing [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S09",
+  "f0": 692,
+  "f1": 767,
+  "label": "Map character with DEBT paper and cash: 'a big debt at a low enough price'; bubble 'I can handle this!'",
+  "layers": "map character; DEBT paper; cash; bubble; caption",
+  "assets": "CH_USMAP,PR_DEBTDOC,PR_CASH,OV_BUBBLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "A big debt at a low price is survivable [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S10",
+  "f0": 767,
+  "f1": 789,
+  "label": "Mortgage document, house and a woman: 'like a mortgage'",
+  "layers": "mortgage doc; house; woman; caption",
+  "assets": "PR_MORTGAGE,PR_HOUSE,CH_WOMAN",
+  "transition_in": "HARD_CUT",
+  "purpose": "Analogy: mortgage [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S11",
+  "f0": 789,
+  "f1": 891,
+  "label": "Host beside a DEBT document (glasses appear); 'what makes debt dangerous'",
+  "layers": "host; DEBT doc; caption",
+  "assets": "CH_HOST,PR_DEBTDOC",
+  "transition_in": "HARD_CUT",
+  "purpose": "Not how much you owe, but what it costs [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S12",
+  "f0": 891,
+  "f1": 971,
+  "label": "Host, money bags and a flattening map: 'it's what it costs to carry'",
+  "layers": "host; bags; map; caption",
+  "assets": "CH_HOST,PR_BAGS,CH_USMAP",
+  "transition_in": "HARD_CUT",
+  "purpose": "Cost to carry [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S13",
+  "f0": 971,
+  "f1": 1003,
+  "label": "US interest-expense-per-day chart appearing",
+  "layers": "chart; caption",
+  "assets": "SS_INTEREST_CHART",
+  "transition_in": "HARD_CUT",
+  "purpose": "'And right now...' [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S14",
+  "f0": 1003,
+  "f1": 1163,
+  "label": "Interest chart then map character 'A DAY?!?'; second chart scene begins ('Over the next decade')",
+  "layers": "chart; map character; bubble; caption",
+  "assets": "SS_INTEREST_CHART,CH_USMAP,OV_BUBBLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "Three billion dollars a day [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S15",
+  "f0": 1163,
+  "f1": 1254,
+  "label": "CBO interest-cost chart with money bags",
+  "layers": "CBO chart; logo; bags; caption",
+  "assets": "SS_CBO_CHART,LOGO_CBO,PR_BAGS",
+  "transition_in": "HARD_CUT",
+  "purpose": "More than $16 trillion on interest [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S16",
+  "f0": 1254,
+  "f1": 1323,
+  "label": "'That's money that buys...' bill; crossed-out roads, schools and research",
+  "layers": "bill; red X on road/school/research props; caption",
+  "assets": "PR_CASH,PR_ROAD,PR_SCHOOL,OV_REDX",
+  "transition_in": "HARD_CUT",
+  "purpose": "Interest buys nothing [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S17",
+  "f0": 1323,
+  "f1": 1455,
+  "label": "'Back then / And now': map characters split by a red line",
+  "layers": "two map characters; DEBT documents; red divider; bubbles; caption",
+  "assets": "CH_USMAP,PR_DEBTDOC,OV_DIVIDER,OV_BUBBLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "Rental fee on decisions already made [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S18",
+  "f0": 1455,
+  "f1": 1491,
+  "label": "FRED interest-to-GDP chart with host pointing; red circle on 2025 value",
+  "layers": "chart; red circle; host; caption (end)",
+  "assets": "SS_FRED_CHART,OV_REDCIRCLE,CH_HOST",
+  "transition_in": "HARD_CUT",
+  "purpose": "Interest eats 3.2% of GDP, seen only once before [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ }
+]

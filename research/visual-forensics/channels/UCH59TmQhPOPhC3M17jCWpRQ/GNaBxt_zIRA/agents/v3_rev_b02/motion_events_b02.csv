@@ -1,0 +1,24 @@
+state,strip_path,first_frame,last_frame,event_type,description,evidence_label
+S016,frames/motion_strips/b02/S016_peak2473.png,2470,2471,NO_VISIBLE_CHANGE,Scene sharp and nearly unchanged between f2470 and f2471.,OBSERVED
+S016,frames/motion_strips/b02/S016_peak2473.png,2472,2475,FADE,"Focus blur and corner darkening ramp up across f2472-f2475 (f2472 slightly soft, f2473 softer, f2474 strongly blurred). Measured peak at f2473 mean diff 12.99.",OBSERVED
+S016,frames/motion_strips/b02/S016_peak2473.png,2475,2475,TEXT_REVEAL,"Title text ""step 1 : attack first!"" first present at f2475, fully formed in that tile; no partial letters seen in sampled frames.",OBSERVED
+S016,frames/motion_strips/b02/S016_peak2473.png,2476,2477,NO_VISIBLE_CHANGE,Blurred scene and title unchanged f2475-f2477.,OBSERVED
+S016,frames/motion_strips/b02/S016_peak2510.png,2507,2509,NO_VISIBLE_CHANGE,"Title at full size over blurred scene, static.",OBSERVED
+S016,frames/motion_strips/b02/S016_peak2510.png,2510,2510,OTHER,Title narrows/shrinks to a small squeezed form at f2510 while scene still blurred (scale-down of text).,OBSERVED
+S016,frames/motion_strips/b02/S016_peak2510.png,2511,2511,ELEMENT_EXIT,Title gone and background fully sharp at f2511: text exit and blur release occur in one frame step (measured peak f2510 diff 16.17).,OBSERVED
+S016,frames/motion_strips/b02/S016_peak2510.png,2512,2514,NO_VISIBLE_CHANGE,"Sharp sloth back view static, small slight pose shifts at tile scale only.",OBSERVED
+S019,frames/motion_strips/b02/S019_peak3017.png,3014,3021,NO_VISIBLE_CHANGE,Claw crop looks the same across all 8 tiles; measured diff 3.23 is low and likely sub-pixel drift or compression; no change resolvable at 480x270.,OBSERVED (no change); MEASURED 3.2287
+S020,frames/motion_strips/b02/S020_peak3121.png,3118,3121,NO_VISIBLE_CHANGE,Sloth stands upright; man static; only tiny head/arm shifts at tile scale.,OBSERVED
+S020,frames/motion_strips/b02/S020_peak3121.png,3122,3125,CHARACTER_MOTION,"Sloth abruptly in forward-lean pose with head lowered and forearm sweeping (large pose change between f3121 and f3122, then arm moves across f3123-f3125). Measured peak f3121 diff 10.85. Intermediate drawing not seen.",OBSERVED
+S021,frames/motion_strips/b02/S021_peak3253.png,3250,3257,CHARACTER_MOTION,Sloth body bobs and forelimbs/claws cycle position across tiles; head stays left.,OBSERVED
+S021,frames/motion_strips/b02/S021_peak3253.png,3250,3257,OTHER,"Blurred background trunks and canopies shift horizontally/change layout across tiles, consistent with scrolling background (INFERRED, loop vs pan unknown).",OBSERVED (shift); INFERRED (mechanism)
+S022,frames/motion_strips/b02/S022_peak3318.png,3315,3320,CAMERA_SCALE,"Wide classroom view becomes a tighter view on the man across f3315-f3320 (man grows, board shrinks off-screen); settled by ~f3320. Measured peak f3318 diff 21.14.",OBSERVED
+S022,frames/motion_strips/b02/S022_peak3318.png,3315,3320,CAMERA_PAN,"Frame content shifts leftward (chalk text exits left, wall poster and bowl enter at right) during the same f3315-f3320 span.",OBSERVED
+S022,frames/motion_strips/b02/S022_peak3318.png,3321,3322,NO_VISIBLE_CHANGE,"Zoomed framing holds, only tiny shifts.",OBSERVED
+S023,frames/motion_strips/b02/S023_peak3517.png,3514,3515,CHARACTER_MOTION,Sloth eye appears drawn closed/lidded in f3514-f3515 (low resolution).,OBSERVED (low-res)
+S023,frames/motion_strips/b02/S023_peak3517.png,3516,3521,CHARACTER_MOTION,Eye open from f3516; body and forelimbs continue bobbing.,OBSERVED
+S023,frames/motion_strips/b02/S023_peak3517.png,3514,3521,OTHER,"Blurred background trees shift/rearrange across tiles (scrolling, mechanism unknown). Measured peak f3517 diff 13.00.",OBSERVED; MEASURED
+S025,frames/motion_strips/b02/S025_peak3689.png,3686,3693,CHARACTER_MOTION,Top-down sloth and tiny man both translate rightward by roughly 70px native across f3686-f3693; man trails/precedes sloth at nearly constant spacing.,OBSERVED
+S025,frames/motion_strips/b02/S025_peak3689.png,3687,3693,OTHER,Tiny red dash-like mark visible adjacent to the man/sloth claws from f3687; identity unavailable at this scale. Measured diff only 1.19.,OBSERVED (mark); identity UNAVAILABLE
+S026,frames/motion_strips/b02/S026_peak3786.png,3783,3784,CHARACTER_MOTION,Sloth eye drawn closed/lidded in f3783-f3784; man left arm low.,OBSERVED (low-res)
+S026,frames/motion_strips/b02/S026_peak3786.png,3785,3790,CHARACTER_MOTION,"Sloth eye open; man arms swing: left arm extends left (f3786-f3788), then arms reposition (f3789-f3790). Sloth head essentially fixed. Measured peak f3786 diff 15.66.",OBSERVED; MEASURED

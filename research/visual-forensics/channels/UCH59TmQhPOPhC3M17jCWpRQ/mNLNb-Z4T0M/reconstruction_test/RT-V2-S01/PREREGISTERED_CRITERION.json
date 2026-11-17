@@ -1,0 +1,15 @@
+{
+ "test": "RT-V2-S01",
+ "registered_before_render": true,
+ "registered_utc": "2026-11-04T19:0xZ",
+ "criteria": [
+  "C1 format exact; frames 206-210",
+  "C2 palette at mid frame: >=30% within L1<=50 of #68c8d8/#68b8d8; >=8% within L1<=60 of #789838; >=8% within L1<=50 of #c8f8f8/#d8f8f8",
+  "C3 no camera: |sum dscale|<0.01 and |sum dx|<15 px over whole scene",
+  "C4 >=3 distinct label onsets: local-change spikes (residual_frac12 peak) separated by >=20 frames, all within f40-130",
+  "C5 a sustained local-motion run >=40 frames in f130-207 (figure drift)",
+  "C6 visual: hand-drawn style, white handwritten labels with arrows, perspective drift toward horizon, original content \u2014 each PASS/FAIL"
+ ],
+ "measurement": "deterministic C1-C5 by scripts/evaluate_style_rt.py on rendered pixels; C6 visual by orchestrator on render frames only; overall PASS only if all C1-C6 PASS",
+ "scope": "style + full-scene (characters, background, typography, layout, motion) for one bounded scene; font/software UNKNOWN; sound NOT tested"
+}

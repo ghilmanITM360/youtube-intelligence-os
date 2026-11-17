@@ -1,0 +1,10 @@
+# One YIOS repository on two Macs
+
+Use GitHub as the transfer point for validated, eligible research. Keep original MP4s, frames, audio and editing projects in durable private media storage with a shared manifest of YouTube ID, byte count, SHA-256, storage locator, restore test and rights/access note. A local path on one Mac is not a recovery plan for the other.
+
+1. **Before switching:** identify the active branch and sole writer, finish one verified work unit, validate exact source and output hashes, and preserve untracked files and stashes. Use `GIT_NO_LAZY_FETCH=1 GIT_OPTIONAL_LOCKS=0` for Git inspection. Commit only intended files and push normally; verify the remote branch and PR head equal the pushed commit.
+2. **On the receiving Mac:** confirm its local writers are idle or explicitly released, disk has at least 5 GB free, and working tree/stashes/untracked evidence are protected. Check live remote and PR heads, then fetch the authorized branch. Do not overwrite local unpublished work. Confirm expected commit, validation receipts and source-media hash availability before continuing.
+3. **During work:** maintain one writer per shared branch. Keep Finance audit writes on its canonical branch and visual forensics on its own branch. Validate each Finance micro-batch before commit and remote verification. Handoffs record local/remote/PR SHA, accepted count and next queue ID, source evidence paths/hashes, pending checks and writer release.
+4. **When switching back:** repeat the same gates in reverse. Draft PR content is not `main` until owner-authorized merge. Never infer another Mac's unpushed work from a remote ref.
+
+Current known gates (2026-10-28): PR #21, PR #36 and PR #44 are separate draft research branches. Machine B is named Finance's sole writer in the latest PR #36 handoff; a claimed release must be confirmed against that branch's live owner handoff and Machine B worktree before Machine A writes. The Machine A forensic branch and Video 003 have protected writers. No branch switch grants ownership of those streams.

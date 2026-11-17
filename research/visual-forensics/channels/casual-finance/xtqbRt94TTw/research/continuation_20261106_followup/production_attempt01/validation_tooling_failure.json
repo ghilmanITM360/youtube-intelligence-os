@@ -1,0 +1,6 @@
+{
+  "stage": "receipt serialization after all12 checks evaluatedtrue",
+  "error": "TypeError: NumPy bool is not JSON serializable",
+  "effect": "No production receipt written; renders and encoded videos retained, no visual criterion changed",
+  "correction": "Convert every assertion result to Pythonbool; validate preservedoutputs without rerender"
+}

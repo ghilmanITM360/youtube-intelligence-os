@@ -576,7 +576,7 @@ def build_model(root: Path) -> dict:
     }
 
 
-def _dataset_records(root: Path) -> list[dict]:
+def _dataset_records(root: Path, *, include_research: bool = False) -> list[dict]:
     records = []
     paths = sorted(
         path for path in (root / "data/manifests").glob("DS-*.md")
@@ -585,6 +585,11 @@ def _dataset_records(root: Path) -> list[dict]:
     for path in paths:
         dataset_id = path.stem
         text = path.read_text(encoding="utf-8")
+        scopes = re.findall(r"^- Registry Scope: (.+)$", text, re.MULTILINE)
+        if len(scopes) > 1 or any(scope not in {"CANONICAL", "RESEARCH_ONLY"} for scope in scopes):
+            raise ValueError(f"Invalid Registry Scope in {path}")
+        if scopes == ["RESEARCH_ONLY"] and not include_research:
+            continue
         heading = next((line.removeprefix("# ").strip() for line in text.splitlines() if line.startswith("# ")), dataset_id)
         records.append({"dataset_id": dataset_id, "dataset_name": heading, "manifest_path": path.relative_to(root).as_posix(), "evidence_scope": None, "limitations": None})
     return records
@@ -798,6 +803,7 @@ def _standard_package_records(root: Path, model: dict) -> tuple[list[dict], list
 def _artifact_records(root: Path, model: dict) -> list[dict]:
     records = []
     registered_datasets = {row["dataset_id"] for row in _dataset_records(root)}
+    research_datasets = {row["dataset_id"] for row in _dataset_records(root, include_research=True)} - registered_datasets
     channel_by_package = {Path(row["workbook_path"]).parent.as_posix(): row["canonical_channel_id"] for row in model["channels"] if row["workbook_path"]}
     for path in sorted((root / "data/extracted/channel-data").rglob("*")):
         if not path.is_file():
@@ -805,6 +811,8 @@ def _artifact_records(root: Path, model: dict) -> list[dict]:
         rel = path.relative_to(root).as_posix()
         match = re.search(r"(DS-\d{6})", rel)
         dataset_id = match.group(1) if match else None
+        if dataset_id in research_datasets:
+            continue
         channel_id = next((identifier for package, identifier in channel_by_package.items() if rel.startswith(package + "/")), None)
         suffix = path.suffix.lower()
         if suffix == ".xlsx":
@@ -824,6 +832,8 @@ def _artifact_records(root: Path, model: dict) -> list[dict]:
         rel = path.relative_to(root).as_posix()
         match = re.search(r"(DS-\d{6})", rel)
         dataset_id = match.group(1) if match else None
+        if dataset_id in research_datasets:
+            continue
         records.append({
             "dataset_id": dataset_id if dataset_id in registered_datasets else None,
             "canonical_channel_id": None,
@@ -836,7 +846,7 @@ def _artifact_records(root: Path, model: dict) -> list[dict]:
     for path in sorted((root / "data/manifests").glob("DS-0000*")):
         if path.is_file():
             match = re.match(r"(DS-\d{6})", path.name)
-            if match:
+            if match and match.group(1) not in research_datasets:
                 records.append({"dataset_id": match.group(1), "canonical_channel_id": None, "artifact_type": "MANIFEST", "repository_path": path.relative_to(root).as_posix(), "sha256": sha256_file(path), "availability_status": "AVAILABLE", "unavailable_reason": None})
     return records
 

@@ -1,0 +1,348 @@
+{
+ "video_id": "-CbNGP9H4xw",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "6f9702db67a5d1050a13d8b429a246ebc916e4a301ac704392d5604459cd07cd",
+ "original_packets": [
+  "NICK_001.json"
+ ],
+ "transcript_chars_read": 18792,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 33,
+    "text": "Kevin got the raise on a Thursday"
+   },
+   "judgment": "MET",
+   "rationale": "Opens inside a concrete character story (SUV, apartment, watch, unchanged balance) and snaps back with \"The upgrades you can see are almost always the ones that keep you broke\"; context lean, stop beat and contrarian turn are all present in the first ~150 words.",
+   "uncertainty": "Judged from text only; delivery, pacing and visuals unavailable."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 863,
+    "end_char": 933,
+    "text": "If you've ever gotten a raise\nand felt poor a year later, stick around"
+   },
+   "judgment": "MET",
+   "rationale": "Intro states the audience situation (raise that vanished), names the promise (the right 10 upgrades) and plants a loop to resolve later; clear and emotionally framed. Over-explains slightly by stacking a disclaimer before the list.",
+   "uncertainty": "First ~30 seconds approximated by text; no audio or timing."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Once You Get Money, Upgrade These 10 Things Immediately"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Opening matches the title promise (upgrade after getting money), but the opening argues AGAINST visible upgrades, while the thumbnail promises physical products; expectation match is title-level only.",
+   "uncertainty": "Expectation match inferred from text; retention graph is not available."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Once You Get Money, Upgrade These 10 Things Immediately"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Immediately\" overpromises for several items: building a 3-6 month emergency fund, improving a credit score (\"let time do the rest\"), disability underwriting and HSA eligibility cannot be done immediately. Items such as the 401k auto-escalation and the savings transfer are quick settings changes, and \"immediately\" may mean \"as soon as you get money\", so the judgment is PARTLY_MET.",
+   "uncertainty": "Title wording judged against delivered content only."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17123,
+    "end_char": 17141,
+    "text": "So, that's the 10."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Delivers ten numbered upgrades. However the thumbnail shows six physical objects (mattress, chair, shoes, laptop, cookware, pillow) while the script covers mostly non-objects (savings rate/interest, 401k match, insurance, HSA, credit score); the speaker's own summary is \"Almost none of them are things\". Only mattress, chair, shoes and a kitchen knife appear in the script; laptop, cookware and pillow are never named, and the only related line warns against buying fast-moving tech \"for life\". The title's word \"Things\" carries the same mismatch.",
+   "uncertainty": "Thumbnail-versus-script mismatch is observed; viewer reaction to it is unmeasured."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12667,
+    "end_char": 12724,
+    "text": "remember that thing I told you to\nhold on to at the start"
+   },
+   "judgment": "MET",
+   "rationale": "A real loop: \"the upgrade that would have saved him the most money is the one that never would have cost him a single dollar\" is opened early and paid off at upgrade eight (credit score) with explicit callback.",
+   "uncertainty": "Retention effect inferred from structure only; not evaluable from stored text alone."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15052,
+    "end_char": 15148,
+    "text": "But, and this is\nthe part the buy quality crowd never\ntells you, it does not apply to\neverything"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Spine is one causal thesis (visibility inversely tracks value) with real BUT turns (boots theory then its limits). Most of the ten items are joined by \"which brings me to / upgrade number N\", i.e. AND-THEN sequencing, so progression between items is list-driven rather than causal.",
+   "uncertainty": "Judgment on the transcript as stored; no edit-level data."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17630,
+    "end_char": 17663,
+    "text": "Think back to Kevin\nfor a second."
+   },
+   "judgment": "MET",
+   "rationale": "Closes by returning to the Kevin opening and restating the thesis; echo is explicit and tightens the message.",
+   "uncertainty": "Echo presence is descriptive; its effect on viewers is unknown."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1801,
+    "end_char": 1919,
+    "text": "Psychologists\ncall this hedonic adaptation, which is a\nfancy way of saying you get used to good\nthings shockingly fast"
+   },
+   "judgment": "MET",
+   "rationale": "Jargon (hedonic adaptation, Diderot effect, HSA triple tax advantage) is defined in plain language the first time it appears.",
+   "uncertainty": "Reading-level judgment from text only. Second pass: \"term life\" versus \"whole life\" is never defined, so MET is slightly generous."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1387,
+    "end_char": 1468,
+    "text": "The more an upgrade can be seen by other\npeople, the worse it usually is for you."
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame against the \"treat yourself after a raise\" default; \"usually\" hedges an otherwise broad claim that is not evidenced by the video.",
+   "uncertainty": "The rule itself is an unmeasured opinion; frame is credible but not proven."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3913,
+    "end_char": 3961,
+    "text": "In the big bank, that\nearns you about $76 a year"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Specific but wrong by the script's own inputs: one third of 1% on $20,000 is $66.67, not $76; specificity must not earn credit when the figure is off. The 4% high-yield result ($800) and the \"more than $700\" gap are consistent.",
+   "uncertainty": "Rate is rounded in speech (\"a third of 1%\"); small tolerance. 4% rate level itself not re-verified here."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12214,
+    "end_char": 12236,
+    "text": "that's\nroughly $56,000"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The $150 per month gap over a 30-year loan is $54,000; \"roughly $56,000\" is close but not reconciled, and the mortgage-score gap is not sourced.",
+   "uncertainty": "Credit-score payment gap is recall; not re-verified against lender tables."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14119,
+    "end_char": 14156,
+    "text": "So, I put together a school community"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Mid-list promotion of a faceless-channel community is bridged by an \"income side\" aside but interrupts item eight/nine pacing and is off-thesis for a spending-upgrades video; descriptive placement judgment only.",
+   "uncertainty": "No evidence on how viewers responded."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 960,
+    "end_char": 1001,
+    "text": "today we're\nupgrading the right 10 things"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Core words (money, upgrade, 10) appear early in the title and the opening; no search-volume data is stored.",
+   "uncertainty": "No search demand data in packets."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timed transcript or video evidence."
+  }
+ ],
+ "title": "Once You Get Money, Upgrade These 10 Things Immediately",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no search or trends demand series stored; topic (post-raise spending) is a broad evergreen personal-finance angle.",
+  "2_differentiated_angle": "Invisible-versus-visible upgrade inversion is a distinct frame over a generic \"10 money tips\" list.",
+  "3_title": "Clear, promise-led, one loop (what are the 10?); \"Immediately\" overpromises.",
+  "4_thumbnail": "Large legible \"10 SMART UPGRADES\", six objects (mattress, chair, shoes, laptop, cookware, pillow), cartoon character pointing; readable at mobile size; shows objects while the script argues for non-objects; character is a recognisable cartoon likeness resembling a well-known cartoon father; rights not judged.",
+  "5_opening": "Story-first and strong; expectation match mixed (see FR-INTRO-02).",
+  "6_loops": "One explicit loop (the free upgrade) paid off at #8; secondary loops weak.",
+  "7_spine": "One thesis with list structure; progression between items mostly sequential.",
+  "8_repetition_clarity": "Thesis restated at the 2/3 point and in closing; some filler between items.",
+  "9_emotion_credibility": "Warm, anecdotal; several statistics are asserted without sources on screen or in text.",
+  "10_ending_cta": "Closes with echo and a \"pick one this week\" action; an intro \"hit subscribe\" ask, one mid-video community CTA and two disclaimers.",
+  "11_metadata_seo": "Only title and first words judged; description not assessed.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered for this video."
+ },
+ "financial_checks": [
+  {
+   "claim": "$1,000 mattress over 10 years is about 27 cents per night",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1,000 / 3,650 nights = $0.274"
+  },
+  {
+   "claim": "$20,000 at a third of 1% earns $76 per year",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Inconsistent with the stated rate: one third of 1% on $20,000 is $66.67; $76 implies about 0.38%. The speaker hedged with \"like a third of 1%\", so the figure is loose rather than a pure error."
+  },
+  {
+   "claim": "$20,000 at about 4% earns over $800",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$800 exactly at 4%; \"over\" is slight"
+  },
+  {
+   "claim": "$1,300 a year missed match grows to nearly $43,000 over 20 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Holds only near 5% growth ($42,986); $53,294 at 7%"
+  },
+  {
+   "claim": "$150 a month over 30 years is roughly $56,000",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$54,000 (mild mismatch)"
+  },
+  {
+   "claim": "Boots theory: $10 boots every season costs $100 over 10 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "As spoken (\"$10 boots that fall apart every season ... over 10 years he spends $100\") the figure is inconsistent: a season is about three months (about 40 pairs, $400); $100 implies one pair per year. \"Season\" may be loose speech for \"year\"."
+  },
+  {
+   "claim": "Average new car payment about $770/month; one in five over $1,000; 60% depreciation over 5 years; 20% on driving off",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified"
+  },
+  {
+   "claim": "RAND sleep under six hours 13% higher mortality; one in four 20-year-olds disabled; half of households without coverage; $50 billion musculoskeletal cost; retiree healthcare over $300,000",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified; sources not shown in the video"
+  }
+ ],
+ "strengths": [
+  "Story-first hook with a snapback and a single clear thesis",
+  "A real open loop with explicit payoff",
+  "Plain-language definitions of jargon",
+  "Closing echo to the opening character"
+ ],
+ "weaknesses": [
+  "Thumbnail promises products; script argues for non-products and warns against buying a laptop for life",
+  "\"Immediately\" is not deliverable for several items",
+  "Mid-list community promotion interrupts the list and the thesis"
+ ],
+ "contradictions": [
+  "Savings interest example: $76 versus $66.67 from the stated rate",
+  "Boots example internal arithmetic",
+  "Thumbnail laptop versus script warning on fast-moving tech"
+ ],
+ "improvement_opportunities": [
+  "Make thumbnail objects match the strongest invisible items (HYSA, match, HSA) or show the visible-versus-invisible contrast",
+  "Consider a title that does not promise \"Immediately\" for the slow items (opinion, not evidence of effect)",
+  "Correct the savings figure on screen and cite the sources for the insurance and sleep statistics",
+  "Move the community mention to the end"
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Source citations shown on screen"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "1.60821",
+  "age_days": "74.0965",
+  "views_likes_comments_snapshot": {
+   "views": 9290,
+   "likes": 319,
+   "comments": 34,
+   "published_at": "2026-06-28"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "1.59897",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content features above are observations, not causes of the measured outcome; one video cannot show that thumbnail mismatch or structure drove views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "confirmed": [
+    "$800 at 4%",
+    "401k $42,986 at 5% / $53,294 at 7%",
+    "$150/month over 30 years = $54,000 vs \"$56,000\"",
+    "mattress $0.274/night",
+    "open loop opened and paid at upgrade #8 (witnesses re-verified)",
+    "12 witness ranges returned exact text"
+   ],
+   "corrections_applied": [
+    "FR-SCR-03: removed unsupported claim that the script warns against \"forever laptops\"; laptop, cookware and pillow are not in the script; added title \"Things\" mismatch",
+    "FR-TITLE-03: removed 401k auto-escalation as an example of a non-immediate item",
+    "$76: reworded to inconsistent-with-stated-rate (speaker hedged)",
+    "boots: reworded as inconsistent-as-spoken with a \"season may mean year\" caveat",
+    "dimension 10: added the intro subscribe CTA",
+    "FR-16C-13: noted undefined term vs whole life",
+    "thumbnail likeness wording clarified"
+   ],
+   "original_version": "commit 0df91c58"
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "reviewer": "QA-B002-11",
+ "batch": "B002-11",
+ "rows": [
+  {
+   "seq": 3,
+   "thumbnail_id": "THB-e5d31edf9267163243f46dbc1dfc0a3b57801c2726f734d5260ae5884cc7a3e8",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: THE / 15/65/20 / RULE are clearly legible on sheet_160; safe and cash are small but recognisable.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The man's head fills about a third of the frame height on the left;",
+     "corrected_value": "The man's head fills about half of the frame height on the left; the heavy headline takes the right and upper-centre; the safe sits low-centre. The arrow runs from the headline down to the safe, forming a diagonal read from words to object, and white space keeps the three elements separate.",
+     "reason": "Head (hair top to chin) spans roughly y=70 to y=445 of 720, about 52 percent of frame height, not a third.",
+     "evidence": "Native 03.jpg measured visually."
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "thumbnail_id": "THB-dcf060e01b8cebdf72a7587afc171137a4b243d388b16b1b93de3b9d7e0af6d6",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: yellow headline, sweating stick figure and red question mark survive on sheet_160; map detail merges but the map shape is still readable.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 16,
+   "thumbnail_id": "THB-be2c86eaf471dd0b5c4634dc05f38e42eebfe14d37b95dbddb36c9efc7fbd003",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: the four headline lines and portrait survive on sheet_160; the two small logo lines are unreadable, as the audit states.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "credibility_score",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "8",
+     "corrected_value": 5,
+     "reason": "8/10 needs a visible earned reason, but the row's own medical_flags is CREDENTIAL_AMBIGUITY (no printed name or credential); a template-style headshot card with a coat and stethoscope is an ordinary plausibility cue. Also the only 8 in a batch otherwise at 5. score_100 would become 57.",
+     "evidence": "Native 16.jpg: no name or credential text beside the portrait; only the logo caption."
+    }
+   ]
+  },
+  {
+   "seq": 17,
+   "thumbnail_id": "THB-8717b1543cc983b581a570d0b0e58eaa0c781d502f932355af39f118a2ef7e04",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: the yellow headline, man with bowl and the animal silhouettes remain readable on sheet_160; cups and fence detail merge, as stated.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 22,
+   "thumbnail_id": "THB-c45006324a9ed49c76beae97e40ed703befd72e70e1733576f82f60bd57cb50e",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: lowercase yellow headline and the large drooling face are legible on sheet_160; skewers read as shapes.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 23,
+   "thumbnail_id": "THB-fc5a67b3bc76388778d653ee20ba405e45b6c22349ebcca5deb42dfea8ac1490",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: three black words and the dollar sack plus stairs are clear on sheet_160; the red arrow is small but visible.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 6,
+  "material": 0,
+  "minor_factual": 1,
+  "classification": 0,
+  "subjective": 1,
+  "style_only": 0
+ }
+}

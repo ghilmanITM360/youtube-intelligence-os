@@ -1,0 +1,26 @@
+{
+  "name": "finance-short-01-animation",
+  "private": true,
+  "type": "module",
+  "description": "Finance Short 01 keyframe animation (Remotion). Assets come from ../experiment/PHASE_2_ASSETS via scripts/export_bundle.py.",
+  "scripts": {
+    "bundle": "python3 scripts/export_bundle.py",
+    "studio": "remotion studio src/index.ts",
+    "still": "remotion still src/index.ts",
+    "preview": "remotion render src/index.ts FinanceShort01 out/preview_PROVISIONAL_muted.mp4 --muted",
+    "test": "node scripts/test_rig.ts && node scripts/test_timeline.ts && node scripts/test_contacts.ts && node scripts/test_captions.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.530",
+    "@remotion/cli": "4.0.530",
+    "@remotion/renderer": "4.0.530",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.530"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}

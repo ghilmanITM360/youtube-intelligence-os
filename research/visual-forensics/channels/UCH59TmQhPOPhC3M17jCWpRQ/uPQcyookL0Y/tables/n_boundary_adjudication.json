@@ -1,0 +1,16 @@
+{
+  "correction": "N01",
+  "state": "W058",
+  "old_kind": "STABLE_OR_MOTION_STATE",
+  "new_kind": "TRANSITION_STATE",
+  "decision": "Retain f9905\u20139906 interval and ID; classify as two-frame zoom-through transition, not independent stable scene/shot. Eight boundary exceptions now reviewed; no retiming necessary beyond existing v5 corrections.",
+  "evidence": [
+    "frames/checkpoint_M/W058_boundary/f9904.png",
+    "frames/checkpoint_M/W058_boundary/f9905.png",
+    "frames/checkpoint_M/W058_boundary/f9906.png",
+    "frames/checkpoint_M/W058_boundary/f9907.png"
+  ],
+  "rule": "visual-ct-scan refs03,13: shots differ from states; retain explicit transition coverage",
+  "uncertainty": "Exact compositing operation/software unknown; inferred zoom-through geometry from consecutive frames",
+  "dependencies": "All89 IDs and bounds identical; prior frame/narration mappings valid unchanged. Earlier versions immutable; W047/W086/W085b unchanged."
+}

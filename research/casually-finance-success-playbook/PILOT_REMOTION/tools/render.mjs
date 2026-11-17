@@ -1,0 +1,21 @@
+import {bundle} from '@remotion/bundler';
+import {selectComposition,renderMedia,renderStill} from '@remotion/renderer';
+import fs from 'node:fs';
+import path from 'node:path';
+import {performance} from 'node:perf_hooks';
+const started=performance.now();
+const browser=process.env.PILOT_BROWSER||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const serveUrl=await bundle({entryPoint:path.resolve('src/index.ts'),outDir:path.resolve('.bundle')});
+const browserLogs=[];
+const opts={serveUrl,browserExecutable:browser,onBrowserLog:log=>{browserLogs.push({type:log.type,text:log.text,...(log.type==='error'?{stackTrace:log.stackTrace.slice(0,3)}:{})});}};
+const composition=await selectComposition({...opts,id:'FixedMortgage'});
+const samples=[0,45,190,355,551,712,903,1023,1206];
+fs.mkdirSync('qa_frames',{recursive:true});
+for(const frame of samples)await renderStill({...opts,composition,frame,output:`qa_frames/frame-${frame}.png`});
+for(const id of ['CharacterBoard','AssetBoard'])await renderStill({...opts,composition:await selectComposition({...opts,id}),output:`evidence/${id}.png`});
+if(process.argv.includes('--stills')){fs.writeFileSync('evidence/browser-log.json',JSON.stringify(browserLogs,null,2));console.log('Sample frames and boards rendered');process.exit(0);}
+let last=-1;
+await renderMedia({...opts,composition,codec:'h264',crf:18,pixelFormat:'yuv420p',audioCodec:'aac',audioBitrate:'192k',outputLocation:'render/fixed-mortgage-pilot.mp4',concurrency:4,onProgress:({progress})=>{const p=Math.floor(progress*10);if(p!==last){last=p;console.log(`render ${p*10}%`);}}});
+fs.writeFileSync('evidence/render-timing.json',JSON.stringify({wall_seconds:(performance.now()-started)/1000,render_settings:{width:1920,height:1080,fps:30,frames:1260,codec:'h264',crf:18,audio:'aac 192k',concurrency:4},remotion:'4.0.535',browser,includes:'bundle, 9 pilot stills, 2 asset boards, final render'},null,2));
+fs.writeFileSync('evidence/browser-log.json',JSON.stringify(browserLogs,null,2));
+console.log('Rendered original 42-second pilot');

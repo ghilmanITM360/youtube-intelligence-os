@@ -1,0 +1,194 @@
+{
+  "status": "VISUAL_ANALYSIS_PARTIAL_PARTITION_V4_EVENTS_V6_CHECKPOINT_R",
+  "CT_SCAN_COMPLETE": false,
+  "video_id": "xtqbRt94TTw",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "first_pass_shards_structurally_validated": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "first_pass_pending": [],
+  "frames_measured_and_independently_counted": 19862,
+  "gates": {
+    "source_hash_and_stream_identity": "PASS_USER_SUPPLIED_ID_HASH_MATCH",
+    "all_frame_numeric_timeline": "PASS",
+    "all_gap_ownership": "PASS_WITH_SAMPLED_INTERIORS",
+    "full_semantic_event_timing": "PARTIAL;NATIVE_SELECTION_APPEARANCE_WRAP_CONTRACTION_VERIFIED;CHART_MACRO_UNINTEGRATED_GLOBAL_ONSET_FLOOR_OPEN",
+    "independent_gap_review": "PASS_BOUNDED_123_GAPS",
+    "merge_split_adjudication": "PASS146_OF146_WITH_EXPLICIT_DISTINCT_AND_NONCONTIGUOUS_RULINGS",
+    "narration_visual_semantics": "199SAMPLED_ROWS_REVIEWED;0OUTSIDE_INTERVAL_SAMPLES;PARTIAL21UNDETERMINED_7POTENTIAL_MISMATCH_ASR_ONLY",
+    "production_state_prompts": "DRAFT447_v2;S0000representative_fixed;originality_motion_static_anchor_validation_pending",
+    "bounded_original_render_test": "PASS_SCHEDULE_ANCHORS_AND6INDEPENDENT_IMAGE_CHECKPOINTS;notwholevideo",
+    "actual_source_listening": "BLOCKED_NO_QUALIFIED_AUDIO_PERCEPTION",
+    "full_av_signoff": "BLOCKED",
+    "full_required_motion_field_schema": "FOUR_CURATED_SUPPLEMENTS_PRESENT;RAW_FIRSTPASS4NULLS_PRESERVED;NOT_GLOBAL_NATIVE_MOTION_PASS"
+  },
+  "integration": {
+    "frames": 19862,
+    "numerical_missing": 0,
+    "numerical_overlaps": 0,
+    "gap_items_reviewed": 123,
+    "gap_frames_reviewed": 3116,
+    "unresolved_gap_frames": 0,
+    "unresolved_brackets": [],
+    "targeted_items_completed": 146,
+    "targeted_items_pending": 0,
+    "merge_ruling_counts": {
+      "MERGE_CONTIGUOUS": 142,
+      "KEEP_DISTINCT": 3,
+      "SAME_LAYOUT_NONCONTIGUOUS": 1
+    },
+    "merges_applied": 142,
+    "split_ruling_counts": {
+      "NOT_REQUESTED": 143,
+      "SPLIT": 3
+    },
+    "splits_pending_exact_timing": [],
+    "composition_intervals": 329,
+    "partition_intervals": 625,
+    "semantic_full_video_certification": false,
+    "actual_listening_seconds": 0,
+    "status": "VISUAL_ANALYSIS_PARTIAL_NOT_CT_COMPLETE"
+  },
+  "coverage_ref": "research/session_20261104/coverage_checkpoint_R.json",
+  "known_issues": "research/session_20261104/KNOWN_ISSUES_LEDGER_v7.md",
+  "event_ledger": "research/integrated_v4/visual_event_ledger_v6.csv",
+  "asr": {
+    "segments": 199,
+    "segment_union_seconds": 820.52,
+    "actual_listening_seconds": 0,
+    "label": "ASR_UNCERTIFIED_NOT_LISTENING"
+  },
+  "active_task": "Chartmacroreview separate;inspectactual live task/output before resuming",
+  "next_task": "Validate actual chartmacro finished/partial output andpendingpaths; thennative exactboundaryframes,remainingsemantic/productionQA andqualifiedsourcehearing",
+  "narration_review": {
+    "ASR_segments_total": 199,
+    "sampled_relation_rows_reviewed": 199,
+    "pending_unreviewed": 0,
+    "source_aligned_native_QA_cases": 16,
+    "prior_outside_interval_cases_fixed": [
+      56,
+      57,
+      74,
+      120,
+      121,
+      133,
+      136,
+      152,
+      162,
+      166,
+      171
+    ],
+    "current_used_sample_locations_outside_ASR_interval": 0,
+    "relation_counts": {
+      "LITERAL": 64,
+      "DATA": 67,
+      "CONTRAST": 2,
+      "HUMOR": 18,
+      "UNDETERMINED": 21,
+      "METAPHOR": 20,
+      "POTENTIAL_MISMATCH": 7
+    },
+    "undetermined_ids": [
+      16,
+      18,
+      31,
+      32,
+      38,
+      46,
+      114,
+      115,
+      130,
+      136,
+      139,
+      142,
+      150,
+      153,
+      158,
+      162,
+      172,
+      181,
+      188,
+      195,
+      198
+    ],
+    "potential_mismatch_ids": [
+      55,
+      125,
+      126,
+      152,
+      171,
+      178,
+      185
+    ],
+    "actual_listening_seconds": 0,
+    "speech_certified": false,
+    "continuous_sync_verified": false,
+    "status": "199SAMPLED_ROWS_REVIEWED_16SOURCE_ALIGNED_QA_NOT_FULL_AV"
+  },
+  "campaign_35": {
+    "target": 35,
+    "roster": "research/campaign_35_v1/target_roster_v1.json",
+    "source_identity_baseline": "research/campaign_35_v1/source_identity_baseline_v1.json",
+    "complete_count_certified": 0,
+    "note": "35selected unique source hashes are readiness, not35fully analyzed videos"
+  },
+  "motion_supplements": {
+    "reviewed_missing_motion_objects": [
+      "SUB101",
+      "SUB103",
+      "SUB104",
+      "SUB151"
+    ],
+    "normalized_motion_objects_missing": 0,
+    "raw_first_pass_missing_fields_retained": [
+      "SUB101",
+      "SUB103",
+      "SUB104",
+      "SUB151"
+    ],
+    "native_ROI_exact_substantive_bounds": {
+      "SUB103": [
+        8034,
+        8038
+      ],
+      "SUB104": [
+        8049,
+        8057
+      ]
+    },
+    "full_event_bounds_still_unknown": [
+      "SUB101",
+      "SUB151"
+    ],
+    "pure_SUB151_appearance_onset": "UNVERIFIED;translation confirmed; faint prewindow mark",
+    "all_easing": "UNKNOWN",
+    "composition_partition": "v4unchanged19862once; no new shot count",
+    "event_rows": 948,
+    "motion_index_rows": 766,
+    "status": "FOUR_BOUNDED_MOTION_SUPPLEMENTS_INTEGRATED;NOT_GLOBAL_CT_MOTION_PASS"
+  },
+  "selection_macro": {
+    "candidate": "EP0234",
+    "raw_claim": "second and later lines unchanged",
+    "ruling": "CONTRADICTED_IN_NATIVE_ROI_SECOND_LINE_SELECTION8017\u20138025",
+    "raw_source": "agents/shard_5/OUT_shard_5.json",
+    "curated_source": "selection_macro_review_v1/OUT_selection_macro_review_v1.json",
+    "raw_file_unchanged": true,
+    "dominant_frame_partition": "v4unchanged; boundedselectionvariants separate",
+    "cursor_velocity_from_line_width_jump": "NOT_ESTABLISHED",
+    "selection_removal": "UNKNOWN_BEYOND8045",
+    "easing": "UNKNOWN",
+    "event_rows": 948,
+    "bounded_graphic_variant_rows": 7,
+    "CT_SCAN_COMPLETE": false
+  }
+}

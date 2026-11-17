@@ -1,0 +1,136 @@
+{
+  "batch_id": "NICK_077",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "DeoEUmhOXF4",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DeoEUmhOXF4",
+          "TRANSCRIPT_COVERAGE.csv:DeoEUmhOXF4",
+          "audit-batches/NICK_077_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"Why Living Like You're Broke in Your 40s Makes You Rich in Your 50s.\" Paradoxical cause-effect promise with two age anchors and a ten-year horizon; \"broke\" is metaphorical (deliberate frugality on a high income). Audience self-selects by age (40s). Search intent overlaps \"stealth wealth\", \"live below your means\", \"retire in 50s\". Strong outcome promise (\"Makes You Rich\") stated as certainty.",
+        "peer_comparison_ids": [
+          "LUrsFkFfSe0",
+          "BAK_C8cWfjw",
+          "maClOD9240k",
+          "AKwTgaPM6z0",
+          "WVTUWtwILXc",
+          "BvkpPOOa7UY"
+        ],
+        "search_demand": "Historical query volume unknown. Look-broke/stealth-wealth titles span Nick BAK_C8cWfjw stop looking rich 1.64088 TYPICAL, maClOD9240k start looking poor 1.36662 TYPICAL, Lucas AKwTgaPM6z0 0.651 TYPICAL and Carl WVTUWtwILXc looking rich 0.34899 WEAK.",
+        "script_alignment": "Aligned: Sarah vs Mike at $90K, stealth wealth, lifestyle inflation, hedonic treadmill, lower retirement need, expense categorization exercise, social pressure. \"Rich in your 50s\" rests on a 10-year projection whose income and retirement math is overstated."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DeoEUmhOXF4",
+          "TRANSCRIPT_COVERAGE.csv:DeoEUmhOXF4",
+          "audit-batches/NICK_077_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_DeoEUmhOXF4.jpg",
+        "image_source": "https://i.ytimg.com/vi/DeoEUmhOXF4/maxresdefault.jpg",
+        "image_sha256": "d87e669872be3bb6c43ecd34f4abd598103e7c80611a3794b49eec1b713e03b8",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field split into \"BEFORE\" and \"AFTER\" headers with a curved arrow; left a disheveled cartoon man in torn jeans sits against a wall holding a cardboard \"money please\" sign beside a hat with coins; right the same character clean-shaven in a navy suit, smiling and holding a fan of green bills. Mobile: headers and contrast very legible. The image depicts literal poverty (begging) becoming wealth, whereas the script describes a $90K earner choosing a $50K lifestyle; \"broke\" is visually literalized, overstating the transformation and implying a rags-to-riches arc the script does not contain. No age cue."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DeoEUmhOXF4",
+          "TRANSCRIPT_COVERAGE.csv:DeoEUmhOXF4",
+          "audit-batches/NICK_077_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "What if I told you that the secret to\nbecoming truly wealthy isn't about\nmaking more money in your 40s, but about\npretending you never got that raise in\nthe first place?\nWhat if the path to financial freedom\nactually requires you to live like\nyou're still scraping by on your\nentry-level salary, even when you're\npulling in six figures? Most people\nthink I've lost my mind when I suggest\nthis, and honestly, I understand why.\nWe've been programmed to",
+        "ending_words": "tisfying about seeing\nyour investment accounts increase every\nmonth, knowing that you're buying your\nfuture freedom $1 at a time. So, there\nyou have it. Living like you're broke in\nyour 40s isn't about deprivation. It's\nabout playing the long game while\neveryone else is still figuring out the\nrules. Your future self will thank you\nwhen you're sipping coffee on a Tuesday\nmorning in your 50s watching your\ninvestments work harder than you ever\nhad to. The choice is yours. You can\nlook rich now and work forever, or you\ncan live modestly today and retire\nwealthy tomorrow. I know which one I\nchoose.",
+        "analysis": "All 19,844 stored characters read in two contiguous ranges with canonical hash match. Hook: pretend you never got the raise; flashy-40s versus modest-55 retiree contrast; subscribe/like CTA. Defines stealth wealth; 40s as peak earnings; lifestyle inflation; Sarah vs Mike (both 42, $90K): Sarah lives on $50K and banks $40K/year, Mike saves ~$5K; 10 years at 8% -> Sarah >$600K and \"almost $50,000/year passive income\" versus Mike ~$50K. Then \"wealth immunity\", golden handcuffs, hedonic treadmill, 70-80% replacement rule and $8,000 vs $3,000 monthly spending -> $1.5M vs $450K, value-based spending exceptions (health, skills, experiences), three-bucket statement exercise, character/discipline, family modeling, career optionality, recession resilience, social pressure, $100 dinner -> $800, $60K car -> $20K versus $150K invested, payment mentality, cash flow vs net worth, close. Long motivational middle with repetition and few new facts after the first third; no sponsor/community CTA. Core ideas mainstream (spending gap, hedonic adaptation) but key numbers overstated. ASR not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              10000
+            ],
+            "beat": "Raise-pretend hook, CTA, stealth wealth, 40s peak earnings, Sarah vs Mike projection, wealth immunity, golden handcuffs, hedonic treadmill, retirement need, spending exceptions"
+          },
+          {
+            "character_range": [
+              10000,
+              19844
+            ],
+            "beat": "Expense consciousness exercise, discipline/identity, family and career optionality, recession resilience, social pressure, $100 dinner and car opportunity cost, payment mentality, close"
+          }
+        ],
+        "claim_audit": [
+          "0:10000 Sarah banks $40,000/year from a $90,000 income while living on $50,000, which ignores income and payroll taxes on the $40,000 unless all of it is sheltered (2026 401k employee limit $24,500 plus IRA). $40,000/year at 8% for 10 years = ~$579,500 end-of-year or ~$625,800 beginning-of-year, so \">$600,000\" requires front-loaded deposits. \"Almost $50,000/year passive income\" applies an 8% expected return as spendable income; at a 4% withdrawal rate $600,000 supports ~$24,000/year, not her original $50,000 lifestyle. \"8% below historical averages\" refers to nominal S&P history; inflation unaddressed.",
+          "0:10000 Retirement numbers do not reconcile with the 25x (4%) rule used elsewhere on the channel: $3,000/month = $36,000/year x 25 = $900,000, not $450,000; $8,000/month = $96,000 x 25 = $2.4M, not $1.5M. The figures would only fit if Social Security or other income covers part of spending, unstated. 70-80% replacement-rate rule of thumb correctly described. Hedonic treadmill concept correctly described.",
+          "10000:19844 $100 at 8% for 20 years = ~$466 (7%: ~$387); \"$800\" requires ~11%. $60,000 at 7% grows to ~$118,000 in 10 years and ~$232,000 in 20, so \">$150,000 in 10-20 years\" is consistent; $60K luxury car worth ~$20K at 5 years implies ~67% depreciation, high but plausible for some luxury models. $700/month x 12 = $8,400 correct. \"People who maintain modest lifestyles often take entrepreneurial risks that pay off big\" is anecdotal (\"I've seen this countless times\")."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DeoEUmhOXF4",
+          "TRANSCRIPT_COVERAGE.csv:DeoEUmhOXF4",
+          "audit-batches/NICK_077_READ_RECEIPTS.json"
+        ],
+        "analysis": "Mid-career frugality/stealth wealth: high earners avoiding lifestyle inflation to reach financial independence in their 50s. Audience: 40-somethings with rising income and little savings. Saturated FIRE/stealth-wealth topic; this version offers a clear paired example and an expense-bucket exercise but overstates outcomes.",
+        "novelty_and_corpus_angle": "Original angle: after-tax version of the Sarah/Mike gap with account limits, a 4%-rule retirement target using both spending levels, and Social Security offsets; show how much of the \"$40K gap\" survives taxes.",
+        "competition": "Exact pool: LUrsFkFfSe0 unsexy habits 3.61262 STRONG; X6_FpDN3XD8 WW3 invest order 1.61477 TYPICAL; F9dpxZP8UXU 20s mistakes 0.43388 WEAK; aHunm6XYO8k WW3 minimum net worth 0.43848 WEAK."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:DeoEUmhOXF4",
+          "TRANSCRIPT_COVERAGE.csv:DeoEUmhOXF4",
+          "audit-batches/NICK_077_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "15,441 views at 185.1089 days, 20:28; 1.20584x TYPICAL against 10 same-channel LONG_FORM peers published 2026-03-04 to 03-14, frozen 2026-09-11. Exact pool: strong LUrsFkFfSe0 unsexy habits 3.61262; typical X6_FpDN3XD8 WW3 invest order 1.61477, YDI8nD9lgA4 investments beat salary 1.22037, HcGoQkyhNjQ money secrets 1.07236, _6Zvfj0ThsQ stable jobs riskier 1.0174, O5fuwQGKf_c new car math 0.74205, BvkpPOOa7UY stop buying in 30s 0.58497, b-Wl948s8Iw $300K feels like nothing 0.51233; weak aHunm6XYO8k WW3 minimum net worth 0.43848, F9dpxZP8UXU 20s mistakes 0.43388. Target is mid-upper TYPICAL. Age-anchored frugality: this 40s/50s title 1.20584 versus BvkpPOOa7UY 30s stop-buying 0.58497 and F9dpxZP8UXU 20s mistakes 0.43388 in the same pool - descriptive only. Peer images/scripts not re-inspected.",
+        "observed_result": "15,441 views; 185.1089 days; 1,228 seconds; 1.20584x TYPICAL; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Stealth-wealth/look-broke themes recur across Nick, Lucas and Carl with TYPICAL-WEAK outcomes; historical search interest unknown.",
+        "trend_timing": "2026-03-09 publication amid channel WW3-themed uploads; no verified event link; seasonality unknown.",
+        "competition": "Same-fortnight pool includes geopolitical-fear titles and the STRONG habits list.",
+        "format_fit": "20-minute monologue with one early paired example then extended motivational discussion; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 181-191 days old.",
+        "alternative_explanations": [
+          "Appeal: before/after beggar-to-suit image is high-contrast and transformation-driven; CTR unknown.",
+          "Engagement: Sarah/Mike contrast early may hook; repetitive later sections could cost attention; retention unavailable.",
+          "Satisfaction: validation of frugality may satisfy, while overstated passive income and retirement math may mislead; satisfaction unknown.",
+          "Age-targeted audience fit, competition from WW3 topics and distribution could explain the TYPICAL result."
+        ],
+        "original_content_lesson": {
+          "test": "Test a stealth-wealth video whose thumbnail shows the actual scenario (same income, two lifestyles) against a beggar-to-rich transformation image; measure own CTR, retention and comments about misleading packaging.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

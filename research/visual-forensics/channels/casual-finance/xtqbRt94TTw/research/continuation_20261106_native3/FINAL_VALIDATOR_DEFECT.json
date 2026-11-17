@@ -1,0 +1,7 @@
+{
+  "status": "FAILED_VALIDATOR_ATTEMPT_PRESERVED",
+  "error": "AssertionError at line16: prior_draft_span_extended_intervals_remaining compared directly to scalar143",
+  "root_cause": "Field is the explicit pending ID list in both parentv10 and outputv11, not scalar. Listlen143 and independent scalar143 bothagree; no analysis/datafix needed.",
+  "correction": "Validate len(list)==143 plus exact set remaining unassessed classifier IDs; preserve schema.",
+  "source_or_production_defect": false
+}

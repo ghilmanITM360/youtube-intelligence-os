@@ -1,0 +1,80 @@
+{
+  "batch_id": "NICK_010_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "2Q_h21K6MAo",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "f5ed8e9d8a6c1af836ec7ac88a1c2d9023ee30d5ed14e226a6b34182e158459f",
+      "character_count": 19275,
+      "read_character_ranges": [
+        [
+          0,
+          4000
+        ],
+        [
+          4000,
+          8000
+        ],
+        [
+          8000,
+          12000
+        ],
+        [
+          12000,
+          16000
+        ],
+        [
+          16000,
+          19275
+        ]
+      ],
+      "audio_verified": false,
+      "image_sha256": "355b7cfa8edca75d7fa333d12ff9ead60ad752f5575c794c6fd253e916d15fb0",
+      "acquired_utc": "2026-10-18T12:19:37.200921+00:00",
+      "title_character_count": 53
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "url": "https://www.morningstar.com/content/cs-assets/v3/assets/blt9415ea4cc4157833/bltb73b87c5d0c70ead/692f43f57737a31596684522/working_file_11.19_FINAL_REVISE.pdf",
+      "access": "2026-10-18primarypage/searchsnippetorreusedreceipt",
+      "observation": "2025base3.9%starting30year90%success;notforever"
+    },
+    {
+      "url": "https://workplace.vanguard.com/insights-and-research/report/previewing-how-america-saves-2026.html",
+      "access": "2026-10-18primarypage/searchsnippetorreusedreceipt",
+      "observation": "median44115coveredparticipants,notallAmericans"
+    },
+    {
+      "url": "https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit",
+      "access": "2026-10-18primarypage/searchsnippetorreusedreceipt",
+      "observation": "400%FPL/MAGI;temporaryexpandedeligibility2021\u201325"
+    },
+    {
+      "url": "https://www.healthcare.gov/retirees/",
+      "access": "2026-10-18primarypage/searchsnippetorreusedreceipt",
+      "observation": "under65canbuyMarketplace;eligibilitydependsincome/household"
+    },
+    {
+      "url": "https://www.irs.gov/retirement-plans/substantially-equal-periodic-payments",
+      "access": "2026-10-18primarypage/searchsnippetorreusedreceipt",
+      "observation": "72tstrictconditions/recapture,notgenericaccess"
+    },
+    {
+      "url": "https://www.irs.gov/publications/p969",
+      "access": "2026-10-18primarypage/searchsnippetorreusedreceipt",
+      "observation": "HSAqualifiedexpensesandcontributionconditions"
+    },
+    {
+      "url": "audit-batches/NICK_005_READ_RECEIPTS.json",
+      "access": "2026-10-18primarypage/searchsnippetorreusedreceipt",
+      "observation": "retained2026IRSlimitsreused"
+    }
+  ],
+  "reproducible_calculations": {
+    "monthly_future_value": "FV=P*(1+r/12)**n+C*((1+r/12)**n-1)/(r/12); end-month contributions",
+    "coast": "FV(50000,1200,.05,120)*1.05**16=586514.8491601542 nominal; inflation not deducted",
+    "seed7": "50000*(1+.07/12)**120=100483.06883478165; annual compounding50000*1.07**10=98357.56786447832"
+  }
+}

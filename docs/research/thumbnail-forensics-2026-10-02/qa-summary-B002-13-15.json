@@ -1,0 +1,33 @@
+{
+ "scope": "B002-13..B002-15 (72 audits), QA wave 5",
+ "decision": "PASS_WITH_CORRECTIONS (no systematic failure; no material errors)",
+ "sample": {
+  "B002_13": 8,
+  "B002_14": 8,
+  "B002_15": 8,
+  "total": 24
+ },
+ "sampling": "qa_select.pick(k=8): hash-seeded greedy over niche/format/score-tercile/channel; raised from the 6-per-batch minimum because earlier full reviews found minor prose errors in most rows",
+ "material": 0,
+ "minor_factual": 7,
+ "classification": 8,
+ "subjective": 7,
+ "style_only": 8,
+ "wrong_image_mappings": 0,
+ "visible_text_errors": 0,
+ "score_arithmetic_errors": 0,
+ "templated_rows": 0,
+ "rows_with_correction": "10 of 24 sampled rows",
+ "field_corrections_applied": 30,
+ "coordinator_override": "B002-15 seq 11: reviewer set numbers_in_text=Y and word_count=7 counting a bracketed receipt price; project convention keeps bracketed prop text out of headline tags, so N/6 retained and the override logged in qa-corrections-log.csv",
+ "reviewer_note": "B002-13 and B002-14 reviewers wrote the error-class key as \"class\"; normalised to \"error_class\" in the review files before apply (no content change)",
+ "automated_checks_all_72_rows": "qa-wave-checks-B002-13-15.json: 0 validator errors, 0 duplicate Thumbnail_IDs, 0 repeated prose, 34 distinct scores, mean 63.2; 2 intentional word_count warnings (bracketed badge/prop text, B002-14 seq 6 and 19)",
+ "mean_score_by_wave": {
+  "wave2": 59.1,
+  "wave3": 65.3,
+  "wave4(B002-07..09)": 68.5,
+  "wave5(B002-10..12)": 66.9,
+  "wave6(B002-13..15)": 63.2
+ },
+ "open_note": "credibility_score mode 5 on 25 of 72 rows; unsampled rows (16 of 24 per batch) carry the same minor-prose-error risk seen in sampled rows"
+}

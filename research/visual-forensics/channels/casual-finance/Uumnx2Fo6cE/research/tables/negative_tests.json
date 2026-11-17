@@ -1,0 +1,258 @@
+{
+ "note": "Mutations applied to a temporary copy; original outputs untouched.",
+ "total_tests": 24,
+ "caught": 24,
+ "all_caught": true,
+ "results": [
+  {
+   "test": "baseline_unmutated",
+   "expected": "PASS",
+   "got": "PASS",
+   "caught": true
+  },
+  {
+   "test": "delete_a_state_row",
+   "expected_failure": "timeline_fully_covered_once",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL timeline_fully_covered_once uncovered=34 overlap=0",
+    "FAIL spec_count_equals_states ",
+    "FAIL spec_source_grounding ['S0100', 'S0101', 'S0102', 'S0103', 'S0104']"
+   ]
+  },
+  {
+   "test": "shift_a_state_frame_boundary",
+   "expected_failure": "timeline_fully_covered_once",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL timeline_fully_covered_once uncovered=0 overlap=5",
+    "FAIL states_ordered ",
+    "FAIL state_frame_counts "
+   ]
+  },
+  {
+   "test": "timestamp_mismatch",
+   "expected_failure": "state_pts_match_frames",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL state_pts_match_frames "
+   ]
+  },
+  {
+   "test": "duplicate_state_id",
+   "expected_failure": "state_ids_unique",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL state_ids_unique ",
+    "FAIL motion_neighbors_valid ",
+    "FAIL spec_count_equals_states "
+   ]
+  },
+  {
+   "test": "duplicate_boundary_event_id",
+   "expected_failure": "event_ids_unique_boundary",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL event_ids_unique_boundary ",
+    "FAIL all_episodes_have_boundary_record 715 vs 715"
+   ]
+  },
+  {
+   "test": "remove_boundary_evidence_row",
+   "expected_failure": "all_episodes_have_boundary_record",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL all_episodes_have_boundary_record 714 vs 715",
+    "FAIL alignment_rows_all_asr_only "
+   ]
+  },
+  {
+   "test": "missing_evidence_sheet_reference",
+   "expected_failure": "boundary_sheets_exist",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL boundary_sheets_exist ['boundary_sheets/bsheet_999.jpg']",
+    "FAIL boundary_sheet_count "
+   ]
+  },
+  {
+   "test": "drop_intra_state_event",
+   "expected_failure": "every_micro_episode_has_intra_event",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL every_micro_episode_has_intra_event missing=1",
+    "FAIL key_facts_match_tables ",
+    "FAIL doc_counts_consistent:OWNER_SUMMARY_ROMAN_URDU.md ['217']"
+   ]
+  },
+  {
+   "test": "intra_event_wrong_parent",
+   "expected_failure": "intra_frames_inside_parent",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL intra_frames_inside_parent bad=1"
+   ]
+  },
+  {
+   "test": "claim_verified_shot",
+   "expected_failure": "no_boundary_labelled_verified_shot",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL no_boundary_labelled_verified_shot "
+   ]
+  },
+  {
+   "test": "high_confidence_on_unreadable_text",
+   "expected_failure": "no_HIGH_confidence_with_unreadable_text",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL no_HIGH_confidence_with_unreadable_text 1"
+   ]
+  },
+  {
+   "test": "brand_name_in_original_prompt",
+   "expected_failure": "no_brand_or_person_names",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL no_brand_or_person_names_in_original_instructions ['S0030']"
+   ]
+  },
+  {
+   "test": "spec_wrong_source_frames",
+   "expected_failure": "spec_source_grounding",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL spec_source_grounding ['S0040']"
+   ]
+  },
+  {
+   "test": "missing_reconstruction_record",
+   "expected_failure": "spec_count_equals_states",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL spec_count_equals_states ",
+    "FAIL spec_source_grounding ['S0061', 'S0062', 'S0063', 'S0064', 'S0065']"
+   ]
+  },
+  {
+   "test": "generic_copied_description",
+   "expected_failure": "objects_nongeneric",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL objects_nongeneric short=2"
+   ]
+  },
+  {
+   "test": "copied_prompt_on_long_states",
+   "expected_failure": "exact_duplicate_prompts_only_short_series",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL exact_duplicate_prompts_only_short_series dups=10 long_dups=['S0007', 'S0020', 'S0023"
+   ]
+  },
+  {
+   "test": "unjustified_audio_verified_claim",
+   "expected_failure": "asr_doc_declares_unverified",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL asr_doc_declares_unverified "
+   ]
+  },
+  {
+   "test": "report_count_contradiction",
+   "expected_failure": "key_facts_match_tables",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL key_facts_match_tables "
+   ]
+  },
+  {
+   "test": "summary_contradicts_ledger",
+   "expected_failure": "doc_counts_consistent",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL doc_counts_consistent:OWNER_SUMMARY_ROMAN_URDU.md ['507']"
+   ]
+  },
+  {
+   "test": "manifest_frame_count_wrong",
+   "expected_failure": "manifest_frame_count",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL manifest_frame_count "
+   ]
+  },
+  {
+   "test": "measurement_pts_corrupted",
+   "expected_failure": "pts_cfr_24",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL pts_cfr_24 max dev 1.00e-02"
+   ]
+  },
+  {
+   "test": "motion_interval_dropped",
+   "expected_failure": "motion_covers_all_n_ge3_episodes",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL motion_covers_all_n_ge3_episodes ",
+    "FAIL key_facts_match_tables "
+   ]
+  },
+  {
+   "test": "deleted_required_deliverable",
+   "expected_failure": "required_deliverables",
+   "validator_failed": true,
+   "named_check_failed": true,
+   "caught": true,
+   "failures": [
+    "FAIL required_deliverables_present_nonempty ['STATE_BY_STATE_VISUAL_FORENSICS.md']",
+    "FAIL state_md_section_per_state "
+   ]
+  }
+ ]
+}

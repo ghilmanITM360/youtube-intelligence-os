@@ -1,0 +1,168 @@
+{
+ "file": "Running_After_60_V1_REVIEW.mp4",
+ "probe": {
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+   {
+    "codec_name": "h264",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "r_frame_rate": "30/1",
+    "duration": "31.933333",
+    "nb_frames": "958"
+   },
+   {
+    "codec_name": "aac",
+    "r_frame_rate": "0/0",
+    "duration": "31.933292",
+    "nb_frames": "1498"
+   }
+  ],
+  "format": {
+   "duration": "31.933333",
+   "size": "3169825"
+  }
+ },
+ "decode_errors": "none",
+ "max_volume": [
+  "-0.9 dB"
+ ],
+ "mean_volume": [
+  "-17.4 dB"
+ ],
+ "min_frame_std_10fps": 27.5,
+ "blank_frames": 0,
+ "large_jumps_s": [
+  2.7,
+  4.7,
+  11.4,
+  14.4,
+  19.7,
+  24.1,
+  28.5
+ ],
+ "planned_cuts_s": [
+  2.7,
+  4.64,
+  11.36,
+  14.42,
+  19.66,
+  24.04,
+  28.44
+ ],
+ "unplanned_large_jumps_s": [],
+ "scenes": 8,
+ "layer_tracks": 45,
+ "unique_assets": 14,
+ "caption_chunks": 30,
+ "sfx": 13,
+ "audio": {
+  "voice": {
+   "file": "source_audio/original_audio.m4a",
+   "sha256": "a00c28af1304a9835be6cdad38e2bf7258d495f488a3767390a65fcaedd07277",
+   "treatment": "decoded unchanged; one whole-mix gain x0.831 to keep peak <= -1 dBFS; no trim, speed, pitch or word change"
+  },
+  "source_music_check": "source gaps measure ~-56 dB mean, noise floor ~-69 dB: no audible music bed in source (measurement, not listening certification)",
+  "music": {
+   "source": "synthesised in tools/anim.py from sine chords (no samples, no library track)",
+   "chords_hz": [
+    [
+     196.0,
+     246.9,
+     293.7
+    ],
+    [
+     146.8,
+     185.0,
+     220.0
+    ],
+    [
+     164.8,
+     196.0,
+     246.9
+    ],
+    [
+     130.8,
+     164.8,
+     196.0
+    ]
+   ],
+   "seconds_per_chord": 2.2,
+   "level_db_below_speech": 22,
+   "rights": "created in this project; no third-party material; rights opinion not given"
+  },
+  "sfx": [
+   {
+    "t": 1.42,
+    "kind": "chime",
+    "event": "S01--score7"
+   },
+   {
+    "t": 3.2,
+    "kind": "pop",
+    "event": "S02--heart"
+   },
+   {
+    "t": 6.12,
+    "kind": "pop",
+    "event": "S03--joint"
+   },
+   {
+    "t": 8.36,
+    "kind": "soft",
+    "event": "S03--shoe"
+   },
+   {
+    "t": 12.7,
+    "kind": "pop",
+    "event": "S04--stopwatch"
+   },
+   {
+    "t": 14.78,
+    "kind": "pop",
+    "event": "S05--calendar"
+   },
+   {
+    "t": 15.38,
+    "kind": "tick",
+    "event": "S05--calendar--days"
+   },
+   {
+    "t": 17.32,
+    "kind": "soft",
+    "event": "S05--shoe"
+   },
+   {
+    "t": 21.02,
+    "kind": "pop",
+    "event": "S06--heart"
+   },
+   {
+    "t": 26.6,
+    "kind": "pop",
+    "event": "S07--lungs--oxygen"
+   },
+   {
+    "t": 25.96,
+    "kind": "pop",
+    "event": "S07--heart"
+   },
+   {
+    "t": 27.14,
+    "kind": "soft",
+    "event": "S07--arrow"
+   },
+   {
+    "t": 30.7,
+    "kind": "pop",
+    "event": "S08--stopwatch"
+   }
+  ],
+  "measured": {
+   "speech_rms_db": -14.0,
+   "mix_peak": 0.89
+  }
+ }
+}

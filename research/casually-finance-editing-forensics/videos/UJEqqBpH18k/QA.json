@@ -1,0 +1,122 @@
+{
+ "analysis_depth": "DEPTH_B (banded layout; scenes cut-delimited; every HARD/ANIMATION auto stage event seen on lean pre/active/post sheets; operations authored for the main events, remaining detected changes kept as UNRESOLVED_CHANGE rows; caption words measured against ASR)",
+ "video_id": "UJEqqBpH18k",
+ "status": "VISUAL_FORENSICS_COMPLETE_AUDIO_LISTENING_BLOCKED",
+ "checks": {
+  "source_sha256_matches_inventory": true,
+  "decoded_frames_equal_ffprobe_frames": true,
+  "scenes_contiguous_cover_all_frames": true,
+  "unique_scene_ids": true,
+  "unique_event_ids": true,
+  "events_inside_their_scene": true,
+  "events_sorted_by_start": true,
+  "measurement_files_exist": true,
+  "asset_scenes_exist": true,
+  "alignment_rows_equal_events": true,
+  "all_stage_active_frames_attributed": true,
+  "every_scene_start_has_event": true,
+  "every_hard_cut_has_large_stage_change": true,
+  "no_unattributed_large_stage_change": true,
+  "asr_within_duration": true
+ },
+ "all_checks_pass": true,
+ "unattributed_stage_active_frames": [],
+ "hard_cut_stage_px": {
+  "ME004": 4605,
+  "ME006": 6884,
+  "ME011": 9226,
+  "ME014": 3126,
+  "ME016": 8180,
+  "ME018": 4939,
+  "ME020": 10704,
+  "ME022": 6392,
+  "ME024": 5740,
+  "ME025": 7780,
+  "ME028": 5395,
+  "ME033": 4500,
+  "ME038": 4407
+ },
+ "coverage": {
+  "duration_s": 73.579,
+  "frames_decoded": 2206,
+  "fps": 30.0,
+  "source_size": [
+   360,
+   640
+  ],
+  "pass_A_narrative_structure": "34 scenes authored from full-duration 1 fps overview (69 frames) + event sheets",
+  "pass_B_automated": "every native frame decoded; stage/caption/header band change detection; 47 stage events, 226 caption change frames",
+  "pass_C_fine_inspection": "native-resolution sheets at every one of the 47 auto stage events (pre/active/post/hold frames); dense consecutive frames for the bag run cycle",
+  "pass_D_audio": "whole soundtrack measured (RMS, pauses, spectrogram) + Whisper small.en; NOT auditory listening",
+  "pass_E_chronological": "scene timeline contiguous over all 2206 frames; every stage-active frame attributed to an authored event; holds classified (no playback by agent)",
+  "frames_viewed_note": "1 fps overview 69 frames + event sheets; static holds between events are verified by zero stage change, not by viewing every frame"
+ },
+ "counts": {
+  "scenes": 15,
+  "events": 40,
+  "asset_appearances": 42,
+  "asset_ids": 28,
+  "caption_word_events": 236,
+  "instant_events": 31,
+  "operations": {
+   "OVERLAY_POP": 3,
+   "UNRESOLVED_CHANGE": 7,
+   "POP_IN": 9,
+   "HARD_CUT_REPLACE": 13,
+   "CAMERA_SCROLL_ZOOM": 5,
+   "HIGHLIGHT_SWEEP": 1,
+   "TEXT_WRITE_ON": 1,
+   "SLIDE_IN": 1
+  }
+ },
+ "derived_statistics": {
+  "hard_cuts": 13,
+  "hard_cuts_per_min": 10.6,
+  "visual_events_per_min": 32.62,
+  "scene_duration_s": {
+   "mean": 4.902,
+   "median": 3.567,
+   "min": 0.733,
+   "max": 16.033
+  },
+  "frame_classes_frames": {
+   "STATIC_HOLD": 1926,
+   "INDET": 33,
+   "CONV": 247,
+   "SCREENREC": 0,
+   "COMPLEX": 0
+  },
+  "frame_classes_pct": {
+   "STATIC_HOLD": 87.3,
+   "INDET": 1.5,
+   "CONV": 11.2,
+   "SCREENREC": 0.0,
+   "COMPLEX": 0.0
+  },
+  "caption_offset_ms_vs_asr_onset": {
+   "n": 216,
+   "median": 43.5,
+   "p10": -73.0,
+   "p90": 160.0,
+   "within_100ms_pct": 72.7
+  },
+  "hard_cuts_at_phrase_start_after_pause": 7,
+  "native_cadence": {
+   "isolated_duplicate_frames_in_motion": 22,
+   "gap_histogram_top": {
+    "5": 11,
+    "125": 1,
+    "15": 1,
+    "25": 1
+   },
+   "interpretation": "irregular duplicates; cadence unresolved"
+  }
+ },
+ "limitations": [
+  "Direct audio listening not performed (agent has no auditory capability)",
+  "360x640 source: fine linework, text weight and sub-10-px motion are resolution limited",
+  "No independent second reviewer; confidence labels are single-reviewer",
+  "Motion method/tool is not observable from a final MP4",
+  "Unreviewed micro-changes below the 8-px stage threshold are treated as compression-noise level and not classified"
+ ]
+}

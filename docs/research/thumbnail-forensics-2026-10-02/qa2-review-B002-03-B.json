@@ -1,0 +1,185 @@
+{
+ "reviewer": "QA2-B",
+ "batch": "B002-03",
+ "rows": [
+  {
+   "seq": 10,
+   "thumbnail_id": "THB-137c54e12bf96959962022fa9381c7242135ae44e0a389031fad3b875971a36a",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: EXTRA / $2,000/MO is legible on sheet_160 and the glowing cash survives.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "typography",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Two lines in black ultra-bold caps, the second line with '$2,000/MO' in a larger size; two words total.",
+     "corrected_value": "Two lines in black ultra-bold caps: 'EXTRA' on top and '$2,000/MO' below, which is wider but about the same cap height, with '/MO' set smaller; two words total.",
+     "reason": "The second line is not set larger than the first. It is wider, and the cap heights are about equal.",
+     "evidence": "In the native image 'EXTRA' spans roughly y40-150 and the '$2,000' numerals roughly y190-290, so they are similar in height. '/MO' is visibly smaller than '$2,000'."
+    }
+   ]
+  },
+  {
+   "seq": 11,
+   "thumbnail_id": "THB-1f218e1539456504ac44054b76b8b4b1b59ba7c01f74606d4e86f902b54d4219",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree (FAIL): the body, name and URL lines are unreadable at 160x90. The two headline lines are faintly legible on sheet_160, so 'nothing is readable' slightly overstates it, but FAIL and a score of 1-2 hold.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "at right five lines of centred black text on white.",
+     "corrected_value": "at right seven centred lines of text on white: two headline lines, three body lines ('What to check next time you visit' / '&' / 'How to talk to them about it'), then the name line and the URL.",
+     "reason": "The line count is wrong. The text field itself lists seven lines.",
+     "evidence": "Counted at native size: 2 headline lines + 3 body lines + 2 credit lines = 7."
+    },
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The black letterbox bars squeeze the active image to a 4:3-like panel.",
+     "corrected_value": "The black letterbox bars above and below squeeze the active slide to a wide strip of about 16:9 or wider, roughly 480x260 inside the 480x360 frame.",
+     "reason": "The 480x360 frame is 4:3, but the visible slide area between the bars is much wider than 4:3.",
+     "evidence": "The bars sit at about y0-55 and y315-360, which leaves a roughly 480x260 content area."
+    },
+    {
+     "field": "typography",
+     "error_class": "STYLE_ONLY",
+     "original_value": "About 26 words in small centred regular-weight serif-sans text at several sizes",
+     "corrected_value": "About 26 words in small centred regular-weight sans-serif text at two sizes (headline slightly larger, body smaller).",
+     "reason": "'serif-sans' is unclear; the font is a plain sans-serif.",
+     "evidence": "Glyphs are sans-serif at native size."
+    }
+   ]
+  },
+  {
+   "seq": 12,
+   "thumbnail_id": "THB-61ad3b563b16f9a9f84b76529269957e714fd1765fddb874e9cb3f3156b20a61",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree (PASS): the huge yellow headline and the lion silhouette read on sheet_160.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "title_relation",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "DUPLICATES",
+     "corrected_value": "COMPLEMENTS",
+     "reason": "The thumbnail text 'WHY NEVER EAT?' is a compressed paraphrase that omits 'predators' and 'each other'. The image supplies the predator-kills-predator example, which the row's own partnership text says it adds. DUPLICATES contradicts that.",
+     "evidence": "The title is 'Why Don't Predators Eat Each Other?'. The thumbnail shows only the three words WHY NEVER EAT? plus the lion on the bear."
+    },
+    {
+     "field": "partnership",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "is delivered almost word for word, with the thumbnail adding the lion-over-bear scene as an example of a predator killing a predator.",
+     "corrected_value": "is compressed to 'WHY NEVER EAT?', which drops 'predators' and 'each other'; the lion-over-bear scene supplies the missing subject and shows one predator killing another.",
+     "reason": "'Almost word for word' is incorrect. Only 'Why' and 'Eat' are shared, and the text is also ambiguous without the title.",
+     "evidence": "Thumbnail text: WHY NEVER EAT?. Title: Why Don't Predators Eat Each Other?."
+    },
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "a dead brown bear lying on its back with X-marked eyes and its tongue lolling out. Acacia silhouettes and a flat tan savanna sit behind under a bright blue sky.",
+     "corrected_value": "a dead brown bear lying flat on the ground with X-marked eyes and its tongue lolling out. Flat dark-green acacia trees at left and right and a tan savanna sit behind under a bright blue sky.",
+     "reason": "The bear's pose is not clearly on its back, and the acacias are filled green flat trees rather than silhouettes.",
+     "evidence": "The bear's head is at lower left with its tongue hanging down and its body stretching right under the lion's paws. The trees are solid green shapes with a black outline."
+    }
+   ]
+  },
+  {
+   "seq": 13,
+   "thumbnail_id": "THB-3dd78c7d97879e4a3e184ba5565504a4e7b621843013cb9cf1aa31b8f8f798b7",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree (PASS): '10:1 RULE' reads on sheet_160, though the black '1' merges with the black lid interior, so '10:1' reads like 'I0:1' at small size.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "typography",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The left edge of '10:1' is partly covered by the green lid, which truncates the '1'. Readable at 160x90 but the overlap creates a defect.",
+     "corrected_value": "The headline sits in front of the green lid. The black '10:1' overlaps the lid's black underside and rim, so the first '1' loses its edge contrast and merges with the lid; the glyphs themselves are not cut off. Readable at 160x90, but the black-on-black overlap lowers legibility of the number.",
+     "reason": "The row says the lid covers and truncates the '1', and the art field says the lid is behind the headline. These contradict each other. The text is drawn on top of the lid and all of '10:1' is drawn.",
+     "evidence": "In the native image the '10:1 RULE' glyphs are complete and drawn over the lid. The black lid interior directly behind the first '1' removes the contrast around it."
+    }
+   ]
+  },
+  {
+   "seq": 14,
+   "thumbnail_id": "THB-4bb33b97cc1d5117576d099b6eb30d63a4c59a3984b740f9dd8e0ded1588e343",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree (PASS): '4 BILLION PEOPLE' and the face survive on sheet_160. 'BY 2035?' and 'World Obesity Day' become tiny.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 15,
+   "thumbnail_id": "THB-5077f2f60657db1a2bba5722a25164590d5ec469f26d66f798fbb9bd3bbb4053",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree (PARTIAL): icons and colour blocks survive and the cursive captions blur on sheet_160.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "hierarchy_score",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "6",
+     "corrected_value": "3",
+     "reason": "The row itself says there is no focal point, no hierarchy and no headline, sets hierarchy_clear=N and names hierarchy as the bottleneck. A 6/10 contradicts that; a visible defect should score under 30%. This moves score_100 from 54 to 51.",
+     "evidence": "Four equal-size panels with equal-weight captions and no dominant element."
+    },
+    {
+     "field": "psychology",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "There is no face to engage with, so the emotion is abstract.",
+     "corrected_value": "The only faces are two tiny sad stick-figure faces (frowning, down-turned mouths) in the top-left panel; at phone size they vanish, so the emotion is carried by icons rather than a face.",
+     "reason": "The statement contradicts the row's own tags (people_count_visible=2, face_visible=Y, face_scale=SMALL, expression_label=sad).",
+     "evidence": "Both stick figures in the top-left panel have visible frowning faces."
+    }
+   ]
+  },
+  {
+   "seq": 17,
+   "thumbnail_id": "THB-4e067a6d9c6520a26d1cf0d62a3d37349b23c30cb9d4d181a5a008373693d284",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree (PASS): 'YOU LOST IT' with the red LOST and the suited figure read on sheet_160.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "psychology",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The confident, slightly smug smile and direct gaze convey arrogance rather than distress, which does not match the sense of catastrophic loss in the word 'LOST'.",
+     "corrected_value": "A closed-mouth smile with a slightly lowered brow and direct gaze at the viewer, with no wide eyes, open mouth or visible tension; this reads as calm rather than distressed, which does not match the loss implied by 'LOST'. The formal three-piece suit signals wealth and authority.",
+     "reason": "AUDIT-PROTOCOL rule 49 forbids inferred inner states such as 'smug' or 'arrogance' in psychology. The same wording appears in mechanism ('smug executive'), weakness and the expression_label 'smirk'.",
+     "evidence": "The mouth is closed and slightly upturned, the gaze is direct, and the hands lie flat on the desk."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 7,
+  "material": 0,
+  "minor_factual": 7,
+  "classification": 1,
+  "subjective": 1,
+  "style_only": 2
+ }
+}

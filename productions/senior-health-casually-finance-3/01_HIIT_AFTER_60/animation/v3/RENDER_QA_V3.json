@@ -1,0 +1,211 @@
+{
+ "file": "HIIT_After_60_V3_REVIEW.mp4",
+ "probe": {
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+   {
+    "codec_name": "h264",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "r_frame_rate": "30/1",
+    "duration": "31.133333",
+    "nb_frames": "934"
+   },
+   {
+    "codec_name": "aac",
+    "r_frame_rate": "0/0",
+    "duration": "31.133292",
+    "nb_frames": "1461"
+   }
+  ],
+  "format": {
+   "duration": "31.133333",
+   "size": "3469094"
+  }
+ },
+ "decode_errors": "none",
+ "av_duration_delta_s": 0.0,
+ "max_volume": [
+  "-0.9 dB"
+ ],
+ "mean_volume": [
+  "-16.9 dB"
+ ],
+ "min_frame_std_10fps": 34.6,
+ "blank_frames": 0,
+ "large_jumps_s": [
+  0.1,
+  3.4,
+  3.5,
+  3.6,
+  8.2,
+  13.9,
+  14.0,
+  17.1,
+  17.2,
+  21.8,
+  21.9,
+  22.0,
+  22.1,
+  24.8,
+  29.4
+ ],
+ "headline_changes_s": [
+  3.52,
+  8.17,
+  13.85,
+  16.77,
+  21.71,
+  24.81,
+  29.41
+ ],
+ "unplanned_large_jumps_s": [
+  0.1,
+  14.0,
+  17.1,
+  17.2,
+  21.9,
+  22.0,
+  22.1
+ ],
+ "scenes": 8,
+ "layer_tracks": 99,
+ "unique_assets": 13,
+ "caption_cues": 20,
+ "caption_min_s": 0.86,
+ "caption_median_s": 1.64,
+ "cues_under_0_8s": [],
+ "caption_block_bottom_px": 1490,
+ "word_corrections": [
+  {
+   "index": 0,
+   "asr": "or",
+   "shown": "\u2026or",
+   "src_start": 0.0
+  },
+  {
+   "index": 1,
+   "asr": "high",
+   "shown": "high-intensity",
+   "src_start": 0.16
+  },
+  {
+   "index": 2,
+   "asr": "intensity",
+   "shown": "",
+   "src_start": 0.36
+  },
+  {
+   "index": 8,
+   "asr": "seven",
+   "shown": "7",
+   "src_start": 1.98
+  },
+  {
+   "index": 71,
+   "asr": "awarded",
+   "shown": "avoided",
+   "src_start": 21.9
+  },
+  {
+   "index": 72,
+   "asr": "to",
+   "shown": "in",
+   "src_start": 22.22
+  }
+ ],
+ "review_marks_in_frames": false,
+ "sfx": 9,
+ "audio": {
+  "voice": {
+   "source_file": "source_audio/original_audio.m4a",
+   "source_sha256": "c24c89901fa3484ff6589811497f7d253efa79b230b4222cf96b25d987746cc5",
+   "derived_file": "source_audio/voice_v2_paced.wav",
+   "derived_sha256": "e8f9784e8a6bb5c377e6d1623642a252dbb8aab536b99cbccdf466c8c3af60c9",
+   "pacing": "animation/v2/VOICE_PACING.json",
+   "treatment": "derived paced voice (see VOICE_PACING.json) + 30 ms end fade; whole-mix gain x0.866"
+  },
+  "music": {
+   "source": "synthesised in tools/anim_v2.py from sine chords (no samples, no library track)",
+   "chords_hz": [
+    [
+     261.6,
+     329.6,
+     392.0
+    ],
+    [
+     174.6,
+     220.0,
+     261.6
+    ],
+    [
+     196.0,
+     246.9,
+     293.7
+    ],
+    [
+     220.0,
+     261.6,
+     329.6
+    ]
+   ],
+   "seconds_per_chord": 2.0,
+   "level_db_below_speech": 24,
+   "rights": "created in this project from code; rights opinion not given; no claim this removes all rights questions"
+  },
+  "sfx": [
+   {
+    "t": 0.73,
+    "kind": "tick",
+    "event": "S01--intervals--work-2"
+   },
+   {
+    "t": 1.28,
+    "kind": "tick",
+    "event": "S01--intervals--work-3"
+   },
+   {
+    "t": 2.23,
+    "kind": "chime",
+    "event": "S01--score7"
+   },
+   {
+    "t": 5.85,
+    "kind": "pop",
+    "event": "S02--heart"
+   },
+   {
+    "t": 10.43,
+    "kind": "pop",
+    "event": "S03--question"
+   },
+   {
+    "t": 13.85,
+    "kind": "whoosh",
+    "event": "S04--clinic"
+   },
+   {
+    "t": 24.81,
+    "kind": "whoosh",
+    "event": "S07--park"
+   },
+   {
+    "t": 26.29,
+    "kind": "pop",
+    "event": "S07--stopwatch"
+   },
+   {
+    "t": 30.25,
+    "kind": "chime",
+    "event": "S08--score7"
+   }
+  ],
+  "sfx_level_db_below_speech": 19,
+  "measured": {
+   "speech_rms_db": -14.1,
+   "mix_peak": 0.89
+  }
+ }
+}

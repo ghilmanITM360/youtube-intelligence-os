@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/Users/ghilmanislam360/Documents/youtube-intelligence-os/.venv/bin/python",
+    "-m",
+    "scripts.validate_youtube_channel_registry"
+  ],
+  "cwd": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+  "at": "2026-11-02T03:48:40.093340+00:00",
+  "code": 0,
+  "stdout": "{\n  \"checks\": {\n    \"duplicate_channel_ids\": 0,\n    \"duplicate_video_ids\": 0,\n    \"first_party_ingested_count\": 0,\n    \"forensic_channel_count\": 1,\n    \"generated_intelligence_marked_unavailable\": 0,\n    \"generated_intelligence_without_evidence\": 0,\n    \"identity_only_with_packages\": 0,\n    \"identity_only_with_videos\": 0,\n    \"null_transcript_without_reason\": 0,\n    \"thumbnail_evidence_channel_count\": 3,\n    \"title_only_historical_channel_count\": 2\n  },\n  \"controls\": {\n    \"canonical_channels\": 75,\n    \"channels_with_video_data\": 46,\n    \"data_layer_rows\": 825,\n    \"datasets\": 33,\n    \"description_gaps\": 17,\n    \"historical_channels\": 6,\n    \"identity_only_channels\": 29,\n    \"intelligence_coverage_rows\": 600,\n    \"non_channel_subjects\": 4,\n    \"placeholders\": 12,\n    \"raw_submissions\": 67,\n    \"real_transcripts\": 2291,\n    \"standard_packages\": 40,\n    \"stored_outside_targets\": 12,\n    \"target_channels\": 63,\n    \"videos\": 2303,\n    \"visual_coverage_rows\": 75\n  },\n  \"errors\": [],\n  \"idempotence\": {\n    \"first\": {\n      \"actor_runs\": 19,\n      \"artifacts\": 319,\n      \"availability_gaps\": 216,\n      \"channel_aliases\": 142,\n      \"channel_data_layers\": 825,\n      \"channels\": 75,\n      \"dataset_channels\": 50,\n      \"dataset_videos\": 2303,\n      \"datasets\": 33,\n      \"identity_evidence\": 75,\n      \"intelligence_capabilities\": 8,\n      \"intelligence_coverage\": 600,\n      \"non_channel_subjects\": 4,\n      \"registry_metadata\": 4,\n      \"subject_datasets\": 4,\n      \"submissions\": 67,\n      \"subtitle_tracks\": 2455,\n      \"transcripts\": 2303,\n      \"videos\": 2303,\n      \"visual_coverage\": 75\n    },\n    \"second\": {\n      \"actor_runs\": 19,\n      \"artifacts\": 319,\n      \"availability_gaps\": 216,\n      \"channel_aliases\": 142,\n      \"channel_data_layers\": 825,\n      \"channels\": 75,\n      \"dataset_channels\": 50,\n      \"dataset_videos\": 2303,\n      \"datasets\": 33,\n      \"identity_evidence\": 75,\n      \"intelligence_capabilities\": 8,\n      \"intelligence_coverage\": 600,\n      \"non_channel_subjects\": 4,\n      \"registry_metadata\": 4,\n      \"subject_datasets\": 4,\n      \"submissions\": 67,\n      \"subtitle_tracks\": 2455,\n      \"transcripts\": 2303,\n      \"videos\": 2303,\n      \"visual_coverage\": 75\n    },\n    \"status\": \"PASS\"\n  },\n  \"status\": \"PASS\"\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 8.652,
+  "name": "registry"
+}

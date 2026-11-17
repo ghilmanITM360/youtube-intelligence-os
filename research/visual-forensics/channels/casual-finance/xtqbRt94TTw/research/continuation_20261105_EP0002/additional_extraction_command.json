@@ -1,0 +1,17 @@
+{
+  "command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-i",
+    "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/To Save the Economy... We\u2019re About to Break It - Casual Finance (1080p, h264).mp4",
+    "-vf",
+    "select=between(n\\,65\\,83)",
+    "-fps_mode",
+    "passthrough",
+    "-start_number",
+    "65",
+    "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/frames/f%05d.png"
+  ],
+  "scope": "EP0003/EP0004 adjacent native state boundaries and contiguous intervening hold; frame74 prior receipt is reconstruction-labelled ambiguous, not relied on as raw source"
+}

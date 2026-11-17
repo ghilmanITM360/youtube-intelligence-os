@@ -1,0 +1,20 @@
+{
+ "rule": "M3",
+ "script": "scripts/camera_m3.py",
+ "script_sha256": "98773b7a16d78f89e1fd0f242443ea928cae1b0e64c60c295dc4a5b4db5c970f",
+ "frozen_utc": "2026-11-05T18:20:14.857517+00:00",
+ "session": "15f69c1b",
+ "status": "POST_HOC_EXPLORATORY: designed after seeing M2 outputs and blind batches 1-2; NOT preregistered",
+ "frozen_before": [
+  "running on the 850 ledger intervals",
+  "native-frame adjudication of the batch-2 rows being compared with M3",
+  "held-out validation sample selection and labelling"
+ ],
+ "synthetic_tuning": "metric edge_support was corrected once after the first synthetic self-check exposed a pixel-set bug, and the object_on_static control was split into three; all of that was before this freeze and used synthetic frames only",
+ "lineage": {
+  "M0": "cam_endpoint.py: preregistered, 11 claims only, endpoints start-1/end+1",
+  "M1": "chain of <=10-frame links; introduced after observation",
+  "M2": "M1 + inlier spread>=0.5 of frame W and H; introduced after observation",
+  "M3": "M2 fit + entry link + edge evidence moved_share + oscillation flag"
+ }
+}

@@ -1,0 +1,11 @@
+# RT-V3-S01 worker notes
+- Read only SPEC_GIVEN_TO_WORKER.json; no other files/sources opened.
+- render.py paints one 3840x2160 canvas (2x base 1920x1080) with grain, then warps per frame.
+- Camera: hard cut f0 wide; push f8-58 scale 1->1.70 with smootherstep (peak speed f33), pan -670 px (same easing).
+- Creep f59-178: 1.70 -> 1.735 linear (f58 = 1.70 exactly).
+- Pointer/mouth drawn in canvas space as discrete swaps; stick rests upright until f66.
+- Pointer swaps (tip positions): f66, 84, 87(tap 86 down), 106, 109(tap 108), 128, 131(tap 130), 150, 153(tap 152), 168.
+- Mouth open frames: 70-75, 80-86, 96-103, 112-120, 126-131, 140-147, 156-162, 168-175.
+- Original art: bald elder with white moustache, stone lectern, wood desks/stools, 3 posters; Bradley Hand chalk text.
+- Palette approx per spec; board ~40% at end framing (estimate, not measured).
+- Verified ffprobe: 179 frames, 1920x1080, 30000/1001, h264 yuv420p.

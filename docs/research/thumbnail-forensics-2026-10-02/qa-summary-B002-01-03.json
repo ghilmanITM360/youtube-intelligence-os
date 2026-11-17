@@ -1,0 +1,38 @@
+{
+ "scope": "B002-01..B002-03 (72 audits)",
+ "decision": {
+  "B002_01": "PASS_WITH_CORRECTIONS",
+  "B002_02": "PASS_WITH_CORRECTIONS",
+  "B002_03": "PASS_WITH_CORRECTIONS (full 24-row review: round-1 6 sampled + round-2 20 rows, seq 22/24 reviewed twice)"
+ },
+ "round1": {
+  "rows_checked": 18,
+  "material_rows": 2,
+  "material_rate_pre_repair": "2/18 = 11.1% (both in B002-03: 2/6)",
+  "rows_needing_repair": 8,
+  "visible_text_errors": 0,
+  "wrong_image_mappings": 0,
+  "score_arithmetic_errors": 0,
+  "object_description_errors": 8,
+  "title_linkage_errors": 3,
+  "tag_errors": 11,
+  "mobile_disagreements": 1
+ },
+ "round2_B002_03": {
+  "rows_checked": 20,
+  "material": 0,
+  "minor_factual": 25,
+  "classification": 6,
+  "subjective": 2,
+  "style_only": 7,
+  "wrong_image": 0,
+  "visible_text_errors": 0,
+  "score_arithmetic_errors": 0,
+  "templated_rows": 0,
+  "rows_with_at_least_one_correction": 17,
+  "corrections_applied_to_fields": 41,
+  "remaining_known_errors": 0
+ },
+ "note": "Round-1 reviewer labelled B002-03 seq 22 title_relation=UNRELATED as MATERIAL (a mislabel that contradicted the row's own prose); by the protocol categories it is a CLASSIFICATION_ERROR. Reported as the reviewer scored it so the pre-repair rate is not understated.",
+ "residual_risk": "B002-01 and B002-02 were only sampled (6 of 24 each); the full review of B002-03 found minor prose errors in 17 of 20 rows, so unsampled rows in 01/02 probably carry similar minor errors. No material errors were found in 20 fully reviewed rows. Mitigation: recurring defect classes are now listed in AUDIT-PROTOCOL.md for later batches."
+}

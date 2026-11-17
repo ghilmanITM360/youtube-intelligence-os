@@ -1,0 +1,453 @@
+{
+ "video_id": "-IpucSOwKgQ",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "dc5e45d212b36477e0812a1c5d20530385abc9b3792d3b71086227067f727056",
+ "original_packets": [
+  "LUCAS_001.json"
+ ],
+ "transcript_chars_read": 22938,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 57,
+    "text": "You wake up at 6:47 a.m. and there's no\nalarm to turn off"
+   },
+   "judgment": "MET",
+   "rationale": "Second-person sensory opening with a stop beat (\"$1,800 deposited while you slept\"), an implied contrarian turn (ordinary Tuesday, not luxury) and a withheld backstory.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 708,
+    "end_char": 754,
+    "text": "is a\ndifferent story from the one you\nexpected"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Emotion and curiosity are strong; the promise is implicit and the intro runs ~750 characters before the 29-year-old backstory begins, so clarity relies on the title.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Cartoon man with navy cap relaxing in a leather armchair holding a coffee in a luxury penthouse above a park skyline; yellow text $90,000/Y and white @ 40 with a red arrow running from the @ 40 toward the window"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title, thumbnail text and opening ($1,800 deposit, age 40) agree, but the thumbnail stages a penthouse while the script says \"You didn't buy a yacht. You didn't buy a penthouse\" and \"The apartment is the same\".",
+   "uncertainty": "Expectation match is inferred; viewer reaction is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17694,
+    "end_char": 17735,
+    "text": "the number on\nthe screen is $2.25 million"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title promise ($90,000 a year at 40 from a median earner) is delivered as a narrative, but its plausibility fails on the script's own inputs: reaching $2.25M from about $158,800 contributed needs roughly a 37% nominal annual return (about 44% effective), so the premise is overpromised and no return assumption is stated.",
+   "uncertainty": "Calculation verified in this session; no return assumption is stated in the video."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17779,
+    "end_char": 17818,
+    "text": "what\n$90,000 a year actually feels like"
+   },
+   "judgment": "MET",
+   "rationale": "The title loop (how a $58,000 earner gets $90,000 a year of dividend income) is paid in the morning scene and the tax comparison, though not on arithmetic that holds.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Luxury penthouse armchair scene with $90,000/Y @ 40"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script delivers a quiet, frugal path and states the opposite of the thumbnail's luxury setting.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8449,
+    "end_char": 8498,
+    "text": "You\nopen a brokerage account. It takes 11\nminutes"
+   },
+   "judgment": "MET",
+   "rationale": "Clear spine: dissatisfaction, the retirement-calculator shock, SCHD and the $27 a month, automation, the yield trap, the $90K morning, the tax comparison.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13211,
+    "end_char": 13261,
+    "text": "something appears that threatens to undo\nall of it"
+   },
+   "judgment": "MET",
+   "rationale": "A real loop: the trap is teased at year four, then paid by the 14% funds section with the NAV-erosion warning.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8996,
+    "end_char": 9044,
+    "text": "the years nobody saw turned out\nthe way they did"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Gaps are planted (\"what it actually took to get here\") but the final account size is only revealed at the end and the intermediate milestones are numeric steps rather than layered questions.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9046,
+    "end_char": 9090,
+    "text": "You automate the transfer the following\nweek"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Each step follows the previous one, but the causal chain from $800 a month to a $2.25M portfolio is missing its return assumption, so the payoff does not follow from the cause.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15215,
+    "end_char": 15242,
+    "text": "But the details matter\nhere"
+   },
+   "judgment": "MET",
+   "rationale": "BUT turns drive the middle: 14% looks like a shortcut BUT NAV erosion; return of capital sounds bad BUT the structure explains it; THEREFORE a 20/80 split.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19640,
+    "end_char": 19716,
+    "text": "Your federal tax bill\non $90,000 in dividend income comes to\nroughly $13,500"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "On the video's own facts, taxable income is $74,250; the first $49,450 is in the 0% qualified-dividend bracket, leaving $24,800 at 15% = $3,720, not $13,500 (15% of the gross, which also contradicts its own \"15% on the taxable portion\" = $11,138). It also treats all $90,000 as qualified dividends and, if the 20% covered-call sleeve pays mostly non-qualified distributions (not verified against fund documents), more of it would be taxed at ordinary or 60/40 rates, and it mixes the 2025 standard deduction ($15,750) with the 2026 0% threshold ($49,450; the 2026 deduction is $16,100).",
+   "uncertainty": "Arithmetic verified; 2026 thresholds verified from secondary summaries of Rev. Proc. 2025-32; state tax ignored."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10283,
+    "end_char": 10344,
+    "text": "4%, which after taxes lands as\nabout 90 extra dollars a month"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "A 4% raise on $58,000 is $193 a month gross (about $155 after tax), not $90, and the transfer is raised by $400 ($800 to $1,200), so \"the raise disappears entirely into the brokerage account\" does not follow.",
+   "uncertainty": "Arithmetic verified; withholding assumptions approximate."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14216,
+    "end_char": 14255,
+    "text": "which runs this strategy on the S&P 500"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "\"SPY\" is the plain S&P 500 ETF; the covered-call fund discussed later is SPYI, and \"QQQY\" is named where QQQI (the fund the script goes on to describe) is meant. Likely a script or transcription slip, but the stated yields are attached to the wrong tickers. The stated yields (7-8% and 14%) were not verified against fund documents.",
+   "uncertainty": "Ticker identity inferred from later passages; not verified against prospectuses."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18743,
+    "end_char": 18806,
+    "text": "the way it arrives every\nweek now in amounts that vary by month"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Payment cadence wording is mixed: \"$1,800 lands on a Tuesday ... every week\" ($93,600 a year, close to the $90,000 average), then \"$6,800 in a lighter quarter, $8,200 when the distributions run heavy\" without saying whether those are months or quarters; SCHD pays quarterly and the covered-call funds monthly.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 22059,
+    "end_char": 22085,
+    "text": "You didn't buy a\npenthouse"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian reframe: wealth as a Tuesday morning with nowhere to be, not visible luxury.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 22896,
+    "end_char": 22937,
+    "text": "whether you sit\ndown and do the real math"
+   },
+   "judgment": "MET",
+   "rationale": "Returns to the opening Tuesday night and the kitchen-table calculator (\"do the real math\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7402,
+    "end_char": 7434,
+    "text": "The\npayment is called a dividend"
+   },
+   "judgment": "MET",
+   "rationale": "Dividend, yield, NAV and return of capital are each defined in one plain sentence on first use; the NAV-erosion explanation is especially clear.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 22572,
+    "end_char": 22611,
+    "text": "Here's the lens to carry into your\nweek"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A reflective call to action (\"Notice what you trade your hours for\") but no like, subscribe or next-video ask anywhere in the stored transcript, and no not-financial-advice disclaimer.",
+   "uncertainty": "Description, end screen and pinned comment are not in the data."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 22003,
+    "end_char": 22033,
+    "text": "what the outro is\nreally about"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"What the number means is what the outro is really about\" is a production-script leak into the narration; at ~23K characters the story also repeats the Tuesday-morning and \"quiet\" imagery many times.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6797,
+    "end_char": 6826,
+    "text": "start reading about dividends"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title says \"Live Off Dividends\"; \"dividends\" is first spoken about 6,800 characters in, long after the opening scene.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "POV: You Live Off Dividends at 40 — $90,000 a Year in Silence",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Passive income and early retirement are broad evergreen interests.",
+  "2_differentiated_angle": "POV narrative with a modest starting salary rather than a high-income achiever; risk education (NAV erosion, return of capital) is a differentiator.",
+  "3_title": "POV frame, specific age and dollar figure, \"in Silence\" mood; strong curiosity, an overpromise on the arithmetic.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, SHA-256 prefix 679de4cbcb3d8f17; not in the repository): large yellow $90,000/Y and \"@ 40\", a cartoon man with a cap and coffee in a leather armchair in a penthouse overlooking a park, red arrow running from \"@ 40\" toward the window. Large shapes readable at mobile size; wealthy-penthouse imagery conflicts with the script. Asset appears AI-generated; not rights-judged.",
+  "5_opening": "Scene-first and sensory; strong.",
+  "6_loops": "Year-four trap loop is explicit and paid; the final total is withheld to the end.",
+  "7_spine": "Chronological life path with a mid-story danger.",
+  "8_repetition_clarity": "Tuesday-morning imagery recurs; numbers anchor each milestone.",
+  "9_emotion_credibility": "Warm and plausible tone; credibility reduced by the 37%-return premise, the tax error and the ticker slips; credibility helped by genuine NAV-erosion education.",
+  "10_ending_cta": "Reflective action, no channel CTA, no disclaimer.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$800/month (then $1,200 from year 3) plus $10,000 starting capital reaches $2.25 million in 11 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: contributions total $158,800; the implied annual return is about 36.8% nominal (about 44% effective). At 3%, 7%, 10% and 14% the balance is $188K, $240K, $291K and $380K."
+  },
+  {
+   "claim": "$90,000 a year from $2.25M; $2,000/$4,000/$10,000 a year at $50K/$100K/$250K",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "All equal a 4% yield; consistent with the \"blended yield toward 4%\", though SCHD was quoted at 3.3%."
+  },
+  {
+   "claim": "$10,000 at 3.3% yields $330, \"$27 a month\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$27.50. Holds."
+  },
+  {
+   "claim": "14% on $250,000 is $35,000",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Holds."
+  },
+  {
+   "claim": "Portfolio about $50,000 around year three",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "About $49,000-$52,000 at 7-10% on the stated contributions; plausible."
+  },
+  {
+   "claim": "4% raise is \"about 90 extra dollars a month\"; transfer raised from $800 to $1,200",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "4% of $58,000 is $193/month gross (about $155 net); the transfer increases by $400."
+  },
+  {
+   "claim": "Federal tax on $90,000 of qualified dividends is \"roughly $13,500\"; take-home about $76,500",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: taxable $74,250; 0% on the first $49,450, 15% on $24,800 = $3,720; take-home about $86,280 before state tax and before any non-qualified portion. The video's own stated method gives $11,138."
+  },
+  {
+   "claim": "2026 single standard deduction $15,750 and 0% bracket up to $49,450",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Secondary summaries of Rev. Proc. 2025-32: 2026 standard deduction $16,100 and 0% ceiling $49,450 (single); $15,750 was the 2025 deduction. Years are mixed in the video."
+  },
+  {
+   "claim": "No FICA on passive dividend income",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Correct in general; not re-verified. (Net investment income tax is below its $200,000 threshold here.)"
+  },
+  {
+   "claim": "SPYI/QQQI use Section 1256 index options (60% long-term / 40% short-term); return of capital \"is a tax deferral mechanism\" and \"principal stays intact\"; 3M cut a 66-year dividend streak; covered-call yields of 7-8% and 14%",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified. Return of capital lowers cost basis and is not by itself proof that NAV is preserved; the 3M streak length (65 or 66 years) and the funds' current yields should be checked."
+  }
+ ],
+ "strengths": [
+  "Strong sensory opening and a coherent spine.",
+  "Genuine risk education: check NAV history before yield, return-of-capital explanation, position sizing (20% in covered-call funds).",
+  "Plain-language definitions of dividend, yield and NAV.",
+  "Explicit loop with a payoff."
+ ],
+ "weaknesses": [
+  "Headline outcome needs a ~37% annual return; no return assumption stated.",
+  "Tax section is wrong by a factor of about 3.6 on its own facts and mixes tax years.",
+  "Fund tickers misattributed in the key yield passage.",
+  "Penthouse thumbnail contradicts the script.",
+  "No channel CTA, no disclaimer, production-script leak in the narration."
+ ],
+ "contradictions": [
+  "Thumbnail penthouse versus \"You didn't buy a penthouse\" and \"The apartment is the same\".",
+  "\"15% on the taxable portion\" ($11,138) versus \"$13,500\" (15% of the gross).",
+  "\"$90 extra a month\" versus a $400 increase \"disappears entirely\" into the transfer.",
+  "\"Median\" at 29 is $58,000 versus \"current national median\" $64,220 (a different population; not reconciled).",
+  "Cadence wording mixes \"every week\", \"quarter\" and \"month\" for the same $90,000."
+ ],
+ "improvement_opportunities": [
+  "State the return assumption and show the three-line arithmetic ($158,800 in; at 10% about $290,600 out) then reframe the title, e.g. \"$90,000 a Year at 40: What You Would Really Need\".",
+  "Rework the tax scene with the 0%/15% stack ($3,720) and say which distributions are qualified.",
+  "Correct the tickers (SPYI, QQQI) and state their tax characterisation from the fund documents.",
+  "Match the thumbnail to the quiet-life message (coffee, same apartment, phone notification)."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description and end-screen content",
+  "Fund prospectuses and distribution-characterisation documents"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "WEAK",
+  "lifetime_rate_ratio": "0.25953",
+  "age_days": "83.3593",
+  "views_likes_comments_snapshot": {
+   "views": 3583,
+   "likes": 108,
+   "comments": 18,
+   "published_at": "2026-06-19"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.35227",
+   "tier": "WEAK",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that thumbnail, tax errors or length affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "implied return stated as ~37% nominal (~44% effective)",
+    "FR-TITLE-03 judgment changed NOT_MET to PARTLY_MET (content delivered; plausibility fails)",
+    "position claims corrected (~750, ~6,800)",
+    "weekly-deposit item restated as mixed wording",
+    "thumbnail arrow described precisely",
+    "ticker/yield and non-qualified-dividend statements hedged"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

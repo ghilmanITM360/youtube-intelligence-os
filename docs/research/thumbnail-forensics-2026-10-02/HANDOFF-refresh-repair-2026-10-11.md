@@ -1,0 +1,13 @@
+# Continuation after dynamic refresh repair
+
+Stop reason: live short-term usage reached 92%; weekly usage 75%. No context/session/rate-limit warning occurred. No subagents or watchers were used. Finish this atomic technical repair and push, then stop under the owner's resource policy.
+
+Canonical main remains `08e719264e31ecd82de24f8eeb8f065c08359fe5`. PR #20 remains OPEN, CLEAN/MERGEABLE, exact head `e9b56960f6c6bcbb07d5dd0475eaf4572a657a25`; GitHub validation is SUCCESS. Recommendation: READY_TO_MERGE, OWNER APPROVAL REQUIRED. It has not been merged or modified during review.
+
+Fresh review verified normal workbook registration, exactly two new identities, zero transcript inserts, NULL unknown metrics/format, duplicate safeguards and unchanged historical video/channel/transcript rows. Both SQLite catalogs pass integrity and zero FK violations. Full PR suite: 460 passed, 1 skipped; focused registration/hook/script suite: 63 passed. Registration verifier confirms 100% provenance. Pending-only hook/script reporting accounts for both real internal IDs and marks both unavailable, with zero features. Three unchanged historical CH-000004 artifacts remain REFRESH_REQUIRED: topic-opportunity-intelligence-2026-09-09.json, packaging-intelligence-2026-09-09-v2.json and hook-script-intelligence-pilot-2026-09-10.json. No generation timestamp was falsified.
+
+Research worktree: `/Users/ghilmankhan/workprojects/yios-thumbnail-forensics`, branch `research/thumbnail-forensics-complete-2026-10-04`. Dynamic refresh repair is described in REFRESH-REPAIR-2026-10-11.md. Totals remain 2303/518/518/121; channels complete 1/75. No new video QA has started. Pre-existing untracked HANDOFF-wave8-resource-stop-2026-10-05.md remains untouched.
+
+Exact next action: check usage first. If safe, recover only Hypothetically's 39-row worklist, then inspect EvuEMhh7SSk's existing B002-07 thumbnail and PK-08 package audits. Its local image exists and SHA256 was freshly verified as d493f7626dd7664e9d3aa778dfdeee133eb55c880c0c9d983f0f5dd77256a5d6. No image was visually inspected this session. Review native, 320x180 and 160x90, record explicit corrections/result, refresh workbook/JSON through the dynamic helper, validate, commit explicit paths and push before advancing. Initial coverage 5/39, remaining 34. Add a dedicated current QA row and confirmed checkpoint to workbook sheets 08/09 when completing a video; the generic totals repair does not invent QA history.
+
+SRC01 U8F7UNK9jco and SRC02 qu8nx1qUwEU remain HELD_UNRESOLVED; no investigation or registration this session. Privacy/access decision remains outstanding; no history rewrite or artifact deletion.

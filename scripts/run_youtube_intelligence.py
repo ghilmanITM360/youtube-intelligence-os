@@ -794,6 +794,18 @@ def build_capability_registry(generated_on=None):
     }
 
 
+def framework_plan_errors(path):
+    """Structural gate from the reference knowledge base: retrieval present, rules real and applicable, every stage implemented or excepted."""
+    sys.path.insert(0, str(REPO_ROOT / "research" / "finance-economics-intelligence" / "reference-framework"))
+    import content_plan_check
+    db = REPO_ROOT / "data" / "knowledge" / "reference_knowledge.db"
+    try:
+        plan = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return [f"unreadable framework plan: {exc}"]
+    return content_plan_check.check(str(db), plan)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--channel")
@@ -801,6 +813,11 @@ def main(argv=None):
     parser.add_argument("--output-dir")
     parser.add_argument("--generated-on")
     parser.add_argument("--json-only", action="store_true")
+    parser.add_argument("--framework-plan",
+                         help="Reference-framework plan JSON (retrieved sections + per-stage rule applications or exceptions). "
+                              "Structurally validated against data/knowledge/reference_knowledge.db before any plan is written; this is not a semantic approval.")
+    parser.add_argument("--framework-guided", action="store_true",
+                         help="Claim this output is framework-guided. Requires --framework-plan. Generic runs omit both.")
     parser.add_argument("--capability-registry", action="store_true",
                          help="Emit the global capability registry instead of a single plan.")
     args = parser.parse_args(argv)
@@ -816,7 +833,19 @@ def main(argv=None):
     if not args.channel or not args.opportunity:
         parser.error("--channel and --opportunity are required unless --capability-registry is set")
 
+    if args.framework_guided and not args.framework_plan:
+        parser.error("--framework-guided requires --framework-plan")
+
+    framework = None
+    if args.framework_plan:
+        errors = framework_plan_errors(args.framework_plan)
+        if errors:
+            print("framework gate FAILED (structural): " + "; ".join(errors), file=sys.stderr)
+            return 2
+        framework = {"status": "STRUCTURALLY_VALID_NOT_SEMANTICALLY_REVIEWED", "plan_file": str(args.framework_plan)}
     plan = build_plan(args.channel, args.opportunity, generated_on=args.generated_on)
+    if framework:
+        plan["reference_framework"] = framework
     json_path, md_path = write_outputs(plan, args.output_dir)
     print(json_path)
     if not args.json_only:

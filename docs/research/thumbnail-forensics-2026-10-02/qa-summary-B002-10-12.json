@@ -1,0 +1,23 @@
+{
+ "scope": "B002-10..B002-12 (72 audits), QA wave 4",
+ "decision": "PASS_WITH_CORRECTIONS (no systematic failure; no material errors)",
+ "sample": {
+  "B002_10": 6,
+  "B002_11": 6,
+  "B002_12": 6,
+  "total": 18
+ },
+ "material": 0,
+ "minor_factual": 12,
+ "classification": 4,
+ "subjective": 3,
+ "style_only": 1,
+ "wrong_image_mappings": 0,
+ "visible_text_errors": "1 omission (B002-12 seq 15 missed three small in-scene text items; classed minor)",
+ "score_arithmetic_errors": 0,
+ "templated_rows": 0,
+ "rows_with_correction": "11 of 18 sampled rows",
+ "field_corrections_applied": 20,
+ "automated_checks_all_72_rows": "qa-wave-checks-B002-10-12.json: 0 validator errors, 0 duplicate Thumbnail_IDs, 0 repeated prose, 31 distinct scores, mean 66.9; 2 intentional word_count warnings (bracketed badge text, full in-scene text count)",
+ "open_note": "mean score 59.1, 65.3, 68.5, 66.9 across waves (no further drift); credibility_score mode 5 on 27 of 72 rows. One reviewer proposed a non-enum mechanism_primary ('aspiration'); coordinator mapped it to 'other' and logged the change. Reviewer sessions hit the API session limit after writing their result files; all three files were complete (6 rows each) and were validated before use."
+}

@@ -1,0 +1,24 @@
+{
+  "batch_id": "NICK_106-110_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {"Video_ID":"J_sTOWazmho","scope":"FULL_STORED_TEXT","Text_SHA256":"2f1f56199ea41789c54130a9e9b82e360f39745633c1c27b6fc66a2f5435987a","character_count":16040,"read_character_ranges":[[0,4500],[4500,9000],[9000,13500],[13500,16040]],"audio_verified":false,"image_sha256":"53582550da758d8fa9cf39f55c4baa4aaaf4150743f82f2bd005ffd7b4a9589f","image_inspected_sizes":[[480,360],[320,180]],"image_acquisition":"FRESH_FETCH_HQDEFAULT_MAXRES_404","acquired_date":"2026-10-19"},
+    {"Video_ID":"JtMc-fNjfpo","scope":"FULL_STORED_TEXT","Text_SHA256":"7990de958d2216346217182ecc2c33a4e39222951acd707acf53f16c7343beec","character_count":19984,"read_character_ranges":[[0,5000],[5000,10000],[10000,15000],[15000,19984]],"audio_verified":false,"image_sha256":"495514be8873cd1b9b8b019a90f9214a542d064b6aa9d365ec9e7a03c88302cf","image_inspected_sizes":[[1280,720],[320,180]],"image_acquisition":"FRESH_FETCH_FROM_REGISTERED_YTIMG_URL","acquired_date":"2026-10-19"},
+    {"Video_ID":"K7yJlhLuNe8","scope":"FULL_STORED_TEXT","Text_SHA256":"61ab161c0fbe27a526243b11d6cbf220e0f538b67c362d056c823c0ef2d1d7d0","character_count":18765,"read_character_ranges":[[0,5000],[5000,10000],[10000,15000],[15000,18765]],"audio_verified":false,"image_sha256":"8c00d8150957969443b7c17af46a9cd07592ed163ee081bad36e1e2dc4900255","image_inspected_sizes":[[1280,720],[320,180]],"image_acquisition":"FRESH_FETCH_FROM_REGISTERED_YTIMG_URL","acquired_date":"2026-10-19"},
+    {"Video_ID":"KEB7pAXu8pk","scope":"FULL_STORED_TEXT","Text_SHA256":"25340bb9dab1bb122e1aa233842040a0396cfd3cfdca7a48648aad49d9acd94d","character_count":21851,"read_character_ranges":[[0,5500],[5500,11000],[11000,16500],[16500,21851]],"audio_verified":false,"image_sha256":"2cb65f27d2ccb93be53cfac6c45e241835c82308726d35c7e83e4cdd9f2e9c72","image_inspected_sizes":[[1280,720],[320,180]],"image_acquisition":"FRESH_FETCH_FROM_REGISTERED_YTIMG_URL","acquired_date":"2026-10-19"},
+    {"Video_ID":"KPHY5M2h8mI","scope":"FULL_STORED_TEXT","Text_SHA256":"52bc41228976cf18c875686e80938f7d40088b3e083f4a615d34a178c26bf4b4","character_count":28779,"read_character_ranges":[[0,6000],[6000,12000],[12000,18000],[18000,24000],[24000,28779]],"audio_verified":false,"image_sha256":"0f2742a5bd796eaf17007305f75ffea9a6bbe5e79f8bba4b2eb84a42d1c471f2","image_inspected_sizes":[[1280,720],[320,180]],"image_acquisition":"FRESH_FETCH_FROM_REGISTERED_YTIMG_URL","acquired_date":"2026-10-19"}
+  ],
+  "primary_source_receipts": [
+    {"claim":"Compare amount financed, APR, term and total ownership cost rather than monthly payment alone","source":"Consumer Financial Protection Bureau auto-loan comparison guidance","url":"https://www.consumerfinance.gov/ask-cfpb/how-do-i-compare-auto-loan-offers-what-should-i-look-at-besides-the-monthly-payment-en-753/","accessed":"2026-10-19"},
+    {"claim":"Market-return projections are assumptions, not guaranteed results","source":"SEC Investor.gov performance-claims bulletin and compound-interest calculator","url":"https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-47","accessed":"2026-10-19"}
+  ],
+  "calculation_receipts": [
+    {"calculation":"$1,000 compounded once for 15 years","result":"$4,177.25 at 10%; $2,759.03 at 7%","method":"1000*(1+r)^15; future value, not present ownership cost"},
+    {"calculation":"$780 monthly for 30 years","result":"$1,763,180.58 at 10% nominal with monthly compounding; script's $1,582,342 implies a lower effective assumption","method":"ordinary-annuity future value"},
+    {"calculation":"$42,000 for 72 months at 6.8%","result":"$712.03 monthly; $51,266.27 total; $9,266.27 interest","method":"standard monthly amortization; stated $780 requires extra financed amount or different terms"},
+    {"calculation":"$500 monthly at 7%","result":"$86,542 after 10 years; $260,463 after 20; $900,527 after 35","method":"ordinary-annuity future value"},
+    {"calculation":"$450 monthly at 7% for 72 months","result":"$40,122","method":"ordinary-annuity future value"},
+    {"calculation":"$400 monthly at 7%","result":"$487,988 after 30 years; $1,049,925 after 40","method":"ordinary-annuity future value"},
+    {"calculation":"$800 monthly at 7%","result":"$119,887 after 9 years; that balance grows to $912,611 over another 30 years; 30 years of continuing deposits yields $975,977","method":"ordinary-annuity future value"}
+  ]
+}

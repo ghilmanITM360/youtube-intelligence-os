@@ -1,0 +1,201 @@
+{
+ "video_id": "uPQcyookL0Y",
+ "mode_requested": "CT_SCAN",
+ "mode_achieved": "STRUCTURAL_PLUS_PARTIAL_REVIEW",
+ "temporal": {
+  "MEASURED": "all 14647 decoded frames, pixel-diff metrics, CFR 30000/1001",
+  "frames_total": 14647
+ },
+ "candidates": {
+  "tierA_hard_cut_or_transition": 77,
+  "tierB_soft_peaks": 8,
+  "reviewed": 85,
+  "review_scope": "all 85 candidates via 18 sparse montages (prev/first/mid/next frames); two bounded reviewers",
+  "unreviewed": "none at montage level",
+  "review_tally": {
+   "SAME_SCENE_MOTION": 6,
+   "TRANSITION": 5,
+   "HARD_CUT": 72,
+   "UNCLEAR": 2
+  },
+  "unclear": [
+   "B005",
+   "A051"
+  ]
+ },
+ "draft_states": {
+  "count": 86,
+  "gaps": 0,
+  "overlaps": 0,
+  "note": "contiguous partition by construction from tier-A cuts; NOT semantically verified; longest state 29.53 s still contains unsegmented intra-state motion",
+  "reconciled": "tables/states_reconciled_v1.csv: 13 of 86 states flagged (7 SPLIT_DOUBTFUL_SAME_SCENE_MOTION; 5 TRANSITION_STATE_REVIEWER_TRANSITION; 1 ENTRY_UNCLEAR); original states_machine.csv unchanged; no merges applied",
+  "v2": {
+   "table": "tables/states_v2_draft.csv",
+   "states": 98,
+   "splits_applied": 12,
+   "gaps": 0,
+   "overlaps": 0,
+   "status": "DRAFT_UNVALIDATED",
+   "v1_unchanged": true
+  }
+ },
+ "domains": {
+  "shots": "PARTIAL",
+  "visual_states": "DRAFT",
+  "object_lifecycles": "NOT_STARTED",
+  "motion": "NOT_STARTED (only per-frame diff metrics)",
+  "text_graphics": "NOT_STARTED",
+  "camera": "NOT_STARTED",
+  "audio_alignment": "UNAVAILABLE - audio not listened; no ASR run",
+  "art_direction": "NOT_STARTED"
+ },
+ "intra_state_scan": {
+  "status": "DETECTOR_RUN_UNVERIFIED",
+  "scope": "26 states >180 frames (9064 frames, 62% of video)",
+  "events": {
+   "STILL_ONSET": 29,
+   "MOTION_ONSET_AFTER_STILL": 23,
+   "BURST": 113
+  },
+  "thresholds": "derived from this source: still ge12<500; still run>=15f; burst ge12>=100000 and >=8x rolling median",
+  "visual_spot_check": "4 of 113 bursts (seq14,57,93,144) viewed: all show real in-scene animation, none are cuts; precision/recall NOT measured",
+  "table": "tables/intra_state_events_detector.csv, tables/long_state_summary.csv",
+  "burst_sample_review": {
+   "scope": "31 of 113 bursts, stratified (strongest + median per state with bursts; NOT random)",
+   "reviewer": "reviewer_3, 8 montages",
+   "tally": {
+    "SCALE_OR_CAMERA_MOVE": 13,
+    "HARD_CUT": 5,
+    "OBJECT_ENTRY_OR_EXIT": 5,
+    "FADE_OR_WIPE": 5,
+    "CHARACTER_ACTION": 1,
+    "TEXT_OR_GRAPHIC_CHANGE": 2
+   },
+   "orchestrator_viewed": "P02 (seq55,49,61,57), P07 (seq113,122,127,141)",
+   "table": "tables/burst_sample_review_sparse_montage.csv"
+  }
+ },
+ "cut_detector_recall": {
+  "status": "IMPROVED_STILL_UNVERIFIED_RECALL",
+  "correction_to_checkpoint_E": "E claimed 5 sampled bursts were cuts 'missed by tier-A'. Re-check: B001(f930), B003(f3767), B007(f13551) were ALREADY tier-B candidates judged HARD_CUT by reviewer_1; draft states v1 had simply not been split on tier-B. Only seq49(f2601) and seq113(f11696) were absent from all candidate lists.",
+  "second_detector": "ink_iou_change>=0.7 on 320x180 gray (ink=gray<200), outside +-4f of A/B, clustered gap<=4f: 42 clusters; threshold picked on 5 known cuts (all >=0.758) -> in-sample, not independent; 7 of 26 known non-cut bursts also exceed it (~27% FP in that stratified sample)",
+  "reviewer_4": {
+   "images_viewed": 9,
+   "rows": 42,
+   "tally": {
+    "SAME_SHOT_MOTION": 29,
+    "HARD_CUT": 7,
+    "TEXT_OR_GRAPHIC_CHANGE": 6
+   },
+   "transcript": "18 image results, own write",
+   "orchestrator_viewed": "Q05 (C021-C025), Q07 (C031-C035)",
+   "contested": "C034 (white '3000' card -> crowd sliding in) may be object entry on a card rather than a hard cut; C023-C025 object swaps on white were judged SAME_SHOT_MOTION"
+  },
+  "hard_cut_total_reviewed": "72 (A/B) + 7 (C) = 79 reviewer-labelled HARD_CUT; still a lower bound: recall of second detector unmeasured, cuts between two colour-heavy full-frame scenes with little ink change and slow dissolves can still be missed",
+  "definitional_note": "On white-card content, 'shot' vs 'object/graphic swap on a continuing white card' is ambiguous; reviewer verdicts are one reading, not ground truth"
+ },
+ "states_v2_boundary_review": {
+  "scope": "all 97 boundaries, one sparse montage row each (midL,endL,startR,midR); reviewer_5 X001-X050, reviewer_6 X051-X097; transcripts: 20 image results each, own writes",
+  "tally": {
+   "TRANSITION": 8,
+   "SPURIOUS": 9,
+   "REAL_SHOT_CHANGE": 80
+  },
+  "spurious": [
+   "X002",
+   "X041",
+   "X042",
+   "X044",
+   "X052",
+   "X069",
+   "X088",
+   "X092",
+   "X095"
+  ],
+  "hidden_change": [
+   "X001",
+   "X004",
+   "X017",
+   "X041",
+   "X046",
+   "X059",
+   "X068",
+   "X069",
+   "X074",
+   "X080",
+   "X087",
+   "X088",
+   "X090",
+   "X097"
+  ],
+  "orchestrator_viewed": "X09 (X041-X045), X14 (X066-X070), X18 (X086-X090): 15 of 97 boundaries, all consistent with reviewers",
+  "finding_boundary_placement": "v2 splits from multi-frame second-detector clusters were placed at cluster start, which may precede the visible change (X088: C034 split at f13348 sits on an unchanged '3000' card; crowd appears ~f13355). Boundaries entered via multi-frame clusters: X035,X088",
+  "finding_zoom": "X041/X042/X044 (A033/A034 entries) show fast zoom on the same figure: reviewer SPURIOUS, orchestrator agrees (camera move, not shot change)",
+  "reviewer_6_chat_tally_note": "reviewer_6's chat summary tally was internally inconsistent; JSON tallies used (REAL 38/TRANS 4/SPUR 5 for X051-X097)",
+  "proposals": "tables/v2_reconcile_proposals_unapplied.csv",
+  "applied": false,
+  "limits": "sparse 4-frame rows; transitions and hidden changes may be missed or mislocated; not native-frame review"
+ },
+ "states_v3": {
+  "status": "DRAFT_UNVALIDATED",
+  "states": 88,
+  "gaps_overlaps": 0,
+  "file": "tables/states_v3_draft.csv",
+  "basis": "v2 with 7 merge groups (9 SPURIOUS boundaries + X043) resolved by orchestrator viewing dense 8-per-state strips; X069 and X088 additionally native consecutive frames (f10347-10356, f13352-13361). v1/v2 immutable.",
+  "hidden_change_resolution": "14/14 resolved in tables/v3_subevents_and_hidden_resolution.csv as camera zoom/pan, in-shot object or board-painting swaps, white-card internal swaps, or transitions; none split as new hard cuts. Sub-event frame brackets are from sparse (8 per state) views except X069/X088 (native).",
+  "definition_caveat": "v3 states are shot-level; graphic swaps on a continuing white card are sub-events, not states. This is one reading, not ground truth; reviewers earlier labelled C034 a HARD_CUT.",
+  "limits": [
+   "Not exhaustive per-frame inspection; dense strips are 8 evenly spaced frames per state",
+   "Single viewer (orchestrator) for these resolutions; no independent second reviewer",
+   "X088 frames f13349-13351 not viewed",
+   "82 intra-state bursts still unreviewed",
+   "No audio listening, no ASR, no semantic validation"
+  ]
+ },
+ "intra_state_burst_review_rest": {
+  "bursts": 82,
+  "montages": "frames/montages8 R01-R21 (external)",
+  "reviewers": "reviewer_7 (rows 1-44, 11 montages), reviewer_8 (rows 45-82, 10 montages); transcripts audited: all montage reads returned images, each wrote its own file",
+  "tally": {
+   "SCALE_OR_CAMERA_MOVE": 33,
+   "FADE_OR_WIPE": 18,
+   "OBJECT_ENTRY_OR_EXIT": 15,
+   "TEXT_OR_GRAPHIC_CHANGE": 5,
+   "HARD_CUT": 4,
+   "UNCLEAR": 4,
+   "CHARACTER_ACTION": 3
+  },
+  "finding": "All 4 HARD_CUT rows (seq 42 f969, 52 f2664, 111 f9664, 147 f13673) sit exactly on existing v3 state starts, so no new hard cut was found among the 82; seq42 and seq111 montages viewed by orchestrator and consistent. 4 UNCLEAR (seq22,125,129,140) left unresolved.",
+  "status": "OBSERVED_sparse (4 frames per burst); now all 113 BURST detector candidates have a sparse review (31 earlier + 82). STILL_ONSET and MOTION_ONSET_AFTER_STILL (52) not reviewed.",
+  "caveat": "Reviewer verdicts for 80 rows not individually spot-checked; only 2 of 4 HARD_CUT montages viewed by orchestrator."
+ },
+ "states_v4": {
+  "file": "tables/states_v4_draft.csv",
+  "states": 89,
+  "change": "W085 split at f13993 -> W085a/W085b",
+  "gaps": 0,
+  "overlaps": 0,
+  "status": "DRAFT_UNVALIDATED"
+ },
+ "review_scope_checkpoint_J": {
+  "reviewers": [
+   "reviewer_9 33 imgs",
+   "reviewer_10 13 imgs",
+   "reviewer_11 6 imgs"
+  ],
+  "resolution": "480x270 consecutive/step montages, 320x180 onset tiles; no native 1080p",
+  "independence": "same-model fresh-context subagents; not human/different-model",
+  "audio": "ASR provisional only; no listening"
+ },
+ "asr": {
+  "tool": "faster-whisper 1.2.1 / ctranslate2 4.8.5 / small.en int8",
+  "words": 1141,
+  "segments": 76,
+  "label": "PROVISIONAL_ASR_NOT_LISTENING"
+ },
+ "checkpoint_K_native_boundary_windows": {
+  "W047": "f8420-8452 native, metrics",
+  "W081": "f13158-13180",
+  "W085b": "f13990-14008"
+ }
+}

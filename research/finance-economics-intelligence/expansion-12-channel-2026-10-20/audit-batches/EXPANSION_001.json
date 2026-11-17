@@ -1,0 +1,58 @@
+{
+  "batch_id": "EXPANSION_001",
+  "status": "BLOCKED_PARTIAL_EVIDENCE",
+  "scope": "First unique Finance-expansion candidate; acquisition metadata and registered thumbnail available, captions unavailable",
+  "reviews": [
+    {
+      "video_id": "HjlVexL2Lxk",
+      "review_date": "2026-10-20",
+      "evidence_disposition": "PARTIAL_ONLY_NOT_DEEP_AUDITED",
+      "title_review": {
+        "scope": "ACTUAL_TITLE_AND_ACQUISITION_DESCRIPTION",
+        "analysis": "'Options Trading Explained with Bananas (No AI)' clearly states an introductory options-education promise, uses the channel's banana metaphor, and adds a production-method claim. The title does not identify calls versus puts, buying versus writing, exercise style, strike, expiration, break-even, assignment, leverage or loss profile. Those distinctions are essential to judging financial accuracy, but no stored captions are available. The parenthetical 'No AI' is an acquisition-description creator claim and was not independently verified.",
+        "source_refs": ["FINANCE_EXPANSION_MASTER.csv:HjlVexL2Lxk", "audit-batches/EXPANSION_001_READ_RECEIPTS.json"]
+      },
+      "thumbnail_review": {
+        "scope": "ACTUAL_IMAGE",
+        "image_path": "research/finance-economics-intelligence/expansion-12-channel-2026-10-20/audit-evidence/HjlVexL2Lxk.jpg",
+        "image_source": "https://i.ytimg.com/vi/HjlVexL2Lxk/maxresdefault.jpg",
+        "image_sha256": "eb5fa82778c7010e85bb7ef47f2a38d270dfef8f1e5c4ad32a11d4f6fd2a92e0",
+        "dimensions": [1280, 720],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "analysis": "The actual image is a white-background hand-drawn composition: a brown ape occupies the left, extends one palm, and faces black handwritten text 'OPTIONS TRADING' on the right with four small yellow x marks. The two-line phrase and character silhouette remain clear at 320x180. The image communicates the topic and handmade channel identity but contains no bananas, payoff diagram, strike/expiration notation or risk cue. It therefore reinforces 'explained simply' more than the financial mechanism promised by the title. Historical upload art, CTR and A/B tests are unavailable.",
+        "source_refs": ["FINANCE_EXPANSION_MASTER.csv:HjlVexL2Lxk", "audit-batches/EXPANSION_001_READ_RECEIPTS.json"]
+      },
+      "script_review": {
+        "scope": "BLOCKED_NO_CAPTION_TEXT",
+        "analysis": "The PR #39 acquisition explicitly reports captions_or_transcript_available=false, and no legitimate stored transcript or caption archive for this Video_ID exists in the local repository or source worktree. Script storyline, quotations, examples and trading claims were not inferred from the title or thumbnail.",
+        "financial_correctness_boundary": "SEC/Investor.gov, FINRA and OCC establish the required distinctions for any later transcript audit: an option buyer receives a right and pays a premium; a writer accepts an obligation and assignment risk; strike, expiration and break-even matter; long options can expire worthless; covered calls and cash-secured puts differ materially from uncovered short options; uncovered calls can have unlimited loss; profit is not guaranteed. With no caption text, none of these points can be attributed to or checked against the video.",
+        "source_refs": ["FINANCE_EXPANSION_MASTER.csv:HjlVexL2Lxk", "audit-batches/EXPANSION_001_READ_RECEIPTS.json"]
+      },
+      "topic_review": {
+        "scope": "BLOCKED_NO_FULL_TEXT",
+        "analysis": "Metadata establishes that options trading is the stated subject and Finance inclusion is appropriate. It does not establish the video's actual coverage, educational depth, strategy recommendations or risk framing, so topic deep review remains blocked rather than complete.",
+        "source_refs": ["FINANCE_EXPANSION_MASTER.csv:HjlVexL2Lxk", "audit-batches/EXPANSION_001_READ_RECEIPTS.json"]
+      },
+      "performance_review": {
+        "scope": "HISTORICAL_ACQUISITION_SNAPSHOT_ONLY",
+        "analysis": "The PR #39 snapshot records 130,434 views, 5,100 likes and 358 comments at 21.8236553125 days, or 5,976.7256 simple snapshot views per day. No expansion peer engine, comparable age-window cohort or repeated historical series has been registered, so performance tier is INSUFFICIENT_COMPARABLE_DATA rather than strong/typical/weak.",
+        "causal_status": "DESCRIPTIVE_SNAPSHOT_NOT_CAUSAL",
+        "source_refs": ["FINANCE_EXPANSION_MASTER.csv:HjlVexL2Lxk", "audit-batches/EXPANSION_001_READ_RECEIPTS.json"]
+      },
+      "virality_review": {
+        "scope": "BLOCKED_NO_SCRIPT_OR_COMPARABLE_COHORT",
+        "analysis": "The public snapshot is observable, but impressions, CTR, retention, traffic sources, packaging history, audience mix and comparable expansion peers are unavailable. No causal virality assessment or recommendation follows.",
+        "source_refs": ["FINANCE_EXPANSION_MASTER.csv:HjlVexL2Lxk", "audit-batches/EXPANSION_001_READ_RECEIPTS.json"]
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "BLOCKED_MISSING_SOURCE",
+        "TOPIC_REVIEW": "BLOCKED_MISSING_SOURCE",
+        "PERFORMANCE_REVIEW": "BLOCKED_INSUFFICIENT_COMPARABLE_DATA",
+        "VIRALITY_REVIEW": "BLOCKED_INSUFFICIENT_EVIDENCE"
+      }
+    }
+  ]
+}

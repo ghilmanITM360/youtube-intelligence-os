@@ -1,0 +1,30 @@
+{
+  "command": "uv run --frozen --extra dev python -m pytest -q",
+  "passed": 455,
+  "failed": 6,
+  "skipped": 1,
+  "warnings": 5,
+  "elapsed_seconds": 38.5,
+  "failed_tests": [
+    "tests/test_bhwa_forensic_research.py::test_bhwa_structural_analysis_covers_all_98_and_separates_deep_review",
+    "tests/test_bhwa_forensic_research.py::test_bhwa_breakout_inventory_has_25_unique_ids_and_original_nine",
+    "tests/test_video_type_classification.py::MasterInventoryVideoTypeCoverageTest::test_no_nonempty_raw_value_falls_through_to_unknown",
+    "tests/test_youtube_channel_master_tracker.py::ChannelMasterTrackerTests::test_raw_csv_json_sqlite_workbook_and_query_report_reconcile",
+    "tests/test_youtube_channel_master_tracker.py::ChannelMasterTrackerTests::test_standard_transcript_archives_crc_and_database_text_reconcile",
+    "tests/test_youtube_channel_master_tracker.py::ChannelMasterTrackerTests::test_submissions_datasets_and_portable_links_reconcile"
+  ],
+  "failure_message": "sqlite3.DatabaseError: file is not a database",
+  "cause_evidence": {
+    "path": "data/catalog/youtube_channel_registry.db",
+    "representation": "Git LFS pointer, not materialized SQLite",
+    "oid": "39e7a28ba592b9022bd1b32f4c288edde519730164a98ea858ce90c44d52f654",
+    "lfs_size_bytes": 141373440
+  },
+  "scope": "Inherited catalog representation; new playbook does not change this database or its tests. No unrelated reanalysis or hydration attempted.",
+  "ci_prior_head": {
+    "sha": "280097c90ef7a4c56c915e27195503c718e89976",
+    "result": "SUCCESS",
+    "url": "https://github.com/ghilmanITM360/youtube-intelligence-os/actions/runs/38345326991"
+  },
+  "initial_console_entrypoint": "uv run --frozen --extra dev pytest -q failed 4 module imports; rerun with documented python -m pytest entrypoint produced counts above"
+}

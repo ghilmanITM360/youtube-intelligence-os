@@ -1,0 +1,11 @@
+# Validation — Senior Health 15/16 channels
+- CSV rows 308 = JSONL rows 308 = XLSX VIDEOS rows 308; unique video IDs 308 (duplicates 0): PASS
+- Per-channel captured IDs == publicly reported totals (probe): all 15 OK (CHANNEL_COVERAGE.csv)
+- Videos by type: regular 308, Shorts 0, streams 0 (actor asked for all three; none exist/returned)
+- Complete metadata (title+date+views present): 308/308
+- Transcripts: 307/308 (creator 3, auto-generated 304); 1 missing: pZ_TXPAngLA (DrVitalisHealth) — actor returned no captions
+- TIMESTAMPS: NOT AVAILABLE. Actor plaintext mode returns text only (srtUrl null). Timestamped segments are NOT captured; needs a separate SRT-mode run (not done).
+- Paid AI transcription: disabled. Members-only: none flagged.
+- Each channel's raw run has 2 empty Shorts/Streams placeholder rows (billed ~$0.008/channel).
+- NOT acquired: DoctorLaura-e1w1o (67 videos, ~$0.27) — would exceed the $1.50 cap; Neal K. Shah excluded by instruction.
+- Actual new Apify charges (run totals): $1.26 of $1.50. A 502 on one request may have left an orphan run; not verified.

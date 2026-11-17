@@ -1,0 +1,22 @@
+{
+  "criteria_sha256": "6f0c962bba486a9163e5abd0281f4b36c6bab0049dca4ad7e612f16c55ddc236",
+  "input": "Only frozen original spec and explicitly original geometry; no source imagery read",
+  "source_index_to_render_index": "render index=source index-37; starts PTS0 independently of source timebase",
+  "implementation_choices": "Rounded-square geometry and discrete lookup positions are original test choices, not recovered source keyframes/curve",
+  "master_sha256": "b8b602299068bf7fab24cf869f67ffaad2eaa9dfab5b64d915cb761e74bfa7c1",
+  "command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-framerate",
+    "24",
+    "-i",
+    "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/encoded_inputs/f%03d.png",
+    "-c:v",
+    "ffv1",
+    "-pix_fmt",
+    "bgr0",
+    "/Users/ghilmankhan/YIOS-local-audits/Casual-Finance-Video006-EP0002-20261105T184819Z/original_render_attempt01/original_timing_master.mkv"
+  ],
+  "actual_listening_seconds": 0
+}

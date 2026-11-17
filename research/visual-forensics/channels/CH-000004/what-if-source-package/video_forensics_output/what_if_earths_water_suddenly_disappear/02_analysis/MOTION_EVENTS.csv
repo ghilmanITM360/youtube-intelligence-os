@@ -1,0 +1,30 @@
+MOTION_ID,SHOT_ID,SOURCE_STATE,TARGET_STATE,IN,OUT,MOVING_ELEMENT,ACTION,DIRECTION_OR_PATH,SPEED,AMPLITUDE,CAMERA,STATIC_ANCHORS,RELATIONSHIP,CONFIDENCE
+A01,S01,F01.0,F01.1,0,47,O01 sailboat,appears/is drawn onto the water line,N/A (reveal),fast (within ~2s),small,LOCKED,"blackboard, water line",STATE_REPLACEMENT,LIKELY
+A02,S01,F01.1,F01.2,48,95,fish graphic,appears below the water line,N/A (reveal),fast,small,LOCKED,"blackboard, sailboat",STATE_REPLACEMENT,LIKELY
+A03,S01,F01.2,F01.3,96,143,O01 sailboat,capsizes/tips over with motion lines,downward/rotational,fast (~1s),medium,LOCKED,"blackboard, water line",SEQUENTIAL,LIKELY
+A04,S03,F03.0,F03.1,247,294,water fill,swaps from normal water to solid black VACUUM fill,N/A (fill swap),fast,large (full water area),LOCKED,"beach line, palm tree",STATE_REPLACEMENT,LIKELY
+A05,S03,F03.1,F03.2,295,342,water fill,reverts from black VACUUM fill to normal water,N/A (fill swap),fast,large,LOCKED,"beach line, palm tree",STATE_REPLACEMENT,LIKELY
+A06,S04,F04.0,F04.1,417,488,exposed seafloor texture,expands downward as water level drops,downward,gradual (~3s),medium,LOCKED,"cliff, water tower, dashed line",SEQUENTIAL,LIKELY
+A07,S04,F04.1,F04.2,489,565,exposed seafloor texture; C04 figure,seafloor fully darkens; figure appears standing on it,downward / reveal,gradual,medium,LOCKED,"cliff, water tower",SIMULTANEOUS_INDEPENDENT,LIKELY
+A08,S05,F05.0,F05.1,643,714,"O03 debris/dead fish, grounded boat",appears scattered on the beach,N/A (reveal),gradual,small-medium,LOCKED,"palm tree, beach line",STATE_REPLACEMENT,LIKELY
+A09,S05,F05.1,F05.2,715,786,O03 debris,population increases across the beach,N/A (accumulation),gradual,medium,LOCKED,"palm tree, beach line",SEQUENTIAL,LIKELY
+A10,S05,F05.2,F05.3,787,856,G04 timer/scale overlay; O02 boat,overlay appears; boat begins dropping below water line,downward (boat),fast (overlay) / gradual (boat),small,LOCKED,"palm tree, beach line",SIMULTANEOUS_INDEPENDENT,LIKELY
+A11,S05,F05.3,F05.4,857,902,O02 boats,descend further below the water line,downward,gradual,medium,LOCKED,"palm tree, beach line, scale bar",SEQUENTIAL,LIKELY
+A12,S06,F06.0,F06.1,951,1066,O05 ship fleet,additional ships appear and continue descending along the seafloor slope,downward along slope,gradual,medium,LOCKED,"depth scale, seafloor slope",SEQUENTIAL,LIKELY
+A13,S06,F06.1,F06.2,1067,1200,depth-scale axis; frame fill,axis values deepen; frame fades to solid gray,N/A (parameter change + fade),gradual then fast fade,large,LOCKED,depth-scale axis,STATE_REPLACEMENT,LIKELY
+A14,S09,F09.0,F09.1,1661,1769,diagram/camera,zooms out from the dual-panel comparison to reveal the full trench profile,outward (zoom out),gradual (~4s),large,ZOOM_OUT,dashed sea-level line,CAMERA_SUBJECT_COUPLED,LIKELY
+A15,S10,F10.0,F10.1,1880,1967,E04 cross-section backdrop,"fades out, leaving the seaplane isolated",N/A (fade),gradual,large,LOCKED,dashed sea-level line,STATE_REPLACEMENT,LIKELY
+A16,S10,F10.1,F10.2,1968,2063,G05/O07 jar-diagram insert,fades in over/alongside the seaplane shot,N/A (fade in),gradual,medium,LOCKED,seaplane position,STATE_REPLACEMENT,LIKELY
+A17,S10,F10.2,F10.3,2064,2159,jar-diagram insert; G05 4-jar row,insert clears; a 4-jar row with GASP caption becomes dominant,N/A (composition swap),fast,large,LOCKED,jar row layout,STATE_REPLACEMENT,LIKELY
+A18,S10,F10.3,F10.4,2160,2255,G06 captions; jar water levels,captions cascade across repeated jar rows as water levels drop,downward (water levels),gradual,medium,LOCKED,jar row layout,SEQUENTIAL,LIKELY
+A19,S10,F10.4,F10.5,2256,2399,jar water fill,fully evaporates to a black dried-out fill in each jar,downward to empty,gradual,medium,LOCKED,jar row layout,SEQUENTIAL,LIKELY
+A20,S11,F11.0,F11.1,2579,2687,"C05 departing figure, dog, O08 rowboat",walk to the rowboat and push off toward open water,rightward/outward,gradual (~2s),medium,LOCKED,"house structure, water tank",SEQUENTIAL,LIKELY
+A21,S12,F12.0,F12.1,2744,2831,G08 rain lines,continue falling steadily (persistent loop),downward,constant,medium,LOCKED,hillside silhouette,PERSISTENT_LOOP,LIKELY
+A22,S12,F12.1,F12.2,2832,2927,E06 vegetation,rain stops; vegetation begins drying/thinning,N/A (state change),gradual,medium,LOCKED,hillside silhouette,STATE_REPLACEMENT,LIKELY
+A23,S12,F12.2,F12.3,2928,3023,G09 fire,small flame ignites at one point on the dried vegetation,N/A (ignition),fast,small,LOCKED,hillside silhouette,STATE_REPLACEMENT,LIKELY
+A24,S12,F12.3,F12.4,3024,3095,G09 fire,spreads across the full width of the hillside,outward (lateral spread),gradual (~3s),large,LOCKED,hillside base line,SEQUENTIAL,LIKELY
+A25,S12,F12.4,F12.5,3096,3191,G10 CO2 symbols; G07 footnote box,CO2 text rises from the fire; a footnote note box appears at upper-left,upward (CO2) / reveal (note box),gradual,medium,LOCKED,"hillside base line, fire",SIMULTANEOUS_INDEPENDENT,LIKELY
+A26,S13,F13.0,F13.1,3283,3373,G11 tombstone caption area,'WORSE? FOR WHO?' caption is hand-added beside the tombstone,N/A (reveal),fast,small,LOCKED,"host figure, blackboard, tombstone",STATE_REPLACEMENT,LIKELY
+A27,S14,F14.0,F14.1,3446,3541,G12 heat-gradient band,red gradient beneath the volcano intensifies progressively,N/A (color intensification),gradual (~7.6s),large,LOCKED,"volcano shape, chemistry boxes",SEQUENTIAL,LIKELY
+A28,S15,F15.0,F15.1,3725,3820,G13/E08 sun rays,"red rays intensify, radiating from the Sun toward the Moon",outward from Sun,gradual,medium,LOCKED,"host figure, blackboard, Sun, Moon",SEQUENTIAL,LIKELY
+A29,S15,F15.1,F15.2,3821,3916,G13/E08 sun rays,"rays fade, leaving the Moon alone and the Sun dimmer",N/A (fade),gradual,medium,LOCKED,"host figure, blackboard",STATE_REPLACEMENT,LIKELY

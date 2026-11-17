@@ -1,0 +1,15 @@
+# Resume — research complete (sampled scope)
+
+Branch `codex/casual-economics-forensic-research`, draft PR #25 (do not merge without owner approval). Status: **FULL_RESEARCH_COMPLETE** within sampled-forensic scope; full AV sign-off 0/11.
+
+## Done
+- 11/11 structural packages PASS (historical six + Big Short, Greece, Japan, 2008, Great Depression).
+- `03_CHANNEL_DNA/CHANNEL_PRODUCTION_DNA.md`, `05_PRODUCTION_BLUEPRINT/ORIGINAL_PRODUCTION_BLUEPRINT.md`.
+- `04_PERFORMANCE_RESEARCH/` performance, Trends (collectors re-runnable), news, SEO hypotheses.
+- `CASUAL_ECONOMICS_DEEP_RESEARCH_REPORT.md`, `06_VALIDATION_AND_HANDOFF/QA_LIMITATIONS_REGISTER.md`.
+
+## Optional future work (not required)
+Direct listening / continuous playback for AV sign-off; independent second reviewer; HIGH_PRIORITY claim fact-checks; first-party analytics if ever available.
+
+## Helpers
+`06_VALIDATION_AND_HANDOFF/prep_video.py`, `temporal_video.py` (copies; canonical scratch in `~/Documents/Codex/2026-10-14/superpowers-using-superpowers-users-ghilmankhan-codex/work/`), `assemble_generic_package.py` (refuses to overwrite validated packages). Validate: `validate_sampled_package.py <id>`, `reconcile_research_masters.py`, `validate_checkpoint.py`, `scripts/scan_tracked_secrets.py`, `git diff --check`.

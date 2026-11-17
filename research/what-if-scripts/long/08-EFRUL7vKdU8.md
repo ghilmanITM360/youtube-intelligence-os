@@ -1,0 +1,57 @@
+# What if you swam in a nuclear storage pool?
+
+| Field | Value |
+|---|---|
+| Video ID | `EFRUL7vKdU8` |
+| URL | https://www.youtube.com/watch?v=EFRUL7vKdU8 |
+| Format | long |
+| Published | 2024-04-02 |
+| Duration | 00:03:58 |
+| Views (at acquisition) | 3,033,203 |
+| Words | 849 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/EFRUL7vKdU8.txt` |
+| Source SHA-256 | `f3aa5cfe6124d091e9972eea54da7e18ed27ff1f79222c2be87f7fa1252dbfde` |
+
+## Script
+
+This question comes from Jonathan, who asks: What if I took a swim in a typical spent nuclear fuel pool? Would I need to dive to actually experience a fatal amount of radiation?
+
+How long could I safely stay at the surface?
+
+The short answer is that, assuming you’re a reasonably good swimmer, you could probably tread water anywhere from 10 to 40 hours. At that point, you would black out from fatigue and drown. This is also true for a pool without nuclear fuel in the bottom. And it’s not really the question Jonathan was asking.
+
+Spent fuel from nuclear reactors is indeed highly radioactive, and it’s also hot. Water is good for both radiation shielding and for cooling, so fuel is stored at the bottom of pools for a couple decades until it’s inert enough to be moved into dry casks. We haven’t really agreed on where to put spent nuclear fuel yet. One of these days we should probably figure that out.
+
+But Jonathan was asking about swimming in the pool. Here’s the geometry of a typical fuel storage pool.
+
+The heat from the fuel wouldn't be a big problem. The water temperature in a fuel pool can in theory go as high as 50°C, but in practice they're typically between 25°C and 35°C –warmer than most pools but cooler than a hot tub.
+
+But Jonathan was asking specifically about the effects of radiation.
+
+For the kinds of radiation coming off spent nuclear fuel, every 7 centimeters of water cuts the amount of radiation in half. This absorption means that two meters away from the fuel there’s a billionth as much radiation as directly adjacent to it – and two meters farther away than that there’s a billionth again as much.
+
+The most highly radioactive fuel rods are those that are recently removed from a reactor. Based on the activity levels provided by Ontario Hydro in a report, these are the regions of danger and safety for fresh fuel rods.
+
+Swimming to the bottom, touching your elbows to a fresh fuel canister, and immediately swimming back up would probably be enough to kill you.
+
+Yet outside the “safe dose” boundary, you could swim around as long as you wanted—the dose from the rods would be less than the normal background dose of radiation you get from cosmic rays and stuff walking around. In fact, as long as you were underwater, you would be shielded from most of that normal background dose as well. So you might receive a lower dose of radiation treading water in a spent fuel pool than walking around on the street.
+
+At least, in theory. If there’s corrosion in the spent fuel rod casings, there may be some fission products in the water. Spent fuel facilities generally do a pretty good job of keeping the water clean, but it’s radioactive enough that it wouldn’t be legal to sell it as bottled water. (Which is too bad –it’d be an amazing energy drink).
+
+We know spent fuel pools can be safe(ish) to swim in because they’re routinely serviced by human divers. However, these divers have to be careful.
+
+On August 31st, 2010, a diver was servicing the spent fuel pool at the Leibstadt nuclear reactor in Switzerland. He spotted an unidentified length of tubing on the bottom of the pool and asked his supervisor what to do. He was told to put it in his tool basket, which he did. Due to bubble noise in the pool, he didn’t hear his radiation alarm.
+
+When the tool basket was lifted towards the surface, the room’s radiation alarms went off. The basket was dropped back down and the diver left the pool. The diver’s dosimeter badges showed that he’d received a higher-than-normal whole-body dose of radiation, and the dose in his right hand was extremely high.
+
+The object turned out to be a piece of protective tubing from a radiation monitor in the reactor core, made highly radioactive by neutron flux.
+
+The tubing in question had been disassembled in 2006 but a piece accidentally broke off and sank to a remote corner of the pool floor, where it sat unnoticed for four years.
+
+The tubing was so radioactive that if the diver had tucked it into a tool belt or shoulder bag close to his body, he could’ve been killed. As it was, the water protected him, and only his hand—which is a body part more resistant to radiation than the delicate internal organs—received a heavy dose.
+
+So, as far as swimming safety goes, the bottom line is that you’d probably be ok, as long as you didn’t dive to the bottom or pick up anything strange or drink too much of the water.
+
+But just to be sure, I got in touch with a friend of mine who works at a research reactor, and asked him what he thought would happen to you if you tried to swim in their radiation containment pool.
+
+“In our reactor?” He thought about it for a moment. “You’d die pretty quickly, before reaching the water, from gunshot wounds.”

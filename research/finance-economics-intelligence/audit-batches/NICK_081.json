@@ -1,0 +1,136 @@
+{
+  "batch_id": "NICK_081",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "EK4tVUCCMGQ",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EK4tVUCCMGQ",
+          "TRANSCRIPT_COVERAGE.csv:EK4tVUCCMGQ",
+          "audit-batches/NICK_081_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact: \"15 Money Secrets Rich Parents Teach Their Kids (That Schools Never Will).\" Numbered secrets list, insider framing (\"Rich Parents\"), parenting angle and anti-school parenthetical. Two audiences: parents and adults who feel they missed lessons. Search intent overlaps \"money lessons for kids\" and \"what rich parents teach\". \"Secrets\" overstates largely familiar advice.",
+        "peer_comparison_ids": [
+          "37hwqt_CoDc",
+          "3w6Ffj_21Z0",
+          "0bnMucPlugA",
+          "NnyXK-ZJmp8",
+          "MMa7EWq0L6k",
+          "jVu2-t_RVII"
+        ],
+        "search_demand": "Historical query volume unknown. \"School never taught\" variants range from 37hwqt_CoDc 4.25985 STRONG (exact pool, five days earlier) to 3w6Ffj_21Z0 1.16413 TYPICAL and 0bnMucPlugA 0.32143 WEAK; this parents/kids variant 0.366 WEAK.",
+        "script_alignment": "Aligned in structure (15 enumerated lessons). Little is specific to parenting practice: most items are adult money-mindset advice (assets vs liabilities, income focus, habits, long-term thinking, good debt, Pareto) with \"wealthy parents teach\" as framing; no evidence about what wealthy parents actually teach."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EK4tVUCCMGQ",
+          "TRANSCRIPT_COVERAGE.csv:EK4tVUCCMGQ",
+          "audit-batches/NICK_081_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_EK4tVUCCMGQ.jpg",
+        "image_source": "https://i.ytimg.com/vi/EK4tVUCCMGQ/maxresdefault.jpg",
+        "image_sha256": "9f56460349fc0171bdabd93de0ce4531841ee7e378f3f3cbc1f565c229b3ee0f",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a grinning cartoon man in a navy blazer, hands on hips; center a smiling red-haired cartoon boy in a white polo dropping a green coin into a green piggy bank beside three rising stacks of green coins; heavy black \"HOW THE RICH / RAISE WINNERS\" with a curved arrow to the child. Mobile: two-line text and child/piggy bank legible. Positive aspirational tone, low tension; \"RAISE WINNERS\" parenting promise matches title, though the script offers little concrete child-rearing method. No number or \"secrets\" cue."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EK4tVUCCMGQ",
+          "TRANSCRIPT_COVERAGE.csv:EK4tVUCCMGQ",
+          "audit-batches/NICK_081_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "Have you ever wondered why some kids\nseem to have an unfair advantage in\nlife? Maybe you've noticed that certain\nclassmates always had the coolest\ngadgets went on the best vacations and\nsomehow landed amazing opportunities\nthat felt completely out of reach for\neveryone else. Um, well, here's the\nthing that might surprise you. It's not\njust about the money their parents had\nsitting in the bank. Um, the real\nadvantage comes from something much more",
+        "ending_words": "\nrespect. So there you have it, 15\nlessons that separate the wealthy from\neveryone else. The beautiful irony is\nthat none of these require a trust fund\nto implement. They just require a\nwillingness to think differently about\nmoney, time, and opportunity. Whether\nyou're broke or well off right now\ndoesn't matter nearly as much as whether\nyou're willing to start teaching these\nprinciples to yourself. And the people\nyou care about because at the end of the\nday, the best inheritance you can leave\nisn't money. It's the knowledge of how\nto create it. Now stop making excuses\nand start making changes.",
+        "analysis": "All 21,005 stored characters read in two contiguous ranges with canonical hash match. Hook: rich kids' advantage is knowledge, not money; subscribe CTA; \"I guarantee some of these will change how you think\". Fifteen lessons: how money works; assets vs liabilities (owner-occupied home and car as liabilities; rental income to pay a $2,000 car lease); anti-entitlement and three-generation loss pattern; social skills; earn more vs spend less; habits; money as a tool; long-term thinking; skills over money; money working for you; bigger problems bigger rewards; time value and skeptical view of degrees; good vs bad debt (rental leverage); 80/20 rule and straight-A tradeoffs; money doesn't make you better. Close: best inheritance is knowledge. Generic Rich-Dad-style content without data, studies, stories or worked numbers; repetitive filler. Several overgeneralizations about wealthy families and risk-free framing of leveraged real estate. Heavy fillers (\"um\", \"uh\") preserved; not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              10500
+            ],
+            "beat": "Rich-kid advantage hook, CTA, lessons 1-7: money basics, assets vs liabilities and rental-funded car lease, anti-entitlement/three generations, social skills, earning focus, habits, money as tool"
+          },
+          {
+            "character_range": [
+              10500,
+              21005
+            ],
+            "beat": "Lessons 8-15: long-term thinking, skills, money working, bigger problems, time and degrees, good vs bad debt, Pareto and grades, humility; knowledge-inheritance close"
+          }
+        ],
+        "claim_audit": [
+          "0:10500 \"Owner-occupied home is a liability\" follows a popular Rich Dad definition (cash-flow based), not standard balance-sheet accounting; a home is an asset that also provides imputed rent. \"Wealthy people never buy luxuries with their own earned income\" is an absolute overgeneralization. Rental properties paying a $2,000/month lease ignore vacancy, maintenance, leverage and tax effects. \"First generation builds, second maintains, third loses\" is a proverb; widely repeated 70%/90% loss statistics trace to weak consulting surveys - no figures given here, claim unverified.",
+          "0:10500 \"Limit to cutting expenses, virtually no limit to earning\" overstates earning flexibility for most workers; both levers matter. \"Poor families stress about $5 coffee while wealthy generate $500/week\" is a stereotype, not evidence.",
+          "10500:21005 \"Overestimate one year, underestimate ten\" is an aphorism. Good debt: \"tenants essentially pay off the loan\" and \"banks love good debt because it is less risky\" omit vacancy, rate, leverage and concentration risks; investment-property loans typically carry higher rates and stricter terms than owner-occupied mortgages, contrary to the implication. Pareto principle described correctly as a heuristic. \"Most wealthy people are humble\" unsupported. No tax, statistic or product claims to verify against primary sources."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EK4tVUCCMGQ",
+          "TRANSCRIPT_COVERAGE.csv:EK4tVUCCMGQ",
+          "audit-batches/NICK_081_READ_RECEIPTS.json"
+        ],
+        "analysis": "Intergenerational financial literacy and wealth mindset: what affluent families supposedly teach. Audience: parents and self-improvers. Very saturated, aspirational topic; this version lacks evidence on parental financial socialization (an existing research field) and offers adult-mindset lists instead.",
+        "novelty_and_corpus_angle": "Original angle: use actual research on financial socialization (e.g., parental money talk, allowances, custodial accounts) and age-specific exercises with real numbers (custodial Roth for teen earnings, matching savings), separating evidence from proverb.",
+        "competition": "Exact pool: STRONG 37hwqt_CoDc financial literacy 50 minutes 4.25985, MMa7EWq0L6k 10 more no-longer-worth 3.09363, 6RneApxqH1U $100K saved 2.68484, v-1VwbsUa94 Chinese rule 2.57622; WEAK OsYS0YdbtkM invest earlier 0.3243, jVu2-t_RVII money anxiety 0.17718."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:EK4tVUCCMGQ",
+          "TRANSCRIPT_COVERAGE.csv:EK4tVUCCMGQ",
+          "audit-batches/NICK_081_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "21,643 views at 310.5481 days, 21:49; 0.366x WEAK against 10 same-channel LONG_FORM peers published 2025-10-29 to 11-10, frozen 2026-09-11. Exact pool: strong 37hwqt_CoDc financial literacy 4.25985, MMa7EWq0L6k 10 more no-longer-worth 3.09363, 6RneApxqH1U $100K saved 2.68484, v-1VwbsUa94 Chinese rule 2.57622; typical rqUzMJmQARw protect wealth 1.92622, uk1hjZJIw4M after $30K 1.57962, uW_dNU7B8-c paycheck 0.81547, si24Q4xpT_Y small wins 0.79722; weak OsYS0YdbtkM invest earlier 0.3243, jVu2-t_RVII money anxiety 0.17718. Target is third-lowest. Closest semantic counterexample: 37hwqt_CoDc \"what school never taught\" literacy video five days earlier is STRONG, while this \"schools never will\" parents list is WEAK; numbered lists also appear among STRONG peers (MMa7EWq0L6k, 6RneApxqH1U), so list format is not the separator. Possible demand overlap with the five-day-earlier literacy video; untested. Peer images/scripts not re-inspected.",
+        "observed_result": "21,643 views; 310.5481 days; 1,309 seconds; 0.366x WEAK; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "School-never-taught and parenting-wealth topics range STRONG to WEAK on the channel; historical search interest unknown.",
+        "trend_timing": "2025-11-04 publication; no event link; seasonality unknown.",
+        "competition": "Same-fortnight pool contains four STRONG videos including a closely related literacy video.",
+        "format_fit": "22-minute 15-item generic list without examples; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 304-317 days old.",
+        "alternative_explanations": [
+          "Appeal: positive child/piggy-bank image and \"RAISE WINNERS\" may read as parenting content outside the core finance audience; CTR unknown.",
+          "Engagement: generic lessons with no stories or numbers may reduce continuation; retention unavailable.",
+          "Satisfaction: \"secrets\" promise versus familiar advice may disappoint; satisfaction unknown.",
+          "Cannibalization by the recent STRONG literacy video, audience mismatch and distribution could explain the WEAK result."
+        ],
+        "original_content_lesson": {
+          "test": "Test a parenting-money video built on specific age-based actions and research (custodial accounts, allowance experiments) against a generic secrets list; measure own CTR among parent-identified viewers, retention and saves.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

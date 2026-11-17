@@ -1,0 +1,51 @@
+{
+  "video_slug": "weird_and_worrying_questions",
+  "reference_video": "/Users/ghilmanislam360/Downloads/YTDown.com_Shorts_Weird-and-worrying-questions_Media_SLd4hnmeW_g_001_1080p.mp4",
+  "audio_present": true,
+  "audio_verified": true,
+  "current_stage": "COMPLETE_WITH_DOCUMENTED_LIMITATIONS",
+  "last_completed_shot": "S01",
+  "last_completed_state": "F01.26",
+  "last_completed_motion": "A25",
+  "last_completed_image": "IMG14",
+  "last_completed_capcut_shot": "S01",
+  "last_completed_i2v_shot": "S01",
+  "completed_files": [
+    "00_source/SOURCE_MANIFEST.md",
+    "00_source/audio/audio_original.aac",
+    "00_source/audio/audio.wav",
+    "00_source/verify.py",
+    "01_evidence/CONTACT_SHEET_1.jpg",
+    "01_evidence/frames/ (47 source-resolution 1s-interval PNGs)",
+    "01_evidence/zoom_*.jpg (5 targeted native-resolution inspection tiles)",
+    "02_analysis/TIMELINE.csv",
+    "02_analysis/ASSET_MANIFEST.csv",
+    "02_analysis/MOTION_EVENTS.csv",
+    "02_analysis/VISUAL_DNA.md",
+    "03_capcut/CAPCUT_REBUILD.md",
+    "04_image_to_video/IMAGE_PROMPTS.md",
+    "04_image_to_video/ANIMATION_PROMPTS.md",
+    "04_image_to_video/I2V_REBUILD.md",
+    "05_audio/AUDIO_MAP.md",
+    "MASTER_REPORT.md",
+    "CONTINUATION_HANDOFF.md"
+  ],
+  "partial_files": [],
+  "known_issues": [
+    "No transcript available: local whisper/mlx-whisper install failed (broken system pip / truststore macOS-version-parsing bug, same as other videos in this project). On-screen Q-card and caption text gives near-complete content coverage as a proxy; audio structure analyzed via ffmpeg silencedetect (4 measured gaps).",
+    "7 of 27 internal state boundaries (frames 213, 292, 507, 675, 833, 977, ~1134) are OBSERVED (confirmed by ffmpeg scene-cut detection at threshold 0.25 or 0.10); the remaining 20 are LIKELY (1-second-interval visual sampling only).",
+    "The entire video was determined to be a single locked-camera shot (S01, no camera cuts) after direct visual comparison across 5 targeted zoom grids spanning the full timeline; this is a deliberate evidence-based finding, not an incomplete shot split."
+  ],
+  "counts": {
+    "shots": 1,
+    "visual_states": 27,
+    "unique_assets": 19,
+    "motion_events": 25,
+    "unique_images": 14,
+    "audio_assets": 1
+  },
+  "next_required_action": "None. Project complete. If a working speech-to-text tool becomes available later, transcribe 00_source/audio/audio.wav and patch SCRIPT_OR_AUDIO_CUE in TIMELINE.csv; re-run 00_source/verify.py afterward. No other stage needs revisiting unless the source video itself changes (check SHA-256 in SOURCE_MANIFEST.md).",
+  "verification_command": "python3 00_source/verify.py",
+  "completed_at_utc": "2026-09-16T16:05:00Z",
+  "updated_at": "2026-09-16T16:05:00Z"
+}

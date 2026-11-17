@@ -1,0 +1,43 @@
+# What if everyone pointed a laser at the moon?
+
+| Field | Value |
+|---|---|
+| Video ID | `JqFSGkFPipM` |
+| URL | https://www.youtube.com/watch?v=JqFSGkFPipM |
+| Format | long |
+| Published | 2024-11-05 |
+| Duration | 00:05:37 |
+| Views (at acquisition) | 5,899,108 |
+| Words | 1,222 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/JqFSGkFPipM.txt` |
+| Source SHA-256 | `8bd552f2b68e3f924c625f11535045536cc1dbd4217a91a3e9241396ca42f676` |
+
+## Script
+
+This question comes from Peter, who asks, "If every person on Earth aimed a laser pointer at the moon at the same time, would it change color?" The answer is, "Not if we used regular laser pointers."
+
+The first thing to consider is that not everyone can see the moon at once. We could gather everyone into one spot, but we learned our lesson about that already. Most of the world's population lives between 0 and 120° east, so our best chance of illuminating the moon comes when it's somewhere over the Arabian Sea. We'll wait for a quarter moon viewed at night so we can compare the effects of our lasers on the dark and light sides. The typical red laser pointer is about 5 m, and a good one would have a tight enough beam to hit the moon, although it'd be spread out over a large fraction of the surface when it got there. Let's assume everyone has steady enough aim to hit the moon, and the light spreads out evenly across the surface. This is what happens.
+
+Nothing. It makes sense, though.
+
+Sunlight bathes the moon and Earth in a bit over a kilowatt of energy per square meter. Since the moon's cross-sectional area is about 10 trillion square meters, the bright half is bathed in about 6 paws of sunlight. While our planetwide collection of 5 matt lasers only adds up to about 30 megawatts of illumination, which is about 200 million times weaker.
+
+There's no way we'd notice the effect of the lasers. What if we tried more power?
+
+Um, okay. A 1 W laser is an extremely dangerous thing. It's not just powerful enough to blind you. It's capable of burning skin and setting things on fire.
+
+These lasers aren't exactly illegal, but there are legal restrictions on selling them in the US, which has led to a proliferation of suspicious $200 online shopping listings for one watt blue flashlight, very narrow beam, wink wink.
+
+I've seen one of these off-brand suspicious lasers in person, and they are terrifying. You should definitely never pick one up unless you're wearing safety glasses that cost more than the laser. So, suppose we spend a trillion dollars to buy one watt lasers for everyone. Here's the effect. Dang. All those laser pointers light up the surface of the moon with about a half a lux of illumination. That's about half as bright as moonlight is to us here on Earth. The 130,000 lux of illumination from the sun still drowns out the lasers. What if we tried more power?
+
+We're going to have to leave lasers behind for the moment and instead give everyone a night sun. The search light mounted on police and coast guard helicopters. With an output on the order of 50,000 lumens, it's capable of turning a patch of ground from night to day. The beam is several degrees wide, so we would want some kind of focusing lenses to get it down to the half degree needed to hit the moon. It's hard to see, but we're making progress. Our collective beam is providing 20 lux of illumination, outshining the ambient light on the night half of the moon by a factor of two. However, it certainly hasn't noticeably affected the light half. What if we tried more power? All right, let's swap out each night sun for an IMAX projector, a 30,000W pair of water cooled lamps with a combined output of over a million lumens. still barely visible. At the top of the Luxor Hotel in Las Vegas is one of the most powerful spotlights on Earth. Let's add a lens so the beam is focused on the moon. Put on a colored filter and then give one of them to everyone. All right, our light is definitely visible. So, we've accomplished our goal. Good job, team. What if we tried more power? Okay, we're going to have to go back to lasers. The Boeing YAL1 was a 747 size laser pointer. Literally, it was a megawatt class infrared laser mounted in a 747 as an experimental technology developed by the US Department of Defense. We can imagine building a visible light laser with similar power and giving one to everyone. Finally, we've managed to match the brightness of sunlight. We're also drawing 5 pawatts of power, which is double the world's average electricity consumption. What if we tried more power? Okay, let's put a megawatt laser on every square meter of Asia. Powering this array of 50 trillion lasers uses up Earth's oil reserves in approximately 2 minutes. But for those 2 minutes, the moon shines as brightly as the midm morning sun. And by the end of the 2 minutes, the lunar regalith is heated to a glow. What if we tried more power? All right, we're about to go way outside the realm of plausibility, like farther than we were already. The most powerful laser on Earth is the confinement beam at the National Ignition Facility, a fusion research laboratory. It's an ultraviolet laser with an output of 500 terowatt, but it fires only in pulses lasting a few nanconds. So, the total energy delivered is equivalent to about 1/4 cup of gasoline. Let's imagine we somehow find a way to power it and fire it continuously. So, you give one to everyone and point them all at the moon.
+
+Unfortunately, the lasers turn the atmosphere to plasma, instantly igniting the Earth's surface and killing us all.
+
+But let's assume that the lasers somehow pass through the atmosphere without interacting. Under those circumstances, turns out the Earth still catches fire.
+
+The reflected light from the moon is 4,000 times brighter than the noonday sun. But forget the Earth. What happens to the moon? The lasers pump out enough energy to vaporize 2 meters of lunar bedrock per second. However, once chunks of moon rock are vaporized, they don't disappear, but instead the surface layer of the moon quickly becomes a plasma, which then blocks the rest of the beam.
+
+As our laser pours more and more energy into the plasma, the plasma keeps getting hotter and hotter, enough that the most energetic plasma particles blast into space at terrific speed. This flow of material effectively turns the entire surface of the moon into a rocket engine, and a surprisingly efficient one. Using lasers to blast off surface material like this is called laser ablation, and it turns out to be a promising method for spacecraft propulsion and moon propulsion. The moon is massive, but we're dealing with a very powerful rock plasma jet. A very rough estimate suggests that the moon is pushed out of range of our lasers within a few short months. In that time, the jet also scour the face of the Earth clean and destroys the lasers, but we're pretending they're invulnerable. The moon keeps most of its mass, but escapes Earth's gravity and enters a lopsided orbit around the sun. this weird orbit isn't stable and the moon would eventually either be slingshoted into the sun, ejected through the outer solar system, or slammed into one of the planets, quite possibly ours. I think we can all agree that in that case, we deserve it. And that at last is enough power.
+
+*[Music]*

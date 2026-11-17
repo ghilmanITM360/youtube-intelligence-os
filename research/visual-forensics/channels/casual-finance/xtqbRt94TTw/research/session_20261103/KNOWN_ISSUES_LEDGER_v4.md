@@ -1,0 +1,14 @@
+# V006 known issues v3
+- KI-1 RESOLVED: table226-300; text changes262/279; Fed-page first301. Inserted states/events preserve this full interval.
+- KI-2 RESOLVED for the reported discrepancy: shard3 30merge flags vs29duplicates differs atS0065. Independent comparison accepts same dominant map layout while retaining speech/text/expression events. Prompt identity is not a merge criterion. Additional duplicate-onlyS0424 is a DISTINCT scene; no adjacency merge applied.
+- KI-3 MAPPING RESOLVED / FULL SEMANTIC TIMING PARTIAL: all339 cuts mapped to containing candidate;314motion/25state-change first-pass claims preserved. These are not339 missing cuts. Exact independently reviewed cuts appear in gap rulings; whole-video shot counts are not certified.
+- KI-4 OWNERSHIP RECOVERED WITH SAMPLING LIMITS: all123 gaps/3116frames independently reviewed; integrated_v3 covers0-19861 once, no numeric missing/overlap or unresolved owner.54 initial gap segments have native boundary checks,120 initially sampled; nine additional uncertain frames adjudicated. This does not mean every gap interior was viewed natively or every minor event timed.
+- KI-4a RESOLVED:8412doors/meme,8430snap-open/reveal within retained layout,8492title/host,8543chart. No interpolated door-opening curve claimed.
+- KI-4b RESOLVED shard8:14340Way1/running insert, through14373; DEBT visual begins14374.
+- KI-5 RESOLVED named missing composition/split claims: wide map/debt begins19651; end card first19712. Additive graphic-state splits18086(S0396),18563(S0406),18644(S0409) independently supported by native bbox crop pairs within mixed evidence sheets. Red41 begins18586; no exact easing/green-trace completion claim.
+- KI-8 NEW boundary refinements: G088 robot antenna already13074; ownership corrected13074-77, true entrance onset<=13074 unknown. G09213532-33 belongs page traversal, presenter first13534. G11016668 prior debt/rate scene, explosion first16669. G12119280-81 previous scene; NYT-card first sliver19282; later Conduit19301.
+- MERGE AUDIT RESOLVED:146/146items adjudicated.142merges applied,3KEEP_DISTINCT,1SAME_LAYOUT_NONCONTIGUOUS; S0133 kept distinct, S0279 cannot bridge G090. All3graphic-state splits preserved.329composition intervals are not a shot count.
+- OPEN:34ASR visual-relation items fromASR156,22reviewed-but-undetermined relation rows,5potentialASR/source-text mismatches; actual hearing required.
+- OPEN MOTION FIELDS: confirmedSUB101,SUB103,SUB104,SUB151 have no motion object; source descriptions preserved, no invented easing. SUB107 is no-change/N/A.
+- OPEN MICROEVENT: SUB032 pixel differences measured; native-region viewing did not identify a discrete semantic change or prove codec origin. Full native onset/object/facial and production prompt QA remainpartial.
+- AUDIO BLOCKED:199machine ASR segments are not listening; actual listening0seconds. Qualified source-sound perception unavailable in this harness. No music/SFX/intonation/AV certification.

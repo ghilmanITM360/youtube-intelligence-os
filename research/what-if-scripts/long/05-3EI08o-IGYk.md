@@ -1,0 +1,43 @@
+# What if you threw a baseball at nearly light speed?
+
+| Field | Value |
+|---|---|
+| Video ID | `3EI08o-IGYk` |
+| URL | https://www.youtube.com/watch?v=3EI08o-IGYk |
+| Format | long |
+| Published | 2024-02-06 |
+| Duration | 00:03:15 |
+| Views (at acquisition) | 3,293,195 |
+| Words | 680 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/3EI08o-IGYk.txt` |
+| Source SHA-256 | `20b6bfd522c3c46ebf7825a135c72c0af38398af609a69f0a7dcf5c3483fb2d4` |
+
+## Script
+
+This question comes from Ellen, who asks: What would happen if you tried to hit a baseball pitched at 90% the speed of light?
+
+Let’s set aside the question of how we got the baseball moving that fast. We'll suppose it's a normal pitch, except in the instant the pitcher releases the ball, it magically accelerates to 0.9c. From that point onward, everything proceeds according to normal physics.
+
+And “what proceeds” turns out to be “a lot of things”, and they all happen very quickly, and it doesn’t end well for the batter (or the pitcher). What follows is my best guess at a nanosecond-by-nanosecond portrait.
+
+The ball is going so fast that everything else is practically stationary. Even the molecules in the air are stationary. Air molecules vibrate back and forth at a few hundred miles per hour, but the ball is moving through them at 600 million miles per hour. This means that as far as the ball is concerned, they’re just hanging there, frozen.
+
+The ideas of aerodynamics don’t apply here.
+
+Normally, air would flow around anything moving through it. But the air molecules in front of this ball don’t have time to be jostled out of the way. The ball smacks into them so hard that the atomic nuclei in the air molecules actually fuse with the atomic nuclei in the ball. Each collision releases a burst of gamma rays and scattered subatomic particles.
+
+These gamma rays and debris expand outward in a bubble centered around the pitcher’s mound. They start to tear apart the molecules in the air, ripping electrons from nuclei and turning the air in the stadium into an expanding bubble of incandescent plasma. The surface of the bubble approaches the batter at about the speed of light—only slightly ahead of the ball itself.
+
+The constant fusion at the front of the ball pushes back on it, slowing it down, as if the ball were a rocket flying tail-first while firing nuclear fusion engines. Unfortunately, the ball is going so fast that even the tremendous force from this ongoing thermonuclear explosion barely slows it down at all. It does, however, start to eat away at the surface, blasting tiny particulate fragments of the ball in all directions. These fragments are going so fast that when *they* hit air molecules, they trigger two or three more rounds of fusion.
+
+After about 60 nanoseconds the shell of x-rays arrives at home plate, and a handful of nanoseconds later the ball hits. The batter hasn't even seen the pitcher let go of the ball, since the light carrying that information arrives at about the same time as the shock wave.
+
+Collisions with the air have eaten the ball away almost completely, and it is now a bullet-shaped cloud of expanding plasma (mainly carbon, oxygen, hydrogen, and nitrogen) ramming into the air and triggering more fusion as it goes.
+
+When it reaches the batter, the center of the cloud is still moving at an appreciable fraction of the speed of light. It hits the bat first, but then the batter, plate, and catcher are all scooped up and carried backward through the backstop as they disintegrate. The shell of x-rays and superheated plasma expands outward and upward, swallowing the backstop, both teams, the stands, and the surrounding neighborhood—all in the first microsecond.
+
+Suppose you’re watching from a hilltop outside the city. The first thing you see is a blinding light, far outshining the sun. This gradually fades over the course of a few seconds, and a growing fireball rises into a mushroom cloud. Then, with a great roar, the blast wave arrives, tearing up trees and shredding houses.
+
+Everything within roughly a mile of the park is leveled, and a firestorm engulfs the surrounding city. The baseball diamond is now a sizable crater, centered a few hundred feet behind the former location of the backstop.
+
+A careful reading of official Major League Baseball Rule 5.05(b)(2) suggests that in this situation, the batter would be considered "hit by pitch", and would be eligible to advance to first base.

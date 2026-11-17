@@ -1,0 +1,92 @@
+{
+ "video_id": "Uumnx2Fo6cE",
+ "channel": "Casual Finance (Casually Finance), UCrNfRFWnLC3tCy1TnyhVQ7g",
+ "title": "The New American Housing Crisis Has Landed",
+ "public_url": "https://www.youtube.com/watch?v=Uumnx2Fo6cE",
+ "source_path": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/The New American Housing Crisis Has Landed.mp4",
+ "source_sha256": "a57768bd5a32a8b0db6275f1af87a259b6a70c7b734d7ad4365afa61e2ab4579",
+ "sha256_prefix": "a57768bd",
+ "bytes": 31152512,
+ "identical_copies_seen": [
+  "/Users/ghilmankhan/Downloads/The New American Housing Crisis Has Landed.mp4",
+  "/Users/ghilmankhan/Downloads/CasuallyFinance/The New American Housing Crisis Has Landed.mp4",
+  "/Users/ghilmankhan/Documents/YIOS-Media-Library/CasuallyFinance/The New American Housing Crisis Has Landed.mp4"
+ ],
+ "copies_sha_status": "all four SHA-256 recomputed today and byte-identical; none modified",
+ "video": {
+  "codec": "h264 Main",
+  "pix_fmt": "yuv420p",
+  "width": 1280,
+  "height": 720,
+  "r_frame_rate": "24/1",
+  "time_base": "1/12288",
+  "frames_decoded": 22097,
+  "first_pts_s": 0.041667,
+  "last_pts_s": 920.708333,
+  "frame_rate_mode": "CFR 24 fps: all 22096 per-frame PTS deltas = 0.041667 s, strictly monotonic (ffprobe per-frame PTS)",
+  "pts_rule": "frame i PTS = (i+1)/24 s; first PTS 1/24",
+  "stream_duration_s": 920.708333,
+  "gop": "303 I-frames, irregular spacing (scene-cut-driven), no fixed GOP"
+ },
+ "audio": {
+  "codec": "aac LC",
+  "sample_rate": 44100,
+  "channels": 2,
+  "duration_s": 920.80576
+ },
+ "container_duration_s": 920.80576,
+ "decode_integrity": "ffmpeg full decode to null (-v error) produced no errors; sequential OpenCV decode returned exactly 22097 frames equal to ffprobe frame count",
+ "registered_manifest_comparison": {
+  "registry": "~/Downloads/CasuallyFinance-Forensic-Research/02_VIDEO_FORENSICS/Uumnx2Fo6cE/SOURCE.json",
+  "registered_sha256": "a57768bd5a32a8b0db6275f1af87a259b6a70c7b734d7ad4365afa61e2ab4579",
+  "sha_match": true,
+  "registered_title": "The New American Housing Crisis Has Landed",
+  "title_match": true,
+  "registered_duration_local_s": 920.806,
+  "duration_match": true,
+  "registered_fps": 24.0,
+  "fps_match": true,
+  "registered_public_duration_s": 921,
+  "registered_published_at": "2026-09-29T10:00:01-07:00",
+  "registered_public_views_2026-10-11": 2352982
+ },
+ "repo_registers": [
+  "research/casually-finance-script-intelligence/SOURCE_REGISTER.csv (SR-E03 Redfin Aug 2026 buyers-vs-sellers article cited for this video; SR-T-Uumnx2Fo6cE ASR_UNVERIFIED transcript)",
+  "research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv (FULL_INDIVIDUAL_DEEP_AUDIT_PENDING)",
+  "research/finance-economics-intelligence/LOCAL_THUMBNAIL_INDEX.csv"
+ ],
+ "thumbnail": {
+  "path": "/Users/ghilmankhan/Downloads/CasuallyFinance-Forensic-Research/02_VIDEO_FORENSICS/Uumnx2Fo6cE/evidence/thumbnail_maxresdefault.jpg",
+  "sha256": "fd5af00d8f7db7cb16038a150ea9817276398c197998a38416f7ec0476345c06",
+  "sha_matches_LOCAL_THUMBNAIL_INDEX": true,
+  "viewed": true,
+  "observation": "Large serif title text 'This Should've Crashed.', US-map character with worried face, red-vs-grey housing affordability line chart labelled 2008 and 2026, chained house; stick figure with top hat and monocle at left. Thumbnail text differs from the video title (packaging variant); US-map character also appears in the video opening (f120 overview)."
+ },
+ "identity": {
+  "status": "SOURCE_VERIFIED",
+  "confidence": "HIGH",
+  "evidence": [
+   "SHA-256 recomputed equals registered SOURCE.json sha256 (and 3 other local copies)",
+   "registered title equals owner-supplied title; duration 920.806 s vs registered local 920.806 and public 921 s",
+   "opening frames (0-5 s) show a Redfin News article 'It's Now The Strongest Buyer's Market on Record, Driven by the Sun Belt' (published Sept 10 2026, updated Sept 25) - matches repository source register SR-E03 for this video",
+   "ending frames (915 s, 919 s) show a 'Subscribe for more Casual Finance' end card; mid-video frame (460 s) shows the channel's stick-figure character reading a newspaper in the same illustration system",
+   "thumbnail's US-map character and unaffordability chart motif correspond to the video's housing-affordability topic"
+  ],
+  "conflicts_found": "none; no ambiguous or conflicting source identity",
+  "caveat": "live YouTube page and live thumbnail not re-fetched (offline, no acquisition); public metadata is the 2026-10-11 snapshot recorded by YIOS, not re-verified today"
+ },
+ "prior_analysis_status": "STRUCTURAL_SAMPLED (prior STATES.csv 567 rows / SHOTS.csv 120 rows are historical sampled estimates, NOT used as truth here)",
+ "asr": {
+  "this_run": "openai-whisper small.en local, word timestamps, 3027 words, 196 segments",
+  "prior": "openai-whisper base (registered TRANSCRIPT.csv, ASR_UNVERIFIED)",
+  "status": "ASR_ONLY_NOT_AUDIO_VERIFIED"
+ },
+ "tools": {
+  "ffmpeg": "9.0.1",
+  "opencv": "5.0.0.93 headless",
+  "scenedetect": "0.7.2 headless",
+  "venv": "/Users/ghilmankhan/YIOS-local-audits/tooling/visual-ct-scan-venv"
+ },
+ "generated": "2026-10-24",
+ "modes": "DEEP + CT_SCAN + RECONSTRUCTION"
+}

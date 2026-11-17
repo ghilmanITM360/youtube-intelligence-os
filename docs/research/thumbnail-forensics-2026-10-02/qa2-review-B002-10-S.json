@@ -1,0 +1,157 @@
+{
+ "reviewer": "QA-B002-10",
+ "batch": "B002-10",
+ "rows": [
+  {
+   "seq": 2,
+   "thumbnail_id": "THB-d7233faa9416ef10a484e0926d14afadba80becb90624a3c7d8b7c9f978106e0",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: headline and red arrow survive at 160x90; price tags, SPEED label, 10 HABITS card and the bottom caption are unreadable, so PARTIAL with score 5 is fair",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "before_after",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "Y",
+     "corrected_value": "N",
+     "reason": "The thumbnail is a wrong-vs-right split (hamster-wheel hustle versus the instructed alternative, framed by STOP HUSTLING DO THIS INSTEAD), not a transformation of one subject. Protocol says a wrong-vs-right split is N. The mechanism_secondary 'before-and-after story' should be reworded to match.",
+     "evidence": "Two different cartoon men, a suited adviser between them, headline imperative 'STOP ... DO THIS INSTEAD'."
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "thumbnail_id": "THB-fb6e4b225cbb27a964968bb26a30ae9a0b762d8b3b0085ba966060430f5dcc2e",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: START HERE, the arrow, the green piggy bank and the cash stacks all read at 160x90",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 10,
+   "thumbnail_id": "THB-20e573a483b6686b231451276c6bdb0eed63f2c5bf2bc7ce91b345ccfb6a61d9",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: KGB and SPY tags and the orange cat are legible at 160x90; the white foliage recedes",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "bare white trees, hedges, a slatted bench, a lamp post and a bin",
+     "corrected_value": "leafy white trees, hedges, a slatted bench, a lamp post and a bin",
+     "reason": "The trees and bushes are fully leafed (the audit's own art field says the foliage is highly detailed), not bare. Nothing in the image shows snow explicitly; it is an all-white clay-style environment.",
+     "evidence": "Dense leaf clusters on the upper-left tree and on the hedges along the path in the native image."
+    },
+    {
+     "field": "typography",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "white on black KGB at the upper middle",
+     "corrected_value": "white on black KGB at the upper right of centre",
+     "reason": "The KGB tag spans roughly x=790-1020 of 1280, so it sits right of centre, not at the upper middle.",
+     "evidence": "Native image: KGB tag centred near 70% of the frame width, beside the lamp post."
+    }
+   ]
+  },
+  {
+   "seq": 13,
+   "thumbnail_id": "THB-bd2cd1a9d2649bc380cc78c625878fa5191264cfdf51f33f6c529e9736ffcb88",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: AVOID THIS BIG MISTAKE!, the grimacing face and the burning bag silhouette read at 160x90; the $100K label is marginal but not the key element",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "to a cluster of three green money bags, the front one marked $100K",
+     "corrected_value": "to a cluster of four green money bags (left, back, front marked $100K, and the burning one at the right)",
+     "reason": "Four bags are visible, not three.",
+     "evidence": "Left bag with $ sign, small bag behind and centre, front $100K bag, and right bag with $ sign charring under flames."
+    },
+    {
+     "field": "people_count_visible",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "2",
+     "corrected_value": 1,
+     "reason": "Only one person is shown; the second item is a cropped hand and forearm entering from the right edge holding a match, which is not a visible person or face. Low-severity, arguable.",
+     "evidence": "Only the egg-headed man has a body and face; the right-edge hand is cut off by the frame."
+    },
+    {
+     "field": "story_score",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "14",
+     "corrected_value": 11,
+     "reason": "14/15 needs a specific, distinctive visual proposition. The row's own weakness/bottleneck say the burning-money metaphor is literal and generic and the mistake is unnamed. A stock alarmed face plus burning cash is ordinary-to-good at about 11. This also pushes score_100 from 83 to 80.",
+     "evidence": "Row's weakness: 'literal and generic, while the actual mistakes are unnamed'. The same egg-head template with a hands-on-cheeks pose appears in other thumbnails in the batch (seq 23)."
+    }
+   ]
+  },
+  {
+   "seq": 14,
+   "thumbnail_id": "THB-182a46c71de814fb3b46e756fdaa5e03db5e0f88b8bff103c34d0a502fbf46c8",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: the face, orange robe and crown are clear at 160x90; the thin script is readable but light and the small logo is lost",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "word_count",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "3",
+     "corrected_value": 5,
+     "reason": "The text field records the logo as '[Lost Legacy logo: lost / LEGACY]'. Protocol counts bracketed logo or badge words that are real words (lost, LEGACY), giving 5 visible words. It is a word logo, not a wordless one.",
+     "evidence": "Top-left circular emblem reads 'lost' with 'LEGACY' beneath it; headline script reads Worshipped, Then Discarded."
+    }
+   ]
+  },
+  {
+   "seq": 15,
+   "thumbnail_id": "THB-9f64488567553b03e2eab1424cf1a9950d0aec012e5e52e0cff1bcda4286b044",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "disagree: at 160x90 only the headline, arrow and large figure read; the safe, coins and jar vignette is a small cluster and the jar-versus-safe contrast is not decodable, which the row's own weakness and bottleneck say, so PARTIAL and a lower score",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "mobile_readability_160",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "PASS",
+     "corrected_value": "PARTIAL",
+     "reason": "Row's weakness says the key vignette 'is hard to decode at phone size' and the bottleneck says the idea 'relies on decoding small symbols'; the protocol requires PARTIAL or FAIL when the row says a key element is not readable at phone size.",
+     "evidence": "sheet_160 tile 15: the safe and reclining man are a few pixels; the jar is barely a mark. Headline and arrow remain clear."
+    },
+    {
+     "field": "mobile_readability_score",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "9",
+     "corrected_value": 6,
+     "reason": "9/10 is not consistent with the row's own statement that the central safe-versus-jar idea is not decodable at phone size. About 6 fits a clear headline over an unreadable payoff. This changes score_100 from 68 to 65.",
+     "evidence": "sheet_160 tile 15 versus sheet_320 tile 15, where the jar and the coin stacks only become legible at the larger size."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 6,
+  "material": 0,
+  "minor_factual": 4,
+  "classification": 3,
+  "subjective": 2,
+  "style_only": 0
+ }
+}

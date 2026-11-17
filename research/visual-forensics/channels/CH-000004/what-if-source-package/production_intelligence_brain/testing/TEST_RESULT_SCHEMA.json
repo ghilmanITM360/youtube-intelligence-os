@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "test_result.schema.json",
+  "title": "Generalization test result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "brain_version", "test_id", "test_mode", "input_hash", "training_overlap_check",
+    "predictions", "observations", "quantitative_metrics", "qualitative_findings",
+    "failures", "brain_limitations_exposed", "recommended_future_changes"
+  ],
+  "properties": {
+    "brain_version": { "type": "string", "const": "1.0.0" },
+    "test_id": { "type": "string" },
+    "test_mode": { "type": "string", "enum": ["MODE_A_UNSEEN_SCRIPT", "MODE_B_UNSEEN_VIDEO"] },
+    "input_hash": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "value"],
+      "properties": {
+        "algorithm": { "type": "string", "const": "SHA-256" },
+        "value": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "training_overlap_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checked_against", "matched_any_source", "pass"],
+      "properties": {
+        "checked_against": { "type": "string", "const": "SOURCE_VIDEO_INDEX.csv" },
+        "matched_any_source": { "type": "boolean" },
+        "pass": { "type": "boolean", "const": true }
+      }
+    },
+    "predictions": {
+      "type": "object",
+      "description": "The brain's frozen-artifact-only output, before any comparison to ground truth.",
+      "additionalProperties": false,
+      "properties": {
+        "sentence_segmentation": { "type": "string" },
+        "key_concepts": { "type": "array", "items": { "type": "string" } },
+        "visual_beat_plan": { "type": "string" },
+        "shot_plan": { "type": "string" },
+        "state_plan": { "type": "string" },
+        "asset_requirements": { "type": "string" },
+        "motion_decisions": { "type": "string" },
+        "audio_anchor_decisions": { "type": "string" },
+        "capcut_vs_i2v_decisions": { "type": "string" },
+        "reconstruction_plan": { "type": "string" },
+        "frozen_at": { "type": "string" }
+      }
+    },
+    "observations": {
+      "type": "object",
+      "description": "Mode B only: independent forensic analysis of the unseen video. Empty object for Mode A.",
+      "properties": {
+        "shots": { "type": "integer", "minimum": 0 },
+        "states": { "type": "integer", "minimum": 0 },
+        "motions": { "type": "integer", "minimum": 0 },
+        "assets": { "type": "integer", "minimum": 0 },
+        "audio_events": { "type": "integer", "minimum": 0 },
+        "av_sync_events": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "quantitative_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "shot_count_error": { "type": "number" },
+        "state_count_error": { "type": "number" },
+        "visual_change_timing_error_ms": { "type": "number" },
+        "motion_decision_precision": { "type": "number", "minimum": 0, "maximum": 1 },
+        "motion_decision_recall": { "type": "number", "minimum": 0, "maximum": 1 },
+        "asset_category_match_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "capcut_vs_i2v_agreement_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "anchor_timing_error_ms": { "type": "number" },
+        "static_hold_duration_error_ms": { "type": "number" },
+        "transition_type_agreement_rate": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "qualitative_findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "visual_style_fidelity": { "type": "string" },
+        "production_logic": { "type": "string" },
+        "over_animation": { "type": "string" },
+        "under_animation": { "type": "string" },
+        "invented_behavior": { "type": "string" },
+        "reference_fidelity": { "type": "string" }
+      }
+    },
+    "failures": { "type": "array", "items": { "type": "string" } },
+    "brain_limitations_exposed": { "type": "array", "items": { "type": "string" } },
+    "recommended_future_changes": { "type": "array", "items": { "type": "string" } }
+  }
+}

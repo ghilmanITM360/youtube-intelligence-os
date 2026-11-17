@@ -1,0 +1,36 @@
+{
+  "status": "ASR_ONLY_NOT_AUDIO_VERIFIED; EDITORIAL_MISMATCH_NOT_ESTABLISHED",
+  "source_pts_authority": "FULL_FRAME_MEASUREMENTS.csv; source_manifest.json timebase1/30000, step1001, SHA1416669f10d7231f8110eb27044986912984dcdbacbd7d9f6440726349a0c69d",
+  "checks": [
+    {
+      "frame": 2605,
+      "pts_s": 86.92016666666666,
+      "state": "W015",
+      "observed": "5. Ice Age; Survival chance: 68%",
+      "evidence": "frames/native_rep/batch02/W015_f2605.png",
+      "qualification": "inside ASR11 [85.62,90.38]; visible witness, not onset"
+    },
+    {
+      "frame": 2750,
+      "pts_s": 91.75833333333334,
+      "state": "W016",
+      "observed": "20,000 years ago beside globe",
+      "evidence": "frames/native_rep/batch02/W016_f2750.png",
+      "qualification": "91.8s refers to this text, not Ice Age title; present by this frame, exact reveal onset uninspected. ASR11 puts phrase within85.62-90.38; no speech-ground-truth lag available."
+    },
+    {
+      "frame": 3222,
+      "pts_s": 107.5074,
+      "state": "W019",
+      "observed": "ice landscape and small caveman",
+      "evidence": "frames/native_rep/batch02/W019_f3222.png",
+      "qualification": "v5 W019 starts3218=107.373933s; source PTS mapping consistent. Actual cut frame not newly viewed. ASR14 ends108.02,ASR15 starts108.02; words not frame-accurate. No editorial error inferred."
+    }
+  ],
+  "prior_judgments_preserved": [
+    "reviewer_13 ASR11 early literal",
+    "reviewer_14 ASR11 tail uncertain",
+    "reviewer_14 ASR14 possible lead"
+  ],
+  "next_audio_action": "Qualified listening to 85.62-110s before any speech lead/lag verdict"
+}

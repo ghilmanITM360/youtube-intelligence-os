@@ -1,0 +1,12 @@
+{
+ "event_id": "EP0080",
+ "native_window": [
+  2655,
+  2672
+ ],
+ "single_reviewer": true,
+ "independent_qa": false,
+ "finding": "Native decode 2655-2672 (18 frames measured, 10 JPEG samples viewed: 2658,2660-2666,2668,2672). 2656-2660 static (0 px >60, max delta<=2). Change onset EXACT 2661 (358528 px >60, bbox 264,80,1789,1009): article scrolled down several hundred px (headline banner/red box displaced, only lower part visible) while figure still smiling with raised pointer. 2662 (198400 px): figure frowning, pointer lowered to diagonal, article scrolled further. 2663-2665 (148050/144151/90431 px, max delta 255): continuing scroll settle/page content shift. 2666: 22 px, max delta 62 (residual); 2667-2672: 0 px >60 (max delta 5-19, codec noise). Last substantive change 2665 = ledger window end; ledger window 2661-2665 equals measured native window. Sub-phase boundaries inside 2661-2665 (scroll vs expression vs pointer) only seen at sampled frames, not measured per-object. Cause of 2666 residual undetermined.",
+ "ledger_verdict": "CONFIRMED_NATIVE_SINGLE_REVIEW: onset exact 2661, last change 2665, multi-phase; candidate window correct.",
+ "measurements": "ep0080_2655_2672/measurements.json"
+}

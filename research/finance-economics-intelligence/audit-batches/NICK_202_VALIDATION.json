@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "Zw038izB1tg",
+ "nick": "NICK_202",
+ "claims": 13,
+ "sources": 1,
+ "calculations": 2,
+ "transcript_chars": 19158,
+ "parent_commit": "1adb73577fdbe462481a7c331eeff55687d44b63",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_201",
+  "NICK_202"
+ ],
+ "changed_ledger_ids": [
+  "Zw038izB1tg"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 476,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 2.19528 STRONG (5-peer 0.28982 WEAK); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 478,
+  "remaining": 1134,
+  "original_pending": 488,
+  "expansion_pending": 646,
+  "changed_cells": "63 cells (dashboard 7 + rows 470-471); styles 0; formulas 0",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "af4f21e9baaaca708dcfd9e26bbad6fd180681fef4c524dca44b97fc11f07bac"
+ },
+ "semantic_acceptance": "All 19158 stored characters and six dimensions reviewed; 13 located claim groups; sources CENINC. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "05902556c34c403dc61e0eb80aa2c7d644e412a61fa2df0f0e2eeff970a96ae8",
+  "NICK_202.json": "e09cb0bfff45dc7f44f78d40ef723056a1e691f6ccc37712f7c5c7e230cd145d",
+  "NICK_202_READ_RECEIPTS.json": "fe598b96ae01e83b4032e1b587a8c1a015171f3ee5d59ff99f859996feaf50b8",
+  "thumbnail": "14a6c2dda73b19b2403772a6025075f01f05dae1ea71e76595ab4edcf9512eb2"
+ }
+}

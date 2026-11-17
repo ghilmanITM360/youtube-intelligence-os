@@ -1,0 +1,47 @@
+{
+ "status": "PASS",
+ "video_id": "pqJLxRMlZkc",
+ "nick": "NICK_282",
+ "claims": 16,
+ "sources": 3,
+ "calculations": 2,
+ "transcript_chars": 18265,
+ "parent_commit": "ed6b76d7",
+ "writer_context": "OWNER_DIRECTED_TAKEOVER on ghilmanislam360 (2026-11-02); superseding historical Machine A assignment; PR #36",
+ "micro_batch": [
+  "NICK_282"
+ ],
+ "changed_ledger_ids": [
+  "pqJLxRMlZkc"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 557,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts errors []; validate_research rc 0)",
+ "finance_tests": "50_PASS_BEFORE_BATCH;re-run after batch recorded in RESUME_HERE",
+ "formatting_tests": "included_in_50",
+ "calculation_verification": "K01 reproduces master 1.39970 TYPICAL (5-peer 1.371 TYPICAL, stable); K02 mean/median, minimum-payment, annuity and ratio arithmetic",
+ "claim_witness_check": "Generator asserts each witness equals text[start_char:end_char] and is unique; strict validator accepted claim source ids",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS_BUILD_AND_INSPECT",
+  "builder": "build_workbook_1612.mjs (unmodified; run from scratch dir with the codex-primary-runtime @oai/artifact-tool node_modules)",
+  "unique_identities": 1612,
+  "completed": 558,
+  "remaining": 1054,
+  "original_pending": 408,
+  "expansion_pending": 646,
+  "changed_cells": "NOT_MEASURED_THIS_BATCH",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "ee0c3228dc0874141986339f2d27c592b2ad1e806c6e41b8a9d5c8927f1ff44c"
+ },
+ "semantic_acceptance": "All 18265 stored characters and six dimensions reviewed; 16 located claim groups; sources FREDCARD, FREDMSP, FREDINC. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "0f7f679a6d68b339717f098c890f1b797126b071013f595fec72c22f31bbe09b",
+  "NICK_282.json": "f6c8c3a9aba5ab50700e1500cad8c3f571f1ef2994406a915e7fbaeb41b2efbb",
+  "NICK_282_READ_RECEIPTS.json": "c7001f30e2d8570cdbe3b51861bfca09a7a2651e6ba44c8dc02e735e98ca5601",
+  "thumbnail": "8da6f3b93bb49d70f7ebcec037584e28326d9c7fefa8dd4d6128efbbf38eb77f"
+ }
+}

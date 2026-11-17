@@ -1,0 +1,396 @@
+{
+  "status": "COMPLETE_FOR_SUPPLIED_SCOPE",
+  "source_sha256": "030a85ad15c25a5ac36cf0a8c8fc67e3b303ba7b3c1883af064a151ebefa7a66",
+  "base_review_ref": {
+    "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+    "sha256": "080fe01a3442213fb1a03b7753f0ebcbc1adb273272f8b31c779f3f7b3e4f3f4",
+    "immutable": true,
+    "old_64_image_requests_redisplayed": 0
+  },
+  "rulings": [
+    {
+      "id": "CBS01",
+      "event_type": "COMPOSITION_CUT",
+      "exact_onset_or_change_frame_or_bracket": {
+        "frame": 17766,
+        "boundary_precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based"
+      },
+      "description": "The macro article/presenter composition at17765 cuts to the OWID chart at17766.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17765_native.png"
+      ],
+      "reused_prior_frame_refs": [
+        {
+          "frame": 17766,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17766_native.png",
+          "sha256": "1d7109e142819b3b34865bdbb3427e55a6385c73c51678ee4dfb88142f4bf8cc",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        }
+      ],
+      "confidence": "HIGH",
+      "limitations": []
+    },
+    {
+      "id": "CBS02",
+      "event_type": "TITLE_HIGHLIGHT_ONSET",
+      "exact_onset_or_change_frame_or_bracket": {
+        "frame": 17784,
+        "boundary_precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based"
+      },
+      "description": "The first visible yellow title stroke appears at17784;17783 has none.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17783_native.png"
+      ],
+      "reused_prior_frame_refs": [
+        {
+          "frame": 17784,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17784_native.png",
+          "sha256": "b5f42ad78fc8e1f4b507b31289c3fc845a04d1f4a2203ea91157903f588d7351",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        }
+      ],
+      "confidence": "HIGH",
+      "limitations": [
+        "This is the visible leading stroke, not full-title coverage."
+      ]
+    },
+    {
+      "id": "CBS03",
+      "event_type": "TOOLTIP_FIRST_VISIBLE",
+      "exact_onset_or_change_frame_or_bracket": {
+        "frame": 17784,
+        "boundary_precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based"
+      },
+      "description": "The first tooltip appears at17784 (Jan2014/$158 million);17783 has none. The cursor is already clear at17783, so this is not cursor-appearance onset.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17783_native.png"
+      ],
+      "reused_prior_frame_refs": [
+        {
+          "frame": 17784,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17784_native.png",
+          "sha256": "b5f42ad78fc8e1f4b507b31289c3fc845a04d1f4a2203ea91157903f588d7351",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        }
+      ],
+      "confidence": "HIGH",
+      "limitations": [
+        "Earlier cursor appearance/precursor uncertainty is preserved from the base review."
+      ]
+    },
+    {
+      "id": "CBS04",
+      "event_type": "TOOLTIP_SIDE_CHANGE",
+      "exact_onset_or_change_frame_or_bracket": {
+        "frame": 17791,
+        "boundary_precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based"
+      },
+      "description": "The tooltip changes from right of the hover point at17790 to left at17791 (Aug2015/$304 million); it remains left at17792. This is an interface state change within the same chart composition.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17791_native.png"
+      ],
+      "reused_prior_frame_refs": [
+        {
+          "frame": 17790,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17790_native.png",
+          "sha256": "8d1781e292ebd3780d5748946932b304149a3c30d57bf95f86373097ddb12c1b",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        },
+        {
+          "frame": 17792,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17792_native.png",
+          "sha256": "eaed4ae083de8f352f707286653330583858db47e3dbed2ef50bb327a5e87b4d",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        }
+      ],
+      "confidence": "HIGH",
+      "limitations": []
+    },
+    {
+      "id": "CBS05",
+      "event_type": "TITLE_HIGHLIGHT_COMPLETION",
+      "exact_onset_or_change_frame_or_bracket": {
+        "frame": 17823,
+        "boundary_precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based"
+      },
+      "description": "The yellow highlight first reaches the full title extent at17823;17822 is incomplete and17824 is complete.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17823_native.png"
+      ],
+      "reused_prior_frame_refs": [
+        {
+          "frame": 17822,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17822_native.png",
+          "sha256": "0313240d1f86ffcbeb31ef84ebaaf2e4e9024474faa392c59762ef64abd7a081",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        },
+        {
+          "frame": 17824,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17824_native.png",
+          "sha256": "6ff52994e9372d7abecf991310c3a8392272f77a71400281ce81ebd77ff512eb",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        }
+      ],
+      "confidence": "HIGH",
+      "limitations": [
+        "Numeric title-mask indexing supports the visually checked boundary: right edge1098 at17822,1121 at17823 and17824. The126 numeric points are not126 image views, source-color proof, or exact easing/preset proof."
+      ]
+    },
+    {
+      "id": "CBS06",
+      "event_type": "TOOLTIP_CONTENT_CHANGE",
+      "exact_onset_or_change_frame_or_bracket": {
+        "frame": 17853,
+        "boundary_precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based"
+      },
+      "description": "The tooltip changes from Apr2026/$3.80 billion at17852 to May2026/$3.99 billion at17853;17854 retains May. The displayed unit is constant2021US$.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17853_native.png"
+      ],
+      "reused_prior_frame_refs": [
+        {
+          "frame": 17852,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17852_native.png",
+          "sha256": "3fade9ef57b7bdf2b929d5a11a0bf1206beb606e483044ab8bf9f0203b9b6012",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        },
+        {
+          "frame": 17854,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17854_native.png",
+          "sha256": "0ec4fe53bcdb3fdd1c66b88b69a3d95de6dc4814783d167f5557e06c99cb0299",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        }
+      ],
+      "confidence": "HIGH",
+      "limitations": [
+        "Source-chart text is transcribed; no financial fact-check was performed."
+      ]
+    },
+    {
+      "id": "CBS07",
+      "event_type": "TOOLTIP_CONTENT_CHANGE",
+      "exact_onset_or_change_frame_or_bracket": {
+        "frame": 17879,
+        "boundary_precision": "EXACT_NATIVE_ADJACENT_PAIR",
+        "frame_index": "0-based"
+      },
+      "description": "The tooltip changes from May2026/$3.99 billion at17878 to Jun2026/$4.36 billion at17879;17880 retains June. The displayed unit is constant2021US$.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17879_native.png"
+      ],
+      "reused_prior_frame_refs": [
+        {
+          "frame": 17878,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17878_native.png",
+          "sha256": "a39d0915346312fc49925bb4a030a4f1f5139f7aac1c6186ef19cf32a7d9ccfa",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        },
+        {
+          "frame": 17880,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17880_native.png",
+          "sha256": "ac4e70f3ac622feeaeb199ec7ec9e886ab5aff9dbe2d83684c024c74e8cf9486",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        }
+      ],
+      "confidence": "HIGH",
+      "limitations": [
+        "Source-chart text is transcribed; no financial fact-check was performed."
+      ]
+    },
+    {
+      "id": "CBS08",
+      "event_type": "LATE_CONTENT_HOLD_AND_UNRESOLVED_MOTION_OFFSET",
+      "exact_onset_or_change_frame_or_bracket": {
+        "exact_motion_offset_frame": null,
+        "observed_native_samples": [
+          17879,
+          17880,
+          17881,
+          17882,
+          17883,
+          17890
+        ],
+        "boundary_precision": "UNRESOLVED_OFFSET"
+      },
+      "description": "June2026/$4.36 billion content, full yellow title and red annotation hold at the sampled late frames. Cursor/card appear near a common endpoint pose at17881,17883 and17890. Exact settling cannot be assigned from visual samples alone.",
+      "evidence_paths": [
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17879_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17881_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17883_native.png",
+        "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17890_native.png"
+      ],
+      "reused_prior_frame_refs": [
+        {
+          "frame": 17880,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17880_native.png",
+          "sha256": "ac4e70f3ac622feeaeb199ec7ec9e886ab5aff9dbe2d83684c024c74e8cf9486",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        },
+        {
+          "frame": 17882,
+          "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/f17882_native.png",
+          "sha256": "da25750a7300162c654be90593a2dfa5366270aeb0ae4ed216de08c379d2c86a",
+          "base_review": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json",
+          "redisplayed": false
+        }
+      ],
+      "confidence": "HIGH_FOR_SAMPLED_CONTENT_HOLD_ONLY",
+      "limitations": [
+        "No pixel-position measurement was made for the late cursor/card; small changes cannot be ruled out.",
+        "Frames17884–17889 are unsupplied; no continuous-motion or permanent-offset claim is made."
+      ]
+    }
+  ],
+  "motion_offset_status": {
+    "status": "UNRESOLVED",
+    "exact_final_motion_offset_frame": null,
+    "latest_new_sample": 17890,
+    "apparent_late_hold_samples": [
+      17881,
+      17883,
+      17890
+    ],
+    "description": "Semantic content is unchanged in the listed samples. Their apparent stable pose does not prove an exact final cursor/card motion offset.",
+    "additional_frame_request": "None required for the resolved semantic boundaries. If an exact motion offset becomes necessary, continuity and position measurement across the late interval would require a separately scoped check."
+  },
+  "extra_exact_frames_needed": [],
+  "reused_red_annotation_boundary": {
+    "frame": 17875,
+    "base_review_ref": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_macro_review_v1/OUT_chart_macro_review_v1.json#reused_exact_annotation_boundary",
+    "new_views": 0,
+    "description": "Existing adjacent-native proof from G116 is reused unchanged; these JPGs were not redisplayed."
+  },
+  "new_evidence_reads": [
+    {
+      "frame": 17765,
+      "source_pts_s": 740.25,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17765_native.png",
+      "sha256": "a89f1ec5b83927d9e000d22e96b6bd7b4805af1e8531d6e80b8008bb7307e70f",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully at native 1920x1080. Enlarged macro article with orange-highlighted US GDP/AI-capex lines and smiling pointer presenter lower-left; OWID chart is not present. Together with reused fullframe17766 this establishes the chart cut at17766."
+    },
+    {
+      "frame": 17783,
+      "source_pts_s": 741,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17783_native.png",
+      "sha256": "98debbd8c2d9711f89af9e21aec84009feaf3b71604545d92abb7fffb26337fb",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully at native 1920x1080. OWID chart title remains unhighlighted; no tooltip or yellow leading stroke is visible. A clear cursor is at the lower-left near the $0 axis label. Reused17784 has the thin yellow stroke and Jan2014 tooltip."
+    },
+    {
+      "frame": 17791,
+      "source_pts_s": 741.3333333333334,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17791_native.png",
+      "sha256": "86fc284a9ffd1304a7126ddf4ff9c9fd8f2923687770af8160d1fcdd1b824773",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully at native 1920x1080. Tooltip is left of hover point; Aug2015, United States $304 million, in constant2021US$. Yellow title reveal has reached the beginning of spending. This resolves the tooltip side flip against reused17790."
+    },
+    {
+      "frame": 17823,
+      "source_pts_s": 742.6666666666666,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17823_native.png",
+      "sha256": "88e1e50af0f19f0e84a8240641e931eb4223c975e5600858b650f610fd41dccc",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully at native 1920x1080. Yellow bar covers the complete title and has the terminal right edge seen at reused17824; reused17822 remains incomplete. Tooltip reads Aug2023, United States $1.37 billion."
+    },
+    {
+      "frame": 17853,
+      "source_pts_s": 743.9166666666666,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17853_native.png",
+      "sha256": "15394f226b0daa5294f82c375be9a52e88d425caae08d323bc11e08da32f96db",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully at native 1920x1080. Tooltip reads May2026, United States $3.99 billion, in constant2021US$; full yellow title bar holds. Reused17852 shows Apr2026/$3.80 billion."
+    },
+    {
+      "frame": 17879,
+      "source_pts_s": 745,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17879_native.png",
+      "sha256": "795c39cf2a7a265a5dfa17312fa1cb791baf5c2a454b3b9537347f49a1ce1379",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully at native 1920x1080. Tooltip reads Jun2026, United States $4.36 billion, in constant2021US$; red up57% annotation and full yellow title bar hold. Reused17878 still shows May2026/$3.99 billion."
+    },
+    {
+      "frame": 17881,
+      "source_pts_s": 745.0833333333334,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17881_native.png",
+      "sha256": "761b127c19421129eb52dc6df40ca1fdd2b4d69cdedfe52ab17916947bfa7527",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully at native 1920x1080. Jun2026/$4.36 billion tooltip, red up57% annotation and complete title highlight remain; cursor/card sit near the upper-right chart endpoint. Near-stable appearance does not establish an exact pixel-level motion offset."
+    },
+    {
+      "frame": 17883,
+      "source_pts_s": 745.1666666666666,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17883_native.png",
+      "sha256": "5ea542b3ca9fe8889029e32ddec9e80335b981ce1fc00eca86b8b3cd2706885d",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully at native 1920x1080. Same Jun2026/$4.36 billion tooltip, red annotation and title bar; cursor/card appear near the same endpoint pose as17881 and reused17882. Exact settling is not certified."
+    },
+    {
+      "frame": 17890,
+      "source_pts_s": 745.4583333333334,
+      "path": "/Users/ghilmankhan/YIOS-local-audits/2026-11-01--xtqbRt94TTw-deep-ct-scan/chart_boundary_supplement_v1/f17890_native.png",
+      "sha256": "b6f11d2cf140a74fb02f9281208f8c2d4f38875b6677dab12851383c37686a8c",
+      "width": 1920,
+      "height": 1080,
+      "scale": "NATIVE_FULLFRAME1920x1080",
+      "successful": true,
+      "witness": "Actually displayed successfully at native 1920x1080. Jun2026/$4.36 billion tooltip, red annotation and title bar still hold; cursor/card appear visually near the17883 pose. Frames17884–17889 were not supplied, so this sample does not establish the final motion offset."
+    }
+  ],
+  "pending_new_image_paths": [],
+  "actual_listening_seconds": 0,
+  "CT_SCAN_COMPLETE": false,
+  "usage_at_stop": {
+    "primary_used_percent": 24,
+    "weekly_used_percent": 35,
+    "paid_credits_balance": "0",
+    "measurement": "Fresh usage check after the final batch of three successful new image returns; no reset or credits spent."
+  },
+  "limitations": [
+    "Only the9 dispatched new native fullframes were displayed in this supplement, in3 batches of3. Prior64 chart request observations were reused without redisplay.",
+    "126 numeric title-mask points provide indexing/threshold trajectory support only. They are not additional image views or proof of the source animation preset.",
+    "This is a bounded visual boundary supplement, not audio/ASR certification, financial fact-checking, or CT-scan completion."
+  ]
+}

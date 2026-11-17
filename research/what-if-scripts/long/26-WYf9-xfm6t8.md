@@ -1,0 +1,89 @@
+# What if you used a flamethrower as a snowblower?
+
+| Field | Value |
+|---|---|
+| Video ID | `WYf9-xfm6t8` |
+| URL | https://www.youtube.com/watch?v=WYf9-xfm6t8 |
+| Format | long |
+| Published | 2025-05-27 |
+| Duration | 00:02:52 |
+| Views (at acquisition) | 1,702,882 |
+| Words | 646 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/WYf9-xfm6t8.txt` |
+| Source SHA-256 | `e2182d7631495615a40289b0d64757dd42a07a272fd6a5e9cc577b7babee54b8` |
+
+## Script
+
+This question comes from Matt, who asks: I've long thought about putting a flamethrower on the front of a car to melt snow and ice before you drive across it.
+
+Now I've realized that a flamethrower is impractical, but what about a high-powered microwave emitter?
+
+Believe it or not, Matt, your flamethrower idea is actually the more practical of the two.
+
+The flamethrower also has the advantage that, unlike the microwave, it won't interfere with wifi (unless you aim it directly at the router).
+
+I originally researched this question in the winter of 2015, when Boston was buried under a truly ridiculous amount of snow.
+
+We'd had more snow in 30 days than Anchorage, Alaska usually gets in an entire winter.
+
+Our transit system had broken down and our roofs were collapsing.
+
+The mayor gave a press conference in which he actually announced, "I don't know what to say to anybody anymore.
+
+Hopefully it will stop eventually."
+
+So snow removal was on our minds.
+
+However, snow is hard to melt.
+
+Your microwave idea certainly sounds like it should be more practical than a flamethrower because microwaves are clean and efficient.
+
+After all, we don't use flamethrowers in our kitchens.
+
+Usually.
+
+But there's a big problem: Microwaves heat liquid water very well, but they work very poorly on frozen water (which is one reason defrosting food evenly in your microwave can be tricky.)
+
+Fortunately, there are other ways to get energy into the snow.
+
+In addition to your flamethrower suggestion, you could, for example, use infrared heat lamps or lasers.
+
+But whatever you use, you'll run into an even bigger problem: It takes an awful lot of energy to melt snow.
+
+Melting a gram of snow takes about 335 joules of energy.
+
+To put that another way, a 60-watt incandescent lightbulb is capable of melting about a pound of snow an hour.
+
+Or if it’s a 60-watt equivalent LED lightbulb, it’s only capable of melting a pound of snow every 6 or 7 hours.
+
+Either way, this is a case where a light bulb does not represent a good idea!
+
+A foot of snow contains roughly the same amount of water as an inch of rain, give or take.
+
+So let's assume you've had a decent snowstorm of about a foot –meaning an inch worth of water– and that you want to melt a 9-foot-wide swath while driving along at 55 mph.
+
+If you’re annoyed by all these different and conflicting units, this happens to be one of those happy physics situations I love where we can just multiply together every number we're looking at in an online calculator that handles units for us, and the answer turns out to be the measurement we want: we need 574 megawatts of power.
+
+Unfortunately, that’s not the answer we'd like.
+
+The nuclear reactor on an aircraft carrier, for example, produces less than 200 megawatts.
+
+To melt snow in front of your car, you'd need three of those, which could lead to its own problems.
+
+What about your original flamethrower idea?
+
+Gasoline may have a phenomenally high energy density, but it's not high enough.
+
+No matter how big the tank on your flamethrower is, you'll run out of fuel constantly.
+
+Gas mileage in the US is often measured in "miles per gallon" of gasoline.
+
+With your flamethrower guzzling fuel, your mileage would be about 17 feet per gallon, and you’d be using up fuel at a rate of almost 5 gallons per second.
+
+You’d probably be better off dropping the melting idea entirely and taking a cue from rail agencies, who use jet-engine-powered snowblowers to clear train tracks.
+
+In the end, it's easier to just move the snow out of your way.
+
+It turns out Matt was right about the flamethrower being impractical.
+
+Although if you aren’t careful with the jet engine snowblower, you might run into a different problem…

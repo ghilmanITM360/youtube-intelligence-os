@@ -1,0 +1,17 @@
+# Load channel intelligence without copying its corpus
+
+For operational commands and limits read [the two-Mac workflow](../../docs/YIOS_TWO_MAC_WORKFLOW.md). This is navigation, not new evidence or an acceptance ledger.
+
+## Casually Finance — UCrNfRFWnLC3tCy1TnyhVQ7g
+
+1. Read the existing [channel START_HERE](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/f4dc5d14d6ad03c1edd92e48fac779e7a8555fc5/research/visual-forensics/channels/UCrNfRFWnLC3tCy1TnyhVQ7g/START_HERE.md) and [video/recovery index](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/f4dc5d14d6ad03c1edd92e48fac779e7a8555fc5/research/visual-forensics/channels/UCrNfRFWnLC3tCy1TnyhVQ7g/VIDEO_AND_RECOVERY_INDEX.md). These are published navigation-branch files, not main.
+2. PR21 corpus pinned `043b85bf58f84fb6a1c8981d54e3b233faa6a928`: `data/extracted/forensic-analysis/casually-finance/2026-10-12/06_REPORTS/CHANNEL_DEEP_FORENSIC_REPORT.md` → `04_PRODUCTION_DNA/{VISUAL_DNA,MOTION_DNA,EDITING_DNA}.md` → `02_VIDEO_FORENSICS/<video>/{SOURCE.json,QA.json,SHOTS.csv,STATES.csv,MOTIONS.csv,SEMANTIC_BEATS.csv,VISUAL_RECONSTRUCTION.md}`. Load only relevant video rows. 16/18 selected sources; derived/structural research, not16fully certified AV reviews.
+3. Later CT001/002: [existing local visual index](../visual-forensics/README.md) and each `PORTABLE_MANIFEST.json`. Visual-only acceptance; listening/fullAV blocked. These overlap PR21 subjects and are not independent evidence counts. Video003 `5umJ63d3rzQ` stays protected PARTIAL checkpoint6; B/D reviewers, integrated reconstruction and listening were historically pending. Current owner checkpoint must be recovered before certifying that state.
+4. Older38Shorts: pinned editing branch `090f84b3292a3b6c6e94653a6ef1867726e4ebdd`, `research/casually-finance-editing-forensics/{STATUS.json,CHANNEL_EDITING_DNA.md,RESUME_HERE.md}`. Single-reviewer, audio-listening-blocked, 2A/32B/4C depth; long-form procedure WRITTEN_NOT_STARTED. Do not reuse its stale pilot queue.
+5. Produce an ORIGINAL storyboard with separate columns: source observation + video/row/time, analyst interpretation + uncertainty, original adaptation + assets/motion. Use original diagrams, narration, characters and timing. Do not reproduce source footage, artwork, voice, dialogue or distinctive sequences. Financial claims need independent primary sources. Existing [original storyboard example](https://github.com/ghilmanITM360/youtube-intelligence-os/blob/f4dc5d14d6ad03c1edd92e48fac779e7a8555fc5/docs/intelligence/CASUALLY_FINANCE_STORYBOARD_TEST.md) is a navigation test, not new forensic evidence.
+
+For local reads, use `GIT_NO_LAZY_FETCH=1 git show PINNED_SHA:exact/path`; if absent, fetch only the named published branch after resource/partial-clone checks. Do not scan raw evidence or build Graphify. External MP4/frame/audio/shard manifests identify dependencies, but private Drive restore and receiving-Mac recovery remain NOT_TESTED where no receipt exists.
+
+## Finance / Nick Invests
+
+Read the **live Finance branch** `research/finance-economics-intelligence/RESUME_HERE.md`, `FINANCE_WRITER_OWNERSHIP.md`, `METHODS.md`, `QA_AND_LIMITATIONS.md`, then exact `audit-batches/<batch>.json`, receipts and canonical target row. Channel synthesis is already under `channel-intelligence/nick-invests/2026-10-23/README.md`; its dated conclusions do not replace newer per-video audits. `yios status` computes counts from the accepted ledger. NICK180–185 are accepted with evidence limitations; never restart them from an old handoff.

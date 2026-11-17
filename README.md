@@ -1,5 +1,7 @@
 # YouTube Intelligence OS
 
+Start with the [permanent mission and architecture](docs/YIOS_MASTER_PLAN.md) and [dated cross-chat session context](docs/AI_SESSION_CONTEXT.md). These entry points link to the underlying research and evidence authorities.
+
 An evidence-based intelligence system for multiple YouTube channels. **YouTube Intelligence OS V1 is complete**: Topic, Packaging, Hook and Script intelligence feed a unified production-plan orchestrator. Editing/Visual intelligence is available where registered forensic evidence exists; unavailable evidence is explicit. Channel Strategy is GENERALIZED_WORKING with limited cross-niche evidence coverage. V2 does not begin automatically.
 
 **What If integration (2026-10-09):** source contract, read-only adapter, durable normalized staging, promotion and source-backed Editing/Visual production guidance are implemented. Ten existing videos supply 8,327 observations. Two independently verified external IDs remain unregistered with transcript evidence pending; two ID-less sources remain unresolved. Identity and transcript availability are separate; the explicit pending registration path is canonical after PR #17. The validated ten-video Genius History packaging packet is canonical after PR #19. Canonical What If count remains 83. See [live remaining-work audit](docs/audits/REMAINING-WORK-MATRIX-2026-10-11.md), [current project status](PROJECT_STATUS.md) and [integration workflow](docs/WHAT_IF_INTEGRATION_WORKFLOW.md) for exact counts, commands and external blockers.
@@ -7,6 +9,11 @@ An evidence-based intelligence system for multiple YouTube channels. **YouTube I
 Catalogs have distinct populations: the selected inventory and the broader channel registry must not be treated as interchangeable sample counts. See `docs/YOUTUBE_CHANNEL_REGISTRY.md` and `data/catalog/README.md`.
 
 **New here? Start with [docs/START_HERE.md](docs/START_HERE.md):** one page that indexes the Casual Finance and xkcd visual-forensics work, the Finance/Economics corpus and the lower-priority campaigns, with pinned commit SHAs and what is blocked. It links evidence that stays on research branches; it adds no media.
+
+## Channel visual research
+
+- [Casually Finance: source-backed visual research index](research/visual-forensics/channels/UCrNfRFWnLC3tCy1TnyhVQ7g/START_HERE.md) links the existing draft forensic corpus, Machine A CT checkpoints, original-media hashes, and evidence limits. It does not merge the draft corpus into `main`.
+- [Two-Mac writer handoff](docs/TWO_MAC_WORKFLOW.md) explains how to switch the repository writer between computers safely.
 
 ## Bootstrap (clean clone)
 
@@ -71,6 +78,11 @@ Raw source files are evidence and must never be modified, rewritten, compressed,
 - `schemas/`, `scripts/`, and `config/` — implemented schema, ingestion, intelligence, validation and configuration layers.
 - `logs/` — non-source operational logs when processing is introduced.
 
+Before acquiring media for video, thumbnail, animation, script, editing or
+forensic work, check the [local media availability registry](docs/LOCAL_MEDIA_AVAILABILITY.md).
+Tracked manifests describe verified local holdings; they do not imply that the
+media bytes are present on GitHub or on every machine.
+
 ## Entering data
 
 Place or provide each new dataset through `data/raw/inbox/`. A dataset may contain archives, documents, tables, images, transcripts, metadata, or other formats not yet known. File extension records physical format; it does not determine semantic role or intelligence value.
@@ -82,3 +94,7 @@ Project documentation, decisions, configuration examples, and small manifests ar
 ## Deferred architecture
 
 Database, vector-search, RAG, agent, provider, API, frontend, and cloud infrastructure choices are intentionally deferred until real supplied datasets have been inspected. External developer tools recorded in `docs/TOOLS_INSTALLED.md` are conveniences and do not determine the system's production architecture.
+
+## Research discovery
+
+See the [project research index](research/README.md), including Finance audit continuation and the Nick Invests channel-intelligence package.
