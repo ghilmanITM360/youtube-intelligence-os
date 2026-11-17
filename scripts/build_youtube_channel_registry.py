@@ -122,7 +122,7 @@ def coverage_metrics(root: Path, row: dict | None) -> dict:
             raise ValueError(f"Expected one workbook and transcript ZIP in {package_path}")
         workbook_path = workbooks[0].relative_to(root).as_posix()
         transcript_zip_path = archives[0].relative_to(root).as_posix()
-    metrics = {
+    return {
         "dataset_ids": [row["Dataset"]],
         "video_count": as_int(row["Videos"]),
         "regular_videos": as_int(row["Regular"]),
@@ -135,35 +135,6 @@ def coverage_metrics(root: Path, row: dict | None) -> dict:
         "workbook_path": workbook_path,
         "transcript_zip_path": transcript_zip_path,
     }
-    if not package:
-        # The coverage ledger is dated evidence. Supplement it with identities
-        # registered in later datasets; never rewrite the historical census.
-        connection = sqlite3.connect(root / "data/catalog/youtube_inventory.db")
-        connection.row_factory = sqlite3.Row
-        try:
-            extra = connection.execute(
-                """SELECT v.video_id,s.description,s.video_type,
-                          EXISTS(SELECT 1 FROM transcripts t WHERE t.video_id=v.video_id
-                                 AND t.availability_status='AVAILABLE') AS has_transcript
-                   FROM videos v JOIN channels c USING(channel_id)
-                   LEFT JOIN video_snapshots s ON s.video_snapshot_id=(
-                       SELECT latest.video_snapshot_id FROM video_snapshots latest
-                       WHERE latest.video_id=v.video_id
-                       ORDER BY latest.observed_at DESC,latest.video_snapshot_id DESC LIMIT 1)
-                   WHERE c.youtube_channel_id=? AND v.created_from_dataset_id<>?""",
-                (canonical_id(row["Canonical ID"]), row["Dataset"]),
-            ).fetchall()
-            metrics["video_count"] += len(extra)
-            metrics["descriptions"] += sum(bool(item["description"]) for item in extra)
-            metrics["real_transcripts"] += sum(item["has_transcript"] for item in extra)
-            metrics["missing_transcripts"] += sum(not item["has_transcript"] for item in extra)
-            types = [str(item["video_type"] or "").lower() for item in extra]
-            metrics["regular_videos"] += sum(value in {"video", "regular"} for value in types)
-            metrics["shorts"] += sum(value in {"short", "shorts"} for value in types)
-            metrics["livestreams"] += sum("live" in value or "stream" in value for value in types)
-        finally:
-            connection.close()
-    return metrics
 
 
 def historical_dataset_links(root: Path) -> dict[str, list[str]]:
@@ -171,7 +142,7 @@ def historical_dataset_links(root: Path) -> dict[str, list[str]]:
     try:
         rows = connection.execute(
             """
-            SELECT DISTINCT c.youtube_channel_id,l.dataset_id
+            SELECT c.youtube_channel_id,l.dataset_id
             FROM channels c JOIN channel_dataset_links l USING(channel_id)
             ORDER BY c.youtube_channel_id,l.dataset_id
             """

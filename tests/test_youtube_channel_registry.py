@@ -628,10 +628,10 @@ class RegistryDatabaseTests(unittest.TestCase):
                         "v_intelligence_coverage",
                     }.issubset(views)
                 )
-                self.assertEqual(2305, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
+                self.assertEqual(2303, connection.execute("SELECT count(*) FROM videos").fetchone()[0])
                 self.assertEqual(2291, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 0").fetchone()[0])
                 self.assertEqual(12, connection.execute("SELECT count(*) FROM transcripts WHERE is_placeholder = 1").fetchone()[0])
-                self.assertEqual(19, connection.execute("SELECT count(*) FROM videos WHERE description IS NULL").fetchone()[0])
+                self.assertEqual(17, connection.execute("SELECT count(*) FROM videos WHERE description IS NULL").fetchone()[0])
                 self.assertEqual(40, connection.execute("SELECT count(*) FROM channels WHERE source_group='STANDARD_PACKAGE'").fetchone()[0])
                 self.assertEqual(6, connection.execute("SELECT count(*) FROM channels WHERE source_group='HISTORICAL_CATALOG'").fetchone()[0])
                 self.assertEqual(29, connection.execute("SELECT count(*) FROM channels WHERE source_group='IDENTITY_ONLY'").fetchone()[0])
