@@ -1,0 +1,51 @@
+........................................................................ [ 15%]
+............................................................F.F.F....... [ 31%]
+........................................................................ [ 46%]
+........................................s............................... [ 62%]
+........................................................................ [ 77%]
+........................................................................ [ 93%]
+...............................                                          [100%]
+=================================== FAILURES ===================================
+__________ LedgerChecksumTests.test_all_csv_ledger_datasets_are_clean __________
+tests/test_dataset_ledger_provenance.py:56: in test_all_csv_ledger_datasets_are_clean
+    self.assertEqual({}, problems, "{} has unresolved ledger issues".format(dataset_id))
+E   AssertionError: {} != {'DS-000021-F034': ['HISTORICAL_COMMIT_MIS[433 chars]f)']}
+E   - {}
+E   + {'DS-000021-F034': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)'],
+E   +  'DS-000021-F035': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)'],
+E   +  'DS-000021-F037': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)'],
+E   +  'DS-000021-F038': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)'],
+E   +  'DS-000021-F039': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)']} : DS-000021 has unresolved ledger issues
+_ LedgerChecksumTests.test_historical_pinned_rows_are_checked_against_their_recorded_commit _
+tests/test_dataset_ledger_provenance.py:71: in test_historical_pinned_rows_are_checked_against_their_recorded_commit
+    self.assertEqual(
+E   AssertionError: '874047790d81d58ef865f45fe6b97c8c1976870dd86a5aa751563390b1e6b124' != None : DS-000021 DS-000021-F034 does not reconcile against pinned commit 78ad5d728380873d67422d71e67f613ff28c37cf
+_ SharedGitattributesPinTests.test_gitattributes_rows_pin_ingestion_time_blob_not_current_file _
+tests/test_dataset_ledger_provenance.py:97: in test_gitattributes_rows_pin_ingestion_time_blob_not_current_file
+    self.assertEqual([], v.validate_row(dataset_id, row))
+E   AssertionError: Lists differ: [] != ['HISTORICAL_COMMIT_MISSING_PATH(59cf21851b5f6e57975ab51944b7572a3edf7471)']
+E   
+E   Second list contains 1 additional elements.
+E   First extra element 0:
+E   'HISTORICAL_COMMIT_MISSING_PATH(59cf21851b5f6e57975ab51944b7572a3edf7471)'
+E   
+E   - []
+E   + ['HISTORICAL_COMMIT_MISSING_PATH(59cf21851b5f6e57975ab51944b7572a3edf7471)']
+=============================== warnings summary ===============================
+tests/test_register_batch.py::RegisterBatchTestCase::test_image_pipeline_extracts_metadata
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+  /Users/ghilmankhan/YIOS-audit-20261105T1657Z/scratch/tests/research_finance-economics-intelligence/scripts/image_pipeline.py:43: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+    pixels = list(small.getdata())
+
+tests/test_register_structured_source.py::RegisterStructuredSourceTestCase::test_register_rejects_duplicate_workbook_video_id_without_duplicate_entity
+  /opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'ChannelA/sameid00001.txt'
+    return self._open_to_write(zinfo, force_zip64=force_zip64)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_dataset_ledger_provenance.py::LedgerChecksumTests::test_all_csv_ledger_datasets_are_clean
+FAILED tests/test_dataset_ledger_provenance.py::LedgerChecksumTests::test_historical_pinned_rows_are_checked_against_their_recorded_commit
+FAILED tests/test_dataset_ledger_provenance.py::SharedGitattributesPinTests::test_gitattributes_rows_pin_ingestion_time_blob_not_current_file
+3 failed, 459 passed, 1 skipped, 5 warnings in 36.84s

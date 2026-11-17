@@ -1,0 +1,666 @@
+validate	UNKNOWN STEP	﻿2026-11-02T09:55:14.8163240Z Current runner version: '2.338.2'
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8202040Z ##[group]Runner Image Provisioner
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8203470Z Hosted Compute Agent
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8204732Z Version: 20261021.618
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8205814Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8207145Z Build Date: 2026-10-21T00:45:21Z
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8208397Z Worker ID: {07d19cb5-6e7a-4d23-9a93-b0c5b5e44b3e}
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8209588Z Region: westus
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8210962Z Cloud: Azure
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8211940Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8214926Z ##[group]Operating System
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8216132Z Ubuntu
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8217081Z 24.04.5
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8218233Z LTS
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8219204Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8220185Z ##[group]Runner Image
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8221763Z Image: ubuntu-24.04
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8222810Z Version: 20261025.353.1
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8225173Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8227931Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8229980Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8232164Z ##[group]GITHUB_TOKEN Permissions
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8235178Z Contents: read
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8236168Z Metadata: read
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8237367Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8241679Z Secret source: Actions
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8243549Z Cache mode: write
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8244806Z Prepare workflow directory
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8907805Z Prepare all required actions
+validate	UNKNOWN STEP	2026-11-02T09:55:14.8983965Z Getting action download info
+validate	UNKNOWN STEP	2026-11-02T09:55:15.3125359Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+validate	UNKNOWN STEP	2026-11-02T09:55:15.4143712Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+validate	UNKNOWN STEP	2026-11-02T09:55:15.5141512Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+validate	UNKNOWN STEP	2026-11-02T09:55:15.7140225Z Complete job name: validate
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8114506Z ##[group]Run actions/checkout@v4
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8115407Z with:
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8115835Z   lfs: true
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8116246Z   fetch-depth: 0
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8116765Z   repository: ghilmanITM360/youtube-intelligence-os
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8120891Z   token: ***
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8121346Z   ssh-strict: true
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8121794Z   ssh-user: git
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8122252Z   persist-credentials: true
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8122736Z   clean: true
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8123186Z   sparse-checkout-cone-mode: true
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8123706Z   fetch-tags: false
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8124153Z   show-progress: true
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8124603Z   submodules: false
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8125047Z   set-safe-directory: true
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8125561Z   allow-unsafe-pr-checkout: false
+validate	UNKNOWN STEP	2026-11-02T09:55:15.8126347Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:55:16.2502041Z Syncing repository: ghilmanITM360/youtube-intelligence-os
+validate	UNKNOWN STEP	2026-11-02T09:55:16.2505312Z ##[group]Getting Git version info
+validate	UNKNOWN STEP	2026-11-02T09:55:16.2507008Z Working directory is '/home/runner/work/youtube-intelligence-os/youtube-intelligence-os'
+validate	UNKNOWN STEP	2026-11-02T09:55:16.2509176Z [command]/usr/bin/git version
+validate	UNKNOWN STEP	2026-11-02T09:55:16.2510117Z git version 2.56.0
+validate	UNKNOWN STEP	2026-11-02T09:55:16.2512829Z [command]/usr/bin/git lfs version
+validate	UNKNOWN STEP	2026-11-02T09:55:16.2911284Z git-lfs/3.8.1 (GitHub; linux amd64; go 1.27.3)
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3015260Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3025142Z Temporarily overriding HOME='/home/runner/work/_temp/28367bf5-395e-4159-aa27-9863cde9d72d' before making global git config changes
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3028950Z Adding repository directory to the temporary git global config as a safe directory
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3031946Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/youtube-intelligence-os/youtube-intelligence-os
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3097837Z Deleting the contents of '/home/runner/work/youtube-intelligence-os/youtube-intelligence-os'
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3101597Z ##[group]Initializing the repository
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3103496Z [command]/usr/bin/git init /home/runner/work/youtube-intelligence-os/youtube-intelligence-os
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3224176Z hint: Using 'master' as the name for the initial branch. This default branch name
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3225429Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3226854Z hint: to use in all of your new repositories, which will suppress this warning,
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3227703Z hint: call:
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3228190Z hint:
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3229137Z hint: 	git config --global init.defaultBranch <name>
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3229866Z hint:
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3230523Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3232600Z hint: 'development'. The just-created branch can be renamed via this command:
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3234278Z hint:
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3235106Z hint: 	git branch -m <name>
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3236065Z hint:
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3237238Z hint: Disable this message with "git config set advice.defaultBranchName false"
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3242745Z Initialized empty Git repository in /home/runner/work/youtube-intelligence-os/youtube-intelligence-os/.git/
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3255765Z [command]/usr/bin/git remote add origin https://github.com/ghilmanITM360/youtube-intelligence-os
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3328369Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3330382Z ##[group]Disabling automatic garbage collection
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3333869Z [command]/usr/bin/git config --local gc.auto 0
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3387007Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3389798Z ##[group]Setting up auth
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3398388Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3459085Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3832578Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+validate	UNKNOWN STEP	2026-11-02T09:55:16.3887746Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+validate	UNKNOWN STEP	2026-11-02T09:55:16.4167341Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+validate	UNKNOWN STEP	2026-11-02T09:55:16.4344589Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+validate	UNKNOWN STEP	2026-11-02T09:55:16.4563068Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+validate	UNKNOWN STEP	2026-11-02T09:55:16.4624082Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:55:16.4629914Z [command]/usr/bin/git lfs install --local
+validate	UNKNOWN STEP	2026-11-02T09:55:16.5302303Z Updated Git hooks.
+validate	UNKNOWN STEP	2026-11-02T09:55:16.5303342Z Git LFS initialized.
+validate	UNKNOWN STEP	2026-11-02T09:55:16.5306105Z ##[group]Fetching the repository
+validate	UNKNOWN STEP	2026-11-02T09:55:16.5309249Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +8614bd2580dbc0088b7f46e59526eb5a38fd7aad:refs/remotes/pull/36/merge
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7045983Z From https://github.com/ghilmanITM360/youtube-intelligence-os
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7074107Z  * [new branch]        chore/full-local-data-sync-and-senior-health-acquisition -> origin/chore/full-local-data-sync-and-senior-health-acquisition
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7076123Z  * [new branch]        codex/casual-economics-forensic-research -> origin/codex/casual-economics-forensic-research
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7099094Z  * [new branch]        codex/casually-finance-forensic-research -> origin/codex/casually-finance-forensic-research
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7105523Z  * [new branch]        codex/casually-finance-knowledge-navigation -> origin/codex/casually-finance-knowledge-navigation
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7122391Z  * [new branch]        codex/finance-machine-a-owner-directed   -> origin/codex/finance-machine-a-owner-directed
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7151887Z  * [new branch]        codex/packaging-rollup-repair-2026-10-11 -> origin/codex/packaging-rollup-repair-2026-10-11
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7153757Z  * [new branch]        codex/register-verified-transcript-pending-what-if -> origin/codex/register-verified-transcript-pending-what-if
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7155370Z  * [new branch]        codex/remaining-work-audit-2026-10-11    -> origin/codex/remaining-work-audit-2026-10-11
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7156868Z  * [new branch]        codex/transcript-pending-registration    -> origin/codex/transcript-pending-registration
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7159017Z  * [new branch]        codex/what-if-archive-main-integration   -> origin/codex/what-if-archive-main-integration
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7160474Z  * [new branch]        codex/what-if-normalized-staging         -> origin/codex/what-if-normalized-staging
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7182287Z  * [new branch]        codex/what-if-promotion                  -> origin/codex/what-if-promotion
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7212255Z  * [new branch]        codex/what-if-readonly-adapter           -> origin/codex/what-if-readonly-adapter
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7214182Z  * [new branch]        codex/what-if-source-contract            -> origin/codex/what-if-source-contract
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7216572Z  * [new branch]        codex/yios-dual-machine-coordination     -> origin/codex/yios-dual-machine-coordination
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7218447Z  * [new branch]        dr-rehan-test-videos                     -> origin/dr-rehan-test-videos
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7220551Z  * [new branch]        fix/repository-health-remediation-2026-09-21 -> origin/fix/repository-health-remediation-2026-09-21
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7223423Z  * [new branch]        integration/packaging-forensics-validated-subset-2026-10-11 -> origin/integration/packaging-forensics-validated-subset-2026-10-11
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7226219Z  * [new branch]        integration/repository-consolidation-2026-09-25 -> origin/integration/repository-consolidation-2026-09-25
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7228986Z  * [new branch]        integration/repository-superset-2026-09-23 -> origin/integration/repository-superset-2026-09-23
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7231401Z  * [new branch]        integration/yios-current-canonical-2026-10-03 -> origin/integration/yios-current-canonical-2026-10-03
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7233366Z  * [new branch]        main                                     -> origin/main
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7235516Z  * [new branch]        planning/deferred-legacy-thumbnail-research -> origin/planning/deferred-legacy-thumbnail-research
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7238017Z  * [new branch]        production/dr-rehan-diabetes-heart-warning-assets -> origin/production/dr-rehan-diabetes-heart-warning-assets
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7240457Z  * [new branch]        production/finance-short-01-keyframe     -> origin/production/finance-short-01-keyframe
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7245739Z  * [new branch]        production/finance-short-02-assets       -> origin/production/finance-short-02-assets
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7247873Z  * [new branch]        production/senior-health-casually-finance-three-videos -> origin/production/senior-health-casually-finance-three-videos
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7250211Z  * [new branch]        recovery/local-research-reconciliation-2026-10-12 -> origin/recovery/local-research-reconciliation-2026-10-12
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7252703Z  * [new branch]        research/barely-evolved-metadata         -> origin/research/barely-evolved-metadata
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7254756Z  * [new branch]        research/casually-finance-editing-forensics -> origin/research/casually-finance-editing-forensics
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7257900Z  * [new branch]        research/casually-finance-success-playbook -> origin/research/casually-finance-success-playbook
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7260100Z  * [new branch]        research/casually-finance-video-inventory -> origin/research/casually-finance-video-inventory
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7262526Z  * [new branch]        research/finance-economics-intelligence  -> origin/research/finance-economics-intelligence
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7264812Z  * [new branch]        research/local-channel-media-library     -> origin/research/local-channel-media-library
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7266763Z  * [new branch]        research/monkey-explains-1999-metadata   -> origin/research/monkey-explains-1999-metadata
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7268769Z  * [new branch]        research/senior-health-acquisition-phase-2 -> origin/research/senior-health-acquisition-phase-2
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7271099Z  * [new branch]        research/senior-health-complete-local-sync -> origin/research/senior-health-complete-local-sync
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7273285Z  * [new branch]        research/senior-health-data-expansion-2026-09-28 -> origin/research/senior-health-data-expansion-2026-09-28
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7275269Z  * [new branch]        research/senior-health-forensic-v2       -> origin/research/senior-health-forensic-v2
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7277288Z  * [new branch]        research/thumbnail-forensics-complete-2026-10-04 -> origin/research/thumbnail-forensics-complete-2026-10-04
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7279542Z  * [new branch]        research/what-if-brain-preservation-batch1 -> origin/research/what-if-brain-preservation-batch1
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7281812Z  * [new branch]        research/youtube-12-channel-metadata     -> origin/research/youtube-12-channel-metadata
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7284026Z  * [new branch]        ui/v1                                    -> origin/ui/v1
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7286048Z  * [new branch]        yios-test/34df1220de934163b910f7d4c737bcf1/checkpoint -> origin/yios-test/34df1220de934163b910f7d4c737bcf1/checkpoint
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7288910Z  * [new branch]        yios-test/34df1220de934163b910f7d4c737bcf1/claims/finance/TEST0000001 -> origin/yios-test/34df1220de934163b910f7d4c737bcf1/claims/finance/TEST0000001
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7291578Z  * [new branch]        yios-test/34df1220de934163b910f7d4c737bcf1/claims/finance/TEST0000002 -> origin/yios-test/34df1220de934163b910f7d4c737bcf1/claims/finance/TEST0000002
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7293066Z  * [new ref]           8614bd2580dbc0088b7f46e59526eb5a38fd7aad -> pull/36/merge
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7295675Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7296312Z ##[group]Determining the checkout info
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7296828Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7297461Z ##[group]Fetching LFS objects
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7298154Z [command]/usr/bin/git lfs fetch origin refs/remotes/pull/36/merge
+validate	UNKNOWN STEP	2026-11-02T09:56:14.7473675Z Fetching reference refs/remotes/pull/36/merge
+validate	UNKNOWN STEP	2026-11-02T09:56:29.9904981Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:29.9905815Z [command]/usr/bin/git sparse-checkout disable
+validate	UNKNOWN STEP	2026-11-02T09:56:29.9952676Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+validate	UNKNOWN STEP	2026-11-02T09:56:29.9997604Z ##[group]Checking out the ref
+validate	UNKNOWN STEP	2026-11-02T09:56:30.0002324Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/36/merge
+validate	UNKNOWN STEP	2026-11-02T09:56:31.0164273Z Updating files:   3% (201/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.0260064Z Updating files:   4% (205/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.0352748Z Updating files:   5% (256/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.0562046Z Updating files:   6% (308/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.1080292Z Updating files:   7% (359/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.1475548Z Updating files:   8% (410/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.3229250Z Updating files:   9% (461/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.3412684Z Updating files:  10% (512/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.5344028Z Updating files:  11% (563/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.6589872Z Updating files:  12% (615/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.6607351Z Updating files:  13% (666/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.6677040Z Updating files:  14% (717/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.6749200Z Updating files:  15% (768/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.6834172Z Updating files:  16% (819/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.6858590Z Updating files:  17% (871/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.7166963Z Updating files:  18% (922/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.7196004Z Updating files:  19% (973/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.7221173Z Updating files:  20% (1024/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.7284082Z Updating files:  21% (1075/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.7400341Z Updating files:  22% (1126/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.7409038Z Updating files:  23% (1178/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.7493634Z Updating files:  24% (1229/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.7534818Z Updating files:  25% (1280/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.7661256Z Updating files:  26% (1331/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.8192479Z Updating files:  27% (1382/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.8408303Z Updating files:  28% (1434/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.8871818Z Updating files:  29% (1485/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.9571929Z Updating files:  30% (1536/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.9573176Z Updating files:  31% (1587/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.9782859Z Updating files:  32% (1638/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.9797536Z Updating files:  33% (1689/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:31.9798420Z Updating files:  34% (1741/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.0921632Z Updating files:  35% (1792/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.0935536Z Updating files:  35% (1831/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.1099917Z Updating files:  36% (1843/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.1270919Z Updating files:  37% (1894/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.1449969Z Updating files:  38% (1945/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.1630837Z Updating files:  39% (1997/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.2039202Z Updating files:  40% (2048/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.2771424Z Updating files:  41% (2099/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.2948368Z Updating files:  42% (2150/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.3124586Z Updating files:  43% (2201/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.3299629Z Updating files:  44% (2252/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.3485079Z Updating files:  45% (2304/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.3671629Z Updating files:  46% (2355/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.3846458Z Updating files:  47% (2406/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.4027800Z Updating files:  48% (2457/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.4088475Z Updating files:  49% (2508/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.4306172Z Updating files:  50% (2559/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.4680584Z Updating files:  51% (2611/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.4890495Z Updating files:  52% (2662/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.5003161Z Updating files:  53% (2713/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.5213042Z Updating files:  54% (2764/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.5413327Z Updating files:  55% (2815/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.5451223Z Updating files:  56% (2867/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.5658594Z Updating files:  57% (2918/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.5696952Z Updating files:  58% (2969/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.5853368Z Updating files:  59% (3020/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.5942277Z Updating files:  60% (3071/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.7380326Z Updating files:  61% (3122/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.7638756Z Updating files:  62% (3174/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.9136267Z Updating files:  63% (3225/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.9716936Z Updating files:  64% (3276/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.9829093Z Updating files:  65% (3327/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.9875280Z Updating files:  66% (3378/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.9914451Z Updating files:  67% (3430/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.9949466Z Updating files:  68% (3481/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:32.9978025Z Updating files:  69% (3532/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0022509Z Updating files:  70% (3583/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0070195Z Updating files:  71% (3634/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0124319Z Updating files:  72% (3685/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0160105Z Updating files:  73% (3737/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0174271Z Updating files:  73% (3775/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0255125Z Updating files:  74% (3788/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0299519Z Updating files:  75% (3839/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0345253Z Updating files:  76% (3890/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0394418Z Updating files:  77% (3941/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0437066Z Updating files:  78% (3993/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0697542Z Updating files:  79% (4044/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.0831518Z Updating files:  80% (4095/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.1041303Z Updating files:  81% (4146/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.1211989Z Updating files:  82% (4197/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.1493589Z Updating files:  83% (4248/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.1644422Z Updating files:  84% (4300/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.1839318Z Updating files:  85% (4351/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.2007289Z Updating files:  86% (4402/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.2326634Z Updating files:  87% (4453/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.2712302Z Updating files:  88% (4504/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.3320313Z Updating files:  89% (4556/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.3687681Z Updating files:  90% (4607/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.4166281Z Updating files:  91% (4658/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.4542511Z Updating files:  92% (4709/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.4772910Z Updating files:  93% (4760/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.4859050Z Updating files:  94% (4811/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.5038377Z Updating files:  95% (4863/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.5096679Z Updating files:  96% (4914/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.5138908Z Updating files:  97% (4965/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.5191050Z Updating files:  98% (5016/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.5223125Z Updating files:  99% (5067/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.5223785Z Updating files: 100% (5118/5118)
+validate	UNKNOWN STEP	2026-11-02T09:56:33.5224491Z Updating files: 100% (5118/5118), done.
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7882029Z Note: switching to 'refs/remotes/pull/36/merge'.
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7891213Z 
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7891694Z You are in 'detached HEAD' state. You can look around, make experimental
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7902140Z changes and commit them, and you can discard any commits you make in this
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7903135Z state without impacting any branches by switching back to a branch.
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7903737Z 
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7904157Z If you want to create a new branch to retain commits you create, you may
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7905031Z do so (now or later) by using -c with the switch command. Example:
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7905552Z 
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7905892Z   git switch -c <new-branch-name>
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7906406Z 
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7906680Z Or undo this operation with:
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7907056Z 
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7907279Z   git switch -
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7907590Z 
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7908058Z Turn off this advice by setting config variable advice.detachedHead to false
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7908626Z 
+validate	UNKNOWN STEP	2026-11-02T09:56:34.7909648Z HEAD is now at 8614bd25 Merge 0df91c584f5b0bad0634028a3817aaedd7c1b6c9 into 08e719264e31ecd82de24f8eeb8f065c08359fe5
+validate	UNKNOWN STEP	2026-11-02T09:56:35.7744250Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:35.7812699Z [command]/usr/bin/git log -1 --format=%H
+validate	UNKNOWN STEP	2026-11-02T09:56:35.7865803Z 8614bd2580dbc0088b7f46e59526eb5a38fd7aad
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0456400Z ##[group]Run actions/setup-python@v5
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0456705Z with:
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0456904Z   python-version: 3.12
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0457123Z   cache: pip
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0457319Z   check-latest: false
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0459953Z   token: ***
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0460173Z   update-environment: true
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0460427Z   allow-prereleases: false
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0460841Z   freethreaded: false
+validate	UNKNOWN STEP	2026-11-02T09:56:36.0461073Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:36.2047964Z ##[group]Installed versions
+validate	UNKNOWN STEP	2026-11-02T09:56:36.2204125Z (node:2224) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+validate	UNKNOWN STEP	2026-11-02T09:56:36.2221452Z (Use `node --trace-deprecation ...` to show where the warning was created)
+validate	UNKNOWN STEP	2026-11-02T09:56:36.2222256Z Successfully set up CPython (3.12.15)
+validate	UNKNOWN STEP	2026-11-02T09:56:36.2223634Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:37.4162702Z [command]/opt/hostedtoolcache/Python/3.12.15/x64/bin/pip cache dir
+validate	UNKNOWN STEP	2026-11-02T09:56:37.7549881Z /home/runner/.cache/pip
+validate	UNKNOWN STEP	2026-11-02T09:56:38.0487530Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-68400ecc0477db46fc552142b6f040075dc16c95691e57d54b4a89a6be0d6501
+validate	UNKNOWN STEP	2026-11-02T09:56:38.0664199Z (node:2224) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+validate	UNKNOWN STEP	2026-11-02T09:56:39.3437316Z Received 6283215 of 23060431 (27.2%), 6.0 MBs/sec
+validate	UNKNOWN STEP	2026-11-02T09:56:40.3433812Z Received 18866127 of 23060431 (81.8%), 9.0 MBs/sec
+validate	UNKNOWN STEP	2026-11-02T09:56:40.4564754Z Received 23060431 of 23060431 (100.0%), 10.4 MBs/sec
+validate	UNKNOWN STEP	2026-11-02T09:56:40.4566345Z Cache Size: ~22 MB (23060431 B)
+validate	UNKNOWN STEP	2026-11-02T09:56:40.4596351Z [command]/usr/bin/tar -xf /home/runner/work/_temp/f8fd0a92-657c-4972-8013-5c6076bad54c/cache.tzst -P -C /home/runner/work/youtube-intelligence-os/youtube-intelligence-os --use-compress-program unzstd
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5260900Z Cache restored successfully
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5292520Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-68400ecc0477db46fc552142b6f040075dc16c95691e57d54b4a89a6be0d6501
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5582141Z ##[group]Run actions/setup-node@v4
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5582432Z with:
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5582656Z   node-version-file: .nvmrc
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5582899Z   always-auth: false
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5583118Z   check-latest: false
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5585771Z   token: ***
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5585981Z env:
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5586260Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5586757Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5587221Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5587622Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5588013Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5588404Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate	UNKNOWN STEP	2026-11-02T09:56:40.5588734Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:40.7155872Z Resolved .nvmrc as 24
+validate	UNKNOWN STEP	2026-11-02T09:56:40.7217011Z Found in cache @ /opt/hostedtoolcache/node/24.22.1/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:40.7232218Z (node:2257) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+validate	UNKNOWN STEP	2026-11-02T09:56:40.7233627Z ##[group]Environment details
+validate	UNKNOWN STEP	2026-11-02T09:56:40.7234401Z (Use `node --trace-deprecation ...` to show where the warning was created)
+validate	UNKNOWN STEP	2026-11-02T09:56:41.5152086Z node: v24.22.1
+validate	UNKNOWN STEP	2026-11-02T09:56:41.5152900Z npm: 11.19.1
+validate	UNKNOWN STEP	2026-11-02T09:56:41.5153551Z yarn: 1.22.22
+validate	UNKNOWN STEP	2026-11-02T09:56:41.5154455Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:41.6069468Z ##[group]Run python -m pip install --upgrade pip && python -m pip install ".[dev]"
+validate	UNKNOWN STEP	2026-11-02T09:56:41.6070572Z ^[[36;1mpython -m pip install --upgrade pip && python -m pip install ".[dev]"^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:41.8967654Z shell: /usr/bin/bash -e {0}
+validate	UNKNOWN STEP	2026-11-02T09:56:41.8968141Z env:
+validate	UNKNOWN STEP	2026-11-02T09:56:41.8968631Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:41.8969460Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate	UNKNOWN STEP	2026-11-02T09:56:41.8970222Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:41.8971166Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:41.8971809Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:41.8972245Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate	UNKNOWN STEP	2026-11-02T09:56:41.8972584Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:43.4199405Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (26.2.2)
+validate	UNKNOWN STEP	2026-11-02T09:56:43.9512103Z Processing ./.
+validate	UNKNOWN STEP	2026-11-02T09:56:43.9529440Z   Installing build dependencies: started
+validate	UNKNOWN STEP	2026-11-02T09:56:44.6804303Z   Installing build dependencies: finished with status 'done'
+validate	UNKNOWN STEP	2026-11-02T09:56:44.6811377Z   Getting requirements to build wheel: started
+validate	UNKNOWN STEP	2026-11-02T09:56:45.2338251Z   Getting requirements to build wheel: finished with status 'done'
+validate	UNKNOWN STEP	2026-11-02T09:56:45.2347783Z   Preparing metadata (pyproject.toml): started
+validate	UNKNOWN STEP	2026-11-02T09:56:45.4354842Z   Preparing metadata (pyproject.toml): finished with status 'done'
+validate	UNKNOWN STEP	2026-11-02T09:56:45.4986542Z Collecting openpyxl<4,>=3.1.5 (from youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:45.5003273Z   Using cached openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:45.7022821Z Collecting Pillow<13,>=12.0 (from youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:45.7040181Z   Using cached pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:45.7291684Z Collecting pytest<9,>=8.4 (from youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:45.7306736Z   Using cached pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:45.7441524Z Collecting pytest-cov<8,>=7 (from youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:45.7455231Z   Using cached pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.0745466Z Collecting ruff<1,>=0.13 (from youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.0761208Z   Using cached ruff-0.17.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.0851993Z Collecting et-xmlfile (from openpyxl<4,>=3.1.5->youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.0866038Z   Using cached et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.0962975Z Collecting iniconfig>=1 (from pytest<9,>=8.4->youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.0978057Z   Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.1112672Z Collecting packaging>=20 (from pytest<9,>=8.4->youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.1119687Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.1226427Z Collecting pluggy<2,>=1.5 (from pytest<9,>=8.4->youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.1240539Z   Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.1402707Z Collecting pygments>=2.7.2 (from pytest<9,>=8.4->youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.1408584Z   Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5671688Z Collecting coverage>=7.10.6 (from coverage[toml]>=7.10.6->pytest-cov<8,>=7->youtube-intelligence-os==1.0.0)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5687566Z   Using cached coverage-7.17.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.1 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5770520Z Using cached openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5788669Z Using cached pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5833366Z Using cached pytest-8.4.2-py3-none-any.whl (365 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5848016Z Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5861296Z Using cached pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5875647Z Using cached ruff-0.17.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.6 MB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5936419Z Using cached coverage-7.17.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (261 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5951021Z Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5964806Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5978930Z Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.5997243Z Using cached et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+validate	UNKNOWN STEP	2026-11-02T09:56:46.6462024Z Building wheels for collected packages: youtube-intelligence-os
+validate	UNKNOWN STEP	2026-11-02T09:56:46.6471769Z   Building wheel for youtube-intelligence-os (pyproject.toml): started
+validate	UNKNOWN STEP	2026-11-02T09:56:46.8722656Z   Building wheel for youtube-intelligence-os (pyproject.toml): finished with status 'done'
+validate	UNKNOWN STEP	2026-11-02T09:56:46.8724717Z   Created wheel for youtube-intelligence-os: filename=youtube_intelligence_os-1.0.0-py3-none-any.whl size=1258 sha256=1bf0ac377ef590f792dd4034a3fb9454829e0308b2b8340bf502114c1fc52bd8
+validate	UNKNOWN STEP	2026-11-02T09:56:46.8726356Z   Stored in directory: /tmp/pip-ephem-wheel-cache-sgxdg85r/wheels/9c/c5/e4/ca7920ce83a71eca11e9614715762477226b1d20c0fc002265
+validate	UNKNOWN STEP	2026-11-02T09:56:46.8751704Z Successfully built youtube-intelligence-os
+validate	UNKNOWN STEP	2026-11-02T09:56:46.9065967Z Installing collected packages: ruff, pygments, pluggy, Pillow, packaging, iniconfig, et-xmlfile, coverage, pytest, openpyxl, youtube-intelligence-os, pytest-cov
+validate	UNKNOWN STEP	2026-11-02T09:56:48.9631836Z 
+validate	UNKNOWN STEP	2026-11-02T09:56:48.9652604Z Successfully installed Pillow-12.3.0 coverage-7.17.0 et-xmlfile-2.0.0 iniconfig-2.3.1 openpyxl-3.1.5 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-8.4.2 pytest-cov-7.1.0 ruff-0.17.3 youtube-intelligence-os-1.0.0
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0696831Z ##[group]Run python -m compileall -q scripts tests
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0697299Z ^[[36;1mpython -m compileall -q scripts tests^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0697624Z ^[[36;1mruff check scripts tests^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0697925Z ^[[36;1mpython scripts/scan_tracked_secrets.py^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0719899Z shell: /usr/bin/bash -e {0}
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0720163Z env:
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0720434Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0721238Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0721699Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0722145Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0722564Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0722989Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate	UNKNOWN STEP	2026-11-02T09:56:49.0723352Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:49.5140585Z All checks passed!
+validate	UNKNOWN STEP	2026-11-02T09:56:50.5992317Z tracked_secret_findings=0
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6135168Z ##[group]Run python -c "
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6135492Z ^[[36;1mpython -c "^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6135727Z ^[[36;1mimport sqlite3^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6136059Z ^[[36;1mcon = sqlite3.connect('data/catalog/youtube_inventory.db')^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6136530Z ^[[36;1mintegrity = con.execute('PRAGMA integrity_check').fetchone()[0]^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6137020Z ^[[36;1mviolations = con.execute('PRAGMA foreign_key_check').fetchall()^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6137492Z ^[[36;1massert integrity == 'ok', f'integrity_check failed: {integrity}'^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6137971Z ^[[36;1massert not violations, f'foreign key violations: {violations}'^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6138489Z ^[[36;1mprint('canonical inventory catalog: integrity ok, 0 foreign key violations')^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6138925Z ^[[36;1m"^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6160095Z shell: /usr/bin/bash -e {0}
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6160374Z env:
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6160927Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6161441Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6161884Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6162273Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6162660Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6163057Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate	UNKNOWN STEP	2026-11-02T09:56:50.6163386Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:51.0944176Z canonical inventory catalog: integrity ok, 0 foreign key violations
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1044074Z ##[group]Run python -m scripts.rebuild_inventory_catalog --database "$RUNNER_TEMP/bootstrap_inventory_catalog.db"
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1045656Z ^[[36;1mpython -m scripts.rebuild_inventory_catalog --database "$RUNNER_TEMP/bootstrap_inventory_catalog.db"^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1078001Z shell: /usr/bin/bash -e {0}
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1078436Z env:
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1078914Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1079765Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1080851Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1081617Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1082375Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1083132Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate	UNKNOWN STEP	2026-11-02T09:56:51.1083765Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:51.2925469Z Applied schema version(s): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+validate	UNKNOWN STEP	2026-11-02T09:56:51.2926864Z Database: /home/runner/work/_temp/tmp3gt1e2jr/bootstrap_inventory_catalog.db
+validate	UNKNOWN STEP	2026-11-02T09:56:51.2929129Z {'database': '/home/runner/work/_temp/bootstrap_inventory_catalog.db', 'datasets': 33, 'schema_version': 11, 'integrity_check': 'ok', 'foreign_key_violations': 0, 'reproduction': 'SEMANTIC_MANIFEST_INDEX_NOT_BYTE_IDENTICAL'}
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3035684Z ##[group]Run python -m scripts.build_youtube_channel_registry --write-ledgers
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3036291Z ^[[36;1mpython -m scripts.build_youtube_channel_registry --write-ledgers^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3057731Z shell: /usr/bin/bash -e {0}
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3057988Z env:
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3058258Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3058713Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3059150Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3059540Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3059935Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3060330Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate	UNKNOWN STEP	2026-11-02T09:56:51.3060954Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7057013Z {
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7058450Z   "database": "/home/runner/work/youtube-intelligence-os/youtube-intelligence-os/data/catalog/youtube_channel_registry.db",
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7059580Z   "controls": {
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7060050Z     "submitted_rows": 67,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7060585Z     "normalized_url_identities": 63,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7061688Z     "canonical_target_channels": 63,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7081367Z     "all_canonical_channels": 75,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7081989Z     "source_groups": {
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7082755Z       "standard_packages": 40,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7087366Z       "historical_catalog": 6,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7087925Z       "identity_only": 29
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7088384Z     },
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7088786Z     "visual_evidence": {
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7089258Z       "forensic_channels": 1,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7089803Z       "thumbnail_evidence_channels": 3,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7090409Z       "title_only_historical_channels": 2,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7091294Z       "unmapped_screenshot_subjects": 4
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7091843Z     },
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7092237Z     "package_layer": {
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7092706Z       "channels": 40,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7093141Z       "unique_videos": 1878,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7093656Z       "real_transcripts": 1867,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7094155Z       "placeholders": 11,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7094664Z       "missing_descriptions": 15
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7095155Z     }
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7095535Z   },
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7095917Z   "table_counts": {
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7096365Z     "actor_runs": 19,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7096826Z     "artifacts": 318,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7097283Z     "availability_gaps": 216,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7097785Z     "channel_aliases": 142,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7098301Z     "channel_data_layers": 825,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7098961Z     "channels": 75,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7099423Z     "dataset_channels": 50,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7099927Z     "dataset_videos": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7100392Z     "datasets": 33,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7101034Z     "identity_evidence": 75,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7101590Z     "intelligence_capabilities": 8,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7102176Z     "intelligence_coverage": 600,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7102743Z     "non_channel_subjects": 4,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7103236Z     "registry_metadata": 4,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7103692Z     "subject_datasets": 4,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7104166Z     "submissions": 67,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7104599Z     "subtitle_tracks": 2455,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7105064Z     "transcripts": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7105515Z     "videos": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7105934Z     "visual_coverage": 75
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7106349Z   }
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7106711Z }
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7544763Z ##[group]Run python -m scripts.validate_dataset_ledgers
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7545243Z ^[[36;1mpython -m scripts.validate_dataset_ledgers^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7545650Z ^[[36;1mpython -m scripts.validate_youtube_channel_registry^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7566426Z shell: /usr/bin/bash -e {0}
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7566678Z env:
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7567144Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7567606Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7568067Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7568649Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7569144Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7569765Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate	UNKNOWN STEP	2026-11-02T09:56:59.7570204Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:57:00.1890346Z DS-000020: clean
+validate	UNKNOWN STEP	2026-11-02T09:57:00.1897324Z DS-000021: clean
+validate	UNKNOWN STEP	2026-11-02T09:57:00.1899721Z DS-000022: clean
+validate	UNKNOWN STEP	2026-11-02T09:57:00.1900035Z DS-000023: clean
+validate	UNKNOWN STEP	2026-11-02T09:57:00.1900355Z DS-000024: clean
+validate	UNKNOWN STEP	2026-11-02T09:57:00.1900951Z DS-000025: clean
+validate	UNKNOWN STEP	2026-11-02T09:57:00.1901285Z DS-000027: clean
+validate	UNKNOWN STEP	2026-11-02T09:57:00.1901593Z DS-000028: clean
+validate	UNKNOWN STEP	2026-11-02T09:57:00.1901907Z DS-000030: clean
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2853844Z {
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2854492Z   "checks": {
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2855103Z     "duplicate_channel_ids": 0,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2855680Z     "duplicate_video_ids": 0,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2856283Z     "first_party_ingested_count": 0,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2856881Z     "forensic_channel_count": 1,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2857549Z     "generated_intelligence_marked_unavailable": 0,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2858263Z     "generated_intelligence_without_evidence": 0,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2858950Z     "identity_only_with_packages": 0,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2859542Z     "identity_only_with_videos": 0,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2860155Z     "null_transcript_without_reason": 0,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2861003Z     "thumbnail_evidence_channel_count": 3,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2861807Z     "title_only_historical_channel_count": 2
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2862368Z   },
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2862812Z   "controls": {
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2863255Z     "canonical_channels": 75,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2863877Z     "channels_with_video_data": 46,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2864424Z     "data_layer_rows": 825,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2864934Z     "datasets": 33,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2865364Z     "description_gaps": 17,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2865859Z     "historical_channels": 6,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2866373Z     "identity_only_channels": 29,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2866973Z     "intelligence_coverage_rows": 600,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2867543Z     "non_channel_subjects": 4,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2868077Z     "placeholders": 12,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2868543Z     "raw_submissions": 67,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2869070Z     "real_transcripts": 2291,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2869574Z     "standard_packages": 40,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2870163Z     "stored_outside_targets": 12,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2870877Z     "target_channels": 63,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2871430Z     "videos": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2871920Z     "visual_coverage_rows": 75
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2872420Z   },
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2872808Z   "errors": [],
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2873255Z   "idempotence": {
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2873682Z     "first": {
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2874151Z       "actor_runs": 19,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2874616Z       "artifacts": 318,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2875143Z       "availability_gaps": 216,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2875644Z       "channel_aliases": 142,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2876192Z       "channel_data_layers": 825,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2876681Z       "channels": 75,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2877169Z       "dataset_channels": 50,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2877742Z       "dataset_videos": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2878252Z       "datasets": 33,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2878743Z       "identity_evidence": 75,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2879322Z       "intelligence_capabilities": 8,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2880379Z       "intelligence_coverage": 600,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2881335Z       "non_channel_subjects": 4,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2881868Z       "registry_metadata": 4,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2882398Z       "subject_datasets": 4,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2882892Z       "submissions": 67,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2883428Z       "subtitle_tracks": 2455,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2883911Z       "transcripts": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2884691Z       "videos": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2885134Z       "visual_coverage": 75
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2885617Z     },
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2886008Z     "second": {
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2886454Z       "actor_runs": 19,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2886885Z       "artifacts": 318,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2887413Z       "availability_gaps": 216,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2887913Z       "channel_aliases": 142,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2888476Z       "channel_data_layers": 825,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2888982Z       "channels": 75,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2889477Z       "dataset_channels": 50,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2890197Z       "dataset_videos": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2890964Z       "datasets": 33,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2891481Z       "identity_evidence": 75,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2892074Z       "intelligence_capabilities": 8,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2892658Z       "intelligence_coverage": 600,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2893270Z       "non_channel_subjects": 4,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2893783Z       "registry_metadata": 4,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2894342Z       "subject_datasets": 4,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2894834Z       "submissions": 67,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2895363Z       "subtitle_tracks": 2455,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2895851Z       "transcripts": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2896373Z       "videos": 2303,
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2896828Z       "visual_coverage": 75
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2897311Z     },
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2897700Z     "status": "PASS"
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2898299Z   },
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2898676Z   "status": "PASS"
+validate	UNKNOWN STEP	2026-11-02T09:57:15.2899119Z }
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3344997Z ##[group]Run python -m pytest -q
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3345641Z ^[[36;1mpython -m pytest -q^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3368673Z shell: /usr/bin/bash -e {0}
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3368934Z env:
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3369212Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3369676Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3370130Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3370541Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3371353Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3371788Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate	UNKNOWN STEP	2026-11-02T09:57:15.3372127Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:57:23.2041911Z ........................................................................ [ 15%]
+validate	UNKNOWN STEP	2026-11-02T09:57:29.5539800Z ........................................................................ [ 31%]
+validate	UNKNOWN STEP	2026-11-02T09:57:32.9410477Z ........................................................................ [ 46%]
+validate	UNKNOWN STEP	2026-11-02T09:57:37.0199742Z ........................................s............................... [ 62%]
+validate	UNKNOWN STEP	2026-11-02T09:57:43.2109394Z ........................................................................ [ 77%]
+validate	UNKNOWN STEP	2026-11-02T09:57:51.9102366Z ........................................................................ [ 93%]
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9722773Z ...............................                                          [100%]
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9724338Z =============================== warnings summary ===============================
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9725977Z tests/test_register_batch.py::RegisterBatchTestCase::test_image_pipeline_extracts_metadata
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9727879Z tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9729669Z tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9731684Z tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9734100Z   /home/runner/work/youtube-intelligence-os/youtube-intelligence-os/scripts/image_pipeline.py:43: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9735976Z     pixels = list(small.getdata())
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9736860Z 
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9738091Z tests/test_register_structured_source.py::RegisterStructuredSourceTestCase::test_register_rejects_duplicate_workbook_video_id_without_duplicate_entity
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9740062Z   /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/zipfile/__init__.py:1650: UserWarning: Duplicate name: 'ChannelA/sameid00001.txt'
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9741729Z     return self._open_to_write(zinfo, force_zip64=force_zip64)
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9742275Z 
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9742867Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+validate	UNKNOWN STEP	2026-11-02T09:58:17.9743864Z 462 passed, 1 skipped, 5 warnings in 62.22s (0:01:02)
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1616896Z ##[group]Run test -z "$(git ls-files 'data/catalog/*.db-wal' 'data/catalog/*.db-shm' 'outputs/**' '*.pyc')"
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1618301Z ^[[36;1mtest -z "$(git ls-files 'data/catalog/*.db-wal' 'data/catalog/*.db-shm' 'outputs/**' '*.pyc')"^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1619954Z ^[[36;1mUNAPPROVED_DBS="$(git ls-files '*.db' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' || true)"^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1621961Z ^[[36;1mtest -z "$UNAPPROVED_DBS" || { echo "Unapproved tracked database(s):"; echo "$UNAPPROVED_DBS"; exit 1; }^[[0m
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1652935Z shell: /usr/bin/bash -e {0}
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1653385Z env:
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1653870Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1654783Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1655661Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1656494Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1657258Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1658015Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1658655Z ##[endgroup]
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1806078Z Unapproved tracked database(s):
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1807200Z data/knowledge/reference_knowledge.db
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1821318Z ##[error]Process completed with exit code 1.
+validate	UNKNOWN STEP	2026-11-02T09:58:18.1957953Z Post job cleanup.
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3024007Z [command]/usr/bin/git version
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3061632Z git version 2.56.0
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3152775Z Temporarily overriding HOME='/home/runner/work/_temp/5c89a652-33ce-4cf4-8708-820b76e6890c' before making global git config changes
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3159625Z Adding repository directory to the temporary git global config as a safe directory
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3161681Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/youtube-intelligence-os/youtube-intelligence-os
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3222224Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3334729Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3799327Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3902202Z http.https://github.com/.extraheader
+validate	UNKNOWN STEP	2026-11-02T09:58:18.3972373Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+validate	UNKNOWN STEP	2026-11-02T09:58:18.4053440Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+validate	UNKNOWN STEP	2026-11-02T09:58:18.4795006Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+validate	UNKNOWN STEP	2026-11-02T09:58:18.4846943Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+validate	UNKNOWN STEP	2026-11-02T09:58:18.5307822Z Cleaning up orphan processes
+validate	UNKNOWN STEP	2026-11-02T09:58:18.5761247Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

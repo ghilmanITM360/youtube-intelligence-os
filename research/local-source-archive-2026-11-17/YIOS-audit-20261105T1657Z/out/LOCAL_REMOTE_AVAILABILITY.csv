@@ -1,0 +1,25 @@
+item,scope,class,detail,label,evidence
+"Remote all refs at final pin (50 heads, 54 pull refs)",Git objects,INDEPENDENTLY_RESTORED_FROM_REMOTE_AND_VERIFIED,0 missing reachable; connectivity fsck exit 0; verify-pack 3/3 exit 0; full fsck exit 0 at 22:48Z before refresh; no alternates; no promisor,FRESH,"raw/remote/, raw/recon/ls_remote_final2.txt"
+LFS payloads,38 unique OIDs,INDEPENDENTLY_RESTORED_FROM_REMOTE_AND_VERIFIED,"38/38 downloaded, 0 hash mismatch, 2,382,198,755 bytes; pointer walk also 38 after final fetch; fetch log says 39 objects, difference unexplained",FRESH,raw/lfs/
+Worktree restore test,"3 refs: main, Finance, Knowledge Navigation",INDEPENDENTLY_RESTORED_FROM_REMOTE_AND_VERIFIED,export plus full test suites; other 47 heads objects verified but not exported,FRESH,raw/tests/full_with_git/
+752 objects missing locally in partial clone,"746 blobs, 6 trees",HERE_ABSENT_LOCALLY_BUT_IN_REMOTE,"All in mirror; promisor gaps, not corruption",FRESH,raw/recon/missing_in_mirror.txt
+12 Finance/NICK Machine B files,12 hashes,PREVIOUSLY_MISSING_NOW_FOUND (remote Git),Not on Machine A disk; 2 also in canonical local objects; SHA-256 verified from mirror bytes,FRESH,out/TWELVE_FINANCE_NICK_FILES.csv
+Machine B identities,"1,000 hashes",988 HASH_VERIFIED_HERE; 12 REMOTE_ONLY,988 and 358 overlap: 358 is inside 988,FRESH,raw/hash/target_comparison.csv
+Oct-26 not-matched rows,370 hashes,358 HASH_VERIFIED_HERE; 12 REMOTE_ONLY,"Inside the 1,000; do not add",FRESH,raw/hash/target_comparison.csv
+Machine B media master PR41,"456 rows, 455 hashes",HASH_VERIFIED_HERE,Only 17 rows also remote,FRESH,raw/hash/target_comparison.csv
+Machine B evidence inventory on PR #36,"3,986 hashes","2,589 disk only; 647 disk+remote; 330 remote only; 420 neither (642,046,957 bytes)",420 are Machine-B-listed only; current Machine B state UNKNOWN,FRESH,raw/portable/inventory_vs_machine_a.csv
+"External visual evidence o3FQcd91MIs, Uumnx2Fo6cE","1,009 rows, 1,006 hashes",HERE_NOT_IN_REMOTE,Machine B recorded them unavailable; all found on this Mac,FRESH,raw/portable/inventory_vs_machine_a.csv
+Published evidence-manifest hashes,"11,398 hashes from 167 manifests","6,735 disk only; 3,974 disk+remote; 655 remote only; 34 neither","Not the 5,767 list. Neither-class likely newer than the 16:57-18:37Z index: INFERENCE",FRESH,raw/5767/published_manifest_hash_comparison.csv
+"5,767 forensic hash list",unknown file,BLOCKED_MISSING_INPUT,Not located; comparison not done,FRESH,raw/5767/
+Local indexed YIOS roots,"40,334 hashes, 19.11 GB logical unique","29,526 hashes, 17.14 GB not in remote","Same-Mac only unless other proof; 2,873 dataless not opened",FRESH,out/DATA_INVENTORY.csv
+Video006 checkpoint U commit df22c7e0,"1 commit, 28 files",COMMIT_LOCAL_ONLY_AND_UNREACHABLE; all 28 file versions in remote,"No ref or reflog entry in canonical; loose object exists; bundle Casual-Finance-Video006-U-V-recovery.bundle sha b01faae0c277de3a1811231f64338de181ccfed6f14a95e1108ad5439b8c6af4 unpacked in scratch and gave commit and tree ae621dfe; same Mac only; tree not in remote",FRESH,raw/u_v/
+Video006 checkpoint V 9c2685f1,1 commit,"IN_REMOTE (pushed by another worker, reflog update by push)",Earlier audit statement local-only is corrected,FRESH,"raw/u_v/, canonical reflog"
+Video006 workspaces,"3,028+ files 592 MB, plus EP0002 234 MB and follow-up 37 MB by du",HERE_NOT_IN_REMOTE (no off-device proof),Top preservation risk,FRESH,out/DATA_INVENTORY.csv
+Primitive Education checkpoint J and local source copies,in progress,HERE_NOT_IN_REMOTE at 03:36:58Z,Worker lock active; may publish later,FRESH,campaign/LOCAL_ONLY_PRESERVATION_MANIFEST.txt
+Stash 5b6c3042,1 tracked-line change; untracked commit has 0 files,LOCAL_ONLY,Kept unchanged,FRESH,after/stash.txt
+Branch backup/decode-15cbe9f-original,1 commit; 11 of 13 changed blobs not in remote,LOCAL_ONLY,Later Decode Your Heart commits exist on remote with other bytes,FRESH,refs matrix
+"Canonical untracked: productions, finance-short-02-visual-calibration, casually-finance-script-intelligence","115 MB, 38 MB, 92 KB",HERE; remote coverage by file in hash index,Not modified,FRESH,after/status_canonical.txt
+Research Export 2026-10-21 original folder,"5,373 rows",UNAVAILABLE_IN_INSPECTED_SCOPE,Folder absent at recorded path; old metadata only,FRESH,raw/hash/target_comparison.csv
+Google Drive backup recorded Oct 26-29,historic,UNKNOWN_NOT_REVERIFIED,Connector and folder not used; no CloudStorage folder on this Mac,HISTORICAL,YIOS-Archive/recovery/YIOS-coverage-audit-20261026T220542Z
+Off-device copy of current local-only work,unknown,UNKNOWN_BLOCKED,Only Macintosh HD mounted; no destination named,FRESH,/Volumes listing
+Machine B current files,unknown,UNKNOWN,Not accessible from here,UNKNOWN,

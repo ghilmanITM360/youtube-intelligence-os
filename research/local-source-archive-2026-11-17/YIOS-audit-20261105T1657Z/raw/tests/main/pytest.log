@@ -1,0 +1,39 @@
+........................................................................ [ 15%]
+............................................................F.F......... [ 31%]
+........................................................................ [ 46%]
+......................................s................................. [ 62%]
+........................................................................ [ 78%]
+........................................................................ [ 93%]
+.............................                                            [100%]
+=================================== FAILURES ===================================
+__________ LedgerChecksumTests.test_all_csv_ledger_datasets_are_clean __________
+tests/test_dataset_ledger_provenance.py:53: in test_all_csv_ledger_datasets_are_clean
+    self.assertEqual({}, problems, "{} has unresolved ledger issues".format(dataset_id))
+E   AssertionError: {} != {'DS-000021-F034': ['HISTORICAL_COMMIT_MIS[433 chars]f)']}
+E   - {}
+E   + {'DS-000021-F034': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)'],
+E   +  'DS-000021-F035': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)'],
+E   +  'DS-000021-F037': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)'],
+E   +  'DS-000021-F038': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)'],
+E   +  'DS-000021-F039': ['HISTORICAL_COMMIT_MISSING_PATH(78ad5d728380873d67422d71e67f613ff28c37cf)']} : DS-000021 has unresolved ledger issues
+_ LedgerChecksumTests.test_historical_pinned_rows_are_checked_against_their_recorded_commit _
+tests/test_dataset_ledger_provenance.py:68: in test_historical_pinned_rows_are_checked_against_their_recorded_commit
+    self.assertEqual(
+E   AssertionError: '874047790d81d58ef865f45fe6b97c8c1976870dd86a5aa751563390b1e6b124' != None : DS-000021 DS-000021-F034 does not reconcile against pinned commit 78ad5d728380873d67422d71e67f613ff28c37cf
+=============================== warnings summary ===============================
+tests/test_register_batch.py::RegisterBatchTestCase::test_image_pipeline_extracts_metadata
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+  /Users/ghilmankhan/YIOS-audit-20261105T1657Z/scratch/tests/main/scripts/image_pipeline.py:43: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+    pixels = list(small.getdata())
+
+tests/test_register_structured_source.py::RegisterStructuredSourceTestCase::test_register_rejects_duplicate_workbook_video_id_without_duplicate_entity
+  /opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'ChannelA/sameid00001.txt'
+    return self._open_to_write(zinfo, force_zip64=force_zip64)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_dataset_ledger_provenance.py::LedgerChecksumTests::test_all_csv_ledger_datasets_are_clean
+FAILED tests/test_dataset_ledger_provenance.py::LedgerChecksumTests::test_historical_pinned_rows_are_checked_against_their_recorded_commit
+2 failed, 458 passed, 1 skipped, 5 warnings in 35.65s

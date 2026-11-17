@@ -1,0 +1,21 @@
+run_no,run_end_utc,class,evidence_label,evidence,research_progress,note
+1,2026-11-04T15:30:48Z,BUSY_EXIT,FRESH,"scheduler.log SKIP lock held (pid 86660 ACTIVE); launchd service inactive",none,gatekeeper only
+2,2026-11-04T15:31:18Z,SUPERVISED_TEST,FRESH,"scheduler.log SUPERVISED TEST exit 0; scheduler_test_output.txt READY/PENDING",none,haiku test; neither research nor failure
+3,2026-11-04T16:01:19Z,BUSY_EXIT,FRESH,"scheduler.log SKIP lock held",none,gatekeeper only
+4,2026-11-04T16:31:19Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,"no log line; only silent path in pe_continue.sh is next_wake gate; D paused 16:15Z at five-hour 0.89 reset 1793823600+300 = 20:25Z",none,no model call
+5,2026-11-04T17:01:19Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,same as run 4,none,
+6,2026-11-04T17:31:19Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,same as run 4,none,
+7,2026-11-04T18:01:19Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,same as run 4,none,
+8,2026-11-04T18:31:19Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,same as run 4,none,
+9,2026-11-04T19:01:19Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,same as run 4,none,
+10,2026-11-04T19:31:19Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,same as run 4,none,
+11,2026-11-04T20:01:19Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,same as run 4,none,
+12,2026-11-04T20:31:49Z,BUSY_EXIT,FRESH,"LAUNCH worker; exit 0 after 23s; progress_log: found lock BUSY launched nothing cost_usd 0.311",none,full worker model spend for a BUSY exit
+13,2026-11-04T21:01:55Z,USAGE_WAIT,FRESH,"scheduler.log WAIT five-hour 0.97",none,
+14,2026-11-05T04:38:37Z,SOURCE_ACCESS_FAILURE,FRESH,"LAUNCH 03:31:54Z; WORKER exit 0 after 4003s; progress_log BLOCKED held-out reads under ~/Downloads hang; xBJ6suQSt98 prep aborted no outputs",none,exit 0 despite block
+15,2026-11-05T12:54:50Z,SOURCE_ACCESS_FAILURE,FRESH,"LAUNCH 12:27:30Z; WORKER exit 0 after 1640s; BLOCKED recheck all 4 held-out sources; worker_last.json no progress cost_usd 0.41 (may be the last call only)",none,exit 0 despite block
+16,2026-11-05T16:18:30Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,"no log line; next_wake_epoch written 12:54Z = 17:25Z",none,no model call
+17,2026-11-05T16:48:31Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,same as run 16,none,
+18,2026-11-05T17:18:31Z,INFERRED_WAIT_UNVERIFIED_OUTCOME,INFERENCE,same as run 16,none,after the 17-run baseline
+19,2026-11-05T17:48:31Z,BUSY_EXIT,FRESH,"scheduler.log SKIP lock held pid 86660",none,after the 17-run baseline; interactive session 85559743 holds lock
+20,2026-11-05T18:18:31Z,BUSY_EXIT,FRESH,"scheduler.log SKIP lock held pid 86660",none,after the 17-run baseline

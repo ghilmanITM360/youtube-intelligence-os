@@ -1,0 +1,20 @@
+gap,type,status,finding,evidence,label
+Partial clone 752 missing objects,Gap in local clone,RESOLVED,All 752 exist in independent mirror; no corruption,raw/recon/missing_in_mirror.txt,FRESH
+Orphan .rev,Warning,UNCHANGED_COSMETIC,"File unchanged, same SHA-256 4507ab3c..fa33; cause of pack removal UNKNOWN",after/count_objects.txt,FRESH
+50 branches / 54 PR refs baseline,Historical,CONFIRMED_COUNT_ONLY,50 and 54 at final pin; 4 tips moved during the audit,raw/recon/ls_remote_final2.txt,FRESH
+38 LFS payloads baseline,Historical,CONFIRMED,38/38 hashed; 39 in fetch log unexplained,raw/lfs/,FRESH
+466-pass baseline,Historical,NOT_REPRODUCED_AS_SAME_NUMBER,"Now 460+1 skip on main and nav, 462+1 skip on Finance; different suites",raw/tests/full_with_git/,FRESH
+"5,767 hashes",Target,BLOCKED_MISSING_INPUT,"No list in 9,345 scanned files, all refs, session logs",raw/5767/,FRESH
+988 and 358,Possible double count,RESOLVED,358 is a subset of 988; union 988; intersection 358,raw/hash/target_comparison.csv,FRESH
+12 Finance/NICK,Not found,RESOLVED_REMOTE,All in remote Git; none on disk,out/TWELVE_FINANCE_NICK_FILES.csv,FRESH
+Video006 V local only (interim finding),Audit claim,CORRECTED,V is on remote; T no longer latest; W4 latest at pin,"canonical reflog, raw/recon",FRESH
+Video006 U ancestor of V (assumption),Audit claim,CORRECTED,U and V are siblings on T,raw/u_v/,FRESH
+Test failures in first local run,Audit result,CORRECTED,Harness had no .git; with Git all suites pass,raw/tests/full_with_git/,FRESH
+No writer lock at 18:47Z (PAUSE_RECORD),Audit claim,CORRECTED,zsh glob artifact; .vf_writer_lock existed,after/locks.txt,FRESH
+Mirror pinned equal to 19:08Z ls-remote (working note),Audit claim,CORRECTED,"Mirror refs matched clone start, 18:33Z; 4 tips lagged by then",raw/refs/,FRESH
+Hosted CI PR #36,Unknown cause,RESOLVED,Allowlist step; 462 passed before it,raw/remote/ci/41448066128.failed.log,FRESH
+"Hosted CI PRs 37,38,39,41,43,44",Unknown cause,STILL_UNKNOWN,Logs not retrievable; no cause assigned,raw/remote/ci/,FRESH
+Allowlist patch ready,Claim,NOT_FOUND_HERE,"No ref, stash, patch or session log has it; Machine B UNKNOWN",raw/code/,FRESH
+Downloads blocker,Scheduler,NOT_FIXED_FOR_SCHEDULED_CONTEXT_UNVERIFIED,Copies made; never exercised by a scheduled run; HOLD now skips,"campaign/NON_AUDIO_GATE_MATRIX.md, scheduler.log",FRESH
+Finance 455 complete (Oct 29 handoff),Old hint,STALE,558 accepted at PR #36,raw/portable/PORTABLE_SYNC_MANIFEST.json,FRESH
+"Barely Evolved N15, Primitive H, Finance f115285 hints",Old hints,N15 and H stale; f115285 still tip,"N18, I, f115285",raw/recon/ls_remote_final2.txt,FRESH
