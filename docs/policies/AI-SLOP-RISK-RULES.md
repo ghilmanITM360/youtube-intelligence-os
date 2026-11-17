@@ -1,6 +1,6 @@
 # AI-slop risk rules (pre-delivery gate)
 
-- **Source:** Mathur, Liu, Tan, Liu (Google), *Scalable Detection of Adversarial Synthetic Slop and Coordinated Media Abuse: A LoRA-Enabled Multimodal Defense System* (4 pp., no venue or dataset sizes stated). Local copy is supplied by the user; it is not stored in the repo.
+- **Source:** Mathur, Liu, Tan, Liu (Google), *Scalable Detection of Adversarial Synthetic Slop and Coordinated Media Abuse: A LoRA-Enabled Multimodal Defense System* (4 pp., no venue or dataset sizes stated). PDF copy (supplied by the user, added 2026-11-17): [`reference/scalable-detection-adversarial-synthetic-slop-mathur-2026.pdf`](reference/scalable-detection-adversarial-synthetic-slop-mathur-2026.pdf).
 - **Gate:** `scripts/check_slop_risk.py`. It runs automatically on production scripts (`productions/<project>/**/*SCRIPT*.md|txt`) through the Claude Code hooks (SessionStart banner, UserPromptSubmit guard, PostToolUse check with a user alert), `.githooks/pre-commit`, CI (`validate.yml`) and `production_pipeline.py validate`. See AGENTS.md, "Pre-delivery AI-slop risk gate".
 - **Labels:** `PAPER_FACT` means the paper states it. `OUR_INFERENCE` means a rule we derived; it is not shown by the paper.
 
