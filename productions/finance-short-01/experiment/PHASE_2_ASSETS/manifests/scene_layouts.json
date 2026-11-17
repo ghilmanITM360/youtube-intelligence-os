@@ -1,0 +1,1415 @@
+{
+ "C01A_HOOK_SIGN": {
+  "scene_id": "SCN_C01A_HOOK_SIGN",
+  "shots": [
+   "S01A"
+  ],
+  "camera": "none",
+  "note": "Open on the promise. Sign swings in (pivot = string tops), Remy shrugs on 'No interest?'.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "promo_sign",
+    "asset_id": "PRP_PROMO_SIGN",
+    "transform": "translate(540 170) scale(1.4)"
+   },
+   {
+    "z": 3,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_SHRUG",
+    "transform": "translate(163.2 804.0) scale(1.2)",
+    "pose": "shrug",
+    "expr": {
+     "preset": "confused"
+    },
+    "feet": [
+     540,
+     2040
+    ],
+    "scale": 1.2,
+    "flip": false
+   }
+  ],
+  "ui": []
+ },
+ "C01B_HOOK_BILL": {
+  "scene_id": "SCN_C01B_HOOK_BILL",
+  "shots": [
+   "S01B"
+  ],
+  "camera": "none",
+  "note": "Statement slides up into Remy's grip on 'bill'; camera pushes in from C01A framing.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "promo_sign",
+    "asset_id": "PRP_PROMO_SIGN",
+    "transform": "translate(540 170) scale(1.4)"
+   },
+   {
+    "z": 3,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_HOLD_BILL",
+    "transform": "translate(86.7 668.6) scale(1.38)",
+    "pose": "hold_bill",
+    "expr": {
+     "preset": "concerned",
+     "gaze": [
+      0,
+      5
+     ]
+    },
+    "feet": [
+     520,
+     2090
+    ],
+    "scale": 1.38,
+    "flip": false
+   }
+  ],
+  "ui": []
+ },
+ "C02_STORE_WIDE": {
+  "scene_id": "SCN_C02_STORE_WIDE",
+  "shots": [
+   "S02A"
+  ],
+  "camera": "none",
+  "note": "'Imagine' - walk-in to the showroom; associate presents the sofa. Fictional store, no brand.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_store__store_bg_wall",
+    "asset_id": "ENV_STORE_L_STORE_BG_WALL",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_store__store_bg_lights",
+    "asset_id": "ENV_STORE_L_STORE_BG_LIGHTS",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "env_store__store_floor",
+    "asset_id": "ENV_STORE_L_STORE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 3,
+    "instance": "env_store__store_rug",
+    "asset_id": "ENV_STORE_L_STORE_RUG",
+    "transform": "none"
+   },
+   {
+    "z": 4,
+    "instance": "env_store__store_mid_displays",
+    "asset_id": "ENV_STORE_L_STORE_MID_DISPLAYS",
+    "transform": "none"
+   },
+   {
+    "z": 5,
+    "instance": "env_store__store_fg_plant",
+    "asset_id": "ENV_STORE_L_STORE_FG_PLANT",
+    "transform": "none"
+   },
+   {
+    "z": 6,
+    "instance": "sofa__shadow",
+    "asset_id": "PRP_SOFA_L_SHADOW",
+    "transform": "translate(650 1590) scale(0.82)"
+   },
+   {
+    "z": 7,
+    "instance": "sofa__legs",
+    "asset_id": "PRP_SOFA_L_LEGS",
+    "transform": "translate(650 1590) scale(0.82)"
+   },
+   {
+    "z": 8,
+    "instance": "sofa__back",
+    "asset_id": "PRP_SOFA_L_BACK",
+    "transform": "translate(650 1590) scale(0.82)"
+   },
+   {
+    "z": 9,
+    "instance": "sofa__seat",
+    "asset_id": "PRP_SOFA_L_SEAT",
+    "transform": "translate(650 1590) scale(0.82)"
+   },
+   {
+    "z": 10,
+    "instance": "sofa__arm_left",
+    "asset_id": "PRP_SOFA_L_ARM_LEFT",
+    "transform": "translate(650 1590) scale(0.82)"
+   },
+   {
+    "z": 11,
+    "instance": "sofa__arm_right",
+    "asset_id": "PRP_SOFA_L_ARM_RIGHT",
+    "transform": "translate(650 1590) scale(0.82)"
+   },
+   {
+    "z": 12,
+    "instance": "sofa__pillow",
+    "asset_id": "PRP_SOFA_L_PILLOW",
+    "transform": "translate(650 1590) scale(0.82)"
+   },
+   {
+    "z": 13,
+    "instance": "price_tag",
+    "asset_id": "PRP_PRICE_TAG",
+    "transform": "translate(890 1430) scale(0.9)"
+   },
+   {
+    "z": 14,
+    "instance": "store_sign",
+    "asset_id": "PRP_PROMO_SIGN_STORE",
+    "transform": "translate(650 900) scale(0.9)"
+   },
+   {
+    "z": 15,
+    "instance": "associate",
+    "asset_id": "CHR_ASSOC_POSE_ASSOC_PRESENT",
+    "transform": "translate(1118.4 1142.0) scale(-0.6 0.6)",
+    "pose": "assoc_present",
+    "feet": [
+     930,
+     1760
+    ],
+    "scale": 0.6,
+    "flip": true
+   },
+   {
+    "z": 16,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_WALK_A",
+    "transform": "translate(55.3 1161.4) scale(0.62)",
+    "pose": "walk_a",
+    "expr": {
+     "preset": "curious",
+     "gaze": [
+      4,
+      0
+     ]
+    },
+    "feet": [
+     250,
+     1800
+    ],
+    "scale": 0.62,
+    "flip": false
+   }
+  ],
+  "ui": [
+   {
+    "instance": "qualifier",
+    "asset_id": "TYP_QUALIFIER_STRIP",
+    "transform": "none"
+   }
+  ]
+ },
+ "C03_CHECKOUT_OFFER": {
+  "scene_id": "SCN_C03_CHECKOUT_OFFER",
+  "shots": [
+   "S02B"
+  ],
+  "camera": "none",
+  "note": "Offer read in full; counter occludes the associate below the waist.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_checkout__checkout_bg_wall",
+    "asset_id": "ENV_CHECKOUT_L_CHECKOUT_BG_WALL",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_checkout__checkout_floor",
+    "asset_id": "ENV_CHECKOUT_L_CHECKOUT_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "associate",
+    "asset_id": "CHR_ASSOC_POSE_ASSOC_PRESENT",
+    "transform": "translate(1174.0 530.0) scale(-1.0 1.0)",
+    "pose": "assoc_present",
+    "feet": [
+     860,
+     1560
+    ],
+    "scale": 1.0,
+    "flip": true
+   },
+   {
+    "z": 3,
+    "instance": "env_checkout__checkout_counter",
+    "asset_id": "ENV_CHECKOUT_L_CHECKOUT_COUNTER",
+    "transform": "none"
+   },
+   {
+    "z": 4,
+    "instance": "card_terminal",
+    "asset_id": "PRP_CARD_TERMINAL",
+    "transform": "translate(930 1090) scale(0.55)"
+   },
+   {
+    "z": 5,
+    "instance": "store_card",
+    "asset_id": "PRP_STORE_CARD",
+    "transform": "translate(700 1150) rotate(-6) scale(0.6)"
+   },
+   {
+    "z": 6,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_HOLD_SHEET",
+    "transform": "translate(-108.2 451.0) scale(1.3)",
+    "pose": "hold_sheet",
+    "expr": {
+     "preset": "intrigued",
+     "gaze": [
+      2,
+      5
+     ]
+    },
+    "feet": [
+     300,
+     1790
+    ],
+    "scale": 1.3,
+    "flip": false
+   }
+  ],
+  "ui": [
+   {
+    "instance": "qualifier",
+    "asset_id": "TYP_QUALIFIER_STRIP",
+    "transform": "none"
+   }
+  ]
+ },
+ "C04_IF_SWITCH": {
+  "scene_id": "SCN_C04_IF_SWITCH",
+  "shots": [
+   "S03"
+  ],
+  "camera": "none",
+  "note": "Macro push from the offer's IF; fingertip lands on the switch lever.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "paper_bg",
+    "asset_id": "ENV_PAPER_MACRO",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "if_switch",
+    "asset_id": "PRP_IF_SWITCH_UP",
+    "transform": "translate(760 820) scale(1.35)"
+   },
+   {
+    "z": 2,
+    "instance": "remy_arm",
+    "asset_id": "CHR_REMY_POSE_POINT_FORWARD",
+    "transform": "translate(-1229.5 73.3) scale(2.4)",
+    "pose": "point_forward",
+    "crop": "arm/hand only; body off-frame left",
+    "scale": 2.4
+   }
+  ],
+  "ui": [
+   {
+    "instance": "qualifier",
+    "asset_id": "TYP_LABEL_IF_PAID_IN_FULL",
+    "transform": "translate(540 300)"
+   }
+  ]
+ },
+ "C05_LEDGER": {
+  "scene_id": "SCN_C05_LEDGER",
+  "shots": [
+   "S04A",
+   "S04B",
+   "S04C"
+  ],
+  "camera": "none",
+  "note": "Rows of the receipt print month by month; 'NOT YET CHARGED' label on S04C.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "diagram_ledger__ledger_title",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_TITLE",
+    "transform": "none"
+   },
+   {
+    "z": 3,
+    "instance": "diagram_ledger__ledger_balance",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_BALANCE",
+    "transform": "none"
+   },
+   {
+    "z": 4,
+    "instance": "diagram_ledger__ledger_receipt_clip",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_RECEIPT_CLIP",
+    "transform": "none"
+   },
+   {
+    "z": 5,
+    "instance": "diagram_ledger__ledger_receipt_rows_01",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_RECEIPT_ROWS_01",
+    "transform": "none"
+   },
+   {
+    "z": 6,
+    "instance": "diagram_ledger__ledger_receipt_rows_03",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_RECEIPT_ROWS_03",
+    "transform": "none"
+   },
+   {
+    "z": 7,
+    "instance": "diagram_ledger__ledger_receipt_rows_06",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_RECEIPT_ROWS_06",
+    "transform": "none"
+   },
+   {
+    "z": 8,
+    "instance": "diagram_ledger__ledger_timeline",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_TIMELINE",
+    "transform": "none"
+   },
+   {
+    "z": 9,
+    "instance": "diagram_ledger__ledger_purchase_day",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_PURCHASE_DAY",
+    "transform": "none"
+   },
+   {
+    "z": 10,
+    "instance": "diagram_ledger__ledger_link",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_LINK",
+    "transform": "none"
+   },
+   {
+    "z": 11,
+    "instance": "diagram_ledger__ledger_not_charged",
+    "asset_id": "DIAGRAM_LEDGER_L_LEDGER_NOT_CHARGED",
+    "transform": "none"
+   },
+   {
+    "z": 12,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_THINK_CHIN",
+    "transform": "translate(-4.7 1291.4) scale(0.62)",
+    "pose": "think_chin",
+    "expr": {
+     "preset": "skeptical",
+     "gaze": [
+      4,
+      -3
+     ]
+    },
+    "feet": [
+     190,
+     1930
+    ],
+    "scale": 0.62,
+    "flip": false
+   }
+  ],
+  "ui": []
+ },
+ "C06A_PAID_IN_FULL": {
+  "scene_id": "SCN_C06A_PAID_IN_FULL",
+  "shots": [
+   "S05A"
+  ],
+  "camera": "none",
+  "note": "Coins drop from the release hand into the balance card; fill shrinks to zero before month 12.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "title",
+    "asset_id": "TYP_LABEL_PAID_IN_FULL_TERMS_MET",
+    "transform": "translate(540 300)"
+   },
+   {
+    "z": 3,
+    "instance": "balance_card",
+    "asset_id": "PRP_BALANCE_CARD_045",
+    "transform": "translate(560 1010) scale(1.25)"
+   },
+   {
+    "z": 4,
+    "instance": "coin_1",
+    "asset_id": "PRP_COIN",
+    "transform": "translate(453.54939121412735 1727.321900763356) scale(0.8)"
+   },
+   {
+    "z": 5,
+    "instance": "coin_2",
+    "asset_id": "PRP_COIN",
+    "transform": "translate(560 880) scale(0.8)"
+   },
+   {
+    "z": 6,
+    "instance": "receipt",
+    "asset_id": "PRP_RECEIPT_ROWS_06",
+    "transform": "translate(820 420) scale(0.95)"
+   },
+   {
+    "z": 7,
+    "instance": "month_strip",
+    "asset_id": "PRP_MONTH_STRIP",
+    "transform": "translate(156 1180)"
+   },
+   {
+    "z": 8,
+    "instance": "deadline_flag",
+    "asset_id": "PRP_DEADLINE_FLAG",
+    "transform": "translate(890 1150) scale(0.75)"
+   },
+   {
+    "z": 9,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_DROP_COIN",
+    "transform": "translate(-26.1 1218.4) scale(0.72)",
+    "pose": "drop_coin",
+    "expr": {
+     "preset": "determined",
+     "gaze": [
+      4,
+      5
+     ]
+    },
+    "feet": [
+     200,
+     1960
+    ],
+    "scale": 0.72,
+    "flip": false
+   }
+  ],
+  "ui": []
+ },
+ "C06B_WAIVED": {
+  "scene_id": "SCN_C06B_WAIVED",
+  "shots": [
+   "S05B"
+  ],
+  "camera": "none",
+  "note": "Stamp slams on 'waived'; receipt can then fade/curl away. Remy exhales.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "title",
+    "asset_id": "TYP_LABEL_INTEREST_WAIVED",
+    "transform": "translate(540 300)"
+   },
+   {
+    "z": 3,
+    "instance": "balance_card",
+    "asset_id": "PRP_BALANCE_CARD_000",
+    "transform": "translate(560 1010) scale(1.25)"
+   },
+   {
+    "z": 4,
+    "instance": "receipt",
+    "asset_id": "PRP_RECEIPT_ROWS_06",
+    "transform": "translate(820 420) scale(0.95)"
+   },
+   {
+    "z": 5,
+    "instance": "stamp",
+    "asset_id": "PRP_STAMP_WAIVED",
+    "transform": "translate(800 620) scale(0.95)"
+   },
+   {
+    "z": 6,
+    "instance": "month_strip",
+    "asset_id": "PRP_MONTH_STRIP",
+    "transform": "translate(156 1180)"
+   },
+   {
+    "z": 7,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_RELIEVED",
+    "transform": "translate(-26.1 1218.4) scale(0.72)",
+    "pose": "relieved",
+    "expr": {
+     "preset": "relieved"
+    },
+    "feet": [
+     200,
+     1960
+    ],
+    "scale": 0.72,
+    "flip": false
+   }
+  ],
+  "ui": []
+ },
+ "C07A_BALANCE_LEFT": {
+  "scene_id": "SCN_C07A_BALANCE_LEFT",
+  "shots": [
+   "S06A"
+  ],
+  "camera": "none",
+  "note": "Calendar page turns to PROMO ENDS; remaining balance highlighted coral.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "title",
+    "asset_id": "TYP_LABEL_ALTERNATIVE",
+    "transform": "translate(540 300)"
+   },
+   {
+    "z": 3,
+    "instance": "calendar",
+    "asset_id": "PRP_CALENDAR_PAGE_PROMO_ENDS",
+    "transform": "translate(250 620) rotate(-4) scale(1.2)"
+   },
+   {
+    "z": 4,
+    "instance": "balance_card",
+    "asset_id": "PRP_BALANCE_CARD_030_REMAINDER",
+    "transform": "translate(560 1010) scale(1.25)"
+   },
+   {
+    "z": 5,
+    "instance": "receipt",
+    "asset_id": "PRP_RECEIPT_ROWS_12",
+    "transform": "translate(800 410) scale(0.8)"
+   },
+   {
+    "z": 6,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_STAND_NEUTRAL",
+    "transform": "translate(1102.4 1227.8) scale(-0.74 0.74)",
+    "pose": "stand_neutral",
+    "expr": {
+     "preset": "concerned",
+     "gaze": [
+      3,
+      2
+     ]
+    },
+    "feet": [
+     870,
+     1990
+    ],
+    "scale": 0.74,
+    "flip": true
+   }
+  ],
+  "ui": []
+ },
+ "C07B_INTEREST_LANDS": {
+  "scene_id": "SCN_C07B_INTEREST_LANDS",
+  "shots": [
+   "S06B"
+  ],
+  "camera": "none",
+  "note": "Receipt drops onto the statement; interest row fills coral. No dollar amounts.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "statement",
+    "asset_id": "PRP_STATEMENT_CHARGED",
+    "transform": "translate(470 900) scale(1.45)"
+   },
+   {
+    "z": 3,
+    "instance": "receipt",
+    "asset_id": "PRP_RECEIPT_ROWS_12",
+    "transform": "translate(470 300) rotate(-6) scale(0.8)"
+   },
+   {
+    "z": 4,
+    "instance": "stamp",
+    "asset_id": "PRP_STAMP_CHARGED",
+    "transform": "translate(470 1250) scale(0.8)"
+   },
+   {
+    "z": 5,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_SHOCKED",
+    "transform": "translate(1102.4 1227.8) scale(-0.74 0.74)",
+    "pose": "shocked",
+    "expr": {
+     "preset": "shocked"
+    },
+    "feet": [
+     870,
+     1990
+    ],
+    "scale": 0.74,
+    "flip": true
+   }
+  ],
+  "ui": []
+ },
+ "C08_NOT_JUST_LEFTOVER": {
+  "scene_id": "SCN_C08_NOT_JUST_LEFTOVER",
+  "shots": [
+   "S07A"
+  ],
+  "camera": "none",
+  "note": "Magnifier finds the small remainder, then the label rejects 'just this'.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "balance_card",
+    "asset_id": "PRP_BALANCE_CARD_030_REMAINDER",
+    "transform": "translate(560 760) scale(1.6)"
+   },
+   {
+    "z": 3,
+    "instance": "magnifier",
+    "asset_id": "PRP_MAGNIFIER",
+    "transform": "translate(470 860) scale(1.25)"
+   },
+   {
+    "z": 4,
+    "instance": "label",
+    "asset_id": "TYP_LABEL_NOT_JUST_WHATS_LEFT",
+    "transform": "translate(540 300)"
+   },
+   {
+    "z": 5,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_THINK_CHIN",
+    "transform": "translate(25.3 1291.4) scale(0.62)",
+    "pose": "think_chin",
+    "expr": {
+     "preset": "skeptical",
+     "gaze": [
+      4,
+      -3
+     ]
+    },
+    "feet": [
+     220,
+     1930
+    ],
+    "scale": 0.62,
+    "flip": false
+   }
+  ],
+  "ui": []
+ },
+ "C09_BALANCE_HISTORY": {
+  "scene_id": "SCN_C09_BALANCE_HISTORY",
+  "shots": [
+   "S07B"
+  ],
+  "camera": "none",
+  "note": "Bars build left->right, chips follow, bracket collects into the receipt; gold arrow traces back to the sofa.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "diagram_balance_history__history_axis",
+    "asset_id": "DIAGRAM_BALANCE_HISTORY_L_HISTORY_AXIS",
+    "transform": "none"
+   },
+   {
+    "z": 3,
+    "instance": "diagram_balance_history__history_bars",
+    "asset_id": "DIAGRAM_BALANCE_HISTORY_L_HISTORY_BARS",
+    "transform": "none"
+   },
+   {
+    "z": 4,
+    "instance": "diagram_balance_history__history_chips",
+    "asset_id": "DIAGRAM_BALANCE_HISTORY_L_HISTORY_CHIPS",
+    "transform": "none"
+   },
+   {
+    "z": 5,
+    "instance": "diagram_balance_history__history_collect",
+    "asset_id": "DIAGRAM_BALANCE_HISTORY_L_HISTORY_COLLECT",
+    "transform": "none"
+   },
+   {
+    "z": 6,
+    "instance": "diagram_balance_history__history_trace_back",
+    "asset_id": "DIAGRAM_BALANCE_HISTORY_L_HISTORY_TRACE_BACK",
+    "transform": "none"
+   },
+   {
+    "z": 7,
+    "instance": "diagram_balance_history__history_note",
+    "asset_id": "DIAGRAM_BALANCE_HISTORY_L_HISTORY_NOTE",
+    "transform": "none"
+   },
+   {
+    "z": 8,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_WALK_A",
+    "transform": "translate(1057.0 1415.0) scale(-0.5 0.5)",
+    "pose": "walk_a",
+    "expr": {
+     "preset": "curious",
+     "gaze": [
+      4,
+      0
+     ]
+    },
+    "feet": [
+     900,
+     1930
+    ],
+    "scale": 0.5,
+    "flip": true
+   }
+  ],
+  "ui": []
+ },
+ "C10_MIN_PAYMENTS": {
+  "scene_id": "SCN_C10_MIN_PAYMENTS",
+  "shots": [
+   "S08"
+  ],
+  "camera": "none",
+  "note": "Twelve MIN ticks pop in sequence; balance card still shows a coral remainder at PROMO ENDS.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "diagram_min_payments__min_title",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_TITLE",
+    "transform": "none"
+   },
+   {
+    "z": 3,
+    "instance": "diagram_min_payments__min_box_01",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_01",
+    "transform": "none"
+   },
+   {
+    "z": 4,
+    "instance": "diagram_min_payments__min_box_02",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_02",
+    "transform": "none"
+   },
+   {
+    "z": 5,
+    "instance": "diagram_min_payments__min_box_03",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_03",
+    "transform": "none"
+   },
+   {
+    "z": 6,
+    "instance": "diagram_min_payments__min_box_04",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_04",
+    "transform": "none"
+   },
+   {
+    "z": 7,
+    "instance": "diagram_min_payments__min_box_05",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_05",
+    "transform": "none"
+   },
+   {
+    "z": 8,
+    "instance": "diagram_min_payments__min_box_06",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_06",
+    "transform": "none"
+   },
+   {
+    "z": 9,
+    "instance": "diagram_min_payments__min_box_07",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_07",
+    "transform": "none"
+   },
+   {
+    "z": 10,
+    "instance": "diagram_min_payments__min_box_08",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_08",
+    "transform": "none"
+   },
+   {
+    "z": 11,
+    "instance": "diagram_min_payments__min_box_09",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_09",
+    "transform": "none"
+   },
+   {
+    "z": 12,
+    "instance": "diagram_min_payments__min_box_10",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_10",
+    "transform": "none"
+   },
+   {
+    "z": 13,
+    "instance": "diagram_min_payments__min_box_11",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_11",
+    "transform": "none"
+   },
+   {
+    "z": 14,
+    "instance": "diagram_min_payments__min_box_12",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BOX_12",
+    "transform": "none"
+   },
+   {
+    "z": 15,
+    "instance": "diagram_min_payments__min_balance_left",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_BALANCE_LEFT",
+    "transform": "none"
+   },
+   {
+    "z": 16,
+    "instance": "diagram_min_payments__min_deadline_flag",
+    "asset_id": "DIAGRAM_MIN_PAYMENTS_L_MIN_DEADLINE_FLAG",
+    "transform": "none"
+   },
+   {
+    "z": 17,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_TICK_PEN",
+    "transform": "translate(-44.7 1321.4) scale(0.62)",
+    "pose": "tick_pen",
+    "expr": {
+     "preset": "focused",
+     "gaze": [
+      5,
+      3
+     ]
+    },
+    "feet": [
+     150,
+     1960
+    ],
+    "scale": 0.62,
+    "flip": false
+   }
+  ],
+  "ui": []
+ },
+ "C11_COMPARE": {
+  "scene_id": "SCN_C11_COMPARE",
+  "shots": [
+   "S09A",
+   "S09B"
+  ],
+  "camera": "none",
+  "note": "Build left panel, then right; S09B highlights the right column. APR line awaits corrected audio.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_stage__stage_bg",
+    "asset_id": "ENV_STAGE_L_STAGE_BG",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_stage__stage_floor",
+    "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "diagram_compare__compare_panel_left",
+    "asset_id": "DIAGRAM_COMPARE_L_COMPARE_PANEL_LEFT",
+    "transform": "none"
+   },
+   {
+    "z": 3,
+    "instance": "diagram_compare__compare_panel_right",
+    "asset_id": "DIAGRAM_COMPARE_L_COMPARE_PANEL_RIGHT",
+    "transform": "none"
+   },
+   {
+    "z": 4,
+    "instance": "diagram_compare__compare_row1_labels",
+    "asset_id": "DIAGRAM_COMPARE_L_COMPARE_ROW1_LABELS",
+    "transform": "none"
+   },
+   {
+    "z": 5,
+    "instance": "diagram_compare__compare_row1_left",
+    "asset_id": "DIAGRAM_COMPARE_L_COMPARE_ROW1_LEFT",
+    "transform": "none"
+   },
+   {
+    "z": 6,
+    "instance": "diagram_compare__compare_row1_right",
+    "asset_id": "DIAGRAM_COMPARE_L_COMPARE_ROW1_RIGHT",
+    "transform": "none"
+   },
+   {
+    "z": 7,
+    "instance": "diagram_compare__compare_row2_labels",
+    "asset_id": "DIAGRAM_COMPARE_L_COMPARE_ROW2_LABELS",
+    "transform": "none"
+   },
+   {
+    "z": 8,
+    "instance": "diagram_compare__compare_row2_left",
+    "asset_id": "DIAGRAM_COMPARE_L_COMPARE_ROW2_LEFT",
+    "transform": "none"
+   },
+   {
+    "z": 9,
+    "instance": "diagram_compare__compare_row2_right",
+    "asset_id": "DIAGRAM_COMPARE_L_COMPARE_ROW2_RIGHT",
+    "transform": "none"
+   },
+   {
+    "z": 10,
+    "instance": "diagram_compare__compare_after_note",
+    "asset_id": "DIAGRAM_COMPARE_L_COMPARE_AFTER_NOTE",
+    "transform": "none"
+   },
+   {
+    "z": 11,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_OPEN_HANDS",
+    "transform": "translate(367.3 1393.5) scale(0.55)",
+    "pose": "open_hands",
+    "expr": {
+     "preset": "content"
+    },
+    "feet": [
+     540,
+     1960
+    ],
+    "scale": 0.55,
+    "flip": false
+   }
+  ],
+  "ui": []
+ },
+ "C12_TWO_DATES": {
+  "scene_id": "SCN_C12_TWO_DATES",
+  "shots": [
+   "S10A",
+   "S10B"
+  ],
+  "camera": "none",
+  "note": "Due-date card first, then Remy circles the single promotion-expiry card.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_living_room__living_bg_wall",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_BG_WALL",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_living_room__living_floor",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "env_living_room__living_rug",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_RUG",
+    "transform": "none"
+   },
+   {
+    "z": 3,
+    "instance": "env_living_room__living_mid_props",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_MID_PROPS",
+    "transform": "none"
+   },
+   {
+    "z": 4,
+    "instance": "env_living_room__living_fg_plant",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_FG_PLANT",
+    "transform": "none"
+   },
+   {
+    "z": 5,
+    "instance": "cal_due",
+    "asset_id": "PRP_CALENDAR_PAGE_PAYMENT_DUE",
+    "transform": "translate(720 450) scale(0.95)"
+   },
+   {
+    "z": 6,
+    "instance": "cal_promo",
+    "asset_id": "PRP_CALENDAR_PAGE_PROMO_ENDS",
+    "transform": "translate(800 940) scale(1.45)"
+   },
+   {
+    "z": 7,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_CIRCLE_MARKER",
+    "transform": "translate(63.1 884.5) scale(0.85)",
+    "pose": "circle_marker",
+    "expr": {
+     "preset": "determined",
+     "gaze": [
+      5,
+      -2
+     ]
+    },
+    "feet": [
+     330,
+     1760
+    ],
+    "scale": 0.85,
+    "flip": false
+   }
+  ],
+  "ui": [
+   {
+    "instance": "label_due",
+    "asset_id": "TYP_LABEL_EVERY_MONTH",
+    "transform": "translate(720 630)"
+   },
+   {
+    "instance": "label_promo",
+    "asset_id": "TYP_LABEL_ONE_DEADLINE",
+    "transform": "translate(800 1170)"
+   }
+  ]
+ },
+ "C13_SOFA_HOME": {
+  "scene_id": "SCN_C13_SOFA_HOME",
+  "shots": [
+   "S11"
+  ],
+  "camera": "none",
+  "note": "Sofa settles, Remy sinks in. DAY 1 tag recalls purchase day.",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_living_room__living_bg_wall",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_BG_WALL",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_living_room__living_floor",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "env_living_room__living_rug",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_RUG",
+    "transform": "none"
+   },
+   {
+    "z": 3,
+    "instance": "env_living_room__living_mid_props",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_MID_PROPS",
+    "transform": "none"
+   },
+   {
+    "z": 4,
+    "instance": "env_living_room__living_fg_plant",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_FG_PLANT",
+    "transform": "none"
+   },
+   {
+    "z": 5,
+    "instance": "sofa__shadow",
+    "asset_id": "PRP_SOFA_L_SHADOW",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 6,
+    "instance": "sofa__legs",
+    "asset_id": "PRP_SOFA_L_LEGS",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 7,
+    "instance": "sofa__back",
+    "asset_id": "PRP_SOFA_L_BACK",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 8,
+    "instance": "sofa__seat",
+    "asset_id": "PRP_SOFA_L_SEAT",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 9,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_SIT_RELAXED",
+    "transform": "translate(175.1 846.6) scale(0.78)",
+    "pose": "sit_relaxed",
+    "expr": {
+     "preset": "content"
+    },
+    "feet": [
+     420,
+     1650
+    ],
+    "scale": 0.78,
+    "flip": false
+   },
+   {
+    "z": 10,
+    "instance": "sofa__arm_left",
+    "asset_id": "PRP_SOFA_L_ARM_LEFT",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 11,
+    "instance": "sofa__arm_right",
+    "asset_id": "PRP_SOFA_L_ARM_RIGHT",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 12,
+    "instance": "sofa__pillow",
+    "asset_id": "PRP_SOFA_L_PILLOW",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 13,
+    "instance": "day1_tag",
+    "asset_id": "TYP_LABEL_DAY_1",
+    "transform": "translate(860 1330)"
+   }
+  ],
+  "ui": []
+ },
+ "C14_INTEREST_WAITING": {
+  "scene_id": "SCN_C14_INTEREST_WAITING",
+  "shots": [
+   "S12"
+  ],
+  "camera": "translate(-210 -560) scale(1.35)",
+  "note": "Push-in; the coral receipt sits on the cushion beside Remy. Clock may tick backward (original metaphor).",
+  "world": [
+   {
+    "z": 0,
+    "instance": "env_living_room__living_bg_wall",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_BG_WALL",
+    "transform": "none"
+   },
+   {
+    "z": 1,
+    "instance": "env_living_room__living_floor",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_FLOOR",
+    "transform": "none"
+   },
+   {
+    "z": 2,
+    "instance": "env_living_room__living_rug",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_RUG",
+    "transform": "none"
+   },
+   {
+    "z": 3,
+    "instance": "env_living_room__living_mid_props",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_MID_PROPS",
+    "transform": "none"
+   },
+   {
+    "z": 4,
+    "instance": "env_living_room__living_fg_plant",
+    "asset_id": "ENV_LIVING_ROOM_L_LIVING_FG_PLANT",
+    "transform": "none"
+   },
+   {
+    "z": 5,
+    "instance": "sofa__shadow",
+    "asset_id": "PRP_SOFA_L_SHADOW",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 6,
+    "instance": "sofa__legs",
+    "asset_id": "PRP_SOFA_L_LEGS",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 7,
+    "instance": "sofa__back",
+    "asset_id": "PRP_SOFA_L_BACK",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 8,
+    "instance": "sofa__seat",
+    "asset_id": "PRP_SOFA_L_SEAT",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 9,
+    "instance": "remy",
+    "asset_id": "CHR_REMY_POSE_SIT_NOTICE",
+    "transform": "translate(175.1 846.6) scale(0.78)",
+    "pose": "sit_notice",
+    "expr": {
+     "preset": "concerned",
+     "gaze": [
+      5,
+      5
+     ]
+    },
+    "feet": [
+     420,
+     1650
+    ],
+    "scale": 0.78,
+    "flip": false
+   },
+   {
+    "z": 10,
+    "instance": "sofa__arm_left",
+    "asset_id": "PRP_SOFA_L_ARM_LEFT",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 11,
+    "instance": "sofa__arm_right",
+    "asset_id": "PRP_SOFA_L_ARM_RIGHT",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 12,
+    "instance": "sofa__pillow",
+    "asset_id": "PRP_SOFA_L_PILLOW",
+    "transform": "translate(560 1650)"
+   },
+   {
+    "z": 13,
+    "instance": "receipt",
+    "asset_id": "PRP_RECEIPT_ROWS_06",
+    "transform": "translate(690 1352) rotate(8) scale(0.44)"
+   },
+   {
+    "z": 14,
+    "instance": "clock",
+    "asset_id": "PRP_CLOCK_FACE",
+    "transform": "translate(742 1352) scale(0.2)"
+   }
+  ],
+  "ui": [
+   {
+    "instance": "qualifier",
+    "asset_id": "TYP_QUALIFIER_STRIP",
+    "transform": "none"
+   }
+  ]
+ }
+}

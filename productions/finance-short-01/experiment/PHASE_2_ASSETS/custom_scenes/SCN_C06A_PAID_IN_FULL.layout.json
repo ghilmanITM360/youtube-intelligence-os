@@ -1,0 +1,85 @@
+{
+ "scene_id": "SCN_C06A_PAID_IN_FULL",
+ "shots": [
+  "S05A"
+ ],
+ "camera": "none",
+ "note": "Coins drop from the release hand into the balance card; fill shrinks to zero before month 12.",
+ "world": [
+  {
+   "z": 0,
+   "instance": "env_stage__stage_bg",
+   "asset_id": "ENV_STAGE_L_STAGE_BG",
+   "transform": "none"
+  },
+  {
+   "z": 1,
+   "instance": "env_stage__stage_floor",
+   "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+   "transform": "none"
+  },
+  {
+   "z": 2,
+   "instance": "title",
+   "asset_id": "TYP_LABEL_PAID_IN_FULL_TERMS_MET",
+   "transform": "translate(540 300)"
+  },
+  {
+   "z": 3,
+   "instance": "balance_card",
+   "asset_id": "PRP_BALANCE_CARD_045",
+   "transform": "translate(560 1010) scale(1.25)"
+  },
+  {
+   "z": 4,
+   "instance": "coin_1",
+   "asset_id": "PRP_COIN",
+   "transform": "translate(453.54939121412735 1727.321900763356) scale(0.8)"
+  },
+  {
+   "z": 5,
+   "instance": "coin_2",
+   "asset_id": "PRP_COIN",
+   "transform": "translate(560 880) scale(0.8)"
+  },
+  {
+   "z": 6,
+   "instance": "receipt",
+   "asset_id": "PRP_RECEIPT_ROWS_06",
+   "transform": "translate(820 420) scale(0.95)"
+  },
+  {
+   "z": 7,
+   "instance": "month_strip",
+   "asset_id": "PRP_MONTH_STRIP",
+   "transform": "translate(156 1180)"
+  },
+  {
+   "z": 8,
+   "instance": "deadline_flag",
+   "asset_id": "PRP_DEADLINE_FLAG",
+   "transform": "translate(890 1150) scale(0.75)"
+  },
+  {
+   "z": 9,
+   "instance": "remy",
+   "asset_id": "CHR_REMY_POSE_DROP_COIN",
+   "transform": "translate(-26.1 1218.4) scale(0.72)",
+   "pose": "drop_coin",
+   "expr": {
+    "preset": "determined",
+    "gaze": [
+     4,
+     5
+    ]
+   },
+   "feet": [
+    200,
+    1960
+   ],
+   "scale": 0.72,
+   "flip": false
+  }
+ ],
+ "ui": []
+}

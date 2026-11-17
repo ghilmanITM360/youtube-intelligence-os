@@ -1,0 +1,67 @@
+{
+ "scene_id": "SCN_C07A_BALANCE_LEFT",
+ "shots": [
+  "S06A"
+ ],
+ "camera": "none",
+ "note": "Calendar page turns to PROMO ENDS; remaining balance highlighted coral.",
+ "world": [
+  {
+   "z": 0,
+   "instance": "env_stage__stage_bg",
+   "asset_id": "ENV_STAGE_L_STAGE_BG",
+   "transform": "none"
+  },
+  {
+   "z": 1,
+   "instance": "env_stage__stage_floor",
+   "asset_id": "ENV_STAGE_L_STAGE_FLOOR",
+   "transform": "none"
+  },
+  {
+   "z": 2,
+   "instance": "title",
+   "asset_id": "TYP_LABEL_ALTERNATIVE",
+   "transform": "translate(540 300)"
+  },
+  {
+   "z": 3,
+   "instance": "calendar",
+   "asset_id": "PRP_CALENDAR_PAGE_PROMO_ENDS",
+   "transform": "translate(250 620) rotate(-4) scale(1.2)"
+  },
+  {
+   "z": 4,
+   "instance": "balance_card",
+   "asset_id": "PRP_BALANCE_CARD_030_REMAINDER",
+   "transform": "translate(560 1010) scale(1.25)"
+  },
+  {
+   "z": 5,
+   "instance": "receipt",
+   "asset_id": "PRP_RECEIPT_ROWS_12",
+   "transform": "translate(800 410) scale(0.8)"
+  },
+  {
+   "z": 6,
+   "instance": "remy",
+   "asset_id": "CHR_REMY_POSE_STAND_NEUTRAL",
+   "transform": "translate(1102.4 1227.8) scale(-0.74 0.74)",
+   "pose": "stand_neutral",
+   "expr": {
+    "preset": "concerned",
+    "gaze": [
+     3,
+     2
+    ]
+   },
+   "feet": [
+    870,
+    1990
+   ],
+   "scale": 0.74,
+   "flip": true
+  }
+ ],
+ "ui": []
+}
