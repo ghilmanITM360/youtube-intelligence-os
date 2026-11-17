@@ -1,0 +1,233 @@
+{
+ "reviewer": "PKQA-6",
+ "rows": [
+  {
+   "Package_ID": "PKG-Dgp4_ehMo9k",
+   "pk": "PK-13",
+   "seq": 1,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-AKeEUOfYlO8",
+   "pk": "PK-13",
+   "seq": 2,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-8oRYviq5Pi0",
+   "pk": "PK-13",
+   "seq": 3,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-mhb_Nd-0VjQ",
+   "pk": "PK-13",
+   "seq": 4,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "'BUY THIS ETF NOW!' with a grinning cartoon man pointing at ETF 1, 2, 3 bars, a rising arrow and money sack.",
+     "corrected_value": "'BUY THIS ETF NOW!' with a grinning cartoon man pointing at the headline above ETF 1, 2, 3 bars, a rising arrow and money sack.",
+     "reason": "The man's outstretched finger aims at the headline text, not at the bars; the bars sit lower right and a separate black arrow points from the exclamation mark down to them.",
+     "evidence": "Image: arm extends rightward at head height toward 'ETF'/'BUY THIS'; bars are far below."
+    },
+    {
+     "field": "contradiction",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "Headline says singular 'THIS ETF' while title says 'The 3 ETFs'; the row itself names the singular/three mismatch as the weakest element, yet marks no contradiction. Defensible either way because three bars are shown.",
+     "evidence": "Image text 'BUY THIS ETF NOW!' vs title 'The 3 ETFs'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-gZr9Ul5xwgg",
+   "pk": "PK-13",
+   "seq": 5,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-Jzea4OQYopI",
+   "pk": "PK-14",
+   "seq": 5,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "improvement",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Test one concrete visual of the method, such as a glass or a walking shoe, beside the couch figure to add a cue.",
+     "corrected_value": "Test adding a short label such as 'NO GYM?' beside the couch figure to hint at the low-effort angle without naming a method.",
+     "reason": "A glass or walking shoe asserts what the video's method is; content is not checked, so this risks inventing a factual/medical claim.",
+     "evidence": "Image has no method cue; content_promise_verified is NOT_CHECKED."
+    },
+    {
+     "field": "content_verification_queue",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "Title claims a lazy belly-fat method 'actually works' and the image shows a couch-to-abs transformation; that is an efficacy/reversal claim the content would need to support.",
+     "evidence": "Title 'That Actually Works'; right panel shows defined abs."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-zagsfHq6UsE",
+   "pk": "PK-14",
+   "seq": 11,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_repeats_title",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "'COCOA FIRST?' with a caveman and cocoa pod largely restates the title's 'ancient humans first discover chocolate'; only the happy reaction is new.",
+     "evidence": "Image text 'COCOA FIRST?' vs title 'When Did Ancient Humans First Discover Chocolate?'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-wCzmaG_pyB8",
+   "pk": "PK-14",
+   "seq": 14,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "misleading_risk",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "LOW",
+     "corrected_value": "MEDIUM",
+     "reason": "Skull-and-crossbones vial and green poison syringe frame murder/poisoning, while the title says the doctor got him hooked on drugs (addiction); the row itself flags thumbnail_escalates_beyond_title=Y.",
+     "evidence": "Image: skull-labelled vial with glowing green liquid at the officer's neck."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-BVyJL_tcMd8",
+   "pk": "PK-14",
+   "seq": 21,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "title_explains_what_thumbnail_cannot",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "The row's own title_only_information says the title alone supplies 'every era' and 'millionaire'; the image shows two eras and no money amount, so the title does explain something the image cannot.",
+     "evidence": "Image: only '30,000 BCE' and 'TODAY' with gold chains; weakest_element admits only chains hint at 'millionaire'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-bsJ25LPIMDI",
+   "pk": "PK-14",
+   "seq": 24,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "title_only_information",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The date as '1.6.22' and the 'Update' framing, nearly identical wording to the slide.",
+     "corrected_value": "NONE",
+     "reason": "The date, COVID, Omicron and 'Update' all appear on the slide ('(1.6.22 Edition)', 'Updates on Omicron'); that is shared information, not title-only, and the row contradicts itself by saying 'nearly identical wording'.",
+     "evidence": "Image text: 'COVID & Aging Adults / Updates on Omicron & More / (1.6.22 Edition)'."
+    },
+    {
+     "field": "medical_escalation",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "BOTH_MODERATE",
+     "corrected_value": "NONE",
+     "reason": "A plain dated label and a plain slide make no escalated claim in either half; NONE fits better than BOTH_MODERATE (defensible).",
+     "evidence": "Image: black-on-white slide text, no alarm cues."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-0aiVrlKNMeM",
+   "pk": "PK-15",
+   "seq": 9,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "primary_relationship",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "REINFORCING",
+     "corrected_value": "REDUNDANT",
+     "reason": "Row sets thumbnail_repeats_title=Y and unnecessary_duplication=Y and complementarity 5/15, but omits REDUNDANT; the thumbnail repeats the 'must know' phrasing and two of three drug names, adding only the pill picture. Add REDUNDANT to relationships.",
+     "evidence": "Image: 'YOU MUST KNOW THIS ABOUT LOSARTAN & AMLODIPINE'; title: 'Taking Amlodipine, Losartan, or Lisinopril... Here's What Many Seniors Don't Know!'."
+    },
+    {
+     "field": "thumbnail_says",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "...beside a smiling older man swallowing a pill with a glass of water.",
+     "corrected_value": "...beside a smiling older man lifting a glass of water to his lips while holding a pill in the other hand.",
+     "reason": "The pill is still held between thumb and finger; he is not shown swallowing it.",
+     "evidence": "Image: white pill at chest height in right hand, glass at mouth."
+    },
+    {
+     "field": "thumbnail_escalates_beyond_title",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "The row's own thumbnail_only_information cites the 'stronger YOU MUST command'; an imperative warning is a larger claim than the title's 'what many seniors don't know'.",
+     "evidence": "Image: 'YOU MUST KNOW THIS ABOUT'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-mJS-QVw8lzY",
+   "pk": "PK-15",
+   "seq": 10,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "credible",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "YES",
+     "corrected_value": "PARTIAL",
+     "reason": "The row's own unanswered question doubts whether 13 minutes covers the 'ENTIRE' epic and the title audit rated overpromise MEDIUM; PARTIAL fits better.",
+     "evidence": "Image: 'IN 13 MINUTES' vs title 'The ENTIRE Story of The Odyssey Explained'."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 12,
+  "material": 0,
+  "minor_factual": 3,
+  "classification": 2,
+  "subjective": 8,
+  "style_only": 0
+ }
+}

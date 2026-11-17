@@ -1,0 +1,22 @@
+{
+  "baseline": "aaa32b580131adfe8ab83bf3a46814d3aadee32d",
+  "initial_clean_checkout_pass": 67,
+  "total": 69,
+  "approved_source_corrections": [
+    {
+      "path": "docs/research/thumbnail-forensics-2026-10-02/audit-batch-B002-03.json",
+      "previous_sha256": "208e0486dd50f2b70db6aa4c1c51e55748eb4c5cc3855d7ced95a95f93180417",
+      "approved_sha256": "4d7d487dac5ae6a685fe48a54247246b24030aaad1771a01914810eaa20ea18a",
+      "reason": "Legitimate recorded QA correction in commit 3ae5c5e2c9d2aa28edff07a42486eea049333d1e: tiny plaza figures acknowledged; registry entry was not refreshed",
+      "evidence_commit": "3ae5c5e2c9d2aa28edff07a42486eea049333d1e"
+    },
+    {
+      "path": "data/catalog/youtube_channel_registry.db",
+      "previous_sha256": "4c4322bf2d7b38e3ecb1ef159c0250f02b4cac007eb5a2e47a03d9f1059641cc",
+      "approved_sha256": "39e7a28ba592b9022bd1b32f4c288edde519730164a98ea858ce90c44d52f654",
+      "reason": "Previous hash is not present in tracked LFS pointer history. Current committed LFS oid verified independently; registry integrity/control counts pass. No DB copied or changed.",
+      "evidence_commit": "aaa32b580131adfe8ab83bf3a46814d3aadee32d"
+    }
+  ],
+  "derived_rollups": "Rebuilt by exact-ID verified-record union; no raw bytes changed"
+}

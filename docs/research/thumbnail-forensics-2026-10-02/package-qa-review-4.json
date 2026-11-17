@@ -1,0 +1,282 @@
+{
+ "reviewer": "PKQA-4",
+ "rows": [
+  {
+   "Package_ID": "PKG-6TzPQ0046lw",
+   "pk": "PK-08",
+   "seq": 11,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "weakest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The skeleton pile jumps from 'got sick' to mass death, and a 7:33 duration badge sits in the corner of the picture.",
+     "corrected_value": "The skeleton pile jumps from 'got sick' to mass death.",
+     "reason": "The 7:33 duration badge is a YouTube overlay, not part of the creative, and the sentence runs 22 words (limit 20).",
+     "evidence": "Image shows the badge bottom-right in the platform's own style."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-vcNmybFIC-s",
+   "pk": "PK-08",
+   "seq": 16,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-HooBxU_HRbM",
+   "pk": "PK-08",
+   "seq": 17,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-or9VIFieAQY",
+   "pk": "PK-08",
+   "seq": 22,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "medical_escalation",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "BOTH_MODERATE",
+     "corrected_value": "TITLE_MODERATE_THUMBNAIL_EXTREME",
+     "reason": "Row itself calls the vein close-up dramatic, yet scores both halves moderate; a glowing inflamed ankle with red arrow is more alarming than the title's plain 'do this 1 exercise'. Defensible either way.",
+     "evidence": "Image: purple vein web, glowing red patch at ankle, red arrow."
+    },
+    {
+     "field": "content_verification_queue",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "Package pairs a 'SURGEON REVEALS' authority claim with a stock-looking scrubs-and-stethoscope doctor and a pathological ankle, implying an exercise remedy for a circulation condition; a content check would need to support it.",
+     "evidence": "Title 'SURGEON REVEALS'; image doctor with stethoscope pointing at foot."
+    },
+    {
+     "field": "strongest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The glowing red ankle with veins, red banner question and doctor's pointing hand make the problem and the 'do this' answer instantly clear.",
+     "corrected_value": "Shorten to <=20 words.",
+     "reason": "23 words, over the 20-word limit.",
+     "evidence": "Word count."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-37NXosi2ipA",
+   "pk": "PK-09",
+   "seq": 4,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "weakest_element",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "'Start' in the image versus 'Owning' in the title shifts the premise, and the near-identical layout to the salon image weakens distinctiveness.",
+     "corrected_value": "'Start' in the image versus 'Owning' in the title shifts the premise, and the dense six-callout layout weakens distinctiveness.",
+     "reason": "References a 'salon image' that is not part of this package; the claim cannot be checked against this thumbnail or title (protocol: every sentence must refer to this package's own words and imagery). Also 22 words.",
+     "evidence": "No salon element appears anywhere in the thumbnail; it is a bank facade with six callouts."
+    },
+    {
+     "field": "unnecessary_duplication",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "Y",
+     "corrected_value": "N",
+     "reason": "The thumbnail does not duplicate the title: it changes the verb to 'START' and adds six concrete revenue/cost callouts (the row's own thumbnail_only_information lists them). Adding detail is not unnecessary duplication; contradicts the row's own scores for complementarity 7 and thumbnail-only info.",
+     "evidence": "Image: Interest Income, Non-Interest Income, Loans & Lending, Operating Costs, Regulation & Compliance, Profit & Value labels around the bank."
+    },
+    {
+     "field": "thumbnail_repeats_title",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Y",
+     "corrected_value": "N",
+     "reason": "Only the topic (a bank) is shared; the headline is 'START A BANK', not the title's 'owning'/'economics'. Arguably the callouts spell out the 'economics', so partly overlapping.",
+     "evidence": "Headline 'SO YOU WANT TO START A BANK' vs title 'The Economics of Owning a Bank'."
+    },
+    {
+     "field": "title_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The profit economics of running a bank.",
+     "corrected_value": "The economics of owning a bank.",
+     "reason": "Title says 'owning' and 'economics'; 'profit' and 'running' are not in the title.",
+     "evidence": "Title text."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-iBC4YPyDQhI",
+   "pk": "PK-09",
+   "seq": 8,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "primary_relationship",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "COMPLEMENTARY",
+     "corrected_value": "CURIOSITY_GAP",
+     "reason": "Both halves withhold the result (no text on the image; title hides the outcome); the row's own weakest_element says neither half names it. The core mechanism is a curiosity gap.",
+     "evidence": "Thumbnail has no text, only cloves, red arrow, muscle-anatomy mouth; title 'Nobody Expected This to Happen So Fast'."
+    },
+    {
+     "field": "improvement",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Swap the muscle face for a plain close-up of a person chewing, and state the result in the title.",
+     "corrected_value": "Swap the muscle face for a plain close-up of a person chewing cloves, keeping the result unstated in the title.",
+     "reason": "Original is two edits, not one; 'state the result in the title' needs an unknown (possibly invented) medical result and would remove the package's curiosity gap.",
+     "evidence": "Protocol: ONE testable edit, no invented medical claim."
+    },
+    {
+     "field": "thumbnail_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Two dried cloves with a large red arrow pointing to an anatomical muscle-fiber face with open mouth, over a blurred lab background.",
+     "corrected_value": "Two dried cloves with a red arrow pointing to an anatomical muscle-fibre face with open mouth, blurred indoor background.",
+     "reason": "'Lab' background is not evident; the background is a blurred blue-grey indoor setting as the thumbnail audit says. Also 22 words.",
+     "evidence": "Blurred background in the image has no lab equipment."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-E4Qsvz-ggXE",
+   "pk": "PK-09",
+   "seq": 18,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "medical_escalation",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "TITLE_EXTREME_THUMBNAIL_NEUTRAL",
+     "corrected_value": "BOTH_MODERATE",
+     "reason": "'7 Shocking Facts You Need to Know!' is a mild curiosity hook about bathing frequency with no diagnosis, cure or fear claim; TITLE_EXTREME is over-labelled (the title audit rated it MEDICAL_PACKAGING_SAFE) and it should be at most moderate, with a neutral cartoon thumbnail giving a mild 'once or twice a week' answer.",
+     "evidence": "Title text; image is a smiling cartoon man in a shower with a printed frequency answer."
+    },
+    {
+     "field": "weakest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The answer 'ONES OR TWICE A WEEK' is printed outright, spending the title's question; 'shocking facts' appears nowhere, and bath vs shower differs.",
+     "corrected_value": "Shorten to <=20 words.",
+     "reason": "23 words, over the 20-word limit.",
+     "evidence": "Word count."
+    },
+    {
+     "field": "thumbnail_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Yellow 'HOW OFTEN SHOULD SENIORS SHOWER?' with 'ONES OR TWICE A WEEK' under a cartoon older man showering.",
+     "corrected_value": "Yellow 'HOW OFTEN SHOULD' lines, a white-on-red 'SHOWER?' and 'ONES OR TWICE A WEEK' beside a cartoon older man showering.",
+     "reason": "The question is yellow only for the first two lines; SHOWER? is white on a red box.",
+     "evidence": "Image."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-Y9UEac9_2ZQ",
+   "pk": "PK-09",
+   "seq": 19,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-EWIGCFd3WzI",
+   "pk": "PK-09",
+   "seq": 21,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "primary_relationship",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "REINFORCING",
+     "corrected_value": "REDUNDANT",
+     "reason": "Headline 'SHAVED WITH ROCKS?' is a near-verbatim repeat of the title phrase; the row flags repeats Y, duplication Y, 'adds no new fact or angle', complementarity 5, and the thumbnail audit rated it DUPLICATES. REDUNDANT is the label that fits; REINFORCING is meant for useful repetition.",
+     "evidence": "Title 'How Did Ancient Humans Shave With Rocks?' vs image text 'SHAVED WITH ROCKS?'."
+    },
+    {
+     "field": "strongest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "A stone pressed to a half-bearded cheek makes 'SHAVED WITH ROCKS?' visible in one glance, with a wary face adding doubt.",
+     "corrected_value": "Shorten to <=20 words.",
+     "reason": "21 words, over the limit.",
+     "evidence": "Word count."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-BueErE8bbo8",
+   "pk": "PK-10",
+   "seq": 4,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "weakest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Both halves say 'kilos of stool' and neither names the remedy, while 'toxic feces' makes a detox claim that is hard to credit.",
+     "corrected_value": "Shorten to <=20 words.",
+     "reason": "23 words, over the 20-word limit.",
+     "evidence": "Word count."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-6dw0y-ATdwI",
+   "pk": "PK-10",
+   "seq": 13,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "'YOUR 40s' with an arrow to a smug man in cap and suit, surrounded by gold coin stacks, cash, watch and a rising chart.",
+     "corrected_value": "'YOUR 40s' with an arrow to a smug man in cap and suit amid gold coins, cash, a watch and a chart.",
+     "reason": "24 words, over the 20-word limit.",
+     "evidence": "Word count."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-ciWCTKap5ZM",
+   "pk": "PK-10",
+   "seq": 14,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "'START HERE' with an arrow from a man holding a coin to a green piggy bank, with cash stacks on the right.",
+     "corrected_value": "'START HERE' with a black arrow from the headline down to a green piggy bank; a man holds a coin and cash stacks sit right.",
+     "reason": "The arrow does not run from the man; it starts under the 'START HERE' headline and points down-left to the piggy bank (the thumbnail audit says so).",
+     "evidence": "Image: curved black arrow under 'HERE' pointing down-left to the piggy bank; man stands at far left holding a coin."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 12,
+  "material": 0,
+  "minor_factual": 2,
+  "classification": 3,
+  "subjective": 5,
+  "style_only": 9
+ }
+}

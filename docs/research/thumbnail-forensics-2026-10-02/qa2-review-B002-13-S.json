@@ -1,0 +1,154 @@
+{
+ "reviewer": "QA-B002-13",
+ "batch": "B002-13",
+ "rows": [
+  {
+   "seq": 1,
+   "thumbnail_id": "THB-0c58e2ca7d1f2cf4bec7bbb7cc79e6b400c31f7c78e78a77852e4212c8f1a32c",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: 160 sheet shows bills and stern face but the thin 50%/20%/15% tags are faint specks, matching PARTIAL/5.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 2,
+   "thumbnail_id": "THB-a916db284a7de8aa733f57ec25e6d9b0f931ae386a6d49e86ea971beb492ebea",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: yellow 2 SLEEPS? headline, head and fire all clearly legible at 160x90, matching PASS/9.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 6,
+   "thumbnail_id": "THB-731364100fb6ebca3c028d8f2fd79ffa4028355b15a91b60544c9570beb856b1",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: 7 MOST HARMFUL and the colon silhouette survive at 160x90 while the circled food labels do not.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 9,
+   "thumbnail_id": "THB-9cabcf25591e0ed45a851aebf228e94f4f612dc01be84691459f61de5c267b4b",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: yellow RETIRE RICH bar, OR RETIRE EARLY? and the shrugging figure are all readable at 160x90.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "composition",
+     "original_value": "three-line headline fills the right 55 percent in descending left-aligned lines",
+     "corrected_value": "three-line headline fills the right half in centred, progressively indented lines",
+     "reason": "The three lines are not left-aligned: the yellow bar starts at about x=445, OR RETIRE at about x=550 and EARLY? at about x=640, all centred on the same vertical axis near x=860.",
+     "evidence": "Native 09.jpg: left edges step inward 445 -> 550 -> 640 while right edges step inward 1260 -> 1170 -> 1060.",
+     "error_class": "MINOR_FACTUAL_ERROR"
+    }
+   ]
+  },
+  {
+   "seq": 17,
+   "thumbnail_id": "THB-644fe344aa394c28355550332656cf7e0e63c98f3a8fa59033f42153ae034a28",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: handwritten Choice was a Lie and the large tearful face read at 160x90; tears/sweat fade but are not key text, PASS with score 6 is defensible.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "counterexample",
+     "original_value": "Seq 3 pairs a heavy red headline with two characters in a visible chase",
+     "corrected_value": "Seq 3 pairs a heavy red HIDE OR DIE headline with a hiding figure and an armed stalker",
+     "reason": "Seq 3 shows one figure peeking from behind a rock and a rifle-holding figure standing in the open; no chase motion is depicted.",
+     "evidence": "03.jpg: left figure behind grey boulder with sweat drops, right figure standing with rifle, red arrow pointing at the hider.",
+     "error_class": "STYLE_ONLY"
+    }
+   ]
+  },
+  {
+   "seq": 18,
+   "thumbnail_id": "THB-ccd486c4b968f907b5fb632a306312d1bc983afd5824666a41e48fe4f2f91b3a",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: the five heavy text lines are fully legible at 160x90 while the thin chalk man and showerhead fade, matching PASS/8.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "mechanism_primary",
+     "original_value": "hidden_answer",
+     "corrected_value": "specificity",
+     "reason": "The thumbnail does not hide the answer: ONES OR TWICE A WEEK is printed in large white capitals, and the row's own weakness, reveal_too_much_risk=HIGH, secondary mechanism and action all say the answer is shown. hidden_answer contradicts them.",
+     "evidence": "Native 18.jpg: bottom two lines read ONES OR TWICE / A WEEK as an explicit numeric frequency answer to the headline question.",
+     "error_class": "CLASSIFICATION_ERROR"
+    }
+   ]
+  },
+  {
+   "seq": 19,
+   "thumbnail_id": "THB-fdf9396e90f8ade599f1912d5e4bbb789d594d2bddbf68cd83e90cbd67125e5c",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: 7 GOALS BEFORE YOU, the yellow RETIRE bar and the green-suited man with clipboard all read at 160x90.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "strength",
+     "original_value": "A clipboard with ticks and a seven-word headline show a goal-checklist idea at a glance.",
+     "corrected_value": "A clipboard with ticks and a five-word headline show a goal-checklist idea at a glance.",
+     "reason": "The headline is 5 words (7 GOALS BEFORE YOU RETIRE), as the row's own word_count states; seven is the number of goals, not words.",
+     "evidence": "Native 19.jpg: text reads 7 / GOALS / BEFORE / YOU / RETIRE.",
+     "error_class": "MINOR_FACTUAL_ERROR"
+    },
+    {
+     "field": "composition",
+     "original_value": "The man and the clipboard occupy the left 45 percent ... three text lines fill the right 55 percent in descending size",
+     "corrected_value": "The man and the clipboard occupy roughly the left 36 percent ... the three text lines fill roughly the right 60 percent, with 7 GOALS and BEFORE YOU at similar size and RETIRE slightly smaller",
+     "reason": "Measured extents differ slightly from the stated split; the first two lines are about equal in cap height.",
+     "evidence": "Native 19.jpg: figure and clipboard span x=0 to about 465 of 1280; text spans about x=475 to 1250; cap heights about 125, 130 and 100 px.",
+     "error_class": "STYLE_ONLY"
+    },
+    {
+     "field": "title_relation",
+     "original_value": "DUPLICATES",
+     "corrected_value": "COMPLEMENTS",
+     "reason": "The row's own partnership says the image adds an optimistic checklist (protocol: use COMPLEMENTS when the row says the image adds information), although its bottleneck says no concrete goal is added; the row is internally inconsistent and either value is defensible.",
+     "evidence": "Native 19.jpg: text restates 7 goals before you retire; the clipboard with ticks is the only visual addition.",
+     "error_class": "SUBJECTIVE_DISAGREEMENT"
+    }
+   ]
+  },
+  {
+   "seq": 22,
+   "thumbnail_id": "THB-fc55308a7ed3060d7c4e6b92eb6f5563a222a6a1c9552e3b8a9d8e867e0e40fd",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: BIRTH CONTROL? headline and the large bowl read at 160x90 despite the 360x202 native file; onlookers are soft.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 8,
+  "material": 0,
+  "minor_factual": 2,
+  "classification": 1,
+  "subjective": 1,
+  "style_only": 2
+ }
+}

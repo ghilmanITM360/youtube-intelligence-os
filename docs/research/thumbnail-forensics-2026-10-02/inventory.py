@@ -33,7 +33,7 @@ def visit(data, location, depth=0):
         except Exception as e: errors.append({'location':location,'error':str(e)})
 for base in ['data','docs/research','channels']:
     for p in sorted((ROOT/base).rglob('*')):
-        if p.is_file() and OUT not in p.parents and '__pycache__' not in p.parts:
+        if p.is_file() and OUT not in p.parents and '__pycache__' not in p.parts and 'thumbnail-recovery-2026-10-04' not in p.parts:  # recovered public images are inventoried by data/manifests/thumbnail-recovery-2026-10-04.json
             try: visit(p.read_bytes(),str(p.relative_to(ROOT)))
             except Exception as e: errors.append({'location':str(p.relative_to(ROOT)),'error':str(e)})
 with (OUT/'asset-inventory.csv').open('w') as f:

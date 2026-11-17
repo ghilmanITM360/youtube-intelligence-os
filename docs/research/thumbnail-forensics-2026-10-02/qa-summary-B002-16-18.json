@@ -1,0 +1,169 @@
+{
+ "scope": "Wave 6: B002-16..18; 72 audits",
+ "decision": "PASS_WITH_CORRECTIONS",
+ "reviewer": "Primary agent; sequential, no subagents",
+ "sample": {
+  "B002-16": 6,
+  "B002-17": 6,
+  "B002-18": 6
+ },
+ "sample_total": 18,
+ "sample_sequences": {
+  "B002-16": [
+   1,
+   4,
+   9,
+   17,
+   21,
+   22
+  ],
+  "B002-17": [
+   2,
+   6,
+   9,
+   10,
+   12,
+   18
+  ],
+  "B002-18": [
+   3,
+   4,
+   15,
+   18,
+   22,
+   23
+  ]
+ },
+ "sampling": "qa_select.pick(k=6), deterministic hash-seeded greedy strata/channel selection",
+ "inspection": "Every sample reopened at native size; corresponding 320x180 and 160x90 sheets inspected directly. All 24 newly authored rows inspected at the same three sizes.",
+ "checks": [
+  "image mapping",
+  "visible text",
+  "objects",
+  "composition",
+  "title relationship",
+  "classification tags",
+  "mobile readability",
+  "medical packaging tags",
+  "score arithmetic"
+ ],
+ "material": 0,
+ "minor_factual": 18,
+ "classification": 8,
+ "subjective": 7,
+ "style_only": 0,
+ "counting_basis": "Field-level correction records; multiple corrected fields may concern one underlying issue. Preliminary recount consolidated.",
+ "wrong_image_mappings": 0,
+ "visible_text_errors": 1,
+ "score_arithmetic_errors": 0,
+ "rows_with_corrections": 14,
+ "field_corrections_applied": 33,
+ "supplementary_consistency_corrections": [
+  {
+   "batch": "B002-16",
+   "seq": 6,
+   "Thumbnail_ID": "THB-92860d6655e9714217556cedf700f462e2544dc81ecaf8ad50a4317d74322f52",
+   "field": "warning_color_used",
+   "before": "N",
+   "after": "Y",
+   "error_class": "CLASSIFICATION",
+   "reason": "Existing colors explicitly identifies red arrow as alarm cue; tag must agree."
+  }
+ ],
+ "warning_adjudications": [
+  {
+   "batch": "B002-16",
+   "seq": 2,
+   "Thumbnail_ID": "THB-cb1a675908024da2aae5ace109397357efa45c3251a0406dead53665cc3732c4",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "A dark teal-grey night kitchen with a warm amber glow at the right and bright white headline text. The only saturated element is the red struck-through $85,000, which reads as a correction mark rather than an alarm, and the man's navy suit blends into the dark table area."
+  },
+  {
+   "batch": "B002-16",
+   "seq": 3,
+   "Thumbnail_ID": "THB-291ecff4a9688d55827ea22b1d0f8ed589c9875a03abba18fe480a9b40424b0e",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "White ground with black headline and red underline, then the building's dark brown and red facade, a cream popcorn bucket, and a green-orange-brown sign panel. Red accents on the marquee, carpet and label underlines repeat across the frame, which unifies it, and no colour signals danger."
+  },
+  {
+   "batch": "B002-16",
+   "seq": 14,
+   "Thumbnail_ID": "THB-11acdfc1d80ff7d82c7eff3875dca36194dad9a30ba76aa4f201877e1d1b7a96",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "A warm orange-to-coral sunset gradient on the left set against a cold blue-black night on the right, with a saturated red car as the focal accent and a white sun disc. The red is a car and logo colour, not an alarm, and the two-temperature split carries the sunset idea."
+  },
+  {
+   "batch": "B002-16",
+   "seq": 18,
+   "Thumbnail_ID": "THB-9e003022227a59afdb60bc510000d9bcc032ea20c440fdc3a812ae182654f11b",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "Brown muscle shapes and yellow molecular glow contrast with black; red heading adds intensity without explicit danger."
+  },
+  {
+   "batch": "B002-16",
+   "seq": 21,
+   "Thumbnail_ID": "THB-bf6099475417aa32534c7ea946a7db68c17ae825ff029bfd25a3527c9e3f3bfc",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "Red clothing and green money separate from white; yellow marks audience rather than explicit danger."
+  },
+  {
+   "batch": "B002-16",
+   "seq": 24,
+   "Thumbnail_ID": "THB-3473842cb3f781feae28e3542630b96fb15518883b104c2ddbc2fc311123a53e",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "Black on white gives headline contrast; green paycheck glow opposes red outflow props without an explicit alarm legend."
+  },
+  {
+   "batch": "B002-17",
+   "seq": 22,
+   "Thumbnail_ID": "THB-59a3c8c4f3eb56ea4817c1a05bbe2a4513613af9960f897b82ef3e574e7e1607",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "Black and white dominate with green glow on the gray sedan and saturated red sports car; no explicit warning palette."
+  },
+  {
+   "batch": "B002-17",
+   "seq": 24,
+   "Thumbnail_ID": "THB-23a85d42b925b9e078cb5819b5003ccd7c229c8c4fc8def068c50fb93f912d6b",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "Orange bodies and teal shorts contrast against white; red emphasizes fast progress rather than danger."
+  },
+  {
+   "batch": "B002-18",
+   "seq": 6,
+   "Thumbnail_ID": "THB-b6555fa7007b183468db50e2616a49b13a9d1e7374df2663ae66a4b2d178d337",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "A flat mint-teal ground with black and white letters, and a maroon blouse and white coat in the photo. Nothing is red or yellow, so there is no danger colour and the palette is calm and clinical."
+  },
+  {
+   "batch": "B002-18",
+   "seq": 22,
+   "Thumbnail_ID": "THB-3f355305e4ec6cbea043c59a639e1c733b967f211fdbe0eb582eb61a23d9a462",
+   "field": "warning_color_used",
+   "decision": "RETAIN_N",
+   "reason": "Negation false positive: red is described as directional, decorative, brand, comparison or absent, rather than an alarm.",
+   "colors_evidence": "Olive equipment on white contrasts with the bright red identity banner; no danger language accompanies the red."
+  }
+ ],
+ "automated_all_72": "qa-wave-checks-B002-16-18.json and recovery-state-2026-10-04.json: zero schema, source hash, mapping, enum, arithmetic, queue/order and duplicate errors",
+ "limitation": "Sample QA does not establish that all 54 unsampled rows are free of minor prose errors. Scores remain analyst diagnostic inference, not performance predictions.",
+ "mean_score": 62.8,
+ "distinct_scores": 30
+}

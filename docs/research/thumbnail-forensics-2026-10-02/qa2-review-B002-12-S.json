@@ -1,0 +1,157 @@
+{
+ "reviewer": "QA-B002-12",
+ "batch": "B002-12",
+ "rows": [
+  {
+   "seq": 2,
+   "thumbnail_id": "THB-5fe04510d94b854f89766735522d6cd5fa53712d8e5f0eba339f7f7fd6b0790f",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: at 160x90 the ice-blue bird silhouette and bold EVERY NIGHT survive, and the thin It Dies line is still legible on the white ground; PASS 8 is fair.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "typography",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Four words over two lines: a thin lowercase It Dies above heavy capitals EVERY NIGHT, black on white.",
+     "corrected_value": "Four words over two lines: a thin hand-lettered mixed-case It Dies (capital I and D) above heavy capitals EVERY NIGHT, black on white. EVERY NIGHT survives well at 160x90 while the lighter It Dies line is thinner, and the text adds a claim the title does not state.",
+     "reason": "It Dies is not lowercase; it has capital I and capital D.",
+     "evidence": "Native image: 'It Dies' glyphs I and D are capitals; only 't', 'i', 'e', 's' are lowercase."
+    },
+    {
+     "field": "weakness",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The thin It Dies line is lighter than the capitals and gives the arrow little to point at.",
+     "corrected_value": "The thin It Dies line is visibly lighter than the heavy EVERY NIGHT capitals, so the two lines read as unequal in weight.",
+     "reason": "The arrow starts under the text and its head points left at the bird, not at It Dies, so the 'little to point at' clause is incoherent.",
+     "evidence": "Native image: arrow tail below EVERY NIGHT at about x=990,y=380, arrowhead at about x=745,y=470 aimed at the bird."
+    }
+   ]
+  },
+  {
+   "seq": 9,
+   "thumbnail_id": "THB-ef294524e73b0022c66384ce91b3f47444fdbce874b392e876462b3566eb7aef",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: money stack, central figure and gold arrow survive at 160x90; skyline detail merges. PASS 6 is reasonable.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "mechanism_primary",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "transformation",
+     "corrected_value": "aspiration",
+     "reason": "The image shows a single static wealth tableau with no before/after or change; the row's own partnership text says no career counterpart is shown, and before_after is N. 'transformation' contradicts that. (Enum list not available to reviewer; use the nearest valid aspirational/status value.)",
+     "evidence": "Native image: one seated cartoon man, cash, tablet arrow and globe; no second state."
+    }
+   ]
+  },
+  {
+   "seq": 14,
+   "thumbnail_id": "THB-770ae4e0d9a1e9726924f9fbc38d2305f62fa8fe7b3887501abe28e957fc59bc",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: all four headline lines, the red arrow and the man's face remain readable at 160x90; PASS 8 is fair.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 15,
+   "thumbnail_id": "THB-b489123adf1904fffbef72c7c2742cb198da5099dc7a6f045d1347070f682708",
+   "wrong_image_mapping": false,
+   "visible_text_correct": false,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: the headline and the LAUNDROMAT sign survive; all eight captions, bottom strip and sandwich-board text are unreadable at 160x90. PARTIAL 4 is fair.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "text",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "SO YOU WANT TO / OWN A LAUNDROMAT [storefront sign LAUNDROMAT with WASH DRY FOLD REPEAT; sandwich board CLEAN TODAY CONFIDENCE TOMORROW; eight captions: Location & Demographics, Equipment Investment, Utilities & Maintenance, Supplies & Vending, Wash & Dry Revenue, Add-On Services (Wash & Fold), Customer Retention, Operating Costs & Profit Margins; bottom strip: SMART LOCATION, EFFICIENT EQUIPMENT, MARKETING & UTILIZATION, STREAMLINED OPERATIONS, PROFITABLE BUSINESS]",
+     "corrected_value": "SO YOU WANT TO / OWN A LAUNDROMAT [storefront sign LAUNDROMAT with WASH DRY FOLD REPEAT; window signs CLEAN CLOTHES HAPPY LIFE and FRESH DONE RIGHT; sandwich board CLEAN TODAY CONFIDENCE TOMORROW; bag WASH DRY FOLD; eight captions: Location & Demographics, Equipment Investment, Utilities & Maintenance, Supplies & Vending, Wash & Dry Revenue, Add-On Services (Wash & Fold), Customer Retention, Operating Costs & Profit Margins; bottom strip: SMART LOCATION, EFFICIENT EQUIPMENT, MARKETING & UTILIZATION, STREAMLINED OPERATIONS, PROFITABLE BUSINESS]",
+     "reason": "Omits three visible text items: two window signs inside the shop and the WASH DRY FOLD text on the blue bag.",
+     "evidence": "Native image: 'CLEAN CLOTHES HAPPY LIFE' at left window, 'FRESH DONE RIGHT' at right window, 'WASH / DRY / FOLD' printed on the blue bag at lower right."
+    },
+    {
+     "field": "word_count",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "7",
+     "corrected_value": 57,
+     "reason": "word_count counts every visible word per protocol (and seq 21 in this batch counts all text zones); 7 counts only the headline. Excluding ampersands, visible words total about 57 (headline 7, sign 5, window signs 7, sandwich board 4, bag 3, eight captions 21, bottom strip 10).",
+     "evidence": "Native image text enumerated; headline is only 7 of about 57 words."
+    }
+   ]
+  },
+  {
+   "seq": 21,
+   "thumbnail_id": "THB-bfbd4f6cee810d2d3a6e6fa0a99cf55708d8ace6be80d3ca493de9d97e06384b",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: headline, red AFTER 25 YEARS and the $71,000 GAP tag survive; names, bottom captions and cheque label are lost. PARTIAL 5 is fair.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "word_count",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "22",
+     "corrected_value": 24,
+     "reason": "Counting every token in the audit's own text field (DIVIDENDS vs GROWTH 3, AFTER 25 YEARS 3, DANA LEO 2, $661K $732K 2, $71,000 GAP 2, GOT PAID EVERY QUARTER 4, GOT PAID NOTHING 3, SAME $600/MONTH 2, PAID TO OWN 3) gives 24; 22 matches neither the count with nor without the cheque label (21).",
+     "evidence": "Native image text enumeration."
+    },
+    {
+     "field": "typography",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "About twenty-two tokens appear across seven text zones: a large black headline, a red AFTER 25 YEARS, names, two amounts, the GAP tag and three bottom captions.",
+     "corrected_value": "About twenty-four tokens appear across seven text zones: a large black headline, a red AFTER 25 YEARS, names, two amounts, the GAP tag and three bottom captions, plus a small PAID TO OWN cheque label. The headline and GAP tag remain readable at 160x90, while names, captions and the cheque label do not. Almost every statistic from the title's experiment is already written out.",
+     "reason": "Token count is 24, not 22 (see word_count).",
+     "evidence": "Native image text enumeration."
+    },
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A symmetrical layout with headline at top, two characters at the sides, the red GAP tag at the centre and a smaller suited figure bottom centre.",
+     "corrected_value": "A symmetrical layout with headline at top, two characters at the sides, the red GAP tag at the centre and a smaller suited figure at bottom centre-right. The eye zig-zags between the two dollar boxes and the central tag, with captions at the bottom corners, and no single element dominates.",
+     "reason": "The suited man sits right of centre (about x 620-1010 of 1280, centre near x=815), under and right of the GAP tag, not at bottom centre.",
+     "evidence": "Native image: calculator at x~620, his head at x~890; GAP tag centred at x~640."
+    }
+   ]
+  },
+  {
+   "seq": 23,
+   "thumbnail_id": "THB-3d14e3dc22e34cad86568cbc55db9a749d0fd6cf7d073a2dec345444973585d6",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: PRIVACY? in yellow and the central embrace read clearly at 160x90 while edge figures merge into a brown mass. PASS 8 is acceptable.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The embracing pair stands in the centre with the fire between the left crowd and the pair, and the watchers form a ring around the edges. The headline arches over the top and the ring structure compresses the centre, but the central pair stays the primary focus.",
+     "corrected_value": "The embracing pair stands in the centre with the fire between the left crowd and the pair, and the watchers form a ring around the edges. The headline runs straight across the top and the ring structure compresses the centre, but the central pair stays the primary focus.",
+     "reason": "The headline is set on a straight horizontal baseline, not arched.",
+     "evidence": "Native image: PRIVACY? letters share one horizontal baseline across the top; no curve."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 6,
+  "material": 0,
+  "minor_factual": 8,
+  "classification": 1,
+  "subjective": 0,
+  "style_only": 1
+ }
+}

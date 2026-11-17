@@ -1,0 +1,242 @@
+{
+ "reviewer": "QA2-A",
+ "batch": "B002-03",
+ "rows": [
+  {
+   "seq": 1,
+   "thumbnail_id": "THB-bf3cd042e2ee8cf8b16c7ef9ad10a8e2383ae25fa46ceae81821656a4163ff6b",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: WHY NOT EAT? and the figure/lion silhouettes are clear on the 160 sheet; small campfire/limbs lose detail as the audit says",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "psychology",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The caveman's furrowed, puzzled look and chin-touch signal thinking, while the lion's bared teeth and angry brow add menace. Together they imply a puzzling danger rather than urgent fear.",
+     "corrected_value": "The caveman's round eyes glancing sideways, small flat mouth and finger-on-chin pose signal thinking, while the lion's bared teeth and angled angry brow add menace. Together they imply a puzzling danger rather than urgent fear.",
+     "reason": "No furrowed brows are drawn on the caveman; the stick-figure face has no eyebrows.",
+     "evidence": "Caveman face: two round white eyes with pupils looking right, no brow lines, small downturned mouth."
+    },
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A stick-figure caveman in a fur tunic stands at left with one finger on his chin and eyes drifting sideways toward a snarling lion lying on a grey stone slab. A raw steak sits in front of the lion and a cut-away red meat wedge shows in its flank, with green stink lines rising from the carcass. A campfire, a thatched hut and acacia trees fill the savanna behind.",
+     "corrected_value": "A stick-figure caveman in a fur tunic stands at left with one finger on his chin and eyes drifting sideways toward a snarling lion lying on a grey stone slab. A raw steak sits in front of the lion and a cut-away red meat wedge shows in its flank, with three green wavy stink lines rising above its back and two small ones above the steak. A campfire, a thatched hut and acacia trees fill the savanna behind.",
+     "reason": "'Carcass' contradicts the live, snarling lion; stink lines also appear over the steak.",
+     "evidence": "Lion has open mouth with bared teeth and an angry brow; green squiggles above its back (x~920-1030) and two above the steak."
+    }
+   ]
+  },
+  {
+   "seq": 2,
+   "thumbnail_id": "THB-45f6c1421e641b1716bada62a8812f9f49ece9e0397842e727198ae27c6b19e3",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: RETIRE LIGHTER is large and legible at 160x90; rider reads as a cyclist with gear",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "word_count",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "2",
+     "corrected_value": "3",
+     "reason": "The text field includes bracketed [STUFF] and seq 5 counts bracketed label words in word_count, so STUFF must be counted for consistency (or removed from text).",
+     "evidence": "Cardboard box at bottom-left bears the printed word STUFF; headline RETIRE and LIGHTER = 2 more words."
+    },
+    {
+     "field": "mechanism",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Reframes retirement as owning less: a cheerful minimalist with a few belongings on a bike contrasts the usual big-nest-egg image. 'Lighter' works as both a wealth and a baggage pun.",
+     "corrected_value": "Reframes retirement as owning less: a cheerful rider on a folding bike with a few belongings (rod, chair, bag of oranges) next to a box labelled STUFF. Analyst reading: 'LIGHTER' can be read as carrying less baggage; no wealth cue is visible.",
+     "reason": "'Usual big-nest-egg image' and the wealth pun are not visible in the thumbnail; they are unsupported analyst speculation presented as fact.",
+     "evidence": "No money, savings or number appears anywhere; only text RETIRE / LIGHTER and the box STUFF."
+    }
+   ]
+  },
+  {
+   "seq": 5,
+   "thumbnail_id": "THB-b2222b05d35bed68fb43a322e2db48011fddab78ac8f34c99939956d7c3459b3",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree for headline (URINARY TRACT INFECTIONS IN AGING legible); note the credential labels, the authority mechanism, are smudged at 160 and faces are tiny, so PARTIAL would also be defensible",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "text",
+     "error_class": "STYLE_ONLY",
+     "original_value": "[circular line-drawing logo of two people walking, one with a cane] / URINARY / TRACT / INFECTIONS / IN AGING / [Leslie Kernisan, MD MPH] / [Chrissy Kistler, MD MASc]",
+     "corrected_value": "URINARY / TRACT / INFECTIONS / IN AGING / [Leslie Kernisan, MD MPH] / [Chrissy Kistler, MD MASc]",
+     "reason": "The logo contains no words; its description is padding and belongs in scene (already there). Text must be exact visible words.",
+     "evidence": "Round line-drawing logo at top-left shows two walking figures only, no lettering."
+    },
+    {
+     "field": "typography",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Five headline words in huge black sans (the last two lines 'IN AGING' in white), plus two small caption labels. The headline is readable at 160x90; the caption names turn to smudges. The text repeats the title's topic.",
+     "corrected_value": "Five headline words on four lines in huge black sans, with the final line 'IN AGING' in white, plus two small caption labels. The headline is readable at 160x90; the caption names turn to smudges. The text repeats the title's topic but omits 'Symptoms & Prevention'.",
+     "reason": "'IN AGING' is one line (two words), not 'two lines'.",
+     "evidence": "Lines: URINARY / TRACT / INFECTIONS (black) / IN AGING (white, single line)."
+    },
+    {
+     "field": "partnership",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Title 'UTIs in Older Adults: Symptoms & Prevention' is repeated almost exactly by the headline, so the image adds only the identity of two speakers; no symptom or prevention detail appears.",
+     "corrected_value": "Title 'UTIs in Older Adults: Symptoms & Prevention' is echoed by the headline on topic only ('UTIs' spelled out, 'Older Adults' becomes 'IN AGING'); 'Symptoms & Prevention' is absent, so the image adds only the identity and credentials of two speakers and no symptom or prevention detail.",
+     "reason": "'Almost exactly' overstates and contradicts the same sentence's admission that symptom/prevention content is missing.",
+     "evidence": "Thumbnail words: URINARY TRACT INFECTIONS IN AGING; no 'symptoms' or 'prevention'."
+    },
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The tile edges align with the headline block, giving a stable but static layout.",
+     "corrected_value": "The two tiles are stacked at the right with a shared left edge, roughly spanning the headline's height (tiles about y 85-628 vs headline about y 125-600), giving a stable but static layout.",
+     "reason": "Tile edges do not align with the headline block; tiles extend above and below it.",
+     "evidence": "Top tile starts at y~85, headline top at y~125; bottom tile ends at y~628, headline ends y~600."
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "thumbnail_id": "THB-bd3f509503116fdb0c3c2ec173e1bcbf136b2fec617c41e8921785d15310690f",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: two-line black headline, shocked face and arrow all survive at 160",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "title_relation",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "ESCALATES",
+     "corrected_value": "COMPLEMENTS",
+     "reason": "The headline 'BEING BROKE IS EXPEN$IVE' paraphrases the title's 'Why You Pay More for Everything' at the same intensity; nothing is escalated. The calculator echoing 'Math' is an addition, i.e. complements. The audit's own typography text says the title adds detail the thumbnail omits.",
+     "evidence": "Headline BEING BROKE / IS EXPEN$IVE with calculator, cracked pig and cash; no stronger or new claim (no number, no consequence)."
+    },
+    {
+     "field": "partnership",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "The title 'The Math of Being Broke (Why You Pay More for Everything)' is expanded by the thumbnail's bold claim, and the calculator visual echoes 'math'. It escalates the title by phrasing it as a blunt statement.",
+     "corrected_value": "The title 'The Math of Being Broke (Why You Pay More for Everything)' and the headline 'BEING BROKE IS EXPEN$IVE' make the same claim; the calculator visual echoes 'math' and the cracked piggy bank adds a scarcity image. The 'why' and 'pay more for everything' detail remain only in the title.",
+     "reason": "Same-claim paraphrase is not escalation; sentence also contradicts typography field.",
+     "evidence": "Thumbnail text is a blunt restatement of the title's premise; calculator in the man's hands."
+    }
+   ]
+  },
+  {
+   "seq": 7,
+   "thumbnail_id": "THB-ac31d0df20b1164741309d86d95dd0b10cc7b3d06cf3ceb11b9976b8fadcdb31",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "disagree: ATE WHAT? and the white face survive, but the ham, berries, tubers and nuts (the content that carries the question per audit's own bottleneck) become small brown blobs at 160, so PARTIAL not PASS",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "mobile_readability_160",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "PASS",
+     "corrected_value": "PARTIAL",
+     "reason": "The row's own weakness/bottleneck/art fields say the food options are too small and low-contrast to read at phone size; PASS contradicts that. Only the headline and face survive.",
+     "evidence": "160 sheet #07: headline and head clear; foods are dark-brown shapes on brown cave, berries barely visible."
+    },
+    {
+     "field": "title_relation",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "DUPLICATES",
+     "corrected_value": "COMPLEMENTS",
+     "reason": "Partnership text says the image 'adds visible candidate foods' beyond the title paraphrase and the cave setting implies pre-fire; that is complementing, and seq 1 (similar structure) is COMPLEMENTS.",
+     "evidence": "Ham, berries, roots, nuts shown on both sides; title has no food information."
+    },
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "At his left a raw ham-on-bone with a pile of blueberries and raspberries; at his right a heap of roots, tubers and nuts, with a blue dusk landscape visible through the cave mouth.",
+     "corrected_value": "At viewer-left a raw ham-on-bone with a pile of blueberries, raspberries and small orange fruit in front; at viewer-right a heap of roots, tubers, acorns and walnuts, with a blue dusk landscape visible through the cave mouth at upper right.",
+     "reason": "Orientation is ambiguous/wrong: the ham is on the figure's right (viewer's left). Composition field uses viewer-left, so scene is internally inconsistent.",
+     "evidence": "Ham pile at x~250-540 (viewer-left); roots/nuts at x~740-960 (viewer-right)."
+    },
+    {
+     "field": "psychology",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Round eyes and a slightly open mouth show puzzlement; the neutral slump and dim lighting give a slight 'primitive and unsure' mood rather than fear.",
+     "corrected_value": "Round eyes glancing sideways and a small open mouth show puzzlement; the arms spread out with hands resting on the two food piles and the dim cave lighting give a slightly unsure mood rather than fear.",
+     "reason": "The figure does not slump; he sits upright cross-legged with arms spread outward.",
+     "evidence": "Torso upright, arms extended left and right to the food piles, legs crossed at bottom edge."
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "thumbnail_id": "THB-74d1dc779949c6cf357d3dfd89301c866b5a0cb3ef1b9083d9c1d4b156fed7b6",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: PARTIAL defensible; ROME, the Colosseum and even the date line remain legible at 160 but the rest of the dense cityscape collapses to texture",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Dozens of tiny robed figures cross a paved plaza.",
+     "corrected_value": "About twenty tiny white-robed figures stand or walk on the paved plaza, mostly in a cluster left of the column.",
+     "reason": "Overcounted; 'dozens' means 24+, and the row's own people_count_visible is 15.",
+     "evidence": "Counted roughly 19-20 small figures between x 140 and 790, concentrated at x 550-690."
+    },
+    {
+     "field": "people_count_visible",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "15",
+     "corrected_value": "20",
+     "reason": "Approximate recount gives about 20 figures; scene and tag disagree.",
+     "evidence": "Cluster of ~10 in the plaza centre plus ~9 scattered near the column, steps and arch."
+    },
+    {
+     "field": "emotion_subject_alignment_score",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "2",
+     "corrected_value": "5 (score_100 would become 50)",
+     "reason": "No face is shown, so emotion is not applicable; the calm monumental subject matches the calm documentary tone. 2/10 implies a visible defect, which is not present.",
+     "evidence": "Warm, calm landscape with no emotional signal and no mismatch between subject and mood."
+    }
+   ]
+  },
+  {
+   "seq": 9,
+   "thumbnail_id": "THB-637f31074de06d589b96c79118ae515fcdd29328a94a8bde6335dd977fbbda2a",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: PARTIAL; woman and tattooed arms read, but the ring is a tiny dark box with a small glint and the shoji/lantern detail turns to texture",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "counterexample",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Seq 8 has a similar illustrated-scene approach but with no human narrative; Seq 9 has a narrative and Seq 8 has none.",
+     "corrected_value": "Seq 8 uses a comparable illustrated-scene approach but shows only monuments and tiny figures with no human action, so Seq 9's POV proposal-and-guards story is the stronger story proposition.",
+     "reason": "Tautological sentence repeats itself and refers to Seq 9 within its own row's counterexample.",
+     "evidence": "Seq 8: Colosseum skyline with text; Seq 9: ring box, laughing woman, two guards."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 7,
+  "material": 0,
+  "minor_factual": 9,
+  "classification": 4,
+  "subjective": 1,
+  "style_only": 3
+ }
+}

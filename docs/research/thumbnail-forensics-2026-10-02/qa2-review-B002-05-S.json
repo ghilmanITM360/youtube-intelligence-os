@@ -1,0 +1,122 @@
+{
+ "reviewer": "QA-B002-05",
+ "batch": "B002-05",
+ "rows": [
+  {
+   "seq": 4,
+   "thumbnail_id": "THB-735c0a713673d1002acde182f8c2369cdd2941f823590ff1e43bfcca42b8f405",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: yellow DO THEY KNOW? stays fully legible in sheet_160; the paw wound is a tiny red smudge, as the bottleneck says",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 6,
+   "thumbnail_id": "THB-232119e5cc1e3d04de931f6d3fb5698be9fcae76af65e5891381845c1acca5c9",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: all three headline lines and the yellow arrow are readable in sheet_160; the foot photo reads as a pink patch",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "word_count",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "8",
+     "corrected_value": 9,
+     "reason": "Visible text is YOUR FEET WILL TELL (4) + YOUR SUGAR (2) + IS DAMAGING YOU (3) = 9 words.",
+     "evidence": "native 06.jpg headline lines"
+    },
+    {
+     "field": "typography",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Eight words in three tiers: yellow YOUR FEET WILL TELL, large white YOUR SUGAR, and white on a red box IS DAMAGING YOU. All three lines stay readable at 160x90. The text names sugar and feet, while the title adds the diagnosis wording, the number nine and the age band.",
+     "corrected_value": "Nine words in three tiers: yellow YOUR FEET WILL TELL, large white YOUR SUGAR, and white on a red box IS DAMAGING YOU. All three lines stay readable at 160x90. The text names sugar and feet, while the title adds the diagnosis wording, the number nine and the age band.",
+     "reason": "Word count wrong (4+2+3 = 9).",
+     "evidence": "native 06.jpg"
+    },
+    {
+     "field": "scene",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The photo shows a bare foot with purple-red discolouration and two small dark spots, framed in a white box with a red outline.",
+     "corrected_value": "The photo shows a bare foot with purple-red discolouration and three small dark spots (one near the ankle, two near the heel and arch), framed in a white box with a red outline.",
+     "reason": "Three dark spots are visible, not two.",
+     "evidence": "foot inset at roughly x437-500, y583-634 in native 06.jpg"
+    },
+    {
+     "field": "psychology",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The man has furrowed brows, a slightly open mouth and a direct stare, a serious, concerned look reinforced by scrubs and stethoscope as authority cues. The foot discolouration adds a fear and vulnerability cue.",
+     "corrected_value": "The man has furrowed brows, a closed, downturned mouth and a direct stare, a serious, concerned look reinforced by scrubs and stethoscope as authority cues. The foot discolouration adds a fear and vulnerability cue.",
+     "reason": "The lips are pressed together and turned down; the mouth is not open.",
+     "evidence": "face region of native 06.jpg"
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "thumbnail_id": "THB-d5e05f5777c37fa3d12008fcd0989c337adc1ad11084d2397db78eead09f76ce",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: white 'The Enron Scandal' and the tilted logo with red line are clear in sheet_160",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 11,
+   "thumbnail_id": "THB-03811b9064828bdf7fd2b8cb887af0a8bef7ecde16675d8dd3152d235c181653",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: in sheet_160 the CONSTIPATED caption is an unreadable orange speck while the organ character survives; PARTIAL and score 3 are consistent",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "composition",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "The intestine character is centred in the narrow column, filling most of its height, with the face as the focal point.",
+     "corrected_value": "The intestine character is centred in the narrow column, filling about half of its height (roughly y175-540 of 720) and most of its width, with the face as the focal point.",
+     "reason": "The organ spans about 50% of the column height, not most of it.",
+     "evidence": "native 11.jpg: organ top y~175, bottom y~540"
+    }
+   ]
+  },
+  {
+   "seq": 18,
+   "thumbnail_id": "THB-d4f09756f8f55496bbf550d9b72d5df18411b5b3e2a7c8f4f7b05b7aea2bc1df",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: YOU tag is a small but visible white-on-dark label in sheet_160; faces and the locker scene are tiny, so PARTIAL is fair",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 24,
+   "thumbnail_id": "THB-92bd56acd9558f22530163128e833c016a45e59ac4eaee42af342ed74dab723d",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: the open mouth and the 10 million / suffers daily caption are readable in sheet_160 on the white ground",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 6,
+  "material": 0,
+  "minor_factual": 5,
+  "classification": 0,
+  "subjective": 0,
+  "style_only": 0
+ }
+}

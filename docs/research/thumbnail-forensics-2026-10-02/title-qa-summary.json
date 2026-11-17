@@ -1,0 +1,197 @@
+{
+ "sample_size": 150,
+ "sampling": "deterministic hash-seeded greedy stratified cover (title_qa_select.py); six independent blind-first reviewers x 25 titles",
+ "coverage": {
+  "channels": 45,
+  "channels_with_videos": 46,
+  "formats": {
+   "LONG_FORM": 138,
+   "SHORT": 12
+  },
+  "perf": {
+   "HIGH": 44,
+   "MIDDLE": 52,
+   "LOW": 51,
+   "INSUFFICIENT_COHORT": 3
+  },
+  "archetype_v1_basis": {
+   "LIST": 10,
+   "DOCTOR_WARNS": 5,
+   "QUESTION": 23,
+   "AFTER_60": 8,
+   "STOP_DOING": 4,
+   "WARNING": 6,
+   "OTHER": 7,
+   "EXPLANATION": 16,
+   "POV": 13,
+   "FOODS": 9,
+   "HOW_TO": 7,
+   "SIGNS": 8,
+   "SECRET": 7,
+   "MISTAKE": 4,
+   "DO_THIS": 4,
+   "CASE_STUDY": 4,
+   "SYMPTOM": 5,
+   "COMPARISON": 8,
+   "MYTH": 2
+  },
+  "health_flag": {
+   "NOT_HEALTH": 93,
+   "MISLEADING_RISK": 21,
+   "NEEDS_CONTEXT": 15,
+   "MEDICAL_PACKAGING_SAFE": 14,
+   "UNRESOLVED": 7
+  },
+  "number_titles": 69,
+  "unmet_quota": {
+   "ARCH:MYTH": [
+    3,
+    8
+   ],
+   "MED:UNRESOLVED": [
+    7,
+    8
+   ],
+   "ARCH:CASE_STUDY": [
+    5,
+    8
+   ],
+   "ARCH:SYMPTOM": [
+    6,
+    8
+   ],
+   "CH:UCJgTBuO9fbNvgL_IS8pqtqg": [
+    0,
+    1
+   ],
+   "ARCH:AVOID": [
+    1,
+    8
+   ]
+  }
+ },
+ "issues_total": 281,
+ "issues_by_class": {
+  "MINOR_FACTUAL": 121,
+  "CLASSIFICATION": 135,
+  "SUBJECTIVE": 17,
+  "STYLE_ONLY": 5,
+  "MATERIAL_ERROR": 3
+ },
+ "issues_by_layer": {
+  "PROGRAMMATIC": {
+   "MINOR_FACTUAL": 58,
+   "CLASSIFICATION": 109,
+   "MATERIAL_ERROR": 2
+  },
+  "ANALYST": {
+   "CLASSIFICATION": 26,
+   "MINOR_FACTUAL": 63,
+   "SUBJECTIVE": 17,
+   "STYLE_ONLY": 5,
+   "MATERIAL_ERROR": 1
+  }
+ },
+ "rows": {
+  "with_any_issue": 127,
+  "with_non_subjective_issue": 122,
+  "with_analyst_non_subjective_issue": 65,
+  "with_programmatic_issue": 101,
+  "clean": 28
+ },
+ "material_errors": [
+  {
+   "Video_ID": "6LVsfOAdubA",
+   "layer": "ANALYST",
+   "field": "ANALYST_TITLE_DIAGNOSTIC_SCORE",
+   "current": "77",
+   "proposed": "64"
+  },
+  {
+   "Video_ID": "oXblqsicTqM",
+   "layer": "PROGRAMMATIC",
+   "field": "Overpromise_Risk_Proxy",
+   "current": "1",
+   "proposed": "3"
+  },
+  {
+   "Video_ID": "BYIs-uNmc5E",
+   "layer": "PROGRAMMATIC",
+   "field": "Overpromise_Risk_Proxy",
+   "current": "1",
+   "proposed": "3"
+  }
+ ],
+ "analyst_score_vs_blind_reviewer": {
+  "n": 150,
+  "mean_diff": 0.11,
+  "mean_abs_diff": 4.95,
+  "within_12": 142,
+  "gap_ge_20": 1,
+  "pearson": 0.715,
+  "sd_analyst": 9.0,
+  "sd_reviewer": 7.4,
+  "mean_component_diff_analyst_minus_reviewer": {
+   "clarity": -0.35,
+   "specificity": -1.25,
+   "curiosity": 0.33,
+   "promise_strength": 0.89,
+   "credibility": 0.18,
+   "audience_fit": 0.61,
+   "concision": -0.29
+  }
+ },
+ "corrections_log": {
+  "total_rows": 342,
+  "by_status": {
+   "RESOLVED_BY_RULE_FIX": 97,
+   "APPLIED": 148,
+   "REMAINS_RULE_LIMITATION": 72,
+   "APPLIED_MANUAL": 2,
+   "NOT_APPLIED_SUBJECTIVE": 17,
+   "NOT_APPLIED_STYLE_ONLY": 5,
+   "NO_CHANGE_NEEDED": 1
+  },
+  "sample_rows": 281,
+  "systematic_mechanical": 61
+ },
+ "programmatic_rule_fixes": [
+  "curly apostrophes/quotes normalised before regex matching (117 titles had defeated n't/\u2019 patterns)",
+  "Question_Form = literal ? or interrogative opener (How to / Why X / Do this no longer questions)",
+  "genuine ?-questions keep archetype QUESTION; Why-led titles do not fire WARNING/MISTAKE/STOP_DOING/AVOID/DO_THIS or Warning/Mistake/Urgency frames",
+  "DOCTOR_WARNS needs a warning verb; any *ologist/surgeon counts as a doctor",
+  "HEALTH vocabulary extended (nails, feet, stool, covid, vaccines, clove, ...); Health_Topic=1 for every SENIOR_HEALTH-channel title",
+  "claim types: bare \"health\" no longer matches REVERSAL; \"Instant Oatmeal\" no longer INSTANT_CURE; EXAGGERATED_BENEFIT added",
+  "Urgency_Frame no longer fires on bare \"before\" or calendar years; Fear_Frame adds irreversible/poison/strain/harm/damage",
+  "List_Form counts \"These 4 Habits\"/\"All 32 States\"; units (kg, lbs, cups) no longer make a list",
+  "overpromise proxy fires on by-morning/flush/melt/N kg/Nx/in N hours"
+ ],
+ "analyst_mechanical_fix": "unnecessary_words: negation words (never/not/no/stop/...) and items absent from the title removed project-wide; each removal logged",
+ "analyst_not_rewritten": true,
+ "post_fix_recheck": {
+  "sample": 40,
+  "rows_with_any_issue": 14,
+  "issues_by_class": {
+   "CLASSIFICATION": 10,
+   "SUBJECTIVE": 11,
+   "MINOR_FACTUAL": 2
+  },
+  "issues_by_field": {
+   "Title_Archetype": 11,
+   "Warning_Frame": 6,
+   "List_Form": 1,
+   "Mistake_Frame": 2,
+   "Title_Archetypes_All": 1,
+   "Question_Form": 1,
+   "Authority_Cue": 1
+  },
+  "rows_clean_or_subjective_only": 30
+ },
+ "known_limitations": [
+  "Title_Archetype primary is first-match in a fixed priority list; Title_Archetypes_All is the authoritative multi-label field and should be used for pattern mining",
+  "Hope/Positive/Secret/Transformation/Authority_Frame regexes are coarse keyword frames (reviewers disagreed on ~3-7 of 150 rows each)",
+  "Age_Number_Present means senior-age (55+) markers only",
+  "named-person authority (e.g. \"Warren Buffett\") is not detected as Authority_Cue"
+ ],
+ "status": "PASS_WITH_CORRECTIONS"
+}

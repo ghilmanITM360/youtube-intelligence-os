@@ -1,0 +1,205 @@
+{
+ "reviewer": "QA-B002-15",
+ "batch": "B002-15",
+ "rows": [
+  {
+   "seq": 1,
+   "thumbnail_id": "THB-4d0c8d756833a37dfd8c6900dd7434bb90e4c9b57ddbc56343d6b7be7a10d69c",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree - the black and white lettering and the framed face stay clear on the 160 sheet.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "field": "word_count",
+     "original_value": 5,
+     "corrected_value": 6,
+     "reason": "The ampersand is a visible word-token ('and'); the row itself counts 5MIN/DAY as two tokens in seq 4, so '&' should be counted for consistency.",
+     "evidence": "Third line reads '& AGING:' in black capitals, so the tokens are PROTEIN, METABOLISM & AGING: NUTRITION TIPS = 6."
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "thumbnail_id": "THB-40e768ef9ba58c4102a4448003bca73077d0504bb6894f137a5b259162d5b9a9",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree - all four text lines are readable at 160x90; only the small profile figure is weak, as the row states.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "error_class": "CLASSIFICATION_ERROR",
+     "field": "title_relation",
+     "original_value": "DUPLICATES",
+     "corrected_value": "COMPLEMENTS",
+     "reason": "Protocol allows DUPLICATES only when nothing is added; the row's own typography and partnership say the thumbnail adds WEAK KNEES, KNEE PAIN GONE? and the shown wall-lift pose, and omits the title's 'over 70' and 'gentle exercise' wording.",
+     "evidence": "Thumbnail lines are WEAK KNEES / KNEE PAIN GONE? / 64% LESS PAIN / 5MIN/DAY versus the title 'One Gentle Exercise That Reduced Knee Pain by 64% in Adults Over 70 - In Under 5 Minutes'; a wall-lift pose is pictured at right."
+    }
+   ]
+  },
+  {
+   "seq": 9,
+   "thumbnail_id": "THB-e79f8e2ded05495ed0dde8359ca0ab08c4690f2e7812b174f56f29543502725d",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree - MISTAKE and the row of cat faces are clear at 160x90.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 10,
+   "thumbnail_id": "THB-368676b4580ad54314d1181fbae255330f12b7e82737666cf876a897475ee373",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree - NO WORDS? and both figures read clearly; the cat is small but visible at 160x90.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "error_class": "STYLE_ONLY",
+     "field": "art",
+     "original_value": "...and a mild gradient in the sky.",
+     "corrected_value": "...and a flat light-blue sky.",
+     "reason": "The sky shows no visible gradient; sampled pixels at different heights are essentially the same blue.",
+     "evidence": "Sky pixel samples at y=230 and y=400 are (118,210,251) and (114,206,253)."
+    }
+   ]
+  },
+  {
+   "seq": 11,
+   "thumbnail_id": "THB-8c00d8150957969443b7c17af46a9cd07592ed163ee081bad36e1e2dc4900255",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "disagree - only the DRIVE A BEATER headline survives at 160x90; the $8,000 and the parenthetical vanish, so PARTIAL fits the row's own weakness.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "error_class": "CLASSIFICATION_ERROR",
+     "field": "mobile_readability_160",
+     "original_value": "PASS",
+     "corrected_value": "PARTIAL",
+     "reason": "The row's weakness and bottleneck say the $8,000 price and the parenthetical are lost on a phone, so by the protocol the tag must be PARTIAL and the score must agree.",
+     "evidence": "On the 160 sheet DRIVE A BEATER reads, but (REAL WEALTH FLEX) and the $8,000 on the receipt are unreadable."
+    },
+    {
+     "error_class": "CLASSIFICATION_ERROR",
+     "field": "mobile_readability_score",
+     "original_value": 8,
+     "corrected_value": 6,
+     "reason": "Score must agree with the PARTIAL tag; 8/10 implies near-full survival. Changing it makes score_100 62.",
+     "evidence": "Only the 3-word headline survives at 160x90; the price (the row's own 'strongest concrete detail') and the parenthetical do not."
+    },
+    {
+     "error_class": "CLASSIFICATION_ERROR",
+     "field": "score_100",
+     "original_value": 64,
+     "corrected_value": 62,
+     "reason": "Follows the mobile_readability_score correction (8 to 6).",
+     "evidence": "10+8+10+8+6+7+6+5+2 = 62."
+    },
+    {
+     "error_class": "CLASSIFICATION_ERROR",
+     "field": "numbers_in_text",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "The row's own text field includes the visible numeral $8,000 on the receipt, and the validator rule is numbers_in_text = Y iff the text contains digits.",
+     "evidence": "Receipt held in the man's hand is marked $8,000."
+    },
+    {
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "field": "word_count",
+     "original_value": 6,
+     "corrected_value": 7,
+     "reason": "The visible numeral $8,000 is a countable token and is included in the text field; the count omitted it.",
+     "evidence": "DRIVE, A, BEATER, REAL, WEALTH, FLEX plus $8,000 on the receipt = 7."
+    },
+    {
+     "error_class": "STYLE_ONLY",
+     "field": "psychology",
+     "original_value": "calm, knowing look, while the held receipt acts as a proud display ... self-assured",
+     "corrected_value": "half-lidded eyes and a closed-mouth smile; he holds the receipt up at chest height",
+     "reason": "'knowing', 'proud' and 'self-assured' are inferred inner states; the protocol asks for visible expression only.",
+     "evidence": "Face shows half-lidded eyes and a small closed smile; arm holds the receipt forward."
+    }
+   ]
+  },
+  {
+   "seq": 12,
+   "thumbnail_id": "THB-af8248c4899315e5cfe3dd594f1023b13532e5c82271d449610e530a9ed54b98",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree - both text blocks and the mouth/clove close-ups survive at 160x90.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "field": "medical_label",
+     "original_value": "MISLEADING_RISK",
+     "corrected_value": "NEEDS_CONTEXT",
+     "reason": "The fear framing (IRREVERSIBLE) comes only from the title; the image itself shows a clove under the tongue and 5 MINUTES LATER... with no claim, and the protocol says contradiction or misleading effect needs content evidence. UNSUPPORTED_TREATMENT is also not shown in the image.",
+     "evidence": "Visible text is only '1 CLOVE UNDER YOUR TONGUE / 5 MINUTES LATER...'; no outcome, cure or fear word appears on the image."
+    }
+   ]
+  },
+  {
+   "seq": 14,
+   "thumbnail_id": "THB-193d41ca8dee45c38f14c00287b260f21271f4c58278a350184d8b26e1d0918c",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree - the red banner headline, mug and the two organ panels are legible at 160x90.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "field": "before_after",
+     "original_value": "Y",
+     "corrected_value": "N",
+     "reason": "The two organ drawings are a diseased-vs-healthy comparison with no sequence cue (no arrow, DAY labels or order marker), and the row's own action proposes adding DAY 1/DAY 7 labels; strict protocol reads this as a comparison, not a true before/after pair.",
+     "evidence": "Left drawing: yellow-spotted liver, green bowel; right drawing: smooth liver, pink bowel; nothing links them to the drink or marks time order."
+    }
+   ]
+  },
+  {
+   "seq": 15,
+   "thumbnail_id": "THB-5a2bb7c398e36537fee125720ae6f53385dc3a86b7c3476b534ebc66339b3876",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree - PROTECT YOUR FIRST $100K and the arrow are clear at 160x90.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "error_class": "STYLE_ONLY",
+     "field": "psychology",
+     "original_value": "serious, guarded expression ... reads as watching over it rather than celebrating",
+     "corrected_value": "half-lidded eyes and a flat, downturned mouth; he stands stiffly with arms at his sides on the cash stack",
+     "reason": "'guarded' and 'watching over it' are inferred states; describe the visible expression only.",
+     "evidence": "Eyes are half-lidded, mouth is a flat downturned line, arms hang at his sides."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 8,
+  "material": 0,
+  "minor_factual": 1,
+  "classification": 5,
+  "subjective": 3,
+  "style_only": 3
+ }
+}

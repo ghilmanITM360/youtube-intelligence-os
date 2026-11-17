@@ -1,0 +1,276 @@
+{
+ "reviewer": "PKQA-2",
+ "rows": [
+  {
+   "Package_ID": "PKG-NE8EaM0Ei9A",
+   "pk": "PK-03",
+   "seq": 9,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "WEALTH MOVES IN YOUR 40S with an arrow to two gold coin stacks; a scowling man lounges in an armchair with a laptop.",
+     "corrected_value": "WEALTH MOVES IN YOUR 40S, arrow to two gold coin stacks; scowling man lounging in armchair with laptop.",
+     "reason": "Exceeds the protocol word limit; trimmed with the same content. (23 words, limit 20)",
+     "evidence": "Image: headline, arrow, two coin stacks, scowling man in armchair with laptop."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-gfrt0ceCkxc",
+   "pk": "PK-03",
+   "seq": 17,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Slide with smiling doctor portrait and text on worry over an aging parent, what to check on a visit, how to talk.",
+     "corrected_value": "Slide with smiling doctor portrait; text on worry over an aging parent, what to check on visits, how to talk.",
+     "reason": "Exceeds the protocol word limit; trimmed with the same content. (22 words)",
+     "evidence": "Image: portrait left, seven text lines right."
+    },
+    {
+     "field": "strongest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Named MD portrait with calm explicit subtopics ('What to check next time you visit') adds concrete scope and credibility the title lacks.",
+     "corrected_value": "Named MD portrait and explicit subtopic 'What to check next time you visit' add concrete scope and credibility the title lacks.",
+     "reason": "Exceeds the protocol word limit; trimmed with the same content. (22 words)",
+     "evidence": "Slide text names Leslie Kernisan, MD and the visit subtopic."
+    },
+    {
+     "field": "weakest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Seven small text lines read as a title slide, illegible at 160 px, and the calm tone clashes with the title's SOS urgency.",
+     "corrected_value": "Seven small text lines read as a title slide, illegible at 160 px, and calm tone clashes with SOS urgency.",
+     "reason": "Exceeds the protocol word limit; trimmed with the same content. (23 words)",
+     "evidence": "Image is a low-resolution text slide."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-RBlS6iNpl50",
+   "pk": "PK-03",
+   "seq": 24,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "weakest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "Image shows a dragon alive and attacking while the title says dragons don't exist, so the premise is invisible; WHY? repeats the title.",
+     "corrected_value": "Dragon appears alive and attacking though the title says dragons don't exist, so the premise is invisible; WHY? repeats the title.",
+     "reason": "Exceeds the protocol word limit; trimmed with the same content. (23 words)",
+     "evidence": "Image: dragon breathing flame at stick figure, WHY? above."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-QLXEHq3xKgE",
+   "pk": "PK-04",
+   "seq": 11,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "weakest_element",
+     "error_class": "STYLE_ONLY",
+     "original_value": "The framing leans on an emphasised bust and a shock phrase, while the Biblical and Israel context lives only in the title.",
+     "corrected_value": "Framing leans on an emphasised bust and shock phrase, while Biblical and Israel context lives only in the title.",
+     "reason": "Exceeds the protocol word limit; trimmed with the same content. (22 words)",
+     "evidence": "Image: large bust, 'Born to Breed', no Israel/Biblical cue."
+    },
+    {
+     "field": "improvement",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Crop the figure to face and tiara, and put a short 'Ancient Israel' tag on the image so the setting is visible.",
+     "corrected_value": "Crop the figure to face and tiara and add a visible setting cue not in the title, such as a tent or desert-palm backdrop.",
+     "reason": "Suggested 'Ancient Israel' tag repeats words already in the title, so it adds no new package information; defensible but weak as a test edit.",
+     "evidence": "Title contains 'Biblical Concubine (In Ancient Israel)'; image has no setting cue."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-Mpo-bDnZzjI",
+   "pk": "PK-04",
+   "seq": 13,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "No text; a calm RHG-cap figure holds a green-chart phone while a sweating Gucci-bag shopper trails bills.",
+     "corrected_value": "No headline text; a calm RHG-cap figure holds a green-chart phone while a sweating Gucci-bag shopper trails bills.",
+     "reason": "'No text' is not literally true: RHG, GUCCI, RENTED. and neon signs are legible in the scene (the row itself cites RHG and Gucci); headline text is what is absent.",
+     "evidence": "Cap 'RHG', bags 'GUCCI', yard signs 'RENTED.', neon signs."
+    },
+    {
+     "field": "title_thumbnail_complementarity",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": 9,
+     "corrected_value": 6,
+     "reason": "9/15 treats the spender-vs-investor scene as closely matching 'stop chasing money'; the spender is overspending, not chasing, and the 'RENTED' signs muddy the wealth cue, so the visual carries a related but different message. Total would be 58 (3 lower), not a flag.",
+     "evidence": "Sweating man with Gucci bags and bills vs calm man with phone chart; no element shows money chasing anyone."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-dlnPr167zII",
+   "pk": "PK-04",
+   "seq": 15,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_says",
+     "error_class": "STYLE_ONLY",
+     "original_value": "'RETIRE BEFORE 50' in huge type beside a smiling cartoon man in falling banknotes next to a desk crossed out in red.",
+     "corrected_value": "'RETIRE BEFORE 50' in huge type beside a smiling cartoon man among falling banknotes and a red-crossed desk.",
+     "reason": "Exceeds the protocol word limit; trimmed with the same content. (22 words)",
+     "evidence": "Image: 'RETIRE BEFORE 50', man, falling bills, desk with red X."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-PWc0zfa2lWU",
+   "pk": "PK-04",
+   "seq": 19,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "medical_package_label",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "NEEDS_CONTEXT",
+     "corrected_value": "MISLEADING_RISK",
+     "reason": "Title audit already flagged this title MISLEADING_RISK (unnamed bodily 'warning', 'Almost Nobody Knows'); the thumbnail adds 'NEVER IGNORE THIS WARNING!' with a symptom face and still names no cause. NEEDS_CONTEXT is defensible but understates a fear claim with no stated cause.",
+     "evidence": "Thumbnail: 'DRY MOUTH? NEVER IGNORE THIS WARNING!' on black with red bar; title: 'YOUR BODY IS WARNING YOU'."
+    },
+    {
+     "field": "thumbnail_escalates_beyond_title",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "N",
+     "corrected_value": "Y",
+     "reason": "The row's own weakest_element says the picture 'adds urgency', and the thumbnail audit labels the relation ESCALATES (NEVER IGNORE command, red WARNING bar); N is defensible only because the title also says 'warning'.",
+     "evidence": "Command 'NEVER IGNORE THIS' and red WARNING! bar are louder than the title's statement."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-rdLRTaULefc",
+   "pk": "PK-04",
+   "seq": 21,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "medical_package_label",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "NEEDS_CONTEXT",
+     "corrected_value": "MISLEADING_RISK",
+     "reason": "Both component audits are MISLEADING_RISK (title: 'ONLY 6 Foods ... Diabetic Nerve Pain'; thumbnail: barbed-wire BEFORE to glowing AFTER foot implying a visible cure) and the row's own weakest_element says the picture implies a cure stronger than 'calm'. Combined package should not be downgraded to NEEDS_CONTEXT. Escalation TITLE_MODERATE_THUMBNAIL_EXTREME already fits.",
+     "evidence": "Image: barbed-wire foot BEFORE, clean glowing foot AFTER, doctor pointing, 'EAT THESE 6 FOODS TO CALM THE PAIN'; title says 'ONLY'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-kz1AQHltnbQ",
+   "pk": "PK-05",
+   "seq": 3,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_only_information",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Blood on the papers and cash, the vintage adding machine and keys being pressed.",
+     "corrected_value": "Red-splashed papers and cash, the vintage adding machine and keys being pressed.",
+     "reason": "Red splashes are presented as 'blood' (also in strongest/weakest and package_promise 'violence'); the image only shows red splatter, which the thumbnail audit itself calls 'red splashes'. Blood is a reasonable reading but is an inference, not an observed fact.",
+     "evidence": "Papers and bills carry red splashes; nothing identifies them as blood."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-jVy3qd70AqU",
+   "pk": "PK-05",
+   "seq": 7,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "Package_ID": "PKG-LOzvA9Q6yV8",
+   "pk": "PK-05",
+   "seq": 10,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "title_says",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Asks whether wild animals realize humans are trying to help them.",
+     "corrected_value": "Asks whether animals realize humans are helping them.",
+     "reason": "The title says 'Animals', not 'wild animals'; 'wild' is added.",
+     "evidence": "Title: 'Do Animals Know We’re Helping?'"
+    },
+    {
+     "field": "thumbnail_says",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "'DO THEY KNOW?' over a night forest where a stick figure pulls a splinter from an injured canine's paw.",
+     "corrected_value": "'DO THEY KNOW?' over a night forest where a stick figure holds a splintered stick against an injured canine's bloody paw.",
+     "reason": "'Pulls a splinter' asserts a helping action the image does not settle: the figure grips a broken wooden stick pressed against the wounded paw (the thumbnail audit says 'holds ... against the paw'); whether it is help or harm is the package's own open question.",
+     "evidence": "Image: kneeling stick figure, splintered stick touching red wound on paw, canine looking down."
+    },
+    {
+     "field": "improvement",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Swap 'DO THEY KNOW?' for a numeric or species-specific line, such as the animal's reaction, for added information.",
+     "corrected_value": "Replace 'DO THEY KNOW?' with a canine-specific line such as 'IT LET HIM?' to name the animal's reaction.",
+     "reason": "Offers two alternatives and a 'numeric' line that has no basis in this package, so it is not ONE concrete testable edit.",
+     "evidence": "Improvement text: 'a numeric or species-specific line, such as the animal's reaction'."
+    }
+   ]
+  },
+  {
+   "Package_ID": "PKG-73Fy0WR984k",
+   "pk": "PK-05",
+   "seq": 21,
+   "image_matches_thumbnail_description": true,
+   "score_total_plausible": true,
+   "verdict": "PASS",
+   "errors": [
+    {
+     "field": "thumbnail_adds_curiosity",
+     "error_class": "SUBJECTIVE_DISAGREEMENT",
+     "original_value": "Y",
+     "corrected_value": "N",
+     "reason": "Row says the image 'adds mood but little new question' and thumbnail_repeats_title=Y, yet marks thumbnail_adds_curiosity=Y; Y is defensible via the visible fire/shelter prompting 'how', but the row's own weakest_element points the other way.",
+     "evidence": "Thumbnail text 'RAIN FOR WEEKS?' near-copies title; image adds scene only."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 12,
+  "material": 0,
+  "minor_factual": 3,
+  "classification": 1,
+  "subjective": 6,
+  "style_only": 8
+ }
+}

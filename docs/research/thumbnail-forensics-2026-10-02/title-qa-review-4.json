@@ -1,0 +1,1236 @@
+[
+ {
+  "i": 1,
+  "Video_ID": "0LfJFTE88Sk",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 17,
+    "specificity": 8,
+    "curiosity": 14,
+    "promise_strength": 8,
+    "credibility": 13,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 71,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "MISTAKE",
+    "proposed": "QUESTION",
+    "reason": "Title is a plain why-question with no mistake or warning wording; the Mistake/Warning frames fire on 'never'."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Mistake_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "No mistake or warning is stated; Warning_Frame=1 is equally spurious."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "Never",
+    "proposed": "Eat Horse Meat? (none cuttable)",
+    "reason": "Removing 'Never' reverses the meaning (Why Do We Eat...), so it is not unnecessary; the absolute is better softened than cut."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "credibility_score",
+    "current": "8",
+    "proposed": "~11",
+    "reason": "Gap to blind total (57 vs 71) is marginally over threshold, driven by credibility; analyst reason (absolute 'never') is visible and consistent with its MEDIUM overpromise, so defensible."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 2,
+  "Video_ID": "0oHyFO1HKUw",
+  "blind": {
+   "archetype": "STOP_DOING",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "Y",
+   "scores": {
+    "clarity": 12,
+    "specificity": 9,
+    "curiosity": 15,
+    "promise_strength": 9,
+    "credibility": 8,
+    "audience_fit": 7,
+    "concision": 4
+   },
+   "total": 64,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "mechanism_reliance",
+    "current": "URGENCY;CURIOSITY;AUTHORITY",
+    "proposed": "URGENCY;CURIOSITY;FEAR",
+    "reason": "No authority cue exists in the title text; the warning is a fear/contrarian mechanism."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "orientation",
+    "current": "SEARCH",
+    "proposed": "BROWSE",
+    "reason": "STOP...Use THIS Instead withholds the answer and is a browse hook, not a search-style query."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Name it: 'Turmeric With Ginger Fat Instead of Black Pepper: Better Absorption?'",
+    "proposed": "Turmeric Without Black Pepper? What To Pair It With Instead",
+    "reason": "'Ginger Fat' is not a real ingredient and the edit asserts an unsupported absorption claim; not a valid concrete hypothesis."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Fear_Frame",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'STOP Adding...' is a warning/avoid-harm framing; Warning_Frame=1 already, Fear_Frame inconsistent (arguable)."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 3,
+  "Video_ID": "4OO-DQjN_-g",
+  "blind": {
+   "archetype": "POV",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 11,
+    "specificity": 10,
+    "curiosity": 13,
+    "promise_strength": 9,
+    "credibility": 7,
+    "audience_fit": 5,
+    "concision": 2
+   },
+   "total": 57,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Authority_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "No authority cue; Authority_Cue is NONE in the same row."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "SECRET",
+    "proposed": "POV",
+    "reason": "Title is a second-person POV ('Your life as a Silent Millionaire'); 'Nobody knows' is secondary."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "560 Million Dollars;Nobody Knows.Your",
+    "proposed": "Nobody Knows.Your",
+    "reason": "'560 Million Dollars' is the core hook and specificity, not cuttable; only the punctuation glitch is a defect."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 4,
+  "Video_ID": "95A2UeaXs3k",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 13,
+    "specificity": 9,
+    "curiosity": 14,
+    "promise_strength": 8,
+    "credibility": 8,
+    "audience_fit": 9,
+    "concision": 3
+   },
+   "total": 64,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Fear_Frame",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'Whether You Like It Or Not' signals inevitability/dread; the analyst row itself lists FEAR."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "overpromise_risk",
+    "current": "LOW",
+    "proposed": "MEDIUM",
+    "reason": "Own exact_promise says things 'happen to everyone after 80'; 'whether you like it or not' is an absolute inevitability claim with an empty note."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "medical_title_flag",
+    "current": "UNRESOLVED",
+    "proposed": "NEEDS_CONTEXT",
+    "reason": "Age-related health content with unstated items; NEEDS_CONTEXT fits slightly better (arguable)."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 5,
+  "Video_ID": "ZqyV6kzdsO8",
+  "blind": {
+   "archetype": "HOW_TO",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 10,
+    "specificity": 5,
+    "curiosity": 8,
+    "promise_strength": 5,
+    "credibility": 10,
+    "audience_fit": 4,
+    "concision": 3
+   },
+   "total": 45,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Question_Form",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'How To have Healthy Coconuts Explained By Ape' is a statement title with no question."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Claim_Type",
+    "current": "REVERSAL",
+    "proposed": "(blank)",
+    "reason": "No reversal/cure language in the title."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "exact_promise",
+    "current": "Healthy coconuts innuendo",
+    "proposed": "Shows how to have healthy coconuts, explained by an ape",
+    "reason": "States a speculative innuendo reading as the promise; the literal text promises coconut how-to. core_topic and intended_viewer ('Crude-humor viewers') are likewise not visible from the title."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "tells_too_much",
+    "current": "Y",
+    "proposed": "N",
+    "reason": "The title reveals almost nothing about the method; 'tells too much' is unsupported."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Healthy Coconuts: Picking, Opening and Eating Fresh Coconuts with an Ape",
+    "proposed": "(coherent with chosen reading)",
+    "reason": "Rewrite resolves to the literal fruit reading, contradicting the analyst's own innuendo diagnosis; hypothesis inconsistent with its row."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "medical_title_flag",
+    "current": "UNRESOLVED",
+    "proposed": "NOT_HEALTH",
+    "reason": "Face-value title is food/novelty, not a medical claim; UNRESOLVED defensible only under the innuendo reading."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 6,
+  "Video_ID": "6V_H293FSko",
+  "blind": {
+   "archetype": "AFTER_60",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 8,
+    "specificity": 4,
+    "curiosity": 15,
+    "promise_strength": 7,
+    "credibility": 12,
+    "audience_fit": 8,
+    "concision": 4
+   },
+   "total": 58,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "tells_too_much",
+    "current": "Y",
+    "proposed": "N",
+    "reason": "Title withholds the habit entirely; both too_much=Y and too_little=Y is contradictory."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "Worth",
+    "proposed": "(none)",
+    "reason": "Removing 'Worth' breaks the sentence; it is not filler."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Name the habit: 'The 1 Water Habit Seniors Should Change After 60'",
+    "proposed": "The Water Habit Seniors Should Stop After 60: Drinking X",
+    "reason": "Edit says 'Name the habit' but names none and hardens 'rethinking' into 'should change'."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "curiosity_score",
+    "current": "10",
+    "proposed": "14",
+    "reason": "Gap to blind is within tolerance; vague-habit tease plus age gate is a stronger open loop."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 7,
+  "Video_ID": "xT6GWE-5_sU",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "SCIENCE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 17,
+    "specificity": 9,
+    "curiosity": 14,
+    "promise_strength": 8,
+    "credibility": 12,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 71,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 8,
+  "Video_ID": "A7f-8sqfe8A",
+  "blind": {
+   "archetype": "DO_THIS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 10,
+    "specificity": 10,
+    "curiosity": 15,
+    "promise_strength": 10,
+    "credibility": 3,
+    "audience_fit": 6,
+    "concision": 2
+   },
+   "total": 56,
+   "overpromise_risk": "HIGH",
+   "medical_flag": "MISLEADING_RISK",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Fear_Frame",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'IRREVERSIBLE Changes' is fear framing; analyst row lists FEAR."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "Your Body Goes Through;Every Morning",
+    "proposed": "Your Body Goes Through",
+    "reason": "'Every Morning' is part of the stated instruction (the habit), not filler."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 9,
+  "Video_ID": "Z5ft4EhlrLw",
+  "blind": {
+   "archetype": "SIGNS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "Y",
+   "scores": {
+    "clarity": 17,
+    "specificity": 13,
+    "curiosity": 13,
+    "promise_strength": 10,
+    "credibility": 10,
+    "audience_fit": 9,
+    "concision": 3
+   },
+   "total": 75,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Urgency_Frame",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'(Check Yours Tonight)' is an explicit urgency CTA; analyst row lists URGENCY."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "medical_title_flag",
+    "current": "MISLEADING_RISK",
+    "proposed": "NEEDS_CONTEXT",
+    "reason": "Symptom list with a doctor-less CTA warrants a flag, but 'misleading' overstates it given MEDIUM overpromise and no cure claim (defensible either way)."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 10,
+  "Video_ID": "XP-VPkD3N64",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 8,
+    "curiosity": 8,
+    "promise_strength": 9,
+    "credibility": 10,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 61,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "Rules for",
+    "proposed": "(none; maybe 'Rules')",
+    "reason": "'19 Financial Freedom' would be ungrammatical; 'Rules for' carries the list-noun and is not filler."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 11,
+  "Video_ID": "GczRApVP5jo",
+  "blind": {
+   "archetype": "POV",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 8,
+    "curiosity": 15,
+    "promise_strength": 8,
+    "credibility": 13,
+    "audience_fit": 7,
+    "concision": 5
+   },
+   "total": 71,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "QUESTION",
+    "proposed": "POV",
+    "reason": "'Could You Survive...' is a second-person hypothetical/POV scenario; POV is an allowed archetype."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 12,
+  "Video_ID": "3WTQUAME6Nc",
+  "blind": {
+   "archetype": "DO_THIS",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "Y",
+   "scores": {
+    "clarity": 15,
+    "specificity": 9,
+    "curiosity": 10,
+    "promise_strength": 13,
+    "credibility": 2,
+    "audience_fit": 8,
+    "concision": 2
+   },
+   "total": 59,
+   "overpromise_risk": "HIGH",
+   "medical_flag": "MISLEADING_RISK",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Hope_Frame",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'No More Constipation... Gone by Tomorrow' is a pure hope/relief promise."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "clarity_score",
+    "current": "9",
+    "proposed": "14",
+    "reason": "Gap in total (46 vs 59) exceeds threshold; problem, timing and outcome are all stated in one read and only the drink is withheld (a specificity issue, not clarity)."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 13,
+  "Video_ID": "_gWYRVbS8LM",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 17,
+    "specificity": 12,
+    "curiosity": 14,
+    "promise_strength": 7,
+    "credibility": 13,
+    "audience_fit": 6,
+    "concision": 3
+   },
+   "total": 72,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "DO_THIS",
+    "proposed": "QUESTION",
+    "reason": "'Why Do Chickens Lay Eggs...' is an explanatory question with no instruction."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Shorten: How Breeding Made Chickens Lay Daily While Wild Birds Lay Once a Season",
+    "proposed": "Why Chickens Lay Daily but Wild Birds Only Once a Year",
+    "reason": "Edit labelled 'Shorten' is longer (13 vs 11 words) and asserts a breeding mechanism not in the title."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 14,
+  "Video_ID": "8qMOscQgJw0",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 16,
+    "specificity": 9,
+    "curiosity": 13,
+    "promise_strength": 7,
+    "credibility": 12,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 68,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "MISTAKE",
+    "proposed": "QUESTION",
+    "reason": "Title is a plain why-question with no mistake or warning wording; the Mistake/Warning frames fire on 'never'."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Mistake_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "No mistake or warning is stated; Warning_Frame=1 also spurious."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "Never;?",
+    "proposed": "?",
+    "reason": "'Never' carries the whole hook; cutting it reverses the meaning. (Only the stray ' ?' spacing is a defect.)"
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "credibility_score",
+    "current": "6",
+    "proposed": "8",
+    "reason": "Total gap vs blind (49 vs 68) exceeds threshold mostly via credibility/concision; analyst reason (absolute 'Never', stray ' ?') is visible, so accepted as defensible."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 15,
+  "Video_ID": "yNLhUnCmWNA",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 6,
+    "curiosity": 12,
+    "promise_strength": 6,
+    "credibility": 12,
+    "audience_fit": 5,
+    "concision": 5
+   },
+   "total": 61,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "MISTAKE",
+    "proposed": "QUESTION",
+    "reason": "Title is a plain why-question with no mistake or warning wording; the Mistake/Warning frames fire on 'never'."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Mistake_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "No mistake or warning is stated; Warning_Frame=1 also spurious."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Name one: Why Do We Eat Chicken but Skip Monitor Lizards and Iguanas?",
+    "proposed": "Why Do We Eat Chicken but Skip Monitor Lizards?",
+    "reason": "'Name one' but it names two and repeats the absolute claim flagged in overpromise_note (iguana is widely eaten)."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "specificity_score",
+    "current": "3",
+    "proposed": "6",
+    "reason": "Total gap (42 vs 61) is large, but 'Other' with no antecedent is a visible defect, so analyst low is defensible."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 16,
+  "Video_ID": "Ut6gsmgRA8k",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 9,
+    "curiosity": 12,
+    "promise_strength": 10,
+    "credibility": 9,
+    "audience_fit": 6,
+    "concision": 3
+   },
+   "total": 63,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 17,
+  "Video_ID": "cKWDJZU1Irs",
+  "blind": {
+   "archetype": "MISTAKE",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 8,
+    "curiosity": 14,
+    "promise_strength": 8,
+    "credibility": 10,
+    "audience_fit": 8,
+    "concision": 5
+   },
+   "total": 68,
+   "overpromise_risk": "LOW",
+   "medical_flag": "MEDICAL_PACKAGING_SAFE",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Urgency_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'You're Doing It Wrong' is a mistake claim; no urgency/time pressure in the title."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 18,
+  "Video_ID": "ZB4NAuLLCHg",
+  "blind": {
+   "archetype": "QUESTION",
+   "number_present": 0,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 7,
+    "curiosity": 13,
+    "promise_strength": 7,
+    "credibility": 12,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 65,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "MIXED"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "MISTAKE",
+    "proposed": "QUESTION",
+    "reason": "Title is a plain why-question with no mistake or warning wording; the Mistake/Warning frames fire on 'never'."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Mistake_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "No mistake or warning is stated; Warning_Frame=1 also spurious."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "Never",
+    "proposed": "(none)",
+    "reason": "Removing 'Never' reverses the meaning (Why Do We Eat...), so it is not unnecessary; the absolute is better softened than cut."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 19,
+  "Video_ID": "Hlk1ZZLbI6s",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 10,
+    "curiosity": 15,
+    "promise_strength": 8,
+    "credibility": 11,
+    "audience_fit": 7,
+    "concision": 3
+   },
+   "total": 68,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "List_Form",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'The 3 Net Worth Levels...' is a counted list of levels; same pattern as other List_Form=1 rows."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "CASE_STUDY",
+    "proposed": "LIST",
+    "reason": "No case study or named subject exists; it is a numbered levels list."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Problem_Solution_Frame",
+    "current": "1",
+    "proposed": "0",
+    "reason": "No problem or solution is stated."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 20,
+  "Video_ID": "H_egwltjGIc",
+  "blind": {
+   "archetype": "AFTER_60",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "Y",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 10,
+    "specificity": 8,
+    "curiosity": 16,
+    "promise_strength": 7,
+    "credibility": 12,
+    "audience_fit": 9,
+    "concision": 4
+   },
+   "total": 66,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NEEDS_CONTEXT",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Fear_Frame",
+    "current": "0",
+    "proposed": "1",
+    "reason": "'May Strain Your Heart' is explicit health-fear framing; analyst row lists FEAR."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "ANALYST",
+    "field": "orientation",
+    "current": "SEARCH",
+    "proposed": "BROWSE",
+    "reason": "Unnamed habit + threat tease is a browse/curiosity hook, not a search-intent query."
+   },
+   {
+    "class": "STYLE_ONLY",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "The",
+    "proposed": "(none)",
+    "reason": "Cutting 'The' is a trivial nit, not a meaningful concision gain."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Name the habit: 'Standing Up Too Fast in the Morning After 60 May Strain Your Heart'",
+    "proposed": "Name the habit: '[Specific habit] Every Morning After 60 May Strain Your Heart'",
+    "reason": "Invents a specific, unverified medical claim and drops the 30-second detail; use a placeholder or content-verified habit."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 21,
+  "Video_ID": "3FQ_fo-r89w",
+  "blind": {
+   "archetype": "LIST",
+   "number_present": 1,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 15,
+    "specificity": 10,
+    "curiosity": 10,
+    "promise_strength": 10,
+    "credibility": 8,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 64,
+   "overpromise_risk": "MEDIUM",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [],
+  "verdict": "CLEAN"
+ },
+ {
+  "i": 22,
+  "Video_ID": "hJAWSLr0bz4",
+  "blind": {
+   "archetype": "DO_THIS",
+   "number_present": 1,
+   "question_form": 1,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "Y",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 12,
+    "curiosity": 12,
+    "promise_strength": 12,
+    "credibility": 2,
+    "audience_fit": 8,
+    "concision": 2
+   },
+   "total": 62,
+   "overpromise_risk": "HIGH",
+   "medical_flag": "MISLEADING_RISK",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Health_Claim_Type",
+    "current": "(blank)",
+    "proposed": "EXAGGERATED_BENEFIT",
+    "reason": "Health_Topic=1 but no claim type recorded despite a '1,000x' blood-flow claim; Hope_Frame also 0."
+   },
+   {
+    "class": "STYLE_ONLY",
+    "layer": "ANALYST",
+    "field": "unanswered_question",
+    "current": "What is the tablespoon, and 1,000x is real?",
+    "proposed": "What is the tablespoon, and is the 1,000x real?",
+    "reason": "Grammar slip only."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 23,
+  "Video_ID": "98QvBAAytmg",
+  "blind": {
+   "archetype": "POV",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 14,
+    "specificity": 8,
+    "curiosity": 15,
+    "promise_strength": 6,
+    "credibility": 12,
+    "audience_fit": 6,
+    "concision": 5
+   },
+   "total": 66,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Question_Form",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'Why it sucks to be born as brachiosaurus' is a declarative statement with no question mark or auxiliary."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "QUESTION",
+    "proposed": "POV",
+    "reason": "'Being born as a brachiosaurus' is a life-as-X POV scenario."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "unnecessary_words",
+    "current": "Why;as",
+    "proposed": "(none)",
+    "reason": "'Why' is the hook and 'as' is grammatical; neither is filler."
+   },
+   {
+    "class": "SUBJECTIVE",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Brachiosaurus Life Explained: The Daily Struggle of a Giant Plant-Eater",
+    "proposed": "(keep hook) Why It Sucks to Be a Brachiosaurus Calf: 5 Daily Dangers",
+    "reason": "Valid and different, but drops the strong 'sucks' hook, so likely a weaker test; defensible as a hypothesis."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 24,
+  "Video_ID": "KgF2ZHsBE8w",
+  "blind": {
+   "archetype": "POV",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 13,
+    "specificity": 7,
+    "curiosity": 14,
+    "promise_strength": 6,
+    "credibility": 12,
+    "audience_fit": 5,
+    "concision": 5
+   },
+   "total": 62,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "BROWSE"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "PROGRAMMATIC",
+    "field": "Question_Form",
+    "current": "1",
+    "proposed": "0",
+    "reason": "'Why It Sucked to Be a Shogun' is a statement-style title, not a question."
+   },
+   {
+    "class": "CLASSIFICATION",
+    "layer": "PROGRAMMATIC",
+    "field": "Title_Archetype",
+    "current": "QUESTION",
+    "proposed": "POV",
+    "reason": "Life-as-a-shogun POV framing."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "mechanism_reliance",
+    "current": "CURIOSITY;NOVELTY;AUTHORITY",
+    "proposed": "CURIOSITY;NOVELTY",
+    "reason": "No authority cue in the title text."
+   },
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "improvement",
+    "current": "Add paradox: 'Why It Sucked to Be Japan's Shogun, the Most Powerful Man Alive'",
+    "proposed": "Why It Sucked to Be Japan's Shogun Despite Holding All the Power",
+    "reason": "'Most Powerful Man Alive' is a factual overreach (emperor/regents) the analyst would flag as overpromise."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ },
+ {
+  "i": 25,
+  "Video_ID": "W9hRteFVYCc",
+  "blind": {
+   "archetype": "EXPLANATION",
+   "number_present": 0,
+   "question_form": 0,
+   "authority_cue": "NONE",
+   "fear": "N",
+   "hope": "N",
+   "urgency": "N",
+   "scores": {
+    "clarity": 9,
+    "specificity": 5,
+    "curiosity": 8,
+    "promise_strength": 4,
+    "credibility": 12,
+    "audience_fit": 3,
+    "concision": 5
+   },
+   "total": 46,
+   "overpromise_risk": "LOW",
+   "medical_flag": "NOT_HEALTH",
+   "orientation": "SEARCH"
+  },
+  "issues": [
+   {
+    "class": "MINOR_FACTUAL",
+    "layer": "ANALYST",
+    "field": "tells_too_much",
+    "current": "Y",
+    "proposed": "N",
+    "reason": "Three-word concept title reveals nothing; 'tells too much' is wrong while too_little=Y is right."
+   }
+  ],
+  "verdict": "CORRECTIONS"
+ }
+]

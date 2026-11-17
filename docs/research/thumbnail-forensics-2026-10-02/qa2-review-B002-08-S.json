@@ -1,0 +1,115 @@
+{
+ "reviewer": "QA-B002-08",
+ "batch": "B002-08",
+ "rows": [
+  {
+   "seq": 6,
+   "thumbnail_id": "THB-45c88442d5bb345db6d8e08417d60784c28e7e8a5d05b7fd0ff8c8fdaf316775",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: NO EXERCISE? headline and the large caveman silhouette are clear on sheet_160; only the far stick figure and hide are tiny, as the audit says.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 7,
+   "thumbnail_id": "THB-e48068e5a52772bf89d788404a1021a22ac8cf417edfa714989a4ac854eadcb0",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: CRUSH / $10,000 / DEBT, the wallet and the arrow all read on sheet_160; only the calculator +1000 screen is lost, which is secondary. PASS is defensible.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "colors",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "Black on white with two semantic glows: green behind the calculator and red behind the wallet. The man's navy-white-blue clothing stays neutral so the glows pop as the only accents.",
+     "corrected_value": "Black on white with two semantic glows: green behind the calculator and red behind the wallet. The man's white shirt and mid-blue jeans stay neutral so the glows pop as the only accents.",
+     "reason": "No navy is visible; the clothing is a white shirt and medium-blue jeans (with black shoes and a brown belt buckle).",
+     "evidence": "07.jpg native: shirt is white, jeans are mid-blue, no navy garment."
+    }
+   ]
+  },
+  {
+   "seq": 16,
+   "thumbnail_id": "THB-251b213aa00af5baa849bf764517ef5e59ba0dbe2859a774255a6c59f110a341",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: banner, DO THIS, red ankle and the doctor survive on sheet_160; the circular exercise inset is a blur of dark shapes, so PARTIAL is correct.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "mechanism",
+     "error_class": "MINOR_FACTUAL_ERROR",
+     "original_value": "A symptom question in a red banner plus a swollen-looking, glowing ankle sets a problem, while the pointing doctor and the exercise inset promise a quick fix to do.",
+     "corrected_value": "A symptom question in a red banner plus a vein-covered, glowing red ankle sets a problem, while the pointing doctor and the exercise inset promise a quick fix to do.",
+     "reason": "The ankle is shown with branching vein lines and a red glow; no swelling is visible, and the audit's own scene field does not mention swelling.",
+     "evidence": "16.jpg native: ankle outline is normal-width with dense purple-blue vein texture and a red patch."
+    }
+   ]
+  },
+  {
+   "seq": 17,
+   "thumbnail_id": "THB-fa17a8d7bd11d9a831032a58075181ce9359faad79aea90a5064888633b091c1",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: all five text lines are legible on sheet_160 and the seated man reads as a distressed figure on a toilet.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 18,
+   "thumbnail_id": "THB-5ce4a355e28e829780da7b2a6fff46d11f82acdf4184b63f46ea54e2fd4d76b1",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: on sheet_160 the pillarboxed column is narrow; HEALTHY?/SPIKE? stay legible, the INSTANT OATS bag and bowl detail are tiny, so PARTIAL fits.",
+   "templated_prose": false,
+   "verdict": "PASS",
+   "errors": []
+  },
+  {
+   "seq": 24,
+   "thumbnail_id": "THB-ac73f3a69d0f264af59e586506279b85c02166cc1b76bd4287583a4c853197c6",
+   "wrong_image_mapping": false,
+   "visible_text_correct": true,
+   "score_arithmetic_correct": true,
+   "mobile_160_check": "agree: on sheet_160 the central black-shirt man is clear but the clipboard, phone figure and the three onlookers' expressions blur into a crowded garage; PARTIAL is right.",
+   "templated_prose": false,
+   "verdict": "PASS_WITH_CORRECTIONS",
+   "errors": [
+    {
+     "field": "title_relation",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "UNRELATED",
+     "corrected_value": "COMPLEMENTS",
+     "reason": "The row's own partnership prose says the connection to the title is 'implied', and it scores title_partnership 7/15; UNRELATED implies no link at all. A calm man facing a $2,000 estimate and a $19,988.00 phone figure plausibly depicts a savings-cushion consequence, so the image adds an implied scenario rather than being unrelated.",
+     "evidence": "24.jpg native: clipboard shows Repair Estimate $2,000 and phone shows $19,988.00 held by the calm central figure; partnership field says 'implied only'."
+    },
+    {
+     "field": "face_scale",
+     "error_class": "CLASSIFICATION_ERROR",
+     "original_value": "LARGE",
+     "corrected_value": "MEDIUM",
+     "reason": "The central chibi face spans roughly 200 px of 1280 px width (about 16 percent) in a busy five-person scene; it is the largest face but not a close-up. Seq 7, with a face about 300 px wide, is tagged MEDIUM.",
+     "evidence": "24.jpg native: head roughly x 520-740, y 90-290; sheet_160 row 24 shows a moderate head within a wide scene."
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "rows_reviewed": 6,
+  "material": 0,
+  "minor_factual": 2,
+  "classification": 2,
+  "subjective": 0,
+  "style_only": 0
+ }
+}
