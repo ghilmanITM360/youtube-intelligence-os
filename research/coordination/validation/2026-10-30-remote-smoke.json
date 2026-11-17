@@ -1,0 +1,81 @@
+{
+  "status": "REMOTELY_VERIFIED",
+  "started_utc": "2026-10-30T12:48:19.106206+00:00",
+  "namespace": "yios-test/34df1220de934163b910f7d4c737bcf1/claims",
+  "real_host": "Users-MacBook-Pro.local",
+  "real_two_mac_testing": "NOT_TESTED",
+  "simulated_clients": true,
+  "preserved_workspace": "/var/folders/7v/zy_dlgrd1cj3rc1sqkc532g40000gn/T/yios-remote-smoke-3tzcj92c",
+  "canonical_mutations": "NONE",
+  "safety": {
+    "checked_utc": "2026-10-30T12:48:19.105556+00:00",
+    "five_hour": 71.0,
+    "weekly": 27.0,
+    "context_reserve": "AVAILABLE_UNMETERED",
+    "paid_credits": 0,
+    "source": "OPERATOR_CURRENT_METER_READING; NO_CREDITS_REDEEMED"
+  },
+  "checks": [
+    {
+      "check": "LIVE_SAME_VIDEO_DOUBLE_WRITER_EXCLUDED",
+      "result": "PASS",
+      "winner": "simulated-client-b",
+      "winning_sha": "eab269500efede978b92de07e93d42d269d53455",
+      "loser": {
+        "rejected": "git push failed: error: failed to push some refs to 'https://github.com/ghilmanITM360/youtube-intelligence-os.git'"
+      }
+    },
+    {
+      "check": "LIVE_DIFFERENT_VIDEO_INDEPENDENT_CLAIM",
+      "result": "PASS",
+      "remote_sha": "ab7461c54a1af5f493dc24aa3822bd9d97d9a4be"
+    },
+    {
+      "check": "LIVE_WRONG_OWNER_RELEASE_REJECTED",
+      "result": "PASS"
+    },
+    {
+      "check": "LIVE_PARTIAL_CHECKPOINT_PUBLISHED",
+      "result": "PASS",
+      "checkpoint": "43aff9d34e3569c7a2a081871fccd6ed68990a6d"
+    },
+    {
+      "check": "LIVE_INDEPENDENT_CONTEXT_PARTIAL_RESTORE_SHA256",
+      "result": "PASS",
+      "checkpoint": "43aff9d34e3569c7a2a081871fccd6ed68990a6d"
+    },
+    {
+      "check": "LIVE_EXPLICIT_RELEASE_AND_REACQUISITION",
+      "result": "PASS",
+      "acquired_sha": "f623ccd0bb1e4809a2dec203d00a40563bd9084b"
+    },
+    {
+      "check": "LIVE_FINAL_REFS_RELEASED_AND_PROTECTED_HEADS_UNCHANGED",
+      "result": "PASS"
+    }
+  ],
+  "refs": {
+    "refs/heads/yios-test/34df1220de934163b910f7d4c737bcf1/checkpoint": "43aff9d34e3569c7a2a081871fccd6ed68990a6d",
+    "refs/heads/yios-test/34df1220de934163b910f7d4c737bcf1/claims/finance/TEST0000001": "5ef9694a0d9f4084ffcd52985ee2da1c70821a8a",
+    "refs/heads/yios-test/34df1220de934163b910f7d4c737bcf1/claims/finance/TEST0000002": "abb9a7b4f33b24aa396f8e7a1859deee6ebb0a8d"
+  },
+  "protected_heads_before": {
+    "main": "08e719264e31ecd82de24f8eeb8f065c08359fe5",
+    "research/finance-economics-intelligence": "223f44981ee174988574e86d5e23ae83ee60ee5d",
+    "research/casually-finance-editing-forensics": "090f84b3292a3b6c6e94653a6ef1867726e4ebdd",
+    "codex/casually-finance-forensic-research": "043b85bf58f84fb6a1c8981d54e3b233faa6a928",
+    "codex/what-if-archive-main-integration": "f345abdef43d54ebde98251cfa4fafb6403c52be",
+    "codex/casually-finance-knowledge-navigation": "f4dc5d14d6ad03c1edd92e48fac779e7a8555fc5"
+  },
+  "protected_heads_after": {
+    "main": "08e719264e31ecd82de24f8eeb8f065c08359fe5",
+    "research/finance-economics-intelligence": "223f44981ee174988574e86d5e23ae83ee60ee5d",
+    "research/casually-finance-editing-forensics": "090f84b3292a3b6c6e94653a6ef1867726e4ebdd",
+    "codex/casually-finance-forensic-research": "043b85bf58f84fb6a1c8981d54e3b233faa6a928",
+    "codex/what-if-archive-main-integration": "f345abdef43d54ebde98251cfa4fafb6403c52be",
+    "codex/casually-finance-knowledge-navigation": "f4dc5d14d6ad03c1edd92e48fac779e7a8555fc5"
+  },
+  "finished_utc": "2026-10-30T12:50:23.960697+00:00",
+  "active_test_writers": 0,
+  "production_acceptance": "NOT_CLAIMED"
+}

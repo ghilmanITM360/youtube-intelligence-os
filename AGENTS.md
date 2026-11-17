@@ -108,3 +108,10 @@ The YouTube reference corpus is stored in `data/knowledge/reference_knowledge.db
 - Finance audits: `validate_audit_966.py` runs `reference_comparison.check_coverage()`; every accepted NICK_281+ batch needs a validating reference comparison.
 - These validators are STRUCTURAL ONLY. Only a reviewer's reading can set a record to semantically reviewed; never infer CTR, retention or causation from title/thumbnail appearance.
 - Historical reanalysis records live in `research/finance-economics-intelligence/reanalysis/` and never edit original audits.
+
+## Explicitly requested two-Mac coordination
+
+- Read `docs/YIOS_TWO_MAC_WORKFLOW.md` and `research/coordination/CHANNELS.md` before task writes or handoffs.
+- The new CLI does not itself transfer legacy authority. Finance's published Machine B sole-writer record and protected Video003 checkpoint remain enforceable until their explicit release and real two-Mac acceptance gates pass.
+- One remote claim per video; a separate exclusive coordinator publishes canonical updates. Do not delete claim refs, bypass a competing writer, infer release from idleness, or overwrite canonical data from a task branch.
+- Small partial checkpoints use separate task branches and exact remote SHA verification. UNSYNCED work remains local until verified. Original media recovery is a separate hash-checked gate.
