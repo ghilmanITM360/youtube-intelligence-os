@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'scripts'))
-from check_slop_risk import evaluate, split_sources  # noqa: E402
+from check_slop_risk import ROOT, evaluate, front_matter, is_script, project_of, split_sources  # noqa: E402
 
 ORIGINAL = ("We measured our own grip strength every morning for thirty days and logged each reading in a notebook. "
             "The numbers drifted upward after the second week once we added a simple towel squeeze before breakfast. ") * 6
@@ -40,3 +40,20 @@ def test_sources_section_excluded_from_body():
     assert split_sources("text\n## Sources\n\n")[1] is False
     assert split_sources("text\nSources: FACT_CHECK.md\n")[1] is True
     assert split_sources("Sources and claim IDs are elsewhere.")[1] is False
+
+
+def test_reuse_of_our_own_other_project_fails():
+    own = [('productions/other/FINAL_SCRIPT.md', 'Our 30-day grip test', ORIGINAL + SRC)]
+    f = evaluate(ORIGINAL + SRC, 'Our 30-day grip test', [], [], [], own)
+    assert {'R2', 'R4'} <= rules(f, 'FAIL'), f
+
+
+def test_front_matter_and_script_paths():
+    meta, body = front_matter("---\ntitle: A: B\nchannel: CH-000001\n---\nHello\n")
+    assert meta == {'title': 'A: B', 'channel': 'CH-000001'} and body == 'Hello\n'
+    assert front_matter("no header")[0] == {}
+    assert is_script(ROOT / 'productions/fs-01/experiment/FINAL_SCRIPT.md')
+    assert project_of(ROOT / 'productions/fs-01/experiment/FINAL_SCRIPT.md') == 'fs-01'
+    assert not is_script(ROOT / 'productions/fs-01/FACT_CHECK.md')
+    assert not is_script(ROOT / 'research/x/SCRIPT_INTELLIGENCE.md')
+    assert not is_script(ROOT / 'productions/fs-01/FINAL_SCRIPT.md.slop-risk.json')

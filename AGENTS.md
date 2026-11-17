@@ -48,7 +48,7 @@ images: <thumbnail/frames file or dir, relative to repo root>
 The gate runs automatically:
 
 - **Claude Code:** a `.claude/settings.json` PostToolUse hook runs it each time a production script is written or edited. FAIL blocks; fix it before delivering.
-- **Git pre-commit:** `.githooks/pre-commit` checks staged production scripts. Install it once per clone with `ln -sf ../../.githooks/pre-commit .git/hooks/pre-commit`. Do not use `core.hooksPath`, because it would disable the Git LFS hooks.
+- **Git pre-commit:** `.githooks/pre-commit` checks staged production scripts. Install it once per clone with `sh .githooks/install.sh`. The installer adds a small shim to `.git/hooks`; it does not use `core.hooksPath`, which would disable the Git LFS hooks.
 - **CI:** `.github/workflows/validate.yml` checks every changed production script on PRs and on pushes to main.
 - **Pipeline:** `production_pipeline.py validate` runs it; `ready_for_capcut` stays false on FAIL.
 - **Manual run:** `uv run python scripts/check_slop_risk.py <script> [--title ... --channel ... --images ...]`.

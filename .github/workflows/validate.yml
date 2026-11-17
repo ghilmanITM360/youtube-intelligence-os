@@ -53,6 +53,11 @@ jobs:
           python -m scripts.validate_youtube_channel_registry
       - name: Run distributable suite
         run: python -m pytest -q
+      - name: AI-slop risk gate on changed production scripts
+        run: |
+          BASE="${{ github.event.pull_request.base.sha || github.event.before }}"
+          git cat-file -e "$BASE^{commit}" 2>/dev/null || BASE="$(git rev-list --max-parents=0 HEAD | tail -1)"
+          git diff -z --name-only --diff-filter=AM "$BASE" HEAD -- productions | xargs -0 python scripts/check_slop_risk.py --only-scripts
       - name: Reject unapproved databases and generated junk
         run: |
           test -z "$(git ls-files 'data/catalog/*.db-wal' 'data/catalog/*.db-shm' 'outputs/**' '*.pyc')"

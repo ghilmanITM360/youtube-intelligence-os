@@ -1,7 +1,7 @@
 # AI-slop risk rules (pre-delivery gate)
 
 - **Source:** Mathur, Liu, Tan, Liu (Google), *Scalable Detection of Adversarial Synthetic Slop and Coordinated Media Abuse: A LoRA-Enabled Multimodal Defense System* (4 pp., no venue or dataset sizes stated). Local copy is supplied by the user; it is not stored in the repo.
-- **Gate:** `uv run python scripts/check_slop_risk.py` (see AGENTS.md, "Pre-delivery AI-slop risk gate").
+- **Gate:** `scripts/check_slop_risk.py`. It runs automatically on production scripts (`productions/<project>/**/*SCRIPT*.md|txt`) through the Claude Code PostToolUse hook, `.githooks/pre-commit`, CI (`validate.yml`) and `production_pipeline.py validate`. See AGENTS.md, "Pre-delivery AI-slop risk gate".
 - **Labels:** `PAPER_FACT` means the paper states it. `OUR_INFERENCE` means a rule we derived; it is not shown by the paper.
 
 ## What the paper says (PAPER_FACT)
@@ -22,10 +22,10 @@
 | R1 | Script 5-gram overlap with any single existing transcript (registry + extracted competitor transcripts) is ≥15%. A score of ≥5% gives WARN. | FAIL | Copying or lightly re-spinning a competitor script is the "templated narrative" signal (F3). |
 | R2 | Title is identical to an existing video or one of our other projects. Word-set Jaccard ≥0.8 gives WARN. | FAIL | Title/description salient terms (F3); Senior Health Report 2 found a 12-channel network sharing titles word for word. |
 | R3 | ≥3 stock AI/clickbait phrases in the script. | WARN | Generic machine phrasing is what anyone can produce from a prompt. |
-| R4 | Script ≥15% overlap with one of **our own other projects**. | FAIL | Reusing one script across our channels makes us look like a Generation Cluster (F1, F2). |
+| R4 | Script ≥15% overlap with a script in one of **our own other projects** (`productions/<other>/`); ≥5% gives WARN. | FAIL | Reusing one script across our channels makes us look like a Generation Cluster (F1, F2). |
 | R5 | No `Sources` section with at least one item (own data, study, document, URL). | FAIL | Substance and accuracy; YMYL niches (health, finance) need it. |
 | R6 | Script claims an expert persona ("as a doctor…") and `--verified-presenter` is not set. | FAIL | Synthetic impersonation is a named target vertical (F4). |
-| R7 | Provided images/frames have dHash distance ≤5 to a competitor thumbnail in the repo. Distance ≤10, or near-identical to our own other project, gives WARN. | FAIL | Visual embeddings are a named feature (F3); cloned visual templates across channels are a coordination signal. |
+| R7 | Provided images/frames have dHash distance ≤5 to a competitor thumbnail in the repo. Distance ≤10 gives WARN. Images come from the script header `images:` or `--images`. | FAIL | Visual embeddings are a named feature (F3); cloned visual templates across channels are a coordination signal. |
 
 ## Manual checklist (a script cannot show these; a human confirms each one)
 
@@ -38,7 +38,8 @@
 ## Hard limits of this gate
 
 1. **It is a proxy.** The paper's strongest signals (F2: account infrastructure, API usage, upload timing) do not appear in a script. PASS means "no risk signal found", never "will not be detected".
-2. **The overlap checks are lexical.** A paraphrased copy can pass R1/R4. Semantic similarity would need a new dependency, which is not approved.
-3. **Evasion is out of scope and is itself a violation.** Do not paraphrase, spin or reorder a competitor script, or add noise to images, to push R1/R4/R7 below threshold. The fix for a FAIL is original work, not disguise.
-4. **Exceptions:** `--exception R5="reason"` turns that rule's FAIL into an `EXCEPTION` entry, recorded in the report and shown to the user. It is never silent.
-5. Thresholds are starting values, not calibrated against platform outcomes. Recalibrate them only with evidence, and record the change here.
+2. **Triggers have gaps.** The Claude hook only sees Write/Edit tool calls, and the pre-commit hook must be installed per clone. CI is the backstop for anything merged.
+3. **The overlap checks are lexical.** A paraphrased copy can pass R1/R4. Semantic similarity would need a new dependency, which is not approved.
+4. **Evasion is out of scope and is itself a violation.** Do not paraphrase, spin or reorder a competitor script, or add noise to images, to push R1/R4/R7 below threshold. The fix for a FAIL is original work, not disguise.
+5. **Exceptions:** `--exception R5="reason"` turns that rule's FAIL into an `EXCEPTION` entry, recorded in the report and shown to the user. It is never silent.
+6. Thresholds are starting values, not calibrated against platform outcomes. Recalibrate them only with evidence, and record the change here.
