@@ -1,0 +1,578 @@
+{
+  "authored_artwork_modules": {
+    "character_rig": 1,
+    "environment": 1,
+    "reusable_finance_props": 5,
+    "diagram_specific_glyphs_check_and_calendar": 2,
+    "illustrated_chart_layout": 1,
+    "policy_connector_diagram": 1,
+    "replacement_process_diagram": 1,
+    "escrow_breakdown_diagram": 1,
+    "shared_arrow": 1
+  },
+  "module_count": 14,
+  "poses": 3,
+  "expressions": 5,
+  "character_svg_exports": 15,
+  "prop_svg_exports": 5,
+  "environment_svg_exports": 1,
+  "svg_export_total": 21,
+  "distinct_authored_character_illustrations": 1,
+  "export_count_is_not_unique_artwork_count": true,
+  "distinct_scene_layouts": 8,
+  "scene_boundaries": [
+    0,
+    130,
+    304,
+    462,
+    638,
+    822,
+    948,
+    1104
+  ],
+  "mean_scene_seconds": 5.25,
+  "reused_objects": {
+    "character": 8,
+    "environment": 8,
+    "contract": 4,
+    "lock": 5,
+    "arrow": 3,
+    "house": 1,
+    "bank": 1,
+    "coin": 1
+  },
+  "reuse_count_definition": "Scene-layout appearances of explicit components; host-held contract contributes to contract scenes 2/5/8 already counted. Arrow component is explicit in hook, refinance, ending. Policy connector is its own diagram path. Multiple instances do not create new authored artwork.",
+  "object_tracks": [
+    {
+      "scene": 1,
+      "target": "policy percent fall",
+      "local_frame_knots": [
+        0,
+        10,
+        38
+      ],
+      "global_frame_knots": [
+        0,
+        10,
+        38
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 1,
+      "target": "payment lock pop",
+      "local_frame_knots": [
+        40,
+        49,
+        57
+      ],
+      "global_frame_knots": [
+        40,
+        49,
+        57
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 2,
+      "target": "contract pop",
+      "local_frame_knots": [
+        6,
+        15,
+        23
+      ],
+      "global_frame_knots": [
+        136,
+        145,
+        153
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 2,
+      "target": "contract lock pop",
+      "local_frame_knots": [
+        33,
+        42,
+        50
+      ],
+      "global_frame_knots": [
+        163,
+        172,
+        180
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 2,
+      "target": "signing label pop",
+      "local_frame_knots": [
+        63,
+        72,
+        80
+      ],
+      "global_frame_knots": [
+        193,
+        202,
+        210
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 3,
+      "target": "bank pop",
+      "local_frame_knots": [
+        4,
+        13,
+        21
+      ],
+      "global_frame_knots": [
+        308,
+        317,
+        325
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 3,
+      "target": "contract pop",
+      "local_frame_knots": [
+        25,
+        34,
+        42
+      ],
+      "global_frame_knots": [
+        329,
+        338,
+        346
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 3,
+      "target": "connector reveal",
+      "local_frame_knots": [
+        32,
+        64
+      ],
+      "global_frame_knots": [
+        336,
+        368
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 3,
+      "target": "policy particle translation/rebound",
+      "local_frame_knots": [
+        32,
+        63,
+        78
+      ],
+      "global_frame_knots": [
+        336,
+        367,
+        382
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 3,
+      "target": "contract lock pop",
+      "local_frame_knots": [
+        58,
+        67,
+        75
+      ],
+      "global_frame_knots": [
+        362,
+        371,
+        379
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 4,
+      "target": "rate stroke reveal",
+      "local_frame_knots": [
+        13,
+        79
+      ],
+      "global_frame_knots": [
+        475,
+        541
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 4,
+      "target": "payment stroke reveal",
+      "local_frame_knots": [
+        52,
+        117
+      ],
+      "global_frame_knots": [
+        514,
+        579
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 4,
+      "target": "payment lock reveal",
+      "local_frame_knots": [
+        108,
+        126
+      ],
+      "global_frame_knots": [
+        570,
+        588
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 5,
+      "target": "old contract translation",
+      "local_frame_knots": [
+        0,
+        115,
+        150
+      ],
+      "global_frame_knots": [
+        638,
+        753,
+        788
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 5,
+      "target": "old contract fade",
+      "local_frame_knots": [
+        0,
+        110,
+        158
+      ],
+      "global_frame_knots": [
+        638,
+        748,
+        796
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 5,
+      "target": "replacement arrow reveal",
+      "local_frame_knots": [
+        24,
+        42
+      ],
+      "global_frame_knots": [
+        662,
+        680
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 5,
+      "target": "new loan pop",
+      "local_frame_knots": [
+        49,
+        58,
+        66
+      ],
+      "global_frame_knots": [
+        687,
+        696,
+        704
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 5,
+      "target": "decision label pop",
+      "local_frame_knots": [
+        91,
+        100,
+        108
+      ],
+      "global_frame_knots": [
+        729,
+        738,
+        746
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 6,
+      "target": "approval pop",
+      "local_frame_knots": [
+        7,
+        16,
+        24
+      ],
+      "global_frame_knots": [
+        829,
+        838,
+        846
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 6,
+      "target": "costs pop",
+      "local_frame_knots": [
+        38,
+        47,
+        55
+      ],
+      "global_frame_knots": [
+        860,
+        869,
+        877
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 6,
+      "target": "term pop",
+      "local_frame_knots": [
+        69,
+        78,
+        86
+      ],
+      "global_frame_knots": [
+        891,
+        900,
+        908
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 7,
+      "target": "house pop",
+      "local_frame_knots": [
+        5,
+        14,
+        22
+      ],
+      "global_frame_knots": [
+        953,
+        962,
+        970
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 7,
+      "target": "escrow layer translation",
+      "local_frame_knots": [
+        36,
+        62,
+        102,
+        142
+      ],
+      "global_frame_knots": [
+        984,
+        1010,
+        1050,
+        1090
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 7,
+      "target": "escrow layer reveal",
+      "local_frame_knots": [
+        36,
+        54
+      ],
+      "global_frame_knots": [
+        984,
+        1002
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 8,
+      "target": "policy arrow fade",
+      "local_frame_knots": [
+        12,
+        77
+      ],
+      "global_frame_knots": [
+        1116,
+        1181
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 8,
+      "target": "contract translation",
+      "local_frame_knots": [
+        0,
+        72
+      ],
+      "global_frame_knots": [
+        1104,
+        1176
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 8,
+      "target": "contract enlargement",
+      "local_frame_knots": [
+        0,
+        72
+      ],
+      "global_frame_knots": [
+        1104,
+        1176
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    },
+    {
+      "scene": 8,
+      "target": "payoff label pop",
+      "local_frame_knots": [
+        75,
+        84,
+        92
+      ],
+      "global_frame_knots": [
+        1179,
+        1188,
+        1196
+      ],
+      "source": "src/Pilot.tsx; Show/pop or key/reveal calls"
+    }
+  ],
+  "object_track_count": 28,
+  "object_value_knots": 76,
+  "camera_tracks": 8,
+  "pose_transitions": [
+    {
+      "scene": 2,
+      "from": "shrug",
+      "to": "hold",
+      "start_frame": 130,
+      "end_frame": 154,
+      "channels": [
+        "hipY",
+        "leftUpper",
+        "leftElbow",
+        "rightUpper",
+        "rightElbow",
+        "head"
+      ]
+    },
+    {
+      "scene": 3,
+      "from": "hold",
+      "to": "point",
+      "start_frame": 304,
+      "end_frame": 328,
+      "channels": [
+        "hipY",
+        "leftUpper",
+        "leftElbow",
+        "rightUpper",
+        "rightElbow",
+        "head"
+      ]
+    },
+    {
+      "scene": 5,
+      "from": "point",
+      "to": "hold",
+      "start_frame": 638,
+      "end_frame": 662,
+      "channels": [
+        "hipY",
+        "leftUpper",
+        "leftElbow",
+        "rightUpper",
+        "rightElbow",
+        "head"
+      ]
+    },
+    {
+      "scene": 6,
+      "from": "hold",
+      "to": "point",
+      "start_frame": 822,
+      "end_frame": 846,
+      "channels": [
+        "hipY",
+        "leftUpper",
+        "leftElbow",
+        "rightUpper",
+        "rightElbow",
+        "head"
+      ]
+    },
+    {
+      "scene": 7,
+      "from": "point",
+      "to": "shrug",
+      "start_frame": 948,
+      "end_frame": 972,
+      "channels": [
+        "hipY",
+        "leftUpper",
+        "leftElbow",
+        "rightUpper",
+        "rightElbow",
+        "head"
+      ]
+    },
+    {
+      "scene": 8,
+      "from": "shrug",
+      "to": "hold",
+      "start_frame": 1104,
+      "end_frame": 1128,
+      "channels": [
+        "hipY",
+        "leftUpper",
+        "leftElbow",
+        "rightUpper",
+        "rightElbow",
+        "head"
+      ]
+    }
+  ],
+  "pose_transition_events": 6,
+  "grasp_visibility_events": 3,
+  "expression_changes": 6,
+  "blink_preset": "fixed 151-frame cycle, 7-frame closed state; no phoneme lip sync",
+  "event_definition": "28 object-property tracks, 8 camera pushes, 6 articulated pose transitions, 3 grasp visibility ramps; expression swaps/blinks/captions are separate. Not a count of unique drawn frames.",
+  "manual_code_and_art_corrections": [
+    "Header label exceeded dark pill; widened pill.",
+    "Shelf intersected headlines; removed shelf.",
+    "100px leg bones created persistent exaggerated crouch; changed to 95px and adjusted hips.",
+    "Hold pose had no held object; added original contract behind foreground hand.",
+    "Missing SVG path separator joined dynamic y and x coordinates; repaired after browser diagnostic.",
+    "Contract floated during pose transitions; delayed opacity ramp until frames 20\u201326.",
+    "Summary captions at 48px were small; enlarged to 58px.",
+    "Paired contact-sheet rows overlapped; corrected row height."
+  ],
+  "remaining_cases": [
+    "Hold-pose hand grasp is stylized and partly hides left hand.",
+    "One fixed torso and limited wrist articulation; no full-body turn or weight transfer.",
+    "Expression open mouth held rather than phoneme-aligned.",
+    "Uniform cut/pose/reveal grammar across most scenes.",
+    "Secondary labels/source strip at 160px are unreadable."
+  ],
+  "machine_timing": {
+    "voice_generation_seconds": 36.1192105,
+    "audio_mix_seconds": 2.17707483400045,
+    "final_render_wall_seconds": 131.178411125,
+    "render_qa_seconds": 6.653294332998485,
+    "wall_minutes_since_plan_creation": 32.25,
+    "clock_basis": "Local file modification timestamp to this inventory checkpoint; includes implementation, waits and review, excludes earlier source exploration. Not a measured human labor rate."
+  },
+  "cash_paid_by_this_run": 0,
+  "cash_limit": "No paid generation or cloud rendering invoked; local hardware, electricity, existing software and account token subscription costs not estimated."
+}

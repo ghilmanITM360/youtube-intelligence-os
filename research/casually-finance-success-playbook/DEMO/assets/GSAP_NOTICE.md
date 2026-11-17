@@ -1,0 +1,1 @@
+GSAP 3.14.2 runtime from https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js . Copyright and license URL are preserved in its original header. License reference: https://gsap.com/standard-license/ . The standalone LICENSE/ LICENSE.md / standard-license.txt files were not served by this package mirror. No claim that this runtime is original authored artwork.
