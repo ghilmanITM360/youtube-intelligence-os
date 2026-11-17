@@ -21,11 +21,11 @@ EXPECTED = {
     "standard_packages": 40,
     "historical_channels": 6,
     "stored_outside_targets": 12,
-    "datasets": 33,
-    "videos": 2303,
+    "datasets": 34,
+    "videos": 2305,
     "real_transcripts": 2291,
     "placeholders": 12,
-    "description_gaps": 17,
+    "description_gaps": 19,
     "non_channel_subjects": 4,
     "intelligence_coverage_rows": 600,
     "data_layer_rows": 825,
@@ -116,8 +116,8 @@ def validate_database(root: Path, database: Path) -> dict:
         if xkcd != ("UC6IxnFzHofFJ5X2PycSMsww", 107, 3, 107):
             errors.append(f"Forensic channel mismatch: {xkcd}")
         xkcd_datasets = scalar(connection, "SELECT count(*) FROM dataset_channels WHERE canonical_channel_id='UC6IxnFzHofFJ5X2PycSMsww'")
-        if xkcd_datasets != 5:
-            errors.append(f"xkcd dataset relationships: expected 5, found {xkcd_datasets}")
+        if xkcd_datasets != 6:
+            errors.append(f"xkcd dataset relationships: expected 6, found {xkcd_datasets}")
         for evidence_path, in connection.execute(
             "SELECT evidence_path FROM intelligence_coverage WHERE generated_artifact_available=1 UNION SELECT evidence_path FROM channel_data_layers"
         ):

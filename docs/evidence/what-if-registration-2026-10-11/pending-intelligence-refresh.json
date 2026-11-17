@@ -1,0 +1,2082 @@
+{
+  "artifacts_considered": 35,
+  "artifacts_refreshed": [],
+  "artifacts_to_refresh": [
+    {
+      "ARTIFACT_ID": "INTEL-0014",
+      "ARTIFACT_SHA256": "be0a1e74354d1e6c9a7eaf2b9eaf641609679c6761934ff7b768c9cdfc6ecf06",
+      "ARTIFACT_TYPE": "HOOK_SCRIPT",
+      "CHANNEL_IDS": [
+        "CH-000004"
+      ],
+      "CURRENT_STATUS": "PARTIALLY_STALE",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000004/hook-script-intelligence-pilot-2026-09-10.json",
+      "RECOMMENDED_REFRESH": [
+        "HOOK_SCRIPT"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/packaging-intelligence-2026-09-09-v2.json",
+          "sha256": "d5f870ce51d41be9f40f24baf04fbc41e215a31a6f35612ba12533de5ec0a4aa",
+          "version_reference": "packaging-intelligence-2"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "4c469524751fb4c86f56fac476c998435ad32361713c6d410d63ba64a9a56500",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000004:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "668247a930df37bcf2f7b587982bbb29de60d5107c22733ed7cdc2c9cde157ea",
+          "version_reference": {
+            "first_id": "VS-000192",
+            "last_id": "VS-000274",
+            "row_count": 83
+          }
+        },
+        {
+          "ref": "canonical:CH-000004:TRANSCRIPT",
+          "sha256": "889cb9f0a7117611b8b3316166f1df61ad7423b9709d306e893a2dbd9146aad2",
+          "version_reference": {
+            "first_id": "TR-000192",
+            "last_id": "TR-000274",
+            "row_count": 83
+          }
+        },
+        {
+          "ref": "code:scripts/report_hook_script_intelligence.py",
+          "sha256": "283c9994d10fd33a44c2820e65e16fb39845eab1ca3630cef082799a8b650c9e",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": [
+        "NEW_PUBLIC_METRIC_SNAPSHOT"
+      ]
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0015",
+      "ARTIFACT_SHA256": "d5f870ce51d41be9f40f24baf04fbc41e215a31a6f35612ba12533de5ec0a4aa",
+      "ARTIFACT_TYPE": "PACKAGING",
+      "CHANNEL_IDS": [
+        "CH-000004"
+      ],
+      "CURRENT_STATUS": "PARTIALLY_STALE",
+      "GENERATED_AT": "2026-09-09",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000004/packaging-intelligence-2026-09-09-v2.json",
+      "RECOMMENDED_REFRESH": [
+        "PACKAGING"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "4c469524751fb4c86f56fac476c998435ad32361713c6d410d63ba64a9a56500",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000004:CANONICAL_VIDEO",
+          "sha256": "f85ef4bbfbf3a55b9c05e12fac1cd8e521684c33dfd2d4614ea343c15f3d06ad",
+          "version_reference": {
+            "first_id": "VID-000192",
+            "last_id": "VID-000274",
+            "row_count": 83
+          }
+        },
+        {
+          "ref": "canonical:CH-000004:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "668247a930df37bcf2f7b587982bbb29de60d5107c22733ed7cdc2c9cde157ea",
+          "version_reference": {
+            "first_id": "VS-000192",
+            "last_id": "VS-000274",
+            "row_count": 83
+          }
+        },
+        {
+          "ref": "canonical:CH-000004:THUMBNAIL_REFERENCE",
+          "sha256": "9264bae93143d9c5aa88391f64e9272777c21dcf003a74e0f08a3c2d2c3f0f38",
+          "version_reference": {
+            "first_id": "evidence",
+            "last_id": "evidence",
+            "row_count": 83
+          }
+        },
+        {
+          "ref": "code:scripts/report_packaging_intelligence.py",
+          "sha256": "0044be1ab29ec5127a715704da27fc4a18e4fbb87ec619a048d3b3115a1c9d5a",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000004:THUMBNAIL_BINARY",
+          "sha256": "aa1efacd954968b2a8aaed7f7b18160ecd137678213d894ed32198335204858f",
+          "version_reference": {
+            "file_count": 1,
+            "paths": [
+              "data/manifests/DS-000017-thumbnail-snapshot-2026-09-09.json"
+            ]
+          }
+        }
+      ],
+      "STALE_REASON": [
+        "CANONICAL_VIDEO_CHANGED",
+        "NEW_PUBLIC_METRIC_SNAPSHOT"
+      ]
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0016",
+      "ARTIFACT_SHA256": "4c469524751fb4c86f56fac476c998435ad32361713c6d410d63ba64a9a56500",
+      "ARTIFACT_TYPE": "TOPIC",
+      "CHANNEL_IDS": [
+        "CH-000004"
+      ],
+      "CURRENT_STATUS": "PARTIALLY_STALE",
+      "GENERATED_AT": "2026-09-09",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json",
+      "RECOMMENDED_REFRESH": [
+        "TOPIC"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "canonical:CH-000004:CANONICAL_VIDEO",
+          "sha256": "f85ef4bbfbf3a55b9c05e12fac1cd8e521684c33dfd2d4614ea343c15f3d06ad",
+          "version_reference": {
+            "first_id": "VID-000192",
+            "last_id": "VID-000274",
+            "row_count": 83
+          }
+        },
+        {
+          "ref": "canonical:CH-000004:CLASSIFICATION",
+          "sha256": "d1f2838054814a0ddf40fbf0b7b3b906269a7d3a235d96dd3fbc4a449662b2b0",
+          "version_reference": {
+            "first_id": "CC-P2S3-000192-FORMAT",
+            "last_id": "CC-PILOT-000231-TOPIC",
+            "row_count": 166
+          }
+        },
+        {
+          "ref": "canonical:CH-000004:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "668247a930df37bcf2f7b587982bbb29de60d5107c22733ed7cdc2c9cde157ea",
+          "version_reference": {
+            "first_id": "VS-000192",
+            "last_id": "VS-000274",
+            "row_count": 83
+          }
+        },
+        {
+          "ref": "canonical:CH-000004:TRANSCRIPT",
+          "sha256": "889cb9f0a7117611b8b3316166f1df61ad7423b9709d306e893a2dbd9146aad2",
+          "version_reference": {
+            "first_id": "TR-000192",
+            "last_id": "TR-000274",
+            "row_count": 83
+          }
+        },
+        {
+          "ref": "code:scripts/report_topic_opportunity.py",
+          "sha256": "11c0533c12858ac4de50fd543907d40c5019f22296bdda89bcf9433be0304eec",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000004:EXTERNAL_VALIDATION",
+          "sha256": "a40d4f8cfd1bb35352d5949e2c73f1d648262746fc778ffb0759b5b69bd3de19",
+          "version_reference": {
+            "file_count": 1,
+            "paths": [
+              "data/intelligence/channels/CH-000004/topic-opportunity-web-validation-2026-09-09.md"
+            ]
+          }
+        }
+      ],
+      "STALE_REASON": [
+        "CANONICAL_VIDEO_CHANGED",
+        "NEW_PUBLIC_METRIC_SNAPSHOT"
+      ]
+    }
+  ],
+  "artifacts_unchanged": [
+    {
+      "ARTIFACT_ID": "INTEL-0001",
+      "ARTIFACT_SHA256": "684d4edcf1c4d27837f3d3c5c60cf8206b6e59300a31f707f866e8287554724c",
+      "ARTIFACT_TYPE": "BLUEPRINT",
+      "CHANNEL_IDS": [
+        "CH-000001",
+        "CH-000002"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/blueprints/finance-channel-strategy-blueprint-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "BLUEPRINT"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "ba673966ea569cee560666563fff3d79ac8a80517228080fd469e55abc469ff2",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/cross-channel/finance-channel-strategy-benchmark-2026-09-11.json",
+          "sha256": "55cd79e9787e21f597af3f895485aac68613060c48f02206192aa9bb16cea447",
+          "version_reference": "channel-strategy-benchmark-1"
+        },
+        {
+          "ref": "code:scripts/report_channel_strategy_intelligence.py",
+          "sha256": "738b38143efaaa7544a08d7c26155f728d9ba9d4747bd1c80d7788bf913c97ba",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0002",
+      "ARTIFACT_SHA256": "e929478aa6d2195ff93fdd57ef7943bb5abb423c17637618fac22103ba78525e",
+      "ARTIFACT_TYPE": "BLUEPRINT",
+      "CHANNEL_IDS": [
+        "CH-000003",
+        "CH-000005"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/blueprints/senior-health-channel-strategy-blueprint-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "BLUEPRINT"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "cb182d6120aef89de5f7ae3834fdc80c8fbe8517b1baab767b443be97d3d0fd6",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/cross-channel/health-channel-strategy-benchmark-2026-09-11.json",
+          "sha256": "25a47db3ed1f80b141ad7f3f3794b0815ca9a0de7e32ff5646324621c0d1183a",
+          "version_reference": "channel-strategy-benchmark-1"
+        },
+        {
+          "ref": "code:scripts/report_channel_strategy_intelligence.py",
+          "sha256": "738b38143efaaa7544a08d7c26155f728d9ba9d4747bd1c80d7788bf913c97ba",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0003",
+      "ARTIFACT_SHA256": "d5cf30bd0c57e3b24815c2425b7b83733f06a1db81cc1b852516a7a791fa7844",
+      "ARTIFACT_TYPE": "HOOK_SCRIPT",
+      "CHANNEL_IDS": [
+        "CH-000001"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000001/hook-script-intelligence-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "HOOK_SCRIPT"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/packaging-intelligence-2026-09-10.json",
+          "sha256": "a5d9541cc1d48dcb493787786f174dfba57aea2c7c9685fac6416e377e43d902",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "611509566b58c929f89467735ec84aeefd10ad53155556e07584d398f9214eaa",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000001:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "7eb6e823d72ce8a3b14daa9db75cadbadd4a020128f153f8e75e32b1030b2ab3",
+          "version_reference": {
+            "first_id": "VS-000005",
+            "last_id": "VS-000159",
+            "row_count": 94
+          }
+        },
+        {
+          "ref": "canonical:CH-000001:TRANSCRIPT",
+          "sha256": "636939443ca8896743c09bea7cf348141cbb11b9648d0344252c6c353ca2249f",
+          "version_reference": {
+            "first_id": "TR-000005",
+            "last_id": "TR-000159",
+            "row_count": 94
+          }
+        },
+        {
+          "ref": "code:scripts/report_hook_script_intelligence.py",
+          "sha256": "283c9994d10fd33a44c2820e65e16fb39845eab1ca3630cef082799a8b650c9e",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0004",
+      "ARTIFACT_SHA256": "a5d9541cc1d48dcb493787786f174dfba57aea2c7c9685fac6416e377e43d902",
+      "ARTIFACT_TYPE": "PACKAGING",
+      "CHANNEL_IDS": [
+        "CH-000001"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000001/packaging-intelligence-2026-09-10.json",
+      "RECOMMENDED_REFRESH": [
+        "PACKAGING"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "611509566b58c929f89467735ec84aeefd10ad53155556e07584d398f9214eaa",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000001:CANONICAL_VIDEO",
+          "sha256": "4132139c74f62581f819258811c3a84d288d79ccdf6b5331bdfbf2534c71f15e",
+          "version_reference": {
+            "first_id": "VID-000005",
+            "last_id": "VID-000159",
+            "row_count": 94
+          }
+        },
+        {
+          "ref": "canonical:CH-000001:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "7eb6e823d72ce8a3b14daa9db75cadbadd4a020128f153f8e75e32b1030b2ab3",
+          "version_reference": {
+            "first_id": "VS-000005",
+            "last_id": "VS-000159",
+            "row_count": 94
+          }
+        },
+        {
+          "ref": "canonical:CH-000001:THUMBNAIL_REFERENCE",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "version_reference": {
+            "first_id": null,
+            "last_id": null,
+            "row_count": 0
+          }
+        },
+        {
+          "ref": "code:scripts/report_packaging_intelligence.py",
+          "sha256": "0044be1ab29ec5127a715704da27fc4a18e4fbb87ec619a048d3b3115a1c9d5a",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000001:THUMBNAIL_BINARY",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "version_reference": {
+            "file_count": 0,
+            "paths": []
+          }
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0005",
+      "ARTIFACT_SHA256": "611509566b58c929f89467735ec84aeefd10ad53155556e07584d398f9214eaa",
+      "ARTIFACT_TYPE": "TOPIC",
+      "CHANNEL_IDS": [
+        "CH-000001"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-09",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000001/topic-opportunity-intelligence-2026-09-09.json",
+      "RECOMMENDED_REFRESH": [
+        "TOPIC"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "canonical:CH-000001:CANONICAL_VIDEO",
+          "sha256": "4132139c74f62581f819258811c3a84d288d79ccdf6b5331bdfbf2534c71f15e",
+          "version_reference": {
+            "first_id": "VID-000005",
+            "last_id": "VID-000159",
+            "row_count": 94
+          }
+        },
+        {
+          "ref": "canonical:CH-000001:CLASSIFICATION",
+          "sha256": "3cf00bfe18d643797b10aebab3e880fc10b57b8450561b432e5ebf8406d7b7f2",
+          "version_reference": {
+            "first_id": "CC-P2S10-000079-FORMAT",
+            "last_id": "CC-P2S12-000155-TOPIC",
+            "row_count": 186
+          }
+        },
+        {
+          "ref": "canonical:CH-000001:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "7eb6e823d72ce8a3b14daa9db75cadbadd4a020128f153f8e75e32b1030b2ab3",
+          "version_reference": {
+            "first_id": "VS-000005",
+            "last_id": "VS-000159",
+            "row_count": 94
+          }
+        },
+        {
+          "ref": "canonical:CH-000001:TRANSCRIPT",
+          "sha256": "636939443ca8896743c09bea7cf348141cbb11b9648d0344252c6c353ca2249f",
+          "version_reference": {
+            "first_id": "TR-000005",
+            "last_id": "TR-000159",
+            "row_count": 94
+          }
+        },
+        {
+          "ref": "code:scripts/report_topic_opportunity.py",
+          "sha256": "11c0533c12858ac4de50fd543907d40c5019f22296bdda89bcf9433be0304eec",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000001:EXTERNAL_VALIDATION",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "version_reference": {
+            "file_count": 0,
+            "paths": []
+          }
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0006",
+      "ARTIFACT_SHA256": "ba673966ea569cee560666563fff3d79ac8a80517228080fd469e55abc469ff2",
+      "ARTIFACT_TYPE": "CHANNEL_STRATEGY",
+      "CHANNEL_IDS": [
+        "CH-000001",
+        "CH-000002"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000002/channel-strategy-diagnosis-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "SUCCESS_FAILURE",
+        "CHANNEL_STRATEGY"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/hook-script-intelligence-2026-09-11.json",
+          "sha256": "d5cf30bd0c57e3b24815c2425b7b83733f06a1db81cc1b852516a7a791fa7844",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/packaging-intelligence-2026-09-10.json",
+          "sha256": "a5d9541cc1d48dcb493787786f174dfba57aea2c7c9685fac6416e377e43d902",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "611509566b58c929f89467735ec84aeefd10ad53155556e07584d398f9214eaa",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/hook-script-intelligence-2026-09-11.json",
+          "sha256": "3d0d5728601b9fd2794b380a97226fd273eaae0804e4b0ee3def3672a3f1a8e1",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/packaging-intelligence-2026-09-10.json",
+          "sha256": "c29194a672ab1854c64d6d515071ad6b0ff301e2fca9b949ee6adf76dc12ba71",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "15b4e9a53d280bdfe566256c05410c693bace1667c4ca685810e6ce2f2144ef0",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/system/youtube-strategy-training-knowledge-2026-09-11.json",
+          "sha256": "aa89dd669aa0b21dca29836133a1790da5d937a3f359e64881a0060dc8739dde",
+          "version_reference": "youtube-strategy-training-knowledge-1"
+        },
+        {
+          "ref": "code:scripts/report_channel_strategy_intelligence.py",
+          "sha256": "738b38143efaaa7544a08d7c26155f728d9ba9d4747bd1c80d7788bf913c97ba",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0007",
+      "ARTIFACT_SHA256": "3d0d5728601b9fd2794b380a97226fd273eaae0804e4b0ee3def3672a3f1a8e1",
+      "ARTIFACT_TYPE": "HOOK_SCRIPT",
+      "CHANNEL_IDS": [
+        "CH-000002"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000002/hook-script-intelligence-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "HOOK_SCRIPT"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/packaging-intelligence-2026-09-10.json",
+          "sha256": "c29194a672ab1854c64d6d515071ad6b0ff301e2fca9b949ee6adf76dc12ba71",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "15b4e9a53d280bdfe566256c05410c693bace1667c4ca685810e6ce2f2144ef0",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000002:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "e4648527f106a72fb62d7f6f4b1cb2dae6c2a03d27be039b791fd7a962b0abe1",
+          "version_reference": {
+            "first_id": "VS-000001",
+            "last_id": "VS-000087",
+            "row_count": 65
+          }
+        },
+        {
+          "ref": "canonical:CH-000002:TRANSCRIPT",
+          "sha256": "6c7d87d48c3edc508f1d744a28e9ca83e058622e86089ca3f5ff522315bab4ef",
+          "version_reference": {
+            "first_id": "TR-000001",
+            "last_id": "TR-000087",
+            "row_count": 65
+          }
+        },
+        {
+          "ref": "code:scripts/report_hook_script_intelligence.py",
+          "sha256": "283c9994d10fd33a44c2820e65e16fb39845eab1ca3630cef082799a8b650c9e",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0008",
+      "ARTIFACT_SHA256": "c29194a672ab1854c64d6d515071ad6b0ff301e2fca9b949ee6adf76dc12ba71",
+      "ARTIFACT_TYPE": "PACKAGING",
+      "CHANNEL_IDS": [
+        "CH-000002"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000002/packaging-intelligence-2026-09-10.json",
+      "RECOMMENDED_REFRESH": [
+        "PACKAGING"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "15b4e9a53d280bdfe566256c05410c693bace1667c4ca685810e6ce2f2144ef0",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000002:CANONICAL_VIDEO",
+          "sha256": "71a3a9656f13662a960a39380bb46f7f370be5e3188de069220d5946c3f059d0",
+          "version_reference": {
+            "first_id": "VID-000001",
+            "last_id": "VID-000087",
+            "row_count": 65
+          }
+        },
+        {
+          "ref": "canonical:CH-000002:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "e4648527f106a72fb62d7f6f4b1cb2dae6c2a03d27be039b791fd7a962b0abe1",
+          "version_reference": {
+            "first_id": "VS-000001",
+            "last_id": "VS-000087",
+            "row_count": 65
+          }
+        },
+        {
+          "ref": "canonical:CH-000002:THUMBNAIL_REFERENCE",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "version_reference": {
+            "first_id": null,
+            "last_id": null,
+            "row_count": 0
+          }
+        },
+        {
+          "ref": "code:scripts/report_packaging_intelligence.py",
+          "sha256": "0044be1ab29ec5127a715704da27fc4a18e4fbb87ec619a048d3b3115a1c9d5a",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000002:THUMBNAIL_BINARY",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "version_reference": {
+            "file_count": 0,
+            "paths": []
+          }
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0009",
+      "ARTIFACT_SHA256": "15b4e9a53d280bdfe566256c05410c693bace1667c4ca685810e6ce2f2144ef0",
+      "ARTIFACT_TYPE": "TOPIC",
+      "CHANNEL_IDS": [
+        "CH-000002"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-09",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000002/topic-opportunity-intelligence-2026-09-09.json",
+      "RECOMMENDED_REFRESH": [
+        "TOPIC"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "canonical:CH-000002:CANONICAL_VIDEO",
+          "sha256": "71a3a9656f13662a960a39380bb46f7f370be5e3188de069220d5946c3f059d0",
+          "version_reference": {
+            "first_id": "VID-000001",
+            "last_id": "VID-000087",
+            "row_count": 65
+          }
+        },
+        {
+          "ref": "canonical:CH-000002:CLASSIFICATION",
+          "sha256": "30bc1e494a847a3df3ca9783a23b4e509273b42cc97472cf7034e9b3ee2b72e4",
+          "version_reference": {
+            "first_id": "CC-P2S10-000001-FORMAT",
+            "last_id": "CC-P2S12-000087-TOPIC",
+            "row_count": 130
+          }
+        },
+        {
+          "ref": "canonical:CH-000002:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "e4648527f106a72fb62d7f6f4b1cb2dae6c2a03d27be039b791fd7a962b0abe1",
+          "version_reference": {
+            "first_id": "VS-000001",
+            "last_id": "VS-000087",
+            "row_count": 65
+          }
+        },
+        {
+          "ref": "canonical:CH-000002:TRANSCRIPT",
+          "sha256": "6c7d87d48c3edc508f1d744a28e9ca83e058622e86089ca3f5ff522315bab4ef",
+          "version_reference": {
+            "first_id": "TR-000001",
+            "last_id": "TR-000087",
+            "row_count": 65
+          }
+        },
+        {
+          "ref": "code:scripts/report_topic_opportunity.py",
+          "sha256": "11c0533c12858ac4de50fd543907d40c5019f22296bdda89bcf9433be0304eec",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000002:EXTERNAL_VALIDATION",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "version_reference": {
+            "file_count": 0,
+            "paths": []
+          }
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0010",
+      "ARTIFACT_SHA256": "c2a0742d496c4dbf330d6fcd068050ee7e202732ec50800c34548171d505a791",
+      "ARTIFACT_TYPE": "HOOK_SCRIPT",
+      "CHANNEL_IDS": [
+        "CH-000003"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000003/hook-script-intelligence-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "HOOK_SCRIPT"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/packaging-intelligence-2026-09-11.json",
+          "sha256": "153dfde68bf28361c01e2e2f5986059867b25b76c6b6e3753d464a1936b7558a",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/topic-opportunity-intelligence-2026-09-11.json",
+          "sha256": "71c4324c1b38e73390fc0273c72b1022896bb05f7cf2066c432439acd29da7e4",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000003:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "f414d9f523637972364d59fdea485bba4b3e0c77bd51503e27857d220d1af6fa",
+          "version_reference": {
+            "first_id": "VS-000160",
+            "last_id": "VS-000191",
+            "row_count": 32
+          }
+        },
+        {
+          "ref": "canonical:CH-000003:TRANSCRIPT",
+          "sha256": "ac2699c41f67afb78bc14a597d30a1fc82aa734ebdcda3875c930a6f13fbedc8",
+          "version_reference": {
+            "first_id": "TR-000160",
+            "last_id": "TR-000191",
+            "row_count": 32
+          }
+        },
+        {
+          "ref": "code:scripts/report_hook_script_intelligence.py",
+          "sha256": "283c9994d10fd33a44c2820e65e16fb39845eab1ca3630cef082799a8b650c9e",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0011",
+      "ARTIFACT_SHA256": "153dfde68bf28361c01e2e2f5986059867b25b76c6b6e3753d464a1936b7558a",
+      "ARTIFACT_TYPE": "PACKAGING",
+      "CHANNEL_IDS": [
+        "CH-000003"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000003/packaging-intelligence-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "PACKAGING"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/topic-opportunity-intelligence-2026-09-11.json",
+          "sha256": "71c4324c1b38e73390fc0273c72b1022896bb05f7cf2066c432439acd29da7e4",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000003:CANONICAL_VIDEO",
+          "sha256": "49698c0e337cd2457a626ff98e6f27e0a66eeeb043c72ab219f4e22a06126e7c",
+          "version_reference": {
+            "first_id": "VID-000160",
+            "last_id": "VID-000191",
+            "row_count": 32
+          }
+        },
+        {
+          "ref": "canonical:CH-000003:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "f414d9f523637972364d59fdea485bba4b3e0c77bd51503e27857d220d1af6fa",
+          "version_reference": {
+            "first_id": "VS-000160",
+            "last_id": "VS-000191",
+            "row_count": 32
+          }
+        },
+        {
+          "ref": "canonical:CH-000003:THUMBNAIL_REFERENCE",
+          "sha256": "e173e890623370ff1e0eb17b84a84c89cd228d7ad08c56fd2fb92ae4fb142508",
+          "version_reference": {
+            "first_id": "evidence",
+            "last_id": "evidence",
+            "row_count": 32
+          }
+        },
+        {
+          "ref": "code:scripts/report_packaging_intelligence.py",
+          "sha256": "0044be1ab29ec5127a715704da27fc4a18e4fbb87ec619a048d3b3115a1c9d5a",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000003:THUMBNAIL_BINARY",
+          "sha256": "22b04c3218106f442d97a9f00134ec7275ddaa147452cfe1b91b5416af3059da",
+          "version_reference": {
+            "file_count": 1,
+            "paths": [
+              "data/manifests/DS-000006-thumbnail-snapshot-2026-09-10.json"
+            ]
+          }
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0012",
+      "ARTIFACT_SHA256": "71c4324c1b38e73390fc0273c72b1022896bb05f7cf2066c432439acd29da7e4",
+      "ARTIFACT_TYPE": "TOPIC",
+      "CHANNEL_IDS": [
+        "CH-000003"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000003/topic-opportunity-intelligence-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "TOPIC"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "canonical:CH-000003:CANONICAL_VIDEO",
+          "sha256": "49698c0e337cd2457a626ff98e6f27e0a66eeeb043c72ab219f4e22a06126e7c",
+          "version_reference": {
+            "first_id": "VID-000160",
+            "last_id": "VID-000191",
+            "row_count": 32
+          }
+        },
+        {
+          "ref": "canonical:CH-000003:CLASSIFICATION",
+          "sha256": "1d3072faac351c740985659213cbda8ea50706d4c17073df49f425374dbba32a",
+          "version_reference": {
+            "first_id": "CC-P2S3-000161-FORMAT",
+            "last_id": "CC-PILOT-000189-TOPIC",
+            "row_count": 64
+          }
+        },
+        {
+          "ref": "canonical:CH-000003:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "f414d9f523637972364d59fdea485bba4b3e0c77bd51503e27857d220d1af6fa",
+          "version_reference": {
+            "first_id": "VS-000160",
+            "last_id": "VS-000191",
+            "row_count": 32
+          }
+        },
+        {
+          "ref": "canonical:CH-000003:TRANSCRIPT",
+          "sha256": "ac2699c41f67afb78bc14a597d30a1fc82aa734ebdcda3875c930a6f13fbedc8",
+          "version_reference": {
+            "first_id": "TR-000160",
+            "last_id": "TR-000191",
+            "row_count": 32
+          }
+        },
+        {
+          "ref": "code:scripts/report_topic_opportunity.py",
+          "sha256": "11c0533c12858ac4de50fd543907d40c5019f22296bdda89bcf9433be0304eec",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000003:EXTERNAL_VALIDATION",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "version_reference": {
+            "file_count": 0,
+            "paths": []
+          }
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0013",
+      "ARTIFACT_SHA256": "6f2f137b23e31d427a90a4fa1732b15151f227e7bd7fd880146dd321ecfa3099",
+      "ARTIFACT_TYPE": "EDITING",
+      "CHANNEL_IDS": [
+        "CH-000004"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000004/editing-visual-intelligence-pilot-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "EDITING"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/hook-script-intelligence-pilot-2026-09-10.json",
+          "sha256": "be0a1e74354d1e6c9a7eaf2b9eaf641609679c6761934ff7b768c9cdfc6ecf06",
+          "version_reference": "hook-script-intelligence-pilot-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/packaging-intelligence-2026-09-09-v2.json",
+          "sha256": "d5f870ce51d41be9f40f24baf04fbc41e215a31a6f35612ba12533de5ec0a4aa",
+          "version_reference": "packaging-intelligence-2"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "4c469524751fb4c86f56fac476c998435ad32361713c6d410d63ba64a9a56500",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000004:FORENSIC_EVIDENCE",
+          "sha256": "bfa39ebac0eda4bc93b00fa8b0ddb941eba6d2b060518c8901f10851654f419c",
+          "version_reference": {
+            "first_id": "DATASET",
+            "last_id": "VISUAL_ASSET",
+            "row_count": 9590
+          }
+        },
+        {
+          "ref": "code:scripts/report_editing_visual_intelligence.py",
+          "sha256": "5b9d2b3f4dfb699900e350a084b3334c56222a4f5e03c054804b8b4c76a91c61",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0017",
+      "ARTIFACT_SHA256": "cb182d6120aef89de5f7ae3834fdc80c8fbe8517b1baab767b443be97d3d0fd6",
+      "ARTIFACT_TYPE": "CHANNEL_STRATEGY",
+      "CHANNEL_IDS": [
+        "CH-000003",
+        "CH-000005"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000005/channel-strategy-diagnosis-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "SUCCESS_FAILURE",
+        "CHANNEL_STRATEGY"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/hook-script-intelligence-2026-09-11.json",
+          "sha256": "c2a0742d496c4dbf330d6fcd068050ee7e202732ec50800c34548171d505a791",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/packaging-intelligence-2026-09-11.json",
+          "sha256": "153dfde68bf28361c01e2e2f5986059867b25b76c6b6e3753d464a1936b7558a",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/topic-opportunity-intelligence-2026-09-11.json",
+          "sha256": "71c4324c1b38e73390fc0273c72b1022896bb05f7cf2066c432439acd29da7e4",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/hook-script-intelligence-2026-09-10.json",
+          "sha256": "18933c240aec27e56f1be8887b9df8e0101b2f80af493475a8b785ac065e2486",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/packaging-intelligence-2026-09-10.json",
+          "sha256": "5c3b78175caf123cfc5f6080f0d6f8763e242f81d1fe19b467b563e2d485c461",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json",
+          "sha256": "94402166b0549c508288188ddfa1ec06028ac2e62fa15fd53cb5f498eba1ba37",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/system/youtube-strategy-training-knowledge-2026-09-11.json",
+          "sha256": "aa89dd669aa0b21dca29836133a1790da5d937a3f359e64881a0060dc8739dde",
+          "version_reference": "youtube-strategy-training-knowledge-1"
+        },
+        {
+          "ref": "code:scripts/report_channel_strategy_intelligence.py",
+          "sha256": "738b38143efaaa7544a08d7c26155f728d9ba9d4747bd1c80d7788bf913c97ba",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0018",
+      "ARTIFACT_SHA256": "18933c240aec27e56f1be8887b9df8e0101b2f80af493475a8b785ac065e2486",
+      "ARTIFACT_TYPE": "HOOK_SCRIPT",
+      "CHANNEL_IDS": [
+        "CH-000005"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000005/hook-script-intelligence-2026-09-10.json",
+      "RECOMMENDED_REFRESH": [
+        "HOOK_SCRIPT"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/packaging-intelligence-2026-09-10.json",
+          "sha256": "5c3b78175caf123cfc5f6080f0d6f8763e242f81d1fe19b467b563e2d485c461",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json",
+          "sha256": "94402166b0549c508288188ddfa1ec06028ac2e62fa15fd53cb5f498eba1ba37",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000005:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "a3b96410b7fdc92733b1aa0a4799e7d2ba2d40424c43b7c0679d8a2971e444c6",
+          "version_reference": {
+            "first_id": "VS-000275",
+            "last_id": "VS-000303",
+            "row_count": 29
+          }
+        },
+        {
+          "ref": "canonical:CH-000005:TRANSCRIPT",
+          "sha256": "edcaf7ef21e6a6304a4e54e87ee809b0c5d91c6964e8c5a4d45bb349018ba94f",
+          "version_reference": {
+            "first_id": "TR-000275",
+            "last_id": "TR-000303",
+            "row_count": 29
+          }
+        },
+        {
+          "ref": "code:scripts/report_hook_script_intelligence.py",
+          "sha256": "283c9994d10fd33a44c2820e65e16fb39845eab1ca3630cef082799a8b650c9e",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0019",
+      "ARTIFACT_SHA256": "5c3b78175caf123cfc5f6080f0d6f8763e242f81d1fe19b467b563e2d485c461",
+      "ARTIFACT_TYPE": "PACKAGING",
+      "CHANNEL_IDS": [
+        "CH-000005"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000005/packaging-intelligence-2026-09-10.json",
+      "RECOMMENDED_REFRESH": [
+        "PACKAGING"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json",
+          "sha256": "94402166b0549c508288188ddfa1ec06028ac2e62fa15fd53cb5f498eba1ba37",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "canonical:CH-000005:CANONICAL_VIDEO",
+          "sha256": "b1dcdf507dfa54fadb1dd92a6edc7865e399e55f49b00a652c570a0d27012262",
+          "version_reference": {
+            "first_id": "VID-000275",
+            "last_id": "VID-000303",
+            "row_count": 29
+          }
+        },
+        {
+          "ref": "canonical:CH-000005:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "a3b96410b7fdc92733b1aa0a4799e7d2ba2d40424c43b7c0679d8a2971e444c6",
+          "version_reference": {
+            "first_id": "VS-000275",
+            "last_id": "VS-000303",
+            "row_count": 29
+          }
+        },
+        {
+          "ref": "canonical:CH-000005:THUMBNAIL_REFERENCE",
+          "sha256": "63626a29a609581f2da5ee009385a962cd273104eba74a23ca7d387366e347d9",
+          "version_reference": {
+            "first_id": "snapshot",
+            "last_id": "snapshot",
+            "row_count": 29
+          }
+        },
+        {
+          "ref": "code:scripts/report_packaging_intelligence.py",
+          "sha256": "0044be1ab29ec5127a715704da27fc4a18e4fbb87ec619a048d3b3115a1c9d5a",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000005:THUMBNAIL_BINARY",
+          "sha256": "f166aaaae23777e96d61f84168eb0438be96f8bce8211ab49ea57a99c0625d8f",
+          "version_reference": {
+            "file_count": 2,
+            "paths": [
+              "data/intelligence/channels/CH-000005/thumbnail-visual-annotations-2026-09-10.json",
+              "data/manifests/DS-000019-thumbnail-snapshot-2026-09-10.json"
+            ]
+          }
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0020",
+      "ARTIFACT_SHA256": "94402166b0549c508288188ddfa1ec06028ac2e62fa15fd53cb5f498eba1ba37",
+      "ARTIFACT_TYPE": "TOPIC",
+      "CHANNEL_IDS": [
+        "CH-000005"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-10",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json",
+      "RECOMMENDED_REFRESH": [
+        "TOPIC"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "canonical:CH-000005:CANONICAL_VIDEO",
+          "sha256": "b1dcdf507dfa54fadb1dd92a6edc7865e399e55f49b00a652c570a0d27012262",
+          "version_reference": {
+            "first_id": "VID-000275",
+            "last_id": "VID-000303",
+            "row_count": 29
+          }
+        },
+        {
+          "ref": "canonical:CH-000005:CLASSIFICATION",
+          "sha256": "fdbb9a7cbedcd41cb2f60c16eb1611f966ae8f4e33ff8ebf83b3c298b041613b",
+          "version_reference": {
+            "first_id": "CC-DR-ELIAS-2026-09-10-000275-FORMAT",
+            "last_id": "CC-DR-ELIAS-2026-09-10-000303-TOPIC",
+            "row_count": 58
+          }
+        },
+        {
+          "ref": "canonical:CH-000005:PUBLIC_METRIC_SNAPSHOT",
+          "sha256": "a3b96410b7fdc92733b1aa0a4799e7d2ba2d40424c43b7c0679d8a2971e444c6",
+          "version_reference": {
+            "first_id": "VS-000275",
+            "last_id": "VS-000303",
+            "row_count": 29
+          }
+        },
+        {
+          "ref": "canonical:CH-000005:TRANSCRIPT",
+          "sha256": "edcaf7ef21e6a6304a4e54e87ee809b0c5d91c6964e8c5a4d45bb349018ba94f",
+          "version_reference": {
+            "first_id": "TR-000275",
+            "last_id": "TR-000303",
+            "row_count": 29
+          }
+        },
+        {
+          "ref": "code:scripts/report_topic_opportunity.py",
+          "sha256": "11c0533c12858ac4de50fd543907d40c5019f22296bdda89bcf9433be0304eec",
+          "version_reference": null
+        },
+        {
+          "ref": "files:CH-000005:EXTERNAL_VALIDATION",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "version_reference": {
+            "file_count": 0,
+            "paths": []
+          }
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0021",
+      "ARTIFACT_SHA256": "8d38f2126ba68cbbbce67e73ef4f2faf0dc042a8c5baec3e41fbbfa880fa4523",
+      "ARTIFACT_TYPE": "EDITING_AVAILABILITY",
+      "CHANNEL_IDS": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000004",
+        "CH-000005",
+        "CH-000006",
+        "CH-000007",
+        "CH-000008",
+        "CH-000009",
+        "CH-000010"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/cross-channel/editing-intelligence-availability-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "EDITING"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/hook-script-intelligence-2026-09-11.json",
+          "sha256": "d5cf30bd0c57e3b24815c2425b7b83733f06a1db81cc1b852516a7a791fa7844",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/packaging-intelligence-2026-09-10.json",
+          "sha256": "a5d9541cc1d48dcb493787786f174dfba57aea2c7c9685fac6416e377e43d902",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "611509566b58c929f89467735ec84aeefd10ad53155556e07584d398f9214eaa",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/hook-script-intelligence-2026-09-11.json",
+          "sha256": "3d0d5728601b9fd2794b380a97226fd273eaae0804e4b0ee3def3672a3f1a8e1",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/packaging-intelligence-2026-09-10.json",
+          "sha256": "c29194a672ab1854c64d6d515071ad6b0ff301e2fca9b949ee6adf76dc12ba71",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "15b4e9a53d280bdfe566256c05410c693bace1667c4ca685810e6ce2f2144ef0",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/hook-script-intelligence-2026-09-11.json",
+          "sha256": "c2a0742d496c4dbf330d6fcd068050ee7e202732ec50800c34548171d505a791",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/packaging-intelligence-2026-09-11.json",
+          "sha256": "153dfde68bf28361c01e2e2f5986059867b25b76c6b6e3753d464a1936b7558a",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/topic-opportunity-intelligence-2026-09-11.json",
+          "sha256": "71c4324c1b38e73390fc0273c72b1022896bb05f7cf2066c432439acd29da7e4",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/editing-visual-intelligence-pilot-2026-09-11.json",
+          "sha256": "6f2f137b23e31d427a90a4fa1732b15151f227e7bd7fd880146dd321ecfa3099",
+          "version_reference": "editing-visual-intelligence-pilot-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/hook-script-intelligence-pilot-2026-09-10.json",
+          "sha256": "be0a1e74354d1e6c9a7eaf2b9eaf641609679c6761934ff7b768c9cdfc6ecf06",
+          "version_reference": "hook-script-intelligence-pilot-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/packaging-intelligence-2026-09-09-v2.json",
+          "sha256": "d5f870ce51d41be9f40f24baf04fbc41e215a31a6f35612ba12533de5ec0a4aa",
+          "version_reference": "packaging-intelligence-2"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "4c469524751fb4c86f56fac476c998435ad32361713c6d410d63ba64a9a56500",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/hook-script-intelligence-2026-09-10.json",
+          "sha256": "18933c240aec27e56f1be8887b9df8e0101b2f80af493475a8b785ac065e2486",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/packaging-intelligence-2026-09-10.json",
+          "sha256": "5c3b78175caf123cfc5f6080f0d6f8763e242f81d1fe19b467b563e2d485c461",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json",
+          "sha256": "94402166b0549c508288188ddfa1ec06028ac2e62fa15fd53cb5f498eba1ba37",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000001-CAND-001-content-intelligence-v1.json",
+          "sha256": "57b5a1febd1c47fefbc69f9fe6faae9d23e8a7da26df53e42955361cb1187c6f",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000002-CAND-001-content-intelligence-v1.json",
+          "sha256": "fd845a75284c65298ada83985060dac41590c5a55452edc2662e0327ce971520",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000003-CAND-001-content-intelligence-v1.json",
+          "sha256": "c13c3f44207d516e4562ee2d646bfa6a724571009d5facdbc04a3936cc620c21",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000004-OP-001-content-intelligence-v1.json",
+          "sha256": "40601ff2b18558747618bfc0e472d874c365eced3d8569eea2cc74248713e04e",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000005-CAND-001-content-intelligence-v1.json",
+          "sha256": "fb1f01047e388da7b154b01ac52343f9fdee7d4170c0c34ca3f64b24f3d1af2b",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "code:scripts/report_editing_visual_intelligence.py",
+          "sha256": "5b9d2b3f4dfb699900e350a084b3334c56222a4f5e03c054804b8b4c76a91c61",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0022",
+      "ARTIFACT_SHA256": "55cd79e9787e21f597af3f895485aac68613060c48f02206192aa9bb16cea447",
+      "ARTIFACT_TYPE": "BENCHMARK",
+      "CHANNEL_IDS": [
+        "CH-000001",
+        "CH-000002"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/cross-channel/finance-channel-strategy-benchmark-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "BENCHMARK"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/hook-script-intelligence-2026-09-11.json",
+          "sha256": "d5cf30bd0c57e3b24815c2425b7b83733f06a1db81cc1b852516a7a791fa7844",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/packaging-intelligence-2026-09-10.json",
+          "sha256": "a5d9541cc1d48dcb493787786f174dfba57aea2c7c9685fac6416e377e43d902",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "611509566b58c929f89467735ec84aeefd10ad53155556e07584d398f9214eaa",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "ba673966ea569cee560666563fff3d79ac8a80517228080fd469e55abc469ff2",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/hook-script-intelligence-2026-09-11.json",
+          "sha256": "3d0d5728601b9fd2794b380a97226fd273eaae0804e4b0ee3def3672a3f1a8e1",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/packaging-intelligence-2026-09-10.json",
+          "sha256": "c29194a672ab1854c64d6d515071ad6b0ff301e2fca9b949ee6adf76dc12ba71",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "15b4e9a53d280bdfe566256c05410c693bace1667c4ca685810e6ce2f2144ef0",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "code:scripts/report_channel_strategy_intelligence.py",
+          "sha256": "738b38143efaaa7544a08d7c26155f728d9ba9d4747bd1c80d7788bf913c97ba",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0023",
+      "ARTIFACT_SHA256": "25a47db3ed1f80b141ad7f3f3794b0815ca9a0de7e32ff5646324621c0d1183a",
+      "ARTIFACT_TYPE": "BENCHMARK",
+      "CHANNEL_IDS": [
+        "CH-000003",
+        "CH-000005"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/cross-channel/health-channel-strategy-benchmark-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "BENCHMARK"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/hook-script-intelligence-2026-09-11.json",
+          "sha256": "c2a0742d496c4dbf330d6fcd068050ee7e202732ec50800c34548171d505a791",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/packaging-intelligence-2026-09-11.json",
+          "sha256": "153dfde68bf28361c01e2e2f5986059867b25b76c6b6e3753d464a1936b7558a",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/topic-opportunity-intelligence-2026-09-11.json",
+          "sha256": "71c4324c1b38e73390fc0273c72b1022896bb05f7cf2066c432439acd29da7e4",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "cb182d6120aef89de5f7ae3834fdc80c8fbe8517b1baab767b443be97d3d0fd6",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/hook-script-intelligence-2026-09-10.json",
+          "sha256": "18933c240aec27e56f1be8887b9df8e0101b2f80af493475a8b785ac065e2486",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/packaging-intelligence-2026-09-10.json",
+          "sha256": "5c3b78175caf123cfc5f6080f0d6f8763e242f81d1fe19b467b563e2d485c461",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json",
+          "sha256": "94402166b0549c508288188ddfa1ec06028ac2e62fa15fd53cb5f498eba1ba37",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "code:scripts/report_channel_strategy_intelligence.py",
+          "sha256": "738b38143efaaa7544a08d7c26155f728d9ba9d4747bd1c80d7788bf913c97ba",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0024",
+      "ARTIFACT_SHA256": "d9792e8728f606a0b02f033d416c0219b7dd17b71de2ad99d362dc62f2b4d332",
+      "ARTIFACT_TYPE": "GLOBAL_KNOWLEDGE",
+      "CHANNEL_IDS": [],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11T00:00:00Z",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/global/creator-strategy-knowledge-DS-000031.json",
+      "RECOMMENDED_REFRESH": [
+        "TRAINING_KNOWLEDGE"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/manifests/DS-000031.md",
+          "sha256": "e4c3756374915b0b8d9d4d4e33159e48dfe56fbd073031f1baf3f3d714c75f60",
+          "version_reference": null
+        },
+        {
+          "ref": "artifact:data/raw/global-youtube-knowledge/DS-000031/creator-strategy-audience-psychology-experimentation-corpus.txt",
+          "sha256": "ab555773faf5b04158aba4d61ebbb4310ac95bb299d07562074556ccfe6d3533",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0025",
+      "ARTIFACT_SHA256": "08945b016dc8b5c1a354fcf178b4936b5cedcade4baedd0ee2370620c02e218d",
+      "ARTIFACT_TYPE": "GLOBAL_KNOWLEDGE",
+      "CHANNEL_IDS": [],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11T00:00:00Z",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/global/creator-strategy-primary-validation-2026-09-24.json",
+      "RECOMMENDED_REFRESH": [
+        "TRAINING_KNOWLEDGE"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/global/creator-strategy-knowledge-DS-000031.json",
+          "sha256": "d9792e8728f606a0b02f033d416c0219b7dd17b71de2ad99d362dc62f2b4d332",
+          "version_reference": "creator-strategy-knowledge-1"
+        },
+        {
+          "ref": "artifact:data/manifests/DS-000031.md",
+          "sha256": "e4c3756374915b0b8d9d4d4e33159e48dfe56fbd073031f1baf3f3d714c75f60",
+          "version_reference": null
+        },
+        {
+          "ref": "artifact:data/raw/global-youtube-knowledge/DS-000031/creator-strategy-audience-psychology-experimentation-corpus.txt",
+          "sha256": "ab555773faf5b04158aba4d61ebbb4310ac95bb299d07562074556ccfe6d3533",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0026",
+      "ARTIFACT_SHA256": "57b5a1febd1c47fefbc69f9fe6faae9d23e8a7da26df53e42955361cb1187c6f",
+      "ARTIFACT_TYPE": "UNIFIED_PLAN",
+      "CHANNEL_IDS": [
+        "CH-000001"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/plans/CH-000001-CAND-001-content-intelligence-v1.json",
+      "RECOMMENDED_REFRESH": [
+        "UNIFIED_PLAN"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/blueprints/finance-channel-strategy-blueprint-2026-09-11.json",
+          "sha256": "684d4edcf1c4d27837f3d3c5c60cf8206b6e59300a31f707f866e8287554724c",
+          "version_reference": "channel-strategy-blueprint-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/hook-script-intelligence-2026-09-11.json",
+          "sha256": "d5cf30bd0c57e3b24815c2425b7b83733f06a1db81cc1b852516a7a791fa7844",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/packaging-intelligence-2026-09-10.json",
+          "sha256": "a5d9541cc1d48dcb493787786f174dfba57aea2c7c9685fac6416e377e43d902",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "611509566b58c929f89467735ec84aeefd10ad53155556e07584d398f9214eaa",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "ba673966ea569cee560666563fff3d79ac8a80517228080fd469e55abc469ff2",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "code:scripts/run_youtube_intelligence.py",
+          "sha256": "5a4bf6ccf8120e78536fc5f2bdcdb3a058a590f837d99760cea2d87dd8765acb",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0027",
+      "ARTIFACT_SHA256": "fd845a75284c65298ada83985060dac41590c5a55452edc2662e0327ce971520",
+      "ARTIFACT_TYPE": "UNIFIED_PLAN",
+      "CHANNEL_IDS": [
+        "CH-000002"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/plans/CH-000002-CAND-001-content-intelligence-v1.json",
+      "RECOMMENDED_REFRESH": [
+        "UNIFIED_PLAN"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/blueprints/finance-channel-strategy-blueprint-2026-09-11.json",
+          "sha256": "684d4edcf1c4d27837f3d3c5c60cf8206b6e59300a31f707f866e8287554724c",
+          "version_reference": "channel-strategy-blueprint-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "ba673966ea569cee560666563fff3d79ac8a80517228080fd469e55abc469ff2",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/hook-script-intelligence-2026-09-11.json",
+          "sha256": "3d0d5728601b9fd2794b380a97226fd273eaae0804e4b0ee3def3672a3f1a8e1",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/packaging-intelligence-2026-09-10.json",
+          "sha256": "c29194a672ab1854c64d6d515071ad6b0ff301e2fca9b949ee6adf76dc12ba71",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "15b4e9a53d280bdfe566256c05410c693bace1667c4ca685810e6ce2f2144ef0",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "code:scripts/run_youtube_intelligence.py",
+          "sha256": "5a4bf6ccf8120e78536fc5f2bdcdb3a058a590f837d99760cea2d87dd8765acb",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0028",
+      "ARTIFACT_SHA256": "c13c3f44207d516e4562ee2d646bfa6a724571009d5facdbc04a3936cc620c21",
+      "ARTIFACT_TYPE": "UNIFIED_PLAN",
+      "CHANNEL_IDS": [
+        "CH-000003"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/plans/CH-000003-CAND-001-content-intelligence-v1.json",
+      "RECOMMENDED_REFRESH": [
+        "UNIFIED_PLAN"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/blueprints/senior-health-channel-strategy-blueprint-2026-09-11.json",
+          "sha256": "e929478aa6d2195ff93fdd57ef7943bb5abb423c17637618fac22103ba78525e",
+          "version_reference": "channel-strategy-blueprint-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/hook-script-intelligence-2026-09-11.json",
+          "sha256": "c2a0742d496c4dbf330d6fcd068050ee7e202732ec50800c34548171d505a791",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/packaging-intelligence-2026-09-11.json",
+          "sha256": "153dfde68bf28361c01e2e2f5986059867b25b76c6b6e3753d464a1936b7558a",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/topic-opportunity-intelligence-2026-09-11.json",
+          "sha256": "71c4324c1b38e73390fc0273c72b1022896bb05f7cf2066c432439acd29da7e4",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "cb182d6120aef89de5f7ae3834fdc80c8fbe8517b1baab767b443be97d3d0fd6",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "code:scripts/run_youtube_intelligence.py",
+          "sha256": "5a4bf6ccf8120e78536fc5f2bdcdb3a058a590f837d99760cea2d87dd8765acb",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0029",
+      "ARTIFACT_SHA256": "40601ff2b18558747618bfc0e472d874c365eced3d8569eea2cc74248713e04e",
+      "ARTIFACT_TYPE": "UNIFIED_PLAN",
+      "CHANNEL_IDS": [
+        "CH-000004"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/plans/CH-000004-OP-001-content-intelligence-v1.json",
+      "RECOMMENDED_REFRESH": [
+        "UNIFIED_PLAN"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/editing-visual-intelligence-pilot-2026-09-11.json",
+          "sha256": "6f2f137b23e31d427a90a4fa1732b15151f227e7bd7fd880146dd321ecfa3099",
+          "version_reference": "editing-visual-intelligence-pilot-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/hook-script-intelligence-pilot-2026-09-10.json",
+          "sha256": "be0a1e74354d1e6c9a7eaf2b9eaf641609679c6761934ff7b768c9cdfc6ecf06",
+          "version_reference": "hook-script-intelligence-pilot-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/packaging-intelligence-2026-09-09-v2.json",
+          "sha256": "d5f870ce51d41be9f40f24baf04fbc41e215a31a6f35612ba12533de5ec0a4aa",
+          "version_reference": "packaging-intelligence-2"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "4c469524751fb4c86f56fac476c998435ad32361713c6d410d63ba64a9a56500",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "code:scripts/run_youtube_intelligence.py",
+          "sha256": "5a4bf6ccf8120e78536fc5f2bdcdb3a058a590f837d99760cea2d87dd8765acb",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0030",
+      "ARTIFACT_SHA256": "fb1f01047e388da7b154b01ac52343f9fdee7d4170c0c34ca3f64b24f3d1af2b",
+      "ARTIFACT_TYPE": "UNIFIED_PLAN",
+      "CHANNEL_IDS": [
+        "CH-000005"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/plans/CH-000005-CAND-001-content-intelligence-v1.json",
+      "RECOMMENDED_REFRESH": [
+        "UNIFIED_PLAN"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/blueprints/senior-health-channel-strategy-blueprint-2026-09-11.json",
+          "sha256": "e929478aa6d2195ff93fdd57ef7943bb5abb423c17637618fac22103ba78525e",
+          "version_reference": "channel-strategy-blueprint-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "cb182d6120aef89de5f7ae3834fdc80c8fbe8517b1baab767b443be97d3d0fd6",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/hook-script-intelligence-2026-09-10.json",
+          "sha256": "18933c240aec27e56f1be8887b9df8e0101b2f80af493475a8b785ac065e2486",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/packaging-intelligence-2026-09-10.json",
+          "sha256": "5c3b78175caf123cfc5f6080f0d6f8763e242f81d1fe19b467b563e2d485c461",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json",
+          "sha256": "94402166b0549c508288188ddfa1ec06028ac2e62fa15fd53cb5f498eba1ba37",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "code:scripts/run_youtube_intelligence.py",
+          "sha256": "5a4bf6ccf8120e78536fc5f2bdcdb3a058a590f837d99760cea2d87dd8765acb",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0031",
+      "ARTIFACT_SHA256": "f3a333248aa59e2b62f18d93fa3f87a882219d8a286b4cbfa122ce38f7ce1f8f",
+      "ARTIFACT_TYPE": "CROSS_NICHE_CALIBRATION",
+      "CHANNEL_IDS": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000005"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/system/cross-niche-strategy-calibration-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "TRAINING_CALIBRATION",
+        "CROSS_NICHE_CALIBRATION"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "ba673966ea569cee560666563fff3d79ac8a80517228080fd469e55abc469ff2",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/channel-strategy-diagnosis-2026-09-11.json",
+          "sha256": "cb182d6120aef89de5f7ae3834fdc80c8fbe8517b1baab767b443be97d3d0fd6",
+          "version_reference": "channel-strategy-diagnosis-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/system/youtube-strategy-training-knowledge-2026-09-11.json",
+          "sha256": "aa89dd669aa0b21dca29836133a1790da5d937a3f359e64881a0060dc8739dde",
+          "version_reference": "youtube-strategy-training-knowledge-1"
+        },
+        {
+          "ref": "code:scripts/report_channel_strategy_intelligence.py",
+          "sha256": "738b38143efaaa7544a08d7c26155f728d9ba9d4747bd1c80d7788bf913c97ba",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0032",
+      "ARTIFACT_SHA256": "f05acffed9cbbc950547e439d0cd0798301ef363e0e6807594f49c5a3a79d08f",
+      "ARTIFACT_TYPE": "FIRST_PARTY_CAPABILITY",
+      "CHANNEL_IDS": [],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/system/first-party-analytics-capability-status-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "FIRST_PARTY_DIAGNOSIS"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "code:scripts/ingest_youtube_analytics.py",
+          "sha256": "dbdf94a5bf65f7807526d08dac7306a212e38f9312adc5752cf30ea23ecf266c",
+          "version_reference": null
+        },
+        {
+          "ref": "code:scripts/plan_intelligence_refresh.py",
+          "sha256": "e1ef1518c1e70d936857c6789bd1156e5d8c0fec579b82bc6b183c5fa5fe4cb9",
+          "version_reference": null
+        },
+        {
+          "ref": "code:scripts/report_first_party_channel_diagnosis.py",
+          "sha256": "62e0d79a3f893d12109f543639fb3b5e69372d75e720c012879eebfba97d8e31",
+          "version_reference": null
+        },
+        {
+          "ref": "files:GLOBAL:FIRST_PARTY_CONTRACT",
+          "sha256": "a7aa341c7f74df3cd04084c148bbe18a8d9ac2199d0dbe27d9a7a24c8df80cef",
+          "version_reference": {
+            "file_count": 1,
+            "paths": [
+              "data/intelligence/system/first-party-analytics-import-contract.json"
+            ]
+          }
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0033",
+      "ARTIFACT_SHA256": "1223c04b2d5e3b022c0baf2a7e0ab85e1c45e372167f2928713e3f04f4089bde",
+      "ARTIFACT_TYPE": "CAPABILITY_REGISTRY",
+      "CHANNEL_IDS": [
+        "CH-000001",
+        "CH-000002",
+        "CH-000003",
+        "CH-000004",
+        "CH-000005"
+      ],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/system/youtube-intelligence-os-v1-capabilities-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "UNIFIED_PLAN"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/hook-script-intelligence-2026-09-11.json",
+          "sha256": "d5cf30bd0c57e3b24815c2425b7b83733f06a1db81cc1b852516a7a791fa7844",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/packaging-intelligence-2026-09-10.json",
+          "sha256": "a5d9541cc1d48dcb493787786f174dfba57aea2c7c9685fac6416e377e43d902",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000001/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "611509566b58c929f89467735ec84aeefd10ad53155556e07584d398f9214eaa",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/hook-script-intelligence-2026-09-11.json",
+          "sha256": "3d0d5728601b9fd2794b380a97226fd273eaae0804e4b0ee3def3672a3f1a8e1",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/packaging-intelligence-2026-09-10.json",
+          "sha256": "c29194a672ab1854c64d6d515071ad6b0ff301e2fca9b949ee6adf76dc12ba71",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000002/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "15b4e9a53d280bdfe566256c05410c693bace1667c4ca685810e6ce2f2144ef0",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/hook-script-intelligence-2026-09-11.json",
+          "sha256": "c2a0742d496c4dbf330d6fcd068050ee7e202732ec50800c34548171d505a791",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/packaging-intelligence-2026-09-11.json",
+          "sha256": "153dfde68bf28361c01e2e2f5986059867b25b76c6b6e3753d464a1936b7558a",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000003/topic-opportunity-intelligence-2026-09-11.json",
+          "sha256": "71c4324c1b38e73390fc0273c72b1022896bb05f7cf2066c432439acd29da7e4",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/editing-visual-intelligence-pilot-2026-09-11.json",
+          "sha256": "6f2f137b23e31d427a90a4fa1732b15151f227e7bd7fd880146dd321ecfa3099",
+          "version_reference": "editing-visual-intelligence-pilot-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/hook-script-intelligence-pilot-2026-09-10.json",
+          "sha256": "be0a1e74354d1e6c9a7eaf2b9eaf641609679c6761934ff7b768c9cdfc6ecf06",
+          "version_reference": "hook-script-intelligence-pilot-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/packaging-intelligence-2026-09-09-v2.json",
+          "sha256": "d5f870ce51d41be9f40f24baf04fbc41e215a31a6f35612ba12533de5ec0a4aa",
+          "version_reference": "packaging-intelligence-2"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json",
+          "sha256": "4c469524751fb4c86f56fac476c998435ad32361713c6d410d63ba64a9a56500",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/hook-script-intelligence-2026-09-10.json",
+          "sha256": "18933c240aec27e56f1be8887b9df8e0101b2f80af493475a8b785ac065e2486",
+          "version_reference": "hook-script-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/packaging-intelligence-2026-09-10.json",
+          "sha256": "5c3b78175caf123cfc5f6080f0d6f8763e242f81d1fe19b467b563e2d485c461",
+          "version_reference": "packaging-intelligence-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/channels/CH-000005/topic-opportunity-intelligence-2026-09-10.json",
+          "sha256": "94402166b0549c508288188ddfa1ec06028ac2e62fa15fd53cb5f498eba1ba37",
+          "version_reference": "topic-opportunity-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000001-CAND-001-content-intelligence-v1.json",
+          "sha256": "57b5a1febd1c47fefbc69f9fe6faae9d23e8a7da26df53e42955361cb1187c6f",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000002-CAND-001-content-intelligence-v1.json",
+          "sha256": "fd845a75284c65298ada83985060dac41590c5a55452edc2662e0327ce971520",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000003-CAND-001-content-intelligence-v1.json",
+          "sha256": "c13c3f44207d516e4562ee2d646bfa6a724571009d5facdbc04a3936cc620c21",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000004-OP-001-content-intelligence-v1.json",
+          "sha256": "40601ff2b18558747618bfc0e472d874c365eced3d8569eea2cc74248713e04e",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/plans/CH-000005-CAND-001-content-intelligence-v1.json",
+          "sha256": "fb1f01047e388da7b154b01ac52343f9fdee7d4170c0c34ca3f64b24f3d1af2b",
+          "version_reference": "youtube-intelligence-os-content-plan-1"
+        },
+        {
+          "ref": "code:scripts/run_youtube_intelligence.py",
+          "sha256": "5a4bf6ccf8120e78536fc5f2bdcdb3a058a590f837d99760cea2d87dd8765acb",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0034",
+      "ARTIFACT_SHA256": "aa89dd669aa0b21dca29836133a1790da5d937a3f359e64881a0060dc8739dde",
+      "ARTIFACT_TYPE": "TRAINING_KNOWLEDGE",
+      "CHANNEL_IDS": [],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-11",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/system/youtube-strategy-training-knowledge-2026-09-11.json",
+      "RECOMMENDED_REFRESH": [
+        "TRAINING_KNOWLEDGE"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "canonical:GLOBAL:TRAINING_KNOWLEDGE",
+          "sha256": "79d577f4226f31c9225b1d5c868bf7c4a74489c363b4f304d1ebc6cf60fe0923",
+          "version_reference": {
+            "first_id": "DS-000011",
+            "last_id": "DS-000018",
+            "row_count": 82
+          }
+        },
+        {
+          "ref": "code:scripts/report_channel_strategy_intelligence.py",
+          "sha256": "738b38143efaaa7544a08d7c26155f728d9ba9d4747bd1c80d7788bf913c97ba",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    },
+    {
+      "ARTIFACT_ID": "INTEL-0035",
+      "ARTIFACT_SHA256": "06b425bb99ba9e4f8832a9d0ddcda8b0a5a5d57eac92a50a00b72941a3467a0f",
+      "ARTIFACT_TYPE": "GLOBAL_KNOWLEDGE",
+      "CHANNEL_IDS": [],
+      "CURRENT_STATUS": "CURRENT",
+      "GENERATED_AT": "2026-09-24",
+      "GENERATED_FROM_COMMIT": "96a47dfb656ca6b577535c4023761ad836a14926",
+      "PATH": "data/intelligence/system/youtube-strategy-training-knowledge-2026-09-24.json",
+      "RECOMMENDED_REFRESH": [
+        "TRAINING_KNOWLEDGE"
+      ],
+      "SOURCE_DEPENDENCIES": [
+        {
+          "ref": "artifact:data/intelligence/global/creator-strategy-knowledge-DS-000031.json",
+          "sha256": "d9792e8728f606a0b02f033d416c0219b7dd17b71de2ad99d362dc62f2b4d332",
+          "version_reference": "creator-strategy-knowledge-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/global/creator-strategy-primary-validation-2026-09-24.json",
+          "sha256": "08945b016dc8b5c1a354fcf178b4936b5cedcade4baedd0ee2370620c02e218d",
+          "version_reference": "creator-strategy-primary-validation-1"
+        },
+        {
+          "ref": "artifact:data/intelligence/system/youtube-strategy-training-knowledge-2026-09-11.json",
+          "sha256": "aa89dd669aa0b21dca29836133a1790da5d937a3f359e64881a0060dc8739dde",
+          "version_reference": "youtube-strategy-training-knowledge-1"
+        },
+        {
+          "ref": "artifact:data/manifests/DS-000031.md",
+          "sha256": "e4c3756374915b0b8d9d4d4e33159e48dfe56fbd073031f1baf3f3d714c75f60",
+          "version_reference": null
+        },
+        {
+          "ref": "artifact:data/raw/global-youtube-knowledge/DS-000031/creator-strategy-audience-psychology-experimentation-corpus.txt",
+          "sha256": "ab555773faf5b04158aba4d61ebbb4310ac95bb299d07562074556ccfe6d3533",
+          "version_reference": null
+        }
+      ],
+      "STALE_REASON": null
+    }
+  ],
+  "blocked_layers": [],
+  "channel_filter": null,
+  "invariants": {
+    "canonical_db_mutations": 0,
+    "historical_artifact_overwrites": 0,
+    "network_calls": 0,
+    "raw_evidence_mutations": 0
+  },
+  "layers_affected": [
+    "CANONICAL",
+    "TOPIC",
+    "PACKAGING",
+    "HOOK_SCRIPT"
+  ],
+  "longitudinal_status": {
+    "CH-000001": {
+      "LONGITUDINAL_TREND": "NOT_AVAILABLE",
+      "snapshot_count": 1
+    },
+    "CH-000002": {
+      "LONGITUDINAL_TREND": "NOT_AVAILABLE",
+      "snapshot_count": 1
+    },
+    "CH-000003": {
+      "LONGITUDINAL_TREND": "NOT_AVAILABLE",
+      "snapshot_count": 1
+    },
+    "CH-000004": {
+      "LONGITUDINAL_TREND": "AVAILABLE",
+      "snapshot_count": 2
+    },
+    "CH-000005": {
+      "LONGITUDINAL_TREND": "NOT_AVAILABLE",
+      "snapshot_count": 1
+    },
+    "CH-000006": {
+      "LONGITUDINAL_TREND": "AVAILABLE",
+      "snapshot_count": 2
+    },
+    "CH-000007": {
+      "LONGITUDINAL_TREND": "NOT_AVAILABLE",
+      "snapshot_count": 1
+    },
+    "CH-000008": {
+      "LONGITUDINAL_TREND": "NOT_AVAILABLE",
+      "snapshot_count": 1
+    },
+    "CH-000009": {
+      "LONGITUDINAL_TREND": "NOT_AVAILABLE",
+      "snapshot_count": 1
+    },
+    "CH-000010": {
+      "LONGITUDINAL_TREND": "AVAILABLE",
+      "snapshot_count": 2
+    }
+  },
+  "replay": false,
+  "run_order": [
+    "TOPIC",
+    "PACKAGING",
+    "HOOK_SCRIPT"
+  ],
+  "schema_version": "intelligence-refresh-plan-1",
+  "stale_artifacts": {
+    "data/intelligence/channels/CH-000004/hook-script-intelligence-pilot-2026-09-10.json": [
+      "NEW_PUBLIC_METRIC_SNAPSHOT"
+    ],
+    "data/intelligence/channels/CH-000004/packaging-intelligence-2026-09-09-v2.json": [
+      "CANONICAL_VIDEO_CHANGED",
+      "NEW_PUBLIC_METRIC_SNAPSHOT"
+    ],
+    "data/intelligence/channels/CH-000004/topic-opportunity-intelligence-2026-09-09.json": [
+      "CANONICAL_VIDEO_CHANGED",
+      "NEW_PUBLIC_METRIC_SNAPSHOT"
+    ]
+  },
+  "status": "REFRESH_REQUIRED",
+  "trigger_changes": [
+    {
+      "change_type": "NEW_DATASET",
+      "channel_id": null,
+      "source": "CANONICAL_DATASET_SET_CHANGED"
+    }
+  ]
+}

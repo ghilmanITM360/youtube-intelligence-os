@@ -1,0 +1,69 @@
+{
+  "canonical_base": "08e719264e31ecd82de24f8eeb8f065c08359fe5",
+  "dataset_id": "DS-000035",
+  "registration_run": "RUN-000039",
+  "records": {
+    "9VG0yqq_PHM": {
+      "catalog_video_id": "VID-000668",
+      "registration_status": "REGISTERED",
+      "identity_status": "IDENTITY_VERIFIED",
+      "transcript_status": "TRANSCRIPT_PENDING",
+      "transcript_rows": 0,
+      "published_at": "2026-09-15T18:23:56Z",
+      "title": "If you put a toaster in a freezer, which wins?",
+      "metrics": null,
+      "content_format": null
+    },
+    "X97DDWvxaqQ": {
+      "catalog_video_id": "VID-000669",
+      "registration_status": "REGISTERED",
+      "identity_status": "IDENTITY_VERIFIED",
+      "transcript_status": "TRANSCRIPT_PENDING",
+      "transcript_rows": 0,
+      "published_at": "2026-09-01T17:00:21Z",
+      "title": "Could you power your computer by typing?",
+      "metrics": null,
+      "content_format": null
+    }
+  },
+  "reviewed_packet": "docs/evidence/what-if-identity-2026-10-11/transcript-pending-metadata-packet.json",
+  "reviewed_packet_sha256": "a8e9477ab0e4670bdf4ee6bb3235793521077743e9e886b29bb1a2d502634309",
+  "workbook_sha256": "42811ac103f24f3474e2ffcd6a18ee62c4fbbe1e0f263fb5d2243bffa9113467",
+  "materialization": "Artifact Tool workbook; package relationships normalized to relative XLSX paths; exact timestamp strings retained for existing importer. Original offset and UTC equivalent both included. Empty numeric cells mean unobserved, never zero. Canonical raw workbook is a byte-identical controlled copy, not independent evidence.",
+  "historical_rows_preserved": true,
+  "pending_transcript_gap_delta": 2,
+  "raw_source_modified": false,
+  "paid_acquisition": false,
+  "crosswalk_modified": false,
+  "new_pr_merge_approved": false,
+  "pending_only_report_verification": {
+    "disposable_copy": true,
+    "canonical_item_count": 2,
+    "unavailable_transcripts": [
+      "VID-000668",
+      "VID-000669"
+    ],
+    "hook_features": 0,
+    "script_features": 0
+  },
+  "validation": {
+    "full_pytest": {
+      "passed": 460,
+      "skipped": 1
+    },
+    "focused_importer_registry": 63,
+    "freshness_tracker": 27,
+    "sqlite_integrity": "ok",
+    "foreign_key_violations": 0,
+    "registry_validator": "PASS",
+    "dataset_validator": "PASS",
+    "structured_registration_verifier": "VERIFIED_100_PERCENT_PROVENANCE",
+    "secret_scan": 0,
+    "ruff": "PASS",
+    "compile": "PASS",
+    "lfs_fsck": "PASS",
+    "whitespace": "PASS",
+    "intelligence_refresh": "REQUIRED_AND_PRESERVED",
+    "tracker_styles_preserved": true
+  }
+}
