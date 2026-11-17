@@ -1,0 +1,15 @@
+# Finance Short02 — original pen illustration system
+
+This production extends the approved V2 woman host, cream institutional props and green/red money vocabulary. Private supplied references remain local: REF09/2EZzwupIa80 51.80s supports paper grip; REF03/rSa2aziEsAI 38.7333–39.6997s supports an independently entering note; REF09 32.54–35.61s/44.75s supports actual evidence highlights. VISUAL/MOTION/EDITING/SHORTS_DNA are source observations, not proof of the creator's software. The missing27-sequence report/DOCX is still unavailable; workflow hypothesis remains PARTIALLY_SUPPORTED.
+
+White dominates. Black irregular contours use purposeful changes between roof, paper, face and limb strokes. Cream distinguishes physical paper/buildings; green indicates money or inflation-fighting benefit; red signals expense, pause or source attention. An upward rate arrow is a direction marker, not a universal good/bad judgement. No navy scene, dashboard, glass or decorative geometric chart.
+
+Production display lettering is original single-line path artwork in tools/pen_art.py. Curved bowls, leaning stems, unequal widths and nonuniform horizontal edges are deliberate. Every label retains semantic data-text and can be rewritten through the original alphabet. No installed display font, font file or proprietary font outline is required. Official screenshot type remains original pixels. Contact-sheet captions alone use a system sans-serif and can differ across PCs; scene/source-art exports do not depend on that font.
+
+Narrative richness comes from original bond/coupon, clock, loss pile/open ledger, paused Treasury route, shield/price tag and repair tool. Supporting banker has grey hair, glasses, tan face and green tie; she is a separate identity, not a recolored host. Do not import creator drawings or copy its maps/BoJ dome/individual compositions.
+
+Numbers are editable original paths where explanatory; genuine source crops are unchanged raster pixels. Conceptual arrows and steps carry no numerical scales. About$3T×0.0025=about$7.5B annualized ONLY if balances stay fixed. No trace chart or relative pile height is a measured loss series. Deferred balance is cumulative; Treasury pause is conditional, not a negative cash transfer. Historical2021 remittance107.4B is separate from107.8B net income.
+
+Essential composition aims at x80–900,y160–1580 in1080×1920. Simulated UI review uses top120/right150/bottom275 source pixels and is not universal certification. Source prose/attribution can be small at160px; focused figure and original explanation must survive. Runtime53s and state holds remain provisional. Static contact does not certify interpolated motion; an editor must hold/step-switch stable drawings or retest an actual move.
+
+Remaining stylistic difference: consistent original path alphabet and carefully editable SVG contours remain cleaner than naturally inked source drawings. This is a reference-compatible interpretation, not equivalence or human-artist certification. Full-package owner art approval remains required before animation.

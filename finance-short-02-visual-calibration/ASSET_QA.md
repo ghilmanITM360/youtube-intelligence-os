@@ -1,0 +1,47 @@
+# Full static asset QA
+
+Structural tests do not certify artistic equivalence or audience comprehension. Owner full-package approval is pending. Native final compositions, every320px state contact and160px stress/simulated UI reviewed per scene. Source captions/attribution remain secondary at160px.
+
+## Scene01
+
+Four progressive hook states inspected. Same approved host, surprise eyes and attached paper grip; raised-hand pose corrected to avoid facial overlap. Original path lettering replaces macOS display-font dependency. Native/320px main contradiction clear;160px secondary bill label small. No observed clipping or fundamental visual-direction failure; more orderly than natural reference ink.
+
+Reference: REF09 / 2EZzwupIa80 S007.2 51.80s paper grip; REF11 / rSa2aziEsAI S010.9 46.21s institutional/rate composition. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene02
+
+Seven static states and native/320/160 previews inspected. Added distinct original banker, account link and reverse Fed-to-bank expense flow. Corrected tiny policy passage using an exact quarter-point crop; kept its separate context/date. Actual Wednesday3,022,066 and IORB3.90% appear with date/units/attribution. Main relationship clear at320; fine documentary context/attribution weak at160 and needs focused reading hold in future edit.
+
+Reference: REF03 / rSa2aziEsAI M0027 38.7333-39.6997s note entrance; REF08 / 0ll9rEtoRrs S003.1-S003.3 9.76-10.78s additive paper. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene03
+
+Five native/source states with progressive percent-to-decimal math inspected; cash bundle/pointing host remain independent. Actual decimal check verifies3T x0.0025=7.5B. Fixed-reserves qualifier and annualized extra-cost wording remain visible; no invented accumulation arithmetic. Main values/assumption readable at320, secondary forecast note weak at160. Typography intentionally hand-lettered uppercase, cleaner than the creator ink.
+
+Reference: VISUAL_DNA / -X6YzlY_8tM 169-189s sequential numerical comparisons; REF05 M0047 30.375-32.750s isolated paper scale. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene04
+
+Bond/coupon/clock and expense-bill illustrations inspected atnative and mobile, all4 states sampled. Preserved explicit much-bond-income and slower reset labels into final comparison, avoiding an all-income claim. Arrows are qualitative, not an invented chart. Main objects and direction survive160; secondary timing words need320/narration. No observed clipping or anatomy mismatch.
+
+Reference: VISUAL_DNA / 0ll9rEtoRrs 75-225s bond/payment metaphor; MOTION_DNA persistent additive financial explanations. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene05
+
+Six states inspected: open accounting ledger and loss papers build cumulatively, then genuine dated H41 label/Total is isolated. Corrected Expenses>income lettering overlap. Kept original source pixels, millions/date and Fed release attribution; negative line explicitly means deferred balance. Main234B and actual-233587 remain identifiable at160; row label and fine attribution need320/native. No claim that latest hike created the full balance.
+
+Reference: REF09 / 2EZzwupIa80 S005.2-S005.6 32.54-35.61s and S006.1 44.75s actual source/highlight. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene06
+
+Six static states inspected. Future-earnings bag and open ledger precede the paused Fed-to-Treasury route; separate historical2021 layout uses actual107.4B crop and preliminary publication date. No107.8B income/remittance confusion or negative cash arrow. Buildings, pause, money and evidence remain independent.320px relation/date readable;160px main107.4B and pause survive, fine attribution secondary.
+
+Reference: REF09 / 2EZzwupIa80 S007.2 51.80s paper personification; VISUAL_DNA simple institutional finance props. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+## Scene07
+
+Four payoff states inspected. Same host switches resolved shield grip to concerned wrench-handle grip; foreground thumb layers meet recorded hand anchors. Corrected conditional headline to CAN MAKE REPAIR HARDER. Shield/price-pressure reminder links both consequences. Native/320px contact and main words clear;160px main paradox recognizable, subtle fingers reduced. Recovery steps are a qualitative metaphor, not a measured financial chart. All7 scenes now have actual editable sources.
+
+Reference: SHORTS_DNA / rSa2aziEsAI ending yen/debt tradeoff; REF02 / -X6YzlY_8tM S018.9/S018.12 190.18/194.67s expression switch. Broad technique is REFERENCE_SUPPORTED; the original staging is ART_DIRECTION_INFERENCE. Actual future easing/audio timing is NOT_YET_VERIFIED.
+
+## Final package review and corrected boundaries
+
+All36 static states and seven native scene finals were inspected through scene sheets/native samples; all114 reusable assets reviewed on the original-only contact sheet and production character sheet. Padded five dollar labels, FACE_WOW overlay brow bounds and wrench tip after an alpha-boundary test exposed clipping; all standalone illustrated alpha bounds now clear their canvas edge. Final seven-scene overview rechecked; no fundamental visual-direction failure observed. Geometry remains cleaner and lettering more uniform than naturally inked references. This is owner-review-ready original interpretation, not visual equivalence or independent human sign-off.
+
+Exact decoded-pixel comparison:114 standalone exports,36 mobile state previews and7 native scene images match their SVG sources in the recorded Sharp/libvips runtime. SVG IDs, actual layer maps, financial qualifiers, approved script hash,24 exact official pixel crops, prop/hand contact and host anatomy are checked separately. Eight face/body assemblies are not eight new character designs; cash bundle reuses banknotes. Counts are explicit in manifests/ASSET_COUNTS.json.
+
+The final payoff now says CAN MAKE REPAIR HARDER; an earlier text replacement did not match the source spacing and was caught in the rendered review, then corrected. The final render contains the conditional wording. No unsupported financial certainty is intended.
