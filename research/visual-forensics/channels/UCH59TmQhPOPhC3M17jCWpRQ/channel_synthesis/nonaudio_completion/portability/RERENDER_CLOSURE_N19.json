@@ -1,0 +1,116 @@
+{
+ "utc": "2026-11-06",
+ "session": "15f69c1b",
+ "machine": "Machine A",
+ "method": "each render.py run from a scratch copy with the visual-ct-scan venv; only RT-V3-S01 variable D edited in the copy; published rt.mp4 files only read",
+ "runtime": {
+  "python": "3.12.14",
+  "opencv": "5.0.0",
+  "numpy": "2.5.4",
+  "pillow": "13.0.0",
+  "ffmpeg": "9.0.1"
+ },
+ "results": [
+  {
+   "rt": "RT-01",
+   "orig_frames": 120,
+   "new_frames": 120,
+   "decoded_frames_identical": 120,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V1-P01",
+   "orig_frames": 90,
+   "new_frames": 90,
+   "decoded_frames_identical": 90,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V1-S01",
+   "orig_frames": 158,
+   "new_frames": 158,
+   "decoded_frames_identical": 158,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V2-01",
+   "orig_frames": 180,
+   "new_frames": 180,
+   "decoded_frames_identical": 180,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V2-02",
+   "orig_frames": 60,
+   "new_frames": 60,
+   "decoded_frames_identical": 60,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V2-S01",
+   "orig_frames": 208,
+   "new_frames": 208,
+   "decoded_frames_identical": 208,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V2-S02",
+   "orig_frames": 208,
+   "new_frames": 208,
+   "decoded_frames_identical": 208,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V2-S03",
+   "orig_frames": 208,
+   "new_frames": 208,
+   "decoded_frames_identical": 208,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V2-S04",
+   "orig_frames": 208,
+   "new_frames": 208,
+   "decoded_frames_identical": 208,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V3-01",
+   "orig_frames": 180,
+   "new_frames": 180,
+   "decoded_frames_identical": 180,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V3-S01",
+   "orig_frames": 179,
+   "new_frames": 179,
+   "decoded_frames_identical": 179,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V3-S02",
+   "orig_frames": 179,
+   "new_frames": 179,
+   "decoded_frames_identical": 179,
+   "byte_identical": true
+  },
+  {
+   "rt": "RT-V3-S03",
+   "orig_frames": 179,
+   "new_frames": 179,
+   "decoded_frames_identical": 179,
+   "byte_identical": true
+  }
+ ],
+ "byte_identical": "13/13",
+ "rt_v2_s02_font_test": {
+  "finding": "Published render used the Noteworthy fallback; /Library/Fonts/Bradley Hand Bold.ttf is absent and optional",
+  "noteworthy_rerender_decoded_md5": "6a1cdef7e60a18019949b6be2cc7269a",
+  "published_decoded_md5": "6a1cdef7e60a18019949b6be2cc7269a",
+  "system_bradley_decoded_md5": "48ffce465b0b2f2c6934587aa1d69a2d",
+  "mean_abs_pixel_diff_published_vs_bradley": 0.4683,
+  "max_frame_mean_diff": 1.6509
+ },
+ "not_tested": "second Mac"
+}

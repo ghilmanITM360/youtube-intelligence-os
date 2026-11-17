@@ -1,0 +1,36 @@
+{
+ "test": "RT-V1-S01",
+ "scene": "size-comparison card, 158 frames",
+ "palette": {
+  "background": "#f8f8f8 off-white, ~70% of frame at the final framing",
+  "main_fill": "warm brown family (#784828 / #885828) ~15-20% (the large creature)",
+  "ink": "#080808 outlines ~1-2%",
+  "accent": "grey #888878 small (horns/tusks/claws)"
+ },
+ "content": "Original: a small round-headed stick-figure villager (simple oval head, dot eyes, short brown hair tuft, leaf skirt, stick limbs) and a huge original creature: a brown furry ground-sloth-like beast with grey curved claws, drawn with hand shading.",
+ "timeline": [
+  "f0: hard cut in. Villager alone, centred-left, LARGE: figure height ~75% of frame height. White background.",
+  "f13-15: a thin black vertical measurement bracket (|-shaped with short horizontal end ticks) and a 2-line small handwritten label (e.g. \"4 ft 11 in (150 cm)\" / \"110 lbs (50 kg)\") appear to the LEFT of the villager (simple pop-in, 1-3 frames).",
+  "f24-37 (14 frames): CAMERA ZOOM-OUT on the whole artwork: total scale factor ~0.43 (i.e. content shrinks to 43%), ease-in-out (slow-fast-slow, fastest around f30), plus a slight horizontal drift (~+120 px total). As it widens, the huge creature is revealed standing to the RIGHT, its height ~85% of frame; the villager + bracket + label are now small at lower-left.",
+  "f38-52: a second taller bracket + 2-line label (e.g. \"13 ft 1 in (400 cm)\" / \"9,900 lbs (4,500 kg)\") appears left of the creature, at upper-left of it.",
+  "f52-157: hold the composition (tiny idle allowed: e.g. 1-2 single-frame blink/pose swaps; no camera motion)."
+ ],
+ "format": {
+  "w": 1920,
+  "h": 1080,
+  "fps": "30000/1001",
+  "codec": "h264",
+  "container": "mp4"
+ },
+ "style": {
+  "line": "thick near-black (#080808..#202020) hand-drawn outlines, slightly uneven width 4-7px at 1080p; flat fills, at most a light hand-shaded texture; no gradients, no glow, no drop shadows",
+  "typography": "handwritten / marker-style lowercase labels (font UNKNOWN in source; use any handwritten-looking font or draw strokes); never a geometric sans",
+  "originality": "ALL characters, creatures, wording and objects must be NEW and original as specified here; do not imitate any existing show"
+ },
+ "deliverables": [
+  "render.py (or equivalent) that produces rt.mp4",
+  "rt.mp4",
+  "timeline.json: frame indices you used for every event"
+ ],
+ "rules": "You see only this spec. No source frames are provided or allowed. Use python3 + numpy + opencv (venv at ~/YIOS-local-audits/tooling/visual-ct-scan-venv/bin/python3) and ffmpeg (h264, yuv420p)."
+}

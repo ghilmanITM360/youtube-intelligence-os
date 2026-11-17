@@ -1,0 +1,7 @@
+id,status,states,change,basis,label
+K01,APPLIED,W046/W047,boundary f8439->f8438,"first-changed-frame onset: static f8434-8437 (MAD 0), f8438 classroom panel entering from right over white card (native f8438 viewed); settled f8442",MEASURED+OBSERVED(native)
+K02,APPLIED,W085b/W086,boundary f14060->f14059,"first-changed-frame onset of fade-in from black; changed bbox x576-1289,y440-1063",MEASURED
+K03,ANNOTATION,W081,hard cut f13168 confirmed,"MAD 161, 99.9% px changed at f13168, static f13169-13174; earlier f13164-13174 bracket was too wide",MEASURED
+K04,ANNOTATION,W085b,fade-in f13993-13999,static from f14000 (luma 1.808); end of fade-in pinned to f13999,MEASURED
+K05,CONVENTION,all,"onset=first frame whose content differs from last steady frame of previous state; hard cut = single frame; fade/slide=interval belongs to incoming state, except fade-outs which belong to the outgoing state until black",definition,DEFINITION
+K06,UNCHANGED_VARIANCE,"W002,W003,W004,W058","boundaries sit mid-ramp (fade or motion ramp) under v3 definitions; not re-cut (W002 start f841 = fade onset after zoom f837-841; W058 start f9905 inside a f9897-9907 motion ramp, ambiguous)",automated MAD series only,MEASURED_ONLY_NOT_VISUALLY_REVIEWED

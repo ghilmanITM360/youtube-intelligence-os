@@ -1,0 +1,22 @@
+{
+ "utc": "2026-11-06",
+ "session": "15f69c1b",
+ "supersedes": "R20_VERIFY_N17.json",
+ "package_items": 21,
+ "package_bytes": 260841354,
+ "sha256_mismatches": 0,
+ "status": "PARTIAL",
+ "transfer": "BLOCKED: approved off-device destination not provided",
+ "same_device_test": "21/21 hashes, 4 restores decoded; refusal of same-device destination exit 2; procedure test only, not backup",
+ "rerender": "13/13 byte-identical on Machine A (RERENDER_CLOSURE_N19.json)",
+ "gaps_closed": [
+  "4 calibration extracts packaged",
+  "/Library/Fonts Bradley Hand path explained: optional, must be absent for byte-identical RT-V2-S02",
+  "manifest base_commit updated to N18"
+ ],
+ "remaining": [
+  "off-device copy verified at the destination",
+  "read confirmed from the second Mac"
+ ],
+ "r20_pass_requires": "a copy at an owner-approved durable off-device destination, verified by stage_and_verify.sh at that destination (and readable from the second Mac)"
+}

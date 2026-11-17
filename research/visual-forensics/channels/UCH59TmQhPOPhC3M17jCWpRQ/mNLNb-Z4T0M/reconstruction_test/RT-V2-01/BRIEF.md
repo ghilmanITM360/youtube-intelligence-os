@@ -1,0 +1,7 @@
+# Reconstruction test RT-V2-01 (fresh worker)
+You receive ONLY `SPEC_GIVEN_TO_WORKER.json` in this folder. Do not look at any file outside this folder (no source video, no frames, no other tables).
+Build a NEW ORIGINAL 6.0-second clip (180 frames) implementing modules M_SQUASH_SWAP and M_CAMERA_PUSH_EASE exactly as specified, one after the other (first module starting near frame 30, second near frame 100; nothing else moves outside those windows).
+- 1920x1080, 30000/1001 fps CFR, H.264 mp4. Use the `test_scene` colours exactly (flat board colour inside board_box_px, wall colour outside). Picture/element content: your own simple original shapes and colours, clearly different from the board colour.
+- Render with Python (PIL + numpy) and ffmpeg via: /Users/ghilmankhan/YIOS-local-audits/tooling/visual-ct-scan-venv/bin/python3 (has PIL, numpy, cv2). Encode losslessly enough that flat colours stay flat (e.g. -crf 12 -pix_fmt yuv420p).
+Write in this folder: `render.py`, `rt.mp4`, and `timeline.json` with the exact frame indices you intended (0-based): SQ_collapse_start (first frame the panel is smaller than full), SQ_band_frames (list), SQ_settled (first frame back at full size), CAM_start (first moving frame), CAM_end (last moving frame); boxes: {"panel":[x0,y0,x1,y1] containing the panel at full size, "scene":[...] region that moves during the camera module}. Box coordinates are integer pixels.
+Do not copy any existing channel's characters or wording. Final message: what you built, frames per event, any spec ambiguity you had to resolve and how.

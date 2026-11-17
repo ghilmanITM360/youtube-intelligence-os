@@ -1,0 +1,20 @@
+{
+ "video": "uPQcyookL0Y",
+ "date": "2026-11-04",
+ "session": "1e8761b1",
+ "W085b": {
+  "interval": "f13993-f14058 (unchanged)",
+  "fade_in": "f13993-f13999 (MEASURED; settles f14000)",
+  "intra_event": "f14029 single-frame word swap and yet->somehow",
+  "exit": "no fade-out; static text to f14058, W086 fade-in starts f14059",
+  "classification": "TEXT_CARD state: fade-in entry, hard exit",
+  "correction": "states_v6_draft.csv W085b basis text 'fade to black again ~f14030-14058 (seq154/155 sparse)' is NOT SUPPORTED: luma stays 2 and diff 0.00 f14030-14058. Original row kept; superseded by this note."
+ },
+ "splits_f2835_f5429": {
+  "decision": "NOT APPLIED; partition v6 retained (89 states)",
+  "rule": "Kit ref 03 state taxonomy lists digital zoom under CAMERA and keeps SHOT boundaries separate from EVENT intervals; ref 13 temporal gate: no zoom falsely counted as a cut. v1 already records same-artwork reframes as intra-state events (e.g. BURST_34 in W001).",
+  "evidence": "Both are single-frame scale discontinuities on identical artwork; output pixels cannot distinguish an edit cut from a keyframed zoom (VC-14/15). Splitting would contradict v1's own convention.",
+  "recorded_as": "NAC-V1-E04, NAC-V1-E05 CAMERA events (v1_visual_event_additions_NAC.csv)"
+ },
+ "dependents": "No state IDs change, so prompts (89/89), art audit and coverage keep their keys. W085b prompt/art rows that mention a fade-out are flagged in V1_W085b_dependent_text_check.csv."
+}

@@ -1,0 +1,77 @@
+{
+ "test": "RT-V2-S01",
+ "criterion_sha256": "626e59746ca845e74292a2b88e906418e296aa401873f5ab22542b1ff9efb1da",
+ "render_sha256": "5f77e3b71466a36182926c17b059813b32c345a0952c022bd18a7ba428f7d019",
+ "deterministic": {
+  "C1": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames_ffprobe": 208,
+   "frames_decoded_cv2": 208
+  },
+  "C2": {
+   "ok": true,
+   "water": 0.433,
+   "grass": 0.34,
+   "sky": 0.14
+  },
+  "C3": {
+   "ok": false,
+   "sum_dscale": -0.3682,
+   "sum_dx": 514.5
+  },
+  "C4": {
+   "ok": true,
+   "onsets": [
+    60,
+    83,
+    103,
+    130
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "longest_local_run": 78
+  }
+ },
+ "deterministic_overall": "FAIL",
+ "C6_visual": {
+  "evaluator": "orchestrator, render frames f0,60,90,120,150,207 only",
+  "items": {
+   "hand_drawn_outline_style": {
+    "ok": true,
+    "obs": "dark jittered outlines on hills/trees, flat fills"
+   },
+   "handwritten_labels": {
+    "ok": false,
+    "obs": "labels are an italic sans (OpenCV Hershey per worker notes), not handwritten letterforms; arrows are dotted white with heads (OK)"
+   },
+   "perspective_drift": {
+    "ok": true,
+    "obs": "label groups shrink and drift toward the horizon; figure floats in from bottom and ends small near the horizon"
+   },
+   "original_content": {
+    "ok": true,
+    "obs": "new words/items/character"
+   }
+  },
+  "ok": false,
+  "non_scored_observations": [
+   "river is a straight V-wedge, spec said winding",
+   "by f150 \"rotten fish\" label is detached from its fish item; labels overlap near horizon ~f190",
+   "background has almost no texture (flat stripes)"
+  ]
+ },
+ "overall": "FAIL",
+ "diagnosis": {
+  "C3_fail_cause": "MEASUREMENT_ON_FEATURELESS_RENDER: background pixel-identical (f0 vs f207 changed px 0.65%); ORB frame-to-previous fit locked onto the moving high-texture labels/figure (600-900 inliers on them), producing apparent dx 514 px / dscale -0.37. Not a real camera move. Pre-registered C3 nevertheless recorded FAIL as measured.",
+  "C3b_attempt": "a background-mask static check was tried and NOT adopted: on the compressed source no stable background keypoints survive (0 keypoints at tol 36/72; spurious fits at 120), so it cannot be calibrated; adopting it would be threshold-fitting.",
+  "fix": "render side: spec v2 for RT-V2-S02 requires texture over the whole frame (as the source has) so the tracker sees the static background, handwritten letterforms, winding river, labels attached to items; criterion unchanged (same sha256)."
+ },
+ "retest": "RT-V2-S02"
+}

@@ -1,0 +1,15 @@
+{
+ "test": "RT-V1-S01",
+ "registered_before_render": true,
+ "registered_utc": "2026-11-04T19:0xZ",
+ "criteria": [
+  "C1 format exact (1920x1080, 30000/1001, h264); frames 156-160",
+  "C2 palette at last frame: >=55% pixels within L1<=40 of #f8f8f8; >=8% within L1<=60 of #784828 or #885828",
+  "C3 zoom-out: summed per-frame dscale (dense_motion.py, same tool as source) over moving run in [-0.95,-0.70]; run length 11-17 frames; run starts in f20-28",
+  "C4 ease: largest |dscale| frame in middle third of the run; first and last run frames |dscale| < 0.6*peak",
+  "C5 static outside: frames 1-19 and 45-end have |dscale|<0.003 and |dx|<2 (camera)",
+  "C6 visual (orchestrator, render frames only): hand-drawn outline style, handwritten labels, bracket-left-of-figure layout, original characters \u2014 each PASS/FAIL"
+ ],
+ "measurement": "deterministic C1-C5 by scripts/evaluate_style_rt.py on rendered pixels; C6 visual by orchestrator on render frames only; overall PASS only if all C1-C6 PASS",
+ "scope": "style + full-scene (characters, background, typography, layout, motion) for one bounded scene; font/software UNKNOWN; sound NOT tested"
+}

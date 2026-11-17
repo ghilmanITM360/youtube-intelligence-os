@@ -1,0 +1,28 @@
+state,strip_path,first_frame,last_frame,event_type,description,evidence_label
+W081,frames/motion_strips/batch09/W081_peak13299.png,13296,13303,CAMERA_SCALE,Red rectangle and its 3000 label both grow and drift up-left across all 8 tiles with decreasing step size; group scale-up or camera zoom cannot be separated.,OBSERVED (tile positions); INFERRED (decelerating easing read from step sizes)
+W081,frames/motion_strips/batch09/W081_peak13357.png,13354,13357,ELEMENT_ENTER,"Crowd cluster enters from the right edge: sliver f13354, partial f13355-13356, fully visible by f13357; no 3000 label in any tile.",OBSERVED
+W081,frames/motion_strips/batch09/W081_peak13357.png,13357,13361,CHARACTER_MOTION,Whole crowd group continues sliding left and decelerating (tile-local centre x about 295 to 170 of 480) from f13357 to f13361.,"OBSERVED (group translation, not individual figures)"
+W082,frames/motion_strips/batch09/W082_peak13558.png,13555,13558,ELEMENT_ENTER,"Isometric corn plot drops in from top edge: tip at f13555, growing into view through f13558.",OBSERVED
+W082,frames/motion_strips/batch09/W082_peak13558.png,13558,13562,OTHER,"Corn plot keeps settling downward with decreasing step (about 25, 15, 5 tile px per frame) and is stationary at f13561-13562; no overshoot seen.",OBSERVED; INFERRED (ease-out)
+W082,frames/motion_strips/batch09/W082_peak13597.png,13594,13595,NO_VISIBLE_CHANGE,Mammoth static at same position in f13594-13595.,OBSERVED
+W082,frames/motion_strips/batch09/W082_peak13597.png,13596,13601,ELEMENT_EXIT,"Mammoth slides straight downward and exits the bottom: lower in f13596-13597, mostly out in f13598, head tip in f13599, gone by f13600-13601.",OBSERVED
+W084,frames/motion_strips/batch09/W084_peak13747.png,13744,13748,FADE,Background fades from mid-grey (f13744) through dark grey (f13746) to near black (f13747) and black (f13748); character stays in place.,OBSERVED
+W084,frames/motion_strips/batch09/W084_peak13747.png,13748,13751,NO_VISIBLE_CHANGE,Black background and dimmed character unchanged f13748-13751; character also looks darker than in earlier tiles.,OBSERVED
+W085a,frames/motion_strips/batch09/W085a_peak13936.png,13933,13940,FADE,Murky beige-teal scene dims progressively tile by tile toward dark; blue patch at top right persists but darkens; no shapes resolved.,OBSERVED
+W085a,frames/motion_strips/batch09/W085a_peak13952.png,13949,13954,FADE,Very dark scene fades to near-black by f13953-13954; faint blotches only visible in f13949-13951.,OBSERVED
+W085a,frames/motion_strips/batch09/W085a_peak13952.png,13954,13956,NO_VISIBLE_CHANGE,Frames look pure black at tile resolution (labels only).,OBSERVED (downscaled tiles; very dark values may hide residual detail)
+W085b,frames/motion_strips/batch09/W085b_peak14029.png,14026,14028,NO_VISIBLE_CHANGE,White text and yet static on black.,OBSERVED
+W085b,frames/motion_strips/batch09/W085b_peak14029.png,14029,14029,TEXT_REVEAL,"Text changes from and yet (f14028) to somehow (f14029) in a single frame step, same centre line; no intermediate wipe seen.",OBSERVED; INFERRED (hard text swap)
+W085b,frames/motion_strips/batch09/W085b_peak14029.png,14030,14033,NO_VISIBLE_CHANGE,somehow static through f14033; no fade-to-black visible in this strip.,OBSERVED
+W086,frames/motion_strips/batch09/W086_peak14109.png,14106,14113,OTHER,"Campfire flame cycles: tall and bright (f14106-14108), drops to medium with detached tongue (f14109-14111), small (f14112-14113); light glow on floor shrinks with it. Characters and cave unchanged.",OBSERVED
+W086,frames/motion_strips/batch09/W086_peak14196.png,14193,14200,OTHER,"Flame sequence tall (f14193-14195), medium (f14196-14198), small (f14199-14200), tile-for-tile similar to the f14106 strip; consistent with a looping flame animation 87 frames apart (not verified further).",OBSERVED; INFERRED (loop)
+W087,frames/motion_strips/batch09/W087_peak14261.png,14258,14260,NO_VISIBLE_CHANGE,They didnt give up text static on white.,OBSERVED
+W087,frames/motion_strips/batch09/W087_peak14261.png,14261,14261,TEXT_REVEAL,Phrase changes from They didnt give up (f14260) to when everything else (f14261) in one frame step; no wipe seen.,OBSERVED; INFERRED (hard text swap)
+W087,frames/motion_strips/batch09/W087_peak14286.png,14283,14285,NO_VISIBLE_CHANGE,when everything else static.,OBSERVED
+W087,frames/motion_strips/batch09/W087_peak14286.png,14286,14286,CUT_WITHIN_STRIP,"Hard change to a much larger DID. in a single frame (f14285 to f14286); no scale animation visible in f14286-14290, text static after.",OBSERVED
+W088,frames/motion_strips/batch09/W088_peak14390.png,14387,14394,CAMERA_SCALE,Push-in from wide classroom (man small at right) to close-up (man fills right half by f14393-14394); head size grows each tile.,OBSERVED
+W088,frames/motion_strips/batch09/W088_peak14390.png,14388,14392,CAMERA_PAN,"subscribe chalk text slides off to the left (full f14387, partial f14389-14391, sliver f14392) while the view moves; consistent with a lateral component of the zoom.",OBSERVED; INFERRED (lateral shift)
+W088,frames/motion_strips/batch09/W088_peak14526.png,14523,14524,NO_VISIBLE_CHANGE,Close-up of the man static across f14523-14524 (very small head movement only).,OBSERVED
+W088,frames/motion_strips/batch09/W088_peak14526.png,14525,14527,CAMERA_SCALE,"Pull-back from close-up to nearly wide framing (f14525 mid-zoom, f14526 near wide, f14527 wide).",OBSERVED
+W088,frames/motion_strips/batch09/W088_peak14526.png,14524,14527,CAMERA_PAN,"subscribe chalk text slides back in from the left edge (sliver f14524, partial f14525-14526, full f14527).",OBSERVED
+W088,frames/motion_strips/batch09/W088_peak14526.png,14528,14530,NO_VISIBLE_CHANGE,Wide framing static; orange trail visible near desk base.,OBSERVED

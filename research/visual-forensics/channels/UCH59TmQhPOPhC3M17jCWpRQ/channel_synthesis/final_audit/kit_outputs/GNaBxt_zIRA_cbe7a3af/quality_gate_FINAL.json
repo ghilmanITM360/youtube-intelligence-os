@@ -1,0 +1,105 @@
+{
+ "video_id": "GNaBxt_zIRA",
+ "audit": "BE final three-video audit 2026-11-04 (session 1e8761b1)",
+ "status": "VISUAL_ANALYSIS_PARTIAL",
+ "CT_SCAN_COMPLETE": false,
+ "FULL_AV_SIGNOFF": false,
+ "gates": {
+  "R01 Source identity + SHA-256 + bytes vs registry": {
+   "status": "PASS",
+   "evidence": "cbe7a3af... 101042486 B = registry row"
+  },
+  "R02 Decoded timeline (CFR 30000/1001; frames)": {
+   "status": "PASS",
+   "evidence": "16319 frames"
+  },
+  "R03 State partition covers every frame; no gaps/overlaps": {
+   "status": "PASS",
+   "evidence": "states_v1 113 states 0-16318"
+  },
+  "R04 Boundary candidates verified; unresolved boundaries": {
+   "status": "PASS",
+   "evidence": "boundary review 247 rows; 0 validation errors"
+  },
+  "R05 Intra-state motion / transitions / camera / drawing changes": {
+   "status": "PARTIAL",
+   "evidence": "173 strip events"
+  },
+  "R06 Native art direction per state (characters/assets/palette/type/layout)": {
+   "status": "PASS (state-level; sparse frames)",
+   "evidence": "113/113"
+  },
+  "R07 Fine visual detail inside long states": {
+   "status": "PARTIAL",
+   "evidence": "long-state interiors sampled"
+  },
+  "R08 Narration coverage + visual alignment": {
+   "status": "PARTIAL",
+   "evidence": "172/172 unique segs (6 dups); 58 UNCERTAIN"
+  },
+  "R09 Actual listening (not ASR)": {
+   "status": "BLOCKED",
+   "evidence": "same"
+  },
+  "R10 Asset aliases + cross-video consistency": {
+   "status": "PARTIAL",
+   "evidence": "per-batch asset IDs; no video-level crosswalk"
+  },
+  "R11 Production specifications": {
+   "status": "PARTIAL",
+   "evidence": "specifications_v1 DRAFT + RT-V3-01 MEASURED spec"
+  },
+  "R12 Kit-required image + image-to-video prompts per distinct state": {
+   "status": "PASS",
+   "evidence": "113/113"
+  },
+  "R13 Independent review": {
+   "status": "PARTIAL",
+   "evidence": "same"
+  },
+  "R14 Supported corrections + disputes resolved": {
+   "status": "PASS",
+   "evidence": "PC-001 (now MEASURED) / PC-002"
+  },
+  "R15 Reconstruction / render tests": {
+   "status": "PARTIAL",
+   "evidence": "RT-V3-01 PASS (2 modules; timing/geometry only)"
+  },
+  "R16 Final report + blueprint + production manual": {
+   "status": "PARTIAL (report/blueprint v1 DRAFT)",
+   "evidence": "visual_ct_scan_report_v1.md"
+  },
+  "R17 Kit mandatory files (manifest/coverage/shot/event/AV/blueprint/gate/handoff)": {
+   "status": "PASS",
+   "evidence": "kit_outputs/GNaBxt_zIRA_cbe7a3af (derived FC-07)"
+  },
+  "R18 Checksum seals verify": {
+   "status": "PASS",
+   "evidence": "seal C 662/0"
+  },
+  "R19 Published artifact readback (remote blob = local)": {
+   "status": "PASS",
+   "evidence": "153/0"
+  },
+  "R20 Evidence portability": {
+   "status": "PARTIAL",
+   "evidence": "same"
+  },
+  "R21 Audio gate / FULL_AV_SIGNOFF": {
+   "status": "BLOCKED",
+   "evidence": "no listening"
+  },
+  "R22 Kit completion contract (CT_SCAN_COMPLETE)": {
+   "status": "FAIL",
+   "evidence": "VISUAL_ANALYSIS_PARTIAL"
+  }
+ },
+ "kit_gates": {
+  "source_identity": "PASS",
+  "temporal": "PARTIAL (contiguous verified partition; intra-state coverage sparse + peak strips)",
+  "creative_reconstruction": "PARTIAL (all-state prompts; bounded timing/geometry tests only)",
+  "audio": "BLOCKED (no listening capability)"
+ },
+ "reviewer": "Claude sonnet subagents + Claude opus orchestrator (same vendor); no human",
+ "supersedes": "quality_gate_C.json (kept)"
+}

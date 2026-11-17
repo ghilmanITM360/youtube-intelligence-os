@@ -1,0 +1,32 @@
+{
+ "test": "RT-V1-P01",
+ "mp4": "source_calibration_local_only/src_RT-V1-P01.mp4",
+ "criteria": {
+  "C1": {
+   "ok": true,
+   "frames": 90,
+   "cv2": 90
+  },
+  "C2": {
+   "ok": true,
+   "jump_frames": [
+    45
+   ]
+  },
+  "C3": {
+   "ok": true,
+   "incremental_scale": 2.137,
+   "fixed_point": [
+    636,
+    817
+   ]
+  },
+  "C4": {
+   "ok": true,
+   "max_other_step": 0.008,
+   "drift_pre": 0.0151,
+   "drift_post": 0.0006
+  }
+ },
+ "deterministic": "PASS"
+}

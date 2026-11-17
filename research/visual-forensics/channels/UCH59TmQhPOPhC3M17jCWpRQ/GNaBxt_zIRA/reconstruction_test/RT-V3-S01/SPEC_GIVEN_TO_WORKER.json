@@ -1,0 +1,35 @@
+{
+ "test": "RT-V3-S01",
+ "scene": "classroom chalkboard push-in, 179 frames",
+ "palette": {
+  "board": "dark olive-green chalkboard #484828..#485828 ~36% at final framing",
+  "wall": "tan/ochre #c89858 ~13%",
+  "wood": "dark brown #683818 ~10% (board frame, desks)",
+  "ink": "#080808 outlines ~3%"
+ },
+ "content": "Original: a prehistoric-style classroom \u2014 large wood-framed chalkboard upper-centre, two small hand-drawn wall posters left and right (original images/words), rows of small wooden desks with stools in the foreground, a stone lectern at right with an original teacher character standing behind it (head and shoulders visible; any original design, e.g. a bald elder with a long white moustache). On the board, handwritten chalk-white cursive text: \"topic: sabre cat\".",
+ "timeline": [
+  "f0: hard cut to the WIDE classroom (board + posters + desks + lectern + teacher all visible).",
+  "f8-58 (about 50 frames): CAMERA PUSH-IN towards the board text and the teacher: total scale factor ~1.70 (content grows to 170%), ease-in-out (very slow start, fastest around f30-36, slow settle into f58), with a simultaneous pan so that content moves LEFT by ~670 px total (camera moves right, towards the teacher); ends framing the board text across the frame with the teacher at the right edge.",
+  "f59-178: after the push, a very slow continued creep-in: about +2% more scale (1.70 -> ~1.735) spread evenly over these 120 frames (barely perceptible). The teacher lifts a thin stick pointer and taps/points at the text: pointer changes position in several discrete steps (pose swaps, 1-2 frames each) 3-5 times; mouth open/closed swaps allowed."
+ ],
+ "format": {
+  "w": 1920,
+  "h": 1080,
+  "fps": "30000/1001",
+  "codec": "h264",
+  "container": "mp4"
+ },
+ "style": {
+  "line": "thick near-black (#080808..#202020) hand-drawn outlines, slightly uneven width 4-7px at 1080p; flat fills, at most a light hand-shaded texture; no gradients, no glow, no drop shadows",
+  "typography": "handwritten / marker-style lowercase labels (font UNKNOWN in source; use any handwritten-looking font or draw strokes); never a geometric sans",
+  "originality": "ALL characters, creatures, wording and objects must be NEW and original as specified here; do not imitate any existing show"
+ },
+ "deliverables": [
+  "render.py (or equivalent) that produces rt.mp4",
+  "rt.mp4",
+  "timeline.json: frame indices you used for every event"
+ ],
+ "rules": "You see only this spec. No source frames are provided or allowed. Use python3 + numpy + opencv (venv at ~/YIOS-local-audits/tooling/visual-ct-scan-venv/bin/python3) and ffmpeg (h264, yuv420p).",
+ "spec_version": "v2 (pre-render; v1 timeline mis-stated the push window and omitted the slow creep, see EVALUATOR_CALIBRATION_NOTES.md)"
+}

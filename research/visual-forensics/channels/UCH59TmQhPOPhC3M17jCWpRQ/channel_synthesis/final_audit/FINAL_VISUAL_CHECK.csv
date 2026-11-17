@@ -1,0 +1,18 @@
+check_id,video_id,frames,resolution,method,ledger_row,ledger_claim_checked,result,evidence_label,local_image
+VC-01,mNLNb-Z4T0M,f8340,native 1920x1080,sequential decode,S080 (tables/consolidated_art_audit.csv),A13 street + castle; bearded man right; green grade grows,MATCH,OBSERVED,frames_local_only/v2_native_f8340.png
+VC-02,uPQcyookL0Y,f60,0.33x,sequential decode,W001 (o_art_consolidated.csv),timeline bar + '2025' + stick-figure YOU,MATCH,OBSERVED,frames_local_only/oe_v1.png
+VC-03,uPQcyookL0Y,f7300,0.33x,sequential decode,W040,brown-bearded caveman; cave dining; leaf on plate,MATCH,OBSERVED,frames_local_only/oe_v1.png
+VC-04,uPQcyookL0Y,f14600,0.33x,sequential decode,W088,glasses lecturer; chalk 'subscribe'; Barely Evolved sign,MATCH,OBSERVED,frames_local_only/oe_v1.png
+VC-05,mNLNb-Z4T0M,f60,0.33x,sequential decode,S004,bearded protagonist bust + partial 'Ages',MATCH,OBSERVED,frames_local_only/oe_v2.png
+VC-06,mNLNb-Z4T0M,f4200,0.33x,sequential decode,S044,villager holding plate; 'keep cooking for the next 200 years',MATCH,OBSERVED,frames_local_only/oe_v2.png
+VC-07,mNLNb-Z4T0M,f16650,0.33x,sequential decode,S136,teacher at stone table; chalk 'subscribe'; sign 'Barely Evolved Shool',MATCH,OBSERVED,frames_local_only/oe_v2.png
+VC-08,GNaBxt_zIRA,f60,0.33x,sequential decode,S001,hunter + giant grey hooked-beak bird on savanna,MATCH,OBSERVED,frames_local_only/oe_v3.png
+VC-09,GNaBxt_zIRA,f8160,0.33x,sequential decode,S062,glasses lecturer; chalk 'flightless bird'; pointer,MATCH,OBSERVED,frames_local_only/oe_v3.png
+VC-10,GNaBxt_zIRA,f16280,0.33x,sequential decode,S113,lecturer exits f16212-16219; empty classroom; chalk 'previous video',MATCH (exit recorded in motion events),OBSERVED,frames_local_only/oe_v3.png
+VC-11,GNaBxt_zIRA,f2074-2090,native ROI,bright-pixel bbox per frame,PC-001 S015,inset pop with overshoot then settle,CONFIRMED_MEASURED: heights 35;0;266;363;362;344... (+5.5% vertical; width clipped by ROI),MEASURED,frames_local_only/v3_S015_dense.png
+VC-12,mNLNb-Z4T0M,f5864-5876;f6567-6578;f9771-9782;f14310-14322,native ROI,warm-pixel panel top edge per frame,S062/S069/S094/S122 squash swaps,overshoot present?,NOT_OBSERVED in 4 events: top edge returns monotonically to settled value (e.g. 136;260;384;384;260;134),MEASURED,frames_local_only/v2_S062_dense.png
+VC-13,mNLNb-Z4T0M,f14-39,native ROI + full frame,mouth ROI pixel change + FULL_FRAME_MEASUREMENTS,S003 (synthesis 'single-frame pose swap' citation),discrete mouth swap?,NOT_SUPPORTED: change decays monotonically f14-f26 (mouth ROI 7208->0; mean_abs_diff 7.66->0.05) = global settle; no discrete swap measured,MEASURED,frames_local_only/v2_S003.png
+VC-14,uPQcyookL0Y,f2833-2836,0.33x + FULL_FRAME_MEASUREMENTS,decode + diff,UBC-002 W016,unresolved boundary,ADJUDICATED: single-frame punch-in on same globe/ice artwork (mean_abs_diff 0.008->38.95->0.26); cut vs keyframe undecidable from output,OBSERVED+MEASURED,frames_local_only/v1_ubc.png
+VC-15,uPQcyookL0Y,f5427-5430,0.33x + FULL_FRAME_MEASUREMENTS,decode + diff,UBC-003 W032,unresolved boundary,ADJUDICATED: single-frame punch-in wide->closer on same two cavemen (0.05->31.35->0.74),OBSERVED+MEASURED,frames_local_only/v1_ubc.png
+VC-16,uPQcyookL0Y,f10315-10318,0.33x + FULL_FRAME_MEASUREMENTS,decode + diff,UBC-001 W062,hard cut vs 1-frame scale jump,ADJUDICATED: continuous decelerating mouse reframe over >=4 frames (14.55;24.60;15.55;1.98) with bacterium gone by f10316; not a hard cut,OBSERVED+MEASURED,frames_local_only/v1_ubc.png
+VC-17,uPQcyookL0Y,f6283-6296,native,changed-region bbox (calibration),W034 M3,overshoot detector calibration,POSITIVE: bbox h 232 peak -> 186 settle,MEASURED,os_v1_cal.csv

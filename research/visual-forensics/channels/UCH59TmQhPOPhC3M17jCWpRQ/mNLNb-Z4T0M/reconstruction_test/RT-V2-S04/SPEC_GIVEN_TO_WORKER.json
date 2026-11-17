@@ -1,0 +1,42 @@
+{
+ "test": "RT-V2-S04",
+ "scene": "landscape label sequence, 208 frames",
+ "palette": {
+  "water": "light cyan-blue #68c8d8 / #68b8d8 ~40-45% (a wide river filling the lower-middle of frame)",
+  "grass": "olive green #789838 ~12-27% (rolling hills left and right)",
+  "sky": "very pale cyan/white #c8f8f8..#d8f8f8 ~13% (top band)",
+  "ink": "dark outlines on hills, trees"
+ },
+ "content": "Original: a wide winding river under pale sky, two grassy hills, two or three simple hand-drawn trees, a tiny distant original village on the horizon (small roof shapes). Original label words and small items: e.g. \"bugs\" with a tiny dot item, \"mud\" with a small BROWN (#7a5230) blob, \"rotten fish\" with a small grey fish. The river must WIND (an S-curve that narrows toward the horizon), not a straight wedge.",
+ "timeline": [
+  "f0: hard cut to the landscape; NO camera motion at any point in the scene (static frame).",
+  "f0-40: nothing moves.",
+  "f~55: label 1 (white handwritten word with thin dark outline) + small white dotted arrow pointing to a tiny item in the water appear (pop/quick write-on <=6 frames), mid-left of river.",
+  "f~85: label 2 + arrow + small item appear lower-left (closer, larger).",
+  "f~115: label 3 + arrow + item appear at the bottom-left (closest, largest).",
+  "f70-195: each label+item group then drifts slowly UP/away toward the horizon and shrinks (perspective drift downstream), while staying readable as long as possible; groups keep their order.",
+  "f~140-207: an original character (e.g. a sad floating person shown from the chest up, eyes closed) drifts in from the bottom edge and floats up the river toward the horizon, shrinking, ending small near centre."
+ ],
+ "format": {
+  "w": 1920,
+  "h": 1080,
+  "fps": "30000/1001",
+  "codec": "h264",
+  "container": "mp4"
+ },
+ "style": {
+  "line": "thick near-black (#080808..#202020) hand-drawn outlines, slightly uneven width 4-7px at 1080p; flat fills, at most a light hand-shaded texture; no gradients, no glow, no drop shadows",
+  "typography": "TRUE handwritten letterforms: draw each label as connected, uneven marker strokes (e.g. stroke-by-stroke polylines with jitter), or use a handwriting TTF font if one exists on this Mac (look under /System/Library/Fonts and /Library/Fonts, e.g. \"Noteworthy\", \"Bradley Hand\", \"Chalkboard\", \"Marker Felt\"). Italic sans or Hershey fonts are NOT acceptable. White fill with a clear dark outline 2-3px.",
+  "originality": "ALL characters, creatures, wording and objects must be NEW and original as specified here; do not imitate any existing show"
+ },
+ "deliverables": [
+  "render.py (or equivalent) that produces rt.mp4",
+  "rt.mp4",
+  "timeline.json: frame indices you used for every event"
+ ],
+ "rules": "You see only this spec. No source frames are provided or allowed. Use python3 + numpy + opencv (venv at ~/YIOS-local-audits/tooling/visual-ct-scan-venv/bin/python3) and ffmpeg (h264, yuv420p).",
+ "spec_version": "v3 after RT-V2-S02 FAIL (palette)",
+ "texture": "Cover the WHOLE frame with fine static hand-drawn texture that never moves: many short grass strokes and tufts on both hills, ripple/wave line marks scattered over all of the water, a few cloud wisps in the sky, small distant hill outlines. The background must be identical every frame (no shimmer at all), so it is completely static. Keep texture SPARSE: grass strokes may cover at most ~20% of hill area; the flat hill fill must be exactly #789838 and clearly dominant on the hills (target: #789838-like pixels >= 15% of the whole frame). Water ripple marks likewise sparse; water fill #68c8d8.",
+ "label_rule": "Each label, its arrow and its item form one rigid group: they drift and shrink together and never separate. Groups must not overlap one another.",
+ "label_size": "Closest label (label 3 at onset) cap height ~55-70 px at 1080p; label 1 ~40 px; they shrink while drifting."
+}

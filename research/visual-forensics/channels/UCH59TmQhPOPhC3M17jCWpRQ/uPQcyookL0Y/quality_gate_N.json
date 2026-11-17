@@ -1,0 +1,68 @@
+{
+  "status": "PARTIAL",
+  "art_start_checkpoint_L": 20,
+  "art_end": 40,
+  "states_total": 89,
+  "art_scope": "W001-W040 sparse native review; intermediate motion not fully inspected",
+  "narration": {
+    "assessed_unique_segments": 35,
+    "segment_ids": "0-34",
+    "primary_supplement_segment_ids": [
+      27
+    ],
+    "ledger_unique_segments": 35,
+    "full_audio_verified_segments": 0,
+    "coverage": "All35 have partial sampled visual evidence only; segment27 primary two-frame supplement supersedes raw reviewer uninspected status; no full segment completion claimed. Segment25 has separate head/tail judgments across batches.",
+    "prior_uncertain_segments": [
+      8,
+      11,
+      22
+    ],
+    "batch04_uncertain_segments": [],
+    "corrections": "m_supplement_corrections.csv controls seg4 narrowed MIXED_PARTIAL and seg8 Daddy? witness. m_reviewer15_corrections.json controls18/19. Preserve raw differing11 judgments and0 primary adjudication."
+  },
+  "boundaries": {
+    "eight_exceptions_reviewed": true,
+    "remaining": [],
+    "v6_change": "Only W058 kind\u2192TRANSITION_STATE; all89 IDs/bounds unchanged; earlier state versions immutable"
+  },
+  "production_specifications": {
+    "scoped_drafts": 3,
+    "fully_reconstructed": 0,
+    "file": "production_specs/specifications_v1.json"
+  },
+  "actual_listening": "PENDING",
+  "reconstruction_test": "NOT_STARTED",
+  "source": "source_manifest.json; durable MP4 outside Git",
+  "validation": {
+    "batch04_native_frames": 30,
+    "sequential_pixel_mismatches": 0,
+    "witness_ID_hash_checks": "PASS",
+    "state_coverage": "89 contiguous states,14647frames; identity map validated"
+  },
+  "resources": {
+    "five_hour_at_initial_recovery": 15,
+    "weekly_at_initial_recovery": 26,
+    "five_hour_at_this_resume": 8,
+    "weekly_at_this_resume": 41,
+    "five_hour_pre_seal": 75,
+    "weekly_pre_seal": 51,
+    "paid_credit_balance": 0,
+    "paid_or_reset_credits_used": 0,
+    "reset_credits_available_untouched": 2,
+    "disk_free_GiB_last": 92,
+    "RAM_GiB": 16,
+    "memory_pressure_level_before_batch": 2,
+    "memory_pressure_level_latest": 1,
+    "swap_used_MB_latest": 11047.81,
+    "paging_latest_4seconds": {
+      "pageouts": 0,
+      "swapins": 54,
+      "swapouts": 0
+    },
+    "paging_during_batch": "Swapouts rose2477090\u21922563462;pageouts178361\u2192180089;16KiBpages",
+    "context": "Compacted once; exact live percent unavailable; inherited reviewer216k input replaced by fresh bounded context",
+    "budget_decision": "Batch04+recovery used67 percentage points this window. New heavy batch cannot be safely budgeted with validation/publication reserve below95. Stop after N; no credits spent."
+  },
+  "next_operation": "Fresh usage/ownership gate; inspect batch05 indices40:50=W041\u2013W050, reuse existing valid frames, run one bounded native-art/overlapping-ASR reviewer. Continue original specs; actual listening remains separate."
+}

@@ -1,0 +1,43 @@
+{
+ "test": "RT-V2-S01",
+ "mp4": "src_RT-V2-S01.mp4",
+ "criteria": {
+  "C1": {
+   "ok": false,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames": 199
+  },
+  "C2": {
+   "ok": true,
+   "water": 0.438,
+   "grass": 0.248,
+   "sky": 0.186
+  },
+  "C3": {
+   "ok": true,
+   "sum_dscale": -0.0019,
+   "sum_dx": 1.8
+  },
+  "C4": {
+   "ok": true,
+   "onsets": [
+    46,
+    66,
+    88,
+    108,
+    128
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "longest_local_run": 69
+  }
+ },
+ "deterministic": "FAIL",
+ "C6": "visual, recorded separately"
+}

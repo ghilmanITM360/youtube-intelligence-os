@@ -1,0 +1,77 @@
+{
+ "frames": 120,
+ "criteria": {
+  "format": {
+   "ok": true,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001",
+    "nb_frames": "120"
+   }
+  },
+  "bg_colour": {
+   "ok": true,
+   "got": [
+    250.0,
+    250.0,
+    250.0
+   ],
+   "want": "#fcfcfc"
+  },
+  "M1_clip_reveal": {
+   "ok": true,
+   "measured_growth_frames": [
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "duration": 5,
+   "left_edge_values": [
+    18
+   ],
+   "want": "3-6 frames, left-to-right (left ink edge fixed)"
+  },
+  "M3_pop_overshoot": {
+   "ok": true,
+   "onset": 40,
+   "heights": [
+    12,
+    53,
+    102,
+    95,
+    91,
+    89,
+    89,
+    89,
+    89,
+    89
+   ],
+   "peak_offset": 2,
+   "final": 89,
+   "want": "peak within 2 frames of onset, then settle smaller"
+  },
+  "M5_pose_swap": {
+   "ok": true,
+   "change_frames": [
+    20,
+    85
+   ],
+   "want": ">=2 swaps, each completes in exactly 1 frame"
+  },
+  "claims_vs_measured": {
+   "M1_claimed": [
+    10,
+    14
+   ],
+   "M5_claimed": [
+    20,
+    85
+   ]
+  }
+ },
+ "overall": "PASS"
+}

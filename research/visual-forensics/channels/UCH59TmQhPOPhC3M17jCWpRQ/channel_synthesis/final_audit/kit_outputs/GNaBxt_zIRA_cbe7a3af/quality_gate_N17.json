@@ -1,0 +1,109 @@
+{
+ "video_id": "GNaBxt_zIRA",
+ "audit": "BE N17 close-out 2026-11-05 (session 15f69c1b)",
+ "status": "VISUAL_ANALYSIS_PARTIAL",
+ "CT_SCAN_COMPLETE": false,
+ "FULL_AV_SIGNOFF": false,
+ "non_audio_verdict": "ANALYSIS_REPORTING_COMPLETE__OFF_DEVICE_PORTABILITY_PENDING",
+ "NON_AUDIO_COMPLETE": false,
+ "remaining_non_audio": [
+  "R20 off-device transfer BLOCKED: destination not provided"
+ ],
+ "excluded_audio": [
+  "R08 PARTIAL (ASR only)",
+  "R09 BLOCKED",
+  "R21 BLOCKED"
+ ],
+ "reviewer": "blind: separate Claude contexts; orchestrator: Claude Opus 5.5; same vendor",
+ "gates": {
+  "R01 Source identity + SHA-256 + bytes vs registry": {
+   "status": "PASS",
+   "evidence": "cbe7a3af... 101042486 B = registry row"
+  },
+  "R02 Decoded timeline (CFR 30000/1001; frames)": {
+   "status": "PASS",
+   "evidence": "16319 frames"
+  },
+  "R03 State partition covers every frame; no gaps/overlaps": {
+   "status": "PASS",
+   "evidence": "states_v1 113 states 0-16318"
+  },
+  "R04 Boundary candidates verified; unresolved boundaries": {
+   "status": "PASS",
+   "evidence": "boundary review 247 rows; 0 validation errors"
+  },
+  "R05 Intra-state motion / transitions / camera / drawing changes": {
+   "status": "PASS_WITHIN_DECLARED_COVERAGE",
+   "evidence": "MEASURED: all 14113 frames of 280 intervals (dense motion + M3 camera). VISUALLY INSPECTED: 1267/14113 interior frames viewed by reviewers; 48 intervals all frames viewed; 152 named from tiles, 128 on native crops; 39 blind rows; 14 rows on orchestrator native frames. Camera: 79 CAMERA_FRAMEWIDE; 112 camera not established (declared)."
+  },
+  "R06 Native art direction per state (characters/assets/palette/type/layout)": {
+   "status": "PASS (state-level; sparse frames)",
+   "evidence": "113/113"
+  },
+  "R07 Fine visual detail inside long states": {
+   "status": "PASS_WITHIN_DECLARED_COVERAGE",
+   "evidence": "MEASURED: every long-state interior frame (14113 frames). VISUALLY INSPECTED: only 1267/14113 interior frames; 48/280 intervals fully viewed. Measured-only frames are not claimed as seen."
+  },
+  "R08 Narration coverage + visual alignment": {
+   "status": "PARTIAL",
+   "evidence": "172/172 unique segs (6 dups); 58 UNCERTAIN"
+  },
+  "R09 Actual listening (not ASR)": {
+   "status": "BLOCKED",
+   "evidence": "same"
+  },
+  "R10 Asset aliases + cross-video consistency": {
+   "status": "PASS",
+   "evidence": "nonaudio_completion/crosswalk/ASSET_CROSSWALK_v1.csv: 86 canonical assets (33 CHR, 21 BKG, 20 PRP, 12 GFX), SAME/VARIANT/UNCERTAIN (51 UNCERTAIN recorded) with distinct_from; aliases XV-01..04 and v1 families kept; orchestrator native spot-check BE-CHR-003 x3 videos"
+  },
+  "R11 Production specifications": {
+   "status": "PASS",
+   "evidence": "RT-V3-S03 SPEC/criterion (incl. screen-anchored teacher layer); manual v1.2"
+  },
+  "R12 Kit-required image + image-to-video prompts per distinct state": {
+   "status": "PASS",
+   "evidence": "113/113"
+  },
+  "R13 Independent review": {
+   "status": "PASS",
+   "evidence": "Criterion: \"Describe actual reviewer independence accurately. Do not invent an additional human-review requirement unless the kit explicitly requires it.\" (owner final-audit prompt, session 1e8761b1 transcript line 14, 2026-11-04T16:41:27Z (same text in session 7a28d062 line 2442); owner N15 prompt 2026-11-05T16:15:12Z asks whether independence means a separate reviewer or an explicitly different vendor/model and states same vendor is not automatically a failure). visual-ct-scan 13_completion_gates_validation_handoffs.md:44 asks quality_gate.json for a reviewer locator; 10_script_and_creator_brain.md:22 warns a simulated panel is not independent validation; no kit file requires a different vendor or a human. Met by separate blind contexts (batch 1 69 rows, batch 2 30 rows; frozen briefs; no ledger access; image blocks present in transcripts: 24 and 11 sheet reads). LIMIT: reviewers and orchestrator are all Claude models (same vendor), adjudication is by the orchestrator who saw measurements. Optional cross-vendor review not run; not required."
+  },
+  "R14 Supported corrections + disputes resolved": {
+   "status": "PASS",
+   "evidence": "PC-001 (now MEASURED) / PC-002"
+  },
+  "R15 Reconstruction / render tests": {
+   "status": "PASS",
+   "evidence": "RT-V3-01 PASS; RT-V3-S01/S02 FAIL kept, S03 PASS"
+  },
+  "R16 Final report + blueprint + production manual": {
+   "status": "PASS",
+   "evidence": "FINAL_THREE_VIDEO_AUDIT_v3.md + CHANNEL_SYNTHESIS_v1_2.md (v1/v2 reports kept)"
+  },
+  "R17 Kit mandatory files (manifest/coverage/shot/event/AV/blueprint/gate/handoff)": {
+   "status": "PASS",
+   "evidence": "kit_outputs/GNaBxt_zIRA_cbe7a3af (derived FC-07)"
+  },
+  "R18 Checksum seals verify": {
+   "status": "PASS",
+   "evidence": "EVIDENCE_SHA256SUMS_checkpoint_N6 698 entries, 0 mismatches (fresh, FINAL_VALIDATION_v3_pre_N17.json)"
+  },
+  "R19 Published artifact readback (remote blob = local)": {
+   "status": "PASS",
+   "evidence": "189 remote files at 16bd0cc7, 0 sha mismatches, 0 unmapped, 0 invalid json (fresh)"
+  },
+  "R20 Evidence portability": {
+   "status": "PARTIAL",
+   "evidence": "Package verified fresh (nonaudio_completion/portability/R20_VERIFY_N17.json). Actual off-device transfer BLOCKED: no approved destination provided. Same-device test is not backup."
+  },
+  "R21 Audio gate / FULL_AV_SIGNOFF": {
+   "status": "BLOCKED",
+   "evidence": "no listening"
+  },
+  "R22 Kit completion contract (CT_SCAN_COMPLETE)": {
+   "status": "FAIL",
+   "evidence": "VISUAL_ANALYSIS_PARTIAL. CT_SCAN_COMPLETE not awarded. Unmet: R08 PARTIAL (ASR only), R09 BLOCKED (no listening), R21 BLOCKED (no AV sign-off), R20 PARTIAL (transfer pending)."
+  }
+ },
+ "supersedes": "quality_gate_NAC.json and quality_gate_FINAL.json kept unchanged"
+}

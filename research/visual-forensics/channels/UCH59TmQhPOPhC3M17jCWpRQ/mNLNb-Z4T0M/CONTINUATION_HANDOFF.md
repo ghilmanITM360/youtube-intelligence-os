@@ -1,0 +1,19 @@
+# mNLNb-Z4T0M — checkpoint A (PARTIAL)
+
+```json
+{
+  "status": "PARTIAL",
+  "video_id": "mNLNb-Z4T0M",
+  "checkpoint": "A",
+  "source": "source_manifest.json: sha256 e6799e8f... matches registry; 16689 frames CFR 30000/1001 (PTS steps 0.033366/0.033367; measurement PTS mismatches 0)",
+  "measurement": "FULL_FRAME_MEASUREMENTS.csv all 16689 frames (scripts/measure_all.py from uPQ v1)",
+  "detectors": "tables/detector_calibration.json; D1 135 runs, D2 330 starts, D3 53 clusters -> 217 clustered candidates",
+  "boundary_review": "agents/v2_boundary_01 (37 montages, 217 rows; witnesses generic = limitation); validation tables/v2_boundary_01_validation.json",
+  "states": "tables/states_v1.csv 136 contiguous (14 transitions), intra_state_events_v1.csv 96 same-scene events; DRAFT, unverified long-state interiors",
+  "asr": "asr/asr_small_en (faster-whisper small.en, 101 segments) PROVISIONAL, not listened",
+  "art_batches_done": "b01 (S001-S015) of b01-b09",
+  "listening": "BLOCKED_CAPABILITY",
+  "CT_SCAN_COMPLETE": false,
+  "next_operation": "reviewers v2_rev_b02..b09 (briefs ready), then prompts/specs/report"
+}
+```

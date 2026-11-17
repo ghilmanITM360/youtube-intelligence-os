@@ -1,0 +1,260 @@
+{
+ "version": "v1",
+ "source_video": "mNLNb-Z4T0M",
+ "source_sha256": "e6799e8f16ad31772020d98404f2c9cf90536a255c6169d29e838c55bd1dd061",
+ "status": "DRAFT_SPEC from validated reviewer batches; no reconstruction test run for this video",
+ "audio": "ASR_UNCERTIFIED (faster-whisper small.en); listening BLOCKED_CAPABILITY; no SFX/music/sync rules specified",
+ "implementation_limit": "Compressed output reveals output geometry and frame timing only; source software, fonts, layer stack, easing curves and asset origin are UNAVAILABLE. Frame numbers at 30000/1001 fps, +-1 frame.",
+ "canvas": {
+  "label": "MEASURED",
+  "resolution": "1920x1080",
+  "fps": "30000/1001 CFR"
+ },
+ "modules": [
+  {
+   "id": "M_ELEMENT_ENTER_EXIT",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "ELEMENT_ENTER",
+    "ELEMENT_EXIT"
+   ],
+   "n_events": 51,
+   "n_states": 39,
+   "observed_span_frames": {
+    "min": 1,
+    "median": 5,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 4,
+    "drop_from_top": 3,
+    "slide_from_side": 12,
+    "typing": 1,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S010 f530-535 [b01]: Sack bed enters from the top edge at f530, moves down and left through f531-f532, then back right to settle on the floor by f534-f535 (path read from tile posit",
+    "S010 f555-562 [b01]: Barrel with a bowl and the shelf unit drop in from the top at f555, move down and settle to the right of the bed and ring by f562; the bed and stone ring are al",
+    "S022 f1564-1568 [b02]: Burlap sack slides in from right edge over the arrow label by f1568.",
+    "S048 f4257-4261 [b04]: Roots-on-soil pile slides rightward off frame: center x about 1046, 1200, 1420, 1640 (full-res, from 4x tile) for f4257-f4260 and clipped at the right edge in f",
+    "S048 f4258-4264 [b04]: Mouse slides in from the left edge: faint patch at f4258, tail at f4259, head at edge f4260, then x about 200-790, 420-1000, 580-1160, 660-1240 for f4261-4264; ",
+    "S058 f5596-5599 [b04]: Skull sign drops in from above the frame onto the flour mound: pole end at about y 132, 272, 412, 560 (full-res) for f5596-5599, roughly 140 px per frame, plant"
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_CAMERA_SCALE_PAN",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "CAMERA_SCALE",
+    "CAMERA_PAN"
+   ],
+   "n_events": 28,
+   "n_states": 22,
+   "observed_span_frames": {
+    "min": 1,
+    "median": 8,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 1,
+    "drop_from_top": 0,
+    "slide_from_side": 4,
+    "typing": 0,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S028 f2260-2267 [b02]: Camera moves right; old woman exits left, arched doorway enters from right.",
+    "S030 f2597-2604 [b02]: Camera moves right; bald man enters from right edge and slime-faced man exits left.",
+    "S078 f7950-7957 [b06]: Room shifts left across strip, shelves enter from right.",
+    "S110 f12010-12017 [b08]: Blobs and labels drift slightly upward across tiles while all four labels (blood, phlegm, yellow bile, black bile) are present; drift small, may be layout settl",
+    "S113 f12514-12518 [b08]: Whole layout slides left: robed figure exits left edge by f12515-12516, arrow and shirtless figure move left, gauge moves toward centre.",
+    "S006 f114-121 [b01]: Banners, columns and carpet edges shift position between tiles and the throne grows slightly, consistent with a slow push-in or reframing; the seated character "
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_FADES",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "FADE"
+   ],
+   "n_events": 7,
+   "n_states": 7,
+   "observed_span_frames": {
+    "min": 3,
+    "median": 8,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 0,
+    "drop_from_top": 0,
+    "slide_from_side": 0,
+    "typing": 0,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S019 f1248-1255 [b02]: Wall tone and sky-through-gap tint brighten from pale cyan to near white across the 8 tiles; window geometry unchanged.",
+    "S020 f1370-1377 [b02]: Day sky blends to dark blue night across the 8 tiles; grass dims.",
+    "S022 f1564-1568 [b02]: Label Straw and arrow turn grey and disappear as sack covers them.",
+    "S066 f6152-6159 [b05]: Bubble opacity ramps up over about f6153-f6155 (grey to black); text appears with it.",
+    "S067 f6296-6303 [b05]: \"parasites\" label and arrow dim progressively toward f6303.",
+    "S073 f7242-7249 [b05]: Sweat drop on forehead fades by f7245; another drop appears by the beard at f7249."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_CHARACTER_MOTION_POSE",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "CHARACTER_MOTION"
+   ],
+   "n_events": 37,
+   "n_states": 27,
+   "observed_span_frames": {
+    "min": 3,
+    "median": 8,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 0,
+    "drop_from_top": 0,
+    "slide_from_side": 0,
+    "typing": 0,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S003 f18-25 [b01]: Head and torso hold position; only the mouth shape and eye pupils change tile to tile (mouth open ellipse at f21/f22/f23, flatter at f24); detector peak value i",
+    "S006 f324-326 [b01]: Seated character tilted while the hand with extended finger sits at right; little change among these three tiles.",
+    "S006 f328-330 [b01]: Character is flicked off the throne: tilted off the seat at f328, rotated and moving left at f329, nearly gone at the left edge at f330; the hand stays at right",
+    "S011 f785-789 [b01]: Goat on white moves left across the frame; it is mostly cropped by f789.",
+    "S024 f1653-1656 [b02]: Large dark tick moves left and exits frame; fleas remain.",
+    "S024 f1785-1792 [b02]: Small flea position shifts a few pixels; background static."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_TEXT_REVEAL_SWAP",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "TEXT_REVEAL",
+    "CUT_WITHIN_STRIP"
+   ],
+   "n_events": 17,
+   "n_states": 16,
+   "observed_span_frames": {
+    "min": 2,
+    "median": 4,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 0,
+    "drop_from_top": 0,
+    "slide_from_side": 0,
+    "typing": 2,
+    "word_swap": 4
+   },
+   "evidence": [
+    "S011 f790-792 [b01]: Hand-lettered word 'maybe' is already fully formed at f790 with no visible partial letters in the sampled tiles.",
+    "S029 f2461-2462 [b02]: Word privacy replaced by word is.",
+    "S052 f4871-4872 [b04]: Hard swap from \"invented\" (about 470 px wide) to the smaller word \"yet\" (about 185 px wide) between f4871 and f4872 with no visible in-between tile; same vertic",
+    "S084 f8712-8713 [b06]: Quote line starts typing (\"watch\" at f8712, \"watch out fo\" at f8713).",
+    "S130 f15149-15156 [b09]: Word swap by vertical slide: \"answer\" enters from top (f15150) overlapping \"Wrong\" at f15152; \"Wrong\" drops out the bottom by f15156 while \"answer\" holds centre",
+    "S135 f16335-16339 [b09]: Hard swap of text from \"years\" to \"decades\" at f16335; background blur unchanged."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_HOLDS",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "NO_VISIBLE_CHANGE"
+   ],
+   "n_events": 31,
+   "n_states": 28,
+   "observed_span_frames": {
+    "min": 1,
+    "median": 3,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 1,
+    "drop_from_top": 0,
+    "slide_from_side": 0,
+    "typing": 0,
+    "word_swap": 0
+   },
+   "evidence": [
+    "S058 f5600-5603 [b04]: Sign stays planted; no visible bounce, differences of about 2 tile px (about 8 px) or less.",
+    "S009 f412-419 [b01]: The peasant lies sideways near the path and the cottage and castle remain; only very small shifts (a slight scale change of the cottage) are visible across tile",
+    "S010 f528-529 [b01]: Empty room with window and posts; no bed yet.",
+    "S012 f854-855 [b01]: Room with the peasant and animals and no label at f854; a tiny scribble-like mark appears at f855 where the label will go.",
+    "S012 f857-861 [b01]: Label and scene hold unchanged.",
+    "S042 f3903-3910 [b03]: Board text and classroom static; only subtle narrator head/mouth variation (measured diff 3.63)."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  },
+  {
+   "id": "M_OTHER",
+   "label": "OBSERVED by bounded sonnet reviewers (sampled 8-frame strips at 480x270); not primary-verified unless listed in primary_corrections",
+   "event_types": [
+    "OTHER"
+   ],
+   "n_events": 21,
+   "n_states": 20,
+   "observed_span_frames": {
+    "min": 2,
+    "median": 6,
+    "max": 8,
+    "note": "spans are bounded by 8-frame strip windows; longer moves are truncated"
+   },
+   "description_keyword_counts": {
+    "overshoot_or_bounce": 1,
+    "drop_from_top": 0,
+    "slide_from_side": 2,
+    "typing": 0,
+    "word_swap": 4
+   },
+   "evidence": [
+    "S062 f5862-5869 [b05]: Board picture squashes vertically to a thin sliver (f5865-f5867) and re-expands (f5868-f5869) as a different painterly picture (deathbed with praying woman); na",
+    "S069 f6569-6576 [b05]: Board picture squash-and-expand: thin sliver at f6569-f6570, expands to parchment panel with pot at f6571-f6572; picture swap.",
+    "S077 f7667-7669 [b06]: Two labels \"option 1\" and \"option 2\" visible; both slide rightward each frame.",
+    "S079 f8031-8034 [b06]: \"option 1\" slides left and out, \"option 2\" slides left.",
+    "S094 f9772-9776 [b07]: Painting panel squashes vertically to thin strip (9772-9773), content swaps to bed painting at 9774, then expands (9775-9776).",
+    "S096 f10031-10032 [b07]: Sign moves back up slightly (small bounce)."
+   ],
+   "original_production_choice": "PROPOSAL: reproduce only the abstract technique (motion type, frame span, direction) with new original art and wording; easing, software and layer structure are UNAVAILABLE."
+  }
+ ],
+ "primary_corrections": [
+  {
+   "id": "PC-001",
+   "state": "S053",
+   "status": "CONFIRMED_WITH_ADDITION"
+  },
+  {
+   "id": "PC-002",
+   "state": "S080/S088 (also S082/S089 by same pattern)",
+   "status": "REVIEWER_INFERENCE_REJECTED_FOR_S080_S088"
+  }
+ ],
+ "per_state_prompts": "tables/consolidated_state_prompts.csv",
+ "motion_type_totals": {
+  "CHARACTER_MOTION": 37,
+  "CAMERA_SCALE": 19,
+  "ELEMENT_EXIT": 14,
+  "NO_VISIBLE_CHANGE": 31,
+  "ELEMENT_ENTER": 37,
+  "TEXT_REVEAL": 12,
+  "OTHER": 21,
+  "FADE": 7,
+  "CUT_WITHIN_STRIP": 5,
+  "CAMERA_PAN": 9
+ }
+}

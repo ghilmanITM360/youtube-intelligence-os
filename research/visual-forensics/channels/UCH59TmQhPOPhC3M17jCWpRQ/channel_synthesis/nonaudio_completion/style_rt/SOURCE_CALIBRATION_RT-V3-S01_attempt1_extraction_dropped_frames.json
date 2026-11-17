@@ -1,0 +1,52 @@
+{
+ "test": "RT-V3-S01",
+ "mp4": "src_RT-V3-S01.mp4",
+ "criteria": {
+  "C1": {
+   "ok": false,
+   "got": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30000/1001"
+   },
+   "frames": 170
+  },
+  "C2": {
+   "ok": true,
+   "board": 0.498,
+   "wall": 0.162,
+   "wood": 0.172
+  },
+  "C3": {
+   "ok": false,
+   "run": [
+    18,
+    46
+   ],
+   "scale": 1.582,
+   "tx": -559,
+   "length": 29
+  },
+  "C4": {
+   "ok": true,
+   "half_at": 0.567,
+   "progress": [
+    0.0,
+    0.06,
+    0.15,
+    0.29,
+    0.49,
+    0.68,
+    0.84,
+    0.95
+   ]
+  },
+  "C5": {
+   "ok": true,
+   "camera_frames_after": []
+  }
+ },
+ "deterministic": "FAIL",
+ "C6": "visual, recorded separately"
+}

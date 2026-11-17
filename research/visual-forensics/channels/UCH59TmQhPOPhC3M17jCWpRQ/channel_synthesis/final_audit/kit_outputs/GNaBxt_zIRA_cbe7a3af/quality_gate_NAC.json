@@ -1,0 +1,108 @@
+{
+ "video_id": "GNaBxt_zIRA",
+ "audit": "BE non-audio completion close-out 2026-11-05 (session 1e8761b1)",
+ "status": "VISUAL_ANALYSIS_PARTIAL",
+ "CT_SCAN_COMPLETE": false,
+ "FULL_AV_SIGNOFF": false,
+ "non_audio_verdict": "NON_AUDIO_WORK_REMAINS",
+ "remaining_non_audio": [
+  "R20 STORAGE_DESTINATION_REQUIRED",
+  "R13 independent (non-Claude) review"
+ ],
+ "excluded_audio": [
+  "R08 PARTIAL (ASR only)",
+  "R09 BLOCKED",
+  "R21 BLOCKED"
+ ],
+ "gates": {
+  "R01 Source identity + SHA-256 + bytes vs registry": {
+   "status": "PASS",
+   "evidence": "cbe7a3af... 101042486 B = registry row"
+  },
+  "R02 Decoded timeline (CFR 30000/1001; frames)": {
+   "status": "PASS",
+   "evidence": "16319 frames"
+  },
+  "R03 State partition covers every frame; no gaps/overlaps": {
+   "status": "PASS",
+   "evidence": "states_v1 113 states 0-16318"
+  },
+  "R04 Boundary candidates verified; unresolved boundaries": {
+   "status": "PASS",
+   "evidence": "boundary review 247 rows; 0 validation errors"
+  },
+  "R05 Intra-state motion / transitions / camera / drawing changes": {
+   "status": "PASS",
+   "evidence": "every decoded frame MEASURED (nonaudio_completion/dense/DENSE_MOTION_<vid>.csv); all 280 previously-uninspected change intervals visually named; ambiguous ones verified on native crops; per-interval density+limitation in nonaudio_completion/dense_review/DENSE_REVIEW_LEDGER_<vid>.csv"
+  },
+  "R06 Native art direction per state (characters/assets/palette/type/layout)": {
+   "status": "PASS (state-level; sparse frames)",
+   "evidence": "113/113"
+  },
+  "R07 Fine visual detail inside long states": {
+   "status": "PASS",
+   "evidence": "long-state interiors covered by the same dense ledger (every frame MEASURED; change intervals named; v1 70/282, v2 68/288, v3 48/280 intervals all-frames viewed; rest: between-sample frames MEASURED not seen, declared)"
+  },
+  "R08 Narration coverage + visual alignment": {
+   "status": "PARTIAL",
+   "evidence": "172/172 unique segs (6 dups); 58 UNCERTAIN"
+  },
+  "R09 Actual listening (not ASR)": {
+   "status": "BLOCKED",
+   "evidence": "same"
+  },
+  "R10 Asset aliases + cross-video consistency": {
+   "status": "PASS",
+   "evidence": "nonaudio_completion/crosswalk/ASSET_CROSSWALK_v1.csv: 86 canonical assets (33 CHR, 21 BKG, 20 PRP, 12 GFX), SAME/VARIANT/UNCERTAIN (51 UNCERTAIN recorded) with distinct_from; aliases XV-01..04 and v1 families kept; orchestrator native spot-check BE-CHR-003 x3 videos"
+  },
+  "R11 Production specifications": {
+   "status": "PASS",
+   "evidence": "RT-V3-S03 SPEC/criterion (incl. screen-anchored teacher layer); manual v1.2"
+  },
+  "R12 Kit-required image + image-to-video prompts per distinct state": {
+   "status": "PASS",
+   "evidence": "113/113"
+  },
+  "R13 Independent review": {
+   "status": "PARTIAL",
+   "evidence": "reviewers are fresh Claude sonnet contexts, orchestrator Claude opus (same vendor); deterministic measurements + orchestrator native spot-checks added; kit does not require a human; cannot be made vendor-independent in this environment"
+  },
+  "R14 Supported corrections + disputes resolved": {
+   "status": "PASS",
+   "evidence": "PC-001 (now MEASURED) / PC-002"
+  },
+  "R15 Reconstruction / render tests": {
+   "status": "PASS",
+   "evidence": "RT-V3-01 PASS; RT-V3-S01/S02 FAIL kept, S03 PASS"
+  },
+  "R16 Final report + blueprint + production manual": {
+   "status": "PASS",
+   "evidence": "FINAL_THREE_VIDEO_AUDIT_v2.md + CHANNEL_SYNTHESIS_v1_2.md supersede the v1 DRAFT report/blueprint as the final per-video report for non-audio scope (DRAFT files kept)"
+  },
+  "R17 Kit mandatory files (manifest/coverage/shot/event/AV/blueprint/gate/handoff)": {
+   "status": "PASS",
+   "evidence": "kit_outputs/GNaBxt_zIRA_cbe7a3af (derived FC-07)"
+  },
+  "R18 Checksum seals verify": {
+   "status": "PASS",
+   "evidence": "EVIDENCE_SHA256SUMS_checkpoint_N6 698 entries, 0 mismatches (FINAL_VALIDATION_v2.json)"
+  },
+  "R19 Published artifact readback (remote blob = local)": {
+   "status": "PASS",
+   "evidence": "189 remote files, 0 sha mismatches vs local, invalid json 0 (FINAL_VALIDATION_v2.json; v1 1 file maps to campaign/)"
+  },
+  "R20 Evidence portability": {
+   "status": "PARTIAL",
+   "evidence": "STORAGE_DESTINATION_REQUIRED (nonaudio_completion/portability/PORTABILITY_INVENTORY.json): text evidence portable via Git; MP4s and RT renders hashed but no approved durable destination exists"
+  },
+  "R21 Audio gate / FULL_AV_SIGNOFF": {
+   "status": "BLOCKED",
+   "evidence": "no listening"
+  },
+  "R22 Kit completion contract (CT_SCAN_COMPLETE)": {
+   "status": "FAIL",
+   "evidence": "VISUAL_ANALYSIS_PARTIAL"
+  }
+ },
+ "supersedes": "quality_gate_FINAL.json kept unchanged"
+}

@@ -1,0 +1,24 @@
+{
+ "test": "RT-V1-P01",
+ "scene": "single-frame punch-in reframe module, 90 frames",
+ "format": {
+  "w": 1920,
+  "h": 1080,
+  "fps": "30000/1001",
+  "codec": "h264",
+  "container": "mp4"
+ },
+ "content": "Original: a simple hand-drawn scene on an off-white background \u2014 an original round-headed stick-figure character standing at lower-left-centre (head near screen (627, 700)) beside an original prop (e.g. a large clay pot) to the right; add fine static texture (paper grain, small grass tufts) over the whole frame so the camera is trackable. Thick dark jittered outlines, flat fills.",
+ "timeline": [
+  "f0-44: wide framing, completely static.",
+  "f45: HARD single-frame punch-in: the SAME artwork (no redraw, no new elements) instantly scaled by 2.14 about the fixed screen point (627, 818); no in-between frames, no easing.",
+  "f46-89: hold the punched-in framing completely static."
+ ],
+ "rules": "You see only this spec. No source frames are provided or allowed. Python numpy/opencv/PIL + ffmpeg (h264 yuv420p). Render the artwork once on a large canvas and derive both framings from it by affine warp.",
+ "deliverables": [
+  "render.py",
+  "rt.mp4",
+  "timeline.json",
+  "WORKER_NOTES.md"
+ ]
+}
