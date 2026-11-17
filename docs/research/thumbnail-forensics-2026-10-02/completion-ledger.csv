@@ -1,11 +1,14 @@
-batch_id,scope,status,discovered_units,completed_units,provenance
-B000,Source inventory and ZIP/Office member traversal,COMPLETE,7031,7031,asset-inventory.csv
-B001,Six long-form public-view extremes,COMPLETE,6,6,individual-audit-batch-001.csv
-B002,Remaining registered thumbnails,PENDING,138,0,thumbnail-ledger.csv
-B003,"Screenshot opening, crops and mapping",PENDING,120,0,asset-inventory.csv
-B004,Forensic support image relevance and review,PENDING,1186,0,asset-inventory.csv
-B005,Preflight screenshot review,PENDING,2,0,asset-inventory.csv
-B006,PDF page/embedded image review,PENDING,UNCOUNTED,0,asset-inventory.csv
-B007,Near duplicates and ambiguous screenshot mappings,PENDING,UNCOUNTED,0,asset-inventory.csv
-B008,All-channel title/analytics/content reconciliation,PENDING,UNCOUNTED,0,asset-inventory.csv
-B009,Complete cohort/pattern synthesis and final report,PENDING,1,0,REPORT.md
+batch_id,scope,status,discovered_units,completed_units,provenance,remaining,opened,audited,excluded,ambiguous,validation_result
+B000,Source inventory and ZIP/Office member traversal,COMPLETE,7031,7031,asset-inventory.csv,,,,,,
+B001,Six long-form public-view extremes,COMPLETE,6,6,individual-audit-batch-001.csv,,,,,,
+B002,Historical 138 pending registered thumbnails; current public additions tracked separately,IN_PROGRESS,138,72,thumbnail-ledger.csv,66,,,,,
+B003,"Screenshot opening, crops and mapping",PENDING,120,0,asset-inventory.csv,,,,,,
+B004,Forensic support image relevance and review,PENDING,1186,0,asset-inventory.csv,,,,,,
+B005,Preflight screenshot review,PENDING,2,0,asset-inventory.csv,,,,,,
+B006,PDF page/embedded image review,PENDING,UNCOUNTED,0,asset-inventory.csv,,,,,,
+B007,Near duplicates and ambiguous screenshot mappings,PENDING,UNCOUNTED,0,asset-inventory.csv,,,,,,
+B008,All-channel title/analytics/content reconciliation,PENDING,UNCOUNTED,0,asset-inventory.csv,,,,,,
+B009,Complete cohort/pattern synthesis and final report,PENDING,1,0,REPORT.md,,,,,,
+B002-01,24 registered CH-000003 thumbnails; native and both mobile scales; medical/content validation remains separate B008 work,VISUAL_AUDIT_COMPLETE,24,24,individual-audit-batch-002-01.json,0,24,24,0,0,"PASS: 24 exact source hashes, unique IDs, required A–J fields, three scales, score bounds"
+B002-02,24 registered thumbnails; native and both mobile scales; medical/content validation remains separate B008 work,VISUAL_AUDIT_COMPLETE,24,24,individual-audit-batch-002-02.json,0,24,24,0,0,"PASS: 24 exact source hashes, unique IDs, required A–J fields, three scales, score bounds"
+B002-03,24 registered thumbnails; native and both mobile scales; medical/content validation remains separate B008 work,VISUAL_AUDIT_COMPLETE,24,24,individual-audit-batch-002-03.json,0,24,24,0,0,"PASS: 24 exact source hashes, unique IDs, required A–J fields, three scales, score bounds"
