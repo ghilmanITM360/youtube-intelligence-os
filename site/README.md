@@ -13,3 +13,10 @@ python3 site/server.py            # first run builds data/catalog/yios_canonical
 - Files only preview if they exist in your checkout; media outside git (see `docs/LOCAL_MEDIA_AVAILABILITY.md`) shows "not present".
 - Viewers: `.md` rendered, `.csv/.tsv` sortable table, `.json/.jsonl` table or tree, `.gz` shown decompressed, images/audio/video inline.
 - Another port: `--port 8030`. Another DB: `YIOS_CANONICAL_DB=/path/to.db`.
+
+## What each page shows
+- **Overview**: totals, uploads per year, biggest channels, how complete each field is.
+- **Channels**: a scatter of every channel (videos vs typical views) and a sortable table with a per-channel uploads sparkline.
+- **Channel report**: key numbers, every video as a dot on a time/views chart, upload heat map, type split, thumbnail gallery of the top videos, all videos in one filterable table.
+- **Videos**: filters (channel, type, year, transcript, specific file), title search and full-text search inside transcripts.
+- Results are cached in memory per DB version and sent gzip-compressed, so every page after the first load answers in about a millisecond.

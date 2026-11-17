@@ -46,8 +46,13 @@ img.pv{max-width:100%;border-radius:6px;border:1px solid var(--line)}
 .ch{width:100%;height:auto;display:block}.ch rect{fill:var(--acc)}.ch rect.b2{fill:var(--bar)}.ch text{fill:var(--mut);font:10px sans-serif}.ch line{stroke:var(--line)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}.grid2 h2{margin-top:14px}
 .md h2,.md h3,.md h4{margin:18px 0 6px}.md p{margin:8px 0}.md code{background:var(--bg);padding:1px 5px;border-radius:4px;font:13px ui-monospace,Menlo,monospace}.md blockquote{margin:8px 0;padding:2px 14px;border-left:3px solid var(--line);color:var(--mut)}.md li{margin:2px 0}.md hr{border:0;border-top:1px solid var(--line)}
-.tbl{max-height:640px;overflow:auto}.tbl th{position:sticky;top:0;background:var(--panel)}.tbl td{max-width:420px;word-break:break-word}
+.tbl{max-height:640px;overflow:auto}.tbl th{position:sticky;top:0;background:var(--panel)}.tbl td{max-width:420px;min-width:70px;overflow-wrap:break-word}.tbl.w td:first-child{min-width:300px}.tbl.w table{min-width:900px}
 .jt details{margin-left:16px}.jt summary{cursor:pointer;list-style-position:outside}.jt .k{color:var(--acc)}.jt .v{margin-left:16px;word-break:break-word}.jt{font:13px/1.6 ui-monospace,Menlo,monospace}
+.ch circle{fill:var(--acc);fill-opacity:.55;stroke:var(--acc);stroke-width:.5}.ch circle.c1{fill:var(--warn);stroke:var(--warn)}.ch circle.c2{fill:var(--ok);stroke:var(--ok)}.ch circle.c3{fill:var(--mut);stroke:var(--mut)}.ch circle:hover{fill-opacity:1;stroke-width:2}.ch .med{stroke:var(--warn);stroke-dasharray:4 3}.ch .heat{fill:var(--acc)}.ch .heat0{fill:var(--line)}
+.spark{display:block;width:90px;height:22px}.spark rect{fill:var(--bar)}.spark rect.l{fill:var(--acc)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px}.gal a{display:block;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}.gal a:hover{text-decoration:none;border-color:var(--acc)}.gal img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--line)}.gal div{padding:6px 9px;font-size:13px}.gal b{display:block;line-height:1.3;max-height:2.6em;overflow:hidden}.gal span{color:var(--mut)}
+.leg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--mut);margin:0 0 6px}.leg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:var(--acc)}.leg i.c1{background:var(--warn)}.leg i.c2{background:var(--ok)}.leg i.c3{background:var(--mut)}
+.pbar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;min-width:120px}.pbar i{display:block;height:100%;background:var(--ok)}
 .seg{display:inline-flex;gap:0}.seg button{border-radius:0}.seg button.on{background:var(--acc-bg);color:var(--acc);border-color:var(--acc)}
 @media (max-width:640px){main{padding:14px 12px 50px}.hide-s{display:none}}
 </style>
@@ -95,10 +100,46 @@ function columns(pts, { w = 560, hgt = 170, thin = 1, name = "" } = {}) {
   const L = 38, B = 22, T = 8, max = Math.max(...pts.map(p => p.v), 1), bw = (w - L) / pts.length, ph = hgt - B - T;
   const svg = sv("svg", { viewBox: `0 0 ${w} ${hgt}`, class: "ch", role: "img", "aria-label": name });
   for (const f of [0, .5, 1]) { const y = T + ph * (1 - f); svg.append(sv("line", { x1: L, x2: w, y1: y, y2: y }), sv("text", { x: L - 4, y: y + 3, "text-anchor": "end" }, short(max * f))); }
-  pts.forEach((p, i) => { const bh = p.v / max * ph, x = L + i * bw; svg.append(sv("rect", { x: x + bw * .12, y: T + ph - bh, width: Math.max(1, bw * .76), height: bh }, sv("title", {}, `${p.l}: ${num(p.v)}`)));
+  pts.forEach((p, i) => { const bh = p.v / max * ph, x = L + i * bw; const bwd = Math.min(Math.max(1, bw * .76), 44); svg.append(sv("rect", { x: x + (bw - bwd) / 2, y: T + ph - bh, width: bwd, height: bh }, sv("title", {}, `${p.l}: ${num(p.v)}`)));
     if (i % thin === 0) svg.append(sv("text", { x: x + bw / 2, y: hgt - 7, "text-anchor": "middle" }, p.l)); });
   return svg;
 }
+// scatter plot: pts = [{x, y, c: colour class 0-3, t: tooltip, href}]; log axes optional; xt/yt = [{v, l}] tick marks
+function plot(pts, { w = 720, hgt = 300, xlog, ylog, xt = [], yt = [], hline, name = "" } = {}) {
+  pts = pts.filter(p => p.x != null && p.y != null && (!xlog || p.x > 0) && (!ylog || p.y > 0));
+  if (!pts.length) return h("div", { class: "empty" }, "No data.");
+  const fx = xlog ? Math.log10 : x => x, fy = ylog ? Math.log10 : x => x, L = 46, B = 24, T = 10, R = 10;
+  const xs = pts.map(p => fx(p.x)), ys = pts.map(p => fy(p.y)); let x0 = Math.min(...xs, ...xt.map(t => fx(t.v))), x1 = Math.max(...xs, ...xt.map(t => fx(t.v))), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  if (x1 === x0) { x0 -= 1; x1 += 1; } if (y1 === y0) { y0 -= 1; y1 += 1; } const px = v => L + (fx(v) - x0) / (x1 - x0) * (w - L - R), py = v => T + (1 - (fy(v) - y0) / (y1 - y0)) * (hgt - T - B);
+  const svg = sv("svg", { viewBox: `0 0 ${w} ${hgt}`, class: "ch", role: "img", "aria-label": name });
+  for (const t of yt) if (fy(t.v) >= y0 && fy(t.v) <= y1) svg.append(sv("line", { x1: L, x2: w - R, y1: py(t.v), y2: py(t.v) }), sv("text", { x: L - 5, y: py(t.v) + 3, "text-anchor": "end" }, t.l));
+  for (const t of xt) if (fx(t.v) >= x0 && fx(t.v) <= x1) svg.append(sv("text", { x: px(t.v), y: hgt - 8, "text-anchor": "middle" }, t.l));
+  if (hline != null && hline > 0 && fy(hline) >= y0 && fy(hline) <= y1) svg.append(sv("line", { class: "med", x1: L, x2: w - R, y1: py(hline), y2: py(hline) }), sv("text", { x: w - R, y: py(hline) - 4, "text-anchor": "end" }, "median"));
+  for (const p of pts) { const c = sv("circle", { cx: px(p.x), cy: py(p.y), r: p.r || 3.2, class: "c" + (p.c || 0) }, sv("title", {}, p.t || "")); svg.append(p.href ? sv("a", { href: p.href }, c) : c); }
+  return svg;
+}
+const logTicks = (lo, hi) => { const o = []; for (let e = Math.floor(Math.log10(Math.max(lo, 1))); e <= Math.ceil(Math.log10(Math.max(hi, 10))); e++) o.push({ v: 10 ** e, l: short(10 ** e) }); return o; };
+const TYPEC = { LONG: 0, SHORT: 1, STREAM: 2 };
+// year x month heat map of upload counts; months = [{l: "2024-05", v: n}]
+function heat(months, { w = 560 } = {}) {
+  if (!months.length) return h("div", { class: "empty" }, "No dated uploads.");
+  const m = Object.fromEntries(months.map(x => [x.l, x.v])), ys = months.map(x => +x.l.slice(0, 4)), y0 = Math.min(...ys), y1 = Math.max(...ys), mx = Math.max(...months.map(x => x.v)), L = 36, cw = (w - L) / 12, ch = 18;
+  const svg = sv("svg", { viewBox: `0 0 ${w} ${(y1 - y0 + 1) * ch + 22}`, class: "ch", role: "img", "aria-label": "uploads heat map" });
+  "JFMAMJJASOND".split("").forEach((x, i) => svg.append(sv("text", { x: L + i * cw + cw / 2, y: 10, "text-anchor": "middle" }, x)));
+  for (let y = y0; y <= y1; y++) { svg.append(sv("text", { x: L - 5, y: 22 + (y - y0) * ch + 12, "text-anchor": "end" }, y));
+    for (let i = 0; i < 12; i++) { const k = y + "-" + String(i + 1).padStart(2, "0"), n = m[k] || 0;
+      svg.append(sv("rect", { x: L + i * cw + 1, y: 22 + (y - y0) * ch, width: cw - 2, height: ch - 2, rx: 2, class: n ? "heat" : "heat0", "fill-opacity": n ? (.2 + .8 * n / mx).toFixed(2) : 1 }, sv("title", {}, `${k}: ${n} upload(s)`))); } }
+  return svg;
+}
+// tiny bar chart for one table cell: counts keyed by year
+function spark(o, y0, y1) {
+  const ys = []; for (let y = y0; y <= y1; y++) ys.push(o[y] || 0); const mx = Math.max(...ys, 1), n = ys.length, bw = 90 / n;
+  const svg = sv("svg", { viewBox: "0 0 90 22", class: "spark", role: "img", "aria-label": "uploads per year" });
+  ys.forEach((v, i) => { if (v) svg.append(sv("rect", { x: i * bw + .3, y: 22 - Math.max(1.5, v / mx * 22), width: Math.max(1, bw - .8), height: Math.max(1.5, v / mx * 22), class: i === n - 1 ? "l" : "" }, sv("title", {}, `${y0 + i}: ${v}`))); });
+  return svg;
+}
+const pct = (a, b) => b ? Math.round(a / b * 1000) / 10 : 0;
+const thumb = id => "https://i.ytimg.com/vi/" + id + "/mqdefault.jpg";
 const panel = (...k) => h("div", { class: "panel" }, ...k);
 const kcard = (n, l) => h("div", { class: "card" }, h("div", { class: "n" }, n), h("div", { class: "l" }, l));
 
@@ -142,14 +183,14 @@ function csvParse(t, max) {
   if (f || row.length) { row.push(f); rows.push(row); } return { rows, more: false };
 }
 // sortable, filterable grid (shows at most 500 matching rows)
-function grid(head, data, note) {
-  let sort = null, dir = 1, qf = ""; const wrap = h("div", {}), body = h("div", { class: "tbl" }), cnt = h("span", { class: "mut" });
+function grid(head, data, note, wide) {
+  let sort = null, dir = 1, qf = ""; const wrap = h("div", {}), body = h("div", { class: "tbl" + (wide ? " w" : "") }), cnt = h("span", { class: "mut" });
   const draw = () => {
-    let r = data; if (qf) r = r.filter(x => x.some(c => String(c ?? "").toLowerCase().includes(qf)));
-    if (sort != null) r = [...r].sort((a, b) => { const x = a[sort], y = b[sort], nx = parseFloat(x), ny = parseFloat(y); return (isNaN(nx) || isNaN(ny) ? String(x ?? "").localeCompare(String(y ?? "")) : nx - ny) * dir; });
-    cnt.textContent = num(r.length) + " of " + num(data.length) + " rows" + (r.length > 500 ? " (first 500 shown)" : "") + (note ? " · " + note : "");
+    const T = c => c && c.nodeType ? c.textContent : c; let r = data; if (qf) r = r.filter(x => x.some(c => String(T(c) ?? "").toLowerCase().includes(qf)));
+    if (sort != null) r = [...r].sort((a, b) => { const x = T(a[sort]), y = T(b[sort]), nx = parseFloat(x), ny = parseFloat(y); return (isNaN(nx) || isNaN(ny) ? String(x ?? "").localeCompare(String(y ?? "")) : nx - ny) * dir; });
+    cnt.textContent = num(r.length) + " of " + num(data.length) + " rows" + (r.length > 1000 ? " (first 1,000 shown)" : "") + (note ? " · " + note : "");
     const t = h("table", {}, h("thead", {}, h("tr", {}, head.map((c, i) => h("th", { class: "s", onclick: () => { dir = sort === i ? -dir : 1; sort = i; draw(); } }, c + (sort === i ? (dir > 0 ? " ▲" : " ▼") : ""))))),
-      h("tbody", {}, r.slice(0, 500).map(x => h("tr", {}, head.map((_, i) => h("td", {}, x[i] == null ? "" : typeof x[i] === "object" ? JSON.stringify(x[i]).slice(0, 160) : String(x[i])))))));
+      h("tbody", {}, r.slice(0, 1000).map(x => h("tr", {}, head.map((_, i) => h("td", {}, x[i] == null ? "" : x[i].nodeType ? x[i] : typeof x[i] === "object" ? JSON.stringify(x[i]).slice(0, 160) : String(x[i])))))));
     body.replaceChildren(t);
   };
   wrap.append(h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Filter rows", oninput: e => { qf = e.target.value.toLowerCase(); draw(); } }), cnt), body); draw(); return wrap;
@@ -187,6 +228,9 @@ async function pOverview() {
   return [h("h1", {}, "YIOS data browser"), h("p", { class: "sub" }, "One de-duplicated catalogue built from five source databases. Nothing here edits the raw evidence."),
     h("div", { class: "cards" }, card(s.channels, "channels"), card(s.videos, "unique videos"), card(s.source_rows, "source rows merged"), card(s.transcripts, "transcripts"), card(s.artifacts, "files inventoried"), card(s.conflicts + s.quality_issues, "conflicts + quality flags")),
     h("h2", {}, "Uploads per year (all channels)"), h("div", { class: "panel" }, columns(s.by_year.map(y => ({ l: y.y, v: y.n })), { name: "uploads per year" })),
+    h("h2", {}, "Biggest channels by total views"), h("div", { class: "panel" }, bars(s.top_channels.map(c => ({ l: c.name || c.channel_id, v: c.views || 0, id: c.channel_id })), "l", "v", r => "#/channel/" + r.id)),
+    h("h2", {}, "How complete is each field?"), h("div", { class: "panel" }, table([{ h: "Field", f: r => r[0] }, { h: "Videos that have it", r: 1, f: r => num(r[1]) }, { h: "Coverage", f: r => h("div", { class: "pbar", title: pct(r[1], s.videos) + "%" }, h("i", { style: `width:${pct(r[1], s.videos)}%` })) }, { h: "%", r: 1, f: r => pct(r[1], s.videos) + "%" }],
+      [["views", s.completeness.views], ["publish date", s.completeness.date], ["duration", s.completeness.duration], ["likes", s.completeness.likes], ["comments", s.completeness.comments], ["description", s.completeness.description], ["thumbnail url", s.completeness.thumbnail], ["transcript", s.completeness.transcript]])),
     h("h2", {}, "Video types"), h("div", { class: "panel" }, bars(s.video_types, "video_type", "n", r => "#/videos" + qs({ type: r.video_type }))),
     h("h2", {}, "Transcripts by caption kind"), h("div", { class: "panel" }, bars(s.caption_kinds, "caption_kind", "n")),
     h("h2", {}, "Files by role"), h("div", { class: "panel" }, bars(s.roles, "role", "n", r => "#/artifacts" + qs({ role: r.role }))),
@@ -199,18 +243,19 @@ async function pOverview() {
 let CH = null, chSort = ["videos", -1], chQ = "";
 async function pChannels() {
   CH = CH || await api("/api/channels");
-  const out = h("div", {}); const body = h("div", { class: "panel" });
+  const out = h("div", {}); const body = h("div", { class: "panel" }), yrs = CH.flatMap(c => Object.keys(c.spark).map(Number)), Y0 = Math.min(...yrs, 2100), Y1 = Math.max(...yrs, 0);
   const draw = () => {
     const rowsF = CH.filter(c => !chQ || ((c.name || "") + (c.handle || "") + c.channel_id).toLowerCase().includes(chQ.toLowerCase())).sort((a, b) => ((a[chSort[0]] ?? -1) > (b[chSort[0]] ?? -1) ? 1 : -1) * chSort[1]);
     const th = (t, k, r) => ({ h: t, r, k });
     const cols = [{ h: "Channel", k: "name", f: c => A("#/channel/" + c.channel_id, c.name || c.channel_id) }, { h: "Handle", k: "handle", cls: "hide-s", f: c => c.handle || "–" },
-      { h: "Subs", k: "subscribers", r: 1, f: c => num(c.subscribers) }, { h: "Videos", k: "videos", r: 1, f: c => num(c.videos) }, { h: "Views", k: "views", r: 1, f: c => num(c.views) },
+      { h: "Subs", k: "subscribers", r: 1, f: c => num(c.subscribers) }, { h: "Videos", k: "videos", r: 1, f: c => num(c.videos) }, { h: "Views", k: "views", r: 1, f: c => num(c.views) }, { h: "Median", k: "median", r: 1, cls: "hide-s", f: c => num(c.median) }, { h: "Best", k: "best", r: 1, cls: "hide-s", f: c => num(c.best) }, { h: "Uploads/year", k: "videos", cls: "hide-s", f: c => spark(c.spark, Y0, Y1) },
       { h: "Transcripts", k: "transcripts", r: 1, cls: "hide-s", f: c => num(c.transcripts) }, { h: "Latest", k: "last_date", cls: "hide-s", f: c => c.last_date || "–" }];
     const t = table(cols, rowsF, "No channel matches."); if (t.tagName === "TABLE") t.querySelectorAll("th").forEach((el, i) => { el.className += " s"; el.onclick = () => { chSort = [cols[i].k, chSort[0] === cols[i].k ? -chSort[1] : -1]; draw(); }; });
     body.replaceChildren(t); cnt.textContent = rowsF.length + " of " + CH.length + " channels";
   };
   const cnt = h("span", { class: "mut" });
   out.append(h("h1", {}, "Channels"), h("p", { class: "sub" }, "Keyed by the YouTube channel id (UC…). Click a column to sort."),
+    h("h2", {}, "Every channel: how many videos vs the typical video's views"), panel(plot(CH.map(c => ({ x: c.videos, y: c.median, t: `${c.name}: ${num(c.videos)} videos, median ${num(c.median)} views`, href: "#/channel/" + c.channel_id })), { xlog: 1, ylog: 1, xt: logTicks(1, 1000), yt: logTicks(10, 1e7), name: "channels" }), h("p", { class: "mut" }, "Each dot is a channel (click to open). Right = more videos, higher = a typical video gets more views. Both axes are logarithmic.")),
     h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Filter by name, handle or id", value: chQ, oninput: e => { chQ = e.target.value; draw(); } }), cnt), body);
   draw(); return out;
 }
@@ -218,12 +263,20 @@ async function pChannel(id) {
   const c = await api("/api/channel/" + id), st = c.stats, D = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const kv = [["Channel id", c.channel_id], ["Handle", c.handle], ["Subscribers", num(c.subscribers)], ["Videos on YouTube (reported)", num(c.channel_total_videos)], ["Views on YouTube (reported)", num(c.channel_total_views)], ["Inventory id", c.inventory_id], ["Source databases", c.source_count]];
   const vcols = [{ h: "Title", f: v => A("#/video/" + v.video_id, v.title || v.video_id) }, { h: "Published", f: v => v.published_date || "–" }, { h: "Length", r: 1, f: v => dur(v.d) }, { h: "Type", f: v => tag(v.video_type, "grey") }, { h: "Views", r: 1, f: v => num(v.views) }, { h: "Likes", r: 1, cls: "hide-s", f: v => num(v.likes) }];
-  const years = st.by_year, months = st.by_month;
+  const years = st.by_year, months = st.by_month, topV = [...st.all].filter(v => v[5] != null).sort((a, b) => b[5] - a[5]);
   return [h("div", { class: "crumbs" }, A("#/channels", "Channels"), " / ", c.name || id), h("h1", {}, c.name || id), h("p", { class: "sub" }, (c.handle || "") + " · " + (st.first || "?") + " → " + (st.last || "?")),
     h("div", { class: "cards" }, kcard(num(st.n), "videos in catalogue"), kcard(short(st.views_total), "total views"), kcard(short(st.views_median), "median views / video"), kcard(short(st.views_max), "best video"), kcard(st.avg_minutes + " min", "average length"),
-      kcard(num((st.caption_kinds.reduce((x, y) => x + y.v, 0))), "transcripts"), kcard(num(st.videos_with_specific_file), "videos with a specific file")),
+      kcard(num((st.caption_kinds.reduce((x, y) => x + y.v, 0))), "transcripts"), kcard(num(st.videos_with_specific_file), "videos with a specific file"),
+      kcard(st.engagement == null ? "–" : st.engagement + "%", "likes per view"), kcard(num(st.comments_total), "comments in total"), kcard(st.gap_days_median == null ? "–" : st.gap_days_median + " d", "median gap between uploads"), kcard(num(st.span_days), "days from first to last upload")),
     h("p", {}, A("#/videos" + qs({ channel: id }), "Browse all " + num(st.n) + " videos →"), "  ", c.types.map(t => tag(t.video_type + " " + t.n, "grey"))),
+    h("h2", {}, "Every video: when it was published and how many views it got"),
+    panel(h("div", { class: "leg" }, ["LONG", "SHORT", "STREAM", "other"].map((t, i) => h("span", {}, h("i", { class: "c" + i }), t)), h("span", {}, "dashed line = channel median · click a dot to open the video")),
+      plot(st.all.filter(v => v[2]).map(v => ({ x: Date.parse(v[2]), y: v[5], c: TYPEC[v[4]] ?? 3, href: "#/video/" + v[0], t: `${v[1]}\n${v[2]} · ${num(v[5])} views · ${v[4]}` })), { w: 900, hgt: 320, ylog: 1, hline: st.views_median, yt: logTicks(10, st.views_max || 1e6),
+        xt: years.map(y => ({ v: Date.parse(y.l + "-01-01"), l: y.l })).filter((_, i, a) => i % Math.ceil(a.length / 12) === 0), name: "views over time" }),
+      h("p", { class: "mut" }, "Videos without a date or view count are left out of this chart (all of them are in the table at the bottom).")),
     h("div", { class: "grid2" },
+      h("div", {}, h("h2", {}, "Uploads by month (heat map)"), panel(heat(months))),
+      h("div", {}, h("h2", {}, "Video types: how many, how many views"), panel(table([{ h: "Type", f: t => tag(t.l, "grey") }, { h: "Videos", r: 1, f: t => num(t.v) }, { h: "Total views", r: 1, f: t => num(t.views) }, { h: "Median views", r: 1, f: t => num(t.median) }], st.by_type))),
       h("div", {}, h("h2", {}, "Uploads per year"), panel(columns(years.map(y => ({ l: y.l, v: y.v })), { name: "uploads per year" }))),
       h("div", {}, h("h2", {}, "Views of those uploads, by publish year"), panel(columns(years.map(y => ({ l: y.l, v: y.views || 0 })), { name: "views per year" }))),
       h("div", {}, h("h2", {}, "Uploads per month"), panel(columns(months.map(m => ({ l: m.l, v: m.v })), { w: Math.max(560, months.length * 7), thin: Math.ceil(months.length / 14) || 1, name: "uploads per month" }))),
@@ -232,8 +285,10 @@ async function pChannel(id) {
       h("div", {}, h("h2", {}, "Publishing weekday"), panel(columns(st.weekday.map(w => ({ l: D[w.l], v: w.v })), { name: "weekday" }))),
       h("div", {}, h("h2", {}, "Transcripts by caption kind"), panel(st.caption_kinds.length ? bars(st.caption_kinds.map(k => ({ l: k.l, v: k.v })), "l", "v") : h("div", { class: "empty" }, "No transcripts stored."))),
       h("div", {}, h("h2", {}, "Files related to this channel, by role"), panel(st.roles.length ? bars(st.roles, "l", "v", r => "#/artifacts" + qs({ role: r.l })) : h("div", { class: "empty" }, "No file mentions this channel or its videos.")))),
-    h("h2", {}, "Top 10 videos by views"), panel(table(vcols, st.top)),
-    h("h2", {}, "Latest 10 uploads"), panel(table(vcols, st.latest)),
+    h("h2", {}, "Top videos (thumbnails)"), h("div", { class: "gal" }, topV.slice(0, 12).map(v => h("a", { href: "#/video/" + v[0] }, h("img", { src: thumb(v[0]), loading: "lazy", alt: "", referrerpolicy: "no-referrer", onerror: e => e.target.style.visibility = "hidden" }), h("div", {}, h("b", {}, v[1] || v[0]), h("span", {}, num(v[5]) + " views" + (st.views_median ? " · " + (v[5] / st.views_median).toFixed(1) + "× median" : "")))))),
+    h("h2", {}, "Top 10 videos by views"), panel(table(vcols, topV.slice(0, 10).map(v => ({ video_id: v[0], title: v[1], published_date: v[2], d: v[3], video_type: v[4], views: v[5], likes: v[6] })))),
+    h("h2", {}, "Latest 10 uploads"), panel(table(vcols, [...st.all].filter(v => v[2]).sort((a, b) => a[2] < b[2] ? 1 : -1).slice(0, 10).map(v => ({ video_id: v[0], title: v[1], published_date: v[2], d: v[3], video_type: v[4], views: v[5], likes: v[6] })))),
+    h("h2", {}, "All " + num(st.n) + " videos (filter and sort here)"), panel(grid(["Title", "Published", "Length", "Type", "Views", "× median", "Likes", "Comments", "Transcript"], st.all.map(v => [A("#/video/" + v[0], v[1] || v[0]), v[2] || "", v[3] == null ? "" : dur(v[3]), v[4], v[5] ?? "", v[5] != null && st.views_median ? +(v[5] / st.views_median).toFixed(2) : "", v[6] ?? "", v[7] ?? "", v[8] ? "yes" : ""]), "", 1)),
     h("h2", {}, "Analyses and files about this channel's videos (" + st.specific_files.length + (st.specific_files.length >= 100 ? "+" : "") + ")"),
     h("p", { class: "sub" }, "Files that name 1–25 videos in total, ordered by how many of this channel's videos they name. A mention is not proof the file analyses the video."),
     panel(table([{ h: "File", f: a => A("#/artifact" + qs({ path: a.path }), a.path) }, { h: "Role", f: a => tag(a.role) }, { h: "Format", cls: "hide-s", f: a => a.format }, { h: "This channel's videos in it", r: 1, f: a => num(a.n) }], st.specific_files, "No specific file names this channel's videos.")),
@@ -250,9 +305,10 @@ async function pVideos(q) {
   const cols = [{ h: "Title", f: v => A("#/video/" + v.video_id, v.title || v.video_id) }, { h: "Channel", cls: "hide-s", f: v => A("#/channel/" + v.channel_id, v.channel) }, { h: "Published", f: v => v.published_date || "–" },
     { h: "Length", r: 1, f: v => dur(v.duration_seconds) }, { h: "Type", f: v => tag(v.video_type, "grey") }, { h: "Views", r: 1, f: v => num(v.views) }, { h: "Tx", f: v => v.has_transcript ? tag("yes", "ok") : "" }];
   return [h("h1", {}, "Videos"), h("p", { class: "sub" }, num(d.total) + " videos match"),
-    h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Search titles (press Enter)", value: q.q || "", onkeydown: e => { if (e.key === "Enter") go({ q: e.target.value }); } }),
+    h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Search titles (press Enter)", value: q.q || "", onkeydown: e => { if (e.key === "Enter") go({ q: e.target.value }); } }), h("input", { type: "search", placeholder: "Search inside transcripts (press Enter)", value: q.tq || "", onkeydown: e => { if (e.key === "Enter") go({ tq: e.target.value }); } }),
       sel("channel", ch.map(c => [c.channel_id, c.name || c.channel_id]), "All channels"), sel("type", ["LONG", "SHORT", "STREAM", "UNKNOWN"].map(x => [x, x]), "All types"),
       sel("sort", [["views", "Most views"], ["likes", "Most likes"], ["duration", "Longest"], ["title", "Title A–Z"]], "Newest first"),
+      sel("year", Array.from({ length: 22 }, (_, i) => String(2026 - i)).map(y => [y, y]), "Any year"), sel("dir", [["asc", "Reverse order"]], "Normal order"),
       sel("tx", [["1", "Has transcript"]], "Any transcript"), sel("art", [["1", "Has a specific file"]], "Any files")),
     h("div", { class: "panel" }, table(cols, d.items, "No video matches.")),
     h("div", { class: "pg" }, h("button", { disabled: d.page <= 1, onclick: () => pg(d.page - 1) }, "← Prev"), "Page " + d.page + " of " + last, h("button", { disabled: d.page >= last, onclick: () => pg(d.page + 1) }, "Next →"))];
@@ -260,12 +316,12 @@ async function pVideos(q) {
 async function pVideo(id) {
   const v = await api("/api/video/" + id), t = v.transcript;
   const kv = [["Video id", v.video_id], ["Channel", A("#/channel/" + v.channel_id, v.channel)], ["Published", [v.published_date, v.published_at_utc && " (" + v.published_at_utc + ")", " ", tag(v.published_precision || "no date", "grey")]],
-    ["Length", dur(v.duration_seconds)], ["Type", [v.video_type, " ", tag(v.video_type_basis, "grey")]], ["Views / likes / comments", [num(v.views), " / ", num(v.likes), " / ", num(v.comments)]], ["Seen in", v.source_count + " source database(s)"], ["YouTube", h("a", { href: v.url || "https://www.youtube.com/watch?v=" + v.video_id, target: "_blank", rel: "noopener" }, "open ↗")]];
+    ["Rank in channel", v.rank.pos ? ["#" + v.rank.pos + " of " + v.rank.of + " by views", v.rank.median && v.views != null ? " · " + (v.views / v.rank.median).toFixed(1) + "× the channel median (" + num(v.rank.median) + ")" : ""] : "–"], ["Length", dur(v.duration_seconds)], ["Type", [v.video_type, " ", tag(v.video_type_basis, "grey")]], ["Views / likes / comments", [num(v.views), " / ", num(v.likes), " / ", num(v.comments)]], ["Seen in", v.source_count + " source database(s)"], ["YouTube", h("a", { href: v.url || "https://www.youtube.com/watch?v=" + v.video_id, target: "_blank", rel: "noopener" }, "open ↗")]];
   const art = v.artifacts, spec = art.filter(a => a.videos_mentioned <= 25), bulk = art.filter(a => a.videos_mentioned > 25);
   const artT = rows => table([{ h: "File", f: a => A("#/artifact" + qs({ path: a.path }), a.path) }, { h: "Role", f: a => tag(a.role) }, { h: "Found in", f: a => a.via }, { h: "Videos in file", r: 1, f: a => num(a.videos_mentioned) }], rows, "None.");
   return [h("div", { class: "crumbs" }, A("#/videos", "Videos"), " / ", v.title || id), h("h1", {}, v.title || id),
     h("div", { class: "panel" }, h("dl", { class: "kv" }, kv.map(([k, x]) => [h("dt", {}, k), h("dd", {}, x)]))),
-    v.thumbnail_url ? h("p", {}, h("img", { class: "thumb", src: v.thumbnail_url, alt: "thumbnail", referrerpolicy: "no-referrer", loading: "lazy" })) : null,
+    h("p", {}, h("img", { class: "thumb", style: "width:240px", src: v.thumbnail_url || thumb(v.video_id), alt: "thumbnail", referrerpolicy: "no-referrer", loading: "lazy" })),
     v.description ? [h("h2", {}, "Description"), h("pre", {}, v.description)] : null,
     h("h2", {}, "Transcript"), t ? [h("p", {}, tag(t.caption_kind, t.caption_kind === "CREATOR" ? "ok" : "warn"), " ", tag(t.language || "language unknown", "grey"), " ", num(t.word_count) + " words · from " + t.source_id + " · " + (t.candidates > 1 ? t.candidates + " candidates, " + t.distinct_texts + " distinct" : "single source"),
       v.transcript_candidates.some(c => c.sha_matches_source === 0) ? [" ", tag("source hash did not verify", "warn")] : null), h("pre", {}, t.text)] : h("div", { class: "panel empty" }, "No transcript stored for this video."),
@@ -316,14 +372,14 @@ async function pQuality() {
 
 async function render() {
   const { parts, q } = route(); const app = $("#app");
-  $("#nav").replaceChildren(h("b", {}, "YIOS"), ...NAV.map(([href, l]) => h("a", { href, class: location.hash.startsWith(href) && href !== "#/" || (href === "#/" && !parts.length) ? "on" : "" }, l)));
+  $("#nav").replaceChildren(h("b", {}, "YIOS"), ...NAV.map(([href, l]) => h("a", { href, class: ({ channel: "channels", video: "videos", artifact: "artifacts" }[parts[0]] || parts[0] || "") === href.slice(2) ? "on" : "" }, l)));
   app.replaceChildren(h("div", { class: "empty" }, "Loading…"));
   try {
     const [a, b] = parts; let out;
     if (!a) out = await pOverview(); else if (a === "channels") out = await pChannels(); else if (a === "channel") out = await pChannel(b);
     else if (a === "videos") out = await pVideos(q); else if (a === "video") out = await pVideo(b); else if (a === "artifacts") out = await pArtifacts(q);
     else if (a === "artifact") out = await pArtifact(q); else if (a === "quality") out = await pQuality(); else out = h("div", { class: "empty" }, "Page not found.");
-    app.replaceChildren(...[out].flat(Infinity).filter(Boolean)); window.scrollTo(0, 0);
+    app.replaceChildren(...[out].flat(Infinity).filter(Boolean)); document.title = (app.querySelector("h1")?.textContent || "Data browser") + " · YIOS"; window.scrollTo(0, 0);
   } catch (e) { app.replaceChildren(h("div", { class: "empty" }, "Error: " + e.message)); }
 }
 addEventListener("hashchange", render); render();

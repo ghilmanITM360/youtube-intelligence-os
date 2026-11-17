@@ -39,6 +39,12 @@ def test_every_endpoint_answers_and_raw_is_whitelisted(tmp_path, monkeypatch):
         assert json.loads(get(base, "/api/summary")[1])["by_year"]
         gz = c.execute("select path from artifacts where path like '%.gz' limit 1").fetchone()
         if gz: assert get(base, f"/raw?path={gz[0]}")[0] in (200, 404)  # .gz is shown decompressed (404 only if the file is absent in this checkout)
+        assert len(st["all"]) == st["n"] and sum(t["v"] for t in st["by_type"]) == st["n"]  # the all-videos table and per-type split cover every video
+        ch = json.loads(get(base, "/api/channels")[1]); assert ch and "median" in ch[0] and "spark" in ch[0]
+        for p in ["/api/videos?year=2024&dir=asc&sort=views", "/api/videos?art=1&tx=1", "/api/videos?tq=the", "/api/summary"]: assert get(base, p)[0] == 200, p
+        assert json.loads(get(base, f"/api/video/{vid}")[1])["rank"]["of"] >= 1
+        req = urllib.request.Request(base + "/api/channels", headers={"Accept-Encoding": "gzip"})
+        with urllib.request.urlopen(req) as r: assert r.headers["Content-Encoding"] == "gzip"  # big JSON is compressed
         assert get(base, "/api/video/nope000000x")[0] == 404
         assert get(base, "/raw?path=../../../../etc/passwd")[0] == 404  # not in the inventory -> never read
         assert get(base, "/api/videos?sort=views%3Bdrop%20table%20videos")[0] == 200  # unknown sort falls back, never reaches SQL

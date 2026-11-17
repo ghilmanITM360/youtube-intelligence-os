@@ -5,7 +5,7 @@
 
 Build the DB first: scripts/build_yios_canonical_db.py build && scripts/build_yios_artifact_inventory.py
 The DB is opened read-only; /raw serves only files that the artifact inventory lists (no path traversal)."""
-import argparse, gzip, json, mimetypes, os, sqlite3, subprocess, sys
+import argparse, datetime, gzip, html, json, mimetypes, os, sqlite3, subprocess, sys, threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
@@ -24,12 +24,52 @@ def conn():
 
 
 def rows(c, sql, *a):
-    return [dict(r) for r in c.execute(sql, a)]
+    return [fix(dict(r)) for r in c.execute(sql, a)]
+
+
+def fix(r):
+    """Some source channel names hold HTML entities ('&amp;'); show them decoded (the stored value is left untouched)."""
+    for k in ("name", "channel", "raw_name"):
+        if isinstance(r.get(k), str) and "&" in r[k]: r[k] = html.unescape(r[k])
+    return r
 
 
 def one(c, sql, *a):
     r = c.execute(sql, a).fetchone()
-    return dict(r) if r else None
+    return fix(dict(r)) if r else None
+
+
+_LOCK, _MEM = threading.Lock(), {}
+
+
+def memo(key, fn):
+    """The DB is read-only while the server runs, so results are cached per DB file version (rebuilt DB => new keys)."""
+    k = (key, os.stat(DB).st_mtime_ns)
+    with _LOCK:
+        if k in _MEM: return _MEM[k]
+    v = fn()
+    with _LOCK:
+        if len(_MEM) > 800: _MEM.clear()
+        _MEM[k] = v
+    return v
+
+
+def spec_index(c):
+    """One pass over the links: which videos / which files are 'specific' (file names 25 videos or fewer), per channel."""
+    def build():
+        meta = {r["path"]: r for r in rows(c, "select path, role, format, videos_mentioned from artifacts where videos_mentioned<=25")}
+        per, vids = {}, set()
+        for cid, path, vid in c.execute("select v.channel_id, l.path, l.target_id from artifact_links l join videos v on v.video_id=l.target_id "
+                                        "where l.target_kind='video'"):
+            if path in meta:
+                vids.add(vid); d = per.setdefault(cid, {"files": {}, "videos": set()}); d["files"].setdefault(path, set()).add(vid); d["videos"].add(vid)
+        return {"vids": vids, "meta": meta, "per": per}
+    return memo("spec", build)
+
+
+def median(xs):
+    xs = sorted(xs); n = len(xs)
+    return None if not n else xs[n // 2] if n % 2 else (xs[n // 2 - 1] + xs[n // 2]) / 2
 
 
 def like(s):
@@ -45,48 +85,69 @@ def summary(c, q):
             "roles": rows(c, "select role, count(*) n from artifacts group by 1 order by n desc"),
             "by_year": rows(c, "select substr(published_date,1,4) y, count(*) n, sum(views) views from videos where published_date is not null group by 1 order by 1"),
             "caption_kinds": rows(c, "select caption_kind, count(*) n from transcripts group by 1 order by n desc"),
-            "videos_with_specific_artifact": c.execute("select count(distinct target_id) from artifact_links l join artifacts a using(path) "
-                                                       "where l.target_kind='video' and a.videos_mentioned<=25").fetchone()[0]}
+            "videos_with_specific_artifact": len(spec_index(c)["vids"]),
+            "completeness": one(c, "select count(*) n, sum(views is not null) views, sum(published_date is not null) date, sum(duration_seconds is not null) duration, "
+                                   "sum(likes is not null) likes, sum(comments is not null) comments, sum(thumbnail_url is not null) thumbnail, sum(has_transcript) transcript, "
+                                   "sum(description is not null and description<>'') description from videos"),
+            "top_channels": rows(c, "select c.channel_id, c.name, sum(v.views) views, count(*) videos from videos v join channels c using(channel_id) "
+                                    "group by 1 order by views desc nulls last limit 15")}
 
 
 def channels(c, q):
-    return rows(c, "select c.channel_id, c.name, c.handle, c.subscribers, count(v.video_id) videos, sum(v.views) views, "
-                   "sum(v.has_transcript) transcripts, min(v.published_date) first_date, max(v.published_date) last_date, c.source_count "
-                   "from channels c left join videos v using(channel_id) group by c.channel_id order by videos desc")
+    out = rows(c, "select c.channel_id, c.name, c.handle, c.subscribers, count(v.video_id) videos, sum(v.views) views, max(v.views) best, sum(v.likes) likes, "
+                  "sum(v.has_transcript) transcripts, min(v.published_date) first_date, max(v.published_date) last_date, c.source_count "
+                  "from channels c left join videos v using(channel_id) group by c.channel_id order by videos desc")
+    vw, spark = {}, {}
+    for cid, x in c.execute("select channel_id, views from videos where views is not null"): vw.setdefault(cid, []).append(x)
+    for cid, y, n in c.execute("select channel_id, substr(published_date,1,4), count(*) from videos where published_date is not null group by 1,2"): spark.setdefault(cid, {})[y] = n
+    for r in out: r["median"] = median(vw.get(r["channel_id"], [])); r["spark"] = spark.get(r["channel_id"], {})
+    return out
 
 
 def stats(c, cid):
-    """Aggregates for one channel's report page (computed on demand, nothing stored)."""
+    """Aggregates for one channel's report page (computed on demand, cached per DB version)."""
     vs = rows(c, "select video_id, title, published_date, duration_seconds d, video_type, views, likes, comments, has_transcript from videos where channel_id=?", cid)
     vw = sorted(v["views"] for v in vs if v["views"] is not None)
-    med = (vw[len(vw) // 2] if len(vw) % 2 else (vw[len(vw) // 2 - 1] + vw[len(vw) // 2]) / 2) if vw else None
+    med = median(vw)
     bucket = lambda x, edges, labels: labels[next((i for i, e in enumerate(edges) if x < e), len(edges))]
-    dur = {}; vb = {}
+    dur = {}; vb = {}; bt = {}
     for v in vs:
         k = "unknown" if v["d"] is None else bucket(v["d"], [60, 300, 600, 1200, 2400, 3600], ["<1 min", "1-5 min", "5-10 min", "10-20 min", "20-40 min", "40-60 min", ">60 min"])
         dur[k] = dur.get(k, 0) + 1
+        t = bt.setdefault(v["video_type"], {"l": v["video_type"], "v": 0, "views": 0, "all": []}); t["v"] += 1
         if v["views"] is not None:
             k = bucket(v["views"], [1e3, 1e4, 1e5, 1e6], ["<1K", "1K-10K", "10K-100K", "100K-1M", ">1M"]); vb[k] = vb.get(k, 0) + 1
+            t["views"] += v["views"]; t["all"].append(v["views"])
+    for t in bt.values(): t["median"] = median(t.pop("all"))
     order = lambda d, labels: [{"l": l, "v": d[l]} for l in labels if l in d]
     dated = [v for v in vs if v["published_date"]]
+    days = []
+    for v in sorted(dated, key=lambda v: v["published_date"]):
+        try: days.append(datetime.date.fromisoformat(v["published_date"][:10]).toordinal())
+        except ValueError: pass
+    gaps = [b - a for a, b in zip(days, days[1:])]
+    lv = [(v["likes"], v["views"]) for v in vs if v["likes"] is not None and v["views"]]
+    sp = spec_index(c)["per"].get(cid, {"files": {}, "videos": set()})
+    meta = spec_index(c)["meta"]
+    spec_files = sorted(({"path": p, "role": meta[p]["role"], "format": meta[p]["format"], "videos_mentioned": meta[p]["videos_mentioned"], "n": len(x)} for p, x in sp["files"].items()),
+                        key=lambda f: (-f["n"], f["path"]))[:100]
     return {"n": len(vs), "views_total": sum(vw), "views_median": med, "views_max": vw[-1] if vw else None, "likes_total": sum(v["likes"] or 0 for v in vs),
+            "comments_total": sum(v["comments"] or 0 for v in vs),
+            "engagement": round(sum(a for a, _ in lv) / sum(b for _, b in lv) * 100, 2) if lv else None,
+            "gap_days_median": median(gaps), "span_days": (days[-1] - days[0]) if len(days) > 1 else 0,
             "avg_minutes": round(sum(v["d"] for v in vs if v["d"]) / max(1, sum(1 for v in vs if v["d"])) / 60, 1),
             "first": min((v["published_date"] for v in dated), default=None), "last": max((v["published_date"] for v in dated), default=None),
             "durations": order(dur, ["<1 min", "1-5 min", "5-10 min", "10-20 min", "20-40 min", "40-60 min", ">60 min", "unknown"]),
             "view_buckets": order(vb, ["<1K", "1K-10K", "10K-100K", "100K-1M", ">1M"]),
+            "by_type": sorted(bt.values(), key=lambda t: -t["v"]),
             "by_month": rows(c, "select substr(published_date,1,7) l, count(*) v, sum(views) views from videos where channel_id=? and published_date is not null group by 1 order by 1", cid),
             "by_year": rows(c, "select substr(published_date,1,4) l, count(*) v, sum(views) views from videos where channel_id=? and published_date is not null group by 1 order by 1", cid),
             "weekday": rows(c, "select cast(strftime('%w', published_date) as int) l, count(*) v from videos where channel_id=? and published_date is not null group by 1 order by 1", cid),
-            "top": sorted((v for v in vs if v["views"] is not None), key=lambda v: -v["views"])[:10],
-            "latest": sorted(dated, key=lambda v: v["published_date"], reverse=True)[:10],
+            "all": [[v["video_id"], v["title"], v["published_date"], v["d"], v["video_type"], v["views"], v["likes"], v["comments"], v["has_transcript"]] for v in vs],
             "caption_kinds": rows(c, "select t.caption_kind l, count(*) v from transcripts t join videos v using(video_id) where v.channel_id=? group by 1 order by v desc", cid),
             "roles": rows(c, "select a.role l, count(distinct a.path) v from artifact_links l join artifacts a using(path) where (l.target_kind='channel' and l.target_id=?) "
                              "or (l.target_kind='video' and l.target_id in (select video_id from videos where channel_id=?)) group by 1 order by v desc", cid, cid),
-            "specific_files": rows(c, "select a.path, a.role, a.format, a.videos_mentioned, count(distinct l.target_id) n from artifact_links l join artifacts a using(path) "
-                                      "join videos v on v.video_id=l.target_id where l.target_kind='video' and v.channel_id=? and a.videos_mentioned<=25 "
-                                      "group by a.path order by n desc, a.path limit 100", cid),
-            "videos_with_specific_file": c.execute("select count(distinct l.target_id) from artifact_links l join artifacts a using(path) join videos v on v.video_id=l.target_id "
-                                                   "where l.target_kind='video' and v.channel_id=? and a.videos_mentioned<=25", (cid,)).fetchone()[0]}
+            "specific_files": spec_files, "videos_with_specific_file": len(sp["videos"])}
 
 
 def channel(c, q, cid):
@@ -96,7 +157,7 @@ def channel(c, q, cid):
     ch["types"] = rows(c, "select video_type, count(*) n from videos where channel_id=? group by 1 order by n desc", cid)
     ch["artifacts"] = rows(c, "select a.path, a.role, a.format, a.videos_mentioned, l.via, l.mentions from artifact_links l join artifacts a using(path) "
                               "where l.target_kind='channel' and l.target_id=? order by a.videos_mentioned, a.path limit 300", cid)
-    ch["stats"] = stats(c, cid)
+    ch["stats"] = memo(("stats", cid), lambda: stats(c, cid))
     ch["video_artifact_count"] = c.execute("select count(distinct l.path) from artifact_links l join videos v on v.video_id=l.target_id "
                                            "where l.target_kind='video' and v.channel_id=?", (cid,)).fetchone()[0]
     return ch
@@ -109,12 +170,15 @@ def videos(c, q):
     if g("channel"): where.append("v.channel_id=?"); args.append(g("channel"))
     if g("type"): where.append("v.video_type=?"); args.append(g("type"))
     if g("tx") == "1": where.append("v.has_transcript=1")
-    if g("art") == "1": where.append("exists(select 1 from artifact_links l join artifacts a using(path) where l.target_kind='video' "
-                                     "and l.target_id=v.video_id and a.videos_mentioned<=25)")
+    if g("year"): where.append("substr(v.published_date,1,4)=?"); args.append(g("year"))
+    if g("tq"): where.append("v.video_id in (select t.video_id from transcripts t join transcript_texts x on x.sha256=t.text_sha256 where x.text like ? escape '\\')"); args.append(like(g("tq")))
+    if g("art") == "1":
+        sv = spec_index(c)["vids"]; c.create_function("is_spec", 1, lambda x: x in sv, deterministic=True); where.append("is_spec(v.video_id)")
     w = ("where " + " and ".join(where)) if where else ""
     page = max(int(g("page") or 1), 1); size = 50
     total = c.execute(f"select count(*) from videos v {w}", args).fetchone()[0]
     order = SORTS.get(g("sort"), SORTS["date"])
+    if g("dir") == "asc": order = order.replace(" DESC", "") if " DESC" in order else order + " DESC"
     items = rows(c, f"select v.video_id, v.title, v.channel_id, c.name channel, v.published_date, v.duration_seconds, v.video_type, v.views, v.likes, "
                     f"v.has_transcript, v.source_count from videos v join channels c using(channel_id) {w} "
                     f"order by {order} nulls last, v.video_id limit ? offset ?", *args, size, (page - 1) * size)
@@ -124,6 +188,8 @@ def videos(c, q):
 def video(c, q, vid):
     v = one(c, "select v.*, c.name channel from videos v join channels c using(channel_id) where video_id=?", vid)
     if not v: return None
+    vw = [r[0] for r in c.execute("select views from videos where channel_id=? and views is not null", (v["channel_id"],))]
+    v["rank"] = {"of": len(vw), "pos": (sum(1 for x in vw if x > v["views"]) + 1) if v["views"] is not None else None, "median": median(vw)}
     v["sources"] = rows(c, "select * from video_sources where video_id=? order by source_id", vid)
     v["conflicts"] = rows(c, "select * from conflicts where video_id=?", vid)
     v["quality_issues"] = rows(c, "select * from quality_issues where video_id=?", vid)
@@ -173,7 +239,8 @@ ROUTES = {"/api/summary": summary, "/api/channels": channels, "/api/videos": vid
 
 
 class H(BaseHTTPRequestHandler):
-    def send(self, code, body, ctype, extra=()):
+    def send(self, code, body, ctype, extra=(), gz=None):
+        if gz is not None and "gzip" in self.headers.get("Accept-Encoding", ""): body, extra = gz, (*extra, ("Content-Encoding", "gzip"), ("Vary", "Accept-Encoding"))
         self.send_response(code)
         self.send_header("Content-Type", ctype); self.send_header("Content-Length", str(len(body)))
         for k, v in extra: self.send_header(k, v)
@@ -187,17 +254,25 @@ class H(BaseHTTPRequestHandler):
         try:
             if p in ("/", "/index.html"):
                 return self.send(200, open(INDEX, "rb").read(), "text/html; charset=utf-8")
-            c = conn()
-            try:
-                if p == "/raw": return self.raw(c, q)
-                if p in ROUTES:
-                    out = ROUTES[p](c, q)
-                elif p.startswith("/api/channel/"): out = channel(c, q, p.rsplit("/", 1)[1])
-                elif p.startswith("/api/video/"): out = video(c, q, p.rsplit("/", 1)[1])
-                else: return self.js({"error": "not found"}, 404)
-            finally:
-                c.close()
-            self.js(out) if out is not None else self.js({"error": "not found"}, 404)
+            if p == "/raw":
+                c = conn()
+                try: return self.raw(c, q)
+                finally: c.close()
+            if p in ROUTES: fn = lambda c: ROUTES[p](c, q)
+            elif p.startswith("/api/channel/"): fn = lambda c: channel(c, q, p.rsplit("/", 1)[1])
+            elif p.startswith("/api/video/"): fn = lambda c: video(c, q, p.rsplit("/", 1)[1])
+            else: return self.js({"error": "not found"}, 404)
+
+            def build():  # json + gzip once per (url, DB version)
+                c = conn()
+                try: out = fn(c)
+                finally: c.close()
+                if out is None: return None
+                b = json.dumps(out, ensure_ascii=False).encode()
+                return b, (gzip.compress(b, 5) if len(b) > 1024 else None)
+            r = memo(("http", self.path), build)
+            if r is None: return self.js({"error": "not found"}, 404)
+            self.send(200, r[0], "application/json; charset=utf-8", gz=r[1])
         except (ValueError, sqlite3.Error) as e:
             self.js({"error": str(e)}, 400)
 
@@ -230,4 +305,5 @@ if __name__ == "__main__":
             subprocess.run([sys.executable, f"{R}/scripts/{sc[0]}", *sc[1:]], cwd=R, check=False)
     if not os.path.exists(DB): sys.exit(f"missing {DB}: run scripts/build_yios_canonical_db.py build, then scripts/build_yios_artifact_inventory.py")
     print(f"YIOS site on http://127.0.0.1:{a.port}  (db {DB}, read-only)")
+    threading.Thread(target=lambda: spec_index(conn()), daemon=True).start()  # warm the one slow aggregate so the first page load is instant
     ThreadingHTTPServer(("127.0.0.1", a.port), H).serve_forever()
