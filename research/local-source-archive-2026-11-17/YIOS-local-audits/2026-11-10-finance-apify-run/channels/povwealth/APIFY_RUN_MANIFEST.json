@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-10T07:24:48.582Z",
+  "channel": {
+    "name": "POV Wealth",
+    "handle": "@PovWealthUS_1",
+    "id": "UCryM-LAkg31P_B0GeshJQjg"
+  },
+  "tranche": "T2",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t2_povwealth",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "14x2NGjn8wPsbJW47",
+    "dataset_id": "ovilXahWhdXZTEuXF",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-10T07:23:41.240Z",
+    "finished_at_utc": "2026-11-10T07:24:48.582Z",
+    "charged_events": {
+      "result": 60
+    },
+    "actual_cost_usd": 0.24,
+    "usage_total_usd_reported": 0.24,
+    "max_cost_usd": 0.29,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCryM-LAkg31P_B0GeshJQjg"
+      ],
+      "maxResults": 71,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 60,
+    "raw_file": "raw/t2_povwealth_14x2NGjn8wPsbJW47_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 60,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

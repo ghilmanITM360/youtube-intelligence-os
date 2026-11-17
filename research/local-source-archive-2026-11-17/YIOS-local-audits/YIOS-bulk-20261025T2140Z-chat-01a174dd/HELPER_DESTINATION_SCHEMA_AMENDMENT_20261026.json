@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-26T16:50:09.479544+00:00",
+  "reason": "Batch29 append-only DESTINATION receipt contains actual validated folder metadata directly rather than nested folder. Resume accepts either existing schema; same owner/private/parent metadata gates unchanged. Original receipt preserved.",
+  "old_sha256": "5cb842feb3c63421218f38421d697cfbdd8ad656aacaa79b8ac04df55ca06804",
+  "new_sha256": "549aadfff9a08317fd414b2903688b2d9bfe98d48c0e59cca0d2c184de144de0",
+  "before": "dest=read(d/'DESTINATION.json')['folder'] if (d/'DESTINATION.json').exists() else",
+  "after": "dest=(lambda z:z.get('folder',z))(read(d/'DESTINATION.json')) if (d/'DESTINATION.json').exists() else"
+}

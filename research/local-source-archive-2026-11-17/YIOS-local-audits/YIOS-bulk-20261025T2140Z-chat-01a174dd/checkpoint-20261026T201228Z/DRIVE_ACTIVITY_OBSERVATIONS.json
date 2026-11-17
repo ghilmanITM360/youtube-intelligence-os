@@ -1,0 +1,44 @@
+{
+  "method": "Fresh authenticated Drive Activity UI, exact row data-id selection",
+  "account": "kgk2930@gmail.com",
+  "timezone": "Asia/Karachi",
+  "events": [
+    {
+      "target_id": "127DXG7Ih9tw61aFNGL0tGzwt4dc0no_A",
+      "actor": "You",
+      "action": "uploaded an item",
+      "time": "11:06 PM Oct 26"
+    },
+    {
+      "target_id": "1_I0MqlstrAynSWTsPnOTuZOzr5eueJtv",
+      "actor": "You",
+      "action": "uploaded an item",
+      "time": "11:11 PM Oct 26"
+    },
+    {
+      "target_id": "1tUB-VgmAgeOZs2NgmVMQ1OFxhdLcgP4J",
+      "actor": "You",
+      "action": "uploaded an item",
+      "time": "11:06 PM Oct 26"
+    },
+    {
+      "target_id": "1tUB-VgmAgeOZs2NgmVMQ1OFxhdLcgP4J",
+      "actor": "You",
+      "action": "uploaded 3 items",
+      "time": "11:11 PM Oct 26"
+    },
+    {
+      "target_id": "1tUB-VgmAgeOZs2NgmVMQ1OFxhdLcgP4J",
+      "actor": "You",
+      "action": "created an item",
+      "time": "11:06 PM Oct 26"
+    }
+  ],
+  "correction": "Fresh folder UI separates earlier one-item event from later three-item event; prior checkpoint observed an aggregated four-item display. Neither display identifies creation client/session.",
+  "limitations": [
+    "No Drive Activity API tool exposed; no new permissions requested.",
+    "Activity UI exposes account actor and minute time, no client/device/IP/session/request ID.",
+    "fields=* returns normalized metadata, not complete raw Drive API fields; no creator transaction identity exposed.",
+    "Revision lists show one revision each, lastModifyingUser owner; revision modified time equals source mtime and does not identify upload session."
+  ]
+}

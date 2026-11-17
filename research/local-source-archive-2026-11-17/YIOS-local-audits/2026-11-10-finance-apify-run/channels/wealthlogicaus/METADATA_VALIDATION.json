@@ -1,0 +1,59 @@
+{
+  "generated_at_utc": "2026-11-10T14:52:49.220646+00:00",
+  "status": "PASS",
+  "checks": {
+    "unique_video_ids": {
+      "pass": true,
+      "duplicates": 0
+    },
+    "watch_urls_match_video_ids": {
+      "pass": true,
+      "failures": []
+    },
+    "all_records_match_verified_channel": {
+      "pass": true,
+      "failures": []
+    },
+    "raw_rows_to_master_reconciliation": {
+      "pass": true,
+      "raw_video_rows": 21,
+      "unique_raw_video_ids": 21,
+      "excluded_members_only": 0,
+      "public_master_rows": 21
+    },
+    "type_counts_reconcile": {
+      "pass": true,
+      "REGULAR": 21,
+      "SHORT": 0,
+      "STREAM": 0
+    },
+    "classification_values_valid": {
+      "pass": true
+    },
+    "unknown_never_zero": {
+      "pass": true,
+      "rule": "None serialised as UNKNOWN in CSV, null in JSONL"
+    },
+    "no_captions_or_ai_charged": {
+      "pass": true
+    }
+  },
+  "metadata_completeness": {
+    "core_fields": [
+      "video_id",
+      "title",
+      "watch_url",
+      "video_type",
+      "publication_timestamp_utc",
+      "duration",
+      "view_count",
+      "like_count",
+      "comment_count",
+      "description",
+      "thumbnail_url"
+    ],
+    "known_values": 231,
+    "possible_values": 231,
+    "percentage": 1.0
+  }
+}

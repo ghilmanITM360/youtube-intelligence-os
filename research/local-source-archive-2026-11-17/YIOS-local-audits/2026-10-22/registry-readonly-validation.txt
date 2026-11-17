@@ -1,0 +1,38 @@
+Existing validate_database with read-only immutable SQLite connector; CLI rebuild/idempotence omitted.
+EXIT 0
+{
+  "status": "PASS",
+  "controls": {
+    "canonical_channels": 75,
+    "raw_submissions": 67,
+    "target_channels": 63,
+    "channels_with_video_data": 46,
+    "identity_only_channels": 29,
+    "standard_packages": 40,
+    "historical_channels": 6,
+    "stored_outside_targets": 12,
+    "datasets": 33,
+    "videos": 2303,
+    "real_transcripts": 2291,
+    "placeholders": 12,
+    "description_gaps": 17,
+    "non_channel_subjects": 4,
+    "intelligence_coverage_rows": 600,
+    "data_layer_rows": 825,
+    "visual_coverage_rows": 75
+  },
+  "checks": {
+    "duplicate_channel_ids": 0,
+    "duplicate_video_ids": 0,
+    "identity_only_with_videos": 0,
+    "identity_only_with_packages": 0,
+    "generated_intelligence_without_evidence": 0,
+    "generated_intelligence_marked_unavailable": 0,
+    "null_transcript_without_reason": 0,
+    "forensic_channel_count": 1,
+    "thumbnail_evidence_channel_count": 3,
+    "title_only_historical_channel_count": 2,
+    "first_party_ingested_count": 0
+  },
+  "errors": []
+}

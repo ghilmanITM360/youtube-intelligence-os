@@ -1,0 +1,147 @@
+{
+ "id": "A89Ct4rL1O1vthxkC",
+ "actId": "h7sDV53CddomktSi5",
+ "userId": "H24ACSyg2vOtQxYik",
+ "startedAt": "2026-11-09T22:33:04.629Z",
+ "finishedAt": "2026-11-09T22:34:26.219Z",
+ "status": "SUCCEEDED",
+ "statusMessage": "Finished! Total 73 requests: 73 succeeded, 0 failed.",
+ "isStatusMessageTerminal": true,
+ "meta": {
+  "origin": "WEB",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+ },
+ "stats": {
+  "inputBodyLen": 357,
+  "migrationCount": 0,
+  "rebootCount": 0,
+  "restartCount": 0,
+  "durationMillis": 81476,
+  "resurrectCount": 0,
+  "runTimeSecs": 81.476,
+  "metamorph": 0,
+  "computeUnits": 0.022632222222222224,
+  "memAvgBytes": 343288695.5285816,
+  "memMaxBytes": 495349760,
+  "memCurrentBytes": 0,
+  "cpuAvgUsage": 12.135576472705027,
+  "cpuMaxUsage": 83.79175726927939,
+  "cpuCurrentUsage": 0,
+  "netRxBytes": 15790438,
+  "netTxBytes": 1988054
+ },
+ "options": {
+  "build": "latest",
+  "timeoutSecs": 600,
+  "memoryMbytes": 1024,
+  "maxTotalChargeUsd": 0.5,
+  "maxItems": null,
+  "isMaxTotalChargeUsdSetByUser": true,
+  "diskMbytes": 2048
+ },
+ "buildId": "0sudfMZtN4cNBxW8i",
+ "exitCode": 0,
+ "defaultKeyValueStoreId": "OXjJxq2NPaIgGDxVE",
+ "defaultDatasetId": "JP5B7X3CDDff79glR",
+ "defaultRequestQueueId": "jgDlGBPgSySHwZcPp",
+ "storageIds": {
+  "keyValueStores": {
+   "default": "OXjJxq2NPaIgGDxVE"
+  },
+  "datasets": {
+   "default": "JP5B7X3CDDff79glR"
+  },
+  "requestQueues": {
+   "default": "jgDlGBPgSySHwZcPp"
+  }
+ },
+ "pricingInfo": {
+  "minimalMaxTotalChargeUsd": null,
+  "pricingModel": "PAY_PER_EVENT",
+  "isPriceChangeNotificationSuppressed": true,
+  "createdAt": "2026-09-02T13:52:04.236Z",
+  "startedAt": "2026-09-02T13:52:04.236Z",
+  "apifyMarginPercentage": 0.2,
+  "pricingPerEvent": {
+   "actorChargeEvents": {
+    "result": {
+     "eventTitle": "Video",
+     "eventDescription": "Each video written to the dataset.",
+     "isOneTimeEvent": false,
+     "isPrimaryEvent": true,
+     "eventPriceUsd": 0.004
+    },
+    "date-filter": {
+     "eventTitle": "Add-on: Date range for channels",
+     "eventDescription": "Extra cost when date filtering is used on channels.",
+     "isOneTimeEvent": false,
+     "eventPriceUsd": 0.0013
+    },
+    "ai-video-description": {
+     "eventTitle": "Add-on: AI description",
+     "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+     "isOneTimeEvent": false,
+     "eventPriceUsd": 0.015
+    },
+    "ai-video-summary": {
+     "eventTitle": "Add-on: AI summary",
+     "eventDescription": "Extra cost for AI summary of a video per minute.",
+     "isOneTimeEvent": false,
+     "eventPriceUsd": 0.015
+    },
+    "transcribeMinute": {
+     "eventTitle": "Add-on: Transcript minute",
+     "eventDescription": "Extra cost charged per started minute per video",
+     "isOneTimeEvent": false,
+     "eventPriceUsd": 0.048
+    }
+   }
+  }
+ },
+ "chargedEventCounts": {
+  "result": 69,
+  "date-filter": 0,
+  "ai-video-description": 0,
+  "ai-video-summary": 0,
+  "transcribeMinute": 0
+ },
+ "platformUsageBillingModel": "DEVELOPER",
+ "accountedChargedEventCounts": {
+  "result": 69,
+  "date-filter": 0,
+  "ai-video-description": 0,
+  "ai-video-summary": 0,
+  "transcribeMinute": 0
+ },
+ "standby": null,
+ "generalAccess": "FOLLOW_USER_SETTING",
+ "buildNumber": "0.0.327",
+ "containerUrl": "https://yku9g85qyukf.runs.apify.net",
+ "usageTotalUsd": 0.276,
+ "consoleUrl": "https://console.apify.com/view/runs/A89Ct4rL1O1vthxkC",
+ "eventUsage": {
+  "result": {
+   "eventTitle": "Video",
+   "eventTotalUsd": 0.276
+  },
+  "date-filter": {
+   "eventTitle": "Add-on: Date range for channels",
+   "eventTotalUsd": 0
+  },
+  "ai-video-description": {
+   "eventTitle": "Add-on: AI description",
+   "eventTotalUsd": 0
+  },
+  "ai-video-summary": {
+   "eventTitle": "Add-on: AI summary",
+   "eventTotalUsd": 0
+  },
+  "transcribeMinute": {
+   "eventTitle": "Add-on: Transcript minute",
+   "eventTotalUsd": 0
+  }
+ },
+ "output": {
+  "dataset": "https://api.apify.com/v2/datasets/JP5B7X3CDDff79glR/items"
+ }
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "ComicB"; src: url("assets/fonts/comic-bold.ttf"); font-weight: 700; }
+:root { --ground:#fff; --ink:#111; --red:#D7263D; --grey:#C4C4C4; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:var(--ground); }
+#root { position:relative; width:1080px; height:1920px; background:#fff; }
+svg { position:absolute; inset:0; width:1080px; height:1920px; }
+.l { fill:none; stroke:var(--ink); stroke-width:8; stroke-linecap:round; stroke-linejoin:round; }
+.r { fill:none; stroke:var(--red); stroke-width:8; stroke-linecap:round; }
+.d { stroke-dasharray:1; stroke-dashoffset:1; }
+text { font-family:"ComicB", sans-serif; font-weight:700; fill:var(--ink); text-anchor:middle; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="12" data-width="1080" data-height="1920">
+<audio id="vo" class="clip" src="assets/vo.wav" data-start="0" data-duration="12" data-track-index="9" data-volume="1"></audio>
+<svg id="stage" class="clip" data-start="0" data-duration="12" data-track-index="1" viewBox="0 0 1080 1920">
+  <defs><clipPath id="water-clip"><path d="M272 950 L286 1236 Q292 1262 322 1262 L498 1262 Q528 1262 534 1236 L548 950 Z"/></clipPath></defs>
+  <!-- title -->
+  <g id="title">
+    <text x="540" y="470" font-size="150">BOIL</text>
+    <text x="540" y="590" font-size="84">BY STIRRING?</text>
+    <path id="strike" class="r d" pathLength="1" d="M360 432 C430 418 520 444 722 410"/>
+  </g>
+  <!-- mug (see-through): water fill, back rim, body, handle, front rim -->
+  <g id="mug">
+    <rect id="water" x="260" y="950" width="300" height="320" fill="#C4C4C4" clip-path="url(#water-clip)"/>
+    <ellipse id="surface" cx="410" cy="950" rx="138" ry="20" fill="#C4C4C4" stroke="#111" stroke-width="8"/>
+    <path class="l" d="M270 900 C268 1000 272 1150 286 1238 Q292 1262 322 1262 L498 1262 Q528 1262 534 1238 C548 1150 552 1000 550 900"/>
+    <path class="l" d="M548 960 C650 948 650 1140 536 1150"/>
+    <ellipse class="l" cx="410" cy="900" rx="140" ry="22"/>
+  </g>
+  <!-- swirl lines and red heat ticks -->
+  <path id="sw1" class="l d" pathLength="1" d="M356 1070 Q336 1100 358 1132"/>
+  <path id="sw2" class="l d" pathLength="1" d="M464 1070 Q484 1100 462 1132"/>
+  <path id="sw3" class="l d" pathLength="1" d="M330 1052 Q298 1100 332 1150"/>
+  <path id="tick1" class="r d" pathLength="1" d="M492 1052 L516 1022"/>
+  <path id="tick2" class="r d" pathLength="1" d="M504 1100 L530 1072"/>
+  <!-- spoon: pivots at the rim -->
+  <g id="spoon">
+    <line class="l" x1="410" y1="730" x2="410" y2="1066"/>
+    <ellipse class="l" cx="410" cy="1100" rx="24" ry="36" fill="#fff"/>
+  </g>
+  <!-- thermometer -->
+  <g id="thermo">
+    <path class="l" d="M740 700 L740 1160 M800 700 L800 1160 M740 700 Q770 676 800 700"/>
+    <circle class="l" cx="770" cy="1210" r="52" fill="#fff"/>
+    <path class="l" d="M740 1160 A52 52 0 1 0 800 1160" fill="#fff"/>
+    <g id="ticks"></g>
+    <path id="merc" class="r" d="M770 1210 L770 1030" style="stroke-width:12"/>
+    <text id="t20" x="770" y="1320" font-size="64">20 °C</text>
+  </g>
+</svg>
+</div>
+<script>
+const tl = gsap.timeline({ paused:true });
+// thermometer ticks (static marks)
+const ns = "http://www.w3.org/2000/svg", tk = document.getElementById("ticks");
+for (let y = 740; y <= 1140; y += 50) { const p = document.createElementNS(ns,"path"); p.setAttribute("d",`M800 ${y} L822 ${y}`); p.setAttribute("class","l"); p.style.strokeWidth=5; tk.appendChild(p); }
+const pop = (sel, t) => tl.fromTo(sel, {opacity:0}, {opacity:1, duration:0.04}, t);   // 1-frame pop
+const draw = (sel, t, d=0.25) => tl.fromTo(sel, {strokeDashoffset:1}, {strokeDashoffset:0, duration:d, ease:"none"}, t);
+// 0.0 objects + title appear
+pop("#mug",0); pop("#thermo",0); pop("#title text",0); pop("#spoon",0);
+tl.set("#spoon", {rotation:0, svgOrigin:"410 900"}, 0);
+// 2.0 strike through BOIL
+draw("#strike", 2.0, 0.2);
+// 3.0-8.0 spoon stirs: 10 swings, 0.5 s each, sine ease, pivot at rim
+let t = 3.0, a = 12;
+tl.to("#spoon", {rotation:a, svgOrigin:"410 900", duration:0.25, ease:"sine.out"}, t); t += 0.25;
+for (let i=0;i<9;i++){ a=-a; tl.to("#spoon",{rotation:a,svgOrigin:"410 900",duration:0.5,ease:"sine.inOut"},t); t+=0.5; }
+tl.to("#spoon",{rotation:0,svgOrigin:"410 900",duration:0.25,ease:"sine.in"},t);
+// swirl lines
+draw("#sw1",3.0); draw("#sw2",3.2); draw("#sw3",3.4);
+// 5.0 two red ticks leave the swirl
+draw("#tick1",5.0,0.15); draw("#tick2",5.1,0.15);
+// 8.0 mercury rises one hair (6 px)
+tl.to("#merc",{attr:{d:"M770 1210 L770 1024"},duration:0.5,ease:"none"},8.0);
+window.__timelines["main"] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# P6 handoff — prompt pack, text only (xkcd clone-readiness)
+- Done: `PROMPT_PACK/` = 17 asset-family files (CHR-001..006, ENV-001..004, PRP-001..002, GFX-001..002, TYP-001, BRD-001, SHT-001) + `PROMPT_INDEX.csv` + `README.md`. Generator `tooling/asset_library/xkcd/write_prompt_pack.py`.
+- Each file: asset_id, name, category, target path under `asset_library/_clone_assets/<category>/<asset_id>/`, purpose, reference frames that were opened, locked descriptors, poses/modifiers/items, framing, ChatGPT prompt (transparent PNG wording + pure-green #00FF00 fallback), negative prompt, acceptance check (side by side + halo QA).
+- Originality: new narrator NIB (round glasses + two-tail scarf on the faceless stick rig), new mascot TARDI (water bear), brand teal #1F6F78 instead of the source's red cards, name chosen by owner (placeholders only). No text generated in images. Source lecture-frame drawing, mascot, cards, names: structure reference only.
+- NOT done: no image generated (needs owner approval + model choice); `_clone_assets/` not created; names not trademark-checked.
+- Next exact operation (owner decision): approve the image model and generate CHR-001 anchor first, then review against the acceptance check.

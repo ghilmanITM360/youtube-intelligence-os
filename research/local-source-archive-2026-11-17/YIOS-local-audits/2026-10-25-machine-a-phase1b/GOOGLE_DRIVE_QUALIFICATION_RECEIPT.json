@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "stage": "PHASE_2A_READ_ONLY_GOOGLE_DRIVE_QUALIFICATION",
+  "classification": "BLOCKED",
+  "authentication": {
+    "profile_read_success": true,
+    "browser_connector_identity_match": true,
+    "identifiers_redacted": true
+  },
+  "quota": {
+    "source": "Authenticated Google One storage UI, independently corroborated by My Drive sidebar",
+    "api_about_get_available": false,
+    "display_limit": "15 GB",
+    "display_usage": "12.47 GB",
+    "display_usage_in_drive": "12.45 GB",
+    "display_gmail": "0.02 GB",
+    "display_photos": "0 GB",
+    "calculated_display_free": "approximately 2.53 GB",
+    "exact_byte_limit": null,
+    "exact_byte_usage": null,
+    "usage_in_drive_trash": null,
+    "pilot_capacity_sufficient": true,
+    "full_scope_35_GiB_capacity_sufficient": false,
+    "current_plan_display": "15 GB included, Rs 0",
+    "pooled_organizational_limit": "NOT_VERIFIED"
+  },
+  "folders": {
+    "owned_folder_pages_inspected": 2,
+    "owned_folder_metadata_records": 60,
+    "more_results": true,
+    "yios_keyword_results": 0,
+    "backup_keyword_results": 1,
+    "root": {
+      "shared": false,
+      "returned_permissions": [
+        {
+          "type": "user",
+          "role": "owner"
+        }
+      ],
+      "can_share": true
+    },
+    "candidate_1": {
+      "alias": "root_child_test_folder",
+      "shared": true,
+      "returned_permissions": [
+        {
+          "type": "anyone",
+          "role": "writer",
+          "allowFileDiscovery": false
+        },
+        {
+          "type": "user",
+          "role": "owner"
+        }
+      ],
+      "decision": "REJECTED_PRIVATE_BACKUP"
+    },
+    "candidate_2": {
+      "alias": "existing_backup_named_folder",
+      "shared": true,
+      "returned_permissions": [
+        {
+          "type": "anyone",
+          "role": "writer",
+          "allowFileDiscovery": false
+        },
+        {
+          "type": "user",
+          "role": "owner"
+        }
+      ],
+      "decision": "REJECTED_PRIVATE_BACKUP"
+    },
+    "dedicated_private_folder": "NOT_IDENTIFIED_OR_APPROVED",
+    "inheritance_details": "NOT_RETURNED_BY_CONNECTOR_NORMALIZATION",
+    "search_note": "shared=false Drive q filter rejected HTTP 400; not retried, replaced by bounded metadata inspection"
+  },
+  "transport": {
+    "binary_upload_tool_present": true,
+    "binary_raw_fetch_tool_present": true,
+    "browser_file_upload_menu_enabled": true,
+    "actual_upload_executed": false,
+    "actual_download_executed": false,
+    "token_binary_write_scope": "NOT_TESTED",
+    "candidate_binary_download_permissions": "NOT_VERIFIED",
+    "independent_restore": "NOT_EXECUTED",
+    "provider_retention": "NOT_VERIFIED",
+    "client_side_encryption": "NOT_APPROVED",
+    "key_recovery": "NOT_VERIFIED"
+  },
+  "resources": {
+    "start_five_hour": 73,
+    "start_weekly": 17,
+    "last_five_hour": 77,
+    "last_weekly": 18,
+    "credits_balance": "0",
+    "credits_spent_or_reset": false,
+    "context": "adequate; no compaction needed"
+  },
+  "actions": {
+    "created_cloud_folders": false,
+    "changed_permissions": false,
+    "uploads": 0,
+    "downloads": 0,
+    "git_mutations": false,
+    "deletions": false
+  },
+  "verified_at": "2026-10-26T00:15:36.894793+05:00",
+  "git": {
+    "branch": "codex/what-if-archive-main-integration",
+    "head": "badec432bbf5610748123b3f0e0bcb9cdb25fa10",
+    "upstream": "badec432bbf5610748123b3f0e0bcb9cdb25fa10",
+    "stash": "5b6c3042679400b16aa1024b79058b71dade0ab9",
+    "status": "?? finance-short-02-visual-calibration/\n?? productions/\n?? research/casually-finance-script-intelligence/",
+    "worktree_porcelain": "worktree /Users/ghilmankhan/workprojects/youtube-intelligence-os\nHEAD badec432bbf5610748123b3f0e0bcb9cdb25fa10\nbranch refs/heads/codex/what-if-archive-main-integration",
+    "remote_refs": "badec432bbf5610748123b3f0e0bcb9cdb25fa10\trefs/heads/codex/what-if-archive-main-integration\n08e719264e31ecd82de24f8eeb8f065c08359fe5\trefs/heads/main\n090f84b3292a3b6c6e94653a6ef1867726e4ebdd\trefs/heads/research/casually-finance-editing-forensics\n1adb8129f689207552f0838414e5823e4255bde1\trefs/heads/research/finance-economics-intelligence"
+  },
+  "disk_df_k": "Filesystem   1024-blocks      Used Available Capacity iused     ifree %iused  Mounted on\n/dev/disk3s5   482797652 429240712  12300252    98% 4551349 123002520    4%   /System/Volumes/Data\n",
+  "previous_artifacts": {
+    "PREPARE_PRIVATE_BACKUP.py": {
+      "sha256": "208f90b9d9d534056ef2bbb6bdb527126ecaf2caf4d8ed0f5f984ada7eb20528",
+      "bytes": 12358,
+      "unchanged": true
+    },
+    "PRIVATE_BACKUP_DESTINATION_DISCOVERY.json": {
+      "sha256": "f148277bba13b661eee00036d85b8ff354d3dd7124e65c5d013a7c97f95902b0",
+      "bytes": 1605,
+      "unchanged": true
+    },
+    "PRIVATE_BACKUP_DIRECTORIES.json": {
+      "sha256": "b7a4aea95eb2ae7056006964869377bd3d2bff13fc80e4cb300352ba699fe1e4",
+      "bytes": 716344,
+      "unchanged": true
+    },
+    "PRIVATE_BACKUP_OBJECT_MANIFEST.jsonl.gz": {
+      "sha256": "15fa7a0d701135b3fd5a14458033ec7796033a21679d3b8a38b5140802c9862a",
+      "bytes": 2240357,
+      "unchanged": true
+    },
+    "PRIVATE_BACKUP_PILOT.json": {
+      "sha256": "ea604018328312f0da9a13a10579b4b18b3a52b5ea24bceec31b3bae839fd263",
+      "bytes": 2964,
+      "unchanged": true
+    },
+    "PRIVATE_BACKUP_READINESS.md": {
+      "sha256": "4c8ab2b84a6d81af12a3e86b448022ee5002ff65df58ea8551a7568344cac698",
+      "bytes": 20244,
+      "unchanged": true
+    },
+    "PRIVATE_BACKUP_SCOPE.json": {
+      "sha256": "bb5f21a0426e95158607f7bf1c647ed7801c8d1aea0e0f24a529b971d092c2d4",
+      "bytes": 2686,
+      "unchanged": true
+    },
+    "PRIVATE_BACKUP_VERIFICATION.json": {
+      "sha256": "43b14f6333b65edad28705688aa9b92a2642245c802f1c70ff2a3e3e8a41d7a6",
+      "bytes": 5821,
+      "unchanged": true
+    },
+    "PRIVATE_BACKUP_VERIFY_PILOT.py": {
+      "sha256": "002e24570db3cb49099d0c731adffa9af93f2c44c4b5ba2ad1005285be1daf7a",
+      "bytes": 2107,
+      "unchanged": true
+    }
+  },
+  "pilot": {
+    "manifest_sha256": "ea604018328312f0da9a13a10579b4b18b3a52b5ea24bceec31b3bae839fd263",
+    "bytes": 95436174,
+    "fresh_rehash_this_stage": false,
+    "files": [
+      {
+        "source": "/Users/ghilmankhan/Downloads/videos in mp3/CasuallyFinance/Brace For Impact. - Casual Finance (720p, h264).mp4",
+        "bytes": 20507667,
+        "prior_sha256": "b07b2a4b55e2b83d717b8cb6e4ac7dcbb44726bf595356d0288617183cfa5bc5",
+        "stat_unchanged": true
+      },
+      {
+        "source": "/Users/ghilmankhan/workprojects/yio-cf-editing-forensics-local-evidence/JsK53moCyZA/gray.npy",
+        "bytes": 74361728,
+        "prior_sha256": "b80204a7cef172a7f167f05cb8938627bc42bfd2fe22597f1650950cc099e5e5",
+        "stat_unchanged": true
+      },
+      {
+        "source": "/Users/ghilmankhan/YIOS-local-audits/2026-10-24-5umJ63d3rzQ-deep-ct-scan/EVIDENCE_SHA256SUMS_checkpoint6",
+        "bytes": 165069,
+        "prior_sha256": "70e1fb80edcaaddfd58c81b2772805bc5c4af9c0c97b48cbb8bcb593eefe361e",
+        "stat_unchanged": true
+      },
+      {
+        "source": "/Users/ghilmankhan/Movies/CapCut/User Data/Projects/com.lveditor.draft/0921/Timelines/21FC2601-3B1E-48EF-82D9-EABE38430012/draft_info.json",
+        "bytes": 401710,
+        "prior_sha256": "dde9cc0a6d7ca1f1d27341042621121df1cff3a191f2dc55352d045858f278c4",
+        "stat_unchanged": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "applies_to": "Frozen batches 0001-0005 and original ordered planning manifests",
+  "interpretation": "Nested upload_status, binary_restore_status and hash_status inherited from the preauthorization inventory are historical snapshot fields. They do not describe current transfer state. Current receipt status=VERIFIED, fresh_sha256, per-object upload records and complete retrieval records are authoritative. Frozen files have not been altered. From batch 0006 onward these nested status fields explicitly reflect verified current transfer state."
+}

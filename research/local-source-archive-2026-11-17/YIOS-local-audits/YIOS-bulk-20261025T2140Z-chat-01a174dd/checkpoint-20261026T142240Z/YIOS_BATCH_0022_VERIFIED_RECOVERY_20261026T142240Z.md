@@ -1,0 +1,2630 @@
+# YIOS Batch22 verified recovery receipt
+
+Status VERIFIED. Uploaded bytes: 154,992,095; complete independently retrieved SHA-256 verified bytes: 154,992,095. Source mappings: 20.
+
+All-in physical uploaded bytes before this MD: 4,533,820,978; independently verified bytes: 4,533,820,978. This MD is additional payload, counted by its separate CONTROL-UPLOAD/VERIFY receipts after complete independent readback. No duplicate/partial I/O is counted as new recovery coverage.
+
+Authenticated owner kgk2930@gmail.com; approved private yios hierarchy. Actual namespace IDs, source paths, hashes, bytes and remote object IDs follow. Source stability and current owner/private/parent/size gates passed. No source deletion/move/cleanup, Git/PR/branch/stash/LFS/production mutation, payment or reset credit use by this backup. This is file-level cloud recovery; independent-machine disaster recovery and production ownership acceptance remain unproven.
+
+```json
+{
+  "receipt": {
+    "status": "VERIFIED",
+    "batch": 22,
+    "completed_utc": "2026-10-26T14:22:40.613698+00:00",
+    "files": [
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if all visible light was a single beam？ [TIDHee_Q5Gk].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if all visible light was a single beam？ [TIDHee_Q5Gk].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 20757466,
+        "allocated_path_bytes": 20758528,
+        "mtime_ns": 1792432444000000000,
+        "device": 16777229,
+        "inode": 93824178,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 406,
+        "proposed_destination_name": "00406__What if all visible light was a single beam？ [TIDHee_Q5Gk].mp4",
+        "fresh_stat": {
+          "st_size": 20757466,
+          "st_mtime_ns": 1792432444000000000,
+          "st_ctime_ns": 1792830801518054922,
+          "st_ino": 93824178,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "fca5fe3090b154140a411458d272fd9108e53519b7fe92f2a245b5eaddc0b09d",
+        "hash_refreshed_utc": "2026-10-26T13:59:12.982635+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj",
+        "remote_url": "https://drive.google.com/file/d/1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:29.097601+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj",
+            "title": "What if all visible light was a single beam？ [TIDHee_Q5Gk].mp4",
+            "mime_type": "video/mp4",
+            "size": "20757466",
+            "url": "https://drive.google.com/file/d/1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:04:01.436Z",
+            "modified_time": "2026-10-19T17:54:04.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 406,
+          "remote_id": "1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj",
+          "retrieval_file_id": "sediment://file_00000000b56082118787882ce85e921a",
+          "metadata": {
+            "id": "1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj",
+            "title": "What if all visible light was a single beam？ [TIDHee_Q5Gk].mp4",
+            "mime_type": "video/mp4",
+            "size": "20757466",
+            "url": "https://drive.google.com/file/d/1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:04:01.436Z",
+            "modified_time": "2026-10-19T17:54:04.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:05:58.609588+00:00",
+          "retrieved_bytes": 20757466,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "20757466",
+          "retrieved_sha256": "fca5fe3090b154140a411458d272fd9108e53519b7fe92f2a245b5eaddc0b09d",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:06:26.245827+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if all your DNA suddenly vanished？ [35KZm1yiyIE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if all your DNA suddenly vanished？ [35KZm1yiyIE].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 7481395,
+        "allocated_path_bytes": 7483392,
+        "mtime_ns": 1792432416000000000,
+        "device": 16777229,
+        "inode": 93824056,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 407,
+        "proposed_destination_name": "00407__What if all your DNA suddenly vanished？ [35KZm1yiyIE].mp4",
+        "fresh_stat": {
+          "st_size": 7481395,
+          "st_mtime_ns": 1792432416000000000,
+          "st_ctime_ns": 1792830801511858439,
+          "st_ino": 93824056,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "655005a9f032404e7a11eda062d2977e29b25c72e30a241c0dc69f92448f9bc6",
+        "hash_refreshed_utc": "2026-10-26T13:59:12.988938+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz",
+        "remote_url": "https://drive.google.com/file/d/1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:30.158355+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz",
+            "title": "What if all your DNA suddenly vanished？ [35KZm1yiyIE].mp4",
+            "mime_type": "video/mp4",
+            "size": "7481395",
+            "url": "https://drive.google.com/file/d/1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:42.058Z",
+            "modified_time": "2026-10-19T17:53:36.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 407,
+          "remote_id": "1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz",
+          "retrieval_file_id": "sediment://file_00000000af7881faa569b5164caaa61a",
+          "metadata": {
+            "id": "1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz",
+            "title": "What if all your DNA suddenly vanished？ [35KZm1yiyIE].mp4",
+            "mime_type": "video/mp4",
+            "size": "7481395",
+            "url": "https://drive.google.com/file/d/1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:42.058Z",
+            "modified_time": "2026-10-19T17:53:36.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:06:31.582036+00:00",
+          "retrieved_bytes": 7481395,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "7481395",
+          "retrieved_sha256": "655005a9f032404e7a11eda062d2977e29b25c72e30a241c0dc69f92448f9bc6",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:06:35.844950+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if everyone jumped at once？ [p2M8Y0z9Rl0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if everyone jumped at once？ [p2M8Y0z9Rl0].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 7273848,
+        "allocated_path_bytes": 7274496,
+        "mtime_ns": 1792432382000000000,
+        "device": 16777229,
+        "inode": 93824221,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 408,
+        "proposed_destination_name": "00408__What if everyone jumped at once？ [p2M8Y0z9Rl0].mp4",
+        "fresh_stat": {
+          "st_size": 7273848,
+          "st_mtime_ns": 1792432382000000000,
+          "st_ctime_ns": 1792830801518791045,
+          "st_ino": 93824221,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "c949504fd017d7ec201e250abae580cbf58667c8275e2beb8138f56689a92cb4",
+        "hash_refreshed_utc": "2026-10-26T13:59:12.994422+00:00",
+        "status": "VERIFIED",
+        "remote_id": "18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx",
+        "remote_url": "https://drive.google.com/file/d/18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:33.827253+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx",
+            "title": "What if everyone jumped at once？ [p2M8Y0z9Rl0].mp4",
+            "mime_type": "video/mp4",
+            "size": "7273848",
+            "url": "https://drive.google.com/file/d/18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:21.957Z",
+            "modified_time": "2026-10-19T17:53:02.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 408,
+          "remote_id": "18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx",
+          "retrieval_file_id": "sediment://file_000000009b508230aa7c1be85456c7a7",
+          "metadata": {
+            "id": "18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx",
+            "title": "What if everyone jumped at once？ [p2M8Y0z9Rl0].mp4",
+            "mime_type": "video/mp4",
+            "size": "7273848",
+            "url": "https://drive.google.com/file/d/18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:21.957Z",
+            "modified_time": "2026-10-19T17:53:02.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:06:44.344192+00:00",
+          "retrieved_bytes": 7273848,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "7273848",
+          "retrieved_sha256": "c949504fd017d7ec201e250abae580cbf58667c8275e2beb8138f56689a92cb4",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:06:48.344307+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if everyone on Earth was in the same place and jumped at the same time？ [Ny9m2l6h478].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if everyone on Earth was in the same place and jumped at the same time？ [Ny9m2l6h478].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 4359789,
+        "allocated_path_bytes": 4362240,
+        "mtime_ns": 1792432552000000000,
+        "device": 16777229,
+        "inode": 93824219,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 409,
+        "proposed_destination_name": "00409__What if everyone on Earth was in the same place and jumped at the same time？ [Ny9m2l6h478].mp4",
+        "fresh_stat": {
+          "st_size": 4359789,
+          "st_mtime_ns": 1792432552000000000,
+          "st_ctime_ns": 1792830801518761295,
+          "st_ino": 93824219,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "3f2dc68b5bfa9e15a46043fbe215238aace2721388d72c3ee10e85020a7da0d8",
+        "hash_refreshed_utc": "2026-10-26T13:59:12.997953+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP",
+        "remote_url": "https://drive.google.com/file/d/1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:21.281561+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP",
+            "title": "What if everyone on Earth was in the same place and jumped at the same time？ [Ny9m2l6h478].mp4",
+            "mime_type": "video/mp4",
+            "size": "4359789",
+            "url": "https://drive.google.com/file/d/1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:49.196Z",
+            "modified_time": "2026-10-19T17:55:52.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 409,
+          "remote_id": "1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP",
+          "retrieval_file_id": "sediment://file_000000004ed081fab25de1946f5f1943",
+          "metadata": {
+            "id": "1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP",
+            "title": "What if everyone on Earth was in the same place and jumped at the same time？ [Ny9m2l6h478].mp4",
+            "mime_type": "video/mp4",
+            "size": "4359789",
+            "url": "https://drive.google.com/file/d/1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:49.196Z",
+            "modified_time": "2026-10-19T17:55:52.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:06:53.471231+00:00",
+          "retrieved_bytes": 4359789,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "4359789",
+          "retrieved_sha256": "3f2dc68b5bfa9e15a46043fbe215238aace2721388d72c3ee10e85020a7da0d8",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:06:57.671216+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if everyone pointed a laser at the moon？ [JqFSGkFPipM].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if everyone pointed a laser at the moon？ [JqFSGkFPipM].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 9226338,
+        "allocated_path_bytes": 9228288,
+        "mtime_ns": 1792432282000000000,
+        "device": 16777229,
+        "inode": 93824229,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 410,
+        "proposed_destination_name": "00410__What if everyone pointed a laser at the moon？ [JqFSGkFPipM].mp4",
+        "fresh_stat": {
+          "st_size": 9226338,
+          "st_mtime_ns": 1792432282000000000,
+          "st_ctime_ns": 1792830801518906086,
+          "st_ino": 93824229,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "a25cece84e9e0aa9929bd9dbed4d718335fcc0a2ee9bd81049a8dceaed5e8c6d",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.005644+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB",
+        "remote_url": "https://drive.google.com/file/d/1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:36.445275+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB",
+            "title": "What if everyone pointed a laser at the moon？ [JqFSGkFPipM].mp4",
+            "mime_type": "video/mp4",
+            "size": "9226338",
+            "url": "https://drive.google.com/file/d/1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:04.331Z",
+            "modified_time": "2026-10-19T17:51:22.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 410,
+          "remote_id": "1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB",
+          "retrieval_file_id": "sediment://file_00000000fc8c81fab865d40dec5fbbde",
+          "metadata": {
+            "id": "1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB",
+            "title": "What if everyone pointed a laser at the moon？ [JqFSGkFPipM].mp4",
+            "mime_type": "video/mp4",
+            "size": "9226338",
+            "url": "https://drive.google.com/file/d/1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:04.331Z",
+            "modified_time": "2026-10-19T17:51:22.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:07:04.037747+00:00",
+          "retrieved_bytes": 9226338,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "9226338",
+          "retrieved_sha256": "a25cece84e9e0aa9929bd9dbed4d718335fcc0a2ee9bd81049a8dceaed5e8c6d",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:07:24.654009+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if everything was antimatter EXCEPT Earth？ [TFhrRrRdUbA].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if everything was antimatter EXCEPT Earth？ [TFhrRrRdUbA].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 6192434,
+        "allocated_path_bytes": 6193152,
+        "mtime_ns": 1792432168000000000,
+        "device": 16777229,
+        "inode": 93824176,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 411,
+        "proposed_destination_name": "00411__What if everything was antimatter EXCEPT Earth？ [TFhrRrRdUbA].mp4",
+        "fresh_stat": {
+          "st_size": 6192434,
+          "st_mtime_ns": 1792432168000000000,
+          "st_ctime_ns": 1792830801518023380,
+          "st_ino": 93824176,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "a64beb2fa5ba3754a2a0a446157d308bc9b32f25700ea333dce4ba817b0eda8f",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.010935+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj",
+        "remote_url": "https://drive.google.com/file/d/1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:45.467386+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj",
+            "title": "What if everything was antimatter EXCEPT Earth？ [TFhrRrRdUbA].mp4",
+            "mime_type": "video/mp4",
+            "size": "6192434",
+            "url": "https://drive.google.com/file/d/1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:26.726Z",
+            "modified_time": "2026-10-19T17:49:28.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 411,
+          "remote_id": "1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj",
+          "retrieval_file_id": "sediment://file_00000000435481fab0afdcae2d224b86",
+          "metadata": {
+            "id": "1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj",
+            "title": "What if everything was antimatter EXCEPT Earth？ [TFhrRrRdUbA].mp4",
+            "mime_type": "video/mp4",
+            "size": "6192434",
+            "url": "https://drive.google.com/file/d/1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:26.726Z",
+            "modified_time": "2026-10-19T17:49:28.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:07:29.958861+00:00",
+          "retrieved_bytes": 6192434,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "6192434",
+          "retrieved_sha256": "a64beb2fa5ba3754a2a0a446157d308bc9b32f25700ea333dce4ba817b0eda8f",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:07:35.273651+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if half the human population ate the other half 🍽️ [oBWqlxDd8sU].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if half the human population ate the other half 🍽️ [oBWqlxDd8sU].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 3925955,
+        "allocated_path_bytes": 3928064,
+        "mtime_ns": 1792432460000000000,
+        "device": 16777229,
+        "inode": 93824257,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 412,
+        "proposed_destination_name": "00412__What if half the human population ate the other half 🍽️ [oBWqlxDd8sU].mp4",
+        "fresh_stat": {
+          "st_size": 3925955,
+          "st_mtime_ns": 1792432460000000000,
+          "st_ctime_ns": 1792830801519111627,
+          "st_ino": 93824257,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "16d4b7bbb334df638d642800e8e6d0a6d934d9b1922c6c98e1562c4c4019fec1",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.014406+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3",
+        "remote_url": "https://drive.google.com/file/d/1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:26.753262+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3",
+            "title": "What if half the human population ate the other half 🍽️ [oBWqlxDd8sU].mp4",
+            "mime_type": "video/mp4",
+            "size": "3925955",
+            "url": "https://drive.google.com/file/d/1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:45.775Z",
+            "modified_time": "2026-10-19T17:54:20.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 412,
+          "remote_id": "1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3",
+          "retrieval_file_id": "sediment://file_0000000009b481faa623b507951e8d3d",
+          "metadata": {
+            "id": "1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3",
+            "title": "What if half the human population ate the other half 🍽️ [oBWqlxDd8sU].mp4",
+            "mime_type": "video/mp4",
+            "size": "3925955",
+            "url": "https://drive.google.com/file/d/1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:45.775Z",
+            "modified_time": "2026-10-19T17:54:20.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:07:42.115059+00:00",
+          "retrieved_bytes": 3925955,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "3925955",
+          "retrieved_sha256": "16d4b7bbb334df638d642800e8e6d0a6d934d9b1922c6c98e1562c4c4019fec1",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:07:50.258606+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the Earth rotated 90 degrees？ [WH4g1ptJ-70].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the Earth rotated 90 degrees？ [WH4g1ptJ-70].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 21332741,
+        "allocated_path_bytes": 21336064,
+        "mtime_ns": 1792432250000000000,
+        "device": 16777229,
+        "inode": 93824044,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 413,
+        "proposed_destination_name": "00413__What if the Earth rotated 90 degrees？ [WH4g1ptJ-70].mp4",
+        "fresh_stat": {
+          "st_size": 21332741,
+          "st_mtime_ns": 1792432250000000000,
+          "st_ctime_ns": 1792830801511830606,
+          "st_ino": 93824044,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "8ae3bc7c280f42075146de93df94a6d086728727499f96307acffaec1f4458f2",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.030293+00:00",
+        "status": "VERIFIED",
+        "remote_id": "10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl",
+        "remote_url": "https://drive.google.com/file/d/10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:40.994804+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl",
+            "title": "What if the Earth rotated 90 degrees？ [WH4g1ptJ-70].mp4",
+            "mime_type": "video/mp4",
+            "size": "21332741",
+            "url": "https://drive.google.com/file/d/10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:37.099Z",
+            "modified_time": "2026-10-19T17:50:50.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 413,
+          "remote_id": "10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl",
+          "retrieval_file_id": "sediment://file_0000000040e881fab31464daa445a602",
+          "metadata": {
+            "id": "10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl",
+            "title": "What if the Earth rotated 90 degrees？ [WH4g1ptJ-70].mp4",
+            "mime_type": "video/mp4",
+            "size": "21332741",
+            "url": "https://drive.google.com/file/d/10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:37.099Z",
+            "modified_time": "2026-10-19T17:50:50.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:07:59.110330+00:00",
+          "retrieved_bytes": 21332741,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "21332741",
+          "retrieved_sha256": "8ae3bc7c280f42075146de93df94a6d086728727499f96307acffaec1f4458f2",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:08:17.909716+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the Moon were made entirely of electrons？ [DiWFXv9N0Vs].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the Moon were made entirely of electrons？ [DiWFXv9N0Vs].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 7496749,
+        "allocated_path_bytes": 7499776,
+        "mtime_ns": 1792432218000000000,
+        "device": 16777229,
+        "inode": 93824106,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 414,
+        "proposed_destination_name": "00414__What if the Moon were made entirely of electrons？ [DiWFXv9N0Vs].mp4",
+        "fresh_stat": {
+          "st_size": 7496749,
+          "st_mtime_ns": 1792432218000000000,
+          "st_ctime_ns": 1792830801512121688,
+          "st_ino": 93824106,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "3218a51a83bdf4b142cd094696a5d2554ec07c6bd20efa696691bdacdabc6caf",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.036699+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l",
+        "remote_url": "https://drive.google.com/file/d/1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:44.277346+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l",
+            "title": "What if the Moon were made entirely of electrons？ [DiWFXv9N0Vs].mp4",
+            "mime_type": "video/mp4",
+            "size": "7496749",
+            "url": "https://drive.google.com/file/d/1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:58.319Z",
+            "modified_time": "2026-10-19T17:50:18.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 414,
+          "remote_id": "1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l",
+          "retrieval_file_id": "sediment://file_0000000017ac81fab78660d5c2af0252",
+          "metadata": {
+            "id": "1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l",
+            "title": "What if the Moon were made entirely of electrons？ [DiWFXv9N0Vs].mp4",
+            "mime_type": "video/mp4",
+            "size": "7496749",
+            "url": "https://drive.google.com/file/d/1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:58.319Z",
+            "modified_time": "2026-10-19T17:50:18.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:08:22.437293+00:00",
+          "retrieved_bytes": 7496749,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "7496749",
+          "retrieved_sha256": "3218a51a83bdf4b142cd094696a5d2554ec07c6bd20efa696691bdacdabc6caf",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:08:26.985336+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the Moon were made of Protons？ [mEUqVgGf4e0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the Moon were made of Protons？ [mEUqVgGf4e0].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 5755058,
+        "allocated_path_bytes": 5758976,
+        "mtime_ns": 1792432452000000000,
+        "device": 16777229,
+        "inode": 93824187,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 415,
+        "proposed_destination_name": "00415__What if the Moon were made of Protons？ [mEUqVgGf4e0].mp4",
+        "fresh_stat": {
+          "st_size": 5755058,
+          "st_mtime_ns": 1792432452000000000,
+          "st_ctime_ns": 1792830801518177796,
+          "st_ino": 93824187,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "dc4bb19a663a23cebb76ea54d3ee8f0f008c52572bb758afe5092000131b8494",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.041538+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB",
+        "remote_url": "https://drive.google.com/file/d/1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:27.880325+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB",
+            "title": "What if the Moon were made of Protons？ [mEUqVgGf4e0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5755058",
+            "url": "https://drive.google.com/file/d/1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:53.807Z",
+            "modified_time": "2026-10-19T17:54:12.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 415,
+          "remote_id": "1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB",
+          "retrieval_file_id": "sediment://file_00000000fd1881fa8a0abbbcb2d1701e",
+          "metadata": {
+            "id": "1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB",
+            "title": "What if the Moon were made of Protons？ [mEUqVgGf4e0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5755058",
+            "url": "https://drive.google.com/file/d/1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:00:53.807Z",
+            "modified_time": "2026-10-19T17:54:12.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:08:32.073934+00:00",
+          "retrieved_bytes": 5755058,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "5755058",
+          "retrieved_sha256": "dc4bb19a663a23cebb76ea54d3ee8f0f008c52572bb758afe5092000131b8494",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:08:35.161559+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the moon turned into a black hole？ [UQgw50GQu1A].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the moon turned into a black hole？ [UQgw50GQu1A].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 6518116,
+        "allocated_path_bytes": 6520832,
+        "mtime_ns": 1792432228000000000,
+        "device": 16777229,
+        "inode": 93824275,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 416,
+        "proposed_destination_name": "00416__What if the moon turned into a black hole？ [UQgw50GQu1A].mp4",
+        "fresh_stat": {
+          "st_size": 6518116,
+          "st_mtime_ns": 1792432228000000000,
+          "st_ctime_ns": 1792830801519211960,
+          "st_ino": 93824275,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "5049f27c6312d3dc6f5b08522230ac717cbb038377e9fbaed9d880e008e7899d",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.046903+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce",
+        "remote_url": "https://drive.google.com/file/d/1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:43.102457+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce",
+            "title": "What if the moon turned into a black hole？ [UQgw50GQu1A].mp4",
+            "mime_type": "video/mp4",
+            "size": "6518116",
+            "url": "https://drive.google.com/file/d/1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:48.753Z",
+            "modified_time": "2026-10-19T17:50:28.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 416,
+          "remote_id": "1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce",
+          "retrieval_file_id": "sediment://file_00000000197c82119847be69ee9f5e0b",
+          "metadata": {
+            "id": "1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce",
+            "title": "What if the moon turned into a black hole？ [UQgw50GQu1A].mp4",
+            "mime_type": "video/mp4",
+            "size": "6518116",
+            "url": "https://drive.google.com/file/d/1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:48.753Z",
+            "modified_time": "2026-10-19T17:50:28.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:08:44.519628+00:00",
+          "retrieved_bytes": 6518116,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "6518116",
+          "retrieved_sha256": "5049f27c6312d3dc6f5b08522230ac717cbb038377e9fbaed9d880e008e7899d",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:08:49.735658+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the sun suddenly went out？ [X7sbn9LMZOg].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the sun suddenly went out？ [X7sbn9LMZOg].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 7054872,
+        "allocated_path_bytes": 7057408,
+        "mtime_ns": 1792432244000000000,
+        "device": 16777229,
+        "inode": 93824240,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 417,
+        "proposed_destination_name": "00417__What if the sun suddenly went out？ [X7sbn9LMZOg].mp4",
+        "fresh_stat": {
+          "st_size": 7054872,
+          "st_mtime_ns": 1792432244000000000,
+          "st_ctime_ns": 1792830801518995211,
+          "st_ino": 93824240,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "c0277769487e381667f8f7781416cb2bd57ec19a8ba58399a838e17dec0988fa",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.052647+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1pvs3Bs-27E4litiec3hJzxgiE1ug3oww",
+        "remote_url": "https://drive.google.com/file/d/1pvs3Bs-27E4litiec3hJzxgiE1ug3oww/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:42.069428+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1pvs3Bs-27E4litiec3hJzxgiE1ug3oww",
+            "title": "What if the sun suddenly went out？ [X7sbn9LMZOg].mp4",
+            "mime_type": "video/mp4",
+            "size": "7054872",
+            "url": "https://drive.google.com/file/d/1pvs3Bs-27E4litiec3hJzxgiE1ug3oww/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1pvs3Bs-27E4litiec3hJzxgiE1ug3oww/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:08.830Z",
+            "modified_time": "2026-10-19T17:50:44.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 417,
+          "remote_id": "1pvs3Bs-27E4litiec3hJzxgiE1ug3oww",
+          "retrieval_file_id": "sediment://file_0000000068d081faa69a6904071fa810",
+          "metadata": {
+            "id": "1pvs3Bs-27E4litiec3hJzxgiE1ug3oww",
+            "title": "What if the sun suddenly went out？ [X7sbn9LMZOg].mp4",
+            "mime_type": "video/mp4",
+            "size": "7054872",
+            "url": "https://drive.google.com/file/d/1pvs3Bs-27E4litiec3hJzxgiE1ug3oww/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1pvs3Bs-27E4litiec3hJzxgiE1ug3oww/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:08.830Z",
+            "modified_time": "2026-10-19T17:50:44.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:12:54.339961+00:00",
+          "retrieved_bytes": 7054872,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "7054872",
+          "retrieved_sha256": "c0277769487e381667f8f7781416cb2bd57ec19a8ba58399a838e17dec0988fa",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:12:59.607637+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the wise men kept walking after Jesus’s birth？ [YL2VNtus4xk].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the wise men kept walking after Jesus’s birth？ [YL2VNtus4xk].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 5139023,
+        "allocated_path_bytes": 5140480,
+        "mtime_ns": 1792432254000000000,
+        "device": 16777229,
+        "inode": 93824205,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 418,
+        "proposed_destination_name": "00418__What if the wise men kept walking after Jesus’s birth？ [YL2VNtus4xk].mp4",
+        "fresh_stat": {
+          "st_size": 5139023,
+          "st_mtime_ns": 1792432254000000000,
+          "st_ctime_ns": 1792830801518537587,
+          "st_ino": 93824205,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "d8e6ec5fc0f9f1c091df33872e92c9825f5b93c98c844d6b75ec813a667dedf9",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.057416+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8",
+        "remote_url": "https://drive.google.com/file/d/1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:39.808675+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8",
+            "title": "What if the wise men kept walking after Jesus’s birth？ [YL2VNtus4xk].mp4",
+            "mime_type": "video/mp4",
+            "size": "5139023",
+            "url": "https://drive.google.com/file/d/1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:31.825Z",
+            "modified_time": "2026-10-19T17:50:54.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 418,
+          "remote_id": "1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8",
+          "retrieval_file_id": "sediment://file_00000000bf688211b2de62e98d4907e0",
+          "metadata": {
+            "id": "1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8",
+            "title": "What if the wise men kept walking after Jesus’s birth？ [YL2VNtus4xk].mp4",
+            "mime_type": "video/mp4",
+            "size": "5139023",
+            "url": "https://drive.google.com/file/d/1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:31.825Z",
+            "modified_time": "2026-10-19T17:50:54.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:13:05.326396+00:00",
+          "retrieved_bytes": 5139023,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "5139023",
+          "retrieved_sha256": "d8e6ec5fc0f9f1c091df33872e92c9825f5b93c98c844d6b75ec813a667dedf9",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:13:09.636339+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we aimed the Hubble Telescope at Earth？ [2LSyizrk8-0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we aimed the Hubble Telescope at Earth？ [2LSyizrk8-0].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 10343339,
+        "allocated_path_bytes": 10346496,
+        "mtime_ns": 1792432414000000000,
+        "device": 16777229,
+        "inode": 93824127,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 419,
+        "proposed_destination_name": "00419__What if we aimed the Hubble Telescope at Earth？ [2LSyizrk8-0].mp4",
+        "fresh_stat": {
+          "st_size": 10343339,
+          "st_mtime_ns": 1792432414000000000,
+          "st_ctime_ns": 1792830801517533506,
+          "st_ino": 93824127,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "d2d0ddff2ea1122545832bce88e33fb3bca7cab0a954eb66097bd49577e369c0",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.065613+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_",
+        "remote_url": "https://drive.google.com/file/d/1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:31.230282+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_",
+            "title": "What if we aimed the Hubble Telescope at Earth？ [2LSyizrk8-0].mp4",
+            "mime_type": "video/mp4",
+            "size": "10343339",
+            "url": "https://drive.google.com/file/d/1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:18.294Z",
+            "modified_time": "2026-10-19T17:53:34.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 419,
+          "remote_id": "1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_",
+          "retrieval_file_id": "sediment://file_00000000342c8211a1a819702e944b0f",
+          "metadata": {
+            "id": "1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_",
+            "title": "What if we aimed the Hubble Telescope at Earth？ [2LSyizrk8-0].mp4",
+            "mime_type": "video/mp4",
+            "size": "10343339",
+            "url": "https://drive.google.com/file/d/1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:18.294Z",
+            "modified_time": "2026-10-19T17:53:34.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:13:15.343465+00:00",
+          "retrieved_bytes": 10343339,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "10343339",
+          "retrieved_sha256": "d2d0ddff2ea1122545832bce88e33fb3bca7cab0a954eb66097bd49577e369c0",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:13:20.635505+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we built a billion-story building？ [J-E8rjWR9rM].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we built a billion-story building？ [J-E8rjWR9rM].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 4233522,
+        "allocated_path_bytes": 4235264,
+        "mtime_ns": 1792432532000000000,
+        "device": 16777229,
+        "inode": 93824213,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 420,
+        "proposed_destination_name": "00420__What if we built a billion-story building？ [J-E8rjWR9rM].mp4",
+        "fresh_stat": {
+          "st_size": 4233522,
+          "st_mtime_ns": 1792432532000000000,
+          "st_ctime_ns": 1792830801518643003,
+          "st_ino": 93824213,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "5502fc502189864565652d856769c10db580d337a38c8a2ce9bfda4cc512a90c",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.069958+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA",
+        "remote_url": "https://drive.google.com/file/d/1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:23.672413+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA",
+            "title": "What if we built a billion-story building？ [J-E8rjWR9rM].mp4",
+            "mime_type": "video/mp4",
+            "size": "4233522",
+            "url": "https://drive.google.com/file/d/1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:34.978Z",
+            "modified_time": "2026-10-19T17:55:32.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 420,
+          "remote_id": "1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA",
+          "retrieval_file_id": "sediment://file_0000000018e88211b49a44b4bb45717f",
+          "metadata": {
+            "id": "1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA",
+            "title": "What if we built a billion-story building？ [J-E8rjWR9rM].mp4",
+            "mime_type": "video/mp4",
+            "size": "4233522",
+            "url": "https://drive.google.com/file/d/1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:34.978Z",
+            "modified_time": "2026-10-19T17:55:32.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:13:25.914641+00:00",
+          "retrieved_bytes": 4233522,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "4233522",
+          "retrieved_sha256": "5502fc502189864565652d856769c10db580d337a38c8a2ce9bfda4cc512a90c",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:13:28.023926+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we put a pool on the moon？ [aIIBBj6KR-Y].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we put a pool on the moon？ [aIIBBj6KR-Y].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 4755442,
+        "allocated_path_bytes": 4755456,
+        "mtime_ns": 1792432260000000000,
+        "device": 16777229,
+        "inode": 93824197,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 421,
+        "proposed_destination_name": "00421__What if we put a pool on the moon？ [aIIBBj6KR-Y].mp4",
+        "fresh_stat": {
+          "st_size": 4755442,
+          "st_mtime_ns": 1792432260000000000,
+          "st_ctime_ns": 1792830801518377337,
+          "st_ino": 93824197,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "1e779c448a3fea125e6ed4ed1cf49524d5eabbab9013bba2fbad7a7fc66d2420",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.073769+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX",
+        "remote_url": "https://drive.google.com/file/d/1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:37.544437+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX",
+            "title": "What if we put a pool on the moon？ [aIIBBj6KR-Y].mp4",
+            "mime_type": "video/mp4",
+            "size": "4755442",
+            "url": "https://drive.google.com/file/d/1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:12.780Z",
+            "modified_time": "2026-10-19T17:51:00.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 421,
+          "remote_id": "1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX",
+          "retrieval_file_id": "sediment://file_0000000021508207a25094a560fb1d61",
+          "metadata": {
+            "id": "1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX",
+            "title": "What if we put a pool on the moon？ [aIIBBj6KR-Y].mp4",
+            "mime_type": "video/mp4",
+            "size": "4755442",
+            "url": "https://drive.google.com/file/d/1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:12.780Z",
+            "modified_time": "2026-10-19T17:51:00.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:13:32.607583+00:00",
+          "retrieved_bytes": 4755442,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "4755442",
+          "retrieved_sha256": "1e779c448a3fea125e6ed4ed1cf49524d5eabbab9013bba2fbad7a7fc66d2420",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:13:35.082101+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we teleported the oceans to Mars？ [2p305nzcVQE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we teleported the oceans to Mars？ [2p305nzcVQE].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 3757039,
+        "allocated_path_bytes": 3760128,
+        "mtime_ns": 1792432542000000000,
+        "device": 16777229,
+        "inode": 93824290,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 422,
+        "proposed_destination_name": "00422__What if we teleported the oceans to Mars？ [2p305nzcVQE].mp4",
+        "fresh_stat": {
+          "st_size": 3757039,
+          "st_mtime_ns": 1792432542000000000,
+          "st_ctime_ns": 1792830801519345710,
+          "st_ino": 93824290,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "7ad232b09890be270b71e58af52ceb920996af6dd04e12c674209d933b2fc4bc",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.076957+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1epuaViqkluVbUigsEfqQZBJN-nZrmmMh",
+        "remote_url": "https://drive.google.com/file/d/1epuaViqkluVbUigsEfqQZBJN-nZrmmMh/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:22.468130+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1epuaViqkluVbUigsEfqQZBJN-nZrmmMh",
+            "title": "What if we teleported the oceans to Mars？ [2p305nzcVQE].mp4",
+            "mime_type": "video/mp4",
+            "size": "3757039",
+            "url": "https://drive.google.com/file/d/1epuaViqkluVbUigsEfqQZBJN-nZrmmMh/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1epuaViqkluVbUigsEfqQZBJN-nZrmmMh/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:51.589Z",
+            "modified_time": "2026-10-19T17:55:42.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 422,
+          "remote_id": "1epuaViqkluVbUigsEfqQZBJN-nZrmmMh",
+          "retrieval_file_id": "sediment://file_000000004f2c8207b60c6034fd5dfeae",
+          "metadata": {
+            "id": "1epuaViqkluVbUigsEfqQZBJN-nZrmmMh",
+            "title": "What if we teleported the oceans to Mars？ [2p305nzcVQE].mp4",
+            "mime_type": "video/mp4",
+            "size": "3757039",
+            "url": "https://drive.google.com/file/d/1epuaViqkluVbUigsEfqQZBJN-nZrmmMh/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1epuaViqkluVbUigsEfqQZBJN-nZrmmMh/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:51.589Z",
+            "modified_time": "2026-10-19T17:55:42.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:15:38.135639+00:00",
+          "retrieved_bytes": 3757039,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "3757039",
+          "retrieved_sha256": "7ad232b09890be270b71e58af52ceb920996af6dd04e12c674209d933b2fc4bc",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:15:40.047739+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we teleported the oceans to Mars？ [FkUNHhVbQ1Q].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we teleported the oceans to Mars？ [FkUNHhVbQ1Q].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 9159872,
+        "allocated_path_bytes": 9162752,
+        "mtime_ns": 1792432300000000000,
+        "device": 16777229,
+        "inode": 93824211,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 423,
+        "proposed_destination_name": "00423__What if we teleported the oceans to Mars？ [FkUNHhVbQ1Q].mp4",
+        "fresh_stat": {
+          "st_size": 9159872,
+          "st_mtime_ns": 1792432300000000000,
+          "st_ctime_ns": 1792830801518616378,
+          "st_ino": 93824211,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "a2091cf27008390412516cb7770d43d4fbe5a8158d40c443e5cab51b7962180f",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.083557+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY",
+        "remote_url": "https://drive.google.com/file/d/1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:34.992850+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY",
+            "title": "What if we teleported the oceans to Mars？ [FkUNHhVbQ1Q].mp4",
+            "mime_type": "video/mp4",
+            "size": "9159872",
+            "url": "https://drive.google.com/file/d/1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:27.973Z",
+            "modified_time": "2026-10-19T17:51:40.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 423,
+          "remote_id": "1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY",
+          "retrieval_file_id": "sediment://file_000000002c9c8207907b3bedab824f1b",
+          "metadata": {
+            "id": "1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY",
+            "title": "What if we teleported the oceans to Mars？ [FkUNHhVbQ1Q].mp4",
+            "mime_type": "video/mp4",
+            "size": "9159872",
+            "url": "https://drive.google.com/file/d/1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:27.973Z",
+            "modified_time": "2026-10-19T17:51:40.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:15:44.920075+00:00",
+          "retrieved_bytes": 9159872,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "9159872",
+          "retrieved_sha256": "a2091cf27008390412516cb7770d43d4fbe5a8158d40c443e5cab51b7962180f",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:15:51.054569+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we turned the moon into a black hole？ [n2XRulD_IVs].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we turned the moon into a black hole？ [n2XRulD_IVs].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 3141733,
+        "allocated_path_bytes": 3145728,
+        "mtime_ns": 1792432468000000000,
+        "device": 16777229,
+        "inode": 93824203,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 424,
+        "proposed_destination_name": "00424__What if we turned the moon into a black hole？ [n2XRulD_IVs].mp4",
+        "fresh_stat": {
+          "st_size": 3141733,
+          "st_mtime_ns": 1792432468000000000,
+          "st_ctime_ns": 1792830801518509879,
+          "st_ino": 93824203,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "8c32f6d8017bccf46b2f309ac57b26f72af8326cda7e0e9f31d0846e1eaa77ff",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.086464+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7",
+        "remote_url": "https://drive.google.com/file/d/1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:25.412858+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7",
+            "title": "What if we turned the moon into a black hole？ [n2XRulD_IVs].mp4",
+            "mime_type": "video/mp4",
+            "size": "3141733",
+            "url": "https://drive.google.com/file/d/1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:37.764Z",
+            "modified_time": "2026-10-19T17:54:28.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 424,
+          "remote_id": "1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7",
+          "retrieval_file_id": "sediment://file_0000000068c8821194e0a5c3e5c1385f",
+          "metadata": {
+            "id": "1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7",
+            "title": "What if we turned the moon into a black hole？ [n2XRulD_IVs].mp4",
+            "mime_type": "video/mp4",
+            "size": "3141733",
+            "url": "https://drive.google.com/file/d/1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:37.764Z",
+            "modified_time": "2026-10-19T17:54:28.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:17:53.430388+00:00",
+          "retrieved_bytes": 3141733,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "3141733",
+          "retrieved_sha256": "8c32f6d8017bccf46b2f309ac57b26f72af8326cda7e0e9f31d0846e1eaa77ff",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:17:54.986089+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if you built a billion-story building？ [Z_xJ40QXu7Q].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if you built a billion-story building？ [Z_xJ40QXu7Q].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 7087364,
+        "allocated_path_bytes": 7090176,
+        "mtime_ns": 1792432258000000000,
+        "device": 16777229,
+        "inode": 93824168,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 425,
+        "proposed_destination_name": "00425__What if you built a billion-story building？ [Z_xJ40QXu7Q].mp4",
+        "fresh_stat": {
+          "st_size": 7087364,
+          "st_mtime_ns": 1792432258000000000,
+          "st_ctime_ns": 1792830801517907255,
+          "st_ino": 93824168,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "6384c44ce09ce40ed82936ea4248ee47807db3ff2624eef5694d8b7413bf733e",
+        "hash_refreshed_utc": "2026-10-26T13:59:13.091792+00:00",
+        "status": "VERIFIED",
+        "remote_id": "18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM",
+        "remote_url": "https://drive.google.com/file/d/18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T14:05:38.682996+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM",
+            "title": "What if you built a billion-story building？ [Z_xJ40QXu7Q].mp4",
+            "mime_type": "video/mp4",
+            "size": "7087364",
+            "url": "https://drive.google.com/file/d/18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:42.802Z",
+            "modified_time": "2026-10-19T17:50:58.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 425,
+          "remote_id": "18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM",
+          "retrieval_file_id": "sediment://file_0000000038f482079b83110dc079f095",
+          "metadata": {
+            "id": "18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM",
+            "title": "What if you built a billion-story building？ [Z_xJ40QXu7Q].mp4",
+            "mime_type": "video/mp4",
+            "size": "7087364",
+            "url": "https://drive.google.com/file/d/18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T14:03:42.802Z",
+            "modified_time": "2026-10-19T17:50:58.000Z",
+            "parent_ids": [
+              "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T14:21:50.978989+00:00",
+          "retrieved_bytes": 7087364,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "7087364",
+          "retrieved_sha256": "6384c44ce09ce40ed82936ea4248ee47807db3ff2624eef5694d8b7413bf733e",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T14:21:57.677281+00:00"
+        }
+      }
+    ],
+    "uploaded_bytes": 154992095,
+    "independently_retrieved_bytes": 154992095,
+    "mapped_source_files": 20,
+    "preflight": {
+      "account": "kgk2930@gmail.com",
+      "privacy": "OWNER_ONLY",
+      "ui_used_gb": 4.88,
+      "conservative_free_bytes": 9660139898,
+      "storage_ui": "4.88GB of15GB; fresh authenticated owner Google One UI; Drive4.58GB Gmail302.23MB",
+      "observed_at": "2026-10-26T13:59:12.848Z",
+      "five_hour_used": 32,
+      "weekly_used": 12,
+      "paid_credits": "0",
+      "context": "Batch21 complete immutable receipt and continuation saved; sufficient current context; exact meter unavailable",
+      "ownership": "Stable read-only originals; protected sessions preserved",
+      "destination_folder_id": "12FkMHzKAtNYleLwX2UBmbMDMlk_6sXEf",
+      "charges": "Existing allowance; paid credits zero, no upgrade/payment action",
+      "mac_free_bytes": 24731934720
+    },
+    "postflight": {
+      "batch_dir": "/Users/ghilmankhan/YIOS-local-audits/YIOS-bulk-20261025T2140Z-chat-01a174dd/batch-0022",
+      "account": "kgk2930@gmail.com",
+      "privacy": "OWNER_ONLY",
+      "ui_used_gb": 5.02,
+      "conservative_free_bytes": 9509816043,
+      "storage_ui": "5.02GB of15GB; fresh owner Google One UI; Drive4.73GB Gmail302.23MB",
+      "observed_at": "2026-10-26T14:22:40.400Z",
+      "five_hour_used": 36,
+      "weekly_used": 12,
+      "paid_credits": "0",
+      "context": "Batch21 complete immutable receipt and continuation saved; sufficient current context; exact meter unavailable",
+      "ownership": "Stable read-only originals; protected sessions preserved",
+      "destination_folder_id": "17ibmt0l0ZtcZ6ePsek9RC-mKXH1yFbxV",
+      "charges": "Existing allowance; paid credits zero, no upgrade/payment action",
+      "mac_free_bytes": 24723718144
+    },
+    "permissions": "Owner-only Restricted; no changes",
+    "encryption": "Google provider managed; owner-held client key not established",
+    "retention": "Until explicit owner removal approval",
+    "coverage": "File-level verified recovery only; no complete-package or independent-machine recovery claim"
+  },
+  "recovery_mapping": {
+    "files": [
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if all visible light was a single beam？ [TIDHee_Q5Gk].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if all visible light was a single beam？ [TIDHee_Q5Gk].mp4",
+        "bytes": 20757466,
+        "fresh_sha256": "fca5fe3090b154140a411458d272fd9108e53519b7fe92f2a245b5eaddc0b09d",
+        "remote_id": "1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj",
+        "remote_url": "https://drive.google.com/file/d/1jBnhS8sJS2VEkfNzjoH2PjfahdIQdegj/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if all your DNA suddenly vanished？ [35KZm1yiyIE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if all your DNA suddenly vanished？ [35KZm1yiyIE].mp4",
+        "bytes": 7481395,
+        "fresh_sha256": "655005a9f032404e7a11eda062d2977e29b25c72e30a241c0dc69f92448f9bc6",
+        "remote_id": "1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz",
+        "remote_url": "https://drive.google.com/file/d/1MYZWErcZ4cP7uJPqqsZfOa6QY4M8dBwz/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if everyone jumped at once？ [p2M8Y0z9Rl0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if everyone jumped at once？ [p2M8Y0z9Rl0].mp4",
+        "bytes": 7273848,
+        "fresh_sha256": "c949504fd017d7ec201e250abae580cbf58667c8275e2beb8138f56689a92cb4",
+        "remote_id": "18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx",
+        "remote_url": "https://drive.google.com/file/d/18qKpYkOYQwRnWoGiFT9KWvyox1ivfVcx/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if everyone on Earth was in the same place and jumped at the same time？ [Ny9m2l6h478].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if everyone on Earth was in the same place and jumped at the same time？ [Ny9m2l6h478].mp4",
+        "bytes": 4359789,
+        "fresh_sha256": "3f2dc68b5bfa9e15a46043fbe215238aace2721388d72c3ee10e85020a7da0d8",
+        "remote_id": "1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP",
+        "remote_url": "https://drive.google.com/file/d/1mpaAPXO3rxD_8DmJgsXJggoTfgOfW7wP/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if everyone pointed a laser at the moon？ [JqFSGkFPipM].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if everyone pointed a laser at the moon？ [JqFSGkFPipM].mp4",
+        "bytes": 9226338,
+        "fresh_sha256": "a25cece84e9e0aa9929bd9dbed4d718335fcc0a2ee9bd81049a8dceaed5e8c6d",
+        "remote_id": "1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB",
+        "remote_url": "https://drive.google.com/file/d/1MuNsu20bvD7JVn6S7N3rXwqhzZqOCnrB/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if everything was antimatter EXCEPT Earth？ [TFhrRrRdUbA].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if everything was antimatter EXCEPT Earth？ [TFhrRrRdUbA].mp4",
+        "bytes": 6192434,
+        "fresh_sha256": "a64beb2fa5ba3754a2a0a446157d308bc9b32f25700ea333dce4ba817b0eda8f",
+        "remote_id": "1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj",
+        "remote_url": "https://drive.google.com/file/d/1ajLPrOks8r8JqngyKl8_TV8CGm0L_GYj/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if half the human population ate the other half 🍽️ [oBWqlxDd8sU].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if half the human population ate the other half 🍽️ [oBWqlxDd8sU].mp4",
+        "bytes": 3925955,
+        "fresh_sha256": "16d4b7bbb334df638d642800e8e6d0a6d934d9b1922c6c98e1562c4c4019fec1",
+        "remote_id": "1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3",
+        "remote_url": "https://drive.google.com/file/d/1xJGVSigJSAYqLOhBfGz_nxj0i2BcWor3/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the Earth rotated 90 degrees？ [WH4g1ptJ-70].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the Earth rotated 90 degrees？ [WH4g1ptJ-70].mp4",
+        "bytes": 21332741,
+        "fresh_sha256": "8ae3bc7c280f42075146de93df94a6d086728727499f96307acffaec1f4458f2",
+        "remote_id": "10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl",
+        "remote_url": "https://drive.google.com/file/d/10jBWHByzpp4B7uwARV_aJmOnvT_7XUyl/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the Moon were made entirely of electrons？ [DiWFXv9N0Vs].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the Moon were made entirely of electrons？ [DiWFXv9N0Vs].mp4",
+        "bytes": 7496749,
+        "fresh_sha256": "3218a51a83bdf4b142cd094696a5d2554ec07c6bd20efa696691bdacdabc6caf",
+        "remote_id": "1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l",
+        "remote_url": "https://drive.google.com/file/d/1cxTZEXlsuCbtN89RdoUm_nGFn7LbCR3l/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the Moon were made of Protons？ [mEUqVgGf4e0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the Moon were made of Protons？ [mEUqVgGf4e0].mp4",
+        "bytes": 5755058,
+        "fresh_sha256": "dc4bb19a663a23cebb76ea54d3ee8f0f008c52572bb758afe5092000131b8494",
+        "remote_id": "1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB",
+        "remote_url": "https://drive.google.com/file/d/1ZZYyjX72jf9lyXQhB2y0H0EcUYHshlJB/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the moon turned into a black hole？ [UQgw50GQu1A].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the moon turned into a black hole？ [UQgw50GQu1A].mp4",
+        "bytes": 6518116,
+        "fresh_sha256": "5049f27c6312d3dc6f5b08522230ac717cbb038377e9fbaed9d880e008e7899d",
+        "remote_id": "1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce",
+        "remote_url": "https://drive.google.com/file/d/1f7YUviRSK_eyyIdI-UmVPxVDG967g5Ce/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the sun suddenly went out？ [X7sbn9LMZOg].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the sun suddenly went out？ [X7sbn9LMZOg].mp4",
+        "bytes": 7054872,
+        "fresh_sha256": "c0277769487e381667f8f7781416cb2bd57ec19a8ba58399a838e17dec0988fa",
+        "remote_id": "1pvs3Bs-27E4litiec3hJzxgiE1ug3oww",
+        "remote_url": "https://drive.google.com/file/d/1pvs3Bs-27E4litiec3hJzxgiE1ug3oww/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if the wise men kept walking after Jesus’s birth？ [YL2VNtus4xk].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if the wise men kept walking after Jesus’s birth？ [YL2VNtus4xk].mp4",
+        "bytes": 5139023,
+        "fresh_sha256": "d8e6ec5fc0f9f1c091df33872e92c9825f5b93c98c844d6b75ec813a667dedf9",
+        "remote_id": "1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8",
+        "remote_url": "https://drive.google.com/file/d/1QUbdhP8pggrVsKEfltIvK945hpFq_EQ8/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we aimed the Hubble Telescope at Earth？ [2LSyizrk8-0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we aimed the Hubble Telescope at Earth？ [2LSyizrk8-0].mp4",
+        "bytes": 10343339,
+        "fresh_sha256": "d2d0ddff2ea1122545832bce88e33fb3bca7cab0a954eb66097bd49577e369c0",
+        "remote_id": "1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_",
+        "remote_url": "https://drive.google.com/file/d/1i3pE6kUhzKEQGgt53AbSKTx56AUenTX_/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we built a billion-story building？ [J-E8rjWR9rM].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we built a billion-story building？ [J-E8rjWR9rM].mp4",
+        "bytes": 4233522,
+        "fresh_sha256": "5502fc502189864565652d856769c10db580d337a38c8a2ce9bfda4cc512a90c",
+        "remote_id": "1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA",
+        "remote_url": "https://drive.google.com/file/d/1Xql5jihZEPcfiKOnrJMtU8VEGcIZR8vA/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we put a pool on the moon？ [aIIBBj6KR-Y].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we put a pool on the moon？ [aIIBBj6KR-Y].mp4",
+        "bytes": 4755442,
+        "fresh_sha256": "1e779c448a3fea125e6ed4ed1cf49524d5eabbab9013bba2fbad7a7fc66d2420",
+        "remote_id": "1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX",
+        "remote_url": "https://drive.google.com/file/d/1xEKXHRUKXG8AokAreO6sCXNxgAGNHisX/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we teleported the oceans to Mars？ [2p305nzcVQE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we teleported the oceans to Mars？ [2p305nzcVQE].mp4",
+        "bytes": 3757039,
+        "fresh_sha256": "7ad232b09890be270b71e58af52ceb920996af6dd04e12c674209d933b2fc4bc",
+        "remote_id": "1epuaViqkluVbUigsEfqQZBJN-nZrmmMh",
+        "remote_url": "https://drive.google.com/file/d/1epuaViqkluVbUigsEfqQZBJN-nZrmmMh/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we teleported the oceans to Mars？ [FkUNHhVbQ1Q].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we teleported the oceans to Mars？ [FkUNHhVbQ1Q].mp4",
+        "bytes": 9159872,
+        "fresh_sha256": "a2091cf27008390412516cb7770d43d4fbe5a8158d40c443e5cab51b7962180f",
+        "remote_id": "1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY",
+        "remote_url": "https://drive.google.com/file/d/1mD4ZAVuF99mkZMxOCUzwFrUJwDzTvWBY/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if we turned the moon into a black hole？ [n2XRulD_IVs].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if we turned the moon into a black hole？ [n2XRulD_IVs].mp4",
+        "bytes": 3141733,
+        "fresh_sha256": "8c32f6d8017bccf46b2f309ac57b26f72af8326cda7e0e9f31d0846e1eaa77ff",
+        "remote_id": "1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7",
+        "remote_url": "https://drive.google.com/file/d/1zFz5CL19zDfx04W_Oc3BtBsFBWMsPOZ7/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/What if you built a billion-story building？ [Z_xJ40QXu7Q].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/What if you built a billion-story building？ [Z_xJ40QXu7Q].mp4",
+        "bytes": 7087364,
+        "fresh_sha256": "6384c44ce09ce40ed82936ea4248ee47807db3ff2624eef5694d8b7413bf733e",
+        "remote_id": "18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM",
+        "remote_url": "https://drive.google.com/file/d/18c--2qTpCUOCBH9CTPUyC4BiVlxqKBFM/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      }
+    ]
+  },
+  "cumulative_before_this_control": {
+    "mapped_source_paths": 433,
+    "uploaded_bytes_including_controls": 4533820978,
+    "verified_bytes_including_controls": 4533820978,
+    "remaining_payload_bytes": 7466179022,
+    "remaining_plan_files": 119
+  }
+}
+```

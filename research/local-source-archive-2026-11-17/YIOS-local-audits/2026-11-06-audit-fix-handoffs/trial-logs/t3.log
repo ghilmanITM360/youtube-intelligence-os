@@ -1,0 +1,27 @@
+OK
+checkall=0
+audit=0
+}
+rebuild=0
+DS-000030: clean
+ledgers=0
+}
+registry=0
+OK
+current=0
+................................................................         [100%]
+=============================== warnings summary ===============================
+tests/test_register_batch.py::RegisterBatchTestCase::test_image_pipeline_extracts_metadata
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+  /private/tmp/claude-501/-Users-ghilmankhan/cb6b3075-f6fa-40f9-bdd3-51470f9508e5/scratchpad/trial/scripts/image_pipeline.py:43: DeprecationWarning: Image.Image.getdata is deprecated and will be remov
+    pixels = list(small.getdata())
+
+tests/test_register_structured_source.py::RegisterStructuredSourceTestCase::test_register_rejects_duplicate_workbook_video_id_without_duplicate_entity
+  /opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'ChannelA/sameid00001.txt'
+    return self._open_to_write(zinfo, force_zip64=force_zip64)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+495 passed, 1 skipped, 5 warnings in 55.82s
+DONE

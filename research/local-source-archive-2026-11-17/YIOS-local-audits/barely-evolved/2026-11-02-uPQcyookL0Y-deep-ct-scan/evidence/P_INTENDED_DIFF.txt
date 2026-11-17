@@ -1,0 +1,30 @@
+.../uPQcyookL0Y/CONTINUATION_HANDOFF_P.md          |   34 +
+ .../uPQcyookL0Y/EVIDENCE_SHA256SUMS_checkpoint_P   | 1076 ++++++++++++++++++++
+ .../uPQcyookL0Y/agents/reviewer_22/BRIEF.md        |   13 +
+ .../agents/reviewer_22/evidence_reads.csv          |   30 +
+ .../agents/reviewer_22/motion_events.csv           |   48 +
+ .../agents/reviewer_22/state_prompts.csv           |   21 +
+ .../uPQcyookL0Y/agents/reviewer_23/BRIEF.md        |   13 +
+ .../agents/reviewer_23/evidence_reads.csv          |   31 +
+ .../agents/reviewer_23/motion_events.csv           |   42 +
+ .../agents/reviewer_23/state_prompts.csv           |   31 +
+ .../o_scripts/asset_family_crosswalk.py            |   16 +
+ .../uPQcyookL0Y/o_scripts/validate_strip_prompt.py |   13 +
+ .../production_specs/specifications_v2.json        |   38 +
+ .../production_specs/specifications_v2_1.json      |  132 +++
+ .../uPQcyookL0Y/quality_gate_P.json                |   28 +
+ .../uPQcyookL0Y/reconstruction_blueprint_v2.md     |   23 +
+ .../uPQcyookL0Y/reconstruction_test/RT-01/BRIEF.md |   10 +
+ .../reconstruction_test/RT-01/EVALUATION.json      |   77 ++
+ .../reconstruction_test/RT-01/RESULT.json          |   16 +
+ .../RT-01/SPEC_GIVEN_TO_WORKER.json                |   56 +
+ .../reconstruction_test/RT-01/render.py            |   60 ++
+ .../reconstruction_test/RT-01/timeline.json        |   39 +
+ .../reconstruction_test/evaluate_rt01.py           |   44 +
+ .../tables/o_asset_family_crosswalk_ext.csv        |  113 ++
+ .../tables/o_reviewer_22_provenance.json           |   13 +
+ .../tables/o_reviewer_23_provenance.json           |   13 +
+ .../tables/o_validation_reviewer_22.json           |    8 +
+ .../tables/o_validation_reviewer_23.json           |    8 +
+ .../uPQcyookL0Y/visual_ct_scan_report_v2.md        |   35 +
+ 29 files changed, 2081 insertions(+)

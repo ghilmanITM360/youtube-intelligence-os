@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-11T17:29:45.000Z",
+  "channel": {
+    "name": "Rick Finance",
+    "handle": "@RickFinance1",
+    "id": "UCDLINT0o_8a0kObYN5bBqUw"
+  },
+  "tranche": "X",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "x_rickfinance",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.332",
+    "run_id": "326K8bk3f2xA2uT5B",
+    "dataset_id": "fsLEO1UtvYMPV07dt",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-11T17:16:57.000Z",
+    "finished_at_utc": "2026-11-11T17:29:45.000Z",
+    "charged_events": {
+      "result": 169
+    },
+    "actual_cost_usd": 0.676,
+    "usage_total_usd_reported": 0.676,
+    "max_cost_usd": 2.6,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCDLINT0o_8a0kObYN5bBqUw"
+      ],
+      "maxResults": 170,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 169,
+    "raw_file": "raw/x_rickfinance_326K8bk3f2xA2uT5B_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 169,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

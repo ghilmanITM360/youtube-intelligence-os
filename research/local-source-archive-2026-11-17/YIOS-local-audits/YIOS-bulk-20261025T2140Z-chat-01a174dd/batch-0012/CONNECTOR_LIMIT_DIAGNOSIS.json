@@ -1,0 +1,19 @@
+{
+  "observed_utc": "2026-10-26T03:10:48.693609+00:00",
+  "connector_response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "HTTP error prior to action invocation. HTTPException: 413: File too large to download: 117441481 bytes exceeds the 104857600-byte limit."
+      }
+    ],
+    "structuredContent": {
+      "error": "HTTP error prior to action invocation. HTTPException: 413: File too large to download: 117441481 bytes exceeds the 104857600-byte limit.",
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  },
+  "conclusion": "100MiB connector file materialization limit; HTTP413 before Drive action invocation. No third upload through connector confirmed. Browser fallback authorized and being qualified.",
+  "next_remote_filename": "5umJ63d3rzQ.ct-evidence.tar.gz",
+  "new_uploads_remaining_blocked_until_browser_transfer_full_verification": true
+}

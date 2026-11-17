@@ -1,0 +1,356 @@
+{
+ "title": "Input schema for the youtube-search-scraper actor",
+ "description": "Scrape YouTube search results using a search term, or directly input a video, channel, or results page URL. Feel free to try it out with our default settings by hitting &#9655;<b> Start</b>. If you need any help, have a read through <a href='https://blog.apify.com/how-to-scrape-youtube/' target='_blank' rel='noopener'>this tutorial</a>.",
+ "type": "object",
+ "schemaVersion": 1,
+ "properties": {
+  "searchQueries": {
+   "title": "Search terms",
+   "type": "array",
+   "editor": "stringList",
+   "description": "Enter search terms just like you would enter it in YouTube's search bar.",
+   "prefill": [
+    "Crawlee"
+   ],
+   "example": [
+    "web scraping tutorials"
+   ],
+   "nullable": false
+  },
+  "maxResults": {
+   "title": "Maximum videos per search term",
+   "type": "integer",
+   "description": "Limit the number of videos you want to crawl. If you scrape a channel, acts as a limit for regular videos.",
+   "minimum": 0,
+   "default": 0,
+   "maximum": 999999,
+   "prefill": 10,
+   "example": 10,
+   "unit": "Videos"
+  },
+  "maxResultsShorts": {
+   "title": "Maximum shorts per search term",
+   "type": "integer",
+   "description": "Limit the number of Shorts videos you want to crawl.",
+   "minimum": 0,
+   "maximum": 999999,
+   "default": 0,
+   "prefill": 0,
+   "example": 5,
+   "unit": "Videos"
+  },
+  "maxResultStreams": {
+   "title": "Maximum streams per search term",
+   "type": "integer",
+   "description": "Limit the number of Stream videos you want to crawl.",
+   "minimum": 0,
+   "maximum": 999999,
+   "default": 0,
+   "prefill": 0,
+   "example": 0,
+   "unit": "Videos"
+  },
+  "startUrls": {
+   "title": "Direct URLs",
+   "type": "array",
+   "description": "Enter a link to a <a href='https://www.youtube.com/watch?v=xObhZ0Ga7EQ' target='_blank' rel='noopener'>YouTube video</a>, <a href='https://www.youtube.com/c/Apify' target='_blank' rel='noopener'>channel</a>, <a href='https://www.youtube.com/playlist?list=PLObrtcm1Kw6PmbXg8bmfJN-o2Hgx8sidf' target='_blank' rel='noopener'>playlist</a> or <a href='https://www.youtube.com/results?search_query=crawlee' target='_blank' rel='noopener'>search results page</a>. You can also import a CSV file or Google Sheet with a list of URLs.<br><b>Note:</b> Input from <i>Search term</i> will be ignored when using this option. If you only want to scrape shorts/streams, set Maximum search results to 0, otherwise they represented number of regular videos requested",
+   "default": [],
+   "editor": "requestListSources",
+   "example": [
+    {
+     "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+   ],
+   "sectionCaption": "\ud83d\udd17 Direct URLs"
+  },
+  "transcriptionAndSubtitle": {
+   "title": "Transcription & subtitles",
+   "type": "string",
+   "editor": "select",
+   "default": "NONE",
+   "description": "Choose whether to download subtitles, transcribe the video using speech-to-text AI, or both. Leave empty to skip subtitles and transcription. Subtitles are added to the dataset items, while transcripts are stored in the key-value store",
+   "enum": [
+    "NONE",
+    "ALWAYS_SUBTITLES",
+    "TRANSCRIPTION_AS_FALLBACK",
+    "ALWAYS_TRANSCRIBE"
+   ],
+   "enumTitles": [
+    "None",
+    "Only download subtitles (when present on the video)",
+    "Download subtitles + transcribe videos without subtitles (using speech-to-text models) ($)",
+    "Always transcribe ($)"
+   ],
+   "sectionCaption": "\ud83d\uddb9 Download YouTube transcript",
+   "nullable": true
+  },
+  "subtitlesLanguage": {
+   "title": "Subtitle language",
+   "type": "string",
+   "description": "Language to download subtitles in.<br><b>Note:</b> a subtitle-downloading option must be selected in <i>Transcription & subtitles</i> for this to work.",
+   "editor": "select",
+   "default": "en",
+   "example": "en",
+   "enum": [
+    "any",
+    "en",
+    "de",
+    "es",
+    "fr",
+    "it",
+    "ja",
+    "ko",
+    "nl",
+    "pt",
+    "ru"
+   ],
+   "enumTitles": [
+    "Any",
+    "English",
+    "German",
+    "Spanish",
+    "French",
+    "Italian",
+    "Japanese",
+    "Korean",
+    "Holland",
+    "Portuguese",
+    "Russian"
+   ]
+  },
+  "subtitlesFormat": {
+   "title": "Subtitle format",
+   "type": "string",
+   "description": "Select in what format you want to download subtitles",
+   "editor": "select",
+   "default": "srt",
+   "example": "srt",
+   "enum": [
+    "srt",
+    "vtt",
+    "xml",
+    "plaintext"
+   ],
+   "enumTitles": [
+    "SRT",
+    "WEBVTT",
+    "XML",
+    "plaintext"
+   ]
+  },
+  "sortingOrder": {
+   "title": "Sorting order",
+   "type": "string",
+   "description": "Select Youtube sorting parameter for search",
+   "sectionCaption": "\u2705 Add filters",
+   "sectionDescription": "Specify the parameters you want to sort/filter videos by. They will be applied as if you manually did so on Youtube's search page. Only works if you provide search term, not for the direct URLs.\n \n \u26a0\ufe0f Using YouTube filters may mix Shorts with regular videos. This is a limitation on YouTube's side. We recommend checking it manually.",
+   "editor": "select",
+   "example": "relevance",
+   "enum": [
+    "relevance",
+    "rating",
+    "date",
+    "views"
+   ],
+   "enumTitles": [
+    "Relevance",
+    "Rating",
+    "Upload date",
+    "View count"
+   ],
+   "nullable": true
+  },
+  "dateFilter": {
+   "title": "Date filter",
+   "type": "string",
+   "description": "Select Youtube upload date filter for search",
+   "editor": "select",
+   "example": "month",
+   "enum": [
+    "hour",
+    "today",
+    "week",
+    "month",
+    "year"
+   ],
+   "enumTitles": [
+    "Last hour",
+    "Today",
+    "This week",
+    "This month",
+    "This year"
+   ],
+   "nullable": true
+  },
+  "videoType": {
+   "title": "Video type filter",
+   "type": "string",
+   "description": "Select Youtube video type filter for search",
+   "editor": "select",
+   "example": "video",
+   "enum": [
+    "video",
+    "movie"
+   ],
+   "enumTitles": [
+    "Video",
+    "Film"
+   ],
+   "nullable": true
+  },
+  "lengthFilter": {
+   "title": "Length filter",
+   "type": "string",
+   "description": "Select Youtube video length filter for search",
+   "editor": "select",
+   "example": "between420",
+   "enum": [
+    "under4",
+    "between420",
+    "plus20"
+   ],
+   "enumTitles": [
+    "Under 4 minutes",
+    "4-20 minutes",
+    "Over 20 minutes"
+   ],
+   "nullable": true
+  },
+  "isHD": {
+   "title": "HD",
+   "type": "boolean",
+   "description": "Will apply the HD filter for search",
+   "editor": "checkbox",
+   "groupCaption": "Features",
+   "groupDescription": "What you could select under the Features section of the Filtering&Sorting menu on Youtube",
+   "nullable": true
+  },
+  "hasSubtitles": {
+   "title": "Subtitles/CC",
+   "type": "boolean",
+   "description": "Will apply the Subtitles/CC filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "hasCC": {
+   "title": "Creative Commons",
+   "type": "boolean",
+   "description": "Will apply the Creative Commons filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "is3D": {
+   "title": "3D",
+   "type": "boolean",
+   "description": "Will apply the 3D filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "isLive": {
+   "title": "Live",
+   "type": "boolean",
+   "description": "Will apply the Live filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "isBought": {
+   "title": "Purchased",
+   "type": "boolean",
+   "description": "Will apply the Purchased filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "is4K": {
+   "title": "4K",
+   "type": "boolean",
+   "description": "Will apply the 4K filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "is360": {
+   "title": "360 degrees",
+   "type": "boolean",
+   "description": "Will apply the 360 degrees filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "hasLocation": {
+   "title": "Location",
+   "type": "boolean",
+   "description": "Will apply the Location filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "isHDR": {
+   "title": "HDR",
+   "type": "boolean",
+   "description": "Will apply the HDR filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "isVR180": {
+   "title": "VR180",
+   "type": "boolean",
+   "description": "Will apply the VR180 filter for search",
+   "editor": "checkbox",
+   "nullable": true
+  },
+  "oldestPostDate": {
+   "title": "Scrape videos published after [date]",
+   "type": "string",
+   "editor": "datepicker",
+   "dateType": "absoluteOrRelative",
+   "pattern": "^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])(T[0-2]\\d:[0-5]\\d(:[0-5]\\d)?(\\.\\d+)?Z?)?$|^(\\d+)\\s*(minute|hour|day|week|month|year)s?$",
+   "description": "Only posts uploaded after or on this date will be scraped. Alternatively, specify how old the scraped videos should be in days. Putting <code>1 day</code> will get you only today's posts, <code>2 days</code> - yesterday's and today's, and so on. Note, that if you select this, sorting parameter will be auto-reset to NEWEST",
+   "example": "2024-01-01",
+   "sectionCaption": "\ud83d\udcc5 Date range (applicable only to scraping by channels URL) ($)"
+  },
+  "sortVideosBy": {
+   "title": "Sort by",
+   "type": "string",
+   "editor": "select",
+   "enum": [
+    "NEWEST",
+    "POPULAR",
+    "OLDEST"
+   ],
+   "description": "Maps to the sorting buttons on the top of the channel's 'Videos', 'Shorts' and 'Live' pages.",
+   "example": "NEWEST",
+   "enumTitles": [
+    "Newest",
+    "Popular",
+    "Oldest"
+   ]
+  },
+  "aiVideoDescription": {
+   "title": "Add-on: AI video description ($)",
+   "type": "boolean",
+   "description": "If enabled, uses AI to generate a time-segmented description of the video, covering both visual and audio content for each segment.",
+   "example": false,
+   "default": false,
+   "sectionCaption": "\ud83e\udd16 AI video analysis ($)"
+  },
+  "aiVideoSummary": {
+   "title": "Add-on: AI video summary ($)",
+   "type": "boolean",
+   "description": "If enabled, uses AI to generate a concise conceptual summary of the video covering both visual and audio content.",
+   "example": false,
+   "default": false
+  },
+  "saveSubsToKVS": {
+   "title": "Save subtitles to key-value store",
+   "type": "boolean",
+   "description": "If set to true, the scraper will save the downloaded subtitles to the key-value store. Transcripts are always saved to the key-value store",
+   "example": false,
+   "editor": "hidden"
+  },
+  "preferAutoGeneratedSubtitles": {
+   "title": "Prefer automatically generated subtitles.",
+   "description": "If set to true, automatically generated subtitles are preferred to user subtitles.<b> Note:</b> a subtitle language must be selected and a subtitle-downloading option must be selected in <i>Transcription & subtitles</i> for this to work.",
+   "type": "boolean",
+   "example": false,
+   "editor": "hidden"
+  }
+ },
+ "required": []
+}

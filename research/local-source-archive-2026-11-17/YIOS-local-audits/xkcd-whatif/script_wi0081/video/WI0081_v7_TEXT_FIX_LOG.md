@@ -1,0 +1,7 @@
+# WI-0081 v7 text-fix log
+Final MP4: video/WI0081_video_v7.mp4 (98.33 s, 1080x1920, 24 fps). SHA256 in SHA256SUMS_v7.txt. Editable: hf/index.html + hf/scenes.js (backups hf/scenes_v7a_backup.js.txt, scenes_v6_backup.js.txt).
+Niagara references: xkcd pfbzrrcQZjs 21-25 s, 27-35 s, 116-138 s (falls), 86-90 s (Bernoulli diagram); Niagara Parks PDF page 3 (file is titled "Niagara-takes-flight") for the Horseshoe aerial.
+Niagara shot 39.33-45.67: three-quarter horseshoe, teal current to brink, curtain, base spray, separate mist, marker parcel on the water, "NIAGARA FALLS" 42.0, "≈ +0.1 °C / idealized estimate" box bottom-right 44.0-44.8.
+Text fixes (s): 4.3 NO moved right; 14.5 THERMAL ENERGY recentred; 27.8-29 timer digits 190; 31.5-34.8 seven bulbs 4+3 two rows, 44 px labels, 700 W equation moved clear to y1210; boil cutaway BOILING/100 °C/at 1 atm re-spaced; 47.9 "< 1 W" recentred/smaller; 52.5 delivered label; 68.5 LOW PRESSURE recentred; 74.2 NOT HEAT moved off thermometer 20 °C and divider; 44.0 "zoomed" off 20.0 °C; scene-end tightening and Niagara label moves from batch 1.
+Audit: automated art-vs-text overlap pass, 7 runs left, all intentional strike-throughs (BOIL 4.4-7.8, BOIL WATER 97-98). hyperframes check: 0 errors.
+Not done: real-time full playback by a person, true phone-size device check (checked at 360 px frames), pixel side-by-side of the Niagara frame with the PDF.

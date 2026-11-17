@@ -1,0 +1,261 @@
+[codex/what-if-archive-main-integration f5cf5479] research: preserve What If per-video evidence batch 2
+ Date: Sun Oct 25 22:28:49 2026 +0500
+ 258 files changed, 30583 insertions(+)
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/00_source/metadata.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/00_source/verify.py
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/01_evidence/EVIDENCE_INDEX.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/01_evidence/frame_change_metrics.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/01_evidence/text_reveal_measurements.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/Could you power your computer by typing?/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/could_you_survive_nanosecond_sun/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/drained_oceans/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/earthquake-magnitude-shorts-wBLVmEZV2Oc/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/00_source/verify.py
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/CONTINUATION_HANDOFF.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/how_long_could_you_drive_towards_the_sunset/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_all_humans_died/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/if_toaster_in_freezer/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/00_source/verify.py
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/CONTINUATION_HANDOFF.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/weird_and_worrying_questions/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/01_evidence/scene_candidates.txt
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what-if-earth-grew-1cm-every-second/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/00_source/verify.py
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/CONTINUATION_HANDOFF.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_all_visible_light_was_a_single_beam/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/00_source/verify.py
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/CONTINUATION_HANDOFF.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_earths_water_suddenly_disappear/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/00_source/verify.py
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/CONTINUATION_HANDOFF.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_if_the_moon_were_made_of_protons/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/00_source/verify.py
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/CONTINUATION_HANDOFF.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/what_would_a_magnitude_15_earthquake_be/RUN_STATE.json
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/00_source/SOURCE_MANIFEST.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/02_analysis/ASSET_MANIFEST.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/02_analysis/MOTION_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/02_analysis/TIMELINE.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/02_analysis/VISUAL_DNA.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/02_analysis/scenecuts_raw.log
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/03_capcut/CAPCUT_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/04_image_to_video/ANIMATION_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/04_image_to_video/I2V_REBUILD.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/04_image_to_video/IMAGE_PROMPTS.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/05_audio/AUDIO_MAP.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/05_audio/semantic/AUDIO_EVENTS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/05_audio/semantic/AUDIO_VISUAL_SYNC.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/05_audio/semantic/TRANSCRIPT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/05_audio/semantic/TRANSCRIPT_SENTENCES.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/05_audio/semantic/TRANSCRIPT_WORDS.csv
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/05_audio/silence_raw.log
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/MASTER_REPORT.md
+ create mode 100644 research/visual-forensics/channels/CH-000004/what-if-source-package/video_forensics_output/worlds-largest-cities-what-if/RUN_STATE.json

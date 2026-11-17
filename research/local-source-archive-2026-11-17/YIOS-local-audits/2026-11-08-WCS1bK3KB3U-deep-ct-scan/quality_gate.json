@@ -1,0 +1,33 @@
+{
+ "video_id": "WCS1bK3KB3U",
+ "source_sha256": "d904634a12feab2ac55ce67d8680aa5bc1c53148c0beea49ff90cf1fe71d1910",
+ "requested_mode": "CT_SCAN",
+ "scope": "visual-only; audio/AV tracked separately",
+ "reviewer": "Claude Opus 5.5, Machine A, 2026-11-08",
+ "gates": {
+  "source_identity": "PASS (hash computed; filename ID/registry attribution; live YouTube not re-checked)",
+  "full_temporal_overview": "PASS (all 14636 frames measured; 1 fps overview)",
+  "candidate_shots_verified": "PASS (217 hard cuts verified on adjacent decoded frames; 424/424 episodes viewed)",
+  "meaningful_state_timing": "PASS_WITH_DECLARED_BOUNDS (394 EXACT, 0 BOUND, rest measured activity edges)",
+  "motion_design_review": "PASS (classified; easing UNAVAILABLE)",
+  "creative_design_review": "PASS (palette measured; typography labelled)",
+  "on_screen_text": "PARTIAL_OPEN_LIMITATION (captions, board text, labels, headlines and logo names read from decoded frames; body text inside articles, tables, charts and UI screenshots flagged not transcribed or quoted only in part; people in photographs and clips not identified)",
+  "visual_script_mapping": "PROVISIONAL_ASR_ONLY (72 semantic pairs, control baseline reported)",
+  "production_blueprint": "PASS (394 per-state prompts, modules, timeline, acceptance tests)",
+  "audio_human_listening": "NOT_COMPLETED",
+  "final_av_signoff": "BLOCKED",
+  "ct_scan_complete": "PASS_VISUAL_ONLY"
+ },
+ "final_video_status": "VISUAL_CT_SCAN_COMPLETE_WITH_EVIDENCE (visual-only, declared coverage)",
+ "full_av_signoff": "NO",
+ "limitations": [
+  "no human listening",
+  "ASR unverified",
+  "quiet-frame interiors not individually viewed",
+  "sub-threshold changes undetectable",
+  "pan/ease curves and typefaces not measured",
+  "live thumbnail/title not re-fetched",
+  "on-screen figures not fact-checked"
+ ],
+ "next_step": "counts only if validate.py exits 0"
+}

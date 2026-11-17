@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-09T23:35:13.146Z",
+  "channel": {
+    "name": "Ronnie Finance",
+    "handle": "@RonnieFinance-w2d",
+    "id": "UCA-ucSJ_2mY4EqjenOT2u3w"
+  },
+  "tranche": "T2",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t2_ronniefinance",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "cHRMEjQ8NaDQnZZR2",
+    "dataset_id": "YCGJNpWe7BDgaLrJA",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-09T23:34:01.230Z",
+    "finished_at_utc": "2026-11-09T23:35:13.146Z",
+    "charged_events": {
+      "result": 61
+    },
+    "actual_cost_usd": 0.244,
+    "usage_total_usd_reported": 0.244,
+    "max_cost_usd": 0.29,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCA-ucSJ_2mY4EqjenOT2u3w"
+      ],
+      "maxResults": 71,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 61,
+    "raw_file": "raw/t2_ronniefinance_cHRMEjQ8NaDQnZZR2_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 61,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

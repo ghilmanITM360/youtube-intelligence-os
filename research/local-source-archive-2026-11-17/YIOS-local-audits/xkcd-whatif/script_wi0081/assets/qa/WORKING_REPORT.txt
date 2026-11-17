@@ -1,0 +1,102 @@
+WI-0081 WORKING REPORT — NOT APPROVED
+New GEN: 62/62 IDs have image-tool output, 147 distinct native images; 0 accepted by partial verifier.
+Selected review rows explicitly marked failed: 18 of 81 GEN/VEC review IDs. All remaining rows are pending, not passed.
+Master SHA-256: 12b1f42ea48d0eb88c1b0fd63237904fd547d478fc7bf8a03bfdd67e3833ad9c
+No chroma key used; keying hole test not applicable.
+
+Regenerations per GEN asset (distinct native images minus one):
+BLB-01: 0
+CAV-01: 0
+CAV-02: 3
+CAV-03: 0
+CHR-G01: 1
+CHR-G02: 1
+CHR-G03: 1
+CHR-G04: 1
+CHR-P01: 3
+CHR-P02: 3
+CHR-P03: 3
+CHR-P04: 3
+CHR-P05: 3
+CHR-P06: 2
+CHR-P07: 3
+CHR-P08: 3
+CHR-P09: 2
+CHR-P10: 2
+CHR-P11: 3
+CHR-P12: 3
+CHR-P13: 1
+CHR-P14: 3
+CHR-V01: 3
+CHR-V02: 3
+CHR-V03: 3
+CHR-V04: 3
+CHR-X01: 1
+CHR-X02: 1
+CHR-X03: 1
+CHR-X04: 1
+CHR-X05: 1
+CHR-X06: 1
+CLK-01: 0
+FLM-01: 1
+HRS-01: 0
+JUG-01: 0
+MUG-01: 0
+MUG-02: 3
+MUG-R01: 0
+MWV-01: 0
+NIA-01: 0
+NIA-02: 1
+NIA-03: 0
+NIA-04: 0
+NIA-06: 0
+RUL-01: 0
+SPN-01: 0
+SPN-02: 3
+SPN-03: 3
+SPN-04: 0
+SPN-05: 0
+SPN-06: 0
+TBL-01: 0
+THM-01: 3
+THM-02: 0
+THM-03: 0
+THM-R01: 0
+THR-01: 0
+WTR-01: 3
+WTR-02: 3
+WTR-03: 3
+WTR-04: 0
+
+Known failures and limitations:
+CHR-P01: FAILED_ALIGNMENT (assets/gen/CHR-P01-v2.png)
+CHR-P02: FAILED_ALIGNMENT (assets/gen/CHR-P02-v2.png)
+CHR-P03: FAILED_ALIGNMENT (assets/gen/CHR-P03.png)
+CHR-P04: FAILED_CUTOUT_OR_CONTENT (assets/gen/CHR-P04-v3.png)
+CHR-P05: FAILED_ALIGNMENT (assets/gen/CHR-P05-v2.png)
+CHR-P07: FAILED_ALIGNMENT (assets/gen/CHR-P07-v2.png)
+CHR-P08: FAILED_CUTOUT_OR_CONTENT (assets/gen/CHR-P08-v3.png)
+CHR-P11: FAILED_CUTOUT_OR_CONTENT (assets/gen/CHR-P11.png)
+CHR-P12: FAILED_ALIGNMENT (assets/gen/CHR-P12-v3.png)
+CHR-P14: FAILED_ALIGNMENT (assets/gen/CHR-P14.png)
+CHR-V01: FAILED_PROPORTIONS (assets/gen/CHR-V01-v4.png)
+CHR-V02: FAILED_PROPORTIONS (assets/gen/CHR-V02-v4.png)
+MUG-02: FAILED_PROP_CHECK (assets/gen/MUG-02-v4.png)
+SPN-02: FAILED_PROP_CHECK (assets/gen/SPN-02-v4.png)
+SPN-03: FAILED_PROP_CHECK (assets/gen/SPN-03-v4.png)
+WTR-01: FAILED_PROP_CHECK (assets/gen/WTR-01-v4.png)
+WTR-02: FAILED_PROP_CHECK (assets/gen/WTR-02-v4.png)
+WTR-03: FAILED_PROP_CHECK (assets/gen/WTR-03-v4.png)
+CHR-V01..V04 / CHR-MS01: selected model-sheet view bottoms y=1004,1139,1115,1190 versus requested 1102; head-height spread 0.30%.
+CHR-P01,P02,P03,P05,P07,P11,P12,P14: best alpha-bottom errors 26,17,37,31,20,17,47,157 px, respectively (6 px allowed); P11 best-baseline candidate also has a dial baked in.
+CHR-P04-v3: visible halo on dark composite; final retry v4 has alpha-bottom error 125 px. CHR-P08-v3/v4: motion marks baked in.
+MUG-01/MUG-02: outline within 1px is about 26% for first attempts; best retries also fail. SPN-02/03: canvas-centered silhouette IoU far below .97; pivot independently unverified. WTR-01/02/03: dominant gray fills differ; clipping against mask unverified.
+CAV-02 initial and v2: bubbles ahead of bowl; v3/v4 appear left-only at review-sheet scale but remain unapproved. FLM-01 initial includes pot; v2 removes it. NIA-02 initial includes landscape; v2 is isolated.
+RUL-01 and THR-01 appear very small at 320px in the draft frames; contrast and readability fail. S14 label overlap was corrected in draft, but complete G has not passed.
+MSK-01 is an approximate coded shape and is not verified against mug interior. All vector assets and text placement remain pending QA.
+29 S01-S29 files are DRAFT stills only. They do not constitute verified shot builds: state changes, anchors, layering, ruler persistence, correct assets and label clearance are incomplete.
+Cut lists: 29 full, 25 short. No explicit 60s-to-full-only reference found; inherited layers not audited.
+Cutout strips generated for 78 selected RGBA IDs. Opened all 14 pose strips and 12 other samples. This is not full-resolution or complete halo/alpha acceptance.
+Not verified: full A output-spec coverage for non-raster/source rows, alpha holes on head interiors at 99.5%, eye/mouth scan/neck continuity, edge spill, paired pose body difference, thermometer pivot, exact mask clipping, complete physical-state checks, originality comparison for horse, full-resolution G, all H, inherited I, and full approval of J. Partial verifier still checks older manifest rows and treats PENDING rows as unaccepted.
+Silent human review S16-S25, voice approval, and owner decision on wording C1-C5 remain pending.
+No commit or publication.

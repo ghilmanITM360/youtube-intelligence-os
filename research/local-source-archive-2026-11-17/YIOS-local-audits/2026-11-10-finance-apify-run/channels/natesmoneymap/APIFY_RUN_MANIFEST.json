@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-10T07:32:22.269Z",
+  "channel": {
+    "name": "Nate’s Money Map",
+    "handle": "@MoneyMapWithNate",
+    "id": "UCtOrKVgo-bsh4XoSCA8R_mg"
+  },
+  "tranche": "T2",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t2_natesmoneymap",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "6DN7kTHiFMgFHEqQC",
+    "dataset_id": "6YuoBQ19jNbiegv9I",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-10T07:31:44.343Z",
+    "finished_at_utc": "2026-11-10T07:32:22.269Z",
+    "charged_events": {
+      "result": 32
+    },
+    "actual_cost_usd": 0.128,
+    "usage_total_usd_reported": 0.128,
+    "max_cost_usd": 0.16,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCtOrKVgo-bsh4XoSCA8R_mg"
+      ],
+      "maxResults": 40,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 32,
+    "raw_file": "raw/t2_natesmoneymap_6DN7kTHiFMgFHEqQC_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 32,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

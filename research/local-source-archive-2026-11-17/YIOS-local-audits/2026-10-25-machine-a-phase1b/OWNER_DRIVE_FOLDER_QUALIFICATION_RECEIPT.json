@@ -1,0 +1,94 @@
+{
+  "checked_at_utc": "2026-10-25 19:46:53 UTC",
+  "task": "Owner-provided exact Google Drive folder qualification; read-only",
+  "folder": {
+    "name": "yios",
+    "exact_supplied_id_used": true,
+    "identifier_redacted": true,
+    "owner_matches_owner_supplied_account": true,
+    "parent": "NOT_VERIFIED; connector returned parent_ids null",
+    "location": "Individual user-owned folder; no shared-drive ID returned; owner's exact My Drive parent NOT_VERIFIED",
+    "shared": true,
+    "permissions": [
+      {
+        "type": "user",
+        "role": "owner",
+        "identity": "OWNER_SUPPLIED_ACCOUNT_REDACTED"
+      },
+      {
+        "type": "anyone",
+        "role": "writer",
+        "allowFileDiscovery": false
+      }
+    ],
+    "general_access": "Anyone with the link / Editor; browser corroborated",
+    "restricted": false,
+    "other_named_users_groups_domains": "None in returned ACL or browser People with access list",
+    "inherited_permission_details": "NOT_VERIFIED; normalized metadata did not expose permissionDetails",
+    "security_limitations_ui": "No limitations applied"
+  },
+  "authentication": {
+    "connector_matches_intended_account": false,
+    "browser_matches_intended_account": false,
+    "alternate_account_identity_redacted": true,
+    "account_switch_performed": false
+  },
+  "capacity": {
+    "intended_owner_account": "NOT_VERIFIED",
+    "observed_other_account": {
+      "total_display_gb": 15,
+      "used_display_gb": 12.47,
+      "approx_free_display_gb": 2.53,
+      "applicability": "NOT APPLICABLE to folder owner quota"
+    },
+    "pilot_bytes": 95436174,
+    "pilot_owner_capacity_acceptance": "BLOCKED"
+  },
+  "capabilities": {
+    "metadata_read": "VERIFIED",
+    "browser_new_button_enabled": true,
+    "public_link_write_grant": "VERIFIED; insecure",
+    "intended_account_upload_authorization": "NOT_VERIFIED",
+    "complete_original_binary_download": "NOT_VERIFIED; no download test or per-file capability acceptance",
+    "api_tools_exist_for_binary_upload_and_raw_fetch": "Prior qualification evidence; not invoked here"
+  },
+  "decision": "BLOCKED",
+  "private_backup_suitability": "REJECTED_PRIVATE_BACKUP",
+  "policy": {
+    "provider_managed_encryption": "PROPOSED; no owner-held end-to-end keys",
+    "retention": "PROPOSED: retain all pilot objects until explicit owner approval for removal",
+    "owner_policy_acceptance": "PENDING"
+  },
+  "resources": {
+    "five_hour_used_percent": 1,
+    "weekly_used_percent": 18,
+    "credits_balance": 0,
+    "context": "Adequate; no compaction required",
+    "initial_free_disk_kib": 7996348,
+    "paid_operations": 0
+  },
+  "protected_repository": {
+    "head": "badec432bbf5610748123b3f0e0bcb9cdb25fa10",
+    "branch": "codex/what-if-archive-main-integration",
+    "tracked_index_status": "Clean from status --porcelain -uno",
+    "stash": "5b6c3042679400b16aa1024b79058b71dade0ab9",
+    "git_mutations": 0,
+    "PR_mutations": 0,
+    "competing_processes": "Other Codex processes observed; no exclusive writer claim or write attempted"
+  },
+  "execution": {
+    "uploads": 0,
+    "private_content_downloads": 0,
+    "folder_creations": 0,
+    "permission_changes": 0,
+    "source_changes": 0,
+    "pilot_restore": "NOT_EXECUTED"
+  },
+  "next_steps": [
+    "Owner makes exact folder Restricted and removes unintended effective access, or separately authorizes that bounded correction; no changes performed now.",
+    "Make intended owner's authenticated environment available; reverify profile, owner-only effective ACL, parent and intended account quota.",
+    "Confirm provider-managed encryption and retention proposal.",
+    "After acceptance, separately authorize exactly four manifest files, 95436174 bytes, upload and fresh independent download with complete SHA-256 verification; no cleanup."
+  ]
+}
+

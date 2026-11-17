@@ -1,0 +1,35 @@
+.../channel_synthesis/CHANNEL_SYNTHESIS_v1_1.md    |  60 +++++++
+ .../EVIDENCE_SHA256SUMS_checkpoint_F1              |  37 ++++
+ .../final_audit/CONTINUATION_HANDOFF_FINAL.md      |  20 +++
+ .../final_audit/CROSS_VIDEO_ASSET_ALIASES.csv      |   5 +
+ .../final_audit/FINAL_AUDIT_MATRIX.csv             |  23 +++
+ .../final_audit/FINAL_CORRECTIONS.csv              |  10 ++
+ .../final_audit/FINAL_THREE_VIDEO_AUDIT.md         | 171 ++++++++++++++++++
+ .../final_audit/FINAL_VALIDATION.json              | 106 +++++++++++
+ .../final_audit/FINAL_VISUAL_CHECK.csv             |  18 ++
+ .../final_audit/RECONSTRUCTION_TESTS_FINAL.csv     |   4 +
+ .../final_audit/be_final_validate.py               |  54 ++++++
+ .../final_audit/build_kit_outputs.py               |  58 ++++++
+ .../final_audit/evaluate_rt_v2v3.py                |  64 +++++++
+ .../audio_visual_alignment.csv                     | 179 +++++++++++++++++++
+ .../kit_outputs/GNaBxt_zIRA_cbe7a3af/coverage.json |  32 ++++
+ .../GNaBxt_zIRA_cbe7a3af/quality_gate_FINAL.json   | 105 +++++++++++
+ .../GNaBxt_zIRA_cbe7a3af/shot_ledger.csv           | 114 ++++++++++++
+ .../GNaBxt_zIRA_cbe7a3af/visual_event_ledger.csv   | 176 +++++++++++++++++++
+ .../audio_visual_alignment.csv                     | 109 ++++++++++++
+ .../kit_outputs/mNLNb-Z4T0M_e6799e8f/coverage.json |  32 ++++
+ .../mNLNb-Z4T0M_e6799e8f/quality_gate_FINAL.json   | 105 +++++++++++
+ .../mNLNb-Z4T0M_e6799e8f/shot_ledger.csv           | 137 +++++++++++++++
+ .../mNLNb-Z4T0M_e6799e8f/visual_event_ledger.csv   | 195 +++++++++++++++++++++
+ .../kit_outputs/uPQcyookL0Y_1416669f/coverage.json |  32 ++++
+ .../uPQcyookL0Y_1416669f/quality_gate_FINAL.json   | 105 +++++++++++
+ .../state_prompts_consolidated.csv                 |  90 ++++++++++
+ .../channel_synthesis/final_audit/os_v1_cal.csv    |   2 +
+ .../channel_synthesis/final_audit/os_v3_cal.csv    |   2 +
+ .../channel_synthesis/final_audit/scripts/grab.py  |  17 ++
+ .../final_audit/scripts/inset_bbox.py              |  11 ++
+ .../final_audit/scripts/lookup.py                  |  12 ++
+ .../final_audit/scripts/overshoot_scan.py          |  23 +++
+ .../final_audit/scripts/warm_bbox.py               |  12 ++
+ .../final_audit/scripts/warm_top.py                |  12 ++
+ 34 files changed, 2132 insertions(+)

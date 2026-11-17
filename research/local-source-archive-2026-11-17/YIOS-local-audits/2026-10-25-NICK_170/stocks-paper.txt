@@ -1,0 +1,612 @@
+      Which U.S. Stocks Generated the Highest Long-Term Returns?
+
+
+
+
+                                    Hendrik Bessembinder
+                Department of Finance, W.P. Carey School of Business,
+                                   Arizona State University
+                                      Email: hb@asu.edu
+
+
+
+
+                                    Initial Draft: July 2024
+
+
+
+
+                                            Abstract
+This report describes compound return outcomes for the 29,078 publicly-listed common stocks
+contained in the CRSP database from December 1925 to December 2023. The majority (51.6%)
+of these stocks had negative cumulative returns. However, the investment performance of some
+stocks was remarkable. Seventeen stocks delivered cumulative returns greater than five million
+percent (or $50,000 per dollar initially invested), with the highest cumulative return of 265
+million percent (or $2.65 million per dollar initially invested) accruing to long-term investors in
+Altria Group. Annualized compound returns to these top performers relatively were modest,
+averaging 13.47% across the top seventeen stocks, thereby affirming the importance of “time in
+the market.” The highest annualized compound return for any stock with at least 20 years of
+return data was 33.38%, earned by Nvidia shareholders.
+          Which U.S. Stocks Generated the Highest Long-Term Returns?
+
+
+    1. Introduction
+
+        I use the Center for Research in Security Prices (CRSP) daily common stock database to
+
+identify the stocks that generated the highest compound rates of return during the ninety-eight
+
+years spanning December 31, 1925 to December 31, 2023. Specifically, I compute the
+
+cumulative compound return for each stock, using all available daily return data in CRSP. This
+
+cumulative return is interpreted as the outcome to an investor who followed a buy-and-hold
+
+strategy, with each dividend reinvested in the same stock, from the first date a stock is included
+
+in CRSP until the time of delisting or the end of the sample period. 1 This study complements
+
+prior analyses that focused on long-term shareholder outcomes measured in dollars. 2
+
+        I obtain return data for all common stocks (share codes 10, 11, and 12) from CRSP. As
+
+of December 2023, CRSP reported returns for 29,078 distinct common stocks. 3 Although this
+
+study spans ninety-eight calendar years, on average these stocks appear in the CRSP data for
+
+only 11.6 years, with a median sample lifetime of just 6.8 years. Only thirty-one stocks are
+
+
+
+1
+  The buy-and-hold returns calculated here apply to a hypothetical investor who follows the strategy described over
+the full length of time that each stock is included in the CRSP database. Bessembinder, Chen, Choi, and Wei (2024)
+describe some drawbacks of this widely-used measure, and propose alternative methods of measuring long-horizon
+investor returns. CRSP includes return data for New York Stock Exchange stocks from December 1925 onward.
+Returns for American Stock Exchange (AMEX) stocks are included since 1962 and Nasdaq stock return data is
+included since 1972.
+2
+  These include Bessembinder (2023), Bessembinder, Chen, Choi, and Wei (2023), Bessembinder (2021), and
+Bessembinder (2018). The present study is distinguished from these by the assessment of rates of return per dollar
+initially invested rather than dollar amounts, and by a direct focus on returns, rather than returns in excess of
+Treasury bill rates.
+3
+  I identify stocks based on the CRSP permno variable. According to the CRSP data guide (available at
+http://www.crsp.com/files/data_descriptions_guide_0.pdf), the Permno is “a unique permanent identification
+number assigned by CRSP to each security. Unlike the CUSIP, Ticker Symbol, and Company Name, the Permno
+neither changes during an issue’s trading history, nor is it reassigned after an issue ceases trading. The user may
+track a security through its entire trading history in CRSP’s files with one Permno, regardless of name or capital
+structure changes.” A few firms issue multiple classes of common shares. Since listing dates and returns differ
+across share classes CRSP assigns a distinct permno to each.
+present in the data across all ninety-eight years. To facilitated interpretation across stocks with
+
+disparate lives I also compute the annualized compound return for each stock. 4
+
+    2. The Distribution of Compound Returns
+
+         Table 1 reports summary statistics regarding cumulative compound returns earned on the
+
+publicly-listed common stocks contained in the CRSP database. 5 To facilitated interpretation, I
+
+report on cumulative returns in percent as well as on the cumulative final wealth per dollar
+
+initially invested. 6    Panel A of Table 1 pertains to all 29,078 common stocks. The mean
+
+outcome across stocks is a cumulative compound return of 22,840%, or equivalently, final
+
+wealth of $229.40 per dollar initially invested. However, the median outcome across stocks is a
+
+cumulative compound return of -7.41%, as 51.64% of stocks realized negative compound returns
+
+over their full lives in the CRSP database. The fact that the mean compound return outcome is
+
+strongly positive while the median outcome is negative is attributable to positive skewness in the
+
+distribution of compound stock returns. 7
+
+         I next report on outcomes for stocks grouped based on the length of time over which
+
+return data is available on CRSP. A stock can have a relatively short life in the CRSP database
+
+for three reasons, including (i) it was initially listed nearer to the end of the sample period in
+
+
+
+4
+  More specifically, I first compute the number of years (NYEARS) that each stock is present in the database based
+on the number of elapsed days between the dates of the first and last returns in CRSP, relative to 365.25 (days per
+year). The annualized compound return is one plus the cumulative return computed across all days raised to the
+power (1/NYEARS), less one. I do not report annualized returns for the 1,327 stocks that are present in the data for
+less than one year, since the computation in those cases would implicitly assume that the performance observed
+during the partial year would have persisted for the full twelve months. The implicit assumption can introduce large
+errors, in particular in cases where a stock earns a high return during a short life-span.
+5
+  Compound return outcomes for all 29,078 stocks are available for download at
+https://wpcarey.asu.edu/department-finance/faculty-research/do-stocks-outperform-treasury-bills.
+6
+  The cumulative return in percent is the cumulative wealth per dollar initially invested less one, times one hundred.
+7
+  For discussion of the positive skewness introduced by compounding see, for example, Albuquerque (2012), Fama
+and French (2018), Bessembinder (2018) Farago and Hjalmarsson (2023), Heaton, Polson and Witte (2017), and
+Simkowitz and Beedles (1978).
+December 2023, (ii) it was delisted for negative, performance-based, reasons, or (iii) it was
+
+delisted due to being merged or acquired. It should be kept in mind that delisting events and
+
+their reasons are only observable ex-post.
+
+        Panel B of Table 1 reports on outcomes after excluding the 1,327 stocks with less than
+
+one year of return data on CRSP. Performance is slightly improved after this exclusion, as the
+
+mean cumulative compound return is 23,934% (final wealth of 240.34 per dollar initially
+
+invested), and the median outcome is a cumulative compound return of -5.00%. Compound
+
+returns are negative for 51.01% of these stocks. The mean annualized compound return is
+
+-9.07% while the median is -0.74%.
+
+        It is worth taking note of the divergence between the mean annualized compound return
+
+for the stocks in Panel B, which is -9.07% and the mean cumulative compound return, which is
+
+not only positive, but is economically large, equal to 22,841%. This divergence also reflects the
+
+skewness induced by compounding. 8 Note that the skewness coefficient for the cumulative
+
+compound return is over 150, while the skewness coefficient for the annualized compound return
+
+is near zero.
+
+        Panel C of Table 1 provides summary statistics for the 10,217 stocks with short return
+
+histories of between one and five years. While delistings can occur for reasons such as
+
+takeovers that tend to be associated with positive abnormal returns, these stocks displayed very
+
+poor performance overall, with the mean annualized return equal to -19.80% and the median
+
+
+
+
+8
+  To illustrate the principle, suppose there are only two stocks, with annualized compound returns of 5% and -5%,
+respectively. The cross-stock mean annualized compound return is zero, and there is no skewness in the
+distribution of annualized returns. However, if these annualized returns pertained to outcomes over 30 years, then
+the cumulative compound returns are 1.0530 - 1 = 332.2% and 0.9530 – 1 = -78.5%, respectively, with a cross-stock
+mean of 126.8%, and with positive skewness.
+equal to -20.64%. More than five of every eight (63.15%) of these stocks suffered negative
+
+compound returns.
+
+       Panel D pertains to the 12,395 stocks with return histories greater than five but less than
+
+twenty years. Even in this longer-lived group the majority of stocks performed poorly, as
+
+51.85% had negative compound returns, and the median compound return was -1.30%
+
+annualized or -11.50% on a cumulative basis. However, due to positive skewness in the
+
+distribution of cumulative returns, the cross-sectional mean cumulative return for this group was
+
+194.33%, or $2.94 per dollar initially invested.
+
+       Finally, Panel E pertains to the 5,139 stocks with return histories longer than twenty
+
+years. The median time in the database for these stocks is 29.8 years, while the mean time in the
+
+database is 34.7 years. Three quarters (75.15%) of these stocks had positive compound returns.
+
+However, the median annualized compound return for these stocks is a relatively modest 7.54%.
+
+       The median cumulative return for these long-lived stocks is 813.44% and the cross-stock
+
+mean compound return is 128,779% (or $1,289 per dollar originally invested). The relatively
+
+large median and mean cumulative outcomes for these stocks reflect that returns for these stocks
+
+are compounded over long time horizons. Even among these long-lived stocks some perform
+
+very poorly; the tenth percentile of the cumulative return distribution is -94.8%. However, the
+
+distribution of cumulative outcomes is strongly asymmetric, reflecting the skewness induced by
+
+compounding. The 90th percentile of the distribution of compound returns is large, equal to
+
+30,698%, while the mean is larger yet, equal to nearly 129,000%. A mean outcome can exceed
+
+the 90th percentile outcome only a relatively few outcomes are extremely large. I next identify
+
+the top performing stocks.
+    3. The Top Performing Stocks
+
+        Table 2 reports outcomes for the thirty stocks with the highest cumulative compound
+
+returns among the 29,078 stocks that have appeared in the CRSP database since December
+
+1925. 9 The magnitudes of these returns are remarkable, ranging from 2.41 million percent, or
+
+$24,098 per dollar initially invested (Emerson Electric Company) to 265.5 million percent, or
+
+$2.65 million per dollar initially invested (Altria Group, previously named Philip Morris). In
+
+addition to Altria, the top five stocks listed on Table 2 are Vulcan Materials ($393,492 per dollar
+
+initially invested), Kansas City Southern ($361,757 per dollar initially invested), General
+
+Dynamics Corp. ($220,850 per dollar initially invested), and Boeing ($212,206) per dollar
+
+initially invested).
+
+        One striking observation that can be drawn from the data in Table 2 is that the highest
+
+cumulative returns delivered by individual common stocks are attributable to annualized returns
+
+that are only moderately high. The median annualized return across the thirty stocks listed on
+
+Table 2 is 13.03%, while the mean is 13.05%. 10 The largest annualized return among the thirty
+
+stocks is Altria Group’s 16.29%. However, these moderately high returns are compounded over
+
+long time periods, averaging 92.1 years. The stock with the shortest listing period (72 years)
+
+among those on Table 2 is Northrup Grumman, which entered the database in December of
+
+1951.
+
+
+
+
+9
+  The company names listed in Tables 2 to 5 are those most recently associated by CRSP to each permno. In many
+cases the entity represented by the permno will have had other names at earlier times. Name changes can occur at
+the times of mergers, acquisitions, and divestitures, among other reasons.
+10
+   These annualized returns may appear particularly modest relative to data reported in many Finance texts that
+indicate a mean annual return to the overall U.S. market since 1926 that exceeds 12% per year. However, these
+texts typically report the arithmetic mean of annual market returns. The annualized compound returns reported here
+are geometric means, which are always lower than corresponding arithmetic means (with the difference
+approximately equal to half the return variance).
+       The data on Table 2 also illustrate how modest differences in annual returns lead to large
+
+differences in cumulative returns. Altria Group and Vulcan materials are both present in the
+
+data for the full ninety-eight years. Altria’s compound annualized return of 16.29% is 1.16 times
+
+as large as Vulcan’s 14.05% outcome, but Altria’s cumulative compound return is 6.75 times as
+
+large as Vulcan’s. On balance, the data reported in Table 2 support the relevance of the adage
+
+focused on the importance of “time in the market.”
+
+       Of course, most investors have horizons shorter than the 98 years for which CRSP data is
+
+available or the 72 years that comprises the shortest calendar time interval over which returns are
+
+computed for the stocks in Table 2. I next report on the stocks with the highest annualized
+
+returns, even if they were not present in the data for a sufficiently long period to appear on Table
+
+2. I report results separately for short-lived stocks (between one and five years of available
+
+return data) in Table 3, medium-lived stocks (more than five but less than or equal to twenty
+
+years of available return data) in Table 4, and long-lived stocks (more than twenty years of
+
+available return data) in Table 5.
+
+       Table 3 reports on the 30 stocks with the highest annualized compound returns among
+
+those stocks with greater than one and less than five years return data. Annualized returns for
+
+these stocks are much higher than those reported in Table 2 for the stocks with the highest
+
+cumulative compound returns, ranging from 177.1% per year (Poly Company America Inc., from
+
+June 1979 to March 1981) to 526.17% per year (Gemini Energy Corporation, from January 1990
+
+to April 1991). The divergence in annualized returns across Tables 2 and 3 illustrates the fact
+
+that, while very high annualized returns are observed in the historical data over relatively short
+
+periods, such dramatic returns have historically not been sustained over long intervals. Indeed,
+
+although all stocks with return data available for between one and five years are eligible to be
+included on Table 3, the high annualized return stocks listed there are those with return data
+
+available for a median of just 1.25 years. Among the thirty stocks listed on Table 3 only one,
+
+Biohaven Limited, was present in the sample at the end of 2023, while all others were delisted at
+
+earlier dates, in most cases because the firms were acquired.
+
+       Table 4 reports on the 30 stocks with the highest annualized compound return among
+
+those stocks with greater than five and less than or equal to twenty years return data.
+
+Annualized returns for these stocks range from 56.47% (Rolm Corporation, from September
+
+1976 to November 1984) to 119.64% (Ascend Communications Inc., from May 1994 to June
+
+1999). While impressive, these annualized returns are considerably lower than those reported in
+
+Table 2. While all stocks with return data available for between five and twenty years are
+
+eligible to be included on Table 4, the stocks listed there are those with return data available for a
+
+median of just 6.03 years, again illustrating that very high annualized returns historically are
+
+observed for short intervals only. None of the thirty stocks listed on Table 4 was present in the
+
+sample at the end of 2023; that is all delisted at earlier dates, again most often because the firms
+
+were acquired. Eight of these high-performing stocks exited the database between 1997 and
+
+1999, during the period sometimes referred to as the “dot com bubble.”
+
+       Finally, Table 5 reports on the 30 stocks with the highest annualized compound returns
+
+among the long-lived stocks for which more than twenty years of return data is available. The
+
+highest annualized compound return for this group is 33.38% per year, earned by Nvidia
+
+shareholders during the 25 years from the firm’s January 1999 IPO through the end of the
+
+sample. This equates to a cumulative compound return of 131,500%, or $1,316 per dollar
+initially invested. 11 Other top performing stocks include Plenum Publishing Corp, whose
+
+shareholders earned 32.09% per year from December 1972 to July 1998, Netflix Inc., whose
+
+shareholders earned 32.06% per year from its May 2002 IPO to the end of the sample in
+
+December 2023, Amazon, whose shareholders earned 31.78% per year from its May 1997 IPO to
+
+the end of the sample, Axon Enterprise Inc., whose shareholders earned 31.13% per year from its
+
+June 2001 IPO (when the firm was named Taser International) to the end of the sample in
+
+December 2023, and Sperry Corporation, whose shareholders earned 28.82% per year from May
+
+1933 until its June 1955 merger with Remington Rand, Inc.
+
+        The median number of years with available return data among the thirty high performing
+
+stocks listed on Table 5 is 25.6 years. Fourteen of these stocks were still listed at the end of the
+
+sample period, while sixteen were delisted prior to that date. The longest-lived stock listed on
+
+Table 5 is Home Depot, whose shareholders earned 25.85% per year during the forty-two and
+
+one fourth years from the firm’s September 1981 IPO to the end of the sample in December
+
+2023. Notably, none of the stocks listed on Table 5, which enumerates the stocks with the
+
+highest annualized returns among those with more than twenty years of return data, also appear
+
+on the Table 2 list of stocks with the highest cumulative compound returns across all months.
+
+This result again affirms that the highest annualized returns attained by any stock are
+
+systematically lower among those stocks with longer lives.
+
+
+
+
+11
+  Since this study’s sample period ends as of December 2023, these outcomes do not include Nvidia’s well-
+documented appreciation during the first half of 2024.
+                                               References
+
+Albuquerque, R., 2012, Skewness in stock returns: reconciling the evidence on firm versus
+   aggregate returns, Review of Financial Studies 25, 1630–1673.
+Bessembinder, Hendrik, 2018, “Do Stocks Outperform Treasury Bills?” Journal of Financial
+Economics, 129, 440-457. The pre-publication document can be downloaded at
+ssrn.com/abstract=2900447.
+Bessembinder, Hendrik, 2021, “Wealth Creation in the U.S. Public Stock Markets 1926 to
+2019”, Journal of Investing. The pre-publication document can be downloaded
+at ssrn.com/abstract=3537838.
+Bessembinder, Hendrik, 2023, “Shareholder Wealth Enhancement, 1926 to 2022”. Document
+can be downloaded at ssrn.com/abstract=4448099.
+Bessembinder, H., Chen, T.F., Choi, G., Wei, K.C. J., 2024, “How should investors’ long-term
+returns be measured?” available at ssrn.com/abstract=4528681.
+Bessembinder, H., Chen, T.F., Choi, G., Wei, K.C. J., 2023, Long-term shareholder returns:
+   Evidence from 64,000 global stocks, Financial Analysts Journal 79 (3), 33-63. Final pre-
+   publication version available at ssrn.com/abstract=3710251.
+Dichev, I.D., 2007, What are stock investors’ actual historical returns? Evidence from dollar-
+   weighted returns, American Economic Review 97, 386–401.
+Dichev, I.D., Yu, G., 2011, Higher risk, lower returns: What hedge fund investors really earn,
+   Journal of Financial Economics 100, 248-263.
+Fama, E.F., French, K.R., 2018, Long horizon returns, Review of Asset Pricing Studies,
+   forthcoming.
+Farago, A., Hjalmarsson, E., 2023, Compound returns are positively skewed, Review of Finance
+   27 (2), 495-538.
+Heaton, J.B., Polson, N.G., Witte, J.H., 2017, Why indexing works, Applied Stochastic Models
+   in Business and Industry 33, 690–693.
+Noe, T., and G. Parker, 2005. Winner take all: competition, strategy, and the structure of returns
+in the internet economy, Journal of Economics and Management Strategy, 14, 141–161.
+Shumway, T., 1997, The delisting bias in CRSP returns, Journal of Finance 52, 327-340.
+Simkowitz, M.A, Beedles W.L., 1978, Diversification in a three-moment world, Journal of
+   Financial and Quantitative Analysis 13, 927–94
+        Table 1: Summary Statistics for Cumulative and Annualized Buy-and-Hold Returns
+
+                                                Cumulative          Cumulative          Annualized
+                                               Gross Wealth     Compound Return Compound Return
+                            Years of Data        Per Dollar             (%)                  (%)
+
+                        Panel A: All stocks that contain Return Data (N = 29,078)
+Mean                             11.61             229.40            22840.22%                NA
+Median                           6.78               0.92               -8.05%                 NA
+10th Percentile                  1.63               0.02              -98.38%                 NA
+90th Percentile                  28.10              12.36            1136.27%                 NA
+Skewness                         2.40              154.23              154.23                 NA
+
+                  Panel B: All stocks with Return Data for at Least One Year (N = 27,751)
+Mean                             12.14             240.34            23933.62%               -9.07%
+Median                           7.30               0.95               -5.00%                -0.74%
+10th Percentile                  1.97               0.02              -98.14%               -58.24%
+90th Percentile                  28.67              13.37            1237.18%               22.10%
+Skewness                         2.37              150.67              150.67                 0.33
+
+                     Panel C: Stocks with One to Five Years Return Data (N = 10,217)
+Mean                              2.83              0.98               -2.25%               -19.80%
+Median                            2.71              0.53              -46.80%               -20.64%
+10th Percentile                   1.43              0.02              -98.03%               -77.77%
+90th Percentile                   4.48              2.33              133.05%               36.11%
+Skewness                          0.26              6.96                6.96                  1.01
+
+                   Panel D: Stocks with Five to Twenty Years Return Data (N = 12,395)
+Mean                             10.46              2.94              194.33%                -5.98%
+Median                           9.61               0.88              -11.50%                -1.30%
+10th Percentile                  5.66               0.01              -98.61%               -40.08%
+90th Percentile                  16.93              6.86              585.88%               20.10%
+Skewness                         0.58               12.84              12.84                  -0.46
+
+                  Panel E: Stocks with More than Twenty Years Return Data (N = 5,139)
+Mean                             34.69             1288.79          128779.19%               4.82%
+Median                           29.82              9.13              813.44%                7.54%
+10th Percentile                  21.73              0.05              -94.82%               -10.20%
+90th Percentile                  54.04             307.98            30697.74%              15.02%
+Skewness                         1.80               64.86              64.86                  -1.22
+                      Table 2: CRSP Common Stocks with the Highest Cumulative Returns
+
+                                                                   Cumulative
+                                    First       Last                 Gross    Cumulative        Annualized
+                                   Return      Return              Wealth Per Compound          Compound
+  Company Name (Most Recent)        Date        Date       Years     Dollar   Return (%)        Return (%)
+ALTRIA GROUP INC                   31-Dec-25   29-Dec-23   98.00    2,655,290   265528900.62%     16.29%
+VULCAN MATERIALS CO                31-Dec-25   29-Dec-23   98.00     393,492     39349084.13%     14.05%
+KANSAS CITY SOUTHERN               31-Dec-25   13-Dec-21   95.95     361,757     36175578.11%     14.27%
+GENERAL DYNAMICS CORP              28-Jan-26   29-Dec-23   97.92     220,850     22084880.36%     13.39%
+BOEING CO                           5-Sep-34   29-Dec-23   89.32     212,206     21220526.33%     14.72%
+INTERNATIONAL BUSINESS MACHS COR   31-Dec-25   29-Dec-23   98.00     175,437     17543644.18%     13.11%
+EATON CORP PLC                     31-Dec-25   29-Dec-23   98.00     151,173     15117167.57%     12.94%
+S & P GLOBAL INC                   14-Feb-29   29-Dec-23   94.87     128,787     12878643.34%     13.20%
+COCA COLA CO                       31-Dec-25   29-Dec-23   98.00     123,724     12372265.06%     12.71%
+PEPSICO INC                        31-Dec-25   29-Dec-23   98.00      86,360     8635937.80%      12.30%
+ABBOTT LABORATORIES                 1-Mar-37   29-Dec-23   86.83      78,038     7803730.36%      13.85%
+UNIVERSAL CORP                     11-Nov-27   29-Dec-23   96.13      70,318     7031700.72%      12.31%
+DEERE & CO                         29-Jun-33   29-Dec-23   90.50      69,886     6988538.63%      13.12%
+HERSHEY CO                          1-Dec-27   29-Dec-23   96.08      69,099     6909822.15%      12.30%
+WYETH                              29-Apr-26   15-Oct-09   83.47      57,024     5702341.59%      14.02%
+JOHNSON & JOHNSON                  25-Sep-44   29-Dec-23   79.26      54,281     5427968.94%      14.75%
+ARCHER DANIELS MIDLAND CO          31-Dec-25   29-Dec-23   98.00      51,811     5181049.17%      11.71%
+C V S HEALTH CORP                  27-Sep-28   29-Dec-23   95.26      46,939     4693845.60%      11.95%
+U S T INC                          31-Dec-25    5-Jan-09   83.02      43,963     4396203.50%      13.74%
+EXXON MOBIL CORP                   31-Dec-25   29-Dec-23   98.00      40,273     4027183.13%      11.43%
+NORTHROP GRUMMAN CORP              10-Dec-51   29-Dec-23   72.05      39,495     3949426.66%      15.82%
+TRANE TECHNOLOGIES PLC             31-Dec-25   29-Dec-23   98.00      39,238     3923693.49%      11.40%
+F M C CORP                         22-Apr-31   29-Dec-23   92.69      37,001     3699995.48%      12.02%
+CATERPILLAR INC                     2-Dec-29   29-Dec-23   94.08      36,903     3690210.17%      11.83%
+BRISTOL MYERS SQUIBB CO             8-Sep-33   29-Dec-23   90.31      34,867     3486607.85%      12.28%
+TOOTSIE ROLL INDS INC              31-Dec-25   29-Dec-23   98.00      34,401     3440011.10%      11.25%
+PFIZER INC                         17-Jan-44   29-Dec-23   79.95      28,990     2898900.69%      13.71%
+KROGER CO                          26-Jan-28   29-Dec-23   95.93      28,345     2834362.61%      11.28%
+WALGREENS BOOTS ALLIANCE INC       15-Feb-34   29-Dec-23   89.87      27,053     2705196.76%      12.03%
+EMERSON ELECTRIC CO                 5-Sep-44   29-Dec-23   79.32      24,098     2409682.63%      13.57%
+    Table 3: Highest Annualized Returns, CRSP Common Stocks with One to Five Years Return Data
+                                                              Cumulative
+                                  First     Last                 Gross     Cumulative Annualized
+                                Return     Return             Wealth Per Compound        Compound
+Company Name (Most Recent)       Date       Date    Years        Dollar    Return (%)     Return (%)
+         GEMINI ENERGY CORP        16-Jan-90    23-Apr-91    1.27   10.23     923.08%      526.17%
+   AUSPEX PHARMACEUTICALS INC       5-Feb-14     4-May-15    1.24   6.45      544.96%      348.00%
+             SYNTHORX INC           7-Dec-18    22-Jan-20    1.13   5.39      439.25%      345.41%
+          E TEK DYNAMICS INC        2-Dec-98    30-Jun-00    1.58   10.54     954.25%      344.16%
+  HENLEY MANUFACTURING CORP        21-Dec-87    19-Jan-89    1.08   4.74      373.68%      319.79%
+            SOFTWARE COM           24-Jun-99    17-Nov-00    1.40   7.11      610.51%      303.93%
+         ACTIVE SOFTWARE INC       13-Aug-99    15-Aug-00    1.01   3.97      297.13%      291.61%
+      GULFMARK OFFSHORE INC        16-Nov-17    15-Nov-18    1.00   3.90      289.85%      290.21%
+             ANORMED INC            4-Nov-05     7-Nov-06    1.01   3.84      283.52%      278.32%
+    NETWORK SOLUTIONS INC DE       26-Sep-97     8-Jun-00    2.70   36.15    3515.23%      277.23%
+             BIOHAVEN LTD           4-Oct-22    29-Dec-23    1.24   5.16      415.66%      276.40%
+         BROADCAST COM INC          17-Jul-98    20-Jul-99   1.01   3.74      273.79%      268.82%
+  I P C INFORMATION SYSTEMS INC     5-May-98    14-Jun-00    2.11   14.13    1313.13%      250.09%
+     DICKSON ELECTRONICS CORP      14-Dec-72     6-Mar-74    1.23   4.62      362.22%      248.37%
+              APPNET INC           18-Jun-99    13-Sep-00    1.24   4.72      371.67%      248.30%
+          COLLEGE BOUND INC        22-Jan-90    16-Apr-92    2.23   15.50    1450.00%      241.04%
+             RECEPTOS INC           9-May-13    27-Aug-15    2.30   16.57    1557.14%      238.51%
+      DESERT SUN MINING CORP       11-Aug-04     5-Apr-06    1.65   7.33      632.67%      234.11%
+ FIRST AMERICAN FINANCIAL TX INC   23-Feb-82     2-May-83    1.19   4.08      308.33%      226.76%
+  WAVEFRONT TECHNOLOGIES INC        3-Jun-94    15-Jun-95    1.03   3.26      226.00%      213.26%
+       CENTURY GREETINGS INC       29-Mar-76    30-Jun-77    1.26   4.15      315.20%      210.44%
+              KAYEX CORP           11-Jun-79    20-Aug-80    1.20   3.85      284.97%      208.54%
+EDGCOMB STEEL NEW ENGLAND INC      18-May-84    22-Jan-86    1.68   6.55      554.55%      205.20%
+               AVEXIS INC          11-Feb-16    14-May-18    2.26   12.08    1107.76%      201.72%
+   HALL MARK ELECTRONICS CORP      22-May-92      1-Jul-93   1.11   3.21      221.42%      185.88%
+NEW RIVER PHARMACEUTICALS INC       5-Aug-04    19-Apr-07    2.70   17.07    1606.67%      185.44%
+       CHAPARRAL STEEL CO DE        1-Aug-05    14-Sep-07    2.12   9.15      814.98%      183.86%
+            FORTY SEVEN INC        28-Jun-18     6-Apr-20    1.78   6.35      534.55%      182.89%
+              ATLANTIC CO          19-Sep-67    15-Nov-68    1.16   3.31      231.14%      180.52%
+           POLY CO AMER INC        21-Jun-79    31-Mar-81    1.78   6.13      513.33%      177.09%
+   Table 4: Highest Annualized Returns, CRSP Common Stocks with Five to Twenty Years Return Data
+                                                               Cumulative
+                                  First      Last                 Gross    Cumulative Annualized
+                                 Return    Return              Wealth Per Compound        Compound
+Company Name (Most Recent)        Date      Date     Years        Dollar    Return (%)    Return (%)
+   ASCEND COMMUNICATIONS INC       13-May-94    24-Jun-99    5.12   56.04    5504.50%      119.64%
+            MYOKARDIA INC          29-Oct-15    16-Nov-20    5.05   21.37    2036.75%      83.28%
+              FIRST USA INC        28-May-92    27-Jun-97    5.08   20.99    1999.50%      81.99%
+                 S D L INC         16-Mar-95    13-Feb-01    5.92   33.59    3258.93%      81.07%
+                 H F S INC         10-Dec-92    17-Dec-97    5.02   17.95    1694.85%      77.72%
+          U S ROBOTICS CORP        11-Oct-91    12-Jun-97    5.67   25.61    2461.06%      77.12%
+         MAGNA BANCORP INC         12-Mar-91    31-Oct-97    6.64   42.03    4102.98%      75.56%
+ LEADER HEALTHCARE ORGANIZATION    10-Sep-75    25-Aug-81    5.96   26.09    2508.70%      72.84%
+             HOE R & CO INC          2-Jul-62     1-Jul-69   7.00   44.46    4345.91%      71.95%
+  CONTINENTAL CONVEYOR & EQUIP     14-Dec-72     21-Jul-78   5.60   20.66    1965.61%      71.70%
+      METAL MANAGEMENT INC          7-Mar-03    14-Mar-08    5.02   14.90    1390.32%      71.21%
+   ANACOR PHARMACEUTICALS INC      24-Nov-10    23-Jun-16    5.58   19.50    1849.90%      70.25%
+           RADIOFONE CORP          23-May-77     1-Dec-82    5.53   18.09    1708.70%      68.84%
+         C I C FINANCIAL CORP      27-May-76    14-Sep-82    6.30   25.17    2416.84%      66.83%
+ NATIONAL STUDENT MARKETING DEL     2-Jan-76     2-Mar-81    5.17   13.25    1224.80%      64.89%
+   U S L D COMMUNICATIONS CORP       9-Jul-90   22-Dec-97    7.46   37.05    3605.22%      62.31%
+CELLULAR COMMUNICATIONS INTL INC   12-Aug-91    25-Mar-99    7.62   40.00    3900.00%      62.28%
+   HOUSTON OIL & MINERALS CORP     10-Oct-72    23-Apr-81    8.54   60.34    5933.84%      61.65%
+              T V GUIDE INC        19-Nov-93     12-Jul-00   6.65   24.35    2335.24%      61.65%
+   JACKSON NATIONAL LIFE INS CO    27-Feb-78    25-Nov-86    8.74   66.25    6524.78%      61.53%
+           CHARTER OIL LTD           2-Jul-62    6-Dec-68    6.43   21.85    2084.62%      61.50%
+  WESTMARC COMMUNICATIONS INC      22-Jun-84     3-Jan-90    5.54   14.04    1304.44%      61.17%
+               DUVAL CORP            2-Jul-62    9-Sep-68    6.19   17.68    1668.04%      59.01%
+      FEDERATED INVESTORS INC      14-Dec-72     1-Nov-82    9.88   91.54    9054.32%      57.93%
+  A B R INFORMATION SERVICES INC   26-May-94     22-Jul-99   5.16   10.55     955.17%      57.90%
+              MINIMED INC           25-Jul-95   28-Aug-01    6.10   15.67    1467.35%      57.04%
+             ADVANCE P C S          8-Oct-96    24-Mar-04    7.46   28.78    2777.54%      56.88%
+             WELLTECH INC          29-Apr-74     1-Jun-79    5.09   9.90      890.48%      56.88%
+        CHEM NUCLEAR SYS INC       10-Sep-76    28-Oct-82    6.13   15.73    1473.33%      56.73%
+               ROLM CORP           15-Sep-76    21-Nov-84    8.19   39.05    3805.26%      56.47%
+    Table 5: Highest Annualized Returns, CRSP Common Stocks with Over Twenty Years Return Data
+                                                               Cumulative
+                                  First      Last                Gross    Cumulative Annualized
+                                 Return    Return              Wealth Per Compound       Compound
+Company Name (Most Recent)        Date      Date     Years       Dollar   Return (%)     Return (%)
+             NVIDIA CORP         22-Jan-99    29-Dec-23    24.94    1,316.00    131500%    33.38%
+     PLENUM PUBLISHING CORP      14-Dec-72     21-Jul-98   25.60    1,243.52    124252%    32.09%
+              NETFLIX INC        23-May-02    29-Dec-23    21.60     406.94     40594%     32.06%
+          AMAZON COM INC         15-May-97    29-Dec-23    26.63    1,551.73    155073%    31.78%
+        AXON ENTERPRISE INC       7-Jun-01    29-Dec-23    22.56     452.55     45155%     31.13%
+          SPERRY CORP OLD         3-May-33    30-Jun-55    22.16     273.82     27282%     28.82%
+      LIN BROADCASTING CORP      14-Dec-72     3-Oct-95    22.80     299.50     29850%     28.41%
+   COMPUTER DATA SYSTEMS INC      31-Jul-75   16-Dec-97    22.38     257.76     25676%     28.15%
+         PIONEER GROUP INC       16-Apr-79    24-Oct-00    21.53     202.40     20140%     27.98%
+       TIME WARNER INC NEW       19-Mar-92    14-Jun-18    26.24     541.01     54001%     27.11%
+              BIOMET INC         17-Dec-82    25-Sep-07    24.77     353.94     35294%     26.73%
+COGNIZANT TECHNOLOGY SOLS CORP   19-Jun-98    29-Dec-23    25.53     396.11     39511%     26.40%
+   KEURIG GREEN MOUNTAIN INC     21-Sep-93    2-Mar-16     22.45     188.93     18793%     26.30%
+          MANOR CARE INC         14-Dec-72    25-Sep-98    25.78     393.08     39208%     26.08%
+          MICROSOFT CORP         13-Mar-86    29-Dec-23    37.80    6,225.98    622498%    26.00%
+   EXPRESS SCRIPTS HOLDING CO     9-Jun-92    20-Dec-18    26.53     457.25     45625%     25.97%
+           HOME DEPOT INC        22-Sep-81    29-Dec-23    42.27   16,627.40   1662640%    25.85%
+           SUNAMERICA INC          2-Jul-62   31-Dec-98    36.50    4,263.36    426236%    25.73%
+              POOL CORP          13-Oct-95    29-Dec-23    28.21     576.72     57572%     25.27%
+         NEUTROGENA CORP         17-Apr-73    30-Sep-94    21.46     123.62     12262%     25.17%
+  PHILIPPINE LONG DISTANCE TEL    2-Oct-62    18-Oct-94    32.05    1,299.79    129879%    25.07%
+          METROMEDIA INC         22-Jun-62    21-Jun-84    22.00     132.70     13170%     24.88%
+               N V R INC         18-Nov-93    29-Dec-23    30.11     727.32     72632%     24.46%
+          ECKERD JACK CORP       23-Jan-64    30-Apr-86    22.27     129.31     12831%     24.40%
+      INTUITIVE SURGICAL INC     13-Jun-00    29-Dec-23    23.55     168.10     16710%     24.31%
+               AAON INC           3-Jan-91    29-Dec-23    32.99    1,217.25    121625%    24.03%
+             LOGICON INC         14-Dec-72     1-Aug-97    24.63     198.55     19755%     23.96%
+              ADOBE INC          13-Aug-86    29-Dec-23    37.38    3,039.55    303855%    23.93%
+     UNITEDHEALTH GROUP INC      17-Oct-84    29-Dec-23    39.20    4,479.41    447841%    23.92%
+ NATIONAL COMPUTER SYSTEMS INC   14-Dec-72    19-Sep-00    27.77     361.09     36009%     23.63%
+

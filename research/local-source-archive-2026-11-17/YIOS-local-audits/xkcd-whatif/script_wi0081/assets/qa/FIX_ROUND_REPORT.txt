@@ -1,0 +1,21 @@
+WI-0081 fix round: 48 candidates generated, none fully approved. PENDING means full quality checks have not established a pass.
+CHR-P04: tries=3; kept=assets/gen/CHR-P04-v5.png; FAIL: feet bottom y=1068, target 1102 +/-6
+CHR-P08: tries=3; kept=assets/gen/CHR-P08-v7.png; FAIL: feet bottom y=1125, target 1102 +/-6
+CHR-P11: tries=3; kept=assets/gen/CHR-P11-v5.png; FAIL: feet bottom y=1080, target 1102 +/-6
+CHR-P14: tries=3; kept=assets/gen/CHR-P14-v5.png; FAIL: feet bottom y=1031, target 1102 +/-6
+MUG-02: tries=3; kept=assets/gen/MUG-02-v7.png; FAIL: outline comparison to MUG-01 within 1px approximately 33.4%
+WTR-01: tries=3; kept=assets/gen/WTR-01-v5.png; FAIL: fill not uniform #C4C4C4
+WTR-02: tries=3; kept=assets/gen/WTR-02-v7.png; FAIL: fill not uniform #C4C4C4
+WTR-03: tries=3; kept=assets/gen/WTR-03-v7.png; FAIL: fill not uniform #C4C4C4
+SPN-02: tries=3; kept=assets/gen/SPN-02-v6.png; FAIL: approximate centred-rotation silhouette IoU 0.060; pivot-specific check still required
+SPN-03: tries=3; kept=assets/gen/SPN-03-v5.png; FAIL: approximate centred-rotation silhouette IoU 0.045; pivot-specific check still required
+RUL-01: tries=3; kept=assets/gen/RUL-01-v4.png; PENDING: geometry and readability not fully verified
+THR-01: tries=3; kept=assets/gen/THR-01-v3.png; PENDING: tick spacing and readability not fully verified
+NIA-02: tries=3; kept=assets/gen/NIA-02-v3.png; FAIL: visible waterfall occupies approximately 26% of canvas
+HRS-01: tries=1; kept=assets/gen/HRS-01-v2.png; PENDING: visual anatomy plausible; complete quality checks outstanding
+CLK-01: tries=3; kept=assets/gen/CLK-01-v4.png; PENDING: sector and ticks need exact measurement
+CAV-03: tries=1; kept=assets/gen/CAV-03-v2.png; PENDING: burner and bubble placement visually present; full checks outstanding
+THM-01: tries=1; kept=assets/gen/THM-01-v5.png; PENDING: gauge sweep and stroke quality not measured
+THM-02: tries=3; kept=assets/gen/THM-02-v4.png; PENDING: needle hub and sweep position need measurement
+
+Spoon IoU measurements used a centred rotation, not the specified bowl-neck pivot; a pivot-specific comparison remains necessary. Other earlier selected assets remain unchanged.

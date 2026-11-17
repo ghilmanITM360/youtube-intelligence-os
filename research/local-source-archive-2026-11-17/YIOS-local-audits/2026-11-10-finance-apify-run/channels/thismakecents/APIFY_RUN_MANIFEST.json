@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-10T19:49:51Z",
+  "channel": {
+    "name": "This make cents",
+    "handle": "@CronusMakesCents",
+    "id": "UCWrtDO6izx1KXQu_BZBrQYg"
+  },
+  "tranche": "T2",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t2_thismakecents",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.329",
+    "run_id": "Zv84L3Yew9RPuqsAa",
+    "dataset_id": "PUDp4Q2ppqMd1vLoZ",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-10T19:49:13Z",
+    "finished_at_utc": "2026-11-10T19:49:51Z",
+    "charged_events": {
+      "result": 20
+    },
+    "actual_cost_usd": 0.08,
+    "usage_total_usd_reported": 0.08,
+    "max_cost_usd": 0.22,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCWrtDO6izx1KXQu_BZBrQYg"
+      ],
+      "maxResults": 27,
+      "maxResultsShorts": 27,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 20,
+    "raw_file": "raw/t2_thismakecents_Zv84L3Yew9RPuqsAa_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 20,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

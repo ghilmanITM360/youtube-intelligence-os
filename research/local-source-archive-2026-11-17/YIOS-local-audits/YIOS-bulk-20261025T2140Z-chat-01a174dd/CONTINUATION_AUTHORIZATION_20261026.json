@@ -1,0 +1,13 @@
+{
+  "observed_utc": "2026-10-26T02:51:25.295069+00:00",
+  "owner_direction": "Continue all eligible priority backup within approved cap/reserve; resume automatically after natural usage reset if work remains. Supersedes prior stop-after-Batch9 instruction only.",
+  "automation_id": "yios-verified-backup-continuation",
+  "schedule": "30-minute heartbeat in this same chat; natural reset only; never use paid/free reset credits",
+  "initial_all_in_uploaded_and_verified_bytes": 1447559979,
+  "cap_bytes": 12000000000,
+  "drive_reserve_bytes": 2000000000,
+  "bulk_folder_id": "12FkMHzKAtNYleLwX2UBmbMDMlk_6sXEf",
+  "new_helper": "/Users/ghilmankhan/YIOS-local-audits/YIOS-bulk-20261025T2140Z-chat-01a174dd/continue_backup.py",
+  "helper_sha256": "d75da8433b599c1acac9e2b23f9c6f8baa459d0587c4355ee568a3bce2c3677f",
+  "helper_review": "New preservation-only helper; prior transfer.py not reused. Python reads original 64-bit stat metadata directly. Exclusive receipt creation, mandatory previous-batch verification, exact SHA dedup only, fresh source stable hashing, independent remote response hashing, no API credentials, staging, source/Git mutations or upload calls inside helper. Uploads only through supported Drive connector."
+}

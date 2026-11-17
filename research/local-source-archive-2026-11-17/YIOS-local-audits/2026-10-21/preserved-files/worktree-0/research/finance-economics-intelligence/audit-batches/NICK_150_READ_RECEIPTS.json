@@ -1,0 +1,160 @@
+{
+  "batch_id": "NICK_150_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "QtXhRiEJ9zo",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "6f15d49f002e5e7d96f780075ca83e74bc80f131699a89d077c9be6884014ed5",
+      "character_count": 17218,
+      "source_word_count": 3047,
+      "coverage_token_count": 3101,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          17218
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "090_QtXhRiEJ9zo_Once_You_Hit_100K_The_Math_Does_The_Rest.txt",
+      "archive_member_sha256": "974a33986082d6cfab4053163c0f4e6ebcccbd2aec9d2c8daca98ff466e4773d",
+      "archive_member_bytes": 18789,
+      "archive_member_lines": 493,
+      "audio_verified": false,
+      "image_sha256": "0dbd11e392cb8ed654cf41732b259c5ed433e45da54dda2d404ebc3af2078fb4",
+      "image_inspected_sizes": [
+        [
+          480,
+          360
+        ],
+        [
+          320,
+          240
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/QtXhRiEJ9zo/hqdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/QtXhRiEJ9zo/hqdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL; REGISTERED_HQDEFAULT_480x360; NO_HIGHER_RESOLUTION_CLAIM",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/QtXhRiEJ9zo/hqdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "US personal saving rate near publication",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-april-2026",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_RELEASE",
+      "finding": "April 2026 personal saving rate 2.6% (released May 28, 2026, before 2026-06-09 publication); March about 3.6% per excerpt. Narrator 'about 3.5%' matches March, not the latest release."
+    },
+    {
+      "claim": "Vanguard 401(k) average and median balance",
+      "url": "https://www.fool.com/retirement/2025/07/16/overall-average-401k-balance-vanguard-savings",
+      "accessed": "2026-10-20",
+      "access_scope": "SEARCH_EXCERPT_SECONDARY_COVERAGE_OF_VANGUARD_HOW_AMERICA_SAVES_2025; Vanguard report not opened",
+      "finding": "Average about $148,153, median about $38,176 at year-end 2024, Vanguard-administered plans only. Matches narrator."
+    },
+    {
+      "claim": "Share of families with retirement accounts (Fed SCF)",
+      "url": "https://www.nerdwallet.com/article/investing/the-average-retirement-savings-by-age-and-why-you-need-more",
+      "accessed": "2026-10-20",
+      "access_scope": "SEARCH_EXCERPT_SECONDARY_COVERAGE_OF_FED_SCF_2022; Fed SCF tables not opened",
+      "finding": "About 54.4% of families held a retirement account in 2022, consistent with about 46% having none. One-in-four with $100,000+ not confirmed (UNVERIFIED)."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "End-of-month $1,000 deposits with rate/12 monthly compounding; time to each $100K by log formula and whole months; lump sums annual compounding; analyst convention, narrator states only annual rates",
+      "results": {
+        "ladder_7pct_years": [
+          6.58,
+          4.49,
+          3.42,
+          2.76,
+          2.31,
+          1.99,
+          1.75,
+          1.56,
+          1.4,
+          1.28
+        ],
+        "ladder_7pct_whole_months": [
+          80,
+          53,
+          41,
+          33,
+          28,
+          24,
+          21,
+          19,
+          17,
+          15
+        ],
+        "ladder_10pct_years": [
+          6.09,
+          3.76,
+          2.73,
+          2.14,
+          1.77,
+          1.5,
+          1.31,
+          1.16,
+          1.04,
+          0.94
+        ],
+        "ladder_10pct_whole_months": [
+          74,
+          45,
+          32,
+          26,
+          21,
+          18,
+          16,
+          14,
+          12,
+          12
+        ],
+        "marcus_balances_y1_y4": [
+          12393,
+          25681,
+          39930,
+          55209
+        ],
+        "contribution_share_y1": 0.968,
+        "dana_40K_37yr_10pct": 1360158,
+        "crossover_7pct": 171429,
+        "crossover_10pct": 120000,
+        "100K_35yr_7pct": 1067658,
+        "100K_35yr_10pct": 2810244,
+        "100K_40yr_10pct": 4525926,
+        "100K_30yr_10pct": 1744940,
+        "gap_25_vs_35": 2780985,
+        "dollar_35yr_10pct": 28.1,
+        "10K_35yr_10pct": 281024,
+        "years_to_100K_saving_2940": {
+          "0pct": 34.0,
+          "5pct": 20.4,
+          "6pct": 19.1,
+          "7pct": 18.0,
+          "10pct": 15.5
+        },
+        "fee_1pct_ending_share_35yr": 0.72,
+        "fee_1pct_ending_share_40yr": 0.687,
+        "rule72_doubling_10pct": 7.2,
+        "exact_doubling_10pct": 7.27,
+        "letterbox_rows": "0-45 and 314-359 black",
+        "peer_ratio_10": 0.8190327834466037,
+        "peer_ratio_5": 0.9895623411468539
+      }
+    }
+  ]
+}

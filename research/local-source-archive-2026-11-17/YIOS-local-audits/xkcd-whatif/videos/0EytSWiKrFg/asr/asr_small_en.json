@@ -1,0 +1,6510 @@
+{
+ "tool": "faster-whisper 1.2.1",
+ "ctranslate2": "4.8.5",
+ "model": "small.en",
+ "language": "en",
+ "language_prob": 1,
+ "duration_s": 259.81,
+ "runtime_s": 50.5,
+ "label": "PROVISIONAL_ASR_NOT_LISTENING",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 2.04,
+   "text": "This question comes from Vittorio, who asks,",
+   "avg_logprob": -0.141,
+   "no_speech_prob": 0.0
+  },
+  {
+   "start": 2.42,
+   "end": 5.72,
+   "text": "What if a glass of water was, all of a sudden, literally half empty?",
+   "avg_logprob": -0.141,
+   "no_speech_prob": 0.0
+  },
+  {
+   "start": 6.26,
+   "end": 9.26,
+   "text": "The pessimist is probably more right about how it would turn out than the optimist.",
+   "avg_logprob": -0.141,
+   "no_speech_prob": 0.0
+  },
+  {
+   "start": 11.36,
+   "end": 15.74,
+   "text": "When people say glass half empty, they usually mean a glass containing equal parts water and air.",
+   "avg_logprob": -0.141,
+   "no_speech_prob": 0.0
+  },
+  {
+   "start": 16.12,
+   "end": 19.82,
+   "text": "Traditionally, the optimist sees the glass as half full while the pessimist sees it as half empty.",
+   "avg_logprob": -0.141,
+   "no_speech_prob": 0.0
+  },
+  {
+   "start": 20.24,
+   "end": 21.82,
+   "text": "Linguist Gretchen McCulloch points out that,",
+   "avg_logprob": -0.141,
+   "no_speech_prob": 0.0
+  },
+  {
+   "start": 22.08,
+   "end": 24.8,
+   "text": "We choose which reference state to mention as a way to efficiently indicate",
+   "avg_logprob": -0.141,
+   "no_speech_prob": 0.0
+  },
+  {
+   "start": 24.8,
+   "end": 27.16,
+   "text": "whether the glass is currently being filled or emptied.",
+   "avg_logprob": -0.141,
+   "no_speech_prob": 0.0
+  },
+  {
+   "start": 27.66,
+   "end": 28.28,
+   "text": "Language is cool.",
+   "avg_logprob": -0.141,
+   "no_speech_prob": 0.0
+  },
+  {
+   "start": 28.28,
+   "end": 31.66,
+   "text": "But what if the empty half of the glass were actually empty?",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 31.96,
+   "end": 32.38,
+   "text": "A vacuum.",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 32.9,
+   "end": 34.7,
+   "text": "The vacuum would definitely not last long.",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 35.02,
+   "end": 39.18,
+   "text": "But exactly what happens depends on a key question that nobody usually bothers to ask.",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 39.82,
+   "end": 40.72,
+   "text": "Which half is empty?",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 41.32,
+   "end": 44.02,
+   "text": "For our scenario, we'll imagine three different half-empty glasses.",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 44.4,
+   "end": 48.78,
+   "text": "The traditional air water glass, a vacuum on top glass, and a vacuum on bottom glass.",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 49.36,
+   "end": 51.8,
+   "text": "We'll imagine the vacuums appear at time t equals zero.",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 52.26,
+   "end": 54.6,
+   "text": "For the first handful of microseconds, nothing happens.",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 54.96,
+   "end": 57.44,
+   "text": "On this time scale, even the air molecules are nearly stationary.",
+   "avg_logprob": -0.08,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 57.44,
+   "end": 61.36,
+   "text": "For the most part, air molecules jiggle around at speeds of a few hundred meters per second,",
+   "avg_logprob": -0.043,
+   "no_speech_prob": 0.001
+  },
+  {
+   "start": 61.52,
+   "end": 64.28,
+   "text": "but at any given time, some of them happen to be moving faster than others.",
+   "avg_logprob": -0.043,
+   "no_speech_prob": 0.001
+  },
+  {
+   "start": 64.5,
+   "end": 66.9,
+   "text": "The fastest few are moving at over a thousand meters per second.",
+   "avg_logprob": -0.043,
+   "no_speech_prob": 0.001
+  },
+  {
+   "start": 67.18,
+   "end": 69.72,
+   "text": "These are the first few to drift into the vacuum in the glass on the left.",
+   "avg_logprob": -0.043,
+   "no_speech_prob": 0.001
+  },
+  {
+   "start": 70.26,
+   "end": 73.68,
+   "text": "The vacuum on the right is surrounded by barriers, so the air molecules can't easily get in.",
+   "avg_logprob": -0.043,
+   "no_speech_prob": 0.001
+  },
+  {
+   "start": 73.92,
+   "end": 77.34,
+   "text": "The water, being liquid, doesn't expand to fill the vacuum in the same way that air does.",
+   "avg_logprob": -0.043,
+   "no_speech_prob": 0.001
+  },
+  {
+   "start": 77.56,
+   "end": 82.1,
+   "text": "However, in a vacuum, it does start to boil, slowly shedding water vapor into the empty space.",
+   "avg_logprob": -0.043,
+   "no_speech_prob": 0.001
+  },
+  {
+   "start": 82.62,
+   "end": 85.1,
+   "text": "The water on the surface of the left glass also starts to boil,",
+   "avg_logprob": -0.043,
+   "no_speech_prob": 0.001
+  },
+  {
+   "start": 85.1,
+   "end": 87.56,
+   "text": "but the incoming air will stop it before it really gets going.",
+   "avg_logprob": -0.055,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 88.2,
+   "end": 91.66,
+   "text": "After a few hundred microseconds, the air rushing into the glass on the left fills the vacuum",
+   "avg_logprob": -0.055,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 91.66,
+   "end": 95.28,
+   "text": "completely and rams into the surface of the water, sending a pressure wave through the liquid.",
+   "avg_logprob": -0.055,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 95.7,
+   "end": 98.88,
+   "text": "The sides of the glass bulge slightly, but they contain the pressure and don't break.",
+   "avg_logprob": -0.055,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 99.5,
+   "end": 101.78,
+   "text": "The shock wave reverberates through the water and back into the air,",
+   "avg_logprob": -0.055,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 101.9,
+   "end": 103.24,
+   "text": "joining the turbulence already there.",
+   "avg_logprob": -0.055,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 103.7,
+   "end": 106.84,
+   "text": "The shock wave from the vacuum collapse takes around a millisecond to spread out",
+   "avg_logprob": -0.055,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 106.84,
+   "end": 110.28,
+   "text": "through the other two glasses, which both flex slightly as the wave passes through them.",
+   "avg_logprob": -0.055,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 110.48,
+   "end": 113.78,
+   "text": "In a few more milliseconds, the shock wave reaches the human's ears as a loud bang.",
+   "avg_logprob": -0.055,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 114.32,
+   "end": 117.48,
+   "text": "Around this time, the glass on the right starts to visibly lift into the air.",
+   "avg_logprob": -0.065,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 117.68,
+   "end": 120.92,
+   "text": "The air pressure around the glass is trying to squeeze the glass and water together.",
+   "avg_logprob": -0.065,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 121.54,
+   "end": 123.48,
+   "text": "This effect is easy to imagine with a wine glass.",
+   "avg_logprob": -0.065,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 123.9,
+   "end": 127.38,
+   "text": "Air pressure at sea level is around 15 pounds per square inch, so in a typical glass,",
+   "avg_logprob": -0.065,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 127.54,
+   "end": 130.98,
+   "text": "the water's surface and the glass below it are being pushed down with a force of almost",
+   "avg_logprob": -0.065,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 130.98,
+   "end": 132.12,
+   "text": "exactly 100 pounds.",
+   "avg_logprob": -0.065,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 132.7,
+   "end": 135.9,
+   "text": "Normally, this force is opposed by the air pushing up on the bottom of the glass.",
+   "avg_logprob": -0.065,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 136.3,
+   "end": 139.88,
+   "text": "But in the glass on the right, air pressure pushes the glass up from below,",
+   "avg_logprob": -0.065,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 140.36,
+   "end": 144.72,
+   "text": "unopposed, with 100 pounds of force, while simultaneously pushing the water down from above.",
+   "avg_logprob": -0.056,
+   "no_speech_prob": 0.046
+  },
+  {
+   "start": 145.28,
+   "end": 146.98,
+   "text": "This is the force we think of as suction.",
+   "avg_logprob": -0.056,
+   "no_speech_prob": 0.046
+  },
+  {
+   "start": 147.56,
+   "end": 150.98,
+   "text": "The vacuum on the left didn't last long enough for the suction to noticeably lift the glass,",
+   "avg_logprob": -0.056,
+   "no_speech_prob": 0.046
+  },
+  {
+   "start": 151.26,
+   "end": 153.54,
+   "text": "but since air can't get into the vacuum on the right,",
+   "avg_logprob": -0.056,
+   "no_speech_prob": 0.046
+  },
+  {
+   "start": 153.8,
+   "end": 155.94,
+   "text": "the glass and the water begin to slide toward each other.",
+   "avg_logprob": -0.056,
+   "no_speech_prob": 0.046
+  },
+  {
+   "start": 156.4,
+   "end": 159.5,
+   "text": "By now, the boiling water has filled the vacuum with a very small amount of water vapor.",
+   "avg_logprob": -0.056,
+   "no_speech_prob": 0.046
+  },
+  {
+   "start": 159.86,
+   "end": 163.24,
+   "text": "However, the glass and the water are moving too fast for the vapor buildup to matter.",
+   "avg_logprob": -0.056,
+   "no_speech_prob": 0.046
+  },
+  {
+   "start": 163.72,
+   "end": 165.76,
+   "text": "Less than 10 milliseconds after the clock started,",
+   "avg_logprob": -0.056,
+   "no_speech_prob": 0.046
+  },
+  {
+   "start": 165.9,
+   "end": 168.12,
+   "text": "they're flying toward each other at several meters per second.",
+   "avg_logprob": -0.056,
+   "no_speech_prob": 0.046
+  },
+  {
+   "start": 168.12,
+   "end": 171.4,
+   "text": "Without a cushion of air between them, just a few wisps of water vapor,",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 171.68,
+   "end": 173.9,
+   "text": "the water smacks into the bottom of the glass like a hammer.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 174.5,
+   "end": 178.0,
+   "text": "Water is very nearly incompressible, so the impact isn't spread out over time.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 178.36,
+   "end": 179.74,
+   "text": "It comes as a single sharp shock.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 180.14,
+   "end": 182.58,
+   "text": "The momentary force on the glass is immense, and it breaks.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 183.24,
+   "end": 187.18,
+   "text": "This water hammer effect, which is responsible for the clunk you sometimes hear in old plumbing",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 187.18,
+   "end": 190.1,
+   "text": "when you turn off the faucet, can also be seen in the well-known party trick of",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 190.1,
+   "end": 192.46,
+   "text": "smacking the top of a glass bottle to blow out the bottom.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 192.9,
+   "end": 195.0,
+   "text": "In our situation, the forces would be more than enough",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 195.0,
+   "end": 196.72,
+   "text": "to destroy even the heaviest drinking glasses.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.029
+  },
+  {
+   "start": 196.72,
+   "end": 197.68,
+   "text": "Fun fact!",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 197.96,
+   "end": 201.1,
+   "text": "When I was trying to calculate this, I bought a bunch of cheap glasses from the dollar store,",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 201.36,
+   "end": 204.58,
+   "text": "and then tested, you know, applying different amounts of force to the base of them to see how",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 204.58,
+   "end": 205.54,
+   "text": "easy they were to blow out.",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 205.82,
+   "end": 209.1,
+   "text": "And one of the glasses just didn't break no matter what I did, so I kept it.",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 209.22,
+   "end": 209.96,
+   "text": "It sits on my shelf.",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 210.26,
+   "end": 213.2,
+   "text": "It doesn't match any of my other glasses, which kind of annoys me,",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 213.36,
+   "end": 216.02,
+   "text": "and every time I look at it, I think, like, thanks science.",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 216.52,
+   "end": 217.68,
+   "text": "So this is why I stick to theory.",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 218.3,
+   "end": 220.88,
+   "text": "The bottom is carried downward by the water and thunks against the table.",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 221.2,
+   "end": 224.46,
+   "text": "The water splashes around it, spraying droplets in glass shards in all directions.",
+   "avg_logprob": -0.094,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 224.46,
+   "end": 228.12,
+   "text": "Meanwhile, the detached upper portion of the glass continues to rise.",
+   "avg_logprob": -0.079,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 228.7,
+   "end": 231.78,
+   "text": "After half a second, the observers, hearing a pop, have begun to flinch.",
+   "avg_logprob": -0.079,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 232.12,
+   "end": 235.18,
+   "text": "Their heads might lift involuntarily to follow the rising movement of the glass.",
+   "avg_logprob": -0.079,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 235.76,
+   "end": 238.1,
+   "text": "The glass has just enough speed to bang into the ceiling,",
+   "avg_logprob": -0.079,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 238.26,
+   "end": 241.1,
+   "text": "breaking into fragments, which then return to the table.",
+   "avg_logprob": -0.079,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 241.64,
+   "end": 242.08,
+   "text": "The lesson?",
+   "avg_logprob": -0.079,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 242.38,
+   "end": 244.26,
+   "text": "If the optimist says the glass is half full,",
+   "avg_logprob": -0.079,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 244.62,
+   "end": 247.9,
+   "text": "and the pessimist says the glass is half empty, the physicist shucks.",
+   "avg_logprob": -0.079,
+   "no_speech_prob": 0.009
+  }
+ ],
+ "words": [
+  {
+   "w": " This",
+   "start": 0.0,
+   "end": 0.38,
+   "p": 0.733
+  },
+  {
+   "w": " question",
+   "start": 0.38,
+   "end": 0.6,
+   "p": 0.992
+  },
+  {
+   "w": " comes",
+   "start": 0.6,
+   "end": 0.88,
+   "p": 0.984
+  },
+  {
+   "w": " from",
+   "start": 0.88,
+   "end": 1.06,
+   "p": 0.996
+  },
+  {
+   "w": " Vittorio,",
+   "start": 1.06,
+   "end": 1.42,
+   "p": 0.877
+  },
+  {
+   "w": " who",
+   "start": 1.7,
+   "end": 1.72,
+   "p": 0.996
+  },
+  {
+   "w": " asks,",
+   "start": 1.72,
+   "end": 2.04,
+   "p": 0.993
+  },
+  {
+   "w": " What",
+   "start": 2.42,
+   "end": 2.42,
+   "p": 0.054
+  },
+  {
+   "w": " if",
+   "start": 2.42,
+   "end": 2.52,
+   "p": 0.984
+  },
+  {
+   "w": " a",
+   "start": 2.52,
+   "end": 2.6,
+   "p": 0.863
+  },
+  {
+   "w": " glass",
+   "start": 2.6,
+   "end": 2.76,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 2.76,
+   "end": 2.92,
+   "p": 0.996
+  },
+  {
+   "w": " water",
+   "start": 2.92,
+   "end": 3.1,
+   "p": 0.997
+  },
+  {
+   "w": " was,",
+   "start": 3.1,
+   "end": 3.4,
+   "p": 0.994
+  },
+  {
+   "w": " all",
+   "start": 3.62,
+   "end": 3.76,
+   "p": 0.976
+  },
+  {
+   "w": " of",
+   "start": 3.76,
+   "end": 3.92,
+   "p": 0.991
+  },
+  {
+   "w": " a",
+   "start": 3.92,
+   "end": 4.08,
+   "p": 0.955
+  },
+  {
+   "w": " sudden,",
+   "start": 4.08,
+   "end": 4.24,
+   "p": 0.995
+  },
+  {
+   "w": " literally",
+   "start": 4.72,
+   "end": 4.88,
+   "p": 0.925
+  },
+  {
+   "w": " half",
+   "start": 4.88,
+   "end": 5.32,
+   "p": 0.971
+  },
+  {
+   "w": " empty?",
+   "start": 5.32,
+   "end": 5.72,
+   "p": 0.629
+  },
+  {
+   "w": " The",
+   "start": 6.26,
+   "end": 6.42,
+   "p": 0.971
+  },
+  {
+   "w": " pessimist",
+   "start": 6.42,
+   "end": 6.88,
+   "p": 0.987
+  },
+  {
+   "w": " is",
+   "start": 6.88,
+   "end": 7.0,
+   "p": 0.995
+  },
+  {
+   "w": " probably",
+   "start": 7.0,
+   "end": 7.26,
+   "p": 0.985
+  },
+  {
+   "w": " more",
+   "start": 7.26,
+   "end": 7.48,
+   "p": 0.996
+  },
+  {
+   "w": " right",
+   "start": 7.48,
+   "end": 7.68,
+   "p": 0.996
+  },
+  {
+   "w": " about",
+   "start": 7.68,
+   "end": 7.84,
+   "p": 0.991
+  },
+  {
+   "w": " how",
+   "start": 7.84,
+   "end": 8.0,
+   "p": 0.998
+  },
+  {
+   "w": " it",
+   "start": 8.0,
+   "end": 8.08,
+   "p": 0.993
+  },
+  {
+   "w": " would",
+   "start": 8.08,
+   "end": 8.18,
+   "p": 0.991
+  },
+  {
+   "w": " turn",
+   "start": 8.18,
+   "end": 8.3,
+   "p": 0.998
+  },
+  {
+   "w": " out",
+   "start": 8.3,
+   "end": 8.44,
+   "p": 0.998
+  },
+  {
+   "w": " than",
+   "start": 8.44,
+   "end": 8.58,
+   "p": 0.982
+  },
+  {
+   "w": " the",
+   "start": 8.58,
+   "end": 8.68,
+   "p": 0.977
+  },
+  {
+   "w": " optimist.",
+   "start": 8.68,
+   "end": 9.26,
+   "p": 0.98
+  },
+  {
+   "w": " When",
+   "start": 11.36,
+   "end": 11.5,
+   "p": 0.784
+  },
+  {
+   "w": " people",
+   "start": 11.5,
+   "end": 11.7,
+   "p": 0.998
+  },
+  {
+   "w": " say",
+   "start": 11.7,
+   "end": 12.0,
+   "p": 0.998
+  },
+  {
+   "w": " glass",
+   "start": 12.0,
+   "end": 12.34,
+   "p": 0.263
+  },
+  {
+   "w": " half",
+   "start": 12.34,
+   "end": 12.58,
+   "p": 0.915
+  },
+  {
+   "w": " empty,",
+   "start": 12.58,
+   "end": 12.92,
+   "p": 0.922
+  },
+  {
+   "w": " they",
+   "start": 13.06,
+   "end": 13.14,
+   "p": 0.992
+  },
+  {
+   "w": " usually",
+   "start": 13.14,
+   "end": 13.38,
+   "p": 0.997
+  },
+  {
+   "w": " mean",
+   "start": 13.38,
+   "end": 13.54,
+   "p": 0.992
+  },
+  {
+   "w": " a",
+   "start": 13.54,
+   "end": 13.66,
+   "p": 0.992
+  },
+  {
+   "w": " glass",
+   "start": 13.66,
+   "end": 13.86,
+   "p": 0.999
+  },
+  {
+   "w": " containing",
+   "start": 13.86,
+   "end": 14.14,
+   "p": 0.999
+  },
+  {
+   "w": " equal",
+   "start": 14.14,
+   "end": 14.54,
+   "p": 0.996
+  },
+  {
+   "w": " parts",
+   "start": 14.54,
+   "end": 14.86,
+   "p": 0.998
+  },
+  {
+   "w": " water",
+   "start": 14.86,
+   "end": 15.12,
+   "p": 0.934
+  },
+  {
+   "w": " and",
+   "start": 15.12,
+   "end": 15.4,
+   "p": 0.989
+  },
+  {
+   "w": " air.",
+   "start": 15.4,
+   "end": 15.74,
+   "p": 0.999
+  },
+  {
+   "w": " Traditionally,",
+   "start": 16.12,
+   "end": 16.46,
+   "p": 0.992
+  },
+  {
+   "w": " the",
+   "start": 16.58,
+   "end": 16.64,
+   "p": 0.991
+  },
+  {
+   "w": " optimist",
+   "start": 16.64,
+   "end": 17.12,
+   "p": 0.989
+  },
+  {
+   "w": " sees",
+   "start": 17.12,
+   "end": 17.28,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 17.28,
+   "end": 17.4,
+   "p": 0.994
+  },
+  {
+   "w": " glass",
+   "start": 17.4,
+   "end": 17.6,
+   "p": 0.767
+  },
+  {
+   "w": " as",
+   "start": 17.6,
+   "end": 17.74,
+   "p": 0.86
+  },
+  {
+   "w": " half",
+   "start": 17.74,
+   "end": 17.94,
+   "p": 0.994
+  },
+  {
+   "w": " full",
+   "start": 17.94,
+   "end": 18.16,
+   "p": 0.828
+  },
+  {
+   "w": " while",
+   "start": 18.16,
+   "end": 18.34,
+   "p": 0.434
+  },
+  {
+   "w": " the",
+   "start": 18.34,
+   "end": 18.46,
+   "p": 0.996
+  },
+  {
+   "w": " pessimist",
+   "start": 18.46,
+   "end": 18.86,
+   "p": 0.995
+  },
+  {
+   "w": " sees",
+   "start": 18.86,
+   "end": 19.0,
+   "p": 0.993
+  },
+  {
+   "w": " it",
+   "start": 19.0,
+   "end": 19.14,
+   "p": 0.988
+  },
+  {
+   "w": " as",
+   "start": 19.14,
+   "end": 19.24,
+   "p": 0.992
+  },
+  {
+   "w": " half",
+   "start": 19.24,
+   "end": 19.46,
+   "p": 0.995
+  },
+  {
+   "w": " empty.",
+   "start": 19.46,
+   "end": 19.82,
+   "p": 0.98
+  },
+  {
+   "w": " Linguist",
+   "start": 20.24,
+   "end": 20.44,
+   "p": 0.838
+  },
+  {
+   "w": " Gretchen",
+   "start": 20.44,
+   "end": 20.7,
+   "p": 0.939
+  },
+  {
+   "w": " McCulloch",
+   "start": 20.7,
+   "end": 21.04,
+   "p": 0.926
+  },
+  {
+   "w": " points",
+   "start": 21.04,
+   "end": 21.32,
+   "p": 0.991
+  },
+  {
+   "w": " out",
+   "start": 21.32,
+   "end": 21.62,
+   "p": 0.997
+  },
+  {
+   "w": " that,",
+   "start": 21.62,
+   "end": 21.82,
+   "p": 0.984
+  },
+  {
+   "w": " We",
+   "start": 22.08,
+   "end": 22.08,
+   "p": 0.034
+  },
+  {
+   "w": " choose",
+   "start": 22.08,
+   "end": 22.38,
+   "p": 0.962
+  },
+  {
+   "w": " which",
+   "start": 22.38,
+   "end": 22.6,
+   "p": 0.992
+  },
+  {
+   "w": " reference",
+   "start": 22.6,
+   "end": 22.9,
+   "p": 0.991
+  },
+  {
+   "w": " state",
+   "start": 22.9,
+   "end": 23.12,
+   "p": 0.828
+  },
+  {
+   "w": " to",
+   "start": 23.12,
+   "end": 23.22,
+   "p": 0.266
+  },
+  {
+   "w": " mention",
+   "start": 23.22,
+   "end": 23.4,
+   "p": 0.996
+  },
+  {
+   "w": " as",
+   "start": 23.4,
+   "end": 23.6,
+   "p": 0.93
+  },
+  {
+   "w": " a",
+   "start": 23.6,
+   "end": 23.7,
+   "p": 0.985
+  },
+  {
+   "w": " way",
+   "start": 23.7,
+   "end": 23.82,
+   "p": 0.999
+  },
+  {
+   "w": " to",
+   "start": 23.82,
+   "end": 23.96,
+   "p": 0.996
+  },
+  {
+   "w": " efficiently",
+   "start": 23.96,
+   "end": 24.32,
+   "p": 0.659
+  },
+  {
+   "w": " indicate",
+   "start": 24.32,
+   "end": 24.8,
+   "p": 0.998
+  },
+  {
+   "w": " whether",
+   "start": 24.8,
+   "end": 25.0,
+   "p": 0.983
+  },
+  {
+   "w": " the",
+   "start": 25.0,
+   "end": 25.2,
+   "p": 0.994
+  },
+  {
+   "w": " glass",
+   "start": 25.2,
+   "end": 25.4,
+   "p": 0.996
+  },
+  {
+   "w": " is",
+   "start": 25.4,
+   "end": 25.64,
+   "p": 0.997
+  },
+  {
+   "w": " currently",
+   "start": 25.64,
+   "end": 25.9,
+   "p": 0.996
+  },
+  {
+   "w": " being",
+   "start": 25.9,
+   "end": 26.2,
+   "p": 0.997
+  },
+  {
+   "w": " filled",
+   "start": 26.2,
+   "end": 26.5,
+   "p": 0.997
+  },
+  {
+   "w": " or",
+   "start": 26.5,
+   "end": 26.72,
+   "p": 0.982
+  },
+  {
+   "w": " emptied.",
+   "start": 26.72,
+   "end": 27.16,
+   "p": 0.973
+  },
+  {
+   "w": " Language",
+   "start": 27.66,
+   "end": 27.8,
+   "p": 0.991
+  },
+  {
+   "w": " is",
+   "start": 27.8,
+   "end": 28.06,
+   "p": 0.998
+  },
+  {
+   "w": " cool.",
+   "start": 28.06,
+   "end": 28.28,
+   "p": 0.996
+  },
+  {
+   "w": " But",
+   "start": 28.28,
+   "end": 28.92,
+   "p": 0.467
+  },
+  {
+   "w": " what",
+   "start": 28.92,
+   "end": 29.44,
+   "p": 0.42
+  },
+  {
+   "w": " if",
+   "start": 29.44,
+   "end": 29.58,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 29.58,
+   "end": 29.72,
+   "p": 0.985
+  },
+  {
+   "w": " empty",
+   "start": 29.72,
+   "end": 30.06,
+   "p": 0.994
+  },
+  {
+   "w": " half",
+   "start": 30.06,
+   "end": 30.26,
+   "p": 0.995
+  },
+  {
+   "w": " of",
+   "start": 30.26,
+   "end": 30.38,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 30.38,
+   "end": 30.48,
+   "p": 0.991
+  },
+  {
+   "w": " glass",
+   "start": 30.48,
+   "end": 30.66,
+   "p": 0.995
+  },
+  {
+   "w": " were",
+   "start": 30.66,
+   "end": 30.88,
+   "p": 0.951
+  },
+  {
+   "w": " actually",
+   "start": 30.88,
+   "end": 31.28,
+   "p": 0.98
+  },
+  {
+   "w": " empty?",
+   "start": 31.28,
+   "end": 31.66,
+   "p": 0.999
+  },
+  {
+   "w": " A",
+   "start": 31.96,
+   "end": 32.04,
+   "p": 0.951
+  },
+  {
+   "w": " vacuum.",
+   "start": 32.04,
+   "end": 32.38,
+   "p": 0.997
+  },
+  {
+   "w": " The",
+   "start": 32.9,
+   "end": 32.98,
+   "p": 0.973
+  },
+  {
+   "w": " vacuum",
+   "start": 32.98,
+   "end": 33.26,
+   "p": 0.999
+  },
+  {
+   "w": " would",
+   "start": 33.26,
+   "end": 33.42,
+   "p": 0.99
+  },
+  {
+   "w": " definitely",
+   "start": 33.42,
+   "end": 33.68,
+   "p": 0.989
+  },
+  {
+   "w": " not",
+   "start": 33.68,
+   "end": 34.0,
+   "p": 0.999
+  },
+  {
+   "w": " last",
+   "start": 34.0,
+   "end": 34.3,
+   "p": 1.0
+  },
+  {
+   "w": " long.",
+   "start": 34.3,
+   "end": 34.7,
+   "p": 0.995
+  },
+  {
+   "w": " But",
+   "start": 35.02,
+   "end": 35.14,
+   "p": 0.984
+  },
+  {
+   "w": " exactly",
+   "start": 35.14,
+   "end": 35.52,
+   "p": 0.924
+  },
+  {
+   "w": " what",
+   "start": 35.52,
+   "end": 35.82,
+   "p": 0.998
+  },
+  {
+   "w": " happens",
+   "start": 35.82,
+   "end": 36.22,
+   "p": 0.997
+  },
+  {
+   "w": " depends",
+   "start": 36.22,
+   "end": 36.56,
+   "p": 0.987
+  },
+  {
+   "w": " on",
+   "start": 36.56,
+   "end": 36.78,
+   "p": 0.996
+  },
+  {
+   "w": " a",
+   "start": 36.78,
+   "end": 36.9,
+   "p": 0.992
+  },
+  {
+   "w": " key",
+   "start": 36.9,
+   "end": 37.14,
+   "p": 0.99
+  },
+  {
+   "w": " question",
+   "start": 37.14,
+   "end": 37.6,
+   "p": 0.998
+  },
+  {
+   "w": " that",
+   "start": 37.6,
+   "end": 37.82,
+   "p": 0.91
+  },
+  {
+   "w": " nobody",
+   "start": 37.82,
+   "end": 38.02,
+   "p": 0.993
+  },
+  {
+   "w": " usually",
+   "start": 38.02,
+   "end": 38.4,
+   "p": 0.991
+  },
+  {
+   "w": " bothers",
+   "start": 38.4,
+   "end": 38.6,
+   "p": 0.993
+  },
+  {
+   "w": " to",
+   "start": 38.6,
+   "end": 38.86,
+   "p": 0.999
+  },
+  {
+   "w": " ask.",
+   "start": 38.86,
+   "end": 39.18,
+   "p": 0.999
+  },
+  {
+   "w": " Which",
+   "start": 39.82,
+   "end": 39.94,
+   "p": 0.617
+  },
+  {
+   "w": " half",
+   "start": 39.94,
+   "end": 40.18,
+   "p": 0.993
+  },
+  {
+   "w": " is",
+   "start": 40.18,
+   "end": 40.38,
+   "p": 0.998
+  },
+  {
+   "w": " empty?",
+   "start": 40.38,
+   "end": 40.72,
+   "p": 0.999
+  },
+  {
+   "w": " For",
+   "start": 41.32,
+   "end": 41.48,
+   "p": 0.987
+  },
+  {
+   "w": " our",
+   "start": 41.48,
+   "end": 41.62,
+   "p": 0.996
+  },
+  {
+   "w": " scenario,",
+   "start": 41.62,
+   "end": 41.94,
+   "p": 0.999
+  },
+  {
+   "w": " we'll",
+   "start": 42.12,
+   "end": 42.18,
+   "p": 0.978
+  },
+  {
+   "w": " imagine",
+   "start": 42.18,
+   "end": 42.46,
+   "p": 0.996
+  },
+  {
+   "w": " three",
+   "start": 42.46,
+   "end": 42.76,
+   "p": 0.914
+  },
+  {
+   "w": " different",
+   "start": 42.76,
+   "end": 43.08,
+   "p": 0.999
+  },
+  {
+   "w": " half",
+   "start": 43.08,
+   "end": 43.34,
+   "p": 0.984
+  },
+  {
+   "w": "-empty",
+   "start": 43.34,
+   "end": 43.6,
+   "p": 0.917
+  },
+  {
+   "w": " glasses.",
+   "start": 43.6,
+   "end": 44.02,
+   "p": 0.991
+  },
+  {
+   "w": " The",
+   "start": 44.4,
+   "end": 44.46,
+   "p": 0.887
+  },
+  {
+   "w": " traditional",
+   "start": 44.46,
+   "end": 44.8,
+   "p": 0.991
+  },
+  {
+   "w": " air",
+   "start": 44.8,
+   "end": 45.04,
+   "p": 0.957
+  },
+  {
+   "w": " water",
+   "start": 45.04,
+   "end": 45.3,
+   "p": 0.192
+  },
+  {
+   "w": " glass,",
+   "start": 45.3,
+   "end": 45.66,
+   "p": 0.955
+  },
+  {
+   "w": " a",
+   "start": 45.92,
+   "end": 46.02,
+   "p": 0.987
+  },
+  {
+   "w": " vacuum",
+   "start": 46.02,
+   "end": 46.32,
+   "p": 0.998
+  },
+  {
+   "w": " on",
+   "start": 46.32,
+   "end": 46.5,
+   "p": 0.927
+  },
+  {
+   "w": " top",
+   "start": 46.5,
+   "end": 46.68,
+   "p": 0.985
+  },
+  {
+   "w": " glass,",
+   "start": 46.68,
+   "end": 47.04,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 47.18,
+   "end": 47.42,
+   "p": 0.996
+  },
+  {
+   "w": " a",
+   "start": 47.42,
+   "end": 47.54,
+   "p": 0.989
+  },
+  {
+   "w": " vacuum",
+   "start": 47.54,
+   "end": 47.78,
+   "p": 1.0
+  },
+  {
+   "w": " on",
+   "start": 47.78,
+   "end": 48.0,
+   "p": 0.996
+  },
+  {
+   "w": " bottom",
+   "start": 48.0,
+   "end": 48.32,
+   "p": 0.942
+  },
+  {
+   "w": " glass.",
+   "start": 48.32,
+   "end": 48.78,
+   "p": 0.999
+  },
+  {
+   "w": " We'll",
+   "start": 49.36,
+   "end": 49.52,
+   "p": 0.987
+  },
+  {
+   "w": " imagine",
+   "start": 49.52,
+   "end": 49.74,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 49.74,
+   "end": 49.88,
+   "p": 0.906
+  },
+  {
+   "w": " vacuums",
+   "start": 49.88,
+   "end": 50.2,
+   "p": 0.963
+  },
+  {
+   "w": " appear",
+   "start": 50.2,
+   "end": 50.4,
+   "p": 0.995
+  },
+  {
+   "w": " at",
+   "start": 50.4,
+   "end": 50.58,
+   "p": 0.993
+  },
+  {
+   "w": " time",
+   "start": 50.58,
+   "end": 50.84,
+   "p": 0.989
+  },
+  {
+   "w": " t",
+   "start": 50.84,
+   "end": 51.14,
+   "p": 0.754
+  },
+  {
+   "w": " equals",
+   "start": 51.14,
+   "end": 51.44,
+   "p": 0.327
+  },
+  {
+   "w": " zero.",
+   "start": 51.44,
+   "end": 51.8,
+   "p": 0.739
+  },
+  {
+   "w": " For",
+   "start": 52.26,
+   "end": 52.38,
+   "p": 0.985
+  },
+  {
+   "w": " the",
+   "start": 52.38,
+   "end": 52.48,
+   "p": 0.999
+  },
+  {
+   "w": " first",
+   "start": 52.48,
+   "end": 52.64,
+   "p": 0.999
+  },
+  {
+   "w": " handful",
+   "start": 52.64,
+   "end": 52.96,
+   "p": 0.995
+  },
+  {
+   "w": " of",
+   "start": 52.96,
+   "end": 53.16,
+   "p": 0.995
+  },
+  {
+   "w": " microseconds,",
+   "start": 53.16,
+   "end": 53.62,
+   "p": 0.992
+  },
+  {
+   "w": " nothing",
+   "start": 54.08,
+   "end": 54.2,
+   "p": 0.999
+  },
+  {
+   "w": " happens.",
+   "start": 54.2,
+   "end": 54.6,
+   "p": 0.999
+  },
+  {
+   "w": " On",
+   "start": 54.96,
+   "end": 55.08,
+   "p": 0.996
+  },
+  {
+   "w": " this",
+   "start": 55.08,
+   "end": 55.24,
+   "p": 0.999
+  },
+  {
+   "w": " time",
+   "start": 55.24,
+   "end": 55.4,
+   "p": 0.737
+  },
+  {
+   "w": " scale,",
+   "start": 55.4,
+   "end": 55.72,
+   "p": 0.985
+  },
+  {
+   "w": " even",
+   "start": 55.82,
+   "end": 55.94,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 55.94,
+   "end": 56.1,
+   "p": 0.999
+  },
+  {
+   "w": " air",
+   "start": 56.1,
+   "end": 56.26,
+   "p": 0.994
+  },
+  {
+   "w": " molecules",
+   "start": 56.26,
+   "end": 56.58,
+   "p": 1.0
+  },
+  {
+   "w": " are",
+   "start": 56.58,
+   "end": 56.76,
+   "p": 0.998
+  },
+  {
+   "w": " nearly",
+   "start": 56.76,
+   "end": 56.98,
+   "p": 0.987
+  },
+  {
+   "w": " stationary.",
+   "start": 56.98,
+   "end": 57.44,
+   "p": 0.996
+  },
+  {
+   "w": " For",
+   "start": 57.44,
+   "end": 58.04,
+   "p": 0.791
+  },
+  {
+   "w": " the",
+   "start": 58.04,
+   "end": 58.14,
+   "p": 0.994
+  },
+  {
+   "w": " most",
+   "start": 58.14,
+   "end": 58.28,
+   "p": 0.997
+  },
+  {
+   "w": " part,",
+   "start": 58.28,
+   "end": 58.52,
+   "p": 0.999
+  },
+  {
+   "w": " air",
+   "start": 58.66,
+   "end": 58.7,
+   "p": 0.983
+  },
+  {
+   "w": " molecules",
+   "start": 58.7,
+   "end": 59.06,
+   "p": 1.0
+  },
+  {
+   "w": " jiggle",
+   "start": 59.06,
+   "end": 59.32,
+   "p": 0.892
+  },
+  {
+   "w": " around",
+   "start": 59.32,
+   "end": 59.64,
+   "p": 0.993
+  },
+  {
+   "w": " at",
+   "start": 59.64,
+   "end": 59.84,
+   "p": 0.973
+  },
+  {
+   "w": " speeds",
+   "start": 59.84,
+   "end": 60.04,
+   "p": 0.987
+  },
+  {
+   "w": " of",
+   "start": 60.04,
+   "end": 60.22,
+   "p": 0.988
+  },
+  {
+   "w": " a",
+   "start": 60.22,
+   "end": 60.32,
+   "p": 0.97
+  },
+  {
+   "w": " few",
+   "start": 60.32,
+   "end": 60.4,
+   "p": 0.995
+  },
+  {
+   "w": " hundred",
+   "start": 60.4,
+   "end": 60.6,
+   "p": 0.98
+  },
+  {
+   "w": " meters",
+   "start": 60.6,
+   "end": 60.76,
+   "p": 0.793
+  },
+  {
+   "w": " per",
+   "start": 60.76,
+   "end": 61.06,
+   "p": 0.996
+  },
+  {
+   "w": " second,",
+   "start": 61.06,
+   "end": 61.36,
+   "p": 0.997
+  },
+  {
+   "w": " but",
+   "start": 61.52,
+   "end": 61.76,
+   "p": 0.979
+  },
+  {
+   "w": " at",
+   "start": 61.76,
+   "end": 61.9,
+   "p": 0.791
+  },
+  {
+   "w": " any",
+   "start": 61.9,
+   "end": 62.04,
+   "p": 0.997
+  },
+  {
+   "w": " given",
+   "start": 62.04,
+   "end": 62.26,
+   "p": 0.998
+  },
+  {
+   "w": " time,",
+   "start": 62.26,
+   "end": 62.54,
+   "p": 0.998
+  },
+  {
+   "w": " some",
+   "start": 62.68,
+   "end": 62.78,
+   "p": 0.996
+  },
+  {
+   "w": " of",
+   "start": 62.78,
+   "end": 62.86,
+   "p": 0.988
+  },
+  {
+   "w": " them",
+   "start": 62.86,
+   "end": 62.96,
+   "p": 0.997
+  },
+  {
+   "w": " happen",
+   "start": 62.96,
+   "end": 63.14,
+   "p": 0.941
+  },
+  {
+   "w": " to",
+   "start": 63.14,
+   "end": 63.24,
+   "p": 0.995
+  },
+  {
+   "w": " be",
+   "start": 63.24,
+   "end": 63.32,
+   "p": 0.976
+  },
+  {
+   "w": " moving",
+   "start": 63.32,
+   "end": 63.48,
+   "p": 0.99
+  },
+  {
+   "w": " faster",
+   "start": 63.48,
+   "end": 63.78,
+   "p": 0.994
+  },
+  {
+   "w": " than",
+   "start": 63.78,
+   "end": 64.04,
+   "p": 0.996
+  },
+  {
+   "w": " others.",
+   "start": 64.04,
+   "end": 64.28,
+   "p": 0.991
+  },
+  {
+   "w": " The",
+   "start": 64.5,
+   "end": 64.66,
+   "p": 0.984
+  },
+  {
+   "w": " fastest",
+   "start": 64.66,
+   "end": 64.94,
+   "p": 0.999
+  },
+  {
+   "w": " few",
+   "start": 64.94,
+   "end": 65.16,
+   "p": 0.963
+  },
+  {
+   "w": " are",
+   "start": 65.16,
+   "end": 65.28,
+   "p": 0.99
+  },
+  {
+   "w": " moving",
+   "start": 65.28,
+   "end": 65.46,
+   "p": 0.99
+  },
+  {
+   "w": " at",
+   "start": 65.46,
+   "end": 65.58,
+   "p": 0.893
+  },
+  {
+   "w": " over",
+   "start": 65.58,
+   "end": 65.74,
+   "p": 0.986
+  },
+  {
+   "w": " a",
+   "start": 65.74,
+   "end": 65.88,
+   "p": 0.717
+  },
+  {
+   "w": " thousand",
+   "start": 65.88,
+   "end": 66.12,
+   "p": 0.986
+  },
+  {
+   "w": " meters",
+   "start": 66.12,
+   "end": 66.36,
+   "p": 0.994
+  },
+  {
+   "w": " per",
+   "start": 66.36,
+   "end": 66.62,
+   "p": 0.998
+  },
+  {
+   "w": " second.",
+   "start": 66.62,
+   "end": 66.9,
+   "p": 0.999
+  },
+  {
+   "w": " These",
+   "start": 67.18,
+   "end": 67.32,
+   "p": 0.991
+  },
+  {
+   "w": " are",
+   "start": 67.32,
+   "end": 67.42,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 67.42,
+   "end": 67.54,
+   "p": 0.995
+  },
+  {
+   "w": " first",
+   "start": 67.54,
+   "end": 67.68,
+   "p": 0.998
+  },
+  {
+   "w": " few",
+   "start": 67.68,
+   "end": 67.88,
+   "p": 0.995
+  },
+  {
+   "w": " to",
+   "start": 67.88,
+   "end": 68.0,
+   "p": 0.992
+  },
+  {
+   "w": " drift",
+   "start": 68.0,
+   "end": 68.18,
+   "p": 0.999
+  },
+  {
+   "w": " into",
+   "start": 68.18,
+   "end": 68.4,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 68.4,
+   "end": 68.52,
+   "p": 0.992
+  },
+  {
+   "w": " vacuum",
+   "start": 68.52,
+   "end": 68.78,
+   "p": 0.997
+  },
+  {
+   "w": " in",
+   "start": 68.78,
+   "end": 68.92,
+   "p": 0.908
+  },
+  {
+   "w": " the",
+   "start": 68.92,
+   "end": 69.04,
+   "p": 0.996
+  },
+  {
+   "w": " glass",
+   "start": 69.04,
+   "end": 69.2,
+   "p": 0.999
+  },
+  {
+   "w": " on",
+   "start": 69.2,
+   "end": 69.38,
+   "p": 0.988
+  },
+  {
+   "w": " the",
+   "start": 69.38,
+   "end": 69.5,
+   "p": 0.999
+  },
+  {
+   "w": " left.",
+   "start": 69.5,
+   "end": 69.72,
+   "p": 0.997
+  },
+  {
+   "w": " The",
+   "start": 70.26,
+   "end": 70.44,
+   "p": 0.997
+  },
+  {
+   "w": " vacuum",
+   "start": 70.44,
+   "end": 70.72,
+   "p": 0.999
+  },
+  {
+   "w": " on",
+   "start": 70.72,
+   "end": 70.86,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 70.86,
+   "end": 70.96,
+   "p": 0.999
+  },
+  {
+   "w": " right",
+   "start": 70.96,
+   "end": 71.12,
+   "p": 0.998
+  },
+  {
+   "w": " is",
+   "start": 71.12,
+   "end": 71.26,
+   "p": 0.997
+  },
+  {
+   "w": " surrounded",
+   "start": 71.26,
+   "end": 71.5,
+   "p": 0.999
+  },
+  {
+   "w": " by",
+   "start": 71.5,
+   "end": 71.7,
+   "p": 0.999
+  },
+  {
+   "w": " barriers,",
+   "start": 71.7,
+   "end": 72.02,
+   "p": 0.915
+  },
+  {
+   "w": " so",
+   "start": 72.04,
+   "end": 72.24,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 72.24,
+   "end": 72.34,
+   "p": 0.988
+  },
+  {
+   "w": " air",
+   "start": 72.34,
+   "end": 72.46,
+   "p": 0.998
+  },
+  {
+   "w": " molecules",
+   "start": 72.46,
+   "end": 72.8,
+   "p": 0.998
+  },
+  {
+   "w": " can't",
+   "start": 72.8,
+   "end": 73.14,
+   "p": 0.64
+  },
+  {
+   "w": " easily",
+   "start": 73.14,
+   "end": 73.24,
+   "p": 0.999
+  },
+  {
+   "w": " get",
+   "start": 73.24,
+   "end": 73.48,
+   "p": 0.999
+  },
+  {
+   "w": " in.",
+   "start": 73.48,
+   "end": 73.68,
+   "p": 0.998
+  },
+  {
+   "w": " The",
+   "start": 73.92,
+   "end": 74.04,
+   "p": 0.994
+  },
+  {
+   "w": " water,",
+   "start": 74.04,
+   "end": 74.24,
+   "p": 0.999
+  },
+  {
+   "w": " being",
+   "start": 74.3,
+   "end": 74.46,
+   "p": 0.999
+  },
+  {
+   "w": " liquid,",
+   "start": 74.46,
+   "end": 74.78,
+   "p": 0.895
+  },
+  {
+   "w": " doesn't",
+   "start": 75.0,
+   "end": 75.2,
+   "p": 0.997
+  },
+  {
+   "w": " expand",
+   "start": 75.2,
+   "end": 75.5,
+   "p": 0.994
+  },
+  {
+   "w": " to",
+   "start": 75.5,
+   "end": 75.68,
+   "p": 0.996
+  },
+  {
+   "w": " fill",
+   "start": 75.68,
+   "end": 75.8,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 75.8,
+   "end": 75.94,
+   "p": 0.995
+  },
+  {
+   "w": " vacuum",
+   "start": 75.94,
+   "end": 76.2,
+   "p": 0.997
+  },
+  {
+   "w": " in",
+   "start": 76.2,
+   "end": 76.36,
+   "p": 0.974
+  },
+  {
+   "w": " the",
+   "start": 76.36,
+   "end": 76.46,
+   "p": 0.998
+  },
+  {
+   "w": " same",
+   "start": 76.46,
+   "end": 76.6,
+   "p": 0.996
+  },
+  {
+   "w": " way",
+   "start": 76.6,
+   "end": 76.74,
+   "p": 0.999
+  },
+  {
+   "w": " that",
+   "start": 76.74,
+   "end": 76.86,
+   "p": 0.955
+  },
+  {
+   "w": " air",
+   "start": 76.86,
+   "end": 77.02,
+   "p": 0.987
+  },
+  {
+   "w": " does.",
+   "start": 77.02,
+   "end": 77.34,
+   "p": 0.997
+  },
+  {
+   "w": " However,",
+   "start": 77.56,
+   "end": 77.78,
+   "p": 0.999
+  },
+  {
+   "w": " in",
+   "start": 78.02,
+   "end": 78.12,
+   "p": 0.998
+  },
+  {
+   "w": " a",
+   "start": 78.12,
+   "end": 78.22,
+   "p": 0.995
+  },
+  {
+   "w": " vacuum,",
+   "start": 78.22,
+   "end": 78.54,
+   "p": 0.999
+  },
+  {
+   "w": " it",
+   "start": 78.76,
+   "end": 78.78,
+   "p": 0.997
+  },
+  {
+   "w": " does",
+   "start": 78.78,
+   "end": 79.04,
+   "p": 0.974
+  },
+  {
+   "w": " start",
+   "start": 79.04,
+   "end": 79.38,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 79.38,
+   "end": 79.56,
+   "p": 0.999
+  },
+  {
+   "w": " boil,",
+   "start": 79.56,
+   "end": 79.78,
+   "p": 0.999
+  },
+  {
+   "w": " slowly",
+   "start": 80.1,
+   "end": 80.3,
+   "p": 0.993
+  },
+  {
+   "w": " shedding",
+   "start": 80.3,
+   "end": 80.62,
+   "p": 0.996
+  },
+  {
+   "w": " water",
+   "start": 80.62,
+   "end": 80.92,
+   "p": 0.997
+  },
+  {
+   "w": " vapor",
+   "start": 80.92,
+   "end": 81.18,
+   "p": 0.973
+  },
+  {
+   "w": " into",
+   "start": 81.18,
+   "end": 81.4,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 81.4,
+   "end": 81.52,
+   "p": 0.995
+  },
+  {
+   "w": " empty",
+   "start": 81.52,
+   "end": 81.7,
+   "p": 1.0
+  },
+  {
+   "w": " space.",
+   "start": 81.7,
+   "end": 82.1,
+   "p": 0.998
+  },
+  {
+   "w": " The",
+   "start": 82.62,
+   "end": 82.76,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 82.76,
+   "end": 82.9,
+   "p": 1.0
+  },
+  {
+   "w": " on",
+   "start": 82.9,
+   "end": 83.06,
+   "p": 0.965
+  },
+  {
+   "w": " the",
+   "start": 83.06,
+   "end": 83.16,
+   "p": 0.999
+  },
+  {
+   "w": " surface",
+   "start": 83.16,
+   "end": 83.32,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 83.32,
+   "end": 83.5,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 83.5,
+   "end": 83.6,
+   "p": 0.992
+  },
+  {
+   "w": " left",
+   "start": 83.6,
+   "end": 83.8,
+   "p": 0.998
+  },
+  {
+   "w": " glass",
+   "start": 83.8,
+   "end": 84.1,
+   "p": 0.999
+  },
+  {
+   "w": " also",
+   "start": 84.1,
+   "end": 84.42,
+   "p": 0.99
+  },
+  {
+   "w": " starts",
+   "start": 84.42,
+   "end": 84.68,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 84.68,
+   "end": 84.88,
+   "p": 0.999
+  },
+  {
+   "w": " boil,",
+   "start": 84.88,
+   "end": 85.1,
+   "p": 0.999
+  },
+  {
+   "w": " but",
+   "start": 85.1,
+   "end": 85.36,
+   "p": 0.377
+  },
+  {
+   "w": " the",
+   "start": 85.36,
+   "end": 85.5,
+   "p": 0.99
+  },
+  {
+   "w": " incoming",
+   "start": 85.5,
+   "end": 85.76,
+   "p": 0.994
+  },
+  {
+   "w": " air",
+   "start": 85.76,
+   "end": 85.94,
+   "p": 0.988
+  },
+  {
+   "w": " will",
+   "start": 85.94,
+   "end": 86.08,
+   "p": 0.991
+  },
+  {
+   "w": " stop",
+   "start": 86.08,
+   "end": 86.32,
+   "p": 0.997
+  },
+  {
+   "w": " it",
+   "start": 86.32,
+   "end": 86.48,
+   "p": 0.985
+  },
+  {
+   "w": " before",
+   "start": 86.48,
+   "end": 86.68,
+   "p": 0.992
+  },
+  {
+   "w": " it",
+   "start": 86.68,
+   "end": 86.8,
+   "p": 0.996
+  },
+  {
+   "w": " really",
+   "start": 86.8,
+   "end": 86.98,
+   "p": 0.969
+  },
+  {
+   "w": " gets",
+   "start": 86.98,
+   "end": 87.2,
+   "p": 0.994
+  },
+  {
+   "w": " going.",
+   "start": 87.2,
+   "end": 87.56,
+   "p": 0.996
+  },
+  {
+   "w": " After",
+   "start": 88.2,
+   "end": 88.34,
+   "p": 0.972
+  },
+  {
+   "w": " a",
+   "start": 88.34,
+   "end": 88.5,
+   "p": 0.993
+  },
+  {
+   "w": " few",
+   "start": 88.5,
+   "end": 88.6,
+   "p": 0.997
+  },
+  {
+   "w": " hundred",
+   "start": 88.6,
+   "end": 88.8,
+   "p": 0.984
+  },
+  {
+   "w": " microseconds,",
+   "start": 88.8,
+   "end": 89.32,
+   "p": 0.989
+  },
+  {
+   "w": " the",
+   "start": 89.52,
+   "end": 89.56,
+   "p": 0.996
+  },
+  {
+   "w": " air",
+   "start": 89.56,
+   "end": 89.68,
+   "p": 0.999
+  },
+  {
+   "w": " rushing",
+   "start": 89.68,
+   "end": 90.02,
+   "p": 0.998
+  },
+  {
+   "w": " into",
+   "start": 90.02,
+   "end": 90.2,
+   "p": 0.985
+  },
+  {
+   "w": " the",
+   "start": 90.2,
+   "end": 90.32,
+   "p": 0.995
+  },
+  {
+   "w": " glass",
+   "start": 90.32,
+   "end": 90.54,
+   "p": 0.996
+  },
+  {
+   "w": " on",
+   "start": 90.54,
+   "end": 90.7,
+   "p": 0.969
+  },
+  {
+   "w": " the",
+   "start": 90.7,
+   "end": 90.8,
+   "p": 0.987
+  },
+  {
+   "w": " left",
+   "start": 90.8,
+   "end": 90.96,
+   "p": 0.998
+  },
+  {
+   "w": " fills",
+   "start": 90.96,
+   "end": 91.22,
+   "p": 0.955
+  },
+  {
+   "w": " the",
+   "start": 91.22,
+   "end": 91.4,
+   "p": 0.998
+  },
+  {
+   "w": " vacuum",
+   "start": 91.4,
+   "end": 91.66,
+   "p": 0.998
+  },
+  {
+   "w": " completely",
+   "start": 91.66,
+   "end": 92.1,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 92.1,
+   "end": 92.42,
+   "p": 0.917
+  },
+  {
+   "w": " rams",
+   "start": 92.42,
+   "end": 92.7,
+   "p": 0.991
+  },
+  {
+   "w": " into",
+   "start": 92.7,
+   "end": 92.92,
+   "p": 0.928
+  },
+  {
+   "w": " the",
+   "start": 92.92,
+   "end": 93.06,
+   "p": 0.995
+  },
+  {
+   "w": " surface",
+   "start": 93.06,
+   "end": 93.26,
+   "p": 0.996
+  },
+  {
+   "w": " of",
+   "start": 93.26,
+   "end": 93.44,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 93.44,
+   "end": 93.54,
+   "p": 0.992
+  },
+  {
+   "w": " water,",
+   "start": 93.54,
+   "end": 93.78,
+   "p": 0.999
+  },
+  {
+   "w": " sending",
+   "start": 93.88,
+   "end": 94.06,
+   "p": 0.999
+  },
+  {
+   "w": " a",
+   "start": 94.06,
+   "end": 94.24,
+   "p": 0.997
+  },
+  {
+   "w": " pressure",
+   "start": 94.24,
+   "end": 94.48,
+   "p": 0.999
+  },
+  {
+   "w": " wave",
+   "start": 94.48,
+   "end": 94.68,
+   "p": 0.996
+  },
+  {
+   "w": " through",
+   "start": 94.68,
+   "end": 94.86,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 94.86,
+   "end": 95.0,
+   "p": 0.993
+  },
+  {
+   "w": " liquid.",
+   "start": 95.0,
+   "end": 95.28,
+   "p": 0.998
+  },
+  {
+   "w": " The",
+   "start": 95.7,
+   "end": 95.88,
+   "p": 0.992
+  },
+  {
+   "w": " sides",
+   "start": 95.88,
+   "end": 96.1,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 96.1,
+   "end": 96.22,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 96.22,
+   "end": 96.28,
+   "p": 0.997
+  },
+  {
+   "w": " glass",
+   "start": 96.28,
+   "end": 96.52,
+   "p": 0.999
+  },
+  {
+   "w": " bulge",
+   "start": 96.52,
+   "end": 96.86,
+   "p": 0.998
+  },
+  {
+   "w": " slightly,",
+   "start": 96.86,
+   "end": 97.2,
+   "p": 0.997
+  },
+  {
+   "w": " but",
+   "start": 97.3,
+   "end": 97.48,
+   "p": 0.998
+  },
+  {
+   "w": " they",
+   "start": 97.48,
+   "end": 97.68,
+   "p": 0.975
+  },
+  {
+   "w": " contain",
+   "start": 97.68,
+   "end": 97.92,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 97.92,
+   "end": 98.06,
+   "p": 0.988
+  },
+  {
+   "w": " pressure",
+   "start": 98.06,
+   "end": 98.3,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 98.3,
+   "end": 98.44,
+   "p": 0.967
+  },
+  {
+   "w": " don't",
+   "start": 98.44,
+   "end": 98.64,
+   "p": 0.993
+  },
+  {
+   "w": " break.",
+   "start": 98.64,
+   "end": 98.88,
+   "p": 0.995
+  },
+  {
+   "w": " The",
+   "start": 99.5,
+   "end": 99.5,
+   "p": 0.519
+  },
+  {
+   "w": " shock",
+   "start": 99.5,
+   "end": 99.62,
+   "p": 0.994
+  },
+  {
+   "w": " wave",
+   "start": 99.62,
+   "end": 99.84,
+   "p": 0.494
+  },
+  {
+   "w": " reverberates",
+   "start": 99.84,
+   "end": 100.44,
+   "p": 0.998
+  },
+  {
+   "w": " through",
+   "start": 100.44,
+   "end": 100.62,
+   "p": 0.994
+  },
+  {
+   "w": " the",
+   "start": 100.62,
+   "end": 100.74,
+   "p": 0.992
+  },
+  {
+   "w": " water",
+   "start": 100.74,
+   "end": 100.9,
+   "p": 0.998
+  },
+  {
+   "w": " and",
+   "start": 100.9,
+   "end": 101.1,
+   "p": 0.974
+  },
+  {
+   "w": " back",
+   "start": 101.1,
+   "end": 101.32,
+   "p": 0.999
+  },
+  {
+   "w": " into",
+   "start": 101.32,
+   "end": 101.52,
+   "p": 0.992
+  },
+  {
+   "w": " the",
+   "start": 101.52,
+   "end": 101.66,
+   "p": 0.996
+  },
+  {
+   "w": " air,",
+   "start": 101.66,
+   "end": 101.78,
+   "p": 0.999
+  },
+  {
+   "w": " joining",
+   "start": 101.9,
+   "end": 102.08,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 102.08,
+   "end": 102.24,
+   "p": 0.991
+  },
+  {
+   "w": " turbulence",
+   "start": 102.24,
+   "end": 102.58,
+   "p": 0.996
+  },
+  {
+   "w": " already",
+   "start": 102.58,
+   "end": 102.9,
+   "p": 0.99
+  },
+  {
+   "w": " there.",
+   "start": 102.9,
+   "end": 103.24,
+   "p": 0.996
+  },
+  {
+   "w": " The",
+   "start": 103.7,
+   "end": 103.88,
+   "p": 0.995
+  },
+  {
+   "w": " shock",
+   "start": 103.88,
+   "end": 104.08,
+   "p": 0.999
+  },
+  {
+   "w": " wave",
+   "start": 104.08,
+   "end": 104.26,
+   "p": 0.929
+  },
+  {
+   "w": " from",
+   "start": 104.26,
+   "end": 104.42,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 104.42,
+   "end": 104.54,
+   "p": 0.998
+  },
+  {
+   "w": " vacuum",
+   "start": 104.54,
+   "end": 104.82,
+   "p": 0.998
+  },
+  {
+   "w": " collapse",
+   "start": 104.82,
+   "end": 105.14,
+   "p": 0.941
+  },
+  {
+   "w": " takes",
+   "start": 105.14,
+   "end": 105.34,
+   "p": 0.994
+  },
+  {
+   "w": " around",
+   "start": 105.34,
+   "end": 105.6,
+   "p": 0.984
+  },
+  {
+   "w": " a",
+   "start": 105.6,
+   "end": 105.76,
+   "p": 0.968
+  },
+  {
+   "w": " millisecond",
+   "start": 105.76,
+   "end": 106.26,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 106.26,
+   "end": 106.44,
+   "p": 0.984
+  },
+  {
+   "w": " spread",
+   "start": 106.44,
+   "end": 106.66,
+   "p": 0.999
+  },
+  {
+   "w": " out",
+   "start": 106.66,
+   "end": 106.84,
+   "p": 0.989
+  },
+  {
+   "w": " through",
+   "start": 106.84,
+   "end": 107.02,
+   "p": 0.99
+  },
+  {
+   "w": " the",
+   "start": 107.02,
+   "end": 107.2,
+   "p": 0.99
+  },
+  {
+   "w": " other",
+   "start": 107.2,
+   "end": 107.38,
+   "p": 0.992
+  },
+  {
+   "w": " two",
+   "start": 107.38,
+   "end": 107.56,
+   "p": 0.989
+  },
+  {
+   "w": " glasses,",
+   "start": 107.56,
+   "end": 107.96,
+   "p": 0.988
+  },
+  {
+   "w": " which",
+   "start": 108.08,
+   "end": 108.34,
+   "p": 0.999
+  },
+  {
+   "w": " both",
+   "start": 108.34,
+   "end": 108.56,
+   "p": 0.997
+  },
+  {
+   "w": " flex",
+   "start": 108.56,
+   "end": 108.8,
+   "p": 0.962
+  },
+  {
+   "w": " slightly",
+   "start": 108.8,
+   "end": 109.16,
+   "p": 0.988
+  },
+  {
+   "w": " as",
+   "start": 109.16,
+   "end": 109.3,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 109.3,
+   "end": 109.4,
+   "p": 0.998
+  },
+  {
+   "w": " wave",
+   "start": 109.4,
+   "end": 109.56,
+   "p": 0.988
+  },
+  {
+   "w": " passes",
+   "start": 109.56,
+   "end": 109.82,
+   "p": 0.999
+  },
+  {
+   "w": " through",
+   "start": 109.82,
+   "end": 110.08,
+   "p": 0.996
+  },
+  {
+   "w": " them.",
+   "start": 110.08,
+   "end": 110.28,
+   "p": 0.998
+  },
+  {
+   "w": " In",
+   "start": 110.48,
+   "end": 110.6,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 110.6,
+   "end": 110.7,
+   "p": 0.999
+  },
+  {
+   "w": " few",
+   "start": 110.7,
+   "end": 110.82,
+   "p": 0.999
+  },
+  {
+   "w": " more",
+   "start": 110.82,
+   "end": 111.04,
+   "p": 0.997
+  },
+  {
+   "w": " milliseconds,",
+   "start": 111.04,
+   "end": 111.38,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 111.62,
+   "end": 111.7,
+   "p": 0.999
+  },
+  {
+   "w": " shock",
+   "start": 111.7,
+   "end": 111.86,
+   "p": 0.999
+  },
+  {
+   "w": " wave",
+   "start": 111.86,
+   "end": 112.02,
+   "p": 0.901
+  },
+  {
+   "w": " reaches",
+   "start": 112.02,
+   "end": 112.24,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 112.24,
+   "end": 112.4,
+   "p": 0.998
+  },
+  {
+   "w": " human's",
+   "start": 112.4,
+   "end": 112.74,
+   "p": 0.943
+  },
+  {
+   "w": " ears",
+   "start": 112.74,
+   "end": 112.92,
+   "p": 0.99
+  },
+  {
+   "w": " as",
+   "start": 112.92,
+   "end": 113.12,
+   "p": 0.953
+  },
+  {
+   "w": " a",
+   "start": 113.12,
+   "end": 113.26,
+   "p": 0.89
+  },
+  {
+   "w": " loud",
+   "start": 113.26,
+   "end": 113.48,
+   "p": 0.999
+  },
+  {
+   "w": " bang.",
+   "start": 113.48,
+   "end": 113.78,
+   "p": 0.978
+  },
+  {
+   "w": " Around",
+   "start": 114.32,
+   "end": 114.72,
+   "p": 0.686
+  },
+  {
+   "w": " this",
+   "start": 114.72,
+   "end": 114.92,
+   "p": 0.991
+  },
+  {
+   "w": " time,",
+   "start": 114.92,
+   "end": 115.12,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 115.22,
+   "end": 115.28,
+   "p": 0.994
+  },
+  {
+   "w": " glass",
+   "start": 115.28,
+   "end": 115.44,
+   "p": 0.996
+  },
+  {
+   "w": " on",
+   "start": 115.44,
+   "end": 115.6,
+   "p": 0.99
+  },
+  {
+   "w": " the",
+   "start": 115.6,
+   "end": 115.74,
+   "p": 0.998
+  },
+  {
+   "w": " right",
+   "start": 115.74,
+   "end": 115.94,
+   "p": 0.98
+  },
+  {
+   "w": " starts",
+   "start": 115.94,
+   "end": 116.2,
+   "p": 0.96
+  },
+  {
+   "w": " to",
+   "start": 116.2,
+   "end": 116.42,
+   "p": 0.989
+  },
+  {
+   "w": " visibly",
+   "start": 116.42,
+   "end": 116.66,
+   "p": 0.986
+  },
+  {
+   "w": " lift",
+   "start": 116.66,
+   "end": 116.88,
+   "p": 0.989
+  },
+  {
+   "w": " into",
+   "start": 116.88,
+   "end": 117.1,
+   "p": 0.983
+  },
+  {
+   "w": " the",
+   "start": 117.1,
+   "end": 117.24,
+   "p": 0.997
+  },
+  {
+   "w": " air.",
+   "start": 117.24,
+   "end": 117.48,
+   "p": 0.999
+  },
+  {
+   "w": " The",
+   "start": 117.68,
+   "end": 117.82,
+   "p": 0.982
+  },
+  {
+   "w": " air",
+   "start": 117.82,
+   "end": 117.96,
+   "p": 0.997
+  },
+  {
+   "w": " pressure",
+   "start": 117.96,
+   "end": 118.16,
+   "p": 0.991
+  },
+  {
+   "w": " around",
+   "start": 118.16,
+   "end": 118.48,
+   "p": 0.991
+  },
+  {
+   "w": " the",
+   "start": 118.48,
+   "end": 118.64,
+   "p": 0.994
+  },
+  {
+   "w": " glass",
+   "start": 118.64,
+   "end": 118.82,
+   "p": 0.991
+  },
+  {
+   "w": " is",
+   "start": 118.82,
+   "end": 119.0,
+   "p": 0.993
+  },
+  {
+   "w": " trying",
+   "start": 119.0,
+   "end": 119.26,
+   "p": 0.996
+  },
+  {
+   "w": " to",
+   "start": 119.26,
+   "end": 119.46,
+   "p": 0.997
+  },
+  {
+   "w": " squeeze",
+   "start": 119.46,
+   "end": 119.7,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 119.7,
+   "end": 119.9,
+   "p": 0.997
+  },
+  {
+   "w": " glass",
+   "start": 119.9,
+   "end": 120.12,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 120.12,
+   "end": 120.28,
+   "p": 0.982
+  },
+  {
+   "w": " water",
+   "start": 120.28,
+   "end": 120.48,
+   "p": 0.976
+  },
+  {
+   "w": " together.",
+   "start": 120.48,
+   "end": 120.92,
+   "p": 0.997
+  },
+  {
+   "w": " This",
+   "start": 121.54,
+   "end": 121.66,
+   "p": 0.991
+  },
+  {
+   "w": " effect",
+   "start": 121.66,
+   "end": 121.88,
+   "p": 0.86
+  },
+  {
+   "w": " is",
+   "start": 121.88,
+   "end": 122.08,
+   "p": 0.996
+  },
+  {
+   "w": " easy",
+   "start": 122.08,
+   "end": 122.22,
+   "p": 0.798
+  },
+  {
+   "w": " to",
+   "start": 122.22,
+   "end": 122.38,
+   "p": 0.999
+  },
+  {
+   "w": " imagine",
+   "start": 122.38,
+   "end": 122.6,
+   "p": 0.994
+  },
+  {
+   "w": " with",
+   "start": 122.6,
+   "end": 122.8,
+   "p": 0.993
+  },
+  {
+   "w": " a",
+   "start": 122.8,
+   "end": 122.92,
+   "p": 0.996
+  },
+  {
+   "w": " wine",
+   "start": 122.92,
+   "end": 123.1,
+   "p": 0.989
+  },
+  {
+   "w": " glass.",
+   "start": 123.1,
+   "end": 123.48,
+   "p": 0.931
+  },
+  {
+   "w": " Air",
+   "start": 123.9,
+   "end": 124.02,
+   "p": 0.979
+  },
+  {
+   "w": " pressure",
+   "start": 124.02,
+   "end": 124.22,
+   "p": 0.998
+  },
+  {
+   "w": " at",
+   "start": 124.22,
+   "end": 124.46,
+   "p": 0.975
+  },
+  {
+   "w": " sea",
+   "start": 124.46,
+   "end": 124.58,
+   "p": 0.996
+  },
+  {
+   "w": " level",
+   "start": 124.58,
+   "end": 124.74,
+   "p": 0.849
+  },
+  {
+   "w": " is",
+   "start": 124.74,
+   "end": 124.9,
+   "p": 0.946
+  },
+  {
+   "w": " around",
+   "start": 124.9,
+   "end": 125.06,
+   "p": 0.965
+  },
+  {
+   "w": " 15",
+   "start": 125.06,
+   "end": 125.4,
+   "p": 0.96
+  },
+  {
+   "w": " pounds",
+   "start": 125.4,
+   "end": 125.62,
+   "p": 0.899
+  },
+  {
+   "w": " per",
+   "start": 125.62,
+   "end": 125.86,
+   "p": 0.983
+  },
+  {
+   "w": " square",
+   "start": 125.86,
+   "end": 126.08,
+   "p": 0.979
+  },
+  {
+   "w": " inch,",
+   "start": 126.08,
+   "end": 126.36,
+   "p": 0.998
+  },
+  {
+   "w": " so",
+   "start": 126.46,
+   "end": 126.64,
+   "p": 0.983
+  },
+  {
+   "w": " in",
+   "start": 126.64,
+   "end": 126.74,
+   "p": 0.956
+  },
+  {
+   "w": " a",
+   "start": 126.74,
+   "end": 126.82,
+   "p": 0.986
+  },
+  {
+   "w": " typical",
+   "start": 126.82,
+   "end": 127.02,
+   "p": 0.998
+  },
+  {
+   "w": " glass,",
+   "start": 127.02,
+   "end": 127.38,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 127.54,
+   "end": 127.68,
+   "p": 0.992
+  },
+  {
+   "w": " water's",
+   "start": 127.68,
+   "end": 127.96,
+   "p": 0.762
+  },
+  {
+   "w": " surface",
+   "start": 127.96,
+   "end": 128.22,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 128.22,
+   "end": 128.42,
+   "p": 0.975
+  },
+  {
+   "w": " the",
+   "start": 128.42,
+   "end": 128.54,
+   "p": 0.969
+  },
+  {
+   "w": " glass",
+   "start": 128.54,
+   "end": 128.76,
+   "p": 0.998
+  },
+  {
+   "w": " below",
+   "start": 128.76,
+   "end": 129.02,
+   "p": 0.996
+  },
+  {
+   "w": " it",
+   "start": 129.02,
+   "end": 129.2,
+   "p": 0.978
+  },
+  {
+   "w": " are",
+   "start": 129.2,
+   "end": 129.4,
+   "p": 0.979
+  },
+  {
+   "w": " being",
+   "start": 129.4,
+   "end": 129.62,
+   "p": 0.983
+  },
+  {
+   "w": " pushed",
+   "start": 129.62,
+   "end": 129.96,
+   "p": 0.993
+  },
+  {
+   "w": " down",
+   "start": 129.96,
+   "end": 130.24,
+   "p": 0.995
+  },
+  {
+   "w": " with",
+   "start": 130.24,
+   "end": 130.4,
+   "p": 0.987
+  },
+  {
+   "w": " a",
+   "start": 130.4,
+   "end": 130.54,
+   "p": 0.947
+  },
+  {
+   "w": " force",
+   "start": 130.54,
+   "end": 130.68,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 130.68,
+   "end": 130.86,
+   "p": 0.992
+  },
+  {
+   "w": " almost",
+   "start": 130.86,
+   "end": 130.98,
+   "p": 0.996
+  },
+  {
+   "w": " exactly",
+   "start": 130.98,
+   "end": 131.44,
+   "p": 0.991
+  },
+  {
+   "w": " 100",
+   "start": 131.44,
+   "end": 131.82,
+   "p": 0.731
+  },
+  {
+   "w": " pounds.",
+   "start": 131.82,
+   "end": 132.12,
+   "p": 0.962
+  },
+  {
+   "w": " Normally,",
+   "start": 132.7,
+   "end": 132.94,
+   "p": 0.991
+  },
+  {
+   "w": " this",
+   "start": 133.08,
+   "end": 133.2,
+   "p": 0.99
+  },
+  {
+   "w": " force",
+   "start": 133.2,
+   "end": 133.4,
+   "p": 0.998
+  },
+  {
+   "w": " is",
+   "start": 133.4,
+   "end": 133.56,
+   "p": 0.998
+  },
+  {
+   "w": " opposed",
+   "start": 133.56,
+   "end": 133.9,
+   "p": 0.99
+  },
+  {
+   "w": " by",
+   "start": 133.9,
+   "end": 134.16,
+   "p": 0.991
+  },
+  {
+   "w": " the",
+   "start": 134.16,
+   "end": 134.26,
+   "p": 0.993
+  },
+  {
+   "w": " air",
+   "start": 134.26,
+   "end": 134.42,
+   "p": 0.999
+  },
+  {
+   "w": " pushing",
+   "start": 134.42,
+   "end": 134.7,
+   "p": 0.998
+  },
+  {
+   "w": " up",
+   "start": 134.7,
+   "end": 134.98,
+   "p": 0.998
+  },
+  {
+   "w": " on",
+   "start": 134.98,
+   "end": 135.16,
+   "p": 0.99
+  },
+  {
+   "w": " the",
+   "start": 135.16,
+   "end": 135.24,
+   "p": 0.998
+  },
+  {
+   "w": " bottom",
+   "start": 135.24,
+   "end": 135.42,
+   "p": 1.0
+  },
+  {
+   "w": " of",
+   "start": 135.42,
+   "end": 135.52,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 135.52,
+   "end": 135.62,
+   "p": 0.997
+  },
+  {
+   "w": " glass.",
+   "start": 135.62,
+   "end": 135.9,
+   "p": 0.999
+  },
+  {
+   "w": " But",
+   "start": 136.3,
+   "end": 136.58,
+   "p": 0.992
+  },
+  {
+   "w": " in",
+   "start": 136.58,
+   "end": 136.74,
+   "p": 0.724
+  },
+  {
+   "w": " the",
+   "start": 136.74,
+   "end": 136.88,
+   "p": 0.994
+  },
+  {
+   "w": " glass",
+   "start": 136.88,
+   "end": 137.12,
+   "p": 0.998
+  },
+  {
+   "w": " on",
+   "start": 137.12,
+   "end": 137.3,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 137.3,
+   "end": 137.42,
+   "p": 0.999
+  },
+  {
+   "w": " right,",
+   "start": 137.42,
+   "end": 137.7,
+   "p": 0.999
+  },
+  {
+   "w": " air",
+   "start": 137.98,
+   "end": 138.12,
+   "p": 0.985
+  },
+  {
+   "w": " pressure",
+   "start": 138.12,
+   "end": 138.38,
+   "p": 0.999
+  },
+  {
+   "w": " pushes",
+   "start": 138.38,
+   "end": 138.72,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 138.72,
+   "end": 138.94,
+   "p": 0.997
+  },
+  {
+   "w": " glass",
+   "start": 138.94,
+   "end": 139.16,
+   "p": 0.999
+  },
+  {
+   "w": " up",
+   "start": 139.16,
+   "end": 139.34,
+   "p": 0.993
+  },
+  {
+   "w": " from",
+   "start": 139.34,
+   "end": 139.52,
+   "p": 0.993
+  },
+  {
+   "w": " below,",
+   "start": 139.52,
+   "end": 139.88,
+   "p": 0.997
+  },
+  {
+   "w": " unopposed,",
+   "start": 140.36,
+   "end": 140.76,
+   "p": 0.7
+  },
+  {
+   "w": " with",
+   "start": 140.84,
+   "end": 141.06,
+   "p": 0.992
+  },
+  {
+   "w": " 100",
+   "start": 141.06,
+   "end": 141.38,
+   "p": 0.685
+  },
+  {
+   "w": " pounds",
+   "start": 141.38,
+   "end": 141.58,
+   "p": 0.755
+  },
+  {
+   "w": " of",
+   "start": 141.58,
+   "end": 141.82,
+   "p": 0.994
+  },
+  {
+   "w": " force,",
+   "start": 141.82,
+   "end": 142.16,
+   "p": 0.995
+  },
+  {
+   "w": " while",
+   "start": 142.34,
+   "end": 142.54,
+   "p": 0.978
+  },
+  {
+   "w": " simultaneously",
+   "start": 142.54,
+   "end": 143.02,
+   "p": 0.997
+  },
+  {
+   "w": " pushing",
+   "start": 143.02,
+   "end": 143.44,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 143.44,
+   "end": 143.62,
+   "p": 0.984
+  },
+  {
+   "w": " water",
+   "start": 143.62,
+   "end": 143.8,
+   "p": 0.997
+  },
+  {
+   "w": " down",
+   "start": 143.8,
+   "end": 144.14,
+   "p": 0.985
+  },
+  {
+   "w": " from",
+   "start": 144.14,
+   "end": 144.42,
+   "p": 0.97
+  },
+  {
+   "w": " above.",
+   "start": 144.42,
+   "end": 144.72,
+   "p": 0.995
+  },
+  {
+   "w": " This",
+   "start": 145.28,
+   "end": 145.48,
+   "p": 0.987
+  },
+  {
+   "w": " is",
+   "start": 145.48,
+   "end": 145.6,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 145.6,
+   "end": 145.74,
+   "p": 0.995
+  },
+  {
+   "w": " force",
+   "start": 145.74,
+   "end": 145.9,
+   "p": 0.993
+  },
+  {
+   "w": " we",
+   "start": 145.9,
+   "end": 146.06,
+   "p": 0.993
+  },
+  {
+   "w": " think",
+   "start": 146.06,
+   "end": 146.22,
+   "p": 0.994
+  },
+  {
+   "w": " of",
+   "start": 146.22,
+   "end": 146.36,
+   "p": 0.996
+  },
+  {
+   "w": " as",
+   "start": 146.36,
+   "end": 146.62,
+   "p": 0.994
+  },
+  {
+   "w": " suction.",
+   "start": 146.62,
+   "end": 146.98,
+   "p": 0.984
+  },
+  {
+   "w": " The",
+   "start": 147.56,
+   "end": 147.76,
+   "p": 0.986
+  },
+  {
+   "w": " vacuum",
+   "start": 147.76,
+   "end": 148.02,
+   "p": 0.999
+  },
+  {
+   "w": " on",
+   "start": 148.02,
+   "end": 148.14,
+   "p": 0.98
+  },
+  {
+   "w": " the",
+   "start": 148.14,
+   "end": 148.28,
+   "p": 0.998
+  },
+  {
+   "w": " left",
+   "start": 148.28,
+   "end": 148.44,
+   "p": 0.996
+  },
+  {
+   "w": " didn't",
+   "start": 148.44,
+   "end": 148.72,
+   "p": 0.993
+  },
+  {
+   "w": " last",
+   "start": 148.72,
+   "end": 148.92,
+   "p": 0.999
+  },
+  {
+   "w": " long",
+   "start": 148.92,
+   "end": 149.12,
+   "p": 0.992
+  },
+  {
+   "w": " enough",
+   "start": 149.12,
+   "end": 149.28,
+   "p": 0.996
+  },
+  {
+   "w": " for",
+   "start": 149.28,
+   "end": 149.44,
+   "p": 0.985
+  },
+  {
+   "w": " the",
+   "start": 149.44,
+   "end": 149.54,
+   "p": 0.989
+  },
+  {
+   "w": " suction",
+   "start": 149.54,
+   "end": 149.82,
+   "p": 0.998
+  },
+  {
+   "w": " to",
+   "start": 149.82,
+   "end": 149.94,
+   "p": 0.997
+  },
+  {
+   "w": " noticeably",
+   "start": 149.94,
+   "end": 150.3,
+   "p": 0.888
+  },
+  {
+   "w": " lift",
+   "start": 150.3,
+   "end": 150.54,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 150.54,
+   "end": 150.72,
+   "p": 0.995
+  },
+  {
+   "w": " glass,",
+   "start": 150.72,
+   "end": 150.98,
+   "p": 0.998
+  },
+  {
+   "w": " but",
+   "start": 151.26,
+   "end": 151.58,
+   "p": 0.991
+  },
+  {
+   "w": " since",
+   "start": 151.58,
+   "end": 151.86,
+   "p": 0.81
+  },
+  {
+   "w": " air",
+   "start": 151.86,
+   "end": 152.1,
+   "p": 0.981
+  },
+  {
+   "w": " can't",
+   "start": 152.1,
+   "end": 152.4,
+   "p": 0.994
+  },
+  {
+   "w": " get",
+   "start": 152.4,
+   "end": 152.5,
+   "p": 0.996
+  },
+  {
+   "w": " into",
+   "start": 152.5,
+   "end": 152.68,
+   "p": 0.983
+  },
+  {
+   "w": " the",
+   "start": 152.68,
+   "end": 152.82,
+   "p": 0.996
+  },
+  {
+   "w": " vacuum",
+   "start": 152.82,
+   "end": 153.1,
+   "p": 0.998
+  },
+  {
+   "w": " on",
+   "start": 153.1,
+   "end": 153.24,
+   "p": 0.982
+  },
+  {
+   "w": " the",
+   "start": 153.24,
+   "end": 153.36,
+   "p": 0.999
+  },
+  {
+   "w": " right,",
+   "start": 153.36,
+   "end": 153.54,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 153.8,
+   "end": 153.84,
+   "p": 0.997
+  },
+  {
+   "w": " glass",
+   "start": 153.84,
+   "end": 154.04,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 154.04,
+   "end": 154.2,
+   "p": 0.99
+  },
+  {
+   "w": " the",
+   "start": 154.2,
+   "end": 154.3,
+   "p": 0.938
+  },
+  {
+   "w": " water",
+   "start": 154.3,
+   "end": 154.52,
+   "p": 0.999
+  },
+  {
+   "w": " begin",
+   "start": 154.52,
+   "end": 154.74,
+   "p": 0.993
+  },
+  {
+   "w": " to",
+   "start": 154.74,
+   "end": 154.96,
+   "p": 0.996
+  },
+  {
+   "w": " slide",
+   "start": 154.96,
+   "end": 155.26,
+   "p": 0.997
+  },
+  {
+   "w": " toward",
+   "start": 155.26,
+   "end": 155.5,
+   "p": 0.971
+  },
+  {
+   "w": " each",
+   "start": 155.5,
+   "end": 155.7,
+   "p": 0.998
+  },
+  {
+   "w": " other.",
+   "start": 155.7,
+   "end": 155.94,
+   "p": 0.997
+  },
+  {
+   "w": " By",
+   "start": 156.4,
+   "end": 156.48,
+   "p": 0.991
+  },
+  {
+   "w": " now,",
+   "start": 156.48,
+   "end": 156.66,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 156.76,
+   "end": 156.8,
+   "p": 0.994
+  },
+  {
+   "w": " boiling",
+   "start": 156.8,
+   "end": 157.0,
+   "p": 0.999
+  },
+  {
+   "w": " water",
+   "start": 157.0,
+   "end": 157.24,
+   "p": 0.999
+  },
+  {
+   "w": " has",
+   "start": 157.24,
+   "end": 157.42,
+   "p": 0.736
+  },
+  {
+   "w": " filled",
+   "start": 157.42,
+   "end": 157.56,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 157.56,
+   "end": 157.68,
+   "p": 0.997
+  },
+  {
+   "w": " vacuum",
+   "start": 157.68,
+   "end": 157.94,
+   "p": 0.996
+  },
+  {
+   "w": " with",
+   "start": 157.94,
+   "end": 158.06,
+   "p": 0.988
+  },
+  {
+   "w": " a",
+   "start": 158.06,
+   "end": 158.16,
+   "p": 0.992
+  },
+  {
+   "w": " very",
+   "start": 158.16,
+   "end": 158.32,
+   "p": 0.993
+  },
+  {
+   "w": " small",
+   "start": 158.32,
+   "end": 158.64,
+   "p": 0.999
+  },
+  {
+   "w": " amount",
+   "start": 158.64,
+   "end": 158.8,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 158.8,
+   "end": 159.0,
+   "p": 0.999
+  },
+  {
+   "w": " water",
+   "start": 159.0,
+   "end": 159.12,
+   "p": 0.993
+  },
+  {
+   "w": " vapor.",
+   "start": 159.12,
+   "end": 159.5,
+   "p": 0.979
+  },
+  {
+   "w": " However,",
+   "start": 159.86,
+   "end": 160.1,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 160.32,
+   "end": 160.4,
+   "p": 0.998
+  },
+  {
+   "w": " glass",
+   "start": 160.4,
+   "end": 160.58,
+   "p": 0.996
+  },
+  {
+   "w": " and",
+   "start": 160.58,
+   "end": 160.76,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 160.76,
+   "end": 160.84,
+   "p": 0.895
+  },
+  {
+   "w": " water",
+   "start": 160.84,
+   "end": 161.02,
+   "p": 1.0
+  },
+  {
+   "w": " are",
+   "start": 161.02,
+   "end": 161.18,
+   "p": 0.995
+  },
+  {
+   "w": " moving",
+   "start": 161.18,
+   "end": 161.42,
+   "p": 0.99
+  },
+  {
+   "w": " too",
+   "start": 161.42,
+   "end": 161.7,
+   "p": 0.992
+  },
+  {
+   "w": " fast",
+   "start": 161.7,
+   "end": 161.96,
+   "p": 0.999
+  },
+  {
+   "w": " for",
+   "start": 161.96,
+   "end": 162.16,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 162.16,
+   "end": 162.26,
+   "p": 0.988
+  },
+  {
+   "w": " vapor",
+   "start": 162.26,
+   "end": 162.48,
+   "p": 0.995
+  },
+  {
+   "w": " buildup",
+   "start": 162.48,
+   "end": 162.72,
+   "p": 0.862
+  },
+  {
+   "w": " to",
+   "start": 162.72,
+   "end": 162.96,
+   "p": 0.999
+  },
+  {
+   "w": " matter.",
+   "start": 162.96,
+   "end": 163.24,
+   "p": 0.999
+  },
+  {
+   "w": " Less",
+   "start": 163.72,
+   "end": 163.82,
+   "p": 0.995
+  },
+  {
+   "w": " than",
+   "start": 163.82,
+   "end": 164.08,
+   "p": 0.997
+  },
+  {
+   "w": " 10",
+   "start": 164.08,
+   "end": 164.34,
+   "p": 0.856
+  },
+  {
+   "w": " milliseconds",
+   "start": 164.34,
+   "end": 164.7,
+   "p": 0.96
+  },
+  {
+   "w": " after",
+   "start": 164.7,
+   "end": 165.06,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 165.06,
+   "end": 165.2,
+   "p": 0.997
+  },
+  {
+   "w": " clock",
+   "start": 165.2,
+   "end": 165.36,
+   "p": 0.979
+  },
+  {
+   "w": " started,",
+   "start": 165.36,
+   "end": 165.76,
+   "p": 0.957
+  },
+  {
+   "w": " they're",
+   "start": 165.9,
+   "end": 166.16,
+   "p": 0.971
+  },
+  {
+   "w": " flying",
+   "start": 166.16,
+   "end": 166.38,
+   "p": 0.998
+  },
+  {
+   "w": " toward",
+   "start": 166.38,
+   "end": 166.6,
+   "p": 0.956
+  },
+  {
+   "w": " each",
+   "start": 166.6,
+   "end": 166.76,
+   "p": 0.999
+  },
+  {
+   "w": " other",
+   "start": 166.76,
+   "end": 166.88,
+   "p": 0.997
+  },
+  {
+   "w": " at",
+   "start": 166.88,
+   "end": 167.02,
+   "p": 0.984
+  },
+  {
+   "w": " several",
+   "start": 167.02,
+   "end": 167.32,
+   "p": 0.998
+  },
+  {
+   "w": " meters",
+   "start": 167.32,
+   "end": 167.5,
+   "p": 0.979
+  },
+  {
+   "w": " per",
+   "start": 167.5,
+   "end": 167.8,
+   "p": 0.995
+  },
+  {
+   "w": " second.",
+   "start": 167.8,
+   "end": 168.12,
+   "p": 0.998
+  },
+  {
+   "w": " Without",
+   "start": 168.12,
+   "end": 168.64,
+   "p": 0.775
+  },
+  {
+   "w": " a",
+   "start": 168.64,
+   "end": 168.82,
+   "p": 0.989
+  },
+  {
+   "w": " cushion",
+   "start": 168.82,
+   "end": 169.0,
+   "p": 0.987
+  },
+  {
+   "w": " of",
+   "start": 169.0,
+   "end": 169.12,
+   "p": 0.995
+  },
+  {
+   "w": " air",
+   "start": 169.12,
+   "end": 169.24,
+   "p": 0.934
+  },
+  {
+   "w": " between",
+   "start": 169.24,
+   "end": 169.5,
+   "p": 0.984
+  },
+  {
+   "w": " them,",
+   "start": 169.5,
+   "end": 169.72,
+   "p": 0.996
+  },
+  {
+   "w": " just",
+   "start": 169.84,
+   "end": 169.96,
+   "p": 0.984
+  },
+  {
+   "w": " a",
+   "start": 169.96,
+   "end": 170.12,
+   "p": 0.996
+  },
+  {
+   "w": " few",
+   "start": 170.12,
+   "end": 170.34,
+   "p": 0.998
+  },
+  {
+   "w": " wisps",
+   "start": 170.34,
+   "end": 170.72,
+   "p": 0.962
+  },
+  {
+   "w": " of",
+   "start": 170.72,
+   "end": 170.86,
+   "p": 0.995
+  },
+  {
+   "w": " water",
+   "start": 170.86,
+   "end": 171.1,
+   "p": 0.993
+  },
+  {
+   "w": " vapor,",
+   "start": 171.1,
+   "end": 171.4,
+   "p": 0.968
+  },
+  {
+   "w": " the",
+   "start": 171.68,
+   "end": 171.76,
+   "p": 0.984
+  },
+  {
+   "w": " water",
+   "start": 171.76,
+   "end": 171.92,
+   "p": 0.998
+  },
+  {
+   "w": " smacks",
+   "start": 171.92,
+   "end": 172.42,
+   "p": 0.989
+  },
+  {
+   "w": " into",
+   "start": 172.42,
+   "end": 172.58,
+   "p": 0.979
+  },
+  {
+   "w": " the",
+   "start": 172.58,
+   "end": 172.76,
+   "p": 0.997
+  },
+  {
+   "w": " bottom",
+   "start": 172.76,
+   "end": 172.92,
+   "p": 0.989
+  },
+  {
+   "w": " of",
+   "start": 172.92,
+   "end": 173.04,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 173.04,
+   "end": 173.1,
+   "p": 0.948
+  },
+  {
+   "w": " glass",
+   "start": 173.1,
+   "end": 173.32,
+   "p": 0.999
+  },
+  {
+   "w": " like",
+   "start": 173.32,
+   "end": 173.52,
+   "p": 0.987
+  },
+  {
+   "w": " a",
+   "start": 173.52,
+   "end": 173.66,
+   "p": 0.997
+  },
+  {
+   "w": " hammer.",
+   "start": 173.66,
+   "end": 173.9,
+   "p": 0.999
+  },
+  {
+   "w": " Water",
+   "start": 174.5,
+   "end": 174.58,
+   "p": 0.964
+  },
+  {
+   "w": " is",
+   "start": 174.58,
+   "end": 174.8,
+   "p": 0.997
+  },
+  {
+   "w": " very",
+   "start": 174.8,
+   "end": 175.06,
+   "p": 0.98
+  },
+  {
+   "w": " nearly",
+   "start": 175.06,
+   "end": 175.46,
+   "p": 0.993
+  },
+  {
+   "w": " incompressible,",
+   "start": 175.46,
+   "end": 176.28,
+   "p": 0.99
+  },
+  {
+   "w": " so",
+   "start": 176.4,
+   "end": 176.5,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 176.5,
+   "end": 176.6,
+   "p": 0.994
+  },
+  {
+   "w": " impact",
+   "start": 176.6,
+   "end": 176.86,
+   "p": 0.999
+  },
+  {
+   "w": " isn't",
+   "start": 176.86,
+   "end": 177.1,
+   "p": 0.992
+  },
+  {
+   "w": " spread",
+   "start": 177.1,
+   "end": 177.34,
+   "p": 0.997
+  },
+  {
+   "w": " out",
+   "start": 177.34,
+   "end": 177.52,
+   "p": 0.993
+  },
+  {
+   "w": " over",
+   "start": 177.52,
+   "end": 177.68,
+   "p": 0.984
+  },
+  {
+   "w": " time.",
+   "start": 177.68,
+   "end": 178.0,
+   "p": 0.999
+  },
+  {
+   "w": " It",
+   "start": 178.36,
+   "end": 178.46,
+   "p": 0.99
+  },
+  {
+   "w": " comes",
+   "start": 178.46,
+   "end": 178.6,
+   "p": 0.997
+  },
+  {
+   "w": " as",
+   "start": 178.6,
+   "end": 178.78,
+   "p": 0.985
+  },
+  {
+   "w": " a",
+   "start": 178.78,
+   "end": 178.92,
+   "p": 0.991
+  },
+  {
+   "w": " single",
+   "start": 178.92,
+   "end": 179.12,
+   "p": 0.957
+  },
+  {
+   "w": " sharp",
+   "start": 179.12,
+   "end": 179.38,
+   "p": 0.913
+  },
+  {
+   "w": " shock.",
+   "start": 179.38,
+   "end": 179.74,
+   "p": 0.995
+  },
+  {
+   "w": " The",
+   "start": 180.14,
+   "end": 180.22,
+   "p": 0.975
+  },
+  {
+   "w": " momentary",
+   "start": 180.22,
+   "end": 180.6,
+   "p": 0.998
+  },
+  {
+   "w": " force",
+   "start": 180.6,
+   "end": 180.82,
+   "p": 0.997
+  },
+  {
+   "w": " on",
+   "start": 180.82,
+   "end": 180.98,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 180.98,
+   "end": 181.08,
+   "p": 0.996
+  },
+  {
+   "w": " glass",
+   "start": 181.08,
+   "end": 181.28,
+   "p": 0.979
+  },
+  {
+   "w": " is",
+   "start": 181.28,
+   "end": 181.46,
+   "p": 0.997
+  },
+  {
+   "w": " immense,",
+   "start": 181.46,
+   "end": 181.74,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 181.94,
+   "end": 182.16,
+   "p": 0.995
+  },
+  {
+   "w": " it",
+   "start": 182.16,
+   "end": 182.32,
+   "p": 0.993
+  },
+  {
+   "w": " breaks.",
+   "start": 182.32,
+   "end": 182.58,
+   "p": 0.992
+  },
+  {
+   "w": " This",
+   "start": 183.24,
+   "end": 183.44,
+   "p": 0.981
+  },
+  {
+   "w": " water",
+   "start": 183.44,
+   "end": 183.7,
+   "p": 0.913
+  },
+  {
+   "w": " hammer",
+   "start": 183.7,
+   "end": 183.96,
+   "p": 0.89
+  },
+  {
+   "w": " effect,",
+   "start": 183.96,
+   "end": 184.34,
+   "p": 0.992
+  },
+  {
+   "w": " which",
+   "start": 184.54,
+   "end": 184.66,
+   "p": 0.994
+  },
+  {
+   "w": " is",
+   "start": 184.66,
+   "end": 184.8,
+   "p": 0.997
+  },
+  {
+   "w": " responsible",
+   "start": 184.8,
+   "end": 185.14,
+   "p": 0.995
+  },
+  {
+   "w": " for",
+   "start": 185.14,
+   "end": 185.48,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 185.48,
+   "end": 185.7,
+   "p": 0.991
+  },
+  {
+   "w": " clunk",
+   "start": 185.7,
+   "end": 186.06,
+   "p": 0.809
+  },
+  {
+   "w": " you",
+   "start": 186.06,
+   "end": 186.24,
+   "p": 0.982
+  },
+  {
+   "w": " sometimes",
+   "start": 186.24,
+   "end": 186.5,
+   "p": 0.985
+  },
+  {
+   "w": " hear",
+   "start": 186.5,
+   "end": 186.7,
+   "p": 0.996
+  },
+  {
+   "w": " in",
+   "start": 186.7,
+   "end": 186.8,
+   "p": 0.978
+  },
+  {
+   "w": " old",
+   "start": 186.8,
+   "end": 186.94,
+   "p": 0.966
+  },
+  {
+   "w": " plumbing",
+   "start": 186.94,
+   "end": 187.18,
+   "p": 0.992
+  },
+  {
+   "w": " when",
+   "start": 187.18,
+   "end": 187.4,
+   "p": 0.984
+  },
+  {
+   "w": " you",
+   "start": 187.4,
+   "end": 187.48,
+   "p": 0.993
+  },
+  {
+   "w": " turn",
+   "start": 187.48,
+   "end": 187.56,
+   "p": 0.848
+  },
+  {
+   "w": " off",
+   "start": 187.56,
+   "end": 187.72,
+   "p": 0.883
+  },
+  {
+   "w": " the",
+   "start": 187.72,
+   "end": 187.84,
+   "p": 0.992
+  },
+  {
+   "w": " faucet,",
+   "start": 187.84,
+   "end": 188.22,
+   "p": 0.998
+  },
+  {
+   "w": " can",
+   "start": 188.44,
+   "end": 188.48,
+   "p": 0.992
+  },
+  {
+   "w": " also",
+   "start": 188.48,
+   "end": 188.68,
+   "p": 0.994
+  },
+  {
+   "w": " be",
+   "start": 188.68,
+   "end": 188.82,
+   "p": 0.997
+  },
+  {
+   "w": " seen",
+   "start": 188.82,
+   "end": 188.98,
+   "p": 0.999
+  },
+  {
+   "w": " in",
+   "start": 188.98,
+   "end": 189.12,
+   "p": 0.989
+  },
+  {
+   "w": " the",
+   "start": 189.12,
+   "end": 189.22,
+   "p": 0.99
+  },
+  {
+   "w": " well",
+   "start": 189.22,
+   "end": 189.34,
+   "p": 0.995
+  },
+  {
+   "w": "-known",
+   "start": 189.34,
+   "end": 189.52,
+   "p": 0.952
+  },
+  {
+   "w": " party",
+   "start": 189.52,
+   "end": 189.74,
+   "p": 0.963
+  },
+  {
+   "w": " trick",
+   "start": 189.74,
+   "end": 189.96,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 189.96,
+   "end": 190.1,
+   "p": 0.994
+  },
+  {
+   "w": " smacking",
+   "start": 190.1,
+   "end": 190.44,
+   "p": 0.992
+  },
+  {
+   "w": " the",
+   "start": 190.44,
+   "end": 190.64,
+   "p": 0.992
+  },
+  {
+   "w": " top",
+   "start": 190.64,
+   "end": 190.8,
+   "p": 0.988
+  },
+  {
+   "w": " of",
+   "start": 190.8,
+   "end": 190.92,
+   "p": 0.997
+  },
+  {
+   "w": " a",
+   "start": 190.92,
+   "end": 191.02,
+   "p": 0.974
+  },
+  {
+   "w": " glass",
+   "start": 191.02,
+   "end": 191.24,
+   "p": 0.998
+  },
+  {
+   "w": " bottle",
+   "start": 191.24,
+   "end": 191.54,
+   "p": 0.998
+  },
+  {
+   "w": " to",
+   "start": 191.54,
+   "end": 191.74,
+   "p": 0.996
+  },
+  {
+   "w": " blow",
+   "start": 191.74,
+   "end": 191.88,
+   "p": 0.998
+  },
+  {
+   "w": " out",
+   "start": 191.88,
+   "end": 192.04,
+   "p": 0.994
+  },
+  {
+   "w": " the",
+   "start": 192.04,
+   "end": 192.16,
+   "p": 0.992
+  },
+  {
+   "w": " bottom.",
+   "start": 192.16,
+   "end": 192.46,
+   "p": 0.994
+  },
+  {
+   "w": " In",
+   "start": 192.9,
+   "end": 193.02,
+   "p": 0.995
+  },
+  {
+   "w": " our",
+   "start": 193.02,
+   "end": 193.14,
+   "p": 0.999
+  },
+  {
+   "w": " situation,",
+   "start": 193.14,
+   "end": 193.54,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 193.76,
+   "end": 193.86,
+   "p": 0.996
+  },
+  {
+   "w": " forces",
+   "start": 193.86,
+   "end": 194.08,
+   "p": 0.988
+  },
+  {
+   "w": " would",
+   "start": 194.08,
+   "end": 194.32,
+   "p": 0.997
+  },
+  {
+   "w": " be",
+   "start": 194.32,
+   "end": 194.46,
+   "p": 0.997
+  },
+  {
+   "w": " more",
+   "start": 194.46,
+   "end": 194.66,
+   "p": 0.995
+  },
+  {
+   "w": " than",
+   "start": 194.66,
+   "end": 194.82,
+   "p": 0.996
+  },
+  {
+   "w": " enough",
+   "start": 194.82,
+   "end": 195.0,
+   "p": 1.0
+  },
+  {
+   "w": " to",
+   "start": 195.0,
+   "end": 195.14,
+   "p": 0.998
+  },
+  {
+   "w": " destroy",
+   "start": 195.14,
+   "end": 195.44,
+   "p": 0.998
+  },
+  {
+   "w": " even",
+   "start": 195.44,
+   "end": 195.66,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 195.66,
+   "end": 195.78,
+   "p": 0.995
+  },
+  {
+   "w": " heaviest",
+   "start": 195.78,
+   "end": 196.06,
+   "p": 0.996
+  },
+  {
+   "w": " drinking",
+   "start": 196.06,
+   "end": 196.32,
+   "p": 0.989
+  },
+  {
+   "w": " glasses.",
+   "start": 196.32,
+   "end": 196.72,
+   "p": 0.979
+  },
+  {
+   "w": " Fun",
+   "start": 196.72,
+   "end": 197.4,
+   "p": 0.604
+  },
+  {
+   "w": " fact!",
+   "start": 197.4,
+   "end": 197.68,
+   "p": 0.944
+  },
+  {
+   "w": " When",
+   "start": 197.96,
+   "end": 198.08,
+   "p": 0.982
+  },
+  {
+   "w": " I",
+   "start": 198.08,
+   "end": 198.2,
+   "p": 0.986
+  },
+  {
+   "w": " was",
+   "start": 198.2,
+   "end": 198.28,
+   "p": 0.986
+  },
+  {
+   "w": " trying",
+   "start": 198.28,
+   "end": 198.4,
+   "p": 0.977
+  },
+  {
+   "w": " to",
+   "start": 198.4,
+   "end": 198.48,
+   "p": 0.998
+  },
+  {
+   "w": " calculate",
+   "start": 198.48,
+   "end": 198.8,
+   "p": 0.996
+  },
+  {
+   "w": " this,",
+   "start": 198.8,
+   "end": 199.06,
+   "p": 0.992
+  },
+  {
+   "w": " I",
+   "start": 199.22,
+   "end": 199.26,
+   "p": 0.995
+  },
+  {
+   "w": " bought",
+   "start": 199.26,
+   "end": 199.44,
+   "p": 0.99
+  },
+  {
+   "w": " a",
+   "start": 199.44,
+   "end": 199.58,
+   "p": 0.987
+  },
+  {
+   "w": " bunch",
+   "start": 199.58,
+   "end": 199.68,
+   "p": 0.995
+  },
+  {
+   "w": " of",
+   "start": 199.68,
+   "end": 199.86,
+   "p": 0.998
+  },
+  {
+   "w": " cheap",
+   "start": 199.86,
+   "end": 200.02,
+   "p": 0.995
+  },
+  {
+   "w": " glasses",
+   "start": 200.02,
+   "end": 200.32,
+   "p": 0.992
+  },
+  {
+   "w": " from",
+   "start": 200.32,
+   "end": 200.52,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 200.52,
+   "end": 200.64,
+   "p": 0.978
+  },
+  {
+   "w": " dollar",
+   "start": 200.64,
+   "end": 200.78,
+   "p": 0.859
+  },
+  {
+   "w": " store,",
+   "start": 200.78,
+   "end": 201.1,
+   "p": 0.998
+  },
+  {
+   "w": " and",
+   "start": 201.36,
+   "end": 201.36,
+   "p": 0.937
+  },
+  {
+   "w": " then",
+   "start": 201.36,
+   "end": 201.56,
+   "p": 0.918
+  },
+  {
+   "w": " tested,",
+   "start": 201.56,
+   "end": 201.92,
+   "p": 0.944
+  },
+  {
+   "w": " you",
+   "start": 202.12,
+   "end": 202.3,
+   "p": 0.664
+  },
+  {
+   "w": " know,",
+   "start": 202.3,
+   "end": 202.42,
+   "p": 0.999
+  },
+  {
+   "w": " applying",
+   "start": 202.56,
+   "end": 202.78,
+   "p": 0.992
+  },
+  {
+   "w": " different",
+   "start": 202.78,
+   "end": 202.96,
+   "p": 0.995
+  },
+  {
+   "w": " amounts",
+   "start": 202.96,
+   "end": 203.14,
+   "p": 0.994
+  },
+  {
+   "w": " of",
+   "start": 203.14,
+   "end": 203.34,
+   "p": 0.996
+  },
+  {
+   "w": " force",
+   "start": 203.34,
+   "end": 203.52,
+   "p": 0.995
+  },
+  {
+   "w": " to",
+   "start": 203.52,
+   "end": 203.7,
+   "p": 0.99
+  },
+  {
+   "w": " the",
+   "start": 203.7,
+   "end": 203.76,
+   "p": 0.994
+  },
+  {
+   "w": " base",
+   "start": 203.76,
+   "end": 203.94,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 203.94,
+   "end": 204.08,
+   "p": 0.993
+  },
+  {
+   "w": " them",
+   "start": 204.08,
+   "end": 204.18,
+   "p": 0.994
+  },
+  {
+   "w": " to",
+   "start": 204.18,
+   "end": 204.3,
+   "p": 0.937
+  },
+  {
+   "w": " see",
+   "start": 204.3,
+   "end": 204.44,
+   "p": 0.999
+  },
+  {
+   "w": " how",
+   "start": 204.44,
+   "end": 204.58,
+   "p": 0.997
+  },
+  {
+   "w": " easy",
+   "start": 204.58,
+   "end": 204.7,
+   "p": 0.983
+  },
+  {
+   "w": " they",
+   "start": 204.7,
+   "end": 204.9,
+   "p": 0.995
+  },
+  {
+   "w": " were",
+   "start": 204.9,
+   "end": 205.0,
+   "p": 0.993
+  },
+  {
+   "w": " to",
+   "start": 205.0,
+   "end": 205.1,
+   "p": 0.998
+  },
+  {
+   "w": " blow",
+   "start": 205.1,
+   "end": 205.26,
+   "p": 0.998
+  },
+  {
+   "w": " out.",
+   "start": 205.26,
+   "end": 205.54,
+   "p": 0.991
+  },
+  {
+   "w": " And",
+   "start": 205.82,
+   "end": 205.9,
+   "p": 0.889
+  },
+  {
+   "w": " one",
+   "start": 205.9,
+   "end": 206.02,
+   "p": 0.99
+  },
+  {
+   "w": " of",
+   "start": 206.02,
+   "end": 206.14,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 206.14,
+   "end": 206.2,
+   "p": 0.989
+  },
+  {
+   "w": " glasses",
+   "start": 206.2,
+   "end": 206.44,
+   "p": 0.994
+  },
+  {
+   "w": " just",
+   "start": 206.44,
+   "end": 206.74,
+   "p": 0.977
+  },
+  {
+   "w": " didn't",
+   "start": 206.74,
+   "end": 207.04,
+   "p": 0.998
+  },
+  {
+   "w": " break",
+   "start": 207.04,
+   "end": 207.26,
+   "p": 0.997
+  },
+  {
+   "w": " no",
+   "start": 207.26,
+   "end": 207.44,
+   "p": 0.73
+  },
+  {
+   "w": " matter",
+   "start": 207.44,
+   "end": 207.58,
+   "p": 0.999
+  },
+  {
+   "w": " what",
+   "start": 207.58,
+   "end": 207.82,
+   "p": 0.994
+  },
+  {
+   "w": " I",
+   "start": 207.82,
+   "end": 207.94,
+   "p": 0.996
+  },
+  {
+   "w": " did,",
+   "start": 207.94,
+   "end": 208.14,
+   "p": 0.999
+  },
+  {
+   "w": " so",
+   "start": 208.32,
+   "end": 208.56,
+   "p": 0.99
+  },
+  {
+   "w": " I",
+   "start": 208.56,
+   "end": 208.7,
+   "p": 0.993
+  },
+  {
+   "w": " kept",
+   "start": 208.7,
+   "end": 208.84,
+   "p": 0.998
+  },
+  {
+   "w": " it.",
+   "start": 208.84,
+   "end": 209.1,
+   "p": 0.999
+  },
+  {
+   "w": " It",
+   "start": 209.22,
+   "end": 209.34,
+   "p": 0.99
+  },
+  {
+   "w": " sits",
+   "start": 209.34,
+   "end": 209.46,
+   "p": 0.993
+  },
+  {
+   "w": " on",
+   "start": 209.46,
+   "end": 209.62,
+   "p": 0.998
+  },
+  {
+   "w": " my",
+   "start": 209.62,
+   "end": 209.76,
+   "p": 0.999
+  },
+  {
+   "w": " shelf.",
+   "start": 209.76,
+   "end": 209.96,
+   "p": 1.0
+  },
+  {
+   "w": " It",
+   "start": 210.26,
+   "end": 210.34,
+   "p": 0.993
+  },
+  {
+   "w": " doesn't",
+   "start": 210.34,
+   "end": 210.64,
+   "p": 0.997
+  },
+  {
+   "w": " match",
+   "start": 210.64,
+   "end": 210.86,
+   "p": 0.999
+  },
+  {
+   "w": " any",
+   "start": 210.86,
+   "end": 211.14,
+   "p": 0.995
+  },
+  {
+   "w": " of",
+   "start": 211.14,
+   "end": 211.28,
+   "p": 0.995
+  },
+  {
+   "w": " my",
+   "start": 211.28,
+   "end": 211.46,
+   "p": 0.991
+  },
+  {
+   "w": " other",
+   "start": 211.46,
+   "end": 211.7,
+   "p": 0.989
+  },
+  {
+   "w": " glasses,",
+   "start": 211.7,
+   "end": 212.12,
+   "p": 0.991
+  },
+  {
+   "w": " which",
+   "start": 212.18,
+   "end": 212.34,
+   "p": 0.998
+  },
+  {
+   "w": " kind",
+   "start": 212.34,
+   "end": 212.52,
+   "p": 0.979
+  },
+  {
+   "w": " of",
+   "start": 212.52,
+   "end": 212.62,
+   "p": 0.998
+  },
+  {
+   "w": " annoys",
+   "start": 212.62,
+   "end": 213.04,
+   "p": 0.999
+  },
+  {
+   "w": " me,",
+   "start": 213.04,
+   "end": 213.2,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 213.36,
+   "end": 213.52,
+   "p": 0.99
+  },
+  {
+   "w": " every",
+   "start": 213.52,
+   "end": 213.76,
+   "p": 0.993
+  },
+  {
+   "w": " time",
+   "start": 213.76,
+   "end": 213.9,
+   "p": 0.978
+  },
+  {
+   "w": " I",
+   "start": 213.9,
+   "end": 214.02,
+   "p": 0.998
+  },
+  {
+   "w": " look",
+   "start": 214.02,
+   "end": 214.14,
+   "p": 0.996
+  },
+  {
+   "w": " at",
+   "start": 214.14,
+   "end": 214.3,
+   "p": 0.997
+  },
+  {
+   "w": " it,",
+   "start": 214.3,
+   "end": 214.44,
+   "p": 0.995
+  },
+  {
+   "w": " I",
+   "start": 214.46,
+   "end": 214.6,
+   "p": 0.998
+  },
+  {
+   "w": " think,",
+   "start": 214.6,
+   "end": 214.82,
+   "p": 0.998
+  },
+  {
+   "w": " like,",
+   "start": 214.92,
+   "end": 215.14,
+   "p": 0.932
+  },
+  {
+   "w": " thanks",
+   "start": 215.36,
+   "end": 215.7,
+   "p": 0.175
+  },
+  {
+   "w": " science.",
+   "start": 215.7,
+   "end": 216.02,
+   "p": 0.521
+  },
+  {
+   "w": " So",
+   "start": 216.52,
+   "end": 216.68,
+   "p": 0.99
+  },
+  {
+   "w": " this",
+   "start": 216.68,
+   "end": 216.78,
+   "p": 0.897
+  },
+  {
+   "w": " is",
+   "start": 216.78,
+   "end": 216.88,
+   "p": 0.994
+  },
+  {
+   "w": " why",
+   "start": 216.88,
+   "end": 217.02,
+   "p": 0.997
+  },
+  {
+   "w": " I",
+   "start": 217.02,
+   "end": 217.12,
+   "p": 0.997
+  },
+  {
+   "w": " stick",
+   "start": 217.12,
+   "end": 217.28,
+   "p": 0.857
+  },
+  {
+   "w": " to",
+   "start": 217.28,
+   "end": 217.42,
+   "p": 0.977
+  },
+  {
+   "w": " theory.",
+   "start": 217.42,
+   "end": 217.68,
+   "p": 0.952
+  },
+  {
+   "w": " The",
+   "start": 218.3,
+   "end": 218.42,
+   "p": 0.391
+  },
+  {
+   "w": " bottom",
+   "start": 218.42,
+   "end": 218.64,
+   "p": 0.953
+  },
+  {
+   "w": " is",
+   "start": 218.64,
+   "end": 218.8,
+   "p": 0.994
+  },
+  {
+   "w": " carried",
+   "start": 218.8,
+   "end": 219.0,
+   "p": 0.998
+  },
+  {
+   "w": " downward",
+   "start": 219.0,
+   "end": 219.3,
+   "p": 0.994
+  },
+  {
+   "w": " by",
+   "start": 219.3,
+   "end": 219.48,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 219.48,
+   "end": 219.62,
+   "p": 0.995
+  },
+  {
+   "w": " water",
+   "start": 219.62,
+   "end": 219.8,
+   "p": 1.0
+  },
+  {
+   "w": " and",
+   "start": 219.8,
+   "end": 219.98,
+   "p": 0.917
+  },
+  {
+   "w": " thunks",
+   "start": 219.98,
+   "end": 220.2,
+   "p": 0.682
+  },
+  {
+   "w": " against",
+   "start": 220.2,
+   "end": 220.42,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 220.42,
+   "end": 220.62,
+   "p": 0.999
+  },
+  {
+   "w": " table.",
+   "start": 220.62,
+   "end": 220.88,
+   "p": 0.999
+  },
+  {
+   "w": " The",
+   "start": 221.2,
+   "end": 221.3,
+   "p": 0.995
+  },
+  {
+   "w": " water",
+   "start": 221.3,
+   "end": 221.46,
+   "p": 1.0
+  },
+  {
+   "w": " splashes",
+   "start": 221.46,
+   "end": 221.88,
+   "p": 0.998
+  },
+  {
+   "w": " around",
+   "start": 221.88,
+   "end": 222.18,
+   "p": 0.998
+  },
+  {
+   "w": " it,",
+   "start": 222.18,
+   "end": 222.36,
+   "p": 0.921
+  },
+  {
+   "w": " spraying",
+   "start": 222.42,
+   "end": 222.6,
+   "p": 0.995
+  },
+  {
+   "w": " droplets",
+   "start": 222.6,
+   "end": 223.04,
+   "p": 0.999
+  },
+  {
+   "w": " in",
+   "start": 223.04,
+   "end": 223.24,
+   "p": 0.414
+  },
+  {
+   "w": " glass",
+   "start": 223.24,
+   "end": 223.46,
+   "p": 0.997
+  },
+  {
+   "w": " shards",
+   "start": 223.46,
+   "end": 223.74,
+   "p": 0.998
+  },
+  {
+   "w": " in",
+   "start": 223.74,
+   "end": 223.92,
+   "p": 0.92
+  },
+  {
+   "w": " all",
+   "start": 223.92,
+   "end": 224.04,
+   "p": 0.999
+  },
+  {
+   "w": " directions.",
+   "start": 224.04,
+   "end": 224.46,
+   "p": 0.998
+  },
+  {
+   "w": " Meanwhile,",
+   "start": 224.46,
+   "end": 225.2,
+   "p": 0.935
+  },
+  {
+   "w": " the",
+   "start": 225.4,
+   "end": 225.5,
+   "p": 0.995
+  },
+  {
+   "w": " detached",
+   "start": 225.5,
+   "end": 225.82,
+   "p": 0.992
+  },
+  {
+   "w": " upper",
+   "start": 225.82,
+   "end": 226.14,
+   "p": 0.983
+  },
+  {
+   "w": " portion",
+   "start": 226.14,
+   "end": 226.56,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 226.56,
+   "end": 226.68,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 226.68,
+   "end": 226.78,
+   "p": 0.994
+  },
+  {
+   "w": " glass",
+   "start": 226.78,
+   "end": 227.04,
+   "p": 0.999
+  },
+  {
+   "w": " continues",
+   "start": 227.04,
+   "end": 227.54,
+   "p": 0.994
+  },
+  {
+   "w": " to",
+   "start": 227.54,
+   "end": 227.82,
+   "p": 0.997
+  },
+  {
+   "w": " rise.",
+   "start": 227.82,
+   "end": 228.12,
+   "p": 0.999
+  },
+  {
+   "w": " After",
+   "start": 228.7,
+   "end": 228.9,
+   "p": 0.993
+  },
+  {
+   "w": " half",
+   "start": 228.9,
+   "end": 229.1,
+   "p": 0.963
+  },
+  {
+   "w": " a",
+   "start": 229.1,
+   "end": 229.28,
+   "p": 0.964
+  },
+  {
+   "w": " second,",
+   "start": 229.28,
+   "end": 229.46,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 229.64,
+   "end": 229.7,
+   "p": 0.997
+  },
+  {
+   "w": " observers,",
+   "start": 229.7,
+   "end": 230.0,
+   "p": 0.643
+  },
+  {
+   "w": " hearing",
+   "start": 230.32,
+   "end": 230.46,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 230.46,
+   "end": 230.64,
+   "p": 0.982
+  },
+  {
+   "w": " pop,",
+   "start": 230.64,
+   "end": 230.86,
+   "p": 0.986
+  },
+  {
+   "w": " have",
+   "start": 231.02,
+   "end": 231.12,
+   "p": 0.932
+  },
+  {
+   "w": " begun",
+   "start": 231.12,
+   "end": 231.3,
+   "p": 0.994
+  },
+  {
+   "w": " to",
+   "start": 231.3,
+   "end": 231.5,
+   "p": 0.995
+  },
+  {
+   "w": " flinch.",
+   "start": 231.5,
+   "end": 231.78,
+   "p": 0.997
+  },
+  {
+   "w": " Their",
+   "start": 232.12,
+   "end": 232.2,
+   "p": 0.985
+  },
+  {
+   "w": " heads",
+   "start": 232.2,
+   "end": 232.4,
+   "p": 0.997
+  },
+  {
+   "w": " might",
+   "start": 232.4,
+   "end": 232.6,
+   "p": 0.984
+  },
+  {
+   "w": " lift",
+   "start": 232.6,
+   "end": 232.88,
+   "p": 0.942
+  },
+  {
+   "w": " involuntarily",
+   "start": 232.88,
+   "end": 233.48,
+   "p": 0.999
+  },
+  {
+   "w": " to",
+   "start": 233.48,
+   "end": 233.74,
+   "p": 0.978
+  },
+  {
+   "w": " follow",
+   "start": 233.74,
+   "end": 233.92,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 233.92,
+   "end": 234.1,
+   "p": 0.996
+  },
+  {
+   "w": " rising",
+   "start": 234.1,
+   "end": 234.36,
+   "p": 0.999
+  },
+  {
+   "w": " movement",
+   "start": 234.36,
+   "end": 234.62,
+   "p": 0.996
+  },
+  {
+   "w": " of",
+   "start": 234.62,
+   "end": 234.8,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 234.8,
+   "end": 234.92,
+   "p": 0.995
+  },
+  {
+   "w": " glass.",
+   "start": 234.92,
+   "end": 235.18,
+   "p": 0.999
+  },
+  {
+   "w": " The",
+   "start": 235.76,
+   "end": 235.9,
+   "p": 0.992
+  },
+  {
+   "w": " glass",
+   "start": 235.9,
+   "end": 236.06,
+   "p": 0.999
+  },
+  {
+   "w": " has",
+   "start": 236.06,
+   "end": 236.26,
+   "p": 0.971
+  },
+  {
+   "w": " just",
+   "start": 236.26,
+   "end": 236.5,
+   "p": 0.957
+  },
+  {
+   "w": " enough",
+   "start": 236.5,
+   "end": 236.74,
+   "p": 0.999
+  },
+  {
+   "w": " speed",
+   "start": 236.74,
+   "end": 237.02,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 237.02,
+   "end": 237.22,
+   "p": 0.997
+  },
+  {
+   "w": " bang",
+   "start": 237.22,
+   "end": 237.4,
+   "p": 0.996
+  },
+  {
+   "w": " into",
+   "start": 237.4,
+   "end": 237.62,
+   "p": 0.989
+  },
+  {
+   "w": " the",
+   "start": 237.62,
+   "end": 237.78,
+   "p": 0.994
+  },
+  {
+   "w": " ceiling,",
+   "start": 237.78,
+   "end": 238.1,
+   "p": 0.999
+  },
+  {
+   "w": " breaking",
+   "start": 238.26,
+   "end": 238.44,
+   "p": 0.995
+  },
+  {
+   "w": " into",
+   "start": 238.44,
+   "end": 238.72,
+   "p": 0.991
+  },
+  {
+   "w": " fragments,",
+   "start": 238.72,
+   "end": 239.12,
+   "p": 0.997
+  },
+  {
+   "w": " which",
+   "start": 239.44,
+   "end": 239.62,
+   "p": 0.996
+  },
+  {
+   "w": " then",
+   "start": 239.62,
+   "end": 239.84,
+   "p": 0.986
+  },
+  {
+   "w": " return",
+   "start": 239.84,
+   "end": 240.16,
+   "p": 0.983
+  },
+  {
+   "w": " to",
+   "start": 240.16,
+   "end": 240.64,
+   "p": 0.981
+  },
+  {
+   "w": " the",
+   "start": 240.64,
+   "end": 240.82,
+   "p": 0.996
+  },
+  {
+   "w": " table.",
+   "start": 240.82,
+   "end": 241.1,
+   "p": 0.999
+  },
+  {
+   "w": " The",
+   "start": 241.64,
+   "end": 241.8,
+   "p": 0.988
+  },
+  {
+   "w": " lesson?",
+   "start": 241.8,
+   "end": 242.08,
+   "p": 0.944
+  },
+  {
+   "w": " If",
+   "start": 242.38,
+   "end": 242.6,
+   "p": 0.985
+  },
+  {
+   "w": " the",
+   "start": 242.6,
+   "end": 242.74,
+   "p": 0.982
+  },
+  {
+   "w": " optimist",
+   "start": 242.74,
+   "end": 243.14,
+   "p": 0.903
+  },
+  {
+   "w": " says",
+   "start": 243.14,
+   "end": 243.3,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 243.3,
+   "end": 243.44,
+   "p": 0.958
+  },
+  {
+   "w": " glass",
+   "start": 243.44,
+   "end": 243.64,
+   "p": 0.999
+  },
+  {
+   "w": " is",
+   "start": 243.64,
+   "end": 243.78,
+   "p": 0.998
+  },
+  {
+   "w": " half",
+   "start": 243.78,
+   "end": 243.98,
+   "p": 0.996
+  },
+  {
+   "w": " full,",
+   "start": 243.98,
+   "end": 244.26,
+   "p": 0.716
+  },
+  {
+   "w": " and",
+   "start": 244.62,
+   "end": 244.72,
+   "p": 0.982
+  },
+  {
+   "w": " the",
+   "start": 244.72,
+   "end": 244.82,
+   "p": 0.988
+  },
+  {
+   "w": " pessimist",
+   "start": 244.82,
+   "end": 245.22,
+   "p": 0.996
+  },
+  {
+   "w": " says",
+   "start": 245.22,
+   "end": 245.38,
+   "p": 0.994
+  },
+  {
+   "w": " the",
+   "start": 245.38,
+   "end": 245.52,
+   "p": 0.98
+  },
+  {
+   "w": " glass",
+   "start": 245.52,
+   "end": 245.72,
+   "p": 0.999
+  },
+  {
+   "w": " is",
+   "start": 245.72,
+   "end": 245.88,
+   "p": 0.997
+  },
+  {
+   "w": " half",
+   "start": 245.88,
+   "end": 246.08,
+   "p": 0.998
+  },
+  {
+   "w": " empty,",
+   "start": 246.08,
+   "end": 246.42,
+   "p": 0.882
+  },
+  {
+   "w": " the",
+   "start": 246.76,
+   "end": 246.9,
+   "p": 0.982
+  },
+  {
+   "w": " physicist",
+   "start": 246.9,
+   "end": 247.32,
+   "p": 0.976
+  },
+  {
+   "w": " shucks.",
+   "start": 247.32,
+   "end": 247.9,
+   "p": 0.979
+  }
+ ]
+}

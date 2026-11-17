@@ -1,0 +1,23 @@
+C=[]
+def c(id,v,t,sb,d,sh,m,conf):
+    C.append(dict(id=id,verdict=v,type=t,state_boundary=sb,desc=d,shot_boundary=sh,motion=m,confidence=conf))
+H='HIGH'
+c("EP0174","CONFIRMED","ADDITIVE_ENTRY","NO","House, office tower and red FOR SALE sign cluster pops in centre-left (x.33-.62,y.30-.52) beside the already-present grey folded laptop prop top-left.","NO",None,H)
+c("EP0175","CONFIRMED","ADDITIVE_ENTRY","NO","Two grey robot figures with red eyes holding phones appear at right (x.69-.84,y.40-.88) in a single frame; existing house/tower/laptop props unchanged.","NO",None,H)
+c("EP0176","RECLASSIFIED","FULL_REPLACE","YES","Whole prop scene (laptop, houses, robots) replaced by single peach-faced stick figure with spiky black hair, smiling, hands on hips, centred. Machine said additive; truth is full replace.","YES",None,H)
+c("EP0177","RECLASSIFIED","FULL_REPLACE","YES","Stick figure replaced by one large mauve heart with thick black outline at left-centre (x.12-.33,y.32-.69). Machine said partial/additive; it is a full composition replace.","YES",None,H)
+c("EP0178","CONFIRMED","DRAW_ON_OR_REVEAL","NO","Green check mark pops in at lower right of heart and grows from small to large over 12 frames; heart unchanged.","NO",{"path":"green check mark scales up from small to full size at heart's lower-right","easing":"ease-out","duration_note":"about 0.4s (f5445-5456)"},"MEDIUM")
+c("EP0179","CONFIRMED","ADDITIVE_ENTRY","NO","Hand-lettered '>0% returns' text appears right of heart/check (x.50-.73,y.35-.70) in the last frames of the window while the first check finishes settling.","NO",{"path":"check settles; text block appears at end (absent f5471, present f5475)","easing":"stepped","duration_note":"text pops within about 4 frames at ~182.5s"},"MEDIUM")
+c("EP0180","CONFIRMED","HIGHLIGHT_ADD","NO","Second green check mark appears right of the 'returns' word (x.80-.93,y.52-.77) and grows from small to larger; text and heart static.","NO",{"path":"second check mark scales up in place at right","easing":"ease-out","duration_note":"about 0.4s (f5491-5502)"},"MEDIUM")
+c("EP0181","CONFIRMED","HIGHLIGHT_ADD","NO","Second check mark finishes growing to full size right of text; diff box lands on heart region only (tiny heart-edge change). Check settles; no other change.","NO",{"path":"second check mark completes scale-up","easing":"ease-out","duration_note":"about 0.4s (f5509-5520)"},"LOW")
+c("EP0182","RECLASSIFIED","FULL_REPLACE","YES","Heart, '>0% returns' text and checks replaced by the centred smiling stick figure with spiky hair; right arm now bent outward in a gesture. Machine said additive; full replace.","YES",None,H)
+c("EP0183","CONFIRMED","POSE_SWAP","NO","Stick figure's right arm (viewer's right) changes from raised bent forearm to lowered forward-pointing arm; head, legs, left arm unchanged.","NO",None,H)
+c("EP0184","RECLASSIFIED","FULL_REPLACE","YES","Stick figure replaced by a single brown yen banknote (circle with yen sign) at top-left (x.11-.30,y.15-.36). Machine said additive; full replace to a new prop scene.","YES",None,H)
+c("EP0185","CONFIRMED","ADDITIVE_ENTRY","NO","Second yen banknote enters below and right of the first (x.21-.40,y.36-.58); first note unchanged.","NO",None,H)
+c("EP0186","CONFIRMED","ADDITIVE_ENTRY","NO","Third yen banknote appears lower-left (x.14-.31,y.60-.82), forming a cascading stack of three notes at left.","NO",None,H)
+c("EP0187","CONFIRMED","ADDITIVE_ENTRY","NO","Large Earth globe (blue/green with white clouds) appears right side (x.55-.88,y.22-.82); three yen notes at left unchanged. Machine said large partial replace; it is additive.","NO",None,H)
+c("EP0188","RECLASSIFIED","ELEMENT_SWAP","YES","Three yen notes at left swapped for a green Japan-shaped cartoon character with big eyes, money bag with dollar sign and green banknote; globe at right unchanged.","AMBIGUOUS",None,H)
+c("EP0189","CONFIRMED","FULL_REPLACE","YES","Japan character and globe replaced by one large yen banknote centred (x.28-.60,y.25-.70) on blank canvas.","YES",None,H)
+c("EP0190","CONFIRMED","PARTIAL_REPLACE","YES","Large centred yen note shrinks and relocates to lower-left (x.12-.28,y.47-.72) while hand-lettered 'Yen carry trade' title appears top-left (x.14-.38,y.20-.40).","NO",None,H)
+c("EP0191","CONFIRMED","ADDITIVE_ENTRY","NO","Thick black equals sign appears mid-frame at x.43-.50,y.47-.54 right of the yen note; rest unchanged.","NO",None,H)
+c("EP0192","CONFIRMED","ADDITIVE_ENTRY","NO","Third-party cut-in photo of a man in dark jacket lying on piles of banknote bundles appears right (x.59-.92,y.28-.72), completing 'yen note = cash pile' equation.","NO",None,H)

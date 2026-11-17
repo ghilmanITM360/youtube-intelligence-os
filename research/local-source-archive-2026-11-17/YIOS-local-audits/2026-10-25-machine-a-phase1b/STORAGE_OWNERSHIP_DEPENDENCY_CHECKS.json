@@ -1,0 +1,157 @@
+{
+  "open_handles": [
+    {
+      "pid": "14917",
+      "command": "node_repl",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "14918",
+      "command": "node_repl",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "14919",
+      "command": "node",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "14978",
+      "command": "node_repl",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "18611",
+      "command": "zsh",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "18612",
+      "command": "Python",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "18613",
+      "command": "lsof",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "64032",
+      "command": "node",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "64035",
+      "command": "node_repl",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "64036",
+      "command": "node_repl",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    },
+    {
+      "pid": "64056",
+      "command": "node_repl",
+      "fd": "cwd",
+      "access": " ",
+      "path": "/Users/ghilmankhan/workprojects/youtube-intelligence-os"
+    }
+  ],
+  "processes": {
+    "14917": "  PID  PPID STARTED                      COMMAND\n14917 49883 Sun Oct 25 23:29:46 2026     /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n",
+    "14918": "  PID  PPID STARTED                      COMMAND\n14918 49883 Sun Oct 25 23:29:46 2026     /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n",
+    "14919": "  PID  PPID STARTED                      COMMAND\n14919 49883 Sun Oct 25 23:29:46 2026     /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node /Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/@oai/cua-repl/bin/cua-repl.mjs\n",
+    "14978": "  PID  PPID STARTED                      COMMAND\n14978 14919 Sun Oct 25 23:29:46 2026     /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n",
+    "18611": "  PID  PPID STARTED                      COMMAND\n18611 49883 Sun Oct 25 23:44:31 2026     /bin/zsh -c python3 - <<'PY'\\012import pathlib,json,subprocess,os,re\\012H=pathlib.Path('/Users/ghilmankhan');D=H/'YIOS-local-audits/2026-10-25-machine-a-phase1b';R={};m=json.loads((D/'STORAGE_READINESS_MEASUREMENTS.json').read_text());roots=[v['path'] for v in m['roots']]\\012# Bounded process open-file inventory; no writes or interruptions.\\012p=subprocess.run(['lsof','-n','-F','pcfan'],capture_output=True,text=True);rec={};matches=[]\\012for line in p.stdout.splitlines():\\012 if line.startswith('p'):rec={'pid':line[1:]}\\012 elif line.startswith('c'):rec['command']=line[1:]\\012 elif line.startswith('f'):rec['fd']=line[1:]\\012 elif line.startswith('a'):rec['access']=line[1:]\\012 elif line.startswith('n'):\\012  name=line[1:]\\012  if any(name==x or name.startswith(x+'/') for x in roots):matches.append(dict(rec,path=name))\\012R['open_handles']=matches;R['processes']={}\\012for pid in sorted({x['pid'] for x in matches}):R['processes'][pid]=subprocess.run(['ps','-p',pid,'-o','pid,ppid,lstart,command'],capture_output=True,text=True).stdout\\012R['ps_capcut_claude']=subprocess.run(['ps','-axo','pid,ppid,stat,command'],capture_output=True,text=True).stdout\\012R['ps_capcut_claude']='\\n'.join(x for x in R['ps_capcut_claude'].splitlines() if re.search(r'Claude|claude|CapCut',x) and 'python3 -' not in x)\\012known=['yios-casual-economics','yios-dr-rehan-test-videos','yios-expansion','yios-integration','yios-main-recovery','yios-packaging-integration','yios-packaging-repair','yios-registration-review','yios-thumbnail-forensics']\\012R['retired_paths']=[{'path':str(H/'workprojects'/n),'exists':(H/'workprojects'/n).exists()} for n in known]\\012for p in [H/'.codex/worktrees/canonical-integration/youtube-intelligence-os',H/'.codex/worktrees/finance-short-01/youtube-intelligence-os',pathlib.Path('/private/tmp/wt-integration')]:R['retired_paths'].append({'path':str(p),'exists':p.exists()})\\012R['workprojects_yios_entries']=[str(p) for p in (H/'workprojects').iterdir() if re.search(r'yios|youtube-intelligence|yio-cf|what.if',p.name,re.I)]\\012R['codex_worktree_yios_hits']=[]\\012wp=H/'.codex/worktrees'\\012if wp.exists():\\012 for p in wp.iterdir():\\012  if p.is_dir():\\012   for q in p.iterdir():\\012    if re.search(r'yios|youtube-intelligence',q.name,re.I):R['codex_worktree_yios_hits'].append({'path':str(q),'git_marker':(q/'.git').exists()})\\012R['dependency_receipts']={}\\012for n in ['production-dependencies.json','capcut-current-dependencies.json']:\\012 p=H/'YIOS-local-audits/2026-10-25-machine-a-phase1a'/n;v=json.loads(p.read_text());print(n,str(v)[:2800]);R['dependency_receipts'][n]=str(p)\\012(D/'STORAGE_OWNERSHIP_DEPENDENCY_CHECKS.json').write_text(json.dumps(R,indent=2));print('handles',len(matches),'processes',list(R['processes']),'retired exist',R['retired_paths'],'other codexhits',R['codex_worktree_yios_hits'],'CapcutClaude',R['ps_capcut_claude'][:1000]);print('hardlinks',m['global_hardlinks'])\\012PY\\012diskutil info /System/Volumes/Data | rg 'Volume Name|File System|APFS|Container|Free Space|Used Space|Total Space'\n",
+    "18612": "  PID  PPID STARTED                      COMMAND\n18612 18611 Sun Oct 25 23:44:31 2026     /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python -\n",
+    "18613": "  PID  PPID STARTED                      COMMAND\n",
+    "64032": "  PID  PPID STARTED                      COMMAND\n64032 49883 Sun Oct 25 11:34:20 2026     /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node /Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/@oai/cua-repl/bin/cua-repl.mjs\n",
+    "64035": "  PID  PPID STARTED                      COMMAND\n64035 49883 Sun Oct 25 11:34:20 2026     /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n",
+    "64036": "  PID  PPID STARTED                      COMMAND\n64036 49883 Sun Oct 25 11:34:20 2026     /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n",
+    "64056": "  PID  PPID STARTED                      COMMAND\n64056 64032 Sun Oct 25 11:34:21 2026     /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n"
+  },
+  "ps_capcut_claude": " 1097   654 S    /Applications/Claude.app/Contents/Helpers/chrome-native-host chrome-extension://fcoeoabgfenejglbffodgkkbkcdhcgfn/\n82730     1 Ss   /Users/ghilmankhan/.bun/bin/bun /Users/ghilmankhan/.claude/plugins/cache/thedotmack/claude-mem/15.2.0/scripts/worker-service.cjs --daemon\n82881 82730 S    /opt/homebrew/bin/uv tool uvx --python 3.13 --with onnxruntime>=1.20 --with protobuf<7 --with chromadb==1.5.9 --with pydantic<2.14 --from chroma-mcp==0.2.6 chroma-mcp --client-type persistent --data-dir /Users/ghilmankhan/.claude-mem/chroma\n82883 82881 S    /Users/ghilmankhan/.cache/uv/archive-v0/2d_RZSByEaa_9DAO/bin/python /Users/ghilmankhan/.cache/uv/archive-v0/2d_RZSByEaa_9DAO/bin/chroma-mcp --client-type persistent --data-dir /Users/ghilmankhan/.claude-mem/chroma",
+  "retired_paths": [
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-casual-economics",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-dr-rehan-test-videos",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-expansion",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-integration",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-main-recovery",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-packaging-integration",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-packaging-repair",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-registration-review",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/workprojects/yios-thumbnail-forensics",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/.codex/worktrees/canonical-integration/youtube-intelligence-os",
+      "exists": false
+    },
+    {
+      "path": "/Users/ghilmankhan/.codex/worktrees/finance-short-01/youtube-intelligence-os",
+      "exists": false
+    },
+    {
+      "path": "/private/tmp/wt-integration",
+      "exists": false
+    }
+  ],
+  "workprojects_yios_entries": [
+    "/Users/ghilmankhan/workprojects/youtube-intelligence-os",
+    "/Users/ghilmankhan/workprojects/yios-recovery-status",
+    "/Users/ghilmankhan/workprojects/yios-visual-forensics-install-candidate-2026-10-24",
+    "/Users/ghilmankhan/workprojects/video data of what if",
+    "/Users/ghilmankhan/workprojects/yio-cf-editing-forensics-local-evidence"
+  ],
+  "codex_worktree_yios_hits": [],
+  "dependency_receipts": {
+    "production-dependencies.json": "/Users/ghilmankhan/YIOS-local-audits/2026-10-25-machine-a-phase1a/production-dependencies.json",
+    "capcut-current-dependencies.json": "/Users/ghilmankhan/YIOS-local-audits/2026-10-25-machine-a-phase1a/capcut-current-dependencies.json"
+  }
+}

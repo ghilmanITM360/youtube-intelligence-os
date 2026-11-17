@@ -1,0 +1,244 @@
+{
+ "video_id": "WCS1bK3KB3U",
+ "total": 42,
+ "passed": 42,
+ "failed": 0,
+ "checks": [
+  {
+   "check": "states start at 0",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "states end at last frame",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "states contiguous, no gap/overlap",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "state pts == frame/24",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "event states resolve",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "shot ids resolve",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "events ordered",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "events within range",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "event inside its state",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "every measured episode explained by a state boundary or a motion state",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "every hard-cut start has a measured entry change (frac>=0.01 or >=2000 full-res px)",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "source sha256 recomputed == manifest",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "source sha256 == campaign baseline",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "CFR proven (single frame delta)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "all frames measured",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "episodes present",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "episode strips exist",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "one spec per state",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "every spec has image+animation prompts and QA",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "no spec asks to copy third-party assets",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty source_manifest.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty coverage.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty shot_ledger.csv",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty visual_event_ledger.csv",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty visual_states.csv",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty audio_visual_alignment.csv",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty audio_visual_alignment_phrase.csv",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty visual_ct_scan_report.md",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty reconstruction_blueprint.md",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty quality_gate.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exists non-empty continuation_handoff.md",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "AV sign-off not claimed",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "audio rows all labelled ASR_UNCERTIFIED",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "evidence sheets exist (overview/episodes/state_rep)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "checksum seal verifies (all listed files)",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "every EXACT onset has a measured change at its start frame (>=20 px)",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "negative test detected: gap between states",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "negative test detected: overlap between states",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "negative test detected: wrong end of video",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "negative test detected: event outside state",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "negative test detected: hard cut with no measured change",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "negative test detected: missing state for a measured episode (a cut state deleted)",
+   "passed": true,
+   "detail": ""
+  }
+ ],
+ "negative_tests": [
+  {
+   "test": "gap between states",
+   "detected": true
+  },
+  {
+   "test": "overlap between states",
+   "detected": true
+  },
+  {
+   "test": "wrong end of video",
+   "detected": true
+  },
+  {
+   "test": "event outside state",
+   "detected": true
+  },
+  {
+   "test": "hard cut with no measured change",
+   "detected": true
+  },
+  {
+   "test": "missing state for a measured episode (a cut state deleted)",
+   "detected": true
+  }
+ ]
+}

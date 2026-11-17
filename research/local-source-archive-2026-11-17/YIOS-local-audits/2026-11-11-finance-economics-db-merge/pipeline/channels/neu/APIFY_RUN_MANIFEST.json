@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-11T17:15:57.000Z",
+  "channel": {
+    "name": "Neu",
+    "handle": "@neu-youtube",
+    "id": "UChS4VG1jXDcxDnUvwcMcxtg"
+  },
+  "tranche": "X",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "x_neu",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.332",
+    "run_id": "7lzjT07IszJcXXByf",
+    "dataset_id": "NCbFUX075iKoePtaA",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-11T17:12:43.000Z",
+    "finished_at_utc": "2026-11-11T17:15:57.000Z",
+    "charged_events": {
+      "result": 56
+    },
+    "actual_cost_usd": 0.224,
+    "usage_total_usd_reported": 0.224,
+    "max_cost_usd": 0.8,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UChS4VG1jXDcxDnUvwcMcxtg"
+      ],
+      "maxResults": 60,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 56,
+    "raw_file": "raw/x_neu_7lzjT07IszJcXXByf_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 56,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

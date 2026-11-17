@@ -1,0 +1,34 @@
+{
+ "video_id": "SLd4hnmeW_g",
+ "source_sha256": "893ebff4dda30f790f56131052879b3353d75af7ba35edece8f95bf5810a3ac5",
+ "contract": "asset_library/_channel/ct_closure/VISUAL_CLOSURE_CONTRACT_v1.md (sha a54b6c3c)",
+ "generated_utc": "2026-11-09T01:30:49Z",
+ "visual_gates": {
+  "V1_source_identity": "PASS",
+  "V2_full_temporal_overview": "PASS",
+  "V3_candidate_shots_verified": "PASS",
+  "V4_meaningful_state_timing": "PASS",
+  "V5_motion_design_review": "PASS",
+  "V6_creative_design_review": "PASS",
+  "V7_production_blueprint": "PASS"
+ },
+ "evidence": {
+  "V1_V2": "closure_v1/checks.json",
+  "V3": "shot_ledger.csv + native before/after frames (closure_v1/native)",
+  "V4": "closure_v1/CLOSURE.md \u00a7V4 + strip_*.png",
+  "V5": "rv1 every-frame activity views + closure_v1/activity_curves.csv + checks.json hold stillness",
+  "V6": "closure_v1/holds_*.jpg (viewed) + CLOSURE.md \u00a7V6",
+  "V7": "closure_v1/reconstruction_blueprint_v2.md"
+ },
+ "separate_not_required": {
+  "visual_script_mapping": "PARTIAL (ASR_UNCERTIFIED)",
+  "audio_human_listening": "BLOCKED_CAPABILITY",
+  "final_av_signoff": "BLOCKED",
+  "render_test": "NOT_DONE"
+ },
+ "final_video_status": "VISUAL_ANALYSIS_COMPLETE",
+ "status_scope": "visual-only; implies nothing about sound",
+ "ct_scan_complete": false,
+ "full_av_signoff": false,
+ "reviewer": "claude deepvf-ct1 (single model reviewer; no human second review)"
+}

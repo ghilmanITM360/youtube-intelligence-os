@@ -1,0 +1,9 @@
+H='HIGH'
+c("EP0232","CONFIRMED","FULL_REPLACE","YES","N°2 scene replaced by teacher stick figure (spiky hair, smiling, arm outstretched) at left and large green chalkboard in brown frame reading 'Free money???' at right.","YES",None,H)
+c("EP0233","RECLASSIFIED","TEXT_CHANGE","NO","Chalkboard text changes from 'Free money???' to 'Well, uh...'; teacher's smile becomes flat mouth and the pointer stick reappears across his body. Machine said partial/additive; text plus face/pose edit.","NO",None,H)
+c("EP0234","CONFIRMED","FULL_REPLACE","YES","Teacher and chalkboard replaced by a different stick figure with beige head, dark brown curled top-knot, small smile and wide-set legs, left side (x.16-.34,y.05-1.0), cropped at bottom; right side blank.","YES",None,H)
+c("EP0235","CONFIRMED","ADDITIVE_ENTRY","NO","Hand-lettered '4%' appears right of the figure's head (x.46-.55,y.43-.53). Large diff bbox covers the figure but only faint codec change there (I-frame).","NO",None,"MEDIUM")
+c("EP0236","CONFIRMED","ADDITIVE_ENTRY","NO","Green paper document prop with script 'United States Treasury' and scribbled signature lines appears right of '4%' (x.60-.90,y.26-.74).","NO",None,H)
+c("EP0237","CONFIRMED","EXPRESSION_CHANGE","NO","Figure's smile becomes a flat mouth and worried slanted eyebrows appear above the eyes; head and body unchanged.","NO",None,H)
+c("EP0238","CONFIRMED","FULL_REPLACE","YES","Figure, '4%' and Treasury document replaced by one large brown yen banknote centred (x.23-.79,y.15-.80) on blank canvas.","YES",None,H)
+c("SUB003","CONFIRMED","WIPE_OR_FADE","NO","Centred yen banknote fades out gradually (outline goes grey, fill pales) over about a second until the canvas is blank; no position change.","NO",{"path":"opacity decreases to zero in place","easing":"linear","duration_note":"32 frames, about 1.07s (f7476-7507)"},H)

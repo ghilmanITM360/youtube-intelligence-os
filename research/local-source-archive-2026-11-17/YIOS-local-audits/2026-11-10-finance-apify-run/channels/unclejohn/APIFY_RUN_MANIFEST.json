@@ -1,0 +1,62 @@
+{
+  "snapshot_timestamp_utc": "2026-11-09T22:29:56.529Z",
+  "channel": {
+    "name": "Uncle John Financial",
+    "handle": "@unclejohnfinancial",
+    "id": "UCWugleQL2wqr5N1X4o8yyLw"
+  },
+  "tranche": "G",
+  "coverage_status": "GAP_FILL_NEWEST",
+  "primary_run": {
+    "label": "g_unclejohn",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "9DqJofvY5Pqgfujqk",
+    "dataset_id": "nkbpzcB0N31GfJAcz",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-09T22:29:21.365Z",
+    "finished_at_utc": "2026-11-09T22:29:56.529Z",
+    "charged_events": {
+      "result": 14,
+      "date-filter": 0,
+      "ai-video-description": 0,
+      "ai-video-summary": 0,
+      "transcribeMinute": 0
+    },
+    "actual_cost_usd": 0.056,
+    "usage_total_usd_reported": 0.056,
+    "max_cost_usd": 0.08,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCWugleQL2wqr5N1X4o8yyLw"
+      ],
+      "maxResults": 9,
+      "maxResultsShorts": 9,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 14,
+    "raw_file": "raw/g_unclejohn_9DqJofvY5Pqgfujqk_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 14,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": {
+    "pr39_package_rows": 53,
+    "fetched_ids": 14,
+    "already_in_pr39": 10,
+    "new_vs_pr39": [
+      "Gv0P1wIb92U",
+      "KhTfi-KCF9E",
+      "TpmCJYe5EPE",
+      "c3PPQ5rhfcY"
+    ]
+  }
+}

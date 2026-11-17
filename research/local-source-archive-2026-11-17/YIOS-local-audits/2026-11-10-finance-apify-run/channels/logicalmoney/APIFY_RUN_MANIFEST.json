@@ -1,0 +1,64 @@
+{
+  "snapshot_timestamp_utc": "2026-11-09T22:32:23.768Z",
+  "channel": {
+    "name": "Logical Money",
+    "handle": "@LogicalMoney72",
+    "id": "UCKhpM-cu2Cod-GyG6KngNYg"
+  },
+  "tranche": "G",
+  "coverage_status": "GAP_FILL_NEWEST",
+  "primary_run": {
+    "label": "g_logicalmoney",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "BXzl010UN4ti6Boj5",
+    "dataset_id": "y3gbVl3bfJDzCp9Z4",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-09T22:32:01.446Z",
+    "finished_at_utc": "2026-11-09T22:32:23.768Z",
+    "charged_events": {
+      "result": 12,
+      "date-filter": 0,
+      "ai-video-description": 0,
+      "ai-video-summary": 0,
+      "transcribeMinute": 0
+    },
+    "actual_cost_usd": 0.048,
+    "usage_total_usd_reported": 0.048,
+    "max_cost_usd": 0.09,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCKhpM-cu2Cod-GyG6KngNYg"
+      ],
+      "maxResults": 11,
+      "maxResultsShorts": 11,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 12,
+    "raw_file": "raw/g_logicalmoney_BXzl010UN4ti6Boj5_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 12,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": {
+    "pr39_package_rows": 20,
+    "fetched_ids": 12,
+    "already_in_pr39": 6,
+    "new_vs_pr39": [
+      "J38JHf9CV6U",
+      "VTDXwfderJk",
+      "aADicDzTcuM",
+      "fEOukoFt5o4",
+      "pyk2Oq30_HQ",
+      "y2606fdiA5U"
+    ]
+  }
+}

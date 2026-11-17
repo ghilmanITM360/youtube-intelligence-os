@@ -1,0 +1,15 @@
+key,value
+generated_at_utc,2026-11-09/10
+repo_commit_HEAD,"efd3dc0a18bc50e95ae6a6c1e1b9931b2d0abbf6 (docs/yios-consolidation-index, clean)"
+registry_db_path,"data/catalog/youtube_channel_registry.db (Git LFS, materialized, opened mode=ro)"
+registry_db_sha256,39e7a28ba592b9022bd1b32f4c288edde519730164a98ea858ce90c44d52f654
+registry_schema_version,PRAGMA user_version=0 (no numbered schema version); registry_metadata.generated_at=2026-09-28T13:21:20Z
+registry_source_payload_sha256,b8f72bfee5d3c8edc206dd4a28d4f31470b9f24a1305044548a1dc78ebd90296
+canonical_channel_count,"75 (STANDARD_PACKAGE 40, HISTORICAL_CATALOG 6, IDENTITY_ONLY 29); 2,303 videos"
+count_vs_owner_expectation,"Owner expected ~73. docs/YOUTUBE_CHANNEL_REGISTRY.md (verified 2026-09-23) says 71; the DB was rebuilt 2026-09-28 after PR #6 added DS-000029/30/32/33 (Doctor Thomas, Senior Health Hub, Decode Your Heart, Better Health While Aging) = 75. No evidence supports 73."
+incoming_reconciliation,144 supplied entries -> 124 normalized URLs (20 repeats; 15 suffixes removed) -> 120 verified UC IDs (0 shared IDs) + 4 IDENTITY_UNRESOLVED
+incoming_raw_list_note,"Only the 124-URL list and the Appendix repeat/suffix summary were supplied; occurrence counts are reconstructed from that summary, not from a raw 144-line file."
+access_path,Public HTTP fetch of each channel /videos and /shorts page (no login; consent cookie only); no media downloaded; Firefox/browser session NOT used (cost/scale); 4 x 404 checked by web search
+classification_nature,AI interpretation of titles/descriptions; not factual observation. channel_type is UNOBSERVED unless the description or title format states it; thumbnails were not viewed.
+package_presence_method,"Known packages matched by exact UC ID (PR #38, #39, #37/#46, DS-000034 on main). id_mentions_on_refs_lead = git grep of the 120 IDs over remote refs: 52 of 56 refs scanned; NOT scanned: origin/ui/v1 and 3 origin/yios-test/* claim refs. Local worktrees and ~/YIOS-local-audits were not ID-scanned beyond the known CF/xkcd/BE/PE folders. A mention is a lead, not a package."
+pricing_basis,"$4.00/1,000 videos Free plan (data/raw/channel-data/DS-000027/preflight/authenticated_apify_pricing_evidence.json, 2026-09-20). Historical: PR #38 $0.500 total; PR #39 $2.012 total. Must be rechecked live before any run."

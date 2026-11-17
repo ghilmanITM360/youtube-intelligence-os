@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-11T17:10:21.000Z",
+  "channel": {
+    "name": "Econ in a Nutshell",
+    "handle": "@EconInANutshell",
+    "id": "UC_DdIoJzHZXlEKTVy41_KQw"
+  },
+  "tranche": "X",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "x_econinanutshell",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.332",
+    "run_id": "Ejhif25dRKVknumlx",
+    "dataset_id": "PIokdgghg8DOt6VtB",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-11T17:06:47.000Z",
+    "finished_at_utc": "2026-11-11T17:10:21.000Z",
+    "charged_events": {
+      "result": 14
+    },
+    "actual_cost_usd": 0.056,
+    "usage_total_usd_reported": 0.056,
+    "max_cost_usd": 0.8,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UC_DdIoJzHZXlEKTVy41_KQw"
+      ],
+      "maxResults": 70,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 14,
+    "raw_file": "raw/x_econinanutshell_Ejhif25dRKVknumlx_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 14,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

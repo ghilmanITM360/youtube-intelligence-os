@@ -1,0 +1,68 @@
+{
+  "session_path": "/Users/ghilmankhan/.codex/sessions/2026/10/26/rollout-2026-10-26T02-00-49-01a174dd-b6f2-7070-abe8-92d25296cf8d.jsonl",
+  "extraction_bounds_utc": [
+    "2026-10-26T18:05:00Z",
+    "2026-10-26T18:17:00Z"
+  ],
+  "records": [
+    {
+      "line": 9922,
+      "utc": "2026-10-26T18:05:52.045Z",
+      "tool": "js",
+      "call_id": "call_975312d5265c488c91859b40739a6848",
+      "input": "{\"code\":\"await storage24.reload(); await storage24.getAXState();\",\"title\":\"Refresh quota before next bounded priority batch\"}",
+      "record_sha256": "c47512c4aad624a2e4b8f71ebb4c7edf8be9e6b5184f4c4623c42a949b475c2b"
+    },
+    {
+      "line": 9929,
+      "utc": "2026-10-26T18:06:00.041Z",
+      "tool": "exec",
+      "call_id": "call_bd69280cbe65467ba7d97ef72e880fdf",
+      "input": "store(\"latestGate\",{...load(\"latestGate\"),five_hour_used:14,weekly_used:22,mac_free_bytes:19312648*1024,observed_at:new Date().toISOString()});\nawait eval(\"(async()=>{\"+load(\"orchestrationV5\")+\"const b=JSON.parse(await helper('prepare',load('latestGate')));store('activeBatch',b);text(b); })()\");\n",
+      "record_sha256": "13f82caf18b1702afda4b1ddc6fbd7f73aef100aa5f4364863cbe3edd07b819f"
+    },
+    {
+      "line": 9934,
+      "utc": "2026-10-26T18:06:08.390Z",
+      "tool": "exec",
+      "call_id": "call_beede7b5954a4bd6b2f5837e64c9f717",
+      "input": "const u=await tools.mcp__codex_apps__google_drive_create_folder({name:\"batch-0031-20261026T1804Z\",parent_folder:\"12FkMHzKAtNYleLwX2UBmbMDMlk_6sXEf\"});if(u.isError)throw Error(\"CREATE_FAILED\");\nconst m=(await tools.mcp__codex_apps__google_drive_get_file_metadata({fileId:u.structuredContent.id,fields:\"*\"})).structuredContent;if(m.shared!==false||m.permissions.length!==1||m.permissions[0].emailAddress!==\"kgk2930@gmail.com\"||m.permissions[0].role!==\"owner\"||!m.parent_ids.includes(\"12FkMHzKAtNYleLwX2UBmbMDMlk_6sXEf\"))throw Error(\"PRIVACY\");\nlet b=load(\"activeBatch\");b.destination_folder_id=m.id;store(\"activeBatch\",b);\nawait eval(\"(async()=>{\"+load(\"orchestrationV5\")+\"await helper('event',{batch_dir:load('activeBatch').batch_dir,name:'DESTINATION.json',data:{folder:\"+JSON.stringify(m)+\"}});await helper('event',{batch_dir:load('activeBatch').batch_dir,name:'PREFLIGHT_OWNER_METADATA.json',data:{results:load('preflight31Metadata')}}); })()\");text(m.id);\n",
+      "record_sha256": "7a6138608e114bed911152a33324ee94edbfc5121a90df50c8549f381622f1c5"
+    },
+    {
+      "line": 9942,
+      "utc": "2026-10-26T18:06:16.263Z",
+      "tool": "js",
+      "call_id": "call_f9ac504bad9b450c9fdd4ab2959ac494",
+      "input": "{\"code\":\"await batch24Tab.goto('https://drive.google.com/drive/u/1/folders/1tUB-VgmAgeOZs2NgmVMQ1OFxhdLcgP4J'); await batch24Tab.getAXState();\",\"title\":\"Open private Batch31 namespace\"}",
+      "record_sha256": "a8276a5ea64cdbad3c93f2776aa2c1304391f9e39a4efb1a42d37770fbbbeb51"
+    },
+    {
+      "line": 9947,
+      "utc": "2026-10-26T18:06:22.631Z",
+      "tool": "js",
+      "call_id": "call_2d643339399444b2ad9dd68a75c96daf",
+      "input": "{\"code\":\"await batch24Tab.click(21); await batch24Tab.getAXState();\",\"title\":\"Open standard file upload menu\"}",
+      "record_sha256": "5cc1a3d4e2ad5d7b6ed70b4099348e01a05d0c9a3374ddab9918e211539a7d1c"
+    },
+    {
+      "line": 9952,
+      "utc": "2026-10-26T18:06:28.843Z",
+      "tool": "js",
+      "call_id": "call_beced81c9c1a4b32871239932f9b0b5c",
+      "input": "{\"code\":\"let p31=batch24Tab.playwright.waitForEvent('filechooser');await batch24Tab.click(62);let c31=await p31;if(!c31.isMultiple())throw Error('MULTI_REQUIRED');await c31.setFiles(['/Users/ghilmankhan/workprojects/youtube-intelligence-os/productions/senior-health-casually-finance-3/01_HIIT_AFTER_60/animation/v3/qa/test_window.mp4','/Users/ghilmankhan/workprojects/youtube-intelligence-os/productions/senior-health-casually-finance-3/01_HIIT_AFTER_60/source_audio/narration_mix.wav','/Users/ghilmankhan/workprojects/youtube-intelligence-os/productions/senior-health-casually-finance-3/01_HIIT_AFTER_60/source_audio/voice_v2_paced.wav']);await batch24Tab.getAXState();\",\"title\":\"Upload three exact selected media files\"}",
+      "record_sha256": "110d65411fc6ac53bfb793fd1a2288b6c1fcb268e3e8b5e74b86f4a68b183f2b"
+    },
+    {
+      "line": 9957,
+      "utc": "2026-10-26T18:16:15.245Z",
+      "tool": "exec",
+      "call_id": "call_91773990526e450ab8c3e5222aaaecb7",
+      "input": "await eval(\"(async()=>{\"+load(\"orchestrationV5\")+\"await captureUiListing(); })()\");\n",
+      "record_sha256": "011a5fd7fba7e6239f2059285089c5b72a98e6a3e860b6a749692dc85027da3d"
+    }
+  ],
+  "one_setFiles_call_observed": true,
+  "no_separate_1811_upload_call_in_available_local_session_logs": true,
+  "limitation": "Absence in available Codex session logs does not exclude a browser internal retry, external client, manual action, other Mac or unrecorded session. No signed URLs or agent credentials copied."
+}

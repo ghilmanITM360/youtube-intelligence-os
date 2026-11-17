@@ -1,0 +1,4931 @@
+{
+  "master_ok": true,
+  "gen_required": 62,
+  "gen_accepted": 0,
+  "gen_missing": [
+    "CHR-V01",
+    "CHR-V02",
+    "CHR-V03",
+    "CHR-V04",
+    "CHR-X01",
+    "CHR-X02",
+    "CHR-X03",
+    "CHR-X04",
+    "CHR-X05",
+    "CHR-X06",
+    "CHR-G01",
+    "CHR-G02",
+    "CHR-G03",
+    "CHR-G04",
+    "CHR-P01",
+    "CHR-P02",
+    "CHR-P03",
+    "CHR-P04",
+    "CHR-P05",
+    "CHR-P06",
+    "CHR-P07",
+    "CHR-P08",
+    "CHR-P09",
+    "CHR-P10",
+    "CHR-P11",
+    "CHR-P12",
+    "CHR-P13",
+    "CHR-P14",
+    "MUG-R01",
+    "MUG-01",
+    "MUG-02",
+    "WTR-01",
+    "WTR-02",
+    "WTR-03",
+    "WTR-04",
+    "SPN-01",
+    "SPN-02",
+    "SPN-03",
+    "SPN-04",
+    "SPN-05",
+    "SPN-06",
+    "THM-R01",
+    "THM-01",
+    "THM-02",
+    "THM-03",
+    "TBL-01",
+    "RUL-01",
+    "THR-01",
+    "JUG-01",
+    "CLK-01",
+    "BLB-01",
+    "MWV-01",
+    "HRS-01",
+    "NIA-01",
+    "NIA-02",
+    "NIA-03",
+    "NIA-04",
+    "NIA-06",
+    "CAV-01",
+    "CAV-02",
+    "CAV-03",
+    "FLM-01"
+  ],
+  "rows_failing": 316,
+  "results": [
+    {
+      "asset_id": "PIPE-01",
+      "attempt": "1",
+      "status": "PASS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "master_identity": true
+      },
+      "ok": true
+    },
+    {
+      "asset_id": "PIPE-02",
+      "attempt": "1",
+      "status": "PENDING_VISUAL_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V01",
+      "attempt": "1",
+      "status": "REJECTED_FLOOR_LINE",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": false,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V01",
+      "attempt": "2",
+      "status": "REJECTED_FLOOR_LINE",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": false,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V01",
+      "attempt": "3",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V02",
+      "attempt": "1",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V02",
+      "attempt": "2",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V02",
+      "attempt": "3",
+      "status": "FAILED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V03",
+      "attempt": "1",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V04",
+      "attempt": "1",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V04",
+      "attempt": "2",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V04",
+      "attempt": "3",
+      "status": "FAILED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X01",
+      "attempt": "1",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": false,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": false,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X01",
+      "attempt": "1",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X01",
+      "attempt": "2",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X01",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V01",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V02",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V03",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V04",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X02",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X03",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X04",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X05",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X06",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G02",
+      "attempt": "2",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G02",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G03",
+      "attempt": "2",
+      "status": "REJECTED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G03",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G04",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-MS01",
+      "attempt": "1",
+      "status": "FAILED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V03",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V02",
+      "attempt": "4",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V01",
+      "attempt": "4",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V04",
+      "attempt": "4",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-MS01",
+      "attempt": "2",
+      "status": "FAILED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V03",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-MS01",
+      "attempt": "3",
+      "status": "FAILED",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "PIPE-02",
+      "attempt": "1",
+      "status": "PENDING_VISUAL_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V01",
+      "attempt": "1",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V02",
+      "attempt": "1",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V03",
+      "attempt": "1",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V04",
+      "attempt": "1",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X01",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X02",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X03",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X04",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X05",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X06",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G01",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G02",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G03",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G04",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-MS01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V01",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V02",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V03",
+      "attempt": "2",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V04",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V01",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V02",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V03",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V04",
+      "attempt": "3",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V01",
+      "attempt": "4",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V02",
+      "attempt": "4",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V03",
+      "attempt": "4",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-V04",
+      "attempt": "4",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-MS01",
+      "attempt": "2",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MUG-R01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-R01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MUG-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MUG-02",
+      "attempt": "1",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-01",
+      "attempt": "1",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-01",
+      "attempt": "2",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-01",
+      "attempt": "3",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-01",
+      "attempt": "4",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-02",
+      "attempt": "1",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-04",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-01",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-01",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-01",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-01",
+      "attempt": "4",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-03",
+      "attempt": "1",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-02",
+      "attempt": "1",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-03",
+      "attempt": "1",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-04",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-05",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-06",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-02",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-03",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TBL-01",
+      "attempt": "1",
+      "status": "FAILED_BACKGROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TBL-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X01",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X02",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X03",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X04",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X05",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-X06",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "C_head_height": true,
+        "C_head_top_y": true,
+        "C_head_axis_x": true,
+        "C_eyes_present": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G01",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G02",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G03",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-G04",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "G_nonempty": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-MS01",
+      "attempt": "3",
+      "status": "FAILED_PROPORTIONS",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P01",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P02",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P03",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P04",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P05",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P06",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P07",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P08",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P09",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P10",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P11",
+      "attempt": "1",
+      "status": "FAILED_CUTOUT_OR_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P12",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P13",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P14",
+      "attempt": "1",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P01",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P02",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P03",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P04",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P05",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P06",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P07",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P08",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P09",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P10",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P11",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P12",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P13",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P14",
+      "attempt": "2",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P01",
+      "attempt": "3",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P02",
+      "attempt": "3",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P03",
+      "attempt": "3",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P04",
+      "attempt": "3",
+      "status": "FAILED_CUTOUT_OR_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "D_feet_baseline": true,
+        "D_strict_head_top": false
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P05",
+      "attempt": "3",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P06",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P07",
+      "attempt": "3",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P08",
+      "attempt": "3",
+      "status": "FAILED_CUTOUT_OR_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P09",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P10",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P11",
+      "attempt": "3",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P12",
+      "attempt": "3",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P14",
+      "attempt": "3",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P01",
+      "attempt": "4",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P02",
+      "attempt": "4",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P03",
+      "attempt": "4",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P05",
+      "attempt": "4",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P07",
+      "attempt": "4",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P11",
+      "attempt": "4",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P12",
+      "attempt": "4",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P14",
+      "attempt": "4",
+      "status": "FAILED_ALIGNMENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "RUL-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THR-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "JUG-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CLK-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "BLB-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MWV-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HRS-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-06",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CAV-03",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "FLM-01",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-02",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-03",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CAV-01",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-04",
+      "attempt": "1",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CAV-02",
+      "attempt": "1",
+      "status": "FAILED_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-01",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-02",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-03",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-04",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-05",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-06",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-07",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-08",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-09",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-10",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-11",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-12",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-13",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-14",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-15",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-16",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-17",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-18",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-19",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-20",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MSK-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MSK-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "DOT-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "DOT-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "RDC-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "RDC-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "BRK-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "BRK-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "ARR-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "ARR-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-05",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-05-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HEAT-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HEAT-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HLS-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HLS-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HLS-02",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HLS-02-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HLS-03",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HLS-03-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "STR-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "STR-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "XOUT-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "XOUT-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "EXP-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "EXP-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "EXP-02",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "EXP-02-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHT-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHT-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SUG-01",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SUG-01-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SUG-02",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SUG-02-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SUG-03",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SUG-03-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SUG-04",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": "UNVERIFIED"
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SUG-04-SVG",
+      "attempt": "1",
+      "status": "PENDING_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "svg_root": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CAV-02",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "FLM-01",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-02",
+      "attempt": "2",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-02",
+      "attempt": "2",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-03",
+      "attempt": "2",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CAV-02",
+      "attempt": "3",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-02",
+      "attempt": "3",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-03",
+      "attempt": "3",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CAV-02",
+      "attempt": "4",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-02",
+      "attempt": "4",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-03",
+      "attempt": "4",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MUG-02",
+      "attempt": "2",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-02",
+      "attempt": "2",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-03",
+      "attempt": "2",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MUG-02",
+      "attempt": "3",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-02",
+      "attempt": "3",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-03",
+      "attempt": "3",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MUG-02",
+      "attempt": "4",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-02",
+      "attempt": "4",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-03",
+      "attempt": "4",
+      "status": "FAILED_PROP_CHECK",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P04",
+      "attempt": "4",
+      "status": "PENDING_QUALITY",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P08",
+      "attempt": "4",
+      "status": "FAILED_CUTOUT_OR_CONTENT",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-01",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-02",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-03",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-04",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-05",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-06",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-07",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-08",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-09",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-10",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-11",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-12",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-13",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-14",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-15",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-16",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-17",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-18",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-19",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "TXT-20",
+      "attempt": "1",
+      "status": "PENDING_COMPOSITOR_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "content_present": true,
+        "text_and_anchor": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P08",
+      "attempt": "5",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P14",
+      "attempt": "5",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P11",
+      "attempt": "5",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P04",
+      "attempt": "5",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MUG-02",
+      "attempt": "5",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-01",
+      "attempt": "5",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-02",
+      "attempt": "5",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-03",
+      "attempt": "5",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-02",
+      "attempt": "5",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "RUL-01",
+      "attempt": "2",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THR-01",
+      "attempt": "2",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-02",
+      "attempt": "3",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-03",
+      "attempt": "5",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "HRS-01",
+      "attempt": "2",
+      "status": "PENDING_FIX_ROUND_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CLK-01",
+      "attempt": "2",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-01",
+      "attempt": "5",
+      "status": "PENDING_FIX_ROUND_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-02",
+      "attempt": "2",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P08",
+      "attempt": "6",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CAV-03",
+      "attempt": "2",
+      "status": "PENDING_FIX_ROUND_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-01",
+      "attempt": "6",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P04",
+      "attempt": "6",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-02",
+      "attempt": "6",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P11",
+      "attempt": "6",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CLK-01",
+      "attempt": "3",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-03",
+      "attempt": "6",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P14",
+      "attempt": "6",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MUG-02",
+      "attempt": "6",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "RUL-01",
+      "attempt": "3",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THR-01",
+      "attempt": "3",
+      "status": "PENDING_FIX_ROUND_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-02",
+      "attempt": "3",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-02",
+      "attempt": "6",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P04",
+      "attempt": "7",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-03",
+      "attempt": "6",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-01",
+      "attempt": "7",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P08",
+      "attempt": "7",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-02",
+      "attempt": "7",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P11",
+      "attempt": "7",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": true,
+        "D_feet_baseline": true,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THM-02",
+      "attempt": "4",
+      "status": "PENDING_FIX_ROUND_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "WTR-03",
+      "attempt": "7",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CHR-P14",
+      "attempt": "7",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true,
+        "D0_no_floor_line": true,
+        "mint_alpha255": false,
+        "D_feet_baseline": false,
+        "D_strict_head_top": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "RUL-01",
+      "attempt": "4",
+      "status": "PENDING_FIX_ROUND_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "CLK-01",
+      "attempt": "4",
+      "status": "PENDING_FIX_ROUND_QA",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "THR-01",
+      "attempt": "4",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "MUG-02",
+      "attempt": "7",
+      "status": "FAILED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-02",
+      "attempt": "7",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "SPN-03",
+      "attempt": "7",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-02",
+      "attempt": "4",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    },
+    {
+      "asset_id": "NIA-02",
+      "attempt": "5",
+      "status": "NOT_SELECTED_FIX_ROUND",
+      "checks": {
+        "exists": true,
+        "sha256": true,
+        "A_native_hash_present": true,
+        "A_native_dimensions": true,
+        "manifest_size_mode": true,
+        "A_delivered_size": true
+      },
+      "ok": false
+    }
+  ],
+  "not_run": "B/E-J full visual review is a human step; Claude contact-sheet review done, owner review pending"
+}

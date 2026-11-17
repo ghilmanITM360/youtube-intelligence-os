@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-10T07:28:43.027Z",
+  "channel": {
+    "name": "Robin MBA",
+    "handle": "@robinmba",
+    "id": "UCOvq-1piPnzCmrqfSspVIwA"
+  },
+  "tranche": "T2",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t2_robinmba",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "kK3WKszFoVQwK9Wq5",
+    "dataset_id": "HR7tVYJmM4wMbRJy3",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-10T07:26:35.897Z",
+    "finished_at_utc": "2026-11-10T07:28:43.027Z",
+    "charged_events": {
+      "result": 56
+    },
+    "actual_cost_usd": 0.224,
+    "usage_total_usd_reported": 0.224,
+    "max_cost_usd": 0.27,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCOvq-1piPnzCmrqfSspVIwA"
+      ],
+      "maxResults": 67,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 56,
+    "raw_file": "raw/t2_robinmba_kK3WKszFoVQwK9Wq5_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 56,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

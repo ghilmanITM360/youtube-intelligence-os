@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<!-- begin spin_special_output(head_start) -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" /><script type="text/javascript" src="js/jquery-webdriver.js" wd_script_id="jquery-webdriver.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<script type="text/javascript" src="js/webdriver.js" wd_script_id="webdriver.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<script type="text/javascript" wd_script_id="view_printable_script" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+	function view_printable() {
+		var loc = window.location;
+		var sep = (loc.search == "") ? "?" : "&";
+		var url = loc.protocol+"//"+loc.host+loc.pathname+loc.search+sep+"printable"+loc.hash;
+		window.open(url, "_blank", "");
+	}
+</script>
+<link href="thirdparty/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" wd_script_id="font-awesome.min.css">
+<script type="text/javascript" src="js/wd_pdf_fallback.js" wd_script_id="wd_pdf_fallback.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<style type="text/css" wd_script_id="toolbar_style" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+			div.wd_toolbar {
+				border-top: 1px solid #cccccc;
+				border-bottom: 1px solid #cccccc;
+				margin: 15px 0px 15px 0px;
+				padding: 5px;
+				line-height: 1;
+			}
+			div.wd_toolbar-page {
+				clear: both;
+			}
+			div.wd_toolbar ul.wd_tools {
+				display: inline-block;
+				width: 100%;
+				margin: 0;
+				padding: 5px 0;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool {
+				display: block;
+				list-style-type: none;
+				margin-right: 5px;
+				padding: 0;
+				float: right;
+			}
+			span.wd_tool_icon > a:link,
+			span.wd_tool_icon > a:visited {
+				border-radius: 2px;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				box-sizing: border-box;
+				margin: 0;
+				padding: 7px;
+				font-size: 16px;
+				line-height: 1;
+				text-align: center;
+				color: #ffffff;
+				background-color: #767676;
+			} 
+			span.wd_tool_icon > a:hover {
+				color: #ffffff;
+				background-color: #666666;
+				text-decoration: none;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool-addthis {
+				float: left;
+			}
+		</style>
+<script type="text/javascript" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">webDriver.push_jQuery();</script>
+<script type="text/javascript" src="js/jquery-ui.js" wd_script_id="jquery-ui.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<script type="text/javascript" src="js/wd_resize.js" wd_script_id="wd_resize.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<link href="css/wd_modal.css" type="text/css" rel="stylesheet" wd_script_id="wd_modal.css">
+<link href="css/wd_wcag.css" type="text/css" rel="stylesheet" wd_script_id="wd_wcag.css">
+<script type="text/javascript" wd_script_id="wd_modal_script" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+(function($) {
+	webDriver.resizeModal = function() {
+		$(this).find(".wd_modal").wd_modal("resize");
+		return false;
+	}
+	
+	var modals = [];
+		
+	function _value(value, base) {
+		if (typeof value == "string" && value.indexOf("%") > 0) {
+			return  base * parseInt(value, 10) / 100;
+		} else {
+			return parseInt(value, 10);
+		}
+	}
+	
+	var wd_modal = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_modal.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.isOpen = false;
+			this.opener = null;
+			
+			this.$element = $(element);
+			this._options = {
+				autoOpen: false,
+				closeExisting: false,
+				closeOnEscape: true,
+				closeOnOverlayClick: true,
+				fadeDuration: null,
+				margin: "10%",
+				padding: 10
+			};
+			
+			this.options(options);
+			
+			this.$overlay = $("<div>").addClass("wd_modal-overlay").attr("wd_resize","resizeModal").appendTo($("body")).hide();
+			this.$outer = $("<div>").addClass("wd_modal-outer").appendTo(this.$overlay);
+			this.$inner = $("<div>").addClass("wd_modal-inner").appendTo(this.$outer).append(this.$element);
+			// Hack because I can't figure out where the extra few pixels at the bottom of the content are coming from
+			this.$inner.css("overflow-y", "hidden");
+			this.$close = $("<a class=\"wd_modal-close fa fa-times\" href=\"#close\" title=\"Close\"><span class=\"wd_sr-only\">Close Dialog<\/span><\/a>")
+					.on("click", function(event) {self.close(); event.preventDefault();})
+					.appendTo(this.$outer);
+			this.$element.addClass("wd_modal");
+			
+			if (this._options.autoOpen)
+				this.open(this._options.closeExisting);
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+
+				this._options.fadeDuration = parseInt(this._options.fadeDuration, 10);
+				if (isNaN(this._options.fadeDuration))
+					this._options.fadeDuration = false;
+				
+				if (!$.isArray(this._options.margin))
+					this._options.margin = [this._options.margin];
+				if (this._options.margin.length < 2)
+					this._options.margin[1] = this._options.margin[0];
+				if (this._options.margin.length < 3)
+					this._options.margin[2] = this._options.margin[0];
+				if (this._options.margin.length < 4)
+					this._options.margin[3] = this._options.margin[1];
+				
+				if (!$.isArray(this._options.padding))
+					this._options.padding = [this._options.padding];
+				if (this._options.padding.length < 2)
+					this._options.padding[1] = this._options.padding[0];
+				if (this._options.padding.length < 3)
+					this._options.padding[2] = this._options.padding[0];
+				if (this._options.padding.length < 4)
+					this._options.padding[3] = this._options.padding[1];
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.resize();
+		},
+		
+		open: function(closeExisting, now) {
+			if (this.isOpen)
+				return;
+			
+			var self = this;
+			var myCloseExisting = closeExisting;
+			
+			if (!this.opener)
+				this.opener = document.activeElement;
+
+			if (closeExisting && modals.length > 0) {
+				for (var i = modals.length - 1; i >= 0; --i)
+					modals[i].close(true, true);
+			}
+
+			this.$overlay.addClass("wd_modal-current");
+			$("body").append(this.$overlay);
+
+			if (!now && this._options.fadeDuration) {
+				this.$overlay.fadeIn(this._options.fadeDuration, function() {self.open(myCloseExisting, true);});
+			} else {
+				if (modals.length == 0) {
+					$("body").css("overflow","hidden");
+					$(document).on("keydown.wd_modal", function (event) {
+						var current = modals[modals.length - 1];
+						if ((event.which == 27 || event.keyCode == 27) && current._options.closeOnEscape) {
+							current.close();
+							event.stopImmediatePropagation();
+							event.preventDefault();
+						}
+					});
+				}
+
+				if (this._options.closeOnOverlayClick) {
+					this.$overlay.on("click.wd_modal", function (event) {
+						if (event.target == this) {
+							self.close();
+							event.preventDefault();
+						}
+					});
+				}
+
+				modals.push(this);
+				
+				this.$overlay.show();
+				
+				var $focus = this.$element.find(":focusable");
+				if ($focus.length > 0)
+					$focus[0].focus();
+				
+				this.isOpen = true;
+
+				this.$element.trigger("open");
+			}
+		},
+		
+		close: function(skipCurrent, now) {
+			if (!this.isOpen)
+				return;
+			
+			this.$element.trigger("beforeClose");
+			
+			// TODO: allow closing of lower modals
+			modals.pop();
+			
+			if (modals.length == 0) {
+				$("body").css("overflow","");
+				$(document).off("keydown.wd_modal");
+			}
+			
+			this.$overlay.off("click.wd_modal");
+			
+			if (this.opener) {
+				this.opener.focus();
+				this.opener = null;
+			}
+			
+			this.isOpen = false;
+			this.$overlay.removeClass("wd_modal-current").hide();
+			
+			if (!skipCurrent && modals.length > 0)
+				modals[modals.length-1].$overlay.addClass("wd_modal-current");
+			
+			this.$element.trigger("close");
+		},
+		
+		destroy: function() {
+			this.close(false, true);
+			$("body").append(this.$element);
+			this.$overlay.remove();
+		},
+		
+		resize: function() {
+			if (!this.isOpen)
+				return;
+			
+			var self = this;
+			var winWidth = $(window).width();
+			var winHeight = $(window).height();
+			
+			var margin = this._options.margin;
+			var padding = this._options.padding;
+			
+			var width = winWidth - _value(margin[1], winWidth) - _value(margin[3], winWidth) - _value(padding[1], winWidth) - _value(padding[1], winWidth);
+			var height = winHeight - _value(margin[0], winHeight) - _value(margin[2], winHeight) - _value(padding[0], winHeight) - _value(padding[2], winHeight);
+			
+			this.$inner.css("max-width", width);
+			this.$inner.css("max-height", height);
+			
+			$.each(["Top", "Right", "Bottom", "Left"], function(i, v) {
+				self.$outer.css("padding" + v, _value(padding[i])+"px");
+			});
+			
+			var fixed = this.$element.find("[wd_need_fixed_container]").is(":visible");
+			
+			this.$inner.css("width", width);
+			this.$inner.css("height", height);
+
+			webDriver.doResize(this.$inner);
+			
+			if (!fixed) {
+				this.$inner.css("width", "auto");
+				this.$inner.css("height", "auto");
+				if (this.$element.outerHeight() > height)
+					this.$inner.css("height", height);
+				if (this.$element.outerWidth() > width)
+					this.$inner.css("width", width);
+			}
+		}
+	};
+
+	$.fn.wd_modal = function(options) {
+		if (options == "exists") {
+			return !!$(this).data("wd_modal");
+		} else if (typeof options == "string") {
+            var instance = $(this).data("wd_modal");
+			if (!instance)
+				return null;
+			var args = Array.prototype.slice.call(arguments, 1);
+            return instance[options].apply(instance, args);
+        } else {
+            return this.each(function() {
+                var instance = $(this).data("wd_modal");
+                if (instance) {
+                    instance.reload(options);
+                } else {
+                    $(this).data("wd_modal", new wd_modal(this, options));
+                }
+            });
+        }
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" src="js/wd_hashchange.js" wd_script_id="wd_hashchange.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<script type="text/javascript" wd_script_id="asset_modal_support_script" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+			(function($) {
+				var prev_group_id = "";
+				var prev_type_id = "";
+				var prev_item_id = "";
+				var prev_hash = false;
+				var on_close = "back";
+				function hash_update() {
+					var hash = window.location.hash || "#";
+					if (hash == prev_hash) return;
+
+					var type_id = "";
+					var item_id = ""
+					var group_id = "main";
+
+					var apos = hash.indexOf("assets_");
+					if (apos >= 0) {
+						type_id = hash.substr(apos+7);
+
+						var dpos = type_id.indexOf("-");
+						if (dpos >= 0) {
+							group_id = type_id.substr(0, dpos);
+							type_id = type_id.substr(dpos+1);
+						}
+
+						var cpos = type_id.indexOf(":");
+						if (cpos >= 0) {
+							item_id = type_id.substr(cpos+1);
+							type_id = type_id.substr(0, cpos);
+						}
+					}
+
+					if (type_id == "")
+						type_id = "all";
+
+					if ((type_id != prev_type_id || group_id != prev_group_id) && item_id == "") {
+						var $carousel = $(".wd_asset_carousel_"+group_id+"_list")
+						if ($carousel.length > 0)
+							$carousel.wd_carousel("filter", (type_id == "all") ? false : ".wd_asset_type_"+type_id);
+
+						var $slideshow = $(".wd_asset_slideshow_"+group_id+"_list")
+						if ($slideshow.length > 0)
+							$slideshow.wd_slideshow("filter", (type_id == "all") ? false : ".wd_asset_type_"+type_id);
+
+						$(".wd_asset_carousel_type_link").removeClass("wd_active");
+						$(".wd_asset_carousel_type_link.wd_asset_type_"+type_id).addClass("wd_active");
+
+						prev_type_id = type_id;
+						on_close = "back";
+					}
+
+					if (type_id != prev_type_id || item_id != prev_item_id || group_id != prev_group_id) {
+						if (item_id == "") {
+							var save_close = on_close;
+							on_close = false;
+							hide_asset_modal();
+							on_close = save_close;
+						} else {
+							load_asset_modal(group_id, type_id, item_id);
+						}
+						set_social_share_data();
+
+						prev_item_id = item_id;
+
+						if (prev_hash === false)
+							on_close = "reset";
+					}
+
+					prev_group_id = group_id;
+					prev_hash = hash;
+				}
+
+				hide_asset_modal = function() {
+					$(".wd_asset_modal").wd_modal("close");
+				}
+
+				load_asset_modal = function(group_id, type_id, item_id) {
+					var $modal = $(".wd_asset_modal_"+group_id);;
+					if ($modal.length == 0)
+						return;
+
+					if (!$modal.wd_modal("exists")) {
+						$modal.wd_modal({
+							autoOpen: false,
+						});
+
+						$modal.show();
+
+						$modal.on("close", function() {
+							if (on_close == "back") {
+								history.back();
+							} else if (on_close == "reset") {
+								var href = window.location.href;
+								href = href.replace(/#.*$/, "#assets_all");
+								window.location.replace(href);
+							}
+						});
+					}
+
+					$modal.wd_modal("open", true);
+					
+					var $slideshow = $(".wd_asset_slideshow_"+group_id+"_list");
+					if ($slideshow.length > 0) {
+						var $slideshow_item = $slideshow.find(".wd_asset_"+type_id+"-"+item_id).not(".wd_clone");
+						if ($slideshow_item.length > 0)
+							$slideshow.wd_slideshow("scrollToItem", $slideshow_item);
+					}
+
+					var $carousel = $(".wd_asset_carousel_"+group_id+"_list");
+					if ($carousel.length > 0) {
+						var $carousel_item = $carousel.find(".wd_asset_"+type_id+"-"+item_id).not(".wd_clone");
+						if ($carousel_item.length > 0)
+							$carousel.wd_carousel("scrollToItem", $carousel_item);
+					}
+				}
+				
+				set_social_share_data = function() {
+					var href = window.location.href.replace("#", "#!");
+					window.addthis_share = {
+						url: href
+					}
+				}
+				
+				$(function() {
+					setTimeout(hash_update, 10);
+					$(window).hashchange(hash_update);
+				});
+			})(webDriver.jQuery);
+		</script>
+<style type="text/css" wd_script_id="asset_modal_support_style" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+			.wd_asset_modal .wd_captioned_image {
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.wd_asset_modal img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.wd_asset_modal div.wd_toolbar.wd_toolbar-asset_modal {
+				position: fixed;
+				background: transparent;
+				top: 5%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border: none;
+				margin: 0;
+			}
+		</style>
+<style type="text/css" wd_script_id="asset_inline_style" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+			.wd_asset_inline_list {
+				width: 50%;
+				float: right;
+				clear: right;
+				margin: 0 0 0 10px;
+			}
+			.wd_asset_inline {
+				background-color: #666666;
+			}
+			.wd_asset_inline_list div.wd_toolbar {
+				border: none;
+				font-size: 10px;
+				position: relative;
+			}
+			.wd_asset_inline_list span.wd_tool_icon a {
+				font-size: 10px;
+				width: 16px;
+				height: 16px;
+				padding: 3px;
+			}
+		</style>
+<script type="text/javascript" src="js/wd_imagesloaded.js" wd_script_id="wd_imagesloaded.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<script type="text/javascript" src="js/wd_scriptloader.js" wd_script_id="wd_scriptloader.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<link href="css/wd_slideshow.css" type="text/css" rel="stylesheet" wd_script_id="wd_slideshow.css">
+<script type="text/javascript" wd_script_id="wd_slideshow_script" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+(function($, undefined) {
+	webDriver.resizeSlideshow = function() {
+		$(this).find(".wd_slideshow-list").wd_slideshow("resize");
+		return false;
+	}
+	
+	var wd_slideshow = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_slideshow.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.$element = $(element);
+			this._options = {
+				selector: "li",
+				preload: false,
+				"class": "",
+				resize: "container" // children, self, container
+			};
+			
+			this.options(options);
+			
+			this.$container = $("<div>").addClass("wd_slideshow").attr("wd_resize","resizeSlideshow").attr("tabindex","-1").insertBefore(this.$element);
+			if (this._options["class"])
+				this.$container.addClass(this._options["class"]);
+			this.$cropper = $("<div>").addClass("wd_slideshow-cropper").appendTo(this.$container);
+			this.$element
+					.addClass("wd_slideshow-list")
+					.appendTo(this.$cropper)
+			;
+			this.$prev = $("<a class=\"wd_slideshow-arrow wd_slideshow-prev fa fa-chevron-left\" href=\"#prev\" title=\"Previous\"><span class=\"wd_sr-only\">Previous Item<\/span><\/a>")
+					.on("click", function(event) {
+						self.prev();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			this.$next = $("<a class=\"wd_slideshow-arrow wd_slideshow-next fa fa-chevron-right\" href=\"#next\" title=\"Next\"><span class=\"wd_sr-only\">Next Item<\/span><\/a>")
+					.on("click", function(event) {
+						self.next();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			
+			this.$container.on("keydown.wd_slideshow", function (event) {
+				var key = event.which || event.keyCode;
+				if (key == 37) {
+					self.prev();
+					event.stopImmediatePropagation();
+					event.preventDefault();
+				}
+				if (key == 39) {
+					self.next();
+					event.stopImmediatePropagation();
+					event.preventDefault();
+				}
+			});
+
+			this.$items = this.$element.children(this._options.selector);
+			this.$items.addClass("wd_slideshow-item");
+			
+			// Remove any non-items (e.g. unintended text nodes)
+			this.$element.empty();
+			this.$element.append(this.$items);
+
+			this.navEnabled = true;
+			this.currentIndex = 0;
+			this.$currentItem = this.$items.eq(0);
+			
+			if (this._options.preload)
+				this.load_next();
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.reset();
+		},
+
+		reset: function() {
+			this.$items.data("wd_slideshow-index", null);
+			
+			var $children = this.$element.children();
+			this.itemCount = $children.length;
+			$children.each(function(index) {
+				$(this).data("wd_slideshow-index", index);
+			});
+
+			this.hideNav(this.itemCount < 2);
+			
+			var index = this.$currentItem.data("wd_slideshow-index");
+			if (!index)
+				index = 0;
+			
+			this.scrollToIndex(index, false);
+		},
+				
+		hideNav: function(hide) {
+			this.$prev.toggle(!hide);
+			this.$next.toggle(!hide);
+			this.navEnabled = !hide;
+		},
+				
+		item_loaded: function(item) {
+			var $item = $(item);
+			return ($item.children().length > 0 || !$item.attr("wd_ajax_url"));
+		},
+				
+		load_next: function() {
+			var self = this;
+			var next = null;
+			var $children = this.$element.children().not(".wd_clone");
+
+			var after = this.currentIndex;
+			var before = this.currentIndex;
+			while (after < $children.length || before >= 0) {
+				if (after < $children.length && !this.item_loaded($children[after])) {
+					next = $children[after];
+					break;
+				}
+				++after;
+				if (before >= 0 && !this.item_loaded($children[before])) {
+					next = $children[before];
+					break;
+				}
+				--before;
+			}
+			
+			if (!next) {
+				var $filtered = this.$items.remove($children);
+
+				$filtered.each(function() {
+					if (!self.item_loaded(this)) {
+						next = this;
+						return false;
+					}
+				});
+			}
+			
+			if (next)
+				this.load_item(next, function() {self.load_next();});
+		},
+		
+		load_item: function(item, on_complete) {
+			var self = this;
+			var $item = $(item);
+			var complete = on_complete;
+			
+			if (!this.item_loaded($item)) {
+				$item.html("<div>Loading...</div>");
+				$item.addClass("wd_loading");
+				$item.load(
+					$item.attr("wd_ajax_url"),
+					function(response, status, xhr) {
+						if ($item.children().length == 0)
+							$item.append("<div>No content</div>");
+						webDriver.queueCallback(function() {
+							if ($item.hasClass("wd_slideshow-current"))
+								self.resize(self._options["resize"] == "container");
+							$item.removeClass("wd_loading");
+							if ($item.hasClass("wd_slideshow-current")) {
+								$item.wd_imagesloaded(
+									function() {
+										self.resize(self._options["resize"] == "container");
+									},
+									"size"
+								);
+							}
+						});
+
+						if (complete)
+							complete(response, status, xhr);
+					}
+				);
+			}
+		},
+				
+		next: function() {
+			return this.scrollBy(1);
+		},
+
+		prev: function() {
+			return this.scrollBy(-1);
+		},
+		
+		scrollBy: function(count) {
+			var index = this.currentIndex + count;
+			
+			return this.scrollToIndex(index, true);
+		},
+		
+		scrollToIndex: function(index, update_hash) {
+			var self = this;
+			var $children = this.$element.children().not(".wd_clone");
+			
+			var orig_index = index;
+			index = (index + $children.length) % $children.length;
+			var $child = $children.eq(index);
+			
+			if (update_hash && $child.attr("wd_item_hash")) {
+				var hash = "#"+$child.attr("wd_item_hash");
+				var current_hash = window.location.hash || "#";
+				if (hash != current_hash) {
+					var href = window.location.href+"#";
+					href = href.replace(/#.*$/, hash);
+					window.location.replace(href);
+					return;
+				}
+			}
+			
+			this.$element.find(".wd_slideshow-current").removeClass("wd_slideshow-current");
+			$child.addClass("wd_slideshow-current");
+			
+			if (!this.item_loaded($child))
+				this.load_item($child);
+			
+			this.$container[0].focus();
+
+			this.currentIndex = index;
+			this.$currentItem = $child;
+			
+			this.resize(this._options["resize"] == "container");
+		},
+				
+		scrollToItem: function(item) {
+			var index = $(item).data("wd_slideshow-index");
+			if (index !== null)
+				this.scrollToIndex(index, true);
+		},
+				
+		filter: function(selector) {
+			this.$element.children().detach();
+			var $items = this.$items;
+			if (selector)
+				$items = $items.filter(selector);
+			this.$element.append($items);
+			this.reset();
+		},
+		
+		destroy: function() {
+			this.filter(false);
+			this.$items
+				.removeClass("wd_slideshow-item")
+				.data("wd_slideshow-index", null)
+			;
+			this.$element
+				.removeClass("wd_slideshow-list")
+				.insertBefore(this.$container)
+			;
+			this.$container.remove();
+		},
+		
+		resize: function(resize_container) {
+			if (resize_container) {
+				webDriver.doResize(this.$container, "container");
+			} else if (this.$currentItem && !this.$currentItem.hasClass("wd_loading")) {
+				webDriver.doResize(this.$currentItem);
+			}
+		}
+	};
+
+	$.fn.wd_slideshow = function(options) {
+		var args = Array.prototype.slice.call(arguments, 1);
+		var result = this;
+		
+		this.each(function() {
+			var instance = $(this).data("wd_slideshow");
+			if (typeof options == "string") {
+				var res = instance[options].apply(instance, args);
+				if (typeof res != "undefined") {
+					result = res;
+					return false;
+				}
+			} else {
+                if (!instance) {
+					instance = new wd_slideshow(this, options);
+					$(this).data("wd_slideshow", instance);
+				}
+				
+                instance.reload(options);
+			}
+        });
+		
+		return result;
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" wd_script_id="template_list_slideshow_script" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+						webDriver.jQuery(function($) {
+							$(".wd_layout-slideshow").each(function() {
+								var $slideshow = $(this);
+								$slideshow.wd_slideshow({
+									preload: true,
+									"class": "wd_asset_slideshow_wrapper wd_asset_slideshow_main_wrapper"
+								});
+							});
+						});
+					</script>
+<script type="text/javascript" wd_script_id="gallery_hi_res_download" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+(function($){
+	function galleryHiResFilename(url) {
+		var path = "";
+		try {
+			path = new URL(url, window.location.href).pathname || "";
+		} catch (err) {
+			path = (url || "").split("?")[0] || "";
+		}
+		var parts = path.split("/");
+		return parts.length ? parts[parts.length - 1] : "";
+	}
+
+	$(document)
+		.off("click.galleryHiResDownload", "a.wd_hi_res_download[data-hi-res-url], .wd_gallery_asset .wd_icon_container > a:last-child, .wd_hi_res_link_wrapper a, .hi_res-links a")
+		.on("click.galleryHiResDownload", "a.wd_hi_res_download[data-hi-res-url], .wd_gallery_asset .wd_icon_container > a:last-child, .wd_hi_res_link_wrapper a, .hi_res-links a", function(e){
+			var a = this;
+			var href = a.href || "";
+			var onclick = a.getAttribute("onclick") || "";
+			if (href.indexOf("protected_url.php") !== -1 || onclick.indexOf("spin_protected_link") !== -1) {
+				e.preventDefault();
+				e.stopPropagation();
+				if (e.stopImmediatePropagation)
+					e.stopImmediatePropagation();
+				spin_protected_link(href, a.target || "");
+				return false;
+			}
+			e.preventDefault();
+			e.stopPropagation();
+			if (e.stopImmediatePropagation)
+				e.stopImmediatePropagation();
+			var url = $(a).data("hi-res-url") || a.href || "";
+			var filename = $(a).data("hi-res-filename") || galleryHiResFilename(url);
+			if (!filename) {
+				window.location.href = a.href || url;
+				return false;
+			}
+			fetch(url, { mode: "cors" })
+				.then(function(r){
+	 				if (!r.ok)
+	 					throw new Error("HTTP " + r.status);
+	 				return r.blob();
+	 			})
+				.then(function(blob){
+					var objUrl = URL.createObjectURL(blob);
+					var link = document.createElement("a");
+					link.href = objUrl;
+					link.download = filename || "hi-res-image.jpg";
+					document.body.appendChild(link);
+					link.click();
+					document.body.removeChild(link);
+					window.setTimeout(function(){
+						URL.revokeObjectURL(objUrl);
+					}, 60000);
+				})
+				.catch(function(){
+	 				window.location.href = a.href || url;
+	 			});
+			return false;
+		});
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" src="js/wd_equal_height.js" wd_script_id="wd_equal_height.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<style type="text/css" wd_script_id="template asset_masonry_item:gallery:system style" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+.wd_gallery_asset {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	color: #ffffff;
+	min-height: 100px;
+}
+.wd_gallery_asset .wd_asset_image {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 0px;
+}
+.wd_gallery_asset .wd_asset_image > div {
+	width: 100%;
+	text-align: center;
+}
+.wd_gallery_asset .wd_asset_image img {
+	max-width: 100%;
+	max-height: none;
+	margin: 0;
+	float: none;
+	flex-shrink: 0;
+}
+.wd_gallery_asset .wd_icon_overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .75) none center center no-repeat;
+	opacity: 0.0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_link_underlay {
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	z-index: 1;
+}
+.wd_gallery_asset .wd_icon_overlay a.wd_link_underlay:hover {
+	background-color: transparent;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container {
+	font-size: 50px;
+	position: relative;
+	text-align: center;
+	z-index: 2;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container > a,
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container > a:link,
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container > a:visited {
+	color: #cccccc;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container > a:hover {
+	text-decoration: none;
+	background-color: transparent;
+}
+.wd_gallery_asset .wd_title_overlay {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	pointer-events: none;
+	opacity: 0.0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-moz-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	-moz-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+}
+.wd_gallery_asset:hover .wd_icon_overlay,
+.wd_gallery_asset:hover .wd_title_overlay,
+.wd_gallery_asset:focus-within .wd_icon_overlay,
+.wd_gallery_asset:focus-within .wd_title_overlay {
+	opacity: 1.0;
+}</style>
+<script type="text/javascript" src="js/wd_masonry.js" wd_script_id="wd_masonry.js" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw=="></script>
+<script type="text/javascript" wd_script_id="template_list_masonry_script" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+						webDriver.jQuery(function($) {
+							var $container = $(".wd_layout-masonry");
+							$container.wd_masonry({"minWidth":250});
+							$container.wd_imagesloaded(function() {
+								$(this).wd_masonry("reflow");
+							});
+							$container.on("wd_more_loaded", function() {
+								$(this).wd_masonry("reflow");
+							});
+						});
+					</script>
+<style type="text/css" wd_script_id="template_list_masonry_style" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+						ul.wd_layout-masonry {
+							position: relative;
+							margin: 10px 0;
+							padding: 0;
+							list-style: none;
+						}
+					</style>
+<script type="text/javascript" wd_script_id="move_content_script" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+				(function($) {
+					function wd_move_content() {
+						$("[wd_move_after]").each(function() {
+							var $this = $(this);
+							var selectors = $this.attr("wd_move_after").split("|");
+							for (var i = 0; i < selectors.length; ++i) {
+								var $dest = $(selectors[i]);
+								if ($dest.length > 0) {
+									$this.insertAfter($dest.eq(0));
+									break;
+								}
+							}
+						});
+					}
+					
+					$(function() {
+						wd_move_content();
+					});
+				})(webDriver.jQuery);
+			</script>
+<script type="text/javascript" wd_script_id="format_news_script" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">
+(function($) {
+	webDriver.formatNews = function() {
+		var $news = $(this);
+		var print_url = $news.attr("wd_print_url");
+		$news.find("table").each(function() {
+			var $table = $(this);
+			var $parent = $table.parent();
+			if ($parent.innerWidth() < $table.outerWidth()) {
+				if ($parent.hasClass("wd_news_table")) {
+					$parent.find(".fullscreen-button").show();
+				} else {
+					var $btn = $("<button>View News Release Full Screen</button>")
+						.addClass("fullscreen-button")
+						.on("click", function() {
+							if (print_url)
+								window.open(print_url, "_blank", "");
+							else
+								view_printable();
+						})
+					;
+
+					var $div = $("<div></div>)")
+						.addClass("wd_news_table")
+						.css("overflow-x", "auto")
+						.append($btn)
+					;
+
+					$table.replaceWith($div);
+					$div.append($table);
+				}
+			} else {
+				if ($parent.hasClass("wd_news_table"))
+					$parent.find(".fullscreen-button").hide();
+			}
+		});
+	}
+})(webDriver.jQuery);
+</script>
+<style type="text/css" wd_script_id="template detail:newsfeed_releases:site style" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">.wd_title {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.wd_subtitle {
+	font-weight: bold;
+}
+table.wd_extimagetable {
+	border-style: none; 
+	border-spacing:0px;
+	clear: right; 
+	float: right; 
+}
+td.wd_extimagecell {
+	text-align: right; 
+	margin: 0px 0px 5px 5px;
+	padding:0px;
+}
+td.wd_extimagecell img {
+	padding-left:10px;
+	padding-bottom:10px;
+	border-style: none; 
+}
+blockquote.wd_pullquote {
+	font-style: italic;
+	width:200px;
+	margin:0 0 20px 20px;
+	line-height: 1.8em;
+	float: right;
+	clear: right;
+}
+blockquote.wd_pullquote:before {
+	content: "“ ";
+	font-size: xx-large;
+}
+blockquote.wd_pullquote:after {
+	content: " ”";
+	font-size: xx-large;
+	float: right;
+}
+.fullscreen-button {
+	border: 1px solid #d1d1d1;
+	background: #e3e3e3 url(images/webdriver/view_full_screen_button_background.png) no-repeat;
+	padding: 3px 3px 3px 30px;
+	margin: 5px 0px 5px 0px;
+	color: #727272;
+	width: 220px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.wd_contact {
+	margin: 1em 0;
+}
+.wd_release_data {
+	margin: 1em 0;
+}
+.wd_caption {
+	text-align: center;
+	font-size: 0.72em;
+	font-style: italic;
+	margin: 1em 0 0 0;
+}
+</style>
+<script type="text/javascript" nonce="YmFlNThlM2Q1NzMyZDI2MzI4MTU2MTEyY2QyYzFhZjc0Mjc3YTQxMw==">webDriver.pop_jQuery();</script>
+
+<!-- end spin_special_output(head_start) -->
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<title>Northwestern Mutual Study Finds Americans Now Believe They Will Need $1.25 Million for Comfortable Retirement - Oct 25, 2022</title>
+		
+ <meta name="keywords" content="" />
+ <meta name="description" content="" />
+ <meta name="twitter:card" content="summary" />
+ <meta name="twitter:title" content="Northwestern Mutual Study Finds Americans Now Believe They Will Need $1.25 Million for Comfortable Retirement" />
+ <meta name="twitter:description" content="Figure represents a 20% jump over last year Anticipated retirement age climbs from 62.6 to 64 years old MILWAUKEE, Oct. 25, 2022 /PRNewswire/ -- The latest findings from Northwestern Mutual's 2022..." />
+ <meta name="twitter:image" content="https://news.northwesternmutual.com/image/Milwaukee+Skyline+Image-OG-card.jpg" />
+ <meta property="og:site_name" content="Newsroom | Northwestern Mutual" />
+ <meta property="og:url" content="https://news.northwesternmutual.com/2022-10-25-Northwestern-Mutual-Study-Finds-Americans-Now-Believe-They-Will-Need-1-25-Million-for-Comfortable-Retirement" />
+ <meta property="og:title" content="Northwestern Mutual Study Finds Americans Now Believe They Will Need $1.25 Million for Comfortable Retirement" />
+ <meta property="og:description" content="Figure represents a 20% jump over last year Anticipated retirement age climbs from 62.6 to 64 years old MILWAUKEE, Oct. 25, 2022 /PRNewswire/ -- The latest findings from Northwestern Mutual's 2022..." />
+ <meta name="image" property="og:image" content="https://mma.prnewswire.com/media/1928414/19_1789_08_Planning_and_Progress_Study_2022_Wave5_2.jpg?p=facebook" />
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+		<link href="css/hql5rrn.css" rel="stylesheet" type="text/css"> 
+		<link href="css/nmcom-1559164562388.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="thirdparty/font-awesome/css/font-awesome.min.css">
+		<link href="css/wd_overrides.css" rel="stylesheet" type="text/css">
+		<link href="css/wdcontent.css" rel="stylesheet" type="text/css">
+					<link rel="icon" href="favicon.ico?v=3"> 
+			<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-v3.png"> 
+			<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32-v3.png"> 
+			<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16-v3.png">  
+
+			<meta name="apple-mobile-web-app-title" content="Northwestern Mutual"> 
+			<meta name="application-name" content="Northwestern Mutual"> 
+			<meta name="theme-color" content="#ffffff"> 
+			<meta name="google-site-verification" content="L-0rab9xqBqLkdhmyeIErNZSuDpljnE-5lHbudU0Ovg"> 
+			<link rel="alternate" href="https://news.northwesternmutual.com/news-releases?pagetemplate=rss" type="application/rss+xml" title="Newsroom | Northwestern Mutual">						
+			<!-- Cookie script -->
+			<script src="https://assets.adobedtm.com/84f7e94eaa36/6dbcd02a5ea6/launch-b3b0dde17de7.min.js" async></script>
+			<!-- End Cookie script -->
+			
+			<script>
+		//Adding hr after recent news items 
+			$(document).ready(function() {
+			
+				$('<hr width = "40%" > ').insertAfter('.wd_featureboxes_middle .item .wd_summary');
+				$('p.more a').after('<svg role="img" class="learn_more_arrow_img" aria-label="Learn More Arrow"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$sg"></use></svg>');
+
+				$('p.more a').empty();
+
+				$('#wd_featurebox-standard_3543 .wd_featurebox').append('<p class="wd_more"><a class="wd_learn-more" href="studies-and-research">Learn More</a><svg role="img" class="learn_more_arrow_img" aria-label="Learn More Arrow"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$sg"></use></svg></p>');
+			});
+
+			
+			//Adding "Learn" to middle featurebox more button
+			
+
+			</script>
+		
+<!-- begin spin_special_output(head_end) -->
+<link rel="canonical" href="https://news.northwesternmutual.com/2022-10-25-Northwestern-Mutual-Study-Finds-Americans-Now-Believe-They-Will-Need-1-25-Million-for-Comfortable-Retirement" />
+<!-- end spin_special_output(head_end) -->
+</head> 
+		<body class="wd_pageid_20295 wd_item_page wd_item_123366" >
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="is-correlated-svgs" role="presentation" aria-hidden="true"><symbol id="svg$u6" viewBox="0 0 180 180"><path d="M150.13 113.17h-20.35v-46H150a1.5 1.5 0 0 0 0-3h-21.72a1.5 1.5 0 0 0-1.5 1.5v4.13l-15.87-6.91a8.67 8.67 0 0 0-3.22-.63H90.21a11.08 11.08 0 0 0-8.78 4.28l-.13.16a32.26 32.26 0 0 0-6.86-.76H53.5v-4.49A1.5 1.5 0 0 0 52 60H30.25a1.5 1.5 0 0 0 0 3H50.5v46H30.13a1.5 1.5 0 0 0 0 3H52a1.51 1.51 0 0 0 1.5-1.5v-5.1H59a3.78 3.78 0 0 1 3.2 1.76l10.31 16.11a6.72 6.72 0 0 0 5.77 3.25 6.62 6.62 0 0 0 3.46-1 6.81 6.81 0 0 0 2.76-3.24 6.7 6.7 0 0 0 3.4 2.06 7 7 0 0 0 1.64.2 6.73 6.73 0 0 0 3.46-1 6.89 6.89 0 0 0 2.77-3.26 6.68 6.68 0 0 0 8.37 1.17 6.9 6.9 0 0 0 2.73-3.17 6.65 6.65 0 0 0 3.65 2.38 7.14 7.14 0 0 0 1.64.2 6.74 6.74 0 0 0 3.47-1 6.88 6.88 0 0 0 2.65-8.72h8.47v3.44a1.5 1.5 0 0 0 1.5 1.5h21.85a1.5 1.5 0 0 0 0-3zm-36 4.22a3.72 3.72 0 0 1-5.11-1.28.43.43 0 0 1 0-.07L98.44 99.56a1.5 1.5 0 0 0-2.53 1.61l8.16 12.8a3.87 3.87 0 0 1-1.46 5 3.74 3.74 0 0 1-5.13-1.31l-1.91-3a1.27 1.27 0 0 0-.13-.19L90 105.88a1.5 1.5 0 0 0-2.54 1.61L93 116.1a3.88 3.88 0 0 1-1.53 4.9 3.69 3.69 0 0 1-2.81.42 3.73 3.73 0 0 1-2.32-1.73l-4.78-7.52a1.5 1.5 0 1 0-2.56 1.66l2.6 4.07v.08a3.87 3.87 0 0 1-1.43 5 3.73 3.73 0 0 1-5.1-1.26l-10.31-16.17A6.75 6.75 0 0 0 59 102.4h-5.5V68.92h20.89a29 29 0 0 1 4.83.42L69 82.65a7.27 7.27 0 0 0 .73 9.62A7.16 7.16 0 0 0 75 94.38a7.37 7.37 0 0 0 5.2-2.21l11.53-11.7a.44.44 0 0 1 .29-.11h.1c.57 0 4.43.41 6.08.52a1.62 1.62 0 0 1 1.32.9l16 30.59a3.88 3.88 0 0 1-1.42 5.02zm2.66-9.16l-14.6-27.83a4.64 4.64 0 0 0-3.78-2.51c-1.44-.1-4.88-.41-6.08-.53H92a3.43 3.43 0 0 0-2.39 1L78.06 90.07a4.35 4.35 0 0 1-6.64-5.6l12.33-16.11A8.12 8.12 0 0 1 90 65.24h17.65a5.48 5.48 0 0 1 2.06.4l17 7.41v35.16z" fill="#0e497b"></path><path d="M39.18 94.08a5 5 0 0 0 0 10h.07a5 5 0 0 0-.12-10zM141 97.9a5 5 0 1 0 5 5 5 5 0 0 0-5-5z" fill="#ffb81c"></path></symbol><symbol id="svg$u4" viewBox="0 0 180 180"><path d="M126.53 94h-1.87a1.56 1.56 0 0 1 0-3.12h1.87a1.56 1.56 0 0 1 0 3.12zM118.84 94h-3.44a1.56 1.56 0 0 1 0-3.12h3.44a1.59 1.59 0 0 1 1.55 1.56 1.53 1.53 0 0 1-1.55 1.56zm-9.15 0h-3.43a1.56 1.56 0 0 1 0-3.12h3.43a1.56 1.56 0 0 1 0 3.12zM124.35 146h-3.44a1.56 1.56 0 0 1 0-3.12h3.44a1.56 1.56 0 0 1 0 3.12zm-9.26 0h-3.43a1.56 1.56 0 0 1 0-3.12h3.43a1.6 1.6 0 0 1 1.56 1.56 1.53 1.53 0 0 1-1.56 1.56zm-9.15 0h-3.43a1.56 1.56 0 0 1 0-3.12h3.43a1.56 1.56 0 0 1 0 3.12zm-9.25 0h-3.43a1.56 1.56 0 0 1 0-3.12h3.43a1.6 1.6 0 0 1 1.56 1.56 1.53 1.53 0 0 1-1.56 1.56zm-9.15 0h-3.43a1.56 1.56 0 1 1 0-3.12h3.43a1.56 1.56 0 0 1 0 3.12zm-9.25 0h-3.43a1.56 1.56 0 1 1 0-3.12h3.43a1.6 1.6 0 0 1 1.56 1.56 1.54 1.54 0 0 1-1.56 1.56zm-9.15 0h-3.43a1.56 1.56 0 1 1 0-3.12h3.43a1.56 1.56 0 1 1 0 3.12zm61-.42a1.66 1.66 0 0 1-1.56-1.25 1.55 1.55 0 0 1 1.14-1.87 13.6 13.6 0 0 0 2.91-1 1.56 1.56 0 1 1 1.35 2.81 20.79 20.79 0 0 1-3.53 1.25c-.07-.02-.18.08-.28.08zM138 141a1.34 1.34 0 0 1-1-.42 1.49 1.49 0 0 1 0-2.18 13.73 13.73 0 0 0 1.87-2.4 1.59 1.59 0 1 1 2.7 1.67 15.15 15.15 0 0 1-2.29 2.91 2 2 0 0 1-1.28.42zm4.15-8h-.31a1.64 1.64 0 0 1-1.24-1.87 12.38 12.38 0 0 0 .2-2.71v-.31a1.54 1.54 0 0 1 1.56-1.56 1.6 1.6 0 0 1 1.56 1.56v.42a18 18 0 0 1-.31 3.33c-.03.64-.76 1.14-1.49 1.14zm-.83-9.05a1.62 1.62 0 0 1-1.45-.93 13.29 13.29 0 0 0-1.46-2.7 1.57 1.57 0 1 1 2.6-1.77 19.43 19.43 0 0 1 1.77 3.22 1.72 1.72 0 0 1-.83 2.08c-.24.02-.45.15-.66.15zm-5.61-7.17a1.67 1.67 0 0 1-.94-.31A13.29 13.29 0 0 0 132 115a1.58 1.58 0 0 1 1.25-2.91 19.43 19.43 0 0 1 3.22 1.77 1.63 1.63 0 0 1 .42 2.18 1.49 1.49 0 0 1-1.21.76zm-8.66-2.78h-3.43a1.56 1.56 0 0 1 0-3.12h3.53a1.49 1.49 0 0 1 1.46 1.67 1.58 1.58 0 0 1-1.56 1.45zm-9.25-.1h-3.44a1.56 1.56 0 0 1 0-3.12h3.44a1.6 1.6 0 0 1 1.56 1.56 1.54 1.54 0 0 1-1.56 1.55zm-9.15 0h-3.43a1.56 1.56 0 0 1 0-3.12h3.43a1.56 1.56 0 0 1 0 3.12zm-9-1.25a2.36 2.36 0 0 1-.83-.21 9.86 9.86 0 0 1-3-2.49 1.55 1.55 0 0 1 2.39-2 9.34 9.34 0 0 0 2.18 1.87 1.51 1.51 0 0 1-.73 2.81zm-4.88-7.48a1.66 1.66 0 0 1-1.56-1.36 5.56 5.56 0 0 1-.11-1.35 10.12 10.12 0 0 1 .32-2.49 1.55 1.55 0 1 1 3 .73 9.33 9.33 0 0 0-.21 1.76 3.68 3.68 0 0 0 .11 1 1.62 1.62 0 0 1-1.32 1.8.34.34 0 0 0-.18-.1zm2.91-8.32a1.66 1.66 0 0 1-1.14-.52 1.61 1.61 0 0 1 0-2.19A11.11 11.11 0 0 1 99.81 92a1.58 1.58 0 1 1 1.25 2.91 11.69 11.69 0 0 0-2.39 1.56c-.11.26-.52.37-.94.37zM59.78 146h-1.87a1.56 1.56 0 1 1 0-3.12h1.87a1.6 1.6 0 0 1 1.56 1.56 1.53 1.53 0 0 1-1.56 1.56z" fill="#ffb81c"></path><path d="M59.68 139a1.2 1.2 0 0 1-1-.42c-1-.94-24.54-24-24.54-43.56a25.71 25.71 0 0 1 25.54-25.73A25.64 25.64 0 0 1 85.25 95c0 19.54-23.6 42.62-24.53 43.56a1.22 1.22 0 0 1-1.04.44zm0-66.54a22.36 22.36 0 0 0-22.46 22.4c0 16 17.88 35.46 22.56 40.24 4.68-4.78 22.56-24.23 22.56-40.24a22.67 22.67 0 0 0-22.66-22.45z" fill="#0e497b"></path><path d="M59.68 108.59a13.94 13.94 0 1 1 13.93-13.94 13.94 13.94 0 0 1-13.93 13.94zm0-24.85a10.81 10.81 0 1 0 10.81 10.81 10.81 10.81 0 0 0-10.81-10.81z" fill="#ffb81c"></path><path d="M124.87 87.07a1.2 1.2 0 0 1-1-.42c-.73-.73-18.2-17.68-18.2-32.23a19.24 19.24 0 1 1 38.47 0c0 14.55-17.36 31.5-18.19 32.23a1.52 1.52 0 0 1-1.08.42zm0-48.77a16.2 16.2 0 0 0-16.12 16.12c0 11.23 12.37 25 16.12 28.9 3.74-3.95 16.13-17.67 16.13-28.9a16.13 16.13 0 0 0-16.13-16.12z" fill="#0e497b"></path><path d="M124.87 64.82a10.71 10.71 0 1 1 10.7-10.71 10.83 10.83 0 0 1-10.7 10.71zm0-18.3a7.59 7.59 0 1 0 7.59 7.59 7.71 7.71 0 0 0-7.59-7.59z" fill="#ffb81c"></path></symbol><symbol id="svg$u5" viewBox="0 0 180 180"><path d="M134.11 34.24a1.5 1.5 0 0 0-2 .61l-25.28 47.38a34.41 34.41 0 0 0-17.16-4.56 33.94 33.94 0 0 0-3.51.18l22.25-41.58a1.5 1.5 0 0 0-2.65-1.42l-16 29.88-16-29.88a1.5 1.5 0 0 0-2.65 1.42l16.96 31.64-5.63 10.52a34.55 34.55 0 0 0-9.94 3.81L47.15 34.85a1.5 1.5 0 1 0-2.64 1.42L70 83.84a34.7 34.7 0 1 0 39.43 0l25.35-47.56a1.5 1.5 0 0 0-.67-2.04zm-12.74 78.13a31.7 31.7 0 1 1-31.7-31.7 31.73 31.73 0 0 1 31.7 31.7z" fill="#0e497b"></path><path d="M63.36 112.37a26.32 26.32 0 1 0 26.31-26.32 26.34 26.34 0 0 0-26.31 26.32zm49.63 0a23.32 23.32 0 1 1-23.32-23.32A23.34 23.34 0 0 1 113 112.37z" fill="#0e497b"></path><path fill="#ffb81c" stroke="#ffb81c" stroke-miterlimit="10" d="M89.67 97.61l4.31 8.72 9.62 1.4-6.96 6.79 1.64 9.58-8.61-4.53-8.6 4.53 1.64-9.58-6.97-6.79 9.63-1.4 4.3-8.72z"></path></symbol><symbol id="svg$tt" viewBox="0 0 106 106"><style>.st3{fill:#ffb81c}</style><circle cx="53" cy="53" r="51" fill="#013f71"></circle><path d="M53 105.5C24.1 105.5.5 81.9.5 53S24.1.5 53 .5s52.5 23.6 52.5 52.5-23.6 52.5-52.5 52.5zm0-102C25.7 3.5 3.5 25.7 3.5 53s22.2 49.5 49.5 49.5 49.5-22.2 49.5-49.5S80.3 3.5 53 3.5z" fill="#658ba9"></path><g id="svg$ea"><path d="M81.3 52.7c-1.8-1.7-4.6-1.7-6.4 0l-14 13.6H31.3c-1.2 0-2.3.5-3.2 1.3-.9.8-1.3 2-1.3 3.2 0 2.5 2.1 4.5 4.5 4.5h3.4l-3.9 2.5c-.6.4-.7 1.2-.4 1.7.2.4.6.6 1 .6.2 0 .5-.1.7-.2l7.1-4.6H56l6.3 4.8c.2.2.5.3.8.3.4 0 .8-.2 1-.5.4-.5.3-1.3-.2-1.8l-3.7-2.8h2.7c1.2 0 2.3-.4 3.1-1.3l15.4-15c.8-.9 1.3-2 1.3-3.2-.1-1.1-.6-2.3-1.4-3.1zm-1.8 4.6L64.2 72.2c-.4.4-.8.6-1.4.5H31.3c-1.1 0-2-.9-2-2 0-.5.2-1 .6-1.4.4-.4.9-.6 1.4-.6h30.1c.3 0 .6-.1.9-.4l14.3-13.9c.8-.8 2.1-.8 2.9 0 .4.4.6.9.6 1.4 0 .6-.2 1.1-.6 1.5z" fill="#fff"></path><path class="st3" d="M47.4 33.5c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 9.9c-2 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7 3.7 1.7 3.7 3.7c-.1 2-1.7 3.7-3.7 3.7zM47.4 30.8c.7 0 1.2-.6 1.2-1.2V23c0-.7-.6-1.2-1.2-1.2s-1.2.6-1.2 1.2v6.5c-.1.7.5 1.3 1.2 1.3zM47.4 48.6c-.7 0-1.2.6-1.2 1.2v6.5c0 .7.6 1.2 1.2 1.2s1.2-.6 1.2-1.2v-6.5c0-.6-.6-1.2-1.2-1.2zM54.6 33.7c.3 0 .6-.1.9-.4l4.6-4.6c.5-.5.5-1.3 0-1.8s-1.3-.5-1.8 0l-4.6 4.6c-.5.5-.5 1.3 0 1.8.2.3.5.4.9.4zM39.2 46l-4.6 4.6c-.5.5-.5 1.3 0 1.8.2.2.6.4.9.4.3 0 .6-.1.9-.4l4.6-4.6c.5-.5.5-1.3 0-1.8s-1.3-.5-1.8 0zM64 38.5h-6.5c-.7 0-1.2.6-1.2 1.2s.6 1.2 1.2 1.2H64c.7 0 1.2-.6 1.2-1.2s-.5-1.2-1.2-1.2zM38.4 39.7c0-.7-.6-1.2-1.2-1.2h-6.5c-.7 0-1.2.6-1.2 1.2S30 41 30.6 41h6.5c.7 0 1.3-.6 1.3-1.3zM55.4 46c-.5-.5-1.3-.5-1.8 0s-.5 1.3 0 1.8l4.6 4.6c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8L55.4 46zM39.2 33.4c.2.2.6.4.9.4.3 0 .6-.1.9-.4.5-.5.5-1.3 0-1.8L36.4 27c-.5-.5-1.3-.5-1.8 0s-.5 1.3 0 1.8l4.6 4.6z"></path></g></symbol><symbol id="svg$ts" viewBox="0 0 106 106"><path d="M53 105.5A52.5 52.5 0 1 1 105.5 53 52.62 52.62 0 0 1 53 105.5z" fill="#fff"></path><path d="M81.3 52.7a4.65 4.65 0 0 0-6.4 0l-14 13.6H31.3a4.82 4.82 0 0 0-3.2 1.3 4.22 4.22 0 0 0-1.3 3.2 4.55 4.55 0 0 0 4.5 4.5h3.4l-3.9 2.5a1.3 1.3 0 0 0-.4 1.7 1.1 1.1 0 0 0 1 .6 1.85 1.85 0 0 0 .7-.2l7.1-4.6H56l6.3 4.8a1.14 1.14 0 0 0 .8.3 1.23 1.23 0 0 0 1-.5 1.39 1.39 0 0 0-.2-1.8l-3.7-2.8h2.7A4 4 0 0 0 66 74l15.4-15a4.82 4.82 0 0 0 1.3-3.2 5.21 5.21 0 0 0-1.4-3.1zm-1.8 4.6L64.2 72.2a1.47 1.47 0 0 1-1.4.5H31.3a2 2 0 0 1-2-2 2.05 2.05 0 0 1 2-2h30.1a1.22 1.22 0 0 0 .9-.4l14.3-13.9a2.05 2.05 0 0 1 2.9 0 2 2 0 0 1 .6 1.4 2 2 0 0 1-.6 1.5z" fill="#013f71"></path><path d="M47.4 33.5a6.2 6.2 0 1 0 6.2 6.2 6.23 6.23 0 0 0-6.2-6.2zm0 9.9a3.7 3.7 0 1 1 3.7-3.7 3.83 3.83 0 0 1-3.7 3.7zM47.4 30.8a1.22 1.22 0 0 0 1.2-1.2V23a1.22 1.22 0 0 0-1.2-1.2 1.29 1.29 0 0 0-1.2 1.2v6.5a1.18 1.18 0 0 0 1.2 1.3zM47.4 48.6a1.22 1.22 0 0 0-1.2 1.2v6.5a1.22 1.22 0 0 0 1.2 1.2 1.29 1.29 0 0 0 1.2-1.2v-6.5a1.29 1.29 0 0 0-1.2-1.2zM54.6 33.7a1.22 1.22 0 0 0 .9-.4l4.6-4.6a1.27 1.27 0 1 0-1.8-1.8l-4.6 4.6a1.27 1.27 0 0 0 0 1.8 1 1 0 0 0 .9.4zM39.2 46l-4.6 4.6a1.27 1.27 0 0 0 0 1.8 1.49 1.49 0 0 0 .9.4 1.22 1.22 0 0 0 .9-.4l4.6-4.6a1.27 1.27 0 0 0-1.8-1.8zM64 38.5h-6.5a1.22 1.22 0 0 0-1.2 1.2 1.29 1.29 0 0 0 1.2 1.2H64a1.2 1.2 0 0 0 0-2.4zM38.4 39.7a1.22 1.22 0 0 0-1.2-1.2h-6.5a1.22 1.22 0 0 0-1.2 1.2 1.3 1.3 0 0 0 1.1 1.3h6.5a1.32 1.32 0 0 0 1.3-1.3zM55.4 46a1.27 1.27 0 0 0-1.8 1.8l4.6 4.6a1.49 1.49 0 0 0 .9.4 1.22 1.22 0 0 0 .9-.4 1.27 1.27 0 0 0 0-1.8zM39.2 33.4a1.49 1.49 0 0 0 .9.4 1.22 1.22 0 0 0 .9-.4 1.27 1.27 0 0 0 0-1.8L36.4 27a1.27 1.27 0 1 0-1.8 1.8z" fill="#ffb81c"></path></symbol><symbol id="svg$sg" viewBox="0 0 6 10"><path d="M1.63.184A.476.476 0 0 0 1.236 0a.506.506 0 0 0-.377.236c-.2.292-.182.744.04 1.01L4.09 5 .898 8.755c-.223.265-.24.718-.04 1.009a.506.506 0 0 0 .377.236h.03a.479.479 0 0 0 .364-.183L5.27 5.53A.828.828 0 0 0 5.45 5a.834.834 0 0 0-.18-.532L1.63.184z" fill="#FFB81C" fill-rule="evenodd"></path></symbol><symbol id="svg$tl" viewBox="0 0 106 106"><style>.st2{fill:#ffb81c}</style><g id="svg$e2"><circle cx="53" cy="53" r="51" fill="#013f71"></circle><path d="M53 105.5C24.1 105.5.5 81.9.5 53S24.1.5 53 .5s52.5 23.6 52.5 52.5-23.6 52.5-52.5 52.5zm0-102C25.7 3.5 3.5 25.7 3.5 53s22.2 49.5 49.5 49.5 49.5-22.2 49.5-49.5S80.3 3.5 53 3.5z" fill="#658ba9"></path><path class="st2" d="M53 49c-3.4 0-6.1-2.7-6.1-6.1s2.7-6.1 6.1-6.1c3.4 0 6.1 2.7 6.1 6.1S56.4 49 53 49zm0-9.8c-2 0-3.6 1.6-3.6 3.6s1.6 3.6 3.6 3.6 3.6-1.6 3.6-3.6-1.6-3.6-3.6-3.6zM55.2 66.2c-1 0-1.8.8-1.8 1.9 0 1 .8 1.8 1.9 1.8 1 0 1.8-.8 1.8-1.9 0-1-.9-1.8-1.9-1.8z"></path><path d="M85.6 46.8l-8.2-5.6V28.1c0-.7-.6-1.2-1.2-1.2h-8.8c-.7 0-1.2.6-1.2 1.2v5.4L53.7 25c-.4-.3-1-.3-1.4 0L20.4 46.8c-.6.4-.7 1.2-.3 1.7.2.4.6.5 1 .5.2 0 .5-.1.7-.2l6.9-4.7v34.2c0 .7.6 1.2 1.2 1.2H76c.7 0 1.2-.6 1.2-1.2V44.2l6.8 4.7c.6.4 1.3.2 1.7-.3s.4-1.4-.1-1.8zM68.5 29.3h6.3v10.2l-6.3-4.3v-5.9zM46.7 65.6c-.1-1.7.5-3.3 1.6-4.5 1.1-1.2 2.7-2 4.4-2.1 1.7-.1 3.3.5 4.5 1.6 1.2 1.1 2 2.7 2.1 4.4v12.2H46.7V65.6zm28.1 11.6h-13V65.8v-.9c-.1-2.3-1.1-4.5-2.9-6.1-1.7-1.6-4-2.4-6.3-2.3-4.8.2-8.6 4.4-8.3 9.2v11.5h-13V42.5L53 27.6l21.8 14.9v34.7z" fill="#fff"></path></g></symbol><symbol id="svg$tk" viewBox="0 0 105 105"><path d="M52.5 105A52.5 52.5 0 1 1 105 52.5 52.62 52.62 0 0 1 52.5 105z" fill="#fff"></path><path d="M52.5 48.5a6.1 6.1 0 1 1 6.1-6.1 6.06 6.06 0 0 1-6.1 6.1zm0-9.8a3.6 3.6 0 1 0 3.6 3.6 3.59 3.59 0 0 0-3.6-3.6zM54.7 65.7a1.85 1.85 0 1 0 1.9 1.8 1.88 1.88 0 0 0-1.9-1.8z" fill="#ffb81c"></path><path d="M85.1 46.3l-8.2-5.6V27.6a1.22 1.22 0 0 0-1.2-1.2h-8.8a1.22 1.22 0 0 0-1.2 1.2V33l-12.5-8.5a1.2 1.2 0 0 0-1.4 0L19.9 46.3a1.18 1.18 0 0 0-.3 1.7 1 1 0 0 0 1 .5 1.85 1.85 0 0 0 .7-.2l6.9-4.7v34.2a1.22 1.22 0 0 0 1.2 1.2h46.1a1.22 1.22 0 0 0 1.2-1.2V43.7l6.8 4.7a1.25 1.25 0 0 0 1.7-.3 1.37 1.37 0 0 0-.1-1.8zM68 28.8h6.3V39L68 34.7zM46.2 65.1a6.1 6.1 0 0 1 1.6-4.5 6.57 6.57 0 0 1 4.4-2.1 6.1 6.1 0 0 1 4.5 1.6 6.57 6.57 0 0 1 2.1 4.4v12.2H46.2zm28.1 11.6h-13V64.4a8.88 8.88 0 0 0-9.2-8.4 8.74 8.74 0 0 0-8.3 9.2v11.5h-13V42l21.7-14.9L74.3 42z" fill="#013f71"></path></symbol><symbol id="svg$tn" viewBox="0 0 106 106"><style>.st3{fill:#ffb81c}</style><g id="svg$e4"><circle cx="53" cy="53" r="51" fill="#013f71"></circle><path d="M53 105.5C24.1 105.5.5 81.9.5 53S24.1.5 53 .5s52.5 23.6 52.5 52.5-23.6 52.5-52.5 52.5zm0-102C25.7 3.5 3.5 25.7 3.5 53s22.2 49.5 49.5 49.5 49.5-22.2 49.5-49.5S80.3 3.5 53 3.5z" fill="#658ba9"></path><path d="M81.9 37.8c-3.9 0-6.1.9-7.3 2.2-2.6-8.5-10.5-14.7-19.9-14.7-.6 0-1.2.5-1.2 1.2v18.3H30.3c-.6 0-1.2.5-1.2 1.2v3.6c0 4.2 2.6 7.9 6.4 9.4l14.6 9.8-8.7 5.9c-.5.4-.7 1.1-.3 1.7.2.3.6.5 1 .5.2 0 .5-.1.7-.2l9.4-6.4 9.5 6.4c.2.1.5.2.7.2.4 0 .8-.2.9-.5.4-.5.3-1.3-.3-1.7l-8.6-5.8 14-9.5c4.1-1.3 7.1-5.1 7.1-9.6v-3.6-.1c0-3.5 0-5.8 6.4-5.8.6 0 1.2-.6 1.2-1.2s-.5-1.3-1.2-1.3zM56 27.8c9.1.6 16.4 7.9 17 17H56v-17zm-15 32h22.3l-11.2 7.6L41 59.8zm31.9-10.3c0 4.2-3.4 7.6-7.6 7.6H39.1c-4.2 0-7.6-3.4-7.6-7.6v-2.3h41.4v2.3z" fill="#fff"></path><path class="st3" d="M42.3 83.2c-4.3 0-7.8-3.5-7.8-7.8s3.5-7.8 7.8-7.8 7.8 3.5 7.8 7.8c0 4.4-3.5 7.8-7.8 7.8zm0-13c-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3-2.4-5.3-5.3-5.3zM62.1 83.2c-4.3 0-7.8-3.5-7.8-7.8s3.5-7.8 7.8-7.8 7.8 3.5 7.8 7.8c0 4.4-3.5 7.8-7.8 7.8zm0-13c-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3-2.4-5.3-5.3-5.3z"></path></g></symbol><symbol id="svg$tm" viewBox="0 0 105 105"><path d="M52.5 105A52.5 52.5 0 1 1 105 52.5 52.62 52.62 0 0 1 52.5 105z" fill="#fff"></path><path d="M81.4 37.3c-3.89 0-6.08.9-7.31 2.2A20.78 20.78 0 0 0 54.2 24.8 1.22 1.22 0 0 0 53 26v18.3H29.8a1.22 1.22 0 0 0-1.2 1.2v3.6a10.14 10.14 0 0 0 6.38 9.4l14.55 9.83-8.63 5.87a1.25 1.25 0 0 0-.3 1.7 1.23 1.23 0 0 0 1 .5 1.85 1.85 0 0 0 .7-.2l9.43-6.4 9.47 6.4a1.85 1.85 0 0 0 .7.2.94.94 0 0 0 .9-.5 1.18 1.18 0 0 0-.3-1.7l-8.63-5.85 14-9.51a10.14 10.14 0 0 0 7.1-9.64v-3.7c0-3.5 0-5.8 6.4-5.8a1.29 1.29 0 0 0 1.23-1.2 1.22 1.22 0 0 0-1.2-1.2zm-25.9-10a18.28 18.28 0 0 1 17 17h-17zm-15 32h22.37L51.7 66.88zM72.4 49a7.6 7.6 0 0 1-7.6 7.6H38.6A7.6 7.6 0 0 1 31 49v-2.3h41.4z" fill="#013f71"></path><path d="M41.8 82.7a7.8 7.8 0 1 1 7.8-7.8 7.81 7.81 0 0 1-7.8 7.8zm0-13a5.3 5.3 0 1 0 5.3 5.3 5.34 5.34 0 0 0-5.3-5.3zM61.6 82.7a7.8 7.8 0 1 1 7.8-7.8 7.81 7.81 0 0 1-7.8 7.8zm0-13a5.3 5.3 0 1 0 5.3 5.3 5.34 5.34 0 0 0-5.3-5.3z" fill="#ffb81c"></path></symbol><symbol id="svg$tp" viewBox="0 0 106 106"><circle cx="53" cy="53" r="51" fill="#013f71"></circle><path d="M53 105.5C24.1 105.5.5 81.9.5 53S24.1.5 53 .5s52.5 23.6 52.5 52.5-23.6 52.5-52.5 52.5zm0-102C25.7 3.5 3.5 25.7 3.5 53s22.2 49.5 49.5 49.5 49.5-22.2 49.5-49.5S80.3 3.5 53 3.5z" fill="#658ba9"></path><path d="M76 33.5c-9-.3-16.2-3-22.2-8.3-.5-.4-1.2-.4-1.7 0-6.1 5.4-13.1 8.1-22.2 8.3-.7 0-1.2.6-1.2 1.2v9.1c0 15.7 2.9 31.4 23.8 38.9.1 0 .3.1.4.1s.3 0 .4-.1c20.9-7.6 23.8-23.2 23.8-38.9v-9.1c.1-.7-.4-1.2-1.1-1.2zm-1.2 10.3c0 14.7-2.6 29.3-21.8 36.4C41.6 76 31.2 68.6 31.2 43.8v-7.9c8.6-.5 15.8-3.2 21.7-8.2 6 5 13.1 7.7 21.8 8.2v7.9z" fill="#fff"></path><path d="M58.2 43.2c-2 0-3.9.9-5.2 2.4-1.3-1.5-3.2-2.4-5.2-2.4-3.5 0-6.3 2.7-6.3 6.2v.1c0 4.4 3.9 7.9 9.9 13.3l1.7 1.5 1.7-1.5c6-5.4 9.9-9 9.9-13.3 0-3.5-2.7-6.3-6.2-6.3h-.3" fill="#ffb81c"></path></symbol><symbol id="svg$to" viewBox="0 0 105 105"><path d="M52.5 105A52.5 52.5 0 1 1 105 52.5 52.62 52.62 0 0 1 52.5 105z" fill="#fff"></path><path d="M75.5 33c-9-.3-16.2-3-22.2-8.3a1.35 1.35 0 0 0-1.7 0c-6.1 5.4-13.1 8.1-22.2 8.3a1.22 1.22 0 0 0-1.2 1.2v9.1c0 15.7 2.9 31.4 23.8 38.9.1 0 .3.1.4.1a.6.6 0 0 0 .4-.1C73.7 74.6 76.6 59 76.6 43.3v-9.1a1 1 0 0 0-1.1-1.2zm-1.2 10.3c0 14.7-2.6 29.3-21.8 36.4-11.4-4.2-21.8-11.6-21.8-36.4v-7.9c8.6-.5 15.8-3.2 21.7-8.2 6 5 13.1 7.7 21.8 8.2v7.9z" fill="#013f71"></path><path d="M57.7 42.7a6.92 6.92 0 0 0-5.2 2.4 6.92 6.92 0 0 0-5.2-2.4 6.19 6.19 0 0 0-6.3 6.2v.1c0 4.4 3.9 7.9 9.9 13.3l1.7 1.5 1.7-1.5c6-5.4 9.9-9 9.9-13.3a6.19 6.19 0 0 0-6.2-6.3h-.3" fill="#ffb81c"></path></symbol><symbol id="svg$tv" viewBox="0 0 106 106"><circle cx="53" cy="53" r="51" fill="#013f71"></circle><path d="M53 105.5C24.1 105.5.5 81.9.5 53S24.1.5 53 .5s52.5 23.6 52.5 52.5-23.6 52.5-52.5 52.5zm0-102C25.7 3.5 3.5 25.7 3.5 53s22.2 49.5 49.5 49.5 49.5-22.2 49.5-49.5S80.3 3.5 53 3.5z" fill="#658ba9"></path><path d="M85.7 47.2l-32.1-18c-.4-.2-.8-.2-1.2 0l-32.1 18c-.4.2-.6.6-.6 1.1s.2.9.6 1.1l6.2 3.5v8H29v-6.6l5.1 2.9v9.5c0 4.2 9.8 6.2 18.9 6.2 9.1 0 18.9-1.9 18.9-6.2v-9.5l13.8-7.7c.4-.2.6-.6.6-1.1s-.2-1-.6-1.2zm-62.2 1.1l3-1.7V50l-3-1.7zm45.9 15c-3.5-2-10.1-2.9-16.4-2.9-6.3 0-12.9.9-16.4 2.9V50.8c0-1.1 5.6-3.7 16.4-3.7s16.4 2.6 16.4 3.7v12.5zm-16.4 7c-10.8 0-16.4-2.6-16.4-3.7s5.6-3.7 16.4-3.7 16.4 2.6 16.4 3.7-5.6 3.7-16.4 3.7zm18.9-16.1v-3.5c0-4.2-9.8-6.2-18.9-6.2-9.1 0-18.9 1.9-18.9 6.2v3.5L29 51.4v-6.2l24-13.4 29.5 16.5-10.6 5.9z" fill="#fff"></path><path d="M30 65.2c.6-.6.9-1.4.9-2.2 0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1 0 .8.3 1.6.9 2.2l-.9 9.1.3.2c.9.5 1.9.7 2.9.7s2-.2 2.9-.7l.3-.2-1.1-9.1z" fill="#ffb81c" stroke="#ffb81c" stroke-width=".5" stroke-miterlimit="10"></path></symbol><symbol id="svg$tu" viewBox="0 0 105 105"><path d="M52.5 105A52.5 52.5 0 1 1 105 52.5 52.62 52.62 0 0 1 52.5 105z" fill="#fff"></path><path d="M85.2 46.7l-32.1-18a1.27 1.27 0 0 0-1.2 0l-32.1 18a1.31 1.31 0 0 0 0 2.2l6.2 3.5v8h2.5v-6.6l5.1 2.9v9.5c0 4.2 9.8 6.2 18.9 6.2s18.9-1.9 18.9-6.2v-9.5L85.2 49a1.15 1.15 0 0 0 .6-1.1 1.31 1.31 0 0 0-.6-1.2zM23 47.8l3-1.7v3.4zm45.9 15c-3.5-2-10.1-2.9-16.4-2.9s-12.9.9-16.4 2.9V50.3c0-1.1 5.6-3.7 16.4-3.7s16.4 2.6 16.4 3.7zm-16.4 7c-10.8 0-16.4-2.6-16.4-3.7s5.6-3.7 16.4-3.7 16.4 2.6 16.4 3.7-5.6 3.7-16.4 3.7zm18.9-16.1v-3.5c0-4.2-9.8-6.2-18.9-6.2s-18.9 1.9-18.9 6.2v3.5l-5.1-2.8v-6.2l24-13.4L82 47.8z" fill="#013f71"></path><path d="M29.5 64.7a3.1 3.1 0 1 0-5.3-2.2 3.1 3.1 0 0 0 .9 2.2l-.9 9.1.3.2a6.36 6.36 0 0 0 5.8 0l.3-.2z" fill="#ffb81c" stroke="#ffb81c" stroke-miterlimit="10" stroke-width=".5"></path></symbol><symbol id="svg$tr" viewBox="0 0 106 106"><circle cx="53" cy="53" r="51" fill="#013f71"></circle><path d="M53 105.5C24.1 105.5.5 81.9.5 53S24.1.5 53 .5s52.5 23.6 52.5 52.5-23.6 52.5-52.5 52.5zm0-102C25.7 3.5 3.5 25.7 3.5 53s22.2 49.5 49.5 49.5 49.5-22.2 49.5-49.5S80.3 3.5 53 3.5z" fill="#658ba9"></path><path d="M76 33.5c-9-.3-16.2-3-22.2-8.3-.5-.4-1.2-.4-1.7 0-6.1 5.4-13.1 8.1-22.2 8.3-.7 0-1.2.6-1.2 1.2v9.1c0 15.7 2.9 31.4 23.8 38.9.1 0 .3.1.4.1s.3 0 .4-.1c20.9-7.6 23.8-23.2 23.8-38.9v-9.1c.1-.7-.4-1.2-1.1-1.2zm-1.2 10.3c0 14.7-2.6 29.3-21.8 36.4C41.6 76 31.2 68.6 31.2 43.8v-7.9c8.6-.5 15.8-3.2 21.7-8.2 6 5 13.1 7.7 21.8 8.2v7.9z" fill="#fff"></path><path d="M52.1 41.3v2.2l-.3.1-.3.1c-1.8.3-3.3 1.5-3.9 3.2-.4 1-.5 2-.5 3 .1 1.8 1.1 3.5 2.7 4.3.7.4 1.5.7 2.3 1 1 .4 1.9.8 2.9 1.2.8.3 1.2 1.1 1.1 1.9 0 .9-.6 1.7-1.5 1.9-.4.1-.8.1-1.2.1-1.4.1-2.7-.8-3.1-2.2-.1-.3-.2-.5-.2-.8l-3.6.9c.3 1.3.9 2.6 1.8 3.6 1.1 1.1 2.5 1.7 4 1.8v2.8h2.4v-2.8c.5-.1.9-.2 1.4-.3 1.7-.4 3.1-1.5 3.8-3.1.5-1.2.7-2.5.4-3.8-.2-1.5-1.2-2.9-2.5-3.6-1.1-.6-2.3-1.1-3.5-1.5-.7-.3-1.4-.6-2.1-1-.4-.2-.7-.6-.8-1-.3-1.1.3-2.3 1.4-2.7h.1c.9-.3 1.8 0 2.4.6.4.4.8.9 1 1.5.1.2.2.4.2.5l3.2-1.2c-.2-.9-.6-1.7-1.2-2.5-1-1.2-2.4-1.9-4-2.1v-2.2h-2.4z" fill="#ffb81c"></path></symbol><symbol id="svg$tq" viewBox="0 0 105 105"><path d="M52.5 105A52.5 52.5 0 1 1 105 52.5 52.62 52.62 0 0 1 52.5 105z" fill="#fff"></path><path d="M75.5 33c-9-.3-16.2-3-22.2-8.3a1.35 1.35 0 0 0-1.7 0c-6.1 5.4-13.1 8.1-22.2 8.3a1.22 1.22 0 0 0-1.2 1.2v9.1c0 15.7 2.9 31.4 23.8 38.9.1 0 .3.1.4.1a.6.6 0 0 0 .4-.1C73.7 74.6 76.6 59 76.6 43.3v-9.1a1 1 0 0 0-1.1-1.2zm-1.2 10.3c0 14.7-2.6 29.3-21.8 36.4-11.4-4.2-21.8-11.6-21.8-36.4v-7.9c8.6-.5 15.8-3.2 21.7-8.2 6 5 13.1 7.7 21.8 8.2v7.9z" fill="#013f71"></path><path d="M51.6 40.8V43l-.3.1-.3.1a5 5 0 0 0-3.9 3.2 7.89 7.89 0 0 0-.5 3 5.11 5.11 0 0 0 2.7 4.3 16 16 0 0 0 2.3 1c1 .4 1.9.8 2.9 1.2a1.75 1.75 0 0 1 1.1 1.9 1.93 1.93 0 0 1-1.5 1.9 4.87 4.87 0 0 1-1.2.1 3 3 0 0 1-3.1-2.2 2.35 2.35 0 0 1-.2-.8l-3.6.9a8.18 8.18 0 0 0 1.8 3.6 6.16 6.16 0 0 0 4 1.8v2.8h2.4v-2.8l1.4-.3a5.43 5.43 0 0 0 3.8-3.1 6.19 6.19 0 0 0 .4-3.8 5 5 0 0 0-2.5-3.6 21.69 21.69 0 0 0-3.5-1.5 20 20 0 0 1-2.1-1 1.59 1.59 0 0 1-.8-1 2.26 2.26 0 0 1 1.4-2.7h.1a2.33 2.33 0 0 1 2.4.6 4 4 0 0 1 1 1.5 1.69 1.69 0 0 1 .2.5l3.2-1.2A6.42 6.42 0 0 0 58 45a6.06 6.06 0 0 0-4-2.1v-2.2h-2.4z" fill="#ffb81c"></path></symbol><symbol id="svg$ue" viewBox="0 0 260 32"><path fill="#FFF" d="M9.2 14.5c2.7 0 5 4.3 5.4 11.1h.1c.4-1.4.5-2.8.5-4.2 0-4.9-2.3-9.3-5.4-9.3-2.9 0-3.2 2.4-2.5 3.5.3-.4.8-1.1 1.9-1.1zm3 12.2c.1-.6.2-1.1.2-2 0-3.1-1.9-8.1-5.4-8.1-2.7 0-3.1 2.6-2.2 3.4.2-.6.8-1.3 1.9-1.3 2.9 0 5 4.5 5.5 8zm17.7-11.1c.3-.4.4-.9.4-1.2 0-1.2-1.1-2.3-2.7-2.3-4.7 0-6.4 8.2-5.1 13.5h.1c.5-7.2 2.8-11.1 5.4-11.1 1.3-.1 1.8.8 1.9 1.1zm.2 1.1c-4.4 0-6.1 7.5-5.2 10h.1c.5-3.8 2.6-8 5.3-8 1.5 0 1.9.9 1.9 1.3 1-.9.4-3.3-2.1-3.3zM19.4 29.3c-2.7 0-5.4.6-7.7 2.1v.1c1.1-.2 3.8-.5 7.1-.5 3.6 0 4.9.5 5.5.5.4 0 .6-.2.6-.6 0-1.2-2.6-1.6-5.5-1.6zm0-2.8c-2.3 0-5.4.6-7.7 2.1v.1c.9-.1 3.9-.5 7.2-.5 3.1 0 4.9.5 5.4.5.4 0 .6-.2.6-.6 0-1.2-2.6-1.6-5.5-1.6zM29.9 8.6c-.3.1-.8.6-.8 1.3 0 .9.6 2.6 3.1 2.6 2.6 0 4.3-1.9 4.3-4.5s-1.9-4.9-6-4.9c-4.9 0-11.2 4.4-11.2 15 0 2 .2 4.2.7 6.6h.1c0-13 4.9-19.2 10.2-19.2 2.3 0 3.5 1.4 3.5 2.9 0 1.4-.8 2.4-2.1 2.4-1.5 0-2-1.3-1.8-2.2zM7 10.2c-.2.3-.8.8-1.8.8C4 11 3 10 3 8.6 3 7.3 4.1 6 6.1 6c5 0 10.9 7.2 10.9 16.3 0 .6 0 1.6-.1 2.4h.1c.5-1.6 1-4 1-5.7 0-8-5.5-15.7-11.9-15.7C2.3 3.3.4 5.8.4 8.1c0 2.5 1.5 4.4 3.8 4.4C6 12.5 7 11.2 7 10.2zM6.3.6c-.5 0-.8.3-.8.6 0 .5.3.7.9.9 1.8.7 5.2 1.2 9 1.2 6.8 0 13.8-1 16.8-2.2V1c-2.5.2-6.8.5-13.7.5C9.1 1.5 7.2.6 6.3.6zm5.4 3.6c.8.4 4.5 2 6.2 8.2.1.4.3.5.5.5.4 0 .6-.3.6-.8 0-2.9-1.6-5.4-2.9-6.5-1.5-1.2-3.3-1.5-4.4-1.4zm9.2.9c1.2-1.2 2.9-1.7 4.7-1.5v.1c-.6.2-2 .7-3.5 2.2-1.2 1.3-2 2.8-2.4 4.1-.4-2.6.4-4.1 1.2-4.9z"></path><path fill="#fff" d="M43.8 15.5h-2v-1.4h4.6v1.4l8.1 8.8v-8.8h-2v-1.4h5.6v1.4h-2v12.9h-1.5l-9.2-10v8.7h1.9v1.3h-5.5v-1.3h2V15.5zm14.6 7.8c0 2.2 1.5 5.4 5.7 5.4 4 0 5.7-2.8 5.7-5.4 0-2.7-1.9-5.4-5.7-5.4-4 0-5.7 3-5.7 5.4zm3.1 0c0-2.4.8-4.2 2.7-4.2 1.7 0 2.6 1.6 2.6 4.4 0 2.6-1 4.2-2.6 4.2-1.7-.1-2.7-1.7-2.7-4.4zm11-4h-1.8v-1.1h4.5v1.7c.4-.6.8-1.1 1.2-1.5.4-.3.8-.5 1.3-.5s1.2.4 1.6 1c-.1.9-.5 2.1-1 2.9-.6-1.1-1-1.5-1.7-1.5-.6 0-.9.3-1.5 1v6H77v1.1h-6.3v-1.1h1.8v-8zm7.6.3l4.3-4.1v2.8h2.9v1.3h-2.9v5.8c0 1.3.5 2.2 1.4 2.2.8 0 1.3-.8 1.7-.8.2 0 .3.1.3.3 0 .5-.9 1.6-3 1.6s-3.1-1.1-3.1-3.4v-5.7h-1.6zm13.1-.2c1.3-.9 2.6-1.5 3.6-1.5 1.6 0 2.8 1.3 2.8 3v6.4h1.8v1.1h-6v-1.1h1.5v-5.8c0-1.2-.6-1.8-1.6-1.8-.6 0-1.3.3-2.2.8v6.8h1.5v1.1h-6v-1.1h1.8V13.8h-1.8v-1.1h4.6v6.7zm7.5-.1v-1.1h5.6v1.1h-1.4l2.3 5.1 1.9-5.1h-1.4v-1.1h5.2v1.1h-1.3l2.3 5.1 1.9-5.1h-1.6v-1.1h4.2v1.1H117l-3.5 9.3h-.6l-3.4-7.2-2.7 7.2h-.5l-4.3-9.3h-1.3zm27.4 3.4c-.3-2.9-2.1-4.7-4.7-4.7-2.8 0-4.7 2.1-4.7 5.2 0 2.4 1.3 5.6 5.5 5.6 1.5 0 2.5-.3 3.9-1.1l.2-1.3c-.8.6-2.2 1.1-3.2 1.1-2 0-3.4-1.9-3.4-4.7h6.4v-.1zm-6.4-1.1c0-1.3.6-2.5 1.7-2.5 1 0 1.7.9 1.9 2.5h-3.6zm8.2 3.8h.7c.4 1.4 1.4 2.2 2.5 2.2.8 0 1.4-.4 1.4-1.2 0-1.7-4.7-2.1-4.7-5.3 0-1.8 1.5-3.1 3.5-3.1.7 0 1.3.2 2 .6l.2-.5h.8v2.7h-.8c-.4-1.2-.9-1.7-1.9-1.7-.9 0-1.4.4-1.4 1 0 2.1 4.8 2 4.8 5.5 0 1.9-1.5 3.2-3.6 3.2-.9 0-1.7-.2-2.5-.6l-.1.5h-.8v-3.3h-.1zm7.8-5.8l4.3-4.1v2.8h2.9v1.3H142v5.8c0 1.3.5 2.2 1.4 2.2.8 0 1.3-.8 1.7-.8.2 0 .3.1.3.3 0 .5-.9 1.6-3 1.6s-3.1-1.1-3.1-3.4v-5.7h-1.6zm17.4 3.1c-.3-2.9-2.1-4.7-4.7-4.7-2.8 0-4.7 2.1-4.7 5.2 0 2.4 1.3 5.6 5.5 5.6 1.5 0 2.5-.3 3.8-1.1l.2-1.3c-.8.6-2.2 1.1-3.3 1.1-2 0-3.4-1.9-3.4-4.7h6.6v-.1zm-6.4-1.1c0-1.3.6-2.5 1.7-2.5 1 0 1.7.9 1.9 2.5h-3.6zm9.5-2.3h-1.8v-1.1h4.5v1.7c.4-.6.8-1.1 1.3-1.5.4-.3.8-.5 1.3-.5s1.2.4 1.6 1c-.1.9-.5 2.1-1 2.9-.6-1.1-1-1.5-1.7-1.5-.6 0-.9.3-1.5 1v6h1.8v1.1h-6.3v-1.1h1.8v-8zm9.8 0h-1.8v-1.1h4.5v1.2c1.4-.9 2.3-1.5 3.6-1.5 1.8 0 2.8 1.2 2.8 3.1v6.3h1.8v1.1h-6v-1.1h1.5v-6.1c0-1-.7-1.6-1.5-1.6-.7 0-1.3.2-2.2.8v6.9h1.4v1.1h-6v-1.1h1.8v-8h.1zm19-3.8h-1.9v-1.4h5.2v1.4l4.1 8.4 4-8.4v-1.4h5.4v1.4h-1.9v11.6h1.9v1.3H197v-1.3h2v-9h-.1L194 28.4h-.5l-4.8-9.9v8.6h1.9v1.3h-5.5v-1.3h1.9V15.5zm29.8 11.8v1.1h-4.5v-1c-1.3.9-2.5 1.3-3.5 1.3-2.2 0-2.9-1.4-2.9-2.9v-6.5H204v-1.1h4.5v7.4c0 1 .5 1.6 1.4 1.6.6 0 1.3-.3 2.3-.9v-7.1h-1.8v-1.1h4.5v9.1h1.9v.1zm.2-7.7l4.3-4.1v2.8h2.9v1.3h-2.9v5.8c0 1.3.5 2.2 1.4 2.2.8 0 1.3-.8 1.7-.8.2 0 .3.1.3.3 0 .5-.9 1.6-3 1.6s-3.1-1.1-3.1-3.4v-5.7H217zm20.8 7.7v1.1h-4.5v-1c-1.3.9-2.5 1.3-3.5 1.3-2.2 0-2.9-1.4-2.9-2.9v-6.5h-1.8v-1.1h4.5v7.4c0 1 .5 1.6 1.4 1.6.6 0 1.3-.3 2.3-.9v-7.1h-1.8v-1.1h4.5v9.1h1.8v.1zm10.6-.3c-.3.1-.5.2-.8.2-.6 0-1.2-.5-1.2-1.3v-4.5c0-2-1.5-3.4-3.4-3.4-1.3 0-2.9.7-4.1 1.8l.2.8c1.2-.7 2.1-1 2.8-1 1.1 0 1.8.7 1.8 2v1.2l-2.5.6c-1.9.5-2.7 1.3-2.7 2.6 0 1.6 1 2.8 2.4 2.8.9 0 1.8-.4 3-1.3.3.8 1.1 1.3 2.1 1.3.8 0 1.6-.2 2.4-.7V27zm-4.7-3.1v2.5c-.5.4-1.1.7-1.5.7-.6 0-1.1-.6-1.1-1.2 0-1.1.5-1.6 2.6-2zm7.2-10.1h-1.7v-1.1h4.5v14.6h1.7v1.1h-6.2v-1.1h1.7V13.8zm6.6.6h.4c.1 0 .4 0 .4-.3 0-.1-.1-.3-.3-.3h-.5v.6zm0 1.1h-.4v-1.9h.9c.1 0 .7 0 .7.6 0 .4-.3.5-.4.5l.4.8h-.4l-.3-.8h-.5v.8zm.4.5c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5-1.5.7-1.5 1.5c0 .9.6 1.5 1.5 1.5zm0-3.3c1 0 1.8.8 1.8 1.8s-.8 1.8-1.8 1.8-1.8-.8-1.8-1.8.8-1.8 1.8-1.8z"></path></symbol><symbol id="svg$ud" viewBox="0 0 332 40"><g fill="#0E497B" fill-rule="evenodd"><path d="M55.243 19.42h-2.442v-1.713h5.839v1.714L68.91 30.67V19.42h-2.579v-1.713h7.174v1.714h-2.523v16.51h-1.9L57.28 23.222v11.004h2.514v1.705h-6.993v-1.705h2.442zM73.94 29.447c0 2.837 1.875 6.845 7.31 6.845 5.073 0 7.267-3.617 7.267-6.845 0-3.373-2.402-6.874-7.235-6.874-5.293 0-7.342 3.84-7.342 6.874m3.905-.059c0-3.065 1.024-5.404 3.405-5.404 2.22 0 3.381 2.057 3.381 5.59 0 3.347-1.32 5.315-3.38 5.315-2.14 0-3.406-2.028-3.406-5.5M91.825 24.339h-2.278v-1.391h5.779v2.19h.058c.547-.826 1.065-1.466 1.587-1.894.511-.449 1.066-.67 1.615-.67.63 0 1.507.552 2.095 1.29-.154 1.182-.643 2.64-1.282 3.672-.722-1.334-1.33-1.854-2.183-1.854-.731 0-1.1.392-1.89 1.274v7.582h2.244v1.392h-8.023v-1.392h2.278v-10.2zM101.505 24.651l5.447-5.23v3.527h3.647v1.703h-3.647v7.423c0 1.667.577 2.816 1.733 2.816 1.03 0 1.677-.97 2.164-.97.236 0 .39.122.39.376 0 .63-1.184 1.995-3.858 1.995-2.71 0-3.926-1.366-3.926-4.373v-7.267h-1.95zM118.15 24.488c1.608-1.146 3.256-1.914 4.621-1.914 2.074 0 3.586 1.622 3.586 3.84v8.125h2.284v1.39h-7.659v-1.39h1.88v-7.428c0-1.523-.703-2.342-1.974-2.342-.727 0-1.699.392-2.738 1.06v8.71h1.865v1.39h-7.681v-1.39h2.324v-17.22h-2.324v-1.403h5.816v8.572zM127.689 24.339v-1.391h7.181v1.39h-1.766l2.918 6.514 2.407-6.513h-1.834v-1.391h6.64v1.39h-1.668l2.942 6.514 2.407-6.513h-1.981v-1.391h5.355v1.39h-1.83l-4.494 11.872h-.731l-4.297-9.221-3.46 9.221h-.608l-5.506-11.871zM162.583 28.599c-.396-3.678-2.708-6.025-5.937-6.025-3.523 0-5.955 2.706-5.955 6.602 0 3.075 1.615 7.116 6.993 7.116 1.859 0 3.194-.362 4.9-1.33l.242-1.71c-1.004.789-2.767 1.347-4.131 1.347-2.59 0-4.292-2.445-4.292-6h8.18zm-8.18-1.398c.027-1.613.724-3.217 2.158-3.217 1.247 0 2.134 1.156 2.406 3.217h-4.564zM164.883 32.1h.883c.55 1.768 1.727 2.79 3.22 2.79.999 0 1.797-.506 1.797-1.542 0-2.101-6.027-2.677-6.027-6.782 0-2.254 1.913-3.992 4.412-3.992.918 0 1.645.221 2.489.769l.242-.672h.982v3.465h-.982c-.542-1.55-1.185-2.153-2.362-2.153-1.102 0-1.799.486-1.799 1.244 0 2.646 6.175 2.608 6.175 7.024 0 2.4-1.917 4.04-4.624 4.04-1.13 0-2.19-.238-3.193-.758l-.15.62h-1.063V32.1zM174.828 24.651l5.442-5.23v3.527h3.648v1.703h-3.648v7.423c0 1.667.58 2.816 1.732 2.816 1.04 0 1.674-.97 2.164-.97.241 0 .397.122.397.376 0 .63-1.19 1.995-3.862 1.995-2.711 0-3.931-1.366-3.931-4.373v-7.267h-1.942zM196.983 28.599c-.39-3.678-2.702-6.025-5.92-6.025-3.537 0-5.969 2.706-5.969 6.602 0 3.075 1.612 7.116 6.996 7.116 1.853 0 3.197-.362 4.893-1.33l.25-1.71c-1.01.789-2.768 1.347-4.135 1.347-2.586 0-4.288-2.445-4.288-6h8.173zM188.81 27.2c.035-1.613.724-3.217 2.153-3.217 1.248 0 2.135 1.156 2.407 3.217h-4.56zM200.833 24.339h-2.29v-1.391h5.793v2.19h.052c.553-.826 1.07-1.466 1.585-1.894.518-.449 1.06-.67 1.615-.67.636 0 1.521.552 2.086 1.29-.142 1.182-.626 2.64-1.27 3.672-.725-1.334-1.332-1.854-2.196-1.854-.724 0-1.089.392-1.872 1.274v7.582h2.25v1.392h-8.043v-1.392h2.29v-10.2zM213.328 24.339h-2.272v-1.391h5.77v1.572c1.735-1.177 2.977-1.946 4.599-1.946 2.279 0 3.617 1.5 3.617 3.992v7.972h2.278v1.392h-7.665v-1.392h1.886v-7.76c0-1.315-.88-2.008-1.853-2.008-.848 0-1.667.305-2.862 1.034v8.734h1.817v1.392h-7.587v-1.392h2.272v-10.2zM237.569 19.42h-2.46v-1.713h6.637v1.714l5.197 10.725 5.114-10.725v-1.714h6.84v1.714h-2.434v14.805h2.433v1.705h-8.668v-1.705h2.552V22.724h-.06l-6.238 13.207h-.698L239.7 23.243h-.057v10.983h2.463v1.705h-6.997v-1.705h2.46zM275.403 34.539v1.392h-5.772V34.69c-1.708 1.18-3.23 1.601-4.478 1.601-2.858 0-3.71-1.736-3.71-3.647v-8.305h-2.287v-1.39h5.783v9.427c0 1.214.63 2.098 1.765 2.098.791 0 1.615-.347 2.927-1.126V24.34h-2.254v-1.39h5.744v11.59h2.282zM275.704 24.651l5.453-5.23v3.527h3.646v1.703h-3.646v7.423c0 1.667.571 2.816 1.73 2.816 1.038 0 1.67-.97 2.163-.97.237 0 .391.122.391.376 0 .63-1.19 1.995-3.86 1.995-2.706 0-3.933-1.366-3.933-4.373v-7.267h-1.944zM302.212 34.539v1.392h-5.783V34.69c-1.71 1.18-3.224 1.601-4.469 1.601-2.862 0-3.72-1.736-3.72-3.647v-8.305h-2.281v-1.39h5.786v9.427c0 1.214.646 2.098 1.766 2.098.787 0 1.605-.347 2.918-1.126V24.34h-2.246v-1.39h5.745v11.59h2.284zM315.655 34.074c-.37.183-.65.247-.982.247-.791 0-1.517-.612-1.517-1.676V26.87c0-2.488-1.857-4.296-4.375-4.296-1.716 0-3.717.861-5.238 2.22l.241 1.07c1.556-.944 2.619-1.309 3.62-1.309 1.459 0 2.25.881 2.25 2.556v1.515l-3.127.799c-2.367.607-3.381 1.582-3.381 3.344 0 2.035 1.275 3.522 3.041 3.522 1.164 0 2.292-.475 3.777-1.6.394.967 1.425 1.6 2.633 1.6 1.077 0 2.076-.301 3.058-.9v-1.317zm-6.001-3.945v3.124c-.633.518-1.334.866-1.88.866-.79 0-1.401-.712-1.401-1.588 0-1.194.692-1.802 3.281-2.402zM318.88 17.32h-2.254v-1.405h5.752v18.623h2.248v1.393h-8v-1.393h2.254zM11.295 18.209c3.428 0 6.423 5.509 6.929 14.083l.101.01c.474-1.727.682-3.552.633-5.369 0-6.25-2.95-11.775-6.915-11.775-3.726 0-4.05 3.088-3.162 4.446.356-.476 1.013-1.395 2.414-1.395zm3.799 15.578c.182-.797.3-1.412.3-2.493 0-3.897-2.348-10.311-6.848-10.311-3.423 0-3.903 3.272-2.804 4.316a2.437 2.437 0 0 1 2.38-1.707c3.622 0 6.326 5.72 6.885 10.195h.087zm22.51-14.183c.357-.498.5-1.143.5-1.578 0-1.492-1.398-2.93-3.454-2.93-5.974 0-8.19 10.454-6.478 17.124h.079c.59-9.161 3.519-14.08 6.867-14.08 1.741 0 2.34 1.035 2.486 1.464zm.224 1.407c-5.645 0-7.715 9.488-6.577 12.784h.073c.661-4.808 3.263-10.18 6.78-10.18 1.888 0 2.406 1.175 2.477 1.696 1.207-1.28.486-4.3-2.753-4.3zM24.25 36.974c-3.378 0-6.891.81-9.77 2.617l.037.09c1.397-.215 4.805-.601 8.987-.601 4.615 0 6.276.601 7.047.601.52 0 .758-.293.758-.775 0-1.328-3.362-1.932-7.059-1.932zm0-3.541c-2.883 0-6.831.754-9.77 2.61l.037.095c1.17-.164 4.906-.658 9.13-.658 4.004 0 6.298.658 6.904.658.52 0 .758-.297.758-.772 0-1.338-3.362-1.933-7.059-1.933zm13.367-22.715c-.43.074-1.032.725-1.032 1.697 0 1.11.818 3.344 3.985 3.344 3.27 0 5.48-2.429 5.48-5.756 0-3.26-2.384-6.278-7.61-6.278-6.226 0-14.227 5.557-14.227 19.067.006 2.579.315 5.395.94 8.438h.111c0-16.602 6.224-24.43 12.95-24.43 2.884 0 4.456 1.828 4.456 3.734 0 1.751-1.04 3.003-2.696 3.003-2.039 0-2.667-1.76-2.357-2.82zM8.428 12.744c-.235.413-.943 1.05-2.216 1.05-1.569 0-2.858-1.29-2.858-3.133 0-1.647 1.45-3.335 4.017-3.335 6.366 0 13.832 9.152 13.924 20.81 0 .737-.047 2.034-.175 3.09l.105.02c.684-2 1.219-5.123 1.219-7.314 0-10.158-6.942-19.914-15.127-19.914C2.461 4.018 0 7.238 0 10.058c0 3.213 1.894 5.652 4.839 5.652 2.31 0 3.59-1.675 3.59-2.966zM7.562.518c-.632 0-.98.33-.98.799 0 .582.376.873 1.124 1.18 2.266.924 6.593 1.483 11.487 1.49 8.663 0 17.513-1.233 21.435-2.814l-.027-.101c-3.19.21-8.685.574-17.465.574C11.181 1.646 8.678.518 7.562.518zm6.892 4.535l-.011.094c1.02.375 5.776 2.465 7.87 10.296.12.464.352.645.67.645.502 0 .716-.37.716-1.053 0-3.662-1.986-6.902-3.748-8.31-1.756-1.424-4.098-1.77-5.497-1.672zm11.732 1.159c1.492-1.587 3.703-2.175 6.016-1.958l.006.091c-.757.211-2.592.881-4.41 2.806-1.51 1.608-2.559 3.549-3.082 5.264-.584-3.23.478-5.14 1.47-6.203zM328.884 17.623h.565c.184 0 .486-.045.486-.359 0-.15-.103-.333-.44-.333h-.61v.692zm0 1.445h-.543v-2.553h1.19c.15 0 .97 0 .97.761 0 .485-.344.625-.474.682l.474 1.11h-.576l-.417-1.017h-.624v1.017zm.462.68a1.955 1.955 0 0 0 1.952-1.952 1.952 1.952 0 0 0-1.952-1.965 1.96 1.96 0 0 0-1.951 1.965c0 1.076.876 1.952 1.951 1.952zm0-4.341a2.386 2.386 0 0 1 2.381 2.39 2.383 2.383 0 0 1-2.38 2.379 2.384 2.384 0 0 1-2.382-2.38 2.38 2.38 0 0 1 2.381-2.39z"></path></g></symbol><symbol id="svg$u1" viewBox="0 0 22 14"><path d="M0 1c0-.552.44-1 1.002-1h19.996A.999.999 0 0 1 22 1c0 .552-.44 1-1.002 1H1.002A.999.999 0 0 1 0 1zm0 6c0-.552.44-1 1.002-1h19.996A.999.999 0 0 1 22 7c0 .552-.44 1-1.002 1H1.002A.999.999 0 0 1 0 7zm0 6c0-.552.44-1 1.002-1h19.996A.999.999 0 0 1 22 13c0 .552-.44 1-1.002 1H1.002A.999.999 0 0 1 0 13z" fill="#0E497B" fill-rule="evenodd"></path></symbol><symbol id="svg$sr" viewBox="0 0 182 182"><g transform="translate(2 2)" fill="none" fill-rule="evenodd"><circle stroke="#FFB81C" stroke-width="4" cx="89" cy="89" r="89"></circle><path d="M62.81 46C52.96 46 45 53.961 45 63.81v52.38C45 126.04 52.961 134 62.81 134h52.38c9.849 0 17.81-7.961 17.81-17.81V63.81C133 53.96 125.039 46 115.19 46H62.81zm0 2.095h25.142v40.857H47.095V63.81c0-8.724 6.99-15.715 15.715-15.715zm27.238 0h25.142c8.724 0 15.715 6.99 15.715 15.715v25.142H90.048V48.095zM47.095 91.048h40.857v40.857H62.81a15.657 15.657 0 0 1-15.715-15.715V91.048zm42.953 0h40.857v25.142c0 8.724-6.99 15.715-15.715 15.715H90.048V91.048z" stroke="#0E497B" stroke-width="2" fill-rule="nonzero"></path><path d="M101.054 105.583c-.582 0-1.054.41-1.054.917 0 .506.472.917 1.054.917h18.975c.582 0 1.054-.41 1.054-.917 0-.506-.472-.917-1.054-.917h-18.975zM101.054 115.667c-.582 0-1.054.41-1.054.916 0 .507.472.917 1.054.917h18.975c.582 0 1.054-.41 1.054-.917 0-.506-.472-.916-1.054-.916h-18.975z" stroke="#FFB81C" stroke-width="2.2" fill="#FFB81C"></path><path d="M67.458 57.917c-.582 0-1.054.472-1.054 1.054v8.433h-8.433a1.054 1.054 0 1 0 0 2.109h8.433v8.433a1.054 1.054 0 1 0 2.108 0v-8.433h8.434a1.054 1.054 0 1 0 0-2.109h-8.434v-8.433c0-.582-.471-1.054-1.054-1.054z" stroke="#FFB81C" stroke-width="1.2" fill="#FFB81C"></path><path d="M101.054 68c-.582 0-1.054.41-1.054.917 0 .506.472.916 1.054.916h18.975c.582 0 1.054-.41 1.054-.916 0-.507-.472-.917-1.054-.917h-18.975z" stroke="#FFB81C" stroke-width="2.2" fill="#FFB81C"></path><path d="M58.888 102.845c-.267 0-.546.09-.75.294a1.072 1.072 0 0 0 0 1.498L65.502 112l-7.362 7.363a1.072 1.072 0 0 0 0 1.498 1.072 1.072 0 0 0 1.498 0L67 113.5l7.363 7.362a1.072 1.072 0 0 0 1.498 0 1.072 1.072 0 0 0 0-1.498L68.5 112l7.362-7.363a1.072 1.072 0 0 0 0-1.498 1.072 1.072 0 0 0-1.498 0L67 110.5l-7.363-7.362a1.055 1.055 0 0 0-.749-.294z" stroke="#FFB81C" stroke-width="1.2" fill="#FFB81C"></path></g></symbol><symbol id="svg$ul" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd"><circle stroke="#CCC" cx="8" cy="8" r="7.5"></circle><path fill="#FFB81C" d="M8 11L5 7h6z"></path></g></symbol><symbol id="svg$up" viewBox="0 0 20 20"><g fill="none" fill-rule="evenodd"><path d="M19.959 0H0v19.988H19.96V0z"></path><path d="M7.901 14.224c-3.406 0-6.176-2.777-6.176-6.19 0-3.414 2.77-6.19 6.176-6.19 3.407 0 6.179 2.776 6.179 6.19 0 3.413-2.772 6.19-6.179 6.19zm4.818.25l.267.36c.042.058.07.099.105.134l4.638 4.649c.49.494 1.354.495 1.848 0a1.32 1.32 0 0 0 .002-1.855l-4.638-4.645c-.023-.023-.053-.045-.084-.067l-.35-.269.185-.414a7.987 7.987 0 0 0 1.29-4.358c0-4.416-3.585-8.01-7.99-8.01C3.584 0 0 3.594 0 8.01c0 4.414 3.584 8.006 7.992 8.006 1.549 0 3.053-.448 4.352-1.295l.375-.246z" fill="#fff" mask="url(#mask-2)"></path></g></symbol><symbol id="svg$uq" viewBox="0 0 20 20"><g fill="none" fill-rule="evenodd"><path d="M19.959 0H0v19.988H19.96V0z"></path><path d="M7.901 14.224c-3.406 0-6.176-2.777-6.176-6.19 0-3.414 2.77-6.19 6.176-6.19 3.407 0 6.179 2.776 6.179 6.19 0 3.413-2.772 6.19-6.179 6.19zm4.818.25l.267.36c.042.058.07.099.105.134l4.638 4.649c.49.494 1.354.495 1.848 0a1.32 1.32 0 0 0 .002-1.855l-4.638-4.645c-.023-.023-.053-.045-.084-.067l-.35-.269.185-.414a7.987 7.987 0 0 0 1.29-4.358c0-4.416-3.585-8.01-7.99-8.01C3.584 0 0 3.594 0 8.01c0 4.414 3.584 8.006 7.992 8.006 1.549 0 3.053-.448 4.352-1.295l.375-.246z" fill="#FFB81C" mask="url(#mask-2)"></path></g></symbol><symbol id="svg$un" viewBox="0 0 18 18"><path d="M3.517 11.428a5.558 5.558 0 0 1-1.638-3.956c0-1.494.581-2.899 1.638-3.955a5.558 5.558 0 0 1 3.955-1.638c1.495 0 2.9.581 3.956 1.638a5.6 5.6 0 0 1 0 7.91 5.558 5.558 0 0 1-3.956 1.639c-1.494 0-2.899-.582-3.955-1.638m14.208 4.968l-4.347-4.347c2.272-2.929 2.068-7.172-.621-9.86A7.428 7.428 0 0 0 7.472 0a7.428 7.428 0 0 0-5.284 2.188A7.427 7.427 0 0 0 0 7.472c0 1.996.777 3.874 2.188 5.284a7.424 7.424 0 0 0 5.284 2.19 7.42 7.42 0 0 0 4.578-1.567l4.346 4.346a.942.942 0 0 0 1.329 0 .941.941 0 0 0 0-1.33" fill="#9B9B9B" fill-rule="evenodd"></path></symbol><symbol id="svg$um" viewBox="0 0 16 16"><path d="M9.414 8l6.293-6.293A.999.999 0 1 0 14.293.293L8 6.586 1.707.293A.999.999 0 1 0 .293 1.707L6.586 8 .293 14.293a.999.999 0 1 0 1.414 1.414L8 9.414l6.293 6.293a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414L9.414 8z" fill="#9B9B9B" fill-rule="evenodd"></path></symbol><symbol id="svg$v6" viewBox="0 0 30 30"><path d="M18.214 15.006h-2.102V22.5h-3.114v-7.494h-1.483v-2.648h1.482v-1.714c0-1.227.583-3.144 3.143-3.144l2.307.01v2.57h-1.674c-.273 0-.661.136-.661.722v1.556h2.375l-.273 2.648zM15 0C6.716 0 0 6.716 0 15c0 8.286 6.716 15 15 15 8.285 0 15-6.714 15-15 0-8.284-6.715-15-15-15z" fill="#CCC" fill-rule="evenodd"></path></symbol><symbol id="svg$vb" viewBox="0 0 30 30"><path d="M20.974 12.34c0 4.066-3.096 8.756-8.756 8.756-1.74 0-3.356-.51-4.718-1.383.242.027.486.042.734.042 1.443 0 2.768-.49 3.821-1.316A3.083 3.083 0 0 1 9.182 16.3a3.105 3.105 0 0 0 1.388-.052 3.082 3.082 0 0 1-2.468-3.018v-.038c.416.23.89.368 1.395.384a3.075 3.075 0 0 1-1.369-2.561c0-.565.152-1.094.416-1.548a8.733 8.733 0 0 0 6.344 3.215 3.076 3.076 0 0 1 2.998-3.777c.884 0 1.684.373 2.245.97.7-.137 1.36-.393 1.955-.747a3.083 3.083 0 0 1-1.353 1.703 6.134 6.134 0 0 0 1.767-.483 6.249 6.249 0 0 1-1.536 1.593c.007.132.01.263.01.397zM0 15c0 8.286 6.716 15 15 15 8.284 0 15-6.714 15-15 0-8.284-6.716-15-15-15C6.716 0 0 6.716 0 15z" fill="#CCC" fill-rule="evenodd"></path></symbol><symbol id="svg$v8" viewBox="0 0 30 30"><path d="M0 15c0 8.286 6.716 15 15 15 8.285 0 15-6.714 15-15 0-8.283-6.715-15-15-15C6.716 0 0 6.717 0 15z" fill="#CCC"></path><path fill="#FFF" d="M8.183 21.796h3.343v-9.984H8.183zM9.857 10.45h-.02C8.72 10.45 8 9.682 8 8.724 8 7.745 8.742 7 9.879 7s1.836.744 1.858 1.724c0 .96-.722 1.725-1.88 1.725M23.488 21.796H20.19v-5.33c0-1.343-.488-2.26-1.69-2.26-.918 0-1.47.619-1.71 1.215-.089.215-.118.512-.118.812v5.563h-3.316s.044-9.06 0-9.983h3.316v1.422c.44-.68 1.23-1.65 2.994-1.65 2.185 0 3.823 1.428 3.823 4.498v5.713z"></path></symbol><symbol id="svg$v7" viewBox="0 0 30 30"><g fill="none" fill-rule="evenodd"><path fill="#fff" d="M0 0h30v30H0V0z"></path><path d="M22.454 18.092c-.035.8-.162 1.344-.348 1.82a3.663 3.663 0 0 1-.865 1.329 3.659 3.659 0 0 1-1.328.865c-.477.186-1.022.312-1.82.348-.802.037-1.056.046-3.093.046-2.038 0-2.292-.009-3.093-.046-.798-.036-1.344-.162-1.82-.348a3.648 3.648 0 0 1-1.328-.865 3.666 3.666 0 0 1-.866-1.329c-.185-.476-.311-1.02-.349-1.82-.035-.8-.044-1.055-.044-3.092s.009-2.292.044-3.092c.038-.798.164-1.343.349-1.82a3.67 3.67 0 0 1 .866-1.328 3.675 3.675 0 0 1 1.328-.866c.476-.185 1.022-.312 1.82-.348.801-.037 1.055-.046 3.093-.046 2.037 0 2.291.01 3.092.046.799.036 1.344.163 1.82.348.493.192.913.449 1.33.866.416.416.673.835.864 1.327.186.478.313 1.023.348 1.821.038.8.046 1.055.046 3.092s-.008 2.292-.046 3.092M15 0C6.716 0 0 6.716 0 15c0 8.286 6.716 15 15 15 8.284 0 15-6.714 15-15 0-8.284-6.716-15-15-15" fill="#CCC"></path><path d="M19.004 11.896a.9.9 0 1 1 0-1.801.9.9 0 0 1 0 1.801M15 18.852a3.851 3.851 0 1 1-.001-7.702 3.851 3.851 0 0 1 0 7.702m5.848-8.275c-.136-.35-.3-.6-.562-.862a2.343 2.343 0 0 0-.861-.562c-.265-.102-.663-.225-1.394-.258-.79-.035-1.028-.043-3.03-.043s-2.24.008-3.03.043c-.732.033-1.13.156-1.394.258-.35.137-.6.3-.862.562a2.331 2.331 0 0 0-.562.862c-.102.265-.224.661-.257 1.393-.036.79-.044 1.028-.044 3.03 0 2.003.008 2.24.044 3.031.033.73.155 1.128.257 1.393.137.35.3.6.562.861.262.264.513.426.862.562.264.102.662.225 1.394.258.79.035 1.027.044 3.03.044 2.002 0 2.24-.009 3.03-.044.73-.033 1.13-.156 1.394-.258.348-.136.599-.298.861-.562.263-.261.426-.512.562-.861.102-.265.225-.662.258-1.393.035-.792.044-1.028.044-3.03 0-2.003-.009-2.24-.044-3.031-.033-.732-.156-1.128-.258-1.393" fill="#CCC"></path><path d="M15 12.5a2.5 2.5 0 1 0-.002 5 2.5 2.5 0 0 0 .002-5" fill="#CCC"></path></g></symbol><symbol id="svg$ve" viewBox="0 0 19 19"><g fill="#CCCBCC" fill-rule="nonzero"><path d="M9 8c.1 0 .1 0 .2-.1 0 0 .1-.1.1-.2V6.3c0-.1 0-.1-.1-.1 0 0-.1-.1-.2-.1s-.1 0-.2.1l-.1.1v1.4c0 .1 0 .1.1.2S9 8 9 8zM10.2 10.6c-.1 0-.1 0-.2.1-.1 0-.1.1-.2.2v-1h-.5V13h.5v-.2l.2.2c.1 0 .2.1.2.1.1 0 .2 0 .3-.1.1-.1.1-.2.1-.4v-1.3c0-.2 0-.3-.1-.4-.1-.3-.2-.3-.3-.3zm-.1 1.8v.2l-.1.1h-.1s-.1 0-.1-.1V11l.1-.1h.1c.1 0 .1 0 .1.1v1.4zM5.8 10.2h.6v2.7h.5v-2.7h.5v-.4H5.8zM8.5 12.3c0 .1-.1.1-.1.1h-.1-.1V10.5h-.5v1.9c0 .1 0 .2.1.3.1.1.1.1.2.1s.2 0 .3-.1c.1 0 .2-.1.3-.2v.3h.5v-2.3h-.5v1.8h-.1z"></path><path d="M9.1.3C4.1.3 0 4.4 0 9.4s4.1 9.1 9.1 9.1 9.1-4.1 9.1-9.1S14.1.3 9.1.3zm1.1 5.5h.5v2h.1s.1 0 .1-.1c.1 0 .1-.1.2-.1V5.7h.5v2.5h-.5v-.3c-.1.1-.2.2-.3.2-.1.1-.2.1-.3.1-.1 0-.2 0-.3-.1-.1-.1-.1-.2-.1-.3v-2h.1zm-1.9.6c0-.2.1-.4.2-.5.1-.1.3-.2.6-.2.2 0 .4.1.5.2.1.1.2.3.2.5v1.3c0 .2-.1.4-.2.5-.1.1-.3.2-.6.2-.2 0-.4-.1-.5-.2-.1-.1-.2-.3-.2-.5V6.4zM6.9 4.9l.4 1.4.4-1.4h.6l-.7 2v1.4H7V7l-.7-2.1h.6zm6.8 7.3c0 .9-.7 1.7-1.7 1.7H6.2c-.9 0-1.7-.7-1.7-1.7v-1.3c0-.9.7-1.7 1.7-1.7H12c.9 0 1.7.7 1.7 1.7v1.3z"></path><path d="M11.6 10.5c-.2 0-.4.1-.5.2-.1.1-.2.3-.2.5v1c0 .2.1.4.2.5.1.1.3.2.5.2s.4-.1.5-.2c.1-.1.2-.3.2-.5v-.1h-.5v.4s-.1.1-.2.1-.1 0-.2-.1v-.7h.9v-.6c0-.2-.1-.4-.2-.5-.2-.1-.3-.2-.5-.2zm.1.9h-.4v-.2-.2s.1-.1.2-.1.1 0 .2.1v.4z"></path></g></symbol></svg> 
+			
+		  <div class="nm-search-page ">
+		    <div class="nm-search-page--background"></div>
+		    <div class="nm-search-page--container">
+		      <div class="nm-search-page--close-background"></div>
+		      <a class="nm-search-page--close">
+		        <picture>
+		          <img src="images/close.svg" alt="Close" role="button">
+		        </picture>
+		      </a>
+		      <form class="nm-search-page--form" name="basic_search" method="get" action="https://news.northwesternmutual.com/index.php?s=20322">
+		        <span class="is-small" id="searchFor">Search for specific advisors, products, services, articles, etc.</span>
+		        <input type="hidden" name="s" value="search_results" />
+		        <input type="search" role="searchbox" placeholder="What are you looking for?" aria-labelledby="searchFor" name="query">
+		        <button class="is-yellow is-small" type="submit" value="Search">Search</button>
+		      </form>
+		      <div class="nm-search-page--content"></div>
+		    </div>
+		  </div>
+				
+		<header class="header is-overlayed"> <a class="header--logo" href="https://www.northwesternmutual.com/"
+				title="Northwestern Mutual Home"> <svg alt="Northwestern Mutual logo." class="is-only-on-desktop img" role="img"
+					aria-label="Northwestern Mutual Home. Click on this to navigate to the home page.">
+					<title>Northwestern Mutual Home.</title>
+					<desc>Click on this to navigate to the home page.</desc>
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$ue"></use>
+				</svg> <svg alt="Northwestern Mutual navy logo." class="is-only-on-phone img" role="img"
+					aria-label="Northwestern Mutual Home. Click on this to navigate to the home page.">
+					<title>Northwestern Mutual Home.</title>
+					<desc>Click on this to navigate to the home page.</desc>
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$ud"></use>
+				</svg> </a> <label class="header--hamburger" for="header--nav-toggle"> <svg alt="Hamburger menu." class="img"
+					role="img" aria-label="Open Menu Click on this to open the navigation menu.">
+					<title>Open Menu</title>
+					<desc>Click on this to open the navigation menu.</desc>
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$u1"></use>
+				</svg> Open Menu </label> <input hidden="" class="header--toggle" id="header--nav-toggle" type="checkbox"
+				tabindex="-1">
+			<nav aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+				<ul class="header--main-nav" role="menubar">
+					<li> <input hidden="" type="checkbox" aria-checked="false" aria-labelledby="Home"
+		class="header--toggle header--sub-nav-toggle" id="header--Home-toggle" tabindex="-1"> <a
+		itemprop="url" href="https://news.northwesternmutual.com/home" target="_self"
+		title="Who We Are - Mutual Company Information"> <span itemprop="name" id="HomeLink">Home</span> </a> <label class="header--nav-forward" for="header--Home-toggle"> <svg
+			alt="Chevron right arrow." class="img" role="img"
+			aria-label="Show Submenu Click on this to show the submenu.">
+			<title>Show Submenu</title>
+			<desc>Click on this to show the submenu.</desc>
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$sg"></use>
+		</svg> Show Submenu </label> <label class="header--nav-back" for="header--Home-toggle"> Back
+	</label>
+	</li>
+<li> <input hidden="" type="checkbox" aria-checked="false" aria-labelledby="News Releases"
+		class="header--toggle header--sub-nav-toggle" id="header--News-Releases-toggle" tabindex="-1"> <a
+		itemprop="url" href="https://news.northwesternmutual.com/news-releases" target="_self"
+		title="News Releases - Mutual Company Information"> <span itemprop="name" id="News-ReleasesLink">News Releases</span> </a> <label class="header--nav-forward" for="header--News-Releases-toggle"> <svg
+			alt="Chevron right arrow." class="img" role="img"
+			aria-label="Show Submenu Click on this to show the submenu.">
+			<title>Show Submenu</title>
+			<desc>Click on this to show the submenu.</desc>
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$sg"></use>
+		</svg> Show Submenu </label> <label class="header--nav-back" for="header--News-Releases-toggle"> Back
+	</label>
+	</li>
+<li> <input hidden="" type="checkbox" aria-checked="false" aria-labelledby="Media Resources"
+		class="header--toggle header--sub-nav-toggle" id="header--Media-Resources-toggle" tabindex="-1"> <a
+		itemprop="url" href="#" target="_self"
+		title="Who We Are - Mutual Company Information"> <span itemprop="name" id="Media-ResourcesLink">Media Resources</span> </a> <label class="header--nav-forward" for="header--Media-Resources-toggle"> <svg
+			alt="Chevron right arrow." class="img" role="img"
+			aria-label="Show Submenu Click on this to show the submenu.">
+			<title>Show Submenu</title>
+			<desc>Click on this to show the submenu.</desc>
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$sg"></use>
+		</svg> Show Submenu </label> <label class="header--nav-back" for="header--Media-Resources-toggle"> Back
+	</label>
+		<ul>
+
+
+	<li><a href="https://news.northwesternmutual.com/fact-sheets" target="_self">Fact Sheets</a></li>
+
+
+
+
+	<li><a href="https://news.northwesternmutual.com/b-roll" target="_self">B-roll</a></li>
+
+
+</ul>
+
+
+</li>
+<li> <input hidden="" type="checkbox" aria-checked="false" aria-labelledby="About Us"
+		class="header--toggle header--sub-nav-toggle" id="header--About-Us-toggle" tabindex="-1"> <a
+		itemprop="url" href="https://www.northwesternmutual.com/who-we-are/" target="_self"
+		title="Who We Are - Mutual Company Information"> <span itemprop="name" id="About-UsLink">About Us</span> </a> <label class="header--nav-forward" for="header--About-Us-toggle"> <svg
+			alt="Chevron right arrow." class="img" role="img"
+			aria-label="Show Submenu Click on this to show the submenu.">
+			<title>Show Submenu</title>
+			<desc>Click on this to show the submenu.</desc>
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$sg"></use>
+		</svg> Show Submenu </label> <label class="header--nav-back" for="header--About-Us-toggle"> Back
+	</label>
+		<ul>
+
+
+	<li><a href="https://www.northwesternmutual.com/who-we-are/" target="_self">Who We Are</a></li>
+
+
+
+
+	<li><a href="https://www.northwesternmutual.com/leaders/" target="_self">Our Leaders</a></li>
+
+
+
+
+	<li><a href="https://news.northwesternmutual.com/awards-and-recognition" target="_self">Awards & Recognition</a></li>
+
+
+</ul>
+
+
+</li>
+<li> <input hidden="" type="checkbox" aria-checked="false" aria-labelledby="Studies & Research"
+		class="header--toggle header--sub-nav-toggle" id="header--Studies-&-Research-toggle" tabindex="-1"> <a
+		itemprop="url" href="https://news.northwesternmutual.com/studies-and-research" target="_self"
+		title="Who We Are - Mutual Company Information"> <span itemprop="name" id="Studies-&-ResearchLink">Studies & Research</span> </a> <label class="header--nav-forward" for="header--Studies-&-Research-toggle"> <svg
+			alt="Chevron right arrow." class="img" role="img"
+			aria-label="Show Submenu Click on this to show the submenu.">
+			<title>Show Submenu</title>
+			<desc>Click on this to show the submenu.</desc>
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$sg"></use>
+		</svg> Show Submenu </label> <label class="header--nav-back" for="header--Studies-&-Research-toggle"> Back
+	</label>
+		<ul>
+
+
+	<li><a href="https://news.northwesternmutual.com/personal-prosperity-index" target="_self">Personal Prosperity Index</a></li>
+
+
+
+
+	<li><a href="https://news.northwesternmutual.com/planning-and-progress-study-2026" target="_self">Planning & Progress Study 2026</a></li>
+
+
+
+
+	<li><a href="https://news.northwesternmutual.com/planning-and-progress-study-2025" target="_self">Planning & Progress Study 2025</a></li>
+
+
+
+
+	<li><a href="https://news.northwesternmutual.com/planning-and-progress-study-2024" target="_self">Planning & Progress Study 2024</a></li>
+
+
+
+
+	<li><a href="https://news.northwesternmutual.com/planning-and-progress-study-2023" target="_self">Planning & Progress Study 2023</a></li>
+
+
+
+
+	<li><a href="https://news.northwesternmutual.com/planning-and-progress-study-2022" target="_self">Planning & Progress Study 2022</a></li>
+
+
+
+
+	<li><a href="https://news.northwesternmutual.com/planning-and-progress-2021" target="_self">Planning & Progress Study 2021</a></li>
+
+
+
+
+	<li><a href="studies-and-research" target="_self">View All Studies</a></li>
+
+
+</ul>
+
+
+</li>
+<li> <input hidden="" type="checkbox" aria-checked="false" aria-labelledby="Media Contacts"
+		class="header--toggle header--sub-nav-toggle" id="header--Media-Contacts-toggle" tabindex="-1"> <a
+		itemprop="url" href="https://news.northwesternmutual.com/Media-Contacts" target="_self"
+		title="Who We Are - Mutual Company Information"> <span itemprop="name" id="Media-ContactsLink">Media Contacts</span> </a> <label class="header--nav-forward" for="header--Media-Contacts-toggle"> <svg
+			alt="Chevron right arrow." class="img" role="img"
+			aria-label="Show Submenu Click on this to show the submenu.">
+			<title>Show Submenu</title>
+			<desc>Click on this to show the submenu.</desc>
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$sg"></use>
+		</svg> Show Submenu </label> <label class="header--nav-back" for="header--Media-Contacts-toggle"> Back
+	</label>
+	</li>
+				</ul>
+				<ul class="header--action-nav" role="menubar">
+					<li>
+					  <a href="#" class="nm-search-toggle"> Search <span class="is-only-on-desktop">
+					      <svg class="is-inactive-state img" alt="search" role="img" aria-label="Search icon. Click here to open search.">
+					        <title>Search icon.</title>
+					        <desc>Click here to open search.</desc>
+					        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$up">
+					        </use>
+					      </svg>
+					      <svg class="is-active-state img" alt="search" role="img" aria-label="Search icon Click here to open search.">
+					        <title>Search icon</title>
+					        <desc>Click here to open search.</desc>
+					        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$uq">
+					        </use>
+					      </svg>
+					    </span>
+					    <span class="is-only-on-phone">
+					      <svg alt="search" class="img" role="img" aria-label="Search icon Click here to open search.">
+					        <title>Search icon</title>
+					        <desc>Click here to open search.</desc>
+					        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$un">
+					        </use>
+					      </svg>
+					    </span>
+					  </a>
+					</li>
+					<li class="is-only-on-phone">
+					  <label for="header--nav-toggle">
+					    <svg alt="close" class="img" role="img" aria-label="Close icon. Click here to close search.">
+					      <title>Close icon.</title>
+					      <desc>Click here to close search.</desc>
+					      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$um">
+					      </use>
+					    </svg> Close Search </label>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+		
+						<section aria-label="Page content." role="banner" class="services-hero">
+				<picture>
+					<img src="/image/Image%2B5.png" alt=""  />				</picture>
+				<h1>News Releases</h1>			</section>
+			<section class="general-content intro-section"> <!-- is-centered --> 
+			<div class="wd_content" >
+								<div class="page_header">News Releases</div><div id="wd_printable_content" class="fr-view">
+<div class="wd_newsfeed_releases-detail">
+<div class="wd_title wd_language_left">Northwestern Mutual Study Finds Americans Now Believe They Will Need $1.25 Million for Comfortable Retirement</div>
+
+<div class="wd_toolbar wd_toolbar-detail"><ul class="wd_tools"><li class="wd_tool wd_tool-print"><span class="wd_tool_icon"><a onclick="view_printable(); return false;" rel="nofollow" aria-describedby="newwindow-note" href="#print" title="print"><span class="fa fa-print"></span></a></span></li><li class="wd_tool wd_tool-email"><span class="wd_tool_icon"><a onclick="window.location.href = 'mailto:?subject=Northwestern%20Mutual%20Study%20Finds%20Americans%20Now%20Believe%20They%20Will%20Need%20%241.25%20Million%20for%20Comfortable%20Retirement%20-%20Oct%2025%2C%202022&amp;body='+encodeURIComponent(window.location.href);return false;" href="#email" title="email"><span class="fa fa-envelope"></span></a></span></li><li class="wd_tool wd_tool-rss"><span class="wd_tool_icon"><a href="https://news.northwesternmutual.com/index.php?s=20324&amp;rsspage=20295" title="rss"><span class="fa fa-rss"></span></a></span></li><li class="wd_tool wd_tool-pdf"><span class="wd_tool_icon"><a href="https://news.northwesternmutual.com/2022-10-25-Northwestern-Mutual-Study-Finds-Americans-Now-Believe-They-Will-Need-1-25-Million-for-Comfortable-Retirement?asPDF=1" rel="nofollow" onclick="return wd_download_pdf(this);" title="pdf"><span class="fa fa-file-pdf-o"></span></a></span></li></ul></div>
+
+<div wd_move_after=".wd_body &gt; p ~ p|.wd_body &gt; p">
+			<div class="wd_asset_modal wd_asset_modal_main" style="display:none;">
+				
+				<ul class="wd_layout-slideshow wd_asset_slideshow_list wd_asset_slideshow_main_list">
+					<li class="wd_asset_slideshow wd_asset_type_117 wd_asset_117-19305" wd_item_hash="assets_117:19305" wd_ajax_url="https://news.northwesternmutual.com/news-releases?gallery=19305&ajax=ajax&op=modal">
+					</li>
+				</ul>
+			</div>
+		
+			<ul class="wd_layout-masonry wd_asset_list wd_asset_inline_list">
+				<li class="wd_asset_inline wd_item wd_asset_type_117 wd_asset_117-19305">
+					
+						<div class="wd_gallery_asset" wd_resize="adjustEqualHeight" wd_min_ratio="16:9">
+	<div class="wd_asset_image">
+		<div>
+			<img src="https://mma.prnewswire.com/media/1928414/19_1789_08_Planning_and_Progress_Study_2022_Wave5_2.jpg?w=600" alt="" title="19-1789-08-Planning-and-Progress-Study-2022-Wave5-2" border="0"/>
+		</div>
+	</div>
+	<div class="wd_icon_overlay">
+		<a href="https://news.northwesternmutual.com/2022-10-25-Northwestern-Mutual-Study-Finds-Americans-Now-Believe-They-Will-Need-1-25-Million-for-Comfortable-Retirement#assets_117:19305" class="wd_link_underlay" tabindex="-1"></a>
+		<div>
+			<div class="wd_icon_container"><a href="https://news.northwesternmutual.com/2022-10-25-Northwestern-Mutual-Study-Finds-Americans-Now-Believe-They-Will-Need-1-25-Million-for-Comfortable-Retirement#assets_117:19305"><span class="fa fa-search-plus"></span><span class="wd_sr-only wd_sr-only-focusable">View File</span></a> <a href="https://mma.prnewswire.com/media/1928414/19_1789_08_Planning_and_Progress_Study_2022_Wave5_2.jpg?p=original" class="wd_hi_res_icon_link wd_hi_res_download" data-hi-res-url="https://mma.prnewswire.com/media/1928414/19_1789_08_Planning_and_Progress_Study_2022_Wave5_2.jpg?p=original" data-hi-res-filename="19_1789_08_Planning_and_Progress_Study_2022_Wave5_2.jpg"><span class="fa fa-download"></span><span class="wd_sr-only wd_sr-only-focusable">Download File</span></a></div>
+			
+		</div>
+	</div>
+	<div class="wd_title_overlay">
+		19-1789-08-Planning-and-Progress-Study-2022-Wave5-2
+	</div>
+</div>
+
+					
+				</li>
+			</ul>
+		</div>
+
+			
+		
+
+			
+		
+
+<style type="text/css">
+
+
+/* Style Definitions */
+span.prnews_span
+{
+font-size:8pt;
+font-family:"Arial";
+color:black;
+}
+a.prnews_a
+{
+color:blue;
+}
+li.prnews_li
+{
+font-size:8pt;
+font-family:"Arial";
+color:black;
+}
+p.prnews_p
+{
+font-size:0.62em;
+font-family:"Arial";
+color:black;
+margin:0in;
+}
+.prngen12{
+PADDING-RIGHT:0.17em; PADDING-LEFT:0.17em; VERTICAL-ALIGN: TOP; TEXT-ALIGN: LEFT; BORDER-TOP:black 1pt; BORDER-RIGHT:black 0.5pt solid; BORDER-BOTTOM:black 0.5pt solid; BORDER-LEFT:black 0.5pt solid
+}
+.prngen13{
+PADDING-RIGHT:0.17em; PADDING-LEFT:0.17em; VERTICAL-ALIGN: TOP; TEXT-ALIGN: LEFT; BORDER-TOP:black 1pt; BORDER-RIGHT:black 0.5pt solid; BORDER-BOTTOM:black 0.5pt solid; BORDER-LEFT:black 1pt
+}
+.prngen6{
+PADDING-RIGHT:0.17em; PADDING-LEFT:0.17em; VERTICAL-ALIGN: BOTTOM; TEXT-ALIGN: RIGHT; BORDER-TOP:black 1pt; BORDER-RIGHT:black 0.5pt solid; BORDER-BOTTOM:black 0.5pt solid; BORDER-LEFT:black 1pt
+}
+.prngen11{
+PADDING-RIGHT:0.17em; PADDING-LEFT:0.17em; VERTICAL-ALIGN: TOP; TEXT-ALIGN: LEFT; BORDER-TOP:black 0.5pt solid; BORDER-RIGHT:black 0.5pt solid; BORDER-BOTTOM:black 0.5pt solid; BORDER-LEFT:black 1pt
+}
+.prngen3{
+PADDING-RIGHT:0.83em; PADDING-LEFT:0.17em; VERTICAL-ALIGN: BOTTOM; FONT-SIZE: 8PT; FONT-FAMILY: ARIAL; COLOR: BLACK; MARGIN:0em; BORDER-TOP:black 1pt; BORDER-RIGHT:black 0.5pt solid; BORDER-BOTTOM:black 1pt; BORDER-LEFT:black 1pt
+}
+.prngen9{
+PADDING-RIGHT:0.83em; PADDING-LEFT:0.17em; VERTICAL-ALIGN: BOTTOM; FONT-SIZE: 8PT; FONT-FAMILY: ARIAL; COLOR: BLACK; MARGIN:0em; BORDER-TOP:black 1pt; BORDER-RIGHT:black 1pt; BORDER-BOTTOM:black 1pt; BORDER-LEFT:black 1pt
+}
+.prngen14{
+PADDING-RIGHT:0.83em; PADDING-LEFT:0.17em; VERTICAL-ALIGN: TOP; FONT-SIZE: 8PT; FONT-FAMILY: ARIAL; COLOR: BLACK; MARGIN:0em; BORDER-TOP:black 1pt; BORDER-RIGHT:black 1pt; BORDER-BOTTOM:black 1pt; BORDER-LEFT:black 1pt
+}
+.prngen7{
+PADDING-RIGHT:0.17em; PADDING-LEFT:0.17em; VERTICAL-ALIGN: BOTTOM; BORDER-TOP:black 1pt; BORDER-RIGHT:black 0.5pt solid; BORDER-BOTTOM:black 0.5pt solid; BORDER-LEFT:black 1pt
+}
+.prngen5{
+PADDING-RIGHT:0.17em; PADDING-LEFT:0.17em; VERTICAL-ALIGN: BOTTOM; BORDER-TOP:black 1pt; BORDER-RIGHT:black 0.5pt solid; BORDER-BOTTOM:black 0.5pt solid; BORDER-LEFT:black 0.5pt solid
+}
+.prnvat{
+VERTICAL-ALIGN: TOP
+}
+.prntac{
+TEXT-ALIGN: CENTER
+}
+.prnbsbls{
+BORDER-LEFT:black 0.5pt solid
+}
+.prnml4{
+MARGIN-TOP:0em; MARGIN-RIGHT:0em; MARGIN-BOTTOM:0em; MARGIN-LEFT:0.33em !IMPORTANT
+}
+.prnpl2{
+PADDING-LEFT:0.17em
+}
+.prnbrbrs{
+BORDER-RIGHT:black 0.5pt solid
+}
+.prnbbbs{
+BORDER-BOTTOM:black 0.5pt solid
+}
+.prntar{
+TEXT-ALIGN: RIGHT
+}
+.prnbcc{
+BORDER-COLLAPSE: COLLAPSE; BORDER-TOP:1pt  black; BORDER-RIGHT:1pt  black; BORDER-BOTTOM:1pt  black; BORDER-LEFT:1pt  black
+}
+.prncbts{
+BORDER-TOP:black 0.5pt solid
+}
+.prnpr2{
+PADDING-RIGHT:0.17em
+}
+.prnsblb1{
+BORDER-LEFT:black 1pt
+}
+.prntal{
+TEXT-ALIGN: LEFT
+}
+.prnvab{
+VERTICAL-ALIGN: BOTTOM
+}
+
+					span.prnews_span{
+						font-size:inherit;
+						font-family:inherit;
+					}
+					li.prnews_li{
+						font-size: inherit;
+						font-family: inherit;           
+					}
+					p.prnews_p{
+						font-size: inherit;
+						font-family: inherit;           
+					}
+				
+					div.PRN_ImbeddedAssetReference{
+						display: none;
+					}
+					div[id^="prni_dvprne"]{
+						display: none;
+					}
+				</style>
+
+<div class="wd_body wd_news_body fr-view" wd_resize="formatNews" wd_print_url="https://news.northwesternmutual.com/2022-10-25-Northwestern-Mutual-Study-Finds-Americans-Now-Believe-They-Will-Need-1-25-Million-for-Comfortable-Retirement?printable=1">
+<p class="prntac"><i>Figure represents a 20% jump over last year</i></p>
+<p class="prntac"><i>Anticipated retirement age climbs from 62.6 to 64 years old</i></p>
+<p><span class="legendSpanClass"><span class="xn-location">MILWAUKEE</span></span>, <span class="legendSpanClass"><span class="xn-chron">Oct. 25, 2022</span></span> /<a href="http://www.prnewswire.com/" target="_blank">PRNewswire</a>/ -- The latest findings from Northwestern Mutual's <a href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=3687284-1&amp;h=220752065&amp;u=https%3A%2F%2Fnews.northwesternmutual.com%2Fplanning-and-progress-study-2022&amp;a=2022+Planning+%26+Progress+Study" target="_blank" rel="nofollow">2022 Planning &amp; Progress Study</a> reveal that U.S. adults aged 18+ anticipate they will need <span class="xn-money">$1.25 million</span> to retire comfortably, a 20% rise since 2021. At the same time, Americans' average retirement savings has dropped 11% – from <span class="xn-money">$98,800</span> last year to <span class="xn-money">$86,869</span> now – while their expected retirement age has risen – now 64, which is up from 62.6 last year.</p>
+
+    <div class="PRN_ImbeddedAssetReference" id="DivAssetPlaceHolder1">
+                <p>
+                        <a href="https://mma.prnewswire.com/media/1928414/19_1789_08_Planning_and_Progress_Study_2022_Wave5_2.html" target="_blank" rel="nofollow">
+                    <img src="https://mma.prnewswire.com/media/1928414/19_1789_08_Planning_and_Progress_Study_2022_Wave5_2.jpg" title="Saving Less, Needing More" alt="Saving Less, Needing More"/>
+                        </a>
+                </p>
+
+    </div>
+<p>&quot;It's a period of uncertainty for many people, driven largely by rising inflation and volatility in the markets,&quot; said <span class="xn-person">Christian Mitchell</span>, executive vice president and chief customer officer at Northwestern Mutual. &quot;We've also seen upticks in spending year-over-year not only as a result of inflation, but also as people have resumed a sense of normalcy in their lives following the earlier days of the pandemic. These factors are leading many people to recalibrate their thinking about how much they'll need to retire and how long it will take them to get there.&quot;</p>
+<p><b>Four in Ten People Don't Think They'll Be Ready to Retire<br/></b><span>The study finds low levels of confidence among Americans about their retirement preparedness, and they don't have great faith in Social Security as a backstop. More than four in ten (43%) people say they do not expect to be financially ready for retirement when the time comes. And 45% say they can imagine a time when Social Security no longer exists.</span></p>
+<p>Meanwhile, one-third (33%) of Americans expect to live to 100, with an equal third (33%) predicting there is a better than 50% chance they may outlive their savings. At the same time, more than one in three (36%) report that they have not proactively taken any steps to address this concern<b>.</b></p>
+<div><table border="1" cellspacing="0" cellpadding="0" class="prnbcc"><tr><td class="prnpr2 prnpl2 prnvab prntac prncbts prnbrbrs prnbbbs prnbsbls" colspan="2" rowspan="1" nowrap="nowrap"><p class="prnml4"><span class="prnews_span"><b>Steps taken to address the possibility <br/>of outliving savings</b></span></p>
+</td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prnpr2 prnpl2 prnvab prntac prncbts prnbrbrs prnbbbs prnsblb1" colspan="2" rowspan="1" nowrap="nowrap"><p class="prnml4"><span class="prnews_span"><b>Percentage of overall retirement <br/>funding people expect to deliver</b></span></p>
+</td></tr><tr><td class="prngen5" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">Increased savings</span></p>
+</td><td class="prngen6" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">25 %</span></p>
+</td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen7" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">401K or other retirement account</span></p>
+</td><td class="prnpr2 prnpl2 prnvab prntar prncbts prnbrbrs prnbbbs prnsblb1" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">27 %</span></p>
+</td></tr><tr><td class="prngen5" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">Put together a financial plan</span></p>
+</td><td class="prngen6" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">22 %</span></p>
+</td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen7" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">Social Security</span></p>
+</td><td class="prngen6" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">26 %</span></p>
+</td></tr><tr><td class="prngen5" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">Purchased investments</span></p>
+</td><td class="prngen6" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">21 %</span></p>
+</td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen7" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">Personal savings or investments</span></p>
+</td><td class="prngen6" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">22 %</span></p>
+</td></tr><tr><td class="prngen5" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">Discussed options with family</span></p>
+</td><td class="prngen6" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">18 %</span></p>
+</td><td class="prngen9" colspan="1" rowspan="1"><br/></td><td class="prngen9" colspan="1" rowspan="1"><br/></td><td class="prngen9" colspan="1" rowspan="1"><br/></td></tr><tr><td class="prngen5" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">Sought advice from an advisor</span></p>
+</td><td class="prngen6" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">18 %</span></p>
+</td><td class="prngen9" colspan="1" rowspan="1"><br/></td><td class="prngen9" colspan="1" rowspan="1"><br/></td><td class="prngen9" colspan="1" rowspan="1"><br/></td></tr><tr><td class="prngen5" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">Purchased insurance</span></p>
+</td><td class="prngen6" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">16 %</span></p>
+</td><td class="prngen9" colspan="1" rowspan="1"><br/></td><td class="prngen9" colspan="1" rowspan="1"><br/></td><td class="prngen9" colspan="1" rowspan="1"><br/></td></tr><tr><td class="prngen5" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">Have not taken any steps</span></p>
+</td><td class="prngen6" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">36 %</span></p>
+</td><td class="prngen9" colspan="1" rowspan="1"><br/></td><td class="prngen9" colspan="1" rowspan="1"><br/></td><td class="prngen9" colspan="1" rowspan="1"><br/></td></tr></table></div><p><b>Working Longer<br/></b><span>Americans on average plan to work until the age of 64, up from 62.6 last year. Interestingly, the study found that working with an advisor and / or being a disciplined planner can shave off a few working years – those two subgroups report anticipated retirement ages of 61 and 62 respectively.</span></p>
+<p>&quot;It's one of those questions on so many people's minds – how long should I expect to work in order to save enough for retirement?&quot; said Mitchell. &quot;It's really difficult to answer because there are all kinds of considerations to factor in. But too many people grapple with it in a bubble. With greater clarity you can make a more confident call and getting professional advice can provide that clarity.&quot;</p>
+<p>When asked about how the pandemic has impacted people's retirement timelines, a quarter (25%) said they plan to retire later than they had anticipated, and 15% said they plan to retire earlier. Digging into the reasons why:</p>
+<div><table border="1" cellspacing="0" cellpadding="0" class="prnbcc"><tr><td class="prnpr2 prnpl2 prnvat prntal prncbts prnbrbrs prnbbbs prnbsbls" colspan="2" rowspan="1"><p class="prnml4"><span class="prnews_span"><b>Reasons for delaying retirement</b></span></p>
+</td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen11" colspan="2" rowspan="1"><p class="prnml4"><span class="prnews_span"><b>Reasons for accelerating retirement</b></span></p>
+</td></tr><tr><td class="prngen12" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">I want to continue to work and save money</span></p>
+</td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">59 %</span></p>
+</td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">I want to spend more time with my loved ones / family</span></p>
+</td><td class="prngen11" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">44 %</span></p>
+</td></tr><tr><td class="prngen12" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">I am concerned about rising costs like healthcare and / or had unexpected medical costs</span></p>
+</td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">45 %</span></p>
+</td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">I have realized that my personal mission is more important than saving more for retirement</span></p>
+</td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">34 %</span></p>
+</td></tr><tr><td class="prngen12" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">I am taking care of a relative or friend / responsible for additional dependents</span></p>
+</td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">26 %</span></p>
+</td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">I can afford it</span></p>
+</td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">32 %</span></p>
+</td></tr><tr><td class="prngen12" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">I had to dip into my retirement savings</span></p>
+</td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">24 %</span></p>
+</td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">I want to focus on priorities / hobbies outside of work</span></p>
+</td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">28 %</span></p>
+</td></tr><tr><td class="prngen14" colspan="1" rowspan="1"><br/></td><td class="prngen14" colspan="1" rowspan="1"><br/></td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">I was offered a buy-out / incentive to retire earlier due to the pandemic</span></p>
+</td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">22 %</span></p>
+</td></tr><tr><td class="prngen14" colspan="1" rowspan="1"><br/></td><td class="prngen14" colspan="1" rowspan="1"><br/></td><td class="prngen3" colspan="1" rowspan="1"><br/></td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">My work situation has changed (laid off, working remotely, etc.)</span></p>
+</td><td class="prngen13" colspan="1" rowspan="1"><p class="prnml4"><span class="prnews_span">22 %</span></p>
+</td></tr></table></div><p>Finally, the study also uncovered interesting data about what Americans value in their work lives, finding that most adults (60%) prioritize personal fulfillment over salary and income potential (40%) in their careers.</p>
+<p>&quot;This is a really fascinating finding and one that advisors should take note of as they work with their clients,&quot; said Mitchell. &quot;What people prioritize goes well beyond their bottom lines. The best advisors understand their clients' values and motivations, not just their financial situations.&quot;  </p>
+<p><b>About The 2022 Northwestern Mutual Planning &amp; Progress Study<br/></b>The 2022 Planning &amp; Progress Study was conducted by The <a href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=3687284-1&amp;h=1654157043&amp;u=https%3A%2F%2Furldefense.proofpoint.com%2Fv2%2Furl%3Fu%3Dhttps-3A__theharrispoll.com_%26d%3DDwMFAg%26c%3DoBIBfyrVf5fVcKOfTTdY_d7WoqYVCfQW6jezwvkj5jg%26r%3DVeUxAMnO2L4CYBZZ2Vhe0YEYjUMYJ6D-iS_IBvVPti5t5nk1w29PczsPqbhYKKOV%26m%3DPhQefTD_5b7iC1LYR8fGKm40Tli-TTD-vSujdxN7b_o%26s%3D4GN8xfhW55YQPbmIicYBfuYfA6wQHOW-bWL8bUdqEsc%26e%3D&amp;a=Harris+Poll" target="_blank" rel="nofollow">Harris Poll</a> on behalf of Northwestern Mutual and included 2,381 American adults aged 18 or older who participated in an online survey between <span class="xn-chron">February 8</span> – 17, 2022.  Results were weighted to Census targets for education, age, gender, race / ethnicity, region and household income. Propensity score weighting was also used to adjust for respondents' propensity to be online. No estimates of theoretical sampling error can be calculated; a full methodology is available.</p>
+<p><b>About Northwestern Mutual<br/></b><a href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=3687284-1&amp;h=3308299984&amp;u=https%3A%2F%2Fwww.northwesternmutual.com%2F&amp;a=Northwestern+Mutual" target="_blank" rel="nofollow">Northwestern Mutual</a> has been helping people and businesses achieve financial security for more than 165 years. Through a holistic planning approach, Northwestern Mutual combines the expertise of its <a href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=3687284-1&amp;h=3959797247&amp;u=https%3A%2F%2Fwww.northwesternmutual.com%2Fworking-with-an-advisor&amp;a=financial+professionals" target="_blank" rel="nofollow">financial professionals</a> with a personalized digital experience and industry-leading products to help its clients plan for what's most important. With more than <span class="xn-money">$561 billion</span> in combined company and client assets, <span class="xn-money">$34 billion</span> in revenues, and <span class="xn-money">$2.1 trillion</span> worth of life insurance protection in force, Northwestern Mutual delivers financial security to nearly five million people with life, disability income and long-term care insurance, annuities, and brokerage and advisory services. Northwestern Mutual ranked 97 on the 2022 FORTUNE 500 and was recognized by FORTUNE® as one of the &quot;World's Most Admired&quot; life insurance companies in 2022.</p>
+<p>Northwestern Mutual is the marketing name for The Northwestern Mutual Life Insurance Company (NM), <span class="xn-location">Milwaukee, WI</span> (life and disability insurance, annuities, and life insurance with long-term care benefits) and its subsidiaries. Subsidiaries include <b>Northwestern Mutual Investment Services, LLC</b> (NMIS) (investment brokerage services), broker-dealer, registered investment adviser, member FINRA and SIPC; the Northwestern Mutual Wealth Management Company® (NMWMC) (investment advisory and services), federal savings bank; and Northwestern Long Term Care Insurance Company (NLTC) (long-term care insurance). <b>Not all Northwestern Mutual representatives are advisors. Only those representatives with &quot;Advisor&quot; in their title or who otherwise disclose their status as an advisor of NMWMC are credentialed as NMWMC representatives to provide investment advisory services.</b></p>
+<p> </p>
+
+<div class="PRN_ImbeddedAssetReference" id="DivAssetPlaceHolder2">
+                <p>
+                        <a href="https://mma.prnewswire.com/media/11686/NORTHWESTERN_MUTUAL_LOGO.html" target="_blank" rel="nofollow">
+                    <img src="https://mma.prnewswire.com/media/11686/NORTHWESTERN_MUTUAL_LOGO.jpg" title="Northwestern Mutual. (PRNewsFoto/Northwestern Mutual)" alt="Northwestern Mutual. (PRNewsFoto/Northwestern Mutual)"/>
+                        </a>
+                </p>
+
+</div>
+
+<p>SOURCE  Northwestern Mutual</p>
+<img alt="" src="https://rt.prnewswire.com/rt.gif?NewsItemId=CG13255&amp;Transmission_Id=202210250800PR_NEWS_USPR_____CG13255&amp;DateId=20221025" style="border:0px; width:1px; height:1px;"/></div>
+
+<div class="wd_contact">PAUL IMIG, 1-800-323-7033, mediarelations@northwesternmutual.com</div>
+
+
+ 
+				
+			
+
+<!-- ITEMDATE: 2022-10-25 08:00:00 EDT -->
+
+</div>
+</div>				</div>
+			</section>
+						
+									
+						
+						
+						
+						
+				
+			
+		</main>
+		<footer class="footer" aria-label="Disclosures and footnotes">
+			<div class="footer--logo"> <a href="https://www.northwesternmutual.com/" title="Northwestern Mutual Home"> <svg
+						alt="Northwestern Mutual navy logo." class="img" role="img" aria-label="Northwestern Mutual Home.">
+						<title>Northwestern Mutual Home.</title>
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$ud"></use>
+					</svg> </a> </div>
+			<div class="footer--contents">
+				<ul class="footer--menu">
+					<li> <a href="https://www.northwesternmutual.com/who-we-are/"
+							title="Who We Are - Mutual Company Information"> About Us </a> <a
+							href="http://news.northwesternmutual.com/" target="_blank" title="Newsroom" rel="noopener"> Newsroom
+						</a> <a href="https://www.northwesternmutual.com/careers/" title="Careers"> Careers </a><a
+							href="https://www.northwesternmutual.com/security-and-privacy/" title="Security and Privacy">
+							Security &amp;<br class="is-only-on-desktop"> Privacy </a> </li>
+					<li> 
+						<a href="https://www.northwesternmutual.com/business-services/" title="Business Services - Financial Planning for Businesses"> Business Services </a>
+						<a href="https://www.northwesternmutual.com/contact-us/" title="Contact Us"> Contact Us </a>
+						<a href="https://www.northwesternmutual.com/legal-information/" title="Legal Information"> Legal Notice </a> 
+
+						<button class="sc-kEjbQP ldvdXP nmx-button sc-dWddBi hELAjB ot-sdk-show-settings nmx-override" id="ot-sdk-btn" type="button" role="menuitem">
+							Do Not Sell or Share My Personal Information
+						</button>
+
+					</li>
+					<li> <a href="https://es.northwesternmutual.com/" target="_blank" title="Spanish Site" rel="noopener"
+							hreflang="es"> Español </a> <a href="https://www.northwesternmutual.com/sitemap/" title="Sitemap">
+							Sitemap </a><a href="https://www.northwesternmutual.com/online-privacy-statement/"
+							title="Online Privacy Statement"> Online Privacy </a> </li>
+				</ul>
+				<div class="footer--social">
+					<p class="footer--social-eyebrow">Connect with us</p> <a href="https://www.facebook.com/northwesternmutual"
+						target="_blank" rel="nofollow noopener" title="Connect with us on Facebook"> <svg
+							alt="Facebook gray icon." class="img" role="img" aria-label="Facebook gray icon.">
+							<title>Facebook gray icon.</title>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$v6"></use>
+						</svg> </a> <a href="https://twitter.com/NM_Financial" target="_blank" rel="nofollow noopener"
+						title="Connect with us on Twitter"> <svg alt="Twitter gray icon." class="img" role="img"
+							aria-label="Northwestern Mutual Twitter.">
+							<title>Northwestern Mutual Twitter.</title>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$vb"></use>
+						</svg> </a> <a href="https://www.linkedin.com/company/northwestern-mutual" target="_blank"
+						rel="nofollow noopener" title="Connect with us on LinkedIn"> <svg alt="LinkedIn gray icon." class="img"
+							role="img" aria-label="Northwestern Mutual LinkedIn .">
+							<title>Northwestern Mutual LinkedIn .</title>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$v8"></use>
+						</svg> </a> <a href="https://instagram.com/northwesternmutual" target="_blank" rel="nofollow noopener"
+						title="Connect with us on Instagram"> <svg alt="Instagram gray icon." class="img" role="img"
+							aria-label="Northwestern Mutual Instagram.">
+							<title>Northwestern Mutual Instagram.</title>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$v7"></use>
+						</svg> </a> <a href="https://www.youtube.com/northwesternmutual" target="_blank" rel="nofollow noopener"
+						title="Connect with us on YouTube"> <svg alt="YouTube gray icon." class="img" role="img"
+							aria-label="Northwestern Mutual YouTube.">
+							<title>Northwestern Mutual YouTube.</title>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$ve"></use>
+						</svg> </a>
+				</div>
+				<div class="footer--stats"> <label>Over 22,000 advisors and team members</label> <a
+						href="https://www.northwesternmutual.com/find-a-financial-advisor/"
+						title="Find A Financial Advisor or Representative"> Find an Advisor <svg alt="Chevron right arrow."
+							class="img" role="img" aria-label="Find an Advisor">
+							<title>Find an Advisor</title>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg$sg"></use>
+						</svg> </a> </div>
+			</div>
+			<div class="footer--legal">
+				<p> Copyright © 2019 The Northwestern Mutual Life Insurance Company, Milwaukee, WI. All Rights Reserved.
+					Northwestern Mutual is the marketing name for The Northwestern Mutual Life Insurance Company and its
+					subsidiaries. </p>
+			</div>
+		</footer> 
+			<script defer="" src="js/nmcom-1559164562388.js" type="text/javascript" nmx-app-name="nmx-static" nmx-app-version="1.0.0"></script>
+				<script>
+		$(".header-container nav .nav-toggle").click(function() {
+		$(".header-container nav").toggleClass("closed");
+	});
+	$( document ).ready(function() {
+		$(".wd_featureboxes_middle2 .wd_featurebox_container").each(function() {
+			var wd_fbox_title = $(this).find('.wd_featurebox_title');
+            if($(this).find('.wd_imagetable').length) {
+			    $(wd_fbox_title).insertAfter($(this).find('.wd_imagetable'));
+            } else {
+                $(wd_fbox_title).prependTo($(this).find('.wd_featurebox'));
+            } 
+			$(wd_fbox_title).wrap('<div class="wd_featurebox_wrap"></div>');
+			$(this).find('.wd_featurebox p').appendTo($(this).find('.wd_featurebox_wrap'));
+		});
+		$(".wd_featureboxes_bottom .wd_featurebox_container").each(function() {
+			var wd_fbox_title = $(this).find('.wd_featurebox_title');
+            if($(this).find('.wd_imagetable').length) {
+			    $(wd_fbox_title).insertAfter($(this).find('.wd_imagetable'));
+            } else {
+                $(wd_fbox_title).prependTo($(this).find('.wd_featurebox'));
+            } 
+			$(wd_fbox_title).wrap('<div class="wd_featurebox_wrap"></div>');
+			$(this).find('.wd_featurebox ul, p.wd_more').appendTo($(this).find('.wd_featurebox_wrap'));
+		});
+				$("#wd_featurebox-standard_2351 table a").addClass('wd_fancybox');
+		$(".wd_pageid_20285 .wd_standard .item:nth-child(2) table a").addClass('wd_fancybox');
+		$(".wd_pageid_20285 .wd_standard .item:nth-child(3) table a").addClass('wd_fancybox');
+		$(".wd_fancybox").fancybox({
+			type : 'iframe',
+			scrolling: 'no',
+			maxWidth  : 640,
+			maxHeight : 475,
+			fitToView   : true,
+			//width       : '640',
+			//height      : '475',
+			autoSize    : true,
+			closeClick  : false,
+			openEffect  : 'none',
+			closeEffect : 'none'
+		});
+		$(".wd_pageid_34144 .wdVideoFancybox").fancybox({});
+		$(".wd_pageid_34144 .wdVideoFancybox").on('click', function() {
+		$.fancybox.open({href: '#wdVideoContainer'});
+		});
+		
+			});
+
+	
+	</script>
+	<script>
+		// Awards and Recognition sliding functionality
+		$('.wd_pageid_20299 .item ul').each(function() {
+			if ($(this).find('li').size() > 5) {
+				$(this).append('<a class="wd_show_more">Show More <svg aria-label="Learn more Arrow" class="img" role="img"><title></title><use xlink:href="#svg$sg" xmlns:xlink="http://www.w3.org/1999/xlink"></use><svg id="svg$sg" viewBox="0 0 6 10"><path d="M1.63.184A.476.476 0 0 0 1.236 0a.506.506 0 0 0-.377.236c-.2.292-.182.744.04 1.01L4.09 5 .898 8.755c-.223.265-.24.718-.04 1.009a.506.506 0 0 0 .377.236h.03a.479.479 0 0 0 .364-.183L5.27 5.53A.828.828 0 0 0 5.45 5a.834.834 0 0 0-.18-.532L1.63.184z" fill="#FFB81C" fill-rule="evenodd"></path></svg></a>');
+				$(this).append('<a class="wd_hide_items" style="display: none;">Show Less <svg aria-label="Learn more Arrow" class="img" role="img"><title></title><use xlink:href="#svg$sg" xmlns:xlink="http://www.w3.org/1999/xlink"></use><svg id="svg$sg" viewBox="0 0 6 10"><path d="M1.63.184A.476.476 0 0 0 1.236 0a.506.506 0 0 0-.377.236c-.2.292-.182.744.04 1.01L4.09 5 .898 8.755c-.223.265-.24.718-.04 1.009a.506.506 0 0 0 .377.236h.03a.479.479 0 0 0 .364-.183L5.27 5.53A.828.828 0 0 0 5.45 5a.834.834 0 0 0-.18-.532L1.63.184z" fill="#FFB81C" fill-rule="evenodd"></path></svg></a>');
+			};
+			
+		});
+		
+		$('.wd_pageid_20299 .item ul').each(function() {
+			$(this).find('li:nth-child(n+4)').wrapAll('<div class="wd_hidden_items"></div>');
+		}); 
+		$('.wd_show_more').click(function() {
+			$(this).parent().find('.wd_hidden_items').slideToggle();
+			$(this).toggle();
+			$(this).parent().find('.wd_hide_items').toggle();
+		});
+		$('.wd_hide_items').click(function() {
+			$(this).parent().find('.wd_hidden_items').slideToggle();
+			$(this).toggle();
+			$(this).parent().find('.wd_show_more').toggle();
+		});
+
+
+	</script>
+			<script type="text/javascript" src="js/wd_scripts.js"></script>
+	
+
+<!-- begin spin_special_output(body_end) -->
+<script wd_script_id="piwik_tracking_code"></script><span id="newwindow-note" class="sr-only">(opens in a new window)</span>
+<!-- end spin_special_output(body_end) -->
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4eb9595fe0c0d93',t:'MTc5MjcwNDQyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,27 @@
+asset_id,category,description,authored_design_families,planned_derived_variants_or_instances,status,editable_source_or_asset_request,reference_evidence_ids
+HOST,CHARACTER,Original woman; neutral/pointing/surprised paper grip/concerned,1,4,CREATED_SAMPLE,HOST_*.svg; face and limbs separate,E01;E02;E07;E08
+PROP_FED,FINANCE_PROP,Simple original institutional building,1,1,CREATED_SAMPLE,PROP_FED.svg,E03
+PROP_BANK,FINANCE_PROP,Simple commercial bank; duplicate instances if useful,1,3,CREATED_SAMPLE,PROP_BANK.svg,E03
+PROP_BILL,FINANCE_PROP,Interest bill; held-paper variant belongs to host,1,2,CREATED_SAMPLE,PROP_BILL.svg,E07;E10
+PROP_NOTE,FINANCE_PROP,Unbranded green payment note,1,4,CREATED_SAMPLE,PROP_NOTE.svg,E03;E07
+PROP_BOND,FINANCE_PROP,Original neutral bond paper,1,2,PLANNED_ONLY,"Separate outlined paper, no invented yield",E03;E04
+PROP_LEDGER,FINANCE_PROP,Accounting ledger for cumulative loss/recovery,1,2,PLANNED_ONLY,Avoid presenting deferred asset as cash,E04
+PROP_TREASURY,FINANCE_PROP,Original labelled Treasury building; no official seal,1,1,PLANNED_ONLY,Distinct silhouette from Fed,E03
+PROP_SHIELD,PAYOFF_PROP,Small inflation-fighting shield,1,1,PLANNED_ONLY,Label its purpose,E10
+PROP_INFLATION,PAYOFF_PROP,Original price-pressure symbol,1,1,PLANNED_ONLY,No invented price figures,E10
+ANN_RATE,ANNOTATION,Up arrow with optional label; direction not moral judgment,1,2,HERO_LAYER_ONLY,Editable path in HERO_01.svg; separate export after approval,E03
+ANN_FLOW,ANNOTATION,Dashed balance link and solid payment/remittance arrows,1,3,HERO_LAYER_ONLY,Named groups in HERO_02.svg; conceptually different directions,E03;E07
+ANN_ARROW,ANNOTATION,Background-free irregular attention arrow,1,1,CREATED_SAMPLE,ANN_ARROW.svg,E05
+ANN_HIGHLIGHT,ANNOTATION,Independent yellow evidence stroke,1,4,CREATED_SAMPLE,ANN_HIGHLIGHT.svg,E06
+ANN_PAUSE,ANNOTATION,Red pause bars plus readable word,1,1,PLANNED_ONLY,Place only on Treasury route,E10
+DGM_MATH,EDITABLE_DIAGRAM,Conditional annualized multiplication,1,1,PLANNED_ONLY,Live text operands/operators; no arbitrary bars,E04
+DGM_EXPENSE_INCOME,EDITABLE_DIAGRAM,"Expenses > income, conceptual condition",1,1,CREATED_SAMPLE,DGM_EXPENSE_INCOME.svg,E04
+DGM_RECOVERY,EDITABLE_DIAGRAM,Earnings cover deferred position before normal Treasury route,1,1,PLANNED_ONLY,Original arrows/labels; no dates or forecast quantities,E04;E10
+DGM_HISTORY,EDITABLE_DIAGRAM,2021 >$107B historical label,1,1,PLANNED_ONLY,No inference about current annual remittances,E06
+TX_TERMS,EDITABLE_TEXT,Narrated financial terms/numbers; excludes later caption chunks,0,12,PARTIAL_SAMPLE,Live SVG text; font approval pending,E04;E06
+BG_WHITE,BACKGROUND,White/off-white field,0,1,CREATED_SAMPLE,Canvas fill,E01
+SS_FOMC,SOURCE_EXCERPT,"16 Sep2026 decision, date retained",0,1,PLANNED_CAPTURE,Official URL in reference register,E06
+SS_IMPLEMENTATION,SOURCE_EXCERPT,Reserve-interest implementation; concise citation,0,1,PLANNED_CAPTURE,Official URL in reference register,E06
+SS_H41_RESERVES,SOURCE_EXCERPT,7 Oct2026 reserve balances row/units,0,1,PLANNED_CAPTURE,Use8 Oct2026 release vintage,E06
+SS_H41_DEFERRED,SOURCE_EXCERPT,"Exact -233,587 million row,7 Oct2026",0,1,CAPTURED_SAMPLE,references/H41_20261008_row_final.png; source+context hashed,E06
+SS_2021,SOURCE_EXCERPT,"Preliminary2021 remittance amount, source14 Jan2022",0,1,PLANNED_CAPTURE,Distinguish remittances from net income,E06

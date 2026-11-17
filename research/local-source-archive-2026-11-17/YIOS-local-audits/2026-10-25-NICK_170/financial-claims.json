@@ -1,0 +1,653 @@
+[
+  {
+    "claim_id": "C01",
+    "start_char": 0,
+    "end_char": 363,
+    "original_quote": "Diego just signed papers putting himself\nanother $200,000\ninto debt, and he did it grinning like\nhe'd won something. His bank account\ndidn't shrink. His net worth just went\nup. Meanwhile, three doors down, Curtis\nhasn't owed a soul a dollar in 9 years,\nchecks his perfect credit score like\nit's a lottery ticket, and is quietly,\nslowly going broke standing still.",
+    "strategy": "FRAME",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Borrow200K adds200Kcash/assets and200Kliability:instantnetworthchange0beforefees,negativeafterfees. Wealthgainrequiresbargainpurchase,subsequentreturnorotherfact;fictionalstorydoesnotestablishcausalborrowingeffect.",
+    "source_ids": [
+      "SEC_LEVERAGE"
+    ],
+    "calculation_ids": [
+      "K01"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C02",
+    "start_char": 1385,
+    "end_char": 1530,
+    "original_quote": "Bad debt buys things that\nlose value and drain your account every\nmonth. Good debt buys things that either\nclimb in value or pay you to own them.",
+    "strategy": "FRAME",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Usefulcash-flowheuristic,incompleteaccounting:depreciatingproductiveequipmentcanearnprofit,appreciatingassetcanbeoverpriced/cashnegative. Debtisliability;assetclassificationnotdeterminedsolelybycurrentcashflow.",
+    "source_ids": [
+      "SEC_LEVERAGE",
+      "SBA8"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C03",
+    "start_char": 1723,
+    "end_char": 1978,
+    "original_quote": "According to Federal Reserve data, the\nwealthiest households carry far less\ndebt relative to what they own, around\n12% for the top sliver, versus well over\n60% for a typical middle-class family.\nThe rich borrow less proportionally and\nget richer doing it.",
+    "strategy": "FRAME",
+    "classification": "UNSUPPORTED_OR_UNVERIFIED",
+    "assessment": "12%/over60%notverifiedwithdefinedyear,wealthgroups,ratioformula. Debt/assets differs debt/networth and medianratio differs ratioofaggregatelevels. Correlationcannotshowborrowingcausedwealth.",
+    "source_ids": [
+      "FED_SCF"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C04",
+    "start_char": 2292,
+    "end_char": 2387,
+    "original_quote": "Hold on to that question because\nit ends up being worth roughly eight\ntimes Curtis's net worth.",
+    "strategy": "FRAME",
+    "classification": "UNSUPPORTED_OR_UNVERIFIED",
+    "assessment": "Eighttimes is storypromise;no consistenttwo-personbalance-sheet/cash-flowmodel. Latercomparisonmixessixproperties/businessvsuncountedpaid-offhouse.",
+    "source_ids": [
+      "FED_SCF"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C05",
+    "start_char": 2501,
+    "end_char": 2650,
+    "original_quote": "The first way is real estate, and it's\nfirst for a reason. It's the most\naccessible serious leverage a normal\nperson can actually get their hands on.",
+    "strategy": "M1_RENTAL",
+    "classification": "UNSUPPORTED_OR_UNVERIFIED",
+    "assessment": "Accessibleseriousleverageisqualitative;eligibility,downpayment,reservesandunderwritingvary.",
+    "source_ids": [
+      "CFPB_MORTGAGE"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C06",
+    "start_char": 2731,
+    "end_char": 3199,
+    "original_quote": "He puts 20% down and the bank\ncovers the rest. But, and this is the\npart that breaks people's brains, he\nkeeps 100% of the appreciation. Put\nnumbers on it. The property costs\n$250,000.\nDiego puts down 50,000. It rises a\nmodest 5% in a year, $12,500.\nIf he'd paid all cash, that's a 5%\nreturn.\nFine, boring, but he didn't pay cash. He\nput in 50,000, so 12,500\nis a 25% return. Same house, same year,\nsame market, he multiplied his return by\nfive using the bank's money.",
+    "strategy": "M1_RENTAL",
+    "classification": "MATHEMATICALLY_REPRODUCED",
+    "assessment": "250Kasset/200Kdebt/50Kequity;12.5Kgrossappreciation/50K=25%,5timesunlevered5%. This excludesinterest,fees,rent,operatingcosts,taxandliquidity;notnettotalreturn.",
+    "source_ids": [
+      "CFPB_MORTGAGE",
+      "SEC_LEVERAGE"
+    ],
+    "calculation_ids": [
+      "K02"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C07",
+    "start_char": 3200,
+    "end_char": 3545,
+    "original_quote": "And that's before the tenant shows up\nand starts paying down his mortgage\nevery month with their own paycheck.\nFast forward 10 years on that single\nproperty. It's worth around 340,000.\nThe loan's down to about uh 166,000,\nand Diego's equity, his slice, is\nroughly 180,000.\nHis original 50 grand turned into 180\nlargely on somebody else's income.",
+    "strategy": "M1_RENTAL",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "The stated rounded inputs give 340K\u2212166K=174K, not exactly180K; because all three values are approximate this is a 6K reconciliation gap, not proof the actual scenario is false. 250Kto340Kin10y implies3.1226%annual; continued5%wouldgive407223.66, but the narrator only explicitly assumes5% for the first year. Loanbalance166K cannot be reproduced withoutAPR/term; own6%30ycase gives167371.45. Tenant rent is gross revenue, not net mortgage coverage.",
+    "source_ids": [
+      "CFPB_MORTGAGE",
+      "IRS_RENTAL"
+    ],
+    "calculation_ids": [
+      "K03",
+      "K04"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C08",
+    "start_char": 3769,
+    "end_char": 4076,
+    "original_quote": "That same multiplier runs in reverse. If\nthe house drops 20% instead of rising,\nDiego's entire $50,000 down payment is\ngone, wiped, and that's not a\nhypothetical. It's a documentary, it's\ncalled 2008. When millions of\nover-leveraged owners watched their\nequity evaporate while the bank came\nknocking anyway.",
+    "strategy": "M1_RENTAL",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Instant20%pricefallon80%LTVremovesinitialequitybeforeamortization/fees;debtpersists.2008historicalallusionnotanindependentlymeasuredmillionsstatisticinthisreview.",
+    "source_ids": [
+      "SEC_LEVERAGE"
+    ],
+    "calculation_ids": [
+      "K02"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C09",
+    "start_char": 4190,
+    "end_char": 4866,
+    "original_quote": "Diego can even refinance,\npull his original 50,000 back out\ntax-free, a loan isn't income, and run\nit again with the same money. Investors\nhave a name for that loop, they call it\nBRRRR buy, rehab, rent, refinance,\nrepeat. Diego buys a beat-up place\ncheap, fixes it up until it's worth\nmore, rents it out,\nthen refinances against the new higher\nvalue and pulls his original cash right\nback out to go again. Same 50 grand\nrecycled into a second house, then a\nthird. He's not saving up for each\nproperty, he's reusing one down payment\non a loop. Meanwhile, Curtis is saving\nup to buy one rental outright in cash\nsometime around his 65th birthday. By\nthen, Diego owns six of them.",
+    "strategy": "M1_RENTAL",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Bona-fidecashoutloannotordinaryincomebutaddsliability,noprofitonreceipt. BRRRRcanrecyclecashonlyifappraisal,LTV,rehab/closingcost,seasoning,rentandunderwritingpermit;notautomaticoriginalcashrecoveryorrepeatableguaranteed6homes.",
+    "source_ids": [
+      "CFPB_MORTGAGE",
+      "IRS_INVESTMENT"
+    ],
+    "calculation_ids": [
+      "K05"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C10",
+    "start_char": 5056,
+    "end_char": 5134,
+    "original_quote": "Businesses fail, a lot of them,\nroughly half within 5 years and 2/3\nwithin 10.",
+    "strategy": "M2_BUSINESS",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Approxhalf5y/twothirds10yconsistentBLSestablishmentsurvival;closuresnotallbankruptcies,notriskestimateforexistingacquiredbusiness.",
+    "source_ids": [
+      "BLS_SURVIVAL"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C11",
+    "start_char": 5185,
+    "end_char": 5288,
+    "original_quote": "here's why this is still the mechanism\nthat mints more everyday millionaires\nthan almost anything else.",
+    "strategy": "M2_BUSINESS",
+    "classification": "UNSUPPORTED_OR_UNVERIFIED",
+    "assessment": "Claimthismechanismmintsmostordinarymillionairesnotestablishedbybusinessownerwealthassociationornewestablishmentsurvival.",
+    "source_ids": [
+      "FED_SCF"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C12",
+    "start_char": 5537,
+    "end_char": 6187,
+    "original_quote": "The Small Business Administration backs\nloans that let a regular person buy a\ncash-flowing business with as little as\n10% down. Picture a boring, unglamorous\nwinner, a laundromat, a plumbing outfit,\na pest control route that earns $200,000\na year and sells for $800,000. Diego\ndoesn't need $800,000. He needs about\n80\nHe borrows the rest, and then the\nbusiness's own profit pays back the\nloan. Sit with that because it's the\nwhole game. The asset pays for itself.\nDiego puts in 80,000, and the thing he\nbought generates the money that clears\nthe debt he bought it with. Loan gone,\nhe owns an $800,000 cash machine\noutright for a tenth of the sticker.",
+    "strategy": "M2_BUSINESS",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "10%equitycanfitcompleteacquisitionminimumTOTALPROJECTCOST;80K/800Kvalidbeforeadditionalcosts,borrow720K. Storedabout80omitsunit;contextimplies80K,spokenunverified.200Kearningsdefinition/APR/term/ownermanagement,wcapital,capexandtaxabsent. Loanpaidfromprofitsmeansfuturecashflowsfundprincipal+interest;not800Kassetfor80Ktotalcost.",
+    "source_ids": [
+      "SBA8"
+    ],
+    "calculation_ids": [
+      "K06"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C13",
+    "start_char": 6188,
+    "end_char": 6453,
+    "original_quote": "This, scaled up with billions and much\nbetter suits, is exactly what private\nequity does. Leveraged buyout is just a\nfancy phrase for borrow most of the\nmoney, buy the company, let the company\npay off its own purchase. They call it a\nstrategy. It's the same hustle.",
+    "strategy": "M2_BUSINESS",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Leveragedbuyoutmechanismbroadlyconsistentwithdebtfundedacquisition;privateequityalsohasfees,capitalstructure,operatingchanges,exits. NotproofofallPEprofitsorcertainrepayment.",
+    "source_ids": [
+      "SBA8"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C14",
+    "start_char": 6454,
+    "end_char": 6605,
+    "original_quote": "Buying an existing, profitable business\ntilts the odds your way versus starting\nfrom zero.\nYou're buying proven cash flow instead\nof a hope and a logo.",
+    "strategy": "M2_BUSINESS",
+    "classification": "UNSUPPORTED_OR_UNVERIFIED",
+    "assessment": "Priorprofitabilityprovidesinformation;comparativefailureadvantagenotquantifiedbycitedstartupcohort. Verifiedcashflowqualityandpurchasepriceareneeded.",
+    "source_ids": [
+      "BLS_SURVIVAL",
+      "SBA8"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C15",
+    "start_char": 6606,
+    "end_char": 6768,
+    "original_quote": "But tilts the odds isn't guarantees, and\nif that laundromat's revenue dries up,\nthe loan payment shows up anyway every\nmonth with the patience of a serial\nkiller.",
+    "strategy": "M2_BUSINESS",
+    "classification": "VERIFIED_PRIMARY_SOURCE",
+    "assessment": "Continuingrepaymentriskcorrect;SBAguaranteeprotectslender,notownerfrompersonalguaranteeliability.",
+    "source_ids": [
+      "SBA8"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C16",
+    "start_char": 7267,
+    "end_char": 7518,
+    "original_quote": "So, say his portfolio is\nnow worth $5 million\nand he originally put in $1 million. If\nhe sells to get cash, he owes capital\ngains tax on the $4 million in profit, a\nbill somewhere around $950,000.\nAlmost a million gone just for touching\nhis own money.",
+    "strategy": "M3_BUY_BORROW_DIE",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "5M\u22121M=4Mgain;950Kimplies23.75%effectivetax;23.8%scenario952K. ActualLTCG/NIIT,state,holdingperiod,taxpayerincomeandparcelbasisunspecified. Sellingall5Mnotcomparabletoborrowing3Mwithoutcashneedalignment.",
+    "source_ids": [
+      "IRS_INVESTMENT"
+    ],
+    "calculation_ids": [
+      "K07"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C17",
+    "start_char": 7622,
+    "end_char": 8052,
+    "original_quote": "The bank hands\nhim a loan at say 6% using the portfolio\nas collateral. On $3 million borrowed,\nthat's $180,000\na year in interest. Line those two\nnumbers up. $950,000\nin tax if he sells versus $180,000\nin interest if he borrows.\nAnd the kicker, his $5 million stays\nfully invested and growing while he\nspends the borrowed cash. He uses his\nwealth without selling it, without\ntriggering the tax, without stepping out\nof the market.",
+    "strategy": "M3_BUY_BORROW_DIE",
+    "classification": "SOURCE_DEFINITION_MISMATCH",
+    "assessment": "3M*.06=180Kannualinterestcorrect;one-timefullsalegainstaxvsrecurringinterestondifferentcashamountisnotapples-to-apples. Debt3Mstilldue;collateralreturncannegative;6%hypotheticalnotobservedoffer.",
+    "source_ids": [
+      "SEC_SBLOC",
+      "IRS_INVESTMENT"
+    ],
+    "calculation_ids": [
+      "K07",
+      "K08"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C18",
+    "start_char": 8053,
+    "end_char": 8439,
+    "original_quote": "Borrowed money isn't\nincome, so there's no tax on it at all.\nThen the morbid last step, the die part.\nWhen Diego passes, his heirs inherit the\nstock, and thanks to a rule called the\nstep-up in basis,\nthat $4 million in gains he never paid\ntax on simply vanishes. Legally, the\nslate wipes clean, the estate settles\nthe loan, the family keeps the rest, and\nthe taxman never got his slice.",
+    "strategy": "M3_BUY_BORROW_DIE",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Bona-fideloanreceiptgenerallynotrealizedgain;repaymentobligationnotwealth. EligibleinheritedassetbasisgenerallyFMV,canstepdown;estate/decedentotherincometaxes,exceptionsanddebtsettlementremain. Doesnotmeanalltaxdisappearsforallestates.",
+    "source_ids": [
+      "IRS_BASIS",
+      "IRS_INVESTMENT"
+    ],
+    "calculation_ids": [
+      "K08"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C19",
+    "start_char": 8498,
+    "end_char": 8617,
+    "original_quote": "It's how people like\nLarry Ellison and Elon Musk operate,\npledging billions in shares as\ncollateral instead of selling.",
+    "strategy": "M3_BUY_BORROW_DIE",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Ellisonissuerfilingconfirmspledgedshares/personalbusinessloans;Musk2017historicalfilingconfirmsstocksecuredloans. OutstandingJuly2026billions/taxmotivationnotverified;pledgecapacitynotdrawnbalance.",
+    "source_ids": [
+      "ORACLE",
+      "TESLA"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C20",
+    "start_char": 8618,
+    "end_char": 9117,
+    "original_quote": "Should you with a normal portfolio go\nlever up on margin this afternoon?\nPlease know, this one has teeth.\nIf the market crashes and your\ncollateral drops, you get a margin call,\nthe bank demanding its money back at the\nexact worst moment, forcing you to sell\ninto the crash, which is the financial\nequivalent of being asked to bail water\nwhile someone drills fresh holes in the\nboat.\nBut the principle underneath is worth\nstealing. To the rich, selling is a last\nresort. Borrowing is the first move.",
+    "strategy": "M3_BUY_BORROW_DIE",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Maintenance/forcedsalewarningvalid. DistinguishnonpurposeSBLOCfrombrokeragemargin;exactcallthreshold,lenderrate/discretioncontractdependent. Generalrichpeoplefirstmoveunquantified.",
+    "source_ids": [
+      "SEC_SBLOC",
+      "SEC_LEVERAGE"
+    ],
+    "calculation_ids": [
+      "K08"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C21",
+    "start_char": 9350,
+    "end_char": 9743,
+    "original_quote": "The\nlogic, if Diego's mortgage is locked at\n3% and the stock market historically\nreturns around 10.\nThen every dollar he doesn't throw at\npaying the mortgage off early and\ninvests instead, earns him the gap.\nBorrow at three, earn at 10. That\nseven-point spread is basically free\nmoney on paper. It's why financially\nsophisticated people are weirdly in no\nhurry to kill a low-interest mortgage.",
+    "strategy": "M4_CHEAP_DEBT",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "10\u22123=7percentagepointsnominalgrossspread;notriskfreearbitrage. Historicalnominalindexreturnrough10perioddependent,notfuturecontractualyield;fees,taxes,volatilityandpaymentliquiditymatter.",
+    "source_ids": [
+      "DAMODARAN",
+      "SEC_LEVERAGE"
+    ],
+    "calculation_ids": [
+      "K09"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C22",
+    "start_char": 9744,
+    "end_char": 10110,
+    "original_quote": "Curtis hurled every spare dollar at his\n3% loan because, in his words, debt bad.\nDiego kept the cheap loan and invested\nthe difference, and across 30 years that\none choice is worth a small fortune. It\nonly works, mind you, if you actually\nstay invested through the ugly years\ninstead of panic selling at the bottom.\nThe spread pays the patient and finds\nthe twitchy.",
+    "strategy": "M4_CHEAP_DEBT",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "30youtcomeunquantifiedinscript;holdingdoesnotguaranteepositivespread. Ownmatchedlumpsum200K3%mortgage30yvsinvestassumption/endmonthrepaymentcashflowsinK09;mayfavorpayoffunderlowreturns.",
+    "source_ids": [
+      "CFPB_MORTGAGE",
+      "SEC_LEVERAGE"
+    ],
+    "calculation_ids": [
+      "K09"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C23",
+    "start_char": 10219,
+    "end_char": 11031,
+    "original_quote": "inflation quietly\npays off your debt for you. Diego\nborrows a fixed amount today, his\nmortgage payment is locked the same\nnumber every month for 30 years. But\ninflation makes every dollar worth a\nlittle less as time rolls on. His salary\nrises, rents rise, the price of a\nsandwich rises, and that mortgage\npayment just sits there.\nFrozen, getting easier to cover every\nsingle year. He's repaying tomorrow's\nexpensive loan with money that keeps\ngetting cheaper. Picture a $2,000\nmonthly payment. In year one, it takes a\nreal bite out of his paycheck. But, 30\nyears later, after decades of raises and\nrising prices, that same $2,000 is what\nhe leaves as a tip at a nice dinner. The\nnumber on the bill never moved, the\nworld around it inflated, and the debt\nshrank in real terms every year he did\nabsolutely nothing.",
+    "strategy": "M4_CHEAP_DEBT",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "FixednominalP&Irealburdenfallsifpositiveinflation;totalhousingpaymentnotfixed;wage/rentgrowthnotguaranteed.2Kbecomingdinnertipishyperbole,notquantifiedforecast. Atown3%inflation30ylater2K=823.97today.",
+    "source_ids": [
+      "FED_INFLATION",
+      "CFPB_MORTGAGE"
+    ],
+    "calculation_ids": [
+      "K10"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C24",
+    "start_char": 11032,
+    "end_char": 11447,
+    "original_quote": "The Federal Reserve has studied this\noutright. Inflation quietly transfers\nwealth from lenders to borrowers. The\nlender loses, the fixed-rate borrower\nwins. And the single biggest winner from\nthe whole mechanism? The US\ngovernment perched on tens of trillions\nof dollars in fixed-rate debt that\ninflation melts down like an ice\nsculpture at a wedding. If it's good\nenough for the Treasury, it's worth a\nsecond look.",
+    "strategy": "M4_CHEAP_DEBT",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "FedresearchsupportsUNEXPECTEDinflationredistributiononnominalclaims,notunconditionallenderloss. Anticipatedinflationpricedin,new/refinancedgovernmentdebtandindexationmatter;Treasuryanalogyisnotpersonalriskproof.",
+    "source_ids": [
+      "FED_INFLATION"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C25",
+    "start_char": 11653,
+    "end_char": 12199,
+    "original_quote": "The interest on your credit card and\nyour car loan, not deductible. You eat\nthat cost alone in the dark. The\ninterest on a business loan or an\ninvestment property, deductible. The\ngovernment chips in. Same act, borrow\nmoney, pay interest, but the code treats\nconsumer debt like a vice and productive\ndebt like a virtue.\nSo, when you're paying interest on that\nfinanced truck, you swallow the whole\nbill. When Diego pays interest on his\nrental, he writes it off, which quietly\nmakes his real borrowing cost lower than\nthe rate printed on the page.",
+    "strategy": "M5_TAX",
+    "classification": "SOURCE_DEFINITION_MISMATCH",
+    "assessment": "Personalcreditcardinterestgenerallynondeductible;qualifyingbusiness/rentalinterestmaydeductsubjectlimits/use. Blanketcarloan/financedtruckinterestnondeductibilityfalse:2025\u201328qualifiednewvehicleexceptionalreadylawandIRSguidancebeforeupload.",
+    "source_ids": [
+      "IRS_CAR",
+      "IRS_CAR_RELEASE",
+      "IRS_RENTAL",
+      "IRS_INVESTMENT"
+    ],
+    "calculation_ids": [
+      "K11"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C26",
+    "start_char": 12200,
+    "end_char": 12521,
+    "original_quote": "Then there's the crown jewel,\ndepreciation. On that rental, the tax\ncode lets Diego deduct a chunk of the\nbuilding's value every year as if it's\nwearing out, even though the place is in\nreality going up in value.\nOn a $275,000\nbuilding, that's around $10,000 a year\nin deductions he claims without spending\na real dollar.",
+    "strategy": "M5_TAX",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "275Keligiblebuildingbasis/27.5=10KfullannualGDSdeduction;landexcluded,firstyearmidmonth/placed-in-service rules. Notnewcashoutlaythatyear,butbuildingcostwaspaid/financed;taxbasisreducedandlatersaletaxpossible.",
+    "source_ids": [
+      "IRS_RENTAL"
+    ],
+    "calculation_ids": [
+      "K11"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C27",
+    "start_char": 12596,
+    "end_char": 12946,
+    "original_quote": "If\nDiego's in a 30% tax bracket and between\ndeductible interest and depreciation,\nhe's got $20,000 in write-offs, that's\n$6,000 the government simply doesn't\ncollect from him every single year for\nowning an asset that's climbing in value\nthe whole time. Curtis, paying interest\non his car, gets exactly none of that.\nHe writes the check and moves on.",
+    "strategy": "M5_TAX",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "20K*.30=6Kiftaxpayermarginalbenefit30%anddeductioncurrentlyusable.30%isillustrativeratenotnamedU.S.federalbracket;passive/at-risk/incomelimitsmaydeferbenefit. Noautomaticannual6Kcashrefund;carloanzeroexceptionabove.",
+    "source_ids": [
+      "IRS_RENTAL",
+      "IRS_CAR"
+    ],
+    "calculation_ids": [
+      "K11"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C28",
+    "start_char": 13059,
+    "end_char": 13463,
+    "original_quote": "Recent\nlaw made it sharper. As of the 2025\nlegislation, businesses can once again\nwrite off 100% of certain purchases in\nthe first year, a provision called bonus\ndepreciation that had been fading out\nand got fully restored.\nPair it with a strategy called cost\nsegregation and serious real estate\ninvestors front-load enormous\ndeductions, sometimes zeroing out their\ntaxable income the very year they buy.",
+    "strategy": "M5_TAX",
+    "classification": "VERIFIED_PRIMARY_SOURCE",
+    "assessment": "2025lawrestored100%bonusforeligibleproperty;Jan14,2026IRSnoticeconfirms. Costsegcomponentsmayqualify,notallbuilding/land;zeroingtaxableincomedependsactivity,basis,timing,losslimitsandothertaxrules.",
+    "source_ids": [
+      "IRS_BONUS",
+      "IRS_RENTAL"
+    ],
+    "calculation_ids": [
+      "K11"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C29",
+    "start_char": 14483,
+    "end_char": 14932,
+    "original_quote": "Which brings us finally to the sixth\nway, less a tactic than the idea sitting\nunder the other five. Every one of those\nplays is really the same move. Use other\npeople's money to control an asset you\ncouldn't buy outright and let the asset\ndo the heavy lifting.\nReal estate, businesses, portfolios,\ncheap arbitrage, tax advantage loans,\nstrip the details and it's one motion.\nBorrow, aim it at something that grows\nor pays, let time compound the gap.",
+    "strategy": "M6_OPM",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Sixthmethodexplicitlyunifyingframework,notindependentsixthreturnstream. Assetmustout-earntotalcostandwithstandliquiditystress;borrowingnotprofitandsamescenarioflowscannotdoublecountacrossmethods.",
+    "source_ids": [
+      "SEC_LEVERAGE"
+    ],
+    "calculation_ids": [
+      "K01"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C30",
+    "start_char": 15076,
+    "end_char": 15325,
+    "original_quote": "$40,000 borrowed for a nursing\ncredential that adds $30,000 a year to\nyour paycheck is one of the best trades\non this entire list. $40,000 borrowed\nfor a degree that lands you right back\nat your old job is just a very expensive\nparticipation trophy.",
+    "strategy": "M6_OPM",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "40Kloan/30Kannualpayupliftiscreatorhypothetical,notsourcedobservednursingreturn.1.333ygrosssimplepaybackexcludesstudytime,completionrisk,loaninterest,taxes/foregoneearnings. Own10y6%loanand0/15K/30KupliftsinK12.",
+    "source_ids": [
+      "CFPB_MORTGAGE"
+    ],
+    "calculation_ids": [
+      "K12"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C31",
+    "start_char": 15326,
+    "end_char": 15617,
+    "original_quote": "Then there's\nseller financing where the person\nselling a business lets you pay them\nover time straight out of the profits.\nSame principle, no bank in the room. A\nfranchise loan, a credit line against\nequipment that earns more than it costs.\nDifferent costume every time, one idea\nunderneath.",
+    "strategy": "M6_OPM",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Sellercredit/franchise/equipmentloanscanfundproductiveassets;notautomaticprofit. Noamounts/APR/fees/termsprovided;numericNPVwouldbeinvented. Samecoverage/equitymechanismasbusinessscenario;sellercontractcanrequireguarantee/security.",
+    "source_ids": [
+      "SBA8"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C32",
+    "start_char": 15913,
+    "end_char": 16114,
+    "original_quote": "The boat you've been eyeing\nis a liability, a duplex is an asset,\nthat watch is a liability, a profitable\nbusiness is an asset.\nRate and terms matter, but that first\nquestion decides almost everything.",
+    "strategy": "M6_OPM",
+    "classification": "SOURCE_DEFINITION_MISMATCH",
+    "assessment": "Consumerassetscanhavepositiveassetvalueandexpenses;duplexstillassetwithliabilityagainst it. Boat/watchnotliterallyliabilityinbalance-sheetterminology. Rate,price,terms,cashflowandriskcanoverridethisslogan.",
+    "source_ids": [
+      "FED_SCF",
+      "SEC_LEVERAGE"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C33",
+    "start_char": 16206,
+    "end_char": 16503,
+    "original_quote": "You can do all of this correctly\nand still lose.\nWe love the people who leverage their\nway to a fortune and quietly forget the\nones who leveraged their way into a\ncrater.\nFor every Diego, there's a shadow Diego\nwho bought at the wrong time, borrowed\ntoo much, hit a bad stretch, and got\nflattened.",
+    "strategy": "RISK",
+    "classification": "VERIFIED_PRIMARY_SOURCE",
+    "assessment": "Survivorship/downsidecaveatmaterialandvalid;preservedinassessmentratherthanclaimingvideoomitsallrisk.",
+    "source_ids": [
+      "SEC_LEVERAGE",
+      "SEC_SBLOC"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C34",
+    "start_char": 16563,
+    "end_char": 16661,
+    "original_quote": "Research shows more than half of\nindividual stocks actually lose money\nover their entire lifetime.",
+    "strategy": "RISK",
+    "classification": "VERIFIED_PRIMARY_SOURCE",
+    "assessment": "OriginalBessembinderJuly2024paper51.6%negativecumulativeobservedreturnsfor29078U.S.stocks1925\u20132023. Observedsamplehistoriesnotallfuturelifetimes;notclaimdiversifiedindexlostmoney.",
+    "source_ids": [
+      "BESSEMBINDER"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C35",
+    "start_char": 16662,
+    "end_char": 16810,
+    "original_quote": "Even the man who built the whole debt is\ndumb gospel, Curtis lives by built it\nafter personally going bankrupt from\nreal estate leverage in his 20s.",
+    "strategy": "RISK",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "LikelyRamseyreferenceconsistenthisown2021/2023accountof1988bankruptcy. Narratordoesnotnamehim;interpretationexplicit,court/creditreportnotread.",
+    "source_ids": [
+      "RAMSEY"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C36",
+    "start_char": 17005,
+    "end_char": 17671,
+    "original_quote": "Four conditions and a good debt play\nneeds all four. One, the spread has to\nbe real. The thing you buy has to\nreasonably out-earn the loan.\nTwo, it has to be an appreciating or\ncash-flowing asset, not a depreciating\ntoy wearing an investment costume.\nThree, the leverage has to be survivable\nwith enough cushion that a bad year\nbends you instead of snapping you. And\nfour, you have to keep making the\npayments through the rough patches\nbecause the rough patches always come\nand a loan, unlike you, never gets\ntired, never sleeps in, and never once\nfeels bad about it.\nMiss any one of the four and good debt\nquietly turns back into the kind that's\ntrying to kill you.",
+    "strategy": "RISK",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "Positiveexpectednetspread,productiveasset,cushionandpaymentcapacityareusefulscreens,notjointguarantee. Needcorrelatedloss/rate/reset/refinancingandconcentrationrisks;positivecashflowmaystilloverpay.",
+    "source_ids": [
+      "SEC_LEVERAGE",
+      "SEC_SBLOC"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C37",
+    "start_char": 18075,
+    "end_char": 18321,
+    "original_quote": "That 30,000 he kept so\nsafe in savings,\na decade later it had crept up to about\n34,000, and after inflation took its\ncut, it actually bought less than the\nday he first parked it. He guarded that\nmoney so carefully, it quietly shrank in\nhis hands.",
+    "strategy": "CLOSING",
+    "classification": "CONDITIONALLY_SUPPORTED",
+    "assessment": "30K\u219234K10yCAGR1.2595%;realdeclineifinflationhigherthan1.2595%. Noactualdepositrateperiodorinflationseriesprovided. Own2/3/5%inflationsensitivities;debtfreeinvestingnotcash-onlycounterfactual.",
+    "source_ids": [
+      "FED_INFLATION"
+    ],
+    "calculation_ids": [
+      "K13"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C38",
+    "start_char": 18322,
+    "end_char": 18514,
+    "original_quote": "Diego took the same instinct, aimed it\nat assets instead, and turned $150,000\ndown payment into $180,000\nin equity, then did it five more times.\nSame street. Same paycheck. Same\nstarting line.",
+    "strategy": "CLOSING",
+    "classification": "CONFIRMED_ERROR",
+    "assessment": "Storedclosing150Kdownpaymentconflictsearlier50K;audioverificationunavailable,cannotcallspokenerror.6\u00d7180K=1.08Mequitybutbusiness/house/cashflow/timingnotmodeled;notmatchedsamepaychecksamecapitalproof.",
+    "source_ids": [
+      "CFPB_MORTGAGE"
+    ],
+    "calculation_ids": [
+      "K03",
+      "K14"
+    ],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  },
+  {
+    "claim_id": "C39",
+    "start_char": 18515,
+    "end_char": 18999,
+    "original_quote": "One of them retired at 50\nwith six properties and a business that\nruns without him. The other has a\npaid-off house, a flawless credit score,\nand a quiet\nnagging sense that he did everything\nright and somehow still got lapped. The\ndifference was never courage or luck or\nincome. Debt is just a tool. In the\nwrong hands, it's a trap that eats\npeople alive. In the right hands, aimed\nat the right thing, it's the closest\nthing to a cheat code ordinary people\nare actually allowed to use.",
+    "strategy": "CLOSING",
+    "classification": "UNSUPPORTED_OR_UNVERIFIED",
+    "assessment": "Retirementat50andwealthcausedsolelybydebtdonotfollowfromfictionalunreconciledbalances. Luck,income,risk,timeandownermanagementmatter;propertyequitynotspendablecashorsustainableincome.",
+    "source_ids": [
+      "SEC_LEVERAGE",
+      "FED_SCF"
+    ],
+    "calculation_ids": [],
+    "confidence": "HIGH_ON_QUOTED_TEXT_AND_ARITHMETIC;EXTERNAL_SCOPE_AS_SOURCE_LEDGER",
+    "applicability": "U.S.rules unlessspecified;hypotheticalratesnotobservedoffers;sourceconditionsapply"
+  }
+]

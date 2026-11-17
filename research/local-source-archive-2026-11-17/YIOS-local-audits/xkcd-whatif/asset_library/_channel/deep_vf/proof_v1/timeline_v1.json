@@ -1,0 +1,166 @@
+{
+ "_doc": "Editable source for the 8 s silent proof. Original placeholders only (own question, own narrator design 'Pip', own story). Edit frames/text/geometry here and re-run render_proof.py. Coordinates are in a 1000-unit design space per layout and scaled to pixels.",
+ "fps": 24,
+ "frames": 192,
+ "canvas": "#F8F8F8",
+ "ink": "#1E1E1E",
+ "red": "#D7263D",
+ "stroke_px_at_1080": 8,
+ "font": "/System/Library/Fonts/Supplemental/ChalkboardSE.ttc",
+ "question": "Q: What if the Moon were a ball of ice?",
+ "layouts": {
+  "16x9": {
+   "size": [
+    1920,
+    1080
+   ],
+   "card": [
+    80,
+    40,
+    1300,
+    150
+   ],
+   "narrator": [
+    60,
+    300,
+    260,
+    960
+   ],
+   "board": [
+    330,
+    230,
+    960,
+    900
+   ],
+   "moon": [
+    560,
+    420,
+    220
+   ],
+   "moon_label": [
+    800,
+    400
+   ],
+   "circle": [
+    560,
+    420,
+    70
+   ],
+   "scene_moon": [
+    650,
+    300,
+    170
+   ],
+   "scene_labels": [
+    [
+     730,
+     560
+    ],
+    [
+     250,
+     250
+    ]
+   ]
+  },
+  "9x16": {
+   "size": [
+    1080,
+    1920
+   ],
+   "card": null,
+   "narrator": [
+    330,
+    1080,
+    670,
+    1650
+   ],
+   "board": [
+    60,
+    80,
+    940,
+    900
+   ],
+   "moon": [
+    500,
+    450,
+    260
+   ],
+   "moon_label": [
+    700,
+    230
+   ],
+   "circle": [
+    500,
+    450,
+    90
+   ],
+   "scene_moon": [
+    500,
+    620,
+    260
+   ],
+   "scene_labels": [
+    [
+     560,
+     1000
+    ],
+    [
+     120,
+     200
+    ]
+   ]
+  }
+ },
+ "events": [
+  {
+   "f": 2,
+   "type": "TYPE_ON",
+   "target": "card_text",
+   "rate_letters_per_frame": 1,
+   "layouts": [
+    "16x9"
+   ]
+  },
+  {
+   "f": 60,
+   "type": "POP",
+   "target": "moon"
+  },
+  {
+   "f": 84,
+   "type": "POP",
+   "target": "moon_label",
+   "text": "ICE"
+  },
+  {
+   "f": 108,
+   "type": "POP",
+   "target": "red_circle"
+  },
+  {
+   "f": 132,
+   "type": "CUT",
+   "target": "scene_night"
+  },
+  {
+   "f": 150,
+   "type": "POP",
+   "target": "scene_label_1",
+   "text": "MELTING"
+  },
+  {
+   "f": 160,
+   "type": "POP",
+   "target": "scene_label_2",
+   "text": "STEAM"
+  },
+  {
+   "f": 170,
+   "type": "DISSOLVE",
+   "target": "glow_plate",
+   "frames": 6,
+   "curve": "linear"
+  }
+ ],
+ "_revision": "attempt2: 16x9 card widened (text overflow), red circle centred on crack; 9x16 board/narrator re-laid (squashed narrator, empty lower 40%), STEAM moved off moon"
+}

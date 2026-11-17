@@ -1,0 +1,24 @@
+stage,n_videos,n_channels,n_shorts,n_with_transcript,n_derived_thumbnail_url,reported_n_in_prior_reports,reproduced_match,notes
+S01_baseline_eligible_all_formats (02_features.py eligible_base),3317,68,221,3104,545,,YES,
+"S02_performance_classification_long (02_features.py; reported n=3,056)",3056,60,0,2858,372,3056,YES,
+S03_shorts_classification_and_analysis (02 + 10 shorts block),201,3,201,201,173,12/23/141/25 =201,YES,
+"S04_title_analysis (03 title features t_*, 06 title claims, 09 playbook families, 10 patterns)",3056,60,0,2858,372,,YES,title features tested: 17 binary (n per test 3056-3056); claim tests n 3056-3056
+S05_hook_analysis (03 h_*; 06 hook claims using transcript features),2858,60,0,2858,371,,YES,hook features tested: 16 binary (n 2858-2858); transcript-based claim tests n 2858-2858
+S06_introduction_analysis (03 i_* + *_150 features),2858,60,0,2858,371,,YES,subset of the hook/intro features (i_* and *_150); same population as S05
+"S07_script_analysis (03 s_*, x_words, s_wpm)",2858,60,0,2858,371,,YES,script features tested: 1 binary (n 2858-2858); continuous tests n 1555-3056
+"S08_hook_claim_proxies_notx_coded_False (06: h_snapback3,h_but_any,h_named_entity_30s)",3056,60,0,2858,372,,YES,claim tests n 3056-3056: videos with no transcript counted as FALSE (disclosed limitation)
+S09_viral_checklist_score (06; no-transcript videos get hook-proxy items=False),3056,60,0,2858,372,,YES,
+S10_thumbnail_visual_analysis (08_thumbs.py),3001,59,0,2803,371,3001,YES,thumbnail tests n 3001-3001
+S11_thumbnail_OCR_text (08b_ocr.py + 08_thumbs),3001,59,0,2803,371,,YES,
+"S12_topic_clustering_FIT (04: TF-IDF+KMeans k=18 on ALL titles, all formats)",3634,68,222,3410,545,,YES,
+S13_topic_cluster_performance_table (04: classified long only),3056,60,0,2858,372,,YES,
+S14_audience_problem_analysis (06: rule tags on title + first 150 transcript words; classified long),3056,60,0,2858,372,,YES,
+S15a_matched_pairs_winners (03_stats.py),692,54,0,672,44,692,YES,
+S15b_matched_pairs_losers (03_stats.py),692,54,0,632,44,,YES,
+S16_heldout_channel_prediction (04: Breakout+Successful vs Underperforming; Average excluded; missing features median-imputed),1605,60,0,1518,143,,YES,"AUC rows: [{'feature_set': 'title_surface', 'n': 1605, 'n_pos': 822, 'AUC_unseen_channels': 0.5037536720396788, 'AUC_sd': 0.010801345946920437, 'AUC_shuffled_label': 0.4941579384589003}, {'feature_set': 'hook_intro', 'n': 1605, 'n_pos': 822, 'AUC_unseen_channels': 0.5269419088103554, 'AUC_sd': 0.030452108275376623, 'AUC_shuffled_label': 0.48412898794847514}, {'feature_set': 'script', 'n': 1605, 'n_pos': 822, 'AUC_unseen_channels': 0.5847890498475942, 'AUC_sd': 0.01383751354601941, 'AUC_shuffled_label': 0.4942792230329657}, {'feature_set': 'all_text', 'n': 1605, 'n_pos': 822, 'AUC_unseen_channels': 0.5761800086524198, 'AUC_sd': 0.022124662304871364, 'AUC_shuffled_label': 0.4877471679942852}, {'feature_set': 'topic_only', 'n': 1605, 'n_pos': 822, 'AUC_unseen_channels': 0.5098232175164291, 'AUC_sd': 0.028929829507308068, 'AUC_shuffled_label': 0.47566495254941293}, {'feature_set': 'all_text+topic', 'n': 1605, 'n_pos': 822, 'AUC_unseen_channels': 0.5768176846439819, 'AUC_sd': 0.01892672355303287, 'AUC_shuffled_label': 0.4865559583222986}]"
+"S17_variance_decomposition_log_views (04: long, views>0)",3402,68,0,3199,372,,YES,
+"S18_channel_level_structure (06: channels >=20 dated long, span>=30d; videos listed)",3035,47,0,2826,187,,YES,
+"S19_outlier_ratio_views_per_subscriber (06: long, subs+views present)",2449,45,0,2254,0,,YES,
+"S20_near_duplicate_script_detection (02: transcript >500 chars, all formats)",3402,66,203,3402,540,,YES,
+S21_publish_quarter_trend_by_format (04: dated videos),3442,62,222,3218,360,,YES,
+S22_subniche_group_channel_medians (07: long with views; groups need >=10 videos),3402,68,0,3199,372,,YES,

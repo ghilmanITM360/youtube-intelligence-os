@@ -1,0 +1,7 @@
+# WI-0081 review notes
+
+Status: reviewable rough animatic, not final asset-pack approval. Voice-over is the supplied 98.32 s recording; timings use existing approximate section cues and need an auditory sync review. Rendering: H.264, 1080×1920, 24 fps, AAC, 98.33 s; complete file decoded by ffmpeg without errors. Actual player and audible listening were not performed in this environment.
+
+Opening, 700 W comparison, cavitation, and ending frames were inspected; an erroneous line across the mascot and a floating sugar cube were corrected. The spoon/arm uses two stepped poses, not a physical fluid simulation; the sugar cube is a schematic on/off indication. The original pilot's PIL-to-ffmpeg workflow was used. `build_animatic.py` contains editable scene recipes and reusable cup/stage functions; `scenes/` contains rendered visual states, and `SHOT_LIST.csv` maps the shots to reused source art. Reused art remains under `../assets/gen/`; none of the existing asset-pack QA statuses was changed. Waterfall alignment and hand grip warrant further production review. Initial QA snapshots with no suffix predate the arm fix; opening_v2 and ending_v2 reflect the final file.
+
+Manual audition, detailed word-level sync, motion and continuity review, mobile-size text review, owner's voice approval, physics wording changes, and final asset approval remain open. The film makes no claim to be a complete final motion production.

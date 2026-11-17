@@ -1,0 +1,585 @@
+{
+ "note": "maxResults* are PER CHANNEL in streamers/youtube-scraper; channels with lower limits are split into their own run (see per_channel_runs) so no channel exceeds its approved limit. Each run also carries maxTotalChargeUsd (est + $0.01) as a per-run hard stop; tranche caps are enforced by cumulative usageTotalUsd checks between runs.",
+ "pilot": {
+  "input": {
+   "startUrls": [
+    {
+     "url": "https://www.youtube.com/channel/UC8p5EKG8jlsL2R2bvr2fZ3g"
+    }
+   ],
+   "maxResults": 3,
+   "maxResultsShorts": 0,
+   "maxResultStreams": 0,
+   "transcriptionAndSubtitle": "NONE",
+   "aiVideoDescription": false,
+   "aiVideoSummary": false
+  },
+  "maxTotalChargeUsd": 0.05
+ },
+ "per_channel_runs": [
+  {
+   "tranche": "T1 (B1 subset)",
+   "channel": "Kevin Explains",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCMl8WtFdqfnzzKcC2KWZZnQ"
+     }
+    ],
+    "maxResults": 188,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.762
+  },
+  {
+   "tranche": "T1 (B1 subset)",
+   "channel": "Lana Maynes",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCj0uhARVVmROWv9TBpVIr9Q"
+     }
+    ],
+    "maxResults": 105,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.43
+  },
+  {
+   "tranche": "T1 (B1 subset)",
+   "channel": "Mark Calloway",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCAOeipQ5KGzZ2McMF1RNsrQ"
+     }
+    ],
+    "maxResults": 100,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.41
+  },
+  {
+   "tranche": "T1 (B1 subset)",
+   "channel": "Business Decoded",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCr1NnI7dwgIqeGJymhKL37A"
+     }
+    ],
+    "maxResults": 52,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.218
+  },
+  {
+   "tranche": "T1 (B1 subset)",
+   "channel": "Marcus Retires",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCW_JmbBR0gsRGIUGRY3WA-Q"
+     }
+    ],
+    "maxResults": 37,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.158
+  },
+  {
+   "tranche": "T1 (B1 subset)",
+   "channel": "Capital Case",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCZXShYiBJlahi8mCNiU3XBg"
+     }
+    ],
+    "maxResults": 20,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.09
+  },
+  {
+   "tranche": "T1 (B1 subset)",
+   "channel": "Built On You",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UC8p5EKG8jlsL2R2bvr2fZ3g"
+     }
+    ],
+    "maxResults": 15,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.07
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Walter Canada",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCQng0CgVwiA79VEPJ9e--zw"
+     }
+    ],
+    "maxResults": 123,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.502
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Nia Prescott",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UC3a2fNfeG-zvJcuDD9R8bLw"
+     }
+    ],
+    "maxResults": 109,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.446
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Finance POV",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UC4zls8vK8iiTSQpnaIxICkg"
+     }
+    ],
+    "maxResults": 90,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.37
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Ronnie Finance",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCA-ucSJ_2mY4EqjenOT2u3w"
+     }
+    ],
+    "maxResults": 71,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.294
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "POV Wealth",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCryM-LAkg31P_B0GeshJQjg"
+     }
+    ],
+    "maxResults": 71,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.294
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Mr. Ranks",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCGwJ94gUJNUWt-EW3zpWotA"
+     }
+    ],
+    "maxResults": 69,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.286
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Robin MBA",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCOvq-1piPnzCmrqfSspVIwA"
+     }
+    ],
+    "maxResults": 67,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.278
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Madeline",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UChghyih02gp-TC7w22ULaXQ"
+     }
+    ],
+    "maxResults": 59,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.246
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Nate\u2019s Money Map",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCtOrKVgo-bsh4XoSCA8R_mg"
+     }
+    ],
+    "maxResults": 40,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.17
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Finance ANALYST",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCWQA4bQidJMFH3odS-RGEyA"
+     }
+    ],
+    "maxResults": 37,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.158
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Frank Law",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCdFjOki_gKUfvDq3SmL36mg"
+     }
+    ],
+    "maxResults": 32,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.138
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Housing",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UC3Tzh0Wu1C9s3AI2Oqc8kIA"
+     }
+    ],
+    "maxResults": 31,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.134
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Arthur Penrose | UK Pension Guide",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCsAnRVKKrZCD7YRVLu5FdSQ"
+     }
+    ],
+    "maxResults": 30,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.13
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Wealth Logic Australia",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCpUvGrDOLrlhpUr5hXnpD9g"
+     }
+    ],
+    "maxResults": 29,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.126
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "This make cents",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCWrtDO6izx1KXQu_BZBrQYg"
+     }
+    ],
+    "maxResults": 27,
+    "maxResultsShorts": 27,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.118
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Sarah Rickshaw",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCn2nfMN6I-ozJikqW-zk_6A"
+     }
+    ],
+    "maxResults": 19,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.086
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "Econ in a Nutshell",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UC_DdIoJzHZXlEKTVy41_KQw"
+     }
+    ],
+    "maxResults": 19,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.086
+  },
+  {
+   "tranche": "T2 (follow-up)",
+   "channel": "The Wealth Engine",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCfTD1TTaLoeF02x8wWFUcKw"
+     }
+    ],
+    "maxResults": 14,
+    "maxResultsShorts": 14,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false
+   },
+   "maxTotalChargeUsd": 0.066
+  },
+  {
+   "tranche": "G (gap-fill, newest-first delta)",
+   "channel": "MonkeyExplains",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCiBGqUxeTe4AYQyRseSZaKw"
+     }
+    ],
+    "maxResults": 47,
+    "maxResultsShorts": 47,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false,
+    "sortVideosBy": "NEWEST"
+   },
+   "maxTotalChargeUsd": 0.198
+  },
+  {
+   "tranche": "G (gap-fill, newest-first delta)",
+   "channel": "Mark Invests",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCcj_KU4ZN6bx6Ki68hNJWqw"
+     }
+    ],
+    "maxResults": 22,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false,
+    "sortVideosBy": "NEWEST"
+   },
+   "maxTotalChargeUsd": 0.098
+  },
+  {
+   "tranche": "G (gap-fill, newest-first delta)",
+   "channel": "Uncle John Financial",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCWugleQL2wqr5N1X4o8yyLw"
+     }
+    ],
+    "maxResults": 9,
+    "maxResultsShorts": 9,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false,
+    "sortVideosBy": "NEWEST"
+   },
+   "maxTotalChargeUsd": 0.046
+  },
+  {
+   "tranche": "G (gap-fill, newest-first delta)",
+   "channel": "Uncle Frank Retirement",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCLh3aiudWdnfR0QDC8aLEhQ"
+     }
+    ],
+    "maxResults": 13,
+    "maxResultsShorts": 0,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false,
+    "sortVideosBy": "NEWEST"
+   },
+   "maxTotalChargeUsd": 0.062
+  },
+  {
+   "tranche": "G (gap-fill, newest-first delta)",
+   "channel": "Primate Economics",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UC14Fb2zWTEZklONPXFbLrTQ"
+     }
+    ],
+    "maxResults": 6,
+    "maxResultsShorts": 6,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false,
+    "sortVideosBy": "NEWEST"
+   },
+   "maxTotalChargeUsd": 0.034
+  },
+  {
+   "tranche": "G (gap-fill, newest-first delta)",
+   "channel": "Logical Money",
+   "input": {
+    "startUrls": [
+     {
+      "url": "https://www.youtube.com/channel/UCKhpM-cu2Cod-GyG6KngNYg"
+     }
+    ],
+    "maxResults": 11,
+    "maxResultsShorts": 11,
+    "maxResultStreams": 0,
+    "transcriptionAndSubtitle": "NONE",
+    "aiVideoDescription": false,
+    "aiVideoSummary": false,
+    "sortVideosBy": "NEWEST"
+   },
+   "maxTotalChargeUsd": 0.054
+  }
+ ]
+}

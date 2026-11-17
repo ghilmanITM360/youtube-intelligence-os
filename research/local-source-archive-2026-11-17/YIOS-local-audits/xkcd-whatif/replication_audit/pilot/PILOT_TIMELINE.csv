@@ -1,0 +1,20 @@
+t_start_s,t_end_s,beat,visible_event,narration_cue
+0,0.12,SETUP,"empty canvas, ground line",none
+0.125,0.5,SETUP,question text pops (f3),narr starts 0.6
+0.5,0.75,SETUP,"trampoline pops f12, Moss pops f18, bowling ball pops f24","narr: ""Drop a bowling ball on a trampoline"""
+2.25,3.5,SETUP,dashed START tick pops f54 at ball-bottom height; hold,narr ends ~2.6; silence
+3.5,3.83,ACTION,"release: hand opens (pose swap P2), ball starts free fall (g stylised, 1.1 s fall)",narr B starts 3.9
+3.83,4.6,ACTION,"ball accelerates; 2 speed ticks flicker; Moss watches (P3, hand on chin)","""The mat"""
+4.6,5.2,ACTION,"contact 1: mat dips 61 units, ball rides it down and back up (half-sine, spring)","""stretches"" @4.6"
+5.91,5.91,CONSEQUENCE,apex 1: ball peaks 74 units above mat; red tick 1 pops (1-frame),
+6.63,7.23,CONSEQUENCE,"contact 2: mat dips 40 units, ball rides it down and back up (half-sine, spring)",
+7.69,7.69,CONSEQUENCE,apex 2: ball peaks 31 units above mat; red tick 2 pops (1-frame),
+8.16,8.76,CONSEQUENCE,"contact 3: mat dips 26 units, ball rides it down and back up (half-sine, spring)",
+9.06,9.06,CONSEQUENCE,apex 3: ball peaks 13 units above mat; red tick 3 pops (1-frame),"""less each bounce"" 9.1-10.0"
+9.25,9.25,CONSEQUENCE,label LESS EACH TIME pops (f222),
+9.36,9.96,CONSEQUENCE,"contact 4: mat dips 17 units, ball rides it down and back up (half-sine, spring)",
+10.16,10.16,CONSEQUENCE,apex 4: ball peaks 6 units above mat; red tick 4 pops (1-frame),
+10.36,10.96,CONSEQUENCE,"contact 5: mat dips 11 units, ball rides it down and back up (half-sine, spring)",
+10.4,10.4,CONSEQUENCE,pose swap P4 shrug,
+11.2,12,CONSEQUENCE,ball settles on mat with ~8 unit sag; end hold,
+11.21,11.81,CONSEQUENCE,"contact 6: mat dips 7 units, ball rides it down and back up (half-sine, spring)",

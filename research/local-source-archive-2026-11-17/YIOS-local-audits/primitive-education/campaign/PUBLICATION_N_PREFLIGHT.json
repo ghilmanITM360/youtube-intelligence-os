@@ -1,0 +1,19 @@
+{
+ "checkpoint": "N",
+ "prepared_utc": "2026-11-06T16:22:31Z",
+ "branch": "research/primitive-education-visual-forensics",
+ "base": "7d71996317a3e55c84ada549dbd773411597697b",
+ "base_is_new_branch_from_main": false,
+ "tree": "fcc298daa1513408b209245f23bda8b22eecde6e",
+ "sealed_entries": 841,
+ "published_files": 842,
+ "tree_files_under_prefix": 842,
+ "changed_paths": 20,
+ "seal": "campaign/EVIDENCE_SHA256SUMS_N.txt",
+ "seal_sha256": "49b1c1fe84cab7cead70d7ab6284c903f8db3556a7dafebd998251ed2f753cc0",
+ "self_reference_exclusions": {
+  "campaign/EVIDENCE_SHA256SUMS_N.txt": "published with X, cannot list its own hash; verified by seal_sha256 in the final receipt",
+  "campaign/PUBLICATION_N_PREFLIGHT.json": "names the tree of X, so it cannot be inside that tree; published by the next checkpoint",
+  "campaign/PUBLICATION_N_FINAL.json": "names the commit of X, which does not exist until after the push; published by the next checkpoint"
+ }
+}

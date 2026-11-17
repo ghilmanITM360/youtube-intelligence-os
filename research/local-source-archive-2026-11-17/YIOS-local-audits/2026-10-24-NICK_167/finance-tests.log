@@ -1,0 +1,18 @@
+................E.................
+======================================================================
+ERROR: test_exported_workbook_shape (test_combined_workbook.CombinedWorkbookContract.test_exported_workbook_shape)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ghilmankhan/workprojects/youtube-intelligence-os/research/finance-economics-intelligence/test_combined_workbook.py", line 113, in test_exported_workbook_shape
+    with zipfile.ZipFile(BOOK) as z:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/zipfile/__init__.py", line 1371, in __init__
+    self._RealGetContents()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/zipfile/__init__.py", line 1438, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.784s
+
+FAILED (errors=1)

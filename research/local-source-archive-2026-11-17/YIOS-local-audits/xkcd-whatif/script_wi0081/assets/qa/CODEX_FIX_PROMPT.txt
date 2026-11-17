@@ -1,0 +1,14 @@
+WI-0081 FIX ROUND. Work only in script_wi0081. Master alien inputs/ALIEN_MASTER_001.png unchanged. Generate with the image tool only; do not draw GEN assets in code. Background pure white #FFFFFF, at least 85% of any canvas empty, one 8 px black monoline, flat greys #E4E4E4/#C4C4C4 only, no gradient, no halo, no glow, no motion marks, no floor line, no text.
+Regenerate ONLY these ids (max 3 tries each, keep the best, then continue, never stop):
+1 CHR-P04: remove halo. 2 CHR-P08: remove motion marks. 3 CHR-P11: remove the baked dial (dial is a separate prop THM-02). 4 CHR-P14: shorter legs, feet bottom near y=1102 on 1536x1536, same head position (head top y=150, height 338).
+5 MUG-02: identical mug outline to MUG-01 (same size, handle, rim), only the contents differ. 6 WTR-01/02/03: same flat #C4C4C4 fill, no gradient; WTR-01 must be a clearly visible filled water shape, not nearly empty. 7 SPN-02/SPN-03: same spoon silhouette as SPN-01, only rotated about the bowl-neck pivot. 8 RUL-01 and THR-01: make the line weight and tick marks bold enough to read at 320 px wide (ticks 8 px, long axis visible), ink at least 3 percent of the canvas.
+Other P poses (P01,P02,P03,P05,P07,P12): do NOT regenerate; feet tolerance is being widened to 50 px by the owner.
+Save to assets/gen/<ID>.png (new names, never overwrite), update MANIFEST.csv, run the existing assets/qa/verify_assets.py and assets/qa/audit_lens.py, and report per id: tries, kept file, pass/fail. Do not commit.
+
+PHYSICS FIXES (same rules, same tries limit). Real-world physics must hold: simplify the drawing, never the science.
+9 NIA-02: waterfall bottom must end as a straight horizontal cut (no icicle drips, it must not look frozen); falling streaks straight and vertical.
+10 HRS-01: horse with 4 distinct legs with knee and hock joints and hooves, standing on level ground contact, correct neck/head/tail anatomy, side view facing right.
+11 CLK-01: stopwatch with a 60-minute face (12 ticks); the shaded wedge is a thin 12 degree sector from the 12 o'clock position, hand at its edge.
+12 CAV-03: add a small burner ring under the pot so the flame has fuel and the pot has support; keep bubbles rising from the bottom, steam above.
+13 THM-01 and THM-02: dial gauge sweep about 270 degrees with a gap at the bottom, ticks only, no numbers; THM-02 needle pointing at the low end of the scale (about 20 percent of the sweep).
+Every file: pure white background, no halo, one line weight, flat greys only.

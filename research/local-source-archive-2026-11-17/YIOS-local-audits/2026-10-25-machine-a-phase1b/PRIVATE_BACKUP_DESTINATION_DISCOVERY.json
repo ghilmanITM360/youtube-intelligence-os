@@ -1,0 +1,54 @@
+{
+  "created": "2026-10-25T23:56:39.325995+05:00",
+  "mounted_volume_count": 1,
+  "external_disk_entries": 18,
+  "all_external_entries_are_mounted_disk_images": true,
+  "physical_external_backup_detected": false,
+  "time_machine": {
+    "code": 0,
+    "stdout": "tmutil: No destinations configured.",
+    "stderr": ""
+  },
+  "local_filevault": {
+    "code": 0,
+    "stdout": "FileVault is On.",
+    "stderr": ""
+  },
+  "tools": {
+    "rclone": false,
+    "restic": false,
+    "borg": false,
+    "aws": false,
+    "gcloud": false,
+    "az": false
+  },
+  "configuration_presence": {
+    ".config/rclone/rclone.conf": false,
+    ".aws/config": false,
+    ".aws/credentials": false,
+    ".config/gcloud": false,
+    ".config/restic": false,
+    ".config/borg": false,
+    "Library/Application Support/Google/DriveFS": false
+  },
+  "cloudstorage_children": 0,
+  "icloud_container_present": true,
+  "google_drive": {
+    "profile_read_authenticated": true,
+    "identifiers_omitted": true,
+    "shared_drives_observed": 0,
+    "quota": "NOT_VERIFIED; available connector has no quota endpoint",
+    "private_upload_scope": "NOT_VERIFIED",
+    "retention": "NOT_VERIFIED",
+    "billing": "NOT_VERIFIED",
+    "independent_restore": "NOT_EXECUTED"
+  },
+  "qualified_destinations": 0,
+  "destination_acceptance": "BLOCKED",
+  "storage_charges_incurred": false,
+  "df": {
+    "code": 0,
+    "stdout": "Filesystem   1024-blocks      Used Available Capacity iused     ifree %iused  Mounted on\n/dev/disk3s5   482797652 429290112  11201880    98% 4548864 112018800    4%   /System/Volumes/Data",
+    "stderr": ""
+  }
+}

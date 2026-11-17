@@ -1,0 +1,294 @@
+# Reconstruction blueprint - original asset system derived from Im-N3K9Pnf0
+New ORIGINAL assets and motion only. No source screenshot, footage, logo or character drawing is copied; third-party items (`IMG_*`, `ICON_*`) are replaced with licensed or self-made equivalents and your own data. Timings at 30 fps, 1920x1080.
+
+## Modules (original rebuild; derived from measured patterns)
+1. **Cast and prop kit**: stick man, glasses man, bull, bear, Uncle Sam, NVIDIA climber, doctor and patient, detective, three doors, text cards. Redraw as new original assets; do not trace the source.
+2. **Hard-cut scene chain**: 192 hard cuts, median shot 3.1 s (0.43-13.5 s); 187 land on I-frames and 5 do not.
+3. **Three-door signpost**: 13 door states; move a red arrow, check or X between the doors.
+4. **One-frame pop-in builds**: 282 of 419 episodes are one frame; build groups one item per step.
+5. **Typed text cards**: 16 white cards with one or two typed lines that build in place.
+6. **Sponsor block**: a 65 s segment opened by a Sponsored by card and closed by a code card, with a short reprise before the end card; use your own sponsor.
+7. **Third-party insert slot**: photos, clips, charts, logos and screenshots are replaced with licensed or self-made equivalents.
+8. **Text-line builds**: add a second typed line to a card in place instead of cutting.
+9. **Slow push-in on held scenes**: 71 of 105 measured states grow in scale by about 0.2-4 percent across the state; add a gentle push-in to held drawings and charts.
+10. **End card**: white card with Subscribe for more, channel name, YouTube mark and crossed-out social icons held 5.0 s.
+11. **Codec note**: 30 fps constant frame rate, 232 I-frames about every 2.9 s on average.
+
+
+## Editor timeline (frames)
+- S001 f0-f55 (56 fr): START+ZOOM_IN - Chicken between two cars on road
+- S002 f56-f72 (17 fr): POP_IN - Red arrow over red car
+- S003 f73-f129 (57 fr): POP_IN+ZOOM_IN - Red arrow over blue car
+- S004 f130-f165 (36 fr): POP_IN+ZOOM_IN - Red arrow over chicken
+- S005 f166-f228 (63 fr): CUT - Bear with megaphone under storm cloud
+- S006 f229-f277 (49 fr): POP_IN - Cloud labelled Recession
+- S007 f278-f375 (98 fr): CUT+ZOOM_IN - Bull in GameStop store with card box
+- S008 f376-f428 (53 fr): POSE+ZOOM_IN - Bull scene shifts
+- S009 f429-f469 (41 fr): CUT - Text card Over the last year
+- S010 f470-f537 (68 fr): CUT+ZOOM_IN - FRED unemployment rate chart
+- S011 f538-f631 (94 fr): CUT+ZOOM_IN - Stick man pouring drinks at bar
+- S012 f632-f661 (30 fr): CUT - Man slumped at desk before rising chart
+- S013 f662-f717 (56 fr): POP_IN+ZOOM_IN - NVIDIA logo and SHORT on monitor
+- S014 f718-f756 (39 fr): CUT+ANIM - Panicking man close
+- S015 f757-f799 (43 fr): POP_IN - Three question marks
+- S016 f800-f947 (148 fr): CUT+ZOOM_IN - City street with 2026 sign
+- S017 f948-f970 (23 fr): CUT - Text card Rate Cuts
+- S018 f971-f991 (21 fr): POP_IN - Text swaps to Maybe
+- S019 f992-f1031 (40 fr): POP_IN - Text swaps to AI Bubble Pops
+- S020 f1032-f1055 (24 fr): POP_IN - Text swaps to Perhaps
+- S021 f1056-f1093 (38 fr): POP_IN - Text swaps to Soft Landing
+- S022 f1094-f1125 (32 fr): POP_IN - Text swaps to Hard Landing
+- S023 f1126-f1196 (71 fr): CUT - Man reading at outdoor cafe
+- S024 f1197-f1234 (38 fr): CUT - Text card All Possible
+- S025 f1235-f1311 (77 fr): CUT+ANIM - S&P 500 chart screenshot
+- S026 f1312-f1387 (76 fr): CUT - Man sunbathing by pool with cigar
+- S027 f1388-f1477 (90 fr): POP_IN - Caption I just bought Treasuries
+- S028 f1478-f1630 (153 fr): CUT+ZOOM_IN - Stick man by mailbox and house
+- S029 f1631-f1669 (39 fr): CUT - Stick man with lightbulb
+- S030 f1670-f1756 (87 fr): CUT+ZOOM_IN - Man reading letter at mailbox
+- S031 f1757-f1798 (42 fr): CUT - Stick man at podcast desk
+- S032 f1799-f1963 (165 fr): CUT - Sad man after 2026 New Years party
+- S033 f1964-f1999 (36 fr): CUT - Text card To be transparent
+- S034 f2000-f2089 (90 fr): CUT - Three doors BEARISH BULLISH ???
+- S035 f2090-f2121 (32 fr): POP_IN - Red arrow at BEARISH
+- S036 f2122-f2149 (28 fr): POP_IN - Arrow moves toward BULLISH
+- S037 f2150-f2166 (17 fr): POP_IN - Arrow continues
+- S038 f2167-f2298 (132 fr): POP_IN - Red arrow at ??? door
+- S039 f2299-f2445 (147 fr): CUT+ANIM - Man spins prediction wheel
+- S040 f2446-f2523 (78 fr): CUT - Man at outdoor cafe again
+- S041 f2524-f2566 (43 fr): CUT - Three doors with arrow at BEARISH
+- S042 f2567-f2669 (103 fr): CUT - 1. Artificial Intelligence chip king on throne
+- S043 f2670-f2738 (69 fr): CUT - Elephant in VR goggles carrying chip king
+- S044 f2739-f2773 (35 fr): CUT - White canvas split by wavy line
+- S045 f2774-f2934 (161 fr): POP_IN+ZOOM_IN - Chip king standing on globe
+- S046 f2935-f2981 (47 fr): POP_IN+ZOOM_IN - Photo of man in goggles
+- S047 f2982-f3013 (32 fr): CUT - Text card One thing is clear
+- S048 f3014-f3104 (91 fr): CUT - Stick man running from elephant
+- S049 f3105-f3153 (49 fr): CUT - Calculator character with ERROR
+- S050 f3154-f3233 (80 fr): CUT - NVIDIA stock quote page
+- S051 f3234-f3313 (80 fr): CUT - Palantir stock quote page
+- S052 f3314-f3378 (65 fr): CUT - Datadog stock quote page
+- S053 f3379-f3449 (71 fr): POP_IN - Red ellipse on PE Ratio 435.89
+- S054 f3450-f3472 (23 fr): CUT - Chalkboard Fundamentals
+- S055 f3473-f3525 (53 fr): POP_IN - Red X over Fundamentals
+- S056 f3526-f3577 (52 fr): CUT+ZOOM_IN - Trader in basement full of silver bars
+- S057 f3578-f3609 (32 fr): CUT - Text card The problem is
+- S058 f3610-f3702 (93 fr): CUT - NVIDIA figure hauling sack uphill
+- S059 f3703-f3763 (61 fr): CUT - When NVIDIA up Then
+- S060 f3764-f3811 (48 fr): POP_IN - Then Semiconductors up
+- S061 f3812-f3854 (43 fr): POP_IN - Then Tech Sector up
+- S062 f3855-f3893 (39 fr): POP_IN - Then S&P 500 up
+- S063 f3894-f3946 (53 fr): CUT - Confused stick man
+- S064 f3947-f4042 (96 fr): CUT+ZOOM_IN - S&P 500 PE ratio history chart
+- S065 f4043-f4142 (100 fr): CUT+ZOOM_IN - S&P 500 PE statistics card
+- S066 f4143-f4256 (114 fr): CUT+ZOOM_IN - PE chart with mean line and 16x
+- S067 f4257-f4332 (76 fr): CUT - NVIDIA climber again
+- S068 f4333-f4382 (50 fr): POP_IN - Red X over climber and sack
+- S069 f4383-f4459 (77 fr): CUT - AI deals network diagram
+- S070 f4460-f4608 (149 fr): CUT - Report executive summary page
+- S071 f4609-f4700 (92 fr): CUT - Man reading to seated people in suits
+- S072 f4701-f4792 (92 fr): CUT+ZOOM_IN - Bear waving peace sign
+- S073 f4793-f4899 (107 fr): CUT+MICRO - 2. Concentration bear bench-pressing
+- S074 f4900-f5046 (147 fr): CUT - Stick man shakes hands with bear
+- S075 f5047-f5115 (69 fr): CUT+ZOOM_IN - Magnificent Seven market cap chart
+- S076 f5116-f5359 (244 fr): CUT+ZOOM_IN - Narrow market leadership chart
+- S077 f5360-f5415 (56 fr): CUT+ZOOM_IN - Big Tech billion-dollar blueprints graphic
+- S078 f5416-f5524 (109 fr): CUT+ZOOM_IN - Magnificent Seven film poster
+- S079 f5525-f5672 (148 fr): CUT+ZOOM_IN - Mag 7 market cap chart returns
+- S080 f5673-f5695 (23 fr): CUT - Text card That's right
+- S081 f5696-f5789 (94 fr): CUT+ZOOM_IN - Mag 7 market cap chart again
+- S082 f5790-f5908 (119 fr): CUT+ZOOM_IN - Goldman Sachs Mag 7 vs 493 chart
+- S083 f5909-f5979 (71 fr): CUT+ZOOM_IN - S&P 500 YTD attribution chart
+- S084 f5980-f6029 (50 fr): POP_IN+MICRO - First paragraph on Magnificent Seven weighting
+- S085 f6030-f6111 (82 fr): POP_IN+ZOOM_IN - Red underline on 41.8%
+- S086 f6112-f6135 (24 fr): POP_IN - Second paragraph on Broadcom and Tesla
+- S087 f6136-f6302 (167 fr): POP_IN+ZOOM_IN - Red underline on Broadcom sentence
+- S088 f6303-f6313 (11 fr): POP_IN - Red underline on 55.5%
+- S089 f6314-f6448 (135 fr): CUT - S&P 500 eleven sectors pie
+- S090 f6449-f6539 (91 fr): CUT - Magnificent Seven chart again
+- S091 f6540-f6607 (68 fr): CUT - Sweating worried man
+- S092 f6608-f6718 (111 fr): CUT+ZOOM_IN - Two stressed analysts at desk
+- S093 f6719-f6802 (84 fr): POP_IN+ZOOM_IN - Relaxed people lying down and thumbs up
+- S094 f6803-f6954 (152 fr): CUT+ZOOM_IN - Passive vs active management chart
+- S095 f6955-f7081 (127 fr): CUT+ZOOM_IN - Equal weighted vs market cap weighted bars
+- S096 f7082-f7133 (52 fr): POP_IN+MICRO - Red underline on Market Cap Weighted
+- S097 f7134-f7237 (104 fr): CUT+ZOOM_IN - NVIDIA and Kraft Heinz logos
+- S098 f7238-f7285 (48 fr): POP_IN - Greater-than sign between logos
+- S099 f7286-f7330 (45 fr): CUT+MICRO - Text The bigger the company
+- S100 f7331-f7387 (57 fr): POP_IN - Text The more weight it receives
+- S101 f7388-f7482 (95 fr): CUT - NVIDIA climber again
+- S102 f7483-f7634 (152 fr): CUT - Rising arrow with big tech logos
+- S103 f7635-f7705 (71 fr): CUT - Investor money bag to S&P 500
+- S104 f7706-f7822 (117 fr): POP_IN+MICRO - Arrow to stacked big tech logos
+- S105 f7823-f7886 (64 fr): CUT - Rising arrow with logos again
+- S106 f7887-f7939 (53 fr): CUT - Falling arrow with big tech logos
+- S107 f7940-f8072 (133 fr): CUT+ZOOM_IN - Stick man pushing row of dominoes
+- S108 f8073-f8097 (25 fr): CUT - Text card For example
+- S109 f8098-f8223 (126 fr): CUT - NVIDIA candlestick chart falling
+- S110 f8224-f8270 (47 fr): CUT - Venn diagram Nasdaq with NVIDIA
+- S111 f8271-f8314 (44 fr): POP_IN - S&P 500 circle label
+- S112 f8315-f8375 (61 fr): POP_IN - Broader Market Pressure overlap
+- S113 f8376-f8426 (51 fr): CUT+MICRO - Hand pulling strings of city skyline
+- S114 f8427-f8473 (47 fr): POP_IN - Label I'm Diversified
+- S115 f8474-f8577 (104 fr): POP_IN+MICRO - Mag7 label with arrow
+- S116 f8578-f8654 (77 fr): CUT+ZOOM_IN - Bridge over canyon on pillars
+- S117 f8655-f8794 (140 fr): POP_IN+ZOOM_IN - Big tech logos on pillars
+- S118 f8795-f8879 (85 fr): CUT - Bear waving peace sign
+- S119 f8880-f8989 (110 fr): CUT - 3. We're Due doctor scene
+- S120 f8990-f9035 (46 fr): CUT+ZOOM_IN - S&P 500 chart with falling arrow
+- S121 f9036-f9108 (73 fr): CUT+ZOOM_IN - Man fleeing falling meteors
+- S122 f9109-f9149 (41 fr): CUT - Glasses man hand to face
+- S123 f9150-f9204 (55 fr): POP_IN - Caption We're overdue for a down year
+- S124 f9205-f9243 (39 fr): POSE - Glasses man points
+- S125 f9244-f9292 (49 fr): POP_IN - Caption Reversion to the mean
+- S126 f9293-f9400 (108 fr): CUT - Pyramid of equity returns infographic
+- S127 f9401-f9623 (223 fr): CUT+ZOOM_IN - S&P 500 daily drawdown curve
+- S128 f9624-f9698 (75 fr): CUT - Annual returns bar chart with green circle
+- S129 f9699-f9782 (84 fr): CUT - Bull and bear market history chart
+- S130 f9783-f9862 (80 fr): CUT+ZOOM_IN - Hand-drawn falling candlestick chart
+- S131 f9863-f9878 (16 fr): POP_IN - Label Normal
+- S132 f9879-f9911 (33 fr): POP_IN+MICRO - Label Healthy
+- S133 f9912-f9987 (76 fr): CUT - Social post I was wrong to say sell
+- S134 f9988-f10129 (142 fr): CUT+ZOOM_IN - Meditating man above SELL button
+- S135 f10130-f10241 (112 fr): CUT - Portrait quote card John Maynard Keynes
+- S136 f10242-f10381 (140 fr): POP_IN - Quote text appears
+- S137 f10382-f10435 (54 fr): CUT - Text And that's the uncomfortable truth with bear
+- S138 f10436-f10461 (26 fr): POP_IN - Red arrow to bear
+- S139 f10462-f10519 (58 fr): CUT - Checklist Valuations
+- S140 f10520-f10591 (72 fr): POP_IN+ZOOM_IN - Checklist Unhealthy Concentration in Indices
+- S141 f10592-f10598 (7 fr): POSE - Check redraw
+- S142 f10599-f10663 (65 fr): POP_IN - Checklist Overextended Rallies
+- S143 f10664-f10714 (51 fr): POP_IN+MICRO - Red X over checklist
+- S144 f10715-f10827 (113 fr): CUT+MICRO - Man frowning at mirror
+- S145 f10828-f10857 (30 fr): CUT - Three doors again
+- S146 f10858-f10885 (28 fr): POP_IN - Red arrow at BULLISH
+- S147 f10886-f10948 (63 fr): CUT - S&P 500 chart again
+- S148 f10949-f11032 (84 fr): CUT - PE chart with 16x again
+- S149 f11033-f11118 (86 fr): CUT - NVIDIA climber again
+- S150 f11119-f11226 (108 fr): CUT+ZOOM_IN - Bull running through wind
+- S151 f11227-f11299 (73 fr): CUT - 1. Interest Rate Cuts bull pulling arrow
+- S152 f11300-f11346 (47 fr): CUT - Chalkboard with Federal Reserve seal
+- S153 f11347-f11474 (128 fr): CUT+MICRO - Photo of Fed chair with Cut Rates button
+- S154 f11475-f11512 (38 fr): CUT - Text card One thing is clear
+- S155 f11513-f11569 (57 fr): CUT - FRED federal funds rate chart
+- S156 f11570-f11728 (159 fr): CUT+ZOOM_IN - Fed meeting rate decisions table
+- S157 f11729-f11871 (143 fr): CUT+ZOOM_IN - Fed dot plot
+- S158 f11872-f11889 (18 fr): POP_IN - Green down arrows on dot plot
+- S159 f11890-f11926 (37 fr): CUT - Lower Rates card
+- S160 f11927-f11987 (61 fr): CUT - Flow Lower Rates to Cheaper Capital
+- S161 f11988-f12072 (85 fr): POP_IN - Flow adds Higher Valuations
+- S162 f12073-f12172 (100 fr): POP_IN+MICRO - Flow adds Investors Get Comfortable Paying Premiums
+- S163 f12173-f12275 (103 fr): CUT - Fed funds chart with figure and money bag
+- S164 f12276-f12313 (38 fr): CUT - Text Valuations
+- S165 f12314-f12344 (31 fr): POP_IN - Text Trading Multiples
+- S166 f12345-f12391 (47 fr): CUT - Checklist Liquidity Loosens
+- S167 f12392-f12438 (47 fr): POP_IN - Checklist Financial Conditions Ease
+- S168 f12439-f12508 (70 fr): POP_IN - Checklist Risk-On Assets Come Alive
+- S169 f12509-f12551 (43 fr): CUT - S&P 500 chart
+- S170 f12552-f12592 (41 fr): POP_IN - Green arrow along chart
+- S171 f12593-f12744 (152 fr): CUT - ECONOMIC UNEASE podium
+- S172 f12745-f12839 (95 fr): CUT - Worried man crossed out
+- S173 f12840-f12912 (73 fr): POSE - Red X redrawn
+- S174 f12913-f13010 (98 fr): CUT - Sponsored by FlexiSpot card
+- S175 f13011-f13129 (119 fr): CUT+MICRO - Man hunched at bedroom desk at night
+- S176 f13130-f13167 (38 fr): CUT - NVIDIA annual report filing page
+- S177 f13168-f13197 (30 fr): CUT - Chalkboard with dense stock chart
+- S178 f13198-f13238 (41 fr): CUT - Trader at desk with headline screens
+- S179 f13239-f13320 (82 fr): POP_IN - Exhausted man limps in at left
+- S180 f13321-f13425 (105 fr): CUT - Tired man at desk at night
+- S181 f13426-f13473 (48 fr): CUT - Text Standing desks on the other hand
+- S182 f13474-f13623 (150 fr): CUT+MICRO - Man working at standing desk
+- S183 f13624-f13750 (127 fr): CUT - Sponsor desk image with review badge
+- S184 f13751-f13961 (211 fr): CUT+ANIM - Video of standing desk in room
+- S185 f13962-f14187 (226 fr): CUT - Standing desk live footage glass of water
+- S186 f14188-f14328 (141 fr): CUT - Standing desk with office chair footage
+- S187 f14329-f14401 (73 fr): CUT - FlexiSpot 440lbs load capacity graphic
+- S188 f14402-f14500 (99 fr): CUT - 440lbs desk with hammock figure
+- S189 f14501-f14623 (123 fr): CUT+ZOOM_IN - 30000+ Lift Tests page
+- S190 f14624-f14684 (61 fr): CUT - Text 30-day risk-free return policy
+- S191 f14685-f14743 (59 fr): CUT+ANIM - FlexiSpot product page
+- S192 f14744-f14852 (109 fr): CUT+ZOOM_IN - Stick man with FlexiSpot code
+- S193 f14853-f14894 (42 fr): CUT - Glasses man at chalkboard Financial Markets
+- S194 f14895-f15097 (203 fr): CUT+ZOOM_IN - Book Monetary Policy ???
+- S195 f15098-f15163 (66 fr): POP_IN - Book Fiscal Policy revealed
+- S196 f15164-f15239 (76 fr): CUT - Bucket 2. Deficit Spending pouring
+- S197 f15240-f15407 (168 fr): CUT+ANIM - Speaker Cuts? before committee
+- S198 f15408-f15446 (39 fr): CUT - Uncle Sam signing among paper stacks
+- S199 f15447-f15588 (142 fr): CUT - Federal deficit chart 2025 1.78T
+- S200 f15589-f15802 (214 fr): CUT - YouTube channel video grid
+- S201 f15803-f15842 (40 fr): CUT - Text card But the reality is
+- S202 f15843-f15872 (30 fr): POP_IN - Text In the short-term added
+- S203 f15873-f15923 (51 fr): POP_IN - Text It brings some benefits added
+- S204 f15924-f16012 (89 fr): CUT+MICRO - Rich man in armchair, Uncle Sam at door
+- S205 f16013-f16062 (50 fr): CUT+MICRO - FRED personal consumption chart
+- S206 f16063-f16104 (42 fr): CUT - Boardroom executives cheering
+- S207 f16105-f16177 (73 fr): CUT - US annual real GDP growth chart
+- S208 f16178-f16265 (88 fr): CUT - Book Monetary Policy crossed out
+- S209 f16266-f16297 (32 fr): POP_IN - Slow arrow over Fiscal Policy
+- S210 f16298-f16370 (73 fr): CUT - Fiscal Spending machine
+- S211 f16371-f16431 (61 fr): CUT+MICRO - Uncle Sam before Social Security, Medicare, Medicaid giants
+- S212 f16432-f16551 (120 fr): CUT+MICRO - Politician Keep Spending! to crowd
+- S213 f16552-f16594 (43 fr): CUT - Text card Even if growth cools
+- S214 f16595-f16682 (88 fr): CUT+MICRO - Politician Stonks Go Up to crowd
+- S215 f16683-f16723 (41 fr): CUT - Text card And that matters
+- S216 f16724-f16788 (65 fr): CUT - Stick man thinking
+- S217 f16789-f16849 (61 fr): CUT - Charging bull
+- S218 f16850-f16984 (135 fr): CUT+ANIM - Bridge on tech company pillars
+- S219 f16985-f17070 (86 fr): CUT - Podcaster at desk with mic
+- S220 f17071-f17170 (100 fr): CUT+ZOOM_IN - Magician card The Most Likely Outcome
+- S221 f17171-f17193 (23 fr): CUT - Text card On one side
+- S222 f17194-f17236 (43 fr): CUT - Man in tuxedo at gala with martini
+- S223 f17237-f17287 (51 fr): CUT+ZOOM_IN - Photo of official with Cut Rates disc
+- S224 f17288-f17338 (51 fr): CUT - Uncle Sam in tank
+- S225 f17339-f17447 (109 fr): CUT+ZOOM_IN - Crowned chip man at bread podium
+- S226 f17448-f17574 (127 fr): CUT - S&P 500 chart 6858.47
+- S227 f17575-f17612 (38 fr): CUT - Text card On the other side
+- S228 f17613-f17649 (37 fr): CUT - Presenter with projector The Issue
+- S229 f17650-f17713 (64 fr): CUT+ZOOM_IN - Detective and Mag 7 bubble
+- S230 f17714-f17750 (37 fr): CUT - Mag 7 chart with red trend arrow
+- S231 f17751-f17794 (44 fr): CUT+MICRO - S&P 500 PE ratio chart 16x line
+- S232 f17795-f17855 (61 fr): CUT+ZOOM_IN - Doctor and patient We're Due
+- S233 f17856-f17996 (141 fr): CUT - S&P 500 chart red down arrow
+- S234 f17997-f18090 (94 fr): CUT - Doors Bearish Bullish ???
+- S235 f18091-f18116 (26 fr): CUT - S&P 500 chart with red X
+- S236 f18117-f18146 (30 fr): POP_IN - Red down arrow added to crossed chart
+- S237 f18147-f18205 (59 fr): POP_IN - Chart sideways squiggle
+- S238 f18206-f18289 (84 fr): CUT - Two readers on park bench
+- S239 f18290-f18362 (73 fr): CUT+MICRO - S&P 500 chart with praying man
+- S240 f18363-f18463 (101 fr): POP_IN+MICRO - Red volatile arrow and worried man
+- S241 f18464-f18585 (122 fr): CUT - S&P 500 chart with sideways arrow
+- S242 f18586-f18676 (91 fr): CUT - Man running in hamster wheel
+- S243 f18677-f18755 (79 fr): CUT - Man urging My Portfolio
+- S244 f18756-f18813 (58 fr): CUT - Three doors again
+- S245 f18814-f18823 (10 fr): POP_IN - Bullish door crossed out
+- S246 f18824-f18892 (69 fr): POP_IN - Bearish door crossed out
+- S247 f18893-f18960 (68 fr): CUT - Text card Every stock feels eerie
+- S248 f18961-f19009 (49 fr): POP_IN - Text Every decision feels wrong added
+- S249 f19010-f19102 (93 fr): CUT - Asset cycle stock house cash oil gold
+- S250 f19103-f19150 (48 fr): CUT - Man with outcome prize wheel
+- S251 f19151-f19270 (120 fr): CUT - Lost driver at night crossroads
+- S252 f19271-f19371 (101 fr): CUT - Long-nosed puppet lying down
+- S253 f19372-f19407 (36 fr): CUT+MICRO - Goblin Trading Courses stand
+- S254 f19408-f19448 (41 fr): CUT+MICRO - Split panel puppet and courses stand
+- S255 f19449-f19495 (47 fr): CUT - Text card The best thing you can do
+- S256 f19496-f19565 (70 fr): CUT+MICRO - Student studying at desk
+- S257 f19566-f19627 (62 fr): CUT - Three doors plain
+- S258 f19628-f19825 (198 fr): CUT - Stick man pointing at viewer
+- S259 f19826-f19927 (102 fr): CUT - Doors with arrow at Bearish
+- S260 f19928-f20015 (88 fr): POP_IN - Arrow moves toward Bullish
+- S261 f20016-f20078 (63 fr): POP_IN - Arrow moves toward ???
+- S262 f20079-f20192 (114 fr): CUT+MICRO - Stick man pointing at Comments board
+- S263 f20193-f20205 (13 fr): CUT+MICRO - FlexiSpot E7 Pro standing desk page
+- S264 f20206-f20269 (64 fr): CUT+ANIM - Product page scroll and zoom
+- S265 f20270-f20335 (66 fr): CUT - Stick man FlexiSpot code end
+- S266 f20336-f20485 (150 fr): CUT - End card Subscribe for more Casual Finance
+
+## Per-state prompts
+All 266 image and animation prompts with static anchors and nearest-frame QA: `PER_STATE_RECONSTRUCTION_SPECIFICATIONS.json`.
+
+## Acceptance tests
+1. Cut frames equal the ledger exactly (166, 278, 429, 470, 538, 632, 718, 800, 948, 1126, 1197, 1235, 1312, 1478, 1631, 1670, 1757, 1799, 1964, 2000, 2299, 2446, 2524, 2567, 2670, 2739, 2982, 3014, 3105, 3154, 3234, 3314, 3450, 3526, 3578, 3610, 3703, 3894, 3947, 4043, 4143, 4257, 4383, 4460, 4609, 4701, 4793, 4900, 5047, 5116, 5360, 5416, 5525, 5673, 5696, 5790, 5909, 6314, 6449, 6540, 6608, 6803, 6955, 7134, 7286, 7388, 7483, 7635, 7823, 7887, 7940, 8073, 8098, 8224, 8376, 8578, 8795, 8880, 8990, 9036, 9109, 9293, 9401, 9624, 9699, 9783, 9912, 9988, 10130, 10382, 10462, 10715, 10828, 10886, 10949, 11033, 11119, 11227, 11300, 11347, 11475, 11513, 11570, 11729, 11890, 11927, 12173, 12276, 12345, 12509, 12593, 12745, 12913, 13011, 13130, 13168, 13198, 13321, 13426, 13474, 13624, 13751, 13962, 14188, 14329, 14402, 14501, 14624, 14685, 14744, 14853, 14895, 15164, 15240, 15408, 15447, 15589, 15803, 15924, 16013, 16063, 16105, 16178, 16298, 16371, 16432, 16552, 16595, 16683, 16724, 16789, 16850, 16985, 17071, 17171, 17194, 17237, 17288, 17339, 17448, 17575, 17613, 17650, 17714, 17751, 17795, 17856, 17997, 18091, 18206, 18290, 18464, 18586, 18677, 18756, 18893, 19010, 19103, 19151, 19271, 19372, 19408, 19449, 19496, 19566, 19628, 19826, 20079, 20193, 20206, 20270, 20336).
+2. EXACT onsets match to the frame; BOUND onsets fall inside their window.
+3. Static anchors are pixel-still between events.
+4. Total length 20486 frames.
+5. Sound unspecified (nobody listened); ASR lines are timing reference only.

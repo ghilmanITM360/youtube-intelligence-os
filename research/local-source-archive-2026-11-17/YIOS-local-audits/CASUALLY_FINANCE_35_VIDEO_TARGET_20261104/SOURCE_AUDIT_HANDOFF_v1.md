@@ -1,0 +1,9 @@
+# 35-video campaign source-readiness milestone
+Recorded 2026-11-04T02:12:14.322815+00:00.
+Goal: fully analyze the exact35 videos in target_roster_v1.csv; goal remains ACTIVE/UNCOMPLETED.
+Source identity baseline:35 currently present MP4s,35 unique measured SHA256s,zero byte-identical source groups;35 successful ffprobe results; video streams35/35,audio streams35/35. Source stats stable during hashing. Original media unchanged and LOCAL_ONLY. Video006 SHA matches owner's expected value. Queue ID attribution remains provisional where no independent identity evidence exists; filenames/hash alone do not establish YouTube identity.
+source_identity_baseline_v1.json checksum seal readback PASS. This is technical/source readiness, not visual review, listening or analysis completion.
+Video006 pending narration packet:34 exact items saved in video006_remaining_narration_manifest_v1.json with existing evidence-file hashes. Excludes165 completed rows; first ASR156. Images only located/hashed, not newly viewed. Parent checkpoint217671d5aaf3c706ffdce947e75224a389430645. Do not rerun completed rows.
+Resource gate: latest67% five-hour/93% weekly; no new heavy reviewer. No paid usage or reset credit used. Source-only audit finished as a bounded safe operation. Its own lock was token-released; no active reviewer.
+Next when resource/ownership checks permit: acquire fresh session lock, review34 pending sampled visual relations starting ASR156, validate actual image reads, integrate a new version, then address missingmotion objectsSUB101/103/104/151, semantic/native-event and production QA. Qualified actual full-source listening is still required and unavailable in the current harness; ASR cannot satisfy it. Other executable gates can progress when resources permit.
+Existing Video006 integratedv4 numerical coverage is complete; overall CT_SCAN_COMPLETE remains false. Preserve all original reviewer outputs, Finance/Barely Evolved work and schedulers.

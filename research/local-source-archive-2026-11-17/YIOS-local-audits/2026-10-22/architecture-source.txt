@@ -1,0 +1,374 @@
+COMMAND cat docs/Architecture.md docs/Phases.md
+EXIT 0
+# Architecture
+
+This document describes the architectural vision for the YouTube Intelligence OS. It records current implementation alongside longer-term planning. Every section is labeled:
+
+- **CURRENT** — actually built and running today.
+- **PLANNED** — decided in direction, not yet implemented.
+- **FUTURE / UNDECIDED** — a real future need whose concrete design (technology, schema, provider) is intentionally not chosen yet.
+
+See `docs/Phases.md` for how these arrive over time, `docs/Database.md` for the conceptual data model, and `docs/DECISIONS.md` for the accepted decisions this document assumes.
+
+## 1. What exists today — CURRENT
+
+- A documentation-first repository at the canonical path (Decision 009) with stdlib ingestion, registration, validation, and read-only reporting scripts.
+- The broader registry validates 75 canonical channels and 33 datasets (2026-10-09); the selected inventory contains 10 channels and 26 datasets. These populations have distinct roles — see `docs/YOUTUBE_CHANNEL_REGISTRY.md` and `data/catalog/README.md`.
+- Two generated SQLite databases with distinct roles: the committed selected-inventory catalog (`data/catalog/youtube_inventory.db`) and the Git LFS-tracked, committed cross-channel query registry (`data/catalog/youtube_channel_registry.db`). Neither is the final production database.
+- Structured channels/videos, append-only snapshots, transcript references, screenshot/multimodal evidence, field provenance, and bounded Apify source-run provenance through Phase 1D.
+- External developer/agent tooling (Graphify, Ponytail, Claude-Mem, Obsidian skills, Scrapling) recorded in `docs/TOOLS_INSTALLED.md`. None of it is part of the application.
+
+### V1 intelligence and What If forensic flow — CURRENT
+
+Topic, Packaging, Hook/Script and evidence-eligible Editing/Visual builders feed `scripts/run_youtube_intelligence.py`. The orchestrator reads canonical artifacts and catalog identities to produce traceable production plans. Channel Strategy is generalized with explicit evidence-coverage limitations; UI/RAG/agents/API services remain outside this V1 architecture.
+
+What If external corpus (configured `YIOS_WHAT_IF_CORPUS_ROOT`) is validated by release/table/media hashes. The read-only adapter loads eight canonical MASTER tables; normalized staging lives under ignored `data/staging/what-if-forensic/v1.0.0/`. Promotion validates staging and commits a compact identity/provenance index. The evidence-query layer validates that index against staged bytes, summarizes matching existing videos, and enriches production-plan Editing/Visual blueprints with cited hypotheses. It never adds forensic rows to channel sample counts or overwrites catalog snapshots. Missing local staging is unavailable, while changed evidence fails closed.
+
+See [integration lifecycle](WHAT_IF_INTEGRATION_WORKFLOW.md) for update, regeneration, rollback and privacy boundaries. Remaining conceptual sections retain their own PLANNED or FUTURE labels where implementation has not been authorized.
+
+## 2. The conceptual end-to-end flow — PLANNED (sequence), FUTURE / UNDECIDED (implementation of each stage)
+
+```text
+USER-SUPPLIED SOURCE
+        ↓
+SOURCE DISCOVERY
+        ↓
+DATASET INVENTORY
+        ↓
+HASHING / DEDUPLICATION
+        ↓
+SEMANTIC CLASSIFICATION
+        ↓
+RAW PRESERVATION
+        ↓
+EXTRACTION
+        ↓
+NORMALIZATION
+        ↓
+EVIDENCE / OBSERVATIONS
+        ↓
+REUSABLE INTELLIGENCE
+        ↓
+CHANNEL-SPECIFIC INTELLIGENCE
+        ↓
+COMPETITOR ANALYSIS
+        ↓
+PATTERN / OUTLIER / GAP DISCOVERY
+        ↓
+TOPIC HYPOTHESES
+        ↓
+INTERNAL RANKING
+        ↓
+WEB RESEARCH / VALIDATION
+        ↓
+RE-ANALYSIS
+        ↓
+FINAL OPPORTUNITY
+        ↓
+TITLE / THUMBNAIL / SCRIPT / VISUAL PLAN / PRODUCTION PLAN
+```
+
+Notes on this flow:
+
+- Every stage after RAW PRESERVATION reads from, and never overwrites, the layer before it. A source's raw bytes stay reachable from any later output through provenance links (see `docs/Database.md`, provenance model).
+- SOURCE DISCOVERY and DATASET INVENTORY are what this Phase 0.5 task exercised manually against four external folders (`docs/source-discovery/`). They are not yet automated tooling — they are a demonstrated, repeatable procedure.
+- WEB RESEARCH / VALIDATION is downstream of internal analysis (Decision 007): the system reasons over supplied evidence first, and only reaches outward to validate or fill gaps. Scrapling (`docs/TOOLS_INSTALLED.md`, Decision 011) is a candidate tool for that stage only, and only when a later phase explicitly authorizes it.
+- TITLE / THUMBNAIL / SCRIPT / VISUAL PLAN / PRODUCTION PLAN is the eventual output surface. No format, template, or generation pipeline for these is decided.
+
+## 3. Future channel separation — PLANNED (concept), FUTURE / UNDECIDED (mechanism)
+
+```text
+GLOBAL KNOWLEDGE
+        │
+        ├── Channel A Brain
+        ├── Channel B Brain
+        ├── Channel C Brain
+        └── Channel D Brain
+```
+
+GLOBAL KNOWLEDGE holds material that is true regardless of which channel uses it — algorithm mechanics, storytelling craft, editing grammar, retention principles (Class A in `docs/DATA_CLASSIFICATION.md`). A "Channel Brain" holds everything specific to one channel: its own videos, its own competitors, its own audience, its own prior experiments (Class F). Decision 006 already requires this separation; what is undecided is how a Channel Brain is physically represented (a folder convention, a database partition, a namespaced vector index, or something else) and how much of GLOBAL KNOWLEDGE a Channel Brain is allowed to override.
+
+## 4. Boundaries — PLANNED
+
+- **Canonical repository** — the single source of truth for documentation, decisions, and (once ingested) manifests and small structured records. Never a temporary Codex task workspace (Decision 009).
+- **Source folders** — user-owned, external, read-only until a controlled ingestion decision is made for them (Decision 010). The system reads them; it does not adopt them as extensions of the repository.
+- **External tools** — Graphify, Ponytail, Claude-Mem, Obsidian skills, Scrapling. Convenience layers only. Their internal graphs, caches, embeddings, or memory stores are never canonical project knowledge and never override repository evidence (`docs/AGENTS.md`, `docs/Security.md`).
+- **Agent memory** — session or cross-session memory used by an agent while working. Auxiliary only, same rule as external tools.
+- **Future structured database** — where inventory, provenance, and evidence records eventually live once real datasets justify a schema. Not chosen yet (`docs/Database.md`).
+- **Future semantic retrieval** — embeddings/RAG over normalized or intelligence-layer content, for stages like pattern discovery or topic hypothesis generation. Not chosen yet, and explicitly out of scope for Phase 0.5 and Phase 1.
+- **Future web research** — Scrapling remains reserved for the WEB RESEARCH / VALIDATION stage. The separately authorized, bounded Apify competitor-acquisition adapter is limited to structured Phase 1D registration (Decision 018), not research or analysis.
+
+No final database, vector-search, or web-acquisition architecture is chosen in this document. That choice is deferred until real ingested datasets make the tradeoffs concrete (Decision 004).
+
+## 5. Source-folder architecture — PLANNED
+
+The system must support being pointed at an arbitrary external folder and asked to understand it before anything is copied or transformed:
+
+```text
+Ingest this folder:
+/path/to/source
+```
+
+Conceptual behavior:
+
+```text
+External Source Folder
+        ↓
+READ-ONLY DISCOVERY
+        ↓
+Inventory
+        ↓
+Hashes
+        ↓
+Logical Dataset Detection
+        ↓
+Noise Detection
+        ↓
+Canonical Evidence Detection
+        ↓
+Manifest
+        ↓
+Controlled Ingestion Decision
+```
+
+Rules that follow from this shape:
+
+- The original external folder is never modified, moved, renamed, or reorganized by discovery. Discovery only reads and records.
+- "Logical Dataset Detection" is explicitly not "one folder = one dataset" — a single folder can contain multiple unrelated logical datasets, and a dataset can span multiple folders (an archive plus its already-extracted copy, for example). `docs/source-discovery/SOURCE_DATASET_INVENTORY.md` demonstrates this against real folders.
+- "Controlled Ingestion Decision" is a recommendation, not an action. Discovery produces a manifest and a proposed priority; a separate, later, explicit step performs any actual copy into `data/raw/`.
+- This is the procedure Phase 0.5 exercised by hand. Whether it becomes a script, a skill, or an agent workflow in a later phase is FUTURE / UNDECIDED — Phase 0.5 only establishes that the procedure works and what it must preserve.
+# Phases
+
+A phased roadmap for the YouTube Intelligence OS. Names and boundaries here are directional, not immutable — a later phase may split, merge, or reorder these if real evidence demands it, subject to an explicit decision recorded in `docs/DECISIONS.md`.
+
+The local SQLite inventory catalog is a Phase 1 exception (Decision 012). Final production database, RAG/vector-search, MCP servers, and agent-workflow infrastructure first appear as design work in Phase 10–11, only after real datasets justify specific choices (Decision 004).
+
+Current implementation summary (2026-10-09): YouTube Intelligence OS V1 is complete within its evidence boundaries; Phase 2 is closed. Topic, Packaging, Hook and Script are generalized; Editing/Visual is available for registered forensics. Channel Strategy is GENERALIZED_WORKING with limited cross-niche evidence coverage. Broader registry validation reports 75 canonical channels and 33 datasets. What If normalized evidence now feeds production plans with row-level provenance and zero additional channel samples. Ownership of the two exact held What If IDs is independently verified; their registration is separate from transcript availability. A full uploads-list refresh remains a separate acquisition limitation; no V2 service/UI/RAG/agent/automation work begins automatically. See [current project status](../PROJECT_STATUS.md) and [What If workflow](WHAT_IF_INTEGRATION_WORKFLOW.md).
+
+---
+
+### Phase 0 — Foundation Definition
+**Status: COMPLETED**
+
+- **Objective:** Establish the canonical repository, its directory layout, core rules, and initial documentation.
+- **Inputs:** None (greenfield).
+- **Outputs:** Repository skeleton, `README.md`, `AGENTS.md`, `docs/PROJECT_SCOPE.md`, `docs/DECISIONS.md` (001–009), `docs/DATA_CLASSIFICATION.md`, `docs/DATA_ENTRY_WORKFLOW.md`, `docs/DATA_INVENTORY.md`, `docs/TOOLS_INSTALLED.md`.
+- **Allowed:** Documentation, directory scaffolding, external convenience-tool installation.
+- **Prohibited:** Real data ingestion, infrastructure, application code.
+- **Completion criteria:** Initial commit exists; rules are documented; no real data ingested. Met.
+- **Dependencies:** None.
+
+---
+
+### Phase 0.5 — Foundation Hardening & Source Discovery
+**Status: COMPLETED**
+
+- **Objective:** Add Scrapling as external research tooling; write the architecture/planning documents this roadmap depends on; deeply inspect real external source folders without ingesting them; produce recommendations for controlled ingestion.
+- **Inputs:** Four external source folders (read-only); the Scrapling upstream repository.
+- **Outputs:** `docs/Architecture.md`, `docs/Phases.md` (this file), `docs/Database.md`, `docs/Prompts.md`, `docs/Security.md`, `docs/Error_Handling.md`; `docs/source-discovery/` reports; Scrapling installed and documented; Decisions 010–011.
+- **Allowed:** Read-only inspection, hashing, content reading, safe archive listing, planning documentation, installing external developer tooling in isolated user-level scope.
+- **Prohibited:** Modifying/moving/deleting anything in the four source folders; ingesting real data into `data/`; scraping any live target; choosing final database/RAG technology; writing SQL or migrations.
+- **Completion criteria:** All six foundation documents exist; all four source folders inspected and reported on; Scrapling installed and verified without live scraping; source-discovery reports exist; source folders provably untouched; Phase 0.5 work committed.
+- **Dependencies:** Phase 0.
+
+---
+
+### Phase 1A — Controlled Data Entry & Inventory
+**Status: COMPLETED**
+
+- **Objective:** Begin actually copying selected, prioritized source material into `data/raw/` under the workflow `docs/DATA_ENTRY_WORKFLOW.md` already defines, using the priorities `docs/source-discovery/SOURCE_INGESTION_RECOMMENDATIONS.md` proposes; introduce a minimal local SQLite inventory/catalog (Decision 012) alongside the manifests.
+- **Inputs:** User decision on which Phase 0.5 recommendation(s) to act on first (DS-000001, DISC-002).
+- **Outputs:** Populated `data/raw/`, `data/manifests/DS-000001.md`, `docs/DATA_INVENTORY.md` entry, `schemas/inventory/001_initial.sql`, `scripts/inventory_catalog.py`.
+- **Allowed:** Copying explicitly approved source material; hashing; basic inventory; exact-duplicate detection; recording provenance.
+- **Prohibited:** Automated bulk ingestion of everything discovered in Phase 0.5; extraction/normalization; any competitor/content analysis; any web research.
+- **Completion criteria:** At least one controlled testcase ingested with full provenance and no source modification. Met — DS-000001 ingested, 8/8 tests passing, source hashes verified unchanged.
+- **Dependencies:** Phase 0.5 (its manifest and recommendations are the input).
+
+---
+
+### Phase 1B — Structured Source Registration
+**Status: COMPLETE**
+
+- **Objective:** Convert a Phase 1A-ingested dataset's raw files into structured, provenance-tracked catalog entities (channels, videos, channel/video snapshots, transcript references) without performing competitor strategy analysis, topic generation, or content scoring.
+- **Inputs:** DS-000001's canonical raw files and Phase 1A catalog records.
+- **Outputs:** `schemas/inventory/002_structured_registration.sql`, `scripts/register_structured_source.py`, `scripts/source_adapters/`, populated `channels`/`channel_snapshots`/`videos`/`video_snapshots`/`transcripts`/`field_provenance` tables, updated manifest and `docs/DATA_INVENTORY.md` status.
+- **Allowed:** Source parsing, structured registration, identity resolution, metric snapshots, transcript metadata, field provenance, source cross-checking, validation, database migration, tests.
+- **Prohibited:** Competitor strategy analysis, viral/topic/title/thumbnail/script analysis, content-gap discovery, recommendations, ranking, embeddings, RAG, vectors, web research, scraping.
+- **Completion criteria:** Structured entities registered for DS-000001 with 100% field-provenance coverage on required fields, source reconciliation with no unexplained discrepancy, migration tests passing, SQLite integrity clean, manifest/database agreement.
+- **Dependencies:** Phase 1A.
+
+---
+
+### Phase 1C — Recursive Multi-Source & Multimodal Ingestion
+**Status: COMPLETE**
+
+- **Objective:** Bulk-ingest 12 authorized external source roots (competitor screenshot folders, a YouTube-training document corpus, a standalone forensic-video evidence set, and the historical `Documents/Codex` forensic-video archive) with 100% recursive file coverage and 100% disposition coverage — every discovered filesystem item explicitly classified (`INGEST`/`REFERENCE_ONLY`/`EXACT_DUPLICATE`/`NOISE`/`TOOLING`/`HOLD`/etc.), never silently skipped.
+- **Inputs:** 12 user-supplied local folder paths (`BATCH-000001`).
+- **Outputs:** `schemas/inventory/003_multimodal_source_registration.sql`, `schemas/inventory/004_discovered_files_fk_indexes.sql`, `scripts/register_batch.py`, `scripts/source_adapters/batch_rules.py`, `scripts/image_pipeline.py`, `scripts/image_text_recognition.swift`, `scripts/load_ocr_results.py`, `scripts/load_semantic_results.py`, `scripts/load_document_results.py`, `scripts/generate_batch_manifests.py`, 15 new registered datasets (`DS-000002`–`DS-000016`), `data/manifests/batches/BATCH-000001.md` + coverage ledger CSV, per-dataset manifests, `.codex/skills/multimodal-source-ingestion/`.
+- **Allowed:** Discovery, hashing, deduplication (exact + perceptual), image OCR/metadata/semantic inspection, document characterization, channel/video-page screenshot observation registration, classification (content domain, packaging style — kept independent of editing style), database migration, tests.
+- **Prohibited:** Competitor strategy analysis, viral analysis, topic clustering/generation, title/thumbnail/script recommendations, content-gap discovery, ranking, embeddings, RAG, vectors, web research/scraping, inferring editing style from screenshots alone.
+- **Completion criteria:** `TOTAL_DISCOVERED_FILES == TOTAL_FILES_WITH_DISPOSITION` (45,774 = 45,774); every unique competitor/evidence screenshot (122) OCR'd and semantically inspected; all 17 training-corpus documents characterized including the Hook-pair content comparison; every image (including 42,535 Codex files) hashed and perceptually clustered; source integrity re-verified (0 mismatches across 42,678 hashed files); migration/registration tests passing; SQLite integrity clean. Met.
+- **Dependencies:** Phase 1A, Phase 1B.
+
+---
+
+### Phase 1D — Controlled Apify YouTube Acquisition
+**Status: COMPLETE**
+
+- **Objective:** Add one production-safe, bounded adapter for `streamers/youtube-scraper` and prove it with the explicitly authorized Dr. Aliza Wright competitor pilot.
+- **Inputs:** DS-000006 screenshot evidence; exact handle `@Dr.AlizaWrightAdvice`; current Actor schema/pricing; explicit $0.50 cap.
+- **Outputs:** schema v5–v6, `scripts/apify_youtube_ingest.py`, offline fixtures/tests, Apify run/cost manifests, a Tier A channel linked to DS-000006, append-only channel/video snapshots, transcript references, thumbnail evidence, and field provenance.
+- **Allowed:** One explicitly authorized competitor channel; regular-video metadata; public English captions; bounded Actor execution; identity reconciliation; normalized registration; reporting and verification.
+- **Prohibited:** Remaining-competitor scraping, strategy analysis, topic/title/thumbnail/script recommendations, Shorts/livestream acquisition, AI add-ons, uncontrolled crawling, secret persistence, or name-only identity merges.
+- **Completion criteria:** Actor SUCCEEDED; expected catalog count reconciled; exact finalized cost below cap; no duplicates/malformed records/channel conflicts; schema/tests/integrity/foreign keys clean; DS-000006 raw screenshot evidence unchanged. Met for run `bD7JBsuj7LK5Wt2rk` (32 videos, exact cost $0.128).
+- **Dependencies:** Phase 1C, Decision 018, explicit user authorization.
+
+---
+
+### Phase 2 — Data Classification & Provenance
+**Status: FOUNDATION CLOSED**
+
+Current catalog: 303 canonical content items; 302 fully classified and one evidence-blocked. DS-000018 has 33/33 final primary-source dispositions with safe platform knowledge separated from creator heuristics and do-not-use-as-fact material.
+
+- **Objective:** Apply semantic classification (`docs/DATA_CLASSIFICATION.md` classes A–H) and the evidence-layer model (`docs/Database.md`) to ingested material; formalize provenance records.
+- **Inputs:** Phase 1 ingested data and manifests.
+- **Outputs:** Classified, provenance-tagged records for each ingested file/dataset.
+- **Allowed:** Classification, provenance tagging, revision/duplicate resolution beyond exact-hash matching.
+- **Prohibited:** Extraction pipelines, database technology selection.
+- **Completion criteria:** Every ingested item has a recorded semantic class and evidence layer.
+- **Dependencies:** Phase 1.
+
+---
+
+### Phase 3 — Extraction & Normalization
+**Status: SUPERSEDED BY DIRECT V1 INTELLIGENCE WORK — YOUTUBE INTELLIGENCE OS V1 COMPLETE**
+
+Step 16B's CH-000003 pilot passed. Step 16C generalized read-only Topic Opportunity Intelligence across the remaining canonical channels while preserving channel separation. Since then, later authorized steps (through Step 21) generalized Packaging, Hook, and Script Intelligence to every canonical channel and added a unified orchestrator (`scripts/run_youtube_intelligence.py`) that composes these layers into evidence-traceable content plans:
+
+- **Topic Opportunity Intelligence:** COMPLETE CAPABILITY — working for all 5 canonical channels.
+- **Packaging Intelligence:** COMPLETE CAPABILITY — working for all 5 channels; title hypotheses are always available, but visual (thumbnail) packaging is an EVIDENCE COVERAGE LIMITATION for CH-000001/CH-000002 (`THUMBNAIL_REFERENCE_GAP`: no canonical thumbnail reference was ever acquired for those channels, not a code gap).
+- **Hook and Script Intelligence:** COMPLETE CAPABILITY — the same generic reporter (`scripts/report_hook_script_intelligence.py`) runs across all 5 channels; where no authored per-opportunity blueprint exists, hook/script archetypes are still measured from transcripts and linked to an opportunity by evidence-video overlap (disclosed as `PARTIAL`, never forced to a full match).
+- **Editing / Visual Intelligence:** COMPLETE CAPABILITY, conditionally available — attached only where forensic video evidence is registered (currently CH-000004 only). This is an EVIDENCE COVERAGE LIMITATION, not a missing capability: CH-000001/CH-000002/CH-000003/CH-000005 correctly report `NOT_AVAILABLE` / `NO_REGISTERED_VIDEO_FORENSIC_EVIDENCE` rather than an inferred or fabricated editing style.
+- **Unified Orchestration:** COMPLETE — composes Topic → Packaging → Hook → Script → Editing into one evidence-traceable plan per (channel, opportunity), degrading gracefully instead of failing when a layer is unavailable.
+
+This does not retroactively declare Phases 4–12 below complete: no Channel Brain partitioning (Phase 5), competitor-intelligence engine (Phase 6), ranked opportunity engine (Phase 7), live web-validation loop (Phase 8), production database/retrieval infrastructure (Phase 10), or agent/automation workflows (Phases 11–12) exist. Phase 3's own literal objective ("Extraction & Normalization") and the formal Phase 4–9 step sequence below were effectively leapfrogged by directly-authorized V1 intelligence work; reconciling phase numbering/objective text against that real sequence is a separate documentation task, not addressed here.
+
+- **Objective:** Turn raw evidence into extracted, then normalized, structured representations (text from PDFs/DOCX, transcripts from video, OCR from images) without interpretation.
+- **Inputs:** Classified raw evidence.
+- **Outputs:** `data/extracted/`, `data/normalized/` content with provenance links back to raw sources.
+- **Allowed:** Deterministic extraction and format normalization.
+- **Prohibited:** Analytical interpretation being stored as fact; database technology selection.
+- **Completion criteria:** Normalized representations exist and trace to their raw source.
+- **Dependencies:** Phase 2.
+
+---
+
+### Phase 4 — Reusable Intelligence Extraction
+
+**Status update (Step 22B — second independent domain):** The Channel Strategy Intelligence layer introduced in Step 22A (training-knowledge registry, relative success/failure and family-repeatability engine, diagnosis/benchmark/blueprint composer in `scripts/report_channel_strategy_intelligence.py`) has now been exercised, with the SAME unmodified core engine, on a second independent niche — finance (CH-000001 Matty Invests vs CH-000002 Mr. Finance), bidirectionally — in addition to the original health-niche pair (CH-000005 vs CH-000003). Generalization testing surfaced and fixed two real defects: a health-niche assumption (`medical_note`) hardcoded into the otherwise-generic diagnosis output, and `assemble_blueprint` emitting fixed senior-health prose regardless of the `niche_label`/benchmark channels passed in; both are now derived from the current benchmark's own evidence. A cross-niche calibration pass (`data/intelligence/system/cross-niche-strategy-calibration-2026-09-11.json`) compared all 7 calibrated heuristics across the health and finance peer groups: 0 reached `ROBUST_CROSS_NICHE_PATTERN` (a disciplined, evidence-driven result on 2 channels per niche, not a shortfall), 1 `NICHE_SPECIFIC_PATTERN`, 1 `CHANNEL_SPECIFIC_PATTERN`, 3 `CONFLICTING_PATTERN`, 2 `INSUFFICIENT_EVIDENCE`. **CHANNEL STRATEGY INTELLIGENCE / SUCCESS-FAILURE INTELLIGENCE / COMPETITOR BENCHMARK / NEW-CHANNEL BLUEPRINT are now GENERALIZED_WORKING**: the same generic code produced evidence-backed output for both independent niches with no niche-specific branching in the core engine. Cross-niche *pattern* confidence (whether any specific heuristic transfers across niches) remains low by design — that is a evidence-coverage finding, not a capability gap. No RAG, agents, UI, or API were introduced.
+
+**Status update (Step 24 — first-party Analytics):** Aggregate YouTube Studio CSV, TSV, and XLSX ingestion is `READY`; own-channel diagnostic enrichment is `READY_FOR_REAL_DATA`; longitudinal first-party intelligence is `READY_WHEN_MULTIPLE_SNAPSHOTS_EXIST`. Private raw and normalized artifacts remain local and gitignored. No real first-party export has been ingested, so no production own-channel diagnosis exists.
+
+- **Objective:** Produce the first AI_INTERPRETATION / OBSERVATION layer outputs (see `docs/Database.md` provenance model) from normalized data — e.g., reusable Global YouTube Knowledge (Class A) distilled from training documents.
+- **Inputs:** Normalized data from Phase 3.
+- **Outputs:** `data/intelligence/` records, each tagged with its evidence layer and confidence.
+- **Allowed:** AI-assisted analysis, explicitly labeled as interpretation, never silently promoted to fact.
+- **Prohibited:** Treating any AI output as ground truth without labeling.
+- **Completion criteria:** Intelligence records exist with evidence-layer tags and traceable provenance.
+- **Dependencies:** Phase 3.
+
+---
+
+### Phase 5 — Channel Brains
+
+- **Objective:** Stand up the first Channel-Specific Intelligence partition(s) (`docs/Architecture.md` §3), separating one channel's evidence and interpretations from another's.
+- **Inputs:** Classified, channel-tagged evidence and intelligence.
+- **Outputs:** At least one working Channel Brain structure.
+- **Allowed:** Channel-scoped organization of existing intelligence.
+- **Prohibited:** Cross-channel leakage of channel-specific rules or evidence.
+- **Completion criteria:** Two channels' material demonstrably does not cross-contaminate.
+- **Dependencies:** Phase 4, Decision 006.
+
+---
+
+### Phase 6 — Competitor Intelligence
+
+- **Objective:** Turn Class B (Competitor Evidence) into structured competitor intelligence — packaging patterns, performance benchmarks, content gaps — per Decision 007 (internal evidence before web validation).
+- **Inputs:** Competitor evidence ingested and classified in earlier phases.
+- **Outputs:** Competitor-intelligence records linked to their source evidence.
+- **Allowed:** Internal comparative analysis.
+- **Prohibited:** Live web scraping of competitors (still requires explicit authorization).
+- **Completion criteria:** At least one competitor's evidence is fully turned into structured, traceable intelligence.
+- **Dependencies:** Phase 5.
+
+---
+
+### Phase 7 — Opportunity Engine
+
+- **Objective:** Implement pattern/outlier/gap discovery and topic-hypothesis generation over accumulated intelligence (`docs/Architecture.md` §2 flow, PATTERN/OUTLIER/GAP DISCOVERY → TOPIC HYPOTHESES → INTERNAL RANKING).
+- **Inputs:** Channel and competitor intelligence.
+- **Outputs:** Ranked internal topic hypotheses.
+- **Allowed:** Internal analysis and ranking logic.
+- **Prohibited:** Treating a hypothesis as a validated opportunity before Phase 8.
+- **Completion criteria:** Hypotheses are generated, ranked, and traceable to the evidence that produced them.
+- **Dependencies:** Phase 6.
+
+---
+
+### Phase 8 — Web Research & Validation Loop
+
+- **Objective:** Validate top-ranked hypotheses against live web research, then re-analyze against internal data (Decision 008's iterative loop). This is the first phase where live web acquisition tooling (candidate: Scrapling, Decision 011) may be authorized for real use.
+- **Inputs:** Ranked hypotheses from Phase 7.
+- **Outputs:** Validated or rejected hypotheses, each with research provenance (source URL, retrieval timestamp).
+- **Allowed:** Explicitly authorized, rate-limited, provenance-preserving web research (`docs/Security.md`, Scraping Boundaries).
+- **Prohibited:** Uncontrolled/unbounded crawling; scraping without `--ai-targeted` on AI-facing output.
+- **Completion criteria:** At least one hypothesis is carried through research and re-analysis to a final opportunity.
+- **Dependencies:** Phase 7, explicit authorization for Scrapling use.
+
+---
+
+### Phase 9 — Title / Thumbnail / Script / Visual Intelligence
+
+- **Objective:** Turn a final opportunity into the concrete production surface: title options, thumbnail concepts, script, visual/production plan.
+- **Inputs:** Final opportunities from Phase 8.
+- **Outputs:** Structured content-production drafts, each traceable to the opportunity and evidence behind it.
+- **Allowed:** Prompted generation using the registered prompt templates (`docs/Prompts.md`).
+- **Prohibited:** Fabricated performance claims presented as measured fact.
+- **Completion criteria:** At least one opportunity is carried through to a complete draft production package.
+- **Dependencies:** Phase 8.
+
+---
+
+### Phase 10 — Database & Retrieval Infrastructure
+
+- **Objective:** Select and implement real structured storage and (if warranted) semantic retrieval, based on the conceptual entities in `docs/Database.md` and the actual volume/shape of data accumulated by prior phases.
+- **Inputs:** All prior-phase data and its observed scale/shape.
+- **Outputs:** A production database (and possibly vector index), migrations, and a retrieval layer.
+- **Allowed:** Real technology selection and implementation, now justified by real data.
+- **Prohibited:** Selecting technology before this phase (Decision 004).
+- **Completion criteria:** Structured storage exists, matches the provenance model, and prior-phase data is migrated without loss.
+- **Dependencies:** Phases 1–9 (their accumulated data shape the schema).
+
+---
+
+### Phase 11 — Skills / MCP / Agent Workflows
+
+- **Objective:** Build any repeatable agent workflows, MCP servers, or skills the system genuinely needs, now that the underlying data and database layers are real.
+- **Inputs:** Phase 10 infrastructure.
+- **Outputs:** Production agent workflows/skills, scoped narrowly to demonstrated needs.
+- **Allowed:** Automation of already-proven manual workflows.
+- **Prohibited:** Speculative automation with no demonstrated manual precedent.
+- **Completion criteria:** Each shipped workflow maps to a manual process it replaces.
+- **Dependencies:** Phase 10.
+
+---
+
+### Phase 12 — Automation & Continuous Learning
+
+- **Objective:** Ongoing, scheduled operation — continuous ingestion, competitor monitoring, and opportunity discovery, running with minimal manual intervention.
+- **Inputs:** All prior infrastructure.
+- **Outputs:** Scheduled/automated pipelines.
+- **Allowed:** Automation, subject to the same evidence and provenance rules as every manual phase before it.
+- **Prohibited:** Any automation that bypasses classification, provenance, or the fact/interpretation distinction.
+- **Completion criteria:** The system operates continuously without silent data-quality regressions.
+- **Dependencies:** Phase 11.

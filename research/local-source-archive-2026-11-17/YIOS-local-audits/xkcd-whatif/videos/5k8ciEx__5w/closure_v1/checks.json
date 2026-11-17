@@ -1,0 +1,96 @@
+{
+ "video_id": "5k8ciEx__5w",
+ "V1": {
+  "sha_recomputed": "05fce38976a32594cc613ce3e6b88fe00fe3b62c7a38d090f287ae0d074fddd3",
+  "sha_manifest": "05fce38976a32594cc613ce3e6b88fe00fe3b62c7a38d090f287ae0d074fddd3",
+  "match": true,
+  "decoded_frames_manifest": 501,
+  "ledger_last_frame": 500,
+  "pass": true
+ },
+ "V2": {
+  "frames_measured": 501,
+  "frames_cov_once": 501,
+  "pass": true
+ },
+ "V5_hold_max_px_diff_ge12_native": {
+  "G0001": 0,
+  "G0003": 1,
+  "G0005": 8,
+  "G0007": 2,
+  "G0009": 81,
+  "G0011": 0,
+  "G0013": 1,
+  "G0015": 0,
+  "G0017": 0,
+  "G0019": 0
+ },
+ "native_frames": 34,
+ "unresolved": {
+  "G0011": {
+   "changed_px_ge12_native": 0,
+   "bbox": null,
+   "next_frame_changed_px": 0
+  },
+  "G0012": {
+   "changed_px_ge12_native": 5653,
+   "bbox": [
+    289,
+    818,
+    865,
+    978
+   ],
+   "next_frame_changed_px": 0
+  },
+  "G0016": {
+   "changed_px_ge12_native": 5622,
+   "bbox": [
+    673,
+    917,
+    1009,
+    985
+   ],
+   "next_frame_changed_px": 0
+  }
+ },
+ "hold_to_hold_shift": {
+  "G0001->G0003": {
+   "dx": 0.0,
+   "dy": -0.0,
+   "response": 0.429
+  },
+  "G0007->G0009": {
+   "dx": -0.0,
+   "dy": 0.0,
+   "response": 0.838
+  },
+  "G0011->G0013": {
+   "dx": -0.0,
+   "dy": 0.0,
+   "response": 0.81
+  },
+  "G0013->G0015": {
+   "dx": -0.0,
+   "dy": 0.0,
+   "response": 0.888
+  },
+  "G0015->G0017": {
+   "dx": -0.0,
+   "dy": 0.0,
+   "response": 0.837
+  },
+  "G0017->G0019": {
+   "dx": -0.0,
+   "dy": 0.0,
+   "response": 0.94
+  }
+ },
+ "review_strips": [
+  "G0011",
+  "G0012",
+  "G0016"
+ ],
+ "hold_frames_gt50px": {
+  "336": 81
+ }
+}

@@ -1,0 +1,931 @@
+{
+  "data": {
+    "id": "h7sDV53CddomktSi5",
+    "userId": "ycBeSnB8vquqE3mpT",
+    "name": "youtube-scraper",
+    "username": "streamers",
+    "description": "YouTube crawler and video scraper. Alternative YouTube API with no limits or quotas. Extract and download channel name, likes, number of views, and number of subscribers.",
+    "isPublic": true,
+    "createdAt": "2023-07-14T13:07:04.588Z",
+    "modifiedAt": "2026-11-09T17:50:12.198Z",
+    "taggedBuilds": {
+      "latest": {
+        "buildId": "0sudfMZtN4cNBxW8i",
+        "finishedAt": "2026-11-09T16:10:31.171Z",
+        "buildNumberInt": 327,
+        "buildNumber": "0.0.327"
+      }
+    },
+    "stats": {
+      "totalBuilds": 1633,
+      "totalRuns": 31899485,
+      "totalUsers": 203609,
+      "totalUsers7Days": 7904,
+      "totalUsers30Days": 17485,
+      "totalUsers90Days": 28136,
+      "lastRunStartedAt": "2026-11-09T21:42:00.813Z",
+      "publicActorRunStats30Days": {
+        "ABORTED": 5947,
+        "FAILED": 12667,
+        "SUCCEEDED": 2969542,
+        "TIMED-OUT": 11907,
+        "TOTAL": 3000063
+      },
+      "actorReviewCount": 198,
+      "actorReviewRating": 4.057771946221697,
+      "bookmarkCount": 2142
+    },
+    "versions": [
+      {
+        "versionNumber": "0.0",
+        "sourceType": "GIT_REPO",
+        "buildTag": "latest"
+      },
+      {
+        "versionNumber": "0.2",
+        "sourceType": "GIT_REPO",
+        "buildTag": "debug"
+      },
+      {
+        "versionNumber": "0.97",
+        "sourceType": "GIT_REPO",
+        "buildTag": null
+      },
+      {
+        "versionNumber": "0.98",
+        "sourceType": "SOURCE_FILES",
+        "buildTag": null
+      },
+      {
+        "versionNumber": "0.99",
+        "sourceType": "GIT_REPO",
+        "buildTag": null
+      },
+      {
+        "versionNumber": "1.0",
+        "sourceType": "GIT_REPO",
+        "buildTag": "outputtest"
+      }
+    ],
+    "defaultRunOptions": {
+      "build": "latest",
+      "timeoutSecs": 604800,
+      "memoryMbytes": 1024
+    },
+    "exampleRunInput": {
+      "body": "{ \"helloWorld\": 123 }",
+      "contentType": "application/json; charset=utf-8"
+    },
+    "categories": [
+      "VIDEOS",
+      "SOCIAL_MEDIA"
+    ],
+    "isDeprecated": false,
+    "title": "YouTube Scraper",
+    "pictureUrl": "https://apify-image-uploads-prod.s3.amazonaws.com/h7sDV53CddomktSi5/dvMi6kaoa7yHbucqD-YouTube_Scraper.png",
+    "seoTitle": "📹 YouTube Scraper",
+    "seoDescription": "No-code YouTube API. Scrape YouTube data: channels, subscribers, views, subtitles, streams, playlists, search results, number of comments, and likes.",
+    "pricingInfos": [
+      {
+        "pricingModel": "PRICE_PER_DATASET_ITEM",
+        "pricePerUnitUsd": 0.005,
+        "unitName": "videos",
+        "createdAt": "2023-07-25T14:01:43.276Z",
+        "startedAt": "2023-07-25T14:01:43.276Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "pricingModel": "PAY_PER_EVENT",
+        "createdAt": "2025-11-07T11:26:22.073Z",
+        "startedAt": "2025-11-07T11:26:22.073Z",
+        "apifyMarginPercentage": 0.2,
+        "isPriceChangeNotificationSuppressed": true,
+        "reasonForChange": "Migration from Pay Per Result to Pay Per Event with apify-default-dataset-item event",
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-default-dataset-item": {
+              "eventTitle": "video",
+              "eventDescription": "Single video in the default dataset.",
+              "eventPriceUsd": 0.005,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "forceContainsSignificantPriceChange": false
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-default-dataset-item": {
+              "eventTitle": "video",
+              "eventDescription": "Single video in the default dataset.",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.005,
+              "isPrimaryEvent": true
+            }
+          }
+        },
+        "createdAt": "2026-02-20T12:12:42.481Z",
+        "startedAt": "2026-02-20T12:12:42.481Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-default-dataset-item": {
+              "eventTitle": "video",
+              "eventDescription": "Single video in the default dataset.",
+              "isOneTimeEvent": false,
+              "eventPriceUsd": 0.005,
+              "isPrimaryEvent": true
+            },
+            "result": {
+              "eventTitle": "Video",
+              "eventDescription": "Each video written to the dataset.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.004
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.003
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0026
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0024
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.001
+                }
+              }
+            },
+            "date-filter": {
+              "eventTitle": "Date filter",
+              "eventDescription": "Extra cost when date filtering is used.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.0013
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.001
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0008
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0006
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0003
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.00017
+                }
+              }
+            }
+          }
+        },
+        "createdAt": "2026-03-03T15:58:09.470Z",
+        "startedAt": "2026-03-03T15:58:09.470Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Video",
+              "eventDescription": "Each video written to the dataset.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.004
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.003
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0026
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0024
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.001
+                }
+              },
+              "isPrimaryEvent": true
+            },
+            "date-filter": {
+              "eventTitle": "Date filter",
+              "eventDescription": "Extra cost when date filtering is used.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.0013
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.001
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0008
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0006
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0003
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.00017
+                }
+              }
+            }
+          }
+        },
+        "createdAt": "2026-03-03T16:00:12.026Z",
+        "startedAt": "2026-03-03T16:00:12.026Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Video",
+              "eventDescription": "Each video written to the dataset.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.004
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.003
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0026
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0024
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.001
+                }
+              },
+              "isPrimaryEvent": true
+            },
+            "date-filter": {
+              "eventTitle": "Date range for channels",
+              "eventDescription": "Extra cost when date filtering is used on channels.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.0013
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.001
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0008
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0006
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0003
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.00017
+                }
+              }
+            }
+          }
+        },
+        "createdAt": "2026-03-04T15:34:43.180Z",
+        "startedAt": "2026-03-04T15:34:43.180Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Video",
+              "eventDescription": "Each video written to the dataset.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.004
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.003
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0026
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0024
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.001
+                }
+              },
+              "isPrimaryEvent": true
+            },
+            "date-filter": {
+              "eventTitle": "Date range for channels",
+              "eventDescription": "Extra cost when date filtering is used on channels.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.0013
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.001
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0008
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0006
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0003
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.00017
+                }
+              }
+            },
+            "ai-video-description": {
+              "eventTitle": "AI description",
+              "eventDescription": "Extra cost for timestamped AI description of a video.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            },
+            "ai-video-summary": {
+              "eventTitle": "AI summary",
+              "eventDescription": "Extra cost for AI summary of a video.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            }
+          }
+        },
+        "createdAt": "2026-07-09T13:16:56.382Z",
+        "startedAt": "2026-07-09T13:16:56.382Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": false,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Video",
+              "eventDescription": "Each video written to the dataset.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.004
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.003
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0026
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0024
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.001
+                }
+              },
+              "isPrimaryEvent": true
+            },
+            "date-filter": {
+              "eventTitle": "Date range for channels",
+              "eventDescription": "Extra cost when date filtering is used on channels.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.0013
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.001
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0008
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0006
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0003
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.00017
+                }
+              }
+            },
+            "ai-video-description": {
+              "eventTitle": "AI description",
+              "eventDescription": "Extra cost for timestamped AI description of a video.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            },
+            "ai-video-summary": {
+              "eventTitle": "AI summary",
+              "eventDescription": "Extra cost for AI summary of a video.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            }
+          }
+        },
+        "createdAt": "2026-07-09T13:17:59.883Z",
+        "startedAt": "2026-07-09T13:17:59.883Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": false,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Video",
+              "eventDescription": "Each video written to the dataset.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.004
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.003
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0026
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0024
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.001
+                }
+              },
+              "isPrimaryEvent": true
+            },
+            "date-filter": {
+              "eventTitle": "Add-on: Date range for channels",
+              "eventDescription": "Extra cost when date filtering is used on channels.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.0013
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.001
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0008
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0006
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0003
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.00017
+                }
+              }
+            },
+            "ai-video-description": {
+              "eventTitle": "Add-on: AI description",
+              "eventDescription": "Extra cost for timestamped AI description of a video.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            },
+            "ai-video-summary": {
+              "eventTitle": "Add-on: AI summary",
+              "eventDescription": "Extra cost for AI summary of a video.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            }
+          }
+        },
+        "createdAt": "2026-07-12T09:42:16.166Z",
+        "startedAt": "2026-07-12T09:42:16.166Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": false,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Video",
+              "eventDescription": "Each video written to the dataset.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.004
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.003
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0026
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0024
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.001
+                }
+              },
+              "isPrimaryEvent": true
+            },
+            "date-filter": {
+              "eventTitle": "Add-on: Date range for channels",
+              "eventDescription": "Extra cost when date filtering is used on channels.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.0013
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.001
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0008
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0006
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0003
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.00017
+                }
+              }
+            },
+            "ai-video-description": {
+              "eventTitle": "Add-on: AI description",
+              "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            },
+            "ai-video-summary": {
+              "eventTitle": "Add-on: AI summary",
+              "eventDescription": "Extra cost for AI summary of a video per minute.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            }
+          }
+        },
+        "createdAt": "2026-08-05T13:18:47.363Z",
+        "startedAt": "2026-08-05T13:18:47.363Z",
+        "apifyMarginPercentage": 0.2
+      },
+      {
+        "minimalMaxTotalChargeUsd": null,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": true,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "result": {
+              "eventTitle": "Video",
+              "eventDescription": "Each video written to the dataset.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.004
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.003
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0026
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0024
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.001
+                }
+              },
+              "isPrimaryEvent": true
+            },
+            "date-filter": {
+              "eventTitle": "Add-on: Date range for channels",
+              "eventDescription": "Extra cost when date filtering is used on channels.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.0013
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.001
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0008
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0006
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0003
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.00017
+                }
+              }
+            },
+            "ai-video-description": {
+              "eventTitle": "Add-on: AI description",
+              "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            },
+            "ai-video-summary": {
+              "eventTitle": "Add-on: AI summary",
+              "eventDescription": "Extra cost for AI summary of a video per minute.",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.015
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.01
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0085
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.007
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0043
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0021
+                }
+              }
+            },
+            "transcribeMinute": {
+              "eventTitle": "Add-on: Transcript minute",
+              "eventDescription": "Extra cost charged per started minute per video",
+              "isOneTimeEvent": false,
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.048
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.041
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.033
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.027
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.02
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.015
+                }
+              }
+            }
+          }
+        },
+        "createdAt": "2026-09-02T13:52:04.236Z",
+        "startedAt": "2026-09-02T13:52:04.236Z",
+        "apifyMarginPercentage": 0.2
+      }
+    ],
+    "notice": "NONE",
+    "isCritical": true,
+    "isGeneric": false,
+    "hasNoDataset": false,
+    "isSourceCodeHidden": true,
+    "standbyUrl": null,
+    "actorPermissionLevel": "LIMITED_PERMISSIONS",
+    "readmeSummary": "## YouTube Scraper\n\nYouTube Scraper is a web scraper that extracts public data from YouTube pages (beyond the YouTube Data API), targeting videos, channels, playlists, search results, shorts, and live streams. It retrieves structured metadata (titles, descriptions, URLs, thumbnails, durations, release dates), engagement metrics (view counts, likes, comment counts, subscriber and total channel metrics), channel details (social links, location, join date, total videos), content markers (hashtags, thumbnails), subtitles (uploaded and autogenerated in SRT/WEBVTT/XML/plain text), and plain-text transcripts generated via speech-to-text AI. Optional AI analysis produces segmented scene descriptions and whole-video summaries. The Actor supports filtering by video type and upload date and emits explicit error records with standardized error codes/messages for items that cannot be retrieved.\n\n## Use cases\n\n- Monitor brand mentions in video titles, descriptions, comments, and transcripts  \n- Lead generation from scraped profile and channel data  \n- Discover trending YouTube topics and capture creator/commenter opinions  \n- Competitor analysis: gather activity, engagement metrics, and comments for rivals  \n- Identify harmful or illegal content on YouTube  \n- Repurpose video transcripts into blog posts, newsletters, social posts, or scripts  \n- Screen large volumes of videos using AI-generated summaries to prioritize viewing  \n- Extract product and service information from video reviews to inform buying decisions  \n- Apply advanced filtering to search results (by date ranges and video types)",
+    "deploymentKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDT86d7v0e07XzCg/dbNWorTl0wBx3hnD8WjzHkrJ1D2QidW8Cb4IekVc/rzJcMSsuFiXKtvgFvEN3qeEwVF/8LglxQdvYLZrUO58wU7giwFm3bEE2Xm8f0abQ7sYRBmS6dkCpLa16+uLBqxIucDlZ05KWnnQaua0l7lX/AEoUCYtNbYLHGkD9p9D112S6VVvsE8f2a8ZQSM8GyoH0t6jT5xlcqcYPOZnLt5wf8xOEjMDkgdfOzPa8655ktFJP46uT2WbzRNygJxhS/VGZznihzxh5EhNV18/CRB8+Vf7/IgofsfHGJbBSfFZI/0uMPAgVoSYKfXKC8xlKBcF1YoDxj \n"
+  }
+}

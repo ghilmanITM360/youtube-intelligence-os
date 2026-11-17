@@ -1,0 +1,4246 @@
+{
+ "tool": "faster-whisper 1.2.1",
+ "ctranslate2": "4.8.5",
+ "model": "small.en",
+ "language": "en",
+ "language_prob": 1,
+ "duration_s": 185.48,
+ "runtime_s": 36.1,
+ "label": "PROVISIONAL_ASR_NOT_LISTENING",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 2.32,
+   "text": "This is a question from Zach, who asks,",
+   "avg_logprob": -0.292,
+   "no_speech_prob": 0.01
+  },
+  {
+   "start": 2.96,
+   "end": 5.1,
+   "text": "stopping rain from falling on something with an umbrella is boring.",
+   "avg_logprob": -0.292,
+   "no_speech_prob": 0.01
+  },
+  {
+   "start": 5.5,
+   "end": 8.28,
+   "text": "What if you tried to stop rain with a laser that targeted and vaporized",
+   "avg_logprob": -0.292,
+   "no_speech_prob": 0.01
+  },
+  {
+   "start": 8.28,
+   "end": 10.96,
+   "text": "each incoming droplet before it could come within 10 feet of the ground?",
+   "avg_logprob": -0.292,
+   "no_speech_prob": 0.01
+  },
+  {
+   "start": 13.44,
+   "end": 16.94,
+   "text": "So, stopping rain with a laser is one of those ideas that sounds totally reasonable, but...",
+   "avg_logprob": -0.292,
+   "no_speech_prob": 0.01
+  },
+  {
+   "start": 17.78,
+   "end": 21.38,
+   "text": "Well, okay. Well, the idea of a laser umbrella might be appealing, it...",
+   "avg_logprob": -0.292,
+   "no_speech_prob": 0.01
+  },
+  {
+   "start": 22.58,
+   "end": 26.88,
+   "text": "Okay, the idea of stopping rain with a laser is a thing we are currently talking about.",
+   "avg_logprob": -0.292,
+   "no_speech_prob": 0.01
+  },
+  {
+   "start": 27.68,
+   "end": 29.36,
+   "text": "Now, it's not a very practical idea.",
+   "avg_logprob": -0.292,
+   "no_speech_prob": 0.01
+  },
+  {
+   "start": 29.36,
+   "end": 31.88,
+   "text": "First, let's look at how much energy the laser would need.",
+   "avg_logprob": -0.108,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 32.46,
+   "end": 35.36,
+   "text": "Vaporizing a liter of water takes about 2.6 megajoules of energy,",
+   "avg_logprob": -0.108,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 35.48,
+   "end": 38.26,
+   "text": "and a big rainstorm might drop half an inch of rain per hour.",
+   "avg_logprob": -0.108,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 38.72,
+   "end": 41.88,
+   "text": "Oddly enough, you can just multiply these two numbers together in a smart calculator",
+   "avg_logprob": -0.108,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 41.88,
+   "end": 45.08,
+   "text": "like Wolfram Alpha or Google, and the units work out to give you an answer",
+   "avg_logprob": -0.108,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 45.08,
+   "end": 48.16,
+   "text": "in terms of power per surface area, which is exactly what we're looking for.",
+   "avg_logprob": -0.108,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 48.42,
+   "end": 52.2,
+   "text": "The calculator says that we need 9 kilowatts of power per square meter we want to protect",
+   "avg_logprob": -0.108,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 52.2,
+   "end": 55.9,
+   "text": "with our laser. 9 kilowatts per square meter is nearly 10 times the amount",
+   "avg_logprob": -0.108,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 55.9,
+   "end": 57.66,
+   "text": "of power Earth's surface receives from the sun.",
+   "avg_logprob": -0.108,
+   "no_speech_prob": 0.017
+  },
+  {
+   "start": 57.66,
+   "end": 59.98,
+   "text": "And while that sounds like a lot of energy,",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 60.34,
+   "end": 63.3,
+   "text": "we need to remember that water's capacity to absorb energy is incredible.",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 63.68,
+   "end": 66.34,
+   "text": "Heating water up to boiling only takes about 10% of the energy.",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 66.62,
+   "end": 69.3,
+   "text": "Getting it from liquid to gas takes the other 90%.",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 69.3,
+   "end": 72.34,
+   "text": "Ultimately, we're talking about filling the air with tons of hot steam,",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 72.72,
+   "end": 75.68,
+   "text": "so basically we'd be building a human-sized autoclave.",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 76.04,
+   "end": 78.96,
+   "text": "Uh, needless to say, autoclaves are not really a popular place to live.",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 79.6,
+   "end": 80.5,
+   "text": "But it gets worse.",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 81.12,
+   "end": 83.86,
+   "text": "Vaporizing a droplet of water with a laser is more complicated than it sounds.",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 84.26,
+   "end": 86.7,
+   "text": "There are many, many, many papers on this subject,",
+   "avg_logprob": -0.071,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 86.7,
+   "end": 90.16,
+   "text": "and the general gist is that it takes a lot of energy, delivered fast,",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 90.38,
+   "end": 93.62,
+   "text": "to vaporize the droplet without just splattering it apart into little droplets.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 94.34,
+   "end": 96.9,
+   "text": "Here's what it looks like when a droplet gets zapped by a laser pulse.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 97.26,
+   "end": 101.44,
+   "text": "You can see that I'm jealous of anyone whose job it is to literally zap water with lasers.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 101.88,
+   "end": 105.8,
+   "text": "You can also see that the laser mostly splatters the droplet, rather than vaporizing it.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 106.02,
+   "end": 109.62,
+   "text": "The implication is that completely vaporizing a droplet would probably take even more",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 109.62,
+   "end": 112.38,
+   "text": "than the already unreasonable amount of power we were considering.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 112.98,
+   "end": 114.84,
+   "text": "Then there's the problem of targeting and aiming.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 114.84,
+   "end": 118.74,
+   "text": "In theory, this is probably solvable, perhaps even without military-grade equipment.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 119.12,
+   "end": 122.6,
+   "text": "High-speed cameras can triangulate the 3D position of a baseball or football hundreds",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 122.6,
+   "end": 124.74,
+   "text": "of times per second to help referees make calls.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 125.06,
+   "end": 128.32,
+   "text": "A similar but more sophisticated system could help track the incoming raindrops.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 128.82,
+   "end": 133.26,
+   "text": "As for targeting, adaptive optics allows for extremely fast and precise control of beams of",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 133.26,
+   "end": 137.52,
+   "text": "light. Covering an area of a square meter would require something like 500 direct pulses",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 137.52,
+   "end": 141.46,
+   "text": "of light per second. This is slow enough that you wouldn't run into any direct problems with",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.005
+  },
+  {
+   "start": 141.46,
+   "end": 145.42,
+   "text": "relativity, but the device would, at minimum, need to be a lot more complicated than just a",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.097
+  },
+  {
+   "start": 145.42,
+   "end": 149.64,
+   "text": "laser pointer on a swiveling base. It might seem easier to forget about targeting completely",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.097
+  },
+  {
+   "start": 149.64,
+   "end": 153.66,
+   "text": "and just fire lasers in random directions. If you aim a laser beam in a random direction,",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.097
+  },
+  {
+   "start": 153.92,
+   "end": 157.44,
+   "text": "how far will it go before it hits a drop? This is a pretty easy question to answer,",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.097
+  },
+  {
+   "start": 157.64,
+   "end": 161.82,
+   "text": "it's the same as asking how far you can see in the rain, and the answer is at least several",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.097
+  },
+  {
+   "start": 161.82,
+   "end": 165.56,
+   "text": "hundred meters. So unless you're trying to protect your whole neighborhood, firing powerful",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.097
+  },
+  {
+   "start": 165.56,
+   "end": 169.9,
+   "text": "lasers in random directions probably won't help. And honestly, if you are trying to protect",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.097
+  },
+  {
+   "start": 169.9,
+   "end": 173.98,
+   "text": "your whole neighborhood, firing powerful lasers in random directions definitely won't help.",
+   "avg_logprob": -0.286,
+   "no_speech_prob": 0.004
+  }
+ ],
+ "words": [
+  {
+   "w": " This",
+   "start": 0.0,
+   "end": 0.66,
+   "p": 0.504
+  },
+  {
+   "w": " is",
+   "start": 0.66,
+   "end": 0.82,
+   "p": 0.993
+  },
+  {
+   "w": " a",
+   "start": 0.82,
+   "end": 0.94,
+   "p": 0.99
+  },
+  {
+   "w": " question",
+   "start": 0.94,
+   "end": 1.12,
+   "p": 0.998
+  },
+  {
+   "w": " from",
+   "start": 1.12,
+   "end": 1.4,
+   "p": 0.997
+  },
+  {
+   "w": " Zach,",
+   "start": 1.4,
+   "end": 1.66,
+   "p": 0.575
+  },
+  {
+   "w": " who",
+   "start": 1.86,
+   "end": 1.9,
+   "p": 0.995
+  },
+  {
+   "w": " asks,",
+   "start": 1.9,
+   "end": 2.32,
+   "p": 0.996
+  },
+  {
+   "w": " stopping",
+   "start": 2.96,
+   "end": 2.96,
+   "p": 0.004
+  },
+  {
+   "w": " rain",
+   "start": 2.96,
+   "end": 3.2,
+   "p": 0.996
+  },
+  {
+   "w": " from",
+   "start": 3.2,
+   "end": 3.36,
+   "p": 0.974
+  },
+  {
+   "w": " falling",
+   "start": 3.36,
+   "end": 3.58,
+   "p": 0.999
+  },
+  {
+   "w": " on",
+   "start": 3.58,
+   "end": 3.74,
+   "p": 0.946
+  },
+  {
+   "w": " something",
+   "start": 3.74,
+   "end": 3.96,
+   "p": 0.995
+  },
+  {
+   "w": " with",
+   "start": 3.96,
+   "end": 4.14,
+   "p": 0.995
+  },
+  {
+   "w": " an",
+   "start": 4.14,
+   "end": 4.24,
+   "p": 0.994
+  },
+  {
+   "w": " umbrella",
+   "start": 4.24,
+   "end": 4.5,
+   "p": 0.997
+  },
+  {
+   "w": " is",
+   "start": 4.5,
+   "end": 4.74,
+   "p": 0.997
+  },
+  {
+   "w": " boring.",
+   "start": 4.74,
+   "end": 5.1,
+   "p": 0.993
+  },
+  {
+   "w": " What",
+   "start": 5.5,
+   "end": 5.56,
+   "p": 0.753
+  },
+  {
+   "w": " if",
+   "start": 5.56,
+   "end": 5.66,
+   "p": 0.995
+  },
+  {
+   "w": " you",
+   "start": 5.66,
+   "end": 5.76,
+   "p": 0.994
+  },
+  {
+   "w": " tried",
+   "start": 5.76,
+   "end": 5.92,
+   "p": 0.854
+  },
+  {
+   "w": " to",
+   "start": 5.92,
+   "end": 6.04,
+   "p": 0.998
+  },
+  {
+   "w": " stop",
+   "start": 6.04,
+   "end": 6.24,
+   "p": 0.999
+  },
+  {
+   "w": " rain",
+   "start": 6.24,
+   "end": 6.46,
+   "p": 0.997
+  },
+  {
+   "w": " with",
+   "start": 6.46,
+   "end": 6.6,
+   "p": 0.998
+  },
+  {
+   "w": " a",
+   "start": 6.6,
+   "end": 6.74,
+   "p": 0.996
+  },
+  {
+   "w": " laser",
+   "start": 6.74,
+   "end": 7.02,
+   "p": 0.989
+  },
+  {
+   "w": " that",
+   "start": 7.02,
+   "end": 7.28,
+   "p": 0.932
+  },
+  {
+   "w": " targeted",
+   "start": 7.28,
+   "end": 7.66,
+   "p": 0.996
+  },
+  {
+   "w": " and",
+   "start": 7.66,
+   "end": 7.86,
+   "p": 0.99
+  },
+  {
+   "w": " vaporized",
+   "start": 7.86,
+   "end": 8.28,
+   "p": 0.977
+  },
+  {
+   "w": " each",
+   "start": 8.28,
+   "end": 8.44,
+   "p": 0.995
+  },
+  {
+   "w": " incoming",
+   "start": 8.44,
+   "end": 8.8,
+   "p": 0.995
+  },
+  {
+   "w": " droplet",
+   "start": 8.8,
+   "end": 9.24,
+   "p": 0.998
+  },
+  {
+   "w": " before",
+   "start": 9.24,
+   "end": 9.54,
+   "p": 0.982
+  },
+  {
+   "w": " it",
+   "start": 9.54,
+   "end": 9.68,
+   "p": 0.997
+  },
+  {
+   "w": " could",
+   "start": 9.68,
+   "end": 9.8,
+   "p": 0.987
+  },
+  {
+   "w": " come",
+   "start": 9.8,
+   "end": 9.92,
+   "p": 0.995
+  },
+  {
+   "w": " within",
+   "start": 9.92,
+   "end": 10.12,
+   "p": 0.986
+  },
+  {
+   "w": " 10",
+   "start": 10.12,
+   "end": 10.3,
+   "p": 0.725
+  },
+  {
+   "w": " feet",
+   "start": 10.3,
+   "end": 10.44,
+   "p": 0.966
+  },
+  {
+   "w": " of",
+   "start": 10.44,
+   "end": 10.58,
+   "p": 0.994
+  },
+  {
+   "w": " the",
+   "start": 10.58,
+   "end": 10.68,
+   "p": 0.997
+  },
+  {
+   "w": " ground?",
+   "start": 10.68,
+   "end": 10.96,
+   "p": 0.999
+  },
+  {
+   "w": " So,",
+   "start": 13.44,
+   "end": 13.54,
+   "p": 0.52
+  },
+  {
+   "w": " stopping",
+   "start": 13.88,
+   "end": 13.92,
+   "p": 0.905
+  },
+  {
+   "w": " rain",
+   "start": 13.92,
+   "end": 14.12,
+   "p": 0.997
+  },
+  {
+   "w": " with",
+   "start": 14.12,
+   "end": 14.26,
+   "p": 0.998
+  },
+  {
+   "w": " a",
+   "start": 14.26,
+   "end": 14.36,
+   "p": 0.989
+  },
+  {
+   "w": " laser",
+   "start": 14.36,
+   "end": 14.56,
+   "p": 0.998
+  },
+  {
+   "w": " is",
+   "start": 14.56,
+   "end": 14.7,
+   "p": 0.992
+  },
+  {
+   "w": " one",
+   "start": 14.7,
+   "end": 14.8,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 14.8,
+   "end": 14.88,
+   "p": 0.997
+  },
+  {
+   "w": " those",
+   "start": 14.88,
+   "end": 15.0,
+   "p": 0.984
+  },
+  {
+   "w": " ideas",
+   "start": 15.0,
+   "end": 15.24,
+   "p": 0.992
+  },
+  {
+   "w": " that",
+   "start": 15.24,
+   "end": 15.44,
+   "p": 0.994
+  },
+  {
+   "w": " sounds",
+   "start": 15.44,
+   "end": 15.66,
+   "p": 0.992
+  },
+  {
+   "w": " totally",
+   "start": 15.66,
+   "end": 16.04,
+   "p": 0.995
+  },
+  {
+   "w": " reasonable,",
+   "start": 16.04,
+   "end": 16.48,
+   "p": 0.998
+  },
+  {
+   "w": " but...",
+   "start": 16.66,
+   "end": 16.94,
+   "p": 0.708
+  },
+  {
+   "w": " Well,",
+   "start": 17.78,
+   "end": 17.92,
+   "p": 0.577
+  },
+  {
+   "w": " okay.",
+   "start": 18.14,
+   "end": 18.36,
+   "p": 0.676
+  },
+  {
+   "w": " Well,",
+   "start": 18.76,
+   "end": 18.82,
+   "p": 0.809
+  },
+  {
+   "w": " the",
+   "start": 18.92,
+   "end": 18.96,
+   "p": 0.993
+  },
+  {
+   "w": " idea",
+   "start": 18.96,
+   "end": 19.2,
+   "p": 1.0
+  },
+  {
+   "w": " of",
+   "start": 19.2,
+   "end": 19.4,
+   "p": 0.998
+  },
+  {
+   "w": " a",
+   "start": 19.4,
+   "end": 19.52,
+   "p": 0.995
+  },
+  {
+   "w": " laser",
+   "start": 19.52,
+   "end": 19.76,
+   "p": 0.997
+  },
+  {
+   "w": " umbrella",
+   "start": 19.76,
+   "end": 20.16,
+   "p": 0.999
+  },
+  {
+   "w": " might",
+   "start": 20.16,
+   "end": 20.38,
+   "p": 0.993
+  },
+  {
+   "w": " be",
+   "start": 20.38,
+   "end": 20.54,
+   "p": 0.999
+  },
+  {
+   "w": " appealing,",
+   "start": 20.54,
+   "end": 20.96,
+   "p": 0.998
+  },
+  {
+   "w": " it...",
+   "start": 21.1,
+   "end": 21.38,
+   "p": 0.524
+  },
+  {
+   "w": " Okay,",
+   "start": 22.58,
+   "end": 22.98,
+   "p": 0.82
+  },
+  {
+   "w": " the",
+   "start": 23.36,
+   "end": 23.44,
+   "p": 0.955
+  },
+  {
+   "w": " idea",
+   "start": 23.44,
+   "end": 23.76,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 23.76,
+   "end": 23.98,
+   "p": 0.997
+  },
+  {
+   "w": " stopping",
+   "start": 23.98,
+   "end": 24.28,
+   "p": 0.988
+  },
+  {
+   "w": " rain",
+   "start": 24.28,
+   "end": 24.56,
+   "p": 0.995
+  },
+  {
+   "w": " with",
+   "start": 24.56,
+   "end": 24.7,
+   "p": 0.999
+  },
+  {
+   "w": " a",
+   "start": 24.7,
+   "end": 24.86,
+   "p": 0.995
+  },
+  {
+   "w": " laser",
+   "start": 24.86,
+   "end": 25.08,
+   "p": 0.999
+  },
+  {
+   "w": " is",
+   "start": 25.08,
+   "end": 25.28,
+   "p": 0.996
+  },
+  {
+   "w": " a",
+   "start": 25.28,
+   "end": 25.44,
+   "p": 0.995
+  },
+  {
+   "w": " thing",
+   "start": 25.44,
+   "end": 25.6,
+   "p": 0.999
+  },
+  {
+   "w": " we",
+   "start": 25.6,
+   "end": 25.74,
+   "p": 0.991
+  },
+  {
+   "w": " are",
+   "start": 25.74,
+   "end": 25.88,
+   "p": 0.991
+  },
+  {
+   "w": " currently",
+   "start": 25.88,
+   "end": 26.22,
+   "p": 0.999
+  },
+  {
+   "w": " talking",
+   "start": 26.22,
+   "end": 26.56,
+   "p": 0.999
+  },
+  {
+   "w": " about.",
+   "start": 26.56,
+   "end": 26.88,
+   "p": 1.0
+  },
+  {
+   "w": " Now,",
+   "start": 27.68,
+   "end": 27.94,
+   "p": 0.99
+  },
+  {
+   "w": " it's",
+   "start": 28.0,
+   "end": 28.2,
+   "p": 0.996
+  },
+  {
+   "w": " not",
+   "start": 28.2,
+   "end": 28.36,
+   "p": 0.999
+  },
+  {
+   "w": " a",
+   "start": 28.36,
+   "end": 28.46,
+   "p": 0.999
+  },
+  {
+   "w": " very",
+   "start": 28.46,
+   "end": 28.64,
+   "p": 0.997
+  },
+  {
+   "w": " practical",
+   "start": 28.64,
+   "end": 28.96,
+   "p": 1.0
+  },
+  {
+   "w": " idea.",
+   "start": 28.96,
+   "end": 29.36,
+   "p": 0.999
+  },
+  {
+   "w": " First,",
+   "start": 29.36,
+   "end": 30.02,
+   "p": 0.696
+  },
+  {
+   "w": " let's",
+   "start": 30.2,
+   "end": 30.32,
+   "p": 0.983
+  },
+  {
+   "w": " look",
+   "start": 30.32,
+   "end": 30.42,
+   "p": 0.974
+  },
+  {
+   "w": " at",
+   "start": 30.42,
+   "end": 30.52,
+   "p": 0.989
+  },
+  {
+   "w": " how",
+   "start": 30.52,
+   "end": 30.62,
+   "p": 0.99
+  },
+  {
+   "w": " much",
+   "start": 30.62,
+   "end": 30.76,
+   "p": 0.998
+  },
+  {
+   "w": " energy",
+   "start": 30.76,
+   "end": 31.06,
+   "p": 0.991
+  },
+  {
+   "w": " the",
+   "start": 31.06,
+   "end": 31.26,
+   "p": 0.968
+  },
+  {
+   "w": " laser",
+   "start": 31.26,
+   "end": 31.46,
+   "p": 0.979
+  },
+  {
+   "w": " would",
+   "start": 31.46,
+   "end": 31.64,
+   "p": 0.977
+  },
+  {
+   "w": " need.",
+   "start": 31.64,
+   "end": 31.88,
+   "p": 0.998
+  },
+  {
+   "w": " Vaporizing",
+   "start": 32.46,
+   "end": 32.7,
+   "p": 0.674
+  },
+  {
+   "w": " a",
+   "start": 32.7,
+   "end": 32.86,
+   "p": 0.985
+  },
+  {
+   "w": " liter",
+   "start": 32.86,
+   "end": 32.96,
+   "p": 0.935
+  },
+  {
+   "w": " of",
+   "start": 32.96,
+   "end": 33.18,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 33.18,
+   "end": 33.34,
+   "p": 0.999
+  },
+  {
+   "w": " takes",
+   "start": 33.34,
+   "end": 33.56,
+   "p": 0.988
+  },
+  {
+   "w": " about",
+   "start": 33.56,
+   "end": 33.78,
+   "p": 0.988
+  },
+  {
+   "w": " 2",
+   "start": 33.78,
+   "end": 34.0,
+   "p": 0.989
+  },
+  {
+   "w": ".6",
+   "start": 34.0,
+   "end": 34.44,
+   "p": 0.995
+  },
+  {
+   "w": " megajoules",
+   "start": 34.44,
+   "end": 34.94,
+   "p": 0.883
+  },
+  {
+   "w": " of",
+   "start": 34.94,
+   "end": 35.08,
+   "p": 0.995
+  },
+  {
+   "w": " energy,",
+   "start": 35.08,
+   "end": 35.36,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 35.48,
+   "end": 35.58,
+   "p": 0.982
+  },
+  {
+   "w": " a",
+   "start": 35.58,
+   "end": 35.66,
+   "p": 0.996
+  },
+  {
+   "w": " big",
+   "start": 35.66,
+   "end": 35.76,
+   "p": 0.996
+  },
+  {
+   "w": " rainstorm",
+   "start": 35.76,
+   "end": 36.28,
+   "p": 0.939
+  },
+  {
+   "w": " might",
+   "start": 36.28,
+   "end": 36.5,
+   "p": 0.974
+  },
+  {
+   "w": " drop",
+   "start": 36.5,
+   "end": 36.82,
+   "p": 0.996
+  },
+  {
+   "w": " half",
+   "start": 36.82,
+   "end": 37.2,
+   "p": 0.791
+  },
+  {
+   "w": " an",
+   "start": 37.2,
+   "end": 37.34,
+   "p": 0.965
+  },
+  {
+   "w": " inch",
+   "start": 37.34,
+   "end": 37.48,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 37.48,
+   "end": 37.62,
+   "p": 0.994
+  },
+  {
+   "w": " rain",
+   "start": 37.62,
+   "end": 37.76,
+   "p": 0.998
+  },
+  {
+   "w": " per",
+   "start": 37.76,
+   "end": 37.98,
+   "p": 0.997
+  },
+  {
+   "w": " hour.",
+   "start": 37.98,
+   "end": 38.26,
+   "p": 0.998
+  },
+  {
+   "w": " Oddly",
+   "start": 38.72,
+   "end": 38.98,
+   "p": 0.994
+  },
+  {
+   "w": " enough,",
+   "start": 38.98,
+   "end": 39.14,
+   "p": 1.0
+  },
+  {
+   "w": " you",
+   "start": 39.26,
+   "end": 39.3,
+   "p": 0.997
+  },
+  {
+   "w": " can",
+   "start": 39.3,
+   "end": 39.42,
+   "p": 0.981
+  },
+  {
+   "w": " just",
+   "start": 39.42,
+   "end": 39.56,
+   "p": 0.992
+  },
+  {
+   "w": " multiply",
+   "start": 39.56,
+   "end": 39.98,
+   "p": 0.975
+  },
+  {
+   "w": " these",
+   "start": 39.98,
+   "end": 40.18,
+   "p": 0.977
+  },
+  {
+   "w": " two",
+   "start": 40.18,
+   "end": 40.32,
+   "p": 0.974
+  },
+  {
+   "w": " numbers",
+   "start": 40.32,
+   "end": 40.58,
+   "p": 0.998
+  },
+  {
+   "w": " together",
+   "start": 40.58,
+   "end": 40.9,
+   "p": 0.996
+  },
+  {
+   "w": " in",
+   "start": 40.9,
+   "end": 41.1,
+   "p": 0.884
+  },
+  {
+   "w": " a",
+   "start": 41.1,
+   "end": 41.24,
+   "p": 0.996
+  },
+  {
+   "w": " smart",
+   "start": 41.24,
+   "end": 41.42,
+   "p": 0.982
+  },
+  {
+   "w": " calculator",
+   "start": 41.42,
+   "end": 41.88,
+   "p": 0.997
+  },
+  {
+   "w": " like",
+   "start": 41.88,
+   "end": 42.12,
+   "p": 0.697
+  },
+  {
+   "w": " Wolfram",
+   "start": 42.12,
+   "end": 42.42,
+   "p": 0.986
+  },
+  {
+   "w": " Alpha",
+   "start": 42.42,
+   "end": 42.62,
+   "p": 0.859
+  },
+  {
+   "w": " or",
+   "start": 42.62,
+   "end": 42.92,
+   "p": 0.967
+  },
+  {
+   "w": " Google,",
+   "start": 42.92,
+   "end": 43.2,
+   "p": 0.989
+  },
+  {
+   "w": " and",
+   "start": 43.54,
+   "end": 43.64,
+   "p": 0.99
+  },
+  {
+   "w": " the",
+   "start": 43.64,
+   "end": 43.74,
+   "p": 0.994
+  },
+  {
+   "w": " units",
+   "start": 43.74,
+   "end": 43.92,
+   "p": 0.998
+  },
+  {
+   "w": " work",
+   "start": 43.92,
+   "end": 44.12,
+   "p": 0.977
+  },
+  {
+   "w": " out",
+   "start": 44.12,
+   "end": 44.36,
+   "p": 0.998
+  },
+  {
+   "w": " to",
+   "start": 44.36,
+   "end": 44.5,
+   "p": 0.902
+  },
+  {
+   "w": " give",
+   "start": 44.5,
+   "end": 44.62,
+   "p": 0.998
+  },
+  {
+   "w": " you",
+   "start": 44.62,
+   "end": 44.72,
+   "p": 0.995
+  },
+  {
+   "w": " an",
+   "start": 44.72,
+   "end": 44.82,
+   "p": 0.994
+  },
+  {
+   "w": " answer",
+   "start": 44.82,
+   "end": 45.08,
+   "p": 0.999
+  },
+  {
+   "w": " in",
+   "start": 45.08,
+   "end": 45.22,
+   "p": 0.984
+  },
+  {
+   "w": " terms",
+   "start": 45.22,
+   "end": 45.36,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 45.36,
+   "end": 45.58,
+   "p": 0.998
+  },
+  {
+   "w": " power",
+   "start": 45.58,
+   "end": 45.82,
+   "p": 0.977
+  },
+  {
+   "w": " per",
+   "start": 45.82,
+   "end": 46.06,
+   "p": 0.987
+  },
+  {
+   "w": " surface",
+   "start": 46.06,
+   "end": 46.38,
+   "p": 0.988
+  },
+  {
+   "w": " area,",
+   "start": 46.38,
+   "end": 46.7,
+   "p": 0.999
+  },
+  {
+   "w": " which",
+   "start": 46.82,
+   "end": 46.96,
+   "p": 0.998
+  },
+  {
+   "w": " is",
+   "start": 46.96,
+   "end": 47.06,
+   "p": 0.998
+  },
+  {
+   "w": " exactly",
+   "start": 47.06,
+   "end": 47.34,
+   "p": 0.998
+  },
+  {
+   "w": " what",
+   "start": 47.34,
+   "end": 47.56,
+   "p": 0.997
+  },
+  {
+   "w": " we're",
+   "start": 47.56,
+   "end": 47.68,
+   "p": 0.986
+  },
+  {
+   "w": " looking",
+   "start": 47.68,
+   "end": 47.86,
+   "p": 0.999
+  },
+  {
+   "w": " for.",
+   "start": 47.86,
+   "end": 48.16,
+   "p": 0.999
+  },
+  {
+   "w": " The",
+   "start": 48.42,
+   "end": 48.54,
+   "p": 0.99
+  },
+  {
+   "w": " calculator",
+   "start": 48.54,
+   "end": 48.84,
+   "p": 0.994
+  },
+  {
+   "w": " says",
+   "start": 48.84,
+   "end": 49.12,
+   "p": 0.998
+  },
+  {
+   "w": " that",
+   "start": 49.12,
+   "end": 49.26,
+   "p": 0.945
+  },
+  {
+   "w": " we",
+   "start": 49.26,
+   "end": 49.36,
+   "p": 0.996
+  },
+  {
+   "w": " need",
+   "start": 49.36,
+   "end": 49.52,
+   "p": 0.997
+  },
+  {
+   "w": " 9",
+   "start": 49.52,
+   "end": 49.84,
+   "p": 0.753
+  },
+  {
+   "w": " kilowatts",
+   "start": 49.84,
+   "end": 50.28,
+   "p": 0.922
+  },
+  {
+   "w": " of",
+   "start": 50.28,
+   "end": 50.48,
+   "p": 0.997
+  },
+  {
+   "w": " power",
+   "start": 50.48,
+   "end": 50.78,
+   "p": 0.998
+  },
+  {
+   "w": " per",
+   "start": 50.78,
+   "end": 51.1,
+   "p": 0.996
+  },
+  {
+   "w": " square",
+   "start": 51.1,
+   "end": 51.4,
+   "p": 0.996
+  },
+  {
+   "w": " meter",
+   "start": 51.4,
+   "end": 51.62,
+   "p": 0.993
+  },
+  {
+   "w": " we",
+   "start": 51.62,
+   "end": 51.78,
+   "p": 0.979
+  },
+  {
+   "w": " want",
+   "start": 51.78,
+   "end": 51.9,
+   "p": 0.935
+  },
+  {
+   "w": " to",
+   "start": 51.9,
+   "end": 51.98,
+   "p": 0.999
+  },
+  {
+   "w": " protect",
+   "start": 51.98,
+   "end": 52.2,
+   "p": 0.996
+  },
+  {
+   "w": " with",
+   "start": 52.2,
+   "end": 52.38,
+   "p": 0.995
+  },
+  {
+   "w": " our",
+   "start": 52.38,
+   "end": 52.52,
+   "p": 0.997
+  },
+  {
+   "w": " laser.",
+   "start": 52.52,
+   "end": 52.88,
+   "p": 0.997
+  },
+  {
+   "w": " 9",
+   "start": 53.42,
+   "end": 53.6,
+   "p": 0.791
+  },
+  {
+   "w": " kilowatts",
+   "start": 53.6,
+   "end": 54.0,
+   "p": 0.993
+  },
+  {
+   "w": " per",
+   "start": 54.0,
+   "end": 54.22,
+   "p": 0.996
+  },
+  {
+   "w": " square",
+   "start": 54.22,
+   "end": 54.42,
+   "p": 0.997
+  },
+  {
+   "w": " meter",
+   "start": 54.42,
+   "end": 54.66,
+   "p": 0.997
+  },
+  {
+   "w": " is",
+   "start": 54.66,
+   "end": 54.82,
+   "p": 0.998
+  },
+  {
+   "w": " nearly",
+   "start": 54.82,
+   "end": 55.08,
+   "p": 0.998
+  },
+  {
+   "w": " 10",
+   "start": 55.08,
+   "end": 55.34,
+   "p": 0.836
+  },
+  {
+   "w": " times",
+   "start": 55.34,
+   "end": 55.6,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 55.6,
+   "end": 55.76,
+   "p": 0.998
+  },
+  {
+   "w": " amount",
+   "start": 55.76,
+   "end": 55.9,
+   "p": 0.996
+  },
+  {
+   "w": " of",
+   "start": 55.9,
+   "end": 56.04,
+   "p": 0.974
+  },
+  {
+   "w": " power",
+   "start": 56.04,
+   "end": 56.2,
+   "p": 0.996
+  },
+  {
+   "w": " Earth's",
+   "start": 56.2,
+   "end": 56.54,
+   "p": 0.935
+  },
+  {
+   "w": " surface",
+   "start": 56.54,
+   "end": 56.76,
+   "p": 0.996
+  },
+  {
+   "w": " receives",
+   "start": 56.76,
+   "end": 57.08,
+   "p": 0.997
+  },
+  {
+   "w": " from",
+   "start": 57.08,
+   "end": 57.3,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 57.3,
+   "end": 57.46,
+   "p": 0.999
+  },
+  {
+   "w": " sun.",
+   "start": 57.46,
+   "end": 57.66,
+   "p": 0.571
+  },
+  {
+   "w": " And",
+   "start": 57.66,
+   "end": 58.28,
+   "p": 0.541
+  },
+  {
+   "w": " while",
+   "start": 58.28,
+   "end": 58.44,
+   "p": 0.969
+  },
+  {
+   "w": " that",
+   "start": 58.44,
+   "end": 58.66,
+   "p": 0.992
+  },
+  {
+   "w": " sounds",
+   "start": 58.66,
+   "end": 58.9,
+   "p": 0.993
+  },
+  {
+   "w": " like",
+   "start": 58.9,
+   "end": 59.16,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 59.16,
+   "end": 59.32,
+   "p": 0.973
+  },
+  {
+   "w": " lot",
+   "start": 59.32,
+   "end": 59.5,
+   "p": 0.972
+  },
+  {
+   "w": " of",
+   "start": 59.5,
+   "end": 59.66,
+   "p": 0.999
+  },
+  {
+   "w": " energy,",
+   "start": 59.66,
+   "end": 59.98,
+   "p": 0.997
+  },
+  {
+   "w": " we",
+   "start": 60.34,
+   "end": 60.36,
+   "p": 0.959
+  },
+  {
+   "w": " need",
+   "start": 60.36,
+   "end": 60.46,
+   "p": 0.994
+  },
+  {
+   "w": " to",
+   "start": 60.46,
+   "end": 60.58,
+   "p": 0.999
+  },
+  {
+   "w": " remember",
+   "start": 60.58,
+   "end": 60.8,
+   "p": 0.996
+  },
+  {
+   "w": " that",
+   "start": 60.8,
+   "end": 61.1,
+   "p": 0.988
+  },
+  {
+   "w": " water's",
+   "start": 61.1,
+   "end": 61.52,
+   "p": 0.981
+  },
+  {
+   "w": " capacity",
+   "start": 61.52,
+   "end": 61.84,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 61.84,
+   "end": 62.02,
+   "p": 0.993
+  },
+  {
+   "w": " absorb",
+   "start": 62.02,
+   "end": 62.32,
+   "p": 0.997
+  },
+  {
+   "w": " energy",
+   "start": 62.32,
+   "end": 62.6,
+   "p": 0.995
+  },
+  {
+   "w": " is",
+   "start": 62.6,
+   "end": 62.8,
+   "p": 0.994
+  },
+  {
+   "w": " incredible.",
+   "start": 62.8,
+   "end": 63.3,
+   "p": 0.997
+  },
+  {
+   "w": " Heating",
+   "start": 63.68,
+   "end": 63.84,
+   "p": 0.968
+  },
+  {
+   "w": " water",
+   "start": 63.84,
+   "end": 63.98,
+   "p": 0.995
+  },
+  {
+   "w": " up",
+   "start": 63.98,
+   "end": 64.14,
+   "p": 0.988
+  },
+  {
+   "w": " to",
+   "start": 64.14,
+   "end": 64.28,
+   "p": 0.994
+  },
+  {
+   "w": " boiling",
+   "start": 64.28,
+   "end": 64.54,
+   "p": 0.998
+  },
+  {
+   "w": " only",
+   "start": 64.54,
+   "end": 64.78,
+   "p": 0.984
+  },
+  {
+   "w": " takes",
+   "start": 64.78,
+   "end": 65.02,
+   "p": 0.997
+  },
+  {
+   "w": " about",
+   "start": 65.02,
+   "end": 65.22,
+   "p": 0.989
+  },
+  {
+   "w": " 10",
+   "start": 65.22,
+   "end": 65.46,
+   "p": 0.889
+  },
+  {
+   "w": "%",
+   "start": 65.46,
+   "end": 65.76,
+   "p": 0.923
+  },
+  {
+   "w": " of",
+   "start": 65.76,
+   "end": 65.9,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 65.9,
+   "end": 66.0,
+   "p": 0.994
+  },
+  {
+   "w": " energy.",
+   "start": 66.0,
+   "end": 66.34,
+   "p": 0.999
+  },
+  {
+   "w": " Getting",
+   "start": 66.62,
+   "end": 66.78,
+   "p": 0.973
+  },
+  {
+   "w": " it",
+   "start": 66.78,
+   "end": 66.94,
+   "p": 0.996
+  },
+  {
+   "w": " from",
+   "start": 66.94,
+   "end": 67.08,
+   "p": 0.997
+  },
+  {
+   "w": " liquid",
+   "start": 67.08,
+   "end": 67.34,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 67.34,
+   "end": 67.58,
+   "p": 0.997
+  },
+  {
+   "w": " gas",
+   "start": 67.58,
+   "end": 67.86,
+   "p": 0.998
+  },
+  {
+   "w": " takes",
+   "start": 67.86,
+   "end": 68.1,
+   "p": 0.983
+  },
+  {
+   "w": " the",
+   "start": 68.1,
+   "end": 68.3,
+   "p": 0.994
+  },
+  {
+   "w": " other",
+   "start": 68.3,
+   "end": 68.46,
+   "p": 0.999
+  },
+  {
+   "w": " 90%.",
+   "start": 68.46,
+   "end": 69.3,
+   "p": 0.975
+  },
+  {
+   "w": " Ultimately,",
+   "start": 69.3,
+   "end": 69.9,
+   "p": 0.988
+  },
+  {
+   "w": " we're",
+   "start": 70.06,
+   "end": 70.1,
+   "p": 0.992
+  },
+  {
+   "w": " talking",
+   "start": 70.1,
+   "end": 70.3,
+   "p": 0.996
+  },
+  {
+   "w": " about",
+   "start": 70.3,
+   "end": 70.5,
+   "p": 0.998
+  },
+  {
+   "w": " filling",
+   "start": 70.5,
+   "end": 70.7,
+   "p": 0.992
+  },
+  {
+   "w": " the",
+   "start": 70.7,
+   "end": 70.92,
+   "p": 0.988
+  },
+  {
+   "w": " air",
+   "start": 70.92,
+   "end": 71.04,
+   "p": 0.999
+  },
+  {
+   "w": " with",
+   "start": 71.04,
+   "end": 71.2,
+   "p": 0.999
+  },
+  {
+   "w": " tons",
+   "start": 71.2,
+   "end": 71.44,
+   "p": 0.989
+  },
+  {
+   "w": " of",
+   "start": 71.44,
+   "end": 71.68,
+   "p": 0.999
+  },
+  {
+   "w": " hot",
+   "start": 71.68,
+   "end": 71.86,
+   "p": 0.995
+  },
+  {
+   "w": " steam,",
+   "start": 71.86,
+   "end": 72.34,
+   "p": 0.998
+  },
+  {
+   "w": " so",
+   "start": 72.72,
+   "end": 73.0,
+   "p": 0.988
+  },
+  {
+   "w": " basically",
+   "start": 73.0,
+   "end": 73.44,
+   "p": 0.941
+  },
+  {
+   "w": " we'd",
+   "start": 73.44,
+   "end": 73.8,
+   "p": 0.897
+  },
+  {
+   "w": " be",
+   "start": 73.8,
+   "end": 73.9,
+   "p": 0.996
+  },
+  {
+   "w": " building",
+   "start": 73.9,
+   "end": 74.1,
+   "p": 0.998
+  },
+  {
+   "w": " a",
+   "start": 74.1,
+   "end": 74.32,
+   "p": 0.996
+  },
+  {
+   "w": " human",
+   "start": 74.32,
+   "end": 74.6,
+   "p": 0.994
+  },
+  {
+   "w": "-sized",
+   "start": 74.6,
+   "end": 74.92,
+   "p": 0.924
+  },
+  {
+   "w": " autoclave.",
+   "start": 74.92,
+   "end": 75.68,
+   "p": 0.991
+  },
+  {
+   "w": " Uh,",
+   "start": 76.04,
+   "end": 76.16,
+   "p": 0.328
+  },
+  {
+   "w": " needless",
+   "start": 76.52,
+   "end": 76.52,
+   "p": 0.992
+  },
+  {
+   "w": " to",
+   "start": 76.52,
+   "end": 76.74,
+   "p": 0.998
+  },
+  {
+   "w": " say,",
+   "start": 76.74,
+   "end": 76.9,
+   "p": 0.999
+  },
+  {
+   "w": " autoclaves",
+   "start": 77.04,
+   "end": 77.4,
+   "p": 0.997
+  },
+  {
+   "w": " are",
+   "start": 77.4,
+   "end": 77.54,
+   "p": 0.987
+  },
+  {
+   "w": " not",
+   "start": 77.54,
+   "end": 77.66,
+   "p": 0.995
+  },
+  {
+   "w": " really",
+   "start": 77.66,
+   "end": 77.86,
+   "p": 0.971
+  },
+  {
+   "w": " a",
+   "start": 77.86,
+   "end": 78.02,
+   "p": 0.999
+  },
+  {
+   "w": " popular",
+   "start": 78.02,
+   "end": 78.3,
+   "p": 0.991
+  },
+  {
+   "w": " place",
+   "start": 78.3,
+   "end": 78.58,
+   "p": 0.999
+  },
+  {
+   "w": " to",
+   "start": 78.58,
+   "end": 78.8,
+   "p": 0.999
+  },
+  {
+   "w": " live.",
+   "start": 78.8,
+   "end": 78.96,
+   "p": 1.0
+  },
+  {
+   "w": " But",
+   "start": 79.6,
+   "end": 79.74,
+   "p": 0.913
+  },
+  {
+   "w": " it",
+   "start": 79.74,
+   "end": 79.98,
+   "p": 0.894
+  },
+  {
+   "w": " gets",
+   "start": 79.98,
+   "end": 80.2,
+   "p": 0.997
+  },
+  {
+   "w": " worse.",
+   "start": 80.2,
+   "end": 80.5,
+   "p": 0.999
+  },
+  {
+   "w": " Vaporizing",
+   "start": 81.12,
+   "end": 81.34,
+   "p": 0.948
+  },
+  {
+   "w": " a",
+   "start": 81.34,
+   "end": 81.5,
+   "p": 0.997
+  },
+  {
+   "w": " droplet",
+   "start": 81.5,
+   "end": 81.72,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 81.72,
+   "end": 81.84,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 81.84,
+   "end": 82.0,
+   "p": 1.0
+  },
+  {
+   "w": " with",
+   "start": 82.0,
+   "end": 82.12,
+   "p": 0.985
+  },
+  {
+   "w": " a",
+   "start": 82.12,
+   "end": 82.24,
+   "p": 0.996
+  },
+  {
+   "w": " laser",
+   "start": 82.24,
+   "end": 82.42,
+   "p": 0.995
+  },
+  {
+   "w": " is",
+   "start": 82.42,
+   "end": 82.6,
+   "p": 0.999
+  },
+  {
+   "w": " more",
+   "start": 82.6,
+   "end": 82.76,
+   "p": 0.999
+  },
+  {
+   "w": " complicated",
+   "start": 82.76,
+   "end": 83.2,
+   "p": 1.0
+  },
+  {
+   "w": " than",
+   "start": 83.2,
+   "end": 83.42,
+   "p": 0.996
+  },
+  {
+   "w": " it",
+   "start": 83.42,
+   "end": 83.54,
+   "p": 0.998
+  },
+  {
+   "w": " sounds.",
+   "start": 83.54,
+   "end": 83.86,
+   "p": 0.999
+  },
+  {
+   "w": " There",
+   "start": 84.26,
+   "end": 84.38,
+   "p": 0.994
+  },
+  {
+   "w": " are",
+   "start": 84.38,
+   "end": 84.54,
+   "p": 0.997
+  },
+  {
+   "w": " many,",
+   "start": 84.54,
+   "end": 84.8,
+   "p": 0.999
+  },
+  {
+   "w": " many,",
+   "start": 84.86,
+   "end": 85.16,
+   "p": 0.999
+  },
+  {
+   "w": " many",
+   "start": 85.28,
+   "end": 85.54,
+   "p": 0.879
+  },
+  {
+   "w": " papers",
+   "start": 85.54,
+   "end": 85.92,
+   "p": 0.993
+  },
+  {
+   "w": " on",
+   "start": 85.92,
+   "end": 86.16,
+   "p": 0.999
+  },
+  {
+   "w": " this",
+   "start": 86.16,
+   "end": 86.34,
+   "p": 0.997
+  },
+  {
+   "w": " subject,",
+   "start": 86.34,
+   "end": 86.7,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 86.7,
+   "end": 87.02,
+   "p": 0.396
+  },
+  {
+   "w": " the",
+   "start": 87.02,
+   "end": 87.18,
+   "p": 0.986
+  },
+  {
+   "w": " general",
+   "start": 87.18,
+   "end": 87.48,
+   "p": 0.996
+  },
+  {
+   "w": " gist",
+   "start": 87.48,
+   "end": 87.72,
+   "p": 1.0
+  },
+  {
+   "w": " is",
+   "start": 87.72,
+   "end": 87.9,
+   "p": 0.991
+  },
+  {
+   "w": " that",
+   "start": 87.9,
+   "end": 88.02,
+   "p": 0.972
+  },
+  {
+   "w": " it",
+   "start": 88.02,
+   "end": 88.12,
+   "p": 0.986
+  },
+  {
+   "w": " takes",
+   "start": 88.12,
+   "end": 88.32,
+   "p": 0.991
+  },
+  {
+   "w": " a",
+   "start": 88.32,
+   "end": 88.56,
+   "p": 0.941
+  },
+  {
+   "w": " lot",
+   "start": 88.56,
+   "end": 88.78,
+   "p": 0.953
+  },
+  {
+   "w": " of",
+   "start": 88.78,
+   "end": 88.94,
+   "p": 0.996
+  },
+  {
+   "w": " energy,",
+   "start": 88.94,
+   "end": 89.24,
+   "p": 0.998
+  },
+  {
+   "w": " delivered",
+   "start": 89.48,
+   "end": 89.76,
+   "p": 0.99
+  },
+  {
+   "w": " fast,",
+   "start": 89.76,
+   "end": 90.16,
+   "p": 0.995
+  },
+  {
+   "w": " to",
+   "start": 90.38,
+   "end": 90.48,
+   "p": 0.998
+  },
+  {
+   "w": " vaporize",
+   "start": 90.48,
+   "end": 90.86,
+   "p": 0.987
+  },
+  {
+   "w": " the",
+   "start": 90.86,
+   "end": 91.02,
+   "p": 0.993
+  },
+  {
+   "w": " droplet",
+   "start": 91.02,
+   "end": 91.32,
+   "p": 0.985
+  },
+  {
+   "w": " without",
+   "start": 91.32,
+   "end": 91.56,
+   "p": 0.975
+  },
+  {
+   "w": " just",
+   "start": 91.56,
+   "end": 91.82,
+   "p": 0.988
+  },
+  {
+   "w": " splattering",
+   "start": 91.82,
+   "end": 92.3,
+   "p": 0.974
+  },
+  {
+   "w": " it",
+   "start": 92.3,
+   "end": 92.54,
+   "p": 0.994
+  },
+  {
+   "w": " apart",
+   "start": 92.54,
+   "end": 92.72,
+   "p": 0.973
+  },
+  {
+   "w": " into",
+   "start": 92.72,
+   "end": 92.92,
+   "p": 0.993
+  },
+  {
+   "w": " little",
+   "start": 92.92,
+   "end": 93.14,
+   "p": 0.996
+  },
+  {
+   "w": " droplets.",
+   "start": 93.14,
+   "end": 93.62,
+   "p": 1.0
+  },
+  {
+   "w": " Here's",
+   "start": 94.34,
+   "end": 94.54,
+   "p": 0.988
+  },
+  {
+   "w": " what",
+   "start": 94.54,
+   "end": 94.62,
+   "p": 0.999
+  },
+  {
+   "w": " it",
+   "start": 94.62,
+   "end": 94.72,
+   "p": 0.994
+  },
+  {
+   "w": " looks",
+   "start": 94.72,
+   "end": 94.86,
+   "p": 0.997
+  },
+  {
+   "w": " like",
+   "start": 94.86,
+   "end": 95.04,
+   "p": 0.998
+  },
+  {
+   "w": " when",
+   "start": 95.04,
+   "end": 95.16,
+   "p": 0.994
+  },
+  {
+   "w": " a",
+   "start": 95.16,
+   "end": 95.28,
+   "p": 0.987
+  },
+  {
+   "w": " droplet",
+   "start": 95.28,
+   "end": 95.58,
+   "p": 0.999
+  },
+  {
+   "w": " gets",
+   "start": 95.58,
+   "end": 95.78,
+   "p": 0.98
+  },
+  {
+   "w": " zapped",
+   "start": 95.78,
+   "end": 96.02,
+   "p": 0.987
+  },
+  {
+   "w": " by",
+   "start": 96.02,
+   "end": 96.22,
+   "p": 0.997
+  },
+  {
+   "w": " a",
+   "start": 96.22,
+   "end": 96.34,
+   "p": 0.991
+  },
+  {
+   "w": " laser",
+   "start": 96.34,
+   "end": 96.58,
+   "p": 0.997
+  },
+  {
+   "w": " pulse.",
+   "start": 96.58,
+   "end": 96.9,
+   "p": 0.998
+  },
+  {
+   "w": " You",
+   "start": 97.26,
+   "end": 97.36,
+   "p": 0.99
+  },
+  {
+   "w": " can",
+   "start": 97.36,
+   "end": 97.5,
+   "p": 0.997
+  },
+  {
+   "w": " see",
+   "start": 97.5,
+   "end": 97.72,
+   "p": 0.997
+  },
+  {
+   "w": " that",
+   "start": 97.72,
+   "end": 97.98,
+   "p": 0.962
+  },
+  {
+   "w": " I'm",
+   "start": 97.98,
+   "end": 98.38,
+   "p": 0.568
+  },
+  {
+   "w": " jealous",
+   "start": 98.38,
+   "end": 98.56,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 98.56,
+   "end": 98.8,
+   "p": 0.997
+  },
+  {
+   "w": " anyone",
+   "start": 98.8,
+   "end": 99.04,
+   "p": 0.991
+  },
+  {
+   "w": " whose",
+   "start": 99.04,
+   "end": 99.24,
+   "p": 0.876
+  },
+  {
+   "w": " job",
+   "start": 99.24,
+   "end": 99.48,
+   "p": 0.999
+  },
+  {
+   "w": " it",
+   "start": 99.48,
+   "end": 99.64,
+   "p": 0.987
+  },
+  {
+   "w": " is",
+   "start": 99.64,
+   "end": 99.8,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 99.8,
+   "end": 100.02,
+   "p": 0.986
+  },
+  {
+   "w": " literally",
+   "start": 100.02,
+   "end": 100.36,
+   "p": 0.989
+  },
+  {
+   "w": " zap",
+   "start": 100.36,
+   "end": 100.7,
+   "p": 0.987
+  },
+  {
+   "w": " water",
+   "start": 100.7,
+   "end": 100.88,
+   "p": 0.996
+  },
+  {
+   "w": " with",
+   "start": 100.88,
+   "end": 101.12,
+   "p": 0.999
+  },
+  {
+   "w": " lasers.",
+   "start": 101.12,
+   "end": 101.44,
+   "p": 0.993
+  },
+  {
+   "w": " You",
+   "start": 101.88,
+   "end": 102.04,
+   "p": 0.992
+  },
+  {
+   "w": " can",
+   "start": 102.04,
+   "end": 102.18,
+   "p": 0.997
+  },
+  {
+   "w": " also",
+   "start": 102.18,
+   "end": 102.38,
+   "p": 0.997
+  },
+  {
+   "w": " see",
+   "start": 102.38,
+   "end": 102.64,
+   "p": 0.998
+  },
+  {
+   "w": " that",
+   "start": 102.64,
+   "end": 102.8,
+   "p": 0.992
+  },
+  {
+   "w": " the",
+   "start": 102.8,
+   "end": 103.02,
+   "p": 0.994
+  },
+  {
+   "w": " laser",
+   "start": 103.02,
+   "end": 103.28,
+   "p": 0.998
+  },
+  {
+   "w": " mostly",
+   "start": 103.28,
+   "end": 103.68,
+   "p": 0.998
+  },
+  {
+   "w": " splatters",
+   "start": 103.68,
+   "end": 104.12,
+   "p": 0.994
+  },
+  {
+   "w": " the",
+   "start": 104.12,
+   "end": 104.32,
+   "p": 0.998
+  },
+  {
+   "w": " droplet,",
+   "start": 104.32,
+   "end": 104.62,
+   "p": 0.997
+  },
+  {
+   "w": " rather",
+   "start": 104.72,
+   "end": 104.84,
+   "p": 0.998
+  },
+  {
+   "w": " than",
+   "start": 104.84,
+   "end": 105.06,
+   "p": 0.998
+  },
+  {
+   "w": " vaporizing",
+   "start": 105.06,
+   "end": 105.52,
+   "p": 0.999
+  },
+  {
+   "w": " it.",
+   "start": 105.52,
+   "end": 105.8,
+   "p": 0.997
+  },
+  {
+   "w": " The",
+   "start": 106.02,
+   "end": 106.16,
+   "p": 0.992
+  },
+  {
+   "w": " implication",
+   "start": 106.16,
+   "end": 106.52,
+   "p": 0.999
+  },
+  {
+   "w": " is",
+   "start": 106.52,
+   "end": 106.82,
+   "p": 0.999
+  },
+  {
+   "w": " that",
+   "start": 106.82,
+   "end": 106.98,
+   "p": 0.993
+  },
+  {
+   "w": " completely",
+   "start": 106.98,
+   "end": 107.4,
+   "p": 0.964
+  },
+  {
+   "w": " vaporizing",
+   "start": 107.4,
+   "end": 107.98,
+   "p": 0.998
+  },
+  {
+   "w": " a",
+   "start": 107.98,
+   "end": 108.1,
+   "p": 0.973
+  },
+  {
+   "w": " droplet",
+   "start": 108.1,
+   "end": 108.38,
+   "p": 0.999
+  },
+  {
+   "w": " would",
+   "start": 108.38,
+   "end": 108.54,
+   "p": 0.994
+  },
+  {
+   "w": " probably",
+   "start": 108.54,
+   "end": 108.88,
+   "p": 0.993
+  },
+  {
+   "w": " take",
+   "start": 108.88,
+   "end": 109.1,
+   "p": 0.997
+  },
+  {
+   "w": " even",
+   "start": 109.1,
+   "end": 109.38,
+   "p": 0.996
+  },
+  {
+   "w": " more",
+   "start": 109.38,
+   "end": 109.62,
+   "p": 0.998
+  },
+  {
+   "w": " than",
+   "start": 109.62,
+   "end": 109.86,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 109.86,
+   "end": 110.02,
+   "p": 0.997
+  },
+  {
+   "w": " already",
+   "start": 110.02,
+   "end": 110.34,
+   "p": 0.992
+  },
+  {
+   "w": " unreasonable",
+   "start": 110.34,
+   "end": 110.88,
+   "p": 0.96
+  },
+  {
+   "w": " amount",
+   "start": 110.88,
+   "end": 111.26,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 111.26,
+   "end": 111.44,
+   "p": 0.999
+  },
+  {
+   "w": " power",
+   "start": 111.44,
+   "end": 111.62,
+   "p": 0.999
+  },
+  {
+   "w": " we",
+   "start": 111.62,
+   "end": 111.84,
+   "p": 0.992
+  },
+  {
+   "w": " were",
+   "start": 111.84,
+   "end": 111.96,
+   "p": 0.98
+  },
+  {
+   "w": " considering.",
+   "start": 111.96,
+   "end": 112.38,
+   "p": 0.999
+  },
+  {
+   "w": " Then",
+   "start": 112.98,
+   "end": 113.2,
+   "p": 0.994
+  },
+  {
+   "w": " there's",
+   "start": 113.2,
+   "end": 113.44,
+   "p": 0.929
+  },
+  {
+   "w": " the",
+   "start": 113.44,
+   "end": 113.52,
+   "p": 0.998
+  },
+  {
+   "w": " problem",
+   "start": 113.52,
+   "end": 113.72,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 113.72,
+   "end": 113.96,
+   "p": 0.995
+  },
+  {
+   "w": " targeting",
+   "start": 113.96,
+   "end": 114.28,
+   "p": 0.991
+  },
+  {
+   "w": " and",
+   "start": 114.28,
+   "end": 114.52,
+   "p": 0.974
+  },
+  {
+   "w": " aiming.",
+   "start": 114.52,
+   "end": 114.84,
+   "p": 0.999
+  },
+  {
+   "w": " In",
+   "start": 114.84,
+   "end": 115.3,
+   "p": 0.837
+  },
+  {
+   "w": " theory,",
+   "start": 115.3,
+   "end": 115.52,
+   "p": 0.991
+  },
+  {
+   "w": " this",
+   "start": 115.74,
+   "end": 115.78,
+   "p": 0.993
+  },
+  {
+   "w": " is",
+   "start": 115.78,
+   "end": 115.94,
+   "p": 0.992
+  },
+  {
+   "w": " probably",
+   "start": 115.94,
+   "end": 116.3,
+   "p": 0.988
+  },
+  {
+   "w": " solvable,",
+   "start": 116.3,
+   "end": 116.82,
+   "p": 0.992
+  },
+  {
+   "w": " perhaps",
+   "start": 117.08,
+   "end": 117.26,
+   "p": 0.995
+  },
+  {
+   "w": " even",
+   "start": 117.26,
+   "end": 117.48,
+   "p": 0.972
+  },
+  {
+   "w": " without",
+   "start": 117.48,
+   "end": 117.76,
+   "p": 0.998
+  },
+  {
+   "w": " military",
+   "start": 117.76,
+   "end": 118.16,
+   "p": 0.986
+  },
+  {
+   "w": "-grade",
+   "start": 118.16,
+   "end": 118.36,
+   "p": 0.834
+  },
+  {
+   "w": " equipment.",
+   "start": 118.36,
+   "end": 118.74,
+   "p": 0.997
+  },
+  {
+   "w": " High",
+   "start": 119.12,
+   "end": 119.2,
+   "p": 0.936
+  },
+  {
+   "w": "-speed",
+   "start": 119.2,
+   "end": 119.36,
+   "p": 0.917
+  },
+  {
+   "w": " cameras",
+   "start": 119.36,
+   "end": 119.74,
+   "p": 0.993
+  },
+  {
+   "w": " can",
+   "start": 119.74,
+   "end": 119.92,
+   "p": 0.974
+  },
+  {
+   "w": " triangulate",
+   "start": 119.92,
+   "end": 120.36,
+   "p": 0.981
+  },
+  {
+   "w": " the",
+   "start": 120.36,
+   "end": 120.56,
+   "p": 0.899
+  },
+  {
+   "w": " 3D",
+   "start": 120.56,
+   "end": 120.78,
+   "p": 0.976
+  },
+  {
+   "w": " position",
+   "start": 120.78,
+   "end": 121.16,
+   "p": 0.958
+  },
+  {
+   "w": " of",
+   "start": 121.16,
+   "end": 121.34,
+   "p": 0.997
+  },
+  {
+   "w": " a",
+   "start": 121.34,
+   "end": 121.48,
+   "p": 0.963
+  },
+  {
+   "w": " baseball",
+   "start": 121.48,
+   "end": 121.76,
+   "p": 0.997
+  },
+  {
+   "w": " or",
+   "start": 121.76,
+   "end": 121.94,
+   "p": 0.99
+  },
+  {
+   "w": " football",
+   "start": 121.94,
+   "end": 122.28,
+   "p": 0.968
+  },
+  {
+   "w": " hundreds",
+   "start": 122.28,
+   "end": 122.6,
+   "p": 0.961
+  },
+  {
+   "w": " of",
+   "start": 122.6,
+   "end": 122.8,
+   "p": 0.981
+  },
+  {
+   "w": " times",
+   "start": 122.8,
+   "end": 122.96,
+   "p": 0.996
+  },
+  {
+   "w": " per",
+   "start": 122.96,
+   "end": 123.18,
+   "p": 0.966
+  },
+  {
+   "w": " second",
+   "start": 123.18,
+   "end": 123.38,
+   "p": 0.998
+  },
+  {
+   "w": " to",
+   "start": 123.38,
+   "end": 123.56,
+   "p": 0.991
+  },
+  {
+   "w": " help",
+   "start": 123.56,
+   "end": 123.68,
+   "p": 0.997
+  },
+  {
+   "w": " referees",
+   "start": 123.68,
+   "end": 124.08,
+   "p": 0.993
+  },
+  {
+   "w": " make",
+   "start": 124.08,
+   "end": 124.38,
+   "p": 0.995
+  },
+  {
+   "w": " calls.",
+   "start": 124.38,
+   "end": 124.74,
+   "p": 0.999
+  },
+  {
+   "w": " A",
+   "start": 125.06,
+   "end": 125.18,
+   "p": 0.989
+  },
+  {
+   "w": " similar",
+   "start": 125.18,
+   "end": 125.44,
+   "p": 0.992
+  },
+  {
+   "w": " but",
+   "start": 125.44,
+   "end": 125.62,
+   "p": 0.688
+  },
+  {
+   "w": " more",
+   "start": 125.62,
+   "end": 125.76,
+   "p": 0.998
+  },
+  {
+   "w": " sophisticated",
+   "start": 125.76,
+   "end": 126.14,
+   "p": 0.999
+  },
+  {
+   "w": " system",
+   "start": 126.14,
+   "end": 126.6,
+   "p": 0.997
+  },
+  {
+   "w": " could",
+   "start": 126.6,
+   "end": 126.82,
+   "p": 0.985
+  },
+  {
+   "w": " help",
+   "start": 126.82,
+   "end": 127.02,
+   "p": 0.992
+  },
+  {
+   "w": " track",
+   "start": 127.02,
+   "end": 127.34,
+   "p": 0.991
+  },
+  {
+   "w": " the",
+   "start": 127.34,
+   "end": 127.52,
+   "p": 0.98
+  },
+  {
+   "w": " incoming",
+   "start": 127.52,
+   "end": 127.78,
+   "p": 0.999
+  },
+  {
+   "w": " raindrops.",
+   "start": 127.78,
+   "end": 128.32,
+   "p": 0.969
+  },
+  {
+   "w": " As",
+   "start": 128.82,
+   "end": 128.92,
+   "p": 0.981
+  },
+  {
+   "w": " for",
+   "start": 128.92,
+   "end": 129.12,
+   "p": 0.999
+  },
+  {
+   "w": " targeting,",
+   "start": 129.12,
+   "end": 129.5,
+   "p": 0.995
+  },
+  {
+   "w": " adaptive",
+   "start": 129.74,
+   "end": 130.0,
+   "p": 0.931
+  },
+  {
+   "w": " optics",
+   "start": 130.0,
+   "end": 130.42,
+   "p": 0.998
+  },
+  {
+   "w": " allows",
+   "start": 130.42,
+   "end": 130.76,
+   "p": 0.991
+  },
+  {
+   "w": " for",
+   "start": 130.76,
+   "end": 131.0,
+   "p": 0.94
+  },
+  {
+   "w": " extremely",
+   "start": 131.0,
+   "end": 131.44,
+   "p": 0.999
+  },
+  {
+   "w": " fast",
+   "start": 131.44,
+   "end": 131.82,
+   "p": 0.993
+  },
+  {
+   "w": " and",
+   "start": 131.82,
+   "end": 131.98,
+   "p": 0.995
+  },
+  {
+   "w": " precise",
+   "start": 131.98,
+   "end": 132.32,
+   "p": 0.999
+  },
+  {
+   "w": " control",
+   "start": 132.32,
+   "end": 132.7,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 132.7,
+   "end": 132.9,
+   "p": 0.999
+  },
+  {
+   "w": " beams",
+   "start": 132.9,
+   "end": 133.08,
+   "p": 0.994
+  },
+  {
+   "w": " of",
+   "start": 133.08,
+   "end": 133.26,
+   "p": 0.998
+  },
+  {
+   "w": " light.",
+   "start": 133.26,
+   "end": 133.48,
+   "p": 0.998
+  },
+  {
+   "w": " Covering",
+   "start": 133.8,
+   "end": 134.1,
+   "p": 0.984
+  },
+  {
+   "w": " an",
+   "start": 134.1,
+   "end": 134.16,
+   "p": 0.992
+  },
+  {
+   "w": " area",
+   "start": 134.16,
+   "end": 134.34,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 134.34,
+   "end": 134.5,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 134.5,
+   "end": 134.64,
+   "p": 0.975
+  },
+  {
+   "w": " square",
+   "start": 134.64,
+   "end": 134.76,
+   "p": 0.996
+  },
+  {
+   "w": " meter",
+   "start": 134.76,
+   "end": 135.0,
+   "p": 0.954
+  },
+  {
+   "w": " would",
+   "start": 135.0,
+   "end": 135.2,
+   "p": 0.989
+  },
+  {
+   "w": " require",
+   "start": 135.2,
+   "end": 135.52,
+   "p": 0.996
+  },
+  {
+   "w": " something",
+   "start": 135.52,
+   "end": 135.84,
+   "p": 0.991
+  },
+  {
+   "w": " like",
+   "start": 135.84,
+   "end": 136.18,
+   "p": 0.997
+  },
+  {
+   "w": " 500",
+   "start": 136.18,
+   "end": 136.78,
+   "p": 0.851
+  },
+  {
+   "w": " direct",
+   "start": 136.78,
+   "end": 137.16,
+   "p": 0.996
+  },
+  {
+   "w": " pulses",
+   "start": 137.16,
+   "end": 137.52,
+   "p": 1.0
+  },
+  {
+   "w": " of",
+   "start": 137.52,
+   "end": 137.76,
+   "p": 0.997
+  },
+  {
+   "w": " light",
+   "start": 137.76,
+   "end": 137.88,
+   "p": 0.998
+  },
+  {
+   "w": " per",
+   "start": 137.88,
+   "end": 138.12,
+   "p": 0.996
+  },
+  {
+   "w": " second.",
+   "start": 138.12,
+   "end": 138.44,
+   "p": 0.999
+  },
+  {
+   "w": " This",
+   "start": 138.66,
+   "end": 138.86,
+   "p": 0.995
+  },
+  {
+   "w": " is",
+   "start": 138.86,
+   "end": 139.0,
+   "p": 0.999
+  },
+  {
+   "w": " slow",
+   "start": 139.0,
+   "end": 139.2,
+   "p": 0.993
+  },
+  {
+   "w": " enough",
+   "start": 139.2,
+   "end": 139.38,
+   "p": 0.999
+  },
+  {
+   "w": " that",
+   "start": 139.38,
+   "end": 139.58,
+   "p": 0.984
+  },
+  {
+   "w": " you",
+   "start": 139.58,
+   "end": 139.72,
+   "p": 0.998
+  },
+  {
+   "w": " wouldn't",
+   "start": 139.72,
+   "end": 139.94,
+   "p": 0.994
+  },
+  {
+   "w": " run",
+   "start": 139.94,
+   "end": 140.12,
+   "p": 0.996
+  },
+  {
+   "w": " into",
+   "start": 140.12,
+   "end": 140.34,
+   "p": 0.996
+  },
+  {
+   "w": " any",
+   "start": 140.34,
+   "end": 140.56,
+   "p": 0.993
+  },
+  {
+   "w": " direct",
+   "start": 140.56,
+   "end": 140.94,
+   "p": 0.952
+  },
+  {
+   "w": " problems",
+   "start": 140.94,
+   "end": 141.28,
+   "p": 0.995
+  },
+  {
+   "w": " with",
+   "start": 141.28,
+   "end": 141.46,
+   "p": 0.992
+  },
+  {
+   "w": " relativity,",
+   "start": 141.46,
+   "end": 141.82,
+   "p": 0.399
+  },
+  {
+   "w": " but",
+   "start": 142.18,
+   "end": 142.36,
+   "p": 0.988
+  },
+  {
+   "w": " the",
+   "start": 142.36,
+   "end": 142.46,
+   "p": 0.988
+  },
+  {
+   "w": " device",
+   "start": 142.46,
+   "end": 142.68,
+   "p": 0.997
+  },
+  {
+   "w": " would,",
+   "start": 142.68,
+   "end": 142.94,
+   "p": 0.991
+  },
+  {
+   "w": " at",
+   "start": 142.96,
+   "end": 143.2,
+   "p": 0.997
+  },
+  {
+   "w": " minimum,",
+   "start": 143.2,
+   "end": 143.44,
+   "p": 0.969
+  },
+  {
+   "w": " need",
+   "start": 143.78,
+   "end": 143.88,
+   "p": 0.984
+  },
+  {
+   "w": " to",
+   "start": 143.88,
+   "end": 144.0,
+   "p": 0.991
+  },
+  {
+   "w": " be",
+   "start": 144.0,
+   "end": 144.08,
+   "p": 0.997
+  },
+  {
+   "w": " a",
+   "start": 144.08,
+   "end": 144.16,
+   "p": 0.95
+  },
+  {
+   "w": " lot",
+   "start": 144.16,
+   "end": 144.32,
+   "p": 0.99
+  },
+  {
+   "w": " more",
+   "start": 144.32,
+   "end": 144.48,
+   "p": 0.998
+  },
+  {
+   "w": " complicated",
+   "start": 144.48,
+   "end": 144.88,
+   "p": 0.999
+  },
+  {
+   "w": " than",
+   "start": 144.88,
+   "end": 145.08,
+   "p": 0.987
+  },
+  {
+   "w": " just",
+   "start": 145.08,
+   "end": 145.24,
+   "p": 0.944
+  },
+  {
+   "w": " a",
+   "start": 145.24,
+   "end": 145.42,
+   "p": 0.992
+  },
+  {
+   "w": " laser",
+   "start": 145.42,
+   "end": 145.64,
+   "p": 0.998
+  },
+  {
+   "w": " pointer",
+   "start": 145.64,
+   "end": 145.9,
+   "p": 0.988
+  },
+  {
+   "w": " on",
+   "start": 145.9,
+   "end": 146.04,
+   "p": 0.989
+  },
+  {
+   "w": " a",
+   "start": 146.04,
+   "end": 146.18,
+   "p": 0.995
+  },
+  {
+   "w": " swiveling",
+   "start": 146.18,
+   "end": 146.48,
+   "p": 0.98
+  },
+  {
+   "w": " base.",
+   "start": 146.48,
+   "end": 146.74,
+   "p": 0.928
+  },
+  {
+   "w": " It",
+   "start": 147.3,
+   "end": 147.4,
+   "p": 0.979
+  },
+  {
+   "w": " might",
+   "start": 147.4,
+   "end": 147.52,
+   "p": 0.995
+  },
+  {
+   "w": " seem",
+   "start": 147.52,
+   "end": 147.74,
+   "p": 0.997
+  },
+  {
+   "w": " easier",
+   "start": 147.74,
+   "end": 148.04,
+   "p": 0.985
+  },
+  {
+   "w": " to",
+   "start": 148.04,
+   "end": 148.34,
+   "p": 0.994
+  },
+  {
+   "w": " forget",
+   "start": 148.34,
+   "end": 148.66,
+   "p": 0.989
+  },
+  {
+   "w": " about",
+   "start": 148.66,
+   "end": 148.86,
+   "p": 0.997
+  },
+  {
+   "w": " targeting",
+   "start": 148.86,
+   "end": 149.16,
+   "p": 0.992
+  },
+  {
+   "w": " completely",
+   "start": 149.16,
+   "end": 149.64,
+   "p": 0.99
+  },
+  {
+   "w": " and",
+   "start": 149.64,
+   "end": 149.9,
+   "p": 0.913
+  },
+  {
+   "w": " just",
+   "start": 149.9,
+   "end": 150.08,
+   "p": 0.989
+  },
+  {
+   "w": " fire",
+   "start": 150.08,
+   "end": 150.4,
+   "p": 0.97
+  },
+  {
+   "w": " lasers",
+   "start": 150.4,
+   "end": 150.72,
+   "p": 0.993
+  },
+  {
+   "w": " in",
+   "start": 150.72,
+   "end": 150.92,
+   "p": 0.997
+  },
+  {
+   "w": " random",
+   "start": 150.92,
+   "end": 151.16,
+   "p": 0.998
+  },
+  {
+   "w": " directions.",
+   "start": 151.16,
+   "end": 151.62,
+   "p": 0.995
+  },
+  {
+   "w": " If",
+   "start": 152.04,
+   "end": 152.18,
+   "p": 0.984
+  },
+  {
+   "w": " you",
+   "start": 152.18,
+   "end": 152.3,
+   "p": 0.999
+  },
+  {
+   "w": " aim",
+   "start": 152.3,
+   "end": 152.4,
+   "p": 1.0
+  },
+  {
+   "w": " a",
+   "start": 152.4,
+   "end": 152.54,
+   "p": 0.989
+  },
+  {
+   "w": " laser",
+   "start": 152.54,
+   "end": 152.74,
+   "p": 0.993
+  },
+  {
+   "w": " beam",
+   "start": 152.74,
+   "end": 152.88,
+   "p": 0.996
+  },
+  {
+   "w": " in",
+   "start": 152.88,
+   "end": 152.98,
+   "p": 0.991
+  },
+  {
+   "w": " a",
+   "start": 152.98,
+   "end": 153.1,
+   "p": 0.982
+  },
+  {
+   "w": " random",
+   "start": 153.1,
+   "end": 153.28,
+   "p": 1.0
+  },
+  {
+   "w": " direction,",
+   "start": 153.28,
+   "end": 153.66,
+   "p": 0.996
+  },
+  {
+   "w": " how",
+   "start": 153.92,
+   "end": 154.04,
+   "p": 0.997
+  },
+  {
+   "w": " far",
+   "start": 154.04,
+   "end": 154.22,
+   "p": 0.998
+  },
+  {
+   "w": " will",
+   "start": 154.22,
+   "end": 154.38,
+   "p": 0.995
+  },
+  {
+   "w": " it",
+   "start": 154.38,
+   "end": 154.48,
+   "p": 0.994
+  },
+  {
+   "w": " go",
+   "start": 154.48,
+   "end": 154.64,
+   "p": 0.997
+  },
+  {
+   "w": " before",
+   "start": 154.64,
+   "end": 154.9,
+   "p": 0.992
+  },
+  {
+   "w": " it",
+   "start": 154.9,
+   "end": 155.0,
+   "p": 0.994
+  },
+  {
+   "w": " hits",
+   "start": 155.0,
+   "end": 155.14,
+   "p": 0.99
+  },
+  {
+   "w": " a",
+   "start": 155.14,
+   "end": 155.26,
+   "p": 0.995
+  },
+  {
+   "w": " drop?",
+   "start": 155.26,
+   "end": 155.5,
+   "p": 0.991
+  },
+  {
+   "w": " This",
+   "start": 155.92,
+   "end": 156.16,
+   "p": 0.985
+  },
+  {
+   "w": " is",
+   "start": 156.16,
+   "end": 156.3,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 156.3,
+   "end": 156.38,
+   "p": 0.978
+  },
+  {
+   "w": " pretty",
+   "start": 156.38,
+   "end": 156.52,
+   "p": 0.997
+  },
+  {
+   "w": " easy",
+   "start": 156.52,
+   "end": 156.74,
+   "p": 0.995
+  },
+  {
+   "w": " question",
+   "start": 156.74,
+   "end": 156.94,
+   "p": 0.994
+  },
+  {
+   "w": " to",
+   "start": 156.94,
+   "end": 157.16,
+   "p": 0.998
+  },
+  {
+   "w": " answer,",
+   "start": 157.16,
+   "end": 157.44,
+   "p": 0.999
+  },
+  {
+   "w": " it's",
+   "start": 157.64,
+   "end": 157.86,
+   "p": 0.969
+  },
+  {
+   "w": " the",
+   "start": 157.86,
+   "end": 158.0,
+   "p": 0.994
+  },
+  {
+   "w": " same",
+   "start": 158.0,
+   "end": 158.16,
+   "p": 0.999
+  },
+  {
+   "w": " as",
+   "start": 158.16,
+   "end": 158.3,
+   "p": 0.995
+  },
+  {
+   "w": " asking",
+   "start": 158.3,
+   "end": 158.62,
+   "p": 0.994
+  },
+  {
+   "w": " how",
+   "start": 158.62,
+   "end": 158.92,
+   "p": 0.973
+  },
+  {
+   "w": " far",
+   "start": 158.92,
+   "end": 159.1,
+   "p": 0.996
+  },
+  {
+   "w": " you",
+   "start": 159.1,
+   "end": 159.28,
+   "p": 0.991
+  },
+  {
+   "w": " can",
+   "start": 159.28,
+   "end": 159.4,
+   "p": 0.978
+  },
+  {
+   "w": " see",
+   "start": 159.4,
+   "end": 159.56,
+   "p": 0.999
+  },
+  {
+   "w": " in",
+   "start": 159.56,
+   "end": 159.68,
+   "p": 0.991
+  },
+  {
+   "w": " the",
+   "start": 159.68,
+   "end": 159.78,
+   "p": 0.998
+  },
+  {
+   "w": " rain,",
+   "start": 159.78,
+   "end": 160.02,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 160.32,
+   "end": 160.44,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 160.44,
+   "end": 160.52,
+   "p": 0.996
+  },
+  {
+   "w": " answer",
+   "start": 160.52,
+   "end": 160.74,
+   "p": 0.998
+  },
+  {
+   "w": " is",
+   "start": 160.74,
+   "end": 161.0,
+   "p": 0.996
+  },
+  {
+   "w": " at",
+   "start": 161.0,
+   "end": 161.24,
+   "p": 0.816
+  },
+  {
+   "w": " least",
+   "start": 161.24,
+   "end": 161.42,
+   "p": 0.996
+  },
+  {
+   "w": " several",
+   "start": 161.42,
+   "end": 161.82,
+   "p": 0.987
+  },
+  {
+   "w": " hundred",
+   "start": 161.82,
+   "end": 162.08,
+   "p": 0.991
+  },
+  {
+   "w": " meters.",
+   "start": 162.08,
+   "end": 162.32,
+   "p": 0.988
+  },
+  {
+   "w": " So",
+   "start": 162.76,
+   "end": 162.96,
+   "p": 0.982
+  },
+  {
+   "w": " unless",
+   "start": 162.96,
+   "end": 163.22,
+   "p": 0.595
+  },
+  {
+   "w": " you're",
+   "start": 163.22,
+   "end": 163.44,
+   "p": 0.98
+  },
+  {
+   "w": " trying",
+   "start": 163.44,
+   "end": 163.56,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 163.56,
+   "end": 163.66,
+   "p": 0.999
+  },
+  {
+   "w": " protect",
+   "start": 163.66,
+   "end": 163.84,
+   "p": 0.87
+  },
+  {
+   "w": " your",
+   "start": 163.84,
+   "end": 164.04,
+   "p": 0.997
+  },
+  {
+   "w": " whole",
+   "start": 164.04,
+   "end": 164.18,
+   "p": 0.986
+  },
+  {
+   "w": " neighborhood,",
+   "start": 164.18,
+   "end": 164.58,
+   "p": 0.94
+  },
+  {
+   "w": " firing",
+   "start": 164.94,
+   "end": 165.14,
+   "p": 0.997
+  },
+  {
+   "w": " powerful",
+   "start": 165.14,
+   "end": 165.56,
+   "p": 0.994
+  },
+  {
+   "w": " lasers",
+   "start": 165.56,
+   "end": 165.84,
+   "p": 0.996
+  },
+  {
+   "w": " in",
+   "start": 165.84,
+   "end": 166.02,
+   "p": 0.998
+  },
+  {
+   "w": " random",
+   "start": 166.02,
+   "end": 166.3,
+   "p": 0.992
+  },
+  {
+   "w": " directions",
+   "start": 166.3,
+   "end": 166.74,
+   "p": 0.996
+  },
+  {
+   "w": " probably",
+   "start": 166.74,
+   "end": 167.06,
+   "p": 0.995
+  },
+  {
+   "w": " won't",
+   "start": 167.06,
+   "end": 167.46,
+   "p": 0.998
+  },
+  {
+   "w": " help.",
+   "start": 167.46,
+   "end": 167.66,
+   "p": 0.999
+  },
+  {
+   "w": " And",
+   "start": 168.1,
+   "end": 168.38,
+   "p": 0.988
+  },
+  {
+   "w": " honestly,",
+   "start": 168.38,
+   "end": 168.82,
+   "p": 0.598
+  },
+  {
+   "w": " if",
+   "start": 169.02,
+   "end": 169.12,
+   "p": 0.994
+  },
+  {
+   "w": " you",
+   "start": 169.12,
+   "end": 169.22,
+   "p": 0.995
+  },
+  {
+   "w": " are",
+   "start": 169.22,
+   "end": 169.44,
+   "p": 0.847
+  },
+  {
+   "w": " trying",
+   "start": 169.44,
+   "end": 169.62,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 169.62,
+   "end": 169.72,
+   "p": 0.999
+  },
+  {
+   "w": " protect",
+   "start": 169.72,
+   "end": 169.9,
+   "p": 0.998
+  },
+  {
+   "w": " your",
+   "start": 169.9,
+   "end": 170.04,
+   "p": 0.369
+  },
+  {
+   "w": " whole",
+   "start": 170.04,
+   "end": 170.2,
+   "p": 0.68
+  },
+  {
+   "w": " neighborhood,",
+   "start": 170.2,
+   "end": 170.56,
+   "p": 0.992
+  },
+  {
+   "w": " firing",
+   "start": 170.9,
+   "end": 171.1,
+   "p": 0.997
+  },
+  {
+   "w": " powerful",
+   "start": 171.1,
+   "end": 171.54,
+   "p": 0.991
+  },
+  {
+   "w": " lasers",
+   "start": 171.54,
+   "end": 171.84,
+   "p": 0.995
+  },
+  {
+   "w": " in",
+   "start": 171.84,
+   "end": 172.08,
+   "p": 0.997
+  },
+  {
+   "w": " random",
+   "start": 172.08,
+   "end": 172.34,
+   "p": 0.996
+  },
+  {
+   "w": " directions",
+   "start": 172.34,
+   "end": 172.82,
+   "p": 0.995
+  },
+  {
+   "w": " definitely",
+   "start": 172.82,
+   "end": 173.24,
+   "p": 0.973
+  },
+  {
+   "w": " won't",
+   "start": 173.24,
+   "end": 173.76,
+   "p": 0.995
+  },
+  {
+   "w": " help.",
+   "start": 173.76,
+   "end": 173.98,
+   "p": 0.999
+  }
+ ]
+}

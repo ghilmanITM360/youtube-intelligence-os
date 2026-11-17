@@ -1,0 +1,836 @@
+[
+ {
+  "id": "EP0407",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "NO",
+  "desc": "Red handwritten label '6 to 8%' pops in whole inside the green rectangle outline at lower-left-centre, under the dark rates card; Excel sheets and stickman unchanged.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0408",
+  "verdict": "CONFIRMED",
+  "type": "PARTIAL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Row of four Excel sheet icons and the handwritten '6 to 8%' vanish; an upside-down grey robot drops in at top-left. Dark rates card and pointing stickman at right stay.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0409",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A grey circuit-board/chip illustration appears at top-centre between the upside-down robot and empty space; rates card and stickman unchanged.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0410",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A second identical chip illustration appears right of the first at top. Wide diff bbox and I-frame flag are codec spread; only the new chip changed.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0411",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "NO",
+  "desc": "Red handwritten '10 to 14%' pops in whole inside the green outline box below the rates card (native crop confirms complete text on the first frame).",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0412",
+  "verdict": "CONFIRMED",
+  "type": "PARTIAL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Both chips, the upside-down robot and the '10 to 14%' note are cleared; a small upright robot appears at upper-left. Rates card and stickman remain.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0413",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "NO",
+  "desc": "A second small upright grey robot clone appears to the right of the first at the top row (x about 0.36).",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0414",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "NO",
+  "desc": "A third small robot clone pops in at x about 0.50 in the top row, continuing the left-to-right row build.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0415",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "NO",
+  "desc": "A fourth small robot clone pops in at x about 0.63, finishing a row of four identical robots above the rates card.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0416",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "NO",
+  "desc": "Red handwritten '15 to 20%' pops in whole inside the green box under the rates card; four robots and stickman unchanged.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0417",
+  "verdict": "CONFIRMED",
+  "type": "ZOOM_OR_SCALE",
+  "state_boundary": "YES",
+  "desc": "Robots and handwritten note drop out; dark rates card and stickman grow together toward centre while the card extends downward to reveal the NPV sensitivity table with a green row outline drawing on.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Card and stickman scale up from lower-right toward centre; card height extends downward to expose the NPV table; green outline draws on row 6%.",
+   "easing": "UNKNOWN",
+   "duration_note": "Over 26 frames (~1.08 s). Robots/note vanish on the first frame; steady scale-up with small per-frame steps, easing not separable at 2-frame sampling."
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "SUB134",
+  "verdict": "NOT_A_CHANGE",
+  "type": "OTHER",
+  "state_boundary": "NO",
+  "desc": "No visible difference between pre and stable in the stickman/table crop; 6 changed pixels, native crops identical.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0418",
+  "verdict": "CONFIRMED",
+  "type": "POSE_SWAP",
+  "state_boundary": "NO",
+  "desc": "Stickman at right of the NPV table changes from a smile to a startled open mouth with hands raised to chest; an orange underline begins to draw under the 10% row.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "SUB135",
+  "verdict": "CONFIRMED",
+  "type": "DRAW_ON_OR_REVEAL",
+  "state_boundary": "NO",
+  "desc": "Orange outline over the 10% table row extends one more step leftward along its top edge; crop sequence shows the line growing right-to-left across frames 14036-14043. Not visible in the single-frame diff.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "MEDIUM"
+ },
+ {
+  "id": "SUB136",
+  "verdict": "CONFIRMED",
+  "type": "DRAW_ON_OR_REVEAL",
+  "state_boundary": "NO",
+  "desc": "Orange outline around the 10% row closes (left, bottom and right edges) completing a box matching the green 6% box; stickman static.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Orange rectangle edges draw on around the 10% row until the box closes.",
+   "easing": "linear",
+   "duration_note": "6 frames (~0.25 s); thin line, small per-frame change"
+  },
+  "confidence": "MEDIUM"
+ },
+ {
+  "id": "EP0419",
+  "verdict": "CONFIRMED",
+  "type": "EXPRESSION_CHANGE",
+  "state_boundary": "NO",
+  "desc": "Stickman face changes from open-mouth to wide round eyes with a frown and arms drop; a red line starts to draw under the 12% row.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0420",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Dark NPV table card and stickman replaced by a news headline card (NYT, 6 hours ago) at top over a large green cartoon US map with wide eyes and smile, framed tight.",
+  "shot_boundary": "YES",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0421",
+  "verdict": "CONFIRMED",
+  "type": "ELEMENT_SWAP",
+  "state_boundary": "YES",
+  "desc": "Headline card at top swaps from the NYT story to a 'Conduit Street Blog' card with a Federal Reserve seal thumbnail; map character below unchanged.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0422",
+  "verdict": "CONFIRMED",
+  "type": "ELEMENT_SWAP",
+  "state_boundary": "YES",
+  "desc": "Card swaps to an NBC News headline with a man-at-podium thumbnail and a slightly taller card; map character unchanged.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0423",
+  "verdict": "CONFIRMED",
+  "type": "ELEMENT_SWAP",
+  "state_boundary": "YES",
+  "desc": "Card swaps to a Fox Business headline with a different speaker thumbnail; same card slot, map character unchanged.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0424",
+  "verdict": "CONFIRMED",
+  "type": "ELEMENT_SWAP",
+  "state_boundary": "YES",
+  "desc": "Card swaps to a WSJ headline (unanimous vote story, 1 day ago) with speaker thumbnail; card is shorter; map unchanged.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "SUB137",
+  "verdict": "NOT_A_CHANGE",
+  "type": "OTHER",
+  "state_boundary": "NO",
+  "desc": "Zero changed pixels; WSJ card and map identical across pre, cut and stable crops.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0425",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Close-up news card plus giant map replaced by a wide shot: full-body green US map character with legs, Alaska/Hawaii inset, holding a DEBT document, at left on white.",
+  "shot_boundary": "AMBIGUOUS",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0426",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "NO",
+  "desc": "A green dollar-sign money bag appears at right-centre (x about 0.75, y about 0.65) beside the empty right half.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0427",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A 'RENT - pay or be kicked out' document appears above the money bag at upper right.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0428",
+  "verdict": "CONFIRMED",
+  "type": "ELEMENT_SWAP",
+  "state_boundary": "YES",
+  "desc": "Rent document and the money bag disappear; a calendar icon with a small money bag overlapping it appears at upper centre-right.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0429",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A second calendar-with-money-bag icon appears lower and further right than the first.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0430",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A third calendar-with-money-bag icon appears at lower centre-right, completing a staggered column of three.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0431",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Map character, DEBT document and three calendars all replaced by a lone smiling stickman with spiky black hair, hands on hips, centred on white.",
+  "shot_boundary": "YES",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0432",
+  "verdict": "CONFIRMED",
+  "type": "POSE_SWAP",
+  "state_boundary": "NO",
+  "desc": "Stickman's right arm lifts and bends upward with a small V/pointing hand while the left arm stays on the hip; face unchanged.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0433",
+  "verdict": "RECLASSIFIED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Hard cut: stickman replaced by red 'Way 1' title at top-left. A small crayon-style blue spiky character clip captioned 'Gotta go fast' runs left to right across the middle; then a DEBT document appears.",
+  "shot_boundary": "YES",
+  "motion": {
+   "path": "Meme clip enters at left edge ~f14342, travels left-to-right at roughly 0.03 frame-width per frame (running animation inside the clip), exits right edge ~f14373; DEBT document pops in at f14374.",
+   "easing": "linear",
+   "duration_note": "Whole interval 35 frames (~1.46 s); the clip crosses in ~1.3 s"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0434",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A second DEBT document appears lower-right of the first, slightly offset downward, under the red 'Way 1' title.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0435",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A third DEBT document appears to the right, higher than the middle one, forming a staggered row of three.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0436",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "Red balloons appear above each of the three DEBT documents with strings attached; balloon heights vary, centre one lower.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0437",
+  "verdict": "CONFIRMED",
+  "type": "OBJECT_MOTION",
+  "state_boundary": "NO",
+  "desc": "Balloons rise and the three DEBT documents realign into an even row at the same height; balloons enlarge slightly. Same objects, no new elements.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Balloons float upward and slightly outward; documents lift from staggered to level and shift up about 0.05 frame-height.",
+   "easing": "ease-out",
+   "duration_note": "14 frames (~0.58 s); movement decelerates toward the end"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0438",
+  "verdict": "CONFIRMED",
+  "type": "PARTIAL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Balloons and DEBT documents replaced by a full-width article screenshot (PitchBook page, CoreWeave $2.6B term loan headline) in a bordered browser frame; red 'Way 1' title stays.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0439",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "Smiling stickman enters at lower-left over the article screenshot, hand near a small round cookie icon; yellow highlight on a sentence already present.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0440",
+  "verdict": "CONFIRMED",
+  "type": "ZOOM_OR_SCALE",
+  "state_boundary": "YES",
+  "desc": "Article screenshot scrolls up and zooms in on the body text while the stickman leaves lower-left and re-enters at right holding a long brown pointer; masthead/hero image exits top.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Screenshot scales up and pans upward until body-text paragraphs fill the frame; stickman exits and reappears at right with a pointer.",
+   "easing": "ease-in-out",
+   "duration_note": "22 frames (~0.92 s); slow start, fast middle, slow settle (cut tiles SD260-SD272)"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "SUB138",
+  "verdict": "CONFIRMED",
+  "type": "HIGHLIGHT_ADD",
+  "state_boundary": "NO",
+  "desc": "Yellow marker highlight extends from the word 'The' across 'yield-to-maturity is 10.44%' over the last sentence of the first paragraph.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Highlight band grows left-to-right along one text line.",
+   "easing": "linear",
+   "duration_note": "10 frames (~0.42 s)"
+  },
+  "confidence": "MEDIUM"
+ },
+ {
+  "id": "SUB139",
+  "verdict": "NOT_A_CHANGE",
+  "type": "OTHER",
+  "state_boundary": "NO",
+  "desc": "Complete highlight already visible before and after; native crops identical, 20 changed pixels, no visible edit.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "MEDIUM"
+ },
+ {
+  "id": "EP0441",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Highlighted article text, stickman and 'Way 1' title replaced by a Federal Reserve building icon at left and an orange percent-sign circle at right on white.",
+  "shot_boundary": "YES",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0442",
+  "verdict": "CONFIRMED",
+  "type": "OBJECT_MOTION",
+  "state_boundary": "NO",
+  "desc": "The orange percent circle moves straight up from the middle-right to the upper-right corner while the Federal Reserve building stays put.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Percent circle translates upward about 0.28 frame-height with a slight outward drift, then rests near the top-right.",
+   "easing": "ease-out",
+   "duration_note": "23 frames (~0.96 s); per-frame displacement shrinks toward the end"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0443",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Federal Reserve building and percent circle removed; a pink LOAN document with red title and squiggle lines appears at left-centre.",
+  "shot_boundary": "YES",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0444",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A green dollar money bag appears overlapping the lower-right corner of the LOAN document.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0445",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A second money bag appears to the right of the first, slightly lower and overlapping it.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0446",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A worried ginger-haired stickman holding a brown wallet enters on the right (x about 0.75), facing the LOAN document and bags.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0447",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Loan, bags and ginger stickman cleared; the frame becomes empty white except a new red 'Way 2' title at top-left.",
+  "shot_boundary": "YES",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0448",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A green cartoon tortoise appears at left-lower (x about 0.1-0.3, y about 0.5-0.7) under the 'Way 2' title.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0449",
+  "verdict": "CONFIRMED",
+  "type": "CHARACTER_ANIMATION",
+  "state_boundary": "NO",
+  "desc": "The tortoise walks slowly to the right by about 0.05 frame-width with unchanged pose; nothing else changes.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Whole tortoise sprite translates right about 48 px at 960-wide scale.",
+   "easing": "linear",
+   "duration_note": "14 frames (~0.58 s), walking pace"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0450",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A text card 'KEY TAKEAWAYS' with four bullet points and 'Source: Investopedia' pops in at once to the right of the tortoise.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0451",
+  "verdict": "CONFIRMED",
+  "type": "PARTIAL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Tortoise and takeaways text card removed; a pink LOAN document appears at the right side under 'Way 2'.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0452",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "Grey old-man beard, moustache and side hair sticker is drawn over the LOAN document, making it look like an elderly face.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0453",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A yellow ornate BOND certificate appears at left of the bearded LOAN document.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0454",
+  "verdict": "CONFIRMED",
+  "type": "PARTIAL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Grey bond and bearded loan documents removed; a skeptical stickman with raised eyebrow and flat mouth appears at left under 'Way 2'.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0455",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A second stick figure with brown hair, tan skin and a shrugging pose enters at right of the skeptical stickman.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0456",
+  "verdict": "CONFIRMED",
+  "type": "PARTIAL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Both stickmen replaced by a bald man with glasses, green tie, hand on chin and a briefcase of cash at left; a grey BOND certificate at right.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0457",
+  "verdict": "CONFIRMED",
+  "type": "POSE_SWAP",
+  "state_boundary": "NO",
+  "desc": "The glasses man's hand drops from chin to hips with a flatter face, and the BOND certificate turns from grey to yellow with orange scrolls.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0458",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "An orange percent-sign circle appears overlapping the lower-right corner of the yellow BOND certificate.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0459",
+  "verdict": "RECLASSIFIED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Hard cut at the first frame: man, bond, percent and 'Way 2' title replaced by a 'BIG BUSINESS' blue skyscraper at left and a LOAN document that then slides left toward it.",
+  "shot_boundary": "YES",
+  "motion": {
+   "path": "After the cut the LOAN document slides leftward about 0.17 frame-width toward the building and settles.",
+   "easing": "ease-out",
+   "duration_note": "25 frames (~1.04 s); steps shrink near the end"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0460",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "NO",
+  "desc": "A small orange percent circle pops in at the lower-right corner of the LOAN document.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0461",
+  "verdict": "CONFIRMED",
+  "type": "OBJECT_MOTION",
+  "state_boundary": "NO",
+  "desc": "LOAN document and small percent circle slide down and out of frame; the document re-enters from the right and slides left to rest slightly higher than before; the percent circle does not return.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "LOAN exits downward with the percent circle at ~f15211, re-enters from the right edge at ~f15222 and glides left to rest by f15234.",
+   "easing": "ease-out",
+   "duration_note": "35 frames (~1.46 s); out-and-back move; building stays"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0462",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A large orange percent-sign circle drops in from above to the right of the LOAN document and settles at the right of the trio.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Percent circle enters from the top edge and settles at right-centre at larger scale.",
+   "easing": "ease-out",
+   "duration_note": "18 frames (~0.75 s)"
+  },
+  "confidence": "MEDIUM"
+ },
+ {
+  "id": "EP0463",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Skyscraper, LOAN and percent icon replaced by a stepped line chart of cumulative rate increases for several tightening periods, labelled Federal Reserve Bank of St. Louis.",
+  "shot_boundary": "YES",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0464",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A stickman holding a long brown pointer enters on the right, framed from the chest up, beside the chart.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0465",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "NO",
+  "desc": "Red handwritten '3%' pops in at the top right of the chart area above the stickman's pointer.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0466",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Chart, '3%' note and stickman replaced by a small, zoomed-out Federal Reserve web page (Board of Governors header) that zooms and scrolls toward a projections table.",
+  "shot_boundary": "YES",
+  "motion": {
+   "path": "Page appears at reduced scale showing its masthead, then scales up and scrolls so Table 1 fills the view.",
+   "easing": "ease-in-out",
+   "duration_note": "10 frames (~0.42 s) following a hard cut at f15410"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "SUB140",
+  "verdict": "NOT_A_CHANGE",
+  "type": "OTHER",
+  "state_boundary": "NO",
+  "desc": "Federal Reserve page, table and cursor identical across pre and stable crops; 32 changed pixels, no visible edit.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0467",
+  "verdict": "CONFIRMED",
+  "type": "PAN_OR_SCROLL",
+  "state_boundary": "NO",
+  "desc": "The Federal Reserve page scrolls down from Table 1 to the real-GDP and unemployment tables; no new objects.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Vertical scroll downward through the page.",
+   "easing": "UNKNOWN",
+   "duration_note": "20 frames (~0.83 s); covers several table heights, speed varies"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0468",
+  "verdict": "CONFIRMED",
+  "type": "PAN_OR_SCROLL",
+  "state_boundary": "NO",
+  "desc": "Scroll continues down past the inflation tables to the FOMC participants' midpoint table and the start of Figure 3.A.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Vertical scroll downward.",
+   "easing": "ease-out",
+   "duration_note": "29 frames (~1.21 s); slows into rest on Figure 2"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0469",
+  "verdict": "CONFIRMED",
+  "type": "ZOOM_OR_SCALE",
+  "state_boundary": "YES",
+  "desc": "Page zooms into the midpoint table (Figure 2) filling the frame, then a pink box outlines the 2026 column and blue boxes outline the 4.375 and 4.125 rows.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Camera-style zoom-in and pan onto the table; pink column outline and two blue row outlines appear near the end.",
+   "easing": "ease-in-out",
+   "duration_note": "26 frames (~1.08 s); highlights appear in the last ~9 frames"
+  },
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0470",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Zoomed Federal Reserve table with pink/blue boxes replaced by a Conference Board article page: heading 'Trusted Insights for What's Ahead' with bullets on expected rate hikes.",
+  "shot_boundary": "YES",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0471",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "A worried stickman with a pointer enters at lower-left of the article, and a yellow highlight appears over the bullet about three consecutive rate hikes.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0472",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Conference Board page and stickman replaced by a Benzinga page: dark AI-themed hero banner with a stock list at right and three paragraphs of article text below.",
+  "shot_boundary": "YES",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "SUB141",
+  "verdict": "CONFIRMED",
+  "type": "HIGHLIGHT_ADD",
+  "state_boundary": "NO",
+  "desc": "Orange highlight marker sweeps along the first line of the second Benzinga paragraph ('In an analyst report...'), growing from the left edge.",
+  "shot_boundary": "NO",
+  "motion": {
+   "path": "Highlight band extends left-to-right along line one.",
+   "easing": "linear",
+   "duration_note": "12 frames (~0.5 s)"
+  },
+  "confidence": "MEDIUM"
+ },
+ {
+  "id": "EP0473",
+  "verdict": "CONFIRMED",
+  "type": "HIGHLIGHT_ADD",
+  "state_boundary": "NO",
+  "desc": "Orange highlight finishes the first line ('through') and wraps to the second line, covering '2030.'; text unchanged.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0474",
+  "verdict": "CONFIRMED",
+  "type": "FULL_REPLACE",
+  "state_boundary": "YES",
+  "desc": "Highlighted Benzinga page replaced by a stickman with a pointer at left and a blank green chalkboard in a brown frame at right on white.",
+  "shot_boundary": "YES",
+  "motion": null,
+  "confidence": "HIGH"
+ },
+ {
+  "id": "EP0475",
+  "verdict": "CONFIRMED",
+  "type": "ADDITIVE_ENTRY",
+  "state_boundary": "YES",
+  "desc": "White chalk text appears on the board ('Like that friend who asks for money / they just KEEP ASKING') and the stickman's pointer arm swings up to the text.",
+  "shot_boundary": "NO",
+  "motion": null,
+  "confidence": "HIGH"
+ }
+]

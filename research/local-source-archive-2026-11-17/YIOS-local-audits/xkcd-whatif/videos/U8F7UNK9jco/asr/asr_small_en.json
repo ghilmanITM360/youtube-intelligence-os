@@ -1,0 +1,4030 @@
+{
+ "tool": "faster-whisper 1.2.1",
+ "ctranslate2": "4.8.5",
+ "model": "small.en",
+ "language": "en",
+ "language_prob": 1,
+ "duration_s": 165.51,
+ "runtime_s": 31.5,
+ "label": "PROVISIONAL_ASR_NOT_LISTENING",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 1.78,
+   "text": "This question comes from Michael, who asks,",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 2.18,
+   "end": 4.84,
+   "text": "what's the longest possible sunset you can experience while driving,",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 5.0,
+   "end": 7.28,
+   "text": "assuming you're obeying the speed limit and driving on paved roads?",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 7.78,
+   "end": 10.14,
+   "text": "To start, we have to define what we mean by sunset.",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 12.02,
+   "end": 15.78,
+   "text": "For the purpose of our question, sunset starts the instant the sun touches the horizon",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 15.78,
+   "end": 17.44,
+   "text": "and ends when it disappears completely.",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 17.8,
+   "end": 19.94,
+   "text": "Which means that, for us, this is not a sunset.",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 20.46,
+   "end": 21.8,
+   "text": "This is also not a sunset.",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 22.32,
+   "end": 23.82,
+   "text": "This is definitely not a sunset.",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 24.34,
+   "end": 27.06,
+   "text": "And no matter what happens here, this will not be a sunset.",
+   "avg_logprob": -0.116,
+   "no_speech_prob": 0.003
+  },
+  {
+   "start": 27.06,
+   "end": 31.32,
+   "text": "If the sun touches the horizon and then it lifts back up, the sunset is disqualified.",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 31.98,
+   "end": 35.36,
+   "text": "For a sunset to count, the sun also can't just disappear behind a nearby hill.",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 35.68,
+   "end": 37.78,
+   "text": "It needs to set behind the ideal ice horizon.",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 38.12,
+   "end": 40.2,
+   "text": "Otherwise, if you could use arbitrary obstacles like that,",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 40.34,
+   "end": 43.04,
+   "text": "you could cause a sunset whenever you wanted just by hiding behind a rock.",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 43.5,
+   "end": 46.12,
+   "text": "At the equator, an average sunset is just over two minutes long.",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 46.42,
+   "end": 49.34,
+   "text": "In places like London, England, it can take between three and five minutes.",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 49.72,
+   "end": 52.18,
+   "text": "At London's latitude, the Earth's surface is moving from west to east",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 52.18,
+   "end": 53.8,
+   "text": "at about a thousand kilometers per hour.",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 54.0,
+   "end": 55.62,
+   "text": "So if you fly west in a commercial airliner,",
+   "avg_logprob": -0.072,
+   "no_speech_prob": 0.054
+  },
+  {
+   "start": 55.62,
+   "end": 57.6,
+   "text": "you can experience an arbitrarily long sunset.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 57.96,
+   "end": 60.84,
+   "text": "Or at least, you can until you run out of fuel 15 or 20 hours in.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 61.2,
+   "end": 63.64,
+   "text": "But Michael's question was about driving to extend the sunset.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 64.1,
+   "end": 67.6,
+   "text": "Intuitively, it seems like we probably want to be as far north or maybe south as possible.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 67.84,
+   "end": 70.46,
+   "text": "The closer we are to the pole, the easier it is to keep up with the sun.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 71.04,
+   "end": 73.92,
+   "text": "Unfortunately, there are no paved roads anywhere near either pole.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 74.28,
+   "end": 76.6,
+   "text": "The closest road that qualifies is probably in Long Erebyen",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 76.6,
+   "end": 77.98,
+   "text": "on the island of Svalbard, Norway.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 78.32,
+   "end": 80.54,
+   "text": "The longest sunset there lasts just under an hour.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 80.74,
+   "end": 82.36,
+   "text": "Although, it doesn't matter if you drive west",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 82.36,
+   "end": 84.82,
+   "text": "because the road's too short for your movement to make much difference.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 84.82,
+   "end": 88.16,
+   "text": "In general, driving west to keep up with the sun isn't a viable strategy.",
+   "avg_logprob": -0.042,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 88.54,
+   "end": 90.3,
+   "text": "Even at the northernmost tip of mainland Norway,",
+   "avg_logprob": -0.042,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 90.56,
+   "end": 93.54,
+   "text": "you'd have to travel at about half the speed of sound to keep up with the sun.",
+   "avg_logprob": -0.042,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 94.12,
+   "end": 95.34,
+   "text": "Luckily, there's a better approach.",
+   "avg_logprob": -0.042,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 95.82,
+   "end": 99.72,
+   "text": "If you're in northern Scandinavia on a day when the sun just barely sets and then rises again,",
+   "avg_logprob": -0.042,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 100.02,
+   "end": 105.12,
+   "text": "the day-night line moves northwest, then slows, reverses, and heads back to the southwest.",
+   "avg_logprob": -0.042,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 105.74,
+   "end": 107.58,
+   "text": "To get a long sunset, the strategy is simple.",
+   "avg_logprob": -0.042,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 108.0,
+   "end": 110.28,
+   "text": "Sit in your car until the sun first touches the horizon,",
+   "avg_logprob": -0.042,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 110.56,
+   "end": 112.28,
+   "text": "which means the day-night line is about to pass you.",
+   "avg_logprob": -0.042,
+   "no_speech_prob": 0.002
+  },
+  {
+   "start": 112.28,
+   "end": 115.6,
+   "text": "Then drive north to stay a little ahead of the line as long as you can,",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 115.86,
+   "end": 117.36,
+   "text": "which will keep the sun in the process of setting.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 117.66,
+   "end": 120.64,
+   "text": "Then you turn and drive south across the line into nighttime.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 121.28,
+   "end": 123.16,
+   "text": "I ran a search for long sunset driving paths",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 123.16,
+   "end": 126.22,
+   "text": "using some PIE-FM code and GPS traces of Norwegian highways,",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 126.44,
+   "end": 128.46,
+   "text": "and I found that the strategy works about equally well",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 128.46,
+   "end": 129.8,
+   "text": "anywhere inside the Arctic Circle.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 130.12,
+   "end": 132.22,
+   "text": "Over a wide range of routes and driving speeds,",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 132.4,
+   "end": 135.54,
+   "text": "the longest sunset I could come up with was consistently about 95 minutes,",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 135.64,
+   "end": 138.7,
+   "text": "which is about 40 minutes longer than the longest sunset you can get in Long Erebyen.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 139.02,
+   "end": 140.42,
+   "text": "But if you are stuck on Svalbard",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 140.42,
+   "end": 143.44,
+   "text": "and you want to make the sunset or sunrise last a little longer,",
+   "avg_logprob": -0.103,
+   "no_speech_prob": 0.011
+  },
+  {
+   "start": 143.78,
+   "end": 145.54,
+   "text": "you can always try spinning counterclockwise",
+   "avg_logprob": -0.103,
+   "no_speech_prob": 0.011
+  },
+  {
+   "start": 145.54,
+   "end": 147.86,
+   "text": "so your angular momentum slows the Earth's rotation.",
+   "avg_logprob": -0.103,
+   "no_speech_prob": 0.011
+  },
+  {
+   "start": 148.36,
+   "end": 151.92,
+   "text": "It's true that it will only add an imperceptibly small fraction of a nanosecond,",
+   "avg_logprob": -0.103,
+   "no_speech_prob": 0.011
+  },
+  {
+   "start": 152.26,
+   "end": 153.62,
+   "text": "but it might be worth it.",
+   "avg_logprob": -0.103,
+   "no_speech_prob": 0.011
+  }
+ ],
+ "words": [
+  {
+   "w": " This",
+   "start": 0.0,
+   "end": 0.38,
+   "p": 0.861
+  },
+  {
+   "w": " question",
+   "start": 0.38,
+   "end": 0.6,
+   "p": 0.99
+  },
+  {
+   "w": " comes",
+   "start": 0.6,
+   "end": 0.84,
+   "p": 0.984
+  },
+  {
+   "w": " from",
+   "start": 0.84,
+   "end": 1.02,
+   "p": 0.997
+  },
+  {
+   "w": " Michael,",
+   "start": 1.02,
+   "end": 1.22,
+   "p": 0.963
+  },
+  {
+   "w": " who",
+   "start": 1.46,
+   "end": 1.48,
+   "p": 0.996
+  },
+  {
+   "w": " asks,",
+   "start": 1.48,
+   "end": 1.78,
+   "p": 0.995
+  },
+  {
+   "w": " what's",
+   "start": 2.18,
+   "end": 2.3,
+   "p": 0.486
+  },
+  {
+   "w": " the",
+   "start": 2.3,
+   "end": 2.4,
+   "p": 0.997
+  },
+  {
+   "w": " longest",
+   "start": 2.4,
+   "end": 2.62,
+   "p": 0.994
+  },
+  {
+   "w": " possible",
+   "start": 2.62,
+   "end": 3.08,
+   "p": 0.994
+  },
+  {
+   "w": " sunset",
+   "start": 3.08,
+   "end": 3.42,
+   "p": 0.995
+  },
+  {
+   "w": " you",
+   "start": 3.42,
+   "end": 3.64,
+   "p": 0.99
+  },
+  {
+   "w": " can",
+   "start": 3.64,
+   "end": 3.78,
+   "p": 0.994
+  },
+  {
+   "w": " experience",
+   "start": 3.78,
+   "end": 4.24,
+   "p": 0.999
+  },
+  {
+   "w": " while",
+   "start": 4.24,
+   "end": 4.46,
+   "p": 0.985
+  },
+  {
+   "w": " driving,",
+   "start": 4.46,
+   "end": 4.84,
+   "p": 0.998
+  },
+  {
+   "w": " assuming",
+   "start": 5.0,
+   "end": 5.22,
+   "p": 0.996
+  },
+  {
+   "w": " you're",
+   "start": 5.22,
+   "end": 5.44,
+   "p": 0.956
+  },
+  {
+   "w": " obeying",
+   "start": 5.44,
+   "end": 5.68,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 5.68,
+   "end": 5.78,
+   "p": 0.989
+  },
+  {
+   "w": " speed",
+   "start": 5.78,
+   "end": 5.96,
+   "p": 1.0
+  },
+  {
+   "w": " limit",
+   "start": 5.96,
+   "end": 6.16,
+   "p": 0.998
+  },
+  {
+   "w": " and",
+   "start": 6.16,
+   "end": 6.32,
+   "p": 0.965
+  },
+  {
+   "w": " driving",
+   "start": 6.32,
+   "end": 6.58,
+   "p": 0.997
+  },
+  {
+   "w": " on",
+   "start": 6.58,
+   "end": 6.72,
+   "p": 0.875
+  },
+  {
+   "w": " paved",
+   "start": 6.72,
+   "end": 6.94,
+   "p": 0.998
+  },
+  {
+   "w": " roads?",
+   "start": 6.94,
+   "end": 7.28,
+   "p": 0.998
+  },
+  {
+   "w": " To",
+   "start": 7.78,
+   "end": 7.9,
+   "p": 0.973
+  },
+  {
+   "w": " start,",
+   "start": 7.9,
+   "end": 8.12,
+   "p": 0.999
+  },
+  {
+   "w": " we",
+   "start": 8.3,
+   "end": 8.32,
+   "p": 0.997
+  },
+  {
+   "w": " have",
+   "start": 8.32,
+   "end": 8.48,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 8.48,
+   "end": 8.64,
+   "p": 0.999
+  },
+  {
+   "w": " define",
+   "start": 8.64,
+   "end": 8.96,
+   "p": 0.993
+  },
+  {
+   "w": " what",
+   "start": 8.96,
+   "end": 9.18,
+   "p": 0.996
+  },
+  {
+   "w": " we",
+   "start": 9.18,
+   "end": 9.34,
+   "p": 0.999
+  },
+  {
+   "w": " mean",
+   "start": 9.34,
+   "end": 9.52,
+   "p": 0.999
+  },
+  {
+   "w": " by",
+   "start": 9.52,
+   "end": 9.72,
+   "p": 0.999
+  },
+  {
+   "w": " sunset.",
+   "start": 9.72,
+   "end": 10.14,
+   "p": 0.851
+  },
+  {
+   "w": " For",
+   "start": 12.02,
+   "end": 12.46,
+   "p": 0.817
+  },
+  {
+   "w": " the",
+   "start": 12.46,
+   "end": 12.58,
+   "p": 0.999
+  },
+  {
+   "w": " purpose",
+   "start": 12.58,
+   "end": 12.72,
+   "p": 0.99
+  },
+  {
+   "w": " of",
+   "start": 12.72,
+   "end": 12.9,
+   "p": 0.998
+  },
+  {
+   "w": " our",
+   "start": 12.9,
+   "end": 13.02,
+   "p": 0.997
+  },
+  {
+   "w": " question,",
+   "start": 13.02,
+   "end": 13.36,
+   "p": 0.992
+  },
+  {
+   "w": " sunset",
+   "start": 13.72,
+   "end": 13.82,
+   "p": 0.984
+  },
+  {
+   "w": " starts",
+   "start": 13.82,
+   "end": 14.16,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 14.16,
+   "end": 14.38,
+   "p": 0.985
+  },
+  {
+   "w": " instant",
+   "start": 14.38,
+   "end": 14.64,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 14.64,
+   "end": 14.86,
+   "p": 0.99
+  },
+  {
+   "w": " sun",
+   "start": 14.86,
+   "end": 15.02,
+   "p": 0.961
+  },
+  {
+   "w": " touches",
+   "start": 15.02,
+   "end": 15.3,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 15.3,
+   "end": 15.48,
+   "p": 0.998
+  },
+  {
+   "w": " horizon",
+   "start": 15.48,
+   "end": 15.78,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 15.78,
+   "end": 16.1,
+   "p": 0.901
+  },
+  {
+   "w": " ends",
+   "start": 16.1,
+   "end": 16.34,
+   "p": 0.985
+  },
+  {
+   "w": " when",
+   "start": 16.34,
+   "end": 16.46,
+   "p": 0.996
+  },
+  {
+   "w": " it",
+   "start": 16.46,
+   "end": 16.58,
+   "p": 0.999
+  },
+  {
+   "w": " disappears",
+   "start": 16.58,
+   "end": 16.9,
+   "p": 0.998
+  },
+  {
+   "w": " completely.",
+   "start": 16.9,
+   "end": 17.44,
+   "p": 0.998
+  },
+  {
+   "w": " Which",
+   "start": 17.8,
+   "end": 17.88,
+   "p": 0.973
+  },
+  {
+   "w": " means",
+   "start": 17.88,
+   "end": 18.08,
+   "p": 0.998
+  },
+  {
+   "w": " that,",
+   "start": 18.08,
+   "end": 18.28,
+   "p": 0.985
+  },
+  {
+   "w": " for",
+   "start": 18.44,
+   "end": 18.48,
+   "p": 0.999
+  },
+  {
+   "w": " us,",
+   "start": 18.48,
+   "end": 18.72,
+   "p": 0.999
+  },
+  {
+   "w": " this",
+   "start": 19.02,
+   "end": 19.12,
+   "p": 0.986
+  },
+  {
+   "w": " is",
+   "start": 19.12,
+   "end": 19.3,
+   "p": 0.999
+  },
+  {
+   "w": " not",
+   "start": 19.3,
+   "end": 19.46,
+   "p": 0.996
+  },
+  {
+   "w": " a",
+   "start": 19.46,
+   "end": 19.6,
+   "p": 0.999
+  },
+  {
+   "w": " sunset.",
+   "start": 19.6,
+   "end": 19.94,
+   "p": 0.999
+  },
+  {
+   "w": " This",
+   "start": 20.46,
+   "end": 20.68,
+   "p": 0.987
+  },
+  {
+   "w": " is",
+   "start": 20.68,
+   "end": 20.9,
+   "p": 0.994
+  },
+  {
+   "w": " also",
+   "start": 20.9,
+   "end": 21.1,
+   "p": 0.84
+  },
+  {
+   "w": " not",
+   "start": 21.1,
+   "end": 21.36,
+   "p": 0.999
+  },
+  {
+   "w": " a",
+   "start": 21.36,
+   "end": 21.48,
+   "p": 0.999
+  },
+  {
+   "w": " sunset.",
+   "start": 21.48,
+   "end": 21.8,
+   "p": 0.999
+  },
+  {
+   "w": " This",
+   "start": 22.32,
+   "end": 22.46,
+   "p": 0.983
+  },
+  {
+   "w": " is",
+   "start": 22.46,
+   "end": 22.7,
+   "p": 0.998
+  },
+  {
+   "w": " definitely",
+   "start": 22.7,
+   "end": 23.04,
+   "p": 0.989
+  },
+  {
+   "w": " not",
+   "start": 23.04,
+   "end": 23.36,
+   "p": 0.999
+  },
+  {
+   "w": " a",
+   "start": 23.36,
+   "end": 23.48,
+   "p": 0.999
+  },
+  {
+   "w": " sunset.",
+   "start": 23.48,
+   "end": 23.82,
+   "p": 1.0
+  },
+  {
+   "w": " And",
+   "start": 24.34,
+   "end": 24.52,
+   "p": 0.987
+  },
+  {
+   "w": " no",
+   "start": 24.52,
+   "end": 24.94,
+   "p": 0.727
+  },
+  {
+   "w": " matter",
+   "start": 24.94,
+   "end": 25.08,
+   "p": 1.0
+  },
+  {
+   "w": " what",
+   "start": 25.08,
+   "end": 25.4,
+   "p": 0.999
+  },
+  {
+   "w": " happens",
+   "start": 25.4,
+   "end": 25.68,
+   "p": 1.0
+  },
+  {
+   "w": " here,",
+   "start": 25.68,
+   "end": 25.92,
+   "p": 0.995
+  },
+  {
+   "w": " this",
+   "start": 26.08,
+   "end": 26.14,
+   "p": 0.997
+  },
+  {
+   "w": " will",
+   "start": 26.14,
+   "end": 26.32,
+   "p": 0.998
+  },
+  {
+   "w": " not",
+   "start": 26.32,
+   "end": 26.46,
+   "p": 0.998
+  },
+  {
+   "w": " be",
+   "start": 26.46,
+   "end": 26.64,
+   "p": 0.999
+  },
+  {
+   "w": " a",
+   "start": 26.64,
+   "end": 26.76,
+   "p": 0.998
+  },
+  {
+   "w": " sunset.",
+   "start": 26.76,
+   "end": 27.06,
+   "p": 1.0
+  },
+  {
+   "w": " If",
+   "start": 27.06,
+   "end": 27.76,
+   "p": 0.404
+  },
+  {
+   "w": " the",
+   "start": 27.76,
+   "end": 27.92,
+   "p": 0.991
+  },
+  {
+   "w": " sun",
+   "start": 27.92,
+   "end": 28.06,
+   "p": 0.779
+  },
+  {
+   "w": " touches",
+   "start": 28.06,
+   "end": 28.32,
+   "p": 0.994
+  },
+  {
+   "w": " the",
+   "start": 28.32,
+   "end": 28.52,
+   "p": 0.991
+  },
+  {
+   "w": " horizon",
+   "start": 28.52,
+   "end": 28.8,
+   "p": 0.994
+  },
+  {
+   "w": " and",
+   "start": 28.8,
+   "end": 29.1,
+   "p": 0.723
+  },
+  {
+   "w": " then",
+   "start": 29.1,
+   "end": 29.26,
+   "p": 0.922
+  },
+  {
+   "w": " it",
+   "start": 29.26,
+   "end": 29.42,
+   "p": 0.976
+  },
+  {
+   "w": " lifts",
+   "start": 29.42,
+   "end": 29.6,
+   "p": 0.958
+  },
+  {
+   "w": " back",
+   "start": 29.6,
+   "end": 29.9,
+   "p": 0.979
+  },
+  {
+   "w": " up,",
+   "start": 29.9,
+   "end": 30.12,
+   "p": 0.992
+  },
+  {
+   "w": " the",
+   "start": 30.4,
+   "end": 30.42,
+   "p": 0.978
+  },
+  {
+   "w": " sunset",
+   "start": 30.42,
+   "end": 30.64,
+   "p": 0.97
+  },
+  {
+   "w": " is",
+   "start": 30.64,
+   "end": 30.82,
+   "p": 0.993
+  },
+  {
+   "w": " disqualified.",
+   "start": 30.82,
+   "end": 31.32,
+   "p": 0.978
+  },
+  {
+   "w": " For",
+   "start": 31.98,
+   "end": 32.1,
+   "p": 0.985
+  },
+  {
+   "w": " a",
+   "start": 32.1,
+   "end": 32.22,
+   "p": 0.996
+  },
+  {
+   "w": " sunset",
+   "start": 32.22,
+   "end": 32.42,
+   "p": 0.99
+  },
+  {
+   "w": " to",
+   "start": 32.42,
+   "end": 32.56,
+   "p": 0.908
+  },
+  {
+   "w": " count,",
+   "start": 32.56,
+   "end": 32.72,
+   "p": 0.989
+  },
+  {
+   "w": " the",
+   "start": 32.9,
+   "end": 32.9,
+   "p": 0.992
+  },
+  {
+   "w": " sun",
+   "start": 32.9,
+   "end": 33.04,
+   "p": 0.977
+  },
+  {
+   "w": " also",
+   "start": 33.04,
+   "end": 33.28,
+   "p": 0.858
+  },
+  {
+   "w": " can't",
+   "start": 33.28,
+   "end": 33.72,
+   "p": 0.987
+  },
+  {
+   "w": " just",
+   "start": 33.72,
+   "end": 33.86,
+   "p": 0.994
+  },
+  {
+   "w": " disappear",
+   "start": 33.86,
+   "end": 34.3,
+   "p": 0.991
+  },
+  {
+   "w": " behind",
+   "start": 34.3,
+   "end": 34.66,
+   "p": 0.979
+  },
+  {
+   "w": " a",
+   "start": 34.66,
+   "end": 34.86,
+   "p": 0.992
+  },
+  {
+   "w": " nearby",
+   "start": 34.86,
+   "end": 35.06,
+   "p": 0.988
+  },
+  {
+   "w": " hill.",
+   "start": 35.06,
+   "end": 35.36,
+   "p": 0.997
+  },
+  {
+   "w": " It",
+   "start": 35.68,
+   "end": 35.8,
+   "p": 0.973
+  },
+  {
+   "w": " needs",
+   "start": 35.8,
+   "end": 35.94,
+   "p": 0.993
+  },
+  {
+   "w": " to",
+   "start": 35.94,
+   "end": 36.14,
+   "p": 0.998
+  },
+  {
+   "w": " set",
+   "start": 36.14,
+   "end": 36.28,
+   "p": 0.854
+  },
+  {
+   "w": " behind",
+   "start": 36.28,
+   "end": 36.56,
+   "p": 0.986
+  },
+  {
+   "w": " the",
+   "start": 36.56,
+   "end": 36.72,
+   "p": 0.975
+  },
+  {
+   "w": " ideal",
+   "start": 36.72,
+   "end": 37.06,
+   "p": 0.997
+  },
+  {
+   "w": " ice",
+   "start": 37.06,
+   "end": 37.3,
+   "p": 0.889
+  },
+  {
+   "w": " horizon.",
+   "start": 37.3,
+   "end": 37.78,
+   "p": 0.947
+  },
+  {
+   "w": " Otherwise,",
+   "start": 38.12,
+   "end": 38.4,
+   "p": 0.985
+  },
+  {
+   "w": " if",
+   "start": 38.66,
+   "end": 38.76,
+   "p": 0.994
+  },
+  {
+   "w": " you",
+   "start": 38.76,
+   "end": 38.86,
+   "p": 0.997
+  },
+  {
+   "w": " could",
+   "start": 38.86,
+   "end": 38.96,
+   "p": 0.957
+  },
+  {
+   "w": " use",
+   "start": 38.96,
+   "end": 39.08,
+   "p": 0.998
+  },
+  {
+   "w": " arbitrary",
+   "start": 39.08,
+   "end": 39.4,
+   "p": 0.995
+  },
+  {
+   "w": " obstacles",
+   "start": 39.4,
+   "end": 39.74,
+   "p": 0.996
+  },
+  {
+   "w": " like",
+   "start": 39.74,
+   "end": 39.98,
+   "p": 0.989
+  },
+  {
+   "w": " that,",
+   "start": 39.98,
+   "end": 40.2,
+   "p": 0.994
+  },
+  {
+   "w": " you",
+   "start": 40.34,
+   "end": 40.38,
+   "p": 0.994
+  },
+  {
+   "w": " could",
+   "start": 40.38,
+   "end": 40.48,
+   "p": 0.968
+  },
+  {
+   "w": " cause",
+   "start": 40.48,
+   "end": 40.66,
+   "p": 0.989
+  },
+  {
+   "w": " a",
+   "start": 40.66,
+   "end": 40.8,
+   "p": 0.973
+  },
+  {
+   "w": " sunset",
+   "start": 40.8,
+   "end": 41.08,
+   "p": 0.999
+  },
+  {
+   "w": " whenever",
+   "start": 41.08,
+   "end": 41.24,
+   "p": 0.984
+  },
+  {
+   "w": " you",
+   "start": 41.24,
+   "end": 41.52,
+   "p": 0.999
+  },
+  {
+   "w": " wanted",
+   "start": 41.52,
+   "end": 41.76,
+   "p": 0.89
+  },
+  {
+   "w": " just",
+   "start": 41.76,
+   "end": 41.96,
+   "p": 0.391
+  },
+  {
+   "w": " by",
+   "start": 41.96,
+   "end": 42.16,
+   "p": 0.996
+  },
+  {
+   "w": " hiding",
+   "start": 42.16,
+   "end": 42.44,
+   "p": 0.994
+  },
+  {
+   "w": " behind",
+   "start": 42.44,
+   "end": 42.7,
+   "p": 0.994
+  },
+  {
+   "w": " a",
+   "start": 42.7,
+   "end": 42.82,
+   "p": 0.997
+  },
+  {
+   "w": " rock.",
+   "start": 42.82,
+   "end": 43.04,
+   "p": 1.0
+  },
+  {
+   "w": " At",
+   "start": 43.5,
+   "end": 43.64,
+   "p": 0.977
+  },
+  {
+   "w": " the",
+   "start": 43.64,
+   "end": 43.78,
+   "p": 0.962
+  },
+  {
+   "w": " equator,",
+   "start": 43.78,
+   "end": 44.06,
+   "p": 0.944
+  },
+  {
+   "w": " an",
+   "start": 44.2,
+   "end": 44.24,
+   "p": 0.991
+  },
+  {
+   "w": " average",
+   "start": 44.24,
+   "end": 44.46,
+   "p": 0.999
+  },
+  {
+   "w": " sunset",
+   "start": 44.46,
+   "end": 44.78,
+   "p": 0.995
+  },
+  {
+   "w": " is",
+   "start": 44.78,
+   "end": 44.96,
+   "p": 0.997
+  },
+  {
+   "w": " just",
+   "start": 44.96,
+   "end": 45.16,
+   "p": 0.99
+  },
+  {
+   "w": " over",
+   "start": 45.16,
+   "end": 45.42,
+   "p": 0.997
+  },
+  {
+   "w": " two",
+   "start": 45.42,
+   "end": 45.6,
+   "p": 0.703
+  },
+  {
+   "w": " minutes",
+   "start": 45.6,
+   "end": 45.8,
+   "p": 0.995
+  },
+  {
+   "w": " long.",
+   "start": 45.8,
+   "end": 46.12,
+   "p": 0.994
+  },
+  {
+   "w": " In",
+   "start": 46.42,
+   "end": 46.6,
+   "p": 0.987
+  },
+  {
+   "w": " places",
+   "start": 46.6,
+   "end": 46.74,
+   "p": 0.998
+  },
+  {
+   "w": " like",
+   "start": 46.74,
+   "end": 47.02,
+   "p": 0.997
+  },
+  {
+   "w": " London,",
+   "start": 47.02,
+   "end": 47.28,
+   "p": 0.994
+  },
+  {
+   "w": " England,",
+   "start": 47.46,
+   "end": 47.64,
+   "p": 0.999
+  },
+  {
+   "w": " it",
+   "start": 47.82,
+   "end": 47.88,
+   "p": 0.995
+  },
+  {
+   "w": " can",
+   "start": 47.88,
+   "end": 47.96,
+   "p": 0.99
+  },
+  {
+   "w": " take",
+   "start": 47.96,
+   "end": 48.12,
+   "p": 0.998
+  },
+  {
+   "w": " between",
+   "start": 48.12,
+   "end": 48.34,
+   "p": 0.99
+  },
+  {
+   "w": " three",
+   "start": 48.34,
+   "end": 48.62,
+   "p": 0.803
+  },
+  {
+   "w": " and",
+   "start": 48.62,
+   "end": 48.8,
+   "p": 0.981
+  },
+  {
+   "w": " five",
+   "start": 48.8,
+   "end": 49.04,
+   "p": 0.998
+  },
+  {
+   "w": " minutes.",
+   "start": 49.04,
+   "end": 49.34,
+   "p": 0.999
+  },
+  {
+   "w": " At",
+   "start": 49.72,
+   "end": 49.88,
+   "p": 0.991
+  },
+  {
+   "w": " London's",
+   "start": 49.88,
+   "end": 50.2,
+   "p": 0.972
+  },
+  {
+   "w": " latitude,",
+   "start": 50.2,
+   "end": 50.5,
+   "p": 0.935
+  },
+  {
+   "w": " the",
+   "start": 50.62,
+   "end": 50.68,
+   "p": 0.998
+  },
+  {
+   "w": " Earth's",
+   "start": 50.68,
+   "end": 50.92,
+   "p": 0.856
+  },
+  {
+   "w": " surface",
+   "start": 50.92,
+   "end": 51.12,
+   "p": 0.999
+  },
+  {
+   "w": " is",
+   "start": 51.12,
+   "end": 51.3,
+   "p": 0.995
+  },
+  {
+   "w": " moving",
+   "start": 51.3,
+   "end": 51.42,
+   "p": 0.998
+  },
+  {
+   "w": " from",
+   "start": 51.42,
+   "end": 51.66,
+   "p": 0.99
+  },
+  {
+   "w": " west",
+   "start": 51.66,
+   "end": 51.86,
+   "p": 0.95
+  },
+  {
+   "w": " to",
+   "start": 51.86,
+   "end": 52.04,
+   "p": 0.984
+  },
+  {
+   "w": " east",
+   "start": 52.04,
+   "end": 52.18,
+   "p": 0.998
+  },
+  {
+   "w": " at",
+   "start": 52.18,
+   "end": 52.36,
+   "p": 0.874
+  },
+  {
+   "w": " about",
+   "start": 52.36,
+   "end": 52.5,
+   "p": 0.989
+  },
+  {
+   "w": " a",
+   "start": 52.5,
+   "end": 52.62,
+   "p": 0.267
+  },
+  {
+   "w": " thousand",
+   "start": 52.62,
+   "end": 52.9,
+   "p": 0.986
+  },
+  {
+   "w": " kilometers",
+   "start": 52.9,
+   "end": 53.28,
+   "p": 0.92
+  },
+  {
+   "w": " per",
+   "start": 53.28,
+   "end": 53.56,
+   "p": 0.997
+  },
+  {
+   "w": " hour.",
+   "start": 53.56,
+   "end": 53.8,
+   "p": 0.999
+  },
+  {
+   "w": " So",
+   "start": 54.0,
+   "end": 54.16,
+   "p": 0.986
+  },
+  {
+   "w": " if",
+   "start": 54.16,
+   "end": 54.26,
+   "p": 0.769
+  },
+  {
+   "w": " you",
+   "start": 54.26,
+   "end": 54.34,
+   "p": 0.999
+  },
+  {
+   "w": " fly",
+   "start": 54.34,
+   "end": 54.54,
+   "p": 0.999
+  },
+  {
+   "w": " west",
+   "start": 54.54,
+   "end": 54.76,
+   "p": 0.992
+  },
+  {
+   "w": " in",
+   "start": 54.76,
+   "end": 54.94,
+   "p": 0.967
+  },
+  {
+   "w": " a",
+   "start": 54.94,
+   "end": 55.08,
+   "p": 0.994
+  },
+  {
+   "w": " commercial",
+   "start": 55.08,
+   "end": 55.22,
+   "p": 0.999
+  },
+  {
+   "w": " airliner,",
+   "start": 55.22,
+   "end": 55.62,
+   "p": 0.996
+  },
+  {
+   "w": " you",
+   "start": 55.62,
+   "end": 55.84,
+   "p": 0.501
+  },
+  {
+   "w": " can",
+   "start": 55.84,
+   "end": 55.98,
+   "p": 0.977
+  },
+  {
+   "w": " experience",
+   "start": 55.98,
+   "end": 56.34,
+   "p": 0.988
+  },
+  {
+   "w": " an",
+   "start": 56.34,
+   "end": 56.48,
+   "p": 0.987
+  },
+  {
+   "w": " arbitrarily",
+   "start": 56.48,
+   "end": 56.86,
+   "p": 0.976
+  },
+  {
+   "w": " long",
+   "start": 56.86,
+   "end": 57.2,
+   "p": 0.982
+  },
+  {
+   "w": " sunset.",
+   "start": 57.2,
+   "end": 57.6,
+   "p": 0.995
+  },
+  {
+   "w": " Or",
+   "start": 57.96,
+   "end": 58.06,
+   "p": 0.92
+  },
+  {
+   "w": " at",
+   "start": 58.06,
+   "end": 58.12,
+   "p": 0.912
+  },
+  {
+   "w": " least,",
+   "start": 58.12,
+   "end": 58.24,
+   "p": 0.998
+  },
+  {
+   "w": " you",
+   "start": 58.52,
+   "end": 58.62,
+   "p": 0.974
+  },
+  {
+   "w": " can",
+   "start": 58.62,
+   "end": 58.76,
+   "p": 0.992
+  },
+  {
+   "w": " until",
+   "start": 58.76,
+   "end": 58.96,
+   "p": 0.665
+  },
+  {
+   "w": " you",
+   "start": 58.96,
+   "end": 59.12,
+   "p": 0.993
+  },
+  {
+   "w": " run",
+   "start": 59.12,
+   "end": 59.26,
+   "p": 0.98
+  },
+  {
+   "w": " out",
+   "start": 59.26,
+   "end": 59.42,
+   "p": 0.983
+  },
+  {
+   "w": " of",
+   "start": 59.42,
+   "end": 59.48,
+   "p": 0.988
+  },
+  {
+   "w": " fuel",
+   "start": 59.48,
+   "end": 59.64,
+   "p": 0.999
+  },
+  {
+   "w": " 15",
+   "start": 59.64,
+   "end": 59.94,
+   "p": 0.794
+  },
+  {
+   "w": " or",
+   "start": 59.94,
+   "end": 60.12,
+   "p": 0.823
+  },
+  {
+   "w": " 20",
+   "start": 60.12,
+   "end": 60.38,
+   "p": 0.998
+  },
+  {
+   "w": " hours",
+   "start": 60.38,
+   "end": 60.58,
+   "p": 0.994
+  },
+  {
+   "w": " in.",
+   "start": 60.58,
+   "end": 60.84,
+   "p": 0.996
+  },
+  {
+   "w": " But",
+   "start": 61.2,
+   "end": 61.32,
+   "p": 0.982
+  },
+  {
+   "w": " Michael's",
+   "start": 61.32,
+   "end": 61.66,
+   "p": 0.959
+  },
+  {
+   "w": " question",
+   "start": 61.66,
+   "end": 61.84,
+   "p": 0.994
+  },
+  {
+   "w": " was",
+   "start": 61.84,
+   "end": 62.04,
+   "p": 0.988
+  },
+  {
+   "w": " about",
+   "start": 62.04,
+   "end": 62.24,
+   "p": 0.995
+  },
+  {
+   "w": " driving",
+   "start": 62.24,
+   "end": 62.62,
+   "p": 0.853
+  },
+  {
+   "w": " to",
+   "start": 62.62,
+   "end": 62.92,
+   "p": 0.991
+  },
+  {
+   "w": " extend",
+   "start": 62.92,
+   "end": 63.16,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 63.16,
+   "end": 63.32,
+   "p": 0.989
+  },
+  {
+   "w": " sunset.",
+   "start": 63.32,
+   "end": 63.64,
+   "p": 0.991
+  },
+  {
+   "w": " Intuitively,",
+   "start": 64.1,
+   "end": 64.5,
+   "p": 0.982
+  },
+  {
+   "w": " it",
+   "start": 64.58,
+   "end": 64.6,
+   "p": 0.986
+  },
+  {
+   "w": " seems",
+   "start": 64.6,
+   "end": 64.72,
+   "p": 0.987
+  },
+  {
+   "w": " like",
+   "start": 64.72,
+   "end": 64.86,
+   "p": 0.889
+  },
+  {
+   "w": " we",
+   "start": 64.86,
+   "end": 64.98,
+   "p": 0.989
+  },
+  {
+   "w": " probably",
+   "start": 64.98,
+   "end": 65.14,
+   "p": 0.879
+  },
+  {
+   "w": " want",
+   "start": 65.14,
+   "end": 65.3,
+   "p": 0.919
+  },
+  {
+   "w": " to",
+   "start": 65.3,
+   "end": 65.36,
+   "p": 0.997
+  },
+  {
+   "w": " be",
+   "start": 65.36,
+   "end": 65.42,
+   "p": 0.997
+  },
+  {
+   "w": " as",
+   "start": 65.42,
+   "end": 65.52,
+   "p": 0.992
+  },
+  {
+   "w": " far",
+   "start": 65.52,
+   "end": 65.78,
+   "p": 0.998
+  },
+  {
+   "w": " north",
+   "start": 65.78,
+   "end": 66.02,
+   "p": 0.943
+  },
+  {
+   "w": " or",
+   "start": 66.02,
+   "end": 66.36,
+   "p": 0.377
+  },
+  {
+   "w": " maybe",
+   "start": 66.36,
+   "end": 66.64,
+   "p": 0.939
+  },
+  {
+   "w": " south",
+   "start": 66.64,
+   "end": 66.92,
+   "p": 0.99
+  },
+  {
+   "w": " as",
+   "start": 66.92,
+   "end": 67.2,
+   "p": 0.98
+  },
+  {
+   "w": " possible.",
+   "start": 67.2,
+   "end": 67.6,
+   "p": 0.999
+  },
+  {
+   "w": " The",
+   "start": 67.84,
+   "end": 67.96,
+   "p": 0.996
+  },
+  {
+   "w": " closer",
+   "start": 67.96,
+   "end": 68.16,
+   "p": 0.999
+  },
+  {
+   "w": " we",
+   "start": 68.16,
+   "end": 68.36,
+   "p": 0.998
+  },
+  {
+   "w": " are",
+   "start": 68.36,
+   "end": 68.5,
+   "p": 0.998
+  },
+  {
+   "w": " to",
+   "start": 68.5,
+   "end": 68.6,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 68.6,
+   "end": 68.74,
+   "p": 0.992
+  },
+  {
+   "w": " pole,",
+   "start": 68.74,
+   "end": 68.9,
+   "p": 0.814
+  },
+  {
+   "w": " the",
+   "start": 69.16,
+   "end": 69.26,
+   "p": 0.998
+  },
+  {
+   "w": " easier",
+   "start": 69.26,
+   "end": 69.44,
+   "p": 0.999
+  },
+  {
+   "w": " it",
+   "start": 69.44,
+   "end": 69.6,
+   "p": 0.994
+  },
+  {
+   "w": " is",
+   "start": 69.6,
+   "end": 69.7,
+   "p": 0.995
+  },
+  {
+   "w": " to",
+   "start": 69.7,
+   "end": 69.82,
+   "p": 0.996
+  },
+  {
+   "w": " keep",
+   "start": 69.82,
+   "end": 69.92,
+   "p": 0.997
+  },
+  {
+   "w": " up",
+   "start": 69.92,
+   "end": 70.02,
+   "p": 0.996
+  },
+  {
+   "w": " with",
+   "start": 70.02,
+   "end": 70.16,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 70.16,
+   "end": 70.3,
+   "p": 0.998
+  },
+  {
+   "w": " sun.",
+   "start": 70.3,
+   "end": 70.46,
+   "p": 0.928
+  },
+  {
+   "w": " Unfortunately,",
+   "start": 71.04,
+   "end": 71.44,
+   "p": 0.991
+  },
+  {
+   "w": " there",
+   "start": 71.64,
+   "end": 71.82,
+   "p": 0.998
+  },
+  {
+   "w": " are",
+   "start": 71.82,
+   "end": 71.94,
+   "p": 0.996
+  },
+  {
+   "w": " no",
+   "start": 71.94,
+   "end": 72.08,
+   "p": 0.995
+  },
+  {
+   "w": " paved",
+   "start": 72.08,
+   "end": 72.32,
+   "p": 0.985
+  },
+  {
+   "w": " roads",
+   "start": 72.32,
+   "end": 72.64,
+   "p": 0.998
+  },
+  {
+   "w": " anywhere",
+   "start": 72.64,
+   "end": 72.92,
+   "p": 0.979
+  },
+  {
+   "w": " near",
+   "start": 72.92,
+   "end": 73.3,
+   "p": 0.993
+  },
+  {
+   "w": " either",
+   "start": 73.3,
+   "end": 73.62,
+   "p": 0.992
+  },
+  {
+   "w": " pole.",
+   "start": 73.62,
+   "end": 73.92,
+   "p": 0.994
+  },
+  {
+   "w": " The",
+   "start": 74.28,
+   "end": 74.44,
+   "p": 0.993
+  },
+  {
+   "w": " closest",
+   "start": 74.44,
+   "end": 74.66,
+   "p": 0.998
+  },
+  {
+   "w": " road",
+   "start": 74.66,
+   "end": 74.86,
+   "p": 0.99
+  },
+  {
+   "w": " that",
+   "start": 74.86,
+   "end": 74.96,
+   "p": 0.993
+  },
+  {
+   "w": " qualifies",
+   "start": 74.96,
+   "end": 75.26,
+   "p": 0.998
+  },
+  {
+   "w": " is",
+   "start": 75.26,
+   "end": 75.56,
+   "p": 0.991
+  },
+  {
+   "w": " probably",
+   "start": 75.56,
+   "end": 75.78,
+   "p": 0.979
+  },
+  {
+   "w": " in",
+   "start": 75.78,
+   "end": 76.06,
+   "p": 0.983
+  },
+  {
+   "w": " Long",
+   "start": 76.06,
+   "end": 76.18,
+   "p": 0.926
+  },
+  {
+   "w": " Erebyen",
+   "start": 76.18,
+   "end": 76.6,
+   "p": 0.457
+  },
+  {
+   "w": " on",
+   "start": 76.6,
+   "end": 76.78,
+   "p": 0.786
+  },
+  {
+   "w": " the",
+   "start": 76.78,
+   "end": 76.88,
+   "p": 0.997
+  },
+  {
+   "w": " island",
+   "start": 76.88,
+   "end": 77.06,
+   "p": 0.969
+  },
+  {
+   "w": " of",
+   "start": 77.06,
+   "end": 77.24,
+   "p": 0.995
+  },
+  {
+   "w": " Svalbard,",
+   "start": 77.24,
+   "end": 77.64,
+   "p": 0.962
+  },
+  {
+   "w": " Norway.",
+   "start": 77.78,
+   "end": 77.98,
+   "p": 0.998
+  },
+  {
+   "w": " The",
+   "start": 78.32,
+   "end": 78.46,
+   "p": 0.996
+  },
+  {
+   "w": " longest",
+   "start": 78.46,
+   "end": 78.66,
+   "p": 0.995
+  },
+  {
+   "w": " sunset",
+   "start": 78.66,
+   "end": 79.0,
+   "p": 0.994
+  },
+  {
+   "w": " there",
+   "start": 79.0,
+   "end": 79.28,
+   "p": 0.995
+  },
+  {
+   "w": " lasts",
+   "start": 79.28,
+   "end": 79.52,
+   "p": 0.989
+  },
+  {
+   "w": " just",
+   "start": 79.52,
+   "end": 79.86,
+   "p": 0.981
+  },
+  {
+   "w": " under",
+   "start": 79.86,
+   "end": 80.1,
+   "p": 0.998
+  },
+  {
+   "w": " an",
+   "start": 80.1,
+   "end": 80.28,
+   "p": 0.981
+  },
+  {
+   "w": " hour.",
+   "start": 80.28,
+   "end": 80.54,
+   "p": 1.0
+  },
+  {
+   "w": " Although,",
+   "start": 80.74,
+   "end": 80.96,
+   "p": 0.983
+  },
+  {
+   "w": " it",
+   "start": 81.08,
+   "end": 81.26,
+   "p": 0.995
+  },
+  {
+   "w": " doesn't",
+   "start": 81.26,
+   "end": 81.48,
+   "p": 0.998
+  },
+  {
+   "w": " matter",
+   "start": 81.48,
+   "end": 81.64,
+   "p": 0.999
+  },
+  {
+   "w": " if",
+   "start": 81.64,
+   "end": 81.78,
+   "p": 0.998
+  },
+  {
+   "w": " you",
+   "start": 81.78,
+   "end": 81.88,
+   "p": 0.992
+  },
+  {
+   "w": " drive",
+   "start": 81.88,
+   "end": 82.06,
+   "p": 0.997
+  },
+  {
+   "w": " west",
+   "start": 82.06,
+   "end": 82.36,
+   "p": 0.97
+  },
+  {
+   "w": " because",
+   "start": 82.36,
+   "end": 82.62,
+   "p": 0.43
+  },
+  {
+   "w": " the",
+   "start": 82.62,
+   "end": 82.84,
+   "p": 0.987
+  },
+  {
+   "w": " road's",
+   "start": 82.84,
+   "end": 83.12,
+   "p": 0.816
+  },
+  {
+   "w": " too",
+   "start": 83.12,
+   "end": 83.24,
+   "p": 0.995
+  },
+  {
+   "w": " short",
+   "start": 83.24,
+   "end": 83.5,
+   "p": 0.999
+  },
+  {
+   "w": " for",
+   "start": 83.5,
+   "end": 83.66,
+   "p": 0.994
+  },
+  {
+   "w": " your",
+   "start": 83.66,
+   "end": 83.78,
+   "p": 0.994
+  },
+  {
+   "w": " movement",
+   "start": 83.78,
+   "end": 84.0,
+   "p": 0.999
+  },
+  {
+   "w": " to",
+   "start": 84.0,
+   "end": 84.18,
+   "p": 0.996
+  },
+  {
+   "w": " make",
+   "start": 84.18,
+   "end": 84.3,
+   "p": 0.999
+  },
+  {
+   "w": " much",
+   "start": 84.3,
+   "end": 84.48,
+   "p": 0.987
+  },
+  {
+   "w": " difference.",
+   "start": 84.48,
+   "end": 84.82,
+   "p": 0.997
+  },
+  {
+   "w": " In",
+   "start": 84.82,
+   "end": 85.5,
+   "p": 0.583
+  },
+  {
+   "w": " general,",
+   "start": 85.5,
+   "end": 85.76,
+   "p": 0.997
+  },
+  {
+   "w": " driving",
+   "start": 85.92,
+   "end": 86.08,
+   "p": 0.99
+  },
+  {
+   "w": " west",
+   "start": 86.08,
+   "end": 86.3,
+   "p": 0.95
+  },
+  {
+   "w": " to",
+   "start": 86.3,
+   "end": 86.46,
+   "p": 0.987
+  },
+  {
+   "w": " keep",
+   "start": 86.46,
+   "end": 86.52,
+   "p": 0.997
+  },
+  {
+   "w": " up",
+   "start": 86.52,
+   "end": 86.62,
+   "p": 0.988
+  },
+  {
+   "w": " with",
+   "start": 86.62,
+   "end": 86.74,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 86.74,
+   "end": 86.86,
+   "p": 0.996
+  },
+  {
+   "w": " sun",
+   "start": 86.86,
+   "end": 87.04,
+   "p": 0.937
+  },
+  {
+   "w": " isn't",
+   "start": 87.04,
+   "end": 87.3,
+   "p": 0.975
+  },
+  {
+   "w": " a",
+   "start": 87.3,
+   "end": 87.4,
+   "p": 0.995
+  },
+  {
+   "w": " viable",
+   "start": 87.4,
+   "end": 87.66,
+   "p": 0.999
+  },
+  {
+   "w": " strategy.",
+   "start": 87.66,
+   "end": 88.16,
+   "p": 0.997
+  },
+  {
+   "w": " Even",
+   "start": 88.54,
+   "end": 88.68,
+   "p": 0.977
+  },
+  {
+   "w": " at",
+   "start": 88.68,
+   "end": 88.82,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 88.82,
+   "end": 88.96,
+   "p": 0.997
+  },
+  {
+   "w": " northernmost",
+   "start": 88.96,
+   "end": 89.36,
+   "p": 0.948
+  },
+  {
+   "w": " tip",
+   "start": 89.36,
+   "end": 89.54,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 89.54,
+   "end": 89.68,
+   "p": 0.998
+  },
+  {
+   "w": " mainland",
+   "start": 89.68,
+   "end": 89.9,
+   "p": 0.966
+  },
+  {
+   "w": " Norway,",
+   "start": 89.9,
+   "end": 90.3,
+   "p": 0.997
+  },
+  {
+   "w": " you'd",
+   "start": 90.56,
+   "end": 90.64,
+   "p": 0.97
+  },
+  {
+   "w": " have",
+   "start": 90.64,
+   "end": 90.72,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 90.72,
+   "end": 90.86,
+   "p": 0.998
+  },
+  {
+   "w": " travel",
+   "start": 90.86,
+   "end": 91.12,
+   "p": 0.997
+  },
+  {
+   "w": " at",
+   "start": 91.12,
+   "end": 91.24,
+   "p": 0.981
+  },
+  {
+   "w": " about",
+   "start": 91.24,
+   "end": 91.4,
+   "p": 0.973
+  },
+  {
+   "w": " half",
+   "start": 91.4,
+   "end": 91.68,
+   "p": 0.984
+  },
+  {
+   "w": " the",
+   "start": 91.68,
+   "end": 91.88,
+   "p": 0.98
+  },
+  {
+   "w": " speed",
+   "start": 91.88,
+   "end": 92.08,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 92.08,
+   "end": 92.2,
+   "p": 0.998
+  },
+  {
+   "w": " sound",
+   "start": 92.2,
+   "end": 92.54,
+   "p": 0.983
+  },
+  {
+   "w": " to",
+   "start": 92.54,
+   "end": 92.82,
+   "p": 0.982
+  },
+  {
+   "w": " keep",
+   "start": 92.82,
+   "end": 92.94,
+   "p": 0.998
+  },
+  {
+   "w": " up",
+   "start": 92.94,
+   "end": 93.08,
+   "p": 0.997
+  },
+  {
+   "w": " with",
+   "start": 93.08,
+   "end": 93.22,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 93.22,
+   "end": 93.36,
+   "p": 0.995
+  },
+  {
+   "w": " sun.",
+   "start": 93.36,
+   "end": 93.54,
+   "p": 0.987
+  },
+  {
+   "w": " Luckily,",
+   "start": 94.12,
+   "end": 94.32,
+   "p": 0.985
+  },
+  {
+   "w": " there's",
+   "start": 94.54,
+   "end": 94.72,
+   "p": 0.976
+  },
+  {
+   "w": " a",
+   "start": 94.72,
+   "end": 94.8,
+   "p": 0.999
+  },
+  {
+   "w": " better",
+   "start": 94.8,
+   "end": 94.92,
+   "p": 0.999
+  },
+  {
+   "w": " approach.",
+   "start": 94.92,
+   "end": 95.34,
+   "p": 0.999
+  },
+  {
+   "w": " If",
+   "start": 95.82,
+   "end": 95.88,
+   "p": 0.966
+  },
+  {
+   "w": " you're",
+   "start": 95.88,
+   "end": 96.02,
+   "p": 0.993
+  },
+  {
+   "w": " in",
+   "start": 96.02,
+   "end": 96.14,
+   "p": 0.993
+  },
+  {
+   "w": " northern",
+   "start": 96.14,
+   "end": 96.3,
+   "p": 0.947
+  },
+  {
+   "w": " Scandinavia",
+   "start": 96.3,
+   "end": 97.02,
+   "p": 0.998
+  },
+  {
+   "w": " on",
+   "start": 97.02,
+   "end": 97.16,
+   "p": 0.739
+  },
+  {
+   "w": " a",
+   "start": 97.16,
+   "end": 97.26,
+   "p": 0.977
+  },
+  {
+   "w": " day",
+   "start": 97.26,
+   "end": 97.36,
+   "p": 0.999
+  },
+  {
+   "w": " when",
+   "start": 97.36,
+   "end": 97.52,
+   "p": 0.978
+  },
+  {
+   "w": " the",
+   "start": 97.52,
+   "end": 97.66,
+   "p": 0.995
+  },
+  {
+   "w": " sun",
+   "start": 97.66,
+   "end": 97.78,
+   "p": 0.975
+  },
+  {
+   "w": " just",
+   "start": 97.78,
+   "end": 97.98,
+   "p": 0.992
+  },
+  {
+   "w": " barely",
+   "start": 97.98,
+   "end": 98.36,
+   "p": 0.996
+  },
+  {
+   "w": " sets",
+   "start": 98.36,
+   "end": 98.76,
+   "p": 0.995
+  },
+  {
+   "w": " and",
+   "start": 98.76,
+   "end": 99.0,
+   "p": 0.953
+  },
+  {
+   "w": " then",
+   "start": 99.0,
+   "end": 99.1,
+   "p": 0.984
+  },
+  {
+   "w": " rises",
+   "start": 99.1,
+   "end": 99.4,
+   "p": 0.993
+  },
+  {
+   "w": " again,",
+   "start": 99.4,
+   "end": 99.72,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 100.02,
+   "end": 100.08,
+   "p": 0.976
+  },
+  {
+   "w": " day",
+   "start": 100.08,
+   "end": 100.26,
+   "p": 0.924
+  },
+  {
+   "w": "-night",
+   "start": 100.26,
+   "end": 100.46,
+   "p": 0.612
+  },
+  {
+   "w": " line",
+   "start": 100.46,
+   "end": 100.72,
+   "p": 0.982
+  },
+  {
+   "w": " moves",
+   "start": 100.72,
+   "end": 101.0,
+   "p": 0.994
+  },
+  {
+   "w": " northwest,",
+   "start": 101.0,
+   "end": 101.46,
+   "p": 0.907
+  },
+  {
+   "w": " then",
+   "start": 102.06,
+   "end": 102.26,
+   "p": 0.998
+  },
+  {
+   "w": " slows,",
+   "start": 102.26,
+   "end": 102.68,
+   "p": 0.994
+  },
+  {
+   "w": " reverses,",
+   "start": 103.22,
+   "end": 103.8,
+   "p": 0.993
+  },
+  {
+   "w": " and",
+   "start": 104.04,
+   "end": 104.12,
+   "p": 0.992
+  },
+  {
+   "w": " heads",
+   "start": 104.12,
+   "end": 104.3,
+   "p": 0.987
+  },
+  {
+   "w": " back",
+   "start": 104.3,
+   "end": 104.5,
+   "p": 0.999
+  },
+  {
+   "w": " to",
+   "start": 104.5,
+   "end": 104.66,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 104.66,
+   "end": 104.8,
+   "p": 0.993
+  },
+  {
+   "w": " southwest.",
+   "start": 104.8,
+   "end": 105.12,
+   "p": 0.961
+  },
+  {
+   "w": " To",
+   "start": 105.74,
+   "end": 105.88,
+   "p": 0.996
+  },
+  {
+   "w": " get",
+   "start": 105.88,
+   "end": 105.98,
+   "p": 1.0
+  },
+  {
+   "w": " a",
+   "start": 105.98,
+   "end": 106.1,
+   "p": 0.505
+  },
+  {
+   "w": " long",
+   "start": 106.1,
+   "end": 106.24,
+   "p": 0.997
+  },
+  {
+   "w": " sunset,",
+   "start": 106.24,
+   "end": 106.6,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 106.72,
+   "end": 106.8,
+   "p": 0.987
+  },
+  {
+   "w": " strategy",
+   "start": 106.8,
+   "end": 107.08,
+   "p": 0.998
+  },
+  {
+   "w": " is",
+   "start": 107.08,
+   "end": 107.3,
+   "p": 0.994
+  },
+  {
+   "w": " simple.",
+   "start": 107.3,
+   "end": 107.58,
+   "p": 0.999
+  },
+  {
+   "w": " Sit",
+   "start": 108.0,
+   "end": 108.12,
+   "p": 0.956
+  },
+  {
+   "w": " in",
+   "start": 108.12,
+   "end": 108.26,
+   "p": 0.998
+  },
+  {
+   "w": " your",
+   "start": 108.26,
+   "end": 108.4,
+   "p": 0.999
+  },
+  {
+   "w": " car",
+   "start": 108.4,
+   "end": 108.64,
+   "p": 0.999
+  },
+  {
+   "w": " until",
+   "start": 108.64,
+   "end": 108.92,
+   "p": 0.987
+  },
+  {
+   "w": " the",
+   "start": 108.92,
+   "end": 109.08,
+   "p": 0.997
+  },
+  {
+   "w": " sun",
+   "start": 109.08,
+   "end": 109.22,
+   "p": 0.994
+  },
+  {
+   "w": " first",
+   "start": 109.22,
+   "end": 109.5,
+   "p": 0.996
+  },
+  {
+   "w": " touches",
+   "start": 109.5,
+   "end": 109.78,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 109.78,
+   "end": 109.98,
+   "p": 0.999
+  },
+  {
+   "w": " horizon,",
+   "start": 109.98,
+   "end": 110.28,
+   "p": 0.999
+  },
+  {
+   "w": " which",
+   "start": 110.56,
+   "end": 110.64,
+   "p": 0.997
+  },
+  {
+   "w": " means",
+   "start": 110.64,
+   "end": 110.8,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 110.8,
+   "end": 110.96,
+   "p": 0.991
+  },
+  {
+   "w": " day",
+   "start": 110.96,
+   "end": 111.1,
+   "p": 0.989
+  },
+  {
+   "w": "-night",
+   "start": 111.1,
+   "end": 111.26,
+   "p": 0.946
+  },
+  {
+   "w": " line",
+   "start": 111.26,
+   "end": 111.44,
+   "p": 0.989
+  },
+  {
+   "w": " is",
+   "start": 111.44,
+   "end": 111.58,
+   "p": 0.999
+  },
+  {
+   "w": " about",
+   "start": 111.58,
+   "end": 111.72,
+   "p": 0.999
+  },
+  {
+   "w": " to",
+   "start": 111.72,
+   "end": 111.82,
+   "p": 0.997
+  },
+  {
+   "w": " pass",
+   "start": 111.82,
+   "end": 112.04,
+   "p": 1.0
+  },
+  {
+   "w": " you.",
+   "start": 112.04,
+   "end": 112.28,
+   "p": 0.998
+  },
+  {
+   "w": " Then",
+   "start": 112.28,
+   "end": 112.7,
+   "p": 0.291
+  },
+  {
+   "w": " drive",
+   "start": 112.7,
+   "end": 113.06,
+   "p": 0.549
+  },
+  {
+   "w": " north",
+   "start": 113.06,
+   "end": 113.38,
+   "p": 0.911
+  },
+  {
+   "w": " to",
+   "start": 113.38,
+   "end": 113.66,
+   "p": 0.912
+  },
+  {
+   "w": " stay",
+   "start": 113.66,
+   "end": 113.84,
+   "p": 0.998
+  },
+  {
+   "w": " a",
+   "start": 113.84,
+   "end": 114.0,
+   "p": 0.974
+  },
+  {
+   "w": " little",
+   "start": 114.0,
+   "end": 114.18,
+   "p": 0.982
+  },
+  {
+   "w": " ahead",
+   "start": 114.18,
+   "end": 114.44,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 114.44,
+   "end": 114.56,
+   "p": 0.988
+  },
+  {
+   "w": " the",
+   "start": 114.56,
+   "end": 114.66,
+   "p": 0.995
+  },
+  {
+   "w": " line",
+   "start": 114.66,
+   "end": 114.84,
+   "p": 0.986
+  },
+  {
+   "w": " as",
+   "start": 114.84,
+   "end": 114.98,
+   "p": 0.974
+  },
+  {
+   "w": " long",
+   "start": 114.98,
+   "end": 115.1,
+   "p": 0.996
+  },
+  {
+   "w": " as",
+   "start": 115.1,
+   "end": 115.2,
+   "p": 0.997
+  },
+  {
+   "w": " you",
+   "start": 115.2,
+   "end": 115.3,
+   "p": 0.997
+  },
+  {
+   "w": " can,",
+   "start": 115.3,
+   "end": 115.6,
+   "p": 0.999
+  },
+  {
+   "w": " which",
+   "start": 115.86,
+   "end": 115.94,
+   "p": 0.979
+  },
+  {
+   "w": " will",
+   "start": 115.94,
+   "end": 116.08,
+   "p": 0.995
+  },
+  {
+   "w": " keep",
+   "start": 116.08,
+   "end": 116.2,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 116.2,
+   "end": 116.38,
+   "p": 0.994
+  },
+  {
+   "w": " sun",
+   "start": 116.38,
+   "end": 116.46,
+   "p": 0.92
+  },
+  {
+   "w": " in",
+   "start": 116.46,
+   "end": 116.6,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 116.6,
+   "end": 116.66,
+   "p": 0.992
+  },
+  {
+   "w": " process",
+   "start": 116.66,
+   "end": 116.9,
+   "p": 0.994
+  },
+  {
+   "w": " of",
+   "start": 116.9,
+   "end": 117.06,
+   "p": 0.998
+  },
+  {
+   "w": " setting.",
+   "start": 117.06,
+   "end": 117.36,
+   "p": 0.995
+  },
+  {
+   "w": " Then",
+   "start": 117.66,
+   "end": 117.86,
+   "p": 0.993
+  },
+  {
+   "w": " you",
+   "start": 117.86,
+   "end": 118.16,
+   "p": 0.665
+  },
+  {
+   "w": " turn",
+   "start": 118.16,
+   "end": 118.4,
+   "p": 0.99
+  },
+  {
+   "w": " and",
+   "start": 118.4,
+   "end": 118.62,
+   "p": 0.951
+  },
+  {
+   "w": " drive",
+   "start": 118.62,
+   "end": 118.82,
+   "p": 0.997
+  },
+  {
+   "w": " south",
+   "start": 118.82,
+   "end": 119.14,
+   "p": 0.979
+  },
+  {
+   "w": " across",
+   "start": 119.14,
+   "end": 119.6,
+   "p": 0.865
+  },
+  {
+   "w": " the",
+   "start": 119.6,
+   "end": 119.84,
+   "p": 0.993
+  },
+  {
+   "w": " line",
+   "start": 119.84,
+   "end": 120.08,
+   "p": 0.997
+  },
+  {
+   "w": " into",
+   "start": 120.08,
+   "end": 120.34,
+   "p": 0.88
+  },
+  {
+   "w": " nighttime.",
+   "start": 120.34,
+   "end": 120.64,
+   "p": 0.665
+  },
+  {
+   "w": " I",
+   "start": 121.28,
+   "end": 121.38,
+   "p": 0.989
+  },
+  {
+   "w": " ran",
+   "start": 121.38,
+   "end": 121.5,
+   "p": 0.983
+  },
+  {
+   "w": " a",
+   "start": 121.5,
+   "end": 121.68,
+   "p": 0.997
+  },
+  {
+   "w": " search",
+   "start": 121.68,
+   "end": 121.8,
+   "p": 0.999
+  },
+  {
+   "w": " for",
+   "start": 121.8,
+   "end": 122.08,
+   "p": 0.998
+  },
+  {
+   "w": " long",
+   "start": 122.08,
+   "end": 122.22,
+   "p": 0.864
+  },
+  {
+   "w": " sunset",
+   "start": 122.22,
+   "end": 122.56,
+   "p": 0.846
+  },
+  {
+   "w": " driving",
+   "start": 122.56,
+   "end": 122.9,
+   "p": 0.995
+  },
+  {
+   "w": " paths",
+   "start": 122.9,
+   "end": 123.16,
+   "p": 0.943
+  },
+  {
+   "w": " using",
+   "start": 123.16,
+   "end": 123.48,
+   "p": 0.75
+  },
+  {
+   "w": " some",
+   "start": 123.48,
+   "end": 123.74,
+   "p": 0.993
+  },
+  {
+   "w": " PIE",
+   "start": 123.74,
+   "end": 123.92,
+   "p": 0.435
+  },
+  {
+   "w": "-FM",
+   "start": 123.92,
+   "end": 124.16,
+   "p": 0.69
+  },
+  {
+   "w": " code",
+   "start": 124.16,
+   "end": 124.46,
+   "p": 0.991
+  },
+  {
+   "w": " and",
+   "start": 124.46,
+   "end": 124.7,
+   "p": 0.986
+  },
+  {
+   "w": " GPS",
+   "start": 124.7,
+   "end": 124.96,
+   "p": 0.997
+  },
+  {
+   "w": " traces",
+   "start": 124.96,
+   "end": 125.34,
+   "p": 0.977
+  },
+  {
+   "w": " of",
+   "start": 125.34,
+   "end": 125.52,
+   "p": 0.996
+  },
+  {
+   "w": " Norwegian",
+   "start": 125.52,
+   "end": 125.86,
+   "p": 0.979
+  },
+  {
+   "w": " highways,",
+   "start": 125.86,
+   "end": 126.22,
+   "p": 0.977
+  },
+  {
+   "w": " and",
+   "start": 126.44,
+   "end": 126.56,
+   "p": 0.971
+  },
+  {
+   "w": " I",
+   "start": 126.56,
+   "end": 126.68,
+   "p": 0.983
+  },
+  {
+   "w": " found",
+   "start": 126.68,
+   "end": 126.84,
+   "p": 0.988
+  },
+  {
+   "w": " that",
+   "start": 126.84,
+   "end": 127.0,
+   "p": 0.983
+  },
+  {
+   "w": " the",
+   "start": 127.0,
+   "end": 127.1,
+   "p": 0.963
+  },
+  {
+   "w": " strategy",
+   "start": 127.1,
+   "end": 127.38,
+   "p": 0.996
+  },
+  {
+   "w": " works",
+   "start": 127.38,
+   "end": 127.7,
+   "p": 0.998
+  },
+  {
+   "w": " about",
+   "start": 127.7,
+   "end": 127.9,
+   "p": 0.977
+  },
+  {
+   "w": " equally",
+   "start": 127.9,
+   "end": 128.2,
+   "p": 0.998
+  },
+  {
+   "w": " well",
+   "start": 128.2,
+   "end": 128.46,
+   "p": 0.995
+  },
+  {
+   "w": " anywhere",
+   "start": 128.46,
+   "end": 128.78,
+   "p": 0.979
+  },
+  {
+   "w": " inside",
+   "start": 128.78,
+   "end": 129.14,
+   "p": 0.983
+  },
+  {
+   "w": " the",
+   "start": 129.14,
+   "end": 129.28,
+   "p": 0.978
+  },
+  {
+   "w": " Arctic",
+   "start": 129.28,
+   "end": 129.52,
+   "p": 0.753
+  },
+  {
+   "w": " Circle.",
+   "start": 129.52,
+   "end": 129.8,
+   "p": 0.944
+  },
+  {
+   "w": " Over",
+   "start": 130.12,
+   "end": 130.28,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 130.28,
+   "end": 130.46,
+   "p": 0.999
+  },
+  {
+   "w": " wide",
+   "start": 130.46,
+   "end": 130.66,
+   "p": 0.999
+  },
+  {
+   "w": " range",
+   "start": 130.66,
+   "end": 131.0,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 131.0,
+   "end": 131.18,
+   "p": 0.998
+  },
+  {
+   "w": " routes",
+   "start": 131.18,
+   "end": 131.38,
+   "p": 0.993
+  },
+  {
+   "w": " and",
+   "start": 131.38,
+   "end": 131.58,
+   "p": 0.998
+  },
+  {
+   "w": " driving",
+   "start": 131.58,
+   "end": 131.88,
+   "p": 0.998
+  },
+  {
+   "w": " speeds,",
+   "start": 131.88,
+   "end": 132.22,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 132.4,
+   "end": 132.56,
+   "p": 0.996
+  },
+  {
+   "w": " longest",
+   "start": 132.56,
+   "end": 132.8,
+   "p": 0.999
+  },
+  {
+   "w": " sunset",
+   "start": 132.8,
+   "end": 133.1,
+   "p": 0.995
+  },
+  {
+   "w": " I",
+   "start": 133.1,
+   "end": 133.26,
+   "p": 0.987
+  },
+  {
+   "w": " could",
+   "start": 133.26,
+   "end": 133.36,
+   "p": 0.998
+  },
+  {
+   "w": " come",
+   "start": 133.36,
+   "end": 133.48,
+   "p": 0.997
+  },
+  {
+   "w": " up",
+   "start": 133.48,
+   "end": 133.6,
+   "p": 0.994
+  },
+  {
+   "w": " with",
+   "start": 133.6,
+   "end": 133.74,
+   "p": 0.994
+  },
+  {
+   "w": " was",
+   "start": 133.74,
+   "end": 133.88,
+   "p": 0.993
+  },
+  {
+   "w": " consistently",
+   "start": 133.88,
+   "end": 134.32,
+   "p": 0.99
+  },
+  {
+   "w": " about",
+   "start": 134.32,
+   "end": 134.62,
+   "p": 0.99
+  },
+  {
+   "w": " 95",
+   "start": 134.62,
+   "end": 135.14,
+   "p": 0.982
+  },
+  {
+   "w": " minutes,",
+   "start": 135.14,
+   "end": 135.54,
+   "p": 0.988
+  },
+  {
+   "w": " which",
+   "start": 135.64,
+   "end": 135.76,
+   "p": 0.994
+  },
+  {
+   "w": " is",
+   "start": 135.76,
+   "end": 135.88,
+   "p": 0.978
+  },
+  {
+   "w": " about",
+   "start": 135.88,
+   "end": 136.04,
+   "p": 0.997
+  },
+  {
+   "w": " 40",
+   "start": 136.04,
+   "end": 136.32,
+   "p": 0.984
+  },
+  {
+   "w": " minutes",
+   "start": 136.32,
+   "end": 136.52,
+   "p": 0.997
+  },
+  {
+   "w": " longer",
+   "start": 136.52,
+   "end": 136.78,
+   "p": 0.997
+  },
+  {
+   "w": " than",
+   "start": 136.78,
+   "end": 137.02,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 137.02,
+   "end": 137.14,
+   "p": 0.996
+  },
+  {
+   "w": " longest",
+   "start": 137.14,
+   "end": 137.34,
+   "p": 0.997
+  },
+  {
+   "w": " sunset",
+   "start": 137.34,
+   "end": 137.66,
+   "p": 0.998
+  },
+  {
+   "w": " you",
+   "start": 137.66,
+   "end": 137.8,
+   "p": 0.99
+  },
+  {
+   "w": " can",
+   "start": 137.8,
+   "end": 137.92,
+   "p": 0.972
+  },
+  {
+   "w": " get",
+   "start": 137.92,
+   "end": 138.02,
+   "p": 0.999
+  },
+  {
+   "w": " in",
+   "start": 138.02,
+   "end": 138.14,
+   "p": 0.995
+  },
+  {
+   "w": " Long",
+   "start": 138.14,
+   "end": 138.26,
+   "p": 0.874
+  },
+  {
+   "w": " Erebyen.",
+   "start": 138.26,
+   "end": 138.7,
+   "p": 0.294
+  },
+  {
+   "w": " But",
+   "start": 139.02,
+   "end": 139.18,
+   "p": 0.992
+  },
+  {
+   "w": " if",
+   "start": 139.18,
+   "end": 139.28,
+   "p": 0.98
+  },
+  {
+   "w": " you",
+   "start": 139.28,
+   "end": 139.4,
+   "p": 0.999
+  },
+  {
+   "w": " are",
+   "start": 139.4,
+   "end": 139.58,
+   "p": 0.982
+  },
+  {
+   "w": " stuck",
+   "start": 139.58,
+   "end": 139.84,
+   "p": 0.997
+  },
+  {
+   "w": " on",
+   "start": 139.84,
+   "end": 140.06,
+   "p": 0.997
+  },
+  {
+   "w": " Svalbard",
+   "start": 140.06,
+   "end": 140.42,
+   "p": 0.976
+  },
+  {
+   "w": " and",
+   "start": 140.42,
+   "end": 140.62,
+   "p": 0.876
+  },
+  {
+   "w": " you",
+   "start": 140.62,
+   "end": 140.72,
+   "p": 0.988
+  },
+  {
+   "w": " want",
+   "start": 140.72,
+   "end": 140.84,
+   "p": 0.91
+  },
+  {
+   "w": " to",
+   "start": 140.84,
+   "end": 140.9,
+   "p": 0.995
+  },
+  {
+   "w": " make",
+   "start": 140.9,
+   "end": 141.02,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 141.02,
+   "end": 141.16,
+   "p": 0.992
+  },
+  {
+   "w": " sunset",
+   "start": 141.16,
+   "end": 141.48,
+   "p": 0.952
+  },
+  {
+   "w": " or",
+   "start": 141.48,
+   "end": 141.76,
+   "p": 0.651
+  },
+  {
+   "w": " sunrise",
+   "start": 141.76,
+   "end": 142.2,
+   "p": 0.993
+  },
+  {
+   "w": " last",
+   "start": 142.2,
+   "end": 142.64,
+   "p": 0.99
+  },
+  {
+   "w": " a",
+   "start": 142.64,
+   "end": 142.84,
+   "p": 0.993
+  },
+  {
+   "w": " little",
+   "start": 142.84,
+   "end": 143.0,
+   "p": 0.987
+  },
+  {
+   "w": " longer,",
+   "start": 143.0,
+   "end": 143.44,
+   "p": 0.998
+  },
+  {
+   "w": " you",
+   "start": 143.78,
+   "end": 143.86,
+   "p": 0.991
+  },
+  {
+   "w": " can",
+   "start": 143.86,
+   "end": 143.96,
+   "p": 0.998
+  },
+  {
+   "w": " always",
+   "start": 143.96,
+   "end": 144.16,
+   "p": 0.989
+  },
+  {
+   "w": " try",
+   "start": 144.16,
+   "end": 144.42,
+   "p": 0.998
+  },
+  {
+   "w": " spinning",
+   "start": 144.42,
+   "end": 144.78,
+   "p": 0.987
+  },
+  {
+   "w": " counterclockwise",
+   "start": 144.78,
+   "end": 145.54,
+   "p": 0.943
+  },
+  {
+   "w": " so",
+   "start": 145.54,
+   "end": 145.78,
+   "p": 0.609
+  },
+  {
+   "w": " your",
+   "start": 145.78,
+   "end": 145.92,
+   "p": 0.979
+  },
+  {
+   "w": " angular",
+   "start": 145.92,
+   "end": 146.18,
+   "p": 1.0
+  },
+  {
+   "w": " momentum",
+   "start": 146.18,
+   "end": 146.54,
+   "p": 0.997
+  },
+  {
+   "w": " slows",
+   "start": 146.54,
+   "end": 146.96,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 146.96,
+   "end": 147.22,
+   "p": 0.995
+  },
+  {
+   "w": " Earth's",
+   "start": 147.22,
+   "end": 147.52,
+   "p": 0.822
+  },
+  {
+   "w": " rotation.",
+   "start": 147.52,
+   "end": 147.86,
+   "p": 0.993
+  },
+  {
+   "w": " It's",
+   "start": 148.36,
+   "end": 148.56,
+   "p": 0.986
+  },
+  {
+   "w": " true",
+   "start": 148.56,
+   "end": 148.78,
+   "p": 0.999
+  },
+  {
+   "w": " that",
+   "start": 148.78,
+   "end": 148.92,
+   "p": 0.987
+  },
+  {
+   "w": " it",
+   "start": 148.92,
+   "end": 149.0,
+   "p": 0.991
+  },
+  {
+   "w": " will",
+   "start": 149.0,
+   "end": 149.14,
+   "p": 0.99
+  },
+  {
+   "w": " only",
+   "start": 149.14,
+   "end": 149.42,
+   "p": 0.998
+  },
+  {
+   "w": " add",
+   "start": 149.42,
+   "end": 149.68,
+   "p": 0.999
+  },
+  {
+   "w": " an",
+   "start": 149.68,
+   "end": 149.8,
+   "p": 0.989
+  },
+  {
+   "w": " imperceptibly",
+   "start": 149.8,
+   "end": 150.56,
+   "p": 0.998
+  },
+  {
+   "w": " small",
+   "start": 150.56,
+   "end": 150.8,
+   "p": 0.992
+  },
+  {
+   "w": " fraction",
+   "start": 150.8,
+   "end": 151.16,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 151.16,
+   "end": 151.3,
+   "p": 0.999
+  },
+  {
+   "w": " a",
+   "start": 151.3,
+   "end": 151.4,
+   "p": 0.987
+  },
+  {
+   "w": " nanosecond,",
+   "start": 151.4,
+   "end": 151.92,
+   "p": 0.996
+  },
+  {
+   "w": " but",
+   "start": 152.26,
+   "end": 152.5,
+   "p": 0.998
+  },
+  {
+   "w": " it",
+   "start": 152.5,
+   "end": 152.9,
+   "p": 0.973
+  },
+  {
+   "w": " might",
+   "start": 152.9,
+   "end": 153.02,
+   "p": 0.979
+  },
+  {
+   "w": " be",
+   "start": 153.02,
+   "end": 153.18,
+   "p": 0.997
+  },
+  {
+   "w": " worth",
+   "start": 153.18,
+   "end": 153.34,
+   "p": 1.0
+  },
+  {
+   "w": " it.",
+   "start": 153.34,
+   "end": 153.62,
+   "p": 0.998
+  }
+ ]
+}

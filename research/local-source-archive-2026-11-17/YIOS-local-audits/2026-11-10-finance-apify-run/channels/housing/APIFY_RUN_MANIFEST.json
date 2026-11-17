@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-10T07:38:14.743Z",
+  "channel": {
+    "name": "Housing",
+    "handle": "@housingusa",
+    "id": "UC3Tzh0Wu1C9s3AI2Oqc8kIA"
+  },
+  "tranche": "T2",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t2_housing",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "TlqPwivVKNc2whzty",
+    "dataset_id": "3lBAbQLmIzjKbmql4",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-10T07:37:35.775Z",
+    "finished_at_utc": "2026-11-10T07:38:14.743Z",
+    "charged_events": {
+      "result": 24
+    },
+    "actual_cost_usd": 0.096,
+    "usage_total_usd_reported": 0.096,
+    "max_cost_usd": 0.13,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UC3Tzh0Wu1C9s3AI2Oqc8kIA"
+      ],
+      "maxResults": 31,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 24,
+    "raw_file": "raw/t2_housing_TlqPwivVKNc2whzty_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 24,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

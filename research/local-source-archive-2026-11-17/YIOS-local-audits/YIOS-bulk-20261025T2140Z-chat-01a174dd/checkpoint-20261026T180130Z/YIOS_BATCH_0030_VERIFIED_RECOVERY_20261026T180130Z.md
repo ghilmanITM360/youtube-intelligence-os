@@ -1,0 +1,198 @@
+# YIOS Batch30 verified recovery receipt
+
+Status VERIFIED. Uploaded bytes: 558,378; complete independently retrieved SHA-256 verified bytes: 558,378. Source mappings: 1.
+
+All-in physical uploaded bytes before this MD: 5,013,204,634; independently verified bytes: 5,013,204,634. This MD is additional payload, counted by its separate CONTROL-UPLOAD/VERIFY receipts after complete independent readback. No duplicate/partial I/O is counted as new recovery coverage.
+
+Authenticated owner kgk2930@gmail.com; approved private yios hierarchy. Actual namespace IDs, source paths, hashes, bytes and remote object IDs follow. Source stability and current owner/private/parent/size gates passed. No source deletion/move/cleanup, Git/PR/branch/stash/LFS/production mutation, payment or reset credit use by this backup. This is file-level cloud recovery; independent-machine disaster recovery and production ownership acceptance remain unproven.
+
+```json
+{
+  "receipt": {
+    "status": "VERIFIED",
+    "batch": 30,
+    "completed_utc": "2026-10-26T18:01:30.220921+00:00",
+    "files": [
+      {
+        "source_absolute": "/Users/ghilmankhan/workprojects/youtube-intelligence-os/productions/senior-health-casually-finance-3/01_HIIT_AFTER_60/animation/v2/qa/test_window.mp4",
+        "restore_relative": "machine-a/workprojects/youtube-intelligence-os/productions/senior-health-casually-finance-3/01_HIIT_AFTER_60/animation/v2/qa/test_window.mp4",
+        "root": "/Users/ghilmankhan/workprojects/youtube-intelligence-os/productions",
+        "kind": "regular",
+        "bytes": 558378,
+        "allocated_path_bytes": 561152,
+        "mtime_ns": 1792082234088857076,
+        "device": 16777229,
+        "inode": 91018934,
+        "nlink": 1,
+        "sha256": "",
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 4013,
+        "proposed_destination_name": "04013__test_window.mp4",
+        "fresh_stat": {
+          "st_size": 558378,
+          "st_mtime_ns": 1792082234088857076,
+          "st_ctime_ns": 1792082234088857076,
+          "st_ino": 91018934,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "3719f4f73fe92eeecb76de40f36ffa2a68a45e0ab9d572cd24839f6980cd9e47",
+        "hash_refreshed_utc": "2026-10-26T17:56:32.058594+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx",
+        "remote_url": "https://drive.google.com/file/d/1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T18:00:59.968754+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx",
+            "title": "test_window.mp4",
+            "mime_type": "video/mp4",
+            "size": "558378",
+            "url": "https://drive.google.com/file/d/1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T17:59:02.942Z",
+            "modified_time": "2026-10-15T16:37:14.088Z",
+            "parent_ids": [
+              "1vcTcjdpZ37LS0SfnlcYUEEpWJhr1xbUl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 4013,
+          "remote_id": "1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx",
+          "retrieval_file_id": "sediment://file_0000000005e08211b9d5880d1d9daa05",
+          "metadata": {
+            "id": "1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx",
+            "title": "test_window.mp4",
+            "mime_type": "video/mp4",
+            "size": "558378",
+            "url": "https://drive.google.com/file/d/1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T17:59:02.942Z",
+            "modified_time": "2026-10-15T16:37:14.088Z",
+            "parent_ids": [
+              "1vcTcjdpZ37LS0SfnlcYUEEpWJhr1xbUl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T18:01:16.656224+00:00",
+          "retrieved_bytes": 558378,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "558378",
+          "retrieved_sha256": "3719f4f73fe92eeecb76de40f36ffa2a68a45e0ab9d572cd24839f6980cd9e47",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T18:01:17.021131+00:00"
+        }
+      }
+    ],
+    "uploaded_bytes": 558378,
+    "independently_retrieved_bytes": 558378,
+    "mapped_source_files": 1,
+    "selection_amendment": null,
+    "preflight": {
+      "account": "kgk2930@gmail.com",
+      "privacy": "OWNER_ONLY",
+      "five_hour_used": 11,
+      "weekly_used": 21,
+      "paid_credits": "0",
+      "observed_at": "2026-10-26T17:56:31.794Z",
+      "ui_used_gb": 5.47,
+      "storage_ui": "Fresh authenticated Google One5.47GB of15GB; Drive5.17GB Gmail302.23MB",
+      "conservative_free_bytes": 9026632222,
+      "mac_free_bytes": 19773779968,
+      "context": "Adequate context; exact context meter unavailable",
+      "ownership": "No active backup helper; live Claude preserved, other preservation chat notLoaded. Stable read-only source access; no writer takeover.",
+      "charges": "Existing allowance; no payment, paid/reset credit use"
+    },
+    "postflight": {
+      "batch_dir": "/Users/ghilmankhan/YIOS-local-audits/YIOS-bulk-20261025T2140Z-chat-01a174dd/batch-0030",
+      "account": "kgk2930@gmail.com",
+      "privacy": "OWNER_ONLY",
+      "five_hour_used": 11,
+      "weekly_used": 21,
+      "paid_credits": "0",
+      "observed_at": "2026-10-26T18:01:30.109Z",
+      "ui_used_gb": 5.47,
+      "storage_ui": "Fresh authenticated Google One5.47GB of15GB; Drive5.17GB Gmail302.23MB",
+      "conservative_free_bytes": 9026632222,
+      "mac_free_bytes": 19773779968,
+      "context": "Adequate context; exact context meter unavailable",
+      "ownership": "No active backup helper; live Claude preserved, other preservation chat notLoaded. Stable read-only source access; no writer takeover.",
+      "charges": "Existing allowance; no payment, paid/reset credit use",
+      "destination_folder_id": "1vcTcjdpZ37LS0SfnlcYUEEpWJhr1xbUl"
+    },
+    "permissions": "Owner-only Restricted; no changes",
+    "encryption": "Google provider managed; owner-held client key not established",
+    "retention": "Until explicit owner removal approval",
+    "coverage": "File-level verified recovery only; no complete-package or independent-machine recovery claim"
+  },
+  "recovery_mapping": {
+    "files": [
+      {
+        "source_absolute": "/Users/ghilmankhan/workprojects/youtube-intelligence-os/productions/senior-health-casually-finance-3/01_HIIT_AFTER_60/animation/v2/qa/test_window.mp4",
+        "restore_relative": "machine-a/workprojects/youtube-intelligence-os/productions/senior-health-casually-finance-3/01_HIIT_AFTER_60/animation/v2/qa/test_window.mp4",
+        "bytes": 558378,
+        "fresh_sha256": "3719f4f73fe92eeecb76de40f36ffa2a68a45e0ab9d572cd24839f6980cd9e47",
+        "remote_id": "1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx",
+        "remote_url": "https://drive.google.com/file/d/1KqS7tTEiSnYmkDrMjGlLeIObzrkb7ISx/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      }
+    ]
+  },
+  "cumulative_before_this_control": {
+    "mapped_source_paths": 494,
+    "uploaded_bytes_including_controls": 5013204634,
+    "verified_bytes_including_controls": 5013204634,
+    "remaining_payload_bytes": 6986795366,
+    "remaining_plan_files": 58
+  }
+}
+```

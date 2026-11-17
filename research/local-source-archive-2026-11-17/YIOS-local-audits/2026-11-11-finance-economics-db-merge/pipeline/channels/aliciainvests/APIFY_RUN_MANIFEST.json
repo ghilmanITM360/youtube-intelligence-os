@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-11T17:25:44.000Z",
+  "channel": {
+    "name": "Alicia Invests",
+    "handle": "@AliciaInvestsUS",
+    "id": "UCFPfloFwa6X2UddqRH83rAA"
+  },
+  "tranche": "X",
+  "coverage_status": "PARTIAL",
+  "primary_run": {
+    "label": "x_aliciainvests",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.332",
+    "run_id": "DGVyhavl8Y2PCPWWh",
+    "dataset_id": "RQg8IhClTEOM1WmdQ",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-11T17:21:23.000Z",
+    "finished_at_utc": "2026-11-11T17:25:44.000Z",
+    "charged_events": {
+      "result": 40
+    },
+    "actual_cost_usd": 0.16,
+    "usage_total_usd_reported": 0.16,
+    "max_cost_usd": 1.0,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCFPfloFwa6X2UddqRH83rAA"
+      ],
+      "maxResults": 40,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 40,
+    "raw_file": "raw/x_aliciainvests_DGVyhavl8Y2PCPWWh_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 40,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

@@ -1,0 +1,514 @@
+# Reconstruction blueprint - original asset system derived from KTnp2OlQJHA
+New ORIGINAL assets and motion only. No source screenshot, footage, logo or character drawing is copied; third-party items (`IMG_*`, `ICON_*`) are replaced with licensed or self-made equivalents and your own data. Timings at 30 fps, 1920x1080.
+
+## Modules (original rebuild; derived from measured patterns)
+1. **Cast and prop kit**: stick man, figure with orange tie, glasses figure, office workers, trader at desk, investor with briefcase, grey robot, chalkboard, medal, money bags, papers, ORDER boxes. Redraw as new original assets; do not trace the source.
+2. **Hard-cut scene chain**: 194 hard cuts, median shot 2.7 s (0.07-12.3 s); 178 land on I-frames and 16 do not.
+3. **Chalkboard term frame**: 34 chalkboard states; swap the board text in place.
+4. **One-frame pop-in builds**: 412 of 478 episodes are one frame; build groups one item per step.
+5. **Caption time jumps**: short handwritten captions for each era.
+6. **Sponsor block with progress bar**: a yellow bar along the bottom edge that grows about 0.94 px per frame across the 69 s segment; use your own sponsor and mascot.
+7. **Third-party insert slot**: photos, clips, charts, logos and screenshots are replaced with licensed or self-made equivalents.
+8. **Counters and blinks**: animated number counters and 4-5 frame blinks for emphasis.
+9. **Mostly locked-off camera**: only a few scale changes (4 measured).
+10. **End card**: white card with Subscribe for more, channel name, YouTube mark and crossed-out social icons held 5.1 s.
+11. **Codec note**: 30 fps constant frame rate, 238 I-frames about every 2.7 s on average.
+
+
+## Editor timeline (frames)
+- S001 f0-f19 (20 fr): START - Caption Back in the day
+- S002 f20-f54 (35 fr): CUT - Wall St street sign
+- S003 f55-f101 (47 fr): CUT - Three office workers
+- S004 f102-f119 (18 fr): CUT - Woman on phone close
+- S005 f120-f147 (28 fr): POP_IN - Man with sparkling object
+- S006 f148-f204 (57 fr): CUT - Figure plants ME flag on island
+- S007 f205-f216 (12 fr): CUT - Stick man at left
+- S008 f217-f242 (26 fr): POP_IN - Film still of man in suspenders
+- S009 f243-f296 (54 fr): POP_IN - Film still of man in suit
+- S010 f297-f360 (64 fr): CUT - Stick man centre
+- S011 f361-f391 (31 fr): POP_IN+ANIM - Woman, man and green arrow enter
+- S012 f392-f469 (78 fr): POP_IN+ANIM - Red falling arrow draws on
+- S013 f470-f514 (45 fr): CUT - Trader at office desk
+- S014 f515-f547 (33 fr): POP_IN - Papers appear
+- S015 f548-f587 (40 fr): POP_IN - Phone appears
+- S016 f588-f631 (44 fr): POP_IN - Red chart and dollar signs appear
+- S017 f632-f665 (34 fr): CUT - Trader close smiling
+- S018 f666-f710 (45 fr): POP_IN - Bubble Trust me boss
+- S019 f711-f742 (32 fr): POP_IN - Bubble I'm sure this won't fail
+- S020 f743-f799 (57 fr): CUT - Stick man holding small skull
+- S021 f800-f867 (68 fr): CUT+ANIM - Crying trader with flying money
+- S022 f868-f937 (70 fr): CUT - Red falling arrow and slumped figure
+- S023 f938-f990 (53 fr): CUT - Stick man at blank chalkboard
+- S024 f991-f1057 (67 fr): POP_IN - Board text Story
+- S025 f1058-f1064 (7 fr): CUT - Thinking figure with orange tie
+- S026 f1065-f1085 (21 fr): POP_IN - Tiny figure appears
+- S027 f1086-f1106 (21 fr): POP_IN - Group of figures with check
+- S028 f1107-f1123 (17 fr): POP_IN - Document icon
+- S029 f1124-f1182 (59 fr): POP_IN - Second check
+- S030 f1183-f1189 (7 fr): POP_IN - Banknote icon
+- S031 f1190-f1213 (24 fr): POP_IN - Stonks tile
+- S032 f1214-f1227 (14 fr): POP_IN - Third check
+- S033 f1228-f1243 (16 fr): CUT - Stick man straight face
+- S034 f1244-f1276 (33 fr): POSE - Stick man smiles
+- S035 f1277-f1288 (12 fr): POSE - Stick man arms move
+- S036 f1289-f1310 (22 fr): POP_IN - Zodiac wheel appears
+- S037 f1311-f1354 (44 fr): POP_IN - Fortune teller with crystal ball
+- S038 f1355-f1407 (53 fr): CUT - Chalkboard Stories = Standard
+- S039 f1408-f1434 (27 fr): POSE - Pointer raises
+- S040 f1435-f1593 (159 fr): CUT+ANIM - Turtle carrying money and papers
+- S041 f1594-f1623 (30 fr): CUT+ANIM - Green rising arrow with money bags
+- S042 f1624-f1634 (11 fr): POP_IN - Second money bag
+- S043 f1635-f1671 (37 fr): POP_IN - Third money bag
+- S044 f1672-f1690 (19 fr): CUT - Stick man centre
+- S045 f1691-f1734 (44 fr): POSE - Stick man arm move
+- S046 f1735-f1761 (27 fr): POSE - Stick man surprised
+- S047 f1762-f1806 (45 fr): CUT - Smiling man with glasses
+- S048 f1807-f1815 (9 fr): CUT - Photo of young man in suit
+- S049 f1816-f1822 (7 fr): POP_IN - Second still
+- S050 f1823-f1848 (26 fr): POP_IN - Third still
+- S051 f1849-f1870 (22 fr): POP_IN - Diploma scroll
+- S052 f1871-f1892 (22 fr): POP_IN - Harvard crest
+- S053 f1893-f1938 (46 fr): CUT - Glasses figure with medal
+- S054 f1939-f1998 (60 fr): POP_IN - Empty thought bubble
+- S055 f1999-f2051 (53 fr): POP_IN - Bell curve chart in thought bubble
+- S056 f2052-f2096 (45 fr): CUT - Caption In the late 1980s
+- S057 f2097-f2185 (89 fr): CUT+ANIM - Three men thinking
+- S058 f2186-f2238 (53 fr): CUT - Chalkboard Random
+- S059 f2239-f2272 (34 fr): POP_IN - Random crossed and Statistical added
+- S060 f2273-f2273 (1 fr): POP_IN - Strike-through redrawn
+- S061 f2274-f2351 (78 fr): CUT - Patterns cycle
+- S062 f2352-f2448 (97 fr): POP_IN - Turtle with money bag
+- S063 f2449-f2479 (31 fr): CUT - Stick man centre
+- S064 f2480-f2536 (57 fr): CUT - Chalkboard Quantitative Investing
+- S065 f2537-f2573 (37 fr): CUT - Thinking figure with orange tie
+- S066 f2574-f2613 (40 fr): POP_IN - Bubble Is this a good company
+- S067 f2614-f2648 (35 fr): CUT - Glasses figure centre
+- S068 f2649-f2687 (39 fr): CUT+ANIM - Patterns cycle and turtle with money bag
+- S069 f2688-f2730 (43 fr): CUT - Glasses figure asks expected outcome
+- S070 f2731-f2749 (19 fr): CUT - Rules scroll
+- S071 f2750-f2777 (28 fr): POP_IN - Man with glasses My friend told me
+- S072 f2778-f2802 (25 fr): CUT - Letter P definition
+- S073 f2803-f2824 (22 fr): POP_IN - Woman on phone I think we should
+- S074 f2825-f2844 (20 fr): CUT - Chalkboard MATH > gut feelings
+- S075 f2845-f2874 (30 fr): POSE - Pointer raises
+- S076 f2875-f2899 (25 fr): CUT - Caption And it worked
+- S077 f2900-f2906 (7 fr): CUT - Money bag
+- S078 f2907-f2911 (5 fr): POP_IN - Second money bag
+- S079 f2912-f2919 (8 fr): POP_IN - Third money bag
+- S080 f2920-f2928 (9 fr): POP_IN - First banknote
+- S081 f2929-f2935 (7 fr): POP_IN - Second banknote
+- S082 f2936-f2981 (46 fr): POP_IN - Third banknote
+- S083 f2982-f2992 (11 fr): CUT - Curly-haired man with mirror
+- S084 f2993-f3003 (11 fr): POSE - Red spots appear on face
+- S085 f3004-f3011 (8 fr): POSE - More spots
+- S086 f3012-f3024 (13 fr): POSE - Mouth opens
+- S087 f3025-f3064 (40 fr): CUT - Stick man straight face
+- S088 f3065-f3114 (50 fr): CUT - Renaissance logo
+- S089 f3115-f3150 (36 fr): CUT - Stick man smiling
+- S090 f3151-f3190 (40 fr): CUT - Medallion Fund medal
+- S091 f3191-f3323 (133 fr): CUT - Stick man pointing at medal
+- S092 f3324-f3360 (37 fr): CUT - Chalkboard THE MOST SUCCESSFUL IN HISTORY
+- S093 f3361-f3390 (30 fr): CUT - Small figure
+- S094 f3391-f3419 (29 fr): POP_IN - Caption a medallion what
+- S095 f3420-f3471 (52 fr): CUT - Renaissance logo at top
+- S096 f3472-f3516 (45 fr): POP_IN - Sailboat with medal on waves
+- S097 f3517-f3569 (53 fr): CUT - Stick man smiling
+- S098 f3570-f3605 (36 fr): CUT - Portrait photo of older man
+- S099 f3606-f3640 (35 fr): CUT - Stick man with photo Hear me out
+- S100 f3641-f3697 (57 fr): POP_IN - Equation 2 + 2 = 4
+- S101 f3698-f3748 (51 fr): POP_IN - Rising price chart replaces equation
+- S102 f3749-f3762 (14 fr): CUT - Adobe logo with falling arrow
+- S103 f3763-f3806 (44 fr): POP_IN - Alphabet with rising arrow
+- S104 f3807-f3855 (49 fr): CUT+ANIM - CNBC news clip Janitor's $8M fortune
+- S105 f3856-f3938 (83 fr): CUT+ANIM - Computer with genie fading in
+- S106 f3939-f4032 (94 fr): CUT+ANIM - Math formulas meme clip
+- S107 f4033-f4043 (11 fr): CUT - Stick man centre
+- S108 f4044-f4060 (17 fr): POSE - Stick man smiles
+- S109 f4061-f4104 (44 fr): CUT - Stick man close straight face
+- S110 f4105-f4152 (48 fr): CUT - Caption For more than 20 YEARS
+- S111 f4153-f4209 (57 fr): CUT+ANIM - Medal with rising arrow
+- S112 f4210-f4215 (6 fr): POP_IN - 60% returns with banknote
+- S113 f4216-f4223 (8 fr): POP_IN - Second banknote
+- S114 f4224-f4297 (74 fr): POP_IN - Third banknote
+- S115 f4298-f4311 (14 fr): POP_IN - 39% returns after fees
+- S116 f4312-f4317 (6 fr): POP_IN - Banknote under 39%
+- S117 f4318-f4366 (49 fr): POP_IN - Second banknote under 39%
+- S118 f4367-f4401 (35 fr): CUT - Stick man with raised pointer
+- S119 f4402-f4447 (46 fr): POP_IN - Portrait photo of elderly investor
+- S120 f4448-f4458 (11 fr): POP_IN - 19% return
+- S121 f4459-f4540 (82 fr): POP_IN - Pointer lowers and banknote appears
+- S122 f4541-f4550 (10 fr): CUT - Banknote alone
+- S123 f4551-f4560 (10 fr): POP_IN - Second banknote
+- S124 f4561-f4576 (16 fr): POP_IN - Third banknote
+- S125 f4577-f4597 (21 fr): POP_IN - $10,000 label
+- S126 f4598-f4630 (33 fr): POP_IN - Round portrait
+- S127 f4631-f4684 (54 fr): POP_IN - 20 years time arrow
+- S128 f4685-f4735 (51 fr): POP_IN+ANIM - Calculator screenshot $324,000 and money clip
+- S129 f4736-f4745 (10 fr): CUT - Banknote alone again
+- S130 f4746-f4755 (10 fr): POP_IN - Second banknote
+- S131 f4756-f4771 (16 fr): POP_IN - Third banknote
+- S132 f4772-f4792 (21 fr): POP_IN - $10,000 label
+- S133 f4793-f4817 (25 fr): POP_IN - Medal instead of portrait
+- S134 f4818-f4876 (59 fr): POP_IN - 20 years time arrow
+- S135 f4877-f4930 (54 fr): POP_IN+ANIM - Calculator $7,000,000 with excited man clip
+- S136 f4931-f4985 (55 fr): CUT - Chalkboard Medallion fund =
+- S137 f4986-f5024 (39 fr): POP_IN - Board adds SUCCESS
+- S138 f5025-f5029 (5 fr): CUT - Blank white
+- S139 f5030-f5038 (9 fr): POP_IN - Word It
+- S140 f5039-f5046 (8 fr): POP_IN - Word transformed
+- S141 f5047-f5055 (9 fr): POP_IN - Word the
+- S142 f5056-f5077 (22 fr): POP_IN - Word industry
+- S143 f5078-f5174 (97 fr): CUT - Three office workers
+- S144 f5175-f5206 (32 fr): POP_IN - Computer with trading chart
+- S145 f5207-f5288 (82 fr): POP_IN - Caption Now I decide
+- S146 f5289-f5321 (33 fr): CUT+ANIM - Red falling and green rising arrows equal money
+- S147 f5322-f5344 (23 fr): POP_IN - ORDER boxes
+- S148 f5345-f5380 (36 fr): POP_IN - Red and green crossing arrows
+- S149 f5381-f5429 (49 fr): CUT - Chalkboard And much more
+- S150 f5430-f5494 (65 fr): POSE - Pointer raises
+- S151 f5495-f5563 (69 fr): CUT+ANIM - Computer and speedster clip
+- S152 f5564-f5636 (73 fr): CUT - Medal alone
+- S153 f5637-f5677 (41 fr): POP_IN - Good job star sticker
+- S154 f5678-f5708 (31 fr): POP_IN - BIG BUSINESS tower
+- S155 f5709-f5757 (49 fr): POP_IN - Small man with glasses
+- S156 f5758-f5858 (101 fr): CUT+ANIM - Headband man thinking
+- S157 f5859-f5873 (15 fr): CUT - Small glasses figure
+- S158 f5874-f5885 (12 fr): POP_IN - Second figure
+- S159 f5886-f5907 (22 fr): POP_IN - Third figure
+- S160 f5908-f5912 (5 fr): POP_IN - Green check
+- S161 f5913-f5917 (5 fr): POP_IN - Check blinks off
+- S162 f5918-f5956 (39 fr): POP_IN - Check back
+- S163 f5957-f5961 (5 fr): POP_IN - Banknote
+- S164 f5962-f5965 (4 fr): POP_IN - Second banknote
+- S165 f5966-f5970 (5 fr): POP_IN - Third banknote
+- S166 f5971-f5975 (5 fr): POP_IN - Fourth banknote
+- S167 f5976-f5980 (5 fr): POP_IN - Fifth banknote
+- S168 f5981-f6041 (61 fr): POP_IN - Sixth banknote
+- S169 f6042-f6058 (17 fr): CUT - Crowd of small stick figures
+- S170 f6059-f6081 (23 fr): POP_IN+ANIM - Red X marks spread over figures
+- S171 f6082-f6091 (10 fr): POP_IN - Last figures crossed
+- S172 f6092-f6096 (5 fr): POP_IN - First green check on a figure
+- S173 f6097-f6119 (23 fr): POP_IN - Second green check
+- S174 f6120-f6165 (46 fr): CUT - Caption By the early 2000s
+- S175 f6166-f6192 (27 fr): CUT - Stick man with magnifier
+- S176 f6193-f6239 (47 fr): POP_IN+ANIM - Paper stack grows
+- S177 f6240-f6350 (111 fr): CUT - Trader close smiling
+- S178 f6351-f6407 (57 fr): CUT - Slumped figure
+- S179 f6408-f6426 (19 fr): CUT - Stick man straight face
+- S180 f6427-f6435 (9 fr): POP_IN - Caption just bad luck that one time
+- S181 f6436-f6457 (22 fr): POP_IN - Red X over caption
+- S182 f6458-f6464 (7 fr): POP_IN - Caption this wasn't my year
+- S183 f6465-f6489 (25 fr): POP_IN - Red X over second caption
+- S184 f6490-f6520 (31 fr): POSE - Stick man arm move
+- S185 f6521-f6532 (12 fr): CUT - REPORT paper
+- S186 f6533-f6542 (10 fr): POP_IN - STUDY paper
+- S187 f6543-f6548 (6 fr): POP_IN - Second STUDY paper
+- S188 f6549-f6555 (7 fr): POP_IN - Second REPORT paper
+- S189 f6556-f6577 (22 fr): POP_IN - Third REPORT paper
+- S190 f6578-f6667 (90 fr): POP_IN - Red 90% over papers
+- S191 f6668-f6760 (93 fr): CUT - Fund manager underperformance bar chart
+- S192 f6761-f6786 (26 fr): POP_IN - Figure with clipboard
+- S193 f6787-f6792 (6 fr): POP_IN - FEE paper
+- S194 f6793-f6800 (8 fr): POP_IN - Second FEE paper
+- S195 f6801-f6857 (57 fr): POP_IN - Third FEE paper
+- S196 f6858-f6871 (14 fr): CUT - Frowning stick man
+- S197 f6872-f6900 (29 fr): POSE - Stick man arm move
+- S198 f6901-f6966 (66 fr): CUT - Investor with briefcase
+- S199 f6967-f7040 (74 fr): POP_IN - Bubble Why am I paying extra to underperform
+- S200 f7041-f7062 (22 fr): CUT - Stick man at blank chalkboard
+- S201 f7063-f7112 (50 fr): POP_IN - Board text Index investing
+- S202 f7113-f7121 (9 fr): CUT - Red down arrow
+- S203 f7122-f7145 (24 fr): POP_IN - Banknote beside arrow
+- S204 f7146-f7164 (19 fr): POP_IN+MICRO - Chart board beside banknote
+- S205 f7165-f7248 (84 fr): CUT - Index fund infographic
+- S206 f7249-f7282 (34 fr): CUT - Headband man thumbs up
+- S207 f7283-f7292 (10 fr): POP_IN - Green check
+- S208 f7293-f7297 (5 fr): POP_IN - Check blinks off
+- S209 f7298-f7353 (56 fr): POP_IN - Check back
+- S210 f7354-f7510 (157 fr): CUT - John Bogle quote card
+- S211 f7511-f7545 (35 fr): CUT - Investor with briefcase
+- S212 f7546-f7569 (24 fr): POP_IN - Three office workers small
+- S213 f7570-f7652 (83 fr): POP_IN - Red X over workers
+- S214 f7653-f7669 (17 fr): POP_IN - Chart board
+- S215 f7670-f7722 (53 fr): POP_IN - Green check
+- S216 f7723-f7783 (61 fr): CUT - BIG BUSINESS tower
+- S217 f7784-f7825 (42 fr): POP_IN - Banknotes
+- S218 f7826-f7913 (88 fr): POP_IN+MICRO - Man in teal tie
+- S219 f7914-f7948 (35 fr): POP_IN+ANIM - Banknotes move
+- S220 f7949-f7978 (30 fr): POP_IN+ANIM - Medal with banknote
+- S221 f7979-f8019 (41 fr): POP_IN+ANIM - Briefcase with banknotes
+- S222 f8020-f8039 (20 fr): CUT - Stick man smiling
+- S223 f8040-f8193 (154 fr): CUT+ANIM - Trader at office desk zooms and greys
+- S224 f8194-f8252 (59 fr): CUT+ANIM - Banknote alone
+- S225 f8253-f8288 (36 fr): CUT - FEE paper
+- S226 f8289-f8337 (49 fr): CUT+MICRO - Woman close smiling faded
+- S227 f8338-f8393 (56 fr): CUT - Stick man smiling
+- S228 f8394-f8421 (28 fr): POSE - Stick man arm move
+- S229 f8422-f8459 (38 fr): POP_IN - Briefcase appears
+- S230 f8460-f8504 (45 fr): POSE - Stick man arm move
+- S231 f8505-f8586 (82 fr): CUT+ANIM - Balance scale tipping
+- S232 f8587-f8593 (7 fr): POP_IN - TAX paper and briefcases
+- S233 f8594-f8661 (68 fr): POP_IN - Second TAX paper
+- S234 f8662-f8705 (44 fr): CUT - Stick man at blank chalkboard
+- S235 f8706-f8773 (68 fr): POP_IN - Board text Robo Advisors
+- S236 f8774-f8815 (42 fr): CUT - Stick man straight face
+- S237 f8816-f8865 (50 fr): POSE - Stick man smiles
+- S238 f8866-f8906 (41 fr): CUT - Robot on phone
+- S239 f8907-f8926 (20 fr): POP_IN - Empty speech bubble
+- S240 f8927-f8956 (30 fr): POP_IN - Flowchart icon in bubble
+- S241 f8957-f8990 (34 fr): POP_IN - Briefcase
+- S242 f8991-f8995 (5 fr): POP_IN - Green check
+- S243 f8996-f9015 (20 fr): POP_IN - Check blinks
+- S244 f9016-f9051 (36 fr): POP_IN - Red X over robot scene
+- S245 f9052-f9081 (30 fr): CUT - Medal alone
+- S246 f9082-f9094 (13 fr): POP_IN - Empty speech bubble
+- S247 f9095-f9129 (35 fr): POP_IN - Flowchart icon in bubble
+- S248 f9130-f9178 (49 fr): CUT - Stick man smiling
+- S249 f9179-f9225 (47 fr): CUT - Renaissance logo
+- S250 f9226-f9256 (31 fr): POP_IN - Two Sigma logo
+- S251 f9257-f9301 (45 fr): CUT - Flowchart icon
+- S252 f9302-f9366 (65 fr): POP_IN+ANIM - Clock and chart board appear
+- S253 f9367-f9418 (52 fr): CUT - Backtest line charts
+- S254 f9419-f9479 (61 fr): CUT - Chalkboard + other strats
+- S255 f9480-f9512 (33 fr): POSE - Pointer raises
+- S256 f9513-f9547 (35 fr): POP_IN - Board text ALPHA
+- S257 f9548-f9623 (76 fr): CUT - Medal alone
+- S258 f9624-f9685 (62 fr): POP_IN - Robot appears
+- S259 f9686-f9712 (27 fr): CUT - Stick man smiling
+- S260 f9713-f9760 (48 fr): CUT - Chef with spoon
+- S261 f9761-f9774 (14 fr): POP_IN - Chef with canned sauce
+- S262 f9775-f9799 (25 fr): POP_IN - Caption best I can do is canned
+- S263 f9800-f9860 (61 fr): CUT - Robot on phone close
+- S264 f9861-f9874 (14 fr): POP_IN - Equals sign
+- S265 f9875-f9912 (38 fr): POP_IN - Computer with trading chart
+- S266 f9913-f9917 (5 fr): POP_IN - Banknote
+- S267 f9918-f9924 (7 fr): POP_IN - Second banknote
+- S268 f9925-f9989 (65 fr): POP_IN - Third banknote
+- S269 f9990-f10012 (23 fr): POP_IN - Three advisors with clipboards
+- S270 f10013-f10041 (29 fr): POP_IN - Red X over advisors
+- S271 f10042-f10103 (62 fr): CUT - Angry robot boxing Two Sigma logo
+- S272 f10104-f10146 (43 fr): CUT - Small advisor with FEE paper and robot
+- S273 f10147-f10195 (49 fr): POP_IN - Bubble Forget those lads
+- S274 f10196-f10209 (14 fr): POP_IN - Bubble I can do it for you
+- S275 f10210-f10262 (53 fr): POP_IN - Red X over advisor and FEE
+- S276 f10263-f10299 (37 fr): CUT - Robot thumbs up close
+- S277 f10300-f10338 (39 fr): POP_IN - Briefcase and money bag
+- S278 f10339-f10468 (130 fr): POP_IN+ANIM - Balance scale, TAX paper and check
+- S279 f10469-f10542 (74 fr): CUT - Trader at desk close
+- S280 f10543-f10611 (69 fr): POP_IN - 1% a year label
+- S281 f10612-f10625 (14 fr): CUT - Investor with crossed 1%
+- S282 f10626-f10679 (54 fr): CUT - Investor with heart sunglasses
+- S283 f10680-f10700 (21 fr): CUT - Stick man smiling
+- S284 f10701-f10720 (20 fr): CUT - Wealthfront logo
+- S285 f10721-f10777 (57 fr): POP_IN - Betterment logo
+- S286 f10778-f10834 (57 fr): POP_IN+ANIM - DOWNLOADS counter climbs
+- S287 f10835-f10872 (38 fr): CUT - Caption 10 years ago
+- S288 f10873-f10902 (30 fr): POP_IN - Wealthfront logo
+- S289 f10903-f10926 (24 fr): POP_IN - $2B
+- S290 f10927-f10984 (58 fr): POP_IN - Briefcase with banknote
+- S291 f10985-f11020 (36 fr): POP_IN+ANIM - Group shifts
+- S292 f11021-f11049 (29 fr): CUT - Stick man at left
+- S293 f11050-f11084 (35 fr): POP_IN - Wealthfront logo beside
+- S294 f11085-f11107 (23 fr): POP_IN - $80B
+- S295 f11108-f11124 (17 fr): POP_IN+ANIM - Banknotes start to fill frame
+- S296 f11125-f11152 (28 fr): POP_IN - Briefcase on banknote wallpaper
+- S297 f11153-f11199 (47 fr): CUT - Stick man straight face
+- S298 f11200-f11219 (20 fr): POP_IN - Earth appears
+- S299 f11220-f11278 (59 fr): POP_IN - Robot thumbs up beside Earth
+- S300 f11279-f11325 (47 fr): CUT - Chalkboard $187 billion
+- S301 f11326-f11364 (39 fr): POP_IN - Board adds in 2017
+- S302 f11365-f11407 (43 fr): POP_IN - Board text By 2023
+- S303 f11408-f11453 (46 fr): POSE - Pointer raises
+- S304 f11454-f11507 (54 fr): POP_IN - Board text $2.8 TRILLION
+- S305 f11508-f11585 (78 fr): POSE - Pointer lowers
+- S306 f11586-f11648 (63 fr): POP_IN - Board $4.7 TRILLION
+- S307 f11649-f11720 (72 fr): CUT - Stick man smiling
+- S308 f11721-f11808 (88 fr): CUT - Jenga tower
+- S309 f11809-f11823 (15 fr): CUT - Robot thumbs up
+- S310 f11824-f11910 (87 fr): POP_IN - Heart beside robot
+- S311 f11911-f11952 (42 fr): CUT+ANIM - Robot holding papers grins
+- S312 f11953-f11990 (38 fr): CUT - Stick man with sponsor progress bar
+- S313 f11991-f12030 (40 fr): POSE - Stick man arm move
+- S314 f12031-f12075 (45 fr): CUT - Dark shape with Who is it
+- S315 f12076-f12086 (11 fr): POP_IN+ANIM - Caption removed
+- S316 f12087-f12113 (27 fr): CUT+ANIM - Dark shape turns into Surfshark logo
+- S317 f12114-f12176 (63 fr): CUT - Chalkboard with Surfshark logo
+- S318 f12177-f12239 (63 fr): POSE - Pointer lowers
+- S319 f12240-f12290 (51 fr): CUT - Stick man at laptop
+- S320 f12291-f12317 (27 fr): POSE - Stick man turns head
+- S321 f12318-f12350 (33 fr): POP_IN - Caption oops
+- S322 f12351-f12388 (38 fr): CUT - Close stick man accidentally gave all my data
+- S323 f12389-f12394 (6 fr): CUT - Sleeping Surfshark mascot
+- S324 f12395-f12404 (10 fr): POP_IN - More z marks
+- S325 f12405-f12415 (11 fr): POP_IN - Third z
+- S326 f12416-f12449 (34 fr): POP_IN - Mascot wakes ready
+- S327 f12450-f12484 (35 fr): CUT - Mascot with HISTORY list and IP
+- S328 f12485-f12507 (23 fr): POP_IN - History lines crossed out
+- S329 f12508-f12541 (34 fr): POSE - Mascot small move
+- S330 f12542-f12552 (11 fr): POP_IN - IP blurred and mascot waves
+- S331 f12553-f12589 (37 fr): POP_IN - Caption all done
+- S332 f12590-f12626 (37 fr): CUT - Stick man smiling
+- S333 f12627-f12633 (7 fr): CUT - Phone glowing
+- S334 f12634-f12646 (13 fr): POP_IN - Laptop
+- S335 f12647-f12655 (9 fr): POP_IN - Second laptop
+- S336 f12656-f12693 (38 fr): POP_IN - Second phone
+- S337 f12694-f12726 (33 fr): CUT - Chalkboard Surfshark logo
+- S338 f12727-f12743 (17 fr): CUT - Mascot holding key
+- S339 f12744-f12787 (44 fr): POP_IN - Caption one account
+- S340 f12788-f12795 (8 fr): POP_IN - Caption go mad
+- S341 f12796-f12799 (4 fr): POP_IN - Devices start to drop in
+- S342 f12800-f12831 (32 fr): POP_IN+ANIM - More devices drop in
+- S343 f12832-f12918 (87 fr): CUT+ANIM - Stick man with email screenshot
+- S344 f12919-f12924 (6 fr): POP_IN - Email warning banner
+- S345 f12925-f13024 (100 fr): POP_IN - Pointer touches banner
+- S346 f13025-f13089 (65 fr): POP_IN+ANIM - Email slides out and data thief runs
+- S347 f13090-f13107 (18 fr): CUT - Mascot arms raised
+- S348 f13108-f13160 (53 fr): POP_IN - Caption hey boss
+- S349 f13161-f13248 (88 fr): CUT - Chalkboard Surfshark logo again
+- S350 f13249-f13256 (8 fr): POSE - Pointer lowers
+- S351 f13257-f13336 (80 fr): POP_IN - Board adds all in one
+- S352 f13337-f13382 (46 fr): CUT - Stick man at laptop
+- S353 f13383-f13424 (42 fr): POP_IN+ANIM - Paper airplane flies over
+- S354 f13425-f13526 (102 fr): CUT - Mascot with caged data box
+- S355 f13527-f13601 (75 fr): CUT - Chalkboard Surfshark logo third
+- S356 f13602-f13659 (58 fr): POP_IN - Board adds 30 day money back guarantee
+- S357 f13660-f13708 (49 fr): CUT - Stick man smiling
+- S358 f13709-f13801 (93 fr): POP_IN - URL caption surfshark.com/casualfinance
+- S359 f13802-f13824 (23 fr): POSE - Stick man arm move
+- S360 f13825-f13955 (131 fr): POP_IN - Code CASUALFINANCE for 4 extra months
+- S361 f13956-f14022 (67 fr): CUT - Stick man and mascot thumbs up
+- S362 f14023-f14024 (2 fr): CUT - Blank white after sponsor
+- S363 f14025-f14046 (22 fr): CUT - Chalkboard Robo advisors
+- S364 f14047-f14084 (38 fr): POSE - Pointer raises
+- S365 f14085-f14112 (28 fr): CUT - Robot holding papers grins
+- S366 f14113-f14159 (47 fr): POP_IN - Caption trust me I'm ok
+- S367 f14160-f14198 (39 fr): CUT - Stick man straight face
+- S368 f14199-f14218 (20 fr): CUT - Robot with banknote and briefcase
+- S369 f14219-f14290 (72 fr): POP_IN - For SALE sign
+- S370 f14291-f14324 (34 fr): CUT - Caption expectation
+- S371 f14325-f14397 (73 fr): POP_IN - Muscular robot with briefcase
+- S372 f14398-f14402 (5 fr): POP_IN - Money bag
+- S373 f14403-f14408 (6 fr): POP_IN - Second money bag
+- S374 f14409-f14469 (61 fr): POSE - Small adjustment
+- S375 f14470-f14563 (94 fr): POP_IN - Reality small robot
+- S376 f14564-f14618 (55 fr): CUT - Stick man smiling
+- S377 f14619-f14679 (61 fr): CUT - QUESTIONNAIRE paper
+- S378 f14680-f14702 (23 fr): POP_IN - age with calendar
+- S379 f14703-f14706 (4 fr): POP_IN - income with dollar
+- S380 f14707-f14711 (5 fr): POP_IN - Second dollar sign
+- S381 f14712-f14723 (12 fr): POP_IN - Third dollar sign
+- S382 f14724-f14809 (86 fr): POP_IN+ANIM - time horizon and goals appear
+- S383 f14810-f14847 (38 fr): CUT - Red-haired man with paper close
+- S384 f14848-f14869 (22 fr): POSE - Red-haired man smiles
+- S385 f14870-f14926 (57 fr): POP_IN - Bubble Sweet
+- S386 f14927-f14960 (34 fr): CUT - Caption But in reality
+- S387 f14961-f14969 (9 fr): CUT - Frowning stick man
+- S388 f14970-f14994 (25 fr): POSE - Stick man arm move
+- S389 f14995-f15049 (55 fr): CUT - Red-haired man with paper
+- S390 f15050-f15078 (29 fr): CUT - QUESTIONNAIRE paper at left
+- S391 f15079-f15119 (41 fr): POP_IN - Robot at chart board
+- S392 f15120-f15155 (36 fr): POP_IN - Bubble This could work for you
+- S393 f15156-f15169 (14 fr): CUT - Bucket Category A
+- S394 f15170-f15235 (66 fr): POP_IN+ANIM - Buckets stack
+- S395 f15236-f15297 (62 fr): CUT - Bucket and briefcase Category A
+- S396 f15298-f15372 (75 fr): POP_IN+ANIM - Crowd forms around briefcase
+- S397 f15373-f15454 (82 fr): CUT - Chalkboard Robo advisors
+- S398 f15455-f15518 (64 fr): CUT - Muscular robot flexing
+- S399 f15519-f15542 (24 fr): CUT+ANIM - Video clip of bearded man talking
+- S400 f15543-f15604 (62 fr): POP_IN - Briefcase beside clip
+- S401 f15605-f15637 (33 fr): CUT - Robot alone
+- S402 f15638-f15731 (94 fr): POP_IN - Three office workers appear
+- S403 f15732-f15766 (35 fr): CUT - Stick man smiling
+- S404 f15767-f15793 (27 fr): CUT - Round table meeting
+- S405 f15794-f15799 (6 fr): POP_IN - Paper
+- S406 f15800-f15803 (4 fr): POP_IN - Second paper
+- S407 f15804-f15839 (36 fr): POP_IN - Third paper
+- S408 f15840-f15912 (73 fr): POP_IN - Sign What is BETA
+- S409 f15913-f15943 (31 fr): POP_IN - Red X over meeting
+- S410 f15944-f16037 (94 fr): CUT - Thinking figure with orange tie
+- S411 f16038-f16045 (8 fr): POP_IN - Money bag
+- S412 f16046-f16074 (29 fr): POP_IN - Second money bag
+- S413 f16075-f16125 (51 fr): POP_IN+ANIM - Green arrow draws on
+- S414 f16126-f16142 (17 fr): CUT - Stick man at blank chalkboard
+- S415 f16143-f16190 (48 fr): POP_IN - Board text ACCESS
+- S416 f16191-f16210 (20 fr): CUT - Computer at upper left
+- S417 f16211-f16216 (6 fr): POP_IN - ORDER box
+- S418 f16217-f16261 (45 fr): POP_IN - Second ORDER box
+- S419 f16262-f16265 (4 fr): POP_IN - STUDY paper
+- S420 f16266-f16271 (6 fr): POP_IN - Second STUDY paper
+- S421 f16272-f16278 (7 fr): POP_IN - REPORT paper
+- S422 f16279-f16313 (35 fr): POP_IN - Second REPORT paper
+- S423 f16314-f16343 (30 fr): CUT - Stick man smiling
+- S424 f16344-f16377 (34 fr): POSE - Stick man arms move
+- S425 f16378-f16389 (12 fr): CUT - Chart board alone
+- S426 f16390-f16413 (24 fr): POP_IN+ANIM - Chart board darkens
+- S427 f16414-f16424 (11 fr): CUT - Paper alone
+- S428 f16425-f16428 (4 fr): POP_IN - Banknote on paper
+- S429 f16429-f16432 (4 fr): POP_IN - Second banknote
+- S430 f16433-f16450 (18 fr): POP_IN - Third banknote
+- S431 f16451-f16489 (39 fr): CUT - Stick man smiling
+- S432 f16490-f16520 (31 fr): CUT - Figure crouching with plank
+- S433 f16521-f16548 (28 fr): POP_IN - Flat-pack furniture parts
+- S434 f16549-f16590 (42 fr): POP_IN - Question mark
+- S435 f16591-f16599 (9 fr): CUT - Stick man smiling
+- S436 f16600-f16638 (39 fr): CUT+ANIM - Excited stick man with glowing globe
+- S437 f16639-f16646 (8 fr): CUT+ANIM - Red-haired man with paper
+- S438 f16647-f16650 (4 fr): POP_IN - REPORT paper
+- S439 f16651-f16697 (47 fr): POP_IN - Breaking News and STUDY
+- S440 f16698-f16725 (28 fr): CUT - Dollar sign and chart board
+- S441 f16726-f16745 (20 fr): POP_IN+ANIM - Dollar sign wobbles
+- S442 f16746-f16806 (61 fr): CUT+ANIM - Stick man and DOWNLOADS counter
+- S443 f16807-f16897 (91 fr): CUT - Two figures beside a door
+- S444 f16898-f16923 (26 fr): CUT - Trader at desk close
+- S445 f16924-f17009 (86 fr): POP_IN - 1% a year
+- S446 f17010-f17044 (35 fr): CUT - Robot on phone
+- S447 f17045-f17078 (34 fr): POSE - Robot thumbs up
+- S448 f17079-f17175 (97 fr): CUT - Stick man
+- S449 f17176-f17245 (70 fr): CUT+ANIM - Stick man removed and airplane appears
+- S450 f17246-f17275 (30 fr): POP_IN - Woman on phone beside airplane
+- S451 f17276-f17326 (51 fr): CUT - Thinking figure with orange tie
+- S452 f17327-f17362 (36 fr): POP_IN - Woman with chart board
+- S453 f17363-f17389 (27 fr): CUT - BUY and SELL buttons
+- S454 f17390-f17414 (25 fr): POP_IN+ANIM - Cursor moves
+- S455 f17415-f17480 (66 fr): POP_IN+ANIM - Cursor moves to BUY then SELL
+- S456 f17481-f17564 (84 fr): CUT - Man on phone
+- S457 f17565-f17623 (59 fr): CUT - Papers and orders equal dollar
+- S458 f17624-f17634 (11 fr): POP_IN - Dollar sign replaced by FREE
+- S459 f17635-f17681 (47 fr): CUT - Man in teal tie close
+- S460 f17682-f17714 (33 fr): CUT - Computer and robot
+- S461 f17715-f17754 (40 fr): CUT - Chalkboard Robo advisors
+- S462 f17755-f17796 (42 fr): POSE - Pointer raises
+- S463 f17797-f17901 (105 fr): CUT - Robot with banknote and slumped figure
+- S464 f17902-f17941 (40 fr): CUT - Chalkboard Robo advisors = good or bad
+- S465 f17942-f18007 (66 fr): POSE - Pointer raises
+- S466 f18008-f18078 (71 fr): POP_IN - Board text different
+- S467 f18079-f18144 (66 fr): POSE - Pointer lowers
+- S468 f18145-f18224 (80 fr): CUT - Skeptical stick man
+- S469 f18225-f18278 (54 fr): POSE - Stick man smiles
+- S470 f18279-f18321 (43 fr): POP_IN - Small robot with banknote enters
+- S471 f18322-f18342 (21 fr): CUT - COMMENT with stick man
+- S472 f18343-f18349 (7 fr): POP_IN - Three red arrows
+- S473 f18350-f18353 (4 fr): POP_IN - Arrows blink off
+- S474 f18354-f18366 (13 fr): POP_IN - Arrows back
+- S475 f18367-f18442 (76 fr): POSE - Stick man opens mouth
+- S476 f18443-f18462 (20 fr): CUT - Stick man centre
+- S477 f18463-f18467 (5 fr): POP_IN - Renaissance logo small
+- S478 f18468-f18505 (38 fr): POP_IN - Two Sigma logo small
+- S479 f18506-f18541 (36 fr): POP_IN - Three advisors with clipboards
+- S480 f18542-f18586 (45 fr): POP_IN - Robot with banknote and briefcase
+- S481 f18587-f18640 (54 fr): POP_IN - Man on phone
+- S482 f18641-f18680 (40 fr): POSE - Stick man arms move
+- S483 f18681-f18706 (26 fr): CUT - Robot beside cracked bank building
+- S484 f18707-f18752 (46 fr): POSE - Robot arm move
+- S485 f18753-f18856 (104 fr): POP_IN+ANIM - Bank building cracks further
+- S486 f18857-f19010 (154 fr): CUT - Subscribe end card
+
+## Per-state prompts
+All 486 image and animation prompts with static anchors and nearest-frame QA: `PER_STATE_RECONSTRUCTION_SPECIFICATIONS.json`.
+
+## Acceptance tests
+1. Cut frames equal the ledger exactly (20, 55, 102, 148, 205, 297, 470, 632, 743, 800, 868, 938, 1058, 1228, 1355, 1435, 1594, 1672, 1762, 1807, 1893, 2052, 2097, 2186, 2274, 2449, 2480, 2537, 2614, 2649, 2688, 2731, 2778, 2825, 2875, 2900, 2982, 3025, 3065, 3115, 3151, 3191, 3324, 3361, 3420, 3517, 3570, 3606, 3749, 3807, 3856, 3939, 4033, 4061, 4105, 4153, 4367, 4541, 4736, 4931, 5025, 5078, 5289, 5381, 5495, 5564, 5758, 5859, 6042, 6120, 6166, 6240, 6351, 6408, 6521, 6668, 6858, 6901, 7041, 7113, 7165, 7249, 7354, 7511, 7723, 8020, 8040, 8194, 8253, 8289, 8338, 8505, 8662, 8774, 8866, 9052, 9130, 9179, 9257, 9367, 9419, 9548, 9686, 9713, 9800, 10042, 10104, 10263, 10469, 10612, 10626, 10680, 10701, 10835, 11021, 11153, 11279, 11649, 11721, 11809, 11911, 11953, 12031, 12087, 12114, 12240, 12351, 12389, 12450, 12590, 12627, 12694, 12727, 12832, 13090, 13161, 13337, 13425, 13527, 13660, 13956, 14023, 14025, 14085, 14160, 14199, 14291, 14564, 14619, 14810, 14927, 14961, 14995, 15050, 15156, 15236, 15373, 15455, 15519, 15605, 15732, 15767, 15944, 16126, 16191, 16314, 16378, 16414, 16451, 16490, 16591, 16600, 16639, 16698, 16746, 16807, 16898, 17010, 17079, 17176, 17276, 17363, 17481, 17565, 17635, 17682, 17715, 17797, 17902, 18145, 18322, 18443, 18681, 18857).
+2. EXACT onsets match to the frame; BOUND onsets fall inside their window.
+3. Static anchors are pixel-still between events.
+4. Total length 19011 frames.
+5. Sound unspecified (nobody listened); ASR lines are timing reference only.

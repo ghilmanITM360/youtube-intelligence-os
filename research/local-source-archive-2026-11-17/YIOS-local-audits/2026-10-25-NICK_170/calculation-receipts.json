@@ -1,0 +1,597 @@
+[
+  {
+    "calculation_id": "K01",
+    "method": "Borrowing is not instant net worth",
+    "formula": "NW=assets-liabilities;deltaNW=borrowedcash-newdebt-fees",
+    "inputs": {
+      "loan": 200000
+    },
+    "results": {
+      "new_cash": 200000,
+      "new_liability": 200000,
+      "networth_change_beforefees": 0
+    },
+    "assumptions_and_limits": "No bargainpurchase orreturn assumed;feesdecreasewealth;cashspentconsumeddecreasesassetswithoutcancelingdebt."
+  },
+  {
+    "calculation_id": "K02",
+    "method": "Instant gross asset leverage",
+    "formula": "E=V-D;ROE=g*V/E;LTV=D/V",
+    "inputs": {
+      "V": 250000,
+      "D": 200000,
+      "E": 50000
+    },
+    "results": {
+      "-0.25": {
+        "asset": 187500.0,
+        "equity": -12500.0,
+        "gross_ROE": -1.25
+      },
+      "-0.2": {
+        "asset": 200000.0,
+        "equity": 0.0,
+        "gross_ROE": -1.0
+      },
+      "-0.1": {
+        "asset": 225000.0,
+        "equity": 25000.0,
+        "gross_ROE": -0.5
+      },
+      "0": {
+        "asset": 250000,
+        "equity": 50000,
+        "gross_ROE": 0
+      },
+      "0.05": {
+        "asset": 262500.0,
+        "equity": 62500.0,
+        "gross_ROE": 0.25
+      },
+      "0.1": {
+        "asset": 275000.0,
+        "equity": 75000.0,
+        "gross_ROE": 0.5
+      }
+    },
+    "assumptions_and_limits": "Ownsassetup/downandfixedliability;beforeinterest,fees,operatingcash,taxesandprincipalpayments.5xgrossgainalso5xloss;worsethan20%dropnegativeequity."
+  },
+  {
+    "calculation_id": "K03",
+    "method": "Ten-year property consistency and mortgage sensitivity",
+    "formula": "FV=250K*(1+g)^10;E=FV-B120;payment=P*i/(1-(1+i)^-360)",
+    "inputs": {
+      "initial_price": 250000,
+      "initial_debt": 200000,
+      "narrated_end_value": 340000,
+      "narrated_end_debt": 166000,
+      "own_loan_APR_scenarios": [
+        0.03,
+        0.06,
+        0.08
+      ]
+    },
+    "results": {
+      "exact_narrated_equity": 174000,
+      "narrated_equity180K_difference": 6000,
+      "implied_appreciation": 0.031226086938676012,
+      "five_percent_FV": 407223.6566943605,
+      "loan_scenarios": {
+        "0.03": {
+          "monthly_payment": 843.208067458912,
+          "months": 120,
+          "total_payments": 101184.96809506943,
+          "interest_paid": 53224.58577855671,
+          "principal_repaid": 47960.38231651281,
+          "balance": 152039.6176834872
+        },
+        "0.06": {
+          "monthly_payment": 1199.1010503055138,
+          "months": 120,
+          "total_payments": 143892.12603666165,
+          "interest_paid": 111263.57596411344,
+          "principal_repaid": 32628.550072548067,
+          "balance": 167371.44992745193
+        },
+        "0.08": {
+          "monthly_payment": 1467.5291477587562,
+          "months": 120,
+          "total_payments": 176103.49773105074,
+          "interest_paid": 151552.90554393915,
+          "principal_repaid": 24550.592187111673,
+          "balance": 175449.40781288833
+        }
+      }
+    },
+    "assumptions_and_limits": "APR/termnotinvideo;ownhypotheticalsnotverified2026offers.5%isexplicitone-yearinput;noassertioncreatorpromised5%alltenyears.340Kroundingcanplausiblymean3%annual,butmustbedisclosed."
+  },
+  {
+    "calculation_id": "K04",
+    "method": "Matched ten-year rental base/adverse/favorable",
+    "formula": "profit=net_sale-debt+sum(NOI-debtservice)-initialequity;unlevered=net_sale+sumNOI-price",
+    "inputs": {
+      "P": 200000,
+      "APR": 0.06,
+      "term": 30,
+      "horizon": 10,
+      "selling_cost_fraction": 0.06
+    },
+    "results": [
+      {
+        "case": "ADVERSE",
+        "annual_price_change": -0.02,
+        "annual_NOI": 12000,
+        "NOI_definition": "rent lessvacancy,repairs,insurance,tax,management,maintenance/capexreserve;analystconstantaggregate",
+        "ending_value": 204268.20172188667,
+        "ending_debt": 167371.44992745193,
+        "cumulative_cash_after_debtservice": -23892.126036661648,
+        "terminal_selling_cost": 12256.0921033132,
+        "leveraged_total_profit": -49251.4663455401,
+        "leveraged_profit_over_initial_equity": -0.985029326910802,
+        "unlevered_total_profit": 62012.10961857345,
+        "unlevered_profit_over250K": 0.2480484384742938
+      },
+      {
+        "case": "BASE",
+        "annual_price_change": 0.03,
+        "annual_NOI": 15000,
+        "NOI_definition": "rent lessvacancy,repairs,insurance,tax,management,maintenance/capexreserve;analystconstantaggregate",
+        "ending_value": 335979.09483603056,
+        "ending_debt": 167371.44992745193,
+        "cumulative_cash_after_debtservice": 6107.873963338352,
+        "terminal_selling_cost": 20158.74569016183,
+        "leveraged_total_profit": 104556.77318175515,
+        "leveraged_profit_over_initial_equity": 2.091135463635103,
+        "unlevered_total_profit": 215820.34914586873,
+        "unlevered_profit_over250K": 0.8632813965834749
+      },
+      {
+        "case": "FAVORABLE",
+        "annual_price_change": 0.05,
+        "annual_NOI": 18000,
+        "NOI_definition": "rent lessvacancy,repairs,insurance,tax,management,maintenance/capexreserve;analystconstantaggregate",
+        "ending_value": 407223.6566943605,
+        "ending_debt": 167371.44992745193,
+        "cumulative_cash_after_debtservice": 36107.87396333835,
+        "terminal_selling_cost": 24433.419401661627,
+        "leveraged_total_profit": 201526.6613285853,
+        "leveraged_profit_over_initial_equity": 4.0305332265717055,
+        "unlevered_total_profit": 312790.2372926988,
+        "unlevered_profit_over250K": 1.2511609491707953
+      }
+    ],
+    "assumptions_and_limits": "Ownscenariosnotmarketforecasts;NOIlevelsexplicitnottranscriptfact,noreinvestment,incometaxorinitialclosingfees. Taxes/feesreduceprofitsfurther;reservesincludeeconomiccapexcostnotduplicateprincipal. Leveraged50Kvsunlevered250Kcapitaldiffexplicit,notmatchedcapitalcausalproof. Principalnotdouble-counted:fullpaymentswithterminalbalance;equivalentNOI\u2212interest+appreciation identityverified."
+  },
+  {
+    "calculation_id": "K05",
+    "method": "Cash-out refinancing balance sheet",
+    "formula": "cashout=newloan-oldbalance-fees;newloan<=LTV*appraisedvalue",
+    "inputs": {
+      "old_debt": 200000,
+      "target_cashout": 50000,
+      "own_LTV_cap": 0.8
+    },
+    "results": {
+      "minimum_value_no_rehab_fees": 312500.0,
+      "cashout_at_unchanged250K_value": 0.0,
+      "new_debt_at312500value": 250000,
+      "networth_change_on_refi_beforefees": 0
+    },
+    "assumptions_and_limits": "Own80%capnotuniversallenderrequirement. Rehabacquisition/financingcostsneedadditionalcapitalorhigherappraisal. Cashoutreducesremainingequitybycashamountwhilecashrises,debtstilldue."
+  },
+  {
+    "calculation_id": "K06",
+    "method": "Business acquisition loan and coverage",
+    "formula": "P=800K\u221280K;PMT=P*i/(1\u2212(1+i)^-120);DSCR=CFADS/annualdebtservice",
+    "inputs": {
+      "purchase": 800000,
+      "equity": 80000,
+      "loan": 720000,
+      "own_APR": 0.1,
+      "own_term_years": 10
+    },
+    "results": {
+      "loan": {
+        "monthly_payment": 9514.853055486858,
+        "months": 120,
+        "total_payments": 1141782.3666584229,
+        "interest_paid": 421782.36665841984,
+        "principal_repaid": 720000.0000000034,
+        "balance": 0
+      },
+      "scenarios": [
+        {
+          "case": "ADVERSE",
+          "annual_cash_available_beforedebt_andtax": 80000,
+          "annual_debtservice": 114178.2366658423,
+          "DSCR": 0.7006589200893912,
+          "annual_after_debt_cash": -34178.2366658423,
+          "terminal_business_value": 400000,
+          "tenyear_profit": -21782.366658422863,
+          "unlevered_tenyear_profit": 400000
+        },
+        {
+          "case": "BASE",
+          "annual_cash_available_beforedebt_andtax": 200000,
+          "annual_debtservice": 114178.2366658423,
+          "DSCR": 1.751647300223478,
+          "annual_after_debt_cash": 85821.7633341577,
+          "terminal_business_value": 800000,
+          "tenyear_profit": 1578217.6333415771,
+          "unlevered_tenyear_profit": 2000000
+        },
+        {
+          "case": "FAVORABLE",
+          "annual_cash_available_beforedebt_andtax": 260000,
+          "annual_debtservice": 114178.2366658423,
+          "DSCR": 2.2771414902905214,
+          "annual_after_debt_cash": 145821.7633341577,
+          "terminal_business_value": 1000000,
+          "tenyear_profit": 2378217.633341577,
+          "unlevered_tenyear_profit": 2800000
+        }
+      ],
+      "principal_plus_interest_plus_down": 1221782.3666584229
+    },
+    "assumptions_and_limits": "200KinterpretedasCFADSafteroperatingcosts,marketownerwage,maintenancecapexandworkingcapital,BEFOREdebt/tax;scriptdoesnotdefineearnings. Ownconstantcasesnoofferprediction,noinitialfees/exitfees/tax. Adversecashdeficitsrequireoutsidesupport/default;noassumedabilitytoborrowthem. Value800Knotguaranteed. Assetnotacquiredfor80Ktotallifetimecashcost."
+  },
+  {
+    "calculation_id": "K07",
+    "method": "Tax sale vs loan with equal cash proceeds",
+    "formula": "tax=realizedgain*t;netcash=sale*(1\u2212gainfraction*t);sale=need/(1\u2212.8*t)",
+    "inputs": {
+      "value": 5000000,
+      "basis": 1000000,
+      "own_federal_combined_rate": 0.238,
+      "required_spendable_cash": 3000000
+    },
+    "results": {
+      "full_sale_gain": 4000000,
+      "full_sale_tax": 952000.0,
+      "full_sale_net": 4048000.0,
+      "equalcash_sale_gross": 3705533.596837945,
+      "equalcash_sale_tax": 705533.5968379448,
+      "portfolio_remaining_after_equalcash_sale": 1294466.4031620552,
+      "annual_interest_3M_6percent": 180000,
+      "simple_interest_years_to952K": 5.288888888888889
+    },
+    "assumptions_and_limits": "23.8%=assumed20%LTCG+3.8%NIIT,notpersonalizedliability;coulddifferwithincome/holdingperiod/state/basis. Simpletax/interestquotientnotstrategybreakeven,samecash/horizon/pathneeded."
+  },
+  {
+    "calculation_id": "K08",
+    "method": "Stock collateral risk and common-horizon cash need",
+    "formula": "initialLTV=3/5;callwhenD/V>contractcap;thresholdV=D/cap;equity=V-D-interest",
+    "inputs": {
+      "initial_value": 5000000,
+      "loan": 3000000,
+      "own_interest_rate": 0.06,
+      "common_spent_cash": 3000000,
+      "horizon_years": 1,
+      "illustrative_LTV_cap": 0.7
+    },
+    "results": {
+      "scenarios": [
+        {
+          "case": "ADVERSE",
+          "one_year_asset_return": -0.4,
+          "asset_end": 3000000.0,
+          "debt": 3000000,
+          "equity_before_interest": 0.0,
+          "interest_paid_from_external_cash": 180000,
+          "equity_after_interest_cost": -180000.0,
+          "change_vs_initial2Mequity": -2180000.0,
+          "unborrowed_equal3Mspending_remaining_portfolio": 776679.841897233,
+          "borrow_vs_sale_terminal_difference_afterinterest": -956679.841897233
+        },
+        {
+          "case": "BASE",
+          "one_year_asset_return": 0.05,
+          "asset_end": 5250000.0,
+          "debt": 3000000,
+          "equity_before_interest": 2250000.0,
+          "interest_paid_from_external_cash": 180000,
+          "equity_after_interest_cost": 2070000.0,
+          "change_vs_initial2Mequity": 70000.0,
+          "unborrowed_equal3Mspending_remaining_portfolio": 1359189.723320158,
+          "borrow_vs_sale_terminal_difference_afterinterest": 710810.276679842
+        },
+        {
+          "case": "FAVORABLE",
+          "one_year_asset_return": 0.1,
+          "asset_end": 5500000.0,
+          "debt": 3000000,
+          "equity_before_interest": 2500000.0,
+          "interest_paid_from_external_cash": 180000,
+          "equity_after_interest_cost": 2320000.0,
+          "change_vs_initial2Mequity": 320000.0,
+          "unborrowed_equal3Mspending_remaining_portfolio": 1423913.0434782607,
+          "borrow_vs_sale_terminal_difference_afterinterest": 896086.9565217393
+        }
+      ],
+      "call_value": 4285714.285714286,
+      "drop_to_call": 0.14285714285714268,
+      "networth_change_onloanreceipt": 0
+    },
+    "assumptions_and_limits": "3Mspentidenticallyinloanandsalestrategies;nointerestdeduction,taxondeath,estatefeesordividendtaxmodeled;initialassetpriceunchanged. Interestfundedexternalcashchargedexplicitly;nocapitalization.70%caponlyanalystexample,notbroker rule;adversepathwouldtriggercallbeforeendpoint,terminalnotguaranteedholdable. Loanproceedsnotenrichment. Totalreturndoesnotmeanspendableyield."
+  },
+  {
+    "calculation_id": "K09",
+    "method": "Mortgage prepayment vs investment with consistent budget",
+    "formula": "A=P*i/(1\u2212(1+i)^-360);FVlump=P*(1+j)^360;FVpayments=A*((1+j)^360\u22121)/j",
+    "inputs": {
+      "P": 200000,
+      "APR": 0.03,
+      "horizon": 30,
+      "investment_monthly_rate": "(1+r)^(1/12)-1",
+      "endmonth_contributions": true
+    },
+    "results": {
+      "mortgage": {
+        "monthly_payment": 843.208067458912,
+        "months": 360,
+        "total_payments": 303554.9042852083,
+        "interest_paid": 103554.90428520164,
+        "principal_repaid": 200000.0000000068,
+        "balance": 0
+      },
+      "scenarios": [
+        {
+          "case": "ADVERSE",
+          "annual_investment_return": 0,
+          "keep_loan_invest200K_terminal": 200000.0,
+          "payoff_now_invest_freed_monthly_payment_terminal": 303554.9042852083,
+          "difference": -103554.90428520832
+        },
+        {
+          "case": "BASE",
+          "annual_investment_return": 0.05,
+          "keep_loan_invest200K_terminal": 864388.4750301485,
+          "payoff_now_invest_freed_monthly_payment_terminal": 687531.5427584695,
+          "difference": 176856.93227167905
+        },
+        {
+          "case": "FAVORABLE",
+          "annual_investment_return": 0.1,
+          "keep_loan_invest200K_terminal": 3489880.4537773104,
+          "payoff_now_invest_freed_monthly_payment_terminal": 1739406.1242923043,
+          "difference": 1750474.3294850062
+        }
+      ],
+      "nominal_10_minus_3_percentage_points": 7,
+      "historical_CAGR_1928_2024": 0.09940957672510464
+    },
+    "assumptions_and_limits": "Ownmatchedinitial200Kcashandmonthlybudget;keep-loanpaysmortgage,prepaypathinvestssamepayment;housevalueidentical/debt0at30y. Noadditionalborrowing,doubledcashflow,fees/tax,inflationorreinvestedrent. Constantreturnsillustrative,nosequenceriskmodeled;break-evenmonthlyinvestmentrate=mortgagemonthlyrate,effectiveannual(1+.03/12)^12\u22121,notexact3%effective."
+  },
+  {
+    "calculation_id": "K10",
+    "method": "Real fixed payment purchasing power",
+    "formula": "real_payment=2000/(1+pi)^30",
+    "inputs": {
+      "payment": 2000,
+      "years": 30,
+      "own_annual_inflation": [
+        0,
+        0.02,
+        0.03,
+        0.05
+      ]
+    },
+    "results": {
+      "0": 2000.0,
+      "0.02": 1104.1417779598232,
+      "0.03": 823.9735190318128,
+      "0.05": 462.7548973117157
+    },
+    "assumptions_and_limits": "NominalP&Ionly;notescrow/wages,notforecast. Inflationdoesnotcancelnominaldebt,unanticipatedinflationresearchnotpromiseallborrowerswin."
+  },
+  {
+    "calculation_id": "K11",
+    "method": "Tax shields are conditional",
+    "formula": "annualbuildingdeduction=275000/27.5;saving=deduction*marginalrate;aftertaxinterest=interest*(1-t)ifusable",
+    "inputs": {
+      "building_depreciable_basis": 275000,
+      "GDSyears": 27.5,
+      "writeoffs": 20000,
+      "assumed_marginalrate": 0.3
+    },
+    "results": {
+      "full_year_depreciation": 10000,
+      "potential_current_taxsaving": 6000,
+      "own_10Kinterest_aftertax_cost_ifusable": 7000,
+      "own_10Kinterest_aftertax_cost_ifdeductiondeferred": 10000
+    },
+    "assumptions_and_limits": "Landexcluded;full-yearsteady-state,firstyearmidmonthlower.30%illustrativecombinedmarginalratenotstatutoryfederalbracket. Saving0currentlyiffullylimited,no6Kcashguarantee,principalnotdeductibleinterest. Bonusnotwholebuildingwriteoff,recapture/adjustedbasisimportant."
+  },
+  {
+    "calculation_id": "K12",
+    "method": "Education hypothetical and downside",
+    "formula": "grosspayback=40000/30000;netcash=incrementalaftertaxearnings\u2212debtservice",
+    "inputs": {
+      "loan": 40000,
+      "own_APR": 0.06,
+      "own_term": 10,
+      "own_tax_on_increment": 0.25
+    },
+    "results": {
+      "loan": {
+        "monthly_payment": 444.08200776660476,
+        "months": 120,
+        "total_payments": 53289.84093199257,
+        "interest_paid": 13289.840931991437,
+        "principal_repaid": 40000.00000000113,
+        "balance": 0
+      },
+      "gross_simple_payback_years": 1.3333333333333333,
+      "scenarios": [
+        {
+          "case": "ADVERSE",
+          "annual_gross_pay_uplift": 0,
+          "annual_net_after_tax_anddebt": -5328.984093199257,
+          "tenyear_net_wage_aftertax_lessallloanpayments": -53289.84093199257
+        },
+        {
+          "case": "BASE",
+          "annual_gross_pay_uplift": 15000,
+          "annual_net_after_tax_anddebt": 5921.015906800743,
+          "tenyear_net_wage_aftertax_lessallloanpayments": 59210.15906800743
+        },
+        {
+          "case": "FAVORABLE_CREATOR_UPLIFT",
+          "annual_gross_pay_uplift": 30000,
+          "annual_net_after_tax_anddebt": 17171.01590680074,
+          "tenyear_net_wage_aftertax_lessallloanpayments": 171710.15906800743
+        }
+      ]
+    },
+    "assumptions_and_limits": "30Kpayupliftnotlaborstatistic;completion/licensure,foregonepay,studytime,nonwagecost,rateandemploymentnotverified. Noearningscapitalizedascurrentnetworth;workincomevsassetcashflowdistinct."
+  },
+  {
+    "calculation_id": "K13",
+    "method": "Savings real loss depends on yield/inflation",
+    "formula": "CAGR=(34000/30000)^.1\u22121;realFV=34000/(1+pi)^10",
+    "inputs": {
+      "start": 30000,
+      "nominal_end": 34000,
+      "years": 10,
+      "own_inflation": [
+        0.02,
+        0.03,
+        0.05
+      ]
+    },
+    "results": {
+      "implied_nominal_CAGR": 0.012594971179361814,
+      "real_end": {
+        "0.02": 27891.842195755275,
+        "0.03": 25299.19310648865,
+        "0.05": 20873.05062038581
+      }
+    },
+    "assumptions_and_limits": "Creatorunsourceddeposit/inflationpath;aftertaxyieldcoulddiffer. Debtfreecouldownstocks/businesses,notautomaticallycash-only."
+  },
+  {
+    "calculation_id": "K14",
+    "method": "Closing balance sheet inconsistency",
+    "formula": "6*180K;180K/50Kvs180K/150K;Curtis NW must include house",
+    "inputs": {
+      "first_downpayment": 50000,
+      "closing_stored_downpayment": 150000,
+      "claimed_equity_each": 180000,
+      "properties": 6
+    },
+    "results": {
+      "six_property_equity_beforeotheritems": 1080000,
+      "using50K_equity_multiple": 3.6,
+      "using150K_equity_multiple": 1.2
+    },
+    "assumptions_and_limits": "NotcreatortrueIRR,profit,liquidcash,or8xrelativewealth. Loanbalances,rehab,fees,ongoingcashflows,acquisitiondates,Curtishousevalue/businessvaluationmissing. Stored150Kcouldcaptionerror,audiounverified."
+  },
+  {
+    "calculation_id": "K15",
+    "method": "Frozen age-peer benchmark",
+    "formula": "rate=views/storedage;ratio=targetrate/median(peerrates)",
+    "inputs": {
+      "method": "sameChannelID/format/snapshot;age>=7;0.5\u20132agefactor;nearestabsage,VideoIDtie;10thenfirst5;STRONG>=2,WEAK<.5"
+    },
+    "results": {
+      "target": {
+        "Video_ID": "ULkTn-jHBBc",
+        "Channel_ID": "UCXzNNA2ngRpRiWvyA7eGd6w",
+        "Channel": "Nick Invests",
+        "Dataset": "DS-000022",
+        "Title": "6 Ways People Become Rich With Debt",
+        "Published_at_raw": "2026-07-07 20:47:41",
+        "Metric_snapshot_date": "2026-09-11",
+        "Snapshot_precision": "SOURCE_DECLARED_SCRAPE_DAY_TIMEZONE_UNKNOWN",
+        "Views": "4462",
+        "Current_views": "NOT_FETCHED",
+        "Format": "LONG_FORM",
+        "Format_source_value": "video",
+        "Duration_seconds": "1255",
+        "Age_days": "65.1336",
+        "Topic_tags_provisional": "debt_credit_banking|personal_finance",
+        "Classification_method": "TITLE_KEYWORD_HEURISTIC_NOT_SEMANTIC_REVIEW",
+        "Audience_problem": "REQUIRES_SEMANTIC_REVIEW",
+        "Economic_mechanism": "REQUIRES_SEMANTIC_REVIEW",
+        "Demand_type": "UNVERIFIED",
+        "Time_sensitivity": "UNVERIFIED",
+        "Narrative_angle": "UNVERIFIED",
+        "Evidence_locator": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Master_Data.xlsx",
+        "URL": "https://www.youtube.com/watch?v=ULkTn-jHBBc",
+        "Performance_tier": "TYPICAL",
+        "Peer_count": "10",
+        "Lifetime_rate_ratio": "0.81094",
+        "Peer_Video_IDs": "wOVEF-cb5XI|gt8KAc7h9O8|qUcdSBhm9us|HJ5GZ2R3n2I|EOVnm1nKCns|v7uG773-wAY|-FsJqwfNvt4|CBzVGI_K3bQ|pqJLxRMlZkc|i7eR3JUrefg",
+        "Tier_basis": "DESCRIPTIVE_LIFETIME_RATE"
+      },
+      "target_vpd": 68.50534900573591,
+      "peers": [
+        {
+          "Video_ID": "wOVEF-cb5XI",
+          "age": 64.1379,
+          "views": 4548,
+          "vpd": 70.90971173050568
+        },
+        {
+          "Video_ID": "gt8KAc7h9O8",
+          "age": 66.138,
+          "views": 20613,
+          "vpd": 311.6665154676585
+        },
+        {
+          "Video_ID": "qUcdSBhm9us",
+          "age": 63.1378,
+          "views": 6581,
+          "vpd": 104.2323299196361
+        },
+        {
+          "Video_ID": "HJ5GZ2R3n2I",
+          "age": 67.138,
+          "views": 4760,
+          "vpd": 70.89874586672227
+        },
+        {
+          "Video_ID": "EOVnm1nKCns",
+          "age": 62.1381,
+          "views": 5604,
+          "vpd": 90.18621425502228
+        },
+        {
+          "Video_ID": "v7uG773-wAY",
+          "age": 68.1381,
+          "views": 5367,
+          "vpd": 78.76650508305926
+        },
+        {
+          "Video_ID": "-FsJqwfNvt4",
+          "age": 61.1381,
+          "views": 4531,
+          "vpd": 74.11090629247556
+        },
+        {
+          "Video_ID": "CBzVGI_K3bQ",
+          "age": 69.1379,
+          "views": 3908,
+          "vpd": 56.52471365199116
+        },
+        {
+          "Video_ID": "pqJLxRMlZkc",
+          "age": 60.11,
+          "views": 7430,
+          "vpd": 123.60672101147895
+        },
+        {
+          "Video_ID": "i7eR3JUrefg",
+          "age": 59.1379,
+          "views": 6992,
+          "vpd": 118.23213201686228
+        }
+      ],
+      "median_10": 84.47635966904076,
+      "ratio_10": 0.8109410641524368,
+      "median_5": 90.18621425502228,
+      "ratio_5": 0.7595988984748963
+    },
+    "assumptions_and_limits": "Frozen2026-09-11counts;4decimalages;notcurrentvelocityorcausalpackagingevidence. BothTYPICAL."
+  }
+]

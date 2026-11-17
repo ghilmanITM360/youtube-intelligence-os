@@ -1,0 +1,42 @@
+{
+  "observed_utc": "2026-10-26T19:58:51.328748+00:00",
+  "method": "Authenticated supported Drive browser Activity UI; exact rows grounded by visible DOM role=row data-id before selection",
+  "account": "kgk2930@gmail.com",
+  "timezone": "Asia/Karachi UTC+05:00",
+  "events": [
+    {
+      "target_id": "127DXG7Ih9tw61aFNGL0tGzwt4dc0no_A",
+      "actor_display": "You",
+      "action_display": "uploaded an item",
+      "display_time": "11:06 PM Oct 26",
+      "utc_minute": "2026-10-26T18:06Z",
+      "parent_id": "1tUB-VgmAgeOZs2NgmVMQ1OFxhdLcgP4J"
+    },
+    {
+      "target_id": "1_I0MqlstrAynSWTsPnOTuZOzr5eueJtv",
+      "actor_display": "You",
+      "action_display": "uploaded an item",
+      "display_time": "11:11 PM Oct 26",
+      "utc_minute": "2026-10-26T18:11Z",
+      "parent_id": "1tUB-VgmAgeOZs2NgmVMQ1OFxhdLcgP4J"
+    },
+    {
+      "target_id": "1tUB-VgmAgeOZs2NgmVMQ1OFxhdLcgP4J",
+      "actor_display": "You",
+      "action_display": "uploaded 4 items",
+      "display_time": "11:11 PM Oct 26",
+      "aggregation_warning": "Folder UI groups both MP4s and two WAVs into one activity; not an exact per-object transaction start time"
+    },
+    {
+      "target_id": "1tUB-VgmAgeOZs2NgmVMQ1OFxhdLcgP4J",
+      "actor_display": "You",
+      "action_display": "created an item in bulk-20261025T2140Z-01a174dd",
+      "display_time": "11:06 PM Oct 26"
+    }
+  ],
+  "limitations": [
+    "UI exposes account-relative actor You and minute-level event times, but no uploader client, IP, device, Mac, session ID or retry request identity.",
+    "Drive Activity API is not exposed by available connector; no new scopes, credentials or installations were requested.",
+    "Owner actor is established. Exact source-path-to-remote creation transaction is not exposed. Earlier authorized chooser correlation is an inference, not exact session attribution."
+  ]
+}

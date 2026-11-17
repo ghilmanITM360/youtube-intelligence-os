@@ -1,0 +1,422 @@
+# Reconstruction blueprint - original asset system derived from WCS1bK3KB3U
+New ORIGINAL assets and motion only. No source screenshot, footage, logo or character drawing is copied; third-party items (`IMG_*`, `ICON_*`) are replaced with licensed or self-made equivalents and your own data. Timings at 24 fps, 1920x1080.
+
+## Modules (original rebuild; derived from measured patterns)
+1. **Cast and prop kit**: stick man, investor with glasses and briefcase, short seller with green tie, phone man, hoodie trader, grey robot, card character with telescope, newspaper, share boxes, banknotes, dominoes, chalkboard. Redraw as new original assets; do not trace the source.
+2. **Hard-cut scene chain**: 217 hard cuts, median shot 2.2 s (0.54-25.5 s); 194 land on I-frames and 23 do not, so author cuts as true edits.
+3. **Chalkboard term frame**: pointer-stick figure beside a green board whose text swaps in place; 26 chalkboard states.
+4. **Date write-on captions**: dates and time jumps written stroke by stroke on white; 8 write-on states.
+5. **One-frame pop-in vocabulary**: bubbles, labels, circles, X marks, arrows and logos in a single frame; 310 of 424 episodes are one frame.
+6. **Recurring diagram**: share-and-dollar icon, banknote and a green arrow that draws on, then a banknote pile.
+7. **Third-party insert slot**: screenshots, charts, memes, photos and clips are replaced with licensed or self-made equivalents; never copy the source items.
+8. **Clip handling**: long interview clip with burned-in subtitles ended by a bar wipe; short loops for meme clips.
+9. **Locked-off camera with rare moves**: scale changes only on a few close-ups (street sign, reporter, cash, photo).
+10. **End card**: white card with Subscribe for more, channel name, YouTube mark and crossed-out social icons held 6.4 s.
+11. **Codec note**: 24 fps constant frame rate, 243 I-frames about every 2.5 s on average.
+
+
+## Editor timeline (frames)
+- S001 f0-f5 (6 fr): START - Stick man on white
+- S002 f6-f58 (53 fr): POP_IN+ANIM - Handwritten date writes on
+- S003 f59-f118 (60 fr): CUT+ANIM - President caricature at desk with long social post
+- S004 f119-f152 (34 fr): CUT - Stick man alone
+- S005 f153-f175 (23 fr): POSE - Stick man raises arm
+- S006 f176-f188 (13 fr): CUT - Numeral 1.
+- S007 f189-f278 (90 fr): CUT+ANIM - Blue app-logo character boasting
+- S008 f279-f305 (27 fr): POP_IN+MICRO - Rival app characters appear
+- S009 f306-f326 (21 fr): POP_IN - Bubble replaced by uhh
+- S010 f327-f360 (34 fr): POP_IN - Stock chart and who's gonna tell him
+- S011 f361-f377 (17 fr): CUT - Numeral 2.
+- S012 f378-f394 (17 fr): CUT - Investor with briefcase beside chart board
+- S013 f395-f416 (22 fr): POSE - Investor hand to chin
+- S014 f417-f463 (47 fr): CUT+ANIM - TradingView line chart with red arrow
+- S015 f464-f478 (15 fr): POP_IN+ANIM - Caption removed and chart zooms out
+- S016 f479-f494 (16 fr): POP_IN - Green circle on jump
+- S017 f495-f551 (57 fr): CUT - Article text on index gains
+- S018 f552-f632 (81 fr): POP_IN+ANIM - Yellow highlights sweep text
+- S019 f633-f673 (41 fr): POP_IN - Red circle around Dow points
+- S020 f674-f732 (59 fr): POP_IN+ANIM - Stick man face slides in at edge
+- S021 f733-f767 (35 fr): CUT - Green rising arrow with But wait there's more image
+- S022 f768-f796 (29 fr): CUT+ANIM - Caption A few weeks later writes on
+- S023 f797-f845 (49 fr): CUT - TradingView chart with surfer at peak
+- S024 f846-f874 (29 fr): CUT - President caricature with deal book
+- S025 f875-f927 (53 fr): CUT - Angry caricature with CNBC headline
+- S026 f928-f962 (35 fr): CUT - Breaking News newspaper
+- S027 f963-f1002 (40 fr): CUT - Two relief-rally article screenshots
+- S028 f1003-f1053 (51 fr): CUT - Two stick figures at rising chart
+- S029 f1054-f1073 (20 fr): CUT - Stick man alone
+- S030 f1074-f1107 (34 fr): POSE - Stick man frowns
+- S031 f1108-f1127 (20 fr): CUT - Breaking News with Relief rally bubble
+- S032 f1128-f1152 (25 fr): POP_IN - Red X over newspaper
+- S033 f1153-f1195 (43 fr): CUT - Stick man at chalkboard What is going on
+- S034 f1196-f1254 (59 fr): CUT+ANIM - Green rising arrow and money bags draw on
+- S035 f1255-f1283 (29 fr): CUT - Two map characters with boxing gloves
+- S036 f1284-f1314 (31 fr): CUT - Stick man alone
+- S037 f1315-f1369 (55 fr): CUT+ZOOM_OUT - Wall St street sign
+- S038 f1370-f1464 (95 fr): CUT+ZOOM_IN - Reporter with microphone and newspaper
+- S039 f1465-f1492 (28 fr): CUT - Cartoon clip in grass field
+- S040 f1493-f1525 (33 fr): CUT+ANIM - Caption On February 28th writes on
+- S041 f1526-f1551 (26 fr): CUT - Black silhouettes of USA and Israel
+- S042 f1552-f1600 (49 fr): POP_IN - Gloved hands at targeting laptop
+- S043 f1601-f1670 (70 fr): CUT - Ali Khamenei photo with Iran flag
+- S044 f1671-f1685 (15 fr): CUT - Strait of Hormuz map
+- S045 f1686-f1725 (40 fr): POP_IN - Red X over strait
+- S046 f1726-f1759 (34 fr): CUT - Sad stick man beside CBS headline
+- S047 f1760-f1802 (43 fr): POSE - Stick man lowers pointer
+- S048 f1803-f1826 (24 fr): POP_IN - Panicked figure with headband appears
+- S049 f1827-f1906 (80 fr): CUT+ANIM - Red stock heatmap and burning office gif
+- S050 f1907-f1974 (68 fr): CUT - Worried 401K document character
+- S051 f1975-f2042 (68 fr): CUT - Side-view ground with sky grass and soil
+- S052 f2043-f2072 (30 fr): CUT - Wall St street sign
+- S053 f2073-f2091 (19 fr): CUT - Panik meme head
+- S054 f2092-f2145 (54 fr): CUT - Dark article screenshot with money bag
+- S055 f2146-f2183 (38 fr): POP_IN+ANIM - Money bag and bills bounce
+- S056 f2184-f2214 (31 fr): POP_IN - Red circle on 13 years and stick man peeks
+- S057 f2215-f2252 (38 fr): CUT - Stick man at chalkboard We're NOT guessing
+- S058 f2253-f2309 (57 fr): CUT - Article screenshot again
+- S059 f2310-f2347 (38 fr): POP_IN - Goldman Sachs card character eats popcorn
+- S060 f2348-f2375 (28 fr): CUT - Stick man with Investopedia takeaways
+- S061 f2376-f2471 (96 fr): POSE - Pointer moves over takeaways
+- S062 f2472-f2490 (19 fr): CUT - Wall St street sign
+- S063 f2491-f2537 (47 fr): CUT - Goldman Sachs character with telescope close
+- S064 f2538-f2561 (24 fr): CUT - Telescope character watches money bag
+- S065 f2562-f2588 (27 fr): POP_IN - For SALE sign appears
+- S066 f2589-f2621 (33 fr): POP_IN - Caption hmmm sus
+- S067 f2622-f2667 (46 fr): CUT - Prime Book global equities chart
+- S068 f2668-f2730 (63 fr): POP_IN - Red up arrow at recent bar
+- S069 f2731-f2786 (56 fr): POP_IN - Virus icon with arrow at 2020
+- S070 f2787-f2878 (92 fr): CUT - Hedgeweek leverage text
+- S071 f2879-f2931 (53 fr): CUT - Stick man at chalkboard Macro ETFs
+- S072 f2932-f2937 (6 fr): POSE - Pointer lowers
+- S073 f2938-f2948 (11 fr): POP_IN - Board text swaps to SPY
+- S074 f2949-f2978 (30 fr): POP_IN - Board text swaps to QQQ
+- S075 f2979-f2999 (21 fr): POSE+ANIM - Figure and board shift
+- S076 f3000-f3028 (29 fr): POP_IN+ANIM - Virus character slides in with speech
+- S077 f3029-f3065 (37 fr): CUT+ANIM - Caption March 19th writes on
+- S078 f3066-f3089 (24 fr): CUT - Stick man alone
+- S079 f3090-f3129 (40 fr): POSE - Stick man arm move
+- S080 f3130-f3399 (270 fr): CUT+ANIM - Interview clip guest with subtitles
+- S081 f3400-f3530 (131 fr): CUT+ANIM - Interview clip host close shot
+- S082 f3531-f3566 (36 fr): CUT+ANIM - Interview clip back to guest
+- S083 f3567-f3737 (171 fr): CUT+ANIM - Interview clip split screen
+- S084 f3738-f4338 (601 fr): CUT+ANIM - Interview clip guest single again
+- S085 f4339-f4348 (10 fr): POP_IN+ANIM - Teal and yellow bar wipe
+- S086 f4349-f4396 (48 fr): CUT+ANIM - Caption Six weeks later writes on
+- S087 f4397-f4416 (20 fr): CUT - Stick man alone
+- S088 f4417-f4448 (32 fr): POSE - Stick man smiles hand to chin
+- S089 f4449-f4491 (43 fr): POSE - Stick man drops hand smiling
+- S090 f4492-f4563 (72 fr): CUT+ANIM - Close-up stick man holding cash
+- S091 f4564-f4577 (14 fr): CUT - Bear beside SELL button
+- S092 f4578-f4597 (20 fr): POP_IN - Hand presses SELL with sad face
+- S093 f4598-f4620 (23 fr): CUT - Stick man alone
+- S094 f4621-f4643 (23 fr): POSE - Stick man arm move
+- S095 f4644-f4682 (39 fr): CUT - Caricature with giant post bubble
+- S096 f4683-f4738 (56 fr): CUT - Briefcases, chart board and money
+- S097 f4739-f4777 (39 fr): CUT+ANIM - Photo of man at podium firing money gun
+- S098 f4778-f4814 (37 fr): POP_IN+ANIM - Photo enlarges
+- S099 f4815-f4884 (70 fr): CUT - Green stock heatmap with bill character
+- S100 f4885-f4889 (5 fr): CUT - First stonks meme tile
+- S101 f4890-f4940 (51 fr): POP_IN+ANIM - Stonks tiles multiply
+- S102 f4941-f4969 (29 fr): CUT - TradingView chart after drop
+- S103 f4970-f5001 (32 fr): POP_IN - Red arrow at the drop
+- S104 f5002-f5036 (35 fr): CUT - Second TradingView chart
+- S105 f5037-f5067 (31 fr): POP_IN - Red arrow redrawn
+- S106 f5068-f5141 (74 fr): POP_IN+ANIM - Shocked stick man at bottom
+- S107 f5142-f5209 (68 fr): CUT - Figure reading newspaper Relief rally
+- S108 f5210-f5221 (12 fr): CUT - Breaking News newspaper
+- S109 f5222-f5241 (20 fr): POP_IN - Newspaper tears
+- S110 f5242-f5304 (63 fr): CUT - Windward logo
+- S111 f5305-f5353 (49 fr): CUT - Robot on phone
+- S112 f5354-f5390 (37 fr): POP_IN - GPS tablet appears
+- S113 f5391-f5431 (41 fr): POP_IN+ANIM - Second tablet and satellite appear
+- S114 f5432-f5537 (106 fr): CUT - Windward article with vessel map
+- S115 f5538-f5552 (15 fr): CUT - Stick man at blank chalkboard
+- S116 f5553-f5608 (56 fr): POP_IN - Board shows 96% decrease
+- S117 f5609-f5658 (50 fr): POSE - Pointer lowers
+- S118 f5659-f5697 (39 fr): POP_IN - Board text swaps to 130 daily transits
+- S119 f5698-f5734 (37 fr): CUT - Strait of Hormuz map again
+- S120 f5735-f5770 (36 fr): CUT - Frowning stick man hand on hip
+- S121 f5771-f5838 (68 fr): CUT - Breaking News with Relief rally again
+- S122 f5839-f5852 (14 fr): CUT - Dove dropping olive branch
+- S123 f5853-f5882 (30 fr): POP_IN - Caption aw man
+- S124 f5883-f5916 (34 fr): CUT - Skeptical stick man
+- S125 f5917-f5937 (21 fr): CUT - Green stock heatmap
+- S126 f5938-f5961 (24 fr): POP_IN - Heatmap enlarged
+- S127 f5962-f5988 (27 fr): CUT - Stick man with question marks
+- S128 f5989-f6004 (16 fr): POSE - Stick man hand to chin
+- S129 f6005-f6037 (33 fr): CUT+MICRO - Meme stock collage
+- S130 f6038-f6046 (9 fr): CUT - Stick man alone
+- S131 f6047-f6066 (20 fr): POSE - Stick man arm move
+- S132 f6067-f6100 (34 fr): CUT - Chalkboard What the heck is a short squeeze
+- S133 f6101-f6194 (94 fr): POSE - Pointer lowers
+- S134 f6195-f6245 (51 fr): CUT - Shorting a stock equals two figures
+- S135 f6246-f6273 (28 fr): POP_IN - Share boxes beside lender
+- S136 f6274-f6291 (18 fr): POP_IN+ANIM - Short seller takes shares and holds cash
+- S137 f6292-f6322 (31 fr): CUT+ANIM - Share price falls arrow
+- S138 f6323-f6348 (26 fr): CUT - Short seller with bought initially for
+- S139 f6349-f6383 (35 fr): POP_IN - Bought back for one bill
+- S140 f6384-f6404 (21 fr): CUT+MICRO - Short seller returns shares
+- S141 f6405-f6437 (33 fr): CUT - Short seller close-up with cash
+- S142 f6438-f6464 (27 fr): CUT+ANIM - Share icon and bill with rising arrow
+- S143 f6465-f6474 (10 fr): POP_IN - Banknotes pile up
+- S144 f6475-f6503 (29 fr): CUT - Short seller close-up worried
+- S145 f6504-f6550 (47 fr): CUT - Short seller and lender with boxes
+- S146 f6551-f6586 (36 fr): CUT - Worried short seller bought initially for
+- S147 f6587-f6629 (43 fr): POP_IN - Bought back for many bills
+- S148 f6630-f6656 (27 fr): CUT+ANIM - Share icon and bill with rising arrow again
+- S149 f6657-f6666 (10 fr): POP_IN - Banknotes pile up again
+- S150 f6667-f6703 (37 fr): CUT+ANIM - Worried short seller looks at money pile
+- S151 f6704-f6731 (28 fr): CUT - Man on phone says Hi
+- S152 f6732-f6771 (40 fr): POP_IN+MICRO - Bubble Do something about this or else
+- S153 f6772-f6793 (22 fr): CUT - Worried short seller alone right
+- S154 f6794-f6798 (5 fr): POP_IN - First flying banknote
+- S155 f6799-f6803 (5 fr): POP_IN - Second banknote
+- S156 f6804-f6829 (26 fr): POP_IN - Third banknote
+- S157 f6830-f6876 (47 fr): POP_IN - Caption or abort the mission
+- S158 f6877-f6884 (8 fr): CUT - Small figure with curl
+- S159 f6885-f6891 (7 fr): POP_IN - Curly-haired woman appears
+- S160 f6892-f6897 (6 fr): POP_IN - Headband figure appears
+- S161 f6898-f6942 (45 fr): POP_IN - Bob-haired figure appears
+- S162 f6943-f6948 (6 fr): CUT - Row of share boxes
+- S163 f6949-f6954 (6 fr): POP_IN - First hand holding banknote
+- S164 f6955-f6964 (10 fr): POP_IN - Second hand with banknote
+- S165 f6965-f6974 (10 fr): POP_IN - Third hand with banknote
+- S166 f6975-f6993 (19 fr): POP_IN - Fourth hand with banknote
+- S167 f6994-f7020 (27 fr): CUT+ANIM - Share icon and bill with rising arrow third time
+- S168 f7021-f7043 (23 fr): POP_IN - Banknotes pile up third time
+- S169 f7044-f7065 (22 fr): CUT - Dark-haired figure with banknote
+- S170 f7066-f7086 (21 fr): POP_IN - Curly-haired figure joins
+- S171 f7087-f7123 (37 fr): CUT+ANIM - Share boxes row with figures
+- S172 f7124-f7157 (34 fr): CUT+ANIM - Orange-slices clip alone
+- S173 f7158-f7180 (23 fr): CUT - Stick man at chalkboard April 8th
+- S174 f7181-f7223 (43 fr): POSE - Pointer lowers
+- S175 f7224-f7266 (43 fr): POP_IN - Board text HIGHEST since 2020
+- S176 f7267-f7294 (28 fr): CUT - TradingView chart V recovery
+- S177 f7295-f7351 (57 fr): CUT+ANIM - Domino video clip
+- S178 f7352-f7381 (30 fr): CUT - Stick man alone
+- S179 f7382-f7393 (12 fr): POSE - Stick man arm move
+- S180 f7394-f7429 (36 fr): CUT+ANIM - Algorithm flowchart icon then robot
+- S181 f7430-f7442 (13 fr): CUT - Stick man at blank chalkboard
+- S182 f7443-f7466 (24 fr): POP_IN - Board text CTAs
+- S183 f7467-f7505 (39 fr): POP_IN - Board text Commodity Trading Advisors
+- S184 f7506-f7535 (30 fr): POSE - Pointer lowers
+- S185 f7536-f7554 (19 fr): CUT+ANIM - Animated sitcom courtroom clip
+- S186 f7555-f7574 (20 fr): CUT+ANIM - Sitcom clip cut to moustached man
+- S187 f7575-f7590 (16 fr): CUT+ANIM - Sitcom clip cut to dog character
+- S188 f7591-f7606 (16 fr): CUT+ANIM - Sitcom clip cut to girl in glasses
+- S189 f7607-f7626 (20 fr): CUT+ANIM - Sitcom clip cut to boy in cap
+- S190 f7627-f7658 (32 fr): CUT+ANIM - Sitcom clip wall bursts
+- S191 f7659-f7707 (49 fr): CUT+ANIM - Sitcom clip wide with pitcher labelled CTAs
+- S192 f7708-f7794 (87 fr): CUT+ANIM - Pitcher mascot labelled CTAs close
+- S193 f7795-f7854 (60 fr): CUT - Robot on phone
+- S194 f7855-f7864 (10 fr): POP_IN - Rules scroll appears
+- S195 f7865-f7886 (22 fr): POP_IN - Flowchart icon appears
+- S196 f7887-f7900 (14 fr): CUT - Breaking News newspaper
+- S197 f7901-f7916 (16 fr): POP_IN - Red X over newspaper
+- S198 f7917-f7933 (17 fr): CUT - Earth character
+- S199 f7934-f7961 (28 fr): POP_IN - Red X over Earth
+- S200 f7962-f7997 (36 fr): CUT+ANIM - Robot on phone with red line
+- S201 f7998-f8010 (13 fr): CUT - Flowchart icon lower left
+- S202 f8011-f8047 (37 fr): POP_IN - Red falling zig-zag arrow
+- S203 f8048-f8066 (19 fr): POP_IN - Short bubble
+- S204 f8067-f8079 (13 fr): CUT - Flowchart icon lower right
+- S205 f8080-f8112 (33 fr): POP_IN - Green rising arrow
+- S206 f8113-f8134 (22 fr): POP_IN - Long bubble
+- S207 f8135-f8167 (33 fr): CUT - Chalkboard Mechanical trading
+- S208 f8168-f8192 (25 fr): CUT - Goldman Sachs logo square
+- S209 f8193-f8233 (41 fr): POP_IN - Text CTAs
+- S210 f8234-f8282 (49 fr): POP_IN - Text $30 BILLION
+- S211 f8283-f8320 (38 fr): POP_IN - Note right before ceasefire
+- S212 f8321-f8367 (47 fr): CUT+ANIM - S&P 500 split by dotted line
+- S213 f8368-f8386 (19 fr): POP_IN - Warning sign appears
+- S214 f8387-f8413 (27 fr): CUT+ANIM - Flowchart icon centred
+- S215 f8414-f8452 (39 fr): CUT - Stick man alone
+- S216 f8453-f8465 (13 fr): CUT - Flowchart icon lower right
+- S217 f8466-f8472 (7 fr): POP_IN - Green rising arrow
+- S218 f8473-f8490 (18 fr): POP_IN - Long bubble
+- S219 f8491-f8504 (14 fr): CUT - Goldman Sachs telescope character left
+- S220 f8505-f8572 (68 fr): POP_IN - Bubble Hmm
+- S221 f8573-f8651 (79 fr): POP_IN - Bubble $40 billion will do
+- S222 f8652-f8698 (47 fr): CUT - Dark article Historic scale of hedge fund buying
+- S223 f8699-f8763 (65 fr): POP_IN - Red circle on $86 billion
+- S224 f8764-f8768 (5 fr): POP_IN - First briefcase
+- S225 f8769-f8779 (11 fr): POP_IN - More briefcases
+- S226 f8780-f8806 (27 fr): POP_IN - Second briefcase pair
+- S227 f8807-f8861 (55 fr): POP_IN - Shocked stick man
+- S228 f8862-f8941 (80 fr): POP_IN+ANIM - Money-throwing clip with flying bills
+- S229 f8942-f8994 (53 fr): CUT+ANIM - Single domino standing
+- S230 f8995-f9025 (31 fr): POP_IN - Caption THE OPTIONS MARKET
+- S231 f9026-f9087 (62 fr): CUT - Stick man with Investopedia delta-neutral list
+- S232 f9088-f9116 (29 fr): POSE - Pointer raises
+- S233 f9117-f9146 (30 fr): CUT - Man on phone alone
+- S234 f9147-f9176 (30 fr): POP_IN+ANIM - Hand raises banknote
+- S235 f9177-f9200 (24 fr): CUT - Hoodie trader with red chart and dollar signs
+- S236 f9201-f9239 (39 fr): POP_IN - Hoodie trader holds cash
+- S237 f9240-f9265 (26 fr): CUT - SpotGamma logo
+- S238 f9266-f9310 (45 fr): POP_IN - Stick man peeks at lower left
+- S239 f9311-f9335 (25 fr): CUT - Article text with dark gamma chart
+- S240 f9336-f9389 (54 fr): POP_IN - Red ellipse on Negative Gamma Regime
+- S241 f9390-f9415 (26 fr): CUT - Stick man at blank chalkboard
+- S242 f9416-f9464 (49 fr): POP_IN - Board text Stabilizing
+- S243 f9465-f9483 (19 fr): POP_IN - Board text Pro-cyclical
+- S244 f9484-f9500 (17 fr): CUT+ANIM - Share icon and bill with rising arrow fourth time
+- S245 f9501-f9504 (4 fr): POP_IN - Banknotes pile up
+- S246 f9505-f9514 (10 fr): CUT - Hoodie trader again
+- S247 f9515-f9525 (11 fr): POP_IN - Hoodie trader holds cash
+- S248 f9526-f9552 (27 fr): CUT+ANIM - Share icon and bill with rising arrow fifth time
+- S249 f9553-f9580 (28 fr): POP_IN - Banknotes pile up
+- S250 f9581-f9603 (23 fr): CUT+ANIM - Orange-slices clip again
+- S251 f9604-f9622 (19 fr): CUT - Chalkboard Stabilizing
+- S252 f9623-f9636 (14 fr): POP_IN - Board text Pro-cyclical again
+- S253 f9637-f9646 (10 fr): CUT - Hoodie trader again
+- S254 f9647-f9667 (21 fr): POP_IN - Hoodie trader holds cash
+- S255 f9668-f9737 (70 fr): CUT+ANIM - Three dominoes
+- S256 f9738-f9759 (22 fr): POP_IN - Breaking News Omg relief rally with fallen dominoes
+- S257 f9760-f9786 (27 fr): CUT - Frowning stick man
+- S258 f9787-f9818 (32 fr): POSE - Stick man smiles
+- S259 f9819-f9881 (63 fr): CUT - Goldman Sachs popcorn character and dark film still
+- S260 f9882-f9973 (92 fr): CUT+ANIM - Red cycle arrows
+- S261 f9974-f10025 (52 fr): CUT+ANIM - Scrolling timeline of years
+- S262 f10026-f10058 (33 fr): CUT+ANIM - Caption December 2018 writes on
+- S263 f10059-f10106 (48 fr): CUT - Not stonks meme
+- S264 f10107-f10115 (9 fr): CUT - Federal Reserve building
+- S265 f10116-f10122 (7 fr): POP_IN - Percent icon appears
+- S266 f10123-f10134 (12 fr): POP_IN - Green up arrow
+- S267 f10135-f10208 (74 fr): CUT - Photo of Fed chair at podium
+- S268 f10209-f10226 (18 fr): POP_IN - Bubble patient
+- S269 f10227-f10246 (20 fr): CUT - Text Dow Jones Industrial Average
+- S270 f10247-f10262 (16 fr): CUT+ANIM - Orange starburst flashes
+- S271 f10263-f10322 (60 fr): CUT - CBS article Dow soars
+- S272 f10323-f10333 (11 fr): POP_IN - Red circle on 1,000 points
+- S273 f10334-f10384 (51 fr): POP_IN - Caption wow
+- S274 f10385-f10438 (54 fr): CUT+ANIM - Caption August 2024 writes on
+- S275 f10439-f10475 (37 fr): CUT+ANIM - Bank of Japan building
+- S276 f10476-f10505 (30 fr): POP_IN - Percent icon and up arrow
+- S277 f10506-f10534 (29 fr): POP_IN - Caption 17 years
+- S278 f10535-f10546 (12 fr): CUT - Stick man at laptop with channel post
+- S279 f10547-f10566 (20 fr): POP_IN - Green arrow on post image
+- S280 f10567-f10582 (16 fr): POP_IN - Post image Japan with yen notes
+- S281 f10583-f10587 (5 fr): POP_IN - Caption Pay up if you want my yen
+- S282 f10588-f10598 (11 fr): POSE - Stick man grins and red arrow
+- S283 f10599-f10622 (24 fr): POP_IN - Post image N°2 figure and buildings
+- S284 f10623-f10629 (7 fr): POP_IN - Banknote in post image
+- S285 f10630-f10686 (57 fr): CUT - Nikkei 225 falling arrow
+- S286 f10687-f10736 (50 fr): POP_IN+ANIM - Green rebound arrow draws on
+- S287 f10737-f10771 (35 fr): CUT - Stick man alone
+- S288 f10772-f10802 (31 fr): POSE - Stick man arm move
+- S289 f10803-f10918 (116 fr): CUT+ANIM - Red cycle arrows with small stick man
+- S290 f10919-f10942 (24 fr): CUT+ANIM - Caption 20 years ago writes on
+- S291 f10943-f10973 (31 fr): CUT - Chart board alone
+- S292 f10974-f10992 (19 fr): CUT - Three office workers
+- S293 f10993-f11027 (35 fr): CUT - Trader at desk in office
+- S294 f11028-f11054 (27 fr): POP_IN - Phone, papers and red chart around trader
+- S295 f11055-f11102 (48 fr): CUT+ANIM - Three men thinking with flying banknotes
+- S296 f11103-f11152 (50 fr): CUT - Red-haired man with paper asks A technology startup
+- S297 f11153-f11194 (42 fr): POP_IN - Bubble Hmm five cents and some gum
+- S298 f11195-f11209 (15 fr): CUT - Frowning stick man
+- S299 f11210-f11249 (40 fr): CUT - Three office workers again
+- S300 f11250-f11259 (10 fr): CUT - ICI total net assets table
+- S301 f11260-f11380 (121 fr): POP_IN - Red circle on percent column
+- S302 f11381-f11394 (14 fr): POP_IN - Red circle on 13,606.4
+- S303 f11395-f11409 (15 fr): POP_IN - Banknote gets eyes
+- S304 f11410-f11444 (35 fr): POP_IN - Caption that's a lot
+- S305 f11445-f11459 (15 fr): CUT - Trader at office desk again
+- S306 f11460-f11484 (25 fr): POP_IN - Phone, papers and red chart again
+- S307 f11485-f11495 (11 fr): CUT - Trader close-up smiling
+- S308 f11496-f11524 (29 fr): POP_IN - Bubble We should go with Apple
+- S309 f11525-f11551 (27 fr): CUT - Robot on phone
+- S310 f11552-f11576 (25 fr): POP_IN - Caption beep boop
+- S311 f11577-f11617 (41 fr): CUT - Stick man at blank chalkboard
+- S312 f11618-f11648 (31 fr): POP_IN - Board text Market cap
+- S313 f11649-f11660 (12 fr): CUT - Small Big Business tower
+- S314 f11661-f11683 (23 fr): POP_IN+ANIM - Tower grows
+- S315 f11684-f11690 (7 fr): POP_IN - First money bag
+- S316 f11691-f11714 (24 fr): POP_IN - Second money bag
+- S317 f11715-f11728 (14 fr): CUT - Magnificent Seven market cap chart
+- S318 f11729-f11779 (51 fr): POP_IN+ANIM - Company logos added around chart
+- S319 f11780-f11845 (66 fr): POP_IN - Red 33% label
+- S320 f11846-f11882 (37 fr): CUT - Briefcase and money bag
+- S321 f11883-f11920 (38 fr): POP_IN - Worried figure with banknote
+- S322 f11921-f11950 (30 fr): CUT - Stick man alone
+- S323 f11951-f11971 (21 fr): POSE - Stick man arm move
+- S324 f11972-f11996 (25 fr): CUT - Investor with briefcase
+- S325 f11997-f12049 (53 fr): POP_IN - Rising chart board beside investor
+- S326 f12050-f12101 (52 fr): CUT - Chalkboard Hedge funds
+- S327 f12102-f12156 (55 fr): POP_IN - Board text Few funds
+- S328 f12157-f12201 (45 fr): CUT - Top-hat tycoon pulling strings
+- S329 f12202-f12221 (20 fr): CUT - Millennium logo
+- S330 f12222-f12247 (26 fr): POP_IN - Citadel logo
+- S331 f12248-f12293 (46 fr): POP_IN - Point72 logo
+- S332 f12294-f12343 (50 fr): CUT+ANIM - Fund logos with briefcases
+- S333 f12344-f12393 (50 fr): POP_IN - Hedge fund AUM bar chart on money wallpaper
+- S334 f12394-f12499 (106 fr): CUT - Dark Millennium risk-rule excerpt
+- S335 f12500-f12544 (45 fr): CUT - Stick man alone
+- S336 f12545-f12561 (17 fr): CUT - Three men at round table
+- S337 f12562-f12599 (38 fr): POP_IN - Bubble So uh
+- S338 f12600-f12608 (9 fr): CUT - Federal Reserve building large
+- S339 f12609-f12625 (17 fr): POP_IN - Knife appears
+- S340 f12626-f12632 (7 fr): CUT - Strait map with question mark
+- S341 f12633-f12669 (37 fr): POP_IN+ANIM - More question marks
+- S342 f12670-f12679 (10 fr): CUT - Investor speech bubble with film clip
+- S343 f12680-f12719 (40 fr): POP_IN+ANIM - Clip subtitles Sell it all Today
+- S344 f12720-f12732 (13 fr): CUT - Stick man alone
+- S345 f12733-f12748 (16 fr): POSE - Stick man arm move
+- S346 f12749-f12782 (34 fr): CUT+ANIM - Single domino tips
+- S347 f12783-f12798 (16 fr): CUT - Stick man alone
+- S348 f12799-f12840 (42 fr): CUT - Cboe options volume text with briefcase
+- S349 f12841-f12967 (127 fr): POP_IN+ANIM - Yellow highlight sweeps a line
+- S350 f12968-f13015 (48 fr): CUT - Man lying on money pile meme $2 TRILLION
+- S351 f13016-f13070 (55 fr): CUT+ANIM - Two banknotes with exchange arrows
+- S352 f13071-f13099 (29 fr): CUT - Stick man alone
+- S353 f13100-f13123 (24 fr): CUT - Hoodie trader again
+- S354 f13124-f13170 (47 fr): POP_IN - Hoodie trader holds cash
+- S355 f13171-f13176 (6 fr): CUT - Row of share boxes
+- S356 f13177-f13182 (6 fr): POP_IN - First banknote hand
+- S357 f13183-f13192 (10 fr): POP_IN - Second banknote hand
+- S358 f13193-f13202 (10 fr): POP_IN - Third banknote hand
+- S359 f13203-f13274 (72 fr): POP_IN - Fourth banknote hand
+- S360 f13275-f13340 (66 fr): CUT - Chalkboard no thinking
+- S361 f13341-f13385 (45 fr): POSE - Pointer raises
+- S362 f13386-f13409 (24 fr): POP_IN - Board text BUY SELL BUY SELL BUY
+- S363 f13410-f13436 (27 fr): CUT+ANIM - Big green dollar sign
+- S364 f13437-f13487 (51 fr): CUT+ANIM - Falling figure and TV host photo SELL then BUY
+- S365 f13488-f13514 (27 fr): CUT - Chalkboard April 8th
+- S366 f13515-f13537 (23 fr): POSE - Pointer raises
+- S367 f13538-f13570 (33 fr): CUT - Efficient Market Hypothesis card
+- S368 f13571-f13617 (47 fr): CUT+ANIM - Stick man and running money bag
+- S369 f13618-f13637 (20 fr): CUT - Efficient Market Hypothesis card again
+- S370 f13638-f13669 (32 fr): POP_IN - Red X over EMH card
+- S371 f13670-f13726 (57 fr): CUT+ANIM - Thinking figure and photo of two traders
+- S372 f13727-f13763 (37 fr): CUT - Stick man alone
+- S373 f13764-f13800 (37 fr): CUT - Figure reading NEWS close
+- S374 f13801-f13816 (16 fr): CUT - Breaking News newspaper
+- S375 f13817-f13874 (58 fr): POP_IN - Bubble Markets explained for dum dums
+- S376 f13875-f13899 (25 fr): CUT - SUBSCRIBE with stick man
+- S377 f13900-f13936 (37 fr): POSE - Stick man small move
+- S378 f13937-f13948 (12 fr): CUT - Small newspaper with eyes
+- S379 f13949-f13973 (25 fr): POSE+ANIM - Newspaper eyes look
+- S380 f13974-f13993 (20 fr): POP_IN+ANIM - Newspaper moves
+- S381 f13994-f14058 (65 fr): CUT+ANIM - Red heart pulses
+- S382 f14059-f14128 (70 fr): CUT+MICRO - Warren Buffett photo
+- S383 f14129-f14153 (25 fr): POP_IN - Attribution Warren Buffett probably
+- S384 f14154-f14177 (24 fr): CUT+ANIM - Briefcase, chart board and money
+- S385 f14178-f14195 (18 fr): POP_IN - Pink heart outline with red X
+- S386 f14196-f14302 (107 fr): CUT+ANIM - Red cycle arrows
+- S387 f14303-f14359 (57 fr): CUT+ANIM - Falling figure and TV host reprise
+- S388 f14360-f14387 (28 fr): CUT - Figure reading NEWS full body
+- S389 f14388-f14417 (30 fr): CUT - Stick man alone
+- S390 f14418-f14436 (19 fr): CUT - Thinking figure with orange tie
+- S391 f14437-f14444 (8 fr): POP_IN - Curly-haired figure appears
+- S392 f14445-f14452 (8 fr): POP_IN - First question mark
+- S393 f14453-f14482 (30 fr): POP_IN - Second question mark
+- S394 f14483-f14635 (153 fr): CUT - Subscribe end card
+
+## Per-state prompts
+All 394 image and animation prompts with static anchors and nearest-frame QA: `PER_STATE_RECONSTRUCTION_SPECIFICATIONS.json`.
+
+## Acceptance tests
+1. Cut frames equal the ledger exactly (59, 119, 176, 189, 361, 378, 417, 495, 733, 768, 797, 846, 875, 928, 963, 1003, 1054, 1108, 1153, 1196, 1255, 1284, 1315, 1370, 1465, 1493, 1526, 1601, 1671, 1726, 1827, 1907, 1975, 2043, 2073, 2092, 2215, 2253, 2348, 2472, 2491, 2538, 2622, 2787, 2879, 3029, 3066, 3130, 3400, 3531, 3567, 3738, 4349, 4397, 4492, 4564, 4598, 4644, 4683, 4739, 4815, 4885, 4941, 5002, 5142, 5210, 5242, 5305, 5432, 5538, 5698, 5735, 5771, 5839, 5883, 5917, 5962, 6005, 6038, 6067, 6195, 6292, 6323, 6384, 6405, 6438, 6475, 6504, 6551, 6630, 6667, 6704, 6772, 6877, 6943, 6994, 7044, 7087, 7124, 7158, 7267, 7295, 7352, 7394, 7430, 7536, 7555, 7575, 7591, 7607, 7627, 7659, 7708, 7795, 7887, 7917, 7962, 7998, 8067, 8135, 8168, 8321, 8387, 8414, 8453, 8491, 8652, 8942, 9026, 9117, 9177, 9240, 9311, 9390, 9484, 9505, 9526, 9581, 9604, 9637, 9668, 9760, 9819, 9882, 9974, 10026, 10059, 10107, 10135, 10227, 10247, 10263, 10385, 10439, 10535, 10630, 10737, 10803, 10919, 10943, 10974, 10993, 11055, 11103, 11195, 11210, 11250, 11445, 11485, 11525, 11577, 11649, 11715, 11846, 11921, 11972, 12050, 12157, 12202, 12294, 12394, 12500, 12545, 12600, 12626, 12670, 12720, 12749, 12783, 12799, 12968, 13016, 13071, 13100, 13171, 13275, 13410, 13437, 13488, 13538, 13571, 13618, 13670, 13727, 13764, 13801, 13875, 13937, 13994, 14059, 14154, 14196, 14303, 14360, 14388, 14418, 14483).
+2. EXACT onsets match to the frame; BOUND onsets fall inside their window.
+3. Static anchors are pixel-still between events.
+4. Total length 14636 frames.
+5. Sound unspecified (nobody listened); ASR lines are timing reference only.

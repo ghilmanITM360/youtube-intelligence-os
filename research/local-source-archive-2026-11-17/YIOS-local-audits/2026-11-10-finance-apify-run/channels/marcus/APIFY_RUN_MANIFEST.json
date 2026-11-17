@@ -1,0 +1,86 @@
+{
+  "snapshot_timestamp_utc": "2026-11-09T22:27:19.368Z",
+  "channel": {
+    "name": "Marcus Retires",
+    "handle": "@MarcusRetires",
+    "id": "UCW_JmbBR0gsRGIUGRY3WA-Q"
+  },
+  "tranche": "T1",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t1_marcus",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "gkDzsaZ2bmWlKhhvC",
+    "dataset_id": "te77ubrhC4eFMGU3h",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-09T22:26:01.276Z",
+    "finished_at_utc": "2026-11-09T22:27:19.368Z",
+    "charged_events": {
+      "result": 29,
+      "date-filter": 0,
+      "ai-video-description": 0,
+      "ai-video-summary": 0,
+      "transcribeMinute": 0
+    },
+    "actual_cost_usd": 0.116,
+    "usage_total_usd_reported": 0.116,
+    "max_cost_usd": 0.15,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCW_JmbBR0gsRGIUGRY3WA-Q"
+      ],
+      "maxResults": 37,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 29,
+    "raw_file": "raw/t1_marcus_gkDzsaZ2bmWlKhhvC_dataset.json"
+  },
+  "pilot_run": {
+    "label": "pilot_marcus",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "if6v2fB9JhYdbmNOe",
+    "dataset_id": "ht9KE1M0WvJftrxey",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-09T22:12:57.005Z",
+    "finished_at_utc": "2026-11-09T22:13:13.619Z",
+    "charged_events": {
+      "result": 3,
+      "date-filter": 0,
+      "ai-video-description": 0,
+      "ai-video-summary": 0,
+      "transcribeMinute": 0
+    },
+    "actual_cost_usd": 0.012,
+    "usage_total_usd_reported": 0.012,
+    "max_cost_usd": 0.05,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCW_JmbBR0gsRGIUGRY3WA-Q"
+      ],
+      "maxResults": 3,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 3,
+    "raw_file": "raw/pilot_marcus_if6v2fB9JhYdbmNOe_dataset.json"
+  },
+  "normalization": {
+    "public_master_rows": 29,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

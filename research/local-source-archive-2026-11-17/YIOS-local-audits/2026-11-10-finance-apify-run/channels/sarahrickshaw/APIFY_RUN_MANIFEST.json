@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-10T19:52:00Z",
+  "channel": {
+    "name": "Sarah Rickshaw",
+    "handle": "@SarahRickshaw",
+    "id": "UCn2nfMN6I-ozJikqW-zk_6A"
+  },
+  "tranche": "T2",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t2_sarahrickshaw",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.329",
+    "run_id": "nquxA7nGF0tIMgQWV",
+    "dataset_id": "OdmAgJIhhjCT8cMPb",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-10T19:51:11Z",
+    "finished_at_utc": "2026-11-10T19:52:00Z",
+    "charged_events": {
+      "result": 12
+    },
+    "actual_cost_usd": 0.048,
+    "usage_total_usd_reported": 0.048,
+    "max_cost_usd": 0.08,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCn2nfMN6I-ozJikqW-zk_6A"
+      ],
+      "maxResults": 19,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 12,
+    "raw_file": "raw/t2_sarahrickshaw_nquxA7nGF0tIMgQWV_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 12,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

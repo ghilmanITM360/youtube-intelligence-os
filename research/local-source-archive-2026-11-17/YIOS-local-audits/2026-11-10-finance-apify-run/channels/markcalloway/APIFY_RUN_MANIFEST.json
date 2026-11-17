@@ -1,0 +1,52 @@
+{
+  "snapshot_timestamp_utc": "2026-11-09T22:25:17.963Z",
+  "channel": {
+    "name": "Mark Calloway",
+    "handle": "@Mark.Calloway",
+    "id": "UCAOeipQ5KGzZ2McMF1RNsrQ"
+  },
+  "tranche": "T1",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t1_markcalloway",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.327",
+    "run_id": "EpREJWO2eZBD4xhRt",
+    "dataset_id": "6RwlvR25Jol93GZ0F",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-09T22:23:22.928Z",
+    "finished_at_utc": "2026-11-09T22:25:17.963Z",
+    "charged_events": {
+      "result": 86,
+      "date-filter": 0,
+      "ai-video-description": 0,
+      "ai-video-summary": 0,
+      "transcribeMinute": 0
+    },
+    "actual_cost_usd": 0.344,
+    "usage_total_usd_reported": 0.34,
+    "max_cost_usd": 0.4,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCAOeipQ5KGzZ2McMF1RNsrQ"
+      ],
+      "maxResults": 100,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 86,
+    "raw_file": "raw/t1_markcalloway_EpREJWO2eZBD4xhRt_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 86,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

@@ -1,0 +1,182 @@
+Updating aea73732..d41a5774
+Fast-forward
+ .../FINANCE_1612_COMBINED_INTELLIGENCE.xlsx        |  Bin 0 -> 2705043 bytes
+ .../FINANCE_966_VIDEO_INTELLIGENCE.xlsx            |  Bin 1075755 -> 0 bytes
+ .../FULL_POPULATION_RESEARCH_REPORT.md             |   22 +
+ .../QA_AND_LIMITATIONS.md                          |    9 +
+ .../finance-economics-intelligence/RESUME_HERE.md  |  379 +-
+ .../SCRIPT_ANALYSIS_966.csv                        |   24 +-
+ .../THUMBNAIL_ANALYSIS_966.csv                     |   24 +-
+ .../TITLE_ANALYSIS_966.csv                         |   24 +-
+ .../TOPIC_ANALYSIS_966.csv                         | 1934 +++----
+ .../VALIDATION_966.json                            |   94 +-
+ .../VIDEO_AUDIT_966.csv                            |   24 +-
+ .../VIDEO_AUDIT_966.jsonl                          |   24 +-
+ .../VIDEO_AUDIT_METHODOLOGY_REVIEW.md              |   85 +
+ .../VIDEO_COMPLETION_MATRIX.csv                    |   24 +-
+ .../VIRALITY_INTELLIGENCE_966.csv                  |   24 +-
+ .../audit-batches/EVENT_SOURCES.json               |  569 ++
+ .../audit-batches/NICK_150.json                    |  144 +
+ .../audit-batches/NICK_150_READ_RECEIPTS.json      |  119 +
+ .../audit-batches/NICK_151.json                    |  147 +
+ .../audit-batches/NICK_151_READ_RECEIPTS.json      |   91 +
+ .../audit-batches/NICK_152.json                    |  122 +
+ .../audit-batches/NICK_152_READ_RECEIPTS.json      |   87 +
+ .../audit-batches/NICK_153.json                    |  199 +
+ .../audit-batches/NICK_153_READ_RECEIPTS.json      |  141 +
+ .../audit-batches/NICK_154.json                    |   91 +
+ .../audit-batches/NICK_154_READ_RECEIPTS.json      |   42 +
+ .../audit-batches/NICK_155.json                    |  103 +
+ .../audit-batches/NICK_155_READ_RECEIPTS.json      |  122 +
+ .../audit-batches/NICK_156.json                    |  105 +
+ .../audit-batches/NICK_156_READ_RECEIPTS.json      |   45 +
+ .../audit-batches/NICK_157.json                    |  127 +
+ .../audit-batches/NICK_157_READ_RECEIPTS.json      |  132 +
+ .../audit-batches/NICK_158.json                    |   89 +
+ .../audit-batches/NICK_158_READ_RECEIPTS.json      |  105 +
+ .../audit-batches/NICK_159.json                    |   88 +
+ .../audit-batches/NICK_159_READ_RECEIPTS.json      |  121 +
+ .../audit-batches/NICK_160.json                    |   91 +
+ .../audit-batches/NICK_160_READ_RECEIPTS.json      |  117 +
+ .../audit-batches/NICK_161.json                    |   94 +
+ .../audit-batches/NICK_161_READ_RECEIPTS.json      |  143 +
+ .../audit-batches/NICK_QtXhRiEJ9zo.jpg             |  Bin 0 -> 19937 bytes
+ .../audit-batches/NICK_QtlJUTJ58ZU.jpg             |  Bin 0 -> 106409 bytes
+ .../audit-batches/NICK_R1AcuUo916k.jpg             |  Bin 0 -> 162045 bytes
+ .../audit-batches/NICK_RUVOjfrIemY.jpg             |  Bin 0 -> 114932 bytes
+ .../audit-batches/NICK_R_E6OOnF9e4.jpg             |  Bin 0 -> 164521 bytes
+ .../audit-batches/NICK_Rd40d0XZLpQ.jpg             |  Bin 0 -> 94504 bytes
+ .../audit-batches/NICK_RgaTGzeFcPQ.jpg             |  Bin 0 -> 128018 bytes
+ .../audit-batches/NICK_RmJKnJkUgxA.jpg             |  Bin 0 -> 100315 bytes
+ .../audit-batches/NICK_S0xwBH_fAn0.jpg             |  Bin 0 -> 105915 bytes
+ .../audit-batches/NICK_SJLyXAGbBLk.jpg             |  Bin 0 -> 228605 bytes
+ .../audit-batches/NICK_SLFcypMv6I0.jpg             |  Bin 0 -> 20728 bytes
+ .../audit-batches/NICK_SU-3ZcgmCJ4.jpg             |  Bin 0 -> 101689 bytes
+ .../audit-batches/workbook-Coverage.png            |  Bin 184374 -> 187837 bytes
+ .../audit-batches/workbook-Readings.png            |  Bin 163245 -> 164194 bytes
+ .../audit-batches/workbook-Videos.png              |  Bin 89214 -> 89510 bytes
+ .../build_combined_workbook_data.py                |  113 +
+ .../build_expansion_audits.py                      |  146 +
+ .../build_finance_expansion.py                     |  242 +
+ .../build_monkey_expansion.py                      |  252 +
+ .../build_repository_finance_universe.py           |  148 +
+ .../build_workbook_1612.mjs                        |  106 +
+ .../build_workbook_966.mjs                         |  119 -
+ .../CHANNEL_CLASSIFICATION_SUMMARY.csv             |   13 +
+ .../DUPLICATE_OVERLAP_WITH_BASELINE.csv            |   29 +
+ .../EXPANSION_AUDIT_CHECKSUMS_SHA256.json          |    7 +
+ .../EXPANSION_AUDIT_LEDGER.jsonl                   |  197 +
+ .../EXPANSION_AUDIT_VALIDATION.json                |   22 +
+ .../EXPANSION_VALIDATION.json                      |   33 +
+ .../FILE_CHECKSUMS_SHA256.json                     |    9 +
+ .../FINANCE_EXPANSION_MASTER.csv                   | 6071 ++++++++++++++++++++
+ .../FINANCE_INCLUSION_CROSSWALK.csv                |  446 ++
+ .../expansion-12-channel-2026-10-20/README.md      |   39 +
+ .../SOURCE_PROVENANCE.json                         |   35 +
+ .../audit-batches/EXPANSION_001.json               |   58 +
+ .../audit-batches/EXPANSION_001_READ_RECEIPTS.json |   54 +
+ .../audit-evidence/HjlVexL2Lxk.jpg                 |  Bin 0 -> 78871 bytes
+ .../CHANNEL_CLASSIFICATION_SUMMARY.csv             |    2 +
+ .../DUPLICATE_OVERLAP_WITH_PRIOR_POPULATION.csv    |    1 +
+ .../EXPANSION_VALIDATION.json                      |   38 +
+ .../FILE_CHECKSUMS_SHA256.json                     |   10 +
+ .../FINANCE_EXPANSION_MASTER.csv                   | 1233 ++++
+ .../FINANCE_INCLUSION_CROSSWALK.csv                | 1574 +++++
+ .../FULL_CHANNEL_SOURCE.csv                        | 1574 +++++
+ .../README.md                                      |   39 +
+ .../SOURCE_PROVENANCE.json                         |   16 +
+ .../CHANNEL_DIRECTORY.csv                          |   43 +
+ .../FILE_CHECKSUMS_SHA256.json                     |    8 +
+ .../FINANCE_UNIVERSE.csv                           | 1613 ++++++
+ .../MONKEY_MEDIUM_CONFIDENCE_REVIEW.csv            |  239 +
+ .../NEW_ELIGIBLE_ADDITIONS.csv                     |  387 ++
+ .../README.md                                      |   44 +
+ .../VALIDATION.json                                |   19 +
+ .../test_combined_workbook.py                      |   97 +
+ .../test_finance_expansion.py                      |   65 +
+ .../test_monkey_expansion.py                       |   49 +
+ .../test_repository_finance_universe.py            |   35 +
+ .../test_video_audit_quality.py                    |   32 +
+ .../validate_audit_966.py                          |   84 +
+ 98 files changed, 20077 insertions(+), 1189 deletions(-)
+ create mode 100644 research/finance-economics-intelligence/FINANCE_1612_COMBINED_INTELLIGENCE.xlsx
+ delete mode 100644 research/finance-economics-intelligence/FINANCE_966_VIDEO_INTELLIGENCE.xlsx
+ create mode 100644 research/finance-economics-intelligence/VIDEO_AUDIT_METHODOLOGY_REVIEW.md
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_150.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_150_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_151.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_151_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_152.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_152_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_153.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_153_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_154.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_154_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_155.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_155_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_156.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_156_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_157.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_157_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_158.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_158_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_159.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_159_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_160.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_160_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_161.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_161_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_QtXhRiEJ9zo.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_QtlJUTJ58ZU.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_R1AcuUo916k.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_RUVOjfrIemY.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_R_E6OOnF9e4.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_Rd40d0XZLpQ.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_RgaTGzeFcPQ.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_RmJKnJkUgxA.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_S0xwBH_fAn0.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_SJLyXAGbBLk.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_SLFcypMv6I0.jpg
+ create mode 100644 research/finance-economics-intelligence/audit-batches/NICK_SU-3ZcgmCJ4.jpg
+ create mode 100644 research/finance-economics-intelligence/build_combined_workbook_data.py
+ create mode 100644 research/finance-economics-intelligence/build_expansion_audits.py
+ create mode 100644 research/finance-economics-intelligence/build_finance_expansion.py
+ create mode 100644 research/finance-economics-intelligence/build_monkey_expansion.py
+ create mode 100644 research/finance-economics-intelligence/build_repository_finance_universe.py
+ create mode 100644 research/finance-economics-intelligence/build_workbook_1612.mjs
+ delete mode 100644 research/finance-economics-intelligence/build_workbook_966.mjs
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/CHANNEL_CLASSIFICATION_SUMMARY.csv
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/DUPLICATE_OVERLAP_WITH_BASELINE.csv
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/EXPANSION_AUDIT_CHECKSUMS_SHA256.json
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/EXPANSION_AUDIT_LEDGER.jsonl
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/EXPANSION_AUDIT_VALIDATION.json
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/EXPANSION_VALIDATION.json
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/FILE_CHECKSUMS_SHA256.json
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/FINANCE_EXPANSION_MASTER.csv
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/FINANCE_INCLUSION_CROSSWALK.csv
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/README.md
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/SOURCE_PROVENANCE.json
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/audit-batches/EXPANSION_001.json
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/audit-batches/EXPANSION_001_READ_RECEIPTS.json
+ create mode 100644 research/finance-economics-intelligence/expansion-12-channel-2026-10-20/audit-evidence/HjlVexL2Lxk.jpg
+ create mode 100644 research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/CHANNEL_CLASSIFICATION_SUMMARY.csv
+ create mode 100644 research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/DUPLICATE_OVERLAP_WITH_PRIOR_POPULATION.csv
+ create mode 100644 research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/EXPANSION_VALIDATION.json
+ create mode 100644 research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/FILE_CHECKSUMS_SHA256.json
+ create mode 100644 research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/FINANCE_EXPANSION_MASTER.csv
+ create mode 100644 research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/FINANCE_INCLUSION_CROSSWALK.csv
+ create mode 100644 research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/FULL_CHANNEL_SOURCE.csv
+ create mode 100644 research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/README.md
+ create mode 100644 research/finance-economics-intelligence/expansion-monkey-explains-1999-2026-10-21/SOURCE_PROVENANCE.json
+ create mode 100644 research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/CHANNEL_DIRECTORY.csv
+ create mode 100644 research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/FILE_CHECKSUMS_SHA256.json
+ create mode 100644 research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv
+ create mode 100644 research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/MONKEY_MEDIUM_CONFIDENCE_REVIEW.csv
+ create mode 100644 research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/NEW_ELIGIBLE_ADDITIONS.csv
+ create mode 100644 research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/README.md
+ create mode 100644 research/finance-economics-intelligence/reconciliation-all-repository-2026-10-21/VALIDATION.json
+ create mode 100644 research/finance-economics-intelligence/test_combined_workbook.py
+ create mode 100644 research/finance-economics-intelligence/test_finance_expansion.py
+ create mode 100644 research/finance-economics-intelligence/test_monkey_expansion.py
+ create mode 100644 research/finance-economics-intelligence/test_repository_finance_universe.py
+ create mode 100644 research/finance-economics-intelligence/test_video_audit_quality.py

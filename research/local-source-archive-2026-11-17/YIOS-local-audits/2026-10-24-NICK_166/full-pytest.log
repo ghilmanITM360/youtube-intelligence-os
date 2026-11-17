@@ -1,0 +1,37 @@
+........................................................................ [ 15%]
+............................................................F........... [ 31%]
+........................................................................ [ 46%]
+........................................................................ [ 62%]
+........................................................................ [ 78%]
+........................................................................ [ 93%]
+.............................                                            [100%]
+=================================== FAILURES ===================================
+__________ LedgerChecksumTests.test_all_csv_ledger_datasets_are_clean __________
+
+self = <test_dataset_ledger_provenance.LedgerChecksumTests testMethod=test_all_csv_ledger_datasets_are_clean>
+
+    def test_all_csv_ledger_datasets_are_clean(self):
+        for dataset_id in DATASETS:
+            problems = v.validate_dataset(dataset_id)
+>           self.assertEqual({}, problems, "{} has unresolved ledger issues".format(dataset_id))
+E           AssertionError: {} != {'DS-000028-F020': ['SIZE_MISMATCH', 'SHA_MISMATCH']}
+E           - {}
+E           + {'DS-000028-F020': ['SIZE_MISMATCH', 'SHA_MISMATCH']} : DS-000028 has unresolved ledger issues
+
+tests/test_dataset_ledger_provenance.py:53: AssertionError
+=============================== warnings summary ===============================
+tests/test_register_batch.py::RegisterBatchTestCase::test_image_pipeline_extracts_metadata
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+tests/test_register_batch.py::RegisterBatchTestCase::test_perceptual_hash_stable_for_identical_image
+  /Users/ghilmankhan/workprojects/youtube-intelligence-os/scripts/image_pipeline.py:43: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+    pixels = list(small.getdata())
+
+tests/test_register_structured_source.py::RegisterStructuredSourceTestCase::test_register_rejects_duplicate_workbook_video_id_without_duplicate_entity
+  /opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'ChannelA/sameid00001.txt'
+    return self._open_to_write(zinfo, force_zip64=force_zip64)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_dataset_ledger_provenance.py::LedgerChecksumTests::test_all_csv_ledger_datasets_are_clean
+1 failed, 460 passed, 5 warnings in 40.09s

@@ -1,0 +1,237 @@
+[
+  {
+    "method": "Frozen lifetime-view-rate age-peer reproduction",
+    "formula": "target_views/stored_age divided by unweighted median(peer_views/stored_age)",
+    "assumptions": "Same channel, format and frozen 2026-09-11 snapshot; ages >=7 days; peer age 0.5\u20132 times target; nearest absolute age distance then Video_ID; ten peers and first-five sensitivity. STRONG >=2; WEAK <0.5; otherwise TYPICAL. Four-decimal ages preserved; lifetime rate is not current velocity or a causal estimate.",
+    "results": {
+      "target": {
+        "Video_ID": "TdNH3QP3qao",
+        "Channel_ID": "UCXzNNA2ngRpRiWvyA7eGd6w",
+        "Channel": "Nick Invests",
+        "Dataset": "DS-000022",
+        "Title": "Who Can Actually Afford a $50K Truck in 2026?",
+        "Published_at_raw": "2026-05-24 22:16:00",
+        "Metric_snapshot_date": "2026-09-11",
+        "Snapshot_precision": "SOURCE_DECLARED_SCRAPE_DAY_TIMEZONE_UNKNOWN",
+        "Views": "59539",
+        "Current_views": "NOT_FETCHED",
+        "Format": "LONG_FORM",
+        "Format_source_value": "video",
+        "Duration_seconds": "1295",
+        "Age_days": "109.0722",
+        "Topic_tags_provisional": "UNCLASSIFIED",
+        "Classification_method": "TITLE_KEYWORD_HEURISTIC_NOT_SEMANTIC_REVIEW",
+        "Audience_problem": "REQUIRES_SEMANTIC_REVIEW",
+        "Economic_mechanism": "REQUIRES_SEMANTIC_REVIEW",
+        "Demand_type": "UNVERIFIED",
+        "Time_sensitivity": "UNVERIFIED",
+        "Narrative_angle": "UNVERIFIED",
+        "Evidence_locator": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Master_Data.xlsx",
+        "URL": "https://www.youtube.com/watch?v=TdNH3QP3qao",
+        "Performance_tier": "STRONG",
+        "Peer_count": "10",
+        "Lifetime_rate_ratio": "7.42186",
+        "Peer_Video_IDs": "3iRHI6Fm2cg|ib9B7I8YsRo|HO4L5NJrUz0|7ChF4Frzc_I|1D9nBNa6jNE|QlPqXGV491Q|08z1JYUQQnM|4U8h2uiixL4|Kv9am3AfKN4|vT7IF16WTNg",
+        "Tier_basis": "DESCRIPTIVE_LIFETIME_RATE"
+      },
+      "target_vpd": 545.8677829914498,
+      "peers": [
+        {
+          "Video_ID": "3iRHI6Fm2cg",
+          "age": 108.1646,
+          "views": 6061,
+          "vpd": 56.034968926987204
+        },
+        {
+          "Video_ID": "ib9B7I8YsRo",
+          "age": 110.1367,
+          "views": 6140,
+          "vpd": 55.74890113831266
+        },
+        {
+          "Video_ID": "HO4L5NJrUz0",
+          "age": 110.9299,
+          "views": 4459,
+          "vpd": 40.19655656410039
+        },
+        {
+          "Video_ID": "7ChF4Frzc_I",
+          "age": 107.0753,
+          "views": 5207,
+          "vpd": 48.62932907962901
+        },
+        {
+          "Video_ID": "1D9nBNa6jNE",
+          "age": 106.155,
+          "views": 7988,
+          "vpd": 75.24845744430314
+        },
+        {
+          "Video_ID": "QlPqXGV491Q",
+          "age": 112.0965,
+          "views": 8054,
+          "vpd": 71.84880883881299
+        },
+        {
+          "Video_ID": "08z1JYUQQnM",
+          "age": 105.1309,
+          "views": 8263,
+          "vpd": 78.59725351918418
+        },
+        {
+          "Video_ID": "4U8h2uiixL4",
+          "age": 113.1847,
+          "views": 77669,
+          "vpd": 686.214656221203
+        },
+        {
+          "Video_ID": "Kv9am3AfKN4",
+          "age": 104.0752,
+          "views": 62303,
+          "vpd": 598.6344489369226
+        },
+        {
+          "Video_ID": "vT7IF16WTNg",
+          "age": 114.1876,
+          "views": 27553,
+          "vpd": 241.295902532324
+        }
+      ],
+      "10": {
+        "median": 73.54863314155807,
+        "ratio": 7.421861694435916,
+        "tier": "STRONG"
+      },
+      "5": {
+        "median": 55.74890113831266,
+        "ratio": 9.791543364005603,
+        "tier": "STRONG"
+      },
+      "peer_ids_10": [
+        "3iRHI6Fm2cg",
+        "ib9B7I8YsRo",
+        "HO4L5NJrUz0",
+        "7ChF4Frzc_I",
+        "1D9nBNa6jNE",
+        "QlPqXGV491Q",
+        "08z1JYUQQnM",
+        "4U8h2uiixL4",
+        "Kv9am3AfKN4",
+        "vT7IF16WTNg"
+      ],
+      "peer_ids_5": [
+        "3iRHI6Fm2cg",
+        "ib9B7I8YsRo",
+        "HO4L5NJrUz0",
+        "7ChF4Frzc_I",
+        "1D9nBNa6jNE"
+      ],
+      "tier_10": "STRONG",
+      "tier_5": "STRONG",
+      "peer_ratio_10": 7.421861694435916,
+      "peer_ratio_5": 9.791543364005603
+    }
+  },
+  {
+    "method": "Monthly loan payment, total interest and year-one balance",
+    "formula": "i=.07/12; M=P*i/(1-(1+i)^(-n)); B(k)=P*(1+i)^k-M*((1+i)^k-1)/i; total=n*M; interest=total-P",
+    "inputs": {
+      "P": 50000,
+      "n": 84,
+      "k": 12,
+      "down_payment": 0,
+      "annual_note_rate": 0.07,
+      "assumed_resale_year1": 40000
+    },
+    "results": {
+      "M84": 754.6339991094675,
+      "total84": 63389.25592519527,
+      "interest84": 13389.25592519527,
+      "balance12": 44262.637846385274,
+      "negative_equity_at40K": 4262.637846385274
+    },
+    "assumptions": "Monthly fully amortizing loan, first payment after one month, no financed fees, taxes, balloon, daily-interest timing or prepayment. APR may differ from note interest when fees exist. Resale is creator assumption, not verified market value."
+  },
+  {
+    "method": "Ownership cash flow and fuel",
+    "formula": "fuel=15000/18*4/12; cash=M+185+fuel+90+90",
+    "results": {
+      "fuel_monthly": 277.77777777777777,
+      "cash_total": 1397.4117768872452,
+      "quoted_sum": 1395
+    },
+    "assumptions": "Creator mileage, economy and pump price are scenario inputs; insurance and maintenance are not actual quotes. Quoted items sum1395, round1400. Loan principal is a cash outflow and asset-equity transfer, not an expense to add again to depreciation. No seven-year fixed operating-cost forecast."
+  },
+  {
+    "method": "Garcia household residual and commute sensitivity",
+    "formula": "residual=5600-(1850+1200+800+350+1400); commute=76*260; fuel=commute/18*4/12",
+    "results": {
+      "expenses": 5600,
+      "residual": 0,
+      "truck_net_pay_share": 0.25,
+      "annual_commute_miles_analyst260workdays": 19760,
+      "commute_monthly_fuel": 365.9259259259259
+    },
+    "assumptions": "Fictional budget; $5,600 take-home is assumed, not a tax estimate. 260 workdays is an analyst sensitivity, not observed employment. CRV and other household expenses are omitted; the stated commute is 76 miles/day."
+  },
+  {
+    "method": "20/4/10 affordability under the creator definition",
+    "formula": "down=.2*50000; P=40000; M=P*(.07/12)/(1-(1+.07/12)^(-48)); minimum_gross=12*(M+185+275+90+90)/.1",
+    "results": {
+      "down_payment": 10000,
+      "principal": 40000,
+      "payment": 957.8497864977129,
+      "annual_income_quoted275fuel": 191741.97437972558,
+      "annual_income_exactfuel": 192075.3077130589,
+      "transport_allowance_at150K": 1250,
+      "remaining_after_payment_at150K": 292.1502135022871
+    },
+    "assumptions": "Same 7% note rate assumed at four-year term; TOTAL transportation costs, not loan payment alone, limited to10% gross. No other household vehicle, debt or financed fees. This heuristic is not a universal affordability or lender eligibility rule."
+  },
+  {
+    "method": "Continuous monthly investment accumulation",
+    "formula": "FV=c*((1+i)^n-1)/i; c=700;i=.08/12;n=360",
+    "results": {
+      "FV700_8_360": 1043251.6140643351,
+      "FV700_effective8": 985985.410992743,
+      "principal_contributed": 252000
+    },
+    "assumptions": "End-of-month contributions. Quoted1.04M reproduces nominal8%/12 convention; effective annual8% convention yields985985.41. Constant return assumption, not forecast. Taxes, fund fees and inflation omitted. Continuous30-year savings must be established separately from an84-month loan."
+  },
+  {
+    "method": "Analyst investment and time-horizon sensitivities",
+    "formula": "FV7_then30=700*((1+.08/12)^84-1)/(.08/12)*(1+.08/12)^276; real=FV30/(1.03)^30",
+    "results": {
+      "FV700_8_84_then276": 491139.83438580995,
+      "FV700_6_360": 703160.5297168181,
+      "FV700_10_360": 1582341.5473572426,
+      "FV_in_today_3pctinflation": 429805.8518381044
+    },
+    "assumptions": "Own sensitivity examples, not creator predictions. Only7 years of contributions then23years growth; alternatively continuous30year contributions at6% or10%. Own3% inflation yields429805.85 in initial-year purchasing power; no inflation forecast or guaranteed retirement age."
+  },
+  {
+    "method": "Income and depreciation denominators",
+    "formula": "50000/84000; 50000/83730; share150Kplus=10.1+16.0; residual5=50000-10000-9000",
+    "results": {
+      "price_to_rounded_household_median": 0.5952380952380952,
+      "price_to_2024_median": 0.5971575301564552,
+      "households_150K_plus_percent": 26.1,
+      "five_year_residual_under_later_claim": 31000,
+      "five_year_depreciation_percent": 38,
+      "half_value_alternative_residual": 25000
+    },
+    "assumptions": "Census2024 pretax household money-income distribution, not2026 purchaser distribution or individual salaries. Two conflicting depreciation scenarios not blended."
+  },
+  {
+    "method": "Analyst five-year capital-cost reconciliation",
+    "formula": "cash_sale_adjusted=60*M+loan_balance60-resale; economic_cost=(50000-resale)+interest_paid60",
+    "results": {
+      "balance60": 16854.82530213351,
+      "interest_paid60": 12132.865248701557,
+      "assumed_resale": 31000,
+      "net_financing_cash_outflow_after_sale": 31132.865248701557,
+      "depreciation_plus_interest": 31132.865248701557
+    },
+    "assumptions": "Own reconciliation using creator later31K year-five residual, not a verified resale quote. Equal sums prove how to avoid principal/depreciation double count. Operating costs would be added once on either side. No terminal loan balance is treated as sale equity."
+  }
+]

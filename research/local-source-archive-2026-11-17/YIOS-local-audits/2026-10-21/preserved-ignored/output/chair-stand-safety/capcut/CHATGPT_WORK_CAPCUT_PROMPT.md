@@ -1,0 +1,5 @@
+# ChatGPT Work CapCut task
+
+Open CapCut Desktop and create/open project `chair-stand-safety`. Read package at `/Users/ghilmankhan/workprojects/youtube-intelligence-os/output/chair-stand-safety`. Read `capcut/MEDIA_IMPORT_MANIFEST.json` first. Stop and report missing assets if `ready_for_capcut` is false; their exact paths and prompts are in `ASSET_REGISTRY.json` and `prompts/IMAGE_PROMPTS.md`.
+
+Import source media and all ready images. Place original source video on primary track if supplied; this package contains voiceover only, so place original MP3 on Track 1. Keep original audio unchanged. Read `capcut/CAPCUT_ACTIONS.json`; execute operations in timestamp order, using specified asset, track, duration, normalized position, scale, rotation, opacity, mask, keyframes, and easing. Use hard cuts where specified. Add editable text layers. Import `captions/captions.srt`. Avoid random templates and generic effects. Preview full edit, fix GUI placement issues without changing timing or visual intent, then present final review before export. Do not manipulate undocumented CapCut project files.

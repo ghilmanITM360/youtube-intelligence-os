@@ -1,0 +1,48 @@
+{
+  "snapshot_timestamp_utc": "2026-11-10T19:47:01Z",
+  "channel": {
+    "name": "Wealth Logic Australia",
+    "handle": "@ThewealthlogicAustralia",
+    "id": "UCpUvGrDOLrlhpUr5hXnpD9g"
+  },
+  "tranche": "T2",
+  "coverage_status": "COMPLETE",
+  "primary_run": {
+    "label": "t2_wealthlogicaus",
+    "actor_name": "streamers/youtube-scraper",
+    "actor_build": "0.0.329",
+    "run_id": "Uc6YO9qbuvX9AuPcV",
+    "dataset_id": "IsaOPuk5Hg35sRsfE",
+    "status": "SUCCEEDED",
+    "started_at_utc": "2026-11-10T19:46:28Z",
+    "finished_at_utc": "2026-11-10T19:47:01Z",
+    "charged_events": {
+      "result": 21
+    },
+    "actual_cost_usd": 0.084,
+    "usage_total_usd_reported": 0.084,
+    "max_cost_usd": 0.12,
+    "input_sanitized": {
+      "startUrls": [
+        "https://www.youtube.com/channel/UCpUvGrDOLrlhpUr5hXnpD9g"
+      ],
+      "maxResults": 29,
+      "maxResultsShorts": 0,
+      "maxResultStreams": 0,
+      "sortVideosBy": "NEWEST",
+      "transcriptionAndSubtitle": "NONE",
+      "aiVideoDescription": false,
+      "aiVideoSummary": false
+    },
+    "origin": "Apify Console (owner browser session)",
+    "raw_rows": 21,
+    "raw_file": "raw/t2_wealthlogicaus_Uc6YO9qbuvX9AuPcV_dataset.json"
+  },
+  "pilot_run": null,
+  "normalization": {
+    "public_master_rows": 21,
+    "members_only_excluded": 0,
+    "primary_key": "video_id"
+  },
+  "reuse_delta_vs_pr39": null
+}

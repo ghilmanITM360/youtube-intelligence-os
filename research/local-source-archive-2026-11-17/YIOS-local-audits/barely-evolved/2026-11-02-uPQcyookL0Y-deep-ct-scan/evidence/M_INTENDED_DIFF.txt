@@ -1,0 +1,27 @@
+.../uPQcyookL0Y/CONTINUATION_HANDOFF_M.md          |  57 ++
+ .../uPQcyookL0Y/EVIDENCE_SHA256SUMS_checkpoint_M   | 632 +++++++++++++++++++++
+ .../agents/reviewer_15/art_audit_batch03.csv       |  11 +
+ .../agents/reviewer_15/evidence_reads.csv          |  35 ++
+ .../reviewer_15/narration_relation_batch03.csv     |  11 +
+ .../agents/reviewer_15/write_narration.py          |  24 +
+ .../uPQcyookL0Y/agents/reviewer_15/write_review.py |  65 +++
+ .../uPQcyookL0Y/m_scripts/prepare_supplement.py    |  33 ++
+ .../m_scripts/record_boundaries_specs.py           |  36 ++
+ .../uPQcyookL0Y/m_scripts/record_supplements.py    |  23 +
+ .../uPQcyookL0Y/m_scripts/seal_publish.py          |  66 +++
+ .../uPQcyookL0Y/m_scripts/verify_decode.py         |  13 +
+ .../production_specs/specifications_v1.json        | 107 ++++
+ .../uPQcyookL0Y/quality_gate_M.json                |  46 ++
+ .../uPQcyookL0Y/tables/k_rep_frames_batch03.csv    |  35 ++
+ .../uPQcyookL0Y/tables/m_art_consolidated.csv      |  31 +
+ .../uPQcyookL0Y/tables/m_asset_alias_crosswalk.csv |  29 +
+ .../tables/m_batch03_decode_verification.json      |   5 +
+ .../tables/m_boundary_exception_review.csv         |   9 +
+ .../uPQcyookL0Y/tables/m_decode_verification.json  |   5 +
+ .../tables/m_narration_batch03_adjudicated.csv     |  11 +
+ .../tables/m_reviewer15_corrections.json           |  16 +
+ .../uPQcyookL0Y/tables/m_reviewer_provenance.json  |  11 +
+ .../tables/m_supplement_corrections.csv            |   5 +
+ .../uPQcyookL0Y/tables/m_supplement_frames.csv     | 283 +++++++++
+ .../tables/m_timing_reconciliation.json            |  36 ++
+ 26 files changed, 1635 insertions(+)

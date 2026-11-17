@@ -1,0 +1,9 @@
+{
+ "rules": "FROZEN_RULES_v3.md",
+ "method": "Deterministic title rule over the 13 local Shorts not used by any selection, ingest or library (census.csv minus videos/, asset_library/, selection/*.json, heldout_v7/v8 selections). No frame, sheet or measurement of any candidate opened before the freeze.",
+ "unused_shorts_pool": ["FKXVs4UteSc","mtTbwHzhUiM","19gun1mffWs","ERieN5pee7A","xA9aqKGBeOs","vBfR2Zb0dkc","WQTNLuhfkwk","m1aMh7z8Y7I","n_KUCunjMwQ","QZIEjvSlOMQ","DDNMLh1I_jY","jjzYUOd5HAA","oBWqlxDd8sU"],
+ "pool_note": "The v2 handoff said about 20 unused; that count only excluded videos/ and the library. Also excluding every selection file leaves 13.",
+ "MAP_FILL_case": {"id": "19gun1mffWs", "title": "What would happen to the population if the Earth suddenly stopped spinning?", "rule": "the title names a whole-planet change measured over geography/population (a map is the expected device); 19gun is preferred over ERieN5pee7A because 'population' implies a filled map", "title_parent": "gp5G1QG6cXc (What if Earth suddenly stopped spinning?; unused long, never ingested or viewed)"},
+ "SCROLL_case": {"id": "FKXVs4UteSc", "title": "Is there such a thing as a magnitude 0 earthquake?", "rule": "among unused Shorts, the one whose title-matched parent long has the most measured whole-frame camera + ruler-scroll labels (parent e3uk7jU3RHo: 13 RULER_SCROLL + 4 WHOLE_FRAME_CAMERA; next best RgBYohJ7mIk 4 + 0 for WQTNLuhfkwk)", "title_parent": "e3uk7jU3RHo (What would a magnitude 15 earthquake be like?; v7 held-out long, used as the v8 motion tool check)"},
+ "exposure": "Neither Short has been ingested or viewed. Parents are title matches (INFERRED); a caption/ASR overlap check is done after ingest and reported. The FKXV parent was viewed in v7, so FKXV is not independent of v7. The selection rule for FKXV used parent motion counts, which means the scroll feature was predicted, not observed."
+}

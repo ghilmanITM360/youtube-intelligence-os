@@ -1,0 +1,2627 @@
+# YIOS Batch18 verified recovery receipt
+
+Status VERIFIED. Uploaded bytes: 86,182,813; complete independently retrieved SHA-256 verified bytes: 86,182,813. Source mappings: 20.
+
+All-in physical uploaded bytes before this MD: 3,487,168,310; independently verified bytes: 3,487,168,310. This MD is additional payload, counted by its separate CONTROL-UPLOAD/VERIFY receipts after complete independent readback. No duplicate/partial I/O is counted as new recovery coverage.
+
+Authenticated owner kgk2930@gmail.com; approved private yios hierarchy. Actual namespace IDs, source paths, hashes, bytes and remote object IDs follow. Source stability and current owner/private/parent/size gates passed. No source deletion/move/cleanup, Git/PR/branch/stash/LFS/production mutation, payment or reset credit use by this backup. This is file-level cloud recovery; independent-machine disaster recovery and production ownership acceptance remain unproven.
+
+```json
+{
+  "receipt": {
+    "status": "VERIFIED",
+    "batch": 18,
+    "completed_utc": "2026-10-26T11:31:39.318300+00:00",
+    "files": [
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 4 [cDaMRHyX9cU].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 4 [cDaMRHyX9cU].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 2125457,
+        "allocated_path_bytes": 2125824,
+        "mtime_ns": 1792437158000000000,
+        "device": 16777229,
+        "inode": 93824547,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 337,
+        "proposed_destination_name": "00337__Caveman Explain Gene Editing - part 4 [cDaMRHyX9cU].mp4",
+        "fresh_stat": {
+          "st_size": 2125457,
+          "st_mtime_ns": 1792437158000000000,
+          "st_ctime_ns": 1792830809933851195,
+          "st_ino": 93824547,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "196fe5c8302a1aa1917df00cb84a8a252c2b1ad30d3aa7d4df40c0f37c87d7c8",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.545845+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-",
+        "remote_url": "https://drive.google.com/file/d/1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:04.466644+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-",
+            "title": "Caveman Explain Gene Editing - part 4 [cDaMRHyX9cU].mp4",
+            "mime_type": "video/mp4",
+            "size": "2125457",
+            "url": "https://drive.google.com/file/d/1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:34.799Z",
+            "modified_time": "2026-10-19T19:12:38.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 337,
+          "remote_id": "1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-",
+          "retrieval_file_id": "sediment://file_00000000bb4c8211bb73074ac9de7c04",
+          "metadata": {
+            "id": "1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-",
+            "title": "Caveman Explain Gene Editing - part 4 [cDaMRHyX9cU].mp4",
+            "mime_type": "video/mp4",
+            "size": "2125457",
+            "url": "https://drive.google.com/file/d/1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:34.799Z",
+            "modified_time": "2026-10-19T19:12:38.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:26:15.838554+00:00",
+          "retrieved_bytes": 2125457,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "2125457",
+          "retrieved_sha256": "196fe5c8302a1aa1917df00cb84a8a252c2b1ad30d3aa7d4df40c0f37c87d7c8",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:26:16.845881+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 5 [1PbsFPWOF68].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 5 [1PbsFPWOF68].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 1952103,
+        "allocated_path_bytes": 1953792,
+        "mtime_ns": 1792437154000000000,
+        "device": 16777229,
+        "inode": 93824549,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 338,
+        "proposed_destination_name": "00338__Caveman Explain Gene Editing - part 5 [1PbsFPWOF68].mp4",
+        "fresh_stat": {
+          "st_size": 1952103,
+          "st_mtime_ns": 1792437154000000000,
+          "st_ctime_ns": 1792830809933924070,
+          "st_ino": 93824549,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "8f2b46da7aa7fa7e9c982cec9a4fb3145034a105dd33154abb478a4d4cf6f339",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.548602+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV",
+        "remote_url": "https://drive.google.com/file/d/1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:05.323385+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV",
+            "title": "Caveman Explain Gene Editing - part 5 [1PbsFPWOF68].mp4",
+            "mime_type": "video/mp4",
+            "size": "1952103",
+            "url": "https://drive.google.com/file/d/1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:40.825Z",
+            "modified_time": "2026-10-19T19:12:34.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 338,
+          "remote_id": "1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV",
+          "retrieval_file_id": "sediment://file_00000000a3a88211ae4f4b4785545262",
+          "metadata": {
+            "id": "1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV",
+            "title": "Caveman Explain Gene Editing - part 5 [1PbsFPWOF68].mp4",
+            "mime_type": "video/mp4",
+            "size": "1952103",
+            "url": "https://drive.google.com/file/d/1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:40.825Z",
+            "modified_time": "2026-10-19T19:12:34.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:26:21.841890+00:00",
+          "retrieved_bytes": 1952103,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "1952103",
+          "retrieved_sha256": "8f2b46da7aa7fa7e9c982cec9a4fb3145034a105dd33154abb478a4d4cf6f339",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:26:23.177544+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 6 [BI3E9ayqdbY].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 6 [BI3E9ayqdbY].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 1221843,
+        "allocated_path_bytes": 1224704,
+        "mtime_ns": 1792437148000000000,
+        "device": 16777229,
+        "inode": 93824487,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 339,
+        "proposed_destination_name": "00339__Caveman Explain Gene Editing - part 6 [BI3E9ayqdbY].mp4",
+        "fresh_stat": {
+          "st_size": 1221843,
+          "st_mtime_ns": 1792437148000000000,
+          "st_ctime_ns": 1792830809933304567,
+          "st_ino": 93824487,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "ab309024e00da66d86f865c9b5507abc2342383c88cb24fe76920130196a13ab",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.550598+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8",
+        "remote_url": "https://drive.google.com/file/d/1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:06.114306+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8",
+            "title": "Caveman Explain Gene Editing - part 6 [BI3E9ayqdbY].mp4",
+            "mime_type": "video/mp4",
+            "size": "1221843",
+            "url": "https://drive.google.com/file/d/1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:37.471Z",
+            "modified_time": "2026-10-19T19:12:28.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 339,
+          "remote_id": "1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8",
+          "retrieval_file_id": "sediment://file_000000000e3082118546b0d99e81b3b6",
+          "metadata": {
+            "id": "1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8",
+            "title": "Caveman Explain Gene Editing - part 6 [BI3E9ayqdbY].mp4",
+            "mime_type": "video/mp4",
+            "size": "1221843",
+            "url": "https://drive.google.com/file/d/1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:37.471Z",
+            "modified_time": "2026-10-19T19:12:28.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:26:27.593202+00:00",
+          "retrieved_bytes": 1221843,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "1221843",
+          "retrieved_sha256": "ab309024e00da66d86f865c9b5507abc2342383c88cb24fe76920130196a13ab",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:26:28.168833+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 7 [fDV-0Br3C7E].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 7 [fDV-0Br3C7E].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 4243947,
+        "allocated_path_bytes": 4247552,
+        "mtime_ns": 1792437144000000000,
+        "device": 16777229,
+        "inode": 93824489,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 340,
+        "proposed_destination_name": "00340__Caveman Explain Gene Editing - part 7 [fDV-0Br3C7E].mp4",
+        "fresh_stat": {
+          "st_size": 4243947,
+          "st_mtime_ns": 1792437144000000000,
+          "st_ctime_ns": 1792830809933328192,
+          "st_ino": 93824489,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "8a8daeec7da6dc71fd9f5ab9ad6bf85c38b9a5f4076444a5f803087eb7a970c5",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.554550+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s",
+        "remote_url": "https://drive.google.com/file/d/1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:06.983727+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s",
+            "title": "Caveman Explain Gene Editing - part 7 [fDV-0Br3C7E].mp4",
+            "mime_type": "video/mp4",
+            "size": "4243947",
+            "url": "https://drive.google.com/file/d/1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:30.100Z",
+            "modified_time": "2026-10-19T19:12:24.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 340,
+          "remote_id": "1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s",
+          "retrieval_file_id": "sediment://file_0000000049208211ac62563c6f88c268",
+          "metadata": {
+            "id": "1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s",
+            "title": "Caveman Explain Gene Editing - part 7 [fDV-0Br3C7E].mp4",
+            "mime_type": "video/mp4",
+            "size": "4243947",
+            "url": "https://drive.google.com/file/d/1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:30.100Z",
+            "modified_time": "2026-10-19T19:12:24.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:26:34.908089+00:00",
+          "retrieved_bytes": 4243947,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "4243947",
+          "retrieved_sha256": "8a8daeec7da6dc71fd9f5ab9ad6bf85c38b9a5f4076444a5f803087eb7a970c5",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:27:57.836335+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing [Ll4MepKCzL0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing [Ll4MepKCzL0].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 5103822,
+        "allocated_path_bytes": 5107712,
+        "mtime_ns": 1792437178000000000,
+        "device": 16777229,
+        "inode": 93824499,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 341,
+        "proposed_destination_name": "00341__Caveman Explain Gene Editing [Ll4MepKCzL0].mp4",
+        "fresh_stat": {
+          "st_size": 5103822,
+          "st_mtime_ns": 1792437178000000000,
+          "st_ctime_ns": 1792830809933463276,
+          "st_ino": 93824499,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "02c8d4032d4c12b4580a72793df1d20f9676d4eb2029d658f44fac391aa6a32e",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.558972+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij",
+        "remote_url": "https://drive.google.com/file/d/1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:03.703372+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij",
+            "title": "Caveman Explain Gene Editing [Ll4MepKCzL0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5103822",
+            "url": "https://drive.google.com/file/d/1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:52.721Z",
+            "modified_time": "2026-10-19T19:12:58.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 341,
+          "remote_id": "1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij",
+          "retrieval_file_id": "sediment://file_000000001c9c8211b7a7b35460405959",
+          "metadata": {
+            "id": "1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij",
+            "title": "Caveman Explain Gene Editing [Ll4MepKCzL0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5103822",
+            "url": "https://drive.google.com/file/d/1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:52.721Z",
+            "modified_time": "2026-10-19T19:12:58.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:28:02.837696+00:00",
+          "retrieved_bytes": 5103822,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "5103822",
+          "retrieved_sha256": "02c8d4032d4c12b4580a72793df1d20f9676d4eb2029d658f44fac391aa6a32e",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:28:06.157404+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 2 [J204M3yIivQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 2 [J204M3yIivQ].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 2457867,
+        "allocated_path_bytes": 2461696,
+        "mtime_ns": 1792437256000000000,
+        "device": 16777229,
+        "inode": 93824501,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 342,
+        "proposed_destination_name": "00342__Caveman Explain How Get Girlfriend - Part 2 [J204M3yIivQ].mp4",
+        "fresh_stat": {
+          "st_size": 2457867,
+          "st_mtime_ns": 1792437256000000000,
+          "st_ctime_ns": 1792830809933487026,
+          "st_ino": 93824501,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "225fdd66a7cecf532fe03322bcbff12ebc92486ad4aed294af9e94dc6c3843ec",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.561827+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1F0-J4I7729dezrxJne2QkUuFDfKOyiO-",
+        "remote_url": "https://drive.google.com/file/d/1F0-J4I7729dezrxJne2QkUuFDfKOyiO-/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:25:56.812729+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1F0-J4I7729dezrxJne2QkUuFDfKOyiO-",
+            "title": "Caveman Explain How Get Girlfriend - Part 2 [J204M3yIivQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "2457867",
+            "url": "https://drive.google.com/file/d/1F0-J4I7729dezrxJne2QkUuFDfKOyiO-/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1F0-J4I7729dezrxJne2QkUuFDfKOyiO-/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:21.731Z",
+            "modified_time": "2026-10-19T19:14:16.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 342,
+          "remote_id": "1F0-J4I7729dezrxJne2QkUuFDfKOyiO-",
+          "retrieval_file_id": "sediment://file_0000000086448211a83dbff2e909e7e1",
+          "metadata": {
+            "id": "1F0-J4I7729dezrxJne2QkUuFDfKOyiO-",
+            "title": "Caveman Explain How Get Girlfriend - Part 2 [J204M3yIivQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "2457867",
+            "url": "https://drive.google.com/file/d/1F0-J4I7729dezrxJne2QkUuFDfKOyiO-/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1F0-J4I7729dezrxJne2QkUuFDfKOyiO-/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:21.731Z",
+            "modified_time": "2026-10-19T19:14:16.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:28:12.285034+00:00",
+          "retrieved_bytes": 2457867,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "2457867",
+          "retrieved_sha256": "225fdd66a7cecf532fe03322bcbff12ebc92486ad4aed294af9e94dc6c3843ec",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:28:15.568169+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 3 [f1vIzsTFrp4].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 3 [f1vIzsTFrp4].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 2525753,
+        "allocated_path_bytes": 2527232,
+        "mtime_ns": 1792437252000000000,
+        "device": 16777229,
+        "inode": 93824462,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 343,
+        "proposed_destination_name": "00343__Caveman Explain How Get Girlfriend - Part 3 [f1vIzsTFrp4].mp4",
+        "fresh_stat": {
+          "st_size": 2525753,
+          "st_mtime_ns": 1792437252000000000,
+          "st_ctime_ns": 1792830809933133108,
+          "st_ino": 93824462,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "6302b60473dea0585f1c59a7bff2a13772b603d0f9e3485f5fda577bd07c05d6",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.564601+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U",
+        "remote_url": "https://drive.google.com/file/d/1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:25:57.612343+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U",
+            "title": "Caveman Explain How Get Girlfriend - Part 3 [f1vIzsTFrp4].mp4",
+            "mime_type": "video/mp4",
+            "size": "2525753",
+            "url": "https://drive.google.com/file/d/1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:47.760Z",
+            "modified_time": "2026-10-19T19:14:12.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 343,
+          "remote_id": "1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U",
+          "retrieval_file_id": "sediment://file_00000000fa8c8207add9b91d6915b83e",
+          "metadata": {
+            "id": "1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U",
+            "title": "Caveman Explain How Get Girlfriend - Part 3 [f1vIzsTFrp4].mp4",
+            "mime_type": "video/mp4",
+            "size": "2525753",
+            "url": "https://drive.google.com/file/d/1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:47.760Z",
+            "modified_time": "2026-10-19T19:14:12.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:28:23.289630+00:00",
+          "retrieved_bytes": 2525753,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "2525753",
+          "retrieved_sha256": "6302b60473dea0585f1c59a7bff2a13772b603d0f9e3485f5fda577bd07c05d6",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:28:24.539291+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 4 [vhiRz60amDM].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 4 [vhiRz60amDM].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 1651939,
+        "allocated_path_bytes": 1654784,
+        "mtime_ns": 1792437246000000000,
+        "device": 16777229,
+        "inode": 93824470,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 344,
+        "proposed_destination_name": "00344__Caveman Explain How Get Girlfriend - Part 4 [vhiRz60amDM].mp4",
+        "fresh_stat": {
+          "st_size": 1651939,
+          "st_mtime_ns": 1792437246000000000,
+          "st_ctime_ns": 1792830809933209192,
+          "st_ino": 93824470,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "3abdece53182e9c893ab3fab98ae27ee1ecbb23c56a5998e6a0bcee6bbf19eb6",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.566691+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn",
+        "remote_url": "https://drive.google.com/file/d/1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:25:58.631885+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn",
+            "title": "Caveman Explain How Get Girlfriend - Part 4 [vhiRz60amDM].mp4",
+            "mime_type": "video/mp4",
+            "size": "1651939",
+            "url": "https://drive.google.com/file/d/1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:17.920Z",
+            "modified_time": "2026-10-19T19:14:06.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 344,
+          "remote_id": "1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn",
+          "retrieval_file_id": "sediment://file_000000008cb88211b7f77be2847fcd35",
+          "metadata": {
+            "id": "1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn",
+            "title": "Caveman Explain How Get Girlfriend - Part 4 [vhiRz60amDM].mp4",
+            "mime_type": "video/mp4",
+            "size": "1651939",
+            "url": "https://drive.google.com/file/d/1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:17.920Z",
+            "modified_time": "2026-10-19T19:14:06.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:28:29.201612+00:00",
+          "retrieved_bytes": 1651939,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "1651939",
+          "retrieved_sha256": "3abdece53182e9c893ab3fab98ae27ee1ecbb23c56a5998e6a0bcee6bbf19eb6",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:28:30.082331+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 5 [H5jC3qiq_0E].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 5 [H5jC3qiq_0E].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 1584110,
+        "allocated_path_bytes": 1585152,
+        "mtime_ns": 1792437242000000000,
+        "device": 16777229,
+        "inode": 93824517,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 345,
+        "proposed_destination_name": "00345__Caveman Explain How Get Girlfriend - Part 5 [H5jC3qiq_0E].mp4",
+        "fresh_stat": {
+          "st_size": 1584110,
+          "st_mtime_ns": 1792437242000000000,
+          "st_ctime_ns": 1792830809933586402,
+          "st_ino": 93824517,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "92cadfff9e437d3eb161ebbed2b371490532c5e7006aaac7dba25a2d230bfdfe",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.569104+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q",
+        "remote_url": "https://drive.google.com/file/d/1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:25:59.529190+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q",
+            "title": "Caveman Explain How Get Girlfriend - Part 5 [H5jC3qiq_0E].mp4",
+            "mime_type": "video/mp4",
+            "size": "1584110",
+            "url": "https://drive.google.com/file/d/1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:43.570Z",
+            "modified_time": "2026-10-19T19:14:02.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 345,
+          "remote_id": "1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q",
+          "retrieval_file_id": "sediment://file_000000002b24821196fab2c1ba2d78bb",
+          "metadata": {
+            "id": "1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q",
+            "title": "Caveman Explain How Get Girlfriend - Part 5 [H5jC3qiq_0E].mp4",
+            "mime_type": "video/mp4",
+            "size": "1584110",
+            "url": "https://drive.google.com/file/d/1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:43.570Z",
+            "modified_time": "2026-10-19T19:14:02.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:28:34.196811+00:00",
+          "retrieved_bytes": 1584110,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "1584110",
+          "retrieved_sha256": "92cadfff9e437d3eb161ebbed2b371490532c5e7006aaac7dba25a2d230bfdfe",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:28:34.961271+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend [LZO3lhgBME4].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend [LZO3lhgBME4].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 3446817,
+        "allocated_path_bytes": 3448832,
+        "mtime_ns": 1792437260000000000,
+        "device": 16777229,
+        "inode": 93824536,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 346,
+        "proposed_destination_name": "00346__Caveman Explain How Get Girlfriend [LZO3lhgBME4].mp4",
+        "fresh_stat": {
+          "st_size": 3446817,
+          "st_mtime_ns": 1792437260000000000,
+          "st_ctime_ns": 1792830809933754444,
+          "st_ino": 93824536,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "5e2d657a15435c6d546af590fae7e2e2d63cdb471be1545442d126470fbf4d40",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.572171+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot",
+        "remote_url": "https://drive.google.com/file/d/1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:25:55.953351+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot",
+            "title": "Caveman Explain How Get Girlfriend [LZO3lhgBME4].mp4",
+            "mime_type": "video/mp4",
+            "size": "3446817",
+            "url": "https://drive.google.com/file/d/1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:25.487Z",
+            "modified_time": "2026-10-19T19:14:20.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 346,
+          "remote_id": "1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot",
+          "retrieval_file_id": "sediment://file_00000000145c8211ad895d2f87d61d54",
+          "metadata": {
+            "id": "1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot",
+            "title": "Caveman Explain How Get Girlfriend [LZO3lhgBME4].mp4",
+            "mime_type": "video/mp4",
+            "size": "3446817",
+            "url": "https://drive.google.com/file/d/1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:23:25.487Z",
+            "modified_time": "2026-10-19T19:14:20.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:28:39.583305+00:00",
+          "retrieved_bytes": 3446817,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "3446817",
+          "retrieved_sha256": "5e2d657a15435c6d546af590fae7e2e2d63cdb471be1545442d126470fbf4d40",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:28:41.469163+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend [qB_EKkMyuUE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend [qB_EKkMyuUE].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 9153460,
+        "allocated_path_bytes": 9154560,
+        "mtime_ns": 1792437056000000000,
+        "device": 16777229,
+        "inode": 93824497,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 347,
+        "proposed_destination_name": "00347__Caveman Explain How Get Girlfriend [qB_EKkMyuUE].mp4",
+        "fresh_stat": {
+          "st_size": 9153460,
+          "st_mtime_ns": 1792437056000000000,
+          "st_ctime_ns": 1792830809933423901,
+          "st_ino": 93824497,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "ce84afbd9055c957d08b5b0dc8af3ffa057ab8d166650c958ce63ebbd5176803",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.578730+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh",
+        "remote_url": "https://drive.google.com/file/d/1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:08.946356+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh",
+            "title": "Caveman Explain How Get Girlfriend [qB_EKkMyuUE].mp4",
+            "mime_type": "video/mp4",
+            "size": "9153460",
+            "url": "https://drive.google.com/file/d/1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:24.717Z",
+            "modified_time": "2026-10-19T19:10:56.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 347,
+          "remote_id": "1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh",
+          "retrieval_file_id": "sediment://file_00000000989c8211945addbbf85567cb",
+          "metadata": {
+            "id": "1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh",
+            "title": "Caveman Explain How Get Girlfriend [qB_EKkMyuUE].mp4",
+            "mime_type": "video/mp4",
+            "size": "9153460",
+            "url": "https://drive.google.com/file/d/1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:24.717Z",
+            "modified_time": "2026-10-19T19:10:56.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:28:47.080861+00:00",
+          "retrieved_bytes": 9153460,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "9153460",
+          "retrieved_sha256": "ce84afbd9055c957d08b5b0dc8af3ffa057ab8d166650c958ce63ebbd5176803",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:28:51.988530+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Mortgage Work [RmTdnXHbI8s].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Mortgage Work [RmTdnXHbI8s].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 10060475,
+        "allocated_path_bytes": 10063872,
+        "mtime_ns": 1792437050000000000,
+        "device": 16777229,
+        "inode": 93824491,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 348,
+        "proposed_destination_name": "00348__Caveman Explain How Mortgage Work [RmTdnXHbI8s].mp4",
+        "fresh_stat": {
+          "st_size": 10060475,
+          "st_mtime_ns": 1792437050000000000,
+          "st_ctime_ns": 1792830809933351901,
+          "st_ino": 93824491,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "29daceca4932d6af59a634cbcc41f8a2efabf350e34d64ad69517dd466d6df38",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.586481+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1ADoufkaz5YwTtIgqwTPR88qUazjaev5S",
+        "remote_url": "https://drive.google.com/file/d/1ADoufkaz5YwTtIgqwTPR88qUazjaev5S/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:09.810510+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1ADoufkaz5YwTtIgqwTPR88qUazjaev5S",
+            "title": "Caveman Explain How Mortgage Work [RmTdnXHbI8s].mp4",
+            "mime_type": "video/mp4",
+            "size": "10060475",
+            "url": "https://drive.google.com/file/d/1ADoufkaz5YwTtIgqwTPR88qUazjaev5S/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ADoufkaz5YwTtIgqwTPR88qUazjaev5S/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:07.709Z",
+            "modified_time": "2026-10-19T19:10:50.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 348,
+          "remote_id": "1ADoufkaz5YwTtIgqwTPR88qUazjaev5S",
+          "retrieval_file_id": "sediment://file_00000000935082118e7e8eec74be9547",
+          "metadata": {
+            "id": "1ADoufkaz5YwTtIgqwTPR88qUazjaev5S",
+            "title": "Caveman Explain How Mortgage Work [RmTdnXHbI8s].mp4",
+            "mime_type": "video/mp4",
+            "size": "10060475",
+            "url": "https://drive.google.com/file/d/1ADoufkaz5YwTtIgqwTPR88qUazjaev5S/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ADoufkaz5YwTtIgqwTPR88qUazjaev5S/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:07.709Z",
+            "modified_time": "2026-10-19T19:10:50.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:28:58.043315+00:00",
+          "retrieved_bytes": 10060475,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "10060475",
+          "retrieved_sha256": "29daceca4932d6af59a634cbcc41f8a2efabf350e34d64ad69517dd466d6df38",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:29:04.394796+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Life [3AsDdMQr_nQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Life [3AsDdMQr_nQ].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 4462288,
+        "allocated_path_bytes": 4464640,
+        "mtime_ns": 1792437042000000000,
+        "device": 16777229,
+        "inode": 93824458,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 349,
+        "proposed_destination_name": "00349__Caveman Explain Modern Life [3AsDdMQr_nQ].mp4",
+        "fresh_stat": {
+          "st_size": 4462288,
+          "st_mtime_ns": 1792437042000000000,
+          "st_ctime_ns": 1792830809933079316,
+          "st_ino": 93824458,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "b21b9455667c784b7c649d2b5c78f2f39fed365143d4edba7c93adb8311958df",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.590707+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP",
+        "remote_url": "https://drive.google.com/file/d/1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:10.617971+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP",
+            "title": "Caveman Explain Modern Life [3AsDdMQr_nQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "4462288",
+            "url": "https://drive.google.com/file/d/1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:28.934Z",
+            "modified_time": "2026-10-19T19:10:42.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 349,
+          "remote_id": "1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP",
+          "retrieval_file_id": "sediment://file_00000000461c8207ae8c951939c51340",
+          "metadata": {
+            "id": "1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP",
+            "title": "Caveman Explain Modern Life [3AsDdMQr_nQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "4462288",
+            "url": "https://drive.google.com/file/d/1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:28.934Z",
+            "modified_time": "2026-10-19T19:10:42.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:29:09.058280+00:00",
+          "retrieved_bytes": 4462288,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "4462288",
+          "retrieved_sha256": "b21b9455667c784b7c649d2b5c78f2f39fed365143d4edba7c93adb8311958df",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:29:16.741361+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things - Part 2 [0fS6bnHbqBE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things - Part 2 [0fS6bnHbqBE].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 2268288,
+        "allocated_path_bytes": 2269184,
+        "mtime_ns": 1792437186000000000,
+        "device": 16777229,
+        "inode": 93824531,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 350,
+        "proposed_destination_name": "00350__Caveman Explain Modern Things - Part 2 [0fS6bnHbqBE].mp4",
+        "fresh_stat": {
+          "st_size": 2268288,
+          "st_mtime_ns": 1792437186000000000,
+          "st_ctime_ns": 1792830809933704236,
+          "st_ino": 93824531,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "e0c2f6cef02d5a0d5db5eb94e9d220f30a43d51fc6c1f3e56d4995dc9d65f614",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.593318+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR",
+        "remote_url": "https://drive.google.com/file/d/1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:02.042673+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR",
+            "title": "Caveman Explain Modern Things - Part 2 [0fS6bnHbqBE].mp4",
+            "mime_type": "video/mp4",
+            "size": "2268288",
+            "url": "https://drive.google.com/file/d/1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:11.155Z",
+            "modified_time": "2026-10-19T19:13:06.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 350,
+          "remote_id": "1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR",
+          "retrieval_file_id": "sediment://file_00000000cfd08211a3121b2b408a4434",
+          "metadata": {
+            "id": "1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR",
+            "title": "Caveman Explain Modern Things - Part 2 [0fS6bnHbqBE].mp4",
+            "mime_type": "video/mp4",
+            "size": "2268288",
+            "url": "https://drive.google.com/file/d/1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:11.155Z",
+            "modified_time": "2026-10-19T19:13:06.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:29:21.421697+00:00",
+          "retrieved_bytes": 2268288,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "2268288",
+          "retrieved_sha256": "e0c2f6cef02d5a0d5db5eb94e9d220f30a43d51fc6c1f3e56d4995dc9d65f614",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:29:22.874722+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things - Part 3 [5gSIU30yiVs].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things - Part 3 [5gSIU30yiVs].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 2453221,
+        "allocated_path_bytes": 2453504,
+        "mtime_ns": 1792437182000000000,
+        "device": 16777229,
+        "inode": 93824589,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 351,
+        "proposed_destination_name": "00351__Caveman Explain Modern Things - Part 3 [5gSIU30yiVs].mp4",
+        "fresh_stat": {
+          "st_size": 2453221,
+          "st_mtime_ns": 1792437182000000000,
+          "st_ctime_ns": 1792830809934141071,
+          "st_ino": 93824589,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "ac73e9e433acf0e6fd12e9356adaeafce1d1935353092cc0c3dbbea7f454b5dd",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.595748+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4",
+        "remote_url": "https://drive.google.com/file/d/1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:02.837011+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4",
+            "title": "Caveman Explain Modern Things - Part 3 [5gSIU30yiVs].mp4",
+            "mime_type": "video/mp4",
+            "size": "2453221",
+            "url": "https://drive.google.com/file/d/1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:19.434Z",
+            "modified_time": "2026-10-19T19:13:02.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 351,
+          "remote_id": "1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4",
+          "retrieval_file_id": "sediment://file_00000000a0048211884a9a6d44c4ef33",
+          "metadata": {
+            "id": "1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4",
+            "title": "Caveman Explain Modern Things - Part 3 [5gSIU30yiVs].mp4",
+            "mime_type": "video/mp4",
+            "size": "2453221",
+            "url": "https://drive.google.com/file/d/1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:19.434Z",
+            "modified_time": "2026-10-19T19:13:02.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:29:27.620108+00:00",
+          "retrieved_bytes": 2453221,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "2453221",
+          "retrieved_sha256": "ac73e9e433acf0e6fd12e9356adaeafce1d1935353092cc0c3dbbea7f454b5dd",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:29:28.932090+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things [8yZy4ia6U2w].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things [8yZy4ia6U2w].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 2739746,
+        "allocated_path_bytes": 2740224,
+        "mtime_ns": 1792437190000000000,
+        "device": 16777229,
+        "inode": 93824533,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 352,
+        "proposed_destination_name": "00352__Caveman Explain Modern Things [8yZy4ia6U2w].mp4",
+        "fresh_stat": {
+          "st_size": 2739746,
+          "st_mtime_ns": 1792437190000000000,
+          "st_ctime_ns": 1792830809933728944,
+          "st_ino": 93824533,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "a9fe671ddf56681792cd45e38eef10d2b25f7c5d1ce48fdfdf98bb540b9361db",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.598133+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG",
+        "remote_url": "https://drive.google.com/file/d/1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:01.232223+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG",
+            "title": "Caveman Explain Modern Things [8yZy4ia6U2w].mp4",
+            "mime_type": "video/mp4",
+            "size": "2739746",
+            "url": "https://drive.google.com/file/d/1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:37.445Z",
+            "modified_time": "2026-10-19T19:13:10.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 352,
+          "remote_id": "1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG",
+          "retrieval_file_id": "sediment://file_000000008c6082119889a5cdedeb154b",
+          "metadata": {
+            "id": "1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG",
+            "title": "Caveman Explain Modern Things [8yZy4ia6U2w].mp4",
+            "mime_type": "video/mp4",
+            "size": "2739746",
+            "url": "https://drive.google.com/file/d/1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:37.445Z",
+            "modified_time": "2026-10-19T19:13:10.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:29:33.939984+00:00",
+          "retrieved_bytes": 2739746,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "2739746",
+          "retrieved_sha256": "a9fe671ddf56681792cd45e38eef10d2b25f7c5d1ce48fdfdf98bb540b9361db",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:29:35.289539+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb - Part 2 [IUur04eOd4A].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb - Part 2 [IUur04eOd4A].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 6630379,
+        "allocated_path_bytes": 6631424,
+        "mtime_ns": 1792437290000000000,
+        "device": 16777229,
+        "inode": 93824452,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 353,
+        "proposed_destination_name": "00353__Caveman Explain Nuclear Bomb - Part 2 [IUur04eOd4A].mp4",
+        "fresh_stat": {
+          "st_size": 6630379,
+          "st_mtime_ns": 1792437290000000000,
+          "st_ctime_ns": 1792830809933048108,
+          "st_ino": 93824452,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "e77e8d9eb461ad043a5d48d5fa5e35882c867ff007dd9ec9c66d54fc833cd890",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.603259+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw",
+        "remote_url": "https://drive.google.com/file/d/1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:25:55.103172+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw",
+            "title": "Caveman Explain Nuclear Bomb - Part 2 [IUur04eOd4A].mp4",
+            "mime_type": "video/mp4",
+            "size": "6630379",
+            "url": "https://drive.google.com/file/d/1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:34.520Z",
+            "modified_time": "2026-10-19T19:14:50.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 353,
+          "remote_id": "1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw",
+          "retrieval_file_id": "sediment://file_00000000f2388211a16258824e6063ca",
+          "metadata": {
+            "id": "1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw",
+            "title": "Caveman Explain Nuclear Bomb - Part 2 [IUur04eOd4A].mp4",
+            "mime_type": "video/mp4",
+            "size": "6630379",
+            "url": "https://drive.google.com/file/d/1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:34.520Z",
+            "modified_time": "2026-10-19T19:14:50.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:29:41.666982+00:00",
+          "retrieved_bytes": 6630379,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "6630379",
+          "retrieved_sha256": "e77e8d9eb461ad043a5d48d5fa5e35882c867ff007dd9ec9c66d54fc833cd890",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:29:45.000790+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb [FKAXKWpGWsM].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb [FKAXKWpGWsM].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 7506805,
+        "allocated_path_bytes": 7507968,
+        "mtime_ns": 1792437294000000000,
+        "device": 16777229,
+        "inode": 93824474,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 354,
+        "proposed_destination_name": "00354__Caveman Explain Nuclear Bomb [FKAXKWpGWsM].mp4",
+        "fresh_stat": {
+          "st_size": 7506805,
+          "st_mtime_ns": 1792437294000000000,
+          "st_ctime_ns": 1792830809933232775,
+          "st_ino": 93824474,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "9bfdcad6fe6cdb987470fb98fa739bdc1bcf9a8044f1f54528c54058a99eb4ef",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.609580+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km",
+        "remote_url": "https://drive.google.com/file/d/1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:25:54.369464+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km",
+            "title": "Caveman Explain Nuclear Bomb [FKAXKWpGWsM].mp4",
+            "mime_type": "video/mp4",
+            "size": "7506805",
+            "url": "https://drive.google.com/file/d/1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:16.089Z",
+            "modified_time": "2026-10-19T19:14:54.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 354,
+          "remote_id": "1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km",
+          "retrieval_file_id": "sediment://file_00000000fb688211bf6c499515b497c8",
+          "metadata": {
+            "id": "1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km",
+            "title": "Caveman Explain Nuclear Bomb [FKAXKWpGWsM].mp4",
+            "mime_type": "video/mp4",
+            "size": "7506805",
+            "url": "https://drive.google.com/file/d/1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:16.089Z",
+            "modified_time": "2026-10-19T19:14:54.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:29:50.293734+00:00",
+          "retrieved_bytes": 7506805,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "7506805",
+          "retrieved_sha256": "9bfdcad6fe6cdb987470fb98fa739bdc1bcf9a8044f1f54528c54058a99eb4ef",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:29:54.491122+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb [xBJ6suQSt98].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb [xBJ6suQSt98].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 12146963,
+        "allocated_path_bytes": 12148736,
+        "mtime_ns": 1792437072000000000,
+        "device": 16777229,
+        "inode": 93824481,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 355,
+        "proposed_destination_name": "00355__Caveman Explain Nuclear Bomb [xBJ6suQSt98].mp4",
+        "fresh_stat": {
+          "st_size": 12146963,
+          "st_mtime_ns": 1792437072000000000,
+          "st_ctime_ns": 1792830809933280150,
+          "st_ino": 93824481,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "1ab0cdd0faf5c86e8fed792900af6d6e56ef249a926e5c78eb8e775fa4c8bb49",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.617596+00:00",
+        "status": "VERIFIED",
+        "remote_id": "15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3",
+        "remote_url": "https://drive.google.com/file/d/15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:07.834694+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3",
+            "title": "Caveman Explain Nuclear Bomb [xBJ6suQSt98].mp4",
+            "mime_type": "video/mp4",
+            "size": "12146963",
+            "url": "https://drive.google.com/file/d/15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:47.128Z",
+            "modified_time": "2026-10-19T19:11:12.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 355,
+          "remote_id": "15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3",
+          "retrieval_file_id": "sediment://file_000000000d8c8211b2f096a60c60d52e",
+          "metadata": {
+            "id": "15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3",
+            "title": "Caveman Explain Nuclear Bomb [xBJ6suQSt98].mp4",
+            "mime_type": "video/mp4",
+            "size": "12146963",
+            "url": "https://drive.google.com/file/d/15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:47.128Z",
+            "modified_time": "2026-10-19T19:11:12.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:30:06.963648+00:00",
+          "retrieved_bytes": 12146963,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "12146963",
+          "retrieved_sha256": "1ab0cdd0faf5c86e8fed792900af6d6e56ef249a926e5c78eb8e775fa4c8bb49",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:30:15.583509+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/caveman explain how mortgage work - part 2 [zNIGKQA7FMQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/caveman explain how mortgage work - part 2 [zNIGKQA7FMQ].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 2447530,
+        "allocated_path_bytes": 2449408,
+        "mtime_ns": 1792437230000000000,
+        "device": 16777229,
+        "inode": 93824581,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 356,
+        "proposed_destination_name": "00356__caveman explain how mortgage work - part 2 [zNIGKQA7FMQ].mp4",
+        "fresh_stat": {
+          "st_size": 2447530,
+          "st_mtime_ns": 1792437230000000000,
+          "st_ctime_ns": 1792830809934090404,
+          "st_ino": 93824581,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "00f5f96f157ef91786706fb25141460e9d38153554eeb77b1e6fb7df725b5af3",
+        "hash_refreshed_utc": "2026-10-26T11:22:25.620329+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq",
+        "remote_url": "https://drive.google.com/file/d/1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T11:26:00.323286+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq",
+            "title": "caveman explain how mortgage work - part 2 [zNIGKQA7FMQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "2447530",
+            "url": "https://drive.google.com/file/d/1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:40.282Z",
+            "modified_time": "2026-10-19T19:13:50.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 356,
+          "remote_id": "1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq",
+          "retrieval_file_id": "sediment://file_00000000e1a08211944d341d9a2bd957",
+          "metadata": {
+            "id": "1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq",
+            "title": "caveman explain how mortgage work - part 2 [zNIGKQA7FMQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "2447530",
+            "url": "https://drive.google.com/file/d/1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T11:24:40.282Z",
+            "modified_time": "2026-10-19T19:13:50.000Z",
+            "parent_ids": [
+              "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T11:30:20.566471+00:00",
+          "retrieved_bytes": 2447530,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "2447530",
+          "retrieved_sha256": "00f5f96f157ef91786706fb25141460e9d38153554eeb77b1e6fb7df725b5af3",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T11:30:21.818400+00:00"
+        }
+      }
+    ],
+    "uploaded_bytes": 86182813,
+    "independently_retrieved_bytes": 86182813,
+    "mapped_source_files": 20,
+    "preflight": {
+      "account": "kgk2930@gmail.com",
+      "privacy": "OWNER_ONLY",
+      "ui_used_gb": 3.97,
+      "conservative_free_bytes": 10637244958,
+      "storage_ui": "3.97 GB used of15GB; fresh owner browser",
+      "observed_at": "2026-10-26T11:21:57.514Z",
+      "five_hour_used": 1,
+      "weekly_used": 7,
+      "paid_credits": "0",
+      "context": "Long context; checkpoints preserved; exact meter unavailable",
+      "ownership": "Stable read-only sources; protected sessions preserved",
+      "destination_folder_id": "12K6tzytA5pgin9ZzIuMvnWvCq3KC_VZA",
+      "planned_destination_folder_name": "batch-0018-ui-20261026T1122Z"
+    },
+    "postflight": {
+      "batch_dir": "/Users/ghilmankhan/YIOS-local-audits/YIOS-bulk-20261025T2140Z-chat-01a174dd/batch-0018",
+      "account": "kgk2930@gmail.com",
+      "privacy": "OWNER_ONLY",
+      "ui_used_gb": 4.05,
+      "conservative_free_bytes": 10551345612,
+      "storage_ui": "4.05 GB used of15GB; fresh owner UI",
+      "observed_at": "2026-10-26T11:31:39.196Z",
+      "five_hour_used": 8,
+      "weekly_used": 8,
+      "paid_credits": "0",
+      "context": "Continuation receipts preserved; exact meter unavailable",
+      "ownership": "Stable read-only originals; protected sessions preserved",
+      "destination_folder_id": "14eGMvnZ_xmqaOGCyqA6afJ7L61JWrgP9"
+    },
+    "permissions": "Owner-only Restricted; no changes",
+    "encryption": "Google provider managed; owner-held client key not established",
+    "retention": "Until explicit owner removal approval",
+    "coverage": "File-level verified recovery only; no complete-package or independent-machine recovery claim"
+  },
+  "recovery_mapping": {
+    "files": [
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 4 [cDaMRHyX9cU].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 4 [cDaMRHyX9cU].mp4",
+        "bytes": 2125457,
+        "fresh_sha256": "196fe5c8302a1aa1917df00cb84a8a252c2b1ad30d3aa7d4df40c0f37c87d7c8",
+        "remote_id": "1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-",
+        "remote_url": "https://drive.google.com/file/d/1UHYYte2OymGBQz1xpoQiYVSrPFB8QDZ-/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 5 [1PbsFPWOF68].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 5 [1PbsFPWOF68].mp4",
+        "bytes": 1952103,
+        "fresh_sha256": "8f2b46da7aa7fa7e9c982cec9a4fb3145034a105dd33154abb478a4d4cf6f339",
+        "remote_id": "1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV",
+        "remote_url": "https://drive.google.com/file/d/1LGTgqFAQ6B-XBT6NyHgQ-RxG_OOm2_rV/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 6 [BI3E9ayqdbY].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 6 [BI3E9ayqdbY].mp4",
+        "bytes": 1221843,
+        "fresh_sha256": "ab309024e00da66d86f865c9b5507abc2342383c88cb24fe76920130196a13ab",
+        "remote_id": "1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8",
+        "remote_url": "https://drive.google.com/file/d/1yVBgVtJpuJWEVzHt1APTX0BhlqDmQ7G8/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 7 [fDV-0Br3C7E].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing - part 7 [fDV-0Br3C7E].mp4",
+        "bytes": 4243947,
+        "fresh_sha256": "8a8daeec7da6dc71fd9f5ab9ad6bf85c38b9a5f4076444a5f803087eb7a970c5",
+        "remote_id": "1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s",
+        "remote_url": "https://drive.google.com/file/d/1uJo-1JvPGaTLQPOGDcDH4l_N0EvxPY3s/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing [Ll4MepKCzL0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Gene Editing [Ll4MepKCzL0].mp4",
+        "bytes": 5103822,
+        "fresh_sha256": "02c8d4032d4c12b4580a72793df1d20f9676d4eb2029d658f44fac391aa6a32e",
+        "remote_id": "1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij",
+        "remote_url": "https://drive.google.com/file/d/1UvkRdXGJFO4kqntqwk_taTHDz3hZz7ij/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 2 [J204M3yIivQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 2 [J204M3yIivQ].mp4",
+        "bytes": 2457867,
+        "fresh_sha256": "225fdd66a7cecf532fe03322bcbff12ebc92486ad4aed294af9e94dc6c3843ec",
+        "remote_id": "1F0-J4I7729dezrxJne2QkUuFDfKOyiO-",
+        "remote_url": "https://drive.google.com/file/d/1F0-J4I7729dezrxJne2QkUuFDfKOyiO-/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 3 [f1vIzsTFrp4].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 3 [f1vIzsTFrp4].mp4",
+        "bytes": 2525753,
+        "fresh_sha256": "6302b60473dea0585f1c59a7bff2a13772b603d0f9e3485f5fda577bd07c05d6",
+        "remote_id": "1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U",
+        "remote_url": "https://drive.google.com/file/d/1KctfV7Rl2DXtAp12Tz-DwmTSbSTRNQ_U/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 4 [vhiRz60amDM].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 4 [vhiRz60amDM].mp4",
+        "bytes": 1651939,
+        "fresh_sha256": "3abdece53182e9c893ab3fab98ae27ee1ecbb23c56a5998e6a0bcee6bbf19eb6",
+        "remote_id": "1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn",
+        "remote_url": "https://drive.google.com/file/d/1tPfwNKyiApF2L0uSNhUrwxIwrDaYdRtn/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 5 [H5jC3qiq_0E].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend - Part 5 [H5jC3qiq_0E].mp4",
+        "bytes": 1584110,
+        "fresh_sha256": "92cadfff9e437d3eb161ebbed2b371490532c5e7006aaac7dba25a2d230bfdfe",
+        "remote_id": "1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q",
+        "remote_url": "https://drive.google.com/file/d/1PLMS08ePe6_EVsGeKPprY2_aS28WWI0Q/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend [LZO3lhgBME4].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend [LZO3lhgBME4].mp4",
+        "bytes": 3446817,
+        "fresh_sha256": "5e2d657a15435c6d546af590fae7e2e2d63cdb471be1545442d126470fbf4d40",
+        "remote_id": "1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot",
+        "remote_url": "https://drive.google.com/file/d/1XD0Go1g_VXVWU73q6wWLJ_DOPRsaUGot/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend [qB_EKkMyuUE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Get Girlfriend [qB_EKkMyuUE].mp4",
+        "bytes": 9153460,
+        "fresh_sha256": "ce84afbd9055c957d08b5b0dc8af3ffa057ab8d166650c958ce63ebbd5176803",
+        "remote_id": "1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh",
+        "remote_url": "https://drive.google.com/file/d/1tqgHK9BvfTMZq3YqVuY7mWBtRKnvkaqh/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Mortgage Work [RmTdnXHbI8s].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain How Mortgage Work [RmTdnXHbI8s].mp4",
+        "bytes": 10060475,
+        "fresh_sha256": "29daceca4932d6af59a634cbcc41f8a2efabf350e34d64ad69517dd466d6df38",
+        "remote_id": "1ADoufkaz5YwTtIgqwTPR88qUazjaev5S",
+        "remote_url": "https://drive.google.com/file/d/1ADoufkaz5YwTtIgqwTPR88qUazjaev5S/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Life [3AsDdMQr_nQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Life [3AsDdMQr_nQ].mp4",
+        "bytes": 4462288,
+        "fresh_sha256": "b21b9455667c784b7c649d2b5c78f2f39fed365143d4edba7c93adb8311958df",
+        "remote_id": "1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP",
+        "remote_url": "https://drive.google.com/file/d/1Tnsd-SPDkd3KxiinGM_5UB3-_GYD_DSP/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things - Part 2 [0fS6bnHbqBE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things - Part 2 [0fS6bnHbqBE].mp4",
+        "bytes": 2268288,
+        "fresh_sha256": "e0c2f6cef02d5a0d5db5eb94e9d220f30a43d51fc6c1f3e56d4995dc9d65f614",
+        "remote_id": "1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR",
+        "remote_url": "https://drive.google.com/file/d/1lEcQNXOdNNPkmXDqE4sSpvV6MEvEHrRR/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things - Part 3 [5gSIU30yiVs].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things - Part 3 [5gSIU30yiVs].mp4",
+        "bytes": 2453221,
+        "fresh_sha256": "ac73e9e433acf0e6fd12e9356adaeafce1d1935353092cc0c3dbbea7f454b5dd",
+        "remote_id": "1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4",
+        "remote_url": "https://drive.google.com/file/d/1YkP_uhSbU0yuq1NWUcz2hunAMPLRTWA4/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things [8yZy4ia6U2w].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Modern Things [8yZy4ia6U2w].mp4",
+        "bytes": 2739746,
+        "fresh_sha256": "a9fe671ddf56681792cd45e38eef10d2b25f7c5d1ce48fdfdf98bb540b9361db",
+        "remote_id": "1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG",
+        "remote_url": "https://drive.google.com/file/d/1_9PNfofsJq18a2a7biPGBLzMKWVFdmAG/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb - Part 2 [IUur04eOd4A].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb - Part 2 [IUur04eOd4A].mp4",
+        "bytes": 6630379,
+        "fresh_sha256": "e77e8d9eb461ad043a5d48d5fa5e35882c867ff007dd9ec9c66d54fc833cd890",
+        "remote_id": "1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw",
+        "remote_url": "https://drive.google.com/file/d/1_rBweRZ_OuvGcP9DSyzVGQ-ScU9KCJrw/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb [FKAXKWpGWsM].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb [FKAXKWpGWsM].mp4",
+        "bytes": 7506805,
+        "fresh_sha256": "9bfdcad6fe6cdb987470fb98fa739bdc1bcf9a8044f1f54528c54058a99eb4ef",
+        "remote_id": "1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km",
+        "remote_url": "https://drive.google.com/file/d/1DfrQzbu8DqX9cDv7otgmu3ze_GzRs_Km/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb [xBJ6suQSt98].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/Caveman Explain Nuclear Bomb [xBJ6suQSt98].mp4",
+        "bytes": 12146963,
+        "fresh_sha256": "1ab0cdd0faf5c86e8fed792900af6d6e56ef249a926e5c78eb8e775fa4c8bb49",
+        "remote_id": "15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3",
+        "remote_url": "https://drive.google.com/file/d/15sHj6LDtlKBw1yip9vf1QaVMyzstYUx3/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/PrimitiveEducation-MP4/caveman explain how mortgage work - part 2 [zNIGKQA7FMQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/PrimitiveEducation-MP4/caveman explain how mortgage work - part 2 [zNIGKQA7FMQ].mp4",
+        "bytes": 2447530,
+        "fresh_sha256": "00f5f96f157ef91786706fb25141460e9d38153554eeb77b1e6fb7df725b5af3",
+        "remote_id": "1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq",
+        "remote_url": "https://drive.google.com/file/d/1J59Zk-gZSQf2PziJjE656n9JHBs2u5mq/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      }
+    ]
+  },
+  "cumulative_before_this_control": {
+    "mapped_source_paths": 364,
+    "uploaded_bytes_including_controls": 3487168310,
+    "verified_bytes_including_controls": 3487168310,
+    "remaining_payload_bytes": 8512831690,
+    "remaining_plan_files": 188
+  }
+}
+```

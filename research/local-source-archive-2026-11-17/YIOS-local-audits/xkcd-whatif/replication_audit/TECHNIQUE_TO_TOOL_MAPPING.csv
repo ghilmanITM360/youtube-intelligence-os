@@ -1,0 +1,16 @@
+technique,evidence_label,evidence,reproducible_method,tools_available_now,working_example_here,local_test_passed,unproven,difficulty
+1-frame pop-on of objects/labels,OBSERVED,5458 states measured,PIL layer composite + ffmpeg overlay,yes,proof_v1_attempt3,machine PASS; human review pending,feel at real playback,low
+6-frame linear dissolve,OBSERVED,13 windows,ffmpeg xfade / PIL alpha,yes,proof_v1_attempt3,machine PASS,none known,low
+Draw-on / type-on strokes,OBSERVED (class) INFERRED (mechanism),2 windows,PIL stroke reveal masks,yes,RT1-RT4 animatics partly,not tested vs source curve,easing UNAVAILABLE,medium
+Pose swap of narrator,OBSERVED,2 windows,swap pre-drawn pose PNGs,needs original character art,no,no,original character does not exist,medium
+Blurred pan/slide 9-12 f,OBSERVED,2 windows,ffmpeg zoompan/crop with eased offset + motion blur,yes (ffmpeg),no,no,blur and easing match,medium
+Zoom,OBSERVED,3 windows,zoompan or PIL scale,yes,no,no,curve match,medium
+Red circle write-on / 1-frame pop,OBSERVED,model sheets,PIL,yes,proof_v1_attempt3,machine PASS,none,low
+Reused lecture-frame template,OBSERVED 18/24 openings,opening_reuse,template layer in compositor,yes,no,no,original template design,low
+Dark/full-bleed scenes and map fills,OBSERVED,palette sheets,PIL gradient + image layers,yes,partly,no,generated art quality,medium
+9:16 re-layout of 16:9 art,OBSERVED 3 pairs,3 pairs,separate layout pass,yes,proof 9x16,machine PASS,more pairs,low
+Typography (hand font),INFERRED font class,no font ID,licensed hand font + pre-rendered text layers (ffmpeg has no drawtext),yes (PIL),proof labels,partly,font match,low
+Narration-led timing,UNKNOWN,ASR_UNCERTIFIED,timing from owner's own narration + human listen,no listening capability,no,no,everything,high
+Sound design / music / SFX,UNKNOWN,none,licensed or original library,no library found,no,no,everything,high
+Original character art set (model sheet, expressions, poses),NOT BUILT,prompt text only,image model + manual cleanup,no image model chosen,no,no,consistency across poses,high
+3D camera / Blender / rig,NOT OBSERVED as used,style is flat 2D,not needed for this channel,blender absent,n/a,n/a,n/a,n/a

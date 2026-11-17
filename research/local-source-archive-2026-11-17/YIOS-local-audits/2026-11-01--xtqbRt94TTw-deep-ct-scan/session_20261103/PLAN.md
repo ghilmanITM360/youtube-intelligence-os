@@ -1,0 +1,13 @@
+# Video006 continuation checklist
+- [x] Read instructions, kit, handoff, operations, overlay, remote, scheduler and ownership.
+- [x] Verify source SHA and checkpoint J seal; preserve all historical records.
+- [x] Recount saved shards 1–10 and rerun structural validation.
+- [x] Reproduce and fix lock owner detection; test compatibility and stale recovery refusal.
+- [ ] Integrate immutable first-pass rows with provenance and explicit unresolved spans.
+- [ ] Independently inspect 123 gap interiors and disputed split/merge boundaries; no automatic predecessor assignment.
+- [ ] Create versioned state/event ledgers with numerical partition audit and semantic caveats.
+- [ ] Audit historical successful image reads and native/scaled evidence.
+- [ ] Run bounded independent semantic review, ASR/narration alignment if supported, production specs and reconstruction checks.
+- [ ] Separate actual listening; record unavailable capabilities explicitly.
+- [ ] Seal, inspect scoped diff, normal push against current remote, remote readback.
+- [ ] Final resources and session-only lock release.

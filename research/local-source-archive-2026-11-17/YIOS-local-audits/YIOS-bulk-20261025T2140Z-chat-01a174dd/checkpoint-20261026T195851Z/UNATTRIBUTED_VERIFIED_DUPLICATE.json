@@ -1,0 +1,23 @@
+{
+  "status": "UNATTRIBUTED_VERIFIED_DUPLICATE",
+  "CONTENT_INTEGRITY": "VERIFIED",
+  "SELECTED_SOURCE_COVERAGE": "3/3 VERIFIED",
+  "EXTRA_PHYSICAL_OBJECT": "VERIFIED",
+  "OWNER_ACCOUNT_ACTOR": "ESTABLISHED_BY_AUTHENTICATED_ACTIVITY_UI",
+  "UPLOAD_ORIGIN_ATTRIBUTION": "UNRESOLVED_AT_CLIENT_SESSION_TRANSACTION_LEVEL",
+  "WHOLE_BATCH_ACCEPTANCE": "BLOCKED",
+  "DATA_CORRUPTION": "NOT_OBSERVED",
+  "earlier_remote_id": "127DXG7Ih9tw61aFNGL0tGzwt4dc0no_A",
+  "selected_remote_id": "1_I0MqlstrAynSWTsPnOTuZOzr5eueJtv",
+  "bytes_each": 404830,
+  "sha256": "e99f5577c066109a03da5d71fd6e4cb23f79f5c45d3eb6a3991a4aaf8dff2953",
+  "corrected_observed_authorized_upload_start_utc": "2026-10-26T18:06:28.843Z",
+  "earlier_remote_created_utc": "2026-10-26T18:06:31.206Z",
+  "selected_remote_created_utc": "2026-10-26T18:11:08.990Z",
+  "finding": "Original blocked handoff incorrectly characterized18:11 as the observed browser upload start. Local exact-source chooser call began18:06:28; earlier object creation follows2.363seconds later and exact-ID Activity attributes upload to signed-in owner. Strong correlation to authorized operation; browser retry or second-client mechanism is not established.",
+  "inference": "Earlier object is consistent with the owner-authorized18:06 chooser operation. Do not state exact client/session attribution or browser retry as proven.",
+  "required_resolution": "Either obtain an exact creation/client/transaction linkage sufficient under owner policy, or explicit owner approval of this specific provenance exception: preserve both IDs unchanged; accept3selected source mappings; count404830extra bytes as redundant physical storage with zero additional unique recovery coverage; retain unresolved client/retry mechanism in permanent receipts; only then close Batch31 and resume after fresh gates. Current task did not itself approve that exception.",
+  "retention": "Both copies preserved; no remote delete/rename/move/upload",
+  "physical_extra_bytes_accounted": 404830,
+  "additional_unique_recovery_coverage": 0
+}

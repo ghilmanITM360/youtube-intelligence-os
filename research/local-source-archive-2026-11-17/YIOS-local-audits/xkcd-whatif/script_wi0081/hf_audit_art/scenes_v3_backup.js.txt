@@ -1,0 +1,279 @@
+// WI-0081 v2: every mark is code. Times are voiceover word times (video/wordlist.json). 1-frame pops, no overshoot, no idle loops.
+const NS = "http://www.w3.org/2000/svg", world = document.getElementById("world");
+const tl = gsap.timeline({ paused: true });
+const E = (p, tag, a = {}, cls = "") => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (cls) e.setAttribute("class", cls); p.appendChild(e); return e; };
+const G = (p, cls = "") => E(p, "g", {}, cls);
+const P = (p, d, cls = "l") => E(p, "path", { d }, cls + " h");
+const D = (p, d, cls = "l") => E(p, "path", { d, pathLength: 1 }, cls + " d h");
+const TX = (p, x, y, s, size = 64, cls = "") => { const t = E(p, "text", { x, y, "font-size": size }, cls + " h"); t.textContent = s; return t; };
+const pop = (el, t) => { tl.set(el, { opacity: 1 }, t); return el; };
+const off = (el, t) => { tl.set(el, { opacity: 0 }, t); return el; };
+const draw = (el, t, d = 0.2) => { tl.set(el, { opacity: 1 }, t); tl.fromTo(el, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "none" }, t); return el; };
+const scene = (a, b) => { const g = G(world, "sc"); tl.set(g, { opacity: 1 }, a); tl.set(g, { opacity: 0 }, b); return g; };
+const show = (g, t) => { for (const c of g.children) pop(c, t); }; // reveal all children of a group at t
+const arrow = (p, x1, y1, x2, y2, cls = "l", hd = 22) => { const a = Math.atan2(y2 - y1, x2 - x1), h = (k) => `${x2 - hd * Math.cos(a + k)} ${y2 - hd * Math.sin(a + k)}`; return P(p, `M${x1} ${y1} L${x2} ${y2} M${h(0.5)} L${x2} ${y2} L${h(-0.5)}`, cls); };
+const wave = (x, y, h) => `M${x} ${y} C${x - 22} ${y - h * 0.25} ${x + 22} ${y - h * 0.5} ${x} ${y - h * 0.75} S${x - 18} ${y - h * 0.95} ${x} ${y - h}`;
+
+// ---------- reusable objects ----------
+function mug(p, cx, rim, s) {
+  const X = (x) => cx + (x - 410) * s, Y = (y) => rim + (y - 900) * s;
+  const tp = (d) => d.replace(/(-?\d+\.?\d*)\s+(-?\d+\.?\d*)/g, (m, a, b) => X(+a) + " " + Y(+b));
+  const g = G(p);
+  const w = P(g, tp("M272 950 L286 1236 Q292 1262 322 1262 L498 1262 Q528 1262 534 1236 L548 950 Z"), "g"); w.setAttribute("stroke", "none");
+  const surf = E(g, "ellipse", { cx: X(410), cy: Y(950), rx: 138 * s, ry: 20 * s }, "g h");
+  P(g, tp("M270 900 C268 1000 272 1150 286 1238 Q292 1262 322 1262 L498 1262 Q528 1262 534 1238 C548 1150 552 1000 550 900"));
+  P(g, tp("M548 960 C650 948 650 1140 536 1150"));
+  E(g, "ellipse", { cx: X(410), cy: Y(900), rx: 140 * s, ry: 22 * s }, "l h");
+  return { g, X, Y, tp, s, cx, rim, surf, items: [...g.children] };
+}
+function spoon(p, m, bowl = 1100) {
+  const g = G(p);
+  P(g, `M${m.X(410)} ${m.Y(730)} L${m.X(410)} ${m.Y(bowl - 34)}`);
+  E(g, "ellipse", { cx: m.X(410), cy: m.Y(bowl), rx: 24 * m.s, ry: 36 * m.s }, "f h");
+  for (const c of g.children) c.classList.remove("h");
+  g.setAttribute("class", "h");
+  return g;
+}
+// Stirred liquid, side view. Real physics: the fluid spins up behind the spoon (lag), the free surface becomes a paraboloid
+// h(r)=D*(r^2/R^2-0.5) with D ~ w^2 (dip in the centre, rise at the wall), the spoon pushes a tilted wave that travels round,
+// tracer specks (tea leaves) circle on ellipses: front half one way, back half the other. All a pure function of timeline time.
+function stir(g, m, t0, t1, amp = 14, o = {}) {
+  const rev = o.rev || 1.6, str = o.str ?? 1, s = m.s, cx = m.cx, ys = m.Y(950), R = 136 * s, k = 0.15;
+  const W0 = rev * 2 * Math.PI, REF = 1.6 * 2 * Math.PI, TS = 0.25, TF = 1.3, DMAX = 34 * s * str;
+  const ox = m.X(410), oy = m.Y(900);
+  const wg = G(g.parentNode); g.parentNode.insertBefore(wg, g); wg.setAttribute("class", "h"); pop(wg, t0);
+  tl.set(m.surf, { opacity: 0 }, t0);
+  const at = { "stroke": "#111", "stroke-linejoin": "round", "stroke-linecap": "round" };
+  tl.set(m.items[0], { opacity: 0 }, t0);
+  const body = E(wg, "path", { fill: "#C4C4C4", stroke: "none" });
+  const side = E(wg, "path", { fill: "none", "stroke-width": 7, ...at });
+  const top = E(wg, "path", { fill: "#E4E4E4", "stroke-width": 7, ...at });
+  const ring1 = E(wg, "path", { fill: "none", "stroke-width": 4, ...at });
+  const ring2 = E(wg, "path", { fill: "#C4C4C4", "stroke-width": 4, ...at });
+  const N = 7, fr = [0.3, 0.8, 0.5, 0.72, 0.4, 0.88, 0.62], ph = [0.2, 1.1, 2.3, 3.0, 4.1, 5.0, 5.7];
+  const dots = fr.map(() => E(wg, "circle", { r: 7 * Math.max(0.8, s), fill: "#111" }));
+  const deep = [[0.7, 70, 0.5], [0.3, 95, 2.0], [0.85, 125, 3.6], [0.5, 150, 5.2], [0.65, 185, 1.2], [0.25, 205, 4.4], [0.8, 235, 2.9], [0.45, 255, 0.1]].map(([f, dy, p0]) => ({ f, dy: dy * s, p0, c: E(wg, "circle", { r: 7 * Math.max(0.8, s), fill: "#111" }) }));
+  const wallPath = m.tp("L286 1236 Q292 1262 322 1262 L498 1262 Q528 1262 534 1236");
+  const spin = (tt, T) => W0 * (tt - T * (1 - Math.exp(-tt / T))); // angle after spin-up with time constant T
+  const upd = (tt) => {
+    const Ts = spin(tt, TS), Tf = spin(tt, TF), wf = W0 * (1 - Math.exp(-tt / TF));
+    const D = Math.min(1.5, (wf / REF) ** 2) * DMAX, A = 0.3 * D * Math.min(1, tt / 0.4);
+    g.setAttribute("transform", `rotate(${amp * Math.min(1, tt / 0.3) * Math.cos(Ts)} ${ox} ${oy})`);
+    const ring = (f, close) => { let d = ""; const r = f * R;
+      for (let j = 0; j <= 40; j++) { const p = j / 40 * 2 * Math.PI;
+        const x = cx + r * Math.cos(p), y = ys - D * (f * f - 0.5) + k * r * Math.sin(p) - A * f * Math.cos(p - Ts + 0.9);
+        d += (j ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1); } return d + "Z"; };
+    // water body: bottom of the mug, then up to the right wall and back along the front arc of the surface
+    let fa = ""; for (let j = 0; j <= 40; j++) { const p = j / 40 * Math.PI, x = cx + R * Math.cos(p), y = ys - 0.5 * D + k * R * Math.sin(p) - A * Math.cos(p - Ts + 0.9); fa += "L" + x.toFixed(1) + " " + y.toFixed(1); }
+    const yl = ys - 0.5 * D - A * Math.cos(Math.PI - Ts + 0.9);
+    
+    body.setAttribute("d", `M${(cx - R).toFixed(1)} ${yl.toFixed(1)} ${wallPath} L${(cx + R).toFixed(1)} ${(ys - 0.5 * D - A * Math.cos(-Ts + 0.9)).toFixed(1)} ${fa.split("L").reverse().filter(Boolean).map((q) => "L" + q).join(" ")} Z`);
+    top.setAttribute("d", ring(0.97)); ring1.setAttribute("d", ring(0.6)); ring2.setAttribute("d", ring(0.27));
+    deep.forEach((o2) => { const r = o2.f * R, p = o2.p0 + Tf * (1 - 0.35 * o2.dy / (255 * s)), sz = 1 + 0.25 * Math.sin(p);
+      o2.c.setAttribute("cx", (cx + r * Math.cos(p)).toFixed(1)); o2.c.setAttribute("cy", (ys + o2.dy + k * r * Math.sin(p)).toFixed(1)); o2.c.setAttribute("r", (7 * Math.max(0.8, s) * sz).toFixed(1)); });
+    dots.forEach((c, i) => { const f = fr[i], r = f * R, p = ph[i] + Tf * (1 + 0.4 * (0.6 - f));
+      c.setAttribute("cx", (cx + r * Math.cos(p)).toFixed(1));
+      c.setAttribute("cy", (ys - D * (f * f - 0.5) + k * r * Math.sin(p) - A * f * Math.cos(p - Ts + 0.9) + 4).toFixed(1)); });
+  };
+  upd(0); const px = { t: 0 };
+  tl.to(px, { t: t1 - t0, duration: t1 - t0, ease: "none", onUpdate: () => upd(px.t) }, t0);
+}
+function thermo(p, x, y100, y0, level, ticks = true) {
+  const g = G(p), Yc = (c) => y0 + (y100 - y0) * c / 100, yb = y0 + 42;
+  const items = [];
+  items.push(P(g, `M${x - 30} ${y100} L${x - 30} ${y0} M${x + 30} ${y100} L${x + 30} ${y0} M${x - 30} ${y100} Q${x} ${y100 - 26} ${x + 30} ${y100}`));
+  items.push(P(g, `M${x - 30} ${y0} A52 52 0 1 0 ${x + 30} ${y0}`, "f"));
+  if (ticks) for (let c = 10; c < 100; c += 10) items.push(P(g, `M${x + 30} ${Yc(c)} L${x + 54} ${Yc(c)}`, "l")), items[items.length - 1].style.strokeWidth = 5;
+  const merc = P(g, `M${x} ${yb} L${x} ${Yc(level)}`, "r"); merc.style.strokeWidth = 14; items.push(merc);
+  return { g, Yc, merc, items, x, yb };
+}
+const mercTo = (th, level, t, d = 0.4) => tl.to(th.merc, { attr: { d: `M${th.x} ${th.yb} L${th.x} ${th.Yc(level)}` }, duration: d, ease: "none" }, t);
+function bulb(p, x, yc) { const g = G(p); E(g, "circle", { cx: x, cy: yc - 10, r: 33 }, "f h"); P(g, `M${x - 14} ${yc + 20} L${x + 14} ${yc + 20} M${x - 12} ${yc + 32} L${x + 12} ${yc + 32}`); P(g, `M${x - 12} ${yc + 20} L${x - 12} ${yc + 8} M${x + 12} ${yc + 20} L${x + 12} ${yc + 8}`); return g; }
+function cube(p, x, y, sz = 54) { const g = G(p); P(g, `M${x} ${y} L${x + sz} ${y} L${x + sz} ${y + sz} L${x} ${y + sz} Z`, "f"); P(g, `M${x} ${y} L${x + 14} ${y - 14} L${x + sz + 14} ${y - 14} L${x + sz} ${y} M${x + sz} ${y + sz} L${x + sz + 14} ${y + sz - 14} L${x + sz + 14} ${y - 14}`); for (const c of g.children) c.classList.remove("h"); g.setAttribute("class", "h"); return g; }
+
+// ---------- S1 hook 0-7.9 ----------
+const S1 = scene(0, 7.9);
+function hookLayout(g, t0, opts = {}) {
+  const m = mug(g, 430, 760, 1.3); const sp = spoon(g, m, 1100);
+  const th = thermo(g, 900, 470, 1250, 20);
+  show(m.g, t0); pop(sp, t0); for (const i of th.items) pop(i, t0);
+  return { m, sp, th };
+}
+const h1 = hookLayout(S1, 0);
+stir(h1.sp, h1.m, 0, 7.9, 12);
+const t100 = TX(S1, 842, 490, "100 °C", 54, "red"); t100.style.textAnchor = "end"; pop(t100, 0);
+const rm100 = P(S1, "M862 470 L878 470", "r"); pop(rm100, 0);
+const t20 = TX(S1, 900, 1400, "20 °C", 60); pop(t20, 0);
+const tBoil = TX(S1, 400, 270, "BOIL", 170); pop(tBoil, 0.6);
+const tBy = TX(S1, 400, 390, "BY STIRRING?", 80); pop(tBy, 2.1);
+const strike = D(S1, "M205 232 C300 214 410 244 600 208", "r"); draw(strike, 4.3, 0.1);
+const lblSp = TX(S1, 190, 640, "SPOON", 56); pop(lblSp, 5.6); const arSp = arrow(S1, 250, 668, 395, 760, "l"); pop(arSp, 5.6);
+
+const tk = [D(S1, "M492 1090 L516 1060", "r"), D(S1, "M504 1138 L530 1110", "r")]; draw(tk[0], 6.2, 0.12); draw(tk[1], 6.3, 0.12);
+mercTo(h1.th, 20.7, 6.2, 0.5);
+
+// ---------- S2 energy -> heat 7.9-18.6 ----------
+const S2 = scene(7.9, 18.6);
+const m2 = mug(S2, 330, 800, 1.05); const sp2 = spoon(S2, m2, 1100); show(m2.g, 7.9); pop(sp2, 7.9); stir(sp2, m2, 7.9, 18.6, 14);
+pop(TX(S2, 330, 380, "ENERGY IN", 70), 8.6);
+const ar2 = arrow(S2, 330, 440, 330, 690, "l"); pop(ar2, 8.6);
+// two layers of water sliding past each other (right side)
+const L1 = arrow(S2, 640, 720, 960, 720, "l"), L2 = arrow(S2, 960, 880, 640, 880, "l"); pop(L1, 10.0); pop(L2, 10.3);
+pop(TX(S2, 800, 690, "WATER", 52), 11.6); pop(TX(S2, 800, 940, "WATER", 52), 11.6);
+const fr = [P(S2, "M700 770 L722 842", "r"), P(S2, "M790 770 L812 842", "r"), P(S2, "M880 770 L902 842", "r")]; fr.forEach((e, i) => pop(e, 12.8 + i * 0.12));
+pop(TX(S2, 800, 1100, "MOTION", 68), 13.7); const ar2b = arrow(S2, 800, 1130, 800, 1220, "l"); pop(ar2b, 14.2); pop(TX(S2, 800, 1300, "HEAT", 68), 14.5);
+const ul = P(S2, "M700 1318 L900 1318", "r"); pop(ul, 14.8);
+pop(TX(S2, 720, 1440, "THE IDEA", 60), 15.3); const ck = P(S2, "M880 1440 L910 1470 L960 1400", "r"); pop(ck, 16.0);
+pop(TX(S2, 720, 1560, "THE AMOUNT", 60), 17.4); const circ = E(S2, "ellipse", { cx: 720, cy: 1542, rx: 200, ry: 48 }, "r h"); pop(circ, 17.9);
+
+// ---------- S3 how much energy 18.6-27.8 ----------
+const S3 = scene(18.6, 27.8);
+const jug = G(S3); const jw = P(jug, "M330 780 L335 1110 Q338 1140 368 1140 L480 1140 Q510 1140 513 1110 L518 780 Z", "g"); jw.setAttribute("stroke", "none");
+P(jug, "M330 660 L335 1110 Q338 1140 368 1140 L480 1140 Q510 1140 513 1110 L518 660"); P(jug, "M330 660 L300 640"); P(jug, "M518 760 C590 750 590 920 513 930");
+E(jug, "ellipse", { cx: 424, cy: 780, rx: 94, ry: 14 }, "g h"); [880, 980, 1060].forEach((y) => P(jug, `M335 ${y} L365 ${y}`));
+show(jug, 18.6);
+pop(TX(S3, 424, 1230, "¼ L", 70), 19.7);
+const th3 = thermo(S3, 800, 520, 1220, 20); for (const i of th3.items) pop(i, 18.6);
+const y20 = th3.Yc(20), y100b = th3.Yc(100);
+const l20 = TX(S3, 735, y20 + 18, "20 °C", 56); l20.style.textAnchor = "end"; pop(l20, 20.9);
+const l100 = TX(S3, 735, y100b + 18, "100 °C", 56); l100.style.textAnchor = "end"; pop(l100, 22.5);
+const br = P(S3, `M880 ${y20} L900 ${y20} L900 ${y100b} L880 ${y100b}`, "r"); pop(br, 24.2);
+pop(TX(S3, 975, (y20 + y100b) / 2 + 20, "80°", 72, "red"), 24.2);
+pop(TX(S3, 440, 450, "84,000 J", 120), 25.5);
+
+// ---------- S4-S7 power ladder 27.8-39.3 (persistent ruler, accumulate) ----------
+const S4 = scene(27.8, 39.3);
+const RY = (w) => 1300 - w; // 1 px per watt
+const rul = G(S4); P(rul, `M220 ${RY(0)} L220 ${RY(1000)}`);
+for (let w = 0; w <= 1000; w += 100) { const q = P(rul, `M220 ${RY(w)} L${w % 500 === 0 ? 256 : 240} ${RY(w)}`); q.style.strokeWidth = 5; }
+[[0, "0"], [500, "500"], [1000, "1000 W"]].forEach(([w, s]) => { const t = TX(rul, 204, RY(w) + 14, s, 36); t.style.textAnchor = "end"; });
+show(rul, 27.8);
+// stopwatch: 2 min = 12 degree wedge from 12 o'clock
+const sx = 860, sy = 1000, sr = 96, ang = (2 / 60) * 2 * Math.PI;
+const swg = G(S4); E(swg, "circle", { cx: sx, cy: sy, r: sr }, "f h"); P(swg, `M${sx - 14} ${sy - sr - 18} L${sx + 14} ${sy - sr - 18} M${sx} ${sy - sr - 18} L${sx} ${sy - sr}`);
+for (let k = 0; k < 12; k++) { const a = k * Math.PI / 6; P(swg, `M${sx + (sr - 14) * Math.sin(a)} ${sy - (sr - 14) * Math.cos(a)} L${sx + (sr - 4) * Math.sin(a)} ${sy - (sr - 4) * Math.cos(a)}`).style.strokeWidth = 4; }
+const wedge = P(swg, `M${sx} ${sy} L${sx} ${sy - (sr - 4)} A${sr - 4} ${sr - 4} 0 0 1 ${sx + (sr - 4) * Math.sin(ang)} ${sy - (sr - 4) * Math.cos(ang)} Z`, "g"); wedge.style.strokeWidth = 3;
+P(swg, `M${sx} ${sy} L${sx + (sr - 4) * Math.sin(ang)} ${sy - (sr - 4) * Math.cos(ang)}`, "r").style.strokeWidth = 5;
+show(swg, 28.2); pop(TX(S4, sx, 1160, "2 MIN", 60), 28.4);
+const t700 = TX(S4, 560, 440, "700 W", 130, "red"); pop(t700, 30.2);
+const line700 = D(S4, `M230 ${RY(700)} L1040 ${RY(700)}`, "r"); line700.style.strokeDasharray = "14 16"; line700.removeAttribute("pathLength"); pop(line700, 29.7);
+const c700 = E(S4, "circle", { cx: 220, cy: RY(700), r: 22 }, "r h"); pop(c700, 29.7);
+for (let i = 0; i < 7; i++) show(bulb(S4, 350, RY(i * 100) - 50), 31.6 + i * 0.22);
+pop(TX(S4, 540, 1000, "7 × 100 W", 60), 33.4);
+const mw = G(S4); P(mw, "M430 515 L670 515 L670 685 L430 685 Z", "f"); P(mw, "M446 530 L580 530 L580 670 L446 670 Z"); P(mw, "M625 548 L627 548 M625 598 L627 598 M625 648 L627 648");
+const mm = mug(mw, 514, 608, 0.3); show(mw, 34.8); show(mm.g, 36.3);
+pop(TX(S4, 550, 745, "MICROWAVE", 44), 35.5);
+const hz = G(S4); const hp = (d) => d.replace(/(-?\d+\.?\d*)\s+(-?\d+\.?\d*)/g, (m, a, b) => `${700 + (+a) * 1.1} ${748 + (+b - 250) * 1.1}`);
+P(hz, hp("M40 70 C40 40 120 36 170 44 C205 48 224 58 232 78 C240 102 226 122 204 124 L72 124 C50 120 38 100 40 70 Z"), "f");
+P(hz, hp("M205 48 C226 32 238 14 246 0 M232 78 C248 58 258 44 264 38"));
+P(hz, hp("M246 0 L290 22 L284 40 L262 36 M242 2 L240 -16 L252 0"));
+P(hz, hp("M198 122 L204 168 L198 200 L202 244 M196 244 L214 244 M176 122 L176 168 L170 200 L174 244 M168 244 L186 244"));
+P(hz, hp("M70 118 C80 150 94 164 86 190 L72 204 L78 244 M72 244 L90 244 M96 122 C100 150 114 164 108 190 L98 204 L102 244 M96 244 L114 244"));
+P(hz, hp("M42 64 C18 72 10 112 20 152"));
+P(hz, hp("M0 250 L300 250")); show(hz, 36.9);
+pop(TX(S4, 870, 810, "1 HORSEPOWER", 44), 38.3);
+
+// ---------- S8 Niagara 39.3-45.7 ----------
+const S8 = scene(39.3, 45.7);
+P(S8, "M1040 330 L880 330 L880 1311 L1040 1311", "l"); S8.lastChild.style.strokeWidth = 7; pop(S8.lastChild, 39.3);
+const fall = G(S8); P(fall, "M690 330 L850 330 L850 1130 L690 1130 Z", "g");
+[720, 750, 780, 812].forEach((x, i) => P(fall, `M${x} ${380 + i * 40} L${x} ${1080 - i * 30}`, "l").style.strokeWidth = 4);
+const cupm = mug(S8, 770, 1130, 0.5); show(fall, 39.3); show(cupm.g, 39.3);
+P(S8, "M430 1311 L880 1311"); pop(S8.lastChild, 39.3);
+pop(TX(S8, 400, 470, "NIAGARA", 110), 42.0);
+pop(TX(S8, 400, 570, "51 m DROP", 56), 42.8);
+const thN = thermo(S8, 520, 720, 1230, 20, false); for (const i of thN.items) pop(i, 42.5);
+pop(TX(S8, 700, 1440, "+0.1 °C", 100, "red"), 44.8);
+mercTo(thN, 20.1, 44.8, 0.1);
+
+// ---------- S9 spoon vs bulbs 45.7-54.6 ----------
+const S9 = scene(45.7, 54.6);
+const rul2 = G(S9); P(rul2, `M220 ${RY(0)} L220 ${RY(1000)}`); for (let w = 0; w <= 1000; w += 100) P(rul2, `M220 ${RY(w)} L${w % 500 === 0 ? 256 : 240} ${RY(w)}`).style.strokeWidth = 5;
+[[0, "0"], [500, "500"], [1000, "1000 W"]].forEach(([w, s]) => { const t = TX(rul2, 204, RY(w) + 14, s, 36); t.style.textAnchor = "end"; }); show(rul2, 45.7);
+const l7 = D(S9, `M230 ${RY(700)} L1040 ${RY(700)}`, "r"); l7.style.strokeDasharray = "14 16"; l7.removeAttribute("pathLength"); pop(l7, 45.7); pop(E(S9, "circle", { cx: 220, cy: RY(700), r: 22 }, "r h"), 45.7);
+const m9 = mug(S9, 640, 780, 0.8); const sp9 = spoon(S9, m9, 1100); show(m9.g, 45.9); pop(sp9, 45.9); stir(sp9, m9, 45.9, 54.6, 12, { str: 0.6 });
+pop(E(S9, "circle", { cx: 220, cy: RY(0.5), r: 11 }, "r h"), 48.0);
+pop(TX(S9, 700, 1250, "GOT < 1 W", 80, "red"), 48.5);
+show(bulb(S9, 350, RY(0) - 50), 49.8); pop(TX(S9, 350, 1170, "100 W", 44), 49.8);
+pop(TX(S9, 640, 540, "NEED 700 W", 70), 51.5);
+
+// ---------- S10 heat in = heat out 54.6-60.4 ----------
+const S10 = scene(54.6, 60.4);
+const m10 = mug(S10, 540, 800, 1.3); const sp10 = spoon(S10, m10, 1100); show(m10.g, 54.6); pop(sp10, 54.6); stir(sp10, m10, 54.6, 60.4, 10, { str: 0.35 });
+const th10 = thermo(S10, 920, 520, 1220, 20.7); for (const i of th10.items) pop(i, 54.6); mercTo(th10, 21.4, 55.4, 0.5);
+const so = arrow(S10, 400, 560, 490, 660, "r"); pop(so, 58.5); pop(TX(S10, 330, 520, "SPOON IN", 52, "red"), 58.5);
+[[640, 770], [740, 740], [840, 770]].forEach(([x, y], i) => pop(P(S10, wave(x, y, 150), "l"), 56.5 + i * 0.15));
+pop(TX(S10, 540, 380, "HEAT OUT", 70), 56.9);
+
+// ---------- S11 stir far faster 60.4-66.1 ----------
+const S11 = scene(60.4, 66.1);
+const m11 = mug(S11, 540, 800, 1.3); const sp11 = spoon(S11, m11, 1100); show(m11.g, 60.4); pop(sp11, 60.4); stir(sp11, m11, 60.4, 66.1, 18, { rev: 2.6, str: 0.9 });
+[[-22, 60.6], [22, 60.6], [-11, 60.7], [11, 60.7]].forEach(([a, t]) => { const gs = G(S11); P(gs, `M${m11.X(410)} ${m11.Y(730)} L${m11.X(410)} ${m11.Y(1066)}`).style.opacity = 1; E(gs, "ellipse", { cx: m11.X(410), cy: m11.Y(1100), rx: 24 * 1.3, ry: 36 * 1.3 }, "l").style.opacity = 1; gs.style.strokeWidth = 4; gs.setAttribute("transform", `rotate(${a} ${m11.X(410)} ${m11.Y(900)})`); gs.style.opacity = 0; pop(gs, t); gs.style.strokeOpacity = 0.35; });
+pop(TX(S11, 540, 400, "FAR FASTER", 100), 60.9);
+pop(TX(S11, 540, 520, "10,000+ STROKES / s", 60), 63.0);
+
+// ---------- S12 cavitation 66.1-71.2 ----------
+const S12 = scene(66.1, 71.2);
+const m12 = mug(S12, 540, 800, 1.3); const sp12 = spoon(S12, m12, 1100); show(m12.g, 66.1); pop(sp12, 66.1); stir(sp12, m12, 66.1, 71.2, 18, { rev: 2.6, str: 0.9 });
+pop(TX(S12, 540, 380, "CAVITATION", 110), 67.2);
+pop(TX(S12, 540, 500, "LOW PRESSURE", 64, "red"), 68.0);
+[[580, 1100, 14], [620, 1150, 20], [540, 1160, 11], [650, 1090, 9]].forEach(([x, y, r], i) => pop(E(S12, "circle", { cx: x, cy: y, r }, "f h"), 70.3 + i * 0.15));
+
+// ---------- S13 not boiling 71.2-75.0 ----------
+const S13 = scene(71.2, 75.0);
+const m13 = mug(S13, 540, 740, 1.3); show(m13.g, 71.2);
+[[470, 1060, 14], [440, 1130, 20], [500, 1160, 11], [420, 1080, 9]].forEach(([x, y, r]) => pop(E(S13, "circle", { cx: x, cy: y, r }, "f h"), 71.2));
+const fl = G(S13); P(fl, "M540 1370 C490 1320 505 1280 520 1262 C525 1290 543 1290 548 1255 C595 1300 600 1340 540 1370 Z", "f"); P(fl, "M430 1380 L650 1380", "l"); P(fl, "M460 1212 L460 1380 M620 1212 L620 1380", "l"); show(fl, 72.1);
+const xs = P(S13, "M480 1250 L600 1370 M600 1250 L480 1370", "r"); pop(xs, 73.4);
+pop(TX(S13, 540, 380, "LOOKS LIKE BOILING", 64), 72.1); pop(TX(S13, 540, 500, "NOT HEAT", 110, "red"), 74.2);
+
+// ---------- S14 splashing 75.0-79.3 ----------
+const S14 = scene(75.0, 79.3);
+const m14 = mug(S14, 540, 800, 1.3); show(m14.g, 75.0);
+[[430, 690, 12], [500, 600, 9], [610, 650, 14], [680, 560, 8], [560, 520, 10]].forEach(([x, y, r], i) => pop(E(S14, "circle", { cx: x, cy: y, r }, "f h"), 75.2 + i * 0.08));
+pop(TX(S14, 540, 380, "SPLASH", 110), 75.5);
+[300, 400, 680, 780].forEach((x, i) => pop(P(S14, wave(x, 760, 190), "l"), 76.5 + i * 0.1));
+pop(TX(S14, 600, 1345, "MORE SURFACE = MORE HEAT OUT", 48), 76.9);
+
+// ---------- S15 tea experiment 79.3-86.0 ----------
+const S15 = scene(79.3, 86.0);
+const cols = [[200, "STIR", 81.2], [540, "DIP", 81.8], [880, "NOTHING", 83.0]]; const ends = [60, 59, 60];
+cols.forEach(([cx, lab, t], i) => {
+  const mg = mug(S15, cx - 40, 900, 0.55); show(mg.g, 79.3);
+  const th = thermo(S15, cx + 100, 560, 1020, 80, false); for (const it of th.items) pop(it, 79.3);
+  mercTo(th, ends[i], 84.2, 1.2);
+  pop(TX(S15, cx, 1160, lab, 60), t);
+});
+pop(TX(S15, 540, 420, "TEA, MEASURED", 80), 80.1); pop(TX(S15, 540, 1300, "ALL COOL ABOUT THE SAME", 56), 84.2); pop(TX(S15, 540, 1370, "(illustrative)", 40), 84.6);
+
+// ---------- S16 answer 86.0-93.1 ----------
+const S16 = scene(86.0, 93.1);
+const h16 = hookLayout(S16, 86.0); stir(h16.sp, h16.m, 86.0, 93.1, 12);
+const n16 = TX(S16, 430, 330, "NO.", 220, "red"); pop(n16, 88.3);
+const t20b = TX(S16, 900, 1400, "20 °C", 60); pop(t20b, 86.0); pop(TX(S16, 430, 440, "STILL ~ROOM TEMP", 60), 89.6);
+
+// ---------- S17 sugar + job description 93.1-98.33 ----------
+const S17 = scene(93.1, 98.33);
+const m17 = mug(S17, 330, 900, 1.0); show(m17.g, 93.1);
+const c1 = cube(S17, 305, 520); pop(c1, 93.8);
+tl.set(c1, { y: 0 }, 93.1); tl.to(c1, { y: 410, duration: 0.5, ease: "power2.in" }, 93.9); tl.to(c1, { y: 560, duration: 0.5, ease: "none" }, 94.4); tl.to(c1, { opacity: 0, duration: 0.25, ease: "none" }, 94.7);
+const card = G(S17); P(card, "M600 640 L1040 640 L1040 1120 L600 1120 Z", "f"); P(card, "M620 690 L1020 690");
+const ct = TX(card, 820, 676, "JOB DESCRIPTION", 38); show(card, 95.2);
+pop(TX(S17, 850, 800, "DISSOLVE SUGAR", 40), 95.2); pop(P(S17, "M618 800 L634 824 L664 768", "r"), 95.8);
+pop(TX(S17, 850, 960, "BOIL WATER", 40), 95.2); draw(D(S17, "M680 950 L1030 950", "r"), 96.1, 0.2);
+pop(TX(S17, 330, 1330, "SUGAR", 80), 94.7);
+
+// ---------- narrator: Codex alien poses, 1-frame swaps on the spoken beat ----------
+const PI = {};
+function poses(list, end = 98.33) {
+  list.forEach(([t, n], i) => {
+    if (!PI[n]) { PI[n] = E(world, "image", { href: `assets/chr/p${String(n).padStart(2, "0")}.png`, x: -134, y: 1335, width: 768, height: 768 }); PI[n].style.opacity = 0; }
+    tl.set(PI[n], { opacity: 1 }, t); tl.set(PI[n], { opacity: 0 }, i + 1 < list.length ? list[i + 1][0] : end);
+  });
+}
+poses([[0, 1], [4.3, 12], [5.6, 11], [7.9, 1], [8.6, 4], [12.8, 5], [15.8, 10], [17.9, 2], [18.6, 1], [20.9, 6], [24.2, 11], [25.5, 8], [27.8, 1], [29.7, 4], [34.8, 6], [36.9, 10], [38.3, 8],
+  [39.3, 2], [42.0, 11], [44.8, 9], [45.7, 5], [51.5, 11], [52.8, 12], [54.6, 1], [57.0, 7], [60.4, 8], [63.0, 10], [66.1, 5], [67.2, 11], [70.3, 2], [71.2, 12], [72.1, 6], [74.2, 11],
+  [75.0, 1], [77.0, 4], [79.3, 5], [80.6, 11], [83.0, 7], [86.0, 1], [88.3, 12], [90.0, 9], [93.1, 10], [95.0, 13], [96.7, 2]]);
+
+window.__timelines["main"] = tl;
+tl.seek(0);

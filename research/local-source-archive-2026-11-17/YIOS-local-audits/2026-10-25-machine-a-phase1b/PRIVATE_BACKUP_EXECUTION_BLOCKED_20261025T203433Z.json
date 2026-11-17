@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "20261025T203433Z",
+  "status": "BLOCKED_AUTHENTICATED_ACCOUNT_MISMATCH",
+  "authenticated_account_matches_authorized_owner": false,
+  "account_evidence": "Fresh connected Google Drive get_profile response; other-account identity redacted",
+  "destination_alias": "owner-designated yios folder",
+  "folder_acl": "NOT_RECHECKED_AFTER_ACCOUNT_GATE_FAILED",
+  "owner_quota": "NOT_VERIFIED",
+  "pilot_status": "BLOCKED_NOT_STARTED",
+  "pilot_expected_files": 4,
+  "pilot_expected_bytes": 95436174,
+  "files_uploaded": 0,
+  "bytes_uploaded": 0,
+  "files_independently_retrieved": 0,
+  "bytes_independently_verified": 0,
+  "bulk_status": "NOT_STARTED",
+  "source_hash_refresh": "NOT_RUN_ACCOUNT_GATE_FAILED",
+  "resource_usage": {
+    "five_hour_used_percent": 5,
+    "weekly_used_percent": 19,
+    "credit_balance": 0,
+    "context_pressure": "adequate",
+    "disk_available_KiB": 9031956
+  },
+  "process_observation": "Read-only process inventory taken; no exclusive writer authorization claimed or needed for this stopped transfer; no processes interrupted",
+  "next_action": "Owner must authenticate the connected Google Drive interface as the authorized account; fresh profile, exact folder ACL/parent/capabilities and owner quota checks must pass before any transfer",
+  "source_files_modified": false,
+  "git_mutations": false,
+  "local_reclaimed_bytes": 0,
+  "retention": "Preserve uploaded objects until explicit owner removal approval; no objects uploaded in this attempt",
+  "encryption": "Provider-managed encryption authorized; client-side encryption not established"
+}

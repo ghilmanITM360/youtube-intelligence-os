@@ -1,0 +1,2630 @@
+# YIOS Batch20 verified recovery receipt
+
+Status VERIFIED. Uploaded bytes: 350,220,324; complete independently retrieved SHA-256 verified bytes: 350,220,324. Source mappings: 20.
+
+All-in physical uploaded bytes before this MD: 4,243,491,319; independently verified bytes: 4,243,491,319. This MD is additional payload, counted by its separate CONTROL-UPLOAD/VERIFY receipts after complete independent readback. No duplicate/partial I/O is counted as new recovery coverage.
+
+Authenticated owner kgk2930@gmail.com; approved private yios hierarchy. Actual namespace IDs, source paths, hashes, bytes and remote object IDs follow. Source stability and current owner/private/parent/size gates passed. No source deletion/move/cleanup, Git/PR/branch/stash/LFS/production mutation, payment or reset credit use by this backup. This is file-level cloud recovery; independent-machine disaster recovery and production ownership acceptance remain unproven.
+
+```json
+{
+  "receipt": {
+    "status": "VERIFIED",
+    "batch": 20,
+    "completed_utc": "2026-10-26T13:29:19.368481+00:00",
+    "files": [
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/How The Big Short Actually Happened - Casual Economics (1080p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/How The Big Short Actually Happened - Casual Economics (1080p, h264).mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 133815468,
+        "allocated_path_bytes": 133816320,
+        "mtime_ns": 1791786722000000000,
+        "device": 16777229,
+        "inode": 93823957,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 366,
+        "proposed_destination_name": "00366__How The Big Short Actually Happened - Casual Economics (1080p, h264).mp4",
+        "fresh_stat": {
+          "st_size": 133815468,
+          "st_mtime_ns": 1791786722000000000,
+          "st_ctime_ns": 1792830799760399066,
+          "st_ino": 93823957,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "0f5da33ad971700c40146299ea23c0c11f6f7e647540a9ccd32d6b472de99f20",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.187369+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4",
+        "remote_url": "https://drive.google.com/file/d/1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:47.464755+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4",
+            "title": "How The Big Short Actually Happened - Casual Economics (1080p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "133815468",
+            "url": "https://drive.google.com/file/d/1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:15:17.152Z",
+            "modified_time": "2026-10-12T06:32:02.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 366,
+          "remote_id": "1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4",
+          "retrieval_file_id": "sediment://file_0000000072ec81fa8bac5c5b1a35800c",
+          "metadata": {
+            "id": "1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4",
+            "title": "How The Big Short Actually Happened - Casual Economics (1080p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "133815468",
+            "url": "https://drive.google.com/file/d/1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:15:17.152Z",
+            "modified_time": "2026-10-12T06:32:02.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:15:58.263749+00:00",
+          "retrieved_bytes": 133815468,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "133815468",
+          "retrieved_sha256": "0f5da33ad971700c40146299ea23c0c11f6f7e647540a9ccd32d6b472de99f20",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:17:44.953394+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/How a Debt Crisis Ruined Greece - Casual Economics (720p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/How a Debt Crisis Ruined Greece - Casual Economics (720p, h264).mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 35593578,
+        "allocated_path_bytes": 35594240,
+        "mtime_ns": 1791788051000000000,
+        "device": 16777229,
+        "inode": 93823879,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 367,
+        "proposed_destination_name": "00367__How a Debt Crisis Ruined Greece - Casual Economics (720p, h264).mp4",
+        "fresh_stat": {
+          "st_size": 35593578,
+          "st_mtime_ns": 1791788051000000000,
+          "st_ctime_ns": 1792830799759299569,
+          "st_ino": 93823879,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "1e6f91e7ed4e1126fb8648c7d8f5dbaf284ac44f3668917c563f28de2d126bf5",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.214267+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi",
+        "remote_url": "https://drive.google.com/file/d/1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:46.639202+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi",
+            "title": "How a Debt Crisis Ruined Greece - Casual Economics (720p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "35593578",
+            "url": "https://drive.google.com/file/d/1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:15:59.116Z",
+            "modified_time": "2026-10-12T06:54:11.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 367,
+          "remote_id": "1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi",
+          "retrieval_file_id": "sediment://file_000000007fd881faa4cb76ea1901b8bb",
+          "metadata": {
+            "id": "1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi",
+            "title": "How a Debt Crisis Ruined Greece - Casual Economics (720p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "35593578",
+            "url": "https://drive.google.com/file/d/1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:15:59.116Z",
+            "modified_time": "2026-10-12T06:54:11.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:18:25.699374+00:00",
+          "retrieved_bytes": 35593578,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "35593578",
+          "retrieved_sha256": "1e6f91e7ed4e1126fb8648c7d8f5dbaf284ac44f3668917c563f28de2d126bf5",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:18:47.417523+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/Japan’s Lost Decade An Economic Crisis in 16 Minutes - Casual Economics (720p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/Japan’s Lost Decade An Economic Crisis in 16 Minutes - Casual Economics (720p, h264).mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 37769850,
+        "allocated_path_bytes": 37773312,
+        "mtime_ns": 1791788689000000000,
+        "device": 16777229,
+        "inode": 93824048,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 368,
+        "proposed_destination_name": "00368__Japan’s Lost Decade An Economic Crisis in 16 Minutes - Casual Economics (720p, h264).mp4",
+        "fresh_stat": {
+          "st_size": 37769850,
+          "st_mtime_ns": 1791788689000000000,
+          "st_ctime_ns": 1792830799760523482,
+          "st_ino": 93824048,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "3e7047ebdd3f54a3abd9b0b464b1922ed169933743a857e30c9ca1678f6dd86f",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.244616+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8",
+        "remote_url": "https://drive.google.com/file/d/1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:44.913509+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8",
+            "title": "Japan’s Lost Decade An Economic Crisis in 16 Minutes - Casual Economics (720p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "37769850",
+            "url": "https://drive.google.com/file/d/1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:14:17.042Z",
+            "modified_time": "2026-10-12T07:04:49.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 368,
+          "remote_id": "1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8",
+          "retrieval_file_id": "sediment://file_0000000024fc8211aa0a369f5e9891de",
+          "metadata": {
+            "id": "1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8",
+            "title": "Japan’s Lost Decade An Economic Crisis in 16 Minutes - Casual Economics (720p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "37769850",
+            "url": "https://drive.google.com/file/d/1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:14:17.042Z",
+            "modified_time": "2026-10-12T07:04:49.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:19:11.219081+00:00",
+          "retrieved_bytes": 37769850,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "37769850",
+          "retrieved_sha256": "3e7047ebdd3f54a3abd9b0b464b1922ed169933743a857e30c9ca1678f6dd86f",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:19:32.504567+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/The 2008 Financial Crisis in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/The 2008 Financial Crisis in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 34525389,
+        "allocated_path_bytes": 34529280,
+        "mtime_ns": 1791788559000000000,
+        "device": 16777229,
+        "inode": 93823871,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 369,
+        "proposed_destination_name": "00369__The 2008 Financial Crisis in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "fresh_stat": {
+          "st_size": 34525389,
+          "st_mtime_ns": 1791788559000000000,
+          "st_ctime_ns": 1792830799759080486,
+          "st_ino": 93823871,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "e5d720fb126b2589dceca99f8c99c746472f65e1ef1f89677c6edd74199b8a9e",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.270563+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo",
+        "remote_url": "https://drive.google.com/file/d/1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:45.820458+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo",
+            "title": "The 2008 Financial Crisis in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "34525389",
+            "url": "https://drive.google.com/file/d/1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:15.079Z",
+            "modified_time": "2026-10-12T07:02:39.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 369,
+          "remote_id": "1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo",
+          "retrieval_file_id": "sediment://file_00000000de7081fa896644b2032495e0",
+          "metadata": {
+            "id": "1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo",
+            "title": "The 2008 Financial Crisis in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "34525389",
+            "url": "https://drive.google.com/file/d/1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:15.079Z",
+            "modified_time": "2026-10-12T07:02:39.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:19:42.514348+00:00",
+          "retrieved_bytes": 34525389,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "34525389",
+          "retrieved_sha256": "e5d720fb126b2589dceca99f8c99c746472f65e1ef1f89677c6edd74199b8a9e",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:20:42.945822+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/The Great Depression in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/The Great Depression in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 26643286,
+        "allocated_path_bytes": 26644480,
+        "mtime_ns": 1791788744000000000,
+        "device": 16777229,
+        "inode": 93824023,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 370,
+        "proposed_destination_name": "00370__The Great Depression in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "fresh_stat": {
+          "st_size": 26643286,
+          "st_mtime_ns": 1791788744000000000,
+          "st_ctime_ns": 1792830799760493566,
+          "st_ino": 93824023,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "e5db7fb9bb72f361f7ec252f80815e2018124499365972b3dbf893774d5be7f3",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.289903+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH",
+        "remote_url": "https://drive.google.com/file/d/1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:43.938121+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH",
+            "title": "The Great Depression in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "26643286",
+            "url": "https://drive.google.com/file/d/1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:15:29.214Z",
+            "modified_time": "2026-10-12T07:05:44.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 370,
+          "remote_id": "1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH",
+          "retrieval_file_id": "sediment://file_00000000ba40820c8a30949ad5e09fe0",
+          "metadata": {
+            "id": "1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH",
+            "title": "The Great Depression in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+            "mime_type": "video/mp4",
+            "size": "26643286",
+            "url": "https://drive.google.com/file/d/1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:15:29.214Z",
+            "modified_time": "2026-10-12T07:05:44.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:20:56.188019+00:00",
+          "retrieved_bytes": 26643286,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "26643286",
+          "retrieved_sha256": "e5db7fb9bb72f361f7ec252f80815e2018124499365972b3dbf893774d5be7f3",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:21:10.144096+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/But what if we tried MORE power？ [jgafb8G7i4o].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/But what if we tried MORE power？ [jgafb8G7i4o].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 7182215,
+        "allocated_path_bytes": 7184384,
+        "mtime_ns": 1792432266000000000,
+        "device": 16777229,
+        "inode": 93824149,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 371,
+        "proposed_destination_name": "00371__But what if we tried MORE power？ [jgafb8G7i4o].mp4",
+        "fresh_stat": {
+          "st_size": 7182215,
+          "st_mtime_ns": 1792432266000000000,
+          "st_ctime_ns": 1792830801517693631,
+          "st_ino": 93824149,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "320cdf05d57b5922d196bd8e8af28db26cc2eca24794db28631e0bbe0c3f921c",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.295976+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc",
+        "remote_url": "https://drive.google.com/file/d/1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:39.755491+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc",
+            "title": "But what if we tried MORE power？ [jgafb8G7i4o].mp4",
+            "mime_type": "video/mp4",
+            "size": "7182215",
+            "url": "https://drive.google.com/file/d/1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:28.699Z",
+            "modified_time": "2026-10-19T17:51:06.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 371,
+          "remote_id": "1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc",
+          "retrieval_file_id": "sediment://file_0000000085c081fa826b3b6d80bc3965",
+          "metadata": {
+            "id": "1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc",
+            "title": "But what if we tried MORE power？ [jgafb8G7i4o].mp4",
+            "mime_type": "video/mp4",
+            "size": "7182215",
+            "url": "https://drive.google.com/file/d/1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:28.699Z",
+            "modified_time": "2026-10-19T17:51:06.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:21:15.126840+00:00",
+          "retrieved_bytes": 7182215,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "7182215",
+          "retrieved_sha256": "320cdf05d57b5922d196bd8e8af28db26cc2eca24794db28631e0bbe0c3f921c",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:21:22.364151+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Can you drive west to lengthen the sunset？ [U8F7UNK9jco].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Can you drive west to lengthen the sunset？ [U8F7UNK9jco].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 7144234,
+        "allocated_path_bytes": 7147520,
+        "mtime_ns": 1792432212000000000,
+        "device": 16777229,
+        "inode": 93824125,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 372,
+        "proposed_destination_name": "00372__Can you drive west to lengthen the sunset？ [U8F7UNK9jco].mp4",
+        "fresh_stat": {
+          "st_size": 7144234,
+          "st_mtime_ns": 1792432212000000000,
+          "st_ctime_ns": 1792830801517486965,
+          "st_ino": 93824125,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "38b212f48aca2b1a78a3e9129a34c30010feff7c555d60c0afaf8d668c625a0a",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.301856+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M",
+        "remote_url": "https://drive.google.com/file/d/1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:41.501923+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M",
+            "title": "Can you drive west to lengthen the sunset？ [U8F7UNK9jco].mp4",
+            "mime_type": "video/mp4",
+            "size": "7144234",
+            "url": "https://drive.google.com/file/d/1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:24.204Z",
+            "modified_time": "2026-10-19T17:50:12.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 372,
+          "remote_id": "1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M",
+          "retrieval_file_id": "sediment://file_000000005f7881fabf2885bd65b871a1",
+          "metadata": {
+            "id": "1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M",
+            "title": "Can you drive west to lengthen the sunset？ [U8F7UNK9jco].mp4",
+            "mime_type": "video/mp4",
+            "size": "7144234",
+            "url": "https://drive.google.com/file/d/1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:24.204Z",
+            "modified_time": "2026-10-19T17:50:12.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:21:27.564214+00:00",
+          "retrieved_bytes": 7144234,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "7144234",
+          "retrieved_sha256": "38b212f48aca2b1a78a3e9129a34c30010feff7c555d60c0afaf8d668c625a0a",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:21:33.036218+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Can you power your computer by typing？ [0L44GEJ5pLE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Can you power your computer by typing？ [0L44GEJ5pLE].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 5979635,
+        "allocated_path_bytes": 5980160,
+        "mtime_ns": 1792432202000000000,
+        "device": 16777229,
+        "inode": 93824207,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 373,
+        "proposed_destination_name": "00373__Can you power your computer by typing？ [0L44GEJ5pLE].mp4",
+        "fresh_stat": {
+          "st_size": 5979635,
+          "st_mtime_ns": 1792432202000000000,
+          "st_ctime_ns": 1792830801518563295,
+          "st_ino": 93824207,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "7daf8ca59667fa64dac0d48ba49ad475873f8b1f6207639a0ba7a6ad767427d1",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.308368+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y",
+        "remote_url": "https://drive.google.com/file/d/1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:42.348469+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y",
+            "title": "Can you power your computer by typing？ [0L44GEJ5pLE].mp4",
+            "mime_type": "video/mp4",
+            "size": "5979635",
+            "url": "https://drive.google.com/file/d/1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:19.344Z",
+            "modified_time": "2026-10-19T17:50:02.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 373,
+          "remote_id": "1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y",
+          "retrieval_file_id": "sediment://file_0000000086388207bd187e00ff7bc42f",
+          "metadata": {
+            "id": "1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y",
+            "title": "Can you power your computer by typing？ [0L44GEJ5pLE].mp4",
+            "mime_type": "video/mp4",
+            "size": "5979635",
+            "url": "https://drive.google.com/file/d/1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:19.344Z",
+            "modified_time": "2026-10-19T17:50:02.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:21:45.735911+00:00",
+          "retrieved_bytes": 5979635,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "5979635",
+          "retrieved_sha256": "7daf8ca59667fa64dac0d48ba49ad475873f8b1f6207639a0ba7a6ad767427d1",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:21:48.829586+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Circumference pop quiz! [5k8ciEx__5w].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Circumference pop quiz! [5k8ciEx__5w].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 599077,
+        "allocated_path_bytes": 602112,
+        "mtime_ns": 1792432594000000000,
+        "device": 16777229,
+        "inode": 93824223,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 374,
+        "proposed_destination_name": "00374__Circumference pop quiz! [5k8ciEx__5w].mp4",
+        "fresh_stat": {
+          "st_size": 599077,
+          "st_mtime_ns": 1792432594000000000,
+          "st_ctime_ns": 1792830801518819961,
+          "st_ino": 93824223,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "05fce38976a32594cc613ce3e6b88fe00fe3b62c7a38d090f287ae0d074fddd3",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.309570+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8",
+        "remote_url": "https://drive.google.com/file/d/1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:32.199396+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8",
+            "title": "Circumference pop quiz! [5k8ciEx__5w].mp4",
+            "mime_type": "video/mp4",
+            "size": "599077",
+            "url": "https://drive.google.com/file/d/1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:13:33.431Z",
+            "modified_time": "2026-10-19T17:56:34.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 374,
+          "remote_id": "1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8",
+          "retrieval_file_id": "sediment://file_0000000052b481fa967f128bd59f7b79",
+          "metadata": {
+            "id": "1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8",
+            "title": "Circumference pop quiz! [5k8ciEx__5w].mp4",
+            "mime_type": "video/mp4",
+            "size": "599077",
+            "url": "https://drive.google.com/file/d/1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:13:33.431Z",
+            "modified_time": "2026-10-19T17:56:34.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:21:52.959233+00:00",
+          "retrieved_bytes": 599077,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "599077",
+          "retrieved_sha256": "05fce38976a32594cc613ce3e6b88fe00fe3b62c7a38d090f287ae0d074fddd3",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:21:53.409487+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could We Harvest Power From Lightning？ [_efsqO-4OoQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could We Harvest Power From Lightning？ [_efsqO-4OoQ].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 6950166,
+        "allocated_path_bytes": 6950912,
+        "mtime_ns": 1792432604000000000,
+        "device": 16777229,
+        "inode": 93824081,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 375,
+        "proposed_destination_name": "00375__Could We Harvest Power From Lightning？ [_efsqO-4OoQ].mp4",
+        "fresh_stat": {
+          "st_size": 6950166,
+          "st_mtime_ns": 1792432604000000000,
+          "st_ctime_ns": 1792830801511977897,
+          "st_ino": 93824081,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "3f3f2e4ef121b0ce610fc7978c1121636197e267cf74218c2e009af562b1c996",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.315939+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI",
+        "remote_url": "https://drive.google.com/file/d/1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:30.482387+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI",
+            "title": "Could We Harvest Power From Lightning？ [_efsqO-4OoQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "6950166",
+            "url": "https://drive.google.com/file/d/1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:14:21.427Z",
+            "modified_time": "2026-10-19T17:56:44.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 375,
+          "remote_id": "1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI",
+          "retrieval_file_id": "sediment://file_00000000e03481fa9a301f6c56b5f1cb",
+          "metadata": {
+            "id": "1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI",
+            "title": "Could We Harvest Power From Lightning？ [_efsqO-4OoQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "6950166",
+            "url": "https://drive.google.com/file/d/1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:14:21.427Z",
+            "modified_time": "2026-10-19T17:56:44.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:22:42.195073+00:00",
+          "retrieved_bytes": 6950166,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "6950166",
+          "retrieved_sha256": "3f3f2e4ef121b0ce610fc7978c1121636197e267cf74218c2e009af562b1c996",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:22:47.394910+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could the Hubble take a photo of you？ [TgA0lXEW7dw].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could the Hubble take a photo of you？ [TgA0lXEW7dw].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 4485238,
+        "allocated_path_bytes": 4489216,
+        "mtime_ns": 1792432576000000000,
+        "device": 16777229,
+        "inode": 93824174,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 376,
+        "proposed_destination_name": "00376__Could the Hubble take a photo of you？ [TgA0lXEW7dw].mp4",
+        "fresh_stat": {
+          "st_size": 4485238,
+          "st_mtime_ns": 1792432576000000000,
+          "st_ctime_ns": 1792830801517994797,
+          "st_ino": 93824174,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "4121a3216ff2b982758b4b7eed169b84d2d976c9816e2739dd5351bd7e2779ad",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.319963+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1KbtgaReioYkkmSqecEdIP7km4HiXaaHY",
+        "remote_url": "https://drive.google.com/file/d/1KbtgaReioYkkmSqecEdIP7km4HiXaaHY/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:33.008908+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1KbtgaReioYkkmSqecEdIP7km4HiXaaHY",
+            "title": "Could the Hubble take a photo of you？ [TgA0lXEW7dw].mp4",
+            "mime_type": "video/mp4",
+            "size": "4485238",
+            "url": "https://drive.google.com/file/d/1KbtgaReioYkkmSqecEdIP7km4HiXaaHY/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1KbtgaReioYkkmSqecEdIP7km4HiXaaHY/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:36.828Z",
+            "modified_time": "2026-10-19T17:56:16.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 376,
+          "remote_id": "1KbtgaReioYkkmSqecEdIP7km4HiXaaHY",
+          "retrieval_file_id": "sediment://file_00000000281882118c900528f211c799",
+          "metadata": {
+            "id": "1KbtgaReioYkkmSqecEdIP7km4HiXaaHY",
+            "title": "Could the Hubble take a photo of you？ [TgA0lXEW7dw].mp4",
+            "mime_type": "video/mp4",
+            "size": "4485238",
+            "url": "https://drive.google.com/file/d/1KbtgaReioYkkmSqecEdIP7km4HiXaaHY/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1KbtgaReioYkkmSqecEdIP7km4HiXaaHY/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:36.828Z",
+            "modified_time": "2026-10-19T17:56:16.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:22:56.204257+00:00",
+          "retrieved_bytes": 4485238,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "4485238",
+          "retrieved_sha256": "4121a3216ff2b982758b4b7eed169b84d2d976c9816e2739dd5351bd7e2779ad",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:22:58.556338+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could this be the last surviving human light source？ [kNry0bf7eC0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could this be the last surviving human light source？ [kNry0bf7eC0].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 5250038,
+        "allocated_path_bytes": 5251072,
+        "mtime_ns": 1792432598000000000,
+        "device": 16777229,
+        "inode": 93824225,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 377,
+        "proposed_destination_name": "00377__Could this be the last surviving human light source？ [kNry0bf7eC0].mp4",
+        "fresh_stat": {
+          "st_size": 5250038,
+          "st_mtime_ns": 1792432598000000000,
+          "st_ctime_ns": 1792830801518848503,
+          "st_ino": 93824225,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "cb6eb61dd038a1130dc353658dcd6752f2ed171dca1051925cf635e078ca221f",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.324919+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt",
+        "remote_url": "https://drive.google.com/file/d/1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:31.359707+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt",
+            "title": "Could this be the last surviving human light source？ [kNry0bf7eC0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5250038",
+            "url": "https://drive.google.com/file/d/1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:35.607Z",
+            "modified_time": "2026-10-19T17:56:38.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 377,
+          "remote_id": "1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt",
+          "retrieval_file_id": "sediment://file_00000000fa108230b8e8d91a2218b69b",
+          "metadata": {
+            "id": "1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt",
+            "title": "Could this be the last surviving human light source？ [kNry0bf7eC0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5250038",
+            "url": "https://drive.google.com/file/d/1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:35.607Z",
+            "modified_time": "2026-10-19T17:56:38.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:23:06.653497+00:00",
+          "retrieved_bytes": 5250038,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "5250038",
+          "retrieved_sha256": "cb6eb61dd038a1130dc353658dcd6752f2ed171dca1051925cf635e078ca221f",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:23:11.020532+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could we survive eating only humans？ [PUtI3xoaHx0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could we survive eating only humans？ [PUtI3xoaHx0].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 5853461,
+        "allocated_path_bytes": 5857280,
+        "mtime_ns": 1792432216000000000,
+        "device": 16777229,
+        "inode": 93824066,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 378,
+        "proposed_destination_name": "00378__Could we survive eating only humans？ [PUtI3xoaHx0].mp4",
+        "fresh_stat": {
+          "st_size": 5853461,
+          "st_mtime_ns": 1792432216000000000,
+          "st_ctime_ns": 1792830801511914564,
+          "st_ino": 93824066,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "b0710bcfddef462dffe7d57f82e51c38ee512dc66440bf1553cc53c354a4cc6f",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.329900+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1tgb18yHdTncaBPUz8vCwdhKroVnvkogl",
+        "remote_url": "https://drive.google.com/file/d/1tgb18yHdTncaBPUz8vCwdhKroVnvkogl/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:40.601100+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1tgb18yHdTncaBPUz8vCwdhKroVnvkogl",
+            "title": "Could we survive eating only humans？ [PUtI3xoaHx0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5853461",
+            "url": "https://drive.google.com/file/d/1tgb18yHdTncaBPUz8vCwdhKroVnvkogl/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1tgb18yHdTncaBPUz8vCwdhKroVnvkogl/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:33.213Z",
+            "modified_time": "2026-10-19T17:50:16.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 378,
+          "remote_id": "1tgb18yHdTncaBPUz8vCwdhKroVnvkogl",
+          "retrieval_file_id": "sediment://file_00000000e73481fa9e453f58c51c6972",
+          "metadata": {
+            "id": "1tgb18yHdTncaBPUz8vCwdhKroVnvkogl",
+            "title": "Could we survive eating only humans？ [PUtI3xoaHx0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5853461",
+            "url": "https://drive.google.com/file/d/1tgb18yHdTncaBPUz8vCwdhKroVnvkogl/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1tgb18yHdTncaBPUz8vCwdhKroVnvkogl/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:33.213Z",
+            "modified_time": "2026-10-19T17:50:16.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:23:16.084981+00:00",
+          "retrieved_bytes": 5853461,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "5853461",
+          "retrieved_sha256": "b0710bcfddef462dffe7d57f82e51c38ee512dc66440bf1553cc53c354a4cc6f",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:23:28.907748+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you make an umbrella out of lasers？ [zgBTwtg7H8E].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you make an umbrella out of lasers？ [zgBTwtg7H8E].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 6381682,
+        "allocated_path_bytes": 6385664,
+        "mtime_ns": 1792432392000000000,
+        "device": 16777229,
+        "inode": 93824195,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 379,
+        "proposed_destination_name": "00379__Could you make an umbrella out of lasers？ [zgBTwtg7H8E].mp4",
+        "fresh_stat": {
+          "st_size": 6381682,
+          "st_mtime_ns": 1792432392000000000,
+          "st_ctime_ns": 1792830801518295296,
+          "st_ino": 93824195,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "ec0837c9b6beeae42121f1470126914921e9bdefc7f3589017a51859d3d3da86",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.335367+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21",
+        "remote_url": "https://drive.google.com/file/d/1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:37.633651+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21",
+            "title": "Could you make an umbrella out of lasers？ [zgBTwtg7H8E].mp4",
+            "mime_type": "video/mp4",
+            "size": "6381682",
+            "url": "https://drive.google.com/file/d/1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:18.044Z",
+            "modified_time": "2026-10-19T17:53:12.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 379,
+          "remote_id": "1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21",
+          "retrieval_file_id": "sediment://file_000000009ecc81fa9af2139960122b8b",
+          "metadata": {
+            "id": "1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21",
+            "title": "Could you make an umbrella out of lasers？ [zgBTwtg7H8E].mp4",
+            "mime_type": "video/mp4",
+            "size": "6381682",
+            "url": "https://drive.google.com/file/d/1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:18.044Z",
+            "modified_time": "2026-10-19T17:53:12.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:23:35.948967+00:00",
+          "retrieved_bytes": 6381682,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "6381682",
+          "retrieved_sha256": "ec0837c9b6beeae42121f1470126914921e9bdefc7f3589017a51859d3d3da86",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:23:40.957172+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you power a house with the radioactivity from bananas？ [BnGqPxnQh9A].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you power a house with the radioactivity from bananas？ [BnGqPxnQh9A].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 5331498,
+        "allocated_path_bytes": 5332992,
+        "mtime_ns": 1792432176000000000,
+        "device": 16777229,
+        "inode": 93824270,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 380,
+        "proposed_destination_name": "00380__Could you power a house with the radioactivity from bananas？ [BnGqPxnQh9A].mp4",
+        "fresh_stat": {
+          "st_size": 5331498,
+          "st_mtime_ns": 1792432176000000000,
+          "st_ctime_ns": 1792830801519190168,
+          "st_ino": 93824270,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "04ce628fd63b51cccac643f815f16eba340b59dc54ae04a1e97d5279135906ca",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.339706+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3",
+        "remote_url": "https://drive.google.com/file/d/1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:43.123046+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3",
+            "title": "Could you power a house with the radioactivity from bananas？ [BnGqPxnQh9A].mp4",
+            "mime_type": "video/mp4",
+            "size": "5331498",
+            "url": "https://drive.google.com/file/d/1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:40.594Z",
+            "modified_time": "2026-10-19T17:49:36.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 380,
+          "remote_id": "1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3",
+          "retrieval_file_id": "sediment://file_00000000747881f5805a04b58bf2a63c",
+          "metadata": {
+            "id": "1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3",
+            "title": "Could you power a house with the radioactivity from bananas？ [BnGqPxnQh9A].mp4",
+            "mime_type": "video/mp4",
+            "size": "5331498",
+            "url": "https://drive.google.com/file/d/1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:40.594Z",
+            "modified_time": "2026-10-19T17:49:36.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:23:50.356210+00:00",
+          "retrieved_bytes": 5331498,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "5331498",
+          "retrieved_sha256": "04ce628fd63b51cccac643f815f16eba340b59dc54ae04a1e97d5279135906ca",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:23:55.020666+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you power your computer by typing？ [X97DDWvxaqQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you power your computer by typing？ [X97DDWvxaqQ].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 9317412,
+        "allocated_path_bytes": 9318400,
+        "mtime_ns": 1792432430000000000,
+        "device": 16777229,
+        "inode": 93824308,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 381,
+        "proposed_destination_name": "00381__Could you power your computer by typing？ [X97DDWvxaqQ].mp4",
+        "fresh_stat": {
+          "st_size": 9317412,
+          "st_mtime_ns": 1792432430000000000,
+          "st_ctime_ns": 1792830801519424376,
+          "st_ino": 93824308,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "c3726ab5e284be3a7fa9b687ddffe354f6181d59e62759c80e23cf67f8426621",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.347277+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18",
+        "remote_url": "https://drive.google.com/file/d/1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:36.658107+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18",
+            "title": "Could you power your computer by typing？ [X97DDWvxaqQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "9317412",
+            "url": "https://drive.google.com/file/d/1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:13.767Z",
+            "modified_time": "2026-10-19T17:53:50.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 381,
+          "remote_id": "1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18",
+          "retrieval_file_id": "sediment://file_000000002ad881faaa05bc08e967ee67",
+          "metadata": {
+            "id": "1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18",
+            "title": "Could you power your computer by typing？ [X97DDWvxaqQ].mp4",
+            "mime_type": "video/mp4",
+            "size": "9317412",
+            "url": "https://drive.google.com/file/d/1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:13.767Z",
+            "modified_time": "2026-10-19T17:53:50.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:24:00.392475+00:00",
+          "retrieved_bytes": 9317412,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "9317412",
+          "retrieved_sha256": "c3726ab5e284be3a7fa9b687ddffe354f6181d59e62759c80e23cf67f8426621",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:24:05.743721+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you survive a nanosecond on the Sun？ [UXA-Af-JeCE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you survive a nanosecond on the Sun？ [UXA-Af-JeCE].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 5738015,
+        "allocated_path_bytes": 5738496,
+        "mtime_ns": 1792432294000000000,
+        "device": 16777229,
+        "inode": 93824263,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 382,
+        "proposed_destination_name": "00382__Could you survive a nanosecond on the Sun？ [UXA-Af-JeCE].mp4",
+        "fresh_stat": {
+          "st_size": 5738015,
+          "st_mtime_ns": 1792432294000000000,
+          "st_ctime_ns": 1792830801519130877,
+          "st_ino": 93824263,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "4f343ee1ae454d422dbaa7ba23086d947c33a59b1dbb79f5c0453fda312e3dba",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.352146+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB",
+        "remote_url": "https://drive.google.com/file/d/1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:38.710072+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB",
+            "title": "Could you survive a nanosecond on the Sun？ [UXA-Af-JeCE].mp4",
+            "mime_type": "video/mp4",
+            "size": "5738015",
+            "url": "https://drive.google.com/file/d/1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:26.010Z",
+            "modified_time": "2026-10-19T17:51:34.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 382,
+          "remote_id": "1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB",
+          "retrieval_file_id": "sediment://file_0000000018308230a6f7f1ff47e5c005",
+          "metadata": {
+            "id": "1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB",
+            "title": "Could you survive a nanosecond on the Sun？ [UXA-Af-JeCE].mp4",
+            "mime_type": "video/mp4",
+            "size": "5738015",
+            "url": "https://drive.google.com/file/d/1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:26.010Z",
+            "modified_time": "2026-10-19T17:51:34.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:28:00.297950+00:00",
+          "retrieved_bytes": 5738015,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "5738015",
+          "retrieved_sha256": "4f343ee1ae454d422dbaa7ba23086d947c33a59b1dbb79f5c0453fda312e3dba",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:28:04.944900+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you swim in a spent nuclear fuel pool？ [vBfR2Zb0dkc].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you swim in a spent nuclear fuel pool？ [vBfR2Zb0dkc].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 2842467,
+        "allocated_path_bytes": 2842624,
+        "mtime_ns": 1792432554000000000,
+        "device": 16777229,
+        "inode": 93824278,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 383,
+        "proposed_destination_name": "00383__Could you swim in a spent nuclear fuel pool？ [vBfR2Zb0dkc].mp4",
+        "fresh_stat": {
+          "st_size": 2842467,
+          "st_mtime_ns": 1792432554000000000,
+          "st_ctime_ns": 1792830801519241793,
+          "st_ino": 93824278,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "0c29f14250531622b01b0f3578793b677e4aff0eed4ea58c8cd34d3dfcc17e79",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.355015+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu",
+        "remote_url": "https://drive.google.com/file/d/1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:35.735340+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu",
+            "title": "Could you swim in a spent nuclear fuel pool？ [vBfR2Zb0dkc].mp4",
+            "mime_type": "video/mp4",
+            "size": "2842467",
+            "url": "https://drive.google.com/file/d/1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:29.265Z",
+            "modified_time": "2026-10-19T17:55:54.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 383,
+          "remote_id": "1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu",
+          "retrieval_file_id": "sediment://file_00000000928081faba2ed2495fda5e7f",
+          "metadata": {
+            "id": "1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu",
+            "title": "Could you swim in a spent nuclear fuel pool？ [vBfR2Zb0dkc].mp4",
+            "mime_type": "video/mp4",
+            "size": "2842467",
+            "url": "https://drive.google.com/file/d/1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:29.265Z",
+            "modified_time": "2026-10-19T17:55:54.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:28:09.767018+00:00",
+          "retrieved_bytes": 2842467,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "2842467",
+          "retrieved_sha256": "0c29f14250531622b01b0f3578793b677e4aff0eed4ea58c8cd34d3dfcc17e79",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:28:11.757497+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you use a laser as an umbrella？ [xA9aqKGBeOs].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you use a laser as an umbrella？ [xA9aqKGBeOs].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 3014209,
+        "allocated_path_bytes": 3014656,
+        "mtime_ns": 1792432558000000000,
+        "device": 16777229,
+        "inode": 93824026,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 384,
+        "proposed_destination_name": "00384__Could you use a laser as an umbrella？ [xA9aqKGBeOs].mp4",
+        "fresh_stat": {
+          "st_size": 3014209,
+          "st_mtime_ns": 1792432558000000000,
+          "st_ctime_ns": 1792830801511666648,
+          "st_ino": 93824026,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "baef873290ad497db1128366b4bc1c6712548ea1192861c794019dbd67246c2d",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.357880+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8",
+        "remote_url": "https://drive.google.com/file/d/1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:34.764411+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8",
+            "title": "Could you use a laser as an umbrella？ [xA9aqKGBeOs].mp4",
+            "mime_type": "video/mp4",
+            "size": "3014209",
+            "url": "https://drive.google.com/file/d/1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:31.673Z",
+            "modified_time": "2026-10-19T17:55:58.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 384,
+          "remote_id": "1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8",
+          "retrieval_file_id": "sediment://file_0000000016a881fab3b13247371ba4a6",
+          "metadata": {
+            "id": "1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8",
+            "title": "Could you use a laser as an umbrella？ [xA9aqKGBeOs].mp4",
+            "mime_type": "video/mp4",
+            "size": "3014209",
+            "url": "https://drive.google.com/file/d/1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:16:31.673Z",
+            "modified_time": "2026-10-19T17:55:58.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:28:16.692389+00:00",
+          "retrieved_bytes": 3014209,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "3014209",
+          "retrieved_sha256": "baef873290ad497db1128366b4bc1c6712548ea1192861c794019dbd67246c2d",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:28:19.966175+00:00"
+        }
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/How detailed would the Hubbles images be if it looked at Earth？ [i6e4NnFnQi0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/How detailed would the Hubbles images be if it looked at Earth？ [i6e4NnFnQi0].mp4",
+        "root": "/Users/ghilmankhan/Downloads/videos in mp3",
+        "kind": "regular",
+        "bytes": 5803406,
+        "allocated_path_bytes": 5804032,
+        "mtime_ns": 1792432570000000000,
+        "device": 16777229,
+        "inode": 93824286,
+        "nlink": 1,
+        "sha256": null,
+        "hash_status": "HASH_REQUIRED_BEFORE_TRANSFER",
+        "object_key": null,
+        "priority": "A_EVIDENCE",
+        "provenance": "Phase 0 inventory + bounded known-root name/stat reconciliation 2026-10-25T23:56:39.325995+05:00",
+        "publication": null,
+        "binary_restore_status": "COMPLETE_REMOTE_BYTES_SHA256_VERIFIED",
+        "upload_status": "UPLOADED_AND_VERIFIED",
+        "actual_reclaimable_bytes": null,
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "rank": 0,
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "existing_remote_mapping": null,
+        "verification_status": "HASH_REFRESH_REQUIRED",
+        "sequence": 385,
+        "proposed_destination_name": "00385__How detailed would the Hubbles images be if it looked at Earth？ [i6e4NnFnQi0].mp4",
+        "fresh_stat": {
+          "st_size": 5803406,
+          "st_mtime_ns": 1792432570000000000,
+          "st_ctime_ns": 1792830801519326001,
+          "st_ino": 93824286,
+          "st_dev": 16777229
+        },
+        "fresh_sha256": "b06384dc341b692b0832a9fb516f8b332cf269307a097d7f341d2d5832ee347d",
+        "hash_refreshed_utc": "2026-10-26T12:12:41.362321+00:00",
+        "status": "VERIFIED",
+        "remote_id": "1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS",
+        "remote_url": "https://drive.google.com/file/d/1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS/view?usp=drivesdk",
+        "upload_utc": "2026-10-26T12:35:33.913593+00:00",
+        "upload_response": {
+          "method": "Owner authenticated standard Drive multi-file upload into newly created private empty namespace; actual ID from bounded direct-child API listing, independent per-object metadata validation; raw original names preserved",
+          "metadata": {
+            "id": "1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS",
+            "title": "How detailed would the Hubbles images be if it looked at Earth？ [i6e4NnFnQi0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5803406",
+            "url": "https://drive.google.com/file/d/1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:22.034Z",
+            "modified_time": "2026-10-19T17:56:10.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          }
+        },
+        "retrieval": {
+          "sequence": 385,
+          "remote_id": "1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS",
+          "retrieval_file_id": "sediment://file_000000000be881faafc66168df365e96",
+          "metadata": {
+            "id": "1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS",
+            "title": "How detailed would the Hubbles images be if it looked at Earth？ [i6e4NnFnQi0].mp4",
+            "mime_type": "video/mp4",
+            "size": "5803406",
+            "url": "https://drive.google.com/file/d/1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-10-26T12:34:22.034Z",
+            "modified_time": "2026-10-19T17:56:10.000Z",
+            "parent_ids": [
+              "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl"
+            ],
+            "drive_id": null,
+            "current_user_can_share": true,
+            "has_augmented_permissions": null,
+            "shared": false,
+            "permissions": [
+              {
+                "type": "user",
+                "role": "owner",
+                "emailAddress": "kgk2930@gmail.com",
+                "domain": null,
+                "displayName": "Ghilman khan",
+                "allowFileDiscovery": null
+              }
+            ],
+            "source_visibility_status": "permission_metadata_available"
+          },
+          "started_utc": "2026-10-26T13:28:24.595252+00:00",
+          "retrieved_bytes": 5803406,
+          "status": "VERIFIED",
+          "method": "Fresh authenticated complete raw remote read after upload phase ended; streamed SHA-256, no local source substitution or staging",
+          "http_status": 200,
+          "response_content_length": "5803406",
+          "retrieved_sha256": "b06384dc341b692b0832a9fb516f8b332cf269307a097d7f341d2d5832ee347d",
+          "source_stable_after_retrieval": true,
+          "finished_utc": "2026-10-26T13:28:40.342084+00:00"
+        }
+      }
+    ],
+    "uploaded_bytes": 350220324,
+    "independently_retrieved_bytes": 350220324,
+    "mapped_source_files": 20,
+    "preflight": {
+      "account": "kgk2930@gmail.com",
+      "privacy": "OWNER_ONLY",
+      "ui_used_gb": 4.42,
+      "conservative_free_bytes": 10154061137,
+      "storage_ui": "4.42 GB of 15 GB; owner Google One UI freshly reloaded",
+      "observed_at": "2026-10-26T12:12:40.978Z",
+      "five_hour_used": 20,
+      "weekly_used": 10,
+      "paid_credits": "0",
+      "context": "Atomic Batch19 plus full handoff verified; current context sufficient; exact meter unavailable",
+      "ownership": "Stable read-only originals; protected sessions preserved",
+      "destination_folder_id": "12FkMHzKAtNYleLwX2UBmbMDMlk_6sXEf",
+      "charges": "Existing allowance; paid credits zero, no upgrade/payment action",
+      "mac_free_bytes": 24754384896
+    },
+    "postflight": {
+      "batch_dir": "/Users/ghilmankhan/YIOS-local-audits/YIOS-bulk-20261025T2140Z-chat-01a174dd/batch-0020",
+      "account": "kgk2930@gmail.com",
+      "privacy": "OWNER_ONLY",
+      "ui_used_gb": 4.75,
+      "conservative_free_bytes": 9799726336,
+      "storage_ui": "4.75 GB of 15 GB; fresh owner Google One UI, Drive4.46GB Gmail302.23MB",
+      "observed_at": "2026-10-26T13:29:19.153Z",
+      "five_hour_used": 25,
+      "weekly_used": 10,
+      "paid_credits": "0",
+      "context": "Atomic Batch19 plus full handoff verified; current context sufficient; exact meter unavailable",
+      "ownership": "Stable read-only originals; protected sessions preserved",
+      "destination_folder_id": "1xZtyTZ8gY2knvAUWsDcs_aA63JhfpMKl",
+      "charges": "Existing allowance; paid credits zero, no upgrade/payment action",
+      "mac_free_bytes": 24763756544
+    },
+    "permissions": "Owner-only Restricted; no changes",
+    "encryption": "Google provider managed; owner-held client key not established",
+    "retention": "Until explicit owner removal approval",
+    "coverage": "File-level verified recovery only; no complete-package or independent-machine recovery claim"
+  },
+  "recovery_mapping": {
+    "files": [
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/How The Big Short Actually Happened - Casual Economics (1080p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/How The Big Short Actually Happened - Casual Economics (1080p, h264).mp4",
+        "bytes": 133815468,
+        "fresh_sha256": "0f5da33ad971700c40146299ea23c0c11f6f7e647540a9ccd32d6b472de99f20",
+        "remote_id": "1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4",
+        "remote_url": "https://drive.google.com/file/d/1oI88K1tZ0VRNjW9TCdoFK781e3jwapE4/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/How a Debt Crisis Ruined Greece - Casual Economics (720p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/How a Debt Crisis Ruined Greece - Casual Economics (720p, h264).mp4",
+        "bytes": 35593578,
+        "fresh_sha256": "1e6f91e7ed4e1126fb8648c7d8f5dbaf284ac44f3668917c563f28de2d126bf5",
+        "remote_id": "1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi",
+        "remote_url": "https://drive.google.com/file/d/1ENKytrQ-NBT24bGK-9OWQE7Z0KhiJhEi/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/Japan’s Lost Decade An Economic Crisis in 16 Minutes - Casual Economics (720p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/Japan’s Lost Decade An Economic Crisis in 16 Minutes - Casual Economics (720p, h264).mp4",
+        "bytes": 37769850,
+        "fresh_sha256": "3e7047ebdd3f54a3abd9b0b464b1922ed169933743a857e30c9ca1678f6dd86f",
+        "remote_id": "1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8",
+        "remote_url": "https://drive.google.com/file/d/1qNKsI4KFbSI5my5q_Vdntv8U2nF-TdC8/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/The 2008 Financial Crisis in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/The 2008 Financial Crisis in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "bytes": 34525389,
+        "fresh_sha256": "e5d720fb126b2589dceca99f8c99c746472f65e1ef1f89677c6edd74199b8a9e",
+        "remote_id": "1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo",
+        "remote_url": "https://drive.google.com/file/d/1xlMKB5_pdBDmkdPLgLpGBuDlFozL2yPo/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/casual_economics/The Great Depression in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/casual_economics/The Great Depression in 12 Minutes (Casual Economics) - Casual Economics (720p, h264).mp4",
+        "bytes": 26643286,
+        "fresh_sha256": "e5db7fb9bb72f361f7ec252f80815e2018124499365972b3dbf893774d5be7f3",
+        "remote_id": "1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH",
+        "remote_url": "https://drive.google.com/file/d/1Vise44WUVU0hgCHDIpUio_ea_lNJk9gH/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/But what if we tried MORE power？ [jgafb8G7i4o].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/But what if we tried MORE power？ [jgafb8G7i4o].mp4",
+        "bytes": 7182215,
+        "fresh_sha256": "320cdf05d57b5922d196bd8e8af28db26cc2eca24794db28631e0bbe0c3f921c",
+        "remote_id": "1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc",
+        "remote_url": "https://drive.google.com/file/d/1Qsc1flvW7a5BySdE36f2vqkyr64SDOFc/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Can you drive west to lengthen the sunset？ [U8F7UNK9jco].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Can you drive west to lengthen the sunset？ [U8F7UNK9jco].mp4",
+        "bytes": 7144234,
+        "fresh_sha256": "38b212f48aca2b1a78a3e9129a34c30010feff7c555d60c0afaf8d668c625a0a",
+        "remote_id": "1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M",
+        "remote_url": "https://drive.google.com/file/d/1nFFZZVlElwIesbxGWKc_GYvK2aJhPy_M/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Can you power your computer by typing？ [0L44GEJ5pLE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Can you power your computer by typing？ [0L44GEJ5pLE].mp4",
+        "bytes": 5979635,
+        "fresh_sha256": "7daf8ca59667fa64dac0d48ba49ad475873f8b1f6207639a0ba7a6ad767427d1",
+        "remote_id": "1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y",
+        "remote_url": "https://drive.google.com/file/d/1UJS0UPvRfmt5GBu_FMHamQz6nUQEsV0y/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Circumference pop quiz! [5k8ciEx__5w].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Circumference pop quiz! [5k8ciEx__5w].mp4",
+        "bytes": 599077,
+        "fresh_sha256": "05fce38976a32594cc613ce3e6b88fe00fe3b62c7a38d090f287ae0d074fddd3",
+        "remote_id": "1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8",
+        "remote_url": "https://drive.google.com/file/d/1cGffYFGwD2kLxGkd3O6WO2mmiHocahj8/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could We Harvest Power From Lightning？ [_efsqO-4OoQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could We Harvest Power From Lightning？ [_efsqO-4OoQ].mp4",
+        "bytes": 6950166,
+        "fresh_sha256": "3f3f2e4ef121b0ce610fc7978c1121636197e267cf74218c2e009af562b1c996",
+        "remote_id": "1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI",
+        "remote_url": "https://drive.google.com/file/d/1kpjyexvc4z3yi3L2o4MC6lr2iB_6TtMI/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could the Hubble take a photo of you？ [TgA0lXEW7dw].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could the Hubble take a photo of you？ [TgA0lXEW7dw].mp4",
+        "bytes": 4485238,
+        "fresh_sha256": "4121a3216ff2b982758b4b7eed169b84d2d976c9816e2739dd5351bd7e2779ad",
+        "remote_id": "1KbtgaReioYkkmSqecEdIP7km4HiXaaHY",
+        "remote_url": "https://drive.google.com/file/d/1KbtgaReioYkkmSqecEdIP7km4HiXaaHY/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could this be the last surviving human light source？ [kNry0bf7eC0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could this be the last surviving human light source？ [kNry0bf7eC0].mp4",
+        "bytes": 5250038,
+        "fresh_sha256": "cb6eb61dd038a1130dc353658dcd6752f2ed171dca1051925cf635e078ca221f",
+        "remote_id": "1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt",
+        "remote_url": "https://drive.google.com/file/d/1172ssrQl7BpoWJYaiB3aKQfdDLuidUCt/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could we survive eating only humans？ [PUtI3xoaHx0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could we survive eating only humans？ [PUtI3xoaHx0].mp4",
+        "bytes": 5853461,
+        "fresh_sha256": "b0710bcfddef462dffe7d57f82e51c38ee512dc66440bf1553cc53c354a4cc6f",
+        "remote_id": "1tgb18yHdTncaBPUz8vCwdhKroVnvkogl",
+        "remote_url": "https://drive.google.com/file/d/1tgb18yHdTncaBPUz8vCwdhKroVnvkogl/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you make an umbrella out of lasers？ [zgBTwtg7H8E].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you make an umbrella out of lasers？ [zgBTwtg7H8E].mp4",
+        "bytes": 6381682,
+        "fresh_sha256": "ec0837c9b6beeae42121f1470126914921e9bdefc7f3589017a51859d3d3da86",
+        "remote_id": "1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21",
+        "remote_url": "https://drive.google.com/file/d/1YIVglsyKnDXfXjNmZQ3cXZcMFoT3aa21/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you power a house with the radioactivity from bananas？ [BnGqPxnQh9A].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you power a house with the radioactivity from bananas？ [BnGqPxnQh9A].mp4",
+        "bytes": 5331498,
+        "fresh_sha256": "04ce628fd63b51cccac643f815f16eba340b59dc54ae04a1e97d5279135906ca",
+        "remote_id": "1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3",
+        "remote_url": "https://drive.google.com/file/d/1fwe-IbGHB_H_S6JbJdfcoEjPm0LHEpv3/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you power your computer by typing？ [X97DDWvxaqQ].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you power your computer by typing？ [X97DDWvxaqQ].mp4",
+        "bytes": 9317412,
+        "fresh_sha256": "c3726ab5e284be3a7fa9b687ddffe354f6181d59e62759c80e23cf67f8426621",
+        "remote_id": "1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18",
+        "remote_url": "https://drive.google.com/file/d/1B2yRsAKCal8OuLXpTuJ9HsfaRmU1HO18/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you survive a nanosecond on the Sun？ [UXA-Af-JeCE].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you survive a nanosecond on the Sun？ [UXA-Af-JeCE].mp4",
+        "bytes": 5738015,
+        "fresh_sha256": "4f343ee1ae454d422dbaa7ba23086d947c33a59b1dbb79f5c0453fda312e3dba",
+        "remote_id": "1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB",
+        "remote_url": "https://drive.google.com/file/d/1mrbI9OH9SiQ1u6aFQKRH8JN7nvIenFWB/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you swim in a spent nuclear fuel pool？ [vBfR2Zb0dkc].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you swim in a spent nuclear fuel pool？ [vBfR2Zb0dkc].mp4",
+        "bytes": 2842467,
+        "fresh_sha256": "0c29f14250531622b01b0f3578793b677e4aff0eed4ea58c8cd34d3dfcc17e79",
+        "remote_id": "1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu",
+        "remote_url": "https://drive.google.com/file/d/1gG3Y04IE0AQNH1zN_ZL5yPb2aahV0Ndu/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Could you use a laser as an umbrella？ [xA9aqKGBeOs].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/Could you use a laser as an umbrella？ [xA9aqKGBeOs].mp4",
+        "bytes": 3014209,
+        "fresh_sha256": "baef873290ad497db1128366b4bc1c6712548ea1192861c794019dbd67246c2d",
+        "remote_id": "1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8",
+        "remote_url": "https://drive.google.com/file/d/1Ms9zbtF-qBEPcDOijxbi6_jkauzJLeG8/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      },
+      {
+        "source_absolute": "/Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/How detailed would the Hubbles images be if it looked at Earth？ [i6e4NnFnQi0].mp4",
+        "restore_relative": "machine-a/Downloads/videos in mp3/xkcd Channel/How detailed would the Hubbles images be if it looked at Earth？ [i6e4NnFnQi0].mp4",
+        "bytes": 5803406,
+        "fresh_sha256": "b06384dc341b692b0832a9fb516f8b332cf269307a097d7f341d2d5832ee347d",
+        "remote_id": "1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS",
+        "remote_url": "https://drive.google.com/file/d/1v_RZBFyOmPpdJdbASHop_8YdB3fQ4rTS/view?usp=drivesdk",
+        "backup_priority": "A_ORIGINAL_MEDIA",
+        "required_companions": "Preserve source parent package; links/references may require unselected external dependencies",
+        "status": "VERIFIED",
+        "duplicate_of_verified": null
+      }
+    ]
+  },
+  "cumulative_before_this_control": {
+    "mapped_source_paths": 393,
+    "uploaded_bytes_including_controls": 4243491319,
+    "verified_bytes_including_controls": 4243491319,
+    "remaining_payload_bytes": 7756508681,
+    "remaining_plan_files": 159
+  }
+}
+```

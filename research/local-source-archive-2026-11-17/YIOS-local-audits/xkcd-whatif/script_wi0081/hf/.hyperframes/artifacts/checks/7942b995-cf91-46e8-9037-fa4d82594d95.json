@@ -1,0 +1,242 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "overlapping_gsap_tweens",
+        "severity": "warning",
+        "message": "GSAP tweens overlap on \"#spoon\" for rotation, svgOrigin between 3.00s and 3.25s.",
+        "selector": "#spoon",
+        "dataAttributes": {},
+        "sourceFile": "/Users/ghilmankhan/YIOS-local-audits/xkcd-whatif/script_wi0081/hf/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Shorten the earlier tween, move the later tween, or add `overwrite: \"auto\"`."
+      },
+      {
+        "code": "overlapping_gsap_tweens",
+        "severity": "warning",
+        "message": "GSAP tweens overlap on \"#spoon\" for rotation, svgOrigin between 3.00s and 3.50s.",
+        "selector": "#spoon",
+        "dataAttributes": {},
+        "sourceFile": "/Users/ghilmankhan/YIOS-local-audits/xkcd-whatif/script_wi0081/hf/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Shorten the earlier tween, move the later tween, or add `overwrite: \"auto\"`."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "off_pivot_rotation",
+        "severity": "warning",
+        "time": 11.333,
+        "selector": "#spoon",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 406,
+          "y": 616,
+          "width": 8,
+          "height": 524
+        },
+        "rect": {
+          "left": 406,
+          "top": 616,
+          "right": 414,
+          "bottom": 1140,
+          "width": 8,
+          "height": 524
+        },
+        "message": "Gauge/dial pointer rotates about a point 2213px from the dial hub — its center-of-rotation is off the hub, so it points wrong or overshoots the track (check the rotating group's pivot: translate to the hub before rotate, or set svgOrigin/transform-origin to the hub).",
+        "fixHint": "The pointer's center-of-rotation must coincide with the dial hub. Rotate the group about the hub (e.g. transform-origin/svgOrigin set to the hub center, or translate the group so its rotation pivot lands on the hub) rather than about the element's own bbox center.",
+        "firstSeen": 11.333,
+        "lastSeen": 11.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.333
+        ]
+      },
+      {
+        "selector": "#title > text:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 350.55,
+          "y": 195,
+          "width": 378.9,
+          "height": 209
+        },
+        "time": 0.667,
+        "rect": {
+          "left": 350.55,
+          "top": 195,
+          "right": 729.45,
+          "bottom": 404,
+          "width": 378.9,
+          "height": 209
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "BOIL",
+        "message": "<text> \"BOIL\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 0.667,
+        "lastSeen": 11.333,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          0.667,
+          2,
+          3.333,
+          4.667,
+          6,
+          7.333,
+          8.667,
+          10,
+          11.333
+        ]
+      },
+      {
+        "selector": "#t20",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 677.73,
+          "y": 1249,
+          "width": 184.54,
+          "height": 90
+        },
+        "time": 0.667,
+        "rect": {
+          "left": 677.73,
+          "top": 1249,
+          "right": 862.27,
+          "bottom": 1339,
+          "width": 184.54,
+          "height": 90
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "20 °C",
+        "message": "<text> \"20 °C\" is outside the safe area: TikTok (right and bottom edges), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 0.667,
+        "lastSeen": 11.333,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          0.667,
+          2,
+          3.333,
+          4.667,
+          6,
+          7.333,
+          8.667,
+          10,
+          11.333
+        ]
+      }
+    ],
+    "duration": 12,
+    "samples": [
+      0.667,
+      2,
+      3.333,
+      4.667,
+      6,
+      7.333,
+      8.667,
+      10,
+      11.333
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 3,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      0.667,
+      3.333,
+      6,
+      8.667,
+      11.333
+    ],
+    "checked": 15,
+    "passed": 15
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 96
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

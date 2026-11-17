@@ -1,0 +1,30 @@
+# Batch35 exact20 final object verification
+
+Whole batch: PASS_VERIFIED_AFTER_APPROVED_DESTINATION_CORRECTION. All20 same IDs moved from MyDrive root0AIBUCbMhIl95Uk9PVA to private original intended folder1BiVQKzb_qPokwUBISUJeYQWcv1TJyv96. No copy/reupload/delete/rename/replace or permissions change.
+
+Each PASS means fresh independent before/after metadata and final readback verifies ID/name/size/modified-time and owner-only privacy, plus cryptographically checked preserved full-remote raw SHA/member receipts and stable original source/member stats. No fresh content read after move is claimed; metadata-only moves qualified reuse under existing policy.
+
+|Sequence|Remote ID|Bytes|SHA256|Members|Result|
+|---|---|---:|---|---:|---|
+|4047|1ASHkoVwGrH-JU9fdoq0LfPSpGQGBljXs|13685463|11efcde9cceb8514ff6b48f969e62f8de301e18f60dbe264ce4f05c94a2bc3ea|11|PASS|
+|4048|1L73ynyImgEMYwJWYlftcoua8uhmROY4I|21097295|4ac981afe475adf1bf5b7c0891c75a711d32efa710f39174bd4b8e7aacaca28e|8|PASS|
+|4049|1klnTHIywQiWhwmW9Xxb7tqCgbq5_Lbl3|11961789|7760dddf57e72466ed780bc96ebca0f713829927ae83451c0eaeef52a3e1099e|8|PASS|
+|4050|1rLRTSjTIBH3SDDrvnYt-gRo8FnlbuXV9|24983426|064ab7eafe5eb2c2db6d3553d342774ceb7267f5d1a28f2bad7dd73fbbcfde38|8|PASS|
+|4051|16CjyBVLrWyDAfH4mvOikMPKzi3qY6ZrZ|14343573|eebf01f6296377ed328e60420ec1ad836bdb7e9cd0f57c2f26a27f0af8ebb418|7|PASS|
+|4052|1JXetRQ8u26ENwx2wWpxblBQSZneCGFvy|22418572|8c84e4f328ecd6f85078c65ca0fb65e8caa9fd89af0537b47805dbe29f16435d|13|PASS|
+|4053|1wUkpNnNPeIXmRbNISZKIL02Nm3FabIlq|19676968|2c91d7bc66aca2271ced7154589f24d61ec4659ded80b08b8d3fe082ea3bff30|9|PASS|
+|4054|1_ClFJF0SXpZpqXJak9c5mub88SW7wweH|18527859|5b0e7a9596dfdb0d1d7e50918fe8056f3d6a4769dde8226b3919595f412f010a|7|PASS|
+|4055|15DbXQNwiABIo-9UvAZa9au2fDeETVtcL|24089893|d4eda53de7e0b161ed090d278e8617d690ffb1462c2267d1cb33ef4e61427a33|10|PASS|
+|4056|1AamQDlI-u_s5Tfnrku33nkURo667l8pQ|30728974|e5d1dd460783600412a7669778333fdb4527fdb5141cccda5c3fed2bc150025a|8|PASS|
+|4057|10alrEbM-mJmFEjyEnm-gRsLzJowHvj78|19512212|5b5af423e19b7d62ae1aad6309b08757d2f4fa97b9230b7e7565efb0b132fb19|13|PASS|
+|4058|1uGVlvLY8btFZNYLMUmaShcAyVQ-K1L-k|21419488|72ee0a2690cd8055ecf8ac8920a048a1e2c834adfea513f67218ebc19e350535|9|PASS|
+|4059|1Um4PY7xWhnHH49JLTsWQGvVL8uSxrPdt|20539766|214d039193d398efd620427ccc262b8de6d46c4f18981fa25b42cf1c8007354d|12|PASS|
+|4060|1E7bHKxa0WxL9ASb9-3g3bIu1_dbwvSa1|21063322|cc47a47dd9282cf8fd5396c018dee18ee506fd3a7b06f6bddbce2832be4ea037|9|PASS|
+|4061|1o3lGCKjnInCXy8BdpnUGFIqlOeYGqxPq|47846|8dac5136c056f38ba106c47542e60131977a7216026c0ff19043572d18a65476|26|PASS|
+|4062|1tvzNYaXVRhoFE8lXDyzmg_9c9vpdc9zA|8402597|dd4a95753a7001f0ee10da765c315cd3c120e5392048fc1e53c7b0cbb0848b1c|300|PASS|
+|4063|1efw8RrwgFuAaYZfSU-GblnguyVJDLFuu|9633731|e6ae283040952261508ee1002d0180ad17b54de453034ef1728026fdeafa144a|299|PASS|
+|4064|1nCXd7OICedmdyoqHPSluqwWPe5Z_hNZf|79168579|6e77a6252ccc73e90cd3791ded07f76e3d5b210db2f082d1fc0f6a9c4d4013e2|111|PASS|
+|4065|15a_jI1dc4xYBODK8Fq81dcbPZ6u8a_YF|79465449|7fbde7a076aaff1512c2052fd4cebd1e6b9608f27bf9e7ba5e57326baa6f948a|66|PASS|
+|4066|1tRlINIjB1K8NYXhZgPgSUumDslEOXdF8|28581819|b9e83fcf4481c7b1b82460cabf688f3f7ca4d4c50e183c290453e9d9700694fc|300|PASS|
+
+Total489348621 content bytes and1234 members. Zero new physical objects/payload bytes from moves. Historical BLOCKED receipts unchanged. Original operator chooser-readiness incident remains documented; internal browser routing mechanism unproved. Batch31 duplicate attribution remains permanently unresolved and its404830 extra physical bytes provide zero unique coverage.

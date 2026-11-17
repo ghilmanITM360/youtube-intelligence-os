@@ -1,0 +1,210 @@
+{
+ "16x9": {
+  "P1_pops_one_frame_PRE": true,
+  "P6_holds_dead_still_PRE": {
+   "pass_": true,
+   "hold_frames": 140,
+   "nonzero": []
+  },
+  "P5_red_only_emphasis_PRE": {
+   "pass_": true,
+   "red_px_before": 0,
+   "red_px_during": 3600,
+   "red_px_after": 0
+  },
+  "layout_check_PRE": {
+   "131": {},
+   "169": {}
+  },
+  "P7_probe_decode": {
+   "pass_": true,
+   "codec_name": "h264",
+   "pix_fmt": "yuv420p",
+   "width": 1920,
+   "height": 1080,
+   "r_frame_rate": "24/1",
+   "avg_frame_rate": "24/1",
+   "nb_read_frames": "192",
+   "duration": "8.000000",
+   "decode_errors": ""
+  },
+  "P6_holds_POST": {
+   "pass_": true,
+   "max_hold_mad": 0.0009
+  },
+  "P1_pops_POST": {
+   "60": {
+    "mad_at": 1.019,
+    "mad_next": 0.0
+   },
+   "84": {
+    "mad_at": 0.131,
+    "mad_next": 0.0
+   },
+   "108": {
+    "mad_at": 0.225,
+    "mad_next": 0.0
+   },
+   "132": {
+    "mad_at": 213.256,
+    "mad_next": 0.0
+   },
+   "150": {
+    "mad_at": 0.381,
+    "mad_next": 0.0
+   },
+   "160": {
+    "mad_at": 0.288,
+    "mad_next": 0.0008
+   },
+   "pass_": true
+  },
+  "P2_dissolve_linear_POST": {
+   "pass_": true,
+   "progress": [
+    0.172,
+    0.337,
+    0.503,
+    0.676,
+    0.839,
+    1.0
+   ],
+   "steps": [
+    0.172,
+    0.165,
+    0.166,
+    0.173,
+    0.163,
+    0.161
+   ]
+  },
+  "P3_no_overshoot_POST": {
+   "pass_": true
+  },
+  "P4_canvas_stroke_POST": {
+   "pass_": true,
+   "modal_rgb": "#F8F8F8",
+   "stroke_px": 8
+  },
+  "RED_CIRCLE_NATIVE_COLOUR_POST": {
+   "pass_": true,
+   "red_px_roi_fm2_to_fp2": [
+    0,
+    0,
+    3576,
+    3576,
+    3576
+   ],
+   "grey_mean_absdiff_at_pop": 0.2369,
+   "grey_changed_frac_ge12": 0.00179,
+   "note": "the pop is 1 frame in native colour; its whole-frame luma change is tiny, which is why grey-only detectors miss it"
+  },
+  "P8_human_keyframe_and_playback_review": "PENDING_HUMAN (model viewed keyframe sheets of attempt 1 (3 defects) and attempt 2 (none seen); no real-time playback capability in this session)",
+  "P9_humancraft_scorecard": "PENDING_HUMAN (not self-scored)",
+  "AUDIO_SYNC_AND_FINAL_AV": "BLOCKED/PENDING (silent proof; no narration exists)"
+ },
+ "9x16": {
+  "P1_pops_one_frame_PRE": true,
+  "P6_holds_dead_still_PRE": {
+   "pass_": true,
+   "hold_frames": 179,
+   "nonzero": []
+  },
+  "P5_red_only_emphasis_PRE": {
+   "pass_": true,
+   "red_px_before": 0,
+   "red_px_during": 4628,
+   "red_px_after": 0
+  },
+  "layout_check_PRE": {
+   "131": {},
+   "169": {}
+  },
+  "P7_probe_decode": {
+   "pass_": true,
+   "codec_name": "h264",
+   "pix_fmt": "yuv420p",
+   "width": 1080,
+   "height": 1920,
+   "r_frame_rate": "24/1",
+   "avg_frame_rate": "24/1",
+   "nb_read_frames": "192",
+   "duration": "8.000000",
+   "decode_errors": ""
+  },
+  "P6_holds_POST": {
+   "pass_": true,
+   "max_hold_mad": 0.0019
+  },
+  "P1_pops_POST": {
+   "60": {
+    "mad_at": 1.293,
+    "mad_next": 0.0
+   },
+   "84": {
+    "mad_at": 0.131,
+    "mad_next": 0.0
+   },
+   "108": {
+    "mad_at": 0.288,
+    "mad_next": 0.0
+   },
+   "132": {
+    "mad_at": 199.077,
+    "mad_next": 0.0
+   },
+   "150": {
+    "mad_at": 0.38,
+    "mad_next": 0.0
+   },
+   "160": {
+    "mad_at": 0.288,
+    "mad_next": 0.0019
+   },
+   "pass_": true
+  },
+  "P2_dissolve_linear_POST": {
+   "pass_": true,
+   "progress": [
+    0.162,
+    0.328,
+    0.504,
+    0.664,
+    0.83,
+    1.0
+   ],
+   "steps": [
+    0.162,
+    0.166,
+    0.176,
+    0.16,
+    0.166,
+    0.17
+   ]
+  },
+  "P3_no_overshoot_POST": {
+   "pass_": true
+  },
+  "P4_canvas_stroke_POST": {
+   "pass_": true,
+   "modal_rgb": "#F6F6F6",
+   "stroke_px": 8
+  },
+  "RED_CIRCLE_NATIVE_COLOUR_POST": {
+   "pass_": true,
+   "red_px_roi_fm2_to_fp2": [
+    0,
+    0,
+    4601,
+    4600,
+    4600
+   ],
+   "grey_mean_absdiff_at_pop": 0.3038,
+   "grey_changed_frac_ge12": 0.00229,
+   "note": "the pop is 1 frame in native colour; its whole-frame luma change is tiny, which is why grey-only detectors miss it"
+  },
+  "P8_human_keyframe_and_playback_review": "PENDING_HUMAN (model viewed keyframe sheets of attempt 1 (3 defects) and attempt 2 (none seen); no real-time playback capability in this session)",
+  "P9_humancraft_scorecard": "PENDING_HUMAN (not self-scored)",
+  "AUDIO_SYNC_AND_FINAL_AV": "BLOCKED/PENDING (silent proof; no narration exists)"
+ }
+}
