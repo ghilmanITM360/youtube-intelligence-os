@@ -1,0 +1,44 @@
+# 32 — DR. CALE SMITH (UCsPba6Pqq_cp37zyU6MP82g, @Dr.CaleSmith) — STATUS: PARTIAL
+Checked 2026-11-14. Sources: senior_health_complete.db (tier 2: Apify complete catalog; 17 videos; 17/17 transcripts), live channel page in built-in Chrome (header only; grid did not render), curl of all 17 watch pages (status, views, likes, publish date, description) and the channel page, 6 hqdefault thumbnails viewed, `script_reuse.py`, `title_families.csv`, DB chronology query for the 5 biggest titles.
+
+## A. Seedha jawab (Roman Urdu)
+1. **Kis ke liye / promise:** 55–85 saal ke seniors: qabz/stool stuck, peanut butter, "6 golden habits", dil ke warning signs, BP target, nahana, sone ki position, beet juice. Promise: "ek doctor (Dr. Cale Smith) jo ek cheez ka asar batata hai". **Naya channel, bohat tez:** DB row joined 2026-08-08; 17 videos 2026-09-03 → 11-07 (1.8/hafta); header **"17 videos", 24k subs**; total ~3.30M views.
+2. **Kya repeat hota hai:** (a) Titles seedhe un titles ke mutabiq jo doosre channels par pehle chale ("Stool STUCK in the Rectum! What is it and what to do", "Sleeping POSITION Increases STROKE Risk", "Once You Turn 80…", "7 Hygiene Mistakes…"). (b) Thumbnail: kaala background, bold peela/safed text + laal label + **illustrated bujurg** ("THE SHOCKING EFFECTS OF PEANUT BUTTER", "STOOL STUCK IN THE RECTUM NO STRENGTH TO PUSH", "IF YOU DO THIS EVERY MORNING YOU WILL DIE SOON!"). (c) Opening: roz-marra ka manzar ("You've got a jar of peanut butter sitting in your kitchen…", "Picture this. You wake up on a Tuesday morning…") ya ek "patient Robert, 72" ki kahani. (d) Ending: "I'll see you in the next one." (e) Description: disclaimer 17/17 + PMC/NEJM/JAMA/CDC/NIA links. **Concentration (live, 17 videos, ~3.30M views):** top-1 35% (`LPF3mCLRq4o` 1,144,236), top-3 82%; median ~34K; 9 videos ≥34K (is niche mein bohat ooncha baseline).
+3. **Winner vs weaker (matched):** `LPF3mCLRq4o` (2026-10-17, 23:25, **1,144,236 views**, 19,314 likes) "Doctor Explains: What Happens When You Start Eating Peanut Butter Every Day?" vs `CwkK6VjS66k` (2026-11-07, 22:29, **708 views**, 20 likes) "Add This One Ingredient to Beet Juice and Double the Blood Flow Effect!" — same channel, 3 hafte ka farq, same illustrated style, **1,600x**. Thumbnail: winner "THE SHOCKING EFFECTS OF PEANUT BUTTER" + bujurg toast khate hue; weak "PUT THIS IN YOUR BEETJUICE FEEL LIKE 20 AGAIN!" + bujurg chamach se pite hue. Opening winner: *"I want you to stop and think for a second. You've got a jar of peanut butter sitting in your kitchen right now…"* (ghar ki cheez, "what happens if I eat X every day"); weak ka transcript is report mein read nahi hua. Farq: **ek aam ghar ki cheez ka "daily eat" sawal (pehle doosre channel par proven)** vs naya "add this ingredient" claim; plausible (interpretation, low): proven title family ko late-stage par uthana + channel ki momentum (Oct 17 tak ~2M views); **testable nahi** (traffic/CTR UNKNOWN). Counterexample: **wahi peanut-butter title family** — pehla DB video `UCUUKj…` 2026-02-17 sirf **2,073** (Feb), is channel ka 10-17 par **1,130,985**, phir copies 967 / 1,783 / 1,630 / 4,917 / 60 — yaani "pehle aane wala" bada nahi tha; channel/timing/promotion UNKNOWN. Confidence: low.
+4. **Topic source / demand (title-family chronology, DB):** (i) **"Stool STUCK in the Rectum"**: 2026-05-03 1,244,219 (UCKn8eHa…) → 05-11 556,225 → 05-17 111,092 → 05-21 2,721 → 06-30 1,090 → 07-13 504 → 07-17 55 → … **is channel ka copy 09-21 par 982,583** (Sept) — order ke saath ghatna dikhta hai par is channel ka late copy bhi bada gaya. (ii) **"6 Golden Habits"**: 08-12 248,637 → 08-27 265,244 → **09-09 (yeh channel) 579,349** → 10-03 1,261 (ch 31). (iii) **"Cardiologist Warns: Millions Still Do This Every Morning"**: 08-07 355,756 → 08-31 48 → **09-27 (yeh) 277,640** → 10-04 150 → 10-21 473 → 10-24 422 → 11-04 808. (iv) **"Sleeping POSITION Increases STROKE"**: 04-25 764,656 → … 08-19 1,475,129 (ch 04 report) → 08-29 34 → 08-31 28,352 → is channel `tbUSMY6ukGw` 09-12 17,042. **Fact:** har family mein 2–3 bade copies (≥250K) aur 5–8 chhote (≤3K); is channel ne 4 mein se 3 families mein **bada** copy diya. Dusre channels mein copies ka size order se ghatta hai (decay) — par yeh sirf DB views, traffic/ownership UNKNOWN. Google Trends nahi chalaya (UNKNOWN). Competitor example: UCKn8eHa… 2026-05-03 `Stool STUCK` 1,244,219.
+5. **Playbook rule:** Outlier concept (Playbook p.6–8, Module 2.1): channel ke andar 9 videos median ke ≥1x, top-3 82%; cross-validation title families se (har family mein 2–3 bade) → topic-level hypothesis medium-high; **independence masla (AGENTS rule 9):** yeh titles/scripts ek doosre ke copies hain (neeche B), isliye "independent" outliers nahi. Title Formats (Playbook p.52–53): "What Happens When You Eat X Every Day" ek proven single-object template. Against: same template ka Feb 2026 pehla copy 2,073 par; aur is channel ka `CwkK6VjS66k` 708.
+6. **Kya banayein (original idea, evidence-gated):** Same "ghar ki cheez ka roz ka asar" format, asli clinician aur named evidence ke saath, bina "DIE SOON" thumbnail ke: "Eating Eggs Every Day After 60: What the Research Says About Cholesterol (and Who Should Be Careful)". Thumbnail: asli clinician + anday + 2-column "helps / watch out". First 30s: "Aap ke fridge mein anday hain? Roz khane ka asar ek number se samjhein", payoff = LDL ka asar (har insaan alag), kis ko seemit karna chahiye. Clinical source jo verify karna hai (yahan fetch NAHI kiya): dietary-cholesterol/egg intake par systematic review/meta-analysis aur AHA scientific statement on dietary cholesterol; video se pehle verify karein.
+
+## B. Script reuse + persona/claims (facts vs interpretation)
+- **Script reuse (fact, `script_reuse.py 32`):** 3/17 videos ka script ≥0.85 doosre channel ke video se match: `8Cvibr_sYNE` ≡ ch 31 `auy0Tw9Z4Z0` (1.00), `LPF3mCLRq4o` ≈ ch 33 `bswfMAYcuhk` (0.94), `vhfV71o8Xl8` ≈ ch 31 `P7c-Evu1LnA` (0.94); `DD7H824HT5k` ≈ ch 31 `9Tb4AoV5vu0` (0.84). **Dates:** teeno mein is channel ka video **pehle** ka hai (09-09 vs 10-03; 10-17 vs 10-28; 09-21 vs 10-04) aur views originals (579K/1.13M/983K) ke muqable copies 1,261 / 4,917 / 137. Yeh ordering hai, **copy direction/ownership/supplier — Not known.**
+- **Fact:** `8Cvibr_sYNE` transcript ending "I'm **Dr. Kael Smith**" jabke channel "Dr. **Cale** Smith" — naam ki spelling mukhtalif (transcription ya persona-slip — UNKNOWN). Credentials, licence, specialty UNVERIFIED; "Cardiologist Warns", "Urologist Reveals", "Doctor Alerts" — titles mein har baar alag specialty ka claim (fact, titles). Presenter ki awaaz/video maine nahi dekhi/suni (playback nahi hua); thumbnails illustrated.
+- **Fact:** `OnvZIfP9N_M` "patient named Robert, 72…" aur `vdYrDjRv2G4` "the pill on your bathroom counter" — kahani-numa opening; real patient hone ka koi saboot nahi (UNVERIFIED, interpretation: scripted).
+- **Fact:** descriptions: disclaimer 17/17; links CDC (2), PMC (2), NEJM (2), JAMA (2), NIA (1) — verify nahi kiye; shop/affiliate link nahi dekha — monetization UNKNOWN; AI-disclosure nahi dekha.
+- **Fact (claims):** "IF YOU DO THIS EVERY MORNING YOU WILL DIE SOON!", "Double the Blood Flow Effect", "5 Pills Increase the Risk of Heart Attack and Stroke" — thumbnail claims title se zyada extreme; source UNVERIFIED (health-misinformation risk, interpretation).
+
+## C. Live vs snapshot
+- Live 2026-11-14: header **"17 videos", 24k subs**; DB 17 videos, 24,000 subs. 17/17 saved IDs playable (curl OK); publish dates 2026-09-03 → 2026-11-07 (IDs 17/17).
+- Views DB → live (~7 hafte): `LPF3mCLRq4o` 1,130,985 → 1,144,236 (+1.2%); `vhfV71o8Xl8` 982,583 → 990,612; `8Cvibr_sYNE` 579,349 → 582,058; `CwkK6VjS66k` 576 → 708.
+
+## D. Coverage
+| Layer | Status |
+|---|---|
+| Catalog titles/views/dates/durations (DB) | 17/17 |
+| Playability / publish date / views / likes (curl 17) | 17/17 |
+| Transcripts | 17/17; open/end read for 6; all 17 reuse-checked |
+| Live channel header (Chrome) | yes (grid not rendered) |
+| Thumbnails | 6 of 17 |
+| Chrome playback / comments | NOT done / NOT read (DB comment counts present) |
+| vidIQ / Trends | not run |
+| Credentials / claims | NOT verified |
+Pending IDs: playback + comments for all 11; 11 thumbnails.
+
+## E. Evidence ledger
+| Claim | Evidence | Conf |
+|---|---|---|
+| LPF3mCLRq4o 1,144,236 vs CwkK6VjS66k 708 | curl watch pages 2026-11-14 | high |
+| Stool-stuck family: 1.24M, 556K, 111K, 2.7K, 1.1K, 504, 55; this channel's copy 982K | DB title query | high (DB views) |
+| 3/17 scripts ≥0.85 vs ch 31/33, this channel earlier by date | script_reuse.py + DB dates | high; direction unknown |
+| Header 17 videos, 24k subs | Chrome header | high |
+| "Dr. Kael Smith" vs "Dr. Cale Smith" | DB transcript ending vs channel name | high |
+| Why peanut butter beat beet juice | interpretation | low |
