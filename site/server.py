@@ -5,7 +5,7 @@
 
 Build the DB first: scripts/build_yios_canonical_db.py build && scripts/build_yios_artifact_inventory.py
 The DB is opened read-only; /raw serves only files that the artifact inventory lists (no path traversal)."""
-import argparse, datetime, gzip, html, json, mimetypes, os, sqlite3, subprocess, sys, threading
+import argparse, collections, datetime, gzip, html, json, mimetypes, os, re, sqlite3, subprocess, sys, threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
@@ -163,6 +163,58 @@ def channel(c, q, cid):
     return ch
 
 
+STOP = set("""the and for that this with you your are was were have has had not but from they them their what when how why who which will would can could should about into out over than then there these those just like more most some any all one two our its his her she him also been being because very much many get got make made does did doing done than too only own same such here where while after before again up down off now new""".split())
+
+
+def words(text):
+    return [w for w in re.findall(r"[a-z][a-z']{2,}", text.lower())]
+
+
+def ch_transcripts(c, q, cid):
+    """Readable-transcript index for one channel + what its transcripts talk about (word and phrase counts)."""
+    t = q.get("q", [""])[0].strip()
+    base = ("from transcripts t join videos v using(video_id) join transcript_texts x on x.sha256=t.text_sha256 where v.channel_id=?")
+    items = []
+    for r in c.execute(f"select v.video_id, v.title, v.published_date, v.views, t.word_count, t.caption_kind, t.language, x.text {base} "
+                       + ("and x.text like ? escape '\\' " if t else "") + "order by v.views desc nulls last limit 200", (cid, like(t)) if t else (cid,)):
+        o = {"video_id": r[0], "title": r[1], "date": r[2], "views": r[3], "words": r[4], "kind": r[5], "lang": r[6]}
+        if t:
+            i = r[7].lower().find(t.lower()); o["hits"] = r[7].lower().count(t.lower()); o["snip"] = r[7][max(0, i - 90): i + len(t) + 90].replace("\n", " ")
+        items.append(o)
+    def top():
+        cw, cb = collections.Counter(), collections.Counter()
+        for (x,) in c.execute(f"select x.text {base}", (cid,)):
+            w = words(x); cw.update(a for a in w if a not in STOP and len(a) > 3)
+            cb.update(f"{a} {b}" for a, b in zip(w, w[1:]) if a not in STOP and b not in STOP and len(a) > 2 and len(b) > 2)
+        return {"words": cw.most_common(40), "phrases": [p for p in cb.most_common(40) if p[1] > 2][:30]}
+    tot = c.execute(f"select count(*), coalesce(sum(t.word_count),0) {base}", (cid,)).fetchone()
+    return {"count": tot[0], "words_total": tot[1], "items": items, "query": t, **(memo(("tw", cid), top) if tot[0] and not t else {"words": [], "phrases": []})}
+
+
+def ch_files(c, q, cid):
+    """Every file that is specifically about this channel (channel-level, or naming 25 videos or fewer), with the numbers to group them."""
+    sp = spec_index(c); out = {}
+    for path, vids in sp["per"].get(cid, {"files": {}})["files"].items():
+        m = sp["meta"][path]; out[path] = {"path": path, "role": m["role"], "format": m["format"], "videos_mentioned": m["videos_mentioned"], "n": len(vids), "kind": "video"}
+    for r in rows(c, "select a.path, a.role, a.format, a.videos_mentioned, a.bytes from artifact_links l join artifacts a using(path) where l.target_kind='channel' and l.target_id=? and a.videos_mentioned<=25", cid):
+        out.setdefault(r["path"], {**r, "n": 0})["kind"] = "channel"
+    sizes = {r[0]: r[1] for r in c.execute("select path, bytes from artifacts where path in (%s)" % ",".join("?" * len(out)), list(out))} if out else {}
+    for f in out.values(): f["bytes"] = sizes.get(f["path"])
+    bulk = c.execute("select count(distinct l.path) from artifact_links l join videos v on v.video_id=l.target_id join artifacts a using(path) where l.target_kind='video' and v.channel_id=? and a.videos_mentioned>25", (cid,)).fetchone()[0]
+    return {"files": sorted(out.values(), key=lambda f: (f["role"], -f["n"], f["path"])), "bulk_files": bulk}
+
+
+def ch_quality(c, q, cid):
+    ids = "select video_id from videos where channel_id=?"
+    return {"conflicts": rows(c, f"select cf.*, v.title from conflicts cf join videos v using(video_id) where cf.video_id in ({ids}) order by field, cf.video_id", cid),
+            "issues": rows(c, f"select qi.*, v.title from quality_issues qi join videos v using(video_id) where qi.video_id in ({ids}) order by issue, qi.video_id", cid),
+            "sources_per_video": rows(c, "select source_count l, count(*) v from videos where channel_id=? group by 1 order by 1", cid),
+            "mismatch": c.execute(f"select count(*) from transcript_candidates where sha_matches_source=0 and video_id in ({ids})", (cid,)).fetchone()[0]}
+
+
+CH_SECTIONS = {"transcripts": ch_transcripts, "files": ch_files, "quality": ch_quality}
+
+
 def videos(c, q):
     g = lambda k: q.get(k, [""])[0]
     where, args = [], []
@@ -259,6 +311,8 @@ class H(BaseHTTPRequestHandler):
                 try: return self.raw(c, q)
                 finally: c.close()
             if p in ROUTES: fn = lambda c: ROUTES[p](c, q)
+            elif p.startswith("/api/channel/") and p.count("/") == 4 and p.rsplit("/", 1)[1] in CH_SECTIONS:
+                fn = lambda c: CH_SECTIONS[p.rsplit("/", 1)[1]](c, q, p.split("/")[3])
             elif p.startswith("/api/channel/"): fn = lambda c: channel(c, q, p.rsplit("/", 1)[1])
             elif p.startswith("/api/video/"): fn = lambda c: video(c, q, p.rsplit("/", 1)[1])
             else: return self.js({"error": "not found"}, 404)

@@ -45,6 +45,8 @@ def test_every_endpoint_answers_and_raw_is_whitelisted(tmp_path, monkeypatch):
         assert json.loads(get(base, f"/api/video/{vid}")[1])["rank"]["of"] >= 1
         req = urllib.request.Request(base + "/api/channels", headers={"Accept-Encoding": "gzip"})
         with urllib.request.urlopen(req) as r: assert r.headers["Content-Encoding"] == "gzip"  # big JSON is compressed
+        for sec in ("transcripts", "files", "quality", "transcripts?q=the"): assert get(base, f"/api/channel/{cid}/{sec}")[0] == 200, sec  # per-channel tabs
+        assert json.loads(get(base, f"/api/channel/{cid}/transcripts")[1])["count"] >= 1
         assert get(base, "/api/video/nope000000x")[0] == 404
         assert get(base, "/raw?path=../../../../etc/passwd")[0] == 404  # not in the inventory -> never read
         assert get(base, "/api/videos?sort=views%3Bdrop%20table%20videos")[0] == 200  # unknown sort falls back, never reaches SQL

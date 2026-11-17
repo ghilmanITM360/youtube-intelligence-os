@@ -17,6 +17,6 @@ python3 site/server.py            # first run builds data/catalog/yios_canonical
 ## What each page shows
 - **Overview**: totals, uploads per year, biggest channels, how complete each field is.
 - **Channels**: a scatter of every channel (videos vs typical views) and a sortable table with a per-channel uploads sparkline.
-- **Channel report**: key numbers, every video as a dot on a time/views chart, upload heat map, type split, thumbnail gallery of the top videos, all videos in one filterable table.
+- **Channel report** (six tabs, with a dropdown to jump between channels): *Overview* (numbers, views-over-time chart, heat map, thumbnails), *Videos* (every video, sortable), *Titles* (which words and title features go with more views, long-form only), *Transcripts* (what the channel talks about, search and read inside the page), *Analyses & files* (every report, table, JSON and image about the channel, opened inline), *Data & sources* (completeness, source names, disagreements).
 - **Videos**: filters (channel, type, year, transcript, specific file), title search and full-text search inside transcripts.
 - Results are cached in memory per DB version and sent gzip-compressed, so every page after the first load answers in about a millisecond.
