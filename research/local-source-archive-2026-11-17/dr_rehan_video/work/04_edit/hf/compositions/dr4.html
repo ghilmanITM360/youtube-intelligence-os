@@ -1,0 +1,34 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;font-family:Inter,sans-serif;background:#F4F1EC}
+.cam{position:absolute;inset:0;transform-origin:45% 45%}
+.cam video{position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover}
+.pop{position:absolute;left:90px;top:300px;width:560px;color:#14213D}
+.pop .in{display:block;border-left:6px solid #D64545;padding:14px 0 14px 28px;background:rgba(244,241,236,.86)}
+.pop-t{font-size:54px;font-weight:900;line-height:1.05;letter-spacing:-0.02em}
+.pop-sub{font-size:30px;font-weight:400;margin-top:10px;color:#3c4660}
+.card{position:absolute;left:0;top:0;width:900px;height:1080px;background:#F4F1EC;color:#14213D;padding:150px 90px}
+.row{font-size:44px;font-weight:700;margin:0 0 34px;line-height:1.15}
+.row small{display:block;font-size:30px;font-weight:400;color:#8A8A8A;margin-top:6px}
+.lt{position:absolute;left:90px;bottom:200px;color:#14213D}
+.lt .in{display:block;background:rgba(244,241,236,.92);padding:22px 34px;border-left:8px solid #D64545}
+.lt-n{font-size:56px;font-weight:900;letter-spacing:-0.02em} .lt-r{font-size:28px;margin-top:6px}
+.lt-tag{font-size:20px;letter-spacing:.3em;color:#D64545;font-weight:700;margin-bottom:10px}
+</style>
+<div id="root" data-composition-id="dr4" data-width="1920" data-height="1080" data-layout-allow-overlap>
+<div id="dr4-wrap" class="cam" data-layout-allow-overlap><div id="dr4-cam" class="cam"><video id="dr4-v" class="clip" src="assets/doctor.mp4" data-start="0" data-duration="17.160" data-media-start="99.160" data-has-audio="true" playsinline></video></div><div id="dr4-p1" class="pop"><div class="in"><div class="pop-t">140/90 or more</div><div class="pop-sub">+ other conditions → treat</div></div></div></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#dr4-wrap",{maskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) -25%, rgba(0,0,0,0) 0%)",webkitMaskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) -25%, rgba(0,0,0,0) 0%)"},{maskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 125%)",webkitMaskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 125%)",duration:0.9,ease:"power2.inOut"},0);tl.set("#dr4-wrap",{maskImage:"none",webkitMaskImage:"none"},0.91);
+tl.fromTo("#dr4-wrap",{scale:1.12,filter:"blur(8px)"},{scale:1,filter:"blur(0px)",duration:1.0,ease:"power3.out"},0);
+tl.fromTo("#dr4-cam",{scale:1.0},{scale:1.05,duration:8,ease:"none"},0.000);
+tl.set("#dr4-cam",{scale:1.1},9.820);
+tl.set("#dr4-cam",{scale:1.0},14.820);
+tl.fromTo("#dr4-p1",{opacity:0},{opacity:1,duration:0.01},9.82);tl.fromTo("#dr4-p1 .in",{yPercent:110,rotationX:-55,transformPerspective:900,transformOrigin:"50% 100%"},{yPercent:0,rotationX:0,duration:0.8,ease:"power4.out"},9.82);
+tl.to("#dr4-p1",{opacity:0,filter:"blur(8px)",duration:0.2,ease:"power3.in"},14.620);
+tl.to("#dr4-wrap",{scale:1.06,filter:"blur(8px)",duration:0.9500000000000001,ease:"power2.in"},16.610);
+tl.set({}, {}, 17.560);
+window.__timelines["dr4"] = tl;
+</script>
+</template>

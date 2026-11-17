@@ -1,0 +1,36 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;font-family:Inter,sans-serif;background:#F4F1EC}
+.cam{position:absolute;inset:0;transform-origin:45% 45%}
+.cam video{position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover}
+.pop{position:absolute;left:90px;top:300px;width:560px;color:#14213D}
+.pop .in{display:block;border-left:6px solid #D64545;padding:14px 0 14px 28px;background:rgba(244,241,236,.86)}
+.pop-t{font-size:54px;font-weight:900;line-height:1.05;letter-spacing:-0.02em}
+.pop-sub{font-size:30px;font-weight:400;margin-top:10px;color:#3c4660}
+.card{position:absolute;left:0;top:0;width:900px;height:1080px;background:#F4F1EC;color:#14213D;padding:150px 90px}
+.row{font-size:44px;font-weight:700;margin:0 0 34px;line-height:1.15}
+.row small{display:block;font-size:30px;font-weight:400;color:#8A8A8A;margin-top:6px}
+.lt{position:absolute;left:90px;bottom:200px;color:#14213D}
+.lt .in{display:block;background:rgba(244,241,236,.92);padding:22px 34px;border-left:8px solid #D64545}
+.lt-n{font-size:56px;font-weight:900;letter-spacing:-0.02em} .lt-r{font-size:28px;margin-top:6px}
+.lt-tag{font-size:20px;letter-spacing:.3em;color:#D64545;font-weight:700;margin-bottom:10px}
+</style>
+<div id="root" data-composition-id="dr5" data-width="1920" data-height="1080" data-layout-allow-overlap>
+<div id="dr5-wrap" class="cam" data-layout-allow-overlap><div id="dr5-cam" class="cam"><video id="dr5-v" class="clip" src="assets/doctor.mp4" data-start="0" data-duration="39.880" data-media-start="116.320" data-has-audio="true" playsinline></video></div><div id="dr5-card" class="card"><div class="row" style="font-size:28px;letter-spacing:.3em;color:#D64545">MEDICINE FITS THE PERSON</div><div class="row" id="dr5-r0">Avoid sudden drops in BP<small></small></div><div class="row" id="dr5-r1">Prostate enlargement<small>→ alpha blockers</small></div><div class="row" id="dr5-r2">Coronary artery disease<small>→ beta blockers</small></div><div class="row" id="dr5-r3">Kidney disease / diabetes<small>→ ACE inhibitors / ARBs</small></div></div></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#dr5-wrap",{maskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) -25%, rgba(0,0,0,0) 0%)",webkitMaskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) -25%, rgba(0,0,0,0) 0%)"},{maskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 125%)",webkitMaskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 125%)",duration:0.9,ease:"power2.inOut"},0);tl.set("#dr5-wrap",{maskImage:"none",webkitMaskImage:"none"},0.91);
+tl.fromTo("#dr5-wrap",{scale:1.12,filter:"blur(8px)"},{scale:1,filter:"blur(0px)",duration:1.0,ease:"power3.out"},0);
+tl.fromTo("#dr5-cam",{scale:1.0},{scale:1.05,duration:6,ease:"none"},0.000);
+tl.fromTo("#dr5-cam",{x:0},{x:470,duration:0.7,ease:"power2.inOut"},0.000);
+tl.fromTo("#dr5-card",{xPercent:-100,rotationY:-35,transformPerspective:1400,transformOrigin:"100% 50%"},{xPercent:0,rotationY:0,duration:0.9,ease:"power3.inOut"},0.000);
+tl.fromTo("#dr5-r0",{opacity:0,x:-30},{opacity:1,x:0,duration:0.55,ease:"expo.out"},5.480);
+tl.fromTo("#dr5-r1",{opacity:0,x:-30},{opacity:1,x:0,duration:0.55,ease:"expo.out"},23.580);
+tl.fromTo("#dr5-r2",{opacity:0,x:-30},{opacity:1,x:0,duration:0.55,ease:"expo.out"},29.960);
+tl.fromTo("#dr5-r3",{opacity:0,x:-30},{opacity:1,x:0,duration:0.55,ease:"expo.out"},35.580);
+tl.to("#dr5-wrap",{scale:1.06,filter:"blur(8px)",duration:0.9500000000000001,ease:"power2.in"},39.330);
+tl.set({}, {}, 40.280);
+window.__timelines["dr5"] = tl;
+</script>
+</template>

@@ -1,0 +1,43 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;font-family:Inter,sans-serif;background:#F4F1EC}
+.cam{position:absolute;inset:0;transform-origin:45% 45%}
+.cam video{position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover}
+.pop{position:absolute;left:90px;top:300px;width:560px;color:#14213D}
+.pop .in{display:block;border-left:6px solid #D64545;padding:14px 0 14px 28px;background:rgba(244,241,236,.86)}
+.pop-t{font-size:54px;font-weight:900;line-height:1.05;letter-spacing:-0.02em}
+.pop-sub{font-size:30px;font-weight:400;margin-top:10px;color:#3c4660}
+.card{position:absolute;left:0;top:0;width:900px;height:1080px;background:#F4F1EC;color:#14213D;padding:150px 90px}
+.row{font-size:44px;font-weight:700;margin:0 0 34px;line-height:1.15}
+.row small{display:block;font-size:30px;font-weight:400;color:#8A8A8A;margin-top:6px}
+.lt{position:absolute;left:90px;bottom:200px;color:#14213D}
+.lt .in{display:block;background:rgba(244,241,236,.92);padding:22px 34px;border-left:8px solid #D64545}
+.lt-n{font-size:56px;font-weight:900;letter-spacing:-0.02em} .lt-r{font-size:28px;margin-top:6px}
+.lt-tag{font-size:20px;letter-spacing:.3em;color:#D64545;font-weight:700;margin-bottom:10px}
+</style>
+<div id="root" data-composition-id="dr3" data-width="1920" data-height="1080" data-layout-allow-overlap>
+<div id="dr3-wrap" class="cam" data-layout-allow-overlap><div id="dr3-cam" class="cam"><video id="dr3-v" class="clip" src="assets/doctor.mp4" data-start="0" data-duration="39.520" data-media-start="59.640" data-has-audio="true" playsinline></video></div><div id="dr3-p1" class="pop"><div class="in"><div class="pop-t">OLD BELIEF</div><div class="pop-sub">treating BP in older people did more harm</div></div></div>
+<div id="dr3-p2" class="pop"><div class="in"><div class="pop-t">A major trial</div><div class="pop-sub">showed treatment helps</div></div></div>
+<div id="dr3-p3" class="pop"><div class="in"><div class="pop-t">Top number &lt; 150</div><div class="pop-sub">systolic blood pressure</div></div></div></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#dr3-wrap",{maskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) -25%, rgba(0,0,0,0) 0%)",webkitMaskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) -25%, rgba(0,0,0,0) 0%)"},{maskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 125%)",webkitMaskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 125%)",duration:0.9,ease:"power2.inOut"},0);tl.set("#dr3-wrap",{maskImage:"none",webkitMaskImage:"none"},0.91);
+tl.fromTo("#dr3-wrap",{scale:1.12,filter:"blur(8px)"},{scale:1,filter:"blur(0px)",duration:1.0,ease:"power3.out"},0);
+tl.fromTo("#dr3-cam",{scale:1.0},{scale:1.05,duration:8,ease:"none"},0.000);
+tl.set("#dr3-cam",{scale:1.1},12.020);
+tl.set("#dr3-cam",{scale:1.0},15.600);
+tl.fromTo("#dr3-cam",{scale:1.05},{scale:1.10,duration:10,ease:"none",immediateRender:false},15.610);
+tl.set("#dr3-cam",{scale:1.12},28.320);
+tl.set("#dr3-cam",{scale:1.0},34.320);
+tl.fromTo("#dr3-p1",{opacity:0},{opacity:1,duration:0.01},2.14);tl.fromTo("#dr3-p1 .w",{opacity:0.12},{opacity:1,duration:0.22,stagger:0.085,ease:"power2.out"},2.14);
+tl.to("#dr3-p1",{opacity:0,filter:"blur(8px)",duration:0.2,ease:"power3.in"},6.140);
+tl.fromTo("#dr3-p2",{opacity:0},{opacity:1,duration:0.01},12.32);tl.fromTo("#dr3-p2 .in",{clipPath:"inset(0% 100% 0% 0%)"},{clipPath:"inset(0% 0% 0% 0%)",duration:0.7,ease:"expo.out"},12.32);
+tl.to("#dr3-p2",{opacity:0,filter:"blur(8px)",duration:0.2,ease:"power3.in"},16.420);
+tl.fromTo("#dr3-p3",{opacity:0},{opacity:1,duration:0.01},28.32);tl.fromTo("#dr3-p3 .in",{yPercent:110,rotationX:-55,transformPerspective:900,transformOrigin:"50% 100%"},{yPercent:0,rotationX:0,duration:0.8,ease:"power4.out"},28.32);
+tl.to("#dr3-p3",{opacity:0,filter:"blur(8px)",duration:0.2,ease:"power3.in"},34.120);
+tl.to("#dr3-wrap",{scale:1.06,filter:"blur(8px)",duration:0.9500000000000001,ease:"power2.in"},38.970);
+tl.set({}, {}, 39.920);
+window.__timelines["dr3"] = tl;
+</script>
+</template>

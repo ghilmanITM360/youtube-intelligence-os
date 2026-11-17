@@ -1,0 +1,297 @@
+
+Asset prompts: Dr. Rehan explainer ("BP after 65")
+Instructions for Codex
+Generate one image per prompt block below, in order (both a and b variants).
+Save each with the exact file name given, into the folder generated/.
+Use the size and background stated in each block. For "transparent", output PNG with alpha.
+Prepend the STYLE LOCK that the block names (CC, MC, NB or FX) to every prompt.
+Do not add text to images. If a generation fails, retry once, then log it in generated/_failed.txt.
+When done, write generated/_index.md listing each file and its prompt ID.
+STYLE LOCK: CC (Clinical Calm)
+Editorial photography look, natural soft window light, muted warm-neutral palette (off-white, warm grey, deep navy, one accent of clinical red #D64545 only where noted). Shallow depth of field, 50mm lens feel, subtle film grain, realistic textures, uncluttered composition with generous negative space for typography. NO text, NO letters, NO numbers on any screen, NO logos, NO watermarks, NO brand names, NO medical gore, NO glossy CGI, NO plastic skin, NO oversaturated colours, NO holograms. People: never a clear face. Hands, silhouettes, backs, over-the-shoulder, or faces cropped/out of focus. Pakistani / South-Asian everyday settings, modest clothing.
+
+STYLE LOCK: MC (Midnight Clinic)
+Same rules as CC, but low-key: pre-dawn blue hour, deep navy shadows (#0B1430), cool cobalt rim light, one small warm practical light source, quiet and intimate, not horror, not sci-fi. Leave the left 40% of the frame dark and empty for typography.
+
+STYLE LOCK: NB (Notebook sketch)
+Hand-drawn editorial illustration: fine graphite pencil and dark-grey ink line art (#3A3A3A) on warm cream paper (#FAF6EE), slightly wobbly human lines, light cross-hatching, at most one accent of red pencil (#D64545) where noted. Looks drawn by hand in a doctor's notebook, not vector, not 3D, not glossy. NO text, NO letters, NO numbers, NO labels, NO arrows with words. No faces drawn in detail. For "transparent" blocks: line art only on a transparent background (no paper).
+
+STYLE LOCK: FX (overlay plates)
+Pure photographic overlay plates for compositing in an editor. Shot on black (or mid-grey where noted), no objects, no text, no frame borders. Must loop or tile without visible seams where noted.
+
+G01a / G01b: bedroom_dawn_a.png / bedroom_dawn_b.png
+Style: MC | Size: 2048×1152 (16:9) | Background: full scene
+Used in: H01 0:00–0:06. Slow push-in, grain, the BP line draws over the dark left side.
+Prompt: A simple South-Asian bedroom before sunrise, an elderly man (about 72) sitting on the edge of a bed in a plain kurta, seen from behind and slightly to the side, his face not visible, a small bedside table with a glass of water and a closed pill box, blue window light. b: same room, wider, the man as a soft silhouette against the window.
+Avoid: visible face, clocks with numbers, text on objects.
+G02a / G02b: hand_bed_edge_a.png / hand_bed_edge_b.png
+Style: MC | Size: 2048×1152 | Background: full scene
+Used in: H01 "every time you stand up". Push + tilt 2°, rack-blur on "the room spins".
+Prompt: Close-up of an elderly South-Asian man's hand gripping the edge of a bed mattress as he pushes himself up, bare feet touching a cool tiled floor, blue pre-dawn light, shallow depth of field. b: the same moment from floor level, feet and hand only.
+Avoid: faces, jewellery brands.
+G03a / G03b: ceiling_fan_a.png / ceiling_fan_b.png
+Style: MC | Size: 2048×1152 | Background: full scene
+Used in: H01 "the room spins" (rotated slowly in code, motion-blurred).
+Prompt: Looking straight up at a simple white ceiling fan in a South-Asian bedroom, still, dim blue light, plain ceiling, slight vignette. b: the same, slightly tilted, softer focus.
+G04a / G04b: two_bp_cuffs_a.png / two_bp_cuffs_b.png
+Style: CC | Size: 2048×2048 | Background: transparent
+Used in: J02 sitting/standing card ⚠️ (only if Dr. Rehan approves that line).
+Prompt: A plain grey upper-arm blood pressure cuff with its tube and bulb, product shot, soft studio light, isolated. The monitor screen (if any) is blank. b: the cuff rolled up.
+Avoid: digits on any display, brand marks.
+G05a / G05b: corridor_walking_stick_a.png / corridor_walking_stick_b.png
+Style: MC | Size: 2048×1152 | Background: full scene
+Used in: B02 "dizziness and falls become the risk". Parallax push; the balance scale sits on the right.
+Layers: also generate G05a_fg.png (person only, transparent) and G05a_bg.png (empty corridor).
+Prompt: An elderly South-Asian woman in a dupatta walking slowly down a dim home corridor with a wooden walking stick, seen from behind, one hand touching the wall, night light at floor level. b: only her slippers and the stick on a tiled floor.
+Avoid: face, fallen person, injury.
+G06a / G06b: morning_walk_a.png / morning_walk_b.png
+Style: CC | Size: 2048×1152 | Background: full scene
+Used in: O01 "better protection". Slow lateral parallax, warm grade.
+Prompt: An elderly South-Asian couple walking side by side on a park path in early morning sun, seen from behind, relaxed, light mist, trees, plenty of empty sky on the left. b: the same couple sitting on a park bench, from behind.
+G07a / G07b: pill_organiser_a.png / pill_organiser_b.png
+Style: CC | Size: 2048×2048 | Background: transparent
+Used in: O01 "never change your medicine on your own". Mask reveal + pop.
+Prompt: A plain weekly pill organiser with seven closed compartments, off-white plastic, soft studio light, isolated, no letters on the lids. b: one compartment open with two plain white tablets.
+T01a / T01b: paper_texture_a.png / paper_texture_b.png
+Style: CC | Size: 4096×2304 | Background: full, seamless if possible
+Used in: every Notebook (NB) scene as the background.
+Prompt: Warm cream notebook paper texture (#FAF6EE), very faint fibres, no lines (a), faint pale-blue ruled lines (b), even soft light, no shadows, no objects.
+T02a / T02b: navy_texture_a.png / navy_texture_b.png
+Style: MC | Size: 4096×2304 | Background: full
+Used in: Midnight Clinic scenes behind typography.
+Prompt: Deep navy (#0B1430) matte paper or soft fabric texture with a very gentle cobalt light falloff from the top right, fine grain, no objects. b: frosted glass over navy, very subtle.
+Batch 2 (G08–G50, T03–T10): more plates for every beat and every transition
+Same rules as above. Priority column: ★ = needed for draft v3, ○ = nice to have. Used in names the beat from asset_plan.md; the animation is done by hand in the edit.
+
+H01: hook (Midnight Clinic)
+G08 ★ dizzy_pov_a.png / dizzy_pov_b.png
+Style: MC | 2048×1152 | full scene
+Used in: H01 "the room spins". Rotated + rack-blurred in code, flashes for 0.4 s.
+Prompt: Point of view of someone standing up from a bed, looking at a bedroom doorway, the frame tilted about 8°, natural lens blur at the edges, blue pre-dawn light. b: the same view, more tilt, the doorway doubled by blur.
+Avoid: people, text, horror mood.
+G09 ★ bedside_macro_a.png / bedside_macro_b.png
+Style: MC | 2048×1152 | full scene
+Used in: H01 "finally coming down". Macro push behind the "72" title.
+Prompt: Macro of a bedside table at dawn: a steel glass of water, a closed plain pill box and folded reading glasses, cobalt window light, warm small lamp glow at the right edge. b: only the glass of water, condensation, very shallow focus.
+G10 ○ window_curtain_dawn_a.png / window_curtain_dawn_b.png
+Style: MC | 2048×1152 | full scene
+Used in: the H01 first frame (establishing). The curtain sways via a 2-layer parallax.
+Layers: also G10a_fg.png (curtain only, transparent).
+Prompt: A simple window with a thin cotton curtain in a South-Asian home before sunrise, deep blue sky, the curtain softly lit from outside. b: the curtain half open, the first warm light at the horizon.
+G11 ○ slippers_floor_a.png / slippers_floor_b.png
+Style: MC | 2048×1152 | full scene
+Used in: H01 "every time you stand up". A floor-level cutaway.
+Prompt: A pair of simple leather chappals on a tiled floor beside a bed, floor-level camera, blue light. b: one bare foot stepping into a chappal.
+I01: Dr. Rehan intro (Clinical Calm)
+G12 ★ stethoscope_desk_a.png / stethoscope_desk_b.png
+Style: CC | 2048×1152 | full scene
+Used in: I01 behind the name reveal (blurred to 40%). A lateral parallax drift.
+Prompt: Top-down view of a clean light-wood clinic desk, a stethoscope in a loose curve, a blank notepad and a pen, empty left half of the frame. b: a side angle, the stethoscope in sharp focus in the foreground, the desk falling off in blur.
+G13 ★ doctor_hands_writing_a.png / doctor_hands_writing_b.png
+Style: CC | 2048×1152 | full scene
+Used in: I01 "consultant…". A mask reveal from the right.
+Prompt: Close-up of a doctor's hands in a white coat sleeve writing on a blank paper pad (no readable writing), soft window light, no face. b: the hands folded on the desk beside a stethoscope.
+G14 ★ heart_model_a.png / heart_model_b.png
+Style: CC | 2048×2048 | transparent
+Used in: I01 "opens blocked heart arteries". Light-3D: two layers parallaxed with a slow Y-rotation fake.
+Prompt: A matte off-white anatomical teaching model of the human heart (plaster-like, not realistic tissue), soft studio light, isolated, three-quarter view. b: the same model, front view.
+Avoid: blood, gore, glossy plastic.
+G15 ○ clinic_corridor_day_a.png / clinic_corridor_day_b.png
+Style: CC | 2048×1152 | full scene
+Used in: the I01 → DR1 transition (push through the corridor into the doctor).
+Prompt: A clean, bright hospital corridor in soft daylight, symmetrical, empty, warm-neutral walls, a single open door at the end with light spilling out. b: the same corridor, shallow focus, closer to the door.
+Avoid: signs, text, logos.
+DR1 / J01: risk factors, ranking (CC + Notebook)
+G16 ★ blood_tubes_a.png / blood_tubes_b.png
+Style: CC | 2048×2048 | transparent
+Used in: the DR1 "Hyperlipidemia" pop (a small cut-out beside the card).
+Prompt: Three plain blood-sample tubes with blank grey caps in a simple rack, no labels, isolated, soft light. b: a single tube held by a gloved hand.
+Avoid: labels, numbers, visible blood splashes.
+G17 ★ world_paper_map_a.png / world_paper_map_b.png
+Style: CC | 2048×1152 | full scene
+Used in: the DR1 "INTERHEART" pop (a slow push, dots drawn in code on top).
+Prompt: A muted vintage paper world map on a desk, soft light, warm-neutral tones, no country names, no text. b: a close-up of South Asia on the same map, shallow focus.
+Avoid: any readable labels.
+G18 ○ research_papers_a.png / research_papers_b.png
+Style: CC | 2048×1152 | full scene
+Used in: DR1 "showed… causation" (cutaway under the pop).
+Prompt: A neat stack of printed research papers and a pair of glasses on a desk, the pages unreadable (soft focus), daylight. b: a hand turning a page, motion blur.
+G19 ★ sketch_heart_a.png / sketch_heart_b.png
+Style: NB | 2048×2048 | transparent
+Used in: J01, beside the #2 ranking. Drawn on with a stroke reveal (mask follows the line).
+Prompt: A simple hand-drawn heart (anatomical but friendly), ink outline, light hatching, the coronary arteries drawn as thin lines on its surface, one artery in red pencil. b: the same heart with a small narrowed section circled in red pencil.
+G20 ★ sketch_artery_a.png / sketch_artery_b.png
+Style: NB | 2048×1152 | transparent
+Used in: J01 "blocked heart arteries". The plaque grows in via a mask.
+Prompt: A hand-drawn cross-section of a tube-like blood vessel, a clear open channel (a), and the same vessel narrowed by a soft build-up drawn with hatching (b).
+Avoid: gore, realistic tissue.
+DR2 / J02: standing up → BP drops (CC + Notebook)
+G21 ★ rising_from_chair_a.png / rising_from_chair_b.png
+Style: CC | 2048×1152 | full scene
+Used in: DR2 split card (top half), "fall down". A slow push.
+Layers: also G21a_fg.png (person + chair, transparent).
+Prompt: An elderly South-Asian man in a shalwar kameez pushing up from a wooden armchair with both hands, seen from the side, face turned away / out of focus, soft daylight living room. b: the same, both hands on the armrests, mid-rise.
+G22 ★ hand_on_wall_a.png / hand_on_wall_b.png
+Style: CC | 2048×1152 | full scene
+Used in: J02 "dizzy, faint". A tilt + rack focus.
+Prompt: An elderly hand pressed flat against a plain painted wall for support, soft daylight, shallow focus. b: an elderly hand gripping a stair railing.
+G23 ★ sketch_sit_stand_a.png / sketch_sit_stand_b.png
+Style: NB | 2048×1152 | transparent
+Used in: J02 "stand up → BP falls → dizzy". Three poses revealed one by one.
+Prompt: Three small hand-drawn line figures side by side: an elderly person sitting on a chair, the same person standing up, the same person standing with one hand on the head and slight wobble lines. b: only the standing figure with wobble lines, larger.
+G24 ○ sketch_bp_cuff_a.png / sketch_bp_cuff_b.png
+Style: NB | 2048×2048 | transparent
+Used in: J02 "check BP sitting AND standing" ⚠️ (only if Dr. Rehan approves that line).
+Prompt: A hand-drawn upper-arm blood pressure cuff with its bulb and tube, ink line art, the display blank. b: the cuff wrapped on a simple sketched arm.
+DR3 / B01: old belief → the trial → the line moved (CC)
+G25 ★ old_files_a.png / old_files_b.png
+Style: CC | 2048×1152 | full scene
+Used in: the DR3 "OLD BELIEF" pop. Desaturated, a sepia push, a dust overlay (T05).
+Prompt: Old cardboard file folders and yellowed papers tied with string on a dusty shelf, soft window light, no readable writing. b: a single faded folder on a desk, dust in a beam of light.
+G26 ★ rubber_stamp_a.png / rubber_stamp_b.png
+Style: CC | 2048×2048 | transparent
+Used in: the DR3 "OLD BELIEF" stamp hit (the stamp drops in, scale 1.3→1, a shake).
+Prompt: A wooden-handled rubber stamp, isolated, soft studio light, the stamp face blank. b: the stamp seen from below, red ink on the face.
+G27 ★ elderly_group_park_a.png / elderly_group_park_b.png
+Style: CC | 2048×1152 | full scene
+Used in: DR3 "a major trial… showed treatment helps". A lateral parallax.
+Prompt: A group of five or six elderly South-Asian men and women walking slowly together on a park path, seen from behind, morning light. b: the same group sitting on a long bench, from behind.
+G28 ○ pencil_line_paper_a.png / pencil_line_paper_b.png
+Style: CC | 2048×1152 | full scene
+Used in: B01 "the line has moved" (the code number line sits on this).
+Prompt: Top-down view of a hand holding a pencil, drawing a straight line along a wooden ruler on cream paper, soft daylight. b: an eraser rubbing out an earlier pencil line, eraser crumbs.
+DR4: 140/90 → treat (CC)
+G29 ★ home_bp_monitor_a.png / home_bp_monitor_b.png
+Style: CC | 2048×1152 | full scene
+Used in: the DR4 "140/90 or more" pop (the numbers are typeset in code, never in the image).
+Prompt: A home blood pressure monitor with a completely blank screen on a dining table, its cuff beside it, a cup of tea, morning window light. b: an elderly arm wearing the cuff, resting on the table, the monitor blank.
+Avoid: digits on the screen, brand names.
+G30 ○ bp_diary_a.png / bp_diary_b.png
+Style: CC | 2048×1152 | full scene
+Used in: DR4 "other conditions". Slow push.
+Prompt: An elderly hand writing in a small home diary with a pen (writing illegible/soft focus), reading glasses on the page. b: the diary closed with the pen on top.
+B02: heart risk vs fall risk (Midnight Clinic)
+G31 ★ stone_balance_a.png / stone_balance_b.png
+Style: MC | 2048×1152 | full scene
+Used in: the B02 opening "Here's the challenge" (behind the code balance scale, at 30%).
+Prompt: Three smooth river stones balanced on top of each other on a dark surface, cobalt rim light, deep navy background, empty left side. b: the same stones, the top one tilting slightly.
+G32 ★ brass_scale_a.png / brass_scale_b.png
+Style: MC | 2048×2048 | transparent
+Used in: B02 (optional photo replacement for the code-drawn scale; the beam is cut as its own layer).
+Layers: G32a_beam.png (beam + pans only) and G32a_stand.png (stand only), both transparent.
+Prompt: A simple antique brass balance scale, two shallow pans, level, isolated, cool rim light, dark-friendly edges. b: the same scale tipped to the left.
+G33 ★ banister_night_a.png / banister_night_b.png
+Style: MC | 2048×1152 | full scene
+Used in: B02 "lowered carelessly → falls". A push + slight tilt.
+Prompt: An elderly hand gripping a wooden banister on a dim staircase at night, a small warm night light at the bottom of the stairs, cobalt shadows. b: the same staircase, empty, seen from the top step.
+Avoid: falling people, injury.
+DR5: medicine fits the person (CC)
+G34 ★ plain_tablets_a.png / plain_tablets_b.png
+Style: CC | 2048×1152 | full scene
+Used in: the DR5 split card background (top strip, blurred).
+Prompt: Several plain white and off-white round and oval tablets scattered on a linen cloth, no markings, soft daylight, shallow focus. b: tablets in four small separate groups on the cloth (to line up with the four map rows).
+Avoid: imprints, brand shapes, colourful capsules.
+G35 ★ blister_pack_a.png / blister_pack_b.png
+Style: CC | 2048×2048 | transparent
+Used in: the DR5 row entrance icons (cut-outs slide in beside each row).
+Prompt: A plain silver blister pack of white tablets, no print on the foil, isolated. b: the same pack with two tablets pushed out.
+G36 ★ consultation_ots_a.png / consultation_ots_b.png
+Style: CC | 2048×1152 | full scene
+Used in: DR5 "the choice… depends on the person". A mask reveal.
+Prompt: Over-the-shoulder view of an elderly South-Asian man in a consultation, across the desk only the doctor's hands and white coat visible, gesturing calmly, both faces not visible, warm clinic light. b: the patient's and doctor's hands on the desk, the doctor pointing at a blank paper.
+G37 ★ sketch_kidney_a.png / sketch_kidney_b.png
+Style: NB | 2048×2048 | transparent
+Used in: the DR5 "kidney disease" row icon.
+Prompt: A simple hand-drawn pair of kidneys, ink outline, light hatching. b: a single kidney, larger, red pencil accent on the outline.
+G38 ○ sketch_heart_small_a.png / sketch_heart_small_b.png
+Style: NB | 1024×1024 | transparent
+Used in: the DR5 "coronary artery disease" row icon.
+Prompt: A small simple hand-drawn heart with two artery lines, ink, minimal. b: the same with a red pencil outline.
+G39 ○ sketch_droplet_a.png / sketch_droplet_b.png
+Style: NB | 1024×1024 | transparent
+Used in: the DR5 "diabetes" row icon.
+Prompt: A small hand-drawn drop of blood shape in ink outline with light hatching, the inside in red pencil. b: the same drop with a small sketched sugar cube beside it.
+U01: no single target (Notebook) ⚠️ (used only if U01 is approved)
+G40 ○ water_tablet_glass_a.png / water_tablet_glass_b.png
+Style: CC | 2048×1152 | full scene
+Used in: U01 "Diuretics (water tablets)".
+Prompt: A glass of water and one plain white tablet on a wooden kitchen counter, morning light, empty right side. b: an elderly hand picking up the tablet.
+G41 ○ sketch_three_paths_a.png / sketch_three_paths_b.png
+Style: NB | 2048×1152 | transparent
+Used in: U01 "Today: no single target". The paths draw on one by one.
+Prompt: A hand-drawn path that splits into three different paths going into the distance, ink lines, small sketched trees, no signs. b: the same, with a small sketched elderly figure with a walking stick at the fork.
+G42 ○ sketch_elderly_hands_a.png / sketch_elderly_hands_b.png
+Style: NB | 2048×1152 | transparent
+Used in: U01 "age 80+".
+Prompt: Hand-drawn elderly hands resting on top of a walking stick, ink and graphite, gentle hatching. b: the same hands holding a cup of tea.
+DR6: bottom line (CC)
+G43 ★ blank_clipboard_a.png / blank_clipboard_b.png
+Style: CC | 2048×2048 | transparent
+Used in: DR6 "BOTTOM LINE" (the tick list sits on this; the ticks are drawn in code).
+Prompt: A plain wooden clipboard with a blank white sheet and a pen clipped on, isolated, top-down, soft light. b: the same at a slight angle.
+G44 ★ stethoscope_back_a.png / stethoscope_back_b.png
+Style: CC | 2048×1152 | full scene
+Used in: DR6 "see a trained specialist". A slow push.
+Prompt: A doctor's hand holding a stethoscope against the back of an elderly man wearing a plain kurta, seen from behind, both faces out of frame, soft clinic light. b: the stethoscope chest piece in the doctor's hand, macro.
+O01: outro (Notebook → Clinical Calm)
+G45 ★ grandchild_hand_a.png / grandchild_hand_b.png
+Style: CC | 2048×1152 | full scene
+Used in: O01 "Better PROTECTION". Slow push, warm grade.
+Prompt: A small child's hand holding an elderly grandfather's hand while walking, close-up from behind, warm morning sun, a park path. b: the same two hands resting together on a bench.
+G46 ★ sitting_on_bed_holding_head_a.png / sitting_on_bed_holding_head_b.png
+Style: CC | 2048×1152 | full scene
+Used in: O01 "Dizzy when you stand". A small inset card beside the list.
+Prompt: An elderly South-Asian woman sitting on the edge of a bed, one hand on her forehead, seen from behind / face hidden, daylight, calm not dramatic. b: the same from the side, softly out of focus.
+G47 ★ phone_call_a.png / phone_call_b.png
+Style: CC | 2048×1152 | full scene
+Used in: O01 "talk to your doctor". A mask reveal.
+Prompt: An elderly hand holding a simple mobile phone to the ear, the face cropped out of frame, soft window light, a cup of tea on the table. b: the phone lying on the table, its screen blank and dark.
+G48 ★ sunrise_rooftops_a.png / sunrise_rooftops_b.png
+Style: CC | 2048×1152 | full scene
+Used in: O01 → DR7 (a hopeful bridge). A slow lateral parallax, then a light-leak (T04) into the doctor.
+Prompt: Sunrise over simple flat South-Asian rooftops with water tanks and a few trees, soft haze, warm gold light, lots of empty sky. b: the same, a little later, brighter, birds as tiny shapes.
+Avoid: signboards, text.
+G49 ○ tea_morning_a.png / tea_morning_b.png
+Style: CC | 2048×1152 | full scene
+Used in: the O01 disclaimer card background (blurred to 30%).
+Prompt: A cup of chai on a windowsill in the morning, steam, plants, soft focus behind. b: two cups of chai side by side.
+END: end card
+G50 ★ warm_bokeh_a.png / warm_bokeh_b.png
+Style: CC | 4096×2304 | full
+Used in: the END card background (under the ECG line, a slow drift).
+Prompt: Soft out-of-focus warm bokeh circles on an off-white background (#F4F1EC), very gentle, no objects. b: the same with a faint cool cobalt hint at the right edge.
+Overlays + transition plates (FX)
+T03 ★ film_grain_plate_a.png / film_grain_plate_b.png
+Style: FX | 2048×1152 | mid-grey (#808080), tiling
+Used in: every scene, as an overlay blend at 6–10%, offset each frame in code (the grain "dances").
+Prompt: Fine 35mm film grain on a flat 50% grey field, even, no vignette, no dust. b: a coarser 16mm grain.
+T04 ★ light_leak_warm_a.png / light_leak_warm_b.png
+Style: FX | 2048×1152 | on black
+Used in: the doctor ↔ narrator transitions (screen blend, swept across in 0.6 s).
+Prompt: An organic warm orange-gold film light leak entering from the right edge on a pure black background, soft, no hard shapes. b: a red-magenta leak from the top-left corner.
+T05 ○ dust_scratches_a.png / dust_scratches_b.png
+Style: FX | 2048×1152 | on black
+Used in: the DR3 "OLD BELIEF" beat only (screen blend).
+Prompt: Sparse white dust specks and a few thin vertical film scratches on pure black. b: denser dust, no scratches.
+T06 ★ paper_torn_edge_a.png / paper_torn_edge_b.png
+Style: NB | 4096×2304 | transparent
+Used in: every transition into a Notebook scene (the paper slides in with its torn edge leading).
+Prompt: A sheet of cream notebook paper (#FAF6EE) filling the frame, with a torn, fibrous left edge, transparent outside the paper. b: the same with a torn top edge.
+T07 ★ ink_brush_mask_a.png / ink_brush_mask_b.png
+Style: FX | 2048×1152 | white background
+Used in: the NB ↔ CC transitions as a luma matte (a brush stroke wipes the next scene in).
+Prompt: One bold black dry-brush ink stroke sweeping horizontally across a white field, rough bristle texture at the edges, covering about 60% of the height. b: three overlapping brush strokes that together cover the whole frame.
+T08 ○ highlighter_swipe_a.png / highlighter_swipe_b.png
+Style: NB | 2048×512 | transparent
+Used in: NB keywords (the swipe is revealed left→right under the word).
+Prompt: A single yellow highlighter marker swipe (#F5D547), slightly uneven edges, transparent background. b: a red pencil scribble underline (#D64545).
+T09 ★ cobalt_light_streak_a.png / cobalt_light_streak_b.png
+Style: FX | 2048×1152 | on black
+Used in: the transitions into and out of Midnight Clinic scenes (a screen blend, whipped across).
+Prompt: A soft horizontal cobalt-blue anamorphic light streak across the centre of a pure black frame, gentle glow. b: a thinner streak with a small warm core.
+T10 ○ lens_dirt_a.png / lens_dirt_b.png
+Style: FX | 2048×1152 | on black
+Used in: the H01 and B02 Midnight scenes (a screen blend at 15%, only visible where light hits).
+Prompt: Subtle lens smudges and fine dust on black, lit faintly from one side. b: a softer, fewer smudges.
+Totals: 50 picture plates (G01–G50) + 10 textures/overlays (T01–T10) = 60 prompts, 120 images with the a/b variants. Return: put all files in work/02_assets/generated/. ★ plates first; ○ plates can come later. Until a plate exists its slot uses the code-drawn placeholder.
+

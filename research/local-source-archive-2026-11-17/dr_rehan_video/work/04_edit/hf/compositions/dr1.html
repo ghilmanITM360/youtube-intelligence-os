@@ -1,0 +1,49 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;font-family:Inter,sans-serif;background:#F4F1EC}
+.cam{position:absolute;inset:0;transform-origin:45% 45%}
+.cam video{position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover}
+.pop{position:absolute;left:90px;top:300px;width:560px;color:#14213D}
+.pop .in{display:block;border-left:6px solid #D64545;padding:14px 0 14px 28px;background:rgba(244,241,236,.86)}
+.pop-t{font-size:54px;font-weight:900;line-height:1.05;letter-spacing:-0.02em}
+.pop-sub{font-size:30px;font-weight:400;margin-top:10px;color:#3c4660}
+.card{position:absolute;left:0;top:0;width:900px;height:1080px;background:#F4F1EC;color:#14213D;padding:150px 90px}
+.row{font-size:44px;font-weight:700;margin:0 0 34px;line-height:1.15}
+.row small{display:block;font-size:30px;font-weight:400;color:#8A8A8A;margin-top:6px}
+.lt{position:absolute;left:90px;bottom:200px;color:#14213D}
+.lt .in{display:block;background:rgba(244,241,236,.92);padding:22px 34px;border-left:8px solid #D64545}
+.lt-n{font-size:56px;font-weight:900;letter-spacing:-0.02em} .lt-r{font-size:28px;margin-top:6px}
+.lt-tag{font-size:20px;letter-spacing:.3em;color:#D64545;font-weight:700;margin-bottom:10px}
+</style>
+<div id="root" data-composition-id="dr1" data-width="1920" data-height="1080" data-layout-allow-overlap>
+<div id="dr1-wrap" class="cam" data-layout-allow-overlap><div id="dr1-cam" class="cam"><video id="dr1-v" class="clip" src="assets/doctor.mp4" data-start="0" data-duration="40.200" data-media-start="0.000" data-has-audio="true" playsinline></video></div><div id="dr1-lt" class="lt"><div class="in"><div class="lt-tag">DECODE YOUR HEART</div><div class="lt-n"><span class="l">D</span><span class="l">r</span><span class="l">.</span><span class="l">&nbsp;</span><span class="l">R</span><span class="l">e</span><span class="l">h</span><span class="l">a</span><span class="l">n</span><span class="l">&nbsp;</span><span class="l">O</span><span class="l">m</span><span class="l">e</span><span class="l">r</span></div><div class="lt-r">Consultant Interventional Cardiologist &amp; Diabetologist</div></div></div>
+<div id="dr1-p1" class="pop"><div class="in"><div class="pop-t">Hyperlipidemia</div><div class="pop-sub">= high cholesterol</div></div></div>
+<div id="dr1-p2" class="pop"><div class="in"><div class="pop-t">INTERHEART</div><div class="pop-sub">a large worldwide heart-attack study</div></div></div>
+<div id="dr1-p3" class="pop"><div class="in"><div class="pop-t">High BP →</div><div class="pop-sub">should always be treated</div></div></div></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#dr1-wrap",{maskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) -25%, rgba(0,0,0,0) 0%)",webkitMaskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) -25%, rgba(0,0,0,0) 0%)"},{maskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 125%)",webkitMaskImage:"radial-gradient(circle at 45% 45%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 125%)",duration:0.9,ease:"power2.inOut"},0);tl.set("#dr1-wrap",{maskImage:"none",webkitMaskImage:"none"},0.91);
+tl.fromTo("#dr1-wrap",{scale:1.12,filter:"blur(8px)"},{scale:1,filter:"blur(0px)",duration:1.0,ease:"power3.out"},0);
+tl.fromTo("#dr1-cam",{scale:1.0},{scale:1.05,duration:7.5,ease:"none"},0.000);
+tl.set("#dr1-cam",{scale:1.1},3.240);
+tl.set("#dr1-cam",{scale:1.0},7.870);
+tl.fromTo("#dr1-cam",{scale:1.05},{scale:1.10,duration:15,ease:"none",immediateRender:false},7.880);
+tl.set("#dr1-cam",{scale:1.1},24.690);
+tl.set("#dr1-cam",{scale:1.0},29.100);
+tl.set("#dr1-cam",{scale:1.12},32.160);
+tl.fromTo("#dr1-cam",{scale:1.0},{scale:1.05,duration:3.8,ease:"none",immediateRender:false},36.300);
+tl.fromTo("#dr1-lt",{opacity:0},{opacity:1,duration:0.01},0.4);tl.fromTo("#dr1-lt .l",{opacity:0,filter:"blur(4px)"},{opacity:1,filter:"blur(0px)",duration:0.2,stagger:0.035,ease:"power3.out"},0.6);
+tl.fromTo("#dr1-lt .in",{clipPath:"inset(0% 100% 0% 0%)"},{clipPath:"inset(0% 0% 0% 0%)",duration:0.7,ease:"expo.out"},0.4);
+tl.to("#dr1-lt",{opacity:0,filter:"blur(8px)",duration:0.25,ease:"power3.in"},5.6);
+tl.fromTo("#dr1-p1",{opacity:0},{opacity:1,duration:0.01},9.54);tl.fromTo("#dr1-p1 .in",{clipPath:"inset(0% 100% 0% 0%)"},{clipPath:"inset(0% 0% 0% 0%)",duration:0.7,ease:"expo.out"},9.54);
+tl.to("#dr1-p1",{opacity:0,filter:"blur(8px)",duration:0.2,ease:"power3.in"},12.740);
+tl.fromTo("#dr1-p2",{opacity:0},{opacity:1,duration:0.01},23.4);tl.fromTo("#dr1-p2 .w",{opacity:0.12},{opacity:1,duration:0.22,stagger:0.085,ease:"power2.out"},23.4);
+tl.to("#dr1-p2",{opacity:0,filter:"blur(8px)",duration:0.2,ease:"power3.in"},27.200);
+tl.fromTo("#dr1-p3",{opacity:0},{opacity:1,duration:0.01},34.28);tl.fromTo("#dr1-p3 .in",{yPercent:110,rotationX:-55,transformPerspective:900,transformOrigin:"50% 100%"},{yPercent:0,rotationX:0,duration:0.8,ease:"power4.out"},34.28);
+tl.to("#dr1-p3",{opacity:0,filter:"blur(8px)",duration:0.2,ease:"power3.in"},37.280);
+tl.to("#dr1-wrap",{scale:1.06,filter:"blur(8px)",duration:0.9500000000000001,ease:"power2.in"},39.650);
+tl.set({}, {}, 40.600);
+window.__timelines["dr1"] = tl;
+</script>
+</template>
