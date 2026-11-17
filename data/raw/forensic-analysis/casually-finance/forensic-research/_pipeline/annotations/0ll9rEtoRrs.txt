@@ -1,0 +1,360 @@
+# S001.0 reviewer boundary
+#S001.0|Small green Treasury paper on white|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S001.0|Small green Treasury paper on white|United States Treasury|small centre|OBJ_TREASURY=green Treasury paper drawing|START: paper
+S001.1|Treasury paper surrounded by bond cards, calendar, host, globe and newspaper reader|BOND; NEWS|paper centre, globe right|OBJ_TREASURY;OBJ_BONDS=yellow bond cards;OBJ_CALENDAR=red calendar;HOST=spiky-haired stick presenter;OBJ_GLOBE=blue green globe with eyes;CHAR_READER=newspaper reader|BUILD: debt collage
+S001.2|Second calendar added to collage|BOND; NEWS|calendars left paper centre|OBJ_TREASURY;OBJ_BONDS;OBJ_CALENDAR;HOST;OBJ_GLOBE;CHAR_READER|POP_IN: calendar
+# S002.0 reviewer boundary
+#S002.0|Three stick observers peek in from left|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S002.0|Three stick observers peek in from left|-|figures left|CHAR_TRIO=three stick observers including glasses and green tie|CUT: observers
+S002.1|Debt counter beside observers|WHAT IS THE NATIONAL DEBT TODAY?; $40,012,878,358,452; $117,237|counter upper right|CHAR_TRIO;SS_DEBT=Peter G Peterson debt counter screenshot|POP_IN: counter
+S002.2|Question added below counter|read that?|text lower right|CHAR_TRIO;SS_DEBT;TXT_QUESTION=read that lettering|TEXT_REVEAL: question
+S002.3|Red outlined debt emphasis added|FOURTY TRILLION!|red text lower right|CHAR_TRIO;SS_DEBT;TXT_QUESTION;TXT_FORTY=red outlined debt lettering|TEXT_REVEAL: number
+# S003.0 reviewer boundary
+#S003.0|Treasury seal alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S003.0|Treasury seal alone|-|upper centre|LOGO_TREASURY=US Treasury seal|CUT: seal
+S003.1|Seal and paper above buyback headline|Treasury Department to double debt buybacks after bond yield spike|seal left paper right headline below|LOGO_TREASURY;OBJ_TREASURY;SS_BUYBACK=The Hill debt buyback headline|BUILD: evidence
+S003.2|Second Treasury paper added|Treasury Department to double debt buybacks after bond yield spike|paper stack upper right|LOGO_TREASURY;OBJ_TREASURY;SS_BUYBACK|POP_IN: paper
+S003.3|Third Treasury paper added|Treasury Department to double debt buybacks after bond yield spike|paper stack upper right|LOGO_TREASURY;OBJ_TREASURY;SS_BUYBACK|POP_IN: paper
+# S004.0 reviewer boundary
+#S004.0|Smiling host hands on hips|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S004.0|Smiling host hands on hips|-|centre|HOST|CUT: host
+# S005.0 reviewer boundary
+#S005.0|Green USA map reads blue US-flag book|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S005.0|Green USA map reads blue US-flag book|-|map fills frame|MAP_USA=green USA map character;OBJ_BOOK=blue flag book|CUT: America reading
+# S005.1 reviewer boundary
+#S005.1|Open heart bond locket|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S005.1|Open heart bond locket|Bond market my beloved|centre small|OBJ_LOCKET=red heart-shaped bond locket|CUT: affection metaphor
+# S006.0 reviewer boundary
+#S006.0|USA map below left of bond heart|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S006.0|USA map below left of bond heart|Bond market my beloved|map left heart right|MAP_USA;OBJ_LOCKET|REFRAME: map and heart
+# S006.1 reviewer boundary
+#S006.1|Red calendar alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S006.1|Red calendar alone|-|centre|OBJ_CALENDAR|CUT: date
+S006.2|US yield chart with endpoint circled beside calendar|30-year Treasury yield hits highest level since 2007|chart left calendar centre|CHART_USYIELD=US yield chart with red circle;OBJ_CALENDAR|POP_IN: US chart
+S006.3|German yield chart added|Germany Is Set to Pay Most in 15-Years to Borrow Funds|chart lower right|CHART_USYIELD;OBJ_CALENDAR;CHART_GERMAN=German yield chart with endpoint circle|POP_IN: German chart
+S006.4|UK yield chart added|UK 30-year bond yields highest since August 1998|chart upper right|CHART_USYIELD;OBJ_CALENDAR;CHART_GERMAN;CHART_UK=UK yield chart|POP_IN: UK chart
+S006.5|France bond quote added|France 30 Year Bond; 4.7016%|chart lower left|CHART_USYIELD;OBJ_CALENDAR;CHART_GERMAN;CHART_UK;CHART_FRANCE=France bond quote card|POP_IN: France chart
+S006.6|Canada quote enlarged over collage|Canada 30 Year Government Bond; 4.050%|left dominant|CHART_GERMAN;CHART_UK;CHART_FRANCE;CHART_CANADA=Canada bond quote card|POP_IN: Canada chart
+S006.7|Japan multi-maturity chart replaces Germany|Japan's Long-Maturity Bonds Have Been Soaring|Japan lower right|CHART_UK;CHART_FRANCE;CHART_CANADA;CHART_JAPAN=Japan maturity yield chart|SWAP: Japan chart
+# S006.8 reviewer boundary
+#S006.8|USA and Germany green maps|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S006.8|USA and Germany green maps|-|left and centre|MAP_USA;MAP_GERMANY=green German map character|CUT: country cast
+S006.9|UK France Canada Japan maps join cast|-|six maps across canvas|MAP_USA;MAP_GERMANY;MAP_UK=green UK map;MAP_FRANCE=green French map;MAP_CANADA=green Canadian map;MAP_JAPAN=green Japan map|BUILD: cast
+S006.10|Five-chart strip above country cast|-|charts top maps below|MAP_USA;MAP_GERMANY;MAP_UK;MAP_FRANCE;MAP_CANADA;MAP_JAPAN;CHART_USYIELD;CHART_UK;CHART_FRANCE;CHART_CANADA;CHART_JAPAN|POP_IN: evidence strip
+# S007.0 reviewer boundary
+#S007.0|Stick figure reads newspaper|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S007.0|Stick figure reads newspaper|NEWS|lower centre|CHAR_READER|CUT: reader
+S007.1|Debt-counter speech bubble over reader|$40,012,878,358,452|bubble above reader|CHAR_READER;SS_DEBT;OBJ_BUBBLE=speech bubble|POP_IN: bubble
+S007.2|Tilted host with bond, upward arrow and percent disk beside reader|BOND; %|host right reader left|CHAR_READER;SS_DEBT;HOST;OBJ_BONDS;ICON_UP=red upward arrow;ICON_PERCENT=orange percent disk|BUILD: rates link
+# S008.0 reviewer boundary
+#S008.0|Animated film character in glasses beside TV|STOCK_FOOTAGE;MOTION_GRAPHICS
+S008.0|Animated film character in glasses beside TV|Coincidence?|embedded clip centre|FOOTAGE_GAG=animated film reaction insert|CUT: reaction
+# S009.0 reviewer boundary
+#S009.0|Close-up film character|STOCK_FOOTAGE;MOTION_GRAPHICS
+S009.0|Close-up film character|I THINK NOT!|embedded clip centre|FOOTAGE_GAG|FOOTAGE_CUT: close-up
+# S010.0 reviewer boundary
+#S010.0|Host with pointer beside blank chalkboard|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S010.0|Host with pointer beside blank chalkboard|-|host left board right|HOST;POINTER=thin brown pointer;OBJ_BOARD=green chalkboard|CUT: lesson
+S010.1|White DEBT label on board|DEBT|board right|HOST;POINTER;OBJ_BOARD;TXT_DEBT=DEBT lettering|TEXT_REVEAL: debt
+# S011.0 reviewer boundary
+#S011.0|Smiling USA map alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S011.0|Smiling USA map alone|-|centre|MAP_USA|CUT: borrower
+S011.1|Debt paper in map hand|DEBT|paper right of map|MAP_USA;OBJ_DEBT=cream debt paper red label|POP_IN: debt
+S011.2|Debt-paper pile beside map|DEBT|pile lower left|MAP_USA;OBJ_DEBT|BUILD: debt pile
+S011.3|Green-tie figure enters beside map and papers|DEBT|figure right|MAP_USA;OBJ_DEBT;CHAR_TIE=bald stick figure green tie|POP_IN: counterpart
+S011.4|Tie figure now worried beside smiling USA and debt pile|DEBT|figure right map left|MAP_USA;OBJ_DEBT;CHAR_TIE|FACE_CHANGE: worry
+# S012.0 reviewer boundary
+#S012.0|Grinning tie figure holding green notes|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S012.0|Grinning tie figure holding green notes|-|large centre figure|CHAR_TIE;OBJ_NOTES=green dollar banknotes|CUT: investor reward
+# S012.1 reviewer boundary
+#S012.1|Host with palms up|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S012.1|Host with palms up|-|centre|HOST|CUT: host
+S012.2|Tall government debt infographic|Government Debt Around the World in 2025|centre narrow infographic|SS_DEBTRATIOS=government debt-to-GDP infographic|POP_IN: debt ratios
+S012.3|Infographic enlarged beside German map|heck ye; 64%; 81%; 91%; 96%; 103%|map left chart right cropped|SS_DEBTRATIOS;MAP_GERMANY|REFRAME: Germany comparison
+S012.4|Debt ratios arranged horizontal with red arrow at Germany|64%; 81%; 91%; 96%; 103%; 114%; 117%; 125%; 137%; 230%|row top arrow left|SS_DEBTRATIOS;ICON_UP|REFRAME: comparison strip
+S012.5|German map and yield chart below debt-ratio row|Germany Is Set to Pay Most in 15-Years to Borrow Funds|ratios top chart lower right|SS_DEBTRATIOS;ICON_UP;MAP_GERMANY;CHART_GERMAN|BUILD: counterexample
+# S012.6 reviewer boundary
+#S012.6|Host wearing detective cap holding magnifier|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S012.6|Host wearing detective cap holding magnifier|-|centre|HOST;OBJ_CAP=detective cap;OBJ_MAGNIFIER=hand magnifying glass|CUT: investigation
+# S012.7 reviewer boundary
+#S012.7|Six country map characters on white|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S012.7|Six country map characters on white|-|row across bottom|MAP_USA;MAP_GERMANY;MAP_UK;MAP_FRANCE;MAP_CANADA;MAP_JAPAN|CUT: country cast
+S012.8|Speech balloon above USA and countries|Lads, I think I'm kinda screwed...|bubble left above cast|MAP_USA;MAP_GERMANY;MAP_UK;MAP_FRANCE;MAP_CANADA;MAP_JAPAN;OBJ_BUBBLE|TEXT_REVEAL: shared distress
+S012.9|Large multi-tail speech balloon above cast|Yeah, me too.|bubble spans top|MAP_USA;MAP_GERMANY;MAP_UK;MAP_FRANCE;MAP_CANADA;MAP_JAPAN;OBJ_BUBBLE|SWAP: group reply
+# S013.0 reviewer boundary
+#S013.0|Detective host with magnifier enlarged|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S013.0|Detective host with magnifier enlarged|-|host left|HOST;OBJ_CAP;OBJ_MAGNIFIER|CUT: investigator
+S013.1|Black question disk beside detective host|?|disk right host left|HOST;OBJ_CAP;OBJ_MAGNIFIER;ICON_QUESTION=black disk white question mark|POP_IN: question
+# S013.2 reviewer boundary
+#S013.2|Small question disk alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S013.2|Small question disk alone|?|lower right|ICON_QUESTION|CUT: question isolated
+S013.3|Treasury and bond pile above question disk|United States Treasury; BOND; ?|pile right|OBJ_TREASURY;OBJ_BONDS;ICON_QUESTION|BUILD: unresolved debt
+S013.4|Globe with face beside Treasury pile|United States Treasury; BOND; ?|globe left pile right|OBJ_GLOBE;OBJ_TREASURY;OBJ_BONDS;ICON_QUESTION|POP_IN: global scope
+# S014.0 reviewer boundary
+#S014.0|Ponytailed detective with magnifier and question disk|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S014.0|Ponytailed detective with magnifier and question disk|?|character left disk right|CHAR_DETECTIVE=ponytailed stick detective;OBJ_MAGNIFIER;ICON_QUESTION|CUT: question
+# S015.0 reviewer boundary
+#S015.0|Glasses figure with headband beside cropped decade arrow|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S015.0|Glasses figure with headband beside cropped decade arrow|1980s|figure left timeline right cropped|CHAR_DWIGHT=glasses brown-haired green-tie character;TXT_DECADE=1980s decade lettering;ICON_UP|CUT: historical setup
+# S015.1 reviewer boundary
+#S015.1|Host with doubtful mouth|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S015.1|Host with doubtful mouth|-|centre|HOST|CUT: doubtful host
+# S015.2 reviewer boundary
+#S015.2|Red fictional paper-company logo|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S015.2|Red fictional paper-company logo|MUNDER DIFFLIN INC PAPER COMPANY|centre|LOGO_PAPER=red fictional paper-company logo|CUT: company analogy
+# S015.3 reviewer boundary
+#S015.3|Embedded cartoon workplace scene|STOCK_FOOTAGE;MOTION_GRAPHICS
+S015.3|Embedded cartoon workplace scene|-|small clip centre|FOOTAGE_WORK=cartoon employee-of-month insert|CUT: workplace gag
+# S016.0 reviewer boundary
+#S016.0|Cartoon employee portrait wall|STOCK_FOOTAGE;MOTION_GRAPHICS
+S016.0|Cartoon employee portrait wall|EMPLOYEE OF THE MONTH|embedded clip centre|FOOTAGE_WORK|FOOTAGE_CUT: portrait wall
+# S017.0 reviewer boundary
+#S017.0|Glasses tie character labeled Dwight with arrow|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S017.0|Glasses tie character labeled Dwight with arrow|Dwight|figure left label right|CHAR_DWIGHT;TXT_DWIGHT=Dwight label;ICON_UP|CUT: employee
+S017.1|Smaller Dwight holding curriculum sheet|CURRICULUM VITAE|figure right|CHAR_DWIGHT;OBJ_CV=cream curriculum sheet|REFRAME: CV
+S017.2|Dwight holding CV and attendance award|CURRICULUM VITAE; PERFECT ATTENDANCE|centre|CHAR_DWIGHT;OBJ_CV;OBJ_AWARD=yellow attendance certificate|POP_IN: award
+# S018.0 reviewer boundary
+#S018.0|Farmer Dwight in straw hat holding beets in field|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S018.0|Farmer Dwight in straw hat holding beets in field|-|figure centre cyan sky green ground|CHAR_DWIGHT;OBJ_BEETS=purple beet roots;OBJ_FARMHAT=straw hat;OBJ_FIELD=cyan sky green field|CUT: farmer gag
+S018.1|Host peeks left pointing at farmer|-|host upper left farmer centre|HOST;CHAR_DWIGHT;OBJ_BEETS;OBJ_FARMHAT;OBJ_FIELD|POP_IN: host
+# S019.0 reviewer boundary
+#S019.0|Paper-company logo alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S019.0|Paper-company logo alone|MUNDER DIFFLIN INC PAPER COMPANY|left centre|LOGO_PAPER|CUT: company
+S019.1|Host below company logo|MUNDER DIFFLIN|logo upper left host below|LOGO_PAPER;HOST|POP_IN: host
+S019.2|Green decade label beside logo|1980s|label right logo left|LOGO_PAPER;HOST;TXT_DECADE|TEXT_REVEAL: decade
+# S019.3 reviewer boundary
+#S019.3|Intertitle on white|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S019.3|Intertitle on white|Many years of work later...|centre|TXT_YEARS=years-of-work intertitle|CUT: elapsed time
+# S019.4 reviewer boundary
+#S019.4|Older Dwight leaning on cane|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S019.4|Older Dwight leaning on cane|-|centre|CHAR_DWIGHT;OBJ_CANE=brown cane|CUT: older employee
+S019.5|Company logo beside older employee|MUNDER DIFFLIN|employee left logo right|CHAR_DWIGHT;OBJ_CANE;LOGO_PAPER|POP_IN: employer
+S019.6|Money bag and monthly amount below company logo|$2k/month|bag lower centre label right|CHAR_DWIGHT;OBJ_CANE;LOGO_PAPER;OBJ_BAG=green dollar money bag;TXT_MONTH=monthly pension amount|BUILD: pension
+# S019.7 reviewer boundary
+#S019.7|Six money bags above calendar row|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S019.7|Six money bags above calendar row|until|repeated symbols top text bottom|OBJ_BAG;OBJ_CALENDAR;TXT_UNTIL=until lettering|CUT: recurring payments
+S019.8|Gravestone joins payment timeline|until; RIP|tombstone lower right|OBJ_BAG;OBJ_CALENDAR;TXT_UNTIL;OBJ_GRAVE=grey gravestone RIP|POP_IN: lifetime duration
+# S019.9 reviewer boundary
+#S019.9|Host with pointer|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S019.9|Host with pointer|-|left|HOST;POINTER|CUT: host
+# S020.0 reviewer boundary
+#S020.0|Host points at blue pension definition card|SCREEN_CAPTURE;MOTION_GRAPHICS
+S020.0|Host points at blue pension definition card|Pension Plan|host left card right|HOST;POINTER;SS_PENSION=Investopedia pension definition card|POP_IN: definition
+# S021.0 reviewer boundary
+#S021.0|Dwight alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S021.0|Dwight alone|-|centre|CHAR_DWIGHT|CUT: employee
+S021.1|Dwight raises thumb|-|left|CHAR_DWIGHT|POSE_CHANGE: approval
+S021.2|Banknote grid and pension check beside employee|Pension check; $$$|employee left money right|CHAR_DWIGHT;OBJ_NOTES;OBJ_CHECK=blue pension check|BUILD: pension pool
+# S021.3 reviewer boundary
+#S021.3|Host close-up pointing toward viewer|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S021.3|Host close-up pointing toward viewer|-|centre|HOST|CUT: direct address
+# S021.4 reviewer boundary
+#S021.4|Company logo alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S021.4|Company logo alone|MUNDER DIFFLIN|centre|LOGO_PAPER|CUT: employer
+S021.5|Same company logo held|MUNDER DIFFLIN|centre|LOGO_PAPER|HOLD: logo
+S021.6|Long pink bill appears beside logo|BILL; YOU BETTER PAY|logo left bill right|LOGO_PAPER;OBJ_BILL=pink bill sheet|POP_IN: obligation
+# S022.0 reviewer boundary
+#S022.0|Many bill sheets fill frame|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S022.0|Many bill sheets fill frame|BILL|full canvas layered papers|OBJ_BILL|CUT: liabilities
+# S023.0 reviewer boundary
+#S023.0|Older employee with cane small on white|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S023.0|Older employee with cane small on white|-|upper left|CHAR_DWIGHT;OBJ_CANE|CUT: retired employee
+S023.1|Bill sheet beside retired employee|BILL|employee left bill right|CHAR_DWIGHT;OBJ_CANE;OBJ_BILL|POP_IN: payment
+S023.2|Two bills beside retired employee|BILL|top row|CHAR_DWIGHT;OBJ_CANE;OBJ_BILL|POP_IN: second bill
+S023.3|Three bills beside retired employee|BILL|top row|CHAR_DWIGHT;OBJ_CANE;OBJ_BILL|POP_IN: third bill
+S023.4|Fourth bill starts lower row|BILL|two rows|CHAR_DWIGHT;OBJ_CANE;OBJ_BILL|POP_IN: fourth bill
+S023.5|Fifth bill added lower middle|BILL|two rows|CHAR_DWIGHT;OBJ_CANE;OBJ_BILL|POP_IN: fifth bill
+S023.6|Sixth bill added lower right|BILL|two rows|CHAR_DWIGHT;OBJ_CANE;OBJ_BILL|POP_IN: sixth bill
+S023.7|Gravestone replaces lower-right bill|BILL; RIP|tombstone lower right|CHAR_DWIGHT;OBJ_CANE;OBJ_BILL;OBJ_GRAVE|SWAP: end of payments
+# S024.0 reviewer boundary
+#S024.0|Host with one hand raised|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S024.0|Host with one hand raised|-|centre|HOST|CUT: host
+S024.1|Host with both hands out|-|centre|HOST|POSE_CHANGE: explanation
+# S024.2 reviewer boundary
+#S024.2|Pile of overlapping bills|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S024.2|Pile of overlapping bills|BILL|centre|OBJ_BILL|CUT: obligation pile
+# S025.0 reviewer boundary
+#S025.0|Dwight gives thumbs-up|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S025.0|Dwight gives thumbs-up|-|centre|CHAR_DWIGHT|CUT: employee
+S025.1|Employee face changes beside red duration|20 years; how tf would you know that|employee left text right|CHAR_DWIGHT;TXT_YEARS;TXT_TINY=small sarcastic aside|TEXT_REVEAL: duration joke
+S025.2|Pension check beneath 20-year label|20 years; Pension check|employee left check right|CHAR_DWIGHT;TXT_YEARS;TXT_TINY;OBJ_CHECK|POP_IN: check
+S025.3|Money bags replace pension check|20 years|employee left bags lower right|CHAR_DWIGHT;TXT_YEARS;TXT_TINY;OBJ_BAG|SWAP: funding
+# S026.0 reviewer boundary
+#S026.0|Company logo enlarged|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S026.0|Company logo enlarged|MUNDER DIFFLIN|centre|LOGO_PAPER|CUT: employer
+S026.1|White thumbs-up beside logo|MUNDER DIFFLIN|logo centre thumb right|LOGO_PAPER;ICON_THUMB=white outlined thumbs-up|POP_IN: approval
+# S027.0 reviewer boundary
+#S027.0|Farmer employee with beets|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S027.0|Farmer employee with beets|-|centre|CHAR_DWIGHT;OBJ_FARMHAT;OBJ_BEETS|CUT: farmer
+S027.1|Farmer employee enlarged|-|large centre|CHAR_DWIGHT;OBJ_FARMHAT;OBJ_BEETS|ZOOM_IN: farmer
+S027.2|Red aside beside farmer|I WILL STAY ALIVE OUT OF SPITE|text right|CHAR_DWIGHT;OBJ_FARMHAT;OBJ_BEETS;TXT_SPITE=red survival aside|TEXT_REVEAL: joke
+# S027.3 reviewer boundary
+#S027.3|Large pension check|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S027.3|Large pension check|Pension check; $$$|centre|OBJ_CHECK|CUT: fixed payment
+S027.4|Red timeline with employee and repeated checks and bags|Year 1; Year 15; Year 30; Year 35+; Dwight retires|timeline top payments bottom|CHAR_DWIGHT;OBJ_CHECK;OBJ_BAG;OBJ_TIMELINE=red pension timeline|BUILD: duration timeline
+# S027.5 reviewer boundary
+#S027.5|Single check beside money bag|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S027.5|Single check beside money bag|Pension check; $$$|centre|OBJ_CHECK;OBJ_BAG|CUT: payment unit
+S027.6|Equation beside check and bag|Fixed amount; Fixed schedule; Looooooooooooong time|unit left definitions right|OBJ_CHECK;OBJ_BAG;TXT_FIXED=fixed amount schedule duration text|TEXT_REVEAL: matching needs
+# S027.7 reviewer boundary
+#S027.7|Frowning host with raised hand|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S027.7|Frowning host with raised hand|-|centre|HOST|CUT: concern
+S027.8|Host moves raised hand lower|-|centre|HOST|POSE_CHANGE: explaining
+# S027.9 reviewer boundary
+#S027.9|Pension check alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S027.9|Pension check alone|Pension check|left centre|OBJ_CHECK|CUT: check
+# S027.10 reviewer boundary
+#S027.10|Green rising line above red time axis with stock meme|SCREEN_CAPTURE;MOTION_GRAPHICS
+S027.10|Green rising line above red time axis with stock meme|Time|chart centre meme above|CHART_DRAWN=green rising line red time axis;IMG_STONKS=stock-market meme still|CUT: market growth
+# S028.0 reviewer boundary
+#S028.0|Rising line extended upward|SCREEN_CAPTURE;MOTION_GRAPHICS
+S028.0|Rising line extended upward|Time|chart centre|CHART_DRAWN;IMG_STONKS|DRAW_ON: line extension
+S028.1|Employee appears beside growth chart|Time|employee right chart left|CHART_DRAWN;IMG_STONKS;CHAR_DWIGHT|POP_IN: investor
+S028.2|Employee holds banknote|Time|employee right|CHART_DRAWN;IMG_STONKS;CHAR_DWIGHT;OBJ_NOTES|POP_IN: investment
+S028.3|Money bag above employee|Time|bag upper right|CHART_DRAWN;IMG_STONKS;CHAR_DWIGHT;OBJ_NOTES;OBJ_BAG|POP_IN: return
+S028.4|Calendar joins money bag|Time|symbols above employee|CHART_DRAWN;IMG_STONKS;CHAR_DWIGHT;OBJ_NOTES;OBJ_BAG;OBJ_CALENDAR|POP_IN: schedule
+# S029.0 reviewer boundary
+#S029.0|Tiny red-tie figure falling under large grey edge|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S029.0|Tiny red-tie figure falling under large grey edge|IT'S NOT WORING HELP ME AAAAAAAAAAAA|figure lower right blue background|CHAR_FALL=red-tie falling stick figure;OBJ_EDGE=grey overhanging edge|CUT: failure gag
+# S030.0 reviewer boundary
+#S030.0|Company logo and money bag|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S030.0|Company logo and money bag|MUNDER DIFFLIN|logo left bag right|LOGO_PAPER;OBJ_BAG|CUT: employer funding
+# S031.0 reviewer boundary
+#S031.0|Employee beside bag and company|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S031.0|Employee beside bag and company|MUNDER DIFFLIN|company left employee right|LOGO_PAPER;OBJ_BAG;CHAR_DWIGHT|POP_IN: beneficiary
+# S031.1 reviewer boundary
+#S031.1|Pension check equals promise note|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S031.1|Pension check equals promise note|Pension check; I'LL PAY, PINKY PROMISE; Trust me|check left note right|OBJ_CHECK;OBJ_PROMISE=cream payment promise note|CUT: promised obligation
+# S032.0 reviewer boundary
+#S032.0|Two economic collapse meme stills|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S032.0|Two economic collapse meme stills|not stonks; THE ENTIRE WORLD ECONOMY IS DESTROYED.|two panels centre|IMG_COLLAPSE=stock crash meme and cartoon exchange still|CUT: crash example
+# S033.0 reviewer boundary
+#S033.0|Check and large money bag|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S033.0|Check and large money bag|Pension check|centre|OBJ_CHECK;OBJ_BAG|CUT: pension funding
+S033.1|Smaller check with banknote|Pension check|centre|OBJ_CHECK;OBJ_NOTES|SWAP: reduced funding
+S033.2|Red cross over check and note|-|centre|OBJ_CHECK;OBJ_NOTES;HL_CROSS=red cross-out strokes|STRIKE: loss
+# S033.3 reviewer boundary
+#S033.3|Host with uncertain face|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S033.3|Host with uncertain face|-|centre small|HOST|CUT: question
+# S033.4 reviewer boundary
+#S033.4|Money bag alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S033.4|Money bag alone|-|centre|OBJ_BAG|CUT: fixed cash
+S033.5|Calendar beside money bag|-|centre pair|OBJ_BAG;OBJ_CALENDAR|POP_IN: schedule
+S033.6|Cartoon forever-at-work still joins symbols|DON'T FORGET: YOU'RE HERE FOREVER.|three objects across|OBJ_BAG;OBJ_CALENDAR;IMG_FOREVER=cartoon workplace sign still|POP_IN: duration joke
+# S033.7 reviewer boundary
+#S033.7|US 30-year yield chart fills frame|SCREEN_CAPTURE;MOTION_GRAPHICS
+S033.7|US 30-year yield chart fills frame|30-year Treasury yield hits highest level since 2007|centre large|CHART_USYIELD|CUT: yield evidence
+# S033.8 reviewer boundary
+#S033.8|Host palms up|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S033.8|Host palms up|-|centre|HOST|CUT: host
+S033.9|Green dollar symbol beside host|$|symbol right|HOST;ICON_DOLLAR=green dollar symbol|POP_IN: value
+S033.10|Bond card beside dollar symbol|BOND; $|host left symbols right|HOST;ICON_DOLLAR;OBJ_BONDS|POP_IN: bond
+# S033.11 reviewer boundary
+#S033.11|Blue liability-driven investment definition|SCREEN_CAPTURE;MOTION_GRAPHICS
+S033.11|Blue liability-driven investment definition|Liability-Driven Investment (LDI)|centre|SS_LDI=Investopedia LDI definition card|CUT: definition
+S033.12|Bond card beside LDI definition|BOND; Liability-Driven Investment (LDI)|definition left bond right|SS_LDI;OBJ_BONDS|POP_IN: bond link
+S033.13|Red curved arrow after bond card|BOND; Liability-Driven Investment (LDI)|arrow right|SS_LDI;OBJ_BONDS;ICON_CURVE=red curved arrow|DRAW_ON: link arrow
+# S033.14 reviewer boundary
+#S033.14|Yield decomposition formula above two puzzled figures|SCREEN_CAPTURE;MOTION_GRAPHICS
+S033.14|Yield decomposition formula above two puzzled figures|Long-term interest rate; Expected short-term interest rates; Term Premium|formula top people below|SS_FORMULA=yield decomposition formula screenshot;CHAR_CONFUSED=two puzzled stick figures|CUT: complexity
+# S034.0 reviewer boundary
+#S034.0|Bowtie figure with red questions beside bond|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S034.0|Bowtie figure with red questions beside bond|???; BOND|person left bond right|CHAR_BOWTIE=dark-haired bowtie stick figure;OBJ_BONDS;TXT_QUESTIONS=red question marks|CUT: confusion
+# S035.0 reviewer boundary
+#S035.0|Anthropomorphic Federal Reserve building with reassurance bubble|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S035.0|Anthropomorphic Federal Reserve building with reassurance bubble|FEDERAL RESERVE; It's alright!|building centre|BLDG_FED=Federal Reserve building with eyes;OBJ_BUBBLE|CUT: reassurance
+S035.1|Larger faded Fed duplicate behind smaller building|FEDERAL RESERVE; It's alright!|ghost building above|BLDG_FED;OBJ_BUBBLE|SCALE_UP: ghost duplicate
+# S035.2 reviewer boundary
+#S035.2|Smiling host palms up|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S035.2|Smiling host palms up|-|centre|HOST|CUT: host
+# S035.3 reviewer boundary
+#S035.3|Bond alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S035.3|Bond alone|BOND|centre|OBJ_BONDS|CUT: bond
+S035.4|Dollar symbol beside bond|$; BOND|pair centre|OBJ_BONDS;ICON_DOLLAR|POP_IN: price
+S035.5|Grinning tie figure offers bond and dollar|BOND; $|figure right symbols left|CHAR_TIE;OBJ_BONDS;ICON_DOLLAR|POP_IN: seller
+S035.6|Speech bubble from seller|Buy my stuff!|bubble above figure|CHAR_TIE;OBJ_BONDS;ICON_DOLLAR;OBJ_BUBBLE|TEXT_REVEAL: sales pitch
+# S035.7 reviewer boundary
+#S035.7|Host points at viewer close-up|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S035.7|Host points at viewer close-up|-|centre|HOST|CUT: direct address
+S035.8|Red cross beside pointing host|-|host left cross right|HOST;HL_CROSS|POP_IN: exclusion
+# S035.9 reviewer boundary
+#S035.9|Bond certificate alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S035.9|Bond certificate alone|BOND|centre|OBJ_BONDS|CUT: bond
+S035.10|Bond torn diagonally into two pieces|BOND|centre|OBJ_BONDS|SWAP: torn bond
+# S035.11 reviewer boundary
+#S035.11|Employee with eyes shut and hand raised|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S035.11|Employee with eyes shut and hand raised|-|left|CHAR_DWIGHT|CUT: creditor
+S035.12|Employee speech bubble|You still gotta pay me!|bubble right|CHAR_DWIGHT;OBJ_BUBBLE|TEXT_REVEAL: obligation
+# S035.13 reviewer boundary
+#S035.13|Red timeline bond at start bag at end notes underneath|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S035.13|Red timeline bond at start bag at end notes underneath|Interest payments|timeline top notes below|OBJ_BONDS;OBJ_BAG;OBJ_NOTES;OBJ_TIMELINE;TXT_INTEREST=interest payment label|CUT: bond cashflows
+S035.14|Maturity label and arrow pointing to final bag|Principal returned at maturity; Interest payments|principal upper right|OBJ_BONDS;OBJ_BAG;OBJ_NOTES;OBJ_TIMELINE;TXT_INTEREST;TXT_PRINCIPAL=principal repayment label;ICON_CURVE|TEXT_REVEAL: principal
+# S035.15 reviewer boundary
+#S035.15|Uncertain host hand raised|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S035.15|Uncertain host hand raised|-|centre|HOST|CUT: host
+# S036.0 reviewer boundary
+#S036.0|Clock money-bag pile and law sheet|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S036.0|Clock money-bag pile and law sheet|LAW|three symbols across|OBJ_CLOCK=round clock;OBJ_BAG;OBJ_LAW=cream law sheet|CUT: matching attributes
+# S037.0 reviewer boundary
+#S037.0|Host peeks below clock money and law|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S037.0|Host peeks below clock money and law|LAW|host lower left|HOST;OBJ_CLOCK;OBJ_BAG;OBJ_LAW|POP_IN: presenter
+# S038.0 reviewer boundary
+#S038.0|Pension definition card|SCREEN_CAPTURE;MOTION_GRAPHICS
+S038.0|Pension definition card|Pension Plan|centre|SS_PENSION|CUT: definition callback
+S038.1|Green tick beside pension card|Pension Plan|tick lower right|SS_PENSION;ICON_TICK=green check mark|DRAW_ON: approval
+S038.2|Pension card and tick moved left|Pension Plan|left|SS_PENSION;ICON_TICK|REFRAME: room for bond
+S038.3|Bond added to pension card|Pension Plan; BOND|bond upper right|SS_PENSION;ICON_TICK;OBJ_BONDS|POP_IN: matching asset
+# S038.4 reviewer boundary
+#S038.4|Defined contribution and benefit participant chart|SCREEN_CAPTURE;MOTION_GRAPHICS
+S038.4|Defined contribution and benefit participant chart|Defined Contribution; Defined Benefit; Millions of Active Participants|chart fills frame|CHART_PARTICIPANTS=US Labor pension participant chart 1975-2023|CUT: pension context
+# S039.0 reviewer boundary
+#S039.0|Participant chart held at slightly different crop|SCREEN_CAPTURE;MOTION_GRAPHICS
+S039.0|Participant chart held at slightly different crop|Defined Contribution; Defined Benefit|centre chart|CHART_PARTICIPANTS|REFRAME: chart
+# S039.1 reviewer boundary
+#S039.1|Detective host beside question disk|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S039.1|Detective host beside question disk|?|host left disk right|HOST;OBJ_CAP;OBJ_MAGNIFIER;ICON_QUESTION|CUT: renewed question
+# S039.2 reviewer boundary
+#S039.2|Bond and Treasury stack over question|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S039.2|Bond and Treasury stack over question|United States Treasury; BOND; ?|right|OBJ_TREASURY;OBJ_BONDS;ICON_QUESTION|CUT: debt puzzle
+S039.3|Globe beside debt stack|United States Treasury; BOND; ?|globe left stack right|OBJ_GLOBE;OBJ_TREASURY;OBJ_BONDS;ICON_QUESTION|POP_IN: world
+# S039.4 reviewer boundary
+#S039.4|Detective host alone|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S039.4|Detective host alone|-|centre|HOST;OBJ_CAP;OBJ_MAGNIFIER|CUT: host
+# S039.5 reviewer boundary
+#S039.5|Laptop video player shows host with pause overlay|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S039.5|Laptop video player shows host with pause overlay|-|screen fills canvas|OBJ_LAPTOP=grey laptop on brown desk;UI_PLAYER=video progress controls;HOST|CUT: sponsorship begins
+# S040.0 reviewer boundary
+#S040.0|Laptop player with play triangle|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S040.0|Laptop player with play triangle|-|screen centre|OBJ_LAPTOP;UI_PLAYER;HOST|UI_STATE: paused player
+# S041.0 reviewer boundary
+#S041.0|Host seated at desk behind CF laptop|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S041.0|Host seated at desk behind CF laptop|CF|host left laptop right|HOST;OBJ_LAPTOP;OBJ_DESK=brown desk|CUT: computer workflow
+# S042.0 reviewer boundary
+#S042.0|Laptop text page with pointing hand|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S042.0|Laptop text page with pointing hand|New|screen centre|OBJ_LAPTOP;UI_TEXT=white typing page;OBJ_HAND=black pointing hand|CUT: typing setup
+# S042.1 reviewer boundary
+#S042.1|Clock beside words-per-minute label|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S042.1|Clock beside words-per-minute label|words per minute|clock left text right|OBJ_CLOCK;TXT_WPM=words-per-minute lettering|CUT: speed concept
+# S043.0 reviewer boundary
+#S043.0|Angry host at CF laptop|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S043.0|Angry host at CF laptop|CF|centre|HOST;OBJ_LAPTOP;OBJ_DESK|CUT: typing frustration
+# S043.1 reviewer boundary
+#S043.1|Pink Turbo Type screen with small car|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S043.1|Pink Turbo Type screen with small car|Turbo Type|laptop screen|OBJ_LAPTOP;UI_TURBO=pink typing game interface;OBJ_HAND|CUT: speed demonstration
+# S044.0 reviewer boundary
+#S044.0|Host talking palms open|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S044.0|Host talking palms open|-|centre|HOST|CUT: presenter
+S044.1|Keyboard in host hand|-|host centre keyboard left|HOST;OBJ_KEYBOARD=grey keyboard|POP_IN: keyboard
+S044.2|Host smiling eyes closed hands on hips|-|centre|HOST|POSE_CHANGE: satisfaction
+# S044.3 reviewer boundary
+#S044.3|Angry host at laptop again|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S044.3|Angry host at laptop again|CF|centre|HOST;OBJ_LAPTOP;OBJ_DESK|CUT: callback
+S044.4|Surprised host with speech balloon|220?!?|balloon upper left|HOST;OBJ_LAPTOP;OBJ_DESK;OBJ_BUBBLE|TEXT_REVEAL: speed claim
+S044.5|Sparkle-eyed host with new balloon|Waow|balloon upper left|HOST;OBJ_LAPTOP;OBJ_DESK;OBJ_BUBBLE|FACE_CHANGE: delight
+# S045.0 reviewer boundary
+#S045.0|Host with pointer beside blank board|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S045.0|Host with pointer beside blank board|-|host left board right|HOST;POINTER;OBJ_BOARD|CUT: sponsor lesson
+S045.1|Sponsor logo on chalkboard|Wispr Flow|board right|HOST;POINTER;OBJ_BOARD;LOGO_WISPR=Wispr Flow logo|POP_IN: sponsor
+# S046.0 reviewer boundary
+#S046.0|Glasses host at laptop, sponsor figure and desk behind|ORIGINAL_DRAWING;MOTION_GRAPHICS
+S046.0|Glasses host at laptop, sponsor figure and desk behind|CF; Wispr Flow|foreground host left background right|HOST;OBJ_LAPTOP;OBJ_DESK;LOGO_WISPR;CHAR_WISPR=stick figure logo sponsor|CUT: sponsor aid

@@ -70,6 +70,16 @@ class LedgerChecksumTests(unittest.TestCase):
                 "{} {} does not reconcile against pinned commit {}".format(dataset_id, artifact_id, commit),
             )
 
+    def test_finance_attributes_do_not_invalidate_historical_configuration(self):
+        for dataset, artifact in [("DS-000028", "DS-000028-F020"),
+                                  ("DS-000030", "DS-000030-F019")]:
+            row = next(r for r in v.load_ledger_rows(dataset)
+                       if r["artifact_id"] == artifact)
+            self.assertEqual([], v.validate_row(dataset, row))
+            tampered = dict(row, sha256="0" * 64)
+            self.assertEqual(["HISTORICAL_BLOB_SHA_MISMATCH"],
+                             v.validate_row(dataset, tampered))
+
     def test_immutable_raw_rows_not_pinned_match_current_bytes(self):
         checked = 0
         for dataset_id in DATASETS:
