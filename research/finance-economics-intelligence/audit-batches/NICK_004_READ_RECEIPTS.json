@@ -1,0 +1,65 @@
+{
+  "batch_id": "NICK_004_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "14gilFEp_Iw",
+      "batch_id": "NICK_004",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "26c623b5431bee273b343982d0c3a73cc76f0c9bb73a40558ae9f821c25c3fd3",
+      "character_count": 19953,
+      "read_character_ranges": [
+        [
+          0,
+          2255
+        ],
+        [
+          2255,
+          5755
+        ],
+        [
+          5755,
+          9255
+        ],
+        [
+          9255,
+          12755
+        ],
+        [
+          12755,
+          16255
+        ],
+        [
+          16255,
+          19953
+        ]
+      ],
+      "reading_method": "Canonical text is exact contiguous substring of package; entire package read sequentially. Header/description excluded from canonical hash.",
+      "package_sha256": "c1514469233afaf5768d8c55354b1147417b68cefc720d2b8e3026432ad69ab5",
+      "audio_verified": false,
+      "image_sha256": "0c8c75542047062e8a04168c57ec7dad552444e7d1e5405486db14d70e835df2",
+      "image_fetched_utc": "2026-10-18T11:15:50.977673+00:00"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-exceptions-to-tax-on-early-distributions",
+      "access": "2026-10-18 web search excerpt; not historical page certification",
+      "observation": "Exceptions include equal payments and qualified-plan separation during/after age55."
+    },
+    {
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+      "access": "2026-10-18 web search excerpt",
+      "observation": "Grace period and full payment may avoid purchase interest."
+    }
+  ],
+  "calculations": {
+    "ordinary_annuity": "200*((1+r/12)**240-1)/(r/12); end-month deposits; nominal annual rate; no fees/tax/inflation",
+    "results": {
+      "5%": 82206.73,
+      "7%": 104185.33,
+      "8%": 117804.08,
+      "10%": 151873.77
+    }
+  }
+}

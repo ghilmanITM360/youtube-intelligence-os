@@ -1,0 +1,89 @@
+{
+  "status": "PASS_PARTIAL_RESEARCH_NOT_COMPLETION",
+  "research_tests": {
+    "passed": 16,
+    "command": "python3 -m unittest discover -s research/finance-economics-intelligence -p 'test_*.py'"
+  },
+  "repository_tests": {
+    "passed": 461,
+    "warnings": 5,
+    "command": ".venv/bin/python -m pytest -q",
+    "note": "Production suite ran for first checkpoint; production paths unchanged in continuation."
+  },
+  "knowledge_validator": {
+    "status": "FAIL_HISTORICAL_SCOPE_GUARD",
+    "local_hashes_checked": 2732,
+    "pre_existing_disallowed_paths": "reports/project-status/2026-10-16/* (7 files)",
+    "note": "No hash mismatch reported; overall command did not pass."
+  },
+  "research_validation": {
+    "validation": "PASS",
+    "research_status": "FULL_POPULATION_RESEARCH_IN_PROGRESS",
+    "registered": 966,
+    "fully_analyzed_complete_evidence": 0,
+    "analyzed_partial_evidence": 30,
+    "source_blocked_videos": 11,
+    "coverage": {
+      "TITLE": {
+        "COMPLETE_LIMITED_EVIDENCE": 30,
+        "IN_PROGRESS": 49,
+        "NOT_STARTED": 887
+      },
+      "THUMBNAIL": {
+        "COMPLETE_LIMITED_EVIDENCE": 30,
+        "IN_PROGRESS": 46,
+        "NOT_STARTED": 890
+      },
+      "SCRIPT": {
+        "COMPLETE_LIMITED_EVIDENCE": 30,
+        "IN_PROGRESS": 24,
+        "NOT_STARTED": 901,
+        "BLOCKED_MISSING_SOURCE": 11
+      },
+      "TOPIC": {
+        "COMPLETE_LIMITED_EVIDENCE": 30,
+        "IN_PROGRESS": 24,
+        "NOT_STARTED": 912
+      },
+      "PERFORMANCE": {
+        "COMPLETE_LIMITED_EVIDENCE": 966
+      },
+      "VIRALITY": {
+        "COMPLETE_LIMITED_EVIDENCE": 30,
+        "NOT_STARTED": 936
+      }
+    },
+    "distinct_readings_including_legacy_and_in_progress": {
+      "titles": 79,
+      "thumbnails": 76,
+      "topics": 54
+    },
+    "batches": [
+      {
+        "batch_id": "CRAYON_001",
+        "status": "IN_PROGRESS",
+        "registered_reviews": 30
+      },
+      {
+        "batch_id": "PRIMATE_001",
+        "status": "COMPLETE_LIMITED_EVIDENCE",
+        "registered_reviews": 28
+      }
+    ],
+    "distinct_full_stored_text_reads": 41,
+    "outstanding_videos": 936,
+    "next_master_order_id": "AKrjI9m6fpk",
+    "source_hashes_checked": 26,
+    "errors": [],
+    "semantic_content_validation": "STRUCTURAL_ONLY; analyst reasoning and source entailment require review",
+    "causal_inference": "Public metadata cannot establish causation; private metrics unavailable",
+    "exact_head_ci": "CHECK_PR_36_AFTER_PUSH"
+  },
+  "current_resource_reading": {
+    "five_hour_used_percent": 29,
+    "weekly_used_percent": 35,
+    "context": "UNKNOWN"
+  },
+  "git_scope": "Existing branch/PR36 only; no canonical source changes, new worktree or merge.",
+  "ci": "ad9326b exact-head PASS; latest commit requires fresh PR check."
+}

@@ -1,0 +1,136 @@
+{
+  "batch_id": "NICK_093",
+  "status": "COMPLETE_LIMITED_EVIDENCE",
+  "scope": "Individual full stored transcript and actual image review",
+  "reviews": [
+    {
+      "Video_ID": "GZUH1m8INNs",
+      "review_date": "2026-10-19",
+      "title": {
+        "review_scope": "ACTUAL_TITLE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GZUH1m8INNs",
+          "TRANSCRIPT_COVERAGE.csv:GZUH1m8INNs",
+          "audit-batches/NICK_093_READ_RECEIPTS.json"
+        ],
+        "analysis": "Exact stored title (with doubled spaces): 'The  \"Hidden\"  Costs (The Homeowner Nightmare).' Scare-quoted \"Hidden\" plus \"Nightmare\" signals negative revelation; subject (what costs?) is withheld until the parenthetical names homeowners. Search intent overlaps \"hidden costs of owning a home\". No number despite a number-heavy script.",
+        "peer_comparison_ids": [
+          "2DBQnxaDScs",
+          "CjOMCDm57hw",
+          "mkcfkfPhW1U",
+          "r30ujBFB50A",
+          "-FsJqwfNvt4",
+          "f6HIYQUiMoU"
+        ],
+        "search_demand": "Historical query volume unknown. Channel housing titles range from 2DBQnxaDScs paid-off house 18.82947 STRONG and f6HIYQUiMoU housing market 33.03103 STRONG to this cost-warning 0.48648 WEAK and -FsJqwfNvt4 rent vs buy 0.66627 TYPICAL.",
+        "script_alignment": "Aligned: repair shocks, Bankrate hidden-cost totals, maintenance rules, state/metro variation, property taxes, HOA fees and special assessments, Florida condos, HGTV renovation creep, and a rent-and-invest comparison."
+      },
+      "thumbnail": {
+        "review_scope": "ACTUAL_IMAGE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GZUH1m8INNs",
+          "TRANSCRIPT_COVERAGE.csv:GZUH1m8INNs",
+          "audit-batches/NICK_093_READ_RECEIPTS.json"
+        ],
+        "image_path": "research/finance-economics-intelligence/audit-batches/NICK_GZUH1m8INNs.jpg",
+        "image_source": "https://i.ytimg.com/vi/GZUH1m8INNs/maxresdefault.jpg",
+        "image_sha256": "26e87782d49fd2467760a4d3e01ee2bf6245f9a959e3a4d0f956a8c3977729d3",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "mobile_review_width": 320,
+        "historical_design": "UNKNOWN",
+        "performance_effect": "NOT_ESTABLISHED",
+        "analysis": "Actual 1280x720 and 320x180 inspected. White field; left a shocked cartoon man in a gray hoodie; right a beige two-story house with red burst marks, a roof-mounted AC unit crashing through shingles with water pouring down, smoke from the roof and a cracked/fallen tree trunk; heavy black \"THE SILENT KILLER\" across the top with a curved arrow. Mobile: headline and damaged house legible. Damage imagery matches repair-cost theme; \"silent killer\" is hyperbolic and does not name homeownership costs; the script is mostly statistics rather than a single disaster."
+      },
+      "script": {
+        "review_scope": "FULL_STORED_TEXT",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GZUH1m8INNs",
+          "TRANSCRIPT_COVERAGE.csv:GZUH1m8INNs",
+          "audit-batches/NICK_093_READ_RECEIPTS.json"
+        ],
+        "timing": "OPENING_WORDS_ONLY",
+        "audio_verified": false,
+        "stored_text_completeness": "FULL_AVAILABLE_STORED_TEXT_READ_HASH_VERIFIED; original audio unverified",
+        "opening_words": "You're standing in the checkout line at\nHome Depot on a Saturday morning, and\nthe guy in front of you just dropped\n$847\non supplies. You peek at his cart. It's\ndrywall tape, some kind of pipe\nfitting, and what looks like industrial\nstrength mold remover. He looks\nexhausted. His hands are covered in\npaint. And you think to yourself,\n\"That's going to be me next year, isn't\nit?\" Because you just bought a house 3\nmonths ago. And the seller swore\never",
+        "ending_words": "miums, and\nmaintenance schedules attached. Nobody's\ncoming to rescue you when the foundation\ncracks. The house doesn't care about\nyour budget. It will break. You will\npay. The only question is whether you\nplan for it. So, run the math before you\nfall in love with the granite\ncountertops. When calculate what you'll\nactually pay per month after\ntaxes, insurance, um HOA fees, and\nrealistic maintenance costs. Um, compare\nthat to rent. Be honest about whether\nyou're buying a home or buying into a\nstory about what home ownership is\nsupposed to mean. because the house will\ntake your money either way.",
+        "analysis": "All 20,775 stored characters read in two contiguous ranges with canonical hash match. Hook: Home Depot checkout and new-homeowner repairs (AC $7,000, roof $4,500, water heater $1,800 = $13,300 in 8 months). Statistics: $526B renovation spending vs Sweden GDP; Bankrate 2025 $21,400/year hidden costs; 1% rule vs 2-3% spending; 46% with >$5K surprises; NerdWallet first-year repairs; state/metro hidden-cost figures; property tax averages and NJ vs FL example; non-mortgage cost growth; HOA prevalence and fee increases; special assessments; condo cost stack; South Florida condos vs rent; Indian River County cash sales; repeated maintenance and repair statistics (second half largely repeats the first); pre-1960 homes 8%; HGTV renovation creep; New England vs East South Central costs; $400K house vs renting with investing the difference; close: rent and invest, run the math. Heavily one-sided toward renting, statistic-dense, repetitive, few sources named precisely. ASR artifacts (\"$18 in 2019\" for HOA, \"$3,18\", \"$69,000\", \"12% phase one\") preserved; not audio-verified.",
+        "beat_map": [
+          {
+            "character_range": [
+              0,
+              10400
+            ],
+            "beat": "Home Depot hook, first-year repair stack, $526B and Bankrate $21,400, 1% rule, surprise repairs, location costs, property taxes NJ vs FL, non-mortgage cost growth, HOA fees and assessments, condo stack start"
+          },
+          {
+            "character_range": [
+              10400,
+              20775
+            ],
+            "beat": "South Florida condos vs rent, cash buyers, repeated maintenance stats, pre-1960 homes, house as liability, repair price ranges, HGTV creep, regional costs, $400K own-vs-rent example, close"
+          }
+        ],
+        "claim_audit": [
+          "0:10400 $7,000 + $4,500 + $1,800 = $13,300 correct. \"$526 billion ... more than the entire GDP of Sweden\" is wrong: Sweden's GDP is roughly $600B. Bankrate 2025 hidden homeownership costs ~$21,400/year ($1,783/month) correctly cited, but that figure already includes property taxes, insurance, maintenance and utilities - the script says it is \"on top of\" insurance, maintenance and taxes, double-counting. State (Hawaii ~$34.6K, West Virginia ~$12.6K; ratio ~2.75x) and metro figures are consistent with Bankrate-style tables. Average property tax ~$3,500 is below ATTOM's ~$4,000+ national average; $3,500/12 = $291 correct. NJ $400K at ~2.23% = $8,920 vs FL ~0.82% = $3,280, difference ~$470/month correct.",
+          "0:10400 \"Non-mortgage costs jumped 30% in 2025 alone\" unsupported. HOA \"median rose from $18 in 2019 to $135 ... 25%\" is garbled (likely $108 -> $135 = 25%). Special assessments \"no vote, no discussion, pay or lose your home\" overgeneralizes; HOA governance and lien/foreclosure rules vary by state.",
+          "10400:20775 \"Homes built before 1960 cost 8% of home value to maintain annually\" ($24,000 on $300K) is implausible as an average and unsourced. Maintenance $3,018 + emergency $2,321 = $5,339 (stored \"$3,18\" ASR) consistent. $400K house, 20% down, $320K at 7%: P&I ~$2,129, matches $2,130; $3,413 x 12 = $40,956 correct. \"$80,000 invested 30 years at 7% grows to $69,000\" is wrong (~$609,000; likely garbled), and the renter's $1.6M omits that $609K while using $1,413/month (which gives ~$1.72M at 7%). The comparison assumes rent stays flat for 30 years while ownership costs include rising taxes/fees, ignores that the mortgage payment is fixed and ends, and values the home at $850K (2.5%/yr) - a one-sided setup."
+        ]
+      },
+      "topic": {
+        "review_scope": "FULL_TRANSCRIPT_TOPIC",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GZUH1m8INNs",
+          "TRANSCRIPT_COVERAGE.csv:GZUH1m8INNs",
+          "audit-batches/NICK_093_READ_RECEIPTS.json"
+        ],
+        "analysis": "True cost of homeownership: maintenance, repairs, taxes, insurance, HOA fees, regional variation, and rent-vs-own. Large relevant audience (owners and buyers); strongly negative framing during a high-rate housing market. Saturated topic; this version is data-heavy but one-sided and repetitive.",
+        "novelty_and_corpus_angle": "Original angle: a balanced 30-year rent-vs-own model with rising rent, fixed P&I, maintenance by home age, tax deductions and selling costs, sourced line by line; checklist for inspection-driven repair reserves.",
+        "competition": "Exact pool: STRONG mkcfkfPhW1U pavement princess 3.94533, r30ujBFB50A snowball effect 2.18934; TYPICAL _pBTzgF-0C0 2026 stats 1.94799, ZCJcr5K0U6A stop grinding 1.63485, NoDH9GW0S38 stop being cheap 1.45772; WEAK kZW4JQj_igg invisible prison 0.4915, cCgJ_itCb-0 friendship tax 0.43928, 1CJTuLaenq8 BNPL 0.42132."
+      },
+      "virality": {
+        "review_scope": "INDIVIDUAL_PUBLIC_EVIDENCE",
+        "source_refs": [
+          "VIDEO_MASTER.csv:GZUH1m8INNs",
+          "TRANSCRIPT_COVERAGE.csv:GZUH1m8INNs",
+          "audit-batches/NICK_093_READ_RECEIPTS.json"
+        ],
+        "causal_status": "DESCRIPTIVE_ASSOCIATION_NOT_CAUSAL",
+        "analysis": "15,585 views at 221.5683 days, 25:17; 0.48648x WEAK against 10 same-channel LONG_FORM peers published 2026-01-27 to 02-06, frozen 2026-09-11. Exact pool: strong mkcfkfPhW1U pavement princess 3.94533, r30ujBFB50A snowball 2.18934; typical _pBTzgF-0C0 2026 stats 1.94799, ZCJcr5K0U6A stop grinding 1.63485, NoDH9GW0S38 stop being cheap 1.45772, NXpQOUVife4 stop stressing 1.11839, T3HINW7Nv14 cost of average 0.68159; weak kZW4JQj_igg invisible prison 0.4915, cCgJ_itCb-0 friendship tax 0.43928, 1CJTuLaenq8 BNPL 0.42132. Target fourth-lowest. Housing counterexample: the paid-off-house transformation video (2DBQnxaDScs, six weeks later) reached 18.82947 STRONG while this cost-warning video is WEAK; positive-outcome vs cost-warning framing is a testable difference, not established cause. Runtime 25:17 is long for the channel; length effects untested.",
+        "observed_result": "15,585 views; 221.5683 days; 1,517 seconds; 0.48648x WEAK; 10 peers; frozen 2026-09-11.",
+        "topic_demand": "Housing topics include the channel's largest outliers but warning-style versions underperform; historical search interest unknown.",
+        "trend_timing": "2026-02-01 publication; no verified event link; seasonality (spring buying season ahead) untested.",
+        "competition": "Same-fortnight pool includes a car-trap outlier; heavy external housing cost content.",
+        "format_fit": "25-minute statistic-dense, repetitive script; completion burden likely high; retention unknown.",
+        "channel_context": "Public lifetime-rate comparison among peers 216-227 days old.",
+        "alternative_explanations": [
+          "Appeal: vague \"SILENT KILLER\" thumbnail and scare-quote title withhold the subject; CTR unknown.",
+          "Engagement: repetition and statistic lists may lose viewers; retention unavailable.",
+          "Satisfaction: one-sided anti-ownership conclusion and number errors may reduce trust among owners; satisfaction unknown.",
+          "Audience composition (many owners), length and distribution could explain the WEAK result."
+        ],
+        "original_content_lesson": {
+          "test": "Test a balanced homeownership-cost video with a named subject in packaging (\"The $21,400 a Year Nobody Budgets For\") against vague fear packaging; measure own CTR, retention and owner versus renter comment sentiment.",
+          "confidence": "MODERATE descriptive; LOW causal"
+        }
+      },
+      "event": {
+        "status": "NOT_RESEARCHED",
+        "source_ids": [],
+        "linkage": "No verified publication-window event",
+        "confidence": "UNKNOWN",
+        "trends_status": "UNAVAILABLE"
+      },
+      "statuses": {
+        "TITLE_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "THUMBNAIL_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "SCRIPT_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "TOPIC_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "VIRALITY_REVIEW": "COMPLETE_LIMITED_EVIDENCE",
+        "PERFORMANCE_REVIEW": "COMPLETE_LIMITED_EVIDENCE"
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+# QA and limitations
+
+**Current status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Reports and a pilot proposal exist, but the complete requested scope is not finished. Deliverable presence is not completion.
+
+## Historical legacy scope (superseded by continuation counts below)
+
+- 13 canonical finance channels, 966 unique videos, 966 titles; 955 nonplaceholder transcripts with 955 distinct exact text hashes. Eleven videos lack available transcript text (ten Lucas Grant placeholders and one Matty Invests gap). Exact hashes do not detect paraphrase/template duplication.
+- 794 source-classified long-form, 13 Shorts and 159 unknown formats. No duration-only inference. No new timed transcript segments; 3/10/30-second analysis unavailable in this baseline.
+- 723 canonical historical comparisons; 243 insufficient. 125/723 labels change with five-peer sensitivity. No channel-growth-at-publication controls. Current canonical views not fetched.
+- 30 transcript excerpt reviews, including 17 full stored-text reads. These are AI analyst readings, **not human/audio verification**. Thirty contextual labels do not constitute 966 semantic topic audits.
+- 807 registry thumbnail URLs, 159 missing registry fields. Thirty attempted sample videos; 27 downloaded and inspected at 320px width; three remain 404 at both saved maxres and fallback hq URLs. 939 canonical videos lack new mobile review; 936 of those were not in the attempted sample. The two CDN-derived fallback URLs do not repair canonical registry fields.
+- 206 Casually Finance and 11 Casual Economics records reused through immutable sources, without new forensic work. Full Economics AV sign-off remains 0/11. These are separate from canonical channels.
+- Six additional public channel pages, 180 distinct first-page video cards, rounded metrics and relative dates. They are partial Tier B, not full histories. Emerging-channel growth coverage remains incomplete.
+- Distinct referenced Video_ID union is 1,363, with no overlap across canonical, overlays and new landscape. This is a locator/metadata universe, not the count of deep reviews.
+
+## Source gaps and freshness
+
+[Twenty-six original-path dispositions](SOURCE_GAP_DISPOSITIONS.csv) preserve the known missing-machine paths. DS-000001 directly affects this audit: its canonical registry/transcript records are available, while original location recovery and historical observation-time/format gaps remain unresolved. Other missing paths do not block the selected baseline. Existing general knowledge is reused from the indexed canonical copies.
+
+Drive has 128 discovered candidates: five previously content-reviewed plus five new bounded content triages. The new finance workbook matches the reused 206-row report on five key fields; four other files are outside finance. The remaining 118 are not content-reviewed. See [Drive follow-up](DRIVE_FOLLOWUP.md); triage is not complete semantic review or binary equivalence.
+
+Canonical dates are August/September-era stored records, not current public totals. Four dataset collection/packaging days and DS-000022 workbook-declared scrape day support approximate observation dates; DS-000001 remains unranked. Branch snapshots span October 11–14. New channel/thumbnail fetches are October 16 local (UTC metadata can be October 15). A current thumbnail need not match the one that generated historical views.
+
+## Interpretation boundaries
+
+Lexical title/topic/script features are provisional proxies. Evidence-word counts do not verify sources. ASR punctuation distorts sentence statistics. Deep sample is purposive and channel-balanced, not random. Shorts have only one canonical sampled channel, so no cross-channel Shorts generalization is justified. Private metrics remain UNKNOWN. Source financial claims are not all fact-checked. No recommendation to copy scripts, illustrations or channel identities.
+
+The new landscape adds mostly established channels; it does **not** fulfill the requested representative weak/average/emerging-channel study. No exhaustive finance-channel census. No evidence of causal virality or an optimal upload schedule. Backlog ratings are editorial 1–5 equal weights; higher affordability/headroom means easier production/less competition, both uncertain judgments. No probability of success is estimated.
+
+## Validation contracts
+
+`build_baseline.py` opens SQLite read-only and checks its before/after hash. The baseline unittest covers missing date/format/views, age eligibility, format/channel isolation, sparse/zero cohorts, threshold ties and malformed dates. `validate_research.py` checks table joins, counts, image hashes, source blobs, ranking reproducibility, score arithmetic and unchanged canonical evidence. Repository knowledge validation verifies all 2,732 indexed local hashes. Run the tracked secret scanner and whitespace check after staging. Exact-head CI must be rechecked after every push; a previous green head does not certify a new commit.
+
+The initial baseline commit used CRLF CSV lines, caught by whitespace validation; the subsequent generator correction uses LF and regenerates all baseline tables. The public-page collector initially recognized an older renderer and returned identity-only results; corrected capture uses the observed lockup renderer. Initial identity captures are retained separately. Neither issue modified source evidence.
+
+Legacy follow-up: [LEGACY_METADATA_PROBE.json](LEGACY_METADATA_PROBE.json) records the existing inventory catalog's candidate DS-000001 observation day, 2026-08-24, for all 159 records. The original date provenance still needs verification and all formats remain null; no tiers were promoted. Do not repeat this catalog lookup.
+
+Prior checkpoint stopped at 93% five-hour /41% weekly. On explicit continuation, live usage was checked again in order: 5% five-hour /16% weekly /context UNKNOWN. Work resumed in bounded batches; the prior resource reading is historical, not the current limit.
+
+Latest continuation checkpoint: **89% five-hour → 29% weekly → context UNKNOWN**. No new research unit starts beyond this approximate stop boundary. Completed this continuation: eight additional full script reads (17 total), 30 semantic title records, five Drive triages, source-date repair for 595 rows and 547 additional eligible performance comparisons (723 total). Finish validation, push and exact-head CI; final SHA/CI are maintained in PR #36.
+
+## Superseding 966-video audit checkpoint
+
+The full-population owner's instruction supersedes the earlier sample scope and RESOURCE_CHECKPOINT headline. Current state is **FULL_POPULATION_RESEARCH_IN_PROGRESS**; consult VALIDATION_966.json, not the legacy counters above. PRIMATE_001 adds all 28 channel videos under the expanded rubric, all limited evidence. Combined distinct totals: 52 titles/topics, 49 actual images, 39 full-stored-text readings. 938 expanded reviews outstanding. All 966 records registered and historical performance revalidated; 243 remain insufficient.
+
+Eleven public watch-page transcript recovery attempts returned title-bearing HTTP 200 pages without captionTracks markers; no transcript recovered. This does not prove the videos lack captions under every accessible method. Google Trends query returned access failure, no numeric observations. Nine shared event sources have per-video linkage and exclusion notes.
+
+Fresh explicit research validation covers frozen IDs, 26 source hashes, transcript hashes, local source references, image/video association and hashes, six completion dimensions, required semantic rubric fields and full-population table identity. Structural checks cannot establish prose entailment or causation. CI integration deferred because repository CI regenerates the canonical DB and its binary hash is a local source-preservation receipt, not a cross-build identity contract.
+
+Repository suite: 461 passed, five warnings. Research suite: 14 passed. Knowledge validation's 2,732 local hashes were checked, but its old-base scope guard rejects seven pre-existing project-status report files, so its overall exit is FAIL_SCOPE_GUARD, not PASS. Do not relabel this as successful knowledge validation. General exact-head CI remains a separate live PR check.
+
+Latest continuation supersedes counts in the preceding checkpoint: 30 expanded complete limited-evidence records (28 Primate + NVIDIA/Petrodollar), 79 title readings, 54 topic readings, 76 visual readings, 41 full stored-text reads; 936 expanded reviews remain outstanding. Crayon 28 records are in progress after actual title/image inspection. Thirteen shared context/reference sources; 16 research tests. Missing-URL metadata acquisition stopped on first HTTP 429; 158 unattempted records stay explicit.
