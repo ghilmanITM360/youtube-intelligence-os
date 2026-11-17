@@ -1,0 +1,7 @@
+# Two-Mac YIOS handoff — 2026-10-29 PKT
+
+Canonical logical repository: `ghilmanITM360/youtube-intelligence-os`. Machine A checkout: `/Users/ghilmankhan/workprojects/youtube-intelligence-os`; Machine B checkout: `/Users/ghilmanislam360/Documents/youtube-intelligence-os`. Follow existing `docs/TWO_MAC_WORKFLOW.md` in the repository.
+
+Before a writer switches Macs, finish and validate one unit; record branch, local SHA, live remote SHA, PR SHA, source hashes, accepted count and next ID. Commit/push normally, then verify remote head. Receiving Mac protects untracked files and stashes, confirms no active writer, fetches the authorized branch, and validates media availability by stable YouTube ID, byte size, SHA-256 and private restore receipt. Do not infer unpushed or ignored assets from GitHub. Never merge PR #21/#36/#44 by this handoff.
+
+Visual Forensics: Machine A navigation branch `codex/casually-finance-knowledge-navigation` local and remote `f4dc5d14d6ad03c1edd92e48fac779e7a8555fc5`; protected forensic writer and Video 003 checkpoint remain untouched. Original MP4/frames/audio outside Git require per-asset private recovery proof. Finance: Machine B sole writer on PR #36; latest live PR head `61f26b5ca9a7bd39c0aa2b63780bb33c18d29cff`. Canonical 966-row deep-audit ledger has 455 fully accepted rows, next untouched NICK_180 (`W-j0_v9cXuQ`). No Machine A Finance write is authorized by this handoff.

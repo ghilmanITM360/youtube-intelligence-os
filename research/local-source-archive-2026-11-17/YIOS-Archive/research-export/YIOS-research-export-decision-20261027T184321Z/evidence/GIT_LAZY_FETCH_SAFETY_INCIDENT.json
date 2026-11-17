@@ -1,0 +1,8 @@
+{
+  "time": "2026-10-27T18:46:33.719596+00:00",
+  "observation": "Audit git ls-tree of live remote commit absent locally spawned Git remote-https descendants automatically. Audit-owned comparison process and known descendants stopped. No explicit fetch command requested by operator. Any implicit network/object side effects are not yet established.",
+  "correction": "All further Git object reads set GIT_NO_LAZY_FETCH=1 and GIT_NO_REPLACE_OBJECTS=1. Do not delete fetched objects or revert protected Git state.",
+  "status": "SAFETY_LIMITATION_UNRESOLVED",
+  "object_store_followup": "87 pack-related files have creation/mtime during audit interval; exact per-file actor and complete before-state unavailable. Cannot certify no automatic downloads/object writes.",
+  "outcome": "Decision audit delivered with explicit safety failure; no integration or cleanup permitted from incomplete evidence."
+}

@@ -1,0 +1,279 @@
+{
+  "status": "PARTIAL_CONTENT_ACCESS_BLOCKED_WITH_GIT_SAFETY_INCIDENT",
+  "scope": "Metadata-complete target; one resident target file syntax/schema-complete; semantic sample only; bounded local/published source-version comparison",
+  "complete_file_semantic_audit": false,
+  "source_content_changes_observed": false,
+  "cloud_uploads_performed": 0,
+  "explicit_git_fetch_commands": 0,
+  "implicit_git_fetch_ruled_out": false,
+  "no_source_script_execution": true,
+  "checks": [
+    {
+      "name": "target_all_metadata_identical",
+      "pass_": true,
+      "detail": []
+    },
+    {
+      "name": "target_count_5373",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "target_logical_bytes",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "target_dataless_count",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "git_status_unchanged",
+      "pass_": true,
+      "detail": "See exact before/after receipts"
+    },
+    {
+      "name": "git_refs_unchanged",
+      "pass_": true,
+      "detail": "See exact before/after receipts"
+    },
+    {
+      "name": "git_head_unchanged",
+      "pass_": true,
+      "detail": "See exact before/after receipts"
+    },
+    {
+      "name": "git_stashes_unchanged",
+      "pass_": true,
+      "detail": "See exact before/after receipts"
+    },
+    {
+      "name": "git_worktrees_unchanged",
+      "pass_": true,
+      "detail": "See exact before/after receipts"
+    },
+    {
+      "name": "no_automatic_git_network_recovery",
+      "pass_": false,
+      "detail": "Safety incident: initial Git ls-tree spawned implicit remote recovery; 87 pack-related files creation/mtime during audit. Object store pre-state not captured; cannot certify unchanged. Audit process stopped; later reads disable lazy fetching."
+    },
+    {
+      "name": "automation_paused",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "disk_reserve_5GB",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "usage_below_owner_checkpoints",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "EXPORT_IDENTITY_REGISTRY_COMPARISON.csv_valid",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "EMBEDDED_SOURCE_IDENTITY_CROSSWALK.csv_valid",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "COMPLETE_SOURCE_FILE_INVENTORY.csv_valid",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "DUPLICATES_AND_SEMANTIC_OVERLAPS.csv_valid",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "REPOSITORY_CONTENT_CROSSWALK.csv_valid",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "UNIQUE_USEFUL_DATA.csv_valid",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "inventory_5373",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "physical_crosswalk_5373",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "embedded_crosswalk_9011",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/source_register_first_line.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/record_value_duplicates.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/object_store_observation.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/final_resources.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/published_identity_byte_proof.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/registry_absence_vs_publication.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/authenticated_repository.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/git_tree_comparison.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/GIT_LAZY_FETCH_SAFETY_INCIDENT.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/embedded_document_index.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/git_blob_sha256.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/final_metadata.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/remote_finance_commit.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/export_identity_values.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/findings_census.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/six_local_research_hashes.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/source_metadata_delta.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/initial_metadata.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/current_db_schemas_counts.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/selected_embedded_document_excerpts.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/embedded_source_index.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/remote_main_commit.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/preflight.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/semantic_samples.json_valid_json",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "required_content_deliverables_present",
+      "pass_": true,
+      "detail": ""
+    }
+  ],
+  "csv_rows": {
+    "EXPORT_IDENTITY_REGISTRY_COMPARISON.csv": 4474,
+    "EMBEDDED_SOURCE_IDENTITY_CROSSWALK.csv": 9011,
+    "COMPLETE_SOURCE_FILE_INVENTORY.csv": 5373,
+    "DUPLICATES_AND_SEMANTIC_OVERLAPS.csv": 8558,
+    "REPOSITORY_CONTENT_CROSSWALK.csv": 5373,
+    "UNIQUE_USEFUL_DATA.csv": 459
+  },
+  "resources": {
+    "time": "2026-10-27T18:54:29.477304+00:00",
+    "five_hour_percent": 22,
+    "weekly_percent": 59,
+    "paid_credit_balance": 0,
+    "reset_credits_available": 2,
+    "reset_credits_redeemed": 0,
+    "free_disk_bytes": 14957174784,
+    "memory_free_percent": 37,
+    "context_meter": "Not exposed; no in-task compaction; durable checkpoints saved",
+    "host": "Ghilmans-Laptop.local",
+    "automation_sha256": "301c523b3f4a49c6c5ab45d6cff97e9357daf9e73967aa8951a65e5aff5905a3",
+    "target_subdirectories": 2
+  },
+  "limitations": [
+    "5372 original files CONTENT_NOT_ACCESSIBLE",
+    "No exact top-level CSV/control or compressed original verification",
+    "Embedded source-hash match is not transformed-record fidelity validation",
+    "No complete historical Git deletion/tags/all-version census",
+    "Implicit Git recovery/object-store incident; no complete object-store before baseline",
+    "No independent full-folder restore; no cleanup certification"
+  ],
+  "passed": 46,
+  "failed": 1
+}

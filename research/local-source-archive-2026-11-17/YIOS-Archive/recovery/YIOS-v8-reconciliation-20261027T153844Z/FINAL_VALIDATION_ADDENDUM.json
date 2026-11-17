@@ -1,0 +1,171 @@
+{
+  "written_utc": "2026-10-27T15:51:21.615626+00:00",
+  "status": "BLOCKED_CURRENT_EXACT_REF_ACCEPTANCE",
+  "original_result_preserved": {
+    "path": "/Users/ghilmankhan/YIOS-v8-readiness-20261026T235710Z/VALIDATION.json",
+    "sha256": "51568f0badda9f729ea2623120f3b77cead5e3ef9608827664a2c6f71b880b4f",
+    "status": "INCOMPLETE_BLOCKED",
+    "checks": 108,
+    "passed": 107,
+    "failed": 1,
+    "failed_check": "Git unchanged: refs",
+    "rewritten": false
+  },
+  "A_canonical_project_state_integrity": {
+    "result": "NO_OBSERVED_PROTECTED_STATE_CHANGE_IN_CHECKED_SCOPE",
+    "head": "badec432bbf5610748123b3f0e0bcb9cdb25fa10",
+    "branch": "codex/what-if-archive-main-integration",
+    "local_publication_refs": "UNCHANGED",
+    "remote_publication_refs": "UNCHANGED_40",
+    "research": "6/6 full-byte hashes plus capture blobs match; tracked research diff empty",
+    "limits": [
+      "No historical raw index digest; compare historical staged/unstaged semantic state only",
+      "No new full ignored/untracked ecosystem content census",
+      "Machine B current source inventory unavailable"
+    ]
+  },
+  "B_auxiliary_ref_changes": {
+    "historical_event_classification": "DOCUMENTED_AUXILIARY_REF_EXCEPTION",
+    "current_delta_classification": "DOCUMENTED_AUXILIARY_REF_CHURN",
+    "exact_named_ref_current": "ABSENT",
+    "deltas": "GIT_REF_DELTA_EVIDENCE.json",
+    "current_target_retaining_refs": 5,
+    "current_strict_ref_set_preservation": "FAIL"
+  },
+  "C_actor_attribution": {
+    "status": "ACTOR_UNKNOWN",
+    "creation": "NOT_PROVEN",
+    "later_removal_checkpoint": "NOT_PROVEN",
+    "generic_codex_pattern": "CONSISTENT_NOT_ATTRIBUTION"
+  },
+  "D_data_loss_and_recovery": {
+    "observed_delta_impact": "NO_OBSERVED_SOURCE_LOSS; same tree survives under five other refs; no publication ref moved",
+    "historical_addition": "Added another reachability root for an already retained tree, without changing HEAD/index/worktree objects",
+    "complete_restore_certification": false,
+    "remaining_gaps": [
+      "16 known LFS OIDs not full-byte LFS verified; eight have verified Drive originals",
+      "Two selected local files lack proven independent recovery",
+      "Bundle external prerequisite closure not independently restore tested",
+      "iCloud current provider availability and immutable version retention unverified",
+      "Machine B current inventory unavailable"
+    ]
+  },
+  "narrow_acceptance": {
+    "criteria_file": "ACCEPTANCE_CRITERIA.md",
+    "criteria_sha256": "526129333a57c26875acec0e954e363edcebecdcc76dbb83be64df6508d867fa",
+    "result": "BLOCKED",
+    "reason": "Predefined exact-ref presence criterion fails; it cannot be honestly reported present. Historical impact isolation supported, but original failure is not waived or converted.",
+    "checks": [
+      {
+        "criterion": "Historical delta is one exact addition only",
+        "result": "PASS",
+        "evidence": "GIT_REF_DELTA_EVIDENCE.json#historical_delta",
+        "reason": ""
+      },
+      {
+        "criterion": "Exact named ref currently resolves to expected OID",
+        "result": "FAIL",
+        "evidence": "evidence/EXACT_REF_INSPECTION.json#exact_ref",
+        "reason": "Ref is absent; exit 128. No reflog exists. It is not recreated."
+      },
+      {
+        "criterion": "Recorded target exists and is tree",
+        "result": "PASS",
+        "evidence": "evidence/EXACT_REF_INSPECTION.json#object_type",
+        "reason": ""
+      },
+      {
+        "criterion": "Same OID retained by pre-existing and current other refs",
+        "result": "PASS",
+        "evidence": "GIT_REF_DELTA_EVIDENCE.json#current_existing_target_refs",
+        "reason": "Five current refs retain the exact same immutable tree; historical prior baseline also retained it."
+      },
+      {
+        "criterion": "Historical canonical Git state preserved",
+        "result": "PASS",
+        "evidence": "GIT_REF_DELTA_EVIDENCE.json#historical_core_equal",
+        "reason": ""
+      },
+      {
+        "criterion": "Current HEAD branch status stash worktrees match prior final",
+        "result": "PASS",
+        "evidence": "GIT_REF_DELTA_EVIDENCE.json#fresh_core_equal",
+        "reason": ""
+      },
+      {
+        "criterion": "Non-auxiliary local refs preserved",
+        "result": "PASS",
+        "evidence": "GIT_REF_DELTA_EVIDENCE.json#non_auxiliary_local_delta",
+        "reason": ""
+      },
+      {
+        "criterion": "Live remote heads/tags match historical publication receipt",
+        "result": "PASS",
+        "evidence": "GIT_REF_DELTA_EVIDENCE.json#live_remote_delta",
+        "reason": "40 advertised heads/tags; ls-remote only, no fetch."
+      },
+      {
+        "criterion": "Current tracked staged/unstaged and tracked research diff empty",
+        "result": "PASS",
+        "evidence": "evidence/GIT_CURRENT_BEFORE.json",
+        "reason": ""
+      },
+      {
+        "criterion": "Six canonical research SHA256 and capture blobs match",
+        "result": "PASS",
+        "evidence": "evidence/RESEARCH_CAPTURE_BLOB_HASHES.json",
+        "reason": "Bounded six-file proof; no whole ignored/untracked census claim."
+      },
+      {
+        "criterion": "Eight proposed local source identities match",
+        "result": "PASS",
+        "evidence": "evidence/EIGHT_SOURCE_REFRESH.json",
+        "reason": ""
+      },
+      {
+        "criterion": "Original 84-entry seal and 286 historical V7 receipts match",
+        "result": "PASS",
+        "evidence": "evidence/PRIOR_SEAL_CHECK.json; evidence/V7_RECEIPTS_CURRENT_CHECK.json",
+        "reason": ""
+      },
+      {
+        "criterion": "Automation still PAUSED and TOML unchanged",
+        "result": "PASS",
+        "evidence": "evidence/AUTOMATION_CURRENT.json",
+        "reason": ""
+      }
+    ],
+    "passed": 12,
+    "failed": 1,
+    "count": 13
+  },
+  "execution_readiness": {
+    "result": "BLOCKED_NO_AUTHORIZATION_AND_RESOURCE_GATES",
+    "mac_disk_reserve": "FAIL_BELOW_5000000000_BYTES",
+    "Drive_owner_quota": "CURRENT_UNVERIFIED",
+    "writer_window": "NOT_RELEASED",
+    "V8_upload_authorization": false,
+    "automation_restart_authorization": false,
+    "mac_disk_free_bytes": 4088963072,
+    "mac_disk_shortfall_bytes": 911036928
+  },
+  "preservation": {
+    "new_cloud_objects": 0,
+    "uploads": 0,
+    "downloads": 0,
+    "git_write_operations": 0,
+    "source_content_writes": 0,
+    "automation_edits": 0,
+    "automation_paused": true,
+    "credit_or_reset_use": false,
+    "only_writes": "New external continuation directory"
+  },
+  "final_session_preservation_check": {
+    "evidence": "evidence/GIT_CURRENT_AFTER.json",
+    "result": "PASS",
+    "all_16_comparisons_match": true,
+    "raw_index_unchanged_during_review": true,
+    "exact_named_ref_still_absent": true
+  },
+  "final_resources": "evidence/FINAL_RESOURCES.json"
+}

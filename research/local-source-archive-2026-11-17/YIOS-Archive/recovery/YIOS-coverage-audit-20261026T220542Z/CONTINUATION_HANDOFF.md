@@ -1,0 +1,17 @@
+# YIOS coverage audit continuation — read-only, no backup resume
+
+Auditdirectory: `/Users/ghilmankhan/YIOS-coverage-audit-20261026T220542Z`. Status MACHINE_A_METADATA_CENSUS_COMPLETE_TWO_MACHINE_AUDIT_LIMITED. Read primaryRomanUrdu report, COVERAGE_AUDIT_VALIDATION.json andSHA256SUMSfirst. All sourcesunchanged byaudit; one SOURCE_INDEXctime-onlychange separatelyreconciled againstmanifestSHA. Originalreceipts andexceptionsimmutable.
+
+Baseline accepted6,332,524,432; physical6,332,929,262;579privateobjects;V7pending0. Drivefull24folderreadmapexact,no unknown/newobjects. Batch31extra404830zero uniquecoverage remainsunattributed, bothIDsunchanged. Batch35resolvedsameIDs; wrongdestinationhistorypreserved. Batch36complete. AutomationPAUSEDconfigunchanged;no cloudobjects/uploads created.
+
+MachineA14rootcomplete metadata census72076regular/6375dirs/70symlinks;34015importantpaths26,085,270,508logicalbytes;7359placeholders1,818,501,188logicalbytes. All72,146localfile/linkrows plus370Bonlyidentities=72,516matrixrows. Bnotdirectlyaccessible;1000historicalhashidentities630Aoverlap370additional. B456mediaentriesallA/Drivehashmatched, currentBnew/unpublishedscopeunknown.
+
+Gitcurrentbadec432bbf5610748123b3f0e0bcb9cdb25fa10branchcodex/what-if-archive-main-integration; main08e719264e31ecd82de24f8eeb8f065c08359fe5; liveFinance61f26b5ca9a7bd39c0aa2b63780bb33c18d29cff. PR36and44draft/open/unmerged. Localcommit15cbe9f.../stash5b6c304... inexisting758722bytebundle; noindependentcopyproof.29LFSproviderdownloadactionmetadataoffers; nofullLFSbytesretrieved. MissingGitblobstopsallrefLFScensus.
+
+Restore3,012,353downloadedbytes, sourceaudio, trackedGitdoc, control and7originalarchive membersPASS; scratchprotectedoutsideallroots, no scripts executed. Nocleanindependentmachinerestorecertified.
+
+Nextsafeordinaryreadwork ifrequested: obtainMachineBcurrentmanifest/sourceaccess, exactCreatorGuideoriginalpath/hash, Bstashproof; fullcriticalLFSreadbackwithinexplicitboundedrestorelimits; resolveiCloudoriginals; testcleanruntime/editingdependencies. DoNOTre-enumerate completedAroots unlessidentitychanges; useCSV/hash/statcheckpoints. Preserve protectedClaude873b9a27 andMachineBFinanceownership; noGraphify, Gitfetch/checkout/worktreecreation orwrites.
+
+FuturebackupneedsseparateownerV8approval. Minimum8distinctsourcefiles1,111,045bytes; catalog141373440conditionalverifyexistingLFSfirst; no automaticuploadorcontrols. Candidatequeue19,015rowsisnot approvedselection; manyunhashed/reproducibilityunknownpopulations. SevenlargeZIPsall456originalmediahashcovered; noextrauniquepayloadneeded. Fullresidentqueueupperbound~6.65GBexceeds12GBcapheadroom5,667,070,738 andafterreserveDrive5,705,929,779.
+
+Latestrecordedresources in FINAL_RESOURCE_CHECK.json:5hour63%,weekly42%,paid0,reset2untouched,disk8915611648bytesfree,memory37%free,Drive6.7of15GBroundedUI,conservativefree7,705,929,779reserve2GB. Refreshbeforecostlyreads;stopnear90/95%. Noauthorityfortransfer, cleanup, permissionchanges, productionaudits, PRmerge orsessioninterruption.

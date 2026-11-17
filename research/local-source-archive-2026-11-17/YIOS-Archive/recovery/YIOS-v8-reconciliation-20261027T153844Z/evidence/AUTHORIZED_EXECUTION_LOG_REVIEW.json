@@ -1,0 +1,71 @@
+{
+  "path": "/Users/ghilmankhan/.codex/sessions/2026/10/27/rollout-2026-10-27T01-08-09-01a179d3-db38-7a20-b177-e0ccd738c7ce.jsonl",
+  "sha256_at_read": "dae3af50ab95d6912d87a4ff8c1394fdfd33811e4de87ecdcb087ceb8a7b94df",
+  "size_at_read": 20157056,
+  "matches": [
+    {
+      "line": 4181,
+      "timestamp": "2026-10-27T03:23:56.534Z",
+      "type": "event_msg",
+      "payload_type": "item_completed",
+      "tool_name": null,
+      "command_type": "CommandExecution",
+      "command_prefix": "['/bin/zsh', '-lc', \"python3 - <<'PY'\\nimport json,difflib\\nfrom pathlib import Path\\np=Path('/Users/ghilmankhan/YIOS-v8-readiness-20261026T235710Z/evidence')\\na=json.loads((p/'GIT_BEFORE.json').read_text());b=json.loads((p/'GIT_AFTER.json').read_text())\\nprint(''.join(difflib.unified_diff(a['refs']",
+      "interpretation": "Observation/reporting reference; not independent actor attribution"
+    },
+    {
+      "line": 4182,
+      "timestamp": "2026-10-27T03:23:56.537Z",
+      "type": "response_item",
+      "payload_type": "custom_tool_call_output",
+      "tool_name": null,
+      "command_type": null,
+      "command_prefix": null,
+      "interpretation": "Observation/reporting reference; not independent actor attribution"
+    },
+    {
+      "line": 4188,
+      "timestamp": "2026-10-27T03:24:50.337Z",
+      "type": "response_item",
+      "payload_type": "custom_tool_call",
+      "tool_name": "exec",
+      "command_type": null,
+      "command_prefix": null,
+      "interpretation": "Observation/reporting reference; not independent actor attribution"
+    },
+    {
+      "line": 4190,
+      "timestamp": "2026-10-27T03:24:50.804Z",
+      "type": "event_msg",
+      "payload_type": "item_completed",
+      "tool_name": null,
+      "command_type": "CommandExecution",
+      "command_prefix": "['/bin/zsh', '-lc', \"python3 - <<'PY'\\nfrom pathlib import Path\\nimport json,hashlib,difflib,time\\nO=Path('/Users/ghilmankhan/YIOS-v8-readiness-20261026T235710Z');E=O/'evidence'\\n# Preserve the first seal and failed validation before appending the review outcome.\\nfor src,dst in [('SHA256SUMS','evid",
+      "interpretation": "Observation/reporting reference; not independent actor attribution"
+    },
+    {
+      "line": 4191,
+      "timestamp": "2026-10-27T03:24:50.809Z",
+      "type": "response_item",
+      "payload_type": "custom_tool_call_output",
+      "tool_name": null,
+      "command_type": null,
+      "command_prefix": null,
+      "interpretation": "Observation/reporting reference; not independent actor attribution"
+    },
+    {
+      "line": 4047,
+      "timestamp": "2026-10-27T03:19:13.189Z",
+      "type": "task_complete",
+      "turn_id": "01a17b5c-5c9e-7753-9a52-92ebc046e650"
+    },
+    {
+      "line": 4048,
+      "timestamp": "2026-10-27T03:19:13.205Z",
+      "type": "task_started",
+      "turn_id": "01a17b5e-8028-7e51-8b04-910f1b13dafd"
+    }
+  ],
+  "actor": "ACTOR_UNKNOWN",
+  "limitations": "Read only prior readiness audit rollout and 2026-10-27 desktop log files. No creation/deletion command or actor identity established. Current chat excluded to avoid circular evidence; no other private task transcripts scanned."
+}

@@ -1,0 +1,218 @@
+{
+  "youtube_channel_registry.db": {
+    "registry_metadata": {
+      "schema": "CREATE TABLE registry_metadata (\n  key TEXT PRIMARY KEY,\n  value TEXT NOT NULL\n)",
+      "rows": 4
+    },
+    "channels": {
+      "schema": "CREATE TABLE channels (\n  canonical_channel_id TEXT PRIMARY KEY,\n  channel_name TEXT NOT NULL,\n  current_handle TEXT,\n  canonical_url TEXT NOT NULL UNIQUE,\n  source_group TEXT NOT NULL CHECK (source_group IN ('STANDARD_PACKAGE','HISTORICAL_CATALOG','IDENTITY_ONLY')),\n  target_group TEXT NOT NULL CHECK (target_group IN ('ORIGINAL_TARGET','ADDED_TARGET','OUTSIDE_TARGET')),\n  status TEXT NOT NULL CHECK (status IN (\n    'COMPLETE','COMPLETE_WITH_LIMITATIONS','PARTIAL',\n    'IDENTITY_VERIFIED_DATA_NOT_EXTRACTED','PENDING_IDENTITY_RESOLUTION',\n    'UNAVAILABLE_OR_DELETED'\n  )),\n  completed_tick TEXT NOT NULL CHECK (completed_tick IN ('','\u2713')),\n  identity_status TEXT NOT NULL CHECK (identity_status IN ('VERIFIED','UNRESOLVED','UNAVAILABLE')),\n  extraction_status TEXT NOT NULL CHECK (extraction_status IN ('COMPLETE','COMPLETE_WITH_LIMITATIONS','PARTIAL','NOT_EXTRACTED')),\n  package_status TEXT NOT NULL CHECK (package_status IN ('STANDARD_PACKAGE','HISTORICAL_FORMAT','NO_PACKAGE')),\n  video_metadata_status TEXT NOT NULL CHECK (video_metadata_status IN ('COMPLETE','COMPLETE_WITH_LIMITATIONS','PARTIAL','NONE')),\n  description_status TEXT NOT NULL CHECK (description_status IN ('COMPLETE','PARTIAL','NONE')),\n  transcript_status TEXT NOT NULL CHECK (transcript_status IN ('COMPLETE_REAL','COMPLETE_WITH_PLACEHOLDERS','PARTIAL','NONE')),\n  thumbnail_metadata_status TEXT NOT NULL CHECK (thumbnail_metadata_status IN ('COMPLETE','PARTIAL','NONE')),\n  visual_asset_status TEXT NOT NULL CHECK (visual_asset_status IN ('NONE','THUMBNAIL_URL_ONLY','THUMBNAIL_EVIDENCE','FORENSIC_VIDEO_EVIDENCE')),\n  forensic_video_status TEXT NOT NULL CHECK (forensic_video_status IN ('AVAILABLE_WITH_LIMITATIONS','NOT_AVAILABLE')),\n  intelligence_status TEXT NOT NULL CHECK (intelligence_status IN ('VALIDATED','AVAILABLE','PARTIAL','DATA_READY','NOT_AVAILABLE','NOT_APPLICABLE')),\n  first_party_analytics_status TEXT NOT NULL CHECK (first_party_analytics_status IN ('INGESTED','SCHEMA_READY_NO_DATA','NOT_CONFIGURED')),\n  identity_verified_at TEXT,\n  identity_evidence_source TEXT NOT NULL,\n  handle_unavailable_reason TEXT,\n  limitations TEXT\n)",
+      "rows": 75
+    },
+    "channel_data_layers": {
+      "schema": "CREATE TABLE channel_data_layers (\n  canonical_channel_id TEXT NOT NULL REFERENCES channels(canonical_channel_id),\n  layer_name TEXT NOT NULL CHECK (layer_name IN (\n    'identity_status','extraction_status','package_status','video_metadata_status',\n    'description_status','transcript_status','thumbnail_metadata_status',\n    'visual_asset_status','forensic_video_status','intelligence_status',\n    'first_party_analytics_status'\n  )),\n  status TEXT NOT NULL,\n  evidence_path TEXT NOT NULL,\n  limitation_reason TEXT,\n  last_verified_at TEXT NOT NULL,\n  PRIMARY KEY(canonical_channel_id,layer_name)\n)",
+      "rows": 825
+    },
+    "submissions": {
+      "schema": "CREATE TABLE submissions (\n  global_row INTEGER PRIMARY KEY,\n  batch TEXT NOT NULL CHECK (batch IN ('A','B')),\n  batch_row INTEGER NOT NULL,\n  original_url TEXT NOT NULL,\n  normalized_url TEXT NOT NULL,\n  is_exact_duplicate INTEGER NOT NULL CHECK (is_exact_duplicate IN (0,1)),\n  duplicate_of_global_row INTEGER REFERENCES submissions(global_row),\n  canonical_channel_id TEXT NOT NULL REFERENCES channels(canonical_channel_id),\n  identity_status TEXT NOT NULL,\n  evidence_source TEXT NOT NULL,\n  verified_at TEXT,\n  UNIQUE(batch,batch_row)\n)",
+      "rows": 67
+    },
+    "channel_aliases": {
+      "schema": "CREATE TABLE channel_aliases (\n  alias_id INTEGER PRIMARY KEY,\n  canonical_channel_id TEXT NOT NULL REFERENCES channels(canonical_channel_id),\n  alias_url TEXT NOT NULL,\n  alias_kind TEXT NOT NULL,\n  submission_global_row INTEGER REFERENCES submissions(global_row),\n  UNIQUE(canonical_channel_id,alias_url,submission_global_row)\n)",
+      "rows": 142
+    },
+    "identity_evidence": {
+      "schema": "CREATE TABLE identity_evidence (\n  evidence_id INTEGER PRIMARY KEY,\n  canonical_channel_id TEXT NOT NULL REFERENCES channels(canonical_channel_id),\n  source_type TEXT NOT NULL,\n  source_locator TEXT NOT NULL,\n  verified_at TEXT,\n  observed_name TEXT,\n  observed_handle TEXT,\n  raw_json TEXT,\n  UNIQUE(canonical_channel_id,source_type,source_locator)\n)",
+      "rows": 75
+    },
+    "datasets": {
+      "schema": "CREATE TABLE datasets (\n  dataset_id TEXT PRIMARY KEY,\n  dataset_name TEXT NOT NULL,\n  manifest_path TEXT NOT NULL,\n  evidence_scope TEXT,\n  limitations TEXT\n)",
+      "rows": 33
+    },
+    "dataset_channels": {
+      "schema": "CREATE TABLE dataset_channels (\n  dataset_id TEXT NOT NULL REFERENCES datasets(dataset_id),\n  canonical_channel_id TEXT NOT NULL REFERENCES channels(canonical_channel_id),\n  relationship TEXT NOT NULL,\n  PRIMARY KEY(dataset_id,canonical_channel_id,relationship)\n)",
+      "rows": 50
+    },
+    "actor_runs": {
+      "schema": "CREATE TABLE actor_runs (\n  actor_run_id TEXT PRIMARY KEY,\n  actor_dataset_id TEXT,\n  dataset_id TEXT NOT NULL REFERENCES datasets(dataset_id),\n  actor_name TEXT,\n  evidence_path TEXT,\n  run_status TEXT,\n  raw_json TEXT\n)",
+      "rows": 19
+    },
+    "videos": {
+      "schema": "CREATE TABLE videos (\n  youtube_video_id TEXT PRIMARY KEY,\n  canonical_channel_id TEXT NOT NULL REFERENCES channels(canonical_channel_id),\n  canonical_url TEXT NOT NULL,\n  title TEXT,\n  published_at TEXT,\n  duration_seconds INTEGER,\n  video_type TEXT,\n  views INTEGER,\n  likes INTEGER,\n  comments INTEGER,\n  description TEXT,\n  description_unavailable_reason TEXT,\n  thumbnail_url TEXT,\n  raw_json TEXT\n)",
+      "rows": 2303
+    },
+    "dataset_videos": {
+      "schema": "CREATE TABLE dataset_videos (\n  dataset_id TEXT NOT NULL REFERENCES datasets(dataset_id),\n  youtube_video_id TEXT NOT NULL REFERENCES videos(youtube_video_id),\n  evidence_locator TEXT,\n  PRIMARY KEY(dataset_id,youtube_video_id)\n)",
+      "rows": 2303
+    },
+    "transcripts": {
+      "schema": "CREATE TABLE transcripts (\n  transcript_id INTEGER PRIMARY KEY,\n  youtube_video_id TEXT NOT NULL REFERENCES videos(youtube_video_id),\n  dataset_id TEXT NOT NULL REFERENCES datasets(dataset_id),\n  transcript_text TEXT,\n  word_count INTEGER,\n  language TEXT,\n  caption_type TEXT,\n  is_placeholder INTEGER NOT NULL CHECK (is_placeholder IN (0,1)),\n  unavailable_reason TEXT,\n  evidence_locator TEXT NOT NULL,\n  transcript_sha256 TEXT,\n  UNIQUE(youtube_video_id,dataset_id)\n)",
+      "rows": 2303
+    },
+    "subtitle_tracks": {
+      "schema": "CREATE TABLE subtitle_tracks (\n  subtitle_track_id INTEGER PRIMARY KEY,\n  youtube_video_id TEXT NOT NULL REFERENCES videos(youtube_video_id),\n  dataset_id TEXT NOT NULL REFERENCES datasets(dataset_id),\n  language TEXT,\n  track_type TEXT,\n  raw_json TEXT,\n  UNIQUE(youtube_video_id,dataset_id,language,track_type)\n)",
+      "rows": 2455
+    },
+    "artifacts": {
+      "schema": "CREATE TABLE artifacts (\n  artifact_id INTEGER PRIMARY KEY,\n  dataset_id TEXT REFERENCES datasets(dataset_id),\n  canonical_channel_id TEXT REFERENCES channels(canonical_channel_id),\n  artifact_type TEXT NOT NULL,\n  repository_path TEXT NOT NULL,\n  sha256 TEXT,\n  availability_status TEXT NOT NULL,\n  unavailable_reason TEXT,\n  UNIQUE(dataset_id,canonical_channel_id,artifact_type,repository_path)\n)",
+      "rows": 318
+    },
+    "availability_gaps": {
+      "schema": "CREATE TABLE availability_gaps (\n  gap_id INTEGER PRIMARY KEY,\n  canonical_channel_id TEXT NOT NULL REFERENCES channels(canonical_channel_id),\n  field_name TEXT NOT NULL,\n  unavailable_reason TEXT NOT NULL,\n  evidence_source TEXT NOT NULL,\n  UNIQUE(canonical_channel_id,field_name,unavailable_reason)\n)",
+      "rows": 216
+    },
+    "intelligence_capabilities": {
+      "schema": "CREATE TABLE intelligence_capabilities (\n  capability_id TEXT PRIMARY KEY,\n  capability_name TEXT NOT NULL\n)",
+      "rows": 8
+    },
+    "intelligence_coverage": {
+      "schema": "CREATE TABLE intelligence_coverage (\n  canonical_channel_id TEXT NOT NULL REFERENCES channels(canonical_channel_id),\n  capability_id TEXT NOT NULL REFERENCES intelligence_capabilities(capability_id),\n  status TEXT NOT NULL CHECK (status IN ('VALIDATED','AVAILABLE','PARTIAL','DATA_READY','NOT_AVAILABLE','NOT_APPLICABLE')),\n  input_data_available INTEGER NOT NULL CHECK (input_data_available IN (0,1)),\n  generated_artifact_available INTEGER NOT NULL CHECK (generated_artifact_available IN (0,1)),\n  evidence_path TEXT NOT NULL,\n  limitation_reason TEXT,\n  last_verified_at TEXT NOT NULL,\n  PRIMARY KEY(canonical_channel_id,capability_id)\n)",
+      "rows": 600
+    },
+    "visual_coverage": {
+      "schema": "CREATE TABLE visual_coverage (\n  canonical_channel_id TEXT PRIMARY KEY REFERENCES channels(canonical_channel_id),\n  thumbnail_url_count INTEGER NOT NULL CHECK (thumbnail_url_count >= 0),\n  downloaded_thumbnail_count INTEGER NOT NULL CHECK (downloaded_thumbnail_count >= 0),\n  screenshot_count INTEGER NOT NULL CHECK (screenshot_count >= 0),\n  keyframe_count INTEGER NOT NULL CHECK (keyframe_count >= 0),\n  registered_source_video_count INTEGER NOT NULL CHECK (registered_source_video_count >= 0),\n  timestamped_visual_observation_count INTEGER NOT NULL CHECK (timestamped_visual_observation_count >= 0),\n  visual_evidence_level TEXT NOT NULL CHECK (visual_evidence_level IN ('NONE','THUMBNAIL_URL_ONLY','THUMBNAIL_EVIDENCE','FORENSIC_VIDEO_EVIDENCE')),\n  editing_visual_intelligence_status TEXT NOT NULL CHECK (editing_visual_intelligence_status IN ('PARTIAL','NOT_AVAILABLE')),\n  evidence_path TEXT NOT NULL,\n  limitation_reason TEXT\n)",
+      "rows": 75
+    },
+    "non_channel_subjects": {
+      "schema": "CREATE TABLE non_channel_subjects (\n  subject_id TEXT PRIMARY KEY,\n  subject_name TEXT NOT NULL,\n  canonical_channel_id TEXT,\n  identity_status TEXT NOT NULL,\n  evidence_source TEXT NOT NULL,\n  limitation TEXT NOT NULL,\n  CHECK (canonical_channel_id IS NULL)\n)",
+      "rows": 4
+    },
+    "subject_datasets": {
+      "schema": "CREATE TABLE subject_datasets (\n  subject_id TEXT NOT NULL REFERENCES non_channel_subjects(subject_id),\n  dataset_id TEXT NOT NULL REFERENCES datasets(dataset_id),\n  PRIMARY KEY(subject_id,dataset_id)\n)",
+      "rows": 4
+    },
+    "transcript_fts": {
+      "schema": "CREATE VIRTUAL TABLE transcript_fts USING fts5(transcript_text)",
+      "rows": 2291
+    },
+    "transcript_fts_data": {
+      "schema": "CREATE TABLE 'transcript_fts_data'(id INTEGER PRIMARY KEY, block BLOB)",
+      "rows": 3807
+    },
+    "transcript_fts_idx": {
+      "schema": "CREATE TABLE 'transcript_fts_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID",
+      "rows": 3421
+    },
+    "transcript_fts_content": {
+      "schema": "CREATE TABLE 'transcript_fts_content'(id INTEGER PRIMARY KEY, c0)",
+      "rows": 2291
+    },
+    "transcript_fts_docsize": {
+      "schema": "CREATE TABLE 'transcript_fts_docsize'(id INTEGER PRIMARY KEY, sz BLOB)",
+      "rows": 2291
+    },
+    "transcript_fts_config": {
+      "schema": "CREATE TABLE 'transcript_fts_config'(k PRIMARY KEY, v) WITHOUT ROWID",
+      "rows": 1
+    }
+  },
+  "youtube_inventory.db": {
+    "schema_meta": {
+      "schema": "CREATE TABLE schema_meta (\n    schema_version  INTEGER PRIMARY KEY,\n    applied_at      TEXT NOT NULL,\n    description     TEXT NOT NULL\n)",
+      "rows": 10
+    },
+    "datasets": {
+      "schema": "CREATE TABLE datasets (\n    dataset_id      TEXT PRIMARY KEY,\n    dataset_name    TEXT NOT NULL,\n    semantic_class  TEXT NOT NULL,\n    description     TEXT,\n    source_type     TEXT NOT NULL,\n    ingestion_mode  TEXT NOT NULL,\n    status          TEXT NOT NULL,\n    discovered_as   TEXT,\n    date_received   TEXT NOT NULL,\n    created_at      TEXT NOT NULL,\n    updated_at      TEXT NOT NULL,\n    notes           TEXT\n)",
+      "rows": 26
+    },
+    "ingestion_runs": {
+      "schema": "CREATE TABLE ingestion_runs (\n    run_id                TEXT PRIMARY KEY,\n    dataset_id            TEXT REFERENCES datasets(dataset_id),\n    started_at            TEXT NOT NULL,\n    completed_at          TEXT,\n    status                TEXT NOT NULL CHECK (status IN ('STARTED', 'COMPLETED', 'PARTIAL', 'FAILED', 'ROLLED_BACK')),\n    source_file_count     INTEGER,\n    archive_member_count  INTEGER,\n    total_size_bytes      INTEGER,\n    errors_count          INTEGER NOT NULL DEFAULT 0,\n    verification_status   TEXT,\n    tool_version          TEXT NOT NULL,\n    notes                 TEXT\n, run_type TEXT NOT NULL DEFAULT 'FILE_INGESTION'\n    CHECK (run_type IN ('FILE_INGESTION', 'STRUCTURED_REGISTRATION')))",
+      "rows": 37
+    },
+    "source_locations": {
+      "schema": "CREATE TABLE source_locations (\n    source_location_id  TEXT PRIMARY KEY,\n    dataset_id           TEXT NOT NULL REFERENCES datasets(dataset_id),\n    original_path        TEXT NOT NULL,\n    location_type         TEXT NOT NULL,\n    exists_at_ingestion   INTEGER NOT NULL CHECK (exists_at_ingestion IN (0, 1)),\n    observed_at            TEXT NOT NULL,\n    notes                  TEXT\n)",
+      "rows": 34
+    },
+    "source_files": {
+      "schema": "CREATE TABLE source_files (\n    file_id               TEXT PRIMARY KEY,\n    dataset_id            TEXT NOT NULL REFERENCES datasets(dataset_id),\n    ingestion_run_id      TEXT NOT NULL REFERENCES ingestion_runs(run_id),\n    parent_file_id        TEXT REFERENCES source_files(file_id),\n\n    storage_kind          TEXT NOT NULL CHECK (storage_kind IN ('PHYSICAL_FILE', 'ARCHIVE_MEMBER')),\n    file_role             TEXT NOT NULL,\n\n    original_filename     TEXT NOT NULL,\n    original_path         TEXT NOT NULL,\n    relative_path         TEXT,\n\n    canonical_path        TEXT,\n    archive_member_path   TEXT,\n\n    extension             TEXT,\n    mime_type              TEXT,\n\n    size_bytes             INTEGER NOT NULL,\n    sha256                 TEXT,\n\n    semantic_class          TEXT,\n    evidence_layer           TEXT,\n\n    is_copied                INTEGER NOT NULL DEFAULT 0 CHECK (is_copied IN (0, 1)),\n    is_archive_member         INTEGER NOT NULL DEFAULT 0 CHECK (is_archive_member IN (0, 1)),\n\n    processing_status          TEXT NOT NULL,\n    verification_status        TEXT NOT NULL,\n\n    created_at                  TEXT NOT NULL,\n    notes                        TEXT\n)",
+      "rows": 6953
+    },
+    "file_relationships": {
+      "schema": "CREATE TABLE file_relationships (\n    relationship_id    TEXT PRIMARY KEY,\n    from_file_id        TEXT NOT NULL REFERENCES source_files(file_id),\n    to_file_id           TEXT NOT NULL REFERENCES source_files(file_id),\n    relationship_type     TEXT NOT NULL CHECK (relationship_type IN (\n        'EXACT_DUPLICATE_OF', 'PROBABLE_DUPLICATE_OF', 'REVISION_OF',\n        'ARCHIVE_OF', 'CONTAINS', 'DERIVED_FROM', 'SUPERSEDES', 'RELATED_TO'\n    )),\n    confidence             TEXT,\n    evidence                TEXT,\n    created_at                TEXT NOT NULL,\n    notes                      TEXT\n)",
+      "rows": 0
+    },
+    "ingestion_errors": {
+      "schema": "CREATE TABLE ingestion_errors (\n    error_id                 TEXT PRIMARY KEY,\n    run_id                    TEXT NOT NULL REFERENCES ingestion_runs(run_id),\n    dataset_id                TEXT REFERENCES datasets(dataset_id),\n    file_id                    TEXT REFERENCES source_files(file_id),\n    error_type                  TEXT NOT NULL,\n    severity                     TEXT NOT NULL,\n    message                       TEXT NOT NULL,\n    retryable                      INTEGER NOT NULL CHECK (retryable IN (0, 1)),\n    requires_human_review           INTEGER NOT NULL CHECK (requires_human_review IN (0, 1)),\n    created_at                       TEXT NOT NULL,\n    resolved_at                       TEXT,\n    notes                              TEXT\n)",
+      "rows": 0
+    },
+    "channels": {
+      "schema": "CREATE TABLE channels (\n    channel_id                TEXT PRIMARY KEY,\n    youtube_channel_id        TEXT UNIQUE,\n    handle                    TEXT,\n    display_name              TEXT NOT NULL,\n    channel_url               TEXT,\n    created_from_dataset_id   TEXT NOT NULL REFERENCES datasets(dataset_id),\n    created_at                TEXT NOT NULL,\n    updated_at                TEXT NOT NULL,\n    notes                     TEXT\n)",
+      "rows": 10
+    },
+    "channel_snapshots": {
+      "schema": "CREATE TABLE channel_snapshots (\n    channel_snapshot_id       TEXT PRIMARY KEY,\n    channel_id                TEXT NOT NULL REFERENCES channels(channel_id),\n    dataset_id                TEXT NOT NULL REFERENCES datasets(dataset_id),\n    registration_run_id       TEXT NOT NULL REFERENCES ingestion_runs(run_id),\n    observed_at                TEXT NOT NULL,\n    subscriber_count           INTEGER,\n    video_count                 INTEGER,\n    created_at                   TEXT NOT NULL,\n    notes                         TEXT,\n    UNIQUE (channel_id, dataset_id, observed_at)\n)",
+      "rows": 12
+    },
+    "videos": {
+      "schema": "CREATE TABLE videos (\n    video_id                  TEXT PRIMARY KEY,\n    youtube_video_id          TEXT NOT NULL UNIQUE,\n    channel_id                TEXT NOT NULL REFERENCES channels(channel_id),\n    canonical_url              TEXT,\n    created_from_dataset_id    TEXT NOT NULL REFERENCES datasets(dataset_id),\n    created_at                  TEXT NOT NULL,\n    updated_at                   TEXT NOT NULL,\n    notes                         TEXT\n)",
+      "rows": 667
+    },
+    "video_snapshots": {
+      "schema": "CREATE TABLE video_snapshots (\n    video_snapshot_id          TEXT PRIMARY KEY,\n    video_id                   TEXT NOT NULL REFERENCES videos(video_id),\n    dataset_id                  TEXT NOT NULL REFERENCES datasets(dataset_id),\n    registration_run_id          TEXT NOT NULL REFERENCES ingestion_runs(run_id),\n\n    observed_at                    TEXT NOT NULL,\n    published_at                    TEXT,\n\n    title                             TEXT,\n    duration_seconds                   INTEGER,\n\n    views                                INTEGER,\n    likes                                 INTEGER,\n    comments                              INTEGER,\n\n    views_per_day                          REAL,\n    engagement_rate                         REAL,\n\n    description_char_count                   INTEGER,\n    transcript_word_count                     INTEGER,\n\n    created_at                                 TEXT NOT NULL,\n    notes                                        TEXT, description TEXT, video_type TEXT, thumbnail_url TEXT,\n    UNIQUE (video_id, dataset_id, observed_at)\n)",
+      "rows": 668
+    },
+    "transcripts": {
+      "schema": "CREATE TABLE transcripts (\n    transcript_id               TEXT PRIMARY KEY,\n    video_id                    TEXT NOT NULL REFERENCES videos(video_id),\n    dataset_id                   TEXT NOT NULL REFERENCES datasets(dataset_id),\n    registration_run_id           TEXT NOT NULL REFERENCES ingestion_runs(run_id),\n\n    archive_member_file_id          TEXT NOT NULL REFERENCES source_files(file_id),\n\n    availability_status               TEXT NOT NULL CHECK (availability_status IN ('AVAILABLE', 'UNAVAILABLE')),\n    caption_type                        TEXT,\n    language                             TEXT,\n    word_count                            INTEGER,\n\n    transcript_sha256                      TEXT,\n    description_present                     INTEGER CHECK (description_present IN (0, 1)),\n\n    created_at                                TEXT NOT NULL,\n    notes                                       TEXT, transcript_format TEXT, transcript_source TEXT NOT NULL DEFAULT 'SUPPLIED_ARCHIVE', canonical_reference TEXT, timing_quality TEXT CHECK (\n    timing_quality IN ('EXACT_TIMESTAMPED', 'SEGMENT_TIMESTAMPED', 'POSITIONAL_ONLY', 'INSUFFICIENT_TIMING')\n),\n    UNIQUE (video_id, dataset_id, registration_run_id)\n)",
+      "rows": 668
+    },
+    "field_provenance": {
+      "schema": "CREATE TABLE field_provenance (\n    provenance_id                TEXT PRIMARY KEY,\n\n    dataset_id                    TEXT NOT NULL REFERENCES datasets(dataset_id),\n    registration_run_id             TEXT NOT NULL REFERENCES ingestion_runs(run_id),\n    source_file_id                    TEXT REFERENCES source_files(file_id),\n\n    channel_id                          TEXT REFERENCES channels(channel_id),\n    channel_snapshot_id                   TEXT REFERENCES channel_snapshots(channel_snapshot_id),\n    video_id                                TEXT REFERENCES videos(video_id),\n    video_snapshot_id                         TEXT REFERENCES video_snapshots(video_snapshot_id),\n    transcript_id                               TEXT REFERENCES transcripts(transcript_id),\n\n    field_name                                    TEXT NOT NULL,\n    source_locator                                  TEXT NOT NULL,\n\n    value_origin                                      TEXT NOT NULL CHECK (value_origin IN (\n        'SOURCE_EXTRACTED', 'SOURCE_DECLARED', 'SOURCE_COMPUTED',\n        'TRANSCRIPT_METADATA', 'ARCHIVE_OBSERVED', 'SYSTEM_VERIFIED'\n    )),\n    evidence_layer                                      TEXT NOT NULL,\n    extraction_method                                     TEXT,\n\n    observed_at                                             TEXT,\n    created_at                                                TEXT NOT NULL,\n    notes                                                       TEXT,\n\n    CHECK (\n        (CASE WHEN channel_id IS NOT NULL THEN 1 ELSE 0 END) +\n        (CASE WHEN channel_snapshot_id IS NOT NULL THEN 1 ELSE 0 END) +\n        (CASE WHEN video_id IS NOT NULL THEN 1 ELSE 0 END) +\n        (CASE WHEN video_snapshot_id IS NOT NULL THEN 1 ELSE 0 END) +\n        (CASE WHEN transcript_id IS NOT NULL THEN 1 ELSE 0 END) = 1\n    )\n)",
+      "rows": 12335
+    },
+    "source_batches": {
+      "schema": "CREATE TABLE source_batches (\n    batch_id        TEXT PRIMARY KEY,\n    batch_name      TEXT NOT NULL,\n    started_at      TEXT NOT NULL,\n    completed_at    TEXT,\n    status          TEXT NOT NULL CHECK (status IN ('STARTED', 'COMPLETED', 'PARTIAL', 'FAILED')),\n    root_count      INTEGER NOT NULL,\n    tool_version    TEXT NOT NULL,\n    notes           TEXT\n)",
+      "rows": 1
+    },
+    "batch_roots": {
+      "schema": "CREATE TABLE batch_roots (\n    batch_root_id       TEXT PRIMARY KEY,\n    batch_id            TEXT NOT NULL REFERENCES source_batches(batch_id),\n    root_index          INTEGER NOT NULL,\n    supplied_path        TEXT NOT NULL,\n    canonical_path        TEXT,\n    exists_at_discovery    INTEGER NOT NULL CHECK (exists_at_discovery IN (0, 1)),\n    root_type               TEXT,\n    file_count                INTEGER,\n    dir_count                  INTEGER,\n    symlink_count                INTEGER,\n    total_size_bytes               INTEGER,\n    observed_at                     TEXT NOT NULL,\n    notes                            TEXT,\n    UNIQUE (batch_id, root_index)\n)",
+      "rows": 12
+    },
+    "discovered_files": {
+      "schema": "CREATE TABLE discovered_files (\n    discovered_file_id   TEXT PRIMARY KEY,\n    batch_id              TEXT NOT NULL REFERENCES source_batches(batch_id),\n    batch_root_id          TEXT NOT NULL REFERENCES batch_roots(batch_root_id),\n\n    entry_type               TEXT NOT NULL CHECK (entry_type IN ('FILE', 'DIR', 'SYMLINK', 'OTHER')),\n    absolute_path              TEXT NOT NULL,\n    relative_path                TEXT NOT NULL,\n\n    extension                     TEXT,\n    mime_type                      TEXT,\n    size_bytes                      INTEGER,\n    sha256                           TEXT,\n\n    dataset_id                       TEXT REFERENCES datasets(dataset_id),\n    source_file_id                    TEXT REFERENCES source_files(file_id),\n\n    disposition                        TEXT NOT NULL CHECK (disposition IN (\n        'INGEST', 'REFERENCE_ONLY', 'ALREADY_INGESTED', 'EXACT_DUPLICATE',\n        'NEAR_DUPLICATE', 'REVISION', 'SUPPORTING_EVIDENCE', 'SUPERSEDED',\n        'NOISE', 'TOOLING', 'UNSUPPORTED', 'UNSAFE', 'HOLD'\n    )),\n    disposition_reason                  TEXT NOT NULL,\n    duplicate_of_discovered_file_id       TEXT REFERENCES discovered_files(discovered_file_id),\n\n    processing_status                      TEXT NOT NULL DEFAULT 'RECORDED',\n    created_at                              TEXT NOT NULL,\n    notes                                     TEXT\n)",
+      "rows": 45774
+    },
+    "visual_assets": {
+      "schema": "CREATE TABLE visual_assets (\n    visual_asset_id     TEXT PRIMARY KEY,\n    discovered_file_id   TEXT NOT NULL REFERENCES discovered_files(discovered_file_id),\n    dataset_id             TEXT REFERENCES datasets(dataset_id),\n\n    sha256                   TEXT NOT NULL,\n    width_px                  INTEGER,\n    height_px                  INTEGER,\n    color_mode                  TEXT,\n    image_format                  TEXT,\n    orientation                     TEXT,\n    exif_json                         TEXT,\n\n    perceptual_hash                     TEXT,\n    perceptual_hash_algorithm             TEXT,\n\n    frame_sequence_id                       TEXT,\n    frame_index                              INTEGER,\n    visual_state_cluster_id                    TEXT,\n\n    created_at                                  TEXT NOT NULL,\n    notes                                         TEXT\n)",
+      "rows": 5172
+    },
+    "visual_observations": {
+      "schema": "CREATE TABLE visual_observations (\n    visual_observation_id   TEXT PRIMARY KEY,\n    visual_asset_id           TEXT NOT NULL REFERENCES visual_assets(visual_asset_id),\n\n    observation_type            TEXT NOT NULL CHECK (observation_type IN ('OCR', 'SEMANTIC_INSPECTION')),\n    observation_method             TEXT NOT NULL,\n    source_surface                   TEXT,\n\n    extracted_text                     TEXT,\n    confidence                           REAL,\n    structured_json                        TEXT,\n\n    evidence_layer                          TEXT NOT NULL,\n    observed_at                              TEXT NOT NULL,\n    notes                                      TEXT\n)",
+      "rows": 244
+    },
+    "entity_classifications": {
+      "schema": "CREATE TABLE entity_classifications (\n    classification_id     TEXT PRIMARY KEY,\n    dataset_id              TEXT NOT NULL REFERENCES datasets(dataset_id),\n    target_type               TEXT NOT NULL CHECK (target_type IN ('DATASET', 'CHANNEL', 'VIDEO')),\n    target_ref                  TEXT NOT NULL,\n\n    content_domain                 TEXT,\n    sub_niche                        TEXT,\n    target_audience                    TEXT,\n    content_format                       TEXT,\n    packaging_style                        TEXT,\n    thumbnail_style                          TEXT,\n    presenter_style                            TEXT,\n    editing_style                                TEXT NOT NULL DEFAULT 'UNKNOWN',\n\n    evidence_layer                                  TEXT NOT NULL,\n    source_locator                                    TEXT NOT NULL,\n    created_at                                          TEXT NOT NULL,\n    notes                                                 TEXT\n)",
+      "rows": 9
+    },
+    "document_records": {
+      "schema": "CREATE TABLE document_records (\n    document_id            TEXT PRIMARY KEY,\n    discovered_file_id       TEXT NOT NULL REFERENCES discovered_files(discovered_file_id),\n    dataset_id                 TEXT NOT NULL REFERENCES datasets(dataset_id),\n\n    title                         TEXT,\n    document_type                   TEXT,\n    subject                           TEXT,\n    knowledge_domains                  TEXT,\n    evidence_type                        TEXT NOT NULL,\n    authorship                             TEXT,\n    ai_generated_indicators                  TEXT,\n    relationship_notes                         TEXT,\n    priority                                     TEXT,\n    revision_status                                TEXT,\n\n    content_read                                    INTEGER NOT NULL CHECK (content_read IN (0, 1)),\n    created_at                                        TEXT NOT NULL,\n    notes                                               TEXT\n)",
+      "rows": 17
+    },
+    "apify_source_runs": {
+      "schema": "CREATE TABLE apify_source_runs (\n    apify_source_run_id          TEXT PRIMARY KEY,\n    registration_run_id          TEXT NOT NULL UNIQUE REFERENCES ingestion_runs(run_id),\n    dataset_id                   TEXT NOT NULL REFERENCES datasets(dataset_id),\n\n    actor_name                   TEXT NOT NULL,\n    actor_id                     TEXT NOT NULL,\n    actor_run_id                 TEXT NOT NULL UNIQUE,\n    actor_build_id               TEXT,\n    actor_build_number           TEXT,\n    actor_build_version          TEXT,\n\n    started_at                   TEXT NOT NULL,\n    finished_at                  TEXT,\n    observed_at                  TEXT NOT NULL,\n    input_json                   TEXT NOT NULL,\n    result_record_count          INTEGER NOT NULL,\n    run_status                   TEXT NOT NULL,\n    run_cost_usd                 REAL,\n    channel_url                  TEXT NOT NULL,\n    transcript_configuration_json TEXT NOT NULL,\n    default_dataset_id           TEXT,\n    run_console_url              TEXT,\n\n    source                       TEXT NOT NULL CHECK (source = 'APIFY'),\n    extraction_provider          TEXT NOT NULL CHECK (extraction_provider = 'streamers/youtube-scraper'),\n    created_at                   TEXT NOT NULL,\n    notes                        TEXT\n)",
+      "rows": 9
+    },
+    "channel_dataset_links": {
+      "schema": "CREATE TABLE channel_dataset_links (\n    channel_id          TEXT NOT NULL REFERENCES channels(channel_id),\n    dataset_id          TEXT NOT NULL REFERENCES datasets(dataset_id),\n    relationship_type   TEXT NOT NULL CHECK (relationship_type IN (\n        'CREATED_FROM', 'IDENTITY_EVIDENCE', 'STRUCTURED_OBSERVATION'\n    )),\n    source_locator      TEXT NOT NULL,\n    evidence_layer      TEXT NOT NULL,\n    created_at          TEXT NOT NULL,\n    notes               TEXT,\n    PRIMARY KEY (channel_id, dataset_id, relationship_type)\n)",
+      "rows": 22
+    },
+    "apify_result_records": {
+      "schema": "CREATE TABLE apify_result_records (\n    apify_result_record_id  TEXT PRIMARY KEY,\n    apify_source_run_id     TEXT NOT NULL REFERENCES apify_source_runs(apify_source_run_id),\n    video_id                TEXT NOT NULL REFERENCES videos(video_id),\n    record_index            INTEGER NOT NULL,\n    raw_record_sha256       TEXT NOT NULL,\n    observed_at             TEXT NOT NULL,\n    created_at              TEXT NOT NULL,\n    UNIQUE (apify_source_run_id, video_id),\n    UNIQUE (apify_source_run_id, record_index)\n)",
+      "rows": 480
+    },
+    "thumbnail_evidence": {
+      "schema": "CREATE TABLE thumbnail_evidence (\n    thumbnail_evidence_id   TEXT PRIMARY KEY,\n    video_id                TEXT NOT NULL REFERENCES videos(video_id),\n    dataset_id              TEXT NOT NULL REFERENCES datasets(dataset_id),\n    registration_run_id     TEXT NOT NULL REFERENCES ingestion_runs(run_id),\n    apify_source_run_id     TEXT NOT NULL REFERENCES apify_source_runs(apify_source_run_id),\n    thumbnail_url           TEXT NOT NULL,\n    source                  TEXT NOT NULL CHECK (source = 'APIFY'),\n    extraction_provider     TEXT NOT NULL CHECK (extraction_provider = 'streamers/youtube-scraper'),\n    extraction_method       TEXT NOT NULL,\n    observed_at             TEXT NOT NULL,\n    created_at              TEXT NOT NULL,\n    UNIQUE (video_id, apify_source_run_id, thumbnail_url)\n)",
+      "rows": 479
+    },
+    "apify_run_cost_observations": {
+      "schema": "CREATE TABLE apify_run_cost_observations (\n    cost_observation_id       TEXT PRIMARY KEY,\n    apify_source_run_id       TEXT NOT NULL REFERENCES apify_source_runs(apify_source_run_id),\n    observed_at               TEXT NOT NULL,\n    usage_total_usd           REAL NOT NULL,\n    charged_event_counts_json TEXT,\n    event_usage_json          TEXT,\n    is_final                  INTEGER NOT NULL CHECK (is_final IN (0, 1)),\n    source_locator            TEXT NOT NULL,\n    created_at                TEXT NOT NULL,\n    notes                     TEXT\n)",
+      "rows": 10
+    },
+    "dataset_relationships": {
+      "schema": "CREATE TABLE dataset_relationships (\n    relationship_id    TEXT PRIMARY KEY,\n    from_dataset_id     TEXT NOT NULL REFERENCES datasets(dataset_id),\n    to_dataset_id       TEXT NOT NULL REFERENCES datasets(dataset_id),\n    relationship_type    TEXT NOT NULL CHECK (relationship_type IN (\n        'SAME_SOURCE_INDEPENDENT_ANALYSIS', 'REVISION_OF',\n        'DUPLICATE_DATASET', 'RELATED_BUT_UNRESOLVED'\n    )),\n    confidence            TEXT NOT NULL,\n    status                 TEXT NOT NULL CHECK (status IN ('PROVEN', 'UNRESOLVED')),\n    evidence               TEXT NOT NULL,\n    source_locator         TEXT NOT NULL,\n    created_at             TEXT NOT NULL,\n    notes                  TEXT,\n    CHECK (from_dataset_id <> to_dataset_id),\n    UNIQUE (from_dataset_id, to_dataset_id, relationship_type)\n)",
+      "rows": 1
+    },
+    "content_classifications": {
+      "schema": "CREATE TABLE content_classifications (\n    classification_id       TEXT PRIMARY KEY,\n    video_id                TEXT NOT NULL REFERENCES videos(video_id),\n    dataset_id              TEXT NOT NULL REFERENCES datasets(dataset_id),\n    source_file_id          TEXT NOT NULL REFERENCES source_files(file_id),\n\n    classification_dimension TEXT NOT NULL CHECK (\n        classification_dimension IN ('CONTENT_TOPIC', 'CONTENT_FORMAT')\n    ),\n    classification_value    TEXT NOT NULL CHECK (length(trim(classification_value)) > 0),\n    evidence_layer          TEXT NOT NULL CHECK (evidence_layer IN (\n        'EXTRACTED_FACT', 'MEASURED_FACT', 'OBSERVATION',\n        'AI_INTERPRETATION', 'HUMAN_INTERPRETATION'\n    )),\n    classification_status   TEXT NOT NULL CHECK (classification_status IN (\n        'PROPOSED', 'VERIFIED', 'REJECTED', 'SUPERSEDED'\n    )),\n\n    source_locator          TEXT NOT NULL CHECK (length(trim(source_locator)) > 0),\n    classification_method   TEXT NOT NULL CHECK (length(trim(classification_method)) > 0),\n    method_version          TEXT,\n    reproducibility_status  TEXT NOT NULL CHECK (\n        reproducibility_status IN ('REPRODUCIBLE', 'NON_REPRODUCIBLE')\n    ),\n    created_at              TEXT NOT NULL,\n    notes                   TEXT,\n\n    CHECK (\n        reproducibility_status = 'NON_REPRODUCIBLE'\n        OR length(trim(method_version)) > 0\n    )\n)",
+      "rows": 604
+    }
+  }
+}

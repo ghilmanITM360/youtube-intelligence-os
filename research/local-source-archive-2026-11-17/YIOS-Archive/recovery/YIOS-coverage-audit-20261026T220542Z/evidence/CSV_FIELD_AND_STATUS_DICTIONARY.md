@@ -1,0 +1,7 @@
+# CSV interpretation
+
+Primary inventory includes every census regularfile andsymlink, plus deduplicated additionalMachineB historicalfingerprints. Directories appear in census/folder rollups. Subtree rows overlap; sum root rows only. LogicalassetSHA groups are contentidentity, not physicalcopies. Path-only IDs preserve unknownhashfiles separately. SF_DATALESS files have sizebutnot localbytes. machine_a_sha256 isblankforB-only; recorded_source_sha256 carrieshistorical sourcehash. MachineB sizeisnot A size. Empty sizes unknown, notzero.
+
+SAFE = exactindependent remoteoriginal/member/Gitblob fullbyteSHAreceipt matched. PROVISIONALLY COVERED = normalGitcontentaddressed treeproof, originalZIPmembersrecoveredwithoutcontainerwrapper, or anotherunverifieddependency. LOCAL ONLY = noestablished independentexactrecoverycopy; doesnotimplyirreplaceability. BLOCKED = sourcebytes/access/evidence unavailable. NOT REQUIRED = explicitly excludedFinder metadata, not blanketignoredfiles. Dependencycaches remainprovisional untilrebuildverified.
+
+DRIVE_* describes specificmappingverification; metadata/readinessnotfullpayloadretrieval. No pointerscountasmedia. Historicalaliasesare zeronewuniquecoverage. Alltotals labelled path/member/physical/dedup; noadding archive expansionto physical. SourceZIPsstreamedwithout extraction, sevenoriginalmember sets covered; wrapperbytesunproven. NextscopecandidateCSV isunapproved queue, includesunknowns andupperbounds, andmustnotdriveschedule.

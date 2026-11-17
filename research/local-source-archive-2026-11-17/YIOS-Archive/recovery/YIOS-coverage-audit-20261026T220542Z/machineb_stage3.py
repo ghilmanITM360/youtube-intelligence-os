@@ -1,0 +1,6 @@
+from pathlib import Path
+import subprocess,json,base64,hashlib
+O=Path(__file__).parent;T=json.load(open(O/'evidence/REMOTE_TREE_FINANCE.txt'));sha='61f26b5ca9a7bd39c0aa2b63780bb33c18d29cff'
+paths=['research/finance-economics-intelligence/FINANCE_WRITER_OWNERSHIP.md','research/finance-economics-intelligence/RESUME_HERE.md','research/finance-economics-intelligence/FINANCE_WEEKEND_HANDOFF_2026-10-23.md','research/finance-economics-intelligence/channel-intelligence/nick-invests/2026-10-23/MACHINE_B_REPOSITORY_FRESHNESS_CHECK.md','research/finance-economics-intelligence/channel-intelligence/nick-invests/2026-10-23/MACHINE_B_YIOS_CHANNEL_ANALYSIS_HANDOFF.md']
+for i,p in enumerate(paths):
+ x=next(x for x in T['tree'] if x['path']==p);r=subprocess.run(['gh','api','repos/ghilmanITM360/youtube-intelligence-os/git/blobs/'+x['sha']],stdout=subprocess.PIPE,stderr=subprocess.PIPE);d=json.loads(r.stdout);b=base64.b64decode(d['content']);g=hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest();assert g==x['sha'];n='FINANCE_AUTHORITY_%02d'%i;(O/'evidence'/(n+'.md')).write_bytes(b);(O/'evidence'/(n+'.json')).write_text(json.dumps({'path':p,'commit':sha,'git_blob_sha1':g,'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b),'remote_blob_hash_verified':True},indent=2));print(n,p,len(b));print(b.decode()[:1000])

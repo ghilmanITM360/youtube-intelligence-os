@@ -1,0 +1,492 @@
+{
+  "utc": "2026-10-26T22:44:24.060356+00:00",
+  "status": "PASS_WITH_DECLARED_ACCESS_AND_READINESS_LIMITATIONS",
+  "checks": [
+    {
+      "check": "required YIOS_FULL_BACKUP_COVERAGE_AND_RECOVERY_READINESS_REPORT.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required ALL_YIOS_LOCAL_ASSETS_INVENTORY.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required FOLDER_BY_FOLDER_COVERAGE.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required MACHINE_A_B_SOURCE_CROSSWALK.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required GITHUB_AND_LFS_RECOVERY_STATUS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required DRIVE_BACKUP_COVERAGE_MATRIX.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required DUPLICATES_ALIASES_AND_OVERLAPS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required MISSING_CRITICAL_ASSETS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required RESTORE_TEST_RESULTS.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required NEXT_BACKUP_SCOPE_PROPOSAL.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required CONTINUATION_HANDOFF.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header GITHUB_REF_AND_STASH_RECOVERY_STATUS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse GITHUB_REF_AND_STASH_RECOVERY_STATUS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header LFS_POINTER_PAYLOAD_CROSSWALK.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse LFS_POINTER_PAYLOAD_CROSSWALK.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header ALL_YIOS_LOCAL_ASSETS_INVENTORY.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse ALL_YIOS_LOCAL_ASSETS_INVENTORY.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header MACHINE_A_B_SOURCE_CROSSWALK.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse MACHINE_A_B_SOURCE_CROSSWALK.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header DRIVE_BACKUP_COVERAGE_MATRIX.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse DRIVE_BACKUP_COVERAGE_MATRIX.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header MEDIA_ZIP_MEMBER_COVERAGE.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse MEDIA_ZIP_MEMBER_COVERAGE.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header NEXT_BACKUP_SCOPE_CANDIDATES.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse NEXT_BACKUP_SCOPE_CANDIDATES.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header FOLDER_BY_FOLDER_COVERAGE.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse FOLDER_BY_FOLDER_COVERAGE.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header MACHINE_B_MANIFEST_SOURCE_IDENTITIES.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse MACHINE_B_MANIFEST_SOURCE_IDENTITIES.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header DUPLICATES_ALIASES_AND_OVERLAPS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse DUPLICATES_ALIASES_AND_OVERLAPS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header GITHUB_AND_LFS_RECOVERY_STATUS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse GITHUB_AND_LFS_RECOVERY_STATUS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header MISSING_CRITICAL_ASSETS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse MISSING_CRITICAL_ASSETS.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unique CSV header DRIVE_PHYSICAL_OBJECTS_RECONCILIATION.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV parse DRIVE_PHYSICAL_OBJECTS_RECONCILIATION.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "primary matrix row total",
+      "pass": true,
+      "detail": 72516
+    },
+    {
+      "check": "local row count",
+      "pass": true,
+      "detail": 72146
+    },
+    {
+      "check": "B additional row count",
+      "pass": true,
+      "detail": 370
+    },
+    {
+      "check": "local paths unique",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "B rows do not claim A hashes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no B direct verification claim",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "three matrix outputs identical content",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "important path count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "important logical bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dataless count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dataless not SAFE",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all local census files included",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all census directories included",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "folder directory total",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "V7 accepted byte reconciliation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "V7 physical byte reconciliation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all baseline evidence hash checks pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "1084 manifest entries pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "V7 package/member count receipts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all selected metadata matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "current full approved namespace reconciles",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no new cloud objects observed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "owner only object and parent privacy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "physical minus accepted exactly approved duplicate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "restore hardcap",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "restore selected samples passed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "restore isolated outside sources",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no restored code executed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Git unchanged head",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Git unchanged branch",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Git unchanged status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Git unchanged refs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Git unchanged worktrees",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Git unchanged stashes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "automation unchanged paused",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "only documented metadata source difference",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source audit writes zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "minimum exact proposal8files",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "minimum exact proposal bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "conditional P0 upper bound",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no candidate hash identity duplicated",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "agent credentials config excluded",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "usage below checkpoints",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "paid/reset use zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "disk above5GB",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drive reserve maintained",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "failures": [],
+  "csv_validation": {
+    "GITHUB_REF_AND_STASH_RECOVERY_STATUS.csv": {
+      "rows": 84,
+      "malformed_rows": 0
+    },
+    "LFS_POINTER_PAYLOAD_CROSSWALK.csv": {
+      "rows": 29,
+      "malformed_rows": 0
+    },
+    "ALL_YIOS_LOCAL_ASSETS_INVENTORY.csv": {
+      "rows": 72516,
+      "malformed_rows": 0
+    },
+    "MACHINE_A_B_SOURCE_CROSSWALK.csv": {
+      "rows": 72516,
+      "malformed_rows": 0
+    },
+    "DRIVE_BACKUP_COVERAGE_MATRIX.csv": {
+      "rows": 72516,
+      "malformed_rows": 0
+    },
+    "MEDIA_ZIP_MEMBER_COVERAGE.csv": {
+      "rows": 952,
+      "malformed_rows": 0
+    },
+    "NEXT_BACKUP_SCOPE_CANDIDATES.csv": {
+      "rows": 19015,
+      "malformed_rows": 0
+    },
+    "FOLDER_BY_FOLDER_COVERAGE.csv": {
+      "rows": 6375,
+      "malformed_rows": 0
+    },
+    "MACHINE_B_MANIFEST_SOURCE_IDENTITIES.csv": {
+      "rows": 1009,
+      "malformed_rows": 0
+    },
+    "DUPLICATES_ALIASES_AND_OVERLAPS.csv": {
+      "rows": 3108,
+      "malformed_rows": 0
+    },
+    "GITHUB_AND_LFS_RECOVERY_STATUS.csv": {
+      "rows": 9680,
+      "malformed_rows": 0
+    },
+    "MISSING_CRITICAL_ASSETS.csv": {
+      "rows": 27280,
+      "malformed_rows": 0
+    },
+    "DRIVE_PHYSICAL_OBJECTS_RECONCILIATION.csv": {
+      "rows": 579,
+      "malformed_rows": 0
+    }
+  },
+  "json_files_parsed": 156,
+  "scope_status": "Complete MachineA authorized metadata census; no directMachineBfilesystem or full independentmachine restore certification",
+  "source_change_qualification": "SOURCE_INDEXctime-only metadata change; bytesSHA match immutableexportmanifest; no source content writes",
+  "remote_reads": "579metadata objects,24private parent/folder checks and24approvedfolder listings; accepted/physical totals independently reconciled",
+  "credits": "No paid/reset consumption or redemption requested; zero balance and2resetcredits preserved",
+  "cloud_writes": 0,
+  "test_restore_downloaded_bytes": 3012353,
+  "limits": [
+    "7359dataless placeholders not fullyread",
+    "MachineB directlyverified0; currentunpublishedscopeunknown",
+    "LFS29read-onlydownloadmetadata offers; nofullremotepayloadhash",
+    "HistoricalallrefLFScan failsmissingblob",
+    "Unhashed/candidate populations not fullycontentdeduplicated",
+    "Application/cleanindependent-machine recovery notcertified"
+  ],
+  "sha256_manifest": "SHA256SUMS generated after all final artifacts; excludesitself; separate final manifest verification receipt isreturned in tooloutput"
+}

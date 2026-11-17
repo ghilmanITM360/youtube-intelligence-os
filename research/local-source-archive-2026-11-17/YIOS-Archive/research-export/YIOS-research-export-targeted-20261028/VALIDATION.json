@@ -1,0 +1,49 @@
+{
+  "status": "PARTIAL_DOWNLOAD_SCOPE_EXCEEDS_BUDGET",
+  "date": "2026-10-28",
+  "selected_files": 10,
+  "selected_expected_bytes": 409849474,
+  "download_cap_bytes": 30000000,
+  "new_download_bytes": 0,
+  "recovered_originals": 0,
+  "proposed_seven_controls_bytes": 21539023,
+  "prior_files_checksum_verified": 55,
+  "prior_checksum_all_pass": true,
+  "prior_validation_preserved": true,
+  "prior_git_incident_preserved": true,
+  "git_before_after_same": true,
+  "selected_metadata_matches_prior": true,
+  "six_complete_hashes_match_prior": true,
+  "unresolved_recheck": {
+    "rows": 453,
+    "counts": {
+      "STILL_UNRESOLVED": 428,
+      "ALREADY_LOCALLY_AVAILABLE": 18,
+      "CURRENT_LOCAL_DIFFERENT_VERSION": 7
+    },
+    "hashed_bytes": 99999765,
+    "six_files": 6,
+    "six_bytes": 77142
+  },
+  "remaining_unresolved_exported_versions": 435,
+  "automation_observed_paused": true,
+  "disk_reserve_pass": true,
+  "no_download_initiated": true,
+  "no_cloud_mutation": true,
+  "no_integration_or_source_write": true,
+  "scope_limitations": [
+    "No originals in ten-file selection read",
+    "No new manifests recovered",
+    "No global remote absence or private backup verification",
+    "No full folder census repeated",
+    "No full Git object database pre/post comparison",
+    "Current financial claims and source rights not independently validated"
+  ],
+  "output_csv_rows": {
+    "EXACT_INTEGRATION_DECISIONS.csv": 6,
+    "TARGETED_RECOVERY_STATUS.csv": 10,
+    "UNRESOLVED_SOURCE_VERSION_RECHECK.csv": 453
+  },
+  "output_json_csv_validation": "PASS",
+  "final_free_disk_bytes": 8597336064
+}
