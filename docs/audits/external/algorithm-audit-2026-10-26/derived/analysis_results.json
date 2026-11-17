@@ -1,0 +1,3960 @@
+{
+ "generated_utc": "2026-10-26T08:44:32.064806+00:00",
+ "seed": 20261026,
+ "B_perm": 4000,
+ "B_boot": 1500,
+ "benchmark_reimplementation": {
+  "n_both": 723,
+  "max_abs_rel_diff": 7.13932907605214e-05,
+  "stored_only": 0,
+  "ours_only": 0
+ },
+ "populations": {
+  "original_966_with_ratio": 723,
+  "original_by_channel_with_ratio": {
+   "Crayon Capital": 27,
+   "Lucas Grant": 75,
+   "Brimm.": 40,
+   "Carl Invests": 76,
+   "Nick Invests": 348,
+   "Primate Economics": 23,
+   "Bob Invests": 48,
+   "Sonny Finance": 34,
+   "Money Life POV": 13,
+   "Dark Ledger": 30,
+   "Shaami Finance": 9
+  },
+  "original_with_opening_text": 955,
+  "deep_complete": 449,
+  "deep_complete_with_ratio": 419,
+  "replication_rows": {
+   "EXPANSION_197": 197,
+   "EXPANSION_MONKEY_63": 63,
+   "CASUALLY_FINANCE_206": 206
+  },
+  "replication_with_ratio": {
+   "EXPANSION_197": 169,
+   "EXPANSION_MONKEY_63": 52,
+   "CASUALLY_FINANCE_206": 197
+  },
+  "replication_by_channel_with_ratio": {
+   "Primitive Education|SHORTS": 11,
+   "Logical Money|LONG_FORM": 15,
+   "Mark Invests|LONG_FORM": 74,
+   "Uncle Frank Retirement|LONG_FORM": 23,
+   "Uncle John Financial|LONG_FORM": 46,
+   "MonkeyExplains|LONG_FORM": 44,
+   "MonkeyExplains|SHORTS": 8,
+   "Casually Finance|SHORTS": 168,
+   "Casually Finance|LONG_FORM": 29
+  }
+ },
+ "primary_tests": [
+  {
+   "feature": "H01_money_amount",
+   "n_with": 142,
+   "n_without": 545,
+   "strata": 9,
+   "effect_log": 0.06667470349365524,
+   "ratio_multiplier": 1.0689476966604223,
+   "p_perm": 0.551362159460135,
+   "ci95_multiplier": [
+    0.8538241947470575,
+    1.3573147129603964
+   ],
+   "loco_min": 1.0317528825333258,
+   "loco_max": 1.1064614359347085,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     3,
+     24,
+     1.0979075314270985
+    ],
+    "Lucas Grant|LONG_FORM": [
+     17,
+     58,
+     0.8299489332846277
+    ],
+    "Brimm.|LONG_FORM": [
+     2,
+     38,
+     0.5918228699683731
+    ],
+    "Carl Invests|LONG_FORM": [
+     11,
+     65,
+     1.1592246283039633
+    ],
+    "Nick Invests|LONG_FORM": [
+     81,
+     267,
+     1.048171164041761
+    ],
+    "Bob Invests|LONG_FORM": [
+     6,
+     42,
+     1.100158702679521
+    ],
+    "Sonny Finance|LONG_FORM": [
+     8,
+     26,
+     1.9459571529144342
+    ],
+    "Dark Ledger|LONG_FORM": [
+     11,
+     19,
+     1.2294093108817352
+    ],
+    "Shaami Finance|LONG_FORM": [
+     3,
+     6,
+     1.093626949677428
+    ]
+   },
+   "strata_same_sign": 7,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "7sbA9WZrfHk",
+      "ch": "Carl Invests",
+      "title": "What Happens If You Invest $100 Every Month (Most People Don't Realize This)",
+      "ratio": 160.55
+     },
+     {
+      "id": "2LXED3ENhck",
+      "ch": "Dark Ledger",
+      "title": "How Banks Treat You at Every Level of Wealth \u2014 $0 to $25M",
+      "ratio": 159.129
+     },
+     {
+      "id": "TDEme_uxx4c",
+      "ch": "Carl Invests",
+      "title": "What Actually Happens When You Invest $500 a Month",
+      "ratio": 55.632
+     }
+    ],
+    "weakest": [
+     {
+      "id": "T58qpmXZmoY",
+      "ch": "Shaami Finance",
+      "title": "\"POV: You Own an $800 Million Company",
+      "ratio": 0.067
+     },
+     {
+      "id": "ddpHhCVTDeY",
+      "ch": "Dark Ledger",
+      "title": "How your Life Changes After You Save $100k",
+      "ratio": 0.108
+     },
+     {
+      "id": "w5rktnyQfCI",
+      "ch": "Carl Invests",
+      "title": "Why Net Worth EXPLODES After $100K (And How to Get There ASAP)",
+      "ratio": 0.109
+     }
+    ]
+   },
+   "replication": {
+    "feature": "H01_money_amount",
+    "n_with": 46,
+    "n_without": 294,
+    "strata": 5,
+    "effect_log": -0.07596860617438615,
+    "ratio_multiplier": 0.9268453033224741,
+    "p_perm": 0.7393151712071983,
+    "ci95_multiplier": [
+     0.6365930510535649,
+     1.354200236876483
+    ],
+    "loco_min": 0.7681056614738395,
+    "loco_max": 1.127829659716948,
+    "loco_sign_flips": [
+     "Uncle John Financial"
+    ],
+    "per_stratum": {
+     "Mark Invests|LONG_FORM": [
+      17,
+      57,
+      0.8133594283526803
+     ],
+     "Uncle Frank Retirement|LONG_FORM": [
+      2,
+      21,
+      38.19696605516367
+     ],
+     "Uncle John Financial|LONG_FORM": [
+      11,
+      35,
+      0.46292865123680915
+     ],
+     "Casually Finance|SHORTS": [
+      13,
+      155,
+      1.045008188788652
+     ],
+     "Casually Finance|LONG_FORM": [
+      3,
+      26,
+      0.7119904699369025
+     ]
+    },
+    "strata_same_sign": 3
+   },
+   "early_half": {
+    "feature": "H01_money_amount",
+    "n_with": 72,
+    "n_without": 266,
+    "strata": 6,
+    "effect_log": 0.05866996227095421,
+    "ratio_multiplier": 1.0604252026547418
+   },
+   "late_half": {
+    "feature": "H01_money_amount",
+    "n_with": 69,
+    "n_without": 261,
+    "strata": 7,
+    "effect_log": 0.068144014452326,
+    "ratio_multiplier": 1.0705194676527718
+   },
+   "excluding_nick": {
+    "feature": "H01_money_amount",
+    "n_with": 61,
+    "n_without": 278,
+    "strata": 8,
+    "effect_log": 0.09237877183756504,
+    "ratio_multiplier": 1.0967801728557405
+   },
+   "q_bh": 0.7423977338998583,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  },
+  {
+   "feature": "H02_curiosity_gap",
+   "n_with": 238,
+   "n_without": 462,
+   "strata": 10,
+   "effect_log": 0.29955712191488326,
+   "ratio_multiplier": 1.3492611170539122,
+   "p_perm": 0.0029992501874531365,
+   "ci95_multiplier": [
+    1.105802586376326,
+    1.6158180208822641
+   ],
+   "loco_min": 1.2946858242023098,
+   "loco_max": 1.7664218442520352,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     2,
+     25,
+     0.71259983054808
+    ],
+    "Lucas Grant|LONG_FORM": [
+     32,
+     43,
+     1.2822574408704455
+    ],
+    "Brimm.|LONG_FORM": [
+     11,
+     29,
+     2.7629373921563474
+    ],
+    "Carl Invests|LONG_FORM": [
+     18,
+     58,
+     1.89497488859404
+    ],
+    "Nick Invests|LONG_FORM": [
+     135,
+     213,
+     1.0959273472515243
+    ],
+    "Bob Invests|LONG_FORM": [
+     25,
+     23,
+     1.6866284321767706
+    ],
+    "Sonny Finance|LONG_FORM": [
+     3,
+     31,
+     4.493291371150337
+    ],
+    "Money Life POV|LONG_FORM": [
+     2,
+     11,
+     3.4020119772375064
+    ],
+    "Dark Ledger|LONG_FORM": [
+     4,
+     26,
+     0.6978790415950574
+    ],
+    "Shaami Finance|LONG_FORM": [
+     6,
+     3,
+     8.47281929231528
+    ]
+   },
+   "strata_same_sign": 8,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "7sbA9WZrfHk",
+      "ch": "Carl Invests",
+      "title": "What Happens If You Invest $100 Every Month (Most People Don't Realize This)",
+      "ratio": 160.55
+     },
+     {
+      "id": "m5WPi3LX9z0",
+      "ch": "Brimm.",
+      "title": "Why Airlines Use This Exact Layout",
+      "ratio": 73.154
+     },
+     {
+      "id": "TDEme_uxx4c",
+      "ch": "Carl Invests",
+      "title": "What Actually Happens When You Invest $500 a Month",
+      "ratio": 55.632
+     }
+    ],
+    "weakest": [
+     {
+      "id": "eB0XSeS7y8Q",
+      "ch": "Shaami Finance",
+      "title": "Why Banks Treat You Differently at Different Levels of Wealth (The Harsh Truth)",
+      "ratio": 0.071
+     },
+     {
+      "id": "w5rktnyQfCI",
+      "ch": "Carl Invests",
+      "title": "Why Net Worth EXPLODES After $100K (And How to Get There ASAP)",
+      "ratio": 0.109
+     },
+     {
+      "id": "M5EdVY6AyA0",
+      "ch": "Carl Invests",
+      "title": "Why a High-Yield Savings Account Could Be Your Most Expensive Mistake",
+      "ratio": 0.121
+     }
+    ]
+   },
+   "replication": {
+    "feature": "H02_curiosity_gap",
+    "n_with": 87,
+    "n_without": 268,
+    "strata": 6,
+    "effect_log": -0.0433430024070973,
+    "ratio_multiplier": 0.9575828804974591,
+    "p_perm": 0.7728067983004249,
+    "ci95_multiplier": [
+     0.7260835803093438,
+     1.3013911146012271
+    ],
+    "loco_min": 0.8247955036201184,
+    "loco_max": 1.0231396815438245,
+    "loco_sign_flips": [
+     "Logical Money"
+    ],
+    "per_stratum": {
+     "Logical Money|LONG_FORM": [
+      4,
+      11,
+      0.23531767881528734
+     ],
+     "Mark Invests|LONG_FORM": [
+      19,
+      55,
+      0.8963055664926203
+     ],
+     "Uncle Frank Retirement|LONG_FORM": [
+      3,
+      20,
+      1.1625351742483725
+     ],
+     "Uncle John Financial|LONG_FORM": [
+      9,
+      37,
+      1.0301543680925096
+     ],
+     "Casually Finance|SHORTS": [
+      43,
+      125,
+      1.0833601868581386
+     ],
+     "Casually Finance|LONG_FORM": [
+      9,
+      20,
+      0.9680627205529947
+     ]
+    },
+    "strata_same_sign": 3
+   },
+   "early_half": {
+    "feature": "H02_curiosity_gap",
+    "n_with": 128,
+    "n_without": 183,
+    "strata": 4,
+    "effect_log": 0.23898936999889867,
+    "ratio_multiplier": 1.2699650367823456
+   },
+   "late_half": {
+    "feature": "H02_curiosity_gap",
+    "n_with": 108,
+    "n_without": 247,
+    "strata": 9,
+    "effect_log": 0.3918345651520235,
+    "ratio_multiplier": 1.4796928983828486
+   },
+   "excluding_nick": {
+    "feature": "H02_curiosity_gap",
+    "n_with": 103,
+    "n_without": 249,
+    "strata": 9,
+    "effect_log": 0.5689559435617846,
+    "ratio_multiplier": 1.7664218442520352
+   },
+   "q_bh": 0.04198950262434391,
+   "verdict": "SUGGESTIVE_NOT_ROBUST"
+  },
+  {
+   "feature": "H03a_threat_fear",
+   "n_with": 144,
+   "n_without": 543,
+   "strata": 9,
+   "effect_log": -0.28657966533371315,
+   "ratio_multiplier": 0.7508272612441118,
+   "p_perm": 0.00899775056235941,
+   "ci95_multiplier": [
+    0.615488882266028,
+    0.9019785791981408
+   ],
+   "loco_min": 0.6928549152401723,
+   "loco_max": 0.8088477023664181,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     8,
+     19,
+     1.0004427851547617
+    ],
+    "Lucas Grant|LONG_FORM": [
+     13,
+     62,
+     0.6787029503666328
+    ],
+    "Brimm.|LONG_FORM": [
+     4,
+     36,
+     1.7245136052779135
+    ],
+    "Carl Invests|LONG_FORM": [
+     16,
+     60,
+     0.41881072384974977
+    ],
+    "Nick Invests|LONG_FORM": [
+     77,
+     271,
+     0.8047252619875552
+    ],
+    "Bob Invests|LONG_FORM": [
+     16,
+     32,
+     1.2764487992956515
+    ],
+    "Sonny Finance|LONG_FORM": [
+     3,
+     31,
+     0.569027105539459
+    ],
+    "Dark Ledger|LONG_FORM": [
+     5,
+     25,
+     0.4742823165238174
+    ],
+    "Shaami Finance|LONG_FORM": [
+     2,
+     7,
+     0.0902762452704777
+    ]
+   },
+   "strata_same_sign": 6,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "tynTfEi4518",
+      "ch": "Nick Invests",
+      "title": "The Car Payment Trap Nobody Talks About",
+      "ratio": 24.517
+     },
+     {
+      "id": "xduAgq_9xNk",
+      "ch": "Brimm.",
+      "title": "How the Rich Ruined Berlin's Nightlife",
+      "ratio": 13.951
+     },
+     {
+      "id": "pfYMWypWbYY",
+      "ch": "Brimm.",
+      "title": "How Endless Tourism Is Destroying Amsterdam",
+      "ratio": 12.699
+     }
+    ],
+    "weakest": [
+     {
+      "id": "PbzkmAofNO4",
+      "ch": "Shaami Finance",
+      "title": "A Day in the Life of a Quiet Millionaire (You'd Never Know)",
+      "ratio": 0.08
+     },
+     {
+      "id": "KHLY6SyLvgQ",
+      "ch": "Crayon Capital",
+      "title": "Every Financial Crisis Explained in 10 Minutes",
+      "ratio": 0.08
+     },
+     {
+      "id": "slIKJx4U0YM",
+      "ch": "Carl Invests",
+      "title": "The One Financial Mistake Every Generation Repeats",
+      "ratio": 0.119
+     }
+    ]
+   },
+   "replication": {
+    "feature": "H03a_threat_fear",
+    "n_with": 86,
+    "n_without": 298,
+    "strata": 6,
+    "effect_log": 0.0945775417802172,
+    "ratio_multiplier": 1.09919439331856,
+    "p_perm": 0.493376655836041,
+    "ci95_multiplier": [
+     0.8691222660524923,
+     1.372727047465718
+    ],
+    "loco_min": 1.0465028087371775,
+    "loco_max": 1.1622735647917255,
+    "loco_sign_flips": [],
+    "per_stratum": {
+     "Mark Invests|LONG_FORM": [
+      12,
+      62,
+      1.1145052745200776
+     ],
+     "Uncle Frank Retirement|LONG_FORM": [
+      6,
+      17,
+      0.5393051019349586
+     ],
+     "Uncle John Financial|LONG_FORM": [
+      3,
+      43,
+      1.292570225773387
+     ],
+     "MonkeyExplains|LONG_FORM": [
+      22,
+      22,
+      1.3743496435642277
+     ],
+     "Casually Finance|SHORTS": [
+      32,
+      136,
+      1.1910337731301504
+     ],
+     "Casually Finance|LONG_FORM": [
+      11,
+      18,
+      0.8234655459404285
+     ]
+    },
+    "strata_same_sign": 4
+   },
+   "early_half": {
+    "feature": "H03a_threat_fear",
+    "n_with": 83,
+    "n_without": 255,
+    "strata": 6,
+    "effect_log": -0.1415912223024309,
+    "ratio_multiplier": 0.8679759932047922
+   },
+   "late_half": {
+    "feature": "H03a_threat_fear",
+    "n_with": 59,
+    "n_without": 271,
+    "strata": 7,
+    "effect_log": -0.48388729289697335,
+    "ratio_multiplier": 0.6163826687024611
+   },
+   "excluding_nick": {
+    "feature": "H03a_threat_fear",
+    "n_with": 67,
+    "n_without": 272,
+    "strata": 8,
+    "effect_log": -0.36693465922836715,
+    "ratio_multiplier": 0.6928549152401723
+   },
+   "q_bh": 0.041989502624343915,
+   "verdict": "SUGGESTIVE_NOT_ROBUST"
+  },
+  {
+   "feature": "H03b_opportunity",
+   "n_with": 168,
+   "n_without": 505,
+   "strata": 9,
+   "effect_log": 0.2438687990497826,
+   "ratio_multiplier": 1.276176883885307,
+   "p_perm": 0.02549362659335166,
+   "ci95_multiplier": [
+    1.0420749379298315,
+    1.5572343382811409
+   ],
+   "loco_min": 1.1618008984162032,
+   "loco_max": 1.3908567121652087,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     32,
+     43,
+     0.9967925923333881
+    ],
+    "Brimm.|LONG_FORM": [
+     2,
+     38,
+     7.4141272021289355
+    ],
+    "Carl Invests|LONG_FORM": [
+     22,
+     54,
+     2.3896705385392627
+    ],
+    "Nick Invests|LONG_FORM": [
+     74,
+     274,
+     1.16486325248557
+    ],
+    "Bob Invests|LONG_FORM": [
+     11,
+     37,
+     1.0216849821513172
+    ],
+    "Sonny Finance|LONG_FORM": [
+     8,
+     26,
+     1.1145889394696358
+    ],
+    "Money Life POV|LONG_FORM": [
+     6,
+     7,
+     1.1339766911194276
+    ],
+    "Dark Ledger|LONG_FORM": [
+     8,
+     22,
+     1.8551944600924493
+    ],
+    "Shaami Finance|LONG_FORM": [
+     5,
+     4,
+     0.43397264030357663
+    ]
+   },
+   "strata_same_sign": 7,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "2LXED3ENhck",
+      "ch": "Dark Ledger",
+      "title": "How Banks Treat You at Every Level of Wealth \u2014 $0 to $25M",
+      "ratio": 159.129
+     },
+     {
+      "id": "ElGhlrZNb_4",
+      "ch": "Lucas Grant",
+      "title": "Living Rich in Secret Changes You More Than You Think.",
+      "ratio": 34.423
+     },
+     {
+      "id": "-HeOz5CF9ys",
+      "ch": "Carl Invests",
+      "title": "9 Signs Someone is Secretly Wealthy",
+      "ratio": 24.314
+     }
+    ],
+    "weakest": [
+     {
+      "id": "eB0XSeS7y8Q",
+      "ch": "Shaami Finance",
+      "title": "Why Banks Treat You Differently at Different Levels of Wealth (The Harsh Truth)",
+      "ratio": 0.071
+     },
+     {
+      "id": "2RAV0z4kDrs",
+      "ch": "Sonny Finance",
+      "title": "How Doctors Treat You at Every Level of Wealth",
+      "ratio": 0.076
+     },
+     {
+      "id": "PbzkmAofNO4",
+      "ch": "Shaami Finance",
+      "title": "A Day in the Life of a Quiet Millionaire (You'd Never Know)",
+      "ratio": 0.08
+     }
+    ]
+   },
+   "replication": {
+    "feature": "H03b_opportunity",
+    "n_with": 30,
+    "n_without": 279,
+    "strata": 4,
+    "effect_log": -0.01355166126037752,
+    "ratio_multiplier": 0.9865397491143773,
+    "p_perm": 0.9502624343914021,
+    "ci95_multiplier": [
+     0.627327315014172,
+     1.6199183455608195
+    ],
+    "loco_min": 0.9220743152835426,
+    "loco_max": 1.0632381721140847,
+    "loco_sign_flips": [
+     "Mark Invests",
+     "Uncle Frank Retirement"
+    ],
+    "per_stratum": {
+     "Mark Invests|LONG_FORM": [
+      11,
+      63,
+      0.8595001102659507
+     ],
+     "Uncle Frank Retirement|LONG_FORM": [
+      4,
+      19,
+      0.8091055814674433
+     ],
+     "MonkeyExplains|LONG_FORM": [
+      3,
+      41,
+      1.3617660996207601
+     ],
+     "Casually Finance|SHORTS": [
+      12,
+      156,
+      1.0835432984762952
+     ]
+    },
+    "strata_same_sign": 2
+   },
+   "early_half": {
+    "feature": "H03b_opportunity",
+    "n_with": 60,
+    "n_without": 251,
+    "strata": 4,
+    "effect_log": 0.275080091871101,
+    "ratio_multiplier": 1.3166361224954262
+   },
+   "late_half": {
+    "feature": "H03b_opportunity",
+    "n_with": 108,
+    "n_without": 235,
+    "strata": 8,
+    "effect_log": 0.20426237948420875,
+    "ratio_multiplier": 1.2266199511479106
+   },
+   "excluding_nick": {
+    "feature": "H03b_opportunity",
+    "n_with": 94,
+    "n_without": 231,
+    "strata": 8,
+    "effect_log": 0.3299198969705038,
+    "ratio_multiplier": 1.3908567121652087
+   },
+   "q_bh": 0.08922769307673081,
+   "verdict": "SUGGESTIVE_NOT_ROBUST"
+  },
+  {
+   "feature": "H04_first_person",
+   "n_with": 10,
+   "n_without": 462,
+   "strata": 3,
+   "effect_log": -0.22411297467601313,
+   "ratio_multiplier": 0.7992248371017756,
+   "p_perm": 0.5221194701324668,
+   "ci95_multiplier": [
+    0.5406461594019826,
+    1.1962528093163127
+   ],
+   "loco_min": 0.560723611389781,
+   "loco_max": 1.0340039866658668,
+   "loco_sign_flips": [
+    "Carl Invests"
+   ],
+   "per_stratum": {
+    "Carl Invests|LONG_FORM": [
+     2,
+     74,
+     0.2871175377805971
+    ],
+    "Nick Invests|LONG_FORM": [
+     5,
+     343,
+     1.1254672401549353
+    ],
+    "Bob Invests|LONG_FORM": [
+     3,
+     45,
+     0.8912946772711947
+    ]
+   },
+   "strata_same_sign": 2,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "PWUPOYdwBc8",
+      "ch": "Nick Invests",
+      "title": "If I Started Investing In 2026, This Is What I Would Do",
+      "ratio": 3.957
+     },
+     {
+      "id": "ZSCK_N_I_pk",
+      "ch": "Bob Invests",
+      "title": "I Rebuilt My Net Worth From $0 (Here\u2019s What I\u2019d Do In 2026)",
+      "ratio": 2.611
+     },
+     {
+      "id": "1Ygx1AP3hDA",
+      "ch": "Nick Invests",
+      "title": "I Investigated 8 Ways to Build Wealth (Only 3 Actually Work)",
+      "ratio": 1.309
+     }
+    ],
+    "weakest": [
+     {
+      "id": "5gGomtstz_M",
+      "ch": "Carl Invests",
+      "title": "I'm Changing How I Invest My Money Because of AI",
+      "ratio": 0.2
+     },
+     {
+      "id": "8z2hKOCH96o",
+      "ch": "Bob Invests",
+      "title": "Why I'm Refusing the Free $1,000",
+      "ratio": 0.371
+     },
+     {
+      "id": "AuAxbdA85Jg",
+      "ch": "Carl Invests",
+      "title": "9 Tiny Habits That Made Me Rich",
+      "ratio": 0.483
+     }
+    ]
+   },
+   "replication": {
+    "feature": "H04_first_person",
+    "n_with": 4,
+    "n_without": 193,
+    "strata": 2,
+    "effect_log": 0.34984984459549906,
+    "ratio_multiplier": 1.41885448392829,
+    "p_perm": 0.4508872781804549,
+    "ci95_multiplier": [
+     0.7927892939460701,
+     2.469157145867605
+    ],
+    "loco_min": null,
+    "loco_max": null,
+    "loco_sign_flips": [],
+    "per_stratum": {
+     "Casually Finance|SHORTS": [
+      2,
+      166,
+      1.054562380884474
+     ],
+     "Casually Finance|LONG_FORM": [
+      2,
+      27,
+      1.9440224937870905
+     ]
+    },
+    "strata_same_sign": 2
+   },
+   "early_half": {
+    "feature": "H04_first_person",
+    "n_with": 0,
+    "n_without": 0,
+    "strata": 0,
+    "effect_log": null,
+    "ratio_multiplier": null
+   },
+   "late_half": {
+    "feature": "H04_first_person",
+    "n_with": 10,
+    "n_without": 179,
+    "strata": 3,
+    "effect_log": -0.21490531755177272,
+    "ratio_multiplier": 0.8066178091108214
+   },
+   "excluding_nick": {
+    "feature": "H04_first_person",
+    "n_with": 5,
+    "n_without": 119,
+    "strata": 2,
+    "effect_log": -0.5785271661812947,
+    "ratio_multiplier": 0.560723611389781
+   },
+   "q_bh": 0.7423977338998583,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  },
+  {
+   "feature": "H05_explicit_audience",
+   "n_with": 61,
+   "n_without": 481,
+   "strata": 5,
+   "effect_log": 0.07790372533769689,
+   "ratio_multiplier": 1.0810185789614113,
+   "p_perm": 0.6363409147713072,
+   "ci95_multiplier": [
+    0.7790916185857572,
+    1.5043306169461075
+   ],
+   "loco_min": 0.8968107850489153,
+   "loco_max": 1.5294282327978743,
+   "loco_sign_flips": [
+    "Sonny Finance",
+    "Carl Invests"
+   ],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     4,
+     71,
+     0.5360970954837256
+    ],
+    "Carl Invests|LONG_FORM": [
+     11,
+     65,
+     2.54297482619307
+    ],
+    "Nick Invests|LONG_FORM": [
+     34,
+     314,
+     0.844703350828484
+    ],
+    "Sonny Finance|LONG_FORM": [
+     10,
+     24,
+     1.89054331896977
+    ],
+    "Shaami Finance|LONG_FORM": [
+     2,
+     7,
+     0.3464356463262617
+    ]
+   },
+   "strata_same_sign": 2,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "7sbA9WZrfHk",
+      "ch": "Carl Invests",
+      "title": "What Happens If You Invest $100 Every Month (Most People Don't Realize This)",
+      "ratio": 160.55
+     },
+     {
+      "id": "vb7UojsINvg",
+      "ch": "Sonny Finance",
+      "title": "Your Life If You Invested $5 a Day",
+      "ratio": 35.558
+     },
+     {
+      "id": "uByLqFbCcEA",
+      "ch": "Sonny Finance",
+      "title": "Your Life If You Start Building Wealth in Your 30s",
+      "ratio": 14.797
+     }
+    ],
+    "weakest": [
+     {
+      "id": "cZQ47oqK2gU",
+      "ch": "Carl Invests",
+      "title": "Age 50 Is The Most Important Decision For Retirement",
+      "ratio": 0.132
+     },
+     {
+      "id": "6dw0y-ATdwI",
+      "ch": "Lucas Grant",
+      "title": "Your Life If You Start Building Wealth in Your 30s",
+      "ratio": 0.142
+     },
+     {
+      "id": "14gilFEp_Iw",
+      "ch": "Nick Invests",
+      "title": "Middle Class Money Traps That Keep You Broke",
+      "ratio": 0.145
+     }
+    ]
+   },
+   "replication": {
+    "feature": "H05_explicit_audience",
+    "n_with": 20,
+    "n_without": 306,
+    "strata": 5,
+    "effect_log": -0.6933366813540474,
+    "ratio_multiplier": 0.49990525858001966,
+    "p_perm": 0.03724068982754311,
+    "ci95_multiplier": [
+     0.3155654482961367,
+     0.7964524864232393
+    ],
+    "loco_min": 0.3994490428105679,
+    "loco_max": 0.6486418814446536,
+    "loco_sign_flips": [],
+    "per_stratum": {
+     "Logical Money|LONG_FORM": [
+      2,
+      13,
+      0.5819078459929551
+     ],
+     "Mark Invests|LONG_FORM": [
+      6,
+      68,
+      0.42803856497336634
+     ],
+     "Uncle Frank Retirement|LONG_FORM": [
+      2,
+      21,
+      0.045784213688690914
+     ],
+     "Uncle John Financial|LONG_FORM": [
+      3,
+      43,
+      1.7666371793666584
+     ],
+     "Casually Finance|SHORTS": [
+      7,
+      161,
+      0.617519547277381
+     ]
+    },
+    "strata_same_sign": 4
+   },
+   "early_half": {
+    "feature": "H05_explicit_audience",
+    "n_with": 21,
+    "n_without": 230,
+    "strata": 2,
+    "effect_log": -0.1703268780577936,
+    "ratio_multiplier": 0.8433890861472778
+   },
+   "late_half": {
+    "feature": "H05_explicit_audience",
+    "n_with": 40,
+    "n_without": 251,
+    "strata": 5,
+    "effect_log": 0.21254471823492116,
+    "ratio_multiplier": 1.2368214207995054
+   },
+   "excluding_nick": {
+    "feature": "H05_explicit_audience",
+    "n_with": 27,
+    "n_without": 167,
+    "strata": 4,
+    "effect_log": 0.42489396150590586,
+    "ratio_multiplier": 1.5294282327978743
+   },
+   "q_bh": 0.7423977338998583,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  },
+  {
+   "feature": "H06_question_mark",
+   "n_with": 39,
+   "n_without": 425,
+   "strata": 3,
+   "effect_log": 0.1407878974643438,
+   "ratio_multiplier": 1.1511804537953083,
+   "p_perm": 0.4226443389152712,
+   "ci95_multiplier": [
+    0.7542851093889532,
+    1.771760581305444
+   ],
+   "loco_min": 1.1006875632818238,
+   "loco_max": 1.2993664737985176,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Brimm.|LONG_FORM": [
+     2,
+     38,
+     2.542187227034862
+    ],
+    "Carl Invests|LONG_FORM": [
+     3,
+     73,
+     0.8347259417259746
+    ],
+    "Nick Invests|LONG_FORM": [
+     34,
+     314,
+     1.1296576920747896
+    ]
+   },
+   "strata_same_sign": 2,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "S81NPqovOT8",
+      "ch": "Brimm.",
+      "title": "Why Are the Dutch So Good at Ecommerce?",
+      "ratio": 38.64
+     },
+     {
+      "id": "f6HIYQUiMoU",
+      "ch": "Nick Invests",
+      "title": "WTF Just Happened To The Housing Market?!",
+      "ratio": 33.031
+     },
+     {
+      "id": "ecfmx_ogHhQ",
+      "ch": "Carl Invests",
+      "title": "How Wealthy Are You Compared to Most? You\u2019ll Be Shocked!",
+      "ratio": 10.449
+     }
+    ],
+    "weakest": [
+     {
+      "id": "TTilKZZd3Es",
+      "ch": "Carl Invests",
+      "title": "Should You Pay Off Your Mortgage Early or Invest? (The Real Math For 2026)",
+      "ratio": 0.061
+     },
+     {
+      "id": "kVpJ1Elw680",
+      "ch": "Nick Invests",
+      "title": "Retire on $1,000,000? The Shocking Reality",
+      "ratio": 0.152
+     },
+     {
+      "id": "a4SmT0E_hnI",
+      "ch": "Dark Ledger",
+      "title": "How Much Do You Need Invested to Replace Your Salary?",
+      "ratio": 0.216
+     }
+    ]
+   },
+   "replication": {
+    "feature": "H06_question_mark",
+    "n_with": 47,
+    "n_without": 352,
+    "strata": 7,
+    "effect_log": 0.010093819490004163,
+    "ratio_multiplier": 1.0101449339211412,
+    "p_perm": 0.9620094976255936,
+    "ci95_multiplier": [
+     0.7159701747853294,
+     1.4035984369127834
+    ],
+    "loco_min": 0.889090219740017,
+    "loco_max": 1.226417055556777,
+    "loco_sign_flips": [
+     "Logical Money",
+     "MonkeyExplains",
+     "Mark Invests"
+    ],
+    "per_stratum": {
+     "Logical Money|LONG_FORM": [
+      3,
+      12,
+      1.6245766607528516
+     ],
+     "Mark Invests|LONG_FORM": [
+      7,
+      67,
+      2.02837922583425
+     ],
+     "Uncle Frank Retirement|LONG_FORM": [
+      5,
+      18,
+      0.6524795977146978
+     ],
+     "Uncle John Financial|LONG_FORM": [
+      7,
+      39,
+      0.9483117538734073
+     ],
+     "MonkeyExplains|LONG_FORM": [
+      5,
+      39,
+      1.2635159875324191
+     ],
+     "Casually Finance|SHORTS": [
+      18,
+      150,
+      0.718318142034006
+     ],
+     "Casually Finance|LONG_FORM": [
+      2,
+      27,
+      1.7412119581993315
+     ]
+    },
+    "strata_same_sign": 4
+   },
+   "early_half": {
+    "feature": "H06_question_mark",
+    "n_with": 15,
+    "n_without": 214,
+    "strata": 1,
+    "effect_log": 0.1657945626389417,
+    "ratio_multiplier": 1.18033059281177
+   },
+   "late_half": {
+    "feature": "H06_question_mark",
+    "n_with": 24,
+    "n_without": 161,
+    "strata": 3,
+    "effect_log": 0.11927566480390632,
+    "ratio_multiplier": 1.1266804616319723
+   },
+   "excluding_nick": {
+    "feature": "H06_question_mark",
+    "n_with": 5,
+    "n_without": 111,
+    "strata": 2,
+    "effect_log": 0.2618768178373892,
+    "ratio_multiplier": 1.2993664737985176
+   },
+   "q_bh": 0.7396275931017247,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  },
+  {
+   "feature": "H07_list_count",
+   "n_with": 74,
+   "n_without": 473,
+   "strata": 4,
+   "effect_log": 0.21617167245569405,
+   "ratio_multiplier": 1.2413154603834213,
+   "p_perm": 0.13171707073231692,
+   "ci95_multiplier": [
+    0.9682123767452446,
+    1.5768556520269994
+   ],
+   "loco_min": 1.1468165453585608,
+   "loco_max": 1.277078609513752,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     9,
+     66,
+     1.023048562869517
+    ],
+    "Carl Invests|LONG_FORM": [
+     20,
+     56,
+     1.1320613725940016
+    ],
+    "Nick Invests|LONG_FORM": [
+     40,
+     308,
+     1.318988088120467
+    ],
+    "Bob Invests|LONG_FORM": [
+     5,
+     43,
+     1.4645199132426452
+    ]
+   },
+   "strata_same_sign": 4,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "-HeOz5CF9ys",
+      "ch": "Carl Invests",
+      "title": "9 Signs Someone is Secretly Wealthy",
+      "ratio": 24.314
+     },
+     {
+      "id": "4U8h2uiixL4",
+      "ch": "Nick Invests",
+      "title": "Wealthy Retirees Stopped Buying These 10 Things to Stay Rich",
+      "ratio": 11.498
+     },
+     {
+      "id": "GUSXF3KDX3s",
+      "ch": "Carl Invests",
+      "title": "7 More Signs Someone is Secretly Wealthy",
+      "ratio": 8.73
+     }
+    ],
+    "weakest": [
+     {
+      "id": "ff2jBasEwd8",
+      "ch": "Carl Invests",
+      "title": "5 Psychological Traps Stopping Average People From Reaching Their First Million",
+      "ratio": 0.179
+     },
+     {
+      "id": "ljtRgiCw3V8",
+      "ch": "Carl Invests",
+      "title": "7 Signs Someone Is \"Fake Rich\"",
+      "ratio": 0.199
+     },
+     {
+      "id": "DeceCki5wbI",
+      "ch": "Carl Invests",
+      "title": "Once You Have Money at 40, Upgrade These 10 Things Immediately.",
+      "ratio": 0.265
+     }
+    ]
+   },
+   "replication": {
+    "feature": "H07_list_count",
+    "n_with": 27,
+    "n_without": 299,
+    "strata": 5,
+    "effect_log": -0.2761385234236939,
+    "ratio_multiplier": 0.7587078246761246,
+    "p_perm": 0.41639590102474383,
+    "ci95_multiplier": [
+     0.44810185933153107,
+     1.293428096938443
+    ],
+    "loco_min": 0.6624011006939021,
+    "loco_max": 0.8750655216188811,
+    "loco_sign_flips": [],
+    "per_stratum": {
+     "Logical Money|LONG_FORM": [
+      2,
+      13,
+      3.7390958237744947
+     ],
+     "Mark Invests|LONG_FORM": [
+      13,
+      61,
+      0.6983300547186415
+     ],
+     "Uncle Frank Retirement|LONG_FORM": [
+      7,
+      16,
+      0.45795087402919515
+     ],
+     "Uncle John Financial|LONG_FORM": [
+      3,
+      43,
+      1.0860049235846594
+     ],
+     "Casually Finance|SHORTS": [
+      2,
+      166,
+      0.6124083258610942
+     ]
+    },
+    "strata_same_sign": 3
+   },
+   "early_half": {
+    "feature": "H07_list_count",
+    "n_with": 32,
+    "n_without": 219,
+    "strata": 2,
+    "effect_log": 0.3989137258254969,
+    "ratio_multiplier": 1.4902050468510137
+   },
+   "late_half": {
+    "feature": "H07_list_count",
+    "n_with": 41,
+    "n_without": 223,
+    "strata": 4,
+    "effect_log": 0.0760404898556732,
+    "ratio_multiplier": 1.079006262080641
+   },
+   "excluding_nick": {
+    "feature": "H07_list_count",
+    "n_with": 34,
+    "n_without": 165,
+    "strata": 3,
+    "effect_log": 0.13698988233716552,
+    "ratio_multiplier": 1.1468165453585608
+   },
+   "q_bh": 0.36880779805048736,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  },
+  {
+   "feature": "H10_timely_marker",
+   "n_with": 62,
+   "n_without": 437,
+   "strata": 3,
+   "effect_log": -0.1591264812256294,
+   "ratio_multiplier": 0.8528884777668089,
+   "p_perm": 0.2944263934016496,
+   "ci95_multiplier": [
+    0.637797440691028,
+    1.1452759643843649
+   ],
+   "loco_min": 0.7004863214011513,
+   "loco_max": 0.9322069416839628,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     2,
+     73,
+     2.0234203135772226
+    ],
+    "Carl Invests|LONG_FORM": [
+     11,
+     65,
+     0.5624386405039556
+    ],
+    "Nick Invests|LONG_FORM": [
+     49,
+     299,
+     0.8993933502196552
+    ]
+   },
+   "strata_same_sign": 2,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "f6HIYQUiMoU",
+      "ch": "Nick Invests",
+      "title": "WTF Just Happened To The Housing Market?!",
+      "ratio": 33.031
+     },
+     {
+      "id": "1mIp0mUyCKU",
+      "ch": "Nick Invests",
+      "title": "Who Can Actually Afford a $500K House in 2026 (The Math Is Brutal)",
+      "ratio": 23.009
+     },
+     {
+      "id": "28u9rXYTjeU",
+      "ch": "Carl Invests",
+      "title": "How Much The Average 45 Year Old Has In 2026",
+      "ratio": 16.328
+     }
+    ],
+    "weakest": [
+     {
+      "id": "TTilKZZd3Es",
+      "ch": "Carl Invests",
+      "title": "Should You Pay Off Your Mortgage Early or Invest? (The Real Math For 2026)",
+      "ratio": 0.061
+     },
+     {
+      "id": "2dNngkX99Bs",
+      "ch": "Carl Invests",
+      "title": "Never Finance A Car This Way 2026",
+      "ratio": 0.133
+     },
+     {
+      "id": "hZ8a8FTijjQ",
+      "ch": "Carl Invests",
+      "title": "Do this EVERY TIME you get paid (2026 pitfalls to avoid)",
+      "ratio": 0.182
+     }
+    ]
+   },
+   "replication": {
+    "feature": "H10_timely_marker",
+    "n_with": 43,
+    "n_without": 326,
+    "strata": 6,
+    "effect_log": -0.10330163172914285,
+    "ratio_multiplier": 0.9018549043969958,
+    "p_perm": 0.5568607848037991,
+    "ci95_multiplier": [
+     0.6860422125586649,
+     1.2243072493081548
+    ],
+    "loco_min": 0.7384641264591336,
+    "loco_max": 1.018605303518908,
+    "loco_sign_flips": [
+     "Mark Invests"
+    ],
+    "per_stratum": {
+     "Mark Invests|LONG_FORM": [
+      3,
+      71,
+      0.21226545496790591
+     ],
+     "Uncle John Financial|LONG_FORM": [
+      8,
+      38,
+      1.2836752087974772
+     ],
+     "MonkeyExplains|LONG_FORM": [
+      7,
+      37,
+      0.8828757366804775
+     ],
+     "MonkeyExplains|SHORTS": [
+      2,
+      6,
+      0.35073465820207395
+     ],
+     "Casually Finance|SHORTS": [
+      18,
+      150,
+      1.0175126739701323
+     ],
+     "Casually Finance|LONG_FORM": [
+      5,
+      24,
+      1.2752187020379606
+     ]
+    },
+    "strata_same_sign": 3
+   },
+   "early_half": {
+    "feature": "H10_timely_marker",
+    "n_with": 25,
+    "n_without": 226,
+    "strata": 2,
+    "effect_log": -0.23265243744442896,
+    "ratio_multiplier": 0.7924289442962454
+   },
+   "late_half": {
+    "feature": "H10_timely_marker",
+    "n_with": 37,
+    "n_without": 211,
+    "strata": 3,
+    "effect_log": -0.11858690551598317,
+    "ratio_multiplier": 0.8881746250286361
+   },
+   "excluding_nick": {
+    "feature": "H10_timely_marker",
+    "n_with": 13,
+    "n_without": 138,
+    "strata": 2,
+    "effect_log": -0.3559804403034349,
+    "ratio_multiplier": 0.7004863214011513
+   },
+   "q_bh": 0.5888527868032992,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  },
+  {
+   "feature": "H11a_open_question",
+   "n_with": 151,
+   "n_without": 559,
+   "strata": 11,
+   "effect_log": -0.30739719650376623,
+   "ratio_multiplier": 0.7353584610828786,
+   "p_perm": 0.006248437890527368,
+   "ci95_multiplier": [
+    0.5887962080012075,
+    0.9070078569509928
+   ],
+   "loco_min": 0.48764898565024956,
+   "loco_max": 0.817040094503317,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     5,
+     22,
+     1.722379054544404
+    ],
+    "Lucas Grant|LONG_FORM": [
+     2,
+     73,
+     0.911846790853608
+    ],
+    "Brimm.|LONG_FORM": [
+     3,
+     37,
+     0.42281796310669456
+    ],
+    "Carl Invests|LONG_FORM": [
+     15,
+     61,
+     0.3214725902192971
+    ],
+    "Nick Invests|LONG_FORM": [
+     101,
+     247,
+     0.8983098685604145
+    ],
+    "Primate Economics|SHORTS": [
+     6,
+     7,
+     0.279047916324372
+    ],
+    "Primate Economics|LONG_FORM": [
+     8,
+     2,
+     0.7389924949892577
+    ],
+    "Bob Invests|LONG_FORM": [
+     2,
+     46,
+     2.225253271092886
+    ],
+    "Sonny Finance|LONG_FORM": [
+     2,
+     32,
+     1.4799965693395365
+    ],
+    "Dark Ledger|LONG_FORM": [
+     4,
+     26,
+     0.20295914057880324
+    ],
+    "Shaami Finance|LONG_FORM": [
+     3,
+     6,
+     0.2013665135835011
+    ]
+   },
+   "strata_same_sign": 8,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "tynTfEi4518",
+      "ch": "Nick Invests",
+      "title": "The Car Payment Trap Nobody Talks About",
+      "ratio": 24.517
+     },
+     {
+      "id": "Rd40d0XZLpQ",
+      "ch": "Nick Invests",
+      "title": "Shocking Money Stats of the Average Person",
+      "ratio": 19.765
+     },
+     {
+      "id": "Dgp4_ehMo9k",
+      "ch": "Nick Invests",
+      "title": "If You Don't Understand Bonds, You Don't Understand Money",
+      "ratio": 13.705
+     }
+    ],
+    "weakest": [
+     {
+      "id": "TTilKZZd3Es",
+      "ch": "Carl Invests",
+      "title": "Should You Pay Off Your Mortgage Early or Invest? (The Real Math For 2026)",
+      "ratio": 0.061
+     },
+     {
+      "id": "T58qpmXZmoY",
+      "ch": "Shaami Finance",
+      "title": "\"POV: You Own an $800 Million Company",
+      "ratio": 0.067
+     },
+     {
+      "id": "IOBcBqb6igM",
+      "ch": "Brimm.",
+      "title": "How Walmart Outsmarted Amazon and Became Unstoppable",
+      "ratio": 0.113
+     }
+    ]
+   },
+   "replication": {
+    "note": "NO_TRANSCRIPT_OPENINGS_IN_REPLICATION_SETS"
+   },
+   "early_half": {
+    "feature": "H11a_open_question",
+    "n_with": 118,
+    "n_without": 204,
+    "strata": 6,
+    "effect_log": -0.2490934011216199,
+    "ratio_multiplier": 0.779507163141126
+   },
+   "late_half": {
+    "feature": "H11a_open_question",
+    "n_with": 29,
+    "n_without": 285,
+    "strata": 6,
+    "effect_log": -0.6337656181822569,
+    "ratio_multiplier": 0.5305900349460421
+   },
+   "excluding_nick": {
+    "feature": "H11a_open_question",
+    "n_with": 50,
+    "n_without": 312,
+    "strata": 10,
+    "effect_log": -0.7181594236436893,
+    "ratio_multiplier": 0.48764898565024956
+   },
+   "q_bh": 0.041989502624343915,
+   "verdict": "SUGGESTIVE_NOT_ROBUST"
+  },
+  {
+   "feature": "H11b_open_personal_story",
+   "n_with": 9,
+   "n_without": 415,
+   "strata": 2,
+   "effect_log": 0.1756495760544372,
+   "ratio_multiplier": 1.19202027300664,
+   "p_perm": 0.6325918520369908,
+   "ci95_multiplier": [
+    0.724981364413864,
+    2.020504231254472
+   ],
+   "loco_min": 1.1359843780789736,
+   "loco_max": 1.4123399156034633,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Carl Invests|LONG_FORM": [
+     2,
+     74,
+     1.4123399156034633
+    ],
+    "Nick Invests|LONG_FORM": [
+     7,
+     341,
+     1.1359843780789736
+    ]
+   },
+   "strata_same_sign": 2,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "I9Yscvqrrt0",
+      "ch": "Carl Invests",
+      "title": "The Biggest Wealth Killers in Your 40s and 50s (Avoid At All Costs)",
+      "ratio": 4.458
+     },
+     {
+      "id": "KrvtiC-Jaz0",
+      "ch": "Nick Invests",
+      "title": "Let's Watch What Happens to People AFTER They Hit $100,000",
+      "ratio": 4.395
+     },
+     {
+      "id": "vdMkNfJYqLI",
+      "ch": "Nick Invests",
+      "title": "The 3 Passive Income Milestones That Change Everything",
+      "ratio": 2.002
+     }
+    ],
+    "weakest": [
+     {
+      "id": "AuAxbdA85Jg",
+      "ch": "Carl Invests",
+      "title": "9 Tiny Habits That Made Me Rich",
+      "ratio": 0.483
+     },
+     {
+      "id": "Ea9L3t6X2Iw",
+      "ch": "Nick Invests",
+      "title": "Why Everything Changes When You Get Rid Of Financial Stress",
+      "ratio": 0.668
+     },
+     {
+      "id": "pmfPNdWGzdo",
+      "ch": "Nick Invests",
+      "title": "Why High-Yield Savings Accounts Are Making a Comeback in 2026",
+      "ratio": 0.77
+     }
+    ]
+   },
+   "replication": {
+    "note": "NO_TRANSCRIPT_OPENINGS_IN_REPLICATION_SETS"
+   },
+   "early_half": {
+    "feature": "H11b_open_personal_story",
+    "n_with": 2,
+    "n_without": 227,
+    "strata": 1,
+    "effect_log": 0.016194330976802812,
+    "ratio_multiplier": 1.0163261698741404
+   },
+   "late_half": {
+    "feature": "H11b_open_personal_story",
+    "n_with": 7,
+    "n_without": 166,
+    "strata": 2,
+    "effect_log": 0.197374003582222,
+    "ratio_multiplier": 1.2181995665181948
+   },
+   "excluding_nick": {
+    "feature": "H11b_open_personal_story",
+    "n_with": 2,
+    "n_without": 74,
+    "strata": 1,
+    "effect_log": 0.3452478435296224,
+    "ratio_multiplier": 1.4123399156034633
+   },
+   "q_bh": 0.7423977338998583,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  },
+  {
+   "feature": "H11c_open_imagine",
+   "n_with": 98,
+   "n_without": 450,
+   "strata": 6,
+   "effect_log": -0.02889951686067831,
+   "ratio_multiplier": 0.9715140803468362,
+   "p_perm": 0.8305423644088977,
+   "ci95_multiplier": [
+    0.7665225798208221,
+    1.260982199545827
+   ],
+   "loco_min": 0.9255816833195205,
+   "loco_max": 1.2128734436978157,
+   "loco_sign_flips": [
+    "Carl Invests",
+    "Nick Invests"
+   ],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     6,
+     21,
+     1.3525129464357655
+    ],
+    "Brimm.|LONG_FORM": [
+     3,
+     37,
+     1.6779195252140404
+    ],
+    "Carl Invests|LONG_FORM": [
+     22,
+     54,
+     0.8451223630624314
+    ],
+    "Nick Invests|LONG_FORM": [
+     51,
+     297,
+     0.8146104104812426
+    ],
+    "Bob Invests|LONG_FORM": [
+     13,
+     35,
+     1.379339189290934
+    ],
+    "Shaami Finance|LONG_FORM": [
+     3,
+     6,
+     5.487131764659094
+    ]
+   },
+   "strata_same_sign": 2,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "Oj5enLUpPyU",
+      "ch": "Shaami Finance",
+      "title": "You Escaped The Rat Race & Nobody Noticed (Here's How)",
+      "ratio": 50.023
+     },
+     {
+      "id": "ptSGP4msJyQ",
+      "ch": "Brimm.",
+      "title": "What Airbnb Did to Athens in 10 Years",
+      "ratio": 32.754
+     },
+     {
+      "id": "-HeOz5CF9ys",
+      "ch": "Carl Invests",
+      "title": "9 Signs Someone is Secretly Wealthy",
+      "ratio": 24.314
+     }
+    ],
+    "weakest": [
+     {
+      "id": "slIKJx4U0YM",
+      "ch": "Carl Invests",
+      "title": "The One Financial Mistake Every Generation Repeats",
+      "ratio": 0.119
+     },
+     {
+      "id": "91OdhWI3e1c",
+      "ch": "Carl Invests",
+      "title": "If Your Company Does This, They're Forcing You To Quit.",
+      "ratio": 0.124
+     },
+     {
+      "id": "EedHneVKmpo",
+      "ch": "Crayon Capital",
+      "title": "The Rise of Paypal Explained Like You're 5",
+      "ratio": 0.144
+     }
+    ]
+   },
+   "replication": {
+    "note": "NO_TRANSCRIPT_OPENINGS_IN_REPLICATION_SETS"
+   },
+   "early_half": {
+    "feature": "H11c_open_imagine",
+    "n_with": 87,
+    "n_without": 244,
+    "strata": 5,
+    "effect_log": -0.12609830902889996,
+    "ratio_multiplier": 0.8815281803440815
+   },
+   "late_half": {
+    "feature": "H11c_open_imagine",
+    "n_with": 11,
+    "n_without": 68,
+    "strata": 3,
+    "effect_log": 0.8091273250048612,
+    "ratio_multiplier": 2.245947149296443
+   },
+   "excluding_nick": {
+    "feature": "H11c_open_imagine",
+    "n_with": 47,
+    "n_without": 153,
+    "strata": 5,
+    "effect_log": 0.19299229121116096,
+    "ratio_multiplier": 1.2128734436978157
+   },
+   "q_bh": 0.8944302385941975,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  },
+  {
+   "feature": "H11d_open_number",
+   "n_with": 479,
+   "n_without": 218,
+   "strata": 10,
+   "effect_log": 0.12026475972378638,
+   "ratio_multiplier": 1.127795406855332,
+   "p_perm": 0.22669332666833292,
+   "ci95_multiplier": [
+    0.935748782848822,
+    1.3526301968433743
+   ],
+   "loco_min": 1.0608617775322042,
+   "loco_max": 1.3916092483095572,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     23,
+     4,
+     1.741697638956092
+    ],
+    "Lucas Grant|LONG_FORM": [
+     51,
+     24,
+     1.0221097434767996
+    ],
+    "Brimm.|LONG_FORM": [
+     23,
+     17,
+     1.5933685686048313
+    ],
+    "Carl Invests|LONG_FORM": [
+     52,
+     24,
+     1.8082910211905747
+    ],
+    "Nick Invests|LONG_FORM": [
+     226,
+     122,
+     0.951923485374917
+    ],
+    "Primate Economics|LONG_FORM": [
+     3,
+     7,
+     0.9665373955812862
+    ],
+    "Bob Invests|LONG_FORM": [
+     42,
+     6,
+     0.9674114918760202
+    ],
+    "Sonny Finance|LONG_FORM": [
+     28,
+     6,
+     0.4669421014629296
+    ],
+    "Dark Ledger|LONG_FORM": [
+     26,
+     4,
+     4.7428188948979235
+    ],
+    "Shaami Finance|LONG_FORM": [
+     5,
+     4,
+     4.222391201114041
+    ]
+   },
+   "strata_same_sign": 6,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "7sbA9WZrfHk",
+      "ch": "Carl Invests",
+      "title": "What Happens If You Invest $100 Every Month (Most People Don't Realize This)",
+      "ratio": 160.55
+     },
+     {
+      "id": "2LXED3ENhck",
+      "ch": "Dark Ledger",
+      "title": "How Banks Treat You at Every Level of Wealth \u2014 $0 to $25M",
+      "ratio": 159.129
+     },
+     {
+      "id": "m5WPi3LX9z0",
+      "ch": "Brimm.",
+      "title": "Why Airlines Use This Exact Layout",
+      "ratio": 73.154
+     }
+    ],
+    "weakest": [
+     {
+      "id": "Z5FKuB7wZJA",
+      "ch": "Money Life POV",
+      "title": "POV: Your Investments Start Making More Money Than You Do",
+      "ratio": 0.05
+     },
+     {
+      "id": "htmoQ2CNw4c",
+      "ch": "Money Life POV",
+      "title": "POV: You Started Thinking Like Old Money \u2014 Your Life Changed",
+      "ratio": 0.054
+     },
+     {
+      "id": "T58qpmXZmoY",
+      "ch": "Shaami Finance",
+      "title": "\"POV: You Own an $800 Million Company",
+      "ratio": 0.067
+     }
+    ]
+   },
+   "replication": {
+    "note": "NO_TRANSCRIPT_OPENINGS_IN_REPLICATION_SETS"
+   },
+   "early_half": {
+    "feature": "H11d_open_number",
+    "n_with": 193,
+    "n_without": 128,
+    "strata": 5,
+    "effect_log": 0.019665896403376553,
+    "ratio_multiplier": 1.0198605440235282
+   },
+   "late_half": {
+    "feature": "H11d_open_number",
+    "n_with": 246,
+    "n_without": 87,
+    "strata": 8,
+    "effect_log": 0.21445202943476233,
+    "ratio_multiplier": 1.239182675255313
+   },
+   "excluding_nick": {
+    "feature": "H11d_open_number",
+    "n_with": 253,
+    "n_without": 96,
+    "strata": 9,
+    "effect_log": 0.33046081008382616,
+    "ratio_multiplier": 1.3916092483095572
+   },
+   "q_bh": 0.5289510955594435,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  },
+  {
+   "feature": "H11e_open_contrarian",
+   "n_with": 87,
+   "n_without": 591,
+   "strata": 8,
+   "effect_log": 0.0032120257552496765,
+   "ratio_multiplier": 1.0032171898375508,
+   "p_perm": 0.9800049987503124,
+   "ci95_multiplier": [
+    0.7630486879043067,
+    1.3186699753237467
+   ],
+   "loco_min": 0.8630566557082754,
+   "loco_max": 1.065682304557088,
+   "loco_sign_flips": [
+    "Crayon Capital",
+    "Carl Invests",
+    "Nick Invests"
+   ],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     3,
+     24,
+     1.4553074659338896
+    ],
+    "Lucas Grant|LONG_FORM": [
+     6,
+     69,
+     0.47719721375832636
+    ],
+    "Brimm.|LONG_FORM": [
+     2,
+     38,
+     0.18184737768580686
+    ],
+    "Carl Invests|LONG_FORM": [
+     20,
+     56,
+     1.8266680349962479
+    ],
+    "Nick Invests|LONG_FORM": [
+     49,
+     299,
+     1.0416625617174737
+    ],
+    "Bob Invests|LONG_FORM": [
+     2,
+     46,
+     0.9345470601219931
+    ],
+    "Sonny Finance|LONG_FORM": [
+     2,
+     32,
+     0.43571572886696847
+    ],
+    "Dark Ledger|LONG_FORM": [
+     3,
+     27,
+     0.4194224755199319
+    ]
+   },
+   "strata_same_sign": 3,
+   "family": "PRIMARY_PREREGISTERED",
+   "examples": {
+    "strongest": [
+     {
+      "id": "7sbA9WZrfHk",
+      "ch": "Carl Invests",
+      "title": "What Happens If You Invest $100 Every Month (Most People Don't Realize This)",
+      "ratio": 160.55
+     },
+     {
+      "id": "TDEme_uxx4c",
+      "ch": "Carl Invests",
+      "title": "What Actually Happens When You Invest $500 a Month",
+      "ratio": 55.632
+     },
+     {
+      "id": "rnbgKswe2nA",
+      "ch": "Carl Invests",
+      "title": "The Number Where Compounding Suddenly Catches Fire (The Real Numbers)",
+      "ratio": 51.385
+     }
+    ],
+    "weakest": [
+     {
+      "id": "eB0XSeS7y8Q",
+      "ch": "Shaami Finance",
+      "title": "Why Banks Treat You Differently at Different Levels of Wealth (The Harsh Truth)",
+      "ratio": 0.071
+     },
+     {
+      "id": "IOBcBqb6igM",
+      "ch": "Brimm.",
+      "title": "How Walmart Outsmarted Amazon and Became Unstoppable",
+      "ratio": 0.113
+     },
+     {
+      "id": "cZQ47oqK2gU",
+      "ch": "Carl Invests",
+      "title": "Age 50 Is The Most Important Decision For Retirement",
+      "ratio": 0.132
+     }
+    ]
+   },
+   "replication": {
+    "note": "NO_TRANSCRIPT_OPENINGS_IN_REPLICATION_SETS"
+   },
+   "early_half": {
+    "feature": "H11e_open_contrarian",
+    "n_with": 52,
+    "n_without": 226,
+    "strata": 4,
+    "effect_log": 0.08425197413873406,
+    "ratio_multiplier": 1.087902982692811
+   },
+   "late_half": {
+    "feature": "H11e_open_contrarian",
+    "n_with": 32,
+    "n_without": 266,
+    "strata": 5,
+    "effect_log": 0.06422928679316185,
+    "ratio_multiplier": 1.0663368676945093
+   },
+   "excluding_nick": {
+    "feature": "H11e_open_contrarian",
+    "n_with": 38,
+    "n_without": 292,
+    "strata": 7,
+    "effect_log": -0.04733419364686677,
+    "ratio_multiplier": 0.9537686009164194
+   },
+   "q_bh": 0.9800049987503124,
+   "verdict": "NOT_SUPPORTED_NULL_OR_INCONSISTENT"
+  }
+ ],
+ "exploratory_tests": [
+  {
+   "feature": "T01_thumb_arrow",
+   "n_with": 251,
+   "n_without": 155,
+   "strata": 6,
+   "effect_log": -0.0005863077376653077,
+   "ratio_multiplier": 0.9994138641071301,
+   "p_perm": 0.9957510622344414,
+   "ci95_multiplier": [
+    0.7340748950901278,
+    1.3425413656457132
+   ],
+   "loco_min": 0.8262109988438183,
+   "loco_max": 1.2300912384364404,
+   "loco_sign_flips": [
+    "Crayon Capital",
+    "Carl Invests",
+    "Nick Invests",
+    "Lucas Grant"
+   ],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     2,
+     25,
+     0.8797888580956349
+    ],
+    "Lucas Grant|LONG_FORM": [
+     43,
+     32,
+     0.6003564612207305
+    ],
+    "Brimm.|LONG_FORM": [
+     6,
+     34,
+     8.79264068773895
+    ],
+    "Carl Invests|LONG_FORM": [
+     38,
+     38,
+     0.9028929300562343
+    ],
+    "Nick Invests|LONG_FORM": [
+     159,
+     19,
+     0.9802122052894544
+    ],
+    "Primate Economics|LONG_FORM": [
+     3,
+     7,
+     1.4320883435248069
+    ]
+   },
+   "strata_same_sign": 4,
+   "family": "EXPLORATORY_ANALYST_PROSE_OUTCOME_AWARE",
+   "examples": {
+    "strongest": [
+     {
+      "id": "7sbA9WZrfHk",
+      "ch": "Carl Invests",
+      "title": "What Happens If You Invest $100 Every Month (Most People Don't Realize This)",
+      "ratio": 160.55
+     },
+     {
+      "id": "m5WPi3LX9z0",
+      "ch": "Brimm.",
+      "title": "Why Airlines Use This Exact Layout",
+      "ratio": 73.154
+     },
+     {
+      "id": "wlvup8NLKaY",
+      "ch": "Brimm.",
+      "title": "How This Unassuming Store Is Quietly Changing America",
+      "ratio": 62.487
+     }
+    ],
+    "weakest": [
+     {
+      "id": "w5rktnyQfCI",
+      "ch": "Carl Invests",
+      "title": "Why Net Worth EXPLODES After $100K (And How to Get There ASAP)",
+      "ratio": 0.109
+     },
+     {
+      "id": "slIKJx4U0YM",
+      "ch": "Carl Invests",
+      "title": "The One Financial Mistake Every Generation Repeats",
+      "ratio": 0.119
+     },
+     {
+      "id": "M5EdVY6AyA0",
+      "ch": "Carl Invests",
+      "title": "Why a High-Yield Savings Account Could Be Your Most Expensive Mistake",
+      "ratio": 0.121
+     }
+    ]
+   },
+   "q_bh": 0.9957510622344413
+  },
+  {
+   "feature": "T02_thumb_red",
+   "n_with": 176,
+   "n_without": 230,
+   "strata": 6,
+   "effect_log": -0.06484835763361176,
+   "ratio_multiplier": 0.937209573279684,
+   "p_perm": 0.5888527868032992,
+   "ci95_multiplier": [
+    0.7368136874042591,
+    1.1752232069710737
+   ],
+   "loco_min": 0.862084854548262,
+   "loco_max": 1.0591169551496302,
+   "loco_sign_flips": [
+    "Nick Invests",
+    "Lucas Grant"
+   ],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     19,
+     8,
+     1.8419536096763909
+    ],
+    "Lucas Grant|LONG_FORM": [
+     34,
+     41,
+     0.570627604169776
+    ],
+    "Brimm.|LONG_FORM": [
+     14,
+     26,
+     2.0435720135362683
+    ],
+    "Carl Invests|LONG_FORM": [
+     18,
+     58,
+     1.0058267783208727
+    ],
+    "Nick Invests|LONG_FORM": [
+     86,
+     92,
+     0.8572459086370249
+    ],
+    "Primate Economics|LONG_FORM": [
+     5,
+     5,
+     1.587764083626137
+    ]
+   },
+   "strata_same_sign": 2,
+   "family": "EXPLORATORY_ANALYST_PROSE_OUTCOME_AWARE",
+   "examples": {
+    "strongest": [
+     {
+      "id": "S81NPqovOT8",
+      "ch": "Brimm.",
+      "title": "Why Are the Dutch So Good at Ecommerce?",
+      "ratio": 38.64
+     },
+     {
+      "id": "-HeOz5CF9ys",
+      "ch": "Carl Invests",
+      "title": "9 Signs Someone is Secretly Wealthy",
+      "ratio": 24.314
+     },
+     {
+      "id": "1mIp0mUyCKU",
+      "ch": "Nick Invests",
+      "title": "Who Can Actually Afford a $500K House in 2026 (The Math Is Brutal)",
+      "ratio": 23.009
+     }
+    ],
+    "weakest": [
+     {
+      "id": "TTilKZZd3Es",
+      "ch": "Carl Invests",
+      "title": "Should You Pay Off Your Mortgage Early or Invest? (The Real Math For 2026)",
+      "ratio": 0.061
+     },
+     {
+      "id": "KHLY6SyLvgQ",
+      "ch": "Crayon Capital",
+      "title": "Every Financial Crisis Explained in 10 Minutes",
+      "ratio": 0.08
+     },
+     {
+      "id": "cZQ47oqK2gU",
+      "ch": "Carl Invests",
+      "title": "Age 50 Is The Most Important Decision For Retirement",
+      "ratio": 0.132
+     }
+    ]
+   },
+   "q_bh": 0.9159932239162433
+  },
+  {
+   "feature": "T03_thumb_face_expression",
+   "n_with": 100,
+   "n_without": 319,
+   "strata": 7,
+   "effect_log": 0.23002642914280255,
+   "ratio_multiplier": 1.2586332740884412,
+   "p_perm": 0.11297175706073481,
+   "ci95_multiplier": [
+    0.955463858761231,
+    1.6577119899181707
+   ],
+   "loco_min": 1.0672344649876344,
+   "loco_max": 2.2425033399860044,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     21,
+     6,
+     3.005869797371369
+    ],
+    "Lucas Grant|LONG_FORM": [
+     8,
+     67,
+     1.373293120253464
+    ],
+    "Brimm.|LONG_FORM": [
+     4,
+     36,
+     1.0102779161831112
+    ],
+    "Carl Invests|LONG_FORM": [
+     6,
+     70,
+     6.442084224453557
+    ],
+    "Nick Invests|LONG_FORM": [
+     46,
+     132,
+     0.808834527173405
+    ],
+    "Primate Economics|SHORTS": [
+     8,
+     5,
+     1.810633367584208
+    ],
+    "Primate Economics|LONG_FORM": [
+     7,
+     3,
+     2.0724663815820077
+    ]
+   },
+   "strata_same_sign": 6,
+   "family": "EXPLORATORY_ANALYST_PROSE_OUTCOME_AWARE",
+   "examples": {
+    "strongest": [
+     {
+      "id": "7sbA9WZrfHk",
+      "ch": "Carl Invests",
+      "title": "What Happens If You Invest $100 Every Month (Most People Don't Realize This)",
+      "ratio": 160.55
+     },
+     {
+      "id": "ne0MlVZQasE",
+      "ch": "Primate Economics",
+      "title": "Inflation #animation #finance",
+      "ratio": 90.386
+     },
+     {
+      "id": "S81NPqovOT8",
+      "ch": "Brimm.",
+      "title": "Why Are the Dutch So Good at Ecommerce?",
+      "ratio": 38.64
+     }
+    ],
+    "weakest": [
+     {
+      "id": "KHLY6SyLvgQ",
+      "ch": "Crayon Capital",
+      "title": "Every Financial Crisis Explained in 10 Minutes",
+      "ratio": 0.08
+     },
+     {
+      "id": "tRwMoqQtzTY",
+      "ch": "Brimm.",
+      "title": "What Happens If America Abandons Europe",
+      "ratio": 0.133
+     },
+     {
+      "id": "EedHneVKmpo",
+      "ch": "Crayon Capital",
+      "title": "The Rise of Paypal Explained Like You're 5",
+      "ratio": 0.144
+     }
+    ]
+   },
+   "q_bh": 0.39540114971257184
+  },
+  {
+   "feature": "T04_thumb_number_or_dollar",
+   "n_with": 138,
+   "n_without": 231,
+   "strata": 4,
+   "effect_log": 0.1457329235149909,
+   "ratio_multiplier": 1.1568871694280662,
+   "p_perm": 0.27993001749562607,
+   "ci95_multiplier": [
+    0.908599312293002,
+    1.46921751025662
+   ],
+   "loco_min": 0.9988402862070572,
+   "loco_max": 1.3184803617289456,
+   "loco_sign_flips": [
+    "Carl Invests"
+   ],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     14,
+     61,
+     0.5285150441510681
+    ],
+    "Brimm.|LONG_FORM": [
+     6,
+     34,
+     1.0846214836107615
+    ],
+    "Carl Invests|LONG_FORM": [
+     37,
+     39,
+     1.8492492326111174
+    ],
+    "Nick Invests|LONG_FORM": [
+     81,
+     97,
+     1.1659317425612499
+    ]
+   },
+   "strata_same_sign": 3,
+   "family": "EXPLORATORY_ANALYST_PROSE_OUTCOME_AWARE",
+   "examples": {
+    "strongest": [
+     {
+      "id": "7sbA9WZrfHk",
+      "ch": "Carl Invests",
+      "title": "What Happens If You Invest $100 Every Month (Most People Don't Realize This)",
+      "ratio": 160.55
+     },
+     {
+      "id": "TDEme_uxx4c",
+      "ch": "Carl Invests",
+      "title": "What Actually Happens When You Invest $500 a Month",
+      "ratio": 55.632
+     },
+     {
+      "id": "rnbgKswe2nA",
+      "ch": "Carl Invests",
+      "title": "The Number Where Compounding Suddenly Catches Fire (The Real Numbers)",
+      "ratio": 51.385
+     }
+    ],
+    "weakest": [
+     {
+      "id": "w5rktnyQfCI",
+      "ch": "Carl Invests",
+      "title": "Why Net Worth EXPLODES After $100K (And How to Get There ASAP)",
+      "ratio": 0.109
+     },
+     {
+      "id": "2dNngkX99Bs",
+      "ch": "Carl Invests",
+      "title": "Never Finance A Car This Way 2026",
+      "ratio": 0.133
+     },
+     {
+      "id": "kpnZwzqeZ7E",
+      "ch": "Carl Invests",
+      "title": "Japan's Yen Crisis is Becoming America's Problem (And How It Directly Hits Your Money)",
+      "ratio": 0.166
+     }
+    ]
+   },
+   "q_bh": 0.6531700408231275
+  },
+  {
+   "feature": "T05_thumb_no_text",
+   "n_with": 13,
+   "n_without": 125,
+   "strata": 4,
+   "effect_log": -0.25352519000026424,
+   "ratio_multiplier": 0.7760601957223803,
+   "p_perm": 0.55936015996001,
+   "ci95_multiplier": [
+    0.39985789733560656,
+    1.5027811862104405
+   ],
+   "loco_min": 0.41363213194343457,
+   "loco_max": 1.3697795614732908,
+   "loco_sign_flips": [
+    "Brimm."
+   ],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     3,
+     72,
+     1.0806980791267031
+    ],
+    "Brimm.|LONG_FORM": [
+     2,
+     38,
+     0.09647026432205646
+    ],
+    "Primate Economics|SHORTS": [
+     2,
+     11,
+     5.398595235762988
+    ],
+    "Primate Economics|LONG_FORM": [
+     6,
+     4,
+     0.6921347773221282
+    ]
+   },
+   "strata_same_sign": 2,
+   "family": "EXPLORATORY_ANALYST_PROSE_OUTCOME_AWARE",
+   "examples": {
+    "strongest": [
+     {
+      "id": "ne0MlVZQasE",
+      "ch": "Primate Economics",
+      "title": "Inflation #animation #finance",
+      "ratio": 90.386
+     },
+     {
+      "id": "37C7fXr8XSY",
+      "ch": "Primate Economics",
+      "title": "Financial Bubbles Explained with Bananas",
+      "ratio": 2.173
+     },
+     {
+      "id": "_t_u1L6eMuE",
+      "ch": "Lucas Grant",
+      "title": "POV: Your Side Hustle Started Paying More Than Your Job",
+      "ratio": 2.066
+     }
+    ],
+    "weakest": [
+     {
+      "id": "tRwMoqQtzTY",
+      "ch": "Brimm.",
+      "title": "What Happens If America Abandons Europe",
+      "ratio": 0.133
+     },
+     {
+      "id": "Ln_biVwKmhk",
+      "ch": "Brimm.",
+      "title": "How Germany Destroyed Their Economy",
+      "ratio": 0.139
+     },
+     {
+      "id": "GdpGd0U2wmo",
+      "ch": "Crayon Capital",
+      "title": "The Greatest Slave System Ever Created",
+      "ratio": 0.282
+     }
+    ]
+   },
+   "q_bh": 0.9159932239162433
+  },
+  {
+   "feature": "topic_retirement",
+   "n_with": 31,
+   "n_without": 550,
+   "strata": 5,
+   "effect_log": -0.3890525656969677,
+   "ratio_multiplier": 0.6776986453760341,
+   "p_perm": 0.06548362909272681,
+   "ci95_multiplier": [
+    0.4787865782247243,
+    0.9622683820694861
+   ],
+   "loco_min": 0.5932355192158179,
+   "loco_max": 0.8305977183115433,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     2,
+     73,
+     0.6377539925775987
+    ],
+    "Carl Invests|LONG_FORM": [
+     6,
+     70,
+     0.5092614387190745
+    ],
+    "Nick Invests|LONG_FORM": [
+     18,
+     330,
+     0.586508421693551
+    ],
+    "Bob Invests|LONG_FORM": [
+     2,
+     46,
+     0.9474156843516568
+    ],
+    "Sonny Finance|LONG_FORM": [
+     3,
+     31,
+     2.456009594669925
+    ]
+   },
+   "strata_same_sign": 4,
+   "family": "EXPLORATORY_TOPIC_KEYWORD_HEURISTIC",
+   "replication": {
+    "feature": "topic_retirement",
+    "n_with": 60,
+    "n_without": 83,
+    "strata": 3,
+    "effect_log": 0.543405534541746,
+    "ratio_multiplier": 1.7218607449703034
+   },
+   "q_bh": 0.39540114971257184
+  },
+  {
+   "feature": "topic_housing_mortgages",
+   "n_with": 33,
+   "n_without": 514,
+   "strata": 4,
+   "effect_log": -0.004637901348413891,
+   "ratio_multiplier": 0.9953728371083296,
+   "p_perm": 0.9780054986253437,
+   "ci95_multiplier": [
+    0.6750302680166724,
+    1.5404002901074434
+   ],
+   "loco_min": 0.7546885093697665,
+   "loco_max": 1.1952034597327759,
+   "loco_sign_flips": [
+    "Carl Invests"
+   ],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     3,
+     72,
+     1.6688046469102922
+    ],
+    "Carl Invests|LONG_FORM": [
+     3,
+     73,
+     0.167838026725752
+    ],
+    "Nick Invests|LONG_FORM": [
+     24,
+     324,
+     1.1069179572657721
+    ],
+    "Bob Invests|LONG_FORM": [
+     3,
+     45,
+     1.5623258761814578
+    ]
+   },
+   "strata_same_sign": 1,
+   "family": "EXPLORATORY_TOPIC_KEYWORD_HEURISTIC",
+   "replication": {
+    "feature": "topic_housing_mortgages",
+    "n_with": 13,
+    "n_without": 95,
+    "strata": 3,
+    "effect_log": -0.002985586960096556,
+    "ratio_multiplier": 0.9970188654725078
+   },
+   "q_bh": 0.9957510622344413
+  },
+  {
+   "feature": "topic_debt_credit_banking",
+   "n_with": 32,
+   "n_without": 482,
+   "strata": 5,
+   "effect_log": -0.11699783184080621,
+   "ratio_multiplier": 0.8895871219278175,
+   "p_perm": 0.540864783804049,
+   "ci95_multiplier": [
+    0.6654679680696353,
+    1.1668362855527115
+   ],
+   "loco_min": 0.691493023805681,
+   "loco_max": 1.054616856440064,
+   "loco_sign_flips": [
+    "Lucas Grant"
+   ],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     5,
+     70,
+     0.35504256925498945
+    ],
+    "Nick Invests|LONG_FORM": [
+     19,
+     329,
+     0.9009136220210625
+    ],
+    "Primate Economics|SHORTS": [
+     2,
+     11,
+     0.28935062309358517
+    ],
+    "Bob Invests|LONG_FORM": [
+     4,
+     44,
+     0.6607236179473768
+    ],
+    "Dark Ledger|LONG_FORM": [
+     2,
+     28,
+     38.86083658891665
+    ]
+   },
+   "strata_same_sign": 4,
+   "family": "EXPLORATORY_TOPIC_KEYWORD_HEURISTIC",
+   "replication": {
+    "feature": "topic_debt_credit_banking",
+    "n_with": 35,
+    "n_without": 303,
+    "strata": 6,
+    "effect_log": 0.0848892020178273,
+    "ratio_multiplier": 1.088596445726655
+   },
+   "q_bh": 0.9159932239162433
+  },
+  {
+   "feature": "topic_investing",
+   "n_with": 72,
+   "n_without": 562,
+   "strata": 8,
+   "effect_log": 0.22859156538553035,
+   "ratio_multiplier": 1.2568286018587698,
+   "p_perm": 0.10272431892026994,
+   "ci95_multiplier": [
+    0.9029849166967744,
+    1.7204674673479423
+   ],
+   "loco_min": 1.1293210195964483,
+   "loco_max": 1.3677826330117575,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Lucas Grant|LONG_FORM": [
+     8,
+     67,
+     0.6440402142784952
+    ],
+    "Carl Invests|LONG_FORM": [
+     7,
+     69,
+     3.2956722490232626
+    ],
+    "Nick Invests|LONG_FORM": [
+     41,
+     307,
+     1.2317741004849332
+    ],
+    "Primate Economics|SHORTS": [
+     2,
+     11,
+     1.897689792620226
+    ],
+    "Primate Economics|LONG_FORM": [
+     2,
+     8,
+     0.4994071932045279
+    ],
+    "Bob Invests|LONG_FORM": [
+     4,
+     44,
+     0.8448258903102365
+    ],
+    "Sonny Finance|LONG_FORM": [
+     4,
+     30,
+     1.6952624347050453
+    ],
+    "Dark Ledger|LONG_FORM": [
+     4,
+     26,
+     1.4769807397302979
+    ]
+   },
+   "strata_same_sign": 5,
+   "family": "EXPLORATORY_TOPIC_KEYWORD_HEURISTIC",
+   "replication": {
+    "feature": "topic_investing",
+    "n_with": 41,
+    "n_without": 268,
+    "strata": 5,
+    "effect_log": 0.1912624256681811,
+    "ratio_multiplier": 1.2107771493959598
+   },
+   "q_bh": 0.39540114971257184
+  },
+  {
+   "feature": "topic_macro_policy",
+   "n_with": 12,
+   "n_without": 399,
+   "strata": 4,
+   "effect_log": 0.03467736313502032,
+   "ratio_multiplier": 1.0352856335988507,
+   "p_perm": 0.939515121219695,
+   "ci95_multiplier": [
+    0.5044221670443139,
+    2.1227206419718168
+   ],
+   "loco_min": 0.3901546537570654,
+   "loco_max": 1.6011341715519554,
+   "loco_sign_flips": [
+    "Primate Economics"
+   ],
+   "per_stratum": {
+    "Brimm.|LONG_FORM": [
+     4,
+     36,
+     0.47932483636787243
+    ],
+    "Nick Invests|LONG_FORM": [
+     2,
+     346,
+     0.2687812909024962
+    ],
+    "Primate Economics|SHORTS": [
+     4,
+     9,
+     6.36142110183443
+    ],
+    "Primate Economics|LONG_FORM": [
+     2,
+     8,
+     1.3511273468796399
+    ]
+   },
+   "strata_same_sign": 2,
+   "family": "EXPLORATORY_TOPIC_KEYWORD_HEURISTIC",
+   "replication": {
+    "feature": "topic_macro_policy",
+    "n_with": 37,
+    "n_without": 258,
+    "strata": 5,
+    "effect_log": 0.12264216765368884,
+    "ratio_multiplier": 1.1304798263145754
+   },
+   "q_bh": 0.9957510622344413
+  },
+  {
+   "feature": "topic_business_models",
+   "n_with": 6,
+   "n_without": 61,
+   "strata": 2,
+   "effect_log": 0.10736879803451822,
+   "ratio_multiplier": 1.1133447781404322,
+   "p_perm": 0.8720319920019995,
+   "ci95_multiplier": [
+    0.5239059155721281,
+    2.2021408222506285
+   ],
+   "loco_min": 0.7716626716489245,
+   "loco_max": 2.27048544800069,
+   "loco_sign_flips": [
+    "Crayon Capital"
+   ],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     2,
+     25,
+     2.27048544800069
+    ],
+    "Brimm.|LONG_FORM": [
+     4,
+     36,
+     0.7716626716489245
+    ]
+   },
+   "strata_same_sign": 1,
+   "family": "EXPLORATORY_TOPIC_KEYWORD_HEURISTIC",
+   "replication": {
+    "feature": "topic_business_models",
+    "n_with": 2,
+    "n_without": 166,
+    "strata": 1,
+    "effect_log": -0.23846185221142052,
+    "ratio_multiplier": 0.7878387419896599
+   },
+   "q_bh": 0.9957510622344413
+  },
+  {
+   "feature": "topic_personal_finance",
+   "n_with": 304,
+   "n_without": 396,
+   "strata": 10,
+   "effect_log": 0.005706061941501097,
+   "ratio_multiplier": 1.0057223725212434,
+   "p_perm": 0.9477630592351912,
+   "ci95_multiplier": [
+    0.8402971288245383,
+    1.2153918535944739
+   ],
+   "loco_min": 0.9505197503055399,
+   "loco_max": 1.0430473873752004,
+   "loco_sign_flips": [
+    "Brimm.",
+    "Dark Ledger",
+    "Sonny Finance",
+    "Carl Invests"
+   ],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     3,
+     24,
+     0.9143772680564861
+    ],
+    "Lucas Grant|LONG_FORM": [
+     41,
+     34,
+     0.9395077012015307
+    ],
+    "Brimm.|LONG_FORM": [
+     3,
+     37,
+     2.517078165999004
+    ],
+    "Carl Invests|LONG_FORM": [
+     44,
+     32,
+     1.5418244043692615
+    ],
+    "Nick Invests|LONG_FORM": [
+     162,
+     186,
+     0.9756399360936504
+    ],
+    "Bob Invests|LONG_FORM": [
+     19,
+     29,
+     0.7189498274004307
+    ],
+    "Sonny Finance|LONG_FORM": [
+     12,
+     22,
+     1.1854001478312919
+    ],
+    "Money Life POV|LONG_FORM": [
+     9,
+     4,
+     0.14039433708727855
+    ],
+    "Dark Ledger|LONG_FORM": [
+     7,
+     23,
+     1.945576396671797
+    ],
+    "Shaami Finance|LONG_FORM": [
+     4,
+     5,
+     0.44263463511143203
+    ]
+   },
+   "strata_same_sign": 4,
+   "family": "EXPLORATORY_TOPIC_KEYWORD_HEURISTIC",
+   "replication": {
+    "feature": "topic_personal_finance",
+    "n_with": 81,
+    "n_without": 297,
+    "strata": 7,
+    "effect_log": -0.13350245879852615,
+    "ratio_multiplier": 0.8750253174640107
+   },
+   "q_bh": 0.9957510622344413
+  },
+  {
+   "feature": "topic_economic_history",
+   "n_with": 4,
+   "n_without": 371,
+   "strata": 2,
+   "effect_log": 0.7078961633701287,
+   "ratio_multiplier": 2.029716571530333,
+   "p_perm": 0.21719570107473132,
+   "ci95_multiplier": [
+    1.4801682753822425,
+    2.748101007073848
+   ],
+   "loco_min": 0.6387862955220363,
+   "loco_max": 7.023688330808879,
+   "loco_sign_flips": [
+    "Crayon Capital"
+   ],
+   "per_stratum": {
+    "Crayon Capital|LONG_FORM": [
+     2,
+     25,
+     7.023688330808879
+    ],
+    "Nick Invests|LONG_FORM": [
+     2,
+     346,
+     0.6387862955220363
+    ]
+   },
+   "strata_same_sign": 1,
+   "family": "EXPLORATORY_TOPIC_KEYWORD_HEURISTIC",
+   "replication": {
+    "feature": "topic_economic_history",
+    "n_with": 9,
+    "n_without": 203,
+    "strata": 2,
+    "effect_log": 0.03312272880499327,
+    "ratio_multiplier": 1.03367739344806
+   },
+   "q_bh": 0.6081479630092477
+  },
+  {
+   "feature": "topic_geopolitics",
+   "n_with": 31,
+   "n_without": 433,
+   "strata": 3,
+   "effect_log": -0.412059008777432,
+   "ratio_multiplier": 0.6622851942594247,
+   "p_perm": 0.07823044238940265,
+   "ci95_multiplier": [
+    0.4525945575096819,
+    1.009407790969222
+   ],
+   "loco_min": 0.5993347653994111,
+   "loco_max": 0.7133827035509384,
+   "loco_sign_flips": [],
+   "per_stratum": {
+    "Brimm.|LONG_FORM": [
+     9,
+     31,
+     0.7501554076513198
+    ],
+    "Carl Invests|LONG_FORM": [
+     3,
+     73,
+     0.34810492106242574
+    ],
+    "Nick Invests|LONG_FORM": [
+     19,
+     329,
+     0.6995944815149349
+    ]
+   },
+   "strata_same_sign": 3,
+   "family": "EXPLORATORY_TOPIC_KEYWORD_HEURISTIC",
+   "replication": {
+    "feature": "topic_geopolitics",
+    "n_with": 48,
+    "n_without": 290,
+    "strata": 5,
+    "effect_log": -0.029833521889438715,
+    "ratio_multiplier": 0.9706071049360124
+   },
+   "q_bh": 0.39540114971257184
+  }
+ ],
+ "continuous": {
+  "duration_log": {
+   "original_per_channel": {
+    "Bob Invests": {
+     "n": 48,
+     "spearman": 0.234
+    },
+    "Brimm.": {
+     "n": 40,
+     "spearman": 0.113
+    },
+    "Carl Invests": {
+     "n": 76,
+     "spearman": 0.069
+    },
+    "Crayon Capital": {
+     "n": 27,
+     "spearman": 0.552
+    },
+    "Dark Ledger": {
+     "n": 30,
+     "spearman": 0.322
+    },
+    "Lucas Grant": {
+     "n": 75,
+     "spearman": -0.03
+    },
+    "Nick Invests": {
+     "n": 348,
+     "spearman": -0.057
+    },
+    "Sonny Finance": {
+     "n": 34,
+     "spearman": 0.04
+    }
+   },
+   "replication_per_channel": {
+    "Casually Finance": {
+     "n": 29,
+     "spearman": 0.159
+    },
+    "Logical Money": {
+     "n": 15,
+     "spearman": 0.521
+    },
+    "Mark Invests": {
+     "n": 74,
+     "spearman": -0.017
+    },
+    "MonkeyExplains": {
+     "n": 44,
+     "spearman": 0.151
+    },
+    "Uncle Frank Retirement": {
+     "n": 23,
+     "spearman": -0.245
+    },
+    "Uncle John Financial": {
+     "n": 46,
+     "spearman": 0.352
+    }
+   },
+   "original_median_rho": 0.091,
+   "original_positive_channels": 6,
+   "original_channels": 8
+  },
+  "title_chars": {
+   "original_per_channel": {
+    "Bob Invests": {
+     "n": 48,
+     "spearman": 0.415
+    },
+    "Brimm.": {
+     "n": 40,
+     "spearman": 0.069
+    },
+    "Carl Invests": {
+     "n": 76,
+     "spearman": -0.06
+    },
+    "Crayon Capital": {
+     "n": 27,
+     "spearman": 0.299
+    },
+    "Dark Ledger": {
+     "n": 30,
+     "spearman": 0.1
+    },
+    "Lucas Grant": {
+     "n": 75,
+     "spearman": -0.176
+    },
+    "Nick Invests": {
+     "n": 348,
+     "spearman": 0.003
+    },
+    "Sonny Finance": {
+     "n": 34,
+     "spearman": -0.047
+    }
+   },
+   "replication_per_channel": {
+    "Casually Finance": {
+     "n": 29,
+     "spearman": -0.239
+    },
+    "Logical Money": {
+     "n": 15,
+     "spearman": -0.09
+    },
+    "Mark Invests": {
+     "n": 74,
+     "spearman": -0.205
+    },
+    "MonkeyExplains": {
+     "n": 44,
+     "spearman": -0.015
+    },
+    "Uncle Frank Retirement": {
+     "n": 23,
+     "spearman": 0.222
+    },
+    "Uncle John Financial": {
+     "n": 46,
+     "spearman": -0.1
+    }
+   },
+   "original_median_rho": 0.036000000000000004,
+   "original_positive_channels": 5,
+   "original_channels": 8
+  },
+  "publication_weekend_vs_weekday_utc": {
+   "weekday": {
+    "n": 516,
+    "median_ratio": 1.0
+   },
+   "weekend": {
+    "n": 207,
+    "median_ratio": 0.941
+   }
+  },
+  "publication_hour_block_utc": {
+   "00-05UTC": {
+    "n": 151,
+    "median_ratio": 1.141
+   },
+   "06-11UTC": {
+    "n": 216,
+    "median_ratio": 0.855
+   },
+   "12-17UTC": {
+    "n": 325,
+    "median_ratio": 1.017
+   },
+   "18-23UTC": {
+    "n": 31,
+    "median_ratio": 0.777
+   }
+  },
+  "like_rate_vs_ratio": {
+   "Bob Invests": {
+    "n": 48,
+    "spearman_likerate_vs_ratio": -0.014
+   },
+   "Brimm.": {
+    "n": 40,
+    "spearman_likerate_vs_ratio": -0.44
+   },
+   "Carl Invests": {
+    "n": 76,
+    "spearman_likerate_vs_ratio": -0.538
+   },
+   "Crayon Capital": {
+    "n": 27,
+    "spearman_likerate_vs_ratio": -0.448
+   },
+   "Dark Ledger": {
+    "n": 30,
+    "spearman_likerate_vs_ratio": -0.487
+   },
+   "Lucas Grant": {
+    "n": 75,
+    "spearman_likerate_vs_ratio": -0.427
+   },
+   "Nick Invests": {
+    "n": 348,
+    "spearman_likerate_vs_ratio": -0.22
+   },
+   "Primate Economics": {
+    "n": 23,
+    "spearman_likerate_vs_ratio": -0.223
+   },
+   "Sonny Finance": {
+    "n": 34,
+    "spearman_likerate_vs_ratio": -0.477
+   }
+  }
+ },
+ "title_templates": [
+  {
+   "channel": "Nick Invests",
+   "skeleton": "why everything changes",
+   "n": 20,
+   "strong": 7,
+   "weak": 2,
+   "min": {
+    "id": "rbnPR2Dnmz4",
+    "title": "Why Everything Changes After $50,000 A Year",
+    "ratio": 0.278
+   },
+   "max": {
+    "id": "2DBQnxaDScs",
+    "title": "Why Everything Changes After Paying Off Your House",
+    "ratio": 18.829
+   }
+  },
+  {
+   "channel": "Sonny Finance",
+   "skeleton": "your life if",
+   "n": 10,
+   "strong": 3,
+   "weak": 1,
+   "min": {
+    "id": "8q9YRFeFaus",
+    "title": "Your Life If You've Been Living Paycheck to Paycheck for 10 Years",
+    "ratio": 0.315
+   },
+   "max": {
+    "id": "vb7UojsINvg",
+    "title": "Your Life If You Invested $5 a Day",
+    "ratio": 35.558
+   }
+  },
+  {
+   "channel": "Lucas Grant",
+   "skeleton": "pov: your life",
+   "n": 7,
+   "strong": 2,
+   "weak": 1,
+   "min": {
+    "id": "LlxQHbHPUsE",
+    "title": "POV: Your Life as a Silent Millionaire \u2014 You Built Wealth From Debt",
+    "ratio": 0.31
+   },
+   "max": {
+    "id": "AyvKJIl3P_U",
+    "title": "POV: Your Life After Your Investments Make More Than Your Job",
+    "ratio": 2.581
+   }
+  },
+  {
+   "channel": "Nick Invests",
+   "skeleton": "who can actually",
+   "n": 6,
+   "strong": 2,
+   "weak": 0,
+   "min": {
+    "id": "vNu80_63AL4",
+    "title": "Who Can Actually Afford a \"Normal\" Life in 2026 (The Math Is Brutal)",
+    "ratio": 0.507
+   },
+   "max": {
+    "id": "1mIp0mUyCKU",
+    "title": "Who Can Actually Afford a $500K House in 2026 (The Math Is Brutal)",
+    "ratio": 23.009
+   }
+  },
+  {
+   "channel": "Nick Invests",
+   "skeleton": "shocking money stats",
+   "n": 5,
+   "strong": 1,
+   "weak": 1,
+   "min": {
+    "id": "Ygv_u2j90OA",
+    "title": "Shocking Money Stats of the Average American",
+    "ratio": 0.31
+   },
+   "max": {
+    "id": "Rd40d0XZLpQ",
+    "title": "Shocking Money Stats of the Average Person",
+    "ratio": 19.765
+   }
+  }
+ ],
+ "prediction": {
+  "splits": [
+   {
+    "split": "TEMPORAL_75_25_ORIGINALS",
+    "n_train": 532,
+    "n_test": 178,
+    "mae_baseline_peer_median": 0.7819247077884334,
+    "mae_baseline_train_mean": 0.7921588201359443,
+    "mae_model": 0.8029239688455321,
+    "spearman_model": 0.12878100367155393,
+    "tier_acc_always_typical": 0.6179775280898876,
+    "tier_acc_model": 0.6292134831460674,
+    "strong_recall_model": 0.05263157894736842,
+    "coef": {
+     "intercept": -0.0101,
+     "H01_money_amount": -0.0244,
+     "H02_curiosity_gap": 0.251,
+     "H03a_threat_fear": -0.2011,
+     "H03b_opportunity": 0.3453,
+     "H04_first_person": -0.2999,
+     "H05_explicit_audience": 0.0047,
+     "H06_question_mark": 0.2292,
+     "H07_list_count": 0.1847,
+     "H10_timely_marker": -0.1462,
+     "title_len_z": -0.0283,
+     "dur_log_z": 0.0795
+    },
+    "mae_gain_vs_baseline_ci95": [
+     -0.0612731706241045,
+     0.01820303390281782
+    ]
+   },
+   {
+    "split": "TRAIN_ORIGINALS_TEST_UNSEEN_CHANNELS_REPLICATION",
+    "n_train": 710,
+    "n_test": 231,
+    "mae_baseline_peer_median": 1.072982234475017,
+    "mae_baseline_train_mean": 1.077608817917002,
+    "mae_model": 1.098064199996645,
+    "spearman_model": 0.023704706088514185,
+    "tier_acc_always_typical": 0.4588744588744589,
+    "tier_acc_model": 0.4588744588744589,
+    "strong_recall_model": 0.0,
+    "coef": {
+     "intercept": -0.0179,
+     "H01_money_amount": 0.0513,
+     "H02_curiosity_gap": 0.3242,
+     "H03a_threat_fear": -0.2538,
+     "H03b_opportunity": 0.2101,
+     "H04_first_person": -0.1706,
+     "H05_explicit_audience": 0.0729,
+     "H06_question_mark": 0.1046,
+     "H07_list_count": 0.1492,
+     "H10_timely_marker": -0.1283,
+     "title_len_z": -0.0261,
+     "dur_log_z": 0.1411
+    },
+    "mae_gain_vs_baseline_ci95": [
+     -0.05586877995353659,
+     0.005336621723393635
+    ]
+   }
+  ],
+  "leave_one_channel_out": [
+   {
+    "split": "LOCO:Bob Invests",
+    "n_test": 48,
+    "mae_baseline_peer_median": 0.6428457993550775,
+    "mae_model": 0.6199383476791948,
+    "spearman_model": 0.16500217108119844
+   },
+   {
+    "split": "LOCO:Brimm.",
+    "n_test": 40,
+    "mae_baseline_peer_median": 1.3380818007077293,
+    "mae_model": 1.27954676228214,
+    "spearman_model": 0.23678408957049382
+   },
+   {
+    "split": "LOCO:Carl Invests",
+    "n_test": 76,
+    "mae_baseline_peer_median": 1.236279964686382,
+    "mae_model": 1.2155226863918245,
+    "spearman_model": 0.3274094326725906
+   },
+   {
+    "split": "LOCO:Crayon Capital",
+    "n_test": 27,
+    "mae_baseline_peer_median": 1.0647969027530233,
+    "mae_model": 1.0267503492050565,
+    "spearman_model": 0.18803418803418803
+   },
+   {
+    "split": "LOCO:Dark Ledger",
+    "n_test": 30,
+    "mae_baseline_peer_median": 1.2577094068853611,
+    "mae_model": 1.2102076961193728,
+    "spearman_model": 0.24805339265850945
+   },
+   {
+    "split": "LOCO:Lucas Grant",
+    "n_test": 75,
+    "mae_baseline_peer_median": 0.7834699256879419,
+    "mae_model": 0.8485503207272854,
+    "spearman_model": -0.013058321479374111
+   },
+   {
+    "split": "LOCO:Nick Invests",
+    "n_test": 348,
+    "mae_baseline_peer_median": 0.7149919573077707,
+    "mae_model": 0.7500837073203627,
+    "spearman_model": 0.09020350091013321
+   },
+   {
+    "split": "LOCO:Sonny Finance",
+    "n_test": 34,
+    "mae_baseline_peer_median": 1.14677895525995,
+    "mae_model": 1.1296385254378416,
+    "spearman_model": 0.13521772345301758
+   }
+  ]
+ },
+ "descriptive": {
+  "age_slope_originals": {
+   "Bob Invests": {
+    "n": 50,
+    "slope": 1.338
+   },
+   "Brimm.": {
+    "n": 44,
+    "slope": -0.081
+   },
+   "Carl Invests": {
+    "n": 77,
+    "slope": 0.343
+   },
+   "Crayon Capital": {
+    "n": 29,
+    "slope": 0.645
+   },
+   "Dark Ledger": {
+    "n": 35,
+    "slope": -0.164
+   },
+   "Lucas Grant": {
+    "n": 75,
+    "slope": 0.24
+   },
+   "Nick Invests": {
+    "n": 348,
+    "slope": 0.863
+   },
+   "Primate Economics": {
+    "n": 15,
+    "slope": 0.823
+   },
+   "Sonny Finance": {
+    "n": 36,
+    "slope": -0.315
+   }
+  },
+  "age_slope_replication": {
+   "Casually Finance": {
+    "n": 33,
+    "slope": -0.656
+   },
+   "Logical Money": {
+    "n": 18,
+    "slope": 0.442
+   },
+   "Mark Invests": {
+    "n": 75,
+    "slope": 0.26
+   },
+   "MonkeyExplains": {
+    "n": 47,
+    "slope": 0.026
+   },
+   "Uncle Frank Retirement": {
+    "n": 24,
+    "slope": -1.605
+   },
+   "Uncle John Financial": {
+    "n": 47,
+    "slope": 0.448
+   }
+  },
+  "age_slope_registry_all_niches": {
+   "Apesthetic": {
+    "n": 20,
+    "slope": 0.454
+   },
+   "Better Health While Aging": {
+    "n": 80,
+    "slope": -0.229
+   },
+   "Brimm.": {
+    "n": 44,
+    "slope": -0.083
+   },
+   "Bro Pump": {
+    "n": 19,
+    "slope": 2.355
+   },
+   "CIPHER UNIT": {
+    "n": 15,
+    "slope": -0.679
+   },
+   "Crayon Capital": {
+    "n": 28,
+    "slope": 0.706
+   },
+   "Dark Ledger": {
+    "n": 35,
+    "slope": -0.172
+   },
+   "Decode Your Heart - Dr. Rehan": {
+    "n": 24,
+    "slope": -0.201
+   },
+   "Doctor Thomas": {
+    "n": 21,
+    "slope": 3.996
+   },
+   "Dr. Ares Senior": {
+    "n": 29,
+    "slope": 0.315
+   },
+   "Dr. Okoro": {
+    "n": 65,
+    "slope": 0.876
+   },
+   "Explain In Paint": {
+    "n": 72,
+    "slope": 1.128
+   },
+   "Hypothetically": {
+    "n": 38,
+    "slope": 0.354
+   },
+   "Ink Explainer": {
+    "n": 15,
+    "slope": -0.245
+   },
+   "Lost Legacy": {
+    "n": 44,
+    "slope": 0.602
+   },
+   "Mack": {
+    "n": 68,
+    "slope": 1.303
+   },
+   "My Chaotic Stories": {
+    "n": 23,
+    "slope": 1.7
+   },
+   "Past Tense": {
+    "n": 23,
+    "slope": 0.708
+   },
+   "Primate Economics": {
+    "n": 15,
+    "slope": 0.833
+   },
+   "Senior Health Hub": {
+    "n": 113,
+    "slope": -0.022
+   },
+   "Sonny Finance": {
+    "n": 35,
+    "slope": -0.222
+   },
+   "Stickly": {
+    "n": 66,
+    "slope": 1.144
+   },
+   "The Life Outline": {
+    "n": 15,
+    "slope": 6.144
+   },
+   "Unknown Frequencies": {
+    "n": 19,
+    "slope": 0.177
+   },
+   "Zenn": {
+    "n": 32,
+    "slope": 1.498
+   },
+   "Zoozle": {
+    "n": 39,
+    "slope": -0.511
+   },
+   "ago.": {
+    "n": 49,
+    "slope": 2.713
+   },
+   "inkly": {
+    "n": 28,
+    "slope": -1.568
+   },
+   "xkcd's What If?": {
+    "n": 42,
+    "slope": 0.574
+   }
+  },
+  "concentration_registry_all_niches": {
+   "Apesthetic": {
+    "n": 21,
+    "top10pct_share_of_views": 0.424,
+    "max_over_median": 14.4
+   },
+   "Better Health While Aging": {
+    "n": 97,
+    "top10pct_share_of_views": 0.685,
+    "max_over_median": 177.1
+   },
+   "Brimm.": {
+    "n": 44,
+    "top10pct_share_of_views": 0.691,
+    "max_over_median": 83.7
+   },
+   "Bro Pump": {
+    "n": 20,
+    "top10pct_share_of_views": 0.677,
+    "max_over_median": 34.2
+   },
+   "CIPHER UNIT": {
+    "n": 17,
+    "top10pct_share_of_views": 0.947,
+    "max_over_median": 1056.8
+   },
+   "Crayon Capital": {
+    "n": 29,
+    "top10pct_share_of_views": 0.493,
+    "max_over_median": 16.6
+   },
+   "Dark Ledger": {
+    "n": 38,
+    "top10pct_share_of_views": 0.669,
+    "max_over_median": 89.8
+   },
+   "Decode Your Heart - Dr. Rehan": {
+    "n": 54,
+    "top10pct_share_of_views": 0.481,
+    "max_over_median": 14.7
+   },
+   "Doctor Thomas": {
+    "n": 21,
+    "top10pct_share_of_views": 0.741,
+    "max_over_median": 108.8
+   },
+   "Dr. Ares Senior": {
+    "n": 35,
+    "top10pct_share_of_views": 0.554,
+    "max_over_median": 32.4
+   },
+   "Dr. Okoro": {
+    "n": 66,
+    "top10pct_share_of_views": 0.974,
+    "max_over_median": 2484.8
+   },
+   "Explain In Paint": {
+    "n": 79,
+    "top10pct_share_of_views": 0.731,
+    "max_over_median": 103.8
+   },
+   "Genius History": {
+    "n": 10,
+    "top10pct_share_of_views": 0.579,
+    "max_over_median": 12.5
+   },
+   "Hypothetically": {
+    "n": 38,
+    "top10pct_share_of_views": 0.457,
+    "max_over_median": 15.2
+   },
+   "Ink Explainer": {
+    "n": 15,
+    "top10pct_share_of_views": 0.512,
+    "max_over_median": 11.3
+   },
+   "Lost Legacy": {
+    "n": 45,
+    "top10pct_share_of_views": 0.445,
+    "max_over_median": 14.9
+   },
+   "Mack": {
+    "n": 75,
+    "top10pct_share_of_views": 0.638,
+    "max_over_median": 86.4
+   },
+   "Money Life POV": {
+    "n": 18,
+    "top10pct_share_of_views": 0.415,
+    "max_over_median": 9.8
+   },
+   "My Chaotic Stories": {
+    "n": 23,
+    "top10pct_share_of_views": 0.854,
+    "max_over_median": 164.4
+   },
+   "Oddlyhuman": {
+    "n": 11,
+    "top10pct_share_of_views": 0.969,
+    "max_over_median": 279.2
+   },
+   "Past Tense": {
+    "n": 24,
+    "top10pct_share_of_views": 0.712,
+    "max_over_median": 236.6
+   },
+   "Primate Economics": {
+    "n": 28,
+    "top10pct_share_of_views": 0.604,
+    "max_over_median": 42.7
+   },
+   "Senior Health Hub": {
+    "n": 116,
+    "top10pct_share_of_views": 0.811,
+    "max_over_median": 315.3
+   },
+   "Shaami Finance": {
+    "n": 13,
+    "top10pct_share_of_views": 0.551,
+    "max_over_median": 41.1
+   },
+   "Sonny Finance": {
+    "n": 36,
+    "top10pct_share_of_views": 0.609,
+    "max_over_median": 33.7
+   },
+   "Stickly": {
+    "n": 73,
+    "top10pct_share_of_views": 0.807,
+    "max_over_median": 245.8
+   },
+   "The Life Outline": {
+    "n": 15,
+    "top10pct_share_of_views": 0.881,
+    "max_over_median": 308.5
+   },
+   "Unknown Frequencies": {
+    "n": 19,
+    "top10pct_share_of_views": 0.342,
+    "max_over_median": 6.1
+   },
+   "Zenn": {
+    "n": 33,
+    "top10pct_share_of_views": 0.771,
+    "max_over_median": 255.1
+   },
+   "Zoozle": {
+    "n": 39,
+    "top10pct_share_of_views": 0.696,
+    "max_over_median": 63.5
+   },
+   "ago.": {
+    "n": 49,
+    "top10pct_share_of_views": 0.606,
+    "max_over_median": 63.6
+   },
+   "inkly": {
+    "n": 28,
+    "top10pct_share_of_views": 0.983,
+    "max_over_median": 1013.4
+   },
+   "xkcd's What If?": {
+    "n": 82,
+    "top10pct_share_of_views": 0.323,
+    "max_over_median": 6.3
+   }
+  },
+  "variance_share_originals": {
+   "n": 734,
+   "channels": 11,
+   "between_channel_share_of_variance_log_vpd": 0.378
+  },
+  "variance_share_registry": {
+   "n": 1169,
+   "channels": 35,
+   "between_channel_share_of_variance_log_vpd": 0.575
+  },
+  "registry_rows_with_dated_snapshot": 1319,
+  "registry_channels": 35,
+  "tier_distribution_ours_originals": {
+   "STRONG": 179,
+   "TYPICAL": 383,
+   "WEAK": 161
+  },
+  "tier_distribution_replication": {
+   "WEAK": 87,
+   "TYPICAL": 240,
+   "STRONG": 91
+  },
+  "shorts_vs_long_lifetime_vpd": {
+   "Better Health While Aging": {
+    "shorts_n": 17,
+    "long_n": 80,
+    "shorts_median_vpd": 5.5,
+    "long_median_vpd": 79.6
+   },
+   "Casually Finance": {
+    "shorts_n": 170,
+    "long_n": 33,
+    "shorts_median_vpd": 217.0,
+    "long_median_vpd": 2647.3
+   },
+   "Decode Your Heart - Dr. Rehan": {
+    "shorts_n": 28,
+    "long_n": 24,
+    "shorts_median_vpd": 1.1,
+    "long_median_vpd": 0.6
+   },
+   "MonkeyExplains": {
+    "shorts_n": 8,
+    "long_n": 47,
+    "shorts_median_vpd": 15.2,
+    "long_median_vpd": 1350.5
+   },
+   "Primate Economics": {
+    "shorts_n": 13,
+    "long_n": 16,
+    "shorts_median_vpd": 305.6,
+    "long_median_vpd": 2873.8
+   },
+   "xkcd's What If?": {
+    "shorts_n": 39,
+    "long_n": 42,
+    "shorts_median_vpd": 4675.8,
+    "long_median_vpd": 4123.2
+   }
+  }
+ }
+}

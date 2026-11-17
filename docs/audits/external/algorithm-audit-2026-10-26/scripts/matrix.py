@@ -1,0 +1,69 @@
+"""Write YIOS_ALGORITHM_VS_EVIDENCE_MATRIX.csv. Usage: python3 -I matrix.py <audit_root>"""
+import csv, sys
+
+ROOT = sys.argv[1]
+FIN = 'research/finance-economics-intelligence/'
+REG = 'data/catalog/youtube_channel_registry.db:videos'
+H = ['question', 'surface', 'official_mechanism', 'official_source', 'mechanism_label', 'yios_variable', 'source_path', 'available_sample',
+     'evidence_status', 'assumption', 'confounders', 'confidence', 'testable_with_yios', 'supporting_video_ids', 'contradictory_video_ids']
+ROWS = [
+    ['Does appeal (choosing to watch when shown) drive distribution?', 'Home/Suggested/Search', 'Appeal = chose to watch vs ignored / not interested', 'support.google.com/youtube/answer/16559650', 'OFFICIALLY_DOCUMENTED_CURRENT',
+     'impressions, impressions CTR', 'NOT_AVAILABLE (first_party_analytics_status=SCHEMA_READY_NO_DATA 75/75)', '0', 'NOT_AVAILABLE', 'none', 'n/a', 'n/a', 'NO (needs owned Studio export)', '', ''],
+    ['Does engagement (AVD/APV) drive ranking?', 'All', 'AVD and average percentage viewed used as signals', 'support.google.com/youtube/answer/11914225', 'OFFICIALLY_DOCUMENTED_CURRENT',
+     'retention, AVD, APV', 'NOT_AVAILABLE', '0', 'NOT_AVAILABLE', 'none', 'n/a', 'n/a', 'NO', '', ''],
+    ['Is long-term satisfaction the objective?', 'All', 'Maximize long-term viewer satisfaction; surveys; valued watchtime', 'support.google.com/youtube/answer/16533387; blog.youtube 2021-09-15', 'OFFICIALLY_DOCUMENTED_CURRENT',
+     'like-rate (public) as weak proxy', REG + '.likes,views', '9 channels, 701 videos', 'EMPIRICALLY_OBSERVED_IN_YIOS: like-rate negatively associated with peer ratio in 9/9 channels',
+     'like-rate is not satisfaction', 'views in denominator; audience mix of breakouts', 'MEDIUM (association) / LOW (as satisfaction)', 'PARTIAL', '', ''],
+    ['Does Home rely on watch history / personalization?', 'Home', 'Home primarily relies on watch history; per-viewer real-time profile', 'support.google.com/youtube/answer/16089387', 'OFFICIALLY_DOCUMENTED_CURRENT',
+     'none (viewer-level data)', 'NOT_AVAILABLE', '0', 'UNTESTABLE_FROM_OUTSIDE', 'n/a', 'n/a', 'HIGH (official)', 'NO', '', ''],
+    ['Is Up Next driven by the current video?', 'Suggested', 'Current video is the main signal', 'support.google.com/youtube/answer/16089387', 'OFFICIALLY_DOCUMENTED_CURRENT',
+     'traffic source Suggested', 'NOT_AVAILABLE', '0', 'NOT_AVAILABLE', 'n/a', 'n/a', 'HIGH (official)', 'NO', '', ''],
+    ['Does search rank on relevance + engagement + quality?', 'Search', 'Title/tags/description/content match; watch time for that query; expertise-authoritativeness-trust', 'support.google.com/youtube/answer/16090438', 'OFFICIALLY_DOCUMENTED_CURRENT',
+     'title text; search traffic share', FIN + 'VIDEO_AUDIT_966.csv; traffic NOT_AVAILABLE', '1141 rated videos (titles only)', 'PLAUSIBLE_HYPOTHESIS: decision-math comparison concepts strong on 2 channels each',
+     'strong lifetime reach of comparison titles reflects search demand', 'channel size, timing, topic demand unmeasured', 'LOW', 'NO (needs traffic source)', 'nkT_K8l1rEw|pnJCpIhshX4|bbP8Mr_MThk|k-ZxdjawYDs|rnbgKswe2nA|OX-fSJzHyPI', 'TTilKZZd3Es'],
+    ['Do curiosity-gap titles outperform?', 'Home/Suggested (packaging)', 'Titles/thumbnails communicate value and set expectations', 'support.google.com/youtube/answer/16559650', 'OFFICIALLY_DOCUMENTED_CURRENT (packaging matters); effect size UNKNOWN',
+     'H02 regex on title; peer ratio', FIN + 'VIDEO_AUDIT_966.csv; derived/per_video_features.csv', '700 orig / 355 replication', 'SUGGESTIVE_NOT_ROBUST: 1.35x [1.11,1.62] q=0.042; replication 0.96x',
+     'regex captures curiosity framing', 'channel grammar; co-occurring wealth words; upload-era title unknown', 'LOW', 'PARTIAL (association only)', '7sbA9WZrfHk|m5WPi3LX9z0|TDEme_uxx4c', 'eB0XSeS7y8Q|w5rktnyQfCI|M5EdVY6AyA0'],
+    ['Do threat/fear titles outperform?', 'Packaging', 'none specific', '', 'UNKNOWN_OR_UNVERIFIABLE',
+     'H03a regex', 'derived/per_video_features.csv', '687 orig / 384 replication', 'NOT_SUPPORTED (orig 0.75x q=0.042 opposite direction; replication 1.10x)',
+     'regex captures threat framing', 'topic; channel', 'LOW', 'PARTIAL', 'tynTfEi4518|pfYMWypWbYY', 'KHLY6SyLvgQ|slIKJx4U0YM'],
+    ['Do opportunity/wealth titles outperform?', 'Packaging', 'none specific', '', 'UNKNOWN_OR_UNVERIFIABLE', 'H03b regex', 'derived/per_video_features.csv', '673 / 309',
+     'SUGGESTIVE_NOT_ROBUST: 1.28x q=0.089; replication 0.99x', 'regex', 'overlaps H02', 'LOW', 'PARTIAL', '2LXED3ENhck|ElGhlrZNb_4|-HeOz5CF9ys', 'eB0XSeS7y8Q|2RAV0z4kDrs|PbzkmAofNO4'],
+    ['Do money amounts in titles outperform?', 'Packaging', 'none specific', '', 'UNKNOWN_OR_UNVERIFIABLE', 'H01 regex', 'derived/per_video_features.csv', '687 / 340',
+     'NOT_SUPPORTED: 1.07x p=0.55; replication 0.93x', 'regex', 'channel style', 'MEDIUM (null)', 'PARTIAL', '7sbA9WZrfHk|2LXED3ENhck', 'T58qpmXZmoY|ddpHhCVTDeY|w5rktnyQfCI'],
+    ['Does explicit audience targeting in titles help?', 'Packaging', 'Know core/potential audience', 'support.google.com/youtube/answer/16559650', 'OFFICIALLY_DOCUMENTED_CURRENT (advice)', 'H05 regex', 'derived/per_video_features.csv', '542 / 326',
+     'NOT_SUPPORTED / UNSTABLE: orig 1.08x; replication 0.50x', 'regex', 'identical titles flip by channel', 'LOW', 'PARTIAL', 'uByLqFbCcEA|vb7UojsINvg', '6dw0y-ATdwI|cZQ47oqK2gU'],
+    ['Do first seconds / intro matter?', 'All incl. Shorts', 'First seconds decide stay/leave; intro should deliver promise fast', 'support.google.com/youtube/answer/16559650', 'OFFICIALLY_DOCUMENTED_CURRENT',
+     'H11 opening-60-word regex (auto captions, untimed)', REG.replace(':videos', ':transcripts'), '710 orig; 0 replication', 'SUGGESTIVE_UNREPLICATED: question opening 0.74x q=0.042',
+     'first 60 words approximate the opening', 'untimed text; ASR; channel templates', 'LOW', 'PARTIAL (needs retention)', 'tynTfEi4518', 'TTilKZZd3Es'],
+    ['Is video length associated with reach?', 'All', 'No format favoured', 'support.google.com/youtube/answer/11914225', 'OFFICIALLY_DOCUMENTED_CURRENT', 'duration_seconds', FIN + 'VIDEO_AUDIT_966.csv', '8 orig + 6 replication channels',
+     'INCONCLUSIVE: median within-channel rho 0.09', 'duration exogenous to topic', 'topic depth; channel norms', 'LOW', 'PARTIAL', '', ''],
+    ['Does publish time matter?', 'All', 'Publish time does not appear to affect long-term viewership', 'support.google.com/youtube/answer/16533387', 'OFFICIALLY_DOCUMENTED_CURRENT', 'published_at weekday/hour UTC', FIN + 'VIDEO_AUDIT_966.csv', '723',
+     'CONSISTENT_WITH_OFFICIAL: weekend 0.94 vs weekday 1.00 median ratio; hour blocks confounded', 'UTC approximates audience time', 'channel schedules/time zones', 'LOW', 'PARTIAL', '', ''],
+    ['Are evergreen topics more durable?', 'Search/Home', 'Seasonality and topic interest affect reach', 'support.google.com/youtube/answer/11914225', 'OFFICIALLY_DOCUMENTED_CURRENT', 'H10 timely-marker regex; Time_sensitivity (UNVERIFIED for 966)', FIN + 'VIDEO_MASTER.csv',
+     '499 / 369', 'NOT_SUPPORTED/UNDERPOWERED: 0.85x p=0.29; replication 0.90x', 'timely words mark timely topics', 'no repeated snapshots -> no decay curves', 'LOW', 'NO (needs repeated snapshots + traffic)', '', ''],
+    ['Do outcomes concentrate in rare hits?', 'All', 'Ranked against all videos a viewer might watch; competition', 'support.google.com/youtube/answer/7628154', 'OFFICIALLY_DOCUMENTED_CURRENT', 'views', REG, '33 channels', 'EMPIRICALLY_OBSERVED_IN_YIOS: top 10% videos = median 66.9% of views',
+     'frozen views reflect lifetime distribution', 'age mix', 'HIGH (descriptive)', 'YES', '', ''],
+    ['Does channel identity dominate outcomes?', 'All', 'Per-viewer interest matching; subscriptions one signal', 'support.google.com/youtube/answer/16089387', 'OFFICIALLY_DOCUMENTED_CURRENT', 'log views/day by channel', REG, '734 Finance / 1169 all-niche', 'EMPIRICALLY_OBSERVED_IN_YIOS: 37.8% / 57.5% between-channel variance',
+     'age differences similar across channels', 'age; snapshot timing', 'HIGH (descriptive)', 'YES', '', ''],
+    ['Does past channel success transfer to a new video?', 'All', 'Fresh performance data for each individual video', 'support.google.com/youtube/answer/16533387', 'OFFICIALLY_DOCUMENTED_CURRENT', 'within-template outcome spread', 'derived/analysis_results.json:title_templates', '5 templates >=4 videos',
+     'EMPIRICALLY_OBSERVED_IN_YIOS: same template yields STRONG and WEAK', 'skeleton = first 3 words', 'topic within template', 'MEDIUM', 'YES', '2DBQnxaDScs|vb7UojsINvg', 'rbnPR2Dnmz4|8q9YRFeFaus'],
+    ['Do views/day decay with age (lifetime proxy bias)?', 'All', 'n/a (measurement)', '', 'EMPIRICALLY_OBSERVED_IN_YIOS', 'log views vs log age', REG, '9 / 6 / 29 channels', 'OBSERVED: median slope 0.34 / 0.26 / 0.57 (<1)',
+     'cross-sectional ages approximate trajectories', 'channel growth over time', 'HIGH (descriptive)', 'YES', '', ''],
+    ['Are thumbnails with faces/arrows/red better?', 'Home/Search', 'Thumbnails communicate value; bigger homepage thumbnails tested', 'support.google.com/youtube/answer/16559650', 'OFFICIALLY_DOCUMENTED_CURRENT (importance) / UNKNOWN (features)', 'analyst thumbnail prose (outcome-aware)', FIN + 'VIDEO_AUDIT_966.jsonl:thumbnail.analysis', '419 rated deep audits',
+     'NOT_SUPPORTED (min q=0.395); contaminated coding', 'current artwork = upload artwork (unknown)', 'analysts knew tiers', 'VERY LOW', 'NO (needs blind coding + A/B)', '', ''],
+    ['Do Shorts and long-form share ranking logic?', 'Shorts', 'Shorts feed personalized; stayed-to-watch metric; no format favoured', 'support.google.com/youtube/answer/9314355; 11914225', 'OFFICIALLY_DOCUMENTED_CURRENT (metrics) / UNKNOWN (architecture)', 'Shorts vs long lifetime views/day', REG, '6 channels with both',
+     'NOT_COMPARABLE_UNITS', 'views comparable across formats (false)', 'view counting differs', 'n/a', 'NO', '', ''],
+    ['Does packaging/promise mismatch hurt?', 'All', 'High CTR + low AVD + lower impressions = clickbait pattern; less likely recommended', 'support.google.com/youtube/answer/7628154', 'OFFICIALLY_DOCUMENTED_CURRENT', 'analyst mismatch notes', FIN + 'VIDEO_AUDIT_966.jsonl:title.analysis', '33 flagged (outcome-aware)',
+     'NOT_TESTABLE_CLEANLY', 'n/a', 'coders saw outcomes', 'n/a', 'NO (needs blind coding + CTR/AVD)', '', ''],
+    ['Does visual editing density drive retention?', 'All', 'Experiment with editing styles; measure retention', 'support.google.com/youtube/answer/16559650', 'OFFICIALLY_DOCUMENTED_CURRENT (advice)', 'visual states/min (VF)', 'research/visual-forensics/channels/casual-finance/*/PORTABLE_MANIFEST.json', '2 videos',
+     'UNTESTABLE (n=2; one breakout, one typical)', 'n/a', 'length, topic, date', 'n/a', 'NO', 'Uumnx2Fo6cE', 'o3FQcd91MIs'],
+    ['Can we predict outperformance from metadata?', 'All', 'No set formula', 'blog.youtube 2021-09-15', 'OFFICIALLY_DOCUMENTED_CURRENT', 'ridge on title features + length', 'derived/analysis_results.json:prediction', '178 temporal / 231 unseen-channel test',
+     'REJECTED: model MAE not better than peer-median baseline', 'features capture packaging', 'missing private signals', 'HIGH (negative result)', 'YES', '', ''],
+]
+with open(f'{ROOT}/YIOS_ALGORITHM_VS_EVIDENCE_MATRIX.csv', 'w', newline='') as fh:
+    w = csv.writer(fh)
+    w.writerow(H)
+    w.writerows(ROWS)
+assert all(len(r) == len(H) for r in ROWS)
+print(len(ROWS), 'rows')
