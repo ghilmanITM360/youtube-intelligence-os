@@ -1,0 +1,58 @@
+{
+  "section_type": "main_chapter",
+  "chapter_title": "FedEx Bandwidth",
+  "original_question": "When—if ever—will the bandwidth of the Internet surpass that of FedEx?",
+  "submitted_by": "Johan Öbrink",
+  "pdf_page_start": 207,
+  "pdf_page_end": 209,
+  "short_answer_summary": "Bulk transport of dense storage can outperform network throughput, but its latency is terrible; the comparison depends on changing storage and network technology.",
+  "detailed_scientific_explanation": "The author compares daily aircraft payload capacity with data density. FedEx's fleet filled with terabyte drives could move about 150 EB/day or 14 Pb/s, almost 100 times the source-era Internet traffic estimate. MicroSD cards improve density to roughly 160 TB/kg, taking the hypothetical fleet to 177 Pb/s or 2 ZB/day. Holding storage density fixed and growing Internet traffic 29% annually would reach that level around 2040, but storage also improves. Fiber clusters could already technically beat the fleet if sufficiently multiplied, and including all US freight raises physical data throughput further. Thus the claim is about hypothetical aggregate bulk capacity, not useful instantaneous connectivity; day-scale delivery produces huge ping times.",
+  "initial_assumptions": [
+    "Full freight payload devoted to storage media",
+    "Cost and loading/reading infrastructure largely ignored",
+    "Source-era storage capacity and traffic estimates"
+  ],
+  "scientific_principles": [
+    "throughput versus latency",
+    "storage density",
+    "unit conversion",
+    "growth extrapolation"
+  ],
+  "calculations": [],
+  "quantitative_facts": [
+    {
+      "pdf_page": 207,
+      "value": "Internet 167 Tb/s; 654 FedEx aircraft; 26.5 million lb/day; 78 g per 1 TB SSD; 150 EB/day≈14 Pb/s"
+    },
+    {
+      "pdf_page": 208,
+      "value": "10 kg box: 136 TB; 25,000 microSD cards:1.6 PB; 160 TB/kg; FedEx 177 Pb/s≈2 ZB/day; 29% annual growth→2040 if capacity fixed"
+    },
+    {
+      "pdf_page": 209,
+      "value": "~200 petabit/s fiber clusters beat FedEx; all US freight ~500 Eb/s; ~500,000 petabit cables; 80,000,000 ms ping"
+    }
+  ],
+  "footnotes": [],
+  "references": [],
+  "uncertainties_and_limitations": [
+    "Highly time-sensitive 2014 comparison; not current Internet/FedEx fact",
+    "Media ingestion and handling infrastructure omitted"
+  ],
+  "verification_status": "VISUALLY_REVIEWED; SOURCE_OCR_NEEDS_PROOFREAD",
+  "question_id": "WI-0061",
+  "printed_page_start": 192,
+  "printed_page_end": 194,
+  "source_page_references": [
+    207,
+    208,
+    209
+  ],
+  "extraction_notes": [
+    "Source transcript is machine OCR and requires line-by-line proofreading against page images."
+  ],
+  "original_answer_transcription_file": "03_ORIGINAL_TRANSCRIPTIONS/chapters/WI-0061.md",
+  "question_topics": [],
+  "figures": [],
+  "related_question_ids": []
+}

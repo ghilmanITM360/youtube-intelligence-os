@@ -1,0 +1,43 @@
+160 WHAT IF?
+
+Six of these are the classic character stats from role-playing games: strength,
+constitution, dexterity, charisma, wisdom, and intelligence. The last one is the
+sex-determining chromosome.
+
+Here’s an example DNA “strand”:
+
+1. STR 15
+2. CON 2
+3. DEX 1X
+4. CHR 12
+5. WIS 0.5X
+6. INT 14
+7. SEX X
+
+In our model, each chromosome contains one piece of information. This piece
+of information is either a stat (a number, usually between 1 and 18) or a multi-
+plier. The last one, SEX, is the sex-determining chromosome, which, as with real
+human genetics, can be “X” or “Y.”
+
+Just like in real life, each person has two sets of chromosomes—one from
+their mother and one from their father. Imagine that your genes looked like this:
+
+Mom'sDNA _ Dad’s DNA
+
+1. STR 15 5
+2. CON 2X 12
+3. DEX 1X 14
+4. CHR 12 1.5X
+5. WIS 0.5X 16
+6. INT 14 15
+7. SEX X X
+
+The combination of these two sets of stats determines a person’s characteris-
+tics. Here’s the simple rule for combining stats in our system:
+
+If you have a number for both versions of a chromosome, you get the bigger
+number as your stat. If you have a number on one chromosome and a multiplier
+on the other, your stat is the number times the multiplier. If you have a multi-
+plier on both sides, you get a stat of 1.’
+
+1 Because 1 is the multiplicative identity.
