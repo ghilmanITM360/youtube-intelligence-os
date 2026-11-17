@@ -1,0 +1,39 @@
+# Could you make an umbrella out of lasers?
+
+| Field | Value |
+|---|---|
+| Video ID | `zgBTwtg7H8E` |
+| URL | https://www.youtube.com/watch?v=zgBTwtg7H8E |
+| Format | long |
+| Published | 2024-02-20 |
+| Duration | 00:03:05 |
+| Views (at acquisition) | 1,830,229 |
+| Words | 636 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/zgBTwtg7H8E.txt` |
+| Source SHA-256 | `e28d18324a917c11739d2d74862ad7c76874eae153dc51230580234d3fe3606a` |
+
+## Script
+
+This is a question from Zach, who asks: Stopping rain from falling on something with an umbrella is boring. What if you tried to stop rain with a laser that targeted and vaporized each incoming droplet before it could come within ten feet of the ground?
+
+So stopping rain with a laser is one of those ideas that sounds totally reasonable, but… Well… ok. While the idea of a laser umbrella might be appealing, it— Ok. The idea of stopping rain with a laser is a thing we are currently talking about.
+
+Now, it's not a very practical idea.
+
+First, let's look at how much energy the laser would need. Vaporizing a liter of water takes about 2.6 megajoules of energy, and a big rainstorm might drop half an inch of rain per hour. Oddly enough, you can just multiply these two numbers together in a smart calculator like Wolfram Alpha or Google and the units work out to give you an answer in terms of power per surface area, which is exactly what we’re looking for: the calculator says we need 9 kilowatts of power per square meter we want to protect with our laser.
+
+9 kilowatts per square meter is nearly 10 times the amount of power Earth’s surface receives from the sun. And while that sounds like a lot of energy, we need to remember that water’s capacity to absorb energy is incredible: heating water up to boiling only takes around 10% of the energy – getting it from liquid to gas takes the other 90%.
+
+Ultimately we’re talking about filling the air with tons of hot steam, so either way, you'd be building a human-sized autoclave. Needless to say, autoclaves are not really a popular place to live.
+
+But it gets worse! Vaporizing a droplet of water with a laser is more complicated than it sounds. There are many, many, many papers on this subject, and the general gist is that it takes a lot of energy—delivered fast—to vaporize the droplet without just splattering it apart into little droplets.
+
+Here's what it looks like when a droplet gets zapped by a laser pulse: you can see that I’m jealous of anyone whose job it is to literally zap water with lasers. You can also see that the laser mostly splatters the droplet, rather than vaporizing it. The implication is that completely vaporizing a droplet would probably take even more than the already-unreasonable amount of power we were considering.
+
+Then there's the problem of targeting and aiming. In theory, this is probably solvable, perhaps even without military grade equipment: high speed cameras can triangulate the 3D position of a baseball or football hundreds of times per second to help referees make calls – a similar but more sophisticated system could track the incoming raindrops.
+
+As for targeting, adaptive optics allows for extremely fast and precise control of beams of light. Covering an area of a square meter would require something like 500 direct pulses per second. This is slow enough that you wouldn't run into any direct problems with relativity, but the device would—at minimum—need to be a lot more complicated than just a laser pointer on a swiveling base.
+
+It might seem easier to forget about targeting completely and just fire lasers in random directions. If you aim a laser beam in a random direction, how far will it go before it hits a drop? This is a pretty easy question to answer; it's the same as asking how far you can see in the rain, and the answer is at least several hundred meters. Unless you're trying to protect your whole neighborhood, firing powerful lasers in random directions probably won't help.
+
+And, honestly, if you are trying to protect your whole neighborhood... firing powerful lasers in random directions definitely won't help.

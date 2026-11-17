@@ -1,0 +1,37 @@
+# What if you had literally had all of the world's money?
+
+| Field | Value |
+|---|---|
+| Video ID | `jVy3qd70AqU` |
+| URL | https://www.youtube.com/shorts/jVy3qd70AqU |
+| Format | shorts |
+| Published | 2026-06-02 |
+| Duration | 00:01:12 |
+| Views (at acquisition) | 522,099 |
+| Words | 257 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/jVy3qd70AqU.txt` |
+| Source SHA-256 | `9b697bf42ed690fb8d9ce909fc74e7d4339a4c7721e4f315ef256ecec364eb8f` |
+
+## Script
+
+What would happen if you literally had all of the world's money?
+
+I don’t know how you would actually gather all the world’s money –let's just assume you invented some kind of money-summoning magic spell.
+
+Most of the world’s wealth isn’t physical money: it’s land and houses, bank accounts, businesses, intellectual property, cryptocurrency, and so on.
+
+Getting all the world's cash is much more straightforward. At any given time, there's a certain amount in the world –right now it's worth somewhere north of 10 trillion dollars– and you want it all.
+
+So you cast your magic spell and summon all the money.
+
+The pile of cash is taller than the statue of liberty and heavier than the empire state building. You probably don't want to be standing under it, so let's assume you're standing over here, off to the side.
+
+In total, US coins and bills are responsible for about 20% of the pile's weight, while the European Union contributes roughly 25%.
+
+Unfortunately for you, the pile doesn't stay a pile for long, and what seems like a safe distance isn't so safe.
+
+As it collapses, the pile spreads outward, a wave of money carrying a staggering amount of momentum.
+
+The pennies, quarters, loonies, and euros scour the landscape in an expanding ring. Within seconds, the wave of coins engulfs you and you die.
+
+There are ways to avoid this. You could, say, build a wall to contain the coins and then summon them. Unfortunately, now you might face a problem worse than death: Building code violations.
