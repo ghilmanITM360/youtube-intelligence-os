@@ -206,6 +206,7 @@ def test_two_packets_through_actual_builder_keep_other_965_records(tmp_path):
     with sqlite3.connect(db) as con:
         con.execute("CREATE TABLE videos(youtube_video_id TEXT, likes INTEGER, comments INTEGER, description TEXT, description_unavailable_reason TEXT)")
         con.executemany("INSERT INTO videos VALUES (?,0,0,'fixture','')", [(vid,) for vid in ids])
+    builder.FROZEN_REGISTRY = db  # the builder reads the frozen baseline copy; point it at the fixture DB
     builder.build()
     for index in (0, 1):
         previous = (base / LEDGER).read_bytes()
