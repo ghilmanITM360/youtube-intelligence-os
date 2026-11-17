@@ -1,0 +1,3 @@
+#!/bin/bash
+# ebur128 levels (MEASURED levels only; not listening). Usage: xk_loudness.sh <video_dir>...
+for v in "$@"; do ffmpeg -nostdin -nostats -hide_banner -i "$(cat $v/evidence/source_path.txt)" -af ebur128=peak=true -f null - 2>&1 | grep -A14 'Summary:' > $v/evidence/ebur128.txt; echo -n "$(basename $v) $(grep -m1 ' I:' $v/evidence/ebur128.txt | tr -s ' ')|"; done

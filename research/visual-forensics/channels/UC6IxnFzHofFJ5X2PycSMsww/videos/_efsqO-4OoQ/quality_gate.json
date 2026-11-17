@@ -1,0 +1,78 @@
+{
+ "video_id": "_efsqO-4OoQ",
+ "source_sha256": "3f3f2e4ef121b0ce610fc7978c1121636197e267cf74218c2e009af562b1c996",
+ "requested_mode": "DEEP",
+ "generated_utc": "2026-11-04T16:33:53Z",
+ "review_scope": {
+  "source_seconds_total": 48.552925,
+  "overview_sampling_hz": "every decoded frame measured",
+  "native_intervals_reviewed": "settled frame of every HOLD + sampled ACTIVITY frames at 1/4 scale (see coverage.json)",
+  "unreviewed_or_unverified_intervals": [
+   {
+    "seg": "G0020",
+    "start": 26.25,
+    "end": 26.4584,
+    "unviewed_frames": 3
+   },
+   {
+    "seg": "G0022",
+    "start": 26.6667,
+    "end": 26.9584,
+    "unviewed_frames": 4
+   },
+   {
+    "seg": "G0024",
+    "start": 27.1667,
+    "end": 27.2917,
+    "unviewed_frames": 1
+   },
+   {
+    "seg": "G0026",
+    "start": 27.75,
+    "end": 28.0,
+    "unviewed_frames": 3
+   },
+   {
+    "seg": "G0036",
+    "start": 38.4583,
+    "end": 38.7084,
+    "unviewed_frames": 3
+   }
+  ]
+ },
+ "gates": {
+  "source_identity": "PASS",
+  "full_temporal_overview": "PASS",
+  "candidate_shots_verified": "PASS",
+  "meaningful_state_timing": "PARTIAL",
+  "motion_design_review": "PARTIAL",
+  "creative_design_review": "PARTIAL",
+  "visual_script_mapping": "PARTIAL",
+  "production_blueprint": "PARTIAL",
+  "audio_human_listening": "BLOCKED",
+  "final_av_signoff": "BLOCKED"
+ },
+ "gate_evidence": {
+  "source_identity": "source_manifest.json + census/census.csv (channel tab listing)",
+  "full_temporal_overview": "tables/FULL_FRAME_MEASUREMENTS.csv all frames; tables/segments_v1.csv covers every frame",
+  "candidate_shots_verified": "tables/state_ledger.csv every segment classified from viewed tiles",
+  "meaningful_state_timing": "frame-precise onsets from measurements; unresolved: ['G0035']",
+  "motion_design_review": "17/22 activities viewed at every frame",
+  "creative_design_review": "visual_ct_scan_report.md \u00a74 + tables/palette_measured.json (tile-scale)",
+  "visual_script_mapping": "audio_visual_alignment.csv ASR_UNCERTIFIED; ASR-vs-caption ratio 0.9838",
+  "production_blueprint": "reconstruction_blueprint.md (derived prompts; no render test yet)",
+  "audio_human_listening": "campaign/AUDIO_LISTENING_CAPABILITY.json BLOCKED_CAPABILITY"
+ },
+ "final_video_status": "VISUAL_ANALYSIS_PARTIAL",
+ "overall": "PARTIAL",
+ "ct_scan_complete": false,
+ "full_av_signoff": false,
+ "limitations": [
+  "no actual listening",
+  "activity in-between frames sampled where noted",
+  "tile-scale (1/4) art review; small text partly illegible",
+  "reconstruction not render-tested per video"
+ ],
+ "reviewer": "rv1__efsqO-4OoQ",
+ "next_step": "independent review sample; reconstruction test via channel manual"
+}

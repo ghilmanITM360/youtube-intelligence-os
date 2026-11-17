@@ -1,0 +1,6855 @@
+{
+ "tool": "faster-whisper 1.2.1",
+ "ctranslate2": "4.8.5",
+ "model": "small.en",
+ "language": "en",
+ "language_prob": 1,
+ "duration_s": 267.22,
+ "runtime_s": 54.4,
+ "label": "PROVISIONAL_ASR_NOT_LISTENING",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 3.68,
+   "text": "This question comes from Ian, and many, many others, who asks,",
+   "avg_logprob": -0.122,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 4.3,
+   "end": 7.54,
+   "text": "Suppose you did drain the Earth's oceans and dumped the water on top of the Curiosity rover.",
+   "avg_logprob": -0.122,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 7.88,
+   "end": 9.58,
+   "text": "How would Mars change as the water accumulated?",
+   "avg_logprob": -0.122,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 11.76,
+   "end": 14.66,
+   "text": "In the previous What If, we opened a portal at the bottom of the Mariana Trench,",
+   "avg_logprob": -0.122,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 14.92,
+   "end": 17.62,
+   "text": "and we let the oceans drain out. For fun, we drained them to Mars.",
+   "avg_logprob": -0.122,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 17.84,
+   "end": 20.72,
+   "text": "The Curiosity rover is working so hard to find evidence of liquid water,",
+   "avg_logprob": -0.122,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 20.8,
+   "end": 22.58,
+   "text": "so I figured we could make things easier for it.",
+   "avg_logprob": -0.122,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 22.9,
+   "end": 24.72,
+   "text": "There is a lot of water currently on Mars.",
+   "avg_logprob": -0.122,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 25.0,
+   "end": 26.42,
+   "text": "The problem is, it's mostly frozen.",
+   "avg_logprob": -0.122,
+   "no_speech_prob": 0.008
+  },
+  {
+   "start": 26.42,
+   "end": 29.9,
+   "text": "Liquid water doesn't last long there, because Mars is too cold and there's too little air.",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 30.28,
+   "end": 34.02,
+   "text": "Before we inundated Curiosity, its temperature sensors recorded air and ground temperatures",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 34.02,
+   "end": 37.32,
+   "text": "ranging daily between minus 100 degrees and zero degrees Celsius,",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 37.58,
+   "end": 39.68,
+   "text": "with the ground occasionally getting a bit above freezing.",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 40.12,
+   "end": 41.38,
+   "text": "Here's the phase diagram for water,",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 41.56,
+   "end": 44.26,
+   "text": "and this line represents the average atmospheric pressure on Mars,",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 44.5,
+   "end": 47.58,
+   "text": "which by coincidence almost perfectly intersects the triple point of water.",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 48.04,
+   "end": 50.72,
+   "text": "It's technically possible for liquid water to exist on Mars",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 50.72,
+   "end": 52.92,
+   "text": "at the very lowest elevations on warm days,",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 53.1,
+   "end": 55.08,
+   "text": "since low elevations have higher atmospheric pressures,",
+   "avg_logprob": -0.069,
+   "no_speech_prob": 0.214
+  },
+  {
+   "start": 55.08,
+   "end": 57.62,
+   "text": "but on most of Mars' surface, water either stays frozen",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.035
+  },
+  {
+   "start": 57.62,
+   "end": 59.98,
+   "text": "or sublimates directly from water ice to water vapor.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.035
+  },
+  {
+   "start": 60.48,
+   "end": 63.22,
+   "text": "But the oceans we're dumping onto Mars wouldn't freeze solid any time soon.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.035
+  },
+  {
+   "start": 63.54,
+   "end": 66.74,
+   "text": "We're dumping a lot of water very fast, and Mars isn't that cold.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.035
+  },
+  {
+   "start": 67.12,
+   "end": 70.92,
+   "text": "The average temperatures of the North Pole on Earth range from minus 30 to zero degrees Celsius,",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.035
+  },
+  {
+   "start": 71.14,
+   "end": 74.3,
+   "text": "and only the top layer of water freezes, because ice is a decent insulator.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.035
+  },
+  {
+   "start": 74.6,
+   "end": 77.9,
+   "text": "Plus, the oceans are saltwater, and salt makes it slightly harder for water to freeze.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.035
+  },
+  {
+   "start": 78.48,
+   "end": 79.74,
+   "text": "Here's an elevation map of Mars.",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.035
+  },
+  {
+   "start": 80.12,
+   "end": 82.04,
+   "text": "Currently Curiosity is sitting in Gale Crater,",
+   "avg_logprob": -0.064,
+   "no_speech_prob": 0.035
+  },
+  {
+   "start": 82.04,
+   "end": 85.68,
+   "text": "a round depression in the Martian surface with a peak, nicknamed Mount Sharp, in the center.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 86.04,
+   "end": 87.6,
+   "text": "We're dumping a lot of water very fast,",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 87.76,
+   "end": 90.46,
+   "text": "which will start to turn Gale Crater into a lake, just like it would on Earth.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 90.92,
+   "end": 94.46,
+   "text": "As the flow continues, the lake fills in, burying Curiosity under hundreds of meters of water.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 94.94,
+   "end": 97.82,
+   "text": "Oddly, the water would freeze from above and below at the same time",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 97.82,
+   "end": 99.86,
+   "text": "because the Martian surface is also below freezing.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 100.4,
+   "end": 103.4,
+   "text": "Rocks and soil would almost certainly become frozen together into ice-dirt chunks",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 103.4,
+   "end": 105.96,
+   "text": "that break free and float up to the surface like icebergs.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 106.28,
+   "end": 109.14,
+   "text": "Eventually, Mount Sharp becomes an island surrounded by ice-covered water.",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 109.5,
+   "end": 111.32,
+   "text": "However, before the peak can disappear completely,",
+   "avg_logprob": -0.052,
+   "no_speech_prob": 0.158
+  },
+  {
+   "start": 111.32,
+   "end": 114.86,
+   "text": "the water spills over the north rim of the crater and starts flowing out across the sand.",
+   "avg_logprob": -0.057,
+   "no_speech_prob": 0.004
+  },
+  {
+   "start": 115.32,
+   "end": 118.34,
+   "text": "The water flows downhill to the north and pools in the north polar basin,",
+   "avg_logprob": -0.057,
+   "no_speech_prob": 0.004
+  },
+  {
+   "start": 118.44,
+   "end": 120.92,
+   "text": "while a layer of sea ice and rockbergs forms on top.",
+   "avg_logprob": -0.057,
+   "no_speech_prob": 0.004
+  },
+  {
+   "start": 121.46,
+   "end": 123.8,
+   "text": "When this kind of water release happens on Mars in real life,",
+   "avg_logprob": -0.057,
+   "no_speech_prob": 0.004
+  },
+  {
+   "start": 123.9,
+   "end": 127.06,
+   "text": "the trickle of water quickly freezes and sublimates before it can get very far.",
+   "avg_logprob": -0.057,
+   "no_speech_prob": 0.004
+  },
+  {
+   "start": 127.36,
+   "end": 129.48,
+   "text": "However, we've got a lot of ocean at our disposal.",
+   "avg_logprob": -0.057,
+   "no_speech_prob": 0.004
+  },
+  {
+   "start": 130.1,
+   "end": 132.2,
+   "text": "Gradually, the water will fill the north polar basin,",
+   "avg_logprob": -0.057,
+   "no_speech_prob": 0.004
+  },
+  {
+   "start": 132.34,
+   "end": 134.3,
+   "text": "covering the defunct Phoenix and Viking landers,",
+   "avg_logprob": -0.057,
+   "no_speech_prob": 0.004
+  },
+  {
+   "start": 134.36,
+   "end": 137.24,
+   "text": "unless they also get caught in freezing ice and lift it up to float on the surface.",
+   "avg_logprob": -0.057,
+   "no_speech_prob": 0.004
+  },
+  {
+   "start": 137.24,
+   "end": 141.08,
+   "text": "If we look at the rest of Mars, we'll see there's still a lot of land far from the water.",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 141.56,
+   "end": 142.36,
+   "text": "I'm a big fan of maps.",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 142.54,
+   "end": 145.26,
+   "text": "I've spent a lot of time drawing them and just looking at them over the years,",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 145.44,
+   "end": 147.56,
+   "text": "and I have to say, I think this one's kind of boring.",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 147.88,
+   "end": 150.34,
+   "text": "It's just this big empty swath of land with some ocean on top.",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 150.94,
+   "end": 154.62,
+   "text": "Luckily for us, if not for Mars, we haven't come close to running out of ocean yet.",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 155.04,
+   "end": 157.22,
+   "text": "At this point, the water fills in the Valles Marineris,",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 157.3,
+   "end": 159.38,
+   "text": "creating these unusual coastlines here.",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 159.76,
+   "end": 162.58,
+   "text": "The water and ice now reach the other Mars landers, carrying them south.",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 162.98,
+   "end": 165.34,
+   "text": "Eventually, the flow breaks through into the Hellas Impact Crater,",
+   "avg_logprob": -0.044,
+   "no_speech_prob": 0.295
+  },
+  {
+   "start": 165.34,
+   "end": 167.18,
+   "text": "the basin covering the lowest point on Mars,",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 167.58,
+   "end": 170.8,
+   "text": "and Perseverance is likely destroyed in the ensuing ice rock waterfall.",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 171.48,
+   "end": 173.74,
+   "text": "In my opinion, the rest of the map is starting to look pretty good.",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 173.98,
+   "end": 175.12,
+   "text": "Like, check out that crinkly coastline.",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 175.46,
+   "end": 176.56,
+   "text": "Like, this is a nice map.",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 176.78,
+   "end": 179.04,
+   "text": "This is the kind of map where if it were in the front of a fantasy novel,",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 179.2,
+   "end": 180.64,
+   "text": "I would spend a lot of time looking at it",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 180.64,
+   "end": 182.72,
+   "text": "and trying to decide where, like, my kingdom would be.",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 183.2,
+   "end": 184.6,
+   "text": "The swath of land in the southern hemisphere",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 184.6,
+   "end": 187.46,
+   "text": "splits into several large islands and innumerable smaller ones,",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 187.58,
+   "end": 191.1,
+   "text": "and also looks very nice, just a plus excellent map.",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 191.56,
+   "end": 194.04,
+   "text": "The water quickly finishes covering most of the high southern plateaus,",
+   "avg_logprob": -0.067,
+   "no_speech_prob": 0.009
+  },
+  {
+   "start": 194.04,
+   "end": 195.5,
+   "text": "leaving only a few islands left.",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 195.88,
+   "end": 197.38,
+   "text": "And then, at last, the flow stops.",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 197.74,
+   "end": 199.2,
+   "text": "The oceans back on Earth are drained,",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 199.62,
+   "end": 201.82,
+   "text": "and the rovers all have water damage",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 201.82,
+   "end": 203.2,
+   "text": "and are now probably out of warranty.",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 203.86,
+   "end": 206.1,
+   "text": "Olympus Mons and a few other volcanoes are still above water,",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 206.3,
+   "end": 207.78,
+   "text": "and they aren't even close to being covered.",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 208.0,
+   "end": 211.12,
+   "text": "Olympus Mons still rises well over 10 kilometers above the new sea level.",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 211.56,
+   "end": 213.6,
+   "text": "The oceans on Mars would last a very long time.",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 213.84,
+   "end": 216.54,
+   "text": "The surface of Mars is already at least 2% ice by weight,",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 216.74,
+   "end": 218.66,
+   "text": "and that ice gradually gets transported to the poles",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 218.66,
+   "end": 220.36,
+   "text": "by sublimation and atmospheric circulation,",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 220.44,
+   "end": 221.9,
+   "text": "but it's an incredibly slow process.",
+   "avg_logprob": -0.038,
+   "no_speech_prob": 0.105
+  },
+  {
+   "start": 221.9,
+   "end": 224.84,
+   "text": "We're covering the planet with an enormous amount of ice-topped water.",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 225.14,
+   "end": 227.2,
+   "text": "The ice would get thicker and thicker as the water below it cooled,",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 227.44,
+   "end": 228.98,
+   "text": "and eventually the oceans would freeze solid.",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 229.48,
+   "end": 231.86,
+   "text": "The surface would very gradually sublimate away to the poles,",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 232.12,
+   "end": 233.8,
+   "text": "and if the ice had picked up enough dirt and rocks,",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 234.2,
+   "end": 235.74,
+   "text": "they would be revealed and collect on top,",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 235.86,
+   "end": 237.88,
+   "text": "like how dirt collects on top of a melting snowbank,",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 238.04,
+   "end": 240.5,
+   "text": "until, perhaps, eventually, the equatorial regions of Mars",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 240.5,
+   "end": 243.26,
+   "text": "would become a dusty, rocky surface atop a bedrock of ice.",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 243.72,
+   "end": 245.36,
+   "text": "Except, maybe none of this would happen.",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 245.74,
+   "end": 247.22,
+   "text": "Water is a potent greenhouse gas,",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 247.42,
+   "end": 249.8,
+   "text": "and with so much new water available to evaporate into the atmosphere,",
+   "avg_logprob": -0.053,
+   "no_speech_prob": 0.021
+  },
+  {
+   "start": 249.8,
+   "end": 252.42,
+   "text": "maybe Mars would warm up and the oceans would remain liquid",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.059
+  },
+  {
+   "start": 252.42,
+   "end": 253.46,
+   "text": "as they are here on Earth.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.059
+  },
+  {
+   "start": 254.02,
+   "end": 255.24,
+   "text": "There's only one way to find out.",
+   "avg_logprob": -0.075,
+   "no_speech_prob": 0.059
+  }
+ ],
+ "words": [
+  {
+   "w": " This",
+   "start": 0.0,
+   "end": 0.46,
+   "p": 0.929
+  },
+  {
+   "w": " question",
+   "start": 0.46,
+   "end": 0.66,
+   "p": 0.993
+  },
+  {
+   "w": " comes",
+   "start": 0.66,
+   "end": 0.92,
+   "p": 0.986
+  },
+  {
+   "w": " from",
+   "start": 0.92,
+   "end": 1.14,
+   "p": 0.997
+  },
+  {
+   "w": " Ian,",
+   "start": 1.14,
+   "end": 1.42,
+   "p": 0.966
+  },
+  {
+   "w": " and",
+   "start": 1.72,
+   "end": 1.9,
+   "p": 0.975
+  },
+  {
+   "w": " many,",
+   "start": 1.9,
+   "end": 2.28,
+   "p": 0.944
+  },
+  {
+   "w": " many",
+   "start": 2.52,
+   "end": 2.56,
+   "p": 0.981
+  },
+  {
+   "w": " others,",
+   "start": 2.56,
+   "end": 3.0,
+   "p": 0.984
+  },
+  {
+   "w": " who",
+   "start": 3.28,
+   "end": 3.4,
+   "p": 0.994
+  },
+  {
+   "w": " asks,",
+   "start": 3.4,
+   "end": 3.68,
+   "p": 0.985
+  },
+  {
+   "w": " Suppose",
+   "start": 4.3,
+   "end": 4.3,
+   "p": 0.059
+  },
+  {
+   "w": " you",
+   "start": 4.3,
+   "end": 4.52,
+   "p": 0.991
+  },
+  {
+   "w": " did",
+   "start": 4.52,
+   "end": 4.7,
+   "p": 0.97
+  },
+  {
+   "w": " drain",
+   "start": 4.7,
+   "end": 5.0,
+   "p": 0.994
+  },
+  {
+   "w": " the",
+   "start": 5.0,
+   "end": 5.14,
+   "p": 0.99
+  },
+  {
+   "w": " Earth's",
+   "start": 5.14,
+   "end": 5.38,
+   "p": 0.872
+  },
+  {
+   "w": " oceans",
+   "start": 5.38,
+   "end": 5.62,
+   "p": 0.989
+  },
+  {
+   "w": " and",
+   "start": 5.62,
+   "end": 5.92,
+   "p": 0.859
+  },
+  {
+   "w": " dumped",
+   "start": 5.92,
+   "end": 6.1,
+   "p": 0.802
+  },
+  {
+   "w": " the",
+   "start": 6.1,
+   "end": 6.24,
+   "p": 0.986
+  },
+  {
+   "w": " water",
+   "start": 6.24,
+   "end": 6.38,
+   "p": 0.998
+  },
+  {
+   "w": " on",
+   "start": 6.38,
+   "end": 6.54,
+   "p": 0.989
+  },
+  {
+   "w": " top",
+   "start": 6.54,
+   "end": 6.66,
+   "p": 0.98
+  },
+  {
+   "w": " of",
+   "start": 6.66,
+   "end": 6.78,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 6.78,
+   "end": 6.88,
+   "p": 0.985
+  },
+  {
+   "w": " Curiosity",
+   "start": 6.88,
+   "end": 7.24,
+   "p": 0.986
+  },
+  {
+   "w": " rover.",
+   "start": 7.24,
+   "end": 7.54,
+   "p": 0.864
+  },
+  {
+   "w": " How",
+   "start": 7.88,
+   "end": 7.98,
+   "p": 0.944
+  },
+  {
+   "w": " would",
+   "start": 7.98,
+   "end": 8.14,
+   "p": 0.994
+  },
+  {
+   "w": " Mars",
+   "start": 8.14,
+   "end": 8.32,
+   "p": 0.989
+  },
+  {
+   "w": " change",
+   "start": 8.32,
+   "end": 8.62,
+   "p": 0.996
+  },
+  {
+   "w": " as",
+   "start": 8.62,
+   "end": 8.8,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 8.8,
+   "end": 8.92,
+   "p": 0.992
+  },
+  {
+   "w": " water",
+   "start": 8.92,
+   "end": 9.06,
+   "p": 0.999
+  },
+  {
+   "w": " accumulated?",
+   "start": 9.06,
+   "end": 9.58,
+   "p": 0.995
+  },
+  {
+   "w": " In",
+   "start": 11.76,
+   "end": 11.92,
+   "p": 0.84
+  },
+  {
+   "w": " the",
+   "start": 11.92,
+   "end": 12.04,
+   "p": 0.997
+  },
+  {
+   "w": " previous",
+   "start": 12.04,
+   "end": 12.32,
+   "p": 0.998
+  },
+  {
+   "w": " What",
+   "start": 12.32,
+   "end": 12.5,
+   "p": 0.333
+  },
+  {
+   "w": " If,",
+   "start": 12.5,
+   "end": 12.66,
+   "p": 0.709
+  },
+  {
+   "w": " we",
+   "start": 12.78,
+   "end": 12.88,
+   "p": 0.991
+  },
+  {
+   "w": " opened",
+   "start": 12.88,
+   "end": 13.12,
+   "p": 0.994
+  },
+  {
+   "w": " a",
+   "start": 13.12,
+   "end": 13.26,
+   "p": 0.982
+  },
+  {
+   "w": " portal",
+   "start": 13.26,
+   "end": 13.42,
+   "p": 0.984
+  },
+  {
+   "w": " at",
+   "start": 13.42,
+   "end": 13.62,
+   "p": 0.986
+  },
+  {
+   "w": " the",
+   "start": 13.62,
+   "end": 13.72,
+   "p": 0.999
+  },
+  {
+   "w": " bottom",
+   "start": 13.72,
+   "end": 13.88,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 13.88,
+   "end": 14.02,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 14.02,
+   "end": 14.1,
+   "p": 0.989
+  },
+  {
+   "w": " Mariana",
+   "start": 14.1,
+   "end": 14.38,
+   "p": 0.98
+  },
+  {
+   "w": " Trench,",
+   "start": 14.38,
+   "end": 14.66,
+   "p": 0.966
+  },
+  {
+   "w": " and",
+   "start": 14.92,
+   "end": 14.98,
+   "p": 0.989
+  },
+  {
+   "w": " we",
+   "start": 14.98,
+   "end": 15.12,
+   "p": 0.967
+  },
+  {
+   "w": " let",
+   "start": 15.12,
+   "end": 15.24,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 15.24,
+   "end": 15.38,
+   "p": 0.997
+  },
+  {
+   "w": " oceans",
+   "start": 15.38,
+   "end": 15.6,
+   "p": 0.992
+  },
+  {
+   "w": " drain",
+   "start": 15.6,
+   "end": 15.86,
+   "p": 0.998
+  },
+  {
+   "w": " out.",
+   "start": 15.86,
+   "end": 16.1,
+   "p": 0.998
+  },
+  {
+   "w": " For",
+   "start": 16.4,
+   "end": 16.54,
+   "p": 0.996
+  },
+  {
+   "w": " fun,",
+   "start": 16.54,
+   "end": 16.76,
+   "p": 0.999
+  },
+  {
+   "w": " we",
+   "start": 16.86,
+   "end": 16.94,
+   "p": 0.999
+  },
+  {
+   "w": " drained",
+   "start": 16.94,
+   "end": 17.1,
+   "p": 0.748
+  },
+  {
+   "w": " them",
+   "start": 17.1,
+   "end": 17.24,
+   "p": 0.995
+  },
+  {
+   "w": " to",
+   "start": 17.24,
+   "end": 17.38,
+   "p": 0.992
+  },
+  {
+   "w": " Mars.",
+   "start": 17.38,
+   "end": 17.62,
+   "p": 0.997
+  },
+  {
+   "w": " The",
+   "start": 17.84,
+   "end": 17.92,
+   "p": 0.99
+  },
+  {
+   "w": " Curiosity",
+   "start": 17.92,
+   "end": 18.32,
+   "p": 0.998
+  },
+  {
+   "w": " rover",
+   "start": 18.32,
+   "end": 18.56,
+   "p": 0.973
+  },
+  {
+   "w": " is",
+   "start": 18.56,
+   "end": 18.78,
+   "p": 0.99
+  },
+  {
+   "w": " working",
+   "start": 18.78,
+   "end": 18.98,
+   "p": 0.999
+  },
+  {
+   "w": " so",
+   "start": 18.98,
+   "end": 19.28,
+   "p": 0.986
+  },
+  {
+   "w": " hard",
+   "start": 19.28,
+   "end": 19.42,
+   "p": 1.0
+  },
+  {
+   "w": " to",
+   "start": 19.42,
+   "end": 19.54,
+   "p": 0.994
+  },
+  {
+   "w": " find",
+   "start": 19.54,
+   "end": 19.7,
+   "p": 0.998
+  },
+  {
+   "w": " evidence",
+   "start": 19.7,
+   "end": 20.0,
+   "p": 0.98
+  },
+  {
+   "w": " of",
+   "start": 20.0,
+   "end": 20.18,
+   "p": 0.997
+  },
+  {
+   "w": " liquid",
+   "start": 20.18,
+   "end": 20.42,
+   "p": 0.991
+  },
+  {
+   "w": " water,",
+   "start": 20.42,
+   "end": 20.72,
+   "p": 0.998
+  },
+  {
+   "w": " so",
+   "start": 20.8,
+   "end": 21.02,
+   "p": 0.983
+  },
+  {
+   "w": " I",
+   "start": 21.02,
+   "end": 21.16,
+   "p": 0.987
+  },
+  {
+   "w": " figured",
+   "start": 21.16,
+   "end": 21.26,
+   "p": 0.995
+  },
+  {
+   "w": " we",
+   "start": 21.26,
+   "end": 21.5,
+   "p": 0.984
+  },
+  {
+   "w": " could",
+   "start": 21.5,
+   "end": 21.58,
+   "p": 0.838
+  },
+  {
+   "w": " make",
+   "start": 21.58,
+   "end": 21.7,
+   "p": 0.997
+  },
+  {
+   "w": " things",
+   "start": 21.7,
+   "end": 21.88,
+   "p": 0.992
+  },
+  {
+   "w": " easier",
+   "start": 21.88,
+   "end": 22.14,
+   "p": 0.999
+  },
+  {
+   "w": " for",
+   "start": 22.14,
+   "end": 22.38,
+   "p": 0.995
+  },
+  {
+   "w": " it.",
+   "start": 22.38,
+   "end": 22.58,
+   "p": 0.996
+  },
+  {
+   "w": " There",
+   "start": 22.9,
+   "end": 23.02,
+   "p": 0.994
+  },
+  {
+   "w": " is",
+   "start": 23.02,
+   "end": 23.22,
+   "p": 0.978
+  },
+  {
+   "w": " a",
+   "start": 23.22,
+   "end": 23.36,
+   "p": 0.997
+  },
+  {
+   "w": " lot",
+   "start": 23.36,
+   "end": 23.54,
+   "p": 0.996
+  },
+  {
+   "w": " of",
+   "start": 23.54,
+   "end": 23.66,
+   "p": 0.999
+  },
+  {
+   "w": " water",
+   "start": 23.66,
+   "end": 23.88,
+   "p": 0.997
+  },
+  {
+   "w": " currently",
+   "start": 23.88,
+   "end": 24.2,
+   "p": 0.983
+  },
+  {
+   "w": " on",
+   "start": 24.2,
+   "end": 24.48,
+   "p": 0.998
+  },
+  {
+   "w": " Mars.",
+   "start": 24.48,
+   "end": 24.72,
+   "p": 0.998
+  },
+  {
+   "w": " The",
+   "start": 25.0,
+   "end": 25.1,
+   "p": 0.997
+  },
+  {
+   "w": " problem",
+   "start": 25.1,
+   "end": 25.3,
+   "p": 0.999
+  },
+  {
+   "w": " is,",
+   "start": 25.3,
+   "end": 25.58,
+   "p": 0.999
+  },
+  {
+   "w": " it's",
+   "start": 25.7,
+   "end": 25.88,
+   "p": 0.986
+  },
+  {
+   "w": " mostly",
+   "start": 25.88,
+   "end": 26.12,
+   "p": 0.998
+  },
+  {
+   "w": " frozen.",
+   "start": 26.12,
+   "end": 26.42,
+   "p": 0.999
+  },
+  {
+   "w": " Liquid",
+   "start": 26.42,
+   "end": 27.02,
+   "p": 0.059
+  },
+  {
+   "w": " water",
+   "start": 27.02,
+   "end": 27.26,
+   "p": 0.955
+  },
+  {
+   "w": " doesn't",
+   "start": 27.26,
+   "end": 27.54,
+   "p": 0.988
+  },
+  {
+   "w": " last",
+   "start": 27.54,
+   "end": 27.76,
+   "p": 0.997
+  },
+  {
+   "w": " long",
+   "start": 27.76,
+   "end": 27.98,
+   "p": 0.985
+  },
+  {
+   "w": " there,",
+   "start": 27.98,
+   "end": 28.16,
+   "p": 0.904
+  },
+  {
+   "w": " because",
+   "start": 28.34,
+   "end": 28.34,
+   "p": 0.544
+  },
+  {
+   "w": " Mars",
+   "start": 28.34,
+   "end": 28.48,
+   "p": 0.968
+  },
+  {
+   "w": " is",
+   "start": 28.48,
+   "end": 28.66,
+   "p": 0.994
+  },
+  {
+   "w": " too",
+   "start": 28.66,
+   "end": 28.8,
+   "p": 0.995
+  },
+  {
+   "w": " cold",
+   "start": 28.8,
+   "end": 29.06,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 29.06,
+   "end": 29.18,
+   "p": 0.778
+  },
+  {
+   "w": " there's",
+   "start": 29.18,
+   "end": 29.34,
+   "p": 0.955
+  },
+  {
+   "w": " too",
+   "start": 29.34,
+   "end": 29.44,
+   "p": 0.975
+  },
+  {
+   "w": " little",
+   "start": 29.44,
+   "end": 29.6,
+   "p": 0.997
+  },
+  {
+   "w": " air.",
+   "start": 29.6,
+   "end": 29.9,
+   "p": 0.995
+  },
+  {
+   "w": " Before",
+   "start": 30.28,
+   "end": 30.46,
+   "p": 0.984
+  },
+  {
+   "w": " we",
+   "start": 30.46,
+   "end": 30.62,
+   "p": 0.996
+  },
+  {
+   "w": " inundated",
+   "start": 30.62,
+   "end": 30.98,
+   "p": 0.997
+  },
+  {
+   "w": " Curiosity,",
+   "start": 30.98,
+   "end": 31.42,
+   "p": 0.928
+  },
+  {
+   "w": " its",
+   "start": 31.72,
+   "end": 31.82,
+   "p": 0.928
+  },
+  {
+   "w": " temperature",
+   "start": 31.82,
+   "end": 32.06,
+   "p": 0.996
+  },
+  {
+   "w": " sensors",
+   "start": 32.06,
+   "end": 32.48,
+   "p": 0.927
+  },
+  {
+   "w": " recorded",
+   "start": 32.48,
+   "end": 32.88,
+   "p": 0.995
+  },
+  {
+   "w": " air",
+   "start": 32.88,
+   "end": 33.16,
+   "p": 0.991
+  },
+  {
+   "w": " and",
+   "start": 33.16,
+   "end": 33.34,
+   "p": 0.772
+  },
+  {
+   "w": " ground",
+   "start": 33.34,
+   "end": 33.58,
+   "p": 0.996
+  },
+  {
+   "w": " temperatures",
+   "start": 33.58,
+   "end": 34.02,
+   "p": 0.979
+  },
+  {
+   "w": " ranging",
+   "start": 34.02,
+   "end": 34.34,
+   "p": 0.863
+  },
+  {
+   "w": " daily",
+   "start": 34.34,
+   "end": 34.78,
+   "p": 0.988
+  },
+  {
+   "w": " between",
+   "start": 34.78,
+   "end": 35.12,
+   "p": 0.985
+  },
+  {
+   "w": " minus",
+   "start": 35.12,
+   "end": 35.46,
+   "p": 0.411
+  },
+  {
+   "w": " 100",
+   "start": 35.46,
+   "end": 35.96,
+   "p": 0.921
+  },
+  {
+   "w": " degrees",
+   "start": 35.96,
+   "end": 36.24,
+   "p": 0.633
+  },
+  {
+   "w": " and",
+   "start": 36.24,
+   "end": 36.44,
+   "p": 0.978
+  },
+  {
+   "w": " zero",
+   "start": 36.44,
+   "end": 36.62,
+   "p": 0.478
+  },
+  {
+   "w": " degrees",
+   "start": 36.62,
+   "end": 36.96,
+   "p": 0.998
+  },
+  {
+   "w": " Celsius,",
+   "start": 36.96,
+   "end": 37.32,
+   "p": 0.824
+  },
+  {
+   "w": " with",
+   "start": 37.58,
+   "end": 37.74,
+   "p": 0.994
+  },
+  {
+   "w": " the",
+   "start": 37.74,
+   "end": 37.94,
+   "p": 0.99
+  },
+  {
+   "w": " ground",
+   "start": 37.94,
+   "end": 38.14,
+   "p": 0.998
+  },
+  {
+   "w": " occasionally",
+   "start": 38.14,
+   "end": 38.6,
+   "p": 0.993
+  },
+  {
+   "w": " getting",
+   "start": 38.6,
+   "end": 38.84,
+   "p": 0.996
+  },
+  {
+   "w": " a",
+   "start": 38.84,
+   "end": 39.0,
+   "p": 0.987
+  },
+  {
+   "w": " bit",
+   "start": 39.0,
+   "end": 39.08,
+   "p": 0.997
+  },
+  {
+   "w": " above",
+   "start": 39.08,
+   "end": 39.34,
+   "p": 0.997
+  },
+  {
+   "w": " freezing.",
+   "start": 39.34,
+   "end": 39.68,
+   "p": 0.976
+  },
+  {
+   "w": " Here's",
+   "start": 40.12,
+   "end": 40.3,
+   "p": 0.983
+  },
+  {
+   "w": " the",
+   "start": 40.3,
+   "end": 40.4,
+   "p": 0.997
+  },
+  {
+   "w": " phase",
+   "start": 40.4,
+   "end": 40.56,
+   "p": 0.983
+  },
+  {
+   "w": " diagram",
+   "start": 40.56,
+   "end": 40.9,
+   "p": 0.999
+  },
+  {
+   "w": " for",
+   "start": 40.9,
+   "end": 41.12,
+   "p": 0.995
+  },
+  {
+   "w": " water,",
+   "start": 41.12,
+   "end": 41.38,
+   "p": 0.994
+  },
+  {
+   "w": " and",
+   "start": 41.56,
+   "end": 41.68,
+   "p": 0.989
+  },
+  {
+   "w": " this",
+   "start": 41.68,
+   "end": 41.9,
+   "p": 0.995
+  },
+  {
+   "w": " line",
+   "start": 41.9,
+   "end": 42.12,
+   "p": 0.995
+  },
+  {
+   "w": " represents",
+   "start": 42.12,
+   "end": 42.5,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 42.5,
+   "end": 42.7,
+   "p": 0.998
+  },
+  {
+   "w": " average",
+   "start": 42.7,
+   "end": 43.02,
+   "p": 0.998
+  },
+  {
+   "w": " atmospheric",
+   "start": 43.02,
+   "end": 43.42,
+   "p": 0.991
+  },
+  {
+   "w": " pressure",
+   "start": 43.42,
+   "end": 43.76,
+   "p": 0.999
+  },
+  {
+   "w": " on",
+   "start": 43.76,
+   "end": 44.0,
+   "p": 0.998
+  },
+  {
+   "w": " Mars,",
+   "start": 44.0,
+   "end": 44.26,
+   "p": 0.993
+  },
+  {
+   "w": " which",
+   "start": 44.5,
+   "end": 44.68,
+   "p": 0.997
+  },
+  {
+   "w": " by",
+   "start": 44.68,
+   "end": 44.84,
+   "p": 0.848
+  },
+  {
+   "w": " coincidence",
+   "start": 44.84,
+   "end": 45.2,
+   "p": 0.995
+  },
+  {
+   "w": " almost",
+   "start": 45.2,
+   "end": 45.54,
+   "p": 0.957
+  },
+  {
+   "w": " perfectly",
+   "start": 45.54,
+   "end": 46.02,
+   "p": 0.992
+  },
+  {
+   "w": " intersects",
+   "start": 46.02,
+   "end": 46.54,
+   "p": 0.984
+  },
+  {
+   "w": " the",
+   "start": 46.54,
+   "end": 46.6,
+   "p": 0.993
+  },
+  {
+   "w": " triple",
+   "start": 46.6,
+   "end": 46.88,
+   "p": 0.945
+  },
+  {
+   "w": " point",
+   "start": 46.88,
+   "end": 47.14,
+   "p": 0.947
+  },
+  {
+   "w": " of",
+   "start": 47.14,
+   "end": 47.26,
+   "p": 0.994
+  },
+  {
+   "w": " water.",
+   "start": 47.26,
+   "end": 47.58,
+   "p": 0.996
+  },
+  {
+   "w": " It's",
+   "start": 48.04,
+   "end": 48.34,
+   "p": 0.992
+  },
+  {
+   "w": " technically",
+   "start": 48.34,
+   "end": 48.66,
+   "p": 0.996
+  },
+  {
+   "w": " possible",
+   "start": 48.66,
+   "end": 49.12,
+   "p": 0.998
+  },
+  {
+   "w": " for",
+   "start": 49.12,
+   "end": 49.38,
+   "p": 0.999
+  },
+  {
+   "w": " liquid",
+   "start": 49.38,
+   "end": 49.6,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 49.6,
+   "end": 49.88,
+   "p": 0.995
+  },
+  {
+   "w": " to",
+   "start": 49.88,
+   "end": 50.02,
+   "p": 0.999
+  },
+  {
+   "w": " exist",
+   "start": 50.02,
+   "end": 50.26,
+   "p": 0.998
+  },
+  {
+   "w": " on",
+   "start": 50.26,
+   "end": 50.46,
+   "p": 0.999
+  },
+  {
+   "w": " Mars",
+   "start": 50.46,
+   "end": 50.72,
+   "p": 0.996
+  },
+  {
+   "w": " at",
+   "start": 50.72,
+   "end": 50.96,
+   "p": 0.895
+  },
+  {
+   "w": " the",
+   "start": 50.96,
+   "end": 51.1,
+   "p": 0.997
+  },
+  {
+   "w": " very",
+   "start": 51.1,
+   "end": 51.28,
+   "p": 0.99
+  },
+  {
+   "w": " lowest",
+   "start": 51.28,
+   "end": 51.66,
+   "p": 0.999
+  },
+  {
+   "w": " elevations",
+   "start": 51.66,
+   "end": 52.18,
+   "p": 0.998
+  },
+  {
+   "w": " on",
+   "start": 52.18,
+   "end": 52.4,
+   "p": 0.996
+  },
+  {
+   "w": " warm",
+   "start": 52.4,
+   "end": 52.64,
+   "p": 0.991
+  },
+  {
+   "w": " days,",
+   "start": 52.64,
+   "end": 52.92,
+   "p": 0.997
+  },
+  {
+   "w": " since",
+   "start": 53.1,
+   "end": 53.28,
+   "p": 0.995
+  },
+  {
+   "w": " low",
+   "start": 53.28,
+   "end": 53.48,
+   "p": 0.987
+  },
+  {
+   "w": " elevations",
+   "start": 53.48,
+   "end": 53.9,
+   "p": 0.999
+  },
+  {
+   "w": " have",
+   "start": 53.9,
+   "end": 54.08,
+   "p": 0.999
+  },
+  {
+   "w": " higher",
+   "start": 54.08,
+   "end": 54.3,
+   "p": 0.984
+  },
+  {
+   "w": " atmospheric",
+   "start": 54.3,
+   "end": 54.74,
+   "p": 0.998
+  },
+  {
+   "w": " pressures,",
+   "start": 54.74,
+   "end": 55.08,
+   "p": 0.994
+  },
+  {
+   "w": " but",
+   "start": 55.08,
+   "end": 55.44,
+   "p": 0.343
+  },
+  {
+   "w": " on",
+   "start": 55.44,
+   "end": 55.54,
+   "p": 0.975
+  },
+  {
+   "w": " most",
+   "start": 55.54,
+   "end": 55.7,
+   "p": 0.995
+  },
+  {
+   "w": " of",
+   "start": 55.7,
+   "end": 55.88,
+   "p": 0.984
+  },
+  {
+   "w": " Mars'",
+   "start": 55.88,
+   "end": 56.02,
+   "p": 0.968
+  },
+  {
+   "w": " surface,",
+   "start": 56.16,
+   "end": 56.46,
+   "p": 0.993
+  },
+  {
+   "w": " water",
+   "start": 56.72,
+   "end": 56.78,
+   "p": 0.992
+  },
+  {
+   "w": " either",
+   "start": 56.78,
+   "end": 56.98,
+   "p": 0.985
+  },
+  {
+   "w": " stays",
+   "start": 56.98,
+   "end": 57.3,
+   "p": 0.998
+  },
+  {
+   "w": " frozen",
+   "start": 57.3,
+   "end": 57.62,
+   "p": 0.999
+  },
+  {
+   "w": " or",
+   "start": 57.62,
+   "end": 57.94,
+   "p": 0.881
+  },
+  {
+   "w": " sublimates",
+   "start": 57.94,
+   "end": 58.4,
+   "p": 0.993
+  },
+  {
+   "w": " directly",
+   "start": 58.4,
+   "end": 58.66,
+   "p": 0.993
+  },
+  {
+   "w": " from",
+   "start": 58.66,
+   "end": 58.94,
+   "p": 0.996
+  },
+  {
+   "w": " water",
+   "start": 58.94,
+   "end": 59.12,
+   "p": 0.993
+  },
+  {
+   "w": " ice",
+   "start": 59.12,
+   "end": 59.32,
+   "p": 0.879
+  },
+  {
+   "w": " to",
+   "start": 59.32,
+   "end": 59.48,
+   "p": 0.995
+  },
+  {
+   "w": " water",
+   "start": 59.48,
+   "end": 59.7,
+   "p": 0.993
+  },
+  {
+   "w": " vapor.",
+   "start": 59.7,
+   "end": 59.98,
+   "p": 0.967
+  },
+  {
+   "w": " But",
+   "start": 60.48,
+   "end": 60.62,
+   "p": 0.985
+  },
+  {
+   "w": " the",
+   "start": 60.62,
+   "end": 60.8,
+   "p": 0.792
+  },
+  {
+   "w": " oceans",
+   "start": 60.8,
+   "end": 60.98,
+   "p": 0.995
+  },
+  {
+   "w": " we're",
+   "start": 60.98,
+   "end": 61.2,
+   "p": 0.955
+  },
+  {
+   "w": " dumping",
+   "start": 61.2,
+   "end": 61.36,
+   "p": 0.998
+  },
+  {
+   "w": " onto",
+   "start": 61.36,
+   "end": 61.56,
+   "p": 0.932
+  },
+  {
+   "w": " Mars",
+   "start": 61.56,
+   "end": 61.76,
+   "p": 0.992
+  },
+  {
+   "w": " wouldn't",
+   "start": 61.76,
+   "end": 62.06,
+   "p": 0.998
+  },
+  {
+   "w": " freeze",
+   "start": 62.06,
+   "end": 62.22,
+   "p": 0.983
+  },
+  {
+   "w": " solid",
+   "start": 62.22,
+   "end": 62.52,
+   "p": 0.965
+  },
+  {
+   "w": " any",
+   "start": 62.52,
+   "end": 62.7,
+   "p": 0.308
+  },
+  {
+   "w": " time",
+   "start": 62.7,
+   "end": 62.92,
+   "p": 0.999
+  },
+  {
+   "w": " soon.",
+   "start": 62.92,
+   "end": 63.22,
+   "p": 0.999
+  },
+  {
+   "w": " We're",
+   "start": 63.54,
+   "end": 63.64,
+   "p": 0.994
+  },
+  {
+   "w": " dumping",
+   "start": 63.64,
+   "end": 63.82,
+   "p": 0.999
+  },
+  {
+   "w": " a",
+   "start": 63.82,
+   "end": 64.02,
+   "p": 0.99
+  },
+  {
+   "w": " lot",
+   "start": 64.02,
+   "end": 64.18,
+   "p": 0.983
+  },
+  {
+   "w": " of",
+   "start": 64.18,
+   "end": 64.34,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 64.34,
+   "end": 64.58,
+   "p": 0.998
+  },
+  {
+   "w": " very",
+   "start": 64.58,
+   "end": 64.94,
+   "p": 0.874
+  },
+  {
+   "w": " fast,",
+   "start": 64.94,
+   "end": 65.28,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 65.56,
+   "end": 65.66,
+   "p": 0.996
+  },
+  {
+   "w": " Mars",
+   "start": 65.66,
+   "end": 65.84,
+   "p": 0.994
+  },
+  {
+   "w": " isn't",
+   "start": 65.84,
+   "end": 66.24,
+   "p": 0.965
+  },
+  {
+   "w": " that",
+   "start": 66.24,
+   "end": 66.44,
+   "p": 0.751
+  },
+  {
+   "w": " cold.",
+   "start": 66.44,
+   "end": 66.74,
+   "p": 0.999
+  },
+  {
+   "w": " The",
+   "start": 67.12,
+   "end": 67.26,
+   "p": 0.993
+  },
+  {
+   "w": " average",
+   "start": 67.26,
+   "end": 67.48,
+   "p": 0.996
+  },
+  {
+   "w": " temperatures",
+   "start": 67.48,
+   "end": 67.78,
+   "p": 0.99
+  },
+  {
+   "w": " of",
+   "start": 67.78,
+   "end": 67.96,
+   "p": 0.936
+  },
+  {
+   "w": " the",
+   "start": 67.96,
+   "end": 68.06,
+   "p": 0.997
+  },
+  {
+   "w": " North",
+   "start": 68.06,
+   "end": 68.2,
+   "p": 0.793
+  },
+  {
+   "w": " Pole",
+   "start": 68.2,
+   "end": 68.36,
+   "p": 0.97
+  },
+  {
+   "w": " on",
+   "start": 68.36,
+   "end": 68.52,
+   "p": 0.973
+  },
+  {
+   "w": " Earth",
+   "start": 68.52,
+   "end": 68.78,
+   "p": 0.919
+  },
+  {
+   "w": " range",
+   "start": 68.78,
+   "end": 69.02,
+   "p": 0.985
+  },
+  {
+   "w": " from",
+   "start": 69.02,
+   "end": 69.24,
+   "p": 0.998
+  },
+  {
+   "w": " minus",
+   "start": 69.24,
+   "end": 69.52,
+   "p": 0.347
+  },
+  {
+   "w": " 30",
+   "start": 69.52,
+   "end": 69.86,
+   "p": 0.874
+  },
+  {
+   "w": " to",
+   "start": 69.86,
+   "end": 70.02,
+   "p": 0.81
+  },
+  {
+   "w": " zero",
+   "start": 70.02,
+   "end": 70.26,
+   "p": 0.331
+  },
+  {
+   "w": " degrees",
+   "start": 70.26,
+   "end": 70.52,
+   "p": 0.989
+  },
+  {
+   "w": " Celsius,",
+   "start": 70.52,
+   "end": 70.92,
+   "p": 0.823
+  },
+  {
+   "w": " and",
+   "start": 71.14,
+   "end": 71.3,
+   "p": 0.991
+  },
+  {
+   "w": " only",
+   "start": 71.3,
+   "end": 71.54,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 71.54,
+   "end": 71.7,
+   "p": 0.995
+  },
+  {
+   "w": " top",
+   "start": 71.7,
+   "end": 71.9,
+   "p": 0.999
+  },
+  {
+   "w": " layer",
+   "start": 71.9,
+   "end": 72.1,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 72.1,
+   "end": 72.26,
+   "p": 0.988
+  },
+  {
+   "w": " water",
+   "start": 72.26,
+   "end": 72.4,
+   "p": 0.998
+  },
+  {
+   "w": " freezes,",
+   "start": 72.4,
+   "end": 72.76,
+   "p": 0.999
+  },
+  {
+   "w": " because",
+   "start": 72.98,
+   "end": 73.12,
+   "p": 0.435
+  },
+  {
+   "w": " ice",
+   "start": 73.12,
+   "end": 73.36,
+   "p": 0.994
+  },
+  {
+   "w": " is",
+   "start": 73.36,
+   "end": 73.54,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 73.54,
+   "end": 73.64,
+   "p": 0.998
+  },
+  {
+   "w": " decent",
+   "start": 73.64,
+   "end": 73.8,
+   "p": 0.998
+  },
+  {
+   "w": " insulator.",
+   "start": 73.8,
+   "end": 74.3,
+   "p": 0.997
+  },
+  {
+   "w": " Plus,",
+   "start": 74.6,
+   "end": 74.72,
+   "p": 0.925
+  },
+  {
+   "w": " the",
+   "start": 74.84,
+   "end": 74.88,
+   "p": 0.998
+  },
+  {
+   "w": " oceans",
+   "start": 74.88,
+   "end": 75.1,
+   "p": 0.994
+  },
+  {
+   "w": " are",
+   "start": 75.1,
+   "end": 75.28,
+   "p": 0.997
+  },
+  {
+   "w": " saltwater,",
+   "start": 75.28,
+   "end": 75.74,
+   "p": 0.767
+  },
+  {
+   "w": " and",
+   "start": 75.84,
+   "end": 75.98,
+   "p": 0.998
+  },
+  {
+   "w": " salt",
+   "start": 75.98,
+   "end": 76.2,
+   "p": 0.999
+  },
+  {
+   "w": " makes",
+   "start": 76.2,
+   "end": 76.38,
+   "p": 0.997
+  },
+  {
+   "w": " it",
+   "start": 76.38,
+   "end": 76.58,
+   "p": 0.997
+  },
+  {
+   "w": " slightly",
+   "start": 76.58,
+   "end": 76.82,
+   "p": 0.993
+  },
+  {
+   "w": " harder",
+   "start": 76.82,
+   "end": 77.14,
+   "p": 0.998
+  },
+  {
+   "w": " for",
+   "start": 77.14,
+   "end": 77.32,
+   "p": 0.998
+  },
+  {
+   "w": " water",
+   "start": 77.32,
+   "end": 77.48,
+   "p": 0.999
+  },
+  {
+   "w": " to",
+   "start": 77.48,
+   "end": 77.66,
+   "p": 0.999
+  },
+  {
+   "w": " freeze.",
+   "start": 77.66,
+   "end": 77.9,
+   "p": 0.999
+  },
+  {
+   "w": " Here's",
+   "start": 78.48,
+   "end": 78.74,
+   "p": 0.992
+  },
+  {
+   "w": " an",
+   "start": 78.74,
+   "end": 78.82,
+   "p": 0.997
+  },
+  {
+   "w": " elevation",
+   "start": 78.82,
+   "end": 79.1,
+   "p": 0.99
+  },
+  {
+   "w": " map",
+   "start": 79.1,
+   "end": 79.34,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 79.34,
+   "end": 79.5,
+   "p": 0.997
+  },
+  {
+   "w": " Mars.",
+   "start": 79.5,
+   "end": 79.74,
+   "p": 0.999
+  },
+  {
+   "w": " Currently",
+   "start": 80.12,
+   "end": 80.34,
+   "p": 0.988
+  },
+  {
+   "w": " Curiosity",
+   "start": 80.34,
+   "end": 80.74,
+   "p": 0.143
+  },
+  {
+   "w": " is",
+   "start": 80.74,
+   "end": 81.12,
+   "p": 0.997
+  },
+  {
+   "w": " sitting",
+   "start": 81.12,
+   "end": 81.28,
+   "p": 0.998
+  },
+  {
+   "w": " in",
+   "start": 81.28,
+   "end": 81.5,
+   "p": 0.993
+  },
+  {
+   "w": " Gale",
+   "start": 81.5,
+   "end": 81.64,
+   "p": 0.96
+  },
+  {
+   "w": " Crater,",
+   "start": 81.64,
+   "end": 82.04,
+   "p": 0.941
+  },
+  {
+   "w": " a",
+   "start": 82.04,
+   "end": 82.26,
+   "p": 0.32
+  },
+  {
+   "w": " round",
+   "start": 82.26,
+   "end": 82.48,
+   "p": 0.987
+  },
+  {
+   "w": " depression",
+   "start": 82.48,
+   "end": 82.86,
+   "p": 0.963
+  },
+  {
+   "w": " in",
+   "start": 82.86,
+   "end": 83.04,
+   "p": 0.988
+  },
+  {
+   "w": " the",
+   "start": 83.04,
+   "end": 83.12,
+   "p": 0.995
+  },
+  {
+   "w": " Martian",
+   "start": 83.12,
+   "end": 83.34,
+   "p": 0.95
+  },
+  {
+   "w": " surface",
+   "start": 83.34,
+   "end": 83.66,
+   "p": 0.997
+  },
+  {
+   "w": " with",
+   "start": 83.66,
+   "end": 83.86,
+   "p": 0.933
+  },
+  {
+   "w": " a",
+   "start": 83.86,
+   "end": 83.98,
+   "p": 0.983
+  },
+  {
+   "w": " peak,",
+   "start": 83.98,
+   "end": 84.18,
+   "p": 0.991
+  },
+  {
+   "w": " nicknamed",
+   "start": 84.54,
+   "end": 84.54,
+   "p": 0.994
+  },
+  {
+   "w": " Mount",
+   "start": 84.54,
+   "end": 84.76,
+   "p": 0.921
+  },
+  {
+   "w": " Sharp,",
+   "start": 84.76,
+   "end": 85.0,
+   "p": 0.868
+  },
+  {
+   "w": " in",
+   "start": 85.22,
+   "end": 85.36,
+   "p": 0.99
+  },
+  {
+   "w": " the",
+   "start": 85.36,
+   "end": 85.48,
+   "p": 0.998
+  },
+  {
+   "w": " center.",
+   "start": 85.48,
+   "end": 85.68,
+   "p": 0.93
+  },
+  {
+   "w": " We're",
+   "start": 86.04,
+   "end": 86.16,
+   "p": 0.977
+  },
+  {
+   "w": " dumping",
+   "start": 86.16,
+   "end": 86.34,
+   "p": 1.0
+  },
+  {
+   "w": " a",
+   "start": 86.34,
+   "end": 86.5,
+   "p": 0.993
+  },
+  {
+   "w": " lot",
+   "start": 86.5,
+   "end": 86.62,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 86.62,
+   "end": 86.7,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 86.7,
+   "end": 86.88,
+   "p": 0.995
+  },
+  {
+   "w": " very",
+   "start": 86.88,
+   "end": 87.24,
+   "p": 0.903
+  },
+  {
+   "w": " fast,",
+   "start": 87.24,
+   "end": 87.6,
+   "p": 0.998
+  },
+  {
+   "w": " which",
+   "start": 87.76,
+   "end": 87.78,
+   "p": 0.997
+  },
+  {
+   "w": " will",
+   "start": 87.78,
+   "end": 87.94,
+   "p": 0.994
+  },
+  {
+   "w": " start",
+   "start": 87.94,
+   "end": 88.1,
+   "p": 0.993
+  },
+  {
+   "w": " to",
+   "start": 88.1,
+   "end": 88.24,
+   "p": 0.994
+  },
+  {
+   "w": " turn",
+   "start": 88.24,
+   "end": 88.4,
+   "p": 0.999
+  },
+  {
+   "w": " Gale",
+   "start": 88.4,
+   "end": 88.58,
+   "p": 0.899
+  },
+  {
+   "w": " Crater",
+   "start": 88.58,
+   "end": 88.9,
+   "p": 0.967
+  },
+  {
+   "w": " into",
+   "start": 88.9,
+   "end": 89.14,
+   "p": 0.993
+  },
+  {
+   "w": " a",
+   "start": 89.14,
+   "end": 89.3,
+   "p": 0.994
+  },
+  {
+   "w": " lake,",
+   "start": 89.3,
+   "end": 89.5,
+   "p": 0.998
+  },
+  {
+   "w": " just",
+   "start": 89.68,
+   "end": 89.8,
+   "p": 0.993
+  },
+  {
+   "w": " like",
+   "start": 89.8,
+   "end": 89.94,
+   "p": 0.999
+  },
+  {
+   "w": " it",
+   "start": 89.94,
+   "end": 90.02,
+   "p": 0.993
+  },
+  {
+   "w": " would",
+   "start": 90.02,
+   "end": 90.12,
+   "p": 0.997
+  },
+  {
+   "w": " on",
+   "start": 90.12,
+   "end": 90.26,
+   "p": 0.993
+  },
+  {
+   "w": " Earth.",
+   "start": 90.26,
+   "end": 90.46,
+   "p": 0.88
+  },
+  {
+   "w": " As",
+   "start": 90.92,
+   "end": 90.98,
+   "p": 0.954
+  },
+  {
+   "w": " the",
+   "start": 90.98,
+   "end": 91.1,
+   "p": 0.999
+  },
+  {
+   "w": " flow",
+   "start": 91.1,
+   "end": 91.24,
+   "p": 0.997
+  },
+  {
+   "w": " continues,",
+   "start": 91.24,
+   "end": 91.6,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 91.8,
+   "end": 91.8,
+   "p": 0.997
+  },
+  {
+   "w": " lake",
+   "start": 91.8,
+   "end": 91.94,
+   "p": 0.992
+  },
+  {
+   "w": " fills",
+   "start": 91.94,
+   "end": 92.16,
+   "p": 0.997
+  },
+  {
+   "w": " in,",
+   "start": 92.16,
+   "end": 92.38,
+   "p": 0.984
+  },
+  {
+   "w": " burying",
+   "start": 92.48,
+   "end": 92.64,
+   "p": 0.967
+  },
+  {
+   "w": " Curiosity",
+   "start": 92.64,
+   "end": 93.08,
+   "p": 0.59
+  },
+  {
+   "w": " under",
+   "start": 93.08,
+   "end": 93.44,
+   "p": 0.991
+  },
+  {
+   "w": " hundreds",
+   "start": 93.44,
+   "end": 93.66,
+   "p": 0.967
+  },
+  {
+   "w": " of",
+   "start": 93.66,
+   "end": 93.88,
+   "p": 0.999
+  },
+  {
+   "w": " meters",
+   "start": 93.88,
+   "end": 93.98,
+   "p": 0.975
+  },
+  {
+   "w": " of",
+   "start": 93.98,
+   "end": 94.24,
+   "p": 0.999
+  },
+  {
+   "w": " water.",
+   "start": 94.24,
+   "end": 94.46,
+   "p": 1.0
+  },
+  {
+   "w": " Oddly,",
+   "start": 94.94,
+   "end": 95.2,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 95.3,
+   "end": 95.34,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 95.34,
+   "end": 95.52,
+   "p": 0.999
+  },
+  {
+   "w": " would",
+   "start": 95.52,
+   "end": 95.74,
+   "p": 0.989
+  },
+  {
+   "w": " freeze",
+   "start": 95.74,
+   "end": 95.96,
+   "p": 0.998
+  },
+  {
+   "w": " from",
+   "start": 95.96,
+   "end": 96.18,
+   "p": 0.996
+  },
+  {
+   "w": " above",
+   "start": 96.18,
+   "end": 96.38,
+   "p": 0.998
+  },
+  {
+   "w": " and",
+   "start": 96.38,
+   "end": 96.74,
+   "p": 0.917
+  },
+  {
+   "w": " below",
+   "start": 96.74,
+   "end": 97.08,
+   "p": 0.995
+  },
+  {
+   "w": " at",
+   "start": 97.08,
+   "end": 97.24,
+   "p": 0.957
+  },
+  {
+   "w": " the",
+   "start": 97.24,
+   "end": 97.38,
+   "p": 0.998
+  },
+  {
+   "w": " same",
+   "start": 97.38,
+   "end": 97.52,
+   "p": 0.999
+  },
+  {
+   "w": " time",
+   "start": 97.52,
+   "end": 97.82,
+   "p": 0.997
+  },
+  {
+   "w": " because",
+   "start": 97.82,
+   "end": 98.04,
+   "p": 0.584
+  },
+  {
+   "w": " the",
+   "start": 98.04,
+   "end": 98.18,
+   "p": 0.997
+  },
+  {
+   "w": " Martian",
+   "start": 98.18,
+   "end": 98.42,
+   "p": 0.99
+  },
+  {
+   "w": " surface",
+   "start": 98.42,
+   "end": 98.72,
+   "p": 0.958
+  },
+  {
+   "w": " is",
+   "start": 98.72,
+   "end": 99.0,
+   "p": 0.998
+  },
+  {
+   "w": " also",
+   "start": 99.0,
+   "end": 99.26,
+   "p": 0.993
+  },
+  {
+   "w": " below",
+   "start": 99.26,
+   "end": 99.5,
+   "p": 0.999
+  },
+  {
+   "w": " freezing.",
+   "start": 99.5,
+   "end": 99.86,
+   "p": 0.982
+  },
+  {
+   "w": " Rocks",
+   "start": 100.4,
+   "end": 100.42,
+   "p": 0.99
+  },
+  {
+   "w": " and",
+   "start": 100.42,
+   "end": 100.66,
+   "p": 0.949
+  },
+  {
+   "w": " soil",
+   "start": 100.66,
+   "end": 100.92,
+   "p": 0.998
+  },
+  {
+   "w": " would",
+   "start": 100.92,
+   "end": 101.14,
+   "p": 0.981
+  },
+  {
+   "w": " almost",
+   "start": 101.14,
+   "end": 101.28,
+   "p": 0.986
+  },
+  {
+   "w": " certainly",
+   "start": 101.28,
+   "end": 101.6,
+   "p": 0.997
+  },
+  {
+   "w": " become",
+   "start": 101.6,
+   "end": 101.82,
+   "p": 0.989
+  },
+  {
+   "w": " frozen",
+   "start": 101.82,
+   "end": 102.1,
+   "p": 0.997
+  },
+  {
+   "w": " together",
+   "start": 102.1,
+   "end": 102.38,
+   "p": 0.993
+  },
+  {
+   "w": " into",
+   "start": 102.38,
+   "end": 102.62,
+   "p": 0.994
+  },
+  {
+   "w": " ice",
+   "start": 102.62,
+   "end": 102.84,
+   "p": 0.879
+  },
+  {
+   "w": "-dirt",
+   "start": 102.84,
+   "end": 103.04,
+   "p": 0.875
+  },
+  {
+   "w": " chunks",
+   "start": 103.04,
+   "end": 103.4,
+   "p": 0.997
+  },
+  {
+   "w": " that",
+   "start": 103.4,
+   "end": 103.68,
+   "p": 0.984
+  },
+  {
+   "w": " break",
+   "start": 103.68,
+   "end": 103.88,
+   "p": 0.996
+  },
+  {
+   "w": " free",
+   "start": 103.88,
+   "end": 104.12,
+   "p": 0.995
+  },
+  {
+   "w": " and",
+   "start": 104.12,
+   "end": 104.28,
+   "p": 0.991
+  },
+  {
+   "w": " float",
+   "start": 104.28,
+   "end": 104.46,
+   "p": 0.993
+  },
+  {
+   "w": " up",
+   "start": 104.46,
+   "end": 104.6,
+   "p": 0.989
+  },
+  {
+   "w": " to",
+   "start": 104.6,
+   "end": 104.72,
+   "p": 0.989
+  },
+  {
+   "w": " the",
+   "start": 104.72,
+   "end": 104.8,
+   "p": 0.968
+  },
+  {
+   "w": " surface",
+   "start": 104.8,
+   "end": 105.04,
+   "p": 0.998
+  },
+  {
+   "w": " like",
+   "start": 105.04,
+   "end": 105.24,
+   "p": 0.977
+  },
+  {
+   "w": " icebergs.",
+   "start": 105.24,
+   "end": 105.96,
+   "p": 0.999
+  },
+  {
+   "w": " Eventually,",
+   "start": 106.28,
+   "end": 106.56,
+   "p": 0.995
+  },
+  {
+   "w": " Mount",
+   "start": 106.74,
+   "end": 106.86,
+   "p": 0.993
+  },
+  {
+   "w": " Sharp",
+   "start": 106.86,
+   "end": 107.06,
+   "p": 0.997
+  },
+  {
+   "w": " becomes",
+   "start": 107.06,
+   "end": 107.32,
+   "p": 0.992
+  },
+  {
+   "w": " an",
+   "start": 107.32,
+   "end": 107.52,
+   "p": 0.997
+  },
+  {
+   "w": " island",
+   "start": 107.52,
+   "end": 107.76,
+   "p": 0.999
+  },
+  {
+   "w": " surrounded",
+   "start": 107.76,
+   "end": 108.14,
+   "p": 0.865
+  },
+  {
+   "w": " by",
+   "start": 108.14,
+   "end": 108.34,
+   "p": 0.999
+  },
+  {
+   "w": " ice",
+   "start": 108.34,
+   "end": 108.58,
+   "p": 0.996
+  },
+  {
+   "w": "-covered",
+   "start": 108.58,
+   "end": 108.72,
+   "p": 0.935
+  },
+  {
+   "w": " water.",
+   "start": 108.72,
+   "end": 109.14,
+   "p": 0.999
+  },
+  {
+   "w": " However,",
+   "start": 109.5,
+   "end": 109.68,
+   "p": 0.994
+  },
+  {
+   "w": " before",
+   "start": 109.86,
+   "end": 110.06,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 110.06,
+   "end": 110.22,
+   "p": 0.997
+  },
+  {
+   "w": " peak",
+   "start": 110.22,
+   "end": 110.38,
+   "p": 0.964
+  },
+  {
+   "w": " can",
+   "start": 110.38,
+   "end": 110.52,
+   "p": 0.955
+  },
+  {
+   "w": " disappear",
+   "start": 110.52,
+   "end": 110.76,
+   "p": 0.993
+  },
+  {
+   "w": " completely,",
+   "start": 110.76,
+   "end": 111.32,
+   "p": 0.999
+  },
+  {
+   "w": " the",
+   "start": 111.32,
+   "end": 111.68,
+   "p": 0.378
+  },
+  {
+   "w": " water",
+   "start": 111.68,
+   "end": 111.82,
+   "p": 0.998
+  },
+  {
+   "w": " spills",
+   "start": 111.82,
+   "end": 112.12,
+   "p": 0.997
+  },
+  {
+   "w": " over",
+   "start": 112.12,
+   "end": 112.4,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 112.4,
+   "end": 112.52,
+   "p": 0.99
+  },
+  {
+   "w": " north",
+   "start": 112.52,
+   "end": 112.66,
+   "p": 0.645
+  },
+  {
+   "w": " rim",
+   "start": 112.66,
+   "end": 112.84,
+   "p": 0.99
+  },
+  {
+   "w": " of",
+   "start": 112.84,
+   "end": 112.96,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 112.96,
+   "end": 113.06,
+   "p": 0.985
+  },
+  {
+   "w": " crater",
+   "start": 113.06,
+   "end": 113.24,
+   "p": 0.94
+  },
+  {
+   "w": " and",
+   "start": 113.24,
+   "end": 113.46,
+   "p": 0.958
+  },
+  {
+   "w": " starts",
+   "start": 113.46,
+   "end": 113.62,
+   "p": 0.973
+  },
+  {
+   "w": " flowing",
+   "start": 113.62,
+   "end": 113.92,
+   "p": 0.993
+  },
+  {
+   "w": " out",
+   "start": 113.92,
+   "end": 114.12,
+   "p": 0.99
+  },
+  {
+   "w": " across",
+   "start": 114.12,
+   "end": 114.36,
+   "p": 0.994
+  },
+  {
+   "w": " the",
+   "start": 114.36,
+   "end": 114.58,
+   "p": 0.996
+  },
+  {
+   "w": " sand.",
+   "start": 114.58,
+   "end": 114.86,
+   "p": 0.998
+  },
+  {
+   "w": " The",
+   "start": 115.32,
+   "end": 115.36,
+   "p": 0.989
+  },
+  {
+   "w": " water",
+   "start": 115.36,
+   "end": 115.52,
+   "p": 0.999
+  },
+  {
+   "w": " flows",
+   "start": 115.52,
+   "end": 115.76,
+   "p": 0.997
+  },
+  {
+   "w": " downhill",
+   "start": 115.76,
+   "end": 116.08,
+   "p": 0.947
+  },
+  {
+   "w": " to",
+   "start": 116.08,
+   "end": 116.28,
+   "p": 0.991
+  },
+  {
+   "w": " the",
+   "start": 116.28,
+   "end": 116.38,
+   "p": 0.998
+  },
+  {
+   "w": " north",
+   "start": 116.38,
+   "end": 116.56,
+   "p": 0.963
+  },
+  {
+   "w": " and",
+   "start": 116.56,
+   "end": 116.84,
+   "p": 0.818
+  },
+  {
+   "w": " pools",
+   "start": 116.84,
+   "end": 117.08,
+   "p": 0.983
+  },
+  {
+   "w": " in",
+   "start": 117.08,
+   "end": 117.28,
+   "p": 0.966
+  },
+  {
+   "w": " the",
+   "start": 117.28,
+   "end": 117.42,
+   "p": 0.948
+  },
+  {
+   "w": " north",
+   "start": 117.42,
+   "end": 117.6,
+   "p": 0.524
+  },
+  {
+   "w": " polar",
+   "start": 117.6,
+   "end": 117.9,
+   "p": 0.97
+  },
+  {
+   "w": " basin,",
+   "start": 117.9,
+   "end": 118.34,
+   "p": 0.997
+  },
+  {
+   "w": " while",
+   "start": 118.44,
+   "end": 118.62,
+   "p": 0.988
+  },
+  {
+   "w": " a",
+   "start": 118.62,
+   "end": 118.74,
+   "p": 0.99
+  },
+  {
+   "w": " layer",
+   "start": 118.74,
+   "end": 118.88,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 118.88,
+   "end": 119.12,
+   "p": 0.997
+  },
+  {
+   "w": " sea",
+   "start": 119.12,
+   "end": 119.3,
+   "p": 0.995
+  },
+  {
+   "w": " ice",
+   "start": 119.3,
+   "end": 119.52,
+   "p": 0.991
+  },
+  {
+   "w": " and",
+   "start": 119.52,
+   "end": 119.68,
+   "p": 0.994
+  },
+  {
+   "w": " rockbergs",
+   "start": 119.68,
+   "end": 120.28,
+   "p": 0.93
+  },
+  {
+   "w": " forms",
+   "start": 120.28,
+   "end": 120.46,
+   "p": 0.955
+  },
+  {
+   "w": " on",
+   "start": 120.46,
+   "end": 120.68,
+   "p": 0.996
+  },
+  {
+   "w": " top.",
+   "start": 120.68,
+   "end": 120.92,
+   "p": 0.996
+  },
+  {
+   "w": " When",
+   "start": 121.46,
+   "end": 121.58,
+   "p": 0.996
+  },
+  {
+   "w": " this",
+   "start": 121.58,
+   "end": 121.76,
+   "p": 0.996
+  },
+  {
+   "w": " kind",
+   "start": 121.76,
+   "end": 121.88,
+   "p": 0.984
+  },
+  {
+   "w": " of",
+   "start": 121.88,
+   "end": 122.0,
+   "p": 0.999
+  },
+  {
+   "w": " water",
+   "start": 122.0,
+   "end": 122.18,
+   "p": 0.996
+  },
+  {
+   "w": " release",
+   "start": 122.18,
+   "end": 122.5,
+   "p": 0.993
+  },
+  {
+   "w": " happens",
+   "start": 122.5,
+   "end": 122.82,
+   "p": 0.997
+  },
+  {
+   "w": " on",
+   "start": 122.82,
+   "end": 123.04,
+   "p": 0.995
+  },
+  {
+   "w": " Mars",
+   "start": 123.04,
+   "end": 123.2,
+   "p": 0.974
+  },
+  {
+   "w": " in",
+   "start": 123.2,
+   "end": 123.38,
+   "p": 0.989
+  },
+  {
+   "w": " real",
+   "start": 123.38,
+   "end": 123.52,
+   "p": 0.999
+  },
+  {
+   "w": " life,",
+   "start": 123.52,
+   "end": 123.8,
+   "p": 0.985
+  },
+  {
+   "w": " the",
+   "start": 123.9,
+   "end": 123.98,
+   "p": 0.996
+  },
+  {
+   "w": " trickle",
+   "start": 123.98,
+   "end": 124.2,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 124.2,
+   "end": 124.32,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 124.32,
+   "end": 124.54,
+   "p": 0.994
+  },
+  {
+   "w": " quickly",
+   "start": 124.54,
+   "end": 124.86,
+   "p": 0.998
+  },
+  {
+   "w": " freezes",
+   "start": 124.86,
+   "end": 125.24,
+   "p": 0.998
+  },
+  {
+   "w": " and",
+   "start": 125.24,
+   "end": 125.52,
+   "p": 0.992
+  },
+  {
+   "w": " sublimates",
+   "start": 125.52,
+   "end": 125.96,
+   "p": 0.989
+  },
+  {
+   "w": " before",
+   "start": 125.96,
+   "end": 126.2,
+   "p": 0.996
+  },
+  {
+   "w": " it",
+   "start": 126.2,
+   "end": 126.32,
+   "p": 0.988
+  },
+  {
+   "w": " can",
+   "start": 126.32,
+   "end": 126.44,
+   "p": 0.996
+  },
+  {
+   "w": " get",
+   "start": 126.44,
+   "end": 126.54,
+   "p": 0.996
+  },
+  {
+   "w": " very",
+   "start": 126.54,
+   "end": 126.74,
+   "p": 0.988
+  },
+  {
+   "w": " far.",
+   "start": 126.74,
+   "end": 127.06,
+   "p": 1.0
+  },
+  {
+   "w": " However,",
+   "start": 127.36,
+   "end": 127.62,
+   "p": 0.998
+  },
+  {
+   "w": " we've",
+   "start": 127.88,
+   "end": 128.18,
+   "p": 0.993
+  },
+  {
+   "w": " got",
+   "start": 128.18,
+   "end": 128.28,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 128.28,
+   "end": 128.4,
+   "p": 0.997
+  },
+  {
+   "w": " lot",
+   "start": 128.4,
+   "end": 128.56,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 128.56,
+   "end": 128.68,
+   "p": 0.993
+  },
+  {
+   "w": " ocean",
+   "start": 128.68,
+   "end": 128.9,
+   "p": 0.992
+  },
+  {
+   "w": " at",
+   "start": 128.9,
+   "end": 129.08,
+   "p": 0.222
+  },
+  {
+   "w": " our",
+   "start": 129.08,
+   "end": 129.14,
+   "p": 0.996
+  },
+  {
+   "w": " disposal.",
+   "start": 129.14,
+   "end": 129.48,
+   "p": 0.999
+  },
+  {
+   "w": " Gradually,",
+   "start": 130.1,
+   "end": 130.4,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 130.48,
+   "end": 130.56,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 130.56,
+   "end": 130.7,
+   "p": 0.999
+  },
+  {
+   "w": " will",
+   "start": 130.7,
+   "end": 130.86,
+   "p": 0.997
+  },
+  {
+   "w": " fill",
+   "start": 130.86,
+   "end": 131.08,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 131.08,
+   "end": 131.24,
+   "p": 0.994
+  },
+  {
+   "w": " north",
+   "start": 131.24,
+   "end": 131.44,
+   "p": 0.929
+  },
+  {
+   "w": " polar",
+   "start": 131.44,
+   "end": 131.78,
+   "p": 0.981
+  },
+  {
+   "w": " basin,",
+   "start": 131.78,
+   "end": 132.2,
+   "p": 0.988
+  },
+  {
+   "w": " covering",
+   "start": 132.34,
+   "end": 132.62,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 132.62,
+   "end": 132.8,
+   "p": 0.992
+  },
+  {
+   "w": " defunct",
+   "start": 132.8,
+   "end": 133.04,
+   "p": 0.999
+  },
+  {
+   "w": " Phoenix",
+   "start": 133.04,
+   "end": 133.36,
+   "p": 0.957
+  },
+  {
+   "w": " and",
+   "start": 133.36,
+   "end": 133.56,
+   "p": 0.992
+  },
+  {
+   "w": " Viking",
+   "start": 133.56,
+   "end": 133.82,
+   "p": 0.994
+  },
+  {
+   "w": " landers,",
+   "start": 133.82,
+   "end": 134.3,
+   "p": 0.851
+  },
+  {
+   "w": " unless",
+   "start": 134.36,
+   "end": 134.54,
+   "p": 0.991
+  },
+  {
+   "w": " they",
+   "start": 134.54,
+   "end": 134.72,
+   "p": 0.996
+  },
+  {
+   "w": " also",
+   "start": 134.72,
+   "end": 134.9,
+   "p": 0.98
+  },
+  {
+   "w": " get",
+   "start": 134.9,
+   "end": 135.14,
+   "p": 0.996
+  },
+  {
+   "w": " caught",
+   "start": 135.14,
+   "end": 135.34,
+   "p": 0.999
+  },
+  {
+   "w": " in",
+   "start": 135.34,
+   "end": 135.52,
+   "p": 0.983
+  },
+  {
+   "w": " freezing",
+   "start": 135.52,
+   "end": 135.72,
+   "p": 0.994
+  },
+  {
+   "w": " ice",
+   "start": 135.72,
+   "end": 136.0,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 136.0,
+   "end": 136.18,
+   "p": 0.976
+  },
+  {
+   "w": " lift",
+   "start": 136.18,
+   "end": 136.34,
+   "p": 0.952
+  },
+  {
+   "w": " it",
+   "start": 136.34,
+   "end": 136.42,
+   "p": 0.979
+  },
+  {
+   "w": " up",
+   "start": 136.42,
+   "end": 136.52,
+   "p": 0.994
+  },
+  {
+   "w": " to",
+   "start": 136.52,
+   "end": 136.64,
+   "p": 0.992
+  },
+  {
+   "w": " float",
+   "start": 136.64,
+   "end": 136.78,
+   "p": 0.999
+  },
+  {
+   "w": " on",
+   "start": 136.78,
+   "end": 136.9,
+   "p": 0.985
+  },
+  {
+   "w": " the",
+   "start": 136.9,
+   "end": 137.0,
+   "p": 0.993
+  },
+  {
+   "w": " surface.",
+   "start": 137.0,
+   "end": 137.24,
+   "p": 0.999
+  },
+  {
+   "w": " If",
+   "start": 137.24,
+   "end": 137.92,
+   "p": 0.536
+  },
+  {
+   "w": " we",
+   "start": 137.92,
+   "end": 138.04,
+   "p": 0.995
+  },
+  {
+   "w": " look",
+   "start": 138.04,
+   "end": 138.16,
+   "p": 0.993
+  },
+  {
+   "w": " at",
+   "start": 138.16,
+   "end": 138.26,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 138.26,
+   "end": 138.32,
+   "p": 0.995
+  },
+  {
+   "w": " rest",
+   "start": 138.32,
+   "end": 138.46,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 138.46,
+   "end": 138.62,
+   "p": 0.995
+  },
+  {
+   "w": " Mars,",
+   "start": 138.62,
+   "end": 138.78,
+   "p": 0.974
+  },
+  {
+   "w": " we'll",
+   "start": 138.92,
+   "end": 139.02,
+   "p": 0.981
+  },
+  {
+   "w": " see",
+   "start": 139.02,
+   "end": 139.12,
+   "p": 0.995
+  },
+  {
+   "w": " there's",
+   "start": 139.12,
+   "end": 139.38,
+   "p": 0.946
+  },
+  {
+   "w": " still",
+   "start": 139.38,
+   "end": 139.52,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 139.52,
+   "end": 139.64,
+   "p": 0.96
+  },
+  {
+   "w": " lot",
+   "start": 139.64,
+   "end": 139.94,
+   "p": 0.941
+  },
+  {
+   "w": " of",
+   "start": 139.94,
+   "end": 140.1,
+   "p": 0.993
+  },
+  {
+   "w": " land",
+   "start": 140.1,
+   "end": 140.34,
+   "p": 0.998
+  },
+  {
+   "w": " far",
+   "start": 140.34,
+   "end": 140.6,
+   "p": 0.986
+  },
+  {
+   "w": " from",
+   "start": 140.6,
+   "end": 140.8,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 140.8,
+   "end": 140.88,
+   "p": 0.997
+  },
+  {
+   "w": " water.",
+   "start": 140.88,
+   "end": 141.08,
+   "p": 0.998
+  },
+  {
+   "w": " I'm",
+   "start": 141.56,
+   "end": 141.68,
+   "p": 0.994
+  },
+  {
+   "w": " a",
+   "start": 141.68,
+   "end": 141.74,
+   "p": 0.994
+  },
+  {
+   "w": " big",
+   "start": 141.74,
+   "end": 141.84,
+   "p": 0.993
+  },
+  {
+   "w": " fan",
+   "start": 141.84,
+   "end": 142.02,
+   "p": 0.997
+  },
+  {
+   "w": " of",
+   "start": 142.02,
+   "end": 142.14,
+   "p": 0.999
+  },
+  {
+   "w": " maps.",
+   "start": 142.14,
+   "end": 142.36,
+   "p": 0.99
+  },
+  {
+   "w": " I've",
+   "start": 142.54,
+   "end": 142.62,
+   "p": 0.992
+  },
+  {
+   "w": " spent",
+   "start": 142.62,
+   "end": 142.74,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 142.74,
+   "end": 142.84,
+   "p": 0.997
+  },
+  {
+   "w": " lot",
+   "start": 142.84,
+   "end": 142.96,
+   "p": 0.994
+  },
+  {
+   "w": " of",
+   "start": 142.96,
+   "end": 143.04,
+   "p": 0.997
+  },
+  {
+   "w": " time",
+   "start": 143.04,
+   "end": 143.22,
+   "p": 0.999
+  },
+  {
+   "w": " drawing",
+   "start": 143.22,
+   "end": 143.52,
+   "p": 0.997
+  },
+  {
+   "w": " them",
+   "start": 143.52,
+   "end": 143.74,
+   "p": 0.998
+  },
+  {
+   "w": " and",
+   "start": 143.74,
+   "end": 143.94,
+   "p": 0.895
+  },
+  {
+   "w": " just",
+   "start": 143.94,
+   "end": 144.22,
+   "p": 0.976
+  },
+  {
+   "w": " looking",
+   "start": 144.22,
+   "end": 144.5,
+   "p": 0.997
+  },
+  {
+   "w": " at",
+   "start": 144.5,
+   "end": 144.7,
+   "p": 0.996
+  },
+  {
+   "w": " them",
+   "start": 144.7,
+   "end": 144.82,
+   "p": 0.999
+  },
+  {
+   "w": " over",
+   "start": 144.82,
+   "end": 144.94,
+   "p": 0.997
+  },
+  {
+   "w": " the",
+   "start": 144.94,
+   "end": 145.1,
+   "p": 0.998
+  },
+  {
+   "w": " years,",
+   "start": 145.1,
+   "end": 145.26,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 145.44,
+   "end": 145.54,
+   "p": 0.872
+  },
+  {
+   "w": " I",
+   "start": 145.54,
+   "end": 145.64,
+   "p": 0.962
+  },
+  {
+   "w": " have",
+   "start": 145.64,
+   "end": 145.76,
+   "p": 0.913
+  },
+  {
+   "w": " to",
+   "start": 145.76,
+   "end": 145.9,
+   "p": 0.998
+  },
+  {
+   "w": " say,",
+   "start": 145.9,
+   "end": 146.16,
+   "p": 0.999
+  },
+  {
+   "w": " I",
+   "start": 146.4,
+   "end": 146.58,
+   "p": 0.994
+  },
+  {
+   "w": " think",
+   "start": 146.58,
+   "end": 146.7,
+   "p": 0.999
+  },
+  {
+   "w": " this",
+   "start": 146.7,
+   "end": 146.86,
+   "p": 0.993
+  },
+  {
+   "w": " one's",
+   "start": 146.86,
+   "end": 147.08,
+   "p": 0.968
+  },
+  {
+   "w": " kind",
+   "start": 147.08,
+   "end": 147.2,
+   "p": 0.712
+  },
+  {
+   "w": " of",
+   "start": 147.2,
+   "end": 147.32,
+   "p": 0.996
+  },
+  {
+   "w": " boring.",
+   "start": 147.32,
+   "end": 147.56,
+   "p": 0.999
+  },
+  {
+   "w": " It's",
+   "start": 147.88,
+   "end": 148.02,
+   "p": 0.992
+  },
+  {
+   "w": " just",
+   "start": 148.02,
+   "end": 148.12,
+   "p": 0.998
+  },
+  {
+   "w": " this",
+   "start": 148.12,
+   "end": 148.28,
+   "p": 0.997
+  },
+  {
+   "w": " big",
+   "start": 148.28,
+   "end": 148.44,
+   "p": 0.998
+  },
+  {
+   "w": " empty",
+   "start": 148.44,
+   "end": 148.68,
+   "p": 0.643
+  },
+  {
+   "w": " swath",
+   "start": 148.68,
+   "end": 148.94,
+   "p": 0.971
+  },
+  {
+   "w": " of",
+   "start": 148.94,
+   "end": 149.14,
+   "p": 0.999
+  },
+  {
+   "w": " land",
+   "start": 149.14,
+   "end": 149.36,
+   "p": 0.999
+  },
+  {
+   "w": " with",
+   "start": 149.36,
+   "end": 149.52,
+   "p": 0.988
+  },
+  {
+   "w": " some",
+   "start": 149.52,
+   "end": 149.66,
+   "p": 0.999
+  },
+  {
+   "w": " ocean",
+   "start": 149.66,
+   "end": 149.88,
+   "p": 0.994
+  },
+  {
+   "w": " on",
+   "start": 149.88,
+   "end": 150.08,
+   "p": 0.997
+  },
+  {
+   "w": " top.",
+   "start": 150.08,
+   "end": 150.34,
+   "p": 0.999
+  },
+  {
+   "w": " Luckily",
+   "start": 150.94,
+   "end": 151.12,
+   "p": 0.994
+  },
+  {
+   "w": " for",
+   "start": 151.12,
+   "end": 151.4,
+   "p": 0.981
+  },
+  {
+   "w": " us,",
+   "start": 151.4,
+   "end": 151.66,
+   "p": 1.0
+  },
+  {
+   "w": " if",
+   "start": 151.8,
+   "end": 151.96,
+   "p": 0.996
+  },
+  {
+   "w": " not",
+   "start": 151.96,
+   "end": 152.1,
+   "p": 1.0
+  },
+  {
+   "w": " for",
+   "start": 152.1,
+   "end": 152.28,
+   "p": 0.985
+  },
+  {
+   "w": " Mars,",
+   "start": 152.28,
+   "end": 152.5,
+   "p": 0.992
+  },
+  {
+   "w": " we",
+   "start": 152.68,
+   "end": 152.88,
+   "p": 0.995
+  },
+  {
+   "w": " haven't",
+   "start": 152.88,
+   "end": 153.08,
+   "p": 0.999
+  },
+  {
+   "w": " come",
+   "start": 153.08,
+   "end": 153.28,
+   "p": 0.997
+  },
+  {
+   "w": " close",
+   "start": 153.28,
+   "end": 153.58,
+   "p": 0.998
+  },
+  {
+   "w": " to",
+   "start": 153.58,
+   "end": 153.76,
+   "p": 0.999
+  },
+  {
+   "w": " running",
+   "start": 153.76,
+   "end": 153.88,
+   "p": 0.999
+  },
+  {
+   "w": " out",
+   "start": 153.88,
+   "end": 154.06,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 154.06,
+   "end": 154.12,
+   "p": 0.998
+  },
+  {
+   "w": " ocean",
+   "start": 154.12,
+   "end": 154.32,
+   "p": 0.994
+  },
+  {
+   "w": " yet.",
+   "start": 154.32,
+   "end": 154.62,
+   "p": 0.992
+  },
+  {
+   "w": " At",
+   "start": 155.04,
+   "end": 155.12,
+   "p": 0.994
+  },
+  {
+   "w": " this",
+   "start": 155.12,
+   "end": 155.34,
+   "p": 1.0
+  },
+  {
+   "w": " point,",
+   "start": 155.34,
+   "end": 155.58,
+   "p": 1.0
+  },
+  {
+   "w": " the",
+   "start": 155.64,
+   "end": 155.72,
+   "p": 0.998
+  },
+  {
+   "w": " water",
+   "start": 155.72,
+   "end": 155.88,
+   "p": 0.999
+  },
+  {
+   "w": " fills",
+   "start": 155.88,
+   "end": 156.12,
+   "p": 0.996
+  },
+  {
+   "w": " in",
+   "start": 156.12,
+   "end": 156.28,
+   "p": 0.992
+  },
+  {
+   "w": " the",
+   "start": 156.28,
+   "end": 156.42,
+   "p": 0.996
+  },
+  {
+   "w": " Valles",
+   "start": 156.42,
+   "end": 156.68,
+   "p": 0.96
+  },
+  {
+   "w": " Marineris,",
+   "start": 156.68,
+   "end": 157.22,
+   "p": 0.86
+  },
+  {
+   "w": " creating",
+   "start": 157.3,
+   "end": 157.56,
+   "p": 0.999
+  },
+  {
+   "w": " these",
+   "start": 157.56,
+   "end": 157.92,
+   "p": 0.993
+  },
+  {
+   "w": " unusual",
+   "start": 157.92,
+   "end": 158.46,
+   "p": 0.999
+  },
+  {
+   "w": " coastlines",
+   "start": 158.46,
+   "end": 159.04,
+   "p": 0.979
+  },
+  {
+   "w": " here.",
+   "start": 159.04,
+   "end": 159.38,
+   "p": 0.994
+  },
+  {
+   "w": " The",
+   "start": 159.76,
+   "end": 159.88,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 159.88,
+   "end": 160.06,
+   "p": 0.998
+  },
+  {
+   "w": " and",
+   "start": 160.06,
+   "end": 160.2,
+   "p": 0.994
+  },
+  {
+   "w": " ice",
+   "start": 160.2,
+   "end": 160.34,
+   "p": 0.999
+  },
+  {
+   "w": " now",
+   "start": 160.34,
+   "end": 160.56,
+   "p": 0.993
+  },
+  {
+   "w": " reach",
+   "start": 160.56,
+   "end": 160.7,
+   "p": 0.941
+  },
+  {
+   "w": " the",
+   "start": 160.7,
+   "end": 160.92,
+   "p": 0.991
+  },
+  {
+   "w": " other",
+   "start": 160.92,
+   "end": 161.12,
+   "p": 0.999
+  },
+  {
+   "w": " Mars",
+   "start": 161.12,
+   "end": 161.38,
+   "p": 0.953
+  },
+  {
+   "w": " landers,",
+   "start": 161.38,
+   "end": 161.78,
+   "p": 0.871
+  },
+  {
+   "w": " carrying",
+   "start": 161.78,
+   "end": 162.08,
+   "p": 0.999
+  },
+  {
+   "w": " them",
+   "start": 162.08,
+   "end": 162.28,
+   "p": 0.989
+  },
+  {
+   "w": " south.",
+   "start": 162.28,
+   "end": 162.58,
+   "p": 0.956
+  },
+  {
+   "w": " Eventually,",
+   "start": 162.98,
+   "end": 163.24,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 163.34,
+   "end": 163.48,
+   "p": 0.999
+  },
+  {
+   "w": " flow",
+   "start": 163.48,
+   "end": 163.68,
+   "p": 0.996
+  },
+  {
+   "w": " breaks",
+   "start": 163.68,
+   "end": 163.92,
+   "p": 0.997
+  },
+  {
+   "w": " through",
+   "start": 163.92,
+   "end": 164.16,
+   "p": 0.994
+  },
+  {
+   "w": " into",
+   "start": 164.16,
+   "end": 164.34,
+   "p": 0.991
+  },
+  {
+   "w": " the",
+   "start": 164.34,
+   "end": 164.46,
+   "p": 0.993
+  },
+  {
+   "w": " Hellas",
+   "start": 164.46,
+   "end": 164.72,
+   "p": 0.733
+  },
+  {
+   "w": " Impact",
+   "start": 164.72,
+   "end": 165.02,
+   "p": 0.802
+  },
+  {
+   "w": " Crater,",
+   "start": 165.02,
+   "end": 165.34,
+   "p": 0.934
+  },
+  {
+   "w": " the",
+   "start": 165.34,
+   "end": 165.62,
+   "p": 0.814
+  },
+  {
+   "w": " basin",
+   "start": 165.62,
+   "end": 165.84,
+   "p": 0.95
+  },
+  {
+   "w": " covering",
+   "start": 165.84,
+   "end": 166.14,
+   "p": 0.995
+  },
+  {
+   "w": " the",
+   "start": 166.14,
+   "end": 166.3,
+   "p": 0.996
+  },
+  {
+   "w": " lowest",
+   "start": 166.3,
+   "end": 166.56,
+   "p": 0.999
+  },
+  {
+   "w": " point",
+   "start": 166.56,
+   "end": 166.82,
+   "p": 0.995
+  },
+  {
+   "w": " on",
+   "start": 166.82,
+   "end": 167.0,
+   "p": 0.987
+  },
+  {
+   "w": " Mars,",
+   "start": 167.0,
+   "end": 167.18,
+   "p": 0.949
+  },
+  {
+   "w": " and",
+   "start": 167.58,
+   "end": 167.7,
+   "p": 0.992
+  },
+  {
+   "w": " Perseverance",
+   "start": 167.7,
+   "end": 168.36,
+   "p": 0.888
+  },
+  {
+   "w": " is",
+   "start": 168.36,
+   "end": 168.52,
+   "p": 0.871
+  },
+  {
+   "w": " likely",
+   "start": 168.52,
+   "end": 168.7,
+   "p": 0.995
+  },
+  {
+   "w": " destroyed",
+   "start": 168.7,
+   "end": 169.2,
+   "p": 0.997
+  },
+  {
+   "w": " in",
+   "start": 169.2,
+   "end": 169.38,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 169.38,
+   "end": 169.44,
+   "p": 0.995
+  },
+  {
+   "w": " ensuing",
+   "start": 169.44,
+   "end": 169.78,
+   "p": 0.998
+  },
+  {
+   "w": " ice",
+   "start": 169.78,
+   "end": 170.08,
+   "p": 0.729
+  },
+  {
+   "w": " rock",
+   "start": 170.08,
+   "end": 170.34,
+   "p": 0.79
+  },
+  {
+   "w": " waterfall.",
+   "start": 170.34,
+   "end": 170.8,
+   "p": 0.994
+  },
+  {
+   "w": " In",
+   "start": 171.48,
+   "end": 171.56,
+   "p": 0.978
+  },
+  {
+   "w": " my",
+   "start": 171.56,
+   "end": 171.76,
+   "p": 0.999
+  },
+  {
+   "w": " opinion,",
+   "start": 171.76,
+   "end": 172.0,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 172.2,
+   "end": 172.24,
+   "p": 0.994
+  },
+  {
+   "w": " rest",
+   "start": 172.24,
+   "end": 172.38,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 172.38,
+   "end": 172.56,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 172.56,
+   "end": 172.58,
+   "p": 0.992
+  },
+  {
+   "w": " map",
+   "start": 172.58,
+   "end": 172.68,
+   "p": 0.998
+  },
+  {
+   "w": " is",
+   "start": 172.68,
+   "end": 172.82,
+   "p": 0.992
+  },
+  {
+   "w": " starting",
+   "start": 172.82,
+   "end": 172.98,
+   "p": 0.997
+  },
+  {
+   "w": " to",
+   "start": 172.98,
+   "end": 173.14,
+   "p": 0.994
+  },
+  {
+   "w": " look",
+   "start": 173.14,
+   "end": 173.26,
+   "p": 0.998
+  },
+  {
+   "w": " pretty",
+   "start": 173.26,
+   "end": 173.5,
+   "p": 0.994
+  },
+  {
+   "w": " good.",
+   "start": 173.5,
+   "end": 173.74,
+   "p": 0.999
+  },
+  {
+   "w": " Like,",
+   "start": 173.98,
+   "end": 174.06,
+   "p": 0.87
+  },
+  {
+   "w": " check",
+   "start": 174.14,
+   "end": 174.18,
+   "p": 0.994
+  },
+  {
+   "w": " out",
+   "start": 174.18,
+   "end": 174.32,
+   "p": 0.997
+  },
+  {
+   "w": " that",
+   "start": 174.32,
+   "end": 174.44,
+   "p": 0.979
+  },
+  {
+   "w": " crinkly",
+   "start": 174.44,
+   "end": 174.76,
+   "p": 0.975
+  },
+  {
+   "w": " coastline.",
+   "start": 174.76,
+   "end": 175.12,
+   "p": 0.996
+  },
+  {
+   "w": " Like,",
+   "start": 175.46,
+   "end": 175.56,
+   "p": 0.873
+  },
+  {
+   "w": " this",
+   "start": 175.6,
+   "end": 175.72,
+   "p": 0.998
+  },
+  {
+   "w": " is",
+   "start": 175.72,
+   "end": 175.86,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 175.86,
+   "end": 176.02,
+   "p": 0.998
+  },
+  {
+   "w": " nice",
+   "start": 176.02,
+   "end": 176.24,
+   "p": 0.991
+  },
+  {
+   "w": " map.",
+   "start": 176.24,
+   "end": 176.56,
+   "p": 1.0
+  },
+  {
+   "w": " This",
+   "start": 176.78,
+   "end": 176.9,
+   "p": 0.989
+  },
+  {
+   "w": " is",
+   "start": 176.9,
+   "end": 177.0,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 177.0,
+   "end": 177.08,
+   "p": 0.991
+  },
+  {
+   "w": " kind",
+   "start": 177.08,
+   "end": 177.16,
+   "p": 0.975
+  },
+  {
+   "w": " of",
+   "start": 177.16,
+   "end": 177.24,
+   "p": 0.998
+  },
+  {
+   "w": " map",
+   "start": 177.24,
+   "end": 177.36,
+   "p": 0.999
+  },
+  {
+   "w": " where",
+   "start": 177.36,
+   "end": 177.52,
+   "p": 0.983
+  },
+  {
+   "w": " if",
+   "start": 177.52,
+   "end": 177.68,
+   "p": 0.73
+  },
+  {
+   "w": " it",
+   "start": 177.68,
+   "end": 177.8,
+   "p": 0.958
+  },
+  {
+   "w": " were",
+   "start": 177.8,
+   "end": 177.92,
+   "p": 0.992
+  },
+  {
+   "w": " in",
+   "start": 177.92,
+   "end": 178.02,
+   "p": 0.988
+  },
+  {
+   "w": " the",
+   "start": 178.02,
+   "end": 178.12,
+   "p": 0.561
+  },
+  {
+   "w": " front",
+   "start": 178.12,
+   "end": 178.24,
+   "p": 0.992
+  },
+  {
+   "w": " of",
+   "start": 178.24,
+   "end": 178.34,
+   "p": 0.995
+  },
+  {
+   "w": " a",
+   "start": 178.34,
+   "end": 178.46,
+   "p": 0.996
+  },
+  {
+   "w": " fantasy",
+   "start": 178.46,
+   "end": 178.76,
+   "p": 0.995
+  },
+  {
+   "w": " novel,",
+   "start": 178.76,
+   "end": 179.04,
+   "p": 0.995
+  },
+  {
+   "w": " I",
+   "start": 179.2,
+   "end": 179.28,
+   "p": 0.997
+  },
+  {
+   "w": " would",
+   "start": 179.28,
+   "end": 179.36,
+   "p": 0.995
+  },
+  {
+   "w": " spend",
+   "start": 179.36,
+   "end": 179.48,
+   "p": 0.997
+  },
+  {
+   "w": " a",
+   "start": 179.48,
+   "end": 179.64,
+   "p": 0.998
+  },
+  {
+   "w": " lot",
+   "start": 179.64,
+   "end": 179.82,
+   "p": 0.99
+  },
+  {
+   "w": " of",
+   "start": 179.82,
+   "end": 179.94,
+   "p": 0.998
+  },
+  {
+   "w": " time",
+   "start": 179.94,
+   "end": 180.1,
+   "p": 0.999
+  },
+  {
+   "w": " looking",
+   "start": 180.1,
+   "end": 180.32,
+   "p": 0.998
+  },
+  {
+   "w": " at",
+   "start": 180.32,
+   "end": 180.54,
+   "p": 0.997
+  },
+  {
+   "w": " it",
+   "start": 180.54,
+   "end": 180.64,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 180.64,
+   "end": 180.76,
+   "p": 0.924
+  },
+  {
+   "w": " trying",
+   "start": 180.76,
+   "end": 180.92,
+   "p": 0.99
+  },
+  {
+   "w": " to",
+   "start": 180.92,
+   "end": 181.04,
+   "p": 0.999
+  },
+  {
+   "w": " decide",
+   "start": 181.04,
+   "end": 181.32,
+   "p": 0.998
+  },
+  {
+   "w": " where,",
+   "start": 181.32,
+   "end": 181.5,
+   "p": 0.997
+  },
+  {
+   "w": " like,",
+   "start": 181.5,
+   "end": 181.66,
+   "p": 0.999
+  },
+  {
+   "w": " my",
+   "start": 181.74,
+   "end": 181.88,
+   "p": 0.979
+  },
+  {
+   "w": " kingdom",
+   "start": 181.88,
+   "end": 182.14,
+   "p": 0.938
+  },
+  {
+   "w": " would",
+   "start": 182.14,
+   "end": 182.46,
+   "p": 0.999
+  },
+  {
+   "w": " be.",
+   "start": 182.46,
+   "end": 182.72,
+   "p": 1.0
+  },
+  {
+   "w": " The",
+   "start": 183.2,
+   "end": 183.28,
+   "p": 0.959
+  },
+  {
+   "w": " swath",
+   "start": 183.28,
+   "end": 183.46,
+   "p": 0.927
+  },
+  {
+   "w": " of",
+   "start": 183.46,
+   "end": 183.64,
+   "p": 0.998
+  },
+  {
+   "w": " land",
+   "start": 183.64,
+   "end": 183.8,
+   "p": 0.999
+  },
+  {
+   "w": " in",
+   "start": 183.8,
+   "end": 183.9,
+   "p": 0.985
+  },
+  {
+   "w": " the",
+   "start": 183.9,
+   "end": 184.02,
+   "p": 0.999
+  },
+  {
+   "w": " southern",
+   "start": 184.02,
+   "end": 184.22,
+   "p": 0.595
+  },
+  {
+   "w": " hemisphere",
+   "start": 184.22,
+   "end": 184.6,
+   "p": 0.993
+  },
+  {
+   "w": " splits",
+   "start": 184.6,
+   "end": 184.9,
+   "p": 0.999
+  },
+  {
+   "w": " into",
+   "start": 184.9,
+   "end": 185.08,
+   "p": 0.998
+  },
+  {
+   "w": " several",
+   "start": 185.08,
+   "end": 185.38,
+   "p": 0.999
+  },
+  {
+   "w": " large",
+   "start": 185.38,
+   "end": 185.64,
+   "p": 0.998
+  },
+  {
+   "w": " islands",
+   "start": 185.64,
+   "end": 186.0,
+   "p": 0.996
+  },
+  {
+   "w": " and",
+   "start": 186.0,
+   "end": 186.38,
+   "p": 0.776
+  },
+  {
+   "w": " innumerable",
+   "start": 186.38,
+   "end": 186.64,
+   "p": 0.959
+  },
+  {
+   "w": " smaller",
+   "start": 186.64,
+   "end": 187.06,
+   "p": 0.998
+  },
+  {
+   "w": " ones,",
+   "start": 187.06,
+   "end": 187.46,
+   "p": 0.996
+  },
+  {
+   "w": " and",
+   "start": 187.58,
+   "end": 187.82,
+   "p": 0.993
+  },
+  {
+   "w": " also",
+   "start": 187.82,
+   "end": 188.24,
+   "p": 0.97
+  },
+  {
+   "w": " looks",
+   "start": 188.24,
+   "end": 188.48,
+   "p": 0.989
+  },
+  {
+   "w": " very",
+   "start": 188.48,
+   "end": 188.84,
+   "p": 0.996
+  },
+  {
+   "w": " nice,",
+   "start": 188.84,
+   "end": 189.24,
+   "p": 0.999
+  },
+  {
+   "w": " just",
+   "start": 189.5,
+   "end": 189.68,
+   "p": 0.986
+  },
+  {
+   "w": " a",
+   "start": 189.68,
+   "end": 190.04,
+   "p": 0.509
+  },
+  {
+   "w": " plus",
+   "start": 190.04,
+   "end": 190.24,
+   "p": 0.494
+  },
+  {
+   "w": " excellent",
+   "start": 190.24,
+   "end": 190.78,
+   "p": 0.503
+  },
+  {
+   "w": " map.",
+   "start": 190.78,
+   "end": 191.1,
+   "p": 0.997
+  },
+  {
+   "w": " The",
+   "start": 191.56,
+   "end": 191.66,
+   "p": 0.991
+  },
+  {
+   "w": " water",
+   "start": 191.66,
+   "end": 191.78,
+   "p": 0.994
+  },
+  {
+   "w": " quickly",
+   "start": 191.78,
+   "end": 192.06,
+   "p": 0.998
+  },
+  {
+   "w": " finishes",
+   "start": 192.06,
+   "end": 192.42,
+   "p": 0.998
+  },
+  {
+   "w": " covering",
+   "start": 192.42,
+   "end": 192.7,
+   "p": 0.995
+  },
+  {
+   "w": " most",
+   "start": 192.7,
+   "end": 192.94,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 192.94,
+   "end": 193.1,
+   "p": 1.0
+  },
+  {
+   "w": " the",
+   "start": 193.1,
+   "end": 193.2,
+   "p": 0.999
+  },
+  {
+   "w": " high",
+   "start": 193.2,
+   "end": 193.34,
+   "p": 0.961
+  },
+  {
+   "w": " southern",
+   "start": 193.34,
+   "end": 193.62,
+   "p": 0.911
+  },
+  {
+   "w": " plateaus,",
+   "start": 193.62,
+   "end": 194.04,
+   "p": 0.965
+  },
+  {
+   "w": " leaving",
+   "start": 194.04,
+   "end": 194.24,
+   "p": 0.799
+  },
+  {
+   "w": " only",
+   "start": 194.24,
+   "end": 194.48,
+   "p": 0.979
+  },
+  {
+   "w": " a",
+   "start": 194.48,
+   "end": 194.62,
+   "p": 0.994
+  },
+  {
+   "w": " few",
+   "start": 194.62,
+   "end": 194.8,
+   "p": 0.999
+  },
+  {
+   "w": " islands",
+   "start": 194.8,
+   "end": 195.08,
+   "p": 0.981
+  },
+  {
+   "w": " left.",
+   "start": 195.08,
+   "end": 195.5,
+   "p": 0.982
+  },
+  {
+   "w": " And",
+   "start": 195.88,
+   "end": 195.9,
+   "p": 0.965
+  },
+  {
+   "w": " then,",
+   "start": 195.9,
+   "end": 196.1,
+   "p": 0.992
+  },
+  {
+   "w": " at",
+   "start": 196.2,
+   "end": 196.36,
+   "p": 0.996
+  },
+  {
+   "w": " last,",
+   "start": 196.36,
+   "end": 196.62,
+   "p": 0.998
+  },
+  {
+   "w": " the",
+   "start": 196.74,
+   "end": 196.82,
+   "p": 0.998
+  },
+  {
+   "w": " flow",
+   "start": 196.82,
+   "end": 196.98,
+   "p": 0.988
+  },
+  {
+   "w": " stops.",
+   "start": 196.98,
+   "end": 197.38,
+   "p": 0.998
+  },
+  {
+   "w": " The",
+   "start": 197.74,
+   "end": 197.8,
+   "p": 0.977
+  },
+  {
+   "w": " oceans",
+   "start": 197.8,
+   "end": 198.06,
+   "p": 0.971
+  },
+  {
+   "w": " back",
+   "start": 198.06,
+   "end": 198.32,
+   "p": 0.997
+  },
+  {
+   "w": " on",
+   "start": 198.32,
+   "end": 198.52,
+   "p": 0.998
+  },
+  {
+   "w": " Earth",
+   "start": 198.52,
+   "end": 198.66,
+   "p": 0.823
+  },
+  {
+   "w": " are",
+   "start": 198.66,
+   "end": 198.84,
+   "p": 0.996
+  },
+  {
+   "w": " drained,",
+   "start": 198.84,
+   "end": 199.2,
+   "p": 0.999
+  },
+  {
+   "w": " and",
+   "start": 199.62,
+   "end": 199.92,
+   "p": 0.951
+  },
+  {
+   "w": " the",
+   "start": 199.92,
+   "end": 200.16,
+   "p": 0.978
+  },
+  {
+   "w": " rovers",
+   "start": 200.16,
+   "end": 200.58,
+   "p": 0.967
+  },
+  {
+   "w": " all",
+   "start": 200.58,
+   "end": 200.94,
+   "p": 0.982
+  },
+  {
+   "w": " have",
+   "start": 200.94,
+   "end": 201.2,
+   "p": 0.997
+  },
+  {
+   "w": " water",
+   "start": 201.2,
+   "end": 201.44,
+   "p": 0.995
+  },
+  {
+   "w": " damage",
+   "start": 201.44,
+   "end": 201.82,
+   "p": 0.995
+  },
+  {
+   "w": " and",
+   "start": 201.82,
+   "end": 202.0,
+   "p": 0.82
+  },
+  {
+   "w": " are",
+   "start": 202.0,
+   "end": 202.08,
+   "p": 0.993
+  },
+  {
+   "w": " now",
+   "start": 202.08,
+   "end": 202.24,
+   "p": 0.977
+  },
+  {
+   "w": " probably",
+   "start": 202.24,
+   "end": 202.48,
+   "p": 0.976
+  },
+  {
+   "w": " out",
+   "start": 202.48,
+   "end": 202.7,
+   "p": 0.998
+  },
+  {
+   "w": " of",
+   "start": 202.7,
+   "end": 202.82,
+   "p": 0.998
+  },
+  {
+   "w": " warranty.",
+   "start": 202.82,
+   "end": 203.2,
+   "p": 0.984
+  },
+  {
+   "w": " Olympus",
+   "start": 203.86,
+   "end": 204.12,
+   "p": 0.991
+  },
+  {
+   "w": " Mons",
+   "start": 204.12,
+   "end": 204.32,
+   "p": 0.988
+  },
+  {
+   "w": " and",
+   "start": 204.32,
+   "end": 204.48,
+   "p": 0.969
+  },
+  {
+   "w": " a",
+   "start": 204.48,
+   "end": 204.56,
+   "p": 0.99
+  },
+  {
+   "w": " few",
+   "start": 204.56,
+   "end": 204.7,
+   "p": 0.999
+  },
+  {
+   "w": " other",
+   "start": 204.7,
+   "end": 204.86,
+   "p": 0.996
+  },
+  {
+   "w": " volcanoes",
+   "start": 204.86,
+   "end": 205.36,
+   "p": 0.963
+  },
+  {
+   "w": " are",
+   "start": 205.36,
+   "end": 205.46,
+   "p": 0.996
+  },
+  {
+   "w": " still",
+   "start": 205.46,
+   "end": 205.64,
+   "p": 0.999
+  },
+  {
+   "w": " above",
+   "start": 205.64,
+   "end": 205.8,
+   "p": 0.996
+  },
+  {
+   "w": " water,",
+   "start": 205.8,
+   "end": 206.1,
+   "p": 0.991
+  },
+  {
+   "w": " and",
+   "start": 206.3,
+   "end": 206.38,
+   "p": 0.995
+  },
+  {
+   "w": " they",
+   "start": 206.38,
+   "end": 206.54,
+   "p": 0.993
+  },
+  {
+   "w": " aren't",
+   "start": 206.54,
+   "end": 206.64,
+   "p": 0.996
+  },
+  {
+   "w": " even",
+   "start": 206.64,
+   "end": 206.86,
+   "p": 0.994
+  },
+  {
+   "w": " close",
+   "start": 206.86,
+   "end": 207.18,
+   "p": 0.979
+  },
+  {
+   "w": " to",
+   "start": 207.18,
+   "end": 207.34,
+   "p": 0.999
+  },
+  {
+   "w": " being",
+   "start": 207.34,
+   "end": 207.5,
+   "p": 0.994
+  },
+  {
+   "w": " covered.",
+   "start": 207.5,
+   "end": 207.78,
+   "p": 0.997
+  },
+  {
+   "w": " Olympus",
+   "start": 208.0,
+   "end": 208.2,
+   "p": 0.981
+  },
+  {
+   "w": " Mons",
+   "start": 208.2,
+   "end": 208.44,
+   "p": 0.993
+  },
+  {
+   "w": " still",
+   "start": 208.44,
+   "end": 208.66,
+   "p": 0.993
+  },
+  {
+   "w": " rises",
+   "start": 208.66,
+   "end": 208.9,
+   "p": 0.969
+  },
+  {
+   "w": " well",
+   "start": 208.9,
+   "end": 209.12,
+   "p": 0.986
+  },
+  {
+   "w": " over",
+   "start": 209.12,
+   "end": 209.32,
+   "p": 0.998
+  },
+  {
+   "w": " 10",
+   "start": 209.32,
+   "end": 209.54,
+   "p": 0.813
+  },
+  {
+   "w": " kilometers",
+   "start": 209.54,
+   "end": 209.92,
+   "p": 0.8
+  },
+  {
+   "w": " above",
+   "start": 209.92,
+   "end": 210.34,
+   "p": 0.996
+  },
+  {
+   "w": " the",
+   "start": 210.34,
+   "end": 210.54,
+   "p": 0.997
+  },
+  {
+   "w": " new",
+   "start": 210.54,
+   "end": 210.68,
+   "p": 0.975
+  },
+  {
+   "w": " sea",
+   "start": 210.68,
+   "end": 210.86,
+   "p": 0.999
+  },
+  {
+   "w": " level.",
+   "start": 210.86,
+   "end": 211.12,
+   "p": 0.999
+  },
+  {
+   "w": " The",
+   "start": 211.56,
+   "end": 211.68,
+   "p": 0.995
+  },
+  {
+   "w": " oceans",
+   "start": 211.68,
+   "end": 211.88,
+   "p": 0.986
+  },
+  {
+   "w": " on",
+   "start": 211.88,
+   "end": 212.1,
+   "p": 0.997
+  },
+  {
+   "w": " Mars",
+   "start": 212.1,
+   "end": 212.24,
+   "p": 0.996
+  },
+  {
+   "w": " would",
+   "start": 212.24,
+   "end": 212.38,
+   "p": 0.97
+  },
+  {
+   "w": " last",
+   "start": 212.38,
+   "end": 212.56,
+   "p": 0.999
+  },
+  {
+   "w": " a",
+   "start": 212.56,
+   "end": 212.74,
+   "p": 0.981
+  },
+  {
+   "w": " very",
+   "start": 212.74,
+   "end": 213.02,
+   "p": 0.991
+  },
+  {
+   "w": " long",
+   "start": 213.02,
+   "end": 213.26,
+   "p": 0.999
+  },
+  {
+   "w": " time.",
+   "start": 213.26,
+   "end": 213.6,
+   "p": 0.999
+  },
+  {
+   "w": " The",
+   "start": 213.84,
+   "end": 213.96,
+   "p": 0.995
+  },
+  {
+   "w": " surface",
+   "start": 213.96,
+   "end": 214.14,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 214.14,
+   "end": 214.36,
+   "p": 0.976
+  },
+  {
+   "w": " Mars",
+   "start": 214.36,
+   "end": 214.52,
+   "p": 0.996
+  },
+  {
+   "w": " is",
+   "start": 214.52,
+   "end": 214.7,
+   "p": 0.987
+  },
+  {
+   "w": " already",
+   "start": 214.7,
+   "end": 214.94,
+   "p": 0.996
+  },
+  {
+   "w": " at",
+   "start": 214.94,
+   "end": 215.14,
+   "p": 0.987
+  },
+  {
+   "w": " least",
+   "start": 215.14,
+   "end": 215.28,
+   "p": 0.997
+  },
+  {
+   "w": " 2",
+   "start": 215.28,
+   "end": 215.56,
+   "p": 0.831
+  },
+  {
+   "w": "%",
+   "start": 215.56,
+   "end": 215.82,
+   "p": 0.807
+  },
+  {
+   "w": " ice",
+   "start": 215.82,
+   "end": 216.08,
+   "p": 0.982
+  },
+  {
+   "w": " by",
+   "start": 216.08,
+   "end": 216.28,
+   "p": 0.982
+  },
+  {
+   "w": " weight,",
+   "start": 216.28,
+   "end": 216.54,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 216.74,
+   "end": 216.9,
+   "p": 0.996
+  },
+  {
+   "w": " that",
+   "start": 216.9,
+   "end": 217.08,
+   "p": 0.995
+  },
+  {
+   "w": " ice",
+   "start": 217.08,
+   "end": 217.28,
+   "p": 0.997
+  },
+  {
+   "w": " gradually",
+   "start": 217.28,
+   "end": 217.66,
+   "p": 0.994
+  },
+  {
+   "w": " gets",
+   "start": 217.66,
+   "end": 217.84,
+   "p": 0.997
+  },
+  {
+   "w": " transported",
+   "start": 217.84,
+   "end": 218.24,
+   "p": 0.999
+  },
+  {
+   "w": " to",
+   "start": 218.24,
+   "end": 218.42,
+   "p": 0.969
+  },
+  {
+   "w": " the",
+   "start": 218.42,
+   "end": 218.52,
+   "p": 0.993
+  },
+  {
+   "w": " poles",
+   "start": 218.52,
+   "end": 218.66,
+   "p": 0.991
+  },
+  {
+   "w": " by",
+   "start": 218.66,
+   "end": 218.9,
+   "p": 0.996
+  },
+  {
+   "w": " sublimation",
+   "start": 218.9,
+   "end": 219.32,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 219.32,
+   "end": 219.46,
+   "p": 0.96
+  },
+  {
+   "w": " atmospheric",
+   "start": 219.46,
+   "end": 219.8,
+   "p": 0.997
+  },
+  {
+   "w": " circulation,",
+   "start": 219.8,
+   "end": 220.36,
+   "p": 0.997
+  },
+  {
+   "w": " but",
+   "start": 220.44,
+   "end": 220.58,
+   "p": 0.998
+  },
+  {
+   "w": " it's",
+   "start": 220.58,
+   "end": 220.7,
+   "p": 0.995
+  },
+  {
+   "w": " an",
+   "start": 220.7,
+   "end": 220.78,
+   "p": 0.995
+  },
+  {
+   "w": " incredibly",
+   "start": 220.78,
+   "end": 221.16,
+   "p": 0.998
+  },
+  {
+   "w": " slow",
+   "start": 221.16,
+   "end": 221.46,
+   "p": 0.998
+  },
+  {
+   "w": " process.",
+   "start": 221.46,
+   "end": 221.9,
+   "p": 0.999
+  },
+  {
+   "w": " We're",
+   "start": 221.9,
+   "end": 222.56,
+   "p": 0.544
+  },
+  {
+   "w": " covering",
+   "start": 222.56,
+   "end": 222.8,
+   "p": 0.987
+  },
+  {
+   "w": " the",
+   "start": 222.8,
+   "end": 222.92,
+   "p": 0.979
+  },
+  {
+   "w": " planet",
+   "start": 222.92,
+   "end": 223.04,
+   "p": 0.901
+  },
+  {
+   "w": " with",
+   "start": 223.04,
+   "end": 223.18,
+   "p": 0.994
+  },
+  {
+   "w": " an",
+   "start": 223.18,
+   "end": 223.3,
+   "p": 0.983
+  },
+  {
+   "w": " enormous",
+   "start": 223.3,
+   "end": 223.66,
+   "p": 0.988
+  },
+  {
+   "w": " amount",
+   "start": 223.66,
+   "end": 223.96,
+   "p": 0.986
+  },
+  {
+   "w": " of",
+   "start": 223.96,
+   "end": 224.12,
+   "p": 0.998
+  },
+  {
+   "w": " ice",
+   "start": 224.12,
+   "end": 224.26,
+   "p": 0.879
+  },
+  {
+   "w": "-topped",
+   "start": 224.26,
+   "end": 224.54,
+   "p": 0.887
+  },
+  {
+   "w": " water.",
+   "start": 224.54,
+   "end": 224.84,
+   "p": 0.998
+  },
+  {
+   "w": " The",
+   "start": 225.14,
+   "end": 225.2,
+   "p": 0.988
+  },
+  {
+   "w": " ice",
+   "start": 225.2,
+   "end": 225.32,
+   "p": 0.998
+  },
+  {
+   "w": " would",
+   "start": 225.32,
+   "end": 225.46,
+   "p": 0.996
+  },
+  {
+   "w": " get",
+   "start": 225.46,
+   "end": 225.58,
+   "p": 0.995
+  },
+  {
+   "w": " thicker",
+   "start": 225.58,
+   "end": 225.86,
+   "p": 0.997
+  },
+  {
+   "w": " and",
+   "start": 225.86,
+   "end": 226.02,
+   "p": 0.99
+  },
+  {
+   "w": " thicker",
+   "start": 226.02,
+   "end": 226.18,
+   "p": 0.997
+  },
+  {
+   "w": " as",
+   "start": 226.18,
+   "end": 226.36,
+   "p": 0.976
+  },
+  {
+   "w": " the",
+   "start": 226.36,
+   "end": 226.48,
+   "p": 0.99
+  },
+  {
+   "w": " water",
+   "start": 226.48,
+   "end": 226.62,
+   "p": 0.999
+  },
+  {
+   "w": " below",
+   "start": 226.62,
+   "end": 226.84,
+   "p": 0.999
+  },
+  {
+   "w": " it",
+   "start": 226.84,
+   "end": 227.0,
+   "p": 0.983
+  },
+  {
+   "w": " cooled,",
+   "start": 227.0,
+   "end": 227.2,
+   "p": 0.993
+  },
+  {
+   "w": " and",
+   "start": 227.44,
+   "end": 227.48,
+   "p": 0.99
+  },
+  {
+   "w": " eventually",
+   "start": 227.48,
+   "end": 227.78,
+   "p": 0.986
+  },
+  {
+   "w": " the",
+   "start": 227.78,
+   "end": 227.92,
+   "p": 0.888
+  },
+  {
+   "w": " oceans",
+   "start": 227.92,
+   "end": 228.14,
+   "p": 0.994
+  },
+  {
+   "w": " would",
+   "start": 228.14,
+   "end": 228.34,
+   "p": 0.996
+  },
+  {
+   "w": " freeze",
+   "start": 228.34,
+   "end": 228.56,
+   "p": 0.995
+  },
+  {
+   "w": " solid.",
+   "start": 228.56,
+   "end": 228.98,
+   "p": 0.955
+  },
+  {
+   "w": " The",
+   "start": 229.48,
+   "end": 229.6,
+   "p": 0.979
+  },
+  {
+   "w": " surface",
+   "start": 229.6,
+   "end": 229.8,
+   "p": 0.997
+  },
+  {
+   "w": " would",
+   "start": 229.8,
+   "end": 230.04,
+   "p": 0.995
+  },
+  {
+   "w": " very",
+   "start": 230.04,
+   "end": 230.2,
+   "p": 0.906
+  },
+  {
+   "w": " gradually",
+   "start": 230.2,
+   "end": 230.68,
+   "p": 0.994
+  },
+  {
+   "w": " sublimate",
+   "start": 230.68,
+   "end": 231.18,
+   "p": 0.923
+  },
+  {
+   "w": " away",
+   "start": 231.18,
+   "end": 231.4,
+   "p": 0.968
+  },
+  {
+   "w": " to",
+   "start": 231.4,
+   "end": 231.52,
+   "p": 0.992
+  },
+  {
+   "w": " the",
+   "start": 231.52,
+   "end": 231.64,
+   "p": 0.997
+  },
+  {
+   "w": " poles,",
+   "start": 231.64,
+   "end": 231.86,
+   "p": 0.992
+  },
+  {
+   "w": " and",
+   "start": 232.12,
+   "end": 232.24,
+   "p": 0.992
+  },
+  {
+   "w": " if",
+   "start": 232.24,
+   "end": 232.4,
+   "p": 0.914
+  },
+  {
+   "w": " the",
+   "start": 232.4,
+   "end": 232.5,
+   "p": 0.971
+  },
+  {
+   "w": " ice",
+   "start": 232.5,
+   "end": 232.64,
+   "p": 0.999
+  },
+  {
+   "w": " had",
+   "start": 232.64,
+   "end": 232.78,
+   "p": 0.683
+  },
+  {
+   "w": " picked",
+   "start": 232.78,
+   "end": 232.9,
+   "p": 0.993
+  },
+  {
+   "w": " up",
+   "start": 232.9,
+   "end": 233.02,
+   "p": 0.996
+  },
+  {
+   "w": " enough",
+   "start": 233.02,
+   "end": 233.2,
+   "p": 0.991
+  },
+  {
+   "w": " dirt",
+   "start": 233.2,
+   "end": 233.38,
+   "p": 1.0
+  },
+  {
+   "w": " and",
+   "start": 233.38,
+   "end": 233.52,
+   "p": 0.986
+  },
+  {
+   "w": " rocks,",
+   "start": 233.52,
+   "end": 233.8,
+   "p": 0.998
+  },
+  {
+   "w": " they",
+   "start": 234.2,
+   "end": 234.34,
+   "p": 0.985
+  },
+  {
+   "w": " would",
+   "start": 234.34,
+   "end": 234.42,
+   "p": 0.972
+  },
+  {
+   "w": " be",
+   "start": 234.42,
+   "end": 234.52,
+   "p": 0.993
+  },
+  {
+   "w": " revealed",
+   "start": 234.52,
+   "end": 234.88,
+   "p": 0.994
+  },
+  {
+   "w": " and",
+   "start": 234.88,
+   "end": 235.1,
+   "p": 0.988
+  },
+  {
+   "w": " collect",
+   "start": 235.1,
+   "end": 235.3,
+   "p": 0.72
+  },
+  {
+   "w": " on",
+   "start": 235.3,
+   "end": 235.5,
+   "p": 0.997
+  },
+  {
+   "w": " top,",
+   "start": 235.5,
+   "end": 235.74,
+   "p": 0.995
+  },
+  {
+   "w": " like",
+   "start": 235.86,
+   "end": 236.0,
+   "p": 0.996
+  },
+  {
+   "w": " how",
+   "start": 236.0,
+   "end": 236.2,
+   "p": 0.994
+  },
+  {
+   "w": " dirt",
+   "start": 236.2,
+   "end": 236.38,
+   "p": 0.995
+  },
+  {
+   "w": " collects",
+   "start": 236.38,
+   "end": 236.66,
+   "p": 0.979
+  },
+  {
+   "w": " on",
+   "start": 236.66,
+   "end": 236.82,
+   "p": 0.995
+  },
+  {
+   "w": " top",
+   "start": 236.82,
+   "end": 236.92,
+   "p": 0.977
+  },
+  {
+   "w": " of",
+   "start": 236.92,
+   "end": 237.06,
+   "p": 0.994
+  },
+  {
+   "w": " a",
+   "start": 237.06,
+   "end": 237.14,
+   "p": 0.993
+  },
+  {
+   "w": " melting",
+   "start": 237.14,
+   "end": 237.36,
+   "p": 1.0
+  },
+  {
+   "w": " snowbank,",
+   "start": 237.36,
+   "end": 237.88,
+   "p": 0.795
+  },
+  {
+   "w": " until,",
+   "start": 238.04,
+   "end": 238.26,
+   "p": 0.996
+  },
+  {
+   "w": " perhaps,",
+   "start": 238.34,
+   "end": 238.5,
+   "p": 0.983
+  },
+  {
+   "w": " eventually,",
+   "start": 239.14,
+   "end": 239.16,
+   "p": 0.993
+  },
+  {
+   "w": " the",
+   "start": 239.32,
+   "end": 239.34,
+   "p": 0.997
+  },
+  {
+   "w": " equatorial",
+   "start": 239.34,
+   "end": 239.74,
+   "p": 0.993
+  },
+  {
+   "w": " regions",
+   "start": 239.74,
+   "end": 240.14,
+   "p": 0.995
+  },
+  {
+   "w": " of",
+   "start": 240.14,
+   "end": 240.32,
+   "p": 0.996
+  },
+  {
+   "w": " Mars",
+   "start": 240.32,
+   "end": 240.5,
+   "p": 0.987
+  },
+  {
+   "w": " would",
+   "start": 240.5,
+   "end": 240.64,
+   "p": 0.972
+  },
+  {
+   "w": " become",
+   "start": 240.64,
+   "end": 240.84,
+   "p": 0.892
+  },
+  {
+   "w": " a",
+   "start": 240.84,
+   "end": 241.08,
+   "p": 0.998
+  },
+  {
+   "w": " dusty,",
+   "start": 241.08,
+   "end": 241.34,
+   "p": 0.998
+  },
+  {
+   "w": " rocky",
+   "start": 241.56,
+   "end": 241.68,
+   "p": 0.997
+  },
+  {
+   "w": " surface",
+   "start": 241.68,
+   "end": 242.04,
+   "p": 0.983
+  },
+  {
+   "w": " atop",
+   "start": 242.04,
+   "end": 242.36,
+   "p": 0.996
+  },
+  {
+   "w": " a",
+   "start": 242.36,
+   "end": 242.5,
+   "p": 0.989
+  },
+  {
+   "w": " bedrock",
+   "start": 242.5,
+   "end": 242.7,
+   "p": 0.999
+  },
+  {
+   "w": " of",
+   "start": 242.7,
+   "end": 243.0,
+   "p": 0.998
+  },
+  {
+   "w": " ice.",
+   "start": 243.0,
+   "end": 243.26,
+   "p": 0.999
+  },
+  {
+   "w": " Except,",
+   "start": 243.72,
+   "end": 244.08,
+   "p": 0.945
+  },
+  {
+   "w": " maybe",
+   "start": 244.38,
+   "end": 244.54,
+   "p": 0.992
+  },
+  {
+   "w": " none",
+   "start": 244.54,
+   "end": 244.72,
+   "p": 0.99
+  },
+  {
+   "w": " of",
+   "start": 244.72,
+   "end": 244.86,
+   "p": 0.998
+  },
+  {
+   "w": " this",
+   "start": 244.86,
+   "end": 244.98,
+   "p": 0.994
+  },
+  {
+   "w": " would",
+   "start": 244.98,
+   "end": 245.1,
+   "p": 0.994
+  },
+  {
+   "w": " happen.",
+   "start": 245.1,
+   "end": 245.36,
+   "p": 0.998
+  },
+  {
+   "w": " Water",
+   "start": 245.74,
+   "end": 245.82,
+   "p": 0.99
+  },
+  {
+   "w": " is",
+   "start": 245.82,
+   "end": 246.06,
+   "p": 0.971
+  },
+  {
+   "w": " a",
+   "start": 246.06,
+   "end": 246.2,
+   "p": 0.998
+  },
+  {
+   "w": " potent",
+   "start": 246.2,
+   "end": 246.42,
+   "p": 0.998
+  },
+  {
+   "w": " greenhouse",
+   "start": 246.42,
+   "end": 246.86,
+   "p": 0.988
+  },
+  {
+   "w": " gas,",
+   "start": 246.86,
+   "end": 247.22,
+   "p": 0.994
+  },
+  {
+   "w": " and",
+   "start": 247.42,
+   "end": 247.52,
+   "p": 0.997
+  },
+  {
+   "w": " with",
+   "start": 247.52,
+   "end": 247.66,
+   "p": 0.992
+  },
+  {
+   "w": " so",
+   "start": 247.66,
+   "end": 247.78,
+   "p": 0.998
+  },
+  {
+   "w": " much",
+   "start": 247.78,
+   "end": 247.9,
+   "p": 0.999
+  },
+  {
+   "w": " new",
+   "start": 247.9,
+   "end": 248.08,
+   "p": 0.988
+  },
+  {
+   "w": " water",
+   "start": 248.08,
+   "end": 248.3,
+   "p": 0.999
+  },
+  {
+   "w": " available",
+   "start": 248.3,
+   "end": 248.58,
+   "p": 0.996
+  },
+  {
+   "w": " to",
+   "start": 248.58,
+   "end": 248.8,
+   "p": 0.998
+  },
+  {
+   "w": " evaporate",
+   "start": 248.8,
+   "end": 249.16,
+   "p": 1.0
+  },
+  {
+   "w": " into",
+   "start": 249.16,
+   "end": 249.28,
+   "p": 0.988
+  },
+  {
+   "w": " the",
+   "start": 249.28,
+   "end": 249.4,
+   "p": 0.998
+  },
+  {
+   "w": " atmosphere,",
+   "start": 249.4,
+   "end": 249.8,
+   "p": 0.999
+  },
+  {
+   "w": " maybe",
+   "start": 249.8,
+   "end": 250.38,
+   "p": 0.237
+  },
+  {
+   "w": " Mars",
+   "start": 250.38,
+   "end": 250.62,
+   "p": 0.965
+  },
+  {
+   "w": " would",
+   "start": 250.62,
+   "end": 250.84,
+   "p": 0.991
+  },
+  {
+   "w": " warm",
+   "start": 250.84,
+   "end": 251.06,
+   "p": 0.999
+  },
+  {
+   "w": " up",
+   "start": 251.06,
+   "end": 251.24,
+   "p": 0.982
+  },
+  {
+   "w": " and",
+   "start": 251.24,
+   "end": 251.4,
+   "p": 0.871
+  },
+  {
+   "w": " the",
+   "start": 251.4,
+   "end": 251.46,
+   "p": 0.99
+  },
+  {
+   "w": " oceans",
+   "start": 251.46,
+   "end": 251.62,
+   "p": 0.992
+  },
+  {
+   "w": " would",
+   "start": 251.62,
+   "end": 251.86,
+   "p": 0.996
+  },
+  {
+   "w": " remain",
+   "start": 251.86,
+   "end": 252.1,
+   "p": 0.998
+  },
+  {
+   "w": " liquid",
+   "start": 252.1,
+   "end": 252.42,
+   "p": 0.986
+  },
+  {
+   "w": " as",
+   "start": 252.42,
+   "end": 252.62,
+   "p": 0.984
+  },
+  {
+   "w": " they",
+   "start": 252.62,
+   "end": 252.74,
+   "p": 0.998
+  },
+  {
+   "w": " are",
+   "start": 252.74,
+   "end": 252.92,
+   "p": 0.999
+  },
+  {
+   "w": " here",
+   "start": 252.92,
+   "end": 253.1,
+   "p": 0.987
+  },
+  {
+   "w": " on",
+   "start": 253.1,
+   "end": 253.26,
+   "p": 0.998
+  },
+  {
+   "w": " Earth.",
+   "start": 253.26,
+   "end": 253.46,
+   "p": 0.813
+  },
+  {
+   "w": " There's",
+   "start": 254.02,
+   "end": 254.16,
+   "p": 0.969
+  },
+  {
+   "w": " only",
+   "start": 254.16,
+   "end": 254.3,
+   "p": 0.997
+  },
+  {
+   "w": " one",
+   "start": 254.3,
+   "end": 254.48,
+   "p": 0.993
+  },
+  {
+   "w": " way",
+   "start": 254.48,
+   "end": 254.6,
+   "p": 0.999
+  },
+  {
+   "w": " to",
+   "start": 254.6,
+   "end": 254.72,
+   "p": 0.999
+  },
+  {
+   "w": " find",
+   "start": 254.72,
+   "end": 254.86,
+   "p": 0.999
+  },
+  {
+   "w": " out.",
+   "start": 254.86,
+   "end": 255.24,
+   "p": 1.0
+  }
+ ]
+}

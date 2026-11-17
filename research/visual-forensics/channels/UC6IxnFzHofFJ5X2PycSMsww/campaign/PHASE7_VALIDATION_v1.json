@@ -1,0 +1,141 @@
+{
+ "sidecar_sha256": "1c3f5a7dd777c228c836a8fcf55d085d1e0deebfd1ba087141a0207d65c8f696",
+ "tests": [
+  {
+   "test": "T1 channel identity: YT id registered as xkcd's What If? in target registry",
+   "result": "PASS",
+   "info": "xkcd's What If?"
+  },
+  {
+   "test": "T2 forensic-index channel_id is CH-000004",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T3 every video edge id is in the census",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T4 91 channel>video edges: 83 catalog + 8 flagged NOT_IN_PROJECT_CATALOG",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T5 every state_event resolves in its video state_ledger",
+   "result": "PASS",
+   "info": "[]"
+  },
+  {
+   "test": "T6 every state_event chain reaches locator, observation and >=1 rule",
+   "result": "PASS",
+   "info": "[]"
+  },
+  {
+   "test": "T7 64 source_hash edges equal the hash table",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T8 issue accounting: 27+8+2=37 and each has a reconciliation",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T9 missing-hash videos absent from census-hashes and from repo index (no silent fill)",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T10 overlap with repo index recorded; hashes differ (not same media)",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T11 untested rules not claimed as tested",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T12 no media paths outside locator edges, no secrets patterns",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T13 deterministic rebuild",
+   "result": "PASS",
+   "info": ""
+  },
+  {
+   "test": "T14 sidecar size < 3 MB",
+   "result": "PASS",
+   "info": "126178"
+  },
+  {
+   "test": "T15 retrieval examples non-empty",
+   "result": "PASS",
+   "info": "{'E1 video 2LSyizrk8-0 chain': 2, 'E2 rule MAN07-S6-R02 -> spec/test': 4, 'E3 untested rules': 8, 'E4 source hash 2LSyizrk8-0': 1, 'E5 observation types supporting R02': 1}"
+  }
+ ],
+ "failures": [],
+ "examples": {
+  "E1 video 2LSyizrk8-0 chain": [
+   {
+    "state_event": "2LSyizrk8-0:G0002",
+    "locator": "videos/2LSyizrk8-0/frames/sheets/SHEET_01.jpg",
+    "observation": "GRAPHIC/TEXT:WRITE_ON_TYPE",
+    "rules": [
+     "MAN07-S6-R02",
+     "MAN07-S6-R02",
+     "MAN07-S6-R08",
+     "MAN07-S6-R08",
+     "MAN07-S6-R08",
+     "MAN07-S6-R08",
+     "MAN07-S6-R08"
+    ]
+   },
+   {
+    "state_event": "2LSyizrk8-0:G0110",
+    "locator": "videos/2LSyizrk8-0/frames/sheets/SHEET_19.jpg;videos/2LSyizrk8-0/frames/sheets/SHEET_20.jpg",
+    "observation": "CAMERA+GRAPHIC/TEXT:PAN_LEFT_REVEAL_PANEL",
+    "rules": [
+     "MAN07-S6-R05"
+    ]
+   }
+  ],
+  "E2 rule MAN07-S6-R02 -> spec/test": [
+   [
+    "specification",
+    "campaign/CHANNEL_PRODUCTION_MANUAL_v0.7.md \u00a76 + \u00a79"
+   ],
+   [
+    "test_result",
+    "RT4_916/attempt_2 (26/26 events, portrait silent PASS)"
+   ],
+   [
+    "specification",
+    "RT4_916/spec_s6.md cites 2LSyizrk8-0 G0002"
+   ],
+   [
+    "specification",
+    "RT4_916/spec_s6.md cites wBLVmEZV2Oc G0004"
+   ]
+  ],
+  "E3 untested rules": [
+   "MAN07-S6-R04",
+   "MAN07-S6-R06",
+   "MAN07-S6-R08",
+   "MAN07-S6-R09",
+   "MAN07-S6-R10",
+   "MAN07-S6-R11",
+   "MAN07-S6-R12",
+   "MAN07-S6-R13"
+  ],
+  "E4 source hash 2LSyizrk8-0": [
+   "d2d0ddff2ea1122545832bce88e33fb3bca7cab0a954eb66097bd49577e369c0"
+  ],
+  "E5 observation types supporting R02": [
+   "GRAPHIC/TEXT:WRITE_ON_TYPE"
+  ]
+ }
+}

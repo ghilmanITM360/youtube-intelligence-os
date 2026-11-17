@@ -1,0 +1,6 @@
+# Continuation handoff — sFTRRdHqZIQ
+- Source sha256 eecb785b4b20a2310f6eb6446d4b92c99211c8d4aabca356a646e11b9b725327; path /Users/ghilmankhan/Downloads/videos in mp3/xkcd Channel/Why Space Is Actually Warm! [sFTRRdHqZIQ].mp4; machine A (Ghilmans-Laptop), xkcd stream lock ~/YIOS-local-audits/xkcd-whatif/.xkcd_writer_lock.
+- Status VISUAL_ANALYSIS_PARTIAL; gates {"source_identity": "PASS", "full_temporal_overview": "PASS", "candidate_shots_verified": "PASS", "meaningful_state_timing": "PARTIAL", "motion_design_review": "PARTIAL", "creative_design_review": "PARTIAL", "visual_script_mapping": "PARTIAL", "production_blueprint": "PARTIAL", "audio_human_listening": "BLOCKED", "final_av_signoff": "BLOCKED"}.
+- Pending: meaningful_state_timing, motion_design_review, creative_design_review, visual_script_mapping, production_blueprint, audio_human_listening, final_av_signoff; unresolved segments ['G0002']; partially viewed activities 3.
+- Tools: scripts/xk_ingest.sh, xk_segment.py, xk_sheets.py, xk_build.py, xk_palette.py, xk_asr_check.py, xk_finalize.py (python -I; cv2 venv ~/YIOS-local-audits/tooling/visual-ct-scan-venv).
+- Next exact operation: listening by a human (intervals = all speech 0–73.653696s); optional full-frame strips for partially viewed activities.
