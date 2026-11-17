@@ -1,0 +1,46 @@
+DIR=__import__('os').environ['FINANCE_WORK']+'/n251/'
+VID='jxeB_FcQrc0'; NICK='NICK_251'
+RANGES=[(0,None)]; DIMS=[1280,720]
+FIRST_END='hit that like button.'
+COMPLETENESS_EXTRA='; stored text ends on the subscribe call ("...smart money decisions absolutely will.") with no separate sign-off; ASR garbles several figures ("23 12%", "$48" for about $408, "$21,66" and "a4 million") and words ("carpor", "sixf figureure", "wealth-b buildinging")'
+IMAGE_ACQ='REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED'
+CLAIMS=[
+("The average monthly payment is $742 for new cars and $525 for used; the average American pays over $700 a month.","climbed to $742","Consistent: Experian Q2 2025 reported a $749 average new-vehicle payment (EXP1); the used figure is consistent by analyst recall (about $520-525). Within rounding for a November 2025 video.",['EXP1']),
+("A new car loses 20% of its value the moment it is driven off the lot.","lost 20% of its value the moment","Overstated: about 20% is a common first-year figure; drive-off loss is usually put near 10%. The script itself later says about 23% in the first year.",[]),
+("The 20/4/10 rule: 20% down, at most 4 years, total transportation under 10% of monthly income; the stricter 20/3/8 caps payments at 8% of gross income.","called the 2410 rule","Correct as commonly stated rules of thumb, but the script then applies both percentages to take-home pay, which is stricter than the 20/4/10 rule's usual gross-income basis; the basis switches without comment.",[]),
+("New cars lose about 23% in year one ($30,000 to about $23,000) and about 60% in five years ($30,000 to $12,000).","Most cars lose about 60% of their","K02: 30,000 x 0.765 = 22,950; 30,000 x 0.4 = 12,000. Arithmetic reproduces; rates consistent by analyst recall with Carfax/Kelley estimates.",[]),
+("At $50,000 (about $3,400 take-home): 10% = $340, 8% = $272; a $150 payment at 5% for 4 years with 20% down buys about $8,000, about $6,000 over 3 years.","with a $150 monthly payment","K02: 3,400 x 0.10/0.08 = 340/272; PV(150, 5%, 48) = 6,513 / 0.8 = 8,142; 36 months 6,256. Reproduces; take-home is a rough single-filer estimate.",[]),
+("At $75,000 (about $5,100 take-home): a $350 payment buys $15-16K; the conservative path $11-12K.","cars in the $15 to $16,000 range","Understated: K02 PV(350, 5%, 48) = 15,198 loan, about $19,000 with 20% down; $250 for 36 months gives about $10,400. The 8% figure is transcribed as \"$48\" (should be about $408).",[]),
+("At $100,000 (about $6,800 take-home) a $500 payment buys $22-25K; at $150,000 (about $9,100) a $700 payment buys $30-35K.","shopping in the $22 to $25,000 range","Understated against the script's own method: K02 $500 -> about $27,100 and $700 -> about $38,000 with 20% down at 5% over 4 years.",[]),
+("Recap: $150,000 lets you shop around $40,000.","lets you shop around 40,000","Internally inconsistent with the earlier $30-35K range for the same salary.",[]),
+("Sarah: $75,000 salary, $900 monthly transportation is nearly 18% of her gross income.","nearly 18% of her gross income","Wrong base: 900 / 6,250 gross = 14.4%; 900 / 5,100 take-home = 17.6%.",[]),
+("After 3 years Sarah's $35,000 SUV is worth $22,000 but she owes $28,000, needing $6,000 to exit.","she still owes 28,000","Overstated: K02 a $35,000 7-year loan with a $650 payment implies about 13% APR and about $23,700 owed after 36 payments, so negative equity is about $1,700, not $6,000.",[]),
+("Mike: $12,000 over 3 years at about 11% is $395 a month; investing $395 for 10 years at 7% gives over $68,000.","his monthly payment is just $395","K02: payment 393; FV(395, 7%, 120 months) = 68,368. Reproduces. Used-car rates near 11% consistent by analyst recall (Experian Q2 2025).",[]),
+("An extra $200 a month for 30 years at 7% becomes over $240,000.","that extra $200 per month becomes over","K02: FV(200, 7%, 360) = 243,994. Reproduces; the follow-on \"a4 million\" is an ASR garble (likely a quarter million).",[]),
+("$39 a month over six years is $2,800; over seven $3,276.","$39 per month over six years","K02: 39 x 72 = 2,808; 39 x 84 = 3,276. Reproduces.",[]),
+("A $20,000 car at 5% costs about $21,66x over 4 years, $22,645 over 6, $23,712 over 7: an extra $2,600.","$20,000 car financed at 5% interest","Does not reproduce: K02 total payments are 22,108 (4y), 23,191 (6y) and 23,745 (7y); 7y minus 4y = 1,637, not $2,600.",[]),
+("Warren Buffett famously drove the same car for decades.","famously drove the same car for decades","Overstated by analyst recall: Buffett kept cars for years (e.g. a 2006 Cadillac DTS until 2014) but replaced them; not one car for decades.",[]),
+]
+TITLE='Authentic title "How Much Car Your Salary Actually Buys You (Shocking)" promises salary-based purchase limits. The script delivers four salary tiers with 10%/8% rules, but its price ranges are lower than its own payment assumptions support and the $150K figure changes between sections. "(Shocking)" is a generic intensifier.'
+THUMB='Registered maxresdefault 1280x720 (HTTP 200, real image). White background: the recurring cartoon man looking alarmed beside a large red SUV (red glow) and a smaller green sedan (green glow) indicated by a black arrow, with "THE 8% RULE" in heavy black capitals. At 320x180 the text and red-vs-green contrast read clearly. Matches the script\'s conservative 20/3/8 option, though the script uses the 10% rule as primary.'
+SCRIPT='A single-narrator explainer with composites Sarah and Mike: hook on average payments and depreciation, 20/4/10 and 20/3/8 rules, total cost of ownership and depreciation, four salary tiers ($50K, $75K, $100K, $150K), Sarah vs Mike, reliable cheap cars, dealer add-ons, opportunity cost, Buffett, image-driven buyers, loan-term arithmetic, recap and subscribe. Several headline calculations reproduce; tier price ranges, Sarah\'s figures and the loan-term totals do not.'
+BEATS=['Hook: average payment and drive-off loss.','Lender incentives.','20/4/10 and 20/3/8 rules.','Total cost and depreciation.','$50K tier.','$75K tier.','$100K tier.','$150K tier.','Sarah vs Mike.','Reliable cheap cars; larger vehicles.','Dealer add-ons.','Opportunity cost.','Buffett and image buyers.','Loan-term math.','Recap and subscribe.']
+TOPIC={'analysis':'Affordable car price by salary using percentage-of-income rules.',
+ 'audience_problem':'Buyers who judge affordability by approved monthly payment.',
+ 'economic_mechanism':'AUTO_LOAN_AFFORDABILITY_DEPRECIATION_AND_OPPORTUNITY_COST',
+ 'demand_type':'SALARY_TIER_EXPLAINER_HYPOTHESIS','time_sensitivity':'Medium: payment and rate levels are 2025-specific.',
+ 'narrative_angle':'Approval is not affordability; cars are wealth destroyers.'}
+LESSON='Test an original car-affordability explainer that states one income basis, shows the loan formula behind each price range, and keeps recap figures identical to the tiers.'
+VIRAL='STRONG (3.962x) at about 290 days old against ten peers 285-295 days old; four peers STRONG, three TYPICAL and three WEAK. Comment rate is computed in observed_result; impressions and CTR unknown.'
+TREND='Published 25 Nov 2025 amid record average auto payments; no authenticated attention series'
+FORMAT='A single-narrator long-form explainer with salary tiers, composites and worked numbers; retention unverified'
+ALTS=['Unknown impressions, traffic sources and subscriber distribution','Salary-personalised car-cost topics may have broad search demand (no data)','Possible external or suggested traffic spikes are unobserved']
+EVENT='Experian average payment reused; take-home shares, $50K tier, depreciation, Mike, $200 opportunity cost and $39 add-on arithmetic reproduced; higher-tier ranges, Sarah ratios/negative equity and loan-term totals do not. Rules of thumb and Buffett by analyst recall.'
+S='SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE'
+SOURCES=[
+ {'source_id':'EXP1','url':'https://www.experian.com/content/dam/noindex/na/us/automotive/summary-report/2025/q2-2025-auto-quarterly-trends-report-summary.pdf','source_date':'2025-08-28','access_scope':S,'locator':'Experian State of the Automotive Finance Market Q2 2025 summary','finding':'Average new-vehicle monthly payment $749.','limitations':'Reused from NICK_240; used-vehicle figure not re-checked.','publication_applicability':'BEFORE_PUBLICATION'},
+]
+K02={'method':'Income-rule budgets, loan present values at 5%/48 and 36 months with 20% down, depreciation, Sarah amortisation, Mike payment and FV, opportunity cost, add-ons, loan-term totals',
+ 'results':{'b50_10':340,'b50_8':272,'price_150_48':8142,'price_150_36':6256,'price_350_48':18998,'price_250_36':10427,'price_500_48':27139,'price_700_48':37995,'dep_y1':22950,'dep_y5':12000,'sarah_gross_share':0.144,'sarah_takehome_share':0.176,'sarah_implied_apr':0.13,'sarah_owed_36':23734,'mike_payment':393,'mike_fv_10y':68368,'fv_200_30y':243994,'addon_72':2808,'addon_84':3276,'total_20k_48':22108,'total_20k_72':23191,'total_20k_84':23745},
+ 'limitations':'Prices assume 5% APR and 20% down; take-home figures are the script\'s; Sarah APR solved from the stated payment.'}
+LIMITS='No audio, video, private analytics or native Excel verification; one reused source; rules and depreciation by analyst recall. No paid purchases.'

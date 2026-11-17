@@ -1,0 +1,41 @@
+DIR=__import__('os').environ['FINANCE_WORK']+'/n206/'
+VID='_uFxmNBZYzE'; NICK='NICK_206'
+RANGES=[(0,None)]; DIMS=[1280,720]
+FIRST_END='still broke.'
+COMPLETENESS_EXTRA='; stored ending is complete ("that\'s the whole game."); ASR artifacts ("60hour", "$2,400 car payment" likely garbled); fillers ("Um", "Uh"); 3,577 words over 1,393 seconds (~154 wpm) is consistent with a full read'
+IMAGE_ACQ='REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED'
+U='UNVERIFIED_CREATOR_ASSERTION'
+CLAIMS=[
+('Switching jobs every two to three years is statistically how you get the biggest pay bumps.','You\'re switching jobs every two to\nthree years','ATLWGT: Atlanta Fed Wage Growth Tracker historically shows a switcher premium, but stayers out-earned switchers Feb-Jul 2025 (first since 2018); the premium returned to ~0.8 pt by September 2025. Directionally true over the long run, weaker and volatile near publication; the premium is in wage growth, not guaranteed raises.',['ATLWGT']),
+('Spending $3,000/year that raises income by $10,000 is a 233% return.','you\'re getting a 233% return','K02: (10,000-3,000)/3,000 = 233% (reproduces, first-year, pre-tax; ignores that the $10,000 may not be caused by the spending).',[]),
+('A permanent $20,000 raise over a 30-year career is worth $600,000.','That one move is worth $600,000','K02: 20,000 x 30 = 600,000 (reproduces nominally; pre-tax, undiscounted, assumes the raise persists).',[]),
+('Choosing $1,800 rent over $2,500 frees $8,400/year, which invested 20 years at 8% is $412,000.','8% returns is $412,000','K02: $700/month at 8%/12 for 240 months = $412,314 (reproduces with monthly contributions); $8,400 annual end-of-year contributions give $384,401. Nominal, pre-tax, assumes 8% returns.',[]),
+('A $650/month Audi payment ($7,800/year) invested over a loan\'s lifetime becomes generational wealth.','That $650 is $7,800','K02: 650 x 12 = 7,800 (reproduces); $650/month for 60 months at 8% = ~$47,760. Calling this "generational wealth" is hyperbole.',[]),
+('Switching a $180 phone plan to $40 saves $1,680/year.','That\'s\n$1,680','K02: (180-40) x 12 = 1,680 (reproduces).',[]),
+('Cutting groceries from $400 to $320 saves $960/year; a $16,000 raise adds ~$11,000 take-home.','That\'s $960 saved annually','K02: 80 x 12 = 960; 16,000 x (1-0.0765-0.22-0.05) = ~$10,456 (approximately reproduces "roughly $11,000" under a 22% bracket and ~5% state tax).',[]),
+('Finding $15,000 in 40 hours of budget work is $375/hour.','That\'s $375 per hour','K02: 15,000/40 = 375 (reproduces; assumes $15,000 of savings is available, which is large relative to a $110,000 income).',[]),
+('$20,000 earned at 25 and invested 40 years becomes $435,000; at 45 it becomes $93,000.','invested for 40 years becomes\n$435,000','K02: 20,000 x 1.08^40 = $434,490; 20,000 x 1.08^20 = $93,219 (reproduce at an assumed 8%, nominal).',[]),
+('A course costing $500-$800 will get you a $15,000 raise; a skill can raise lifetime earnings by $200,000.','You\'re taking\nthe course that costs $500',f'Illustrative; no evidence offered that such courses produce these raises. {U}',[]),
+]
+TITLE='Authentic title "The Financial \\"Bulk & Cut\\" Strategy - Which Phase Are You In?" borrows a bodybuilding metaphor and adds a self-diagnosis question. The script is an opinion framework (earn-first in your 20s, optimize in your 30s) with illustrative arithmetic. WEAK against peers that include very large outliers ("Who Can Actually Afford a $500K House in 2026" 529K views, "How They Afford It: The Fake Rich Illusion" 141K). Association only.'
+THUMB='Registered maxresdefault 1280x720 (HTTP 200, real image). White field. Left: the recurring cartoon man with glasses in a navy suit cutting a red credit card and a red cup with large scissors. Right: a three-line black headline \'THE "BULK & CUT" STRATEGY\' over green rising bars and stacked cash, with a curved arrow. The image shows only the "cut" half; the "bulk" (income growth) is implied by bars. At 320x180 the headline is legible; the scissors and card remain readable.'
+SCRIPT='An opinion framework: hook contrasting an $85K broke earner with a $52K saver, the bulking/cutting analogy, what bulking means (income growth, self-investment, job switching), the trap of staying in bulking, what cutting means, phase-by-age guidance, worked examples (rent, car, phone), a 12-month test, numerical comparisons of coupon savings vs raises, compounding of early earnings, transition psychology and an action plan by age/income. Arithmetic largely reproduces at stated assumptions (233%, $412K with monthly contributions, $435K/$93K at 8%, $375/hour). Weak points: job-switch premium was negative for much of 2025 (Atlanta Fed); "generational wealth" from a $650 payment (~$48K); age cut-offs and course/raise links are unevidenced; "$2,400 car payment" likely garbled. Few external factual claims. The stored ending is complete.'
+BEATS=['Hook: $85K broke vs $52K saver.','Offense vs defense; introduction.','Bodybuilding bulk/cut analogy.','Financial bulking: income growth and self-investment.','ROI of self-investment; staying in bulk too long.','Financial cutting: optimize spending.','Generic frugality advice is mis-sequenced.','Bulking as startup growth mode; $45K to $65K example.','Missing the transition; cutting examples (rent, car, phone).','Which-phase test.','Worked comparisons: coupons vs raise; $110K cutting.','Sequencing by decade; compounding early earnings.','Transition psychology; action plan by age/income.','Close without subscribe ask.']
+TOPIC={'analysis':'A sequencing framework: prioritize income growth early, then spending optimization, framed with a bodybuilding bulk/cut metaphor.',
+ 'audience_problem':'Earners unsure whether to focus on earning more or spending less.',
+ 'economic_mechanism':'HUMAN_CAPITAL_INVESTMENT_VS_EXPENSE_OPTIMIZATION_SEQUENCING',
+ 'demand_type':'EVERGREEN_FRAMEWORK_SELF_DIAGNOSIS_HYPOTHESIS','time_sensitivity':'Low: framework is not time-bound.',
+ 'narrative_angle':'Stop doing both; pick a phase.'}
+LESSON='Test an original earn-vs-save sequencing explainer with a transparent decision calculator (hours, expected raise, probability, tax) rather than fixed age cut-offs, and cite current job-switch wage data.'
+VIRAL='WEAK against a cohort containing the channel\'s largest affordability outliers; the median is robust but the cohort is strong. Comment rate is computed in observed_result; impressions and CTR unknown.'
+TREND='Published 20 Jan 2026 (New Year planning window); no authenticated attention series'
+FORMAT='A single-narrator long-form opinion essay with illustrative math; retention unverified'
+ALTS=['Unknown impressions, traffic sources and subscriber distribution','Abstract metaphor title vs concrete affordability titles in the cohort','Thumbnail shows only the cutting half; association only','Unknown packaging revisions and upload environment']
+EVENT='Atlanta Fed Wage Growth Tracker switcher/stayer series checked via search summaries; all illustrative arithmetic reproduced. Course/raise and lifetime-earnings claims not evidenced.'
+S='SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE'
+SOURCES=[
+ {'source_id':'ATLWGT','url':'https://fred.stlouisfed.org/series/FRBATLWGT3MMAUMHWGJMJST','source_date':'2025-12-01','access_scope':S,'locator':'Atlanta Fed Wage Growth Tracker job stayer/switcher series (FRED; Bloomberg, MNI coverage)','finding':'Stayers out-earned switchers Feb-Jul 2025 (first since 2018); switcher premium ~0.8 pt in September 2025, highest since January 2024.','limitations':'Tracker not read directly; three-month vs twelve-month series differ.','publication_applicability':'BEFORE_PUBLICATION'}]
+K02={'method':'ROI, nominal sum, annuity future value, lump-sum compounding, tax and hourly-rate checks',
+ 'results':{'roi_first_year':2.3333,'raise_30y':600000,'fv_700_monthly_8pct_20y':412314.29,'fv_8400_annual_8pct_20y':384400.50,'fv_650_monthly_60mo':47759.96,'phone_savings':1680,'grocery_savings':960,'raise_16k_after_tax':10456,'hourly_value':375,'fv_20k_40y':434490.43,'fv_20k_20y':93219.14},
+ 'limitations':'Assumed 8% nominal returns as stated; tax at 22% federal + 7.65% FICA + ~5% state.'}
+LIMITS='No audio, video, private analytics or native Excel verification; sources via search summaries. No paid purchases.'
