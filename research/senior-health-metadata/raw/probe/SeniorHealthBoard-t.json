@@ -1,0 +1,248 @@
+{
+ "run": {
+  "id": "0Gc6d4Z1tSTC1sDJS",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:03:49.581Z",
+  "finishedAt": "2026-11-11T08:03:59.732Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 374,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 9867,
+   "resurrectCount": 0,
+   "runTimeSecs": 9.867,
+   "metamorph": 0,
+   "computeUnits": 0.0027408333333333334,
+   "memAvgBytes": 161547889.2265497,
+   "memMaxBytes": 175427584,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 19.277239080792203,
+   "cpuMaxUsage": 101.98330345710627,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 677144,
+   "netTxBytes": 78624
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "xiFK8ND6DK8qCK7Vs",
+  "defaultDatasetId": "4HX4AtuRQw1RMl8R2",
+  "defaultRequestQueueId": "6ZIc0QTlXxvhcijQS",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "xiFK8ND6DK8qCK7Vs"
+   },
+   "datasets": {
+    "default": "4HX4AtuRQw1RMl8R2"
+   },
+   "requestQueues": {
+    "default": "6ZIc0QTlXxvhcijQS"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://agkoe7hglffv.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/0Gc6d4Z1tSTC1sDJS",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/4HX4AtuRQw1RMl8R2/items?signature=MC4wLjFNWFZUcTZ1aHhVZjFCd0RzSVhyUw"
+  }
+ },
+ "records": [
+  {
+   "title": "10 Hygiene Mistakes After 65 That Make You Smell Worse Without Knowing It!",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "Ls0BAnsL6xw",
+   "url": "https://www.youtube.com/watch?v=Ls0BAnsL6xw",
+   "thumbnailUrl": "https://i.ytimg.com/vi/Ls0BAnsL6xw/maxresdefault.jpg",
+   "viewCount": 202,
+   "date": "2026-11-10T15:00:08.000Z",
+   "likes": 6,
+   "location": null,
+   "channelName": "Senior Health Board",
+   "channelUrl": "https://www.youtube.com/channel/UCkkVU1WKciGh02Lb8AaCZVQ",
+   "channelUsername": "SeniorHealthBoard-t",
+   "collaborators": null,
+   "channelId": "UCkkVU1WKciGh02Lb8AaCZVQ",
+   "channelDescription": "Welcome to Senior Health Board!\nPractical, easy-to-understand health and wellness information for adults 60 and older.\nOn this channel, we focus on healthy aging, mobility, nutrition, sleep, heart health, everyday habits, and common health concerns that can affect quality of life as we get older.\nOur goal is simple: turn complicated health topics into clear, useful information you can actually understand and apply in daily life.\nNo confusing medical jargon. No unnecessary fear. Just straightforward educational content designed to help you make more informed choices about your health and well-being.\nSubscribe for regular videos about staying active, independent, and healthier as you age.\n\nThis channel is for educational purposes only and is not a substitute for personalized medical advice from your own phy.",
+   "channelJoinedDate": "Oct 3, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/JZFQxsv92cJ75dSKVh_Z1e6Q5wbwHet3gkRKvdrDISI-S4Y-rS-9NG7EQprh3X7P454uMrU6=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/EbwEYVM2PuTj1aZxJWWx-skyqrrWYD228tQ3LiIc-HC5Y6ydypMqiewjvzwOSwui6hwNm5h2hqU=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 19,
+   "channelTotalViews": 664907,
+   "numberOfSubscribers": 4680,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@SeniorHealthBoard-t",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Welcome to Senior Health Board!\nPractical, easy-to-understand health and wellness information for adults 60 and older.\nOn this channel, we focus on healthy aging, mobility, nutrition, sleep, heart health, everyday habits, and common health concerns that can affect quality of life as we get older.\nOur goal is simple: turn complicated health topics into clear, useful information you can actually understand and apply in daily life.\nNo confusing medical jargon. No unnecessary fear. Just straightforward educational content designed to help you make more informed choices about your health and well-being.\nSubscribe for regular videos about staying active, independent, and healthier as you age.\n\nThis channel is for educational purposes only and is not a substitute for personalized medical advice from your own phy.",
+    "channelJoinedDate": "Oct 3, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": "United States",
+    "channelUsername": "SeniorHealthBoard-t",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/JZFQxsv92cJ75dSKVh_Z1e6Q5wbwHet3gkRKvdrDISI-S4Y-rS-9NG7EQprh3X7P454uMrU6=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/EbwEYVM2PuTj1aZxJWWx-skyqrrWYD228tQ3LiIc-HC5Y6ydypMqiewjvzwOSwui6hwNm5h2hqU=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 19,
+    "channelTotalViews": 664907,
+    "numberOfSubscribers": 4680,
+    "isChannelVerified": false,
+    "channelName": "Senior Health Board",
+    "channelUrl": "https://www.youtube.com/channel/UCkkVU1WKciGh02Lb8AaCZVQ",
+    "channelId": "UCkkVU1WKciGh02Lb8AaCZVQ",
+    "inputChannelUrl": "https://www.youtube.com/@SeniorHealthBoard-t",
+    "isAgeRestricted": false
+   },
+   "duration": "00:20:32",
+   "commentsCount": 2,
+   "text": "10 Hygiene Mistakes After 65 That Make You Smell Worse Without Knowing It!\n\nYou shower every day, you put on clean clothes, and still a grandchild wrinkles their nose during a hug. If you’re over 65 and you’ve wondered why body odor seems to change with age, this lesson explains what’s really going on. After 40, the skin starts producing a compound called 2-nonenal, which forms when natural skin oil reacts with the air. It doesn’t come from sweat, and water alone doesn’t wash it away. On top of that, our sense of smell weakens with age, so we’re often the last to notice.\nIn this video we walk through 10 everyday hygiene mistakes that keep the smell around even after a shower. They cover skin oil, sweat, dry mouth and bad breath, tongue coating, polyester clothing, cold laundry washes, a “nose-blind” home, and covering smells with perfume. You’ll also learn three simple at-home checks, the cotton pad test, the spoon test and the door test, plus an easy 15-minute evening routine to help you stay fresh after 60.\nThis is practical senior hygiene advice for older adults and their families, explained plainly, slowly, one lesson at a time.\n\n\nResearch referenced in this video:\nHaze S. et al., Journal of Investigative Dermatology, 2001: 2-nonenal and age-related body odor (Shiseido)\nDoty R.L. et al., Science, 1984: Smell identification ability changes with age (1,955 people, University of Pennsylvania)\nCallewaert C. et al., Applied and Environmental Microbiology, 2014: Polyester vs. cotton odor (Ghent University)\nFurtwangen University, Microorganisms, 2021: Bacteria in low-temperature laundry\nBollen C.M.L. & Beikler T., International Journal of Oral Science, 2012: Tongue coating as the most common cause of bad breath\nNational Institute of Dental and Craniofacial Research: Dry Mouth and Older Adults\nAmerican Academy of Dermatology: Applying antiperspirant at bedtime\n\nDisclaimer: This is education, not medical advice. Always check any changes with your own doctor, and talk to your doctor before changing any medication.\n\nIf this lesson helped, subscribe to Senior Health Board for more plain, research-based lessons on health after 60. Tell us in the comments which test you’ll try first, and share this video with someone you love who’s over 60.\n\n#seniorhealth #over60 #healthyaging #bodyodor #hygienetips",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#seniorhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/over60",
+     "text": "#over60"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#healthyaging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/bodyodor",
+     "text": "#bodyodor"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hygienetips",
+     "text": "#hygienetips"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "Imagine this. It's Sunday afternoon.\nThere's a pot roast in the oven. And\nyour daughter Sarah is on her way with\nher family. You haven't seen them in\nalmost a month. And you've been glancing\nout the window since lunchtime, waiting\nfor that familiar car to pull into the\ndriveway. Finally, the doorbell rings.\nSarah walks through the door with her\narms already open, and you pull her into\none of those long hugs where neither of\nyou wants to let go first.\nThen your 5-year-old grandson, Leo,\ncomes running down the hallway in his\nlittle sneakers. You scoop him up, hold\nhim close, and spin him around just the\nway he loves. But halfway through that\nhug, Leo suddenly leans back. He\nwrinkles his nose, looks straight at\nyou, and says loud enough for everyone\nin the room to hear, \"Grandpa, you smell\nfunny.\" Everyone laughs. He's only five\nafter all, and children say whatever\npops into their heads without thinking\ntwice about it. You laugh, too. You\nruffle his hair, pretend it's nothing,\nand carry him into the kitchen to show\nhim the cookies you bought especially\nfor him. But even as the afternoon goes\non, those four little words keep\nreplaying in your mind because you\nshowered just an hour before they\narrived. You put on a freshly washed\nshirt. You made sure you were clean and\npresentable because your family was\ncoming to see you. So, how could Leo\nnotice a smell that you couldn't even\ndetect yourself. And why does this seem\nto happen more often as we get older?\nThe truth is, it has nothing to do with\nhow often you shower. After reading a\nlot about this, I found that it comes\ndown to 10 everyday habits. And every\none of them has a simple fix you can\nstart tonight. And one of them surprised\nme more than the rest because part of\nthe smell Leo noticed isn't coming from\nyour body at all. It's hiding in your\ncloset in a place you've never thought\nto look. Welcome to Senior Health Board.\nHere we take what the research says\nabout health after 60 and put it up on\nthe board plainly, slowly, one lesson at\na time. This is education, not medical\nadvice. So always check any changes with\nyour own doctor. If lessons like this\nare useful to you, please subscribe so\nyou don't miss the next one. Let's\nbegin. I'd like to start with a study I\nread years ago that has stayed with me\never since. In 2001, a team of\nresearchers at the Japanese cosmetics\ncompany Shedo collected skin odor from\npeople ranging from their 20s to their\n70s. And they found a compound called\ntwo nonenol on the skin of people over\n40 that simply wasn't there in the\nyounger group. And the older the person\nwas, the more of it they tended to find.\nTunanol has a greasy, slightly grassy\nsmell and it doesn't come from sweat at\nall because it forms when the natural\noil on your skin slowly reacts with the\nair around it. The easiest way I've\nfound to picture it is a stick of butter\nleft out on the kitchen counter, which\nlooks perfectly fine on the first day,\nbut after a few days, it starts to smell\na little stale because fat changes once\nair gets to it. And the oil on our skin\ndoes something very similar. As we get\nolder, the mix of fats in that skin oil\nshifts and the skin's own protection\nagainst that change gets weaker. So,\nmore of that stale butter smell forms\nand it collects in the oily places which\nare the back of the neck, behind the\nears, the chest, and the upper back.\nYour own nose gets used to your own\nsmell within minutes. So, the person\nliving inside the body is almost always\nthe last one to notice, which makes this\nchemistry and nothing to be ashamed of.\nAnd chemistry is something we can work\nwith. I'd like you to meet Ruth, who is\n71, a retired bank teller from Ohio, who\nhas showered every single morning of her\nadult life, and couldn't understand why\nher friends at church had started\nsitting one chair farther away at coffee\nhour. Mistake number one is letting the\nwater do the washing on the oily parts\nof your body. Most of us were taught to\nsoap the armpits and the private areas\ncarefully and then the shower stream\nruns over the neck, the shoulders, and\nthe upper back and we assume that\ncounts. But water on its own slides\nright over oil. The same way rinsing a\nbuttery frying pan under the tap still\nleaves it greasy. That stale butter\ncompound needs soap, a little lather,\nand some gentle rubbing to come off. and\nthe places it collects are exactly the\nplaces that become hard to reach once a\nshoulder gets stiff or the back stops\nturning the way it used to. The fix is\nsimple and it doesn't need any special\nproduct because your usual soap on a\nwashcloth or a long-handled bath brush\nis enough as long as you give the back\nof the neck behind both ears, the chest,\nand the upper back about 10 slow seconds\neach before you rinse. There's a little\ntest I love for this one because it\ntakes almost no effort at all. Tonight\nbefore bed, wipe a plain cotton pad\nfirmly across the back of your neck and\nbehind one ear. Put it in a small\nsandwich bag and smell it in the morning\nwhen your nose is fresh. A lot of people\nare surprised by what they find. And\nwhatever you notice, you've just found\nthe spot that needs the washcloth. Ruth\ntried it and she told her daughter\nafterwards that she'd washed her hair\nevery day for 50 years and had never\nonce actually soaked behind her ears.\nMistake number two is showering only in\nthe morning, which feels like the clean\nand sensible choice because you start\nthe day fresh. But think about what\nhappens over the next 16 hours because\nthe oil builds up all day long and then\nyou carry that whole day's worth of oil\ninto bed and press the back of your neck\ninto the same pillowcase for seven or\neight hours while the fabric holds the\nwarmth and the oil keeps reacting with\nthe air. By morning, the pillowcase is\ncarrying yesterday and every night you\nlie down on it. So are you even after\nanother shower? You don't have to give\nup your morning shower if you love it.\nBecause what makes the biggest\ndifference is a short wash before bed.\nEven just a warm soapy washcloth over\nthe neck, the ears, the chest, and the\nunderarms while you sit on the edge of\nthe tub, and a pillowcase that gets\nchanged every 3 or 4 days, which is easy\nif you keep a second set in the drawer.\nIf you've been a morning only shower all\nthese years and you're going to try the\nevening wash tonight, type the word\nevening in the comments because I'd\nreally like to know how many of us have\nbeen doing it the other way round.\nMistake number three is putting your\nantipersperent on in the morning. And\nthis one honestly surprised me when I\nfirst came across it because I think\nalmost all of us do it right after the\nshower and that turns out to be close to\nthe worst moment of the whole day. An\nantipersperent works by forming tiny\nplugs at the openings of the sweat\nglands and it needs dry skin and a few\ncalm hours to settle in. But in the\nmorning after a warm shower, the skin is\nstill damp and the sweat glands are\nalready waking up. So a good deal of the\nproduct is carried away by the first\nsweat of the day. At night, the body\nsweats much less. The skin is dry and\nthe product has six or eight hours to do\nits job, which is why the American\nAcademy of Dermatology recommends\napplying antipersperent before bed. And\nmany skin doctors say the morning shower\ndoesn't undo it because by then those\nlittle plugs have already formed.\nThere's also a difference worth knowing\nbetween the two kinds of sticks on the\nstore shelf because a deodorant only\ncovers smell, while an antipersperent\nactually reduces the sweat that bacteria\nfeed on. So, if smell is your worry,\nlook for the word anti-persperent on the\nlabel. Walter, who is 74 and has lived\non his own since his wife passed 3 years\nago, had bought the same deodorant stick\nsince the 1980s. and when his daughter\nturned it over in the store one day, he\nrealized it didn't say antipersperent\nanywhere on it.\nMistake number four is letting sweat sit\nin the places where the air never\nreaches. As we get older, many of us\nfeel the cold more. So, we put on an\nundershirt, a sweater, and a cardigan on\ntop, and we turn the thermostat up a few\ndegrees. And underneath all of those\nlayers, the body sweats a little without\never feeling hot. That sweat ends up in\nthe places that stay closed all day.\nUnder the breasts, in the fold of the\nbelly, in the groin, between the toes,\nand on the back of a shirt pressed\nagainst a recliner for an entire\nafternoon. Warm, damp skin is exactly\nwhere bacteria like to live. And they\nturn plain sweat into that sour smell.\nAnd none of this happens out of neglect\nbecause bending and twisting to dry\nthose places properly is hard with stiff\nhips. so they get a quick dab with the\ntowel and stay damp. So pat every fold\ncompletely dry after washing, sitting\ndown to do the feet, and on warm days,\ntry tucking a thin strip of soft cotton\nfabric into a skin fold so that skin\nisn't resting against skin, which keeps\nthat area surprisingly fresh by evening.\nIt also helps to dress in layers you can\ndrop the moment the room feels warm, and\nto change your socks at lunchtime on\nwarmer days. If the skin in a fold looks\nred, cracked, or shiny, show it to your\ndoctor because a yeast infection can\nsettle there and it's usually easy to\ntreat. If you're still watching, type\nthe word fresh in the comments. So, I\nknow these lessons are reaching the\npeople they're meant for. Mistake number\nfive is blaming a dry mouth on age. And\nI'll admit, I'd always assume the\nopposite of what the experts say here.\nThe National Institute of Dental and\nCranioacial Research is very clear on\nthis point. Dry mouth is not a normal\npart of getting older. And what usually\ncauses it is medication. Because\nhundreds of common medicines reduce\nsaliva, including many pills for blood\npressure, depression, and an overactive\nbladder. Saliva is your mouth's own\nrinse cycle, washing bacteria away all\nday long. And when there's less of it,\nbacteria settle in and the breath turns\nstale much faster, especially first\nthing in the morning. So, keep a glass\nor a bottle of water within reach and\ntake small sips through the day. Chew\nsugar-free gum or suck on a sugar-free\nmint after meals to get the saliva\nflowing. And if you use a mouthwash,\nchoose one that says alcohol-free\nbecause alcohol dries the mouth out even\nmore. A humidifier in the bedroom at\nnight helps more than most people\nexpect. If your mouth feels dry most of\nthe time, bring it up with your doctor\nor your dentist. And please talk to your\ndoctor before changing any medication\nbecause there are often alternatives or\nsimple treatments that make a real\ndifference. Mistake number six is\nbrushing your teeth and forgetting your\ntongue. And when I read the numbers on\nthis one, I actually went back to check\nthem twice. A clinic in Belgium that\nevaluated about 2,000 patients who came\nin for bad breath found that the single\nmost common cause was the coating on the\nback of the tongue, which on its own was\nbehind more than four in every 10 cases.\nThe surface of the tongue is rough, a\nbit like a carpet, so food and bacteria\nsettle down into it, and a toothbrush\nthat only cleans the teeth leaves all of\nthat behind. There's an easy way to\ncheck and you can do it today if you\nlike because all you need is a teaspoon.\nGently scrape the back of your tongue\nwith the edge of the spoon. Wait about a\nminute and then smell the spoon and\nwhatever you notice there is close to\nwhat the person across the table notices\nwhen you're talking to them. The fix\ntakes about 10 seconds because brushing\nor scraping the tongue gently from back\nto front each night and rinsing\nafterwards clears most of that coating\naway. If you wear dentures, take them\nout at night, brush them, and leave them\nto soak because the denture surface\ncollects the same kind of film, and your\ngums deserve a few hours of rest.\nBernie, who is 77 and spent 30 years\ndelivering mail, tried the spoon test\nafter noticing that his wife kept\noffering him mints after dinner, and he\ntold her that night he finally\nunderstood what she'd been too kind to\nsay. If you just tried the spoon test or\nyou're planning to try it tonight, type\nthe word spoon in the comments. Mistake\nnumber seven is wearing polyester\nagainst your skin. And this is where I\npromise to show you the smell that isn't\ncoming from your body at all. In 2014,\nresearchers at Gent University in\nBelgium asked 26 people to do an hour of\nhard cycling and then collected their\nshirts, some made of cotton and some of\npolyester. And the next day, a trained\npanel smelled them. The polyester shirts\nsmelled clearly worse. And when the\nscientists looked more closely, they\nfound that one group of odor-\nmakingaking bacteria called microcatchi\ngrew much better on polyester than on\ncotton. Polyester is a kind of plastic\nfiber, and it holds onto skin oil and\nthose bacteria even after a wash. So, a\nshirt can come out of the dryer looking\nspotless and still smell like last week\nthe moment it warms up against your\nbody. Many of the easy care clothes made\nfor older adults, the shirts that never\nwrinkle, the fleece tops, the slacks,\nand the night gowns are polyester or\npolyester blends. And a cardigan that\nlives in a closet for months can soak up\nthat stale smell as well. You don't have\nto throw anything away because the\nsimple fix is to check the labels and\nchoose cotton, linen, or marino wool for\nthe layer that touches your skin,\nmeaning your undershirts, your\nnightwear, and your underwear, and keep\nthe polyester for the outer layer where\nit touches much less of you. Mistake\nnumber eight is washing everything cold\nand quick, which saves energy and works\nfine for clothes you've barely worn. The\ntrouble is that body oil doesn't melt\nand lift away in cold water the way it\ndoes in warm water. And a German study\nfrom FKVong University in 2021 found\nthat low temperature water-saving washes\nleave more bacteria behind on laundry.\nOn top of that, the washing machine\nitself can build up a damp, smelly film\nin the rubber seal around the door and\nin the detergent drawer, and that film\npasses a little of itself onto every\nload. So, the things that touch your\nskin, the undershirts, underwear, socks,\ntowels, and pillowcases, are worth\nwashing on the warmest setting their\nlabels allow with the full amount of\ndetergent and taking out as soon as the\ncycle ends so they don't sit wet in the\ndrum. Leave the machine door and the\ndetergent drawer open between washes so\nthey can dry out. And once a month, run\nthe machine empty on its hottest cycle\nto clean it. If you're still with me,\ntype the word cotton in the comments and\ntell me if you checked a label in your\ncloset today. Mistake number nine is\ntrusting your own nose. In 1984, a\nresearcher named Richard Dodie at the\nUniversity of Pennsylvania tested the\nsense of smell of nearly 2,000 people,\nfrom young children to people in their\nlate 90s. And the results still surprise\npeople today because more than half of\nthose between 65 and 80 had a major loss\nin their sense of smell. And among those\nover 80, it was more than three out of\nfour. Add to that something every nose\ndoes at any age, which is that after a\nfew minutes in the same place, it stops\nnoticing the smells around it. And you\ncan see why our own homes become\ninvisible to us. The sofa, the recliner,\nthe curtains, the carpet, and the car\nhold on to body oil and cooking smells\nfor years, and the person who lives with\nthem everyday smells nothing at all.\nThis is where Walter's story comes back\nin because his daughter Karen stopped by\nevery Tuesday on her lunch break and the\nfirst thing she did every single time\nwas open the kitchen window even in\nNovember. Walter thought she was just\nrunning warm until one afternoon she sat\ndown next to him at the table and said,\n\"Dad, I love being here and because I\nlove you, I'm going to tell you\nsomething nobody else will. The house\nhas a smell you've stopped noticing and\nI'd like us to fix it together. Walter\ntold her later that he was embarrassed\nfor about 10 minutes and grateful for\nmonths. And the two of them washed the\ncouch covers that same afternoon.\nThere's a simple test for this and I\ncall it the door test. Go outside for 2\nor 3 minutes, walk to the mailbox and\nbreathe some fresh air. and then step\nback in through your front door and take\none slow breath because that very first\nbreath is what every visitor smells when\nthey walk in. To freshen things up, open\ntwo windows on opposite sides of the\nhouse for a few minutes each morning so\nthe air can move all the way through.\nWash the sofa throws and cushion covers\nevery season and leave an open box of\nbaking soda in the closet and in the\ncar. Mistake number 10 is covering a\nsmell instead of finding where it comes\nfrom. and it's the one almost all of us\nmake because perfume after shave, air\nfreshener, and scented powder feel like\nthe quickest answer. When a strong\nfragrance lands on a body smell, the two\nblend into a third smell that is often\nheavier than either of them, and the\npeople around you end up noticing both.\nCovering a smell also hides the fact\nthat a new smell can sometimes be a\nmessage from the body. A sweet fruity\nsmell on the breath can be linked to\nhigh blood sugar. A sharp ammonia smell\ncan point to a problem with the kidneys.\nAnd urine that suddenly smells much\nstronger, especially along with burning\nor new confusion can mean a bladder\ninfection, which in older adults\nsometimes shows up as confusion long\nbefore there's any pain. So if a smell\nis new, comes on suddenly, or stays even\nafter good washing, please make an\nappointment with your doctor rather than\nreaching for the perfume. The same goes\nfor small bladder leaks, which are very\ncommon and very treatable. And I gently\nask you not to drink less water to avoid\nthem because concentrated urine smells\nstronger. So cutting back on water makes\nthe smell worse. Change pads as soon as\nthey feel damp. And tell your doctor\nabout the leaks because doctors hear\nabout them every day and there's a lot\nthey can do. All through this lesson,\nyou may have been wondering why in that\nliving room on Sunday, the only person\nwho said anything was a 5-year-old. The\ngrown-ups had noticed it, too. For\nmonths, and Sarah laughed it off as\nquickly as she did because she was\nafraid of hurting you. And when you\nthink about it, that silence is a kind\nof love. Leo simply hadn't learned to be\npolite about it yet, which makes him the\nmost honest friend you have. And in a\nway, he did you a favor. If you're the\none who has noticed it in a parent or a\nfriend, choose a quiet moment when it's\njust the two of you. Start with how much\nyou care about them and offer to help\nwith the fix rather than pointing out\nthe problem. So, tonight before bed, sit\ndown in the bathroom and wash the back\nof your neck, behind your ears, your\nchest, and your upper back with soap on\na washcloth. Then, dry every fold. Put\non your antipersperent and brush your\ntongue along with your teeth. Slip into\nsomething cotton. Lay your head on a\nfresh pillowcase and in the morning keep\na glass of water where you'll see it and\ndrop yesterday's clothes in the basket,\neven if they still look clean. In a\ncouple of weeks, try the cotton pad test\nand the door test again. And if a smell\never shows up that's new or doesn't go\naway with good washing, let your doctor\nknow because sometimes that's the body\nasking for a checkup. Next month, when\nthe doorbell rings and Leo comes running\ndown the hallway, let him bury his face\nin your shoulder and tell you, \"Grandpa,\nyou smell like cookies.\" If this lesson\nhelped, tell me in the comments which\ntest you're going to try first. Send it\nto someone you love who's over 60. And\nsubscribe because in the next lesson,\nwe're looking at why the nose starts\nrunning the moment the food arrives at\nthe table. This is Senior Health Board.\nFresh after 60 starts with one\nwashcloth. and I'll see you in the next\nlesson."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@SeniorHealthBoard-t/videos",
+   "isMonetized": null,
+   "hashtags": [
+    "#seniorhealth",
+    "#over60",
+    "#healthyaging"
+   ],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@SeniorHealthBoard-t",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

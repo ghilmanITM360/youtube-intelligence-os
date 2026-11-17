@@ -1,0 +1,359 @@
+{
+ "run": {
+  "id": "QFT0eTDO3ahuLmSNs",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:05:21.829Z",
+  "finishedAt": "2026-11-11T08:05:44.088Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 370,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 22096,
+   "resurrectCount": 0,
+   "runTimeSecs": 22.096,
+   "metamorph": 0,
+   "computeUnits": 0.006137777777777778,
+   "memAvgBytes": 155451939.9315146,
+   "memMaxBytes": 175669248,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 9.161961524084143,
+   "cpuMaxUsage": 93.2670603277749,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 679049,
+   "netTxBytes": 99349
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "qpxugBN40ssbun8H2",
+  "defaultDatasetId": "QC4wYixzIifPzPtBd",
+  "defaultRequestQueueId": "OwFL49A2dwi1bOvip",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "qpxugBN40ssbun8H2"
+   },
+   "datasets": {
+    "default": "QC4wYixzIifPzPtBd"
+   },
+   "requestQueues": {
+    "default": "OwFL49A2dwi1bOvip"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://nnaogwcmetrn.runs.apify.net",
+  "usageTotalUsd": 0.004,
+  "consoleUrl": "https://console.apify.com/view/runs/QFT0eTDO3ahuLmSNs",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0.004
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/QC4wYixzIifPzPtBd/items?signature=MC4wLjRNTjUxV2hUWWN4d01zS1BZZ1Vn"
+  }
+ },
+ "records": [
+  {
+   "title": "Over 70? Never Do These 6 Things (Your Heart Can't Take Them)",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "Y7q0T8ic5xc",
+   "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc",
+   "thumbnailUrl": "https://i.ytimg.com/vi/Y7q0T8ic5xc/maxresdefault.jpg",
+   "viewCount": 6112,
+   "date": "2026-10-19T16:21:01.000Z",
+   "likes": 58,
+   "location": "Dr. Vitalis — Senior Health Podcast: Heart, Blood Pressure & Strong Legs After 60",
+   "channelName": "Dr. Vitalis",
+   "channelUrl": "https://www.youtube.com/channel/UCLxJ_nQg42P-0XNRdGwA2gg",
+   "channelUsername": "DrVitalisHealth",
+   "collaborators": [
+    {
+     "name": "Dr. Vitalis",
+     "username": "DrVitalisHealth",
+     "url": "https://www.youtube.com/@DrVitalisHealth",
+     "channelId": "UCLxJ_nQg42P-0XNRdGwA2gg"
+    },
+    {
+     "name": "Ansel Senior Health",
+     "username": "AnselSeniorHealth",
+     "url": "https://www.youtube.com/@AnselSeniorHealth",
+     "channelId": "UCX_263NGp5srFTs-HfgWdSw"
+    }
+   ],
+   "channelId": "UCLxJ_nQg42P-0XNRdGwA2gg",
+   "channelDescription": "Clear, research-backed health answers for adults over 60.\n\nDr. Vitalis takes the questions older adults actually face and explains what the evidence says in plain language. Examples: a blood pressure reading that looks \"normal\" but isn't, legs that feel weaker on the stairs, a common pill with side effects nobody mentioned, a warning sign that's easy to blame on age.\n\nWhat we cover:\n• Blood pressure, heart health and stroke warning signs\n• Kidneys, blood sugar and circulation\n• Leg strength, balance and preventing falls\n• Medications and supplements worth asking your doctor about\n• Everyday food choices, without the hype\n\nEvery video ends with simple next steps: what to watch for, what to ask at your next appointment, and when to call right away.\n\nSubscribe for the next one.\n\nFor educational purposes only. Not medical advice. Always talk with your own doctor before changing medications or treatment. If you think you're having a stroke or heart attack, call 911.",
+   "channelJoinedDate": "May 17, 2013",
+   "channelDescriptionLinks": [
+    {
+     "text": "Buy me a coffee",
+     "url": "https://ko-fi.com/drvitalis"
+    },
+    {
+     "text": "Fanpage",
+     "url": "https://www.facebook.com/people/Dr-Vitalis/61591483233591/"
+    }
+   ],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/oP2bXYGzwSxXm12sF9dve_uWJFh2LB2GsQZXj2XpTEe0VU6clUXhcIBt_Pxbqm7XS5rkDoGE-7E=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/EuSLXFjosOkK6a4hsnxrk_MAl9cUKKuTdvQlWKmLNxeqXcubjC0i5Hv4l_ya-PADh9lWMm4w2A=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 27,
+   "channelTotalViews": 1120512,
+   "numberOfSubscribers": 34200,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@DrVitalisHealth",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Clear, research-backed health answers for adults over 60.\n\nDr. Vitalis takes the questions older adults actually face and explains what the evidence says in plain language. Examples: a blood pressure reading that looks \"normal\" but isn't, legs that feel weaker on the stairs, a common pill with side effects nobody mentioned, a warning sign that's easy to blame on age.\n\nWhat we cover:\n• Blood pressure, heart health and stroke warning signs\n• Kidneys, blood sugar and circulation\n• Leg strength, balance and preventing falls\n• Medications and supplements worth asking your doctor about\n• Everyday food choices, without the hype\n\nEvery video ends with simple next steps: what to watch for, what to ask at your next appointment, and when to call right away.\n\nSubscribe for the next one.\n\nFor educational purposes only. Not medical advice. Always talk with your own doctor before changing medications or treatment. If you think you're having a stroke or heart attack, call 911.",
+    "channelJoinedDate": "May 17, 2013",
+    "channelDescriptionLinks": [
+     {
+      "text": "Buy me a coffee",
+      "url": "https://ko-fi.com/drvitalis"
+     },
+     {
+      "text": "Fanpage",
+      "url": "https://www.facebook.com/people/Dr-Vitalis/61591483233591/"
+     }
+    ],
+    "channelLocation": "United States",
+    "channelUsername": "DrVitalisHealth",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/oP2bXYGzwSxXm12sF9dve_uWJFh2LB2GsQZXj2XpTEe0VU6clUXhcIBt_Pxbqm7XS5rkDoGE-7E=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/EuSLXFjosOkK6a4hsnxrk_MAl9cUKKuTdvQlWKmLNxeqXcubjC0i5Hv4l_ya-PADh9lWMm4w2A=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 27,
+    "channelTotalViews": 1120512,
+    "numberOfSubscribers": 34200,
+    "isChannelVerified": false,
+    "channelName": "Dr. Vitalis",
+    "channelUrl": "https://www.youtube.com/channel/UCLxJ_nQg42P-0XNRdGwA2gg",
+    "channelId": "UCLxJ_nQg42P-0XNRdGwA2gg",
+    "inputChannelUrl": "https://www.youtube.com/@DrVitalisHealth",
+    "isAgeRestricted": false
+   },
+   "duration": "00:24:38",
+   "commentsCount": 11,
+   "text": "After 70, one in five adults has a blood pressure drop every time they stand up — and no routine visit ever checks for it. Your pressure is taken sitting down, the number is fine, and you go home. The second after you stand is where the broken hips come from.\n\nSix everyday actions your arteries absorbed without comment at 50 and can no longer absorb at 70: standing up fast after lying down, starting a new supplement without telling the pharmacist, shovelling snow or heavy lifting in the cold, skipping fluids on hot days, a heavy meal followed by a hot bath, and doubling a missed blood pressure pill. This video explains why orthostatic hypotension and stiff arteries turn each of these into a real strain on the heart, what a slower baroreflex means for the moment you stand, and the safer way to do every one of them. The sixth item is the one most people did this morning, and it comes last.\n\n⏱ CHAPTERS\n0:00 — The one second the room lags behind your head\n1:02 — Two words: one move, or stages?\n1:18 — Why no visit ever takes your pressure standing\n2:13 — The stretchy aorta you no longer have\n2:28 — A heavy dinner, then a hot bath\n5:21 — The supplement your pharmacist never heard about\n8:07 — Thirst stops warning you after 70\n12:03 — Glenn, a stent, and nine degrees of snow\n15:03 — The missed pill: never double it\n18:52 — The one you did this morning\n22:56 — Robert's reading, and three things to do now\n\nIf this changed how you get out of bed tomorrow, subscribe for the next warning your routine appointment skips — and tell us in the comments: one move, or stages?\n\n⚠️ DISCLAIMER\nThis video is for educational purposes only and does not constitute medical advice. Robert, Shirley, Glenn and every other person described here are composites drawn from published case reports, not real patients. Nobody on this channel is a licensed physician, and the visuals in this video are AI-generated. Do not change, stop, or double any medication based on a video; consult your own doctor or pharmacist, who knows your numbers and your medicines. If you experience chest tightness, a sudden faint, confusion, or an unexplained fall, call 911.\n\n📚 SOURCES & REFERENCES\n1. Lei LY, et al. (2020) Autonomic neuroscience : basic & clinical — Differential diagnosis of orthostatic hypotension.\n   https://pubmed.ncbi.nlm.nih.gov/32805514/\n2. Mayo Clinic — Orthostatic hypotension (postural hypotension) - Symptoms and causes\n   https://www.mayoclinic.org/diseases-conditions/orthostatic-hypotension/symptoms-causes/syc-20352548\n3. National Institute on Aging — Falls and Fractures in Older Adults: Causes and Prevention\n   https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention\n4. Agbabiaka TB, et al. (2018) The British journal of general practice : the journal of the Royal College of General Practitioners — Prevalence of drug-herb and drug-supplement interactions in older adults: a cross-sectional survey.\n   https://pubmed.ncbi.nlm.nih.gov/30249608/\n5. MedlinePlus (NIH/NLM) — Dietary Supplements\n   https://medlineplus.gov/dietarysupplements.html\n6. National Institute on Aging — Dietary Supplements for Older Adults\n   https://www.nia.nih.gov/health/vitamins-and-supplements/dietary-supplements-older-adults\n7. FDA — Dietary Supplements\n   https://www.fda.gov/food/dietary-supplements\n8. Valtonen RIP, et al. (2022) European journal of applied physiology — Cardiovascular responses to dynamic and static upper-body exercise in a cold environment in coronary artery disease patients.\n   https://pubmed.ncbi.nlm.nih.gov/34655331/\n9. Pence J, et al. (2025) Nutrients — Hydration Strategies in Older Adults.\n   https://pubmed.ncbi.nlm.nih.gov/40732881/\n10. CDC — Heat and Older Adults (Aged 65+) | Heat Health\n   https://www.cdc.gov/heat-health/risk-factors/heat-and-older-adults-aged-65.html\n11. National Institute on Aging — Hot Weather Safety for Older Adults\n   https://www.nia.nih.gov/health/safety/hot-weather-safety-older-adults\n12. NHS — Amlodipine: medicine to treat high blood pressure and angina\n   https://www.nhs.uk/medicines/amlodipine/\n\nTags: orthostatic hypotension, blood pressure drop standing up, over 70 health, seniors blood pressure, dizzy when standing up, postural hypotension, falls in older adults, stiff arteries aging, heart health after 70, blood pressure medication seniors, missed blood pressure pill, supplement drug interactions, dehydration in older adults, heat and older adults, shoveling snow heart attack, hot bath after eating, baroreflex aging, amlodipine, low blood pressure elderly, senior heart warning signs, preventive health seniors, things to avoid after 70, Dr. Vitalis\n\n#SeniorHealth #OrthostaticHypotension #DrVitalis\n\nStock footage: Pexels",
+   "translatedText": "After 70, one in five adults has a blood pressure drop every time they stand up — and no routine visit ever checks for it. Your pressure is taken sitting down, the number is fine, and you go home. The second after you stand is where the broken hips come from.\n\nSix everyday actions your arteries absorbed without comment at 50 and can no longer absorb at 70: standing up fast after lying down, starting a new supplement without telling the pharmacist, shovelling snow or heavy lifting in the cold, skipping fluids on hot days, a heavy meal followed by a hot bath, and doubling a missed blood pressure pill. This video explains why orthostatic hypotension and stiff arteries turn each of these into a real strain on the heart, what a slower baroreflex means for the moment you stand, and the safer way to do every one of them. The sixth item is the one most people did this morning, and it comes last.\n\n⏱ CHAPTERS\n0:00 — The one second the room lags behind your head\n1:02 — Two words: one move, or stages?\n1:18 — Why no visit ever takes your pressure standing\n2:13 — The stretchy aorta you no longer have\n2:28 — A heavy dinner, then a hot bath\n5:21 — The supplement your pharmacist never heard about\n8:07 — Thirst stops warning you after 70\n12:03 — Glenn, a stent, and nine degrees of snow\n15:03 — The missed pill: never double it\n18:52 — The one you did this morning\n22:56 — Robert's reading, and three things to do now\n\nIf this changed how you get out of bed tomorrow, subscribe for the next warning your routine appointment skips — and tell us in the comments: one move, or stages?\n\n⚠️ DISCLAIMER\nThis video is for educational purposes only and does not constitute medical advice. Robert, Shirley, Glenn and every other person described here are composites drawn from published case reports, not real patients. Nobody on this channel is a licensed physician, and the visuals in this video are AI-generated. Do not change, stop, or double any medication based on a video; consult your own doctor or pharmacist, who knows your numbers and your medicines. If you experience chest tightness, a sudden faint, confusion, or an unexplained fall, call 911.\n\n📚 SOURCES & REFERENCES\n1. Lei LY, et al. (2020) Autonomic neuroscience : basic & clinical — Differential diagnosis of orthostatic hypotension.\n   https://pubmed.ncbi.nlm.nih.gov/32805...\n2. Mayo Clinic — Orthostatic hypotension (postural hypotension) - Symptoms and causes\n   https://www.mayoclinic.org/diseases-c...\n3. National Institute on Aging — Falls and Fractures in Older Adults: Causes and Prevention\n   https://www.nia.nih.gov/health/falls-...\n4. Agbabiaka TB, et al. (2018) The British journal of general practice : the journal of the Royal College of General Practitioners — Prevalence of drug-herb and drug-supplement interactions in older adults: a cross-sectional survey.\n   https://pubmed.ncbi.nlm.nih.gov/30249...\n5. MedlinePlus (NIH/NLM) — Dietary Supplements\n   https://medlineplus.gov/dietarysupple...\n6. National Institute on Aging — Dietary Supplements for Older Adults\n   https://www.nia.nih.gov/health/vitami...\n7. FDA — Dietary Supplements\n   https://www.fda.gov/food/dietary-supp...\n8. Valtonen RIP, et al. (2022) European journal of applied physiology — Cardiovascular responses to dynamic and static upper-body exercise in a cold environment in coronary artery disease patients.\n   https://pubmed.ncbi.nlm.nih.gov/34655...\n9. Pence J, et al. (2025) Nutrients — Hydration Strategies in Older Adults.\n   https://pubmed.ncbi.nlm.nih.gov/40732...\n10. CDC — Heat and Older Adults (Aged 65+) | Heat Health\n   https://www.cdc.gov/heat-health/risk-...\n11. National Institute on Aging — Hot Weather Safety for Older Adults\n   https://www.nia.nih.gov/health/safety...\n12. NHS — Amlodipine: medicine to treat high blood pressure and angina\n   https://www.nhs.uk/medicines/amlodipine/\n\nTags: orthostatic hypotension, blood pressure drop standing up, over 70 health, seniors blood pressure, dizzy when standing up, postural hypotension, falls in older adults, stiff arteries aging, heart health after 70, blood pressure medication seniors, missed blood pressure pill, supplement drug interactions, dehydration in older adults, heat and older adults, shoveling snow heart attack, hot bath after eating, baroreflex aging, amlodipine, low blood pressure elderly, senior heart warning signs, preventive health seniors, things to avoid after 70, Dr. Vitalis\n\n#SeniorHealth #OrthostaticHypotension #DrVitalis\n\nStock footage: Pexels",
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc",
+     "text": "0:00"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=62s",
+     "text": "1:02"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=78s",
+     "text": "1:18"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=133s",
+     "text": "2:13"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=148s",
+     "text": "2:28"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=321s",
+     "text": "5:21"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=487s",
+     "text": "8:07"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=723s",
+     "text": "12:03"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=903s",
+     "text": "15:03"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=1132s",
+     "text": "18:52"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Y7q0T8ic5xc&t=1376s",
+     "text": "22:56"
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32805514/",
+     "text": "https://pubmed.ncbi.nlm.nih.gov/32805..."
+    },
+    {
+     "url": "https://www.mayoclinic.org/diseases-conditions/orthostatic-hypotension/symptoms-causes/syc-20352548",
+     "text": "https://www.mayoclinic.org/diseases-c..."
+    },
+    {
+     "url": "https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention",
+     "text": "https://www.nia.nih.gov/health/falls-..."
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30249608/",
+     "text": "https://pubmed.ncbi.nlm.nih.gov/30249..."
+    },
+    {
+     "url": "https://medlineplus.gov/dietarysupplements.html",
+     "text": "https://medlineplus.gov/dietarysupple..."
+    },
+    {
+     "url": "https://www.nia.nih.gov/health/vitamins-and-supplements/dietary-supplements-older-adults",
+     "text": "https://www.nia.nih.gov/health/vitami..."
+    },
+    {
+     "url": "https://www.fda.gov/food/dietary-supplements",
+     "text": "https://www.fda.gov/food/dietary-supp..."
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34655331/",
+     "text": "https://pubmed.ncbi.nlm.nih.gov/34655..."
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40732881/",
+     "text": "https://pubmed.ncbi.nlm.nih.gov/40732..."
+    },
+    {
+     "url": "https://www.cdc.gov/heat-health/risk-factors/heat-and-older-adults-aged-65.html",
+     "text": "https://www.cdc.gov/heat-health/risk-..."
+    },
+    {
+     "url": "https://www.nia.nih.gov/health/safety/hot-weather-safety-older-adults",
+     "text": "https://www.nia.nih.gov/health/safety..."
+    },
+    {
+     "url": "https://www.nhs.uk/medicines/amlodipine/",
+     "text": "https://www.nhs.uk/medicines/amlodipine/"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#SeniorHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/orthostatichypotension",
+     "text": "#OrthostaticHypotension"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/drvitalis",
+     "text": "#DrVitalis"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "6:20 in the morning. You swing your legs\noff the bed. You stand. And for one\nsecond, the room is a beat behind your\nhead. You put a hand on the nightstand.\nYou tell yourself it was the pillow or\nthe dark or getting up too fast at 74.\nBy the time the coffee is on, you have\nforgotten it. That second has a name. It\nis orthostatic hypotension. A drop in\nblood pressure in the moment you stand.\nAfter 70, it stops being a quirk of the\nmorning. It becomes one of the most\ncommon ways a perfectly ordinary day\nturns into a broken hip by lunchtime.\nAnd the same stiff arteries and slow\nreflex behind it are what make a cold\ndriveway or a doubled pill dangerous for\nthe heart itself. This video is about\nsix everyday actions that your arteries\nabsorbed without comment at 50 and can\nno longer absorb at 70. It is also about\nthe safer way to do each one. One of the\nsix is in a different league from the\nother five. It is the one you did this\nmorning and it comes last. Before we\nlook at the list, answer me this in two\nwords down in the comments. How did you\nget out of bed this morning? One move or\nin stages? Keep your answer in mind\nbecause by the end of this video, you\nwill know exactly what those two words\nare costing your heart. A 2020 review in\nthe journal Autonomic Neuroscience put\nthe scale of this plainly. More than 20%\nof people over 60 have orthostatic\nhypotension. And the people who have it\ncarry a higher risk of falls, of\ncardiovascular events, and of death. One\nin five. Most of them have never heard\nthe term because nobody takes your\npressure lying down and then standing in\na routine visit. You sit in the chair,\nthe cuff goes on, the number is fine,\nand you go home. No appointment slot\nexists for the second after you stand\nup. Robert, like everyone you will meet\nhere, is a composite drawn from real\ncase reports. He is 74, walks the dog\ntwice a day. His pressure is well\ncontrolled on two pills, and he would\ntell you he feels fine. Nothing here is\na diagnosis or a prescription. The\ndecisions belong with you and your own\ndoctor. Here is why all six matter more\nafter 70 in one picture. The arteries\nstiffen and the reflex that catches a\ndrop in pressure slows down. A stiff\nsystem with a sleepy thermostat. Every\nhabit on this list leans on that. Number\nsix, the one that sounds most like a\nreward. A big heavy meal and then a hot\nbath. Carolyn is 76. Sunday is pot\nroast, mashed potatoes, a glass of wine,\ndessert because her daughter made it.\nAnd then because her hips ache from\nstanding at the stove, a long soak in a\nhot bath before bed, each half of that\nis pleasant. Together, they stack two\nseparate drops in blood pressure on top\nof a reflex that cannot answer either\none quickly. After a large meal, the gut\nneeds blood to do its work, and the body\nsends a lot of it there. In a younger\nperson, the heart picks up and the\nvessels elsewhere tighten to compensate,\nand the overall pressure barely moves.\nIn many older adults, the compensation\nlags and pressure falls in the hour or\ntwo after eating. The lag comes from two\nchanges. Over decades, the elastic\nfibers in the artery walls fray and get\nreplaced with stiffer collagen and\ncalcium. [snorts] So, a vessel that was\na balloon behaves more like a garden\nhose with no cushion when demand shifts.\nAnd the reflex that should answer the\ndrop gets slower and quieter with age,\nmore so on many pressure and heart\nmedicines. The medical term is\npostprandial hypotension. Pressure that\ndrops after a meal. It is a known cause\nof the dizziness, the heaviness, and the\nneed to sit down. People over 70 often\ndescribe that after a big lunch. Then\nCaroline gets into water hot enough to\nturn her skin pink. Heat opens the blood\nvessels in the skin wide because the\nbody is trying to shed warmth. That\npulls a second large share of blood away\nfrom the core and the brain. Now the gut\nhas one portion, the skin has another,\nthe stiff arteries hold the rest. The\nsleepy reflex is trying to serve a head\nthat is above the waterline. The moment\nof greatest risk is when she stands up\nout of that bath. She is warm, dilated,\nfull, and vertical in one move. and the\npressure in the vessels feeding her\nbrain can fall far enough that the\nlights go gray. Bathrooms are hard,\ntiled, and have nothing soft to land on.\nThe safer way does not ask her to give\nup the bath. Leave at least an hour,\nbetter two, between a heavy meal and a\nhot soak, so the gut has finished its\nclaim on the circulation. Run the water\nwarm rather than hot. If your skin is\nflushing red, it is pulling more blood\nthan you can spare. Keep the soak to 15\nor 20 minutes and get out in two stages.\nSit up in the water for a slow count of\n30 before you stand. Then sit on the\nedge of the tub for another count before\nyou step out. If you ever feel the gray\ncreeping in, sit straight back down,\neven in the water, and wait. Caroline\nstill has her sundae. She has moved the\nbath to the morning. Number five,\nstarting a new supplement without\ntelling your pharmacist. On Robert's\nkitchen shelf, between the fish oil and\nthe magnesium, there is a box of\ndigestive tea. Two cups every evening\nfor a year. Nobody with a pharmacology\ndegree has ever seen it. One survey of\ncommunity dwelling older adults looked\nat this directly. It found that a\nsubstantial share were taking a\nprescription medicine alongside a herbal\nproduct or a dietary supplement. A\nmeaningful fraction of those\ncombinations carried a potential\ninteraction. The people in that survey\nwere not reckless. They were doing what\nRobert does. They buy the fish oil, the\nturmeric, the magnesium, the thing a\nneighbor swore by. They never mention\nany of it to anyone with a\npharmarmacology degree because it did\nnot feel like medicine. The reason this\nbelongs on a list about your heart and\nyour pressure is that the FDA and the\nNational Library of Medicine both say\nthe same thing in plain language.\nDietary supplements are not tested the\nway drugs are before they reach the\nshelf. The label dose is a\nrecommendation, not a tested ceiling,\nand nobody has checked how the contents\nbehave next to the two pills you already\ntake for your pressure. Some of these\ninteractions push pressure up. Licorice\nroot turns up in digestive teas and some\nherbal blends. It may hold sodium and\nlose potassium in a way that raises\nblood pressure and can undo a\nmedication's work. Some push it down or\nadd to a medicine that already does,\nwhich lands you right back in the gray\nroom. Second from the top of this video.\nSome change how the liver processes\nother drugs entirely. St. John's wart is\nthe well-known example. It may speed up\nthe clearance of a long list of\nmedicines so the dose your doctor set no\nlonger does what it did. None of that\nmeans the supplement is poison. It means\nthe combination is unmeasured. And the\none person in your life who can measure\nit for free without an appointment is\nstanding behind the pharmacy counter.\nThe safer habit is one sentence long.\nBefore you take the first capsule of\nanything new, bring the bottle to the\npharmacy, hand it across, and say, \"I\ntake these two. Is this fine with them?\"\nPharmacists check interactions all day.\nIt is the heart of the job, and most\nwill do it on the spot. The box the\npharmacist flagged on Robert's shelf was\nthe digestive tea. It had licorice root\nin it, and it had been quietly nudging\nhis pressure up against the two pills\nmeant to hold it down. He had never once\nthought of it as medicine. Robert now\nkeeps a photo on his phone of every\nbottle on his kitchen shelf,\nprescription and otherwise, and shows it\nat every pharmacy visit. It takes 9\nseconds. Number four, skipping fluids on\na hot day. Shirley is 71 and she will\ntell you she is not a big drinker of\nwater. She has never been thirsty much\nand in summer she stays indoors in the\nafternoon so she assumes she is fine. In\nJuly her town has 3 days above 95°. On\nthe third afternoon she stands up from\nthe sofa to answer the door and sits\ndown hard on the hallway floor. Think\nback to the last really hot day this\nsummer. How many glasses of anything did\nyou actually drink before noon? not\ncoffee, actual fluid. Keep that number\nin your head because it matters in a\nminute. Two age related changes meet on\na hot day. A review of hydration\nstrategies in older adults lays them\nout. The thirst signal weakens with age,\nso you can be well into a water deficit\nbefore you feel any pull to drink. The\nkidneys lose some of their ability to\nhold on to water and concentrate urine,\nso you also lose fluid faster than you\ndid. Add the common medicines. Water\npills, the diuretics prescribed for\npressure or for a weak heart, are\ndesigned to make you lose fluid and\nsalt. Some pressure medicines blunt\nsweating or the heart [clears throat]\nrate response to heat. The CDC lists\nadults aged 65 and over as more prone to\nheat stress for exactly these reasons.\nThe body adjusts to temperature less\nwell, and chronic conditions change the\nnormal response. Medicines interfere\nwith the body's ability to keep itself\ncool and keep its fluid balance. What\nthat does to the heart and the pressure\nis mechanical. Lose a cord of fluid and\nthe volume of blood in your vessels\ndrops. The heart has less to pump, so it\npumps faster and harder to maintain\npressure and the stiff arteries give it\nno help. When Shirley stood up, her\nalready thin circulation pulled in her\nlegs. The sleepy reflex did not catch it\nand her brain went without for 2 or 3\nseconds. Her number before noon was\nzero. If your number was zero or one,\nyou are not unusual. And this is the\nsingle easiest item on this list to fix.\nThe standard hot weather advice for\nolder adults is to drink regardless of\nwhether you feel thirsty because thirst\nwill not warn you in time. So take the\ndecision away from thirst. On any day\nthe forecast goes above 85, put a glass\nby the coffee maker and a glass by the\nchair you sit in most. Put a glass by\nthe bed. Empty each one at set times.\nWhen you wake, midm morning, lunch,\nmid-afternoon with dinner. Water,\ndiluted juice, broth, milk, decaf tea,\nall count. Check the color of your\nurine. Pale straw is where you want it.\nAnd anything darker than apple juice is\na signal, not an opinion. If you take a\nwater pill, ask your doctor what your\nfluid target should be on hot days. For\nsome people with a weak heart, the\nanswer is more careful than simply more.\nThat is a conversation worth having\nbefore the heatwave rather than during\nit. Shirley had hers on a gurnie, which\nis the wrong place for it. The emergency\nroom doctor told her three things she\nnow follows. First, on any day above 85,\nshe drinks her first full glass before\nthe water pill, not after, so the pill\nis not pulling from an empty tank.\nSecond, she closes the blinds by noon\nand sits in the coolest room in the\nhouse from 1 until 5. Third, if she\nfeels laded, gets a headache, or has not\nneeded the bathroom since morning, she\ndrinks a glass, sits down, and calls the\noffice. Her doctor also went over the\ndose. In the hottest weeks of summer, it\nis now a check-in, not a fixed number\nshe carries alone. Shirley now keeps a\nmarked pitcher in the fridge. When it is\nempty, she has had her day's share, and\nshe does not have to remember a single\nglass.\nNumber three, shoveling snow or any\nheavy lifting in the cold. Glenn is 72.\nHe had a stent put in at 68 and he has\nbeen fine since. On a January morning\nwith a thermometer reading 9 degrees, he\ngoes out at 7 to clear the driveway\nbefore his wife needs the car. He does\nit because he has always done it and\nbecause he does not see himself as\nsomebody who pays a teenager to do it.\nResearchers took 20 people with stable\ncoronary artery disease. People in a\nsituation much like Glenn's. It had them\ndo upper body exercise in two rooms, one\nat 72° F, one at [snorts] 5° F. They\ncompared the kind of arm work that keeps\nmoving with the kind that holds a\nstrain. The premise was that arm\nexercise in the cold may put extra\nstrain on the heart in people whose\ncoronary arteries are already narrowed.\nThat premise is a driveway. It is cold\nair, armwork, and a held strain, which\nis the exact combination a snow shovel\nproduces. Each of those three raises the\nheart's workload on its own. Cold\nnarrows the blood vessels in the skin\nand the limbs to keep heat in, which\nraises the pressure the heart has to\npush against. Arm work raises pressure\nmore than leg work at the same effort\nbecause the arms have smaller muscles\nworking near or above heart level. And\nthe held strain is the part most people\nnever think about. When you lift a\nloaded shovel, you brace. You hold your\nbreath for a second. That moment of\nstraining against a closed throat sends\npressure sharply up and then when you\nbreathe out lets it fall. Stiff arteries\npass every bit of that spike straight\nthrough. If there is a narrowed coronary\nartery, the heart muscle beyond it is\nbeing asked for far more work. At the\nsame moment its supply is being squeezed\nby the cold. That is the mechanism\nbehind the winter stories about men in\ntheir 70s found in their driveways. The\nsafer way starts with an honest\nsentence. A 72year-old with a stent does\nnot shovel wet snow at 7 in the morning.\nIf it must be done, do it late morning\nwhen the air has warmed and your own\nbody has been up for a few hours. Blood\npressure tends to run higher in the\nfirst hours after waking. Push the snow\nrather than lift it. Take small loads.\nBreathe out as you move the shovel and\nnever hold your breath against a weight.\nDress so your face and hands are covered\nbecause cold air on the face triggers\nthe narrowing reflex strongly. Stop\nevery few minutes whether you feel the\nneed or not. And if you feel a tightness\nin the chest, the jaw, or the arm, drop\nthe shovel, go inside, and call 911. Do\nthe same if you are suddenly short of\nbreath or sweating in a way the effort\ndoes not explain. That is not a\nsituation to finish the driveway first.\nGlenn now pays the teenager. He\ndescribes it as the cheapest cardiology\nhe has ever bought. Number two, doubling\nup on a missed pill. This is the one\nthat comes from good intentions. Robert\ntakes his two pressure pills with\nbreakfast. On a Tuesday, he is out early\nwith the dog, comes home, has coffee. At\n4 in the afternoon, he realizes the\nmorning dose is still in the box. He is\na conscientious man. He reasons that he\nis behind, so he should catch up. and he\ntakes the morning pills and the evening\npills together. What follows is drawn\nfrom the case reports and it runs the\nsame way in most of them. At 5, he eats\nan early supper and settles into the\nrecliner with the news. At 7, he stands\nup to let the dog out. The room goes\ngray from the edges in the way a\nphotograph fades and the sound of the\ntelevision drops away. His wife is\ncoming through from the kitchen and\ncatches his arm before his knees finish\nfolding. She walks him the four steps to\nthe staircase and sits him down on the\nsecond stair. He stays there with his\nhead on his knees for 10 minutes. The\ncolor comes back into his face. Then he\nfeels foolish and then he feels\nfrightened. Nothing hurt so they do not\ncall anyone that night. At 9 the next\nmorning, his wife phones the pharmacy\nwith the box in her hand. The pharmacist\nlistens, asks what time he took the\npills, and explains it in one plain\nline. Two doses relaxed his arteries far\nmore than one at the hour he stood up\nand his pressure had nowhere to go but\ndown. Then she asked him to come in that\nweek so they can write the misdose rule\non every box he owns. What a pressure\npill does in most cases is either open\nthe blood vessels wider or slow and\nsoften the heart's work or both. The\ndose your doctor set was chosen to bring\nyour pressure down to a target and hold\nit there. Two doses at once overshoot\nthat target and the overshoot lands on\nthe same slow reflex that cannot catch a\ndrop when you stand. For a medicine like\namloopene, one of the most common\npressure pills in the world, the Medline\nPlus page on it is explicit about this\nsituation. If you forget a dose, take it\nas soon as you remember, unless it is\nnearly time for the next one. In that\ncase, skip the missed dose and stay on\nyour regular schedule. Never take a\ndouble dose to make up for a forgotten\none. The reason is that amloopene works\nby relaxing the walls of the arteries.\nTwice the relaxation in a 74 year old\nwith a sleepy reflex can mean a pressure\nlow enough to cause dizziness or a fall\nor a faint. For other pills, the wrist\ntakes a different shape. Double a beta\nblocker and the heart may slow too far.\nDouble a water pill and you lose too\nmuch fluid and potassium in an\nafternoon, which is number four all over\nagain. The common thread is simple. A\nsingle missed dose of a pressure pill\nalmost never hurts anyone over the\ncourse of one day. A doubled one can and\nsometimes does. The safer habit is to\ndecide the rule in advance, once for\neach medicine, instead of reasoning it\nout at 4 in the afternoon. Ask your\npharmacist or your doctor a single\nquestion for every pill you take. If I\nmiss this, what do I do? Write the\nanswer on the box with a marker. Then\nmake missing it rarer. A weekly pill\norganizer with a compartment for each\nday turns the question, \"Did I take it?\"\ninto a glance. Pair the dose with\nsomething that already happens every\nday. The coffee maker, the dog's\nbreakfast, the news, so the habit\ncarries it. If you use a phone, set an\nalarm that repeats. Robert's rule\nwritten on his box in his own hand is\nmissed morning, take it by noon.\nAfternoon, skip it. He has not doubled\nsince. Number one, standing up fast\nafter lying down. [snorts] We started\nhere and we come back because this is\nthe one in a different league. The other\nfive are things you might do a few times\na month. This one you do every morning\nof your life and most nights once or\ntwice on the way to the bathroom. It is\nthe one most closely tied to the falls\nthat end independence.\nLie flat for 7 hours and your blood\nspreads evenly through a horizontal\nbody. Stand and in the space of a\nbreath, gravity pulls a large share of\nit down into the veins of the legs and\nthe belly. That is something close to a\nquart in a tall man. the volume\nreturning to the heart falls. So, the\nheart has less to pump. So, the pressure\nin the vessels feeding your brain drops.\nIn a 30-year-old, the barerrow\nreceptors, the pressure sensors in the\narteries of the neck and in the arch of\nthe aorta, notice within a beat or two.\nThey speed the heart up, tighten the\nsmall vessels in the legs and gut, and\nkeep the brain supplied. The pressure is\nback before the brain registers\nanything. In a 74 year old with stiff\narteries and a slow reflex, there are\ntwo 3 4 seconds where the brain is under\nsupplied. That is the room being a beat\nbehind your head. On most mornings it\nclears. Then there is the morning it\ndoes not clear or the morning you also\nhad a hot shower, a water pill, a glass\nof wine the night before, or a doubled\npill. On that morning it does not clear\nin time and you go down. The Mayo Clinic\ndescribes the symptoms most people wave\naway. Lightadedness or dizziness on\nstanding. Blurred vision, weakness,\nconfusion, and in the worst case,\nfainting. A drop in blood pressure on\nstanding sits among the recognized\ncauses of falls in older adults\nalongside the medicines that cause it.\nAnd the falls are the point. A fall at\n30 is a bruise. A fall at 74 onto a hip\nin a bathroom in the dark is often the\nevent that divides a life into before\nand after. So go back to the question\nfrom the start. If you said one move,\nthat is the thing to change and it cost\nyou about 45 seconds a day. If you said\nstages, you are already doing most of\nthis and you will see why it works. Do\nit this way every time and do it with me\nnow. If you are sitting down, before you\nstand from lying, roll onto your side\nand push yourself up to sitting on the\nedge of the bed. Sit there, feet flat on\nthe floor, and count to 30 slowly. While\nyou count, pump your ankles up and down\n10 times and squeeze your thighs and\nbuttocks hard for a few seconds. Those\nmuscles are the pump that squeezes blood\nback up out of the legs. you are doing\nthe reflex's job for it. Then stand, but\nkeep one hand on something solid, the\nheadboard, the nightstand, the wall, and\nstand still for another count of 10\nbefore you take a step. If at any point\nthe room starts to gray or your ears\nring or the floor tilts, sit straight\nback down and wait a full minute before\nyou try again. In the night, the same\nthing. Sit, count, then walk. Have a\nlight you can reach from the bed because\nthe fall in the dark is the one that\ngets people. Drink a glass of water\nbefore you lie down as long as\n[clears throat] your doctor has cleared\nyou to overnight you lose fluid and dawn\nis when you are at your emptiest. One\nmore thing you can do that no routine\nvisit will do for you. Buy or borrow a\nhome blood pressure cuff and take two\nreadings a few minutes apart. One after\nlying flat for 5 minutes and one after\nstanding for three. Between lying and\nstanding, a fall of 20 points or more in\nthe top number is the common definition\nof orthostatic hypotension. So is 10 or\nmore in the bottom. If you see that, it\nis a number worth bringing to your\ndoctor as the first item of the\nappointment, not a remark on the way\nout. It may change which pills you take\nor when you take them or how much.\nRobert measured his lying 132 over 78\nstanding at 3 minutes 106 over 66 a\n26-point drop that no visit in 15 years\nhad caught because no visit had looked.\nHis doctor moved one of his two pills to\nthe evening and took the morning one\ndown a step. The room no longer lags\nbehind his head and he gets out of bed\nthe slow way every day, including the\ndays he feels fine. what that means for\nyou in order of urgency. Over the next\nmonth, take the lying and standing\nreadings yourself and bring the gap to\nyour next routine visit. This week,\ncarry every supplement bottle to the\npharmacy and ask the one question about\neach medicine. If I miss this, what do I\ndo? And right now, if you have chest\ntightness, a sudden faint, confusion, or\na fall you cannot explain, that is 911,\nnot a note for next time. None of this\nis a diagnosis of you. The numbers you\ncollect belong on your own doctor's desk\nwhere they can be read against\neverything else they know about you.\nTonight, before you lie down, put a\nglass of water on the nightstand. Count\nout the 30 seconds on the edge of the\nbed just to feel how long it actually\nis. Then tell me in the comments now\nthat you know what the two words cost,\none move or stages, and has your answer\nchanged. Send this to a friend your age\nwho still shovels the driveway and still\ngets up in one go. And if this helped,\nsubscribe for the next one. Tomorrow\nmorning, when your feet touch the floor\nand you sit there counting, that is not\nan old man's caution. That is you doing\nthe job your arteries used to do for you\nand doing it"
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@DrVitalisHealth/videos",
+   "isMonetized": null,
+   "hashtags": [],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@DrVitalisHealth",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

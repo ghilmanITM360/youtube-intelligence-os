@@ -1,0 +1,288 @@
+{
+ "run": {
+  "id": "xbLVJamgt5viXmDc2",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:07:56.632Z",
+  "finishedAt": "2026-11-11T08:08:22.088Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 375,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 25268,
+   "resurrectCount": 0,
+   "runTimeSecs": 25.268,
+   "metamorph": 0,
+   "computeUnits": 0.007018888888888889,
+   "memAvgBytes": 154788206.07578254,
+   "memMaxBytes": 169570304,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 9.115830373232058,
+   "cpuMaxUsage": 103.91999999999999,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 646163,
+   "netTxBytes": 102359
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "QC3r8U05GFByQu9lp",
+  "defaultDatasetId": "TR5q0RIcFzQMC4cyT",
+  "defaultRequestQueueId": "6jhbh1me0EMss1eq9",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "QC3r8U05GFByQu9lp"
+   },
+   "datasets": {
+    "default": "TR5q0RIcFzQMC4cyT"
+   },
+   "requestQueues": {
+    "default": "6jhbh1me0EMss1eq9"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://kejtc14spug2.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/xbLVJamgt5viXmDc2",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/TR5q0RIcFzQMC4cyT/items?signature=MC4wLjEwNzhFSVpzZVpnaDdGeWtRc1d4SQ"
+  }
+ },
+ "records": [
+  {
+   "title": "8 Kidney-Friendly Fruits You Should Be Eating Every Night (Over 60)",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "wjYgfvXXAm8",
+   "url": "https://www.youtube.com/watch?v=wjYgfvXXAm8",
+   "thumbnailUrl": "https://i.ytimg.com/vi/wjYgfvXXAm8/maxresdefault.jpg",
+   "viewCount": 7,
+   "date": "2026-11-10T13:00:03.000Z",
+   "likes": 0,
+   "location": "UNITED STATES",
+   "channelName": "Clinical Senior Health",
+   "channelUrl": "https://www.youtube.com/channel/UCmGrX6faHltXQBZl2mrM7Fg",
+   "channelUsername": "ClinicalSeniorHealth",
+   "collaborators": null,
+   "channelId": "UCmGrX6faHltXQBZl2mrM7Fg",
+   "channelDescription": "Welcome to **Clinical Senior Health**! 🌿 Your trusted source for **senior health, healthy aging, wellness, nutrition, mobility, fitness, pain relief, and longevity tips**. Our goal is to help adults over 50 live a healthier, stronger, and more active life through practical, easy-to-understand health information.\n\nSubscribe for helpful videos covering **healthy aging, joint health, senior fitness, brain health, heart health, sleep, nutrition, pain management, and everyday wellness**.\n\n⚠️ **Disclaimer:** This channel provides educational and informational content only and is not medical advice. Always consult a qualified healthcare professional before making changes to your diet, exercise, medications, or health routine.\n\n#ClinicalSeniorHealth #HealthyAging #SeniorHealth #SeniorWellness #Longevity #AgingWell",
+   "channelJoinedDate": "Sep 26, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/eDGRkrJlWwMJrNE7UfiGNB40piwrg1CmMCr3ERzBKXUFQjyhB87MkMLkif-duAer0yHu6vyeMA=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": null,
+   "channelTotalVideos": 25,
+   "channelTotalViews": 57775,
+   "numberOfSubscribers": 706,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@ClinicalSeniorHealth",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Welcome to **Clinical Senior Health**! 🌿 Your trusted source for **senior health, healthy aging, wellness, nutrition, mobility, fitness, pain relief, and longevity tips**. Our goal is to help adults over 50 live a healthier, stronger, and more active life through practical, easy-to-understand health information.\n\nSubscribe for helpful videos covering **healthy aging, joint health, senior fitness, brain health, heart health, sleep, nutrition, pain management, and everyday wellness**.\n\n⚠️ **Disclaimer:** This channel provides educational and informational content only and is not medical advice. Always consult a qualified healthcare professional before making changes to your diet, exercise, medications, or health routine.\n\n#ClinicalSeniorHealth #HealthyAging #SeniorHealth #SeniorWellness #Longevity #AgingWell",
+    "channelJoinedDate": "Sep 26, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": "United States",
+    "channelUsername": "ClinicalSeniorHealth",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/eDGRkrJlWwMJrNE7UfiGNB40piwrg1CmMCr3ERzBKXUFQjyhB87MkMLkif-duAer0yHu6vyeMA=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": null,
+    "channelTotalVideos": 25,
+    "channelTotalViews": 57775,
+    "numberOfSubscribers": 706,
+    "isChannelVerified": false,
+    "channelName": "Clinical Senior Health",
+    "channelUrl": "https://www.youtube.com/channel/UCmGrX6faHltXQBZl2mrM7Fg",
+    "channelId": "UCmGrX6faHltXQBZl2mrM7Fg",
+    "inputChannelUrl": "https://www.youtube.com/@ClinicalSeniorHealth",
+    "isAgeRestricted": false
+   },
+   "duration": "00:19:32",
+   "commentsCount": 0,
+   "text": "#KidneyHealth #HealthyKidneys #KidneyDisease #KidneyHealthTips #FoodsForKidneys #KidneyDiet\n\nCan eating the right fruit before bed help support your kidney health after 60?\n\nYour kidneys work around the clock to filter waste, balance fluids, and maintain essential minerals in your body. But as we get older, protecting kidney function becomes increasingly important. And some everyday fruits may offer valuable nutrients that support overall kidney and cardiovascular health.\n\nIn this video, Mr. Ares reveals 8 powerful fruits that older adults should know about and explains how they can fit into a kidney-friendly eating plan.\n\nDiscover the potential benefits of:\n\n🍇 Blueberries – Rich in antioxidants that help protect cells from oxidative stress.\n\n🍒 Cranberries – Contain natural compounds that may help reduce the risk of certain urinary tract infections.\n\n🍇 Red Grapes – Provide beneficial plant compounds that support overall vascular health.\n\n🍎 Apples – A source of fiber and beneficial plant nutrients.\n\n🍒 Tart Cherries – Contain antioxidants that may support a healthy inflammatory response.\n\n🍉 Watermelon – Provides hydration and naturally occurring citrulline.\n\n🍍 Pineapple – Contains bromelain, a naturally occurring enzyme with anti-inflammatory properties.\n\n🍓 Strawberries – Provide vitamin C, fiber, and antioxidant compounds.\n\nYou'll also discover how blood pressure, dehydration, elevated uric acid, kidney stones, inflammation, and age-related changes can affect kidney health.\n\nBONUS: A Simple Bedtime Kidney-Friendly Drink\n\nStay until the end to discover a simple recipe combining blueberries, tart cherries, strawberries, plain kefir or yogurt, unsweetened cranberry juice, and cinnamon.\n\nYou'll also learn five practical habits that can help support your kidneys as you age.\n\nIMPORTANT WARNING: Learn to recognize potential warning signs that deserve medical attention, including blood in your urine, persistent foamy urine, swelling, reduced urination, unexplained fatigue, and persistent itching. Do not ignore these symptoms or attempt to treat them with food alone.\n\nWHO SHOULD WATCH THIS VIDEO?\n\nAdults over 50 and 60.\n\nSeniors interested in healthy aging.\n\nPeople looking for kidney-friendly food choices.\n\nAnyone interested in nutrition, hydration, and long-term wellness.\n\nRESEARCH REFERENCES\n\nCDC (2023) – Chronic Kidney Disease Prevalence: cdc.gov/kidneydisease\n\nRule AD et al. (2010) – Age-Related GFR Decline: doi:10.1681/ASN.2009020174\n\nCassidy A et al. (2011) – Blueberry Anthocyanins and Blood Pressure: doi:10.3945/ajcn.110.004697\n\nJepson RG et al. (2012) – Cranberry and Urinary Health: doi:10.1002/14651858.CD001321.pub5\n\nZhang Y et al. (2012) – Tart Cherries and Uric Acid: doi:10.1002/art.34667\n\nKang DH et al. (2009) – Uric Acid and Kidney Health: doi:10.1093/ndt/gfp046\n\nFigueroa A et al. (2011) – Watermelon and Vascular Function: doi:10.1038/ajh.2010.142\n\nLekawanvijit S (2018) – Resveratrol and Kidney Cell Protection: doi:10.3390/antiox7120170\n\nRathnavelu V et al. (2016) – Bromelain and Inflammation: doi:10.3892/br.2016.720\n\nMEDICAL DISCLAIMER:\n\nThis video is intended for general educational and informational purposes only. It does not replace professional medical advice, diagnosis, or treatment. People with chronic kidney disease, advanced kidney disease, or those receiving dialysis may need to limit certain fruits, potassium, phosphorus, or fluids. Always consult your nephrologist or registered dietitian before making dietary changes.\n\nIf you found this video helpful, please LIKE, SHARE, and SUBSCRIBE for more practical health and wellness tips for adults over 50 and 60.\n\n#SeniorHealth #HealthAfter60 #HealthyAging #CKD #KidneyCare #KidneyNutrition #KidneyFriendlyFoods #HealthyLifestyle #PreventiveHealth #DrAresSeniorHealth",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/kidneyhealth",
+     "text": "#KidneyHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthykidneys",
+     "text": "#HealthyKidneys"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidneydisease",
+     "text": "#KidneyDisease"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidneyhealthtips",
+     "text": "#KidneyHealthTips"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/foodsforkidneys",
+     "text": "#FoodsForKidneys"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidneydiet",
+     "text": "#KidneyDiet"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#SeniorHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthafter60",
+     "text": "#HealthAfter60"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#HealthyAging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/ckd",
+     "text": "#CKD"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidneycare",
+     "text": "#KidneyCare"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidneynutrition",
+     "text": "#KidneyNutrition"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidneyfriendlyfoods",
+     "text": "#KidneyFriendlyFoods"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthylifestyle",
+     "text": "#HealthyLifestyle"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/preventivehealth",
+     "text": "#PreventiveHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/draresseniorhealth",
+     "text": "#DrAresSeniorHealth"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "Most people trying to protect their\nkidneys are focused entirely on what to\ncut out. Less salt, less protein, less\nprocessed food. And yes, those things\nmatter. But there is a whole other side\nof this conversation that almost nobody\nis having. And it is not about\nrestriction at all. Here is something\nyour doctor has almost certainly never\nhad time to explain in a 12-minute\nappointment. What you eat in that final\nhour before you go to bed either gives\nyour kidneys exactly what they need to\nrun a clean overnight cycle or it hands\nthem more work they cannot finish before\nmorning and after 60 that difference\naccumulates quietly night after night\nfor years before it ever shows up on a\nlab report. My name is Dr. Aries Smith.\nI have spent 15 years in preventive\nmedicine watching chronic kidney disease\ndevelop slowly, silently, and almost\nalways without warning. One in seven\nAmerican adults is living with it right\nnow and the vast majority of them feel\ncompletely fine. The kidneys do not hurt\nwhen they are struggling. There are no\nearly warning pains, no obvious signals.\nThe organ simply loses capacity\ngradually until a number called\ncreatinine or eGFR on a routine blood\ntest comes back wrong and a doctor has\nto explain something that has been\nbuilding for years. Tonight I am going\nto give you eight specific fruits that\nactively support kidney health and\nexplain exactly what each one does and\nwhy the timing of eating them in the\nevening matters. Some of these you\nalready know. A couple will genuinely\nsurprise you. And one of them, fruit\nnumber five, does something for a kidney\ndamaging problem that most people over\n60 are carrying without even knowing it.\nI will also give you a simple 2-minute\nbedtime recipe at the end that combines\nthe most powerful of these fruits into\none glass. Before we go further, I want\nto ask you one direct question. When was\nthe last time you had a full kidney\nfunction panel, including your eGFR and\ncreatinine? Drop your answer in the\ncomments right now. Last year, a few\nyears ago, or never? Just those words.\nIt takes 5 seconds and it tells me\nexactly who this video needs to reach\nmost. Let me explain what is happening\ninside your body during the overnight\nhours. Because once you understand it,\nthe choices I am about to give you will\nmake complete sense. Your kidneys are\ntwo fist-sized organs sitting just below\nyour rib cage, one on each side of your\nspine. Each one contains roughly 1\nmillion tiny filtering units called\nnephrons. Together, those nephrons\nprocess approximately\n180 L of fluid. Filtrate every 24 hours,\npulling out waste products, excess\nminerals, uric acid, metabolic\nbyproducts, and anything else your body\nno longer needs, concentrating all of it\ninto urine, and sending it on its way.\nHere is the part that matters for\ntonight. Your kidneys work continuously\naround the clock, but the overnight rest\nperiod gives them one significant\nadvantage they do not have during the\nday. No new food is coming in, no fresh\nsugar load, no sudden sodium spike from\na salty dinner, no alcohol. The\ndigestive system quiets down and the\nkidneys can work through what is already\nin circulation without new material\nbeing added on top. When you eat the\nwrong thing in that last window before\nbed, you take that advantage away from\nthem. A high sodium snack at 900 p.m.\nfloods the kidneys with a new excretion\ntask right as the digestive load was\nfinally tapering off. A sugary dessert\nspikes blood glucose, which acts as a\nmild diuretic, pulling extra fluid\nthrough the kidney filtration system for\nhours afterward. A processed snack heavy\nwith artificial compounds adds to the\nchemical excretion burden just as the\novernight window was opening. do this\nnight after night for years. And those\nnephrons are working under constant load\nwith no recovery window. And here is\nwhat makes this genuinely serious.\nNephrons that are lost do not\nregenerate. That is established in the\nnefrology literature going back decades.\nOnce a filtering unit is damaged beyond\nrepair, it is gone. The remaining\nnephrons compensate by working harder,\nwhich over time accelerates the decline\nof the ones that remain. This is the\nreal reason the evening matters so much.\nEvery fruit I am about to give you does\none of three specific jobs. It delivers\nantioxidants that protect nefron walls\nfrom the oxidative wear of continuous\nfiltration. It carries compounds that\nreduce inflammation in kidney tissue\nbefore it can do lasting damage. Or it\nbrings nutrients that support healthy\nblood pressure and vascular function in\nthe tiny pressure sensitive blood\nvessels the kidneys depend on. and every\none of them is gentle enough and low\nenough in potassium for the vast\nmajority of people over 60 to eat safely\nin the evening. One important note\nbefore we begin the list. If you have\nbeen diagnosed with stage 4 or stage 5\nchronic kidney disease or if you are on\ndialysis, please clear all dietary\nchanges with your nephologist first. At\nthat stage, individual potassium and\nphosphorus limits vary significantly\nfrom person to person. For everyone\nelse, let us get into it. Before I give\nyou the fruits, I need to draw the same\nline I would in my own office. If you\nnotice blood in your urine with no pain\nor burning, do not wait for your next\nregular appointment. Call your doctor\nthis week. That combination, painless\nblood and visible discoloration in your\nurine, is one of the early presentations\nof bladder or kidney pathology that\nwarrants a proper evaluation, not a\nsearch online. If you have unexplained\nswelling in both legs and ankles that is\nnot resolving by morning combined with\nunusual fatigue and reduced urination,\nthose together can indicate that the\nkidneys are significantly struggling\nwith fluid regulation. That is a phone\ncall, not a watch and weight. If you\nnotice persistent foamy urine, a\nmetallic taste you cannot explain, or\nitching without a skin rash, those can\nbe signs of waste products accumulating\nin the bloodstream because the kidneys\nare not clearing them efficiently. Any\none of these symptoms alongside a known\nhistory of diabetes or high blood\npressure warrants prompt evaluation.\nThese are not fruit problems. These are\nsee someone today problems. What we are\ntalking about in this video is\nsupporting kidneys that are working\nunder the normal strain of aging,\nmetabolic stress, and the daily load\nthat comes with the lifestyle most\npeople over 60 are living. Food is the\nfoundation of that support. It is not a\nreplacement for medical care. If this is\nhelpful and you want more of this kind\nof clear, practical information,\nsubscribe right now and tap the bell.\nThis channel exists to give you what a\n12minute office visit cannot. Every\nvideo is built on peer-reviewed\nresearch, not supplement sales, not\nadvertising, just the truth. Fruit\nnumber one, blueberries. I am leading\nwith this one because the research\nbehind it for kidney health is some of\nthe most directly applicable food\nscience I have come across. Blueberries\nget their deep blue color from\nantioxidant compounds called\nanthocyanins. And anthocyanins matter\nfor your kidneys in two ways that are\nboth well documented. First, every time\nyour nephrons filter blood, the process\ngenerates a small amount of oxidative\nstress as a byproduct. Over years and\ndecades, that oxidative stress quietly\ndamages nephron walls. Anthocyanins are\namong the most potent natural compounds\nidentified for neutralizing that\nspecific type of cellular damage.\nSecond, research published in the\nAmerican Journal of Clinical Nutrition\nfound that regular consumption of\nblueberries significantly reduced\nsystolic blood pressure in study\nparticipants. That finding matters\nenormously for kidney health because\nhigh blood pressure is one of the two\nleading causes of chronic kidney damage.\nA food that supports healthy blood\npressure quietly protects the tiny\npressure sensitive blood vessels inside\nthe kidneys at the same time. Frozen\nblueberries work just as well as fresh\nhere. A half cup in the evening on their\nown or stirred into plain yogurt is the\nright amount. Fruit number two,\ncranberries. Cranberries carry compounds\ncalled pro-anthocyanidins\nand they do something for your urinary\ntract that no other fruit on this list\ndoes. Research published in the Cochran\ndatabase confirmed that these compounds\nprevent certain harmful bacteria from\nadhering to the lining of the urinary\ntract and the kidney tissue itself. Here\nis why that matters beyond just\npreventing obvious infections. Many\nolder adults carry a low-grade chronic\nbacterial presence in the bladder and\nlower urinary tract that never develops\ninto a full infection, never causes a\nfever, never burns, but it chronically\nirritates the lining of the urinary\nsystem. And recurrent bacterial\ninvolvement that travels upward toward\nthe kidneys, even at low levels over\nyears, can contribute to gradual\nscarring of kidney tissue. The word to\nfocus on here is unsweetened. Pure\nunsweetened cranberry juice, two\ntablespoons diluted in water or a small\nportion of dried cranberries with no\nadded sugar. Not the cocktail blend, not\nthe sweetened juice drink. Check the\nlabel. Sugar added to a kidney\nprotective fruit turns it into a blood\nglucose spike at the worst possible time\nof day. If this is helping you so far,\ntype two in the comments right now. It\nonly takes 2 seconds and it lets me know\nyou're still with me. Fruit number\nthree, red grapes. Red and purple grapes\ncarry a compound in their skin called\nresveratrol and it works very\ndifferently for kidney health than most\npeople realize. Research published in\nthe journal antioxidants identified that\nreveratrol activates protective pathways\ninside kidney cells that reduce\ninflammation and help defend nephrons\nfrom the cumulative oxidative stress of\nyears of filtration work. It has also\nbeen studied in the context of the two\nbiggest threats to kidney function in\nolder adults, high blood pressure and\nelevated blood sugar, and it appears to\nsupport cellular resilience against\nboth. The green grape carries very\nlittle of this. Reach for red or purple\nvarieties and eat them with the skin on\nbecause that is exactly where their\nveratrol is concentrated. Keep the\nportion to 12 to 15 grapes. This is not\na fruit to eat by the bowl in the\nevening. And a trick I give to nearly\nevery patient who asks about portion\ncontrol with fruit at night, freeze\nthem. Frozen grapes, eat slowly, feel\nlike a real treat, and make it genuinely\neasy to stop at the right amount. Quick\npause right here. Tell me in the\ncomments which of these first three\nfruits you already have in your house\nright now. Blueberries, cranberry juice,\nor red grapes? One word. It takes 2\nseconds, and I read every comment on\nthis channel. Fruit number four, apples.\nThe apple works for your kidneys through\na connection that almost nobody talks\nabout, the gut kidney axis. Your gut\nmicrobiome and your kidneys are in\nconstant communication through the\nbloodstream. When your gut bacteria are\nhealthy and producing the right\nshort-chain fatty acids, they send\nanti-inflammatory signals throughout the\nbody that reduce the filtration burden\non the kidneys. When the gut microbiome\nis out of balance, it generates\ncompounds called uremic toxins that\ncirculate in the blood and increase the\nwork the kidneys have to do to clear\nthem. The apple is one of the best whole\nfood sources of soluble fiber,\nspecifically a type called pectin that\nselectively feeds beneficial gut\nbacteria. Research published in the\njournal Gut Microbes confirmed that\npectin is one of the most effective\nprebiotic fibers for shifting the gut\nmicrobiome toward a composition that\nreduces systemic inflammation. The skin\nof the apple carries corotin, an\nantioxidant shown in research published\nin the European Journal of\nPharmarmacology to reduce key\ninflammatory markers associated with\ncellular stress in kidney tissue. Peel\nthe apple and you discard most of that.\nEat a medium apple in the evening, skin\non about an hour before bed. A tart\nvariety like Granny Smith has less sugar\nand more fiber than the sweeter options.\nSlice it, dust it with real cinnamon,\nand it becomes something that actually\nfeels like a treat rather than a health\nobligation. If you're finding this\nhelpful so far, type four in the\ncomments below. It takes just 2 seconds,\nand it lets me know you're still with\nme. Fruit number five, tart cherries.\nThis is the one I want to spend extra\ntime on because of what tart cherries do\nfor a specific problem that quietly\ndamages kidneys in a large number of\npeople over 60. And most of them have\nnever connected the two. That problem is\nelevated uric acid. Uric acid is a waste\nproduct your body produces when it\nbreaks down compounds called purines\nfound in red meat, certain seafood,\norgan meats, and alcohol. When uric acid\nbuilds up in the blood, most people\nassociate it with gout, the sudden\nagonizing joint pain that usually starts\nin the big toe. But gout is not just a\njoint problem. Research published in\nnefrology dialysis transplantation\nestablished that chronically elevated\nuric acid directly damages kidney\ntubules, the tiny structures inside each\nnephron responsible for reabsorbing what\nthe body needs and discarding what it\ndoes not. Elevated uric acid is an\nunderrecognized and underappreciated\ncontributor to early kidney decline in\nolder adults. Tart cherries contain\nanthocyanins and specific\nanti-inflammatory compounds that have\nbeen tested in a clinical study\npublished in arthritis and rheumatism.\nParticipants who ate cherries over a\n2-day period showed significantly lower\nblood uric acid levels compared to those\nwho did not. Beyond the uric acid angle,\nresearch published in the Journal of\nAgricultural and Food Chemistry\nconfirmed that tart cherries are one of\nthe few whole food sources of naturally\noccurring melatonin. Better sleep means\na longer, cleaner overnight filtration\nwindow for your kidneys. A food that\nsupports both uric acid clearance and\nsleep quality at the same time is doing\ndouble duty for kidney health. A small\nglass of unsweetened pure tart cherry\njuice diluted in water or about a dozen\nfresh or frozen tart cherries in the\nevening is the right amount. Type yes in\nthe comments right now if you have ever\nhad a gout flare or been told by a\ndoctor that your uric acid was elevated.\nYou may be surprised how many people\nwatching this are sitting with a kidney\nrisk factor that has never been properly\nconnected for them. Fruit number six,\nwatermelon. I promised you a surprise.\nWatermelon is it. Most people think of\nwatermelon as a summer indulgence with\nno particular health significance, but\nfor your kidneys, it is doing two very\nspecific things. The first is hydration,\nand it matters more than it sounds. One\nof the most consistent and wellocumented\nrisk factors for kidney stone formation\nand early kidney disease in older adults\nis chronic mild dehydration. Research\npublished in the journal of urology\nconfirmed that low urine volume is a\ndirect driver of kidney stone risk. The\nproblem is that research published in\nmedicine and science and sports and\nexercise established that adults over 60\nhave a significantly blunted thirst\nsensation. The brain stops sending the\nmessage as clearly as it once did. So\nolder adults walk around mildly\ndehydrated on a regular basis without\never feeling particularly thirsty.\nEating watermelon in the evening\nprovides a gentle natural source of\nfluid right before your kidneys begin\ntheir overnight cycle without requiring\nyou to drink another glass of water at\n900 p.m. that you do not feel you need.\nThe second is citrine. Watermelon is one\nof the richest whole food sources of an\namino acid called citrine which the body\nconverts into arginine which in turn\nsupports healthy blood vessel elasticity\nand function. Research published in the\nAmerican Journal of Hypertension found\nthat watermelon derived citrine\nmeasurably improved vascular function\nand reduced blood pressure in study\nparticipants. The tiny blood vessels\ninside your kidneys called glomeuli are\namong the most pressure sensitive\nstructures in your body. High blood\npressure degrades them over years.\nCitrine supports the vascular health\nthose structures depend on. One cup of\nfresh cubed watermelon in the evening is\nthe right amount. If you are monitoring\nblood sugar, portion matters here\nbecause watermelon has a higher glycemic\nindex than the other fruits on this\nlist. Fruit number seven, pineapple.\nMost tropical fruits carry a reputation\nfor being high in potassium, which is a\nlegitimate concern for people with\nadvanced kidney disease. Pineapple is\nthe exception. It is one of the lower\npotassium tropical fruits, which is part\nof why it belongs on this list. What\nmakes pineapple genuinely useful for\nkidney health is what comes with that\nlow potassium, a natural enzyme called\nbromelain. Research published in\nbiomedical reports confirm that\nbromelain carries significant\nanti-inflammatory properties, reducing\nkey inflammatory markers in a measurable\ndose dependent way. For your kidneys,\nthat matters because inflammation is the\nengine that drives the progression of\nkidney disease. The path from a stressed\nkidney to a scarred one almost always\nruns through years of low-grade\nsustained inflammation. Bromelain has\nalso been studied for its effect on\ncirculation and fluid balance, which\nconnects to a symptom many people notice\nwhen their kidneys are under strain,\nankle puffiness, and mild fluid\nretention in the lower legs by evening.\nOne cup of fresh pineapple is the right\nevening amount. Not the canned version\npacked in syrup and not canned in juice\neither because the canning process\ndestroys most of the active bromelain.\nFresh or frozen gives you what you are\nlooking for. Fruit number eight,\nstrawberries. I saved strawberries for\nlast because they wrap up everything we\nhave covered tonight in a fruit that is\naccessible, affordable, low in\npotassium, and genuinely enjoyable to\neat at the end of the day. Strawberries\ncarry vitamin C, which kidney cells\nrequire for tissue repair. They carry\nalagic acid, a polyphenol with\nantioxidant properties that laboratory\nresearch suggests may help protect cells\nfrom the type of oxidative damage that\naccumulates in kidney tissue over time.\nThe direct human clinical trial data\nhere is still building. So, I will be\nstraight with you. The mechanism is\nsound and the cell model research is\npromising, but this is not yet as firmly\nestablished in human trials as the\nblueberry and tart cherry data. What is\nwell established is that strawberries\nare one of the safest whole fruits for\nkidney health. Low in potassium, low in\nsugar relative to their volume, and rich\nin compounds that support the\nanti-inflammatory picture across the\nwhole body. Strawberries also contain\nfolate, a B vitamin essential for the\nclearance of homoyine, an amino acid\nthat when chronically elevated is\nassociated with both kidney and\ncardiovascular decline in older adults,\nas established in research published in\nthe annual review of nutrition. Half a\ncup of fresh strawberries in the evening\non their own or alongside another fruit\nfrom this list is one of the simplest\nthings you can do to close the day with\nyour kidneys in mind. Here is the recipe\nI promised you. I call it the bedtime\nkidney tonic, and you can put it\ntogether in 2 minutes. Into a blender,\nadd half a cup of frozen blueberries.\nAdd 10 frozen tart cherries. Add four or\nfive fresh strawberries. Pour in half a\ncup of plain unsweetened kafir or plain\nyogurt for the gut kidney connection we\ncovered with the apple section. Add 2\ntablespoons of pure unsweetened\ncranberry juice and a small splash of\nwater to loosen the blend. Finish with a\npinch of cinnamon. Blend it smooth and\ndrink it about an hour before bed."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@ClinicalSeniorHealth/videos",
+   "isMonetized": null,
+   "hashtags": [],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@ClinicalSeniorHealth",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}
