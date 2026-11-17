@@ -1,0 +1,7 @@
+# Audio limits and measurements — rl6ggpS13ao
+
+AUDIO_LISTENING_UNVERIFIED. Source stereo44100Hz AAC was extracted once with video disabled to mono22050Hz PCM. The local WAV hash is in SOURCE.json; it is not committed. AUDIO_EVENTS.csv contains 698 consecutive one-second RMS/peak windows including the final partial window. Median RMS is -19.2815dBFS; maximum sampled peak is -0.049dBFS. 0 windows fall below -45dBFS RMS. These describe the decoded waveform and cannot establish voice cadence,intensity changes,speech pauses,music or SFX. No direct listening or verified sound-event classification was available.
+
+SOURCE_DECLARED description credits Kevin MacLeod tracks Dark Fog,Expeditionary,The Descent,Faster Does It,Lightless Dawn and Sneak Up On You by Redafs. These are credited titles,not independently recognized audible cues or verified licenses. Auto-caption [music] markers are text from the same track,not listening evidence. Captions remain display intervals with overlaps,not verified sentences or word alignment. Raw numeric statements are not certified spoken numbers.
+
+AUDIO_VISUAL_SYNC.csv links each caption/state overlap to its onset audio signal window. It does not prove intentional synchronization,the entire overlap's audio window coverage,or exact syllable timing. Dialogue gesture/onscreen text changes are observed in representatives and their semantic alignment is inferred from caption context. Further listening/playback is required for full AV sign-off.

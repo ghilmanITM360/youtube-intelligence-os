@@ -194,3 +194,7 @@ Full validation requires the bundled Python runtime with `openpyxl` and local ig
 - Historical catalog source records retain old absolute paths as provenance. Registry and editing reports rebase repository evidence under the selected worktree and emit relative locators.
 - Transcript ZIP members remain authoritative when spreadsheet cell limits affect presentation.
 - No acquisition runs occur during build or validation.
+
+### Research-only dataset manifests
+
+Dataset manifests default to canonical registry inventory. An explicit `- Registry Scope: RESEARCH_ONLY` line keeps a research dataset and its raw/extracted channel-data artifacts out of the production channel-registry rebuild. The manifest and research evidence remain preserved; this marker does not register or promote a channel. Unknown or repeated scope markers fail validation. DS-000036 uses this boundary while its acquisition registration remains in an isolated research staging database.

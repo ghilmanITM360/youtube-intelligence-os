@@ -84,6 +84,37 @@ class DatasetInventoryTests(unittest.TestCase):
         self.assertNotIn("DS-000026", dataset_ids)
 
 
+    def test_research_manifest_and_artifacts_do_not_enter_canonical_registry(self):
+        from scripts.build_youtube_channel_registry import _dataset_records, _artifact_records
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifests = root / "data/manifests"
+            manifests.mkdir(parents=True)
+            (manifests / "DS-000001.md").write_text("# Canonical fixture\n")
+            (manifests / "DS-000036.md").write_text(
+                "# Research fixture\n- Registry Scope: RESEARCH_ONLY\n"
+            )
+            for layer in ("raw", "extracted"):
+                folder = root / f"data/{layer}/channel-data/DS-000036"
+                folder.mkdir(parents=True)
+                (folder / "fixture.json").write_text("{}")
+            self.assertEqual(["DS-000001"], [r["dataset_id"] for r in _dataset_records(root)])
+            artifacts = _artifact_records(root, {"channels": []})
+            self.assertEqual(["DS-000001"], [r["dataset_id"] for r in artifacts])
+
+    def test_unknown_registry_scope_is_rejected(self):
+        from scripts.build_youtube_channel_registry import _dataset_records
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            folder = root / "data/manifests"
+            folder.mkdir(parents=True)
+            (folder / "DS-000036.md").write_text("# Fixture\n- Registry Scope: typo\n")
+            with self.assertRaisesRegex(ValueError, "Registry Scope"):
+                _dataset_records(root)
+
+
 class RegistryModelTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -620,7 +651,7 @@ class RegistryDatabaseTests(unittest.TestCase):
 
 class RegistryValidatorTests(unittest.TestCase):
     def test_validator_proves_required_controls(self):
-        from scripts.build_youtube_channel_registry import build_database, build_model
+        from scripts.build_youtube_channel_registry import build_database, build_model, _dataset_records
         from scripts.validate_youtube_channel_registry import validate_database
 
         model = build_model(ROOT)
@@ -629,6 +660,8 @@ class RegistryValidatorTests(unittest.TestCase):
             build_database(ROOT, path, model)
             result = validate_database(ROOT, path)
         self.assertEqual("PASS", result["status"])
+        self.assertEqual(33, result["controls"]["datasets"])
+        self.assertNotIn("DS-000036", {row["dataset_id"] for row in _dataset_records(ROOT)})
         self.assertEqual(75, result["controls"]["canonical_channels"])
         self.assertEqual(63, result["controls"]["target_channels"])
         self.assertEqual(46, result["controls"]["channels_with_video_data"])

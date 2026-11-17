@@ -1,0 +1,7 @@
+# Dubai packaging — N9GUfsfiM4M
+
+OBSERVED metadata title: **How Dubai Got So Rich | History of Dubai**, from DS-000036. The observed served thumbnail is 1280×720 JPEG: THE RISE OF DUBAI in heavy white uppercase with black outline, two large cartoon faces, an outlined map silhouette, UAE flag, money sack and OIL barrel. The right figure has angled eyebrows and a beard; the left presenter looks worried. Hero/conflict implications are INFERRED, not audience-response observations.
+
+OBSERVED mobile review: at 320×180 the headline, both faces, flag colors and OIL word remain distinct. At 160×90 the headline and faces remain readable/recognizable; map edge and flag remain visible. Money-sack symbol and barrel lettering become secondary/small; the narrow flag bands are less distinct. The crowded top line remains readable in these exact derivatives; this does not establish legibility on every device. Native and derived hashes/URL provenance are in evidence/THUMBNAIL_PROVENANCE.json.
+
+INFERRED promise: a mechanism-led historical transformation, using oil/wealth symbols and leader imagery. It aligns with the opening prosperity-to-desert contrast, the 1966 oil sequence and the infrastructure gamble; the later labor-cost and future-risk sections complicate the triumphal RISE framing. The thumbnail's UAE country map and flag contextualize a Dubai-specific title; the unit is a city/emirate, not the entire country's economy. No CTR, impressions, retention, mobile audience testing or causal packaging score was acquired. Scores: NOT_APPLICABLE.

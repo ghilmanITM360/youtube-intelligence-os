@@ -1,0 +1,78 @@
+{
+  "video_id": "kbPauzdHhcI",
+  "status": "STRUCTURAL_EVIDENCE_CHECKPOINT_PASSED_WITH_LIMITATIONS",
+  "overall_audiovisual_status": "PARTIAL",
+  "counts": {
+    "shots": 131,
+    "reviewed_representative_states": 336,
+    "motion_candidates": 380,
+    "assets": 233,
+    "audio_signal_windows": 744,
+    "caption_segments": 318,
+    "temporal_overlap_rows": 940,
+    "reviewed_contact_sheets": 28,
+    "semantic_beats": 15,
+    "material_claims": 20
+  },
+  "coverage": {
+    "container_duration_sec": 743.101655,
+    "first_video_pts": 0.016667,
+    "last_video_frame_end_sec": 743.0499996666666,
+    "native_frame_count": 44582,
+    "decoded_frame_count": 44582,
+    "unreviewed_micro_change_candidates": 283,
+    "all_representative_states_reviewed": true,
+    "every_frame_visually_viewed": false
+  },
+  "checks": {
+    "unique_state_ids": true,
+    "unique_shot_ids": true,
+    "native_pts_count_matches_decode": true,
+    "timestamps_bounded": true,
+    "state_shot_fk": true,
+    "all336annotations": true,
+    "source_hash_matches_manifest": true,
+    "claim_state_links_resolve": true
+  },
+  "files": {
+    "ASSETS.csv": {
+      "bytes": 48684,
+      "sha256": "8939f403e3b41cf0b44b561026c13548b962a296338c39935aefa9640b869410"
+    },
+    "AUDIO_EVENTS.csv": {
+      "bytes": 151500,
+      "sha256": "c73f6d9a1b28c67c0450e5c174f263c1e4cd0c926e69ea91c6e15c08f124abf7"
+    },
+    "SENTENCES.csv": {
+      "bytes": 108912,
+      "sha256": "f0107a3c7a86d06345154eefc9904aa1ba8791c1575b0e890fe63e6ef2ac060c"
+    },
+    "SHOTS.csv": {
+      "bytes": 31039,
+      "sha256": "a4f89c3af86c0673a706d4c03ee909e6bc19004047d6b093e7ecd917b51f9d2c"
+    },
+    "MOTIONS.csv": {
+      "bytes": 74119,
+      "sha256": "97f316a1fea2cdce4252c2902bf763f256c4266b1be4242f615946b2ced54f0b"
+    },
+    "AUDIO_VISUAL_SYNC.csv": {
+      "bytes": 227198,
+      "sha256": "0bebda8fcea9a828d14a14502469546f05693d99273813133ed303f0d30ead98"
+    },
+    "STATES.csv": {
+      "bytes": 162187,
+      "sha256": "13d3da2e1972ce61ee0ad48eeb33a73b4b07491406ac00d87df3fab078d0da33"
+    }
+  },
+  "limitations": [
+    "Direct audio listening unavailable; no invented voice/music/SFX observations.",
+    "Caption segments are not word-aligned verified sentences.",
+    "Motion classes are signal-derived candidates; easing/path,masking and authoring software not established.",
+    "All336representative states reviewed;283micro change episodes below segmentation threshold not individually annotated.",
+    "Visual pipeline decoder warnings retained; independent fullnativePTSprobe clean; chronology retains nominal-to-native one-frame offset.",
+    "No causal virality claims or investment advice.",
+    "Financial/historical fact checks targeted,not comprehensive."
+  ],
+  "packaging_review": "NATIVE_SERVED720x404;320x180;160x90",
+  "caption_evidence_source": "DS36ActorinlineSRT;earlierbrowserexportretainedlocallyassame-sourcealias"
+}
